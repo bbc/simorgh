@@ -1,4 +1,3 @@
-import path from 'ramda/src/path';
 import { buildATIPageTrackPath } from '../../atiUrl';
 import { LIBRARY_VERSION } from '../../../../lib/analyticsUtils';
 
@@ -14,15 +13,24 @@ export const buildRadioATIParams = (
     service,
   } = serviceContext;
 
-  const { metadata } = pageData;
+  const { id, language, pageTitle, pageIdentifier, contentType } = pageData;
+
+  const isLiveRadio = contentType === 'player-live';
+
+  const getContentId = assetType => {
+    const guid = id.split('/').pop();
+    const contentId = `urn:bbc:${assetType}:`.concat(guid);
+    return contentId;
+  };
 
   return {
     appName: atiAnalyticsAppName,
-    contentId: metadata.id,
-    contentType: 'player-live',
-    language: metadata.language,
-    pageIdentifier: path(['analyticsLabels', 'pageIdentifier'], metadata),
-    pageTitle: path(['analyticsLabels', 'pageTitle'], metadata),
+    contentId: isLiveRadio ? id : getContentId('pips'),
+    // workaround until ARES have corrected onDemand contentType to player-episode
+    contentType: isLiveRadio ? contentType : 'player-episode',
+    language,
+    pageIdentifier,
+    pageTitle,
     producerId: atiAnalyticsProducerId,
     libraryVersion: LIBRARY_VERSION,
     statsDestination,

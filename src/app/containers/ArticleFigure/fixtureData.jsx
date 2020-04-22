@@ -11,9 +11,9 @@ const imageSrc =
   'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg';
 const imageWidth = 640;
 const imageRatio = 56.25;
-const captionBlock = (text) => blockContainingText('caption', text, 'mock-id');
+const captionBlock = text => blockContainingText('caption', text, 'mock-id');
 
-const createCaptionBlock = (arrayOfBlocks) => {
+const createCaptionBlock = arrayOfBlocks => {
   const captionBlockSkeleton = {
     type: 'caption',
     model: {
@@ -27,7 +27,7 @@ const createCaptionBlock = (arrayOfBlocks) => {
       ],
     },
   };
-  arrayOfBlocks.forEach((block) => {
+  arrayOfBlocks.forEach(block => {
     captionBlockSkeleton.model.blocks[0].model.blocks.push(block);
   });
   return captionBlockSkeleton;
@@ -214,7 +214,7 @@ export const FigureLazyLoadImage = (
 
 export const FigureAmpImage = <GenerateFixtureData platform="amp" />;
 
-export const FigureImageWithCaption = (service) => (
+export const FigureImageWithCaption = service => (
   <GenerateFixtureData
     platform="canonical"
     type="image"
@@ -223,7 +223,7 @@ export const FigureImageWithCaption = (service) => (
   />
 );
 
-export const FigureAmpImageWithCaption = (service) => (
+export const FigureAmpImageWithCaption = service => (
   <GenerateFixtureData
     platform="amp"
     type="image"

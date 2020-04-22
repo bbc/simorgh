@@ -13,7 +13,7 @@ const setCookieGetMock = ({
   explicit = '1',
   policy = '111',
 }) => {
-  Cookie.get.mockImplementation((cookie) => {
+  Cookie.get.mockImplementation(cookie => {
     if (cookie === PRIVACY_COOKIE) {
       return privacy;
     }
@@ -151,7 +151,7 @@ describe('Consent Banner Utilities', () => {
     });
 
     it('does not show the cookie banner when EXPLICIT_COOKIE is 1 or 2', () => {
-      ['1', '2'].forEach((value) => {
+      ['1', '2'].forEach(value => {
         setCookieGetMock({ explicit: value });
 
         const { runInitial } = getConsentBannerUtilities();

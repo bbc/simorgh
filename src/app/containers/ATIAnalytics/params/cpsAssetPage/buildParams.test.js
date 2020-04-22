@@ -128,10 +128,10 @@ describe('buildCpsAssetPageATIUrl', () => {
     );
     const campaignString = expectation.campaigns
       .filter(
-        (campaign) =>
+        campaign =>
           campaign.campaignName && typeof campaign.campaignName === 'string',
       )
-      .map((campaign) => campaign.campaignName.replace(/ /g, '%20'))
+      .map(campaign => campaign.campaignName.replace(/ /g, '%20'))
       .join('~');
 
     expect(result).toEqual(

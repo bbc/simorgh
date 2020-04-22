@@ -1,0 +1,34 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "text": "ያድምጡ",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "ዝግጅቶቻችንን’",
+        "type": "paragraph"
+      },
+      {
+        "id": "liveradio",
+        "subType": "primary",
+        "format": "audio",
+        "externalId": "bbc_amharic_radio",
+        "duration": "PT0S",
+        "caption": "",
+        "embedding": false,
+        "available": true,
+        "live": true,
+        "type": "version"
+      }
+    ]
+  },
+  "language": "am",
+  "id": "urn:bbc:ares::ws_live:bbc_amharic_radio",
+  "name": "ያድምጡ",
+  "summary": "ዝግጅቶቻችንን’",
+  "pageTitle": "ያድምጡ - BBC News አማርኛ",
+  "contentType": "player-live",
+  "pageIdentifier": "amharic.bbc_amharic_radio.liveradio.page"
+}

@@ -38,7 +38,7 @@ export const custom = {
   height: 547,
 };
 
-export const imageData = (image) =>
+export const imageData = image =>
   blockArrayModel([
     {
       type: 'rawImage',
