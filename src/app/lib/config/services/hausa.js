@@ -139,7 +139,7 @@ export const service = {
       media: {
         noJs: "Na'urarku na da matsalar sauraren sauti",
         contentExpired: 'Yanzu an daina samar da wannan shiri.',
-        audio: 'Sauti',
+        audio: 'Murya',
         photogallery: 'Rumbun hotuna',
         video: 'Bidiyo',
         bbc_hausa_radio: {
@@ -152,13 +152,13 @@ export const service = {
           subtitle:
             "Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako.",
         },
-        listen: 'Listen',
+        listen: 'Saurari',
         watch: 'Kalla',
         liveLabel: 'KAI TSAYE',
-        nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'NA GABA',
+        previousRadioShow: 'Shirye-shiryen rediyo da suka gabata',
+        nextRadioShow: 'Shirye-shiryen rediyo na gaba',
+        duration: 'Tsawon lokaci',
       },
       socialEmbed: {
         caption: {
@@ -199,7 +199,7 @@ export const service = {
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/hausa/game-da-mu-49283501',
-        text: 'Me yasa za ka aminta da BBC',
+        text: 'Me ya sa za ku iya aminta da BBC',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
@@ -208,7 +208,7 @@ export const service = {
       links: [
         {
           href: 'https://www.bbc.com/hausa/game-da-mu-37377086',
-          text: 'Sharudan yin amfani',
+          text: 'Sharuddan yin amfani',
         },
         {
           href: 'https://www.bbc.com/hausa/game-da-mu-37377088',
