@@ -1,23 +1,19 @@
-const { within } = require('@testing-library/dom');
+export default () => {
+  describe('A11y', () => {
+    it('I can see the skip to content link', () => {
+      const skipToContentEl = document.querySelector('[href="#content"]');
 
-export default ({ skipToContentText, headlineText }) => {
-  [amp, canonical].forEach(page => {
-    describe(`And using ${page.platform}`, () => {
-      it('I can see a skip to content link that links to the main content of the page', () => {
-        const skipToContentEl = page.getByText(skipToContentText);
-        expect(skipToContentEl.getAttribute('href')).toBe('#content');
-      });
+      expect(skipToContentEl).toBeInTheDocument();
+      expect(skipToContentEl.textContent).toBeTruthy();
+      expect(skipToContentEl.textContent).toMatchSnapshot();
+    });
 
-      if (headlineText) {
-        it('I can see a headline in the main content of the page', () => {
-          const { getByText } = within(
-            page.document.querySelector('h1[id="content"]'),
-          );
-          const mainContentEl = getByText(headlineText);
+    it('Headline in main content', () => {
+      const accessibleH1El = document.querySelector(
+        'h1[id="content"][tabindex="-1"]',
+      );
 
-          expect(mainContentEl.getAttribute('tabindex')).toBe('-1');
-        });
-      }
+      expect(accessibleH1El).toBeInTheDocument();
     });
   });
 };
