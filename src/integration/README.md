@@ -14,37 +14,90 @@ This will build and run the application that the tests will run against.
 
 ## How to write tests
 
-An example of a test that would check a headline renders in the document on both AMP and canonical platforms would look like this:
+We need to write tests for both our AMP and canonical platforms. There are tests that can be written to test both platforms (cross platform tests), some tests for canonical only, and some tests for AMP only.
+
+#### Cross platform tests
+
+For tests that can be run in both platforms, we should add these tests to a file called `crossPlatformTests.js`. An example of a cross platform test would be like
+
+```js
+export default () => {
+  it('I can see the headline', () => {
+    const h1El = document.querySelector('h1');
+
+    expect(h1El).toBeInTheDocument();
+    expect(h1El).toBeTruthy();
+    expect(h1El.textContent).toMatchSnapshot();
+  });
+};
+```
+
+#### AMP only tests
+
+For tests that should be run only on the AMP platform, we should add these tests to a file called `ampTests.js`. An example of an AMP test would be like
+
+```js
+export default () => {
+  describe('Analytics', () => {
+    it('ATI', () => {
+      expect(
+        document.querySelector('amp-analytics script[type="application/json"]')
+          .textContent,
+      ).toMatch('https://logws1363.ati-host.net?');
+    });
+  });
+};
+```
+
+#### Canonical only tests
+
+For tests that should be run only on the canonical platform, we should add these tests to a file called `canonicalTests.js`. An example of a canonical test would be like
+
+```js
+export default () => {
+  describe('Analytics', () => {
+    it('ATI', () => {
+      const noscriptImage = document.querySelector('noscript img');
+
+      expect(noscriptImage.tagName).toEqual('IMG');
+      expect(noscriptImage.getAttribute('width')).toEqual('1px');
+      expect(noscriptImage.getAttribute('height')).toEqual('1px');
+      expect(noscriptImage.getAttribute('src')).toMatch(
+        'https://logws1363.ati-host.net?',
+      );
+    });
+  });
+};
+```
+
+For Jest to run the tests in these files we need to create a `*(amp|canonical).test.js` file that will import and call the test functions. We use `amp.test.js` to run the tests on the AMP platform and `canonical.test.js` to run the tests on the canonical platform. For example a file name `amp.test.js` with the contents:
 
 ```js
 /**
- * @pathname /mundo/articles/ce42wzqr2mko
+ * @service pidgin
+ * @pathname /pidgin/23248703
  */
 
-[amp, canonical].forEach((page) => {
-  it('I can see the headline', () => {
-    const headlineEl = page.getByText(headlineText);
+import runCrossPlatformTests from '../crossPlatformTests';
+import runAmpTests from '../ampTests';
 
-    expect(headlineEl).toBeInTheDocument();
+describe('AMP', () => {
+  describe(pageType, () => {
+    runCrossPlatformTests();
+    runAmpTests();
   });
 });
 ```
 
-In the above example we have specified a pathname using a [docblock pragma](#what-is-a-docblock-pragma). The pathname is the part of the url that is everything after `https://bbc.com` and in this example it is `/mundo/articles/ce42wzqr2mko`. If you visit `https://bbc.com/mundo/articles/ce42wzqr2mko` you will see this is a Mundo article page and it is what we are going to test.
+In the above example we import the cross platform tests and the AMP tests. We have also specified a pathname using a [docblock pragma](#what-is-a-docblock-pragma). The pathname is the part of the url that is everything after `https://bbc.com` and in this example it is `/mundo/articles/ce42wzqr2mko`. If you visit `https://bbc.com/mundo/articles/ce42wzqr2mko` (**NB** this is the canonical url - for the AMP url just add `.amp` on the end) you will see this is a Mundo article page and it is what we are going to test.
 
-Before our tests run, the test environment [setup file](https://github.com/bbc/simorgh/tree/latest/src/integration/integrationTestEnvironment.js) parses the `pathname` dockblock pragma and constructs both an AMP and canonical url. JSDOM then visits both urls to get the DOM trees that we can use to run our tests against. The AMP DOM and the canonical DOM is available on the global scope across all files used in a test. We can run the same test for AMP and canonical by putting them in an array and iterating on the array. If we only want to run a test on a single platform, for example amp, then we can just do:
+Before our tests run, the test environment [setup file](https://github.com/bbc/simorgh/tree/latest/src/integration/integrationTestEnvironment.js) parses the `pathname` dockblock pragma and constructs the url. JSDOM then visits the url to get the DOM trees that we can use to run our tests against.
 
-```js
-/**
- * @pathname /mundo/articles/ce42wzqr2mko
- */
+Note we have also specified a `service` docblock pragma. The service is parsed and added to the global scope of every test file. This can come in handy for tests where you need to know the service. There are other useful variables added to the global scope:
 
-it('I can see the headline', () => {
-  const headlineEl = canonical.getByText(headlineText);
-
-  expect(headlineEl).toBeInTheDocument();
-});
-```
+- `pageType` - The page type which is parsed from the test file path.
+- `service` - The service of the currently running page test.
+- `document` - The `document` object of the current page. You can use this to query the DOM and assert the correct things are in the page.
 
 Tests for pages are located in the `src/app/integration/pages` directory within a directory for each page type:
 
@@ -60,27 +113,17 @@ Tests for pages are located in the `src/app/integration/pages` directory within 
 |  ├── onDemandRadioPage
 ```
 
-within a page type directory we tell Jest where our test suites are by using the `.test.js` file extension, for example, `amharic.test.js`, `korean.test.js` where we are testing the Amharic and Korean live radio pages respectively.
+within a page type directory we tell Jest where our test suites are by using the `.test.js` file extension, for example, `amp.test.js`, `canonical.test.js`. To test the `amharic` service we have created a directory specifically for this and located the AMP and canonical test files within.
 
 ```
 └── liveRadioPage
-   ├── __snapshots__
-   |  ├── amharic.test.js.snap
-   |  └── korean.test.js.snap
-   ├── amharic.test.js
-   ├── korean.test.js
-   ├── user.amp.js
-   ├── user.canonical.js
-   └── user.js
+   ├── amharic
+   |  ├── amp.test.js
+   |  └── canonical.test.js
+   ├── ampTests.js
+   ├── canonicalTests.js
+   └── crossPlatformTests.js
 ```
-
-Each page type's test file will have specific user tests, for example in the context of a live radio page, we want to test that a user can see a headline, a description of the live radio stream and a media player.
-
-We define these tests inside of the `user.js` file and import them into each page type test file `amharic.test.js`, `korean.test.js`. Sometimes the UI or UX is slightly different between AMP and canonical. In these cases we have different files for each - `user.amp.js` and `user.canonical.js`. User tests should be focussed on testing things on the page that a user can see or interact with. They should not contain anything to do with SEO, analytics or checking scripts are in the page.
-
-User tests are the most important tests we write because this is who we build software for. We should also consider a11y tests in our user tests.
-
-We can make use of DOM Testing Library to write better user tests. The main utilities it provides involve querying the DOM in a way that's similar to how the user finds elements on the page e.g. `getByText('This is the headline text')`. This is preferred over something like `document.querySelector('.headline')`. This also makes our user tests more maintainable in the long run as refactors to our components, for example a class name change, don't break our tests and slow us down. When testing something like SEO, something that you cannot see or interact with, then `document.querySelector` is the go to method for querying the DOM.
 
 All page types have some common UI and functionality. Tests for the common stuff are located in `src/app/integration/common`:
 
@@ -95,8 +138,7 @@ All page types have some common UI and functionality. Tests for the common stuff
 |  ├── footer.js
 |  ├── header.js
 |  ├── index.js
-|  ├── performance.js
-|  └── snapshot.js
+|  └── performance.js
 ```
 
 As you can see, common UI and functionality includes header and footer UI, analytics reporting, SEO etc. We can import these in each page type's test file to run these tests.
@@ -119,31 +161,65 @@ You might then think it makes sense to only write integration tests but there ar
 
 [Jest](https://jestjs.io/en/) is a JavaScript library for creating, running, and structuring tests. We use Jest for our unit and integration tests.
 
-## What is DOM Testing Library?
-
-[DOM Testing Library](https://github.com/testing-library/dom-testing-library) provides testing utilities that encourage good testing practices. It provides methods to query the DOM for nodes in a way that's similar to how the user finds elements on the page. All queries available can be found [here](https://testing-library.com/docs/dom-testing-library/api-queries).
-
 ## What is a docblock pragma?
 
 A docblock pragma is a specially-formatted comment at the top of a test file. We can use docblock pragmas to alter the environment that tests run in.
 
-## What is the Given-When-Then stuff all about?
-
-The Given-When-Then formula is a template intended to guide the writing of acceptance tests for a user story.
-
-- (Given) some context
-- (When) some action is carried out
-- (Then) a particular set of consequences can be observed
-
-An example:
-
-- Given I am on a Mundo article canonical page
-- When I am using the website
-- Then I can see an image with a caption.
-
 ## What is a snapshot?
 
-This is a feature provided by Jest. It's not a snapshot of the graphical UI but a snapshot of the underlying DOM tree that is used to catch unexpected changes.
+This is a feature provided by Jest. It's not a snapshot of the graphical UI but a snapshot of a result that is typically returned from a function. This is often the HTML returned from DOM query selector e.g.
+
+```js
+it('should render the headline', () => {
+  expect(document.querySelector('h1').outerHTML).toMatchSnapshot();
+});
+```
+
+The above would create a file in a colocated `__snapshots__` directory
+
+```
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`I can see the headline`] = `
+<h1 id="content"
+       "tabindex="-1"
+>
+  <span role="text">
+    <span lang="en-GB">
+      BBC News
+    </span>
+    ,
+    Pidgin
+    -
+    Home
+  </span>
+</h1>
+`;
+```
+
+It's recommended not to snapshot large parts of the DOM because this creates brittle tests i.e. these tests would break often because the DOM changes whenever someone changes something such as a React component's structure and styles, translation configs and feature toggles. It is better to have smaller and more focused snapshots. More info on this approach can be found in this article [Effective Snapshot Testing](https://kentcdodds.com/blog/effective-snapshot-testing).
+
+An even better example of asserting a headline is on the page
+
+```js
+it('I can see the headline', () => {
+  const h1El = document.querySelector('h1');
+
+  expect(h1El).toBeInTheDocument(); // check the headline element is in the document
+  expect(h1El.getAttribute('id')).toBe('content'); // check for the id attribute
+  expect(h1El.getAttribute('tabindex')).toBe('-1'); // check for the tabindex attribute
+  expect(h1El.textContent).toBeTruthy(); // check there is some text inside the element
+  expect(h1El.textContent).toMatchSnapshot(); // snapshot the value so that we have a baseline to fail the test if it ever unexpectedly changes
+});
+```
+
+This would produce the following snapshot:
+
+```
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`I can see the headline`] = `BBC News, Pidgin - Home`;
+```
 
 ## What is Cypress
 
@@ -160,17 +236,3 @@ Here are some possible answers:
 - ### Content in an iframe I want to test is not in the DOM
 
   This is another current limitation we have. We cannot test the contents that are rendered within an iframe. We can test that the iframe is there though. Testing the iframe `src` url may be sufficient. If this does not provide enough confidence then you should consider writing an end-to-end tests using another tool we use in Simorgh such as [Cypress](what-is-cypress).
-
-- ### The `getByText` query is not working
-
-  getByText has a limitation where it cannot select text that spans mulitple elements. In these cases you can use `getByTextMultiElement`
-
-- ### The `getByAltText` query is not working for AMP
-
-  AMP has some custom components which are transformed by the AMP library on the client side into something that the web-browser can understand. One of these components is `amp-img`. The problem is the `getByAltText` queries the DOM for an `img` element with an `alt` attribute that matches the provided alt-text so the `amp-img` element is not picked up. The current solution is to use `document.querySelector` and search for the `amp-img` element combined with an attribute selector, for example:
-
-  ```js
-  const image = amp.document.querySelector(`amp-img[alt="${imageAltText}"]`);
-  ```
-
-  This could be another issue that will be fixed by client side rendering with JSDOM.

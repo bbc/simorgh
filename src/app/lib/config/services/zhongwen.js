@@ -30,6 +30,9 @@ const baseServiceConfig = {
   radioSchedule: {
     hasRadioSchedule: false,
   },
+  recommendations: {
+    hasStoryRecommendations: false,
+  },
   brandSVG,
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,
@@ -43,7 +46,7 @@ export const service = {
   simp: {
     ...baseServiceConfig,
     ads: {
-      hasAds: false,
+      hasAds: true,
     },
     externalLinkText: ', 外部链接',
     frontPageTitle: '主页',
@@ -262,7 +265,7 @@ export const service = {
   trad: {
     ...baseServiceConfig,
     ads: {
-      hasAds: false,
+      hasAds: true,
     },
     lang: `zh-hant`,
     locale: `zh-hant`,

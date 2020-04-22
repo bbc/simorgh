@@ -68,14 +68,11 @@ const frontPage = {
   },
 };
 const media = {
-  metadata: {
-    id: 'id',
-    language: 'language',
-    analyticsLabels: {
-      pageIdentifier: 'pageIdentifier',
-      pageTitle: 'pageTitle',
-    },
-  },
+  id: 'id',
+  language: 'language',
+  pageIdentifier: 'pageIdentifier',
+  pageTitle: 'pageTitle',
+  contentType: 'player-live',
 };
 const MAP = {
   promo: {

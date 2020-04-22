@@ -1,0 +1,34 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "text": "BBC Indonesia Radio",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "BBC Indonesia Radio: Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.",
+        "type": "paragraph"
+      },
+      {
+        "id": "liveradio",
+        "subType": "primary",
+        "format": "audio",
+        "externalId": "bbc_indonesian_radio",
+        "duration": "PT0S",
+        "caption": "",
+        "embedding": false,
+        "available": true,
+        "live": true,
+        "type": "version"
+      }
+    ]
+  },
+  "language": "id",
+  "id": "urn:bbc:ares::ws_live:bbc_indonesian_radio",
+  "name": "BBC Indonesia Radio",
+  "summary": "BBC Indonesia Radio: Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.",
+  "pageTitle": "BBC Indonesia Radio - BBC News Indonesia",
+  "contentType": "player-live",
+  "pageIdentifier": "indonesia.bbc_indonesian_radio.liveradio.page"
+}

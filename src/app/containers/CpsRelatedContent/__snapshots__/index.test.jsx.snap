@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CpsRelatedContent should render Story Promo components in Live environment 1`] = `
+exports[`CpsRelatedContent should render Story Promo components when given appropriate data 1`] = `
 <DocumentFragment>
   <section
     aria-labelledby="related-content-heading"
@@ -8,13 +8,13 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
+        class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc"
+          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA"
         >
           <div
             class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -22,7 +22,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
           <h2
             class="Heading-sc-1x4gwjz-2 eZofTG"
           >
-            <div
+            <span
               class="FlexColumn-wx5kdp-0 dgpsiS"
             >
               <span
@@ -36,7 +36,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
                   Another thing we de for inside dis tori
                 </span>
               </span>
-            </div>
+            </span>
           </h2>
         </div>
         <ul
@@ -79,7 +79,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
                   class="Headline-sc-1dvfmi3-3 hSJrur"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 yQgSu"
+                    class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                     href="/pidgin/44508901"
                   >
                     <span
@@ -145,7 +145,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
                   class="Headline-sc-1dvfmi3-3 hSJrur"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 yQgSu"
+                    class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                     href="/pidgin/tori-46975713"
                   >
                     How light companies dey use estimated billing show Nigerians pepper
@@ -200,235 +200,8 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
                   class="Headline-sc-1dvfmi3-3 hSJrur"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 yQgSu"
+                    class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                     href="/pidgin/tori-42494678"
-                  >
-                    Nigeria: Wetin 5,222 megawatts electric fit do?
-                  </a>
-                </h3>
-                <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
-                >
-                  Di Transmission Company of Nigeria and di vice-president office carry tori come outside say electric power wey di country produce don increase pass before as e reach 5,222 megawatts dis December.
-                </p>
-                <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
-                  datetime="1970-01-18"
-                >
-                  18th January 1970
-                </time>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-</DocumentFragment>
-`;
-
-exports[`CpsRelatedContent should render Story Promo components when given appropriate data 1`] = `
-<DocumentFragment>
-  <section
-    aria-labelledby="related-content-heading"
-    class="GridWrapper-sc-12lwanc-0 hgpaqH"
-    role="region"
-  >
-    <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
-    >
-      <div
-        class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
-      >
-        <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc"
-        >
-          <div
-            class="Bar-sc-1x4gwjz-0 jsgdXU"
-          />
-          <h2
-            class="Heading-sc-1x4gwjz-2 eZofTG"
-          >
-            <div
-              class="FlexColumn-wx5kdp-0 dgpsiS"
-            >
-              <span
-                class="FlexRow-wx5kdp-2 dVBNyZ"
-              >
-                <span
-                  class="Title-wx5kdp-4 BeqZV"
-                  dir="ltr"
-                  id="related-content-heading"
-                >
-                  Another thing we de for inside dis tori
-                </span>
-              </span>
-            </div>
-          </h2>
-        </div>
-        <ul
-          class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
-          dir="ltr"
-          role="list"
-        >
-          <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
-            dir="ltr"
-            role="listitem"
-          >
-            <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-            >
-              <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="ltr"
-              >
-                <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                >
-                  <div
-                    class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
-                  >
-                    <div
-                      class="lazyload-placeholder"
-                    />
-                  </div>
-                  <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                  />
-                </div>
-              </div>
-              <div
-                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="ltr"
-              >
-                <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
-                >
-                  <a
-                    class="Link-sc-1dvfmi3-5 yQgSu"
-                    href="/pidgin/44508901?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                  >
-                    <span
-                      role="text"
-                    >
-                      <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
-                      >
-                        , 
-                      </span>
-                      <span>
-                        Meet boys who dey convert cassava to electricity
-                      </span>
-                    </span>
-                  </a>
-                </h3>
-                <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
-                >
-                  James den Kwesi Ansah want convert most of Ghana's cassava waste into cheap electricity supply for schools, hospitals den villages.
-                </p>
-                <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
-                  datetime="1970-01-18"
-                >
-                  18th January 1970
-                </time>
-              </div>
-            </div>
-          </li>
-          <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
-            dir="ltr"
-            role="listitem"
-          >
-            <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-            >
-              <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="ltr"
-              >
-                <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                >
-                  <div
-                    class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
-                  >
-                    <div
-                      class="lazyload-placeholder"
-                    />
-                  </div>
-                  <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                  />
-                </div>
-              </div>
-              <div
-                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="ltr"
-              >
-                <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
-                >
-                  <a
-                    class="Link-sc-1dvfmi3-5 yQgSu"
-                    href="/pidgin/tori-46975713?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
-                  >
-                    How light companies dey use estimated billing show Nigerians pepper
-                  </a>
-                </h3>
-                <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
-                >
-                  Lawmakers for Nigeria wan make am crime for light companies to use guesswork give customer estimated bill.
-                </p>
-                <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
-                  datetime="1970-01-18"
-                >
-                  18th January 1970
-                </time>
-              </div>
-            </div>
-          </li>
-          <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
-            dir="ltr"
-            role="listitem"
-          >
-            <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-            >
-              <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="ltr"
-              >
-                <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                >
-                  <div
-                    class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
-                  >
-                    <div
-                      class="lazyload-placeholder"
-                    />
-                  </div>
-                  <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                  />
-                </div>
-              </div>
-              <div
-                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="ltr"
-              >
-                <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
-                >
-                  <a
-                    class="Link-sc-1dvfmi3-5 yQgSu"
-                    href="/pidgin/tori-42494678?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                   >
                     Nigeria: Wetin 5,222 megawatts electric fit do?
                   </a>
@@ -462,13 +235,13 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
+        class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc"
+          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA"
         >
           <div
             class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -476,7 +249,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
           <h2
             class="Heading-sc-1x4gwjz-2 eZofTG"
           >
-            <div
+            <span
               class="FlexColumn-wx5kdp-0 dgpsiS"
             >
               <span
@@ -490,11 +263,11 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
                   Another thing we de for inside dis tori
                 </span>
               </span>
-            </div>
+            </span>
           </h2>
         </div>
         <div
-          class="SingleContentWrapper-sc-1itct8j-2 upQSg"
+          class="SingleContentWrapper-opyob2-2 cSBeTC"
         >
           <div
             class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
@@ -526,8 +299,8 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
                 class="Headline-sc-1dvfmi3-3 hSJrur"
               >
                 <a
-                  class="Link-sc-1dvfmi3-5 yQgSu"
-                  href="/pidgin/44508901?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                  class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
+                  href="/pidgin/44508901"
                 >
                   <span
                     role="text"

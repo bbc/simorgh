@@ -2,7 +2,7 @@
 library 'Simorgh'
 
 def dockerRegistry = "329802642264.dkr.ecr.eu-west-1.amazonaws.com"
-def nodeImageVersion = "12.15.0"
+def nodeImageVersion = "12.16.2"
 def nodeImage = "${dockerRegistry}/bbc-news/node-12-lts:${nodeImageVersion}"
 
 def appGitCommit = ""
@@ -99,7 +99,7 @@ def cancelPreviousBuilds() {
 pipeline {
   agent any
   options {
-    buildDiscarder(logRotator(daysToKeepStr: '10', artifactDaysToKeepStr: '10'))
+    buildDiscarder(logRotator(daysToKeepStr: '3', artifactDaysToKeepStr: '3'))
     timeout(time: 90, unit: 'MINUTES')
     timestamps ()
   }

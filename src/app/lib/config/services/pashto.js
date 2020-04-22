@@ -54,7 +54,7 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'See all',
+      seeAll: 'ټول وګورئ',
       home: 'کور پاڼه',
       currentPage: 'اوسنۍ پاڼه',
       skipLinkText: 'مطلب ته ورشئ',
@@ -146,7 +146,7 @@ export const service = {
         noJs: 'په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.',
         contentExpired: 'دغه فایل نور د لاسرسي وړ نه دی.',
         audio: 'غږ',
-        photogallery: 'د عکسونو البوم',
+        photogallery: 'دعکسونو ګالري',
         video: 'ویډیو',
         bbc_pashto_radio: {
           title: 'بي بي سي افغانستان (پښتو خپرونه)',
@@ -158,13 +158,13 @@ export const service = {
           subtitle:
             'د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.',
         },
-        listen: 'Listen',
+        listen: 'واورئ',
         watch: 'و یې ګورئ',
         liveLabel: 'ژوندۍ',
-        nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'بل',
+        previousRadioShow: 'تېره راډیویي خپرونه',
+        nextRadioShow: 'راتلونکې راډیویي خپرونه',
+        duration: 'موده',
       },
       socialEmbed: {
         caption: {
@@ -194,9 +194,13 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: true,
+      frontPagePosition: 'feature-main',
       frequenciesPageUrl: '/pashto/institutional/2012/03/000001_frequencies',
       frequenciesPageLabel: 'راديويي څپې',
       header: 'تازه خبرونه واورئ',
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
@@ -222,7 +226,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'کوکيز',
+          text: 'Cookies',
         },
         {
           href: 'https://www.bbc.co.uk/pashto/institutional-37622768',

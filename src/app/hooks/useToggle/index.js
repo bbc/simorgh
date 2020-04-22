@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { ToggleContext } from '#contexts/ToggleContext';
 
-const useToggle = (toggleName) => {
+const useToggle = toggleName => {
   const featureToggle = useContext(ToggleContext).toggleState[toggleName];
   const { enabled = null, value } = featureToggle || {};
 

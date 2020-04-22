@@ -125,6 +125,10 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
       property="fb:app_id"
     />
     <meta
+      content="285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"
+      property="fb:pages"
+    />
+    <meta
       content="yes"
       name="mobile-web-app-capable"
     />
@@ -221,7 +225,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   margin: 0;
 }
 
-.c7 {
+.c6 {
   position: absolute;
   top: 0;
   left: 0;
@@ -229,7 +233,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   height: 100%;
 }
 
-.c8 {
+.c7 {
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -245,7 +249,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   background-color: rgba(34,34,34,0.75);
 }
 
-.c9 {
+.c8 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -254,18 +258,14 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   border-bottom: 0.0625rem solid transparent;
 }
 
-.c6 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 50rem;
-  max-width: calc(100vw - 2rem);
+.c5 {
   position: relative;
-  overflow: hidden;
-  height: 165px;
+  min-height: 165px;
+  margin-bottom: 2rem;
 }
 
 .c1 {
+  width: 100%;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -384,39 +384,26 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c7 {
     font-size: 0.875rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c8 {
+  .c7 {
     background-color: transparent;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c9 {
+  .c8 {
     background-color: window;
   }
 }
 
 @media (min-width:25rem) {
-  .c9 {
+  .c8 {
     padding: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c5 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
   }
 }
 
@@ -435,6 +422,16 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 <div>
+      <amp-analytics>
+        <script
+          type="application/json"
+        >
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"pageview":"\${base}s=598343&s2=68&p=pashto.bbc_pashto_radio.w172x8nvf4bchz5.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:pips:w172x8nvf4bchz5]&x2=[amp]&x3=[news-pashto]&x4=[ps]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[وروستي+خبرونه+-+BBC+News+پښتو]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <div>
+        chartbeat
+      </div>
       <main
         class="c0 c1"
         dir="rtl"
@@ -470,15 +467,11 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
               <div
                 class="c7"
               >
-                <div
+                <strong
                   class="c8"
                 >
-                  <strong
-                    class="c9"
-                  >
-                    دغه فایل نور د لاسرسي وړ نه دی.
-                  </strong>
-                </div>
+                  دغه فایل نور د لاسرسي وړ نه دی.
+                </strong>
               </div>
             </div>
           </div>
@@ -513,7 +506,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   margin: 0;
 }
 
-.c7 {
+.c6 {
   position: absolute;
   top: 0;
   left: 0;
@@ -521,7 +514,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   height: 100%;
 }
 
-.c8 {
+.c7 {
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -537,7 +530,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   background-color: rgba(34,34,34,0.75);
 }
 
-.c9 {
+.c8 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -546,18 +539,14 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   border-bottom: 0.0625rem solid transparent;
 }
 
-.c6 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 50rem;
-  max-width: calc(100vw - 2rem);
+.c5 {
   position: relative;
-  overflow: hidden;
-  height: 165px;
+  min-height: 165px;
+  margin-bottom: 2rem;
 }
 
 .c1 {
+  width: 100%;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -676,39 +665,26 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c7 {
     font-size: 0.875rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c8 {
+  .c7 {
     background-color: transparent;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c9 {
+  .c8 {
     background-color: window;
   }
 }
 
 @media (min-width:25rem) {
-  .c9 {
+  .c8 {
     padding: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c5 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
   }
 }
 
@@ -853,6 +829,10 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
       property="fb:app_id"
     />
     <meta
+      content="285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"
+      property="fb:pages"
+    />
+    <meta
       content="yes"
       name="mobile-web-app-capable"
     />
@@ -927,6 +907,10 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   </head>
   <body>
     <div>
+      <noscript />
+      <div>
+        chartbeat
+      </div>
       <main
         class="c0 c1"
         dir="rtl"
@@ -962,15 +946,11 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
               <div
                 class="c7"
               >
-                <div
+                <strong
                   class="c8"
                 >
-                  <strong
-                    class="c9"
-                  >
-                    دغه فایل نور د لاسرسي وړ نه دی.
-                  </strong>
-                </div>
+                  دغه فایل نور د لاسرسي وړ نه دی.
+                </strong>
               </div>
             </div>
           </div>
@@ -1006,6 +986,7 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
 }
 
 .c1 {
+  width: 100%;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -1138,6 +1119,10 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
 }
 
 <div>
+  <noscript />
+  <div>
+    chartbeat
+  </div>
   <main
     class="c0 c1"
     dir="ltr"
@@ -1193,7 +1178,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   margin: 0;
 }
 
-.c7 {
+.c6 {
   position: absolute;
   top: 0;
   left: 0;
@@ -1201,7 +1186,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   height: 100%;
 }
 
-.c8 {
+.c7 {
   font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1217,7 +1202,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   background-color: rgba(34,34,34,0.75);
 }
 
-.c9 {
+.c8 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -1226,18 +1211,14 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   border-bottom: 0.0625rem solid transparent;
 }
 
-.c6 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 50rem;
-  max-width: calc(100vw - 2rem);
+.c5 {
   position: relative;
-  overflow: hidden;
-  height: 165px;
+  min-height: 165px;
+  margin-bottom: 2rem;
 }
 
 .c1 {
+  width: 100%;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -1356,39 +1337,26 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c7 {
     font-size: 0.875rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c8 {
+  .c7 {
     background-color: transparent;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c9 {
+  .c8 {
     background-color: window;
   }
 }
 
 @media (min-width:25rem) {
-  .c9 {
+  .c8 {
     padding: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c5 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
   }
 }
 
@@ -1407,6 +1375,10 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 <div>
+  <noscript />
+  <div>
+    chartbeat
+  </div>
   <main
     class="c0 c1"
     dir="ltr"
@@ -1442,15 +1414,11 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
           <div
             class="c7"
           >
-            <div
+            <strong
               class="c8"
             >
-              <strong
-                class="c9"
-              >
-                더 이상 이용할 수 없는 콘텐츠입니다.
-              </strong>
-            </div>
+              더 이상 이용할 수 없는 콘텐츠입니다.
+            </strong>
           </div>
         </div>
       </div>
