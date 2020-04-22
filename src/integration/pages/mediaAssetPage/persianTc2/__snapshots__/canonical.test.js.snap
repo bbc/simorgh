@@ -6,6 +6,8 @@ exports[`Canonical Media Asset Page Analytics ATI: https://logws1363.ati-host.ne
 
 exports[`Canonical Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
+exports[`Canonical Media Asset Page Footer I can click the external link 1`] = `"https://www.bbc.com/persian/institutional/2011/04/000001_links"`;
+
 exports[`Canonical Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
 exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, فارسی"`;

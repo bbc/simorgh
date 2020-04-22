@@ -6,6 +6,8 @@ exports[`Canonical Articles Analytics ATI: https://logws1363.ati-host.net? 1`] =
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
+exports[`Canonical Articles Footer I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
 exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News, Pidgin"`;

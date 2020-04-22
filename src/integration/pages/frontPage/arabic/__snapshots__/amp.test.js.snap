@@ -96,6 +96,8 @@ Object {
 
 exports[`AMP Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
+exports[`AMP Front Page Footer I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
 exports[`AMP Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
 exports[`AMP Front Page Header I can see the branding 1`] = `"BBC News, عربي"`;
