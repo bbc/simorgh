@@ -1,65 +1,60 @@
 const { jestDirAlias } = require('./dirAlias');
 
+const unitTests = {
+  setupFiles: ['./src/testHelpers/jest-setup.js'],
+  setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
+  moduleNameMapper: jestDirAlias,
+  snapshotSerializers: ['enzyme-to-json/serializer'],
+  transform: {
+    '^.+\\.js$': 'babel-jest',
+    '^.+\\.jsx$': 'babel-jest',
+  },
+  displayName: 'Unit Tests',
+  collectCoverageFrom: [
+    '**/(src|scripts)/**/*.{js,jsx}',
+    '!**/src/testHelpers/**',
+    '!**/*.stories.jsx',
+    '!**/src/integration/!(utils)/**/*',
+  ],
+  testMatch: [
+    '**/__tests__/**/*.js?(x)',
+    '**/?(*.)+(spec|test).js?(x)',
+    '!**/src/integration/!(utils)/**/*',
+  ],
+};
+
+const ampIntegrationTests = {
+  displayName: 'Integration Tests - AMP',
+  testEnvironment: './src/integration/integrationTestEnvironment.js',
+  testEnvironmentOptions: {
+    platform: 'amp',
+  },
+  setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
+  testMatch: ['**/src/integration/!(utils)/**/*[^.canonical].test.js'],
+};
+
+const canonicalIntegrationTests = {
+  displayName: 'Integration Tests - Canonical',
+  testEnvironment: './src/integration/integrationTestEnvironment.js',
+  testEnvironmentOptions: {
+    platform: 'canonical',
+  },
+  setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
+  testMatch: ['**/src/integration/!(utils)/**/*[^.amp].test.js'],
+};
+
 module.exports = {
-  projects: [
-    {
-      displayName: 'Unit Tests',
-      reporters: [
-        'default',
-        [
-          'jest-junit',
-          {
-            suiteName: 'Unit Tests',
-            outputDirectory: 'reports/jest',
-            uniqueOutputName: 'true',
-            ancestorSeparator: ' › ',
-          },
-        ],
-      ],
-      collectCoverageFrom: [
-        '**/(src|scripts)/**/*.{js,jsx}',
-        '!**/src/testHelpers/**',
-        '!**/*.stories.jsx',
-        '!**/src/integration/**/*.{js,jsx}',
-      ],
-      setupFiles: ['./src/testHelpers/jest-setup.js'],
-      testMatch: [
-        '**/__tests__/**/*.js?(x)',
-        '**/?(*.)+(spec|test).js?(x)',
-        '!**/src/integration/**/*.{js,jsx}',
-      ],
-      snapshotSerializers: ['enzyme-to-json/serializer'],
-      setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
-      moduleNameMapper: jestDirAlias,
-      transform: {
-        '^.+\\.js$': 'babel-jest',
-        '^.+\\.jsx$': 'babel-jest',
+  projects: [unitTests, ampIntegrationTests, canonicalIntegrationTests],
+  reporters: [
+    'default',
+    [
+      'jest-junit',
+      {
+        suiteName: 'Jest Tests',
+        outputDirectory: 'reports/jest',
+        uniqueOutputName: 'true',
+        ancestorSeparator: ' › ',
       },
-    },
-    {
-      displayName: 'Integration Tests',
-      testEnvironment: './src/integration/integrationTestEnvironment.js',
-      reporters: [
-        'default',
-        [
-          'jest-junit',
-          {
-            suiteName: 'Integration Tests',
-            outputDirectory: 'reports/jest',
-            uniqueOutputName: 'true',
-            ancestorSeparator: ' › ',
-          },
-        ],
-      ],
-      setupFiles: ['./src/testHelpers/jest-setup.js'],
-      testMatch: ['**/src/integration/**/*.test.{js,jsx}'],
-      snapshotSerializers: ['jest-serializer-html'],
-      setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
-      moduleNameMapper: jestDirAlias,
-      transform: {
-        '^.+\\.js$': 'babel-jest',
-        '^.+\\.jsx$': 'babel-jest',
-      },
-    },
+    ],
   ],
 };
