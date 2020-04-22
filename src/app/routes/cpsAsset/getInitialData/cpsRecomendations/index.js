@@ -30,7 +30,6 @@ const getNthCpsParagraphIndex = (blocks, n) => {
       indexCount = index;
       return true;
     }
-    indexCount += 1;
     return false;
   });
   return indexCount;
@@ -38,16 +37,16 @@ const getNthCpsParagraphIndex = (blocks, n) => {
 
 const insertRecommendationsBlock = (recommendations, blocks) => {
   // get the index of the 7th paragraph
-  const reccomendationIndex = getNthCpsParagraphIndex(blocks, 7) + 1;
+  const recommendationIndex = getNthCpsParagraphIndex(blocks, 7) + 1;
 
   // split blocks at the index of the 7th paragraph
-  const [a, b] = splitAt(reccomendationIndex, blocks);
+  const [a, b] = splitAt(recommendationIndex, blocks);
 
   // reconstruct
   return [...a, { ...recommendations }, ...b];
 };
 
-const cpsRecomendations = (originalJson) => {
+const cpsRecommendations = (originalJson) => {
   const json = deepClone(originalJson);
   const pageType = path(['metadata', 'type'], json);
   const blocks = path(['content', 'model', 'blocks'], json);
@@ -73,4 +72,4 @@ const cpsRecomendations = (originalJson) => {
   return json;
 };
 
-export default cpsRecomendations;
+export default cpsRecommendations;
