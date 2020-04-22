@@ -4,14 +4,15 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 <DocumentFragment>
   <section
     aria-labelledby="top-stories-heading"
-    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
+    class="Wrapper-opyob2-0 dlivvF"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
+      class="GridComponent-nf79gm-0 ehIAex Wrapper-opyob2-0 dlivvF"
+      dir="ltr"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT"
       >
         <div
           class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -120,14 +121,15 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 <DocumentFragment>
   <section
     aria-labelledby="top-stories-heading"
-    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
+    class="Wrapper-opyob2-0 dlivvF"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
+      class="GridComponent-nf79gm-0 ehIAex Wrapper-opyob2-0 dlivvF"
+      dir="ltr"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT"
       >
         <div
           class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -153,7 +155,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
         </h2>
       </div>
       <div
-        class="SingleContentWrapper-opyob2-2 cSBeTC"
+        class="SingleContentWrapper-opyob2-3 iddZTf"
       >
         <div
           class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"

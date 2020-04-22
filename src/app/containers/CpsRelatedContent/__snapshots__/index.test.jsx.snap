@@ -8,13 +8,13 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 EnabledGridWrapper-opyob2-1 JNKTB"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
+        class="GridItemConstrainedLarge-sc-12lwanc-4 EnabledGridWrapper-opyob2-1 JNKTB"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA"
+          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT"
         >
           <div
             class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -235,13 +235,13 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 EnabledGridWrapper-opyob2-1 JNKTB"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
+        class="GridItemConstrainedLarge-sc-12lwanc-4 EnabledGridWrapper-opyob2-1 JNKTB"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA"
+          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT"
         >
           <div
             class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -267,7 +267,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
           </h2>
         </div>
         <div
-          class="SingleContentWrapper-opyob2-2 cSBeTC"
+          class="SingleContentWrapper-opyob2-3 iddZTf"
         >
           <div
             class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
