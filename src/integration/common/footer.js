@@ -10,7 +10,10 @@ export default () => {
     it('I can click the external link', () => {
       const externalLinkEl = document.querySelector('footer div p a');
       expect(externalLinkEl).toBeInTheDocument();
-      expect(externalLinkEl.getAttribute('href')).toMatchSnapshot();
+      expect(externalLinkEl.textContent).toBeTruthy();
+      expect(externalLinkEl.getAttribute('href')).toMatchSnapshot(
+        externalLinkEl.textContent,
+      );
     });
 
     it('I can see the BBC branding', () => {

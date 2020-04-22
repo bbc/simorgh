@@ -96,7 +96,7 @@ Object {
 
 exports[`AMP Live Radio Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/amharic"`;
 
-exports[`AMP Live Radio Footer I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+exports[`AMP Live Radio Footer I can click the external link: ስለ ውጪ ሊንኮች ያለን አቀራረብ 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
 exports[`AMP Live Radio Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 

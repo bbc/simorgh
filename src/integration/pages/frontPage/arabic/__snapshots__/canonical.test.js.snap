@@ -6,7 +6,7 @@ exports[`Canonical Front Page Analytics ATI: https://logws1363.ati-host.net? 1`]
 
 exports[`Canonical Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
-exports[`Canonical Front Page Footer I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+exports[`Canonical Front Page Footer I can click the external link: سياستنا بخصوص الروابط الخارجية. 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
 exports[`Canonical Front Page Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 

@@ -6,7 +6,7 @@ exports[`Canonical Media Asset Page Analytics ATI: https://logws1363.ati-host.ne
 
 exports[`Canonical Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
-exports[`Canonical Media Asset Page Footer I can click the external link 1`] = `"https://www.bbc.com/persian/institutional/2011/04/000001_links"`;
+exports[`Canonical Media Asset Page Footer I can click the external link: سیاست ما درباره لینک دادن به سایت های دیگر. 1`] = `"https://www.bbc.com/persian/institutional/2011/04/000001_links"`;
 
 exports[`Canonical Media Asset Page Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
