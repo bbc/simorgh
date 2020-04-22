@@ -1,9 +1,13 @@
 export default () => {
-  it('AMP analytics config is loaded', () => {
-    expect(
-      amp.document.querySelector(
-        'amp-analytics script[type="application/json"]',
-      ).textContent,
-    ).toMatch('https://logws1363.ati-host.net?');
+  describe('Analytics', () => {
+    it('ATI', () => {
+      expect(
+        JSON.parse(
+          document.querySelector(
+            'amp-analytics script[type="application/json"]',
+          ).textContent,
+        ),
+      ).toMatchSnapshot();
+    });
   });
 };
