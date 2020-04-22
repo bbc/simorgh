@@ -16,7 +16,7 @@ exports[`Canonical On Demand Radio Episode I can see the episode summary 1`] = `
 
 exports[`Canonical On Demand Radio Episode I can see the episode title 1`] = `"04/02/2020 GMT"`;
 
-exports[`Canonical On Demand Radio Episode Media player embed A11y I can read the media player title 1`] = `"Audio player"`;
+exports[`Canonical On Demand Radio Episode Media player embed A11y I can read the media player title 1`] = `"اډیو پلیئر"`;
 
 exports[`Canonical On Demand Radio Episode Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w172x8nvf4bchz5/ps?morph_env=live"`;
 
