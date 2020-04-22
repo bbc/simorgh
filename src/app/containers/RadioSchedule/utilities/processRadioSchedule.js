@@ -25,10 +25,7 @@ export const getLink = (state, program, service) => {
 };
 
 const logProgramError = error => {
-  logger.error({
-    event: RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR,
-    message: error,
-  });
+  logger.error(RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR, { error });
 };
 
 export default (data, service, currentTime) => {
