@@ -28,18 +28,22 @@ const assertURLContains = (product, variantValue) => {
 };
 
 const assertScriptSwitchButton = (service, variantValue) => {
-  const serviceName = config[service].name;
   const scriptToSwitchTo =
-    appConfig[serviceName][variantValue].scriptLink.variant;
+    appConfig[config[service].name][variantValue].scriptLink.variant;
 
   cy.get('header[role="banner"]').within(() => {
-    cy.get(`a[data-variant="${scriptToSwitchTo}"]`);
+    cy.get(`a[data-variant="${scriptToSwitchTo}"]`).should('exist');
   });
+};
+
+const assertLang = (service, variantValue) => {
+  const expectedLang = appConfig[config[service].name][variantValue].lang;
+  cy.get(`html[lang=${expectedLang}]`);
+  // cy.get('html').should('have.property', 'lang', expectedLang);
 };
 
 const clickHomePageLink = product => {
   cy.get('header[role="banner"]').within(() => {
-    // TODO: remove first
     cy.get(`a[href="/${product}"]`).click();
   });
 };
@@ -94,6 +98,7 @@ Object.keys(config)
               getPrivacyBannerAccept(service, variant).click();
 
               // Accept cookie banner
+              // TODO: What is the difference between service & variant?
               getCookieBannerAccept(service, variant).click();
 
               // Checks URL is in current variant
@@ -102,11 +107,13 @@ Object.keys(config)
               // Assert the script switch button is correct for variant
               assertScriptSwitchButton(service, variant);
 
+              // Assert lang for page is as expected for variant
+              assertLang(service, variant);
+
               // Clicks script switcher
-              // TODO: Does it need to have a variant passed in?
               clickScriptSwitcher(otherVariant);
 
-              // TODO: Asset lang is as expected lang="sr-cyrl"
+              // TODO: group assertions
               // Checks cookie is set to other variant
               assertScriptCookie(product, otherVariant);
 
@@ -115,6 +122,9 @@ Object.keys(config)
 
               // Assert the script switch button is for other variant
               assertScriptSwitchButton(service, otherVariant);
+
+              // Assert the lang for hte page is for other variant
+              assertLang(service, variant);
 
               // Navigate to home page by clicking link in the banner
               clickHomePageLink(product);
