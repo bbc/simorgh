@@ -1,7 +1,6 @@
 {
   "globals": {
-    "amp": true,
-    "canonical": true,
-    "document": "off"
+    "pageType": true,
+    "service": true
   }
 }
