@@ -1,5 +1,4 @@
 /* eslint-disable consistent-return */
-
 const getSchemaForMediaFormat = format =>
   format === 'video' ? 'VideoObject' : 'AudioObject';
 
@@ -15,10 +14,8 @@ const getMediaSchemasForSTY = jsonData => {
       .filter(block => block.type === 'media')
       .map(mediaBlock => mediaBlock.format)
       .map(format => getSchemaForMediaFormat(format));
-    return mediaFormats.join(',');
+    return [...new Set(mediaFormats)].sort();
   }
-
-  return '';
 };
 
 const getSchemas = jsonData => {
@@ -27,8 +24,14 @@ const getSchemas = jsonData => {
   switch (pageType) {
     case 'MAP':
       return ['Article', getMediaSchemaForMAP(jsonData)];
-    case 'STY':
-      return ['ReportageNewsArticle', getMediaSchemasForSTY(jsonData)];
+    case 'STY': {
+      const storySchemas = ['ReportageNewsArticle'];
+      const mediaSchemas = getMediaSchemasForSTY(jsonData);
+      if (mediaSchemas) {
+        storySchemas.push(...mediaSchemas);
+      }
+      return storySchemas;
+    }
     case 'PGL':
       return ['Article'];
     case 'WS-LIVE': // Live Radio
