@@ -10,6 +10,38 @@ exports[`Canonical Live Radio Footer I can click the external link 1`] = `"https
 
 exports[`Canonical Live Radio Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다 외부 링크에 대한 본사 정책 보기"`;
 
+exports[`Canonical Live Radio Header I can see a navigation link with title 1`] = `"뉴스"`;
+
+exports[`Canonical Live Radio Header I can see a navigation link with title 2`] = `"비디오"`;
+
+exports[`Canonical Live Radio Header I can see a navigation link with title 3`] = `"다운로드"`;
+
+exports[`Canonical Live Radio Header I can see a navigation link with title 4`] = `"TOP 뉴스"`;
+
+exports[`Canonical Live Radio Header I can see a navigation link with title 5`] = `"뉴스"`;
+
+exports[`Canonical Live Radio Header I can see a navigation link with title 6`] = `"비디오"`;
+
+exports[`Canonical Live Radio Header I can see a navigation link with title 7`] = `"다운로드"`;
+
+exports[`Canonical Live Radio Header I can see a navigation link with title 8`] = `"TOP 뉴스"`;
+
+exports[`Canonical Live Radio Header I can see a navigation link with url 1`] = `"/korean"`;
+
+exports[`Canonical Live Radio Header I can see a navigation link with url 2`] = `"/korean/media/video"`;
+
+exports[`Canonical Live Radio Header I can see a navigation link with url 3`] = `"/korean/downloads"`;
+
+exports[`Canonical Live Radio Header I can see a navigation link with url 4`] = `"/korean/popular/read"`;
+
+exports[`Canonical Live Radio Header I can see a navigation link with url 5`] = `"/korean"`;
+
+exports[`Canonical Live Radio Header I can see a navigation link with url 6`] = `"/korean/media/video"`;
+
+exports[`Canonical Live Radio Header I can see a navigation link with url 7`] = `"/korean/downloads"`;
+
+exports[`Canonical Live Radio Header I can see a navigation link with url 8`] = `"/korean/popular/read"`;
+
 exports[`Canonical Live Radio Header I can see the branding 1`] = `"BBC News, 코리아"`;
 
 exports[`Canonical Live Radio I can see the headline 1`] = `"BBC 코리아 라디오"`;

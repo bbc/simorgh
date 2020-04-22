@@ -10,6 +10,134 @@ exports[`Canonical Media Asset Page Footer I can click the external link 1`] = `
 
 exports[`Canonical Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 1`] = `"صفحه اول"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 2`] = `"کرونا"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 3`] = `"پخش زنده"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 4`] = `"ویدیو"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 5`] = `"تلویزیون"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 6`] = `"رادیو"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 7`] = `"ايران"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 8`] = `"افغانستان"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 9`] = `"جهان"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 10`] = `"هنر"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 11`] = `"ورزش"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 12`] = `"اقتصاد"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 13`] = `"دانش"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 14`] = `"ناظران می‌گویند"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 15`] = `"صفحات ویژه"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 16`] = `"وبلاگ‌ها"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 17`] = `"صفحه اول"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 18`] = `"کرونا"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 19`] = `"پخش زنده"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 20`] = `"ویدیو"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 21`] = `"تلویزیون"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 22`] = `"رادیو"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 23`] = `"ايران"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 24`] = `"افغانستان"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 25`] = `"جهان"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 26`] = `"هنر"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 27`] = `"ورزش"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 28`] = `"اقتصاد"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 29`] = `"دانش"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 30`] = `"ناظران می‌گویند"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 31`] = `"صفحات ویژه"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with title 32`] = `"وبلاگ‌ها"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 1`] = `"/persian"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 2`] = `"/persian/science-52004647"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 3`] = `"/persian/media-49522521"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 4`] = `"/persian/media/video"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 5`] = `"/persian/tv-and-radio-37434377"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 6`] = `"/persian/tv-and-radio-37434376"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 7`] = `"/persian/iran"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 8`] = `"/persian/afghanistan"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 9`] = `"/persian/world"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 10`] = `"/persian/arts"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 11`] = `"/persian/sport"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 12`] = `"/persian/business"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 13`] = `"/persian/science"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 14`] = `"/persian/blogs/viewpoints"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 15`] = `"/persian/world-37434378"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 16`] = `"/persian/services/2012/01/000000_blogs_list"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 17`] = `"/persian"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 18`] = `"/persian/science-52004647"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 19`] = `"/persian/media-49522521"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 20`] = `"/persian/media/video"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 21`] = `"/persian/tv-and-radio-37434377"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 22`] = `"/persian/tv-and-radio-37434376"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 23`] = `"/persian/iran"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 24`] = `"/persian/afghanistan"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 25`] = `"/persian/world"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 26`] = `"/persian/arts"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 27`] = `"/persian/sport"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 28`] = `"/persian/business"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 29`] = `"/persian/science"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 30`] = `"/persian/blogs/viewpoints"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 31`] = `"/persian/world-37434378"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link with url 32`] = `"/persian/services/2012/01/000000_blogs_list"`;
+
 exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, فارسی"`;
 
 exports[`Canonical Media Asset Page I can see the headline 1`] = `"Trump long headline"`;

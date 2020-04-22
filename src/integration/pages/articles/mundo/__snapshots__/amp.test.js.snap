@@ -80,6 +80,102 @@ exports[`AMP Articles Footer I can click the external link 1`] = `"https://www.b
 
 exports[`AMP Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
+exports[`AMP Articles Header I can see a navigation link with title 1`] = `"Noticias"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 2`] = `"América Latina"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 3`] = `"Internacional"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 4`] = `"Economía"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 5`] = `"Tecnología"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 6`] = `"Ciencia"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 7`] = `"Salud"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 8`] = `"Cultura"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 9`] = `"Deportes"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 10`] = `"Video"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 11`] = `"Hay Festival"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 12`] = `"Centroamérica Cuenta"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 13`] = `"Noticias"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 14`] = `"América Latina"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 15`] = `"Internacional"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 16`] = `"Economía"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 17`] = `"Tecnología"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 18`] = `"Ciencia"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 19`] = `"Salud"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 20`] = `"Cultura"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 21`] = `"Deportes"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 22`] = `"Video"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 23`] = `"Hay Festival"`;
+
+exports[`AMP Articles Header I can see a navigation link with title 24`] = `"Centroamérica Cuenta"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 1`] = `"/mundo"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 2`] = `"/mundo/america_latina"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 3`] = `"/mundo/internacional"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 4`] = `"/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 5`] = `"/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 6`] = `"/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 7`] = `"/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 8`] = `"/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 9`] = `"/mundo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 10`] = `"/mundo/media/video"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 11`] = `"/mundo/noticias-36795069"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 12`] = `"/mundo/noticias-43826245"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 13`] = `"/mundo"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 14`] = `"/mundo/america_latina"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 15`] = `"/mundo/internacional"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 16`] = `"/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 17`] = `"/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 18`] = `"/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 19`] = `"/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 20`] = `"/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 21`] = `"/mundo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 22`] = `"/mundo/media/video"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 23`] = `"/mundo/noticias-36795069"`;
+
+exports[`AMP Articles Header I can see a navigation link with url 24`] = `"/mundo/noticias-43826245"`;
+
 exports[`AMP Articles Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
 exports[`AMP Articles I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/ee58/test/4a2f4c00-e695-11e9-88d6-81aa2ccc6d4c.jpg"`;

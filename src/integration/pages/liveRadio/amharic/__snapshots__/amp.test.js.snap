@@ -100,6 +100,38 @@ exports[`AMP Live Radio Footer I can click the external link 1`] = `"https://www
 
 exports[`AMP Live Radio Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም. ስለ ውጪ ሊንኮች ያለን አቀራረብ"`;
 
+exports[`AMP Live Radio Header I can see a navigation link with title 1`] = `"ዜና"`;
+
+exports[`AMP Live Radio Header I can see a navigation link with title 2`] = `"ኢትዮጵያ"`;
+
+exports[`AMP Live Radio Header I can see a navigation link with title 3`] = `"ቪዲዮ"`;
+
+exports[`AMP Live Radio Header I can see a navigation link with title 4`] = `"በጣም የተወደዱ"`;
+
+exports[`AMP Live Radio Header I can see a navigation link with title 5`] = `"ዜና"`;
+
+exports[`AMP Live Radio Header I can see a navigation link with title 6`] = `"ኢትዮጵያ"`;
+
+exports[`AMP Live Radio Header I can see a navigation link with title 7`] = `"ቪዲዮ"`;
+
+exports[`AMP Live Radio Header I can see a navigation link with title 8`] = `"በጣም የተወደዱ"`;
+
+exports[`AMP Live Radio Header I can see a navigation link with url 1`] = `"/amharic"`;
+
+exports[`AMP Live Radio Header I can see a navigation link with url 2`] = `"/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"`;
+
+exports[`AMP Live Radio Header I can see a navigation link with url 3`] = `"/amharic/media/video"`;
+
+exports[`AMP Live Radio Header I can see a navigation link with url 4`] = `"/amharic/popular/read"`;
+
+exports[`AMP Live Radio Header I can see a navigation link with url 5`] = `"/amharic"`;
+
+exports[`AMP Live Radio Header I can see a navigation link with url 6`] = `"/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"`;
+
+exports[`AMP Live Radio Header I can see a navigation link with url 7`] = `"/amharic/media/video"`;
+
+exports[`AMP Live Radio Header I can see a navigation link with url 8`] = `"/amharic/popular/read"`;
+
 exports[`AMP Live Radio Header I can see the branding 1`] = `"BBC News, አማርኛ"`;
 
 exports[`AMP Live Radio I can see the headline 1`] = `"ያድምጡ"`;

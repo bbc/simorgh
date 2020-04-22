@@ -12,8 +12,23 @@ export default () => {
       const navigationItemEls = document.querySelector(
         'header nav ul > li > a',
       );
-
       expect(navigationItemEls).toBeInTheDocument();
+    });
+
+    const navigationLinks = document.querySelectorAll('header nav ul > li > a');
+    navigationLinks.forEach(navigationLink => {
+      describe('I can see a navigation link', () => {
+        beforeEach(() => {
+          expect(navigationLink).toBeInTheDocument();
+        });
+        it('with title', () => {
+          expect(navigationLink.textContent).toBeTruthy();
+          expect(navigationLink.textContent).toMatchSnapshot();
+        });
+        it('with url', () => {
+          expect(navigationLink.getAttribute('href')).toMatchSnapshot();
+        });
+      });
     });
 
     it('I can see a skip to content link', () => {
