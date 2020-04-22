@@ -81,8 +81,13 @@ const AMP_ACCESS_FETCH = service => {
   );
 };
 
+// What sets personalization? Is it the consent banner?
+// For now try use personalizationEnabled value in user context. Pass it in from UserContext in simorgh/src/app/containers/Ad/index.jsx
+// Alternative, have personalisation UI come from what sets personalization
+
 // eslint-disable-next-line react/prop-types
-const AmpAd = ({ service }) => {
+const AmpAd = ({ service, personalisationEnabled }) => {
+  console.log('personalisationEnabled --- ', personalisationEnabled);
   return (
     <>
       <Helmet>
