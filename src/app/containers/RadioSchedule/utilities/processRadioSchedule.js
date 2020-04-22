@@ -1,10 +1,10 @@
 import findLastIndex from 'ramda/src/findLastIndex';
 import propSatisfies from 'ramda/src/propSatisfies';
 import path from 'ramda/src/path';
-import webLogger from '#lib/logger.web';
+import nodeLogger from '#lib/logger.node';
 import { RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR } from '#lib/logger.const';
 
-const logger = webLogger();
+const logger = nodeLogger(__filename);
 
 export const getProgramState = (currentTime, startTime, endTime) => {
   const isLive = currentTime < endTime && currentTime > startTime;
@@ -24,17 +24,10 @@ export const getLink = (state, program, service) => {
   return state === 'live' ? `${url}/liveradio` : `${url}/${pid}`;
 };
 
-const logMissingFieldError = field => {
-  logger.error(
-    JSON.stringify(
-      {
-        event: RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR,
-        message: `${field} field is missing in program`,
-      },
-      null,
-      2,
-    ),
-  );
+const logProgramError = error => {
+  logger.error(RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR, {
+    error,
+  });
 };
 
 export default (data, service, currentTime) => {
@@ -52,6 +45,11 @@ export default (data, service, currentTime) => {
 
   const scheduleDataIsComplete =
     schedules[latestProgramIndex - 2] && schedules[latestProgramIndex + 1];
+
+  if (!scheduleDataIsComplete) {
+    logProgramError('Incomplete program schedule');
+  }
+
   const programsToShow = scheduleDataIsComplete && [
     schedules[latestProgramIndex],
     schedules[latestProgramIndex - 1],
@@ -72,13 +70,13 @@ export default (data, service, currentTime) => {
       const episodeTitle = path(['episode', 'presentationTitle'], program);
 
       if (!publishedTimeStart) {
-        logMissingFieldError('publishedTimeStart');
+        logProgramError('publishTimeStart field is missing in program');
       }
       if (!brandTitle) {
-        logMissingFieldError('title');
+        logProgramError('title field is missing in program');
       }
       if (!episodeTitle) {
-        logMissingFieldError('presentationTitle');
+        logProgramError('episodeTitle field is missing in program');
       }
 
       const currentState = getProgramState(
