@@ -1,5 +1,6 @@
 {
   "globals": {
-    "pageType": true
+    "pageType": true,
+    "service": true
   }
 }

@@ -83,7 +83,11 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       });
 
       route
-        .getInitialData({ path: location.pathname, service: nextService })
+        .getInitialData({
+          path: location.pathname,
+          service: nextService,
+          variant: nextVariant,
+        })
         .then(data => {
           clearTimeout(loaderTimeout);
           shouldSetFocus.current = true;
