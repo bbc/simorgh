@@ -4,13 +4,15 @@ exports[`AMP Story Page A11y I can see the skip to content link 1`] = `"Ir al co
 
 exports[`AMP Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`AMP Story Page Footer I can click the external link: Lee sobre nuestra postura acerca de enlaces externos. 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
-
 exports[`AMP Story Page Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`AMP Story Page Footer I can see a link: BBC News, Mundo 1`] = `"/mundo"`;
 
 exports[`AMP Story Page Footer I can see a link: Contacta a la BBC 1`] = `"https://www.bbc.com/mundo/institucional-36400011"`;
 
 exports[`AMP Story Page Footer I can see a link: Cookies 1`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+
+exports[`AMP Story Page Footer I can see a link: Lee sobre nuestra postura acerca de enlaces externos. 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
 exports[`AMP Story Page Footer I can see a link: Política de privacidad 1`] = `"https://www.bbc.com/mundo/institucional-36400009"`;
 

@@ -6,15 +6,17 @@ exports[`Canonical Front Page Analytics ATI: https://logws1363.ati-host.net? 1`]
 
 exports[`Canonical Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
-exports[`Canonical Front Page Footer I can click the external link: De way wey we de take go external link. 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
-
 exports[`Canonical Front Page Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
 exports[`Canonical Front Page Footer I can see a link: As e concern BBC 1`] = `"https://www.bbc.co.uk/aboutthebbc"`;
 
+exports[`Canonical Front Page Footer I can see a link: BBC News, Pidgin 1`] = `"/pidgin"`;
+
 exports[`Canonical Front Page Footer I can see a link: Call BBC 1`] = `"https://www.bbc.com/pidgin/institutional-42188215"`;
 
 exports[`Canonical Front Page Footer I can see a link: Cookies 1`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`Canonical Front Page Footer I can see a link: De way wey we de take go external link. 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
 exports[`Canonical Front Page Footer I can see a link: How dem dey take use am 1`] = `"https://www.bbc.co.uk/usingthebbc/terms/"`;
 

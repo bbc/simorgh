@@ -7,15 +7,6 @@ export default () => {
       expect(footerCopyrightEl.textContent).toMatchSnapshot();
     });
 
-    it('I can click the external link', () => {
-      const externalLinkEl = document.querySelector('footer div p a');
-      expect(externalLinkEl).toBeInTheDocument();
-      expect(externalLinkEl.textContent).toBeTruthy();
-      expect(externalLinkEl.getAttribute('href')).toMatchSnapshot(
-        externalLinkEl.textContent,
-      );
-    });
-
     it('I can see the BBC branding', () => {
       const brandingEl = document.querySelector('footer svg');
 
@@ -32,7 +23,7 @@ export default () => {
       expect(brandingImageEl).toBeInTheDocument();
     });
 
-    const footerLinks = document.querySelectorAll('footer ul > li > a');
+    const footerLinks = document.querySelectorAll('footer a');
     footerLinks.forEach(link => {
       it('I can see a link', () => {
         expect(link).toBeInTheDocument();

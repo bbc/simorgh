@@ -96,13 +96,15 @@ Object {
 
 exports[`AMP Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
-exports[`AMP Front Page Footer I can click the external link: سياستنا بخصوص الروابط الخارجية. 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
-
 exports[`AMP Front Page Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`AMP Front Page Footer I can see a link: BBC News, عربي 1`] = `"/arabic"`;
 
 exports[`AMP Front Page Footer I can see a link: اتصل بـ بي بي سي 1`] = `"https://www.bbc.com/arabic/institutional-37731355"`;
 
 exports[`AMP Front Page Footer I can see a link: سياسة الخصوصية 1`] = `"https://www.bbc.com/arabic/institutional-37731353"`;
+
+exports[`AMP Front Page Footer I can see a link: سياستنا بخصوص الروابط الخارجية. 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
 exports[`AMP Front Page Footer I can see a link: شروط الاستخدام 1`] = `"https://www.bbc.com/arabic/institutional-37731351"`;
 

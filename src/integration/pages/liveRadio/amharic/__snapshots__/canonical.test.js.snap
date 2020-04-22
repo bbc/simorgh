@@ -6,11 +6,13 @@ exports[`Canonical Live Radio Analytics ATI: https://logws1363.ati-host.net? 1`]
 
 exports[`Canonical Live Radio Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/amharic"`;
 
-exports[`Canonical Live Radio Footer I can click the external link: ስለ ውጪ ሊንኮች ያለን አቀራረብ 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
-
 exports[`Canonical Live Radio Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
+exports[`Canonical Live Radio Footer I can see a link: BBC News, አማርኛ 1`] = `"/amharic"`;
+
 exports[`Canonical Live Radio Footer I can see a link: ስለ ቢቢሲ 1`] = `"https://www.bbc.com/aboutthebbc"`;
+
+exports[`Canonical Live Radio Footer I can see a link: ስለ ውጪ ሊንኮች ያለን አቀራረብ 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
 exports[`Canonical Live Radio Footer I can see a link: ቢቢሲን ለምን ማመን እንደሚገባዎ 1`] = `"https://www.bbc.com/amharic/institutional-49283133"`;
 

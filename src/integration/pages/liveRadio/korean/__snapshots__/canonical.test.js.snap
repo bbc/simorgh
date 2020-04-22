@@ -6,9 +6,9 @@ exports[`Canonical Live Radio Analytics ATI: https://logws1363.ati-host.net? 1`]
 
 exports[`Canonical Live Radio Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/korean"`;
 
-exports[`Canonical Live Radio Footer I can click the external link: 외부 링크에 대한 본사 정책 보기 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
-
 exports[`Canonical Live Radio Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Canonical Live Radio Footer I can see a link: BBC News, 코리아 1`] = `"/korean"`;
 
 exports[`Canonical Live Radio Footer I can see a link: BBC News를 신뢰할 수 있는 이유 1`] = `"https://www.bbc.com/korean/institutional-49283197"`;
 
@@ -17,6 +17,8 @@ exports[`Canonical Live Radio Footer I can see a link: BBC 소개 1`] = `"https:
 exports[`Canonical Live Radio Footer I can see a link: 개인정보취급방침 1`] = `"https://www.bbc.co.uk/usingthebbc/privacy/"`;
 
 exports[`Canonical Live Radio Footer I can see a link: 고객센터 1`] = `"https://www.bbc.com/korean/institutional-42224941"`;
+
+exports[`Canonical Live Radio Footer I can see a link: 외부 링크에 대한 본사 정책 보기 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
 exports[`Canonical Live Radio Footer I can see a link: 이용 약관 1`] = `"https://www.bbc.co.uk/usingthebbc/terms/"`;
 

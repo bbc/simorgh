@@ -76,15 +76,17 @@ Object {
 
 exports[`AMP Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
-exports[`AMP Media Asset Page Footer I can click the external link: سیاست ما درباره لینک دادن به سایت های دیگر. 1`] = `"https://www.bbc.com/persian/institutional/2011/04/000001_links"`;
-
 exports[`AMP Media Asset Page Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`AMP Media Asset Page Footer I can see a link: BBC News, فارسی 1`] = `"/persian"`;
 
 exports[`AMP Media Asset Page Footer I can see a link: تماس با بی بی سی 1`] = `"https://www.bbc.com/persian/institutional-37542244"`;
 
 exports[`AMP Media Asset Page Footer I can see a link: درباره بی بی سی 1`] = `"https://www.bbc.com/persian/institutional-37474136"`;
 
 exports[`AMP Media Asset Page Footer I can see a link: سیاست حفظ حریم خصوصی 1`] = `"https://www.bbc.com/persian/institutional-37540067"`;
+
+exports[`AMP Media Asset Page Footer I can see a link: سیاست ما درباره لینک دادن به سایت های دیگر. 1`] = `"https://www.bbc.com/persian/institutional/2011/04/000001_links"`;
 
 exports[`AMP Media Asset Page Footer I can see a link: شرایط استفاده 1`] = `"https://www.bbc.com/persian/institutional-37474133"`;
 
