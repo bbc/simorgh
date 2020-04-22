@@ -7,7 +7,6 @@ const getMediaSchemaForMAP = jsonData =>
 
 const getMediaSchemasForSTY = jsonData => {
   if (jsonData.metadata.blockTypes.includes('media')) {
-    // Get all media blocks & get the format for each
     const { blocks } = jsonData.content;
 
     const mediaFormats = blocks
