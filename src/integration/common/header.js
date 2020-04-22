@@ -15,7 +15,7 @@ export default () => {
       expect(navigationItemEls).toBeInTheDocument();
     });
 
-    const navigationLinks = document.querySelectorAll('header nav ul > li > a');
+    const navigationLinks = document.querySelectorAll('header nav a');
     navigationLinks.forEach(navigationLink => {
       it('I can see a navigation link', () => {
         expect(navigationLink).toBeInTheDocument();
