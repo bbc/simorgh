@@ -146,7 +146,7 @@ exports[`AMP Story Page SEO Heading level 1 1`] = `"Brexit: qué cambiará para 
 
 exports[`AMP Story Page SEO Lang attribute 1`] = `"es"`;
 
-exports[`AMP Story Page SEO Linked data 1`] = `
+exports[`AMP Story Page SEO Linked data : BackgroundNewsArticle 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "BackgroundNewsArticle",

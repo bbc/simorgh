@@ -190,7 +190,7 @@ exports[`AMP Articles SEO Heading level 1 1`] = `"Adams Oshiomhole say 'I still 
 
 exports[`AMP Articles SEO Lang attribute 1`] = `"pcm"`;
 
-exports[`AMP Articles SEO Linked data 1`] = `
+exports[`AMP Articles SEO Linked data : ReportageNewsArticle 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "ReportageNewsArticle",

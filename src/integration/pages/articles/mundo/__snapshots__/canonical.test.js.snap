@@ -152,7 +152,7 @@ exports[`Canonical Articles SEO Heading level 1 1`] = `"Este es el titular de es
 
 exports[`Canonical Articles SEO Lang attribute 1`] = `"es"`;
 
-exports[`Canonical Articles SEO Linked data 1`] = `
+exports[`Canonical Articles SEO Linked data : Article 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "Article",
@@ -194,6 +194,19 @@ Object {
   },
   "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
   "url": "http://localhost:7080/mundo/articles/ce42wzqr2mko",
+}
+`;
+
+exports[`Canonical Articles SEO Linked data : VideoObject 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "description": "Indonesians Mark Eid al-Adha Amidst Earthquakes in Lombok Region",
+  "duration": "PT1M59S",
+  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/articles/ce42wzqr2mko/p01jv300/es",
+  "name": "Indonesians Mark Eid al-Adha Amidst Earthquakes in Lombok Region",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01jv35f.jpg",
+  "uploadDate": "2018-09-11T15:25:37.000Z",
 }
 `;
 

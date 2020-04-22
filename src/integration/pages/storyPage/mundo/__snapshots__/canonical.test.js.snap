@@ -146,7 +146,7 @@ exports[`Canonical Story Page SEO Heading level 1 1`] = `"Brexit: qué cambiará
 
 exports[`Canonical Story Page SEO Lang attribute 1`] = `"es"`;
 
-exports[`Canonical Story Page SEO Linked data 1`] = `
+exports[`Canonical Story Page SEO Linked data : BackgroundNewsArticle 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "BackgroundNewsArticle",

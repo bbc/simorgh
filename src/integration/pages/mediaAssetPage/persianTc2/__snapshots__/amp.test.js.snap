@@ -258,7 +258,7 @@ exports[`AMP Media Asset Page SEO Heading level 1 1`] = `"Trump long headline"`;
 
 exports[`AMP Media Asset Page SEO Lang attribute 1`] = `"fa"`;
 
-exports[`AMP Media Asset Page SEO Linked data 1`] = `
+exports[`AMP Media Asset Page SEO Linked data : Article 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "Article",
@@ -300,6 +300,19 @@ Object {
   },
   "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
   "url": "http://localhost:7080/persian/iran-23231114",
+}
+`;
+
+exports[`AMP Media Asset Page SEO Linked data : AudioObject 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "AudioObject",
+  "description": "Trump long headline",
+  "duration": "PT26S",
+  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa/amp",
+  "name": "Trump short headline",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01lmkk5.jpg",
+  "uploadDate": "2019-02-15T12:37:28.000Z",
 }
 `;
 

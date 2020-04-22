@@ -128,7 +128,7 @@ exports[`Canonical Media Asset Page SEO Heading level 1 1`] = `"Simorgh: Media P
 
 exports[`Canonical Media Asset Page SEO Lang attribute 1`] = `"pcm"`;
 
-exports[`Canonical Media Asset Page SEO Linked data 1`] = `
+exports[`Canonical Media Asset Page SEO Linked data : Article 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "Article",
@@ -170,6 +170,19 @@ Object {
   },
   "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
   "url": "http://localhost:7080/pidgin/23248703",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Linked data : VideoObject 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "description": "short",
+  "duration": "PT5S",
+  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm",
+  "name": "alt-text world service clip",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg",
+  "uploadDate": "2018-12-20T11:06:51.000Z",
 }
 `;
 

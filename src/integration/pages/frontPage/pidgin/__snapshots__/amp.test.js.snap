@@ -206,7 +206,7 @@ exports[`AMP Front Page SEO Heading level 1 1`] = `"BBC News, Pidgin - Home"`;
 
 exports[`AMP Front Page SEO Lang attribute 1`] = `"pcm"`;
 
-exports[`AMP Front Page SEO Linked data 1`] = `
+exports[`AMP Front Page SEO Linked data : WebPage 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "WebPage",
