@@ -24,133 +24,69 @@ exports[`Canonical Front Page Footer I can see a link: ملفات الارتبا
 
 exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 1`] = `"الصفحة الحالية, رئيسية"`;
+exports[`Canonical Front Page Header I can see a navigation link: اقتصاد 1`] = `"/arabic/business"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 2`] = `"شرق أوسط"`;
+exports[`Canonical Front Page Header I can see a navigation link: اقتصاد 2`] = `"/arabic/business"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 3`] = `"عالم"`;
+exports[`Canonical Front Page Header I can see a navigation link: الصفحة الحالية, رئيسية 1`] = `"/arabic"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 4`] = `"علوم وتكنولوجيا"`;
+exports[`Canonical Front Page Header I can see a navigation link: الصفحة الحالية, رئيسية 2`] = `"/arabic"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 5`] = `"صحة"`;
+exports[`Canonical Front Page Header I can see a navigation link: برامجنا 1`] = `"/arabic/tv-and-radio-37728883"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 6`] = `"اقتصاد"`;
+exports[`Canonical Front Page Header I can see a navigation link: برامجنا 2`] = `"/arabic/tv-and-radio-37728883"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 7`] = `"فنون"`;
+exports[`Canonical Front Page Header I can see a navigation link: ترند 1`] = `"/arabic/trending"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 8`] = `"رياضة"`;
+exports[`Canonical Front Page Header I can see a navigation link: ترند 2`] = `"/arabic/trending"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 9`] = `"مجلة"`;
+exports[`Canonical Front Page Header I can see a navigation link: حوارات 1`] = `"/arabic/interactivity"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 10`] = `"مرأة"`;
+exports[`Canonical Front Page Header I can see a navigation link: حوارات 2`] = `"/arabic/interactivity"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 11`] = `"فيديو"`;
+exports[`Canonical Front Page Header I can see a navigation link: رياضة 1`] = `"/arabic/sports"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 12`] = `"صحافة"`;
+exports[`Canonical Front Page Header I can see a navigation link: رياضة 2`] = `"/arabic/sports"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 13`] = `"برامجنا"`;
+exports[`Canonical Front Page Header I can see a navigation link: شرق أوسط 1`] = `"/arabic/middleeast"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 14`] = `"ترند"`;
+exports[`Canonical Front Page Header I can see a navigation link: شرق أوسط 2`] = `"/arabic/middleeast"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 15`] = `"حوارات"`;
+exports[`Canonical Front Page Header I can see a navigation link: صحافة 1`] = `"/arabic/inthepress"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 16`] = `"ملفات"`;
+exports[`Canonical Front Page Header I can see a navigation link: صحافة 2`] = `"/arabic/inthepress"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 17`] = `"الصفحة الحالية, رئيسية"`;
+exports[`Canonical Front Page Header I can see a navigation link: صحة 1`] = `"/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 18`] = `"شرق أوسط"`;
+exports[`Canonical Front Page Header I can see a navigation link: صحة 2`] = `"/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 19`] = `"عالم"`;
+exports[`Canonical Front Page Header I can see a navigation link: عالم 1`] = `"/arabic/world"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 20`] = `"علوم وتكنولوجيا"`;
+exports[`Canonical Front Page Header I can see a navigation link: عالم 2`] = `"/arabic/world"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 21`] = `"صحة"`;
+exports[`Canonical Front Page Header I can see a navigation link: علوم وتكنولوجيا 1`] = `"/arabic/scienceandtech"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 22`] = `"اقتصاد"`;
+exports[`Canonical Front Page Header I can see a navigation link: علوم وتكنولوجيا 2`] = `"/arabic/scienceandtech"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 23`] = `"فنون"`;
+exports[`Canonical Front Page Header I can see a navigation link: فنون 1`] = `"/arabic/artandculture"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 24`] = `"رياضة"`;
+exports[`Canonical Front Page Header I can see a navigation link: فنون 2`] = `"/arabic/artandculture"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 25`] = `"مجلة"`;
+exports[`Canonical Front Page Header I can see a navigation link: فيديو 1`] = `"/arabic/media"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 26`] = `"مرأة"`;
+exports[`Canonical Front Page Header I can see a navigation link: فيديو 2`] = `"/arabic/media"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 27`] = `"فيديو"`;
+exports[`Canonical Front Page Header I can see a navigation link: مجلة 1`] = `"/arabic/magazine"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 28`] = `"صحافة"`;
+exports[`Canonical Front Page Header I can see a navigation link: مجلة 2`] = `"/arabic/magazine"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 29`] = `"برامجنا"`;
+exports[`Canonical Front Page Header I can see a navigation link: مرأة 1`] = `"/arabic/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 30`] = `"ترند"`;
+exports[`Canonical Front Page Header I can see a navigation link: مرأة 2`] = `"/arabic/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 31`] = `"حوارات"`;
+exports[`Canonical Front Page Header I can see a navigation link: ملفات 1`] = `"/arabic/in_depth"`;
 
-exports[`Canonical Front Page Header I can see a navigation link with title 32`] = `"ملفات"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 1`] = `"/arabic"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 2`] = `"/arabic/middleeast"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 3`] = `"/arabic/world"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 4`] = `"/arabic/scienceandtech"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 5`] = `"/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 6`] = `"/arabic/business"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 7`] = `"/arabic/artandculture"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 8`] = `"/arabic/sports"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 9`] = `"/arabic/magazine"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 10`] = `"/arabic/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 11`] = `"/arabic/media"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 12`] = `"/arabic/inthepress"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 13`] = `"/arabic/tv-and-radio-37728883"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 14`] = `"/arabic/trending"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 15`] = `"/arabic/interactivity"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 16`] = `"/arabic/in_depth"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 17`] = `"/arabic"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 18`] = `"/arabic/middleeast"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 19`] = `"/arabic/world"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 20`] = `"/arabic/scienceandtech"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 21`] = `"/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 22`] = `"/arabic/business"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 23`] = `"/arabic/artandculture"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 24`] = `"/arabic/sports"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 25`] = `"/arabic/magazine"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 26`] = `"/arabic/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 27`] = `"/arabic/media"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 28`] = `"/arabic/inthepress"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 29`] = `"/arabic/tv-and-radio-37728883"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 30`] = `"/arabic/trending"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 31`] = `"/arabic/interactivity"`;
-
-exports[`Canonical Front Page Header I can see a navigation link with url 32`] = `"/arabic/in_depth"`;
+exports[`Canonical Front Page Header I can see a navigation link: ملفات 2`] = `"/arabic/in_depth"`;
 
 exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 

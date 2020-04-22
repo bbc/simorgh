@@ -94,133 +94,69 @@ exports[`AMP Media Asset Page Footer I can see a link: کوکی ها 1`] = `"htt
 
 exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 1`] = `"صفحه اول"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: افغانستان 1`] = `"/persian/afghanistan"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 2`] = `"کرونا"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: افغانستان 2`] = `"/persian/afghanistan"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 3`] = `"پخش زنده"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: اقتصاد 1`] = `"/persian/business"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 4`] = `"ویدیو"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: اقتصاد 2`] = `"/persian/business"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 5`] = `"تلویزیون"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: ايران 1`] = `"/persian/iran"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 6`] = `"رادیو"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: ايران 2`] = `"/persian/iran"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 7`] = `"ايران"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: تلویزیون 1`] = `"/persian/tv-and-radio-37434377"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 8`] = `"افغانستان"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: تلویزیون 2`] = `"/persian/tv-and-radio-37434377"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 9`] = `"جهان"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: جهان 1`] = `"/persian/world"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 10`] = `"هنر"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: جهان 2`] = `"/persian/world"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 11`] = `"ورزش"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: دانش 1`] = `"/persian/science"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 12`] = `"اقتصاد"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: دانش 2`] = `"/persian/science"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 13`] = `"دانش"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: رادیو 1`] = `"/persian/tv-and-radio-37434376"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 14`] = `"ناظران می‌گویند"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: رادیو 2`] = `"/persian/tv-and-radio-37434376"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 15`] = `"صفحات ویژه"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: صفحات ویژه 1`] = `"/persian/world-37434378"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 16`] = `"وبلاگ‌ها"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: صفحات ویژه 2`] = `"/persian/world-37434378"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 17`] = `"صفحه اول"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: صفحه اول 1`] = `"/persian"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 18`] = `"کرونا"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: صفحه اول 2`] = `"/persian"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 19`] = `"پخش زنده"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: ناظران می‌گویند 1`] = `"/persian/blogs/viewpoints"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 20`] = `"ویدیو"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: ناظران می‌گویند 2`] = `"/persian/blogs/viewpoints"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 21`] = `"تلویزیون"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: هنر 1`] = `"/persian/arts"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 22`] = `"رادیو"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: هنر 2`] = `"/persian/arts"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 23`] = `"ايران"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: وبلاگ‌ها 1`] = `"/persian/services/2012/01/000000_blogs_list"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 24`] = `"افغانستان"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: وبلاگ‌ها 2`] = `"/persian/services/2012/01/000000_blogs_list"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 25`] = `"جهان"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: ورزش 1`] = `"/persian/sport"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 26`] = `"هنر"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: ورزش 2`] = `"/persian/sport"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 27`] = `"ورزش"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: ویدیو 1`] = `"/persian/media/video"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 28`] = `"اقتصاد"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: ویدیو 2`] = `"/persian/media/video"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 29`] = `"دانش"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: پخش زنده 1`] = `"/persian/media-49522521"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 30`] = `"ناظران می‌گویند"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: پخش زنده 2`] = `"/persian/media-49522521"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 31`] = `"صفحات ویژه"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: کرونا 1`] = `"/persian/science-52004647"`;
 
-exports[`AMP Media Asset Page Header I can see a navigation link with title 32`] = `"وبلاگ‌ها"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 1`] = `"/persian"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 2`] = `"/persian/science-52004647"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 3`] = `"/persian/media-49522521"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 4`] = `"/persian/media/video"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 5`] = `"/persian/tv-and-radio-37434377"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 6`] = `"/persian/tv-and-radio-37434376"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 7`] = `"/persian/iran"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 8`] = `"/persian/afghanistan"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 9`] = `"/persian/world"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 10`] = `"/persian/arts"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 11`] = `"/persian/sport"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 12`] = `"/persian/business"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 13`] = `"/persian/science"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 14`] = `"/persian/blogs/viewpoints"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 15`] = `"/persian/world-37434378"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 16`] = `"/persian/services/2012/01/000000_blogs_list"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 17`] = `"/persian"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 18`] = `"/persian/science-52004647"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 19`] = `"/persian/media-49522521"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 20`] = `"/persian/media/video"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 21`] = `"/persian/tv-and-radio-37434377"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 22`] = `"/persian/tv-and-radio-37434376"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 23`] = `"/persian/iran"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 24`] = `"/persian/afghanistan"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 25`] = `"/persian/world"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 26`] = `"/persian/arts"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 27`] = `"/persian/sport"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 28`] = `"/persian/business"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 29`] = `"/persian/science"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 30`] = `"/persian/blogs/viewpoints"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 31`] = `"/persian/world-37434378"`;
-
-exports[`AMP Media Asset Page Header I can see a navigation link with url 32`] = `"/persian/services/2012/01/000000_blogs_list"`;
+exports[`AMP Media Asset Page Header I can see a navigation link: کرونا 2`] = `"/persian/science-52004647"`;
 
 exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, فارسی"`;
 

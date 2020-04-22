@@ -24,69 +24,37 @@ exports[`Canonical Media Asset Page Footer I can see a link: Why you fit trust B
 
 exports[`Canonical Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
-exports[`Canonical Media Asset Page Header I can see a navigation link with title 1`] = `"Home"`;
+exports[`Canonical Media Asset Page Header I can see a navigation link: Africa 1`] = `"/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"`;
 
-exports[`Canonical Media Asset Page Header I can see a navigation link with title 2`] = `"Nigeria"`;
+exports[`Canonical Media Asset Page Header I can see a navigation link: Africa 2`] = `"/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"`;
 
-exports[`Canonical Media Asset Page Header I can see a navigation link with title 3`] = `"Africa"`;
+exports[`Canonical Media Asset Page Header I can see a navigation link: Entertainment 1`] = `"/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"`;
 
-exports[`Canonical Media Asset Page Header I can see a navigation link with title 4`] = `"World"`;
+exports[`Canonical Media Asset Page Header I can see a navigation link: Entertainment 2`] = `"/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"`;
 
-exports[`Canonical Media Asset Page Header I can see a navigation link with title 5`] = `"Video"`;
+exports[`Canonical Media Asset Page Header I can see a navigation link: Home 1`] = `"/pidgin"`;
 
-exports[`Canonical Media Asset Page Header I can see a navigation link with title 6`] = `"Sport"`;
+exports[`Canonical Media Asset Page Header I can see a navigation link: Home 2`] = `"/pidgin"`;
 
-exports[`Canonical Media Asset Page Header I can see a navigation link with title 7`] = `"Entertainment"`;
+exports[`Canonical Media Asset Page Header I can see a navigation link: Most popular 1`] = `"/pidgin/popular/read"`;
 
-exports[`Canonical Media Asset Page Header I can see a navigation link with title 8`] = `"Most popular"`;
+exports[`Canonical Media Asset Page Header I can see a navigation link: Most popular 2`] = `"/pidgin/popular/read"`;
 
-exports[`Canonical Media Asset Page Header I can see a navigation link with title 9`] = `"Home"`;
+exports[`Canonical Media Asset Page Header I can see a navigation link: Nigeria 1`] = `"/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"`;
 
-exports[`Canonical Media Asset Page Header I can see a navigation link with title 10`] = `"Nigeria"`;
+exports[`Canonical Media Asset Page Header I can see a navigation link: Nigeria 2`] = `"/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"`;
 
-exports[`Canonical Media Asset Page Header I can see a navigation link with title 11`] = `"Africa"`;
+exports[`Canonical Media Asset Page Header I can see a navigation link: Sport 1`] = `"/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
 
-exports[`Canonical Media Asset Page Header I can see a navigation link with title 12`] = `"World"`;
+exports[`Canonical Media Asset Page Header I can see a navigation link: Sport 2`] = `"/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
 
-exports[`Canonical Media Asset Page Header I can see a navigation link with title 13`] = `"Video"`;
+exports[`Canonical Media Asset Page Header I can see a navigation link: Video 1`] = `"/pidgin/media/video"`;
 
-exports[`Canonical Media Asset Page Header I can see a navigation link with title 14`] = `"Sport"`;
+exports[`Canonical Media Asset Page Header I can see a navigation link: Video 2`] = `"/pidgin/media/video"`;
 
-exports[`Canonical Media Asset Page Header I can see a navigation link with title 15`] = `"Entertainment"`;
+exports[`Canonical Media Asset Page Header I can see a navigation link: World 1`] = `"/pidgin/world"`;
 
-exports[`Canonical Media Asset Page Header I can see a navigation link with title 16`] = `"Most popular"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link with url 1`] = `"/pidgin"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link with url 2`] = `"/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link with url 3`] = `"/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link with url 4`] = `"/pidgin/world"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link with url 5`] = `"/pidgin/media/video"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link with url 6`] = `"/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link with url 7`] = `"/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link with url 8`] = `"/pidgin/popular/read"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link with url 9`] = `"/pidgin"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link with url 10`] = `"/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link with url 11`] = `"/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link with url 12`] = `"/pidgin/world"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link with url 13`] = `"/pidgin/media/video"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link with url 14`] = `"/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link with url 15`] = `"/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link with url 16`] = `"/pidgin/popular/read"`;
+exports[`Canonical Media Asset Page Header I can see a navigation link: World 2`] = `"/pidgin/world"`;
 
 exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
