@@ -1,6 +1,10 @@
 import findLastIndex from 'ramda/src/findLastIndex';
 import propSatisfies from 'ramda/src/propSatisfies';
 import path from 'ramda/src/path';
+import webLogger from '#lib/logger.web';
+import { RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR } from '#lib/logger.const';
+
+const logger = webLogger();
 
 export const getProgramState = (currentTime, startTime, endTime) => {
   const isLive = currentTime < endTime && currentTime > startTime;
@@ -18,6 +22,19 @@ export const getLink = (state, program, service) => {
   const pid = path(['episode', 'pid'], program);
   const url = `/${service}/${program.serviceId}`;
   return state === 'live' ? `${url}/liveradio` : `${url}/${pid}`;
+};
+
+const logMissingFieldError = field => {
+  logger.error(
+    JSON.stringify(
+      {
+        event: RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR,
+        message: `${field} field is missing in program`,
+      },
+      null,
+      2,
+    ),
+  );
 };
 
 export default (data, service, currentTime) => {
@@ -51,6 +68,19 @@ export default (data, service, currentTime) => {
         publishedTimeDuration,
       } = program;
 
+      const brandTitle = path(['brand', 'title'], program);
+      const episodeTitle = path(['episode', 'presentationTitle'], program);
+
+      if (!publishedTimeStart) {
+        logMissingFieldError('publishedTimeStart');
+      }
+      if (!brandTitle) {
+        logMissingFieldError('title');
+      }
+      if (!episodeTitle) {
+        logMissingFieldError('presentationTitle');
+      }
+
       const currentState = getProgramState(
         currentTime,
         publishedTimeStart,
@@ -63,8 +93,8 @@ export default (data, service, currentTime) => {
         state: currentState,
         startTime: publishedTimeStart,
         link: getLink(currentState, program, service),
-        brandTitle: path(['brand', 'title'], program),
-        episodeTitle: path(['episode', 'presentationTitle'], program),
+        brandTitle,
+        episodeTitle,
         summary: path(['episode', 'synopses', 'short'], program),
         duration: publishedTimeDuration || '',
         durationLabel: 'Duration',
