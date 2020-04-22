@@ -99,7 +99,7 @@ def cancelPreviousBuilds() {
 pipeline {
   agent any
   options {
-    buildDiscarder(logRotator(daysToKeepStr: '10', artifactDaysToKeepStr: '10'))
+    buildDiscarder(logRotator(daysToKeepStr: '3', artifactDaysToKeepStr: '3'))
     timeout(time: 90, unit: 'MINUTES')
     timestamps ()
   }
