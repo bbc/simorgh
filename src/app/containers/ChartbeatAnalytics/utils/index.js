@@ -18,7 +18,7 @@ const buildSectionArr = (service, value, type) => [
 
 const buildSectionItem = (service, type) => [`${service} - ${type}`];
 
-const capitalize = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+const capitalize = s => s.charAt(0).toUpperCase() + s.slice(1);
 
 export const getSylphidCookie = () =>
   onClient() ? Cookie.get(ID_COOKIE) : null;
@@ -33,7 +33,7 @@ export const getType = (pageType, shorthand = false) => {
     case 'MAP':
       return 'article-media-asset';
     case 'media':
-      return 'Live Radio';
+      return 'Radio';
     default:
       return null;
   }
@@ -50,7 +50,7 @@ export const buildSections = ({
   const addProducer = producer && service !== producer;
   const serviceCap = capitalize(service);
   const type = getType(pageType, true);
-  const appendCategory = (name) => `${name}-category`;
+  const appendCategory = name => `${name}-category`;
 
   switch (pageType) {
     case 'MAP':
@@ -64,10 +64,9 @@ export const buildSections = ({
     case 'media':
       return [
         serviceCap,
-        buildSectionItem(serviceCap, ''),
-        buildSectionItem(serviceCap, 'unknown'),
-        buildSectionItem(serviceCap, 'unknown'),
-        buildSectionItem(serviceCap, 'unknown'),
+        ...(pageType ? buildSectionItem(serviceCap, type) : []),
+        ...(addProducer ? buildSectionArr(serviceCap, producer, type) : []),
+        ...(chapter ? buildSectionArr(serviceCap, chapter, type) : []),
       ].join(', ');
     default:
       return [
@@ -89,10 +88,16 @@ export const getTitle = (pageType, pageData, brandName) => {
     case 'MAP':
       return path(['promo', 'headlines', 'headline'], pageData);
     case 'media':
-      return path(['name'], pageData);
+      return path(['pageTitle'], pageData);
     default:
       return null;
   }
+};
+
+const getRadioContentType = pageData => {
+  const contentType = path(['contentType'], pageData);
+  // workaround until contentType value is fixed by ARES
+  return contentType === 'player-live' ? contentType : 'player-episode';
 };
 
 export const getConfig = ({
@@ -123,6 +128,8 @@ export const getConfig = ({
   });
   const cookie = getSylphidCookie();
   const type = getType(pageType);
+  const contentType = type === 'Radio' ? getRadioContentType(data) : type;
+
   const currentPath = onClient() && window.location.pathname;
   return {
     domain,
@@ -130,9 +137,9 @@ export const getConfig = ({
     uid: chartbeatUID,
     title,
     virtualReferrer: referrer,
-    ...(isAmp && { contentType: type }),
+    ...(isAmp && { contentType }),
     ...(!isAmp && {
-      type,
+      type: contentType,
       useCanonical,
       path: currentPath,
     }),

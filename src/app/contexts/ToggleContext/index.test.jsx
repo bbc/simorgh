@@ -13,13 +13,13 @@ const TestComponent = ({ toggle, children }) => {
   return toggleIsEnabled && <div>{children}</div>;
 };
 
-const shouldCallTogglesEndpoint = (togglesUrl) =>
+const shouldCallTogglesEndpoint = togglesUrl =>
   expect(fetchMock.calls(togglesUrl).length).toBeTruthy();
-const shouldNotCallTogglesEndpoint = (togglesUrl) =>
+const shouldNotCallTogglesEndpoint = togglesUrl =>
   expect(fetchMock.calls(togglesUrl).length).toBeFalsy();
-const shouldRenderAd = (container) =>
+const shouldRenderAd = container =>
   expect(queryByText(container, 'Dummy Ad Component')).toBeInTheDocument();
-const shouldNotRenderAd = (container) =>
+const shouldNotRenderAd = container =>
   expect(queryByText(container, 'Dummy Ad Component')).not.toBeInTheDocument();
 
 describe('ToggleContext with feature toggles', () => {

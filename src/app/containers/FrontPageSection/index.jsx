@@ -103,7 +103,7 @@ const renderPromos = (items, isFirstSection, dir) => {
   const sectionHasSingleStory =
     rowsDetails.length === 1 && rowsDetails[0].stories.length === 1;
 
-  const renderedRows = rowsDetails.map((row) => (
+  const renderedRows = rowsDetails.map(row => (
     <row.RowComponent
       key={row.stories[0].id}
       stories={row.stories}
@@ -122,7 +122,12 @@ const renderPromos = (items, isFirstSection, dir) => {
       oneItem={sectionHasSingleStory}
     >
       {sectionHasSingleStory ? (
-        <TopRow stories={items} dir={dir} sectionHasSingleStory />
+        <TopRow
+          isFirstSection={isFirstSection}
+          stories={items}
+          dir={dir}
+          sectionHasSingleStory
+        />
       ) : (
         <Grid
           columns={parentGridColumns}

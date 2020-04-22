@@ -4,8 +4,9 @@ const mediaId = 'foo/bar';
 const legacyId = 'russian/multimedia/2016/05/160505_v_diving_record/123/ru';
 const liveOverrideParam = '?renderer_env=live';
 const testOverrideParam = '?renderer_env=test';
+const embedUrlLiveOverride = '?morph_env=live';
 
-const setEnvironment = (environment) => {
+const setEnvironment = environment => {
   process.env.SIMORGH_APP_ENV = environment;
 };
 
@@ -58,7 +59,7 @@ const testCases = [
   },
   {
     description: `should build a CANONICAL url for articles in test environment with live override`,
-    expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}`,
+    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/articles/${mediaId}${embedUrlLiveOverride}`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {
@@ -69,7 +70,7 @@ const testCases = [
   },
   {
     description: `should build an AMP url for articles in test environment with live override`,
-    expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
+    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp${embedUrlLiveOverride}`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {
@@ -77,6 +78,29 @@ const testCases = [
       mediaId,
       type: 'articles',
       queryString: liveOverrideParam,
+    },
+  },
+  {
+    description: `should build a CANONICAL url for on-demand/live radio in test environment with live override`,
+    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/media/${mediaId}${embedUrlLiveOverride}`,
+    environment: 'test',
+    before: setEnvironment,
+    embedObject: {
+      mediaId,
+      type: 'media',
+      queryString: '',
+    },
+  },
+  {
+    description: `should build an AMP url for on-demand/live radio in test environment with live override`,
+    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/media/${mediaId}/amp${embedUrlLiveOverride}`,
+    environment: 'test',
+    before: setEnvironment,
+    embedObject: {
+      isAmp: true,
+      mediaId,
+      type: 'media',
+      queryString: '',
     },
   },
   {

@@ -187,6 +187,9 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: false,
     },
+    recommendations: {
+      hasStoryRecommendations: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/nepali/institutional-50318130',
@@ -235,7 +238,7 @@ export const service = {
         url: '/nepali',
       },
       {
-        title: 'कोरोनाभाइरसको',
+        title: 'कोरोनाभाइरस',
         url: '/nepali/news-51941128',
       },
       {

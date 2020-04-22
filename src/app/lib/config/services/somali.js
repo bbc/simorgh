@@ -198,10 +198,13 @@ export const service = {
       frontPagePosition: 'feature-main',
       header: 'Barnaamijyada Idaacadda',
     },
+    recommendations: {
+      hasStoryRecommendations: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/somali/hayadeed-49283375',
-        text: 'Sababta aada ku aamini kartid BBC News',
+        text: 'Sababta aad ku aamini kartid BBC News',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',

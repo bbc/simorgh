@@ -7,7 +7,7 @@ import GlobalStyles from '@bbc/psammead-styles/global-styles';
 const req = require.context('../src/app', true, /\.stories\.jsx$/);
 
 function loadStories() {
-  req.keys().forEach((filename) => req(filename));
+  req.keys().forEach(filename => req(filename));
 }
 
 const fontPathMap = [
@@ -24,13 +24,13 @@ const fontPathMap = [
   { prefix: 'F_SHONAR_BANGLA', path: 'fonts/ShonarBangla/' },
 ];
 
-addDecorator((story) => (
+addDecorator(story => (
   /* eslint-disable react/jsx-filename-extension */
   <>
     <GlobalStyles
-      fonts={Object.values(fontFaces).map((fontFace) => {
+      fonts={Object.values(fontFaces).map(fontFace => {
         const fontMap =
-          fontPathMap.find((map) => fontFace.name.includes(map.prefix)) ||
+          fontPathMap.find(map => fontFace.name.includes(map.prefix)) ||
           fontPathMap[0];
         return fontFace(fontMap.path);
       })}

@@ -1,151 +1,184 @@
-export default ({
-  pageTitle,
-  canonicalUrl,
-  readingDirection,
-  language,
-  fbAdmins,
-  fbAppId,
-  fbPages,
-  ogImage,
-  ogImageAlt,
-  ogLocale,
-  ogType,
-  ogUrl,
-  ogSiteName,
-  twitterCard,
-  twitterCreator,
-  twitterImageAlt,
-  twitterImageSrc,
-  twitterSite,
-  ogDescription,
-  ogTitle,
-  twitterDescription,
-  twitterTitle,
-  linkedData,
-}) => {
-  [amp, canonical].forEach((page) => {
-    describe(`And using ${page.platform}`, () => {
-      it('it can see the page title', () => {
-        expect(page.document.title).toEqual(pageTitle);
-      });
+const getMetaTagContent = selector =>
+  document.querySelector(selector).getAttribute('content');
 
-      it('it can see the heading level 1', () => {
-        const headingEl = page.document.querySelector('h1');
+export default () => {
+  describe('SEO', () => {
+    it('Page title', () => {
+      const pageTitleEl = document.querySelector('title');
 
-        expect(headingEl).toBeInTheDocument();
-      });
+      expect(pageTitleEl).toBeInTheDocument();
+      expect(pageTitleEl.textContent).toBeTruthy();
+      expect(pageTitleEl.textContent).toMatchSnapshot();
+    });
 
-      it('it can see the canonical link', () => {
-        const canonicalEl = page.document.querySelector(
-          'head link[rel="canonical"]',
-        );
+    it('Heading level 1', () => {
+      const headingEl = document.querySelector('h1');
 
-        expect(canonicalEl.getAttribute('href')).toEqual(canonicalUrl);
-      });
+      expect(headingEl).toBeInTheDocument();
+      expect(headingEl.textContent).toBeTruthy();
+      expect(headingEl.textContent).toMatchSnapshot();
+    });
 
-      it('it can see the robots meta tag', () => {
-        const robotsEl = page.document.querySelector(
-          'head meta[name="robots"]',
-        );
-        const robotsContent = robotsEl.getAttribute('content');
+    it('Canonical link', () => {
+      const canonicalEl = document.querySelector('head link[rel="canonical"]');
 
-        expect(robotsContent).toEqual('noodp,noydir');
-      });
+      expect(canonicalEl.getAttribute('href')).toMatchSnapshot();
+    });
 
-      it('it can see the lang attribute', () => {
-        const htmlEl = page.document.querySelector('html');
+    it('Robots meta tag', () => {
+      const robotsEl = document.querySelector('head meta[name="robots"]');
+      const robotsContent = robotsEl.getAttribute('content');
 
-        expect(htmlEl.getAttribute('lang')).toEqual(language);
-      });
+      expect(robotsContent).toMatchSnapshot();
+    });
 
-      it('it can see the dir attribute', () => {
-        const htmlEl = page.document.querySelector('html');
+    it('Lang attribute', () => {
+      const htmlEl = document.querySelector('html');
 
-        expect(htmlEl.getAttribute('dir')).toEqual(readingDirection);
-      });
+      expect(htmlEl.getAttribute('lang')).toMatchSnapshot();
+    });
 
-      it('it can see the shared metadata', () => {
-        const fbAdminsEl = page.document.querySelector(
-          'meta[property="fb:admins"]',
-        );
-        const fbAppIdEl = page.document.querySelector(
-          'meta[property="fb:app_id"]',
-        );
-        const fbPagesEl = page.document.querySelector(
-          'meta[property="fb:pages"]',
-        );
-        const ogImageEl = page.document.querySelector(
-          'meta[property="og:image"]',
-        );
-        const ogImageAltEl = page.document.querySelector(
-          'meta[property="og:image:alt"]',
-        );
-        const ogLocaleEl = page.document.querySelector(
-          'meta[property="og:locale"]',
-        );
-        const ogTypeEl = page.document.querySelector(
-          'meta[property="og:type"]',
-        );
-        const ogUrlEl = page.document.querySelector('meta[property="og:url"]');
-        const ogSiteNameEl = page.document.querySelector(
-          'meta[property="og:site_name"]',
-        );
-        const twitterCardEl = page.document.querySelector(
-          'meta[name="twitter:card"]',
-        );
-        const twitterCreatorEl = page.document.querySelector(
-          'meta[name="twitter:creator"]',
-        );
-        const twitterImageAltEl = page.document.querySelector(
-          'meta[name="twitter:image:alt"]',
-        );
-        const twitterImageSrcEl = page.document.querySelector(
-          'meta[name="twitter:image:src"]',
-        );
-        const twitterSiteEl = page.document.querySelector(
-          'meta[name="twitter:site"]',
-        );
-        const ogDescriptionEl = page.document.querySelector(
-          'meta[property="og:description"]',
-        );
-        const ogTitleEl = page.document.querySelector(
-          'meta[property="og:title"]',
-        );
-        const twitterDescriptionEl = page.document.querySelector(
-          'meta[name="twitter:description"]',
-        );
-        const twitterTitleEl = page.document.querySelector(
-          'meta[name="twitter:title"]',
-        );
+    it('Dir attribute', () => {
+      const htmlEl = document.querySelector('html');
 
-        expect(fbAdminsEl.getAttribute('content')).toBe(fbAdmins);
-        expect(fbAppIdEl.getAttribute('content')).toBe(fbAppId);
-        expect(fbPagesEl.getAttribute('content')).toBe(fbPages);
-        expect(ogImageEl.getAttribute('content')).toBe(ogImage);
-        expect(ogImageAltEl.getAttribute('content')).toBe(ogImageAlt);
-        expect(ogLocaleEl.getAttribute('content')).toBe(ogLocale);
-        expect(ogTypeEl.getAttribute('content')).toBe(ogType);
-        expect(ogUrlEl.getAttribute('content')).toBe(ogUrl);
-        expect(ogSiteNameEl.getAttribute('content')).toBe(ogSiteName);
-        expect(twitterCardEl.getAttribute('content')).toBe(twitterCard);
-        expect(twitterCreatorEl.getAttribute('content')).toBe(twitterCreator);
-        expect(twitterImageAltEl.getAttribute('content')).toBe(twitterImageAlt);
-        expect(twitterImageSrcEl.getAttribute('content')).toBe(twitterImageSrc);
-        expect(twitterSiteEl.getAttribute('content')).toBe(twitterSite);
-        expect(ogDescriptionEl.getAttribute('content')).toBe(ogDescription);
-        expect(ogTitleEl.getAttribute('content')).toBe(ogTitle);
-        expect(twitterDescriptionEl.getAttribute('content')).toBe(
-          twitterDescription,
-        );
-        expect(twitterTitleEl.getAttribute('content')).toBe(twitterTitle);
-      });
+      expect(htmlEl.getAttribute('dir')).toMatchSnapshot();
+    });
 
-      it('it can see the linked data', () => {
-        expect(
-          page.document.querySelector('script[type="application/ld+json"]')
-            .textContent,
-        ).toEqual(linkedData);
-      });
+    it('FB admins', () => {
+      const metaTagContent = getMetaTagContent('meta[property="fb:admins"]');
+
+      expect(metaTagContent).toBeTruthy();
+      expect(metaTagContent).toMatchSnapshot();
+    });
+
+    it('FB app ID', () => {
+      const metaTagContent = getMetaTagContent('meta[property="fb:app_id"]');
+
+      expect(metaTagContent).toBeTruthy();
+      expect(metaTagContent).toMatchSnapshot();
+    });
+
+    it('OG image', () => {
+      const metaTagContent = getMetaTagContent('meta[property="og:image"]');
+
+      expect(metaTagContent).toBeTruthy();
+      expect(metaTagContent).toMatchSnapshot();
+    });
+
+    it('OG image alt', () => {
+      const metaTagContent = getMetaTagContent('meta[property="og:image:alt"]');
+
+      expect(metaTagContent).toBeTruthy();
+      expect(metaTagContent).toMatchSnapshot();
+    });
+
+    it('OG locale', () => {
+      const metaTagContent = getMetaTagContent('meta[property="og:locale"]');
+
+      expect(metaTagContent).toBeTruthy();
+      expect(metaTagContent).toMatchSnapshot();
+    });
+
+    it('OG type', () => {
+      const metaTagContent = getMetaTagContent('meta[property="og:type"]');
+
+      expect(metaTagContent).toBeTruthy();
+      expect(metaTagContent).toMatchSnapshot();
+    });
+
+    it('OG url', () => {
+      const metaTagContent = getMetaTagContent('meta[property="og:url"]');
+
+      expect(metaTagContent).toBeTruthy();
+      expect(metaTagContent).toMatchSnapshot();
+    });
+
+    it('OG site name', () => {
+      const metaTagContent = getMetaTagContent('meta[property="og:site_name"]');
+
+      expect(metaTagContent).toBeTruthy();
+      expect(metaTagContent).toMatchSnapshot();
+    });
+
+    it('Twitter card', () => {
+      const metaTagContent = getMetaTagContent('meta[name="twitter:card"]');
+
+      expect(metaTagContent).toBeTruthy();
+      expect(metaTagContent).toMatchSnapshot();
+    });
+
+    it('Twitter creator', () => {
+      const metaTagContent = getMetaTagContent('meta[name="twitter:creator"]');
+
+      expect(metaTagContent).toBeTruthy();
+      expect(metaTagContent).toMatchSnapshot();
+    });
+
+    it('Twitter image alt', () => {
+      const metaTagContent = getMetaTagContent(
+        'meta[name="twitter:image:alt"]',
+      );
+
+      expect(metaTagContent).toBeTruthy();
+      expect(metaTagContent).toMatchSnapshot();
+    });
+
+    it('Twitter image src', () => {
+      const metaTagContent = getMetaTagContent(
+        'meta[name="twitter:image:src"]',
+      );
+
+      expect(metaTagContent).toBeTruthy();
+      expect(metaTagContent).toMatchSnapshot();
+    });
+
+    it('Twitter site', () => {
+      const metaTagContent = getMetaTagContent('meta[name="twitter:site"]');
+
+      expect(metaTagContent).toBeTruthy();
+      expect(metaTagContent).toMatchSnapshot();
+    });
+
+    it('OG description', () => {
+      const metaTagContent = getMetaTagContent(
+        'meta[property="og:description"]',
+      );
+
+      expect(metaTagContent).toBeTruthy();
+      expect(metaTagContent).toMatchSnapshot();
+    });
+
+    it('OG title', () => {
+      const metaTagContent = getMetaTagContent('meta[property="og:title"]');
+
+      expect(metaTagContent).toBeTruthy();
+      expect(metaTagContent).toMatchSnapshot();
+    });
+
+    it('Twitter description', () => {
+      const metaTagContent = getMetaTagContent(
+        'meta[name="twitter:description"]',
+      );
+
+      expect(metaTagContent).toBeTruthy();
+      expect(metaTagContent).toMatchSnapshot();
+    });
+
+    it('Twitter title', () => {
+      const metaTagContent = getMetaTagContent('meta[name="twitter:title"]');
+
+      expect(metaTagContent).toBeTruthy();
+      expect(metaTagContent).toMatchSnapshot();
+    });
+
+    it('Linked data', () => {
+      const linkedDataEl = document.querySelector(
+        'script[type="application/ld+json"]',
+      );
+
+      expect(linkedDataEl).toBeInTheDocument();
+      expect(linkedDataEl.textContent).toBeTruthy();
+      expect(JSON.parse(linkedDataEl.textContent)).toMatchSnapshot();
     });
   });
 };

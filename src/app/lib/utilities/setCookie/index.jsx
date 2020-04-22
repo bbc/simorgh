@@ -2,7 +2,7 @@ import Cookie from 'js-cookie';
 
 const COOKIE_EXPIRY = 365;
 
-export const getCookieDomain = (domain) => {
+export const getCookieDomain = domain => {
   const domainParts = domain.split('.');
   const isBBCDomain = domainParts.includes('bbc');
 

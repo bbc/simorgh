@@ -20,7 +20,6 @@ import {
   GEL_MARGIN_ABOVE_400PX,
 } from '@bbc/gel-foundations/spacings';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import pathOr from 'ramda/src/pathOr';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '#containers/FrontPageSection';
@@ -73,8 +72,9 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const lang = path(['metadata', 'language'], pageData);
   const description = path(['metadata', 'summary'], pageData);
   const seoTitle = path(['promo', 'name'], pageData);
-  const onFrontPage = pathOr(null, ['onFrontPage'], radioSchedule);
-  const frontPagePosition = pathOr(null, ['frontPagePosition'], radioSchedule);
+  const radioScheduleData = path(['radioScheduleData'], pageData);
+  const radioScheduleOnPage = path(['onFrontPage'], radioSchedule);
+  const radioSchedulePosition = path(['frontPagePosition'], radioSchedule);
 
   // eslint-disable-next-line jsx-a11y/aria-role
   const offScreenText = (
@@ -85,7 +85,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
 
   // Most Read is required to render above useful-links if it exists
   const hasUsefulLinks =
-    findIndex((group) => group.type === 'useful-links')(groups) > -1;
+    findIndex(group => group.type === 'useful-links')(groups) > -1;
 
   const renderMostRead = () => (
     <MostReadContainer
@@ -115,8 +115,8 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
           {groups.map((group, index) => (
             <Fragment key={group.title}>
               {group.type === 'useful-links' && renderMostRead()}
-              {onFrontPage && frontPagePosition === group.type && (
-                <RadioScheduleContainer />
+              {radioScheduleOnPage && radioSchedulePosition === group.type && (
+                <RadioScheduleContainer initialData={radioScheduleData} />
               )}
               <FrontPageSection group={group} sectionNumber={index} />
             </Fragment>

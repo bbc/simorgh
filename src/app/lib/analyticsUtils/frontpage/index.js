@@ -14,7 +14,7 @@ const curieRegex = new RegExp(
   `http://www.bbc.co.uk/asset/${guidRegex}/desktop/domestic`,
 );
 
-export const getContentId = (frontpageData) => {
+export const getContentId = frontpageData => {
   const curie = pathOr(null, ['metadata', 'locators', 'curie'], frontpageData);
 
   if (!curie) {
@@ -30,7 +30,7 @@ export const getContentId = (frontpageData) => {
   return null;
 };
 
-export const getLanguage = (frontpageData) =>
+export const getLanguage = frontpageData =>
   pathOr(null, ['metadata', 'language'], frontpageData);
 
 // This formatting of the page title is implemented independently of
