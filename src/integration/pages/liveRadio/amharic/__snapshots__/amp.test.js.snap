@@ -98,33 +98,19 @@ exports[`AMP Live Radio Footer I can click on the BBC branding and it would take
 
 exports[`AMP Live Radio Footer I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
-exports[`AMP Live Radio Footer I can see a link with title 1`] = `"ቢቢሲን ለምን ማመን እንደሚገባዎ"`;
+exports[`AMP Live Radio Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
-exports[`AMP Live Radio Footer I can see a link with title 2`] = `"የአጠቃቀም ደንብ"`;
+exports[`AMP Live Radio Footer I can see a link: ስለ ቢቢሲ 1`] = `"https://www.bbc.com/aboutthebbc"`;
 
-exports[`AMP Live Radio Footer I can see a link with title 3`] = `"ስለ ቢቢሲ"`;
+exports[`AMP Live Radio Footer I can see a link: ቢቢሲን ለምን ማመን እንደሚገባዎ 1`] = `"https://www.bbc.com/amharic/institutional-49283133"`;
 
-exports[`AMP Live Radio Footer I can see a link with title 4`] = `"የፕራይቬሲ ፖሊሲ"`;
+exports[`AMP Live Radio Footer I can see a link: ቢቢሲን ያግኙ 1`] = `"https://www.bbc.com/amharic/institutional-42228117"`;
 
-exports[`AMP Live Radio Footer I can see a link with title 5`] = `"ኩኪዎች"`;
+exports[`AMP Live Radio Footer I can see a link: ኩኪዎች 1`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
 
-exports[`AMP Live Radio Footer I can see a link with title 6`] = `"ቢቢሲን ያግኙ"`;
+exports[`AMP Live Radio Footer I can see a link: የአጠቃቀም ደንብ 1`] = `"https://www.bbc.com/usingthebbc/terms/"`;
 
-exports[`AMP Live Radio Footer I can see a link with title 7`] = `"AdChoices / Do Not Sell My Info"`;
-
-exports[`AMP Live Radio Footer I can see a link with url 1`] = `"https://www.bbc.com/amharic/institutional-49283133"`;
-
-exports[`AMP Live Radio Footer I can see a link with url 2`] = `"https://www.bbc.com/usingthebbc/terms/"`;
-
-exports[`AMP Live Radio Footer I can see a link with url 3`] = `"https://www.bbc.com/aboutthebbc"`;
-
-exports[`AMP Live Radio Footer I can see a link with url 4`] = `"https://www.bbc.com/usingthebbc/privacy/"`;
-
-exports[`AMP Live Radio Footer I can see a link with url 5`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
-
-exports[`AMP Live Radio Footer I can see a link with url 6`] = `"https://www.bbc.com/amharic/institutional-42228117"`;
-
-exports[`AMP Live Radio Footer I can see a link with url 7`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`AMP Live Radio Footer I can see a link: የፕራይቬሲ ፖሊሲ 1`] = `"https://www.bbc.com/usingthebbc/privacy/"`;
 
 exports[`AMP Live Radio Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም. ስለ ውጪ ሊንኮች ያለን አቀራረብ"`;
 

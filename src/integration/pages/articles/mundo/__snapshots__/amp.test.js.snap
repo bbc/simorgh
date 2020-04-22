@@ -78,33 +78,19 @@ exports[`AMP Articles Footer I can click on the BBC branding and it would take m
 
 exports[`AMP Articles Footer I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
-exports[`AMP Articles Footer I can see a link with title 1`] = `"Por qué puedes confiar en la BBC"`;
+exports[`AMP Articles Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
-exports[`AMP Articles Footer I can see a link with title 2`] = `"Términos de uso"`;
+exports[`AMP Articles Footer I can see a link: Contacta a la BBC 1`] = `"https://www.bbc.com/mundo/institucional-36400011"`;
 
-exports[`AMP Articles Footer I can see a link with title 3`] = `"Sobre la BBC"`;
+exports[`AMP Articles Footer I can see a link: Cookies 1`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
 
-exports[`AMP Articles Footer I can see a link with title 4`] = `"Política de privacidad"`;
+exports[`AMP Articles Footer I can see a link: Política de privacidad 1`] = `"https://www.bbc.com/mundo/institucional-36400009"`;
 
-exports[`AMP Articles Footer I can see a link with title 5`] = `"Cookies"`;
+exports[`AMP Articles Footer I can see a link: Por qué puedes confiar en la BBC 1`] = `"https://www.bbc.com/mundo/institucional-51359666"`;
 
-exports[`AMP Articles Footer I can see a link with title 6`] = `"Contacta a la BBC"`;
+exports[`AMP Articles Footer I can see a link: Sobre la BBC 1`] = `"https://www.bbc.com/mundo/institucional-36400007"`;
 
-exports[`AMP Articles Footer I can see a link with title 7`] = `"AdChoices / Do Not Sell My Info"`;
-
-exports[`AMP Articles Footer I can see a link with url 1`] = `"https://www.bbc.com/mundo/institucional-51359666"`;
-
-exports[`AMP Articles Footer I can see a link with url 2`] = `"https://www.bbc.com/mundo/institucional-36400005"`;
-
-exports[`AMP Articles Footer I can see a link with url 3`] = `"https://www.bbc.com/mundo/institucional-36400007"`;
-
-exports[`AMP Articles Footer I can see a link with url 4`] = `"https://www.bbc.com/mundo/institucional-36400009"`;
-
-exports[`AMP Articles Footer I can see a link with url 5`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
-
-exports[`AMP Articles Footer I can see a link with url 6`] = `"https://www.bbc.com/mundo/institucional-36400011"`;
-
-exports[`AMP Articles Footer I can see a link with url 7`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`AMP Articles Footer I can see a link: Términos de uso 1`] = `"https://www.bbc.com/mundo/institucional-36400005"`;
 
 exports[`AMP Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
