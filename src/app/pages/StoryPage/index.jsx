@@ -37,11 +37,7 @@ import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const StoryPage = ({
-  pageData,
-  mostReadEndpointOverride,
-  secondaryColumData,
-}) => {
+const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const { dir } = useContext(ServiceContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const category = path(
