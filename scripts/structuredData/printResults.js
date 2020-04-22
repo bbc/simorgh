@@ -18,15 +18,8 @@ const testDetails = test => {
 };
 
 const errorDetails = test => {
-  const { error, expect } = test;
+  const { error } = test;
   const errorMessage = error ? cyan(error.message) : '';
-  if (expect && error.found) {
-    return `${errorMessage}\n\tExpected: ${JSON.stringify(
-      expect,
-      null,
-      2,
-    )}\n\tActual: ${JSON.stringify(error.found)}`;
-  }
   return errorMessage;
 };
 
@@ -68,37 +61,26 @@ const printStatistics = results => {
     overallResults.passed.length + overallResults.failed.length;
 
   console.log(bold(`\nStatistics\n`));
-  console.log(`              URLs:`, `${overallResults.urls.length || 0}`);
+  console.log(`              URLs: ${overallResults.urls.length || 0}`);
   console.log(
-    `          Metatags:`,
-    `${Object.keys(overallResults.structuredData.metatags).length || 0}`,
+    `          Metatags: ${
+      Object.keys(overallResults.structuredData.metatags).length || 0
+    }`,
   );
-  console.log(
-    `   json+ld schemas:`,
-    `${Object.keys(overallResults.structuredData.jsonld).join(', ') || 0}`,
-  );
-  console.log(
-    `schema.org schemas:`,
-    `${overallResults.schemas.join(', ') || 0}`,
-  );
+  console.log(`schema.org schemas: ${overallResults.schemas.join(', ') || 0}`);
 
-  console.log(`       Total Tests:`, `${totalTests}`);
-  console.log('');
+  console.log(`       Total Tests: ${totalTests}`);
 
-  console.log(bold(`Results\n`));
+  console.log(bold(`\nResults\n`));
 
   console.log(
-    `      Passed:`,
-    `\t${overallResults.passed.length}`,
-    `\t(${
+    `      Passed:\t${overallResults.passed.length}\t(${
       ((overallResults.passed.length / totalTests) * 100).toFixed(2) || 0
     }%)`,
   );
 
   console.log(
-    `      Failed:`,
-    `\t${overallResults.failed.length}`,
-    `\t(${
+    `      Failed:\t${overallResults.failed.length}\t(${
       ((overallResults.failed.length / totalTests) * 100).toFixed(2) || 0
     }%)`,
   );
