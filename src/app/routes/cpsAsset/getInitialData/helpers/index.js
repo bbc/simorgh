@@ -41,5 +41,3 @@ export const getNthCpsParagraphIndex = (blocks, count) => {
   }
   return indexCount;
 };
-
-export default insertBlockAfterHeadline;
