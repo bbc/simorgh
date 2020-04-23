@@ -36,7 +36,7 @@ const assertScriptSwitchButton = (service, variantValue) => {
   });
 };
 
-const variantAssertions = (product, service, variantValue) => {
+const allVariantAssertions = (product, service, variantValue) => {
   // Assert the script switch button is correct for variant
   assertScriptSwitchButton(service, variantValue);
   // Assert URL contains correct variant
@@ -110,22 +110,24 @@ Object.keys(config)
               // Accept cookie banner
               getCookieBannerAccept(service, variant).click();
 
-              // Assert things have been correctly set for this variant
-              // TODO: What is the difference between service & variant?
-              // TODO: How do we make this not assert cookies in the first instance?
-              variantAssertions(product, service, variant);
+              // Assert the script switch button is correct for variant
+              assertScriptSwitchButton(service, variant);
+
+              // Assert URL contains correct variant
+              assertURLContains(product, variant);
 
               // Clicks script switcher
               clickScriptSwitcher(otherVariant);
 
               // Assert against other variant after switching script
-              variantAssertions(product, service, otherVariant);
+              // TODO: What is the difference between service & variant?
+              allVariantAssertions(product, service, otherVariant);
 
               // Navigate to home page by clicking link in the banner
               clickHomePageLink(product);
 
               // Assert other variant has persisted
-              variantAssertions(product, service, otherVariant);
+              allVariantAssertions(product, service, otherVariant);
 
               // TODO: Push this entire block into its own const
               // Finding a link to click on the home page
@@ -140,13 +142,13 @@ Object.keys(config)
               });
 
               // Assert other variant has persisted after navigating to new page
-              variantAssertions(product, service, otherVariant);
+              allVariantAssertions(product, service, otherVariant);
 
               // Clicks script switcher to original variant
               clickScriptSwitcher(variant);
 
               // Assert variant values have changed after clicking script switcher
-              variantAssertions(product, service, variant);
+              allVariantAssertions(product, service, variant);
             });
           });
         });
