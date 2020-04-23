@@ -24,10 +24,10 @@ export const getLink = (state, program, service) => {
   return state === 'live' ? `${url}/liveradio` : `${url}/${pid}`;
 };
 
-const logProgramError = error => {
-  logger.error({
-    event: RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR,
-    message: error,
+const logProgramError = ({ error, service }) => {
+  logger.error(RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR, {
+    error,
+    service,
   });
 };
 
@@ -48,7 +48,7 @@ export default (data, service, currentTime) => {
     schedules[latestProgramIndex - 2] && schedules[latestProgramIndex + 1];
 
   if (!scheduleDataIsComplete) {
-    logProgramError('Incomplete program schedule');
+    logProgramError({ error: 'Incomplete program schedule', service });
   }
 
   const programsToShow = scheduleDataIsComplete && [
@@ -70,10 +70,16 @@ export default (data, service, currentTime) => {
       const brandTitle = path(['brand', 'title'], program);
 
       if (!publishedTimeStart) {
-        logProgramError('publishTimeStart field is missing in program');
+        logProgramError({
+          error: 'publishTimeStart field is missing in program',
+          service,
+        });
       }
       if (!brandTitle) {
-        logProgramError('title field is missing in program');
+        logProgramError({
+          error: 'title field is missing in program',
+          service,
+        });
       }
 
       const currentState = getProgramState(
