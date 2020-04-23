@@ -226,6 +226,8 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
             <MostReadContainer
               mostReadEndpointOverride={mostReadEndpointOverride}
               columnLayout="oneColumn"
+              linkTypography="pica"
+              rankTypography="trafalgar"
             />
           </ComponentWrapper>
         </GridSecondaryColumn>
