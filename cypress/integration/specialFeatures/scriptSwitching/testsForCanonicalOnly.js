@@ -35,8 +35,7 @@ const assertScriptSwitchButton = (product, variantValue) => {
   });
 };
 
-const allVariantAssertions = (product, service, variantValue) => {
-  // debugger;
+const allVariantAssertions = (product, variantValue) => {
   // Assert the script switch button is correct for variant
   assertScriptSwitchButton(product, variantValue);
   // Assert URL contains correct variant
@@ -117,7 +116,7 @@ Object.keys(config)
 
             it(`should change to the correct script when switching script between ${variant} and ${otherVariant}`, () => {
               // Accept privacy banner
-              getPrivacyBannerAccept(service, variant).click();
+              getPrivacyBannerAccept(product, variant).click();
 
               // Accept cookie banner
               getCookieBannerAccept(service, variant).click();
@@ -132,25 +131,25 @@ Object.keys(config)
               clickScriptSwitcher(otherVariant);
 
               // Assert against other variant after switching script
-              allVariantAssertions(product, service, otherVariant);
+              allVariantAssertions(product, otherVariant);
 
               // Navigate to home page by clicking link in the banner
               clickHomePageLink(product);
 
               // Assert other variant has persisted
-              allVariantAssertions(product, service, otherVariant);
+              allVariantAssertions(product, otherVariant);
 
               // Finding a link to click on the home page
               clickPromoLinkOnHomePage(pageType);
 
               // Assert other variant has persisted after navigating to new page
-              allVariantAssertions(product, service, otherVariant);
+              allVariantAssertions(product, otherVariant);
 
               // Clicks script switcher to original variant
               clickScriptSwitcher(variant);
 
               // Assert variant values have changed after clicking script switcher
-              allVariantAssertions(product, service, variant);
+              allVariantAssertions(product, variant);
             });
           });
         });
