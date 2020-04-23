@@ -1,5 +1,5 @@
-import runAmpTests from './user.amp';
-import runCanonicalTests from './user.canonical';
+import runAmpTests from './testsForAMPOnly';
+import runCanonicalTests from './testsForCanonicalOnly';
 import runStandaloneTests from '../../../support/helpers/runStandaloneTests';
 
 const pageType = 'mediaAssetPage';
