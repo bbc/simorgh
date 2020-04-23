@@ -2287,7 +2287,7 @@ module.exports = () => ({
           local: {
             paths: [
               '/kyrgyz/media-23257484', // CPS MAP with video clip
-              '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP with video clip
+              // '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP with video clip
             ],
             enabled: true,
           },
