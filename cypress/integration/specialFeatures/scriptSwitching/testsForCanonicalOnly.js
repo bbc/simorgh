@@ -27,9 +27,8 @@ const assertURLContains = (product, variantValue) => {
   });
 };
 
-const assertScriptSwitchButton = (service, variantValue) => {
-  const scriptToSwitchTo =
-    appConfig[config[service].name][variantValue].scriptLink.variant;
+const assertScriptSwitchButton = (product, variantValue) => {
+  const scriptToSwitchTo = appConfig[product][variantValue].scriptLink.variant;
 
   cy.get('header[role="banner"]').within(() => {
     cy.get(`a[data-variant="${scriptToSwitchTo}"]`).should('exist');
@@ -37,8 +36,9 @@ const assertScriptSwitchButton = (service, variantValue) => {
 };
 
 const allVariantAssertions = (product, service, variantValue) => {
+  // debugger;
   // Assert the script switch button is correct for variant
-  assertScriptSwitchButton(service, variantValue);
+  assertScriptSwitchButton(product, variantValue);
   // Assert URL contains correct variant
   assertURLContains(product, variantValue);
   // Checks correct variant is saved in cookie
@@ -123,7 +123,7 @@ Object.keys(config)
               getCookieBannerAccept(service, variant).click();
 
               // Assert the script switch button is correct for variant
-              assertScriptSwitchButton(service, variant);
+              assertScriptSwitchButton(product, variant);
 
               // Assert URL contains correct variant
               assertURLContains(product, variant);
@@ -132,7 +132,6 @@ Object.keys(config)
               clickScriptSwitcher(otherVariant);
 
               // Assert against other variant after switching script
-              // TODO: What is the difference between service & variant?
               allVariantAssertions(product, service, otherVariant);
 
               // Navigate to home page by clicking link in the banner
