@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP  A11y I can see the skip to content link 1`] = `"Air adhart"`;
+
+exports[`AMP  AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+}
+`;
+
+exports[`AMP  AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+  },
+}
+`;
+
+exports[`AMP  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/naidheachdan"`;
+
+exports[`AMP  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. Chan eil am BBC an urra ris na tha a' nochdadh air làraichean-lìn air an taobh a-muigh Leugh mun fheallsanachd againn mu cheangaileachan dhan taobh a-muigh"`;
+
+exports[`AMP  Header I can see the branding 1`] = `"BBC News, Naidheachdan"`;
+
+exports[`AMP  I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/d1c1/test/67369410-ec36-11e9-88d6-81aa2ccc6d4c.jpg"`;
+
+exports[`AMP  I can see an image with a caption 2`] = `"Tiotal an deilbh, ‘S e dealbh deuchainn a tha seo, còraichean glèidhte aig a’ BhBC, a’ sealltainn mapa den Fhraing. Tha an dealbh anns na trì blocaichean aig an toiseach leis an tiotal seo."`;
+
+exports[`AMP  SEO Canonical link 1`] = `"http://localhost:7080/naidheachdan/sgeulachdan/c18q7nedn2ko"`;
+
+exports[`AMP  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`AMP  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`AMP  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP  SEO Heading level 1 1`] = `"Seo an ceann-naidheachd don artaigil deuchainn"`;
+
+exports[`AMP  SEO Lang attribute 1`] = `"gd"`;
+
+exports[`AMP  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png",
+      "width": 1024,
+    },
+    "name": "BBC Naidheachdan",
+    "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+  },
+  "dateModified": "2019-10-11T14:52:07.001Z",
+  "datePublished": "2019-07-13T12:48:34.054Z",
+  "headline": "Seo an ceann-naidheachd SEO ‘son an artaigil seo",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/naidheachdan/sgeulachdan/c18q7nedn2ko",
+    "@type": "WebPage",
+    "name": "Seo an ceann-naidheachd SEO ‘son an artaigil seo",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png",
+      "width": 1024,
+    },
+    "name": "BBC Naidheachdan",
+    "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+  },
+  "thumbnailUrl": "https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png",
+  "url": "http://localhost:7080/naidheachdan/sgeulachdan/c18q7nedn2ko",
+}
+`;
+
+exports[`AMP  SEO OG description 1`] = `"Seo an ceann-naidheachd SEO ‘son an artaigil seo"`;
+
+exports[`AMP  SEO OG image 1`] = `"https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png"`;
+
+exports[`AMP  SEO OG image alt 1`] = `"BBC Naidheachdan"`;
+
+exports[`AMP  SEO OG locale 1`] = `"gd"`;
+
+exports[`AMP  SEO OG site name 1`] = `"BBC Naidheachdan"`;
+
+exports[`AMP  SEO OG title 1`] = `"Seo an ceann-naidheachd SEO ‘son an artaigil seo - BBC Naidheachdan"`;
+
+exports[`AMP  SEO OG type 1`] = `"article"`;
+
+exports[`AMP  SEO OG url 1`] = `"http://localhost:7080/naidheachdan/sgeulachdan/c18q7nedn2ko"`;
+
+exports[`AMP  SEO Page title 1`] = `"Seo an ceann-naidheachd SEO ‘son an artaigil seo - BBC Naidheachdan"`;
+
+exports[`AMP  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`AMP  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP  SEO Twitter creator 1`] = `"@bbcnaidheachdan"`;
+
+exports[`AMP  SEO Twitter description 1`] = `"Seo an ceann-naidheachd SEO ‘son an artaigil seo"`;
+
+exports[`AMP  SEO Twitter image alt 1`] = `"BBC Naidheachdan"`;
+
+exports[`AMP  SEO Twitter image src 1`] = `"https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png"`;
+
+exports[`AMP  SEO Twitter site 1`] = `"@bbcnaidheachdan"`;
+
+exports[`AMP  SEO Twitter title 1`] = `"Seo an ceann-naidheachd SEO ‘son an artaigil seo - BBC Naidheachdan"`;

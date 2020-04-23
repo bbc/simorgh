@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"مطلب ته ورشئ"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=68&p=embedded_media::pashto.embedded_media.media_asset.23257523.page&x1=[urn:bbc:cps:33af4333-fbb2-854d-ae2c-6cf747f8cb11]&x2=[responsive]&x3=[news-pashto]&x4=[ps]&x7=[article-media-asset]&x8=[simorgh-nojs]&x9=[Test+Pashto+-+BBC+News+پښتو]&x11=[2019-12-03T14:53:25.000Z]&x12=[2019-12-03T14:53:28.000Z]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, پښتو"`;
+
+exports[`Canonical  I can see the headline 1`] = `"Test Pashto"`;
+
+exports[`Canonical  I can see the timestamp 1`] = `"۱۲ لیندۍ ۱۳۹۸ - ۳ ډیسمبر ۲۰۱۹"`;
+
+exports[`Canonical  Media player embed A11y I can read the media player title 1`] = `"Media player"`;
+
+exports[`Canonical  Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pashto/media-23257523/p01plp4q/ps"`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/pashto/media-23257523"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"rtl"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"Test Pashto"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"ps"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png",
+      "width": 1024,
+    },
+    "name": "BBC News پښتو",
+    "noBylinesPolicy": "https://www.bbc.com/pashto/institutional-49283007#authorexpertise",
+  },
+  "dateModified": "2019-12-03T14:53:28.000Z",
+  "datePublished": "2019-12-03T14:53:25.000Z",
+  "headline": "Test Pashto",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/pashto/media-23257523",
+    "@type": "WebPage",
+    "name": "Test Pashto",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png",
+      "width": 1024,
+    },
+    "name": "BBC News پښتو",
+    "publishingPrinciples": "https://www.bbc.com/pashto/institutional-49283007",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png",
+  "url": "http://localhost:7080/pashto/media-23257523",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"Test Pashto"`;
+
+exports[`Canonical  SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pashto/E8AA/test/_63726595_chrome.png"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"bbc"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"ps"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News پښتو"`;
+
+exports[`Canonical  SEO OG title 1`] = `"Test Pashto - BBC News پښتو"`;
+
+exports[`Canonical  SEO OG type 1`] = `"article"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/pashto/media-23257523"`;
+
+exports[`Canonical  SEO Page title 1`] = `"Test Pashto - BBC News پښتو"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbcpashto"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"Test Pashto"`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"bbc"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pashto/E8AA/test/_63726595_chrome.png"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbcpashto"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"Test Pashto - BBC News پښتو"`;

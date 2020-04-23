@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"Simbira ku birimwo"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=40&p=gahuza.articles.cey23zx8wx8o.page&x1=[urn:bbc:optimo:cey23zx8wx8o]&x2=[responsive]&x3=[news-gahuza]&x4=[rw]&x7=[article]&x8=[simorgh-nojs]&x9=[Abarihimbye+turi+kumwe+muri+iki+kiganiro+barabidusobanurira+neza.]&x11=[2019-07-12T12:59:18.638Z]&x12=[2019-07-12T12:59:18.638Z]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, Gahuza"`;
+
+exports[`Canonical  I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/1bed/test/e2f3a520-e137-11e9-b23c-f1ac9644bb55.jpg"`;
+
+exports[`Canonical  I can see an image with a caption 2`] = `"Insiguro y'isanamu, Abarihimbye turi kumwe muri iki kiganiro, barabidusobanurira neza."`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/gahuza/articles/cey23zx8wx8o"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `
+"Mwaramukanye amahoro mwese muteze amatwi
+
+"
+`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"rw"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+      "width": 1024,
+    },
+    "name": "BBC News Gahuza",
+    "noBylinesPolicy": "https://www.bbc.com/gahuza/institutional-49283343#authorexpertise",
+  },
+  "dateModified": "2019-07-12T12:59:18.638Z",
+  "datePublished": "2019-07-12T12:59:18.638Z",
+  "headline": "Abarihimbye turi kumwe muri iki kiganiro barabidusobanurira neza.",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/gahuza/articles/cey23zx8wx8o",
+    "@type": "WebPage",
+    "name": "Abarihimbye turi kumwe muri iki kiganiro barabidusobanurira neza.",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+      "width": 1024,
+    },
+    "name": "BBC News Gahuza",
+    "publishingPrinciples": "https://www.bbc.com/gahuza/institutional-49283343",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+  "url": "http://localhost:7080/gahuza/articles/cey23zx8wx8o",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"Abarihimbye turi kumwe muri iki kiganiro barabidusobanurira neza."`;
+
+exports[`Canonical  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"BBC News Gahuza"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"rw-RW"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News Gahuza"`;
+
+exports[`Canonical  SEO OG title 1`] = `"Abarihimbye turi kumwe muri iki kiganiro barabidusobanurira neza. - BBC News Gahuza"`;
+
+exports[`Canonical  SEO OG type 1`] = `"article"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/gahuza/articles/cey23zx8wx8o"`;
+
+exports[`Canonical  SEO Page title 1`] = `"Abarihimbye turi kumwe muri iki kiganiro barabidusobanurira neza. - BBC News Gahuza"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbcgahuza"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"Abarihimbye turi kumwe muri iki kiganiro barabidusobanurira neza."`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"BBC News Gahuza"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbcgahuza"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"Abarihimbye turi kumwe muri iki kiganiro barabidusobanurira neza. - BBC News Gahuza"`;

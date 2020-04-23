@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"Перейти к содержанию"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=75&p=russian.page&x1=[urn:bbc:cps:33cf4114-07fe-c79b-e050-380a4e803fdd]&x2=[responsive]&x3=[news-russian]&x4=[ru]&x7=[index-home]&x8=[simorgh-nojs]&x9=[Главная+-+BBC+News+Русская+служба]&x11=[1970-01-17T22:51:25.822Z]&x12=[1970-01-19T02:08:50.893Z]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/russian"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. Би-би-си на несет ответственности за содержание других сайтов. Познакомьтесь с нашими правилами внешних ссылок."`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, Русская служба"`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/russian"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"BBC News, Русская служба - Главная"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"ru"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/russian.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/russian",
+    "@type": "WebPage",
+    "name": "Главная",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/russian.png",
+      "width": 1024,
+    },
+    "name": "BBC News Русская служба",
+    "publishingPrinciples": "https://www.bbc.com/russian/institutional-50098149",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/russian.png",
+  "url": "http://localhost:7080/russian",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"Русская служба Би-би-си – это непредвзятое освещение событий в России и мире на русском языке."`;
+
+exports[`Canonical  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/russian.png"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"BBC News Русская служба"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"ru-RU"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News Русская служба"`;
+
+exports[`Canonical  SEO OG title 1`] = `"Главная - BBC News Русская служба"`;
+
+exports[`Canonical  SEO OG type 1`] = `"website"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/russian"`;
+
+exports[`Canonical  SEO Page title 1`] = `"Главная - BBC News Русская служба"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbcrussian"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"Русская служба Би-би-си – это непредвзятое освещение событий в России и мире на русском языке."`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"BBC News Русская служба"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/russian.png"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbcrussian"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"Главная - BBC News Русская служба"`;

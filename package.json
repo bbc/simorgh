@@ -36,7 +36,7 @@
     "test:unit:watch": "npm run test:unit -- --watch",
     "test:integration": "./scripts/killApp.sh && npm run build:local && (npm run start & wait-on -t 20000 http://localhost:7080/status) && jest --runInBand --colors ./src/integration/pages/**/*",
     "test:integration:ci": "jest --ci --runInBand --colors ./src/integration/pages/**/*",
-    "test:integration:full": "npm run build:test:integration:full && ./scripts/killApp.sh && npm run build:local && (npm run start & wait-on -t 20000 http://localhost:7080/status) && jest --no-cache --runInBand --colors ./src/integration/__full_service_regression_tests__/**/*",
+    "test:integration:full": "./scripts/killApp.sh && npm run build:local && (npm run start & wait-on -t 20000 http://localhost:7080/status) && jest --no-cache --runInBand --colors ./src/integration/__full_service_regression_tests__/**/*",
     "test:integration:full:ci": "jest --no-cache --ci --runInBand --colors ./src/integration/__full_service_regression_tests__/**/*",
     "test:integration:watch": "npm run test:integration -- --watch",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",

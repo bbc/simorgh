@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"Ruka hadi maelezo"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=86&p=swahili.bbc_swahili_radio.liveradio.page&x1=[urn:bbc:ares::ws_live:bbc_swahili_radio]&x2=[responsive]&x3=[news-swahili]&x4=[sw]&x7=[player-live]&x8=[simorgh-nojs]&x9=[BBC+Swahili+Radio+-+BBC+News+Swahili]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/swahili"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC haihusiki na taarifa za kutoka mitandao ya nje. Soma kuhusu mtazamo wetu wa viambatanishi vya nje."`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, Swahili"`;
+
+exports[`Canonical  I can see the headline 1`] = `"BBC Swahili Radio"`;
+
+exports[`Canonical  I can see the summary 1`] = `"Habari za kimataifa, michezo na uchambuzi kutoka kwa idhaa ya dunia."`;
+
+exports[`Canonical  Media player embed A11y I can read the media player title 1`] = `"Kicheza Sauti"`;
+
+exports[`Canonical  Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_swahili_radio/liveradio/sw?morph_env=live"`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/swahili/bbc_swahili_radio/liveradio"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"BBC Swahili Radio"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"sw"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "RadioChannel",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/swahili/bbc_swahili_radio/liveradio",
+    "@type": "WebPage",
+    "name": "BBC Swahili Radio",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png",
+      "width": 1024,
+    },
+    "name": "BBC News Swahili",
+    "publishingPrinciples": "https://www.bbc.com/swahili/taasisi-49283417",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png",
+  "url": "http://localhost:7080/swahili/bbc_swahili_radio/liveradio",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"Habari za kimataifa, michezo na uchambuzi kutoka kwa idhaa ya dunia."`;
+
+exports[`Canonical  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"BBC News Swahili"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"sw-KE"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News Swahili"`;
+
+exports[`Canonical  SEO OG title 1`] = `"BBC Swahili Radio - BBC News Swahili"`;
+
+exports[`Canonical  SEO OG type 1`] = `"website"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/swahili/bbc_swahili_radio/liveradio"`;
+
+exports[`Canonical  SEO Page title 1`] = `"BBC Swahili Radio - BBC News Swahili"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbcswahili"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"Habari za kimataifa, michezo na uchambuzi kutoka kwa idhaa ya dunia."`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"BBC News Swahili"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbcswahili"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"BBC Swahili Radio - BBC News Swahili"`;

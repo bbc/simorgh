@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"U gudub qaybta macluumaadka"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=83&p=somali.articles.cgn6emk3jm8o.page&x1=[urn:bbc:optimo:cgn6emk3jm8o]&x2=[responsive]&x3=[news-somali]&x4=[so]&x7=[article]&x8=[simorgh-nojs]&x9=[Tani+waa+cinwaanka+SEO+ee+maqaalkan+tijaabada+ah]&x11=[2019-07-12T13:01:32.234Z]&x12=[2019-07-12T13:01:32.234Z]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/somali"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda."`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, Somali"`;
+
+exports[`Canonical  I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/9d53/test/ad9ec840-de13-11e9-b23c-f1ac9644bb55.jpg"`;
+
+exports[`Canonical  I can see an image with a caption 2`] = `"Qoraalka sawirka, Sawirkan tijaabada ah, oo ah xuquuqda daabacaadda BBC, waxay muujineysaa khariidad Faransiis ah. Muuqaalku wuxuu ku jiraa saddexda qaybood ee ugu horreeya wuxuuna leeyahay cinwaankan."`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/somali/articles/cgn6emk3jm8o"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"Tani waa cinwaanka maqaalkan imtixaanka"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"so"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/somali.png",
+      "width": 1024,
+    },
+    "name": "BBC News Somali",
+    "noBylinesPolicy": "https://www.bbc.com/somali/hayadeed-49283375#authorexpertise",
+  },
+  "dateModified": "2019-07-12T13:01:32.234Z",
+  "datePublished": "2019-07-12T13:01:32.234Z",
+  "headline": "Tani waa cinwaanka SEO ee maqaalkan tijaabada ah",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/somali.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/somali/articles/cgn6emk3jm8o",
+    "@type": "WebPage",
+    "name": "Tani waa cinwaanka SEO ee maqaalkan tijaabada ah",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/somali.png",
+      "width": 1024,
+    },
+    "name": "BBC News Somali",
+    "publishingPrinciples": "https://www.bbc.com/somali/hayadeed-49283375",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/somali.png",
+  "url": "http://localhost:7080/somali/articles/cgn6emk3jm8o",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"Tani waa cinwaanka SEO ee maqaalkan tijaabada ah"`;
+
+exports[`Canonical  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/somali.png"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"BBC News Somali"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"so-SO"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News Somali"`;
+
+exports[`Canonical  SEO OG title 1`] = `"Tani waa cinwaanka SEO ee maqaalkan tijaabada ah - BBC News Somali"`;
+
+exports[`Canonical  SEO OG type 1`] = `"article"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/somali/articles/cgn6emk3jm8o"`;
+
+exports[`Canonical  SEO Page title 1`] = `"Tani waa cinwaanka SEO ee maqaalkan tijaabada ah - BBC News Somali"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbcsomali"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"Tani waa cinwaanka SEO ee maqaalkan tijaabada ah"`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"BBC News Somali"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/somali.png"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbcsomali"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"Tani waa cinwaanka SEO ee maqaalkan tijaabada ah - BBC News Somali"`;

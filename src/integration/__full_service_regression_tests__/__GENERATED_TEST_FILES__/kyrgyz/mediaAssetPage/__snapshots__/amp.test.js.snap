@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP  A11y I can see the skip to content link 1`] = `"Сайтка өтүү"`;
+
+exports[`AMP  AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+}
+`;
+
+exports[`AMP  AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+  },
+}
+`;
+
+exports[`AMP  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
+
+exports[`AMP  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
+
+exports[`AMP  Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
+
+exports[`AMP  I can see the headline 1`] = `"대한 계획을 중단함에 따라 지난주의 예리한 수사법이"`;
+
+exports[`AMP  I can see the timestamp 1`] = `"3 декабрь 2019"`;
+
+exports[`AMP  Media player embed A11y I can read the media player title 1`] = `"Media player"`;
+
+exports[`AMP  Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/kyrgyz/media-23257484/p01cxxyy/ky/amp"`;
+
+exports[`AMP  SEO Canonical link 1`] = `"http://localhost:7080/kyrgyz/media-23257484"`;
+
+exports[`AMP  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`AMP  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`AMP  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP  SEO Heading level 1 1`] = `"대한 계획을 중단함에 따라 지난주의 예리한 수사법이"`;
+
+exports[`AMP  SEO Lang attribute 1`] = `"ky"`;
+
+exports[`AMP  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+      "width": 1024,
+    },
+    "name": "BBC News Кыргыз Кызматы",
+    "noBylinesPolicy": "https://www.bbc.com/kyrgyz/institutional-49677275#authorexpertise",
+  },
+  "dateModified": "2019-12-03T10:57:41.000Z",
+  "datePublished": "2019-12-03T10:57:40.000Z",
+  "headline": "대한 계획을 중단함에 따라 지난주의 예리한 수사법이",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/kyrgyz/media-23257484",
+    "@type": "WebPage",
+    "name": "대한 계획을 중단함에 따라 지난주의 예리한 수사법이",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+      "width": 1024,
+    },
+    "name": "BBC News Кыргыз Кызматы",
+    "publishingPrinciples": "https://www.bbc.com/kyrgyz/institutional-49677275",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+  "url": "http://localhost:7080/kyrgyz/media-23257484",
+}
+`;
+
+exports[`AMP  SEO OG description 1`] = `"북한 위기 : 전쟁은 끔찍할 것입니다. 조셉 던포드 (Joseph Dunford) 테스트 합동 참모 총장은 중국 방문 중에 의견을 발표했다. 북한의 미사일 시험 발사 이후 미국과 북한 간의 긴장이 고조되고있다. 트럼프 대변인은 북한이 괌의 미국 영토를 공격하겠다고 위협하면서 \\"화재와 분노\\"에"`;
+
+exports[`AMP  SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_kyrgyz/831A/test/_63726533_p01fcplf.jpg"`;
+
+exports[`AMP  SEO OG image alt 1`] = `"Buqqaafamtoota keessaa"`;
+
+exports[`AMP  SEO OG locale 1`] = `"ky-KG"`;
+
+exports[`AMP  SEO OG site name 1`] = `"BBC News Кыргыз Кызматы"`;
+
+exports[`AMP  SEO OG title 1`] = `"대한 계획을 중단함에 따라 지난주의 예리한 수사법이 - BBC News Кыргыз Кызматы"`;
+
+exports[`AMP  SEO OG type 1`] = `"article"`;
+
+exports[`AMP  SEO OG url 1`] = `"http://localhost:7080/kyrgyz/media-23257484"`;
+
+exports[`AMP  SEO Page title 1`] = `"대한 계획을 중단함에 따라 지난주의 예리한 수사법이 - BBC News Кыргыз Кызматы"`;
+
+exports[`AMP  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`AMP  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP  SEO Twitter creator 1`] = `"@bbckyrgyz"`;
+
+exports[`AMP  SEO Twitter description 1`] = `"북한 위기 : 전쟁은 끔찍할 것입니다. 조셉 던포드 (Joseph Dunford) 테스트 합동 참모 총장은 중국 방문 중에 의견을 발표했다. 북한의 미사일 시험 발사 이후 미국과 북한 간의 긴장이 고조되고있다. 트럼프 대변인은 북한이 괌의 미국 영토를 공격하겠다고 위협하면서 \\"화재와 분노\\"에"`;
+
+exports[`AMP  SEO Twitter image alt 1`] = `"Buqqaafamtoota keessaa"`;
+
+exports[`AMP  SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_kyrgyz/831A/test/_63726533_p01fcplf.jpg"`;
+
+exports[`AMP  SEO Twitter site 1`] = `"@bbckyrgyz"`;
+
+exports[`AMP  SEO Twitter title 1`] = `"대한 계획을 중단함에 따라 지난주의 예리한 수사법이 - BBC News Кыргыз Кызматы"`;

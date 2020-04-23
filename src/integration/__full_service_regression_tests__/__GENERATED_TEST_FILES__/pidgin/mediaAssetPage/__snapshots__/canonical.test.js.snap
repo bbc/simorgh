@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"Waka go wetin de inside"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=70&p=pidgin.media_asset.23248703.page&x1=[urn:bbc:cps:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f]&x2=[responsive]&x3=[news-pidgin]&x4=[pcm]&x7=[article-media-asset]&x8=[simorgh-nojs]&x9=[Simorgh:+Media+Pod+Build+First+CPS+Media+Asset+Page+in+Simorgh+with+the+Help+of+Drew+&+<+>+-+BBC+News+Pidgin]&x11=[2019-09-13T15:31:44.000Z]&x12=[2019-11-20T12:24:25.000Z]&x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]&x17=[Opinion]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, Pidgin"`;
+
+exports[`Canonical  I can see the bulleted list item 1`] = `"<Media Asset Page><Media Asset Page><Media Asset Page>this is the link textthis is the link textthis is the link text"`;
+
+exports[`Canonical  I can see the headline 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
+
+exports[`Canonical  I can see the related content 1`] = `"Police Arrest 3 ontop Anambra Church AttackGovernor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp8th August 2017Lagos 'Gay' men Appear for Court, say Dem no dey GuiltyThe men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.8th August 2017Image gallery, Kenya Elections Pictures: 8 August 2017This na some of the picture wey our eye see as Kenya people go vote for election today8th August 20170:15Audio, BBC News Pidgin One Minute News, 0,15All di local and world tori wey you suppose know in 60 seconds!17th August 2017"`;
+
+exports[`Canonical  I can see the timestamp 1`] = `"13 September 2019"`;
+
+exports[`Canonical  Media player embed A11y I can read the media player title 1`] = `"Media player"`;
+
+exports[`Canonical  Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/pidgin/23248703"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"pcm"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+      "width": 1024,
+    },
+    "name": "BBC News Pidgin",
+    "noBylinesPolicy": "https://www.bbc.com/pidgin/institutional-48528766#authorexpertise",
+  },
+  "dateModified": "2019-11-20T12:24:25.000Z",
+  "datePublished": "2019-09-13T15:31:44.000Z",
+  "headline": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/pidgin/23248703",
+    "@type": "WebPage",
+    "name": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+      "width": 1024,
+    },
+    "name": "BBC News Pidgin",
+    "publishingPrinciples": "https://www.bbc.com/pidgin/institutional-48528766",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+  "url": "http://localhost:7080/pidgin/23248703",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components."`;
+
+exports[`Canonical  SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"connectionAltText"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"pcm"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News Pidgin"`;
+
+exports[`Canonical  SEO OG title 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
+
+exports[`Canonical  SEO OG type 1`] = `"article"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/pidgin/23248703"`;
+
+exports[`Canonical  SEO Page title 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@BBCNews"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components."`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"connectionAltText"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@BBCNews"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;

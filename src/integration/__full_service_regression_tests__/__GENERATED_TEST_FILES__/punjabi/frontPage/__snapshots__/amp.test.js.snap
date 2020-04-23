@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP  A11y I can see the skip to content link 1`] = `"ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ"`;
+
+exports[`AMP  AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+}
+`;
+
+exports[`AMP  AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+  },
+}
+`;
+
+exports[`AMP  Analytics ATI 1`] = `
+Object {
+  "requests": Object {
+    "base": "https://logws1363.ati-host.net?",
+    "pageview": "\${base}s=598343&s2=73&p=punjabi.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:5186f24b-70d2-c87e-e050-17ac8045dfa0]&x2=[amp]&x3=[news-punjabi]&x4=[pa]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[ਨਿਊਜ਼+-+BBC+News+ਪੰਜਾਬੀ]&x11=[1970-01-18T07:54:39.141Z]&x12=[1970-01-19T02:08:50.014Z]",
+  },
+  "transport": Object {
+    "beacon": false,
+    "image": true,
+    "xhrpost": false,
+  },
+  "triggers": Object {
+    "trackPageview": Object {
+      "on": "visible",
+      "request": "pageview",
+    },
+  },
+}
+`;
+
+exports[`AMP  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/punjabi"`;
+
+exports[`AMP  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ ਲਈ ਬੀਬੀਸੀ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ ਬਾਹਰੀ ਲਿੰਕਿੰਗ ਲਈ ਸਾਡੇ ਤਰੀਕੇ ਬਾਰੇ ਪੜ੍ਹੋ"`;
+
+exports[`AMP  Header I can see the branding 1`] = `"BBC News, ਪੰਜਾਬੀ"`;
+
+exports[`AMP  SEO Canonical link 1`] = `"http://localhost:7080/punjabi"`;
+
+exports[`AMP  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`AMP  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`AMP  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP  SEO Heading level 1 1`] = `"BBC News, ਪੰਜਾਬੀ - ਹੋਮ ਪੇਜ"`;
+
+exports[`AMP  SEO Lang attribute 1`] = `"pa"`;
+
+exports[`AMP  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/punjabi",
+    "@type": "WebPage",
+    "name": "ਨਿਊਜ਼",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png",
+      "width": 1024,
+    },
+    "name": "BBC News ਪੰਜਾਬੀ",
+    "publishingPrinciples": "https://www.bbc.com/punjabi/institutional-49282853",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png",
+  "url": "http://localhost:7080/punjabi",
+}
+`;
+
+exports[`AMP  SEO OG description 1`] = `"ਪੰਜਾਬ ਤੇ ਭਾਰਤ ਸਬੰਧੀ ਤੇ ਕੌਮਾਂਤਰੀ ਖ਼ਬਰਾਂ ਲਈ ਬੀਬੀਸੀ ਪੰਜਾਬੀ ’ਤੇ ਆਓ। ਇੱਥੇ ਤੁਹਾਨੂੰ ਸਿਆਸਤ ਤੇ ਸਮਾਜ ਨਾਲ ਜੁੜੀਆਂ ਖ਼ਬਰਾਂ ਤੋਂ ਇਲਾਵਾ ਫੋਟੋ ਫੀਚਰ, ਵੀਡੀਓ ਤੇ ਮਨੋਰਥ ਭਰਪੂਰ ਲੇਖ ਵੀ ਮਿਲਣਗੇ। ਨੌਜਵਾਨਾਂ ਤੇ ਔਰਤਾਂ ਦਾ ਖ਼ਾਸ ਧਿਆਨ ਰੱਖਦੇ ਹੋਏ ਸੋਸ਼ਲ ਮੀਡੀਆ ਰੁਝਾਨਾਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਮਿਲੇਗੀ।"`;
+
+exports[`AMP  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png"`;
+
+exports[`AMP  SEO OG image alt 1`] = `"BBC News ਪੰਜਾਬੀ"`;
+
+exports[`AMP  SEO OG locale 1`] = `"pa-IN"`;
+
+exports[`AMP  SEO OG site name 1`] = `"BBC News ਪੰਜਾਬੀ"`;
+
+exports[`AMP  SEO OG title 1`] = `"ਨਿਊਜ਼ - BBC News ਪੰਜਾਬੀ"`;
+
+exports[`AMP  SEO OG type 1`] = `"website"`;
+
+exports[`AMP  SEO OG url 1`] = `"http://localhost:7080/punjabi"`;
+
+exports[`AMP  SEO Page title 1`] = `"ਨਿਊਜ਼ - BBC News ਪੰਜਾਬੀ"`;
+
+exports[`AMP  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`AMP  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP  SEO Twitter creator 1`] = `"@bbcnewspunjabi"`;
+
+exports[`AMP  SEO Twitter description 1`] = `"ਪੰਜਾਬ ਤੇ ਭਾਰਤ ਸਬੰਧੀ ਤੇ ਕੌਮਾਂਤਰੀ ਖ਼ਬਰਾਂ ਲਈ ਬੀਬੀਸੀ ਪੰਜਾਬੀ ’ਤੇ ਆਓ। ਇੱਥੇ ਤੁਹਾਨੂੰ ਸਿਆਸਤ ਤੇ ਸਮਾਜ ਨਾਲ ਜੁੜੀਆਂ ਖ਼ਬਰਾਂ ਤੋਂ ਇਲਾਵਾ ਫੋਟੋ ਫੀਚਰ, ਵੀਡੀਓ ਤੇ ਮਨੋਰਥ ਭਰਪੂਰ ਲੇਖ ਵੀ ਮਿਲਣਗੇ। ਨੌਜਵਾਨਾਂ ਤੇ ਔਰਤਾਂ ਦਾ ਖ਼ਾਸ ਧਿਆਨ ਰੱਖਦੇ ਹੋਏ ਸੋਸ਼ਲ ਮੀਡੀਆ ਰੁਝਾਨਾਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਮਿਲੇਗੀ।"`;
+
+exports[`AMP  SEO Twitter image alt 1`] = `"BBC News ਪੰਜਾਬੀ"`;
+
+exports[`AMP  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png"`;
+
+exports[`AMP  SEO Twitter site 1`] = `"@bbcnewspunjabi"`;
+
+exports[`AMP  SEO Twitter title 1`] = `"ਨਿਊਜ਼ - BBC News ਪੰਜਾਬੀ"`;

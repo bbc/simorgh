@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP  A11y I can see the skip to content link 1`] = `"내용 보기"`;
+
+exports[`AMP  AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+}
+`;
+
+exports[`AMP  AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+  },
+}
+`;
+
+exports[`AMP  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/korean"`;
+
+exports[`AMP  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다 외부 링크에 대한 본사 정책 보기"`;
+
+exports[`AMP  Header I can see the branding 1`] = `"BBC News, 코리아"`;
+
+exports[`AMP  I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/4017/test/ba378f90-110a-11ea-acaa-cd607a38aea4.jpg"`;
+
+exports[`AMP  I can see an image with a caption 2`] = `"사진 설명, 이 테스트 이미지 인 저작권 는 프랑스지도를 보여줍니다. 이미지는 처음 세 블록에 있으며이 캡션이 있습니다."`;
+
+exports[`AMP  SEO Canonical link 1`] = `"http://localhost:7080/korean/articles/c3mn1lvz65xo"`;
+
+exports[`AMP  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`AMP  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`AMP  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP  SEO Heading level 1 1`] = `"이것이이 테스트 기사의 헤드 라인입니다."`;
+
+exports[`AMP  SEO Lang attribute 1`] = `"ko"`;
+
+exports[`AMP  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/korean.png",
+      "width": 1024,
+    },
+    "name": "BBC News 코리아",
+    "noBylinesPolicy": "https://www.bbc.com/korean/institutional-49283197#authorexpertise",
+  },
+  "dateModified": "2019-11-27T11:45:47.209Z",
+  "datePublished": "2019-11-27T11:45:47.209Z",
+  "headline": "이것이이 테스트 기사의 헤드 라인입니다.",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/korean.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/korean/articles/c3mn1lvz65xo",
+    "@type": "WebPage",
+    "name": "이것이이 테스트 기사의 헤드 라인입니다.",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/korean.png",
+      "width": 1024,
+    },
+    "name": "BBC News 코리아",
+    "publishingPrinciples": "https://www.bbc.com/korean/institutional-49283197",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/korean.png",
+  "url": "http://localhost:7080/korean/articles/c3mn1lvz65xo",
+}
+`;
+
+exports[`AMP  SEO OG description 1`] = `"이것이이 테스트 기사의 헤드 라인입니다."`;
+
+exports[`AMP  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"`;
+
+exports[`AMP  SEO OG image alt 1`] = `"BBC News 코리아"`;
+
+exports[`AMP  SEO OG locale 1`] = `"ko-KO"`;
+
+exports[`AMP  SEO OG site name 1`] = `"BBC News 코리아"`;
+
+exports[`AMP  SEO OG title 1`] = `"이것이이 테스트 기사의 헤드 라인입니다. - BBC News 코리아"`;
+
+exports[`AMP  SEO OG type 1`] = `"article"`;
+
+exports[`AMP  SEO OG url 1`] = `"http://localhost:7080/korean/articles/c3mn1lvz65xo"`;
+
+exports[`AMP  SEO Page title 1`] = `"이것이이 테스트 기사의 헤드 라인입니다. - BBC News 코리아"`;
+
+exports[`AMP  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`AMP  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP  SEO Twitter creator 1`] = `"@bbcnews"`;
+
+exports[`AMP  SEO Twitter description 1`] = `"이것이이 테스트 기사의 헤드 라인입니다."`;
+
+exports[`AMP  SEO Twitter image alt 1`] = `"BBC News 코리아"`;
+
+exports[`AMP  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"`;
+
+exports[`AMP  SEO Twitter site 1`] = `"@bbcnews"`;
+
+exports[`AMP  SEO Twitter title 1`] = `"이것이이 테스트 기사의 헤드 라인입니다. - BBC News 코리아"`;

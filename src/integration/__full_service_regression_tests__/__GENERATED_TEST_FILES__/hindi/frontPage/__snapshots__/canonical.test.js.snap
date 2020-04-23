@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"सामग्री को स्किप करें"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=52&p=hindi.page&x1=[urn:bbc:cps:3b83631f-f40b-ba7d-e050-380a4e806f21]&x2=[responsive]&x3=[news-hindi]&x4=[hi]&x7=[index-home]&x8=[simorgh-nojs]&x9=[ब्रेकिंग+न्यूज़+समाचार,+ताजा+खबर+|+News,+latest+news,+breaking+news+-+BBC+News+हिंदी]&x11=[1970-01-18T01:11:23.777Z]&x12=[1970-01-19T02:08:49.803Z]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hindi"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है. बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें."`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, हिंदी"`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/hindi"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"BBC News, हिंदी - होम पेज"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"hi"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/hindi",
+    "@type": "WebPage",
+    "name": "ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png",
+      "width": 1024,
+    },
+    "name": "BBC News हिंदी",
+    "publishingPrinciples": "https://www.bbc.com/hindi/institutional-50223932",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png",
+  "url": "http://localhost:7080/hindi",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"हिंदी में ताज़ा समाचार, ब्रेकिंग न्यूज़, वीडियो, ऑडियो और फ़ीचर. बीबीसी हिंदी डॉटकॉम पर भारत, पाकिस्तान और चीन सहित दुनिया भर की ताज़ा ख़बरें. BBC HINDI for up-to-the-minute news, breaking news, video, audio and feature stories."`;
+
+exports[`Canonical  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"BBC News हिंदी"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"hi-IN"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News हिंदी"`;
+
+exports[`Canonical  SEO OG title 1`] = `"ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news - BBC News हिंदी"`;
+
+exports[`Canonical  SEO OG type 1`] = `"website"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/hindi"`;
+
+exports[`Canonical  SEO Page title 1`] = `"ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news - BBC News हिंदी"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbchindi"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"हिंदी में ताज़ा समाचार, ब्रेकिंग न्यूज़, वीडियो, ऑडियो और फ़ीचर. बीबीसी हिंदी डॉटकॉम पर भारत, पाकिस्तान और चीन सहित दुनिया भर की ताज़ा ख़बरें. BBC HINDI for up-to-the-minute news, breaking news, video, audio and feature stories."`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"BBC News हिंदी"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbchindi"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news - BBC News हिंदी"`;

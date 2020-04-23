@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP  A11y I can see the skip to content link 1`] = `"Fò kọjá sí nnkan tí ó wà nínú rẹ̀"`;
+
+exports[`AMP  AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+}
+`;
+
+exports[`AMP  AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+  },
+}
+`;
+
+exports[`AMP  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/yoruba"`;
+
+exports[`AMP  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC kò mọ̀ nípa àwọn ohun tí ó wà ní àwọn ojú òpó tí ó wà ní ìta. Ọwọ́ tí a fi mú ìbáṣepọ̀ ti ìta."`;
+
+exports[`AMP  Header I can see the branding 1`] = `"BBC News, Yorùbá"`;
+
+exports[`AMP  I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/4273/test/097029e0-de26-11e9-b23c-f1ac9644bb55.jpg"`;
+
+exports[`AMP  I can see an image with a caption 2`] = `"Àkọlé àwòrán, Aworan idanwo yii, BBC aladakọ, fihan maapu ti Ilu Faranse. Aworan naa wa ni awọn bulọọki mẹta akọkọ ati pe o ni ifori."`;
+
+exports[`AMP  SEO Canonical link 1`] = `"http://localhost:7080/yoruba/articles/clw06m0nj8qo"`;
+
+exports[`AMP  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`AMP  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`AMP  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP  SEO Heading level 1 1`] = `"Eyi ni akọle ti nkan idanwo yii"`;
+
+exports[`AMP  SEO Lang attribute 1`] = `"yo"`;
+
+exports[`AMP  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png",
+      "width": 1024,
+    },
+    "name": "BBC News Yorùbá",
+    "noBylinesPolicy": "https://www.bbc.com/yoruba/institutional-48528718#authorexpertise",
+  },
+  "dateModified": "2019-09-27T16:24:58.248Z",
+  "datePublished": "2019-07-12T13:09:53.391Z",
+  "headline": "Eyi ni akọle SEO ti nkan idanwo yii",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/yoruba/articles/clw06m0nj8qo",
+    "@type": "WebPage",
+    "name": "Eyi ni akọle SEO ti nkan idanwo yii",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png",
+      "width": 1024,
+    },
+    "name": "BBC News Yorùbá",
+    "publishingPrinciples": "https://www.bbc.com/yoruba/institutional-48528718",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png",
+  "url": "http://localhost:7080/yoruba/articles/clw06m0nj8qo",
+}
+`;
+
+exports[`AMP  SEO OG description 1`] = `"Eyi ni akọle SEO ti nkan idanwo yii"`;
+
+exports[`AMP  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png"`;
+
+exports[`AMP  SEO OG image alt 1`] = `"BBC News Yorùbá"`;
+
+exports[`AMP  SEO OG locale 1`] = `"yo"`;
+
+exports[`AMP  SEO OG site name 1`] = `"BBC News Yorùbá"`;
+
+exports[`AMP  SEO OG title 1`] = `"Eyi ni akọle SEO ti nkan idanwo yii - BBC News Yorùbá"`;
+
+exports[`AMP  SEO OG type 1`] = `"article"`;
+
+exports[`AMP  SEO OG url 1`] = `"http://localhost:7080/yoruba/articles/clw06m0nj8qo"`;
+
+exports[`AMP  SEO Page title 1`] = `"Eyi ni akọle SEO ti nkan idanwo yii - BBC News Yorùbá"`;
+
+exports[`AMP  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`AMP  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP  SEO Twitter creator 1`] = `"@BBCNews"`;
+
+exports[`AMP  SEO Twitter description 1`] = `"Eyi ni akọle SEO ti nkan idanwo yii"`;
+
+exports[`AMP  SEO Twitter image alt 1`] = `"BBC News Yorùbá"`;
+
+exports[`AMP  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png"`;
+
+exports[`AMP  SEO Twitter site 1`] = `"@BBCNews"`;
+
+exports[`AMP  SEO Twitter title 1`] = `"Eyi ni akọle SEO ti nkan idanwo yii - BBC News Yorùbá"`;

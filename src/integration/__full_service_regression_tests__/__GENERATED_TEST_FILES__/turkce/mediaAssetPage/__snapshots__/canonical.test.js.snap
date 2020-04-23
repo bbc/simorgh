@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"İçeriğe götür"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=92&p=embedded_video::turkce.embedded_video.media_asset.23268997.page&x1=[urn:bbc:cps:ebbdb429-1837-b34e-a5ec-1351d577da4b]&x2=[responsive]&x3=[news-turkce]&x4=[tr]&x7=[article-media-asset]&x8=[simorgh-nojs]&x9=[Some+audio+from+a+supermarket+checkout+in+Birmingham+-+BBC+News+Türkçe]&x11=[2020-03-02T15:19:42.000Z]&x12=[2020-03-02T15:19:43.000Z]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/turkce"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC, link verilen internet sitelerinin içeriğinden sorumlu değildir. Link verilen internet sitelerine yaklaşımımız."`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, Türkçe"`;
+
+exports[`Canonical  I can see the headline 1`] = `"Some audio from a supermarket checkout in Birmingham"`;
+
+exports[`Canonical  I can see the timestamp 1`] = `"2 Mart 2020"`;
+
+exports[`Canonical  Media player embed A11y I can read the media player title 1`] = `"Media player"`;
+
+exports[`Canonical  Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/turkce/media-23268997/p01m7d09/tr"`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/turkce/media-23268997"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"Some audio from a supermarket checkout in Birmingham"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"tr"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/turkce.png",
+      "width": 1024,
+    },
+    "name": "BBC News Türkçe",
+    "noBylinesPolicy": "https://www.bbc.com/turkce/kurumsal-50221017#authorexpertise",
+  },
+  "dateModified": "2020-03-02T15:19:43.000Z",
+  "datePublished": "2020-03-02T15:19:42.000Z",
+  "headline": "Some audio from a supermarket checkout in Birmingham",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/turkce.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/turkce/media-23268997",
+    "@type": "WebPage",
+    "name": "Some audio from a supermarket checkout in Birmingham",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/turkce.png",
+      "width": 1024,
+    },
+    "name": "BBC News Türkçe",
+    "publishingPrinciples": "https://www.bbc.com/turkce/kurumsal-50221017",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/turkce.png",
+  "url": "http://localhost:7080/turkce/media-23268997",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"audio."`;
+
+exports[`Canonical  SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_turkce/59EF/test/_63732032_p01mt2kt.jpg"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"England star Fran Kirby"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"tr-TR"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News Türkçe"`;
+
+exports[`Canonical  SEO OG title 1`] = `"Some audio from a supermarket checkout in Birmingham - BBC News Türkçe"`;
+
+exports[`Canonical  SEO OG type 1`] = `"article"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/turkce/media-23268997"`;
+
+exports[`Canonical  SEO Page title 1`] = `"Some audio from a supermarket checkout in Birmingham - BBC News Türkçe"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbcturkce"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"audio."`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"England star Fran Kirby"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_turkce/59EF/test/_63732032_p01mt2kt.jpg"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbcturkce"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"Some audio from a supermarket checkout in Birmingham - BBC News Türkçe"`;

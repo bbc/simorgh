@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"ናብቲ ትሕዝቶ ቀጽሉ"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=91&p=tigrinya.articles.ck62z3rjwdeo.page&x1=[urn:bbc:optimo:ck62z3rjwdeo]&x2=[responsive]&x3=[news-tigrinya]&x4=[ti]&x7=[article]&x8=[simorgh-nojs]&x9=[እትህቡና+ውልቃዊ+ሐበሬታ፡+ተሳትፎኹም+ኮነ+እተቕርቡዎ+ጥርዓንን+መልሰ+ዕንጋለን]&x11=[2019-11-27T11:25:04.923Z]&x12=[2019-11-27T11:25:04.923Z]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/tigrinya"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. ቢቢሲ፡ ንትሕዝቶ ካልኦት መርበባት ሓበሬታ ሓላፍነት ኣይወስድን። ብዛዕባ ምስ ናይ ደገ መርበባት እንገብሮ መላግቦታት ዘለና ኣረኣእያ ንምርዳእ ኣንብቡ።"`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, ትግርኛ"`;
+
+exports[`Canonical  I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/fa95/test/0985b6b0-1108-11ea-acaa-cd607a38aea4.jpg"`;
+
+exports[`Canonical  I can see an image with a caption 2`] = `"መግለጺ ስእሊ, ንመስርሕ ዕቃበን ኣጠቓቕማ ውልቃዊ ሐበሬታ ብዘማልእ ኣገባብ ይሕዞ"`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/tigrinya/articles/ck62z3rjwdeo"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"እትህቡና ውልቃዊ ሐበሬታ፡ ተሳትፎኹም ኮነ እተቕርቡዎ ጥርዓንን መልሰ ዕንጋለን"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"ti"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png",
+      "width": 1024,
+    },
+    "name": "BBC News ትግርኛ",
+    "noBylinesPolicy": "https://www.bbc.com/tigrinya/institutional-49283259#authorexpertise",
+  },
+  "dateModified": "2019-11-27T11:25:04.923Z",
+  "datePublished": "2019-11-27T11:25:04.923Z",
+  "headline": "እትህቡና ውልቃዊ ሐበሬታ፡ ተሳትፎኹም ኮነ እተቕርቡዎ ጥርዓንን መልሰ ዕንጋለን",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/tigrinya/articles/ck62z3rjwdeo",
+    "@type": "WebPage",
+    "name": "እትህቡና ውልቃዊ ሐበሬታ፡ ተሳትፎኹም ኮነ እተቕርቡዎ ጥርዓንን መልሰ ዕንጋለን",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png",
+      "width": 1024,
+    },
+    "name": "BBC News ትግርኛ",
+    "publishingPrinciples": "https://www.bbc.com/tigrinya/institutional-49283259",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png",
+  "url": "http://localhost:7080/tigrinya/articles/ck62z3rjwdeo",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"እትህቡና ውልቃዊ ሐበሬታ፡ ተሳትፎኹም ኮነ እተቕርቡዎ ጥርዓንን መልሰ ዕንጋለን"`;
+
+exports[`Canonical  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"BBC News ትግርኛ"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"ti-ET"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News ትግርኛ"`;
+
+exports[`Canonical  SEO OG title 1`] = `"እትህቡና ውልቃዊ ሐበሬታ፡ ተሳትፎኹም ኮነ እተቕርቡዎ ጥርዓንን መልሰ ዕንጋለን - BBC News ትግርኛ"`;
+
+exports[`Canonical  SEO OG type 1`] = `"article"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/tigrinya/articles/ck62z3rjwdeo"`;
+
+exports[`Canonical  SEO Page title 1`] = `"እትህቡና ውልቃዊ ሐበሬታ፡ ተሳትፎኹም ኮነ እተቕርቡዎ ጥርዓንን መልሰ ዕንጋለን - BBC News ትግርኛ"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbcnews"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"እትህቡና ውልቃዊ ሐበሬታ፡ ተሳትፎኹም ኮነ እተቕርቡዎ ጥርዓንን መልሰ ዕንጋለን"`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"BBC News ትግርኛ"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbcnews"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"እትህቡና ውልቃዊ ሐበሬታ፡ ተሳትፎኹም ኮነ እተቕርቡዎ ጥርዓንን መልሰ ዕንጋለን - BBC News ትግርኛ"`;

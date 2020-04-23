@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"අන්තර්ගතයට පිවිසෙන්න"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=82&p=sinhala.page&x1=[urn:bbc:cps:2f416a5d-6891-8ef4-e050-380a4e800c16]&x2=[responsive]&x3=[news-sinhala]&x4=[si]&x7=[index-home]&x8=[simorgh-nojs]&x9=[මුල්+පිටුව+-+BBC+News+සිංහල]&x11=[1970-01-17T21:22:10.823Z]&x12=[1970-01-19T02:08:50.525Z]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/sinhala"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ. බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න."`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, සිංහල"`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/sinhala"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"BBC News, සිංහල - මුල් පිටුව"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"si"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/sinhala",
+    "@type": "WebPage",
+    "name": "මුල් පිටුව",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png",
+      "width": 1024,
+    },
+    "name": "BBC News සිංහල",
+    "publishingPrinciples": "https://www.bbc.com/sinhala/institutional-50288553",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png",
+  "url": "http://localhost:7080/sinhala",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"ශ්‍රී ලංකාව සම්බන්ධ නැවුම් පුවත්, අලුත්ම පුවත්, ක්‍රිකට්, විශේෂ සම්මුඛ සාකච්ඡා, හඬපට, වීඩියෝ පට, ප්‍රවෘත්ති විශ්ලේෂණ, විශේෂාංග, කාලීන ප්‍රවෘත්ති සහ ව්‍යාපාරික හා කලා තොරතුරු දැන ගැනීමට බීබීසී සිංහල වෙබ් අඩවියට පිවිසෙන්න. BBC Sandeshaya, BBC Sinhala"`;
+
+exports[`Canonical  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"BBC News සිංහල"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"si-LK"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News සිංහල"`;
+
+exports[`Canonical  SEO OG title 1`] = `"මුල් පිටුව - BBC News සිංහල"`;
+
+exports[`Canonical  SEO OG type 1`] = `"website"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/sinhala"`;
+
+exports[`Canonical  SEO Page title 1`] = `"මුල් පිටුව - BBC News සිංහල"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbcsinhala"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"ශ්‍රී ලංකාව සම්බන්ධ නැවුම් පුවත්, අලුත්ම පුවත්, ක්‍රිකට්, විශේෂ සම්මුඛ සාකච්ඡා, හඬපට, වීඩියෝ පට, ප්‍රවෘත්ති විශ්ලේෂණ, විශේෂාංග, කාලීන ප්‍රවෘත්ති සහ ව්‍යාපාරික හා කලා තොරතුරු දැන ගැනීමට බීබීසී සිංහල වෙබ් අඩවියට පිවිසෙන්න. BBC Sandeshaya, BBC Sinhala"`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"BBC News සිංහල"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbcsinhala"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"මුල් පිටුව - BBC News සිංහල"`;

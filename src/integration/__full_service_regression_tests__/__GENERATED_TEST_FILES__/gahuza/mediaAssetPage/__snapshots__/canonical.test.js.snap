@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"Simbira ku birimwo"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=40&p=news::gahuza.news.media_asset.23257470.page&x1=[urn:bbc:cps:1f5779c5-0439-3043-be6c-5d76c5e6041b]&x2=[responsive]&x3=[news-gahuza]&x4=[rw]&x7=[article-media-asset]&x8=[simorgh-nojs]&x9=[This+is+the+full+headline+which+appears+inside+the+media+asset+page+-+BBC+News+Gahuza]&x11=[2019-12-03T10:49:25.000Z]&x12=[2019-12-03T10:49:26.000Z]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, Gahuza"`;
+
+exports[`Canonical  I can see the headline 1`] = `"This is the full headline which appears inside the media asset page"`;
+
+exports[`Canonical  I can see the timestamp 1`] = `"3 Ukw'icumi na kabiri 2019"`;
+
+exports[`Canonical  Media player embed A11y I can read the media player title 1`] = `"Ibikinwa"`;
+
+exports[`Canonical  Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/gahuza/amakuru-23257470/p0182w5s/rw"`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/gahuza/amakuru-23257470"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"This is the full headline which appears inside the media asset page"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"rw"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+      "width": 1024,
+    },
+    "name": "BBC News Gahuza",
+    "noBylinesPolicy": "https://www.bbc.com/gahuza/institutional-49283343#authorexpertise",
+  },
+  "dateModified": "2019-12-03T10:49:26.000Z",
+  "datePublished": "2019-12-03T10:49:25.000Z",
+  "headline": "This is the full headline which appears inside the media asset page",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/gahuza/amakuru-23257470",
+    "@type": "WebPage",
+    "name": "This is the full headline which appears inside the media asset page",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+      "width": 1024,
+    },
+    "name": "BBC News Gahuza",
+    "publishingPrinciples": "https://www.bbc.com/gahuza/institutional-49283343",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+  "url": "http://localhost:7080/gahuza/amakuru-23257470",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"This is the summary"`;
+
+exports[`Canonical  SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_gahuza/831A/test/_63726533_p01fcplf.jpg"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"Buqqaafamtoota keessaa"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"rw-RW"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News Gahuza"`;
+
+exports[`Canonical  SEO OG title 1`] = `"This is the full headline which appears inside the media asset page - BBC News Gahuza"`;
+
+exports[`Canonical  SEO OG type 1`] = `"article"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/gahuza/amakuru-23257470"`;
+
+exports[`Canonical  SEO Page title 1`] = `"This is the full headline which appears inside the media asset page - BBC News Gahuza"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbcgahuza"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"This is the summary"`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"Buqqaafamtoota keessaa"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_gahuza/831A/test/_63726533_p01fcplf.jpg"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbcgahuza"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"This is the full headline which appears inside the media asset page - BBC News Gahuza"`;

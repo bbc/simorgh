@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"थेट मजकुरावर जा"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=59&p=marathi.articles.cp47g4myxz7o.page&x1=[urn:bbc:optimo:cp47g4myxz7o]&x2=[responsive]&x3=[news-marathi]&x4=[mr]&x7=[article]&x8=[simorgh-nojs]&x9=[चांद्रमोहीम+:+कसं+होतं+अपोलो+11+मिशन?]&x11=[2019-07-12T14:38:07.715Z]&x12=[2019-07-12T14:38:07.715Z]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/marathi"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही. बाह्य लिंक्सबद्दल आम्हाल काय वाटतं? इथे वाचा. बाह्य लिंक्सबद्दल आम्हाल काय वाटतं? इथे वाचा."`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, मराठी"`;
+
+exports[`Canonical  I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/9563/test/1b98b910-fcb3-11e9-9afe-1371928331c5.jpg"`;
+
+exports[`Canonical  I can see an image with a caption 2`] = `"फोटो कॅप्शन, ही चाचणी प्रतिमा, बीबीसी कॉपीराइट, फ्रान्सचा नकाशा दर्शविते. प्रतिमा पहिल्या तीन ब्लॉक्समध्ये आहे आणि त्यास हे मथळा आहे."`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/marathi/articles/cp47g4myxz7o"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"ही या चाचणी लेखाची मथळा आहे"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"mr"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png",
+      "width": 1024,
+    },
+    "name": "BBC News मराठी",
+    "noBylinesPolicy": "https://www.bbc.com/marathi/institutional-50418391#authorexpertise",
+  },
+  "dateModified": "2019-07-12T14:38:07.715Z",
+  "datePublished": "2019-07-12T14:38:07.715Z",
+  "headline": "चांद्रमोहीम : कसं होतं अपोलो 11 मिशन?",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/marathi/articles/cp47g4myxz7o",
+    "@type": "WebPage",
+    "name": "चांद्रमोहीम : कसं होतं अपोलो 11 मिशन?",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png",
+      "width": 1024,
+    },
+    "name": "BBC News मराठी",
+    "publishingPrinciples": "https://www.bbc.com/marathi/institutional-50418391",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png",
+  "url": "http://localhost:7080/marathi/articles/cp47g4myxz7o",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"चांद्रमोहीम : कसं होतं अपोलो 11 मिशन?"`;
+
+exports[`Canonical  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"BBC News मराठी"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"mr-IN"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News मराठी"`;
+
+exports[`Canonical  SEO OG title 1`] = `"चांद्रमोहीम : कसं होतं अपोलो 11 मिशन? - BBC News मराठी"`;
+
+exports[`Canonical  SEO OG type 1`] = `"article"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/marathi/articles/cp47g4myxz7o"`;
+
+exports[`Canonical  SEO Page title 1`] = `"चांद्रमोहीम : कसं होतं अपोलो 11 मिशन? - BBC News मराठी"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbcnewsmarathi"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"चांद्रमोहीम : कसं होतं अपोलो 11 मिशन?"`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"BBC News मराठी"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbcnewsmarathi"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"चांद्रमोहीम : कसं होतं अपोलो 11 मिशन? - BBC News मराठी"`;

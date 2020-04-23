@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"Mətnə keçid"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=6&p=azerbaijan::azeri.azerbaijan.media_asset.23257464.page&x1=[urn:bbc:cps:d39ebe18-605c-5543-86eb-639422147697]&x2=[responsive]&x3=[news-azeri]&x4=[az]&x7=[article-media-asset]&x8=[simorgh-nojs]&x9=[Clip+short+synopsis+-+e2e+test+-+BBC+News+Azərbaycanca]&x11=[2019-12-03T10:45:00.000Z]&x12=[2019-12-03T10:45:01.000Z]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/azeri"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC kənar saytların məzmununa məsul deyil. Bizim kənar keçidlərə dair yanaşmamız barədə oxuyun."`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, Azərbaycanca"`;
+
+exports[`Canonical  I can see the headline 1`] = `"Clip short synopsis - e2e test"`;
+
+exports[`Canonical  I can see the timestamp 1`] = `"3 Dekabr 2019"`;
+
+exports[`Canonical  Media player embed A11y I can read the media player title 1`] = `"Media player"`;
+
+exports[`Canonical  Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/azeri/azerbaijan-23257464/p01d23fm/az"`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/azeri/azerbaijan-23257464"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"Clip short synopsis - e2e test"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"az"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/azeri.png",
+      "width": 1024,
+    },
+    "name": "BBC News Azərbaycanca",
+    "noBylinesPolicy": "https://www.bbc.com/azeri/institutional-49283479#authorexpertise",
+  },
+  "dateModified": "2019-12-03T10:45:01.000Z",
+  "datePublished": "2019-12-03T10:45:00.000Z",
+  "headline": "Clip short synopsis - e2e test",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/azeri.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/azeri/azerbaijan-23257464",
+    "@type": "WebPage",
+    "name": "Clip short synopsis - e2e test",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/azeri.png",
+      "width": 1024,
+    },
+    "name": "BBC News Azərbaycanca",
+    "publishingPrinciples": "https://www.bbc.com/azeri/institutional-49283479",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/azeri.png",
+  "url": "http://localhost:7080/azeri/azerbaijan-23257464",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"Clip medium synopsis - e2e test"`;
+
+exports[`Canonical  SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_azeri/831A/test/_63726533_p01fcplf.jpg"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"Buqqaafamtoota keessaa"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"az-AZ"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News Azərbaycanca"`;
+
+exports[`Canonical  SEO OG title 1`] = `"Clip short synopsis - e2e test - BBC News Azərbaycanca"`;
+
+exports[`Canonical  SEO OG type 1`] = `"article"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/azeri/azerbaijan-23257464"`;
+
+exports[`Canonical  SEO Page title 1`] = `"Clip short synopsis - e2e test - BBC News Azərbaycanca"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbcazeri"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"Clip medium synopsis - e2e test"`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"Buqqaafamtoota keessaa"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_azeri/831A/test/_63726533_p01fcplf.jpg"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbcazeri"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"Clip short synopsis - e2e test - BBC News Azərbaycanca"`;

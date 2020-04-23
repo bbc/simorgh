@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"सामग्री को स्किप करें"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=52&p=hindi.bbc_hindi_radio.liveradio.page&x1=[urn:bbc:ares::ws_live:bbc_hindi_radio]&x2=[responsive]&x3=[news-hindi]&x4=[hi]&x7=[player-live]&x8=[simorgh-nojs]&x9=[बीबीसी+हिंदी+-+BBC+News+हिंदी]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hindi"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है. बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें."`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, हिंदी"`;
+
+exports[`Canonical  I can see the headline 1`] = `"बीबीसी हिंदी"`;
+
+exports[`Canonical  I can see the summary 1`] = `"दुनिया और भारत की ख़बरें, विश्लेषण और फ़ीचर. हिंदी में संवाद के सूत्रधार"`;
+
+exports[`Canonical  Media player embed A11y I can read the media player title 1`] = `"ऑडिया प्लेयर"`;
+
+exports[`Canonical  Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_hindi_radio/liveradio/hi?morph_env=live"`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/hindi/bbc_hindi_radio/liveradio"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"बीबीसी हिंदी"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"hi"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "RadioChannel",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/hindi/bbc_hindi_radio/liveradio",
+    "@type": "WebPage",
+    "name": "बीबीसी हिंदी",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png",
+      "width": 1024,
+    },
+    "name": "BBC News हिंदी",
+    "publishingPrinciples": "https://www.bbc.com/hindi/institutional-50223932",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png",
+  "url": "http://localhost:7080/hindi/bbc_hindi_radio/liveradio",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"दुनिया और भारत की ख़बरें, विश्लेषण और फ़ीचर. हिंदी में संवाद के सूत्रधार"`;
+
+exports[`Canonical  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"BBC News हिंदी"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"hi-IN"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News हिंदी"`;
+
+exports[`Canonical  SEO OG title 1`] = `"बीबीसी हिंदी - BBC News हिंदी"`;
+
+exports[`Canonical  SEO OG type 1`] = `"website"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/hindi/bbc_hindi_radio/liveradio"`;
+
+exports[`Canonical  SEO Page title 1`] = `"बीबीसी हिंदी - BBC News हिंदी"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbchindi"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"दुनिया और भारत की ख़बरें, विश्लेषण और फ़ीचर. हिंदी में संवाद के सूत्रधार"`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"BBC News हिंदी"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbchindi"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"बीबीसी हिंदी - BBC News हिंदी"`;

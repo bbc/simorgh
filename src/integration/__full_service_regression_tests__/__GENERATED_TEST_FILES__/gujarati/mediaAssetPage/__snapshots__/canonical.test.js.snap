@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"કન્ટેન્ટ પર જાવ"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=50&p=also_in_the_news::gujarati.also_in_the_news.media_asset.23130286.page&x1=[urn:bbc:cps:77bd783c-5f55-1a4f-8704-baaaee04a4e4]&x2=[responsive]&x3=[news-gujarati]&x4=[gu]&x7=[article-media-asset]&x8=[simorgh-nojs]&x9=[આગળની+સ્લાઇડમાં+જુઓ,+સબંધિત+વધુ+તસવીરો...+-+BBC+News+ગુજરાતી]&x11=[2017-06-06T10:31:38.000Z]&x12=[2017-06-06T10:43:19.000Z]&x13=[Narendra+Modi]&x14=[103fc7e4-3a8d-491c-9a75-3c37c299d48f]&x17=[News]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gujarati"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. બહારની વેબસાઇટ્સની સામગ્રી માટે બીબીસી જવાબદાર નથી. બહારની વેબસાઇટ્સની લિંક આપવા અંગેની અમારી નીતિ વિશે વાંચો"`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, ગુજરાતી"`;
+
+exports[`Canonical  I can see the headline 1`] = `"આગળની સ્લાઇડમાં જુઓ, સબંધિત વધુ તસવીરો..."`;
+
+exports[`Canonical  I can see the timestamp 1`] = `"6 જૂન 2017"`;
+
+exports[`Canonical  Media player embed A11y I can read the media player title 1`] = `"મીડિયા પ્લેયર"`;
+
+exports[`Canonical  Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/gujarati/other-news-23130286/p01blkgq/gu"`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/gujarati/other-news-23130286"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"આગળની સ્લાઇડમાં જુઓ, સબંધિત વધુ તસવીરો..."`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"gu"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "about": Array [
+    Object {
+      "@type": "Thing",
+      "name": "Narendra Modi",
+    },
+  ],
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gujarati.png",
+      "width": 1024,
+    },
+    "name": "BBC News ગુજરાતી",
+    "noBylinesPolicy": "https://www.bbc.com/gujarati/institutional-50409883#authorexpertise",
+  },
+  "dateModified": "2017-06-06T10:43:19.000Z",
+  "datePublished": "2017-06-06T10:31:38.000Z",
+  "headline": "આગળની સ્લાઇડમાં જુઓ, સબંધિત વધુ તસવીરો...",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gujarati.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/gujarati/other-news-23130286",
+    "@type": "WebPage",
+    "name": "આગળની સ્લાઇડમાં જુઓ, સબંધિત વધુ તસવીરો...",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gujarati.png",
+      "width": 1024,
+    },
+    "name": "BBC News ગુજરાતી",
+    "publishingPrinciples": "https://www.bbc.com/gujarati/institutional-50409883",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/gujarati.png",
+  "url": "http://localhost:7080/gujarati/other-news-23130286",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"ભારતીય કેપ્ટન વિરાટ કોહલીએ પાકિસ્તાન વિરૂદ્ધ જીત બાદ કહ્યું યુવરાજની પાકિસ્તાન વિરૂદ્ધ વિસ્ફોટક બેટિંગ દરમિયાન હું પોતાને 'ક્લબ બેટ્સમેન' ગણી રહ્યો હતો."`;
+
+exports[`Canonical  SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_gujarati/C281/test/_63539794_p01blmqx.jpg"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"શિખર-રોહિતની કરી પ્રશંસા"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"gu-IN"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News ગુજરાતી"`;
+
+exports[`Canonical  SEO OG title 1`] = `"આગળની સ્લાઇડમાં જુઓ, સબંધિત વધુ તસવીરો... - BBC News ગુજરાતી"`;
+
+exports[`Canonical  SEO OG type 1`] = `"article"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/gujarati/other-news-23130286"`;
+
+exports[`Canonical  SEO Page title 1`] = `"આગળની સ્લાઇડમાં જુઓ, સબંધિત વધુ તસવીરો... - BBC News ગુજરાતી"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbcnewsgujarati"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"ભારતીય કેપ્ટન વિરાટ કોહલીએ પાકિસ્તાન વિરૂદ્ધ જીત બાદ કહ્યું યુવરાજની પાકિસ્તાન વિરૂદ્ધ વિસ્ફોટક બેટિંગ દરમિયાન હું પોતાને 'ક્લબ બેટ્સમેન' ગણી રહ્યો હતો."`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"શિખર-રોહિતની કરી પ્રશંસા"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_gujarati/C281/test/_63539794_p01blmqx.jpg"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbcnewsgujarati"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"આગળની સ્લાઇડમાં જુઓ, સબંધિત વધુ તસવીરો... - BBC News ગુજરાતી"`;

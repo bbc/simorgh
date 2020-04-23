@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"Neidio i'r cynnwys"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598292&s2=100&p=cymrufyw.articles.c06p32z9x2mo.page&x1=[urn:bbc:optimo:c06p32z9x2mo]&x2=[responsive]&x3=[news-cymrufyw]&x4=[cy]&x7=[article]&x8=[simorgh-nojs]&x9=[Dyma+bennawd+SEO+yr+erthygl+brawf+yma]&x11=[2019-07-13T12:47:29.359Z]&x12=[2019-10-11T14:48:52.046Z]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/cymrufyw"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. Nid yw'r BBC yn gyfrifol am gynnwys safleoedd allanol. Sut ry'n ni'n defnyddio dolenni allanol."`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, Cymru Fyw"`;
+
+exports[`Canonical  I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/434d/test/2dd9efb0-ec35-11e9-88d6-81aa2ccc6d4c.jpg"`;
+
+exports[`Canonical  I can see an image with a caption 2`] = `"Disgrifiad o'r llun, Mae’r llun prawf hwn, hawlfraint BBC, yn dangos map o Ffrainc. Mae’r llun o fewn y tri blwch cyntaf, gyda’r pennawd yma."`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/cymrufyw/erthyglau/c06p32z9x2mo"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"Dyma bennawd yr erthygl brawf yma"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"cy"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://www.bbc.co.uk/news/special/2015/newsspec_11063/cymru_fyw_1024x576.png",
+      "width": 1024,
+    },
+    "name": "BBC Cymru Fyw",
+    "noBylinesPolicy": "https://www.bbc.com/news/help-41670342#authorexpertise",
+  },
+  "dateModified": "2019-10-11T14:48:52.046Z",
+  "datePublished": "2019-07-13T12:47:29.359Z",
+  "headline": "Dyma bennawd SEO yr erthygl brawf yma",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://www.bbc.co.uk/news/special/2015/newsspec_11063/cymru_fyw_1024x576.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/cymrufyw/erthyglau/c06p32z9x2mo",
+    "@type": "WebPage",
+    "name": "Dyma bennawd SEO yr erthygl brawf yma",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://www.bbc.co.uk/news/special/2015/newsspec_11063/cymru_fyw_1024x576.png",
+      "width": 1024,
+    },
+    "name": "BBC Cymru Fyw",
+    "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+  },
+  "thumbnailUrl": "https://www.bbc.co.uk/news/special/2015/newsspec_11063/cymru_fyw_1024x576.png",
+  "url": "http://localhost:7080/cymrufyw/erthyglau/c06p32z9x2mo",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"Dyma bennawd SEO yr erthygl brawf yma"`;
+
+exports[`Canonical  SEO OG image 1`] = `"https://www.bbc.co.uk/news/special/2015/newsspec_11063/cymru_fyw_1024x576.png"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"BBC Cymru Fyw"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"cy"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC Cymru Fyw"`;
+
+exports[`Canonical  SEO OG title 1`] = `"Dyma bennawd SEO yr erthygl brawf yma - BBC Cymru Fyw"`;
+
+exports[`Canonical  SEO OG type 1`] = `"article"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/cymrufyw/erthyglau/c06p32z9x2mo"`;
+
+exports[`Canonical  SEO Page title 1`] = `"Dyma bennawd SEO yr erthygl brawf yma - BBC Cymru Fyw"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@BBCCymruFyw"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"Dyma bennawd SEO yr erthygl brawf yma"`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"BBC Cymru Fyw"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"https://www.bbc.co.uk/news/special/2015/newsspec_11063/cymru_fyw_1024x576.png"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@BBCCymruFyw"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"Dyma bennawd SEO yr erthygl brawf yma - BBC Cymru Fyw"`;

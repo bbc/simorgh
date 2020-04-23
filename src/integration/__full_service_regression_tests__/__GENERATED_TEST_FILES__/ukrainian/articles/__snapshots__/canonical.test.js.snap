@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"Перейти до змісту"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=94&p=ukrainian.articles.cp4l2mrejvdo.page&x1=[urn:bbc:optimo:cp4l2mrejvdo]&x2=[responsive]&x3=[news-ukrainian]&x4=[uk]&x7=[article]&x8=[simorgh-nojs]&x9=[Це+заголовок+цієї+тестової+статті]&x11=[2020-01-08T10:07:49.451Z]&x12=[2020-01-08T10:07:49.451Z]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/ukrainian"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. ВВС не несе відповідальності за контент інших сайтів. Ознайомтеся з нашими правилами зовнішніх посилань."`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, Україна"`;
+
+exports[`Canonical  I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/340d/test/8f2169c0-31fd-11ea-8512-1f30fd3689d9.jpg"`;
+
+exports[`Canonical  I can see an image with a caption 2`] = `"Підпис до фото, Це тестове зображення, авторське право BBC, показує карту Франції. Зображення знаходиться в перших трьох блоках і має цей підпис."`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/ukrainian/articles/cp4l2mrejvdo"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"Це заголовок цієї тестової статті"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"uk"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
+      "width": 1024,
+    },
+    "name": "BBC News Україна",
+    "noBylinesPolicy": "https://www.bbc.com/ukrainian/institutional-50170368#authorexpertise",
+  },
+  "dateModified": "2020-01-08T10:07:49.451Z",
+  "datePublished": "2020-01-08T10:07:49.451Z",
+  "headline": "Це заголовок цієї тестової статті",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/ukrainian/articles/cp4l2mrejvdo",
+    "@type": "WebPage",
+    "name": "Це заголовок цієї тестової статті",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
+      "width": 1024,
+    },
+    "name": "BBC News Україна",
+    "publishingPrinciples": "https://www.bbc.com/ukrainian/institutional-50170368",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
+  "url": "http://localhost:7080/ukrainian/articles/cp4l2mrejvdo",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"Це заголовок цієї тестової статті"`;
+
+exports[`Canonical  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"BBC News Україна"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"uk-UA"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News Україна"`;
+
+exports[`Canonical  SEO OG title 1`] = `"Це заголовок цієї тестової статті - BBC News Україна"`;
+
+exports[`Canonical  SEO OG type 1`] = `"article"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/ukrainian/articles/cp4l2mrejvdo"`;
+
+exports[`Canonical  SEO Page title 1`] = `"Це заголовок цієї тестової статті - BBC News Україна"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@BBC_ua"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"Це заголовок цієї тестової статті"`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"BBC News Україна"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@BBC_ua"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"Це заголовок цієї тестової статті - BBC News Україна"`;

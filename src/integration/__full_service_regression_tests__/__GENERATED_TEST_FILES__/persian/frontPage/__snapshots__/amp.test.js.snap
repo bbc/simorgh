@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP  A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
+
+exports[`AMP  AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+}
+`;
+
+exports[`AMP  AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+  },
+}
+`;
+
+exports[`AMP  Analytics ATI 1`] = `
+Object {
+  "requests": Object {
+    "base": "https://logws1363.ati-host.net?",
+    "pageview": "\${base}s=598343&s2=69&p=persian.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:3cda0a4b-f084-8ae4-e050-380a4e805462]&x2=[amp]&x3=[news-persian]&x4=[fa]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[صفحه+اول+-+BBC+News+فارسی]&x11=[1970-01-18T01:32:51.040Z]&x12=[1970-01-19T02:08:50.414Z]",
+  },
+  "transport": Object {
+    "beacon": false,
+    "image": true,
+    "xhrpost": false,
+  },
+  "triggers": Object {
+    "trackPageview": Object {
+      "on": "visible",
+      "request": "pageview",
+    },
+  },
+}
+`;
+
+exports[`AMP  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
+
+exports[`AMP  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+
+exports[`AMP  Header I can see the branding 1`] = `"BBC News, فارسی"`;
+
+exports[`AMP  SEO Canonical link 1`] = `"http://localhost:7080/persian"`;
+
+exports[`AMP  SEO Dir attribute 1`] = `"rtl"`;
+
+exports[`AMP  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`AMP  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP  SEO Heading level 1 1`] = `"BBC News, فارسی - صفحه اول"`;
+
+exports[`AMP  SEO Lang attribute 1`] = `"fa"`;
+
+exports[`AMP  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/persian",
+    "@type": "WebPage",
+    "name": "صفحه اول",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+      "width": 1024,
+    },
+    "name": "BBC News فارسی",
+    "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+  "url": "http://localhost:7080/persian",
+}
+`;
+
+exports[`AMP  SEO OG description 1`] = `"سایت فارسی بی‌بی‌سی تازه‌ترین اخبار و گزارش ها درباره ایران و افغانستان و جهان در حوزه سیاست، اقتصاد، جامعه و فرهنگ و همچنین ویدیو، گزارش‌های تصویری و برنامه‌های تلویزیون فارسی را به شما ارائه می‌دهد."`;
+
+exports[`AMP  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"`;
+
+exports[`AMP  SEO OG image alt 1`] = `"BBC News فارسی"`;
+
+exports[`AMP  SEO OG locale 1`] = `"fa"`;
+
+exports[`AMP  SEO OG site name 1`] = `"BBC News فارسی"`;
+
+exports[`AMP  SEO OG title 1`] = `"صفحه اول - BBC News فارسی"`;
+
+exports[`AMP  SEO OG type 1`] = `"website"`;
+
+exports[`AMP  SEO OG url 1`] = `"http://localhost:7080/persian"`;
+
+exports[`AMP  SEO Page title 1`] = `"صفحه اول - BBC News فارسی"`;
+
+exports[`AMP  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`AMP  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP  SEO Twitter creator 1`] = `"@bbcpersian"`;
+
+exports[`AMP  SEO Twitter description 1`] = `"سایت فارسی بی‌بی‌سی تازه‌ترین اخبار و گزارش ها درباره ایران و افغانستان و جهان در حوزه سیاست، اقتصاد، جامعه و فرهنگ و همچنین ویدیو، گزارش‌های تصویری و برنامه‌های تلویزیون فارسی را به شما ارائه می‌دهد."`;
+
+exports[`AMP  SEO Twitter image alt 1`] = `"BBC News فارسی"`;
+
+exports[`AMP  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"`;
+
+exports[`AMP  SEO Twitter site 1`] = `"@bbcpersian"`;
+
+exports[`AMP  SEO Twitter title 1`] = `"صفحه اول - BBC News فارسی"`;

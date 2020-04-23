@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"Саҳифага ўтиш"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=96&p=world::uzbek.world.media_asset.23053613.page&x1=[urn:bbc:cps:d1bef766-a8c0-834e-bfbc-b9c0ca2f04e4]&x2=[responsive]&x3=[news-uzbek]&x4=[uz-Cyrl]&x7=[article-media-asset]&x8=[simorgh-nojs]&x9=[Ўзбекистон,+Коронавирус:+Мирзиёев+Хитой+усулини+қўлламоқчи+-+O\`zbekiston+-+BBC+News+O'zbek]&x11=[2016-06-17T14:24:55.000Z]&x12=[2020-03-24T09:45:13.000Z]&x13=[Environment~Bangladesh]&x14=[0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f~f7cb7586-737a-419d-b569-15b25da5a2c1]&x17=[News]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/uzbek"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. Би-би-си ташқи сайтлар мазмуни учун масъул эмас. Ташқи линкларга бизнинг ёндашувимиз қандайлиги ҳақида маълумотга эга бўлинг"`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, O'zbek"`;
+
+exports[`Canonical  I can see the headline 1`] = `"Ўзбекистон, Коронавирус: Мирзиёев Хитой усулини қўлламоқчи - O\`zbekiston"`;
+
+exports[`Canonical  I can see the related content 1`] = `"Марсель полицияси 11 россиялик ишқибозни озод қилди? world фвфвФранция полицияси аввалроқ қўлга олинган 11 нафар россиялик футбол ишқибозини қўйиб юборган. Бу ҳақида Марселдаги Россия бош консули Сергей Молчанов хабар берди world қфвқ.22 июн 2016Видео, 16 iyun kuni jahonda yuz bergan muhim voqealar sharhi Latin.Ha, bugun Angliyaga qarshi maydonga tushajak yulduzi Garet Beyl sharafiga Uelsning shimoliy Bala shahri ma‘muriyati xuddi shunga qaror qilibdi.17 июн 2016"`;
+
+exports[`Canonical  I can see the timestamp 1`] = `"17 июн 2016"`;
+
+exports[`Canonical  Media player embed A11y I can read the media player title 1`] = `"Медиа плейер"`;
+
+exports[`Canonical  Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/uzbek/world-23053613/p01qjbvb/uz-Cyrl"`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/uzbek/world-23053613"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"Ўзбекистон, Коронавирус: Мирзиёев Хитой усулини қўлламоқчи - O\`zbekiston"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"uz-Cyrl"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "about": Array [
+    Object {
+      "@type": "Thing",
+      "name": "Environment",
+      "sameAs": Array [
+        "http://dbpedia.org/resource/Natural_environment",
+      ],
+    },
+    Object {
+      "@type": "Thing",
+      "name": "Bangladesh",
+    },
+  ],
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png",
+      "width": 1024,
+    },
+    "name": "BBC News O'zbek",
+    "noBylinesPolicy": "https://www.bbc.com/uzbek/institutional-50220995#authorexpertise",
+  },
+  "dateModified": "2020-03-24T09:45:13.000Z",
+  "datePublished": "2016-06-17T14:24:55.000Z",
+  "headline": "Ўзбекистон, Коронавирус: Мирзиёев Хитой усулини қўлламоқчи - O\`zbekiston",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/uzbek/world-23053613",
+    "@type": "WebPage",
+    "name": "Ўзбекистон, Коронавирус: Мирзиёев Хитой усулини қўлламоқчи - O\`zbekiston",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png",
+      "width": 1024,
+    },
+    "name": "BBC News O'zbek",
+    "publishingPrinciples": "https://www.bbc.com/uzbek/institutional-50220995",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png",
+  "url": "http://localhost:7080/uzbek/world-23053613",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"Ўзбекистон, Коронавирус: Мирзиёев Хитой усулини қўлламоқчи - O\`zbekiston"`;
+
+exports[`Canonical  SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_uzbek/B6D9/test/_63490864_p0140swc.jpg"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"Америкада 2 яшар болани тимсоҳ тортиб кетди"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"uz-UZ"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News O'zbek"`;
+
+exports[`Canonical  SEO OG title 1`] = `"Ўзбекистон, Коронавирус: Мирзиёев Хитой усулини қўлламоқчи - O\`zbekiston - BBC News O'zbek"`;
+
+exports[`Canonical  SEO OG type 1`] = `"article"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/uzbek/world-23053613"`;
+
+exports[`Canonical  SEO Page title 1`] = `"Ўзбекистон, Коронавирус: Мирзиёев Хитой усулини қўлламоқчи - O\`zbekiston - BBC News O'zbek"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbcuzbek"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"Ўзбекистон, Коронавирус: Мирзиёев Хитой усулини қўлламоқчи - O\`zbekiston"`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"Америкада 2 яшар болани тимсоҳ тортиб кетди"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_uzbek/B6D9/test/_63490864_p0140swc.jpg"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbcuzbek"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"Ўзбекистон, Коронавирус: Мирзиёев Хитой усулини қўлламоқчи - O\`zbekiston - BBC News O'zbek"`;

@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"Пређите на садржај"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=81&p=serbiancyr.page&x1=[urn:bbc:cps:631e99d6-c1c4-73b7-e050-17ac8045512e]&x2=[responsive]&x3=[news-serbian]&x4=[sr-Cyrl]&x7=[index-home]&x8=[simorgh-nojs]&x9=[Почетна+страна+-+BBC+News+на+српском]&x11=[2018-01-19T14:09:41.000Z]&x12=[2019-09-08T20:45:22.000Z]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/serbian"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. ББЦ није одговоран за садржај других сајтова. Прочитајте наша правила о линковању других сајтова."`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, на српском"`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/serbian/cyr"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"BBC News, на српском - Главна страница"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"sr-Cyrl"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/serbian/cyr",
+    "@type": "WebPage",
+    "name": "Почетна страна",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+      "width": 1024,
+    },
+    "name": "BBC News на српском",
+    "publishingPrinciples": "https://www.bbc.com/serbian/cyr/institutional-50173730",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+  "url": "http://localhost:7080/serbian/cyr",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"ББЦ на српском нуди ексклузиван садржај - аналитичко, истраживачкo и непристрасно извештавање у текстовима и видео прилозима прилагођеним и друштвеним мрежама."`;
+
+exports[`Canonical  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"ББЦ News на српском"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"sr-cyrl"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News на српском"`;
+
+exports[`Canonical  SEO OG title 1`] = `"Главна страница - BBC News на српском"`;
+
+exports[`Canonical  SEO OG type 1`] = `"website"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/serbian/cyr"`;
+
+exports[`Canonical  SEO Page title 1`] = `"Главна страница - BBC News на српском"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbcnasrpskom"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"ББЦ на српском нуди ексклузиван садржај - аналитичко, истраживачкo и непристрасно извештавање у текстовима и видео прилозима прилагођеним и друштвеним мрежама."`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"ББЦ News на српском"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbcnasrpskom"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"Главна страница - BBC News на српском"`;

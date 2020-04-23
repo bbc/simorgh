@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"コンテンツへ移動"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598290&s2=56&p=japanese.articles.cdd6p3r9g7jo.page&x1=[urn:bbc:optimo:cdd6p3r9g7jo]&x2=[responsive]&x3=[news-japanese]&x4=[ja]&x7=[article]&x8=[simorgh-nojs]&x9=[これは、このテスト記事の見出しです]&x11=[2019-11-27T11:38:13.250Z]&x12=[2019-11-27T11:38:13.250Z]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/japanese"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC.　BBCは外部サイトの内容に責任を負いません。 本サイトの外部リンク方針はこちら"`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, ニュース"`;
+
+exports[`Canonical  I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/cba9/test/c8130910-1109-11ea-acaa-cd607a38aea4.jpg"`;
+
+exports[`Canonical  I can see an image with a caption 2`] = `"画像説明, このテスト画像、著作権は、フランスの地図を示しています。画像は最初の3ブロックにあり、このキャプションがあります。"`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/japanese/articles/cdd6p3r9g7jo"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"これは、このテスト記事の見出しです"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"ja"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png",
+      "width": 1024,
+    },
+    "name": "BBCニュース",
+    "noBylinesPolicy": "https://www.bbc.com/japanese/help-49677253#authorexpertise",
+  },
+  "dateModified": "2019-11-27T11:38:13.250Z",
+  "datePublished": "2019-11-27T11:38:13.250Z",
+  "headline": "これは、このテスト記事の見出しです",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/japanese/articles/cdd6p3r9g7jo",
+    "@type": "WebPage",
+    "name": "これは、このテスト記事の見出しです",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png",
+      "width": 1024,
+    },
+    "name": "BBCニュース",
+    "publishingPrinciples": "https://www.bbc.com/japanese/help-49677253",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png",
+  "url": "http://localhost:7080/japanese/articles/cdd6p3r9g7jo",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"これは、このテスト記事の見出しです"`;
+
+exports[`Canonical  SEO OG image 1`] = `"https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"BBCニュース"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"ja-JP"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBCニュース"`;
+
+exports[`Canonical  SEO OG title 1`] = `"これは、このテスト記事の見出しです - BBCニュース"`;
+
+exports[`Canonical  SEO OG type 1`] = `"article"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/japanese/articles/cdd6p3r9g7jo"`;
+
+exports[`Canonical  SEO Page title 1`] = `"これは、このテスト記事の見出しです - BBCニュース"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbcnewsjapan"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"これは、このテスト記事の見出しです"`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"BBCニュース"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbcnewsjapan"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"これは、このテスト記事の見出しです - BBCニュース"`;

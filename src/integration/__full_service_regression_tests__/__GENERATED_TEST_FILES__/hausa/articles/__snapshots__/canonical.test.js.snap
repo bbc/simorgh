@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"Tsallaka zuwa abubuwan da ke ciki"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=51&p=hausa.articles.c2nr6xqmnewo.page&x1=[urn:bbc:optimo:c2nr6xqmnewo]&x2=[responsive]&x3=[news-hausa]&x4=[ha]&x7=[article]&x8=[simorgh-nojs]&x9=[Wannan+shine+taken+SEO+na+wannan+labarin+gwaji]&x11=[2019-07-12T13:07:09.639Z]&x12=[2019-07-12T13:07:09.639Z]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hausa"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, Hausa"`;
+
+exports[`Canonical  I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/08d8/test/4926a890-de24-11e9-b23c-f1ac9644bb55.jpg"`;
+
+exports[`Canonical  I can see an image with a caption 2`] = `"Bayanan hoto, Wannan hoton gwaji, mallakin BBC, ya nuna taswirar Faransa. Hoton yana cikin katangar ukun farko kuma yana da wannan taken."`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/hausa/articles/c2nr6xqmnewo"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"Wannan shine taken wannan labarin gwajin"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"ha"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+      "width": 1024,
+    },
+    "name": "BBC News Hausa",
+    "noBylinesPolicy": "https://www.bbc.com/hausa/game-da-mu-49283501#authorexpertise",
+  },
+  "dateModified": "2019-07-12T13:07:09.639Z",
+  "datePublished": "2019-07-12T13:07:09.639Z",
+  "headline": "Wannan shine taken SEO na wannan labarin gwaji",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/hausa/articles/c2nr6xqmnewo",
+    "@type": "WebPage",
+    "name": "Wannan shine taken SEO na wannan labarin gwaji",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+      "width": 1024,
+    },
+    "name": "BBC News Hausa",
+    "publishingPrinciples": "https://www.bbc.com/hausa/game-da-mu-49283501",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+  "url": "http://localhost:7080/hausa/articles/c2nr6xqmnewo",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"Wannan shine taken SEO na wannan labarin gwaji"`;
+
+exports[`Canonical  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"BBC News Hausa"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"ha-GH"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News Hausa"`;
+
+exports[`Canonical  SEO OG title 1`] = `"Wannan shine taken SEO na wannan labarin gwaji - BBC News Hausa"`;
+
+exports[`Canonical  SEO OG type 1`] = `"article"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/hausa/articles/c2nr6xqmnewo"`;
+
+exports[`Canonical  SEO Page title 1`] = `"Wannan shine taken SEO na wannan labarin gwaji - BBC News Hausa"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbchausa"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"Wannan shine taken SEO na wannan labarin gwaji"`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"BBC News Hausa"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbchausa"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"Wannan shine taken SEO na wannan labarin gwaji - BBC News Hausa"`;

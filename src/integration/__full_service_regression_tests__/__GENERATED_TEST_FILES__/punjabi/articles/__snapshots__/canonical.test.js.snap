@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=73&p=punjabi.articles.c0l79lr39qyo.page&x1=[urn:bbc:optimo:c0l79lr39qyo]&x2=[responsive]&x3=[news-punjabi]&x4=[pa]&x7=[article]&x8=[simorgh-nojs]&x9=[ਕੰਨ+ਫੜਕੇ+ਧੁੱਪ+'ਚ+ਉੱਠਕ+ਬੈਠਕ+:+ਬੱਚੇ+ਕਹਿੰਦੇ+ਸਜ਼ਾ+ਵਾਂਗ+ਹੈ+ਤੇ+ਸਕੂਲ+ਵਾਲੇ+ਕਹਿੰਦੇ+'ਦਿਮਾਗ+ਤੇਜ਼'+ਕਰਨ+ਵਾਲਾ+ਯੋਗਾ]&x11=[2019-07-12T14:47:57.468Z]&x12=[2019-07-12T14:47:57.468Z]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/punjabi"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ ਲਈ ਬੀਬੀਸੀ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ ਬਾਹਰੀ ਲਿੰਕਿੰਗ ਲਈ ਸਾਡੇ ਤਰੀਕੇ ਬਾਰੇ ਪੜ੍ਹੋ"`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, ਪੰਜਾਬੀ"`;
+
+exports[`Canonical  I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/4d4a/test/5143a9a0-fcc0-11e9-9afe-1371928331c5.jpg"`;
+
+exports[`Canonical  I can see an image with a caption 2`] = `"ਤਸਵੀਰ ਕੈਪਸ਼ਨ, ਇਹ ਪਰੀਖਿਆ ਚਿੱਤਰ, ਕਾਪੀਰਾਈਟ ਬੀਬੀਸੀ, ਫਰਾਂਸ ਦਾ ਨਕਸ਼ਾ ਦਰਸਾਉਂਦਾ ਹੈ. ਚਿੱਤਰ ਪਹਿਲੇ ਤਿੰਨ ਬਲਾਕਾਂ ਵਿੱਚ ਹੈ ਅਤੇ ਇਸਦਾ ਸਿਰਲੇਖ ਹੈ."`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/punjabi/articles/c0l79lr39qyo"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"ਇਹ ਇਸ ਪਰੀਖਿਆ ਲੇਖ ਦਾ ਸਿਰਲੇਖ ਹੈ"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"pa"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png",
+      "width": 1024,
+    },
+    "name": "BBC News ਪੰਜਾਬੀ",
+    "noBylinesPolicy": "https://www.bbc.com/punjabi/institutional-49282853#authorexpertise",
+  },
+  "dateModified": "2019-07-12T14:47:57.468Z",
+  "datePublished": "2019-07-12T14:47:57.468Z",
+  "headline": "ਕੰਨ ਫੜਕੇ ਧੁੱਪ 'ਚ ਉੱਠਕ ਬੈਠਕ : ਬੱਚੇ ਕਹਿੰਦੇ ਸਜ਼ਾ ਵਾਂਗ ਹੈ ਤੇ ਸਕੂਲ ਵਾਲੇ ਕਹਿੰਦੇ 'ਦਿਮਾਗ ਤੇਜ਼' ਕਰਨ ਵਾਲਾ ਯੋਗਾ",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/punjabi/articles/c0l79lr39qyo",
+    "@type": "WebPage",
+    "name": "ਕੰਨ ਫੜਕੇ ਧੁੱਪ 'ਚ ਉੱਠਕ ਬੈਠਕ : ਬੱਚੇ ਕਹਿੰਦੇ ਸਜ਼ਾ ਵਾਂਗ ਹੈ ਤੇ ਸਕੂਲ ਵਾਲੇ ਕਹਿੰਦੇ 'ਦਿਮਾਗ ਤੇਜ਼' ਕਰਨ ਵਾਲਾ ਯੋਗਾ",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png",
+      "width": 1024,
+    },
+    "name": "BBC News ਪੰਜਾਬੀ",
+    "publishingPrinciples": "https://www.bbc.com/punjabi/institutional-49282853",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png",
+  "url": "http://localhost:7080/punjabi/articles/c0l79lr39qyo",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"ਕੰਨ ਫੜਕੇ ਧੁੱਪ 'ਚ ਉੱਠਕ ਬੈਠਕ : ਬੱਚੇ ਕਹਿੰਦੇ ਸਜ਼ਾ ਵਾਂਗ ਹੈ ਤੇ ਸਕੂਲ ਵਾਲੇ ਕਹਿੰਦੇ 'ਦਿਮਾਗ ਤੇਜ਼' ਕਰਨ ਵਾਲਾ ਯੋਗਾ"`;
+
+exports[`Canonical  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"BBC News ਪੰਜਾਬੀ"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"pa-IN"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News ਪੰਜਾਬੀ"`;
+
+exports[`Canonical  SEO OG title 1`] = `"ਕੰਨ ਫੜਕੇ ਧੁੱਪ 'ਚ ਉੱਠਕ ਬੈਠਕ : ਬੱਚੇ ਕਹਿੰਦੇ ਸਜ਼ਾ ਵਾਂਗ ਹੈ ਤੇ ਸਕੂਲ ਵਾਲੇ ਕਹਿੰਦੇ 'ਦਿਮਾਗ ਤੇਜ਼' ਕਰਨ ਵਾਲਾ ਯੋਗਾ - BBC News ਪੰਜਾਬੀ"`;
+
+exports[`Canonical  SEO OG type 1`] = `"article"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/punjabi/articles/c0l79lr39qyo"`;
+
+exports[`Canonical  SEO Page title 1`] = `"ਕੰਨ ਫੜਕੇ ਧੁੱਪ 'ਚ ਉੱਠਕ ਬੈਠਕ : ਬੱਚੇ ਕਹਿੰਦੇ ਸਜ਼ਾ ਵਾਂਗ ਹੈ ਤੇ ਸਕੂਲ ਵਾਲੇ ਕਹਿੰਦੇ 'ਦਿਮਾਗ ਤੇਜ਼' ਕਰਨ ਵਾਲਾ ਯੋਗਾ - BBC News ਪੰਜਾਬੀ"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbcnewspunjabi"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"ਕੰਨ ਫੜਕੇ ਧੁੱਪ 'ਚ ਉੱਠਕ ਬੈਠਕ : ਬੱਚੇ ਕਹਿੰਦੇ ਸਜ਼ਾ ਵਾਂਗ ਹੈ ਤੇ ਸਕੂਲ ਵਾਲੇ ਕਹਿੰਦੇ 'ਦਿਮਾਗ ਤੇਜ਼' ਕਰਨ ਵਾਲਾ ਯੋਗਾ"`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"BBC News ਪੰਜਾਬੀ"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbcnewspunjabi"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"ਕੰਨ ਫੜਕੇ ਧੁੱਪ 'ਚ ਉੱਠਕ ਬੈਠਕ : ਬੱਚੇ ਕਹਿੰਦੇ ਸਜ਼ਾ ਵਾਂਗ ਹੈ ਤੇ ਸਕੂਲ ਵਾਲੇ ਕਹਿੰਦੇ 'ਦਿਮਾਗ ਤੇਜ਼' ਕਰਨ ਵਾਲਾ ਯੋਗਾ - BBC News ਪੰਜਾਬੀ"`;

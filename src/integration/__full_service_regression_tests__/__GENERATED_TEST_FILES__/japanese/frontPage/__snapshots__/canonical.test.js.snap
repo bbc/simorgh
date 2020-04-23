@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"コンテンツへ移動"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598290&s2=56&p=japanese.page&x1=[urn:bbc:cps:19bd183d-7b2f-3423-e050-380a4e8062eb]&x2=[responsive]&x3=[news-japanese]&x4=[ja]&x7=[index-home]&x8=[simorgh-nojs]&x9=[ホーム+-+BBCニュース]&x11=[1970-01-17T16:01:24.262Z]&x12=[1970-01-19T02:08:49.828Z]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/japanese"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC.　BBCは外部サイトの内容に責任を負いません。 本サイトの外部リンク方針はこちら"`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, ニュース"`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/japanese"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"BBC News, ニュース - ホーム"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"ja"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/japanese",
+    "@type": "WebPage",
+    "name": "ホーム",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png",
+      "width": 1024,
+    },
+    "name": "BBCニュース",
+    "publishingPrinciples": "https://www.bbc.com/japanese/help-49677253",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png",
+  "url": "http://localhost:7080/japanese",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"BBCニュースが伝える世界の動き、BBCニュースならではの視点を日本語でお届けします。世界各地で取材する日々の出来事、世界の人が注目している話題の紹介や解説を、日本語の記事、ビデオ、写真ギャラリーなどで"`;
+
+exports[`Canonical  SEO OG image 1`] = `"https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"BBCニュース"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"ja-JP"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBCニュース"`;
+
+exports[`Canonical  SEO OG title 1`] = `"最新ニュース - BBCニュース"`;
+
+exports[`Canonical  SEO OG type 1`] = `"website"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/japanese"`;
+
+exports[`Canonical  SEO Page title 1`] = `"最新ニュース - BBCニュース"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbcnewsjapan"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"BBCニュースが伝える世界の動き、BBCニュースならではの視点を日本語でお届けします。世界各地で取材する日々の出来事、世界の人が注目している話題の紹介や解説を、日本語の記事、ビデオ、写真ギャラリーなどで"`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"BBCニュース"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbcnewsjapan"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"最新ニュース - BBCニュース"`;

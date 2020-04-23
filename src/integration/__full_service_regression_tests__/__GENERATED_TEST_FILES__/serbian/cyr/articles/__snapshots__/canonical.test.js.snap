@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"Пређите на садржај"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=81&p=serbian.articles.c805k05kr73o.page&x1=[urn:bbc:optimo:c805k05kr73o]&x2=[responsive]&x3=[news-serbian]&x4=[sr-cyrl]&x7=[article]&x8=[simorgh-nojs]&x9=[Ратови+звезда:+Нишки+џедаји+помажу+децу+без+родитеља]&x11=[2019-07-12T14:57:17.714Z]&x12=[2019-07-12T14:57:17.714Z]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/serbian"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. ББЦ није одговоран за садржај других сајтова. Прочитајте наша правила о линковању других сајтова."`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, на српском"`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/serbian/articles/c805k05kr73o/cyr"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"CYR - Ратови звезда: Нишки џедаји помажу децу без родитеља"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"sr-cyrl"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+      "width": 1024,
+    },
+    "name": "BBC News на српском",
+    "noBylinesPolicy": "https://www.bbc.com/serbian/cyr/institutional-50173730#authorexpertise",
+  },
+  "dateModified": "2019-07-12T14:57:17.714Z",
+  "datePublished": "2019-07-12T14:57:17.714Z",
+  "headline": "Ратови звезда: Нишки џедаји помажу децу без родитеља",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/serbian/articles/c805k05kr73o/cyr",
+    "@type": "WebPage",
+    "name": "Ратови звезда: Нишки џедаји помажу децу без родитеља",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+      "width": 1024,
+    },
+    "name": "BBC News на српском",
+    "publishingPrinciples": "https://www.bbc.com/serbian/cyr/institutional-50173730",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+  "url": "http://localhost:7080/serbian/articles/c805k05kr73o/cyr",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"Ратови звезда: Нишки џедаји помажу децу без родитеља"`;
+
+exports[`Canonical  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"ББЦ News на српском"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"sr-cyrl"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News на српском"`;
+
+exports[`Canonical  SEO OG title 1`] = `"Ратови звезда: Нишки џедаји помажу децу без родитеља - BBC News на српском"`;
+
+exports[`Canonical  SEO OG type 1`] = `"article"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/serbian/articles/c805k05kr73o/cyr"`;
+
+exports[`Canonical  SEO Page title 1`] = `"Ратови звезда: Нишки џедаји помажу децу без родитеља - BBC News на српском"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbcnasrpskom"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"Ратови звезда: Нишки џедаји помажу децу без родитеља"`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"ББЦ News на српском"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbcnasrpskom"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"Ратови звезда: Нишки џедаји помажу децу без родитеља - BBC News на српском"`;

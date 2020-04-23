@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP  A11y I can see the skip to content link 1`] = `"కంటెంట్‌కు వెళ్లండి"`;
+
+exports[`AMP  AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+}
+`;
+
+exports[`AMP  AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+  },
+}
+`;
+
+exports[`AMP  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/telugu"`;
+
+exports[`AMP  Footer I can see the footer copyright and external linking text 1`] = `"© 2020  BBC. ఇతర వెబ్‌సైట్లలో సమాచారానికి బీబీసీ బాధ్యత వహించదు. ఇతర వెబ్‌సైట్లకు మా లింకింగ్ విధానం గురించి తెలుసుకోండి."`;
+
+exports[`AMP  Header I can see the branding 1`] = `"BBC News, తెలుగు"`;
+
+exports[`AMP  I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/b931/test/574551d0-fcbd-11e9-9afe-1371928331c5.jpg"`;
+
+exports[`AMP  I can see an image with a caption 2`] = `"ఫొటో క్యాప్షన్, ఈ పరీక్ష చిత్రం, కాపీరైట్ BBC, ఫ్రాన్స్ యొక్క మ్యాప్‌ను చూపిస్తుంది. చిత్రం మొదటి మూడు బ్లాకులలో ఉంది మరియు ఈ శీర్షిక ఉంది."`;
+
+exports[`AMP  SEO Canonical link 1`] = `"http://localhost:7080/telugu/articles/cq0y4008d4vo"`;
+
+exports[`AMP  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`AMP  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`AMP  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP  SEO Heading level 1 1`] = `"ఈ పరీక్షా వ్యాసం యొక్క శీర్షిక ఇది"`;
+
+exports[`AMP  SEO Lang attribute 1`] = `"te"`;
+
+exports[`AMP  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/telugu.png",
+      "width": 1024,
+    },
+    "name": "BBC News తెలుగు",
+    "noBylinesPolicy": "https://www.bbc.com/telugu/institutional-50420343#authorexpertise",
+  },
+  "dateModified": "2019-07-12T14:43:38.861Z",
+  "datePublished": "2019-07-12T14:43:38.861Z",
+  "headline": "డక్‌వర్త్ లూయీస్: క్రికెట్ మ్యాచ్‌లో వర్షం పడితే ఫలితం తేల్చేది వీళ్లే... అసలు ఇది ఎలా పుట్టింది?",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/telugu.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/telugu/articles/cq0y4008d4vo",
+    "@type": "WebPage",
+    "name": "డక్‌వర్త్ లూయీస్: క్రికెట్ మ్యాచ్‌లో వర్షం పడితే ఫలితం తేల్చేది వీళ్లే... అసలు ఇది ఎలా పుట్టింది?",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/telugu.png",
+      "width": 1024,
+    },
+    "name": "BBC News తెలుగు",
+    "publishingPrinciples": "https://www.bbc.com/telugu/institutional-50420343",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/telugu.png",
+  "url": "http://localhost:7080/telugu/articles/cq0y4008d4vo",
+}
+`;
+
+exports[`AMP  SEO OG description 1`] = `"డక్‌వర్త్ లూయీస్: క్రికెట్ మ్యాచ్‌లో వర్షం పడితే ఫలితం తేల్చేది వీళ్లే... అసలు ఇది ఎలా పుట్టింది?"`;
+
+exports[`AMP  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/telugu.png"`;
+
+exports[`AMP  SEO OG image alt 1`] = `"BBC News తెలుగు"`;
+
+exports[`AMP  SEO OG locale 1`] = `"te-IN"`;
+
+exports[`AMP  SEO OG site name 1`] = `"BBC News తెలుగు"`;
+
+exports[`AMP  SEO OG title 1`] = `"డక్‌వర్త్ లూయీస్: క్రికెట్ మ్యాచ్‌లో వర్షం పడితే ఫలితం తేల్చేది వీళ్లే... అసలు ఇది ఎలా పుట్టింది? - BBC News తెలుగు"`;
+
+exports[`AMP  SEO OG type 1`] = `"article"`;
+
+exports[`AMP  SEO OG url 1`] = `"http://localhost:7080/telugu/articles/cq0y4008d4vo"`;
+
+exports[`AMP  SEO Page title 1`] = `"డక్‌వర్త్ లూయీస్: క్రికెట్ మ్యాచ్‌లో వర్షం పడితే ఫలితం తేల్చేది వీళ్లే... అసలు ఇది ఎలా పుట్టింది? - BBC News తెలుగు"`;
+
+exports[`AMP  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`AMP  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP  SEO Twitter creator 1`] = `"@bbcnewstelugu"`;
+
+exports[`AMP  SEO Twitter description 1`] = `"డక్‌వర్త్ లూయీస్: క్రికెట్ మ్యాచ్‌లో వర్షం పడితే ఫలితం తేల్చేది వీళ్లే... అసలు ఇది ఎలా పుట్టింది?"`;
+
+exports[`AMP  SEO Twitter image alt 1`] = `"BBC News తెలుగు"`;
+
+exports[`AMP  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/telugu.png"`;
+
+exports[`AMP  SEO Twitter site 1`] = `"@bbcnewstelugu"`;
+
+exports[`AMP  SEO Twitter title 1`] = `"డక్‌వర్త్ లూయీస్: క్రికెట్ మ్యాచ్‌లో వర్షం పడితే ఫలితం తేల్చేది వీళ్లే... అసలు ఇది ఎలా పుట్టింది? - BBC News తెలుగు"`;

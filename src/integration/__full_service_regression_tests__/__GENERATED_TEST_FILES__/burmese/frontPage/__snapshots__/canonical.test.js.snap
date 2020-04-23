@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical  A11y I can see the skip to content link 1`] = `"အကြောင်းအရာများဆီ ကျော်သွားရန်"`;
+
+exports[`Canonical  Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=35&p=burmese.page&x1=[urn:bbc:cps:3af71f4d-3624-3d9a-e050-380a4e800b53]&x2=[responsive]&x3=[news-burmese]&x4=[my]&x7=[index-home]&x8=[simorgh-nojs]&x9=[ဘီဘီစီ+မြန်မာ+|+အထူးသတင်း+|+နောက်ဆုံးရ+သတင်း+|+နောက်ဆုံးရခေါင်းစဉ်+သတင်း+|မြန်မာသတင်း+-+BBC+News+မြန်မာ]&x11=[1970-01-18T01:04:16.774Z]&x12=[1970-01-19T02:08:51.004Z]"`;
+
+exports[`Canonical  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/burmese"`;
+
+exports[`Canonical  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. ပြင်ပဝက်ဆိုက်များတွင် ပါဝင်သော အကြောင်းအရာများအတွက် ဘီဘီစီက တာဝန်မယူပါ။ ပြင်ပဝက်ဆိုက်များကို လင့် ထည့်ပေးခြင်းနှင့် ပတ်သက်သော ဘီဘီစီလုပ်ထုံးလုပ်နည်းကို ဖတ်ရန်။"`;
+
+exports[`Canonical  Header I can see the branding 1`] = `"BBC News, မြန်မာ"`;
+
+exports[`Canonical  SEO Canonical link 1`] = `"http://localhost:7080/burmese"`;
+
+exports[`Canonical  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical  SEO Heading level 1 1`] = `"BBC News, မြန်မာ - ပင်မစာမျက်နှာ"`;
+
+exports[`Canonical  SEO Lang attribute 1`] = `"my"`;
+
+exports[`Canonical  SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/burmese.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/burmese",
+    "@type": "WebPage",
+    "name": "ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/burmese.png",
+      "width": 1024,
+    },
+    "name": "BBC News မြန်မာ",
+    "publishingPrinciples": "https://www.bbc.com/burmese/institutional-51387206",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/burmese.png",
+  "url": "http://localhost:7080/burmese",
+}
+`;
+
+exports[`Canonical  SEO OG description 1`] = `"နောက်ဆုံးရ သတင်း၊ အထူးသတင်း၊ ကမ္ဘာနဲ့ မြန်မာ့ရေးရာ သတင်းတွေ၊ ဗီဒီယိုနဲ့ ရုပ်သံ သတင်းတွေ၊ ဆောင်းပါးတွေကို ဘီဘီစီမြန်မာပိုင်း စာမျက်နှာမှာ အချိန်နဲ့ တပြေးညီ တင်ဆက်ပေးနေပါတယ်။ အနုပညာ၊ ဘောလုံး၊ အားကစား၊ သိပ္ပံ နည်းပညာနဲ့ စီးပွားရေး စတဲ့ အကြောင်းအရာမျိုးစုံကိုလည်း ဖတ်ရှု ကြည့်ရှုနိုင်ပါတယ်။"`;
+
+exports[`Canonical  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/burmese.png"`;
+
+exports[`Canonical  SEO OG image alt 1`] = `"BBC News မြန်မာ"`;
+
+exports[`Canonical  SEO OG locale 1`] = `"my-MM"`;
+
+exports[`Canonical  SEO OG site name 1`] = `"BBC News မြန်မာ"`;
+
+exports[`Canonical  SEO OG title 1`] = `"ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း - BBC News မြန်မာ"`;
+
+exports[`Canonical  SEO OG type 1`] = `"website"`;
+
+exports[`Canonical  SEO OG url 1`] = `"http://localhost:7080/burmese"`;
+
+exports[`Canonical  SEO Page title 1`] = `"ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း - BBC News မြန်မာ"`;
+
+exports[`Canonical  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical  SEO Twitter creator 1`] = `"@bbcburmese"`;
+
+exports[`Canonical  SEO Twitter description 1`] = `"နောက်ဆုံးရ သတင်း၊ အထူးသတင်း၊ ကမ္ဘာနဲ့ မြန်မာ့ရေးရာ သတင်းတွေ၊ ဗီဒီယိုနဲ့ ရုပ်သံ သတင်းတွေ၊ ဆောင်းပါးတွေကို ဘီဘီစီမြန်မာပိုင်း စာမျက်နှာမှာ အချိန်နဲ့ တပြေးညီ တင်ဆက်ပေးနေပါတယ်။ အနုပညာ၊ ဘောလုံး၊ အားကစား၊ သိပ္ပံ နည်းပညာနဲ့ စီးပွားရေး စတဲ့ အကြောင်းအရာမျိုးစုံကိုလည်း ဖတ်ရှု ကြည့်ရှုနိုင်ပါတယ်။"`;
+
+exports[`Canonical  SEO Twitter image alt 1`] = `"BBC News မြန်မာ"`;
+
+exports[`Canonical  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/burmese.png"`;
+
+exports[`Canonical  SEO Twitter site 1`] = `"@bbcburmese"`;
+
+exports[`Canonical  SEO Twitter title 1`] = `"ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း - BBC News မြန်မာ"`;
