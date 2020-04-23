@@ -116,7 +116,7 @@ Object.keys(config)
 
             it(`should change to the correct script when switching script between ${variant} and ${otherVariant}`, () => {
               // Accept privacy banner
-              getPrivacyBannerAccept(product, variant).click();
+              getPrivacyBannerAccept(service, variant).click();
 
               // Accept cookie banner
               getCookieBannerAccept(service, variant).click();

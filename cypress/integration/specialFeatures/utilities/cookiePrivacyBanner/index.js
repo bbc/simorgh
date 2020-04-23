@@ -1,9 +1,10 @@
 import appConfig from '../../../../../src/server/utilities/serviceConfigs';
 import config from '../../../../support/config/services';
 
-export const getPrivacyBanner = (product, variant) =>
+export const getPrivacyBanner = (service, variant) =>
   cy.contains(
-    appConfig[product][variant].translations.consentBanner.privacy.title,
+    appConfig[config[service].name][variant].translations.consentBanner.privacy
+      .title,
   );
 
 export const getCookieBanner = (service, variant) =>
@@ -12,17 +13,18 @@ export const getCookieBanner = (service, variant) =>
       .title,
   );
 
-const getPrivacyBannerContainer = (product, variant) =>
-  getPrivacyBanner(product, variant).parent();
+const getPrivacyBannerContainer = (service, variant) =>
+  getPrivacyBanner(service, variant).parent();
 
 const getCookieBannerContainer = (service, variant) =>
   getCookieBanner(service, variant).parent();
 
-export const getPrivacyBannerAccept = (product, variant) =>
-  getPrivacyBannerContainer(product, variant)
+export const getPrivacyBannerAccept = (service, variant) =>
+  getPrivacyBannerContainer(service, variant)
     .find('button')
     .contains(
-      appConfig[product][variant].translations.consentBanner.privacy.accept,
+      appConfig[config[service].name][variant].translations.consentBanner
+        .privacy.accept,
     );
 
 export const getCookieBannerAccept = (service, variant) =>
