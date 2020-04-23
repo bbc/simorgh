@@ -6,19 +6,28 @@ const RecommendationsContainer = ({ assetUri }) => {
   const [recommendationsData, setRecommendations] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
-      const result = await fetch(
-        `https://camino-broker-cdn.api.bbci.co.uk/api/recommend?recSys=2&limit=4&assetUri=${assetUri}`,
-      ).catch(function (error) {
+      try {
+        const response = await fetch(
+          `https://camino-broker-cdn.api.bbci.co.uk/api/recommend?recSys=2&limit=4&assetUri=${assetUri}`,
+        );
+        const data = await response.json();
+        setRecommendations(data);
+      } catch (error) {
         // handle error
         console.log(error);
-      });
-      const response = await result.text();
-      return JSON.parse(response);
+      }
     };
-    fetchData().then(r => {
-      setRecommendations(r);
-    });
-  }, [assetUri, recommendationsData]);
-  return <div>{JSON.stringify(recommendationsData)}</div>;
+    fetchData();
+  }, [assetUri]);
+  return (
+    recommendationsData && (
+      <>
+      {recommendationsData.items.map((item) => (
+        <span key={item.shortHeadline}>{item.shortHeadline}</span>
+
+      ))}
+      </>
+    )
+  );
 };
 export default RecommendationsContainer;

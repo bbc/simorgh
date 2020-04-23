@@ -42,14 +42,13 @@ describe('RecommendationsContainer', () => {
     fetch.resetMocks();
   });
   it('should fetch data from the camino API', async () => {
-    fetch.mockResponse(JSON.stringify(caminoResponseData), {
-      Headers: { 'Content-Type': 'application/json' },
-    });
+    fetch.mockResponse(JSON.stringify(caminoResponseData));
     const { container } = render(
       <RecommendationsContainer assetUri={assetUri} />,
     );
     await wait(() => {
       expect(container).toMatchSnapshot();
+      expect(fetch).toHaveBeenCalled();
     });
   });
 });
