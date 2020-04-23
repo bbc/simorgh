@@ -20,6 +20,7 @@ const logCodes = {
   SERVER_RESPONSE_TIME: 'server_response_time',
   SERVER_SIDE_RENDER_REQUEST_RECEIVED: 'ssr_request_received',
   SERVER_SIDE_REQUEST_FAILED: 'ssr_request_failed',
+  SERVICE_CONFIG_ERROR: 'service_config_error',
   SERVICE_WORKER_SENDFILE_ERROR: 'server_sendfile_error_sw',
   TOGGLE_FETCH_ERROR: 'toggle_fetch_error',
   UNSUPPORTED_BLOCK_TYPE: 'unsupported_block_type',

@@ -1,5 +1,6 @@
 import path from 'ramda/src/path';
 import nodeLogger from '#lib/logger.node';
+import { SERVICE_CONFIG_ERROR } from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
@@ -13,14 +14,20 @@ const getConfig = async (service, variant = 'default') => {
     const { service: config } = await import(`#lib/config/services/${service}`);
     serviceConfig = config;
   } catch (e) {
-    logger.error(`Error retrieving config for ${service}`);
+    logger.error(SERVICE_CONFIG_ERROR, {
+      message: `Error retrieving config for ${service}`,
+      service,
+    });
     return {};
   }
 
   const variantConfig = path([variant], serviceConfig);
 
   if (!variantConfig) {
-    logger.error(`No config found for ${service} variant ${variant}`);
+    logger.error(SERVICE_CONFIG_ERROR, {
+      message: `No config found for ${service} variant ${variant}`,
+      service,
+    });
   }
 
   return variantConfig || {};
