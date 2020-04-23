@@ -4,17 +4,14 @@ import splitAt from 'ramda/src/splitAt';
 import { getNthCpsParagraphIndex } from '../helpers';
 
 const insertRecommendationsBlock = (recommendationBlock, blocks) => {
-  // get the index of the 5th paragraph
   const fifthParagraphIndex = getNthCpsParagraphIndex(blocks, 5);
 
   if (!fifthParagraphIndex) {
     return blocks;
   }
 
-  // split blocks at the index of the 5th paragraph
   const parts = splitAt(fifthParagraphIndex + 1, blocks);
 
-  // reconstruct blocks
   return [...parts[0], { ...recommendationBlock }, ...parts[1]];
 };
 
