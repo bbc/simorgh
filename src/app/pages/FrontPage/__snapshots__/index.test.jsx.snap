@@ -63,7 +63,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       <h2
                         class="Heading-sc-1x4gwjz-2 eZofTG"
                       >
-                        <div
+                        <span
                           class="FlexColumn-wx5kdp-0 dgpsiS"
                         >
                           <span
@@ -77,7 +77,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               Top tori
                             </span>
                           </span>
-                        </div>
+                        </span>
                       </h2>
                     </div>
                     <div
@@ -96,8 +96,13 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             <div
                               class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                             >
-                              <div
-                                class="lazyload-placeholder"
+                              <img
+                                alt="Senator Ahmad Lawan and Ali Ndume"
+                                class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                                sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
+                                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 660w"
+                                width="976"
                               />
                             </div>
                             <div
@@ -113,7 +118,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="Headline-sc-1dvfmi3-3 fccgro"
                           >
                             <a
-                              class="Link-sc-1dvfmi3-5 yQgSu"
+                              class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                               href="/pidgin/live/tori-48591362"
                             >
                               <span
@@ -197,7 +202,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       <h2
                         class="Heading-sc-1x4gwjz-2 eZofTG"
                       >
-                        <div
+                        <span
                           class="FlexColumn-wx5kdp-0 dgpsiS"
                         >
                           <span
@@ -211,7 +216,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               2018 World Cup
                             </span>
                           </span>
-                        </div>
+                        </span>
                       </h2>
                     </div>
                     <ul
@@ -254,7 +259,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                                 href="https://www.bbc.com/pidgin/sport-44416820"
                               >
                                 Take dis predictor choose who go reach World Cup final
@@ -330,7 +335,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                                 href="http://www.bbc.com/pidgin"
                               >
                                 Audio promo
@@ -385,7 +390,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                                 href="https://www.bbc.com/pidgin/sport-44439411"
                               >
                                 World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
@@ -435,7 +440,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup
@@ -485,7 +490,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup as a feature
@@ -558,7 +563,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup - Video
@@ -608,7 +613,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                                 href="https://www.bbc.com/pidgin/sport-44214129"
                               >
                                 World Cup 2018: Di top stars wey no dey go World Cup
@@ -686,7 +691,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                                 href="http://www.bbc.com/azeri"
                               >
                                 Gallery promo
@@ -718,7 +723,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       <h2
                         class="Heading-sc-1x4gwjz-2 eZofTG"
                       >
-                        <div
+                        <span
                           class="FlexColumn-wx5kdp-0 dgpsiS"
                         >
                           <span
@@ -732,14 +737,14 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               De one we dem de read well well
                             </span>
                           </span>
-                        </div>
+                        </span>
                       </h2>
                     </div>
                     <div
                       class="MarginWrapper-sc-6bm912-0 bmzrWW"
                     >
                       <ol
-                        class="GridComponent-nf79gm-0 gjgzxV TwoColumnGrid-sc-1ofyujo-0 ewnImn"
+                        class="GridComponent-nf79gm-0 gjgzxV OneColumnGrid-sc-1ofyujo-0 TwoColumnGrid-sc-1ofyujo-1 boiGsE"
                         dir="ltr"
                         role="list"
                       >
@@ -752,11 +757,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="TwoColumnWrapper-fs4y6m-0 fpGgZU"
+                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hmbaNr"
                               dir="ltr"
                             >
                               <span
-                                class="StyledSpan-fs4y6m-2 bbVUNN"
+                                class="StyledSpan-fs4y6m-3 hNbbwU"
                               >
                                 1
                               </span>
@@ -793,11 +798,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="TwoColumnWrapper-fs4y6m-0 bLjXLm"
+                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 jkHEBl"
                               dir="ltr"
                             >
                               <span
-                                class="StyledSpan-fs4y6m-2 bbVUNN"
+                                class="StyledSpan-fs4y6m-3 hNbbwU"
                               >
                                 2
                               </span>
@@ -834,11 +839,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="TwoColumnWrapper-fs4y6m-0 fpGgZU"
+                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hmbaNr"
                               dir="ltr"
                             >
                               <span
-                                class="StyledSpan-fs4y6m-2 bbVUNN"
+                                class="StyledSpan-fs4y6m-3 hNbbwU"
                               >
                                 3
                               </span>
@@ -875,11 +880,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="TwoColumnWrapper-fs4y6m-0 bLjXLm"
+                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 jkHEBl"
                               dir="ltr"
                             >
                               <span
-                                class="StyledSpan-fs4y6m-2 bbVUNN"
+                                class="StyledSpan-fs4y6m-3 hNbbwU"
                               >
                                 4
                               </span>
@@ -916,11 +921,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="TwoColumnWrapper-fs4y6m-0 fpGgZU"
+                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hmbaNr"
                               dir="ltr"
                             >
                               <span
-                                class="StyledSpan-fs4y6m-2 bbVUNN"
+                                class="StyledSpan-fs4y6m-3 hNbbwU"
                               >
                                 5
                               </span>
@@ -957,11 +962,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="TwoColumnWrapper-fs4y6m-0 bXogUn"
+                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 kalooU"
                               dir="ltr"
                             >
                               <span
-                                class="StyledSpan-fs4y6m-2 bbVUNN"
+                                class="StyledSpan-fs4y6m-3 hNbbwU"
                               >
                                 6
                               </span>
@@ -998,11 +1003,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="TwoColumnWrapper-fs4y6m-0 jmVRMD"
+                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 gIAmWi"
                               dir="ltr"
                             >
                               <span
-                                class="StyledSpan-fs4y6m-2 bbVUNN"
+                                class="StyledSpan-fs4y6m-3 hNbbwU"
                               >
                                 7
                               </span>
@@ -1039,11 +1044,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="TwoColumnWrapper-fs4y6m-0 bXogUn"
+                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 kalooU"
                               dir="ltr"
                             >
                               <span
-                                class="StyledSpan-fs4y6m-2 bbVUNN"
+                                class="StyledSpan-fs4y6m-3 hNbbwU"
                               >
                                 8
                               </span>
@@ -1080,11 +1085,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="TwoColumnWrapper-fs4y6m-0 jmVRMD"
+                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 gIAmWi"
                               dir="ltr"
                             >
                               <span
-                                class="StyledSpan-fs4y6m-2 bbVUNN"
+                                class="StyledSpan-fs4y6m-3 hNbbwU"
                               >
                                 9
                               </span>
@@ -1121,11 +1126,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="TwoColumnWrapper-fs4y6m-0 bXogUn"
+                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 kalooU"
                               dir="ltr"
                             >
                               <span
-                                class="StyledSpan-fs4y6m-2 bbVUNN"
+                                class="StyledSpan-fs4y6m-3 hNbbwU"
                               >
                                 10
                               </span>

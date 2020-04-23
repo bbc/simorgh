@@ -12,7 +12,7 @@ export const service = {
     },
     lang: `ko`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
-    articleTimestampPrefix: '최종 송고일',
+    articleTimestampPrefix: '에 업데이트됨',
     atiAnalyticsAppName: 'news-korean',
     atiAnalyticsProducerId: '57',
     chartbeatDomain: 'korean.bbc.co.uk',
@@ -23,11 +23,11 @@ export const service = {
     defaultImageAltText: 'BBC News 코리아',
     dir: `ltr`,
     externalLinkText: ', 외부 사이트',
-    imageCaptionOffscreenText: '사진 설명 ',
-    videoCaptionOffscreenText: '동영상 설명 ',
-    audioCaptionOffscreenText: '오디오 설명 ',
-    defaultCaptionOffscreenText: '설명 ',
-    imageCopyrightOffscreenText: '사진 출처 ',
+    imageCaptionOffscreenText: '사진 설명, ',
+    videoCaptionOffscreenText: '동영상 설명, ',
+    audioCaptionOffscreenText: '오디오 설명, ',
+    defaultCaptionOffscreenText: '설명, ',
+    imageCopyrightOffscreenText: '사진 출처, ',
     locale: `ko-KO`,
     datetimeLocale: `ko`,
     service: 'korean',
@@ -49,22 +49,22 @@ export const service = {
     },
     translations: {
       seeAll: '모든 기사 보기',
-      home: '뉴스',
+      home: '홈',
       currentPage: '현재 페이지',
-      skipLinkText: '내용으로 건너뛰기',
+      skipLinkText: '내용 보기',
       relatedContent: '관련 기사 더 보기',
       navMenuText: '섹션',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: '미디어 플레이어',
+        audioPlayer: '오디오 플레이어',
+        videoPlayer: '비디오 플레이어',
       },
       error: {
         404: {
           statusCode: '404',
           title: '페이지를 찾을 수 없습니다',
           message:
-            '죄송합니다. 찾으시는 페이지를 가져올 수 없습니다. 이 중 하나를 해보세요:',
+            '죄송합니다. 페이지를 찾지 못했습니다. 이 중 하나를 시도해보세요:',
           solutions: [
             'URL 주소 재확인',
             '웹브라우저의 새로 고침 버튼 누르기',
@@ -79,8 +79,11 @@ export const service = {
           statusCode: '500',
           title: '내부 서버 에러',
           message:
-            '죄송합니다. 찾으시는 페이지를 가져올 수 없습니다. 이 중 하나를 해보세요:',
-          solutions: ['웹브라우저의 새로 고침 버튼 누르기', '다시 시도해 보기'],
+            '죄송합니다. 페이지를 찾지 못했습니다. 이 중 하나를 시도해보세요:',
+          solutions: [
+            '웹브라우저의 새로 고침 버튼 누르기',
+            '나중에 다시 시도하기',
+          ],
           callToActionFirst: '',
           callToActionLinkText: 'BBC News 코리아',
           callToActionLast: ' 홈페이지를 방문해보세요',
@@ -89,34 +92,34 @@ export const service = {
       },
       consentBanner: {
         privacy: {
-          title: '개인정보와 쿠키 처리방침을 변경했습니다',
+          title: '개인 정보와 쿠키 처리 방침이 업데이트되었습니다',
           description: {
             uk: {
               first:
-                '변경된 개인정보와 쿠키 처리방침이 이용자에게 어떤 영향을 미칠지 알려드립니다',
+                '개인 정보와 쿠키 처리 방침에서 주요 변경 사항과 이 변경 사항이 이용자와 이용자의 정보에 가질 영향에 대해 알려드리고자 합니다.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                '변경된 개인정보와 쿠키 처리방침이 이용자에게 어떤 영향을 미칠지 알려드립니다.',
+                '개인 정보와 쿠키 처리 방침에서 주요 변경 사항과 이 변경 사항이 이용자와 이용자의 정보에 가질 영향에 대해 알려드리고자 합니다.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
           },
-          accept: '알겠습니다',
+          accept: '네',
           reject: '변경사항을 확인하세요',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: '쿠키생성에 동의하시나요',
+          title: '쿠키 수집에 동의하십니까?',
           description: {
             uk: {
-              first: 'BBC는 이용자의 최적의 온라인 경험을 위해 ',
+              first: 'BBC는 이용자에게 최적의 온라인 경험을 제공하기 위해 ',
               linkText: '쿠키',
-              last: ' 정보를 수집합니다. 쿠키생성에 동의하시는지 알려주세요',
+              last: ' 정보를 이용합니다. 쿠키 수집에 동의하십니까?',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -124,13 +127,13 @@ export const service = {
               first: 'BBC와 파트너사는 ',
               linkText: '쿠키',
               last:
-                ' 웹브라우징 데이터 수집 같은 기술을 통해 이용자에게 최적의 온라인 경험을 제공하고 개인에 맞춤화된 콘텐츠와 광고를 노출하고자 합니다. 이에 동의하는지 알려주세요.',
+                ', 웹브라우징 데이터 수집과 같은 기술을 통해 이용자에게 최적의 온라인 경험과 맞춤 콘텐츠, 광고를 제공하고 있습니다. 이에 동의하십니까?',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
           accept: '네, 동의합니다',
-          reject: '아니요, 재 세팅 하겠습니다',
+          reject: '아니요, 설정 화면으로 이동합니다',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
@@ -141,43 +144,47 @@ export const service = {
         audio: '오디오',
         photogallery: '사진 갤러리',
         video: '비디오',
-        listen: '청취',
-        watch: '감상하기',
+        listen: '듣기',
+        watch: '보기',
         liveLabel: 'LIVE',
-        nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: '다음',
+        previousRadioShow: '이전 라디오 방송',
+        nextRadioShow: '다음 라디오 방송',
+        duration: '방송 길이',
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
-          text: 'Warning: Third party content may contain adverts',
+          textPrefixVisuallyHidden: '동영상 설명, ',
+          text: '경고: 타사 콘텐츠에는 광고가 포함될 수 있습니다',
         },
         fallback: {
-          text: 'Content is not available',
-          linkText: 'View content on %provider_name%',
-          linkTextSuffixVisuallyHidden: ', external',
+          text: '콘텐츠를 불러올 수 없습니다',
+          linkText: '더보기 %provider_name%',
+          linkTextSuffixVisuallyHidden: ', 외부 사이트',
           warningText:
-            'BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.',
+            'BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다',
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: '%provider_name% 포스트 건너뛰기',
+          endTextVisuallyHidden: '%provider_name% 포스트 마침',
         },
       },
     },
     brandSVG,
     mostRead: {
       header: 'TOP 뉴스',
-      lastUpdated: '최종 송고일',
+      lastUpdated: '마지막 업데이트일',
       numberOfItems: 10,
       hasMostRead: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: true,
+      frontPagePosition: 'responsive-must-see',
       header: 'BBC 코리아 라디오',
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
@@ -186,7 +193,7 @@ export const service = {
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: '외부 콘텐츠 링크에 대한 본사 정책 보기.',
+        text: '외부 링크에 대한 본사 정책 보기',
       },
       links: [
         {
@@ -217,7 +224,7 @@ export const service = {
         },
       ],
       copyrightText:
-        'BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.',
+        'BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다',
     },
     fonts: [],
     navigation: [

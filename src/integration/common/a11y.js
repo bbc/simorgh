@@ -1,14 +1,19 @@
-export default ({ skipToContentText, headlineText }) => {
-  [amp, canonical].forEach((page) => {
-    describe(`And using ${page.platform}`, () => {
-      it('I can see a skip to content link that links to the main content of the page', () => {
-        const skipToContentEl = page.getByText(skipToContentText);
-        const mainContentEl = page.getByText(headlineText);
+export default () => {
+  describe('A11y', () => {
+    it('I can see the skip to content link', () => {
+      const skipToContentEl = document.querySelector('[href="#content"]');
 
-        expect(skipToContentEl.getAttribute('href')).toBe('#content');
-        expect(mainContentEl.getAttribute('id')).toBe('content');
-        expect(mainContentEl.getAttribute('tabindex')).toBe('-1');
-      });
+      expect(skipToContentEl).toBeInTheDocument();
+      expect(skipToContentEl.textContent).toBeTruthy();
+      expect(skipToContentEl.textContent).toMatchSnapshot();
+    });
+
+    it('Headline in main content', () => {
+      const accessibleH1El = document.querySelector(
+        'h1[id="content"][tabindex="-1"]',
+      );
+
+      expect(accessibleH1El).toBeInTheDocument();
     });
   });
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import {
   GEL_SPACING_DBL,
@@ -8,7 +8,7 @@ import {
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import Grid from '@bbc/psammead-grid';
+import Grid from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -20,12 +20,14 @@ import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import TopStories from '#containers/CpsTopStories';
-import FeaturesAnalysis from '#containers/FeaturesAnalysis';
+import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
+import MostReadContainer from '#containers/MostRead';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import Byline from '#containers/Byline';
+import SocialEmbed from '#containers/SocialEmbed';
 import {
   getFirstPublished,
   getLastPublished,
@@ -33,8 +35,10 @@ import {
 } from '#lib/utilities/parseAssetData';
 import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
+import { ServiceContext } from '#contexts/ServiceContext';
 
-const StoryPage = ({ pageData }) => {
+const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
+  const { dir } = useContext(ServiceContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const category = path(
     ['promo', 'passport', 'category', 'categoryName'],
@@ -66,14 +70,15 @@ const StoryPage = ({ pageData }) => {
     subheadline: headings,
     text,
     image,
-    timestamp: (props) =>
+    timestamp: props =>
       allowDateStamp ? (
         <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
       ) : null,
-    video: (props) => <MediaPlayer {...props} assetUri={assetUri} />,
-    version: (props) => <MediaPlayer {...props} assetUri={assetUri} />,
-    byline: (props) => <StyledByline {...props} />,
-    include: (props) => <Include {...props} />,
+    video: props => <MediaPlayer {...props} assetUri={assetUri} />,
+    version: props => <MediaPlayer {...props} assetUri={assetUri} />,
+    byline: props => <StyledByline {...props} />,
+    include: props => <Include {...props} />,
+    social_embed: props => <SocialEmbed {...props} />,
   };
 
   const StyledTimestamp = styled(Timestamp)`
@@ -92,8 +97,13 @@ const StoryPage = ({ pageData }) => {
     }
   `;
 
-  const StyledGrid = styled(Grid)`
+  const StoryPageGrid = styled(Grid)`
     flex-grow: 1;
+    width: 100%; /* Needed for IE11 */
+    margin: 0 auto;
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
+    }
   `;
 
   const GridSecondaryColumn = styled(Grid)`
@@ -143,7 +153,7 @@ const StoryPage = ({ pageData }) => {
     group2: 1,
     group3: 1,
     group4: 1,
-    group5: 3,
+    group5: 1,
   };
 
   const gridColsMain = {
@@ -152,7 +162,7 @@ const StoryPage = ({ pageData }) => {
     group2: 8,
     group3: 8,
     group4: 8,
-    group5: 5,
+    group5: 8,
   };
 
   const gridColsSecondary = {
@@ -161,7 +171,7 @@ const StoryPage = ({ pageData }) => {
     group2: 8,
     group3: 8,
     group4: 4,
-    group5: 3,
+    group5: 4,
   };
 
   return (
@@ -188,19 +198,21 @@ const StoryPage = ({ pageData }) => {
       />
       <ATIAnalytics data={pageData} />
 
-      <StyledGrid columns={gridColumns} enableGelGutters margins={gridMargins}>
-        <Grid
-          item
-          columns={gridColsMain}
-          startOffset={gridOffset}
-          as="main"
-          role="main"
-        >
-          <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+      <StoryPageGrid
+        dir={dir}
+        columns={gridColumns}
+        enableGelGutters
+        margins={gridMargins}
+      >
+        <Grid item dir={dir} columns={gridColsMain} startOffset={gridOffset}>
+          <main role="main">
+            <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+          </main>
           <CpsRelatedContent content={relatedContent} />
         </Grid>
         <GridSecondaryColumn
           item
+          dir={dir}
           columns={gridColsSecondary}
           parentColumns={gridColumns}
         >
@@ -211,13 +223,13 @@ const StoryPage = ({ pageData }) => {
             <FeaturesAnalysis />
           </ResponsiveComponentWrapper>
           <ComponentWrapper>
-            <h2>This is a component in the second column</h2>
-          </ComponentWrapper>
-          <ComponentWrapper>
-            <h2>This is a component in the second column</h2>
+            <MostReadContainer
+              mostReadEndpointOverride={mostReadEndpointOverride}
+              columnLayout="oneColumn"
+            />
           </ComponentWrapper>
         </GridSecondaryColumn>
-      </StyledGrid>
+      </StoryPageGrid>
     </>
   );
 };

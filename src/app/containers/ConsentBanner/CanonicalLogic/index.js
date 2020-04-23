@@ -31,8 +31,8 @@ const policyCookieSet = () => !!Cookie.get(POLICY_COOKIE);
 
 const setSeenPrivacyBanner = () =>
   setCookie(PRIVACY_COOKIE, PRIVACY_COOKIE_CURRENT);
-const setDefaultPolicy = (logger) => setPolicyCookie(POLICY_DENIED, logger);
-const setApprovedPolicy = (logger) => setPolicyCookie(POLICY_APPROVED, logger);
+const setDefaultPolicy = logger => setPolicyCookie(POLICY_DENIED, logger);
+const setApprovedPolicy = logger => setPolicyCookie(POLICY_APPROVED, logger);
 const setDismissedCookieBanner = () =>
   setCookie(EXPLICIT_COOKIE, COOKIE_BANNER_APPROVED);
 

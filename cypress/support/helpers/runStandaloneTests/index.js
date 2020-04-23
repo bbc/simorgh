@@ -10,12 +10,12 @@ export default ({
   runCanonicalTests = () => {},
 }) => {
   Object.keys(config)
-    .filter((service) => serviceHasPageType(service, pageType))
-    .forEach((service) => {
+    .filter(service => serviceHasPageType(service, pageType))
+    .forEach(service => {
       const paths = getPaths(service, pageType);
       const { variant } = config[service];
 
-      paths.forEach((path) => {
+      paths.forEach(path => {
         describe(`${pageType} tests for ${service} - ${path}`, () => {
           const testArgs = {
             canonicalPath: path,

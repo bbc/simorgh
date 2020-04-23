@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import { string, number, shape } from 'prop-types';
 import styled from 'styled-components';
 import MetadataContainer from '../../containers/Metadata';
+import ATIAnalytics from '../../containers/ATIAnalytics';
+import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import HeadingBlock from '#containers/RadioPageBlocks/Blocks/Heading';
@@ -23,7 +25,8 @@ const getEpisodeAvailability = (availableFrom, availableUntil) => {
 };
 
 const StyledGelPageGrid = styled(GelPageGrid)`
-  flex-grow: 1;
+  width: 100%;
+  flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
 `;
 
 const renderEpisode = (
@@ -65,6 +68,8 @@ const OnDemandRadioPage = ({ pageData }) => {
 
   return (
     <>
+      <ATIAnalytics data={pageData} />
+      <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
         title={headline}
         lang={language}

@@ -15,7 +15,7 @@ import idSanitiser from '#lib/utilities/idSanitiser';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 
 const StatusCode = styled.span`
-  ${(props) => (props.script ? getParagon(props.script) : '')};
+  ${props => (props.script ? getParagon(props.script) : '')};
   color: ${C_POSTBOX};
   display: block;
   font-family: ${GEL_FF_REITH_SANS};
@@ -95,7 +95,7 @@ const ErrorMain = ({
         {message}
       </CustomParagraph>
       <ul>
-        {solutions.map((text) => (
+        {solutions.map(text => (
           <CustomParagraph
             script={script}
             service={service}

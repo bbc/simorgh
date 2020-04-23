@@ -64,7 +64,7 @@ describe('getPaths', () => {
     let getPaths;
     beforeEach(() => {
       global.Cypress = {
-        env: (name) => {
+        env: name => {
           switch (name) {
             case 'SMOKE':
               return true;
@@ -98,7 +98,7 @@ describe('getPaths', () => {
     let getPaths;
     beforeEach(() => {
       global.Cypress = {
-        env: (name) => {
+        env: name => {
           switch (name) {
             case 'SMOKE':
               return false;
