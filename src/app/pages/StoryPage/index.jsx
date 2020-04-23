@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import {
   GEL_SPACING_DBL,
@@ -36,8 +36,15 @@ import {
 import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
 import { ServiceContext } from '#contexts/ServiceContext';
+import fetchPageData from '../../routes/utils/fetchPageData';
+import { Link } from 'react-router-dom';
+
+const secondaryColDefaultState = { topStories: [], featuresAndAnalysis: [] };
 
 const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
+  const [secondaryColState, setSecondaryColState] = useState(
+    secondaryColDefaultState,
+  );
   const { dir } = useContext(ServiceContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const category = path(
@@ -62,9 +69,36 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
-  const {
-    additonalData: { featuresAndAnalysis, topStories },
-  } = pageData;
+  const topStories = path(['additionalData', 'topStories'], pageData);
+  const featuresAndAnalysis = path(
+    ['additionalData', 'featuresAndAnalysis'],
+    pageData,
+  );
+  const topStoriesContent = topStories || secondaryColState.topStories;
+  const featuresAndAnalysisContent =
+    featuresAndAnalysis || secondaryColState.featuresAndAnalysis;
+
+  useEffect(() => {
+    const abortController = new AbortController();
+    const signal = abortController.signal;
+
+    const fetchAditionalData = async () => {
+      const data = await fetchPageData('/mundo/testdata', { signal: signal });
+      const { json } = data;
+      if (json) {
+        setSecondaryColState(json);
+      }
+    };
+
+    if (!topStories && !featuresAndAnalysis) {
+      console.log('fetching data');
+      fetchAditionalData();
+    }
+
+    return () => {
+      abortController.abort;
+    };
+  }, [pageData]);
 
   const componentsToRender = {
     fauxHeadline,
@@ -202,6 +236,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         enableGelGutters
         margins={gridMargins}
       >
+        <Link to="/mundo/noticias-internacional-51266689">STY Asset Link</Link>
         <Grid item dir={dir} columns={gridColsMain} startOffset={gridOffset}>
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
@@ -215,10 +250,10 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           parentColumns={gridColumns}
         >
           <ResponsiveComponentWrapper>
-            <TopStories content={topStories} />
+            <TopStories content={topStoriesContent} />
           </ResponsiveComponentWrapper>
           <ResponsiveComponentWrapper>
-            <FeaturesAnalysis content={featuresAndAnalysis} />
+            <FeaturesAnalysis content={featuresAndAnalysisContent} />
           </ResponsiveComponentWrapper>
           <ComponentWrapper>
             <MostReadContainer

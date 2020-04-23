@@ -16,6 +16,7 @@ import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
 import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import onClient from '../../../lib/utilities/onClient';
 
 const formatPageData = pipe(
   addAnalyticsCounterName,
@@ -68,14 +69,17 @@ const getAdditionalData = async (pageData) => {
 
 export default async ({ path: pathname }) => {
   const { json, ...rest } = await fetchPageData(pathname);
-  //   const { json: data } = await fetchPageData('/mundo/testdata');
+  let pageData = await transformJson(json);
 
-  const additonalData = await getAdditionalData(json);
+  if (!onClient()) {
+    const additionalData = await getAdditionalData(json);
+    pageData = { ...(await transformJson(json)), additionalData };
+  }
 
   return {
     ...rest,
     ...(json && {
-      pageData: { ...(await transformJson(json)), additonalData },
+      pageData,
     }),
   };
 };
