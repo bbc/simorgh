@@ -15,6 +15,8 @@ const MostReadContainer = ({
   columnLayout,
   constrainMaxWidth,
   isOnFrontPage,
+  linkTypography,
+  rankTypography,
 }) => {
   const { variant, isAmp } = useContext(RequestContext);
   const {
@@ -39,6 +41,8 @@ const MostReadContainer = ({
       constrainMaxWidth={constrainMaxWidth}
       columnLayout={columnLayout}
       isOnFrontPage={isOnFrontPage}
+      linkTypography={linkTypography}
+      rankTypography={rankTypography}
     />
   );
 };
@@ -48,6 +52,8 @@ MostReadContainer.propTypes = {
   constrainMaxWidth: bool,
   columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
   isOnFrontPage: bool,
+  linkTypography: oneOf(['greatprimer', 'pica']),
+  rankTypography: oneOf(['foolscap', 'trafalgar']),
 };
 
 MostReadContainer.defaultProps = {
@@ -55,6 +61,8 @@ MostReadContainer.defaultProps = {
   constrainMaxWidth: false,
   columnLayout: 'multiColumn',
   isOnFrontPage: false,
+  linkTypography: 'greatprimer',
+  rankTypography: 'foolscap',
 };
 
 export default MostReadContainer;
