@@ -6,7 +6,7 @@ import { toggleReducer, updateToggles } from './reducer';
 import defaultToggles from '#lib/config/toggles';
 import constructTogglesEndpoint from './utils/constructTogglesEndpoint';
 
-const logger = nodeLogger();
+const logger = nodeLogger(__filename);
 const ToggleContext = createContext({});
 
 const ToggleContextProvider = ({ children, service, origin }) => {
