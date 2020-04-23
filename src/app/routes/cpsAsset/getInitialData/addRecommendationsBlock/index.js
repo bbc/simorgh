@@ -34,9 +34,7 @@ const addRecommendationsBlock = originalJson => {
     type: 'wsoj',
     model: {
       type: 'recommendations',
-      assetUri,
-      resource: '/api/recommend',
-      version: 2,
+      path: `/api/recommend?recSys=2&limit=4&assetUri=${assetUri}`,
     },
   };
 
