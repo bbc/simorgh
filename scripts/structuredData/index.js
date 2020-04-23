@@ -72,7 +72,10 @@ const checkStructuredData = async urls => {
     .then(results => {
       return results;
     })
-    .catch(error => console.error(error));
+    .catch(error => {
+      console.error(error);
+      process.exit(1);
+    });
 };
 
 const printResults = results => {
@@ -108,11 +111,15 @@ const exit = results => {
 };
 
 const run = async () => {
-  const results = await checkStructuredData(getUrls());
+  try {
+    const results = await checkStructuredData(getUrls());
 
-  printResults(results);
-
-  exit(results);
+    console.log('printing results here');
+    printResults(results);
+    exit(results);
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 run();
