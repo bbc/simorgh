@@ -61,7 +61,7 @@ const getUrls = () => {
         urlsToValidate.push(...urls);
       });
   });
-  return urlsToValidate.slice(0, 2);
+  return urlsToValidate;
 };
 
 const checkStructuredData = async urls => {
