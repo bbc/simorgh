@@ -230,9 +230,8 @@ describe('addRecommendationsBlock', () => {
               type: 'wsoj',
               model: {
                 type: 'recommendations',
-                assetUri: '/news/media-333256',
-                resource: '/api/recommend',
-                version: 2,
+                path:
+                  '/api/recommend?recSys=2&limit=4&assetUri=/news/media-333256',
               },
             },
             {
