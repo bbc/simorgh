@@ -22,10 +22,9 @@ const RecommendationsContainer = ({ assetUri }) => {
   return (
     recommendationsData && (
       <>
-      {recommendationsData.items.map((item) => (
-        <span key={item.shortHeadline}>{item.shortHeadline}</span>
-
-      ))}
+        {recommendationsData.items.map(item => (
+          <span key={item.shortHeadline}>{item.shortHeadline}</span>
+        ))}
       </>
     )
   );
