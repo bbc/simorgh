@@ -78,6 +78,18 @@ const clickFirstMapLink = () => {
   });
 };
 
+const clickPromoLinkOnHomePage = pageType => {
+  cy.get('li[class^="StoryPromoLi"]').within(() => {
+    // If it is a MAP test, find first MAP within a StoryPromoLi item and click it
+    if (pageType === 'mediaAssetPage') {
+      clickFirstMapLink();
+    } else {
+      // If it isn't a MAP page being tested, click the first promo item
+      clickFirstLink();
+    }
+  });
+};
+
 const hasVariant = service => {
   return config[service] && config[service].variant !== 'default';
 };
@@ -129,17 +141,8 @@ Object.keys(config)
               // Assert other variant has persisted
               allVariantAssertions(product, service, otherVariant);
 
-              // TODO: Push this entire block into its own const
               // Finding a link to click on the home page
-              cy.get('li[class^="StoryPromoLi"]').within(() => {
-                // If it is a MAP test, find first MAP within a StoryPromoLi item and click it
-                if (pageType === 'mediaAssetPage') {
-                  clickFirstMapLink();
-                } else {
-                  // If it isn't a MAP page being tested, click the first promo item
-                  clickFirstLink();
-                }
-              });
+              clickPromoLinkOnHomePage(pageType);
 
               // Assert other variant has persisted after navigating to new page
               allVariantAssertions(product, service, otherVariant);
