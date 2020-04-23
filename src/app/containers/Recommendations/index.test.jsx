@@ -2,7 +2,7 @@ import React from 'react';
 import { wait, render } from '@testing-library/react';
 import RecommendationsContainer from '.';
 
-const assetUri = '/arabic/middleeast-51679521';
+const assetUri = `/arabic/middleeast-51679521`;
 const caminoResponseData = {
   items: [
     {
@@ -42,7 +42,9 @@ describe('RecommendationsContainer', () => {
     fetch.resetMocks();
   });
   it('should fetch data from the camino API', async () => {
-    fetch.mockResponse(JSON.stringify(caminoResponseData));
+    fetch.mockResponse(JSON.stringify(caminoResponseData), {
+      Headers: { 'Content-Type': 'application/json' },
+    });
     const { container } = render(
       <RecommendationsContainer assetUri={assetUri} />,
     );
