@@ -1,28 +1,42 @@
+/* eslint-disable no-console */
+
 const JsdomEnvironment = require('jest-environment-jsdom');
-const render = require('./render');
+const fetchDom = require('./utils/fetchDom');
+const getPageTypeFromTestPath = require('./utils/getPageTypeFromTestPath');
+const camelCaseToText = require('./utils/camelCaseToText');
 
 class IntegrationTestEnvironment extends JsdomEnvironment {
   constructor(config, context) {
     super(config, context);
-    this.docblockPragmas = context.docblockPragmas;
+    const { platform } = config.testEnvironmentOptions;
+    const { pathname, service } = context.docblockPragmas;
+    const pageType = getPageTypeFromTestPath(context.testPath);
+
+    this.pageType = camelCaseToText(pageType);
+    this.service = service;
+    this.url = `http://localhost:7080${pathname}${
+      platform === 'amp' ? '.amp' : ''
+    }`;
   }
 
   async setup() {
-    const { pathname } = this.docblockPragmas;
-    const renderCanonical = render(pathname);
-    const renderAmp = render(`${pathname}.amp`);
-
     await super.setup();
 
-    const [canonical, amp] = await Promise.all([renderCanonical, renderAmp]);
+    try {
+      const dom = await fetchDom(this.url);
 
-    this.global.canonical = { ...canonical, platform: 'Canonical' };
-    this.global.amp = { ...amp, platform: 'AMP' };
+      Object.defineProperties(this.global, {
+        pageType: { value: this.pageType },
+        service: { value: this.service },
+        window: { value: dom.window },
+        document: { value: dom.window.document },
+      });
+    } catch (e) {
+      console.error(e);
+    }
   }
 
   async teardown() {
-    this.global.canonical = undefined;
-    this.global.amp = undefined;
     await super.teardown();
   }
 
