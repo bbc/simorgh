@@ -1,10 +1,6 @@
 import findLastIndex from 'ramda/src/findLastIndex';
 import propSatisfies from 'ramda/src/propSatisfies';
 import path from 'ramda/src/path';
-import nodeLogger from '#lib/logger.node';
-import { RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR } from '#lib/logger.const';
-
-const logger = nodeLogger(__filename);
 
 export const getProgramState = (currentTime, startTime, endTime) => {
   const isLive = currentTime < endTime && currentTime > startTime;
@@ -24,13 +20,6 @@ export const getLink = (state, program, service) => {
   return state === 'live' ? `${url}/liveradio` : `${url}/${pid}`;
 };
 
-const logProgramError = ({ error, service }) => {
-  logger.error(RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR, {
-    error,
-    service,
-  });
-};
-
 export default (data, service, currentTime) => {
   if (!data) {
     return null;
@@ -46,11 +35,6 @@ export default (data, service, currentTime) => {
 
   const scheduleDataIsComplete =
     schedules[latestProgramIndex - 2] && schedules[latestProgramIndex + 1];
-
-  if (!scheduleDataIsComplete) {
-    logProgramError({ error: 'Incomplete program schedule', service });
-  }
-
   const programsToShow = scheduleDataIsComplete && [
     schedules[latestProgramIndex],
     schedules[latestProgramIndex - 1],
@@ -67,21 +51,6 @@ export default (data, service, currentTime) => {
         publishedTimeDuration,
       } = program;
 
-      const brandTitle = path(['brand', 'title'], program);
-
-      if (!publishedTimeStart) {
-        logProgramError({
-          error: 'publishTimeStart field is missing in program',
-          service,
-        });
-      }
-      if (!brandTitle) {
-        logProgramError({
-          error: 'title field is missing in program',
-          service,
-        });
-      }
-
       const currentState = getProgramState(
         currentTime,
         publishedTimeStart,
@@ -94,7 +63,8 @@ export default (data, service, currentTime) => {
         state: currentState,
         startTime: publishedTimeStart,
         link: getLink(currentState, program, service),
-        brandTitle,
+        brandTitle: path(['brand', 'title'], program),
+        episodeTitle: path(['episode', 'presentationTitle'], program),
         summary: path(['episode', 'synopses', 'short'], program),
         duration: publishedTimeDuration || '',
         durationLabel: 'Duration',

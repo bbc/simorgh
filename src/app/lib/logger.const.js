@@ -13,7 +13,6 @@ const logCodes = {
   ROUTING_INFORMATION: 'routing_info',
   RADIO_SCHEDULE_FETCH_ERROR: 'radio_schedule_fetch_error',
   RADIO_SCHEDULE_REQUEST_RECEIVED: 'radio_schedule_request_received',
-  RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR: 'radio_schedule_data_incomplete_error',
   SERVER_LISTEN_ERROR: 'server_listen_error',
   SERVER_RESPONSE_TIME: 'server_response_time',
   SERVER_SIDE_RENDER_REQUEST_RECEIVED: 'ssr_request_received',

@@ -7,6 +7,7 @@ const radioSchedulesShape = arrayOf(
     startTime: number.isRequired,
     link: string.isRequired,
     brandTitle: string.isRequired,
+    episodeTitle: string.isRequired,
     summary: string,
     duration: string.isRequired,
     durationLabel: string.isRequired,
