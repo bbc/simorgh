@@ -1,45 +1,24 @@
 import path from 'ramda/src/path';
 import deepClone from 'ramda/src/clone';
 import splitAt from 'ramda/src/splitAt';
-
-const isCpsParagraphBlock = cpsBlock => {
-  if (cpsBlock.type === 'text') {
-    const paragraphBlocks = path(['model', 'blocks'], cpsBlock).filter(
-      block => block.type === 'paragraph',
-    );
-    return !!paragraphBlocks.length;
-  }
-  return false;
-};
-
-const getNthCpsParagraphIndex = (blocks, n) => {
-  let indexCount = 0; // maybe make it the lastt block just incase there's no paragraph blocks
-  let paragraphCount = 0;
-  blocks.some((block, index) => {
-    if (isCpsParagraphBlock(block)) {
-      paragraphCount += 1;
-    }
-    if (paragraphCount === n) {
-      indexCount = index;
-      return true;
-    }
-    return false;
-  });
-  return indexCount;
-};
+import { getNthCpsParagraphIndex } from '../helpers';
 
 const insertRecommendationsBlock = (recommendationBlock, blocks) => {
   // get the index of the 5th paragraph
-  const recommendationIndex = getNthCpsParagraphIndex(blocks, 5) + 1;
+  const fifthParagraphIndex = getNthCpsParagraphIndex(blocks, 5);
+
+  if (!fifthParagraphIndex) {
+    return blocks;
+  }
 
   // split blocks at the index of the 5th paragraph
-  const parts = splitAt(recommendationIndex, blocks);
+  const parts = splitAt(fifthParagraphIndex + 1, blocks);
 
   // reconstruct blocks
   return [...parts[0], { ...recommendationBlock }, ...parts[1]];
 };
 
-const cpsRecommendations = originalJson => {
+const addRecommendationsBlock = originalJson => {
   const json = deepClone(originalJson);
   const pageType = path(['metadata', 'type'], json);
   const { allowAdvertising } = path(['metadata', 'options'], json);
@@ -56,6 +35,8 @@ const cpsRecommendations = originalJson => {
     model: {
       type: 'recommendations',
       assetUri,
+      resource: '/api/recommend',
+      version: 2,
     },
   };
 
@@ -64,4 +45,4 @@ const cpsRecommendations = originalJson => {
   return json;
 };
 
-export default cpsRecommendations;
+export default addRecommendationsBlock;
