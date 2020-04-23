@@ -50,25 +50,22 @@ const validate = async url => {
 };
 
 const getUrls = () => {
-  const urlsToValidate = {};
+  const urlsToValidate = [];
   Object.keys(services).forEach(service => {
-    urlsToValidate[service] = [];
     Object.keys(services[service].pageTypes)
       .filter(pageType => !pageType.startsWith('error'))
       .forEach(pageType => {
         const paths = getPaths(service, pageType);
         const urls = paths.map(path => `http://localhost:7080${path}`);
 
-        urlsToValidate[service] = [urlsToValidate[service], urls].flat();
+        urlsToValidate.push(...urls);
       });
   });
   return urlsToValidate;
 };
 
 const checkStructuredData = async urls => {
-  const urlsToValidate = Object.values(urls).flat();
-
-  return Promise.all(urlsToValidate.map(url => validate(url)))
+  return Promise.all(urls.map(url => validate(url)))
     .then(results => {
       return results;
     })
