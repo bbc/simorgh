@@ -38,11 +38,10 @@ describe('sendBeacon', () => {
   });
 
   describe('when the fetch fails', () => {
-    let error;
-
+    let newError;
     beforeEach(() => {
-      error = new Error('An error');
-      fetchResponse = Promise.reject(error);
+      newError = new Error();
+      fetchResponse = Promise.reject(newError);
     });
 
     afterEach(() => {
@@ -54,7 +53,9 @@ describe('sendBeacon', () => {
 
       await sendBeacon('https://foobar.com');
 
-      expect(loggerMock.error).toHaveBeenCalledWith(error);
+      expect(loggerMock.error).toHaveBeenCalledWith('analytics_beacon_error', {
+        error: newError,
+      });
     });
   });
 });

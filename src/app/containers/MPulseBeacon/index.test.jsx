@@ -134,20 +134,28 @@ describe('MPulseBeacon', () => {
     });
   });
 
-  describe('when boomr throws and error', () => {
+  describe('when boomr throws an error', () => {
+    let newError;
     beforeEach(() => {
-      boomr.mockImplementation(() => throw new Error());
+      newError = new Error();
+      boomr.mockImplementation(() => {
+        throw new Error();
+      });
     });
 
-    it('should not call boomr', () => {
+    afterEach(() => {
+      jest.resetAllMocks();
+    });
+
+    it(`should send error to logger`, async () => {
       act(() => {
         ReactDOM.render(<ContextWrappedMPulse />, container);
       });
-
       expect(boomr).toHaveBeenCalled();
-      expect(loggerMock.error).toHaveBeenCalledWith(
-        'Error initialising mPulse: "Error"',
-      );
+
+      expect(loggerMock.error).toHaveBeenCalledWith('mpulse_error', {
+        error: newError,
+      });
     });
   });
 });

@@ -6,6 +6,8 @@ import { renderHook, act } from '@testing-library/react-hooks';
 import '@testing-library/jest-dom/extend-expect';
 import useToggle from '.';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+/* eslint-disable global-require */
+import loggerMock from '#testHelpers/loggerMock';
 
 jest.mock('../../lib/config/toggles/index.js', () => ({
   test: {
@@ -117,8 +119,15 @@ describe('useToggle custom hook', () => {
   });
 
   describe('Given ads toggle that is fetched from the toggle service returns a 503', () => {
+    let newError;
+    beforeEach(() => {
+      newError = new Error();
+    });
+
+    afterEach(() => {
+      jest.resetAllMocks();
+    });
     it('should log the fetch error', async () => {
-      console.error = jest.fn();
       fetchMock.mock(togglesUrl, 503);
       const wrapper = ({ children }) => (
         <ToggleContextProvider
@@ -135,13 +144,12 @@ describe('useToggle custom hook', () => {
         });
       });
 
-      expect(console.error).toHaveBeenCalledWith(
-        `error - ${JSON.stringify(
-          { event: 'toggle_fetch_error', message: {} },
-          null,
-          2,
-        )}`,
-      );
+      expect(loggerMock.error).toHaveBeenCalledWith({
+        event: 'toggle_fetch_error',
+        message: {
+          error: newError,
+        },
+      });
     });
   });
 });
