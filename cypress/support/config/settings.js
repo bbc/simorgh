@@ -4297,7 +4297,7 @@ module.exports = () => ({
           local: {
             paths: [
               // '/swahili/media-23268999', // CPS MAP with live stream
-              // '/swahili/michezo/2016/07/160712_tc2_testmap1', // TC2 MAP with video clip
+              '/swahili/michezo/2016/07/160712_tc2_testmap1', // TC2 MAP with video clip
             ],
             enabled: true,
           },
