@@ -8,11 +8,12 @@ const testSummary = test => {
 };
 
 const testDetails = test => {
-  return `${cyan('└─', test.test)}\n\t\t└─${JSON.stringify(
-    test.value,
-    null,
-    2,
-  )}`;
+  const value =
+    typeof test.value === 'object'
+      ? JSON.stringify(test.value, null, 4)
+      : test.value;
+
+  return `${cyan('└─', test.test)}\n\t  └─ ${value}`;
 };
 
 const errorDetails = test => {

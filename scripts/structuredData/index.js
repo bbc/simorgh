@@ -61,10 +61,11 @@ const getUrls = () => {
         urlsToValidate.push(...urls);
       });
   });
+
   return urlsToValidate;
 };
 
-const checkStructuredData = async urls => {
+const checkStructuredData = urls => {
   return Promise.all(urls.map(url => validate(url)))
     .then(results => {
       return results;
@@ -75,11 +76,27 @@ const checkStructuredData = async urls => {
     });
 };
 
+const mergePassedValues = result => {
+  Object.entries(result.structuredData.metatags).forEach(entry => {
+    const metatag = entry[0];
+    const value = entry[1];
+    const test = result.passed.find(pass => {
+      return pass.test.includes(metatag);
+    });
+
+    if (test) {
+      test.value = value.toString();
+    }
+  });
+};
+
 const printResults = results => {
   const showInfo = process.argv[2] && process.argv[2] === '-i';
 
   results.forEach(result => {
     console.log(`\n${result.url}`);
+
+    mergePassedValues(result);
 
     if (showInfo) {
       printPassing(result.passed);
