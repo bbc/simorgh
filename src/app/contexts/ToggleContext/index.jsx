@@ -1,11 +1,12 @@
 import React, { createContext, useEffect, useReducer } from 'react';
 import { node, string } from 'prop-types';
-import webLogger from '#lib/logger.web';
+import nodeLogger from '#lib/logger.node';
+import { TOGGLE_FETCH_ERROR } from '#lib/logger.const';
 import { toggleReducer, updateToggles } from './reducer';
 import defaultToggles from '#lib/config/toggles';
 import constructTogglesEndpoint from './utils/constructTogglesEndpoint';
 
-const logger = webLogger();
+const logger = nodeLogger();
 const ToggleContext = createContext({});
 
 const ToggleContextProvider = ({ children, service, origin }) => {
@@ -35,16 +36,7 @@ const ToggleContextProvider = ({ children, service, origin }) => {
 
           toggleDispatch(updateToggles(jsonData));
         } catch (error) {
-          logger.error(
-            JSON.stringify(
-              {
-                event: 'toggle_fetch_error',
-                message: error,
-              },
-              null,
-              2,
-            ),
-          );
+          logger.error(TOGGLE_FETCH_ERROR, { error });
         }
       };
       fetchAndUpdateToggles();

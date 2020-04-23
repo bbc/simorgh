@@ -140,16 +140,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint }) => {
         fetch(pathname, { mode: 'no-cors' })
           .then(handleResponse(pathname))
           .catch(error => {
-            logger.error(
-              JSON.stringify(
-                {
-                  event: RADIO_SCHEDULE_FETCH_ERROR,
-                  message: error.toString(),
-                },
-                null,
-                2,
-              ),
-            );
+            logger.error(RADIO_SCHEDULE_FETCH_ERROR, { error });
           });
 
       fetchRadioScheduleData(endpoint);

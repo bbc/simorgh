@@ -1,4 +1,5 @@
 import nodeLogger from '#lib/logger.node';
+import { UNSUPPORTED_BLOCK_TYPE } from '#lib/logger.const';
 import convertParagraph from '../paragraph';
 import { blockBase } from '#app/models/blocks';
 
@@ -12,7 +13,9 @@ const convertToSubheadline = async block => {
       blocks: [innerParagraph],
     });
   }
-  logger.error(`Incorrect block type ${block.type}`);
+  logger.error(UNSUPPORTED_BLOCK_TYPE, {
+    type: block.type,
+  });
   return null;
 };
 

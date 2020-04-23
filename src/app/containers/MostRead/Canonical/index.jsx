@@ -28,6 +28,7 @@ import {
 import SectionLabel from '@bbc/psammead-section-label';
 import { ServiceContext } from '#contexts/ServiceContext';
 import webLogger from '#lib/logger.web';
+import { MOST_READ_FETCH_ERROR } from '#lib/logger.const';
 import { mostReadRecordIsFresh, shouldRenderLastUpdated } from '../utilities';
 import LastUpdated from './LastUpdated';
 
@@ -124,7 +125,7 @@ const CanonicalMostRead = ({
     const fetchMostReadData = pathname =>
       fetch(pathname, { mode: 'no-cors' })
         .then(handleResponse)
-        .catch(e => logger.error(`HTTP Error: "${e}"`));
+        .catch(error => logger.error(MOST_READ_FETCH_ERROR, { error }));
     fetchMostReadData(endpoint);
   }, [
     endpoint,

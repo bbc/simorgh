@@ -1,5 +1,6 @@
 import { useEffect, useContext } from 'react';
 import nodeLogger from '#lib/logger.node';
+import { MPULSE_ERROR } from '#lib/logger.const';
 import { UserContext } from '#contexts/UserContext';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -21,8 +22,8 @@ const MPulseBeaconContainer = () => {
     if (isEnabled && personalisationEnabled) {
       try {
         boomr(API_KEY);
-      } catch (e) {
-        logger.error(`Error initialising mPulse: "${e}"`);
+      } catch (error) {
+        logger.error(MPULSE_ERROR, { error });
       }
     }
   }, [isEnabled, personalisationEnabled, API_KEY]);

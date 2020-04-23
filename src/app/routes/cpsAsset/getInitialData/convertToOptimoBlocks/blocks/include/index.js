@@ -1,5 +1,6 @@
 import 'isomorphic-fetch';
 import nodeLogger from '#lib/logger.node';
+import { INCLUDE_FETCH_ERROR } from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
@@ -27,17 +28,8 @@ const fetchMarkup = async url => {
       const html = await res.text();
       return html;
     }
-  } catch (e) {
-    logger.error(
-      JSON.stringify(
-        {
-          event: 'include_fetch_error',
-          message: e,
-        },
-        null,
-        2,
-      ),
-    );
+  } catch (error) {
+    logger.error(INCLUDE_FETCH_ERROR, { error });
     return null;
   }
 };

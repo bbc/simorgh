@@ -50,16 +50,7 @@ export default () => {
     service !== 'news' && contentNotAvailableMessage === message;
 
   if (isNotTranslated) {
-    logger.info(
-      JSON.stringify(
-        {
-          event: NO_TRANSLATION_FOUND,
-          message: `No ${service} translation found for "${message}"`,
-        },
-        null,
-        2,
-      ),
-    );
+    logger.info(NO_TRANSLATION_FOUND, { service });
   }
 
   return (
