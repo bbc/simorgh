@@ -32,7 +32,7 @@
     "test:e2e:interactive": "./scripts/killApp.sh && npm run build && run-p --race start cypress:interactive",
     "test:lint": "eslint --ext .js,jsx,json ./src ./data ./cypress ./.storybook ./webpack** && swagger-cli validate data/schema.yaml && stylelint 'src/**/*.js' 'src/**/*.jsx'",
     "test:puppeteer": "jest --ci --env=jsdom --colors ./puppeteer",
-    "test:structured-data": "npm run stop && npm run build:local && (npm run start & wait-on -t 20000 http://localhost:7080/status) && node ./scripts/structuredData/index.js -i",
+    "test:structured-data": "npm run stop && npm run build:local && (npm run start & wait-on -t 20000 http://localhost:7080/status) && node ./scripts/structuredData/index.js -i && npm run stop",
     "test:structured-data:ci": "node ./scripts/structuredData/index.js",
     "test:unit": "test -z $CI && jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" || jest --ci --runInBand --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\"",
     "test:unit:watch": "npm run test:unit -- --watch",
