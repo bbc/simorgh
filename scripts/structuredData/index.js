@@ -76,7 +76,7 @@ const checkStructuredData = urls => {
     });
 };
 
-const mergePassedValues = result => {
+const populateTestValues = result => {
   Object.entries(result.structuredData.metatags).forEach(entry => {
     const metatag = entry[0];
     const value = entry[1];
@@ -96,12 +96,11 @@ const printResults = results => {
   results.forEach(result => {
     console.log(`\n${result.url}`);
 
-    mergePassedValues(result);
-
     if (showInfo) {
+      populateTestValues(result);
       printPassing(result.passed);
     } else {
-      console.log(green(`${result.passed.length} tests passed`));
+      console.log(green(`  ✓ ${result.passed.length} tests passed`));
     }
   });
 
