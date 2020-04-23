@@ -61,7 +61,7 @@ const getUrls = () => {
         urlsToValidate.push(...urls);
       });
   });
-  return urlsToValidate;
+  return urlsToValidate.slice(0, 2);
 };
 
 const checkStructuredData = async urls => {
@@ -108,15 +108,11 @@ const exit = results => {
 };
 
 const run = async () => {
-  try {
-    const results = await checkStructuredData(getUrls());
+  const results = await checkStructuredData(getUrls());
 
-    console.log('printing results here');
-    printResults(results);
-    exit(results);
-  } catch (error) {
-    console.error(error);
-  }
+  printResults(results);
+
+  exit(results);
 };
 
 run();

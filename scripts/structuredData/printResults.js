@@ -4,9 +4,7 @@
 const { cyan, red, green, bold } = require('chalk');
 
 const testSummary = test => {
-  return `${test.group ? test.group : ''} ${
-    test.description ? test.description : ''
-  }`;
+  return test.description || '';
 };
 
 const testDetails = test => {
@@ -19,8 +17,7 @@ const testDetails = test => {
 
 const errorDetails = test => {
   const { error } = test;
-  const errorMessage = error ? cyan(error.message) : '';
-  return errorMessage;
+  return error ? cyan(error.message) : '';
 };
 
 const printFailures = failed => {
@@ -48,7 +45,7 @@ const aggregateResults = results => {
     failed: results
       .map(result => [...result.failed, ...result.warnings])
       .flat(),
-    schemas: [...new Set(results.map(result => result.schemas).flat())],
+    schemas: [...new Set(...results.map(result => result.schemas))],
     structuredData: Object.assign(
       ...results.map(result => result.structuredData),
     ),
