@@ -50,7 +50,7 @@ export default () => {
   );
 
   if (relatedContentItems) {
-    it('I can see the related content', () => {
+    it('I can see related content', () => {
       relatedContentItems.forEach(relatedContent => {
         expect(relatedContent).toBeInTheDocument();
         expect(relatedContent.textContent).toBeTruthy();

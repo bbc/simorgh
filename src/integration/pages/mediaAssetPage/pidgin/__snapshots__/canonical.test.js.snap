@@ -14,15 +14,15 @@ exports[`Canonical Media Asset Page I can see a bulleted list item 1`] = `"<Medi
 
 exports[`Canonical Media Asset Page I can see a bulleted list item with link: <Media Asset Page> 1`] = `"http://www.bbc.com/afrique/23248423"`;
 
+exports[`Canonical Media Asset Page I can see related content: Audio, BBC News Pidgin One Minute News, 0,15 1`] = `"/pidgin/media-23147054"`;
+
+exports[`Canonical Media Asset Page I can see related content: Image gallery, Kenya Elections Pictures: 8 August 2017 1`] = `"/pidgin/23146654"`;
+
+exports[`Canonical Media Asset Page I can see related content: Lagos 'Gay' men Appear for Court, say Dem no dey Guilty 1`] = `"/pidgin/tori-23143754"`;
+
+exports[`Canonical Media Asset Page I can see related content: Police Arrest 3 ontop Anambra Church Attack 1`] = `"/pidgin/tori-23145776"`;
+
 exports[`Canonical Media Asset Page I can see the headline 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
-
-exports[`Canonical Media Asset Page I can see the related content: Audio, BBC News Pidgin One Minute News, 0,15 1`] = `"/pidgin/media-23147054"`;
-
-exports[`Canonical Media Asset Page I can see the related content: Image gallery, Kenya Elections Pictures: 8 August 2017 1`] = `"/pidgin/23146654"`;
-
-exports[`Canonical Media Asset Page I can see the related content: Lagos 'Gay' men Appear for Court, say Dem no dey Guilty 1`] = `"/pidgin/tori-23143754"`;
-
-exports[`Canonical Media Asset Page I can see the related content: Police Arrest 3 ontop Anambra Church Attack 1`] = `"/pidgin/tori-23145776"`;
 
 exports[`Canonical Media Asset Page I can see the timestamp 1`] = `"13 September 2019"`;
 

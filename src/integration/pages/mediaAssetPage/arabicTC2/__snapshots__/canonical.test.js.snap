@@ -10,11 +10,11 @@ exports[`Canonical Media Asset Page Footer I can see the footer copyright and ex
 
 exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
+exports[`Canonical Media Asset Page I can see related content: , "الجنس مقابل السمك" أحد أسباب انتشار الأيدز في كينيا 1`] = `"/arabic/multimedia/2014/02/140217_odd_kenya_fish_instead_sex"`;
+
+exports[`Canonical Media Asset Page I can see related content: , حملة كبيرة ضد تجارة الجنس في الصين 1`] = `"/arabic/multimedia/2014/02/140211_china_sex_trade"`;
+
 exports[`Canonical Media Asset Page I can see the headline 1`] = `"أطفال كينيون يمارسون الجنس مع السياح من أجل مبالغ مغرية"`;
-
-exports[`Canonical Media Asset Page I can see the related content: , "الجنس مقابل السمك" أحد أسباب انتشار الأيدز في كينيا 1`] = `"/arabic/multimedia/2014/02/140217_odd_kenya_fish_instead_sex"`;
-
-exports[`Canonical Media Asset Page I can see the related content: , حملة كبيرة ضد تجارة الجنس في الصين 1`] = `"/arabic/multimedia/2014/02/140211_china_sex_trade"`;
 
 exports[`Canonical Media Asset Page I can see the timestamp 1`] = `"15 مايو/ أيار 2014"`;
 
