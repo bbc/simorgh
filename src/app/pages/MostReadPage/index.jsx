@@ -123,7 +123,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
       <MetadataContainer
         title={`${header} - ${brandName}`}
         lang={lang}
-        description="mostread"
+        description={`${header} - ${brandName}`}
         openGraphType="website"
       />
 

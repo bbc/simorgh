@@ -454,7 +454,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
       name="application-name"
     />
     <meta
-      content="mostread"
+      content="De one we dem de read well well - BBC News Pidgin"
       name="description"
     />
     <meta
@@ -482,7 +482,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
       name="msapplication-TileImage"
     />
     <meta
-      content="mostread"
+      content="De one we dem de read well well - BBC News Pidgin"
       property="og:description"
     />
     <meta
@@ -522,7 +522,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
       name="twitter:creator"
     />
     <meta
-      content="mostread"
+      content="De one we dem de read well well - BBC News Pidgin"
       name="twitter:description"
     />
     <meta
