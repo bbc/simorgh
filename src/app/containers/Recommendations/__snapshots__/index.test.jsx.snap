@@ -1,18 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RecommendationsContainer should fetch data from the camino API 1`] = `
+exports[`RecommendationsContainer should fetch empty recommendations data 1`] = `<div />`;
+
+exports[`RecommendationsContainer should fetch recommendations data successfuly 1`] = `
 <div>
-  <span>
-    الحرب في سوريا: الجيش التركي يُسقط مقاتلتين سوريتين
-  </span>
-  <span>
-    مقتل 33 جنديا تركيا في غارة للجيش السوري في إدلب
-  </span>
-  <span>
-    مقتل جنود أتراك في قصف للقوات السورية على إدلب
-  </span>
-  <span>
-    أنقرة تعلن "قتل العشرات" من القوات الحكومية السورية عقب مقتل جنود أتراك
-  </span>
+  <ul>
+    <li>
+      الحرب في سوريا: الجيش التركي يُسقط مقاتلتين سوريتين
+    </li>
+    <li>
+      مقتل 33 جنديا تركيا في غارة للجيش السوري في إدلب
+    </li>
+    <li>
+      مقتل جنود أتراك في قصف للقوات السورية على إدلب
+    </li>
+    <li>
+      أنقرة تعلن "قتل العشرات" من القوات الحكومية السورية عقب مقتل جنود أتراك
+    </li>
+  </ul>
 </div>
 `;

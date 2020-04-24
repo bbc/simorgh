@@ -1,32 +1,40 @@
 import React, { useEffect, useState } from 'react';
+import { string } from 'prop-types';
 import 'isomorphic-fetch';
+import webLogger from '#lib/logger.web';
 
-// eslint-disable-next-line react/prop-types
-const RecommendationsContainer = ({ assetUri }) => {
-  const [recommendationsData, setRecommendations] = useState(null);
+const logger = webLogger();
+
+const RecommendationsContainer = ({ path }) => {
+  const [recommendationsData, setRecommendations] = useState({ items: [] });
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://camino-broker-cdn.api.bbci.co.uk/api/recommend?recSys=2&limit=4&assetUri=${assetUri}`,
+          `https://camino-broker-cdn.api.bbci.co.uk${path}`,
         );
         const data = await response.json();
         setRecommendations(data);
       } catch (error) {
-        // handle error
-        console.log(error);
+        logger.error(`HTTP Error: "${error}"`);
       }
     };
     fetchData();
-  }, [assetUri]);
+  }, [path]);
+  const { items } = recommendationsData;
   return (
-    recommendationsData && (
-      <>
+    !!items.length && (
+      <ul>
         {recommendationsData.items.map(item => (
-          <span key={item.shortHeadline}>{item.shortHeadline}</span>
+          <li key={item.shortHeadline}>{item.shortHeadline}</li>
         ))}
-      </>
+      </ul>
     )
   );
 };
+
+RecommendationsContainer.propTypes = {
+  path: string.isRequired,
+};
+
 export default RecommendationsContainer;

@@ -35,10 +35,10 @@ const processOptimoBlocks = pipe(
   addSummaryBlock,
   augmentWithTimestamp,
   addBylineBlock,
+  addRecommendationsBlock,
   addIdsToBlocks,
   applyBlockPositioning,
   cpsOnlyOnwardJourneys,
-  addRecommendationsBlock,
 );
 const transformJson = async json => {
   try {

@@ -39,7 +39,7 @@ import Recommendations from '#containers/Recommendations';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
-  const { dir } = useContext(ServiceContext);
+  const { dir, recommendations } = useContext(ServiceContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const category = path(
     ['promo', 'passport', 'category', 'categoryName'],
@@ -64,6 +64,8 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
 
+  const { hasStoryRecommendations } = recommendations;
+
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
@@ -79,9 +81,8 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
     byline: props => <StyledByline {...props} />,
     include: props => <Include {...props} />,
-    recommendations: props => (
-      <Recommendations {...props} assetUri={assetUri} />
-    ),
+    wsoj: props =>
+      hasStoryRecommendations ? <Recommendations {...props} /> : null,
     social_embed: props => <SocialEmbed {...props} />,
   };
 
