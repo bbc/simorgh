@@ -345,7 +345,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 >
   <head>
     <title>
-      De one we dem de read well well - BBC News Pidgin
+      De one we dem de read well well - BBC News Pidgin - BBC News Pidgin
     </title>
     <link
       href="https://www.test.bbc.com/pathname"
@@ -502,7 +502,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
       property="og:site_name"
     />
     <meta
-      content="De one we dem de read well well - BBC News Pidgin"
+      content="De one we dem de read well well - BBC News Pidgin - BBC News Pidgin"
       property="og:title"
     />
     <meta
@@ -538,7 +538,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
       name="twitter:site"
     />
     <meta
-      content="De one we dem de read well well - BBC News Pidgin"
+      content="De one we dem de read well well - BBC News Pidgin - BBC News Pidgin"
       name="twitter:title"
     />
   </head>

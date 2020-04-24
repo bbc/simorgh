@@ -60,6 +60,7 @@ const MostReadHeader = styled.h1.attrs({
 
 const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
+    brandName,
     service,
     script,
     dir,
@@ -120,7 +121,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
-        title={header}
+        title={`${header} - ${brandName}`}
         lang={lang}
         description="mostread"
         openGraphType="website"
