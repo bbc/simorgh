@@ -30,15 +30,15 @@ export default () => {
       expect(bulletedListEl).toBeInTheDocument();
       expect(bulletedListEl.textContent).toBeTruthy();
       expect(bulletedListEl.textContent).toMatchSnapshot();
+
+      const link = document.querySelector('main ul[role="list"] > li > a');
+
+      if (link) {
+        expect(link.getAttribute('href')).toMatchSnapshot(
+          `with link ${link.textContent}`,
+        );
+      }
     });
-
-    const link = bulletedListEl.querySelector('a');
-
-    if (link) {
-      it('I can see a bulleted list item with link ', () => {
-        expect(link.getAttribute('href')).toMatchSnapshot(link.textContent);
-      });
-    }
   }
 
   const relatedContentItems = document.querySelectorAll(

@@ -95,7 +95,7 @@ exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, Pi
 
 exports[`AMP Media Asset Page I can see a bulleted list item 1`] = `"<Media Asset Page>"`;
 
-exports[`AMP Media Asset Page I can see a bulleted list item with link : <Media Asset Page> 1`] = `"http://www.bbc.com/afrique/23248423"`;
+exports[`AMP Media Asset Page I can see a bulleted list item: with link <Media Asset Page> 1`] = `"http://www.bbc.com/afrique/23248423"`;
 
 exports[`AMP Media Asset Page I can see the headline 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
 
