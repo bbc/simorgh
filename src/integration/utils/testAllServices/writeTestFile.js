@@ -7,10 +7,7 @@ const acorn = require('acorn');
 const walk = require('acorn-walk');
 const escodegen = require('escodegen');
 const glob = require('glob');
-const {
-  FULL_SERVICE_INTEGRATION_TEST_DIR,
-  GENERATED_TEST_FILES_DIR,
-} = require('./constants');
+const { FULL_SERVICE_INTEGRATION_TEST_DIR } = require('./constants');
 
 module.exports = ({ service, variant = '', pageType, pathname }) =>
   new Promise(resolve => {
@@ -47,7 +44,7 @@ module.exports = ({ service, variant = '', pageType, pathname }) =>
             ImportDeclaration(_node) {
               if (_node.source.value.startsWith('../')) {
                 // eslint-disable-next-line no-param-reassign
-                _node.source.value = `../../../../${
+                _node.source.value = `../../../${
                   variant ? '../' : ''
                 }pages/${pageType}/${_node.source.value.substring(3)}`;
               }
@@ -76,7 +73,6 @@ module.exports = ({ service, variant = '', pageType, pathname }) =>
             __dirname,
             '../../',
             FULL_SERVICE_INTEGRATION_TEST_DIR,
-            GENERATED_TEST_FILES_DIR,
             service,
             variant,
             pageType,

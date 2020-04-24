@@ -8,13 +8,15 @@ export default () => {
       expect(logo.parentNode.textContent).toMatchSnapshot();
     });
 
-    it('I can see the navigation', () => {
-      const navigationItemEls = document.querySelector(
-        'header nav ul > li > a',
-      );
+    if (service !== 'scotland') {
+      it('I can see the navigation', () => {
+        const navigationItemEls = document.querySelector(
+          'header nav ul > li > a',
+        );
 
-      expect(navigationItemEls).toBeInTheDocument();
-    });
+        expect(navigationItemEls).toBeInTheDocument();
+      });
+    }
 
     it('I can see a skip to content link', () => {
       const skipToContentEl = document.querySelector(

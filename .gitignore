@@ -13,3 +13,4 @@ storybook_dist
 simorgh.report.html
 simorgh.report.json
 cypress/integration/123PlaygroundForTests/*
+src/integration/allSnapshots/**/*.test.js

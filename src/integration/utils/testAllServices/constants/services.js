@@ -234,7 +234,7 @@ module.exports = {
     frontPage: '/swahili',
     articles: '/swahili/articles/czjqge2jwn2o',
     liveRadio: '/swahili/bbc_swahili_radio/liveradio',
-    mediaAssetPage: '/swahili/michezo/2016/07/160713_tc2_testmediaAssetPage2',
+    // mediaAssetPage: '/swahili/michezo/2016/07/160713_tc2_testmediaAssetPage2',
     PGL: '/swahili/habari-48185450',
   },
 

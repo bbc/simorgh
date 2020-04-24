@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 
 const JsdomEnvironment = require('jest-environment-jsdom');
+const chalk = require('chalk');
 const fetchDom = require('./utils/fetchDom');
 const getPageTypeFromTestPath = require('./utils/getPageTypeFromTestPath');
 const camelCaseToText = require('./utils/camelCaseToText');
@@ -21,19 +22,26 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
 
   async setup() {
     await super.setup();
+    let dom = {
+      window: {
+        document: {},
+      },
+    };
 
     try {
-      const dom = await fetchDom(this.url);
-
-      Object.defineProperties(this.global, {
-        pageType: { value: this.pageType },
-        service: { value: this.service },
-        window: { value: dom.window },
-        document: { value: dom.window.document },
-      });
-    } catch (e) {
-      console.error(e);
+      dom = await fetchDom(this.url);
+    } catch (error) {
+      console.log(
+        chalk.red.bold('Error setting up test for', this.url, error.statusCode),
+      );
     }
+
+    Object.defineProperties(this.global, {
+      pageType: { value: this.pageType },
+      service: { value: this.service },
+      window: { value: dom.window },
+      document: { value: dom.window.document },
+    });
   }
 
   async teardown() {
