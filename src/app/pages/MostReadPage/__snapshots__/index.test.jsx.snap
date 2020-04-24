@@ -105,7 +105,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   font-weight: 400;
   font-style: normal;
   margin: 0;
-  padding: 1.5rem 0 0.5rem;
+  padding: 1rem 0 1.5rem;
 }
 
 @supports (display:grid) {
@@ -336,6 +336,18 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   .c2 {
     font-size: 1.75rem;
     line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 1.5rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    padding: 1.5rem 0 0.5rem;
   }
 }
 

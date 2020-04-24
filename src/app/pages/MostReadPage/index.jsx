@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { string, node } from 'prop-types';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
@@ -55,7 +56,13 @@ const MostReadHeader = styled.h1.attrs({
   ${({ script }) => script && getParagon(script)};
   ${({ service }) => getSansRegular(service)};
   margin: 0;
-  padding: ${GEL_SPACING_TRPL} 0 ${GEL_SPACING};
+  padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_TRPL};
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    padding: ${GEL_SPACING_TRPL} 0 ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding: ${GEL_SPACING_TRPL} 0 ${GEL_SPACING};
+  }
 `;
 
 const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
