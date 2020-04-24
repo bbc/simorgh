@@ -42,7 +42,7 @@ const allVariantAssertions = (product, variantValue) => {
   assertURLContains(product, variantValue);
   // Checks correct variant is saved in cookie
   assertScriptCookie(product, variantValue);
-  // // Assert lang for page is as expected for variant
+  //  Doesn't work locally - Assert lang for page is as expected for variant
   // assertLang(service, variantValue);
 };
 
