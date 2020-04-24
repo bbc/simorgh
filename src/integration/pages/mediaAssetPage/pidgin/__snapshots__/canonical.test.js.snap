@@ -10,37 +10,9 @@ exports[`Canonical Media Asset Page Footer I can see the footer copyright and ex
 
 exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
-exports[`Canonical Media Asset Page I can see the bulleted list item: with text '<Media Asset Page>' and link 1`] = `"http://www.bbc.com/afrique/23248423"`;
+exports[`Canonical Media Asset Page I can see a bulleted list item with link : '<Media Asset Page>' 1`] = `"http://www.bbc.com/afrique/23248423"`;
 
-exports[`Canonical Media Asset Page I can see the bulleted list item: with text '<Media Asset Page>' and link 2`] = `"http://www.bbc.com/afrique/23248423"`;
-
-exports[`Canonical Media Asset Page I can see the bulleted list item: with text '<Media Asset Page>' and link 3`] = `"http://www.bbc.com/afrique/23248423"`;
-
-exports[`Canonical Media Asset Page I can see the bulleted list item: with text '<Media Asset Page>' and link 4`] = `"http://www.bbc.com/afrique/23248423"`;
-
-exports[`Canonical Media Asset Page I can see the bulleted list item: with text '<Media Asset Page>' and link 5`] = `"http://www.bbc.com/afrique/23248423"`;
-
-exports[`Canonical Media Asset Page I can see the bulleted list item: with text '<Media Asset Page>' and link 6`] = `"http://www.bbc.com/afrique/23248423"`;
-
-exports[`Canonical Media Asset Page I can see the bulleted list item: with text 'this is the link text' and link 1`] = `"https://bbc.com/pidgin"`;
-
-exports[`Canonical Media Asset Page I can see the bulleted list item: with text 'this is the link text' and link 2`] = `"https://bbc.com/pidgin"`;
-
-exports[`Canonical Media Asset Page I can see the bulleted list item: with text 'this is the link text' and link 3`] = `"https://bbc.com/pidgin"`;
-
-exports[`Canonical Media Asset Page I can see the bulleted list item: with text 'this is the link text' and link 4`] = `"https://bbc.com/pidgin"`;
-
-exports[`Canonical Media Asset Page I can see the bulleted list item: with text 'this is the link text' and link 5`] = `"https://bbc.com/pidgin"`;
-
-exports[`Canonical Media Asset Page I can see the bulleted list item: with text 'this is the link text' and link 6`] = `"https://bbc.com/pidgin"`;
-
-exports[`Canonical Media Asset Page I can see the bulleted list item: with text 1`] = `"sunt in culpa qui officia deserunt mollit anim id est laborum"`;
-
-exports[`Canonical Media Asset Page I can see the bulleted list item: with text 2`] = `"sunt in culpa qui officia deserunt mollit anim id est laborum"`;
-
-exports[`Canonical Media Asset Page I can see the bulleted list item: with text 3`] = `"sunt in culpa qui officia deserunt mollit anim id est laborum"`;
-
-exports[`Canonical Media Asset Page I can see the bulleted list item: with text 4`] = `"v3 draft"`;
+exports[`Canonical Media Asset Page I can see the bulleted list item 1`] = `"<Media Asset Page>"`;
 
 exports[`Canonical Media Asset Page I can see the headline 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
 
