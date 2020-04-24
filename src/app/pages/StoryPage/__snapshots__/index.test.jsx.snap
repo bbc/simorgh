@@ -353,6 +353,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c48:before {
@@ -2421,6 +2422,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c50:before {
