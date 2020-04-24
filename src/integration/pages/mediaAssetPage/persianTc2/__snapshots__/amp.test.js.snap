@@ -74,6 +74,19 @@ Object {
 }
 `;
 
+exports[`AMP Media Asset Page Analytics ATI 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "article-media-asset",
+    "domain": "test.bbc.co.uk",
+    "sections": "Persian, Persian - صفحه ایران, Persian - MAP, Persian - صفحه ایران - MAP, Persian - undefined-category",
+    "title": "Trump long headline",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
 exports[`AMP Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
 exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;

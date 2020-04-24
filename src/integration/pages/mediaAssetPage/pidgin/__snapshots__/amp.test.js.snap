@@ -74,6 +74,19 @@ Object {
 }
 `;
 
+exports[`AMP Media Asset Page Analytics ATI 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "article-media-asset",
+    "domain": "test.bbc.co.uk",
+    "sections": "Pidgin, Pidgin - Domot, Pidgin - MAP, Pidgin - Domot - MAP, Pidgin - Opinion-category",
+    "title": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
 exports[`AMP Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
 exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
