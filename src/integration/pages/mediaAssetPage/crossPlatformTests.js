@@ -30,14 +30,18 @@ export default () => {
       expect(bulletedListEl).toBeInTheDocument();
       expect(bulletedListEl.textContent).toBeTruthy();
       expect(bulletedListEl.textContent).toMatchSnapshot();
+    });
+  }
 
-      const link = document.querySelector('main ul[role="list"] > li > a');
+  const bulletedListlink = document.querySelector(
+    'main ul[role="list"] > li > a',
+  );
 
-      if (link) {
-        expect(link.getAttribute('href')).toMatchSnapshot(
-          `with link ${link.textContent}`,
-        );
-      }
+  if (bulletedListlink) {
+    it('I can see a bulleted list item with link', () => {
+      expect(bulletedListlink.getAttribute('href')).toMatchSnapshot(
+        bulletedListlink.textContent,
+      );
     });
   }
 
