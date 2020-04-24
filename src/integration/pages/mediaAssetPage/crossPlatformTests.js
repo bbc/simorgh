@@ -41,13 +41,19 @@ export default () => {
     }
   }
 
-  const releatedContentEl = document.querySelector('section [role="list"]');
+  const relatedContentItems = document.querySelectorAll(
+    'section [role="list"] a',
+  );
 
-  if (releatedContentEl) {
+  if (relatedContentItems) {
     it('I can see the related content', () => {
-      expect(releatedContentEl).toBeInTheDocument();
-      expect(releatedContentEl.textContent).toBeTruthy();
-      expect(releatedContentEl.textContent).toMatchSnapshot();
+      relatedContentItems.forEach(relatedContent => {
+        expect(relatedContent).toBeInTheDocument();
+        expect(relatedContent.textContent).toBeTruthy();
+        expect(relatedContent.getAttribute('href')).toMatchSnapshot(
+          relatedContent.textContent,
+        );
+      });
     });
   }
 };
