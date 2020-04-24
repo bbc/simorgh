@@ -26,7 +26,7 @@ export default () => {
   const bulletedListEl = document.querySelector('main ul[role="list"] > li');
 
   if (bulletedListEl) {
-    it('I can see the bulleted list item', () => {
+    it('I can see a bulleted list item', () => {
       expect(bulletedListEl).toBeInTheDocument();
       expect(bulletedListEl.textContent).toBeTruthy();
       expect(bulletedListEl.textContent).toMatchSnapshot();
