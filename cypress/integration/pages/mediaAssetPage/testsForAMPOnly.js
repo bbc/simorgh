@@ -1,6 +1,5 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import envConfig from '../../../support/config/envs';
 import { getEmbedUrl, hasMedia } from './helpers';
 
 // For testing important features that differ between services, e.g. Timestamps.
@@ -45,11 +44,9 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
     });
 
     describe('Chartbeat', () => {
-      if (envConfig.chartbeatEnabled) {
-        it('should have chartbeat config UID', () => {
-          cy.hasAmpChartbeatConfigUid();
-        });
-      }
+      it('should have the correct config UID', () => {
+        cy.hasAmpChartbeatConfigUid();
+      });
     });
   });
 };

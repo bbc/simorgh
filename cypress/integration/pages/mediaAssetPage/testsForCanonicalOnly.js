@@ -1,6 +1,5 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import envConfig from '../../../support/config/envs';
 import { getEmbedUrl } from './helpers';
 
 // For testing important features that differ between services, e.g. Timestamps.
@@ -40,14 +39,12 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     });
 
     describe('Chartbeat', () => {
-      if (envConfig.chartbeatEnabled) {
-        it('should have a script with src value set to chartbeat source', () => {
-          cy.hasScriptWithChartbeatSrc();
-        });
-        it('should have chartbeat config set to window object', () => {
-          cy.hasGlobalChartbeatConfig();
-        });
-      }
+      it('should have a script with correct src', () => {
+        cy.hasScriptWithChartbeatSrc();
+      });
+      it('should have correct config', () => {
+        cy.hasGlobalChartbeatConfig();
+      });
     });
   });
 };
