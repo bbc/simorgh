@@ -486,6 +486,7 @@ server
     },
   )
   .get('/:service/testdata.json', async ({ params }, res) => {
+    res.set('Cache-Control', 'public, max-age=31557600'); // testing the app respects the cache
     res.status(200).send(secondaryColumData);
   })
   .get(

@@ -79,25 +79,22 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     featuresAndAnalysis || secondaryColState.featuresAndAnalysis;
 
   useEffect(() => {
-    const abortController = new AbortController();
-    const signal = abortController.signal;
+    let isSubscribed = true;
 
     const fetchAditionalData = async () => {
-      const data = await fetchPageData('/mundo/testdata', { signal: signal });
+      const data = await fetchPageData('/mundo/testdata');
       const { json } = data;
       if (json) {
-        setSecondaryColState(json);
+        // Only setstate if still subscribed to promise/component is mounted
+        isSubscribed ? setSecondaryColState(json) : null;
       }
     };
 
     if (!topStories && !featuresAndAnalysis) {
-      console.log('fetching data');
       fetchAditionalData();
     }
 
-    return () => {
-      abortController.abort;
-    };
+    return () => (isSubscribed = false); // unsubscribe to promise when cleaningup useEffect
   }, [pageData]);
 
   const componentsToRender = {
