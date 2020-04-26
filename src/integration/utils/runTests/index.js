@@ -7,8 +7,14 @@ const writeTestFiles = require('./writeTestFiles/writeTestFiles');
 const { SERVICES_TESTS_DIR } = require('./constants');
 
 const isCI = argv.ci;
-const getArgs = () =>
-  process.argv.slice(2).filter(flag => !flag.startsWith('--services='));
+const isDev = Boolean(argv.dev);
+process.env.DEV_MODE = isDev;
+
+const getJestArgs = () =>
+  process.argv
+    .slice(2)
+    .filter(flag => !flag.startsWith('--services='))
+    .filter(flag => !flag.startsWith('--dev'));
 
 const getFilesToTest = services => {
   if (services) {
@@ -37,7 +43,9 @@ const buildApp = () =>
 const startApp = () => {
   return new Promise(resolve => {
     const child = exec(
-      'npm run start & ./node_modules/.bin/wait-on -t 20000 http://localhost:7080/status',
+      `npm run ${
+        isDev ? 'dev' : 'start'
+      } & ./node_modules/.bin/wait-on -t 20000 http://localhost:7080/status`,
     );
 
     child.on('exit', resolve);
@@ -46,30 +54,30 @@ const startApp = () => {
 
 const runTests = () =>
   new Promise(resolve => {
-    console.log(
-      [filesToTest, '--runInBand', '--colors', ...getArgs()].join(' '),
-    );
     const child = spawn(
       'jest',
-      [filesToTest, '--runInBand', '--colors', ...getArgs()],
+      [filesToTest, '--runInBand', '--colors', ...getJestArgs()],
       { stdio: 'inherit' },
     );
 
     child.on('exit', resolve);
   });
 
+const spinner = ora('Creating test files').start();
+writeTestFiles();
+
 if (isCI) {
   runTests();
 } else {
-  const spinner = ora('Creating test files').start();
-  writeTestFiles();
   stopApp()
     .then(() => {
+      if (isDev) return Promise.resolve();
+
       spinner.text = 'Building app';
       return buildApp();
     })
     .then(() => {
-      spinner.text = 'Starting app';
+      spinner.text = isDev ? 'Starting app in developer mode' : 'Starting app';
       return startApp();
     })
     .then(
