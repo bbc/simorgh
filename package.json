@@ -15,7 +15,6 @@
     "build:storybook": "build-storybook -s .storybook/static -c .storybook -o storybook_dist",
     "build:test": "cp envConfig/test.env .env && NODE_ENV=production webpack",
     "build:test:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' envConfig/test.env > .env && NODE_ENV=production webpack",
-    "build:test:integration:full": "node src/integration/utils/buildFullServiceIntegrationTests/index.js",
     "cypress": "cypress run",
     "cypress:ci": "rm -rf cypress/results; xvfb-run -a cypress run --reporter cypress-multi-reporters --reporter-options configFile=cypress/reporter-config.json",
     "cypress:interactive": "cypress open",
