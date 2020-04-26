@@ -200,7 +200,6 @@
     "prettier": "^2.0.4",
     "prop-types": "^15.7.2",
     "retry": "^0.12.0",
-    "rimraf": "^3.0.2",
     "start-server-webpack-plugin": "^2.2.5",
     "storybook-chromatic": "^3.5.2",
     "stylelint": "^13.3.0",
