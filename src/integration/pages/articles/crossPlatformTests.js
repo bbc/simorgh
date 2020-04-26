@@ -4,7 +4,7 @@ export default () => {
   runCommonCrossPlatformTests();
 
   // These service's urls don't have images with captions. Need to find better examples
-  if (!['zhongwen', 'uzbek', 'serbian'].includes(service)) {
+  if (!['zhongwen', 'uzbek', 'serbian', 'ukchina'].includes(service)) {
     it('I can see an image with a caption', () => {
       const imageEl = document.querySelector(
         'main figure img, main figure amp-img',
@@ -17,7 +17,7 @@ export default () => {
 
       expect(imageCaptionEl).toBeInTheDocument();
       expect(imageCaptionEl.textContent).toBeTruthy();
-      expect(imageCaptionEl.textContent).toMatchSnapshot();
+      expect('imageCaptionEl.textContent').toMatchSnapshot();
     });
   }
 };

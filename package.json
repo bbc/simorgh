@@ -35,10 +35,8 @@
     "test:puppeteer": "jest --ci --env=jsdom --colors ./puppeteer",
     "test:unit": "test -z $CI && jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" || jest --ci --runInBand --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\"",
     "test:unit:watch": "npm run test:unit -- --watch",
-    "test:integration": "npm run stop && npm run build:local && (npm run start & wait-on -t 20000 http://localhost:7080/status) && (jest --runInBand --colors ./src/integration/pages/**/*) && npm run stop",
-    "test:integration:ci": "jest --ci --runInBand --colors ./src/integration/pages/**/*",
-    "test:integration:full": "node src/integration/utils/testAllServices/index.js",
-    "test:integration:full:ci": "jest --ci --runInBand --colors ./src/integration/allSnapshots/**/*",
+    "test:integration": "node src/integration/utils/runTests/index.js",
+    "test:integration:ci": "npm run test:integration -- --ci",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
     "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --env.config='server'"
   },

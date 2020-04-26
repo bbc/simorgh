@@ -1,17 +1,15 @@
 /* eslint-disable no-console */
 
 const writeTestFile = require('./writeTestFile');
-const { SERVICES, SERVICES_CONFIG } = require('./constants');
-
-const getPageTypes = service => Object.keys(SERVICES_CONFIG[service]);
-const getPathname = (service, pageType) => SERVICES_CONFIG[service][pageType];
-
-const hasVariants = service => SERVICES_CONFIG[service].variants;
-const getVariants = service => Object.keys(SERVICES_CONFIG[service].variants);
-const getVariantPageTypes = (service, variant) =>
-  Object.keys(SERVICES_CONFIG[service].variants[variant]);
-const getVariantPathname = (service, variant, pageType) =>
-  SERVICES_CONFIG[service].variants[variant][pageType];
+const { SERVICES } = require('../constants');
+const {
+  getPageTypes,
+  getPathname,
+  hasVariants,
+  getVariants,
+  getVariantPageTypes,
+  getVariantPathname,
+} = require('./utils');
 
 module.exports = () => {
   SERVICES.forEach(service => {
