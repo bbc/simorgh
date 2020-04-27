@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RecommendationsContainer should fetch empty recommendations data 1`] = `<div />`;
+exports[`CpsRecommendationsContainer should fetch empty recommendations data 1`] = `<div />`;
 
-exports[`RecommendationsContainer should fetch recommendations data successfuly 1`] = `
+exports[`CpsRecommendationsContainer should fetch recommendations data successfuly 1`] = `
 <div>
   <ul>
     <li>

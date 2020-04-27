@@ -1,6 +1,6 @@
 import React from 'react';
 import { wait, render } from '@testing-library/react';
-import RecommendationsContainer from '.';
+import CpsRecommendationsContainer from '.';
 
 const path = `/api/recommend?recSys=2&limit=4&assetUri=arabic/middleeast-51679521`;
 const caminoResponseData = {
@@ -37,13 +37,13 @@ const caminoResponseData = {
   ],
 };
 
-describe('RecommendationsContainer', () => {
+describe('CpsRecommendationsContainer', () => {
   afterEach(() => {
     fetch.resetMocks();
   });
   it('should fetch recommendations data successfuly', async () => {
     fetch.mockResponse(JSON.stringify(caminoResponseData));
-    const { container } = render(<RecommendationsContainer path={path} />);
+    const { container } = render(<CpsRecommendationsContainer path={path} />);
     await wait(() => {
       expect(container).toMatchSnapshot();
       expect(fetch).toHaveBeenCalled();
@@ -52,7 +52,7 @@ describe('RecommendationsContainer', () => {
 
   it('should fetch empty recommendations data', async () => {
     fetch.mockResponse(JSON.stringify({ items: [] }));
-    const { container } = render(<RecommendationsContainer path={path} />);
+    const { container } = render(<CpsRecommendationsContainer path={path} />);
     await wait(() => {
       expect(container).toMatchSnapshot();
       expect(fetch).toHaveBeenCalled();

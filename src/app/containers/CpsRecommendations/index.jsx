@@ -5,7 +5,7 @@ import webLogger from '#lib/logger.web';
 
 const logger = webLogger();
 
-const RecommendationsContainer = ({ path }) => {
+const CpsRecommendationsContainer = ({ path }) => {
   const [recommendationsData, setRecommendations] = useState({ items: [] });
   useEffect(() => {
     const fetchData = async () => {
@@ -33,8 +33,8 @@ const RecommendationsContainer = ({ path }) => {
   );
 };
 
-RecommendationsContainer.propTypes = {
+CpsRecommendationsContainer.propTypes = {
   path: string.isRequired,
 };
 
-export default RecommendationsContainer;
+export default CpsRecommendationsContainer;
