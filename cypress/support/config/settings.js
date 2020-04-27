@@ -257,7 +257,7 @@ module.exports = () => ({
           local: {
             paths: [
               '/afrique/region-23278969', // CPS MAP
-              '/afrique/nos_emissions/2016/06/160622_tc2_testmap1', // TC2 MAP
+              '/afrique/nos_emissions/2016/06/160622_tc2_testmap1', // TC2 MAP video
             ],
             enabled: true,
           },
@@ -1452,7 +1452,6 @@ module.exports = () => ({
           local: {
             paths: [
               '/hausa/23269030', // CPS MAP with video clip
-              '/hausa/multimedia/2016/07/160714_tc2_audiomap', // TC2 MAP with audio clip
             ],
             enabled: true,
           },
@@ -2281,14 +2280,14 @@ module.exports = () => ({
           test: {
             paths: [
               '/kyrgyz/media-23257484', // CPS MAP with video clip
-              '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP with video clip
+              '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP with audio clip
             ],
             enabled: true,
           },
           local: {
             paths: [
               '/kyrgyz/media-23257484', // CPS MAP with video clip
-              '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP with video clip
+              // '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP with audio clip
             ],
             enabled: true,
           },
@@ -2525,7 +2524,7 @@ module.exports = () => ({
           local: {
             paths: [
               '/mundo/media-23283126', // CPS MAP
-              '/mundo/noticias/2016/04/160427_tc2_testmap1', // TC2 MAP
+              '/mundo/noticias/2016/04/160427_tc2_testmap1', // TC2 MAP video
             ],
             enabled: true,
           },
@@ -3327,7 +3326,7 @@ module.exports = () => ({
           local: {
             paths: [
               '/portuguese/media-23282671', // CPS MAP
-              '/portuguese/revista/2016/05/160506_tc2_map_0605', // TC2 MAP
+              '/portuguese/revista/2016/05/160506_tc2_map_0605', // TC2 MAP video
             ],
             enabled: true,
           },
@@ -3979,7 +3978,6 @@ module.exports = () => ({
           local: {
             paths: [
               '/sinhala/23248970', // CPS MAP with audio clip
-              '/sinhala/multimedia/2016/03/160323_si_test_audio_map', // TC2 MAP with audio clip
             ],
             enabled: true,
           },
@@ -4299,7 +4297,7 @@ module.exports = () => ({
           local: {
             paths: [
               // '/swahili/media-23268999', // CPS MAP with live stream
-              '/swahili/michezo/2016/07/160713_tc2_testmap2', // TC2 MAP with audio clip
+              '/swahili/michezo/2016/07/160712_tc2_testmap1', // TC2 MAP with video clip
             ],
             enabled: true,
           },
@@ -5313,7 +5311,7 @@ module.exports = () => ({
             paths: [
               '/ukrainian/world-23087423', // Russian CPS
               '/ukrainian/other-news-23279018', // Ukrainian CPS
-              '/ukrainian/entertainment/2016/10/161025_tc2_testmap1', // TC2 Ukrainian (no Russian TC2 MAP)
+              '/ukrainian/entertainment/2016/10/161025_tc2_testmap1', // TC2 Ukrainian video (no Russian TC2 MAP)
             ],
             enabled: true,
           },
