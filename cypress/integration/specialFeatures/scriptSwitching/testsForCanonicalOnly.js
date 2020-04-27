@@ -21,12 +21,6 @@ const assertScriptCookie = (product, cookieValue) => {
   );
 };
 
-const assertURLContains = (product, variantValue) => {
-  cy.url().should(url => {
-    url.includes(`${product}/${variantValue}/`);
-  });
-};
-
 const assertScriptSwitchButton = (product, variantValue) => {
   const scriptToSwitchTo = appConfig[product][variantValue].scriptLink.variant;
 
@@ -35,22 +29,31 @@ const assertScriptSwitchButton = (product, variantValue) => {
   });
 };
 
+const assertURLContains = (product, variantValue) => {
+  cy.url().should(url => {
+    url.includes(`${product}/${variantValue}/`);
+  });
+};
+
+const assertLang = (serviceName, variantValue) => {
+  const expectedLang = appConfig[serviceName][variantValue].lang;
+  cy.get('html')
+    .should('have.attr', 'lang')
+    .then($lang => {
+      expect($lang.toLowerCase()).to.equal(expectedLang);
+    });
+};
+
 const allVariantAssertions = (serviceName, variantValue) => {
+  // Checks correct variant is saved in cookie
+  assertScriptCookie(serviceName, variantValue);
   // Assert the script switch button is correct for variant
   assertScriptSwitchButton(serviceName, variantValue);
   // Assert URL contains correct variant
   assertURLContains(serviceName, variantValue);
-  // Checks correct variant is saved in cookie
-  assertScriptCookie(serviceName, variantValue);
   // Issue with 'have.property' assertion
-  // assertLang(serviceName, variantValue);
+  assertLang(serviceName, variantValue);
 };
-
-// const assertLang = (serviceName, variantValue) => {
-//   const expectedLang = appConfig[serviceName][variantValue].lang;
-//   cy.get('html').should('have.property', 'lang', expectedLang);
-//   debugger;
-// };
 
 const clickHomePageLink = product => {
   cy.get('header[role="banner"]').within(() => {
