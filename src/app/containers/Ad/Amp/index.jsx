@@ -43,6 +43,8 @@ const constructAdJsonData = ({ service }) => {
 };
 
 const ampAdPropsMobile = ({ service }) => ({
+  'data-block-on-consent': true,
+  'data-npa-on-unknown-consent': true,
   media: '(max-width: 599px)',
   type: 'doubleclick',
   width: '320',
@@ -56,6 +58,7 @@ const ampAdPropsMobile = ({ service }) => ({
 
 const ampAdPropsDesktop = ({ service }) => ({
   'data-block-on-consent': true,
+  'data-npa-on-unknown-consent': true,
   media: '(min-width: 600px)',
   type: 'doubleclick',
   width: '970',
@@ -82,17 +85,8 @@ const AMP_ACCESS_FETCH = service => {
   );
 };
 
-// Read personalization value set by AMP banner from local storage
-// Pass on read value to AMP container
-// If the user has responded affirmatively to the amp-consent component (user accepts the consent prompt), ads will be requested normally.
-// If the user has responded negatively to the amp-consent component (user rejects the consent prompt), non-personalized ads will be requested.
-// If the user’s response to the amp-consent is unknown (user dismisses the consent prompt)
-//    By default, no ad requests are sent at all
-//    If data-npa-on-unknown-consent is set to true, non-personalized ads will be requested
-
 // eslint-disable-next-line react/prop-types
-const AmpAd = ({ service, personalisationEnabled }) => {
-  console.log('personalisationEnabled --- ', personalisationEnabled);
+const AmpAd = ({ service }) => {
   return (
     <>
       <Helmet>
