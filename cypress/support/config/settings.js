@@ -288,7 +288,7 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [], // /afrique/region-23268823
+            paths: [],
             enabled: false,
           },
           local: {
