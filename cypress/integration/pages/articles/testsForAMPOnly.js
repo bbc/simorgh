@@ -64,8 +64,8 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
             if (media && media.type === 'video') {
               const { lang } = appConfig[service][variant];
               const embedUrl = `${getVideoEmbedUrl(body, lang)}/amp`;
-              cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
               cy.get(`amp-iframe[src="${embedUrl}"]`).should('be.visible');
+              cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
             }
           });
         });

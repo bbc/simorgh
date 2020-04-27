@@ -170,7 +170,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             if (media && media.type === 'video') {
               const { lang } = appConfig[service][variant];
               const embedUrl = getVideoEmbedUrl(body, lang);
-              cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
               cy.get(
                 'div[class*="StyledVideoContainer"] button[class*="StyledPlayButton"]',
               )
@@ -178,6 +177,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
                 .then(() => {
                   cy.get(`iframe[src="${embedUrl}"]`).should('be.visible');
                 });
+              cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
             }
           });
         });
