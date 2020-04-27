@@ -81,15 +81,15 @@ const generateLaunchDates = (service) => {
   }
 
   if (serviceLaunch.mediaAssetPage && serviceLaunch.mediaAssetPage !== '') {
-    output.push(`__MAPs__: ${serviceLaunch.mediaAssetPage}`);
+    output.push(`__MAP__: ${serviceLaunch.mediaAssetPage}`);
   }
 
   if (serviceLaunch.photoGalleryPage && serviceLaunch.photoGalleryPage !== '') {
-    output.push(`__PGLs__: ${serviceLaunch.photoGalleryPage}`);
+    output.push(`__PGL__: ${serviceLaunch.photoGalleryPage}`);
   }
 
   if (serviceLaunch.storyPage && serviceLaunch.storyPage !== '') {
-    output.push(`__STYs__: ${serviceLaunch.storyPage}`);
+    output.push(`__STY__: ${serviceLaunch.storyPage}`);
   }
 
   return output.join('<br/>');
