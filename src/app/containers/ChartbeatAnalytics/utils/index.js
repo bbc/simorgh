@@ -146,7 +146,7 @@ export const getConfig = ({
     sections,
     uid: chartbeatUID,
     title,
-    virtualReferrer: referrer && decodeURIComponent(referrer),
+    virtualReferrer: referrer ? decodeURIComponent(referrer) : null,
     ...(isAmp && { contentType }),
     ...(!isAmp && {
       type: contentType,
