@@ -64,9 +64,7 @@ const MostReadSection = styled.section.attrs(() => ({
   role: 'region',
   'aria-labelledby': 'Most-Read',
   'data-e2e': 'most-read',
-}))``;
-
-const FrontPageMostReadSection = styled(MostReadSection)`
+}))`
   /* To centre page layout for Group 4+ */
   margin: 0 auto;
   width: 100%; /* Needed for IE11 */
@@ -109,7 +107,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     findIndex(group => group.type === 'useful-links')(groups) > -1;
 
   const MostReadWrapper = ({ children }) => (
-    <FrontPageMostReadSection>
+    <MostReadSection>
       <SectionLabel
         script={script}
         labelId="Most-Read"
@@ -119,7 +117,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         {header}
       </SectionLabel>
       {children}
-    </FrontPageMostReadSection>
+    </MostReadSection>
   );
 
   MostReadWrapper.propTypes = {
