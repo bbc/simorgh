@@ -28,7 +28,7 @@ const {
 
 let locServeCookieValue;
 
-const returnsNullWhenOffClient = (func) => {
+const returnsNullWhenOffClient = func => {
   describe('returns null when not on client', () => {
     beforeEach(() => {
       isOnClient = false;
@@ -316,7 +316,7 @@ describe('getHref', () => {
 
     const href = getHref();
 
-    expect(href).toEqual('https://href.com');
+    expect(href).toEqual('https%3A%2F%2Fhref.com');
   });
 
   it('should return null if href isnt set', () => {
@@ -334,7 +334,7 @@ describe('getHref', () => {
       href: 'https://www.example.com/#anchortext',
     });
     const href = getHref();
-    expect(href).toEqual('https://www.example.com/%23anchortext');
+    expect(href).toEqual('https%3A%2F%2Fwww.example.com%2F%23anchortext');
   });
 });
 
@@ -349,7 +349,7 @@ describe('getReferrer', () => {
 
     const referrer = getReferrer();
 
-    expect(referrer).toEqual('https://referrer.com');
+    expect(referrer).toEqual('https%3A%2F%2Freferrer.com');
   });
 
   it('should return null if referrer isnt set', () => {

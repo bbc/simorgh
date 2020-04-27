@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { number, oneOf, string, shape } from 'prop-types';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
 import ErrorMain from '#app/components/ErrorMain';
 

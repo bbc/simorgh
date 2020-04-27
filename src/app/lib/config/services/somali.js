@@ -22,10 +22,10 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/somali.png',
     defaultImageAltText: 'BBC News Somali',
     dir: `ltr`,
-    externalLinkText: ', bogag kale',
+    externalLinkText: ', Bogag kale',
     imageCaptionOffscreenText: 'Qoraalka sawirka, ',
     videoCaptionOffscreenText: 'Qoraalka Muuqaalka, ',
-    audioCaptionOffscreenText: 'Qoralka Codka, ',
+    audioCaptionOffscreenText: 'Qoraalka Codka, ',
     defaultCaptionOffscreenText: 'Qoraal, ',
     imageCopyrightOffscreenText: 'Xigashada Sawirka, ',
     locale: `so-SO`,
@@ -55,9 +55,9 @@ export const service = {
       relatedContent: 'Warar kale oo dheeraad ah oo la xiriira qodobkan',
       navMenuText: 'Qaybaha',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'Ciyaaridda warbixinnada',
+        audioPlayer: 'Ciyaaridda Codka',
+        videoPlayer: 'Ciyaaridda Muuqaalka',
       },
       error: {
         404: {
@@ -66,9 +66,9 @@ export const service = {
           message:
             'Waan ka xunnahay, ma awoodno inaan kuu soo gudbino bogga aad raadineyso. Fadlan iskuday.',
           solutions: [
-            'iska xaqiiji url-ka ama linkiga',
+            'Iska xaqiiji url-ka ama linkiga',
             'Guji batanka cusbooneysiinta ee boggaaga',
-            'Boggan wax k raadi adigoo adeegsanaya hanaanka raadinta ee BBC',
+            'Boggan wax ka raadi adigoo adeegsanaya hanaanka raadinta ee BBC',
           ],
           callToActionFirst: 'Taa bedelkeeda, fadlan booqo bogga hore ee ',
           callToActionLinkText: 'BBC News Somali',
@@ -97,14 +97,14 @@ export const service = {
           description: {
             uk: {
               first:
-                'Waxaa isbedel muhiim ah ku sameynay Shuruucda Xogta gaarka ah iyo qoraallada kooban waxaana dooneynaa in aad ogaato waxa ay arrinta kaaga dhigan tahay adiga iyo xogtaada.',
+                'Waxaa isbedel muhiim ah ku sameynay Shuruucda Xogta gaarka ah iyo qoraallada kooban waxaana dooneynaa in aad ogaato waxa ay arrinta kaaga dhigan tahay adiga iyo xogtaada.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                'Waxaa isbedel muhiim ah ku sameynay Shuruucda Xogta gaarka ah iyo qoraallada kooban waxaana dooneynaa in aad ogaato waxa ay arrinta kaaga dhigan tahay adiga iyo xogtaada.',
+                'Waxaa isbedel muhiim ah ku sameynay Shuruucda Xogta gaarka ah iyo qoraallada kooban waxaana dooneynaa in aad ogaato waxa ay arrinta kaaga dhigan tahay adiga iyo xogtaada.',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -128,10 +128,10 @@ export const service = {
             },
             international: {
               first:
-                'Anaga iyo baraha aan ollogga nahay waxaan adeegsanaa teknolijiyad sida ',
+                'Anaga iyo baraha aan ogolnahay nahay waxaan adeegsanaa teknolijiyad sida ',
               linkText: 'cookies',
               last:
-                ', waxaana uruurinaa xogt booqashada bogga si aan khibradda ugu fiican ee adeegsiga intarnet-ka aan kuu siino, si aan kugu soo gudbiyo warar iyo xayeysiinno adiga gar kuu ah. Fadlan aan ogaano haddii aad oggoshahay.',
+                ', waxaana uruurinaa xogta booqashada bogga si aan khibradda ugu fiican ee adeegsiga intarnet-ka aan kuu siino, si aan kugu soo gudbiyo warar iyo xayeysiinno adiga gaar kuu ah. Fadlan aan ogaano haddii aad aqbashay.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -143,12 +143,10 @@ export const service = {
         },
       },
       media: {
-        noJs:
-          'Qalabkan aad haysato kuma ciyaari kartid maqalkan iyo muuqaalkan',
-        contentExpired:
-          'Adeeggani hadda iyo wixii ka danbeeya ma jiro oo ma heli kartid',
-        audio: 'Maqal',
-        photogallery: 'Albamka sawirrada',
+        noJs: 'Qalabkan kuma ciyaari kartid maqalka iyo muuqaalka',
+        contentExpired: 'Adeeggan hadda ma heli kartid',
+        audio: 'Cod',
+        photogallery: 'Albumka sawirrada',
         video: 'Muuqaal',
         bbc_somali_radio: {
           title: 'Raadiyaha BBC Soomaali',
@@ -160,30 +158,30 @@ export const service = {
           subtitle:
             'Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'Dhageyso',
+        watch: 'Daawo',
         liveLabel: 'TOOS',
-        nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'Xiga',
+        previousRadioShow: 'Barnaamijyadii hore ee Raadiyaha',
+        nextRadioShow: 'Barnaamijka Xiga ee Raadiyaha',
+        duration: 'Muddada',
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Qoraalka Muuqaalka ',
+          textPrefixVisuallyHidden: 'Qoraalka Muuqaalka, ',
           text:
-            'Digniin: Macluumaadka dad kale waxaa laga yaabaa inay ku jiraan xayaysiin',
+            'Digniin: Waxaa suuragal ah in macluumaadka dad kale ay ku jiraan xayaysiin',
         },
         fallback: {
           text: 'Macluumaadkan lama heli karo',
           linkText: 'Faahfaahin ka eeg %provider_name%',
-          linkTextSuffixVisuallyHidden: ', bogag kale',
+          linkTextSuffixVisuallyHidden: ', Bogag kale',
           warningText:
-            'BBC masuul kama ahan macluumadka bogagga kale ee dibadda.',
+            'BBC masuul kama ahan macluumadka bogagga kale ee dibadda.',
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: 'Ka bood %provider_name% boggan',
+          endTextVisuallyHidden: 'Dhammaadka %provider_name% boggan',
         },
       },
     },
@@ -197,13 +195,16 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: true,
-      frontPagePosition: 'top-stories',
+      frontPagePosition: 'feature-main',
       header: 'Barnaamijyada Idaacadda',
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/somali/hayadeed-49283375',
-        text: 'Sababta aada ku aamini kartid BBC News',
+        text: 'Sababta aad ku aamini kartid BBC News',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',

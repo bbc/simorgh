@@ -11,6 +11,7 @@ import addHeadlineBlock from './addHeadlineBlock';
 import timestampToMilliseconds from './timestampToMilliseconds';
 import addSummaryBlock from './addSummaryBlock';
 import cpsOnlyOnwardJourneys from './cpsOnlyOnwardJourneys';
+import addRecommendationsBlock from './addRecommendationsBlock';
 import addBylineBlock from './addBylineBlock';
 import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
@@ -37,8 +38,9 @@ const processOptimoBlocks = pipe(
   addIdsToBlocks,
   applyBlockPositioning,
   cpsOnlyOnwardJourneys,
+  addRecommendationsBlock,
 );
-const transformJson = async (json) => {
+const transformJson = async json => {
   try {
     const formattedPageData = formatPageData(json);
     const optimoBlocks = await convertToOptimoBlocks(formattedPageData);
@@ -50,8 +52,8 @@ const transformJson = async (json) => {
   }
 };
 
-export default async (urlPath) => {
-  const { json, ...rest } = await fetchPageData(urlPath);
+export default async ({ path: pathname }) => {
+  const { json, ...rest } = await fetchPageData(pathname);
 
   return {
     ...rest,

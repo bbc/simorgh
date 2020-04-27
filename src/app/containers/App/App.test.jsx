@@ -18,7 +18,9 @@ describe('App', () => {
     timeOnServer,
   };
   const error = 'Error!';
-  const match = { params: { service: 'news', amp: false, variant: '/simp' } };
+  const match = {
+    params: { service: 'ukchina', amp: false, variant: '/simp' },
+  };
   const history = { action: 'POP' };
 
   const route = {
@@ -57,7 +59,7 @@ describe('App', () => {
       isAmp: false,
       loading: false,
       pageType: 'article',
-      service: 'news',
+      service: 'ukchina',
       pathname: 'pathnameOne',
       previousPath: null,
       variant: 'simp',
@@ -93,7 +95,7 @@ describe('App', () => {
       describe('rejected loadInitialData', () => {
         it('should set state to the error', async () => {
           route.getInitialData.mockImplementation(() => {
-            return new Promise((resolve) => {
+            return new Promise(resolve => {
               setTimeout(
                 () =>
                   resolve({
@@ -128,7 +130,7 @@ describe('App', () => {
               isAmp: false,
               loading: true,
               pageType: 'article',
-              service: 'news',
+              service: 'ukchina',
               pathname: 'pathnameTwo',
               previousPath: 'pathnameOne',
               variant: 'simp',
@@ -150,7 +152,7 @@ describe('App', () => {
               isAmp: false,
               loading: false,
               pageType: 'article',
-              service: 'news',
+              service: 'ukchina',
               pathname: 'pathnameTwo',
               previousPath: 'pathnameOne',
               variant: 'simp',
@@ -169,7 +171,7 @@ describe('App', () => {
           };
 
           route.getInitialData.mockImplementation(() => {
-            return new Promise((resolve) => {
+            return new Promise(resolve => {
               setTimeout(() => resolve(data), 600);
             });
           });
@@ -182,7 +184,11 @@ describe('App', () => {
 
           expect.assertions(3);
 
-          expect(route.getInitialData).toHaveBeenCalledWith(pathname);
+          expect(route.getInitialData).toHaveBeenCalledWith({
+            path: pathname,
+            service: 'ukchina',
+            variant: 'simp',
+          });
 
           // start data fetch and set loading to true
           expect(reactRouterConfig.renderRoutes).toHaveBeenNthCalledWith(
@@ -198,7 +204,7 @@ describe('App', () => {
               isAmp: false,
               loading: true,
               pageType: 'article',
-              service: 'news',
+              service: 'ukchina',
               pathname: 'pathnameThree',
               previousPath: 'pathnameTwo',
               variant: 'simp',
@@ -220,7 +226,7 @@ describe('App', () => {
               isAmp: false,
               loading: false,
               pageType: 'article',
-              service: 'news',
+              service: 'ukchina',
               pathname: 'pathnameThree',
               previousPath: 'pathnameTwo',
               variant: 'simp',

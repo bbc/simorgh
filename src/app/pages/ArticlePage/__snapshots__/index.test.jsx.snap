@@ -37,7 +37,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   </main>
   <section
     aria-labelledby="Most-Read"
-    class="MostReadSection-sc-6bm912-1 ConstrainedMostReadSection-sc-6bm912-3 LgbeX"
+    class="MostReadSection-sc-1onvfv8-1 jcKdxx"
     data-e2e="most-read"
     role="region"
   >
@@ -50,7 +50,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
       <h2
         class="Heading-sc-1x4gwjz-2 eZofTG"
       >
-        <div
+        <span
           class="FlexColumn-wx5kdp-0 dgpsiS"
         >
           <span
@@ -64,7 +64,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
               De one we dem de read well well
             </span>
           </span>
-        </div>
+        </span>
       </h2>
     </div>
     <div
@@ -566,7 +566,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   </main>
   <section
     aria-labelledby="Most-Read"
-    class="MostReadSection-sc-6bm912-1 ConstrainedMostReadSection-sc-6bm912-3 LgbeX"
+    class="MostReadSection-sc-1onvfv8-1 jcKdxx"
     data-e2e="most-read"
     role="region"
   >
@@ -579,7 +579,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
       <h2
         class="Heading-sc-1x4gwjz-2 eZofTG"
       >
-        <div
+        <span
           class="FlexColumn-wx5kdp-0 dgpsiS"
         >
           <span
@@ -593,7 +593,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
               پربیننده‌ترین‌ها
             </span>
           </span>
-        </div>
+        </span>
       </h2>
     </div>
     <div

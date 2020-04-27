@@ -35,7 +35,7 @@ const getVariantRedirectUrl = ({ path, params, service, variant }) => {
         variant: `/${redirectVariant}`,
       },
       {
-        encode: (value) => value,
+        encode: value => value,
       },
     );
   }
