@@ -67,6 +67,8 @@ const spinner = ora('Creating test files').start();
 writeTestFiles();
 
 if (isCI) {
+  spinner.text = 'Running tests';
+  spinner.stop();
   runTests();
 } else {
   stopApp()
