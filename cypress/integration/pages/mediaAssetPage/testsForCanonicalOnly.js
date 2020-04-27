@@ -22,7 +22,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         cy.request(`${Cypress.env('currentPath')}.json`).then(
           ({ body: jsonData }) => {
             const embedUrl = getEmbedUrl(jsonData, language);
-            cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
+            cy.get(`iframe[src="${embedUrl}"]`).should('be.visible');
             cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
 
             // Ensure media player is ready

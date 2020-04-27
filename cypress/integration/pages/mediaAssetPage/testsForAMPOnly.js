@@ -24,7 +24,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
             if (hasMedia(jsonData)) {
               const embedUrl = getEmbedUrl(jsonData, language, true);
 
-              cy.get(`amp-iframe[src*="${embedUrl}"]`).should('be.visible');
+              cy.get(`amp-iframe[src="${embedUrl}"]`).should('be.visible');
               cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
 
               // Ensure media player is ready
