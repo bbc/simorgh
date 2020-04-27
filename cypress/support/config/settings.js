@@ -267,7 +267,7 @@ module.exports = () => ({
       photoGalleryPage: {
         environments: {
           live: {
-            paths: ['afrique/region-50925908'],
+            paths: ['/afrique/region-50925908'],
             enabled: false,
           },
           test: {
@@ -419,7 +419,7 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['amharic/news-23148117'],
+            paths: ['/amharic/news-23148117'],
             enabled: false,
           },
           local: {
