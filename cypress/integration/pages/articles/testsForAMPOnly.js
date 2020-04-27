@@ -57,7 +57,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           });
         });
 
-        it('should render an iframe with a valid URL when a user clicks play', () => {
+        it('should render an iframe with a valid URL', () => {
           cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
             const media = getBlockData('video', body);
 
