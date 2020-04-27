@@ -968,7 +968,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
         >
           <span
             class="c6"
-            lang="en-GB"
+            lang="ig"
           >
             Gee ntị, 
           </span>
@@ -1300,7 +1300,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
         >
           <span
             class="c6"
-            lang="en-GB"
+            lang="ig"
           >
             Lee, 
           </span>
