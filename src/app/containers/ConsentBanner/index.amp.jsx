@@ -13,8 +13,6 @@ const ampConsentData = {
     'user-consent': {
       promptIfUnknownForGeoGroup: 'eea',
       promptUI: promptId,
-      consentRequired: true,
-      expireCache: true,
     },
   },
 };

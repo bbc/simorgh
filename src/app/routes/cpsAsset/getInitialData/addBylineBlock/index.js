@@ -1,7 +1,7 @@
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import deepClone from 'ramda/src/clone';
-import insertBlockAfterHeadline from '../helpers';
+import { insertBlockAfterHeadline } from '../helpers';
 
 const getBylineBlock = json => {
   const byline = pathOr(null, ['promo', 'byline'], json);
