@@ -1,8 +1,4 @@
-import config from '../../../support/config/services';
-import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import visitPage from '../../../support/helpers/visitPage';
-import getPaths from '../../../support/helpers/getPaths';
-import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
 import {
   assertScriptSwitchButton,
   assertURLContains,
@@ -19,72 +15,59 @@ import {
   getCookieBannerAccept,
 } from '../utilities/cookiePrivacyBanner';
 
-const hasVariant = serviceName => {
-  return config[serviceName] && config[serviceName].variant !== 'default';
-};
+export default ({
+  serviceId,
+  serviceName,
+  pageType,
+  path,
+  variant,
+  otherVariant,
+}) => {
+  describe(`Script Switching - ${serviceId} - ${pageType} - ${path}`, () => {
+    beforeEach(() => {
+      cy.clearCookies();
+      visitPage(path, pageType);
+    });
 
-Object.keys(config)
-  .filter(hasVariant)
-  .forEach(service => {
-    Object.keys(config[service].pageTypes)
-      .filter(
-        pageType =>
-          serviceHasPageType(service, pageType) && !pageType.includes('error'),
-      )
-      .forEach(pageType => {
-        const paths = getPaths(service, pageType);
-        paths.forEach(path => {
-          const { variant } = config[service];
-          const product = config[service].name;
-          const otherVariant = appConfig[product][variant].scriptLink.variant;
+    it(`should change to the correct script when switching script between ${variant} and ${otherVariant}`, () => {
+      // Accept privacy banner
+      getPrivacyBannerAccept(serviceId, variant).click();
 
-          describe(`Script Switching - ${service} - ${pageType} - ${path}`, () => {
-            beforeEach(() => {
-              cy.clearCookies();
-              visitPage(path, pageType);
-            });
+      // Accept cookie banner
+      getCookieBannerAccept(serviceId, variant).click();
 
-            it(`should change to the correct script when switching script between ${variant} and ${otherVariant}`, () => {
-              // Accept privacy banner
-              getPrivacyBannerAccept(service, variant).click();
+      // Assert the script switch button is correct for variant
+      assertScriptSwitchButton(serviceName, variant);
 
-              // Accept cookie banner
-              getCookieBannerAccept(service, variant).click();
+      // Assert URL contains correct variant
+      assertURLContains(serviceName, variant);
 
-              // Assert the script switch button is correct for variant
-              assertScriptSwitchButton(product, variant);
+      // Assert lang for document is correct for variant
+      assertLang(serviceName, variant);
 
-              // Assert URL contains correct variant
-              assertURLContains(product, variant);
+      // Clicks script switcher
+      clickScriptSwitcher(otherVariant);
 
-              // Assert lang for document is correct for variant
-              assertLang(product, variant);
+      // Assert against other variant after switching script
+      allVariantAssertions(serviceName, otherVariant);
 
-              // Clicks script switcher
-              clickScriptSwitcher(otherVariant);
+      // Navigate to home page by clicking link in the banner
+      clickHomePageLink(serviceName);
 
-              // Assert against other variant after switching script
-              allVariantAssertions(product, otherVariant);
+      // Assert other variant has persisted
+      allVariantAssertions(serviceName, otherVariant);
 
-              // Navigate to home page by clicking link in the banner
-              clickHomePageLink(product);
+      // Finding a link to click on the home page
+      clickPromoLinkOnHomePage(pageType);
 
-              // Assert other variant has persisted
-              allVariantAssertions(product, otherVariant);
+      // Assert other variant has persisted after navigating to new page
+      allVariantAssertions(serviceName, otherVariant);
 
-              // Finding a link to click on the home page
-              clickPromoLinkOnHomePage(pageType);
+      // Clicks script switcher to original variant
+      clickScriptSwitcher(variant);
 
-              // Assert other variant has persisted after navigating to new page
-              allVariantAssertions(product, otherVariant);
-
-              // Clicks script switcher to original variant
-              clickScriptSwitcher(variant);
-
-              // Assert variant values have changed after clicking script switcher
-              allVariantAssertions(product, variant);
-            });
-          });
-        });
-      });
+      // Assert variant values have changed after clicking script switcher
+      allVariantAssertions(serviceName, variant);
+    });
   });
+};
