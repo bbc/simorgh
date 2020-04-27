@@ -95,7 +95,7 @@
     "@bbc/psammead-story-promo-list": "^4.0.7",
     "@bbc/psammead-story-promo": "^6.0.1",
     "@bbc/psammead-styles": "^4.3.1",
-    "@bbc/psammead-timestamp-container": "^3.0.0",
+    "@bbc/psammead-timestamp-container": "^3.0.1",
     "@bbc/psammead-useful-links": "^1.0.17",
     "@bbc/psammead-visually-hidden-text": "^1.2.3",
     "@loadable/component": "^5.12.0",
