@@ -69,7 +69,7 @@
     "@bbc/psammead-bulleted-list": "1.0.8",
     "@bbc/psammead-bulletin": "^3.0.5",
     "@bbc/psammead-byline": "1.0.3",
-    "@bbc/psammead-calendars": "^2.0.12",
+    "@bbc/psammead-calendars": "^2.0.13",
     "@bbc/psammead-caption": "^2.2.27",
     "@bbc/psammead-consent-banner": "^2.3.29",
     "@bbc/psammead-copyright": "^1.2.25",
