@@ -35,20 +35,21 @@ const assertScriptSwitchButton = (product, variantValue) => {
   });
 };
 
-const allVariantAssertions = (product, variantValue) => {
+const allVariantAssertions = (serviceName, variantValue) => {
   // Assert the script switch button is correct for variant
-  assertScriptSwitchButton(product, variantValue);
+  assertScriptSwitchButton(serviceName, variantValue);
   // Assert URL contains correct variant
-  assertURLContains(product, variantValue);
+  assertURLContains(serviceName, variantValue);
   // Checks correct variant is saved in cookie
-  assertScriptCookie(product, variantValue);
-  //  Doesn't work locally - Assert lang for page is as expected for variant
-  // assertLang(service, variantValue);
+  assertScriptCookie(serviceName, variantValue);
+  // Issue with 'have.property' assertion
+  // assertLang(serviceName, variantValue);
 };
 
-// const assertLang = (service, variantValue) => {
-//   const expectedLang = appConfig[config[service].name][variantValue].lang;
+// const assertLang = (serviceName, variantValue) => {
+//   const expectedLang = appConfig[serviceName][variantValue].lang;
 //   cy.get('html').should('have.property', 'lang', expectedLang);
+//   debugger;
 // };
 
 const clickHomePageLink = product => {
@@ -89,8 +90,8 @@ const clickPromoLinkOnHomePage = pageType => {
   });
 };
 
-const hasVariant = service => {
-  return config[service] && config[service].variant !== 'default';
+const hasVariant = serviceName => {
+  return config[serviceName] && config[serviceName].variant !== 'default';
 };
 
 Object.keys(config)

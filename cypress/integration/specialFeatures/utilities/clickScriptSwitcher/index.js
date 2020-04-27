@@ -1,3 +1,3 @@
-export default (variant) => {
+export default variant => {
   cy.get(`a[data-variant="${variant}"]`).click();
 };
