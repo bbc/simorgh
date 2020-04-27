@@ -146,7 +146,7 @@ describe('ToggleContext with feature toggles', () => {
       describe(`given service is ${service}`, () => {
         describe(`given the local ads toggle is ${localAdToggleValue} and the fetching of toggles is ${
           enableFetchingTogglesValue
-            ? `true and the remote ads toggle value is ${remoteAdToggleValue}`
+            ? `true and the remote ads toggle value is ${remoteAdToggleValue} and advertiseCombined is ${remoteAdvertiseCombinedValue}`
             : 'false'
         }`, () => {
           const togglesUrl = getMockTogglesUrl(service);
@@ -219,18 +219,6 @@ describe('ToggleContext with feature toggles', () => {
     beforeEach(() => {
       togglesConfig.local.ads.enabled = true;
       togglesConfig.local.enableFetchingToggles.enabled = true;
-      fetchMock.mock(togglesUrl, {
-        toggles: {
-          ads: {
-            enabled: true,
-            value: '',
-          },
-        },
-        geoIp: {
-          status: 'error',
-          message: 'Error performing lookup',
-        },
-      });
     });
 
     afterEach(() => {
@@ -238,9 +226,11 @@ describe('ToggleContext with feature toggles', () => {
     });
 
     describe('given the local ads toggle is true and the fetching of toggles is true and the remote ads toggle value is true', () => {
-      it('should not render test component if geoIp has an error', async () => {
-        let container;
+      it('should not render enable ads or render test component if toggles endpoint throws an error', async () => {
+        fetchMock.mock(togglesUrl, 500);
+        togglesConfig.local.ads.enabled = false;
 
+        let container;
         await act(async () => {
           container = await render(
             <ToggleContextProvider
@@ -254,6 +244,35 @@ describe('ToggleContext with feature toggles', () => {
 
         shouldNotRenderAd(container);
       });
+    });
+
+    it('should not render test component if geoIp has an error', async () => {
+      fetchMock.mock(togglesUrl, {
+        toggles: {
+          ads: {
+            enabled: true,
+            value: '',
+          },
+        },
+        geoIp: {
+          status: 'error',
+          message: 'Error performing lookup',
+        },
+      });
+
+      let container;
+      await act(async () => {
+        container = await render(
+          <ToggleContextProvider
+            service="news"
+            origin="https://www.test.bbc.com"
+          >
+            <TestComponent toggle="ads">Dummy Ad Component</TestComponent>
+          </ToggleContextProvider>,
+        ).container;
+      });
+
+      shouldNotRenderAd(container);
     });
   });
 });
