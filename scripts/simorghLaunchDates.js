@@ -71,6 +71,7 @@ const simorghLaunchDates = {
     articles: 'Sept 2019',
     frontPage: '13th Jan 2020',
     mediaAssetPage: '6th Feb 2020',
+    photoGalleryPage: '18th Feb 2020',
     storyPage: '',
   },
   hausa: {
@@ -78,6 +79,7 @@ const simorghLaunchDates = {
     frontPage: '23rd April 2020',
     liveRadio: '30th Jan 2020',
     mediaAssetPage: '5th March 2020',
+    photoGalleryPage: '24th March 2020',
     storyPage: '',
   },
   hindi: {
