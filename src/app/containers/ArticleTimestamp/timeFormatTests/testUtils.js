@@ -40,5 +40,5 @@ export const format = (datetimeLocale, timezone, timeStamp) => {
     : moment
         .tz(timestampsFixtures[timeStamp].time, timezone)
         .locale(datetimeLocale)
-        .format(timestampsFixtures[timeStamp].dateTimeFormat);
+        .format(timestampsFixtures[timeStamp].dateTimeFormat(datetimeLocale));
 };

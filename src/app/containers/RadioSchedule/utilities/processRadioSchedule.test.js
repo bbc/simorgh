@@ -77,13 +77,12 @@ describe('processRadioSchedule', () => {
     });
 
     it('should return a program that has the right fields', () => {
-      programs.forEach((program) => {
+      programs.forEach(program => {
         expect(program).toHaveProperty('id');
         expect(program).toHaveProperty('state');
         expect(program).toHaveProperty('startTime');
         expect(program).toHaveProperty('link');
         expect(program).toHaveProperty('brandTitle');
-        expect(program).toHaveProperty('episodeTitle');
         expect(program).toHaveProperty('summary');
         expect(program).toHaveProperty('duration');
         expect(program).toHaveProperty('durationLabel');

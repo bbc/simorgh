@@ -128,10 +128,10 @@ describe('buildCpsAssetPageATIUrl', () => {
     );
     const campaignString = expectation.campaigns
       .filter(
-        (campaign) =>
+        campaign =>
           campaign.campaignName && typeof campaign.campaignName === 'string',
       )
-      .map((campaign) => campaign.campaignName.replace(/ /g, '%20'))
+      .map(campaign => campaign.campaignName.replace(/ /g, '%20'))
       .join('~');
 
     expect(result).toEqual(
@@ -147,7 +147,7 @@ describe('buildCpsAssetPageATIUrl', () => {
         'x2=[responsive]',
         `x3=[${serviceContext.atiAnalyticsAppName}]`,
         `x4=[${expectation.language}]`,
-        'x5=[http://localhost/]',
+        'x5=[http%3A%2F%2Flocalhost%2F]',
         `x7=[${expectation.contentType}]`,
         `x8=[${expectation.libraryVersion}]`,
         `x9=[${expectation.pageTitle.replace(/ /g, '+')}]`,

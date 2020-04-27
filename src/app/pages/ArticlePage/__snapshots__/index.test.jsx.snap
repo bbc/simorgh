@@ -37,7 +37,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   </main>
   <section
     aria-labelledby="Most-Read"
-    class="MostReadSection-sc-6bm912-1 ConstrainedMostReadSection-sc-6bm912-3 LgbeX"
+    class="MostReadSection-sc-1onvfv8-1 jcKdxx"
     data-e2e="most-read"
     role="region"
   >
@@ -50,7 +50,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
       <h2
         class="Heading-sc-1x4gwjz-2 eZofTG"
       >
-        <div
+        <span
           class="FlexColumn-wx5kdp-0 dgpsiS"
         >
           <span
@@ -64,14 +64,14 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
               De one we dem de read well well
             </span>
           </span>
-        </div>
+        </span>
       </h2>
     </div>
     <div
       class="MarginWrapper-sc-6bm912-0 bmzrWW"
     >
       <ol
-        class="GridComponent-nf79gm-0 iakllL TwoColumnGrid-sc-1ofyujo-0 MultiColumnGrid-sc-1ofyujo-1 cCvfjo"
+        class="GridComponent-nf79gm-0 iakllL OneColumnGrid-sc-1ofyujo-0 TwoColumnGrid-sc-1ofyujo-1 MultiColumnGrid-sc-1ofyujo-2 ecxuWs"
         dir="ltr"
         role="list"
       >
@@ -84,11 +84,11 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 chtVVr"
+              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 MultiColumnWrapper-fs4y6m-2 iuHYyT"
               dir="ltr"
             >
               <span
-                class="StyledSpan-fs4y6m-2 bbVUNN"
+                class="StyledSpan-fs4y6m-3 hNbbwU"
               >
                 1
               </span>
@@ -125,11 +125,11 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 dDTbdG"
+              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 MultiColumnWrapper-fs4y6m-2 cTzHph"
               dir="ltr"
             >
               <span
-                class="StyledSpan-fs4y6m-2 bbVUNN"
+                class="StyledSpan-fs4y6m-3 hNbbwU"
               >
                 2
               </span>
@@ -166,11 +166,11 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 chtVVr"
+              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 MultiColumnWrapper-fs4y6m-2 iuHYyT"
               dir="ltr"
             >
               <span
-                class="StyledSpan-fs4y6m-2 bbVUNN"
+                class="StyledSpan-fs4y6m-3 hNbbwU"
               >
                 3
               </span>
@@ -207,11 +207,11 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 dDTbdG"
+              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 MultiColumnWrapper-fs4y6m-2 cTzHph"
               dir="ltr"
             >
               <span
-                class="StyledSpan-fs4y6m-2 bbVUNN"
+                class="StyledSpan-fs4y6m-3 hNbbwU"
               >
                 4
               </span>
@@ -248,11 +248,11 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 gHHITV"
+              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 MultiColumnWrapper-fs4y6m-2 lbsNHC"
               dir="ltr"
             >
               <span
-                class="StyledSpan-fs4y6m-2 bbVUNN"
+                class="StyledSpan-fs4y6m-3 hNbbwU"
               >
                 5
               </span>
@@ -289,11 +289,11 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 gUpuHE"
+              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 MultiColumnWrapper-fs4y6m-2 gnpPeA"
               dir="ltr"
             >
               <span
-                class="StyledSpan-fs4y6m-2 bbVUNN"
+                class="StyledSpan-fs4y6m-3 hNbbwU"
               >
                 6
               </span>
@@ -330,11 +330,11 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 jYgYTA"
+              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 MultiColumnWrapper-fs4y6m-2 crTqku"
               dir="ltr"
             >
               <span
-                class="StyledSpan-fs4y6m-2 bbVUNN"
+                class="StyledSpan-fs4y6m-3 hNbbwU"
               >
                 7
               </span>
@@ -371,11 +371,11 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 gUpuHE"
+              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 MultiColumnWrapper-fs4y6m-2 gnpPeA"
               dir="ltr"
             >
               <span
-                class="StyledSpan-fs4y6m-2 bbVUNN"
+                class="StyledSpan-fs4y6m-3 hNbbwU"
               >
                 8
               </span>
@@ -412,11 +412,11 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 jYgYTA"
+              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 MultiColumnWrapper-fs4y6m-2 crTqku"
               dir="ltr"
             >
               <span
-                class="StyledSpan-fs4y6m-2 bbVUNN"
+                class="StyledSpan-fs4y6m-3 hNbbwU"
               >
                 9
               </span>
@@ -453,11 +453,11 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 gUpuHE"
+              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 MultiColumnWrapper-fs4y6m-2 bKoGnm"
               dir="ltr"
             >
               <span
-                class="StyledSpan-fs4y6m-2 bbVUNN"
+                class="StyledSpan-fs4y6m-3 hNbbwU"
               >
                 10
               </span>
@@ -566,7 +566,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   </main>
   <section
     aria-labelledby="Most-Read"
-    class="MostReadSection-sc-6bm912-1 ConstrainedMostReadSection-sc-6bm912-3 LgbeX"
+    class="MostReadSection-sc-1onvfv8-1 jcKdxx"
     data-e2e="most-read"
     role="region"
   >
@@ -579,7 +579,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
       <h2
         class="Heading-sc-1x4gwjz-2 eZofTG"
       >
-        <div
+        <span
           class="FlexColumn-wx5kdp-0 dgpsiS"
         >
           <span
@@ -593,14 +593,14 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
               پربیننده‌ترین‌ها
             </span>
           </span>
-        </div>
+        </span>
       </h2>
     </div>
     <div
       class="MarginWrapper-sc-6bm912-0 bmzrWW"
     >
       <ol
-        class="GridComponent-nf79gm-0 iakllL TwoColumnGrid-sc-1ofyujo-0 MultiColumnGrid-sc-1ofyujo-1 cCvfjo"
+        class="GridComponent-nf79gm-0 iakllL OneColumnGrid-sc-1ofyujo-0 TwoColumnGrid-sc-1ofyujo-1 MultiColumnGrid-sc-1ofyujo-2 ecxuWs"
         dir="rtl"
         role="list"
       >
@@ -613,11 +613,11 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 eXXziL"
+              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 MultiColumnWrapper-fs4y6m-2 lanIPw"
               dir="rtl"
             >
               <span
-                class="StyledSpan-fs4y6m-2 etHPTl"
+                class="StyledSpan-fs4y6m-3 gTXkuQ"
               >
                 ۱
               </span>
@@ -654,11 +654,11 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 gaDNHh"
+              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 MultiColumnWrapper-fs4y6m-2 hMzjkj"
               dir="rtl"
             >
               <span
-                class="StyledSpan-fs4y6m-2 etHPTl"
+                class="StyledSpan-fs4y6m-3 gTXkuQ"
               >
                 ۲
               </span>
@@ -695,11 +695,11 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 eXXziL"
+              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 MultiColumnWrapper-fs4y6m-2 lanIPw"
               dir="rtl"
             >
               <span
-                class="StyledSpan-fs4y6m-2 etHPTl"
+                class="StyledSpan-fs4y6m-3 gTXkuQ"
               >
                 ۳
               </span>
@@ -736,11 +736,11 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 gaDNHh"
+              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 MultiColumnWrapper-fs4y6m-2 hMzjkj"
               dir="rtl"
             >
               <span
-                class="StyledSpan-fs4y6m-2 etHPTl"
+                class="StyledSpan-fs4y6m-3 gTXkuQ"
               >
                 ۴
               </span>
@@ -777,11 +777,11 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 dldTof"
+              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 MultiColumnWrapper-fs4y6m-2 khmBSM"
               dir="rtl"
             >
               <span
-                class="StyledSpan-fs4y6m-2 etHPTl"
+                class="StyledSpan-fs4y6m-3 gTXkuQ"
               >
                 ۵
               </span>
@@ -818,11 +818,11 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 kscXFz"
+              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 MultiColumnWrapper-fs4y6m-2 bsZBlj"
               dir="rtl"
             >
               <span
-                class="StyledSpan-fs4y6m-2 etHPTl"
+                class="StyledSpan-fs4y6m-3 gTXkuQ"
               >
                 ۶
               </span>
@@ -859,11 +859,11 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 dfbaZn"
+              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 MultiColumnWrapper-fs4y6m-2 kANedH"
               dir="rtl"
             >
               <span
-                class="StyledSpan-fs4y6m-2 etHPTl"
+                class="StyledSpan-fs4y6m-3 gTXkuQ"
               >
                 ۷
               </span>
@@ -900,11 +900,11 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 kscXFz"
+              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 MultiColumnWrapper-fs4y6m-2 bsZBlj"
               dir="rtl"
             >
               <span
-                class="StyledSpan-fs4y6m-2 etHPTl"
+                class="StyledSpan-fs4y6m-3 gTXkuQ"
               >
                 ۸
               </span>
@@ -941,11 +941,11 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 dfbaZn"
+              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 MultiColumnWrapper-fs4y6m-2 kANedH"
               dir="rtl"
             >
               <span
-                class="StyledSpan-fs4y6m-2 etHPTl"
+                class="StyledSpan-fs4y6m-3 gTXkuQ"
               >
                 ۹
               </span>
@@ -982,11 +982,11 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="ItemWrapper-u0d8kd-3 juBlKT"
           >
             <div
-              class="TwoColumnWrapper-fs4y6m-0 MultiColumnWrapper-fs4y6m-1 kscXFz"
+              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 MultiColumnWrapper-fs4y6m-2 eprrsb"
               dir="rtl"
             >
               <span
-                class="StyledSpan-fs4y6m-2 etHPTl"
+                class="StyledSpan-fs4y6m-3 gTXkuQ"
               >
                 ۱۰
               </span>

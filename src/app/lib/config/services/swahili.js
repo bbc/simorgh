@@ -50,14 +50,14 @@ export const service = {
     translations: {
       seeAll: 'Tazama zote',
       home: 'Habari',
-      currentPage: 'Ukurasa uliopo',
+      currentPage: 'Ukurasa uliopo ',
       skipLinkText: 'Ruka hadi maelezo',
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
       navMenuText: 'Yaliyomo',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'Kicheza Nyenzo',
+        audioPlayer: 'Kicheza Sauti',
+        videoPlayer: 'Kicheza Video',
       },
       error: {
         404: {
@@ -155,13 +155,13 @@ export const service = {
           subtitle:
             'Mitikasi Leo ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku.',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'Sikiliza',
+        watch: 'Tazama',
         liveLabel: 'Moja kwa moja',
-        nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'MBELE',
+        previousRadioShow: 'Kipindi kilichopita cha redio',
+        nextRadioShow: 'Kipindi kijacho cha redio',
+        duration: 'Muda',
       },
       socialEmbed: {
         caption: {
@@ -175,8 +175,8 @@ export const service = {
           warningText: 'BBC haihusiki na taarifa za kutoka mitandao ya nje.',
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: 'Ruka %provider_name% ujumbe',
+          endTextVisuallyHidden: 'Mwisho wa %provider_name% ujumbe',
         },
       },
     },
@@ -190,7 +190,11 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: true,
+      frontPagePosition: 'Features',
       header: 'Vipindi vya Redio',
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

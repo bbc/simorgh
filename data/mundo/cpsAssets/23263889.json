@@ -275,7 +275,8 @@
       {
         "href": "https://twitter.com/BBCWorld/status/1224253149176791040",
         "source": "twitter",
-        "type": "social_embed"
+        "type": "social_embed",
+        "id": "1224253149176791040"
       },
       {
         "text": "YouTube",
@@ -285,7 +286,8 @@
       {
         "href": "https://youtu.be/J4KzO1P6gW4",
         "source": "youtube",
-        "type": "social_embed"
+        "type": "social_embed",
+        "id": "J4KzO1P6gW4"
       },
       {
         "text": "Instagram",
@@ -295,7 +297,8 @@
       {
         "href": "https://www.instagram.com/p/B8FPf4ZphHi/?utm_source=ig_web_copy_link",
         "source": "instagram",
-        "type": "social_embed"
+        "type": "social_embed",
+        "id": "B8FPf4ZphHi"
       },
       {
         "text": "Embedded MAP: video",
@@ -393,7 +396,7 @@
       {
         "required": false,
         "tile": "IDT2 Include",
-        "href": "/idt2/41a6ad82-8bad-482e-9645-301af4a8e857",
+        "href": "/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6",
         "platform": "highweb",
         "type": "include"
       },

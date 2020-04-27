@@ -27,7 +27,7 @@ export const service = {
     videoCaptionOffscreenText: 'व्हीडिओ कॅप्शन, ',
     audioCaptionOffscreenText: 'ऑडिओ कॅप्शन, ',
     defaultCaptionOffscreenText: 'कॅप्शन, ',
-    imageCopyrightOffscreenText: 'फफोटो स्रोत, ',
+    imageCopyrightOffscreenText: 'फोटो स्रोत, ',
     locale: `mr-IN`,
     datetimeLocale: `mr`,
     service: 'marathi',
@@ -62,17 +62,17 @@ export const service = {
       error: {
         404: {
           statusCode: '404',
-          title: 'हे पृष्ठ सापडले नाही',
+          title: 'हे पान सापडलं नाही',
           message:
-            'माफ करा, तुम्ही शोधत असलेले पृष्ठ आम्हाला सापडले नाही. कृपया प्रयत्न करा:',
+            'माफ करा, तुम्ही शोधत असलेलं पान आम्हाला सापडलं नाही. कृपया हे करून पाहा:',
           solutions: [
             'तुमचं URL पुन्हा एकदा तपासा',
             'तुमच्या ब्राऊझरमध्ये रिफ्रेश बटण दाबा',
             'बीबीसीचं सर्च बार वापरून हे पृष्ठ शोधा',
           ],
           callToActionFirst: 'किंवा, ',
-          callToActionLinkText: 'बीबीसी न्यूज मराठी]च्या',
-          callToActionLast: ' होमपेजला भेट द्या.',
+          callToActionLinkText: 'बीबीसी न्यूज मराठी',
+          callToActionLast: 'च्या होमपेजला भेट द्या.',
           callToActionLinkUrl: 'https://www.bbc.com/marathi',
         },
         500: {
@@ -85,15 +85,14 @@ export const service = {
             'थोड्या वेळाने परत या',
           ],
           callToActionFirst: 'किंवा, ',
-          callToActionLinkText: 'बीबीसी न्यूज मराठी]च्या',
-          callToActionLast: ' होमपेजला भेट द्या.',
+          callToActionLinkText: 'बीबीसी न्यूज मराठी',
+          callToActionLast: 'च्या होमपेजला भेट द्या.',
           callToActionLinkUrl: 'https://www.bbc.com/marathi',
         },
       },
       consentBanner: {
         privacy: {
-          title:
-            'आम्ही आमचं गोपनीयतेचं आणि कुकीजच्या बाबतीतलं धोरण अपडेट केलं आहे',
+          title: 'आम्ही आमचं गोपनीयतेचं आणि कुकीजच्या बाबतीतलं धोरण बदललं आहे',
           description: {
             uk: {
               first:
@@ -126,7 +125,7 @@ export const service = {
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'आम्ही आणि आमचे सहयोगी ',
+              first: 'आम्ही आणि आमचे सहकारी ',
               linkText: 'कुकीज',
               last:
                 'सारखं तंत्रज्ञान वापरून तुमचा ब्राऊझिंग डेटा गोळा करत असतो, जेणेकरून तुमचा ऑनलाईन अनुभव सर्वोत्तम व्हावा आणि तुम्हाला खास तुमच्यासाठीचा मजकूर आणि अ‍ॅड दाखवता याव्यात. तुमची याला सहमती असल्याचं आम्हाला कळवा.',
@@ -153,27 +152,27 @@ export const service = {
         },
         listen: 'ऐका',
         watch: 'पाहा',
-        liveLabel: 'थेट',
-        nextLabel: 'NEXT',
+        liveLabel: 'LIVE',
+        nextLabel: 'पुढचे',
         previousRadioShow: 'यापूर्वीचा रेडिओ शो',
         nextRadioShow: 'पुढचा रेडिओ शो',
         duration: 'वेळ',
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
-          text: 'Warning: Third party content may contain adverts',
+          textPrefixVisuallyHidden: 'व्हीडिओ कॅप्शन, ',
+          text: 'सावधान: बाहेरच्या मजकुरावर काही अॅड असू शकतात',
         },
         fallback: {
-          text: 'Content is not available',
-          linkText: 'View content on %provider_name%',
-          linkTextSuffixVisuallyHidden: ', external',
+          text: 'मजकूर उपलब्ध नाही',
+          linkText: '%provider_name%वर आणखी पाहा',
+          linkTextSuffixVisuallyHidden: ', बाहेरचा मजकूर',
           warningText:
             'बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही. बाह्य लिंक्सबद्दल आम्हाल काय वाटतं? इथे वाचा.',
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: '%provider_name% पोस्टवरून पुढे जा',
+          endTextVisuallyHidden: '%provider_name% पोस्ट समाप्त',
         },
       },
     },
@@ -187,10 +186,13 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: false,
     },
+    recommendations: {
+      hasStoryRecommendations: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/marathi/institutional-50418391',
-        text: 'तुम्ही बीबीसीवर विश्वास ठेवू शकता कारणा',
+        text: 'तुम्ही बीबीसीवर विश्वास ठेवू शकता कारण',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
@@ -211,7 +213,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/marathi/institutional-42227676',
-          text: 'बीबीसीशी संपर्क साधाा',
+          text: 'बीबीसीशी संपर्क साधा',
         },
         {
           href:
@@ -221,7 +223,7 @@ export const service = {
         },
       ],
       copyrightText:
-        'बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही.',
+        'BBC. बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही. बाह्य लिंक्सबद्दल आम्हाल काय वाटतं? इथे वाचा.',
     },
     fonts: [],
     timezone: 'Asia/Kolkata',

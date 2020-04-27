@@ -20,6 +20,8 @@ const toggleContextMock = {
 };
 
 describe('Ad Container', () => {
+  process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+
   describe('Snapshots', () => {
     shouldMatchSnapshot(
       'should correctly render an AMP ad',

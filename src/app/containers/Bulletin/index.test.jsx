@@ -48,7 +48,7 @@ const liveRadioBulletinItem = {
   isLive: true,
 };
 
-const BulletinWithContext = (item) => (
+const BulletinWithContext = item => (
   <ServiceContextProvider service="igbo">
     <BulletinContainer item={item} />
   </ServiceContextProvider>
@@ -82,19 +82,19 @@ describe('Bulletin Container', () => {
       const { container } = render(BulletinWithContext(liveTvBulletinItem));
       const span = container.getElementsByTagName('span')[1];
 
-      expect(span.textContent).toEqual('Lee Live, ');
+      expect(span.textContent).toEqual('NA EME UGBU A ');
     });
 
     it('should render the Live Radio offscreen text', () => {
       const { container } = render(BulletinWithContext(liveRadioBulletinItem));
       const span = container.getElementsByTagName('span')[1];
 
-      expect(span.textContent).toEqual('Gee ntị Live, ');
+      expect(span.textContent).toEqual('NA EME UGBU A ');
     });
 
     it('should render the LIVE label', () => {
       const { container } = render(BulletinWithContext(liveTvBulletinItem));
-      const span = container.getElementsByTagName('span')[2];
+      const span = container.getElementsByTagName('span')[1];
 
       expect(span.getAttribute('aria-hidden')).toBeDefined();
       expect(span.getAttribute('aria-hidden')).toEqual('true');

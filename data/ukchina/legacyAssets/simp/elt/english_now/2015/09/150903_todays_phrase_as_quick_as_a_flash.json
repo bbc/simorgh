@@ -1,0 +1,308 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:ukchina/simp/elt/english_now/2015/09/150903_todays_phrase_as_quick_as_a_flash",
+    "locators": {
+      "assetUri": "/ukchina/simp/elt/english_now/2015/09/150903_todays_phrase_as_quick_as_a_flash",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/elt/english_now/2015/09/150903_todays_phrase_as_quick_as_a_flash",
+      "curie": "http://www.bbc.co.uk/asset/fbb98f10-5212-11e5-a4fe-85df3db9bd6e"
+    },
+    "type": "STY",
+    "createdBy": "ukchina_simplified",
+    "language": "zh-Hans",
+    "lastUpdated": 1550554370748,
+    "firstPublished": 1441278835,
+    "lastPublished": 1441710033,
+    "options": {
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": false,
+      "allowAdvertising": false,
+      "isBreakingNews": false
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "cps_asset_id": "40330608"
+    },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "pullOut"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "d5e341",
+        "subType": "body",
+        "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/09/03/150903080752_todays_phrase_as_quick_as_a_flash_624x351_thinkstock_nocredit.jpg",
+        "path": "/amz/worldservice/live/assets/images/2015/09/03/150903080752_todays_phrase_as_quick_as_a_flash_624x351_thinkstock_nocredit.jpg",
+        "height": 351,
+        "width": 624,
+        "altText": "Car dashboard in a flash",
+        "caption": "Formula One (F1) is the highest level of auto-racing. An F1 car can easily reach 321km/h (200miles/h) ",
+        "copyrightHolder": "ThinkStock",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "<bold/>",
+        "role": "introduction",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>今日短语 </bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "title": "今日小常识",
+        "elements": [
+          {
+            "text": "The official land-speed record measured is 763.035 miles per hour, set by Andy Green UK on 15 October 1997 in the Black Rock Desert.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "官方纪录的最高陆地驾驶速度是 763.035英里/小时（1227 .985公里/小时）。1997年10月15日，英国人安迪•格林在美国内华达洲的黑岩沙漠里创造了此纪录。",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ],
+        "type": "pullOut"
+      },
+      {
+        "text": "我们可以用短语 as quick as a flash 来形容一个人做事情像闪电般一样快。<italic/>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>例句</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<italic>John knew the answer so he put up his hand as quick as a flash.</italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<italic>The customers are complaining. We need to get more food on the shelves as quick as a flash.</italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>请注意</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "另一个含有单词 flash 的短语 a flash in the pan 的意思是“昙花一现”。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>例句</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<italic>Our football team were champions last year, but that won't happen again. It's just a flash in the pan. </italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "As quick as a flash  快如闪电般地",
+      "headline": "As quick as a flash  快如闪电般地"
+    },
+    "locators": {
+      "assetUri": "/ukchina/simp/elt/english_now/2015/09/150903_todays_phrase_as_quick_as_a_flash",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/elt/english_now/2015/09/150903_todays_phrase_as_quick_as_a_flash",
+      "curie": "http://www.bbc.co.uk/asset/fbb98f10-5212-11e5-a4fe-85df3db9bd6e"
+    },
+    "summary": "Here is a useful phrase to say something is very fast. Click here! ",
+    "timestamp": 1550554370748,
+    "passport": {},
+    "indexImage": {
+      "id": "d5e222",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/09/03/150903080752_todays_phrase_as_quick_as_a_flash_144x81_thinkstock_nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2015/09/03/150903080752_todays_phrase_as_quick_as_a_flash_144x81_thinkstock_nocredit.jpg",
+      "height": 81,
+      "width": 144,
+      "altText": "Car dashboard in a flash",
+      "copyrightHolder": "ThinkStock",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:ukchina/simp/elt/english_now/2015/09/150903_todays_phrase_as_quick_as_a_flash",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "潮流英语",
+      "uri": "/ukchina/simp/elt/english_now",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "bbcukchina.com",
+      "uri": "/ukchina/simp",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Ring around 打一圈电话",
+              "headline": "Ring around 打一圈电话"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/elt/english_now/2015/09/150901_todays_phrase_ring_around",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/elt/english_now/2015/09/150901_todays_phrase_ring_around"
+            },
+            "summary": "Planning a party? Then you'd better get on the phone and see if people are free to come",
+            "timestamp": 1441097288,
+            "cpsType": "STY",
+            "id": "urn:bbc:ares::asset:ukchina/simp/elt/english_now/2015/09/150901_todays_phrase_ring_around",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Scream your head off 大声狂叫",
+              "headline": "Scream your head off 大声狂叫"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/elt/english_now/2015/08/150827_todays_phrase_scream_your_head_off",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/elt/english_now/2015/08/150827_todays_phrase_scream_your_head_off"
+            },
+            "summary": "When nothing seems to be going to plan, how would you feel? Here is a phrase that expresses 'frustration' perfectly",
+            "timestamp": 1440675180,
+            "cpsType": "STY",
+            "id": "urn:bbc:ares::asset:ukchina/simp/elt/english_now/2015/08/150827_todays_phrase_scream_your_head_off",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Show your face 露面",
+              "headline": "Show your face 露面"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/elt/english_now/2015/08/150825_todays_phrase_show_your_face",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/elt/english_now/2015/08/150825_todays_phrase_show_your_face"
+            },
+            "summary": "This phrase is often used to talk about social situations. Learn its usage here",
+            "timestamp": 1440493840,
+            "cpsType": "STY",
+            "id": "urn:bbc:ares::asset:ukchina/simp/elt/english_now/2015/08/150825_todays_phrase_show_your_face",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Get your skates on! 快点！",
+              "headline": "Get your skates on! 快点！"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/elt/english_now/2015/08/150820_todays_phrase_get_your_skates_on",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/elt/english_now/2015/08/150820_todays_phrase_get_your_skates_on"
+            },
+            "summary": "Do you know another way of saying 'hurry up'? Learn a sporty phrase today",
+            "timestamp": 1440067065,
+            "cpsType": "STY",
+            "id": "urn:bbc:ares::asset:ukchina/simp/elt/english_now/2015/08/150820_todays_phrase_get_your_skates_on",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "To tower over 高出、胜过",
+              "headline": "To tower over 高出、胜过"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/elt/english_now/2015/08/150818_todays_phrase_to_tower_over",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/elt/english_now/2015/08/150818_todays_phrase_to_tower_over"
+            },
+            "summary": "Do you love architecture? Learn a useful expression for talking about really tall things",
+            "timestamp": 1439894183,
+            "cpsType": "STY",
+            "id": "urn:bbc:ares::asset:ukchina/simp/elt/english_now/2015/08/150818_todays_phrase_to_tower_over",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Go head-to-head 针锋相对地竞争",
+              "headline": "Go head-to-head 针锋相对地竞争"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/elt/english_now/2015/08/150813_todays_phrase_head_to_head",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/elt/english_now/2015/08/150813_todays_phrase_head_to_head"
+            },
+            "summary": "What to say when you are in fierce competition with someone else. This is a good phrase to describe the situation",
+            "timestamp": 1439463128,
+            "cpsType": "STY",
+            "id": "urn:bbc:ares::asset:ukchina/simp/elt/english_now/2015/08/150813_todays_phrase_head_to_head",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Sunny-side up 单煎一面的荷包蛋",
+              "headline": "Sunny-side up 单煎一面的荷包蛋"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/elt/english_now/2015/08/150806_todays_phrase_sunny_side_up",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/elt/english_now/2015/08/150806_todays_phrase_sunny_side_up"
+            },
+            "summary": "This expression has nothing to do with the sun. But it might be useful when you're hungry",
+            "timestamp": 1438856982,
+            "cpsType": "STY",
+            "id": "urn:bbc:ares::asset:ukchina/simp/elt/english_now/2015/08/150806_todays_phrase_sunny_side_up",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Ask for the moon 异想天开",
+              "headline": "Ask for the moon 异想天开"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/elt/english_now/2015/08/150811_todays_phrase_ask_for_the_moon",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/elt/english_now/2015/08/150811_todays_phrase_ask_for_the_moon"
+            },
+            "summary": "A phrase to describe when a person is asking for something impossible. Learn how to use it in Today's phrase",
+            "timestamp": 1439292670,
+            "cpsType": "STY",
+            "id": "urn:bbc:ares::asset:ukchina/simp/elt/english_now/2015/08/150811_todays_phrase_ask_for_the_moon",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "In safe hands 在可靠的人手中",
+              "headline": "In safe hands 在可靠的人手中"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/elt/english_now/2015/08/150804_todays_phrase_in_safe_hands",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/elt/english_now/2015/08/150804_todays_phrase_in_safe_hands"
+            },
+            "summary": "Does someone need reassurance? Use this expression",
+            "timestamp": 1438686885,
+            "cpsType": "STY",
+            "id": "urn:bbc:ares::asset:ukchina/simp/elt/english_now/2015/08/150804_todays_phrase_in_safe_hands",
+            "type": "cps"
+          },
+          {
+            "name": "To file away 存档",
+            "uri": "http://www.bbc.co.uk/ukchina/simp/elt/english_now/2013/11/131126_todays_phrase_file_away",
+            "type": "link"
+          }
+        ]
+      }
+    ]
+  }
+}
