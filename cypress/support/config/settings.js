@@ -139,7 +139,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/igbo/afirika-23252735'],
+            paths: [],
             enabled: false,
           },
         },
