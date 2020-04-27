@@ -4,7 +4,7 @@ import '@testing-library/jest-dom/extend-expect';
 import { render } from '@testing-library/react';
 import AmpAd from './index';
 
-describe('AMP Navigation', () => {
+describe('AMP Ads', () => {
   process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
 
   describe('Snapshots', () => {
@@ -20,6 +20,11 @@ describe('AMP Navigation', () => {
       const ampAd = container.querySelectorAll('amp-ad');
 
       expect(ampAd.length).toBe(2);
+    });
+    it('should have the correct attributes', () => {
+      const { container } = render(<AmpAd service="pidgin" />);
+      const ampAd = container.querySelectorAll('amp-ad');
+      console.log('----', container);
     });
   });
 });
