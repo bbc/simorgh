@@ -128,7 +128,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
-        title={`${header} - ${brandName}`}
+        title={header}
         lang={lang}
         description={`${header} - ${brandName}`}
         openGraphType="website"
