@@ -226,7 +226,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 .c20:before {
@@ -1212,7 +1211,6 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 .c14:before {
@@ -1963,7 +1961,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 .c16:before {
@@ -2470,7 +2467,6 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
-  overflow-wrap: break-word;
   overflow-wrap: break-word;
 }
 
