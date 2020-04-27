@@ -11,7 +11,7 @@ const simorghLaunchDates = {
     articles: 'Sept 2019',
     frontPage: '23rd April 2020',
     liveRadio: '10th Jan 2020',
-    mediaAssetPage: '',
+    mediaAssetPage: '7th April 2020',
     photoGalleryPage: '12th March 2020',
     storyPage: '',
   },
@@ -106,7 +106,7 @@ const simorghLaunchDates = {
   japanese: {
     articles: 'Sept 2019',
     frontPage: '26th Sept 2019',
-    mediaAssetPage: '',
+    mediaAssetPage: '7th April 2020',
     storyPage: '',
     photoGalleryPage: '20th Feb 2010',
   },
@@ -136,7 +136,7 @@ const simorghLaunchDates = {
   mundo: {
     articles: 'Sept 2019',
     frontPage: '2nd April 2020',
-    mediaAssetPage: '',
+    mediaAssetPage: '7th April 2020',
     photoGalleryPage: '24th March 2020',
     storyPage: '',
   },
@@ -181,7 +181,7 @@ const simorghLaunchDates = {
   portuguese: {
     articles: 'Sept 2019',
     frontPage: '31st March 2020',
-    mediaAssetPage: '',
+    mediaAssetPage: '7th April 2020',
     photoGalleryPage: '12th March 2020',
     storyPage: '',
   },
