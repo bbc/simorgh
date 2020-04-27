@@ -115,9 +115,10 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
           {groups.map((group, index) => (
             <Fragment key={group.title}>
               {group.type === 'useful-links' && renderMostRead()}
-              {radioScheduleOnPage && radioSchedulePosition === group.type && (
-                <RadioScheduleContainer initialData={radioScheduleData} />
-              )}
+              {radioScheduleOnPage &&
+                radioSchedulePosition === group.semanticGroupName && (
+                  <RadioScheduleContainer initialData={radioScheduleData} />
+                )}
               <FrontPageSection group={group} sectionNumber={index} />
             </Fragment>
           ))}

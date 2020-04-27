@@ -191,7 +191,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: true,
-      frontPagePosition: 'feature-main',
+      frontPagePosition: 'Features',
       frequenciesPageUrl:
         '/arabic/institutional/2011/01/000000_frequencies_radio',
       frequenciesPageLabel: 'استقبال البث',
