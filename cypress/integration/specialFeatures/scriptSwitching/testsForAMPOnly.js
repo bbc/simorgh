@@ -1,10 +1,5 @@
 import visitPage from '../../../support/helpers/visitPage';
-import {
-  // assertScriptSwitchButton,
-  assertURLContains,
-  // assertLang,
-  // allVariantAssertions,
-} from '../utilities/scriptSwitchingJourneyAssertions';
+import { nonCookieVariantAssertions } from '../utilities/scriptSwitchingJourneyAssertions';
 import {
   clickScriptSwitcher,
   // clickHomePageLink,
@@ -36,14 +31,14 @@ export default ({
       // Accept cookie banner
       getCookieBannerAccept(serviceId, variant).click();
 
-      // Checks URL is in current variant
-      assertURLContains(serviceName, variant);
+      // Assert script switch button, url and document lang against variant
+      nonCookieVariantAssertions(serviceName, variant);
 
       // Clicks script switcher
       clickScriptSwitcher(otherVariant);
 
-      // Checks URL is in other variant
-      assertURLContains(serviceName, otherVariant);
+      // Assert script switch button, url and document lang against variant after clicking script switcher
+      nonCookieVariantAssertions(serviceName, variant);
 
       // Navigate to home page
       visitPage(`${serviceName}/${otherVariant}.amp`, pageType);
@@ -54,8 +49,8 @@ export default ({
       // Clicks script switcher to original variant
       clickScriptSwitcher(variant);
 
-      // Checks URL is correct variant
-      assertURLContains(serviceName, variant);
+      // Assert script switch button, url and document lang against variant after clicking script switcher
+      nonCookieVariantAssertions(serviceName, variant);
     });
   });
 };

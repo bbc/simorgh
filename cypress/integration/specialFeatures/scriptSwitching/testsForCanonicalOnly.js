@@ -1,9 +1,7 @@
 import visitPage from '../../../support/helpers/visitPage';
 import {
-  assertScriptSwitchButton,
-  assertURLContains,
-  assertLang,
   allVariantAssertions,
+  nonCookieVariantAssertions,
 } from '../utilities/scriptSwitchingJourneyAssertions';
 import {
   clickScriptSwitcher,
@@ -36,14 +34,8 @@ export default ({
       // Accept cookie banner
       getCookieBannerAccept(serviceId, variant).click();
 
-      // Assert the script switch button is correct for variant
-      assertScriptSwitchButton(serviceName, variant);
-
-      // Assert URL contains correct variant
-      assertURLContains(serviceName, variant);
-
-      // Assert lang for document is correct for variant
-      assertLang(serviceName, variant);
+      // Assert script switch button, url and document lang against variant
+      nonCookieVariantAssertions(serviceName, variant);
 
       // Clicks script switcher
       clickScriptSwitcher(otherVariant);
