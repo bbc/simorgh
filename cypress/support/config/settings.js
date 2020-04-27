@@ -139,7 +139,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/igbo/afirika-23252735'],
             enabled: false,
           },
         },
@@ -288,7 +288,7 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: [], // /afrique/region-23268823
             enabled: false,
           },
           local: {
@@ -2559,7 +2559,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/mundo/23263889'],
             enabled: false,
           },
         },
@@ -2961,7 +2961,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/pashto/23289748'],
             enabled: false,
           },
         },
@@ -3128,7 +3128,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/persian/arts-52166891'],
             enabled: false,
           },
         },
@@ -3240,7 +3240,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/pidgin/tori-51745682'],
             enabled: false,
           },
         },
@@ -5893,7 +5893,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/yoruba/afrika-23252769'],
             enabled: false,
           },
         },
