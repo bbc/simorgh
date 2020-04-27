@@ -17,10 +17,9 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { GridWrapper, GridItemConstrainedLarge } from '#lib/styledGrid';
 import { gelGridMargin } from '#app/lib/layoutGrid';
 
-const ConstrainedLargeGrid = ({ children, ...restProps }) => (
+const ConstrainedLargeGrid = ({ children, ...gridProps }) => (
   <Grid
-    item
-    {...restProps}
+    {...gridProps}
     columns={{
       group0: 1,
       group1: 1,
