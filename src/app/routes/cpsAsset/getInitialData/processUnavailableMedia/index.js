@@ -19,26 +19,27 @@ export const unavailableMediaBlock = {
   id: UNAVAILABLE_MEDIA_TEXT,
 };
 
-export const logUnavailableMedia = blocks => {
+export const logUnavailableMedia = (blocks, url) => {
   const mediaBlock = blocks.find(block => block.type === EXTERNAL_VPID);
   if (mediaBlock) {
-    const statusCode = path(['statusCode'], mediaBlock);
+    const { statusCode } = mediaBlock;
     switch (statusCode) {
       case 404:
-        logger.warn(MEDIA_ASSET_REVOKED);
+        logger.warn(MEDIA_ASSET_REVOKED, { url });
         break;
       case 410:
-        logger.warn(MEDIA_ASSET_EXPIRED);
+        logger.warn(MEDIA_ASSET_EXPIRED, { url });
         break;
       default:
-        logger.error(MEDIA_METADATA_UNAVAILABLE);
+        logger.error(MEDIA_METADATA_UNAVAILABLE, { url });
     }
   }
 };
 
 export const addUnavailableMediaBlock = pageData => {
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
-  logUnavailableMedia(blocks);
+  const url = path(['metadata', 'locators', 'assetUri'], pageData);
+  logUnavailableMedia(blocks, url);
   const filteredBlocks = blocks.filter(block => block.type !== EXTERNAL_VPID);
   return assocPath(
     ['content', 'model', 'blocks'],

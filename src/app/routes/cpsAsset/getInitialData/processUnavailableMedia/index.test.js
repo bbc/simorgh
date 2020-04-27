@@ -28,6 +28,10 @@ describe('processUnavailableMedia', () => {
     },
   };
 
+  const mockUrlObject = {
+    url: 'mock-uri',
+  };
+
   it('filters external_vpid from the rendered blocks', () => {
     const pageData = {
       content: {
@@ -86,9 +90,7 @@ describe('processUnavailableMedia', () => {
     };
     const receivedPageData = processUnavailableMedia(pageData);
     expect(receivedPageData).toEqual(expectedPageData);
-    expect(loggerMock.warn).toHaveBeenCalledWith(NO_MEDIA_BLOCK, {
-      url: 'mock-uri',
-    });
+    expect(loggerMock.warn).toHaveBeenCalledWith(NO_MEDIA_BLOCK, mockUrlObject);
   });
 
   it('runs addUnavailableMediaBlock when there is an external_vpid in the content blocks', () => {
@@ -119,42 +121,54 @@ describe('processUnavailableMedia', () => {
     expect(receivedPageData).toEqual(pageData);
   });
 
-  it('logs the right code when the media asset is revoked', async () => {
+  it('logs the correct message when the media asset is revoked', async () => {
     const pageData = {
       metadata: {
         blockTypes: [EXTERNAL_VPID, 'paragraph', 'heading'],
+        locators: { assetUri: 'mock-uri' },
       },
       content: {
         model: { blocks: [{ statusCode: 404, type: EXTERNAL_VPID }] },
       },
     };
     processUnavailableMedia(pageData);
-    expect(loggerMock.warn).toHaveBeenCalledWith(MEDIA_ASSET_REVOKED);
+    expect(loggerMock.warn).toHaveBeenCalledWith(
+      MEDIA_ASSET_REVOKED,
+      mockUrlObject,
+    );
   });
 
-  it('logs the right code when the media asset has expired', async () => {
+  it('logs the correct message when the media asset has expired', async () => {
     const pageData = {
       metadata: {
         blockTypes: [EXTERNAL_VPID, 'paragraph', 'heading'],
+        locators: { assetUri: 'mock-uri' },
       },
       content: {
         model: { blocks: [{ statusCode: 410, type: EXTERNAL_VPID }] },
       },
     };
     processUnavailableMedia(pageData);
-    expect(loggerMock.warn).toHaveBeenCalledWith(MEDIA_ASSET_EXPIRED);
+    expect(loggerMock.warn).toHaveBeenCalledWith(
+      MEDIA_ASSET_EXPIRED,
+      mockUrlObject,
+    );
   });
 
-  it('logs the right code when the media metadata is unavailable', async () => {
+  it('logs the correct message when the media metadata is unavailable', async () => {
     const pageData = {
       metadata: {
         blockTypes: [EXTERNAL_VPID, 'paragraph', 'heading'],
+        locators: { assetUri: 'mock-uri' },
       },
       content: {
         model: { blocks: [{ type: EXTERNAL_VPID }] },
       },
     };
     processUnavailableMedia(pageData);
-    expect(loggerMock.error).toHaveBeenCalledWith(MEDIA_METADATA_UNAVAILABLE);
+    expect(loggerMock.error).toHaveBeenCalledWith(
+      MEDIA_METADATA_UNAVAILABLE,
+      mockUrlObject,
+    );
   });
 });
