@@ -8,7 +8,7 @@ const simorghLaunchDates = {
   },
   afrique: {
     articles: 'Sept 2019',
-    frontPage: '',
+    frontPage: '23rd April 2020',
     liveRadio: '10th Jan 2020',
     mediaAssetPage: '',
     photoGalleryPage: '12th March 2020',
@@ -24,7 +24,7 @@ const simorghLaunchDates = {
   },
   arabic: {
     articles: 'Sept 2019',
-    frontPage: '',
+    frontPage: '23rd April 2020',
     liveRadio: '4th Feb 2020',
     mediaAssetPage: '',
     photoGalleryPage: '12th March 2020',
@@ -74,7 +74,7 @@ const simorghLaunchDates = {
   },
   hausa: {
     articles: 'Sept 2019',
-    frontPage: '',
+    frontPage: '23rd April 2020',
     liveRadio: '30th Jan 2020',
     mediaAssetPage: '5th March 2020',
     storyPage: '',
@@ -109,7 +109,7 @@ const simorghLaunchDates = {
   },
   korean: {
     articles: 'Sept 2019',
-    frontPage: '',
+    frontPage: '23rd April 2020',
     liveRadio: '30th Sept 2019',
     mediaAssetPage: '6th Feb 2020',
     storyPage: '',
@@ -152,7 +152,7 @@ const simorghLaunchDates = {
   },
   pashto: {
     articles: 'Sept 2019',
-    frontPage: '',
+    frontPage: '23rd April 2020',
     liveRadio: '14th Jan 2020',
     mediaAssetPage: '5th March 2020',
     photoGalleryPage: '12th March 2020',
@@ -160,7 +160,7 @@ const simorghLaunchDates = {
   },
   persian: {
     articles: 'Sept 2019',
-    frontPage: '',
+    frontPage: '23rd April 2020',
     liveRadio: '4th Feb 2020',
     mediaAssetPage: '27th Feb 2020',
     photoGalleryPage: '12th March 2020',
@@ -220,7 +220,7 @@ const simorghLaunchDates = {
   },
   somali: {
     articles: 'Sept 2019',
-    frontPage: '',
+    frontPage: '23rd April 2020',
     liveRadio: '30th Jan 2020',
     mediaAssetPage: '5th March 2020',
     photoGalleryPage: '12th March 2020',
@@ -232,7 +232,7 @@ const simorghLaunchDates = {
   },
   swahili: {
     articles: 'Sept 2019',
-    frontPage: '',
+    frontPage: '23rd April 2020',
     liveRadio: '10th Jan 2020',
     mediaAssetPage: '5th March 2020',
     photoGalleryPage: '12th March 2020',
