@@ -2,8 +2,8 @@ import visitPage from '../../../support/helpers/visitPage';
 import { nonCookieVariantAssertions } from '../utilities/scriptSwitchingJourneyAssertions';
 import {
   clickScriptSwitcher,
-  // clickHomePageLink,
-  // clickPromoLinkOnHomePage,
+  clickHomePageLink,
+  clickPromoLinkOnHomePage,
 } from '../utilities/scriptSwitchingJourneyActions';
 import {
   getPrivacyBannerAccept,
@@ -37,19 +37,25 @@ export default ({
       // Clicks script switcher
       clickScriptSwitcher(otherVariant);
 
-      // Assert script switch button, url and document lang against variant after clicking script switcher
-      nonCookieVariantAssertions(serviceName, variant);
+      // Assert against other variant after switching script
+      nonCookieVariantAssertions(serviceName, otherVariant);
 
-      // Navigate to home page
-      visitPage(`${serviceName}/${otherVariant}.amp`, pageType);
+      // Navigate to home page by clicking link in the banner
+      clickHomePageLink(serviceName);
 
-      // Navigates back to the original page, but for other variant
-      visitPage(path.replace(`/${variant}`, `/${otherVariant}`), pageType);
+      // Assert otherVariant has persisted
+      nonCookieVariantAssertions(serviceName, otherVariant);
+
+      // Finding a link to click on the home page
+      clickPromoLinkOnHomePage(pageType);
+
+      // Assert other variant has persisted after navigating to new page
+      nonCookieVariantAssertions(serviceName, otherVariant);
 
       // Clicks script switcher to original variant
       clickScriptSwitcher(variant);
 
-      // Assert script switch button, url and document lang against variant after clicking script switcher
+      // Assert variant values have changed after clicking script switcher
       nonCookieVariantAssertions(serviceName, variant);
     });
   });
