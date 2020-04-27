@@ -19,6 +19,7 @@ import { gelGridMargin } from '#app/lib/layoutGrid';
 
 const ConstrainedLargeGrid = ({ children, ...gridProps }) => (
   <Grid
+    item
     {...gridProps}
     columns={{
       group0: 1,
@@ -126,7 +127,7 @@ const CpsOnwardJourney = ({
 
   return (
     <CpsOnwardJourneyWrapper>
-      <CpsOnwardJourneyItemWrapper item>
+      <CpsOnwardJourneyItemWrapper>
         <StyledSectionLabel
           script={script}
           service={service}
