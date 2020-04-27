@@ -2,7 +2,72 @@
 
 exports[`Story Page should not show the pop-out timestamp when allowDateStamp is false 1`] = `
 <DocumentFragment>
-  .c30 {
+  .c36 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c37 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c38 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c34 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c32 {
+  position: relative;
+  z-index: 0;
+  margin-top: 2rem;
+}
+
+.c35 {
+  margin: 0;
+  padding: 0;
+}
+
+.c30 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -168,71 +233,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
-}
-
-.c36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c37 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c38 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c34 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c32 {
-  position: relative;
-  z-index: 0;
-  margin-top: 2rem;
-}
-
-.c35 {
-  margin: 0;
-  padding: 0;
 }
 
 .c44 {
@@ -482,6 +482,68 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+@media (min-width:37.5rem) {
+  .c37 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c38 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c38 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c38 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c38 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c34 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c34 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c32 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c32 {
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -861,68 +923,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @supports (display:grid) {
   .c40 {
     display: block;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c37 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c38 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c38 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c38 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c38 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c34 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c34 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c32 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c32 {
-    margin-bottom: 1.5rem;
   }
 }
 
@@ -2056,6 +2056,71 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 `;
 
 exports[`Story Page snapshots should match snapshot for STY 1`] = `
+.c38 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c39 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c40 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c36 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c34 {
+  position: relative;
+  z-index: 0;
+  margin-top: 2rem;
+}
+
+.c37 {
+  margin: 0;
+  padding: 0;
+}
+
 .c32 {
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -2237,71 +2302,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
-}
-
-.c38 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c39 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c40 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c36 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c34 {
-  position: relative;
-  z-index: 0;
-  margin-top: 2rem;
-}
-
-.c37 {
-  margin: 0;
-  padding: 0;
 }
 
 .c46 {
@@ -2555,6 +2555,68 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+@media (min-width:37.5rem) {
+  .c39 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c40 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c40 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c40 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c40 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c36 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c36 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c34 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c34 {
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -2948,68 +3010,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @supports (display:grid) {
   .c42 {
     display: block;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c39 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c40 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c40 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c40 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c40 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c36 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c36 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c34 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c34 {
-    margin-bottom: 1.5rem;
   }
 }
 

@@ -2897,6 +2897,71 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   height: 0.8125rem;
 }
 
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c23 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c19 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c17 {
+  position: relative;
+  z-index: 0;
+  margin-top: 2rem;
+}
+
+.c20 {
+  margin: 0;
+  padding: 0;
+}
+
 .c15 {
   margin: 0 auto;
   padding-bottom: 2rem;
@@ -3016,71 +3081,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-.c21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c22 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c23 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c19 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c17 {
-  position: relative;
-  z-index: 0;
-  margin-top: 2rem;
-}
-
-.c20 {
-  margin: 0;
-  padding: 0;
 }
 
 .c26 {
@@ -3224,6 +3224,68 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 .c4 {
   padding-bottom: 1rem;
+}
+
+@media (min-width:37.5rem) {
+  .c22 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c23 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c23 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c23 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c23 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c19 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c17 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c17 {
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (max-width:37.4375rem) {
@@ -3565,68 +3627,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 @supports (display:grid) {
   .c27 {
     display: block;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c22 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c23 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c23 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c23 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c23 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c19 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c19 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c17 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c17 {
-    margin-bottom: 1.5rem;
   }
 }
 
@@ -5896,7 +5896,72 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
     </script>
   </head>
   <body>
-    .c34 {
+    .c40 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c41 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c42 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c38 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c36 {
+  position: relative;
+  z-index: 0;
+  margin-top: 2rem;
+}
+
+.c39 {
+  margin: 0;
+  padding: 0;
+}
+
+.c34 {
   margin: 0 auto;
   padding-bottom: 2rem;
 }
@@ -6231,71 +6296,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   font-style: normal;
 }
 
-.c40 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c41 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c42 {
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c38 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c36 {
-  position: relative;
-  z-index: 0;
-  margin-top: 2rem;
-}
-
-.c39 {
-  margin: 0;
-  padding: 0;
-}
-
 .c45 {
   padding: 0.5rem 0 1rem;
 }
@@ -6414,6 +6414,68 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 .c4 {
   padding-bottom: 1rem;
+}
+
+@media (min-width:37.5rem) {
+  .c41 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c42 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c42 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c42 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c42 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c38 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c38 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c36 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c36 {
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (max-width:37.4375rem) {
@@ -6906,68 +6968,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 @supports (display:grid) {
   .c46 {
     display: block;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c41 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c42 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c42 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c42 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c42 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c38 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c38 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c36 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c36 {
-    margin-bottom: 1.5rem;
   }
 }
 
