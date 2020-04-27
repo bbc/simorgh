@@ -15,7 +15,9 @@
     "**/pages/testsForAllAMPPages.js",
     "**/pages/testsForAllCanonicalPages.js",
     "**/123PlaygroundForTests/**",
-    "**/specialFeatures/utilities/**"
+    "**/specialFeatures/utilities/**",
+    "**/specialFeatures/scriptSwitching/testsForAMPOnly.js",
+    "**/specialFeatures/scriptSwitching/testsForCanonicalOnly.js"
   ],
   "defaultCommandTimeout": 10000,
   "pageLoadTimeout": 100000,
