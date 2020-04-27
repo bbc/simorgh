@@ -5,6 +5,7 @@ const simorghLaunchDates = {
     liveRadio: '30th Sept 2019',
     mediaAssetPage: '6th Feb 2020',
     storyPage: '',
+    photoGalleryPage: '20th Feb 2010',
   },
   afrique: {
     articles: 'Sept 2019',
@@ -92,6 +93,7 @@ const simorghLaunchDates = {
     frontPage: '15th July 2019',
     mediaAssetPage: '16th Jan 2020',
     storyPage: '',
+    photoGalleryPage: '20th Feb 2010',
   },
   indonesia: {
     articles: 'Sept 2019',
@@ -106,6 +108,7 @@ const simorghLaunchDates = {
     frontPage: '26th Sept 2019',
     mediaAssetPage: '',
     storyPage: '',
+    photoGalleryPage: '20th Feb 2010',
   },
   korean: {
     articles: 'Sept 2019',
@@ -113,6 +116,7 @@ const simorghLaunchDates = {
     liveRadio: '30th Sept 2019',
     mediaAssetPage: '6th Feb 2020',
     storyPage: '',
+    photoGalleryPage: '20th Feb 2010',
   },
   kyrgyz: {
     articles: 'Sept 2019',
@@ -127,6 +131,7 @@ const simorghLaunchDates = {
     frontPage: '13th Jan 2020',
     mediaAssetPage: '6th Feb 2020',
     storyPage: '',
+    photoGalleryPage: '20th Feb 2010',
   },
   mundo: {
     articles: 'Sept 2019',
@@ -171,6 +176,7 @@ const simorghLaunchDates = {
     frontPage: '15th July 2019',
     mediaAssetPage: '16th Jan 2020',
     storyPage: '',
+    photoGalleryPage: '20th Feb 2010',
   },
   portuguese: {
     articles: 'Sept 2019',
@@ -184,6 +190,7 @@ const simorghLaunchDates = {
     frontPage: '10th Sept 2019',
     mediaAssetPage: '6th Feb 2020',
     storyPage: '',
+    photoGalleryPage: '20th Feb 2010',
   },
   russian: {
     articles: 'Sept 2019',
@@ -251,12 +258,14 @@ const simorghLaunchDates = {
     frontPage: '13th Jan 2020',
     mediaAssetPage: '6th Feb 2020',
     storyPage: '',
+    photoGalleryPage: '20th Feb 2010',
   },
   thai: {
     articles: 'Sept 2019',
     frontPage: '19th Aug 2019',
     mediaAssetPage: '6th Feb 2020',
     storyPage: '',
+    photoGalleryPage: '20th Feb 2010',
   },
   tigrinya: {
     articles: 'Sept 2019',
@@ -264,6 +273,7 @@ const simorghLaunchDates = {
     liveRadio: '30th Sept 2019',
     mediaAssetPage: '6th Feb 2020',
     storyPage: '',
+    photoGalleryPage: '20th Feb 2010',
   },
   turkce: {
     articles: 'Sept 2019',
