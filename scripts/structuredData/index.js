@@ -76,20 +76,6 @@ const checkStructuredData = urls => {
     });
 };
 
-const populateTestValues = result => {
-  Object.entries(result.structuredData.metatags).forEach(entry => {
-    const metatag = entry[0];
-    const value = entry[1];
-    const test = result.passed.find(pass => {
-      return pass.test.includes(metatag);
-    });
-
-    if (test) {
-      test.value = value.toString();
-    }
-  });
-};
-
 const printResults = results => {
   const showInfo = process.argv[2] && process.argv[2] === '-i';
 
@@ -97,8 +83,7 @@ const printResults = results => {
     console.log(`\n${result.url}`);
 
     if (showInfo) {
-      populateTestValues(result);
-      printPassing(result.passed);
+      printPassing(result);
     } else {
       console.log(green(`  ✓ ${result.passed.length} tests passed`));
     }

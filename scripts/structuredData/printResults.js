@@ -32,8 +32,23 @@ const printFailures = failed => {
   });
 };
 
-const printPassing = passed => {
-  passed.forEach(pass => {
+const populateTestValues = result => {
+  Object.entries(result.structuredData.metatags).forEach(entry => {
+    const metatag = entry[0];
+    const value = entry[1];
+    const test = result.passed.find(pass => {
+      return pass.test.includes(metatag);
+    });
+
+    if (test) {
+      test.value = value.toString();
+    }
+  });
+};
+
+const printPassing = results => {
+  populateTestValues(results);
+  results.passed.forEach(pass => {
     console.log(`${green('  ✓ ', testSummary(pass))}\n \t${testDetails(pass)}`);
   });
 };
