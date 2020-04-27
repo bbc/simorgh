@@ -16,10 +16,8 @@ export const toggleReducer = (toggleState, action) => {
       return {
         ...toggleState,
         ...data.toggles,
-        ...{
-          ads: {
-            enabled: adsEnabled(data),
-          },
+        ads: {
+          enabled: adsEnabled(data),
         },
       };
     default:
