@@ -35,7 +35,7 @@ import {
 } from '#lib/utilities/parseAssetData';
 import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
-import Recommendations from '#containers/Recommendations';
+import Recommendations from '#containers/CpsRecommendations';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
