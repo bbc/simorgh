@@ -190,11 +190,11 @@ module.exports = () => ({
       frontPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/afrique'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/afrique'],
             enabled: false,
           },
           local: {
@@ -491,11 +491,11 @@ module.exports = () => ({
       frontPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/arabic'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/arabic'],
             enabled: false,
           },
           local: {
@@ -1385,11 +1385,11 @@ module.exports = () => ({
       frontPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/hausa'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/hausa'],
             enabled: false,
           },
           local: {
@@ -1537,11 +1537,11 @@ module.exports = () => ({
       frontPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/hindi'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/hindi'],
             enabled: false,
           },
           local: {
@@ -2072,11 +2072,11 @@ module.exports = () => ({
       frontPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/korean'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/korean'],
             enabled: false,
           },
           local: {
@@ -2489,11 +2489,11 @@ module.exports = () => ({
       frontPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/mundo'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/mundo'],
             enabled: false,
           },
           local: {
@@ -2859,11 +2859,11 @@ module.exports = () => ({
       frontPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/pashto'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/pashto'],
             enabled: false,
           },
           local: {
@@ -3012,11 +3012,11 @@ module.exports = () => ({
       frontPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/persian'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/persian'],
             enabled: false,
           },
           local: {
@@ -3291,11 +3291,11 @@ module.exports = () => ({
       frontPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/portuguese'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/portuguese'],
             enabled: false,
           },
           local: {
@@ -3527,11 +3527,11 @@ module.exports = () => ({
       frontPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/russian'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/russian'],
             enabled: false,
           },
           local: {
@@ -3687,11 +3687,11 @@ module.exports = () => ({
       frontPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/serbian/cyr'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/serbian/cyr'],
             enabled: false,
           },
           local: {
@@ -3799,11 +3799,11 @@ module.exports = () => ({
       frontPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/serbian/lat'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/serbian/lat'],
             enabled: false,
           },
           local: {
@@ -4062,11 +4062,11 @@ module.exports = () => ({
       frontPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/somali'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/somali'],
             enabled: false,
           },
           local: {
@@ -4230,11 +4230,11 @@ module.exports = () => ({
       frontPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/swahili'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/swahili'],
             enabled: false,
           },
           local: {
@@ -5037,11 +5037,11 @@ module.exports = () => ({
       frontPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/ukchina/simp'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/ukchina/simp'],
             enabled: false,
           },
           local: {
@@ -5155,11 +5155,11 @@ module.exports = () => ({
       frontPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/ukchina/trad'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/ukchina/trad'],
             enabled: false,
           },
           local: {
@@ -5273,11 +5273,11 @@ module.exports = () => ({
       frontPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/ukrainian'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/ukrainian'],
             enabled: false,
           },
           local: {
@@ -5944,11 +5944,11 @@ module.exports = () => ({
       frontPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/zhongwen/simp'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/zhongwen/simp'],
             enabled: false,
           },
           local: {
@@ -6062,11 +6062,11 @@ module.exports = () => ({
       frontPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/zhongwen/trad'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/zhongwen/trad'],
             enabled: false,
           },
           local: {
