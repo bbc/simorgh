@@ -31,4 +31,10 @@ export default () => {
 
     expect(serviceScripts.length).toBe(1);
   });
+
+  it('AMP attribute is not set', () => {
+    const htmlEl = document.querySelector('html');
+
+    expect(htmlEl.getAttribute('amp')).toBeNull();
+  });
 };
