@@ -11,6 +11,7 @@ import addHeadlineBlock from './addHeadlineBlock';
 import timestampToMilliseconds from './timestampToMilliseconds';
 import addSummaryBlock from './addSummaryBlock';
 import cpsOnlyOnwardJourneys from './cpsOnlyOnwardJourneys';
+import addRecommendationsBlock from './addRecommendationsBlock';
 import addBylineBlock from './addBylineBlock';
 import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
@@ -37,6 +38,7 @@ const processOptimoBlocks = pipe(
   addIdsToBlocks,
   applyBlockPositioning,
   cpsOnlyOnwardJourneys,
+  addRecommendationsBlock,
 );
 const transformJson = async json => {
   try {
