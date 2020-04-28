@@ -14,9 +14,9 @@ exports[`Canonical Media Asset Page I can see the headline 1`] = `"Trump long he
 
 exports[`Canonical Media Asset Page I can see the timestamp 1`] = `"۲۶ بهمن ۱۳۹۷ - ۱۵ فوریه ۲۰۱۹"`;
 
-exports[`Canonical Media Asset Page Media player embed A11y I can read the media player title 1`] = `"پخش صدا و تصویر"`;
+exports[`Canonical Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"پخش صدا و تصویر"`;
 
-exports[`Canonical Media Asset Page Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa"`;
+exports[`Canonical Media Asset Page Media Player should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa"`;
 
 exports[`Canonical Media Asset Page SEO Canonical link 1`] = `"http://localhost:7080/persian/iran-23231114"`;
 

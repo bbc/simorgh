@@ -1,18 +1,20 @@
 export default () => {
-  describe('Media player embed', () => {
-    it('I can see the media player embed', () => {
-      const audioPlayerIframe = document.querySelector('iframe, amp-iframe');
+  describe('Media Player', () => {
+    const mediaPlayerIframe = document.querySelector('iframe, amp-iframe');
 
-      expect(audioPlayerIframe.getAttribute('src')).toMatchSnapshot();
+    beforeEach(() => {
+      expect(mediaPlayerIframe).toBeInTheDocument();
     });
 
-    describe('A11y', () => {
-      it('I can read the media player title', () => {
-        const mediaPlayerEl = document.querySelector('iframe, amp-iframe');
+    it('should be rendered', () => {
+      expect(mediaPlayerIframe.getAttribute('src')).toBeTruthy();
+      expect(mediaPlayerIframe.getAttribute('src')).toMatchSnapshot();
+    });
 
-        expect(mediaPlayerEl).toBeInTheDocument();
-        expect(mediaPlayerEl.getAttribute('title')).toBeTruthy();
-        expect(mediaPlayerEl.getAttribute('title')).toMatchSnapshot();
+    describe('a11y', () => {
+      it('assistive technology can read the media player title', () => {
+        expect(mediaPlayerIframe.getAttribute('title')).toBeTruthy();
+        expect(mediaPlayerIframe.getAttribute('title')).toMatchSnapshot();
       });
     });
   });
