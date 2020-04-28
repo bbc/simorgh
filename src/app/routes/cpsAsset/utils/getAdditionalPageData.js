@@ -7,16 +7,8 @@ const pageTypeUrls = (assetType, service) => {
     case STORY_PAGE:
       return [
         {
-          name: 'secondaryColumn',
-          path: `/${service}`,
-        },
-        {
           name: 'mostRead',
           path: `/${service}/mostread`,
-        },
-        {
-          name: 'igbo',
-          url: `/igbo`,
         },
       ];
     default:
