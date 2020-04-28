@@ -179,7 +179,7 @@ const CanonicalMostRead = ({
                 numberOfItems={items.length}
                 dir={dir}
                 columnLayout={columnLayout}
-                typography={rankTypography}
+                rankTypography={rankTypography}
               />
               <MostReadLink
                 dir={dir}
@@ -187,7 +187,7 @@ const CanonicalMostRead = ({
                 script={script}
                 title={item.title}
                 href={item.href}
-                typography={linkTypography}
+                linkTypography={linkTypography}
                 rankTypography={rankTypography}
               >
                 {item.timestamp}
