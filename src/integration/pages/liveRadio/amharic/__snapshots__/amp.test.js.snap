@@ -1,5 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`AMP Live Radio A11y Banner should contain product and localised service name  1`] = `"BBC News, አማርኛ"`;
+
+exports[`AMP Live Radio A11y Banner should contain product and localised service name with lang 1`] = `"en-GB"`;
+
 exports[`AMP Live Radio A11y I can see the skip to content link 1`] = `"ወደ ዋናው ይዘት ይለፉ"`;
 
 exports[`AMP Live Radio AMP Consent config 1`] = `

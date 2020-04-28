@@ -1,5 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`AMP Media Asset Page A11y Banner should contain product and localised service name  1`] = `"BBC News, فارسی"`;
+
+exports[`AMP Media Asset Page A11y Banner should contain product and localised service name with lang 1`] = `"en-GB"`;
+
 exports[`AMP Media Asset Page A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
 
 exports[`AMP Media Asset Page AMP Consent config 1`] = `
