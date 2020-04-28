@@ -32,4 +32,10 @@ export default () => {
       ),
     ).toMatchSnapshot();
   });
+
+  it('AMP attribute is set', () => {
+    const htmlEl = document.querySelector('html');
+
+    expect(htmlEl.getAttribute('amp')).not.toBeNull();
+  });
 };
