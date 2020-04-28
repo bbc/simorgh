@@ -8,6 +8,8 @@ exports[`AMP Story Page Footer I can see the footer copyright and external linki
 
 exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
+exports[`AMP Story Page I can see an image with a caption: "Pie de foto, Llegó el día de la salida de Reino Unido de la UE." 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
+
 exports[`AMP Story Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
 
 exports[`AMP Story Page SEO Dir attribute 1`] = `"ltr"`;
