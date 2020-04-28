@@ -44,12 +44,35 @@ export default () => {
       expect(htmlEl.getAttribute('dir')).toMatchSnapshot();
     });
 
-    describe('Apple Touch Icons', () => {
+    describe('Apple Touch', () => {
       const appleTouchIcons = document.querySelectorAll(
         'head link[rel="apple-touch-icon"]',
       );
 
       appleTouchIcons.forEach(icon => {
+        it('Icon', () => {
+          expect(icon).toBeInTheDocument();
+          expect(icon.getAttribute('href')).toBeTruthy();
+
+          const size = icon.getAttribute('sizes') || 'default';
+          expect(icon.getAttribute('href')).toMatchSnapshot(size);
+        });
+      });
+
+      it('Startup Image', () => {
+        const startupImage = document.querySelector(
+          'head link[rel="apple-touch-startup-image"]',
+        );
+
+        expect(startupImage.getAttribute('href')).toBeTruthy();
+        expect(startupImage.getAttribute('href')).toMatchSnapshot();
+      });
+    });
+
+    describe('Icons', () => {
+      const icons = document.querySelectorAll('head link[rel="icon"]');
+
+      icons.forEach(icon => {
         it('', () => {
           expect(icon).toBeInTheDocument();
           expect(icon.getAttribute('href')).toBeTruthy();
