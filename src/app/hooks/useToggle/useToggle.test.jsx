@@ -16,6 +16,11 @@ jest.mock('../../lib/config/toggles/index.js', () => ({
     ads: {
       enabled: true,
     },
+    geoIp: {
+      ukCombined: true,
+      advertiseCombined: true,
+      countryCode: 'gb',
+    },
   },
 }));
 
@@ -39,6 +44,11 @@ describe('useToggle custom hook', () => {
             value: '',
           },
         },
+        geoIp: {
+          ukCombined: true,
+          advertiseCombined: true,
+          countryCode: 'gb',
+        },
       });
       let result;
       const wrapper = ({ children }) => (
@@ -54,7 +64,7 @@ describe('useToggle custom hook', () => {
         result = renderHook(() => useToggle('ads'), { wrapper }).result;
       });
 
-      expect(result.current).toEqual({ enabled: true, value: '' });
+      expect(result.current).toEqual({ enabled: true });
     });
   });
 
@@ -65,6 +75,11 @@ describe('useToggle custom hook', () => {
           ads: {
             enabled: false,
             value: '',
+          },
+          geoIp: {
+            ukCombined: true,
+            advertiseCombined: true,
+            countryCode: 'gb',
           },
         },
       });
@@ -82,7 +97,7 @@ describe('useToggle custom hook', () => {
         result = renderHook(() => useToggle('ads'), { wrapper }).result;
       });
 
-      expect(result.current).toEqual({ enabled: false, value: '' });
+      expect(result.current).toEqual({ enabled: false });
     });
   });
 
@@ -94,6 +109,11 @@ describe('useToggle custom hook', () => {
             enabled: false,
             value: '',
           },
+        },
+        geoIp: {
+          ukCombined: true,
+          advertiseCombined: true,
+          countryCode: 'gb',
         },
       });
       let result;
