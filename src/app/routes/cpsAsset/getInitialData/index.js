@@ -17,6 +17,7 @@ import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import getAdditionalPageData from '../utils/getAdditionalPageData';
 
 const formatPageData = pipe(
   addAnalyticsCounterName,
@@ -52,13 +53,23 @@ const transformJson = async json => {
   }
 };
 
-export default async ({ path: pathname }) => {
+export default async ({ path: pathname, service, variant }) => {
   const { json, ...rest } = await fetchPageData(pathname);
+
+  const additionalPageData = await getAdditionalPageData(
+    json,
+    service,
+    variant,
+  );
+
+  console.log(additionalPageData);
 
   return {
     ...rest,
     ...(json && {
-      pageData: await transformJson(json),
+      pageData: additionalPageData
+        ? { ...(await transformJson(json)), ...additionalPageData }
+        : await transformJson(json),
     }),
   };
 };
