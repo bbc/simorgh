@@ -46,7 +46,7 @@ export default () => {
   }
 
   const relatedContentLinks = document.querySelectorAll(
-    'section [role="list"] a',
+    'section[aria-labelledby="related-content-heading"] a',
   );
 
   if (relatedContentLinks) {
