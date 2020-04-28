@@ -23,39 +23,39 @@ export default () => {
     expect(timestampEl.textContent).toMatchSnapshot();
   });
 
-  const bulletedListEl = document.querySelector('main ul[role="list"] > li');
+  const bulletedListItem = document.querySelector('main ul[role="list"] > li');
 
-  if (bulletedListEl) {
+  if (bulletedListItem) {
     it('I can see a bulleted list item', () => {
-      expect(bulletedListEl).toBeInTheDocument();
-      expect(bulletedListEl.textContent).toBeTruthy();
-      expect(bulletedListEl.textContent).toMatchSnapshot();
+      expect(bulletedListItem).toBeInTheDocument();
+      expect(bulletedListItem.textContent).toBeTruthy();
+      expect(bulletedListItem.textContent).toMatchSnapshot();
     });
   }
 
-  const bulletedListlink = document.querySelector(
+  const bulletedListItemWithLink = document.querySelector(
     'main ul[role="list"] > li > a',
   );
 
-  if (bulletedListlink) {
+  if (bulletedListItemWithLink) {
     it('I can see a bulleted list item with link', () => {
-      expect(bulletedListlink.getAttribute('href')).toMatchSnapshot(
-        bulletedListlink.textContent,
+      expect(bulletedListItemWithLink.getAttribute('href')).toMatchSnapshot(
+        bulletedListItemWithLink.textContent,
       );
     });
   }
 
-  const relatedContentItems = document.querySelectorAll(
+  const relatedContentLinks = document.querySelectorAll(
     'section [role="list"] a',
   );
 
-  if (relatedContentItems) {
+  if (relatedContentLinks) {
     it('I can see related content', () => {
-      relatedContentItems.forEach(relatedContent => {
-        expect(relatedContent).toBeInTheDocument();
-        expect(relatedContent.textContent).toBeTruthy();
-        expect(relatedContent.getAttribute('href')).toMatchSnapshot(
-          relatedContent.textContent,
+      relatedContentLinks.forEach(relatedContentLink => {
+        expect(relatedContentLink).toBeInTheDocument();
+        expect(relatedContentLink.textContent).toBeTruthy();
+        expect(relatedContentLink.getAttribute('href')).toMatchSnapshot(
+          relatedContentLink.textContent,
         );
       });
     });
