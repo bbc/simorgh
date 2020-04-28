@@ -108,23 +108,25 @@ exports[`AMP Live Radio Media player embed A11y I can read the media player titl
 
 exports[`AMP Live Radio Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp?morph_env=live"`;
 
-exports[`AMP Live Radio SEO Apple Touch Icons : 72x72 1`] = `"https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-72x72.png"`;
+exports[`AMP Live Radio SEO Apple Touch Icon: 72x72 1`] = `"https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-72x72.png"`;
 
-exports[`AMP Live Radio SEO Apple Touch Icons : 96x96 1`] = `"https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-96x96.png"`;
+exports[`AMP Live Radio SEO Apple Touch Icon: 96x96 1`] = `"https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-96x96.png"`;
 
-exports[`AMP Live Radio SEO Apple Touch Icons : 128x128 1`] = `"https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-128x128.png"`;
+exports[`AMP Live Radio SEO Apple Touch Icon: 128x128 1`] = `"https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-128x128.png"`;
 
-exports[`AMP Live Radio SEO Apple Touch Icons : 144x144 1`] = `"https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-144x144.png"`;
+exports[`AMP Live Radio SEO Apple Touch Icon: 144x144 1`] = `"https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-144x144.png"`;
 
-exports[`AMP Live Radio SEO Apple Touch Icons : 152x152 1`] = `"https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-152x152.png"`;
+exports[`AMP Live Radio SEO Apple Touch Icon: 152x152 1`] = `"https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-152x152.png"`;
 
-exports[`AMP Live Radio SEO Apple Touch Icons : 192x192 1`] = `"https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-192x192.png"`;
+exports[`AMP Live Radio SEO Apple Touch Icon: 192x192 1`] = `"https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-192x192.png"`;
 
-exports[`AMP Live Radio SEO Apple Touch Icons : 384x384 1`] = `"https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-384x384.png"`;
+exports[`AMP Live Radio SEO Apple Touch Icon: 384x384 1`] = `"https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-384x384.png"`;
 
-exports[`AMP Live Radio SEO Apple Touch Icons : 512x512 1`] = `"https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-512x512.png"`;
+exports[`AMP Live Radio SEO Apple Touch Icon: 512x512 1`] = `"https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-512x512.png"`;
 
-exports[`AMP Live Radio SEO Apple Touch Icons : default 1`] = `"http://localhost:7080/korean/images/icons/icon-192x192.png"`;
+exports[`AMP Live Radio SEO Apple Touch Icon: default 1`] = `"http://localhost:7080/korean/images/icons/icon-192x192.png"`;
+
+exports[`AMP Live Radio SEO Apple Touch Startup Image 1`] = `"https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-512x512.png"`;
 
 exports[`AMP Live Radio SEO Canonical link 1`] = `"http://localhost:7080/korean/bbc_korean_radio/liveradio"`;
 
@@ -135,6 +137,12 @@ exports[`AMP Live Radio SEO FB admins 1`] = `"100004154058350"`;
 exports[`AMP Live Radio SEO FB app ID 1`] = `"1609039196070050"`;
 
 exports[`AMP Live Radio SEO Heading level 1 1`] = `"BBC 코리아 라디오"`;
+
+exports[`AMP Live Radio SEO Icons : 72x72 1`] = `"https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-72x72.png"`;
+
+exports[`AMP Live Radio SEO Icons : 96x96 1`] = `"https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-96x96.png"`;
+
+exports[`AMP Live Radio SEO Icons : 192x192 1`] = `"https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-192x192.png"`;
 
 exports[`AMP Live Radio SEO Lang attribute 1`] = `"ko"`;
 
