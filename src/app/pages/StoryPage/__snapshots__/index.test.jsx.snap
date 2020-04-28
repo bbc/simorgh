@@ -2,7 +2,7 @@
 
 exports[`Story Page should not show the pop-out timestamp when allowDateStamp is false 1`] = `
 <DocumentFragment>
-  .c36 {
+  .c37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12,7 +12,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   flex-direction: column;
 }
 
-.c37 {
+.c38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -31,7 +31,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   align-items: baseline;
 }
 
-.c38 {
+.c39 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -51,18 +51,18 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   align-items: center;
 }
 
-.c34 {
+.c35 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c32 {
+.c33 {
   position: relative;
   z-index: 0;
   margin-top: 2rem;
 }
 
-.c35 {
+.c36 {
   margin: 0;
   padding: 0;
 }
@@ -235,7 +235,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   overflow: hidden;
 }
 
-.c44 {
+.c45 {
   padding: 0.5rem 0 1rem;
 }
 
@@ -485,7 +485,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:37.5rem) {
-  .c37 {
+  .c38 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -494,39 +494,39 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c38 {
+  .c39 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c38 {
+  .c39 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c38 {
+  .c39 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c38 {
+  .c39 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c34 {
+  .c35 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c34 {
+  .c35 {
     position: absolute;
     left: 0;
     right: 0;
@@ -535,13 +535,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:37.5rem) {
-  .c32 {
+  .c33 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c32 {
+  .c33 {
     margin-bottom: 1.5rem;
   }
 }
@@ -1389,7 +1389,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               <span
                                 class="c18"
                               >
-                                Wia dis foto come from,
+                                Wia dis foto come from, 
                               </span>
                               <span
                                 lang="en-GB"
@@ -1408,7 +1408,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             <span
                               class="c18"
                             >
-                              Wetin we call dis foto,
+                              Wetin we call dis foto, 
                             </span>
                             <p>
                               Some people went to the NTA awards recently.
@@ -1425,7 +1425,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       class="c21"
                     >
                       <b>
-                         This is introduction text, it should be bold by default, but also support
+                         This is introduction text, it should be bold by default, but also support 
                       </b>
                       <a
                         class="c22"
@@ -1448,7 +1448,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         class="c23"
                       >
                         <b>
-                          This is a subheadline! that has
+                          This is a subheadline! that has 
                         </b>
                       </i>
                       <a
@@ -1480,7 +1480,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           class="c26"
                           role="listitem"
                         >
-                          It can have
+                          It can have 
                           <b>
                             bold text
                           </b>
@@ -1516,14 +1516,14 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     <p
                       class="c21"
                     >
-                      Feta the big cheese macaroni cheese.
+                      Feta the big cheese macaroni cheese. 
                       <a
                         class="c22"
                         href="https://bbc.com/pidgin/23248703"
                       >
                         Caerphilly danish fontina
                       </a>
-                       queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese.
+                       queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. 
                       <b>
                         Cow cheeseburger
                       </b>
@@ -1556,7 +1556,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               <span
                                 class="c18"
                               >
-                                Wia dis foto come from,
+                                Wia dis foto come from, 
                               </span>
                               <span
                                 lang="en-GB"
@@ -1609,7 +1609,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     <p
                       class="c21"
                     >
-                      Rubber cheese macaroni
+                      Rubber cheese macaroni 
                       <i
                         class="c23"
                       >
@@ -1639,7 +1639,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           class="c26"
                           role="listitem"
                         >
-                          It can have
+                          It can have 
                           <b>
                             bold text
                           </b>
@@ -2104,7 +2104,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 `;
 
 exports[`Story Page snapshots should match snapshot for STY 1`] = `
-.c38 {
+.c39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2114,7 +2114,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   flex-direction: column;
 }
 
-.c39 {
+.c40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2133,7 +2133,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   align-items: baseline;
 }
 
-.c40 {
+.c41 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2153,18 +2153,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   align-items: center;
 }
 
-.c36 {
+.c37 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c34 {
+.c35 {
   position: relative;
   z-index: 0;
   margin-top: 2rem;
 }
 
-.c37 {
+.c38 {
   margin: 0;
   padding: 0;
 }
@@ -2352,7 +2352,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   overflow: hidden;
 }
 
-.c46 {
+.c47 {
   padding: 0.5rem 0 1rem;
 }
 
@@ -2606,7 +2606,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c39 {
+  .c40 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -2615,39 +2615,39 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c40 {
+  .c41 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c40 {
+  .c41 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c40 {
+  .c41 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c40 {
+  .c41 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c36 {
+  .c37 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c36 {
+  .c37 {
     position: absolute;
     left: 0;
     right: 0;
@@ -2656,13 +2656,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c34 {
+  .c35 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c34 {
+  .c35 {
     margin-bottom: 1.5rem;
   }
 }
@@ -3757,7 +3757,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   <span
                                     class="c18"
                                   >
-                                    Wia dis foto come from,
+                                    Wia dis foto come from, 
                                   </span>
                                   <span
                                     lang="en-GB"
@@ -3776,7 +3776,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 <span
                                   class="c18"
                                 >
-                                  Wetin we call dis foto,
+                                  Wetin we call dis foto, 
                                 </span>
                                 <p>
                                   Some people went to the NTA awards recently.
@@ -3803,7 +3803,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           class="c23"
                         >
                           <b>
-                             This is introduction text, it should be bold by default, but also support
+                             This is introduction text, it should be bold by default, but also support 
                           </b>
                           <a
                             class="c24"
@@ -3826,7 +3826,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             class="c25"
                           >
                             <b>
-                              This is a subheadline! that has
+                              This is a subheadline! that has 
                             </b>
                           </i>
                           <a
@@ -3858,7 +3858,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="c28"
                               role="listitem"
                             >
-                              It can have
+                              It can have 
                               <b>
                                 bold text
                               </b>
@@ -3894,14 +3894,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         <p
                           class="c23"
                         >
-                          Feta the big cheese macaroni cheese.
+                          Feta the big cheese macaroni cheese. 
                           <a
                             class="c24"
                             href="https://bbc.com/pidgin/23248703"
                           >
                             Caerphilly danish fontina
                           </a>
-                           queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese.
+                           queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. 
                           <b>
                             Cow cheeseburger
                           </b>
@@ -3934,7 +3934,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   <span
                                     class="c18"
                                   >
-                                    Wia dis foto come from,
+                                    Wia dis foto come from, 
                                   </span>
                                   <span
                                     lang="en-GB"
@@ -3987,7 +3987,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         <p
                           class="c23"
                         >
-                          Rubber cheese macaroni
+                          Rubber cheese macaroni 
                           <i
                             class="c25"
                           >
@@ -4017,7 +4017,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="c28"
                               role="listitem"
                             >
-                              It can have
+                              It can have 
                               <b>
                                 bold text
                               </b>
