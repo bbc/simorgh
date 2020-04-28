@@ -10,7 +10,7 @@
     "type": "STY",
     "createdBy": "kyrgyz-v6",
     "language": "ky",
-    "lastUpdated": 1588079758776,
+    "lastUpdated": 1588086814630,
     "firstPublished": 1587739877000,
     "lastPublished": 1587739877000,
     "timestamp": 1587739877000,
@@ -38,17 +38,11 @@
     "passport": { "taggings": [] },
     "tags": {},
     "version": "v1.2.0",
-    "blockTypes": ["paragraph", "image", "crosshead", "social_embed"],
+    "blockTypes": ["image", "paragraph", "crosshead", "social_embed"],
     "includeComments": false
   },
   "content": {
     "blocks": [
-      {
-        "text": "This is a test STY for social embeds.",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
       {
         "id": "63734037",
         "subType": "body",
@@ -61,6 +55,12 @@
         "copyrightHolder": "BBC",
         "positionHint": "full-width",
         "type": "image"
+      },
+      {
+        "text": "This is a test STY for social embeds.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
       },
       {
         "text": "Social embed content galore.",
@@ -122,11 +122,7 @@
         "id": "UqdIoCjy1CM",
         "type": "social_embed"
       },
-      {
-        "text": "<bold>Twitte</bold><bold>r</bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
+      { "text": "Twitter", "markupType": "plain_text", "type": "crosshead" },
       {
         "href": "https://twitter.com/bbckyrgyz/status/1253664751588126722",
         "source": "twitter",
@@ -148,39 +144,6 @@
           }
         },
         "id": "1253664751588126722",
-        "type": "social_embed"
-      },
-      {
-        "text": "Instagram with non-existent content",
-        "markupType": "plain_text",
-        "type": "crosshead"
-      },
-      {
-        "href": "https://www.instagram.com/p/BWp1s3lH066/",
-        "source": "instagram",
-        "id": "BWp1s3lH066",
-        "type": "social_embed"
-      },
-      {
-        "text": "YouTube with non-existent content",
-        "markupType": "plain_text",
-        "type": "crosshead"
-      },
-      {
-        "href": "https://www.youtube.com/watch?v=TIc-koGM6G1",
-        "source": "youtube",
-        "id": "TIc-koGM6G1",
-        "type": "social_embed"
-      },
-      {
-        "text": "Twitter with non-existent content",
-        "markupType": "plain_text",
-        "type": "crosshead"
-      },
-      {
-        "href": "https://twitter.com/bbckyrgyz/status/125366475158812672G",
-        "source": "twitter",
-        "id": "125366475158812672G",
         "type": "social_embed"
       },
       { "text": "Facebook", "markupType": "plain_text", "type": "crosshead" },
