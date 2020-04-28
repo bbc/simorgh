@@ -15,5 +15,22 @@ export default () => {
 
       expect(accessibleH1El).toBeInTheDocument();
     });
+
+    describe('Banner should contain product and localised service name', () => {
+      const bannerTextEl = document.querySelector(
+        'header div[class^="Banner"] span[class^="VisuallyHiddenText"]',
+      );
+
+      it('', () => {
+        expect(bannerTextEl).toBeInTheDocument();
+        expect(bannerTextEl.textContent).toMatchSnapshot();
+      });
+
+      it('with lang', () => {
+        const productLang = bannerTextEl.querySelector('span');
+        expect(productLang).toBeInTheDocument();
+        expect(productLang.getAttribute('lang')).toMatchSnapshot();
+      });
+    });
   });
 };

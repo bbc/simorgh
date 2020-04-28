@@ -1,5 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`AMP Articles A11y Banner should contain product and localised service name  1`] = `"BBC News, Mundo"`;
+
+exports[`AMP Articles A11y Banner should contain product and localised service name with lang 1`] = `"en-GB"`;
+
 exports[`AMP Articles A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
 
 exports[`AMP Articles AMP Consent config 1`] = `

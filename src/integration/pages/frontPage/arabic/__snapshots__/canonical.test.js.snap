@@ -1,5 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Canonical Front Page A11y Banner should contain product and localised service name  1`] = `"BBC News, عربي"`;
+
+exports[`Canonical Front Page A11y Banner should contain product and localised service name with lang 1`] = `"en-GB"`;
+
 exports[`Canonical Front Page A11y I can see the skip to content link 1`] = `"إذهب الى المحتوى"`;
 
 exports[`Canonical Front Page Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=5&p=arabic.page&x1=[urn:bbc:cps:3f0c7dec-d826-8578-e050-380a4e807810]&x2=[responsive]&x3=[news-arabic]&x4=[ar]&x7=[index-home]&x8=[simorgh-nojs]&x9=[الرئيسية+-+BBC+News+عربي]&x11=[1970-01-18T02:13:01.429Z]&x12=[1970-01-19T02:08:48.876Z]"`;
