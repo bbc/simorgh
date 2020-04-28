@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Ad Container Snapshots should correctly render a Canonical ad 1`] = `<div />`;
+
 exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
 .c0 {
   margin: 0 auto;
@@ -92,5 +94,7 @@ exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
   </body>
 </html>
 `;
+
+exports[`Ad Container Snapshots should not render a Canonical ad for News 1`] = `<div />`;
 
 exports[`Ad Container Snapshots should not render an AMP ad for News 1`] = `<div />`;
