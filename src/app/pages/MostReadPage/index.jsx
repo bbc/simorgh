@@ -6,7 +6,6 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import {
@@ -29,22 +28,15 @@ import Grid, { GelPageGrid } from '#app/components/Grid';
 const StyledMain = styled.main.attrs({ role: 'main' })`
   flex-grow: 1;
   margin: 0 ${GEL_SPACING};
+
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     margin: 0 ${GEL_SPACING_DBL};
   }
-`;
-
-const ConstrainedWrapper = styled.div`
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     margin-bottom: ${GEL_SPACING_TRPL};
   }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     margin-bottom: ${GEL_SPACING_QUIN};
-  }
-  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    width: 100%; /* Needed for IE11 */
-    margin: 0 auto ${GEL_SPACING_QUIN};
-    max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
   }
 `;
 
@@ -57,11 +49,19 @@ const MostReadHeader = styled.h1.attrs({
   ${({ service }) => getSansRegular(service)};
   margin: 0;
   padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_TRPL};
+
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     padding: ${GEL_SPACING_TRPL} 0 ${GEL_SPACING_DBL};
   }
+
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     padding: ${GEL_SPACING_TRPL} 0 ${GEL_SPACING};
+  }
+
+  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
+    width: 100%; /* Needed for IE11 */
+    margin: 0 auto;
+    max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
   }
 `;
 
@@ -76,11 +76,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
   } = useContext(ServiceContext);
 
   const MostReadWrapper = ({ children }) => (
-    <ConstrainedWrapper>
-      <MostReadHeader script={script} service={service}>
-        {header}
-      </MostReadHeader>
-
+    <StyledMain>
       <GelPageGrid
         dir={dir}
         columns={{
@@ -116,7 +112,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
           {children}
         </Grid>
       </GelPageGrid>
-    </ConstrainedWrapper>
+    </StyledMain>
   );
 
   MostReadWrapper.propTypes = {
@@ -134,14 +130,15 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
         openGraphType="website"
       />
 
-      <StyledMain>
-        <MostReadContainer
-          mostReadEndpointOverride={mostReadEndpointOverride}
-          wrapper={MostReadWrapper}
-          columnLayout="oneColumn"
-          initialData={pageData}
-        />
-      </StyledMain>
+      <MostReadHeader script={script} service={service}>
+        {header}
+      </MostReadHeader>
+      <MostReadContainer
+        mostReadEndpointOverride={mostReadEndpointOverride}
+        columnLayout="oneColumn"
+        initialData={pageData}
+        wrapper={MostReadWrapper}
+      />
     </>
   );
 };
