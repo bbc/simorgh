@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Most Read Page Main should match snapshot for most read page 1`] = `
-.c8 {
+.c7 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   grid-template-rows: repeat(10,auto);
 }
 
-.c13 {
+.c12 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -21,7 +21,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   padding: 0;
 }
 
-.c15 {
+.c14 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -34,13 +34,13 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   margin-bottom: 0.5rem;
 }
 
-.c15:hover,
-.c15:focus {
+.c14:hover,
+.c14:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c15:before {
+.c14:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -52,18 +52,18 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   z-index: 1;
 }
 
-.c14 {
+.c13 {
   padding-top: 0.375rem;
   padding-bottom: 1.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.c16 {
+.c15 {
   padding-top: 0.5rem;
 }
 
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -75,11 +75,11 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   padding: 0;
 }
 
-.c10 {
+.c9 {
   position: relative;
 }
 
-.c17 {
+.c16 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -89,7 +89,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   font-style: normal;
 }
 
-.c0 {
+.c1 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -97,7 +97,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   margin: 0 0.5rem;
 }
 
-.c2 {
+.c0 {
   color: #6E6E73;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -109,14 +109,14 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @supports (display:grid) {
-  .c3 {
+  .c2 {
     display: grid;
     position: initial;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c5 {
+  .c4 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
     margin-left: 0%;
@@ -126,7 +126,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c5 {
+  .c4 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
     margin-left: 0%;
@@ -136,7 +136,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c4 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
     margin-left: 0%;
@@ -146,7 +146,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
+  .c4 {
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
     margin-left: 0%;
@@ -156,7 +156,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c5 {
+  .c4 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     margin-left: 0%;
@@ -166,7 +166,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c5 {
+  .c4 {
     width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
     margin-left: 10%;
@@ -176,131 +176,131 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @supports (display:grid) {
-  .c5 {
+  .c4 {
     display: block;
   }
 }
 
 @supports (display:grid) {
-  .c7 {
+  .c6 {
     display: grid;
     position: initial;
   }
 }
 
 @supports (display:grid) {
-  .c9 {
+  .c8 {
     display: block;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c12 {
+  .c11 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c12 {
+  .c11 {
     min-width: 2.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c12 {
+  .c11 {
     min-width: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c11 {
     min-width: 4rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
+  .c12 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c13 {
+  .c12 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c15 {
+  .c14 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c15 {
+  .c14 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c15 {
+  .c14 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c14 {
+  .c13 {
     padding-right: 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c17 {
+  .c16 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c16 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c5 {
     margin-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c6 {
+  .c5 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c4 {
+  .c3 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c4 {
+  .c3 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c0 {
+  .c1 {
     margin: 0 1rem;
   }
 }
@@ -311,43 +311,43 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:63rem) {
   .c1 {
     margin-bottom: 2.5rem;
   }
 }
 
-@media (min-width:80rem) {
-  .c1 {
-    width: 100%;
-    margin: 0 auto 2.5rem;
-    max-width: 80rem;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c0 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c2 {
+  .c0 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
+  .c0 {
     padding: 1.5rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c2 {
+  .c0 {
     padding: 1.5rem 0 0.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 80rem;
   }
 }
 
@@ -559,448 +559,444 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
       <div>
         chartbeat
       </div>
-      <main
+      <h1
         class="c0"
+        id="content"
+        tabindex="-1"
+      >
+        De one we dem de read well well
+      </h1>
+      <main
+        class="c1"
         role="main"
       >
         <div
-          class="c1"
+          class="c2 c3"
+          dir="ltr"
         >
-          <h1
-            class="c2"
-            id="content"
-            tabindex="-1"
-          >
-            De one we dem de read well well
-          </h1>
           <div
-            class="c3 c4"
+            class="c4"
             dir="ltr"
           >
             <div
               class="c5"
-              dir="ltr"
             >
-              <div
-                class="c6"
+              <ol
+                class="c6 c7"
+                dir="ltr"
+                role="list"
               >
-                <ol
-                  class="c7 c8"
+                <li
+                  class="c8 c9"
                   dir="ltr"
-                  role="list"
+                  role="listitem"
                 >
-                  <li
-                    class="c9 c10"
-                    dir="ltr"
-                    role="listitem"
+                  <div
+                    class="c10"
                   >
                     <div
                       class="c11"
+                      dir="ltr"
                     >
-                      <div
+                      <span
                         class="c12"
-                        dir="ltr"
                       >
-                        <span
-                          class="c13"
-                        >
-                          1
-                        </span>
-                      </div>
-                      <div
+                        1
+                      </span>
+                    </div>
+                    <div
+                      class="c13"
+                      dir="ltr"
+                    >
+                      <a
                         class="c14"
-                        dir="ltr"
+                        href="/pidgin/tori-46729879"
                       >
-                        <a
-                          class="c15"
-                          href="/pidgin/tori-46729879"
-                        >
-                          Public Holidays wey go happun for 2019
-                        </a>
-                        <div
+                        Public Holidays wey go happun for 2019
+                      </a>
+                      <div
+                        class="c15"
+                      >
+                        <time
                           class="c16"
+                          datetime="2019-05-21"
                         >
-                          <time
-                            class="c17"
-                            datetime="2019-05-21"
-                          >
-                            De one we dem update for: 21st May 2019
-                          </time>
-                        </div>
+                          De one we dem update for: 21st May 2019
+                        </time>
                       </div>
                     </div>
-                  </li>
-                  <li
-                    class="c9 c10"
-                    dir="ltr"
-                    role="listitem"
+                  </div>
+                </li>
+                <li
+                  class="c8 c9"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
                   >
                     <div
                       class="c11"
+                      dir="ltr"
                     >
-                      <div
+                      <span
                         class="c12"
-                        dir="ltr"
                       >
-                        <span
-                          class="c13"
-                        >
-                          2
-                        </span>
-                      </div>
-                      <div
+                        2
+                      </span>
+                    </div>
+                    <div
+                      class="c13"
+                      dir="ltr"
+                    >
+                      <a
                         class="c14"
-                        dir="ltr"
+                        href="/pidgin/tori-50304653"
                       >
-                        <a
-                          class="c15"
-                          href="/pidgin/tori-50304653"
-                        >
-                          Liberia banks don run out of money
-                        </a>
-                        <div
+                        Liberia banks don run out of money
+                      </a>
+                      <div
+                        class="c15"
+                      >
+                        <time
                           class="c16"
+                          datetime="2019-11-05"
                         >
-                          <time
-                            class="c17"
-                            datetime="2019-11-05"
-                          >
-                            De one we dem update for: 5th November 2019
-                          </time>
-                        </div>
+                          De one we dem update for: 5th November 2019
+                        </time>
                       </div>
                     </div>
-                  </li>
-                  <li
-                    class="c9 c10"
-                    dir="ltr"
-                    role="listitem"
+                  </div>
+                </li>
+                <li
+                  class="c8 c9"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
                   >
                     <div
                       class="c11"
+                      dir="ltr"
                     >
-                      <div
+                      <span
                         class="c12"
-                        dir="ltr"
                       >
-                        <span
-                          class="c13"
-                        >
-                          3
-                        </span>
-                      </div>
-                      <div
+                        3
+                      </span>
+                    </div>
+                    <div
+                      class="c13"
+                      dir="ltr"
+                    >
+                      <a
                         class="c14"
-                        dir="ltr"
+                        href="/pidgin/tori-50298882"
                       >
-                        <a
-                          class="c15"
-                          href="/pidgin/tori-50298882"
-                        >
-                          Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
-                        </a>
-                        <div
+                        Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
+                      </a>
+                      <div
+                        class="c15"
+                      >
+                        <time
                           class="c16"
+                          datetime="2019-11-05"
                         >
-                          <time
-                            class="c17"
-                            datetime="2019-11-05"
-                          >
-                            De one we dem update for: 5th November 2019
-                          </time>
-                        </div>
+                          De one we dem update for: 5th November 2019
+                        </time>
                       </div>
                     </div>
-                  </li>
-                  <li
-                    class="c9 c10"
-                    dir="ltr"
-                    role="listitem"
+                  </div>
+                </li>
+                <li
+                  class="c8 c9"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
                   >
                     <div
                       class="c11"
+                      dir="ltr"
                     >
-                      <div
+                      <span
                         class="c12"
-                        dir="ltr"
                       >
-                        <span
-                          class="c13"
-                        >
-                          4
-                        </span>
-                      </div>
-                      <div
+                        4
+                      </span>
+                    </div>
+                    <div
+                      class="c13"
+                      dir="ltr"
+                    >
+                      <a
                         class="c14"
-                        dir="ltr"
+                        href="/pidgin/tori-50315150"
                       >
-                        <a
-                          class="c15"
-                          href="/pidgin/tori-50315150"
-                        >
-                          Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
-                        </a>
-                        <div
+                        Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
+                      </a>
+                      <div
+                        class="c15"
+                      >
+                        <time
                           class="c16"
+                          datetime="2019-11-06"
                         >
-                          <time
-                            class="c17"
-                            datetime="2019-11-06"
-                          >
-                            De one we dem update for: 6th November 2019
-                          </time>
-                        </div>
+                          De one we dem update for: 6th November 2019
+                        </time>
                       </div>
                     </div>
-                  </li>
-                  <li
-                    class="c9 c10"
-                    dir="ltr"
-                    role="listitem"
+                  </div>
+                </li>
+                <li
+                  class="c8 c9"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
                   >
                     <div
                       class="c11"
+                      dir="ltr"
                     >
-                      <div
+                      <span
                         class="c12"
-                        dir="ltr"
                       >
-                        <span
-                          class="c13"
-                        >
-                          5
-                        </span>
-                      </div>
-                      <div
+                        5
+                      </span>
+                    </div>
+                    <div
+                      class="c13"
+                      dir="ltr"
+                    >
+                      <a
                         class="c14"
-                        dir="ltr"
+                        href="/pidgin/tori-50315157"
                       >
-                        <a
-                          class="c15"
-                          href="/pidgin/tori-50315157"
-                        >
-                          How Balogun market fire kill Policeman for Lagos
-                        </a>
-                        <div
+                        How Balogun market fire kill Policeman for Lagos
+                      </a>
+                      <div
+                        class="c15"
+                      >
+                        <time
                           class="c16"
+                          datetime="2019-11-06"
                         >
-                          <time
-                            class="c17"
-                            datetime="2019-11-06"
-                          >
-                            De one we dem update for: 6th November 2019
-                          </time>
-                        </div>
+                          De one we dem update for: 6th November 2019
+                        </time>
                       </div>
                     </div>
-                  </li>
-                  <li
-                    class="c9 c10"
-                    dir="ltr"
-                    role="listitem"
+                  </div>
+                </li>
+                <li
+                  class="c8 c9"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
                   >
                     <div
                       class="c11"
+                      dir="ltr"
                     >
-                      <div
+                      <span
                         class="c12"
-                        dir="ltr"
                       >
-                        <span
-                          class="c13"
-                        >
-                          6
-                        </span>
-                      </div>
-                      <div
+                        6
+                      </span>
+                    </div>
+                    <div
+                      class="c13"
+                      dir="ltr"
+                    >
+                      <a
                         class="c14"
-                        dir="ltr"
+                        href="/pidgin/tori-50093818"
                       >
-                        <a
-                          class="c15"
-                          href="/pidgin/tori-50093818"
-                        >
-                          Labour, FG finally agree minimum wage salary adjustment
-                        </a>
-                        <div
+                        Labour, FG finally agree minimum wage salary adjustment
+                      </a>
+                      <div
+                        class="c15"
+                      >
+                        <time
                           class="c16"
+                          datetime="2019-10-18"
                         >
-                          <time
-                            class="c17"
-                            datetime="2019-10-18"
-                          >
-                            De one we dem update for: 18th October 2019
-                          </time>
-                        </div>
+                          De one we dem update for: 18th October 2019
+                        </time>
                       </div>
                     </div>
-                  </li>
-                  <li
-                    class="c9 c10"
-                    dir="ltr"
-                    role="listitem"
+                  </div>
+                </li>
+                <li
+                  class="c8 c9"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
                   >
                     <div
                       class="c11"
+                      dir="ltr"
                     >
-                      <div
+                      <span
                         class="c12"
-                        dir="ltr"
                       >
-                        <span
-                          class="c13"
-                        >
-                          7
-                        </span>
-                      </div>
-                      <div
+                        7
+                      </span>
+                    </div>
+                    <div
+                      class="c13"
+                      dir="ltr"
+                    >
+                      <a
                         class="c14"
-                        dir="ltr"
+                        href="/pidgin/tori-50187218"
                       >
-                        <a
-                          class="c15"
-                          href="/pidgin/tori-50187218"
-                        >
-                          Naira Marley na 'Bad Influence'?
-                        </a>
-                        <div
+                        Naira Marley na 'Bad Influence'?
+                      </a>
+                      <div
+                        class="c15"
+                      >
+                        <time
                           class="c16"
+                          datetime="2019-10-25"
                         >
-                          <time
-                            class="c17"
-                            datetime="2019-10-25"
-                          >
-                            De one we dem update for: 25th October 2019
-                          </time>
-                        </div>
+                          De one we dem update for: 25th October 2019
+                        </time>
                       </div>
                     </div>
-                  </li>
-                  <li
-                    class="c9 c10"
-                    dir="ltr"
-                    role="listitem"
+                  </div>
+                </li>
+                <li
+                  class="c8 c9"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
                   >
                     <div
                       class="c11"
+                      dir="ltr"
                     >
-                      <div
+                      <span
                         class="c12"
-                        dir="ltr"
                       >
-                        <span
-                          class="c13"
-                        >
-                          8
-                        </span>
-                      </div>
-                      <div
+                        8
+                      </span>
+                    </div>
+                    <div
+                      class="c13"
+                      dir="ltr"
+                    >
+                      <a
                         class="c14"
-                        dir="ltr"
+                        href="/pidgin/tori-48347911"
                       >
-                        <a
-                          class="c15"
-                          href="/pidgin/tori-48347911"
-                        >
-                          Tins you suppose know about Naira Marley
-                        </a>
-                        <div
+                        Tins you suppose know about Naira Marley
+                      </a>
+                      <div
+                        class="c15"
+                      >
+                        <time
                           class="c16"
+                          datetime="2019-05-23"
                         >
-                          <time
-                            class="c17"
-                            datetime="2019-05-23"
-                          >
-                            De one we dem update for: 23rd May 2019
-                          </time>
-                        </div>
+                          De one we dem update for: 23rd May 2019
+                        </time>
                       </div>
                     </div>
-                  </li>
-                  <li
-                    class="c9 c10"
-                    dir="ltr"
-                    role="listitem"
+                  </div>
+                </li>
+                <li
+                  class="c8 c9"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
                   >
                     <div
                       class="c11"
+                      dir="ltr"
                     >
-                      <div
+                      <span
                         class="c12"
-                        dir="ltr"
                       >
-                        <span
-                          class="c13"
-                        >
-                          9
-                        </span>
-                      </div>
-                      <div
+                        9
+                      </span>
+                    </div>
+                    <div
+                      class="c13"
+                      dir="ltr"
+                    >
+                      <a
                         class="c14"
-                        dir="ltr"
+                        href="/pidgin/sport-50312710"
                       >
-                        <a
-                          class="c15"
-                          href="/pidgin/sport-50312710"
-                        >
-                          Golden Eaglets crash out of Fifa U17 World Cup
-                        </a>
-                        <div
+                        Golden Eaglets crash out of Fifa U17 World Cup
+                      </a>
+                      <div
+                        class="c15"
+                      >
+                        <time
                           class="c16"
+                          datetime="2019-11-06"
                         >
-                          <time
-                            class="c17"
-                            datetime="2019-11-06"
-                          >
-                            De one we dem update for: 6th November 2019
-                          </time>
-                        </div>
+                          De one we dem update for: 6th November 2019
+                        </time>
                       </div>
                     </div>
-                  </li>
-                  <li
-                    class="c9 c10"
-                    dir="ltr"
-                    role="listitem"
+                  </div>
+                </li>
+                <li
+                  class="c8 c9"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <div
+                    class="c10"
                   >
                     <div
                       class="c11"
+                      dir="ltr"
                     >
-                      <div
+                      <span
                         class="c12"
-                        dir="ltr"
                       >
-                        <span
-                          class="c13"
-                        >
-                          10
-                        </span>
-                      </div>
-                      <div
+                        10
+                      </span>
+                    </div>
+                    <div
+                      class="c13"
+                      dir="ltr"
+                    >
+                      <a
                         class="c14"
-                        dir="ltr"
+                        href="/pidgin/tori-42945173"
                       >
-                        <a
-                          class="c15"
-                          href="/pidgin/tori-42945173"
-                        >
-                          Tiger nut drink fit wake up your sex drive - Nutritionist
-                        </a>
-                        <div
+                        Tiger nut drink fit wake up your sex drive - Nutritionist
+                      </a>
+                      <div
+                        class="c15"
+                      >
+                        <time
                           class="c16"
+                          datetime="2019-05-21"
                         >
-                          <time
-                            class="c17"
-                            datetime="2019-05-21"
-                          >
-                            De one we dem update for: 21st May 2019
-                          </time>
-                        </div>
+                          De one we dem update for: 21st May 2019
+                        </time>
                       </div>
                     </div>
-                  </li>
-                </ol>
-              </div>
+                  </div>
+                </li>
+              </ol>
             </div>
           </div>
         </div>
