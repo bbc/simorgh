@@ -75,7 +75,7 @@ const AMP_ACCESS_DATA = endpoint => ({
   noPingback: true,
 });
 
-const AMP_ACCESS_FETCH = service => {
+export const AMP_ACCESS_FETCH = service => {
   const togglesEndpoint = `${process.env.SIMORGH_TOGGLES_URL}/toggles?application=simorgh&service=${service}&geoiplookup=true`;
 
   return (
