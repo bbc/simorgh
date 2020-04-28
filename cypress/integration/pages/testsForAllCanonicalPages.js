@@ -1,11 +1,6 @@
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
-export const testsThatAlwaysRunForAllCanonicalPages = ({
-  service,
-  pageType,
-}) => {
-  describe(`No testsThatAlwaysRunForAllCanonicalPages to run for ${service} ${pageType}`, () => {});
-};
+export const testsThatAlwaysRunForAllCanonicalPages = () => {};
 
 // For testing feastures that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
@@ -24,9 +19,4 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
 };
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
-export const testsThatNeverRunDuringSmokeTestingForAllCanonicalPages = ({
-  service,
-  pageType,
-}) => {
-  describe(`No testsThatNeverRunDuringSmokeTestingForAllCanonicalPages to run for ${service} ${pageType}`, () => {});
-};
+export const testsThatNeverRunDuringSmokeTestingForAllCanonicalPages = () => {};
