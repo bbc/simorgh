@@ -1,5 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Canonical Story Page A11y Banner should contain product and localised service name  1`] = `"BBC News, Mundo"`;
+
+exports[`Canonical Story Page A11y Banner should contain product and localised service name with lang 1`] = `"en-GB"`;
+
 exports[`Canonical Story Page A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
 
 exports[`Canonical Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
