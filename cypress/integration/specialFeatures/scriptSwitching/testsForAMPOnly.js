@@ -31,6 +31,7 @@ export default ({
       // Accept cookie banner
       getCookieBannerAccept(serviceId, variant).click();
 
+      cy.log('0th assertion - variant');
       // Assert script switch button, url and document lang against variant
       nonCookieVariantAssertions(serviceName, variant);
 
@@ -38,24 +39,28 @@ export default ({
       clickScriptSwitcher(otherVariant);
 
       // Assert against other variant after switching script
+      cy.log('1st assertion - otherVariant');
       nonCookieVariantAssertions(serviceName, otherVariant);
 
       // Navigate to home page by clicking link in the banner
       clickHomePageLink(serviceName);
 
       // Assert otherVariant has persisted
+      cy.log('2nd assertion - otherVariant');
       nonCookieVariantAssertions(serviceName, otherVariant);
 
       // Finding a link to click on the home page
       clickPromoLinkOnHomePage(pageType);
 
       // Assert other variant has persisted after navigating to new page
+      cy.log('3rd assertion - otherVariant');
       nonCookieVariantAssertions(serviceName, otherVariant);
 
       // Clicks script switcher to original variant
       clickScriptSwitcher(variant);
 
       // Assert variant values have changed after clicking script switcher
+      cy.log('4th assertion - variant');
       nonCookieVariantAssertions(serviceName, variant);
     });
   });
