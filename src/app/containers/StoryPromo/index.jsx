@@ -132,15 +132,26 @@ const StoryPromoContainer = ({
 
   const useLargeImages = promoType === 'top' || promoType === 'leading';
 
+  // Override the heading tag with a div if it does not have related content under it.
+  const headingTagOverride = () =>
+    (!promoSummary || !displaySummary) &&
+    (!timestamp || isStoryPromoPodcast || isLive) &&
+    (!promoType === 'top' || !relatedItems)
+      ? 'div'
+      : null;
+
+  const headlineProps = {
+    script,
+    service,
+    promoType,
+    promoHasImage: displayImage,
+    ...(headingTagOverride() && { as: headingTagOverride() }),
+  };
+
   const Info = (
     <>
       {headline && (
-        <Headline
-          script={script}
-          service={service}
-          promoType={promoType}
-          promoHasImage={displayImage}
-        >
+        <Headline {...headlineProps}>
           <StyledLink href={url}>
             {isLive ? (
               <LiveLabel
