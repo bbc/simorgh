@@ -49,6 +49,7 @@ describe('AMP Ads', () => {
 
         expect(ampAccessFetch).toHaveReturned();
         expect(ampAccessFetch).toHaveBeenCalledWith('pidgin');
+        expect(ampAccessData.type).toEqual('script');
         expect(ampAccessData.props.children).toMatch(
           JSON.stringify(expectedReturn),
         );
