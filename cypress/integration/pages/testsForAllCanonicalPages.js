@@ -12,17 +12,15 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
   service,
   pageType,
 }) => {
-  if (pageType !== 'errorPage404') {
-    describe(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
-      if (['photoGalleryPage', 'storyPage'].includes(pageType)) {
-        describe('CPS PGL and STY Tests', () => {
-          it('should render at least one image', () => {
-            cy.get('figure').first().find('img').should('be.visible');
-          });
+  describe(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
+    if (['photoGalleryPage', 'storyPage'].includes(pageType)) {
+      describe('CPS PGL and STY Tests', () => {
+        it('should render at least one image', () => {
+          cy.get('figure').first().find('img').should('be.visible');
         });
-      }
-    });
-  }
+      });
+    }
+  });
 };
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
