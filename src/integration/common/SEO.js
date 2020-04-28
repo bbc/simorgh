@@ -44,6 +44,22 @@ export default () => {
       expect(htmlEl.getAttribute('dir')).toMatchSnapshot();
     });
 
+    describe('Apple Touch Icons', () => {
+      const appleTouchIcons = document.querySelectorAll(
+        'head link[rel="apple-touch-icon"]',
+      );
+
+      appleTouchIcons.forEach(icon => {
+        it('', () => {
+          expect(icon).toBeInTheDocument();
+          expect(icon.getAttribute('href')).toBeTruthy();
+
+          const size = icon.getAttribute('sizes') || 'default';
+          expect(icon.getAttribute('href')).toMatchSnapshot(size);
+        });
+      });
+    });
+
     it('FB admins', () => {
       const metaTagContent = getMetaTagContent('meta[property="fb:admins"]');
 
