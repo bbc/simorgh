@@ -11,14 +11,14 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
   pageType,
 }) => {
   describe(`Running testsForAllPages for ${service} ${pageType}`, () => {
-    describe('Header Tests', () => {
-      const serviceName = config[service].name;
+    const serviceName = config[service].name;
 
-      // limit number of tests to 2 services for navigation toggling
-      const testMobileNav =
-        serviceName === 'ukchina' || serviceName === 'persian';
+    // limit number of tests to 2 services for navigation toggling
+    const testMobileNav =
+      serviceName === 'ukchina' || serviceName === 'persian';
 
-      if (testMobileNav) {
+    if (testMobileNav) {
+      describe('Header Tests', () => {
         it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
           cy.viewport(320, 480);
           cy.get('nav')
@@ -37,8 +37,8 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
 
           cy.get('nav').find('ul[class^="DropdownUl"]').should('be.visible');
         });
-      }
-    });
+      });
+    }
 
     if (['photoGalleryPage', 'storyPage'].includes(pageType)) {
       describe('Photo Gallery and Story Pages', () => {
