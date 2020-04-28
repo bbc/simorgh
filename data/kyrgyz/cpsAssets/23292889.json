@@ -10,7 +10,7 @@
     "type": "STY",
     "createdBy": "kyrgyz-v6",
     "language": "ky",
-    "lastUpdated": 1587742424965,
+    "lastUpdated": 1588079758776,
     "firstPublished": 1587739877000,
     "lastPublished": 1587739877000,
     "timestamp": 1587739877000,
@@ -37,8 +37,8 @@
     },
     "passport": { "taggings": [] },
     "tags": {},
-    "version": "v1.1.13",
-    "blockTypes": ["paragraph", "crosshead", "social_embed"],
+    "version": "v1.2.0",
+    "blockTypes": ["paragraph", "image", "crosshead", "social_embed"],
     "includeComments": false
   },
   "content": {
@@ -48,6 +48,19 @@
         "role": "introduction",
         "markupType": "plain_text",
         "type": "paragraph"
+      },
+      {
+        "id": "63734037",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/11D53/test/_63734037_socialmedia.jpg",
+        "path": "/cpsdevpb/11D53/test/_63734037_socialmedia.jpg",
+        "height": 351,
+        "width": 624,
+        "altText": "social media",
+        "caption": "Social media",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
       },
       {
         "text": "Social embed content galore.",
