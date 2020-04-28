@@ -167,7 +167,7 @@ export const service = {
       header: 'Most read',
       lastUpdated: 'Last updated:',
       numberOfItems: 10,
-      hasMostRead: false,
+      hasMostRead: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,
