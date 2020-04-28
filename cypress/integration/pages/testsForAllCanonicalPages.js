@@ -4,7 +4,7 @@ export const testsThatAlwaysRunForAllCanonicalPages = ({
   service,
   pageType,
 }) => {
-  describe(`No testsToAlwaysRunForCanonicalPages to run for ${service} ${pageType}`, () => {});
+  describe(`No testsThatAlwaysRunForAllCanonicalPages to run for ${service} ${pageType}`, () => {});
 };
 
 // For testing feastures that may differ across services but share a common logic e.g. translated strings.
@@ -12,7 +12,7 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
   service,
   pageType,
 }) => {
-  describe(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
+  describe(`Running testsThatFollowSmokeTestConfigForAllCanonicalPages for ${service} ${pageType}`, () => {
     if (['photoGalleryPage', 'storyPage'].includes(pageType)) {
       describe('CPS PGL and STY Tests', () => {
         it('should render at least one image', () => {
@@ -28,5 +28,5 @@ export const testsThatNeverRunDuringSmokeTestingForAllCanonicalPages = ({
   service,
   pageType,
 }) => {
-  describe(`No testsToNeverSmokeTestForCanonicalPages to run for ${service} ${pageType}`, () => {});
+  describe(`No testsThatNeverRunDuringSmokeTestingForAllCanonicalPages to run for ${service} ${pageType}`, () => {});
 };
