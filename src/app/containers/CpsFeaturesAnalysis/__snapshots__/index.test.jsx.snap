@@ -19,7 +19,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
         <h2
           class="Heading-sc-1x4gwjz-2 eZofTG"
         >
-          <div
+          <span
             class="FlexColumn-wx5kdp-0 dgpsiS"
           >
             <span
@@ -33,7 +33,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 Features & Analysis
               </span>
             </span>
-          </div>
+          </span>
         </h2>
       </div>
       <ul
@@ -74,7 +74,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 class="Headline-sc-1dvfmi3-3 hSJrur"
               >
                 <a
-                  class="Link-sc-1dvfmi3-5 yQgSu"
+                  class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                   href="/igbo/afirika-23252735"
                 >
                   STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
@@ -128,7 +128,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 class="Headline-sc-1dvfmi3-3 hSJrur"
               >
                 <a
-                  class="Link-sc-1dvfmi3-5 yQgSu"
+                  class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                   href="/igbo/afirika-49666505"
                 >
                   Robert Mugabe: Zimbabwe eferela nwa amadi a aka
@@ -173,7 +173,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
         <h2
           class="Heading-sc-1x4gwjz-2 eZofTG"
         >
-          <div
+          <span
             class="FlexColumn-wx5kdp-0 dgpsiS"
           >
             <span
@@ -187,7 +187,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
                 Features & Analysis
               </span>
             </span>
-          </div>
+          </span>
         </h2>
       </div>
       <div
@@ -223,7 +223,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
               class="Headline-sc-1dvfmi3-3 hSJrur"
             >
               <a
-                class="Link-sc-1dvfmi3-5 yQgSu"
+                class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                 href="/igbo/afirika-23252735"
               >
                 STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?

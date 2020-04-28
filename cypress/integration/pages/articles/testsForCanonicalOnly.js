@@ -1,9 +1,10 @@
+import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
 import appToggles from '../../../support/helpers/useAppToggles';
-import { getBlockData, getBlockByType } from './helpers';
+import { getBlockData, getBlockByType, getVideoEmbedUrl } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
-const serviceHasCaption = (service) => service === 'news';
+const serviceHasCaption = service => service === 'news';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -15,6 +16,7 @@ export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
 export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   service,
   pageType,
+  variant,
 }) =>
   describe(`Canonical Tests for ${service} ${pageType}`, () => {
     it('should not have an AMP attribute on the main article', () => {
@@ -66,7 +68,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         });
 
         it('should have an image with a caption', () => {
-          cy.window().then((win) => {
+          cy.window().then(win => {
             const { model } = getBlockData('image', win.SIMORGH_DATA.pageData);
             const {
               model: { blocks },
@@ -96,7 +98,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     if (appToggles.mediaPlayer.enabled) {
       describe('Media Player: Canonical', () => {
         it('should render a visible placeholder image', () => {
-          cy.window().then((win) => {
+          cy.window().then(win => {
             const media = getBlockData('video', win.SIMORGH_DATA.pageData);
             if (media) {
               cy.get('div[class^="StyledVideoContainer"]').within(() => {
@@ -110,7 +112,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         });
 
         it('should render a visible guidance message', () => {
-          cy.window().then((win) => {
+          cy.window().then(win => {
             const media = getBlockData('video', win.SIMORGH_DATA.pageData);
 
             if (media) {
@@ -139,7 +141,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         });
 
         it('should have a visible play button and valid duration', () => {
-          cy.window().then((win) => {
+          cy.window().then(win => {
             const media = getBlockData('video', win.SIMORGH_DATA.pageData);
             if (media && media.type === 'video') {
               const aresMediaBlocks = media.model.blocks[1].model.blocks[0];
@@ -160,57 +162,25 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           });
         });
 
-        // Tests requiring iframe access are temporarily being throttled to the 'news' service.
-        if (service === 'news') {
-          it('plays media when a user clicks play', () => {
-            cy.window().then((win) => {
-              const media = getBlockData('video', win.SIMORGH_DATA.pageData);
-              if (media && media.type === 'video') {
-                cy.get('div[class^="StyledVideoContainer"]')
-                  .within(() => {
-                    cy.get('button');
-                  })
-                  .click()
-                  .should('not.exist')
-                  .then(() => {
-                    cy.get('iframe[class^="StyledIframe"]').then(($iframe) => {
-                      cy.wrap($iframe.prop('contentWindow'), {
-                        // `timeout` only applies to the methods chained below.
-                        // `its()` benefits from this, and will wait up to 8s
-                        // for the mediaPlayer instance to become available.
-                        timeout: 20000,
-                      })
-                        .its('embeddedMedia.playerInstances.mediaPlayer')
-                        .invoke('currentTime')
-                        .should('be.gt', 0);
-                    });
-                  });
-              }
-            });
-          });
+        it('should render an iframe with a valid URL when a user clicks play', () => {
+          cy.window().then(win => {
+            const body = win.SIMORGH_DATA.pageData;
+            const media = getBlockData('video', body);
 
-          it('should have subtitles set to enabled by default', () => {
-            cy.window().then((win) => {
-              const media = getBlockData('video', win.SIMORGH_DATA.pageData);
-              if (media && media.type === 'video') {
-                cy.get(
-                  'div[class^="StyledVideoContainer"] iframe[class^="StyledIframe"]',
-                ).then(($iframe) => {
-                  cy.wrap($iframe.prop('contentWindow'), {
-                    // `timeout` only applies to the methods chained below.
-                    // `its()` benefits from this, and will wait up to 8s
-                    // for the mediaPlayer instance to become available.
-                    timeout: 20000,
-                  })
-                    .its(
-                      'embeddedMedia.playerInstances.mediaPlayer._settings.ui.subtitles.enabled',
-                    )
-                    .should('eq', true);
+            if (media && media.type === 'video') {
+              const { lang } = appConfig[service][variant];
+              const embedUrl = getVideoEmbedUrl(body, lang);
+              cy.get(
+                'div[class*="StyledVideoContainer"] button[class*="StyledPlayButton"]',
+              )
+                .click()
+                .then(() => {
+                  cy.get(`iframe[src="${embedUrl}"]`).should('be.visible');
                 });
-              }
-            });
+              cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
+            }
           });
-        }
+        });
       });
     }
   });

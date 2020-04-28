@@ -9,6 +9,7 @@ import serbianLatData from '#data/serbian/frontpage/lat';
 import { service as arabicConfig } from '#lib/config/services/arabic';
 import { service as igboConfig } from '#lib/config/services/igbo';
 import { service as serbianConfig } from '#lib/config/services/serbian';
+import { getLocalMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 import { FrontPage } from '..';
 
 const serviceDataSets = {
@@ -26,12 +27,12 @@ const serviceConfigs = {
   serbian: serbianConfig,
 };
 
-const stories = storiesOf('Pages|Front Page', module).addDecorator((story) => (
+const stories = storiesOf('Pages|Front Page', module).addDecorator(story => (
   <WithTimeMachine>{story()}</WithTimeMachine>
 ));
 
-Object.keys(serviceDataSets).forEach((service) => {
-  Object.keys(serviceDataSets[service]).forEach((variant) => {
+Object.keys(serviceDataSets).forEach(service => {
+  Object.keys(serviceDataSets[service]).forEach(variant => {
     stories.add(`${service} ${variant === 'default' ? '' : variant}`, () => (
       <BrowserRouter>
         <FrontPage
@@ -42,9 +43,10 @@ Object.keys(serviceDataSets).forEach((service) => {
           service={service}
           variant={variant}
           pageData={serviceDataSets[service][variant]}
-          mostReadEndpointOverride={`./data/${service}/mostRead/${
-            variant === 'default' ? 'index' : variant
-          }.json`}
+          mostReadEndpointOverride={getLocalMostReadEndpoint({
+            service,
+            variant,
+          })}
         />
       </BrowserRouter>
     ));

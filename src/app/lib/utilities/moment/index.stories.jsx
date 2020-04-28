@@ -457,7 +457,7 @@ const Table = styled.table`
   }
 `;
 
-const ShowMoment = ({ name, locale, moments }) => {
+const ShowMoment = ({ dir, lang, locale, moments, name }) => {
   return (
     <Table>
       <tbody>
@@ -471,7 +471,9 @@ const ShowMoment = ({ name, locale, moments }) => {
           <tr key={index}>
             <td>{what}</td>
             <td>{method('en-gb')}</td>
-            <td>{method(locale)}</td>
+            <td dir={dir} lang={lang}>
+              {method(locale)}
+            </td>
           </tr>
         ))}
       </tbody>
@@ -480,6 +482,8 @@ const ShowMoment = ({ name, locale, moments }) => {
 };
 
 ShowMoment.propTypes = {
+  dir: string.isRequired,
+  lang: string.isRequired,
   name: string.isRequired,
   moments: arrayOf(
     shape({
@@ -492,30 +496,34 @@ ShowMoment.propTypes = {
 
 const editorialStories = storiesOf('Moment Locales/Editorial view', module)
   .addParameters({ chromatic: { disable: true } })
-  .addDecorator((story) => <WithTimeMachine>{story()}</WithTimeMachine>);
+  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
 
 const developerStories = storiesOf('Moment Locales/Developer view', module)
   .addParameters({ chromatic: { disable: true } })
-  .addDecorator((story) => <WithTimeMachine>{story()}</WithTimeMachine>);
+  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
 
-const capitalizeService = (service) =>
+const capitalizeService = service =>
   service.charAt(0).toUpperCase() + service.slice(1);
 
-Object.keys(services).forEach((service) => {
+Object.keys(services).forEach(service => {
   Object.keys(services[service])
-    .filter((variant) => services[service][variant].datetimeLocale)
-    .forEach((variant) => {
+    .filter(variant => services[service][variant].datetimeLocale)
+    .forEach(variant => {
       const serviceName = capitalizeService(service);
-      const serviceLocale = services[service][variant].datetimeLocale;
+      const { dir, lang, datetimeLocale: serviceLocale } = services[service][
+        variant
+      ];
       const storyTitle = `${serviceName} - ${serviceLocale} ${
         variant !== 'default' ? `(${variant})` : ''
       }`;
 
       editorialStories.add(storyTitle, () => (
         <ShowMoment
+          dir={dir}
+          lang={lang}
           name={serviceName}
           locale={serviceLocale}
-          moments={methods.filter((method) =>
+          moments={methods.filter(method =>
             editorialWhitelist.includes(method.what),
           )}
         />
@@ -524,6 +532,8 @@ Object.keys(services).forEach((service) => {
       developerStories.add(storyTitle, () => {
         return (
           <ShowMoment
+            dir={dir}
+            lang={lang}
             name={serviceName}
             locale={serviceLocale}
             moments={methods}

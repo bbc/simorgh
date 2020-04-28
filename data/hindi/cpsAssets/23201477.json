@@ -1,0 +1,173 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "advertising": true,
+        "caption": "शीर्षक",
+        "embedding": true,
+        "format": "video",
+        "id": "p01hcz73",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01hczc4.jpg",
+        "subType": "clip",
+        "synopses": { "short": "à¤¸à¤¾à¤°" },
+        "title": "à¤œà¤¾à¤¨à¤µà¤°à¥‹à¤‚",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1524139096000,
+            "availableTerritories": { "nonUk": true, "uk": true },
+            "duration": 119,
+            "durationISO8601": "PT1M59S",
+            "types": ["Original"],
+            "versionId": "p01hcz75",
+            "warnings": {}
+          }
+        ]
+      },
+      {
+        "href": "https://youtu.be/VVD7E0JUjEI",
+        "source": "youtube",
+        "type": "social_embed"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "ट्रंप प्रशासन ने अमेरिकन एयरलाइंस और अपने यहाँ के अन्य विमान सेवा देने वाली कंपनियों से आग्रह किया है कि वो ताइवान को लेकर चीनी मांगों को नज़रअंदाज़ करें.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "चीन और अमरीका के बीच तनाव बढ़ने का यह ताज़ा उदाहरण है.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "अमरीकी अधिकारियों ने अमेरिकन एयरलाइंस और डेल्टा से कहा है कि वो चीन की उस मांग को नहीं मानें जिसमें ताइवान को ''ताइवान चाइना'' कहने के लिए कहा गया है.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "अमरीका ने यह निर्देश तब जारी किया है जब चीन ने 36 विदेशी एयरलाइंस को आदेश दिया कि चाहे जिस भी भाषा में केवल ताइवान लिखा है उसे हटा दे. ताइवान एक स्वतंत्र लोकतांत्रिक द्वीप है, लेकिन चीन दावा करता है यह उसका हिस्सा है.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "वाइट हाउस ने चीन के इस आदेश को बकवास बताया है. अमरेकिन एयरलाइंस ने इस पर कोई भी टिप्पणी करने से इनकार कर दिया है.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "चीन ने दुनिया भर की एयरलाइंस से कहा है कि वो अपनी वेबसाइट पर ताइवान, हॉन्ग कॉन्ग और मकाउ को चीन का हिस्सा बताए न कि स्वतंत्र देश. इस मांग की ऑस्ट्रेलिया, ताइवान और अमरीका ने आलोचना की है.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "ताइवान को चीन वन चाइना पॉलिसी के तहत अपना आंतरिक हिस्सा बताता है. वहीं चीन हॉन्ग कॉन्ग और मकाउ को विशेष प्रशासनिक क्षेत्र बताता है.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "कई पर्यक्षकों का कहना है कि चीन दुनिया भर के देशों पर दबाव बना रहा है ताकि ताइवान को अलग-थलग किया जाए.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "hindi.media_asset.23201477.page",
+      "cps_asset_id": "23201477",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["media", "social_embed", "paragraph"],
+    "createdBy": "hindi-v6",
+    "firstPublished": 1526917251000,
+    "id": "urn:bbc:ares::asset:hindi/23201477",
+    "includeComments": false,
+    "language": "hi",
+    "lastPublished": 1528825664000,
+    "lastUpdated": 1567420405408,
+    "locators": {
+      "assetUri": "/hindi/23201477",
+      "cpsUrn": "urn:bbc:content:assetUri:hindi/23201477",
+      "curie": "http://www.bbc.co.uk/asset/e97d7208-292f-184e-90b7-f58106f27db5"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "type": "MAP",
+    "version": "v1.1.0"
+  },
+  "promo": {
+    "headlines": { "headline": "सार", "shortHeadline": "जानवरों" },
+    "id": "urn:bbc:ares::asset:hindi/23201477",
+    "indexImage": {
+      "altText": "alt tag",
+      "caption": "image caption",
+      "copyrightHolder": "Empics",
+      "height": 576,
+      "href": "http://b.files.bbci.co.uk/60DD/test/_63679742_p01hczc4.jpg",
+      "id": "63679742",
+      "path": "/cpsdevpb/60DD/test/_63679742_p01hczc4.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 1024
+    },
+    "locators": {
+      "assetUri": "/hindi/23201477",
+      "cpsUrn": "urn:bbc:content:assetUri:hindi/23201477",
+      "curie": "http://www.bbc.co.uk/asset/e97d7208-292f-184e-90b7-f58106f27db5"
+    },
+    "media": {
+      "advertising": true,
+      "caption": "शीर्षक",
+      "embedding": true,
+      "format": "video",
+      "id": "p01hcz73",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01hczc4.jpg",
+      "subType": "clip",
+      "synopses": { "short": "à¤¸à¤¾à¤°" },
+      "title": "à¤œà¤¾à¤¨à¤µà¤°à¥‹à¤‚",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1524139096000,
+          "availableTerritories": { "nonUk": true, "uk": true },
+          "duration": 119,
+          "durationISO8601": "PT1M59S",
+          "types": ["Original"],
+          "versionId": "p01hcz75",
+          "warnings": {}
+        }
+      ]
+    },
+    "passport": {},
+    "summary": "सार",
+    "timestamp": 1567420405408,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "होम पेज",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/hindi/front_page"
+    },
+    "site": {
+      "name": "BBC हिंदी",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/hindi"
+    }
+  }
+}

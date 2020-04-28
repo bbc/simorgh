@@ -63,7 +63,7 @@ const blocksWithInline = [
   inlinePersianBlock,
 ];
 
-const ParagraphContainerWithContext = (blocks) => (
+const ParagraphContainerWithContext = blocks => (
   <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
     <ParagraphContainer blocks={blocks} />
   </ServiceContext.Provider>

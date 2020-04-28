@@ -19,7 +19,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
         <h2
           class="Heading-sc-1x4gwjz-2 eZofTG"
         >
-          <div
+          <span
             class="FlexColumn-wx5kdp-0 dgpsiS"
           >
             <span
@@ -33,7 +33,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
                 Top Stories
               </span>
             </span>
-          </div>
+          </span>
         </h2>
       </div>
       <ul
@@ -55,7 +55,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
                 class="Headline-sc-1dvfmi3-3 gejHzT"
               >
                 <a
-                  class="Link-sc-1dvfmi3-5 yQgSu"
+                  class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                   href="/mundo/noticias-internacional-51939501"
                 >
                   China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
@@ -90,7 +90,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
                 class="Headline-sc-1dvfmi3-3 gejHzT"
               >
                 <a
-                  class="Link-sc-1dvfmi3-5 yQgSu"
+                  class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                   href="/pidgin/tori-51945757"
                 >
                   Nigeria don get five new cases of Coronavirus - See how e happun
@@ -135,7 +135,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
         <h2
           class="Heading-sc-1x4gwjz-2 eZofTG"
         >
-          <div
+          <span
             class="FlexColumn-wx5kdp-0 dgpsiS"
           >
             <span
@@ -149,7 +149,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
                 Top Stories
               </span>
             </span>
-          </div>
+          </span>
         </h2>
       </div>
       <div
@@ -166,7 +166,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
               class="Headline-sc-1dvfmi3-3 gejHzT"
             >
               <a
-                class="Link-sc-1dvfmi3-5 yQgSu"
+                class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                 href="/mundo/noticias-internacional-51939501"
               >
                 China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos

@@ -5,205 +5,20 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import '@testing-library/jest-dom/extend-expect';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import relItems from './IndexAlsos/relatedItems';
+import {
+  completeItem,
+  itemWithOvertypedSummary,
+  audioItem,
+  videoItem,
+  liveItem,
+  audioItemNoDuration,
+  standardLinkItem,
+  featureLinkItem,
+  podcastLinkItem,
+  itemWithoutImage,
+  indexAlsosItem,
+} from './helpers/fixtureData';
 import StoryPromoContainer from '.';
-
-const completeItem = {
-  headlines: {
-    headline: 'A headline',
-  },
-  locators: {
-    assetUri: 'https://www.bbc.co.uk',
-  },
-  summary: 'Summary text',
-  timestamp: 1556795033000,
-  indexImage: {
-    path: '/cpsprodpb/0A06/production/image.jpg',
-    height: 1152,
-    width: 2048,
-    altText: 'Image Alt text',
-    copyrightHolder: 'Image provider',
-  },
-};
-
-const audioItem = {
-  headlines: {
-    headline: 'An audio item',
-  },
-  locators: {
-    assetUri: 'https://www.bbc.co.uk',
-  },
-  summary: 'Summary text',
-  timestamp: 1556795033000,
-  indexImage: {
-    path: '/cpsprodpb/0A06/production/image.jpg',
-    height: 1152,
-    width: 2048,
-    altText: 'Image Alt text',
-    copyrightHolder: 'Image provider',
-  },
-  cpsType: 'MAP',
-  media: {
-    format: 'audio',
-    versions: [
-      {
-        duration: 192,
-      },
-    ],
-  },
-};
-
-const videoItem = {
-  headlines: {
-    headline: 'A video item',
-  },
-  locators: {
-    assetUri: 'https://www.bbc.co.uk',
-  },
-  summary: 'Summary text',
-  timestamp: 1556795033000,
-  indexImage: {
-    path: '/cpsprodpb/0A06/production/image.jpg',
-    height: 1152,
-    width: 2048,
-    altText: 'Image Alt text',
-    copyrightHolder: 'Image provider',
-  },
-  cpsType: 'MAP',
-  media: {
-    format: 'video',
-    versions: [
-      {
-        duration: 5600,
-      },
-    ],
-  },
-};
-
-const liveItem = {
-  headlines: {
-    headline: 'A live item',
-  },
-  locators: {
-    assetUri: 'https://www.bbc.co.uk',
-  },
-  summary: 'Summary text',
-  timestamp: 1556795033000,
-  indexImage: {
-    path: '/cpsprodpb/0A06/production/image.jpg',
-    height: 1152,
-    width: 2048,
-    altText: 'Image Alt text',
-    copyrightHolder: 'Image provider',
-  },
-  cpsType: 'LIV',
-};
-
-const audioItemNoDuration = {
-  headlines: {
-    headline: 'An audio item',
-  },
-  locators: {
-    assetUri: 'https://www.bbc.co.uk',
-  },
-  summary: 'Summary text',
-  timestamp: 1556795033000,
-  indexImage: {
-    path: '/cpsprodpb/0A06/production/image.jpg',
-    height: 1152,
-    width: 2048,
-    altText: 'Image Alt text',
-    copyrightHolder: 'Image provider',
-  },
-  cpsType: 'MAP',
-  media: {
-    format: 'audio',
-    versions: [{}],
-  },
-};
-
-const standardLinkItem = {
-  name: 'Standard promo with summary',
-  summary: 'Summary text',
-  indexImage: {
-    id: 63692548,
-    subType: 'index',
-    href: 'http://b.files.bbci.co.uk/14A31/test/_63692548_000327537-1.jpg',
-    path: '/cpsdevpb/14A31/test/_63692548_000327537-1.jpg',
-    height: 549,
-    width: 976,
-    altText: 'A lone Koala perches in a eucalyptus tree',
-    caption: 'Koalas are from Australia',
-    copyrightHolder: 'BBC',
-  },
-  uri: 'http://www.bbc.com/azeri',
-  contentType: 'Text',
-  assetTypeCode: 'PRO',
-  timestamp: 1565186015000,
-  type: 'link',
-};
-
-const featureLinkItem = {
-  name: 'Feature promo with summary',
-  summary: 'Summary text for feature Promo',
-  indexImage: {
-    id: 63692548,
-    subType: 'index',
-    href: 'http://b.files.bbci.co.uk/14A31/test/_63692548_000327537-1.jpg',
-    path: '/cpsdevpb/14A31/test/_63692548_000327537-1.jpg',
-    height: 549,
-    width: 976,
-    altText: 'A lone Koala perches in a eucalyptus tree',
-    caption: 'Koalas are from Australia',
-    copyrightHolder: 'BBC',
-  },
-  uri: 'http://www.bbc.com/azeri',
-  contentType: 'Feature',
-  assetTypeCode: 'PRO',
-  timestamp: 1565186015000,
-  type: 'link',
-};
-
-const podcastLinkItem = {
-  name: 'Test indonesian podcast',
-  summary: 'BBC Indonesia',
-  uri: 'https://www.bbc.com/indonesia/media-45640737',
-  contentType: 'Podcast',
-  assetTypeCode: 'PRO',
-  timestamp: 1537952309000,
-  type: 'link',
-};
-
-const itemWithoutImage = {
-  headlines: {
-    headline: 'A headline',
-  },
-  locators: {
-    assetUri: 'https://www.bbc.co.uk',
-  },
-  summary: 'Summary text',
-  timestamp: 1556795033000,
-};
-
-const indexAlsosItem = {
-  headlines: {
-    headline: 'A headline',
-  },
-  locators: {
-    assetUri: 'https://www.bbc.co.uk',
-  },
-  summary: 'Summary text',
-  timestamp: 1556795033000,
-  indexImage: {
-    path: '/cpsprodpb/0A06/production/image.jpg',
-    height: 1152,
-    width: 2048,
-    altText: 'Image Alt text',
-    copyrightHolder: 'Image provider',
-  },
-  cpsType: 'STY',
-  relatedItems: relItems,
-};
 
 const onlyOneRelatedItem = {
   ...indexAlsosItem,
@@ -212,6 +27,7 @@ const onlyOneRelatedItem = {
 
 const fixtures = {
   standard: completeItem,
+  standardOvertypedSummary: itemWithOvertypedSummary,
   video: videoItem,
   audio: audioItem,
   live: liveItem,
@@ -276,13 +92,20 @@ describe('StoryPromo Container', () => {
 
   describe('assertion tests', () => {
     let cpsItem;
+    let overtypedSummaryItem;
     let assetTypeItem;
     let cpsContainer;
+    let overtypedSummaryContainer;
     let assetTypeContainer;
 
     beforeEach(() => {
       cpsItem = deepClone(completeItem);
       cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
+
+      overtypedSummaryItem = deepClone(itemWithOvertypedSummary);
+      overtypedSummaryContainer = render(
+        <WrappedStoryPromo item={overtypedSummaryItem} />,
+      ).container;
 
       assetTypeItem = deepClone(standardLinkItem);
       assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
@@ -301,6 +124,10 @@ describe('StoryPromo Container', () => {
       expect(cpsContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
         '2 Mee 2019',
       );
+
+      expect(
+        overtypedSummaryContainer.getElementsByTagName('p')[0].innerHTML,
+      ).toEqual(itemWithOvertypedSummary.overtypedSummary);
 
       expect(assetTypeContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
         assetTypeItem.name,
@@ -337,6 +164,7 @@ describe('StoryPromo Container', () => {
       const newsContainer = render(
         <WrappedStoryPromo service="news" item={newItem} />,
       ).container;
+
       expect(newsContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
         '1 minute ago',
       );
@@ -344,6 +172,7 @@ describe('StoryPromo Container', () => {
       const yorubaContainer = render(
         <WrappedStoryPromo service="yoruba" item={newItem} />,
       ).container;
+
       expect(yorubaContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
         'ìṣẹ́jú kan sẹ́yìn',
       );
@@ -352,7 +181,7 @@ describe('StoryPromo Container', () => {
     [
       {
         service: 'pashto',
-        expectationFirstJan2020: '۱۱ مرغومی ۱۳۹۸ - جنوري ۱، ۲۰۲۰',
+        expectationFirstJan2020: '۱۱ مرغومی ۱۳۹۸ - ۱ جنوري ۲۰۲۰',
       },
       {
         service: 'persian',
@@ -409,7 +238,6 @@ describe('StoryPromo Container', () => {
         delete cpsItem.headlines;
         delete assetTypeItem.name;
       });
-
       it('should not include a headline element', () => {
         cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
         assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
@@ -460,7 +288,6 @@ describe('StoryPromo Container', () => {
         delete cpsItem.indexImage;
         delete assetTypeItem.indexImage;
       });
-
       it('should not include an img element', () => {
         expect(cpsContainer.getElementsByTagName('img').length).toEqual(0);
         expect(assetTypeContainer.getElementsByTagName('img').length).toEqual(

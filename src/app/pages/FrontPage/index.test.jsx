@@ -17,7 +17,7 @@ const requestContextData = {
   data: { status: 200 },
 };
 
-const FrontPageWithContext = (props) => (
+const FrontPageWithContext = props => (
   <BrowserRouter>
     <ToggleContextProvider service="pidgin" origin="https://www.test.bbc.com">
       <RequestContextProvider {...requestContextData}>
@@ -34,7 +34,10 @@ let pageData;
 beforeEach(async () => {
   fetch.mockResponse(JSON.stringify(frontPageDataPidgin));
 
-  const response = await getInitialData('some-front-page-path');
+  const response = await getInitialData({
+    path: 'some-front-page-path',
+    service: 'pidgin',
+  });
 
   pageData = response.pageData;
 
@@ -54,8 +57,8 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
-jest.mock('#containers/PageHandlers/withVariant', () => (Component) => {
-  const VariantContainer = (props) => (
+jest.mock('#containers/PageHandlers/withVariant', () => Component => {
+  const VariantContainer = props => (
     <div id="VariantContainer">
       <Component {...props} />
     </div>
@@ -64,8 +67,8 @@ jest.mock('#containers/PageHandlers/withVariant', () => (Component) => {
   return VariantContainer;
 });
 
-jest.mock('#containers/PageHandlers/withContexts', () => (Component) => {
-  const DataContainer = (props) => (
+jest.mock('#containers/PageHandlers/withContexts', () => Component => {
+  const DataContainer = props => (
     <div id="ContextsContainer">
       <Component {...props} />
     </div>
@@ -74,8 +77,8 @@ jest.mock('#containers/PageHandlers/withContexts', () => (Component) => {
   return DataContainer;
 });
 
-jest.mock('#containers/PageHandlers/withPageWrapper', () => (Component) => {
-  const PageWrapperContainer = (props) => (
+jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
+  const PageWrapperContainer = props => (
     <div id="PageWrapperContainer">
       <Component {...props} />
     </div>
@@ -84,8 +87,8 @@ jest.mock('#containers/PageHandlers/withPageWrapper', () => (Component) => {
   return PageWrapperContainer;
 });
 
-jest.mock('#containers/PageHandlers/withLoading', () => (Component) => {
-  const LoadingContainer = (props) => (
+jest.mock('#containers/PageHandlers/withLoading', () => Component => {
+  const LoadingContainer = props => (
     <div id="LoadingContainer">
       <Component {...props} />
     </div>
@@ -94,8 +97,8 @@ jest.mock('#containers/PageHandlers/withLoading', () => (Component) => {
   return LoadingContainer;
 });
 
-jest.mock('#containers/PageHandlers/withError', () => (Component) => {
-  const ErrorContainer = (props) => (
+jest.mock('#containers/PageHandlers/withError', () => Component => {
+  const ErrorContainer = props => (
     <div id="ErrorContainer">
       <Component {...props} />
     </div>
@@ -104,8 +107,8 @@ jest.mock('#containers/PageHandlers/withError', () => (Component) => {
   return ErrorContainer;
 });
 
-jest.mock('#containers/PageHandlers/withData', () => (Component) => {
-  const DataContainer = (props) => (
+jest.mock('#containers/PageHandlers/withData', () => Component => {
+  const DataContainer = props => (
     <div id="DataContainer">
       <Component {...props} />
     </div>
@@ -114,8 +117,8 @@ jest.mock('#containers/PageHandlers/withData', () => (Component) => {
   return DataContainer;
 });
 
-jest.mock('#containers/PageHandlers/withContexts', () => (Component) => {
-  const ContextsContainer = (props) => (
+jest.mock('#containers/PageHandlers/withContexts', () => Component => {
+  const ContextsContainer = props => (
     <div id="ContextsContainer">
       <Component {...props} />
     </div>
@@ -170,7 +173,7 @@ describe('Front Page', () => {
       const sections = container.querySelectorAll('section');
 
       expect(sections).toHaveLength(2);
-      sections.forEach((section) => {
+      sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });
       await wait();

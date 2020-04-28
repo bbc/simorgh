@@ -184,6 +184,9 @@ export const service = {
       hasRadioSchedule: true,
       onFrontPage: false,
     },
+    recommendations: {
+      hasStoryRecommendations: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/afaanoromoo/institutional-49281861',

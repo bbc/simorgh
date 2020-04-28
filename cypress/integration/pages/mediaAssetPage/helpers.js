@@ -1,30 +1,13 @@
 import paths from 'ramda/src/paths';
 import envConfig from '../../../support/config/envs';
 
-export const getBlockByType = (blocks, blockType) => {
-  let blockData;
-
-  blocks.forEach((block) => {
-    if (!blockData && block.type === blockType) {
-      blockData = block;
-    }
-  });
-  return blockData;
-};
-
-export const getBlockData = (blockType, body) => {
-  const { blocks } = body.content.model;
-
-  return getBlockByType(blocks, blockType);
-};
-
-export const hasMedia = (body) => {
+export const hasMedia = jsonData => {
   const mediaTypes = ['video', 'version', 'media', 'legacyMedia'];
-  return mediaTypes.some((type) => body.metadata.blockTypes.includes(type));
+  return mediaTypes.some(type => jsonData.metadata.blockTypes.includes(type));
 };
 
-const getMediaId = (body) => {
-  const mediaBlock = body.promo.media;
+const getMediaId = jsonData => {
+  const mediaBlock = jsonData.promo.media;
 
   const [versionId, externalId, id] = paths(
     [['versions', 0, 'versionId'], ['externalId'], ['id']],
@@ -34,14 +17,16 @@ const getMediaId = (body) => {
   return versionId || externalId || id;
 };
 
-export const getEmbedUrl = (body, language) => {
-  const prefix = body.promo.media.type === 'legacyMedia' ? 'legacy' : 'cps';
+export const getEmbedUrl = (jsonData, language, isAmp = false) => {
+  const prefix = jsonData.promo.media.type === 'legacyMedia' ? 'legacy' : 'cps';
 
-  return [
+  const embedUrl = [
     envConfig.avEmbedBaseUrl,
     'ws/av-embeds',
-    `${prefix}${body.metadata.locators.assetUri}`,
-    getMediaId(body),
+    `${prefix}${jsonData.metadata.locators.assetUri}`,
+    getMediaId(jsonData),
     language,
   ].join('/');
+
+  return isAmp ? `${embedUrl}/amp` : embedUrl;
 };
