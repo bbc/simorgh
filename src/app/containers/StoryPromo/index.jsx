@@ -21,7 +21,7 @@ import MediaIndicatorContainer from './MediaIndicator';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import IndexAlsosContainer from './IndexAlsos';
 
-const PROMO_TYPES = ['top', 'regular', 'leading'];
+const PROMO_TYPES = ['top', 'regular', 'leading', 'recommendation'];
 
 const StoryPromoImage = ({ useLargeImages, imageValues, lazyLoad }) => {
   if (!imageValues) {
@@ -132,20 +132,14 @@ const StoryPromoContainer = ({
 
   const useLargeImages = promoType === 'top' || promoType === 'leading';
 
-  // Override the heading tag with a div if it does not have related content under it.
-  const headingTagOverride = () =>
-    (!promoSummary || !displaySummary) &&
-    (!timestamp || isStoryPromoPodcast || isLive) &&
-    (!promoType === 'top' || !relatedItems)
-      ? 'div'
-      : null;
+  const headingTagOverride = promoType === 'recommendation' ? 'div' : null;
 
   const headlineProps = {
     script,
     service,
     promoType,
     promoHasImage: displayImage,
-    ...(headingTagOverride() && { as: headingTagOverride() }),
+    ...(headingTagOverride && { as: headingTagOverride }),
   };
 
   const Info = (
