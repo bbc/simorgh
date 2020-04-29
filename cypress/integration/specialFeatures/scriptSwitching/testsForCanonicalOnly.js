@@ -1,8 +1,5 @@
 import visitPage from '../../../support/helpers/visitPage';
-import {
-  allVariantAssertions,
-  nonCookieVariantAssertions,
-} from '../utilities/scriptSwitchingJourneyAssertions';
+import allVariantAssertions from '../utilities/scriptSwitchingJourneyAssertions';
 import {
   clickScriptSwitcher,
   clickHomePageLink,
@@ -37,13 +34,13 @@ export default ({
       cy.log(
         `Asserting script switch button, url and document lang against variant: ${variant}`,
       );
-      nonCookieVariantAssertions(serviceName, variant);
+      allVariantAssertions(serviceName, variant);
 
       // Clicks script switcher
       clickScriptSwitcher(otherVariant);
 
       cy.log(
-        `Asserting cookies, script switch button, url and document lang against other variant: ${otherVariant}`,
+        `Asserting script switch button, url and document lang against other variant: ${otherVariant}`,
       );
       allVariantAssertions(serviceName, otherVariant);
 
@@ -51,7 +48,7 @@ export default ({
       clickHomePageLink(serviceName);
 
       cy.log(
-        `Asserting cookies, script switch button, url and document lang has persisted for other variant: ${otherVariant}`,
+        `Asserting script switch button, url and document lang has persisted for other variant: ${otherVariant}`,
       );
       allVariantAssertions(serviceName, otherVariant);
 
@@ -59,7 +56,7 @@ export default ({
       clickPromoLinkOnHomePage(pageType);
 
       cy.log(
-        `Asserting cookies, script switch button, url and document lang has persisted for other variant: ${otherVariant}`,
+        `Asserting script switch button, url and document lang has persisted for other variant: ${otherVariant}`,
       );
       allVariantAssertions(serviceName, otherVariant);
 
@@ -67,7 +64,7 @@ export default ({
       clickScriptSwitcher(variant);
 
       cy.log(
-        `Asserting cookies, script switch button, url and document lang have changed after clicking script switcher to ${variant}`,
+        `Asserting script switch button, url and document lang have changed after clicking script switcher to ${variant}`,
       );
       allVariantAssertions(serviceName, variant);
     });

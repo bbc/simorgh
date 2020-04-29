@@ -1,17 +1,5 @@
 import appConfig from '../../../../../src/server/utilities/serviceConfigs/index';
 
-const assertScriptCookie = (product, cookieValue) => {
-  const cookieSuffix = ['ukchina', 'zhongwen'].includes(product)
-    ? 'chinese'
-    : product;
-
-  cy.getCookie(`ckps_${cookieSuffix}`).should(
-    'have.property',
-    'value',
-    cookieValue,
-  );
-};
-
 const assertScriptSwitchButton = (product, variantValue) => {
   const scriptToSwitchTo = appConfig[product][variantValue].scriptLink.variant;
 
@@ -35,18 +23,7 @@ const assertLang = (serviceName, variantValue) => {
     });
 };
 
-export const allVariantAssertions = (serviceName, variantValue) => {
-  // Checks correct variant is saved in cookie
-  assertScriptCookie(serviceName, variantValue);
-  // Assert the script switch button is correct for variant
-  assertScriptSwitchButton(serviceName, variantValue);
-  // Assert URL contains correct variant
-  assertURLContains(serviceName, variantValue);
-  // Issue with 'have.property' assertion
-  assertLang(serviceName, variantValue);
-};
-
-export const nonCookieVariantAssertions = (serviceName, variantValue) => {
+export default (serviceName, variantValue) => {
   // Assert the script switch button is correct for variant
   assertScriptSwitchButton(serviceName, variantValue);
   // Assert URL contains correct variant
