@@ -17,12 +17,10 @@ export default () => {
 
     const navigationLinks = document.querySelectorAll('header nav a');
     navigationLinks.forEach(navigationLink => {
-      it('I can see a navigation link', () => {
+      it(`I can see a navigation link: ${navigationLink.textContent}`, () => {
         expect(navigationLink).toBeInTheDocument();
         expect(navigationLink.textContent).toBeTruthy();
-        expect(navigationLink.getAttribute('href')).toMatchSnapshot(
-          navigationLink.textContent,
-        );
+        expect(navigationLink.getAttribute('href')).toMatchSnapshot();
       });
     });
 

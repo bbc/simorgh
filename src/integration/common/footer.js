@@ -25,10 +25,10 @@ export default () => {
 
     const footerLinks = document.querySelectorAll('footer a');
     footerLinks.forEach(link => {
-      it('I can see a link', () => {
+      it(`I can see a link: ${link.textContent}`, () => {
         expect(link).toBeInTheDocument();
         expect(link.textContent).toBeTruthy();
-        expect(link.getAttribute('href')).toMatchSnapshot(link.textContent);
+        expect(link.getAttribute('href')).toMatchSnapshot();
       });
     });
   });
