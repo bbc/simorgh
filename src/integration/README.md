@@ -1,24 +1,48 @@
 This is where we write integration tests specifically for ensuring that all modules and React components within Simorgh and Psammead are working together to render a full page as expected.
 
-These tests use the [Jest](#what-is-jest) test runner and operate in a [JSDOM](#what-is-jsdom) environment.
+These tests use the [Jest](#what-is-jest) test runner and operate in a custom [JSDOM](#what-is-jsdom) environment.
 
 ## Getting started
 
-To run the tests locally:
-
-```js
+To run the tests against all 40+ services:
+```
 npm run test:integration
 ```
 
-This will build and run the application that the tests will run against.
+To run tests for a single service with the watch task:
+```
+npm run test:integration -- --services=amharic --watch
+```
+
+To run tests for selected services:
+```
+npm run test:integration -- --services=korean,persian,amharic
+```
+
+To run tests for a single service with the watch task and webpack hot reloading of application code:
+```
+npm run test:integration -- --services=korean --watch --dev
+```
+
+To run tests in CI so they fail if a snapshot was not captured:
+```
+npm run test:integration:ci
+```
+
+To stop running tests immediately when there is a failure - NB this is useful when you want to reduce noise if there are a lot of failing tests and you want to inspect one failing test at a time:
+```
+npm run test:integration -- --bail
+```
+
+Any other Jest CLI args and flags can be passed along in the `test:integration` script.
 
 ## How to write tests
 
-We need to write tests for both our AMP and canonical platforms. There are tests that can be written to test both platforms (cross platform tests), some tests for canonical only, and some tests for AMP only.
+Test suites are designed to test a full page that a user can visit at a given url. We test both AMP and canonical platforms for a given page. Most tests we write can be run against both platforms. We refer to these tests as cross platform tests. Some tests need to be written for a specific platform because of the differences in HTML or functionality. When writing tests we need to consider that tests will be run for all 40+ services so they must not be specific to any service or language.
 
 #### Cross platform tests
 
-For tests that can be run in both platforms, we should add these tests to a file called `crossPlatformTests.js`. An example of a cross platform test would be like
+Tests that can be run in both platforms need to be contained in a file called `crossPlatformTests.js`. An example of a cross platform test would be like:
 
 ```js
 export default () => {
@@ -26,7 +50,7 @@ export default () => {
     const h1El = document.querySelector('h1');
 
     expect(h1El).toBeInTheDocument();
-    expect(h1El).toBeTruthy();
+    expect(h1El.textContent).toBeTruthy();
     expect(h1El.textContent).toMatchSnapshot();
   });
 };
@@ -34,7 +58,7 @@ export default () => {
 
 #### AMP only tests
 
-For tests that should be run only on the AMP platform, we should add these tests to a file called `ampTests.js`. An example of an AMP test would be like
+Tests that should be run only on the AMP platform need to be contained in a file called `ampTests.js`. An example of an AMP test would be like
 
 ```js
 export default () => {
@@ -51,7 +75,7 @@ export default () => {
 
 #### Canonical only tests
 
-For tests that should be run only on the canonical platform, we should add these tests to a file called `canonicalTests.js`. An example of a canonical test would be like
+Tests that should be run only on the canonical platform need to be contained in a tests to a file called `canonicalTests.js`. An example of a canonical test would be like
 
 ```js
 export default () => {
@@ -70,7 +94,9 @@ export default () => {
 };
 ```
 
-For Jest to run the tests in these files we need to create a `*(amp|canonical).test.js` file that will import and call the test functions. We use `amp.test.js` to run the tests on the AMP platform and `canonical.test.js` to run the tests on the canonical platform. For example a file name `amp.test.js` with the contents:
+The above tests will not be picked up by the Jest test runner just yet because they are just exported functions. The reason we define them as exported functions is, if you remember from [How to write tests](#how-to-write-tests), tests are run against all 40+ services so we define our tests as reusable functions that can be called in any service environment. Jest is set up to detect files with the naming `*(amp|canonical).test.js` and run any tests that are inside of them. This is where we can import and call the above mentioned test functions. To clarify, `amp.test.js` files run the tests on the AMP platform and `canonical.test.js` run the tests on the canonical platform.
+
+An example of an `amp.test.js` test file that imports all AMP tests for a Pidgin article example http://localhost:7080:/pidgin/23248703 looks like:
 
 ```js
 /**
@@ -78,28 +104,38 @@ For Jest to run the tests in these files we need to create a `*(amp|canonical).t
  * @pathname /pidgin/23248703
  */
 
-import runCrossPlatformTests from '../crossPlatformTests';
-import runAmpTests from '../ampTests';
+import runAmpTests from '../../../pages/articles/ampTests';
 
-describe('AMP', () => {
-  describe(pageType, () => {
-    runCrossPlatformTests();
-    runAmpTests();
-  });
-});
+describe('AMP pidgin articles', runAmpTests);
+
 ```
 
-In the above example we import the cross platform tests and the AMP tests. We have also specified a pathname using a [docblock pragma](#what-is-a-docblock-pragma). The pathname is the part of the url that is everything after `https://bbc.com` and in this example it is `/mundo/articles/ce42wzqr2mko`. If you visit `https://bbc.com/mundo/articles/ce42wzqr2mko` (**NB** this is the canonical url - for the AMP url just add `.amp` on the end) you will see this is a Mundo article page and it is what we are going to test.
+The canonical equivalent looks like
 
-Before our tests run, the test environment [setup file](https://github.com/bbc/simorgh/tree/latest/src/integration/integrationTestEnvironment.js) parses the `pathname` dockblock pragma and constructs the url. JSDOM then visits the url to get the DOM trees that we can use to run our tests against.
+```js
+/**
+ * @service pidgin
+ * @pathname /pidgin/23248703
+ */
 
-Note we have also specified a `service` docblock pragma. The service is parsed and added to the global scope of every test file. This can come in handy for tests where you need to know the service. There are other useful variables added to the global scope:
+import runCanonicalTests from '../../../pages/articles/canonicalTests';
 
-- `pageType` - The page type which is parsed from the test file path.
-- `service` - The service of the currently running page test.
-- `document` - The `document` object of the current page. You can use this to query the DOM and assert the correct things are in the page.
+describe('Canonical pidgin articles', runCanonicalTests);
 
-Tests for pages are located in the `src/app/integration/pages` directory within a directory for each page type:
+```
+
+Writing and maintaining these test files for 40+ services and all their page types would be very difficult to do manually so these files are generated from a config file found in [`src/integration/utils/runTests/constants/services.js`](https://github.com/bbc/simorgh/blob/latest/src/integration/utils/runTests/constants/services.js). This config file contains all services and service variants with examples of urls for every page type to run tests against. Every time tests are run, the test files are regenerated from this config file to ensure they are up to date.
+
+### How do the `amp.test.js` and `canonical.test.js` files work?
+Each file contains 2 necessary [docblock pragmas](#what-is-a-docblock-pragma) - `@service` and `@pathname`.
+
+The `@pathname` is the part of the url that is everything after `https://bbc.com` and in this example it is `/mundo/articles/ce42wzqr2mko`. If you visit `https://bbc.com/mundo/articles/ce42wzqr2mko` (**NB** this is the canonical url - for the AMP url just add `.amp` on the end) you will see this is a Mundo article page and it is what we are going to test.
+
+The `@service` is parsed and added to the global scope of every test suite to serve tests that need to know the service they are running against, for example, tests that ensure the correct service's JavaScript bundled is loaded in the document. It also comes in handy to make exceptions for certain services in tests, for example, the Scotland service does not have a navigation bar, so we can wrap a conditional around such tests.
+
+Before our tests run, a custom test environment [setup file](https://github.com/bbc/simorgh/tree/latest/src/integration/integrationTestEnvironment.js) parses the `@pathname` dockblock pragma and constructs the url. JSDOM then visits the url to get the DOM trees that we can use to run our tests against.
+
+Tests functions for pages are located in the `src/app/integration/pages` directory within a directory for each page type:
 
 ```
 ├── pages
@@ -113,13 +149,10 @@ Tests for pages are located in the `src/app/integration/pages` directory within 
 |  ├── onDemandRadioPage
 ```
 
-within a page type directory we tell Jest where our test suites are by using the `.test.js` file extension, for example, `amp.test.js`, `canonical.test.js`. To test the `amharic` service we have created a directory specifically for this and located the AMP and canonical test files within.
+Within each `page` directory are located the `ampTests`, `canonicalTests` and `crossPlatformTests` files.
 
 ```
 └── liveRadioPage
-   ├── amharic
-   |  ├── amp.test.js
-   |  └── canonical.test.js
    ├── ampTests.js
    ├── canonicalTests.js
    └── crossPlatformTests.js
