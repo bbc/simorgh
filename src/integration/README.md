@@ -110,7 +110,7 @@ describe('AMP pidgin articles', runAmpTests);
 
 ```
 
-The canonical equivalent looks like
+The `canonical.test.js` equivalent looks like:
 
 ```js
 /**
@@ -134,6 +134,8 @@ The `@pathname` is the part of the url that is everything after `https://bbc.com
 The `@service` is parsed and added to the global scope of every test suite to serve tests that need to know the service they are running against, for example, tests that ensure the correct service's JavaScript bundled is loaded in the document. It also comes in handy to make exceptions for certain services in tests, for example, the Scotland service does not have a navigation bar, so we can wrap a conditional around such tests.
 
 Before our tests run, a custom test environment [setup file](https://github.com/bbc/simorgh/tree/latest/src/integration/integrationTestEnvironment.js) parses the `@pathname` dockblock pragma and constructs the url. JSDOM then visits the url to get the DOM trees that we can use to run our tests against.
+
+### Directory Structure
 
 Tests functions for pages are located in the `src/app/integration/pages` directory within a directory for each page type:
 
@@ -176,29 +178,31 @@ All page types have some common UI and functionality. Tests for the common stuff
 
 As you can see, common UI and functionality includes header and footer UI, analytics reporting, SEO etc. We can import these in each page type's test file to run these tests.
 
-## I already wrote unit tests for a component. Do I need to write an integration test for this component?
+## FAQs
+
+### I already wrote unit tests for a component. Do I need to write an integration test for this component?
 
 The answer is probably, yes. The purpose of an integration test is to test that the interaction between modules and React components work as expected.
 
 A unit test only ensures that something works in isolation. Even if the units work well in isolation, you do not know if they work well together. For that we need integration tests.
 
-## Can I just write integration tests and forget about unit tests since integration tests test the interaction between modules and the modules themselves
+### Can I just write integration tests and forget about unit tests since integration tests test the interaction between modules and the modules themselves
 
 You might then think it makes sense to only write integration tests but there are downsides to integration tests. One downside is that integration tests are brittle. Because integration tests test a lot of moving parts there are a lot of things that can go wrong and finding where the problem lies can be like finding a needle in a haystack. Unit tests can help signal where we need to make a fix. It's also very difficult to cover all possible test cases of an application using only integration tests. It's much faster and easier to writes tests for various states of a React component with unit testing than it is with integration testing.
 
-## What is JSDOM?
+### What is JSDOM?
 
 [JSDOM](https://github.com/jsdom/jsdom) is a JavaScript emulation of a web-browser. It can also be called a [headless browser](https://en.wikipedia.org/wiki/Headless_browser). Running tests in a JSDOM environment is substantially faster and less flaky than running tests in a real web browser however we sacrifice some environment accuracy. It can be a trade-off worth making for simple DOM querying tests.
 
-## What is Jest?
+### What is Jest?
 
 [Jest](https://jestjs.io/en/) is a JavaScript library for creating, running, and structuring tests. We use Jest for our unit and integration tests.
 
-## What is a docblock pragma?
+### What is a docblock pragma?
 
 A docblock pragma is a specially-formatted comment at the top of a test file. We can use docblock pragmas to alter the environment that tests run in.
 
-## What is a snapshot?
+### What is a snapshot?
 
 This is a feature provided by Jest. It's not a snapshot of the graphical UI but a snapshot of a result that is typically returned from a function. This is often the HTML returned from DOM query selector e.g.
 
@@ -254,18 +258,18 @@ This would produce the following snapshot:
 exports[`I can see the headline`] = `BBC News, Pidgin - Home`;
 ```
 
-## What is Cypress
+### What is Cypress
 
 Cypress is a JavaScript-based end-to-end testing framework. Our Cypress tests can be found [here](https://github.com/bbc/simorgh/tree/latest/cypress).
 
-## My test is failing and I don't know why
+### My test is failing and I don't know why
 
 Here are some possible answers:
 
-- ### The thing I am testing is not in the DOM
+- #### The thing I am testing is not in the DOM
 
   The feature you are trying to test may be rendered on the client side instead of on the server so does not exist in the DOM you are testing. We do not currently have client side rendering working with JSDOM but this is something we want to add in the future.
 
-- ### Content in an iframe I want to test is not in the DOM
+- #### Content in an iframe I want to test is not in the DOM
 
   This is another current limitation we have. We cannot test the contents that are rendered within an iframe. We can test that the iframe is there though. Testing the iframe `src` url may be sufficient. If this does not provide enough confidence then you should consider writing an end-to-end tests using another tool we use in Simorgh such as [Cypress](what-is-cypress).
