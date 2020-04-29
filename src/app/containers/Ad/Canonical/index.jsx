@@ -7,6 +7,7 @@ const CanonicalAd = () => {
     return null;
   }
 
+  // To be implemented in next feature ticket
   return null;
 };
 
