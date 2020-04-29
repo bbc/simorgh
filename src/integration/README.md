@@ -137,6 +137,8 @@ The `@service` is parsed and added to the global scope of every test suite to se
 
 Before our tests run, a custom test environment [setup file](https://github.com/bbc/simorgh/tree/latest/src/integration/integrationTestEnvironment.js) parses the `@pathname` dockblock pragma and constructs the url. JSDOM then visits the url to get the DOM trees that we can use to run our tests against.
 
+The benefit of abstracting the page rendering away from test files in a custom Jest environment is that it removes the test setup boilerplate from each test suite which would contain asynchronous handling of rendering the page. Also, since all the page rendering handling is done in one place, if we ever decide to switch to a different page rendering framework, but still want to use Jest as our test runner, then we can simply switch the JSDOM setup out of the custom test environment file and replace it with another page rendering framework. As long as we still pass a DOM implementation (`window.document` object) to the test files then our tests should still work as expected.
+
 ### Directory Structure
 
 Tests functions for pages are located in the `src/app/integration/pages` directory within a directory for each page type:
