@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, waitForDomChange } from '@testing-library/react';
 import IncludeContainer from '.';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -77,4 +77,21 @@ describe('IncludeContainer', () => {
     );
     expect(container).toMatchSnapshot();
   });
+  const runningIncludeTest = includeType => {
+    it(`should add require to the page for ${includeType}`, async () => {
+      render(
+        <IncludeContainerWithMockContext
+          toggleState={toggleStateFalse}
+          html={fakeMarkup}
+          type={includeType}
+        />,
+      );
+      await waitForDomChange({
+        container: document.querySelector('head'),
+      });
+      expect(document.querySelector('html')).toMatchSnapshot();
+    });
+  };
+  runningIncludeTest('idt1');
+  runningIncludeTest('vj');
 });
