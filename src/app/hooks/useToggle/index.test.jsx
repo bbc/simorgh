@@ -39,33 +39,10 @@ describe('useToggle custom hook', () => {
             value: '',
           },
         },
-      });
-      let result;
-      const wrapper = ({ children }) => (
-        <ToggleContextProvider
-          service="mundo"
-          origin="https://www.test.bbc.com"
-        >
-          {children}
-        </ToggleContextProvider>
-      );
-
-      await act(async () => {
-        result = renderHook(() => useToggle('ads'), { wrapper }).result;
-      });
-
-      expect(result.current).toEqual({ enabled: true, value: '' });
-    });
-  });
-
-  describe('Given ads toggle that is fetched from the toggle service is disabled', () => {
-    it('return enabled false', async () => {
-      fetchMock.mock(togglesUrl, {
-        toggles: {
-          ads: {
-            enabled: false,
-            value: '',
-          },
+        geoIp: {
+          ukCombined: true,
+          advertiseCombined: true,
+          countryCode: 'gb',
         },
       });
       let result;
@@ -82,7 +59,40 @@ describe('useToggle custom hook', () => {
         result = renderHook(() => useToggle('ads'), { wrapper }).result;
       });
 
-      expect(result.current).toEqual({ enabled: false, value: '' });
+      expect(result.current).toEqual({ enabled: true });
+    });
+  });
+
+  describe('Given ads toggle that is fetched from the toggle service is disabled', () => {
+    it('return enabled false', async () => {
+      fetchMock.mock(togglesUrl, {
+        toggles: {
+          ads: {
+            enabled: false,
+            value: '',
+          },
+        },
+        geoIp: {
+          ukCombined: true,
+          advertiseCombined: true,
+          countryCode: 'gb',
+        },
+      });
+      let result;
+      const wrapper = ({ children }) => (
+        <ToggleContextProvider
+          service="mundo"
+          origin="https://www.test.bbc.com"
+        >
+          {children}
+        </ToggleContextProvider>
+      );
+
+      await act(async () => {
+        result = renderHook(() => useToggle('ads'), { wrapper }).result;
+      });
+
+      expect(result.current).toEqual({ enabled: false });
     });
   });
 

@@ -11,12 +11,11 @@ import {
   getRadioAndTVRegex,
   getErrorPageRegex,
   getLegacyAssetRegex,
+  getMostReadPageRegex,
+  getMostReadDataRegex,
 } from './utils';
 
 const allServices = Object.keys(services);
-const serviceRegex = Object.keys(services).join('|');
-const variantRegex = '/simp|/trad|/cyr|/lat';
-const mostRead = 'mostread';
 
 export const articlePath = getArticleRegex(allServices);
 export const articleDataPath = `${articlePath}.json`;
@@ -40,7 +39,9 @@ export const radioAndTvPath = getRadioAndTVRegex(allServices);
 export const radioAndTvDataPath = `${radioAndTvPath}.json`;
 
 export const errorPagePath = getErrorPageRegex(allServices);
-export const mostReadDataRegexPath = `/:service(${serviceRegex})/${mostRead}:variant(${variantRegex})?.json`;
 
 export const legacyAssetPagePath = getLegacyAssetRegex(allServices);
 export const legacyAssetPageDataPath = `${legacyAssetPagePath}.json`;
+
+export const mostReadPagePath = getMostReadPageRegex(allServices);
+export const mostReadDataRegexPath = getMostReadDataRegex(allServices);
