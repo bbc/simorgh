@@ -12,8 +12,29 @@ export default () => {
     expect(imageEl).toBeInTheDocument();
     expect(imageCaptionEl).toBeInTheDocument();
     expect(imageCaptionEl.textContent).toBeTruthy();
-    expect(imageCaptionEl.textContent).toMatchSnapshot(
-      `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`,
+    expect(imageCaptionEl.textContent).toMatchSnapshot();
+  });
+
+  /**
+   * Social Embeds.
+   */
+  it('I can see the skip social embed link', () => {
+    const skipLinkEl = document.querySelector(
+      'a[href="#skip-youtube-content-1"]',
     );
+
+    expect(skipLinkEl).toBeInTheDocument();
+    expect(skipLinkEl.textContent).toBeTruthy();
+    expect(skipLinkEl.textContent).toMatchSnapshot();
+  });
+
+  it('I can see the skip social embed link destination', () => {
+    const skipLinkDestinationEl = document.getElementById(
+      'skip-youtube-content-1',
+    );
+
+    expect(skipLinkDestinationEl).toBeInTheDocument();
+    expect(skipLinkDestinationEl.textContent).toBeTruthy();
+    expect(skipLinkDestinationEl.textContent).toMatchSnapshot();
   });
 };

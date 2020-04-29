@@ -80,7 +80,11 @@ exports[`AMP Story Page Footer I can see the footer copyright and external linki
 
 exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
-exports[`AMP Story Page I can see an image with a caption: "Pie de foto, Llegó el día de la salida de Reino Unido de la UE." 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
+exports[`AMP Story Page I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
+
+exports[`AMP Story Page I can see the skip social embed link 1`] = `"YouTube баракчаны өткөрүп жиберүү, пост, 1"`;
+
+exports[`AMP Story Page I can see the skip social embed link destination 1`] = `"YouTube посттун аягы, 1"`;
 
 exports[`AMP Story Page SEO Canonical link 1`] = `"http://localhost:7080/kyrgyz/23292889"`;
 

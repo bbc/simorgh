@@ -8,7 +8,11 @@ exports[`Canonical Story Page Footer I can see the footer copyright and external
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
-exports[`Canonical Story Page I can see an image with a caption: "Pie de foto, Llegó el día de la salida de Reino Unido de la UE." 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
+exports[`Canonical Story Page I can see an image with a caption 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
+
+exports[`Canonical Story Page I can see the skip social embed link 1`] = `"Saltar contenido de YouTube, 1"`;
+
+exports[`Canonical Story Page I can see the skip social embed link destination 1`] = `"Fin del contenido de YouTube, 1"`;
 
 exports[`Canonical Story Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
 
