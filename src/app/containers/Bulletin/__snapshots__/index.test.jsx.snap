@@ -36,6 +36,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c5:before {
@@ -379,6 +380,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c5:before {
@@ -713,6 +715,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c5:before {
@@ -1042,6 +1045,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c5:before {

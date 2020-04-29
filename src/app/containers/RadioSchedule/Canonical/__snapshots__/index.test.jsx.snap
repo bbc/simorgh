@@ -60,6 +60,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c21:before {
@@ -1358,6 +1359,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c21:before {
