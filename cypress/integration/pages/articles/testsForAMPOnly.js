@@ -1,6 +1,7 @@
+import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
 import appToggles from '../../../support/helpers/useAppToggles';
-import { getBlockData } from './helpers';
+import { getBlockData, getVideoEmbedUrl } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = service =>
@@ -16,6 +17,7 @@ export const testsThatAlwaysRunForAMPOnly = ({ service, pageType }) => {
 export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   service,
   pageType,
+  variant,
 }) =>
   describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {
     if (appToggles.chartbeatAnalytics.enabled) {
@@ -55,33 +57,18 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           });
         });
 
-        // Tests requiring iframe access are temporarily being throttled to the 'news' service.
-        if (service === 'news') {
-          it('should autoplay', () => {
-            cy.request(`${Cypress.env('currentPath')}.json`).then(
-              ({ body }) => {
-                const media = getBlockData('video', body);
-                if (media && media.type === 'video') {
-                  cy.get(
-                    'div[class^="StyledVideoContainer"] iframe[class^="i-amphtml-fill-content"]',
-                  )
-                    .scrollIntoView()
-                    .then($iframe => {
-                      cy.wrap($iframe.prop('contentWindow'), {
-                        // `timeout` only applies to the methods chained below.
-                        // `its()` benefits from this, and will wait up to 8s
-                        // for the mediaPlayer instance to become available.
-                        timeout: 20000,
-                      })
-                        .its('embeddedMedia.playerInstances.mediaPlayer')
-                        .invoke('currentTime')
-                        .should('be.gt', 0);
-                    });
-                }
-              },
-            );
+        it('should render an iframe with a valid URL', () => {
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const media = getBlockData('video', body);
+
+            if (media && media.type === 'video') {
+              const { lang } = appConfig[service][variant];
+              const embedUrl = `${getVideoEmbedUrl(body, lang)}/amp`;
+              cy.get(`amp-iframe[src="${embedUrl}"]`).should('be.visible');
+              cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
+            }
           });
-        }
+        });
       });
     }
   });

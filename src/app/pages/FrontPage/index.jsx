@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment, useContext } from 'react';
-import { string } from 'prop-types';
+import { string, node } from 'prop-types';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
 import styled from 'styled-components';
@@ -19,6 +19,7 @@ import {
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
 } from '@bbc/gel-foundations/spacings';
+import SectionLabel from '@bbc/psammead-section-label';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -59,6 +60,19 @@ export const StyledFrontPageDiv = styled.div`
   }
 `;
 
+const MostReadSection = styled.section.attrs(() => ({
+  role: 'region',
+  'aria-labelledby': 'Most-Read',
+  'data-e2e': 'most-read',
+}))`
+  /* To centre page layout for Group 4+ */
+  margin: 0 auto;
+  width: 100%; /* Needed for IE11 */
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
+  }
+`;
+
 const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
     product,
@@ -66,7 +80,12 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     translations,
     frontPageTitle,
     radioSchedule,
+    service,
+    script,
+    dir,
+    mostRead: { header },
   } = useContext(ServiceContext);
+
   const home = path(['home'], translations);
   const groups = path(['content', 'groups'], pageData);
   const lang = path(['metadata', 'language'], pageData);
@@ -87,11 +106,29 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const hasUsefulLinks =
     findIndex(group => group.type === 'useful-links')(groups) > -1;
 
+  const MostReadWrapper = ({ children }) => (
+    <MostReadSection>
+      <SectionLabel
+        script={script}
+        labelId="Most-Read"
+        service={service}
+        dir={dir}
+      >
+        {header}
+      </SectionLabel>
+      {children}
+    </MostReadSection>
+  );
+
+  MostReadWrapper.propTypes = {
+    children: node.isRequired,
+  };
+
   const renderMostRead = () => (
     <MostReadContainer
       mostReadEndpointOverride={mostReadEndpointOverride}
       columnLayout="twoColumn"
-      isOnFrontPage
+      wrapper={MostReadWrapper}
     />
   );
 
@@ -115,9 +152,10 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
           {groups.map((group, index) => (
             <Fragment key={group.title}>
               {group.type === 'useful-links' && renderMostRead()}
-              {radioScheduleOnPage && radioSchedulePosition === group.type && (
-                <RadioScheduleContainer initialData={radioScheduleData} />
-              )}
+              {radioScheduleOnPage &&
+                radioSchedulePosition === group.semanticGroupName && (
+                  <RadioScheduleContainer initialData={radioScheduleData} />
+                )}
               <FrontPageSection group={group} sectionNumber={index} />
             </Fragment>
           ))}

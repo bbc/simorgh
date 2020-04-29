@@ -195,7 +195,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: true,
-      frontPagePosition: 'feature-main',
+      frontPagePosition: 'Features',
       header: 'Barnaamijyada Idaacadda',
     },
     recommendations: {
