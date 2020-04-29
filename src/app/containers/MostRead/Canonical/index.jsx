@@ -80,8 +80,7 @@ const CanonicalMostRead = ({
   columnLayout,
   constrainMaxWidth,
   isOnFrontPage,
-  linkTypography,
-  rankTypography,
+  size,
 }) => {
   const [items, setItems] = useState([]);
   const {
@@ -179,7 +178,7 @@ const CanonicalMostRead = ({
                 numberOfItems={items.length}
                 dir={dir}
                 columnLayout={columnLayout}
-                rankTypography={rankTypography}
+                size={size}
               />
               <MostReadLink
                 dir={dir}
@@ -187,8 +186,7 @@ const CanonicalMostRead = ({
                 script={script}
                 title={item.title}
                 href={item.href}
-                linkTypography={linkTypography}
-                rankTypography={rankTypography}
+                size={size}
               >
                 {item.timestamp}
               </MostReadLink>
@@ -205,15 +203,13 @@ CanonicalMostRead.propTypes = {
   constrainMaxWidth: bool.isRequired,
   columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
   isOnFrontPage: bool,
-  linkTypography: oneOf(['greatprimer', 'pica']),
-  rankTypography: oneOf(['foolscap', 'trafalgar']),
+  size: oneOf(['default', 'small']),
 };
 
 CanonicalMostRead.defaultProps = {
   columnLayout: 'multiColumn',
   isOnFrontPage: false,
-  linkTypography: 'greatprimer',
-  rankTypography: 'foolscap',
+  size: 'default',
 };
 
 export default CanonicalMostRead;
