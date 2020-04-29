@@ -26,10 +26,6 @@ exports[`Canonical Front Page Footer I can see a link: ملفات الارتبا
 
 exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
-exports[`Canonical Front Page Header I can see a navigation link: اقتصاد 1`] = `"/arabic/business"`;
-
-exports[`Canonical Front Page Header I can see a navigation link: اقتصاد 2`] = `"/arabic/business"`;
-
 exports[`Canonical Front Page Header I can see a navigation link: الصفحة الحالية, رئيسية 1`] = `"/arabic"`;
 
 exports[`Canonical Front Page Header I can see a navigation link: الصفحة الحالية, رئيسية 2`] = `"/arabic"`;
@@ -38,17 +34,13 @@ exports[`Canonical Front Page Header I can see a navigation link: برامجنا
 
 exports[`Canonical Front Page Header I can see a navigation link: برامجنا 2`] = `"/arabic/tv-and-radio-37728883"`;
 
+exports[`Canonical Front Page Header I can see a navigation link: تحقيقات 1`] = `"/arabic/tv-and-radio-42414864"`;
+
+exports[`Canonical Front Page Header I can see a navigation link: تحقيقات 2`] = `"/arabic/tv-and-radio-42414864"`;
+
 exports[`Canonical Front Page Header I can see a navigation link: ترند 1`] = `"/arabic/trending"`;
 
 exports[`Canonical Front Page Header I can see a navigation link: ترند 2`] = `"/arabic/trending"`;
-
-exports[`Canonical Front Page Header I can see a navigation link: حوارات 1`] = `"/arabic/interactivity"`;
-
-exports[`Canonical Front Page Header I can see a navigation link: حوارات 2`] = `"/arabic/interactivity"`;
-
-exports[`Canonical Front Page Header I can see a navigation link: رياضة 1`] = `"/arabic/sports"`;
-
-exports[`Canonical Front Page Header I can see a navigation link: رياضة 2`] = `"/arabic/sports"`;
 
 exports[`Canonical Front Page Header I can see a navigation link: شرق أوسط 1`] = `"/arabic/middleeast"`;
 
@@ -70,25 +62,9 @@ exports[`Canonical Front Page Header I can see a navigation link: علوم وت�
 
 exports[`Canonical Front Page Header I can see a navigation link: علوم وتكنولوجيا 2`] = `"/arabic/scienceandtech"`;
 
-exports[`Canonical Front Page Header I can see a navigation link: فنون 1`] = `"/arabic/artandculture"`;
-
-exports[`Canonical Front Page Header I can see a navigation link: فنون 2`] = `"/arabic/artandculture"`;
-
 exports[`Canonical Front Page Header I can see a navigation link: فيديو 1`] = `"/arabic/media"`;
 
 exports[`Canonical Front Page Header I can see a navigation link: فيديو 2`] = `"/arabic/media"`;
-
-exports[`Canonical Front Page Header I can see a navigation link: مجلة 1`] = `"/arabic/magazine"`;
-
-exports[`Canonical Front Page Header I can see a navigation link: مجلة 2`] = `"/arabic/magazine"`;
-
-exports[`Canonical Front Page Header I can see a navigation link: مرأة 1`] = `"/arabic/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
-
-exports[`Canonical Front Page Header I can see a navigation link: مرأة 2`] = `"/arabic/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
-
-exports[`Canonical Front Page Header I can see a navigation link: ملفات 1`] = `"/arabic/in_depth"`;
-
-exports[`Canonical Front Page Header I can see a navigation link: ملفات 2`] = `"/arabic/in_depth"`;
 
 exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
