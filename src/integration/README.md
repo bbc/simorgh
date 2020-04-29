@@ -94,9 +94,11 @@ export default () => {
 };
 ```
 
-The above tests will not be picked up by the Jest test runner just yet because they are just exported functions. The reason we define them as exported functions is, if you remember from [How to write tests](#how-to-write-tests), tests are run against all 40+ services so we define our tests as reusable functions that can be called in any service environment. Jest is set up to detect files with the naming `*(amp|canonical).test.js` and run any tests that are inside of them. This is where we can import and call the above mentioned test functions. To clarify, `amp.test.js` files run the tests on the AMP platform and `canonical.test.js` run the tests on the canonical platform.
+The above tests will not be picked up by the Jest test runner yet because they are just exported functions. The reason we define them as exported functions is, if you remember from [How to write tests](#how-to-write-tests), tests are run against all 40+ services so we define our tests as reusable functions that can be called in any service environment.
 
-An example of an `amp.test.js` test file that imports all AMP tests for a Pidgin article example http://localhost:7080:/pidgin/23248703 looks like:
+Jest is set up to detect files with the naming `(amp|canonical).test.js` and run any tests that are inside of them. This is where we can import and call the above mentioned test functions. To clarify, `amp.test.js` files run the tests on the AMP platform and `canonical.test.js` run the tests on the canonical platform.
+
+An example of an `amp.test.js` test file that imports all AMP tests for a Pidgin article example http://localhost:7080/pidgin/23248703 looks like:
 
 ```js
 /**
