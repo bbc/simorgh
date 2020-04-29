@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitForDomChange } from '@testing-library/react';
+import { render, wait } from '@testing-library/react';
 import IncludeContainer from '.';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -34,6 +34,14 @@ const IncludeContainerWithMockContext = ({ toggleState, html, type }) => (
 );
 
 describe('IncludeContainer', () => {
+  beforeEach(() => {
+    window.require = { config: jest.fn() };
+  });
+
+  afterEach(() => {
+    window.require = null;
+  });
+
   it('should render HTML when include toggle is enabled', async () => {
     const { container } = render(
       <IncludeContainerWithMockContext
@@ -77,6 +85,7 @@ describe('IncludeContainer', () => {
     );
     expect(container).toMatchSnapshot();
   });
+
   const runningIncludeTest = includeType => {
     it(`should add require to the page for ${includeType}`, async () => {
       render(
@@ -86,12 +95,34 @@ describe('IncludeContainer', () => {
           type={includeType}
         />,
       );
-      await waitForDomChange({
-        container: document.querySelector('head'),
-      });
-      expect(document.querySelector('html')).toMatchSnapshot();
+
+      await wait(() =>
+        expect(
+          Array.from(document.querySelectorAll('head script')),
+        ).toHaveLength(2),
+      );
+
+      expect(window.require.config).toHaveBeenCalled();
     });
   };
   runningIncludeTest('vj');
   runningIncludeTest('idt1');
+
+  it(`should add not add require to the page for idt2`, async () => {
+    render(
+      <IncludeContainerWithMockContext
+        toggleState={toggleStateFalse}
+        html={fakeMarkup}
+        type="idt2"
+      />,
+    );
+
+    await wait(() =>
+      expect(Array.from(document.querySelectorAll('head script'))).toHaveLength(
+        0,
+      ),
+    );
+
+    expect(window.require.config).toHaveBeenCalledTimes(0);
+  });
 });
