@@ -92,6 +92,6 @@ describe('IncludeContainer', () => {
       expect(document.querySelector('html')).toMatchSnapshot();
     });
   };
-  runningIncludeTest('idt1');
   runningIncludeTest('vj');
+  runningIncludeTest('idt1');
 });

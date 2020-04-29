@@ -29,7 +29,7 @@ const IncludeContainer = ({ html, type }) => {
       'https://nav.files.bbci.co.uk/orbit-webmodules/0.0.2-448.45dcd56/istats/istats-1',
   }`;
 
-  const configureAdditionalScripts = `require.config({ paths:${paths} });`;
+  const configureAdditionalScripts = `window.requre && require.config({ paths:${paths} });`;
 
   return (
     <>

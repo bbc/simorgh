@@ -51,6 +51,21 @@ exports[`IncludeContainer should add require to the page for idt1 1`] = `
 /* sc-component-id: PopOutAtGroup5-sc-12lwanc-13 */
 
     </style>
+    <script
+      data-react-helmet="true"
+      src="https://news.files.bbci.co.uk/include/vjassets/js/vendor/require-2.1.20b.min.js"
+      type="text/javascript"
+    />
+    <script
+      data-react-helmet="true"
+    >
+      window.requre && require.config({ paths:{
+    'jquery-1':
+      'https://static.bbc.co.uk/frameworks/jquery/0.4.1/sharedmodules/jquery-1.7.2',
+    'istats-1':
+      'https://nav.files.bbci.co.uk/orbit-webmodules/0.0.2-448.45dcd56/istats/istats-1',
+  } });
+    </script>
   </head>
   <body>
     <div>
@@ -131,7 +146,7 @@ exports[`IncludeContainer should add require to the page for vj 1`] = `
     <script
       data-react-helmet="true"
     >
-      require.config({ paths:{
+      window.requre && require.config({ paths:{
     'jquery-1':
       'https://static.bbc.co.uk/frameworks/jquery/0.4.1/sharedmodules/jquery-1.7.2',
     'istats-1':
@@ -155,78 +170,7 @@ exports[`IncludeContainer should add require to the page for vj 1`] = `
         </div>
       </div>
     </div>
-    <div>
-      <div
-        class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
-      >
-        <div>
-          <div>
-            Visual Journalism Markup
-          </div>
-          <script
-            src="localhost/vj.js"
-            type="text/javascript"
-          />
-        </div>
-      </div>
-    </div>
   </body>
-</html>
-`;
-
-exports[`IncludeContainer should add require to the page for vj 2`] = `
-<html>
-  <head>
-    <style
-      data-styled=""
-      data-styled-version="4.4.1"
-    >
-      
-      
-/* sc-component-id: GridWrapper-sc-12lwanc-0 */
-
-      
-/* sc-component-id: GridItemConstrainedSmall-sc-12lwanc-1 */
-
-      
-/* sc-component-id: GridItemConstrainedMedium-sc-12lwanc-2 */
-.fVauYi{grid-column:1 / span 6;} @media (max-width:25rem){.fVauYi{padding:0 0.5rem;}} @media (min-width:25rem) and (max-width:62.9375rem){.fVauYi{padding:0 1rem;}} @media (max-width:37.4375rem){} @media (min-width:37.5rem){.fVauYi{grid-column:1 / span 5;max-width:83.33%;}} @media (min-width:63rem) and (max-width:79.9375rem){.fVauYi{grid-column:3 / span 5;max-width:37.75rem;}} @media (min-width:80rem){.fVauYi{grid-column:6 / span 10;max-width:38.5rem;}} @supports (display:grid){.fVauYi{max-width:initial;}}
-      
-/* sc-component-id: GridItemConstrainedMediumNoMargin-sc-12lwanc-3 */
-
-      
-/* sc-component-id: GridItemConstrainedLarge-sc-12lwanc-4 */
-
-      
-/* sc-component-id: GridItemConstrainedLargeNoMargin-sc-12lwanc-5 */
-
-      
-/* sc-component-id: GridItemConstrainedLargeWithTopMargin-sc-12lwanc-6 */
-
-      
-/* sc-component-id: NestedGridItemChildSmall-sc-12lwanc-7 */
-
-      
-/* sc-component-id: NestedGridItemChildMedium-sc-12lwanc-8 */
-
-      
-/* sc-component-id: NestedGridItemChildLarge-sc-12lwanc-9 */
-
-      
-/* sc-component-id: NestedGridParentLarge-sc-12lwanc-10 */
-
-      
-/* sc-component-id: NestedGridParentMedium-sc-12lwanc-11 */
-
-      
-/* sc-component-id: NestedGridParentSmall-sc-12lwanc-12 */
-
-      
-/* sc-component-id: PopOutAtGroup5-sc-12lwanc-13 */
-
-    </style>
-  </head>
-  <body />
 </html>
 `;
 
