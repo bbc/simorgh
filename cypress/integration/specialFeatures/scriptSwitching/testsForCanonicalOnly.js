@@ -34,31 +34,41 @@ export default ({
       // Accept cookie banner
       getCookieBannerAccept(serviceId, variant).click();
 
-      // Assert script switch button, url and document lang against variant
+      cy.log(
+        `Asserting script switch button, url and document lang against variant: ${variant}`,
+      );
       nonCookieVariantAssertions(serviceName, variant);
 
       // Clicks script switcher
       clickScriptSwitcher(otherVariant);
 
-      // Assert against other variant after switching script
+      cy.log(
+        `Asserting cookies, script switch button, url and document lang against other variant: ${otherVariant}`,
+      );
       allVariantAssertions(serviceName, otherVariant);
 
       // Navigate to home page by clicking link in the banner
       clickHomePageLink(serviceName);
 
-      // Assert other variant has persisted
+      cy.log(
+        `Asserting cookies, script switch button, url and document lang has persisted for other variant: ${otherVariant}`,
+      );
       allVariantAssertions(serviceName, otherVariant);
 
       // Finding a link to click on the home page
       clickPromoLinkOnHomePage(pageType);
 
-      // Assert other variant has persisted after navigating to new page
+      cy.log(
+        `Asserting cookies, script switch button, url and document lang has persisted for other variant: ${otherVariant}`,
+      );
       allVariantAssertions(serviceName, otherVariant);
 
       // Clicks script switcher to original variant
       clickScriptSwitcher(variant);
 
-      // Assert variant values have changed after clicking script switcher
+      cy.log(
+        `Asserting cookies, script switch button, url and document lang have changed after clicking script switcher to ${variant}`,
+      );
       allVariantAssertions(serviceName, variant);
     });
   });
