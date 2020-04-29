@@ -1,6 +1,7 @@
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { getAssetType } from './getAssetType';
 import fetchPageData from '../../utils/fetchPageData';
+import isEmpty from 'ramda/src/isEmpty';
 
 const pageTypeUrls = (assetType, service) => {
   switch (assetType) {
@@ -17,7 +18,7 @@ const pageTypeUrls = (assetType, service) => {
 };
 
 const validateResponse = ({ status, json }, name) => {
-  if (status == 200 && json) {
+  if (status == 200 && !isEmpty(json)) {
     return { [name]: json };
   }
 
@@ -32,11 +33,13 @@ const getAdditionalPageData = async (pageData, service, variant) => {
 
   const urlsToFetch = pageTypeUrls(assetType, service);
 
-  const data = await Promise.all(urlsToFetch.map(fetchUrl)).then(results =>
-    Object.assign({}, ...results),
-  );
+  if (urlsToFetch) {
+    return await Promise.all(urlsToFetch.map(fetchUrl)).then(results =>
+      Object.assign({}, ...results),
+    );
+  }
 
-  return data;
+  return null;
 };
 
 export default getAdditionalPageData;

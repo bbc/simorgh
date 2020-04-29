@@ -62,8 +62,6 @@ export default async ({ path: pathname, service, variant }) => {
     variant,
   );
 
-  console.log(additionalPageData);
-
   return {
     ...rest,
     ...(json && {
