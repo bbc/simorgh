@@ -20,9 +20,9 @@ const assertScriptSwitchButton = (product, variantValue) => {
   });
 };
 
-const assertURLContains = (product, variantValue) => {
+const assertURLContains = (serviceName, variantValue) => {
   cy.url().should(url => {
-    url.includes(`${product}/${variantValue}/`);
+    url.includes(`${serviceName}/${variantValue}/`);
   });
 };
 
