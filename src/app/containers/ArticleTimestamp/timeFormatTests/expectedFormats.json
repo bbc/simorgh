@@ -339,10 +339,10 @@
   },
   "swahili": {
     "default": {
-      "one minute ago": "tokea dakika moja",
-      "five minutes ago": "tokea dakika 5",
-      "one hour ago": "tokea saa limoja",
-      "five hours ago": "tokea masaa 5",
+      "one minute ago": "Dakika 1 iliyopita",
+      "five minutes ago": "Dakika 5 zilizopita",
+      "one hour ago": "Saa 1 iliyopita",
+      "five hours ago": "Saa 5 zilizopita",
       "exact date": "10 Oktoba 2018",
       "exact date and time with timezone": "12 Julai 2019, 15:55 EAT"
     }

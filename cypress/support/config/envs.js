@@ -27,7 +27,7 @@ const config = {
     assetUrl: 'http://localhost:7080',
     assetOrigin: 'http://localhost:7080',
     atiUrl: 'https://logws1363.ati-host.net?',
-    chartbeatEnabled: false,
+    chartbeatEnabled: true,
     avEmbedBaseUrl: 'https://polling.test.bbc.co.uk',
     standaloneErrorPages: true,
     alwaysCheckForFallback: false,
