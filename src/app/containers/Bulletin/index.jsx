@@ -56,9 +56,7 @@ BulletinImage.defaultProps = {
 };
 
 const BulletinContainer = ({ item, lazyLoadImage }) => {
-  const { script, service, dir, translations, lang } = useContext(
-    ServiceContext,
-  );
+  const { script, service, dir, translations } = useContext(ServiceContext);
 
   const headline = pathOr(null, ['name'], item);
   const ctaLink = pathOr(null, ['uri'], item);
@@ -103,7 +101,7 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
       isLive={isLive}
       liveText={liveText}
       offScreenText={offScreenText}
-      lang={ctaTextIsEnglish && 'en-GB'}
+      lang={ctaTextIsEnglish ? 'en-GB' : null}
     />
   );
 };
