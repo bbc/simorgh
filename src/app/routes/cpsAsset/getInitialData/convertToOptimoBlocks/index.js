@@ -16,10 +16,11 @@ const nodeLogger = require('#lib/logger.node');
 
 const logger = nodeLogger(__filename);
 
-const handleMissingType = (block, json) =>
+const handleMissingType = (block, json, assetType) =>
   logger.info(UNSUPPORTED_BLOCK_TYPE, {
     url: json.metadata.locators.assetUri,
     type: block.type,
+    assetType,
   });
 
 const typesToConvert = {
@@ -36,12 +37,16 @@ const typesToConvert = {
   social_embed: socialEmbed,
 };
 
-const parseBlockByType = (block, json) => {
+const parseBlockByType = (block, json, assetType) => {
   if (!path(['type'], block)) return false;
 
   const { type } = block;
 
-  const parsedBlock = (typesToConvert[type] || handleMissingType)(block, json);
+  const parsedBlock = (typesToConvert[type] || handleMissingType)(
+    block,
+    json,
+    assetType,
+  );
 
   if (!parsedBlock) {
     return null;
@@ -53,10 +58,11 @@ const parseBlockByType = (block, json) => {
 const convertToOptimoBlocks = async jsonRaw => {
   const json = clone(jsonRaw);
 
+  const assetType = path(['metadata', 'type'], json);
   const blocks = pathOr([], ['content', 'blocks'], json);
 
   const parsedBlocks = await Promise.all(
-    blocks.map(block => parseBlockByType(block, json)),
+    blocks.map(block => parseBlockByType(block, json, assetType)),
   );
 
   return {
