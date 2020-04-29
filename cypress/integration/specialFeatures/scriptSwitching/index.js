@@ -37,12 +37,9 @@ Object.keys(config)
           .map(path => `${path}.amp`)
           .forEach(path => {
             testsForAMPOnly({
-              serviceId,
               serviceName,
               pageType,
               path,
-              variant,
-              otherVariant,
             });
           });
       });
