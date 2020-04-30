@@ -18,7 +18,7 @@ const pageTypeUrls = (assetType, service) => {
 };
 
 const validateResponse = ({ status, json }, name) => {
-  if (status == 200 && !isEmpty(json)) {
+  if (status === 200 && !isEmpty(json)) {
     return { [name]: json };
   }
 
