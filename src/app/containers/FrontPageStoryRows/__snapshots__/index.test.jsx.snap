@@ -571,7 +571,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
             >
               <span
                 class="c8"
-                lang="en-GB"
               >
                 استمع, 
               </span>
@@ -1824,7 +1823,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
             >
               <span
                 class="c8"
-                lang="en-GB"
               >
                 استمع, 
               </span>
@@ -3133,7 +3131,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
             >
               <span
                 class="c8"
-                lang="en-GB"
               >
                 استمع, 
               </span>
@@ -4053,7 +4050,6 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
           >
             <span
               class="c8"
-              lang="en-GB"
             >
               استمع, 
             </span>
