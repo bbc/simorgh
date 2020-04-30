@@ -190,7 +190,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: true,
-      frontPagePosition: 'feature-main',
+      frontPagePosition: 'Features',
       frequenciesPageUrl: '/hausa/institutional/2011/11/000001_mitocinmu',
       frequenciesPageLabel: 'Mitocinmu da sauko da sautin labarai',
       header: 'Shirye-shiryenmu',
