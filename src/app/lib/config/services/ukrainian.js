@@ -178,6 +178,8 @@ export const service = {
           endTextVisuallyHidden: 'Кінець %provider_name% допису',
         },
       },
+      topStoriesTitle: 'Top Stories',
+      featuresAnalysisTitle: 'Докладно',
     },
     brandSVG,
     mostRead: {
