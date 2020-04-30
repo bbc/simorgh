@@ -25,6 +25,7 @@ import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
+import logEmbedSourceStatus from './helpers/logEmbedSourceStatus';
 
 const DEFAULT_WIDTH = 512;
 const MediaPlayerContainer = ({
@@ -115,6 +116,7 @@ const MediaPlayerContainer = ({
     isAmp,
     queryString: location.search,
   });
+
   const iframeTitle = pathOr(
     'Media player',
     ['mediaAssetPage', 'mediaPlayer'],
@@ -150,6 +152,8 @@ const MediaPlayerContainer = ({
       </StyledMessageContainer>
     );
   }
+
+  logEmbedSourceStatus(embedSource);
 
   return (
     <>

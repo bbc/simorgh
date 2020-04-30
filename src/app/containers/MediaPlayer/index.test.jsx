@@ -10,6 +10,9 @@ import {
   VideoCanonicalWithCaption,
   VideoAmpWithCaption,
 } from './fixtureData';
+import logEmbedSourceStatus from './helpers/logEmbedSourceStatus';
+
+jest.mock('./helpers/logEmbedSourceStatus');
 
 describe('MediaPlayer', () => {
   shouldMatchSnapshot(
@@ -60,4 +63,15 @@ it('should contain the noscript tag for no-JS scenarios ', () => {
   render(VideoCanonicalWithCaption);
 
   expect(document.querySelector('noscript')).toBeInTheDocument();
+});
+
+it('should log embed source status code when player is loaded', () => {
+  logEmbedSourceStatus.mockImplementation(() => jest.fn());
+  render(VideoCanonicalWithCaption);
+
+  expect(logEmbedSourceStatus.mock.calls.length).toBeGreaterThan(0);
+  logEmbedSourceStatus.mock.calls.forEach(call => {
+    const url = call[0];
+    url.includes('test.bbc.co.uk');
+  });
 });
