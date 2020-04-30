@@ -172,6 +172,8 @@ export const service = {
           endTextVisuallyHidden: 'Lompati %provider_name% pesan',
         },
       },
+      topStoriesTitle: 'Berita Utama',
+      featuresAnalysisTitle: 'Features',
     },
     brandSVG,
     mostRead: {

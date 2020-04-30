@@ -168,6 +168,8 @@ export const service = {
           endTextVisuallyHidden: 'Cuối %provider_name% tin',
         },
       },
+      topStoriesTitle: 'Tin chính',
+      featuresAnalysisTitle: 'Góc nhìn và chuyên mục',
     },
     brandSVG,
     mostRead: {
