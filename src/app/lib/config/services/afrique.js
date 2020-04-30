@@ -186,6 +186,8 @@ export const service = {
           endTextVisuallyHidden: 'Fin de %provider_name% publication',
         },
       },
+      topStoriesTitle: 'À la une',
+      featuresAnalysisTitle: 'Le choix de la rédaction',
     },
     brandSVG,
     mostRead: {
