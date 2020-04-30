@@ -67,8 +67,11 @@ const getCanonicalStoryPromo = (
   isRecommendation = false,
 ) => getStoryPromo('canonical', item, promoType, isRecommendation);
 
-const getAmpStoryPromo = (item, promoType = 'regular') =>
-  getStoryPromo('amp', item, promoType);
+const getAmpStoryPromo = (
+  item,
+  promoType = 'regular',
+  isRecommendation = false,
+) => getStoryPromo('amp', item, promoType, isRecommendation);
 
 storiesOf('Containers|Story Promo/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
@@ -101,6 +104,4 @@ storiesOf('Containers|Story Promo/AMP', module)
   .add('Regular', () => getAmpStoryPromo(firstFixture))
   .add('Leading', () => getAmpStoryPromo(firstFixture, 'leading'))
   .add('Top', () => getAmpStoryPromo(firstFixture, 'top'))
-  .add('Recommendation', () =>
-    getCanonicalStoryPromo(firstFixture, 'regular', true),
-  );
+  .add('Recommendation', () => getAmpStoryPromo(firstFixture, 'regular', true));
