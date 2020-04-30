@@ -1,0 +1,65 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "advertising": false,
+        "embedding": false,
+        "format": "Audio",
+        "id": "w172xh267fpn19l",
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+        "subType": "episode",
+        "synopses": {
+          "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+          "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+        },
+        "title": "27/04/2020 GMT",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1588029300000,
+            "availableTerritories": {
+              "nonUk": false,
+              "uk": false,
+              "world": true
+            },
+            "availableUntil": 1590621300000,
+            "duration": 930,
+            "durationISO8601": "PT15M30S",
+            "types": ["Original"],
+            "versionId": "w1mshmz0tp17044",
+            "warnings": {}
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "contentType": "player-episode",
+      "pageIdentifier": "indonesian.bbc_indonesian_radio.w172xh267fpn19l.page",
+      "pageTitle": "Dunia Pagi Ini - BBC News Indonesia",
+      "producer": "INDONESIAN",
+      "producerId": "54"
+    },
+    "blockTypes": ["media"],
+    "createdBy": "bbc_indonesian_radio",
+    "firstPublished": 1587075911000,
+    "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xh267fpn19l",
+    "language": "id",
+    "lastPublished": 1587075911000,
+    "lastUpdated": 1588187368652,
+    "locators": {
+      "brandPid": "w13xtt0s",
+      "pid": "w172xh267fpn19l"
+    },
+    "options": {},
+    "releaseDateTimeStamp": 1587945600000,
+    "tags": {},
+    "timestamp": 1587075911000,
+    "title": "Dunia Pagi Ini",
+    "type": "WSRADIO",
+    "version": "v1.2.0"
+  },
+  "promo": {},
+  "relatedContent": {}
+}
