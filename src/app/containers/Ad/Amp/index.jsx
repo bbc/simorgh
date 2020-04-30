@@ -73,6 +73,9 @@ const ampAdPropsDesktop = ({ service }) => ({
 const AMP_ACCESS_DATA = endpoint => ({
   authorization: endpoint,
   noPingback: true,
+  authorizationFallbackResponse: {
+    error: true,
+  },
 });
 
 export const AMP_ACCESS_FETCH = service => {
