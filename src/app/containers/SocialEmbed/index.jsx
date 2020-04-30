@@ -54,7 +54,7 @@ const SocialEmbedContainer = ({ blocks }) => {
 
   const id = path(['id'], model);
   const href = path(['href'], model);
-  if (!id || !href) return null;
+  if (!href) return null;
 
   const oEmbed = path(['embed', 'oembed'], model);
 
