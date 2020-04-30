@@ -11,7 +11,7 @@ describe('getAdditionalPageData', () => {
     fetchMock.restore();
   });
 
-  it('should return no aditional data for a MAP asset', async () => {
+  it('should return no additional data for a MAP asset', async () => {
     const additionalPageData = await getAdditionalPageData(mapJson, 'pidgin');
 
     expect(additionalPageData).toBe(null);
