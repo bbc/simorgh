@@ -6,10 +6,13 @@ const socialEmbedBlockPropTypes = {
       type: string.isRequired,
       indexOfType: number.isRequired,
       model: shape({
-        id: string.isRequired,
+        // `id` is provided by Ares on the basis it knows how to extract it
+        // from the URL. For unsupported providers (e.g. Facebook), this will
+        // not be supplied - for that reason it is no required.
+        id: string,
         href: string.isRequired,
-        // 'embed' is optional, however if it is included it
-        // must contain 'oembed' and 'oembed.html' properties.
+        // 'embed' is not required, however if it is included it must contain
+        // 'oembed' and 'oembed.html' properties.
         embed: shape({
           oembed: shape({
             html: string.isRequired,
