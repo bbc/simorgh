@@ -184,6 +184,8 @@ export const service = {
           endTextVisuallyHidden: 'Dhammaadka %provider_name% boggan',
         },
       },
+      topStoriesTitle: 'Wararka ugu waaweyn',
+      featuresAnalysisTitle: 'Xul',
     },
     brandSVG,
     mostRead: {
