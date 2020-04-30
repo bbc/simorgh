@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP Photo Gallery Page A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
+
+exports[`AMP Photo Gallery Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
+
+exports[`AMP Photo Gallery Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+
+exports[`AMP Photo Gallery Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
+
+exports[`AMP Photo Gallery Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/deportes-36935058"`;
+
+exports[`AMP Photo Gallery Page SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`AMP Photo Gallery Page SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`AMP Photo Gallery Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP Photo Gallery Page SEO Heading level 1 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos"`;
+
+exports[`AMP Photo Gallery Page SEO Lang attribute 1`] = `"es"`;
+
+exports[`AMP Photo Gallery Page SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "about": Array [
+    Object {
+      "@type": "Thing",
+      "name": "Olympics",
+      "sameAs": Array [
+        "http://dbpedia.org/resource/Summer_Olympic_Games",
+      ],
+    },
+    Object {
+      "@type": "Thing",
+      "name": "Brazil",
+    },
+    Object {
+      "@type": "Thing",
+      "name": "Rio 2016",
+    },
+    Object {
+      "@type": "Thing",
+      "name": "Sport",
+      "sameAs": Array [
+        "http://dbpedia.org/resource/Sport",
+      ],
+    },
+  ],
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+      "width": 1024,
+    },
+    "name": "BBC News Mundo",
+    "noBylinesPolicy": "https://www.bbc.com/mundo/institucional-51359666#authorexpertise",
+  },
+  "dateModified": "2016-08-07T09:21:14.000Z",
+  "datePublished": "2016-08-07T09:21:02.000Z",
+  "description": "La estética de la ropa deportiva ha ido evolucionando en cada edición olímpica, pero no solo se trata de lucir bien, pues en varias competencias contar con un traje adecuado puede ser un factor que contribuya al triunfo.",
+  "headline": "Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/mundo/deportes-36935058",
+    "@type": "WebPage",
+    "name": "Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+      "width": 1024,
+    },
+    "name": "BBC News Mundo",
+    "publishingPrinciples": "https://www.bbc.com/mundo/institucional-51359666",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+  "url": "http://localhost:7080/mundo/deportes-36935058",
+}
+`;
+
+exports[`AMP Photo Gallery Page SEO OG description 1`] = `"La estética de la ropa deportiva ha ido evolucionando en cada edición olímpica, pero no solo se trata de lucir bien, pues en varias competencias contar con un traje adecuado puede ser un factor que contribuya al triunfo."`;
+
+exports[`AMP Photo Gallery Page SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg"`;
+
+exports[`AMP Photo Gallery Page SEO OG image alt 1`] = `"Gimnastas en los primeros juegos"`;
+
+exports[`AMP Photo Gallery Page SEO OG locale 1`] = `"es-005"`;
+
+exports[`AMP Photo Gallery Page SEO OG site name 1`] = `"BBC News Mundo"`;
+
+exports[`AMP Photo Gallery Page SEO OG title 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos - BBC News Mundo"`;
+
+exports[`AMP Photo Gallery Page SEO OG type 1`] = `"article"`;
+
+exports[`AMP Photo Gallery Page SEO OG url 1`] = `"http://localhost:7080/mundo/deportes-36935058"`;
+
+exports[`AMP Photo Gallery Page SEO Page title 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos - BBC News Mundo"`;
+
+exports[`AMP Photo Gallery Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`AMP Photo Gallery Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP Photo Gallery Page SEO Twitter creator 1`] = `"@bbcmundo"`;
+
+exports[`AMP Photo Gallery Page SEO Twitter description 1`] = `"La estética de la ropa deportiva ha ido evolucionando en cada edición olímpica, pero no solo se trata de lucir bien, pues en varias competencias contar con un traje adecuado puede ser un factor que contribuya al triunfo."`;
+
+exports[`AMP Photo Gallery Page SEO Twitter image alt 1`] = `"Gimnastas en los primeros juegos"`;
+
+exports[`AMP Photo Gallery Page SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg"`;
+
+exports[`AMP Photo Gallery Page SEO Twitter site 1`] = `"@bbcmundo"`;
+
+exports[`AMP Photo Gallery Page SEO Twitter title 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos - BBC News Mundo"`;
