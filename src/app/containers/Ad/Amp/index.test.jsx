@@ -59,17 +59,14 @@ describe('AMP Ads', () => {
       it('should retrieve data from the correct endpoint', () => {
         const ampAccessFetch = jest.fn().mockImplementation(AMP_ACCESS_FETCH);
         const ampAccessData = ampAccessFetch('pidgin');
-        const expectedReturn = {
-          authorization:
-            'https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=pidgin&geoiplookup=true',
-          noPingback: true,
-        };
+        const expectedReturn =
+          'https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=pidgin&geoiplookup=true';
 
         expect(ampAccessFetch).toHaveReturned();
         expect(ampAccessFetch).toHaveBeenCalledWith('pidgin');
         expect(ampAccessData.type).toEqual('script');
-        expect(ampAccessData.props.children).toMatch(
-          JSON.stringify(expectedReturn),
+        expect(JSON.parse(ampAccessData.props.children).authorization).toEqual(
+          expectedReturn,
         );
       });
     });
