@@ -169,6 +169,8 @@ export const service = {
           endTextVisuallyHidden: 'Paylaşımın sonu %provider_name%',
         },
       },
+      topStoriesTitle: 'Bu günün xəbərləri',
+      featuresAnalysisTitle: 'Bunları da oxuyun',
     },
     brandSVG,
     mostRead: {
