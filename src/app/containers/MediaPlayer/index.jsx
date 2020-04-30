@@ -25,6 +25,7 @@ import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
+import shouldAllowAdvertising from './shouldAllowAdvertising';
 
 const DEFAULT_WIDTH = 512;
 const MediaPlayerContainer = ({
@@ -35,11 +36,12 @@ const MediaPlayerContainer = ({
   available,
   isLegacyMedia,
 }) => {
+  const { enabled: mediaPlayerIsEnabled } = useToggle('mediaPlayer');
+  const { enabled: adsIsEnabled } = useToggle('ads');
   const { isAmp } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
-  const { enabled } = useToggle('mediaPlayer');
   const location = useLocation();
-  if (!enabled || !blocks) {
+  if (!mediaPlayerIsEnabled || !blocks) {
     return null;
   }
 
@@ -151,9 +153,20 @@ const MediaPlayerContainer = ({
     );
   }
 
+  const ALLOW_ADVERTISING = shouldAllowAdvertising({
+    isEmbedabble: false, // get this from Ares response
+    isOutsideUk: adsIsEnabled,
+    allowGlobal: adsIsEnabled,
+    allowService: adsIsEnabled,
+    allowAsset: true, // get this from Ares response
+    assetDuration: rawDuration,
+    assetType, // enable only for CPS/legacy assets?
+  });
+
   return (
     <>
       <Metadata aresMediaBlock={aresMediaBlock} embedSource={embedSource} />
+      {ALLOW_ADVERTISING ? 'A preroll will play' : 'A preroll will not play'}
       <Figure>
         {isAmp ? (
           <AmpMediaPlayer
@@ -163,6 +176,7 @@ const MediaPlayerContainer = ({
             title={iframeTitle}
             noJsMessage={translatedNoJSMessage}
             service={service}
+            allowAdvertising={ALLOW_ADVERTISING}
           />
         ) : (
           <CanonicalMediaPlayer
@@ -175,6 +189,7 @@ const MediaPlayerContainer = ({
             mediaInfo={mediaInfo}
             noJsMessage={translatedNoJSMessage}
             noJsClassName="no-js"
+            allowAdvertising={ALLOW_ADVERTISING}
           />
         )}
         {captionBlock && <Caption block={captionBlock} type={mediaInfo.type} />}
@@ -195,6 +210,7 @@ MediaPlayerContainer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
   available: true,
   isLegacyMedia: false,
+  allowAdvertising: false,
 };
 
 export default MediaPlayerContainer;
