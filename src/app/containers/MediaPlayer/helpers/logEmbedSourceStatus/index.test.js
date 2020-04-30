@@ -4,6 +4,7 @@ import logEmbedSourceStatus from '.';
 
 const fetchResponse = { status: 200 };
 const url = '/embed/source';
+const assetType = 'cps';
 
 describe('logEmbedSourceStatus', () => {
   beforeEach(() => {
@@ -12,10 +13,11 @@ describe('logEmbedSourceStatus', () => {
 
   const testLogging = async (status, logFn) => {
     fetchResponse.status = status;
-    await logEmbedSourceStatus(url);
+    await logEmbedSourceStatus({ url, assetType });
     expect(logFn).toHaveBeenLastCalledWith(MEDIA_PLAYER_RESPONSE, {
       url,
       status,
+      assetType,
     });
   };
 
