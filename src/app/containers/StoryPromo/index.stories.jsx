@@ -42,7 +42,7 @@ const audioPromo = promoFixture('Audio');
 const galleryPromo = promoFixture('Gallery');
 const podcastPromo = promoFixture('Podcast');
 
-const getStoryPromo = (platform, item, promoType) => (
+const getStoryPromo = (platform, item, promoType, isRecommendation) => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
@@ -52,13 +52,20 @@ const getStoryPromo = (platform, item, promoType) => (
       pageType="article"
       service="news"
     >
-      <StoryPromoContainer item={item} promoType={promoType} />
+      <StoryPromoContainer
+        item={item}
+        promoType={promoType}
+        isRecommendation={isRecommendation}
+      />
     </RequestContextProvider>
   </ServiceContextProvider>
 );
 
-const getCanonicalStoryPromo = (item, promoType = 'regular') =>
-  getStoryPromo('canonical', item, promoType);
+const getCanonicalStoryPromo = (
+  item,
+  promoType = 'regular',
+  isRecommendation = false,
+) => getStoryPromo('canonical', item, promoType, isRecommendation);
 
 const getAmpStoryPromo = (item, promoType = 'regular') =>
   getStoryPromo('amp', item, promoType);
@@ -75,7 +82,10 @@ storiesOf('Containers|Story Promo/Canonical', module)
   .add('Podcast link promo', () => getCanonicalStoryPromo(podcastPromo))
   .add('Regular', () => getCanonicalStoryPromo(firstFixture))
   .add('Leading', () => getCanonicalStoryPromo(firstFixture, 'leading'))
-  .add('Top', () => getCanonicalStoryPromo(firstFixture, 'top'));
+  .add('Top', () => getCanonicalStoryPromo(firstFixture, 'top'))
+  .add('Recommendation', () =>
+    getCanonicalStoryPromo(firstFixture, 'regular', true),
+  );
 
 storiesOf('Containers|Story Promo/AMP', module)
   .addParameters({ chromatic: { disable: true } })
@@ -90,4 +100,7 @@ storiesOf('Containers|Story Promo/AMP', module)
   .add('Podcast link promo', () => getAmpStoryPromo(podcastPromo))
   .add('Regular', () => getAmpStoryPromo(firstFixture))
   .add('Leading', () => getAmpStoryPromo(firstFixture, 'leading'))
-  .add('Top', () => getAmpStoryPromo(firstFixture, 'top'));
+  .add('Top', () => getAmpStoryPromo(firstFixture, 'top'))
+  .add('Recommendation', () =>
+    getCanonicalStoryPromo(firstFixture, 'regular', true),
+  );
