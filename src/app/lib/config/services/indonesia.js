@@ -174,7 +174,7 @@ export const service = {
       },
       topStoriesTitle: 'Berita Utama',
       featuresAnalysisTitle: 'Features',
-    },,
+    },
     brandSVG,
     mostRead: {
       header: 'Paling banyak dibaca',
