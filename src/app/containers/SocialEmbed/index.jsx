@@ -61,7 +61,7 @@ const SocialEmbedContainer = ({ blocks }) => {
   const {
     fallback: fallbackTranslations,
     skipLink: skipLinkTranslations,
-    captionTranslations,
+    caption: captionTranslations,
   } = createTranslations({ translations, index });
 
   const fallback = {
