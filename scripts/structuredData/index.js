@@ -109,9 +109,13 @@ const exit = results => {
 };
 
 const run = async () => {
+  const start = new Date();
+
   const results = await checkStructuredData(getUrls());
 
   printResults(results);
+
+  console.log('Execution Time: %d seconds', (new Date() - start) / 1000);
 
   exit(results);
 };
