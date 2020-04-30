@@ -10,14 +10,14 @@ describe('logEmbedSourceStatus', () => {
     fetch.mockImplementation(() => fetchResponse);
   });
 
-  async function testLogging(status, logFn) {
+  const testLogging = async (status, logFn) => {
     fetchResponse.status = status;
     await logEmbedSourceStatus(url);
     expect(logFn).toHaveBeenLastCalledWith(MEDIA_PLAYER_RESPONSE, {
       url,
       status,
     });
-  }
+  };
 
   it('should log info level on 200', async () => {
     await testLogging(200, loggerMock.info);

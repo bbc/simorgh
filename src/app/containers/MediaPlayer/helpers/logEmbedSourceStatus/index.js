@@ -3,7 +3,7 @@ import { MEDIA_PLAYER_RESPONSE } from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
-async function logEmbedSourceStatus(embedSource) {
+const logEmbedSourceStatus = async embedSource => {
   const response = await fetch(embedSource, { method: 'HEAD' });
   const { status } = response;
   const data = {
@@ -15,6 +15,6 @@ async function logEmbedSourceStatus(embedSource) {
   } else {
     logger.info(MEDIA_PLAYER_RESPONSE, data);
   }
-}
+};
 
 export default logEmbedSourceStatus;
