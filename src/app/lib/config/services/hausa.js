@@ -177,6 +177,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'Babban Labari',
+      featuresAnalysisTitle: 'Minti Daya Da BBC',
     },
     brandSVG,
     mostRead: {
