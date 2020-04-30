@@ -181,6 +181,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'ප්‍රධාන පුවත',
+      featuresAnalysisTitle: 'දැක්ම',
     },
     brandSVG,
     mostRead: {
