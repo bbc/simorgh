@@ -169,6 +169,8 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% 포스트 마침',
         },
       },
+      topStoriesTitle: '주요뉴스',
+      featuresAnalysisTitle: 'Features',
     },
     brandSVG,
     mostRead: {
