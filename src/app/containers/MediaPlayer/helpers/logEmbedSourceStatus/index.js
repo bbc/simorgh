@@ -6,14 +6,14 @@ const logger = nodeLogger(__filename);
 const logEmbedSourceStatus = async embedSource => {
   const response = await fetch(embedSource, { method: 'HEAD' });
   const { status } = response;
-  const data = {
+  const message = {
     url: embedSource,
     status,
   };
   if (status >= 300 || status < 200) {
-    logger.warn(MEDIA_PLAYER_RESPONSE, data);
+    logger.warn(MEDIA_PLAYER_RESPONSE, message);
   } else {
-    logger.info(MEDIA_PLAYER_RESPONSE, data);
+    logger.info(MEDIA_PLAYER_RESPONSE, message);
   }
 };
 
