@@ -167,6 +167,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'እንዳያመልጥዎ',
+      featuresAnalysisTitle: 'Features',
     },
     brandSVG,
     mostRead: {

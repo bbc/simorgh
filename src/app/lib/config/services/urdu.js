@@ -172,6 +172,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'اہم خبریں',
+      featuresAnalysisTitle: 'فیچر اور تجزیے',
     },
     brandSVG,
     mostRead: {
