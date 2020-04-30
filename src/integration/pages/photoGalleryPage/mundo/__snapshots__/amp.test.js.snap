@@ -2,6 +2,98 @@
 
 exports[`AMP Photo Gallery Page A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
 
+exports[`AMP Photo Gallery Page AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+}
+`;
+
+exports[`AMP Photo Gallery Page AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+  },
+}
+`;
+
+exports[`AMP Photo Gallery Page Analytics ATI 1`] = `
+Object {
+  "requests": Object {
+    "base": "https://logws1363.ati-host.net?",
+    "pageview": "\${base}s=598343&s2=62&p=sport::mundo.sport.photo_gallery.36935058.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:08e22e90-7361-cd47-b586-7cb53fc5a012]&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[Río+2016,+el+antes+y+el+ahora:+cómo+ha+cambiado+la+ropa+deportiva+en+más+de+un+siglo+de+juegos+olímpicos+-+BBC+News+Mundo]&x11=[2016-08-07T09:21:02.000Z]&x12=[2016-08-07T09:21:14.000Z]&x13=[Olympics~Brazil~Rio+2016~Sport]&x14=[0d205538-c52e-41c7-a4a1-50efd6c1da59~15f1bcf6-b6ab-48e8-b708-efed41e43d31~1d2e1514-faa8-425d-8481-a1cc4da6cc24~4063f80f-cccc-44c8-9449-5ca44e4c8592]",
+  },
+  "transport": Object {
+    "beacon": false,
+    "image": true,
+    "xhrpost": false,
+  },
+  "triggers": Object {
+    "trackPageview": Object {
+      "on": "visible",
+      "request": "pageview",
+    },
+  },
+}
+`;
+
 exports[`AMP Photo Gallery Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
 exports[`AMP Photo Gallery Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;

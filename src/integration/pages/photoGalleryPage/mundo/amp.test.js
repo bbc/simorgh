@@ -4,9 +4,11 @@
  */
 
 import runCrossPlatformTests from '../crossPlatformTests';
+import runAMPTests from '../ampTests';
 
 describe('AMP', () => {
   describe(pageType, () => {
     runCrossPlatformTests();
+    runAMPTests();
   });
 });
