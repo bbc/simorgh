@@ -183,6 +183,8 @@ export const service = {
           endTextVisuallyHidden: 'د ‍پوسټ %provider_name% پای',
         },
       },
+      topStoriesTitle: 'مهم خبرونه',
+      featuresAnalysisTitle: 'ځانګړي مطالب',
     },
     brandSVG,
     mostRead: {
