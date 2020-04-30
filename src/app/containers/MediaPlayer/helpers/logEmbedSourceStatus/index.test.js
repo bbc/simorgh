@@ -10,36 +10,25 @@ describe('logEmbedSourceStatus', () => {
     fetch.mockImplementation(() => fetchResponse);
   });
 
-  it('should log info level on 200', async () => {
-    fetchResponse.status = 200;
+  async function testLogging(status, logFn) {
+    fetchResponse.status = status;
     await logEmbedSourceStatus(url);
-    expect(loggerMock.info).toHaveBeenLastCalledWith(MEDIA_PLAYER_RESPONSE, {
+    expect(logFn).toHaveBeenLastCalledWith(MEDIA_PLAYER_RESPONSE, {
       url,
-      status: 200,
+      status,
     });
+  }
+
+  it('should log info level on 200', async () => {
+    await testLogging(200, loggerMock.info);
   });
 
   it('should log warn level on 4xx', async () => {
-    fetchResponse.status = 400;
-    await logEmbedSourceStatus(url);
-    expect(loggerMock.warn).toHaveBeenLastCalledWith(MEDIA_PLAYER_RESPONSE, {
-      url,
-      status: 400,
-    });
-    fetchResponse.status = 404;
-    await logEmbedSourceStatus(url);
-    expect(loggerMock.warn).toHaveBeenLastCalledWith(MEDIA_PLAYER_RESPONSE, {
-      url,
-      status: 404,
-    });
+    await testLogging(400, loggerMock.warn);
+    await testLogging(404, loggerMock.warn);
   });
 
   it('should log warn level on 5xx', async () => {
-    fetchResponse.status = 500;
-    await logEmbedSourceStatus(url);
-    expect(loggerMock.warn).toHaveBeenLastCalledWith(MEDIA_PLAYER_RESPONSE, {
-      url,
-      status: 500,
-    });
+    await testLogging(500, loggerMock.warn);
   });
 });

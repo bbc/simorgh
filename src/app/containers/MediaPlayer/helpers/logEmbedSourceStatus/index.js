@@ -10,11 +10,10 @@ async function logEmbedSourceStatus(embedSource) {
     url: embedSource,
     status,
   };
-  if (status >= 200 && status < 300) {
-    logger.info(MEDIA_PLAYER_RESPONSE, data);
-  }
-  if (status >= 400 && status < 600) {
+  if (status >= 300 || status < 200) {
     logger.warn(MEDIA_PLAYER_RESPONSE, data);
+  } else {
+    logger.info(MEDIA_PLAYER_RESPONSE, data);
   }
 }
 
