@@ -16,6 +16,20 @@ describe('Preroll ads are allowed', () => {
 
     expect(allowAdvertising).toBe(expectedValue);
   });
+
+  it('xxx', () => {
+    const allowAdvertising = shouldAllowAdvertising({
+      isEmbedabble: false,
+      isOutsideUk: true,
+      allowGlobal: true,
+      allowService: true,
+      assetType: 'legacy',
+      allowAsset: true,
+      assetDuration: 30,
+    });
+
+    expect(allowAdvertising).toBe(expectedValue);
+  });
 });
 
 describe('Preroll ads are NOT allowed', () => {
@@ -70,6 +84,20 @@ describe('Preroll ads are NOT allowed', () => {
       allowGlobal: true,
       allowService: false,
       assetType: 'cps',
+      allowAsset: true,
+      assetDuration: 30,
+    });
+
+    expect(allowAdvertising).toBe(expectedValue);
+  });
+
+  it('xxx', () => {
+    const allowAdvertising = shouldAllowAdvertising({
+      isEmbedabble: false,
+      isOutsideUk: true,
+      allowGlobal: true,
+      allowService: true,
+      assetType: 'some-other-asset-type',
       allowAsset: true,
       assetDuration: 30,
     });
