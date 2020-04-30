@@ -20,7 +20,7 @@ import MediaIndicatorContainer from './MediaIndicator';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import IndexAlsosContainer from './IndexAlsos';
 
-const PROMO_TYPES = ['top', 'regular', 'leading', 'recommendation'];
+const PROMO_TYPES = ['top', 'regular', 'leading'];
 
 const StoryPromoImage = ({ useLargeImages, imageValues, lazyLoad }) => {
   if (!imageValues) {
