@@ -23,12 +23,10 @@ describe('logEmbedSourceStatus', () => {
     await testLogging(200, loggerMock.info);
   });
 
-  it('should log warn level on 4xx', async () => {
+  it('should log warn level when not 2xx', async () => {
+    await testLogging(100, loggerMock.warn);
     await testLogging(400, loggerMock.warn);
     await testLogging(404, loggerMock.warn);
-  });
-
-  it('should log warn level on 5xx', async () => {
     await testLogging(500, loggerMock.warn);
   });
 });
