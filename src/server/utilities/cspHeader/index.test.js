@@ -140,7 +140,7 @@ describe('cspHeader', () => {
         'https://platform.twitter.com',
         'https://pbs.twimg.com',
         'https://i.ytimg.com',
-        'https://ton.twimg.com/tfw/css',
+        'https://ton.twimg.com',
         "data: 'self'",
       ],
       scriptSrcExpectation: [
@@ -160,7 +160,7 @@ describe('cspHeader', () => {
       styleSrcExpectation: [
         'https://news.files.bbci.co.uk',
         'https://platform.twitter.com',
-        'https://ton.twimg.com/tfw/css',
+        'https://ton.twimg.com',
         "'unsafe-inline'",
       ],
       workerSrcExpectation: ["'self'"],
@@ -302,7 +302,7 @@ describe('cspHeader', () => {
         'https://platform.twitter.com',
         'https://pbs.twimg.com',
         'https://i.ytimg.com',
-        'https://ton.twimg.com/tfw/css',
+        'https://ton.twimg.com',
         "data: 'self'",
       ],
       scriptSrcExpectation: [
@@ -325,7 +325,7 @@ describe('cspHeader', () => {
       styleSrcExpectation: [
         'https://news.files.bbci.co.uk',
         'https://platform.twitter.com',
-        'https://ton.twimg.com/tfw/css',
+        'https://ton.twimg.com',
         "'unsafe-inline'",
       ],
       workerSrcExpectation: ["'self'"],

@@ -159,7 +159,7 @@ const directives = {
       'https://platform.twitter.com', // Social Embeds
       'https://pbs.twimg.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
-      'https://ton.twimg.com/tfw/css', // Social Embeds
+      'https://ton.twimg.com', // Social Embeds
       "data: 'self'", // needed at the end to maintain proper order
     ],
     ampNonLive: [
@@ -205,7 +205,7 @@ const directives = {
       'https://platform.twitter.com', // Social Embeds
       'https://pbs.twimg.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
-      'https://ton.twimg.com/tfw/css', // Social Embeds
+      'https://ton.twimg.com', // Social Embeds
       "data: 'self'", // needed at the end to maintain proper order
     ],
   },
@@ -269,7 +269,7 @@ const directives = {
     canonicalLive: [
       'https://news.files.bbci.co.uk', // STY include styles
       'https://platform.twitter.com', // Social Embeds
-      'https://ton.twimg.com/tfw/css', // Social Embeds
+      'https://ton.twimg.com', // Social Embeds
       "'unsafe-inline'",
     ],
     ampNonLive: [
@@ -279,7 +279,7 @@ const directives = {
     canonicalNonLive: [
       'https://news.files.bbci.co.uk', // STY include styles
       'https://platform.twitter.com', // Social Embeds
-      'https://ton.twimg.com/tfw/css', // Social Embeds
+      'https://ton.twimg.com', // Social Embeds
       "'unsafe-inline'",
     ],
   },
