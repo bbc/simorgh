@@ -84,6 +84,7 @@ const StoryPromoContainer = ({
   dir,
   displayImage,
   displaySummary,
+  isRecommendation,
 }) => {
   const {
     altCalendar,
@@ -132,20 +133,18 @@ const StoryPromoContainer = ({
 
   const useLargeImages = promoType === 'top' || promoType === 'leading';
 
-  const headingTagOverride = promoType === 'recommendation' ? 'div' : null;
-
-  const headlineProps = {
-    script,
-    service,
-    promoType,
-    promoHasImage: displayImage,
-    ...(headingTagOverride && { as: headingTagOverride }),
-  };
+  const headingTagOverride = isRecommendation ? 'div' : null;
 
   const Info = (
     <>
       {headline && (
-        <Headline {...headlineProps}>
+        <Headline
+          script={script}
+          service={service}
+          promoType={promoType}
+          promoHasImage={displayImage}
+          as={headingTagOverride}
+        >
           <StyledLink href={url}>
             {isLive ? (
               <LiveLabel
@@ -236,6 +235,7 @@ StoryPromoContainer.propTypes = {
   dir: oneOf(['ltr', 'rtl']),
   displayImage: bool,
   displaySummary: bool,
+  isRecommendation: bool,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -244,6 +244,7 @@ StoryPromoContainer.defaultProps = {
   dir: 'ltr',
   displayImage: true,
   displaySummary: true,
+  isRecommendation: false,
 };
 
 export default StoryPromoContainer;
