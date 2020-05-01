@@ -176,6 +176,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'ముఖ్యమైన కథనాలు',
+      featuresAnalysisTitle: 'Features',
     },
     brandSVG,
     mostRead: {

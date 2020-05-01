@@ -180,6 +180,8 @@ export const service = {
           endTextVisuallyHidden: 'نهاية %provider_name% مشاركة',
         },
       },
+      topStoriesTitle: 'الخبر الرئيسي',
+      featuresAnalysisTitle: 'اخترنا لكم',
     },
     brandSVG,
     mostRead: {
