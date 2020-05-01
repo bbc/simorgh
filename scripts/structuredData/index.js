@@ -116,11 +116,10 @@ const run = async () => {
   exit(results);
 };
 
-run();
-
 module.exports = {
   getUrls,
   printResults,
   validate,
   checkStructuredData,
+  run,
 };
