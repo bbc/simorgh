@@ -55,4 +55,19 @@ export default () => {
       expect(figCaptionEl.textContent).toMatchSnapshot();
     });
   }
+
+  // Social Embeds - Fallback.
+  const hasFallback = !!document.getElementById('skip-facebook-content-1');
+
+  if (hasFallback) {
+    it('I can see a link to the original content in a social embed fallback', () => {
+      const externalLinkEl = document.querySelector(
+        'a[href="https://www.facebook.com/228735667216/posts/10157712846517217/?sfnsn=scwspmo&extid=ixkwkArH1fy0g2GP"]',
+      );
+
+      expect(externalLinkEl).toBeInTheDocument();
+      expect(externalLinkEl.textContent).toBeTruthy();
+      expect(externalLinkEl.textContent).toMatchSnapshot();
+    });
+  }
 };

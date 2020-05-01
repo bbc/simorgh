@@ -8,6 +8,8 @@ exports[`Canonical Story Page Footer I can see the footer copyright and external
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
+exports[`Canonical Story Page I can see a link to the original content in a social embed fallback 1`] = `"Facebook баракчадан көбүрөк пост окуу"`;
+
 exports[`Canonical Story Page I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
 exports[`Canonical Story Page I can see the caption accompanying a rich YouTube embed 1`] = `"Видеонун түшүндүрмөсү, Эскертүү: Жарнамалар болушу ыктымал"`;
