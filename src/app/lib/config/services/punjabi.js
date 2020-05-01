@@ -166,6 +166,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'ਤਾਜ਼ਾ ਘਟਨਾਕ੍ਰਮ',
+      featuresAnalysisTitle: 'Features',
     },
     brandSVG,
     mostRead: {
