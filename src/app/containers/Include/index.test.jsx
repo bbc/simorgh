@@ -108,7 +108,7 @@ describe('IncludeContainer', () => {
   runningIncludeTest('vj');
   runningIncludeTest('idt1');
 
-  it(`should add not add require to the page for idt2`, async () => {
+  it(`should not add require to the page for idt2`, async () => {
     render(
       <IncludeContainerWithMockContext
         toggleState={toggleStateFalse}
