@@ -193,6 +193,8 @@ export const service = {
           endTextVisuallyHidden: 'پایان پست %provider_name%',
         },
       },
+      topStoriesTitle: 'مهمترین خبرها',
+      featuresAnalysisTitle: 'گزارش و تحلیل',
     },
     brandSVG,
     mostRead: {
