@@ -1,4 +1,6 @@
-import { getAssetType } from './getAssetType';
+import getAssetType from './getAssetType';
+
+// mock data
 import mapJson from '#data/pidgin/cpsAssets/media-23256549.json';
 import styJson from '#data/mundo/cpsAssets/23263889.json';
 

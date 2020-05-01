@@ -1,3 +1,5 @@
 import path from 'ramda/src/path';
 
-export const getAssetType = pageData => path(['metadata', 'type'], pageData);
+const getAssetType = pageData => path(['metadata', 'type'], pageData);
+
+export default getAssetType;

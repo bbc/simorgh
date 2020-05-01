@@ -1,16 +1,22 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
+
+// test helpers
 import { render } from '@testing-library/react';
 import assocPath from 'ramda/src/assocPath';
 import '@testing-library/jest-dom/extend-expect';
+import fetchMock from 'fetch-mock';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
+
+// contexts
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
+
+// components to test
 import { StoryPage } from '..';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
-import fetchMock from 'fetch-mock';
 
 // mock data
 import pidginPageData from '#data/pidgin/cpsAssets/world-23252817';
