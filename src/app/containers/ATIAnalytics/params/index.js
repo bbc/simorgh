@@ -11,6 +11,10 @@ import {
   buildCpsAssetPageATIParams,
   buildCpsAssetPageATIUrl,
 } from './cpsAssetPage/buildParams';
+import {
+  buildMostReadATIParams,
+  buildMostReadATIUrl,
+} from './mostReadPage/buildParams';
 
 const ARTICLE_MEDIA_ASSET = 'article-media-asset';
 const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
@@ -19,6 +23,7 @@ const pageTypeUrlBuilders = {
   article: buildArticleATIUrl,
   frontPage: buildFrontPageATIUrl,
   media: buildRadioATIUrl,
+  mostRead: buildMostReadATIUrl,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIUrl(
       data,
@@ -39,6 +44,7 @@ const pageTypeParamBuilders = {
   article: buildArticleATIParams,
   frontPage: buildFrontPageATIParams,
   media: buildRadioATIParams,
+  mostRead: buildMostReadATIParams,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIParams(
       data,
