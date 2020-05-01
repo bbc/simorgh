@@ -51,12 +51,12 @@ const frontPage = {
   },
 };
 
-describe('frontpage buildParams', () => {
+describe('mostRead buildParams', () => {
   afterEach(() => {
     jest.clearAllMocks();
   });
 
-  describe('buildFrontPageATIParams', () => {
+  describe('buildMostReadATIParams', () => {
     it('should return the right object', () => {
       const result = buildMostReadATIParams(
         frontPage,
@@ -67,7 +67,7 @@ describe('frontpage buildParams', () => {
     });
   });
 
-  describe('buildFrontPageATIUrl', () => {
+  describe('buildMostReadATIUrl', () => {
     it('should return the right url', () => {
       const result = buildMostReadATIUrl(
         frontPage,
