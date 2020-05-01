@@ -16,6 +16,11 @@ const mediaFixture = type =>
         pathOr(null, ['media', 'format'], item) === type,
     );
 
+const storyFixture = type =>
+  pathOr(null, ['content', 'groups'], fixture)
+    .flatMap(group => pathOr(null, ['items'], group))
+    .find(item => pathOr(null, ['cpsType'], item) === 'STY');
+
 const promoFixture = type =>
   pathOr(null, ['content', 'groups'], fixture)
     .flatMap(group => pathOr(null, ['items'], group))
@@ -41,6 +46,7 @@ const featurePromo = promoFixture('Feature');
 const audioPromo = promoFixture('Audio');
 const galleryPromo = promoFixture('Gallery');
 const podcastPromo = promoFixture('Podcast');
+const recommendationPromo = storyFixture('responsive-top-stories');
 
 const getStoryPromo = (platform, item, promoType, isRecommendation) => (
   <ServiceContextProvider service="news">
@@ -87,7 +93,7 @@ storiesOf('Containers|Story Promo/Canonical', module)
   .add('Leading', () => getCanonicalStoryPromo(firstFixture, 'leading'))
   .add('Top', () => getCanonicalStoryPromo(firstFixture, 'top'))
   .add('Recommendation', () =>
-    getCanonicalStoryPromo(firstFixture, 'regular', true),
+    getCanonicalStoryPromo(recommendationPromo, 'regular', true),
   );
 
 storiesOf('Containers|Story Promo/AMP', module)
