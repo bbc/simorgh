@@ -1,15 +1,15 @@
 import React from 'react';
-
-// components being tested
+import { MemoryRouter } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config';
 import { matchPath } from 'react-router';
-import routes from './index';
 
 // test helpers
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import fetchMock from 'fetch-mock';
-import { MemoryRouter } from 'react-router-dom';
-import { renderRoutes } from 'react-router-config';
+
+// components being tested
+import routes from './index';
 
 // mock data
 import liveRadioPageJson from '#data/korean/bbc_korean_radio/liveradio.json';
