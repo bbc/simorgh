@@ -8,7 +8,6 @@ import { buildFrontPageATIUrl } from './params/frontpage/buildParams';
 import { buildRadioATIUrl } from './params/radioPage/buildParams';
 import { buildCpsAssetPageATIUrl } from './params/cpsAssetPage/buildParams';
 import { buildMostReadATIUrl } from './params/mostReadPage/buildParams';
-
 import { pageDataPropType } from '#models/propTypes/data';
 
 const ATIAnalytics = ({ data }) => {
