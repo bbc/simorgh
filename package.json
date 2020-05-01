@@ -37,7 +37,9 @@
     "test:integration": "npm run stop && npm run build:local && (npm run start & wait-on -t 20000 http://localhost:7080/status) && (jest --runInBand --colors ./src/integration/pages/**/*) && npm run stop",
     "test:integration:ci": "jest --ci --runInBand --colors ./src/integration/pages/**/*",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
-    "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --env.config='server'"
+    "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --env.config='server'",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -130,7 +132,8 @@
     "styled-normalize": "^8.0.7",
     "url-parse": "^1.4.7",
     "uuid": "^3.4.0",
-    "winston": "^3.2.1"
+    "winston": "^3.2.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -242,5 +245,6 @@
     "commitHash": "383522b",
     "deployEnvironment": "green",
     "version": "1.0.0"
-  }
+  },
+  "snyk": true
 }
