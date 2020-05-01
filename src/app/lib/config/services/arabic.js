@@ -180,6 +180,8 @@ export const service = {
           endTextVisuallyHidden: 'نهاية %provider_name% مشاركة',
         },
       },
+      topStoriesTitle: 'الخبر الرئيسي',
+      featuresAnalysisTitle: 'اخترنا لكم',
     },
     brandSVG,
     mostRead: {
@@ -264,26 +266,6 @@ export const service = {
         url: '/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
       },
       {
-        title: 'اقتصاد',
-        url: '/arabic/business',
-      },
-      {
-        title: 'فنون',
-        url: '/arabic/artandculture',
-      },
-      {
-        title: 'رياضة',
-        url: '/arabic/sports',
-      },
-      {
-        title: 'مجلة',
-        url: '/arabic/magazine',
-      },
-      {
-        title: 'مرأة',
-        url: '/arabic/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862',
-      },
-      {
         title: 'فيديو',
         url: '/arabic/media',
       },
@@ -292,20 +274,16 @@ export const service = {
         url: '/arabic/inthepress',
       },
       {
-        title: 'برامجنا',
-        url: '/arabic/tv-and-radio-37728883',
-      },
-      {
         title: 'ترند',
         url: '/arabic/trending',
       },
       {
-        title: 'حوارات',
-        url: '/arabic/interactivity',
+        title: 'تحقيقات',
+        url: '/arabic/tv-and-radio-42414864',
       },
       {
-        title: 'ملفات',
-        url: '/arabic/in_depth',
+        title: 'برامجنا',
+        url: '/arabic/tv-and-radio-37728883',
       },
     ],
   },

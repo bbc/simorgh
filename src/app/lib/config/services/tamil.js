@@ -183,6 +183,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'முக்கிய செய்திகள்',
+      featuresAnalysisTitle: 'சிறப்புச் செய்திகள்',
     },
     brandSVG,
     mostRead: {

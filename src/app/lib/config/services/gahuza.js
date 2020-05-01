@@ -174,6 +174,8 @@ export const service = {
           endTextVisuallyHidden: 'Impera ya %provider_name% ubutumwa',
         },
       },
+      topStoriesTitle: "Inkuru iri kw'isonga",
+      featuresAnalysisTitle: 'Ivyo BBC Gahuza ibahitiramwo',
     },
     brandSVG,
     mostRead: {
