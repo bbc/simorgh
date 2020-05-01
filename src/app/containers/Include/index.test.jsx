@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, wait } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import IncludeContainer from '.';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -96,7 +96,7 @@ describe('IncludeContainer', () => {
         />,
       );
 
-      await wait(() =>
+      await waitFor(() =>
         expect(
           Array.from(document.querySelectorAll('head script')),
         ).toHaveLength(2),
@@ -117,7 +117,7 @@ describe('IncludeContainer', () => {
       />,
     );
 
-    await wait(() =>
+    await waitFor(() =>
       expect(Array.from(document.querySelectorAll('head script'))).toHaveLength(
         0,
       ),
