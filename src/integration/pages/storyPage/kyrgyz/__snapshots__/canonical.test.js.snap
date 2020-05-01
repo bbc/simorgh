@@ -10,6 +10,8 @@ exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, К
 
 exports[`Canonical Story Page I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
+exports[`Canonical Story Page I can see the caption accompanying a rich YouTube embed 1`] = `"Видеонун түшүндүрмөсү, Эскертүү: Жарнамалар болушу ыктымал"`;
+
 exports[`Canonical Story Page I can see the skip social embed link 1`] = `"YouTube баракчаны өткөрүп жиберүү, пост, 1"`;
 
 exports[`Canonical Story Page I can see the skip social embed link destination 1`] = `"YouTube посттун аягы, 1"`;

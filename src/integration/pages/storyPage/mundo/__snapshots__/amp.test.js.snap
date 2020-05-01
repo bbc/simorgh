@@ -82,6 +82,8 @@ exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
 exports[`AMP Story Page I can see an image with a caption 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
 
+exports[`AMP Story Page I can see the caption accompanying a rich YouTube embed 1`] = `"Título del video: Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad"`;
+
 exports[`AMP Story Page I can see the skip social embed link 1`] = `"Saltar contenido de YouTube, 1"`;
 
 exports[`AMP Story Page I can see the skip social embed link destination 1`] = `"Fin del contenido de YouTube, 1"`;
