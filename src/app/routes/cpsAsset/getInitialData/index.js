@@ -41,6 +41,7 @@ const processOptimoBlocks = pipe(
   cpsOnlyOnwardJourneys,
   addRecommendationsBlock,
 );
+
 const transformJson = async json => {
   try {
     const formattedPageData = formatPageData(json);
@@ -65,9 +66,7 @@ export default async ({ path: pathname, service, variant }) => {
   return {
     ...rest,
     ...(json && {
-      pageData: additionalPageData
-        ? { ...(await transformJson(json)), ...additionalPageData }
-        : await transformJson(json),
+      pageData: { ...(await transformJson(json)), ...additionalPageData },
     }),
   };
 };

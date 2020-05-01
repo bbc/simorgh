@@ -79,10 +79,14 @@ it('should have correct properties in each route', () => {
 
 it('should route to and render live radio page', async () => {
   const pathname = '/korean/bbc_korean_radio/liveradio';
-  fetchMock.mock(`http://localhost${pathname}.json`, liveRadioPageJson);
+  fetchMock.mock(
+    `http://localhost${pathname}.json?renderer_env=live`,
+    liveRadioPageJson,
+  );
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
   const { pageData } = await getInitialData({ path: pathname });
+
   const { getByText } = renderRouter({
     pathname,
     pageData,
@@ -96,7 +100,10 @@ it('should route to and render live radio page', async () => {
 
 it('should route to and render the skeleton onDemand Radio page', async () => {
   const pathname = '/indonesia/bbc_indonesian_radio/w172x6r5000f38s';
-  fetchMock.mock(`http://localhost${pathname}.json`, onDemandRadioPageJson);
+  fetchMock.mock(
+    `http://localhost${pathname}.json?renderer_env=live`,
+    onDemandRadioPageJson,
+  );
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
   const { pageData } = await getInitialData({ path: pathname });
