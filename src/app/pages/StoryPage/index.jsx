@@ -258,6 +258,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
             <MostReadContainer
               mostReadEndpointOverride={mostReadEndpointOverride}
               columnLayout="oneColumn"
+              size="small"
               wrapper={MostReadWrapper}
               initialData={mostReadInitialData}
             />
