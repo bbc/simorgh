@@ -37,6 +37,7 @@ const MarginWrapper = styled.div`
 const CanonicalMostRead = ({
   endpoint,
   columnLayout,
+  size,
   initialData,
   wrapper: Wrapper,
 }) => {
@@ -106,6 +107,7 @@ const CanonicalMostRead = ({
                 numberOfItems={items.length}
                 dir={dir}
                 columnLayout={columnLayout}
+                size={size}
               />
               <MostReadLink
                 dir={dir}
@@ -113,6 +115,7 @@ const CanonicalMostRead = ({
                 script={script}
                 title={item.title}
                 href={item.href}
+                size={size}
               >
                 {shouldRenderLastUpdated(item.timestamp) && (
                   <LastUpdated
@@ -136,12 +139,14 @@ const CanonicalMostRead = ({
 CanonicalMostRead.propTypes = {
   endpoint: string.isRequired,
   columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
+  size: oneOf(['default', 'small']),
   initialData: mostReadShape,
   wrapper: elementType,
 };
 
 CanonicalMostRead.defaultProps = {
   columnLayout: 'multiColumn',
+  size: 'default',
   initialData: null,
   wrapper: React.Fragment,
 };
