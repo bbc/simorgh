@@ -277,7 +277,9 @@ pipeline {
             wait: true
           )
           echo "Child variables: ${run.buildVariables}"
-          currentBuild.description = "Cosmos release ${run.buildVariables.COSMOS_VERSION}"
+          if (run.buildVariables.COSMOS_VERSION) {
+            currentBuild.description = "Cosmos release ${run.buildVariables.COSMOS_VERSION}"
+          }
         }
       }
     }
