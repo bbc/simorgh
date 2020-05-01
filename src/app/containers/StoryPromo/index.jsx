@@ -157,7 +157,7 @@ const StoryPromoContainer = ({
           </Link>
         </Headline>
       )}
-      {promoSummary && displaySummary && (
+      {promoSummary && displaySummary && !isRecommendation && (
         <Summary
           script={script}
           service={service}
@@ -167,7 +167,7 @@ const StoryPromoContainer = ({
           {promoSummary}
         </Summary>
       )}
-      {timestamp && !isStoryPromoPodcast && !isLive && (
+      {timestamp && !isStoryPromoPodcast && !isRecommendation && !isLive && (
         <Timestamp
           altCalendar={altCalendar}
           locale={datetimeLocale}
