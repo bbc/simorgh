@@ -12,30 +12,29 @@ const getTestHead = ({ service, pathname }) => `
    */
 `;
 
-const getAmpTestBody = ({ service, pageType, parentDirPath }) => `
-  import runAmpTests from '${parentDirPath}pages/${pageType}/ampTests';
+const getAmpTestBody = ({ service, pageType }) => `
+  import runAmpTests from '../../../../pages/${pageType}/ampTests';
 
   describe('AMP ${service} ${pageType}', runAmpTests);
 `;
 
-const getCanonicalTestBody = ({ service, pageType, parentDirPath }) => `
-  import runCanonicalTests from '${parentDirPath}pages/${pageType}/canonicalTests';
+const getCanonicalTestBody = ({ service, pageType }) => `
+  import runCanonicalTests from '../../../../pages/${pageType}/canonicalTests';
 
   describe('Canonical ${service} ${pageType}', runCanonicalTests);
 `;
 
-module.exports = ({ service, variant = '', pageType, pathname }) => {
+module.exports = ({ service, pageType, pathname }) => {
   const testHead = getTestHead({ service, pathname });
-  const parentDirPath = variant ? '../../../../' : '../../../';
 
   const ampTestContent = prettifyContent(`
     ${testHead}
-    ${getAmpTestBody({ service, pageType, parentDirPath })}
+    ${getAmpTestBody({ service, pageType })}
   `);
 
   const canonicalTestContent = prettifyContent(`
     ${testHead}
-    ${getCanonicalTestBody({ service, pageType, parentDirPath })}
+    ${getCanonicalTestBody({ service, pageType })}
   `);
 
   const testDirPath = path.join(
@@ -43,8 +42,8 @@ module.exports = ({ service, variant = '', pageType, pathname }) => {
     '../../../',
     SERVICES_TESTS_DIR,
     service,
-    variant,
     pageType,
+    pathname.slice(1).split('/').join('-'),
   );
 
   fs.mkdirSync(testDirPath, {

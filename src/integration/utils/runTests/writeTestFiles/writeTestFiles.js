@@ -2,37 +2,18 @@
 
 const writeTestFile = require('./writeTestFile');
 const { SERVICES } = require('../constants');
-const {
-  getPageTypes,
-  getPathname,
-  hasVariants,
-  getVariants,
-  getVariantPageTypes,
-  getVariantPathname,
-} = require('./utils');
+const { getPageTypes, getPathnames } = require('./utils');
 
 module.exports = () => {
   SERVICES.forEach(service => {
-    if (hasVariants(service)) {
-      const variants = getVariants(service);
+    const pageTypes = getPageTypes(service);
 
-      variants.forEach(variant => {
-        const pageTypes = getVariantPageTypes(service, variant);
+    pageTypes.forEach(pageType => {
+      const pathnames = getPathnames(service, pageType);
 
-        pageTypes.forEach(pageType => {
-          const pathname = getVariantPathname(service, variant, pageType);
-
-          writeTestFile({ service, pageType, pathname, variant });
-        });
-      });
-    } else {
-      const pageTypes = getPageTypes(service);
-
-      pageTypes.forEach(pageType => {
-        const pathname = getPathname(service, pageType);
-
+      pathnames.forEach(pathname => {
         writeTestFile({ service, pageType, pathname });
       });
-    }
+    });
   });
 };

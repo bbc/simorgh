@@ -27,13 +27,7 @@ const getExpectedFileContent = ({
   ${expectedDescribeBlock}
 `);
 
-const runTests = ({
-  service,
-  pageType,
-  pathname,
-  expectedParentDir,
-  expectedTestDir,
-}) => {
+const runTests = ({ service, pageType, pathname, expectedTestDir }) => {
   afterEach(() => {
     fs.writeFileSync.mockClear();
     fs.mkdirSync.mockClear();
@@ -56,7 +50,7 @@ const runTests = ({
         `/simorgh/src/integration/${SERVICES_TESTS_DIR}/${expectedTestDir}/amp.test.js`,
       );
 
-      const expectedImports = `import runAmpTests from '${expectedParentDir}pages/${pageType}/ampTests';`;
+      const expectedImports = `import runAmpTests from '../../../../pages/${pageType}/ampTests';`;
       const expectedDescribeBlock = `describe('AMP ${service} ${pageType}', runAmpTests)`;
 
       expect(fileContent).toEqual(
@@ -80,7 +74,7 @@ const runTests = ({
         `/simorgh/src/integration/${SERVICES_TESTS_DIR}/${expectedTestDir}/canonical.test.js`,
       );
 
-      const expectedImports = `import runCanonicalTests from '${expectedParentDir}pages/${pageType}/canonicalTests';`;
+      const expectedImports = `import runCanonicalTests from '../../../../pages/${pageType}/canonicalTests';`;
       const expectedDescribeBlock = `describe('Canonical ${service} ${pageType}', runCanonicalTests)`;
 
       expect(fileContent).toEqual(
@@ -112,31 +106,6 @@ describe('should generate test files from a given test example', () => {
     service,
     pageType,
     pathname,
-    expectedParentDir: '../../../',
-    expectedTestDir: `${service}/${pageType}`,
-  });
-});
-
-describe('should generate test files from a given test example for services with variants', () => {
-  const service = 'zhongwen';
-  const pageType = 'articles';
-  const pathname = '/zhongwen/articles/c3xd4x9prgyo/simp';
-  const variant = 'simp';
-
-  beforeEach(() => {
-    writeTestFile({
-      service,
-      pageType,
-      pathname,
-      variant,
-    });
-  });
-
-  runTests({
-    service,
-    pageType,
-    pathname,
-    expectedParentDir: '../../../../',
-    expectedTestDir: `${service}/${variant}/${pageType}`,
+    expectedTestDir: 'persian/liveRadio/persian-bbc_persian_radio-liveradio',
   });
 });

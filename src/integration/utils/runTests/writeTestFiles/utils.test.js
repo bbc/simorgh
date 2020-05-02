@@ -1,30 +1,30 @@
 const {
   getPageTypes,
-  getPathname,
+  getPathnames,
   hasVariants,
   getVariants,
   getVariantPageTypes,
-  getVariantPathname,
+  getVariantPathnames,
 } = require('./utils');
 
 jest.mock('../constants/services', () => ({
   persian: {
-    frontPage: '/persian',
-    articles: '/persian/articles/cej3lzd5e0go',
-    liveRadio: '/persian/bbc_persian_radio/liveradio',
-    mediaAssetPage: '/persian/iran-23231114',
-    PGL: '/persian/magazine-49281981',
+    frontPage: ['/persian'],
+    articles: ['/persian/articles/cej3lzd5e0go'],
+    liveRadio: ['/persian/bbc_persian_radio/liveradio'],
+    mediaAssetPage: ['/persian/iran-23231114'],
+    PGL: ['/persian/magazine-49281981'],
   },
   zhongwen: {
     variants: {
       simp: {
-        frontPage: '/zhongwen/simp',
-        articles: '/zhongwen/articles/c3xd4x9prgyo/simp',
+        frontPage: ['/zhongwen/simp'],
+        articles: ['/zhongwen/articles/c3xd4x9prgyo/simp'],
       },
       trad: {
-        frontPage: '/zhongwen/trad',
-        articles: '/zhongwen/articles/c3xd4x9prgyo/trad',
-        PGL: '/zhongwen/trad/chinese-news-49065935',
+        frontPage: ['/zhongwen/trad'],
+        articles: ['/zhongwen/articles/c3xd4x9prgyo/trad'],
+        PGL: ['/zhongwen/trad/chinese-news-49065935'],
       },
     },
   },
@@ -47,8 +47,8 @@ describe('getPageTypes', () => {
 
 describe('getPathname', () => {
   it("should get the pathname of a service's page type", () => {
-    const actual = getPathname('persian', 'PGL');
-    const expected = '/persian/magazine-49281981';
+    const actual = getPathnames('persian', 'PGL');
+    const expected = ['/persian/magazine-49281981'];
 
     expect(actual).toEqual(expected);
   });
@@ -81,8 +81,8 @@ describe('getVariantPageTypes', () => {
 
 describe('getVariantPathname', () => {
   it("should get a service variant's page type's pathname", () => {
-    const actual = getVariantPathname('zhongwen', 'simp', 'articles');
-    const expected = '/zhongwen/articles/c3xd4x9prgyo/simp';
+    const actual = getVariantPathnames('zhongwen', 'simp', 'articles');
+    const expected = ['/zhongwen/articles/c3xd4x9prgyo/simp'];
 
     expect(actual).toEqual(expected);
   });
