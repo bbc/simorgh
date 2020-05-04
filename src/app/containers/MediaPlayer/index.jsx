@@ -154,7 +154,8 @@ const MediaPlayerContainer = ({
   }
 
   logEmbedSourceStatus({
-    url: embedSource,
+    url: assetId,
+    embedUrl: embedSource,
     assetType,
   });
 

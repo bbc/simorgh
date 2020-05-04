@@ -71,8 +71,9 @@ it('should log embed source status code when player is loaded', () => {
 
   expect(logEmbedSourceStatus.mock.calls.length).toBeGreaterThan(0);
   logEmbedSourceStatus.mock.calls.forEach(call => {
-    const { url, assetType } = call[0];
-    expect(url.includes('test.bbc.co.uk')).toBe(true);
+    const { url, assetType, embedUrl } = call[0];
+    expect(url).toBe('c123456789o');
+    expect(embedUrl.includes('test.bbc.co.uk')).toBe(true);
     expect(assetType).toBe('articles');
   });
 });

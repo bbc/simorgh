@@ -1,9 +1,10 @@
 import loggerMock from '#testHelpers/loggerMock';
-import { MEDIA_PLAYER_RESPONSE } from '#lib/logger.const';
+import { MEDIA_PLAYER_INFO } from '#lib/logger.const';
 import logEmbedSourceStatus from '.';
 
 const fetchResponse = { status: 200 };
-const url = '/embed/source';
+const url = '/asset/id';
+const embedUrl = '/embed/url';
 const assetType = 'cps';
 
 describe('logEmbedSourceStatus', () => {
@@ -13,9 +14,10 @@ describe('logEmbedSourceStatus', () => {
 
   const testLogging = async (status, logFn) => {
     fetchResponse.status = status;
-    await logEmbedSourceStatus({ url, assetType });
-    expect(logFn).toHaveBeenLastCalledWith(MEDIA_PLAYER_RESPONSE, {
+    await logEmbedSourceStatus({ url, assetType, embedUrl });
+    expect(logFn).toHaveBeenLastCalledWith(MEDIA_PLAYER_INFO, {
       url,
+      embedUrl,
       status,
       assetType,
     });
