@@ -2,7 +2,7 @@ import express from 'express';
 import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';
 import path from 'path';
-import pathOr from 'ramda/src/pathOr';
+import paths from 'ramda/src/paths';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
@@ -223,6 +223,16 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
  * Application env routes
  */
 
+export const getPageType = data => {
+  const { pageData } = data;
+  const [metadataType, contentType] = paths(
+    [['metadata', 'type'], ['contentType']],
+    pageData,
+  );
+
+  return metadataType || contentType || 'Unknown';
+};
+
 server
   .get([articleSwPath, frontPageSwPath], (req, res) => {
     const swPath = `${__dirname}/public/sw.js`;
@@ -284,7 +294,7 @@ server
         logger.info(ROUTING_INFORMATION, {
           url,
           status,
-          pageType: pathOr('Error', ['pageData', 'metadata', 'type'], data),
+          pageType: getPageType(data),
         });
 
         if (result.redirectUrl) {
