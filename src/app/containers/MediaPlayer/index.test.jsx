@@ -12,8 +12,10 @@ import {
 } from './fixtureData';
 import logEmbedSourceStatus from './helpers/logEmbedSourceStatus';
 import defaultToggles from '#lib/config/toggles';
+import onClient from '#lib/utilities/onClient';
 
 jest.mock('./helpers/logEmbedSourceStatus');
+jest.mock('#lib/utilities/onClient');
 
 describe('MediaPlayer', () => {
   shouldMatchSnapshot(
@@ -69,10 +71,11 @@ it('should contain the noscript tag for no-JS scenarios ', () => {
 describe('log MediaPlayer status', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    logEmbedSourceStatus.mockImplementationOnce(() => jest.fn());
+    onClient.mockReturnValue(false);
   });
 
   it('should log embed source status code when player is loaded', () => {
-    logEmbedSourceStatus.mockImplementationOnce(() => jest.fn());
     render(VideoCanonicalWithCaption);
 
     expect(logEmbedSourceStatus.mock.calls.length).toBeGreaterThan(0);
@@ -88,8 +91,16 @@ describe('log MediaPlayer status', () => {
     defaultToggles[
       process.env.SIMORGH_APP_ENV || 'local'
     ].logMediaPlayerStatus.enabled = false;
-    logEmbedSourceStatus.mockImplementation(() => jest.fn());
     render(VideoCanonicalWithCaption);
+
+    expect(logEmbedSourceStatus).not.toHaveBeenCalled();
+  });
+
+  it('should only log on server', () => {
+    onClient.mockReturnValue(true);
+    defaultToggles[
+      process.env.SIMORGH_APP_ENV || 'local'
+    ].logMediaPlayerStatus.enabled = true;
 
     expect(logEmbedSourceStatus).not.toHaveBeenCalled();
   });

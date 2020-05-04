@@ -21,12 +21,13 @@ import buildIChefURL from '#lib/utilities/ichefURL';
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
+import toggles from '#lib/config/toggles';
+import onClient from '#lib/utilities/onClient';
 import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 import logEmbedSourceStatus from './helpers/logEmbedSourceStatus';
-import toggles from '#lib/config/toggles';
 
 const { logMediaPlayerStatus } = toggles[
   process.env.SIMORGH_APP_ENV || 'local'
@@ -157,7 +158,7 @@ const MediaPlayerContainer = ({
     );
   }
 
-  if (logMediaPlayerStatus.enabled) {
+  if (!onClient() && logMediaPlayerStatus.enabled) {
     logEmbedSourceStatus({
       url: assetId,
       embedUrl: embedSource,
