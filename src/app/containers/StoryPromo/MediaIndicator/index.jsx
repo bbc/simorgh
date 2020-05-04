@@ -9,10 +9,6 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import formatDuration from '#lib/utilities/formatDuration';
-import loggerNode from '#lib/logger.node';
-import { MEDIA_MISSING_FIELD } from '#lib/logger.const';
-
-const logger = loggerNode(__filename);
 
 const getAssetContentTypes = item => {
   const type = pathOr('', ['contentType'], item);
@@ -60,14 +56,6 @@ const MediaIndicatorContainer = ({ item, script, service, dir, isInline }) => {
 
   // Always gets the first version. Smarter logic may be needed in the future.
   const rawDuration = path(['media', 'versions', 0, 'duration'], item);
-
-  if (!rawDuration) {
-    logger.warn(MEDIA_MISSING_FIELD, {
-      url: '/pashto',
-      missingField: 'duration',
-      item,
-    });
-  }
 
   if (rawDuration && !isInline) {
     const duration = moment.duration(rawDuration, 'seconds');

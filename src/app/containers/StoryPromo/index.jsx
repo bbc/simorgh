@@ -19,6 +19,10 @@ import LinkContents from './LinkContents';
 import MediaIndicatorContainer from './MediaIndicator';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import IndexAlsosContainer from './IndexAlsos';
+import loggerNode from '#lib/logger.node';
+import { MEDIA_MISSING_FIELD } from '#lib/logger.const';
+
+const logger = loggerNode(__filename);
 
 const PROMO_TYPES = ['top', 'regular', 'leading'];
 
@@ -118,6 +122,16 @@ const StoryPromoContainer = ({
 
   const timestamp = pathOr(null, ['timestamp'], item);
   const relatedItems = pathOr(null, ['relatedItems'], item);
+  // Always gets the first version. Smarter logic may be needed in the future.
+  const duration = pathOr(null, ['media', 'versions', 0, 'duration'], item);
+
+  if (!duration) {
+    logger.warn(MEDIA_MISSING_FIELD, {
+      url: '/pashto',
+      missingField: 'duration',
+      item,
+    });
+  }
 
   const linkcontents = <LinkContents item={item} isInline={!displayImage} />;
 
