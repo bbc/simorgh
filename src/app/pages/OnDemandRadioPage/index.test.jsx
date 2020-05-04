@@ -108,19 +108,47 @@ describe('OnDemand Radio Page ', () => {
     expect(getByText('ماښامنۍ خپرونه')).toBeInTheDocument();
   });
 
-  // it('should show the episode title for OnDemand Radio Pages', async () => {
-  //   fetch.mockResponse(JSON.stringify(pashtoPageData));
+  it('should show the datestamp correctly for Pashto OnDemand Radio Pages', async () => {
+    fetch.mockResponse(JSON.stringify(pashtoPageData));
 
-  //   const { pageData: pageDataWithWithoutVideo } = await getInitialData(
-  //     'some-ondemand-radio-path',
-  //   );
-  //   const { getByText } = await renderPage({
-  //     pageData: pageDataWithWithoutVideo,
-  //     service: 'pashto',
-  //   });
+    const { pageData: pageDataWithWithoutVideo } = await getInitialData(
+      'some-ondemand-radio-path',
+    );
+    const { getByText } = await renderPage({
+      pageData: pageDataWithWithoutVideo,
+      service: 'pashto',
+    });
 
-  //   expect(getByText('04/02/2020 GMT')).toBeInTheDocument();
-  // });
+    expect(getByText('۱ می ۲۰۲۰')).toBeInTheDocument();
+  });
+
+  it('should show the datestamp correctly for Korean OnDemand Radio Pages', async () => {
+    fetch.mockResponse(JSON.stringify(koreanPageData));
+
+    const { pageData: pageDataWithWithoutVideo } = await getInitialData(
+      'some-ondemand-radio-path',
+    );
+    const { getByText } = await renderPage({
+      pageData: pageDataWithWithoutVideo,
+      service: 'korean',
+    });
+
+    expect(getByText('2020년 5월 4일')).toBeInTheDocument();
+  });
+
+  it('should show the datestamp correctly for Indonesian OnDemand Radio Pages', async () => {
+    fetch.mockResponse(JSON.stringify(indonesiaPageData));
+
+    const { pageData: pageDataWithWithoutVideo } = await getInitialData(
+      'some-ondemand-radio-path',
+    );
+    const { getByText } = await renderPage({
+      pageData: pageDataWithWithoutVideo,
+      service: 'indonesia',
+    });
+
+    expect(getByText('27 April 2020')).toBeInTheDocument();
+  });
 
   it('should show the summary for OnDemand Radio Pages', async () => {
     fetch.mockResponse(JSON.stringify(indonesiaPageData));

@@ -7,7 +7,7 @@ import {
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import Datestamp from '.';
 
-describe('AudioPlayer blocks DateStamp', () => {
+describe('AudioPlayer blocks Datestamp', () => {
   shouldMatchSnapshot(
     'should render correctly',
     <ServiceContextProvider service="news">

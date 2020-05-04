@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AudioPlayer blocks DateStamp should render correctly 1`] = `
+exports[`AudioPlayer blocks Datestamp should render correctly 1`] = `
 .c0 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
