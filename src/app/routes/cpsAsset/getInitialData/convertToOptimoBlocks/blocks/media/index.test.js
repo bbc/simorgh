@@ -57,7 +57,7 @@ describe('convertMedia', () => {
     expect(convertMedia(inputC)).toEqual(false);
   });
 
-  it.only('provides a default placeholder image if one is not defined', () => {
+  it('provides a default placeholder image if one is not defined', () => {
     const placeholderUrl = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}images/media_placeholder.png`;
 
     const input = assocPath(['imageUrl'], null, CPSMediaBlock);
