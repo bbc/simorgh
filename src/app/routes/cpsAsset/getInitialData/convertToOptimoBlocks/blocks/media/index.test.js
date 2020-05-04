@@ -43,18 +43,18 @@ describe('convertMedia', () => {
   });
 
   it('returns false if resulting data seems invalid', () => {
-    const inputA = assocPath(['format'], false, CPSMediaBlock);
-    expect(convertMedia(inputA)).toEqual(false);
+    const missingFormat = assocPath(['format'], false, CPSMediaBlock);
+    expect(convertMedia(missingFormat)).toEqual(false);
 
-    const inputB = assocPath(['imageUrl'], false, CPSMediaBlock);
-    expect(convertMedia(inputB)).toEqual(false);
+    const missingId = assocPath(['id'], false, CPSMediaBlock);
+    expect(convertMedia(missingId)).toEqual(false);
 
-    const inputC = assocPath(
+    const missingVersionId = assocPath(
       ['versions', 0, 'versionId'],
       false,
       CPSMediaBlock,
     );
-    expect(convertMedia(inputC)).toEqual(false);
+    expect(convertMedia(missingVersionId)).toEqual(false);
   });
 
   it('provides a default placeholder image if one is not defined', () => {

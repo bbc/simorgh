@@ -32,6 +32,7 @@ const generateVideoBlock = block => {
     generatedBlock.model.format = 'audio_video';
   }
 
+  // Some media blocks do not have an image url defined, so we fall back to this default
   if (!generatedBlock.model.imageUrl) {
     generatedBlock.model.imageUrl = FALLBACK_PLACEHOLDER_IMAGE_URL;
   }
@@ -44,7 +45,6 @@ const generatePlaceholderImageUrl = imageUrl => {
     return `https://${imageUrl.replace('$recipe', '1024x576')}`;
   }
 
-  // Some media blocks do not have an image url defined, so we fall back to this default
   return FALLBACK_PLACEHOLDER_IMAGE_URL;
 };
 
