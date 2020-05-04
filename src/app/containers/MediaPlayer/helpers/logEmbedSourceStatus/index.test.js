@@ -1,5 +1,5 @@
 import loggerMock from '#testHelpers/loggerMock';
-import { MEDIA_PLAYER_INFO } from '#lib/logger.const';
+import { MEDIA_PLAYER_STATUS } from '#lib/logger.const';
 import logEmbedSourceStatus from '.';
 
 const fetchResponse = { status: 200 };
@@ -15,7 +15,7 @@ describe('logEmbedSourceStatus', () => {
   const testLogging = async (status, logFn) => {
     fetchResponse.status = status;
     await logEmbedSourceStatus({ url, assetType, embedUrl });
-    expect(logFn).toHaveBeenLastCalledWith(MEDIA_PLAYER_INFO, {
+    expect(logFn).toHaveBeenLastCalledWith(MEDIA_PLAYER_STATUS, {
       url,
       embedUrl,
       status,
