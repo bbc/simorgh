@@ -17,6 +17,10 @@ const logCodes = {
   MEDIA_ASSET_REVOKED: 'media_asset_revoked',
   MEDIA_ASSET_EXPIRED: 'media_asset_expired',
   MEDIA_METADATA_UNAVAILABLE: 'media_metadata_unavailable',
+  CPS_MEDIA_WITHOUT_IMAGE: 'cps_media_without_image',
+  CPS_MEDIA_WITHOUT_ID: 'cps_media_without_id',
+  CPS_MEDIA_WITHOUT_FORMAT: 'cps_media_without_format',
+  CPS_MEDIA_WITHOUT_VERSION_ID: 'cps_media_without_version_id',
 
   // Translations
   NO_TRANSLATION_FOUND: 'no_translation_found',

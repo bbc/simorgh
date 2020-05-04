@@ -2,6 +2,16 @@ import pick from 'ramda/src/pick';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 
+import nodeLogger from '#lib/logger.node';
+import {
+  CPS_MEDIA_WITHOUT_IMAGE,
+  CPS_MEDIA_WITHOUT_ID,
+  CPS_MEDIA_WITHOUT_FORMAT,
+  CPS_MEDIA_WITHOUT_VERSION_ID,
+} from '#lib/logger.const';
+
+const logger = nodeLogger(__filename);
+
 const FALLBACK_PLACEHOLDER_IMAGE_URL = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}images/media_placeholder.png`;
 
 const generateVideoBlock = block => {
@@ -89,7 +99,25 @@ const withValidationCheck = convertedBlock => {
   return checks.every(Boolean) && convertedBlock;
 };
 
-const convertMedia = block => {
+const validateInputBlock = (block, aresResponse) => {
+  const log = category =>
+    logger.warn(category, {
+      id: path(['metadata', 'id'], aresResponse),
+      url: path(['metadata', 'locators', 'assetUri'], aresResponse),
+    });
+
+  [
+    [CPS_MEDIA_WITHOUT_IMAGE, block.imageUrl],
+    [CPS_MEDIA_WITHOUT_ID, block.id],
+    [CPS_MEDIA_WITHOUT_FORMAT, block.format],
+    [CPS_MEDIA_WITHOUT_VERSION_ID, path(['versions', 0, 'versionId'], block)],
+  ]
+    .filter(([, checkSucceeded]) => !checkSucceeded)
+    .forEach(([issue]) => log(issue));
+};
+
+const convertMedia = (block, aresResponse) => {
+  validateInputBlock(block, aresResponse);
   const convertedBlock = {
     type: 'video',
     model: {
