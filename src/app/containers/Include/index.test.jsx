@@ -17,8 +17,9 @@ const toggleStateFalse = {
 };
 
 const fakeMarkup = `<div>Visual Journalism Markup</div><script type="text/javascript" src="localhost/vj.js"></script>`;
+
 // eslint-disable-next-line react/prop-types
-const IncludeContainerWithMockContext = ({ toggleState, html, type }) => (
+const MockContext = ({ toggleState, children }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     isAmp={false}
@@ -28,9 +29,16 @@ const IncludeContainerWithMockContext = ({ toggleState, html, type }) => (
     pathname="/pathname"
   >
     <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
-      <IncludeContainer html={html} type={type} />
+      {children}
     </ToggleContext.Provider>
   </RequestContextProvider>
+);
+
+// eslint-disable-next-line react/prop-types
+const IncludeContainerWithMockContext = ({ toggleState, html, type }) => (
+  <MockContext toggleState={toggleState}>
+    <IncludeContainer html={html} type={type} />
+  </MockContext>
 );
 
 describe('IncludeContainer', () => {
@@ -107,6 +115,25 @@ describe('IncludeContainer', () => {
   };
   runningIncludeTest('vj');
   runningIncludeTest('idt1');
+
+  it(`should add require once for page with multiple vj and idt1 includes`, async () => {
+    render(
+      <MockContext toggleState={defaultToggleState}>
+        <IncludeContainer html={fakeMarkup} type="idt1" />
+        <IncludeContainer html={fakeMarkup} type="vj" />
+        <IncludeContainer html={fakeMarkup} type="idt1" />
+        <IncludeContainer html={fakeMarkup} type="vj" />
+      </MockContext>,
+    );
+
+    await waitFor(() =>
+      expect(Array.from(document.querySelectorAll('head script'))).toHaveLength(
+        2,
+      ),
+    );
+
+    expect(window.require.config).toHaveBeenCalled();
+  });
 
   it(`should not add require to the page for idt2`, async () => {
     render(
