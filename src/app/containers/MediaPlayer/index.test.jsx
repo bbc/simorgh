@@ -11,6 +11,7 @@ import {
   VideoAmpWithCaption,
 } from './fixtureData';
 import logEmbedSourceStatus from './helpers/logEmbedSourceStatus';
+import defaultToggles from '#lib/config/toggles';
 
 jest.mock('./helpers/logEmbedSourceStatus');
 
@@ -65,15 +66,31 @@ it('should contain the noscript tag for no-JS scenarios ', () => {
   expect(document.querySelector('noscript')).toBeInTheDocument();
 });
 
-it('should log embed source status code when player is loaded', () => {
-  logEmbedSourceStatus.mockImplementation(() => jest.fn());
-  render(VideoCanonicalWithCaption);
+describe('log SMP status', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
 
-  expect(logEmbedSourceStatus.mock.calls.length).toBeGreaterThan(0);
-  logEmbedSourceStatus.mock.calls.forEach(call => {
-    const { url, assetType, embedUrl } = call[0];
-    expect(url).toBe('c123456789o');
-    expect(embedUrl.includes('test.bbc.co.uk')).toBe(true);
-    expect(assetType).toBe('articles');
+  it('should log embed source status code when player is loaded', () => {
+    logEmbedSourceStatus.mockImplementationOnce(() => jest.fn());
+    render(VideoCanonicalWithCaption);
+
+    expect(logEmbedSourceStatus.mock.calls.length).toBeGreaterThan(0);
+    logEmbedSourceStatus.mock.calls.forEach(call => {
+      const { url, assetType, embedUrl } = call[0];
+      expect(url).toBe('c123456789o');
+      expect(embedUrl.includes('test.bbc.co.uk')).toBe(true);
+      expect(assetType).toBe('articles');
+    });
+  });
+
+  it('should not log when toggle is disabled', () => {
+    defaultToggles[
+      process.env.SIMORGH_APP_ENV || 'local'
+    ].logMediaPlayerStatus.enabled = false;
+    logEmbedSourceStatus.mockImplementation(() => jest.fn());
+    render(VideoCanonicalWithCaption);
+
+    expect(logEmbedSourceStatus).not.toHaveBeenCalled();
   });
 });
