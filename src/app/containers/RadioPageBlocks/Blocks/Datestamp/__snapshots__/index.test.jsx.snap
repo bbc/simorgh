@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AudioPlayer blocks DateStamp should render correctly 1`] = `
+.c0 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+<p
+  class="c0"
+  id="idAttr"
+>
+  27 April 2020
+</p>
+`;
