@@ -26,7 +26,7 @@ const IncludeContainer = ({ html, type }) => {
     'jquery-1':
       'https://static.bbc.co.uk/frameworks/jquery/0.4.1/sharedmodules/jquery-1.7.2',
     'istats-1':
-      'https://nav.files.bbci.co.uk/orbit-webmodules/0.0.2-448.45dcd56/istats/istats-1',
+      'https://news.files.bbci.co.uk/include/vjassets/js/vendor/istats-1.0.0.min',
   }`;
 
   const configureAdditionalScripts = `require.config({ paths:${paths} });`;
