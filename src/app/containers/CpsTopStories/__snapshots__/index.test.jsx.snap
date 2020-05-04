@@ -4,46 +4,163 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 <DocumentFragment>
   <section
     aria-labelledby="top-stories-heading"
-    class="Wrapper-opyob2-0 dlivvF"
+    class="GridWrapper-sc-12lwanc-0 hgpaqH"
     role="region"
   >
     <div
-      class="GridComponent-nf79gm-0 ehIAex Wrapper-opyob2-0 dlivvF"
-      dir="ltr"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT"
+        class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
       >
         <div
-          class="Bar-sc-1x4gwjz-0 jsgdXU"
-        />
-        <h2
-          class="Heading-sc-1x4gwjz-2 eZofTG"
+          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT"
         >
-          <span
-            class="FlexColumn-wx5kdp-0 dgpsiS"
+          <div
+            class="Bar-sc-1x4gwjz-0 jsgdXU"
+          />
+          <h2
+            class="Heading-sc-1x4gwjz-2 eZofTG"
           >
             <span
-              class="FlexRow-wx5kdp-2 dVBNyZ"
+              class="FlexColumn-wx5kdp-0 dgpsiS"
             >
               <span
-                class="Title-wx5kdp-4 BeqZV"
-                dir="ltr"
-                id="top-stories-heading"
+                class="FlexRow-wx5kdp-2 dVBNyZ"
               >
-                Top Stories
+                <span
+                  class="Title-wx5kdp-4 BeqZV"
+                  dir="ltr"
+                  id="top-stories-heading"
+                >
+                  Top Stories
+                </span>
               </span>
             </span>
-          </span>
-        </h2>
+          </h2>
+        </div>
+        <ul
+          class="StoryPromoUl-sc-171lqjd-1 isCYWc"
+          role="list"
+        >
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 gCyGvI"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 gejHzT"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/mundo/noticias-internacional-51939501"
+                  >
+                    China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 hTsuvP"
+                >
+                  Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-02-03"
+                >
+                  3rd February 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 gCyGvI"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 gejHzT"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/pidgin/tori-51945757"
+                  >
+                    Nigeria don get five new cases of Coronavirus - See how e happun
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 hTsuvP"
+                >
+                  Nigeria Health say di patients from UK and America travel come di kontri.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-02-03"
+                >
+                  3rd February 2020
+                </time>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
-      <ul
-        class="StoryPromoUl-sc-171lqjd-1 isCYWc"
-        role="list"
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`CpsRelatedContent should render Top Stories components when without <ul> 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="top-stories-heading"
+    class="GridWrapper-sc-12lwanc-0 hgpaqH"
+    role="region"
+  >
+    <div
+      class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
+    >
+      <div
+        class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
       >
-        <li
-          class="StoryPromoLi-sc-171lqjd-0 jTGbev"
-          role="listitem"
+        <div
+          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT"
+        >
+          <div
+            class="Bar-sc-1x4gwjz-0 jsgdXU"
+          />
+          <h2
+            class="Heading-sc-1x4gwjz-2 eZofTG"
+          >
+            <span
+              class="FlexColumn-wx5kdp-0 dgpsiS"
+            >
+              <span
+                class="FlexRow-wx5kdp-2 dVBNyZ"
+              >
+                <span
+                  class="Title-wx5kdp-4 BeqZV"
+                  dir="ltr"
+                  id="top-stories-heading"
+                >
+                  Top Stories
+                </span>
+              </span>
+            </span>
+          </h2>
+        </div>
+        <div
+          class="SingleContentWrapper-opyob2-3 iddZTf"
         >
           <div
             class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
@@ -74,117 +191,6 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
                 3rd February 2020
               </time>
             </div>
-          </div>
-        </li>
-        <li
-          class="StoryPromoLi-sc-171lqjd-0 jTGbev"
-          role="listitem"
-        >
-          <div
-            class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-          >
-            <div
-              class="TextGridItem-sc-1lkbq5i-0 gCyGvI"
-              dir="ltr"
-            >
-              <h3
-                class="Headline-sc-1dvfmi3-3 gejHzT"
-              >
-                <a
-                  class="Link-sc-1dvfmi3-5 jeUMCT"
-                  href="/pidgin/tori-51945757"
-                >
-                  Nigeria don get five new cases of Coronavirus - See how e happun
-                </a>
-              </h3>
-              <p
-                class="Summary-sc-1dvfmi3-4 hTsuvP"
-              >
-                Nigeria Health say di patients from UK and America travel come di kontri.
-              </p>
-              <time
-                class="StyledTimestamp-um718p-0 kVWTyt"
-                datetime="2020-02-03"
-              >
-                3rd February 2020
-              </time>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-</DocumentFragment>
-`;
-
-exports[`CpsRelatedContent should render Top Stories components when without <ul> 1`] = `
-<DocumentFragment>
-  <section
-    aria-labelledby="top-stories-heading"
-    class="Wrapper-opyob2-0 dlivvF"
-    role="region"
-  >
-    <div
-      class="GridComponent-nf79gm-0 ehIAex Wrapper-opyob2-0 dlivvF"
-      dir="ltr"
-    >
-      <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT"
-      >
-        <div
-          class="Bar-sc-1x4gwjz-0 jsgdXU"
-        />
-        <h2
-          class="Heading-sc-1x4gwjz-2 eZofTG"
-        >
-          <span
-            class="FlexColumn-wx5kdp-0 dgpsiS"
-          >
-            <span
-              class="FlexRow-wx5kdp-2 dVBNyZ"
-            >
-              <span
-                class="Title-wx5kdp-4 BeqZV"
-                dir="ltr"
-                id="top-stories-heading"
-              >
-                Top Stories
-              </span>
-            </span>
-          </span>
-        </h2>
-      </div>
-      <div
-        class="SingleContentWrapper-opyob2-3 iddZTf"
-      >
-        <div
-          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-        >
-          <div
-            class="TextGridItem-sc-1lkbq5i-0 gCyGvI"
-            dir="ltr"
-          >
-            <h3
-              class="Headline-sc-1dvfmi3-3 gejHzT"
-            >
-              <a
-                class="Link-sc-1dvfmi3-5 jeUMCT"
-                href="/mundo/noticias-internacional-51939501"
-              >
-                China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
-              </a>
-            </h3>
-            <p
-              class="Summary-sc-1dvfmi3-4 hTsuvP"
-            >
-              Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.
-            </p>
-            <time
-              class="StyledTimestamp-um718p-0 kVWTyt"
-              datetime="2020-02-03"
-            >
-              3rd February 2020
-            </time>
           </div>
         </div>
       </div>

@@ -8,10 +8,10 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 EnabledGridWrapper-opyob2-1 JNKTB"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-4 EnabledGridWrapper-opyob2-1 JNKTB"
+        class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
       >
         <div
           class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT"
@@ -235,10 +235,10 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 EnabledGridWrapper-opyob2-1 JNKTB"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-4 EnabledGridWrapper-opyob2-1 JNKTB"
+        class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
       >
         <div
           class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT"
