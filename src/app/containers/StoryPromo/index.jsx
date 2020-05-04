@@ -20,7 +20,7 @@ import MediaIndicatorContainer from './MediaIndicator';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import IndexAlsosContainer from './IndexAlsos';
 import loggerNode from '#lib/logger.node';
-import { MEDIA_MISSING_FIELD } from '#lib/logger.const';
+import { MEDIA_MISSING } from '#lib/logger.const';
 
 const logger = loggerNode(__filename);
 
@@ -122,14 +122,15 @@ const StoryPromoContainer = ({
 
   const timestamp = pathOr(null, ['timestamp'], item);
   const relatedItems = pathOr(null, ['relatedItems'], item);
-  // Always gets the first version. Smarter logic may be needed in the future.
-  const duration = pathOr(null, ['media', 'versions', 0, 'duration'], item);
+  const cpsType = pathOr(null, ['cpsType'], item);
+  // If mediaStatusCode is visible, there is an error in rendering the block
+  const mediaStatuscode = pathOr(null, ['media', 'statusCode'], item);
 
-  if (!duration) {
-    logger.warn(MEDIA_MISSING_FIELD, {
-      url: '/pashto',
-      missingField: 'duration',
-      item,
+  if (cpsType === 'MAP' && mediaStatuscode) {
+    logger.warn(MEDIA_MISSING, {
+      url: pathOr(null, ['section', 'uri'], item),
+      mediaStatuscode,
+      mediaBlock: item.media,
     });
   }
 
