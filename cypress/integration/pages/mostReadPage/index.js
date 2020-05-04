@@ -16,7 +16,7 @@ import {
 } from './testsForCanonicalOnly';
 
 const testsForPage = {
-  pageType: 'storyPage',
+  pageType: 'mostReadPage',
   testsThatAlwaysRun,
   testsThatAlwaysRunForCanonicalOnly,
   testsThatAlwaysRunForAMPOnly,
