@@ -66,7 +66,7 @@ it('should contain the noscript tag for no-JS scenarios ', () => {
   expect(document.querySelector('noscript')).toBeInTheDocument();
 });
 
-describe('log SMP status', () => {
+describe('log MediaPlayer status', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
