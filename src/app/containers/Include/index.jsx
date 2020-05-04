@@ -1,10 +1,12 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
+import React, { useContext } from 'react';
 import { string } from 'prop-types';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
+import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 
 const IncludeContainer = ({ html, type }) => {
+  const { isAmp } = useContext(RequestContext);
   const { enabled } = useToggle('include');
 
   const supportedTypes = {
@@ -12,7 +14,8 @@ const IncludeContainer = ({ html, type }) => {
     vj: 'vj',
   };
 
-  const shouldNotRenderInclude = !enabled || !html || !supportedTypes[type];
+  const shouldNotRenderInclude =
+    isAmp || !enabled || !html || !supportedTypes[type];
 
   if (shouldNotRenderInclude) {
     return null;
