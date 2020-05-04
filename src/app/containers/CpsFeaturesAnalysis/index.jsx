@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, any } from 'prop-types';
+import { arrayOf, shape, number } from 'prop-types';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 
 import featuresAnalysis from '#pages/StoryPage/featuresAnalysis.json';
@@ -39,7 +39,14 @@ const FeaturesAnalysis = ({ content, parentColumns }) => {
 
 FeaturesAnalysis.propTypes = {
   content: arrayOf(shape(storyItem)),
-  parentColumns: shape(any),
+  parentColumns: shape({
+    group0: number,
+    group1: number,
+    group2: number,
+    group3: number,
+    group4: number,
+    group5: number,
+  }),
 };
 
 FeaturesAnalysis.defaultProps = {

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, any, node, string, func } from 'prop-types';
+import { arrayOf, shape, number, node, string, func } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled, { css } from 'styled-components';
 import {
@@ -14,10 +14,13 @@ import {
 import Grid from '@bbc/psammead-grid';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { GridWrapper, GridItemConstrainedLarge } from '#lib/styledGrid';
+import {
+  GridWrapper as LegacyGridWrapper,
+  GridItemConstrainedLarge,
+} from '#lib/styledGrid';
 import { gelGridMargin } from '#app/lib/layoutGrid';
 
-const ConstrainedLargeGridColumns = {
+const constrainedLargeGridColumns = {
   group0: 1,
   group1: 1,
   group2: 1,
@@ -29,7 +32,7 @@ const ConstrainedLargeGridColumns = {
 const ConstrainedLargeGrid = ({ children, ...gridProps }) => (
   <Grid
     {...gridProps}
-    columns={ConstrainedLargeGridColumns}
+    columns={constrainedLargeGridColumns}
     margins={{
       group0: true,
       group1: true,
@@ -67,7 +70,7 @@ const Wrapper = styled(ConstrainedLargeGrid)`
   ${gridMarginSmall}
 `;
 
-const EnabledGridWrapper = styled(GridItemConstrainedLarge)`
+const LegacyGridItemConstrainedLarge = styled(GridItemConstrainedLarge)`
   ${gridMarginSmall}
 `;
 
@@ -100,14 +103,16 @@ const CpsOnwardJourney = ({
   };
   const { script, service, dir } = useContext(ServiceContext);
   const CpsOnwardJourneyWrapper = ({ children }) =>
-    !parentColumns ? (
-      <GridWrapper {...a11yAttributes}>
-        <EnabledGridWrapper>{children}</EnabledGridWrapper>
-      </GridWrapper>
-    ) : (
+    parentColumns ? (
       <Wrapper parentColumns={parentColumns} {...a11yAttributes}>
         {children}
       </Wrapper>
+    ) : (
+      <LegacyGridWrapper {...a11yAttributes}>
+        <LegacyGridItemConstrainedLarge>
+          {children}
+        </LegacyGridItemConstrainedLarge>
+      </LegacyGridWrapper>
     );
 
   CpsOnwardJourneyWrapper.propTypes = {
@@ -119,7 +124,7 @@ const CpsOnwardJourney = ({
   const [singleContent] = content;
 
   const WrapperItem = ({ children }) => (
-    <Wrapper parentColumns={ConstrainedLargeGridColumns} item>
+    <Wrapper parentColumns={constrainedLargeGridColumns} item>
       {children}
     </Wrapper>
   );
@@ -128,9 +133,9 @@ const CpsOnwardJourney = ({
     children: node.isRequired,
   };
 
-  const CpsOnwardJourneyItemWrapper = !parentColumns
-    ? EnabledGridWrapper
-    : WrapperItem;
+  const CpsOnwardJourneyItemWrapper = parentColumns
+    ? WrapperItem
+    : LegacyGridItemConstrainedLarge;
 
   return (
     <CpsOnwardJourneyWrapper>
@@ -159,7 +164,14 @@ CpsOnwardJourney.propTypes = {
   labelId: string.isRequired,
   title: string.isRequired,
   content: arrayOf(shape(storyItem)),
-  parentColumns: shape(any),
+  parentColumns: shape({
+    group0: number,
+    group1: number,
+    group2: number,
+    group3: number,
+    group4: number,
+    group5: number,
+  }),
   listTransform: func.isRequired,
   singleTransform: func.isRequired,
 };
