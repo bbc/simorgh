@@ -26,7 +26,11 @@ import {
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 import logEmbedSourceStatus from './helpers/logEmbedSourceStatus';
+import toggles from '#lib/config/toggles';
 
+const { logMediaPlayerStatus } = toggles[
+  process.env.SIMORGH_APP_ENV || 'local'
+];
 const DEFAULT_WIDTH = 512;
 const MediaPlayerContainer = ({
   blocks,
@@ -153,11 +157,13 @@ const MediaPlayerContainer = ({
     );
   }
 
-  logEmbedSourceStatus({
-    url: assetId,
-    embedUrl: embedSource,
-    assetType,
-  });
+  if (logMediaPlayerStatus.enabled) {
+    logEmbedSourceStatus({
+      url: assetId,
+      embedUrl: embedSource,
+      assetType,
+    });
+  }
 
   return (
     <>
