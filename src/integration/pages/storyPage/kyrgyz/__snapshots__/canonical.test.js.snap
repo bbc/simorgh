@@ -2,6 +2,8 @@
 
 exports[`Canonical Story Page A11y I can see the skip to content link 1`] = `"Сайтка өтүү"`;
 
+exports[`Canonical Story Page Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=58&p=story::kyrgyz.story.23292889.page&x1=[urn:bbc:cps:bb9390aa-4b35-e448-b295-cbd7369fe457]&x2=[responsive]&x3=[news-kyrgyz]&x4=[ky]&x7=[article]&x8=[simorgh-nojs]&x9=[Test+STY+for+social+embeds+-+BBC+News+Кыргыз+Кызматы]&x11=[2020-04-24T14:51:17.000Z]&x12=[2020-04-24T14:51:17.000Z]"`;
+
 exports[`Canonical Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
 
 exports[`Canonical Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
