@@ -3,6 +3,8 @@ import { render, cleanup } from '@testing-library/react';
 import deepClone from 'ramda/src/clone';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import '@testing-library/jest-dom/extend-expect';
+import loggerMock from '#testHelpers/loggerMock';
+import { MEDIA_MISSING_FIELD } from '#lib/logger.const';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
@@ -17,6 +19,7 @@ import {
   podcastLinkItem,
   itemWithoutImage,
   indexAlsosItem,
+  mapWithMediaError,
 } from './helpers/fixtureData';
 import StoryPromoContainer from '.';
 
@@ -366,6 +369,30 @@ describe('StoryPromo Container', () => {
         const { container } = render(<WrappedStoryPromo item={liveItem} />);
         const time = container.querySelector('time');
         expect(time).toEqual(null);
+      });
+    });
+  });
+
+  describe('given we have data that has an error', () => {
+    describe('when there is a media block without duration', () => {
+      [
+        {
+          item: mapWithMediaError,
+          platform: 'amp',
+        },
+        {
+          item: mapWithMediaError,
+          platform: 'canonical',
+        },
+      ].forEach(({ item, platform }) => {
+        it('should log a warning', () => {
+          render(<WrappedStoryPromo item={item} platform={platform} />);
+          expect(loggerMock.warn).toHaveBeenCalledWith(MEDIA_MISSING_FIELD, {
+            url: '/pashto',
+            missingField: 'duration',
+            item: mapWithMediaError,
+          });
+        });
       });
     });
   });

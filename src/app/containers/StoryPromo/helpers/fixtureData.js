@@ -201,3 +201,53 @@ export const indexAlsosItem = {
   cpsType: 'STY',
   relatedItems: relItems,
 };
+
+export const mapWithMediaError = {
+  cpsType: 'MAP',
+  headlines: {
+    headline: 'کورونا وېروس او هوایي شرکتونه',
+  },
+  id: 'urn:bbc:ares::asset:pashto/52433999',
+  indexImage: {
+    altText: 'Keyframe #2',
+    caption: 'شرکتونه',
+    copyrightHolder: 'BBC',
+    height: 576,
+    href: 'http://c.files.bbci.co.uk/0FBB/production/_111972040_p08bkb0s.jpg',
+    id: '111972040',
+    path: '/cpsprodpb/0FBB/production/_111972040_p08bkb0s.jpg',
+    subType: 'index',
+    type: 'image',
+    width: 1024,
+  },
+  language: 'ps',
+  locators: {
+    assetId: '52433999',
+    assetUri: '/pashto/52433999',
+    cpsUrn: 'urn:bbc:content:assetUri:pashto/52433999',
+  },
+  media: {
+    caption: 'کورونا وېروس او هوایي شرکتونه',
+    entityType: 'Clip',
+    externalId: 'p08bk9qn',
+    format: 'video',
+    id: '52434000',
+    statusCode: 404,
+    statusMessage: 'Asset could not be found. Perhaps it was withdrawn.',
+    subType: 'index',
+    type: 'external_vpid',
+  },
+  options: {
+    isBreakingNews: false,
+    isFactCheck: false,
+  },
+  section: {
+    name: 'کور پاڼه',
+    subType: 'IDX',
+    type: 'simple',
+    uri: '/pashto/front_page',
+  },
+  summary: 'کورونا وېروس او هوایي شرکتونه',
+  timestamp: 1587917277000,
+  type: 'cps',
+};
