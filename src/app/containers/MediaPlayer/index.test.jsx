@@ -101,6 +101,7 @@ describe('log MediaPlayer status', () => {
     defaultToggles[
       process.env.SIMORGH_APP_ENV || 'local'
     ].logMediaPlayerStatus.enabled = true;
+    render(VideoCanonicalWithCaption);
 
     expect(logEmbedSourceStatus).not.toHaveBeenCalled();
   });
