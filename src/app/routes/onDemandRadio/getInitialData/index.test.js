@@ -18,7 +18,7 @@ describe('Get initial data for on demand radio', () => {
     });
 
     expect(pageData.headline).toEqual('ماښامنۍ خپرونه');
-    expect(pageData.episodeTitle).toEqual('01/05/2020 GMT');
+    expect(pageData.releaseDateTimeStamp).toEqual(1588291200000);
     expect(pageData.summary).toEqual('د بي بي سي ورلډ سروس څخه پروګرام کول');
     expect(pageData.language).toEqual('ps');
   });
