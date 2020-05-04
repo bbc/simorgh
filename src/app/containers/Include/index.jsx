@@ -20,6 +20,9 @@ const IncludeContainer = ({ html, type }) => {
     return null;
   }
 
+  // This is a list of include types that depend on the javascript module loader requireJs.
+  // These includes were built to work within the BBC's legacy publishing platform (the PAL)
+  // that uses requireJS extensively. See https://github.com/bbc/simorgh/issues/5750
   const requireIncludeTypes = ['vj', 'idt1'];
 
   const paths = `{
@@ -39,6 +42,10 @@ const IncludeContainer = ({ html, type }) => {
             type="text/javascript"
             src="https://news.files.bbci.co.uk/include/vjassets/js/vendor/require-2.1.20b.min.js"
           />
+          {/* 
+           A map of legacy modules is configured here, they are defined as require modules and 
+           and may be required by the include dangerously set below
+           */}
           <script>{configureAdditionalScripts}</script>
         </Helmet>
       ) : null}
