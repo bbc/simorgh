@@ -10,7 +10,7 @@ const pageTypeUrls = (assetType, service) => {
       return [
         {
           name: 'mostRead',
-          path: getMostReadEndpoint({ service }).replace('.json', ''),
+          path: getMostReadEndpoint({ service, variant }).replace('.json', ''),
         },
       ];
     default:
@@ -29,7 +29,7 @@ const validateResponse = ({ status, json }, name) => {
 const fetchUrl = ({ name, path }) =>
   fetchPageData(path).then(response => validateResponse(response, name));
 
-const getAdditionalPageData = async (pageData, service) => {
+const getAdditionalPageData = async (pageData, service, variant) => {
   const assetType = getAssetType(pageData);
 
   const urlsToFetch = pageTypeUrls(assetType, service);

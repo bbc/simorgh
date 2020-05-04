@@ -57,7 +57,11 @@ const transformJson = async json => {
 export default async ({ path: pathname, service, variant }) => {
   const { json, ...rest } = await fetchPageData(pathname);
 
-  const additionalPageData = await getAdditionalPageData(json, service);
+  const additionalPageData = await getAdditionalPageData(
+    json,
+    service,
+    variant,
+  );
 
   return {
     ...rest,
