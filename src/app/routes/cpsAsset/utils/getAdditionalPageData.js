@@ -2,6 +2,7 @@ import isEmpty from 'ramda/src/isEmpty';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import getAssetType from './getAssetType';
 import fetchPageData from '../../utils/fetchPageData';
+import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 
 const pageTypeUrls = (assetType, service) => {
   switch (assetType) {
@@ -9,7 +10,7 @@ const pageTypeUrls = (assetType, service) => {
       return [
         {
           name: 'mostRead',
-          path: `/${service}/mostread`,
+          path: getMostReadEndpoint({ service }).replace('.json', ''),
         },
       ];
     default:
