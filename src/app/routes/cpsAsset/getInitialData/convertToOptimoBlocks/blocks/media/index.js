@@ -2,6 +2,8 @@ import pick from 'ramda/src/pick';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 
+const FALLBACK_PLACEHOLDER_IMAGE_URL = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}images/media_placeholder.png`;
+
 const generateVideoBlock = block => {
   const generatedBlock = {
     type: 'aresMediaMetadata',
@@ -30,28 +32,37 @@ const generateVideoBlock = block => {
     generatedBlock.model.format = 'audio_video';
   }
 
+  if (!generatedBlock.model.imageUrl) {
+    generatedBlock.model.imageUrl = FALLBACK_PLACEHOLDER_IMAGE_URL;
+  }
+
   return generatedBlock;
 };
 
-const generateImageBlock = block => {
-  if (!is(String, block.imageUrl)) return {};
+const generatePlaceholderImageUrl = imageUrl => {
+  if (imageUrl && is(String, imageUrl)) {
+    return `https://${imageUrl.replace('$recipe', '1024x576')}`;
+  }
 
-  return {
-    type: 'image',
-    model: {
-      blocks: [
-        {
-          type: 'rawImage',
-          model: {
-            copyrightHolder: block.imageCopyright,
-            locator: `https://${block.imageUrl.replace('$recipe', '1024x576')}`,
-            originCode: 'pips',
-          },
-        },
-      ],
-    },
-  };
+  // Some media blocks do not have an image url defined, so we fall back to this default
+  return FALLBACK_PLACEHOLDER_IMAGE_URL;
 };
+
+const generateImageBlock = block => ({
+  type: 'image',
+  model: {
+    blocks: [
+      {
+        type: 'rawImage',
+        model: {
+          copyrightHolder: block.imageCopyright,
+          locator: generatePlaceholderImageUrl(block.imageUrl),
+          originCode: 'pips',
+        },
+      },
+    ],
+  },
+});
 
 const withValidationCheck = convertedBlock => {
   const aresMediaMetadata = path(
