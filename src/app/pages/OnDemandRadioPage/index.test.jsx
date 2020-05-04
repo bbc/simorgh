@@ -9,7 +9,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import OnDemandRadioPage from '.';
 import pashtoPageData from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
-import koreanPageData from '#data/korean/bbc_korean_radio/w3cszwcg';
+import koreanPageData from '#data/korean/bbc_korean_radio/w3ct0kn5';
 import indonesiaPageData from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -155,7 +155,7 @@ describe('OnDemand Radio Page ', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3cszwcg/ko?morph_env=live',
+      'https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko?morph_env=live',
     );
   });
 
@@ -175,7 +175,7 @@ describe('OnDemand Radio Page ', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://polling.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3cszwcg/ko',
+      'https://polling.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko',
     );
   });
 
@@ -198,7 +198,7 @@ describe('OnDemand Radio Page ', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      `https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3cszwcg/ko/amp?morph_env=live`,
+      `https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko/amp?morph_env=live`,
     );
   });
 
@@ -222,7 +222,7 @@ describe('OnDemand Radio Page ', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://polling.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3cszwcg/ko/amp',
+      'https://polling.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko/amp',
     );
   });
 

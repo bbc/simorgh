@@ -2114,7 +2114,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/korean/bbc_korean_radio/w3cszwcg'],
+            paths: ['/korean/bbc_korean_radio/w3ct0kn5'],
             enabled: true,
           },
         },
