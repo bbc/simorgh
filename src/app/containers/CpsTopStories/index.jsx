@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape } from 'prop-types';
+import { arrayOf, shape, any } from 'prop-types';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 
 import topStories from '#pages/StoryPage/topStories.json';
@@ -8,7 +8,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 
-const TopStories = ({ content }) => {
+const TopStories = ({ content, parentColumns }) => {
   const { dir } = useContext(ServiceContext);
 
   const singleTransform = promo => (
@@ -30,7 +30,7 @@ const TopStories = ({ content }) => {
       labelId="top-stories-heading"
       title="Top Stories"
       content={content}
-      enableGridWrapper={false}
+      parentColumns={parentColumns}
       singleTransform={singleTransform}
       listTransform={listTransform}
     />
@@ -39,10 +39,12 @@ const TopStories = ({ content }) => {
 
 TopStories.propTypes = {
   content: arrayOf(shape(storyItem)),
+  parentColumns: shape(any),
 };
 
 TopStories.defaultProps = {
   content: topStories, // TODO: rm this https://github.com/bbc/simorgh/issues/5765
+  parentColumns: null,
 };
 
 export default TopStories;

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, bool, node, string, func } from 'prop-types';
+import { arrayOf, shape, any, node, string, func } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled, { css } from 'styled-components';
 import {
@@ -17,17 +17,19 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { GridWrapper, GridItemConstrainedLarge } from '#lib/styledGrid';
 import { gelGridMargin } from '#app/lib/layoutGrid';
 
+const ConstrainedLargeGridColumns = {
+  group0: 1,
+  group1: 1,
+  group2: 1,
+  group3: 1,
+  group4: 6,
+  group5: 12,
+};
+
 const ConstrainedLargeGrid = ({ children, ...gridProps }) => (
   <Grid
     {...gridProps}
-    columns={{
-      group0: 1,
-      group1: 1,
-      group2: 1,
-      group3: 1,
-      group4: 6,
-      group5: 12,
-    }}
+    columns={ConstrainedLargeGridColumns}
     margins={{
       group0: true,
       group1: true,
@@ -43,14 +45,6 @@ const ConstrainedLargeGrid = ({ children, ...gridProps }) => (
       group3: 1,
       group4: 3,
       group5: 6,
-    }}
-    parentColumns={{
-      group0: 8,
-      group1: 8,
-      group2: 8,
-      group3: 8,
-      group4: 4,
-      group5: 3,
     }}
   >
     {children}
@@ -95,7 +89,7 @@ const CpsOnwardJourney = ({
   labelId,
   title,
   content,
-  enableGridWrapper,
+  parentColumns,
   listTransform,
   singleTransform,
 }) => {
@@ -106,27 +100,41 @@ const CpsOnwardJourney = ({
   };
   const { script, service, dir } = useContext(ServiceContext);
   const CpsOnwardJourneyWrapper = ({ children }) =>
-    enableGridWrapper ? (
+    !parentColumns ? (
       <GridWrapper {...a11yAttributes}>
         <EnabledGridWrapper>{children}</EnabledGridWrapper>
       </GridWrapper>
     ) : (
-      <Wrapper {...a11yAttributes}>{children}</Wrapper>
+      <Wrapper parentColumns={parentColumns} {...a11yAttributes}>
+        {children}
+      </Wrapper>
     );
+
   CpsOnwardJourneyWrapper.propTypes = {
     children: node.isRequired,
   };
+
   if (!content.length) return null;
   const hasSingleContent = content.length === 1;
   const [singleContent] = content;
 
-  const CpsOnwardJourneyItemWrapper = enableGridWrapper
+  const WrapperItem = ({ children }) => (
+    <Wrapper parentColumns={ConstrainedLargeGridColumns} item>
+      {children}
+    </Wrapper>
+  );
+
+  WrapperItem.propTypes = {
+    children: node.isRequired,
+  };
+
+  const CpsOnwardJourneyItemWrapper = !parentColumns
     ? EnabledGridWrapper
-    : Wrapper;
+    : WrapperItem;
 
   return (
     <CpsOnwardJourneyWrapper>
-      <CpsOnwardJourneyItemWrapper item>
+      <CpsOnwardJourneyItemWrapper>
         <StyledSectionLabel
           script={script}
           service={service}
@@ -151,14 +159,14 @@ CpsOnwardJourney.propTypes = {
   labelId: string.isRequired,
   title: string.isRequired,
   content: arrayOf(shape(storyItem)),
-  enableGridWrapper: bool,
+  parentColumns: shape(any),
   listTransform: func.isRequired,
   singleTransform: func.isRequired,
 };
 
 CpsOnwardJourney.defaultProps = {
   content: [],
-  enableGridWrapper: false,
+  parentColumns: null,
 };
 
 export default CpsOnwardJourney;

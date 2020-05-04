@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape } from 'prop-types';
+import { arrayOf, shape, any } from 'prop-types';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 
 import featuresAnalysis from '#pages/StoryPage/featuresAnalysis.json';
@@ -8,7 +8,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 
-const FeaturesAnalysis = ({ content }) => {
+const FeaturesAnalysis = ({ content, parentColumns }) => {
   const { dir } = useContext(ServiceContext);
 
   const singleTransform = promo => (
@@ -30,7 +30,7 @@ const FeaturesAnalysis = ({ content }) => {
       labelId="features-analysis-heading"
       title="Features &amp; Analysis"
       content={content}
-      enableGridWrapper={false}
+      parentColumns={parentColumns}
       singleTransform={singleTransform}
       listTransform={listTransform}
     />
@@ -39,10 +39,12 @@ const FeaturesAnalysis = ({ content }) => {
 
 FeaturesAnalysis.propTypes = {
   content: arrayOf(shape(storyItem)),
+  parentColumns: shape(any),
 };
 
 FeaturesAnalysis.defaultProps = {
   content: featuresAnalysis, // TODO: rm this https://github.com/bbc/simorgh/issues/5765
+  parentColumns: null,
 };
 
 export default FeaturesAnalysis;
