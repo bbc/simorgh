@@ -16,6 +16,7 @@ dotenv.config({ path: './envConfig/local.env' });
 const path = require('path');
 const express = require('express');
 const server = require('./index').default;
+const { getPageType } = require('./index');
 
 const sendFileSpy = jest.spyOn(express.response, 'sendFile');
 
@@ -974,5 +975,20 @@ describe('Server HTTP Headers', () => {
     });
 
     // It should turn the message around at the end of the line and send it back again (Currently untested)
+  });
+});
+
+describe('getPageType', () => {
+  it('should return metadata type', () => {
+    const data = { pageData: { metadata: { type: 'metadataType' } } };
+    expect(getPageType(data)).toBe('metadataType');
+  });
+  it('should return content type if metadata type does not exist', () => {
+    const data = { pageData: { contentType: 'contentType' } };
+    expect(getPageType(data)).toBe('contentType');
+  });
+  it('should return Unknown if metadata type and content type do no exist', () => {
+    const data = { pageData: {} };
+    expect(getPageType(data)).toBe('Unknown');
   });
 });
