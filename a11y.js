@@ -53,6 +53,10 @@ const pageTypes = {
     '/html/head/iframe',
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
   ],
+  storyPage: [
+    '/html/head/iframe',
+    "//div[@id='root']/header/nav/div/div[1]/div/ul",
+  ],
 };
 
 Object.keys(pageTypes).forEach((pageType) => {
