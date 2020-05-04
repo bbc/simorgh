@@ -10,15 +10,7 @@ exports[`Canonical Story Page Footer I can see the footer copyright and external
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
-exports[`Canonical Story Page I can see a link to the original content in a social embed fallback 1`] = `"Facebook баракчадан көбүрөк пост окуу"`;
-
 exports[`Canonical Story Page I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
-
-exports[`Canonical Story Page I can see the caption accompanying a rich YouTube embed 1`] = `"Видеонун түшүндүрмөсү, Эскертүү: Жарнамалар болушу ыктымал"`;
-
-exports[`Canonical Story Page I can see the skip social embed link 1`] = `"YouTube баракчаны өткөрүп жиберүү, пост, 1"`;
-
-exports[`Canonical Story Page I can see the skip social embed link destination 1`] = `"YouTube посттун аягы, 1"`;
 
 exports[`Canonical Story Page SEO Canonical link 1`] = `"http://localhost:7080/kyrgyz/23292889"`;
 
@@ -111,3 +103,11 @@ exports[`Canonical Story Page SEO Twitter image src 1`] = `"http://ichef.test.bb
 exports[`Canonical Story Page SEO Twitter site 1`] = `"@bbckyrgyz"`;
 
 exports[`Canonical Story Page SEO Twitter title 1`] = `"Test STY for social embeds - BBC News Кыргыз Кызматы"`;
+
+exports[`Canonical Story Page Social Embeds I can see a link to the original content in a fallback 1`] = `"Facebook баракчадан көбүрөк пост окуу"`;
+
+exports[`Canonical Story Page Social Embeds I can see the caption accompanying a YouTube embed 1`] = `"Видеонун түшүндүрмөсү, Эскертүү: Жарнамалар болушу ыктымал"`;
+
+exports[`Canonical Story Page Social Embeds I can see the skip link 1`] = `"YouTube баракчаны өткөрүп жиберүү, пост, 1"`;
+
+exports[`Canonical Story Page Social Embeds I can see the skip link destination 1`] = `"YouTube посттун аягы, 1"`;
