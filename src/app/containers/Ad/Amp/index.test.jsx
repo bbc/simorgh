@@ -41,7 +41,7 @@ describe('AMP Ads', () => {
 
       const ampAd = container.querySelectorAll('amp-ad');
       ampAd.forEach(ad => {
-        expect(ad).toHaveAttribute('data-block-on-consent', '_till_accepted');
+        expect(ad).toHaveAttribute('data-block-on-consent', 'default');
         expect(ad).toHaveAttribute('data-npa-on-unknown-consent', 'true');
         expect(ad).toHaveAttribute('media');
         expect(ad).toHaveAttribute('type');

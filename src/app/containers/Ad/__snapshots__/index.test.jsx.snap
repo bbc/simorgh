@@ -51,7 +51,7 @@ exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
           <amp-ad
             data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
             data-amp-slot-index="0"
-            data-block-on-consent="_till_accepted"
+            data-block-on-consent="default"
             data-multi-size="320x50,300x50"
             data-npa-on-unknown-consent="true"
             data-slot="/4817/bbccom.test.site.amp.news"
@@ -72,7 +72,7 @@ exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
           <amp-ad
             data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
             data-amp-slot-index="0"
-            data-block-on-consent="_till_accepted"
+            data-block-on-consent="default"
             data-multi-size="970x250,728x90"
             data-npa-on-unknown-consent="true"
             data-slot="/4817/bbccom.test.site.amp.news"
