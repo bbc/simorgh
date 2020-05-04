@@ -8,7 +8,7 @@ import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import OnDemandRadioPage from '.';
-import pashtoPageData from '#data/pashto/bbc_pashto_radio/w172x8nvf4bchz5';
+import pashtoPageData from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
 import koreanPageData from '#data/korean/bbc_korean_radio/w3cszwcg';
 import indonesiaPageData from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l';
 import * as analyticsUtils from '#lib/analyticsUtils';

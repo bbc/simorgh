@@ -1,6 +1,6 @@
 import getInitialData from '.';
 import * as fetchPageData from '../../utils/fetchPageData';
-import onDemandRadioJson from '#data/pashto/bbc_pashto_radio/w172x8nvf4bchz5.json';
+import onDemandRadioJson from '#data/pashto/bbc_pashto_radio/w3ct0lz1.json';
 
 fetch.mockResponse(JSON.stringify(onDemandRadioJson));
 const { env } = process;

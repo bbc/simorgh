@@ -2901,7 +2901,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/pashto/bbc_pashto_radio/w172x8nvf4bchz5'],
+            paths: ['/pashto/bbc_pashto_radio/w3ct0lz1'],
             enabled: true,
           },
         },
