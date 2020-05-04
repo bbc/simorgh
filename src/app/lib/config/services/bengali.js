@@ -180,6 +180,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'প্রধান খবর',
+      featuresAnalysisTitle: 'চিঠিপত্র ও মতামত',
     },
     brandSVG,
     mostRead: {
