@@ -43,7 +43,7 @@ const constructAdJsonData = ({ service }) => {
 };
 
 const ampAdPropsMobile = ({ service }) => ({
-  'data-block-on-consent': '_till_accepted',
+  'data-block-on-consent': 'default',
   'data-npa-on-unknown-consent': 'true',
   media: '(max-width: 599px)',
   type: 'doubleclick',
@@ -57,7 +57,7 @@ const ampAdPropsMobile = ({ service }) => ({
 });
 
 const ampAdPropsDesktop = ({ service }) => ({
-  'data-block-on-consent': '_till_accepted',
+  'data-block-on-consent': 'default',
   'data-npa-on-unknown-consent': 'true',
   media: '(min-width: 600px)',
   type: 'doubleclick',
