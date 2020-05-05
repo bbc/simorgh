@@ -2,9 +2,6 @@ jest.mock('../../../cypress/support/config/services', () => {
   const services = {
     afaanoromoo: {
       name: 'afaanoromoo',
-      font: undefined,
-      isWorldService: true,
-      variant: 'default',
       pageTypes: {
         articles: {
           environments: {
@@ -21,7 +18,6 @@ jest.mock('../../../cypress/support/config/services', () => {
               enabled: true,
             },
           },
-          smoke: false,
         },
         frontPage: {
           environments: {
@@ -38,7 +34,6 @@ jest.mock('../../../cypress/support/config/services', () => {
               enabled: true,
             },
           },
-          smoke: false,
         },
         liveRadio: {
           environments: {
@@ -116,9 +111,6 @@ jest.mock('../../../cypress/support/config/services', () => {
     },
     amharic: {
       name: 'amharic',
-      font: undefined,
-      isWorldService: true,
-      variant: 'default',
       pageTypes: {
         articles: {
           environments: {
@@ -135,7 +127,6 @@ jest.mock('../../../cypress/support/config/services', () => {
               enabled: true,
             },
           },
-          smoke: false,
         },
         errorPage404: {
           environments: {
@@ -152,7 +143,6 @@ jest.mock('../../../cypress/support/config/services', () => {
               enabled: true,
             },
           },
-          smoke: false,
         },
         frontPage: {
           environments: {
@@ -169,7 +159,6 @@ jest.mock('../../../cypress/support/config/services', () => {
               enabled: true,
             },
           },
-          smoke: false,
         },
         liveRadio: {
           environments: {
@@ -186,7 +175,6 @@ jest.mock('../../../cypress/support/config/services', () => {
               enabled: true,
             },
           },
-          smoke: true,
         },
         onDemandRadioEpisode: {
           environments: {
@@ -203,7 +191,6 @@ jest.mock('../../../cypress/support/config/services', () => {
               enabled: true,
             },
           },
-          smoke: false,
         },
         mediaAssetPage: {
           environments: {
