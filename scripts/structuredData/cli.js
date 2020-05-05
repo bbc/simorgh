@@ -1,3 +1,4 @@
 const { run } = require('.');
 
-run();
+const showInfo = process.argv[2] && process.argv[2] === '-i';
+run(showInfo);

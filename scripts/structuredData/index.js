@@ -76,9 +76,7 @@ const checkStructuredData = urls => {
     });
 };
 
-const printResults = results => {
-  const showInfo = process.argv[2] && process.argv[2] === '-i';
-
+const printResults = (results, showInfo) => {
   results.forEach(result => {
     console.log(`\n${result.url}`);
 
@@ -108,12 +106,12 @@ const exit = results => {
   }
 };
 
-const run = async () => {
+const run = async showInfo => {
   const start = new Date();
 
   const results = await checkStructuredData(getUrls());
 
-  printResults(results);
+  printResults(results, showInfo);
 
   console.log('Execution Time: %d seconds', (new Date() - start) / 1000);
 
