@@ -19,10 +19,10 @@ const toggleStateFalse = {
 const fakeMarkup = `<div>Visual Journalism Markup</div><script type="text/javascript" src="localhost/vj.js"></script>`;
 
 // eslint-disable-next-line react/prop-types
-const MockContext = ({ toggleState, children }) => (
+const MockContext = ({ toggleState, isAmp, children }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
-    isAmp={false}
+    isAmp={isAmp || false}
     pageType="STY"
     service="news"
     statusCode={200}
@@ -34,12 +34,18 @@ const MockContext = ({ toggleState, children }) => (
   </RequestContextProvider>
 );
 
-// eslint-disable-next-line react/prop-types
-const IncludeContainerWithMockContext = ({ toggleState, html, type }) => (
-  <MockContext toggleState={toggleState}>
+/* eslint-disable react/prop-types */
+const IncludeContainerWithMockContext = ({
+  toggleState,
+  html,
+  type,
+  isAmp,
+}) => (
+  <MockContext toggleState={toggleState} isAmp={isAmp}>
     <IncludeContainer html={html} type={type} />
   </MockContext>
 );
+/* eslint-enable react/prop-types */
 
 describe('IncludeContainer', () => {
   beforeEach(() => {
@@ -89,6 +95,18 @@ describe('IncludeContainer', () => {
         toggleState={toggleStateFalse}
         html={fakeMarkup}
         type="idt2"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should not render any HTML when its an amp page', async () => {
+    const { container } = render(
+      <IncludeContainerWithMockContext
+        toggleState={toggleStateFalse}
+        html={fakeMarkup}
+        type="idt2"
+        isAmp
       />,
     );
     expect(container).toMatchSnapshot();
