@@ -100,17 +100,18 @@ const withValidationCheck = convertedBlock => {
 };
 
 const validateInputBlock = (block, aresResponse) => {
-  const log = category =>
-    logger.warn(category, {
+  const log = missingField =>
+    logger.warn(CPS_MEDIA_MISSING_FIELD, {
       id: path(['metadata', 'id'], aresResponse),
       url: path(['metadata', 'locators', 'assetUri'], aresResponse),
+      missingField,
     });
 
   [
-    [CPS_MEDIA_WITHOUT_IMAGE, block.imageUrl],
-    [CPS_MEDIA_WITHOUT_ID, block.id],
-    [CPS_MEDIA_WITHOUT_FORMAT, block.format],
-    [CPS_MEDIA_WITHOUT_VERSION_ID, path(['versions', 0, 'versionId'], block)],
+    ['imageUrl, block.imageUrl],
+    ['id', block.id],
+    ['format', block.format],
+    ['versionId', path(['versions', 0, 'versionId'], block)],
   ]
     .filter(([, checkSucceeded]) => !checkSucceeded)
     .forEach(([issue]) => log(issue));
