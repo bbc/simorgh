@@ -176,7 +176,7 @@ export const buildATIPageTrackPath = ({
     },
     {
       key: 'ref',
-      description: 'refferer url',
+      description: 'referrer url',
       value: getReferrer(platform, origin, previousPath),
       wrap: false,
     },
