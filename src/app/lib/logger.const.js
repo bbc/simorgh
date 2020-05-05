@@ -18,6 +18,7 @@ const logCodes = {
   MEDIA_ASSET_EXPIRED: 'media_asset_expired',
   MEDIA_METADATA_UNAVAILABLE: 'media_metadata_unavailable',
   CPS_MEDIA_MISSING_FIELD: 'cps_media_missing_field',
+  MEDIA_PLAYER_STATUS: 'media_player_status',
 
   // Translations
   NO_TRANSLATION_FOUND: 'no_translation_found',
