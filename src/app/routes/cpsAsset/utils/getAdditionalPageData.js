@@ -4,7 +4,7 @@ import getAssetType from './getAssetType';
 import fetchPageData from '../../utils/fetchPageData';
 import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 
-const pageTypeUrls = (assetType, service) => {
+const pageTypeUrls = (assetType, service, variant) => {
   switch (assetType) {
     case STORY_PAGE:
       return [
