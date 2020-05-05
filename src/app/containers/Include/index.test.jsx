@@ -104,11 +104,22 @@ describe('IncludeContainer', () => {
         />,
       );
 
-      await waitFor(() =>
-        expect(
-          Array.from(document.querySelectorAll('head script')),
-        ).toHaveLength(2),
-      );
+      await waitFor(() => {
+        const scripts = Array.from(document.querySelectorAll('head script'));
+
+        expect(scripts).toEqual(
+          expect.arrayContaining([
+            expect.objectContaining({
+              src: `https://news.files.bbci.co.uk/include/vjassets/js/vendor/require-2.1.20b.min.js`,
+            }),
+            expect.objectContaining({
+              text: expect.stringContaining('require.config'),
+            }),
+          ]),
+        );
+
+        expect(scripts).toHaveLength(2);
+      });
 
       expect(window.require.config).toHaveBeenCalled();
     });
@@ -126,11 +137,22 @@ describe('IncludeContainer', () => {
       </MockContext>,
     );
 
-    await waitFor(() =>
-      expect(Array.from(document.querySelectorAll('head script'))).toHaveLength(
-        2,
-      ),
-    );
+    await waitFor(() => {
+      const scripts = Array.from(document.querySelectorAll('head script'));
+
+      expect(scripts).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            src: `https://news.files.bbci.co.uk/include/vjassets/js/vendor/require-2.1.20b.min.js`,
+          }),
+          expect.objectContaining({
+            text: expect.stringContaining('require.config'),
+          }),
+        ]),
+      );
+
+      expect(scripts).toHaveLength(2);
+    });
 
     expect(window.require.config).toHaveBeenCalled();
   });
