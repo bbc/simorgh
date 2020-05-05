@@ -39,7 +39,7 @@ const IncludeContainer = ({ html, type }) => {
 
   return (
     <>
-      {requireIncludeTypes.includes(type) ? (
+      {requireIncludeTypes.includes(type) && (
         <Helmet>
           <script
             type="text/javascript"
@@ -51,7 +51,7 @@ const IncludeContainer = ({ html, type }) => {
            */}
           <script>{configureAdditionalScripts}</script>
         </Helmet>
-      ) : null}
+      )}
       <GridItemConstrainedMedium>
         <div
           suppressHydrationWarning
