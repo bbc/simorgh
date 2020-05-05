@@ -21,7 +21,6 @@ describe('Get initial data for on demand radio', () => {
     expect(pageData.episodeTitle).toEqual('04/02/2020 GMT');
     expect(pageData.summary).toEqual('د نړۍ وروستي خبرونه');
     expect(pageData.language).toEqual('ps');
-    expect(pageData.metadata.type).toEqual('On Demand Radio');
   });
 
   it('should override renderer on test', async () => {
