@@ -251,3 +251,69 @@ export const mapWithMediaError = {
   timestamp: 1587917277000,
   type: 'cps',
 };
+
+export const mapWithoutMediaError = {
+  cpsType: 'MAP',
+  headlines: {
+    headline: 'افغانستان کې د کورونا وېروس وروستی حال',
+  },
+  id: 'urn:bbc:ares::asset:pashto/52521615',
+  indexImage: {
+    altText: 'Keyframe #1',
+    caption: 'نجما ځلا',
+    copyrightHolder: 'BBC',
+    height: 576,
+    href: 'http://c.files.bbci.co.uk/35D3/production/_112097731_p08c569d.jpg',
+    id: '112097731',
+    path: '/cpsprodpb/35D3/production/_112097731_p08c569d.jpg',
+    subType: 'index',
+    width: 1024,
+  },
+  language: 'ps',
+  locators: {
+    assetId: '52521615',
+    assetUri: '/pashto/52521615',
+    cpsUrn: 'urn:bbc:content:assetUri:pashto/52521615',
+  },
+  media: {
+    advertising: true,
+    caption: 'افغانستان کې د کورونا وېروس وروستی حال',
+    embedding: true,
+    format: 'video',
+    id: 'p08c567v',
+    imageUrl: 'ichef.bbci.co.uk/images/ic/$recipe/p08c569d.jpg',
+    subType: 'clip',
+    synopses: {
+      short: 'افغانستان کې د کورونا وېروس وروستی حال',
+    },
+    title: 'افغانستان کې د کورونا وېروس وروستی حال',
+    versions: [
+      {
+        availableFrom: 1588517677000,
+        availableTerritories: {
+          nonUk: true,
+          uk: true,
+          world: false,
+        },
+        duration: 135,
+        durationISO8601: 'PT2M15S',
+        types: ['Original'],
+        versionId: 'p08c567x',
+        warnings: {},
+      },
+    ],
+  },
+  options: {
+    isBreakingNews: false,
+    isFactCheck: false,
+  },
+  section: {
+    name: 'کور پاڼه',
+    subType: 'IDX',
+    type: 'simple',
+    uri: '/pashto/front_page',
+  },
+  summary: 'افغانستان کې د کورونا وېروس وروستی حال',
+  timestamp: 1588517817000,
+  type: 'cps',
+};

@@ -20,6 +20,7 @@ import {
   itemWithoutImage,
   indexAlsosItem,
   mapWithMediaError,
+  mapWithoutMediaError,
 } from './helpers/fixtureData';
 import StoryPromoContainer from '.';
 
@@ -373,26 +374,55 @@ describe('StoryPromo Container', () => {
     });
   });
 
-  describe('given we have data that has an error', () => {
-    describe('when there is a media block without duration', () => {
-      [
-        {
-          item: mapWithMediaError,
-          platform: 'amp',
-        },
-        {
-          item: mapWithMediaError,
-          platform: 'canonical',
-        },
-      ].forEach(({ item, platform }) => {
-        it('should log a warning', () => {
-          render(<WrappedStoryPromo item={item} platform={platform} />);
-          expect(loggerMock.warn).toHaveBeenCalledWith(MEDIA_MISSING, {
-            url: '/pashto/front_page',
-            mediaStatuscode: 404,
-            mediaBlock: mapWithMediaError.media,
-          });
+  describe('given there is a CPS MAP block with a media error', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+
+    [
+      {
+        item: mapWithMediaError,
+        platform: 'amp',
+      },
+      {
+        item: mapWithMediaError,
+        platform: 'canonical',
+      },
+    ].forEach(({ item, platform }) => {
+      it(`when we render for ${platform}, it should log a warning`, () => {
+        render(<WrappedStoryPromo item={item} platform={platform} />);
+        expect(loggerMock.warn).toHaveBeenCalledWith(MEDIA_MISSING, {
+          url: '/pashto/front_page',
+          mediaStatuscode: 404,
+          mediaBlock: mapWithMediaError.media,
         });
+      });
+    });
+  });
+
+  describe('given there is a CPS MAP block without a media error', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+    [
+      {
+        item: mapWithoutMediaError,
+        platform: 'amp',
+      },
+      {
+        item: mapWithoutMediaError,
+        platform: 'canonical',
+      },
+    ].forEach(({ item, platform }) => {
+      it(`when we render for ${platform}, it should *not* log a warning`, () => {
+        render(<WrappedStoryPromo item={item} platform={platform} />);
+        expect(loggerMock.warn).not.toHaveBeenCalled();
       });
     });
   });
