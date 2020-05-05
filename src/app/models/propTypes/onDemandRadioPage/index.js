@@ -1,14 +1,12 @@
 import { bool, shape, string, number } from 'prop-types';
-// Delete model and reinstate the props within the page
 
 export const onDemandRadioPageDataPropTypes = shape({
-  brandTitle: string,
-  headline: string,
-  summary: string,
   language: string,
-  episodeAvailableFrom: number,
-  episodeAvailableUntil: number,
-  releaseDateTimeStamp: number,
+  brandTitle: string,
+  episodeTitle: string,
+  headline: string,
+  shortSynopsis: string,
+  summary: string,
 });
 
 const onDemandPagePropTypes = {

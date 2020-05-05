@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { shape, string, number } from 'prop-types';
 import MetadataContainer from '../../containers/Metadata';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import { onDemandRadioPageDataPropTypes } from '#models/propTypes/onDemandRadioPage';
 import HeadingBlock from '#containers/RadioPageBlocks/Blocks/Heading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
 import DatestampBlock from '#containers/RadioPageBlocks/Blocks/Datestamp';
@@ -129,7 +129,15 @@ const OnDemandRadioPage = ({ pageData }) => {
 };
 
 OnDemandRadioPage.propTypes = {
-  pageData: onDemandRadioPageDataPropTypes.isRequired,
+  pageData: shape({
+    brandTitle: string,
+    headline: string,
+    summary: string,
+    language: string,
+    episodeAvailableFrom: number,
+    episodeAvailableUntil: number,
+    releaseDateTimeStamp: number,
+  }).isRequired,
 };
 
 export default OnDemandRadioPage;
