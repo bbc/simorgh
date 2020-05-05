@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render, waitFor } from '@testing-library/react';
+import { act } from 'react-dom/test-utils';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -163,7 +164,8 @@ describe('Front Page', () => {
       expect(langSpan.getAttribute('lang')).toEqual('en-GB');
       expect(langSpan.textContent).toEqual('BBC News');
 
-      await waitFor(() => {});
+      // await waitFor(() => {});
+      await act(() => {});
     });
 
     it('should render front page sections', async () => {
@@ -176,7 +178,8 @@ describe('Front Page', () => {
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });
-      await waitFor(() => {});
+      // await waitFor(() => {});
+      await act(() => {});
     });
   });
 });
