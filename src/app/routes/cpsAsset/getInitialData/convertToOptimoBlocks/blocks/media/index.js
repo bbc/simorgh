@@ -3,7 +3,7 @@ import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 
 import nodeLogger from '#lib/logger.node';
-import { CPS_MEDIA_MISSING_FIELD } from '#lib/logger.const';
+import { MEDIA_MISSING_FIELD } from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
@@ -96,7 +96,7 @@ const withValidationCheck = convertedBlock => {
 
 const validateInputBlock = (block, aresResponse) => {
   const log = missingField =>
-    logger.warn(CPS_MEDIA_MISSING_FIELD, {
+    logger.warn(MEDIA_MISSING_FIELD, {
       id: path(['metadata', 'id'], aresResponse),
       url: path(['metadata', 'locators', 'assetUri'], aresResponse),
       missingField,
