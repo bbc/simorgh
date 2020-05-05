@@ -15,6 +15,30 @@ const expectedUrls = [
   `${urlPrefix}/amharic/42743191`,
 ];
 
+const results = [
+  {
+    url: 'mock-url-1',
+    failed: ['failed-test'],
+    passed: ['passed-test'],
+  },
+  {
+    url: 'mock-url-2',
+    passed: ['passed-test'],
+    failed: [],
+  },
+  {
+    url: 'mock-url-3',
+    passed: ['passed-test'],
+    failed: [],
+  },
+  {
+    url: 'mock-url-4',
+    passed: ['passed-test'],
+    failed: [],
+  },
+];
+
 module.exports = {
   expectedUrls,
+  results,
 };

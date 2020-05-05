@@ -11,26 +11,48 @@ jest.mock('structured-data-testing-tool', () => ({
   structuredDataTest: jest.fn(() => ({})),
 }));
 
+const { log } = require('./mocks/printResults');
 require('./mocks/services');
-const { expectedUrls } = require('./mocks/fixtures');
+const { expectedUrls, results } = require('./mocks/fixtures');
+const {
+  printFailures,
+  printStatistics,
+  printPassing,
+} = require('./printResults');
 const {
   getUrls,
-  // printResults,
+  printResults,
   validate,
-  // checkStructuredData,
+  checkStructuredData,
 } = require('./index');
 
 describe('Structured Data Test', () => {
   describe('getUrls', () => {
-    it('get the expected urls', () => {
+    it('should get the expected urls', () => {
       const urls = getUrls();
       expect(urls).toEqual(expectedUrls);
     });
   });
 
   describe('printResults', () => {
-    it('should do something', () => {
-      expect(false).toBeTruthy();
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+
+    it('should not print passing tests when showInfo is false', () => {
+      printResults(results, false);
+      expect(log).toBeCalledTimes(11);
+      expect(printPassing).toBeCalledTimes(0);
+      expect(printFailures).toBeCalledTimes(1);
+      expect(printStatistics).toBeCalledTimes(1);
+    });
+
+    it('should print passing tests when showInfo is true', () => {
+      printResults(results, true);
+      expect(log).toBeCalledTimes(5);
+      expect(printPassing).toBeCalledTimes(4);
+      expect(printFailures).toBeCalledTimes(1);
+      expect(printStatistics).toBeCalledTimes(1);
     });
   });
 
@@ -40,7 +62,11 @@ describe('Structured Data Test', () => {
       presets: [Google, SocialMedia],
     };
 
-    it('run tool with video MAP schema', async () => {
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+
+    it('should run tool with video MAP schema', async () => {
       const videoMapJson = {
         metadata: {
           type: 'MAP',
@@ -60,7 +86,7 @@ describe('Structured Data Test', () => {
       });
     });
 
-    it('run tool with audio MAP schema', async () => {
+    it('should run tool with audio MAP schema', async () => {
       const audioMapJson = {
         metadata: {
           type: 'MAP',
@@ -80,7 +106,7 @@ describe('Structured Data Test', () => {
       });
     });
 
-    it('run tool with video STY schema', async () => {
+    it('should run tool with video STY schema', async () => {
       const styVideoJson = {
         metadata: {
           type: 'STY',
@@ -112,7 +138,7 @@ describe('Structured Data Test', () => {
       });
     });
 
-    it('run tool with audio STY schema', async () => {
+    it('should run tool with audio STY schema', async () => {
       const styAudioJson = {
         metadata: {
           type: 'STY',
@@ -144,7 +170,7 @@ describe('Structured Data Test', () => {
       });
     });
 
-    it('run tool with PGL schema', async () => {
+    it('should run tool with PGL schema', async () => {
       const pglJson = { metadata: { type: 'PGL' } };
       const schemas = ['Article'];
       fetch.mockImplementation(() => ({ json: () => pglJson }));
@@ -155,7 +181,7 @@ describe('Structured Data Test', () => {
       });
     });
 
-    it('run tool with live radio schema', async () => {
+    it('should run tool with live radio schema', async () => {
       const liveRadioJson = { metadata: { type: 'WS-LIVE' } };
       const schemas = ['RadioChannel'];
       fetch.mockImplementation(() => ({ json: () => liveRadioJson }));
@@ -166,7 +192,7 @@ describe('Structured Data Test', () => {
       });
     });
 
-    it('run tool with IDX schema', async () => {
+    it('should run tool with IDX schema', async () => {
       const idxJson = { metadata: { type: 'IDX' } };
       const schemas = ['WebPage'];
       fetch.mockImplementation(() => ({ json: () => idxJson }));
@@ -177,7 +203,7 @@ describe('Structured Data Test', () => {
       });
     });
 
-    it('run tool with article schema', async () => {
+    it('should run tool with article schema', async () => {
       const articleJson = { metadata: { type: 'article' } };
       const schemas = ['Article'];
       fetch.mockImplementation(() => ({ json: () => articleJson }));
@@ -188,7 +214,7 @@ describe('Structured Data Test', () => {
       });
     });
 
-    it('run tool with on demand radio schema', async () => {
+    it('should run tool with on demand radio schema', async () => {
       const odRadioJson = { metadata: { type: 'WSRADIO' } };
       const schemas = [];
       fetch.mockImplementation(() => ({ json: () => odRadioJson }));
@@ -200,11 +226,11 @@ describe('Structured Data Test', () => {
     });
   });
 
-  describe('checkStructuredData', () => {
-    // checkStructuredData();
-
-    it('should do something', () => {
-      expect(false).toBeTruthy();
+  describe('checkStructuredData', async () => {
+    it('should call the validate function and return results;', async () => {
+      const data = await checkStructuredData(expectedUrls);
+      const expectedData = expectedUrls.map(url => ({ url }));
+      expect(data).toEqual(expectedData);
     });
   });
 });
