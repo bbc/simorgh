@@ -37,9 +37,15 @@ import {
 } from '#lib/utilities/parseAssetData';
 import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
+import IncludeTestForm from './IncludeTestForm';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
+const StoryPage = ({
+  pageData,
+  pathname,
+  location,
+  mostReadEndpointOverride,
+}) => {
   const {
     dir,
     mostRead: { header },
@@ -237,6 +243,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       >
         <Grid item dir={dir} columns={gridColsMain} startOffset={gridOffset}>
           <main role="main">
+            {pathname === '/testInclude' ? (
+              <IncludeTestForm pathWithGetParameters={location.search} />
+            ) : null}
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
           <CpsRelatedContent content={relatedContent} />

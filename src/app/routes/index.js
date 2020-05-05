@@ -6,6 +6,7 @@ import mostRead from './mostRead';
 import onDemandRadio from './onDemandRadio';
 import error from './error';
 import errorNoRouteMatch from './errorNoRouteMatch';
+import testInclude from './testInclude';
 
 export default [
   article,
@@ -14,6 +15,7 @@ export default [
   liveRadio,
   mostRead,
   onDemandRadio,
+  testInclude,
   error,
   errorNoRouteMatch,
 ];
