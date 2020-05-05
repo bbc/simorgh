@@ -16,10 +16,10 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
 
-  const { pageData, status, error, timeOnServer } = initialData;
+  const { data, status, error, timeOnServer } = initialData;
 
   const [state, setState] = useState({
-    pageData,
+    data,
     status,
     service,
     variant,
@@ -44,7 +44,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       }
       shouldSetFocus.current = false;
     }
-  }, [state.loading, state.pageData]);
+  }, [state.loading, state.data]);
 
   useEffect(() => {
     if (isInitialMount.current) {
@@ -67,7 +67,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
 
       loaderPromise.then(() => {
         setState({
-          pageData: null,
+          data: null,
           status: null,
           service: nextService,
           variant: nextVariant,
@@ -88,7 +88,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
           service: nextService,
           variant: nextVariant,
         })
-        .then(data => {
+        .then(initialPageData => {
           clearTimeout(loaderTimeout);
           shouldSetFocus.current = true;
           setState({
@@ -99,11 +99,11 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
             isAmp: nextIsAmp,
             pageType: route.pageType,
             loading: false,
-            pageData: path(['pageData'], data),
-            status: path(['status'], data),
-            error: path(['error'], data),
+            data: { ...initialPageData },
+            status: path(['status'], initialPageData),
+            error: path(['error'], initialPageData),
             errorCode: null,
-            timeOnServer: path(['timeOnServer'], data),
+            timeOnServer: path(['timeOnServer'], initialPageData),
           });
         });
     }

@@ -73,7 +73,10 @@ const MostReadSection = styled.section.attrs(() => ({
   }
 `;
 
-const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
+const FrontPage = ({
+  data: { pageData, mostRead },
+  mostReadEndpointOverride,
+}) => {
   const {
     product,
     serviceLocalizedName,
@@ -129,6 +132,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
       mostReadEndpointOverride={mostReadEndpointOverride}
       columnLayout="twoColumn"
       wrapper={MostReadWrapper}
+      initialData={mostRead}
     />
   );
 

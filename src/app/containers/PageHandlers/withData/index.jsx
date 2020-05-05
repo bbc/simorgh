@@ -6,7 +6,8 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import shouldRender from './shouldRender';
 
 const WithData = Component => {
-  const DataContainer = ({ pageData, status, ...props }) => {
+  const DataContainer = ({ data, status, ...props }) => {
+    const { pageData } = data;
     const { service } = props;
     const { passportHomes } = useContext(ServiceContext) || {};
     const {
@@ -15,7 +16,7 @@ const WithData = Component => {
     } = shouldRender({ pageData, status }, service, passportHomes);
 
     if (hasData200StatusAndCorrectService) {
-      return <Component pageData={pageData} {...props} />;
+      return <Component data={data} {...props} />;
     }
 
     return <ErrorPage errorCode={statusCode} />;
