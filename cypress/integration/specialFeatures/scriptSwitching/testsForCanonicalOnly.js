@@ -18,7 +18,8 @@ export default ({
   variant,
   otherVariant,
 }) => {
-  describe(`Script Switching - ${serviceId} - ${pageType} - ${path}`, () => {
+  describe.skip(`Script Switching - ${serviceId} - ${pageType} - ${path}`, () => {
+    // This test suite is being skipped due to flakey failing within our build pipeline. Being investigated here https://github.com/bbc/simorgh/issues/6399
     beforeEach(() => {
       cy.clearCookies();
       visitPage(path, pageType);
@@ -67,7 +68,6 @@ export default ({
         `Asserting script switch button, url and document lang have changed after clicking script switcher to ${variant}`,
       );
       allVariantAssertions(serviceName, variant);
-    }).skip();
-    // This test suite is being skipped due to flakey failing within our build pipeline
+    });
   });
 };
