@@ -1,4 +1,4 @@
-const getSchemas = require('./schemas');
+const getSchemas = require('./getSchemas');
 
 const constructJsonData = pageType => {
   return {
