@@ -32,7 +32,7 @@ const fetchUrl = ({ name, path }) =>
 const getAdditionalPageData = async (pageData, service, variant) => {
   const assetType = getAssetType(pageData);
 
-  const urlsToFetch = pageTypeUrls(assetType, service);
+  const urlsToFetch = pageTypeUrls(assetType, service, variant);
 
   if (urlsToFetch) {
     return Promise.all(urlsToFetch.map(fetchUrl)).then(results =>
