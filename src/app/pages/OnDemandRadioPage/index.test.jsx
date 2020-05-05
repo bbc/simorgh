@@ -111,11 +111,10 @@ describe('OnDemand Radio Page ', () => {
   it('should show the datestamp correctly for Pashto OnDemand Radio Pages', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
-    const { pageData: pageDataWithWithoutVideo } = await getInitialData(
-      'some-ondemand-radio-path',
-    );
+    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    // Check destructuring like this works & amend for other tests
     const { getByText } = await renderPage({
-      pageData: pageDataWithWithoutVideo,
+      pageData,
       service: 'pashto',
     });
 
