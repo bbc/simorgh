@@ -35,20 +35,13 @@ const validURLParams = {
   platform: requestContext.platform,
   service: 'pidgin',
   statsDestination: requestContext.statsDestination,
+  timePublished: '2019-11-06T15:00:00Z',
+  timeUpdated: '2030-01-01T17:00:00Z',
 };
 
-const frontPage = {
-  metadata: {
-    analyticsLabels: {
-      counterName: 'service.page',
-    },
-    locators: {
-      curie:
-        'http://www.bbc.co.uk/asset/00000000-0000-0000-0000-000000000000/desktop/domestic',
-    },
-    language: 'language',
-    title: 'title',
-  },
+const pageData = {
+  firstRecordTimeStamp: '2019-11-06T15:00:00Z',
+  lastRecordTimeStamp: '2030-01-01T17:00:00Z',
 };
 
 describe('mostRead buildParams', () => {
@@ -59,7 +52,7 @@ describe('mostRead buildParams', () => {
   describe('buildMostReadATIParams', () => {
     it('should return the right object', () => {
       const result = buildMostReadATIParams(
-        frontPage,
+        pageData,
         requestContext,
         serviceContext,
       );
@@ -70,7 +63,7 @@ describe('mostRead buildParams', () => {
   describe('buildMostReadATIUrl', () => {
     it('should return the right url', () => {
       const result = buildMostReadATIUrl(
-        frontPage,
+        pageData,
         requestContext,
         serviceContext,
       );
@@ -90,6 +83,8 @@ describe('mostRead buildParams', () => {
           'x7=[list-datadriven]',
           'x8=[simorgh]',
           'x9=[De+one+we+dem+de+read+well+well+-+BBC+News+Pidgin]',
+          'x11=[2019-11-06T15:00:00Z]',
+          'x12=[2030-01-01T17:00:00Z]',
         ].join('&'),
       );
     });
