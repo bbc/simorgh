@@ -19,21 +19,9 @@ const {
   printStatistics,
   printPassing,
 } = require('./printResults');
-const {
-  getUrls,
-  printResults,
-  validate,
-  checkStructuredData,
-} = require('./index');
+const { printResults, validate, checkStructuredData } = require('./index');
 
 describe('Structured Data Test', () => {
-  describe('getUrls', () => {
-    it('should get the expected urls', () => {
-      const urls = getUrls();
-      expect(urls).toEqual(expectedUrls);
-    });
-  });
-
   describe('printResults', () => {
     afterEach(() => {
       jest.clearAllMocks();
