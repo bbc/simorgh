@@ -80,9 +80,10 @@ describe('convertMedia', () => {
     };
 
     expect(convertMedia(input, fixtureAresResponse)).toEqual(expected);
-    expect(loggerMock.warn).toHaveBeenCalledWith('cps_media_without_image', {
+    expect(loggerMock.warn).toHaveBeenCalledWith('cps_media_missing_field', {
       url: 'fixture-url',
       id: 'fixture-id',
+      missingField: 'imageUrl',
     });
   });
 });
