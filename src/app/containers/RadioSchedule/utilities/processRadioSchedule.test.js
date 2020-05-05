@@ -85,7 +85,6 @@ describe('processRadioSchedule', () => {
         expect(program).toHaveProperty('brandTitle');
         expect(program).toHaveProperty('summary');
         expect(program).toHaveProperty('duration');
-        expect(program).toHaveProperty('durationLabel');
       });
     });
   });
