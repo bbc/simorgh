@@ -1,3 +1,4 @@
+// components to test
 import getAssetType from './getAssetType';
 
 // mock data
