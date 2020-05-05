@@ -3,12 +3,7 @@ import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 
 import nodeLogger from '#lib/logger.node';
-import {
-  CPS_MEDIA_WITHOUT_IMAGE,
-  CPS_MEDIA_WITHOUT_ID,
-  CPS_MEDIA_WITHOUT_FORMAT,
-  CPS_MEDIA_WITHOUT_VERSION_ID,
-} from '#lib/logger.const';
+import { CPS_MEDIA_MISSING_FIELD } from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
@@ -108,7 +103,7 @@ const validateInputBlock = (block, aresResponse) => {
     });
 
   [
-    ['imageUrl, block.imageUrl],
+    ['imageUrl', block.imageUrl],
     ['id', block.id],
     ['format', block.format],
     ['versionId', path(['versions', 0, 'versionId'], block)],
