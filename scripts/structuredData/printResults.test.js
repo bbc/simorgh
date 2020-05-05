@@ -84,12 +84,13 @@ describe('printResults', () => {
 
   describe('printPassing', () => {
     it('should not output anything if no passing tests', () => {
-      printPassing([]);
+      printPassing(constructResult());
       expect(global.console.log).not.toHaveBeenCalled();
     });
 
     it('should output details of tests passed', () => {
-      printPassing([constructTest()]);
+      const result = { ...constructResult(), passed: [constructTest()] };
+      printPassing(result);
       expect(global.console.log).toHaveBeenCalledTimes(1);
       expect(global.console.log).toBeCalledWith(
         expect.stringContaining('Test 1'),
@@ -97,7 +98,11 @@ describe('printResults', () => {
     });
 
     it('should output details of multiple passed tests', () => {
-      printPassing([constructTest(1), constructTest(2)]);
+      const result = {
+        ...constructResult(),
+        passed: [constructTest(1), constructTest(2)],
+      };
+      printPassing(result);
       expect(global.console.log).toHaveBeenCalledTimes(2);
       expect(global.console.log).toHaveBeenNthCalledWith(
         1,
