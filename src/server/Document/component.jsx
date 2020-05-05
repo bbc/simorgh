@@ -55,6 +55,7 @@ const Document = ({
         {links}
         {styleTags}
         {headScript}
+        <script src="https://gn-web-assets.api.bbc.com/ngas/beta/dotcom-bootstrap.js" />
         {isAmp && (
           <>
             <style amp-boilerplate="">{AMP_SCRIPT}</style>

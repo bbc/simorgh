@@ -1,5 +1,7 @@
-import React from 'react';
+/* eslint-disable react/jsx-curly-brace-presence */
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -27,51 +29,34 @@ const StyledAd = styled.div`
   }
 `;
 
-const CanonicalAd = () => {
-  const { enabled: adsEnabled } = useToggle('ads');
+const AdSlot = ({ type }) => {
+  const location = useLocation();
+  useEffect(() => {
+    window.dotcom.cmd.push(() => {
+      window.dotcom.ads.registerSlot(type);
+    });
+  }, [location, type]);
 
-  if (!adsEnabled) {
-    return null;
-  }
+  return <div id={`dotcom-${type}`} className="dotcom-ad" />;
+};
+
+const CanonicalAd = () => {
+  useEffect(() => {
+    window.dotcom.bootstrap({
+      pageAds: true,
+      playerAds: false,
+    });
+  }, []);
+
+  // const { enabled: adsEnabled } = useToggle('ads');
+
+  // if (!adsEnabled) {
+  //   // return null;
+  // }
 
   return (
     <>
-      <Helmet>
-        <script
-          async
-          src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
-        />
-        <script>
-          {`
-            window.googletag = window.googletag || {cmd: []};
-            googletag.cmd.push(function() {
-                var adSlot = googletag
-                  .defineSlot('/4817/bbccom.test.site.amp.news', [[300, 50], [320, 50], [728, 90], [970, 250]], 'banner-ad')
-                  .addService(googletag.pubads());
-
-                var mapping = googletag.sizeMapping()
-                  .addSize([600, 1], [[728, 90], [970, 250]])
-                  .addSize([0, 0], [[300, 50], [320, 50]])
-                  .build();
-
-                adSlot.defineSizeMapping(mapping);
-
-                googletag.enableServices();
-            });
-          `}
-        </script>
-      </Helmet>
-      <StyledAd id="banner-ad">
-        <Helmet>
-          <script>
-            {`
-              googletag.cmd.push(function() {
-                googletag.display('banner-ad');
-              });
-            `}
-          </script>
-        </Helmet>
-      </StyledAd>
+      <AdSlot type="leaderboard" />
     </>
   );
 };
