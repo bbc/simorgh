@@ -27,6 +27,8 @@ export const buildMostReadATIParams = (
     statsDestination,
     platform,
     service,
+    timePublished: pageData.firstRecordTimeStamp,
+    timeUpdated: pageData.lastRecordTimeStamp,
   };
 };
 
