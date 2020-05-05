@@ -119,9 +119,9 @@ describe('IncludeContainer', () => {
         );
 
         expect(scripts).toHaveLength(2);
-      });
 
-      expect(window.require.config).toHaveBeenCalled();
+        expect(window.require.config).toHaveBeenCalledTimes(1);
+      });
     });
   };
   runningIncludeTest('vj');
@@ -152,9 +152,9 @@ describe('IncludeContainer', () => {
       );
 
       expect(scripts).toHaveLength(2);
-    });
 
-    expect(window.require.config).toHaveBeenCalled();
+      expect(window.require.config).toHaveBeenCalledTimes(1);
+    });
   });
 
   it(`should not add require to the page for idt2`, async () => {
@@ -166,12 +166,11 @@ describe('IncludeContainer', () => {
       />,
     );
 
-    await waitFor(() =>
+    await waitFor(() => {
       expect(Array.from(document.querySelectorAll('head script'))).toHaveLength(
         0,
-      ),
-    );
-
-    expect(window.require.config).toHaveBeenCalledTimes(0);
+      );
+      expect(window.require.config).toHaveBeenCalledTimes(0);
+    });
   });
 });
