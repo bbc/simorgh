@@ -46,9 +46,10 @@ const populateTestValues = result => {
   });
 };
 
-const printPassing = results => {
-  populateTestValues(results);
-  results.passed.forEach(pass => {
+const printPassing = result => {
+  const { structuredData } = result;
+  if (structuredData) populateTestValues(result);
+  result.passed.forEach(pass => {
     console.log(`${green('  ✓ ', testSummary(pass))}\n \t${testDetails(pass)}`);
   });
 };
@@ -61,7 +62,7 @@ const aggregateResults = results => {
     failed: results
       .map(result => [...result.failed, ...result.warnings])
       .flat(),
-    schemas: [...new Set(...results.map(result => result.schemas))],
+    schemas: [...new Set(results.map(result => result.schemas).flat())],
     structuredData: Object.assign(
       ...results.map(result => result.structuredData),
     ),
