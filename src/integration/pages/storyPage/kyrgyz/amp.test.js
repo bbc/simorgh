@@ -1,6 +1,6 @@
 /**
- * @service mundo
- * @pathname /mundo/noticias-internacional-51266689
+ * @service kyrgyz
+ * @pathname /kyrgyz/23292889
  */
 
 import runCrossPlatformTests from '../crossPlatformTests';
