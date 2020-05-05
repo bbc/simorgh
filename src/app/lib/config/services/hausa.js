@@ -177,6 +177,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'Babban Labari',
+      featuresAnalysisTitle: 'Minti Daya Da BBC',
     },
     brandSVG,
     mostRead: {
@@ -212,7 +214,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/hausa/game-da-mu-37377088',
-          text: 'Dangane da BBC',
+          text: 'A game da BBC',
         },
         {
           href: 'https://www.bbc.com/hausa/game-da-mu-37377090',
