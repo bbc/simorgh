@@ -208,7 +208,7 @@ export const service = {
       onFrontPage: false,
       frontPagePosition: '',
       header: 'برنامه‌های رادیو',
-      durationLabel: 'زمان %duration%',
+      durationLabel: 'مدت %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,
