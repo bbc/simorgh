@@ -32,11 +32,16 @@ const HeadingContainer = ({ idAttr, brandTitle, releaseDateTimeStamp }) => {
 
   return (
     <Headline script={script} service={service} id={idAttr} tabIndex="-1">
-      <span role="text">
+      <span
+        // eslint-disable-next-line jsx-a11y/aria-role
+        role="text"
+      >
         {/* <Headline>{brandTitle}</Headline> */}
         <span>{brandTitle}</span>
         {/* <DatestampBlock timestamp={releaseDateTimeStamp} /> */}
-        <StyledDatestamp>{formattedTimestamp}</StyledDatestamp>
+        <StyledDatestamp script={script} service={service}>
+          {formattedTimestamp}
+        </StyledDatestamp>
       </span>
     </Headline>
   );
