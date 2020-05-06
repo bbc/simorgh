@@ -38,6 +38,7 @@ const directives = {
       'https://cookie-oven.api.bbc.com', // Cookie banner
       'https://cookie-oven.api.bbc.co.uk', // Cookie banner
       'https://www.bbc.co.uk', // STY include indepthtoolkit
+      'https://news.test.files.bbci.co.uk', // STY include
       "'self'",
     ],
     ampNonLive: [
@@ -72,6 +73,7 @@ const directives = {
       'https://cookie-oven.test.api.bbc.com', // Cookie banner
       'https://cookie-oven.test.api.bbc.co.uk', // Cookie banner
       'https://www.bbc.co.uk', // STY include indepthtoolkit
+      'https://news.test.files.bbci.co.uk', // STY include
       "'self'",
     ],
   },
@@ -270,6 +272,7 @@ const directives = {
       'https://news.files.bbci.co.uk', // STY include styles
       'https://platform.twitter.com', // Social Embeds
       'https://ton.twimg.com', // Social Embeds
+      'https://news.test.files.bbci.co.uk', // STY includes
       "'unsafe-inline'",
     ],
     ampNonLive: [
@@ -280,6 +283,7 @@ const directives = {
       'https://news.files.bbci.co.uk', // STY include styles
       'https://platform.twitter.com', // Social Embeds
       'https://ton.twimg.com', // Social Embeds
+      'https://news.test.files.bbci.co.uk', // STY includes
       "'unsafe-inline'",
     ],
   },
@@ -299,6 +303,7 @@ export const generateDefaultSrc = () => ["'self'"];
 export const generateFontSrc = () => [
   'https://gel.files.bbci.co.uk',
   'https://ws-downloads.files.bbci.co.uk',
+  'https://static.bbci.co.uk', // STY includes
 ];
 
 export const generateFrameSrc = ({ isAmp, isLive }) => {
