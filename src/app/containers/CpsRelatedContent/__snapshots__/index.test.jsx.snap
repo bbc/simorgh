@@ -86,7 +86,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                       role="text"
                     >
                       <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                       >
                         , 
                       </span>
@@ -306,7 +306,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
                     role="text"
                   >
                     <span
-                      class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                      class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                     >
                       , 
                     </span>
