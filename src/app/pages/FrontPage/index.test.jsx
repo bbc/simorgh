@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { render, waitFor } from '@testing-library/react';
+import { render, act, waitFor } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -144,9 +144,12 @@ describe('Front Page', () => {
 
   describe('Assertions', () => {
     it('should render visually hidden text as h1', async () => {
-      const { container } = render(
-        <FrontPageWithContext pageData={pageData} />,
-      );
+      let container;
+
+      await act(async () => {
+        container = render(<FrontPageWithContext pageData={pageData} />)
+          .container;
+      });
 
       const h1 = container.querySelector('h1');
       const content = h1.getAttribute('id');
@@ -162,21 +165,20 @@ describe('Front Page', () => {
       const langSpan = span.querySelector('span');
       expect(langSpan.getAttribute('lang')).toEqual('en-GB');
       expect(langSpan.textContent).toEqual('BBC News');
-
-      await waitFor(() => {});
     });
 
     it('should render front page sections', async () => {
-      const { container } = render(
-        <FrontPageWithContext pageData={pageData} />,
-      );
-      const sections = container.querySelectorAll('section');
+      let container;
+      await act(async () => {
+        container = render(<FrontPageWithContext pageData={pageData} />)
+          .container;
+      });
 
-      expect(sections).toHaveLength(2);
+      const sections = container.querySelectorAll('section');
+      expect(sections).toHaveLength(3);
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });
-      await waitFor(() => {});
     });
   });
 });
