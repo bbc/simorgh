@@ -187,6 +187,18 @@ describe('ATIAnalytics params', () => {
         's=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn:bbc:cps:4d36f80b-8711-0b4e-8da0-ef76ae8ac470]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%3A%2F%2Flocalhost%2F]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[headline+-+brandName]&x11=[1970-01-01T00:00:00.000Z]&x12=[1970-01-01T00:00:00.000Z]',
       );
     });
+
+    it('should have both ref parameter and x6 referrer url parameter when referrer url exists', () => {
+      const params = buildATIUrl(
+        article,
+        { ...requestContext, pageType: 'article' },
+        serviceContext,
+      );
+      const decodedParams = decodeURIComponent(params).split('&');
+
+      expect(decodedParams.pop()).toEqual('ref=originhttp://www.example.com');
+      expect(decodedParams).toContain('x6=[originhttp://www.example.com]');
+    });
   });
 
   describe('buildATIClickParams', () => {
