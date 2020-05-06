@@ -17,6 +17,8 @@ const setCookie = (name, value, expires = COOKIE_EXPIRY) =>
   Cookie.set(name, value, {
     expires,
     domain: getCookieDomain(document.domain),
+    sameSite: 'None',
+    secure: true,
   });
 
 export default setCookie;
