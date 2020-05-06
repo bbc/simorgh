@@ -8,7 +8,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 >
   <head>
     <title>
-      وروستي خبرونه - BBC News پښتو
+      ماښامنۍ خپرونه - BBC News پښتو
     </title>
     <link
       href="https://www.test.bbc.com/pathname"
@@ -113,7 +113,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
       name="application-name"
     />
     <meta
-      content="د نړۍ وروستي خبرونه"
+      content="د بي بي سي ورلډ سروس څخه پروګرام کول"
       name="description"
     />
     <meta
@@ -141,7 +141,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
       name="msapplication-TileImage"
     />
     <meta
-      content="د نړۍ وروستي خبرونه"
+      content="د بي بي سي ورلډ سروس څخه پروګرام کول"
       property="og:description"
     />
     <meta
@@ -161,7 +161,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
       property="og:site_name"
     />
     <meta
-      content="وروستي خبرونه - BBC News پښتو"
+      content="ماښامنۍ خپرونه - BBC News پښتو"
       property="og:title"
     />
     <meta
@@ -181,7 +181,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
       name="twitter:creator"
     />
     <meta
-      content="د نړۍ وروستي خبرونه"
+      content="د بي بي سي ورلډ سروس څخه پروګرام کول"
       name="twitter:description"
     />
     <meta
@@ -197,8 +197,13 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
       name="twitter:site"
     />
     <meta
-      content="وروستي خبرونه - BBC News پښتو"
+      content="ماښامنۍ خپرونه - BBC News پښتو"
       name="twitter:title"
+    />
+    <script
+      async="true"
+      custom-element="amp-iframe"
+      src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
     />
   </head>
   <body>
@@ -226,42 +231,15 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 .c6 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.c7 {
-  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 0.0625rem solid transparent;
-  color: #FFFFFF;
-  background-color: rgba(34,34,34,0.75);
-}
-
-.c8 {
-  display: block;
-  font-weight: normal;
-  bottom: 0;
-  position: absolute;
-  padding: 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
+  height: 165px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c5 {
-  position: relative;
-  min-height: 165px;
-  margin-bottom: 2rem;
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
 }
 
 .c1 {
@@ -383,27 +361,16 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
-  .c7 {
-    font-size: 0.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c7 {
-    background-color: transparent;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c8 {
-    background-color: window;
+@media (min-width:63rem) {
+  .c6 {
+    margin-bottom: 2rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c8 {
-    padding: 1rem;
+  .c5 {
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
   }
 }
 
@@ -446,17 +413,17 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
             id="content"
             tabindex="-1"
           >
-            وروستي خبرونه
+            ماښامنۍ خپرونه
           </h1>
           <p
             class="c4"
           >
-            04/02/2020 GMT
+            ۱ می ۲۰۲۰
           </p>
           <p
             class="c4"
           >
-            د نړۍ وروستي خبرونه
+            د بي بي سي ورلډ سروس څخه پروګرام کول
           </p>
           <div
             class="c5"
@@ -464,15 +431,26 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
             <div
               class="c6"
             >
-              <div
-                class="c7"
+              <amp-iframe
+                allowfullscreen="allowfullscreen"
+                frameborder="0"
+                layout="fill"
+                sandbox="allow-scripts allow-same-origin"
+                scrolling="no"
+                src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps/amp?morph_env=live"
+                title="اډیو پلیئر"
               >
-                <strong
-                  class="c8"
-                >
-                  دغه فایل نور د لاسرسي وړ نه دی.
-                </strong>
-              </div>
+                <amp-img
+                  alt=""
+                  attribution=""
+                  height="16"
+                  layout="fill"
+                  placeholder="true"
+                  src="http://localhost:7080/images/amp_audio_placeholder.png"
+                  width="9"
+                />
+                <noscript />
+              </amp-iframe>
             </div>
           </div>
         </div>
@@ -507,42 +485,15 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 .c6 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.c7 {
-  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 0.0625rem solid transparent;
-  color: #FFFFFF;
-  background-color: rgba(34,34,34,0.75);
-}
-
-.c8 {
-  display: block;
-  font-weight: normal;
-  bottom: 0;
-  position: absolute;
-  padding: 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
+  height: 165px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c5 {
-  position: relative;
-  min-height: 165px;
-  margin-bottom: 2rem;
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
 }
 
 .c1 {
@@ -551,6 +502,16 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c7 {
+  border: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @supports (display:grid) {
@@ -664,27 +625,16 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
-  .c7 {
-    font-size: 0.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c7 {
-    background-color: transparent;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c8 {
-    background-color: window;
+@media (min-width:63rem) {
+  .c6 {
+    margin-bottom: 2rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c8 {
-    padding: 1rem;
+  .c5 {
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
   }
 }
 
@@ -708,7 +658,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 >
   <head>
     <title>
-      وروستي خبرونه - BBC News پښتو
+      ماښامنۍ خپرونه - BBC News پښتو
     </title>
     <link
       href="https://www.test.bbc.com/pathname"
@@ -817,7 +767,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
       name="application-name"
     />
     <meta
-      content="د نړۍ وروستي خبرونه"
+      content="د بي بي سي ورلډ سروس څخه پروګرام کول"
       name="description"
     />
     <meta
@@ -845,7 +795,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
       name="msapplication-TileImage"
     />
     <meta
-      content="د نړۍ وروستي خبرونه"
+      content="د بي بي سي ورلډ سروس څخه پروګرام کول"
       property="og:description"
     />
     <meta
@@ -865,7 +815,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
       property="og:site_name"
     />
     <meta
-      content="وروستي خبرونه - BBC News پښتو"
+      content="ماښامنۍ خپرونه - BBC News پښتو"
       property="og:title"
     />
     <meta
@@ -885,7 +835,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
       name="twitter:creator"
     />
     <meta
-      content="د نړۍ وروستي خبرونه"
+      content="د بي بي سي ورلډ سروس څخه پروګرام کول"
       name="twitter:description"
     />
     <meta
@@ -901,7 +851,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
       name="twitter:site"
     />
     <meta
-      content="وروستي خبرونه - BBC News پښتو"
+      content="ماښامنۍ خپرونه - BBC News پښتو"
       name="twitter:title"
     />
   </head>
@@ -925,17 +875,17 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
             id="content"
             tabindex="-1"
           >
-            وروستي خبرونه
+            ماښامنۍ خپرونه
           </h1>
           <p
             class="c4"
           >
-            04/02/2020 GMT
+            ۱ می ۲۰۲۰
           </p>
           <p
             class="c4"
           >
-            د نړۍ وروستي خبرونه
+            د بي بي سي ورلډ سروس څخه پروګرام کول
           </p>
           <div
             class="c5"
@@ -943,15 +893,15 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
             <div
               class="c6"
             >
-              <div
+              <iframe
+                allow="autoplay; fullscreen"
+                allowfullscreen=""
                 class="c7"
-              >
-                <strong
-                  class="c8"
-                >
-                  دغه فایل نور د لاسرسي وړ نه دی.
-                </strong>
-              </div>
+                scrolling="no"
+                src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"
+                title="اډیو پلیئر"
+              />
+              <noscript />
             </div>
           </div>
         </div>
@@ -1142,7 +1092,7 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
       <p
         class="c4"
       >
-        2020/03/06 GMT
+        2020년 5월 4일
       </p>
       <p
         class="c4"
@@ -1398,7 +1348,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
       <p
         class="c4"
       >
-        2020/03/06 GMT
+        2020년 5월 4일
       </p>
       <p
         class="c4"
