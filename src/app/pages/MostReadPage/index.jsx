@@ -26,7 +26,7 @@ import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import MetadataContainer from '#containers/Metadata';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 
-const StyledMain = styled.main.attrs({ role: 'main' })`
+const StyledMain = styled.main.attrs({ role: 'main', 'data-e2e': 'most-read' })`
   flex-grow: 1;
   margin: 0 ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
