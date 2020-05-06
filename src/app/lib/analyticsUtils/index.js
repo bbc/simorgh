@@ -194,6 +194,14 @@ export const getAtiUrl = (data = []) => {
     wrap ? `${key}=[${value}]` : `${key}=${value}`,
   );
 
+  const atiReferrer = parsedAtiValues.find(value => value.includes('ref'));
+
+  if (atiReferrer) {
+    const stripRefValue = parsedAtiValues.filter(
+      value => value !== atiReferrer,
+    );
+    return stripRefValue.join('&').concat(`&${atiReferrer}`);
+  }
   return parsedAtiValues.join('&');
 };
 
