@@ -41,7 +41,6 @@ const CanonicalMostRead = ({
   initialData,
   wrapper: Wrapper,
 }) => {
-  console.log(`initialData: ${initialData}`);
   const {
     service,
     script,
