@@ -11,7 +11,7 @@ const requestContext = {
   platform: 'platform',
   isUK: 'isUK',
   statsDestination: 'statsDestination',
-  previousPath: 'previousPath',
+  previousPath: 'http://www.example.com',
   origin: 'origin',
   canonicalLink: 'https://www.bbc.com/pidgin/51536047',
 };
@@ -140,7 +140,7 @@ describe('ATIAnalytics params', () => {
         serviceContext,
       );
       expect(url).toEqual(
-        's=598285&s2=atiAnalyticsProducerId&p=service.articles.//www.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn:bbc:optimo://www.bbc.co.uk]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%3A%2F%2Flocalhost%2F]&x6=[originpreviousPath]&x7=[article]&x8=[simorgh]&x9=[pageTitle]&x11=[1970-01-01T00:00:00.000Z]&x12=[1970-01-01T00:00:00.000Z]&x13=[thing+label+1~thing+label+2]&x14=[thing+id+1~thing+id+2]&ref=originpreviousPath',
+        's=598285&s2=atiAnalyticsProducerId&p=service.articles.//www.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn:bbc:optimo://www.bbc.co.uk]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%3A%2F%2Flocalhost%2F]&x6=[originhttp%3A%2F%2Fwww.example.com]&x7=[article]&x8=[simorgh]&x9=[pageTitle]&x11=[1970-01-01T00:00:00.000Z]&x12=[1970-01-01T00:00:00.000Z]&x13=[thing+label+1~thing+label+2]&x14=[thing+id+1~thing+id+2]&ref=originhttp%3A%2F%2Fwww.example.com',
       );
     });
 
@@ -209,7 +209,7 @@ describe('ATIAnalytics params', () => {
         pageTitle: 'pageTitle',
         libraryVersion: 'simorgh',
         platform: 'platform',
-        previousPath: 'previousPath',
+        previousPath: 'http://www.example.com',
         producerId: 'atiAnalyticsProducerId',
         service: 'service',
         statsDestination: 'statsDestination',
