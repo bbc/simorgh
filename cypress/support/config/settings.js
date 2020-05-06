@@ -1845,7 +1845,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/indonesia/bbc_indonesian_radio/w172x6r5000f38s'],
+            paths: ['/indonesia/bbc_indonesian_radio/w172xh267fpn19l'],
             enabled: true,
           },
         },
@@ -2114,7 +2114,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/korean/bbc_korean_radio/w3cszwcg'],
+            paths: ['/korean/bbc_korean_radio/w3ct0kn5'],
             enabled: true,
           },
         },
@@ -2901,7 +2901,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/pashto/bbc_pashto_radio/w172x8nvf4bchz5'],
+            paths: ['/pashto/bbc_pashto_radio/w3ct0lz1'],
             enabled: true,
           },
         },
