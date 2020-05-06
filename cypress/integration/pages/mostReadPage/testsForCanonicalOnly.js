@@ -14,6 +14,10 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       it('should have a visually hidden top-level header', () => {
         cy.get('h1').should('have.length', 1);
       });
+
+      it('should have mostread component rendered ', () => {
+        cy.get('main').should('have.attr', 'data-e2e', 'most-read');
+      });
     });
   });
 
