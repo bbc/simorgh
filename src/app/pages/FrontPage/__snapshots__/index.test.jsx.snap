@@ -96,8 +96,13 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             <div
                               class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                             >
-                              <div
-                                class="lazyload-placeholder"
+                              <img
+                                alt="Senator Ahmad Lawan and Ali Ndume"
+                                class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                                sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
+                                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 660w"
+                                width="976"
                               />
                             </div>
                             <div
@@ -113,7 +118,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="Headline-sc-1dvfmi3-3 fccgro"
                           >
                             <a
-                              class="Link-sc-1dvfmi3-5 yQgSu"
+                              class="Link-sc-1dvfmi3-5 jeUMCT"
                               href="/pidgin/live/tori-48591362"
                             >
                               <span
@@ -254,7 +259,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 jeUMCT"
                                 href="https://www.bbc.com/pidgin/sport-44416820"
                               >
                                 Take dis predictor choose who go reach World Cup final
@@ -330,7 +335,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 jeUMCT"
                                 href="http://www.bbc.com/pidgin"
                               >
                                 Audio promo
@@ -385,7 +390,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 jeUMCT"
                                 href="https://www.bbc.com/pidgin/sport-44439411"
                               >
                                 World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
@@ -435,7 +440,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 jeUMCT"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup
@@ -485,7 +490,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 jeUMCT"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup as a feature
@@ -558,7 +563,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 jeUMCT"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup - Video
@@ -608,7 +613,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 jeUMCT"
                                 href="https://www.bbc.com/pidgin/sport-44214129"
                               >
                                 World Cup 2018: Di top stars wey no dey go World Cup
@@ -686,7 +691,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 jeUMCT"
                                 href="http://www.bbc.com/azeri"
                               >
                                 Gallery promo
@@ -705,7 +710,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </section>
                   <section
                     aria-labelledby="Most-Read"
-                    class="MostReadSection-sc-58u5qv-1 FrontPageMostReadSection-sc-58u5qv-2 bHEJPx"
+                    class="MostReadSection-sc-58u5qv-1 ilJrAv"
                     data-e2e="most-read"
                     role="region"
                   >
@@ -752,11 +757,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hmbaNr"
+                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cVIHWy"
                               dir="ltr"
                             >
                               <span
-                                class="StyledSpan-fs4y6m-3 hNbbwU"
+                                class="StyledSpan-fs4y6m-3 gymrUA"
                               >
                                 1
                               </span>
@@ -766,7 +771,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               dir="ltr"
                             >
                               <a
-                                class="StyledLink-u0d8kd-0 iVuzjN"
+                                class="StyledLink-u0d8kd-0 kUvyYz"
                                 href="/pidgin/tori-46729879"
                               >
                                 Public Holidays wey go happun for 2019
@@ -793,11 +798,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 jkHEBl"
+                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 loYovV"
                               dir="ltr"
                             >
                               <span
-                                class="StyledSpan-fs4y6m-3 hNbbwU"
+                                class="StyledSpan-fs4y6m-3 gymrUA"
                               >
                                 2
                               </span>
@@ -807,7 +812,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               dir="ltr"
                             >
                               <a
-                                class="StyledLink-u0d8kd-0 iVuzjN"
+                                class="StyledLink-u0d8kd-0 kUvyYz"
                                 href="/pidgin/tori-50304653"
                               >
                                 Liberia banks don run out of money
@@ -834,11 +839,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hmbaNr"
+                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cVIHWy"
                               dir="ltr"
                             >
                               <span
-                                class="StyledSpan-fs4y6m-3 hNbbwU"
+                                class="StyledSpan-fs4y6m-3 gymrUA"
                               >
                                 3
                               </span>
@@ -848,7 +853,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               dir="ltr"
                             >
                               <a
-                                class="StyledLink-u0d8kd-0 iVuzjN"
+                                class="StyledLink-u0d8kd-0 kUvyYz"
                                 href="/pidgin/tori-50298882"
                               >
                                 Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
@@ -875,11 +880,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 jkHEBl"
+                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 loYovV"
                               dir="ltr"
                             >
                               <span
-                                class="StyledSpan-fs4y6m-3 hNbbwU"
+                                class="StyledSpan-fs4y6m-3 gymrUA"
                               >
                                 4
                               </span>
@@ -889,7 +894,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               dir="ltr"
                             >
                               <a
-                                class="StyledLink-u0d8kd-0 iVuzjN"
+                                class="StyledLink-u0d8kd-0 kUvyYz"
                                 href="/pidgin/tori-50315150"
                               >
                                 Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
@@ -916,11 +921,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hmbaNr"
+                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cVIHWy"
                               dir="ltr"
                             >
                               <span
-                                class="StyledSpan-fs4y6m-3 hNbbwU"
+                                class="StyledSpan-fs4y6m-3 gymrUA"
                               >
                                 5
                               </span>
@@ -930,7 +935,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               dir="ltr"
                             >
                               <a
-                                class="StyledLink-u0d8kd-0 iVuzjN"
+                                class="StyledLink-u0d8kd-0 kUvyYz"
                                 href="/pidgin/tori-50315157"
                               >
                                 How Balogun market fire kill Policeman for Lagos
@@ -957,11 +962,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 kalooU"
+                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cXzHhm"
                               dir="ltr"
                             >
                               <span
-                                class="StyledSpan-fs4y6m-3 hNbbwU"
+                                class="StyledSpan-fs4y6m-3 gymrUA"
                               >
                                 6
                               </span>
@@ -971,7 +976,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               dir="ltr"
                             >
                               <a
-                                class="StyledLink-u0d8kd-0 iVuzjN"
+                                class="StyledLink-u0d8kd-0 kUvyYz"
                                 href="/pidgin/tori-50093818"
                               >
                                 Labour, FG finally agree minimum wage salary adjustment
@@ -998,11 +1003,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 gIAmWi"
+                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 nHiMH"
                               dir="ltr"
                             >
                               <span
-                                class="StyledSpan-fs4y6m-3 hNbbwU"
+                                class="StyledSpan-fs4y6m-3 gymrUA"
                               >
                                 7
                               </span>
@@ -1012,7 +1017,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               dir="ltr"
                             >
                               <a
-                                class="StyledLink-u0d8kd-0 iVuzjN"
+                                class="StyledLink-u0d8kd-0 kUvyYz"
                                 href="/pidgin/tori-50187218"
                               >
                                 Naira Marley na 'Bad Influence'?
@@ -1039,11 +1044,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 kalooU"
+                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cXzHhm"
                               dir="ltr"
                             >
                               <span
-                                class="StyledSpan-fs4y6m-3 hNbbwU"
+                                class="StyledSpan-fs4y6m-3 gymrUA"
                               >
                                 8
                               </span>
@@ -1053,7 +1058,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               dir="ltr"
                             >
                               <a
-                                class="StyledLink-u0d8kd-0 iVuzjN"
+                                class="StyledLink-u0d8kd-0 kUvyYz"
                                 href="/pidgin/tori-48347911"
                               >
                                 Tins you suppose know about Naira Marley
@@ -1080,11 +1085,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 gIAmWi"
+                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 nHiMH"
                               dir="ltr"
                             >
                               <span
-                                class="StyledSpan-fs4y6m-3 hNbbwU"
+                                class="StyledSpan-fs4y6m-3 gymrUA"
                               >
                                 9
                               </span>
@@ -1094,7 +1099,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               dir="ltr"
                             >
                               <a
-                                class="StyledLink-u0d8kd-0 iVuzjN"
+                                class="StyledLink-u0d8kd-0 kUvyYz"
                                 href="/pidgin/sport-50312710"
                               >
                                 Golden Eaglets crash out of Fifa U17 World Cup
@@ -1121,11 +1126,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ItemWrapper-u0d8kd-3 juBlKT"
                           >
                             <div
-                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 kalooU"
+                              class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cXzHhm"
                               dir="ltr"
                             >
                               <span
-                                class="StyledSpan-fs4y6m-3 hNbbwU"
+                                class="StyledSpan-fs4y6m-3 gymrUA"
                               >
                                 10
                               </span>
@@ -1135,7 +1140,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               dir="ltr"
                             >
                               <a
-                                class="StyledLink-u0d8kd-0 iVuzjN"
+                                class="StyledLink-u0d8kd-0 kUvyYz"
                                 href="/pidgin/tori-42945173"
                               >
                                 Tiger nut drink fit wake up your sex drive - Nutritionist

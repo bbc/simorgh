@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { render, wait, waitForElement } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -34,7 +34,10 @@ let pageData;
 beforeEach(async () => {
   fetch.mockResponse(JSON.stringify(frontPageDataPidgin));
 
-  const response = await getInitialData('some-front-page-path');
+  const response = await getInitialData({
+    path: 'some-front-page-path',
+    service: 'pidgin',
+  });
 
   pageData = response.pageData;
 
@@ -133,7 +136,7 @@ describe('Front Page', () => {
 
       // Waiting to ensure most read data is loaded and element is rendered
       // The data is loaded separately which was previously causing snapshots to fail
-      await waitForElement(() => container.querySelector('#Most-Read'));
+      await waitFor(() => container.querySelector('#Most-Read'));
 
       expect(container).toMatchSnapshot();
     });
@@ -160,7 +163,7 @@ describe('Front Page', () => {
       expect(langSpan.getAttribute('lang')).toEqual('en-GB');
       expect(langSpan.textContent).toEqual('BBC News');
 
-      await wait();
+      await waitFor(() => {});
     });
 
     it('should render front page sections', async () => {
@@ -173,7 +176,7 @@ describe('Front Page', () => {
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });
-      await wait();
+      await waitFor(() => {});
     });
   });
 });

@@ -182,6 +182,8 @@ export const service = {
           endTextVisuallyHidden: 'पोस्ट %provider_name% समाप्त',
         },
       },
+      topStoriesTitle: 'टॉप स्टोरी',
+      featuresAnalysisTitle: 'ज़रूर पढ़ें',
     },
     brandSVG,
     mostRead: {
@@ -192,6 +194,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: true,
     },
     footer: {
       trustProjectLink: {

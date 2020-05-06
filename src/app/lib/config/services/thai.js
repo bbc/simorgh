@@ -172,6 +172,8 @@ export const service = {
           endTextVisuallyHidden: 'สิ้นสุด %provider_name% โพสต์',
         },
       },
+      topStoriesTitle: 'ข่าวเด่น',
+      featuresAnalysisTitle: 'เรื่องน่าสนใจ',
     },
     brandSVG,
     mostRead: {
@@ -182,6 +184,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     navigation: [
       {

@@ -191,6 +191,8 @@ export const service = {
           endTextVisuallyHidden: 'Контент из %provider_name% окончен',
         },
       },
+      topStoriesTitle: 'Главное',
+      featuresAnalysisTitle: 'Журнал',
     },
     brandSVG,
     mostRead: {
@@ -201,6 +203,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

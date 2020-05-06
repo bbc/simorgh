@@ -178,6 +178,8 @@ export const service = {
           endTextVisuallyHidden: 'Кінець %provider_name% допису',
         },
       },
+      topStoriesTitle: 'Top Stories',
+      featuresAnalysisTitle: 'Докладно',
     },
     brandSVG,
     mostRead: {
@@ -188,6 +190,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

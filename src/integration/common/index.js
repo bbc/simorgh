@@ -1,23 +1,32 @@
-import runCommonCanonicalAnalyticsTests from './analytics.canonical';
-import runCommonAmpAnalyticsTests from './analytics.amp';
-import runFooterTests from './footer';
-import runHeaderTests from './header';
-import runCommonSeoTests from './SEO';
-import runCommonA11yTests from './a11y';
+import runA11yTests from './a11y';
+import runAmpAnalyticsTests from './analytics.amp';
+import runCanonicalAnalyticsTests from './analytics.canonical';
 import runCoreAmpTests from './core.amp';
 import runCoreCanonicalTests from './core.canonical';
+import runFooterTests from './footer';
+import runHeaderTests from './header';
+import runMediaPlayerEmbedTests from './mediaPlayerEmbed';
 import runPerformanceTests from './performance';
-import runSnapshotTests from './snapshot';
+import runSEOTests from './SEO';
+
+const runCommonCrossPlatformTests = () => {
+  runA11yTests();
+  runHeaderTests();
+  runFooterTests();
+  runPerformanceTests();
+  runSEOTests();
+};
 
 export {
-  runFooterTests,
-  runHeaderTests,
-  runCommonSeoTests,
-  runCommonA11yTests,
-  runCommonCanonicalAnalyticsTests,
-  runCommonAmpAnalyticsTests,
+  runA11yTests,
+  runAmpAnalyticsTests,
+  runCanonicalAnalyticsTests,
+  runCommonCrossPlatformTests,
   runCoreAmpTests,
   runCoreCanonicalTests,
+  runFooterTests,
+  runHeaderTests,
+  runMediaPlayerEmbedTests,
   runPerformanceTests,
-  runSnapshotTests,
+  runSEOTests,
 };

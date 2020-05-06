@@ -177,6 +177,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'Ìròyìn tó ṣe kókó',
+      featuresAnalysisTitle: 'Features',
     },
     brandSVG,
     mostRead: {
@@ -187,6 +189,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

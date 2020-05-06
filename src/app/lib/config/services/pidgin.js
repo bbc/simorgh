@@ -177,6 +177,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'Top Tori',
+      featuresAnalysisTitle: 'Features',
     },
     mostRead: {
       header: 'De one we dem de read well well',
@@ -186,6 +188,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     navigation: [
       {

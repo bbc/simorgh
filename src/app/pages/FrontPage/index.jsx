@@ -21,7 +21,6 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import SectionLabel from '@bbc/psammead-section-label';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import pathOr from 'ramda/src/pathOr';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '#containers/FrontPageSection';
@@ -65,9 +64,7 @@ const MostReadSection = styled.section.attrs(() => ({
   role: 'region',
   'aria-labelledby': 'Most-Read',
   'data-e2e': 'most-read',
-}))``;
-
-const FrontPageMostReadSection = styled(MostReadSection)`
+}))`
   /* To centre page layout for Group 4+ */
   margin: 0 auto;
   width: 100%; /* Needed for IE11 */
@@ -94,8 +91,9 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const lang = path(['metadata', 'language'], pageData);
   const description = path(['metadata', 'summary'], pageData);
   const seoTitle = path(['promo', 'name'], pageData);
-  const onFrontPage = pathOr(null, ['onFrontPage'], radioSchedule);
-  const frontPagePosition = pathOr(null, ['frontPagePosition'], radioSchedule);
+  const radioScheduleData = path(['radioScheduleData'], pageData);
+  const radioScheduleOnPage = path(['onFrontPage'], radioSchedule);
+  const radioSchedulePosition = path(['frontPagePosition'], radioSchedule);
 
   // eslint-disable-next-line jsx-a11y/aria-role
   const offScreenText = (
@@ -109,7 +107,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     findIndex(group => group.type === 'useful-links')(groups) > -1;
 
   const MostReadWrapper = ({ children }) => (
-    <FrontPageMostReadSection>
+    <MostReadSection>
       <SectionLabel
         script={script}
         labelId="Most-Read"
@@ -119,7 +117,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         {header}
       </SectionLabel>
       {children}
-    </FrontPageMostReadSection>
+    </MostReadSection>
   );
 
   MostReadWrapper.propTypes = {
@@ -154,9 +152,10 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
           {groups.map((group, index) => (
             <Fragment key={group.title}>
               {group.type === 'useful-links' && renderMostRead()}
-              {onFrontPage && frontPagePosition === group.type && (
-                <RadioScheduleContainer />
-              )}
+              {radioScheduleOnPage &&
+                radioSchedulePosition === group.semanticGroupName && (
+                  <RadioScheduleContainer initialData={radioScheduleData} />
+                )}
               <FrontPageSection group={group} sectionNumber={index} />
             </Fragment>
           ))}

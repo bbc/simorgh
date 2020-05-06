@@ -99,7 +99,7 @@ def cancelPreviousBuilds() {
 pipeline {
   agent any
   options {
-    buildDiscarder(logRotator(daysToKeepStr: '10', artifactDaysToKeepStr: '10'))
+    buildDiscarder(logRotator(daysToKeepStr: '3', artifactDaysToKeepStr: '3'))
     timeout(time: 90, unit: 'MINUTES')
     timestamps ()
   }
@@ -266,15 +266,21 @@ pipeline {
         //   wait: false
         // )
         unstash 'simorgh'
-        build(
-          job: 'simorgh-infrastructure-test/latest',
-          parameters: [
-            [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
-            booleanParam(name: 'SKIP_OOH_CHECK', value: params.SKIP_OOH_CHECK)
-          ],
-          propagate: true,
-          wait: true
-        )
+        script {
+          def run = build(
+            job: 'simorgh-infrastructure-test/latest',
+            parameters: [
+              [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
+              booleanParam(name: 'SKIP_OOH_CHECK', value: params.SKIP_OOH_CHECK)
+            ],
+            propagate: true,
+            wait: true
+          )
+          echo "Child variables: ${run.buildVariables}"
+          if (run.buildVariables.COSMOS_VERSION) {
+            currentBuild.description = "Cosmos release ${run.buildVariables.COSMOS_VERSION}"
+          }
+        }
       }
     }
   }

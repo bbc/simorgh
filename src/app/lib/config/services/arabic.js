@@ -12,7 +12,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     ads: {
-      hasAds: arabic,
+      hasAds: false,
     },
     lang: 'ar',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -98,18 +98,18 @@ export const service = {
       consentBanner: {
         privacy: {
           title:
-            'لقد حدّثنا سياستنا المتعلقة بالخصوصية وبالشروط الخاصة بملفات الارتباط (الكوكيز)',
+            'لقد حدّثنا سياستنا المتعلقة بالخصوصية وبالشروط الخاصة بملفات الارتباط Cookies',
           description: {
             uk: {
               first:
-                'لقد أدخلنا تغييرات مهمة على سياستنا المتعلقة بالخصوصية وعلى الشروط الخاصة بملفات الارتباط (الكوكيز)، ويهمنا أن تكونوا ملمين بما قد تعني هذه التغييرات بالنسبة لكم ولبياناتكم',
+                'لقد أدخلنا تغييرات مهمة على سياستنا المتعلقة بالخصوصية وعلى الشروط الخاصة بملفات الارتباط Cookies، ويهمنا أن تكونوا ملمين بما قد تعني هذه التغييرات بالنسبة لكم ولبياناتكم',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                'لقد أدخلنا تغييرات مهمة على سياستنا المتعلقة بالخصوصية وعلى الشروط الخاصة بملفات الارتباط (الكوكيز)، ويهمنا أن تكونوا ملمين بما قد تعني هذه التغييرات بالنسبة لكم ولبياناتكم',
+                'لقد أدخلنا تغييرات مهمة على سياستنا المتعلقة بالخصوصية وعلى الشروط الخاصة بملفات الارتباط Cookies، ويهمنا أن تكونوا ملمين بما قد تعني هذه التغييرات بالنسبة لكم ولبياناتكم',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -124,17 +124,17 @@ export const service = {
           description: {
             uk: {
               first: 'نستخدم ',
-              linkText: 'ملفات ارتباط (كوكيز)',
+              linkText: 'ملفات ارتباط',
               last:
-                ' لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الكوكيز.',
+                ' لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الملفات cookies .',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
               first: 'نستخدم نحن وشركاؤنا تقنيات مثل ',
-              linkText: 'الكوكيز',
+              linkText: 'ملفات الارتباط',
               last:
-                '، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولاضفاء مسحة شخصية للمحتوى والاعلانات الموجهة إليك. الرجاء إعلامنا إذا كنت موافقا على ذلك.',
+                '، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولجعل المحتوى والاعلانات، الموجهة إليك، شخصية. الرجاء إعلامنا إذا كنت موافقا على ذلك.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -180,6 +180,8 @@ export const service = {
           endTextVisuallyHidden: 'نهاية %provider_name% مشاركة',
         },
       },
+      topStoriesTitle: 'الخبر الرئيسي',
+      featuresAnalysisTitle: 'اخترنا لكم',
     },
     brandSVG,
     mostRead: {
@@ -191,16 +193,19 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: true,
-      frontPagePosition: 'feature-main',
+      frontPagePosition: 'Features',
       frequenciesPageUrl:
         '/arabic/institutional/2011/01/000000_frequencies_radio',
       frequenciesPageLabel: 'استقبال البث',
       header: 'أحدث نشرة أخبار',
     },
+    recommendations: {
+      hasStoryRecommendations: true,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/arabic/institutional-49283069',
-        text: 'لماذا يمكنك الإعتماد على أخبار بي بي سي',
+        text: 'لماذا يمكنك الاعتماد على أخبار بي بي سي',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
@@ -261,26 +266,6 @@ export const service = {
         url: '/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
       },
       {
-        title: 'اقتصاد',
-        url: '/arabic/business',
-      },
-      {
-        title: 'فنون',
-        url: '/arabic/artandculture',
-      },
-      {
-        title: 'رياضة',
-        url: '/arabic/sports',
-      },
-      {
-        title: 'مجلة',
-        url: '/arabic/magazine',
-      },
-      {
-        title: 'مرأة',
-        url: '/arabic/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862',
-      },
-      {
         title: 'فيديو',
         url: '/arabic/media',
       },
@@ -289,20 +274,16 @@ export const service = {
         url: '/arabic/inthepress',
       },
       {
-        title: 'برامجنا',
-        url: '/arabic/tv-and-radio-37728883',
-      },
-      {
         title: 'ترند',
         url: '/arabic/trending',
       },
       {
-        title: 'حوارات',
-        url: '/arabic/interactivity',
+        title: 'تحقيقات',
+        url: '/arabic/tv-and-radio-42414864',
       },
       {
-        title: 'ملفات',
-        url: '/arabic/in_depth',
+        title: 'برامجنا',
+        url: '/arabic/tv-and-radio-37728883',
       },
     ],
   },

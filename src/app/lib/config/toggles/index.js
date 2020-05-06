@@ -38,6 +38,9 @@ const toggles = {
     socialEmbed: {
       enabled: true,
     },
+    logMediaPlayerStatus: {
+      enabled: true,
+    },
   },
   test: {
     ads: {
@@ -78,6 +81,9 @@ const toggles = {
     socialEmbed: {
       enabled: true,
     },
+    logMediaPlayerStatus: {
+      enabled: true,
+    },
   },
   live: {
     ads: {
@@ -102,7 +108,7 @@ const toggles = {
       enabled: true,
     },
     radioSchedule: {
-      enabled: false,
+      enabled: true,
     },
     scriptLink: {
       enabled: true,
@@ -117,6 +123,9 @@ const toggles = {
     },
     socialEmbed: {
       enabled: false,
+    },
+    logMediaPlayerStatus: {
+      enabled: true,
     },
   },
 };

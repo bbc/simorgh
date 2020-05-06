@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { string, node } from 'prop-types';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
@@ -47,7 +48,7 @@ const ConstrainedWrapper = styled.div`
   }
 `;
 
-const HeadingOne = styled.h1.attrs({
+const MostReadHeader = styled.h1.attrs({
   id: 'content',
   tabIndex: '-1',
 })`
@@ -55,15 +56,18 @@ const HeadingOne = styled.h1.attrs({
   ${({ script }) => script && getParagon(script)};
   ${({ service }) => getSansRegular(service)};
   margin: 0;
-  padding: ${GEL_SPACING_TRPL} 0 ${GEL_SPACING};
-`;
-
-const StyledGelPageGrid = styled(GelPageGrid)`
-  flex-grow: 1;
+  padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_TRPL};
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    padding: ${GEL_SPACING_TRPL} 0 ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding: ${GEL_SPACING_TRPL} 0 ${GEL_SPACING};
+  }
 `;
 
 const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
+    brandName,
     service,
     script,
     dir,
@@ -73,11 +77,11 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
 
   const MostReadWrapper = ({ children }) => (
     <ConstrainedWrapper>
-      <HeadingOne script={script} service={service}>
+      <MostReadHeader script={script} service={service}>
         {header}
-      </HeadingOne>
+      </MostReadHeader>
 
-      <StyledGelPageGrid
+      <GelPageGrid
         dir={dir}
         columns={{
           group0: 6,
@@ -111,7 +115,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
         >
           {children}
         </Grid>
-      </StyledGelPageGrid>
+      </GelPageGrid>
     </ConstrainedWrapper>
   );
 
@@ -126,7 +130,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
       <MetadataContainer
         title={header}
         lang={lang}
-        description="mostread"
+        description={`${header} - ${brandName}`}
         openGraphType="website"
       />
 

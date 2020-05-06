@@ -12,6 +12,7 @@ const MostReadContainer = ({
   mostReadEndpointOverride,
   initialData,
   columnLayout,
+  size,
   wrapper,
 }) => {
   const { variant, isAmp } = useContext(RequestContext);
@@ -39,6 +40,7 @@ const MostReadContainer = ({
       endpoint={endpoint}
       wrapper={wrapper}
       columnLayout={columnLayout}
+      size={size}
     />
   );
 };
@@ -46,6 +48,7 @@ const MostReadContainer = ({
 MostReadContainer.propTypes = {
   mostReadEndpointOverride: string,
   columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
+  size: oneOf(['default', 'small']),
   initialData: mostReadShape,
   wrapper: elementType,
 };
@@ -53,6 +56,7 @@ MostReadContainer.propTypes = {
 MostReadContainer.defaultProps = {
   mostReadEndpointOverride: undefined,
   columnLayout: 'multiColumn',
+  size: 'default',
   initialData: undefined,
   wrapper: undefined,
 };

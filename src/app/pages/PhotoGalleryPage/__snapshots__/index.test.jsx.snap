@@ -3156,6 +3156,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c34:before {
@@ -6368,6 +6369,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c54:before {

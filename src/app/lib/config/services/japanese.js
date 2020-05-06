@@ -167,16 +167,21 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% の投稿の終わり',
         },
       },
+      topStoriesTitle: 'トップ記事',
+      featuresAnalysisTitle: '読み物・解説',
     },
     brandSVG,
     mostRead: {
       header: '読まれた記事ランキング',
-      lastUpdated: 'Last updated:',
+      lastUpdated: '最終更新:',
       numberOfItems: 10,
       hasMostRead: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

@@ -181,6 +181,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'Isi akụkọ',
+      featuresAnalysisTitle: 'Features',
     },
     mostRead: {
       header: 'Akachasị Gụọ',
@@ -190,6 +192,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     navigation: [
       {

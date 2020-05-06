@@ -98,6 +98,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -570,7 +571,6 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
             >
               <span
                 class="c8"
-                lang="en-GB"
               >
                 استمع, 
               </span>
@@ -812,6 +812,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c5:before {
@@ -1355,6 +1356,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -1821,7 +1823,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
             >
               <span
                 class="c8"
-                lang="en-GB"
               >
                 استمع, 
               </span>
@@ -2135,6 +2136,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c9:before {
@@ -2698,6 +2700,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -3128,7 +3131,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
             >
               <span
                 class="c8"
-                lang="en-GB"
               >
                 استمع, 
               </span>
@@ -3370,6 +3372,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c5:before {
@@ -3756,6 +3759,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -4046,7 +4050,6 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
           >
             <span
               class="c8"
-              lang="en-GB"
             >
               استمع, 
             </span>
@@ -4155,6 +4158,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c9:before {

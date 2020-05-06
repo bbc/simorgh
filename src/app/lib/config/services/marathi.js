@@ -175,6 +175,8 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% पोस्ट समाप्त',
         },
       },
+      topStoriesTitle: 'मोठ्या बातम्या',
+      featuresAnalysisTitle: 'Features',
     },
     brandSVG,
     mostRead: {
@@ -185,6 +187,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

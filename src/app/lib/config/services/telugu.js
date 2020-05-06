@@ -176,6 +176,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'ముఖ్యమైన కథనాలు',
+      featuresAnalysisTitle: 'Features',
     },
     brandSVG,
     mostRead: {
@@ -186,6 +188,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

@@ -64,6 +64,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c11:before {
@@ -448,6 +449,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c11:before {
@@ -831,6 +833,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c3:before {
@@ -1221,6 +1224,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c11:before {
@@ -1589,6 +1593,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c10:before {
@@ -1958,6 +1963,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c10:before {
@@ -2326,6 +2332,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c3:before {
@@ -2701,6 +2708,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c10:before {
@@ -3045,6 +3053,7 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -3318,6 +3327,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -3590,6 +3600,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c3:before {
@@ -3869,6 +3880,7 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -4126,6 +4138,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -4390,6 +4403,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -4658,6 +4672,7 @@ exports[`StoryPromo Container should render item without an image promoType lead
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c3:before {
@@ -4928,6 +4943,7 @@ exports[`StoryPromo Container should render item without an image promoType top 
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -5176,6 +5192,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -5438,6 +5455,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -5699,6 +5717,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c3:before {
@@ -5967,6 +5986,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -6226,6 +6246,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -6667,6 +6688,7 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -6901,6 +6923,7 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -7139,6 +7162,7 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c3:before {
@@ -7379,6 +7403,7 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -7597,6 +7622,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -7870,6 +7896,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -8142,6 +8169,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c3:before {
@@ -8421,6 +8449,7 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -8678,6 +8707,7 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -8951,6 +8981,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -9223,6 +9254,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c3:before {
@@ -9502,6 +9534,7 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -9759,6 +9792,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -10032,6 +10066,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -10304,6 +10339,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c3:before {
@@ -10583,6 +10619,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c7:before {
@@ -10849,6 +10886,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c11:before {
@@ -11230,6 +11268,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c11:before {
@@ -11610,6 +11649,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c3:before {
@@ -11997,6 +12037,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c11:before {

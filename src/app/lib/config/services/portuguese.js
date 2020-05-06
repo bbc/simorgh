@@ -183,6 +183,8 @@ export const service = {
           endTextVisuallyHidden: 'Final de %provider_name% post',
         },
       },
+      topStoriesTitle: 'Principais notícias',
+      featuresAnalysisTitle: 'Leia mais',
     },
     brandSVG,
     mostRead: {
@@ -193,6 +195,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: true,
     },
     footer: {
       trustProjectLink: {

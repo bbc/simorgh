@@ -172,6 +172,8 @@ export const service = {
           endTextVisuallyHidden: 'Lompati %provider_name% pesan',
         },
       },
+      topStoriesTitle: 'Berita Utama',
+      featuresAnalysisTitle: 'Features',
     },
     brandSVG,
     mostRead: {
@@ -183,6 +185,9 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
