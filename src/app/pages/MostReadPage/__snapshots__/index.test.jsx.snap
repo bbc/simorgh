@@ -561,6 +561,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
       </div>
       <main
         class="c0"
+        data-e2e="most-read"
         role="main"
       >
         <div
