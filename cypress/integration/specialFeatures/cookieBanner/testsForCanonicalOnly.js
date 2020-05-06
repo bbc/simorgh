@@ -12,7 +12,7 @@ import {
 // Limited to 1 UK & 1 WS service when a smoke test due to time test takes to run per page.
 // This is why this file doesn't check smoke test values.
 const serviceFilter = service =>
-  Cypress.env('SMOKE') ? ['pidgin', 'thai'].includes(service) : service;
+  Cypress.env('SMOKE') ? ['news', 'thai'].includes(service) : service;
 
 const assertCookieValue = (cookieName, value) => {
   cy.getCookie(cookieName).should('have.property', 'value', value);
