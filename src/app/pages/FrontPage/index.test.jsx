@@ -145,7 +145,6 @@ describe('Front Page', () => {
   describe('Assertions', () => {
     it('should render visually hidden text as h1', async () => {
       let container;
-
       await act(async () => {
         container = render(<FrontPageWithContext pageData={pageData} />)
           .container;
