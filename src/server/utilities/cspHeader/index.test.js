@@ -45,6 +45,7 @@ describe('cspHeader', () => {
       fontSrcExpectation: [
         'https://gel.files.bbci.co.uk',
         'https://ws-downloads.files.bbci.co.uk',
+        'https://static.bbci.co.uk',
       ],
       frameSrcExpectation: [
         'https://polling.bbc.co.uk',
@@ -103,12 +104,14 @@ describe('cspHeader', () => {
         'https://cookie-oven.api.bbc.com',
         'https://cookie-oven.api.bbc.co.uk',
         'https://www.bbc.co.uk',
+        'https://news.test.files.bbci.co.uk',
         "'self'",
       ],
       defaultSrcExpectation: ["'self'"],
       fontSrcExpectation: [
         'https://gel.files.bbci.co.uk',
         'https://ws-downloads.files.bbci.co.uk',
+        'https://static.bbci.co.uk',
       ],
       frameSrcExpectation: [
         'https://polling.bbc.co.uk',
@@ -161,6 +164,7 @@ describe('cspHeader', () => {
         'https://news.files.bbci.co.uk',
         'https://platform.twitter.com',
         'https://ton.twimg.com',
+        'https://news.test.files.bbci.co.uk',
         "'unsafe-inline'",
       ],
       workerSrcExpectation: ["'self'"],
@@ -192,6 +196,7 @@ describe('cspHeader', () => {
       fontSrcExpectation: [
         'https://gel.files.bbci.co.uk',
         'https://ws-downloads.files.bbci.co.uk',
+        'https://static.bbci.co.uk',
       ],
       frameSrcExpectation: [
         'https://polling.bbc.co.uk',
@@ -259,12 +264,14 @@ describe('cspHeader', () => {
         'https://cookie-oven.test.api.bbc.com',
         'https://cookie-oven.test.api.bbc.co.uk',
         'https://www.bbc.co.uk',
+        'https://news.test.files.bbci.co.uk',
         "'self'",
       ],
       defaultSrcExpectation: ["'self'"],
       fontSrcExpectation: [
         'https://gel.files.bbci.co.uk',
         'https://ws-downloads.files.bbci.co.uk',
+        'https://static.bbci.co.uk',
       ],
       frameSrcExpectation: [
         'https://polling.bbc.co.uk',
@@ -326,6 +333,7 @@ describe('cspHeader', () => {
         'https://news.files.bbci.co.uk',
         'https://platform.twitter.com',
         'https://ton.twimg.com',
+        'https://news.test.files.bbci.co.uk',
         "'unsafe-inline'",
       ],
       workerSrcExpectation: ["'self'"],
