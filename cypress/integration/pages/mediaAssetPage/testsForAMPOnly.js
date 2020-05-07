@@ -20,7 +20,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
     describe('Media Player', () => {
       const language = appConfig[config[service].name][variant].lang;
 
-      it('should be rendered', () => {
+      it('should render an iframe with a valid URL', () => {
         cy.request(`${Cypress.env('currentPath')}.json`).then(
           ({ body: jsonData }) => {
             if (hasMedia(jsonData)) {
@@ -28,17 +28,10 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
 
               cy.get(`amp-iframe[src="${embedUrl}"]`).should('be.visible');
               cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
-
-              // Ensure media player is ready
-              cy.get('iframe').then($iframe => {
-                cy.wrap($iframe.prop('contentWindow'), {
-                  timeout: 30000,
-                })
-                  .its('embeddedMedia.playerInstances.mediaPlayer.ready')
-                  .should('eq', true);
-              });
             } else {
-              cy.log(`No media on ${pageType} for ${service}`);
+              cy.log(
+                `No media on ${pageType} for ${Cypress.env('currentPath')}`,
+              );
             }
           },
         );
