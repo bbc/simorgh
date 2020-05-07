@@ -19,6 +19,10 @@ import LinkContents from './LinkContents';
 import MediaIndicatorContainer from './MediaIndicator';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import IndexAlsosContainer from './IndexAlsos';
+import loggerNode from '#lib/logger.node';
+import { MEDIA_MISSING } from '#lib/logger.const';
+
+const logger = loggerNode(__filename);
 
 const PROMO_TYPES = ['top', 'regular', 'leading'];
 
@@ -119,6 +123,17 @@ const StoryPromoContainer = ({
 
   const timestamp = pathOr(null, ['timestamp'], item);
   const relatedItems = pathOr(null, ['relatedItems'], item);
+  const cpsType = pathOr(null, ['cpsType'], item);
+  // If mediaStatusCode is visible, there is an error in rendering the block
+  const mediaStatuscode = pathOr(null, ['media', 'statusCode'], item);
+
+  if (cpsType === 'MAP' && mediaStatuscode) {
+    logger.warn(MEDIA_MISSING, {
+      url: pathOr(null, ['section', 'uri'], item),
+      mediaStatuscode,
+      mediaBlock: item.media,
+    });
+  }
 
   const linkcontents = <LinkContents item={item} isInline={!displayImage} />;
 
