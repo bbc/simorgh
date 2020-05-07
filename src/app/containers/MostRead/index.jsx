@@ -22,9 +22,15 @@ const MostReadContainer = ({
 
   const { enabled } = useToggle('mostRead');
 
-  const mostReadEnabled = !isAmp && enabled && hasMostRead;
+  const mostReadToggleEnabled = enabled && hasMostRead;
 
-  if (!mostReadEnabled) {
+  // Do not render most read when a toggle is disabled
+  if (!mostReadToggleEnabled) {
+    return null;
+  }
+
+  // Do not render on AMP when there is no initial data
+  if (isAmp && !initialData) {
     return null;
   }
 
