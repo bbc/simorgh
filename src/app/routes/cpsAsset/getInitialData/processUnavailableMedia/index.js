@@ -2,12 +2,8 @@ import pathOr from 'ramda/src/pathOr';
 import assocPath from 'ramda/src/assocPath';
 import path from 'ramda/src/path';
 import nodeLogger from '#lib/logger.node';
-import {
-  NO_MEDIA_BLOCK,
-  MEDIA_ASSET_EXPIRED,
-  MEDIA_ASSET_REVOKED,
-  MEDIA_METADATA_UNAVAILABLE,
-} from '#lib/logger.const';
+import { NO_MEDIA_BLOCK } from '#lib/logger.const';
+import { logMediaError } from '#lib/utilities/logging';
 
 const logger = nodeLogger(__filename);
 
@@ -22,17 +18,7 @@ export const unavailableMediaBlock = {
 export const logUnavailableMedia = (blocks, url) => {
   const mediaBlock = blocks.find(block => block.type === EXTERNAL_VPID);
   if (mediaBlock) {
-    const { statusCode } = mediaBlock;
-    switch (statusCode) {
-      case 404:
-        logger.warn(MEDIA_ASSET_REVOKED, { url });
-        break;
-      case 410:
-        logger.warn(MEDIA_ASSET_EXPIRED, { url });
-        break;
-      default:
-        logger.error(MEDIA_METADATA_UNAVAILABLE, { url });
-    }
+    logMediaError({ logger, mediaBlock, url });
   }
 };
 
