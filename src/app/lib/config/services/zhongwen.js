@@ -30,6 +30,9 @@ const baseServiceConfig = {
   radioSchedule: {
     hasRadioSchedule: false,
   },
+  recommendations: {
+    hasStoryRecommendations: false,
+  },
   brandSVG,
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,
@@ -43,7 +46,7 @@ export const service = {
   simp: {
     ...baseServiceConfig,
     ads: {
-      hasAds: false,
+      hasAds: true,
     },
     externalLinkText: ', 外部链接',
     frontPageTitle: '主页',
@@ -257,12 +260,14 @@ export const service = {
           endTextVisuallyHidden: '结尾 %provider_name% 帖子',
         },
       },
+      topStoriesTitle: '头条新闻',
+      featuresAnalysisTitle: '特别推荐',
     },
   },
   trad: {
     ...baseServiceConfig,
     ads: {
-      hasAds: false,
+      hasAds: true,
     },
     lang: `zh-hant`,
     locale: `zh-hant`,
@@ -476,6 +481,8 @@ export const service = {
           endTextVisuallyHidden: '結尾 %provider_name% 帖子',
         },
       },
+      topStoriesTitle: '頭條新聞',
+      featuresAnalysisTitle: '特別推薦',
     },
   },
 };

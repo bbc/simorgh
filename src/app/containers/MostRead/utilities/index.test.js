@@ -3,10 +3,10 @@ import { mostReadRecordIsFresh, shouldRenderLastUpdated } from '.';
 const epochTimeNow = Date.now();
 const currentTime = new Date();
 
-const calcTimestampMinutesAgo = (minutes) =>
+const calcTimestampMinutesAgo = minutes =>
   new Date(epochTimeNow - 60 * 1000 * minutes).toUTCString();
 
-const calcTimestampDaysAgo = (days) =>
+const calcTimestampDaysAgo = days =>
   new Date(epochTimeNow - 24 * 60 * 60 * 1000 * days);
 
 describe('mostReadRecordIsFresh', () => {

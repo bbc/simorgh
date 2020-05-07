@@ -4,14 +4,14 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 <DocumentFragment>
   <section
     aria-labelledby="top-stories-heading"
-    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-14492ea-0 eWXduN"
+    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-14492ea-0 eWXduN"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-14492ea-1 kBWCTE"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA"
       >
         <div
           class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -19,7 +19,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
         <h2
           class="Heading-sc-1x4gwjz-2 eZofTG"
         >
-          <div
+          <span
             class="FlexColumn-wx5kdp-0 dgpsiS"
           >
             <span
@@ -33,7 +33,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
                 Top Stories
               </span>
             </span>
-          </div>
+          </span>
         </h2>
       </div>
       <ul
@@ -55,7 +55,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
                 class="Headline-sc-1dvfmi3-3 gejHzT"
               >
                 <a
-                  class="Link-sc-1dvfmi3-5 yQgSu"
+                  class="Link-sc-1dvfmi3-5 jeUMCT"
                   href="/mundo/noticias-internacional-51939501"
                 >
                   China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
@@ -90,7 +90,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
                 class="Headline-sc-1dvfmi3-3 gejHzT"
               >
                 <a
-                  class="Link-sc-1dvfmi3-5 yQgSu"
+                  class="Link-sc-1dvfmi3-5 jeUMCT"
                   href="/pidgin/tori-51945757"
                 >
                   Nigeria don get five new cases of Coronavirus - See how e happun
@@ -120,14 +120,14 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 <DocumentFragment>
   <section
     aria-labelledby="top-stories-heading"
-    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-14492ea-0 eWXduN"
+    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-14492ea-0 eWXduN"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-14492ea-1 kBWCTE"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA"
       >
         <div
           class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -135,7 +135,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
         <h2
           class="Heading-sc-1x4gwjz-2 eZofTG"
         >
-          <div
+          <span
             class="FlexColumn-wx5kdp-0 dgpsiS"
           >
             <span
@@ -149,11 +149,11 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
                 Top Stories
               </span>
             </span>
-          </div>
+          </span>
         </h2>
       </div>
       <div
-        class="SpacingDiv-sc-14492ea-2 eZWPCT"
+        class="SingleContentWrapper-opyob2-2 cSBeTC"
       >
         <div
           class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
@@ -166,7 +166,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
               class="Headline-sc-1dvfmi3-3 gejHzT"
             >
               <a
-                class="Link-sc-1dvfmi3-5 yQgSu"
+                class="Link-sc-1dvfmi3-5 jeUMCT"
                 href="/mundo/noticias-internacional-51939501"
               >
                 China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos

@@ -184,6 +184,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'ထိပ်တန်း သတင်းများ',
+      featuresAnalysisTitle: 'ဆောင်းပါး',
     },
     brandSVG,
     mostRead: {
@@ -195,6 +197,9 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

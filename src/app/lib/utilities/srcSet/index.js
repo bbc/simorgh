@@ -13,7 +13,7 @@ export const createSrcset = (
   }
 
   const requiredResolutions = resolutions.filter(
-    (resolution) => resolution <= originalImageWidth,
+    resolution => resolution <= originalImageWidth,
   );
 
   if (
@@ -24,7 +24,7 @@ export const createSrcset = (
   }
 
   const urls = requiredResolutions.map(
-    (resolution) =>
+    resolution =>
       `${buildIChefUrl({ originCode, locator, resolution })} ${resolution}w`,
   );
 
@@ -34,7 +34,7 @@ export const getPlaceholderSrcSet = ({ originCode, locator }) => {
   if (!originCode) return '';
   if (!locator) return '';
   return DEFAULT_RESOLUTIONS.map(
-    (resolution) =>
+    resolution =>
       `${buildIChefUrl({ originCode, locator, resolution })} ${resolution}w`,
   ).join(', ');
 };

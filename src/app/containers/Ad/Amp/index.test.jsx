@@ -5,6 +5,8 @@ import { render } from '@testing-library/react';
 import AmpAd from './index';
 
 describe('AMP Navigation', () => {
+  process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+
   describe('Snapshots', () => {
     shouldMatchSnapshot(
       'should correctly render an AMP leaderboard ad',

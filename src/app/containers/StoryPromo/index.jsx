@@ -19,6 +19,10 @@ import LinkContents from './LinkContents';
 import MediaIndicatorContainer from './MediaIndicator';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import IndexAlsosContainer from './IndexAlsos';
+import loggerNode from '#lib/logger.node';
+import { MEDIA_MISSING } from '#lib/logger.const';
+
+const logger = loggerNode(__filename);
 
 const PROMO_TYPES = ['top', 'regular', 'leading'];
 
@@ -79,6 +83,7 @@ const StoryPromoContainer = ({
   dir,
   displayImage,
   displaySummary,
+  isRecommendation,
 }) => {
   const {
     altCalendar,
@@ -104,9 +109,31 @@ const StoryPromoContainer = ({
     item,
     isAssetTypeCode,
   );
-  const summary = pathOr(null, ['summary'], item);
+
+  const overtypedSummary = pathOr(null, ['overtypedSummary'], item);
+  const hasWhiteSpaces = overtypedSummary && !overtypedSummary.trim().length;
+
+  let promoSummary;
+  if (overtypedSummary && !hasWhiteSpaces) {
+    promoSummary = overtypedSummary;
+  } else {
+    const summary = pathOr(null, ['summary'], item);
+    promoSummary = summary;
+  }
+
   const timestamp = pathOr(null, ['timestamp'], item);
   const relatedItems = pathOr(null, ['relatedItems'], item);
+  const cpsType = pathOr(null, ['cpsType'], item);
+  // If mediaStatusCode is visible, there is an error in rendering the block
+  const mediaStatuscode = pathOr(null, ['media', 'statusCode'], item);
+
+  if (cpsType === 'MAP' && mediaStatuscode) {
+    logger.warn(MEDIA_MISSING, {
+      url: pathOr(null, ['section', 'uri'], item),
+      mediaStatuscode,
+      mediaBlock: item.media,
+    });
+  }
 
   const linkcontents = <LinkContents item={item} isInline={!displayImage} />;
 
@@ -116,6 +143,8 @@ const StoryPromoContainer = ({
 
   const useLargeImages = promoType === 'top' || promoType === 'leading';
 
+  const headingTagOverride = isRecommendation ? 'div' : null;
+
   const Info = (
     <>
       {headline && (
@@ -124,6 +153,7 @@ const StoryPromoContainer = ({
           service={service}
           promoType={promoType}
           promoHasImage={displayImage}
+          as={headingTagOverride}
         >
           <Link href={url}>
             {isLive ? (
@@ -142,17 +172,17 @@ const StoryPromoContainer = ({
           </Link>
         </Headline>
       )}
-      {summary && displaySummary && (
+      {promoSummary && displaySummary && !isRecommendation && (
         <Summary
           script={script}
           service={service}
           promoType={promoType}
           promoHasImage={displayImage}
         >
-          {summary}
+          {promoSummary}
         </Summary>
       )}
-      {timestamp && !isStoryPromoPodcast && !isLive && (
+      {timestamp && !isStoryPromoPodcast && !isRecommendation && !isLive && (
         <Timestamp
           altCalendar={altCalendar}
           locale={datetimeLocale}
@@ -215,6 +245,7 @@ StoryPromoContainer.propTypes = {
   dir: oneOf(['ltr', 'rtl']),
   displayImage: bool,
   displaySummary: bool,
+  isRecommendation: bool,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -223,6 +254,7 @@ StoryPromoContainer.defaultProps = {
   dir: 'ltr',
   displayImage: true,
   displaySummary: true,
+  isRecommendation: false,
 };
 
 export default StoryPromoContainer;

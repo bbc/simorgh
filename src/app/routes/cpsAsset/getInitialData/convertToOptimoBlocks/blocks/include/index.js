@@ -3,27 +3,19 @@ import nodeLogger from '#lib/logger.node';
 
 const logger = nodeLogger(__filename);
 
-// this defaults all VJ, IDT2 and IDT1 includes to the specified urls for now
-// should be removed once mozart routes have been created
-const includeUrls = {
-  vj: 'https://simorgh-include-test.s3-eu-west-1.amazonaws.com/vj.html',
-  idt2: 'https://simorgh-include-test.s3-eu-west-1.amazonaws.com/idt2.html',
-  idt1: 'https://simorgh-include-test.s3-eu-west-1.amazonaws.com/idt1.html',
+const buildIncludeUrl = (href, type) => {
+  const resolvers = {
+    idt1: '',
+    idt2: '/html',
+    vj: '',
+  };
+
+  const withTrailingHref = href.startsWith('/') ? href : `/${href}`;
+
+  return `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${resolvers[type]}`;
 };
 
-/* This ensures the Include markup is encoded before being added
-   in the page data because serializing window.SIMORGH_DATA with an html string
-    as part of the JSON will result in having some characters unescaped.
-*/
-const encodeHTML = (str) =>
-  String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-
-const fetchMarkup = async (url) => {
+const fetchMarkup = async url => {
   try {
     /* The timeout value here is arbitrary and subject to change. It's purpose is to ensure that pending promises do not delay page rendering on the server.
       Using isomorphic-fetch means we use window.fetch, which does not have a timeout option, on the client and node-fetch, which does, on the server.
@@ -33,7 +25,7 @@ const fetchMarkup = async (url) => {
       throw new Error(`Failed to fetch include at: ${url}`);
     } else {
       const html = await res.text();
-      return encodeHTML(html);
+      return html;
     }
   } catch (e) {
     logger.error(
@@ -61,7 +53,7 @@ const convertInclude = async ({ href, type, ...rest }) => {
   const hrefTypePostion = () => (href.indexOf('/') === 0 ? 1 : 0);
 
   // This checks if the supportedType is in the correct position of the href
-  const hrefIsSupported = () => (supportedType) =>
+  const hrefIsSupported = () => supportedType =>
     href && href.startsWith(supportedType, hrefTypePostion());
 
   // This extracts the type from the href
@@ -71,7 +63,6 @@ const convertInclude = async ({ href, type, ...rest }) => {
 
   // This determines if the type is supported and returns the include type name
   const includeType = supportedTypes[typeExtraction];
-
   if (!includeType) {
     return null;
   }
@@ -80,8 +71,7 @@ const convertInclude = async ({ href, type, ...rest }) => {
     type,
     model: {
       href,
-      // `includeUrls[includeType]` here should be replaced with `href` once mozart routes have been created.
-      html: await fetchMarkup(includeUrls[includeType]),
+      html: await fetchMarkup(buildIncludeUrl(href, includeType)),
       type: includeType,
       ...rest,
     },

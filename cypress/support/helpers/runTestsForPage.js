@@ -18,18 +18,7 @@ import {
 
 import getPaths from './getPaths';
 import serviceHasPageType from './serviceHasPageType';
-
-const visitPage = (path, pageType) => {
-  const expectedContentType = 'text/html';
-  const isErrorPage = pageType.includes('error');
-  const expectedStatus = isErrorPage ? 404 : 200;
-  const failOnStatusCode = !isErrorPage;
-
-  cy.testResponseCodeAndType(path, expectedStatus, expectedContentType);
-  cy.visit(path, {
-    failOnStatusCode,
-  });
-};
+import visitPage from './visitPage';
 
 // This function takes all types of tests we have and runs in this series of steps with the fewest possible page visits
 
@@ -48,11 +37,11 @@ const runTestsForPage = ({
 }) => {
   // For each Service and Page Type in the config file it visits the path and it writes a describe saying this.
   Object.keys(config)
-    .filter((service) => serviceHasPageType(service, pageType))
-    .forEach((service) => {
+    .filter(service => serviceHasPageType(service, pageType))
+    .forEach(service => {
       const paths = getPaths(service, pageType);
 
-      paths.forEach((currentPath) => {
+      paths.forEach(currentPath => {
         describe(`${pageType} - ${currentPath} - Canonical`, () => {
           before(() => {
             Cypress.env('currentPath', currentPath);

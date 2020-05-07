@@ -180,6 +180,8 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% посттун аягы',
         },
       },
+      topStoriesTitle: 'Башкы кабарлар',
+      featuresAnalysisTitle: 'Редактордун тандоосу',
     },
     brandSVG,
     mostRead: {
@@ -190,6 +192,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

@@ -17,7 +17,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     ads: {
-      hasAds: false,
+      hasAds: true,
     },
     lang: `pt-BR`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -183,6 +183,8 @@ export const service = {
           endTextVisuallyHidden: 'Final de %provider_name% post',
         },
       },
+      topStoriesTitle: 'Principais notícias',
+      featuresAnalysisTitle: 'Leia mais',
     },
     brandSVG,
     mostRead: {
@@ -193,6 +195,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: true,
     },
     footer: {
       trustProjectLink: {

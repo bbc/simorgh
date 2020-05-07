@@ -144,7 +144,7 @@ export const service = {
         video: 'ਵੀਡੀਓ',
         listen: 'ਸੁਣੋ',
         watch: 'ਦੇਖੋ',
-        liveLabel: 'ਸਿੱਧਾ ਪ੍ਰਸਾਰਣ',
+        liveLabel: 'LIVE',
         nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
@@ -166,6 +166,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'ਤਾਜ਼ਾ ਘਟਨਾਕ੍ਰਮ',
+      featuresAnalysisTitle: 'Features',
     },
     brandSVG,
     mostRead: {
@@ -176,6 +178,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     navigation: [
       {

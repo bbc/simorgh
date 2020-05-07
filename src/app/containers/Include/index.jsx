@@ -1,29 +1,12 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
+import React, { useContext } from 'react';
 import { string } from 'prop-types';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
+import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 
-/* The Include html which we are getting would be encoded
-   so that html characters are escaped when serializing the page data.
-   This function ensures that it gets decoded back to an html string.
- */
-const decodeHTML = (str) => {
-  const replacedParts = {
-    '&quot;': '"',
-    '&#39;': "'",
-    '&amp;': '&',
-    '&lt;': '<',
-    '&gt;': '>',
-  };
-  const replacementsRegex = new RegExp(
-    Object.keys(replacedParts).join('|'),
-    'gi',
-  );
-  return str.replace(replacementsRegex, (match) => replacedParts[match]);
-};
-
 const IncludeContainer = ({ html, type }) => {
+  const { isAmp } = useContext(RequestContext);
   const { enabled } = useToggle('include');
 
   const supportedTypes = {
@@ -31,7 +14,8 @@ const IncludeContainer = ({ html, type }) => {
     vj: 'vj',
   };
 
-  const shouldNotRenderInclude = !enabled || !html || !supportedTypes[type];
+  const shouldNotRenderInclude =
+    isAmp || !enabled || !html || !supportedTypes[type];
 
   if (shouldNotRenderInclude) {
     return null;
@@ -41,7 +25,7 @@ const IncludeContainer = ({ html, type }) => {
     <GridItemConstrainedMedium>
       <div
         suppressHydrationWarning
-        dangerouslySetInnerHTML={{ __html: decodeHTML(html) }}
+        dangerouslySetInnerHTML={{ __html: html }}
       />
     </GridItemConstrainedMedium>
   );

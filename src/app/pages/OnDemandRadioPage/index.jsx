@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
-import { string, number, shape } from 'prop-types';
 import styled from 'styled-components';
+import { shape, string, number } from 'prop-types';
 import MetadataContainer from '../../containers/Metadata';
+import ATIAnalytics from '../../containers/ATIAnalytics';
+import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import HeadingBlock from '#containers/RadioPageBlocks/Blocks/Heading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
+import DatestampBlock from '#containers/RadioPageBlocks/Blocks/Datestamp';
 import AudioPlayerBlock from '#containers/RadioPageBlocks/Blocks/AudioPlayer';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
@@ -23,7 +26,8 @@ const getEpisodeAvailability = (availableFrom, availableUntil) => {
 };
 
 const StyledGelPageGrid = styled(GelPageGrid)`
-  flex-grow: 1;
+  width: 100%;
+  flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
 `;
 
 const renderEpisode = (
@@ -52,7 +56,6 @@ const OnDemandRadioPage = ({ pageData }) => {
   const {
     language,
     brandTitle,
-    episodeTitle,
     headline,
     summary,
     shortSynopsis,
@@ -60,11 +63,14 @@ const OnDemandRadioPage = ({ pageData }) => {
     episodeId,
     episodeAvailableFrom,
     episodeAvailableUntil,
+    releaseDateTimeStamp,
   } = pageData;
   const { dir } = useContext(ServiceContext);
 
   return (
     <>
+      <ATIAnalytics data={pageData} />
+      <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
         title={headline}
         lang={language}
@@ -108,7 +114,7 @@ const OnDemandRadioPage = ({ pageData }) => {
           margins={{ group0: true, group1: true, group2: true, group3: true }}
         >
           <HeadingBlock idAttr={idAttr} text={brandTitle} />
-          <ParagraphBlock text={episodeTitle} />
+          <DatestampBlock timestamp={releaseDateTimeStamp} />
           <ParagraphBlock text={summary} />
           {renderEpisode(
             masterBrand,
@@ -125,12 +131,12 @@ const OnDemandRadioPage = ({ pageData }) => {
 OnDemandRadioPage.propTypes = {
   pageData: shape({
     brandTitle: string,
-    episodeTitle: string,
     headline: string,
     summary: string,
     language: string,
     episodeAvailableFrom: number,
     episodeAvailableUntil: number,
+    releaseDateTimeStamp: number,
   }).isRequired,
 };
 

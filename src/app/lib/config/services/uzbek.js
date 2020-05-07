@@ -179,6 +179,8 @@ export const service = {
           endTextVisuallyHidden: 'Охири %provider_name% пост',
         },
       },
+      topStoriesTitle: 'Бош мақола',
+      featuresAnalysisTitle: 'Муҳаррир танлови',
     },
     brandSVG,
     mostRead: {
@@ -189,6 +191,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

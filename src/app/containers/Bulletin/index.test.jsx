@@ -48,8 +48,8 @@ const liveRadioBulletinItem = {
   isLive: true,
 };
 
-const BulletinWithContext = (item) => (
-  <ServiceContextProvider service="igbo">
+const BulletinWithContext = (item, service = 'igbo') => (
+  <ServiceContextProvider service={service}>
     <BulletinContainer item={item} />
   </ServiceContextProvider>
 );
@@ -59,6 +59,11 @@ describe('Bulletin Container', () => {
     shouldMatchSnapshot(
       'should render a TV bulletin correctly',
       BulletinWithContext(tvBulletinItem),
+    );
+
+    shouldMatchSnapshot(
+      'should render a TV bulletin with lang attribute',
+      BulletinWithContext(tvBulletinItem, 'scotland'),
     );
 
     shouldMatchSnapshot(

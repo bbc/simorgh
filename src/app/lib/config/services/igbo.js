@@ -29,11 +29,11 @@ export const service = {
     defaultImageAltText: 'BBC News Ìgbò',
     dir: 'ltr',
     externalLinkText: ', Site na mpụta',
-    imageCaptionOffscreenText: 'Nkọwa foto ',
-    videoCaptionOffscreenText: 'Aha onyonyo ',
-    audioCaptionOffscreenText: 'Aha nkeananụānụ',
-    defaultCaptionOffscreenText: 'Ihe a na-akpọ ya ',
-    imageCopyrightOffscreenText: 'Ebe foto si ',
+    imageCaptionOffscreenText: 'Nkọwa foto, ',
+    videoCaptionOffscreenText: 'Aha onyonyo, ',
+    audioCaptionOffscreenText: 'Aha nkeananụānụ, ',
+    defaultCaptionOffscreenText: 'Ihe a na-akpọ ya, ',
+    imageCopyrightOffscreenText: 'Ebe foto si, ',
     brandSVG,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
@@ -181,6 +181,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'Isi akụkọ',
+      featuresAnalysisTitle: 'Features',
     },
     mostRead: {
       header: 'Akachasị Gụọ',
@@ -190,6 +192,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     navigation: [
       {

@@ -63,8 +63,13 @@ describe('Chartbeat utilities', () => {
       },
       {
         type: 'media',
-        expectedDefaultType: 'Live Radio',
-        expectedShortType: 'Live Radio',
+        expectedDefaultType: 'Radio',
+        expectedShortType: 'Radio',
+      },
+      {
+        type: 'mostRead',
+        expectedDefaultType: 'Most Read',
+        expectedShortType: 'Most Read',
       },
       {
         type: null,
@@ -159,8 +164,7 @@ describe('Chartbeat utilities', () => {
         service: 'korean',
         pageType: 'media',
         description: 'should return expected section for live radio',
-        expected:
-          'Korean, Korean - , Korean - unknown, Korean - unknown, Korean - unknown',
+        expected: 'Korean, Korean - Radio',
       },
     ];
 
@@ -200,9 +204,7 @@ describe('Chartbeat utilities', () => {
         .fn()
         .mockImplementation(() => 'This is an article title');
       articleUtils.getPromoHeadline = mockGetPromoHeadline;
-      expect(getTitle(pageType, pageData, null)).toBe(
-        'This is an article title',
-      );
+      expect(getTitle({ pageType, pageData })).toBe('This is an article title');
       expect(mockGetPromoHeadline).toHaveBeenCalledTimes(1);
     });
 
@@ -215,7 +217,7 @@ describe('Chartbeat utilities', () => {
         .fn()
         .mockImplementation(() => 'This is a frontpage title');
       frontPageUtils.getPageTitle = mockGetPageTitle;
-      expect(getTitle(pageType, pageData, brandName)).toBe(
+      expect(getTitle({ pageType, pageData, brandName })).toBe(
         'This is a frontpage title',
       );
       expect(mockGetPageTitle).toHaveBeenCalledTimes(1);
@@ -230,7 +232,7 @@ describe('Chartbeat utilities', () => {
         .fn()
         .mockImplementation(() => 'This is an index page title');
       frontPageUtils.getPageTitle = mockGetPageTitle;
-      expect(getTitle(pageType, pageData, brandName)).toBe(
+      expect(getTitle({ pageType, pageData, brandName })).toBe(
         'This is an index page title',
       );
       expect(mockGetPageTitle).toHaveBeenCalledTimes(1);
@@ -241,7 +243,7 @@ describe('Chartbeat utilities', () => {
       const pageData = {};
       const brandName = 'BBC News';
 
-      expect(getTitle(pageType, pageData, brandName)).toBe(null);
+      expect(getTitle({ pageType, pageData, brandName })).toBe(null);
     });
 
     it('should return correct title when pageType is MAP', () => {
@@ -254,18 +256,38 @@ describe('Chartbeat utilities', () => {
         },
       };
 
-      expect(getTitle(pageType, pageData)).toBe('MAP Page Title');
+      expect(getTitle({ pageType, pageData })).toBe('MAP Page Title');
     });
 
     it('should return correct title when pageType is media (Live radio)', () => {
       const pageType = 'media';
       const pageData = {
-        promo: {
-          name: 'Live Radio Page Title',
-        },
+        pageTitle: 'Live Radio Page Title',
       };
 
-      expect(getTitle(pageType, pageData)).toBe('Live Radio Page Title');
+      expect(getTitle({ pageType, pageData })).toBe('Live Radio Page Title');
+    });
+
+    it('should return correct title when pageType is media (onDemand radio)', () => {
+      const pageType = 'media';
+      const pageData = {
+        pageTitle: 'OnDemand Radio Page Title',
+      };
+
+      expect(getTitle({ pageType, pageData })).toBe(
+        'OnDemand Radio Page Title',
+      );
+    });
+
+    it('should return correct title when pageType is mostRead', () => {
+      const pageType = 'mostRead';
+      const pageData = {};
+      const brandName = 'BBC News 코리아';
+      const title = 'TOP 뉴스';
+
+      expect(getTitle({ pageType, pageData, brandName, title })).toBe(
+        'TOP 뉴스 - BBC News 코리아',
+      );
     });
   });
 
@@ -387,9 +409,8 @@ describe('Chartbeat utilities', () => {
         platform: 'amp',
         pageType: 'media',
         data: {
-          promo: {
-            name: 'Live Radio Page Title',
-          },
+          pageTitle: 'Live Radio Page Title',
+          contentType: 'player-live',
         },
         brandName: '',
         chartbeatDomain: 'korean.bbc.co.uk',
@@ -404,15 +425,99 @@ describe('Chartbeat utilities', () => {
         idSync: {
           bbc_hid: 'foobar',
         },
-        sections:
-          'Korean, Korean - , Korean - unknown, Korean - unknown, Korean - unknown',
+        sections: 'Korean, Korean - Radio',
         title: 'Live Radio Page Title',
-        contentType: 'Live Radio',
+        contentType: 'player-live',
         uid: 50924,
         virtualReferrer: `\${documentReferrer}`,
       };
 
       expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
     });
+  });
+
+  it('should return config for amp pages when page type is media (onDemand radio) and env is live', () => {
+    const fixtureData = {
+      isAmp: true,
+      platform: 'amp',
+      pageType: 'media',
+      data: {
+        pageTitle: 'OnDemand Radio Page Title',
+        contentType: 'player-episode',
+      },
+      brandName: '',
+      chartbeatDomain: 'korean.bbc.co.uk',
+      env: 'live',
+      service: 'korean',
+      origin: 'bbc.com',
+      previousPath: '/previous-path',
+    };
+
+    const expectedConfig = {
+      domain: 'korean.bbc.co.uk',
+      idSync: {
+        bbc_hid: 'foobar',
+      },
+      sections: 'Korean, Korean - Radio',
+      title: 'OnDemand Radio Page Title',
+      contentType: 'player-episode',
+      uid: 50924,
+      virtualReferrer: `\${documentReferrer}`,
+    };
+
+    expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+  });
+
+  it('should return config for canonical pages when page type is mostRead and env is not live', () => {
+    const fixtureData = {
+      isAmp: false,
+      platform: 'canonical',
+      pageType: 'mostRead',
+      data: {
+        name: 'Most Read Page Title',
+      },
+      brandName: 'BBC News 코리아',
+      mostReadTitle: 'TOP 뉴스',
+      chartbeatDomain: 'korean.bbc.co.uk',
+      env: 'test',
+      service: 'korean',
+      origin: 'test.bbc.com',
+      previousPath: '/previous-path',
+    };
+
+    const expectedConfig = {
+      domain: 'test.bbc.co.uk',
+      idSync: {
+        bbc_hid: 'foobar',
+      },
+      path: '/',
+      sections: 'Korean, Korean - Most Read',
+      type: 'Most Read',
+      title: 'TOP 뉴스 - BBC News 코리아',
+      uid: 50924,
+      useCanonical: true,
+      virtualReferrer: 'test.bbc.com/previous-path',
+    };
+
+    expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+  });
+
+  it('should return null for virtualReferrer when isOnClient is false and there is no previousPath', () => {
+    isOnClient = false;
+
+    const fixtureData = {
+      isAmp: false,
+      platform: 'canonical',
+      pageType: 'frontPage',
+      data: {},
+      brandName: 'BBC-News',
+      chartbeatDomain: 'bbc.co.uk',
+      env: 'test',
+      service: 'news',
+      origin: 'test.bbc.com',
+    };
+
+    const chartbeatConfig = getConfig(fixtureData);
+    expect(chartbeatConfig.virtualReferrer).toBeNull();
   });
 });

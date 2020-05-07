@@ -1,20 +1,18 @@
 import React, { useContext } from 'react';
-import { bool, string, oneOf } from 'prop-types';
+import { oneOf, string, elementType } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import Canonical from './Canonical';
-
-const getMostReadEndpoint = ({ service, variant }) =>
-  variant
-    ? `/${service}/mostread/${variant}.json`
-    : `/${service}/mostread.json`;
+import mostReadShape from './utilities/mostReadShape';
+import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 
 const MostReadContainer = ({
   mostReadEndpointOverride,
+  initialData,
   columnLayout,
-  constrainMaxWidth,
-  isOnFrontPage,
+  size,
+  wrapper,
 }) => {
   const { variant, isAmp } = useContext(RequestContext);
   const {
@@ -35,26 +33,29 @@ const MostReadContainer = ({
 
   return (
     <Canonical
+      initialData={initialData}
       endpoint={endpoint}
-      constrainMaxWidth={constrainMaxWidth}
+      wrapper={wrapper}
       columnLayout={columnLayout}
-      isOnFrontPage={isOnFrontPage}
+      size={size}
     />
   );
 };
 
 MostReadContainer.propTypes = {
   mostReadEndpointOverride: string,
-  constrainMaxWidth: bool,
   columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
-  isOnFrontPage: bool,
+  size: oneOf(['default', 'small']),
+  initialData: mostReadShape,
+  wrapper: elementType,
 };
 
 MostReadContainer.defaultProps = {
-  mostReadEndpointOverride: null,
-  constrainMaxWidth: false,
+  mostReadEndpointOverride: undefined,
   columnLayout: 'multiColumn',
-  isOnFrontPage: false,
+  size: 'default',
+  initialData: undefined,
+  wrapper: undefined,
 };
 
 export default MostReadContainer;

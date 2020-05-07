@@ -5,7 +5,7 @@ import ErrorPage from '#pages/ErrorPage';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import shouldRender from './shouldRender';
 
-const WithData = (Component) => {
+const WithData = Component => {
   const DataContainer = ({ pageData, status, ...props }) => {
     const { service } = props;
     const { passportHomes } = useContext(ServiceContext) || {};

@@ -169,6 +169,8 @@ export const service = {
           endTextVisuallyHidden: 'Paylaşımın sonu %provider_name%',
         },
       },
+      topStoriesTitle: 'Bu günün xəbərləri',
+      featuresAnalysisTitle: 'Bunları da oxuyun',
     },
     brandSVG,
     mostRead: {
@@ -179,6 +181,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

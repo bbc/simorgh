@@ -8,7 +8,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     ads: {
-      hasAds: false,
+      hasAds: true,
     },
     lang: `hi`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -182,6 +182,8 @@ export const service = {
           endTextVisuallyHidden: 'पोस्ट %provider_name% समाप्त',
         },
       },
+      topStoriesTitle: 'टॉप स्टोरी',
+      featuresAnalysisTitle: 'ज़रूर पढ़ें',
     },
     brandSVG,
     mostRead: {
@@ -192,6 +194,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: true,
     },
     footer: {
       trustProjectLink: {
@@ -241,6 +246,10 @@ export const service = {
         url: '/hindi',
       },
       {
+        title: 'कोरोनावायरस',
+        url: '/hindi/international-51848794',
+      },
+      {
         title: 'भारत',
         url: '/hindi/india',
       },
@@ -271,10 +280,6 @@ export const service = {
       {
         title: 'बीबीसी स्पेशल',
         url: '/hindi/in_depth',
-      },
-      {
-        title: '#ISWOTY',
-        url: '/hindi/resources/idt-a6da5349-3698-4f42-9e5b-35513c8c0537',
       },
     ],
   },
