@@ -436,29 +436,6 @@ describe('getAtiUrl', () => {
     const data = [];
     expect(getAtiUrl(data)).toEqual('');
   });
-
-  it('should return ref as last item in url', () => {
-    const data = [
-      {
-        key: 'a',
-        value: 'a1',
-        wrap: false,
-      },
-      {
-        key: 'ref',
-        value: 'referrer',
-        wrap: false,
-      },
-      {
-        key: 'c',
-        value: 'c1',
-        wrap: false,
-      },
-    ];
-    const returnValue = getAtiUrl(data).split('&');
-
-    expect(returnValue[returnValue.length - 1]).toEqual('ref=referrer');
-  });
 });
 
 describe('getEventInfo', () => {

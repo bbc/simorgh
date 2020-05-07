@@ -188,16 +188,47 @@ describe('ATIAnalytics params', () => {
       );
     });
 
-    it('should have both ref parameter and x6 referrer url parameter when referrer url exists', () => {
+    it('should have both ref parameter and x6 referrer url parameter, if referrer url exists', () => {
       const params = buildATIUrl(
         article,
         { ...requestContext, pageType: 'article' },
         serviceContext,
       );
-      const decodedParams = decodeURIComponent(params).split('&');
+      const decodedParams = params.split('&');
 
-      expect(decodedParams.pop()).toEqual('ref=originhttp://www.example.com');
-      expect(decodedParams).toContain('x6=[originhttp://www.example.com]');
+      expect(decodedParams).toContain(
+        'x6=[originhttp%3A%2F%2Fwww.example.com]',
+      );
+      expect(decodedParams).toContain('ref=originhttp%3A%2F%2Fwww.example.com');
+    });
+
+    it('should have ref parameter as the last parameter, if referrer url exists', () => {
+      const params = buildATIUrl(
+        article,
+        { ...requestContext, pageType: 'article' },
+        serviceContext,
+      );
+      const decodedParams = params.split('&');
+
+      expect(decodedParams.pop()).toEqual(
+        'ref=originhttp%3A%2F%2Fwww.example.com',
+      );
+    });
+
+    it('should not have ref and x6 parameters, if referrer url does not exist', () => {
+      const params = buildATIUrl(
+        article,
+        { ...requestContext, pageType: 'article', previousPath: '' },
+        serviceContext,
+      );
+      const decodedParams = params.split('&');
+
+      expect(decodedParams).not.toContain(
+        'x6=[originhttp%3A%2F%2Fwww.example.com]',
+      );
+      expect(decodedParams).not.toContain(
+        'ref=originhttp%3A%2F%2Fwww.example.com',
+      );
     });
   });
 
