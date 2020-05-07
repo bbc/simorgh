@@ -8,9 +8,11 @@ import useToggle from '#hooks/useToggle';
 const AdSlot = ({ type }) => {
   const location = useLocation();
   useEffect(() => {
-    window.dotcom.cmd.push(() => {
-      window.dotcom.ads.registerSlot(type);
-    });
+    if (window.dotcom) {
+      window.dotcom.cmd.push(() => {
+        window.dotcom.ads.registerSlot(type);
+      });
+    }
   }, [location, type]);
 
   return <div id={`dotcom-${type}`} className="dotcom-ad" />;
@@ -22,10 +24,12 @@ AdSlot.propTypes = {
 
 const CanonicalAd = () => {
   useEffect(() => {
-    window.dotcom.bootstrap({
-      pageAds: true,
-      playerAds: false,
-    });
+    if (window.dotcom) {
+      window.dotcom.bootstrap({
+        pageAds: true,
+        playerAds: false,
+      });
+    }
   }, []);
 
   const { enabled: adsEnabled } = useToggle('ads');
