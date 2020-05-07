@@ -1,7 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MediaPageBlocks AudioPlayer should render correctly for amp 1`] = `
-.c1 {
+<html>
+  <head>
+    <script
+      async="true"
+      custom-element="amp-iframe"
+      src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","duration":"PT29M30S","thumbnailUrl":"ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg","uploadDate":"2020-04-23T15:30:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/externalId/id/ko/amp?morph_env=live"}
+    </script>
+  </head>
+  <body>
+    .c1 {
   height: 165px;
   position: relative;
   overflow: hidden;
@@ -26,16 +40,7 @@ exports[`MediaPageBlocks AudioPlayer should render correctly for amp 1`] = `
   }
 }
 
-<html>
-  <head>
-    <script
-      async="true"
-      custom-element="amp-iframe"
-      src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
-    />
-  </head>
-  <body>
-    <div>
+<div>
       <div
         class="c0"
       >
@@ -105,23 +110,36 @@ exports[`MediaPageBlocks AudioPlayer should render correctly for canonical 1`] =
   }
 }
 
-<div
-  class="c0"
->
-  <div
-    class="c1"
-  >
-    <iframe
-      allow="autoplay; fullscreen"
-      allowfullscreen=""
-      class="c2"
-      scrolling="no"
-      src="https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/externalId/id/ko?morph_env=live"
-      title="오디오 플레이어"
-    />
-    <noscript />
-  </div>
-</div>
+<html>
+  <head>
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","duration":"PT29M30S","thumbnailUrl":"ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg","uploadDate":"2020-04-23T15:30:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/externalId/id/ko?morph_env=live"}
+    </script>
+  </head>
+  <body>
+    <div>
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        >
+          <iframe
+            allow="autoplay; fullscreen"
+            allowfullscreen=""
+            class="c2"
+            scrolling="no"
+            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/externalId/id/ko?morph_env=live"
+            title="오디오 플레이어"
+          />
+          <noscript />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
 `;
 
 exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo_radio should render correctly for amp 1`] = `
@@ -132,6 +150,11 @@ exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is ov
       custom-element="amp-iframe"
       src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
     />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","duration":"PT29M30S","thumbnailUrl":"ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg","uploadDate":"2020-04-23T15:30:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om/amp?morph_env=live"}
+    </script>
   </head>
   <body>
     .c1 {
@@ -194,7 +217,16 @@ exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is ov
 `;
 
 exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo_radio should render correctly for canonical 1`] = `
-.c1 {
+<html>
+  <head>
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","duration":"PT29M30S","thumbnailUrl":"ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg","uploadDate":"2020-04-23T15:30:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om?morph_env=live"}
+    </script>
+  </head>
+  <body>
+    .c1 {
   height: 165px;
   position: relative;
   overflow: hidden;
@@ -229,21 +261,25 @@ exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is ov
   }
 }
 
-<div
-  class="c0"
->
-  <div
-    class="c1"
-  >
-    <iframe
-      allow="autoplay; fullscreen"
-      allowfullscreen=""
-      class="c2"
-      scrolling="no"
-      src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om?morph_env=live"
-      title="Audio player"
-    />
-    <noscript />
-  </div>
-</div>
+<div>
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        >
+          <iframe
+            allow="autoplay; fullscreen"
+            allowfullscreen=""
+            class="c2"
+            scrolling="no"
+            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om?morph_env=live"
+            title="Audio player"
+          />
+          <noscript />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
 `;

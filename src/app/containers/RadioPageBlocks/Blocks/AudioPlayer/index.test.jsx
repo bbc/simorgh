@@ -11,6 +11,14 @@ import AudioPlayer from '.';
 
 const origin = 'http://localhost:7080';
 
+const metadata = {
+  promoBrandTitle: 'ماښامنۍ خپرونه',
+  shortSynopsis: 'د بي بي سي ورلډ سروس څخه پروګرام کول',
+  durationISO8601: 'PT29M30S',
+  imageUrl: 'ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg',
+  episodeAvailableFrom: 1587655800000,
+};
+
 describe('MediaPageBlocks AudioPlayer', () => {
   shouldMatchSnapshot(
     'should render correctly for canonical',
@@ -24,6 +32,7 @@ describe('MediaPageBlocks AudioPlayer', () => {
             idAttr="idAttr"
             externalId="externalId"
             id="id"
+            {...metadata}
           />
         </BrowserRouter>
       </ServiceContextProvider>
@@ -43,6 +52,7 @@ describe('MediaPageBlocks AudioPlayer', () => {
             idAttr="idAttr"
             externalId="externalId"
             id="id"
+            {...metadata}
           />
         </BrowserRouter>
       </ServiceContextProvider>
@@ -62,6 +72,7 @@ describe('MediaPageBlocks AudioPlayer', () => {
               idAttr="idAttr"
               externalId="externalId"
               id="id"
+              {...metadata}
             />
           </BrowserRouter>
         </ServiceContextProvider>
@@ -77,7 +88,12 @@ describe('MediaPageBlocks AudioPlayer', () => {
       <RequestContext.Provider value={{ platform: 'foobar', origin }}>
         <ServiceContextProvider service="korean">
           <BrowserRouter>
-            <AudioPlayer uuid="uuid" idAttr="idAttr" externalId="externalId" />
+            <AudioPlayer
+              uuid="uuid"
+              idAttr="idAttr"
+              externalId="externalId"
+              {...metadata}
+            />
           </BrowserRouter>
         </ServiceContextProvider>
       </RequestContext.Provider>,
@@ -92,7 +108,7 @@ describe('MediaPageBlocks AudioPlayer', () => {
       <RequestContext.Provider value={{ platform: 'foobar', origin }}>
         <ServiceContextProvider service="korean">
           <BrowserRouter>
-            <AudioPlayer uuid="uuid" idAttr="idAttr" id="id" />
+            <AudioPlayer uuid="uuid" idAttr="idAttr" id="id" {...metadata} />
           </BrowserRouter>
         </ServiceContextProvider>
       </RequestContext.Provider>,
@@ -112,6 +128,7 @@ describe('MediaPageBlocks AudioPlayer', () => {
               idAttr="idAttr"
               externalId="bbc_oromo_radio"
               id="id"
+              {...metadata}
             />
           </BrowserRouter>
         </ServiceContextProvider>
@@ -131,6 +148,7 @@ describe('MediaPageBlocks AudioPlayer', () => {
               idAttr="idAttr"
               externalId="bbc_oromo_radio"
               id="id"
+              {...metadata}
             />
           </BrowserRouter>
         </ServiceContextProvider>

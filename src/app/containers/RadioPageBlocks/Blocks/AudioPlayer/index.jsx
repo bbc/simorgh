@@ -7,7 +7,7 @@ import {
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import { string, bool } from 'prop-types';
+import { string, bool, number } from 'prop-types';
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
@@ -17,6 +17,7 @@ import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
+import StructuredData from './StructuredData';
 
 const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
 
@@ -54,6 +55,11 @@ const AudioPlayer = ({
   id: assetId,
   idAttr,
   isExpired,
+  promoBrandTitle,
+  shortSynopsis,
+  durationISO8601,
+  imageUrl,
+  episodeAvailableFrom,
 }) => {
   const { liveRadioOverrides, lang, translations, service } = useContext(
     ServiceContext,
@@ -127,6 +133,14 @@ const AudioPlayer = ({
           noJsClassName="no-js"
         />
       )}
+      <StructuredData
+        promoBrandTitle={promoBrandTitle}
+        shortSynopsis={shortSynopsis}
+        durationISO8601={durationISO8601}
+        embedUrl={embedUrl}
+        imageUrl={imageUrl}
+        episodeAvailableFrom={episodeAvailableFrom}
+      />
     </AudioPlayerWrapper>
   );
 };
@@ -136,6 +150,11 @@ AudioPlayer.propTypes = {
   id: string,
   idAttr: string,
   isExpired: bool,
+  promoBrandTitle: string,
+  shortSynopsis: string,
+  durationISO8601: string,
+  imageUrl: string,
+  episodeAvailableFrom: number,
 };
 
 AudioPlayer.defaultProps = {
@@ -143,6 +162,11 @@ AudioPlayer.defaultProps = {
   id: '',
   idAttr: null,
   isExpired: false,
+  promoBrandTitle: '',
+  shortSynopsis: '',
+  durationISO8601: '',
+  imageUrl: '',
+  episodeAvailableFrom: null,
 };
 
 export default AudioPlayer;

@@ -205,6 +205,11 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
       custom-element="amp-iframe"
       src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
     />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","duration":"PT29M30S","thumbnailUrl":"ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg","uploadDate":"2020-05-01T15:30:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps/amp?morph_env=live"}
+    </script>
   </head>
   <body>
     .c3 {
@@ -854,6 +859,11 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
       content="ماښامنۍ خپرونه - BBC News پښتو"
       name="twitter:title"
     />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","duration":"PT29M30S","thumbnailUrl":"ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg","uploadDate":"2020-05-01T15:30:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"}
+    </script>
   </head>
   <body>
     <div>

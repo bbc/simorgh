@@ -29,12 +29,21 @@ const StructuredData = ({
 };
 
 StructuredData.propTypes = {
-  promoBrandTitle: string.isRequired,
-  shortSynopsis: string.isRequired,
-  durationISO8601: string.isRequired,
-  embedUrl: string.isRequired,
-  imageUrl: string.isRequired,
-  episodeAvailableFrom: number.isRequired,
+  promoBrandTitle: string,
+  shortSynopsis: string,
+  durationISO8601: string,
+  embedUrl: string,
+  imageUrl: string,
+  episodeAvailableFrom: number,
+};
+
+StructuredData.defaultProps = {
+  promoBrandTitle: '',
+  shortSynopsis: '',
+  durationISO8601: '',
+  embedUrl: '',
+  imageUrl: '',
+  episodeAvailableFrom: null,
 };
 
 export default StructuredData;
