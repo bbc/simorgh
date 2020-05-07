@@ -1,4 +1,5 @@
-import { number, shape, string, arrayOf, bool } from 'prop-types';
+import { number, shape, string, arrayOf, bool, oneOfType } from 'prop-types';
+import { textBlockPropTypes } from '../text';
 
 export const mediaPromoPropTypes = {
   name: string.isRequired,
@@ -18,7 +19,7 @@ export const optimoPromoPropTypes = {
   locators: shape({
     optimoUrn: string.isRequired,
   }),
-  summary: string,
+  summary: oneOfType([textBlockPropTypes, string]),
   timestamp: number,
 };
 

@@ -18,7 +18,7 @@ const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
 const getArticleMetadataProps = data => ({
   title: data.promo.headlines.seoHeadline,
   lang: data.metadata.passport.language,
-  description: data.promo.summary,
+  description: data.promo.summary.blocks[0].model.blocks[0].model.text,
   openGraphType: 'article',
   aboutTags: articleDataNews.metadata.tags.about,
   mentionsTags: articleDataNews.metadata.tags.mentions,
