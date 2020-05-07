@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { string } from 'prop-types';
+import { string, number } from 'prop-types';
 import { C_SHADOW } from '@bbc/psammead-styles/colours';
 import styled from 'styled-components';
 import { Headline } from '@bbc/psammead-headings';
@@ -71,7 +71,7 @@ const HeadingContainer = ({ idAttr, brandTitle, releaseDateTimeStamp }) => {
 HeadingContainer.propTypes = {
   idAttr: string,
   brandTitle: string.isRequired,
-  releaseDateTimeStamp: string.isRequired,
+  releaseDateTimeStamp: number.isRequired,
 };
 
 HeadingContainer.defaultProps = {

@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
+.c2 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c0 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c1 {
+  display: block;
+  padding-bottom: 0.5rem;
+}
+
+.c3 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:1px) {
+  .c0 {
+    padding: 2rem 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+<h1
+  class="c0"
+  id="idAttr"
+  tabindex="-1"
+>
+  <span
+    role="text"
+  >
+    <span
+      class="c1"
+    >
+      Dunia Pagi Ini
+    </span>
+    <span
+      class="c2"
+      tabindex="-1"
+    >
+      , 
+    </span>
+    <span
+      class="c3"
+    >
+      7 May 2020
+    </span>
+  </span>
+</h1>
+`;
