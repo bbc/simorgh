@@ -185,7 +185,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
-      durationLabel: '%duration% دورانیہ',
+      durationLabel: ' دورانیہ %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,
