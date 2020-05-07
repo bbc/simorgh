@@ -1,4 +1,5 @@
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 
 const getISOStringDate = date => new Date(date).toISOString();
 
@@ -6,7 +7,17 @@ export const getArticleId = path(['metadata', 'id']);
 
 export const getHeadline = path(['promo', 'headlines', 'seoHeadline']);
 
-export const getSummary = path(['promo', 'summary']);
+export const getSummary = pathOr('', [
+  'promo',
+  'summary',
+  'blocks',
+  '0',
+  'model',
+  'blocks',
+  '0',
+  'model',
+  'text',
+]);
 
 export const getFirstPublished = articleData =>
   getISOStringDate(path(['metadata', 'firstPublished'], articleData));

@@ -6,6 +6,7 @@ import {
   getArticleSection,
   getMentions,
   getLang,
+  getSummary,
 } from '.';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 
@@ -89,6 +90,13 @@ describe('ArticleMain utils', () => {
   it('getLang › it should return the correct value', () => {
     const actual = getLang(articleDataNews);
     const expected = 'en-gb';
+
+    expect(actual).toEqual(expected);
+  });
+
+  it('getSummary › it should return the correct value', () => {
+    const actual = getSummary(articleDataNews);
+    const expected = 'This is the summary text';
 
     expect(actual).toEqual(expected);
   });

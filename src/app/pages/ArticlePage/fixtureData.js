@@ -48,7 +48,32 @@ const articleDataBuilder = (
     locators: {
       optimoUrn: `urn:bbc:optimo:asset:${id}`,
     },
-    summary,
+    summary: {
+      blocks: [
+        {
+          model: {
+            blocks: [
+              {
+                model: {
+                  blocks: [
+                    {
+                      model: {
+                        attributes: [],
+                        text: summary,
+                      },
+                      type: 'fragment',
+                    },
+                  ],
+                  text: summary,
+                },
+                type: 'paragraph',
+              },
+            ],
+          },
+          type: 'text',
+        },
+      ],
+    },
     timestamp: 1514811600000,
   },
 });
