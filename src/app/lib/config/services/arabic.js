@@ -198,7 +198,6 @@ export const service = {
         '/arabic/institutional/2011/01/000000_frequencies_radio',
       frequenciesPageLabel: 'استقبال البث',
       header: 'أحدث نشرة أخبار',
-      durationLabel: 'المدة %duration%',
     },
     recommendations: {
       hasStoryRecommendations: true,
