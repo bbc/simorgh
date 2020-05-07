@@ -372,6 +372,23 @@ describe('StoryPromo Container', () => {
         expect(time).toEqual(null);
       });
     });
+
+    describe('Recommendation Promo', () => {
+      it('should render headline as a div instead of an h3', () => {
+        const { container } = render(
+          <WrappedStoryPromo
+            platform="canonical"
+            item={fixtures.standard}
+            isRecommendation
+          />,
+        );
+
+        expect(container.querySelector('h3')).toBeNull();
+        expect(container.querySelectorAll('div a')[0].innerHTML).toEqual(
+          cpsItem.headlines.headline,
+        );
+      });
+    });
   });
 
   describe('given there is a CPS MAP block with a media error', () => {
