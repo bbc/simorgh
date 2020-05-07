@@ -33,15 +33,14 @@ const Datestamp = styled.span`
   ${({ script }) => script && getBodyCopy(script)};
   ${({ service }) => getSansRegular(service)};
   color: ${C_SHADOW};
-  /* padding-bottom: ${GEL_SPACING_TRPL}; */
-  margin: 0; /* Reset */
+  margin: 0;
 `;
 
 const HeadingContainer = ({ idAttr, brandTitle, releaseDateTimeStamp }) => {
   const { script, service, timezone, locale } = useContext(ServiceContext);
 
   const formattedTimestamp = formatUnixTimestamp({
-    releaseDateTimeStamp,
+    timestamp: releaseDateTimeStamp,
     format: 'LL',
     timezone,
     locale,
@@ -56,11 +55,7 @@ const HeadingContainer = ({ idAttr, brandTitle, releaseDateTimeStamp }) => {
       >
         <BrandTitle>{brandTitle}</BrandTitle>
         <VisuallyHiddenText tabIndex="-1">, </VisuallyHiddenText>
-        <Datestamp
-          script={script}
-          service={service}
-          releaseDateTimeStamp={releaseDateTimeStamp}
-        >
+        <Datestamp script={script} service={service}>
           {formattedTimestamp}
         </Datestamp>
       </span>
