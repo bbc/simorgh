@@ -172,6 +172,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'Isin hin darbiin',
+      featuresAnalysisTitle: 'Features',
     },
     brandSVG,
     mostRead: {

@@ -351,7 +351,7 @@ server
         logger.info(ROUTING_INFORMATION, {
           url,
           status,
-          pageType: pathOr('Error', ['pageData', 'metadata', 'type'], data),
+          pageType: pathOr('Unknown', ['pageData', 'metadata', 'type'], data),
         });
 
         if (result.redirectUrl) {

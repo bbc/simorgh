@@ -64,7 +64,7 @@ const generateLinks = (service, env, domain) => {
   return output.join('<br/>');
 };
 
-const generateLaunchDates = (service) => {
+const generateLaunchDates = service => {
   const output = [];
   const serviceLaunch = simorghLaunchDates[service];
 
@@ -81,15 +81,15 @@ const generateLaunchDates = (service) => {
   }
 
   if (serviceLaunch.mediaAssetPage && serviceLaunch.mediaAssetPage !== '') {
-    output.push(`__MAPs__: ${serviceLaunch.mediaAssetPage}`);
+    output.push(`__MAP__: ${serviceLaunch.mediaAssetPage}`);
   }
 
   if (serviceLaunch.photoGalleryPage && serviceLaunch.photoGalleryPage !== '') {
-    output.push(`__PGLs__: ${serviceLaunch.photoGalleryPage}`);
+    output.push(`__PGL__: ${serviceLaunch.photoGalleryPage}`);
   }
 
   if (serviceLaunch.storyPage && serviceLaunch.storyPage !== '') {
-    output.push(`__STYs__: ${serviceLaunch.storyPage}`);
+    output.push(`__STY__: ${serviceLaunch.storyPage}`);
   }
 
   return output.join('<br/>');
@@ -113,7 +113,7 @@ stream.once('open', () => {
 
   const services = allServices('');
 
-  Object.keys(services).forEach((service) => {
+  Object.keys(services).forEach(service => {
     console.log(`Generating information for ${service}`);
     const items = [
       service,

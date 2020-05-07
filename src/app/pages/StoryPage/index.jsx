@@ -266,6 +266,7 @@ const StoryPage = ({
             <MostReadContainer
               mostReadEndpointOverride={mostReadEndpointOverride}
               columnLayout="oneColumn"
+              size="small"
               wrapper={MostReadWrapper}
             />
           </ComponentWrapper>
