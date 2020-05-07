@@ -2,6 +2,8 @@
 
 exports[`Canonical Most Read Page A11y I can see the skip to content link 1`] = `"Bỏ qua để xem nội dung"`;
 
+exports[`Canonical Most Read Page Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=97&p=vietnamese.popular.read.page&x2=[responsive]&x3=[news-vietnamese]&x4=[vi]&x7=[list-datadriven]&x8=[simorgh-nojs]&x9=[Đọc+nhiều+nhất+-+BBC+News+Tiếng+Việt]&x11=[2019-11-06T16:54:00Z]&x12=[2100-11-06T17:09:00Z]"`;
+
 exports[`Canonical Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/vietnamese"`;
 
 exports[`Canonical Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC không chịu trách nhiệm nội dung các trang ngoài. Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài"`;

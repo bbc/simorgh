@@ -2,6 +2,8 @@
 
 exports[`Canonical Most Read Page A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
 
+exports[`Canonical Most Read Page Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=62&p=mundo.popular.read.page&x2=[responsive]&x3=[news-mundo]&x4=[es]&x7=[list-datadriven]&x8=[simorgh-nojs]&x9=[Más+leídas+-+BBC+News+Mundo]&x11=[2019-11-06T16:24:00Z]&x12=[2100-11-06T16:39:00Z]"`;
+
 exports[`Canonical Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
 exports[`Canonical Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;

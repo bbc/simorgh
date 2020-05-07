@@ -1,9 +1,9 @@
 import {
   runCoreCanonicalTests,
-  // runCanonicalAnalyticsTests,
+  runCanonicalAnalyticsTests,
 } from '../../common';
 
 export default () => {
   runCoreCanonicalTests();
-  // runCanonicalAnalyticsTests();
+  runCanonicalAnalyticsTests();
 };
