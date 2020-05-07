@@ -64,7 +64,7 @@ const generateLinks = (service, env, domain) => {
   return output.join('<br/>');
 };
 
-const generateLaunchDates = (service) => {
+const generateLaunchDates = service => {
   const output = [];
   const serviceLaunch = simorghLaunchDates[service];
 
@@ -113,7 +113,7 @@ stream.once('open', () => {
 
   const services = allServices('');
 
-  Object.keys(services).forEach((service) => {
+  Object.keys(services).forEach(service => {
     console.log(`Generating information for ${service}`);
     const items = [
       service,
