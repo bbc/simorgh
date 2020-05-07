@@ -133,14 +133,16 @@ const AudioPlayer = ({
           noJsClassName="no-js"
         />
       )}
-      <StructuredData
-        promoBrandTitle={promoBrandTitle}
-        shortSynopsis={shortSynopsis}
-        durationISO8601={durationISO8601}
-        embedUrl={embedUrl}
-        imageUrl={imageUrl}
-        episodeAvailableFrom={episodeAvailableFrom}
-      />
+      {!isLiveRadio(assetId) && (
+        <StructuredData
+          promoBrandTitle={promoBrandTitle}
+          shortSynopsis={shortSynopsis}
+          durationISO8601={durationISO8601}
+          embedUrl={embedUrl}
+          imageUrl={imageUrl}
+          episodeAvailableFrom={episodeAvailableFrom}
+        />
+      )}
     </AudioPlayerWrapper>
   );
 };
