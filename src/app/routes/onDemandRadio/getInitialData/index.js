@@ -34,6 +34,7 @@ const getEpisodeAvailableUntil = path([
   '0',
   'availableUntil',
 ]);
+const getReleaseDateTimeStamp = path(['metadata', 'releaseDateTimeStamp']);
 
 export default async ({ path: pathname }) => {
   const onDemandRadioDataPath = overrideRendererOnTest(pathname);
@@ -56,6 +57,7 @@ export default async ({ path: pathname }) => {
         masterBrand: getMasterBrand(json),
         episodeAvailableFrom: getEpisodeAvailableFrom(json),
         episodeAvailableUntil: getEpisodeAvailableUntil(json),
+        releaseDateTimeStamp: getReleaseDateTimeStamp(json),
         pageTitle: getPageTitle(json),
         pageIdentifier: getPageIdentifier(json),
         ...pageType,
