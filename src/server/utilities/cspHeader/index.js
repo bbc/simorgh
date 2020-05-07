@@ -287,6 +287,17 @@ const directives = {
       "'unsafe-inline'",
     ],
   },
+  fontSrc: {
+    amp: [
+      'https://gel.files.bbci.co.uk',
+      'https://ws-downloads.files.bbci.co.uk',
+    ],
+    canonical: [
+      'https://gel.files.bbci.co.uk',
+      'https://ws-downloads.files.bbci.co.uk',
+      'https://static.bbci.co.uk', // STY includes
+    ],
+  },
 };
 
 export const generateChildSrc = ({ isAmp }) => (isAmp ? ['blob:'] : ["'self'"]);
@@ -300,11 +311,8 @@ export const generateConnectSrc = ({ isAmp, isLive }) => {
 
 export const generateDefaultSrc = () => ["'self'"];
 
-export const generateFontSrc = () => [
-  'https://gel.files.bbci.co.uk',
-  'https://ws-downloads.files.bbci.co.uk',
-  'https://static.bbci.co.uk', // STY includes
-];
+export const generateFontSrc = ({ isAmp }) =>
+  isAmp ? directives.fontSrc.amp : directives.fontSrc.canonical;
 
 export const generateFrameSrc = ({ isAmp, isLive }) => {
   if (!isLive && isAmp) return directives.frameSrc.ampNonLive;
@@ -342,7 +350,7 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'default-src': generateDefaultSrc(),
     'child-src': generateChildSrc({ isAmp }),
     'connect-src': generateConnectSrc({ isAmp, isLive }),
-    'font-src': generateFontSrc(),
+    'font-src': generateFontSrc({ isAmp }),
     'frame-src': generateFrameSrc({ isAmp, isLive }),
     'img-src': generateImgSrc({ isAmp, isLive }),
     'script-src': generateScriptSrc({ isAmp, isLive }),

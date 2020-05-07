@@ -45,7 +45,6 @@ describe('cspHeader', () => {
       fontSrcExpectation: [
         'https://gel.files.bbci.co.uk',
         'https://ws-downloads.files.bbci.co.uk',
-        'https://static.bbci.co.uk',
       ],
       frameSrcExpectation: [
         'https://polling.bbc.co.uk',
@@ -196,7 +195,6 @@ describe('cspHeader', () => {
       fontSrcExpectation: [
         'https://gel.files.bbci.co.uk',
         'https://ws-downloads.files.bbci.co.uk',
-        'https://static.bbci.co.uk',
       ],
       frameSrcExpectation: [
         'https://polling.bbc.co.uk',
@@ -372,7 +370,7 @@ describe('cspHeader', () => {
         });
 
         it(`Then it has this fontSrc`, () => {
-          expect(generateFontSrc()).toEqual(fontSrcExpectation);
+          expect(generateFontSrc({ isAmp })).toEqual(fontSrcExpectation);
         });
 
         it(`Then it has this frameSrc`, () => {
