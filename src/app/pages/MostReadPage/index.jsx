@@ -141,6 +141,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
           wrapper={MostReadWrapper}
           columnLayout="oneColumn"
           initialData={pageData}
+          isMostReadPage
         />
       </StyledMain>
     </>

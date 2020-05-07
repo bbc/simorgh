@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { oneOf, string, elementType } from 'prop-types';
+import { oneOf, string, elementType, bool } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
@@ -13,6 +13,7 @@ const MostReadContainer = ({
   columnLayout,
   size,
   wrapper,
+  isMostReadPage,
 }) => {
   const { variant, isAmp } = useContext(RequestContext);
   const {
@@ -29,8 +30,9 @@ const MostReadContainer = ({
     return null;
   }
 
-  // Do not render on AMP when there is no initial data
-  if (isAmp && !initialData) {
+  // Do not render on AMP when it is not the most read page
+  // We only want to render most read on AMP for the "/popular/read" pages
+  if (isAmp && !isMostReadPage) {
     return null;
   }
 
@@ -54,6 +56,7 @@ MostReadContainer.propTypes = {
   size: oneOf(['default', 'small']),
   initialData: mostReadShape,
   wrapper: elementType,
+  isMostReadPage: bool,
 };
 
 MostReadContainer.defaultProps = {
@@ -62,6 +65,7 @@ MostReadContainer.defaultProps = {
   size: 'default',
   initialData: undefined,
   wrapper: undefined,
+  isMostReadPage: false,
 };
 
 export default MostReadContainer;
