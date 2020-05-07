@@ -22,6 +22,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import MostReadContainer from '#containers/MostRead';
 import mostReadShape from '#containers/MostRead/utilities/mostReadShape';
 import ATIAnalytics from '#containers/ATIAnalytics';
+import LinkedData from '#containers/LinkedData';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import MetadataContainer from '#containers/Metadata';
 import Grid, { GelPageGrid } from '#app/components/Grid';
@@ -133,7 +134,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
         description={`${header} - ${brandName}`}
         openGraphType="website"
       />
-
+      <LinkedData type="WebPage" seoTitle={header} />
       <StyledMain>
         <MostReadContainer
           mostReadEndpointOverride={mostReadEndpointOverride}
