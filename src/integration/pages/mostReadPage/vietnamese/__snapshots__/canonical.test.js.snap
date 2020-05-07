@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical Most Read Page A11y I can see the skip to content link 1`] = `"Bỏ qua để xem nội dung"`;
+
+exports[`Canonical Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/vietnamese"`;
+
+exports[`Canonical Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC không chịu trách nhiệm nội dung các trang ngoài. Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài"`;
+
+exports[`Canonical Most Read Page Header I can see the branding 1`] = `"BBC News, Tiếng Việt"`;
+
+exports[`Canonical Most Read Page I can see the headline 1`] = `"Đọc nhiều nhất"`;
+
+exports[`Canonical Most Read Page I can see the list items 1`] = `"1Đại biểu QHVN muốn làm rõ vụ 9 người 'đi nhờ máy bay'Cập nhật gần nhất: 6 tháng 11 năm 2019"`;
+
+exports[`Canonical Most Read Page I can see the list items 2`] = `"2Việt Nam ‘rà soát lỗ hổng’ vì ô tô có ‘đường lưỡi bò’Cập nhật gần nhất: 6 tháng 11 năm 2019"`;
+
+exports[`Canonical Most Read Page I can see the list items 3`] = `"3Greentrees phản bác phóng sự 'Núp bóng môi trường' của VTVCập nhật gần nhất: 6 tháng 11 năm 2019"`;
+
+exports[`Canonical Most Read Page I can see the list items 4`] = `"4Trump-Tập gặp ở Iowa gợi nhớ quan hệ tốt đẹp ngày xưaCập nhật gần nhất: 6 tháng 11 năm 2019"`;
+
+exports[`Canonical Most Read Page I can see the list items 5`] = `"5Biểu tình và luật pháp: Cảnh sát Anh thua kiệnCập nhật gần nhất: 6 tháng 11 năm 2019"`;
+
+exports[`Canonical Most Read Page I can see the list items 6`] = `"6Giải pháp cho cuộc chiến tài nguyên nước trên dòng MekongCập nhật gần nhất: 6 tháng 11 năm 2019"`;
+
+exports[`Canonical Most Read Page I can see the list items 7`] = `"7Vụ 39 người chết ở Anh: Tranh cãi về trách nhiệmCập nhật gần nhất: 6 tháng 11 năm 2019"`;
+
+exports[`Canonical Most Read Page I can see the list items 8`] = `"8Vụ 39 người chết: Nhiều người Việt tỏ ra 'lạnh lùng'Cập nhật gần nhất: 6 tháng 11 năm 2019"`;
+
+exports[`Canonical Most Read Page I can see the list items 9`] = `"9HRW kêu gọi trả tự do cho nhà hoạt động Nguyễn Ngọc ÁnhCập nhật gần nhất: 6 tháng 11 năm 2019"`;
+
+exports[`Canonical Most Read Page I can see the list items 10`] = `"10Lỗ hổng thiên đàng và một căn bệnh mãn tínhCập nhật gần nhất: 6 tháng 11 năm 2019"`;
+
+exports[`Canonical Most Read Page SEO Canonical link 1`] = `"http://localhost:7080/vietnamese/popular/read"`;
+
+exports[`Canonical Most Read Page SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical Most Read Page SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical Most Read Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical Most Read Page SEO Heading level 1 1`] = `"Đọc nhiều nhất"`;
+
+exports[`Canonical Most Read Page SEO Lang attribute 1`] = `"vi"`;
+
+exports[`Canonical Most Read Page SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/vietnamese/popular/read",
+    "@type": "WebPage",
+    "name": "Đọc nhiều nhất",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
+      "width": 1024,
+    },
+    "name": "BBC News Tiếng Việt",
+    "publishingPrinciples": "https://www.bbc.com/vietnamese/institutional-49283563",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
+  "url": "http://localhost:7080/vietnamese/popular/read",
+}
+`;
+
+exports[`Canonical Most Read Page SEO OG description 1`] = `"Đọc nhiều nhất - BBC News Tiếng Việt"`;
+
+exports[`Canonical Most Read Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png"`;
+
+exports[`Canonical Most Read Page SEO OG image alt 1`] = `"BBC News Tiếng Việt"`;
+
+exports[`Canonical Most Read Page SEO OG locale 1`] = `"vi-VN"`;
+
+exports[`Canonical Most Read Page SEO OG site name 1`] = `"BBC News Tiếng Việt"`;
+
+exports[`Canonical Most Read Page SEO OG title 1`] = `"Đọc nhiều nhất - BBC News Tiếng Việt"`;
+
+exports[`Canonical Most Read Page SEO OG type 1`] = `"website"`;
+
+exports[`Canonical Most Read Page SEO OG url 1`] = `"http://localhost:7080/vietnamese/popular/read"`;
+
+exports[`Canonical Most Read Page SEO Page title 1`] = `"Đọc nhiều nhất - BBC News Tiếng Việt"`;
+
+exports[`Canonical Most Read Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical Most Read Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical Most Read Page SEO Twitter creator 1`] = `"@bbcvietnamese"`;
+
+exports[`Canonical Most Read Page SEO Twitter description 1`] = `"Đọc nhiều nhất - BBC News Tiếng Việt"`;
+
+exports[`Canonical Most Read Page SEO Twitter image alt 1`] = `"BBC News Tiếng Việt"`;
+
+exports[`Canonical Most Read Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png"`;
+
+exports[`Canonical Most Read Page SEO Twitter site 1`] = `"@bbcvietnamese"`;
+
+exports[`Canonical Most Read Page SEO Twitter title 1`] = `"Đọc nhiều nhất - BBC News Tiếng Việt"`;
