@@ -35,6 +35,15 @@ const getEpisodeAvailableUntil = path([
   'availableUntil',
 ]);
 const getReleaseDateTimeStamp = path(['metadata', 'releaseDateTimeStamp']);
+const getPromoBrandTitle = path(['promo', 'brand', 'title']);
+const getDurationISO8601 = path([
+  'promo',
+  'media',
+  'versions',
+  0,
+  'durationISO8601',
+]);
+const getImageUrl = path(['promo', 'media', 'imageUrl']);
 
 export default async ({ path: pathname }) => {
   const onDemandRadioDataPath = overrideRendererOnTest(pathname);
@@ -60,6 +69,9 @@ export default async ({ path: pathname }) => {
         releaseDateTimeStamp: getReleaseDateTimeStamp(json),
         pageTitle: getPageTitle(json),
         pageIdentifier: getPageIdentifier(json),
+        promoBrandTitle: getPromoBrandTitle(json),
+        durationISO8601: getDurationISO8601(json),
+        imageUrl: getImageUrl(json),
         ...pageType,
       },
     }),
