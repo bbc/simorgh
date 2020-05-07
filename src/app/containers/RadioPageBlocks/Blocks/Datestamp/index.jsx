@@ -12,7 +12,7 @@ const StyledDatestamp = styled.span`
   ${({ script }) => script && getBodyCopy(script)};
   ${({ service }) => getSansRegular(service)};
   color: ${C_SHADOW};
-  padding-bottom: ${GEL_SPACING_TRPL};
+  /* padding-bottom: ${GEL_SPACING_TRPL}; */
   margin: 0; /* Reset */
 `;
 
