@@ -18,8 +18,10 @@ const mostReadItems = ({ data, numberOfItems }) => {
       .slice(0, numberOfItems)
       .map(({ id, promo: { headlines, locators, timestamp } }) => ({
         id,
-        title: headlines.shortHeadline,
-        href: locators.assetUri,
+        title:
+          headlines.shortHeadline ||
+          headlines.promoHeadline.blocks[0].model.blocks[0].model.text,
+        href: locators.assetUri || locators.canonicalUrl,
         timestamp,
       }));
   }
