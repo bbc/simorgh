@@ -1,4 +1,14 @@
 const { run } = require('.');
+const waitForLocalhost = require('./waitForLocalhost');
 
-const showInfo = process.argv[2] && process.argv[2] === '-i';
-run(showInfo);
+const cli = async () => {
+  const showInfo = process.argv.includes('-i');
+  const shouldWait = process.argv.includes('-w');
+
+  if (shouldWait) {
+    await waitForLocalhost();
+  }
+  run(showInfo);
+};
+
+cli();
