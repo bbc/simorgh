@@ -9,7 +9,7 @@ const props = {
   embedUrl:
     'https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/externalId/id/ko?morph_env=live',
   imageUrl: 'ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg',
-  episodeAvailableFrom: 1587655800000,
+  releaseDateTimeStamp: 1587655800000,
 };
 
 describe('StructuredData', () => {

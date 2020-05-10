@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { string, number } from 'prop-types';
+import serialiseForScript from '#lib/utilities/serialiseForScript';
 
 const StructuredData = ({
   promoBrandTitle,
@@ -8,7 +9,7 @@ const StructuredData = ({
   durationISO8601,
   embedUrl,
   imageUrl,
-  episodeAvailableFrom,
+  releaseDateTimeStamp,
 }) => {
   const metadata = {
     '@context': 'http://schema.org',
@@ -17,13 +18,13 @@ const StructuredData = ({
     description: shortSynopsis,
     duration: durationISO8601,
     thumbnailUrl: imageUrl,
-    uploadDate: new Date(episodeAvailableFrom).toISOString(),
+    uploadDate: new Date(releaseDateTimeStamp).toISOString(),
     embedURL: embedUrl,
   };
 
   return (
     <Helmet>
-      <script type="application/ld+json">{JSON.stringify(metadata)}</script>
+      <script type="application/ld+json">{serialiseForScript(metadata)}</script>
     </Helmet>
   );
 };
@@ -34,7 +35,7 @@ StructuredData.propTypes = {
   durationISO8601: string,
   embedUrl: string,
   imageUrl: string,
-  episodeAvailableFrom: number,
+  releaseDateTimeStamp: number,
 };
 
 StructuredData.defaultProps = {
@@ -43,7 +44,7 @@ StructuredData.defaultProps = {
   durationISO8601: '',
   embedUrl: '',
   imageUrl: '',
-  episodeAvailableFrom: null,
+  releaseDateTimeStamp: null,
 };
 
 export default StructuredData;

@@ -40,6 +40,7 @@ const renderEpisode = ({
   shortSynopsis,
   imageUrl,
   durationISO8601,
+  releaseDateTimeStamp,
 }) => {
   const episodeAvailability = getEpisodeAvailability(
     episodeAvailableFrom,
@@ -55,7 +56,7 @@ const renderEpisode = ({
           shortSynopsis={shortSynopsis}
           imageUrl={imageUrl}
           durationISO8601={durationISO8601}
-          episodeAvailableFrom={episodeAvailableFrom}
+          releaseDateTimeStamp={releaseDateTimeStamp}
         />
       );
     case EPISODE_IS_EXPIRED:
@@ -144,6 +145,7 @@ const OnDemandRadioPage = ({ pageData }) => {
             shortSynopsis,
             imageUrl,
             durationISO8601,
+            releaseDateTimeStamp,
           })}
         </Grid>
       </StyledGelPageGrid>

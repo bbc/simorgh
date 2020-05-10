@@ -16,7 +16,7 @@ const metadata = {
   shortSynopsis: 'د بي بي سي ورلډ سروس څخه پروګرام کول',
   durationISO8601: 'PT29M30S',
   imageUrl: 'ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg',
-  episodeAvailableFrom: 1587655800000,
+  releaseDateTimeStamp: 1587655800000,
 };
 
 describe('MediaPageBlocks AudioPlayer', () => {

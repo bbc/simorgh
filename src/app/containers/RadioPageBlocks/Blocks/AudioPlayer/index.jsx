@@ -59,7 +59,7 @@ const AudioPlayer = ({
   shortSynopsis,
   durationISO8601,
   imageUrl,
-  episodeAvailableFrom,
+  releaseDateTimeStamp,
 }) => {
   const { liveRadioOverrides, lang, translations, service } = useContext(
     ServiceContext,
@@ -140,7 +140,7 @@ const AudioPlayer = ({
           durationISO8601={durationISO8601}
           embedUrl={embedUrl}
           imageUrl={imageUrl}
-          episodeAvailableFrom={episodeAvailableFrom}
+          releaseDateTimeStamp={releaseDateTimeStamp}
         />
       )}
     </AudioPlayerWrapper>
@@ -156,7 +156,7 @@ AudioPlayer.propTypes = {
   shortSynopsis: string,
   durationISO8601: string,
   imageUrl: string,
-  episodeAvailableFrom: number,
+  releaseDateTimeStamp: number,
 };
 
 AudioPlayer.defaultProps = {
@@ -168,7 +168,7 @@ AudioPlayer.defaultProps = {
   shortSynopsis: '',
   durationISO8601: '',
   imageUrl: '',
-  episodeAvailableFrom: null,
+  releaseDateTimeStamp: null,
 };
 
 export default AudioPlayer;
