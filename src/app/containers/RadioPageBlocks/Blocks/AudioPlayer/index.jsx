@@ -35,6 +35,11 @@ const getMediaInfo = assetId => ({
 const getMasterBrand = (masterBrand, liveRadioIdOverrides) =>
   pathOr(masterBrand, ['masterBrand', masterBrand], liveRadioIdOverrides);
 
+const getMediaId = ({ assetId, masterBrand, lang, service }) =>
+  isLiveRadio(assetId)
+    ? `${masterBrand}/${assetId}/${lang}` // liveradio
+    : `${service}/${masterBrand}/${assetId}/${lang}`; // ondemand
+
 const AudioPlayerWrapper = styled.div`
   width: calc(100% + ${GEL_SPACING_DBL});
   margin: 0 -${GEL_SPACING};
@@ -91,9 +96,7 @@ const AudioPlayer = ({
 
   if (!isValidPlatform || !masterBrand || !assetId) return null; // potential for logging here
 
-  const mediaId = isLiveRadio(assetId)
-    ? `${masterBrand}/${assetId}/${lang}` // liveradio
-    : `${service}/${masterBrand}/${assetId}/${lang}`; // ondemand
+  const mediaId = getMediaId({ assetId, masterBrand, lang, service });
 
   const embedUrl = getEmbedUrl({
     mediaId,
