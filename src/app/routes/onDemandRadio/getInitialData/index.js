@@ -1,6 +1,7 @@
 import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
+import { getPlaceholderImageUrl } from '../../utils/imageUrl';
 
 const getBrandTitle = path(['metadata', 'title']);
 const getLanguage = path(['metadata', 'language']);
@@ -71,7 +72,7 @@ export default async ({ path: pathname }) => {
         pageIdentifier: getPageIdentifier(json),
         promoBrandTitle: getPromoBrandTitle(json),
         durationISO8601: getDurationISO8601(json),
-        imageUrl: getImageUrl(json),
+        imageUrl: getPlaceholderImageUrl(getImageUrl(json)),
         ...pageType,
       },
     }),

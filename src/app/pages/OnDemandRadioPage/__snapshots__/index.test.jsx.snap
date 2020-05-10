@@ -208,7 +208,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","duration":"PT29M30S","thumbnailUrl":"ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg","uploadDate":"2020-05-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps/amp?morph_env=live"}
+      {"@context":"http://schema.org","@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","duration":"PT29M30S","thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg","uploadDate":"2020-05-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps/amp?morph_env=live"}
     </script>
   </head>
   <body>
@@ -862,7 +862,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","duration":"PT29M30S","thumbnailUrl":"ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg","uploadDate":"2020-05-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"}
+      {"@context":"http://schema.org","@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","duration":"PT29M30S","thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg","uploadDate":"2020-05-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"}
     </script>
   </head>
   <body>
