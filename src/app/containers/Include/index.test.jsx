@@ -19,10 +19,10 @@ const toggleStateFalse = {
 const fakeMarkup = `<div>Visual Journalism Markup</div><script type="text/javascript" src="localhost/vj.js"></script>`;
 
 // eslint-disable-next-line react/prop-types
-const MockContext = ({ toggleState, children }) => (
+const MockContext = ({ toggleState, isAmp, children }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
-    isAmp={false}
+    isAmp={isAmp || false}
     pageType="STY"
     service="news"
     statusCode={200}
@@ -34,12 +34,18 @@ const MockContext = ({ toggleState, children }) => (
   </RequestContextProvider>
 );
 
-// eslint-disable-next-line react/prop-types
-const IncludeContainerWithMockContext = ({ toggleState, html, type }) => (
-  <MockContext toggleState={toggleState}>
+/* eslint-disable react/prop-types */
+const IncludeContainerWithMockContext = ({
+  toggleState,
+  html,
+  type,
+  isAmp,
+}) => (
+  <MockContext toggleState={toggleState} isAmp={isAmp}>
     <IncludeContainer html={html} type={type} />
   </MockContext>
 );
+/* eslint-enable react/prop-types */
 
 describe('IncludeContainer', () => {
   beforeEach(() => {
@@ -94,6 +100,18 @@ describe('IncludeContainer', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should not render any HTML when its an amp page', async () => {
+    const { container } = render(
+      <IncludeContainerWithMockContext
+        toggleState={toggleStateFalse}
+        html={fakeMarkup}
+        type="idt2"
+        isAmp
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
+
   const runningIncludeTest = includeType => {
     it(`should add require to the page for ${includeType}`, async () => {
       render(
@@ -104,13 +122,24 @@ describe('IncludeContainer', () => {
         />,
       );
 
-      await waitFor(() =>
-        expect(
-          Array.from(document.querySelectorAll('head script')),
-        ).toHaveLength(2),
-      );
+      await waitFor(() => {
+        const scripts = Array.from(document.querySelectorAll('head script'));
 
-      expect(window.require.config).toHaveBeenCalled();
+        expect(scripts).toEqual(
+          expect.arrayContaining([
+            expect.objectContaining({
+              src: `https://news.files.bbci.co.uk/include/vjassets/js/vendor/require-2.1.20b.min.js`,
+            }),
+            expect.objectContaining({
+              text: expect.stringContaining('require.config'),
+            }),
+          ]),
+        );
+
+        expect(scripts).toHaveLength(2);
+
+        expect(window.require.config).toHaveBeenCalledTimes(1);
+      });
     });
   };
   runningIncludeTest('vj');
@@ -126,13 +155,24 @@ describe('IncludeContainer', () => {
       </MockContext>,
     );
 
-    await waitFor(() =>
-      expect(Array.from(document.querySelectorAll('head script'))).toHaveLength(
-        2,
-      ),
-    );
+    await waitFor(() => {
+      const scripts = Array.from(document.querySelectorAll('head script'));
 
-    expect(window.require.config).toHaveBeenCalled();
+      expect(scripts).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            src: `https://news.files.bbci.co.uk/include/vjassets/js/vendor/require-2.1.20b.min.js`,
+          }),
+          expect.objectContaining({
+            text: expect.stringContaining('require.config'),
+          }),
+        ]),
+      );
+
+      expect(scripts).toHaveLength(2);
+
+      expect(window.require.config).toHaveBeenCalledTimes(1);
+    });
   });
 
   it(`should not add require to the page for idt2`, async () => {
@@ -144,12 +184,11 @@ describe('IncludeContainer', () => {
       />,
     );
 
-    await waitFor(() =>
+    await waitFor(() => {
       expect(Array.from(document.querySelectorAll('head script'))).toHaveLength(
         0,
-      ),
-    );
-
-    expect(window.require.config).toHaveBeenCalledTimes(0);
+      );
+      expect(window.require.config).toHaveBeenCalledTimes(0);
+    });
   });
 });

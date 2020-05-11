@@ -1,11 +1,13 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
+import React, { useContext } from 'react';
 import { string } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
+import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 
 const IncludeContainer = ({ html, type }) => {
+  const { isAmp } = useContext(RequestContext);
   const { enabled } = useToggle('include');
 
   const supportedTypes = {
@@ -14,7 +16,8 @@ const IncludeContainer = ({ html, type }) => {
     idt1: 'idt1',
   };
 
-  const shouldNotRenderInclude = !enabled || !html || !supportedTypes[type];
+  const shouldNotRenderInclude =
+    isAmp || !enabled || !html || !supportedTypes[type];
 
   if (shouldNotRenderInclude) {
     return null;
@@ -36,7 +39,7 @@ const IncludeContainer = ({ html, type }) => {
 
   return (
     <>
-      {requireIncludeTypes.includes(type) ? (
+      {requireIncludeTypes.includes(type) && (
         <Helmet>
           <script
             type="text/javascript"
@@ -48,7 +51,7 @@ const IncludeContainer = ({ html, type }) => {
            */}
           <script>{configureAdditionalScripts}</script>
         </Helmet>
-      ) : null}
+      )}
       <GridItemConstrainedMedium>
         <div
           suppressHydrationWarning
