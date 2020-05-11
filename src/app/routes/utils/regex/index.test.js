@@ -216,7 +216,7 @@ describe('liveRadioPath', () => {
 });
 
 describe('mostReadDataRegexPath', () => {
-  const validRoutes = ['/news/.json', '/zhongwen/mostread/simp.json'];
+  const validRoutes = ['/news/mostRead.json', '/zhongwen/mostread/simp.json'];
   shouldMatchValidRoutes(validRoutes, mostReadDataRegexPath);
 
   const invalidRoutes = [

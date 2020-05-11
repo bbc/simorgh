@@ -576,17 +576,25 @@ describe('Server', () => {
         '/zhongwen/sty-secondary-column/trad.json',
       );
       expect(body).toEqual(
-        expect.objectContaining({ records: expect.any(Object) }),
+        expect.objectContaining({
+          topStories: expect.any(Object),
+          features: expect.any(Object),
+        }),
       );
     });
     it('should serve a file for valid service paths without variants', async () => {
       const { body } = await makeRequest('/mundo/sty-secondary-column.json');
       expect(body).toEqual(
-        expect.objectContaining({ records: expect.any(Object) }),
+        expect.objectContaining({
+          topStories: expect.any(Object),
+          features: expect.any(Object),
+        }),
       );
     });
     it('should respond with a 500 for non-existing services', async () => {
-      const { statusCode } = await makeRequest('/some-service/mostread.json');
+      const { statusCode } = await makeRequest(
+        '/some-service/sty-secondary-column.json',
+      );
       expect(statusCode).toEqual(500);
     });
   });

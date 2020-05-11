@@ -7,8 +7,8 @@ describe('getSecondaryColumnEndpoint', () => {
     );
   });
   it('should return endpoint when passed service and variant', () => {
-    expect(getSecondaryColumnUrl({ service: 'serbian', variant: 'trad' })).toBe(
-      '/zhongwen/sty-secondary-column/trad.json',
-    );
+    expect(
+      getSecondaryColumnUrl({ service: 'zhongwen', variant: 'trad' }),
+    ).toBe('/zhongwen/sty-secondary-column/trad.json');
   });
 });
