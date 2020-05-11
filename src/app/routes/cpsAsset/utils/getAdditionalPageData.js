@@ -3,6 +3,7 @@ import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import getAssetType from './getAssetType';
 import fetchPageData from '../../utils/fetchPageData';
 import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
+import getSecondaryColumnUrl from '#lib/utilities/getSecondaryColumnUrl';
 
 const pageTypeUrls = (assetType, service, variant) => {
   switch (assetType) {
@@ -11,6 +12,13 @@ const pageTypeUrls = (assetType, service, variant) => {
         {
           name: 'mostRead',
           path: getMostReadEndpoint({ service, variant }).replace('.json', ''),
+        },
+        {
+          name: 'secondaryColumn',
+          path: getSecondaryColumnUrl({ service, variant }).replace(
+            '.json',
+            '',
+          ),
         },
       ];
     default:
