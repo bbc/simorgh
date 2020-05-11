@@ -1,3 +1,4 @@
+import { mergeDeepLeft } from 'ramda';
 import {
   getHeadline,
   getFirstPublished,
@@ -97,6 +98,19 @@ describe('ArticleMain utils', () => {
   it('getSummary › it should return the correct value', () => {
     const actual = getSummary(articleDataNews);
     const expected = 'Article summary.';
+
+    expect(actual).toEqual(expected);
+  });
+
+  it('getSummary old format › it should return an empty string', () => {
+    const articleDataNewsSummary = mergeDeepLeft(
+      {
+        promo: { summary: 'a summary ' },
+      },
+      articleDataNews,
+    );
+    const actual = getSummary(articleDataNewsSummary);
+    const expected = '';
 
     expect(actual).toEqual(expected);
   });
