@@ -19,14 +19,17 @@ const mostReadItems = ({ data, numberOfItems }) => {
         ['headlines', 'shortHeadline'],
         record.promo,
       );
+      // const contentBlocks = blocks.map(block => block.model.blocks).flat();
       const optimoHeadline = pathOr(
         null,
         [
           'headlines',
           'promoHeadline',
-          'blocks[0]',
+          'blocks',
+          0,
           'model',
-          'blocks[0]',
+          'blocks',
+          0,
           'model',
           'text',
         ],
@@ -34,12 +37,14 @@ const mostReadItems = ({ data, numberOfItems }) => {
       );
       const cpsLocator = pathOr(null, ['locators', 'assetUri'], record.promo);
       const optimoLocator = pathOr(null, ['locators', 'canonicalUrl'], record);
+      const cpsTimestamp = pathOr(null, ['promo', 'timestamp'], record);
+      const optimoTimestamp = pathOr(null, ['timestamp'], record);
 
       return {
         id: record.id,
         title: cpsHeadline || optimoHeadline,
         href: cpsLocator || optimoLocator,
-        timestamp: record.timestamp,
+        timestamp: cpsTimestamp || optimoTimestamp,
       };
     });
     return items;

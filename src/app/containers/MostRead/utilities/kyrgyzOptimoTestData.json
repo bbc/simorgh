@@ -1,0 +1,645 @@
+{
+  "generated": "2019-11-06T16:58:23.889Z",
+  "lastRecordTimeStamp": "2100-11-06T16:53:00Z",
+  "firstRecordTimeStamp": "2019-11-06T10:53:00Z",
+  "totalRecords": 100,
+  "records": [
+    {
+      "locators" : {
+        "optimoUrn" : "urn:bbc:optimo:asset:cn060pe01e5o",
+        "canonicalUrl" : "https://www.bbc.com/news/articles/cn060pe01e5o"
+      },
+      "timestamp" : 1586266369329,
+      "suitableForSyndication" : true,
+      "language" : "en-gb",
+      "headlines" : {
+        "seoHeadline" : "Hello promos",
+        "promoHeadline" : {
+          "blocks" : [ {
+            "type" : "text",
+            "model" : {
+              "blocks" : [ {
+                "type" : "paragraph",
+                "model" : {
+                  "text" : "Hello promos",
+                  "blocks" : [ {
+                    "type" : "fragment",
+                    "model" : {
+                      "text" : "Hello promos",
+                      "attributes" : [ ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      },
+      "images" : {
+        "defaultPromoImage" : {
+          "blocks" : [ {
+            "type" : "altText",
+            "model" : {
+              "blocks" : [ {
+                "type" : "text",
+                "model" : {
+                  "blocks" : [ {
+                    "type" : "paragraph",
+                    "model" : {
+                      "text" : "Pretty landscape",
+                      "blocks" : [ {
+                        "type" : "fragment",
+                        "model" : {
+                          "text" : "Pretty landscape",
+                          "attributes" : [ ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "type" : "rawImage",
+            "model" : {
+              "width" : 2560,
+              "height" : 1440,
+              "locator" : "8ee9/test/9ae5a590-78d5-11ea-9cbf-d518984d106c.jpg",
+              "originCode" : "cpsdevpb",
+              "copyrightHolder" : "Optimo",
+              "suitableForSyndication" : false
+            }
+          } ]
+        }
+      },
+      "summary" : {
+        "blocks" : [ {
+          "type" : "text",
+          "model" : {
+            "blocks" : [ {
+              "type" : "paragraph",
+              "model" : {
+                "text" : "Hello Promo summary text",
+                "blocks" : [ {
+                  "type" : "fragment",
+                  "model" : {
+                    "text" : "Hello Promo summary text",
+                    "attributes" : [ ]
+                  }
+                } ]
+              }
+            } ]
+          }
+        } ]
+      },
+      "id" : "urn:bbc:ares::article:cn060pe01e5o",
+      "type" : "optimo"
+    },
+    {
+      "locators" : {
+        "optimoUrn" : "urn:bbc:optimo:asset:cn060pe01e5o",
+        "canonicalUrl" : "https://www.bbc.com/news/articles/cn060pe01e5o"
+      },
+      "timestamp" : 1586266369329,
+      "suitableForSyndication" : true,
+      "language" : "en-gb",
+      "headlines" : {
+        "seoHeadline" : "Hello promos",
+        "promoHeadline" : {
+          "blocks" : [ {
+            "type" : "text",
+            "model" : {
+              "blocks" : [ {
+                "type" : "paragraph",
+                "model" : {
+                  "text" : "Hello promos",
+                  "blocks" : [ {
+                    "type" : "fragment",
+                    "model" : {
+                      "text" : "Hello promos",
+                      "attributes" : [ ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      },
+      "images" : {
+        "defaultPromoImage" : {
+          "blocks" : [ {
+            "type" : "altText",
+            "model" : {
+              "blocks" : [ {
+                "type" : "text",
+                "model" : {
+                  "blocks" : [ {
+                    "type" : "paragraph",
+                    "model" : {
+                      "text" : "Pretty landscape",
+                      "blocks" : [ {
+                        "type" : "fragment",
+                        "model" : {
+                          "text" : "Pretty landscape",
+                          "attributes" : [ ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "type" : "rawImage",
+            "model" : {
+              "width" : 2560,
+              "height" : 1440,
+              "locator" : "8ee9/test/9ae5a590-78d5-11ea-9cbf-d518984d106c.jpg",
+              "originCode" : "cpsdevpb",
+              "copyrightHolder" : "Optimo",
+              "suitableForSyndication" : false
+            }
+          } ]
+        }
+      },
+      "summary" : {
+        "blocks" : [ {
+          "type" : "text",
+          "model" : {
+            "blocks" : [ {
+              "type" : "paragraph",
+              "model" : {
+                "text" : "Hello Promo summary text",
+                "blocks" : [ {
+                  "type" : "fragment",
+                  "model" : {
+                    "text" : "Hello Promo summary text",
+                    "attributes" : [ ]
+                  }
+                } ]
+              }
+            } ]
+          }
+        } ]
+      },
+      "id" : "urn:bbc:ares::article:cn060pe01e5o",
+      "type" : "optimo"
+    },
+    {
+      "locators" : {
+        "optimoUrn" : "urn:bbc:optimo:asset:cn060pe01e5o",
+        "canonicalUrl" : "https://www.bbc.com/news/articles/cn060pe01e5o"
+      },
+      "timestamp" : 1586266369329,
+      "suitableForSyndication" : true,
+      "language" : "en-gb",
+      "headlines" : {
+        "seoHeadline" : "Hello promos",
+        "promoHeadline" : {
+          "blocks" : [ {
+            "type" : "text",
+            "model" : {
+              "blocks" : [ {
+                "type" : "paragraph",
+                "model" : {
+                  "text" : "Hello promos",
+                  "blocks" : [ {
+                    "type" : "fragment",
+                    "model" : {
+                      "text" : "Hello promos",
+                      "attributes" : [ ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      },
+      "images" : {
+        "defaultPromoImage" : {
+          "blocks" : [ {
+            "type" : "altText",
+            "model" : {
+              "blocks" : [ {
+                "type" : "text",
+                "model" : {
+                  "blocks" : [ {
+                    "type" : "paragraph",
+                    "model" : {
+                      "text" : "Pretty landscape",
+                      "blocks" : [ {
+                        "type" : "fragment",
+                        "model" : {
+                          "text" : "Pretty landscape",
+                          "attributes" : [ ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "type" : "rawImage",
+            "model" : {
+              "width" : 2560,
+              "height" : 1440,
+              "locator" : "8ee9/test/9ae5a590-78d5-11ea-9cbf-d518984d106c.jpg",
+              "originCode" : "cpsdevpb",
+              "copyrightHolder" : "Optimo",
+              "suitableForSyndication" : false
+            }
+          } ]
+        }
+      },
+      "summary" : {
+        "blocks" : [ {
+          "type" : "text",
+          "model" : {
+            "blocks" : [ {
+              "type" : "paragraph",
+              "model" : {
+                "text" : "Hello Promo summary text",
+                "blocks" : [ {
+                  "type" : "fragment",
+                  "model" : {
+                    "text" : "Hello Promo summary text",
+                    "attributes" : [ ]
+                  }
+                } ]
+              }
+            } ]
+          }
+        } ]
+      },
+      "id" : "urn:bbc:ares::article:cn060pe01e5o",
+      "type" : "optimo"
+    },
+    {
+      "locators" : {
+        "optimoUrn" : "urn:bbc:optimo:asset:cn060pe01e5o",
+        "canonicalUrl" : "https://www.bbc.com/news/articles/cn060pe01e5o"
+      },
+      "timestamp" : 1586266369329,
+      "suitableForSyndication" : true,
+      "language" : "en-gb",
+      "headlines" : {
+        "seoHeadline" : "Hello promos",
+        "promoHeadline" : {
+          "blocks" : [ {
+            "type" : "text",
+            "model" : {
+              "blocks" : [ {
+                "type" : "paragraph",
+                "model" : {
+                  "text" : "Hello promos",
+                  "blocks" : [ {
+                    "type" : "fragment",
+                    "model" : {
+                      "text" : "Hello promos",
+                      "attributes" : [ ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      },
+      "images" : {
+        "defaultPromoImage" : {
+          "blocks" : [ {
+            "type" : "altText",
+            "model" : {
+              "blocks" : [ {
+                "type" : "text",
+                "model" : {
+                  "blocks" : [ {
+                    "type" : "paragraph",
+                    "model" : {
+                      "text" : "Pretty landscape",
+                      "blocks" : [ {
+                        "type" : "fragment",
+                        "model" : {
+                          "text" : "Pretty landscape",
+                          "attributes" : [ ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "type" : "rawImage",
+            "model" : {
+              "width" : 2560,
+              "height" : 1440,
+              "locator" : "8ee9/test/9ae5a590-78d5-11ea-9cbf-d518984d106c.jpg",
+              "originCode" : "cpsdevpb",
+              "copyrightHolder" : "Optimo",
+              "suitableForSyndication" : false
+            }
+          } ]
+        }
+      },
+      "summary" : {
+        "blocks" : [ {
+          "type" : "text",
+          "model" : {
+            "blocks" : [ {
+              "type" : "paragraph",
+              "model" : {
+                "text" : "Hello Promo summary text",
+                "blocks" : [ {
+                  "type" : "fragment",
+                  "model" : {
+                    "text" : "Hello Promo summary text",
+                    "attributes" : [ ]
+                  }
+                } ]
+              }
+            } ]
+          }
+        } ]
+      },
+      "id" : "urn:bbc:ares::article:cn060pe01e5o",
+      "type" : "optimo"
+    },
+    {
+      "locators" : {
+        "optimoUrn" : "urn:bbc:optimo:asset:cn060pe01e5o",
+        "canonicalUrl" : "https://www.bbc.com/news/articles/cn060pe01e5o"
+      },
+      "timestamp" : 1586266369329,
+      "suitableForSyndication" : true,
+      "language" : "en-gb",
+      "headlines" : {
+        "seoHeadline" : "Hello promos",
+        "promoHeadline" : {
+          "blocks" : [ {
+            "type" : "text",
+            "model" : {
+              "blocks" : [ {
+                "type" : "paragraph",
+                "model" : {
+                  "text" : "Hello promos",
+                  "blocks" : [ {
+                    "type" : "fragment",
+                    "model" : {
+                      "text" : "Hello promos",
+                      "attributes" : [ ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      },
+      "images" : {
+        "defaultPromoImage" : {
+          "blocks" : [ {
+            "type" : "altText",
+            "model" : {
+              "blocks" : [ {
+                "type" : "text",
+                "model" : {
+                  "blocks" : [ {
+                    "type" : "paragraph",
+                    "model" : {
+                      "text" : "Pretty landscape",
+                      "blocks" : [ {
+                        "type" : "fragment",
+                        "model" : {
+                          "text" : "Pretty landscape",
+                          "attributes" : [ ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "type" : "rawImage",
+            "model" : {
+              "width" : 2560,
+              "height" : 1440,
+              "locator" : "8ee9/test/9ae5a590-78d5-11ea-9cbf-d518984d106c.jpg",
+              "originCode" : "cpsdevpb",
+              "copyrightHolder" : "Optimo",
+              "suitableForSyndication" : false
+            }
+          } ]
+        }
+      },
+      "summary" : {
+        "blocks" : [ {
+          "type" : "text",
+          "model" : {
+            "blocks" : [ {
+              "type" : "paragraph",
+              "model" : {
+                "text" : "Hello Promo summary text",
+                "blocks" : [ {
+                  "type" : "fragment",
+                  "model" : {
+                    "text" : "Hello Promo summary text",
+                    "attributes" : [ ]
+                  }
+                } ]
+              }
+            } ]
+          }
+        } ]
+      },
+      "id" : "urn:bbc:ares::article:cn060pe01e5o",
+      "type" : "optimo"
+    },
+    {
+      "locators" : {
+        "optimoUrn" : "urn:bbc:optimo:asset:cn060pe01e5o",
+        "canonicalUrl" : "https://www.bbc.com/news/articles/cn060pe01e5o"
+      },
+      "timestamp" : 1586266369329,
+      "suitableForSyndication" : true,
+      "language" : "en-gb",
+      "headlines" : {
+        "seoHeadline" : "Hello promos",
+        "promoHeadline" : {
+          "blocks" : [ {
+            "type" : "text",
+            "model" : {
+              "blocks" : [ {
+                "type" : "paragraph",
+                "model" : {
+                  "text" : "Hello promos",
+                  "blocks" : [ {
+                    "type" : "fragment",
+                    "model" : {
+                      "text" : "Hello promos",
+                      "attributes" : [ ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      },
+      "images" : {
+        "defaultPromoImage" : {
+          "blocks" : [ {
+            "type" : "altText",
+            "model" : {
+              "blocks" : [ {
+                "type" : "text",
+                "model" : {
+                  "blocks" : [ {
+                    "type" : "paragraph",
+                    "model" : {
+                      "text" : "Pretty landscape",
+                      "blocks" : [ {
+                        "type" : "fragment",
+                        "model" : {
+                          "text" : "Pretty landscape",
+                          "attributes" : [ ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "type" : "rawImage",
+            "model" : {
+              "width" : 2560,
+              "height" : 1440,
+              "locator" : "8ee9/test/9ae5a590-78d5-11ea-9cbf-d518984d106c.jpg",
+              "originCode" : "cpsdevpb",
+              "copyrightHolder" : "Optimo",
+              "suitableForSyndication" : false
+            }
+          } ]
+        }
+      },
+      "summary" : {
+        "blocks" : [ {
+          "type" : "text",
+          "model" : {
+            "blocks" : [ {
+              "type" : "paragraph",
+              "model" : {
+                "text" : "Hello Promo summary text",
+                "blocks" : [ {
+                  "type" : "fragment",
+                  "model" : {
+                    "text" : "Hello Promo summary text",
+                    "attributes" : [ ]
+                  }
+                } ]
+              }
+            } ]
+          }
+        } ]
+      },
+      "id" : "urn:bbc:ares::article:cn060pe01e5o",
+      "type" : "optimo"
+    },
+    {
+      "locators" : {
+        "optimoUrn" : "urn:bbc:optimo:asset:cn060pe01e5o",
+        "canonicalUrl" : "https://www.bbc.com/news/articles/cn060pe01e5o"
+      },
+      "timestamp" : 1586266369329,
+      "suitableForSyndication" : true,
+      "language" : "en-gb",
+      "headlines" : {
+        "seoHeadline" : "Hello promos",
+        "promoHeadline" : {
+          "blocks" : [ {
+            "type" : "text",
+            "model" : {
+              "blocks" : [ {
+                "type" : "paragraph",
+                "model" : {
+                  "text" : "Hello promos",
+                  "blocks" : [ {
+                    "type" : "fragment",
+                    "model" : {
+                      "text" : "Hello promos",
+                      "attributes" : [ ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      },
+      "images" : {
+        "defaultPromoImage" : {
+          "blocks" : [ {
+            "type" : "altText",
+            "model" : {
+              "blocks" : [ {
+                "type" : "text",
+                "model" : {
+                  "blocks" : [ {
+                    "type" : "paragraph",
+                    "model" : {
+                      "text" : "Pretty landscape",
+                      "blocks" : [ {
+                        "type" : "fragment",
+                        "model" : {
+                          "text" : "Pretty landscape",
+                          "attributes" : [ ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "type" : "rawImage",
+            "model" : {
+              "width" : 2560,
+              "height" : 1440,
+              "locator" : "8ee9/test/9ae5a590-78d5-11ea-9cbf-d518984d106c.jpg",
+              "originCode" : "cpsdevpb",
+              "copyrightHolder" : "Optimo",
+              "suitableForSyndication" : false
+            }
+          } ]
+        }
+      },
+      "summary" : {
+        "blocks" : [ {
+          "type" : "text",
+          "model" : {
+            "blocks" : [ {
+              "type" : "paragraph",
+              "model" : {
+                "text" : "Hello Promo summary text",
+                "blocks" : [ {
+                  "type" : "fragment",
+                  "model" : {
+                    "text" : "Hello Promo summary text",
+                    "attributes" : [ ]
+                  }
+                } ]
+              }
+            } ]
+          }
+        } ]
+      },
+      "id" : "urn:bbc:ares::article:cn060pe01e5o",
+      "type" : "optimo"
+    }
+  ]
+}

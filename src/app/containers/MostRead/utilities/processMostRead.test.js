@@ -1,5 +1,6 @@
 import processMostRead from './processMostRead';
 import pidginData from '#data/pidgin/mostRead';
+import kyrgyzData from '#data/kyrgyz/mostRead';
 import { setStaleLastRecordTimeStamp } from './testHelpers';
 
 const expectedPidginData = [
@@ -66,13 +67,53 @@ const expectedPidginData = [
   },
 ];
 
+// Kyrgyz uses Optimo data for Most read
+const expectedKyrgyzData = [
+  {
+    id: 'urn:bbc:ares::article:cn060pe01e5o',
+    title: 'Hello promos',
+    href: 'https://www.bbc.com/news/articles/cn060pe01e5o',
+    timestamp: 1586266369329,
+  },
+  {
+    id: 'urn:bbc:ares::article:cn060pe01e5o',
+    title: 'Hello promos',
+    href: 'https://www.bbc.com/news/articles/cn060pe01e5o',
+    timestamp: 1586266369329,
+  },
+  {
+    id: 'urn:bbc:ares::article:cn060pe01e5o',
+    title: 'Hello promos',
+    href: 'https://www.bbc.com/news/articles/cn060pe01e5o',
+    timestamp: 1586266369329,
+  },
+  {
+    id: 'urn:bbc:ares::article:cn060pe01e5o',
+    title: 'Hello promos',
+    href: 'https://www.bbc.com/news/articles/cn060pe01e5o',
+    timestamp: 1586266369329,
+  },
+  {
+    id: 'urn:bbc:ares::article:cn060pe01e5o',
+    title: 'Hello promos',
+    href: 'https://www.bbc.com/news/articles/cn060pe01e5o',
+    timestamp: 1586266369329,
+  },
+];
+
 describe('filterMostRead', () => {
   [
     {
-      description: 'should return expected filtered data',
+      description: 'should return expected filtered CPS data',
       data: pidginData,
       numberOfItems: 10,
       expectedReturn: expectedPidginData,
+    },
+    {
+      description: 'should return expected filtered Optimo data',
+      data: kyrgyzData,
+      numberOfItems: 5,
+      expectedReturn: expectedKyrgyzData,
     },
     {
       description: 'should return null when last record time stamp is stale',
