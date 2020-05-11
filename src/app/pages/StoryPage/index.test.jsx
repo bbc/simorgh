@@ -21,8 +21,10 @@ import getInitialData from '#app/routes/cpsAsset/getInitialData';
 // mock data
 import pidginPageData from '#data/pidgin/cpsAssets/world-23252817';
 import pidginMostReadData from '#data/pidgin/mostRead/index.json';
+import pidginSecondaryColumnData from '#data/pidgin/secondaryColumn/index.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import igboMostReadData from '#data/igbo/mostRead/index.json';
+import igboSecondaryColumnData from '#data/igbo/secondaryColumn/index.json';
 
 fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
 
@@ -113,6 +115,10 @@ describe('Story Page', () => {
         'http://localhost/pidgin/mostread.json',
         pidginMostReadData,
       );
+      fetchMock.mock(
+        'http://localhost/pidgin/sty-secondary-column.json',
+        pidginSecondaryColumnData,
+      );
 
       const { pageData } = await getInitialData({
         path: '/some-cps-sty-path',
@@ -127,6 +133,10 @@ describe('Story Page', () => {
   it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
     fetchMock.mock('http://localhost/some-cps-sty-path.json', igboPageData);
     fetchMock.mock('http://localhost/igbo/mostread.json', igboMostReadData);
+    fetchMock.mock(
+      'http://localhost/igbo/sty-secondary-column.json',
+      igboSecondaryColumnData,
+    );
 
     const { pageData } = await getInitialData({
       path: '/some-cps-sty-path',
@@ -140,6 +150,10 @@ describe('Story Page', () => {
   it('should not show the pop-out timestamp when allowDateStamp is false', async () => {
     fetchMock.mock('http://localhost/some-cps-sty-path.json', igboPageData);
     fetchMock.mock('http://localhost/igbo/mostread.json', igboMostReadData);
+    fetchMock.mock(
+      'http://localhost/igbo/sty-secondary-column.json',
+      igboSecondaryColumnData,
+    );
 
     const { pageData } = await getInitialData({
       path: '/some-cps-sty-path',
