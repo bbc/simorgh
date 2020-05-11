@@ -96,7 +96,7 @@ describe('ArticleMain utils', () => {
 
   it('getSummary › it should return the correct value', () => {
     const actual = getSummary(articleDataNews);
-    const expected = 'This is the summary text';
+    const expected = 'Article summary.';
 
     expect(actual).toEqual(expected);
   });
