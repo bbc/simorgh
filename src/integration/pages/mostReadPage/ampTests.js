@@ -1,5 +1,6 @@
-import { runCoreAmpTests } from '../../common';
+import { runCoreAmpTests, runAmpAnalyticsTests } from '../../common';
 
 export default () => {
   runCoreAmpTests();
+  runAmpAnalyticsTests();
 };
