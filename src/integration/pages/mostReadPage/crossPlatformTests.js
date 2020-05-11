@@ -14,7 +14,7 @@ export default () => {
   it('I can see the list items', () => {
     const listItemElements = document.querySelectorAll('main ol li');
 
-    listItemtElements.forEach(itemEl => {
+    listItemElements.forEach(itemEl => {
       expect(itemEl).toBeInTheDocument();
       expect(itemEl).toBeTruthy();
       expect(itemEl.textContent).toMatchSnapshot();
