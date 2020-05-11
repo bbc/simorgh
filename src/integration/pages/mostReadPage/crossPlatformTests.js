@@ -12,7 +12,7 @@ export default () => {
   });
 
   it('I can see the list items', () => {
-    const listItemtElements = document.querySelectorAll('main ol li');
+    const listItemElements = document.querySelectorAll('main ol li');
 
     listItemtElements.forEach(itemEl => {
       expect(itemEl).toBeInTheDocument();
