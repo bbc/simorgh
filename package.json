@@ -36,6 +36,7 @@
     "test:unit:watch": "npm run test:unit -- --watch",
     "test:integration": "npm run stop && npm run build:local && (npm run start & wait-on -t 20000 http://localhost:7080/status) && (jest --runInBand --colors ./src/integration/pages/**/*) && npm run stop",
     "test:integration:ci": "jest --ci --runInBand --colors ./src/integration/pages/**/*",
+    "test:linkey": "node scripts/linkeySetup.js && npx jest src/app/lib/config/services/*.test.js --verbose true && find src/app/lib/config/services -type f -name '*.test.js' -delete",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
     "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --env.config='server'"
   },
@@ -196,6 +197,7 @@
     "lint-staged": "^10.1.7",
     "mocha": "^7.1.2",
     "mocha-junit-reporter": "^1.23.3",
+    "node-fetch": "^2.6.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "prop-types": "^15.7.2",
