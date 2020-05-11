@@ -5,222 +5,641 @@
   "totalRecords": 100,
   "records": [
     {
-      "id": "1c116074-5ecd-f74d-aa46-c736f039b885",
-      "count": 1415,
-      "urn": "urn:bbc:curie:asset:1c116074-5ecd-f74d-aa46-c736f039b885",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "\"Идеябызды эч ким түшүнгөн эмес, эми анын баасы миллиард\"",
-          "headline": "\"Идеябызды эч ким түшүнгөн эмес, эми анын баасы миллиард\""
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/magazine-50285910",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-50285910",
-          "curie": "http://www.bbc.co.uk/asset/1c116074-5ecd-f74d-aa46-c736f039b885"
-        },
-        "summary": "Ховард Лю - AirTable компаниясынын негиздөөчүсү. AirTable төрт гана жыл мурун ишин баштаганына карабастан, компания бүгүнкү күнү 1,1 млрд. долларга бааланууда.",
-        "timestamp": 1573020392750,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e2939461b000e9dabf8",
-              "campaignName": "WS - Educate me"
+      "locators" : {
+        "optimoUrn" : "urn:bbc:optimo:asset:cn060pe01e5o",
+        "canonicalUrl" : "https://www.bbc.com/news/articles/cn060pe01e5o"
+      },
+      "timestamp" : 1586266369329,
+      "suitableForSyndication" : true,
+      "language" : "en-gb",
+      "headlines" : {
+        "seoHeadline" : "Hello promos",
+        "promoHeadline" : {
+          "blocks" : [ {
+            "type" : "text",
+            "model" : {
+              "blocks" : [ {
+                "type" : "paragraph",
+                "model" : {
+                  "text" : "Hello promos",
+                  "blocks" : [ {
+                    "type" : "fragment",
+                    "model" : {
+                      "text" : "Hello promos",
+                      "attributes" : [ ]
+                    }
+                  } ]
+                }
+              } ]
             }
-          ]
-        },
-        "indexImage": {
-          "id": "109461706",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/ED2C/production/_109461706_61ddc731-ed2c-48ce-b7da-e386220f35ef.jpg",
-          "path": "/cpsprodpb/ED2C/production/_109461706_61ddc731-ed2c-48ce-b7da-e386220f35ef.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Howie Liu",
-          "copyrightHolder": "Bloomberg"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/magazine-50285910"
-      }
-    },
-    {
-      "id": "224ac7c3-6ea9-4a4a-99ad-ea768a097521",
-      "count": 474,
-      "urn": "urn:bbc:curie:asset:224ac7c3-6ea9-4a4a-99ad-ea768a097521",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Сталин менен коштошуу зыйнатындагы курмандыктар: күбөлөрдүн көзү менен",
-          "headline": "Сталин менен коштошуу зыйнатындагы курмандыктар: күбөлөрдүн көзү менен"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/entertainment-43368802",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment-43368802",
-          "curie": "http://www.bbc.co.uk/asset/224ac7c3-6ea9-4a4a-99ad-ea768a097521"
-        },
-        "summary": "1953-жылдын 9-мартында Москвада Иосиф Сталин менен коштошуу зыйнаты болгон. Мунун алдында шаардын борборунда үрөй учурган окуя болгон. Бул тууралуу кайра куруу дооруна чейин эч ким ооз ачкан эмес.",
-        "timestamp": 1572857768993,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
+          } ]
+        }
+      },
+      "images" : {
+        "defaultPromoImage" : {
+          "blocks" : [ {
+            "type" : "altText",
+            "model" : {
+              "blocks" : [ {
+                "type" : "text",
+                "model" : {
+                  "blocks" : [ {
+                    "type" : "paragraph",
+                    "model" : {
+                      "text" : "Pretty landscape",
+                      "blocks" : [ {
+                        "type" : "fragment",
+                        "model" : {
+                          "text" : "Pretty landscape",
+                          "attributes" : [ ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "type" : "rawImage",
+            "model" : {
+              "width" : 2560,
+              "height" : 1440,
+              "locator" : "8ee9/test/9ae5a590-78d5-11ea-9cbf-d518984d106c.jpg",
+              "originCode" : "cpsdevpb",
+              "copyrightHolder" : "Optimo",
+              "suitableForSyndication" : false
+            }
+          } ]
+        }
+      },
+      "summary" : {
+        "blocks" : [ {
+          "type" : "text",
+          "model" : {
+            "blocks" : [ {
+              "type" : "paragraph",
+              "model" : {
+                "text" : "Hello Promo summary text",
+                "blocks" : [ {
+                  "type" : "fragment",
+                  "model" : {
+                    "text" : "Hello Promo summary text",
+                    "attributes" : [ ]
+                  }
+                } ]
+              }
+            } ]
           }
-        },
-        "indexImage": {
-          "id": "100252976",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/10955/production/_100252976_gettyimages-2628478.jpg",
-          "path": "/cpsprodpb/10955/production/_100252976_gettyimages-2628478.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Иосиф Сталин в гробу в Колонном зале Дома Союзов",
-          "copyrightHolder": "Getty Images"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/entertainment-43368802"
-      }
+        } ]
+      },
+      "id" : "urn:bbc:ares::article:cn060pe01e5o",
+      "type" : "optimo"
     },
     {
-      "id": "a0b60724-0ec2-5740-a838-ab9177c2ca29",
-      "count": 192,
-      "urn": "urn:bbc:curie:asset:a0b60724-0ec2-5740-a838-ab9177c2ca29",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "Тажикстан: \"ИМ\" тобунун согушкерлери чек ара тозотуна кол салды",
-          "headline": "Тажикстан: \"ИМ\" тобунун согушкерлери чек ара тозотуна кол салды"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/world-50313381",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/world-50313381",
-          "curie": "http://www.bbc.co.uk/asset/a0b60724-0ec2-5740-a838-ab9177c2ca29"
-        },
-        "summary": "Өздөрүн \"Ислам мамлекети\" деп атаган топтун согушкерлери Тажикстан менен Өзбекстандын чек арасына жакын аймактагы тозотко кол салып, кеминде 17 киши каза тапты. Бул тууралуу Тажикстандын расмийлери билдирди.",
-        "timestamp": 1573039213288,
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e4739461b000e9dabfc",
-              "campaignName": "WS - Update me"
+      "locators" : {
+        "optimoUrn" : "urn:bbc:optimo:asset:c736f039b88",
+        "canonicalUrl" : "https://www.bbc.com/news/articles/c736f039b88"
+      },
+      "timestamp" : 1586266369329,
+      "suitableForSyndication" : true,
+      "language" : "en-gb",
+      "headlines" : {
+        "seoHeadline" : "Hello promos",
+        "promoHeadline" : {
+          "blocks" : [ {
+            "type" : "text",
+            "model" : {
+              "blocks" : [ {
+                "type" : "paragraph",
+                "model" : {
+                  "text" : "Hello promos",
+                  "blocks" : [ {
+                    "type" : "fragment",
+                    "model" : {
+                      "text" : "Hello promos",
+                      "attributes" : [ ]
+                    }
+                  } ]
+                }
+              } ]
             }
-          ]
-        },
-        "indexImage": {
-          "id": "109547421",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/30BA/production/_109547421_6ee8d77d-0e4a-4457-bd42-649be087beb7.jpg",
-          "path": "/cpsprodpb/30BA/production/_109547421_6ee8d77d-0e4a-4457-bd42-649be087beb7.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "тышууда 15 экстремисттик топтун согушкери өлтүрүлгөн",
-          "caption": "тышууда 15 экстремисттик топтун согушкери өлтүрүлгөн",
-          "copyrightHolder": "AFP/Tajikistan government"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/world-50313381"
-      }
-    },
-    {
-      "id": "c683f1fb-3dd8-7242-a7cc-3c62d6061fc2",
-      "count": 98,
-      "urn": "urn:bbc:curie:asset:c683f1fb-3dd8-7242-a7cc-3c62d6061fc2",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "\"Уурдалган кыз селфи сүрөт аркылуу табылды\"",
-          "headline": "\"Уурдалган кыз селфи сүрөт аркылуу табылды\""
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/magazine-50231420",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/magazine-50231420",
-          "curie": "http://www.bbc.co.uk/asset/c683f1fb-3dd8-7242-a7cc-3c62d6061fc2"
-        },
-        "summary": "1997-жылы апрель айында Кейптаун шаарындагы мейманканадан үч күн мурун төрөлгөн ымыркай уурдалган. Анын энеси уктап жаткан болчу. 17 жылдан кийин бул кыз байкабай өзүнүн чыныгы энесин таап алды.",
-        "timestamp": 1572588888375,
-        "byline": {
-          "name": "Sarah McDermott",
-          "title": "BBC World Service",
-          "persons": [
-            {
-              "name": "Sarah McDermott",
-              "function": "BBC World Service"
+          } ]
+        }
+      },
+      "images" : {
+        "defaultPromoImage" : {
+          "blocks" : [ {
+            "type" : "altText",
+            "model" : {
+              "blocks" : [ {
+                "type" : "text",
+                "model" : {
+                  "blocks" : [ {
+                    "type" : "paragraph",
+                    "model" : {
+                      "text" : "Pretty landscape",
+                      "blocks" : [ {
+                        "type" : "fragment",
+                        "model" : {
+                          "text" : "Pretty landscape",
+                          "attributes" : [ ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
             }
-          ]
-        },
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
-          },
-          "campaigns": [
-            {
-              "campaignId": "5a988e1739461b000e9dabf6",
-              "campaignName": "WS - CS"
-            },
-            {
-              "campaignId": "5a988e3139461b000e9dabf9",
-              "campaignName": "WS - Divert me"
+          }, {
+            "type" : "rawImage",
+            "model" : {
+              "width" : 2560,
+              "height" : 1440,
+              "locator" : "8ee9/test/9ae5a590-78d5-11ea-9cbf-d518984d106c.jpg",
+              "originCode" : "cpsdevpb",
+              "copyrightHolder" : "Optimo",
+              "suitableForSyndication" : false
             }
-          ]
-        },
-        "indexImage": {
-          "id": "109373368",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/15141/production/_109373368_micheselfie976.jpg",
-          "path": "/cpsprodpb/15141/production/_109373368_micheselfie976.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Miche and Cassidy",
-          "copyrightHolder": "BBC"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/magazine-50231420"
-      }
-    },
-    {
-      "id": "7b9a121d-896f-c247-9487-105a0de62da9",
-      "count": 88,
-      "urn": "urn:bbc:curie:asset:7b9a121d-896f-c247-9487-105a0de62da9",
-      "promo": {
-        "headlines": {
-          "shortHeadline": "7-8-ноябрь Тарых жана ата-бабаларды эскерүү күнү катары белгиленди",
-          "headline": "7-8-ноябрь Тарых жана ата-бабаларды эскерүү күнү катары белгиленди"
-        },
-        "locators": {
-          "assetUri": "/kyrgyz/kyrgyzstan-41902014",
-          "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-41902014",
-          "curie": "http://www.bbc.co.uk/asset/7b9a121d-896f-c247-9487-105a0de62da9"
-        },
-        "summary": "Бул тууралуу президент Атамбаевдин жарлыгы октябрь аягында жарыяланган эле. Аталган жарлыкта 1916-жылдагы улуттук-боштондук көтөрүлүшүнө, февраль жана октябрь революциялары, репрессиянын кесепеттерине объективдүү тарыхый баа берүү максаты айтылган.",
-        "timestamp": 1558434138730,
-        "byline": {
-          "name": "Айбек Абдылдаев",
-          "title": "Би-Би-Си Кыргыз кызматы",
-          "persons": [
-            {
-              "name": "Айбек Абдылдаев",
-              "function": "Би-Би-Си Кыргыз кызматы"
-            }
-          ]
-        },
-        "passport": {
-          "category": {
-            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName": "News"
+          } ]
+        }
+      },
+      "summary" : {
+        "blocks" : [ {
+          "type" : "text",
+          "model" : {
+            "blocks" : [ {
+              "type" : "paragraph",
+              "model" : {
+                "text" : "Hello Promo summary text",
+                "blocks" : [ {
+                  "type" : "fragment",
+                  "model" : {
+                    "text" : "Hello Promo summary text",
+                    "attributes" : [ ]
+                  }
+                } ]
+              }
+            } ]
           }
-        },
-        "indexImage": {
-          "id": "98649099",
-          "subType": "index",
-          "href": "http://c.files.bbci.co.uk/18316/production/_98649099_ce1ba4ea-8132-4b41-85c8-0706739d3648.jpg",
-          "path": "/cpsprodpb/18316/production/_98649099_ce1ba4ea-8132-4b41-85c8-0706739d3648.jpg",
-          "height": 549,
-          "width": 976,
-          "altText": "Кыргыз лидерлери",
-          "copyrightHolder": "president.kg"
-        },
-        "id": "urn:bbc:ares::asset:kyrgyz/kyrgyzstan-41902014"
-      }
+        } ]
+      },
+      "id" : "urn:bbc:ares::article:c736f039b88",
+      "type" : "optimo"
+    },
+    {
+      "locators" : {
+        "optimoUrn" : "urn:bbc:optimo:asset:ea768a097521",
+        "canonicalUrl" : "https://www.bbc.com/news/articles/ea768a097521"
+      },
+      "timestamp" : 1586266369329,
+      "suitableForSyndication" : true,
+      "language" : "en-gb",
+      "headlines" : {
+        "seoHeadline" : "Hello promos",
+        "promoHeadline" : {
+          "blocks" : [ {
+            "type" : "text",
+            "model" : {
+              "blocks" : [ {
+                "type" : "paragraph",
+                "model" : {
+                  "text" : "Hello promos",
+                  "blocks" : [ {
+                    "type" : "fragment",
+                    "model" : {
+                      "text" : "Hello promos",
+                      "attributes" : [ ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      },
+      "images" : {
+        "defaultPromoImage" : {
+          "blocks" : [ {
+            "type" : "altText",
+            "model" : {
+              "blocks" : [ {
+                "type" : "text",
+                "model" : {
+                  "blocks" : [ {
+                    "type" : "paragraph",
+                    "model" : {
+                      "text" : "Pretty landscape",
+                      "blocks" : [ {
+                        "type" : "fragment",
+                        "model" : {
+                          "text" : "Pretty landscape",
+                          "attributes" : [ ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "type" : "rawImage",
+            "model" : {
+              "width" : 2560,
+              "height" : 1440,
+              "locator" : "8ee9/test/9ae5a590-78d5-11ea-9cbf-d518984d106c.jpg",
+              "originCode" : "cpsdevpb",
+              "copyrightHolder" : "Optimo",
+              "suitableForSyndication" : false
+            }
+          } ]
+        }
+      },
+      "summary" : {
+        "blocks" : [ {
+          "type" : "text",
+          "model" : {
+            "blocks" : [ {
+              "type" : "paragraph",
+              "model" : {
+                "text" : "Hello Promo summary text",
+                "blocks" : [ {
+                  "type" : "fragment",
+                  "model" : {
+                    "text" : "Hello Promo summary text",
+                    "attributes" : [ ]
+                  }
+                } ]
+              }
+            } ]
+          }
+        } ]
+      },
+      "id" : "urn:bbc:ares::article:ea768a097521",
+      "type" : "optimo"
+    },
+    {
+      "locators" : {
+        "optimoUrn" : "urn:bbc:optimo:asset:ab9177c2ca29",
+        "canonicalUrl" : "https://www.bbc.com/news/articles/ab9177c2ca29"
+      },
+      "timestamp" : 1586266369329,
+      "suitableForSyndication" : true,
+      "language" : "en-gb",
+      "headlines" : {
+        "seoHeadline" : "Hello promos",
+        "promoHeadline" : {
+          "blocks" : [ {
+            "type" : "text",
+            "model" : {
+              "blocks" : [ {
+                "type" : "paragraph",
+                "model" : {
+                  "text" : "Hello promos",
+                  "blocks" : [ {
+                    "type" : "fragment",
+                    "model" : {
+                      "text" : "Hello promos",
+                      "attributes" : [ ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      },
+      "images" : {
+        "defaultPromoImage" : {
+          "blocks" : [ {
+            "type" : "altText",
+            "model" : {
+              "blocks" : [ {
+                "type" : "text",
+                "model" : {
+                  "blocks" : [ {
+                    "type" : "paragraph",
+                    "model" : {
+                      "text" : "Pretty landscape",
+                      "blocks" : [ {
+                        "type" : "fragment",
+                        "model" : {
+                          "text" : "Pretty landscape",
+                          "attributes" : [ ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "type" : "rawImage",
+            "model" : {
+              "width" : 2560,
+              "height" : 1440,
+              "locator" : "8ee9/test/9ae5a590-78d5-11ea-9cbf-d518984d106c.jpg",
+              "originCode" : "cpsdevpb",
+              "copyrightHolder" : "Optimo",
+              "suitableForSyndication" : false
+            }
+          } ]
+        }
+      },
+      "summary" : {
+        "blocks" : [ {
+          "type" : "text",
+          "model" : {
+            "blocks" : [ {
+              "type" : "paragraph",
+              "model" : {
+                "text" : "Hello Promo summary text",
+                "blocks" : [ {
+                  "type" : "fragment",
+                  "model" : {
+                    "text" : "Hello Promo summary text",
+                    "attributes" : [ ]
+                  }
+                } ]
+              }
+            } ]
+          }
+        } ]
+      },
+      "id" : "urn:bbc:ares::article:ab9177c2ca29",
+      "type" : "optimo"
+    },
+    {
+      "locators" : {
+        "optimoUrn" : "urn:bbc:optimo:asset:cn060pe01e5o",
+        "canonicalUrl" : "https://www.bbc.com/news/articles/cn060pe01e5o"
+      },
+      "timestamp" : 1586266369329,
+      "suitableForSyndication" : true,
+      "language" : "en-gb",
+      "headlines" : {
+        "seoHeadline" : "Hello promos",
+        "promoHeadline" : {
+          "blocks" : [ {
+            "type" : "text",
+            "model" : {
+              "blocks" : [ {
+                "type" : "paragraph",
+                "model" : {
+                  "text" : "Hello promos",
+                  "blocks" : [ {
+                    "type" : "fragment",
+                    "model" : {
+                      "text" : "Hello promos",
+                      "attributes" : [ ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      },
+      "images" : {
+        "defaultPromoImage" : {
+          "blocks" : [ {
+            "type" : "altText",
+            "model" : {
+              "blocks" : [ {
+                "type" : "text",
+                "model" : {
+                  "blocks" : [ {
+                    "type" : "paragraph",
+                    "model" : {
+                      "text" : "Pretty landscape",
+                      "blocks" : [ {
+                        "type" : "fragment",
+                        "model" : {
+                          "text" : "Pretty landscape",
+                          "attributes" : [ ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "type" : "rawImage",
+            "model" : {
+              "width" : 2560,
+              "height" : 1440,
+              "locator" : "8ee9/test/9ae5a590-78d5-11ea-9cbf-d518984d106c.jpg",
+              "originCode" : "cpsdevpb",
+              "copyrightHolder" : "Optimo",
+              "suitableForSyndication" : false
+            }
+          } ]
+        }
+      },
+      "summary" : {
+        "blocks" : [ {
+          "type" : "text",
+          "model" : {
+            "blocks" : [ {
+              "type" : "paragraph",
+              "model" : {
+                "text" : "Hello Promo summary text",
+                "blocks" : [ {
+                  "type" : "fragment",
+                  "model" : {
+                    "text" : "Hello Promo summary text",
+                    "attributes" : [ ]
+                  }
+                } ]
+              }
+            } ]
+          }
+        } ]
+      },
+      "id" : "urn:bbc:ares::article:cn060pe01e5o",
+      "type" : "optimo"
+    },
+    {
+      "locators" : {
+        "optimoUrn" : "urn:bbc:optimo:asset:cn060pe01e5o",
+        "canonicalUrl" : "https://www.bbc.com/news/articles/cn060pe01e5o"
+      },
+      "timestamp" : 1586266369329,
+      "suitableForSyndication" : true,
+      "language" : "en-gb",
+      "headlines" : {
+        "seoHeadline" : "Hello promos",
+        "promoHeadline" : {
+          "blocks" : [ {
+            "type" : "text",
+            "model" : {
+              "blocks" : [ {
+                "type" : "paragraph",
+                "model" : {
+                  "text" : "Hello promos",
+                  "blocks" : [ {
+                    "type" : "fragment",
+                    "model" : {
+                      "text" : "Hello promos",
+                      "attributes" : [ ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      },
+      "images" : {
+        "defaultPromoImage" : {
+          "blocks" : [ {
+            "type" : "altText",
+            "model" : {
+              "blocks" : [ {
+                "type" : "text",
+                "model" : {
+                  "blocks" : [ {
+                    "type" : "paragraph",
+                    "model" : {
+                      "text" : "Pretty landscape",
+                      "blocks" : [ {
+                        "type" : "fragment",
+                        "model" : {
+                          "text" : "Pretty landscape",
+                          "attributes" : [ ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "type" : "rawImage",
+            "model" : {
+              "width" : 2560,
+              "height" : 1440,
+              "locator" : "8ee9/test/9ae5a590-78d5-11ea-9cbf-d518984d106c.jpg",
+              "originCode" : "cpsdevpb",
+              "copyrightHolder" : "Optimo",
+              "suitableForSyndication" : false
+            }
+          } ]
+        }
+      },
+      "summary" : {
+        "blocks" : [ {
+          "type" : "text",
+          "model" : {
+            "blocks" : [ {
+              "type" : "paragraph",
+              "model" : {
+                "text" : "Hello Promo summary text",
+                "blocks" : [ {
+                  "type" : "fragment",
+                  "model" : {
+                    "text" : "Hello Promo summary text",
+                    "attributes" : [ ]
+                  }
+                } ]
+              }
+            } ]
+          }
+        } ]
+      },
+      "id" : "urn:bbc:ares::article:cn060pe01e5o",
+      "type" : "optimo"
+    },
+    {
+      "locators" : {
+        "optimoUrn" : "urn:bbc:optimo:asset:cn060pe01e5o",
+        "canonicalUrl" : "https://www.bbc.com/news/articles/cn060pe01e5o"
+      },
+      "timestamp" : 1586266369329,
+      "suitableForSyndication" : true,
+      "language" : "en-gb",
+      "headlines" : {
+        "seoHeadline" : "Hello promos",
+        "promoHeadline" : {
+          "blocks" : [ {
+            "type" : "text",
+            "model" : {
+              "blocks" : [ {
+                "type" : "paragraph",
+                "model" : {
+                  "text" : "Hello promos",
+                  "blocks" : [ {
+                    "type" : "fragment",
+                    "model" : {
+                      "text" : "Hello promos",
+                      "attributes" : [ ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          } ]
+        }
+      },
+      "images" : {
+        "defaultPromoImage" : {
+          "blocks" : [ {
+            "type" : "altText",
+            "model" : {
+              "blocks" : [ {
+                "type" : "text",
+                "model" : {
+                  "blocks" : [ {
+                    "type" : "paragraph",
+                    "model" : {
+                      "text" : "Pretty landscape",
+                      "blocks" : [ {
+                        "type" : "fragment",
+                        "model" : {
+                          "text" : "Pretty landscape",
+                          "attributes" : [ ]
+                        }
+                      } ]
+                    }
+                  } ]
+                }
+              } ]
+            }
+          }, {
+            "type" : "rawImage",
+            "model" : {
+              "width" : 2560,
+              "height" : 1440,
+              "locator" : "8ee9/test/9ae5a590-78d5-11ea-9cbf-d518984d106c.jpg",
+              "originCode" : "cpsdevpb",
+              "copyrightHolder" : "Optimo",
+              "suitableForSyndication" : false
+            }
+          } ]
+        }
+      },
+      "summary" : {
+        "blocks" : [ {
+          "type" : "text",
+          "model" : {
+            "blocks" : [ {
+              "type" : "paragraph",
+              "model" : {
+                "text" : "Hello Promo summary text",
+                "blocks" : [ {
+                  "type" : "fragment",
+                  "model" : {
+                    "text" : "Hello Promo summary text",
+                    "attributes" : [ ]
+                  }
+                } ]
+              }
+            } ]
+          }
+        } ]
+      },
+      "id" : "urn:bbc:ares::article:cn060pe01e5o",
+      "type" : "optimo"
     },
     {
       "id": "51fbe4ee-457d-7e45-8ee1-976dfba00365",
