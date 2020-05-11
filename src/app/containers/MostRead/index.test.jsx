@@ -15,7 +15,7 @@ const MostReadWithContext = ({
   service,
   variant = null,
   mostReadToggle,
-  isMostReadPage,
+  serverRenderOnAmp,
 }) => (
   <ToggleContext.Provider
     value={{
@@ -34,7 +34,7 @@ const MostReadWithContext = ({
       variant={variant}
     >
       <ServiceContextProvider service={service} variant={variant}>
-        <MostReadContainer isMostReadPage={isMostReadPage} />
+        <MostReadContainer serverRenderOnAmp={serverRenderOnAmp} />
       </ServiceContextProvider>
     </RequestContextProvider>
   </ToggleContext.Provider>
@@ -60,7 +60,7 @@ describe('MostReadContainerCanonical Assertion', () => {
       variant: null,
       renderExpectation: shouldRenderMostRead,
       dataResponse: setFreshPromoTimestamp(pidginMostReadData),
-      isMostReadPage: false,
+      serverRenderOnAmp: false,
     },
     {
       description: 'should render most read for serbian lat with toggles on',
@@ -70,7 +70,7 @@ describe('MostReadContainerCanonical Assertion', () => {
       variant: 'lat',
       renderExpectation: shouldRenderMostRead,
       dataResponse: setFreshPromoTimestamp(serbianLatMostReadData),
-      isMostReadPage: false,
+      serverRenderOnAmp: false,
     },
     {
       description: 'should not render most read for pidgin with toggles off',
@@ -80,7 +80,7 @@ describe('MostReadContainerCanonical Assertion', () => {
       variant: null,
       renderExpectation: shouldNotRenderMostRead,
       dataResponse: setFreshPromoTimestamp(pidginMostReadData),
-      isMostReadPage: false,
+      serverRenderOnAmp: false,
     },
     {
       description: 'should not render most read for archive',
@@ -90,7 +90,7 @@ describe('MostReadContainerCanonical Assertion', () => {
       variant: null,
       renderExpectation: shouldNotRenderMostRead,
       dataResponse: null,
-      isMostReadPage: false,
+      serverRenderOnAmp: false,
     },
     {
       description:
@@ -101,20 +101,18 @@ describe('MostReadContainerCanonical Assertion', () => {
       variant: null,
       renderExpectation: shouldNotRenderMostRead,
       dataResponse: setFreshPromoTimestamp(pidginMostReadData),
-
-      isMostReadPage: false,
+      serverRenderOnAmp: false,
     },
     {
       description:
-        'should render most read on amp pages when initialData is passed and isMostReadPage is true',
+        'should render most read on amp pages when initialData is passed and serverRenderOnAmp is true',
       service: 'pidgin',
       mostReadToggle: true,
       isAmp: true,
       variant: null,
       renderExpectation: shouldRenderMostRead,
       dataResponse: setFreshPromoTimestamp(pidginMostReadData),
-
-      isMostReadPage: true,
+      serverRenderOnAmp: true,
     },
   ].forEach(
     ({
@@ -125,8 +123,7 @@ describe('MostReadContainerCanonical Assertion', () => {
       variant,
       renderExpectation,
       dataResponse,
-
-      isMostReadPage,
+      serverRenderOnAmp,
     }) => {
       it(description, async () => {
         fetch.mockResponse(JSON.stringify(dataResponse));
@@ -139,7 +136,7 @@ describe('MostReadContainerCanonical Assertion', () => {
               mostReadToggle={mostReadToggle}
               isAmp={isAmp}
               variant={variant}
-              isMostReadPage={isMostReadPage}
+              serverRenderOnAmp={serverRenderOnAmp}
             />,
           ).container;
         });

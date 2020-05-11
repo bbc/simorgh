@@ -13,7 +13,7 @@ const MostReadContainer = ({
   columnLayout,
   size,
   wrapper,
-  isMostReadPage,
+  serverRenderOnAmp,
 }) => {
   const { variant, isAmp } = useContext(RequestContext);
   const {
@@ -32,7 +32,7 @@ const MostReadContainer = ({
 
   // Do not render on AMP when it is not the most read page
   // We only want to render most read on AMP for the "/popular/read" pages
-  if (isAmp && !isMostReadPage) {
+  if (isAmp && !serverRenderOnAmp) {
     return null;
   }
 
@@ -56,7 +56,7 @@ MostReadContainer.propTypes = {
   size: oneOf(['default', 'small']),
   initialData: mostReadShape,
   wrapper: elementType,
-  isMostReadPage: bool,
+  serverRenderOnAmp: bool,
 };
 
 MostReadContainer.defaultProps = {
@@ -65,7 +65,7 @@ MostReadContainer.defaultProps = {
   size: 'default',
   initialData: undefined,
   wrapper: undefined,
-  isMostReadPage: false,
+  serverRenderOnAmp: false,
 };
 
 export default MostReadContainer;
