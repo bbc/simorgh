@@ -1,0 +1,273 @@
+{
+  "topStories":[
+    {
+      "headlines":{
+        "headline":"Мирзиёевнинг илк давлат сафари Қозоғистон"
+      },
+      "locators":{
+        "assetUri":"/kyrgyz/23103378",
+        "cpsUrn":"urn:bbc:content:assetUri:kyrgyz/23103378",
+        "assetId":"23103378"
+      },
+      "summary":"Ўзбекистон президентининг илк давлат сафари билан март ойида Қозоғистонга боради. Бу ҳақида Ўзбекистон ва Қозоғистон ўртасидаги ҳамкорлик бўйича тузилган ҳукуматлараро комиссиянинг Тошкентдаги мажлисида эълон қилинди.",
+      "timestamp":1569397958000,
+      "language":"ky",
+      "passport":{
+        "category":{
+          "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+          "categoryName":"News"
+        },
+        "taggings":[
+
+        ]
+      },
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63529676",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/1086C/test/_63529676_000141412-1.jpg",
+        "path":"/cpsdevpb/1086C/test/_63529676_000141412-1.jpg",
+        "height":549,
+        "width":976,
+        "altText":"Mirsiyoywv Rossiya o'rniga Qozogintonni tanladi",
+        "caption":"Mirsiyoyev Rossiya o'rniga Qozogintonni tanladi",
+        "copyrightHolder":"AP",
+        "type":"image"
+      },
+      "imageThumbnail":{
+        "id":"63529678",
+        "subType":"index-thumbnail",
+        "href":"http://b.files.bbci.co.uk/1568C/test/_63529678_000141412-1.jpg",
+        "path":"/cpsdevpb/1568C/test/_63529678_000141412-1.jpg",
+        "height":180,
+        "width":320,
+        "altText":"Mirsiyoywv Rossiya o'rniga Qozogintonni tanladi",
+        "caption":"Mirsiyoyev Rossiya o'rniga Qozogintonni tanladi",
+        "copyrightHolder":"AP",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "prominence":"maximum",
+      "section":{
+        "subType":"IDX",
+        "name":"Башталгыч бет",
+        "uri":"/kyrgyz/front_page",
+        "type":"simple"
+      },
+      "id":"urn:bbc:ares::asset:kyrgyz/23103378",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт"
+      },
+      "locators":{
+        "assetUri":"/kyrgyz/kyrgyzstan-23088783",
+        "cpsUrn":"urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-23088783",
+        "assetId":"23088783"
+      },
+      "summary":"Үй-бүлөдөгү зомбулуктан эң көп аялдар жабыркайт",
+      "timestamp":1478184211000,
+      "language":"ky",
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63520710",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/06A6/test/_63520710_23088783.jpg",
+        "path":"/cpsdevpb/06A6/test/_63520710_23088783.jpg",
+        "height":549,
+        "width":976,
+        "altText":"Family Violence",
+        "caption":"Family Violence",
+        "copyrightHolder":"BBC",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "id":"urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23088783",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"АКШ: жаңы президент ким экенин аныктаган штаттар кайсылар?"
+      },
+      "locators":{
+        "assetUri":"/kyrgyz/world-23090100",
+        "cpsUrn":"urn:bbc:content:assetUri:kyrgyz/world-23090100",
+        "assetId":"23090100"
+      },
+      "summary":"Шейшембиде Америка кошмо штаттары өлкөнүн жаңы президентин тандап алуу үчүн добуш беришет.",
+      "timestamp":1478663803000,
+      "language":"ky",
+      "passport":{
+        "category":{
+          "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+          "categoryName":"News"
+        },
+        "taggings":[
+
+        ]
+      },
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63521576",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/107B8/test/_63521576_66f7fe9f-1076-402a-988b-6e515cbb6b4b.jpg",
+        "path":"/cpsdevpb/107B8/test/_63521576_66f7fe9f-1076-402a-988b-6e515cbb6b4b.jpg",
+        "height":549,
+        "width":976,
+        "altText":"Trump",
+        "caption":"Trump",
+        "copyrightHolder":"Getty Images",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "id":"urn:bbc:ares::asset:kyrgyz/world-23090100",
+      "type":"cps"
+    }
+  ],
+  "features":[
+    {
+      "headlines":{
+        "headline":"Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 42"
+      },
+      "locators":{
+        "assetUri":"/kyrgyz/kyrgyzstan-23087521",
+        "cpsUrn":"urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-23087521",
+        "assetId":"23087521"
+      },
+      "summary":"Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
+      "timestamp":1477898711000,
+      "language":"ky",
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63486487",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
+        "path":"/cpsdevpb/13284/test/_63486487_63486486.jpg",
+        "height":549,
+        "width":976,
+        "altText":"Өзбекстандын",
+        "caption":"Өзбекстандын",
+        "copyrightHolder":"Getty Images",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "id":"urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23087521",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 41"
+      },
+      "locators":{
+        "assetUri":"/kyrgyz/kyrgyzstan-23087520",
+        "cpsUrn":"urn:bbc:content:assetUri:kyrgyz/kyrgyzstan-23087520",
+        "assetId":"23087520"
+      },
+      "summary":"Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
+      "timestamp":1477898715000,
+      "language":"ky",
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63486487",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
+        "path":"/cpsdevpb/13284/test/_63486487_63486486.jpg",
+        "height":549,
+        "width":976,
+        "altText":"Өзбекстандын",
+        "caption":"Өзбекстандын",
+        "copyrightHolder":"Getty Images",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "id":"urn:bbc:ares::asset:kyrgyz/kyrgyzstan-23087520",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 03"
+      },
+      "locators":{
+        "assetUri":"/kyrgyz/in-depth-23087490",
+        "cpsUrn":"urn:bbc:content:assetUri:kyrgyz/in-depth-23087490",
+        "assetId":"23087490"
+      },
+      "summary":"Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
+      "timestamp":1477850398000,
+      "language":"ky",
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63486487",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
+        "path":"/cpsdevpb/13284/test/_63486487_63486486.jpg",
+        "height":549,
+        "width":976,
+        "altText":"Өзбекстандын",
+        "caption":"Өзбекстандын",
+        "copyrightHolder":"Getty Images",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "section":{
+        "subType":"IDX",
+        "name":"Атайын репортаж",
+        "uri":"/kyrgyz/in_depth",
+        "type":"simple"
+      },
+      "id":"urn:bbc:ares::asset:kyrgyz/in-depth-23087490",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Тарых барактары: Кыргызстан-Өзбекстан ортосундагы коңшулук мамиле 03"
+      },
+      "locators":{
+        "assetUri":"/kyrgyz/entertainment-23087489",
+        "cpsUrn":"urn:bbc:content:assetUri:kyrgyz/entertainment-23087489",
+        "assetId":"23087489"
+      },
+      "summary":"Ушул аптанын башында Кыргызстан акыркы он жылдан бери биринчи жолу Өзбекстандын расмий делегациясын кабыл алды.",
+      "timestamp":1477850376000,
+      "language":"ky",
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63486487",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/13284/test/_63486487_63486486.jpg",
+        "path":"/cpsdevpb/13284/test/_63486487_63486486.jpg",
+        "height":549,
+        "width":976,
+        "altText":"Өзбекстандын",
+        "caption":"Өзбекстандын",
+        "copyrightHolder":"Getty Images",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "id":"urn:bbc:ares::asset:kyrgyz/entertainment-23087489",
+      "type":"cps"
+    }
+  ]
+}
