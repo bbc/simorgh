@@ -1,4 +1,10 @@
+// test helpers
+import fetchMock from 'fetch-mock';
+
+// component to test
 import getInitialData, { only } from '.';
+
+// mock data
 import mapJson from '#data/pidgin/cpsAssets/media-23256549.json';
 
 describe('getInitialData', () => {
@@ -7,8 +13,15 @@ describe('getInitialData', () => {
   });
 
   it('should return essential data for a page to render', async () => {
-    jest.spyOn(global, 'fetch').mockResponse(JSON.stringify(mapJson));
-    const { pageData } = await getInitialData({ path: 'mock-map-path' });
+    fetchMock.mock(
+      'http://localhost/mock-map-path.json',
+      JSON.stringify(mapJson),
+    );
+
+    const { pageData } = await getInitialData({
+      path: 'mock-map-path',
+      service: 'pidgin',
+    });
 
     expect(pageData.metadata.id).toEqual(
       'urn:bbc:ares::asset:pidgin/media-23256549',
