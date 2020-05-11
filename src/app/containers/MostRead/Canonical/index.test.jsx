@@ -3,6 +3,7 @@ import { render, act } from '@testing-library/react';
 import arabicMostReadData from '#data/arabic/mostRead';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import nepaliMostReadData from '#data/nepali/mostRead';
+import kyrgyzMostReadData from '#data/kyrgyz/mostRead';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   setStalePromoTimestamp,
@@ -48,6 +49,14 @@ describe('MostReadContainerCanonical', () => {
       endpoint: 'www.test.bbc.com/nepali/mostread.json',
       initialData: nepaliMostReadData,
     },
+    {
+      description: 'should render 5 list items for kyrgyz from server data',
+      service: 'kyrgyz',
+      numberOfItems: 5,
+      mostReadData: kyrgyzMostReadData,
+      endpoint: 'www.test.bbc.com/kyrgyz/mostread.json',
+      initialData: kyrgyzMostReadData,
+    },
   ].forEach(
     ({
       description,
@@ -76,6 +85,7 @@ describe('MostReadContainerCanonical', () => {
         expect(container.querySelectorAll('li a').length).toEqual(
           numberOfItems,
         );
+        expect(container.querySelectorAll('li a').textContent).not.toBeNull();
 
         if (initialData) {
           expect(fetch).not.toBeCalled();

@@ -34,7 +34,7 @@ const optimoMostReadRecord = {
 
 const mostReadShape = shape({
   lastRecordTimeStamp: string.isRequired,
-  records: arrayOf(oneOf[(cpsMostReadRecord, optimoMostReadRecord)]),
+  records: arrayOf(oneOf([cpsMostReadRecord, optimoMostReadRecord])),
 });
 
 export default mostReadShape;
