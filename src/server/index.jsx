@@ -18,6 +18,7 @@ import {
   radioAndTvDataPath,
   mostReadDataRegexPath,
   legacyAssetPageDataPath,
+  secondaryColumnDataRegexPath,
 } from '../app/routes/utils/regex';
 import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
@@ -64,6 +65,7 @@ const constructDataFilePath = ({
   switch (pageType) {
     case 'frontpage':
     case 'mostRead':
+    case 'secondaryColumn':
       dataPath = `${variant || 'index'}.json`;
       break;
     case 'cpsAssets':
@@ -210,6 +212,16 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
         assetUri,
         variant,
       });
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(secondaryColumnDataRegexPath, async ({ params }, res, next) => {
+      const { service, variant } = params;
+      const dataFilePath = constructDataFilePath({
+        pageType: 'secondaryColumn',
+        service,
+        variant,
+      });
+
       sendDataFile(res, dataFilePath, next);
     })
     .get('/ckns_policy/*', (req, res) => {

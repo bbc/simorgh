@@ -15,6 +15,7 @@ import {
   mostReadDataRegexPath,
   legacyAssetPagePath,
   legacyAssetPageDataPath,
+  secondaryColumnDataRegexPath,
 } from './index';
 
 jest.mock('#server/utilities/serviceConfigs', () => ({
@@ -215,7 +216,7 @@ describe('liveRadioPath', () => {
 });
 
 describe('mostReadDataRegexPath', () => {
-  const validRoutes = ['/news/mostread.json', '/zhongwen/mostread/simp.json'];
+  const validRoutes = ['/news/.json', '/zhongwen/mostread/simp.json'];
   shouldMatchValidRoutes(validRoutes, mostReadDataRegexPath);
 
   const invalidRoutes = [
@@ -223,6 +224,22 @@ describe('mostReadDataRegexPath', () => {
     '/foobar/mostread',
     '/foobar/mostread.js',
     '/news/trad/mostread.json',
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, mostReadDataRegexPath);
+});
+
+describe('secondaryColumnDataRegexPath', () => {
+  const validRoutes = [
+    '/mundo/sty-secondary-column.json',
+    '/zhongwen/sty-secondary-column/simp.json',
+  ];
+  shouldMatchValidRoutes(validRoutes, secondaryColumnDataRegexPath);
+
+  const invalidRoutes = [
+    '/foobar/sty-secondary-column.json',
+    '/foobar/sty-secondary-column',
+    '/foobar/sty-secondary-column.js',
+    '/news/trad/sty-secondary-column.json',
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, mostReadDataRegexPath);
 });

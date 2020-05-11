@@ -570,6 +570,27 @@ describe('Server', () => {
     });
   });
 
+  describe('STY secondary column json', () => {
+    it('should serve a file for valid service paths with variants', async () => {
+      const { body } = await makeRequest(
+        '/zhongwen/sty-secondary-column/trad.json',
+      );
+      expect(body).toEqual(
+        expect.objectContaining({ records: expect.any(Object) }),
+      );
+    });
+    it('should serve a file for valid service paths without variants', async () => {
+      const { body } = await makeRequest('/mundo/sty-secondary-column.json');
+      expect(body).toEqual(
+        expect.objectContaining({ records: expect.any(Object) }),
+      );
+    });
+    it('should respond with a 500 for non-existing services', async () => {
+      const { statusCode } = await makeRequest('/some-service/mostread.json');
+      expect(statusCode).toEqual(500);
+    });
+  });
+
   describe('Data', () => {
     describe('for articles', () => {
       it('should respond with JSON', async () => {
