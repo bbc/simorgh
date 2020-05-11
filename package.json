@@ -97,7 +97,7 @@
     "@bbc/psammead-styles": "^4.3.1",
     "@bbc/psammead-timestamp-container": "^3.0.1",
     "@bbc/psammead-useful-links": "^1.0.17",
-    "@bbc/psammead-visually-hidden-text": "^1.2.3",
+    "@bbc/psammead-visually-hidden-text": "^1.3.0",
     "@loadable/component": "^5.12.0",
     "@loadable/server": "^5.12.0",
     "@loadable/webpack-plugin": "^5.12.0",
