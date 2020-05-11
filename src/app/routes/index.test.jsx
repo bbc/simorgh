@@ -13,7 +13,7 @@ import routes from './index';
 
 // mock data
 import liveRadioPageJson from '#data/korean/bbc_korean_radio/liveradio.json';
-import onDemandRadioPageJson from '#data/indonesia/bbc_indonesian_radio/w172x6r5000f38s.json';
+import onDemandRadioPageJson from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l.json';
 import articlePageJson from '#data/persian/articles/c4vlle3q337o.json';
 import frontPageJson from '#data/pidgin/frontpage/index.json';
 import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
@@ -99,7 +99,7 @@ it('should route to and render live radio page', async () => {
 });
 
 it('should route to and render the skeleton onDemand Radio page', async () => {
-  const pathname = '/indonesia/bbc_indonesian_radio/w172x6r5000f38s';
+  const pathname = '/indonesia/bbc_indonesian_radio/w172xh267fpn19l';
   fetchMock.mock(
     `http://localhost${pathname}.json?renderer_env=live`,
     onDemandRadioPageJson,
