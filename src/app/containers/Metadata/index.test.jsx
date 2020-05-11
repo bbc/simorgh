@@ -17,14 +17,17 @@ import { getSummary } from '#lib/utilities/parseAssetData/index';
 const dotComOrigin = 'https://www.bbc.com';
 const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
 
-const getArticleMetadataProps = data => ({
-  title: data.promo.headlines.seoHeadline,
-  lang: data.metadata.passport.language,
-  description: getSummary(data),
-  openGraphType: 'article',
-  aboutTags: articleDataNews.metadata.tags.about,
-  mentionsTags: articleDataNews.metadata.tags.mentions,
-});
+const getArticleMetadataProps = data => {
+  const props = {
+    title: data.promo.headlines.seoHeadline,
+    lang: data.metadata.passport.language,
+    description: getSummary(data),
+    openGraphType: 'article',
+    aboutTags: articleDataNews.metadata.tags.about,
+    mentionsTags: articleDataNews.metadata.tags.mentions,
+  };
+  return props;
+};
 
 const newsArticleMetadataProps = getArticleMetadataProps(articleDataNews);
 const persianArticleMetadataProps = getArticleMetadataProps(articleDataPersian);

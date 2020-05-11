@@ -16,6 +16,9 @@ export const getSummary = pathOr('', [
   'blocks',
   '0',
   'model',
+  'blocks',
+  '0',
+  'model',
   'text',
 ]);
 
