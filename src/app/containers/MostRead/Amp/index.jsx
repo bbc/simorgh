@@ -13,7 +13,7 @@ import {
 } from '@bbc/psammead-most-read';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const AmpMostRead = ({ endpoint, wrapper: Wrapper }) => {
+const AmpMostRead = ({ endpoint, size, wrapper: Wrapper }) => {
   const {
     service,
     script,
@@ -51,6 +51,7 @@ const AmpMostRead = ({ endpoint, wrapper: Wrapper }) => {
                   dir={dir}
                   listIndex={'{{ rank }}'}
                   columnLayout="oneColumn"
+                  size={size}
                 />
                 <MostReadLink
                   dir={dir}
@@ -58,6 +59,7 @@ const AmpMostRead = ({ endpoint, wrapper: Wrapper }) => {
                   script={script}
                   title={'{{promo.headlines.shortHeadline}}'}
                   href={'{{promo.locators.assetUri}}'}
+                  size={size}
                 />
               </MostReadItemWrapper>
             </template>
