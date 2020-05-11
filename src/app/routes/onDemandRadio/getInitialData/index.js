@@ -4,11 +4,12 @@ import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 
 const getBrandTitle = path(['metadata', 'title']);
 const getLanguage = path(['metadata', 'language']);
-const getEpisodeTitle = path(['content', 'blocks', '0', 'title']);
+const getEpisodeTitle = path(['content', 'blocks', 0, 'title']);
 const getHeadline = path(['promo', 'headlines', 'headline']);
 const getShortSynopsis = path(['promo', 'media', 'synopses', 'short']);
-const getSummary = path(['content', 'blocks', '0', 'synopses', 'short']);
-const getEpisodeId = path(['content', 'blocks', '0', 'id']);
+const getSummary = path(['content', 'blocks', 0, 'synopses', 'short']);
+const getEpisodeId = path(['content', 'blocks', 0, 'id']);
+const getImageUrl = path(['content', 'blocks', 0, 'imageUrl']);
 const getId = path(['metadata', 'id']);
 const getMasterBrand = path(['metadata', 'createdBy']);
 const getContentType = path(['metadata', 'analyticsLabels', 'contentType']);
@@ -60,6 +61,7 @@ export default async ({ path: pathname }) => {
         releaseDateTimeStamp: getReleaseDateTimeStamp(json),
         pageTitle: getPageTitle(json),
         pageIdentifier: getPageIdentifier(json),
+        imageUrl: getImageUrl(json),
         ...pageType,
       },
     }),
