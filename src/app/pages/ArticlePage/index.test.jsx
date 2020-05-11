@@ -13,6 +13,7 @@ import {
 import newsMostReadData from '#data/news/mostRead';
 import persianMostReadData from '#data/persian/mostRead';
 import pidginMostReadData from '#data/pidgin/mostRead';
+import { textBlock } from '#models/blocks/index';
 
 // temporary: will be removed with https://github.com/bbc/simorgh/issues/836
 const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
@@ -50,32 +51,7 @@ it('should use headline for meta description if summary does not exist', async (
   const articleDataNewsWithSummary = mergeDeepLeft(
     {
       promo: {
-        summary: {
-          blocks: [
-            {
-              model: {
-                blocks: [
-                  {
-                    model: {
-                      blocks: [
-                        {
-                          model: {
-                            attributes: [],
-                            text: '',
-                          },
-                          type: 'fragment',
-                        },
-                      ],
-                      text: '',
-                    },
-                    type: 'paragraph',
-                  },
-                ],
-              },
-              type: 'text',
-            },
-          ],
-        },
+        summary: textBlock(''),
       },
     },
     articleDataNews,
