@@ -311,10 +311,6 @@ export const service = {
         url: '/persian/blogs/viewpoints',
       },
       {
-        title: 'صفحات ویژه',
-        url: '/persian/world-37434378',
-      },
-      {
         title: 'وبلاگ‌ها',
         url: '/persian/services/2012/01/000000_blogs_list',
       },
