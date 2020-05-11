@@ -27,7 +27,7 @@ describe('getAdditionalPageData', () => {
     fetchMock.mock('http://localhost/mundo/mostread.json', mostReadJson);
     fetchMock.mock(
       'http://localhost/mundo/sty-secondary-column.json',
-      mostReadJson,
+      secondaryColumnJson,
     );
     const additionalPageData = await getAdditionalPageData(styJson, 'mundo');
 
