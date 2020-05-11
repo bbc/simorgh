@@ -70,8 +70,11 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
   const mostReadInitialData = path(['mostRead'], pageData);
-  const topStoriesInitialData = path(['secondaryColumn'], pageData).topStories;
-  const featuresInitialData = path(['secondaryColumn'], pageData).features;
+  const topStoriesInitialData = path(
+    ['secondaryColumn', 'topStories'],
+    pageData,
+  );
+  const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
 
   const componentsToRender = {
     fauxHeadline,
