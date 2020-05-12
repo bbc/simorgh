@@ -15,10 +15,7 @@ const pageTypeUrls = (assetType, service, variant) => {
         },
         {
           name: 'secondaryColumn',
-          path: getSecondaryColumnUrl({ service, variant }).replace(
-            '.json',
-            '',
-          ),
+          path: getSecondaryColumnUrl({ service, variant }),
         },
       ];
     default:
