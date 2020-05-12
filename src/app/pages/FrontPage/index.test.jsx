@@ -56,6 +56,10 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
   return () => <div>chartbeat</div>;
 });
 
+jest.mock('#containers/ATIAnalytics/amp', () => {
+  return () => <div>Amp ATI analytics</div>;
+});
+
 jest.mock('#containers/PageHandlers/withVariant', () => Component => {
   return props => (
     <div id="VariantContainer">
