@@ -476,7 +476,6 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
               </span>
               <span
                 class="c5"
-                tabindex="-1"
               >
                 , 
               </span>
@@ -1005,7 +1004,6 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
               </span>
               <span
                 class="c5"
-                tabindex="-1"
               >
                 , 
               </span>
@@ -1284,7 +1282,6 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
           </span>
           <span
             class="c5"
-            tabindex="-1"
           >
             , 
           </span>
@@ -1607,7 +1604,6 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
           </span>
           <span
             class="c5"
-            tabindex="-1"
           >
             , 
           </span>

@@ -88,7 +88,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
 
 <h1
   class="c0"
-  id="idAttr"
+  id="content"
   tabindex="-1"
 >
   <span
@@ -101,7 +101,6 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
     </span>
     <span
       class="c2"
-      tabindex="-1"
     >
       , 
     </span>

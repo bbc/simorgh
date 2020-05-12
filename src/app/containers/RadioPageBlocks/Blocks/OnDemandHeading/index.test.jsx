@@ -11,7 +11,7 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
         brandTitle="Dunia Pagi Ini"
         releaseDateTimeStamp={1587945600000}
         uuid="uuid"
-        idAttr="idAttr"
+        idAttr="content"
       />
     </ServiceContextProvider>,
   );
