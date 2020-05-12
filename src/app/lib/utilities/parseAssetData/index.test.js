@@ -102,7 +102,7 @@ describe('ArticleMain utils', () => {
     expect(actual).toEqual(expected);
   });
 
-  it('getSummary old format › it should return an empty string', () => {
+  it('getSummary old format › it should return undefined', () => {
     const articleDataNewsSummary = mergeDeepLeft(
       {
         promo: { summary: 'a summary ' },
@@ -110,7 +110,7 @@ describe('ArticleMain utils', () => {
       articleDataNews,
     );
     const actual = getSummary(articleDataNewsSummary);
-    const expected = '';
+    const expected = undefined;
 
     expect(actual).toEqual(expected);
   });
