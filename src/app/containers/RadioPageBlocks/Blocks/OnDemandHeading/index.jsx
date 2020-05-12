@@ -54,7 +54,7 @@ const HeadingContainer = ({ idAttr, brandTitle, releaseDateTimeStamp }) => {
         role="text"
       >
         <BrandTitle>{brandTitle}</BrandTitle>
-        <VisuallyHiddenText tabIndex="-1">, </VisuallyHiddenText>
+        <VisuallyHiddenText>, </VisuallyHiddenText>
         <Datestamp script={script} service={service}>
           {formattedTimestamp}
         </Datestamp>
