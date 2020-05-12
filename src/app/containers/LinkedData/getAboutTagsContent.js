@@ -1,9 +1,28 @@
 const checkType = types => {
-  const acceptableTypes = ['Person', 'Event', 'Organization', 'Place'];
-  if (types.length === 0 || types.length > 1) {
+  const acceptableTypes = [
+    'core:Person',
+    'core:Event',
+    'core:Organization',
+    'core:Place',
+  ];
+
+  if (types.length === 0) {
     return 'Thing';
   }
-  return acceptableTypes.includes(types[0]) ? types[0] : 'Thing';
+
+  let typesFound = 0;
+  let typeFound;
+  types.forEach(type => {
+    if (acceptableTypes.includes(type)) {
+      typesFound += 1;
+      typeFound = type.replace('core:', '');
+    }
+  });
+
+  if (typesFound === 1) {
+    return typeFound;
+  }
+  return 'Thing';
 };
 
 const checkSameAs = uris => {
