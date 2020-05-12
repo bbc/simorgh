@@ -1,78 +1,42 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "advertising": false,
-        "caption": "BBC Pidgin Minute",
-        "embedding": false,
-        "format": "audio",
-        "id": "p081lwmg",
-        "imageCopyright": "BBC",
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p081lx1r.jpg",
-        "subType": "clip",
-        "synopses": {
-          "medium": "All di local and world tori wey you suppose know in 60 seconds!",
-          "short": "BBC Pidgin Minute"
-        },
-        "title": "BBC Pidgin Minute",
-        "type": "media",
-        "versions": [
-          {
-            "availableFrom": 1580215615000,
-            "availableTerritories": {
-              "nonUk": true,
-              "uk": true,
-              "world": false
-            },
-            "availableUntil": 1580302015000,
-            "duration": 60,
-            "durationISO8601": "PT1M",
-            "types": ["Original"],
-            "versionId": "p081lwmj",
-            "warnings": {}
-          }
-        ]
-      },
-      {
-        "markupType": "plain_text",
-        "text": "All di local and world tori wey you suppose know in 60 seconds!",
-        "type": "paragraph"
-      }
-    ]
-  },
   "metadata": {
-    "analyticsLabels": {
-      "counterName": "pidgin.embedded_media.media_asset.44221514.page",
-      "cps_asset_id": "44221514",
-      "cps_asset_type": "map"
-    },
-    "blockTypes": ["media", "paragraph"],
-    "createdBy": "pidgin-v6",
-    "firstPublished": 1527054884000,
     "id": "urn:bbc:ares::asset:pidgin/media-44221514",
-    "includeComments": false,
-    "language": "pcm",
-    "lastPublished": 1580216517000,
-    "lastUpdated": 1580216527670,
     "locators": {
       "assetUri": "/pidgin/media-44221514",
       "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-44221514",
-      "curie": "http://www.bbc.co.uk/asset/80c40606-2288-7e48-820e-1770842e1230"
+      "curie": "http://www.bbc.co.uk/asset/80c40606-2288-7e48-820e-1770842e1230",
+      "assetId": "44221514"
     },
+    "type": "MAP",
+    "createdBy": "pidgin-v6",
+    "language": "pcm",
+    "lastUpdated": 1589223543176,
+    "firstPublished": 1527054884000,
+    "lastPublished": 1589223530000,
+    "timestamp": 1589223530000,
     "options": {
-      "allowDateStamp": true,
-      "allowHeadline": true,
-      "allowPrintingSharingLinks": true,
-      "allowRelatedStoriesBox": true,
-      "allowRightHandSide": true,
-      "hasNewsTracker": false,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "isFactCheck": false,
       "isIgorSeoTagsEnabled": false,
-      "isKeyContent": false
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "pidgin.embedded_media.media_asset.44221514.page",
+      "cps_asset_id": "44221514"
     },
     "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
       "campaigns": [
         {
           "campaignId": "5a988e2939461b000e9dabf8",
@@ -91,127 +55,155 @@
           "campaignName": "WS - Update me"
         }
       ],
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-        "categoryName": "News"
-      },
       "taggings": []
     },
     "tags": {
       "about": [
         {
+          "thingLabel": "Nigeria",
+          "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+          "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
+          "thingType": ["core:Place", "core:Thing", "tagging:TagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/2328926/"],
+          "topicName": "Nigeria",
+          "topicId": "c2dwqd1zr92t",
           "curationList": [
             {
               "curationId": "30600bd9-ac23-45c9-948a-55fe7e115078",
               "curationType": "vivo-stream"
             }
-          ],
-          "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
-          "thingLabel": "Nigeria",
-          "thingSameAs": ["http://sws.geonames.org/2328926/"],
-          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
-          "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
-          "topicId": "c2dwqd1zr92t",
-          "topicName": "Nigeria"
+          ]
         },
         {
+          "thingLabel": "Africa",
+          "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+          "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
+          "thingType": ["core:Thing", "core:Place", "tagging:TagConcept"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q15",
+            "http://dbpedia.org/resource/Africa",
+            "http://sws.geonames.org/6255146/"
+          ],
+          "topicName": "Africa",
+          "topicId": "c404v061z85t",
+          "curationList": [
+            {
+              "curationId": "fa9a0861-2fbd-4caf-856b-f25a20f741b4",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Cameroon",
+          "thingUri": "http://www.bbc.co.uk/things/6ae05645-a3cf-4c86-a194-fdd98389a670#id",
+          "thingId": "6ae05645-a3cf-4c86-a194-fdd98389a670",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Place"],
+          "thingSameAs": ["http://sws.geonames.org/2233387/"],
+          "topicName": "Cameroon",
+          "topicId": "c340q4z3n2qt",
           "curationList": [
             {
               "curationId": "6396890d-e9a6-4ca8-a8a0-29be9b9ef754",
               "curationType": "vivo-stream"
             }
-          ],
-          "thingId": "6ae05645-a3cf-4c86-a194-fdd98389a670",
-          "thingLabel": "Cameroon",
-          "thingSameAs": ["http://sws.geonames.org/2233387/"],
-          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
-          "thingUri": "http://www.bbc.co.uk/things/6ae05645-a3cf-4c86-a194-fdd98389a670#id",
-          "topicId": "c340q4z3n2qt",
-          "topicName": "Cameroon"
+          ]
         },
         {
-          "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
-          "thingLabel": "Africa",
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Africa",
-            "http://sws.geonames.org/6255146/",
-            "http://www.wikidata.org/entity/Q15"
-          ],
-          "thingType": ["news:Place", "Place", "Thing"],
-          "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id"
-        },
-        {
+          "thingLabel": "Ghana",
+          "thingUri": "http://www.bbc.co.uk/things/d3d75366-7593-4ef6-93c7-b9490925fea0#id",
+          "thingId": "d3d75366-7593-4ef6-93c7-b9490925fea0",
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+          "thingSameAs": ["http://sws.geonames.org/2300660/"],
+          "topicName": "Ghana",
+          "topicId": "cg72673yg2rt",
           "curationList": [
             {
               "curationId": "bc8ddb8e-dd87-4a69-9cae-832d7c377302",
               "curationType": "vivo-stream"
             }
-          ],
-          "thingId": "d3d75366-7593-4ef6-93c7-b9490925fea0",
-          "thingLabel": "Ghana",
-          "thingSameAs": ["http://sws.geonames.org/2300660/"],
-          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
-          "thingUri": "http://www.bbc.co.uk/things/d3d75366-7593-4ef6-93c7-b9490925fea0#id",
-          "topicId": "cg72673yg2rt",
-          "topicName": "Ghana"
+          ]
+        },
+        {
+          "thingLabel": "Coronavirus",
+          "thingUri": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+          "thingId": "5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+          "thingSameAs": ["http://www.wikidata.org/entity/Q290805"],
+          "topicName": "Coronavirus",
+          "topicId": "c235vrjxq59t",
+          "curationList": [
+            {
+              "curationId": "ef908066-c741-4203-8f35-d907c9741d77",
+              "curationType": "vivo-stream"
+            }
+          ]
         }
       ]
     },
-    "timestamp": 1580216510000,
-    "type": "MAP",
-    "version": "v1.1.4"
+    "version": "v1.2.1",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p08cwl8l",
+        "subType": "clip",
+        "format": "audio",
+        "title": "BBC Pidgin Minute",
+        "synopses": {
+          "short": "BBC Pidgin Minute",
+          "medium": "All di local and world tori wey you suppose know in 60 seconds!"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08cwllj.jpg",
+        "embedding": false,
+        "advertising": false,
+        "caption": "BBC Pidgin Minute",
+        "versions": [
+          {
+            "versionId": "p08cwl8n",
+            "types": ["Original"],
+            "duration": 61,
+            "durationISO8601": "PT1M1S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableUntil": 1589307872000,
+            "availableFrom": 1589221472000
+          }
+        ],
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "All di local and world tori wey you suppose know in 60 seconds!",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
   },
   "promo": {
     "headlines": {
-      "headline": "BBC Pidgin Minute",
-      "shortHeadline": "BBC Pidgin Minute"
-    },
-    "id": "urn:bbc:ares::asset:pidgin/media-44221514",
-    "indexImage": {
-      "altText": "BBC Pidgin Minute",
-      "copyrightHolder": "BBC",
-      "height": 549,
-      "href": "http://c.files.bbci.co.uk/14A8E/production/_110222648_p07y820h.jpg",
-      "id": "110222648",
-      "path": "/cpsprodpb/14A8E/production/_110222648_p07y820h.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 976
+      "shortHeadline": "BBC Pidgin Minute",
+      "headline": "BBC Pidgin Minute"
     },
     "locators": {
       "assetUri": "/pidgin/media-44221514",
       "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-44221514",
-      "curie": "http://www.bbc.co.uk/asset/80c40606-2288-7e48-820e-1770842e1230"
+      "curie": "http://www.bbc.co.uk/asset/80c40606-2288-7e48-820e-1770842e1230",
+      "assetId": "44221514"
     },
-    "media": {
-      "advertising": false,
-      "caption": "BBC Pidgin Minute",
-      "embedding": false,
-      "format": "audio",
-      "id": "p081lwmg",
-      "imageCopyright": "BBC",
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p081lx1r.jpg",
-      "subType": "clip",
-      "synopses": {
-        "medium": "All di local and world tori wey you suppose know in 60 seconds!",
-        "short": "BBC Pidgin Minute"
-      },
-      "title": "BBC Pidgin Minute",
-      "type": "media",
-      "versions": [
-        {
-          "availableFrom": 1580215615000,
-          "availableTerritories": { "nonUk": true, "uk": true, "world": false },
-          "availableUntil": 1580302015000,
-          "duration": 60,
-          "durationISO8601": "PT1M",
-          "types": ["Original"],
-          "versionId": "p081lwmj",
-          "warnings": {}
-        }
-      ]
-    },
+    "summary": "All di local and world tori wey you suppose know in 60 seconds!",
+    "timestamp": 1589223530000,
+    "language": "pcm",
     "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
       "campaigns": [
         {
           "campaignId": "5a988e2939461b000e9dabf8",
@@ -230,29 +222,67 @@
           "campaignName": "WS - Update me"
         }
       ],
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-        "categoryName": "News"
-      },
       "taggings": []
     },
-    "summary": "All di local and world tori wey you suppose know in 60 seconds!",
-    "timestamp": 1580216510000,
+    "media": {
+      "id": "p08cwl8l",
+      "subType": "clip",
+      "format": "audio",
+      "title": "BBC Pidgin Minute",
+      "synopses": {
+        "short": "BBC Pidgin Minute",
+        "medium": "All di local and world tori wey you suppose know in 60 seconds!"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08cwllj.jpg",
+      "embedding": false,
+      "advertising": false,
+      "caption": "BBC Pidgin Minute",
+      "versions": [
+        {
+          "versionId": "p08cwl8n",
+          "types": ["Original"],
+          "duration": 61,
+          "durationISO8601": "PT1M1S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true,
+            "world": false
+          },
+          "availableUntil": 1589307872000,
+          "availableFrom": 1589221472000
+        }
+      ],
+      "imageCopyright": "BBC",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "111515667",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/12B6B/production/_111515667_p07y820h.jpg",
+      "path": "/cpsprodpb/12B6B/production/_111515667_p07y820h.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "BBC Pidgin Minute",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:pidgin/media-44221514",
     "type": "cps"
   },
   "relatedContent": {
-    "groups": [],
     "section": {
-      "name": "Media",
       "subType": "index",
-      "type": "simple",
-      "uri": "/pidgin/media"
+      "name": "Media",
+      "uri": "/pidgin/media",
+      "type": "simple"
     },
     "site": {
-      "name": "BBC Pidgin",
       "subType": "site",
-      "type": "simple",
-      "uri": "/pidgin"
-    }
+      "name": "BBC Pidgin",
+      "uri": "/pidgin",
+      "type": "simple"
+    },
+    "groups": []
   }
 }

@@ -144,7 +144,7 @@ it('should route to and render a media asset page', async () => {
     service: 'yoruba',
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-    'Ko ko koo, "lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa".';
+    'Ko ko koo, "lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa" introduction.';
 
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
@@ -163,7 +163,7 @@ it('should route to and render a media asset page', async () => {
 
   // TODO: use headline text when double headline bug is fixed https://github.com/bbc/simorgh/issues/5688
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-    'Ko ko koo, "lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa".';
+    'Ko ko koo, "lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa" introduction.';
 
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
