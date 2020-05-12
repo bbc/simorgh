@@ -246,6 +246,10 @@ export const service = {
         url: '/bengali',
       },
       {
+        title: 'করোনাভাইরাস',
+        url: '/bengali/news-51941294',
+      },
+      {
         title: 'ভিডিও',
         url: '/bengali/media/video',
       },
