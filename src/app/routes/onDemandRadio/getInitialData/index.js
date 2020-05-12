@@ -44,7 +44,9 @@ const getDurationISO8601 = path([
   0,
   'durationISO8601',
 ]);
-const getImageUrl = path(['promo', 'media', 'imageUrl']);
+const getImageUrl = getPlaceholderImageUrl(
+  path(['promo', 'media', 'imageUrl']),
+);
 
 export default async ({ path: pathname }) => {
   const onDemandRadioDataPath = overrideRendererOnTest(pathname);
@@ -72,7 +74,7 @@ export default async ({ path: pathname }) => {
         pageIdentifier: getPageIdentifier(json),
         promoBrandTitle: getPromoBrandTitle(json),
         durationISO8601: getDurationISO8601(json),
-        imageUrl: getPlaceholderImageUrl(getImageUrl(json)),
+        imageUrl: getImageUrl(json),
         ...pageType,
       },
     }),
