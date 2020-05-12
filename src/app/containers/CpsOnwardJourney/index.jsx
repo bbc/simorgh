@@ -133,29 +133,23 @@ const CpsOnwardJourney = ({
     children: node.isRequired,
   };
 
-  const CpsOnwardJourneyItemWrapper = parentColumns
-    ? WrapperItem
-    : LegacyGridItemConstrainedLarge;
-
   return (
     <CpsOnwardJourneyWrapper>
-      <CpsOnwardJourneyItemWrapper>
-        <StyledSectionLabel
-          script={script}
-          service={service}
-          dir={dir}
-          labelId={labelId}
-        >
-          {title}
-        </StyledSectionLabel>
-        {hasSingleContent ? (
-          <SingleContentWrapper>
-            {singleTransform(singleContent)}
-          </SingleContentWrapper>
-        ) : (
-          listTransform(content)
-        )}
-      </CpsOnwardJourneyItemWrapper>
+      <StyledSectionLabel
+        script={script}
+        service={service}
+        dir={dir}
+        labelId={labelId}
+      >
+        {title}
+      </StyledSectionLabel>
+      {hasSingleContent ? (
+        <SingleContentWrapper>
+          {singleTransform(singleContent)}
+        </SingleContentWrapper>
+      ) : (
+        listTransform(content)
+      )}
     </CpsOnwardJourneyWrapper>
   );
 };
