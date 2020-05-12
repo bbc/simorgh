@@ -9,7 +9,6 @@ const radioSchedulesShape = arrayOf(
     brandTitle: string.isRequired,
     summary: string,
     duration: string.isRequired,
-    durationLabel: string.isRequired,
   }),
 );
 

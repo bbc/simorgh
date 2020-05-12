@@ -132,10 +132,13 @@ describe('processUnavailableMedia', () => {
       },
     };
     processUnavailableMedia(pageData);
-    expect(loggerMock.warn).toHaveBeenCalledWith(
-      MEDIA_ASSET_REVOKED,
-      mockUrlObject,
-    );
+    expect(loggerMock.warn).toHaveBeenCalledWith(MEDIA_ASSET_REVOKED, {
+      url: 'mock-uri',
+      mediaBlock: {
+        statusCode: 404,
+        type: EXTERNAL_VPID,
+      },
+    });
   });
 
   it('logs the correct message when the media asset has expired', async () => {
@@ -149,10 +152,13 @@ describe('processUnavailableMedia', () => {
       },
     };
     processUnavailableMedia(pageData);
-    expect(loggerMock.warn).toHaveBeenCalledWith(
-      MEDIA_ASSET_EXPIRED,
-      mockUrlObject,
-    );
+    expect(loggerMock.warn).toHaveBeenCalledWith(MEDIA_ASSET_EXPIRED, {
+      url: 'mock-uri',
+      mediaBlock: {
+        statusCode: 410,
+        type: EXTERNAL_VPID,
+      },
+    });
   });
 
   it('logs the correct message when the media metadata is unavailable', async () => {
@@ -166,9 +172,11 @@ describe('processUnavailableMedia', () => {
       },
     };
     processUnavailableMedia(pageData);
-    expect(loggerMock.error).toHaveBeenCalledWith(
-      MEDIA_METADATA_UNAVAILABLE,
-      mockUrlObject,
-    );
+    expect(loggerMock.error).toHaveBeenCalledWith(MEDIA_METADATA_UNAVAILABLE, {
+      url: 'mock-uri',
+      mediaBlock: {
+        type: EXTERNAL_VPID,
+      },
+    });
   });
 });
