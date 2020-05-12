@@ -15,7 +15,7 @@ const AdContainer = () => {
     return null;
   }
 
-  //   const Ad = isAmp ? Amp : Canonical;
+  // const Ad = isAmp ? Amp : Canonical;
   if (isAmp) {
     return <Amp service={service} />;
   }

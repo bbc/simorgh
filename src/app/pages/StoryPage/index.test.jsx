@@ -1,17 +1,30 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
+
+// test helpers
 import { render } from '@testing-library/react';
 import assocPath from 'ramda/src/assocPath';
 import '@testing-library/jest-dom/extend-expect';
+import fetchMock from 'fetch-mock';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
+
+// contexts
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
+
+// components to test
 import { StoryPage } from '..';
-import pidginPageData from '#data/pidgin/cpsAssets/world-23252817';
-import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
+
+// mock data
+import pidginPageData from '#data/pidgin/cpsAssets/world-23252817';
+import pidginMostReadData from '#data/pidgin/mostRead/index.json';
+import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
+import igboMostReadData from '#data/igbo/mostRead/index.json';
+
+fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
 
 const toggleState = {
   mediaPlayer: {
@@ -89,27 +102,50 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 });
 
 describe('Story Page', () => {
+  afterEach(() => {
+    fetchMock.restore();
+  });
+
   describe('snapshots', () => {
     it('should match snapshot for STY', async () => {
-      fetch.mockResponse(JSON.stringify(pidginPageData));
+      fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
+      fetchMock.mock(
+        'http://localhost/pidgin/mostread.json',
+        pidginMostReadData,
+      );
 
-      const { pageData } = await getInitialData('some-cps-sty-path');
+      const { pageData } = await getInitialData({
+        path: '/some-cps-sty-path',
+        service: 'pidgin',
+      });
+
       const page = createAssetPage({ pageData }, 'pidgin');
       await matchSnapshotAsync(page);
     });
   });
-  it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
-    fetch.mockResponse(JSON.stringify(igboPageData));
 
-    const { pageData } = await getInitialData('some-cps-sty-path');
+  it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
+    fetchMock.mock('http://localhost/some-cps-sty-path.json', igboPageData);
+    fetchMock.mock('http://localhost/igbo/mostread.json', igboMostReadData);
+
+    const { pageData } = await getInitialData({
+      path: '/some-cps-sty-path',
+      service: 'igbo',
+    });
+
     const { getByText } = render(createAssetPage({ pageData }, 'igbo'));
     expect(getByText('23 Ọktọba 2019')).toBeInTheDocument();
   });
 
   it('should not show the pop-out timestamp when allowDateStamp is false', async () => {
-    fetch.mockResponse(JSON.stringify(igboPageData));
+    fetchMock.mock('http://localhost/some-cps-sty-path.json', igboPageData);
+    fetchMock.mock('http://localhost/igbo/mostread.json', igboMostReadData);
 
-    const { pageData } = await getInitialData('some-cps-sty-path');
+    const { pageData } = await getInitialData({
+      path: '/some-cps-sty-path',
+      service: 'igbo',
+    });
+
     const pageDataWithHiddenTimestamp = assocPath(
       ['metadata', 'options', 'allowDateStamp'],
       false,
