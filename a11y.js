@@ -54,12 +54,9 @@ const pageTypes = {
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
   ],
   storyPage: [
-    '/html/head/iframe',
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
-    "//iframe[@id='instagram-embed-0']",
-    "//div[@id='root']/div/div[1]/main/div[31]/figure/div/iframe",
-    "//div[@id='root']/div/div[1]/main/div[33]/figure/div/iframe",
-    '/html/body/iframe',
+    '/iframe', // known issue above with iframes should be revisited once https://github.com/bbc/bbc-a11y/pull/313 gets merged.
+    "//div[@id='root']/div/div[1]/main/div[37]/div/div/div", // issue with IDT2 includes
   ],
 };
 
