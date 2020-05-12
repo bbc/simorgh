@@ -8,6 +8,7 @@ const articleLocalRegex = 'articles|erthyglau|sgeulachdan';
 const mediaIdRegex = '[a-z0-9]+';
 const mediaServiceIdRegex = 'bbc_[a-z]+_radio|bbc_[a-z]+_tv';
 const errorCodeRegex = '404|500';
+const idxRegex = 'persian/afghanistan|ukrainian/ukraine_in_russian';
 
 const getServiceRegex = services => services.join('|');
 
@@ -74,4 +75,8 @@ export const getMostReadPageRegex = services => {
 export const getMostReadDataRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/mostread:variant(${variantRegex})?.json`;
+};
+
+export const getIDXPageRegex = () => {
+  return `/:idx(${idxRegex}):amp(${ampRegex})?`;
 };
