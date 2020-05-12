@@ -115,6 +115,7 @@ describe('buildParams', () => {
           'x12=[1970-01-01T00:00:00.000Z]',
           'x13=[thing+label+1~thing+label+2]',
           'x14=[thing+id+1~thing+id+2]',
+          'ref=originpreviousPath',
         ].join('&'),
       );
     });
