@@ -73,4 +73,9 @@ describe('CpsRelatedContent', () => {
     renderTopStories();
     expect(document.querySelector(`#top-stories-heading`)).toBeTruthy();
   });
+
+  it('should not render images for Top Stories components', () => {
+    renderTopStories();
+    expect(document.querySelector('img')).not.toBeInTheDocument();
+  });
 });
