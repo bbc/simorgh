@@ -194,6 +194,7 @@ export const service = {
       onFrontPage: true,
       frontPagePosition: 'Features',
       header: 'Vipindi vya Redio',
+      durationLabel: 'Muda %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

@@ -43,6 +43,8 @@ const constructAdJsonData = ({ service }) => {
 };
 
 const ampAdPropsMobile = ({ service }) => ({
+  'data-block-on-consent': 'default',
+  'data-npa-on-unknown-consent': 'true',
   media: '(max-width: 599px)',
   type: 'doubleclick',
   width: '320',
@@ -55,6 +57,8 @@ const ampAdPropsMobile = ({ service }) => ({
 });
 
 const ampAdPropsDesktop = ({ service }) => ({
+  'data-block-on-consent': 'default',
+  'data-npa-on-unknown-consent': 'true',
   media: '(min-width: 600px)',
   type: 'doubleclick',
   width: '970',
@@ -69,9 +73,12 @@ const ampAdPropsDesktop = ({ service }) => ({
 const AMP_ACCESS_DATA = endpoint => ({
   authorization: endpoint,
   noPingback: true,
+  authorizationFallbackResponse: {
+    error: true,
+  },
 });
 
-const AMP_ACCESS_FETCH = service => {
+export const AMP_ACCESS_FETCH = service => {
   const togglesEndpoint = `${process.env.SIMORGH_TOGGLES_URL}/toggles?application=simorgh&service=${service}&geoiplookup=true`;
 
   return (

@@ -1,12 +1,13 @@
 import { bool, shape, string, number } from 'prop-types';
 
 export const onDemandRadioPageDataPropTypes = shape({
-  language: string,
   brandTitle: string,
-  episodeTitle: string,
   headline: string,
-  shortSynopsis: string,
   summary: string,
+  language: string,
+  episodeAvailableFrom: number,
+  episodeAvailableUntil: number,
+  releaseDateTimeStamp: number,
 });
 
 const onDemandPagePropTypes = {
