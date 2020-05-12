@@ -219,7 +219,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   transition: visibility 0.2s linear;
 }
 
-.c50 {
+.c53 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -254,35 +254,14 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding: 0;
 }
 
-.c51 {
+.c46 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c46 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-  width: 100%;
-}
-
-.c46 >div {
-  vertical-align: middle;
-}
-
-.c46 >div {
-  display: inline-block;
-  vertical-align: initial;
-}
-
-.c46 svg {
-  margin: 0;
-}
-
-.c54 {
+.c49 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -293,28 +272,16 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   position: relative;
 }
 
-.c52 {
+.c47 {
   position: relative;
 }
 
-.c53 > * {
+.c48 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c47 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  display: inline;
-}
-
-.c55 {
+.c50 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -325,19 +292,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   line-height: 1.25rem;
 }
 
-.c49 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
-}
-
-.c56 {
+.c52 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -348,7 +303,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding-bottom: 0.5rem;
 }
 
-.c48 {
+.c51 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -356,7 +311,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   overflow-wrap: break-word;
 }
 
-.c48:before {
+.c51:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -368,13 +323,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   z-index: 1;
 }
 
-.c48:hover,
-.c48:focus {
+.c51:hover,
+.c51:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c48:visited {
+.c51:visited {
   color: #6E6E73;
 }
 
@@ -465,7 +420,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   margin: 0 auto;
 }
 
-.c57 {
+.c54 {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
@@ -774,14 +729,14 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c50 {
+  .c53 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c50 {
+  .c53 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -951,27 +906,27 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:63rem) {
-  .c51 {
+  .c46 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c51 {
+  .c46 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c46 {
+  .c49 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c46 {
+  .c49 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -979,31 +934,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c46 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c54 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c54 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c54 {
+  .c49 {
     display: block;
     width: initial;
     padding: initial;
@@ -1020,98 +951,56 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:25rem) {
-  .c53 {
+  .c48 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c53 > * {
+  .c48 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c47 {
+  .c50 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c47 {
+  .c50 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c55 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c55 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c49 {
+  .c52 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c49 {
+  .c52 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c49 {
+  .c52 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c49 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c56 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c56 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c56 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:63rem) {
-  .c56 {
+  .c52 {
     display: none;
     visibility: hidden;
   }
@@ -1776,119 +1665,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
               >
                 <div
                   class="c42"
-                >
-                  <section
-                    aria-labelledby="top-stories-heading"
-                    class="c31"
-                    role="region"
-                  >
-                    <div
-                      class="c31"
-                    >
-                      <div
-                        class="c32 c33"
-                      >
-                        <div
-                          class="c34"
-                        />
-                        <h2
-                          class="c35"
-                        >
-                          <span
-                            class="c36"
-                          >
-                            <span
-                              class="c37"
-                            >
-                              <span
-                                class="c38"
-                                dir="ltr"
-                                id="top-stories-heading"
-                              >
-                                Top Stories
-                              </span>
-                            </span>
-                          </span>
-                        </h2>
-                      </div>
-                      <ul
-                        class="c43"
-                        role="list"
-                      >
-                        <li
-                          class="c44"
-                          role="listitem"
-                        >
-                          <div
-                            class="c45"
-                          >
-                            <div
-                              class="c46"
-                              dir="ltr"
-                            >
-                              <h3
-                                class="c47"
-                              >
-                                <a
-                                  class="c48"
-                                  href="/mundo/noticias-internacional-51939501"
-                                >
-                                  China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
-                                </a>
-                              </h3>
-                              <p
-                                class="c49"
-                              >
-                                Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.
-                              </p>
-                              <time
-                                class="c50"
-                                datetime="2020-02-03"
-                              >
-                                3rd February 2020
-                              </time>
-                            </div>
-                          </div>
-                        </li>
-                        <li
-                          class="c44"
-                          role="listitem"
-                        >
-                          <div
-                            class="c45"
-                          >
-                            <div
-                              class="c46"
-                              dir="ltr"
-                            >
-                              <h3
-                                class="c47"
-                              >
-                                <a
-                                  class="c48"
-                                  href="/pidgin/tori-51945757"
-                                >
-                                  Nigeria don get five new cases of Coronavirus - See how e happun
-                                </a>
-                              </h3>
-                              <p
-                                class="c49"
-                              >
-                                Nigeria Health say di patients from UK and America travel come di kontri.
-                              </p>
-                              <time
-                                class="c50"
-                                datetime="2020-02-03"
-                              >
-                                3rd February 2020
-                              </time>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </section>
-                </div>
+                />
                 <div
                   class="c42"
                 >
@@ -1938,11 +1715,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             class="c45"
                           >
                             <div
-                              class="c51"
+                              class="c46"
                               dir="ltr"
                             >
                               <div
-                                class="c52"
+                                class="c47"
                               >
                                 <div
                                   class="c15"
@@ -1952,31 +1729,31 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                   />
                                 </div>
                                 <div
-                                  class="c53"
+                                  class="c48"
                                 />
                               </div>
                             </div>
                             <div
-                              class="c54"
+                              class="c49"
                               dir="ltr"
                             >
                               <h3
-                                class="c55"
+                                class="c50"
                               >
                                 <a
-                                  class="c48"
+                                  class="c51"
                                   href="/igbo/afirika-23252735"
                                 >
                                   STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
                                 </a>
                               </h3>
                               <p
-                                class="c56"
+                                class="c52"
                               >
                                 This is a test asset used in Simorgh, please do not edit it without asking.
                               </p>
                               <time
-                                class="c50"
+                                class="c53"
                                 datetime="2020-02-03"
                               >
                                 3rd February 2020
@@ -1992,11 +1769,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             class="c45"
                           >
                             <div
-                              class="c51"
+                              class="c46"
                               dir="ltr"
                             >
                               <div
-                                class="c52"
+                                class="c47"
                               >
                                 <div
                                   class="c15"
@@ -2006,31 +1783,31 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                   />
                                 </div>
                                 <div
-                                  class="c53"
+                                  class="c48"
                                 />
                               </div>
                             </div>
                             <div
-                              class="c54"
+                              class="c49"
                               dir="ltr"
                             >
                               <h3
-                                class="c55"
+                                class="c50"
                               >
                                 <a
-                                  class="c48"
+                                  class="c51"
                                   href="/igbo/afirika-49666505"
                                 >
                                   Robert Mugabe: Zimbabwe eferela nwa amadi a aka
                                 </a>
                               </h3>
                               <p
-                                class="c56"
+                                class="c52"
                               >
                                 Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.
                               </p>
                               <time
-                                class="c50"
+                                class="c53"
                                 datetime="2020-02-03"
                               >
                                 3rd February 2020
@@ -2043,7 +1820,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </section>
                 </div>
                 <div
-                  class="c57"
+                  class="c54"
                 />
               </div>
             </div>
@@ -2288,7 +2065,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-bottom: 1rem;
 }
 
-.c52 {
+.c55 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -2323,35 +2100,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding: 0;
 }
 
-.c53 {
+.c48 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c48 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-  width: 100%;
-}
-
-.c48 >div {
-  vertical-align: middle;
-}
-
-.c48 >div {
-  display: inline-block;
-  vertical-align: initial;
-}
-
-.c48 svg {
-  margin: 0;
-}
-
-.c56 {
+.c51 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -2362,28 +2118,16 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   position: relative;
 }
 
-.c54 {
+.c49 {
   position: relative;
 }
 
-.c55 > * {
+.c50 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c49 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  display: inline;
-}
-
-.c57 {
+.c52 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -2394,19 +2138,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   line-height: 1.25rem;
 }
 
-.c51 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
-}
-
-.c58 {
+.c54 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2417,7 +2149,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c50 {
+.c53 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -2425,7 +2157,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   overflow-wrap: break-word;
 }
 
-.c50:before {
+.c53:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -2437,13 +2169,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   z-index: 1;
 }
 
-.c50:hover,
-.c50:focus {
+.c53:hover,
+.c53:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c50:visited {
+.c53:visited {
   color: #6E6E73;
 }
 
@@ -2538,7 +2270,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   margin: 0 auto;
 }
 
-.c59 {
+.c56 {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
@@ -2861,14 +2593,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c52 {
+  .c55 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c52 {
+  .c55 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -3038,27 +2770,27 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:63rem) {
-  .c53 {
+  .c48 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c53 {
+  .c48 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c48 {
+  .c51 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c48 {
+  .c51 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -3066,31 +2798,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c48 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c56 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c56 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c56 {
+  .c51 {
     display: block;
     width: initial;
     padding: initial;
@@ -3107,98 +2815,56 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c55 {
+  .c50 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c55 > * {
+  .c50 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c49 {
+  .c52 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c49 {
+  .c52 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c57 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c57 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c51 {
+  .c54 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c51 {
+  .c54 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c51 {
+  .c54 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c51 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c58 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c58 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c58 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:63rem) {
-  .c58 {
+  .c54 {
     display: none;
     visibility: hidden;
   }
@@ -4095,119 +3761,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   >
                     <div
                       class="c44"
-                    >
-                      <section
-                        aria-labelledby="top-stories-heading"
-                        class="c33"
-                        role="region"
-                      >
-                        <div
-                          class="c33"
-                        >
-                          <div
-                            class="c34 c35"
-                          >
-                            <div
-                              class="c36"
-                            />
-                            <h2
-                              class="c37"
-                            >
-                              <span
-                                class="c38"
-                              >
-                                <span
-                                  class="c39"
-                                >
-                                  <span
-                                    class="c40"
-                                    dir="ltr"
-                                    id="top-stories-heading"
-                                  >
-                                    Top Stories
-                                  </span>
-                                </span>
-                              </span>
-                            </h2>
-                          </div>
-                          <ul
-                            class="c45"
-                            role="list"
-                          >
-                            <li
-                              class="c46"
-                              role="listitem"
-                            >
-                              <div
-                                class="c47"
-                              >
-                                <div
-                                  class="c48"
-                                  dir="ltr"
-                                >
-                                  <h3
-                                    class="c49"
-                                  >
-                                    <a
-                                      class="c50"
-                                      href="/mundo/noticias-internacional-51939501"
-                                    >
-                                      China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
-                                    </a>
-                                  </h3>
-                                  <p
-                                    class="c51"
-                                  >
-                                    Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.
-                                  </p>
-                                  <time
-                                    class="c52"
-                                    datetime="2020-02-03"
-                                  >
-                                    3rd February 2020
-                                  </time>
-                                </div>
-                              </div>
-                            </li>
-                            <li
-                              class="c46"
-                              role="listitem"
-                            >
-                              <div
-                                class="c47"
-                              >
-                                <div
-                                  class="c48"
-                                  dir="ltr"
-                                >
-                                  <h3
-                                    class="c49"
-                                  >
-                                    <a
-                                      class="c50"
-                                      href="/pidgin/tori-51945757"
-                                    >
-                                      Nigeria don get five new cases of Coronavirus - See how e happun
-                                    </a>
-                                  </h3>
-                                  <p
-                                    class="c51"
-                                  >
-                                    Nigeria Health say di patients from UK and America travel come di kontri.
-                                  </p>
-                                  <time
-                                    class="c52"
-                                    datetime="2020-02-03"
-                                  >
-                                    3rd February 2020
-                                  </time>
-                                </div>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </section>
-                    </div>
+                    />
                     <div
                       class="c44"
                     >
@@ -4257,11 +3811,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="c47"
                               >
                                 <div
-                                  class="c53"
+                                  class="c48"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="c54"
+                                    class="c49"
                                   >
                                     <div
                                       class="c15"
@@ -4271,31 +3825,31 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                       />
                                     </div>
                                     <div
-                                      class="c55"
+                                      class="c50"
                                     />
                                   </div>
                                 </div>
                                 <div
-                                  class="c56"
+                                  class="c51"
                                   dir="ltr"
                                 >
                                   <h3
-                                    class="c57"
+                                    class="c52"
                                   >
                                     <a
-                                      class="c50"
+                                      class="c53"
                                       href="/igbo/afirika-23252735"
                                     >
                                       STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
                                     </a>
                                   </h3>
                                   <p
-                                    class="c58"
+                                    class="c54"
                                   >
                                     This is a test asset used in Simorgh, please do not edit it without asking.
                                   </p>
                                   <time
-                                    class="c52"
+                                    class="c55"
                                     datetime="2020-02-03"
                                   >
                                     3rd February 2020
@@ -4311,11 +3865,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="c47"
                               >
                                 <div
-                                  class="c53"
+                                  class="c48"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="c54"
+                                    class="c49"
                                   >
                                     <div
                                       class="c15"
@@ -4325,31 +3879,31 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                       />
                                     </div>
                                     <div
-                                      class="c55"
+                                      class="c50"
                                     />
                                   </div>
                                 </div>
                                 <div
-                                  class="c56"
+                                  class="c51"
                                   dir="ltr"
                                 >
                                   <h3
-                                    class="c57"
+                                    class="c52"
                                   >
                                     <a
-                                      class="c50"
+                                      class="c53"
                                       href="/igbo/afirika-49666505"
                                     >
                                       Robert Mugabe: Zimbabwe eferela nwa amadi a aka
                                     </a>
                                   </h3>
                                   <p
-                                    class="c58"
+                                    class="c54"
                                   >
                                     Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.
                                   </p>
                                   <time
-                                    class="c52"
+                                    class="c55"
                                     datetime="2020-02-03"
                                   >
                                     3rd February 2020
@@ -4362,7 +3916,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </section>
                     </div>
                     <div
-                      class="c59"
+                      class="c56"
                     />
                   </div>
                 </div>

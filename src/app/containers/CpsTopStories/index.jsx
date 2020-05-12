@@ -37,7 +37,11 @@ const TopStories = ({ content }) => {
 };
 
 TopStories.propTypes = {
-  content: arrayOf(shape(storyItem)).isRequired,
+  content: arrayOf(shape(storyItem)),
+};
+
+TopStories.defaultProps = {
+  content: [],
 };
 
 export default TopStories;
