@@ -13,15 +13,19 @@ export const optimoPromoSummaryPropTypes = {
   blocks: arrayOf(
     shape({
       model: shape({
-        blocks: arrayOf({
-          model: shape({
-            blocks: arrayOf({
-              model: shape({
-                text: string,
-              }),
+        blocks: arrayOf(
+          shape({
+            model: shape({
+              blocks: arrayOf(
+                shape({
+                  model: shape({
+                    text: string,
+                  }),
+                }),
+              ),
             }),
           }),
-        }),
+        ),
       }),
     }),
   ),
@@ -36,7 +40,7 @@ export const optimoPromoPropTypes = {
   locators: shape({
     optimoUrn: string.isRequired,
   }),
-  summary: oneOfType([optimoPromoSummaryPropTypes, string]),
+  summary: oneOfType([shape(optimoPromoSummaryPropTypes), string]),
   timestamp: number,
 };
 
