@@ -24,7 +24,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                 <script
                   type="application/json"
                 >
-                  {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"pageview":"\${base}s=598343&idclient=a64aa1c5-f05e-4dd0-a8da-38267f0b2be7&s2=70&p=pidgin.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:52f3c7b1-83ed-2338-e050-17ac8045cd94]&x2=[amp]&x3=[news-pidgin]&x4=[pcm]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[Domot+-+BBC+News+Pidgin]&x11=[1970-01-18T08:30:40.608Z]&x12=[1970-01-19T01:24:09.011Z]&ref=\${documentReferrer}"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+                  {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"pageview":"\${base}s=598343&idclient=f62185ec-a9e4-4030-bfc1-fd033d480602&s2=70&p=pidgin.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:52f3c7b1-83ed-2338-e050-17ac8045cd94]&x2=[amp]&x3=[news-pidgin]&x4=[pcm]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[Domot+-+BBC+News+Pidgin]&x11=[1970-01-18T08:30:40.608Z]&x12=[1970-01-19T01:24:09.011Z]&ref=\${documentReferrer}"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
                 </script>
               </amp-analytics>
               <div>
@@ -34,7 +34,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                 role="main"
               >
                 <h1
-                  class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                  class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                   id="content"
                   tabindex="-1"
                 >
@@ -46,9 +46,9 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                     >
                       BBC News
                     </span>
-                    ,
+                    , 
                     Pidgin
-                     -
+                     - 
                     Home
                   </span>
                 </h1>
@@ -88,7 +88,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                         data-amp-slot-index="0"
                         data-block-on-consent="default"
                         data-multi-size="970x250,728x90"
-                        data-npa-on-unknown-consent="true"q
+                        data-npa-on-unknown-consent="true"
                         data-slot="/4817/bbccom.test.site.amp.news"
                         height="250"
                         json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"pidgin\\"}}"
@@ -189,7 +189,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                                   class="StyledSpan-sc-5gbj69-0 jbxGSs"
                                   dir="ltr"
                                 >
-                                  AS E DE HAPPEN
+                                  AS E DE HAPPEN 
                                 </span>
                                 Senators don begin vote for Senate President
                               </span>
@@ -205,7 +205,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                             data-e2e="index-alsos"
                           >
                             <h4
-                              class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                              class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                             >
                               Another thing we de for inside dis tori
                             </h4>
@@ -860,9 +860,9 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                     >
                       BBC News
                     </span>
-                    ,
+                    , 
                     Pidgin
-                     -
+                     - 
                     Home
                   </span>
                 </h1>
@@ -948,7 +948,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                   class="StyledSpan-sc-5gbj69-0 jbxGSs"
                                   dir="ltr"
                                 >
-                                  AS E DE HAPPEN
+                                  AS E DE HAPPEN 
                                 </span>
                                 Senators don begin vote for Senate President
                               </span>
