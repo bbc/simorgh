@@ -2,6 +2,8 @@ import processMostRead from './processMostRead';
 import pidginData from '#data/pidgin/mostRead';
 import kyrgyzData from '#data/kyrgyz/mostRead';
 import { setStaleLastRecordTimeStamp } from './testHelpers';
+import loggerMock from '#testHelpers/loggerMock';
+import { MOST_READ_DATA_INCOMPLETE_WARNING } from '#lib/logger.const';
 
 const expectedPidginData = [
   {
@@ -101,7 +103,7 @@ const expectedKyrgyzData = [
   },
 ];
 
-const insuffcientData = {
+const missingTitleData = {
   locators: {
     canonicalUrl: 'https://www.bbc.com/news/articles/cn060pe01e5o',
   },
@@ -116,7 +118,33 @@ const insuffcientData = {
               {
                 type: 'paragraph',
                 model: {
-                  text: '',
+                  text: null,
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+};
+
+const missingHrefData = {
+  locators: {
+    canonicalUrl: null,
+  },
+  timestamp: 1586266369329,
+  headlines: {
+    promoHeadline: {
+      blocks: [
+        {
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                type: 'paragraph',
+                model: {
+                  text: 'Most read item title',
                 },
               },
             ],
@@ -163,16 +191,44 @@ describe('filterMostRead', () => {
       data: { lastRecordTimeStamp: '2100-11-06T16:37:00Z' },
       expectedReturn: [],
     },
-    {
-      description:
-        'should log an insufficent data message when title is missing',
-      data: insuffcientData,
-      numberOfItems: 1,
-      expectedReturn: null,
-    },
   ].forEach(({ description, data, numberOfItems, expectedReturn }) => {
     it(description, () => {
       expect(processMostRead({ data, numberOfItems })).toEqual(expectedReturn);
+    });
+  });
+
+  describe('Error logging', () => {
+    [
+      {
+        description:
+          'should log an insufficent data message when most read item title is missing',
+        data: missingTitleData,
+        numberOfItems: 1,
+        expectedReturn: null,
+      },
+      {
+        description:
+          'should log an insufficent data message when most read item href is missing',
+        data: missingHrefData,
+        numberOfItems: 1,
+        expectedReturn: null,
+      },
+    ].forEach(({ description, data, numberOfItems, expectedReturn }) => {
+      it(description, () => {
+        const expectedLog = JSON.stringify(
+          {
+            event: MOST_READ_DATA_INCOMPLETE_WARNING,
+            message: 'Most read item is missing title or link data fields',
+          },
+          null,
+          2,
+        );
+        processMostRead({ data, numberOfItems });
+        expect(loggerMock.info).toHaveBeenCalledWith(expectedLog);
+        expect(processMostRead({ data, numberOfItems })).toEqual(
+          expectedReturn,
+        );
+      });
     });
   });
 });

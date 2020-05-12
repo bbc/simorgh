@@ -17,10 +17,10 @@ export const setStalePromoTimestamp = mostReadData => {
 export const setFreshPromoTimestamp = mostReadData => {
   const freshDate = new Date();
   const updatedMostReadData = { ...mostReadData };
+  const { records } = updatedMostReadData;
 
   // Updates first 10 promos to have a fresh date
   for (let i = 0; i < 10; i += 1) {
-    const { records } = updatedMostReadData;
     if (records[i]) {
       const { type } = records[i];
       if (type && type === 'optimo') {

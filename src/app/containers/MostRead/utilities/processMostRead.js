@@ -1,7 +1,7 @@
 import pathOr from 'ramda/src/pathOr';
 import nodeLogger from '#lib/logger.node';
 import { mostReadRecordIsFresh } from '.';
-import { INSUFFICIENT_DATA_TO_RENDER_ITEM } from '#lib/logger.const';
+import { MOST_READ_DATA_INCOMPLETE_WARNING } from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
@@ -61,8 +61,8 @@ const mostReadItems = ({ data, numberOfItems }) => {
         logger.info(
           JSON.stringify(
             {
-              event: INSUFFICIENT_DATA_TO_RENDER_ITEM,
-              message: 'Most read item is missing title or link',
+              event: MOST_READ_DATA_INCOMPLETE_WARNING,
+              message: 'Most read item is missing title or link data fields',
             },
             null,
             2,
