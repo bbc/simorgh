@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { render, act, waitFor } from '@testing-library/react';
+import { render, act } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -130,13 +130,11 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
 describe('Front Page', () => {
   describe('snapshots', () => {
     it('should render a pidgin frontpage correctly', async () => {
-      const { container } = render(
-        <FrontPageWithContext pageData={pageData} />,
-      );
-
-      // Waiting to ensure most read data is loaded and element is rendered
-      // The data is loaded separately which was previously causing snapshots to fail
-      await waitFor(() => container.querySelector('#Most-Read'));
+      let container;
+      await act(async () => {
+        container = render(<FrontPageWithContext pageData={pageData} />)
+          .container;
+      });
 
       expect(container).toMatchSnapshot();
     });
