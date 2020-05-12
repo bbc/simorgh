@@ -177,7 +177,32 @@
       "canonicalUrl": "https://www.bbc.com/news/articles/cv7yn5n25rno",
       "optimoUrn": "urn:bbc:optimo:asset:cv7yn5n25rno"
     },
-    "summary": "",
+    "summary": {
+      "blocks": [
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": ""
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": ""
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        }
+      ]
+    },
     "timestamp": 1563358511643,
     "type": "cps"
   },

@@ -144,7 +144,32 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c3rykrrvy19o"
     },
-    "summary": "",
+    "summary": {
+      "blocks": [
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": ""
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": ""
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        }
+      ]
+    },
     "timestamp": 1562942682443,
     "id": "urn:bbc:ares::article:c3rykrrvy19o",
     "type": "cps"

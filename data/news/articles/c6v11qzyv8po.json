@@ -887,7 +887,32 @@
       "canonicalUrl": "https://www.bbc.com/news/articles/c6v11qzyv8po",
       "optimoUrn": "urn:bbc:optimo:asset:c6v11qzyv8po"
     },
-    "summary": "",
+    "summary": {
+      "blocks": [
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": ""
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": ""
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        }
+      ]
+    },
     "timestamp": 1539188371344,
     "type": "cps"
   },

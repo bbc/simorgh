@@ -2628,7 +2628,32 @@
       "optimoUrn": "urn:bbc:optimo:asset:cjn0qpz3jjvo",
       "canonicalUrl": "https://www.bbc.com/news/articles/cjn0qpz3jjvo"
     },
-    "summary": "",
+    "summary": {
+      "blocks": [
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": ""
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": ""
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        }
+      ]
+    },
     "timestamp": 1571149356325,
     "id": "urn:bbc:ares::article:cjn0qpz3jjvo",
     "type": "cps"
