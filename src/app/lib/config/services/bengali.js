@@ -193,6 +193,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
+      durationLabel: 'Duration %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,
@@ -243,6 +244,10 @@ export const service = {
       {
         title: 'মূলপাতা',
         url: '/bengali',
+      },
+      {
+        title: 'করোনাভাইরাস',
+        url: '/bengali/news-51941294',
       },
       {
         title: 'ভিডিও',
