@@ -38,7 +38,7 @@ export default ({ serviceName, pageType, path }) => {
             if (getAdSetting(jsonData)) {
               cy.log('ads allowed');
               if (shouldAllowAdsForVideoDuration(jsonData)) {
-                cy.log('Should have ads');
+                cy.log('Duration condition met');
                 cy.get(
                   `script[src="https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap.js"]`,
                 ).should('exist');
