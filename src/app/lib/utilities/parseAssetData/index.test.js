@@ -1,3 +1,4 @@
+import { mergeDeepLeft } from 'ramda';
 import {
   getHeadline,
   getFirstPublished,
@@ -6,6 +7,7 @@ import {
   getArticleSection,
   getMentions,
   getLang,
+  getSummary,
 } from '.';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 
@@ -89,6 +91,26 @@ describe('ArticleMain utils', () => {
   it('getLang › it should return the correct value', () => {
     const actual = getLang(articleDataNews);
     const expected = 'en-gb';
+
+    expect(actual).toEqual(expected);
+  });
+
+  it('getSummary › it should return the correct value', () => {
+    const actual = getSummary(articleDataNews);
+    const expected = 'Article summary.';
+
+    expect(actual).toEqual(expected);
+  });
+
+  it('getSummary old format › it should return undefined', () => {
+    const articleDataNewsSummary = mergeDeepLeft(
+      {
+        promo: { summary: 'a summary ' },
+      },
+      articleDataNews,
+    );
+    const actual = getSummary(articleDataNewsSummary);
+    const expected = undefined;
 
     expect(actual).toEqual(expected);
   });
