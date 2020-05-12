@@ -47,6 +47,9 @@ const convertInclude = async ({ href, type, ...rest }) => {
     indepthtoolkit: 'idt1',
     idt2: 'idt2',
     include: 'vj',
+    'news/special': 'vj',
+    'market-data': 'vj',
+    'smallprox/include': 'vj',
   };
 
   // This determines if the href has a leading '/'
