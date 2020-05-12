@@ -5,13 +5,18 @@ import {
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
 import { BrowserRouter } from 'react-router-dom';
+import omit from 'ramda/src/omit';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import AudioPlayer from '.';
 
 const origin = 'http://localhost:7080';
 
-const metadata = {
+const defaultAudioPlayerProps = {
+  uuid: 'uuid',
+  idAttr: 'idAttr',
+  externalId: 'externalId',
+  id: 'id',
   promoBrandTitle: 'ماښامنۍ خپرونه',
   shortSynopsis: 'د بي بي سي ورلډ سروس څخه پروګرام کول',
   durationISO8601: 'PT29M30S',
@@ -19,24 +24,30 @@ const metadata = {
   releaseDateTimeStamp: 1587655800000,
 };
 
+const defaultRequestContextValue = { platform: 'foobar', origin };
+
+/* eslint-disable react/prop-types */
+const renderComponent = ({
+  audioPlayerProps = defaultAudioPlayerProps,
+  requestContextValue = defaultRequestContextValue,
+  service = 'korean',
+}) => (
+  <RequestContext.Provider value={requestContextValue}>
+    <ServiceContextProvider service={service}>
+      <BrowserRouter>
+        <AudioPlayer {...audioPlayerProps} />
+      </BrowserRouter>
+    </ServiceContextProvider>
+  </RequestContext.Provider>
+);
+/* eslint-enable react/prop-types */
+
 describe('MediaPageBlocks AudioPlayer', () => {
   shouldMatchSnapshot(
     'should render correctly for canonical',
-    <RequestContext.Provider
-      value={{ platform: 'canonical', isAmp: false, origin }}
-    >
-      <ServiceContextProvider service="korean">
-        <BrowserRouter>
-          <AudioPlayer
-            uuid="uuid"
-            idAttr="idAttr"
-            externalId="externalId"
-            id="id"
-            {...metadata}
-          />
-        </BrowserRouter>
-      </ServiceContextProvider>
-    </RequestContext.Provider>,
+    renderComponent({
+      requestContextValue: { platform: 'canonical', isAmp: false, origin },
+    }),
   );
 
   // TODO: remove the need for this suppressPropWarnings for placeholderSrc on AMP player
@@ -44,40 +55,15 @@ describe('MediaPageBlocks AudioPlayer', () => {
 
   shouldMatchSnapshot(
     'should render correctly for amp',
-    <RequestContext.Provider value={{ platform: 'amp', isAmp: true, origin }}>
-      <ServiceContextProvider service="korean">
-        <BrowserRouter>
-          <AudioPlayer
-            uuid="uuid"
-            idAttr="idAttr"
-            externalId="externalId"
-            id="id"
-            {...metadata}
-          />
-        </BrowserRouter>
-      </ServiceContextProvider>
-    </RequestContext.Provider>,
+    renderComponent({
+      requestContextValue: { platform: 'amp', isAmp: true, origin },
+    }),
   );
 
   describe('when platform is unknown', () => {
     suppressPropWarnings(['text', 'undefined']);
 
-    isNull(
-      'should render null',
-      <RequestContext.Provider value={{ platform: 'foobar', origin }}>
-        <ServiceContextProvider service="korean">
-          <BrowserRouter>
-            <AudioPlayer
-              uuid="uuid"
-              idAttr="idAttr"
-              externalId="externalId"
-              id="id"
-              {...metadata}
-            />
-          </BrowserRouter>
-        </ServiceContextProvider>
-      </RequestContext.Provider>,
-    );
+    isNull('should render null', renderComponent({}));
   });
 
   describe('when id isnt provided', () => {
@@ -85,18 +71,9 @@ describe('MediaPageBlocks AudioPlayer', () => {
 
     isNull(
       'should render null',
-      <RequestContext.Provider value={{ platform: 'foobar', origin }}>
-        <ServiceContextProvider service="korean">
-          <BrowserRouter>
-            <AudioPlayer
-              uuid="uuid"
-              idAttr="idAttr"
-              externalId="externalId"
-              {...metadata}
-            />
-          </BrowserRouter>
-        </ServiceContextProvider>
-      </RequestContext.Provider>,
+      renderComponent({
+        audioPlayerProps: omit(['id'], defaultAudioPlayerProps),
+      }),
     );
   });
 
@@ -105,34 +82,26 @@ describe('MediaPageBlocks AudioPlayer', () => {
 
     isNull(
       'should render null',
-      <RequestContext.Provider value={{ platform: 'foobar', origin }}>
-        <ServiceContextProvider service="korean">
-          <BrowserRouter>
-            <AudioPlayer uuid="uuid" idAttr="idAttr" id="id" {...metadata} />
-          </BrowserRouter>
-        </ServiceContextProvider>
-      </RequestContext.Provider>,
+      renderComponent({
+        audioPlayerProps: omit(['externalId'], defaultAudioPlayerProps),
+      }),
     );
   });
 
   describe('when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo_radio', () => {
+    const service = 'afaanoromoo';
+    const audioPlayerProps = {
+      ...defaultAudioPlayerProps,
+      externalId: 'bbc_oromo_radio',
+    };
+
     shouldMatchSnapshot(
       'should render correctly for canonical',
-      <RequestContext.Provider
-        value={{ platform: 'canonical', isAmp: false, origin }}
-      >
-        <ServiceContextProvider service="afaanoromoo">
-          <BrowserRouter>
-            <AudioPlayer
-              uuid="uuid"
-              idAttr="idAttr"
-              externalId="bbc_oromo_radio"
-              id="id"
-              {...metadata}
-            />
-          </BrowserRouter>
-        </ServiceContextProvider>
-      </RequestContext.Provider>,
+      renderComponent({
+        service,
+        requestContextValue: { platform: 'canonical', isAmp: false, origin },
+        audioPlayerProps,
+      }),
     );
 
     // TODO: remove the need for this suppressPropWarnings for placeholderSrc on AMP player
@@ -140,19 +109,11 @@ describe('MediaPageBlocks AudioPlayer', () => {
 
     shouldMatchSnapshot(
       'should render correctly for amp',
-      <RequestContext.Provider value={{ platform: 'amp', isAmp: true, origin }}>
-        <ServiceContextProvider service="afaanoromoo">
-          <BrowserRouter>
-            <AudioPlayer
-              uuid="uuid"
-              idAttr="idAttr"
-              externalId="bbc_oromo_radio"
-              id="id"
-              {...metadata}
-            />
-          </BrowserRouter>
-        </ServiceContextProvider>
-      </RequestContext.Provider>,
+      renderComponent({
+        service,
+        requestContextValue: { platform: 'amp', isAmp: true, origin },
+        audioPlayerProps,
+      }),
     );
   });
 });
