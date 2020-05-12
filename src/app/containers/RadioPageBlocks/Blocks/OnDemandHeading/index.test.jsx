@@ -37,5 +37,23 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
     expect(spanWithAriaRoleText).toContainElement(brandTitle);
   });
 
-  it('should have visually hidden comma so screenreaders pause when reading', () => {});
+  it('should have visually hidden comma so screenreaders pause when reading', () => {
+    render(
+      <ServiceContextProvider service="news">
+        <OnDemandHeading
+          brandTitle="Dunia Pagi Ini"
+          releaseDateTimeStamp={1587945600000}
+          uuid="uuid"
+          idAttr="content"
+        />
+      </ServiceContextProvider>,
+    );
+
+    const visuallyHiddenComma = document.querySelector(
+      'span[class^="VisuallyHiddenText"]',
+    );
+
+    expect(visuallyHiddenComma).toBeInTheDocument();
+    expect(visuallyHiddenComma).toContainHTML(', ');
+  });
 });
