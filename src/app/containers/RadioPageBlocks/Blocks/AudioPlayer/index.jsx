@@ -17,7 +17,7 @@ import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
-import StructuredData from './StructuredData';
+import AudioObjectStructuredData from './AudioObjectStructuredData';
 
 const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
 
@@ -137,7 +137,7 @@ const AudioPlayer = ({
         />
       )}
       {!isLiveRadio(assetId) && (
-        <StructuredData
+        <AudioObjectStructuredData
           promoBrandTitle={promoBrandTitle}
           shortSynopsis={shortSynopsis}
           durationISO8601={durationISO8601}

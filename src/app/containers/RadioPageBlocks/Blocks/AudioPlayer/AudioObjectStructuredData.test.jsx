@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import StructuredData from './StructuredData';
+import AudioObjectStructuredData from './AudioObjectStructuredData';
 
 const props = {
   promoBrandTitle: 'ماښامنۍ خپرونه',
@@ -12,9 +12,9 @@ const props = {
   releaseDateTimeStamp: 1587655800000,
 };
 
-describe('StructuredData', () => {
+describe('AudioObjectStructuredData', () => {
   shouldMatchSnapshot(
-    'should render StructuredData correctly',
-    <StructuredData {...props} />,
+    'should render AudioObjectStructuredData correctly',
+    <AudioObjectStructuredData {...props} />,
   );
 });
