@@ -50,12 +50,11 @@ describe('MostReadContainerCanonical', () => {
       initialData: nepaliMostReadData,
     },
     {
-      description: 'should render 5 list items for kyrgyz from server data',
+      description: 'should render 5 list items for kyrgyz from fetched data',
       service: 'kyrgyz',
       numberOfItems: 5,
       mostReadData: kyrgyzMostReadData,
       endpoint: 'www.test.bbc.com/kyrgyz/mostread.json',
-      initialData: kyrgyzMostReadData,
     },
   ].forEach(
     ({

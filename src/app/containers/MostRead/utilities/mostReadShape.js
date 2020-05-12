@@ -1,4 +1,4 @@
-import { string, shape, arrayOf, number, oneOf } from 'prop-types';
+import { string, shape, arrayOf, number, oneOfType } from 'prop-types';
 
 const cpsMostReadRecord = {
   id: string.isRequired,
@@ -34,7 +34,9 @@ const optimoMostReadRecord = {
 
 const mostReadShape = shape({
   lastRecordTimeStamp: string.isRequired,
-  records: arrayOf(oneOf([cpsMostReadRecord, optimoMostReadRecord])),
+  records: arrayOf(
+    oneOfType([shape(cpsMostReadRecord), shape(optimoMostReadRecord)]),
+  ),
 });
 
 export default mostReadShape;

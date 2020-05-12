@@ -188,8 +188,8 @@
     },
     {
       "locators" : {
-        "optimoUrn" : "urn:bbc:optimo:asset:ea768a097521",
-        "canonicalUrl" : "https://www.bbc.com/news/articles/ea768a097521"
+        "optimoUrn" : "urn:bbc:optimo:asset:c736f039bwx",
+        "canonicalUrl" : "https://www.bbc.com/news/articles/c736f039bwx"
       },
       "timestamp" : 1586266369329,
       "suitableForSyndication" : true,
@@ -274,13 +274,13 @@
           }
         } ]
       },
-      "id" : "urn:bbc:ares::article:ea768a097521",
+      "id" : "urn:bbc:ares::article:c736f039bwx",
       "type" : "optimo"
     },
     {
       "locators" : {
-        "optimoUrn" : "urn:bbc:optimo:asset:ab9177c2ca29",
-        "canonicalUrl" : "https://www.bbc.com/news/articles/ab9177c2ca29"
+        "optimoUrn" : "urn:bbc:optimo:asset:cn060pe0qwer",
+        "canonicalUrl" : "https://www.bbc.com/news/articles/cn060pe0qwer"
       },
       "timestamp" : 1586266369329,
       "suitableForSyndication" : true,
@@ -365,7 +365,7 @@
           }
         } ]
       },
-      "id" : "urn:bbc:ares::article:ab9177c2ca29",
+      "id" : "urn:bbc:ares::article:cn060pe0qwer",
       "type" : "optimo"
     },
     {
