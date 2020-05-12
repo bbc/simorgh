@@ -6,11 +6,12 @@ phases:
       nodejs: 12
   pre_build:
     commands:
+      - apt-get -y install google-chrome-stable
       - npm ci
       - npm run build
   build:
     commands:
-      - npm run cypress:ci
+      - npm run cypress:ci -- --browser chrome
 reports:
   JunitReportsTest:
     files:
