@@ -47,10 +47,17 @@ const mostReadItems = ({ data, numberOfItems }) => {
   // Do not show most read if lastRecordUpdated is greater than 35min as this means PopAPI has failed twice
   // in succession. This suggests ATI may be having issues, hence risk of stale data.
   if (isTest || mostReadRecordIsFresh(data.lastRecordTimeStamp)) {
-    const items = records
-      .map(record => getMostReadItemData(record))
-      .filter(record => record.title && record.href)
-      .slice(0, numberOfItems);
+    const items = [];
+    for (let i = 0; i < records.length; i += 1) {
+      const mostReadItemData = getMostReadItemData(records[i]);
+      const { href, title } = mostReadItemData;
+      if (href && title) {
+        items.push(mostReadItemData);
+      }
+      if (items.length === numberOfItems) {
+        break;
+      }
+    }
     return items;
   }
   return null;
