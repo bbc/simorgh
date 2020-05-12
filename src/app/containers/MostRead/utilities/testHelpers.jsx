@@ -20,7 +20,11 @@ export const setFreshPromoTimestamp = mostReadData => {
 
   // Updates first 10 promos to have a fresh date
   for (let i = 0; i < 10; i += 1) {
-    if (!updatedMostReadData.records[i].promo) {
+    if (
+      updatedMostReadData.records[i].type &&
+      updatedMostReadData.records[i].type === 'optimo'
+    ) {
+      console.log('---type', updatedMostReadData.records[i]);
       updatedMostReadData.records[i].timestamp = freshDate.getTime();
     } else {
       updatedMostReadData.records[i].promo.timestamp = freshDate.getTime();

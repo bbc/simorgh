@@ -116,8 +116,15 @@ describe('filterMostRead', () => {
       expectedReturn: expectedKyrgyzData,
     },
     {
-      description: 'should return null when last record time stamp is stale',
+      description:
+        'should return null when last record CPS time stamp is stale',
       data: setStaleLastRecordTimeStamp(pidginData),
+      expectedReturn: null,
+    },
+    {
+      description:
+        'should return null when last record Optimo time stamp is stale',
+      data: setStaleLastRecordTimeStamp(kyrgyzData),
       expectedReturn: null,
     },
     {
@@ -136,3 +143,6 @@ describe('filterMostRead', () => {
     });
   });
 });
+
+// // should return headline for both CPS and Optimo
+// describe('')
