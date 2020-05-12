@@ -10,15 +10,17 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import {
-  GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
+  GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
+import { C_LUNAR_LIGHT } from '@bbc/psammead-styles/colours';
 
 const StyledAd = styled.div`
   /* To centre page layout for Group 4+ */
   margin: 0 auto;
   width: 100%; /* Needed for IE11 */
   text-align: center;
+  background-color: ${C_LUNAR_LIGHT};
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_TRPL};
@@ -31,15 +33,13 @@ const StyledAd = styled.div`
 `;
 
 const constructAdJsonData = ({ service }) => {
-  const data = {
+  return {
     targeting: {
       slot: 'leaderboard',
       asset_type: 'index',
       channel: service,
     },
   };
-
-  return data;
 };
 
 const ampAdPropsMobile = ({ service }) => ({
