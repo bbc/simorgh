@@ -425,7 +425,32 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c7eel0lmr4do"
     },
-    "summary": "",
+    "summary": {
+      "blocks": [
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": ""
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": ""
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        }
+      ]
+    },
     "timestamp": 1549894065147,
     "type": "cps"
   },
