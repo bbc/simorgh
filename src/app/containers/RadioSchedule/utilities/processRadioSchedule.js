@@ -97,7 +97,6 @@ export default (data, service, currentTime) => {
         brandTitle,
         summary: path(['episode', 'synopses', 'short'], program),
         duration: publishedTimeDuration || '',
-        durationLabel: 'Duration',
       };
     });
 
