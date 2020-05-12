@@ -112,6 +112,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint }) => {
     header,
     frequenciesPageUrl,
     frequenciesPageLabel,
+    durationLabel,
   } = radioScheduleConfig;
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
@@ -182,6 +183,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint }) => {
           dir={dir}
           liveLabel={liveLabel}
           nextLabel={nextLabel}
+          durationLabel={durationLabel}
         />
         {frequenciesPageUrl && (
           <RadioFrequencyLink
