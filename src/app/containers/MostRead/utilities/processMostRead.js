@@ -56,19 +56,19 @@ const mostReadItems = ({ data, numberOfItems }) => {
       const mostReadItemData = getMostReadItemData(records[i]);
       const { href, title } = mostReadItemData;
       if (href && title) {
+        console.log('INNER ---');
         items.push(mostReadItemData);
-      } else {
-        logger.info(
-          JSON.stringify(
-            {
-              event: MOST_READ_DATA_INCOMPLETE_WARNING,
-              message: 'Most read item is missing title or link data fields',
-            },
-            null,
-            2,
-          ),
-        );
       }
+      logger.info(
+        JSON.stringify(
+          {
+            event: MOST_READ_DATA_INCOMPLETE_WARNING,
+            message: 'Most read item is missing title or link data fields',
+          },
+          null,
+          2,
+        ),
+      );
 
       if (items.length === numberOfItems) {
         break;
