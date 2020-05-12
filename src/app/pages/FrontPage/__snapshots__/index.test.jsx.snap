@@ -28,7 +28,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                 role="main"
               >
                 <h1
-                  class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                  class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                   id="content"
                   tabindex="-1"
                 >
@@ -144,7 +144,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             data-e2e="index-alsos"
                           >
                             <h4
-                              class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                              class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                             >
                               Another thing we de for inside dis tori
                             </h4>
