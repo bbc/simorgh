@@ -89,7 +89,7 @@ exports[`AMP Live Radio Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=4&p=amharic.bbc_amharic_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:ares::ws_live:bbc_amharic_radio]&x2=[amp]&x3=[news-amharic]&x4=[am]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[ያድምጡ+-+BBC+News+አማርኛ]",
+    "pageview": "\${base}s=598343&s2=4&p=amharic.bbc_amharic_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:ares::ws_live:bbc_amharic_radio]&x2=[amp]&x3=[news-amharic]&x4=[am]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[ያድምጡ+-+BBC+News+አማርኛ]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,

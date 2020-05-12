@@ -89,7 +89,7 @@ exports[`AMP Front Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=5&p=arabic.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:3f0c7dec-d826-8578-e050-380a4e807810]&x2=[amp]&x3=[news-arabic]&x4=[ar]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[الرئيسية+-+BBC+News+عربي]&x11=[1970-01-18T02:13:01.429Z]&x12=[1970-01-19T02:08:48.876Z]",
+    "pageview": "\${base}s=598343&s2=5&p=arabic.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:3f0c7dec-d826-8578-e050-380a4e807810]&x2=[amp]&x3=[news-arabic]&x4=[ar]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[الرئيسية+-+BBC+News+عربي]&x11=[1970-01-18T02:13:01.429Z]&x12=[1970-01-19T02:08:48.876Z]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
