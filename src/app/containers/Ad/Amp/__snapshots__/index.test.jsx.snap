@@ -42,7 +42,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
   <body>
     <div>
       <div
-        amp-access="toggles.ads.enabled AND xIpAdvertiseCombined"
+        amp-access="toggles.ads.enabled"
         amp-access-hide="true"
       >
         <div

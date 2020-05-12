@@ -38,7 +38,6 @@ describe('ToggleContext with feature toggles', () => {
       enableFetchingTogglesValue: true,
       remoteToggleExpectation: shouldCallTogglesEndpoint,
       remoteAdToggleValue: true,
-      remoteAdvertiseCombinedValue: true,
       renderExpectation: shouldRenderAd,
     },
     {
@@ -47,7 +46,6 @@ describe('ToggleContext with feature toggles', () => {
       enableFetchingTogglesValue: true,
       remoteToggleExpectation: shouldCallTogglesEndpoint,
       remoteAdToggleValue: false,
-      remoteAdvertiseCombinedValue: true,
       renderExpectation: shouldNotRenderAd,
     },
     {
@@ -56,7 +54,6 @@ describe('ToggleContext with feature toggles', () => {
       enableFetchingTogglesValue: true,
       remoteToggleExpectation: shouldCallTogglesEndpoint,
       remoteAdToggleValue: false,
-      remoteAdvertiseCombinedValue: true,
       renderExpectation: shouldNotRenderAd,
     },
     {
@@ -65,27 +62,7 @@ describe('ToggleContext with feature toggles', () => {
       enableFetchingTogglesValue: true,
       remoteToggleExpectation: shouldCallTogglesEndpoint,
       remoteAdToggleValue: true,
-      remoteAdvertiseCombinedValue: true,
       renderExpectation: shouldRenderAd,
-    },
-    {
-      service: 'mundo',
-      localAdToggleValue: true,
-      enableFetchingTogglesValue: true,
-      remoteToggleExpectation: shouldCallTogglesEndpoint,
-      remoteAdToggleValue: true,
-      remoteAdvertiseCombinedValue: false,
-      renderExpectation: shouldNotRenderAd,
-    },
-    {
-      service: 'mundo',
-      localAdToggleValue: true,
-      enableFetchingTogglesValue: true,
-      remoteToggleExpectation: shouldCallTogglesEndpoint,
-      remoteAdToggleValue: true,
-      // Value is missing if it is undefined in the xIpAdvertiseCombined header
-      remoteAdvertiseCombinedValue: undefined,
-      renderExpectation: shouldNotRenderAd,
     },
     {
       service: 'mundo',
@@ -93,7 +70,6 @@ describe('ToggleContext with feature toggles', () => {
       enableFetchingTogglesValue: false,
       remoteToggleExpectation: shouldNotCallTogglesEndpoint,
       remoteAdToggleValue: null,
-      remoteAdvertiseCombinedValue: true,
       renderExpectation: shouldRenderAd,
     },
     {
@@ -102,8 +78,6 @@ describe('ToggleContext with feature toggles', () => {
       enableFetchingTogglesValue: false,
       remoteToggleExpectation: shouldNotCallTogglesEndpoint,
       remoteAdToggleValue: 'anything here, since value should not be fetched',
-      remoteAdvertiseCombinedValue:
-        'anything here, since value should not be fetched',
       renderExpectation: shouldNotRenderAd,
     },
     {
@@ -112,7 +86,6 @@ describe('ToggleContext with feature toggles', () => {
       enableFetchingTogglesValue: false,
       remoteToggleExpectation: shouldNotCallTogglesEndpoint, // service not in allowlist so not fetched
       remoteAdToggleValue: null,
-      remoteAdvertiseCombinedValue: null,
       renderExpectation: shouldRenderAd, // rendered since following local toggle
     },
     {
@@ -121,7 +94,6 @@ describe('ToggleContext with feature toggles', () => {
       enableFetchingTogglesValue: true,
       remoteToggleExpectation: shouldNotCallTogglesEndpoint, // service not in allowlist so not fetched
       remoteAdToggleValue: true,
-      remoteAdvertiseCombinedValue: true,
       renderExpectation: shouldNotRenderAd, // not rendered since following local toggle
     },
     {
@@ -130,7 +102,6 @@ describe('ToggleContext with feature toggles', () => {
       enableFetchingTogglesValue: true,
       remoteToggleExpectation: shouldNotCallTogglesEndpoint, // service not in allowlist so not fetched
       remoteAdToggleValue: true,
-      remoteAdvertiseCombinedValue: true,
       renderExpectation: shouldRenderAd, // rendered since following local toggle
     },
   ].forEach(
@@ -140,13 +111,12 @@ describe('ToggleContext with feature toggles', () => {
       remoteAdToggleValue,
       service,
       remoteToggleExpectation,
-      remoteAdvertiseCombinedValue,
       renderExpectation,
     }) => {
       describe(`given service is ${service}`, () => {
         describe(`given the local ads toggle is ${localAdToggleValue} and the fetching of toggles is ${
           enableFetchingTogglesValue
-            ? `true and the remote ads toggle value is ${remoteAdToggleValue} and advertiseCombined is ${remoteAdvertiseCombinedValue}`
+            ? `true and the remote ads toggle value is ${remoteAdToggleValue}`
             : 'false'
         }`, () => {
           const togglesUrl = getMockTogglesUrl(service);
