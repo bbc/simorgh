@@ -41,6 +41,9 @@ const logCodes = {
 
   // Block Types
   UNSUPPORTED_BLOCK_TYPE: 'unsupported_block_type',
+
+  // Most Read
+  INSUFFICIENT_DATA_TO_RENDER_ITEM: 'insufficient_data_to_render_item',
 };
 
 module.exports = logCodes;

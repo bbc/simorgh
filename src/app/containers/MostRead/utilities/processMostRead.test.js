@@ -101,6 +101,32 @@ const expectedKyrgyzData = [
   },
 ];
 
+const insuffcientData = {
+  locators: {
+    canonicalUrl: 'https://www.bbc.com/news/articles/cn060pe01e5o',
+  },
+  timestamp: 1586266369329,
+  headlines: {
+    promoHeadline: {
+      blocks: [
+        {
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                type: 'paragraph',
+                model: {
+                  text: '',
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+};
+
 describe('filterMostRead', () => {
   [
     {
@@ -137,12 +163,16 @@ describe('filterMostRead', () => {
       data: { lastRecordTimeStamp: '2100-11-06T16:37:00Z' },
       expectedReturn: [],
     },
+    {
+      description:
+        'should log an insufficent data message when title is missing',
+      data: insuffcientData,
+      numberOfItems: 1,
+      expectedReturn: null,
+    },
   ].forEach(({ description, data, numberOfItems, expectedReturn }) => {
     it(description, () => {
       expect(processMostRead({ data, numberOfItems })).toEqual(expectedReturn);
     });
   });
 });
-
-// // should return headline for both CPS and Optimo
-// describe('')

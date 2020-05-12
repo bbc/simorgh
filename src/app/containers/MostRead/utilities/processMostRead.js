@@ -1,5 +1,9 @@
 import pathOr from 'ramda/src/pathOr';
+import nodeLogger from '#lib/logger.node';
 import { mostReadRecordIsFresh } from '.';
+import { INSUFFICIENT_DATA_TO_RENDER_ITEM } from '#lib/logger.const';
+
+const logger = nodeLogger(__filename);
 
 const getMostReadItemData = record => {
   const cpsHeadline = pathOr(
@@ -53,7 +57,19 @@ const mostReadItems = ({ data, numberOfItems }) => {
       const { href, title } = mostReadItemData;
       if (href && title) {
         items.push(mostReadItemData);
+      } else {
+        logger.info(
+          JSON.stringify(
+            {
+              event: INSUFFICIENT_DATA_TO_RENDER_ITEM,
+              message: 'Most read item is missing title or link',
+            },
+            null,
+            2,
+          ),
+        );
       }
+
       if (items.length === numberOfItems) {
         break;
       }
