@@ -5,6 +5,7 @@ exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
   margin: 0 auto;
   width: 100%;
   text-align: center;
+  background-color: #F6F6F6;
 }
 
 @media (min-width:37.5rem) {

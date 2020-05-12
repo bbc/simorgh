@@ -32,15 +32,13 @@ const StyledAd = styled.div`
   }
 `;
 
-const constructAdJsonData = ({ service }) => {
-  return {
-    targeting: {
-      slot: 'leaderboard',
-      asset_type: 'index',
-      channel: service,
-    },
-  };
-};
+const constructAdJsonData = ({ service }) => ({
+  targeting: {
+    slot: 'leaderboard',
+    asset_type: 'index',
+    channel: service,
+  },
+});
 
 const ampAdPropsMobile = ({ service }) => ({
   'data-block-on-consent': 'default',
