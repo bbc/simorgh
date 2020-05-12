@@ -1,4 +1,4 @@
-import { number, shape, string, arrayOf, bool } from 'prop-types';
+import { number, shape, string, arrayOf, bool, oneOfType } from 'prop-types';
 
 export const mediaPromoPropTypes = {
   name: string.isRequired,
@@ -7,6 +7,28 @@ export const mediaPromoPropTypes = {
   contentType: string,
   id: string,
   type: string,
+};
+
+export const optimoPromoSummaryPropTypes = {
+  blocks: arrayOf(
+    shape({
+      model: shape({
+        blocks: arrayOf(
+          shape({
+            model: shape({
+              blocks: arrayOf(
+                shape({
+                  model: shape({
+                    text: string,
+                  }),
+                }),
+              ),
+            }),
+          }),
+        ),
+      }),
+    }),
+  ),
 };
 
 export const optimoPromoPropTypes = {
@@ -18,7 +40,7 @@ export const optimoPromoPropTypes = {
   locators: shape({
     optimoUrn: string.isRequired,
   }),
-  summary: string,
+  summary: oneOfType([shape(optimoPromoSummaryPropTypes), string]),
   timestamp: number,
 };
 
