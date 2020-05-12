@@ -103,6 +103,7 @@ describe('getThingAttributes', () => {
       'x6=[getReferrer]',
       'x9=[sanitise]',
       'x18=[isLocServeCookieSet]',
+      'ref=getReferrer',
     ];
 
     expect(queryParamsArray).toHaveLength(expectedValues.length);
