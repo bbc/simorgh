@@ -120,35 +120,6 @@ describe('convertInclude', () => {
     );
   });
 
-  it('should convert an include block to an idt1 block with no query params in href', async () => {
-    fetch.mockResponse(() => Promise.resolve(idt1Markup));
-    const input = {
-      required: false,
-      tile: 'A quiz!',
-      href: 'indepthtoolkit?foo=bar',
-      platform: 'highweb',
-      type: 'include',
-    };
-    const expected = {
-      type: 'include',
-      model: {
-        href: 'indepthtoolkit',
-        required: false,
-        tile: 'A quiz!',
-        platform: 'highweb',
-        type: 'idt1',
-        html: idt1Markup,
-      },
-    };
-    expect(await convertInclude(input)).toEqual(expected);
-    expect(fetch).toHaveBeenCalledWith(
-      'https://foobar.com/includes/indepthtoolkit',
-      {
-        timeout: 3000,
-      },
-    );
-  });
-
   it('should convert an include block to an idt2 block with no / in href', async () => {
     fetch.mockResponse(() => Promise.resolve(idt2Markup));
     const input = {
@@ -173,6 +144,36 @@ describe('convertInclude', () => {
     expect(fetch).toHaveBeenCalled();
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/idt2/html',
+      {
+        timeout: 3000,
+      },
+    );
+  });
+
+  it('should fetch and convert an include block to a vj block with no / in href', async () => {
+    fetch.mockResponse(() => Promise.resolve(vjMarkup));
+    const input = {
+      required: false,
+      tile: 'Include from VisJo',
+      href: 'news/special/111-222-333-444-555',
+      platform: 'highweb',
+      type: 'include',
+    };
+    const expected = {
+      type: 'include',
+      model: {
+        href: 'news/special/111-222-333-444-555',
+        required: false,
+        tile: 'Include from VisJo',
+        platform: 'highweb',
+        type: 'vj',
+        html: vjMarkup,
+      },
+    };
+    expect(await convertInclude(input)).toEqual(expected);
+    expect(fetch).toHaveBeenCalled();
+    expect(fetch).toHaveBeenCalledWith(
+      'https://foobar.com/includes/news/special/111-222-333-444-555',
       {
         timeout: 3000,
       },

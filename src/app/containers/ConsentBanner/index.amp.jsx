@@ -15,6 +15,17 @@ const ampConsentData = {
       promptUI: promptId,
     },
   },
+  policy: {
+    default: {
+      waitFor: {
+        'user-consent': [],
+      },
+      timeout: {
+        seconds: 0,
+        fallbackAction: 'reject',
+      },
+    },
+  },
 };
 
 const jsonInlinedScript = data => (
