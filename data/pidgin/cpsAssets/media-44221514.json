@@ -10,10 +10,10 @@
     "type": "MAP",
     "createdBy": "pidgin-v6",
     "language": "pcm",
-    "lastUpdated": 1589223543176,
+    "lastUpdated": 1589273389232,
     "firstPublished": 1527054884000,
-    "lastPublished": 1589223530000,
-    "timestamp": 1589223530000,
+    "lastPublished": 1589273373000,
+    "timestamp": 1589273373000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -147,7 +147,7 @@
   "content": {
     "blocks": [
       {
-        "id": "p08cwl8l",
+        "id": "p08cxl7l",
         "subType": "clip",
         "format": "audio",
         "title": "BBC Pidgin Minute",
@@ -155,13 +155,13 @@
           "short": "BBC Pidgin Minute",
           "medium": "All di local and world tori wey you suppose know in 60 seconds!"
         },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08cwllj.jpg",
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08cxlk2.jpg",
         "embedding": false,
         "advertising": false,
         "caption": "BBC Pidgin Minute",
         "versions": [
           {
-            "versionId": "p08cwl8n",
+            "versionId": "p08cxl7r",
             "types": ["Original"],
             "duration": 61,
             "durationISO8601": "PT1M1S",
@@ -171,15 +171,15 @@
               "nonUk": true,
               "world": false
             },
-            "availableUntil": 1589307872000,
-            "availableFrom": 1589221472000
+            "availableUntil": 1589359188000,
+            "availableFrom": 1589272788000
           }
         ],
         "imageCopyright": "BBC",
         "type": "media"
       },
       {
-        "text": "All di local and world tori wey you suppose know in 60 seconds!",
+        "text": "All di local and world tori wey you suppose know in 60 seconds!g",
         "markupType": "plain_text",
         "type": "paragraph"
       }
@@ -197,7 +197,7 @@
       "assetId": "44221514"
     },
     "summary": "All di local and world tori wey you suppose know in 60 seconds!",
-    "timestamp": 1589223530000,
+    "timestamp": 1589273373000,
     "language": "pcm",
     "passport": {
       "category": {
@@ -225,7 +225,7 @@
       "taggings": []
     },
     "media": {
-      "id": "p08cwl8l",
+      "id": "p08cxl7l",
       "subType": "clip",
       "format": "audio",
       "title": "BBC Pidgin Minute",
@@ -233,13 +233,13 @@
         "short": "BBC Pidgin Minute",
         "medium": "All di local and world tori wey you suppose know in 60 seconds!"
       },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08cwllj.jpg",
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08cxlk2.jpg",
       "embedding": false,
       "advertising": false,
       "caption": "BBC Pidgin Minute",
       "versions": [
         {
-          "versionId": "p08cwl8n",
+          "versionId": "p08cxl7r",
           "types": ["Original"],
           "duration": 61,
           "durationISO8601": "PT1M1S",
@@ -249,8 +249,8 @@
             "nonUk": true,
             "world": false
           },
-          "availableUntil": 1589307872000,
-          "availableFrom": 1589221472000
+          "availableUntil": 1589359188000,
+          "availableFrom": 1589272788000
         }
       ],
       "imageCopyright": "BBC",

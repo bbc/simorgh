@@ -3,6 +3,8 @@ import { render, cleanup } from '@testing-library/react';
 import deepClone from 'ramda/src/clone';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import '@testing-library/jest-dom/extend-expect';
+import loggerMock from '#testHelpers/loggerMock';
+import { MEDIA_MISSING } from '#lib/logger.const';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
@@ -17,6 +19,8 @@ import {
   podcastLinkItem,
   itemWithoutImage,
   indexAlsosItem,
+  mapWithMediaError,
+  mapWithoutMediaError,
 } from './helpers/fixtureData';
 import StoryPromoContainer from '.';
 
@@ -366,6 +370,76 @@ describe('StoryPromo Container', () => {
         const { container } = render(<WrappedStoryPromo item={liveItem} />);
         const time = container.querySelector('time');
         expect(time).toEqual(null);
+      });
+    });
+
+    describe('Recommendation Promo', () => {
+      it('should render headline as a div instead of an h3', () => {
+        const { container } = render(
+          <WrappedStoryPromo
+            platform="canonical"
+            item={fixtures.standard}
+            isRecommendation
+          />,
+        );
+
+        expect(container.querySelector('h3')).toBeNull();
+        expect(container.querySelectorAll('div a')[0].innerHTML).toEqual(
+          cpsItem.headlines.headline,
+        );
+      });
+    });
+  });
+
+  describe('given there is a CPS MAP block with a media error', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+
+    [
+      {
+        item: mapWithMediaError,
+        platform: 'amp',
+      },
+      {
+        item: mapWithMediaError,
+        platform: 'canonical',
+      },
+    ].forEach(({ item, platform }) => {
+      it(`when we render for ${platform}, it should log a warning`, () => {
+        render(<WrappedStoryPromo item={item} platform={platform} />);
+        expect(loggerMock.warn).toHaveBeenCalledWith(MEDIA_MISSING, {
+          url: '/pashto/front_page',
+          mediaStatuscode: 404,
+          mediaBlock: mapWithMediaError.media,
+        });
+      });
+    });
+  });
+
+  describe('given there is a CPS MAP block without a media error', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+    [
+      {
+        item: mapWithoutMediaError,
+        platform: 'amp',
+      },
+      {
+        item: mapWithoutMediaError,
+        platform: 'canonical',
+      },
+    ].forEach(({ item, platform }) => {
+      it(`when we render for ${platform}, it should *not* log a warning`, () => {
+        render(<WrappedStoryPromo item={item} platform={platform} />);
+        expect(loggerMock.warn).not.toHaveBeenCalled();
       });
     });
   });
