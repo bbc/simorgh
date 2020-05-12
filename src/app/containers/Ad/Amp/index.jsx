@@ -79,7 +79,7 @@ const AMP_ACCESS_DATA = endpoint => ({
 });
 
 export const AMP_ACCESS_FETCH = service => {
-  const togglesEndpoint = `${process.env.SIMORGH_TOGGLES_URL}/toggles?application=simorgh&service=${service}&geoiplookup=true`;
+  const togglesEndpoint = `${process.env.SIMORGH_TOGGLES_URL}/toggles?application=simorgh&service=${service}`;
 
   return (
     <script id="amp-access" type="application/json">
@@ -98,7 +98,7 @@ const AmpAd = ({ service }) => {
         {AMP_ACCESS_FETCH(service)}
       </Helmet>
       <div
-        amp-access="toggles.ads.enabled AND geoIp.advertiseCombined"
+        amp-access="toggles.ads.enabled AND xIpAdvertiseCombined"
         amp-access-hide="true"
       >
         <StyledAd>

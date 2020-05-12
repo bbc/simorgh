@@ -16,16 +16,11 @@ jest.mock('../../lib/config/toggles/index.js', () => ({
     ads: {
       enabled: true,
     },
-    geoIp: {
-      ukCombined: true,
-      advertiseCombined: true,
-      countryCode: 'gb',
-    },
   },
 }));
 
 const togglesUrl =
-  'https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=mundo&__amp_source_origin=https://www.test.bbc.com&geoiplookup=true';
+  'https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=mundo&__amp_source_origin=https://www.test.bbc.com';
 
 beforeEach(() => {
   process.env.SIMORGH_APP_ENV = 'test';
@@ -43,11 +38,6 @@ describe('useToggle custom hook', () => {
             enabled: true,
             value: '',
           },
-        },
-        geoIp: {
-          ukCombined: true,
-          advertiseCombined: true,
-          countryCode: 'gb',
         },
       });
       let result;
@@ -75,11 +65,6 @@ describe('useToggle custom hook', () => {
           ads: {
             enabled: false,
             value: '',
-          },
-          geoIp: {
-            ukCombined: true,
-            advertiseCombined: true,
-            countryCode: 'gb',
           },
         },
       });
@@ -109,11 +94,6 @@ describe('useToggle custom hook', () => {
             enabled: false,
             value: '',
           },
-        },
-        geoIp: {
-          ukCombined: true,
-          advertiseCombined: true,
-          countryCode: 'gb',
         },
       });
       let result;

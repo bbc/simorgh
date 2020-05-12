@@ -23,7 +23,7 @@ const shouldNotRenderAd = container =>
   expect(queryByText(container, 'Dummy Ad Component')).not.toBeInTheDocument();
 
 const getMockTogglesUrl = service =>
-  `https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=${service}&__amp_source_origin=https://www.test.bbc.com&geoiplookup=true`;
+  `https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=${service}&__amp_source_origin=https://www.test.bbc.com`;
 
 describe('ToggleContext with feature toggles', () => {
   beforeAll(() => {
@@ -83,7 +83,7 @@ describe('ToggleContext with feature toggles', () => {
       enableFetchingTogglesValue: true,
       remoteToggleExpectation: shouldCallTogglesEndpoint,
       remoteAdToggleValue: true,
-      // Value is missing if there is a geoIp error on the endpoint
+      // Value is missing if it is undefined in the xIpAdvertiseCombined header
       remoteAdvertiseCombinedValue: undefined,
       renderExpectation: shouldNotRenderAd,
     },
@@ -160,11 +160,6 @@ describe('ToggleContext with feature toggles', () => {
                   enabled: remoteAdToggleValue,
                   value: '',
                 },
-              },
-              geoIp: {
-                ukCombined: true,
-                advertiseCombined: remoteAdvertiseCombinedValue,
-                countryCode: 'gb',
               },
             });
           });
@@ -244,35 +239,6 @@ describe('ToggleContext with feature toggles', () => {
 
         shouldNotRenderAd(container);
       });
-    });
-
-    it('should not render test component if geoIp has an error', async () => {
-      fetchMock.mock(togglesUrl, {
-        toggles: {
-          ads: {
-            enabled: true,
-            value: '',
-          },
-        },
-        geoIp: {
-          status: 'error',
-          message: 'Error performing lookup',
-        },
-      });
-
-      let container;
-      await act(async () => {
-        container = await render(
-          <ToggleContextProvider
-            service="news"
-            origin="https://www.test.bbc.com"
-          >
-            <TestComponent toggle="ads">Dummy Ad Component</TestComponent>
-          </ToggleContextProvider>,
-        ).container;
-      });
-
-      shouldNotRenderAd(container);
     });
   });
 });
