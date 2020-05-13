@@ -260,8 +260,6 @@ server
           routes,
           urlPath,
         );
-        console.log('aslkdaslkjdaskld', route);
-        console.log('aslkdaslkjdaskld2', routes);
         const data = await route.getInitialData({
           path: url,
           service,

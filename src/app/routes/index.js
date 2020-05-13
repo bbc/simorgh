@@ -17,5 +17,6 @@ export default [
   onDemandRadio,
   idx,
   error,
-  errorNoRouteMatch,
+  errorNoRouteMatch, // When none of the above routes match, it will fall to this.
+  // Please ensure that when adding new pages, it is above this check in the array.
 ];

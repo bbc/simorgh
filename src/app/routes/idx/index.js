@@ -5,6 +5,6 @@ export default {
   path: idxPagePath,
   exact: true,
   component: IDXPage,
-  getInitialData: () => Promise.resolve({ status: 200 }),
+  getInitialData: () => Promise.resolve({ status: 200, pageData: {} }),
   pageType: 'idx',
 };
