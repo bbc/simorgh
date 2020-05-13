@@ -6,9 +6,8 @@ import ATIAnalytics from '../../containers/ATIAnalytics';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import HeadingBlock from '#containers/RadioPageBlocks/Blocks/Heading';
+import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
-import DatestampBlock from '#containers/RadioPageBlocks/Blocks/Datestamp';
 import AudioPlayerBlock from '#containers/RadioPageBlocks/Blocks/AudioPlayer';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
@@ -113,8 +112,12 @@ const OnDemandRadioPage = ({ pageData }) => {
           }}
           margins={{ group0: true, group1: true, group2: true, group3: true }}
         >
-          <HeadingBlock idAttr={idAttr} text={brandTitle} />
-          <DatestampBlock timestamp={releaseDateTimeStamp} />
+          <OnDemandHeadingBlock
+            idAttr={idAttr}
+            brandTitle={brandTitle}
+            releaseDateTimeStamp={releaseDateTimeStamp}
+          />
+
           <ParagraphBlock text={summary} />
           {renderEpisode(
             masterBrand,
