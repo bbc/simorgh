@@ -1,4 +1,4 @@
-import { getPlaceholderImageUrl } from '.';
+import getPlaceholderImageUrl from '.';
 
 describe('generatePlaceholderImageUrl', () => {
   test('should generate correct image url when url provided', () => {

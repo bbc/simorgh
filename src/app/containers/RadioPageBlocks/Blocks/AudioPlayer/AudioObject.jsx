@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { string, number } from 'prop-types';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 
-const AudioObjectStructuredData = ({
+const AudioObject = ({
   promoBrandTitle,
   shortSynopsis,
   durationISO8601,
@@ -29,7 +29,7 @@ const AudioObjectStructuredData = ({
   );
 };
 
-AudioObjectStructuredData.propTypes = {
+AudioObject.propTypes = {
   promoBrandTitle: string,
   shortSynopsis: string,
   durationISO8601: string,
@@ -38,7 +38,7 @@ AudioObjectStructuredData.propTypes = {
   releaseDateTimeStamp: number,
 };
 
-AudioObjectStructuredData.defaultProps = {
+AudioObject.defaultProps = {
   promoBrandTitle: '',
   shortSynopsis: '',
   durationISO8601: '',
@@ -47,4 +47,4 @@ AudioObjectStructuredData.defaultProps = {
   releaseDateTimeStamp: null,
 };
 
-export default AudioObjectStructuredData;
+export default AudioObject;

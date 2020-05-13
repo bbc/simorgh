@@ -3,10 +3,9 @@ import path from 'ramda/src/path';
 
 import nodeLogger from '#lib/logger.node';
 import { MEDIA_MISSING_FIELD } from '#lib/logger.const';
-import {
+import getPlaceholderImageUrl, {
   FALLBACK_PLACEHOLDER_IMAGE_URL,
-  getPlaceholderImageUrl,
-} from '../../../../../utils/imageUrl';
+} from '../../../../../utils/getPlaceholderImageUrl';
 
 const logger = nodeLogger(__filename);
 
