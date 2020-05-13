@@ -10,9 +10,6 @@ const getDuration = jsonData => jsonData.promo.media.versions[0].duration;
 const shouldAllowAdsForAssetType = jsonData =>
   !jsonData.metadata.blockTypes.includes('legacyMedia');
 
-// const isLiveStream = jsonData =>
-//   jsonData.;
-
 const shouldAllowAdsForVideoDuration = jsonData => {
   if (jsonData.promo.media.live) {
     return true;
