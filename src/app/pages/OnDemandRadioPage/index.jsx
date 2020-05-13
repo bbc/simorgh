@@ -6,9 +6,8 @@ import ATIAnalytics from '../../containers/ATIAnalytics';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import HeadingBlock from '#containers/RadioPageBlocks/Blocks/Heading';
+import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
-import DatestampBlock from '#containers/RadioPageBlocks/Blocks/Datestamp';
 import AudioPlayerBlock from '#containers/RadioPageBlocks/Blocks/AudioPlayer';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
@@ -30,19 +29,35 @@ const StyledGelPageGrid = styled(GelPageGrid)`
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
 `;
 
-const renderEpisode = (
+/* eslint-disable react/prop-types */
+const renderEpisode = ({
   masterBrand,
   episodeId,
   episodeAvailableFrom,
   episodeAvailableUntil,
-) => {
+  promoBrandTitle,
+  shortSynopsis,
+  imageUrl,
+  durationISO8601,
+  releaseDateTimeStamp,
+}) => {
   const episodeAvailability = getEpisodeAvailability(
     episodeAvailableFrom,
     episodeAvailableUntil,
   );
   switch (episodeAvailability) {
     case EPISODE_IS_AVAILABLE:
-      return <AudioPlayerBlock externalId={masterBrand} id={episodeId} />;
+      return (
+        <AudioPlayerBlock
+          externalId={masterBrand}
+          id={episodeId}
+          promoBrandTitle={promoBrandTitle}
+          shortSynopsis={shortSynopsis}
+          imageUrl={imageUrl}
+          durationISO8601={durationISO8601}
+          releaseDateTimeStamp={releaseDateTimeStamp}
+        />
+      );
     case EPISODE_IS_EXPIRED:
       return <AudioPlayerBlock isExpired />;
     case EPISODE_IS_NOT_YET_AVAILABLE:
@@ -50,6 +65,7 @@ const renderEpisode = (
       return null;
   }
 };
+/* eslint-enable react/prop-types */
 
 const OnDemandRadioPage = ({ pageData }) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
@@ -64,6 +80,9 @@ const OnDemandRadioPage = ({ pageData }) => {
     episodeAvailableFrom,
     episodeAvailableUntil,
     releaseDateTimeStamp,
+    promoBrandTitle,
+    durationISO8601,
+    imageUrl,
   } = pageData;
   const { dir } = useContext(ServiceContext);
 
@@ -113,15 +132,24 @@ const OnDemandRadioPage = ({ pageData }) => {
           }}
           margins={{ group0: true, group1: true, group2: true, group3: true }}
         >
-          <HeadingBlock idAttr={idAttr} text={brandTitle} />
-          <DatestampBlock timestamp={releaseDateTimeStamp} />
+          <OnDemandHeadingBlock
+            idAttr={idAttr}
+            brandTitle={brandTitle}
+            releaseDateTimeStamp={releaseDateTimeStamp}
+          />
+
           <ParagraphBlock text={summary} />
-          {renderEpisode(
+          {renderEpisode({
             masterBrand,
             episodeId,
             episodeAvailableFrom,
             episodeAvailableUntil,
-          )}
+            promoBrandTitle,
+            shortSynopsis,
+            imageUrl,
+            durationISO8601,
+            releaseDateTimeStamp,
+          })}
         </Grid>
       </StyledGelPageGrid>
     </>
