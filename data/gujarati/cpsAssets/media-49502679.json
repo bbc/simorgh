@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/gujarati/media-49502679",
       "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-49502679",
-      "curie": "http://www.bbc.co.uk/asset/b914f819-3a6c-324a-b3b0-f7d2d2613b9c"
+      "curie": "http://www.bbc.co.uk/asset/b914f819-3a6c-324a-b3b0-f7d2d2613b9c",
+      "assetId": "49502679"
     },
     "type": "MAP",
     "createdBy": "gujarati-v6",
     "language": "gu",
-    "lastUpdated": 1567086073340,
-    "firstPublished": 1567079155,
-    "lastPublished": 1567086065,
+    "lastUpdated": 1588785566621,
+    "firstPublished": 1567079155000,
+    "lastPublished": 1567079155000,
+    "timestamp": 1567079155000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -44,33 +46,25 @@
           "campaignId": "5a988e3139461b000e9dabf9",
           "campaignName": "WS - Divert me"
         }
-      ]
+      ],
+      "taggings": []
     },
     "tags": {
       "about": [
         {
-          "thingLabel": "Nepal",
-          "thingUri": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
-          "thingId": "1de7eccb-d633-4e93-97c2-1771b7841345",
-          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
-          "thingSameAs": ["http://sws.geonames.org/1282988/"],
-          "topicName": "નેપાળ",
-          "topicId": "c404vn5789qt",
-          "curationList": [
-            {
-              "curationId": "32bcce5b-99ed-48a0-99ed-ac2fe5cacefc",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "Children",
+          "thingLabel": "બાળક",
           "thingUri": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id",
           "thingId": "992e096e-28e6-412d-b6a1-652f78be63c7",
-          "thingType": ["Theme", "Thing"],
+          "thingType": [
+            "core:Theme",
+            "tagging:TagConcept",
+            "core:Thing",
+            "tagging:AmbiguousTerm",
+            "tagging:Genre"
+          ],
           "thingSameAs": [
-            "http://dbpedia.org/resource/Child",
-            "http://www.wikidata.org/entity/Q7569"
+            "http://www.wikidata.org/entity/Q7569",
+            "http://dbpedia.org/resource/Child"
           ],
           "topicName": "બાળક",
           "topicId": "cpzd4k9j2g9t",
@@ -82,13 +76,28 @@
           ]
         },
         {
-          "thingLabel": "Women",
+          "thingLabel": "નેપાળ",
+          "thingUri": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+          "thingId": "1de7eccb-d633-4e93-97c2-1771b7841345",
+          "thingType": ["core:Place", "core:Thing", "tagging:TagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/1282988/"],
+          "topicName": "નેપાળ",
+          "topicId": "c404vn5789qt",
+          "curationList": [
+            {
+              "curationId": "32bcce5b-99ed-48a0-99ed-ac2fe5cacefc",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "મહિલા",
           "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
           "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
-          "thingType": ["Theme", "Thing"],
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
           "thingSameAs": [
-            "http://dbpedia.org/resource/Woman",
-            "http://www.wikidata.org/entity/Q467"
+            "http://www.wikidata.org/entity/Q467",
+            "http://dbpedia.org/resource/Woman"
           ],
           "topicName": "મહિલા",
           "topicId": "c7zp5121jg8t",
@@ -100,10 +109,10 @@
           ]
         },
         {
-          "thingLabel": "Women's health",
+          "thingLabel": "મહિલા આરોગ્ય",
           "thingUri": "http://www.bbc.co.uk/things/faa8885f-9e69-4c29-a8a5-516d508075dc#id",
           "thingId": "faa8885f-9e69-4c29-a8a5-516d508075dc",
-          "thingType": ["Theme", "Thing"],
+          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
           "thingSameAs": ["http://www.wikidata.org/entity/Q8031191"],
           "topicName": "મહિલા આરોગ્ય",
           "topicId": "c1gdq29gx40t",
@@ -116,7 +125,7 @@
         }
       ]
     },
-    "version": "v1.0.10",
+    "version": "v1.2.1",
     "blockTypes": ["media", "paragraph"],
     "includeComments": false
   },
@@ -145,9 +154,10 @@
             "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
+              "nonUk": true,
+              "world": false
             },
-            "availableFrom": 1567011153
+            "availableFrom": 1567011153000
           }
         ],
         "imageCopyright": "BBC",
@@ -189,10 +199,12 @@
     "locators": {
       "assetUri": "/gujarati/media-49502679",
       "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-49502679",
-      "curie": "http://www.bbc.co.uk/asset/b914f819-3a6c-324a-b3b0-f7d2d2613b9c"
+      "curie": "http://www.bbc.co.uk/asset/b914f819-3a6c-324a-b3b0-f7d2d2613b9c",
+      "assetId": "49502679"
     },
     "summary": "માતાનાં દૂધથી વંચિત બાળકો માટે 'દેવદૂત' સમાન બની પાંચ મહિલાઓ.",
-    "timestamp": 1567086073340,
+    "timestamp": 1567079155000,
+    "language": "gu",
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -207,7 +219,8 @@
           "campaignId": "5a988e3139461b000e9dabf9",
           "campaignName": "WS - Divert me"
         }
-      ]
+      ],
+      "taggings": []
     },
     "media": {
       "id": "p07ltlm1",
@@ -230,11 +243,8 @@
           "duration": 140,
           "durationISO8601": "PT2M20S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          },
-          "availableFrom": 1567011153
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1567011153000
         }
       ],
       "imageCopyright": "BBC",
