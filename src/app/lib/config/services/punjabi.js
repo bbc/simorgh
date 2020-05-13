@@ -144,11 +144,30 @@ export const service = {
         video: 'ਵੀਡੀਓ',
         listen: 'ਸੁਣੋ',
         watch: 'ਦੇਖੋ',
-        liveLabel: 'ਸਿੱਧਾ ਪ੍ਰਸਾਰਣ',
+        liveLabel: 'LIVE',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Video caption, ',
+          text: 'Warning: Third party content may contain adverts',
+        },
+        fallback: {
+          text: 'Content is not available',
+          linkText: 'View content on %provider_name%',
+          linkTextSuffixVisuallyHidden: ', external',
+          warningText: 'ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ ਲਈ ਬੀਬੀਸੀ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
+      topStoriesTitle: 'ਤਾਜ਼ਾ ਘਟਨਾਕ੍ਰਮ',
+      featuresAnalysisTitle: 'Features',
     },
     brandSVG,
     mostRead: {
@@ -160,10 +179,17 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: false,
     },
+    recommendations: {
+      hasStoryRecommendations: false,
+    },
     navigation: [
       {
         title: 'ਖ਼ਬਰਾਂ',
         url: '/punjabi',
+      },
+      {
+        title: 'ਕੋਰੋਨਾਵਾਇਰਸ',
+        url: '/punjabi/india-51764906',
       },
       {
         title: 'ਵੀਡੀਓ',
@@ -180,10 +206,6 @@ export const service = {
       {
         title: 'ਕੌਮਾਂਤਰੀ',
         url: '/punjabi/international',
-      },
-      {
-        title: '#ISWOTY',
-        url: '/punjabi/resources/idt-681afed0-03f5-4d5f-a640-3011a722d1c8',
       },
     ],
     footer: {

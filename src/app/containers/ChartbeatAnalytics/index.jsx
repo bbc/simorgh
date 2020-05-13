@@ -5,10 +5,15 @@ import { RequestContext } from '../../contexts/RequestContext';
 import { pageDataPropType } from '../../models/propTypes/data';
 import AmpChartbeatBeacon from './amp';
 import { getConfig } from './utils';
-import useToggle from '../Toggle/useToggle';
+import useToggle from '#hooks/useToggle';
 
 const ChartbeatAnalytics = ({ data }) => {
-  const { service, brandName, chartbeatDomain } = useContext(ServiceContext);
+  const {
+    service,
+    brandName,
+    chartbeatDomain,
+    mostRead: { header: mostReadTitle },
+  } = useContext(ServiceContext);
   const { sendCanonicalChartbeatBeacon } = useContext(UserContext);
   const { enabled } = useToggle('chartbeatAnalytics');
   const { env, isAmp, platform, pageType, previousPath, origin } = useContext(
@@ -28,6 +33,7 @@ const ChartbeatAnalytics = ({ data }) => {
     service,
     origin,
     previousPath,
+    mostReadTitle,
   };
 
   const chartbeatConfig = getConfig(configDependencies);

@@ -111,7 +111,7 @@ export const getHref = platform => {
 
   if (onClient() && window.location.href) {
     const { href } = window.location;
-    return href.replace('#', '%23');
+    return encodeURIComponent(href);
   }
 
   return null;
@@ -123,7 +123,10 @@ export const getReferrer = (platform, origin, previousPath) => {
   }
 
   if (onClient() && (document.referrer || previousPath)) {
-    return previousPath ? `${origin}${previousPath}` : document.referrer;
+    const referrer = previousPath
+      ? `${origin}${previousPath}`
+      : document.referrer;
+    return encodeURIComponent(referrer);
   }
 
   return null;

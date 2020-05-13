@@ -21,7 +21,7 @@
     "analyticsLabels": { "cps_asset_type": "map" },
     "tags": {},
     "version": "v1.0.0",
-    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "blockTypes": ["legacyMedia", "paragraph"],
     "includeComments": false
   },
   "content": {
@@ -83,8 +83,18 @@
     "type": "cps"
   },
   "relatedContent": {
-    "section": { "subType": "index", "name": "Medianuai", "uri": "/swahili/medianuai", "type": "simple" },
-    "site": { "subType": "site", "name": "BBCSwahili.com", "uri": "/swahili", "type": "simple" },
+    "section": {
+      "subType": "index",
+      "name": "Medianuai",
+      "uri": "/swahili/medianuai",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBCSwahili.com",
+      "uri": "/swahili",
+      "type": "simple"
+    },
     "groups": []
   }
 }

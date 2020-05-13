@@ -28,11 +28,11 @@ export const service = {
     defaultImageAltText: 'BBC News پښتو',
     dir: 'rtl',
     externalLinkText: '، بهرنی',
-    imageCaptionOffscreenText: '، د عکس تشریح',
-    videoCaptionOffscreenText: '، د ویډیو تشریح',
-    audioCaptionOffscreenText: '، د غږ تشریح',
-    defaultCaptionOffscreenText: '، تشریح',
-    imageCopyrightOffscreenText: '، د عکس سرچینه',
+    imageCaptionOffscreenText: 'د عکس تشریح، ',
+    videoCaptionOffscreenText: 'د ویډیو تشریح، ',
+    audioCaptionOffscreenText: 'د غږ تشریح، ',
+    defaultCaptionOffscreenText: 'تشریح، ',
+    imageCopyrightOffscreenText: 'د عکس سرچینه، ',
     locale: 'ps',
     datetimeLocale: 'ps',
     service: 'pashto',
@@ -54,16 +54,16 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'See all',
+      seeAll: 'ټول وګورئ',
       home: 'کور پاڼه',
       currentPage: 'اوسنۍ پاڼه',
       skipLinkText: 'مطلب ته ورشئ',
       relatedContent: 'اسی بارے میں',
       navMenuText: 'برخې',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'میډیا پلیئر',
+        audioPlayer: 'اډیو پلیئر',
+        videoPlayer: 'ویډیو پلیئر',
       },
       error: {
         404: {
@@ -76,8 +76,8 @@ export const service = {
             'دا پاڼه په بي بي سي بار کې ولټوئ',
           ],
           callToActionFirst: 'بله لاره دا ده چې د ',
-          callToActionLinkText: 'بي بي سي خبرونو پښتو پاڼې ته ورشئ ',
-          callToActionLast: '',
+          callToActionLinkText: 'BBC News پښتو پاڼې',
+          callToActionLast: ' ته ورشئ',
           callToActionLinkUrl: 'https://www.bbc.com/pashto',
         },
         500: {
@@ -146,7 +146,7 @@ export const service = {
         noJs: 'په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.',
         contentExpired: 'دغه فایل نور د لاسرسي وړ نه دی.',
         audio: 'غږ',
-        photogallery: 'د عکسونو البوم',
+        photogallery: 'دعکسونو ګالري',
         video: 'ویډیو',
         bbc_pashto_radio: {
           title: 'بي بي سي افغانستان (پښتو خپرونه)',
@@ -158,13 +158,33 @@ export const service = {
           subtitle:
             'د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.',
         },
-        listen: 'Listen',
+        listen: 'واورئ',
         watch: 'و یې ګورئ',
         liveLabel: 'ژوندۍ',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'بل',
+        previousRadioShow: 'تېره راډیویي‌ خپرونه',
+        nextRadioShow: 'راتلونکې راډیویي خپرونه',
+        duration: 'موده',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'د ویډیو تشریح، ',
+          text: 'خبرداری:‌ ښايي درېیمګړي ته اړوند منځپانګه کې اعلانونه وي',
+        },
+        fallback: {
+          text: 'منځپانګه نه شته',
+          linkText: 'په %provider_name% کې نور وګورئ',
+          linkTextSuffixVisuallyHidden: '، بهرنی',
+          warningText:
+            ' بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.',
+        },
+        skipLink: {
+          text: 'دې %provider_name% پوسټ نه تېرشئ',
+          endTextVisuallyHidden: 'د ‍پوسټ %provider_name% پای',
+        },
+      },
+      topStoriesTitle: 'مهم خبرونه',
+      featuresAnalysisTitle: 'ځانګړي مطالب',
     },
     brandSVG,
     mostRead: {
@@ -175,9 +195,15 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onFrontPage: true,
+      frontPagePosition: 'Interactivity',
       frequenciesPageUrl: '/pashto/institutional/2012/03/000001_frequencies',
-      frequenciesPageLabel: 'Radio Frequencies Link Label',
-      header: 'BBC News Radio',
+      frequenciesPageLabel: 'راديويي څپې',
+      header: 'تازه خبرونه واورئ',
+      durationLabel: '%duration% موده',
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
@@ -203,7 +229,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'کوکيز',
+          text: 'Cookies',
         },
         {
           href: 'https://www.bbc.co.uk/pashto/institutional-37622768',
@@ -248,10 +274,6 @@ export const service = {
       {
         title: 'ويډيوګانې',
         url: '/pashto/media/video',
-      },
-      {
-        title: 'انځورونه',
-        url: '/pashto/media/photogalleries',
       },
       {
         title: 'ځانګړې پاڼې',

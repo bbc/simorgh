@@ -243,9 +243,7 @@
                         "versions": [
                           {
                             "versionId": "p01djw2p",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 28,
                             "durationISO8601": "PT28S",
                             "warnings": {},
@@ -391,7 +389,32 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c45w255zlexo"
     },
-    "summary": "",
+    "summary": {
+      "blocks": [
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": ""
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": ""
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        }
+      ]
+    },
     "timestamp": 1562942502450,
     "id": "urn:bbc:ares::article:c45w255zlexo",
     "type": "cps"

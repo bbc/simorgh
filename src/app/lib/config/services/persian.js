@@ -28,11 +28,11 @@ export const service = {
     defaultImageAltText: 'BBC News فارسی',
     dir: 'rtl',
     externalLinkText: '، لینک خارجی',
-    imageCaptionOffscreenText: '،توضیح تصویر',
-    videoCaptionOffscreenText: '،توضیح ویدئو',
-    audioCaptionOffscreenText: '،توضیح صدا',
-    defaultCaptionOffscreenText: '،توضیح',
-    imageCopyrightOffscreenText: '،منبع تصویر',
+    imageCaptionOffscreenText: 'توضیح تصویر، ',
+    videoCaptionOffscreenText: 'توضیح ویدئو، ',
+    audioCaptionOffscreenText: 'توضیح صدا، ',
+    defaultCaptionOffscreenText: 'توضیح، ',
+    imageCopyrightOffscreenText: 'منبع تصویر، ',
     locale: 'fa',
     datetimeLocale: 'fa',
     service: 'persian',
@@ -54,16 +54,16 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'See all',
+      seeAll: 'بیشتر',
       home: 'صفحه اول',
-      currentPage: 'Current page',
+      currentPage: 'صفحه فعلی',
       skipLinkText: 'مشاهده محتوا',
       relatedContent: 'مطالب مرتبط',
       navMenuText: 'صفحه ها',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'پخش صدا و تصویر',
+        audioPlayer: 'پخش صدا',
+        videoPlayer: 'پخش ویدیو',
       },
       error: {
         404: {
@@ -73,11 +73,11 @@ export const service = {
             'متاسفانه صفحه مورد نظر شما را پیدا نمی‌کنیم. لطفا گزینه‌های زیر را امتحان کنید:',
           solutions: [
             'آدرس صفحه مورد نظر را دوباره بررسی کنید',
-            'با مرورگر خود صفحه را ریفرش (Refresh) کنید',
+            'با مرورگر خود صفحه را ریفرش کنید',
             'در نوار جستجوی بی‌بی‌سی دنبال اطلاعات مورد نظرتان بگردید',
           ],
-          callToActionFirst: 'برای یافتن اطلاعات مورد نظر به ',
-          callToActionLinkText: 'صفحه اصلی بی‌بی‌سی فارسی',
+          callToActionFirst: 'برای یافتن اطلاعات مورد نظر به صفحه اصلی ',
+          callToActionLinkText: 'BBC News فارسی',
           callToActionLast: ' بروید',
           callToActionLinkUrl: 'https://www.bbc.com/persian',
         },
@@ -87,11 +87,11 @@ export const service = {
           message:
             'متاسفانه صفحه مورد نظر شما در دسترس نیست. لطفا گزینه‌های زیر را امتحان کنید:',
           solutions: [
-            'با مرورگر خود صفحه را ریفرش (Refresh) کنید',
+            'با مرورگر خود صفحه را ریفرش کنید',
             'بعدا دوباره امتحان کنید',
           ],
-          callToActionFirst: 'برای یافتن اطلاعات مورد نظر به ',
-          callToActionLinkText: 'صفحه اصلی بی‌بی‌سی فارسی',
+          callToActionFirst: 'برای یافتن اطلاعات مورد نظر به صفحه اصلی ',
+          callToActionLinkText: 'BBC News فارسی',
           callToActionLast: ' بروید',
           callToActionLinkUrl: 'https://www.bbc.com/persian',
         },
@@ -99,7 +99,7 @@ export const service = {
       consentBanner: {
         privacy: {
           title:
-            'ما سیاست‌های حفظ حریم خصوصی و کوکی‌های (Cookies) خود را به روز کرده‌ایم',
+            'ما سیاست‌های حفظ حریم خصوصی و کوکی‌های خود را به روز کرده‌ایم',
           description: {
             uk: {
               first:
@@ -121,7 +121,7 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'آیا با دریافت کوکی‌های ما (Cookies) موافقید؟',
+          title: 'آیا با دریافت کوکی‌های ما موافقید؟',
           description: {
             uk: {
               first: 'ما برای بهبود استفاده شما از خدمات بی‌بی‌سی از ',
@@ -134,7 +134,7 @@ export const service = {
             international: {
               first:
                 'ما و شریکانمان برای اینکه خدمات آنلاین بهتری به شما ارائه کنیم و محتوای مورد نظرتان را به شما نشان دهیم از تکنولوژی‌هایی مانند ',
-              linkText: 'کوکی‌ها',
+              linkText: 'کوکی ها',
               last:
                 ' یا برداشت از داده‌های مرورگر شما استفاده می‌کنیم؛ اگر موافق هستید تایید کنید',
               linkUrl:
@@ -148,7 +148,8 @@ export const service = {
         },
       },
       media: {
-        noJs: 'پخش این فایل در دستگاه شما پشتیبانی نمی شود.',
+        noJs:
+          'برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.',
         contentExpired: 'این محتوا دیگر قابل دسترس نیست.',
         audio: 'صدا',
         photogallery: 'عکس',
@@ -168,13 +169,32 @@ export const service = {
           subtitle:
             'برنامه خبری-تحلیلی یک ساعته که تصویری روشن و ساده از رویدادهای پیچیده جهان ارائه می‌کند.',
         },
-        listen: 'Listen',
-        watch: 'تماشا کنید',
+        listen: 'بشنوید',
+        watch: 'ببینید',
         liveLabel: 'زنده',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'بعدی',
+        previousRadioShow: 'برنامه رادیویی قبلی',
+        nextRadioShow: 'برنامه رادیویی بعدی',
+        duration: 'مدت',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'توضیح ویدیو، ',
+          text: 'توضیح: محتوای مربوط به طرف ثالث ممکن است شامل آگهی باشد',
+        },
+        fallback: {
+          text: 'محتوا در دسترس نیست',
+          linkText: 'در %provider_name% بیشتر ببینید',
+          linkTextSuffixVisuallyHidden: '، لینک خارجی',
+          warningText: 'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.',
+        },
+        skipLink: {
+          text: 'رد شدن از پست %provider_name%',
+          endTextVisuallyHidden: 'پایان پست %provider_name%',
+        },
+      },
+      topStoriesTitle: 'مهمترین خبرها',
+      featuresAnalysisTitle: 'گزارش و تحلیل',
     },
     brandSVG,
     mostRead: {
@@ -185,7 +205,13 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      header: 'BBC News Radio',
+      onFrontPage: false,
+      frontPagePosition: '',
+      header: 'برنامه‌های رادیو',
+      durationLabel: 'مدت %duration%',
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
@@ -211,7 +237,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
-          text: 'Cookies',
+          text: 'کوکی ها',
         },
         {
           href: 'https://www.bbc.com/persian/institutional-37542244',
@@ -232,6 +258,10 @@ export const service = {
       {
         title: 'صفحه اول',
         url: '/persian',
+      },
+      {
+        title: 'کرونا',
+        url: '/persian/science-52004647',
       },
       {
         title: 'پخش زنده',
@@ -278,28 +308,12 @@ export const service = {
         url: '/persian/science',
       },
       {
-        title: 'شما',
-        url: '/persian/interactivity',
-      },
-      {
-        title: 'عکس',
-        url: '/persian/media/photogalleries',
-      },
-      {
-        title: 'ناظران می‌گویند...',
+        title: 'ناظران می‌گویند',
         url: '/persian/blogs/viewpoints',
-      },
-      {
-        title: 'صفحات ویژه',
-        url: '/persian/world-37434378',
       },
       {
         title: 'وبلاگ‌ها',
         url: '/persian/services/2012/01/000000_blogs_list',
-      },
-      {
-        title: 'آموزش زبان انگلیسی',
-        url: '/persian/learningenglish',
       },
     ],
   },

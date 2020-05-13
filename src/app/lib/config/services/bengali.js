@@ -158,10 +158,30 @@ export const service = {
         listen: 'শুনুন',
         watch: 'দেখুন',
         liveLabel: 'লাইভ',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'ভিডিওর ক্যাপশান: ',
+          text: 'সতর্কবাণী: তৃতীয়পক্ষের কন্টেন্টে বিজ্ঞাপন থাকতে পারে',
+        },
+        fallback: {
+          text: 'ছবির কপিরাইট',
+          linkText: '%provider_name% -এ আরো দেখুন',
+          linkTextSuffixVisuallyHidden: ', বিবিসির বাইরের খবর',
+          warningText:
+            'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
+      topStoriesTitle: 'প্রধান খবর',
+      featuresAnalysisTitle: 'চিঠিপত্র ও মতামত',
     },
     brandSVG,
     mostRead: {
@@ -171,7 +191,12 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
+      onFrontPage: false,
+      durationLabel: 'Duration %duration%',
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
@@ -221,16 +246,12 @@ export const service = {
         url: '/bengali',
       },
       {
-        title: 'অডিও',
-        url: '/bengali/media/audio',
+        title: 'করোনাভাইরাস',
+        url: '/bengali/news-51941294',
       },
       {
         title: 'ভিডিও',
         url: '/bengali/media/video',
-      },
-      {
-        title: 'ফটো গ্যালারি',
-        url: '/bengali/media/photogalleries',
       },
     ],
   },

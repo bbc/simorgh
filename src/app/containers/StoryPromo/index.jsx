@@ -1,14 +1,9 @@
 import React, { useContext } from 'react';
-import { shape, bool, string, element, oneOf, oneOfType } from 'prop-types';
-import StoryPromo, {
-  Headline,
-  Summary,
-  Link,
-  LiveLabel,
-} from '@bbc/psammead-story-promo';
+import { shape, bool, oneOf, oneOfType } from 'prop-types';
+import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import pathOr from 'ramda/src/pathOr';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import LiveLabel from '@bbc/psammead-live-label';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
@@ -24,6 +19,10 @@ import LinkContents from './LinkContents';
 import MediaIndicatorContainer from './MediaIndicator';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import IndexAlsosContainer from './IndexAlsos';
+import loggerNode from '#lib/logger.node';
+import { MEDIA_MISSING } from '#lib/logger.const';
+
+const logger = loggerNode(__filename);
 
 const PROMO_TYPES = ['top', 'regular', 'leading'];
 
@@ -77,40 +76,17 @@ StoryPromoImage.defaultProps = {
   }),
 };
 
-const LiveComponent = ({ headline, service, liveLabel, dir }) => {
-  // As screenreaders mispronounce the word 'LIVE', we use visually hidden
-  // text to read 'Live' instead, which screenreaders pronounce correctly.
-  const liveLabelIsEnglish = liveLabel === 'LIVE';
-
-  return (
-    // eslint-disable-next-line jsx-a11y/aria-role
-    <span role="text">
-      <LiveLabel service={service} dir={dir} ariaHidden={liveLabelIsEnglish}>
-        {liveLabel}
-      </LiveLabel>
-      {liveLabelIsEnglish && (
-        <VisuallyHiddenText lang="en-GB">{` Live, `}</VisuallyHiddenText>
-      )}
-      {headline}
-    </span>
-  );
-};
-
-LiveComponent.propTypes = {
-  service: string.isRequired,
-  dir: string.isRequired,
-  headline: element.isRequired,
-  liveLabel: string.isRequired,
-};
-
 const StoryPromoContainer = ({
   item,
   promoType,
   lazyLoadImage,
   dir,
   displayImage,
+  displaySummary,
+  isRecommendation,
 }) => {
   const {
+    altCalendar,
     script,
     datetimeLocale,
     service,
@@ -119,6 +95,10 @@ const StoryPromoContainer = ({
   } = useContext(ServiceContext);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
+
+  // As screenreaders mispronounce the word 'LIVE', we use visually hidden
+  // text to read 'Live' instead, which screenreaders pronounce correctly.
+  const liveLabelIsEnglish = liveLabel === 'LIVE';
 
   const isAssetTypeCode = getAssetTypeCode(item);
   const isStoryPromoPodcast =
@@ -129,9 +109,31 @@ const StoryPromoContainer = ({
     item,
     isAssetTypeCode,
   );
-  const summary = pathOr(null, ['summary'], item);
+
+  const overtypedSummary = pathOr(null, ['overtypedSummary'], item);
+  const hasWhiteSpaces = overtypedSummary && !overtypedSummary.trim().length;
+
+  let promoSummary;
+  if (overtypedSummary && !hasWhiteSpaces) {
+    promoSummary = overtypedSummary;
+  } else {
+    const summary = pathOr(null, ['summary'], item);
+    promoSummary = summary;
+  }
+
   const timestamp = pathOr(null, ['timestamp'], item);
   const relatedItems = pathOr(null, ['relatedItems'], item);
+  const cpsType = pathOr(null, ['cpsType'], item);
+  // If mediaStatusCode is visible, there is an error in rendering the block
+  const mediaStatuscode = pathOr(null, ['media', 'statusCode'], item);
+
+  if (cpsType === 'MAP' && mediaStatuscode) {
+    logger.warn(MEDIA_MISSING, {
+      url: pathOr(null, ['section', 'uri'], item),
+      mediaStatuscode,
+      mediaBlock: item.media,
+    });
+  }
 
   const linkcontents = <LinkContents item={item} isInline={!displayImage} />;
 
@@ -141,6 +143,8 @@ const StoryPromoContainer = ({
 
   const useLargeImages = promoType === 'top' || promoType === 'leading';
 
+  const headingTagOverride = isRecommendation ? 'div' : null;
+
   const Info = (
     <>
       {headline && (
@@ -149,33 +153,38 @@ const StoryPromoContainer = ({
           service={service}
           promoType={promoType}
           promoHasImage={displayImage}
+          as={headingTagOverride}
         >
           <Link href={url}>
             {isLive ? (
-              <LiveComponent
+              <LiveLabel
                 service={service}
-                headline={linkcontents}
-                liveLabel={liveLabel}
                 dir={dir}
-              />
+                liveText={liveLabel}
+                ariaHidden={liveLabelIsEnglish}
+                offScreenText={liveLabelIsEnglish ? 'Live' : null}
+              >
+                {linkcontents}
+              </LiveLabel>
             ) : (
               linkcontents
             )}
           </Link>
         </Headline>
       )}
-      {summary && displayImage && (
+      {promoSummary && displaySummary && !isRecommendation && (
         <Summary
           script={script}
           service={service}
           promoType={promoType}
           promoHasImage={displayImage}
         >
-          {summary}
+          {promoSummary}
         </Summary>
       )}
-      {timestamp && !isStoryPromoPodcast && (
+      {timestamp && !isStoryPromoPodcast && !isRecommendation && !isLive && (
         <Timestamp
+          altCalendar={altCalendar}
           locale={datetimeLocale}
           timestamp={timestamp}
           dateTimeFormat="YYYY-MM-DD"
@@ -235,6 +244,8 @@ StoryPromoContainer.propTypes = {
   lazyLoadImage: bool,
   dir: oneOf(['ltr', 'rtl']),
   displayImage: bool,
+  displaySummary: bool,
+  isRecommendation: bool,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -242,6 +253,8 @@ StoryPromoContainer.defaultProps = {
   lazyLoadImage: true,
   dir: 'ltr',
   displayImage: true,
+  displaySummary: true,
+  isRecommendation: false,
 };
 
 export default StoryPromoContainer;

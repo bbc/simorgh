@@ -8,7 +8,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     ads: {
-      hasAds: false,
+      hasAds: true,
     },
     lang: `hi`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -65,29 +65,29 @@ export const service = {
           statusCode: '404',
           title: 'पेज नहीं मिला',
           message:
-            'माफ़ी चाहते हैं, जो वह पन्ना नहीं दिखा पा रहे हैं जिसे आप ढूँढ रहे हैं. कृपया कोशिश करें:',
+            'माफ़ी चाहते हैं, हम वह पन्ना नहीं दिखा पा रहे हैं जिसे आप ढूँढ रहे हैं. कृपया कोशिश करें:',
           solutions: [
             'URL को दोबारा जांचने की',
             'ब्राउज़र का रिफ़्रेश बटन दबाएं',
             'इस पेज को बीबीसी सर्च बार खोलकर खोजने की कोशिश करें',
           ],
           callToActionFirst: 'विकल्प के तौर पर हमारे ',
-          callToActionLinkText: 'होमपेज',
-          callToActionLast: 'पर जाएं',
+          callToActionLinkText: 'होमपेज BBC News हिंदी',
+          callToActionLast: ' पर जाएं',
           callToActionLinkUrl: 'https://www.bbc.com/hindi',
         },
         500: {
           statusCode: '500',
           title: 'इंटरनल सर्वर एरर',
           message:
-            'माफ़ी चाहते हैं, जो वह पन्ना नहीं दिखा पा रहे हैं जिसे आप ढूँढ रहे हैं. कृपया कोशिश करें:',
+            'माफ़ी चाहते हैं, हम वह पन्ना नहीं दिखा पा रहे हैं जिसे आप ढूँढ रहे हैं. कृपया कोशिश करें:',
           solutions: [
             'ब्राउज़र का रिफ़्रेश बटन दबाएं',
             'कुछ समय बाद कोशिश करें',
           ],
           callToActionFirst: 'विकल्प के तौर पर हमारे ',
-          callToActionLinkText: 'होमपेज',
-          callToActionLast: 'पर जाएं',
+          callToActionLinkText: 'होमपेज BBC News हिंदी',
+          callToActionLast: ' पर जाएं',
           callToActionLinkUrl: 'https://www.bbc.com/hindi',
         },
       },
@@ -121,7 +121,7 @@ export const service = {
               first: 'हम ',
               linkText: 'कुकीज़',
               last:
-                'का इस्तेमाल आपको बेहतर ऑनलाइन सेवाएं देने के लिए करते हैं. हमें बताएं कि आप इन सभी कुकीज़ से सहमत हैं.',
+                ' का इस्तेमाल आपको बेहतर ऑनलाइन सेवाएं देने के लिए करते हैं. हमें बताएं कि आप इन सभी कुकीज़ से सहमत हैं.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -157,13 +157,33 @@ export const service = {
           subtitle:
             'बीबीसी दुनिया में देखिए ताज़ा अंतरराष्ट्रीय और क्षेत्रीय ख़बरें, उनका विश्लेषण और सोशल मीडिया की हलचल. साथ ही होंगी कई रोचक ख़बरें भी.',
         },
-        listen: 'Listen',
+        listen: 'सुनिए',
         watch: 'देखिए',
         liveLabel: 'लाइव',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'अगला',
+        previousRadioShow: 'पिछला रेडियो शो',
+        nextRadioShow: 'अगला रेडियो शो',
+        duration: 'अवधि',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'वीडियो कैप्शन ',
+          text: 'चेतावनी: तीसरे पक्ष की सामग्री में विज्ञापन हो सकते हैं.',
+        },
+        fallback: {
+          text: 'सामग्री् उपलब्ध नहीं है',
+          linkText: 'सोशल नेटवर्क पर और देखिए',
+          linkTextSuffixVisuallyHidden: ' बाहरी सामग्री',
+          warningText:
+            'बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है.',
+        },
+        skipLink: {
+          text: 'छोड़िए %provider_name% पोस्ट',
+          endTextVisuallyHidden: 'पोस्ट %provider_name% समाप्त',
+        },
+      },
+      topStoriesTitle: 'टॉप स्टोरी',
+      featuresAnalysisTitle: 'ज़रूर पढ़ें',
     },
     brandSVG,
     mostRead: {
@@ -174,6 +194,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: true,
     },
     footer: {
       trustProjectLink: {
@@ -186,7 +209,7 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/hindi/institutional-37342293',
           text: 'इस्तेमाल की शर्तें',
         },
         {
@@ -194,7 +217,7 @@ export const service = {
           text: 'बीबीसी के बारे में',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/hindi/institutional-37342614',
           text: 'निजता की नीति',
         },
         {
@@ -202,7 +225,7 @@ export const service = {
           text: 'कुकीज़',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/hindi/institutional-37342616',
           text: 'बीबीसी से संपर्क करें',
         },
         {
@@ -221,6 +244,10 @@ export const service = {
       {
         title: 'होम पेज',
         url: '/hindi',
+      },
+      {
+        title: 'कोरोनावायरस',
+        url: '/hindi/international-51848794',
       },
       {
         title: 'भारत',
@@ -251,16 +278,8 @@ export const service = {
         url: '/hindi/media/video',
       },
       {
-        title: 'तस्वीरें',
-        url: '/hindi/media/photogalleries',
-      },
-      {
         title: 'बीबीसी स्पेशल',
         url: '/hindi/in_depth',
-      },
-      {
-        title: '#ISWOTY',
-        url: '/hindi/resources/idt-a6da5349-3698-4f42-9e5b-35513c8c0537',
       },
     ],
   },

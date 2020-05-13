@@ -1,301 +1,293 @@
 {
-   "metadata":{
-      "id":"urn:bbc:ares::asset:yoruba/afrika-23252769",
-      "locators":{
-         "assetUri":"/yoruba/afrika-23252769",
-         "cpsUrn":"urn:bbc:content:assetUri:yoruba/afrika-23252769",
-         "curie":"http://www.bbc.co.uk/asset/e0c0b3f7-9a10-a848-b46b-1c8825adfec9"
+  "metadata": {
+    "id": "urn:bbc:ares::asset:yoruba/afrika-23252769",
+    "locators": {
+      "assetUri": "/yoruba/afrika-23252769",
+      "cpsUrn": "urn:bbc:content:assetUri:yoruba/afrika-23252769",
+      "curie": "http://www.bbc.co.uk/asset/e0c0b3f7-9a10-a848-b46b-1c8825adfec9"
+    },
+    "type": "STY",
+    "createdBy": "yoruba-v6",
+    "language": "yo",
+    "lastUpdated": 1571834216853,
+    "firstPublished": 1571834212000,
+    "lastPublished": 1571834213000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "yoruba.africa.story.23252769.page",
+      "cps_asset_id": "23252769"
+    },
+    "tags": {},
+    "version": "v1.1.2",
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "list",
+      "social_embed",
+      "media",
+      "heading",
+      "crosshead"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "63724372",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/6ACE/test/_63724372_gettyimages-1098075358.jpg",
+        "path": "/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Some people at the NTA awards",
+        "caption": "Some people went to the NTA awards recently.",
+        "copyrightHolder": "Joe Maher",
+        "positionHint": "full-width",
+        "type": "image"
       },
-      "type":"STY",
-      "createdBy":"yoruba-v6",
-      "language":"yo",
-      "lastUpdated":1571834216853,
-      "firstPublished":1571834212000,
-      "lastPublished":1571834213000,
-      "options":{
-         "isIgorSeoTagsEnabled":false,
-         "includeComments":false,
-         "allowRightHandSide":true,
-         "isFactCheck":false,
-         "allowDateStamp":true,
-         "suitableForSyndication":true,
-         "hasNewsTracker":false,
-         "allowRelatedStoriesBox":true,
-         "isKeyContent":false,
-         "allowHeadline":true,
-         "allowAdvertising":true,
-         "hasContentWarning":false,
-         "isBreakingNews":false,
-         "allowPrintingSharingLinks":true
+      {
+        "text": " This is introduction text, it should be bold by default, but also support <link><caption>inline links</caption><url href=\"https://bbc.com/pidgin/23248703\" platform=\"highweb\"/></link> to other pages.",
+        "role": "introduction",
+        "markupType": "candy_xml",
+        "type": "paragraph"
       },
-      "analyticsLabels":{
-         "cps_asset_type":"sty",
-         "counterName":"yoruba.africa.story.23252769.page",
-         "cps_asset_id":"23252769"
+      {
+        "text": "<bold><italic>This is a subheadline! that has </italic></bold><link><caption>a link</caption><url href=\"https://bbc.com/pidgin/23248703\" platform=\"highweb\"/></link>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
       },
-      "tags":{
-
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "This is a unordered list",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "It can have <bold>bold text</bold> in it",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<link><caption>It can also have links</caption><url href=\"https://bbc.com/pidgin/23248703\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<italic>It can even have italic text in it!</italic>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
       },
-      "version":"v1.1.2",
-      "blockTypes":[
-         "image",
-         "paragraph",
-         "list",
-         "social_embed",
-         "media",
-         "heading",
-         "crosshead"
-      ],
-      "includeComments":false
-   },
-   "content":{
-      "blocks":[
-         {
-            "id":"63724372",
-            "subType":"body",
-            "href":"http://b.files.bbci.co.uk/6ACE/test/_63724372_gettyimages-1098075358.jpg",
-            "path":"/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg",
-            "height":549,
-            "width":976,
-            "altText":"Some people at the NTA awards",
-            "caption":"Some people went to the NTA awards recently.",
-            "copyrightHolder":"Joe Maher",
-            "positionHint":"full-width",
-            "type":"image"
-         },
-         {
-            "text":" This is introduction text, it should be bold by default, but also support <link><caption>inline links</caption><url href=\"https://bbc.com/pidgin/23248703\" platform=\"highweb\"/></link> to other pages.",
-            "role":"introduction",
-            "markupType":"candy_xml",
-            "type":"paragraph"
-         },
-         {
-            "text":"<bold><italic>This is a subheadline! that has </italic></bold><link><caption>a link</caption><url href=\"https://bbc.com/pidgin/23248703\" platform=\"highweb\"/></link>",
-            "markupType":"candy_xml",
-            "type":"paragraph"
-         },
-         {
-            "numbered":false,
-            "items":[
-               {
-                  "text":"This is a unordered list",
-                  "markupType":"plain_text",
-                  "type":"listItem"
-               },
-               {
-                  "text":"It can have <bold>bold text</bold> in it",
-                  "markupType":"candy_xml",
-                  "type":"listItem"
-               },
-               {
-                  "text":"<link><caption>It can also have links</caption><url href=\"https://bbc.com/pidgin/23248703\" platform=\"highweb\"/></link>",
-                  "markupType":"candy_xml",
-                  "type":"listItem"
-               },
-               {
-                  "text":"<italic>It can even have italic text in it!</italic>",
-                  "markupType":"candy_xml",
-                  "type":"listItem"
-               }
-            ],
-            "type":"list"
-         },
-         {
-            "text":"Feta the big cheese macaroni cheese. <link><caption>Caerphilly danish fontina</caption><url href=\"https://bbc.com/pidgin/23248703\" platform=\"highweb\"/></link> queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. <bold>Cow cheeseburger</bold> stilton emmental.",
-            "markupType":"candy_xml",
-            "type":"paragraph"
-         },
-         {
-            "id":"63724374",
-            "subType":"body",
-            "href":"http://b.files.bbci.co.uk/B8EE/test/_63724374_gettyimages-1098050396.jpg",
-            "path":"/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg",
-            "height":549,
-            "width":976,
-            "altText":"That guy from bodyguard at the NTAs",
-            "copyrightHolder":"Joe Maher",
-            "positionHint":"full-width",
-            "type":"image"
-         },
-         {
-            "text":"<bold>Start of localised text</bold>",
-            "markupType":"candy_xml",
-            "type":"paragraph"
-         },
-         {
-            "text":"Bakan naa, Oluranlọwọ fun Gomina Ipinlẹ Kwara fọrọ iroyin, Rafiu Ajakaye ti ni asọyepọ gbọdọ waye laarin ijọba ipinlẹ ati awọn osisẹ, ki awọn to le e gbe igbesẹ kankan lori sisan owo osu osisẹ tuntun.",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"Ajakaye tun fikun wi pe ,awọ̀n ko mọ igba tabi akoko ti ipade laarin ijọba ati osisẹ yoo waye, amọ laipẹ awọn yoo sọ ipinnu wọn lori ọrọ naa.",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"<bold>End of localised text</bold>",
-            "markupType":"candy_xml",
-            "type":"paragraph"
-         },
-         {
-            "text":"Rubber cheese macaroni <italic>cheese cottage cheese</italic>. Caerphilly gouda ricotta st. agur blue cheese cheese strings taleggio feta say cheese. The big cheese cheeseburger fondue dolcelatte fromage frais chalk and cheese cheese slices cheddar. Airedale macaroni cheese cheese strings fromage frais.",
-            "markupType":"candy_xml",
-            "type":"paragraph"
-         },
-         {
-            "numbered":true,
-            "items":[
-               {
-                  "text":"This is a ordered list",
-                  "markupType":"plain_text",
-                  "type":"listItem"
-               },
-               {
-                  "text":"It can have <bold>bold text</bold> in it",
-                  "markupType":"candy_xml",
-                  "type":"listItem"
-               },
-               {
-                  "text":"<link><caption>It can also have links</caption><url href=\"https://bbc.com/pidgin/23248703\" platform=\"highweb\"/></link>",
-                  "markupType":"candy_xml",
-                  "type":"listItem"
-               },
-               {
-                  "text":"<italic>It can even have italic text in it!</italic>",
-                  "markupType":"candy_xml",
-                  "type":"listItem"
-               }
-            ],
-            "type":"list"
-         },
-         {
-            "href":"https://twitter.com/casualafro/status/1184522157050748929",
-            "source":"twitter",
-            "type":"social_embed"
-         },
-         {
-            "text":"Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "id":"p01mr6r7",
-            "subType":"clip",
-            "format":"audio",
-            "title":"Подкаст \"Разговоры с арбитром\": чемпионский парад \"Ливерпуля\"",
-            "synopses":{
-               "short":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов."
+      {
+        "text": "Feta the big cheese macaroni cheese. <link><caption>Caerphilly danish fontina</caption><url href=\"https://bbc.com/pidgin/23248703\" platform=\"highweb\"/></link> queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. <bold>Cow cheeseburger</bold> stilton emmental.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "id": "63724374",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/B8EE/test/_63724374_gettyimages-1098050396.jpg",
+        "path": "/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "That guy from bodyguard at the NTAs",
+        "copyrightHolder": "Joe Maher",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "<bold>Start of localised text</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Bakan naa, Oluranlọwọ fun Gomina Ipinlẹ Kwara fọrọ iroyin, Rafiu Ajakaye ti ni asọyepọ gbọdọ waye laarin ijọba ipinlẹ ati awọn osisẹ, ki awọn to le e gbe igbesẹ kankan lori sisan owo osu osisẹ tuntun.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ajakaye tun fikun wi pe ,awọ̀n ko mọ igba tabi akoko ti ipade laarin ijọba ati osisẹ yoo waye, amọ laipẹ awọn yoo sọ ipinnu wọn lori ọrọ naa.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>End of localised text</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Rubber cheese macaroni <italic>cheese cottage cheese</italic>. Caerphilly gouda ricotta st. agur blue cheese cheese strings taleggio feta say cheese. The big cheese cheeseburger fondue dolcelatte fromage frais chalk and cheese cheese slices cheddar. Airedale macaroni cheese cheese strings fromage frais.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "numbered": true,
+        "items": [
+          {
+            "text": "This is a ordered list",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "It can have <bold>bold text</bold> in it",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<link><caption>It can also have links</caption><url href=\"https://bbc.com/pidgin/23248703\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<italic>It can even have italic text in it!</italic>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "href": "https://twitter.com/casualafro/status/1184522157050748929",
+        "source": "twitter",
+        "type": "social_embed"
+      },
+      {
+        "text": "Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "p01mr6r7",
+        "subType": "clip",
+        "format": "audio",
+        "title": "Подкаст \"Разговоры с арбитром\": чемпионский парад \"Ливерпуля\"",
+        "synopses": {
+          "short": "Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов."
+        },
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mr7dp.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "A caption for a test asset",
+        "versions": [
+          {
+            "versionId": "p01mr6r9",
+            "types": ["Original"],
+            "duration": 1961,
+            "durationISO8601": "PT32M41S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
             },
-            "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01mr7dp.jpg",
-            "embedding":true,
-            "advertising":true,
-            "caption":"A caption for a test asset",
-            "versions":[
-               {
-                  "versionId":"p01mr6r9",
-                  "types":[
-                     "Original"
-                  ],
-                  "duration":1961,
-                  "durationISO8601":"PT32M41S",
-                  "warnings":{
-
-                  },
-                  "availableTerritories":{
-                     "uk":true,
-                     "nonUk":true
-                  },
-                  "availableFrom":1559819809000
-               }
-            ],
-            "imageCopyright":"Getty Images",
-            "type":"media"
-         },
-         {
-            "text":"This is a heading!",
-            "markupType":"plain_text",
-            "type":"heading"
-         },
-         {
-            "text":"Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"This is a crosshead!",
-            "markupType":"plain_text",
-            "type":"crosshead"
-         },
-         {
-            "text":"Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"<link><caption>This is an external link to google!</caption><url href=\"https://www.google.com/\" platform=\"highweb\"/></link>",
-            "markupType":"candy_xml",
-            "type":"paragraph"
-         },
-         {
-            "text":"Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         }
+            "availableFrom": 1559819809000
+          }
+        ],
+        "imageCopyright": "Getty Images",
+        "type": "media"
+      },
+      {
+        "text": "This is a heading!",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "This is a crosshead!",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<link><caption>This is an external link to google!</caption><url href=\"https://www.google.com/\" platform=\"highweb\"/></link>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "STY - A ó gbé ìpínlẹ̀ tí kò bá san ₦30,000",
+      "headline": "STY - A ó gbé ìpínlẹ̀ tí kò bá san ₦30,000"
+    },
+    "locators": {
+      "assetUri": "/yoruba/afrika-23252769",
+      "cpsUrn": "urn:bbc:content:assetUri:yoruba/afrika-23252769",
+      "curie": "http://www.bbc.co.uk/asset/e0c0b3f7-9a10-a848-b46b-1c8825adfec9"
+    },
+    "summary": "This is a test asset used in Simorgh, please do not edit it without asking.",
+    "timestamp": 1571834216853,
+    "byline": {
+      "name": "By Andrew Overtyped Marr",
+      "title": "BBC News - Overtyped",
+      "persons": [
+        {
+          "name": "Andrew Marr",
+          "function": "BBC News",
+          "thumbnail": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/50002000/jpg/_50002170_andrew_marr_112_bbc.jpg"
+        }
       ]
-   },
-   "promo":{
-      "headlines":{
-         "shortHeadline":"STY - A ó gbé ìpínlẹ̀ tí kò bá san ₦30,000",
-         "headline":"STY - A ó gbé ìpínlẹ̀ tí kò bá san ₦30,000"
-      },
-      "locators":{
-         "assetUri":"/yoruba/afrika-23252769",
-         "cpsUrn":"urn:bbc:content:assetUri:yoruba/afrika-23252769",
-         "curie":"http://www.bbc.co.uk/asset/e0c0b3f7-9a10-a848-b46b-1c8825adfec9"
-      },
-      "summary":"This is a test asset used in Simorgh, please do not edit it without asking.",
-      "timestamp":1571834216853,
-      "byline":{
-         "name":"By Andrew Overtyped Marr",
-         "title":"BBC News - Overtyped",
-         "persons":[
-            {
-               "name":"Andrew Marr",
-               "function":"BBC News",
-               "thumbnail":"http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/50002000/jpg/_50002170_andrew_marr_112_bbc.jpg"
-            }
-         ]
-      },
-      "passport":{
-
-      },
-      "id":"urn:bbc:ares::asset:yoruba/afrika-23252769",
-      "type":"cps"
-   },
-   "relatedContent":{
-      "section":{
-         "subType":"index",
-         "name":"Afrika",
-         "uri":"/yoruba/afrika",
-         "type":"simple"
-      },
-      "site":{
-         "subType":"site",
-         "name":"BBC News Yorùbá",
-         "uri":"/yoruba",
-         "type":"simple"
-      },
-      "groups":[
-         {
-            "type":"related-urls",
-            "promos":[
-               {
-                  "name":"The pidgin map asset",
-                  "uri":"https://www.test.bbc.com/pidgin/23248703",
-                  "type":"link"
-               }
-            ]
-         }
-      ]
-   }
+    },
+    "passport": {},
+    "id": "urn:bbc:ares::asset:yoruba/afrika-23252769",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Afrika",
+      "uri": "/yoruba/afrika",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC News Yorùbá",
+      "uri": "/yoruba",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "related-urls",
+        "promos": [
+          {
+            "name": "The pidgin map asset",
+            "uri": "https://www.test.bbc.com/pidgin/23248703",
+            "type": "link"
+          }
+        ]
+      }
+    ]
+  }
 }

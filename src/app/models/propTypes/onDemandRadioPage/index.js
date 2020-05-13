@@ -1,19 +1,20 @@
 import { bool, shape, string, number } from 'prop-types';
-import { mediaMetadataPropTypes } from '../metadata';
-import { onDemandRadioPromoPropTypes } from '../promo';
-import onDemandRadioPageContentPropTypes from './content';
 
 export const onDemandRadioPageDataPropTypes = shape({
-  metadata: shape(mediaMetadataPropTypes).isRequired,
-  promo: shape(onDemandRadioPromoPropTypes).isRequired,
-  content: shape(onDemandRadioPageContentPropTypes).isRequired,
+  brandTitle: string,
+  headline: string,
+  summary: string,
+  language: string,
+  episodeAvailableFrom: number,
+  episodeAvailableUntil: number,
+  releaseDateTimeStamp: number,
 });
 
-const onDemandMockPagePropTypes = {
+const onDemandPagePropTypes = {
   isAmp: bool,
   data: onDemandRadioPageDataPropTypes,
   service: string,
   status: number,
 };
 
-export default onDemandMockPagePropTypes;
+export default onDemandPagePropTypes;

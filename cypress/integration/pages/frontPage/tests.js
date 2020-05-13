@@ -103,9 +103,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
             // This check would only run for the top stories section and not any other sections
             cy.get('p').then($el => {
               if ($el.length > 0) {
-                cy.get('p')
-                  .eq(0)
-                  .should('be.visible');
+                cy.get('p').eq(0).should('be.visible');
               }
             });
 
@@ -138,9 +136,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
 
             cy.url().then(url => {
               currentURL = url;
-              cy.get('h3')
-                .eq(3)
-                .click();
+              cy.get('h3').eq(3).click();
               cy.go('back');
               cy.url().should('eq', currentURL);
             });

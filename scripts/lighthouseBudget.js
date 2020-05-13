@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const fs = require('fs');
 
-const getCategoryScores = data => {
+const getCategoryScores = (data) => {
   const { categories } = data;
 
   return {
@@ -29,7 +29,7 @@ const compareToBudget = (categories, scoreResult, scoreBudget) => {
   let result = true;
   const logArray = [];
   // eslint-disable-next-line consistent-return
-  categories.forEach(prop => {
+  categories.forEach((prop) => {
     const isPassing = isAboveThreshold(scoreResult[prop], scoreBudget[prop]);
     const passLog = logRow(
       prop,
@@ -45,7 +45,7 @@ const compareToBudget = (categories, scoreResult, scoreBudget) => {
   return result;
 };
 
-const readReport = path => {
+const readReport = (path) => {
   console.log('Reading the report');
   const rawdata = fs.readFileSync(path);
   console.log(rawdata);
@@ -54,8 +54,8 @@ const readReport = path => {
   return result;
 };
 
-const exitResult = isPassing => {
-  process.on('exit', code => console.log(`Exiting with code ${code}`));
+const exitResult = (isPassing) => {
+  process.on('exit', (code) => console.log(`Exiting with code ${code}`));
 
   if (!isPassing) {
     console.log('Lighthouse tests failed. See log table for details');

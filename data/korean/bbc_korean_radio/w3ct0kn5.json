@@ -1,0 +1,469 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:page:bbc_korean_radio/w3ct0kn5",
+    "locators": {
+      "pid": "w3ct0kn5",
+      "brandPid": "w13xttll"
+    },
+    "type": "WSRADIO",
+    "createdBy": "bbc_korean_radio",
+    "language": "ko",
+    "lastUpdated": 1588318165729,
+    "firstPublished": 1588580293000,
+    "lastPublished": 1588580293000,
+    "timestamp": 1588580293000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "BBC 코리아 라디오 - BBC News 코리아",
+      "pageIdentifier": "korean.bbc_korean_radio.w3ct0kn5.page",
+      "producerId": "57",
+      "contentType": "player-episode",
+      "producer": "KOREAN"
+    },
+    "tags": {},
+    "version": "v1.2.1",
+    "blockTypes": ["media"],
+    "title": "BBC 코리아 라디오",
+    "releaseDateTimeStamp": 1588550400000
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "w3ct0kn5",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "2020/05/04 GMT",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w4hqw4gw",
+            "types": ["Original"],
+            "duration": 1140,
+            "durationISO8601": "PT19M",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1589221140000,
+            "availableFrom": 1588607340000
+          }
+        ],
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "BBC 코리아 라디오"
+    },
+    "locators": {
+      "pid": "w3ct0kn5",
+      "brandPid": "w13xttll"
+    },
+    "media": {
+      "id": "w3ct0kn5",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "2020/05/04 GMT",
+      "synopses": {
+        "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+        "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "w4hqw4gw",
+          "types": ["Original"],
+          "duration": 1140,
+          "durationISO8601": "PT19M",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": false,
+            "nonUk": false,
+            "world": true
+          },
+          "availableUntil": 1589221140000,
+          "availableFrom": 1588607340000
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "brand": {
+      "pid": "w13xttll",
+      "title": "BBC 코리아 라디오"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_korean_radio/w3ct0kn5",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Korean",
+      "uri": "/korean",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": {
+              "headline": "BBC 코리아 라디오"
+            },
+            "locators": {
+              "pid": "w3ct0km0",
+              "brandPid": "w13xttll"
+            },
+            "media": {
+              "id": "w3ct0km0",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "2020/05/01 GMT",
+              "synopses": {
+                "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+                "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hqw4fq",
+                  "types": ["Original"],
+                  "duration": 1140,
+                  "durationISO8601": "PT19M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1588961940000,
+                  "availableFrom": 1588348140000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "w13xttll",
+              "title": "BBC 코리아 라디오"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_korean_radio/w3ct0km0",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "BBC 코리아 라디오"
+            },
+            "locators": {
+              "pid": "w3ct0kp8",
+              "brandPid": "w13xttll"
+            },
+            "media": {
+              "id": "w3ct0kp8",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "2020/04/30 GMT",
+              "synopses": {
+                "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+                "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hqw4hz",
+                  "types": ["Original"],
+                  "duration": 1140,
+                  "durationISO8601": "PT19M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1588875540000,
+                  "availableFrom": 1588261740000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "w13xttll",
+              "title": "BBC 코리아 라디오"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_korean_radio/w3ct0kp8",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "BBC 코리아 라디오"
+            },
+            "locators": {
+              "pid": "w3ct0krj",
+              "brandPid": "w13xttll"
+            },
+            "media": {
+              "id": "w3ct0krj",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "2020/04/29 GMT",
+              "synopses": {
+                "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+                "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hqw4l7",
+                  "types": ["Original"],
+                  "duration": 1140,
+                  "durationISO8601": "PT19M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1588789140000,
+                  "availableFrom": 1588175340000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "w13xttll",
+              "title": "BBC 코리아 라디오"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_korean_radio/w3ct0krj",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "BBC 코리아 라디오"
+            },
+            "locators": {
+              "pid": "w3ct0kqd",
+              "brandPid": "w13xttll"
+            },
+            "media": {
+              "id": "w3ct0kqd",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "2020/04/28 GMT",
+              "synopses": {
+                "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+                "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hqw4k3",
+                  "types": ["Original"],
+                  "duration": 1140,
+                  "durationISO8601": "PT19M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1588702740000,
+                  "availableFrom": 1588088940000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "w13xttll",
+              "title": "BBC 코리아 라디오"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_korean_radio/w3ct0kqd",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "BBC 코리아 라디오"
+            },
+            "locators": {
+              "pid": "w3ct0kn4",
+              "brandPid": "w13xttll"
+            },
+            "media": {
+              "id": "w3ct0kn4",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "2020/04/27 GMT",
+              "synopses": {
+                "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+                "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hqw4gv",
+                  "types": ["Original"],
+                  "duration": 1140,
+                  "durationISO8601": "PT19M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1588616340000,
+                  "availableFrom": 1588002540000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "w13xttll",
+              "title": "BBC 코리아 라디오"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_korean_radio/w3ct0kn4",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "BBC 코리아 라디오"
+            },
+            "locators": {
+              "pid": "w3csvzmp",
+              "brandPid": "w13xttll"
+            },
+            "media": {
+              "id": "w3csvzmp",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "2017/10/24 GMT",
+              "synopses": {
+                "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+                "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hqqcmm",
+                  "types": ["Original"],
+                  "duration": 1140,
+                  "durationISO8601": "PT19M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableFrom": 1508860140000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "w13xttll",
+              "title": "BBC 코리아 라디오"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_korean_radio/w3csvzmp",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}

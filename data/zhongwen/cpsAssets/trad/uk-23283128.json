@@ -1,0 +1,224 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:zhongwen/trad/uk-23283128",
+    "locators": {
+      "assetUri": "/zhongwen/trad/uk-23283128",
+      "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/uk-23283128",
+      "curie": "http://www.bbc.co.uk/asset/e6ae9f07-1c7e-8b4f-8178-772492c3145c",
+      "assetId": "23283128"
+    },
+    "type": "MAP",
+    "createdBy": "zhongwen-traditional-v6",
+    "language": "zh-Hant",
+    "lastUpdated": 1588335919801,
+    "firstPublished": 1585750005000,
+    "lastPublished": 1585750005000,
+    "timestamp": 1585750005000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "zhongwentrad.uk.media_asset.23283128.page",
+      "cps_asset_id": "23283128"
+    },
+    "passport": { "taggings": [] },
+    "tags": {},
+    "version": "v1.2.1",
+    "blockTypes": [
+      "media",
+      "paragraph",
+      "heading",
+      "image",
+      "subheading",
+      "list"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p01m7d3c",
+        "subType": "clip",
+        "format": "audio",
+        "title": "Birmingham Checkout 2",
+        "synopses": {
+          "short": "This is some sound from a supermarket checkout in Birmingham"
+        },
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n2gbb.jpg",
+        "embedding": true,
+        "advertising": false,
+        "caption": "This is some sound from a supermarket checkout in Birmingham",
+        "versions": [
+          {
+            "versionId": "p01m7d3h",
+            "types": ["Original"],
+            "duration": 127,
+            "durationISO8601": "PT2M7S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": false,
+              "world": false
+            },
+            "availableFrom": 1555067786000
+          }
+        ],
+        "imageCopyright": "AP",
+        "type": "media"
+      },
+      {
+        "text": "t te tes test 12345678909876543210",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      { "text": "Heading", "markupType": "plain_text", "type": "heading" },
+      {
+        "text": "COVID-19新型冠狀病毒疫情擴散，繼中國之後，世界各國也有越來越多城市實行&quot;禁足令&quot;甚至&quot;封城&quot;，無數人須困在家中繼續工作，精神難以放鬆。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "63733336",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/F765/test/_63733336_nhsc_1117_fitness-yoga_width-320.jpg",
+        "path": "/cpsdevpb/F765/test/_63733336_nhsc_1117_fitness-yoga_width-320.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "yoga pose",
+        "caption": "yoga is good for you",
+        "copyrightHolder": "NHS",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "id": "63733338",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/14585/test/_63733338_t_0318_fitness-tai-chi_537714578_width-320.jpg",
+        "path": "/cpsdevpb/14585/test/_63733338_t_0318_fitness-tai-chi_537714578_width-320.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "tai chi",
+        "caption": "How about trying tai chi?",
+        "copyrightHolder": "NHS",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Subheading",
+        "markupType": "plain_text",
+        "type": "subheading"
+      },
+      {
+        "text": "BBC記者艾米莉·福特（Emily Ford）最近也跟成千上萬英國工薪族一樣改成在家辦公，而她本身也是合格瑜伽教練。她在此給大家分享一些有助舒緩身心疲勞的瑜伽招式。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "新型冠狀病毒專題報道",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "居家隔離小貼士：如何堅持鍛煉和保持最佳狀態",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "<link><caption>BBC Link</caption><altText>link to another bbc page</altText><url href=\"https://www.bbc.com/zhongwen/trad/uk-52094163\" platform=\"highweb\"/></link> <link><caption>External link</caption><altText>yoga link</altText><url href=\"https://en.wikipedia.org/wiki/Yoga\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Zhongwen test MAP",
+      "headline": "Zhongwen test MAP Zhongwen test MAP Zhongwen test MAP Zhongwen test MAP Zhongwen test MAP"
+    },
+    "locators": {
+      "assetUri": "/zhongwen/trad/uk-23283128",
+      "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/uk-23283128",
+      "curie": "http://www.bbc.co.uk/asset/e6ae9f07-1c7e-8b4f-8178-772492c3145c",
+      "assetId": "23283128"
+    },
+    "summary": "test",
+    "timestamp": 1585750005000,
+    "language": "zh-Hant",
+    "passport": { "taggings": [] },
+    "media": {
+      "id": "p01m7d3c",
+      "subType": "clip",
+      "format": "audio",
+      "title": "Birmingham Checkout 2",
+      "synopses": {
+        "short": "This is some sound from a supermarket checkout in Birmingham"
+      },
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n2gbb.jpg",
+      "embedding": true,
+      "advertising": false,
+      "caption": "This is some sound from a supermarket checkout in Birmingham",
+      "versions": [
+        {
+          "versionId": "p01m7d3h",
+          "types": ["Original"],
+          "duration": 127,
+          "durationISO8601": "PT2M7S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": false,
+            "world": false
+          },
+          "availableFrom": 1555067786000
+        }
+      ],
+      "imageCopyright": "AP",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "63733334",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/A945/test/_63733334_p01n2gbb.jpg",
+      "path": "/cpsdevpb/A945/test/_63733334_p01n2gbb.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "Alt text",
+      "copyrightHolder": "AP",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:zhongwen/trad/uk-23283128",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "英國動態",
+      "uri": "/zhongwen/trad/uk",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC 中文",
+      "uri": "/zhongwen/trad",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

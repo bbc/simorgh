@@ -7,25 +7,8 @@ import { ToggleContext } from '#contexts/ToggleContext';
 import AdContainer from './index';
 
 const defaultToggleState = {
-  local: {
-    ads: {
-      enabled: true,
-    },
-  },
-  test: {
-    ads: {
-      enabled: true,
-    },
-  },
-  stage: {
-    ads: {
-      enabled: false,
-    },
-  },
-  live: {
-    ads: {
-      enabled: false,
-    },
+  ads: {
+    enabled: true,
   },
 };
 
@@ -37,6 +20,14 @@ const toggleContextMock = {
 };
 
 describe('Ad Container', () => {
+  beforeAll(() => {
+    process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+  });
+
+  afterAll(() => {
+    delete process.env.SIMORGH_TOGGLES_URL;
+  });
+
   describe('Snapshots', () => {
     shouldMatchSnapshot(
       'should correctly render an AMP ad',

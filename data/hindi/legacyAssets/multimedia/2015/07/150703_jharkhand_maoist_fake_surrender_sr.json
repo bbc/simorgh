@@ -23,7 +23,7 @@
     "analyticsLabels": { "cps_asset_id": "39483912", "cps_asset_type": "map" },
     "tags": {},
     "version": "v1.0.0",
-    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "blockTypes": ["legacyMedia", "paragraph"],
     "includeComments": false
   },
   "content": {
@@ -93,8 +93,18 @@
     "type": "cps"
   },
   "relatedContent": {
-    "section": { "subType": "index", "name": "फ़ोटो-वीडियो", "uri": "/hindi/multimedia", "type": "simple" },
-    "site": { "subType": "site", "name": "BBCHindi.com", "uri": "/hindi", "type": "simple" },
+    "section": {
+      "subType": "index",
+      "name": "फ़ोटो-वीडियो",
+      "uri": "/hindi/multimedia",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBCHindi.com",
+      "uri": "/hindi",
+      "type": "simple"
+    },
     "groups": []
   }
 }

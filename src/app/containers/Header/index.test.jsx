@@ -11,27 +11,14 @@ import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 import { service as serbianServiceConfig } from '#lib/config/services/serbian';
 
 const defaultToggleState = {
-  test: {
-    navOnArticles: {
-      enabled: true,
-    },
-    scriptLink: {
-      enabled: true,
-    },
-    variantCookie: {
-      enabled: true,
-    },
+  navOnArticles: {
+    enabled: true,
   },
-  live: {
-    navOnArticles: {
-      enabled: false,
-    },
-    scriptLink: {
-      enabled: true,
-    },
-    variantCookie: {
-      enabled: true,
-    },
+  scriptLink: {
+    enabled: true,
+  },
+  variantCookie: {
+    enabled: true,
   },
 };
 
@@ -98,16 +85,6 @@ describe(`Header`, () => {
   it('should output a nav bar for articles', () => {
     render(HeaderContainerWithContext({ pageType: 'article' }));
     expect(document.querySelector(`header nav`)).not.toBeNull();
-  });
-
-  it('should NOT output a nav bar for articles on live', () => {
-    render(
-      HeaderContainerWithContext({
-        pageType: 'article',
-        bbcOrigin: 'https://www.bbc.com',
-      }),
-    );
-    expect(document.querySelector(`header nav`)).toBeNull();
   });
 
   it('should render a Brand with a Skip to content link, linking to #content', () => {

@@ -1,0 +1,199 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:uzbek/23279019",
+    "locators": {
+      "assetUri": "/uzbek/23279019",
+      "cpsUrn": "urn:bbc:content:assetUri:uzbek/23279019",
+      "curie": "http://www.bbc.co.uk/asset/2f5eada4-d499-df47-ab44-50388599e251",
+      "assetId": "23279019"
+    },
+    "type": "MAP",
+    "createdBy": "uzbek-v6",
+    "language": "uz-Cyrl",
+    "lastUpdated": 1588335939805,
+    "firstPublished": 1585042751000,
+    "lastPublished": 1585042751000,
+    "timestamp": 1585042751000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "uzbek.media_asset.23279019.page",
+      "cps_asset_id": "23279019"
+    },
+    "passport": { "taggings": [] },
+    "tags": {},
+    "version": "v1.2.1",
+    "blockTypes": ["media", "paragraph", "image"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p01qjbpq",
+        "subType": "clip",
+        "format": "video",
+        "title": "koala",
+        "synopses": {
+          "short": "koajaa",
+          "long": "koala ijm aus",
+          "medium": "australia"
+        },
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01qjbvt.jpg",
+        "embedding": true,
+        "advertising": false,
+        "caption": "nnnnn",
+        "versions": [
+          {
+            "versionId": "p01qjbvb",
+            "types": ["Editorial"],
+            "duration": 15,
+            "durationISO8601": "PT15S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1582890367000
+          }
+        ],
+        "type": "media"
+      },
+      {
+        "text": "Koʻpchilik shariat qoidalarining qattiqqoʻlligini tanqidga tutadi. Biroq Malayziyadagi Oliy Shariat mahkamasining ayol hakamlaridan biri aksar musulmonlar istiqomat qiladigan ushbu mamlakatdagi ayollar huquqini muhofaza qilishni oʻz vazifasi, deb biladi.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Hakam Nanni Shushayda bir kunda beshdan ortiq sud ishiga raislik qiladi va haftasiga 80 taga yaqin shikoyatni tinglaydi.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Islomning moʻtadil koʻrinishi koʻproq ommalashgan Malayziyada shariat qonunlari taʼsiri tinimsiz oshib bormoqda. Ikki tomonlama huquqiy tizim mavjud mazkur mamlakatning minglab musulmon fuqarolari axloqiy va oilaviy masalalarni hal etishda shariat qonunlariga murojaat etadilar. Musulmon boʻlmagan aholi esa dunyoviy qonunlarga amal qiladi.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Hakam Shushayda meros boʻlashishdan tortib zinoga taalluqli mojarolarga qadar boʻlgan ishlarni koʻrib chiqish bilan shugʻullanadi.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ammo uning asosiy mutaxassisligi bola huquqlari va koʻpxotinlik masalalarini hal etishga asoslangan.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Shushayda xonim biror erkakning xotin ustiga xotin olishiga ruxsat berishdan oldin koʻplab omillarni koʻrib chiqishi haqida soʻzlaydi.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Har bir ish oʻzgacha va murakkab. Siz Islom qonunlarini umumlashtirib, erkaklarning huquqi ayollarnikidan yuqori, deya olmaysiz. Men ana shu notoʻgʻri qarashni toʻgʻrilamoq mening istagim,&quot; deydi u.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "63733078",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/153F9/test/_63733078_coronavirus.jpg",
+        "path": "/cpsdevpb/153F9/test/_63733078_coronavirus.jpg",
+        "height": 351,
+        "width": 624,
+        "altText": "corona",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Koʻpxotinlikka asoslangan turmush boshlamoqchi boʻlganlarning bari hakam Shushaydaning qoshida hozir boʻlishi zarur.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "MAP Uzbek Latin video",
+      "headline": "MAP Uzbek Latin video"
+    },
+    "locators": {
+      "assetUri": "/uzbek/23279019",
+      "cpsUrn": "urn:bbc:content:assetUri:uzbek/23279019",
+      "curie": "http://www.bbc.co.uk/asset/2f5eada4-d499-df47-ab44-50388599e251",
+      "assetId": "23279019"
+    },
+    "summary": "MAP Uzbek Latin video",
+    "timestamp": 1585042751000,
+    "language": "uz-Cyrl",
+    "passport": { "taggings": [] },
+    "media": {
+      "id": "p01qjbpq",
+      "subType": "clip",
+      "format": "video",
+      "title": "koala",
+      "synopses": {
+        "short": "koajaa",
+        "long": "koala ijm aus",
+        "medium": "australia"
+      },
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01qjbvt.jpg",
+      "embedding": true,
+      "advertising": false,
+      "caption": "nnnnn",
+      "versions": [
+        {
+          "versionId": "p01qjbvb",
+          "types": ["Editorial"],
+          "duration": 15,
+          "durationISO8601": "PT15S",
+          "warnings": {},
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1582890367000
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "63733077",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/12CE9/test/_63733077_p01qjbvt.jpg",
+      "path": "/cpsdevpb/12CE9/test/_63733077_p01qjbvt.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "australia",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:uzbek/23279019",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Бош саҳифа",
+      "uri": "/uzbek/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Ўзбек тилидаги янгиликлар",
+      "uri": "/uzbek",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

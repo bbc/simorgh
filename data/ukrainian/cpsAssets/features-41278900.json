@@ -47,10 +47,7 @@
           "thingLabel": "Environment",
           "thingUri": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
           "thingId": "0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
+          "thingType": ["Thing", "Theme"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Natural_environment",
             "http://www.wikidata.org/entity/Q43619"
@@ -68,10 +65,7 @@
           "thingLabel": "Science",
           "thingUri": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
           "thingId": "0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
+          "thingType": ["Thing", "Theme"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Science",
             "http://www.wikidata.org/entity/Q336"
@@ -89,10 +83,7 @@
           "thingLabel": "Culture",
           "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
           "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
+          "thingType": ["Thing", "Theme"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Culture",
             "http://www.wikidata.org/entity/Q11042"
@@ -109,9 +100,7 @@
       ]
     },
     "version": "v1.1.4",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

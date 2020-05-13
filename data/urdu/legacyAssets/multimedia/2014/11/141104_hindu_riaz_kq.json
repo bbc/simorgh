@@ -22,7 +22,7 @@
     "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "35668404" },
     "tags": {},
     "version": "v1.0.10",
-    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "blockTypes": ["legacyMedia", "paragraph"],
     "includeComments": false
   },
   "content": {
@@ -44,7 +44,10 @@
     ]
   },
   "promo": {
-    "headlines": { "shortHeadline": "سندھ کے ہندو عزادار", "headline": "سندھ کے ہندو عزادار" },
+    "headlines": {
+      "shortHeadline": "سندھ کے ہندو عزادار",
+      "headline": "سندھ کے ہندو عزادار"
+    },
     "locators": {
       "assetUri": "/urdu/multimedia/2014/11/141104_hindu_riaz_kq",
       "cpsUrn": "urn:bbc:content:assetUri:urdu/multimedia/2014/11/141104_hindu_riaz_kq",
@@ -77,8 +80,18 @@
     "type": "cps"
   },
   "relatedContent": {
-    "section": { "subType": "index", "name": "ملٹی میڈیا", "uri": "/urdu/multimedia", "type": "simple" },
-    "site": { "subType": "site", "name": "BBCUrdu.com", "uri": "/urdu", "type": "simple" },
+    "section": {
+      "subType": "index",
+      "name": "ملٹی میڈیا",
+      "uri": "/urdu/multimedia",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBCUrdu.com",
+      "uri": "/urdu",
+      "type": "simple"
+    },
     "groups": [
       {
         "type": "see-alsos",

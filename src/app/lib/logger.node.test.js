@@ -129,7 +129,7 @@ describe('Logger node - for the server', () => {
           });
           expect(winston.format.simple).toHaveBeenCalled();
           expect(winston.format.timestamp).toHaveBeenCalledWith({
-            format: 'YYYY-MM-DD HH:mm:ss',
+            format: 'YYYY-MM-DD HH:mm:ss.SSS',
           });
           expect(winston.createLogger).toHaveBeenCalledWith({
             format: 'Combine Mock',

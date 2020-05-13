@@ -1,0 +1,223 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:afrique/region-23278969",
+    "locators": {
+      "assetUri": "/afrique/region-23278969",
+      "cpsUrn": "urn:bbc:content:assetUri:afrique/region-23278969",
+      "curie": "http://www.bbc.co.uk/asset/3ffb6bb9-a7fd-0747-8695-d219c4a67389",
+      "assetId": "23278969"
+    },
+    "type": "MAP",
+    "createdBy": "afrique-v6",
+    "language": "fr",
+    "lastUpdated": 1588335913810,
+    "firstPublished": 1585037532000,
+    "lastPublished": 1585037532000,
+    "timestamp": 1585037532000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "afrique.africa.media_asset.23278969.page",
+      "cps_asset_id": "23278969"
+    },
+    "passport": { "taggings": [] },
+    "tags": {},
+    "version": "v1.2.1",
+    "blockTypes": ["media", "paragraph", "list", "heading", "image"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p01k6msm",
+        "subType": "clip",
+        "format": "video",
+        "title": "Five things ants can teach us about management",
+        "synopses": {
+          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+        },
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+        "versions": [
+          {
+            "versionId": "p01k6msp",
+            "types": ["Original"],
+            "duration": 191,
+            "durationISO8601": "PT3M11S",
+            "warnings": {
+              "short": "Contains strong language and adult humour.",
+              "long": "Contains strong language and adult humour."
+            },
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1540218932000
+          }
+        ],
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "African French is the generic name of the varieties of a French language spoken by an estimated 430 million people in Africa spread across 29 francophone countries.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Africa is thus the continent with the most French speakers in the world. In each of the francophone African countries, French is spoken with local variations in pronunciation and vocabulary. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "There are many different varieties of African French, but they can be broadly grouped into four categories:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<link><caption>the French spoken by people in West and Central Africa - spoken altogether by about 75 million people, as either a first or second language.</caption><altText>wikipedia</altText><url href=\"https://en.wikipedia.org/wiki/African_French\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<bold><italic> the French variety spoken by Maghrebis and Berbers in Northwest Africa (see Maghreb French), which has about 36 million first and second language speakers.</italic></bold>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<bold>the French variety spoken in Djibouti in the Horn of Africa.</bold>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<italic>the French variety spoken by Creoles in the Indian Ocean (Réunion, Mauritius and Seychelles), which has around 1.6 million first and second language speakers. The French spoken in this region is not to be confused with the French-based creole languages, which are also spoken in the area.</italic>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "TEST test 123 !\"£$%%^&*()<>?/",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "Afrique test page",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "63733052",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/61C9/test/_63733052_300px-francophone_africa.png",
+        "path": "/cpsdevpb/61C9/test/_63733052_300px-francophone_africa.png",
+        "height": 549,
+        "width": 976,
+        "altText": "map",
+        "caption": "map test caption {}:@~<>?[]-=+_",
+        "copyrightHolder": "Wikipedia",
+        "positionHint": "full-width",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Afrique test video clip - Five things ants can teach us about management",
+      "headline": "Afrique test video clip - They may be tiny, but us humans could learn a thing or two from ants."
+    },
+    "locators": {
+      "assetUri": "/afrique/region-23278969",
+      "cpsUrn": "urn:bbc:content:assetUri:afrique/region-23278969",
+      "curie": "http://www.bbc.co.uk/asset/3ffb6bb9-a7fd-0747-8695-d219c4a67389",
+      "assetId": "23278969"
+    },
+    "summary": "afrique ants",
+    "timestamp": 1585037532000,
+    "language": "fr",
+    "passport": { "taggings": [] },
+    "media": {
+      "id": "p01k6msm",
+      "subType": "clip",
+      "format": "video",
+      "title": "Five things ants can teach us about management",
+      "synopses": {
+        "short": "They may be tiny, but us humans could learn a thing or two from ants."
+      },
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+      "versions": [
+        {
+          "versionId": "p01k6msp",
+          "types": ["Original"],
+          "duration": 191,
+          "durationISO8601": "PT3M11S",
+          "warnings": {
+            "short": "Contains strong language and adult humour.",
+            "long": "Contains strong language and adult humour."
+          },
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1540218932000
+        }
+      ],
+      "imageCopyright": "BBC",
+      "type": "media"
+    },
+    "id": "urn:bbc:ares::asset:afrique/region-23278969",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Afrique",
+      "uri": "/afrique/region",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Afrique",
+      "uri": "/afrique",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

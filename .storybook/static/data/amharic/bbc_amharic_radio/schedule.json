@@ -1,0 +1,952 @@
+{
+  "schedules": [
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574357828000,
+      "publishedTimeStart": 1575307787000,
+      "publishedTimeEnd": 1575308670000,
+      "publishedTimeDuration": "PT14M43S",
+      "transmissionTimeStart": 1575307787000,
+      "transmissionTimeEnd": 1575308670000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtq23.imi:ws.bbc.co.uk/AMHAR1575307787",
+        "pid": "p07vqcwt"
+      },
+      "brand": {
+        "pid": "w13xttnt",
+        "title": "ቢቢሲ አማርኛ ዜና",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5s0",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqtq23"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574357829000,
+      "publishedTimeStart": 1575308670000,
+      "publishedTimeEnd": 1575308970000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575308670000,
+      "transmissionTimeEnd": 1575308970000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtpyq.imi:ws.bbc.co.uk/AMHAR1575308670",
+        "pid": "p07vqcww"
+      },
+      "brand": {
+        "pid": "w13xttnv",
+        "title": "ቢቢሲ አማርኛ የእንግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnv.jpg",
+        "synopses": {
+          "short": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+          "medium": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5nm",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3csz5nm.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqtpyq"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574361382000,
+      "publishedTimeStart": 1575311370000,
+      "publishedTimeEnd": 1575312270000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575311387000,
+      "transmissionTimeEnd": 1575312270000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtq23.imi:ws.bbc.co.uk/AMHAR1575311370",
+        "pid": "p07vqjb3"
+      },
+      "brand": {
+        "pid": "w13xttnt",
+        "title": "ቢቢሲ አማርኛ ዜና",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5s0",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqtq23"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574361377000,
+      "publishedTimeStart": 1575312270000,
+      "publishedTimeEnd": 1575312570000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575312270000,
+      "transmissionTimeEnd": 1575312570000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtpyq.imi:ws.bbc.co.uk/AMHAR1575312270",
+        "pid": "p07vqj92"
+      },
+      "brand": {
+        "pid": "w13xttnv",
+        "title": "ቢቢሲ አማርኛ የእንግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnv.jpg",
+        "synopses": {
+          "short": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+          "medium": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5nm",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3csz5nm.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqtpyq"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574364989000,
+      "publishedTimeStart": 1575314970000,
+      "publishedTimeEnd": 1575315870000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575314987000,
+      "transmissionTimeEnd": 1575315870000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtq23.imi:ws.bbc.co.uk/AMHAR1575314970",
+        "pid": "p07vqqjf"
+      },
+      "brand": {
+        "pid": "w13xttnt",
+        "title": "ቢቢሲ አማርኛ ዜና",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5s0",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqtq23"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574364994000,
+      "publishedTimeStart": 1575315870000,
+      "publishedTimeEnd": 1575316170000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575315870000,
+      "transmissionTimeEnd": 1575316170000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtpyq.imi:ws.bbc.co.uk/AMHAR1575315870",
+        "pid": "p07vqqk8"
+      },
+      "brand": {
+        "pid": "w13xttnv",
+        "title": "ቢቢሲ አማርኛ የእንግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnv.jpg",
+        "synopses": {
+          "short": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+          "medium": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5nm",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3csz5nm.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqtpyq"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574368562000,
+      "publishedTimeStart": 1575318570000,
+      "publishedTimeEnd": 1575319470000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575318587000,
+      "transmissionTimeEnd": 1575319470000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtq23.imi:ws.bbc.co.uk/AMHAR1575318570",
+        "pid": "p07vqtbl"
+      },
+      "brand": {
+        "pid": "w13xttnt",
+        "title": "ቢቢሲ አማርኛ ዜና",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5s0",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqtq23"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574368563000,
+      "publishedTimeStart": 1575319470000,
+      "publishedTimeEnd": 1575319770000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575319470000,
+      "transmissionTimeEnd": 1575319770000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtpyq.imi:ws.bbc.co.uk/AMHAR1575319470",
+        "pid": "p07vqtbm"
+      },
+      "brand": {
+        "pid": "w13xttnv",
+        "title": "ቢቢሲ አማርኛ የእንግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnv.jpg",
+        "synopses": {
+          "short": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+          "medium": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5nm",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3csz5nm.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqtpyq"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574444172000,
+      "publishedTimeStart": 1575394187000,
+      "publishedTimeEnd": 1575395070000,
+      "publishedTimeDuration": "PT14M43S",
+      "transmissionTimeStart": 1575394187000,
+      "transmissionTimeEnd": 1575395070000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtq4c.imi:ws.bbc.co.uk/AMHAR1575394187",
+        "pid": "p07vtfrh"
+      },
+      "brand": {
+        "pid": "w13xttnt",
+        "title": "ቢቢሲ አማርኛ ዜና",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5v8",
+        "presentationTitle": "03/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqtq4c"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574444173000,
+      "publishedTimeStart": 1575395070000,
+      "publishedTimeEnd": 1575395370000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575395070000,
+      "transmissionTimeEnd": 1575395370000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtpzv.imi:ws.bbc.co.uk/AMHAR1575395070",
+        "pid": "p07vtfrk"
+      },
+      "brand": {
+        "pid": "w13xttnv",
+        "title": "ቢቢሲ አማርኛ የእንግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnv.jpg",
+        "synopses": {
+          "short": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+          "medium": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5pr",
+        "presentationTitle": "03/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3csz5pr.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqtpzv"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574447772000,
+      "publishedTimeStart": 1575397770000,
+      "publishedTimeEnd": 1575398670000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575397787000,
+      "transmissionTimeEnd": 1575398670000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtq4c.imi:ws.bbc.co.uk/AMHAR1575397770",
+        "pid": "p07vtm8g"
+      },
+      "brand": {
+        "pid": "w13xttnt",
+        "title": "ቢቢሲ አማርኛ ዜና",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5v8",
+        "presentationTitle": "03/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqtq4c"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574447777000,
+      "publishedTimeStart": 1575398670000,
+      "publishedTimeEnd": 1575398970000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575398670000,
+      "transmissionTimeEnd": 1575398970000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtpzv.imi:ws.bbc.co.uk/AMHAR1575398670",
+        "pid": "p07vtm8p"
+      },
+      "brand": {
+        "pid": "w13xttnv",
+        "title": "ቢቢሲ አማርኛ የእንግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnv.jpg",
+        "synopses": {
+          "short": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+          "medium": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5pr",
+        "presentationTitle": "03/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3csz5pr.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqtpzv"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574451373000,
+      "publishedTimeStart": 1575401370000,
+      "publishedTimeEnd": 1575402270000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575401387000,
+      "transmissionTimeEnd": 1575402270000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtq4c.imi:ws.bbc.co.uk/AMHAR1575401370",
+        "pid": "p07vtrr8"
+      },
+      "brand": {
+        "pid": "w13xttnt",
+        "title": "ቢቢሲ አማርኛ ዜና",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5v8",
+        "presentationTitle": "03/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqtq4c"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574451378000,
+      "publishedTimeStart": 1575402270000,
+      "publishedTimeEnd": 1575402570000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575402270000,
+      "transmissionTimeEnd": 1575402570000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtpzv.imi:ws.bbc.co.uk/AMHAR1575402270",
+        "pid": "p07vtrrj"
+      },
+      "brand": {
+        "pid": "w13xttnv",
+        "title": "ቢቢሲ አማርኛ የእንግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnv.jpg",
+        "synopses": {
+          "short": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+          "medium": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5pr",
+        "presentationTitle": "03/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3csz5pr.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqtpzv"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574454963000,
+      "publishedTimeStart": 1575404970000,
+      "publishedTimeEnd": 1575405870000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575404987000,
+      "transmissionTimeEnd": 1575405870000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtq4c.imi:ws.bbc.co.uk/AMHAR1575404970",
+        "pid": "p07vtw2x"
+      },
+      "brand": {
+        "pid": "w13xttnt",
+        "title": "ቢቢሲ አማርኛ ዜና",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5v8",
+        "presentationTitle": "03/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqtq4c"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574454963000,
+      "publishedTimeStart": 1575405870000,
+      "publishedTimeEnd": 1575406170000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575405870000,
+      "transmissionTimeEnd": 1575406170000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtpzv.imi:ws.bbc.co.uk/AMHAR1575405870",
+        "pid": "p07vtw2z"
+      },
+      "brand": {
+        "pid": "w13xttnv",
+        "title": "ቢቢሲ አማርኛ የእንግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnv.jpg",
+        "synopses": {
+          "short": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+          "medium": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5pr",
+        "presentationTitle": "03/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3csz5pr.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqtpzv"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574530563000,
+      "publishedTimeStart": 1575480587000,
+      "publishedTimeEnd": 1575481470000,
+      "publishedTimeDuration": "PT14M43S",
+      "transmissionTimeStart": 1575480587000,
+      "transmissionTimeEnd": 1575481470000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtq5h.imi:ws.bbc.co.uk/AMHAR1575480587",
+        "pid": "p07vwbcf"
+      },
+      "brand": {
+        "pid": "w13xttnt",
+        "title": "ቢቢሲ አማርኛ ዜና",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5wd",
+        "presentationTitle": "04/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqtq5h"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574530563000,
+      "publishedTimeStart": 1575481470000,
+      "publishedTimeEnd": 1575481770000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575481470000,
+      "transmissionTimeEnd": 1575481770000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtpyq.imi:ws.bbc.co.uk/AMHAR1575481470",
+        "pid": "p07vwbcg"
+      },
+      "brand": {
+        "pid": "w13xttnv",
+        "title": "ቢቢሲ አማርኛ የእንግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnv.jpg",
+        "synopses": {
+          "short": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+          "medium": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5nm",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3csz5nm.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqtpyq"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574534310000,
+      "publishedTimeStart": 1575484170000,
+      "publishedTimeEnd": 1575485070000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575484187000,
+      "transmissionTimeEnd": 1575485070000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtq5h.imi:ws.bbc.co.uk/AMHAR1575484170",
+        "pid": "p07vwhf4"
+      },
+      "brand": {
+        "pid": "w13xttnt",
+        "title": "ቢቢሲ አማርኛ ዜና",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5wd",
+        "presentationTitle": "04/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqtq5h"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574534312000,
+      "publishedTimeStart": 1575485070000,
+      "publishedTimeEnd": 1575485370000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575485070000,
+      "transmissionTimeEnd": 1575485370000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtpyq.imi:ws.bbc.co.uk/AMHAR1575485070",
+        "pid": "p07vwhf6"
+      },
+      "brand": {
+        "pid": "w13xttnv",
+        "title": "ቢቢሲ አማርኛ የእንግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnv.jpg",
+        "synopses": {
+          "short": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+          "medium": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5nm",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3csz5nm.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqtpyq"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574537896000,
+      "publishedTimeStart": 1575487770000,
+      "publishedTimeEnd": 1575488670000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575487787000,
+      "transmissionTimeEnd": 1575488670000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtq5h.imi:ws.bbc.co.uk/AMHAR1575487770",
+        "pid": "p07vwkgp"
+      },
+      "brand": {
+        "pid": "w13xttnt",
+        "title": "ቢቢሲ አማርኛ ዜና",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5wd",
+        "presentationTitle": "04/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqtq5h"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574537897000,
+      "publishedTimeStart": 1575488670000,
+      "publishedTimeEnd": 1575488970000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575488670000,
+      "transmissionTimeEnd": 1575488970000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtpyq.imi:ws.bbc.co.uk/AMHAR1575488670",
+        "pid": "p07vwkgq"
+      },
+      "brand": {
+        "pid": "w13xttnv",
+        "title": "ቢቢሲ አማርኛ የእንግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnv.jpg",
+        "synopses": {
+          "short": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+          "medium": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5nm",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3csz5nm.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqtpyq"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574541398000,
+      "publishedTimeStart": 1575491370000,
+      "publishedTimeEnd": 1575492270000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575491387000,
+      "transmissionTimeEnd": 1575492270000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtq5h.imi:ws.bbc.co.uk/AMHAR1575491370",
+        "pid": "p07vwmt1"
+      },
+      "brand": {
+        "pid": "w13xttnt",
+        "title": "ቢቢሲ አማርኛ ዜና",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5wd",
+        "presentationTitle": "04/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "synopses": {
+          "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
+          "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqtq5h"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_amharic_radio",
+      "serviceId": "bbc_amharic_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1893488400000,
+      "publishedTimeStart": 1893488400000,
+      "publishedTimeEnd": 1893488700000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1893488400000,
+      "transmissionTimeEnd": 1893488700000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtpyq.imi:ws.bbc.co.uk/AMHAR1575492270",
+        "pid": "p07vwmt2"
+      },
+      "brand": {
+        "pid": "w13xttnv",
+        "title": "ቢቢሲ አማርኛ የእንግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnv.jpg",
+        "synopses": {
+          "short": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ",
+          "medium": "የ5 ደቂቃ የጀማሪ፣ የመለስተኛና የከፍተኛ ደረጃ የእግሊዝኛ ቋንቋ ትምህርት ክፍለ-ግዜ"
+        }
+      },
+      "episode": {
+        "pid": "w3csz5nm",
+        "presentationTitle": "01/01/2030 09:00 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3csz5nm.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqtpyq"
+      }
+    }
+  ]
+}

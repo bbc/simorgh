@@ -1,0 +1,158 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/ukrainian/meta/dps/junk/2016/10/emp/161025_tc2_testmap1.emp.xml",
+        "id": "17698757",
+        "image": {
+          "altText": "",
+          "copyrightHolder": "",
+          "height": 360,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/10/23/151023094050_seaside_640x360_agent_nocredit.jpg",
+          "id": "17698757",
+          "path": "/amz/worldservice/test/assets/images/2015/10/23/151023094050_seaside_640x360_agent_nocredit.jpg",
+          "subType": "thumbnail",
+          "type": "image",
+          "width": 640
+        },
+        "live": false,
+        "playlist": [
+          {
+            "bitrate": "168000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161025_tc2_testmap1_16x9_lo.mp4"
+          },
+          {
+            "bitrate": "320000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161025_tc2_testmap1_16x9_med.mp4"
+          },
+          {
+            "bitrate": "904000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161025_tc2_testmap1_16x9_hi.mp4"
+          }
+        ],
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Цивільні мешканці міста Мосул два роки жили за жорстокими правилами, які встановили бойовики так званої Ісламської Держави. Зараз мешканців очікує ще одне випробування - урядові війська готують штурм Мосула. Ці голоси людей з фронтового міста записали журналісти радіостанції Аль-Гхад, що мовить із міста Ірбіл на півночі Іраку. Відеоматеріал журналістів ВВС Надера Ібрахіма і Діни Демрдаш.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": { "cps_asset_id": "17698757", "cps_asset_type": "map" },
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "createdBy": "ukrainian",
+    "firstPublished": 1477391044000,
+    "id": "urn:bbc:ares::asset:ukrainian/entertainment/2016/10/161025_tc2_testmap1",
+    "includeComments": false,
+    "language": "uk",
+    "lastPublished": 1477404195000,
+    "lastUpdated": 1585065298491,
+    "locators": {
+      "assetId": "17698757",
+      "assetUri": "/ukrainian/entertainment/2016/10/161025_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/entertainment/2016/10/161025_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/f8d96b70-9a9c-11e6-82b9-3462d7e7dbc4"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1477391044000,
+    "type": "MAP",
+    "version": "v1.1.8"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Вчені: титанозаври прийшли в Австралію через Антарктиду",
+      "shortHeadline": "Вчені: титанозаври прийшли в Австралію через Антарктиду"
+    },
+    "id": "urn:bbc:ares::asset:ukrainian/entertainment/2016/10/161025_tc2_testmap1",
+    "indexImage": {
+      "altText": "",
+      "copyrightHolder": "BBC",
+      "height": 81,
+      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226143043_bruce_forsyth_144x81_bbc.jpg",
+      "id": "d5e214",
+      "path": "/amz/worldservice/test/assets/images/2015/02/26/150226143043_bruce_forsyth_144x81_bbc.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 144
+    },
+    "language": "uk",
+    "locators": {
+      "assetId": "17698757",
+      "assetUri": "/ukrainian/entertainment/2016/10/161025_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/entertainment/2016/10/161025_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/f8d96b70-9a9c-11e6-82b9-3462d7e7dbc4"
+    },
+    "media": {
+      "aspectRatio": "16:9",
+      "format": "video",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/ukrainian/meta/dps/junk/2016/10/emp/161025_tc2_testmap1.emp.xml",
+      "id": "17698757",
+      "image": {
+        "altText": "",
+        "copyrightHolder": "",
+        "height": 360,
+        "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/10/23/151023094050_seaside_640x360_agent_nocredit.jpg",
+        "id": "17698757",
+        "path": "/amz/worldservice/test/assets/images/2015/10/23/151023094050_seaside_640x360_agent_nocredit.jpg",
+        "subType": "thumbnail",
+        "type": "image",
+        "width": 640
+      },
+      "live": false,
+      "playlist": [
+        {
+          "bitrate": "168000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161025_tc2_testmap1_16x9_lo.mp4"
+        },
+        {
+          "bitrate": "320000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161025_tc2_testmap1_16x9_med.mp4"
+        },
+        {
+          "bitrate": "904000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/ukrainian/dps/junk/2016/10/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161025_tc2_testmap1_16x9_hi.mp4"
+        }
+      ],
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": { "taggings": [] },
+    "summary": "Австралійській вчені повідомили про відкриття нового виду величезних травоїдних динозаврів – савванозаврів (Savannasaurus), що належать до родини титанозаврів.",
+    "timestamp": 1477391044000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Життя",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/ukrainian/entertainment"
+    },
+    "site": {
+      "name": "BBCUkrainian.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/ukrainian"
+    }
+  }
+}

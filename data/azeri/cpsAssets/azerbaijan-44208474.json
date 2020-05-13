@@ -45,10 +45,7 @@
           "thingLabel": "History",
           "thingUri": "http://www.bbc.co.uk/things/03eb3674-6190-4cd7-8104-1a00991d67a3#id",
           "thingId": "03eb3674-6190-4cd7-8104-1a00991d67a3",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
+          "thingType": ["Theme", "Thing"],
           "thingSameAs": [
             "http://dbpedia.org/resource/History",
             "http://www.wikidata.org/entity/Q309"
@@ -66,14 +63,8 @@
           "thingLabel": "Azerbaijan",
           "thingUri": "http://www.bbc.co.uk/things/0f8e45e2-6499-44b1-be1f-1a3dd81e8af7#id",
           "thingId": "0f8e45e2-6499-44b1-be1f-1a3dd81e8af7",
-          "thingType": [
-            "Place",
-            "Thing",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/587116/"
-          ],
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/587116/"],
           "topicName": "Azərbaycan",
           "topicId": "c7zp571g7y7t",
           "curationList": [
@@ -87,10 +78,7 @@
           "thingLabel": "Society",
           "thingUri": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
           "thingId": "5307a8d9-f620-40f5-92d4-f99c919a6ffa",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
+          "thingType": ["Theme", "Thing"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Society",
             "http://www.wikidata.org/entity/Q8425"
@@ -100,10 +88,7 @@
           "thingLabel": "Culture",
           "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
           "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
+          "thingType": ["Theme", "Thing"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Culture",
             "http://www.wikidata.org/entity/Q11042"
@@ -113,13 +98,8 @@
           "thingLabel": "Politics",
           "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
           "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Politics"
-          ],
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Politics"],
           "topicName": "Siyasət",
           "topicId": "cpzd41kyk1gt",
           "curationList": [
@@ -133,10 +113,7 @@
           "thingLabel": "Human rights",
           "thingUri": "http://www.bbc.co.uk/things/8b04c2e8-5409-4e7d-9877-3ccaf04727af#id",
           "thingId": "8b04c2e8-5409-4e7d-9877-3ccaf04727af",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
+          "thingType": ["Theme", "Thing"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Human_rights",
             "http://www.wikidata.org/entity/Q8458"
@@ -154,10 +131,7 @@
           "thingLabel": "Azerbaijan Democratic Republic 100th anniversary",
           "thingUri": "http://www.bbc.co.uk/things/9e6f8e15-894a-45cb-9db9-d8881e8e6ae2#id",
           "thingId": "9e6f8e15-894a-45cb-9db9-d8881e8e6ae2",
-          "thingType": [
-            "Event",
-            "Thing"
-          ],
+          "thingType": ["Event", "Thing"],
           "thingSameAs": [],
           "topicName": "ADR-100",
           "topicId": "cr50yv616gxt",
@@ -172,10 +146,7 @@
           "thingLabel": "Caucasus",
           "thingUri": "http://www.bbc.co.uk/things/a86bc15e-ccd0-4ea9-9903-df3d4575a176#id",
           "thingId": "a86bc15e-ccd0-4ea9-9903-df3d4575a176",
-          "thingType": [
-            "Place",
-            "Thing"
-          ],
+          "thingType": ["Place", "Thing"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Caucasus",
             "http://www.wikidata.org/entity/Q18869"
@@ -185,20 +156,13 @@
           "thingLabel": "Law and order",
           "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
           "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Law"
-          ]
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Law"]
         }
       ]
     },
     "version": "v1.0.10",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

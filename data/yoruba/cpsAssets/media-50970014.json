@@ -4,14 +4,15 @@
     "locators": {
       "assetUri": "/yoruba/media-50970014",
       "cpsUrn": "urn:bbc:content:assetUri:yoruba/media-50970014",
-      "curie": "http://www.bbc.co.uk/asset/f7937009-e80f-a74b-9226-d36edc716ad5"
+      "curie": "http://www.bbc.co.uk/asset/f7937009-e80f-a74b-9226-d36edc716ad5",
+      "assetId": "50970014"
     },
     "type": "PGL",
     "createdBy": "yoruba-v6",
     "language": "yo",
-    "lastUpdated": 1577949042967,
+    "lastUpdated": 1588713780878,
     "firstPublished": 1577948757000,
-    "lastPublished": 1577949034000,
+    "lastPublished": 1577948757000,
     "timestamp": 1577948757000,
     "options": {
       "isIgorSeoTagsEnabled": false,
@@ -50,29 +51,11 @@
     "tags": {
       "about": [
         {
-          "thingLabel": "Society",
-          "thingUri": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
-          "thingId": "5307a8d9-f620-40f5-92d4-f99c919a6ffa",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Society",
-            "http://www.wikidata.org/entity/Q8425"
-          ]
-        },
-        {
-          "thingLabel": "Politics",
+          "thingLabel": "Eto Iselu",
           "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
           "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Politics"
-          ],
+          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Politics"],
           "topicName": "Eto Iselu",
           "topicId": "cyx5k5r3g5nt",
           "curationList": [
@@ -83,16 +66,29 @@
           ]
         },
         {
-          "thingLabel": "Nigeria politics",
+          "thingLabel": "Awujọ",
+          "thingUri": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
+          "thingId": "5307a8d9-f620-40f5-92d4-f99c919a6ffa",
+          "thingType": ["core:Theme", "tagging:TagConcept", "core:Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Society",
+            "http://www.wikidata.org/entity/Q8425"
+          ],
+          "topicName": "Awujọ",
+          "topicId": "c1gdqd9j0w8t",
+          "curationList": [
+            {
+              "curationId": "87af26ca-3caf-4a97-9f27-32665cb11e63",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Eto Iselu Naijiria",
           "thingUri": "http://www.bbc.co.uk/things/7d65828a-85c1-41f4-96cf-c758da75e401#id",
           "thingId": "7d65828a-85c1-41f4-96cf-c758da75e401",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Politics_of_Nigeria"
-          ],
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Politics_of_Nigeria"],
           "topicName": "Eto Iselu Naijiria",
           "topicId": "c404v45pnr8t",
           "curationList": [
@@ -103,14 +99,10 @@
           ]
         },
         {
-          "thingLabel": "Kwara state",
+          "thingLabel": "Ipinlẹ Kwara",
           "thingUri": "http://www.bbc.co.uk/things/cece4fd8-a9a3-4b50-bbc7-406ba2bccccb#id",
           "thingId": "cece4fd8-a9a3-4b50-bbc7-406ba2bccccb",
-          "thingType": [
-            "Thing",
-            "Place",
-            "geoname:GeoTagConcept"
-          ],
+          "thingType": ["core:Place", "core:Thing", "tagging:TagConcept"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Kwara_State",
             "http://sws.geonames.org/2332785/"
@@ -126,10 +118,8 @@
         }
       ]
     },
-    "version": "v1.1.4",
-    "blockTypes": [
-      "image"
-    ],
+    "version": "v1.2.1",
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {
@@ -276,10 +266,12 @@
     "locators": {
       "assetUri": "/yoruba/media-50970014",
       "cpsUrn": "urn:bbc:content:assetUri:yoruba/media-50970014",
-      "curie": "http://www.bbc.co.uk/asset/f7937009-e80f-a74b-9226-d36edc716ad5"
+      "curie": "http://www.bbc.co.uk/asset/f7937009-e80f-a74b-9226-d36edc716ad5",
+      "assetId": "50970014"
     },
     "summary": "Laago mẹrin idaji aarọ yii ni ijọba wa wo ile arugbo ti Bukola Saraki ni kí wọn ma wo tẹlẹ, ọrọ bẹ́yìn yọ.",
     "timestamp": 1577948757000,
+    "language": "yo",
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",

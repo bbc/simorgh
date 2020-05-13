@@ -57,9 +57,7 @@ export const sameDayTimestampsGenerator = ({ intervals, date }) => {
     );
   }
 
-  const startOfDayTimestamp = moment(date)
-    .startOf('day')
-    .valueOf();
+  const startOfDayTimestamp = moment(date).startOf('day').valueOf();
   const mockCurrentTimestamp = addTimeDifference(
     startOfDayTimestamp,
     intervals[0],

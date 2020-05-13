@@ -116,33 +116,39 @@ describe('ArticleTimestamp helper functions', () => {
     };
     it(`should return date format when firstPublished is not today`, () => {
       const firstPublished = timestampGenerator({ days: 5 });
-      expect(formatType({ firstPublished })).toBe(dateFormats.date);
+      expect(formatType({ firstPublished, datetimeLocale: 'en-gb' })).toBe(
+        dateFormats.date,
+      );
     });
 
     it(`should return date and time with timezone format when firstPublished is today`, () => {
       const firstPublished = timestampGenerator({ hours: 4 });
-      expect(formatType({ firstPublished })).toBe(dateFormats.dateTimeTimezone);
+      expect(formatType({ firstPublished, datetimeLocale: 'en-gb' })).toBe(
+        dateFormats.dateTimeTimezone,
+      );
     });
 
     it(`should return date format when lastPublished and firstPublished are not on the same day`, () => {
       const firstPublished = timestampGenerator({ days: 4 });
       const lastPublished = timestampGenerator({ days: 2 });
-      expect(formatType({ firstPublished, lastPublished })).toBe(
-        dateFormats.date,
-      );
+      expect(
+        formatType({ firstPublished, lastPublished, datetimeLocale: 'en-gb' }),
+      ).toBe(dateFormats.date);
     });
 
     it(`should return date and time with timezone format when firstPublished and lastPublished are on the same day and today`, () => {
       const firstPublished = timestampGenerator({ hours: 4 });
       const lastPublished = timestampGenerator({ hours: 2 });
-      expect(formatType({ firstPublished, lastPublished })).toBe(
-        dateFormats.dateTimeTimezone,
-      );
+      expect(
+        formatType({ firstPublished, lastPublished, datetimeLocale: 'en-gb' }),
+      ).toBe(dateFormats.dateTimeTimezone);
     });
 
     it(`should return date format when firstPublished is null`, () => {
       const firstPublished = null;
-      expect(formatType({ firstPublished })).toBe(dateFormats.date);
+      expect(formatType({ firstPublished, datetimeLocale: 'en-gb' })).toBe(
+        dateFormats.date,
+      );
     });
   });
 });

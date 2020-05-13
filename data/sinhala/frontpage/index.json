@@ -1548,9 +1548,7 @@
               "versions": [
                 {
                   "versionId": "p07fty0l",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 174,
                   "durationISO8601": "PT2M54S",
                   "warnings": {},
@@ -1617,9 +1615,7 @@
               "versions": [
                 {
                   "versionId": "p07fgrqq",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 160,
                   "durationISO8601": "PT2M40S",
                   "warnings": {},
@@ -1687,9 +1683,7 @@
               "versions": [
                 {
                   "versionId": "p07f74pr",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 45,
                   "durationISO8601": "PT45S",
                   "warnings": {},
@@ -1757,9 +1751,7 @@
               "versions": [
                 {
                   "versionId": "p07d0727",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 240,
                   "durationISO8601": "PT4M",
                   "warnings": {},
@@ -1826,9 +1818,7 @@
               "versions": [
                 {
                   "versionId": "p07dgq9y",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 163,
                   "durationISO8601": "PT2M43S",
                   "warnings": {},
@@ -1897,9 +1887,7 @@
               "versions": [
                 {
                   "versionId": "p07cxzlc",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 1711,
                   "durationISO8601": "PT28M31S",
                   "warnings": {},

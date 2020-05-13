@@ -246,9 +246,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {
@@ -427,7 +425,32 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:ck62z3rjwdeo"
     },
-    "summary": "",
+    "summary": {
+      "blocks": [
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": ""
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": ""
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        }
+      ]
+    },
     "timestamp": 1574853904923,
     "id": "urn:bbc:ares::article:ck62z3rjwdeo",
     "type": "cps"

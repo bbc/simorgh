@@ -51,14 +51,8 @@
           "thingLabel": "India",
           "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
           "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
-          "thingType": [
-            "Thing",
-            "Place",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/1269750/"
-          ],
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/1269750/"],
           "topicName": "भारत",
           "topicId": "ckdxnkz7607t",
           "curationList": [
@@ -72,14 +66,8 @@
           "thingLabel": "Uttar Pradesh",
           "thingUri": "http://www.bbc.co.uk/things/7c657c38-57a4-4d98-b283-f3b6a8b16bd9#id",
           "thingId": "7c657c38-57a4-4d98-b283-f3b6a8b16bd9",
-          "thingType": [
-            "Thing",
-            "Place",
-            "news:Place"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Uttar_Pradesh"
-          ],
+          "thingType": ["Thing", "Place", "news:Place"],
+          "thingSameAs": ["http://dbpedia.org/resource/Uttar_Pradesh"],
           "topicName": "उत्तर प्रदेश",
           "topicId": "c7zp510pgv8t",
           "curationList": [
@@ -93,10 +81,7 @@
           "thingLabel": "Diwali",
           "thingUri": "http://www.bbc.co.uk/things/9fc34042-7f4d-4e54-b23e-e92bacea49e4#id",
           "thingId": "9fc34042-7f4d-4e54-b23e-e92bacea49e4",
-          "thingType": [
-            "Thing",
-            "Event"
-          ],
+          "thingType": ["Thing", "Event"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Diwali",
             "http://www.wikidata.org/entity/Q10244"
@@ -114,10 +99,7 @@
           "thingLabel": "Ayodhya dispute",
           "thingUri": "http://www.bbc.co.uk/things/ee41140e-1a3d-4b34-8674-c6b005cba64a#id",
           "thingId": "ee41140e-1a3d-4b34-8674-c6b005cba64a",
-          "thingType": [
-            "Thing",
-            "Event"
-          ],
+          "thingType": ["Thing", "Event"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Ayodhya_dispute",
             "http://www.wikidata.org/entity/Q3522690"
@@ -134,9 +116,7 @@
       ]
     },
     "version": "v1.1.2",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

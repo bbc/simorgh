@@ -406,9 +406,7 @@
               "versions": [
                 {
                   "versionId": "p04y30lh",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 178,
                   "durationISO8601": "PT2M58S",
                   "warnings": {},

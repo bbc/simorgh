@@ -48,8 +48,8 @@ const liveRadioBulletinItem = {
   isLive: true,
 };
 
-const BulletinWithContext = item => (
-  <ServiceContextProvider service="igbo">
+const BulletinWithContext = (item, service = 'igbo') => (
+  <ServiceContextProvider service={service}>
     <BulletinContainer item={item} />
   </ServiceContextProvider>
 );
@@ -59,6 +59,11 @@ describe('Bulletin Container', () => {
     shouldMatchSnapshot(
       'should render a TV bulletin correctly',
       BulletinWithContext(tvBulletinItem),
+    );
+
+    shouldMatchSnapshot(
+      'should render a TV bulletin with lang attribute',
+      BulletinWithContext(tvBulletinItem, 'scotland'),
     );
 
     shouldMatchSnapshot(
@@ -82,19 +87,19 @@ describe('Bulletin Container', () => {
       const { container } = render(BulletinWithContext(liveTvBulletinItem));
       const span = container.getElementsByTagName('span')[1];
 
-      expect(span.textContent).toEqual('Lee Live, ');
+      expect(span.textContent).toEqual('NA EME UGBU A ');
     });
 
     it('should render the Live Radio offscreen text', () => {
       const { container } = render(BulletinWithContext(liveRadioBulletinItem));
       const span = container.getElementsByTagName('span')[1];
 
-      expect(span.textContent).toEqual('Gee ntị Live, ');
+      expect(span.textContent).toEqual('NA EME UGBU A ');
     });
 
     it('should render the LIVE label', () => {
       const { container } = render(BulletinWithContext(liveTvBulletinItem));
-      const span = container.getElementsByTagName('span')[2];
+      const span = container.getElementsByTagName('span')[1];
 
       expect(span.getAttribute('aria-hidden')).toBeDefined();
       expect(span.getAttribute('aria-hidden')).toEqual('true');

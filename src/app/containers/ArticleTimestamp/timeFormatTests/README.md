@@ -10,16 +10,16 @@ A couple of scenarios that we expect these tests would fail and need updating wo
 
 - Change in timestamp or timezone logic in `@bbc/moment-timezone-include`, `@bbc/psammead-locales` etc.
 
-- Change in the timeformat logic [here](../timeFormats) 
+- Change in the timeformat logic [here](../timeFormats)
 
 - Changes in DST times accross different timezones.
 
 - ... please add more if you find any
 
-
 ## Updating expected time formats
+
 From your local repository run this command from the root directory
+
 ```
 npx -p @babel/core -p @babel/node babel-node ./src/app/containers/ArticleTimestamp/timeFormatTests/generateTimeFormats.js
 ```
-

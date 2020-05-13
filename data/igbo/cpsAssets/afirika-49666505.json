@@ -51,23 +51,14 @@
           "thingLabel": "Robert Mugabe",
           "thingUri": "http://www.bbc.co.uk/things/45210c2a-374d-448b-a175-3471b1afca7e#id",
           "thingId": "45210c2a-374d-448b-a175-3471b1afca7e",
-          "thingType": [
-            "Thing",
-            "Person"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Robert_Mugabe"
-          ]
+          "thingType": ["Thing", "Person"],
+          "thingSameAs": ["http://dbpedia.org/resource/Robert_Mugabe"]
         },
         {
           "thingLabel": "Africa",
           "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
           "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
-          "thingType": [
-            "news:Place",
-            "Place",
-            "Thing"
-          ],
+          "thingType": ["news:Place", "Place", "Thing"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Africa",
             "http://sws.geonames.org/6255146/",
@@ -78,14 +69,8 @@
           "thingLabel": "Zimbabwe",
           "thingUri": "http://www.bbc.co.uk/things/f863965b-7b40-4e80-ad7a-6290d822e64f#id",
           "thingId": "f863965b-7b40-4e80-ad7a-6290d822e64f",
-          "thingType": [
-            "Thing",
-            "Place",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/878675/"
-          ],
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/878675/"],
           "topicId": "cnq68k0jr7zt",
           "curationList": [
             {
@@ -97,9 +82,7 @@
       ]
     },
     "version": "v1.0.10",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

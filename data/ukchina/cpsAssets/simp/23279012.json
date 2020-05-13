@@ -1,0 +1,178 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:ukchina/simp/23279012",
+    "locators": {
+      "assetUri": "/ukchina/simp/23279012",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/23279012",
+      "curie": "http://www.bbc.co.uk/asset/fcd02dcc-c7e7-f544-8999-8270fa95dab7",
+      "assetId": "23279012"
+    },
+    "type": "MAP",
+    "createdBy": "ukchina-v6",
+    "language": "zh-Hans",
+    "lastUpdated": 1588335962187,
+    "firstPublished": 1585039496000,
+    "lastPublished": 1585039496000,
+    "timestamp": 1585039496000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "ukchinasimp.media_asset.23279012.page",
+      "cps_asset_id": "23279012"
+    },
+    "passport": { "taggings": [] },
+    "tags": {},
+    "version": "v1.2.1",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p01plpyx",
+        "subType": "clip",
+        "format": "video",
+        "title": "Test UK China",
+        "synopses": {
+          "short": "Test UK China",
+          "long": "Test UK China",
+          "medium": "Test UK China"
+        },
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Test UK China",
+        "versions": [
+          {
+            "versionId": "p01plpyz",
+            "types": ["Original"],
+            "duration": 29,
+            "durationISO8601": "PT29S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1575388995000
+          }
+        ],
+        "type": "media"
+      },
+      {
+        "text": "即便在提倡生態保護的今天，老虎和其他瀕危物種還是會遭到人類的捕殺。對於這種現象，最好問一問偷獵者為什麼這樣做。只有充分理解他們的動機，才有望改變這種行為。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "老虎已經成為全球性瀕危物種。孟加拉國曾經生存著大量老虎，但現在數量已經不足100頭，其中大多數分佈於該國南部申達本（Sundarbans）地區廣袤的紅樹林地帶。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "在英國殖民時期，肆無忌憚的捕獵行為曾經導致申達本老虎數量劇減。1974年，政府規定獵虎為非法行為。但是自那時起，不法分子的偷獵行為卻一直肆虐不已，從而導致申達本地區老虎數量持續下降。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "為什麼他們要獵殺老虎？",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "《羚羊》（Oryx）雜誌2016年10月號刊登了由英國坎特伯雷肯特大學科研人員賽米婭·賽義夫（Samia Saif）撰寫的一篇文章。文章指出，人們在申達本地區偷獵老虎主要是出於四大原因。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "分享此項報導 關於分享",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "誰是獵殺孟加拉虎的真正元 MAP TEST 1",
+      "headline": "誰是獵殺孟加拉虎的真正元 MAP TEST 1"
+    },
+    "locators": {
+      "assetUri": "/ukchina/simp/23279012",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/23279012",
+      "curie": "http://www.bbc.co.uk/asset/fcd02dcc-c7e7-f544-8999-8270fa95dab7",
+      "assetId": "23279012"
+    },
+    "summary": "誰是獵殺孟加拉虎的真正元 MAP TEST 1",
+    "timestamp": 1585039496000,
+    "language": "zh-Hans",
+    "passport": { "taggings": [] },
+    "media": {
+      "id": "p01plpyx",
+      "subType": "clip",
+      "format": "video",
+      "title": "Test UK China",
+      "synopses": {
+        "short": "Test UK China",
+        "long": "Test UK China",
+        "medium": "Test UK China"
+      },
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "Test UK China",
+      "versions": [
+        {
+          "versionId": "p01plpyz",
+          "types": ["Original"],
+          "duration": 29,
+          "durationISO8601": "PT29S",
+          "warnings": {},
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1575388995000
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "63733064",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/B3D1/test/_63733064_coronavirus.jpg",
+      "path": "/cpsdevpb/B3D1/test/_63733064_coronavirus.jpg",
+      "height": 351,
+      "width": 624,
+      "altText": "corona",
+      "caption": "corona",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:ukchina/simp/23279012",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "主页",
+      "uri": "/ukchina/simp/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC英伦网",
+      "uri": "/ukchina/simp",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

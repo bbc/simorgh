@@ -53,10 +53,7 @@
           "thingLabel": "Renewable energy",
           "thingUri": "http://www.bbc.co.uk/things/7a198bf4-40e2-4131-b2e5-8027f5497bf1#id",
           "thingId": "7a198bf4-40e2-4131-b2e5-8027f5497bf1",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
+          "thingType": ["Thing", "Theme"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Renewable_energy",
             "http://www.wikidata.org/entity/Q12705"
@@ -66,10 +63,7 @@
           "thingLabel": "Nuclear power",
           "thingUri": "http://www.bbc.co.uk/things/c191b8f2-d9db-49eb-9194-8980e1bf3661#id",
           "thingId": "c191b8f2-d9db-49eb-9194-8980e1bf3661",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
+          "thingType": ["Thing", "Theme"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Nuclear_power",
             "http://www.wikidata.org/entity/Q12739"
@@ -79,11 +73,7 @@
           "thingLabel": "Ukraine",
           "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
           "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
-          "thingType": [
-            "Thing",
-            "Place",
-            "geoname:GeoTagConcept"
-          ],
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Ukraine",
             "http://sws.geonames.org/690791/",
@@ -93,9 +83,7 @@
       ]
     },
     "version": "v1.1.4",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

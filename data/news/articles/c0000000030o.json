@@ -143,9 +143,7 @@
                             },
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "versionId": "p01k6msp",
                             "warnings": {
                               "long": "Contains strong language and adult humour.",
@@ -254,7 +252,32 @@
       "canonicalUrl": "https://www.bbc.com/news/articles/c0000000030o",
       "optimoUrn": "urn:bbc:optimo:asset:c0000000030o"
     },
-    "summary": "",
+    "summary": {
+      "blocks": [
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": ""
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": ""
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        }
+      ]
+    },
     "timestamp": 1559129664696,
     "type": "cps"
   },

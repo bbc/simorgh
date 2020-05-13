@@ -1,184 +1,177 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-49490954",
-        "locators": {
-            "assetUri": "/afaanoromoo/oduu-49490954",
-            "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-49490954",
-            "curie": "http://www.bbc.co.uk/asset/9f7d4022-f634-c347-a52c-cb860c0d11fb"
+  "metadata": {
+    "id": "urn:bbc:ares::asset:afaanoromoo/oduu-49490954",
+    "locators": {
+      "assetUri": "/afaanoromoo/oduu-49490954",
+      "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-49490954",
+      "curie": "http://www.bbc.co.uk/asset/9f7d4022-f634-c347-a52c-cb860c0d11fb"
+    },
+    "type": "MAP",
+    "createdBy": "afaan-oromoo-v6",
+    "language": "om",
+    "lastUpdated": 1566971400449,
+    "firstPublished": 1566971389,
+    "lastPublished": 1566971391,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "afaanoromoo.news.media_asset.49490954.page",
+      "cps_asset_id": "49490954"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ]
+    },
+    "tags": {},
+    "version": "v1.0.10",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07lrpfc",
+        "subType": "clip",
+        "format": "video",
+        "title": "Maatii biyya ormaatti daa'imman Afaan Oromoo barsiisutti milkaa'an",
+        "synopses": {
+          "short": "Biyyaa ormaatti maatiin  da'imman akkamiin Afaan Oromoo barsiisu?",
+          "medium": "Afaan Oromoofi Biyya Ormaa: Biyyaa ormaatti maatiin  da'imman akkamiin Afaan Oromoo barsiisu?"
         },
-        "type": "MAP",
-        "createdBy": "afaan-oromoo-v6",
-        "language": "om",
-        "lastUpdated": 1566971400449,
-        "firstPublished": 1566971389,
-        "lastPublished": 1566971391,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
-        },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "afaanoromoo.news.media_asset.49490954.page",
-            "cps_asset_id": "49490954"
-        },
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07lrplj.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Biyyaa ormaatti maatiin da'imman akkamiin Afaan Oromoo barsiisu?",
+        "versions": [
+          {
+            "versionId": "p07lrpfj",
+            "types": ["Original"],
+            "duration": 160,
+            "durationISO8601": "PT2M40S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
             },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e3139461b000e9dabf9",
-                    "campaignName": "WS - Divert me"
-                }
-            ]
-        },
-        "tags": {},
-        "version": "v1.0.10",
-        "blockTypes": [
-            "media",
-            "paragraph"
+            "availableFrom": 1566930156
+          }
         ],
-        "includeComments": false
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "Afaan barachuun guddina daa'immani keessatti dhimma murteessaa dha. Of-ibsuuf, namoota waliin hariiroo uumuufi eenyummaa isaanii hubachuuf isaan gargaara.  ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Oromoota biyyoota hambaa keessa jiraachaa maatii horatan keessa tokko tokko akkataa isaan ittiin daa'imman isaanii Afaan Oromoo barsiisani gaafannee jirra. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Maatii biyya ormaatti daa'imman Afaan Oromoo barsiisutti milkaa'an",
+      "headline": "Biyyaa ormaatti maatiin da'imman akkamiin Afaan Oromoo barsiisu?"
     },
-    "content": {
-        "blocks": [
-            {
-                "id": "p07lrpfc",
-                "subType": "clip",
-                "format": "video",
-                "title": "Maatii biyya ormaatti daa'imman Afaan Oromoo barsiisutti milkaa'an",
-                "synopses": {
-                    "short": "Biyyaa ormaatti maatiin  da'imman akkamiin Afaan Oromoo barsiisu?",
-                    "medium": "Afaan Oromoofi Biyya Ormaa: Biyyaa ormaatti maatiin  da'imman akkamiin Afaan Oromoo barsiisu?"
-                },
-                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07lrplj.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "Biyyaa ormaatti maatiin da'imman akkamiin Afaan Oromoo barsiisu?",
-                "versions": [
-                    {
-                        "versionId": "p07lrpfj",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 160,
-                        "durationISO8601": "PT2M40S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableFrom": 1566930156
-                    }
-                ],
-                "imageCopyright": "BBC",
-                "type": "media"
-            },
-            {
-                "text": "Afaan barachuun guddina daa'immani keessatti dhimma murteessaa dha. Of-ibsuuf, namoota waliin hariiroo uumuufi eenyummaa isaanii hubachuuf isaan gargaara.  ",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "Oromoota biyyoota hambaa keessa jiraachaa maatii horatan keessa tokko tokko akkataa isaan ittiin daa'imman isaanii Afaan Oromoo barsiisani gaafannee jirra. ",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            }
-        ]
+    "locators": {
+      "assetUri": "/afaanoromoo/oduu-49490954",
+      "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-49490954",
+      "curie": "http://www.bbc.co.uk/asset/9f7d4022-f634-c347-a52c-cb860c0d11fb"
     },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "Maatii biyya ormaatti daa'imman Afaan Oromoo barsiisutti milkaa'an",
-            "headline": "Biyyaa ormaatti maatiin da'imman akkamiin Afaan Oromoo barsiisu?"
-        },
-        "locators": {
-            "assetUri": "/afaanoromoo/oduu-49490954",
-            "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-49490954",
-            "curie": "http://www.bbc.co.uk/asset/9f7d4022-f634-c347-a52c-cb860c0d11fb"
-        },
-        "summary": "Afaan Oromoofi Biyya Ormaa: Biyyaa ormaatti maatiin da'imman akkamiin Afaan Oromoo barsiisu?",
-        "timestamp": 1566971400449,
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
-            },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e3139461b000e9dabf9",
-                    "campaignName": "WS - Divert me"
-                }
-            ]
-        },
-        "media": {
-            "id": "p07lrpfc",
-            "subType": "clip",
-            "format": "video",
-            "title": "Maatii biyya ormaatti daa'imman Afaan Oromoo barsiisutti milkaa'an",
-            "synopses": {
-                "short": "Biyyaa ormaatti maatiin  da'imman akkamiin Afaan Oromoo barsiisu?",
-                "medium": "Afaan Oromoofi Biyya Ormaa: Biyyaa ormaatti maatiin  da'imman akkamiin Afaan Oromoo barsiisu?"
-            },
-            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07lrplj.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "Biyyaa ormaatti maatiin da'imman akkamiin Afaan Oromoo barsiisu?",
-            "versions": [
-                {
-                    "versionId": "p07lrpfj",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 160,
-                    "durationISO8601": "PT2M40S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableFrom": 1566930156
-                }
-            ],
-            "imageCopyright": "BBC",
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "108518721",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/31ED/production/_108518721_p07lrplj.jpg",
-            "path": "/cpsprodpb/31ED/production/_108518721_p07lrplj.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "Haaraa Dhaabasaa",
-            "copyrightHolder": "BBC",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-49490954",
-        "type": "cps"
+    "summary": "Afaan Oromoofi Biyya Ormaa: Biyyaa ormaatti maatiin da'imman akkamiin Afaan Oromoo barsiisu?",
+    "timestamp": 1566971400449,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ]
     },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "Oduu",
-            "uri": "/afaanoromoo/oduu",
-            "type": "simple"
-        },
-        "site": {
-            "subType": "site",
-            "name": "BBC Afaan Oromoo",
-            "uri": "/afaanoromoo",
-            "type": "simple"
-        },
-        "groups": []
-    }
+    "media": {
+      "id": "p07lrpfc",
+      "subType": "clip",
+      "format": "video",
+      "title": "Maatii biyya ormaatti daa'imman Afaan Oromoo barsiisutti milkaa'an",
+      "synopses": {
+        "short": "Biyyaa ormaatti maatiin  da'imman akkamiin Afaan Oromoo barsiisu?",
+        "medium": "Afaan Oromoofi Biyya Ormaa: Biyyaa ormaatti maatiin  da'imman akkamiin Afaan Oromoo barsiisu?"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07lrplj.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "Biyyaa ormaatti maatiin da'imman akkamiin Afaan Oromoo barsiisu?",
+      "versions": [
+        {
+          "versionId": "p07lrpfj",
+          "types": ["Original"],
+          "duration": 160,
+          "durationISO8601": "PT2M40S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1566930156
+        }
+      ],
+      "imageCopyright": "BBC",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "108518721",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/31ED/production/_108518721_p07lrplj.jpg",
+      "path": "/cpsprodpb/31ED/production/_108518721_p07lrplj.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Haaraa Dhaabasaa",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:afaanoromoo/oduu-49490954",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Oduu",
+      "uri": "/afaanoromoo/oduu",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Afaan Oromoo",
+      "uri": "/afaanoromoo",
+      "type": "simple"
+    },
+    "groups": []
+  }
 }

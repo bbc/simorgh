@@ -1,0 +1,158 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/zhongwen/simp/meta/dps/junk/2016/11/emp/161107_tc2_testmap1.emp.xml",
+        "id": "17698911",
+        "image": {
+          "altText": "",
+          "copyrightHolder": "",
+          "height": 360,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_640x360_bbc_nocredit.jpg",
+          "id": "17698911",
+          "path": "/amz/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_640x360_bbc_nocredit.jpg",
+          "subType": "thumbnail",
+          "type": "image",
+          "width": 640
+        },
+        "live": false,
+        "playlist": [
+          {
+            "bitrate": "168000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/zhongwen/simp/dps/junk/2016/11/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161107_tc2_testmap1_16x9_lo.mp4"
+          },
+          {
+            "bitrate": "320000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/zhongwen/simp/dps/junk/2016/11/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161107_tc2_testmap1_16x9_med.mp4"
+          },
+          {
+            "bitrate": "904000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/zhongwen/simp/dps/junk/2016/11/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161107_tc2_testmap1_16x9_hi.mp4"
+          }
+        ],
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "美國大選11月8日舉行，亞裔團體都希望向候選人展示其力量，也得設法聯絡選民，提醒他們投票。 韓基行（Robert）是一位來美40年的華人移民，他在本屆選舉也參與了華人組織的電話催票（phone banking）工作。 BBC中文網記者倪偉峰來到弗吉尼亞州，看看韓基行的工作。",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": { "cps_asset_id": "17698911", "cps_asset_type": "map" },
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "createdBy": "chinese_traditional",
+    "firstPublished": 1478539974000,
+    "id": "urn:bbc:ares::asset:zhongwen/trad/multimedia/2016/11/161107_tc2_testmap1",
+    "includeComments": false,
+    "language": "zh-Hant",
+    "lastPublished": 1478539974000,
+    "lastUpdated": 1585904793099,
+    "locators": {
+      "assetId": "17698911",
+      "assetUri": "/zhongwen/trad/multimedia/2016/11/161107_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/multimedia/2016/11/161107_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/40e736d6-a510-11e6-869f-98d5b025cdfd"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1478539974000,
+    "type": "MAP",
+    "version": "v1.1.10"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "美國亞裔社群電話催票顯實力",
+      "shortHeadline": "美國亞裔社群電話催票顯實力"
+    },
+    "id": "urn:bbc:ares::asset:zhongwen/trad/multimedia/2016/11/161107_tc2_testmap1",
+    "indexImage": {
+      "altText": "",
+      "copyrightHolder": "BBC",
+      "height": 81,
+      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_144x81_bbc_nocredit.jpg",
+      "id": "d5e220",
+      "path": "/amz/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_144x81_bbc_nocredit.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 144
+    },
+    "language": "zh-Hant",
+    "locators": {
+      "assetId": "17698911",
+      "assetUri": "/zhongwen/trad/multimedia/2016/11/161107_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/multimedia/2016/11/161107_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/40e736d6-a510-11e6-869f-98d5b025cdfd"
+    },
+    "media": {
+      "aspectRatio": "16:9",
+      "format": "video",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/zhongwen/simp/meta/dps/junk/2016/11/emp/161107_tc2_testmap1.emp.xml",
+      "id": "17698911",
+      "image": {
+        "altText": "",
+        "copyrightHolder": "",
+        "height": 360,
+        "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_640x360_bbc_nocredit.jpg",
+        "id": "17698911",
+        "path": "/amz/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_640x360_bbc_nocredit.jpg",
+        "subType": "thumbnail",
+        "type": "image",
+        "width": 640
+      },
+      "live": false,
+      "playlist": [
+        {
+          "bitrate": "168000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/zhongwen/simp/dps/junk/2016/11/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161107_tc2_testmap1_16x9_lo.mp4"
+        },
+        {
+          "bitrate": "320000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/zhongwen/simp/dps/junk/2016/11/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161107_tc2_testmap1_16x9_med.mp4"
+        },
+        {
+          "bitrate": "904000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/zhongwen/simp/dps/junk/2016/11/hd_g20_aiib_ptc_gracie_0648_8_9_105_6173084_toprores_161107_tc2_testmap1_16x9_hi.mp4"
+        }
+      ],
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": { "taggings": [] },
+    "summary": "美國大選11月8日舉行，亞裔團體都希望向候選人展示其力量，也得設法聯絡選民，提醒他們投票。",
+    "timestamp": 1478539974000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "多媒體",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/zhongwen/trad/multimedia"
+    },
+    "site": {
+      "name": "bbcchinese.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/zhongwen/trad"
+    }
+  }
+}

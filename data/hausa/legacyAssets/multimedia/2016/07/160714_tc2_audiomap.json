@@ -21,10 +21,7 @@
       "cps_asset_id": "17697852",
       "cps_asset_type": "map"
     },
-    "blockTypes": [
-      "legacyMedia",
-      "paragraph"
-    ],
+    "blockTypes": ["legacyMedia", "paragraph"],
     "createdBy": "hausa",
     "firstPublished": 1468508148000,
     "id": "urn:bbc:ares::asset:hausa/multimedia/2016/07/160714_tc2_audiomap",

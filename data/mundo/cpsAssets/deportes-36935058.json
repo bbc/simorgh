@@ -47,22 +47,14 @@
             "Thing",
             "sport:Competition"
           ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Summer_Olympic_Games"
-          ]
+          "thingSameAs": ["http://dbpedia.org/resource/Summer_Olympic_Games"]
         },
         {
           "thingLabel": "Brazil",
           "thingUri": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id",
           "thingId": "15f1bcf6-b6ab-48e8-b708-efed41e43d31",
-          "thingType": [
-            "Thing",
-            "Place",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/3469034/"
-          ]
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/3469034/"]
         },
         {
           "thingLabel": "Rio 2016",
@@ -89,9 +81,7 @@
             "Thing",
             "Theme"
           ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Sport"
-          ],
+          "thingSameAs": ["http://dbpedia.org/resource/Sport"],
           "topicName": "Deportes",
           "topicId": "cr50y726329t",
           "curationList": [
@@ -104,9 +94,7 @@
       ]
     },
     "version": "v1.1.4",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

@@ -10,9 +10,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
     it('should render a description for the page', () => {
       cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
         const description = body.promo.summary;
-        cy.get('main p')
-          .first()
-          .should('contain', description);
+        cy.get('main p').first().should('contain', description);
       });
     });
   });

@@ -1,0 +1,198 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/mundo/meta/dps/junk/2016/04/emp/160427_tc2_testmap1.emp.xml",
+        "id": "17697143",
+        "image": {
+          "altText": "video",
+          "copyrightHolder": "",
+          "height": 360,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+          "id": "17697143",
+          "path": "/amz/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+          "subType": "thumbnail",
+          "type": "image",
+          "width": 640
+        },
+        "live": false,
+        "playlist": [
+          {
+            "bitrate": "168000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/mundo/dps/junk/2016/04/hd_cps_sot_1800_24_2_105_5256622_toprores_160427_tc2_testmap1_16x9_lo.mp4"
+          },
+          {
+            "bitrate": "320000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/mundo/dps/junk/2016/04/hd_cps_sot_1800_24_2_105_5256622_toprores_160427_tc2_testmap1_16x9_med.mp4"
+          },
+          {
+            "bitrate": "904000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/mundo/dps/junk/2016/04/hd_cps_sot_1800_24_2_105_5256622_toprores_160427_tc2_testmap1_16x9_hi.mp4"
+          }
+        ],
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Un golazo. Es la mejor manera de definir la acrobacia del jugador del Socuéllamos, Javi Gómez, durante la jornada de tercera división del futbol español.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Transcurrían los 20 minutos del primer tiempo entre el Socuéllamos y el Toledo, este domingo, cuando Gómez recibió un pase largo desde la defensa de su equipo.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Entonces decidió arremeter, cometer la hazaña: recibió de pecho, se levantó por los aires y, a por lo menos 40 metros del arco contrario, hizo una chilena, pero no fua una acrobacia normal: fue una apuesta a la fortuna vestida de malabar, que afortunadamente terminó en gol.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Perdón, en un golazo.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Todos los hinchas celebraron como cuando se conquista una copa.&quot;Cuando hice la jugada pensé: 'Que sea lo que Dios quiera'&quot;, le dijo Gómez al programa &quot;Fuera de Tiempo&quot; de la radio española.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Ese gol representó la victoria del Socuéllamos y le dio a este equipo de Ciudad Real la posibilidad de acceder a la fase final del torneo.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "&quot;Lo del gol es anecdótico, lo importante es que el Socuéllamos se mete en puestos para la final a tres jornadas y ha podido ser de esta manera&quot;, explicó Gómez.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Desde ya, muchos analistas y hasta el mismo club ya nominan la chilena de Gómez como uno de las mejores anotaciones del año en España y que tendrá su puesto dentro de los nominados al premio Puskas de la FIFA, que reconoce los mejores goles del año.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Imágenes Cortesía Castilla-La Mancha TV.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": { "cps_asset_id": "17697143", "cps_asset_type": "map" },
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "createdBy": "mundo",
+    "firstPublished": 1461774694000,
+    "id": "urn:bbc:ares::asset:mundo/noticias/2016/04/160427_tc2_testmap1",
+    "includeComments": false,
+    "language": "es",
+    "lastPublished": 1461774694000,
+    "lastUpdated": 1585904698821,
+    "locators": {
+      "assetId": "17697143",
+      "assetUri": "/mundo/noticias/2016/04/160427_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias/2016/04/160427_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/0d4450a2-0c95-11e6-82cc-6442e881520c"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1461774694000,
+    "type": "MAP",
+    "version": "v1.1.10"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "De chilena y desde 40 metros: ¿es este el mejor gol del año?",
+      "shortHeadline": "De chilena y desde 40 metros: ¿es este el mejor gol del año?"
+    },
+    "id": "urn:bbc:ares::asset:mundo/noticias/2016/04/160427_tc2_testmap1",
+    "indexImage": {
+      "altText": "",
+      "copyrightHolder": "BBC",
+      "height": 81,
+      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_144x81_bbc_nocredit.jpg",
+      "id": "d5e220",
+      "path": "/amz/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_144x81_bbc_nocredit.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 144
+    },
+    "language": "es",
+    "locators": {
+      "assetId": "17697143",
+      "assetUri": "/mundo/noticias/2016/04/160427_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias/2016/04/160427_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/0d4450a2-0c95-11e6-82cc-6442e881520c"
+    },
+    "media": {
+      "aspectRatio": "16:9",
+      "format": "video",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/mundo/meta/dps/junk/2016/04/emp/160427_tc2_testmap1.emp.xml",
+      "id": "17697143",
+      "image": {
+        "altText": "video",
+        "copyrightHolder": "",
+        "height": 360,
+        "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+        "id": "17697143",
+        "path": "/amz/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+        "subType": "thumbnail",
+        "type": "image",
+        "width": 640
+      },
+      "live": false,
+      "playlist": [
+        {
+          "bitrate": "168000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/mundo/dps/junk/2016/04/hd_cps_sot_1800_24_2_105_5256622_toprores_160427_tc2_testmap1_16x9_lo.mp4"
+        },
+        {
+          "bitrate": "320000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/mundo/dps/junk/2016/04/hd_cps_sot_1800_24_2_105_5256622_toprores_160427_tc2_testmap1_16x9_med.mp4"
+        },
+        {
+          "bitrate": "904000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/mundo/dps/junk/2016/04/hd_cps_sot_1800_24_2_105_5256622_toprores_160427_tc2_testmap1_16x9_hi.mp4"
+        }
+      ],
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": { "taggings": [] },
+    "summary": "De chilena y desde 40 metros: ¿es este el mejor gol del año?",
+    "timestamp": 1461774694000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Noticias",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/mundo/noticias"
+    },
+    "site": {
+      "name": "BBCMundo.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/mundo"
+    }
+  }
+}

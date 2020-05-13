@@ -150,10 +150,30 @@ export const service = {
         listen: 'ฟัง',
         watch: 'ดูู',
         liveLabel: 'สด',
+        nextLabel: 'NEXT',
         previousRadioShow: 'รายการวิทยุก่อนหน้า',
         nextRadioShow: 'รายการวิทยุถัดไป',
         duration: 'ความยาว',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'คำบรรยายวิดีโอ ',
+          text: 'คำเตือน:เนื้อหาภายนอกอาจมีโฆษณา',
+        },
+        fallback: {
+          text: 'ไม่มีเนื้อหานี้',
+          linkText: 'ดูเพิ่มเติมที่ %provider_name%',
+          linkTextSuffixVisuallyHidden: ' ลิงก์จากภายนอก',
+          warningText:
+            'บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก. นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก.',
+        },
+        skipLink: {
+          text: 'ข้าม %provider_name% โพสต์ ',
+          endTextVisuallyHidden: 'สิ้นสุด %provider_name% โพสต์',
+        },
+      },
+      topStoriesTitle: 'ข่าวเด่น',
+      featuresAnalysisTitle: 'เรื่องน่าสนใจ',
     },
     brandSVG,
     mostRead: {
@@ -164,6 +184,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     navigation: [
       {

@@ -24,7 +24,7 @@ describe('rich-text-transforms JS bundle request', () => {
     });
     page = await browser.newPage();
 
-    page.on('request', request => {
+    page.on('request', (request) => {
       requests.push(request.url());
     });
   });
@@ -33,15 +33,15 @@ describe('rich-text-transforms JS bundle request', () => {
     await browser.close();
   });
 
-  Object.keys(config).forEach(service => {
+  Object.keys(config).forEach((service) => {
     Object.keys(config[service].pageTypes)
       .filter(
-        pageType =>
+        (pageType) =>
           pageType === 'mediaAssetPage' &&
           shouldSmokeTest(pageType, service) &&
           serviceHasPageType(service, pageType),
       )
-      .forEach(pageType => {
+      .forEach((pageType) => {
         const paths = getPaths(service, pageType);
 
         if (paths.length > 0) {
@@ -60,7 +60,9 @@ describe('rich-text-transforms JS bundle request', () => {
 
             it('does not load the rich-text-transforms bundle on initial page load', async () => {
               expect(
-                requests.some(url => url.match(richTextTransformsBundleRegex)),
+                requests.some((url) =>
+                  url.match(richTextTransformsBundleRegex),
+                ),
               ).toEqual(false);
             });
 
@@ -79,12 +81,14 @@ describe('rich-text-transforms JS bundle request', () => {
                 page.waitForNavigation({ waitUntil: 'networkidle2' }),
               ]);
 
-              await page.waitForRequest(request =>
+              await page.waitForRequest((request) =>
                 request.url().match(richTextTransformsBundleRegex),
               );
 
               expect(
-                requests.some(url => url.match(richTextTransformsBundleRegex)),
+                requests.some((url) =>
+                  url.match(richTextTransformsBundleRegex),
+                ),
               ).toEqual(true);
             });
           });

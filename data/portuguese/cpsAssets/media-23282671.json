@@ -1,0 +1,245 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:portuguese/media-23282671",
+    "locators": {
+      "assetUri": "/portuguese/media-23282671",
+      "cpsUrn": "urn:bbc:content:assetUri:portuguese/media-23282671",
+      "curie": "http://www.bbc.co.uk/asset/a9601e04-929a-c74b-8198-cdbdfd3f046e",
+      "assetId": "23282671"
+    },
+    "type": "MAP",
+    "createdBy": "brasil-v6",
+    "language": "pt-BR",
+    "lastUpdated": 1588335920162,
+    "firstPublished": 1585672938000,
+    "lastPublished": 1585672938000,
+    "timestamp": 1585672938000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "portuguese.media.media_asset.23282671.page",
+      "cps_asset_id": "23282671"
+    },
+    "passport": {
+      "taggings": []
+    },
+    "tags": {},
+    "version": "v1.2.1",
+    "blockTypes": [
+      "media",
+      "paragraph",
+      "heading",
+      "image",
+      "subheading",
+      "list"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p01kdbns",
+        "subType": "clip",
+        "format": "video",
+        "title": "How Germans remember the World Wars",
+        "synopses": {
+          "short": "Remembrance Day: How Germans remember the World Wars",
+          "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
+          "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?"
+        },
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "How do Germans remember the World Wars?",
+        "versions": [
+          {
+            "versionId": "p01kdbnv",
+            "types": ["Original"],
+            "duration": 162,
+            "durationISO8601": "PT2M42S",
+            "warnings": {
+              "short": "Contains some strong language.",
+              "long": "Contains some strong language."
+            },
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": false,
+              "world": false
+            },
+            "availableFrom": 1541761851000
+          }
+        ],
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "Já ouviu falar da cabra gnu, do macaco de orelhas vermelhas ou do monstro de Gila?",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Eles podem ser os futuros ícones da conservação ambiental, de acordo com um estudo.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Os cientistas acreditam que estes animais pouco conhecidos são fundamentais para arrecadar dinheiro para proteger ecossistemas vulneráveis.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "As imagens de tigres e elefantes, que têm grande apelo junto ao público, são frequentemente selecionadas para campanhas de arrecadação de fundos.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Heading",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "text text text text",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "63733272",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/6A61/test/_63733272__110989783_animals-comp.jpg",
+        "path": "/cpsdevpb/6A61/test/_63733272__110989783_animals-comp.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Two photos of nice animals",
+        "caption": "Nice animals",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Subheading",
+        "markupType": "plain_text",
+        "type": "subheading"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "Conheça as 'superfrutas' encontradas na Mata Atlântica que pesquisadores tentam salvar da extinção",
+            "markupType": "plain_text",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "Por que Greta Thunberg pode estar errada sobre estarmos diante da 'sexta extinção em massa na Terra'",
+            "markupType": "plain_text",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "<italic>Mas essa abordagem tem sido criticada por negligenciar muitas outras espécies que precisam da nossa ajuda.</italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Brasil/Portuguese test MAP",
+      "headline": "Brasil/Portuguese test MAP"
+    },
+    "locators": {
+      "assetUri": "/portuguese/media-23282671",
+      "cpsUrn": "urn:bbc:content:assetUri:portuguese/media-23282671",
+      "curie": "http://www.bbc.co.uk/asset/a9601e04-929a-c74b-8198-cdbdfd3f046e",
+      "assetId": "23282671"
+    },
+    "summary": "Can people in today's Germany mourn their dead without whitewashing their country's past?",
+    "timestamp": 1585672938000,
+    "language": "pt-BR",
+    "passport": {
+      "taggings": []
+    },
+    "media": {
+      "id": "p01kdbns",
+      "subType": "clip",
+      "format": "video",
+      "title": "How Germans remember the World Wars",
+      "synopses": {
+        "short": "Remembrance Day: How Germans remember the World Wars",
+        "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
+        "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?"
+      },
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "How do Germans remember the World Wars?",
+      "versions": [
+        {
+          "versionId": "p01kdbnv",
+          "types": ["Original"],
+          "duration": 162,
+          "durationISO8601": "PT2M42S",
+          "warnings": {
+            "short": "Contains some strong language.",
+            "long": "Contains some strong language."
+          },
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": false,
+            "world": false
+          },
+          "availableFrom": 1541761851000
+        }
+      ],
+      "imageCopyright": "BBC",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "63733270",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/1C41/test/_63733270_p01kdbpk.jpg",
+      "path": "/cpsdevpb/1C41/test/_63733270_p01kdbpk.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "Description of picture (ALT TEXT)",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:portuguese/media-23282671",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Media",
+      "uri": "/portuguese/media",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Brasil",
+      "uri": "/portuguese",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

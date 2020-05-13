@@ -1,0 +1,538 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:persian/arts-52166891",
+    "locators": {
+      "assetUri": "/persian/arts-52166891",
+      "cpsUrn": "urn:bbc:content:assetUri:persian/arts-52166891",
+      "curie": "http://www.bbc.co.uk/asset/d99c234d-5d8a-8749-914c-c19f2a95fbed",
+      "assetId": "52166891"
+    },
+    "type": "STY",
+    "createdBy": "persian-v6",
+    "language": "fa",
+    "lastUpdated": 1586020162850,
+    "firstPublished": 1586020154000,
+    "lastPublished": 1586020154000,
+    "timestamp": 1586020154000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "persian.arts.story.52166891.page",
+      "cps_asset_id": "52166891"
+    },
+    "tags": {},
+    "version": "v1.1.10",
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "crosshead"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "111618481",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/4831/production/_111618481_1h.heidari.png",
+        "path": "/cpsprodpb/4831/production/_111618481_1h.heidari.png",
+        "height": 549,
+        "width": 976,
+        "altText": "تو مسئول گُلِت هستی",
+        "caption": "تو مسئول گُلِت هستی",
+        "copyrightHolder": "H.Heidari ",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "هفته دوم بهار، نمایشخانه‌ها، سینماها، ورزشگاه‌ها، برخی پارک‌ها و گردشگاه‌ها، فروشگاه‌ها و مال‌های بزرگ همه دربسته‌اند. رابطه‌ها و شاید هم بهانه‌های زندگی، همه در قرنطینه‌اند که محمد قاید نویسنده آن را بتمرگینگی نامید. تورها، مجالس عروسی و حتی عزاداری ممنوع است، اما در همین زمان هنرمندان برجسته تیاتر و سینما و سریال‌های تلویزیونی و ورزشکاران نامدار، با جمع آوری کمک‌های مردمی، در کارند. صدا و سیما باز هم عقب ماند، گرچه دو سریالش میلیون‌ها نفر را به پای صفحه تلویزیون کشاند، پیداست که مردم همچنان ترجیح دادند اخبار را از منابع دیگر به دست آورند.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "در این میدان به ظاهر ساکت، و در نهان پرغوغا، چه می‌کنند اهل ادب و هنر در پادکست‌ها. تمام روز برای شنیدن این همه قصه‌ها و روایت‌های خوب کم است. پوریاعالمی، شرمین نادری، صابر ابر با عشقی مشغولند به قصه گویی و امیدپاشی. رادیو کرگدن، شنیدستان، اینجا پادکست. آی قصه. چنین پیداست که بزودی پادکست‌ها و کارتون‌های کوتاه و هدفمند، از این شرایط به یادگار می‌مانند. پادکست دارد تبدیل به مهم‌ترین رسانه غیرخبری عالم می‌شود. صداها دارد صمیمانه‌تر از رادیوهای مانده از دوران جنگ جهانی رشد می‌کنند و تهران و لس آنجلس با هم می‌شنوند. یعنی تنها صداست که می‌ماند.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "اما گروه شهرونگ و هادی حیدری دبیرش، چه آینده‌نگر بودند که از ابتدای سال نو مسیحی گویا بوی تعطیل به مشامشان خورد که رفتند و یک ساز تازه کوک کردند، و دم خروس به عنوان آخرین رسانه آنلاین طنز ایران.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "111619081",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/46AB/production/_111619081_2film.png",
+        "path": "/cpsprodpb/46AB/production/_111619081_2film.png",
+        "height": 434,
+        "width": 359,
+        "altText": "فیلم در خدمت برای قرنطینه",
+        "caption": "فیلم در خدمت برای قرنطینه",
+        "copyrightHolder": "Film Mag",
+        "type": "image"
+      },
+      {
+        "text": "ماهنامه ۳۸ ساله فیلم هم در شماره نوروزی خود فیلم‌هایی برای تماشا در روزهای قرنطینه منتشر کرد که ۴۳ کارشناس و منقد سینما آن را توصیه کردند. در فضای مجازی، آرشیوهای تاریخ سینما باز شد، کیست که رغبت به ساخته‌های صدا و سیما کند که هنوز پخش نشده، خبر می‌رسد که سانسور در سانسور شده است. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "و در همین زمانه سکوت است که خبری در گوش اهل سینما و هنر می پیچد. فیلم‌های رخشان بنی اعتماد در آرشیو زنان فیلمساز جهان قرار گرفت. با انتخاب بانک اطلاعات اینترنتی فیلم‌ها. (IMDb)",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "علیرضا داوودنژاد، کارگردان فیلم‌هایی چون مصائب شیرین، نازنین هم به بی‌بی‌سی می‌گوید: برای نجات صنعت سینما از ورشستگی در دوران کرونا باید ۱۰۰ فیلم جدید امسال را به جای سینما به صورت آنلاین نمایش داد. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "هفته، هفته انتقال هنرها به بخش فرهنگی جامعه بود. ابتکارهای نو در پخت انواع نان و غذا، ساخت فیلم، انیمیش‌های کوتاه و کارتون‌هایی با مضمون بالابردن فرهنگ برخورد جامعه با بیماری مهلک و همه‌گیر. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "حضور بی سروصدا و بی تبلیغ هنرمندان در جمع آوری اعانات و کمک به روان شدن کاروان‌های مردمی تهیه لوازم پزشکی از جمله دستاوردها، و تجربه‌های تازه حرکت جامعه مدنی است. عکسی که از هدیه تهرانی هنرپیشه صاحب سبک سینما در هنگام ارسال جعبه کمک‌های امدادی و ضروری برای بیمارستان‌ها به دست آمد، نمونه‌ای از برخورد هنرمندانی است که نوروز امسال، وقتی نه مراسمی بود، یا دعوتی و جشنی و نه فیلمبرداری فیلم دیگری، یا نمایش فیلم تازه‌ای، پیوند خود با مردم را از یاد نبردند. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "به گفته یک جامعه شناس: جامعه مدنی آسیب دیده در ۲۰ سال گذشته، در سه ماه با کمک اهل فرهنگ، هنرمندان و پاسخ درخور مردم، بر بال شبکه‌های اجتماعی به پرواز درآمد و اینک بالیده‌تر از همیشه در تحولات جامعه تاثیر می‌گذارد.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "111619083",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/94CB/production/_111619083_3saan.png",
+        "path": "/cpsprodpb/94CB/production/_111619083_3saan.png",
+        "height": 387,
+        "width": 313,
+        "altText": "نوروزی سان",
+        "caption": "نوروزی سان",
+        "copyrightHolder": " Saan",
+        "type": "image"
+      },
+      {
+        "text": "روزنامه و مجله کجا می‌رود؟",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "در میانه هفته دوم بهار، دولت خبر داد که روزنامه‌های چاپی فعلا منتشر نمی‌شود. در زمانی که حرفه روزنامه‌نگاری، به علت سیاست‌های تند و امنیتی حاکمیت عملا بی‌ مقدار و بی‌ اعتبار شده است. در روزگاری که هر هفته خبر از جدا شدن چند نفری از دایره روزنامه‌نگاری به گوش‌ها می‌رسد، تصمیم دولت اشک هیچ خواننده طالب خبری را سرازیر نکرد. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "به نوشته طنزآمیز کارتونیست مشهور که با عنوان میس کارتون شناخته می‌شود: در پی چاپ نشدن روزنامه‌ها، در آینده با بحران روزنامه باطله برای سبزی پاک کردن و شیشه پاک کردن مواجه خواهیم شد. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "روزنامه‌ها، برخوردار از یارانه‌های دولتی، به شدت مبتلا به سیاست بازی شده‌اند، انتخابات ماه گذشته مجلس نشان داد که دیگر انتظار هیچ معجزه‌ای از آنان نمی‌توان داشت. از همین روست که یکی از روزنامه‌نگاران قدیمی که در سی سال گذشته چندین روزنامه و مجله برپا داشته که همه تعطیل شده‌اند گفته است شاید تصمیم کمیته مبارزه با کرونا به تعطیل روزنامه‌ها، خود گامی تشخیص داده شود، برای آزاد شدن روزنامه‌ها از زنجیر سانسور.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "اما از بخشنامه دولت و آخرین واکنش روزنامه‌ها به تصمیم دولت، می‌توان دریافت که روزنه‌هایی برای امید در بخشی از روزنامه‌نگاران حرفه‌ای باز مانده است. اول انتشار روزنامه‌های آنلاین با همکاری مردم در خرید آن‌ها، دیگر مجلات نوپدید که از هر جهت نگاهشان امروزی و جهان شمول است، و در حوزه‌های تخصصی تعریف شده‌ای منتشر می‌شوند، می‌توانند باقی بمانند بی نیازی به دریافت کمک یا یارانه از دولت. وگرنه…",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "در قله تمنا",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "اما سردبیر مجله زیبا و خواندنی سان در سرمقاله شماره نوروزی خود اول فضای دور و بر را نشان داد و نوشت: امروز که آمدم دفتر دیدم تکه یونولیتی چسبانده‌اند به آینه‌ی اتاقک آسانسور و صدتا گوش پاک کن را نصف کرده‌اند و هرکدام را فرو کرده‌اند توی یونولیت. کاغذی هم زده‌اند جلوی چشم که خواهش می‌کنیم هربار با یکی از گوش پاک کن‌ها کلید آسانسور را بزنید، بعد هم بیندازیدش توی لیوان. گوش پاک کن‌های مصرفی در لیوان از سروکول هم بالا می‌رفتند. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "و در پایان سرمقاله آرش صادق بیگی نوشته: نابودی شتری است خوابیده در خانه همه. غایت مقدری که کنار دست داریمش و با آن کنار آمده‌ایم. این وسط آن چیزی که جزو مقرری روزهای من و شما حساب می‌شود همین ساختن است. ساختنی با سنگ بنای عاطفه و قصه که با جزئیاتی از خود زندگی بندکشی شود. رو برمی‌گردانیم و سال گذشــته را از نظر می‌گذرانیم و لعنت خفیفی حواله خودمان و بختمان می‌کنیم اما بهار در راه است. با خیره سری دل یکدله کنیم و به زور هم شده، لگن طبیعت را جا بیندازیم. هنوز می‌شود به زور گوش پاک کن زنده ماند و به زور ادبیات ملنگ شد و روی قله‌های تمنا پرواز کرد‏. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "111619085",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/E2EB/production/_111619085_4bozorg.png",
+        "path": "/cpsprodpb/E2EB/production/_111619085_4bozorg.png",
+        "height": 597,
+        "width": 475,
+        "altText": "محمد قاید",
+        "caption": "محمد قاید",
+        "copyrightHolder": "Bozorgmehr Hosseinpour",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "کتاب در روزهای تمرگینگی",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "محمد قاید متفکر و مترجم نام آشنا همزمان با پیشنهاد لغت تمرگینگی (به جای ماندن در خانه، و گاهی به خطا قرنطینه)، برخورد خشمگینی با کورونا و ضربه اش با فرهنگ و هنر، همزمان با حلول ماه فروردین الحرام، در سایت خود نوشت:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "از ایمیل دیروز مدیر دفتر نشر دربارهٔ روی جلد ارتکاب در دست پزش این کیبورد:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;سلام",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "چند نکته:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "اسب را زین کرده بودیم کتاب را به نمایشگاه برسانیم که نقش برآب شد. فعلاً دست‎دست می‎کنیم ببینم چه می‎شود.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "دیگر کتاب‎های چاپ‌شده به همین منظور را در چاپخانه رها کردیم. کو کوزه‎گر و کوزه‎خر و کوزه‎فروش. به نظر می‎رسید در دوران تمرگینه جماعت بیشتر کتاب بخوانند. اما نمی‎خوانند. زمان خوبی برای انتشار نیست. شهید می‎شود. ولی ما آماده می‎شویم و در اولین فرصت به چاپش می‎دهیم. . . &quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "و ایمیل یک دوست دیگر:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;دوستان خواستند اگر ممکنه مثلا ده کتاب به انتخاب شما برای مطالعه در قرنطینه پیشنهاد کنید. اگر امکانش هست ممنون می‌شوم.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "پاسخ این کیبورد:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;آقا در شرایطی که نه کتابخانه‌ در دسترس است و نه کتابفروشی باز، چنان لیستی عملا سودی ندارد.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "هرکس هر کتاب ناخوانده‌ای در خانه دارد که دلش می‌خواسته بخواند حالا وقتش است دست بگیرد.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "از چند روز آینده همین کار را با ده‌ها کتاب و فیلمی خواهم کرد که به من هدیه داده‌اند و ده‌ها کتاب که خودم خریده‌ام.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "از سالها پیش عقیده داشته‌ام برابر 'تعلیق' برای suspense گرچه درست است دقیق و همه‌فهم نیست (به فنربندی غریب ماشین ژیان مکانیک‌ها &quot;سوسپانسیون&quot; می‌گفتند). جز جیمز استیوارت در یک صحنهٔ سرگیجه،‌ کسی در فیلم‌های &quot;آل هیچ&quot; به معنی دقیق کلمه آویزان و معلق نیست؛ آدم‌ها روی مبل‌گرم و نرم هم تکلیف خودشان را نمی‌دانند. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "دارم افکار می‌نمایم حتی وقتی مضطرب نیستی ممکن است در تعلیق باشی و منتظر موشک بالیستیکی که از امشب تا ماه‌ها بعد درون خودت و دیگران منفجر شود.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "111619087",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1310B/production/_111619087_5ahmadreza.png",
+        "path": "/cpsprodpb/1310B/production/_111619087_5ahmadreza.png",
+        "height": 406,
+        "width": 589,
+        "altText": "احمدرضا احمدی",
+        "caption": "احمدرضا احمدی",
+        "copyrightHolder": "Saan.Mag",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "<bold><span xml:lang=\"en\" lang=\"en\" class=\"lang-en\"> '</span></bold><bold>هنوز زنده هستم</bold><bold><span xml:lang=\"en\" lang=\"en\" class=\"lang-en\"> '</span></bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "احمدرضا احمدی شاعر همیشه عاشق، به جای روزنگاری که در شماره‌های پیشین مجله سان در این مجله زیبا و وزین نوشت، این باری شعری سروده است که هم نفس بهار در آن جاری است و هم اندوهی و شکایتی از روزگار. آخرین سروده احمدرضا. هنوز زنده هستم.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "چه بگویم",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "از این شب گریزان",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "که از دست‌ها و چشم‌های من می‌گریزد",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "قصد بازگشت هم ندارد",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "من گمان نداشتم",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "بتوانم در این شب گریزان",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "بی رنج در شعری پنهان شوم",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "اما چنان آشفته بودم",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "از بوی گل و نرگس",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "که بر ملافه‌های من",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "روییده بود",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "مرا بی خبر از این جهان می‌کرد",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "که در دست‌های من",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "جا نمی‌گرفت",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "من نمی‌دانستم",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "این جهان را باید ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "کجا پنهان کنم",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "پس دلخوش از رقت سپیده بودم",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "و دوستی با بارانی",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "که دیر به دیر",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "بر من می‌بارید",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "دیگر نه خشم من طغیان می‌کرد",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "نه سراغی از عشق می‌گرفتم",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "که در آستانه‌ی بهار",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "در کنارم آرام آرام جان می‌داد",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "من این جهان را به جهان سپردم",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "آرام به خوابی رفتم",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "خوابی که از آن توقع دوستی و هستی نداشتم",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "هرچه بود",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "مرگ بود",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "برگ خشک بود",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "و اندوهی که در گریه‌های شبانه من",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "جان سپرد",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "و من همچنان تعجب می‌کردم",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "که چگونه هنوز",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "زنده هستم",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "کارتون هفته",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "id": "111619129",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1681F/production/_111619129_6firoozeh.png",
+        "path": "/cpsprodpb/1681F/production/_111619129_6firoozeh.png",
+        "height": 479,
+        "width": 380,
+        "altText": "فیروزه مظفری/ آرمان ملی",
+        "caption": "فیروزه مظفری/ آرمان ملی",
+        "copyrightHolder": "BBC",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "هفته هنر و فرهنگ؛ 'هنر در بتمرگینگی، خدمت به جامعه مدنی'",
+      "headline": "هفته هنر و فرهنگ؛ 'هنر در بتمرگینگی، خدمت به جامعه مدنی'"
+    },
+    "locators": {
+      "assetUri": "/persian/arts-52166891",
+      "cpsUrn": "urn:bbc:content:assetUri:persian/arts-52166891",
+      "curie": "http://www.bbc.co.uk/asset/d99c234d-5d8a-8749-914c-c19f2a95fbed",
+      "assetId": "52166891"
+    },
+    "summary": "هفته دوم بهار، نمایشخانه‌ها، سینماها، ورزشگاه‌ها، برخی پارک‌ها و گردشگاه‌ها، فروشگاه‌ها و مال‌های بزرگ همه دربسته‌اند. رابطه‌ها و شاید هم بهانه‌های زندگی، همه در قرنطینه‌اند که محمد قاید نویسنده آن را بتمرگینگی نامید. تورها، مجالس عروسی و حتی عزاداری ممنوع است، اما در همین زمان هنرمندان برجسته تیاتر و سینما و سریال‌های تلویزیونی و ورزشکاران نامدار، با جمع آوری کمک‌های مردمی، در کارند. صدا و سیما باز هم عقب ماند، گرچه دو سریالش میلیون‌ها نفر را به پای صفحه تلویزیون کشاند، پیداست که مردم همچنان ترجیح دادند اخبار را از منابع دیگر به دست آورند.",
+    "timestamp": 1586020154000,
+    "language": "fa",
+    "byline": {
+      "name": "مسعود بهنود",
+      "title": " روزنامه‌نگار",
+      "persons": [
+        {
+          "name": "Dan Egan",
+          "function": ""
+        }
+      ]
+    },
+    "passport": {
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "111619079",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/17B43/production/_111619079_1h.heidari.png",
+      "path": "/cpsprodpb/17B43/production/_111619079_1h.heidari.png",
+      "height": 549,
+      "width": 976,
+      "altText": "تو مسئول گُلِت هستی",
+      "caption": "تو مسئول گُلِت هستی",
+      "copyrightHolder": "H.Heidari ",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:persian/arts-52166891",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "فرهنگ و هنر",
+      "uri": "/persian/arts",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Persian",
+      "uri": "/persian",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

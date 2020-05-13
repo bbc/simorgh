@@ -155,10 +155,29 @@ export const service = {
         listen: 'వినండి',
         watch: 'చూడండి',
         liveLabel: 'లైవ్',
+        nextLabel: 'NEXT',
         previousRadioShow: 'ఇంతకు ముందు రేడియో షో',
         nextRadioShow: 'తర్వాత రేడియో షో',
         duration: 'వ్యవధి',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Video caption, ',
+          text: 'Warning: Third party content may contain adverts',
+        },
+        fallback: {
+          text: 'Content is not available',
+          linkText: 'View content on %provider_name%',
+          linkTextSuffixVisuallyHidden: ', external',
+          warningText: 'ఇతర వెబ్‌సైట్లలో సమాచారానికి బీబీసీ బాధ్యత వహించదు.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
+      topStoriesTitle: 'ముఖ్యమైన కథనాలు',
+      featuresAnalysisTitle: 'Features',
     },
     brandSVG,
     mostRead: {
@@ -169,6 +188,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
@@ -232,10 +254,6 @@ export const service = {
       {
         title: 'అంతర్జాతీయం',
         url: '/telugu/international',
-      },
-      {
-        title: '#ISWOTY',
-        url: '/telugu/resources/idt-47054a9b-b97c-4190-bed0-0416210e698b',
       },
     ],
   },

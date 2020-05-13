@@ -45,10 +45,7 @@
           "thingLabel": "Refugees and asylum seekers",
           "thingUri": "http://www.bbc.co.uk/things/0cd55773-e753-44ad-ad07-1366bf1aa6bc#id",
           "thingId": "0cd55773-e753-44ad-ad07-1366bf1aa6bc",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
+          "thingType": ["Theme", "Thing"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Refugee",
             "http://www.wikidata.org/entity/Q564811"
@@ -66,14 +63,8 @@
           "thingLabel": "Rwanda",
           "thingUri": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
           "thingId": "8125f2a9-3259-4f35-ab75-d9a6577fdc88",
-          "thingType": [
-            "Place",
-            "Thing",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/49518/"
-          ],
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/49518/"],
           "topicName": "Rwanda",
           "topicId": "c340q4v3942t",
           "curationList": [
@@ -89,14 +80,8 @@
           "thingLabel": "Democratic Republic of Congo",
           "thingUri": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
           "thingId": "3548f44f-46f5-4e6e-8628-3f668f161691",
-          "thingType": [
-            "Place",
-            "Thing",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/203312/"
-          ],
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/203312/"],
           "topicName": "Republika Iharanira Demokrasi ya Kongo",
           "topicId": "c8y94y03z72t",
           "curationList": [
@@ -109,9 +94,7 @@
       ]
     },
     "version": "v1.0.10",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

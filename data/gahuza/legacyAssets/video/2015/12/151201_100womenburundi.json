@@ -23,7 +23,7 @@
     "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "41561035" },
     "tags": {},
     "version": "v1.0.0",
-    "blockTypes": [ "legacyMedia", "image", "paragraph" ],
+    "blockTypes": ["legacyMedia", "image", "paragraph"],
     "includeComments": false
   },
   "content": {
@@ -104,8 +104,18 @@
     "type": "cps"
   },
   "relatedContent": {
-    "section": { "subType": "index", "name": "Video", "uri": "/gahuza/video", "type": "simple" },
-    "site": { "subType": "site", "name": "BBCGahuza.com", "uri": "/gahuza", "type": "simple" },
+    "section": {
+      "subType": "index",
+      "name": "Video",
+      "uri": "/gahuza/video",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBCGahuza.com",
+      "uri": "/gahuza",
+      "type": "simple"
+    },
     "groups": []
   }
 }

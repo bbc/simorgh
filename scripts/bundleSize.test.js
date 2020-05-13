@@ -4,10 +4,10 @@ import { readdirSync, statSync } from 'fs';
 
 jest.mock('ora');
 jest.mock('chalk', () => ({
-  red: a => a,
-  green: a => a,
-  blue: a => a,
-  yellow: a => a,
+  red: (a) => a,
+  green: (a) => a,
+  blue: (a) => a,
+  yellow: (a) => a,
 }));
 jest.mock('../cypress/support/config/services', () => ({
   service1: {},
@@ -38,8 +38,8 @@ const setUpFSMocks = (service1FileSize, service2FileSize) => {
       main: 20000,
       vendor: 100000,
     };
-    statSync.mockImplementation(filePath => {
-      const filePattern = Object.keys(filePatternToSizeMap).find(key =>
+    statSync.mockImplementation((filePath) => {
+      const filePattern = Object.keys(filePatternToSizeMap).find((key) =>
         filePath.includes(key),
       );
       return { size: filePatternToSizeMap[filePattern] };
@@ -65,7 +65,7 @@ describe('bundleSize', () => {
       succeed,
       fail,
     });
-    chalk.red.bold = a => a;
+    chalk.red.bold = (a) => a;
 
     global.console.log = jest.fn();
     global.console.error = jest.fn();

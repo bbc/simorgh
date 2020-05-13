@@ -1,25 +1,80 @@
 import React, { useContext } from 'react';
-import { string, shape, object, arrayOf } from 'prop-types';
 import styled from 'styled-components';
-import path from 'ramda/src/path';
+import { shape, string, number } from 'prop-types';
 import MetadataContainer from '../../containers/Metadata';
+import ATIAnalytics from '../../containers/ATIAnalytics';
+import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
-import OnDemandRadio from '#containers/RadioPageBlocks/Blocks/OnDemandRadio';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import HeadingBlock from '#containers/RadioPageBlocks/Blocks/Heading';
+import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
+import DatestampBlock from '#containers/RadioPageBlocks/Blocks/Datestamp';
+import AudioPlayerBlock from '#containers/RadioPageBlocks/Blocks/AudioPlayer';
+
+const SKIP_LINK_ANCHOR_ID = 'content';
+const EPISODE_IS_AVAILABLE = 'available';
+const EPISODE_IS_EXPIRED = 'expired';
+const EPISODE_IS_NOT_YET_AVAILABLE = 'not-yet-available';
+
+const getEpisodeAvailability = (availableFrom, availableUntil) => {
+  const timeNow = Date.now();
+
+  if (!availableUntil) return EPISODE_IS_EXPIRED;
+  if (timeNow < availableFrom) return EPISODE_IS_NOT_YET_AVAILABLE;
+
+  return EPISODE_IS_AVAILABLE;
+};
+
+const StyledGelPageGrid = styled(GelPageGrid)`
+  width: 100%;
+  flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
+`;
+
+const renderEpisode = (
+  masterBrand,
+  episodeId,
+  episodeAvailableFrom,
+  episodeAvailableUntil,
+) => {
+  const episodeAvailability = getEpisodeAvailability(
+    episodeAvailableFrom,
+    episodeAvailableUntil,
+  );
+  switch (episodeAvailability) {
+    case EPISODE_IS_AVAILABLE:
+      return <AudioPlayerBlock externalId={masterBrand} id={episodeId} />;
+    case EPISODE_IS_EXPIRED:
+      return <AudioPlayerBlock isExpired />;
+    case EPISODE_IS_NOT_YET_AVAILABLE:
+    default:
+      return null;
+  }
+};
 
 const OnDemandRadioPage = ({ pageData }) => {
-  const promo = path(['promo'], pageData);
-  const metadata = path(['metadata'], pageData);
+  const idAttr = SKIP_LINK_ANCHOR_ID;
+  const {
+    language,
+    brandTitle,
+    headline,
+    summary,
+    shortSynopsis,
+    masterBrand,
+    episodeId,
+    episodeAvailableFrom,
+    episodeAvailableUntil,
+    releaseDateTimeStamp,
+  } = pageData;
   const { dir } = useContext(ServiceContext);
-  const StyledGelPageGrid = styled(GelPageGrid)`
-    flex-grow: 1;
-  `;
+
   return (
     <>
+      <ATIAnalytics data={pageData} />
+      <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
-        title={promo.headlines.headline}
-        lang={metadata.language}
-        description={promo.media.synopses.short}
+        title={headline}
+        lang={language}
+        description={shortSynopsis}
         openGraphType="website"
       />
 
@@ -58,7 +113,15 @@ const OnDemandRadioPage = ({ pageData }) => {
           }}
           margins={{ group0: true, group1: true, group2: true, group3: true }}
         >
-          <OnDemandRadio />
+          <HeadingBlock idAttr={idAttr} text={brandTitle} />
+          <DatestampBlock timestamp={releaseDateTimeStamp} />
+          <ParagraphBlock text={summary} />
+          {renderEpisode(
+            masterBrand,
+            episodeId,
+            episodeAvailableFrom,
+            episodeAvailableUntil,
+          )}
         </Grid>
       </StyledGelPageGrid>
     </>
@@ -67,25 +130,13 @@ const OnDemandRadioPage = ({ pageData }) => {
 
 OnDemandRadioPage.propTypes = {
   pageData: shape({
-    metadata: shape({
-      id: string,
-      tags: object,
-    }),
-    promo: shape({
-      subtype: string,
-      name: string,
-    }),
-    content: shape({
-      blocks: arrayOf(
-        shape({
-          uuid: string,
-          id: string,
-          externalId: string,
-          text: string,
-          type: string,
-        }),
-      ),
-    }),
+    brandTitle: string,
+    headline: string,
+    summary: string,
+    language: string,
+    episodeAvailableFrom: number,
+    episodeAvailableUntil: number,
+    releaseDateTimeStamp: number,
   }).isRequired,
 };
 

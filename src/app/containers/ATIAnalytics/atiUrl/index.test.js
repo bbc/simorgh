@@ -7,11 +7,7 @@ const mockAndSet = ({ name, source }, response) => {
   source[name].mockImplementation(() => response);
 };
 
-const splitUrl = url =>
-  url
-    .replace(/&/g, ',')
-    .replace(/\?/g, ',')
-    .split(',');
+const splitUrl = url => url.replace(/&/g, ',').replace(/\?/g, ',').split(',');
 
 const analyticsUtilFunctions = [
   { name: 'getDestination', source: genericLabelHelpers },
@@ -107,6 +103,7 @@ describe('getThingAttributes', () => {
       'x6=[getReferrer]',
       'x9=[sanitise]',
       'x18=[isLocServeCookieSet]',
+      'ref=getReferrer',
     ];
 
     expect(queryParamsArray).toHaveLength(expectedValues.length);

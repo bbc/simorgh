@@ -21,6 +21,7 @@ Please familiarise yourself with our:
 - [Code of conduct](https://github.com/bbc/simorgh/blob/latest/.github/CODE_OF_CONDUCT.md)
 - [Code Standards](https://github.com/bbc/simorgh/blob/latest/docs/Code-Standards.md)
 - [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md)
+- [Guide to Code Reviews](https://github.com/bbc/simorgh/blob/latest/docs/Code-Reviews.md)
 - [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.md)
 - [GPG Signing Guide](docs/GPG-Signing-Guide.md)
 - [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md) (you are here)
@@ -139,7 +140,7 @@ When adding a new page type there are several parts required.
 
 #### 6) Add Cypress E2E tests for the new page type
 
-- This requires config in `cypress/support/config/services.js` for every service (even if to set the new page type to undefined)
+- This requires config in `cypress/support/config/settings.js` for every service (even if to set the new page type to undefined)
 - If required bespoke tests for the page type should be added inside of `cypress/integration/pages/`
 - If bespoke tests are added under `cypress/integration/pages/` you must ensure the e2e pipelines are updated to run the new spec [Test e2e Pipeline](https://github.com/bbc/simorgh/blob/latest/Jenkinsfile-e2e-test) & [Live e2e Pipeline](https://github.com/bbc/simorgh/blob/latest/Jenkinsfile-e2e)
 

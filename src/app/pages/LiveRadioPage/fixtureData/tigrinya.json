@@ -1,0 +1,34 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "text": "ስምዑ",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "መደባትና",
+        "type": "paragraph"
+      },
+      {
+        "id": "liveradio",
+        "subType": "primary",
+        "format": "audio",
+        "externalId": "bbc_tigrinya_radio",
+        "duration": "PT0S",
+        "caption": "",
+        "embedding": false,
+        "available": true,
+        "live": true,
+        "type": "version"
+      }
+    ]
+  },
+  "language": "ti",
+  "id": "urn:bbc:ares::ws_live:bbc_tigrinya_radio",
+  "name": "ስምዑ",
+  "summary": "መደባትና",
+  "pageTitle": "ስምዑ - BBC News ትግርኛ",
+  "contentType": "player-live",
+  "pageIdentifier": "tigrinya.bbc_tigrinya_radio.liveradio.page"
+}

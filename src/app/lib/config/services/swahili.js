@@ -50,14 +50,14 @@ export const service = {
     translations: {
       seeAll: 'Tazama zote',
       home: 'Habari',
-      currentPage: 'Ukurasa uliopo',
+      currentPage: 'Ukurasa uliopo ',
       skipLinkText: 'Ruka hadi maelezo',
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
       navMenuText: 'Yaliyomo',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'Kicheza Nyenzo',
+        audioPlayer: 'Kicheza Sauti',
+        videoPlayer: 'Kicheza Video',
       },
       error: {
         404: {
@@ -155,13 +155,32 @@ export const service = {
           subtitle:
             'Mitikasi Leo ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku.',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'Sikiliza',
+        watch: 'Tazama',
         liveLabel: 'Moja kwa moja',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'MBELE',
+        previousRadioShow: 'Kipindi kilichopita cha redio',
+        nextRadioShow: 'Kipindi kijacho cha redio',
+        duration: 'Muda',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Maelezo ya video, ',
+          text: 'Onyo: Imetoka kwingine na inaweza kuwa na matangazo',
+        },
+        fallback: {
+          text: 'Haipatikani tena',
+          linkText: 'Tazama zaidi katika %provider_name%',
+          linkTextSuffixVisuallyHidden: ', ya nje',
+          warningText: 'BBC haihusiki na taarifa za kutoka mitandao ya nje.',
+        },
+        skipLink: {
+          text: 'Ruka %provider_name% ujumbe',
+          endTextVisuallyHidden: 'Mwisho wa %provider_name% ujumbe',
+        },
+      },
+      topStoriesTitle: 'Habari kuu',
+      featuresAnalysisTitle: 'Gumzo mitandaoni',
     },
     brandSVG,
     mostRead: {
@@ -172,7 +191,13 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      header: 'BBC News Radio',
+      onFrontPage: true,
+      frontPagePosition: 'Features',
+      header: 'Vipindi vya Redio',
+      durationLabel: 'Muda %duration%',
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
@@ -230,16 +255,8 @@ export const service = {
         url: '/swahili/media/video',
       },
       {
-        title: 'Sauti',
-        url: '/swahili/media/audio',
-      },
-      {
         title: 'Vipindi vya Redio',
         url: '/swahili/kwa_kina/redio',
-      },
-      {
-        title: 'Picha',
-        url: '/swahili/media/photogalleries',
       },
     ],
   },

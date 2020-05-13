@@ -700,9 +700,7 @@
               "versions": [
                 {
                   "versionId": "p07gn6fb",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 232,
                   "durationISO8601": "PT3M52S",
                   "warnings": {},
@@ -771,9 +769,7 @@
               "versions": [
                 {
                   "versionId": "p07gjysh",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 204,
                   "durationISO8601": "PT3M24S",
                   "warnings": {},
@@ -842,9 +838,7 @@
               "versions": [
                 {
                   "versionId": "p07gg1by",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 99,
                   "durationISO8601": "PT1M39S",
                   "warnings": {},
@@ -961,9 +955,7 @@
               "versions": [
                 {
                   "versionId": "p07gg17s",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 130,
                   "durationISO8601": "PT2M10S",
                   "warnings": {},
@@ -1031,9 +1023,7 @@
               "versions": [
                 {
                   "versionId": "p07gfdtq",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 91,
                   "durationISO8601": "PT1M31S",
                   "warnings": {},
@@ -1102,9 +1092,7 @@
               "versions": [
                 {
                   "versionId": "p07gdwdg",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 125,
                   "durationISO8601": "PT2M5S",
                   "warnings": {},
@@ -1179,9 +1167,7 @@
               "versions": [
                 {
                   "versionId": "p07gdpwd",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 1,
                   "durationISO8601": "PT1S",
                   "warnings": {},
@@ -1296,9 +1282,7 @@
               "versions": [
                 {
                   "versionId": "p06xfq53",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
                   "warnings": {},

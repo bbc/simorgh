@@ -21,7 +21,7 @@
     "analyticsLabels": { "cps_asset_type": "map" },
     "tags": {},
     "version": "v1.0.0",
-    "blockTypes": [ "legacyMedia", "paragraph", "crosshead" ],
+    "blockTypes": ["legacyMedia", "paragraph", "crosshead"],
     "includeComments": false
   },
   "content": {
@@ -60,7 +60,11 @@
         "markupType": "plain_text",
         "type": "paragraph"
       },
-      { "text": "වරප්\u200dරසාදිත සුළු පිරිසක්", "markupType": "plain_text", "type": "crosshead" },
+      {
+        "text": "වරප්\u200dරසාදිත සුළු පිරිසක්",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
       {
         "text": "එහෙත්, යුද හමුදාවේ වරප්\u200dරසාද ලත් සුළු පිරිසක් පමණක් මෙම සහනය භුක්ති විඳින බවයි ඔවුන් ප්\u200dරකාශ කළේ.",
         "markupType": "plain_text",
@@ -131,7 +135,12 @@
       "uri": "/sinhala/sri_lanka",
       "type": "simple"
     },
-    "site": { "subType": "site", "name": "BBCSinhala.com", "uri": "/sinhala", "type": "simple" },
+    "site": {
+      "subType": "site",
+      "name": "BBCSinhala.com",
+      "uri": "/sinhala",
+      "type": "simple"
+    },
     "groups": [
       {
         "type": "see-alsos",

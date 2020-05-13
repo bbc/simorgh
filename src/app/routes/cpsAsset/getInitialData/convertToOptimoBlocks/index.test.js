@@ -1,3 +1,4 @@
+import loggerMock from '#testHelpers/loggerMock'; // Must be imported before convertToOptimoBlocks
 import { CPSMediaBlock, optimoVideoBlock } from './blocks/media/fixtures';
 import {
   legacyMediaBlock,
@@ -12,6 +13,7 @@ import {
 } from './blocks/list/fixtures';
 import convertToOptimoBlocks from '.';
 import { optimoTextWithParagraph, optimoSubheadline } from './utils/helpers';
+import { UNSUPPORTED_BLOCK_TYPE } from '#lib/logger.const';
 
 describe('convertToOptimoBlocks', () => {
   it('should convert CPS data into Optimo format', async () => {
@@ -293,6 +295,32 @@ describe('convertToOptimoBlocks', () => {
       };
 
       expect(await convertToOptimoBlocks(input)).toEqual(expected);
+    });
+  });
+
+  it('should log info if block type is unsupported', async () => {
+    const url = '/service/path/to/asset';
+    const type = 'unsupported-type-name-here';
+    const assetType = 'MAP';
+    const input = {
+      metadata: {
+        locators: { assetUri: url },
+        type: assetType,
+      },
+      content: {
+        blocks: [
+          {
+            type,
+          },
+        ],
+      },
+    };
+
+    await convertToOptimoBlocks(input);
+    expect(loggerMock.info).toHaveBeenCalledWith(UNSUPPORTED_BLOCK_TYPE, {
+      url,
+      type,
+      assetType,
     });
   });
 });

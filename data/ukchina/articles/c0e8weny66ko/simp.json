@@ -18,12 +18,7 @@
     },
     "tags": {},
     "version": "v1.1.0",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment"
-    ]
+    "blockTypes": ["headline", "text", "paragraph", "fragment"]
   },
   "content": {
     "model": {
@@ -104,7 +99,32 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c0e8weny66ko"
     },
-    "summary": "",
+    "summary": {
+      "blocks": [
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": ""
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": ""
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        }
+      ]
+    },
     "timestamp": 1562943210269,
     "id": "urn:bbc:ares::article:c0e8weny66ko",
     "type": "cps"

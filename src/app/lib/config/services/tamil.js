@@ -161,10 +161,30 @@ export const service = {
         listen: 'கேட்க',
         watch: 'பார்க்க',
         liveLabel: 'நேரலை',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'காணொளிக் குறிப்பு ',
+          text: 'எச்சரிக்கை: வெளியார் தகவல்களில் விளம்பரங்கள் இருக்கலாம்',
+        },
+        fallback: {
+          text: 'தகவல் இல்லை',
+          linkText: 'மேலதிக விவரங்களைக் காண %provider_name%',
+          linkTextSuffixVisuallyHidden: ', வெளி இணைப்பு',
+          warningText:
+            'வெளியார் இணைய தளங்களின் உள்ளடக்கத்துக்கு பிபிசி பொறுப்பாகாது.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
+      topStoriesTitle: 'முக்கிய செய்திகள்',
+      featuresAnalysisTitle: 'சிறப்புச் செய்திகள்',
     },
     brandSVG,
     mostRead: {
@@ -175,6 +195,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
@@ -251,10 +274,6 @@ export const service = {
       {
         title: 'வீடியோ',
         url: '/tamil/media/video',
-      },
-      {
-        title: '#ISWOTY',
-        url: '/tamil/resources/idt-ce219e77-9003-42b8-b276-1214e232fdc0',
       },
     ],
   },

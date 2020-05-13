@@ -214,9 +214,7 @@
                             },
                             "duration": 45,
                             "durationISO8601": "PT45S",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "versionId": "p019dx68",
                             "warnings": {}
                           }
@@ -391,7 +389,32 @@
     "locators": {
       "optimoUrn": "urn:bbc:optimo:asset:c3xd4xg3rm9o"
     },
-    "summary": "",
+    "summary": {
+      "blocks": [
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": ""
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": ""
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        }
+      ]
+    },
     "timestamp": 1562941862686,
     "type": "cps"
   },

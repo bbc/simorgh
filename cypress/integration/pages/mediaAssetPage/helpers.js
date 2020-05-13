@@ -1,16 +1,32 @@
-export const getBlockByType = (blocks, blockType) => {
-  let blockData;
+import paths from 'ramda/src/paths';
+import envConfig from '../../../support/config/envs';
 
-  blocks.forEach(block => {
-    if (!blockData && block.type === blockType) {
-      blockData = block;
-    }
-  });
-  return blockData;
+export const hasMedia = jsonData => {
+  const mediaTypes = ['video', 'version', 'media', 'legacyMedia'];
+  return mediaTypes.some(type => jsonData.metadata.blockTypes.includes(type));
 };
 
-export const getBlockData = (blockType, body) => {
-  const { blocks } = body.content.model;
+const getMediaId = jsonData => {
+  const mediaBlock = jsonData.promo.media;
 
-  return getBlockByType(blocks, blockType);
+  const [versionId, externalId, id] = paths(
+    [['versions', 0, 'versionId'], ['externalId'], ['id']],
+    mediaBlock,
+  );
+
+  return versionId || externalId || id;
+};
+
+export const getEmbedUrl = (jsonData, language, isAmp = false) => {
+  const prefix = jsonData.promo.media.type === 'legacyMedia' ? 'legacy' : 'cps';
+
+  const embedUrl = [
+    envConfig.avEmbedBaseUrl,
+    'ws/av-embeds',
+    `${prefix}${jsonData.metadata.locators.assetUri}`,
+    getMediaId(jsonData),
+    language,
+  ].join('/');
+
+  return isAmp ? `${embedUrl}/amp` : embedUrl;
 };

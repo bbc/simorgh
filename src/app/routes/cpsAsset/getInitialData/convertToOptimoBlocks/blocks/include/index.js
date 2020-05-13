@@ -1,8 +1,55 @@
-const convertInclude = ({ href, url, type, ...rest }) => {
+import 'isomorphic-fetch';
+import nodeLogger from '#lib/logger.node';
+
+const logger = nodeLogger(__filename);
+
+const buildIncludeUrl = (href, type) => {
+  const resolvers = {
+    idt1: '',
+    idt2: '/html',
+    vj: '',
+  };
+
+  const withTrailingHref = href.startsWith('/') ? href : `/${href}`;
+
+  return `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${resolvers[type]}`;
+};
+
+const fetchMarkup = async url => {
+  try {
+    /* The timeout value here is arbitrary and subject to change. It's purpose is to ensure that pending promises do not delay page rendering on the server.
+      Using isomorphic-fetch means we use window.fetch, which does not have a timeout option, on the client and node-fetch, which does, on the server.
+    */
+    const res = await fetch(url, { timeout: 3000 });
+    if (res.status !== 200) {
+      throw new Error(`Failed to fetch include at: ${url}`);
+    } else {
+      const html = await res.text();
+      return html;
+    }
+  } catch (e) {
+    logger.error(
+      JSON.stringify(
+        {
+          event: 'include_fetch_error',
+          message: e,
+        },
+        null,
+        2,
+      ),
+    );
+    return null;
+  }
+};
+
+const convertInclude = async ({ href, type, ...rest }) => {
   const supportedTypes = {
     indepthtoolkit: 'idt1',
     idt2: 'idt2',
     include: 'vj',
+    'news/special': 'vj',
+    'market-data': 'vj',
+    'smallprox/include': 'vj',
   };
 
   // This determines if the href has a leading '/'
@@ -19,7 +66,6 @@ const convertInclude = ({ href, url, type, ...rest }) => {
 
   // This determines if the type is supported and returns the include type name
   const includeType = supportedTypes[typeExtraction];
-
   if (!includeType) {
     return null;
   }
@@ -27,10 +73,10 @@ const convertInclude = ({ href, url, type, ...rest }) => {
   return {
     type,
     model: {
-      // `url` here should be replaced with `href` once mozart routes have been created. /*TODO: Create issue for this */
-      href: url,
-      ...rest,
+      href,
+      html: await fetchMarkup(buildIncludeUrl(href, includeType)),
       type: includeType,
+      ...rest,
     },
   };
 };

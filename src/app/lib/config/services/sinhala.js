@@ -159,10 +159,30 @@ export const service = {
         listen: 'සවන්දෙන්න',
         watch: 'නරඹන්න',
         liveLabel: 'සජීවී.',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'වීඩියෝ ශීර්ෂ වැකිය, ',
+          text:
+            'අනතුරු ඇඟවීමයි: බීබීසී නොවන වාර්තාවල වෙළෙඳ දැන්වීම් අඩංගු විය හැකිය',
+        },
+        fallback: {
+          text: 'මෙහි අන්තර්ගතය නැත',
+          linkText: 'වැඩිදුරටත් %provider_name% බලන්න',
+          linkTextSuffixVisuallyHidden: ', බාහිර',
+          warningText: 'බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
+      topStoriesTitle: 'ප්‍රධාන පුවත',
+      featuresAnalysisTitle: 'දැක්ම',
     },
     brandSVG,
     mostRead: {
@@ -173,6 +193,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
@@ -225,24 +248,8 @@ export const service = {
         url: '/sinhala/world',
       },
       {
-        title: 'ක්‍රීඩා',
-        url: '/sinhala/sport',
-      },
-      {
-        title: 'ලලනා',
-        url: '/sinhala/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862',
-      },
-      {
-        title: 'යෞවන',
-        url: '/sinhala/topics/f6ec89fd-3823-498e-a888-572e96f791b2',
-      },
-      {
-        title: 'විද්‍යාව',
-        url: '/sinhala/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
-      },
-      {
-        title: 'වීඩියෝ',
-        url: '/sinhala/media/video',
+        title: 'විශේෂාංග',
+        url: '/sinhala/51727586',
       },
     ],
   },

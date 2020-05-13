@@ -21,7 +21,7 @@
     "analyticsLabels": { "cps_asset_type": "map" },
     "tags": {},
     "version": "v1.0.10",
-    "blockTypes": [ "legacyMedia" ],
+    "blockTypes": ["legacyMedia"],
     "includeComments": false
   },
   "content": {
@@ -80,7 +80,12 @@
       "uri": "/kyrgyz/entertainment",
       "type": "simple"
     },
-    "site": { "subType": "site", "name": "BBCkyrgyz.com", "uri": "/kyrgyz", "type": "simple" },
+    "site": {
+      "subType": "site",
+      "name": "BBCkyrgyz.com",
+      "uri": "/kyrgyz",
+      "type": "simple"
+    },
     "groups": []
   }
 }

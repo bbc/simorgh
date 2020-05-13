@@ -51,10 +51,7 @@
           "thingLabel": "Business",
           "thingUri": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
           "thingId": "2f2db234-3c2d-40a4-b4ac-eea661faadd0",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
+          "thingType": ["Theme", "Thing"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Business",
             "http://www.wikidata.org/entity/Q21857788"
@@ -64,45 +61,27 @@
           "thingLabel": "Tajikistan",
           "thingUri": "http://www.bbc.co.uk/things/896fde99-08a3-4291-bcaf-f40b89bd0e67#id",
           "thingId": "896fde99-08a3-4291-bcaf-f40b89bd0e67",
-          "thingType": [
-            "Place",
-            "Thing",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/1220409/"
-          ]
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/1220409/"]
         },
         {
           "thingLabel": "Currency markets",
           "thingUri": "http://www.bbc.co.uk/things/c34824bf-225d-4efa-ab84-53e95d40656d#id",
           "thingId": "c34824bf-225d-4efa-ab84-53e95d40656d",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Foreign_exchange_market"
-          ]
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Foreign_exchange_market"]
         },
         {
           "thingLabel": "Economy",
           "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
           "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Economy"
-          ]
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Economy"]
         }
       ]
     },
     "version": "v0.4.12",
-    "blockTypes": [
-      "image"
-    ]
+    "blockTypes": ["image"]
   },
   "content": {
     "blocks": [

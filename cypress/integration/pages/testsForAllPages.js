@@ -33,9 +33,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         resources.forEach(resource => {
           const selector = `head link[href="${resource}"]`;
           cy.get(selector).should('have.attr', 'rel', 'preconnect');
-          cy.get(selector)
-            .eq(1)
-            .should('have.attr', 'rel', 'dns-prefetch');
+          cy.get(selector).eq(1).should('have.attr', 'rel', 'dns-prefetch');
         });
       });
 
@@ -211,7 +209,11 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                 switch (pageType) {
                   case 'articles':
                     description =
-                      body.promo.summary || body.promo.headlines.seoHeadline;
+                      (typeof body.promo.summary === 'string'
+                        ? body.promo.summary
+                        : body.promo.summary.blocks[0].model.blocks[0].model
+                            .blocks[0].model.text) ||
+                      body.promo.headlines.seoHeadline;
                     title = body.promo.headlines.seoHeadline;
                     break;
                   case 'frontPage':

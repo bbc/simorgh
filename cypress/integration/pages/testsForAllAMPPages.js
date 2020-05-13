@@ -54,10 +54,7 @@ export const testsThatFollowSmokeTestConfigForAllAMPPages = ({
         });
       });
       it('should render at least one amp image', () => {
-        cy.get('figure')
-          .first()
-          .find('amp-img')
-          .should('be.visible');
+        cy.get('figure').first().find('amp-img').should('be.visible');
       });
     }
   });

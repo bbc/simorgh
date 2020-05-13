@@ -24,7 +24,7 @@
     "analyticsLabels": { "cps_asset_id": "20005826", "cps_asset_type": "map" },
     "tags": {},
     "version": "v1.0.0",
-    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "blockTypes": ["legacyMedia", "paragraph"],
     "includeComments": false
   },
   "content": {
@@ -117,8 +117,18 @@
     "type": "cps"
   },
   "relatedContent": {
-    "section": { "subType": "index", "name": "Multimedia", "uri": "/azeri/multimedia", "type": "simple" },
-    "site": { "subType": "site", "name": "BBCAzeri.com", "uri": "/azeri", "type": "simple" },
+    "section": {
+      "subType": "index",
+      "name": "Multimedia",
+      "uri": "/azeri/multimedia",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBCAzeri.com",
+      "uri": "/azeri",
+      "type": "simple"
+    },
     "groups": []
   }
 }

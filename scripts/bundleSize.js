@@ -13,13 +13,13 @@ const { MIN_SIZE, MAX_SIZE } = require('./bundleSizeConfig');
 
 const jsFiles = fs
   .readdirSync('build/public/static/js')
-  .filter(fileName => fileName.endsWith('.js'));
+  .filter((fileName) => fileName.endsWith('.js'));
 
-const getFileSize = filePath => fs.statSync(filePath).size;
-const getTotalSizeOfFilesBeginningWith = string => {
+const getFileSize = (filePath) => fs.statSync(filePath).size;
+const getTotalSizeOfFilesBeginningWith = (string) => {
   const sizeInBytes = jsFiles
-    .filter(fileName => fileName.startsWith(string))
-    .map(fileName => getFileSize(`build/public/static/js/${fileName}`))
+    .filter((fileName) => fileName.startsWith(string))
+    .map((fileName) => getFileSize(`build/public/static/js/${fileName}`))
     .reduce((totalKB, fileSizeInKB) => totalKB + fileSizeInKB, 0);
   return Math.round(sizeInBytes / 1000);
 };
@@ -27,10 +27,10 @@ const getTotalSizeOfFilesBeginningWith = string => {
 const mainBundleSize = getTotalSizeOfFilesBeginningWith('main');
 const vendorBundleSize = getTotalSizeOfFilesBeginningWith('vendor');
 
-const getServiceBundleSize = service =>
+const getServiceBundleSize = (service) =>
   mainBundleSize + vendorBundleSize + getTotalSizeOfFilesBeginningWith(service);
 
-const capitaliseFirstLetter = string =>
+const capitaliseFirstLetter = (string) =>
   string.charAt(0).toUpperCase() + string.slice(1);
 
 const createConsoleError = (service, size, adjective) =>
@@ -64,7 +64,7 @@ let smallestBundle;
 let largestBundle;
 
 const errors = services
-  .map(service => {
+  .map((service) => {
     const size = getServiceBundleSize(service);
 
     totalSize += size;
@@ -79,11 +79,11 @@ const errors = services
 
     return mapSizeToError(service, size);
   })
-  .filter(item => !!item);
+  .filter((item) => !!item);
 
 if (errors.length) {
   spinner.fail('Issues with service bundles: ');
-  errors.forEach(err => console.error(err)); // eslint-disable-line no-console
+  errors.forEach((err) => console.error(err)); // eslint-disable-line no-console
   throw new Error();
 } else {
   spinner.succeed('All bundle sizes are good!');
@@ -110,7 +110,7 @@ const bundlesToLog = [
 ];
 
 const maxSizeDigits = 5;
-const formatSize = size =>
+const formatSize = (size) =>
   `${' '.repeat(maxSizeDigits - size.toString().length)} ${size} kB  `;
 
 const logBundle = ({ name, size, service }) =>
@@ -124,6 +124,6 @@ const logBundle = ({ name, size, service }) =>
   );
 
 console.log('\nBundle size summary:\n'); // eslint-disable-line no-console
-bundlesToLog.forEach(bundleData => {
+bundlesToLog.forEach((bundleData) => {
   logBundle(bundleData);
 });

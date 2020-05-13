@@ -1,0 +1,187 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:arabic/world-23278971",
+    "locators": {
+      "assetUri": "/arabic/world-23278971",
+      "cpsUrn": "urn:bbc:content:assetUri:arabic/world-23278971",
+      "curie": "http://www.bbc.co.uk/asset/6ae06642-7526-8742-9e12-a5436f02ee56",
+      "assetId": "23278971"
+    },
+    "type": "MAP",
+    "createdBy": "arabic-v6",
+    "language": "ar",
+    "lastUpdated": 1588335919706,
+    "firstPublished": 1585038491000,
+    "lastPublished": 1585038491000,
+    "timestamp": 1585038491000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "arabic.world.media_asset.23278971.page",
+      "cps_asset_id": "23278971"
+    },
+    "passport": { "taggings": [] },
+    "tags": {},
+    "version": "v1.2.1",
+    "blockTypes": ["media", "heading", "paragraph", "list"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p01m7d07",
+        "subType": "clip",
+        "format": "audio",
+        "title": "Birmingham checkout",
+        "synopses": {
+          "short": "Some audio from a supermarket checkout in Birmingham"
+        },
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+        "embedding": false,
+        "advertising": false,
+        "caption": "Some audio from a supermarket checkout in Birmingham",
+        "versions": [
+          {
+            "versionId": "p01m7d09",
+            "types": ["Original"],
+            "duration": 127,
+            "durationISO8601": "PT2M7S",
+            "warnings": {
+              "short": "Contains some strong language.",
+              "long": "Contains some strong language."
+            },
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1555067395000
+          }
+        ],
+        "imageCopyright": "Getty Images",
+        "type": "media"
+      },
+      {
+        "text": "Test audio clip Arabic",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "تداول رواد موافع التواصل الاجتماعي مقاطع فيديو تظهر لبنانيين تحت الحجر الصحي يغنون ويرقصون من شرفاتهم. ولم تخل الشرفات من أغاني المظاهرات وحتى الصلوات.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "وكان مجلس الدفاع الأعلى في لبنان قد أعلن الأحد حالة الطوارىء الصحية في البلاد، لمواجهة انتشار فيروس كورونا. كما طلبت الحكومة من المواطنين البقاء في المنزل وعدم الخروج إلا لأسباب طارئة.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "تداول رواد موافع التواصل الاجتماعي مقاطع فيديو تظهر لبنانيين تحت الحجر الصحي يغنون ويرقصون من شرفاتهم. ولم تخل الشرفات من أغاني المظاهرات وحتى الصلوات.",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "وكان مجلس الدفاع الأعلى في لبنان قد أعلن الأحد حالة الطوارىء الصحية في البلاد، لمواجهة انتشار فيروس كورونا. كما طلبت الحكومة من المواطنين البقاء في المنزل وعدم الخروج إلا لأسباب طارئة.",
+            "markupType": "plain_text",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "<link><caption>link to another MAP</caption><altText>link</altText><url href=\"https://www.test.bbc.com/arabic/media-51927923\" platform=\"highweb\"/></link>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Test Arabic MAP",
+      "headline": "Test Arabic MAP audio clip"
+    },
+    "locators": {
+      "assetUri": "/arabic/world-23278971",
+      "cpsUrn": "urn:bbc:content:assetUri:arabic/world-23278971",
+      "curie": "http://www.bbc.co.uk/asset/6ae06642-7526-8742-9e12-a5436f02ee56",
+      "assetId": "23278971"
+    },
+    "summary": "test audio clip",
+    "timestamp": 1585038491000,
+    "language": "ar",
+    "passport": { "taggings": [] },
+    "media": {
+      "id": "p01m7d07",
+      "subType": "clip",
+      "format": "audio",
+      "title": "Birmingham checkout",
+      "synopses": {
+        "short": "Some audio from a supermarket checkout in Birmingham"
+      },
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+      "embedding": false,
+      "advertising": false,
+      "caption": "Some audio from a supermarket checkout in Birmingham",
+      "versions": [
+        {
+          "versionId": "p01m7d09",
+          "types": ["Original"],
+          "duration": 127,
+          "durationISO8601": "PT2M7S",
+          "warnings": {
+            "short": "Contains some strong language.",
+            "long": "Contains some strong language."
+          },
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1555067395000
+        }
+      ],
+      "imageCopyright": "Getty Images",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "63733053",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/88D9/test/_63733053_p01mt2kt.jpg",
+      "path": "/cpsdevpb/88D9/test/_63733053_p01mt2kt.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "England star Fran Kirby",
+      "copyrightHolder": "Getty Images",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:arabic/world-23278971",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "أخبار العالم",
+      "uri": "/arabic/world",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Arabic",
+      "uri": "/arabic",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

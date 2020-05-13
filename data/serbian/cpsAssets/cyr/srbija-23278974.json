@@ -1,0 +1,204 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "advertising": false,
+        "caption": "Audio test for articles, UK only",
+        "embedding": false,
+        "format": "audio",
+        "id": "p01n6y6z",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n6y7l.jpg",
+        "subType": "episode",
+        "synopses": { "short": "Audio test for articles, UK only" },
+        "title": "Audio test for articles, UK only",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1563782700000,
+            "availableTerritories": {
+              "nonUk": false,
+              "uk": true,
+              "world": false
+            },
+            "duration": 343,
+            "durationISO8601": "PT5M43S",
+            "types": ["Original"],
+            "versionId": "p01n6yb1",
+            "warnings": {
+              "long": "Contains some strong language.",
+              "short": "Contains some strong language."
+            }
+          }
+        ]
+      },
+      {
+        "markupType": "plain_text",
+        "role": "introduction",
+        "text": "Test MAP for Serbian",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Archaeological evidence of Paleolithic settlements on the territory of present-day Serbia is scarce. A fragment of a human jaw was found in Sićevo (Mala Balanica) and is believed to be up to 525,000-397,000 years old.",
+        "type": "paragraph"
+      },
+      { "markupType": "plain_text", "text": "Geography", "type": "heading" },
+      {
+        "markupType": "plain_text",
+        "text": "Situated at the crossroads between Central[16][137][138] and Southern Europe, Serbia is located in the Balkan peninsula and the Pannonian Plain. Serbia lies between latitudes 41° and 47° N, and longitudes 18° and 23° E. The country covers a total of 88,361 km2 (including Kosovo), which places it at 113th place in the world; with Kosovo excluded, the total area is 77,474 km2,[1] which would make it 117th.",
+        "type": "paragraph"
+      },
+      {
+        "altText": "serbia on map alt tag",
+        "caption": "serbia on map <>?:@~{}_+-=",
+        "copyrightHolder": "Wikipedia",
+        "height": 549,
+        "href": "http://b.files.bbci.co.uk/12519/test/_63733057_220px-serbia_-orthographic_projection_svg.png",
+        "id": "63733057",
+        "path": "/cpsdevpb/12519/test/_63733057_220px-serbia_-orthographic_projection_svg.png",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 976
+      },
+      {
+        "items": [
+          { "markupType": "plain_text", "text": "test", "type": "listItem" },
+          { "markupType": "plain_text", "text": "test", "type": "listItem" },
+          {
+            "markupType": "candy_xml",
+            "text": "<link><caption>test</caption><altText>wikipedia link</altText><url href=\"https://en.wikipedia.org/wiki/Serbia\" platform=\"highweb\"/></link>",
+            "type": "listItem"
+          }
+        ],
+        "numbered": false,
+        "type": "list"
+      },
+      { "markupType": "plain_text", "text": "crosshead", "type": "crosshead" },
+      {
+        "markupType": "plain_text",
+        "text": "test test test",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "serbiancyr.serbia.media_asset.23278974.page",
+      "cps_asset_id": "23278974",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": [
+      "media",
+      "paragraph",
+      "heading",
+      "image",
+      "list",
+      "crosshead"
+    ],
+    "createdBy": "serbian-v6",
+    "firstPublished": 1585040685000,
+    "id": "urn:bbc:ares::asset:serbian/cyr/srbija-23278974",
+    "includeComments": false,
+    "language": "sr-Cyrl",
+    "lastPublished": 1585041203000,
+    "lastUpdated": 1585041207175,
+    "locators": {
+      "assetId": "23278974",
+      "assetUri": "/serbian/cyr/srbija-23278974",
+      "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/srbija-23278974",
+      "curie": "http://www.bbc.co.uk/asset/00f43a6d-42bb-7a4c-995c-44462411e646"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "timestamp": 1585040685000,
+    "type": "MAP",
+    "version": "v1.1.8"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Serbia MAP test",
+      "shortHeadline": "Serbia MAP test"
+    },
+    "id": "urn:bbc:ares::asset:serbian/cyr/srbija-23278974",
+    "indexImage": {
+      "altText": "alt tag church image",
+      "copyrightHolder": "Google",
+      "height": 576,
+      "href": "http://b.files.bbci.co.uk/D6F9/test/_63733055_p01n6y7l.jpg",
+      "id": "63733055",
+      "path": "/cpsdevpb/D6F9/test/_63733055_p01n6y7l.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 1024
+    },
+    "language": "sr-Cyrl",
+    "locators": {
+      "assetId": "23278974",
+      "assetUri": "/serbian/cyr/srbija-23278974",
+      "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/srbija-23278974",
+      "curie": "http://www.bbc.co.uk/asset/00f43a6d-42bb-7a4c-995c-44462411e646"
+    },
+    "media": {
+      "advertising": false,
+      "caption": "Audio test for articles, UK only",
+      "embedding": false,
+      "format": "audio",
+      "id": "p01n6y6z",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n6y7l.jpg",
+      "subType": "episode",
+      "synopses": { "short": "Audio test for articles, UK only" },
+      "title": "Audio test for articles, UK only",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1563782700000,
+          "availableTerritories": {
+            "nonUk": false,
+            "uk": true,
+            "world": false
+          },
+          "duration": 343,
+          "durationISO8601": "PT5M43S",
+          "types": ["Original"],
+          "versionId": "p01n6yb1",
+          "warnings": {
+            "long": "Contains some strong language.",
+            "short": "Contains some strong language."
+          }
+        }
+      ]
+    },
+    "passport": { "taggings": [] },
+    "summary": "test",
+    "timestamp": 1585040685000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Србија",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/serbian/cyr/srbija"
+    },
+    "site": {
+      "name": "BBC News na srpskom",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/serbian/cyr"
+    }
+  }
+}

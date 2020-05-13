@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import useToggle from '../../../containers/Toggle/useToggle';
+import useToggle from '#hooks/useToggle';
 import CanonicalChartbeatBeacon from '../../../containers/ChartbeatAnalytics/canonical';
 import { RequestContext } from '../../RequestContext';
 import { canonicalChartbeatPropTypes } from '../../../models/propTypes/chartbeatAnalytics';

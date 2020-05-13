@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/ukrainian/media-40962249",
       "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-40962249",
-      "curie": "http://www.bbc.co.uk/asset/e8887c53-d231-db4f-ad42-018f90d9e93d"
+      "curie": "http://www.bbc.co.uk/asset/e8887c53-d231-db4f-ad42-018f90d9e93d",
+      "assetId": "40962249"
     },
     "type": "MAP",
     "createdBy": "ukrainian-v6",
     "language": "ru",
-    "lastUpdated": 1550609792418,
-    "firstPublished": 1502974945,
-    "lastPublished": 1502974946,
+    "lastUpdated": 1588323359593,
+    "firstPublished": 1502974945000,
+    "lastPublished": 1502974945000,
+    "timestamp": 1502974945000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -30,8 +32,9 @@
       "counterName": "ukrainian.embedded_media.media_asset.40962249.page",
       "cps_asset_id": "40962249"
     },
+    "passport": { "taggings": [] },
     "tags": {},
-    "version": "v1.0.0",
+    "version": "v1.2.1",
     "blockTypes": ["media", "paragraph", "list"],
     "includeComments": false
   },
@@ -49,7 +52,6 @@
         },
         "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05cll5w.jpg",
         "embedding": true,
-        "warnings": {},
         "advertising": true,
         "caption": "\"Многие с ума сходили, не выдерживали\": узница ГУЛАГа вспоминает свой арест",
         "versions": [
@@ -57,10 +59,14 @@
             "versionId": "p05cfdcy",
             "types": ["Editorial"],
             "duration": 132,
+            "durationISO8601": "PT2M12S",
+            "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
-            }
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1502724462000
           }
         ],
         "type": "media"
@@ -107,11 +113,13 @@
     "locators": {
       "assetUri": "/ukrainian/media-40962249",
       "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-40962249",
-      "curie": "http://www.bbc.co.uk/asset/e8887c53-d231-db4f-ad42-018f90d9e93d"
+      "curie": "http://www.bbc.co.uk/asset/e8887c53-d231-db4f-ad42-018f90d9e93d",
+      "assetId": "40962249"
     },
     "summary": "Август 1937 года известен как начало “Большого террора” в СССР. Одна из узниц ГУЛАГа Вера Голубева рассказала корреспонденту Би-би-си Саре Рейнсфорд о том, что ей довелось пережить.",
-    "timestamp": 1550609792418,
-    "passport": {},
+    "timestamp": 1502974945000,
+    "language": "ru",
+    "passport": { "taggings": [] },
     "media": {
       "id": "p05cczb8",
       "subType": "clip",
@@ -124,7 +132,6 @@
       },
       "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05cll5w.jpg",
       "embedding": true,
-      "warnings": {},
       "advertising": true,
       "caption": "\"Многие с ума сходили, не выдерживали\": узница ГУЛАГа вспоминает свой арест",
       "versions": [
@@ -132,10 +139,10 @@
           "versionId": "p05cfdcy",
           "types": ["Editorial"],
           "duration": 132,
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          }
+          "durationISO8601": "PT2M12S",
+          "warnings": {},
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1502724462000
         }
       ],
       "type": "media"
@@ -186,7 +193,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/blogs-russian-38807549"
             },
             "summary": "Фильмы Александра Довженко \"Звенигора\" и \"Арсенал\" стали попытками \"исправить\" свою биографию. Ведь в 1917 году будущий режиссер воевал в петлюровской армии.",
-            "timestamp": 1485866701,
+            "timestamp": 1485866701000,
+            "language": "ru",
             "cpsType": "STY",
             "indexImage": {
               "id": "93884632",
@@ -212,7 +220,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/features-russian-39899056"
             },
             "summary": "Когда Светлана Лохова увидела, что по всему интернету ходят сообщения, что она, может быть, российская шпионка, она сначала подумала, что это шутка. Однако в реальности все оказалось куда серьезнее.",
-            "timestamp": 1494593961,
+            "timestamp": 1494593961000,
+            "language": "ru",
             "cpsType": "STY",
             "indexImage": {
               "id": "96017137",
@@ -238,7 +247,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/features-russian-38928171"
             },
             "summary": "В феврале в украинский прокат выходит фильм \"Горькая жатва\" - первая голливудская лента, посвященная теме Голодомора.",
-            "timestamp": 1486716293,
+            "timestamp": 1486716293000,
+            "language": "ru",
             "cpsType": "STY",
             "indexImage": {
               "id": "94232460",
@@ -265,7 +275,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/blogs-russian-38735932"
             },
             "summary": "90 лет назад в тогдашней украинской столице Харькове разворачивалась бурная литературная дискуссия, в которой все заметнее становились политические акценты. Суть противостояния определяло название памфлета Хвылевого - \"Украина или Малороссия?\".",
-            "timestamp": 1485277653,
+            "timestamp": 1485277653000,
+            "language": "ru",
             "cpsType": "STY",
             "indexImage": {
               "id": "93791473",
@@ -291,7 +302,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/features-russian-39254197"
             },
             "summary": "Институт национальной памяти собрал опровержения десяти исторических мифов о событиях Украинской революции 1917-1921 годов.",
-            "timestamp": 1489405483,
+            "timestamp": 1489405483000,
+            "language": "ru",
             "cpsType": "STY",
             "indexImage": {
               "id": "95056795",

@@ -147,10 +147,29 @@ export const service = {
         listen: 'Listen',
         watch: 'Xem',
         liveLabel: 'TRỰC TIẾP',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Chụp lại video, ',
+          text: 'Cảnh báo: Nội dung bên thứ ba có thể có quảng cáo',
+        },
+        fallback: {
+          text: 'Nội dung không có',
+          linkText: 'Xem thêm ở %provider_name%',
+          linkTextSuffixVisuallyHidden: ', bên ngoài',
+          warningText: 'BBC không chịu trách nhiệm nội dung các trang ngoài.',
+        },
+        skipLink: {
+          text: 'Bỏ qua %provider_name% tin',
+          endTextVisuallyHidden: 'Cuối %provider_name% tin',
+        },
+      },
+      topStoriesTitle: 'Tin chính',
+      featuresAnalysisTitle: 'Góc nhìn và chuyên mục',
     },
     brandSVG,
     mostRead: {
@@ -161,6 +180,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
@@ -237,14 +259,6 @@ export const service = {
       {
         title: 'Học tiếng Anh',
         url: '/vietnamese/english',
-      },
-      {
-        title: 'Hình ảnh',
-        url: '/vietnamese/media/photogalleries',
-      },
-      {
-        title: 'Audio',
-        url: '/vietnamese/media/audio',
       },
       {
         title: 'Video',

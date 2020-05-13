@@ -45,10 +45,7 @@
           "thingLabel": "Astronomy",
           "thingUri": "http://www.bbc.co.uk/things/4fdf1711-6845-4344-98cc-1a382ed91b65#id",
           "thingId": "4fdf1711-6845-4344-98cc-1a382ed91b65",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
+          "thingType": ["Theme", "Thing"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Astronomy",
             "http://www.wikidata.org/entity/Q333"
@@ -58,14 +55,8 @@
           "thingLabel": "India",
           "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
           "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
-          "thingType": [
-            "Place",
-            "Thing",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/1269750/"
-          ],
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/1269750/"],
           "topicName": "भारत",
           "topicId": "cxnyk3y49x6t",
           "curationList": [
@@ -78,9 +69,7 @@
       ]
     },
     "version": "v1.0.10",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

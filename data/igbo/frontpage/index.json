@@ -774,6 +774,38 @@
             },
             "id": "urn:bbc:ares::asset:igbo/23182710",
             "type": "cps"
+          },
+          {
+            "name": "Igbo TV bulletin",
+            "summary": "This is a live Igbo TV bulletin promo, using a CPS promo for a TV Bulletin",
+            "indexImage": {
+              "id": "63725092",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/4A6C/test/_63725091_e7badb45-9052-4554-87f6-b430cb6d48fb.jpg",
+              "path": "/cpsdevpb/4A6C/test/_63725091_e7badb45-9052-4554-87f6-b430cb6d48fb.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "NYSC from the Igbo site",
+              "caption": "NYSC from the Igbo site",
+              "copyrightHolder": "other"
+            },
+            "indexThumbnail": {
+              "id": "63725093",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/988C/test/_63725093_mediaitem63725091.jpg",
+              "path": "/cpsdevpb/988C/test/_63725093_mediaitem63725091.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "NYSC from the Igbo site",
+              "caption": "NYSC from the Igbo site",
+              "copyrightHolder": "other"
+            },
+            "uri": "https://www.bbc.com/igbo/media-42986440",
+            "contentType": "TVBulletin",
+            "assetTypeCode": "PRO",
+            "timestamp": 1573483162000,
+            "isLive": true,
+            "type": "link"
           }
         ],
         "strapline": {

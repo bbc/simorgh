@@ -2,7 +2,7 @@ const idRegex = 'c[a-zA-Z0-9]{10}o';
 const ampRegex = '.amp';
 const assetUriRegex = '[a-z-_]{0,}[0-9]{8,}';
 const legacyAssetUriRegex =
-  '[a-z-_]{1,}/[0-9]{4}/[0-9]{2}/[0-9]{6}[a-z0-9-_]{0,}';
+  '[a-z-_/]{1,}/[0-9]{4}/[0-9]{2}/[0-9]{6}[a-z0-9-_]{0,}';
 const variantRegex = '/simp|/trad|/cyr|/lat';
 const articleLocalRegex = 'articles|erthyglau|sgeulachdan';
 const mediaIdRegex = '[a-z0-9]+';
@@ -64,4 +64,19 @@ export const getRadioAndTVRegex = services => {
 export const getErrorPageRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/:errorCode(${errorCodeRegex}):variant(${variantRegex})?`;
+};
+
+export const getMostReadPageRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex}):variant(${variantRegex})?/popular/read`;
+};
+
+export const getMostReadDataRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex})/mostread:variant(${variantRegex})?.json`;
+};
+
+export const getSecondaryColumnDataRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex})/sty-secondary-column:variant(${variantRegex})?.json`;
 };

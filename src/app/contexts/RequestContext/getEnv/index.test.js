@@ -9,7 +9,7 @@ const tests = [
   },
   {
     input: 'https://www.stage.bbc.co.uk',
-    expected: 'live',
+    expected: 'test',
     assertion: 'should return expected output for stage',
   },
   {

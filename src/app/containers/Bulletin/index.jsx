@@ -79,6 +79,7 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
   const listenText = pathOr('Listen', ['media', 'listen'], translations);
   const liveText = pathOr('LIVE', ['media', 'liveLabel'], translations);
   const ctaText = contentType === 'TVBulletin' ? watchText : listenText;
+  const ctaTextIsEnglish = ctaText === 'Watch' || ctaText === 'Listen';
 
   const isLive = pathOr(null, ['isLive'], item);
 
@@ -88,18 +89,19 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
 
   return (
     <Bulletin
-      image={Image}
-      mediaType={mediaType}
-      isLive={isLive}
       script={script}
       service={service}
+      dir={dir}
+      image={Image}
+      mediaType={mediaType}
       headlineText={headline}
       summaryText={summary}
       ctaLink={ctaLink}
       ctaText={ctaText}
+      isLive={isLive}
       liveText={liveText}
       offScreenText={offScreenText}
-      dir={dir}
+      lang={ctaTextIsEnglish ? 'en-GB' : null}
     />
   );
 };

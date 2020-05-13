@@ -1,1448 +1,1416 @@
 {
-   "metadata":{
-      "id":"urn:bbc:ares::index:serbian/cyr/front_page/desktop/domestic",
-      "locators":{
-         "assetUri":"/serbian/cyr/front_page",
-         "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/front_page",
-         "curie":"http://www.bbc.co.uk/asset/631e99d6-c1c4-73b7-e050-17ac8045512e/desktop/domestic"
-      },
-      "type":"IDX",
-      "createdBy":"serbian-v6",
-      "language":"sr-Cyrl",
-      "lastUpdated":1567975529298,
-      "firstPublished":1516370981000,
-      "lastPublished":1567975522000,
-      "options":{
-         "allowAdvertising":true
-      },
-      "analyticsLabels":{
-         "counterName":"serbiancyr.page",
-         "cps_asset_id":"42745681",
-         "cps_asset_type":"idx"
-      },
-      "tags":{
-
-      },
-      "version":"v1.1.1",
-      "blockTypes":[
-         "responsive-top-stories",
-         "responsive-cluster",
-         "responsive-must-see",
-         "responsive-inspire",
-         "responsive-in-depth",
-         "featured-site-top-stories",
-         "useful-links"
-      ],
-      "title":"Почетна страна",
-      "summary":"ББЦ на српском нуди ексклузиван садржај - аналитичко, истраживачкo и непристрасно извештавање у текстовима и видео прилозима прилагођеним и друштвеним мрежама."
-   },
-   "content":{
-      "groups":[
-         {
-            "type":"responsive-top-stories",
-            "title":"Top Stories",
-            "maxRelatedLinks":2,
-            "items":[
-               {
-                  "headlines":{
-                     "headline":"CYR - Сарајево - „Нека љуби ко год кога хоће\""
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/balkan-49629025",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/balkan-49629025"
-                  },
-                  "summary":"Више од хиљаду људи шетало је центром Сарајева уз звуке бубњева и једну севдалинку.",
-                  "timestamp":1567960803000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e1739461b000e9dabf6",
-                           "campaignName":"WS - CS"
-                        },
-                        {
-                           "campaignId":"5a988e4739461b000e9dabfc",
-                           "campaignName":"WS - Update me"
-                        }
-                     ]
-                  },
-                  "cpsType":"MAP",
-                  "media":{
-                     "id":"p07mt4mj",
-                     "subType":"clip",
-                     "format":"video",
-                     "title":"Sarajevo - Neka ljubi ko god koga hoće",
-                     "synopses":{
-                        "short":"Sarajevo - Neka ljubi ko god koga hoće"
-                     },
-                     "imageUrl":"ichef.bbci.co.uk/images/ic/$recipe/p07mt62p.jpg",
-                     "embedding":true,
-                     "advertising":false,
-                     "caption":"Sarajevo - Neka ljubi ko god koga hoće",
-                     "versions":[
-                        {
-                           "versionId":"p07mt4ml",
-                           "types":[
-                              "Original"
-                           ],
-                           "duration":135,
-                           "durationISO8601":"PT2M15S",
-                           "warnings":{
-
-                           },
-                           "availableTerritories":{
-                              "uk":true,
-                              "nonUk":true
-                           },
-                           "availableFrom":1567959613000
-                        }
-                     ]
-                  },
-                  "indexImage":{
-                     "id":"108661856",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/10118/production/_108661856_coversarajevo.jpg",
-                     "path":"/cpsprodpb/10118/production/_108661856_coversarajevo.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"И певач Божо Врећо дошао је на Поворку поноса",
-                     "caption":"И певач Божо Врећо дошао је на Поворку поноса",
-                     "copyrightHolder":"BBC"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "prominence":"standard",
-                  "relatedItems":[
-                     {
-                        "headlines":{
-                           "headline":"Најстарија транс жена Сарајева"
-                        },
-                        "locators":{
-                           "assetUri":"/serbian/cyr/balkan-49587510",
-                           "cpsUrn":"urn:bbc:content:assetUri:/serbian/cyr/balkan-49587510"
-                        },
-                        "summary":"Елена је провела више од пола века покушавајући да живи као мушкарац док са шездесет година није схватила да је жена.",
-                        "timestamp":1567749336000,
-                        "cpsType":"MAP",
-                        "id":"urn:bbc:ares::asset:serbian/cyr/balkan-49587510",
-                        "type":"cps"
-                     },
-                     {
-                        "headlines":{
-                           "headline":"Невидљивост, насиље, страх, али и борба и храброст - живот ЛГБТ заједнице у Босни"
-                        },
-                        "locators":{
-                           "assetUri":"/serbian/cyr/balkan-49495450",
-                           "cpsUrn":"urn:bbc:content:assetUri:/serbian/cyr/balkan-49495450"
-                        },
-                        "summary":"Уочи првог Прајда у Сарајеву, четворо младих људи открива како је живети као ЛГБТ особа у Босни и Херцеговини.",
-                        "timestamp":1567578223000,
-                        "cpsType":"STY",
-                        "id":"urn:bbc:ares::asset:serbian/cyr/balkan-49495450",
-                        "type":"cps"
-                     }
-                  ],
-                  "id":"urn:bbc:ares::asset:serbian/cyr/balkan-49629025",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"Одбојкашице Србије: Челичне краљице драме и шампионке Европе"
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/srbija-49629836",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/srbija-49629836"
-                  },
-                  "summary":"Одбојкашице Србије одбраниле су титулу првака Европе, пошто су у финалу шампионата у Анкари победиле селекцију Турске са 3:2.",
-                  "timestamp":1567975460000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e4739461b000e9dabfc",
-                           "campaignName":"WS - Update me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108662914",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/A3C6/production/_108662914_33828122_b.jpg",
-                     "path":"/cpsprodpb/A3C6/production/_108662914_33828122_b.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Одбојкашице",
-                     "copyrightHolder":"Фонет"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "prominence":"standard",
-                  "relatedItems":[
-                     {
-                        "headlines":{
-                           "headline":"„Кошарка и материнство иду заједно кад имаш подршку\""
-                        },
-                        "locators":{
-                           "assetUri":"/serbian/cyr/srbija-48862081",
-                           "cpsUrn":"urn:bbc:content:assetUri:/serbian/cyr/srbija-48862081"
-                        },
-                        "summary":"Разговарали смо са кошаркашицом репрезентације Србије Јеленом Брукс о спорту и мајчинству.",
-                        "timestamp":1562238350000,
-                        "cpsType":"MAP",
-                        "id":"urn:bbc:ares::asset:serbian/cyr/srbija-48862081",
-                        "type":"cps"
-                     },
-                     {
-                        "headlines":{
-                           "headline":"Никола Калинић: „Малу сам цену платио за сатисфакцију коју имам\""
-                        },
-                        "locators":{
-                           "assetUri":"/serbian/cyr/srbija-49099890",
-                           "cpsUrn":"urn:bbc:content:assetUri:/serbian/cyr/srbija-49099890"
-                        },
-                        "summary":"Трофејни српски кошаркаш за ББЦ говори о терену, политици, селектору Ђорђевићу, друштвеним мрежама и потреби да јасно и до краја изрази став.",
-                        "timestamp":1564135958000,
-                        "cpsType":"STY",
-                        "id":"urn:bbc:ares::asset:serbian/cyr/srbija-49099890",
-                        "type":"cps"
-                     }
-                  ],
-                  "id":"urn:bbc:ares::asset:serbian/cyr/srbija-49629836",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"Трамп отказао мировни споразум са Талибанима"
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/svet-49626434",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/svet-49626434"
-                  },
-                  "summary":"Председник Америке намеравао је да се састане са Талибанима на америчком тлу, неколико дана пре годишњице 11. септембра.",
-                  "timestamp":1567945532000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e4739461b000e9dabfc",
-                           "campaignName":"WS - Update me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108656883",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/97D1/production/_108656883_hi056179386.jpg",
-                     "path":"/cpsprodpb/97D1/production/_108656883_hi056179386.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Авганистанске безбедносне снаге",
-                     "caption":"Авганистанске безбедносне снаге",
-                     "copyrightHolder":"Reuters"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "prominence":"standard",
-                  "relatedItems":[
-                     {
-                        "headlines":{
-                           "headline":"\"У инат талибанима\" - картање у епицентру рата"
-                        },
-                        "locators":{
-                           "assetUri":"/serbian/cyr/svet-44936766",
-                           "cpsUrn":"urn:bbc:content:assetUri:/serbian/cyr/svet-44936766"
-                        },
-                        "summary":"Док су талибани држали Лашкаргах, ноћног живота није било. Сад више нису ту и картање може да почне.",
-                        "timestamp":1544080984000,
-                        "cpsType":"MAP",
-                        "id":"urn:bbc:ares::asset:serbian/cyr/svet-44936766",
-                        "type":"cps"
-                     },
-                     {
-                        "headlines":{
-                           "headline":"Авганистан прогласио примирје са Талибанима током Бајрама"
-                        },
-                        "locators":{
-                           "assetUri":"/serbian/cyr/svet-44401675",
-                           "cpsUrn":"urn:bbc:content:assetUri:/serbian/cyr/svet-44401675"
-                        },
-                        "summary":"Још увек се очекује одговор Талибана, а борбе против других милитантних група биће настављене.",
-                        "timestamp":1528392373000,
-                        "cpsType":"STY",
-                        "id":"urn:bbc:ares::asset:serbian/cyr/svet-44401675",
-                        "type":"cps"
-                     }
-                  ],
-                  "id":"urn:bbc:ares::asset:serbian/cyr/svet-49626434",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"Договор седам земаља Јужне Америке за заштиту Амазоније"
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/svet-49621622",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/svet-49621622"
-                  },
-                  "summary":"Председник Перуа је рекао да „није довољна само добра воља\" и да је зато постигнут регионални договор.",
-                  "timestamp":1567931529000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e4739461b000e9dabfc",
-                           "campaignName":"WS - Update me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108616889",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/1822D/production/_108616889_hi056217137.png",
-                     "path":"/cpsprodpb/1822D/production/_108616889_hi056217137.png",
-                     "height":549,
-                     "width":976,
-                     "altText":"Trees in the Brazilian Amazon on fire",
-                     "copyrightHolder":"Reuters"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "prominence":"standard",
-                  "relatedItems":[
-                     {
-                        "headlines":{
-                           "headline":"Зашто је прашума Амазона толико важна"
-                        },
-                        "locators":{
-                           "assetUri":"/serbian/cyr/svet-49486456",
-                           "cpsUrn":"urn:bbc:content:assetUri:/serbian/cyr/svet-49486456"
-                        },
-                        "summary":"Колика је штета од пожара који горе у Амазону и колико смо изгубили у борби против климатских промена?",
-                        "timestamp":1566925983000,
-                        "cpsType":"MAP",
-                        "id":"urn:bbc:ares::asset:serbian/cyr/svet-49486456",
-                        "type":"cps"
-                     },
-                     {
-                        "headlines":{
-                           "headline":"Кишне шуме Амазоније горе рекордном брзином"
-                        },
-                        "locators":{
-                           "assetUri":"/serbian/cyr/svet-49418371",
-                           "cpsUrn":"urn:bbc:content:assetUri:/serbian/cyr/svet-49418371"
-                        },
-                        "summary":"Бразилска свемирска агенција саопштила је да је број пожара у Амазонији порастао за 83 одсто услед крчења шума.",
-                        "timestamp":1566371425000,
-                        "cpsType":"STY",
-                        "id":"urn:bbc:ares::asset:serbian/cyr/svet-49418371",
-                        "type":"cps"
-                     }
-                  ],
-                  "id":"urn:bbc:ares::asset:serbian/cyr/svet-49621622",
-                  "type":"cps"
-               }
-            ],
-            "strapline":{
-               "name":"Најважније"
+  "metadata": {
+    "id": "urn:bbc:ares::index:serbian/cyr/front_page/desktop/domestic",
+    "locators": {
+      "assetUri": "/serbian/cyr/front_page",
+      "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/front_page",
+      "curie": "http://www.bbc.co.uk/asset/631e99d6-c1c4-73b7-e050-17ac8045512e/desktop/domestic"
+    },
+    "type": "IDX",
+    "createdBy": "serbian-v6",
+    "language": "sr-Cyrl",
+    "lastUpdated": 1567975529298,
+    "firstPublished": 1516370981000,
+    "lastPublished": 1567975522000,
+    "options": {
+      "allowAdvertising": true
+    },
+    "analyticsLabels": {
+      "counterName": "serbiancyr.page",
+      "cps_asset_id": "42745681",
+      "cps_asset_type": "idx"
+    },
+    "tags": {},
+    "version": "v1.1.1",
+    "blockTypes": [
+      "responsive-top-stories",
+      "responsive-cluster",
+      "responsive-must-see",
+      "responsive-inspire",
+      "responsive-in-depth",
+      "featured-site-top-stories",
+      "useful-links"
+    ],
+    "title": "Почетна страна",
+    "summary": "ББЦ на српском нуди ексклузиван садржај - аналитичко, истраживачкo и непристрасно извештавање у текстовима и видео прилозима прилагођеним и друштвеним мрежама."
+  },
+  "content": {
+    "groups": [
+      {
+        "type": "responsive-top-stories",
+        "title": "Top Stories",
+        "maxRelatedLinks": 2,
+        "items": [
+          {
+            "headlines": {
+              "headline": "CYR - Сарајево - „Нека љуби ко год кога хоће\""
             },
-            "semanticGroupName":"Top Stories"
-         },
-         {
-            "type":"responsive-cluster",
-            "title":"Cluster 1",
-            "items":[
-               {
-                  "headlines":{
-                     "headline":"Турској опозиционарки десет година затвора због порука на Твитеру"
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/svet-49615029",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/svet-49615029"
-                  },
-                  "summary":"Џанан Кафтанџоглу је вођа главне опозиоционе Републиканке народне партије у највећем турском граду, Истанбулу.",
-                  "timestamp":1567848992000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e4739461b000e9dabfc",
-                           "campaignName":"WS - Update me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"107581124",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/A486/production/_107581124_9a3dbd96-7564-4ef0-9af8-0685e545158d.jpg",
-                     "path":"/cpsprodpb/A486/production/_107581124_9a3dbd96-7564-4ef0-9af8-0685e545158d.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Џанан Кафтанџоглу на једном од протеста",
-                     "caption":"Џанан Кафтанџоглу на једном од протеста",
-                     "copyrightHolder":"AFP"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "id":"urn:bbc:ares::asset:serbian/cyr/svet-49615029",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"Саша Обрадовић за ББЦ: О Атини '95, медаљама, балкону, Мухамеду Алију и Новаку"
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/srbija-49601918",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/srbija-49601918"
-                  },
-                  "summary":"Обрадовић за ББЦ говори о бројним успесима са репрезентацијом, каријери, као о томе због чега је Србија земља кошарке.",
-                  "timestamp":1567763341000,
-                  "byline":{
-                     "name":"Слободан Маричић",
-                     "title":"ББЦ новинар ",
-                     "persons":[
-                        {
-                           "name":"Слободан Маричић",
-                           "function":"ББЦ новинар"
-                        }
-                     ]
-                  },
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                        "categoryName":"Feature"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e2139461b000e9dabf7",
-                           "campaignName":"WS - Inspire me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108627195",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/E724/production/_108627195_gettyimages-549741319.jpg",
-                     "path":"/cpsprodpb/E724/production/_108627195_gettyimages-549741319.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Саша Обрадовић",
-                     "caption":"Обрадовић је до тренутно тренер Монака, а најуспешнији је до сада био као тренер Албе из Берлина",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "id":"urn:bbc:ares::asset:serbian/cyr/srbija-49601918",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"Невидљивост, насиље, страх, али и борба и храброст - живот ЛГБТ заједнице у Босни"
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/balkan-49495450",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/balkan-49495450"
-                  },
-                  "summary":"Уочи првог Прајда у Сарајеву, четворо младих људи открива како је живети као ЛГБТ особа у Босни и Херцеговини.",
-                  "timestamp":1567578223000,
-                  "byline":{
-                     "name":"Лазара Маринковић",
-                     "title":"ББЦ новинарка",
-                     "persons":[
-                        {
-                           "name":"Лазара Маринковић",
-                           "function":"ББЦ новинарка"
-                        }
-                     ]
-                  },
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                        "categoryName":"Feature"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"106286918",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/14030/production/_106286918_sarajevolgbt.jpg",
-                     "path":"/cpsprodpb/14030/production/_106286918_sarajevolgbt.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Activists protest in 2017 after authorities rejected their application for pride march",
-                     "caption":"Протест активиста 2017. након што власти нису одобриле одржавање Поворке поноса",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "id":"urn:bbc:ares::asset:serbian/cyr/balkan-49495450",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"Шест разлога зашто је „Шесто чуло“ и после 20 година легендаран филм"
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/svet-49473917",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/svet-49473917"
-                  },
-                  "summary":"Премијерно приказан у биоскопима 1999. године, филм Шест чуло постао је кинематографски класик, а његов славни обрт на крају само је један од разлога за то.",
-                  "timestamp":1567796943000,
-                  "byline":{
-                     "name":"Фернандо Дуарте ",
-                     "title":"ББЦ Светски сервис",
-                     "persons":[
-                        {
-                           "name":"Fernando Duarte",
-                           "function":"BBC World Service"
-                        }
-                     ]
-                  },
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e1739461b000e9dabf6",
-                           "campaignName":"WS - CS"
-                        },
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108302200",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/00DC/production/_108302200_gettyimages-51096858.jpg",
-                     "path":"/cpsprodpb/00DC/production/_108302200_gettyimages-51096858.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"сцена из филма Шесто чуло",
-                     "caption":"Шесто чуло, прича која се врти око односа између детета којег муче духови и његовог терапеута, постао је један од најуспешнијих трилера у историји",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "id":"urn:bbc:ares::asset:serbian/cyr/svet-49473917",
-                  "type":"cps"
-               }
-            ],
-            "strapline":{
-               "name":"У току"
+            "locators": {
+              "assetUri": "/serbian/cyr/balkan-49629025",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/balkan-49629025"
             },
-            "semanticGroupName":"Cluster 1"
-         },
-         {
-            "type":"responsive-must-see",
-            "title":"Section 1",
-            "items":[
-               {
-                  "headlines":{
-                     "headline":"ББЦ и технолошке компаније удружене у борби против лажних вести"
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/svet-49621615",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/svet-49621615"
-                  },
-                  "summary":"Нове мере укључују и систем који ће се користити и током избора, наводи ББЦ.",
-                  "timestamp":1567932668000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"100293490",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/24DF/production/_100293490_gettyimages-620193410-1.jpg",
-                     "path":"/cpsprodpb/24DF/production/_100293490_gettyimages-620193410-1.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Група људи куца на мобилним телефонима и таблетима",
-                     "caption":"Лажне вести се брзо шире",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "imageThumbnail":{
-                     "id":"108652686",
-                     "subType":"index-thumbnail",
-                     "href":"http://c.files.bbci.co.uk/10C11/production/_108652686_gettyimages-620193410-1.jpg",
-                     "path":"/cpsprodpb/10C11/production/_108652686_gettyimages-620193410-1.jpg",
-                     "height":180,
-                     "width":320,
-                     "altText":"Група људи куца на мобилним телефонима и таблетима",
-                     "caption":"Лажне вести се брзо шире",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "id":"urn:bbc:ares::asset:serbian/cyr/svet-49621615",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"Русија и Украјина размениле заробљенике"
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/svet-49621394",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/svet-49621394"
-                  },
-                  "summary":"У Украјину се вратили морнари и новинари, а у Русију, поред осталих, и човек који је био део истраге о паду малезијског авиона.",
-                  "timestamp":1567861559000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e4739461b000e9dabfc",
-                           "campaignName":"WS - Update me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108652554",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/B1D5/production/_108652554_mediaitem108652182.jpg",
-                     "path":"/cpsprodpb/B1D5/production/_108652554_mediaitem108652182.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Ослобођени Украјинац по изласку из авиона на аеродрому у Кијеву",
-                     "caption":"Ослобођени Украјинац по изласку из авиона на аеродрому у Кијеву",
-                     "copyrightHolder":"Reuters"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "id":"urn:bbc:ares::asset:serbian/cyr/svet-49621394",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"Индија изгубила контакт са летелицом пре слетања на Месец"
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/svet-49619726",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/svet-49619726"
-                  },
-                  "summary":"Само неколико тренутака пре него што је летелица Чандрајан 2 требало да слети на јужни пол на Месецу изгубио се контакт са комуникационим центром.",
-                  "timestamp":1567843695000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e4739461b000e9dabfc",
-                           "campaignName":"WS - Update me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"107974752",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/6493/production/_107974752_mediaitem107973397.jpg",
-                     "path":"/cpsprodpb/6493/production/_107974752_mediaitem107973397.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Chandrayaan-2 taking off",
-                     "caption":"The lift-off was broadcast live on Indian television networks to an audience of hundreds of millions",
-                     "copyrightHolder":"Isro"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "id":"urn:bbc:ares::asset:serbian/cyr/svet-49619726",
-                  "type":"cps"
-               }
-            ],
-            "strapline":{
-               "name":"Сазнања "
+            "summary": "Више од хиљаду људи шетало је центром Сарајева уз звуке бубњева и једну севдалинку.",
+            "timestamp": 1567960803000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
             },
-            "semanticGroupName":"Section 1"
-         },
-         {
-            "type":"responsive-inspire",
-            "title":"Section 2",
-            "items":[
-               {
-                  "headlines":{
-                     "headline":"У фотографијама: Дремка у парламенту и Џонсонова недеља за заборав"
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07mt4mj",
+              "subType": "clip",
+              "format": "video",
+              "title": "Sarajevo - Neka ljubi ko god koga hoće",
+              "synopses": {
+                "short": "Sarajevo - Neka ljubi ko god koga hoće"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mt62p.jpg",
+              "embedding": true,
+              "advertising": false,
+              "caption": "Sarajevo - Neka ljubi ko god koga hoće",
+              "versions": [
+                {
+                  "versionId": "p07mt4ml",
+                  "types": ["Original"],
+                  "duration": 135,
+                  "durationISO8601": "PT2M15S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
                   },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/svet-49621400",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/svet-49621400"
-                  },
-                  "summary":"Пред вама је ББЦ избор неких од најупечатљивијих фотографија у недељи за нама.",
-                  "timestamp":1567958342000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3139461b000e9dabf9",
-                           "campaignName":"WS - Divert me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108639605",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/C605/production/_108639605_rees_mogg_sfp.jpg",
-                     "path":"/cpsprodpb/C605/production/_108639605_rees_mogg_sfp.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Jacob Rees-Mogg lying on chairs in Parliament",
-                     "copyrightHolder":"Anna Turley / AFP"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "id":"urn:bbc:ares::asset:serbian/cyr/svet-49621400",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"Најстарија транс жена Сарајева"
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/balkan-49587510",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/balkan-49587510"
-                  },
-                  "summary":"Елена је провела више од пола века покушавајући да живи као мушкарац док са шездесет година није схватила да је жена.",
-                  "timestamp":1567749336000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                        "categoryName":"Feature"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e1739461b000e9dabf6",
-                           "campaignName":"WS - CS"
-                        },
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        }
-                     ]
-                  },
-                  "cpsType":"MAP",
-                  "media":{
-                     "id":"p07mg7bm",
-                     "subType":"clip",
-                     "format":"video",
-                     "title":"Najstarija trans žena Sarajeva",
-                     "synopses":{
-                        "short":"Elena - najstarija trans žena Sarajeva"
-                     },
-                     "imageUrl":"ichef.bbci.co.uk/images/ic/$recipe/p07mg7hd.jpg",
-                     "embedding":true,
-                     "advertising":false,
-                     "caption":"Елена - најстарија транс жена Сарајева",
-                     "versions":[
-                        {
-                           "versionId":"p07mg7bp",
-                           "types":[
-                              "Original"
-                           ],
-                           "duration":234,
-                           "durationISO8601":"PT3M54S",
-                           "warnings":{
-
-                           },
-                           "availableTerritories":{
-                              "uk":true,
-                              "nonUk":true
-                           },
-                           "availableFrom":1567621437000
-                        }
-                     ],
-                     "imageCopyright":"BBC"
-                  },
-                  "indexImage":{
-                     "id":"108618451",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/3C79/production/_108618451_p07mg7hd.jpg",
-                     "path":"/cpsprodpb/3C79/production/_108618451_p07mg7hd.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Елена",
-                     "copyrightHolder":"BBC"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "id":"urn:bbc:ares::asset:serbian/cyr/balkan-49587510",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"„Паркур је начин соучавања са страховима\""
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/svet-49474218",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/svet-49474218"
-                  },
-                  "summary":"Рејвен Круз користи способности тела и ума да превазиђе различите препреке, а томе учи и децу из сиромашних породица у свом граду.",
-                  "timestamp":1567787646000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3139461b000e9dabf9",
-                           "campaignName":"WS - Divert me"
-                        }
-                     ]
-                  },
-                  "cpsType":"MAP",
-                  "media":{
-                     "id":"p07lnhtv",
-                     "subType":"clip",
-                     "format":"video",
-                     "title":"„Паркур је начин соучавања са страховима\"",
-                     "synopses":{
-                        "short":"„Паркур је начин соучавања са сопственим страховима\""
-                     },
-                     "imageUrl":"ichef.bbci.co.uk/images/ic/$recipe/p07lnhz5.jpg",
-                     "embedding":true,
-                     "advertising":false,
-                     "caption":"„Паркур је начин соучавања са сопственим страховима\"",
-                     "versions":[
-                        {
-                           "versionId":"p07lnhtx",
-                           "types":[
-                              "Original"
-                           ],
-                           "duration":178,
-                           "durationISO8601":"PT2M58S",
-                           "warnings":{
-
-                           },
-                           "availableTerritories":{
-                              "uk":true,
-                              "nonUk":true
-                           },
-                           "availableFrom":1566824367000
-                        }
-                     ],
-                     "imageCopyright":"BBC"
-                  },
-                  "indexImage":{
-                     "id":"108645103",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/75CA/production/_108645103_p07lnhz5.jpg",
-                     "path":"/cpsprodpb/75CA/production/_108645103_p07lnhz5.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Rejven Kruz",
-                     "caption":"Рејвен Круз",
-                     "copyrightHolder":"BBC"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "id":"urn:bbc:ares::asset:serbian/cyr/svet-49474218",
-                  "type":"cps"
-               }
-            ],
-            "strapline":{
-               "name":"Занимљиво"
+                  "availableFrom": 1567959613000
+                }
+              ]
             },
-            "semanticGroupName":"Section 2"
-         },
-         {
-            "type":"responsive-in-depth",
-            "title":"Section 3",
-            "items":[
-               {
-                  "headlines":{
-                     "headline":"Ко победи - остаје: Како је улични баскет подигао српску кошарку"
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/srbija-49557873",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/srbija-49557873"
-                  },
-                  "summary":"Многи велики кошаркаши, освајачи бројних медаља на првенствима света и Европе, нису могли да победе на баскету у крају.",
-                  "timestamp":1567444437000,
-                  "byline":{
-                     "name":"Слободан Маричић",
-                     "title":"ББЦ новинар ",
-                     "persons":[
-                        {
-                           "name":"Слободан Маричић",
-                           "function":"ББЦ новинар"
-                        }
-                     ]
-                  },
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                        "categoryName":"Feature"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3e39461b000e9dabfb",
-                           "campaignName":"WS - Keep me on trend"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108588763",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/8FB4/production/_108588763_33775778_b.jpg",
-                     "path":"/cpsprodpb/8FB4/production/_108588763_33775778_b.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Радуља",
-                     "copyrightHolder":"Fonet"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "id":"urn:bbc:ares::asset:serbian/cyr/srbija-49557873",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"Брегзит: Све што морате да знате"
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/svet-46870721",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/svet-46870721"
-                  },
-                  "summary":"Ево пријемчивог водича за Брегзит, а ту су и одговори на питања која смо добили од читалаца.",
-                  "timestamp":1547540644000,
-                  "byline":{
-                     "name":"Алекс Хант и Брајан Вилер",
-                     "title":"ББЦ новинари",
-                     "persons":[
-                        {
-                           "name":"Alex Hunt",
-                           "function":"BBC News"
-                        },
-                        {
-                           "name":"Brian Wheeler",
-                           "function":"Political reporter",
-                           "correspondentId":"Politics"
-                        }
-                     ]
-                  },
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
-                        "categoryName":"Explainer"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"Give me perspective"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"105185962",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/694E/production/_105185962_gettyflags.jpg",
-                     "path":"/cpsprodpb/694E/production/_105185962_gettyflags.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"UK and EU flags",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "id":"urn:bbc:ares::asset:serbian/cyr/svet-46870721",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"Одакле Гаврило Принцип и Милош Обилић на кесицама кокаина"
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/balkan-49563727",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/balkan-49563727"
-                  },
-                  "summary":"Од Че Геваре до Мајка Тајсона - чији све лик кријумчари смештају на пакете дроге. Стручњаци објашњавају и зашто.",
-                  "timestamp":1567509768000,
-                  "byline":{
-                     "name":"Марија Јанковић",
-                     "title":"ББЦ новинарка",
-                     "persons":[
-                        {
-                           "name":"Марија Јанковић",
-                           "function":"ББЦ новинарка"
-                        }
-                     ]
-                  },
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
-                        "categoryName":"Analysis"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3139461b000e9dabf9",
-                           "campaignName":"WS - Divert me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108595744",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/AED7/production/_108595744_3.jpg",
-                     "path":"/cpsprodpb/AED7/production/_108595744_3.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Кесице кокаина са ликом Гаврила Принципа",
-                     "caption":"Кесице и кутије кокаина са ликом Гаврила Принципа",
-                     "copyrightHolder":"МУП Србије"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "id":"urn:bbc:ares::asset:serbian/cyr/balkan-49563727",
-                  "type":"cps"
-               }
-            ],
-            "strapline":{
-               "name":"Aко сте пропустили"
+            "indexImage": {
+              "id": "108661856",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/10118/production/_108661856_coversarajevo.jpg",
+              "path": "/cpsprodpb/10118/production/_108661856_coversarajevo.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "И певач Божо Врећо дошао је на Поворку поноса",
+              "caption": "И певач Божо Врећо дошао је на Поворку поноса",
+              "copyrightHolder": "BBC"
             },
-            "semanticGroupName":"Section 3"
-         },
-         {
-            "type":"featured-site-top-stories",
-            "title":"Sport",
-            "items":[
-               {
-                  "headlines":{
-                     "headline":"Шта значи бити витез Љубичева"
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/srbija-49584771",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/srbija-49584771"
-                  },
-                  "summary":"Победник Љубичевских игара Андрија Стерђевић понео је сабљу, плашт и - одговорност.",
-                  "timestamp":1567662228000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e1739461b000e9dabf6",
-                           "campaignName":"WS - CS"
-                        },
-                        {
-                           "campaignId":"5a988e2139461b000e9dabf7",
-                           "campaignName":"WS - Inspire me"
-                        }
-                     ]
-                  },
-                  "cpsType":"MAP",
-                  "media":{
-                     "id":"p07mf4s8",
-                     "subType":"clip",
-                     "format":"video",
-                     "title":"Витез Љубичева: Ко је носилац чувене сабље",
-                     "synopses":{
-                        "short":"Победник Љубичевских игара Андрија Стерђевић понео је сабљу, плашт и - одговорност."
-                     },
-                     "imageUrl":"ichef.bbci.co.uk/images/ic/$recipe/p07mf53d.jpg",
-                     "embedding":true,
-                     "advertising":false,
-                     "caption":"Победник Љубичевских игара Андрија Стерђевић понео је сабљу, плашт и - одговорност.",
-                     "versions":[
-                        {
-                           "versionId":"p07mf4sf",
-                           "types":[
-                              "Original"
-                           ],
-                           "duration":110,
-                           "durationISO8601":"PT1M50S",
-                           "warnings":{
-
-                           },
-                           "availableTerritories":{
-                              "uk":true,
-                              "nonUk":true
-                           },
-                           "availableFrom":1567607975000
-                        }
-                     ],
-                     "imageCopyright":"BBC"
-                  },
-                  "indexImage":{
-                     "id":"108615645",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/D57B/production/_108615645_p07mf53d.jpg",
-                     "path":"/cpsprodpb/D57B/production/_108615645_p07mf53d.jpg",
-                     "height":576,
-                     "width":1024,
-                     "altText":"-",
-                     "copyrightHolder":"BBC"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "id":"urn:bbc:ares::asset:serbian/cyr/srbija-49584771",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"Може ли ваше лице да постане ваш пасош"
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/svet-49452646",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/svet-49452646"
-                  },
-                  "summary":"Погледајте како фунционише систем за препознавање лица на аеродрому и контроли пасоша који влада Велике Британије разматра да уведе.",
-                  "timestamp":1567684499000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3e39461b000e9dabfb",
-                           "campaignName":"WS - Keep me on trend"
-                        }
-                     ]
-                  },
-                  "cpsType":"MAP",
-                  "media":{
-                     "id":"p07lgks0",
-                     "subType":"clip",
-                     "format":"video",
-                     "title":"Технологија за препознавање лица тежи да скрати редове на аеродромима",
-                     "synopses":{
-                        "short":"Технологија за препознавање лица тежи да скрати редове на пасошким контролама"
-                     },
-                     "imageUrl":"ichef.bbci.co.uk/images/ic/$recipe/p07lglb8.jpg",
-                     "embedding":true,
-                     "advertising":true,
-                     "caption":"Технологија за препознавање лица тежи да скрати редове на пасошким контролама",
-                     "versions":[
-                        {
-                           "versionId":"p07lgks3",
-                           "types":[
-                              "Original"
-                           ],
-                           "duration":134,
-                           "durationISO8601":"PT2M14S",
-                           "warnings":{
-
-                           },
-                           "availableTerritories":{
-                              "uk":true,
-                              "nonUk":true
-                           },
-                           "availableFrom":1566572412000
-                        }
-                     ],
-                     "imageCopyright":"BBC"
-                  },
-                  "indexImage":{
-                     "id":"108479426",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/F421/production/_108479426_p07lglb8.jpg",
-                     "path":"/cpsprodpb/F421/production/_108479426_p07lglb8.jpg",
-                     "height":575,
-                     "width":1024,
-                     "altText":"tehnologija za prepoznavanje lica",
-                     "copyrightHolder":"BBC"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "id":"urn:bbc:ares::asset:serbian/cyr/svet-49452646",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"Zero waste: Како живети без отпада у Србији"
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/srbija-49351280",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/srbija-49351280"
-                  },
-                  "summary":"Миља Вуковић је пре две године одлучила да радикално смањи количину отпада у кући.",
-                  "timestamp":1567075642000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
-                        "categoryName":"Explainer"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e2939461b000e9dabf8",
-                           "campaignName":"WS - Educate me"
-                        }
-                     ]
-                  },
-                  "cpsType":"MAP",
-                  "media":{
-                     "id":"p07km6gh",
-                     "subType":"clip",
-                     "format":"video",
-                     "title":"Zero waste: Како живети без отпада у Србији",
-                     "synopses":{
-                        "short":"Миља Вуковић већ две године живи без отпада."
-                     },
-                     "imageUrl":"ichef.bbci.co.uk/images/ic/$recipe/p07km7xp.jpg",
-                     "embedding":true,
-                     "advertising":true,
-                     "caption":"Миља Вуковић већ две године живи без отпада.",
-                     "versions":[
-                        {
-                           "versionId":"p07km6gl",
-                           "types":[
-                              "Original"
-                           ],
-                           "duration":121,
-                           "durationISO8601":"PT2M1S",
-                           "warnings":{
-
-                           },
-                           "availableTerritories":{
-                              "uk":true,
-                              "nonUk":true
-                           },
-                           "availableFrom":1565796371000
-                        }
-                     ]
-                  },
-                  "indexImage":{
-                     "id":"108316051",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/3AD5/production/_108316051_p07km7xp.jpg",
-                     "path":"/cpsprodpb/3AD5/production/_108316051_p07km7xp.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Zero waste",
-                     "copyrightHolder":"BBC"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "id":"urn:bbc:ares::asset:serbian/cyr/srbija-49351280",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"„Жене у науци: Само напред\""
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/svet-49566767",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/svet-49566767"
-                  },
-                  "summary":"Добитница Нобела за медицину Елизабет Блекбурн жели да охрабри младе научнице да истрају у свету у ком су још увек мушкарци већина.",
-                  "timestamp":1567575773000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                        "categoryName":"Feature"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e1739461b000e9dabf6",
-                           "campaignName":"WS - CS"
-                        },
-                        {
-                           "campaignId":"5a988e2139461b000e9dabf7",
-                           "campaignName":"WS - Inspire me"
-                        }
-                     ]
-                  },
-                  "cpsType":"MAP",
-                  "media":{
-                     "id":"p07mb0nz",
-                     "subType":"clip",
-                     "format":"video",
-                     "title":"„Жене у науци: Само напред\"",
-                     "synopses":{
-                        "short":"„Жене у науци: Само напред\""
-                     },
-                     "imageUrl":"ichef.bbci.co.uk/images/ic/$recipe/p07mb0sq.jpg",
-                     "embedding":true,
-                     "advertising":false,
-                     "caption":"„Жене у науци: Само напред\"",
-                     "versions":[
-                        {
-                           "versionId":"p07mb0p1",
-                           "types":[
-                              "Original"
-                           ],
-                           "duration":118,
-                           "durationISO8601":"PT1M58S",
-                           "warnings":{
-
-                           },
-                           "availableTerritories":{
-                              "uk":true,
-                              "nonUk":true
-                           },
-                           "availableFrom":1567508029000
-                        }
-                     ],
-                     "imageCopyright":"BBC"
-                  },
-                  "indexImage":{
-                     "id":"108596496",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/10F5D/production/_108596496_p07mb0sq.jpg",
-                     "path":"/cpsprodpb/10F5D/production/_108596496_p07mb0sq.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Naučnica",
-                     "copyrightHolder":"BBC"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "id":"urn:bbc:ares::asset:serbian/cyr/svet-49566767",
-                  "type":"cps"
-               }
-            ],
-            "strapline":{
-               "name":"Најгледаније"
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
             },
-            "semanticGroupName":"Sport"
-         },
-         {
-            "type":"useful-links",
-            "title":"Useful links",
-            "items":[
-               {
-                  "headlines":{
-                     "headline":"Koнтaктирајте BBC News на српском",
-                     "overtyped":"Контактирајте нас"
-                  },
-                  "locators":{
-                     "assetUri":"/serbian/cyr/institutional-43543431",
-                     "cpsUrn":"urn:bbc:content:assetUri:serbian/cyr/institutional-43543431"
-                  },
-                  "summary":"Koнтaктирајте BBC News на српском",
-                  "timestamp":1522063228000,
-                  "cpsType":"STY",
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":"Контактирајте нас",
-                  "id":"urn:bbc:ares::asset:serbian/cyr/institutional-43543431",
-                  "type":"cps"
-               }
+            "prominence": "standard",
+            "relatedItems": [
+              {
+                "headlines": {
+                  "headline": "Најстарија транс жена Сарајева"
+                },
+                "locators": {
+                  "assetUri": "/serbian/cyr/balkan-49587510",
+                  "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/balkan-49587510"
+                },
+                "summary": "Елена је провела више од пола века покушавајући да живи као мушкарац док са шездесет година није схватила да је жена.",
+                "timestamp": 1567749336000,
+                "cpsType": "MAP",
+                "id": "urn:bbc:ares::asset:serbian/cyr/balkan-49587510",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Невидљивост, насиље, страх, али и борба и храброст - живот ЛГБТ заједнице у Босни"
+                },
+                "locators": {
+                  "assetUri": "/serbian/cyr/balkan-49495450",
+                  "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/balkan-49495450"
+                },
+                "summary": "Уочи првог Прајда у Сарајеву, четворо младих људи открива како је живети као ЛГБТ особа у Босни и Херцеговини.",
+                "timestamp": 1567578223000,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:serbian/cyr/balkan-49495450",
+                "type": "cps"
+              }
             ],
-            "semanticGroupName":"Useful links"
-         }
-      ]
-   },
-   "promo":{
-      "subType":"IDX",
-      "name":"Почетна страна",
-      "uri":"/serbian/cyr/front_page",
-      "id":"urn:bbc:ares::index:serbian/cyr/front_page/desktop/domestic",
-      "type":"simple"
-   },
-   "relatedContent":{
-      "section":{
-         "subType":"index",
-         "name":"Почетна страна",
-         "uri":"/serbian/cyr/front_page",
-         "type":"simple"
+            "id": "urn:bbc:ares::asset:serbian/cyr/balkan-49629025",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Одбојкашице Србије: Челичне краљице драме и шампионке Европе"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/srbija-49629836",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/srbija-49629836"
+            },
+            "summary": "Одбојкашице Србије одбраниле су титулу првака Европе, пошто су у финалу шампионата у Анкари победиле селекцију Турске са 3:2.",
+            "timestamp": 1567975460000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108662914",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/A3C6/production/_108662914_33828122_b.jpg",
+              "path": "/cpsprodpb/A3C6/production/_108662914_33828122_b.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Одбојкашице",
+              "copyrightHolder": "Фонет"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "relatedItems": [
+              {
+                "headlines": {
+                  "headline": "„Кошарка и материнство иду заједно кад имаш подршку\""
+                },
+                "locators": {
+                  "assetUri": "/serbian/cyr/srbija-48862081",
+                  "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/srbija-48862081"
+                },
+                "summary": "Разговарали смо са кошаркашицом репрезентације Србије Јеленом Брукс о спорту и мајчинству.",
+                "timestamp": 1562238350000,
+                "cpsType": "MAP",
+                "id": "urn:bbc:ares::asset:serbian/cyr/srbija-48862081",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Никола Калинић: „Малу сам цену платио за сатисфакцију коју имам\""
+                },
+                "locators": {
+                  "assetUri": "/serbian/cyr/srbija-49099890",
+                  "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/srbija-49099890"
+                },
+                "summary": "Трофејни српски кошаркаш за ББЦ говори о терену, политици, селектору Ђорђевићу, друштвеним мрежама и потреби да јасно и до краја изрази став.",
+                "timestamp": 1564135958000,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:serbian/cyr/srbija-49099890",
+                "type": "cps"
+              }
+            ],
+            "id": "urn:bbc:ares::asset:serbian/cyr/srbija-49629836",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Трамп отказао мировни споразум са Талибанима"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/svet-49626434",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/svet-49626434"
+            },
+            "summary": "Председник Америке намеравао је да се састане са Талибанима на америчком тлу, неколико дана пре годишњице 11. септембра.",
+            "timestamp": 1567945532000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108656883",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/97D1/production/_108656883_hi056179386.jpg",
+              "path": "/cpsprodpb/97D1/production/_108656883_hi056179386.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Авганистанске безбедносне снаге",
+              "caption": "Авганистанске безбедносне снаге",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "relatedItems": [
+              {
+                "headlines": {
+                  "headline": "\"У инат талибанима\" - картање у епицентру рата"
+                },
+                "locators": {
+                  "assetUri": "/serbian/cyr/svet-44936766",
+                  "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/svet-44936766"
+                },
+                "summary": "Док су талибани држали Лашкаргах, ноћног живота није било. Сад више нису ту и картање може да почне.",
+                "timestamp": 1544080984000,
+                "cpsType": "MAP",
+                "id": "urn:bbc:ares::asset:serbian/cyr/svet-44936766",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Авганистан прогласио примирје са Талибанима током Бајрама"
+                },
+                "locators": {
+                  "assetUri": "/serbian/cyr/svet-44401675",
+                  "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/svet-44401675"
+                },
+                "summary": "Још увек се очекује одговор Талибана, а борбе против других милитантних група биће настављене.",
+                "timestamp": 1528392373000,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:serbian/cyr/svet-44401675",
+                "type": "cps"
+              }
+            ],
+            "id": "urn:bbc:ares::asset:serbian/cyr/svet-49626434",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Договор седам земаља Јужне Америке за заштиту Амазоније"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/svet-49621622",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/svet-49621622"
+            },
+            "summary": "Председник Перуа је рекао да „није довољна само добра воља\" и да је зато постигнут регионални договор.",
+            "timestamp": 1567931529000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108616889",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1822D/production/_108616889_hi056217137.png",
+              "path": "/cpsprodpb/1822D/production/_108616889_hi056217137.png",
+              "height": 549,
+              "width": 976,
+              "altText": "Trees in the Brazilian Amazon on fire",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "relatedItems": [
+              {
+                "headlines": {
+                  "headline": "Зашто је прашума Амазона толико важна"
+                },
+                "locators": {
+                  "assetUri": "/serbian/cyr/svet-49486456",
+                  "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/svet-49486456"
+                },
+                "summary": "Колика је штета од пожара који горе у Амазону и колико смо изгубили у борби против климатских промена?",
+                "timestamp": 1566925983000,
+                "cpsType": "MAP",
+                "id": "urn:bbc:ares::asset:serbian/cyr/svet-49486456",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "Кишне шуме Амазоније горе рекордном брзином"
+                },
+                "locators": {
+                  "assetUri": "/serbian/cyr/svet-49418371",
+                  "cpsUrn": "urn:bbc:content:assetUri:/serbian/cyr/svet-49418371"
+                },
+                "summary": "Бразилска свемирска агенција саопштила је да је број пожара у Амазонији порастао за 83 одсто услед крчења шума.",
+                "timestamp": 1566371425000,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:serbian/cyr/svet-49418371",
+                "type": "cps"
+              }
+            ],
+            "id": "urn:bbc:ares::asset:serbian/cyr/svet-49621622",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Најважније"
+        },
+        "semanticGroupName": "Top Stories"
       },
-      "site":{
-         "subType":"site",
-         "name":"BBC News na srpskom",
-         "uri":"/serbian/cyr",
-         "type":"simple"
+      {
+        "type": "responsive-cluster",
+        "title": "Cluster 1",
+        "items": [
+          {
+            "headlines": {
+              "headline": "Турској опозиционарки десет година затвора због порука на Твитеру"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/svet-49615029",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/svet-49615029"
+            },
+            "summary": "Џанан Кафтанџоглу је вођа главне опозиоционе Републиканке народне партије у највећем турском граду, Истанбулу.",
+            "timestamp": 1567848992000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107581124",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/A486/production/_107581124_9a3dbd96-7564-4ef0-9af8-0685e545158d.jpg",
+              "path": "/cpsprodpb/A486/production/_107581124_9a3dbd96-7564-4ef0-9af8-0685e545158d.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Џанан Кафтанџоглу на једном од протеста",
+              "caption": "Џанан Кафтанџоглу на једном од протеста",
+              "copyrightHolder": "AFP"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:serbian/cyr/svet-49615029",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Саша Обрадовић за ББЦ: О Атини '95, медаљама, балкону, Мухамеду Алију и Новаку"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/srbija-49601918",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/srbija-49601918"
+            },
+            "summary": "Обрадовић за ББЦ говори о бројним успесима са репрезентацијом, каријери, као о томе због чега је Србија земља кошарке.",
+            "timestamp": 1567763341000,
+            "byline": {
+              "name": "Слободан Маричић",
+              "title": "ББЦ новинар ",
+              "persons": [
+                {
+                  "name": "Слободан Маричић",
+                  "function": "ББЦ новинар"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108627195",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/E724/production/_108627195_gettyimages-549741319.jpg",
+              "path": "/cpsprodpb/E724/production/_108627195_gettyimages-549741319.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Саша Обрадовић",
+              "caption": "Обрадовић је до тренутно тренер Монака, а најуспешнији је до сада био као тренер Албе из Берлина",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:serbian/cyr/srbija-49601918",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Невидљивост, насиље, страх, али и борба и храброст - живот ЛГБТ заједнице у Босни"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/balkan-49495450",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/balkan-49495450"
+            },
+            "summary": "Уочи првог Прајда у Сарајеву, четворо младих људи открива како је живети као ЛГБТ особа у Босни и Херцеговини.",
+            "timestamp": 1567578223000,
+            "byline": {
+              "name": "Лазара Маринковић",
+              "title": "ББЦ новинарка",
+              "persons": [
+                {
+                  "name": "Лазара Маринковић",
+                  "function": "ББЦ новинарка"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106286918",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/14030/production/_106286918_sarajevolgbt.jpg",
+              "path": "/cpsprodpb/14030/production/_106286918_sarajevolgbt.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Activists protest in 2017 after authorities rejected their application for pride march",
+              "caption": "Протест активиста 2017. након што власти нису одобриле одржавање Поворке поноса",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:serbian/cyr/balkan-49495450",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Шест разлога зашто је „Шесто чуло“ и после 20 година легендаран филм"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/svet-49473917",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/svet-49473917"
+            },
+            "summary": "Премијерно приказан у биоскопима 1999. године, филм Шест чуло постао је кинематографски класик, а његов славни обрт на крају само је један од разлога за то.",
+            "timestamp": 1567796943000,
+            "byline": {
+              "name": "Фернандо Дуарте ",
+              "title": "ББЦ Светски сервис",
+              "persons": [
+                {
+                  "name": "Fernando Duarte",
+                  "function": "BBC World Service"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108302200",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/00DC/production/_108302200_gettyimages-51096858.jpg",
+              "path": "/cpsprodpb/00DC/production/_108302200_gettyimages-51096858.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "сцена из филма Шесто чуло",
+              "caption": "Шесто чуло, прича која се врти око односа између детета којег муче духови и његовог терапеута, постао је један од најуспешнијих трилера у историји",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:serbian/cyr/svet-49473917",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "У току"
+        },
+        "semanticGroupName": "Cluster 1"
       },
-      "groups":[
-
-      ]
-   }
+      {
+        "type": "responsive-must-see",
+        "title": "Section 1",
+        "items": [
+          {
+            "headlines": {
+              "headline": "ББЦ и технолошке компаније удружене у борби против лажних вести"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/svet-49621615",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/svet-49621615"
+            },
+            "summary": "Нове мере укључују и систем који ће се користити и током избора, наводи ББЦ.",
+            "timestamp": 1567932668000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "100293490",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/24DF/production/_100293490_gettyimages-620193410-1.jpg",
+              "path": "/cpsprodpb/24DF/production/_100293490_gettyimages-620193410-1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Група људи куца на мобилним телефонима и таблетима",
+              "caption": "Лажне вести се брзо шире",
+              "copyrightHolder": "Getty Images"
+            },
+            "imageThumbnail": {
+              "id": "108652686",
+              "subType": "index-thumbnail",
+              "href": "http://c.files.bbci.co.uk/10C11/production/_108652686_gettyimages-620193410-1.jpg",
+              "path": "/cpsprodpb/10C11/production/_108652686_gettyimages-620193410-1.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "Група људи куца на мобилним телефонима и таблетима",
+              "caption": "Лажне вести се брзо шире",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:serbian/cyr/svet-49621615",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Русија и Украјина размениле заробљенике"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/svet-49621394",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/svet-49621394"
+            },
+            "summary": "У Украјину се вратили морнари и новинари, а у Русију, поред осталих, и човек који је био део истраге о паду малезијског авиона.",
+            "timestamp": 1567861559000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108652554",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/B1D5/production/_108652554_mediaitem108652182.jpg",
+              "path": "/cpsprodpb/B1D5/production/_108652554_mediaitem108652182.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Ослобођени Украјинац по изласку из авиона на аеродрому у Кијеву",
+              "caption": "Ослобођени Украјинац по изласку из авиона на аеродрому у Кијеву",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:serbian/cyr/svet-49621394",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Индија изгубила контакт са летелицом пре слетања на Месец"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/svet-49619726",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/svet-49619726"
+            },
+            "summary": "Само неколико тренутака пре него што је летелица Чандрајан 2 требало да слети на јужни пол на Месецу изгубио се контакт са комуникационим центром.",
+            "timestamp": 1567843695000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107974752",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/6493/production/_107974752_mediaitem107973397.jpg",
+              "path": "/cpsprodpb/6493/production/_107974752_mediaitem107973397.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Chandrayaan-2 taking off",
+              "caption": "The lift-off was broadcast live on Indian television networks to an audience of hundreds of millions",
+              "copyrightHolder": "Isro"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:serbian/cyr/svet-49619726",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Сазнања "
+        },
+        "semanticGroupName": "Section 1"
+      },
+      {
+        "type": "responsive-inspire",
+        "title": "Section 2",
+        "items": [
+          {
+            "headlines": {
+              "headline": "У фотографијама: Дремка у парламенту и Џонсонова недеља за заборав"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/svet-49621400",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/svet-49621400"
+            },
+            "summary": "Пред вама је ББЦ избор неких од најупечатљивијих фотографија у недељи за нама.",
+            "timestamp": 1567958342000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108639605",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/C605/production/_108639605_rees_mogg_sfp.jpg",
+              "path": "/cpsprodpb/C605/production/_108639605_rees_mogg_sfp.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Jacob Rees-Mogg lying on chairs in Parliament",
+              "copyrightHolder": "Anna Turley / AFP"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:serbian/cyr/svet-49621400",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Најстарија транс жена Сарајева"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/balkan-49587510",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/balkan-49587510"
+            },
+            "summary": "Елена је провела више од пола века покушавајући да живи као мушкарац док са шездесет година није схватила да је жена.",
+            "timestamp": 1567749336000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07mg7bm",
+              "subType": "clip",
+              "format": "video",
+              "title": "Najstarija trans žena Sarajeva",
+              "synopses": {
+                "short": "Elena - najstarija trans žena Sarajeva"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mg7hd.jpg",
+              "embedding": true,
+              "advertising": false,
+              "caption": "Елена - најстарија транс жена Сарајева",
+              "versions": [
+                {
+                  "versionId": "p07mg7bp",
+                  "types": ["Original"],
+                  "duration": 234,
+                  "durationISO8601": "PT3M54S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1567621437000
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "108618451",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/3C79/production/_108618451_p07mg7hd.jpg",
+              "path": "/cpsprodpb/3C79/production/_108618451_p07mg7hd.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Елена",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:serbian/cyr/balkan-49587510",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "„Паркур је начин соучавања са страховима\""
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/svet-49474218",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/svet-49474218"
+            },
+            "summary": "Рејвен Круз користи способности тела и ума да превазиђе различите препреке, а томе учи и децу из сиромашних породица у свом граду.",
+            "timestamp": 1567787646000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07lnhtv",
+              "subType": "clip",
+              "format": "video",
+              "title": "„Паркур је начин соучавања са страховима\"",
+              "synopses": {
+                "short": "„Паркур је начин соучавања са сопственим страховима\""
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07lnhz5.jpg",
+              "embedding": true,
+              "advertising": false,
+              "caption": "„Паркур је начин соучавања са сопственим страховима\"",
+              "versions": [
+                {
+                  "versionId": "p07lnhtx",
+                  "types": ["Original"],
+                  "duration": 178,
+                  "durationISO8601": "PT2M58S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1566824367000
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "108645103",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/75CA/production/_108645103_p07lnhz5.jpg",
+              "path": "/cpsprodpb/75CA/production/_108645103_p07lnhz5.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Rejven Kruz",
+              "caption": "Рејвен Круз",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:serbian/cyr/svet-49474218",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Занимљиво"
+        },
+        "semanticGroupName": "Section 2"
+      },
+      {
+        "type": "responsive-in-depth",
+        "title": "Section 3",
+        "items": [
+          {
+            "headlines": {
+              "headline": "Ко победи - остаје: Како је улични баскет подигао српску кошарку"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/srbija-49557873",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/srbija-49557873"
+            },
+            "summary": "Многи велики кошаркаши, освајачи бројних медаља на првенствима света и Европе, нису могли да победе на баскету у крају.",
+            "timestamp": 1567444437000,
+            "byline": {
+              "name": "Слободан Маричић",
+              "title": "ББЦ новинар ",
+              "persons": [
+                {
+                  "name": "Слободан Маричић",
+                  "function": "ББЦ новинар"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108588763",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/8FB4/production/_108588763_33775778_b.jpg",
+              "path": "/cpsprodpb/8FB4/production/_108588763_33775778_b.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Радуља",
+              "copyrightHolder": "Fonet"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:serbian/cyr/srbija-49557873",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Брегзит: Све што морате да знате"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/svet-46870721",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/svet-46870721"
+            },
+            "summary": "Ево пријемчивог водича за Брегзит, а ту су и одговори на питања која смо добили од читалаца.",
+            "timestamp": 1547540644000,
+            "byline": {
+              "name": "Алекс Хант и Брајан Вилер",
+              "title": "ББЦ новинари",
+              "persons": [
+                {
+                  "name": "Alex Hunt",
+                  "function": "BBC News"
+                },
+                {
+                  "name": "Brian Wheeler",
+                  "function": "Political reporter",
+                  "correspondentId": "Politics"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "105185962",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/694E/production/_105185962_gettyflags.jpg",
+              "path": "/cpsprodpb/694E/production/_105185962_gettyflags.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "UK and EU flags",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:serbian/cyr/svet-46870721",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Одакле Гаврило Принцип и Милош Обилић на кесицама кокаина"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/balkan-49563727",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/balkan-49563727"
+            },
+            "summary": "Од Че Геваре до Мајка Тајсона - чији све лик кријумчари смештају на пакете дроге. Стручњаци објашњавају и зашто.",
+            "timestamp": 1567509768000,
+            "byline": {
+              "name": "Марија Јанковић",
+              "title": "ББЦ новинарка",
+              "persons": [
+                {
+                  "name": "Марија Јанковић",
+                  "function": "ББЦ новинарка"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108595744",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/AED7/production/_108595744_3.jpg",
+              "path": "/cpsprodpb/AED7/production/_108595744_3.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Кесице кокаина са ликом Гаврила Принципа",
+              "caption": "Кесице и кутије кокаина са ликом Гаврила Принципа",
+              "copyrightHolder": "МУП Србије"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:serbian/cyr/balkan-49563727",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Aко сте пропустили"
+        },
+        "semanticGroupName": "Section 3"
+      },
+      {
+        "type": "featured-site-top-stories",
+        "title": "Sport",
+        "items": [
+          {
+            "headlines": {
+              "headline": "Шта значи бити витез Љубичева"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/srbija-49584771",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/srbija-49584771"
+            },
+            "summary": "Победник Љубичевских игара Андрија Стерђевић понео је сабљу, плашт и - одговорност.",
+            "timestamp": 1567662228000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07mf4s8",
+              "subType": "clip",
+              "format": "video",
+              "title": "Витез Љубичева: Ко је носилац чувене сабље",
+              "synopses": {
+                "short": "Победник Љубичевских игара Андрија Стерђевић понео је сабљу, плашт и - одговорност."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mf53d.jpg",
+              "embedding": true,
+              "advertising": false,
+              "caption": "Победник Љубичевских игара Андрија Стерђевић понео је сабљу, плашт и - одговорност.",
+              "versions": [
+                {
+                  "versionId": "p07mf4sf",
+                  "types": ["Original"],
+                  "duration": 110,
+                  "durationISO8601": "PT1M50S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1567607975000
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "108615645",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/D57B/production/_108615645_p07mf53d.jpg",
+              "path": "/cpsprodpb/D57B/production/_108615645_p07mf53d.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "-",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:serbian/cyr/srbija-49584771",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Може ли ваше лице да постане ваш пасош"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/svet-49452646",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/svet-49452646"
+            },
+            "summary": "Погледајте како фунционише систем за препознавање лица на аеродрому и контроли пасоша који влада Велике Британије разматра да уведе.",
+            "timestamp": 1567684499000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07lgks0",
+              "subType": "clip",
+              "format": "video",
+              "title": "Технологија за препознавање лица тежи да скрати редове на аеродромима",
+              "synopses": {
+                "short": "Технологија за препознавање лица тежи да скрати редове на пасошким контролама"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07lglb8.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "Технологија за препознавање лица тежи да скрати редове на пасошким контролама",
+              "versions": [
+                {
+                  "versionId": "p07lgks3",
+                  "types": ["Original"],
+                  "duration": 134,
+                  "durationISO8601": "PT2M14S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1566572412000
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "108479426",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/F421/production/_108479426_p07lglb8.jpg",
+              "path": "/cpsprodpb/F421/production/_108479426_p07lglb8.jpg",
+              "height": 575,
+              "width": 1024,
+              "altText": "tehnologija za prepoznavanje lica",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:serbian/cyr/svet-49452646",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Zero waste: Како живети без отпада у Србији"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/srbija-49351280",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/srbija-49351280"
+            },
+            "summary": "Миља Вуковић је пре две године одлучила да радикално смањи количину отпада у кући.",
+            "timestamp": 1567075642000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07km6gh",
+              "subType": "clip",
+              "format": "video",
+              "title": "Zero waste: Како живети без отпада у Србији",
+              "synopses": {
+                "short": "Миља Вуковић већ две године живи без отпада."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07km7xp.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "Миља Вуковић већ две године живи без отпада.",
+              "versions": [
+                {
+                  "versionId": "p07km6gl",
+                  "types": ["Original"],
+                  "duration": 121,
+                  "durationISO8601": "PT2M1S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1565796371000
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "108316051",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/3AD5/production/_108316051_p07km7xp.jpg",
+              "path": "/cpsprodpb/3AD5/production/_108316051_p07km7xp.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Zero waste",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:serbian/cyr/srbija-49351280",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "„Жене у науци: Само напред\""
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/svet-49566767",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/svet-49566767"
+            },
+            "summary": "Добитница Нобела за медицину Елизабет Блекбурн жели да охрабри младе научнице да истрају у свету у ком су још увек мушкарци већина.",
+            "timestamp": 1567575773000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07mb0nz",
+              "subType": "clip",
+              "format": "video",
+              "title": "„Жене у науци: Само напред\"",
+              "synopses": {
+                "short": "„Жене у науци: Само напред\""
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mb0sq.jpg",
+              "embedding": true,
+              "advertising": false,
+              "caption": "„Жене у науци: Само напред\"",
+              "versions": [
+                {
+                  "versionId": "p07mb0p1",
+                  "types": ["Original"],
+                  "duration": 118,
+                  "durationISO8601": "PT1M58S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1567508029000
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "108596496",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/10F5D/production/_108596496_p07mb0sq.jpg",
+              "path": "/cpsprodpb/10F5D/production/_108596496_p07mb0sq.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Naučnica",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:serbian/cyr/svet-49566767",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Најгледаније"
+        },
+        "semanticGroupName": "Sport"
+      },
+      {
+        "type": "useful-links",
+        "title": "Useful links",
+        "items": [
+          {
+            "headlines": {
+              "headline": "Koнтaктирајте BBC News на српском",
+              "overtyped": "Контактирајте нас"
+            },
+            "locators": {
+              "assetUri": "/serbian/cyr/institutional-43543431",
+              "cpsUrn": "urn:bbc:content:assetUri:serbian/cyr/institutional-43543431"
+            },
+            "summary": "Koнтaктирајте BBC News на српском",
+            "timestamp": 1522063228000,
+            "cpsType": "STY",
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": "Контактирајте нас",
+            "id": "urn:bbc:ares::asset:serbian/cyr/institutional-43543431",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "Useful links"
+      }
+    ]
+  },
+  "promo": {
+    "subType": "IDX",
+    "name": "Почетна страна",
+    "uri": "/serbian/cyr/front_page",
+    "id": "urn:bbc:ares::index:serbian/cyr/front_page/desktop/domestic",
+    "type": "simple"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Почетна страна",
+      "uri": "/serbian/cyr/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC News na srpskom",
+      "uri": "/serbian/cyr",
+      "type": "simple"
+    },
+    "groups": []
+  }
 }

@@ -7,10 +7,7 @@ export const getThumbnailUri = aresMetadataBlock => {
   let imageUrl = pathOr('', ['model', 'imageUrl'], aresMetadataBlock);
 
   if (imageUrl.startsWith('http')) {
-    imageUrl = imageUrl
-      .split('/')
-      .slice(2)
-      .join('/');
+    imageUrl = imageUrl.split('/').slice(2).join('/');
   }
 
   return `https://${imageUrl.replace('$recipe', DEFAULT_IMAGE_RES)}`;

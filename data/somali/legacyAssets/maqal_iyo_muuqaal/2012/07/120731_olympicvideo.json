@@ -24,7 +24,7 @@
     "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "18949484" },
     "tags": {},
     "version": "v1.0.0",
-    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "blockTypes": ["legacyMedia", "paragraph"],
     "includeComments": false
   },
   "content": {
@@ -88,7 +88,12 @@
       "uri": "/somali/maqal_iyo_muuqaal",
       "type": "simple"
     },
-    "site": { "subType": "site", "name": "BBCSomali.com", "uri": "/somali", "type": "simple" },
+    "site": {
+      "subType": "site",
+      "name": "BBCSomali.com",
+      "uri": "/somali",
+      "type": "simple"
+    },
     "groups": []
   }
 }

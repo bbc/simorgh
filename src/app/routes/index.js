@@ -1,17 +1,19 @@
 import article from './article';
 import cpsAsset from './cpsAsset';
 import home from './home';
-import liveRadio from './radio';
+import liveRadio from './liveRadio';
+import mostRead from './mostRead';
 import onDemandRadio from './onDemandRadio';
-import error200 from './error200';
-import error404 from './error404';
+import error from './error';
+import errorNoRouteMatch from './errorNoRouteMatch';
 
 export default [
   article,
   cpsAsset,
   home,
   liveRadio,
+  mostRead,
   onDemandRadio,
-  error200,
-  error404,
+  error,
+  errorNoRouteMatch,
 ];

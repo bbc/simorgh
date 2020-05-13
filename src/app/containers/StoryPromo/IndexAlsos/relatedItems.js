@@ -18,6 +18,7 @@ const relatedItems = [
   {
     headlines: {
       headline: 'Yaushe Obasanjo ya fara yi wa shugabannin kasa baki?',
+      overtyped: 'Overtyped headline',
     },
     locators: {
       assetUri: '/hausa/labarai-42837051',

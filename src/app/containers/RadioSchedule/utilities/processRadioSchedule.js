@@ -1,9 +1,12 @@
-import moment from 'moment';
 import findLastIndex from 'ramda/src/findLastIndex';
 import propSatisfies from 'ramda/src/propSatisfies';
-import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
+import nodeLogger from '#lib/logger.node';
+import { RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR } from '#lib/logger.const';
 
-const getProgramState = (currentTime, startTime, endTime) => {
+const logger = nodeLogger(__filename);
+
+export const getProgramState = (currentTime, startTime, endTime) => {
   const isLive = currentTime < endTime && currentTime > startTime;
   if (isLive) {
     return 'live';
@@ -15,56 +18,87 @@ const getProgramState = (currentTime, startTime, endTime) => {
   return 'next';
 };
 
-const getLink = (state, program, service) => {
+export const getLink = (state, program, service) => {
+  const pid = path(['episode', 'pid'], program);
   const url = `/${service}/${program.serviceId}`;
-  return state === 'live'
-    ? `${url}/liveradio`
-    : `${url}/${program.broadcast.pid}`;
+  return state === 'live' ? `${url}/liveradio` : `${url}/${pid}`;
 };
 
-export default (radioScheduleData, service) => {
-  const currentTime = parseInt(moment.utc().format('x'), 10);
+const logProgramError = ({ error, service }) => {
+  logger.error(RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR, {
+    error,
+    service,
+  });
+};
+
+export default (data, service, currentTime) => {
+  if (!data) {
+    return null;
+  }
+
+  const { schedules = [] } = data;
 
   // finding latest program, that may or may not still be live. this is because there isn't
   // always a live program, in which case we show the most recently played program on demand.
   const latestProgramIndex = findLastIndex(
     propSatisfies(time => time < currentTime, 'publishedTimeStart'),
-  )(radioScheduleData.schedules);
-
-  const radioSchedules = radioScheduleData.schedules;
+  )(schedules);
 
   const scheduleDataIsComplete =
-    radioSchedules[latestProgramIndex - 2] &&
-    radioSchedules[latestProgramIndex + 1];
-  const schedulesToShow = scheduleDataIsComplete && [
-    radioSchedules[latestProgramIndex],
-    radioSchedules[latestProgramIndex - 1],
-    radioSchedules[latestProgramIndex - 2],
-    radioSchedules[latestProgramIndex + 1],
+    schedules[latestProgramIndex - 2] && schedules[latestProgramIndex + 1];
+
+  if (!scheduleDataIsComplete) {
+    logProgramError({ error: 'Incomplete program schedule', service });
+  }
+
+  const programsToShow = scheduleDataIsComplete && [
+    schedules[latestProgramIndex],
+    schedules[latestProgramIndex - 1],
+    schedules[latestProgramIndex - 2],
+    schedules[latestProgramIndex + 1],
   ];
 
-  const schedules =
-    schedulesToShow &&
-    schedulesToShow.map(program => {
+  const processedSchedule =
+    programsToShow &&
+    programsToShow.map((program = {}) => {
+      const {
+        publishedTimeStart,
+        publishedTimeEnd,
+        publishedTimeDuration,
+      } = program;
+
+      const brandTitle = path(['brand', 'title'], program);
+
+      if (!publishedTimeStart) {
+        logProgramError({
+          error: 'publishTimeStart field is missing in program',
+          service,
+        });
+      }
+      if (!brandTitle) {
+        logProgramError({
+          error: 'title field is missing in program',
+          service,
+        });
+      }
+
       const currentState = getProgramState(
         currentTime,
-        program.publishedTimeStart,
-        program.publishedTimeEnd,
+        publishedTimeStart,
+        publishedTimeEnd,
         service,
       );
+
       return {
-        id: pathOr(null, ['broadcast', 'pid'], program),
+        id: path(['broadcast', 'pid'], program),
         state: currentState,
-        stateLabel: currentState,
-        startTime: pathOr(null, ['publishedTimeStart'], program),
+        startTime: publishedTimeStart,
         link: getLink(currentState, program, service),
-        brandTitle: pathOr(null, ['brand', 'title'], program),
-        episodeTitle: pathOr(null, ['episode', 'presentationTitle'], program),
-        summary: pathOr(null, ['episode', 'synopses', 'short'], program),
-        duration: pathOr(null, ['publishedTimeDuration'], program),
-        durationLabel: 'Duration',
+        brandTitle,
+        summary: path(['episode', 'synopses', 'short'], program),
+        duration: publishedTimeDuration || '',
       };
     });
 
-  return schedules;
+  return processedSchedule;
 };

@@ -4,7 +4,7 @@ plugins:
     enabled: true
     config:
       languages:
-      - javascript
+        - javascript
     exclude_patterns:
       - 'cypress/{integration,support}/**/*.js'
       # The line below should work but doesn't it removes all js and jsx quality checking
@@ -17,3 +17,5 @@ exclude_patterns:
   - 'scripts/lighthouseBudget.test.js'
   - 'scripts/lighthouseBudget.js'
   - 'scripts/dependencyCheck.js'
+  - 'scripts/simorghPages.js'
+  - 'scripts/simorghLaunchDates.js'

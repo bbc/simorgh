@@ -1315,6 +1315,10 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
       property="fb:app_id"
     />
     <meta
+      content="285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"
+      property="fb:pages"
+    />
+    <meta
       content="yes"
       name="mobile-web-app-capable"
     />
@@ -2778,6 +2782,10 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
       property="fb:app_id"
     />
     <meta
+      content="285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"
+      property="fb:pages"
+    />
+    <meta
       content="yes"
       name="mobile-web-app-capable"
     />
@@ -2887,6 +2895,71 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   fill: currentColor;
   width: 1rem;
   height: 0.8125rem;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c23 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c19 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c17 {
+  position: relative;
+  z-index: 0;
+  margin-top: 2rem;
+}
+
+.c20 {
+  margin: 0;
+  padding: 0;
 }
 
 .c15 {
@@ -3010,71 +3083,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   font-style: normal;
 }
 
-.c21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c22 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c23 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c19 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c17 {
-  position: relative;
-  z-index: 0;
-  margin-top: 2rem;
-}
-
-.c20 {
-  margin: 0;
-  padding: 0;
-}
-
 .c26 {
   padding: 0.5rem 0 1rem;
 }
@@ -3148,6 +3156,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c34:before {
@@ -3197,7 +3206,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 .c16 {
   margin-bottom: 1rem;
-  z-index: 0;
 }
 
 .c18 {
@@ -3216,6 +3224,68 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 .c4 {
   padding-bottom: 1rem;
+}
+
+@media (min-width:37.5rem) {
+  .c22 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c23 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c23 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c23 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c23 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c19 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c17 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c17 {
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (max-width:37.4375rem) {
@@ -3557,68 +3627,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 @supports (display:grid) {
   .c27 {
     display: block;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c22 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c23 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c23 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c23 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c23 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c19 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c19 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c17 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c17 {
-    margin-bottom: 1.5rem;
   }
 }
 
@@ -4361,7 +4369,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         <h2
                           class="c20"
                         >
-                          <div
+                          <span
                             class="c21"
                           >
                             <span
@@ -4375,7 +4383,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                                 Another thing we de for inside dis tori
                               </span>
                             </span>
-                          </div>
+                          </span>
                         </h2>
                       </div>
                       <ul
@@ -4419,7 +4427,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                               >
                                 <a
                                   class="c34"
-                                  href="/pidgin/media-45132087?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/pidgin/media-45132087"
                                 >
                                   <span
                                     role="text"
@@ -4509,7 +4517,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                               >
                                 <a
                                   class="c34"
-                                  href="/pidgin/tori-45242255?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/pidgin/tori-45242255"
                                 >
                                   <span
                                     role="text"
@@ -5087,6 +5095,10 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
     <meta
       content="1609039196070050"
       property="fb:app_id"
+    />
+    <meta
+      content="285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"
+      property="fb:pages"
     />
     <meta
       content="yes"
@@ -5754,6 +5766,10 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
       property="fb:app_id"
     />
     <meta
+      content="285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"
+      property="fb:pages"
+    />
+    <meta
       content="yes"
       name="mobile-web-app-capable"
     />
@@ -5880,7 +5896,72 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
     </script>
   </head>
   <body>
-    .c34 {
+    .c40 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c41 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c42 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c38 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c36 {
+  position: relative;
+  z-index: 0;
+  margin-top: 2rem;
+}
+
+.c39 {
+  margin: 0;
+  padding: 0;
+}
+
+.c34 {
   margin: 0 auto;
   padding-bottom: 2rem;
 }
@@ -6215,71 +6296,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   font-style: normal;
 }
 
-.c40 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c41 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c42 {
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c38 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c36 {
-  position: relative;
-  z-index: 0;
-  margin-top: 2rem;
-}
-
-.c39 {
-  margin: 0;
-  padding: 0;
-}
-
 .c45 {
   padding: 0.5rem 0 1rem;
 }
@@ -6353,6 +6369,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c54:before {
@@ -6379,7 +6396,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 .c35 {
   margin-bottom: 1rem;
-  z-index: 0;
 }
 
 .c37 {
@@ -6398,6 +6414,68 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 .c4 {
   padding-bottom: 1rem;
+}
+
+@media (min-width:37.5rem) {
+  .c41 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c42 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c42 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c42 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c42 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c38 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c38 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c36 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c36 {
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (max-width:37.4375rem) {
@@ -6890,68 +6968,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 @supports (display:grid) {
   .c46 {
     display: block;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c41 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c42 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c42 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c42 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c42 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c38 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c38 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c36 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c36 {
-    margin-bottom: 1.5rem;
   }
 }
 
@@ -8285,7 +8301,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         <h2
                           class="c39"
                         >
-                          <div
+                          <span
                             class="c40"
                           >
                             <span
@@ -8299,7 +8315,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 Bu barədə daha geniş
                               </span>
                             </span>
-                          </div>
+                          </span>
                         </h2>
                       </div>
                       <ul
@@ -8343,7 +8359,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               >
                                 <a
                                   class="c54"
-                                  href="/azeri/azerbaijan-44124647?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/azeri/azerbaijan-44124647"
                                 >
                                   ADR və Qazaxdan Qarsadək müsəlman dəhlizi ideyası
                                 </a>
@@ -8398,7 +8414,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               >
                                 <a
                                   class="c54"
-                                  href="/azeri/azerbaijan-43540056?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/azeri/azerbaijan-43540056"
                                 >
                                   ADR-100: Türk Əsgəri üçün Cəbrayıl çörəyi
                                 </a>
@@ -8453,7 +8469,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               >
                                 <a
                                   class="c54"
-                                  href="/azeri/azerbaijan-44022776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/azeri/azerbaijan-44022776"
                                 >
                                   Borçalı: Tortdan hərəyə bir tikə - təkbaşına isə onu yemək olmaz
                                 </a>
@@ -8508,7 +8524,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               >
                                 <a
                                   class="c54"
-                                  href="/azeri/azerbaijan-43713137?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/azeri/azerbaijan-43713137"
                                 >
                                   Cümhuriyyət hökuməti Azərbaycanı necə idarə edirdi? İlk 6 ayın hadisələri
                                 </a>
@@ -8563,7 +8579,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               >
                                 <a
                                   class="c54"
-                                  href="/azeri/azerbaijan-37688691?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/azeri/azerbaijan-37688691"
                                 >
                                   1918-1991: Bir müstəqilliyin iki bəyanı
                                 </a>
@@ -8618,7 +8634,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               >
                                 <a
                                   class="c54"
-                                  href="/azeri/azerbaijan-37691096?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/azeri/azerbaijan-37691096"
                                 >
                                   <span
                                     role="text"
@@ -8684,7 +8700,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               >
                                 <a
                                   class="c54"
-                                  href="/azeri/azerbaijan-43499221?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/azeri/azerbaijan-43499221"
                                 >
                                   1918-ci ilə baxış: Mayın 28-nə aparan o yaz günlərində həyat necə idi?
                                 </a>
@@ -8739,7 +8755,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               >
                                 <a
                                   class="c54"
-                                  href="/azeri/azerbaijan-44004471?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/azeri/azerbaijan-44004471"
                                 >
                                   #ADR100 Zaqatala: Azərbaycanın qalib gəldiyi mübahisə
                                 </a>
@@ -8794,7 +8810,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               >
                                 <a
                                   class="c54"
-                                  href="/azeri/azerbaijan-43870815?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/azeri/azerbaijan-43870815"
                                 >
                                   Cümhuriyyət hökumətinin İranla əlaqələri necə idi?
                                 </a>

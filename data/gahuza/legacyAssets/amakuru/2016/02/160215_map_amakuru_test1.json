@@ -1,81 +1,7 @@
 {
-    "content": {
-      "blocks": [
-        {
-          "aspectRatio": "16:9",
-          "format": "video",
-          "href": "http://a.files.bbci.co.uk/worldservice/test/gahuza/meta/dps/junk/2016/02/emp/160215_map_amakuru_test1.emp.xml",
-          "id": "17696215",
-          "live": false,
-          "subType": "primary",
-          "type": "legacyMedia"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "Clip long synopsis - e2e test 2016-01-27T07:20:16+00:00",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "Clip long synopsis - e2e test 2016-01-27T07:20:16+00:00",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "28 Ukwa mbere 2016 Ibiheruka guhinduka 16:13 GMT Uwari perezida wa Cote d'Ivoire Laurent Gbagbo, yahamagajwe imbere ya sentare mpuzamakungu mpanavyaha y' i La Haye -ICC. Yagirizwa ivyaha vyakozwe mu gihe c'intambara hagati y'abavukagihugu, yadutse inyuma y'amatora yo mu 2010. Gbagbo n'uwo bagirizwa hamwe Charles Ble Goude, barahakana ivyaha bakavuga ko bera.",
-          "type": "paragraph"
-        }
-      ]
-    },
-    "metadata": {
-      "analyticsLabels": {
-        "cps_asset_id": "17696215",
-        "cps_asset_type": "map"
-      },
-      "blockTypes": [
-        "legacyMedia",
-        "paragraph"
-      ],
-      "createdBy": "greatlakes",
-      "firstPublished": 1455560132000,
-      "id": "urn:bbc:ares::asset:gahuza/amakuru/2016/02/160215_map_amakuru_test1",
-      "includeComments": false,
-      "language": "rw",
-      "lastPublished": 1455560132000,
-      "lastUpdated": 1583431055363,
-      "locators": {
-        "assetId": "17696215",
-        "assetUri": "/gahuza/amakuru/2016/02/160215_map_amakuru_test1",
-        "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru/2016/02/160215_map_amakuru_test1",
-        "curie": "http://www.bbc.co.uk/asset/239ba6b6-d40f-11e5-be5e-1ac75fbf2e4c"
-      },
-      "options": {
-        "allowAdvertising": true,
-        "allowDateStamp": true,
-        "allowRightHandSide": true,
-        "includeComments": false,
-        "isBreakingNews": false,
-        "suitableForSyndication": false
-      },
-      "tags": {},
-      "timestamp": 1455560132000,
-      "type": "MAP",
-      "version": "v1.1.6"
-    },
-    "promo": {
-      "headlines": {
-        "headline": "Laurent Gbagbo imbere ya sentare i La Haye",
-        "shortHeadline": "Laurent Gbagbo imbere ya sentare i La Haye"
-      },
-      "id": "urn:bbc:ares::asset:gahuza/amakuru/2016/02/160215_map_amakuru_test1",
-      "language": "rw",
-      "locators": {
-        "assetId": "17696215",
-        "assetUri": "/gahuza/amakuru/2016/02/160215_map_amakuru_test1",
-        "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru/2016/02/160215_map_amakuru_test1",
-        "curie": "http://www.bbc.co.uk/asset/239ba6b6-d40f-11e5-be5e-1ac75fbf2e4c"
-      },
-      "media": {
+  "content": {
+    "blocks": [
+      {
         "aspectRatio": "16:9",
         "format": "video",
         "href": "http://a.files.bbci.co.uk/worldservice/test/gahuza/meta/dps/junk/2016/02/emp/160215_map_amakuru_test1.emp.xml",
@@ -84,26 +10,97 @@
         "subType": "primary",
         "type": "legacyMedia"
       },
-      "passport": {
-        "taggings": []
+      {
+        "markupType": "plain_text",
+        "text": "Clip long synopsis - e2e test 2016-01-27T07:20:16+00:00",
+        "type": "paragraph"
       },
-      "summary": "Laurent Gbagbo imbere ya sentare i La Haye",
-      "timestamp": 1455560132000,
-      "type": "cps"
-    },
-    "relatedContent": {
-      "groups": [],
-      "section": {
-        "name": "Amakuru",
-        "subType": "index",
-        "type": "simple",
-        "uri": "/gahuza/amakuru"
+      {
+        "markupType": "plain_text",
+        "text": "Clip long synopsis - e2e test 2016-01-27T07:20:16+00:00",
+        "type": "paragraph"
       },
-      "site": {
-        "name": "BBCGahuza.com",
-        "subType": "site",
-        "type": "simple",
-        "uri": "/gahuza"
+      {
+        "markupType": "plain_text",
+        "text": "28 Ukwa mbere 2016 Ibiheruka guhinduka 16:13 GMT Uwari perezida wa Cote d'Ivoire Laurent Gbagbo, yahamagajwe imbere ya sentare mpuzamakungu mpanavyaha y' i La Haye -ICC. Yagirizwa ivyaha vyakozwe mu gihe c'intambara hagati y'abavukagihugu, yadutse inyuma y'amatora yo mu 2010. Gbagbo n'uwo bagirizwa hamwe Charles Ble Goude, barahakana ivyaha bakavuga ko bera.",
+        "type": "paragraph"
       }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "cps_asset_id": "17696215",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "createdBy": "greatlakes",
+    "firstPublished": 1455560132000,
+    "id": "urn:bbc:ares::asset:gahuza/amakuru/2016/02/160215_map_amakuru_test1",
+    "includeComments": false,
+    "language": "rw",
+    "lastPublished": 1455560132000,
+    "lastUpdated": 1583431055363,
+    "locators": {
+      "assetId": "17696215",
+      "assetUri": "/gahuza/amakuru/2016/02/160215_map_amakuru_test1",
+      "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru/2016/02/160215_map_amakuru_test1",
+      "curie": "http://www.bbc.co.uk/asset/239ba6b6-d40f-11e5-be5e-1ac75fbf2e4c"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1455560132000,
+    "type": "MAP",
+    "version": "v1.1.6"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Laurent Gbagbo imbere ya sentare i La Haye",
+      "shortHeadline": "Laurent Gbagbo imbere ya sentare i La Haye"
+    },
+    "id": "urn:bbc:ares::asset:gahuza/amakuru/2016/02/160215_map_amakuru_test1",
+    "language": "rw",
+    "locators": {
+      "assetId": "17696215",
+      "assetUri": "/gahuza/amakuru/2016/02/160215_map_amakuru_test1",
+      "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru/2016/02/160215_map_amakuru_test1",
+      "curie": "http://www.bbc.co.uk/asset/239ba6b6-d40f-11e5-be5e-1ac75fbf2e4c"
+    },
+    "media": {
+      "aspectRatio": "16:9",
+      "format": "video",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/gahuza/meta/dps/junk/2016/02/emp/160215_map_amakuru_test1.emp.xml",
+      "id": "17696215",
+      "live": false,
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": {
+      "taggings": []
+    },
+    "summary": "Laurent Gbagbo imbere ya sentare i La Haye",
+    "timestamp": 1455560132000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Amakuru",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/gahuza/amakuru"
+    },
+    "site": {
+      "name": "BBCGahuza.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/gahuza"
     }
   }
+}

@@ -22,10 +22,7 @@
       "cps_asset_id": "17698099",
       "cps_asset_type": "map"
     },
-    "blockTypes": [
-      "legacyMedia",
-      "paragraph"
-    ],
+    "blockTypes": ["legacyMedia", "paragraph"],
     "createdBy": "burmese",
     "firstPublished": 1470925531000,
     "id": "urn:bbc:ares::asset:burmese/sport/2016/08/160811_tc2_testmap1",

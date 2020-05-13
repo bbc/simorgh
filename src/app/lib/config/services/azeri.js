@@ -148,10 +148,29 @@ export const service = {
         listen: 'Listen',
         watch: 'İzləyin',
         liveLabel: 'CANLI',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Videonun alt yazısı, ',
+          text: 'Xəbərdarlıq : Üçüncü tərəfin məzmununda reklam ola bilər',
+        },
+        fallback: {
+          text: 'Məzmun mövcud deyil',
+          linkText: 'Daha çoxu üçün %provider_name%',
+          linkTextSuffixVisuallyHidden: ', BBC-dən kənar',
+          warningText: 'BBC kənar saytların məzmununa məsul deyil.',
+        },
+        skipLink: {
+          text: 'Paylaşımını ötürün %provider_name%',
+          endTextVisuallyHidden: 'Paylaşımın sonu %provider_name%',
+        },
+      },
+      topStoriesTitle: 'Bu günün xəbərləri',
+      featuresAnalysisTitle: 'Bunları da oxuyun',
     },
     brandSVG,
     mostRead: {
@@ -162,6 +181,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
@@ -225,10 +247,6 @@ export const service = {
       {
         title: 'Dərgi',
         url: '/azeri/magazine',
-      },
-      {
-        title: 'Fotoqalereya',
-        url: '/azeri/media/photogalleries',
       },
       {
         title: 'Video',

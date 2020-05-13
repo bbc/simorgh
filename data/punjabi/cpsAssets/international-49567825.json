@@ -1,186 +1,282 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:punjabi/international-49567825",
-        "locators": {
-            "assetUri": "/punjabi/international-49567825",
-            "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-49567825",
-            "curie": "http://www.bbc.co.uk/asset/ecdfc1d0-c4d4-4746-8ea1-98aff0250003"
-        },
-        "type": "MAP",
-        "createdBy": "punjabi-v6",
-        "language": "pa",
-        "lastUpdated": 1567520219542,
-        "firstPublished": 1567520174,
-        "lastPublished": 1567520175,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
-        },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "punjabi.international.media_asset.49567825.page",
-            "cps_asset_id": "49567825"
-        },
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-            },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e4739461b000e9dabfc",
-                    "campaignName": "WS - Update me"
-                }
-            ]
-        },
-        "tags": {},
-        "version": "v1.0.10",
-        "blockTypes": [
-            "media",
-            "paragraph"
-        ],
-        "includeComments": false
+  "metadata": {
+    "id": "urn:bbc:ares::asset:punjabi/international-49567825",
+    "locators": {
+      "assetUri": "/punjabi/international-49567825",
+      "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-49567825",
+      "curie": "http://www.bbc.co.uk/asset/ecdfc1d0-c4d4-4746-8ea1-98aff0250003",
+      "assetId": "49567825"
     },
-    "content": {
-        "blocks": [
+    "type": "MAP",
+    "createdBy": "punjabi-v6",
+    "language": "pa",
+    "lastUpdated": 1588965350844,
+    "firstPublished": 1567520174000,
+    "lastPublished": 1567520174000,
+    "timestamp": 1567520174000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "punjabi.international.media_asset.49567825.page",
+      "cps_asset_id": "49567825"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "ਧਰਮ",
+          "thingUri": "http://www.bbc.co.uk/things/fbcd47f3-d67a-4b69-b15c-d4b6c270adbf#id",
+          "thingId": "fbcd47f3-d67a-4b69-b15c-d4b6c270adbf",
+          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Religion",
+            "http://www.wikidata.org/entity/Q9174"
+          ],
+          "topicName": "ਧਰਮ",
+          "topicId": "c404v093q9pt",
+          "curationList": [
             {
-                "id": "p07mbjbz",
-                "subType": "clip",
-                "format": "video",
-                "title": "ਪਾਕ ’ਚ ਸਿੱਖ ਕੁੜੀ ਦਾ ਧਰਮ ਪਰਿਵਰਤਨ: ਗਵਰਨਰ ਨੇ ਕਰਵਾਇਆ ‘ਰਾਜ਼ੀਨਾਮਾ’",
-                "synopses": {
-                    "short": "ਪਾਕ ’ਚ ਸਿੱਖ ਕੁੜੀ ਦਾ ਧਰਮ ਪਰਿਵਰਤਨ: ਗਵਰਨਰ ਨੇ ਕਰਵਾਇਆ ‘ਰਾਜ਼ੀਨਾਮਾ’, ਕੁੜੀ ਪਰਤੇਗੀ ਮਾਪਿਆਂ ਦੇ ਘਰ",
-                    "long": "ਪਾਕਿਸਤਾਨ ਦੇ ਪੰਜਾਬ ਸੂਬੇ ਦੇ ਗਵਰਨਰ ਦੇ ਦੋਵੇਂ ਪਰਿਵਾਰਾਂ ਨੂੰ ਬੁਲਾ ਕੇ ਕਰਵਾਇਆ ਫੈਸਲਾ, ਕੁੜੀ ਤੇ ਮੁੰਡੇ ਦਾ ਪੱਖ ਅਜੇ ਨਹੀਂ ਮਿਲਿਆ ਹੈ",
-                    "medium": "ਕੁੜੀ ਤੇ ਮੁੰਡੇ ਦਾ ਪੱਖ ਅਜੇ ਨਹੀਂ ਮਿਲਿਆ ਹੈ, ਹਾਲਾਂਕਿ ਦੋਵੇਂ ਬਾਲਗ ਹਨ"
-                },
-                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mbl71.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "ਪਾਕ ’ਚ ਸਿੱਖ ਕੁੜੀ ਦਾ ਧਰਮ ਪਰਿਵਰਤਨ: ਗਵਰਨਰ ਨੇ ਕਰਵਾਇਆ ‘ਰਾਜ਼ੀਨਾਮਾ’, ਕੁੜੀ ਪਰਤੇਗੀ ਮਾਪਿਆਂ ਦੇ ਘਰ",
-                "versions": [
-                    {
-                        "versionId": "p07mbjc2",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 130,
-                        "durationISO8601": "PT2M10S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableFrom": 1567519198
-                    }
-                ],
-                "imageCopyright": "BBC",
-                "type": "media"
-            },
-            {
-                "text": "ਪਾਕਿਸਤਾਨ ਦੇ ਪੰਜਾਬ ਸੂਬੇ ਦੇ ਗਵਰਨਰ ਦੇ ਦੋਵੇਂ ਪਰਿਵਾਰਾਂ ਨੂੰ ਬੁਲਾ ਕੇ ਕਰਵਾਇਆ ਫੈਸਲਾ, ਕੁੜੀ ਤੇ ਮੁੰਡੇ ਦਾ ਪੱਖ ਅਜੇ ਨਹੀਂ ਮਿਲਿਆ ਹੈ।",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "<bold>(ਬੀਬੀਸੀ ਪੰਜਾਬੀ ਨਾਲ </bold><link><caption>FACEBOOK</caption><url href=\"https://www.facebook.com/BBCnewsPunjabi/\" platform=\"highweb\"/><url href=\"https://www.facebook.com/BBCnewsPunjabi/\" platform=\"enhancedmobile\"/></link><bold>, </bold><link><caption>INSTAGRAM</caption><altText>https://instagram.com/bbcnewspunjabi </altText><url href=\"https://instagram.com/bbcnewspunjabi\" platform=\"highweb\"/><url href=\"https://instagram.com/bbcnewspunjabi\" platform=\"enhancedmobile\"/></link><bold>, </bold><link><caption>TWITTER</caption><altText>https://twitter.com/bbcnewspunjabi</altText><url href=\"https://twitter.com/bbcnewspunjabi\" platform=\"highweb\"/><url href=\"https://twitter.com/bbcnewspunjabi\" platform=\"enhancedmobile\"/></link><bold>ਅਤੇ </bold><link><caption>YouTube </caption><altText>https://www.youtube.com/channel/UCN5piaaZEZBfvFJLd_kBHnA</altText><url href=\"https://www.youtube.com/channel/UCN5piaaZEZBfvFJLd_kBHnA\" platform=\"highweb\"/><url href=\"https://www.youtube.com/channel/UCN5piaaZEZBfvFJLd_kBHnA\" platform=\"enhancedmobile\"/></link><bold>'ਤੇ ਜੁੜੋ।)</bold>",
-                "markupType": "candy_xml",
-                "type": "paragraph"
+              "curationId": "ef0bca4b-7e1f-4317-99cd-556c0335d60e",
+              "curationType": "vivo-stream"
             }
-        ]
+          ]
+        },
+        {
+          "thingLabel": "ਪਾਕਿਸਤਾਨ",
+          "thingUri": "http://www.bbc.co.uk/things/cd832879-ac76-4842-8c33-be2be67e53b8#id",
+          "thingId": "cd832879-ac76-4842-8c33-be2be67e53b8",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Place"],
+          "thingSameAs": ["http://sws.geonames.org/1168579/"],
+          "topicName": "ਪਾਕਿਸਤਾਨ",
+          "topicId": "c6vzyvdgrj0t",
+          "curationList": [
+            {
+              "curationId": "f48721d4-e22a-49a2-a42b-165d24516bba",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "ਇਸਲਾਮ",
+          "thingUri": "http://www.bbc.co.uk/things/1b3d2a47-78c9-4fc9-aeb6-746063169674#id",
+          "thingId": "1b3d2a47-78c9-4fc9-aeb6-746063169674",
+          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Islam"],
+          "topicName": "ਇਸਲਾਮ",
+          "topicId": "c8y94yq2p1rt",
+          "curationList": [
+            {
+              "curationId": "6bd7ad6b-78de-4a7a-ab8f-1bd8a4548081",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "ਹਿੰਦੂਵਾਦ",
+          "thingUri": "http://www.bbc.co.uk/things/8862a06b-bc20-47f4-ac68-638b03747abd#id",
+          "thingId": "8862a06b-bc20-47f4-ac68-638b03747abd",
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Hinduism"],
+          "topicName": "ਹਿੰਦੂਵਾਦ",
+          "topicId": "cjgn7g5z437t",
+          "curationList": [
+            {
+              "curationId": "bef28b29-90ac-46f3-b21d-b36f76c8760f",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "ਸਿੱਖ",
+          "thingUri": "http://www.bbc.co.uk/things/6a36cf40-2e40-4ac4-9fe6-67fbb7ba2f3c#id",
+          "thingId": "6a36cf40-2e40-4ac4-9fe6-67fbb7ba2f3c",
+          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q582779",
+            "http://dbpedia.org/resource/Sikh"
+          ],
+          "topicName": "ਸਿੱਖ",
+          "topicId": "c7zp5zjnr01t",
+          "curationList": [
+            {
+              "curationId": "5d5ac4ea-dec6-4ee9-bb4e-8e47f7230160",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "ਪੰਜਾਬ",
+          "thingUri": "http://www.bbc.co.uk/things/23b55a8e-f58c-404a-92ba-426dc5d00fee#id",
+          "thingId": "23b55a8e-f58c-404a-92ba-426dc5d00fee",
+          "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/_region"],
+          "topicName": "ਪੰਜਾਬ",
+          "topicId": "c8y94yqdnxrt",
+          "curationList": [
+            {
+              "curationId": "168ab74f-bae0-4fbd-a110-1220bdca2410",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
     },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "ਪਾਕ ’ਚ ਸਿੱਖ ਕੁੜੀ ਦਾ ਧਰਮ ਪਰਿਵਰਤਨ: ਗਵਰਨਰ ਨੇ ਕਰਵਾਇਆ ‘ਰਾਜ਼ੀਨਾਮਾ’",
-            "headline": "ਪਾਕ ’ਚ ਸਿੱਖ ਕੁੜੀ ਦਾ ਧਰਮ ਪਰਿਵਰਤਨ: ਗਵਰਨਰ ਨੇ ਕਰਵਾਇਆ ‘ਰਾਜ਼ੀਨਾਮਾ’, ਕੁੜੀ ਪਰਤੇਗੀ ਮਾਪਿਆਂ ਦੇ ਘਰ"
+    "version": "v1.2.1",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07mbjbz",
+        "subType": "clip",
+        "format": "video",
+        "title": "ਪਾਕ ’ਚ ਸਿੱਖ ਕੁੜੀ ਦਾ ਧਰਮ ਪਰਿਵਰਤਨ: ਗਵਰਨਰ ਨੇ ਕਰਵਾਇਆ ‘ਰਾਜ਼ੀਨਾਮਾ’",
+        "synopses": {
+          "short": "ਪਾਕ ’ਚ ਸਿੱਖ ਕੁੜੀ ਦਾ ਧਰਮ ਪਰਿਵਰਤਨ: ਗਵਰਨਰ ਨੇ ਕਰਵਾਇਆ ‘ਰਾਜ਼ੀਨਾਮਾ’, ਕੁੜੀ ਪਰਤੇਗੀ ਮਾਪਿਆਂ ਦੇ ਘਰ",
+          "long": "ਪਾਕਿਸਤਾਨ ਦੇ ਪੰਜਾਬ ਸੂਬੇ ਦੇ ਗਵਰਨਰ ਦੇ ਦੋਵੇਂ ਪਰਿਵਾਰਾਂ ਨੂੰ ਬੁਲਾ ਕੇ ਕਰਵਾਇਆ ਫੈਸਲਾ, ਕੁੜੀ ਤੇ ਮੁੰਡੇ ਦਾ ਪੱਖ ਅਜੇ ਨਹੀਂ ਮਿਲਿਆ ਹੈ",
+          "medium": "ਕੁੜੀ ਤੇ ਮੁੰਡੇ ਦਾ ਪੱਖ ਅਜੇ ਨਹੀਂ ਮਿਲਿਆ ਹੈ, ਹਾਲਾਂਕਿ ਦੋਵੇਂ ਬਾਲਗ ਹਨ"
         },
-        "locators": {
-            "assetUri": "/punjabi/international-49567825",
-            "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-49567825",
-            "curie": "http://www.bbc.co.uk/asset/ecdfc1d0-c4d4-4746-8ea1-98aff0250003"
-        },
-        "summary": "ਕੁੜੀ ਤੇ ਮੁੰਡੇ ਦਾ ਪੱਖ ਅਜੇ ਨਹੀਂ ਮਿਲਿਆ ਹੈ, ਹਾਲਾਂਕਿ ਦੋਵੇਂ ਬਾਲਗ ਹਨ।",
-        "timestamp": 1567520219542,
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mbl71.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "ਪਾਕ ’ਚ ਸਿੱਖ ਕੁੜੀ ਦਾ ਧਰਮ ਪਰਿਵਰਤਨ: ਗਵਰਨਰ ਨੇ ਕਰਵਾਇਆ ‘ਰਾਜ਼ੀਨਾਮਾ’, ਕੁੜੀ ਪਰਤੇਗੀ ਮਾਪਿਆਂ ਦੇ ਘਰ",
+        "versions": [
+          {
+            "versionId": "p07mbjc2",
+            "types": ["Original"],
+            "duration": 130,
+            "durationISO8601": "PT2M10S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
             },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e4739461b000e9dabfc",
-                    "campaignName": "WS - Update me"
-                }
-            ]
-        },
-        "media": {
-            "id": "p07mbjbz",
-            "subType": "clip",
-            "format": "video",
-            "title": "ਪਾਕ ’ਚ ਸਿੱਖ ਕੁੜੀ ਦਾ ਧਰਮ ਪਰਿਵਰਤਨ: ਗਵਰਨਰ ਨੇ ਕਰਵਾਇਆ ‘ਰਾਜ਼ੀਨਾਮਾ’",
-            "synopses": {
-                "short": "ਪਾਕ ’ਚ ਸਿੱਖ ਕੁੜੀ ਦਾ ਧਰਮ ਪਰਿਵਰਤਨ: ਗਵਰਨਰ ਨੇ ਕਰਵਾਇਆ ‘ਰਾਜ਼ੀਨਾਮਾ’, ਕੁੜੀ ਪਰਤੇਗੀ ਮਾਪਿਆਂ ਦੇ ਘਰ",
-                "long": "ਪਾਕਿਸਤਾਨ ਦੇ ਪੰਜਾਬ ਸੂਬੇ ਦੇ ਗਵਰਨਰ ਦੇ ਦੋਵੇਂ ਪਰਿਵਾਰਾਂ ਨੂੰ ਬੁਲਾ ਕੇ ਕਰਵਾਇਆ ਫੈਸਲਾ, ਕੁੜੀ ਤੇ ਮੁੰਡੇ ਦਾ ਪੱਖ ਅਜੇ ਨਹੀਂ ਮਿਲਿਆ ਹੈ",
-                "medium": "ਕੁੜੀ ਤੇ ਮੁੰਡੇ ਦਾ ਪੱਖ ਅਜੇ ਨਹੀਂ ਮਿਲਿਆ ਹੈ, ਹਾਲਾਂਕਿ ਦੋਵੇਂ ਬਾਲਗ ਹਨ"
-            },
-            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mbl71.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "ਪਾਕ ’ਚ ਸਿੱਖ ਕੁੜੀ ਦਾ ਧਰਮ ਪਰਿਵਰਤਨ: ਗਵਰਨਰ ਨੇ ਕਰਵਾਇਆ ‘ਰਾਜ਼ੀਨਾਮਾ’, ਕੁੜੀ ਪਰਤੇਗੀ ਮਾਪਿਆਂ ਦੇ ਘਰ",
-            "versions": [
-                {
-                    "versionId": "p07mbjc2",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 130,
-                    "durationISO8601": "PT2M10S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableFrom": 1567519198
-                }
-            ],
-            "imageCopyright": "BBC",
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "108598150",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/1445/production/_108598150_p07mbjqn.jpg",
-            "path": "/cpsprodpb/1445/production/_108598150_p07mbjqn.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "ਪਾਕ ’ਚ ਸਿੱਖ ਕੁੜੀ ਦਾ ਧਰਮ ਪਰਿਵਰਤਨ: ਗਵਰਨਰ ਨੇ ਕਰਵਾਇਆ ‘ਰਾਜ਼ੀਨਾਮਾ’, ਕੁੜੀ ਪਰਤੇਗੀ ਮਾਪਿਆਂ ਦੇ ਘਰ",
-            "copyrightHolder": "BBC",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:punjabi/international-49567825",
-        "type": "cps"
+            "availableFrom": 1567519198000
+          }
+        ],
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "ਪਾਕਿਸਤਾਨ ਦੇ ਪੰਜਾਬ ਸੂਬੇ ਦੇ ਗਵਰਨਰ ਦੇ ਦੋਵੇਂ ਪਰਿਵਾਰਾਂ ਨੂੰ ਬੁਲਾ ਕੇ ਕਰਵਾਇਆ ਫੈਸਲਾ, ਕੁੜੀ ਤੇ ਮੁੰਡੇ ਦਾ ਪੱਖ ਅਜੇ ਨਹੀਂ ਮਿਲਿਆ ਹੈ।",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>(ਬੀਬੀਸੀ ਪੰਜਾਬੀ ਨਾਲ </bold><link><caption>FACEBOOK</caption><url href=\"https://www.facebook.com/BBCnewsPunjabi/\" platform=\"highweb\"/><url href=\"https://www.facebook.com/BBCnewsPunjabi/\" platform=\"enhancedmobile\"/></link><bold>, </bold><link><caption>INSTAGRAM</caption><altText>https://instagram.com/bbcnewspunjabi </altText><url href=\"https://instagram.com/bbcnewspunjabi\" platform=\"highweb\"/><url href=\"https://instagram.com/bbcnewspunjabi\" platform=\"enhancedmobile\"/></link><bold>, </bold><link><caption>TWITTER</caption><altText>https://twitter.com/bbcnewspunjabi</altText><url href=\"https://twitter.com/bbcnewspunjabi\" platform=\"highweb\"/><url href=\"https://twitter.com/bbcnewspunjabi\" platform=\"enhancedmobile\"/></link><bold>ਅਤੇ </bold><link><caption>YouTube </caption><altText>https://www.youtube.com/channel/UCN5piaaZEZBfvFJLd_kBHnA</altText><url href=\"https://www.youtube.com/channel/UCN5piaaZEZBfvFJLd_kBHnA\" platform=\"highweb\"/><url href=\"https://www.youtube.com/channel/UCN5piaaZEZBfvFJLd_kBHnA\" platform=\"enhancedmobile\"/></link><bold>'ਤੇ ਜੁੜੋ।)</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "ਪਾਕ ’ਚ ਸਿੱਖ ਕੁੜੀ ਦਾ ਧਰਮ ਪਰਿਵਰਤਨ: ਗਵਰਨਰ ਨੇ ਕਰਵਾਇਆ ‘ਰਾਜ਼ੀਨਾਮਾ’",
+      "headline": "ਪਾਕ ’ਚ ਸਿੱਖ ਕੁੜੀ ਦਾ ਧਰਮ ਪਰਿਵਰਤਨ: ਗਵਰਨਰ ਨੇ ਕਰਵਾਇਆ ‘ਰਾਜ਼ੀਨਾਮਾ’, ਕੁੜੀ ਪਰਤੇਗੀ ਮਾਪਿਆਂ ਦੇ ਘਰ"
     },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "ਕੌਮਾਂਤਰੀ",
-            "uri": "/punjabi/international",
-            "type": "simple"
-        },
-        "site": {
-            "subType": "site",
-            "name": "BBC ਪੰਜਾਬੀ",
-            "uri": "/punjabi",
-            "type": "simple"
-        },
-        "groups": []
-    }
+    "locators": {
+      "assetUri": "/punjabi/international-49567825",
+      "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-49567825",
+      "curie": "http://www.bbc.co.uk/asset/ecdfc1d0-c4d4-4746-8ea1-98aff0250003",
+      "assetId": "49567825"
+    },
+    "summary": "ਕੁੜੀ ਤੇ ਮੁੰਡੇ ਦਾ ਪੱਖ ਅਜੇ ਨਹੀਂ ਮਿਲਿਆ ਹੈ, ਹਾਲਾਂਕਿ ਦੋਵੇਂ ਬਾਲਗ ਹਨ।",
+    "timestamp": 1567520174000,
+    "language": "pa",
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "taggings": []
+    },
+    "media": {
+      "id": "p07mbjbz",
+      "subType": "clip",
+      "format": "video",
+      "title": "ਪਾਕ ’ਚ ਸਿੱਖ ਕੁੜੀ ਦਾ ਧਰਮ ਪਰਿਵਰਤਨ: ਗਵਰਨਰ ਨੇ ਕਰਵਾਇਆ ‘ਰਾਜ਼ੀਨਾਮਾ’",
+      "synopses": {
+        "short": "ਪਾਕ ’ਚ ਸਿੱਖ ਕੁੜੀ ਦਾ ਧਰਮ ਪਰਿਵਰਤਨ: ਗਵਰਨਰ ਨੇ ਕਰਵਾਇਆ ‘ਰਾਜ਼ੀਨਾਮਾ’, ਕੁੜੀ ਪਰਤੇਗੀ ਮਾਪਿਆਂ ਦੇ ਘਰ",
+        "long": "ਪਾਕਿਸਤਾਨ ਦੇ ਪੰਜਾਬ ਸੂਬੇ ਦੇ ਗਵਰਨਰ ਦੇ ਦੋਵੇਂ ਪਰਿਵਾਰਾਂ ਨੂੰ ਬੁਲਾ ਕੇ ਕਰਵਾਇਆ ਫੈਸਲਾ, ਕੁੜੀ ਤੇ ਮੁੰਡੇ ਦਾ ਪੱਖ ਅਜੇ ਨਹੀਂ ਮਿਲਿਆ ਹੈ",
+        "medium": "ਕੁੜੀ ਤੇ ਮੁੰਡੇ ਦਾ ਪੱਖ ਅਜੇ ਨਹੀਂ ਮਿਲਿਆ ਹੈ, ਹਾਲਾਂਕਿ ਦੋਵੇਂ ਬਾਲਗ ਹਨ"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mbl71.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "ਪਾਕ ’ਚ ਸਿੱਖ ਕੁੜੀ ਦਾ ਧਰਮ ਪਰਿਵਰਤਨ: ਗਵਰਨਰ ਨੇ ਕਰਵਾਇਆ ‘ਰਾਜ਼ੀਨਾਮਾ’, ਕੁੜੀ ਪਰਤੇਗੀ ਮਾਪਿਆਂ ਦੇ ਘਰ",
+      "versions": [
+        {
+          "versionId": "p07mbjc2",
+          "types": ["Original"],
+          "duration": 130,
+          "durationISO8601": "PT2M10S",
+          "warnings": {},
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1567519198000
+        }
+      ],
+      "imageCopyright": "BBC",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "108598150",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/1445/production/_108598150_p07mbjqn.jpg",
+      "path": "/cpsprodpb/1445/production/_108598150_p07mbjqn.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "ਪਾਕ ’ਚ ਸਿੱਖ ਕੁੜੀ ਦਾ ਧਰਮ ਪਰਿਵਰਤਨ: ਗਵਰਨਰ ਨੇ ਕਰਵਾਇਆ ‘ਰਾਜ਼ੀਨਾਮਾ’, ਕੁੜੀ ਪਰਤੇਗੀ ਮਾਪਿਆਂ ਦੇ ਘਰ",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:punjabi/international-49567825",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "ਕੌਮਾਂਤਰੀ",
+      "uri": "/punjabi/international",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC ਪੰਜਾਬੀ",
+      "uri": "/punjabi",
+      "type": "simple"
+    },
+    "groups": []
+  }
 }

@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "id": "urn:bbc:ares::index:afaanoromoo\/front_page\/desktop\/domestic",
+    "id": "urn:bbc:ares::index:afaanoromoo/front_page/desktop/domestic",
     "locators": {
-      "assetUri": "\/afaanoromoo\/front_page",
-      "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/front_page",
-      "curie": "http:\/\/www.bbc.co.uk\/asset\/506c4a07-5a7b-23bf-e050-17ac8045c197\/desktop\/domestic"
+      "assetUri": "/afaanoromoo/front_page",
+      "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/front_page",
+      "curie": "http://www.bbc.co.uk/asset/506c4a07-5a7b-23bf-e050-17ac8045c197/desktop/domestic"
     },
     "type": "IDX",
     "createdBy": "afaan-oromoo-v6",
@@ -20,9 +20,7 @@
       "cps_asset_id": "40060717",
       "cps_asset_type": "idx"
     },
-    "tags": {
-      
-    },
+    "tags": {},
     "version": "v1.0.10",
     "blockTypes": [
       "responsive-top-stories",
@@ -47,14 +45,14 @@
               "headline": "Wal qoccoluun paartilee ADWUI biyyattii garam geessa?"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48960514",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48960514"
+              "assetUri": "/afaanoromoo/oduu-48960514",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48960514"
             },
             "summary": "Gamaa gamanaa quba walitti qabuu fi wal yakkuun dhaabbilee miseensa 'ADWUI' lamaan hegeree biyyattii yaaddoo keessa kan buusudha jedhu namoonni siyaasaa.",
             "timestamp": 1562922319000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Analysis",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
                 "categoryName": "Analysis"
               },
               "campaigns": [
@@ -68,8 +66,8 @@
             "indexImage": {
               "id": "107847229",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/16872\/production\/_107847229_98.jpg",
-              "path": "\/cpsprodpb\/16872\/production\/_107847229_98.jpg",
+              "href": "http://c.files.bbci.co.uk/16872/production/_107847229_98.jpg",
+              "path": "/cpsprodpb/16872/production/_107847229_98.jpg",
               "height": 549,
               "width": 976,
               "altText": "ADWUI",
@@ -78,8 +76,8 @@
             "imageThumbnail": {
               "id": "107847231",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/33DA\/production\/_107847231_98.jpg",
-              "path": "\/cpsprodpb\/33DA\/production\/_107847231_98.jpg",
+              "href": "http://c.files.bbci.co.uk/33DA/production/_107847231_98.jpg",
+              "path": "/cpsprodpb/33DA/production/_107847231_98.jpg",
               "height": 180,
               "width": 320,
               "altText": "ADWUI",
@@ -96,13 +94,13 @@
                   "headline": "'Qalama qofaan osoo hin taane qawwee hidhannee loluuf qophiidha'"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48822722",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48822722"
+                  "assetUri": "/afaanoromoo/oduu-48822722",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48822722"
                 },
                 "summary": "Ministirri Muummee Abiy Ahimad gabaasa raawwii hojii mootummaa isaanii kan bara baajataa 2011 mana maree bakka bu'oota uummataaf dhiyeessanii jiru. Dhimmoota garagaraa irratti gaaffii miseensotarraa dhiyaateefis deebii kennaniiru. Akka itti aanutti dhiyaateera.",
                 "timestamp": 1561972552000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48822722",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48822722",
                 "type": "cps"
               },
               {
@@ -110,17 +108,17 @@
                   "headline": "\"Yaalii fonqolchaa' dabalatee rakkoolee biroof furmaatni filannoodha\""
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48855951",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48855951"
+                  "assetUri": "/afaanoromoo/oduu-48855951",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48855951"
                 },
                 "summary": "Rakkoolee siyaasaa Itoophiyaa amma jiru haalawwan ittiin hiikuun danda'amu keessa tokko filannoo gaggeessudha jedhu pirofeesar Mararaa Guddinaa.",
                 "timestamp": 1562228087000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48855951",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48855951",
                 "type": "cps"
               }
             ],
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48960514",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48960514",
             "type": "cps"
           },
           {
@@ -128,14 +126,14 @@
               "headline": "\"Badii siyaasaa biyyattiin keessa jirtuuf 'TPLF' itti gaafatamaadha\" - ADP"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48954624",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48954624"
+              "assetUri": "/afaanoromoo/oduu-48954624",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48954624"
             },
             "summary": "Ibsi 'TPLF' baaase shira siyaasaa ittiin beekamu xaxuu kan itti fufe ta'uu kan agarsiisu qofaa osoo hin taane badii siyaasaa ofiin raawwachaa ture kan saaxiledha jedheera ibsi Koree hoji-raawwachiiftuu ADP.",
             "timestamp": 1562872194000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -149,8 +147,8 @@
             "indexImage": {
               "id": "107841921",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/3272\/production\/_107841921_a4faf0fe-4f71-43da-9b97-862f303feba5.jpg",
-              "path": "\/cpsprodpb\/3272\/production\/_107841921_a4faf0fe-4f71-43da-9b97-862f303feba5.jpg",
+              "href": "http://c.files.bbci.co.uk/3272/production/_107841921_a4faf0fe-4f71-43da-9b97-862f303feba5.jpg",
+              "path": "/cpsprodpb/3272/production/_107841921_a4faf0fe-4f71-43da-9b97-862f303feba5.jpg",
               "height": 549,
               "width": 976,
               "altText": "Asxaa ADP",
@@ -159,8 +157,8 @@
             "imageThumbnail": {
               "id": "107841923",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/8092\/production\/_107841923_a4faf0fe-4f71-43da-9b97-862f303feba5.jpg",
-              "path": "\/cpsprodpb\/8092\/production\/_107841923_a4faf0fe-4f71-43da-9b97-862f303feba5.jpg",
+              "href": "http://c.files.bbci.co.uk/8092/production/_107841923_a4faf0fe-4f71-43da-9b97-862f303feba5.jpg",
+              "path": "/cpsprodpb/8092/production/_107841923_a4faf0fe-4f71-43da-9b97-862f303feba5.jpg",
               "height": 180,
               "width": 320,
               "altText": "Asxaa ADP",
@@ -177,13 +175,13 @@
                   "headline": "Rakkoo tibbanaan warri Buraayyutti qabaman Finfinneetti dabarfaman"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48951073",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48951073"
+                  "assetUri": "/afaanoromoo/oduu-48951073",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48951073"
                 },
                 "summary": "Ajjeechaa qondaaltota mootummaa magaalaa Baahirdaar dhaqqabe hordofee kan to'annoo jala oolan gara federaalatti dabarfaman. Kanneen, daddabarsa meeshaan himatamanis murtiin irrati darbeera.",
                 "timestamp": 1562857269000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48951073",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48951073",
                 "type": "cps"
               },
               {
@@ -191,18 +189,18 @@
                   "headline": "'Humnoota of-tuultotaa bakka gara garaatii walitti qabamanitu biyya diigaa jira'"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48954623",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48954623"
+                  "assetUri": "/afaanoromoo/oduu-48954623",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48954623"
                 },
                 "summary": "'TPLF' ajjeechaa aanga'oota waraanaafi bulchiinsa naannoo Amaaraa ol-aanoofi nageenyi boora'uu biyyaatiif ADP cimsee qeeqeera. ADPn of sirreessuu baannaanis waliin hojjechuu akka dhaabu akeekkachiiseera. Namoonni siyaasaa ibsa 'TPLF' dubbii ijoo torba qabu kana akkamitti akka ilaalan iyyaafanneerra.",
                 "timestamp": 1562864303000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48954623",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48954623",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48954624",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48954624",
             "type": "cps"
           },
           {
@@ -210,14 +208,14 @@
               "headline": "Bara 2011tti kontrobaandiin birri bil. 1.4 baasuu to'atame"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48960758",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48960758"
+              "assetUri": "/afaanoromoo/oduu-48960758",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48960758"
             },
             "summary": "Bara 2011'tti meeshaaleen kontrobaandiin birri bil. 1.4tti tilmaamamu to'annoo jala olfamuufi kanumaan walqabatees namootni 1000 qabamanii seeratti dhiyyeeffamunsaanii Ministeerri Galiiwwan Itoophiyaa beeksise.",
             "timestamp": 1562923144000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -231,8 +229,8 @@
             "indexImage": {
               "id": "107847471",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/4442\/production\/_107847471_adaanachhabebe.jpg",
-              "path": "\/cpsprodpb\/4442\/production\/_107847471_adaanachhabebe.jpg",
+              "href": "http://c.files.bbci.co.uk/4442/production/_107847471_adaanachhabebe.jpg",
+              "path": "/cpsprodpb/4442/production/_107847471_adaanachhabebe.jpg",
               "height": 549,
               "width": 976,
               "altText": "Aaddee Adaanach Abeebee",
@@ -241,8 +239,8 @@
             "imageThumbnail": {
               "id": "107845098",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/15BDE\/production\/_107845098_adaanachhabebe.jpg",
-              "path": "\/cpsprodpb\/15BDE\/production\/_107845098_adaanachhabebe.jpg",
+              "href": "http://c.files.bbci.co.uk/15BDE/production/_107845098_adaanachhabebe.jpg",
+              "path": "/cpsprodpb/15BDE/production/_107845098_adaanachhabebe.jpg",
               "height": 180,
               "width": 320,
               "altText": "Aaddee Adaanach Abeebee",
@@ -259,13 +257,13 @@
                   "headline": "Maallaqni biyyoota 13 fi warqeen Kg 7 Toogoo Wacaaleetti qabame"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-47147128",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-47147128"
+                  "assetUri": "/afaanoromoo/oduu-47147128",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-47147128"
                 },
                 "summary": "Maallaqni biyyoota 13 miiliyoona 60 tahuu fi warqeen Kg 7 Birrii miiliyoona 10 baasu seeraan ala socho'aa ture to'annoo jala oole.",
                 "timestamp": 1549462832000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-47147128",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-47147128",
                 "type": "cps"
               },
               {
@@ -273,18 +271,18 @@
                   "headline": "'Komiin Ministeera Galiiwwaniitti Oromoon aangoorratti heddummaate jedhu soba'"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48224245",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48224245"
+                  "assetUri": "/afaanoromoo/oduu-48224245",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48224245"
                 },
                 "summary": "Ministeera Galiiwwanii keessatti hooggansa naannolee biyyattii bakka bu'ee jiru ilaalchisee loogiitu jira jechuun tibbana komiin ka'aa tureera. Aadde Adaanach ''Inumaa Oromiyaa keessatti itti aantonni saboota biroodha,'' jedhu.",
                 "timestamp": 1557476583000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48224245",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48224245",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48960758",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48960758",
             "type": "cps"
           },
           {
@@ -292,14 +290,14 @@
               "headline": "Imaammati ekisteenshinii fayyaa leellifamaa ture laafaa jiraa?"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48811034",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48811034"
+              "assetUri": "/afaanoromoo/oduu-48811034",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48811034"
             },
             "summary": "Sagantaan esteenshinii fayyaa dhibee dursanii ittisurratti hubannoo hawaasa jabeessun maqaa gaariin ka'a. Haala wal fakkaatuun immoo mootummaan bu'aa siyaasaaf itti fayyadamuutu himama.",
             "timestamp": 1562911365000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -317,8 +315,8 @@
             "indexImage": {
               "id": "107845442",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/5F86\/production\/_107845442_gettyimages-507784942.jpg",
-              "path": "\/cpsprodpb\/5F86\/production\/_107845442_gettyimages-507784942.jpg",
+              "href": "http://c.files.bbci.co.uk/5F86/production/_107845442_gettyimages-507784942.jpg",
+              "path": "/cpsprodpb/5F86/production/_107845442_gettyimages-507784942.jpg",
               "height": 549,
               "width": 976,
               "altText": "Ogeettii Eksiteenshinii Fayyaa daa'ima qorataa jirtu",
@@ -327,8 +325,8 @@
             "imageThumbnail": {
               "id": "107845444",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/ADA6\/production\/_107845444_gettyimages-507784942.jpg",
-              "path": "\/cpsprodpb\/ADA6\/production\/_107845444_gettyimages-507784942.jpg",
+              "href": "http://c.files.bbci.co.uk/ADA6/production/_107845444_gettyimages-507784942.jpg",
+              "path": "/cpsprodpb/ADA6/production/_107845444_gettyimages-507784942.jpg",
               "height": 180,
               "width": 320,
               "altText": "Ogeettii Eksiteenshinii Fayyaa daa'ima qorataa jirtu",
@@ -345,13 +343,13 @@
                   "headline": "'Haatikoo HIV akkan qabu osoo natti hin himin duute'"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48850744",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48850744"
+                  "assetUri": "/afaanoromoo/oduu-48850744",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48850744"
                 },
                 "summary": "Maatiin tokko tokko Keenyaa keessatti iccitii isaanii osoo hin dubbatin du'u. Kunimmoo, waan ijoolleen isaanuu dhagahu qaban dabalata.",
                 "timestamp": 1562148003000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48850744",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48850744",
                 "type": "cps"
               },
               {
@@ -359,18 +357,18 @@
                   "headline": "Dhugaatiin shukkaara hedduu qabu kaansariif nama saaxilaa?"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48946793",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48946793"
+                  "assetUri": "/afaanoromoo/oduu-48946793",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48946793"
                 },
                 "summary": "Saayintistoonni akka ibsanitti dhugaatiin ykn cuunfaan shukkaara hedduu of keessaa qabu carraa dhibee kaansariitiin qabamuu guddisaa jira. Garuu, sababiin isaa sirriitti hin kaa'amne.",
                 "timestamp": 1562821933000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48946793",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48946793",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48811034",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48811034",
             "type": "cps"
           },
           {
@@ -378,14 +376,14 @@
               "headline": "Sudaan 'yaalii fonqolchaa ofirraa qolatte'"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48960376",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48960376"
+              "assetUri": "/afaanoromoo/oduu-48960376",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48960376"
             },
             "summary": "Xiinxalaan Sudaan Ahimad Kodowudaa Sagantaa BBC Newsday' jedhamu irratti akka himanitti taanaan manni maree waraanaa yaalii fonqolchaa qolachuu isaanii yeroo dubbatan kuni kan sadaffaati.",
             "timestamp": 1562914683000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -403,8 +401,8 @@
             "indexImage": {
               "id": "107846090",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/2368\/production\/_107846090_sudaanyaalii.jpg",
-              "path": "\/cpsprodpb\/2368\/production\/_107846090_sudaanyaalii.jpg",
+              "href": "http://c.files.bbci.co.uk/2368/production/_107846090_sudaanyaalii.jpg",
+              "path": "/cpsprodpb/2368/production/_107846090_sudaanyaalii.jpg",
               "height": 549,
               "width": 976,
               "altText": "Akka xiinxalaan jedhanitti manni maree waraanaa fonqolcha qoladhe yoo jedhu kun kan sadaffaati",
@@ -414,8 +412,8 @@
             "imageThumbnail": {
               "id": "107846092",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/7188\/production\/_107846092_sudaanyaalii.jpg",
-              "path": "\/cpsprodpb\/7188\/production\/_107846092_sudaanyaalii.jpg",
+              "href": "http://c.files.bbci.co.uk/7188/production/_107846092_sudaanyaalii.jpg",
+              "path": "/cpsprodpb/7188/production/_107846092_sudaanyaalii.jpg",
               "height": 180,
               "width": 320,
               "altText": "Akka xiinxalaan jedhanitti manni maree waraanaa fonqolcha qoladhe yoo jedhu kun kan sadaffaati",
@@ -433,13 +431,13 @@
                   "headline": "Waraanni Sudaan fi mormitoonni ce'umsa irratti waliigalan"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48878902",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48878902"
+                  "assetUri": "/afaanoromoo/oduu-48878902",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48878902"
                 },
                 "summary": "Manni maree Ce'umsaa humna waraanaa Sudaan fi mormitoonni ce'umsa gara bulchiinsa siiviilii fiduf waggoota sadii irratti waliigalan.",
                 "timestamp": 1562303533000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48878902",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48878902",
                 "type": "cps"
               },
               {
@@ -447,18 +445,18 @@
                   "headline": "Biyyoonni alaa Sudaan saamaa jiruu?"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48933168",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48933168"
+                  "assetUri": "/afaanoromoo/oduu-48933168",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48933168"
                 },
                 "summary": "Bulchiinsi humna waaraanaa amma aangoo of harkaa qabu biyyoota alaa gara biyya keessaa galchuun qabeenya Sudaan saamsisaa jira jechuun mormitoonni komatan.",
                 "timestamp": 1562742642000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48933168",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48933168",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48960376",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48960376",
             "type": "cps"
           },
           {
@@ -466,14 +464,14 @@
               "headline": "Miidhaan bunarra ga'aa jiru akkatti isin miidhuu danda'u"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48960479",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48960479"
+              "assetUri": "/afaanoromoo/oduu-48960479",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48960479"
             },
             "summary": "Addunyaarratti gatiin bunaa hir'achuun qonnaan bultoota buna oomishan miidhaa jira, gatiin buna dhugamuu maaliif dabalaa jiraa?",
             "timestamp": 1562918557000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Analysis",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
                 "categoryName": "Analysis"
               },
               "campaigns": [
@@ -487,8 +485,8 @@
             "indexImage": {
               "id": "107828728",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/1435E\/production\/_107828728_gettyimages-1144862230.jpg",
-              "path": "\/cpsprodpb\/1435E\/production\/_107828728_gettyimages-1144862230.jpg",
+              "href": "http://c.files.bbci.co.uk/1435E/production/_107828728_gettyimages-1144862230.jpg",
+              "path": "/cpsprodpb/1435E/production/_107828728_gettyimages-1144862230.jpg",
               "height": 549,
               "width": 976,
               "altText": "Buna warshaa keessatti daakamaa jiru",
@@ -497,8 +495,8 @@
             "imageThumbnail": {
               "id": "107846096",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/10DC8\/production\/_107846096_gettyimages-1144862230.jpg",
-              "path": "\/cpsprodpb\/10DC8\/production\/_107846096_gettyimages-1144862230.jpg",
+              "href": "http://c.files.bbci.co.uk/10DC8/production/_107846096_gettyimages-1144862230.jpg",
+              "path": "/cpsprodpb/10DC8/production/_107846096_gettyimages-1144862230.jpg",
               "height": 180,
               "width": 320,
               "altText": "Buna warshaa keessatti daakamaa jiru",
@@ -515,13 +513,13 @@
                   "headline": "'Harka namaa eeguun nama hin baasu'"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/46556705",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/46556705"
+                  "assetUri": "/afaanoromoo/46556705",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/46556705"
                 },
                 "summary": "Hagareen Yunvarsiitii Madda Walaabuutti barattuu seeraa sagantaa idileedha. Saatii boqonnaa qabdutti ammoo hojii buna danfisuutti bobbaatee of gargaaraa jirti.",
                 "timestamp": 1544708672000,
                 "cpsType": "MAP",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/46556705",
+                "id": "urn:bbc:ares::asset:afaanoromoo/46556705",
                 "type": "cps"
               },
               {
@@ -529,18 +527,18 @@
                   "headline": "Qonnaan bultoonni Oromiyaa buna omishan yaaddoo attamii qabu?"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-47067621",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-47067621"
+                  "assetUri": "/afaanoromoo/oduu-47067621",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-47067621"
                 },
                 "summary": "Qorannoon waliigalaa haala bunni addunyaa irratti argamu gamaaggamu gosoota bunaa addunyaarratti beekaman 124 keessaa harki 60 fiixee badiisarra jiru jedhe.",
                 "timestamp": 1549264982000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-47067621",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-47067621",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48960479",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48960479",
             "type": "cps"
           },
           {
@@ -548,14 +546,14 @@
               "headline": "'Maatiin miidhamtootaa beenyaa Boeing kenneen gowwoomfaman'"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48960475",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48960475"
+              "assetUri": "/afaanoromoo/oduu-48960475",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48960475"
             },
             "summary": "Balaa xiyyaaraa Boeing, Lion Air bara 2018 keessa mudateen firootasaanii kan dhaban maatiin wayita beenyaa fudhatan akka himannaa hin banneef dirqamaan akka mallatteessan godhamaniiru jedhu Abukaatonni maatiiwwanii.",
             "timestamp": 1562909608000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -569,8 +567,8 @@
             "indexImage": {
               "id": "104528591",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/4C7E\/production\/_104528591_mediaitem104528588.jpg",
-              "path": "\/cpsprodpb\/4C7E\/production\/_104528591_mediaitem104528588.jpg",
+              "href": "http://c.files.bbci.co.uk/4C7E/production/_104528591_mediaitem104528588.jpg",
+              "path": "/cpsprodpb/4C7E/production/_104528591_mediaitem104528588.jpg",
               "height": 549,
               "width": 976,
               "altText": "Balaa xiyyaaraa bara darbe Indooneezhiyaa keessatti mudateen namoonni xiyyaaricha keessa turan 189 dhumaniiru",
@@ -580,8 +578,8 @@
             "imageThumbnail": {
               "id": "107845090",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/235E\/production\/_107845090_mediaitem104528588.jpg",
-              "path": "\/cpsprodpb\/235E\/production\/_107845090_mediaitem104528588.jpg",
+              "href": "http://c.files.bbci.co.uk/235E/production/_107845090_mediaitem104528588.jpg",
+              "path": "/cpsprodpb/235E/production/_107845090_mediaitem104528588.jpg",
               "height": 180,
               "width": 320,
               "altText": "Balaa xiyyaaraa bara darbe Indooneezhiyaa keessatti mudateen namoonni xiyyaaricha keessa turan 189 dhumaniiru",
@@ -599,13 +597,13 @@
                   "headline": "'Boeing' maatii miidhamtootaaf doolaara miiliyoona 100 kenne"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48857572",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48857572"
+                  "assetUri": "/afaanoromoo/oduu-48857572",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48857572"
                 },
                 "summary": "Boeing maatii balaawwan xiyyaaraa Itoophiyaa fi Indooneezhiyaatti mudateen miidhaman garagaaruuf doolaara Ameerikaa miiliyoona 100 kenne.",
                 "timestamp": 1562215629000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48857572",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48857572",
                 "type": "cps"
               },
               {
@@ -613,18 +611,18 @@
                   "headline": "'Miiliyoona miti biiliyoonni haadha warraakoo naaf hin deebisu'"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48864900",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48864900"
+                  "assetUri": "/afaanoromoo/oduu-48864900",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48864900"
                 },
                 "summary": "Abbootiin seeraa maatii miidhamtoota balaa xiyyaara Itoophiyaa baatii Bitooteessaa keessa kufee caccabeen firotasaanii dhabanii, maallaqa beenyaa omishaan xiyyaara Boeing dhiyeesse hinfudhannu jedhan.",
                 "timestamp": 1562250005000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48864900",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48864900",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48960475",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48960475",
             "type": "cps"
           },
           {
@@ -632,14 +630,14 @@
               "headline": "Raafamni xiyyaara Kaanadaa mudate namoota 35 madeesse"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48960511",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48960511"
+              "assetUri": "/afaanoromoo/oduu-48960511",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48960511"
             },
             "summary": "Xiyyaarri Kaanadaa magaalaa Vaankoovar irraa gara Siidnii balali'aa ture qilleensarrattu raafamee namootni 35 madaa'an.",
             "timestamp": 1562909164000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -653,8 +651,8 @@
             "indexImage": {
               "id": "107843846",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/FD42\/production\/_107843846_hi055240707.jpg",
-              "path": "\/cpsprodpb\/FD42\/production\/_107843846_hi055240707.jpg",
+              "href": "http://c.files.bbci.co.uk/FD42/production/_107843846_hi055240707.jpg",
+              "path": "/cpsprodpb/FD42/production/_107843846_hi055240707.jpg",
               "height": 549,
               "width": 976,
               "altText": "Emergency workers assist passengers of Air Canada AC 33 flight, which diverted to Hawaii after turbulence",
@@ -672,13 +670,13 @@
                   "headline": "Dargaggoonni xiyyaara qe'eetti hojjetaniin Kaayiroo gahan"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48918347",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48918347"
+                  "assetUri": "/afaanoromoo/oduu-48918347",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48918347"
                 },
                 "summary": "Xiyyaara kana torban sadi keessatti hojjetan, kiilomeetira 12,000 ammoo torban ja'a keessatti imalan.",
                 "timestamp": 1562653445000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48918347",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48918347",
                 "type": "cps"
               },
               {
@@ -686,18 +684,18 @@
                   "headline": "'Haadha warraa fi ijoollee koo sadii balaa xiyyaaraa Itoophiyaatiin dhabe'"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48878905",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48878905"
+                  "assetUri": "/afaanoromoo/oduu-48878905",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48878905"
                 },
                 "summary": "Maatii isaa guutuu balaa xiyyaaraa Itoophiyaa ET302'n kan dhabe Pool Injoroogee badii maatiisaarra gaheef 'Boeing' komata. Boeing 737 Max balaliisatti debi'uu hin qabu jedhe.",
                 "timestamp": 1562321109000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48878905",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48878905",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48960511",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48960511",
             "type": "cps"
           },
           {
@@ -705,14 +703,14 @@
               "headline": "Dubartiin reeffa haadhaa waliin waggoota 3'f jiraatte hidhamte"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48960375",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48960375"
+              "assetUri": "/afaanoromoo/oduu-48960375",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48960375"
             },
             "summary": "Intalli akkoo kanaa hanga hidhaa waggaa 20 fi qarshii dolaara 10,000 (gara 300,000'tti tilmaamamu) adabamti jedhamee eegama.",
             "timestamp": 1562906582000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -726,8 +724,8 @@
             "indexImage": {
               "id": "107844263",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/8D94\/production\/_107844263_policetape.jpg",
-              "path": "\/cpsprodpb\/8D94\/production\/_107844263_policetape.jpg",
+              "href": "http://c.files.bbci.co.uk/8D94/production/_107844263_policetape.jpg",
+              "path": "/cpsprodpb/8D94/production/_107844263_policetape.jpg",
               "height": 549,
               "width": 976,
               "altText": "Teeppii poolisii",
@@ -736,8 +734,8 @@
             "imageThumbnail": {
               "id": "107845129",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/167FA\/production\/_107845129_policetape.jpg",
-              "path": "\/cpsprodpb\/167FA\/production\/_107845129_policetape.jpg",
+              "href": "http://c.files.bbci.co.uk/167FA/production/_107845129_policetape.jpg",
+              "path": "/cpsprodpb/167FA/production/_107845129_policetape.jpg",
               "height": 180,
               "width": 320,
               "altText": "Teeppii poolisii",
@@ -754,13 +752,13 @@
                   "headline": "Namtichi reeffa guyyaa afur bule kaasuuf yaale hidhame"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-44907868",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-44907868"
+                  "assetUri": "/afaanoromoo/oduu-44907868",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-44907868"
                 },
                 "summary": "Namtichi ani raajiidha jedhe tokko Wallagga bahaa aanaa Limmuutti reeffa guyyaa afur bule kaasuuf yaale to'anoo poolisii jala ooleera.",
                 "timestamp": 1532111531000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-44907868",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-44907868",
                 "type": "cps"
               },
               {
@@ -768,18 +766,18 @@
                   "headline": "Dubartii dogoggoraan 'daa'imman nama biraa' deesse"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48918285",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48918285"
+                  "assetUri": "/afaanoromoo/oduu-48918285",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48918285"
                 },
                 "summary": "Himannaan kiliniika wal-hormaataa Kaaliforniyaatti argamu irratti baname, dubartiin daa'imman dogoggoraa akka deessu taasiseera jedha.",
                 "timestamp": 1562652500000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48918285",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48918285",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48960375",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48960375",
             "type": "cps"
           },
           {
@@ -787,14 +785,14 @@
               "headline": "'Humnoota of-tuultotaa bakka gara garaatii walitti qabamanitu biyya diigaa jira'"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48954623",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48954623"
+              "assetUri": "/afaanoromoo/oduu-48954623",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48954623"
             },
             "summary": "'TPLF' ajjeechaa aanga'oota waraanaafi bulchiinsa naannoo Amaaraa ol-aanoofi nageenyi boora'uu biyyaatiif ADP cimsee qeeqeera. ADPn of sirreessuu baannaanis waliin hojjechuu akka dhaabu akeekkachiiseera. Namoonni siyaasaa ibsa 'TPLF' dubbii ijoo torba qabu kana akkamitti akka ilaalan iyyaafanneerra.",
             "timestamp": 1562864303000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -808,8 +806,8 @@
             "indexImage": {
               "id": "107839594",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/C1B9\/production\/_107839594_b8c20045-0f9e-410b-bc0c-2a379416613e.jpg",
-              "path": "\/cpsprodpb\/C1B9\/production\/_107839594_b8c20045-0f9e-410b-bc0c-2a379416613e.jpg",
+              "href": "http://c.files.bbci.co.uk/C1B9/production/_107839594_b8c20045-0f9e-410b-bc0c-2a379416613e.jpg",
+              "path": "/cpsprodpb/C1B9/production/_107839594_b8c20045-0f9e-410b-bc0c-2a379416613e.jpg",
               "height": 549,
               "width": 976,
               "altText": "Dura Ta'aa 'TPLF'",
@@ -818,8 +816,8 @@
             "imageThumbnail": {
               "id": "107839595",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/E8C9\/production\/_107839595_b8c20045-0f9e-410b-bc0c-2a379416613e.jpg",
-              "path": "\/cpsprodpb\/E8C9\/production\/_107839595_b8c20045-0f9e-410b-bc0c-2a379416613e.jpg",
+              "href": "http://c.files.bbci.co.uk/E8C9/production/_107839595_b8c20045-0f9e-410b-bc0c-2a379416613e.jpg",
+              "path": "/cpsprodpb/E8C9/production/_107839595_b8c20045-0f9e-410b-bc0c-2a379416613e.jpg",
               "height": 180,
               "width": 320,
               "altText": "Dura Ta'aa 'TPLF'",
@@ -836,13 +834,13 @@
                   "headline": "Lidatuu Ayyaaloo maaf siyaasa dhaabee laataa?"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-45137358",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-45137358"
+                  "assetUri": "/afaanoromoo/oduu-45137358",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-45137358"
                 },
                 "summary": "Dursaan Paartii Dimokiraatawaa Itoophiyaa duraanii Obbo Lidatuun sababii doorsisa isaanirra gaheeen hirmaannaa siyaasaa kamiyyu akka dhaaban himan.",
                 "timestamp": 1533876525000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-45137358",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-45137358",
                 "type": "cps"
               },
               {
@@ -850,18 +848,18 @@
                   "headline": "'TPLF' rakkoo naannoo Amaaraa fi guutuu biyyaatti mudateef 'ADP' qeeqe"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48945163",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48945163"
+                  "assetUri": "/afaanoromoo/oduu-48945163",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48945163"
                 },
                 "summary": "Addi Bilisa Baasaa Ummata Tigiraay ADP waliin hojjechuu dhaabuuf akka jedhu akeekkachiise. Koreen gidduugaleessaa dhaabichaa wal gahii ariifachiisaa taa'een ADP uummata dhiifama gaafachuu qaba jedhe.",
                 "timestamp": 1562784615000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48945163",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48945163",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48954623",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48954623",
             "type": "cps"
           },
           {
@@ -869,14 +867,14 @@
               "headline": "Rakkoo tibbanaan warri Buraayyutti qabaman Finfinneetti dabarfaman"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48951073",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48951073"
+              "assetUri": "/afaanoromoo/oduu-48951073",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48951073"
             },
             "summary": "Ajjeechaa qondaaltota mootummaa magaalaa Baahirdaar dhaqqabe hordofee kan to'annoo jala oolan gara federaalatti dabarfaman. Kanneen, daddabarsa meeshaan himatamanis murtiin irrati darbeera.",
             "timestamp": 1562857269000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -894,8 +892,8 @@
             "indexImage": {
               "id": "107518368",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/1516D\/production\/_107518368_5175e648-a569-4576-bcb9-0a30fa651735.jpg",
-              "path": "\/cpsprodpb\/1516D\/production\/_107518368_5175e648-a569-4576-bcb9-0a30fa651735.jpg",
+              "href": "http://c.files.bbci.co.uk/1516D/production/_107518368_5175e648-a569-4576-bcb9-0a30fa651735.jpg",
+              "path": "/cpsprodpb/1516D/production/_107518368_5175e648-a569-4576-bcb9-0a30fa651735.jpg",
               "height": 549,
               "width": 976,
               "altText": "Asaminew Tsigge",
@@ -904,8 +902,8 @@
             "imageThumbnail": {
               "id": "107839588",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/15A11\/production\/_107839588_5175e648-a569-4576-bcb9-0a30fa651735.jpg",
-              "path": "\/cpsprodpb\/15A11\/production\/_107839588_5175e648-a569-4576-bcb9-0a30fa651735.jpg",
+              "href": "http://c.files.bbci.co.uk/15A11/production/_107839588_5175e648-a569-4576-bcb9-0a30fa651735.jpg",
+              "path": "/cpsprodpb/15A11/production/_107839588_5175e648-a569-4576-bcb9-0a30fa651735.jpg",
               "height": 180,
               "width": 320,
               "altText": "Asaminew Tsigge",
@@ -919,16 +917,16 @@
             "relatedItems": [
               {
                 "headlines": {
-                  "headline": "Haadha warraa B\/J Asaamminaw irraa 'ragaan argamaa jira'"
+                  "headline": "Haadha warraa B/J Asaamminaw irraa 'ragaan argamaa jira'"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48891633",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48891633"
+                  "assetUri": "/afaanoromoo/oduu-48891633",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48891633"
                 },
-                "summary": "Gaafa Kamisa darbe ture poolisiin haadha warraa qondaala nageenyaa duraanii kan naannoo Amaaraa, B\/J Asaamminaw Tsiggee kan to'annoo jala oolche.",
+                "summary": "Gaafa Kamisa darbe ture poolisiin haadha warraa qondaala nageenyaa duraanii kan naannoo Amaaraa, B/J Asaamminaw Tsiggee kan to'annoo jala oolche.",
                 "timestamp": 1562419711000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48891633",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48891633",
                 "type": "cps"
               },
               {
@@ -936,18 +934,18 @@
                   "headline": "''Miseensonni kiyya 100 ol hidhaman''"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48796513",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48796513"
+                  "assetUri": "/afaanoromoo/oduu-48796513",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48796513"
                 },
                 "summary": "Dhabbanni Sochii Biyyaalessaa Amaaraa erga guyyaa Sanbataa as Finfinnee fi naannoo Oromiyaa qofatti miseensoonni kiyyaa 100 ol ta'an hidhamaniiru jechuun BBC'tti hime.",
                 "timestamp": 1561712869000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48796513",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48796513",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48951073",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48951073",
             "type": "cps"
           },
           {
@@ -955,14 +953,14 @@
               "headline": "'TPLF' rakkoo naannoo Amaaraa fi guutuu biyyaatti mudateef 'ADP' qeeqe"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48945163",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48945163"
+              "assetUri": "/afaanoromoo/oduu-48945163",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48945163"
             },
             "summary": "Addi Bilisa Baasaa Ummata Tigiraay ADP waliin hojjechuu dhaabuuf akka jedhu akeekkachiise. Koreen gidduugaleessaa dhaabichaa wal gahii ariifachiisaa taa'een ADP uummata dhiifama gaafachuu qaba jedhe.",
             "timestamp": 1562784615000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Analysis",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
                 "categoryName": "Analysis"
               }
             },
@@ -970,8 +968,8 @@
             "indexImage": {
               "id": "107828246",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/FB1A\/production\/_107828246_98.jpg",
-              "path": "\/cpsprodpb\/FB1A\/production\/_107828246_98.jpg",
+              "href": "http://c.files.bbci.co.uk/FB1A/production/_107828246_98.jpg",
+              "path": "/cpsprodpb/FB1A/production/_107828246_98.jpg",
               "height": 309,
               "width": 549,
               "altText": "Addi Bilisa Baasaa Ummata Tigiraay.",
@@ -980,8 +978,8 @@
             "imageThumbnail": {
               "id": "107828348",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/1499E\/production\/_107828348_98.jpg",
-              "path": "\/cpsprodpb\/1499E\/production\/_107828348_98.jpg",
+              "href": "http://c.files.bbci.co.uk/1499E/production/_107828348_98.jpg",
+              "path": "/cpsprodpb/1499E/production/_107828348_98.jpg",
               "height": 180,
               "width": 320,
               "altText": "Addi Bilisa Baasaa Ummata Tigiraay.",
@@ -998,13 +996,13 @@
                   "headline": "''Abiy Ahimad MM biyyattii guutuu ta'uu qaba''"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-47159759",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-47159759"
+                  "assetUri": "/afaanoromoo/oduu-47159759",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-47159759"
                 },
                 "summary": "Hogganoota olaanoo 'TPLF' keessaa tokko kan ta'an Obbo Geetachoo Raddaa Maqaleetti BBC waliin turtii taasisaniiru.",
                 "timestamp": 1549609089000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-47159759",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-47159759",
                 "type": "cps"
               },
               {
@@ -1012,18 +1010,18 @@
                   "headline": "Tarkaanfiin koree giddu galeessaa ABUT maal hima?"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-42173166",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-42173166"
+                  "assetUri": "/afaanoromoo/oduu-42173166",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-42173166"
                 },
                 "summary": "Tarkaanfiin koree giddu galeessaa Adda Bilisa baasaa Uummata Tigiraay baatilee lamaa oliif gaggeeffamaa tureefi tarkaanfiin korichi miseensota isaa irratti fudhate maal himu?",
                 "timestamp": 1512014937000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-42173166",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-42173166",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48945163",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48945163",
             "type": "cps"
           },
           {
@@ -1031,14 +1029,14 @@
               "headline": "Dargaggoo 'Youtube' qofaan afaan Chaayinaa barate"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48905932",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48905932"
+              "assetUri": "/afaanoromoo/oduu-48905932",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48905932"
             },
             "summary": "Dargaggoo Yaareed garuu karaadhuma YouTube fayyadamuun erga afaan Chaayinaa barate booda amma hojii turjumaanaa ittiin hojjataa jira. Mee turtii dargaggoo kana waliin taasifne kunooti dubbifadhaa..",
             "timestamp": 1562822394000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -1052,8 +1050,8 @@
             "indexImage": {
               "id": "107830339",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/16C77\/production\/_107830339_chuchu.jpg",
-              "path": "\/cpsprodpb\/16C77\/production\/_107830339_chuchu.jpg",
+              "href": "http://c.files.bbci.co.uk/16C77/production/_107830339_chuchu.jpg",
+              "path": "/cpsprodpb/16C77/production/_107830339_chuchu.jpg",
               "height": 549,
               "width": 976,
               "altText": "Dargaggoo ofiin Afaan Chaayinaa baratee hojii itti argate",
@@ -1062,8 +1060,8 @@
             "imageThumbnail": {
               "id": "107830341",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/37DF\/production\/_107830341_chuchu.jpg",
-              "path": "\/cpsprodpb\/37DF\/production\/_107830341_chuchu.jpg",
+              "href": "http://c.files.bbci.co.uk/37DF/production/_107830341_chuchu.jpg",
+              "path": "/cpsprodpb/37DF/production/_107830341_chuchu.jpg",
               "height": 180,
               "width": 320,
               "altText": "Dargaggoo ofiin Afaan Chaayinaa baratee hojii itti argate",
@@ -1080,13 +1078,13 @@
                   "headline": "Baasii interneeta mobaayila keessan hir'isuuf..."
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-45002877",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-45002877"
+                  "assetUri": "/afaanoromoo/oduu-45002877",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-45002877"
                 },
                 "summary": "Daataan mobaayila keessaniif Itiyoo-telekoomirraa bitattan daddafee dhumee isin rakkiseeraa? Mobaayila keessanirratti wantoota kana sirreeffachuun baasii keessan hir'ifachuu ni dandeessu.",
                 "timestamp": 1532944527000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-45002877",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-45002877",
                 "type": "cps"
               },
               {
@@ -1094,18 +1092,18 @@
                   "headline": "Daa'imni waggaa torbaa YouTube'n dolaara m22 argachaa jira"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-46428339",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-46428339"
+                  "assetUri": "/afaanoromoo/oduu-46428339",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-46428339"
                 },
                 "summary": "Dolaara miliyoona 22 argachuudhaan daa'imni waggaa torbaa ashaangulliota (toy) keessa deebiyee ilaalu tokkomucaa YouTube irratti nama hundaa ol argatu ta'een beekameera.",
                 "timestamp": 1543861843000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-46428339",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-46428339",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48905932",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48905932",
             "type": "cps"
           },
           {
@@ -1113,14 +1111,14 @@
               "headline": "Suuraalee bakkeewwan hambaa haaraa addunyaa"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48947127",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48947127"
+              "assetUri": "/afaanoromoo/oduu-48947127",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48947127"
             },
             "summary": "Bakkeewwan haaraa akka hambaa addunyaatti galmaa'an keessa paarkii biyyaleessa Ayislaand, magaalaa dimadiii Hindiifi xuwwee dhagaa kumaan lakkaa'aman keessa jiru.",
             "timestamp": 1562842419000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -1138,8 +1136,8 @@
             "indexImage": {
               "id": "107775117",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/115F5\/production\/_107775117_9bdbeef5-55e5-497c-8716-e39fdc83919c.jpg",
-              "path": "\/cpsprodpb\/115F5\/production\/_107775117_9bdbeef5-55e5-497c-8716-e39fdc83919c.jpg",
+              "href": "http://c.files.bbci.co.uk/115F5/production/_107775117_9bdbeef5-55e5-497c-8716-e39fdc83919c.jpg",
+              "path": "/cpsprodpb/115F5/production/_107775117_9bdbeef5-55e5-497c-8716-e39fdc83919c.jpg",
               "height": 549,
               "width": 976,
               "altText": "Sunrise landscape view with silhouettes of old temples, Bagan, Myanmar",
@@ -1148,8 +1146,8 @@
             "imageThumbnail": {
               "id": "107831137",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/11D99\/production\/_107831137_4dcb0a1c-ddfb-461d-a025-e5c55d154282.jpg",
-              "path": "\/cpsprodpb\/11D99\/production\/_107831137_4dcb0a1c-ddfb-461d-a025-e5c55d154282.jpg",
+              "href": "http://c.files.bbci.co.uk/11D99/production/_107831137_4dcb0a1c-ddfb-461d-a025-e5c55d154282.jpg",
+              "path": "/cpsprodpb/11D99/production/_107831137_4dcb0a1c-ddfb-461d-a025-e5c55d154282.jpg",
               "height": 180,
               "width": 320,
               "altText": "Dirree Xuwwee, Laawoos",
@@ -1166,18 +1164,18 @@
                   "headline": "Masaraa mootummoota Itoophiyaa keessa maaltu jira?"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48362309",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48362309"
+                  "assetUri": "/afaanoromoo/oduu-48362309",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48362309"
                 },
                 "summary": "Masaraa mootumoota Itoophiyaa kiiloo afur argamu keessa yeroo garaa garaatti bulchitoonni mana isaanii godhataniiru. Ofii maalitu keessa jira. Isa kamitu daawwatama? Kanneenif nama nu daawwachiisu iyyaafanneerra.",
                 "timestamp": 1558523259000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48362309",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48362309",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48947127",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48947127",
             "type": "cps"
           },
           {
@@ -1185,14 +1183,14 @@
               "headline": "Sanyiin Hoomoo Saappiyeens Afrikaan ala argame"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48946894",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48946894"
+              "assetUri": "/afaanoromoo/oduu-48946894",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48946894"
             },
             "summary": "Qorattoonni sanyii dhala namaa ammayyaa (Hoomoo Saappiyeens) Afrikaan ala argatan.",
             "timestamp": 1562820274000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -1206,8 +1204,8 @@
             "indexImage": {
               "id": "107796890",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/268D\/production\/_107796890_skull.jpg",
-              "path": "\/cpsprodpb\/268D\/production\/_107796890_skull.jpg",
+              "href": "http://c.files.bbci.co.uk/268D/production/_107796890_skull.jpg",
+              "path": "/cpsprodpb/268D/production/_107796890_skull.jpg",
               "height": 549,
               "width": 976,
               "altText": "Buqqee mataa",
@@ -1225,13 +1223,13 @@
                   "headline": "Sanyiin dhala namaa haaraan Filippiinsitti argame"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-47890883",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-47890883"
+                  "assetUri": "/afaanoromoo/oduu-47890883",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-47890883"
                 },
                 "summary": "Hambaan Sanyii dhala namaa addunyaarraa bade haaraan odola Filippiinsitti argame.",
                 "timestamp": 1554964699000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-47890883",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-47890883",
                 "type": "cps"
               },
               {
@@ -1239,18 +1237,18 @@
                   "headline": "Israa'eel bakka jireenyaa namoota yeroosif 'jannata' ture qottee baaste"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-42600781",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-42600781"
+                  "assetUri": "/afaanoromoo/oduu-42600781",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-42600781"
                 },
                 "summary": "Meeshaaleen dhagaa irraa hojjetaman dhibba hedduu ta'an akkasumas faayaaleen naannoo magaalaa Teel Aviiv argaman waa\u2019ee jireenya durii dhala namaa waan haaraa himu.",
                 "timestamp": 1515399529000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-42600781",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-42600781",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48946894",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48946894",
             "type": "cps"
           },
           {
@@ -1258,14 +1256,14 @@
               "headline": "Dhugaatiin shukkaara hedduu qabu kaansariif nama saaxilaa?"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48946793",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48946793"
+              "assetUri": "/afaanoromoo/oduu-48946793",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48946793"
             },
             "summary": "Saayintistoonni akka ibsanitti dhugaatiin ykn cuunfaan shukkaara hedduu of keessaa qabu carraa dhibee kaansariitiin qabamuu guddisaa jira. Garuu, sababiin isaa sirriitti hin kaa'amne.",
             "timestamp": 1562821933000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -1279,8 +1277,8 @@
             "indexImage": {
               "id": "107821217",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/1162C\/production\/_107821217_gettyimages-961736622.jpg",
-              "path": "\/cpsprodpb\/1162C\/production\/_107821217_gettyimages-961736622.jpg",
+              "href": "http://c.files.bbci.co.uk/1162C/production/_107821217_gettyimages-961736622.jpg",
+              "path": "/cpsprodpb/1162C/production/_107821217_gettyimages-961736622.jpg",
               "height": 1152,
               "width": 2048,
               "altText": "Dubartii cuunfaa burtukaanaa dhugaa jirtu",
@@ -1290,8 +1288,8 @@
             "imageThumbnail": {
               "id": "107830099",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/182BB\/production\/_107830099_gettyimages-961736622.jpg",
-              "path": "\/cpsprodpb\/182BB\/production\/_107830099_gettyimages-961736622.jpg",
+              "href": "http://c.files.bbci.co.uk/182BB/production/_107830099_gettyimages-961736622.jpg",
+              "path": "/cpsprodpb/182BB/production/_107830099_gettyimages-961736622.jpg",
               "height": 180,
               "width": 320,
               "altText": "Dubartii cuunfaa burtukaanaa dhugaa jirtu",
@@ -1309,13 +1307,13 @@
                   "headline": "'Hojjetoonni fayyaa mirga hojii lagachuu hin qaban'"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48298198",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48298198"
+                  "assetUri": "/afaanoromoo/oduu-48298198",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48298198"
                 },
                 "summary": "Hayyuu Seeraafi Ingiliiz Yunvarsiitii Keelitti barsiisaa kan ta'an Dr. Awwal Aloo hojjetoota fayyaa dabalatee warreen tajaajila hawwaasaa bu'uuraafi addatti barbaachisoo ta'an keessa warri hojjetan hojii lagachuun mirga hin qaban jedha.",
                 "timestamp": 1558013087000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48298198",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48298198",
                 "type": "cps"
               },
               {
@@ -1323,18 +1321,18 @@
                   "headline": "Nyaanni sadarkaa hedduu keessa darbee qophaa'u umurii namaa gabaabsa"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48456149",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48456149"
+                  "assetUri": "/afaanoromoo/oduu-48456149",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48456149"
                 },
                 "summary": "Namoonni yeroo baayyee nyaata warshaalee keessatti gulantaa hedduu keessa darbuu fi halluun itti daramee hojjetamu soorachuu filatu, garuu kun fayyummaa qaamaa irratti dhiibbaa akkamii qabaata laata?",
                 "timestamp": 1559193773000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48456149",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48456149",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48946793",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48946793",
             "type": "cps"
           },
           {
@@ -1342,14 +1340,14 @@
               "headline": "Oromoon dur attamiin maqaa moggaasaa ture, ammahoo?"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48836203",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48836203"
+              "assetUri": "/afaanoromoo/oduu-48836203",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48836203"
             },
             "summary": "''Hawaasni aadaadhaan beekama. Aadaanimmoo afaaniin ibsama, argaa dhageettiidhaan tikfamee dhalootatti darba. Namni maqaa hin qabne biyya hin qabu, biyyi maqaa hin qabnes abbaa hin qabu,'' jedhu hayyoonni seenaa Oromoo qoratan.",
             "timestamp": 1562752961000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Feature",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
                 "categoryName": "Feature"
               },
               "campaigns": [
@@ -1367,22 +1365,22 @@
             "indexImage": {
               "id": "107817310",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/055B\/production\/_107817310_gettyimages-656567108.jpg",
-              "path": "\/cpsprodpb\/055B\/production\/_107817310_gettyimages-656567108.jpg",
+              "href": "http://c.files.bbci.co.uk/055B/production/_107817310_gettyimages-656567108.jpg",
+              "path": "/cpsprodpb/055B/production/_107817310_gettyimages-656567108.jpg",
               "height": 447,
               "width": 794,
               "altText": "Dabballee",
-              "copyrightHolder": "Eric Lafforgue\/Art in All of Us"
+              "copyrightHolder": "Eric Lafforgue/Art in All of Us"
             },
             "imageThumbnail": {
               "id": "107817312",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/537B\/production\/_107817312_gettyimages-656567108.jpg",
-              "path": "\/cpsprodpb\/537B\/production\/_107817312_gettyimages-656567108.jpg",
+              "href": "http://c.files.bbci.co.uk/537B/production/_107817312_gettyimages-656567108.jpg",
+              "path": "/cpsprodpb/537B/production/_107817312_gettyimages-656567108.jpg",
               "height": 180,
               "width": 320,
               "altText": "Dabballee",
-              "copyrightHolder": "Eric Lafforgue\/Art in All of Us"
+              "copyrightHolder": "Eric Lafforgue/Art in All of Us"
             },
             "options": {
               "isBreakingNews": false,
@@ -1395,13 +1393,13 @@
                   "headline": "Qabadhu! Eebba Oromoo Karrayyuu"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/47071005",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/47071005"
+                  "assetUri": "/afaanoromoo/47071005",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/47071005"
                 },
                 "summary": "Eebba Karrayyuu wanti adda taasisuu jiraa? Mee viidiyoo gabaabduu kanarraa hubadhaa",
                 "timestamp": 1548934043000,
                 "cpsType": "MAP",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/47071005",
+                "id": "urn:bbc:ares::asset:afaanoromoo/47071005",
                 "type": "cps"
               },
               {
@@ -1409,18 +1407,18 @@
                   "headline": "Uffanni aadaa Oromoo eessaa garamitti...?"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-44210573",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-44210573"
+                  "assetUri": "/afaanoromoo/oduu-44210573",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-44210573"
                 },
                 "summary": "Hamayyeessuu fi qulqullumma hojiisaa dabalurratti malee uffanni Oromoon silayyu dizaayina bareedaa heddu qaba",
                 "timestamp": 1529297358000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-44210573",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-44210573",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48836203",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48836203",
             "type": "cps"
           },
           {
@@ -1428,14 +1426,14 @@
               "headline": "Ibsi Iskindirfaa kennaa turan mormiin bittinnaa'e"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48937331",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48937331"
+              "assetUri": "/afaanoromoo/oduu-48937331",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48937331"
             },
             "summary": "Ibsi gareen Iskindir Naggaan hoogganamu fi 'mana maree baaladaraa' jechuun of waamu kennaa ture osoo hin xummuramin bittinaa'e.",
             "timestamp": 1562753736000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -1453,8 +1451,8 @@
             "indexImage": {
               "id": "107818075",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/DEF9\/production\/_107818075_baalaadaraa.jpg",
-              "path": "\/cpsprodpb\/DEF9\/production\/_107818075_baalaadaraa.jpg",
+              "href": "http://c.files.bbci.co.uk/DEF9/production/_107818075_baalaadaraa.jpg",
+              "path": "/cpsprodpb/DEF9/production/_107818075_baalaadaraa.jpg",
               "height": 549,
               "width": 976,
               "altText": "Iskindir Naggaa",
@@ -1463,8 +1461,8 @@
             "imageThumbnail": {
               "id": "107819078",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/15433\/production\/_107819078_baalaadaraa.jpg",
-              "path": "\/cpsprodpb\/15433\/production\/_107819078_baalaadaraa.jpg",
+              "href": "http://c.files.bbci.co.uk/15433/production/_107819078_baalaadaraa.jpg",
+              "path": "/cpsprodpb/15433/production/_107819078_baalaadaraa.jpg",
               "height": 180,
               "width": 320,
               "altText": "Iskindir Naggaa",
@@ -1481,13 +1479,13 @@
                   "headline": "''Qeerroo fiinxaleessi biyyaaf balaadhan jedhe''"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-47249367",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-47249367"
+                  "assetUri": "/afaanoromoo/oduu-47249367",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-47249367"
                 },
                 "summary": "Shoroorkeessummaan himatame hidhaa yeroo dheera booda waggaa darbe kan gadhiifame Iskindir Naggaa qeerroo lamatti qoodeen ilaala jedhe.",
                 "timestamp": 1550214826000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-47249367",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-47249367",
                 "type": "cps"
               },
               {
@@ -1495,18 +1493,18 @@
                   "headline": "Miseensonni 'Balderaas' sadi shororkeessummaan himatamuufi"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48764332",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48764332"
+                  "assetUri": "/afaanoromoo/oduu-48764332",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48764332"
                 },
                 "summary": "Miseensonni garee 'Mana Maree Baalaadaraa Addis Ababa' ofiin jedhan sadi ajjeechaa tibbana Baahirdaariifi Finfinneetti raawwateen wal qabate guyyoota 28 booda shororkeessummaan himatamuufi.",
                 "timestamp": 1561609557000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48764332",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48764332",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48937331",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48937331",
             "type": "cps"
           },
           {
@@ -1514,14 +1512,14 @@
               "headline": "Doqdoqqeewwan magaalaa Finfinnee ittifaman komii kaasan"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48933084",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48933084"
+              "assetUri": "/afaanoromoo/oduu-48933084",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48933084"
             },
             "summary": "Sababa seera haaraa bulchiinsi magaalaa Finfinnee baaseen doqdoqqeewwan ittifaman miidhamaa jiraachuu komatan.",
             "timestamp": 1562759921000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -1535,8 +1533,8 @@
             "indexImage": {
               "id": "107820240",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/106A\/production\/_107820240_motorbike.jpg",
-              "path": "\/cpsprodpb\/106A\/production\/_107820240_motorbike.jpg",
+              "href": "http://c.files.bbci.co.uk/106A/production/_107820240_motorbike.jpg",
+              "path": "/cpsprodpb/106A/production/_107820240_motorbike.jpg",
               "height": 549,
               "width": 976,
               "altText": "Doqdoqqee magaalaa Finfinnee",
@@ -1545,8 +1543,8 @@
             "imageThumbnail": {
               "id": "107820242",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/5E8A\/production\/_107820242_motorbike.jpg",
-              "path": "\/cpsprodpb\/5E8A\/production\/_107820242_motorbike.jpg",
+              "href": "http://c.files.bbci.co.uk/5E8A/production/_107820242_motorbike.jpg",
+              "path": "/cpsprodpb/5E8A/production/_107820242_motorbike.jpg",
               "height": 180,
               "width": 320,
               "altText": "Doqdoqqee magaalaa Finfinnee",
@@ -1563,13 +1561,13 @@
                   "headline": "Yakkawwan Motaraa Finfinnee keessatti dagaagaa jiran"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48552436",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48552436"
+                  "assetUri": "/afaanoromoo/oduu-48552436",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48552436"
                 },
                 "summary": "Konkolaachiftoota motaraa fi yakkawwan Finfinnee keessatti dagaagaa jiran ilaalchisee poolisoonni magaaltti waan jedhan qabu.",
                 "timestamp": 1559907473000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48552436",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48552436",
                 "type": "cps"
               },
               {
@@ -1577,18 +1575,18 @@
                   "headline": "Balfa keessaa maal baasuu dandeessu?"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-41174159",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-41174159"
+                  "assetUri": "/afaanoromoo/oduu-41174159",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-41174159"
                 },
                 "summary": "Waa'een eegumsa naannoo kan isaan dhiphise dargaggoonni lama balfa irraa kalaqa addaa addaa hojjechuu jalqaban.",
                 "timestamp": 1505710087000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-41174159",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-41174159",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48933084",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48933084",
             "type": "cps"
           },
           {
@@ -1596,14 +1594,14 @@
               "headline": "Finfinneen barattoota kuma 600'f 'yuunifoormii' bituufi"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48933081",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48933081"
+              "assetUri": "/afaanoromoo/oduu-48933081",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48933081"
             },
             "summary": "Barattoota manneen barumsaa mootummaa magaalaa Finfinnee keessatti baratan kuma 600 ta'aniif uffata dambii bituufi.",
             "timestamp": 1562750628000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -1617,8 +1615,8 @@
             "indexImage": {
               "id": "107816637",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/11FBD\/production\/_107816637_gettyimages-163951706.jpg",
-              "path": "\/cpsprodpb\/11FBD\/production\/_107816637_gettyimages-163951706.jpg",
+              "href": "http://c.files.bbci.co.uk/11FBD/production/_107816637_gettyimages-163951706.jpg",
+              "path": "/cpsprodpb/11FBD/production/_107816637_gettyimages-163951706.jpg",
               "height": 549,
               "width": 976,
               "altText": "Barattoota Yuunifoormii uffatan",
@@ -1627,8 +1625,8 @@
             "imageThumbnail": {
               "id": "107816635",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/D19D\/production\/_107816635_gettyimages-163951706.jpg",
-              "path": "\/cpsprodpb\/D19D\/production\/_107816635_gettyimages-163951706.jpg",
+              "href": "http://c.files.bbci.co.uk/D19D/production/_107816635_gettyimages-163951706.jpg",
+              "path": "/cpsprodpb/D19D/production/_107816635_gettyimages-163951706.jpg",
               "height": 180,
               "width": 320,
               "altText": "Barattoota Yuunifoormii uffatan",
@@ -1645,13 +1643,13 @@
                   "headline": "'Nama biyya Oromoo' jechuun kan of himan Abbaa Gammachiis eenyu?"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48715569",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48715569"
+                  "assetUri": "/afaanoromoo/oduu-48715569",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48715569"
                 },
                 "summary": "\"Ani Shifarraa Guddataa Noggoo Sarboo Karoosoo Irreessoon jedhama. Abbaa Gammachis (Onesmos Nasib) ammoo Hiikaa Awaajii Irreessoo jedhama. Kanaaf Onesmos Nasib anaaf abaabayyuu kooti\" jechuunis himu.",
                 "timestamp": 1562047633000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48715569",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48715569",
                 "type": "cps"
               },
               {
@@ -1659,18 +1657,18 @@
                   "headline": "Dargaggeessa umurii 17 abbaa kalaqoota 27 ta'e"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48799476",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48799476"
+                  "assetUri": "/afaanoromoo/oduu-48799476",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48799476"
                 },
                 "summary": "\"Namni waa kalaqu kamuu rakkina keessa darburraa ka'uun ta'u danda'a'' kan jedhu Izaddiin Kamaal, attamiin akka hojii kalaqaa kana eegale BBC'tti himeera.",
                 "timestamp": 1561881676000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48799476",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48799476",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48933081",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48933081",
             "type": "cps"
           },
           {
@@ -1678,14 +1676,14 @@
               "headline": "Biyyoonni alaa Sudaan saamaa jiruu?"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48933168",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48933168"
+              "assetUri": "/afaanoromoo/oduu-48933168",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48933168"
             },
             "summary": "Bulchiinsi humna waaraanaa amma aangoo of harkaa qabu biyyoota alaa gara biyya keessaa galchuun qabeenya Sudaan saamsisaa jira jechuun mormitoonni komatan.",
             "timestamp": 1562742642000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -1699,8 +1697,8 @@
             "indexImage": {
               "id": "107803669",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/17976\/production\/_107803669_gettyimages-1153961374.jpg",
-              "path": "\/cpsprodpb\/17976\/production\/_107803669_gettyimages-1153961374.jpg",
+              "href": "http://c.files.bbci.co.uk/17976/production/_107803669_gettyimages-1153961374.jpg",
+              "path": "/cpsprodpb/17976/production/_107803669_gettyimages-1153961374.jpg",
               "height": 549,
               "width": 976,
               "altText": "Lammiileen Sudaan qoodiinsa aangoo humna waraanaa fi siivilii giduutti walii galtee irra ga'ame booda gammchuu wayita ibsatan",
@@ -1710,8 +1708,8 @@
             "imageThumbnail": {
               "id": "107814995",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/EA25\/production\/_107814995_gettyimages-1153961374.jpg",
-              "path": "\/cpsprodpb\/EA25\/production\/_107814995_gettyimages-1153961374.jpg",
+              "href": "http://c.files.bbci.co.uk/EA25/production/_107814995_gettyimages-1153961374.jpg",
+              "path": "/cpsprodpb/EA25/production/_107814995_gettyimages-1153961374.jpg",
               "height": 180,
               "width": 320,
               "altText": "Lammiileen Sudaan qoodiinsa aangoo humna waraanaa fi siivilii giduutti walii galtee irra ga'ame booda gammchuu wayita ibsatan",
@@ -1729,13 +1727,13 @@
                   "headline": "Humni waraanaafi mormitoonni Sudaan walii galan"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48277843",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48277843"
+                  "assetUri": "/afaanoromoo/oduu-48277843",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48277843"
                 },
                 "summary": "Humni waraanaa amma aangoo harkaa qabuu fi mormitoonni bulchiinsi siivilii biyyattii keessatti akka jiraatu walii galan.",
                 "timestamp": 1557896416000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48277843",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48277843",
                 "type": "cps"
               },
               {
@@ -1743,18 +1741,18 @@
                   "headline": "Rakkoon Sudaan keessaa maaliif biyyoota gara garaa hawwatee?"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48578589",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48578589"
+                  "assetUri": "/afaanoromoo/oduu-48578589",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48578589"
                 },
                 "summary": "Hookkarri Sudaan keessa bubbule biyyoota naannawa ishee kanneen akka Sa'uudii Arabiyaa ,Ijiptiifi Tarkii akkasumas biyyoota addunyaa jajjaboo fi biyyoota ollaa gidduutti walmorkii yaadaa uumeera. Kunoo akkamiin akka isaan itti seenan hubadhaa.",
                 "timestamp": 1560154629000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48578589",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48578589",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48933168",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48933168",
             "type": "cps"
           },
           {
@@ -1762,14 +1760,14 @@
               "headline": "Dargaggoonni xiyyaara qe'eetti hojjetaniin Kaayiroo gahan"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48918347",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48918347"
+              "assetUri": "/afaanoromoo/oduu-48918347",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48918347"
             },
             "summary": "Xiyyaara kana torban sadi keessatti hojjetan, kiilomeetira 12,000 ammoo torban ja'a keessatti imalan.",
             "timestamp": 1562653445000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -1783,8 +1781,8 @@
             "indexImage": {
               "id": "107800462",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/6720\/production\/_107800462_capture.jpg",
-              "path": "\/cpsprodpb\/6720\/production\/_107800462_capture.jpg",
+              "href": "http://c.files.bbci.co.uk/6720/production/_107800462_capture.jpg",
+              "path": "/cpsprodpb/6720/production/_107800462_capture.jpg",
               "height": 322,
               "width": 573,
               "altText": "Xiyyaara Afriikaa kibbaa",
@@ -1793,8 +1791,8 @@
             "imageThumbnail": {
               "id": "107800464",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/B540\/production\/_107800464_capture.jpg",
-              "path": "\/cpsprodpb\/B540\/production\/_107800464_capture.jpg",
+              "href": "http://c.files.bbci.co.uk/B540/production/_107800464_capture.jpg",
+              "path": "/cpsprodpb/B540/production/_107800464_capture.jpg",
               "height": 180,
               "width": 320,
               "altText": "Xiyyaara Afriikaa kibbaa",
@@ -1811,13 +1809,13 @@
                   "headline": "Masirii hanga Afriikaa Kibbaa KM 11.000 bishkilitiin"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-44410447",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-44410447"
+                  "assetUri": "/afaanoromoo/oduu-44410447",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-44410447"
                 },
                 "summary": "Dargaggoonni lammii Biriteen sadi Masirii irraa ka'anii Itoophiyaa, Keeniyaafi biyyoota kaan qaxxaamuruun gara Afriikaa Kibbaa imalaa jiru.",
                 "timestamp": 1528461861000,
                 "cpsType": "MAP",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-44410447",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-44410447",
                 "type": "cps"
               },
               {
@@ -1825,18 +1823,18 @@
                   "headline": "Kalaqa haaraa addeessarra qubachuuf tolu"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-48224288",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-48224288"
+                  "assetUri": "/afaanoromoo/oduu-48224288",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-48224288"
                 },
                 "summary": "Meeshaan geejjibaa haaraa kalqame kun bara 2024'tti namoota addeessarra qubsiisuu danda'a jedhame.",
                 "timestamp": 1557477075000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48224288",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48224288",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48918347",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48918347",
             "type": "cps"
           },
           {
@@ -1844,14 +1842,14 @@
               "headline": "Biyyoota addunyaa interneetii saffisaa qaban shanan"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48918348",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48918348"
+              "assetUri": "/afaanoromoo/oduu-48918348",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48918348"
             },
             "summary": "Dhaabbati dhimma networkii biyyoota addunyaa qoratu 'InterNations' jedhamu qorannoo tibbana baaseen saffisa interneetii fi tajaajila 'online' qabaachuudhaan biyyoota sadarkaa 1ffaa hanga 5ffaa jiran adda baaseera.",
             "timestamp": 1562664815000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Analysis",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
                 "categoryName": "Analysis"
               },
               "campaigns": [
@@ -1865,22 +1863,22 @@
             "indexImage": {
               "id": "107800582",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/6F54\/production\/_107800582_p07fczm4.jpg",
-              "path": "\/cpsprodpb\/6F54\/production\/_107800582_p07fczm4.jpg",
+              "href": "http://c.files.bbci.co.uk/6F54/production/_107800582_p07fczm4.jpg",
+              "path": "/cpsprodpb/6F54/production/_107800582_p07fczm4.jpg",
               "height": 549,
               "width": 976,
               "altText": "Namoota Interneetii fayyadaman",
-              "copyrightHolder": "Terese Loeb Kreuzer \/ Alamy Stock Photo"
+              "copyrightHolder": "Terese Loeb Kreuzer / Alamy Stock Photo"
             },
             "imageThumbnail": {
               "id": "107802592",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/7350\/production\/_107802592_p07fczm4.jpg",
-              "path": "\/cpsprodpb\/7350\/production\/_107802592_p07fczm4.jpg",
+              "href": "http://c.files.bbci.co.uk/7350/production/_107802592_p07fczm4.jpg",
+              "path": "/cpsprodpb/7350/production/_107802592_p07fczm4.jpg",
               "height": 180,
               "width": 320,
               "altText": "Namoota Interneetii fayyadaman",
-              "copyrightHolder": "Terese Loeb Kreuzer \/ Alamy Stock Photo"
+              "copyrightHolder": "Terese Loeb Kreuzer / Alamy Stock Photo"
             },
             "options": {
               "isBreakingNews": false,
@@ -1893,13 +1891,13 @@
                   "headline": "Damee telekoom abbootii qabeenyaa dhunfaaf...?"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-44161517",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-44161517"
+                  "assetUri": "/afaanoromoo/oduu-44161517",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-44161517"
                 },
                 "summary": "Itiyoo-Telekoom taajaajila interneeta akka dhiyeessaniif dhaabilee dhunfaa 8'f eeyyama kennuun isaa gaaffilee adda addaa kaasaa jira.",
                 "timestamp": 1526622610000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-44161517",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-44161517",
                 "type": "cps"
               },
               {
@@ -1907,18 +1905,18 @@
                   "headline": "Miidiyaa maxxansaa Itoophiyaa 'balaaf saaxilame'"
                 },
                 "locators": {
-                  "assetUri": "\/afaanoromoo\/oduu-42686097",
-                  "cpsUrn": "urn:bbc:content:assetUri:\/afaanoromoo\/oduu-42686097"
+                  "assetUri": "/afaanoromoo/oduu-42686097",
+                  "cpsUrn": "urn:bbc:content:assetUri:/afaanoromoo/oduu-42686097"
                 },
                 "summary": "Seenaa miidiyaa biyyattii keessatti shoora gahee olaanaa kan qabu dameen miidiyaa maxxansaa wayita ammaa balaa cimaaf saaxilamee jira jedhu ogeeyyiin, kanaaf ammoo mootummaan itti gaafatamummaa guddaa fudhatas jedhu.",
                 "timestamp": 1515993700000,
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-42686097",
+                "id": "urn:bbc:ares::asset:afaanoromoo/oduu-42686097",
                 "type": "cps"
               }
             ],
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48918348",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48918348",
             "type": "cps"
           }
         ],
@@ -1936,14 +1934,14 @@
               "headline": "Kubbaan alatti eenyutu Waancaa Afriikaa mo'ata?"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/isportii-48914437",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/isportii-48914437"
+              "assetUri": "/afaanoromoo/isportii-48914437",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/isportii-48914437"
             },
             "summary": "Mee altokko dirree kubbaarraa bahuun gaaffii ''Kubbaa miilaan alatti gosa biraatiin eenyuutu Waancaa fudhata?'' jedhu haa gaafannu. Taphni nuti akkasiin midhaassine kun biyyoota Afriikaa gama saffisa intarneetii, hanga umrii jireenyaa, malaammaltummaa fi kanneen biroon walfalmisiisa.",
             "timestamp": 1562649123000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Interactive",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
                 "categoryName": "Interactive"
               },
               "campaigns": [
@@ -1957,8 +1955,8 @@
             "indexImage": {
               "id": "107793038",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/1445F\/production\/_107793038_afaanoromoo_afcon_otherwinners_promo_640.png",
-              "path": "\/cpsprodpb\/1445F\/production\/_107793038_afaanoromoo_afcon_otherwinners_promo_640.png",
+              "href": "http://c.files.bbci.co.uk/1445F/production/_107793038_afaanoromoo_afcon_otherwinners_promo_640.png",
+              "path": "/cpsprodpb/1445F/production/_107793038_afaanoromoo_afcon_otherwinners_promo_640.png",
               "height": 360,
               "width": 640,
               "altText": "Waancaa Afriikaa 2019",
@@ -1969,7 +1967,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/isportii-48914437",
+            "id": "urn:bbc:ares::asset:afaanoromoo/isportii-48914437",
             "type": "cps"
           },
           {
@@ -1977,14 +1975,14 @@
               "headline": "Waancaa Afriikaa 2019 - qabxii amma duraa fi taphoota itti aanan"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48641038",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48641038"
+              "assetUri": "/afaanoromoo/oduu-48641038",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48641038"
             },
             "summary": "Waancaa Afriikaa bara 2019 Masiriin qopheessite Waxabajjii 21 eegalu sagantaa fi qabxii asii hordofuu dandeessu.",
             "timestamp": 1560520285000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Feature",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
                 "categoryName": "Feature"
               },
               "campaigns": [
@@ -1998,8 +1996,8 @@
             "indexImage": {
               "id": "107382470",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/1D04\/production\/_107382470_promo_afcon_bbc_news_976.jpg",
-              "path": "\/cpsprodpb\/1D04\/production\/_107382470_promo_afcon_bbc_news_976.jpg",
+              "href": "http://c.files.bbci.co.uk/1D04/production/_107382470_promo_afcon_bbc_news_976.jpg",
+              "path": "/cpsprodpb/1D04/production/_107382470_promo_afcon_bbc_news_976.jpg",
               "height": 549,
               "width": 976,
               "altText": "Waancaa Afriikaa 2019",
@@ -2008,8 +2006,8 @@
             "imageThumbnail": {
               "id": "107382472",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/6B24\/production\/_107382472_promo_afcon_bbc_news_976.jpg",
-              "path": "\/cpsprodpb\/6B24\/production\/_107382472_promo_afcon_bbc_news_976.jpg",
+              "href": "http://c.files.bbci.co.uk/6B24/production/_107382472_promo_afcon_bbc_news_976.jpg",
+              "path": "/cpsprodpb/6B24/production/_107382472_promo_afcon_bbc_news_976.jpg",
               "height": 180,
               "width": 320,
               "altText": "Waancaa Afriikaa 2019",
@@ -2020,7 +2018,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48641038",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48641038",
             "type": "cps"
           },
           {
@@ -2028,14 +2026,14 @@
               "headline": "Taphattoota ciccimoo gareekoo keessa galchu"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/isportii-48803225",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/isportii-48803225"
+              "assetUri": "/afaanoromoo/isportii-48803225",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/isportii-48803225"
             },
             "summary": "Tooftaa haawwataa qixeessineetti fayyadamuun, tarree taphattootaa ekispartoota kubbaa miilaa BBC'n qophaa'e keessaa garee cimaa Waancaa Afrikaa filachuun hiriyyoota keetiif qoodi",
             "timestamp": 1561804936000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Interactive",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
                 "categoryName": "Interactive"
               },
               "campaigns": [
@@ -2049,8 +2047,8 @@
             "indexImage": {
               "id": "107581724",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/A6DE\/production\/_107581724_dt_promo_976.jpg",
-              "path": "\/cpsprodpb\/A6DE\/production\/_107581724_dt_promo_976.jpg",
+              "href": "http://c.files.bbci.co.uk/A6DE/production/_107581724_dt_promo_976.jpg",
+              "path": "/cpsprodpb/A6DE/production/_107581724_dt_promo_976.jpg",
               "height": 549,
               "width": 976,
               "altText": "Taphattoota Waancaa Afriikaa irratti hirmaatan keessaa muraasa (Saadiyoo Maanee, Mohaammad Saalaa)",
@@ -2059,8 +2057,8 @@
             "imageThumbnail": {
               "id": "107581726",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/F4FE\/production\/_107581726_dt_promo_976.jpg",
-              "path": "\/cpsprodpb\/F4FE\/production\/_107581726_dt_promo_976.jpg",
+              "href": "http://c.files.bbci.co.uk/F4FE/production/_107581726_dt_promo_976.jpg",
+              "path": "/cpsprodpb/F4FE/production/_107581726_dt_promo_976.jpg",
               "height": 180,
               "width": 320,
               "altText": "Taphattoota Waancaa Afriikaa irratti hirmaatan keessaa muraasa (Saadiyoo Maanee, Mohaammad Saalaa)",
@@ -2070,7 +2068,7 @@
               "isBreakingNews": false,
               "isFactCheck": false
             },
-            "id": "urn:bbc:ares::asset:afaanoromoo\/isportii-48803225",
+            "id": "urn:bbc:ares::asset:afaanoromoo/isportii-48803225",
             "type": "cps"
           },
           {
@@ -2078,14 +2076,14 @@
               "headline": "Waancaa Afriikaa baranaa maaltu adda taasisa?"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48719289",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48719289"
+              "assetUri": "/afaanoromoo/oduu-48719289",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48719289"
             },
             "summary": "Waanca biyyoota Afrikaa Jimaata kana eegalamuun qopheessitun dorgommicha Masriin Zimbaabwee waliin taphatti.",
             "timestamp": 1561128858000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Feature",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
                 "categoryName": "Feature"
               },
               "campaigns": [
@@ -2099,8 +2097,8 @@
             "indexImage": {
               "id": "107382250",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/146C\/production\/_107382250_collage.jpg",
-              "path": "\/cpsprodpb\/146C\/production\/_107382250_collage.jpg",
+              "href": "http://c.files.bbci.co.uk/146C/production/_107382250_collage.jpg",
+              "path": "/cpsprodpb/146C/production/_107382250_collage.jpg",
               "height": 675,
               "width": 1200,
               "altText": "Mohamed Salah, pyramids, Clarence Seedorf, Saido Berahino",
@@ -2109,8 +2107,8 @@
             "imageThumbnail": {
               "id": "107491954",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/B35F\/production\/_107491954_collage.jpg",
-              "path": "\/cpsprodpb\/B35F\/production\/_107491954_collage.jpg",
+              "href": "http://c.files.bbci.co.uk/B35F/production/_107491954_collage.jpg",
+              "path": "/cpsprodpb/B35F/production/_107491954_collage.jpg",
               "height": 180,
               "width": 320,
               "altText": "Mohamed Salah, pyramids, Clarence Seedorf, Saido Berahino",
@@ -2120,7 +2118,7 @@
               "isBreakingNews": false,
               "isFactCheck": false
             },
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48719289",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48719289",
             "type": "cps"
           },
           {
@@ -2128,14 +2126,14 @@
               "headline": "Guyyaa 18ffaa Waancaa Afriikaa, maaltu eegama?"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48905160",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48905160"
+              "assetUri": "/afaanoromoo/oduu-48905160",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48905160"
             },
             "summary": "Yeroo duraaf Waancaa Afriikaa bara kanaarratti hirmaachaa kan jirtu irratti Madagaaskaar seenaa hojjechuun marsaa biyyoota 8 itti aanutti ceeteetti - guyyaa 18ffaa irraahoo maaltu eegama?",
             "timestamp": 1562563297000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Analysis",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
                 "categoryName": "Analysis"
               },
               "campaigns": [
@@ -2149,8 +2147,8 @@
             "indexImage": {
               "id": "107782079",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/17B04\/production\/_107782079_hi055042565.jpg",
-              "path": "\/cpsprodpb\/17B04\/production\/_107782079_hi055042565.jpg",
+              "href": "http://c.files.bbci.co.uk/17B04/production/_107782079_hi055042565.jpg",
+              "path": "/cpsprodpb/17B04/production/_107782079_hi055042565.jpg",
               "height": 576,
               "width": 1024,
               "altText": "Deeggartoota Gaanaa",
@@ -2161,7 +2159,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48905160",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48905160",
             "type": "cps"
           },
           {
@@ -2169,14 +2167,14 @@
               "headline": "Taphoota Waancaa Afriikaa tilmaamuuf kana bani"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48710683",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48710683"
+              "assetUri": "/afaanoromoo/oduu-48710683",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48710683"
             },
             "summary": "Taphni Waancaa Afrikaa har'a Jimaata eegala, tapha jalqabaan Masriin Zimbaabuwee waliin taphatti.",
             "timestamp": 1561091736000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Interactive",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
                 "categoryName": "Interactive"
               },
               "campaigns": [
@@ -2190,8 +2188,8 @@
             "indexImage": {
               "id": "107473739",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/16E29\/production\/_107473739_afcon_predictor_promo_976.jpg",
-              "path": "\/cpsprodpb\/16E29\/production\/_107473739_afcon_predictor_promo_976.jpg",
+              "href": "http://c.files.bbci.co.uk/16E29/production/_107473739_afcon_predictor_promo_976.jpg",
+              "path": "/cpsprodpb/16E29/production/_107473739_afcon_predictor_promo_976.jpg",
               "height": 549,
               "width": 976,
               "altText": "Tilmaama AfCON",
@@ -2200,8 +2198,8 @@
             "imageThumbnail": {
               "id": "107473740",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/1281\/production\/_107473740_afcon_predictor_promo_976.jpg",
-              "path": "\/cpsprodpb\/1281\/production\/_107473740_afcon_predictor_promo_976.jpg",
+              "href": "http://c.files.bbci.co.uk/1281/production/_107473740_afcon_predictor_promo_976.jpg",
+              "path": "/cpsprodpb/1281/production/_107473740_afcon_predictor_promo_976.jpg",
               "height": 180,
               "width": 320,
               "altText": "Tilmaama AfCON",
@@ -2212,7 +2210,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48710683",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48710683",
             "type": "cps"
           },
           {
@@ -2221,14 +2219,14 @@
               "overtyped": "Masiriin waancaa Afriikaa 2019 qopheessuuf filatamte "
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-46793687",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-46793687"
+              "assetUri": "/afaanoromoo/oduu-46793687",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-46793687"
             },
             "summary": "Waancaan Afriikaa kan 2019 Kaameruun akka qopheessituuf kennameefii ture irraa fudhatamuun Masriin akka keessummeessitu murtaa'e.",
             "timestamp": 1546950626000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -2242,8 +2240,8 @@
             "indexImage": {
               "id": "105094669",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/17989\/production\/_105094669_mediaitem105094668.jpg",
-              "path": "\/cpsprodpb\/17989\/production\/_105094669_mediaitem105094668.jpg",
+              "href": "http://c.files.bbci.co.uk/17989/production/_105094669_mediaitem105094668.jpg",
+              "path": "/cpsprodpb/17989/production/_105094669_mediaitem105094668.jpg",
               "height": 351,
               "width": 624,
               "altText": "Waancaa Afrikaa",
@@ -2253,8 +2251,8 @@
             "imageThumbnail": {
               "id": "105099580",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/2197\/production\/_105099580_mediaitem105094668.jpg",
-              "path": "\/cpsprodpb\/2197\/production\/_105099580_mediaitem105094668.jpg",
+              "href": "http://c.files.bbci.co.uk/2197/production/_105099580_mediaitem105094668.jpg",
+              "path": "/cpsprodpb/2197/production/_105099580_mediaitem105094668.jpg",
               "height": 180,
               "width": 320,
               "altText": "Waancaa Afrikaa",
@@ -2265,7 +2263,7 @@
               "isBreakingNews": false,
               "isFactCheck": false
             },
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-46793687",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-46793687",
             "type": "cps"
           },
           {
@@ -2273,14 +2271,14 @@
               "headline": "Abdiisaa Nagaroo Amboorraa"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48678121",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48678121"
+              "assetUri": "/afaanoromoo/oduu-48678121",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48678121"
             },
             "summary": "Waa'een biyya kiyyaafi naannoon jiraadhuu wwan natti dhagahamuufan yeroo hunda bilbila",
             "timestamp": 1560931964000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Feature",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
                 "categoryName": "Feature"
               },
               "campaigns": [
@@ -2299,21 +2297,17 @@
               "synopses": {
                 "short": "Waa'een biyya koiyyaa waan na gadduufan bilbila"
               },
-              "imageUrl": "ichef.bbci.co.uk\/images\/ic\/$recipe\/p07djs8g.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07djs8g.jpg",
               "embedding": true,
               "advertising": true,
               "caption": "Waa'een biyya koiyyaa waan na gadduufan bilbila",
               "versions": [
                 {
                   "versionId": "p07djrzt",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 97,
                   "durationISO8601": "PT1M37S",
-                  "warnings": {
-                    
-                  },
+                  "warnings": {},
                   "availableTerritories": {
                     "uk": true,
                     "nonUk": true
@@ -2326,8 +2320,8 @@
             "indexImage": {
               "id": "107453403",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/76E3\/production\/_107453403_p07djs8g.jpg",
-              "path": "\/cpsprodpb\/76E3\/production\/_107453403_p07djs8g.jpg",
+              "href": "http://c.files.bbci.co.uk/76E3/production/_107453403_p07djs8g.jpg",
+              "path": "/cpsprodpb/76E3/production/_107453403_p07djs8g.jpg",
               "height": 576,
               "width": 1024,
               "altText": "Keyframe #1",
@@ -2337,7 +2331,7 @@
               "isBreakingNews": false,
               "isFactCheck": false
             },
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48678121",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48678121",
             "type": "cps"
           }
         ],
@@ -2345,8 +2339,8 @@
           "name": "Waancaa Afriikaa 2019",
           "type": "LINK",
           "links": {
-            "mobile": "https:\/\/www.bbc.com\/afaanoromoo",
-            "enhancedmobile": "https:\/\/www.bbc.com\/afaanoromoo"
+            "mobile": "https://www.bbc.com/afaanoromoo",
+            "enhancedmobile": "https://www.bbc.com/afaanoromoo"
           }
         },
         "semanticGroupName": "Cluster 1"
@@ -2360,14 +2354,14 @@
               "headline": "Haadholii Itoophiyaa qofaa ilmoo guddifachuu filatan"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48933082",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48933082"
+              "assetUri": "/afaanoromoo/oduu-48933082",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48933082"
             },
             "summary": "Dubartoonni sababoota adda addaatiin osoo bultii hin ijaarratiin ilmoo godhatanii qofaadhuma jiraachu filatan jiru. Maaliif?",
             "timestamp": 1562735252000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Explainer",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
                 "categoryName": "Explainer"
               },
               "campaigns": [
@@ -2381,8 +2375,8 @@
             "indexImage": {
               "id": "107815080",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/1F73\/production\/_107815080_6e8235dd-b0eb-4648-bc0f-ab8a0cf62526.jpg",
-              "path": "\/cpsprodpb\/1F73\/production\/_107815080_6e8235dd-b0eb-4648-bc0f-ab8a0cf62526.jpg",
+              "href": "http://c.files.bbci.co.uk/1F73/production/_107815080_6e8235dd-b0eb-4648-bc0f-ab8a0cf62526.jpg",
+              "path": "/cpsprodpb/1F73/production/_107815080_6e8235dd-b0eb-4648-bc0f-ab8a0cf62526.jpg",
               "height": 549,
               "width": 976,
               "altText": "Haadha daa'ima ishee kaasuutti baatte",
@@ -2391,8 +2385,8 @@
             "imageThumbnail": {
               "id": "107815082",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/6D93\/production\/_107815082_6e8235dd-b0eb-4648-bc0f-ab8a0cf62526.jpg",
-              "path": "\/cpsprodpb\/6D93\/production\/_107815082_6e8235dd-b0eb-4648-bc0f-ab8a0cf62526.jpg",
+              "href": "http://c.files.bbci.co.uk/6D93/production/_107815082_6e8235dd-b0eb-4648-bc0f-ab8a0cf62526.jpg",
+              "path": "/cpsprodpb/6D93/production/_107815082_6e8235dd-b0eb-4648-bc0f-ab8a0cf62526.jpg",
               "height": 180,
               "width": 320,
               "altText": "Haadha daa'ima ishee kaasuutti baatte",
@@ -2403,7 +2397,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48933082",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48933082",
             "type": "cps"
           },
           {
@@ -2411,14 +2405,14 @@
               "headline": "Dhaabbileen mirga gaazexeessitootaaf falman Itoophiyaa akeekkachiisan"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48933083",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48933083"
+              "assetUri": "/afaanoromoo/oduu-48933083",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48933083"
             },
             "summary": "Dhaabbileen mirga gaazexeessitootaaf falman akka CPJ fi 'Amnesty International' Itoophiyaan hatattamaan gaazexeessitoota hiite gadi dhiisuu qabdi jedhan.",
             "timestamp": 1562741134000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -2432,8 +2426,8 @@
             "indexImage": {
               "id": "107815953",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/8C6F\/production\/_107815953_848cb913-090e-4107-b802-55f36f40707e.jpg",
-              "path": "\/cpsprodpb\/8C6F\/production\/_107815953_848cb913-090e-4107-b802-55f36f40707e.jpg",
+              "href": "http://c.files.bbci.co.uk/8C6F/production/_107815953_848cb913-090e-4107-b802-55f36f40707e.jpg",
+              "path": "/cpsprodpb/8C6F/production/_107815953_848cb913-090e-4107-b802-55f36f40707e.jpg",
               "height": 549,
               "width": 976,
               "altText": "Committee to Protect Journalists",
@@ -2442,8 +2436,8 @@
             "imageThumbnail": {
               "id": "107815955",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/DA8F\/production\/_107815955_848cb913-090e-4107-b802-55f36f40707e.jpg",
-              "path": "\/cpsprodpb\/DA8F\/production\/_107815955_848cb913-090e-4107-b802-55f36f40707e.jpg",
+              "href": "http://c.files.bbci.co.uk/DA8F/production/_107815955_848cb913-090e-4107-b802-55f36f40707e.jpg",
+              "path": "/cpsprodpb/DA8F/production/_107815955_848cb913-090e-4107-b802-55f36f40707e.jpg",
               "height": 180,
               "width": 320,
               "altText": "Committee to Protect Journalists",
@@ -2454,7 +2448,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48933083",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48933083",
             "type": "cps"
           },
           {
@@ -2463,14 +2457,14 @@
               "overtyped": "'Jilbeenfadhee harkakoo diriirsuun, galatakoo mullisa' "
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48899533",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48899533"
+              "assetUri": "/afaanoromoo/oduu-48899533",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48899533"
             },
             "summary": "Yunivarsiitiin Dirree Dhawaa Artist Alii Birraaf Doktora Kabajaa isa lammaffaa kenneerraaf. Kanaan duras Yunivarsiitii Jimmaarraa ALI 2002tti badhaasa walfakkaatu argate ture.",
             "timestamp": 1562493290000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -2484,8 +2478,8 @@
             "indexImage": {
               "id": "107779229",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/16889\/production\/_107779229_aliibirraa.jpg",
-              "path": "\/cpsprodpb\/16889\/production\/_107779229_aliibirraa.jpg",
+              "href": "http://c.files.bbci.co.uk/16889/production/_107779229_aliibirraa.jpg",
+              "path": "/cpsprodpb/16889/production/_107779229_aliibirraa.jpg",
               "height": 549,
               "width": 976,
               "altText": "Dr. Kabajaa Artist Alii Birraa wayita uummata galateeffatu",
@@ -2494,8 +2488,8 @@
             "imageThumbnail": {
               "id": "107779231",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/33F1\/production\/_107779231_aliibirraa.jpg",
-              "path": "\/cpsprodpb\/33F1\/production\/_107779231_aliibirraa.jpg",
+              "href": "http://c.files.bbci.co.uk/33F1/production/_107779231_aliibirraa.jpg",
+              "path": "/cpsprodpb/33F1/production/_107779231_aliibirraa.jpg",
               "height": 180,
               "width": 320,
               "altText": "Dr. Kabajaa Artist Alii Birraa wayita uummata galateeffatu",
@@ -2506,7 +2500,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48899533",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48899533",
             "type": "cps"
           },
           {
@@ -2514,14 +2508,14 @@
               "headline": "Itoophiyaan carraa hojii miliyoona sadi uumuuf karoorfatte"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48905174",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48905174"
+              "assetUri": "/afaanoromoo/oduu-48905174",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48905174"
             },
             "summary": "Manni maree bakka bu'oota uummataa wixinee bajata bara 2012 (A.L.I) irratti erga mari'ateen booda birrii biiliyoona 386.95 bajata mootummaa Federaalaa bara 2012 gochuun raggaasiseera.",
             "timestamp": 1562580744000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -2535,8 +2529,8 @@
             "indexImage": {
               "id": "107789318",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/13DF6\/production\/_107789318_66299595_622499484907905_7270183848808284160_n.jpg",
-              "path": "\/cpsprodpb\/13DF6\/production\/_107789318_66299595_622499484907905_7270183848808284160_n.jpg",
+              "href": "http://c.files.bbci.co.uk/13DF6/production/_107789318_66299595_622499484907905_7270183848808284160_n.jpg",
+              "path": "/cpsprodpb/13DF6/production/_107789318_66299595_622499484907905_7270183848808284160_n.jpg",
               "height": 549,
               "width": 976,
               "altText": "MM Abiy Ahimad",
@@ -2545,8 +2539,8 @@
             "imageThumbnail": {
               "id": "107789320",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/095E\/production\/_107789320_66299595_622499484907905_7270183848808284160_n.jpg",
-              "path": "\/cpsprodpb\/095E\/production\/_107789320_66299595_622499484907905_7270183848808284160_n.jpg",
+              "href": "http://c.files.bbci.co.uk/095E/production/_107789320_66299595_622499484907905_7270183848808284160_n.jpg",
+              "path": "/cpsprodpb/095E/production/_107789320_66299595_622499484907905_7270183848808284160_n.jpg",
               "height": 180,
               "width": 320,
               "altText": "MM Abiy Ahimad",
@@ -2557,7 +2551,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48905174",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48905174",
             "type": "cps"
           },
           {
@@ -2565,14 +2559,14 @@
               "headline": "Nagaa ganna tokkoon duuba Itoophiyaa fi Eertiraan maal buufatan?"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48905163",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48905163"
+              "assetUri": "/afaanoromoo/oduu-48905163",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48905163"
             },
             "summary": "Waliigaltee nagaa Adoolessa 8 bara 2018 waggaa har'aa Itoophiyaa fi Eertiraan mallatteessan irraa lammileen biyyoota lamaanii maal buufatan?",
             "timestamp": 1562574605000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Explainer",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
                 "categoryName": "Explainer"
               },
               "campaigns": [
@@ -2586,8 +2580,8 @@
             "indexImage": {
               "id": "107785784",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/BE76\/production\/_107785784_gettyimages-1059873978.jpg",
-              "path": "\/cpsprodpb\/BE76\/production\/_107785784_gettyimages-1059873978.jpg",
+              "href": "http://c.files.bbci.co.uk/BE76/production/_107785784_gettyimages-1059873978.jpg",
+              "path": "/cpsprodpb/BE76/production/_107785784_gettyimages-1059873978.jpg",
               "height": 261,
               "width": 464,
               "altText": "Pirezidaantii Eertiraa Isaayaas Afawarqii fi MinistiraMuummee Itoophiyaa Abiy Ahmad",
@@ -2596,8 +2590,8 @@
             "imageThumbnail": {
               "id": "107785782",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/7056\/production\/_107785782_gettyimages-1059873978.jpg",
-              "path": "\/cpsprodpb\/7056\/production\/_107785782_gettyimages-1059873978.jpg",
+              "href": "http://c.files.bbci.co.uk/7056/production/_107785782_gettyimages-1059873978.jpg",
+              "path": "/cpsprodpb/7056/production/_107785782_gettyimages-1059873978.jpg",
               "height": 180,
               "width": 320,
               "altText": "Pirezidaantii Eertiraa Isaayaas Afawarqii fi MinistiraMuummee Itoophiyaa Abiy Ahmad",
@@ -2608,22 +2602,22 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48905163",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48905163",
             "type": "cps"
           },
           {
             "headlines": {
-              "headline": "\"Sagalee B\/Jeneraal Asaamminew waraabeera\" - Gaazexeessituu Faasikaa Taaddasa"
+              "headline": "\"Sagalee B/Jeneraal Asaamminew waraabeera\" - Gaazexeessituu Faasikaa Taaddasa"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48864330",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48864330"
+              "assetUri": "/afaanoromoo/oduu-48864330",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48864330"
             },
-            "summary": "Gaazexeessituu Faasikaa Taaddasa battala ajjechaan qondaaltota irratti raawwate B\/J Asaaminaw Tsiggee dubbisuu ishee dubbatti. Qondaalli ajjeechaa kanaan shakkaman maal jedhaniin?",
+            "summary": "Gaazexeessituu Faasikaa Taaddasa battala ajjechaan qondaaltota irratti raawwate B/J Asaaminaw Tsiggee dubbisuu ishee dubbatti. Qondaalli ajjeechaa kanaan shakkaman maal jedhaniin?",
             "timestamp": 1562225477000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Opinion",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
                 "categoryName": "Opinion"
               },
               "campaigns": [
@@ -2645,31 +2639,31 @@
             "indexImage": {
               "id": "107739947",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/124F1\/production\/_107739947_fasikafasika.jpg",
-              "path": "\/cpsprodpb\/124F1\/production\/_107739947_fasikafasika.jpg",
+              "href": "http://c.files.bbci.co.uk/124F1/production/_107739947_fasikafasika.jpg",
+              "path": "/cpsprodpb/124F1/production/_107739947_fasikafasika.jpg",
               "height": 549,
               "width": 976,
-              "altText": "Gaazexeessituu Faasikaa Taaddasan gaafa ajjechaan raawwate B\/J Asaamminaw dubbistee turte",
-              "caption": "Gaazexeessituu Faasikaa Taaddasan gaafa ajjechaan raawwate B\/J Asaamminaw dubbistee turte",
-              "copyrightHolder": "Fasika Tadesse\/FB"
+              "altText": "Gaazexeessituu Faasikaa Taaddasan gaafa ajjechaan raawwate B/J Asaamminaw dubbistee turte",
+              "caption": "Gaazexeessituu Faasikaa Taaddasan gaafa ajjechaan raawwate B/J Asaamminaw dubbistee turte",
+              "copyrightHolder": "Fasika Tadesse/FB"
             },
             "imageThumbnail": {
               "id": "107739949",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/17311\/production\/_107739949_fasikafasika.jpg",
-              "path": "\/cpsprodpb\/17311\/production\/_107739949_fasikafasika.jpg",
+              "href": "http://c.files.bbci.co.uk/17311/production/_107739949_fasikafasika.jpg",
+              "path": "/cpsprodpb/17311/production/_107739949_fasikafasika.jpg",
               "height": 180,
               "width": 320,
-              "altText": "Gaazexeessituu Faasikaa Taaddasan gaafa ajjechaan raawwate B\/J Asaamminaw dubbistee turte",
-              "caption": "Gaazexeessituu Faasikaa Taaddasan gaafa ajjechaan raawwate B\/J Asaamminaw dubbistee turte",
-              "copyrightHolder": "Fasika Tadesse\/FB"
+              "altText": "Gaazexeessituu Faasikaa Taaddasan gaafa ajjechaan raawwate B/J Asaamminaw dubbistee turte",
+              "caption": "Gaazexeessituu Faasikaa Taaddasan gaafa ajjechaan raawwate B/J Asaamminaw dubbistee turte",
+              "copyrightHolder": "Fasika Tadesse/FB"
             },
             "options": {
               "isBreakingNews": false,
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48864330",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48864330",
             "type": "cps"
           },
           {
@@ -2677,14 +2671,14 @@
               "headline": "\"Yaalii fonqolchaa' dabalatee rakkoolee biroof furmaatni filannoodha\""
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48855951",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48855951"
+              "assetUri": "/afaanoromoo/oduu-48855951",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48855951"
             },
             "summary": "Rakkoolee siyaasaa Itoophiyaa amma jiru haalawwan ittiin hiikuun danda'amu keessa tokko filannoo gaggeessudha jedhu pirofeesar Mararaa Guddinaa.",
             "timestamp": 1562228087000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Analysis",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
                 "categoryName": "Analysis"
               },
               "campaigns": [
@@ -2698,8 +2692,8 @@
             "indexImage": {
               "id": "107739127",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/11A01\/production\/_107739127_merera.jpg",
-              "path": "\/cpsprodpb\/11A01\/production\/_107739127_merera.jpg",
+              "href": "http://c.files.bbci.co.uk/11A01/production/_107739127_merera.jpg",
+              "path": "/cpsprodpb/11A01/production/_107739127_merera.jpg",
               "height": 549,
               "width": 976,
               "altText": "Mararaa Guddinaa",
@@ -2708,8 +2702,8 @@
             "imageThumbnail": {
               "id": "107739129",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/16821\/production\/_107739129_merera.jpg",
-              "path": "\/cpsprodpb\/16821\/production\/_107739129_merera.jpg",
+              "href": "http://c.files.bbci.co.uk/16821/production/_107739129_merera.jpg",
+              "path": "/cpsprodpb/16821/production/_107739129_merera.jpg",
               "height": 180,
               "width": 320,
               "altText": "Mararaa Guddinaa",
@@ -2720,7 +2714,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48855951",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48855951",
             "type": "cps"
           }
         ],
@@ -2738,14 +2732,14 @@
               "headline": "Taaksii barsiisotaa fi poolisoota tola keessummeessu"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48950163",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48950163"
+              "assetUri": "/afaanoromoo/oduu-48950163",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48950163"
             },
             "summary": "Magaala Adaamaatti taaksiin dargaggoo Maaruuf Usmaan, gaafuma balbala olseenan beeksisa \"barsiisotaa fi poolisoota hin kafalchiifnu, waraqaa eenyummaa qofa nu agarsiisaa,\" jedhutu maxxanfamee mul'ata.",
             "timestamp": 1562841695000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Feature",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
                 "categoryName": "Feature"
               },
               "campaigns": [
@@ -2759,8 +2753,8 @@
             "indexImage": {
               "id": "107833529",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/16975\/production\/_107833529_img_3781.jpg",
-              "path": "\/cpsprodpb\/16975\/production\/_107833529_img_3781.jpg",
+              "href": "http://c.files.bbci.co.uk/16975/production/_107833529_img_3781.jpg",
+              "path": "/cpsprodpb/16975/production/_107833529_img_3781.jpg",
               "height": 549,
               "width": 976,
               "altText": "Maaruuf Usmaan",
@@ -2771,7 +2765,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48950163",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48950163",
             "type": "cps"
           },
           {
@@ -2779,14 +2773,14 @@
               "headline": "'Cidha qoosaa' Feesbuuki irratti raawwateen booda misirrichi dorsifame"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48947123",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48947123"
+              "assetUri": "/afaanoromoo/oduu-48947123",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48947123"
             },
             "summary": "Magaalaa kaaba Naayijeeriyaa Kaanootti namootni afur 'cidha qoosaa' Feesbooki irratti doqindeessan dorsifni ajjeechaa isaanirra gahuu himan.",
             "timestamp": 1562832051000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -2800,8 +2794,8 @@
             "indexImage": {
               "id": "107831852",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/64D5\/production\/_107831852_facebookimage.jpg",
-              "path": "\/cpsprodpb\/64D5\/production\/_107831852_facebookimage.jpg",
+              "href": "http://c.files.bbci.co.uk/64D5/production/_107831852_facebookimage.jpg",
+              "path": "/cpsprodpb/64D5/production/_107831852_facebookimage.jpg",
               "height": 549,
               "width": 976,
               "altText": "suuraa 'emoji' laphee",
@@ -2810,8 +2804,8 @@
             "imageThumbnail": {
               "id": "107831132",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/5A49\/production\/_107831132_facebookimage.jpg",
-              "path": "\/cpsprodpb\/5A49\/production\/_107831132_facebookimage.jpg",
+              "href": "http://c.files.bbci.co.uk/5A49/production/_107831132_facebookimage.jpg",
+              "path": "/cpsprodpb/5A49/production/_107831132_facebookimage.jpg",
               "height": 180,
               "width": 320,
               "altText": "suuraa 'emoji' laphee",
@@ -2821,7 +2815,7 @@
               "isBreakingNews": false,
               "isFactCheck": false
             },
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48947123",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48947123",
             "type": "cps"
           },
           {
@@ -2829,14 +2823,14 @@
               "headline": "Dhaabbata hojjetaa 900 qabuu garuu waajjira hin qabne"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48899017",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48899017"
+              "assetUri": "/afaanoromoo/oduu-48899017",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48899017"
             },
             "summary": "Dhaabonni waajjira qabaachu dhiisuu jabeessaa jiran hojjettootaaf gaariimoo hamaadha?",
             "timestamp": 1562567110000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Feature",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
                 "categoryName": "Feature"
               },
               "campaigns": [
@@ -2854,8 +2848,8 @@
             "indexImage": {
               "id": "107759512",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/545B\/production\/_107759512_catehustonteamfliss.jpg",
-              "path": "\/cpsprodpb\/545B\/production\/_107759512_catehustonteamfliss.jpg",
+              "href": "http://c.files.bbci.co.uk/545B/production/_107759512_catehustonteamfliss.jpg",
+              "path": "/cpsprodpb/545B/production/_107759512_catehustonteamfliss.jpg",
               "height": 1152,
               "width": 2048,
               "altText": "Group standing in water smiling",
@@ -2867,7 +2861,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48899017",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48899017",
             "type": "cps"
           },
           {
@@ -2875,14 +2869,14 @@
               "headline": "\"Uummatni Oromoo godaanaa osoo hin taane Saaqaa ta'u isaan beeka\""
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48905930",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48905930"
+              "assetUri": "/afaanoromoo/oduu-48905930",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48905930"
             },
             "summary": "Kitaabni koo 'Uummatni Oromoo gaanfa Afriikaa saaqaa moo godaanaa' jedhu kitaabilee ani barreesse keessaa yeroo koo isa guddaa kan natti fudhate dha.",
             "timestamp": 1562571312000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Feature",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
                 "categoryName": "Feature"
               },
               "campaigns": [
@@ -2896,8 +2890,8 @@
             "indexImage": {
               "id": "107786838",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/1479C\/production\/_107786838_obbocharinnat.jpg",
-              "path": "\/cpsprodpb\/1479C\/production\/_107786838_obbocharinnat.jpg",
+              "href": "http://c.files.bbci.co.uk/1479C/production/_107786838_obbocharinnat.jpg",
+              "path": "/cpsprodpb/1479C/production/_107786838_obbocharinnat.jpg",
               "height": 549,
               "width": 976,
               "altText": "Obbo Charinnat Waaqwayyaa",
@@ -2908,7 +2902,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48905930",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48905930",
             "type": "cps"
           },
           {
@@ -2916,14 +2910,14 @@
               "headline": "Dubartii dogoggoraan 'daa'imman nama biraa' deesse"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48918285",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48918285"
+              "assetUri": "/afaanoromoo/oduu-48918285",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48918285"
             },
             "summary": "Himannaan kiliniika wal-hormaataa Kaaliforniyaatti argamu irratti baname, dubartiin daa'imman dogoggoraa akka deessu taasiseera jedha.",
             "timestamp": 1562652500000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -2937,8 +2931,8 @@
             "indexImage": {
               "id": "107794488",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/15981\/production\/_107794488_mediaitem107794487.jpg",
-              "path": "\/cpsprodpb\/15981\/production\/_107794488_mediaitem107794487.jpg",
+              "href": "http://c.files.bbci.co.uk/15981/production/_107794488_mediaitem107794487.jpg",
+              "path": "/cpsprodpb/15981/production/_107794488_mediaitem107794487.jpg",
               "height": 1152,
               "width": 2048,
               "altText": "Dubartii Ulfaa",
@@ -2947,8 +2941,8 @@
             "imageThumbnail": {
               "id": "107800138",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/1449C\/production\/_107800138_mediaitem107794487.jpg",
-              "path": "\/cpsprodpb\/1449C\/production\/_107800138_mediaitem107794487.jpg",
+              "href": "http://c.files.bbci.co.uk/1449C/production/_107800138_mediaitem107794487.jpg",
+              "path": "/cpsprodpb/1449C/production/_107800138_mediaitem107794487.jpg",
               "height": 180,
               "width": 320,
               "altText": "Dubartii Ulfaa",
@@ -2959,7 +2953,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48918285",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48918285",
             "type": "cps"
           },
           {
@@ -2967,8 +2961,8 @@
               "headline": "\"Akkamitti akkan dogoggore anumaafuu naaf hin galu\""
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48905164",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48905164"
+              "assetUri": "/afaanoromoo/oduu-48905164",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48905164"
             },
             "summary": "Atileet Hagoos Gabrahiwoot dorgommii daayimand liigii Jimaata biyya Siwitzerlaand magaalaa Luuzanitti dorgomame irratti marsaan tokko osoo isa hafuu waan xumure se'e gammachuu isaa ibsachaa fiigicha dhaabe.",
             "timestamp": 1562578973000,
@@ -2976,8 +2970,8 @@
             "indexImage": {
               "id": "107787601",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/29B6\/production\/_107787601_gettyimages-1154004860.jpg",
-              "path": "\/cpsprodpb\/29B6\/production\/_107787601_gettyimages-1154004860.jpg",
+              "href": "http://c.files.bbci.co.uk/29B6/production/_107787601_gettyimages-1154004860.jpg",
+              "path": "/cpsprodpb/29B6/production/_107787601_gettyimages-1154004860.jpg",
               "height": 576,
               "width": 1024,
               "altText": "Atileet Hagoos Gabrahiwoot",
@@ -2986,8 +2980,8 @@
             "imageThumbnail": {
               "id": "107787603",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/77D6\/production\/_107787603_gettyimages-1154004860.jpg",
-              "path": "\/cpsprodpb\/77D6\/production\/_107787603_gettyimages-1154004860.jpg",
+              "href": "http://c.files.bbci.co.uk/77D6/production/_107787603_gettyimages-1154004860.jpg",
+              "path": "/cpsprodpb/77D6/production/_107787603_gettyimages-1154004860.jpg",
               "height": 180,
               "width": 320,
               "altText": "Atileet Hagoos Gabrahiwoot",
@@ -2998,7 +2992,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48905164",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48905164",
             "type": "cps"
           },
           {
@@ -3006,14 +3000,14 @@
               "headline": "'Dhukkubbii ciniinsuu sodaadheen oppireeshiniin dahe'"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48545063",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48545063"
+              "assetUri": "/afaanoromoo/oduu-48545063",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48545063"
             },
             "summary": "Itoophiyaa keessatti fayyaa daa'imaa yookiin hadhaarratti rakkoon yoo uumame malee dubartoonni oppireeshiniidhaan dahuun hin hayyamamu.",
             "timestamp": 1561956047000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Feature",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
                 "categoryName": "Feature"
               },
               "campaigns": [
@@ -3027,8 +3021,8 @@
             "indexImage": {
               "id": "107491960",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/1B07\/production\/_107491960_gettyimages-151047227.jpg",
-              "path": "\/cpsprodpb\/1B07\/production\/_107491960_gettyimages-151047227.jpg",
+              "href": "http://c.files.bbci.co.uk/1B07/production/_107491960_gettyimages-151047227.jpg",
+              "path": "/cpsprodpb/1B07/production/_107491960_gettyimages-151047227.jpg",
               "height": 549,
               "width": 976,
               "altText": "Dubartii garaashee qabattee jirtu",
@@ -3037,8 +3031,8 @@
             "imageThumbnail": {
               "id": "107491962",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/6927\/production\/_107491962_gettyimages-151047227.jpg",
-              "path": "\/cpsprodpb\/6927\/production\/_107491962_gettyimages-151047227.jpg",
+              "href": "http://c.files.bbci.co.uk/6927/production/_107491962_gettyimages-151047227.jpg",
+              "path": "/cpsprodpb/6927/production/_107491962_gettyimages-151047227.jpg",
               "height": 180,
               "width": 320,
               "altText": "Dubartii garaashee qabattee jirtu",
@@ -3049,7 +3043,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48545063",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48545063",
             "type": "cps"
           },
           {
@@ -3057,14 +3051,14 @@
               "headline": "Qeerransoonni nama sarkasii isaan leenjisu galaafatan"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48885678",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48885678"
+              "assetUri": "/afaanoromoo/oduu-48885678",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48885678"
             },
             "summary": "Qeerransoonni kunneen nama Etorii Weebar jedhamaniifi umuriin isaanii 61 ta'e agarsiisaaf osoo isaan shaakalsiisuuti kan galaafatan.",
             "timestamp": 1562390922000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -3082,8 +3076,8 @@
             "indexImage": {
               "id": "107765935",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/D2C4\/production\/_107765935_tiger.jpg",
-              "path": "\/cpsprodpb\/D2C4\/production\/_107765935_tiger.jpg",
+              "href": "http://c.files.bbci.co.uk/D2C4/production/_107765935_tiger.jpg",
+              "path": "/cpsprodpb/D2C4/production/_107765935_tiger.jpg",
               "height": 549,
               "width": 976,
               "altText": "Etoori Weebar yeroo qeerransoota leenjisan",
@@ -3092,8 +3086,8 @@
             "imageThumbnail": {
               "id": "107765108",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/1391C\/production\/_107765108_gettyimages-526060366.jpg",
-              "path": "\/cpsprodpb\/1391C\/production\/_107765108_gettyimages-526060366.jpg",
+              "href": "http://c.files.bbci.co.uk/1391C/production/_107765108_gettyimages-526060366.jpg",
+              "path": "/cpsprodpb/1391C/production/_107765108_gettyimages-526060366.jpg",
               "height": 180,
               "width": 320,
               "altText": "Qeerransa sarkasii leenji'u",
@@ -3104,7 +3098,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48885678",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48885678",
             "type": "cps"
           }
         ],
@@ -3122,14 +3116,14 @@
               "headline": "Dargaggoo Afaan Chaayinaa of barsiise"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48946896",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48946896"
+              "assetUri": "/afaanoromoo/oduu-48946896",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48946896"
             },
             "summary": "Afaan kana dura tasuma hin barre tokko 'YouTube' qofaan yeroo gabaabaatti baranii turjumaana tahuun ni dandahama jettanii yaadduu?",
             "timestamp": 1562827870000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -3148,21 +3142,17 @@
               "synopses": {
                 "short": "Afaan Chaayinaa 'YouTube' qofaan akkamin baruun danda'ama?"
               },
-              "imageUrl": "ichef.bbci.co.uk\/images\/ic\/$recipe\/p07glfm5.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07glfm5.jpg",
               "embedding": true,
               "advertising": true,
               "caption": "Afaan Chaayinaa 'YouTube' qofaan akkamin baruun danda'ama?",
               "versions": [
                 {
                   "versionId": "p07glfcd",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 122,
                   "durationISO8601": "PT2M2S",
-                  "warnings": {
-                    
-                  },
+                  "warnings": {},
                   "availableTerritories": {
                     "uk": true,
                     "nonUk": true
@@ -3174,8 +3164,8 @@
             "indexImage": {
               "id": "107830185",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/E2F7\/production\/_107830185_p07glfm5.jpg",
-              "path": "\/cpsprodpb\/E2F7\/production\/_107830185_p07glfm5.jpg",
+              "href": "http://c.files.bbci.co.uk/E2F7/production/_107830185_p07glfm5.jpg",
+              "path": "/cpsprodpb/E2F7/production/_107830185_p07glfm5.jpg",
               "height": 549,
               "width": 976,
               "altText": "Dargaggoo Yaareed Ammahaa",
@@ -3185,8 +3175,8 @@
             "imageThumbnail": {
               "id": "107830187",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/13117\/production\/_107830187_p07glfm5.jpg",
-              "path": "\/cpsprodpb\/13117\/production\/_107830187_p07glfm5.jpg",
+              "href": "http://c.files.bbci.co.uk/13117/production/_107830187_p07glfm5.jpg",
+              "path": "/cpsprodpb/13117/production/_107830187_p07glfm5.jpg",
               "height": 180,
               "width": 320,
               "altText": "Dargaggoo Yaareed Ammahaa",
@@ -3198,7 +3188,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48946896",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48946896",
             "type": "cps"
           },
           {
@@ -3206,14 +3196,14 @@
               "headline": "Baankiin Islaamaa maali, Itoophiyaatti maaliif barbaachise?"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48918055",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48918055"
+              "assetUri": "/afaanoromoo/oduu-48918055",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48918055"
             },
             "summary": "Mootummaan Itoophiyaa baankiin Islaamaa qofaatti dhala irraa bilisa ta'e akka hundaa'u dhihoo eeyyameera. Garuu, faayidaan isaa maali? Akkamin hojjeta kan jedhu namoota beekan gaafanneerra.",
             "timestamp": 1562648732000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Analysis",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
                 "categoryName": "Analysis"
               },
               "campaigns": [
@@ -3231,8 +3221,8 @@
             "indexImage": {
               "id": "107799940",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/1387\/production\/_107799940_gettyimages-641305200-1.jpg",
-              "path": "\/cpsprodpb\/1387\/production\/_107799940_gettyimages-641305200-1.jpg",
+              "href": "http://c.files.bbci.co.uk/1387/production/_107799940_gettyimages-641305200-1.jpg",
+              "path": "/cpsprodpb/1387/production/_107799940_gettyimages-641305200-1.jpg",
               "height": 549,
               "width": 976,
               "altText": "Masjiida magaalaa Harar",
@@ -3241,8 +3231,8 @@
             "imageThumbnail": {
               "id": "107799942",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/61A7\/production\/_107799942_gettyimages-641305200-1.jpg",
-              "path": "\/cpsprodpb\/61A7\/production\/_107799942_gettyimages-641305200-1.jpg",
+              "href": "http://c.files.bbci.co.uk/61A7/production/_107799942_gettyimages-641305200-1.jpg",
+              "path": "/cpsprodpb/61A7/production/_107799942_gettyimages-641305200-1.jpg",
               "height": 180,
               "width": 320,
               "altText": "Masjiida magaalaa Harar",
@@ -3253,7 +3243,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48918055",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48918055",
             "type": "cps"
           },
           {
@@ -3261,14 +3251,14 @@
               "headline": "Olmaa barreessitoonni Oromoo guddina ogbarruu Afaan Amaaraatiif oolan"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48892474",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48892474"
+              "assetUri": "/afaanoromoo/oduu-48892474",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48892474"
             },
             "summary": "Barreessitoota guddina ogbarruu afaan Amaaraatiif gumaatan keessaa hedduun Afaan Oromoo fi Tigreen afaan kan hiikkatanidha. Kanaanis asoosamoota dheeraa, ogwalaloo fi tiyaatiroota hedduu keessatti maqaansaanii akka ka'u ta'uusaa oggeeyyiin damee kanaa dhugaa bahu.",
             "timestamp": 1562478211000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Feature",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
                 "categoryName": "Feature"
               },
               "campaigns": [
@@ -3282,8 +3272,8 @@
             "indexImage": {
               "id": "107727175",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/DF54\/production\/_107727175_mediaitem107727173.jpg",
-              "path": "\/cpsprodpb\/DF54\/production\/_107727175_mediaitem107727173.jpg",
+              "href": "http://c.files.bbci.co.uk/DF54/production/_107727175_mediaitem107727173.jpg",
+              "path": "/cpsprodpb/DF54/production/_107727175_mediaitem107727173.jpg",
               "height": 549,
               "width": 976,
               "altText": "Kitaboolee barraa'an adda addaa",
@@ -3292,8 +3282,8 @@
             "imageThumbnail": {
               "id": "107727177",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/12D74\/production\/_107727177_mediaitem107727173.jpg",
-              "path": "\/cpsprodpb\/12D74\/production\/_107727177_mediaitem107727173.jpg",
+              "href": "http://c.files.bbci.co.uk/12D74/production/_107727177_mediaitem107727173.jpg",
+              "path": "/cpsprodpb/12D74/production/_107727177_mediaitem107727173.jpg",
               "height": 180,
               "width": 320,
               "altText": "Kitaboolee barraa'an adda addaa",
@@ -3304,7 +3294,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48892474",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48892474",
             "type": "cps"
           },
           {
@@ -3312,14 +3302,14 @@
               "headline": "'Nama biyya Oromoo' jechuun kan of himan Abbaa Gammachiis eenyu?"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48715569",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48715569"
+              "assetUri": "/afaanoromoo/oduu-48715569",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48715569"
             },
             "summary": "\"Ani Shifarraa Guddataa Noggoo Sarboo Karoosoo Irreessoon jedhama. Abbaa Gammachis (Onesmos Nasib) ammoo Hiikaa Awaajii Irreessoo jedhama. Kanaaf Onesmos Nasib anaaf abaabayyuu kooti\" jechuunis himu.",
             "timestamp": 1562047633000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Feature",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
                 "categoryName": "Feature"
               },
               "campaigns": [
@@ -3337,8 +3327,8 @@
             "indexImage": {
               "id": "107732929",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/16AFB\/production\/_107732929_onesmos.jpg",
-              "path": "\/cpsprodpb\/16AFB\/production\/_107732929_onesmos.jpg",
+              "href": "http://c.files.bbci.co.uk/16AFB/production/_107732929_onesmos.jpg",
+              "path": "/cpsprodpb/16AFB/production/_107732929_onesmos.jpg",
               "height": 549,
               "width": 976,
               "altText": "Abbaa Gammachis",
@@ -3347,8 +3337,8 @@
             "imageThumbnail": {
               "id": "107735182",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/6DF9\/production\/_107735182_onesmos.jpg",
-              "path": "\/cpsprodpb\/6DF9\/production\/_107735182_onesmos.jpg",
+              "href": "http://c.files.bbci.co.uk/6DF9/production/_107735182_onesmos.jpg",
+              "path": "/cpsprodpb/6DF9/production/_107735182_onesmos.jpg",
               "height": 180,
               "width": 320,
               "altText": "Abbaa Gammachis",
@@ -3359,7 +3349,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48715569",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48715569",
             "type": "cps"
           },
           {
@@ -3367,14 +3357,14 @@
               "headline": "Godambaan Wallaga Bahaa maal maal of keessaa qaba?"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48899531",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48899531"
+              "assetUri": "/afaanoromoo/oduu-48899531",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48899531"
             },
             "summary": "Godambaa Wallaga Bahaa maal maal of keessaa qaba? Gaazexeessitoonni BBC dhaqanii daawwataniiru. Dhiyaadhaa",
             "timestamp": 1562485037000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Feature",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
                 "categoryName": "Feature"
               },
               "campaigns": [
@@ -3393,21 +3383,17 @@
               "synopses": {
                 "short": "Godambaa Wallaga Bahaa"
               },
-              "imageUrl": "ichef.bbci.co.uk\/images\/ic\/$recipe\/p07g7wmx.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07g7wmx.jpg",
               "embedding": true,
               "advertising": true,
               "caption": "Godambaa Wallaga Bahaa",
               "versions": [
                 {
                   "versionId": "p07g7wh0",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 186,
                   "durationISO8601": "PT3M6S",
-                  "warnings": {
-                    
-                  },
+                  "warnings": {},
                   "availableTerritories": {
                     "uk": true,
                     "nonUk": true
@@ -3420,8 +3406,8 @@
             "indexImage": {
               "id": "107778581",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/489B\/production\/_107778581_p07g7wmx.jpg",
-              "path": "\/cpsprodpb\/489B\/production\/_107778581_p07g7wmx.jpg",
+              "href": "http://c.files.bbci.co.uk/489B/production/_107778581_p07g7wmx.jpg",
+              "path": "/cpsprodpb/489B/production/_107778581_p07g7wmx.jpg",
               "height": 549,
               "width": 976,
               "altText": "Keyframe #5",
@@ -3430,8 +3416,8 @@
             "imageThumbnail": {
               "id": "107778576",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/10803\/production\/_107778576_p07g7wmx.jpg",
-              "path": "\/cpsprodpb\/10803\/production\/_107778576_p07g7wmx.jpg",
+              "href": "http://c.files.bbci.co.uk/10803/production/_107778576_p07g7wmx.jpg",
+              "path": "/cpsprodpb/10803/production/_107778576_p07g7wmx.jpg",
               "height": 180,
               "width": 320,
               "altText": "Keyframe #5",
@@ -3442,7 +3428,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48899531",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48899531",
             "type": "cps"
           },
           {
@@ -3451,8 +3437,8 @@
             "indexImage": {
               "id": "104639694",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/C21D\/production\/_104639694_ao-news-1.jpg",
-              "path": "\/cpsprodpb\/C21D\/production\/_104639694_ao-news-1.jpg",
+              "href": "http://c.files.bbci.co.uk/C21D/production/_104639694_ao-news-1.jpg",
+              "path": "/cpsprodpb/C21D/production/_104639694_ao-news-1.jpg",
               "height": 540,
               "width": 960,
               "altText": "Jecha welcome jedhu",
@@ -3461,14 +3447,14 @@
             "indexThumbnail": {
               "id": "104639696",
               "subType": "index-thumbnail",
-              "href": "http:\/\/c.files.bbci.co.uk\/1103D\/production\/_104639696_ao-news-1.jpg",
-              "path": "\/cpsprodpb\/1103D\/production\/_104639696_ao-news-1.jpg",
+              "href": "http://c.files.bbci.co.uk/1103D/production/_104639696_ao-news-1.jpg",
+              "path": "/cpsprodpb/1103D/production/_104639696_ao-news-1.jpg",
               "height": 180,
               "width": 320,
               "altText": "Jecha welcome jedhu",
               "copyrightHolder": "JackF"
             },
-            "uri": "http:\/\/www.bbc.co.uk\/learningenglish\/oromo",
+            "uri": "http://www.bbc.co.uk/learningenglish/oromo",
             "contentType": "Text",
             "assetTypeCode": "PRO",
             "timestamp": 1519308897000,
@@ -3479,14 +3465,14 @@
               "headline": "Itoophiyaan qooda Itiyoo-telekom dhibbeentaa 49 gurguruuf"
             },
             "locators": {
-              "assetUri": "\/afaanoromoo\/oduu-48882828",
-              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo\/oduu-48882828"
+              "assetUri": "/afaanoromoo/oduu-48882828",
+              "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-48882828"
             },
             "summary": "Mootummaan Itoophiyaa qooda Itiyoo-telekom dhibbeentaa 49 gurguruuf murteessee jira.",
             "timestamp": 1562331295000,
             "passport": {
               "category": {
-                "categoryId": "http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
               "campaigns": [
@@ -3500,8 +3486,8 @@
             "indexImage": {
               "id": "107762066",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/101EA\/production\/_107762066_finance.jpg",
-              "path": "\/cpsprodpb\/101EA\/production\/_107762066_finance.jpg",
+              "href": "http://c.files.bbci.co.uk/101EA/production/_107762066_finance.jpg",
+              "path": "/cpsprodpb/101EA/production/_107762066_finance.jpg",
               "height": 549,
               "width": 976,
               "altText": "Dr Iyyoob Takkaaliny",
@@ -3512,7 +3498,7 @@
               "isFactCheck": false
             },
             "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:afaanoromoo\/oduu-48882828",
+            "id": "urn:bbc:ares::asset:afaanoromoo/oduu-48882828",
             "type": "cps"
           }
         ],
@@ -3530,14 +3516,14 @@
             "indexImage": {
               "id": "101869164",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/B474\/production\/_101869164_worldcup_promo_976x549-nc.png",
-              "path": "\/cpsprodpb\/B474\/production\/_101869164_worldcup_promo_976x549-nc.png",
+              "href": "http://c.files.bbci.co.uk/B474/production/_101869164_worldcup_promo_976x549-nc.png",
+              "path": "/cpsprodpb/B474/production/_101869164_worldcup_promo_976x549-nc.png",
               "height": 549,
               "width": 976,
               "altText": "Illustration of World Cup fans",
               "copyrightHolder": "BBC"
             },
-            "uri": "https:\/\/www.bbc.com\/afaanoromoo\/isportii-44389313",
+            "uri": "https://www.bbc.com/afaanoromoo/isportii-44389313",
             "contentType": "Text",
             "assetTypeCode": "PRO",
             "timestamp": 1528989022000,
@@ -3548,14 +3534,14 @@
             "indexImage": {
               "id": "101907188",
               "subType": "index",
-              "href": "http:\/\/c.files.bbci.co.uk\/1586A\/production\/_101907188_world_cup_charts_promo_976.jpg",
-              "path": "\/cpsprodpb\/1586A\/production\/_101907188_world_cup_charts_promo_976.jpg",
+              "href": "http://c.files.bbci.co.uk/1586A/production/_101907188_world_cup_charts_promo_976.jpg",
+              "path": "/cpsprodpb/1586A/production/_101907188_world_cup_charts_promo_976.jpg",
               "height": 360,
               "width": 640,
               "altText": "Promo image for the World Cup in charts story",
               "copyrightHolder": "BBC"
             },
-            "uri": "https:\/\/www.bbc.com\/afaanoromoo\/oduu-44436439",
+            "uri": "https://www.bbc.com/afaanoromoo/oduu-44436439",
             "contentType": "Text",
             "assetTypeCode": "PRO",
             "timestamp": 1528988171000,
@@ -3572,25 +3558,23 @@
   "promo": {
     "subType": "IDX",
     "name": "Oduu",
-    "uri": "\/afaanoromoo\/front_page",
-    "id": "urn:bbc:ares::index:afaanoromoo\/front_page\/desktop\/domestic",
+    "uri": "/afaanoromoo/front_page",
+    "id": "urn:bbc:ares::index:afaanoromoo/front_page/desktop/domestic",
     "type": "simple"
   },
   "relatedContent": {
     "section": {
       "subType": "index",
       "name": "Oduu",
-      "uri": "\/afaanoromoo\/front_page",
+      "uri": "/afaanoromoo/front_page",
       "type": "simple"
     },
     "site": {
       "subType": "site",
       "name": "BBC Afaan Oromoo",
-      "uri": "\/afaanoromoo",
+      "uri": "/afaanoromoo",
       "type": "simple"
     },
-    "groups": [
-      
-    ]
+    "groups": []
   }
 }

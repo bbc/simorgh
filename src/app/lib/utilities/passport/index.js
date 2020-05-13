@@ -7,10 +7,7 @@ export const getPassportHome = pageData => {
     pageData,
   );
   return pageData && homeServiceUrl
-    ? homeServiceUrl
-        .split('/')
-        .pop()
-        .toLowerCase()
+    ? homeServiceUrl.split('/').pop().toLowerCase()
     : null;
 };
 

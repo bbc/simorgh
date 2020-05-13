@@ -47,10 +47,7 @@
           "thingLabel": "History",
           "thingUri": "http://www.bbc.co.uk/things/03eb3674-6190-4cd7-8104-1a00991d67a3#id",
           "thingId": "03eb3674-6190-4cd7-8104-1a00991d67a3",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
+          "thingType": ["Thing", "Theme"],
           "thingSameAs": [
             "http://dbpedia.org/resource/History",
             "http://www.wikidata.org/entity/Q309"
@@ -68,10 +65,7 @@
           "thingLabel": "Queen Elizabeth II",
           "thingUri": "http://www.bbc.co.uk/things/1ff657f2-0bc9-4172-a198-fda306e611f4#id",
           "thingId": "1ff657f2-0bc9-4172-a198-fda306e611f4",
-          "thingType": [
-            "Thing",
-            "Person"
-          ],
+          "thingType": ["Thing", "Person"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Elizabeth_II",
             "http://rdf.freebase.com/ns/m.0d1_f",
@@ -90,14 +84,8 @@
           "thingLabel": "United Kingdom",
           "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
           "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
-          "thingType": [
-            "Thing",
-            "Place",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/2635167/"
-          ],
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/2635167/"],
           "topicName": "బ్రిటన్",
           "topicId": "cyx5kx5g8nvt",
           "curationList": [
@@ -111,14 +99,8 @@
           "thingLabel": "India",
           "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
           "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
-          "thingType": [
-            "Thing",
-            "Place",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/1269750/"
-          ],
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/1269750/"],
           "topicName": "భారత్",
           "topicId": "c5qvp16w7dnt",
           "curationList": [
@@ -132,13 +114,8 @@
           "thingLabel": "Photography",
           "thingUri": "http://www.bbc.co.uk/things/ae0d5073-dfeb-4251-b555-0a9c74f3d4e0#id",
           "thingId": "ae0d5073-dfeb-4251-b555-0a9c74f3d4e0",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Photography"
-          ],
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Photography"],
           "topicName": "ఫోటోగ్రఫి",
           "topicId": "c06gqjrd46kt",
           "curationList": [
@@ -151,9 +128,7 @@
       ]
     },
     "version": "v1.1.4",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

@@ -51,10 +51,7 @@
           "thingLabel": "Film",
           "thingUri": "http://www.bbc.co.uk/things/2611f753-ece7-47ea-9782-f912bc1e4088#id",
           "thingId": "2611f753-ece7-47ea-9782-f912bc1e4088",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
+          "thingType": ["Theme", "Thing"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Film",
             "http://www.wikidata.org/entity/Q11424"
@@ -64,21 +61,13 @@
           "thingLabel": "Myanmar",
           "thingUri": "http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id",
           "thingId": "a26174f5-fa3c-4cf8-95a2-29d877175eab",
-          "thingType": [
-            "Place",
-            "Thing",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/1327865/"
-          ]
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/1327865/"]
         }
       ]
     },
     "version": "v1.0.0",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

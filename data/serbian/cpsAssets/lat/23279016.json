@@ -1,0 +1,167 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "advertising": true,
+        "caption": "nnnnn",
+        "embedding": true,
+        "format": "video",
+        "id": "p01qjbpq",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01qjbvt.jpg",
+        "subType": "clip",
+        "synopses": {
+          "long": "koala ijm aus",
+          "medium": "australia",
+          "short": "koajaa"
+        },
+        "title": "koala",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1582890367000,
+            "availableTerritories": {
+              "nonUk": true,
+              "uk": true,
+              "world": false
+            },
+            "duration": 15,
+            "durationISO8601": "PT15S",
+            "types": ["Editorial"],
+            "versionId": "p01qjbvb",
+            "warnings": {}
+          }
+        ]
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Jinka Ilori je umetnik koji živi u Londonu.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Njegova dela su inspirisana nigerijskim pričama i nigerijskim nasleđem.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Ilorijevi radovi su izloženi u galerijama i na ulicama Londona.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Evo kako je put u Nigeriju u detinjstvu uticao na njegov rad.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "serbianlat.media_asset.23279016.page",
+      "cps_asset_id": "23279016",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["media", "paragraph"],
+    "createdBy": "serbian-v6",
+    "firstPublished": 1585040745000,
+    "id": "urn:bbc:ares::asset:serbian/lat/23279016",
+    "includeComments": false,
+    "language": "sr-Latn",
+    "lastPublished": 1585040761000,
+    "lastUpdated": 1585040771762,
+    "locators": {
+      "assetId": "23279016",
+      "assetUri": "/serbian/lat/23279016",
+      "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/23279016",
+      "curie": "http://www.bbc.co.uk/asset/281f815b-b6dc-e240-87ec-2fdcc6fe4010"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "timestamp": 1585040745000,
+    "type": "MAP",
+    "version": "v1.1.8"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Ulična umetnost: „Donosim eksploziju boja u javni prostor“ MAP MAP TEST 1",
+      "shortHeadline": "Ulična umetnost: „Donosim eksploziju boja u javni prostor“ MAP TEST 1"
+    },
+    "id": "urn:bbc:ares::asset:serbian/lat/23279016",
+    "indexImage": {
+      "altText": "corona",
+      "caption": "corna",
+      "copyrightHolder": "BBC",
+      "height": 351,
+      "href": "http://b.files.bbci.co.uk/4289/test/_63733071_coronavirus.jpg",
+      "id": "63733071",
+      "path": "/cpsdevpb/4289/test/_63733071_coronavirus.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 624
+    },
+    "language": "sr-Latn",
+    "locators": {
+      "assetId": "23279016",
+      "assetUri": "/serbian/lat/23279016",
+      "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/23279016",
+      "curie": "http://www.bbc.co.uk/asset/281f815b-b6dc-e240-87ec-2fdcc6fe4010"
+    },
+    "media": {
+      "advertising": true,
+      "caption": "nnnnn",
+      "embedding": true,
+      "format": "video",
+      "id": "p01qjbpq",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01qjbvt.jpg",
+      "subType": "clip",
+      "synopses": {
+        "long": "koala ijm aus",
+        "medium": "australia",
+        "short": "koajaa"
+      },
+      "title": "koala",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1582890367000,
+          "availableTerritories": { "nonUk": true, "uk": true, "world": false },
+          "duration": 15,
+          "durationISO8601": "PT15S",
+          "types": ["Editorial"],
+          "versionId": "p01qjbvb",
+          "warnings": {}
+        }
+      ]
+    },
+    "passport": { "taggings": [] },
+    "summary": "Ulična umetnost: „Donosim eksploziju boja u javni prostor“ MAP TEST 1",
+    "timestamp": 1585040745000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Početna strana",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/serbian/lat/front_page"
+    },
+    "site": {
+      "name": "BBC News na srpskom",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/serbian/lat"
+    }
+  }
+}

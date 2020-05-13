@@ -27,6 +27,9 @@ const baseServiceConfig = {
   radioSchedule: {
     hasRadioSchedule: false,
   },
+  recommendations: {
+    hasStoryRecommendations: false,
+  },
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,
     brandLogoColour: `${C_WHITE}`,
@@ -57,10 +60,10 @@ export const service = {
     serviceLocalizedName: 'na srpskom',
     serviceName: 'News na srpskom',
     defaultImageAltText: 'BBC News na srpskom',
-    defaultCaptionOffscreenText: 'Potpis ',
-    audioCaptionOffscreenText: 'Potpis ispod audio zapisa ',
-    videoCaptionOffscreenText: 'Potpis ispod videa ',
-    imageCaptionOffscreenText: 'Potpis ispod fotografije ',
+    defaultCaptionOffscreenText: 'Potpis, ',
+    audioCaptionOffscreenText: 'Potpis ispod audio zapisa, ',
+    videoCaptionOffscreenText: 'Potpis ispod videa, ',
+    imageCaptionOffscreenText: 'Potpis ispod fotografije, ',
     imageCopyrightOffscreenText: 'Autor fotografije, ',
     footer: {
       trustProjectLink: {
@@ -113,6 +116,10 @@ export const service = {
         url: '/serbian/lat',
       },
       {
+        title: 'Korona virus',
+        url: '/serbian/lat/srbija-52197807',
+      },
+      {
         title: 'Srbija',
         url: '/serbian/lat/topics/1791445f-977a-4e6d-b490-51f84bb4fc52',
       },
@@ -135,7 +142,6 @@ export const service = {
     ],
     scriptLink: {
       text: 'Ћир',
-      offscreenText: 'Cyrillic',
       variant: 'cyr',
     },
     translations: {
@@ -240,10 +246,29 @@ export const service = {
         listen: 'Slušajte',
         watch: 'Gledajte',
         liveLabel: 'UŽIVO',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Prethodna radio emisija',
         nextRadioShow: 'Sledeća radio emisija',
         duration: 'Trajanje',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Video caption, ',
+          text: 'Warning: Third party content may contain adverts',
+        },
+        fallback: {
+          text: 'Content is not available',
+          linkText: 'View content on %provider_name%',
+          linkTextSuffixVisuallyHidden: ', external',
+          warningText: 'BBC nije odgovoran za sadržaj drugih sajtova.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
+      topStoriesTitle: 'Najvažnije',
+      featuresAnalysisTitle: 'Features',
     },
   },
   cyr: {
@@ -322,6 +347,10 @@ export const service = {
         url: '/serbian/cyr',
       },
       {
+        title: 'Корона вирус',
+        url: '/serbian/cyr/srbija-52197807',
+      },
+      {
         title: 'Србија',
         url: '/serbian/cyr/topics/1791445f-977a-4e6d-b490-51f84bb4fc52',
       },
@@ -344,7 +373,6 @@ export const service = {
     ],
     scriptLink: {
       text: 'Lat',
-      offscreenText: 'Latin',
       variant: 'lat',
     },
     translations: {
@@ -449,10 +477,29 @@ export const service = {
         listen: 'Слушајте',
         watch: 'Гледајте',
         liveLabel: 'УЖИВО',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Претходна радио емисија',
         nextRadioShow: 'Следећа радио емисија',
         duration: 'Трајање',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Video caption, ',
+          text: 'Warning: Third party content may contain adverts',
+        },
+        fallback: {
+          text: 'Content is not available',
+          linkText: 'View content on %provider_name%',
+          linkTextSuffixVisuallyHidden: ', external',
+          warningText: 'ББЦ није одговоран за садржај других сајтова.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
+      topStoriesTitle: 'Најважније',
+      featuresAnalysisTitle: 'Features',
     },
   },
 };

@@ -157,10 +157,29 @@ export const service = {
         listen: 'Прослухати',
         watch: 'Дивитися',
         liveLabel: 'LIVE',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Попередня радіопрограма',
         nextRadioShow: 'Наступна радіопрограма',
         duration: 'Тривалість',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Підпис до відео, ',
+          text: 'Увага: інші сайти можуть містити рекламу',
+        },
+        fallback: {
+          text: 'Контент недоступний',
+          linkText: 'Дивіться більше у %provider_name%',
+          linkTextSuffixVisuallyHidden: ', зовнішнє посилання',
+          warningText: 'ВВС не несе відповідальності за контент інших сайтів.',
+        },
+        skipLink: {
+          text: 'Пропустити %provider_name% допис',
+          endTextVisuallyHidden: 'Кінець %provider_name% допису',
+        },
+      },
+      topStoriesTitle: 'Top Stories',
+      featuresAnalysisTitle: 'Докладно',
     },
     brandSVG,
     mostRead: {
@@ -171,6 +190,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
@@ -214,6 +236,10 @@ export const service = {
       {
         title: 'Новини',
         url: '/ukrainian',
+      },
+      {
+        title: 'Коронавірус',
+        url: '/ukrainian/52118881',
       },
       {
         title: 'Наука',

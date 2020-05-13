@@ -4,20 +4,20 @@
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
       "serviceId": "bbc_urdu_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570796747000,
-      "publishedTimeStart": 1571745600000,
-      "publishedTimeEnd": 1571746200000,
+      "updateTime": 1584015974000,
+      "publishedTimeStart": 1584964800000,
+      "publishedTimeEnd": 1584965400000,
       "publishedTimeDuration": "PT10M",
-      "transmissionTimeStart": 1571745600000,
-      "transmissionTimeEnd": 1571746200000,
+      "transmissionTimeStart": 1584964800000,
+      "transmissionTimeEnd": 1584965400000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh1f05rv634b.imi:ws.bbc.co.uk/URDUA1571745600",
-        "pid": "p07qt1y2"
+        "bid": "w1mshg43h7gzv0l.imi:ws.bbc.co.uk/URDUA1584964800",
+        "pid": "p086fjxk"
       },
       "brand": {
         "pid": "p03413l5",
@@ -29,8 +29,8 @@
         }
       },
       "episode": {
-        "pid": "w172wxgwmjb2yfh",
-        "presentationTitle": "22/10/2019 GMT",
+        "pid": "w172x9dy2z0772s",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
         "synopses": {
           "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
@@ -38,27 +38,27 @@
         }
       },
       "version": {
-        "pid": "w1msh1f05rv634b"
+        "pid": "w1mshg43h7gzv0l"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
       "serviceId": "bbc_urdu_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570800403000,
-      "publishedTimeStart": 1571749200000,
-      "publishedTimeEnd": 1571749800000,
+      "updateTime": 1584019554000,
+      "publishedTimeStart": 1584968400000,
+      "publishedTimeEnd": 1584969000000,
       "publishedTimeDuration": "PT10M",
-      "transmissionTimeStart": 1571749200000,
-      "transmissionTimeEnd": 1571749800000,
+      "transmissionTimeStart": 1584968400000,
+      "transmissionTimeEnd": 1584969000000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh1f05rv66wg.imi:ws.bbc.co.uk/URDUA1571749200",
-        "pid": "p07qt9vh"
+        "bid": "w1mshg43h7gzyrq.imi:ws.bbc.co.uk/URDUA1584968400",
+        "pid": "p086frc4"
       },
       "brand": {
         "pid": "p03413l5",
@@ -70,8 +70,8 @@
         }
       },
       "episode": {
-        "pid": "w172wxgwmjb325m",
-        "presentationTitle": "22/10/2019 GMT",
+        "pid": "w172x9dy2z07btx",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
         "synopses": {
           "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
@@ -79,27 +79,27 @@
         }
       },
       "version": {
-        "pid": "w1msh1f05rv66wg"
+        "pid": "w1mshg43h7gzyrq"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
       "serviceId": "bbc_urdu_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570803992000,
-      "publishedTimeStart": 1571752800000,
-      "publishedTimeEnd": 1571753400000,
+      "updateTime": 1584023159000,
+      "publishedTimeStart": 1584972000000,
+      "publishedTimeEnd": 1584972600000,
       "publishedTimeDuration": "PT10M",
-      "transmissionTimeStart": 1571752800000,
-      "transmissionTimeEnd": 1571753400000,
+      "transmissionTimeStart": 1584972000000,
+      "transmissionTimeEnd": 1584972600000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh1f05rv6bml.imi:ws.bbc.co.uk/URDUA1571752800",
-        "pid": "p07qtknq"
+        "bid": "w1mshg43h7h02hv.imi:ws.bbc.co.uk/URDUA1584972000",
+        "pid": "p086fyx7"
       },
       "brand": {
         "pid": "p03413l5",
@@ -111,8 +111,8 @@
         }
       },
       "episode": {
-        "pid": "w172wxgwmjb35xr",
-        "presentationTitle": "22/10/2019 GMT",
+        "pid": "w172x9dy2z07gl1",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
         "synopses": {
           "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
@@ -120,109 +120,27 @@
         }
       },
       "version": {
-        "pid": "w1msh1f05rv6bml"
+        "pid": "w1mshg43h7h02hv"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
       "serviceId": "bbc_urdu_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570803998000,
-      "publishedTimeStart": 1571756370000,
-      "publishedTimeEnd": 1571758140000,
-      "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1571756370000,
-      "transmissionTimeEnd": 1571758140000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqtfnb.imi:ws.bbc.co.uk/URDUA1571756370",
-        "pid": "p07qtkq4"
-      },
-      "brand": {
-        "pid": "w13xttt5",
-        "title": "سیربین",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4lwd.jpg",
-        "synopses": {
-          "short": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام",
-          "medium": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام"
-        }
-      },
-      "episode": {
-        "pid": "w3csyygc",
-        "presentationTitle": "22/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4lwd.jpg",
-        "synopses": {
-          "short": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام",
-          "medium": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام"
-        }
-      },
-      "version": {
-        "pid": "w4hqtfnb"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
-      "serviceId": "bbc_urdu_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570807658000,
-      "publishedTimeStart": 1571758140000,
-      "publishedTimeEnd": 1571759940000,
-      "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1571758170000,
-      "transmissionTimeEnd": 1571759940000,
-      "isBlanked": false,
-      "isRepeat": true,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqtfnb.imi:ws.bbc.co.uk/URDUA1571758140",
-        "pid": "p07qtt1q"
-      },
-      "brand": {
-        "pid": "w13xttt5",
-        "title": "سیربین",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4lwd.jpg",
-        "synopses": {
-          "short": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام",
-          "medium": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام"
-        }
-      },
-      "episode": {
-        "pid": "w3csyygc",
-        "presentationTitle": "22/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4lwd.jpg",
-        "synopses": {
-          "short": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام",
-          "medium": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام"
-        }
-      },
-      "version": {
-        "pid": "w4hqtfnb"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
-      "serviceId": "bbc_urdu_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570883131000,
-      "publishedTimeStart": 1571832000000,
-      "publishedTimeEnd": 1571832600000,
+      "updateTime": 1584102374000,
+      "publishedTimeStart": 1585051200000,
+      "publishedTimeEnd": 1585051800000,
       "publishedTimeDuration": "PT10M",
-      "transmissionTimeStart": 1571832000000,
-      "transmissionTimeEnd": 1571832600000,
+      "transmissionTimeStart": 1585051200000,
+      "transmissionTimeEnd": 1585051800000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh1f05rv901f.imi:ws.bbc.co.uk/URDUA1571832000",
-        "pid": "p07qwz70"
+        "bid": "w1mshg43h7h2qxp.imi:ws.bbc.co.uk/URDUA1585051200",
+        "pid": "p086k1ks"
       },
       "brand": {
         "pid": "p03413l5",
@@ -234,8 +152,8 @@
         }
       },
       "episode": {
-        "pid": "w172wxgwmjb5vbl",
-        "presentationTitle": "23/10/2019 GMT",
+        "pid": "w172x9dy2z0b3zw",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
         "synopses": {
           "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
@@ -243,27 +161,27 @@
         }
       },
       "version": {
-        "pid": "w1msh1f05rv901f"
+        "pid": "w1mshg43h7h2qxp"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
       "serviceId": "bbc_urdu_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570886743000,
-      "publishedTimeStart": 1571835600000,
-      "publishedTimeEnd": 1571836200000,
+      "updateTime": 1584106025000,
+      "publishedTimeStart": 1585054800000,
+      "publishedTimeEnd": 1585055400000,
       "publishedTimeDuration": "PT10M",
-      "transmissionTimeStart": 1571835600000,
-      "transmissionTimeEnd": 1571836200000,
+      "transmissionTimeStart": 1585054800000,
+      "transmissionTimeEnd": 1585055400000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh1f05rv93sk.imi:ws.bbc.co.uk/URDUA1571835600",
-        "pid": "p07qx28f"
+        "bid": "w1mshg43h7h2vnt.imi:ws.bbc.co.uk/URDUA1585054800",
+        "pid": "p086k8rr"
       },
       "brand": {
         "pid": "p03413l5",
@@ -275,8 +193,8 @@
         }
       },
       "episode": {
-        "pid": "w172wxgwmjb5z2q",
-        "presentationTitle": "23/10/2019 GMT",
+        "pid": "w172x9dy2z0b7r0",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
         "synopses": {
           "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
@@ -284,27 +202,27 @@
         }
       },
       "version": {
-        "pid": "w1msh1f05rv93sk"
+        "pid": "w1mshg43h7h2vnt"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
       "serviceId": "bbc_urdu_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570890348000,
-      "publishedTimeStart": 1571839200000,
-      "publishedTimeEnd": 1571839800000,
+      "updateTime": 1584109583000,
+      "publishedTimeStart": 1585058400000,
+      "publishedTimeEnd": 1585059000000,
       "publishedTimeDuration": "PT10M",
-      "transmissionTimeStart": 1571839200000,
-      "transmissionTimeEnd": 1571839800000,
+      "transmissionTimeStart": 1585058400000,
+      "transmissionTimeEnd": 1585059000000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh1f05rv97jp.imi:ws.bbc.co.uk/URDUA1571839200",
-        "pid": "p07qx4l1"
+        "bid": "w1mshg43h7h2zdy.imi:ws.bbc.co.uk/URDUA1585058400",
+        "pid": "p086khpk"
       },
       "brand": {
         "pid": "p03413l5",
@@ -316,8 +234,8 @@
         }
       },
       "episode": {
-        "pid": "w172wxgwmjb62tv",
-        "presentationTitle": "23/10/2019 GMT",
+        "pid": "w172x9dy2z0bch4",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
         "synopses": {
           "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
@@ -325,109 +243,27 @@
         }
       },
       "version": {
-        "pid": "w1msh1f05rv97jp"
+        "pid": "w1mshg43h7h2zdy"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
       "serviceId": "bbc_urdu_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570890350000,
-      "publishedTimeStart": 1571842770000,
-      "publishedTimeEnd": 1571844540000,
-      "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1571842770000,
-      "transmissionTimeEnd": 1571844540000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqtfpg.imi:ws.bbc.co.uk/URDUA1571842770",
-        "pid": "p07qx4l4"
-      },
-      "brand": {
-        "pid": "w13xttt5",
-        "title": "سیربین",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4lwd.jpg",
-        "synopses": {
-          "short": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام",
-          "medium": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام"
-        }
-      },
-      "episode": {
-        "pid": "w3csyyhh",
-        "presentationTitle": "23/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4lwd.jpg",
-        "synopses": {
-          "short": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام",
-          "medium": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام"
-        }
-      },
-      "version": {
-        "pid": "w4hqtfpg"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
-      "serviceId": "bbc_urdu_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570893945000,
-      "publishedTimeStart": 1571844540000,
-      "publishedTimeEnd": 1571846340000,
-      "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1571844570000,
-      "transmissionTimeEnd": 1571846340000,
-      "isBlanked": false,
-      "isRepeat": true,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqtfpg.imi:ws.bbc.co.uk/URDUA1571844540",
-        "pid": "p07qx6cb"
-      },
-      "brand": {
-        "pid": "w13xttt5",
-        "title": "سیربین",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4lwd.jpg",
-        "synopses": {
-          "short": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام",
-          "medium": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام"
-        }
-      },
-      "episode": {
-        "pid": "w3csyyhh",
-        "presentationTitle": "23/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4lwd.jpg",
-        "synopses": {
-          "short": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام",
-          "medium": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام"
-        }
-      },
-      "version": {
-        "pid": "w4hqtfpg"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
-      "serviceId": "bbc_urdu_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570969535000,
-      "publishedTimeStart": 1571918400000,
-      "publishedTimeEnd": 1571919000000,
+      "updateTime": 1584188735000,
+      "publishedTimeStart": 1585137600000,
+      "publishedTimeEnd": 1585138200000,
       "publishedTimeDuration": "PT10M",
-      "transmissionTimeStart": 1571918400000,
-      "transmissionTimeEnd": 1571919000000,
+      "transmissionTimeStart": 1585137600000,
+      "transmissionTimeEnd": 1585138200000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh1f05rvcwyj.imi:ws.bbc.co.uk/URDUA1571918400",
-        "pid": "p07qyk1f"
+        "bid": "w1mshg43h7h5mts.imi:ws.bbc.co.uk/URDUA1585137600",
+        "pid": "p086nccw"
       },
       "brand": {
         "pid": "p03413l5",
@@ -439,8 +275,8 @@
         }
       },
       "episode": {
-        "pid": "w172wxgwmjb8r7p",
-        "presentationTitle": "24/10/2019 GMT",
+        "pid": "w172x9dy2z0f0wz",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
         "synopses": {
           "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
@@ -448,27 +284,27 @@
         }
       },
       "version": {
-        "pid": "w1msh1f05rvcwyj"
+        "pid": "w1mshg43h7h5mts"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
       "serviceId": "bbc_urdu_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570973146000,
-      "publishedTimeStart": 1571922000000,
-      "publishedTimeEnd": 1571922600000,
+      "updateTime": 1584192349000,
+      "publishedTimeStart": 1585141200000,
+      "publishedTimeEnd": 1585141800000,
       "publishedTimeDuration": "PT10M",
-      "transmissionTimeStart": 1571922000000,
-      "transmissionTimeEnd": 1571922600000,
+      "transmissionTimeStart": 1585141200000,
+      "transmissionTimeEnd": 1585141800000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh1f05rvd0pn.imi:ws.bbc.co.uk/URDUA1571922000",
-        "pid": "p07qymcp"
+        "bid": "w1mshg43h7h5rkx.imi:ws.bbc.co.uk/URDUA1585141200",
+        "pid": "p086nhyv"
       },
       "brand": {
         "pid": "p03413l5",
@@ -480,8 +316,8 @@
         }
       },
       "episode": {
-        "pid": "w172wxgwmjb8vzt",
-        "presentationTitle": "24/10/2019 GMT",
+        "pid": "w172x9dy2z0f4n3",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
         "synopses": {
           "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
@@ -489,27 +325,27 @@
         }
       },
       "version": {
-        "pid": "w1msh1f05rvd0pn"
+        "pid": "w1mshg43h7h5rkx"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
       "serviceId": "bbc_urdu_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570976750000,
-      "publishedTimeStart": 1571925600000,
-      "publishedTimeEnd": 1571926200000,
+      "updateTime": 1893488400000,
+      "publishedTimeStart": 1893488400000,
+      "publishedTimeEnd": 1893489000000,
       "publishedTimeDuration": "PT10M",
-      "transmissionTimeStart": 1571925600000,
-      "transmissionTimeEnd": 1571926200000,
+      "transmissionTimeStart": 1893488400000,
+      "transmissionTimeEnd": 1893489000000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh1f05rvd4fs.imi:ws.bbc.co.uk/URDUA1571925600",
-        "pid": "p07qypdn"
+        "bid": "w1mshg43h7h5wb1.imi:ws.bbc.co.uk/URDUA1585144800",
+        "pid": "p086nnnt"
       },
       "brand": {
         "pid": "p03413l5",
@@ -521,8 +357,8 @@
         }
       },
       "episode": {
-        "pid": "w172wxgwmjb8zqy",
-        "presentationTitle": "24/10/2019 GMT",
+        "pid": "w172x9dy2z0f8d7",
+        "presentationTitle": "01/01/2030 09:00 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
         "synopses": {
           "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
@@ -530,89 +366,7 @@
         }
       },
       "version": {
-        "pid": "w1msh1f05rvd4fs"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
-      "serviceId": "bbc_urdu_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570976747000,
-      "publishedTimeStart": 1571929170000,
-      "publishedTimeEnd": 1571930940000,
-      "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1571929170000,
-      "transmissionTimeEnd": 1571930940000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqtfm6.imi:ws.bbc.co.uk/URDUA1571929170",
-        "pid": "p07qypdh"
-      },
-      "brand": {
-        "pid": "w13xttt5",
-        "title": "سیربین",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4lwd.jpg",
-        "synopses": {
-          "short": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام",
-          "medium": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام"
-        }
-      },
-      "episode": {
-        "pid": "w3csyyf7",
-        "presentationTitle": "24/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4lwd.jpg",
-        "synopses": {
-          "short": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام",
-          "medium": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام"
-        }
-      },
-      "version": {
-        "pid": "w4hqtfm6"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
-      "serviceId": "bbc_urdu_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1570980346000,
-      "publishedTimeStart": 1571930940000,
-      "publishedTimeEnd": 1571932740000,
-      "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1571930970000,
-      "transmissionTimeEnd": 1571932740000,
-      "isBlanked": false,
-      "isRepeat": true,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqtfm6.imi:ws.bbc.co.uk/URDUA1571930940",
-        "pid": "p07qyrxs"
-      },
-      "brand": {
-        "pid": "w13xttt5",
-        "title": "سیربین",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4lwd.jpg",
-        "synopses": {
-          "short": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام",
-          "medium": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام"
-        }
-      },
-      "episode": {
-        "pid": "w3csyyf7",
-        "presentationTitle": "24/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4lwd.jpg",
-        "synopses": {
-          "short": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام",
-          "medium": "خبروں اور حالات حاضرہ پر مبنی بی بی سی اردو کا روزانہ ریڈیو پروگرام"
-        }
-      },
-      "version": {
-        "pid": "w4hqtfm6"
+        "pid": "w1mshg43h7h5wb1"
       }
     }
   ]

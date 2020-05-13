@@ -1,0 +1,158 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/ukchina/simp/meta/dps/junk/2016/11/emp/161104_tc2_testmap1.emp.xml",
+        "id": "17698867",
+        "image": {
+          "altText": "",
+          "copyrightHolder": "",
+          "height": 360,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+          "id": "17698867",
+          "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+          "subType": "thumbnail",
+          "type": "image",
+          "width": 640
+        },
+        "live": false,
+        "playlist": [
+          {
+            "bitrate": "168000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/junk/2016/11/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_161104_tc2_testmap1_16x9_lo.mp4"
+          },
+          {
+            "bitrate": "320000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/junk/2016/11/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_161104_tc2_testmap1_16x9_med.mp4"
+          },
+          {
+            "bitrate": "904000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/junk/2016/11/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_161104_tc2_testmap1_16x9_hi.mp4"
+          }
+        ],
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "BBC在春節期間派出攝製隊到中國拍攝，華裔英國演員陸思敬作為主持人之一，向BBC中文吐露感想與喜好。",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": { "cps_asset_id": "17698867", "cps_asset_type": "map" },
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "createdBy": "ukchina_traditional",
+    "firstPublished": 1478273688000,
+    "id": "urn:bbc:ares::asset:ukchina/trad/multimedia/2016/11/161104_tc2_testmap1",
+    "includeComments": false,
+    "language": "zh-Hant",
+    "lastPublished": 1478273688000,
+    "lastUpdated": 1585927999900,
+    "locators": {
+      "assetId": "17698867",
+      "assetUri": "/ukchina/trad/multimedia/2016/11/161104_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/multimedia/2016/11/161104_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/4883e9c0-a2a4-11e6-826b-7e22ae65fd85"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1478273688000,
+    "type": "MAP",
+    "version": "v1.1.10"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "視頻：英國華人演員陸思敬談《中國春節》",
+      "shortHeadline": "視頻：英國華人演員陸思敬談《中國春節》"
+    },
+    "id": "urn:bbc:ares::asset:ukchina/trad/multimedia/2016/11/161104_tc2_testmap1",
+    "indexImage": {
+      "altText": "",
+      "copyrightHolder": "Getty",
+      "height": 81,
+      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+      "id": "d5e216",
+      "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 144
+    },
+    "language": "zh-Hant",
+    "locators": {
+      "assetId": "17698867",
+      "assetUri": "/ukchina/trad/multimedia/2016/11/161104_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/multimedia/2016/11/161104_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/4883e9c0-a2a4-11e6-826b-7e22ae65fd85"
+    },
+    "media": {
+      "aspectRatio": "16:9",
+      "format": "video",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/ukchina/simp/meta/dps/junk/2016/11/emp/161104_tc2_testmap1.emp.xml",
+      "id": "17698867",
+      "image": {
+        "altText": "",
+        "copyrightHolder": "",
+        "height": 360,
+        "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+        "id": "17698867",
+        "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+        "subType": "thumbnail",
+        "type": "image",
+        "width": 640
+      },
+      "live": false,
+      "playlist": [
+        {
+          "bitrate": "168000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/junk/2016/11/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_161104_tc2_testmap1_16x9_lo.mp4"
+        },
+        {
+          "bitrate": "320000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/junk/2016/11/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_161104_tc2_testmap1_16x9_med.mp4"
+        },
+        {
+          "bitrate": "904000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/ukchina/simp/dps/junk/2016/11/hd_png_lancaster_fire_2_1245_12_5_103_1924290_toprores_161104_tc2_testmap1_16x9_hi.mp4"
+        }
+      ],
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": { "taggings": [] },
+    "summary": "BBC在春節期間派出攝製隊到中國拍攝，華裔英國演員陸思敬作為主持人之一，向BBC中文吐露感想與喜好。",
+    "timestamp": 1478273688000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "音視圖片",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/ukchina/trad/multimedia"
+    },
+    "site": {
+      "name": "bbcukchina.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/ukchina/trad"
+    }
+  }
+}

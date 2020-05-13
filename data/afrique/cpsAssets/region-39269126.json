@@ -39,20 +39,13 @@
           "thingLabel": "African Union",
           "thingUri": "http://www.bbc.co.uk/things/47227265-9a40-4277-ad88-09d0453c33c6#id",
           "thingId": "47227265-9a40-4277-ad88-09d0453c33c6",
-          "thingType": [
-            "Organisation",
-            "Thing"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/African_Union"
-          ]
+          "thingType": ["Organisation", "Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/African_Union"]
         }
       ]
     },
     "version": "v1.0.10",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

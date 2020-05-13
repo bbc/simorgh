@@ -23,7 +23,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
               role="main"
             >
               <h1
-                class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                 id="content"
                 tabindex="-1"
               >
@@ -69,14 +69,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 >
                   13 сентябр 2019
                 </time>
-                <div>
-                  <time
-                    class="StyledTimestamp-um718p-0 bAgcOD"
-                    datetime="2019-11-06"
-                  >
-                    Янгиланди 6 ноябр 2019
-                  </time>
-                </div>
               </div>
               <div
                 class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
@@ -326,7 +318,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                           role="text"
                         >
                           <span
-                            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                            class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                           >
                             Сурат манбаси, 
                           </span>
@@ -394,7 +386,7 @@ exports[`Media Asset Page should render component 1`] = `
               role="main"
             >
               <h1
-                class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                 id="content"
                 tabindex="-1"
               >
@@ -822,7 +814,7 @@ exports[`Media Asset Page should render component 1`] = `
                           role="text"
                         >
                           <span
-                            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                            class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                           >
                             Wia dis foto come from, 
                           </span>
@@ -841,7 +833,7 @@ exports[`Media Asset Page should render component 1`] = `
                         class="Caption-sc-16x70so-0 bjgllj"
                       >
                         <span
-                          class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                          class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                         >
                           Wetin we call dis foto, 
                         </span>
@@ -877,7 +869,7 @@ exports[`Media Asset Page should render component 1`] = `
                           role="text"
                         >
                           <span
-                            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                            class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                           >
                             Wia dis foto come from, 
                           </span>
@@ -896,7 +888,7 @@ exports[`Media Asset Page should render component 1`] = `
                         class="Caption-sc-16x70so-0 bjgllj"
                       >
                         <span
-                          class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                          class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                         >
                           Wetin we call dis foto, 
                         </span>
@@ -971,13 +963,13 @@ exports[`Media Asset Page should render component 1`] = `
               role="region"
             >
               <div
-                class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
+                class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
               >
                 <div
-                  class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
+                  class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
                 >
                   <div
-                    class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc"
+                    class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA"
                   >
                     <div
                       class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -985,7 +977,7 @@ exports[`Media Asset Page should render component 1`] = `
                     <h2
                       class="Heading-sc-1x4gwjz-2 eZofTG"
                     >
-                      <div
+                      <span
                         class="FlexColumn-wx5kdp-0 dgpsiS"
                       >
                         <span
@@ -999,7 +991,7 @@ exports[`Media Asset Page should render component 1`] = `
                             Another thing we de for inside dis tori
                           </span>
                         </span>
-                      </div>
+                      </span>
                     </h2>
                   </div>
                   <ul
@@ -1008,7 +1000,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="list"
                   >
                     <li
-                      class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                      class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
                       dir="ltr"
                       role="listitem"
                     >
@@ -1042,8 +1034,8 @@ exports[`Media Asset Page should render component 1`] = `
                             class="Headline-sc-1dvfmi3-3 hSJrur"
                           >
                             <a
-                              class="Link-sc-1dvfmi3-5 yQgSu"
-                              href="/pidgin/tori-23145776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                              class="Link-sc-1dvfmi3-5 jeUMCT"
+                              href="/pidgin/tori-23145776"
                             >
                               Police Arrest 3 ontop Anambra Church Attack
                             </a>
@@ -1063,7 +1055,7 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                     </li>
                     <li
-                      class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                      class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
                       dir="ltr"
                       role="listitem"
                     >
@@ -1097,8 +1089,8 @@ exports[`Media Asset Page should render component 1`] = `
                             class="Headline-sc-1dvfmi3-3 hSJrur"
                           >
                             <a
-                              class="Link-sc-1dvfmi3-5 yQgSu"
-                              href="/pidgin/tori-23143754?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                              class="Link-sc-1dvfmi3-5 jeUMCT"
+                              href="/pidgin/tori-23143754"
                             >
                               Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
                             </a>
@@ -1118,7 +1110,7 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                     </li>
                     <li
-                      class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                      class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
                       dir="ltr"
                       role="listitem"
                     >
@@ -1176,14 +1168,14 @@ exports[`Media Asset Page should render component 1`] = `
                             class="Headline-sc-1dvfmi3-3 hSJrur"
                           >
                             <a
-                              class="Link-sc-1dvfmi3-5 yQgSu"
-                              href="/pidgin/23146654?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                              class="Link-sc-1dvfmi3-5 jeUMCT"
+                              href="/pidgin/23146654"
                             >
                               <span
                                 role="text"
                               >
                                 <span
-                                  class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                                  class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                                 >
                                   Image gallery, 
                                 </span>
@@ -1208,7 +1200,7 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                     </li>
                     <li
-                      class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                      class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
                       dir="ltr"
                       role="listitem"
                     >
@@ -1274,14 +1266,14 @@ exports[`Media Asset Page should render component 1`] = `
                             class="Headline-sc-1dvfmi3-3 hSJrur"
                           >
                             <a
-                              class="Link-sc-1dvfmi3-5 yQgSu"
-                              href="/pidgin/media-23147054?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                              class="Link-sc-1dvfmi3-5 jeUMCT"
+                              href="/pidgin/media-23147054"
                             >
                               <span
                                 role="text"
                               >
                                 <span
-                                  class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                                  class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                                 >
                                   Audio, 
                                 </span>
@@ -1289,7 +1281,7 @@ exports[`Media Asset Page should render component 1`] = `
                                   BBC News Pidgin One Minute News
                                 </span>
                                 <span
-                                  class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                                  class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                                 >
                                   , 0,15
                                 </span>

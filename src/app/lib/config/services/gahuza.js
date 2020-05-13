@@ -153,10 +153,29 @@ export const service = {
         listen: 'Umviriza',
         watch: 'Raba',
         liveLabel: 'LIVE',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Ikiganiro ca radiyo giheruka',
         nextRadioShow: 'Ikiganiro ca radiyo gikurikira',
         duration: 'Umwanya bimara',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Insiguro ya video, ',
+          text: "Uragaba: Ibitangwa n'izindi mbuga bishobora kubamwo gutangaza",
+        },
+        fallback: {
+          text: 'Ibi ntibiboneka',
+          linkText: 'Raba ibindi kuri %provider_name%',
+          linkTextSuffixVisuallyHidden: ', bivuye ahandi',
+          warningText: 'BBC ntibazwa ibivuye ku zindi mbuga.',
+        },
+        skipLink: {
+          text: 'Tambuka %provider_name% ubutumwa',
+          endTextVisuallyHidden: 'Impera ya %provider_name% ubutumwa',
+        },
+      },
+      topStoriesTitle: "Inkuru iri kw'isonga",
+      featuresAnalysisTitle: 'Ivyo BBC Gahuza ibahitiramwo',
     },
     brandSVG,
     mostRead: {
@@ -166,7 +185,12 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
+      onFrontPage: false,
+      durationLabel: 'Umwanya, %duration%',
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
@@ -221,10 +245,6 @@ export const service = {
       {
         title: 'Imikino',
         url: '/gahuza/imikino',
-      },
-      {
-        title: 'Umviriza',
-        url: '/gahuza/media/audio',
       },
       {
         title: 'Video',

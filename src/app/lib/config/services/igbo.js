@@ -29,11 +29,11 @@ export const service = {
     defaultImageAltText: 'BBC News Ìgbò',
     dir: 'ltr',
     externalLinkText: ', Site na mpụta',
-    imageCaptionOffscreenText: 'Nkọwa foto ',
-    videoCaptionOffscreenText: 'Aha onyonyo ',
-    audioCaptionOffscreenText: 'Aha nkeananụānụ',
-    defaultCaptionOffscreenText: 'Ihe a na-akpọ ya ',
-    imageCopyrightOffscreenText: 'Ebe foto si ',
+    imageCaptionOffscreenText: 'Nkọwa foto, ',
+    videoCaptionOffscreenText: 'Aha onyonyo, ',
+    audioCaptionOffscreenText: 'Aha nkeananụānụ, ',
+    defaultCaptionOffscreenText: 'Ihe a na-akpọ ya, ',
+    imageCopyrightOffscreenText: 'Ebe foto si, ',
     brandSVG,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
@@ -159,10 +159,30 @@ export const service = {
         listen: 'Gee ntị',
         watch: 'Lee',
         liveLabel: 'NA EME UGBU A',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Video caption, ',
+          text: 'Warning: Third party content may contain adverts',
+        },
+        fallback: {
+          text: 'Content is not available',
+          linkText: 'View content on %provider_name%',
+          linkTextSuffixVisuallyHidden: ', external',
+          warningText:
+            'BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.s',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
+      topStoriesTitle: 'Isi akụkọ',
+      featuresAnalysisTitle: 'Features',
     },
     mostRead: {
       header: 'Akachasị Gụọ',
@@ -172,6 +192,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     navigation: [
       {

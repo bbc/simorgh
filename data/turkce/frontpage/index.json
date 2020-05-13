@@ -864,9 +864,7 @@
               "versions": [
                 {
                   "versionId": "p07ghm61",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 66,
                   "durationISO8601": "PT1M6S",
                   "warnings": {},

@@ -46,6 +46,20 @@ storiesOf('Containers|CPS Related Content/Canonical', module)
       dir: 'rtl',
       data: arabicRelatedContentData,
     }),
+  )
+  .add('pidgin (ltr) with one item', () =>
+    canonicalRelatedContent({
+      service: 'pidgin',
+      dir: 'ltr',
+      data: [pidginRelatedContentData[0]],
+    }),
+  )
+  .add('arabic (rtl) with one item', () =>
+    canonicalRelatedContent({
+      service: 'arabic',
+      dir: 'rtl',
+      data: [arabicRelatedContentData[0]],
+    }),
   );
 
 storiesOf('Containers|CPS Related Content/AMP', module)
@@ -63,5 +77,19 @@ storiesOf('Containers|CPS Related Content/AMP', module)
       service: 'arabic',
       dir: 'rtl',
       data: arabicRelatedContentData,
+    }),
+  )
+  .add('pidgin (ltr) with one item', () =>
+    canonicalRelatedContent({
+      service: 'pidgin',
+      dir: 'ltr',
+      data: [pidginRelatedContentData[0]],
+    }),
+  )
+  .add('arabic (rtl) with one item', () =>
+    canonicalRelatedContent({
+      service: 'arabic',
+      dir: 'rtl',
+      data: [arabicRelatedContentData[0]],
     }),
   );

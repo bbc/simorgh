@@ -33,10 +33,7 @@
           "thingUri": "http://www.bbc.co.uk/things/c6176220-b6bb-4a1c-b3b4-3a6fcdc283b1#id",
           "thingId": "c6176220-b6bb-4a1c-b3b4-3a6fcdc283b1",
           "thingLabel": " پهپاد",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
+          "thingType": ["Thing", "Theme"],
           "thingSameAs": []
         }
       ],

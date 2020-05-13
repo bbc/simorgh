@@ -7,7 +7,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import RadioPageBlocks from '.';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
-import getInitialData from '#app/routes/radio/getInitialData';
+import getInitialData from '#app/routes/liveRadio/getInitialData';
 
 const serviceContextMock = {
   service: 'amharic',

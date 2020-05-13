@@ -1,4 +1,4 @@
-import { number, shape, string, arrayOf, bool } from 'prop-types';
+import { number, shape, string, arrayOf, bool, oneOfType } from 'prop-types';
 
 export const mediaPromoPropTypes = {
   name: string.isRequired,
@@ -9,58 +9,26 @@ export const mediaPromoPropTypes = {
   type: string,
 };
 
-export const onDemandRadioPromoPropTypes = {
-  headlines: shape({
-    headline: string,
-  }),
-  locators: shape({
-    pid: string,
-  }),
-  media: shape({
-    id: string,
-    subType: string,
-    format: string,
-    title: string,
-    synopses: shape({
-      short: string,
-      medium: string,
-    }),
-    imageUrl: string,
-    embedding: bool,
-    advertising: bool,
-    versions: arrayOf(
-      shape({
-        versionId: string,
-        types: arrayOf(string),
-        duration: number,
-        durationISO8601: string,
-        warnings: shape({}),
-        availableTerritories: shape({
-          uk: bool,
-          nonUk: bool,
-          world: bool,
-        }),
-        availableUntil: number,
-        availableFrom: number,
+export const optimoPromoSummaryPropTypes = {
+  blocks: arrayOf(
+    shape({
+      model: shape({
+        blocks: arrayOf(
+          shape({
+            model: shape({
+              blocks: arrayOf(
+                shape({
+                  model: shape({
+                    text: string,
+                  }),
+                }),
+              ),
+            }),
+          }),
+        ),
       }),
-    ),
-    imageCopyright: string,
-  }),
-  indexImage: shape({
-    id: string,
-    subType: string,
-    href: string,
-    path: string,
-    height: number,
-    width: number,
-    altText: string,
-    copyrightHolder: string,
-  }),
-  brand: shape({
-    pid: string,
-    title: string,
-  }),
-  id: string,
+    }),
+  ),
 };
 
 export const optimoPromoPropTypes = {
@@ -72,7 +40,7 @@ export const optimoPromoPropTypes = {
   locators: shape({
     optimoUrn: string.isRequired,
   }),
-  summary: string,
+  summary: oneOfType([shape(optimoPromoSummaryPropTypes), string]),
   timestamp: number,
 };
 

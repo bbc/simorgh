@@ -1,82 +1,7 @@
 {
-    "content": {
-      "blocks": [
-        {
-          "aspectRatio": "16:9",
-          "format": "video",
-          "href": "http://a.files.bbci.co.uk/worldservice/test/urdu/meta/dps/junk/2016/09/emp/160902_tc2_testmap2.emp.xml",
-          "id": "17698202",
-          "live": false,
-          "subType": "primary",
-          "type": "legacyMedia"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "آسٹریلیا کے وسطی علاقے میں واقع ایک عظیم الجثہ چٹان کے ڈرون کیمرے سے لیا گیا فضائی منظر۔",
-          "type": "paragraph"
-        }
-      ]
-    },
-    "metadata": {
-      "analyticsLabels": {
-        "cps_asset_id": "17698202",
-        "cps_asset_type": "map"
-      },
-      "blockTypes": [
-        "legacyMedia",
-        "paragraph"
-      ],
-      "createdBy": "urdu",
-      "firstPublished": 1472821554000,
-      "id": "urn:bbc:ares::asset:urdu/sport/2016/09/160902_tc2_testmap2",
-      "includeComments": false,
-      "language": "ur",
-      "lastPublished": 1472824146000,
-      "lastUpdated": 1583262192829,
-      "locators": {
-        "assetId": "17698202",
-        "assetUri": "/urdu/sport/2016/09/160902_tc2_testmap2",
-        "cpsUrn": "urn:bbc:content:assetUri:urdu/sport/2016/09/160902_tc2_testmap2",
-        "curie": "http://www.bbc.co.uk/asset/89e301f2-7104-11e6-bf13-daa2ce2e2eb5"
-      },
-      "options": {
-        "allowAdvertising": true,
-        "allowDateStamp": true,
-        "allowRightHandSide": true,
-        "includeComments": false,
-        "isBreakingNews": false,
-        "suitableForSyndication": false
-      },
-      "tags": {},
-      "timestamp": 1472821554000,
-      "type": "MAP",
-      "version": "v1.1.6"
-    },
-    "promo": {
-      "headlines": {
-        "headline": "اولورو چٹان کا ڈرون کی آنکھ سے نظارہ",
-        "shortHeadline": "اولورو چٹان کا ڈرون کی آنکھ سے نظارہ"
-      },
-      "id": "urn:bbc:ares::asset:urdu/sport/2016/09/160902_tc2_testmap2",
-      "indexImage": {
-        "altText": "",
-        "copyrightHolder": "Getty",
-        "height": 81,
-        "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
-        "id": "d5e223",
-        "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
-        "subType": "index",
-        "type": "image",
-        "width": 144
-      },
-      "language": "ur",
-      "locators": {
-        "assetId": "17698202",
-        "assetUri": "/urdu/sport/2016/09/160902_tc2_testmap2",
-        "cpsUrn": "urn:bbc:content:assetUri:urdu/sport/2016/09/160902_tc2_testmap2",
-        "curie": "http://www.bbc.co.uk/asset/89e301f2-7104-11e6-bf13-daa2ce2e2eb5"
-      },
-      "media": {
+  "content": {
+    "blocks": [
+      {
         "aspectRatio": "16:9",
         "format": "video",
         "href": "http://a.files.bbci.co.uk/worldservice/test/urdu/meta/dps/junk/2016/09/emp/160902_tc2_testmap2.emp.xml",
@@ -85,26 +10,98 @@
         "subType": "primary",
         "type": "legacyMedia"
       },
-      "passport": {
-        "taggings": []
-      },
-      "summary": "آسٹریلیا کے وسطی علاقے میں واقع ایک عظیم الجثہ چٹان کے ڈرون کیمرے سے لیا گیا فضائی منظر۔",
-      "timestamp": 1472821554000,
-      "type": "cps"
-    },
-    "relatedContent": {
-      "groups": [],
-      "section": {
-        "name": "کھیل",
-        "subType": "index",
-        "type": "simple",
-        "uri": "/urdu/sport"
-      },
-      "site": {
-        "name": "BBCUrdu.com",
-        "subType": "site",
-        "type": "simple",
-        "uri": "/urdu"
+      {
+        "markupType": "plain_text",
+        "text": "آسٹریلیا کے وسطی علاقے میں واقع ایک عظیم الجثہ چٹان کے ڈرون کیمرے سے لیا گیا فضائی منظر۔",
+        "type": "paragraph"
       }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "cps_asset_id": "17698202",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "createdBy": "urdu",
+    "firstPublished": 1472821554000,
+    "id": "urn:bbc:ares::asset:urdu/sport/2016/09/160902_tc2_testmap2",
+    "includeComments": false,
+    "language": "ur",
+    "lastPublished": 1472824146000,
+    "lastUpdated": 1583262192829,
+    "locators": {
+      "assetId": "17698202",
+      "assetUri": "/urdu/sport/2016/09/160902_tc2_testmap2",
+      "cpsUrn": "urn:bbc:content:assetUri:urdu/sport/2016/09/160902_tc2_testmap2",
+      "curie": "http://www.bbc.co.uk/asset/89e301f2-7104-11e6-bf13-daa2ce2e2eb5"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1472821554000,
+    "type": "MAP",
+    "version": "v1.1.6"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "اولورو چٹان کا ڈرون کی آنکھ سے نظارہ",
+      "shortHeadline": "اولورو چٹان کا ڈرون کی آنکھ سے نظارہ"
+    },
+    "id": "urn:bbc:ares::asset:urdu/sport/2016/09/160902_tc2_testmap2",
+    "indexImage": {
+      "altText": "",
+      "copyrightHolder": "Getty",
+      "height": 81,
+      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+      "id": "d5e223",
+      "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 144
+    },
+    "language": "ur",
+    "locators": {
+      "assetId": "17698202",
+      "assetUri": "/urdu/sport/2016/09/160902_tc2_testmap2",
+      "cpsUrn": "urn:bbc:content:assetUri:urdu/sport/2016/09/160902_tc2_testmap2",
+      "curie": "http://www.bbc.co.uk/asset/89e301f2-7104-11e6-bf13-daa2ce2e2eb5"
+    },
+    "media": {
+      "aspectRatio": "16:9",
+      "format": "video",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/urdu/meta/dps/junk/2016/09/emp/160902_tc2_testmap2.emp.xml",
+      "id": "17698202",
+      "live": false,
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": {
+      "taggings": []
+    },
+    "summary": "آسٹریلیا کے وسطی علاقے میں واقع ایک عظیم الجثہ چٹان کے ڈرون کیمرے سے لیا گیا فضائی منظر۔",
+    "timestamp": 1472821554000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "کھیل",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/urdu/sport"
+    },
+    "site": {
+      "name": "BBCUrdu.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/urdu"
     }
   }
+}

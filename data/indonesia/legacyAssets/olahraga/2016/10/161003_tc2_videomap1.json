@@ -22,10 +22,7 @@
       "cps_asset_id": "17698522",
       "cps_asset_type": "map"
     },
-    "blockTypes": [
-      "legacyMedia",
-      "paragraph"
-    ],
+    "blockTypes": ["legacyMedia", "paragraph"],
     "createdBy": "indonesia",
     "firstPublished": 1475488380000,
     "id": "urn:bbc:ares::asset:indonesia/olahraga/2016/10/161003_tc2_videomap1",

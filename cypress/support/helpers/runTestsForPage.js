@@ -18,18 +18,7 @@ import {
 
 import getPaths from './getPaths';
 import serviceHasPageType from './serviceHasPageType';
-
-const visitPage = (path, pageType) => {
-  const expectedContentType = 'text/html';
-  const isErrorPage = pageType.includes('error');
-  const expectedStatus = isErrorPage ? 404 : 200;
-  const failOnStatusCode = !isErrorPage;
-
-  cy.testResponseCodeAndType(path, expectedStatus, expectedContentType);
-  cy.visit(path, {
-    failOnStatusCode,
-  });
-};
+import visitPage from './visitPage';
 
 // This function takes all types of tests we have and runs in this series of steps with the fewest possible page visits
 
@@ -65,7 +54,7 @@ const runTestsForPage = ({
             variant: config[service].variant,
           };
 
-          // Enables overriding of the smoke test values in the config/services.js file
+          // Enables overriding of the smoke test values in the config/settings.js file
           testsThatAlwaysRunForAllPages(testArgs);
           testsThatAlwaysRunForAllCanonicalPages(testArgs);
           // Page specific tests
@@ -104,7 +93,7 @@ const runTestsForPage = ({
             variant: config[service].variant,
           };
 
-          // Enables overriding of the smoke test values in the config/services.js file
+          // Enables overriding of the smoke test values in the config/settings.js file
           testsThatAlwaysRunForAllPages(testArgs);
           testsThatAlwaysRunForAllAMPPages(testArgs);
           // Page specific tests

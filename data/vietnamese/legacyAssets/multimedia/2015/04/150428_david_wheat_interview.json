@@ -23,7 +23,7 @@
     "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "38491575" },
     "tags": {},
     "version": "v1.0.0",
-    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "blockTypes": ["legacyMedia", "paragraph"],
     "includeComments": false
   },
   "content": {
@@ -222,7 +222,12 @@
       "uri": "/vietnamese/multimedia",
       "type": "simple"
     },
-    "site": { "subType": "site", "name": "BBCVietnamese.com", "uri": "/vietnamese", "type": "simple" },
+    "site": {
+      "subType": "site",
+      "name": "BBCVietnamese.com",
+      "uri": "/vietnamese",
+      "type": "simple"
+    },
     "groups": []
   }
 }

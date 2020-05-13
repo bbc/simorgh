@@ -150,10 +150,30 @@ export const service = {
         listen: 'Dhaggeeffadhaa',
         watch: 'Daawwadhu',
         liveLabel: 'KALLATTIIN',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Video caption, ',
+          text: 'Warning: Third party content may contain adverts',
+        },
+        fallback: {
+          text: 'Content is not available',
+          linkText: 'View content on %provider_name%',
+          linkTextSuffixVisuallyHidden: ', external',
+          warningText:
+            "Qabiyyeewwan maddawwan alaa irraa ta'aniif BBCn itti gaafatamaa miti.",
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
+      topStoriesTitle: 'Isin hin darbiin',
+      featuresAnalysisTitle: 'Features',
     },
     brandSVG,
     mostRead: {
@@ -163,7 +183,12 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
+      onFrontPage: false,
+      durationLabel: 'Duration %duration%',
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
@@ -225,8 +250,8 @@ export const service = {
       },
     ],
     timezone: 'Africa/Addis_Ababa',
-    liveRadio: {
-      externalIdOverrides: { bbc_oromo_radio: 'bbc_afaanoromoo_radio' },
+    liveRadioOverrides: {
+      masterBrand: { bbc_oromo_radio: 'bbc_afaanoromoo_radio' },
     },
   },
 };

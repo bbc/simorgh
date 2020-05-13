@@ -1,4 +1,5 @@
 import pipe from 'ramda/src/pipe';
+import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
 import {
   augmentWithTimestamp,
@@ -10,16 +11,27 @@ import addHeadlineBlock from './addHeadlineBlock';
 import timestampToMilliseconds from './timestampToMilliseconds';
 import addSummaryBlock from './addSummaryBlock';
 import cpsOnlyOnwardJourneys from './cpsOnlyOnwardJourneys';
+import addRecommendationsBlock from './addRecommendationsBlock';
 import addBylineBlock from './addBylineBlock';
 import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
+import processUnavailableMedia from './processUnavailableMedia';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import getAdditionalPageData from '../utils/getAdditionalPageData';
 
 const formatPageData = pipe(
   addAnalyticsCounterName,
   parseInternalLinks,
   timestampToMilliseconds,
 );
+
+export const only = (pageType, transformer) => (pageData, ...args) => {
+  const isCorrectPageType = path(['metadata', 'type'], pageData) === pageType;
+  return isCorrectPageType ? transformer(pageData, ...args) : pageData;
+};
+
 const processOptimoBlocks = pipe(
+  only(MEDIA_ASSET_PAGE, processUnavailableMedia),
   addHeadlineBlock,
   addSummaryBlock,
   augmentWithTimestamp,
@@ -27,7 +39,9 @@ const processOptimoBlocks = pipe(
   addIdsToBlocks,
   applyBlockPositioning,
   cpsOnlyOnwardJourneys,
+  addRecommendationsBlock,
 );
+
 const transformJson = async json => {
   try {
     const formattedPageData = formatPageData(json);
@@ -40,13 +54,19 @@ const transformJson = async json => {
   }
 };
 
-export default async path => {
-  const { json, ...rest } = await fetchPageData(path);
+export default async ({ path: pathname, service, variant }) => {
+  const { json, ...rest } = await fetchPageData(pathname);
+
+  const additionalPageData = await getAdditionalPageData(
+    json,
+    service,
+    variant,
+  );
 
   return {
     ...rest,
     ...(json && {
-      pageData: await transformJson(json),
+      pageData: { ...(await transformJson(json)), ...additionalPageData },
     }),
   };
 };
