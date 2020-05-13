@@ -10,7 +10,7 @@
     "type": "MAP",
     "createdBy": "ukrainian-v6",
     "language": "uk",
-    "lastUpdated": 1583407642547,
+    "lastUpdated": 1588679469584,
     "firstPublished": 1583407632000,
     "lastPublished": 1583407632000,
     "timestamp": 1583407632000,
@@ -48,10 +48,10 @@
     "tags": {
       "about": [
         {
-          "thingLabel": "Politics",
+          "thingLabel": "Політика",
           "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
           "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
-          "thingType": ["Thing", "Theme"],
+          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
           "thingSameAs": ["http://dbpedia.org/resource/Politics"],
           "topicName": "Політика",
           "topicId": "cyx5kzy2wdrt",
@@ -64,7 +64,7 @@
         }
       ]
     },
-    "version": "v1.1.6",
+    "version": "v1.2.1",
     "blockTypes": ["media", "paragraph", "list"],
     "includeComments": false
   },
@@ -75,9 +75,7 @@
         "subType": "clip",
         "format": "video",
         "title": "Уряд Шмигаля: що говорять депутати",
-        "synopses": {
-          "short": "Уряд Шмигаля: що говорять депутати"
-        },
+        "synopses": { "short": "Уряд Шмигаля: що говорять депутати" },
         "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p085p12n.jpg",
         "embedding": true,
         "advertising": true,
@@ -243,9 +241,7 @@
       "subType": "clip",
       "format": "video",
       "title": "Уряд Шмигаля: що говорять депутати",
-      "synopses": {
-        "short": "Уряд Шмигаля: що говорять депутати"
-      },
+      "synopses": { "short": "Уряд Шмигаля: що говорять депутати" },
       "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p085p12n.jpg",
       "embedding": true,
       "advertising": true,
@@ -257,11 +253,7 @@
           "duration": 150,
           "durationISO8601": "PT2M30S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true,
-            "world": false
-          },
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
           "availableFrom": 1583354616000
         }
       ],

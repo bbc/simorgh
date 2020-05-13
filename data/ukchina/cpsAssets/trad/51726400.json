@@ -10,9 +10,9 @@
     "type": "MAP",
     "createdBy": "ukchina-traditional-v6",
     "language": "zh-Hant",
-    "lastUpdated": 1583247216830,
+    "lastUpdated": 1588464575855,
     "firstPublished": 1583247195000,
-    "lastPublished": 1583247207000,
+    "lastPublished": 1583247195000,
     "timestamp": 1583247195000,
     "options": {
       "isIgorSeoTagsEnabled": false,
@@ -48,52 +48,52 @@
     "tags": {
       "about": [
         {
-          "thingLabel": "Nature",
-          "thingUri": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
-          "thingId": "12e69b92-a7ba-4463-84e0-be107b9805d0",
-          "thingType": ["Thing", "Theme"],
-          "thingSameAs": ["http://dbpedia.org/resource/Nature"]
+          "thingLabel": "United States",
+          "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+          "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+          "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+          "thingSameAs": ["http://sws.geonames.org/6252001/"]
+        },
+        {
+          "thingLabel": "Climate change",
+          "thingUri": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+          "thingId": "e6369e45-f838-49cc-b5ac-857ed182e549",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q125928",
+            "http://dbpedia.org/resource/Climate_change"
+          ]
         },
         {
           "thingLabel": "Animals",
           "thingUri": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
           "thingId": "14745d1f-885d-4b9f-b28a-24540e7beb15",
-          "thingType": ["Thing", "Theme"],
+          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
           "thingSameAs": [
-            "http://dbpedia.org/resource/Animal",
-            "http://www.wikidata.org/entity/Q729"
+            "http://www.wikidata.org/entity/Q729",
+            "http://dbpedia.org/resource/Animal"
           ]
-        },
-        {
-          "thingLabel": "United States",
-          "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
-          "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
-          "thingType": ["nsl:Topic", "Thing", "Place", "geoname:GeoTagConcept"],
-          "thingSameAs": ["http://sws.geonames.org/6252001/"]
         },
         {
           "thingLabel": "Conservation",
           "thingUri": "http://www.bbc.co.uk/things/bce059a1-1a05-4b8d-aac8-381699aaa2f0#id",
           "thingId": "bce059a1-1a05-4b8d-aac8-381699aaa2f0",
-          "thingType": ["Thing", "Theme"],
+          "thingType": ["core:Thing", "core:Theme", "tagging:TagConcept"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Conservation_(ethic)",
             "http://www.wikidata.org/entity/Q628403"
           ]
         },
         {
-          "thingLabel": "Climate change",
-          "thingUri": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
-          "thingId": "e6369e45-f838-49cc-b5ac-857ed182e549",
-          "thingType": ["Thing", "Event"],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Climate_change",
-            "http://www.wikidata.org/entity/Q125928"
-          ]
+          "thingLabel": "Nature",
+          "thingUri": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
+          "thingId": "12e69b92-a7ba-4463-84e0-be107b9805d0",
+          "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+          "thingSameAs": ["http://dbpedia.org/resource/Nature"]
         }
       ]
     },
-    "version": "v1.1.6",
+    "version": "v1.2.1",
     "blockTypes": ["media", "paragraph", "list"],
     "includeComments": false
   },
@@ -104,9 +104,7 @@
         "subType": "clip",
         "format": "video",
         "title": "加利福尼亚小镇居民区的不速之客",
-        "synopses": {
-          "short": "加利福尼亚小镇居民区的不速之客"
-        },
+        "synopses": { "short": "加利福尼亚小镇居民区的不速之客" },
         "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p084t6zf.jpg",
         "embedding": true,
         "advertising": true,
@@ -353,9 +351,7 @@
       "subType": "clip",
       "format": "video",
       "title": "加利福尼亚小镇居民区的不速之客",
-      "synopses": {
-        "short": "加利福尼亚小镇居民区的不速之客"
-      },
+      "synopses": { "short": "加利福尼亚小镇居民区的不速之客" },
       "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p084t6zf.jpg",
       "embedding": true,
       "advertising": true,
@@ -367,11 +363,7 @@
           "duration": 62,
           "durationISO8601": "PT1M2S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true,
-            "world": false
-          },
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
           "availableFrom": 1582714352000
         }
       ],

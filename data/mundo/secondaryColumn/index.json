@@ -1,0 +1,332 @@
+{
+  "topStories":[
+    {
+      "headlines":{
+        "headline":"Headline"
+      },
+      "locators":{
+        "assetUri":"/mundo/23244196",
+        "cpsUrn":"urn:bbc:content:assetUri:mundo/23244196",
+        "assetId":"23244196"
+      },
+      "summary":"Summary",
+      "timestamp":1563370009000,
+      "language":"es",
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63711182",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/6DCF/test/_63711182_perez-cruz_ecord_iodp_lb_myrtle.jpg",
+        "path":"/cpsdevpb/6DCF/test/_63711182_perez-cruz_ecord_iodp_lb_myrtle.jpg",
+        "height":1152,
+        "width":2048,
+        "altText":"Picture of an oil rig",
+        "caption":"Oil rig",
+        "copyrightHolder":"BBC",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "prominence":"standard",
+      "section":{
+        "subType":"IDX",
+        "name":"Noticias",
+        "uri":"/mundo/front_page",
+        "type":"simple"
+      },
+      "id":"urn:bbc:ares::asset:mundo/23244196",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Wapinzani waafikiana nchini South Sudan",
+        "overtyped":"Overtyped headline"
+      },
+      "locators":{
+        "assetUri":"/swahili/23210641",
+        "cpsUrn":"urn:bbc:content:assetUri:swahili/23210641",
+        "assetId":"23210641"
+      },
+      "summary":"Mahasimu nchini Sudan Kusini wameweka saini makubaliano ya kugawana madaraka huku Rais Salva Kirr akitoa wito wa kutaka kuwepo amani kwenye nchi ambapo vita vya wenyewe kwa wenyewe vimesababisha vifo vya maelfu ya watu.",
+      "timestamp":1533557370000,
+      "language":"sw",
+      "passport":{
+        "category":{
+          "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+          "categoryName":"News"
+        },
+        "campaigns":[
+          {
+            "campaignId":"5ad8625ac93a9f000eecb253",
+            "campaignName":"Inspire me"
+          },
+          {
+            "campaignId":"5ad86270c93a9f000eecb255",
+            "campaignName":"Amuse me"
+          },
+          {
+            "campaignId":"5ae6ef1da75015000e2d194f",
+            "campaignName":"testCampaign"
+          }
+        ],
+        "taggings":[
+
+        ]
+      },
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63685549",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/1715E/test/_63685549_c5daa10f-fea1-48bb-9570-dd61904a22bc.jpg",
+        "path":"/cpsdevpb/1715E/test/_63685549_c5daa10f-fea1-48bb-9570-dd61904a22bc.jpg",
+        "height":549,
+        "width":976,
+        "altText":"A Sudanese man gathers branches to build his destroyed house in Abyei.",
+        "caption":"A Sudanese man gathers branches as he a builds a new roof for his destroyed house in Abyei.",
+        "copyrightHolder":"BBC",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "prominence":"standard",
+      "section":{
+        "subType":"IDX",
+        "name":"Swahili",
+        "uri":"/swahili/front_page",
+        "type":"simple"
+      },
+      "overtypedSummary":"Overtyped summary",
+      "site":{
+        "subType":"site",
+        "name":"BBC Swahili",
+        "uri":"/swahili",
+        "type":"simple"
+      },
+      "id":"urn:bbc:ares::asset:swahili/23210641",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Audio map page test"
+      },
+      "locators":{
+        "assetUri":"/mundo/23245765",
+        "cpsUrn":"urn:bbc:content:assetUri:mundo/23245765",
+        "assetId":"23245765"
+      },
+      "summary":"Audio map page test",
+      "timestamp":1564757533000,
+      "language":"es",
+      "cpsType":"MAP",
+      "media":{
+        "id":"63501300",
+        "subType":"index",
+        "format":"audio",
+        "externalId":"bbc_world_service_west_africa",
+        "duration":"PT0S",
+        "caption":"Tower",
+        "image":{
+          "id":"63501300",
+          "subType":"thumbnail",
+          "href":"http://b.files.bbci.co.uk/58B7/test/_63711722__108159722_gettyimages-1157643996.jpg",
+          "path":"/cpsdevpb/58B7/test/_63711722__108159722_gettyimages-1157643996.jpg",
+          "height":360,
+          "width":640,
+          "altText":"tower",
+          "copyrightHolder":"(C) British Broadcasting Corporation",
+          "type":"image"
+        },
+        "embedding":false,
+        "available":true,
+        "live":true,
+        "type":"version"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "prominence":"standard",
+      "section":{
+        "subType":"IDX",
+        "name":"Noticias",
+        "uri":"/mundo/front_page",
+        "type":"simple"
+      },
+      "id":"urn:bbc:ares::asset:mundo/23245765",
+      "type":"cps"
+    }
+  ],
+  "features":[
+    {
+      "headlines":{
+        "headline":"5 proyectos descomunales con los que China quiere mostrar su poderío científico",
+        "overtyped":"Mas noticias"
+      },
+      "locators":{
+        "assetUri":"/mundo/vert-cap-23038373",
+        "cpsUrn":"urn:bbc:content:assetUri:mundo/vert-cap-23038373",
+        "assetId":"23038373"
+      },
+      "summary":"Además de sus decenas de museos tradicionales, Ciudad de México es una galería al aire libre de arte callejero, en la que exponen artistas nacionales y extranjeros. Lo invitamos a un recorrido.",
+      "timestamp":1462433623000,
+      "language":"es",
+      "byline":{
+        "name":"Aled Scourfield",
+        "title":"BBC News, Wales",
+        "persons":[
+          {
+            "name":"Aled Scourfield",
+            "function":"BBC News, Wales"
+          }
+        ]
+      },
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63486494",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/C13C/test/_63486494_a77a56ca-be96-4113-84d0-d9be7f8ee6f9.jpg",
+        "path":"/cpsdevpb/C13C/test/_63486494_a77a56ca-be96-4113-84d0-d9be7f8ee6f9.jpg",
+        "height":371,
+        "width":660,
+        "altText":"bbc",
+        "copyrightHolder":"BBC",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "id":"urn:bbc:ares::asset:mundo/vert-cap-23038373",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Cómo Venezuela se metió de lleno en la campaña electoral de España"
+      },
+      "locators":{
+        "assetUri":"/mundo/noticias-23048155",
+        "cpsUrn":"urn:bbc:content:assetUri:mundo/noticias-23048155",
+        "assetId":"23048155"
+      },
+      "summary":"Los problemas de Venezuela la han convertido en una presencia familiar en los medios informativos de todo el mundo. Y eso también sucede en España.",
+      "timestamp":1464590024000,
+      "language":"es",
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63486479",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/17CBC/test/_63486479_d0149c46-2ef3-47d0-a0d6-8f42d8f020d4.jpg",
+        "path":"/cpsdevpb/17CBC/test/_63486479_d0149c46-2ef3-47d0-a0d6-8f42d8f020d4.jpg",
+        "height":371,
+        "width":660,
+        "altText":"afp",
+        "copyrightHolder":"AFP",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "id":"urn:bbc:ares::asset:mundo/noticias-23048155",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Cómo usar Google Maps sin conexión a internet"
+      },
+      "locators":{
+        "assetUri":"/mundo/blog-de-los-editores-23038590",
+        "cpsUrn":"urn:bbc:content:assetUri:mundo/blog-de-los-editores-23038590",
+        "assetId":"23038590"
+      },
+      "summary":"á ä à â ¿Por qué algunas personas conservan su aspecto juvenil más que otras? ñ ç €",
+      "timestamp":1462463595000,
+      "language":"es",
+      "byline":{
+        "name":"José Antonio-Domínguez",
+        "title":"BBC Mundo Reporter",
+        "persons":[
+          {
+            "name":"José Antonio-Domínguez",
+            "function":"BBC Mundo Reporter",
+            "thumbnail":"http://b.files.bbci.co.uk/8F14/test/_63482663_tv000088736.jpg"
+          }
+        ]
+      },
+      "passport":{
+        "category":{
+          "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+          "categoryName":"News"
+        },
+        "taggings":[
+
+        ]
+      },
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63486504",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/9E78/test/_63486504_53094e7e-3454-4cc2-aaad-061c587fc686.jpg",
+        "path":"/cpsdevpb/9E78/test/_63486504_53094e7e-3454-4cc2-aaad-061c587fc686.jpg",
+        "height":371,
+        "width":660,
+        "altText":"getty",
+        "copyrightHolder":"Getty Images",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "includeComments":true,
+      "id":"urn:bbc:ares::asset:mundo/blog-de-los-editores-23038590",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"El colorido encanto del arte callejero chilango 17"
+      },
+      "locators":{
+        "assetUri":"/mundo/internacional-23038380",
+        "cpsUrn":"urn:bbc:content:assetUri:mundo/internacional-23038380",
+        "assetId":"23038380"
+      },
+      "summary":"Además de sus decenas de museos tradicionales, Ciudad de México es una galería al aire libre de arte callejero, en la que exponen artistas nacionales y extranjeros. Lo invitamos a un recorrido.",
+      "timestamp":1462445134000,
+      "language":"es",
+      "byline":{
+        "name":"Aled Scourfield",
+        "title":"BBC News, Wales",
+        "persons":[
+          {
+            "name":"Aled Scourfield",
+            "function":"BBC News, Wales"
+          }
+        ]
+      },
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63482865",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/DDFC/test/_63482865_orange2.jpg",
+        "path":"/cpsdevpb/DDFC/test/_63482865_orange2.jpg",
+        "height":549,
+        "width":976,
+        "altText":"Orange 2",
+        "caption":"Orange 2",
+        "copyrightHolder":"BBC",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "id":"urn:bbc:ares::asset:mundo/internacional-23038380",
+      "type":"cps"
+    }
+  ]
+}
