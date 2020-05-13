@@ -7,6 +7,7 @@ import {
 } from '@bbc/psammead-assets/amp-boilerplate';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import {
@@ -45,7 +46,7 @@ const constructAdJsonData = ({ service }) => {
 const ampAdPropsMobile = ({ service }) => ({
   'data-block-on-consent': 'default',
   'data-npa-on-unknown-consent': 'true',
-  media: '(max-width: 599px)',
+  media: `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
   type: 'doubleclick',
   width: '320',
   height: '50',
@@ -59,7 +60,7 @@ const ampAdPropsMobile = ({ service }) => ({
 const ampAdPropsDesktop = ({ service }) => ({
   'data-block-on-consent': 'default',
   'data-npa-on-unknown-consent': 'true',
-  media: '(min-width: 600px)',
+  media: `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN})`,
   type: 'doubleclick',
   width: '970',
   height: '250',
@@ -97,10 +98,7 @@ const AmpAd = ({ service }) => {
         {AMP_ACCESS_JS}
         {AMP_ACCESS_FETCH(service)}
       </Helmet>
-      <div
-        amp-access="toggles.ads.enabled AND geoIp.advertiseCombined"
-        amp-access-hide="true"
-      >
+      <div amp-access-hide="true">
         <StyledAd>
           <amp-ad {...ampAdPropsMobile({ service })}>
             <amp-img
