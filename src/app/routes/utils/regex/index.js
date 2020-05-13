@@ -13,7 +13,7 @@ import {
   getLegacyAssetRegex,
   getMostReadPageRegex,
   getMostReadDataRegex,
-  getIDXPageRegex,
+  getIndexPageRegex,
   getSecondaryColumnDataRegex,
 } from './utils';
 
@@ -52,4 +52,4 @@ export const secondaryColumnDataRegexPath = getSecondaryColumnDataRegex(
   allServices,
 );
 
-export const idxPagePath = getIDXPageRegex();
+export const indexPagePath = getIndexPageRegex();

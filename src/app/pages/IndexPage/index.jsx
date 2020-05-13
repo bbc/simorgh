@@ -1,6 +1,6 @@
 import React from 'react';
 
-const IDXPage = () => {
+const IndexPage = () => {
   return (
     <main>
       <div />
@@ -8,4 +8,4 @@ const IDXPage = () => {
   );
 };
 
-export default IDXPage;
+export default IndexPage;

@@ -5,3 +5,9 @@ exports[`IDXPage should correctly render a blank page with HOC components 1`] = 
   <div />
 </main>
 `;
+
+exports[`IndexPage should correctly render a blank page with HOC components 1`] = `
+<main>
+  <div />
+</main>
+`;
