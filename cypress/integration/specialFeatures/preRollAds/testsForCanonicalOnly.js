@@ -41,27 +41,25 @@ export default ({ serviceName, pageType, path }) => {
                 ).should('exist');
               } else {
                 cy.log(
-                  `Duration is under 0 on ${pageType} for ${Cypress.env(
-                    'currentPath',
-                  )}`,
+                  `Duration is below ${MIN_VIDEO_DURATION_FOR_PREROLLS} on ${path}
+                  `,
                 );
               }
             } else {
               cy.log(
-                `No ads allowed in ad settings on ${pageType} for ${Cypress.env(
-                  'currentPath',
-                )}`,
+                `No ads allowed in ad settings on ${pageType} ${path}
+                `,
               );
             }
           } else {
             cy.log(
-              `Not a CPS asset on ${pageType} for ${Cypress.env(
-                'currentPath',
-              )}`,
+              `Not a CPS asset on ${pageType} ${path}
+              `,
             );
           }
         } else {
-          cy.log(`No media on ${pageType} for ${Cypress.env('currentPath')}`);
+          cy.log(`No media on ${pageType} ${path}
+          `);
         }
       });
     });
