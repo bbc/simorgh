@@ -17,12 +17,6 @@ import onClient from '#lib/utilities/onClient';
 jest.mock('./helpers/logEmbedSourceStatus');
 jest.mock('#lib/utilities/onClient');
 
-const setToggle = flag => {
-  defaultToggles[
-    process.env.SIMORGH_APP_ENV || 'local'
-  ].logMediaPlayerStatus.enabled = flag;
-};
-
 describe('MediaPlayer', () => {
   shouldMatchSnapshot(
     'Calls the canonical placeholder when platform is canonical and showPlaceholder is true',
@@ -74,12 +68,18 @@ it('should contain the noscript tag for no-JS scenarios ', () => {
   expect(document.querySelector('noscript')).toBeInTheDocument();
 });
 
+const enableLogMediaPlayerStatus = flag => {
+  defaultToggles[
+    process.env.SIMORGH_APP_ENV || 'local'
+  ].logMediaPlayerStatus.enabled = flag;
+};
+
 describe('log MediaPlayer status', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     logEmbedSourceStatus.mockImplementationOnce(() => jest.fn());
     onClient.mockReturnValue(false);
-    setToggle(true);
+    enableLogMediaPlayerStatus(true);
   });
 
   it('should log embed source status code when player is loaded', () => {
@@ -95,7 +95,7 @@ describe('log MediaPlayer status', () => {
   });
 
   it('should not log when toggle is disabled', () => {
-    setToggle(false);
+    enableLogMediaPlayerStatus(false);
     render(VideoCanonicalWithCaption);
 
     expect(logEmbedSourceStatus).not.toHaveBeenCalled();
