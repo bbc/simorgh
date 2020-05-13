@@ -109,6 +109,12 @@ and limitations under the License.
 
 //! moment-timezone.js
 
+//! moment.js
+
+//! moment.js language configuration
+
+//! moment.js locale configuration
+
 //! stable.js 0.1.8, https://github.com/Two-Screen/stable
 
 //! version : 0.5.28
