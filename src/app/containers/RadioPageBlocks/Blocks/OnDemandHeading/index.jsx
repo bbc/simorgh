@@ -16,7 +16,7 @@ import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const StyledHeadline = styled(Headline)`
-  @media (min-width: 1px) {
+  @media screen {
     padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING_TRPL};
   }
 `;
