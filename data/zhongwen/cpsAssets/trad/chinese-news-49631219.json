@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/zhongwen/trad/chinese-news-49631219",
       "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49631219",
-      "curie": "http://www.bbc.co.uk/asset/4ef85b8b-be8d-1a4b-851c-db9c073e76dc"
+      "curie": "http://www.bbc.co.uk/asset/4ef85b8b-be8d-1a4b-851c-db9c073e76dc",
+      "assetId": "49631219"
     },
     "type": "MAP",
     "createdBy": "zhongwen-traditional-v6",
     "language": "zh-Hant",
-    "lastUpdated": 1568077214115,
-    "firstPublished": 1568077193,
-    "lastPublished": 1568077207,
+    "lastUpdated": 1589270008123,
+    "firstPublished": 1568077193000,
+    "lastPublished": 1568077193000,
+    "timestamp": 1568077193000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -40,10 +42,11 @@
           "campaignId": "5a988e3139461b000e9dabf9",
           "campaignName": "WS - Divert me"
         }
-      ]
+      ],
+      "taggings": []
     },
     "tags": {},
-    "version": "v1.0.10",
+    "version": "v1.2.1",
     "blockTypes": ["media", "paragraph"],
     "includeComments": false
   },
@@ -72,9 +75,10 @@
             "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
+              "nonUk": true,
+              "world": false
             },
-            "availableFrom": 1568021741
+            "availableFrom": 1568021741000
           }
         ],
         "type": "media"
@@ -95,10 +99,12 @@
     "locators": {
       "assetUri": "/zhongwen/trad/chinese-news-49631219",
       "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49631219",
-      "curie": "http://www.bbc.co.uk/asset/4ef85b8b-be8d-1a4b-851c-db9c073e76dc"
+      "curie": "http://www.bbc.co.uk/asset/4ef85b8b-be8d-1a4b-851c-db9c073e76dc",
+      "assetId": "49631219"
     },
     "summary": "中國首只克隆貓誕生背後有什麼故事？",
-    "timestamp": 1568077214115,
+    "timestamp": 1568077193000,
+    "language": "zh-Hant",
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -109,7 +115,8 @@
           "campaignId": "5a988e3139461b000e9dabf9",
           "campaignName": "WS - Divert me"
         }
-      ]
+      ],
+      "taggings": []
     },
     "media": {
       "id": "p07mvfms",
@@ -132,11 +139,8 @@
           "duration": 125,
           "durationISO8601": "PT2M5S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          },
-          "availableFrom": 1568021741
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1568021741000
         }
       ],
       "type": "media"
