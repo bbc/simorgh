@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "id": "urn:bbc:ares::ws_live:bbc_pashto_radio",
+    "id": "urn:bbc:ares:ws_media:live:bbc_pashto_radio",
     "locators": {
       "pipsUrn": "urn:bbc:pips:bbc_pashto_radio"
     },
