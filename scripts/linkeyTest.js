@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 /* eslint-disable no-undef */
 const getServiceName = serviceConfig => {
-  if (serviceConfig.length === 1) {
+  if (serviceConfig.default) {
     return service.default.service;
   }
 
@@ -11,7 +11,7 @@ const getServiceName = serviceConfig => {
 };
 
 const getLinks = (serviceConfig, type) => {
-  if (serviceConfig.length === 1) {
+  if (serviceConfig.default) {
     return serviceConfig.default[type];
   }
 
