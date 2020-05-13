@@ -1,201 +1,200 @@
 {
+  "metadata": {
+    "id": "urn:bbc:ares::asset:urdu/world-23268929",
+    "locators": {
+      "assetUri": "/urdu/world-23268929",
+      "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23268929",
+      "curie": "http://www.bbc.co.uk/asset/febd42cb-9572-ec40-9a18-d1141608c13a",
+      "assetId": "23268929"
+    },
+    "type": "MAP",
+    "createdBy": "urdu-v6",
+    "language": "ur",
+    "lastUpdated": 1588335919927,
+    "firstPublished": 1583153356000,
+    "lastPublished": 1583153356000,
+    "timestamp": 1583153356000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "urdu.world.media_asset.23268929.page",
+      "cps_asset_id": "23268929"
+    },
+    "passport": { "taggings": [] },
+    "tags": {},
+    "version": "v1.2.1",
+    "blockTypes": ["media", "paragraph", "heading", "subheading", "crosshead"],
+    "includeComments": false
+  },
   "content": {
     "blocks": [
       {
+        "id": "p01kdbns",
+        "subType": "clip",
+        "format": "video",
+        "title": "How Germans remember the World Wars",
+        "synopses": {
+          "short": "Remembrance Day: How Germans remember the World Wars",
+          "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
+          "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?"
+        },
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg",
+        "embedding": true,
         "advertising": true,
         "caption": "How do Germans remember the World Wars?",
-        "embedding": true,
-        "format": "video",
-        "id": "p01kdbns",
-        "imageCopyright": "BBC",
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg",
-        "subType": "clip",
-        "synopses": {
-          "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
-          "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?",
-          "short": "Remembrance Day: How Germans remember the World Wars"
-        },
-        "title": "How Germans remember the World Wars",
-        "type": "media",
         "versions": [
           {
-            "availableFrom": 1541761851000,
-            "availableTerritories": {
-              "nonUk": false,
-              "uk": true,
-              "world": false
-            },
+            "versionId": "p01kdbnv",
+            "types": ["Original"],
             "duration": 162,
             "durationISO8601": "PT2M42S",
-            "types": ["Original"],
-            "versionId": "p01kdbnv",
             "warnings": {
-              "long": "Contains some strong language.",
-              "short": "Contains some strong language."
-            }
+              "short": "Contains some strong language.",
+              "long": "Contains some strong language."
+            },
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": false,
+              "world": false
+            },
+            "availableFrom": 1541761851000
           }
-        ]
+        ],
+        "imageCopyright": "BBC",
+        "type": "media"
       },
       {
-        "markupType": "candy_xml",
-        "role": "introduction",
         "text": "<span xml:lang=\"en\" lang=\"en\" class=\"lang-en\"> Introduction</span>",
-        "type": "paragraph"
-      },
-      {
+        "role": "introduction",
         "markupType": "candy_xml",
-        "text": "<span xml:lang=\"en\" lang=\"en\" class=\"lang-en\"> Text text text text text</span>",
         "type": "paragraph"
       },
       {
-        "markupType": "plain_text",
+        "text": "<span xml:lang=\"en\" lang=\"en\" class=\"lang-en\"> Text text text text text</span>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
         "text": "Heading!\"£$%^&*()[]{}",
+        "markupType": "plain_text",
         "type": "heading"
       },
       {
-        "markupType": "candy_xml",
         "text": "<span xml:lang=\"en\" lang=\"en\" class=\"lang-en\"> text text text text text?!</span>",
+        "markupType": "candy_xml",
         "type": "paragraph"
       },
       {
-        "markupType": "plain_text",
         "text": "Subheading!\"£$%^&*()",
+        "markupType": "plain_text",
         "type": "subheading"
       },
       {
-        "markupType": "plain_text",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "markupType": "plain_text",
         "type": "paragraph"
       },
       {
-        "markupType": "plain_text",
         "text": "Crosshead<crosshead>",
+        "markupType": "plain_text",
         "type": "crosshead"
       },
       {
-        "markupType": "plain_text",
         "text": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
+        "markupType": "plain_text",
         "type": "paragraph"
       }
     ]
   },
-  "metadata": {
-    "analyticsLabels": {
-      "counterName": "urdu.world.media_asset.23268929.page",
-      "cps_asset_id": "23268929",
-      "cps_asset_type": "map"
-    },
-    "blockTypes": ["media", "paragraph", "heading", "subheading", "crosshead"],
-    "createdBy": "urdu-v6",
-    "firstPublished": 1583153356000,
-    "id": "urn:bbc:ares::asset:urdu/world-23268929",
-    "includeComments": false,
-    "language": "ur",
-    "lastPublished": 1583153357000,
-    "lastUpdated": 1583153370726,
-    "locators": {
-      "assetId": "23268929",
-      "assetUri": "/urdu/world-23268929",
-      "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23268929",
-      "curie": "http://www.bbc.co.uk/asset/febd42cb-9572-ec40-9a18-d1141608c13a"
-    },
-    "options": {
-      "allowDateStamp": true,
-      "allowHeadline": true,
-      "allowPrintingSharingLinks": true,
-      "allowRelatedStoriesBox": true,
-      "allowRightHandSide": true,
-      "hasNewsTracker": false,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "isFactCheck": false,
-      "isIgorSeoTagsEnabled": false,
-      "isKeyContent": false
-    },
-    "tags": {},
-    "timestamp": 1583153356000,
-    "type": "MAP",
-    "version": "v1.1.6"
-  },
   "promo": {
     "headlines": {
-      "headline": "Remembrance Day: How Germans remember the World Wars",
-      "shortHeadline": "Urdu CPS test UK ONLY How Germans remember the World Wars"
+      "shortHeadline": "Urdu CPS test UK ONLY How Germans remember the World Wars",
+      "headline": "Remembrance Day: How Germans remember the World Wars"
     },
-    "id": "urn:bbc:ares::asset:urdu/world-23268929",
-    "indexImage": {
-      "altText": "Description of picture (ALT TEXT)",
-      "copyrightHolder": "BBC",
-      "height": 576,
-      "href": "http://b.files.bbci.co.uk/16777/test/_63732029_p01kdbpk.jpg",
-      "id": "63732029",
-      "path": "/cpsdevpb/16777/test/_63732029_p01kdbpk.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 1024
-    },
-    "language": "ur",
     "locators": {
-      "assetId": "23268929",
       "assetUri": "/urdu/world-23268929",
       "cpsUrn": "urn:bbc:content:assetUri:urdu/world-23268929",
-      "curie": "http://www.bbc.co.uk/asset/febd42cb-9572-ec40-9a18-d1141608c13a"
-    },
-    "media": {
-      "advertising": true,
-      "caption": "How do Germans remember the World Wars?",
-      "embedding": true,
-      "format": "video",
-      "id": "p01kdbns",
-      "imageCopyright": "BBC",
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg",
-      "subType": "clip",
-      "synopses": {
-        "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
-        "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?",
-        "short": "Remembrance Day: How Germans remember the World Wars"
-      },
-      "title": "How Germans remember the World Wars",
-      "type": "media",
-      "versions": [
-        {
-          "availableFrom": 1541761851000,
-          "availableTerritories": {
-            "nonUk": false,
-            "uk": true,
-            "world": false
-          },
-          "duration": 162,
-          "durationISO8601": "PT2M42S",
-          "types": ["Original"],
-          "versionId": "p01kdbnv",
-          "warnings": {
-            "long": "Contains some strong language.",
-            "short": "Contains some strong language."
-          }
-        }
-      ]
-    },
-    "passport": {
-      "taggings": []
+      "curie": "http://www.bbc.co.uk/asset/febd42cb-9572-ec40-9a18-d1141608c13a",
+      "assetId": "23268929"
     },
     "summary": "Can people in today's Germany mourn their dead without whitewashing their country's past?",
     "timestamp": 1583153356000,
+    "language": "ur",
+    "passport": { "taggings": [] },
+    "media": {
+      "id": "p01kdbns",
+      "subType": "clip",
+      "format": "video",
+      "title": "How Germans remember the World Wars",
+      "synopses": {
+        "short": "Remembrance Day: How Germans remember the World Wars",
+        "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
+        "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?"
+      },
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "How do Germans remember the World Wars?",
+      "versions": [
+        {
+          "versionId": "p01kdbnv",
+          "types": ["Original"],
+          "duration": 162,
+          "durationISO8601": "PT2M42S",
+          "warnings": {
+            "short": "Contains some strong language.",
+            "long": "Contains some strong language."
+          },
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": false,
+            "world": false
+          },
+          "availableFrom": 1541761851000
+        }
+      ],
+      "imageCopyright": "BBC",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "63732029",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/16777/test/_63732029_p01kdbpk.jpg",
+      "path": "/cpsdevpb/16777/test/_63732029_p01kdbpk.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "Description of picture (ALT TEXT)",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:urdu/world-23268929",
     "type": "cps"
   },
   "relatedContent": {
-    "groups": [],
     "section": {
-      "name": "ورلڈ",
       "subType": "index",
-      "type": "simple",
-      "uri": "/urdu/world"
+      "name": "ورلڈ",
+      "uri": "/urdu/world",
+      "type": "simple"
     },
     "site": {
-      "name": "BBC Urdu",
       "subType": "site",
-      "type": "simple",
-      "uri": "/urdu"
-    }
+      "name": "BBC Urdu",
+      "uri": "/urdu",
+      "type": "simple"
+    },
+    "groups": []
   }
 }

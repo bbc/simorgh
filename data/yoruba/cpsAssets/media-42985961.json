@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/yoruba/media-42985961",
       "cpsUrn": "urn:bbc:content:assetUri:yoruba/media-42985961",
-      "curie": "http://www.bbc.co.uk/asset/e74e06ec-eaf0-ce4f-aff0-262c453086cd"
+      "curie": "http://www.bbc.co.uk/asset/e74e06ec-eaf0-ce4f-aff0-262c453086cd",
+      "assetId": "42985961"
     },
     "type": "MAP",
     "createdBy": "yoruba-v6",
     "language": "yo",
-    "lastUpdated": 1567530163159,
-    "firstPublished": 1518072696,
-    "lastPublished": 1567530149,
+    "lastUpdated": 1589267918213,
+    "firstPublished": 1518072696000,
+    "lastPublished": 1589267909000,
+    "timestamp": 1589267909000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -40,15 +42,16 @@
           "campaignId": "5a988e4739461b000e9dabfc",
           "campaignName": "Update me"
         }
-      ]
+      ],
+      "taggings": []
     },
     "tags": {
       "about": [
         {
-          "thingLabel": "Nigeria",
+          "thingLabel": "Orilẹede Naijiria",
           "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
           "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
-          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
+          "thingType": ["core:Place", "core:Thing", "tagging:TagConcept"],
           "thingSameAs": ["http://sws.geonames.org/2328926/"],
           "topicName": "Orilẹede Naijiria",
           "topicId": "cr50y07d1vqt",
@@ -61,45 +64,46 @@
         }
       ]
     },
-    "version": "v1.0.10",
+    "version": "v1.2.1",
     "blockTypes": ["media", "paragraph"],
     "includeComments": false
   },
   "content": {
     "blocks": [
       {
-        "id": "p07mbz8r",
+        "id": "p08cxfzw",
         "subType": "clip",
         "format": "audio",
         "title": "Ìṣẹ́jú kan BBC",
         "synopses": {
           "short": "Ìsẹ̀lẹ̀ jákèjádò orílẹ̀èdè àgbáyé láàárín ìṣẹ́jú kan",
-          "medium": "Àkójọpọ̀ ìsẹ̀lẹ̀ jákèjádò àgbáyé láàárín ìṣẹ́jú kan lórí BBC."
+          "medium": "Àkójọpọ̀ ìsẹ̀lẹ̀ jákèjádò àgbáyé láàárín ìṣẹ́jú kan lórí BBC"
         },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mbzbc.jpg",
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08cxg19.jpg",
         "embedding": true,
         "advertising": true,
         "caption": "Ìsẹ̀lẹ̀ jákèjádò orílẹ̀èdè àgbáyé láàárín ìṣẹ́jú kan",
         "versions": [
           {
-            "versionId": "p07mbz8t",
+            "versionId": "p08cxfzy",
             "types": ["Original"],
-            "duration": 58,
-            "durationISO8601": "PT58S",
+            "duration": 62,
+            "durationISO8601": "PT1M2S",
             "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
+              "nonUk": true,
+              "world": false
             },
-            "availableUntil": 1567616269,
-            "availableFrom": 1567529869
+            "availableUntil": 1589353963000,
+            "availableFrom": 1589267563000
           }
         ],
         "imageCopyright": "BBC",
         "type": "media"
       },
       {
-        "text": "Àkójọpọ̀ ìsẹ̀lẹ̀ jákèjádò àgbáyé láàárín ìṣẹ́jú kan lórí BBC.     ",
+        "text": "Àkójọpọ̀ ìsẹ̀lẹ̀ jákèjádò àgbáyé láàárín ìṣẹ́jú kan lórí BBC.",
         "markupType": "plain_text",
         "type": "paragraph"
       }
@@ -113,10 +117,12 @@
     "locators": {
       "assetUri": "/yoruba/media-42985961",
       "cpsUrn": "urn:bbc:content:assetUri:yoruba/media-42985961",
-      "curie": "http://www.bbc.co.uk/asset/e74e06ec-eaf0-ce4f-aff0-262c453086cd"
+      "curie": "http://www.bbc.co.uk/asset/e74e06ec-eaf0-ce4f-aff0-262c453086cd",
+      "assetId": "42985961"
     },
-    "summary": "Àkójọpọ̀ ìsẹ̀lẹ̀ jákèjádò àgbáyé láàárín ìṣẹ́jú kan lórí BBC.",
-    "timestamp": 1567530163159,
+    "summary": "Àkójọpọ̀ ìsẹ̀lẹ̀ jákèjádò àgbáyé láàárín ìṣẹ́jú kan lórí BBC",
+    "timestamp": 1589267909000,
+    "language": "yo",
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -127,48 +133,45 @@
           "campaignId": "5a988e4739461b000e9dabfc",
           "campaignName": "Update me"
         }
-      ]
+      ],
+      "taggings": []
     },
     "media": {
-      "id": "p07mbz8r",
+      "id": "p08cxfzw",
       "subType": "clip",
       "format": "audio",
       "title": "Ìṣẹ́jú kan BBC",
       "synopses": {
         "short": "Ìsẹ̀lẹ̀ jákèjádò orílẹ̀èdè àgbáyé láàárín ìṣẹ́jú kan",
-        "medium": "Àkójọpọ̀ ìsẹ̀lẹ̀ jákèjádò àgbáyé láàárín ìṣẹ́jú kan lórí BBC."
+        "medium": "Àkójọpọ̀ ìsẹ̀lẹ̀ jákèjádò àgbáyé láàárín ìṣẹ́jú kan lórí BBC"
       },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mbzbc.jpg",
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08cxg19.jpg",
       "embedding": true,
       "advertising": true,
       "caption": "Ìsẹ̀lẹ̀ jákèjádò orílẹ̀èdè àgbáyé láàárín ìṣẹ́jú kan",
       "versions": [
         {
-          "versionId": "p07mbz8t",
+          "versionId": "p08cxfzy",
           "types": ["Original"],
-          "duration": 58,
-          "durationISO8601": "PT58S",
+          "duration": 62,
+          "durationISO8601": "PT1M2S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          },
-          "availableUntil": 1567616269,
-          "availableFrom": 1567529869
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableUntil": 1589353963000,
+          "availableFrom": 1589267563000
         }
       ],
       "imageCopyright": "BBC",
       "type": "media"
     },
     "indexImage": {
-      "id": "108603836",
+      "id": "112237149",
       "subType": "index",
-      "href": "http://c.files.bbci.co.uk/F956/production/_108603836_p07mbzbc.jpg",
-      "path": "/cpsprodpb/F956/production/_108603836_p07mbzbc.jpg",
-      "height": 549,
-      "width": 976,
+      "href": "http://c.files.bbci.co.uk/16FDD/production/_112237149_p08cxg19.jpg",
+      "path": "/cpsprodpb/16FDD/production/_112237149_p08cxg19.jpg",
+      "height": 576,
+      "width": 1024,
       "altText": "Ìṣẹ́jú kan BBC",
-      "caption": "Ìṣẹ́jú kan BBC",
       "copyrightHolder": "BBC",
       "type": "image"
     },
