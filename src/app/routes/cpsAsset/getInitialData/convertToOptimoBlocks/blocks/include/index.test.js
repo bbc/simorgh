@@ -150,6 +150,36 @@ describe('convertInclude', () => {
     );
   });
 
+  it('should fetch and convert an include block to a vj block with no / in href', async () => {
+    fetch.mockResponse(() => Promise.resolve(vjMarkup));
+    const input = {
+      required: false,
+      tile: 'Include from VisJo',
+      href: 'news/special/111-222-333-444-555',
+      platform: 'highweb',
+      type: 'include',
+    };
+    const expected = {
+      type: 'include',
+      model: {
+        href: 'news/special/111-222-333-444-555',
+        required: false,
+        tile: 'Include from VisJo',
+        platform: 'highweb',
+        type: 'vj',
+        html: vjMarkup,
+      },
+    };
+    expect(await convertInclude(input)).toEqual(expected);
+    expect(fetch).toHaveBeenCalled();
+    expect(fetch).toHaveBeenCalledWith(
+      'https://foobar.com/includes/news/special/111-222-333-444-555',
+      {
+        timeout: 3000,
+      },
+    );
+  });
+
   it('should convert an include block to an idt2 block with html set to null when fetch returns with status other than 200', async () => {
     jest.mock('#lib/logger.web', () => jest.fn());
     fetch.mockResponse(() => Promise.resolve({ status: 304 }));

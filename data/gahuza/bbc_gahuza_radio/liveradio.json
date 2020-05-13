@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "id": "urn:bbc:ares::ws_live:bbc_gahuza_radio",
+    "id": "urn:bbc:ares:ws_media:live:bbc_gahuza_radio",
     "locators": {
       "pipsUrn": "urn:bbc:pips:bbc_gahuza_radio"
     },

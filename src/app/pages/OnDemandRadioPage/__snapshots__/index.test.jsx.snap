@@ -205,9 +205,26 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
       custom-element="amp-iframe"
       src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
     />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","duration":"PT29M30S","thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg","uploadDate":"2020-05-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps/amp?morph_env=live"}
+    </script>
   </head>
   <body>
-    .c3 {
+    .c5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c3 {
   font-size: 2rem;
   line-height: 2.625rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -220,6 +237,21 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 .c4 {
+  display: block;
+  padding-bottom: 0.5rem;
+}
+
+.c6 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+}
+
+.c7 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -230,14 +262,14 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   margin: 0;
 }
 
-.c6 {
+.c9 {
   height: 165px;
   position: relative;
   overflow: hidden;
   margin-bottom: 1rem;
 }
 
-.c5 {
+.c8 {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
 }
@@ -347,28 +379,54 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media screen {
+  .c3 {
+    padding: 2rem 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
   .c4 {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c6 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c7 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c6 {
+  .c9 {
     margin-bottom: 2rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c5 {
+  .c8 {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
   }
@@ -393,7 +451,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
         <script
           type="application/json"
         >
-          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"pageview":"\${base}s=598343&s2=68&p=pashto.bbc_pashto_radio.w3ct0lz1.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:pips:w3ct0lz1]&x2=[amp]&x3=[news-pashto]&x4=[ps]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[ماښامنۍ+خپرونه+-+BBC+News+پښتو]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"pageview":"\${base}s=598343&s2=68&p=pashto.bbc_pashto_radio.w3ct0lz1.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:pips:w3ct0lz1]&x2=[amp]&x3=[news-pashto]&x4=[ps]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[ماښامنۍ+خپرونه+-+BBC+News+پښتو]&ref=\${documentReferrer}"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
         </script>
       </amp-analytics>
       <div>
@@ -413,23 +471,36 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
             id="content"
             tabindex="-1"
           >
-            ماښامنۍ خپرونه
+            <span
+              role="text"
+            >
+              <span
+                class="c4"
+              >
+                ماښامنۍ خپرونه
+              </span>
+              <span
+                class="c5"
+              >
+                , 
+              </span>
+              <span
+                class="c6"
+              >
+                ۱ می ۲۰۲۰
+              </span>
+            </span>
           </h1>
           <p
-            class="c4"
-          >
-            ۱ می ۲۰۲۰
-          </p>
-          <p
-            class="c4"
+            class="c7"
           >
             د بي بي سي ورلډ سروس څخه پروګرام کول
           </p>
           <div
-            class="c5"
+            class="c8"
           >
             <div
-              class="c6"
+              class="c9"
             >
               <amp-iframe
                 allowfullscreen="allowfullscreen"
@@ -461,6 +532,18 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 `;
 
 exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
+.c5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 .c3 {
   font-size: 2rem;
   line-height: 2.625rem;
@@ -474,6 +557,21 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 .c4 {
+  display: block;
+  padding-bottom: 0.5rem;
+}
+
+.c6 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+}
+
+.c7 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -484,14 +582,14 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   margin: 0;
 }
 
-.c6 {
+.c9 {
   height: 165px;
   position: relative;
   overflow: hidden;
   margin-bottom: 1rem;
 }
 
-.c5 {
+.c8 {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
 }
@@ -504,7 +602,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   flex-grow: 1;
 }
 
-.c7 {
+.c10 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -611,28 +709,54 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media screen {
+  .c3 {
+    padding: 2rem 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
   .c4 {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c6 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c7 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c6 {
+  .c9 {
     margin-bottom: 2rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c5 {
+  .c8 {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
   }
@@ -854,6 +978,11 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
       content="ماښامنۍ خپرونه - BBC News پښتو"
       name="twitter:title"
     />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","duration":"PT29M30S","thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg","uploadDate":"2020-05-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"}
+    </script>
   </head>
   <body>
     <div>
@@ -875,28 +1004,41 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
             id="content"
             tabindex="-1"
           >
-            ماښامنۍ خپرونه
+            <span
+              role="text"
+            >
+              <span
+                class="c4"
+              >
+                ماښامنۍ خپرونه
+              </span>
+              <span
+                class="c5"
+              >
+                , 
+              </span>
+              <span
+                class="c6"
+              >
+                ۱ می ۲۰۲۰
+              </span>
+            </span>
           </h1>
           <p
-            class="c4"
-          >
-            ۱ می ۲۰۲۰
-          </p>
-          <p
-            class="c4"
+            class="c7"
           >
             د بي بي سي ورلډ سروس څخه پروګرام کول
           </p>
           <div
-            class="c5"
+            class="c8"
           >
             <div
-              class="c6"
+              class="c9"
             >
               <iframe
                 allow="autoplay; fullscreen"
                 allowfullscreen=""
-                class="c7"
+                class="c10"
                 scrolling="no"
                 src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"
                 title="اډیو پلیئر"
@@ -912,6 +1054,18 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 `;
 
 exports[`OnDemand Radio Page  should not show the audio player if it is not available yet 1`] = `
+.c5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 .c3 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -925,6 +1079,21 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
 }
 
 .c4 {
+  display: block;
+  padding-bottom: 0.5rem;
+}
+
+.c6 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+}
+
+.c7 {
   font-size: 1rem;
   line-height: 1.375rem;
   font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
@@ -1040,15 +1209,41 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media screen {
+  .c3 {
+    padding: 2rem 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
   .c4 {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c7 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
     font-size: 1rem;
     line-height: 1.75rem;
   }
@@ -1087,15 +1282,28 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
         id="content"
         tabindex="-1"
       >
-        BBC 코리아 라디오
+        <span
+          role="text"
+        >
+          <span
+            class="c4"
+          >
+            BBC 코리아 라디오
+          </span>
+          <span
+            class="c5"
+          >
+            , 
+          </span>
+          <span
+            class="c6"
+          >
+            2020년 5월 4일
+          </span>
+        </span>
       </h1>
       <p
-        class="c4"
-      >
-        2020년 5월 4일
-      </p>
-      <p
-        class="c4"
+        class="c7"
       >
         한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.
       </p>
@@ -1105,6 +1313,18 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
 `;
 
 exports[`OnDemand Radio Page  should show the expired content message if episode is expired 1`] = `
+.c5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 .c3 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -1118,6 +1338,21 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 .c4 {
+  display: block;
+  padding-bottom: 0.5rem;
+}
+
+.c6 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+}
+
+.c7 {
   font-size: 1rem;
   line-height: 1.375rem;
   font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
@@ -1128,7 +1363,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   margin: 0;
 }
 
-.c6 {
+.c9 {
   position: absolute;
   top: 0;
   left: 0;
@@ -1136,7 +1371,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   height: 100%;
 }
 
-.c7 {
+.c10 {
   font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1152,7 +1387,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   background-color: rgba(34,34,34,0.75);
 }
 
-.c8 {
+.c11 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -1161,7 +1396,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   border-bottom: 0.0625rem solid transparent;
 }
 
-.c5 {
+.c8 {
   position: relative;
   min-height: 165px;
   margin-bottom: 2rem;
@@ -1272,40 +1507,66 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media screen {
+  .c3 {
+    padding: 2rem 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
   .c4 {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c7 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
     font-size: 1rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
+  .c10 {
     font-size: 0.875rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c7 {
+  .c10 {
     background-color: transparent;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c8 {
+  .c11 {
     background-color: window;
   }
 }
 
 @media (min-width:25rem) {
-  .c8 {
+  .c11 {
     padding: 1rem;
   }
 }
@@ -1343,29 +1604,42 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
         id="content"
         tabindex="-1"
       >
-        BBC 코리아 라디오
+        <span
+          role="text"
+        >
+          <span
+            class="c4"
+          >
+            BBC 코리아 라디오
+          </span>
+          <span
+            class="c5"
+          >
+            , 
+          </span>
+          <span
+            class="c6"
+          >
+            2020년 5월 4일
+          </span>
+        </span>
       </h1>
       <p
-        class="c4"
-      >
-        2020년 5월 4일
-      </p>
-      <p
-        class="c4"
+        class="c7"
       >
         한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.
       </p>
       <div
-        class="c5"
+        class="c8"
       >
         <div
-          class="c6"
+          class="c9"
         >
           <div
-            class="c7"
+            class="c10"
           >
             <strong
-              class="c8"
+              class="c11"
             >
               더 이상 이용할 수 없는 콘텐츠입니다.
             </strong>
