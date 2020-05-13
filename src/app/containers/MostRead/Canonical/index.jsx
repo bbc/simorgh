@@ -57,9 +57,11 @@ const CanonicalMostRead = ({
 
   useEffect(() => {
     if (!items) {
-      const handleResponse = async response => {
+      const handleResponse = url => async response => {
         if (!response.ok) {
-          throw Error(response.statusText);
+          throw Error(
+            `Unexpected response (HTTP status code ${response.status}) when requesting ${url}`,
+          );
         }
         const mostReadData = await response.json();
         setItems(processMostRead({ data: mostReadData, numberOfItems }));
