@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/sinhala/sri-lanka-49411205",
       "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-49411205",
-      "curie": "http://www.bbc.co.uk/asset/f9021464-4d93-6046-b082-3720cfde4e48"
+      "curie": "http://www.bbc.co.uk/asset/f9021464-4d93-6046-b082-3720cfde4e48",
+      "assetId": "49411205"
     },
     "type": "MAP",
     "createdBy": "sinhala-v6",
     "language": "si",
-    "lastUpdated": 1566475850617,
-    "firstPublished": 1566475841,
-    "lastPublished": 1566475842,
+    "lastUpdated": 1588685878832,
+    "firstPublished": 1566475841000,
+    "lastPublished": 1566475841000,
+    "timestamp": 1566475841000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -40,10 +42,50 @@
           "campaignId": "5a988e3139461b000e9dabf9",
           "campaignName": "WS - Divert me"
         }
+      ],
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "පරිසරය",
+          "thingUri": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
+          "thingId": "0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f",
+          "thingType": ["core:Theme", "tagging:TagConcept", "core:Thing"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q43619",
+            "http://dbpedia.org/resource/Natural_environment"
+          ],
+          "topicName": "පරිසරය",
+          "topicId": "cdr56r9j4vpt",
+          "curationList": [
+            {
+              "curationId": "45394e1e-31e5-4a9c-bcfe-b3cdc66a053a",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "සතුන්",
+          "thingUri": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
+          "thingId": "14745d1f-885d-4b9f-b28a-24540e7beb15",
+          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q729",
+            "http://dbpedia.org/resource/Animal"
+          ],
+          "topicName": "සතුන්",
+          "topicId": "cvjp2jyr7xvt",
+          "curationList": [
+            {
+              "curationId": "62c91987-b15c-4943-8295-2f2f56008f44",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
       ]
     },
-    "tags": {},
-    "version": "v1.0.10",
+    "version": "v1.2.1",
     "blockTypes": ["media", "paragraph", "list"],
     "includeComments": false
   },
@@ -54,9 +96,7 @@
         "subType": "clip",
         "format": "video",
         "title": "හලාවතින් හමු වූ ''අත්භූත කුරුල්ලා\" කවුද?",
-        "synopses": {
-          "short": "හලාවතින් හමු වූ ''අත්භූත කුරුල්ලා\" කවුද?"
-        },
+        "synopses": { "short": "හලාවතින් හමු වූ ''අත්භූත කුරුල්ලා\" කවුද?" },
         "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07l43fm.jpg",
         "embedding": true,
         "advertising": true,
@@ -70,9 +110,10 @@
             "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
+              "nonUk": true,
+              "world": false
             },
-            "availableFrom": 1566305109
+            "availableFrom": 1566305109000
           }
         ],
         "type": "media"
@@ -123,12 +164,14 @@
                   "href": "http://www.bbc.com/sinhala/sri-lanka-49183271"
                 },
                 "summary": "පැස්තුඩුවන් අත් ට්‍රැක්ටරය පසු පසින් ගමන් කරන්නේ හමුදා භට පිරිසක් උත්තමාචාර පෙළපාළියක ගමන් කරන ආකාරය සිහිපත් කරමිනි.",
-                "timestamp": 1564634854,
+                "timestamp": 1564634854000,
+                "language": "si",
                 "passport": {
                   "category": {
                     "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                     "categoryName": "News"
-                  }
+                  },
+                  "taggings": []
                 },
                 "id": "urn:bbc:ares::asset:sinhala/sri-lanka-49183271",
                 "type": "cps"
@@ -150,12 +193,14 @@
                   "href": "http://www.bbc.com/sinhala/world-49275324"
                 },
                 "summary": "වසර මිලියන 19කට පෙර නවසීලන්තයේ වාසය කළ උසින් මීටර් එකක පමණ යුත් යෝධ ගිරවෙකු පිළිබඳව නවතම ගවේෂණයකින් අනාවරණය වී තිබේ.",
-                "timestamp": 1565342278,
+                "timestamp": 1565342278000,
+                "language": "si",
                 "passport": {
                   "category": {
                     "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                     "categoryName": "News"
-                  }
+                  },
+                  "taggings": []
                 },
                 "id": "urn:bbc:ares::asset:sinhala/world-49275324",
                 "type": "cps"
@@ -177,10 +222,12 @@
     "locators": {
       "assetUri": "/sinhala/sri-lanka-49411205",
       "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-49411205",
-      "curie": "http://www.bbc.co.uk/asset/f9021464-4d93-6046-b082-3720cfde4e48"
+      "curie": "http://www.bbc.co.uk/asset/f9021464-4d93-6046-b082-3720cfde4e48",
+      "assetId": "49411205"
     },
     "summary": "හලාවත මුතුපංතිය දූපතෙන් ''අද්භූත කුරුල්ලෙකු'' හමු වී ඇති බවට පළ වන වාර්තා ගැන විමසුමක්.",
-    "timestamp": 1566475850617,
+    "timestamp": 1566475841000,
+    "language": "si",
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -191,16 +238,15 @@
           "campaignId": "5a988e3139461b000e9dabf9",
           "campaignName": "WS - Divert me"
         }
-      ]
+      ],
+      "taggings": []
     },
     "media": {
       "id": "p07l41lf",
       "subType": "clip",
       "format": "video",
       "title": "හලාවතින් හමු වූ ''අත්භූත කුරුල්ලා\" කවුද?",
-      "synopses": {
-        "short": "හලාවතින් හමු වූ ''අත්භූත කුරුල්ලා\" කවුද?"
-      },
+      "synopses": { "short": "හලාවතින් හමු වූ ''අත්භූත කුරුල්ලා\" කවුද?" },
       "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07l43fm.jpg",
       "embedding": true,
       "advertising": true,
@@ -212,11 +258,8 @@
           "duration": 141,
           "durationISO8601": "PT2M21S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          },
-          "availableFrom": 1566305109
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1566305109000
         }
       ],
       "type": "media"
@@ -262,7 +305,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/sinhala/world-49275324"
             },
             "summary": "වසර මිලියන 19කට පෙර නවසීලන්තයේ වාසය කළ උසින් මීටර් එකක පමණ යුත් යෝධ ගිරවෙකු පිළිබඳව නවතම ගවේෂණයකින් අනාවරණය වී තිබේ.",
-            "timestamp": 1565342278,
+            "timestamp": 1565342278000,
+            "language": "si",
             "cpsType": "STY",
             "indexImage": {
               "id": "108241173",

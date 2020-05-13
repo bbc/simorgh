@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/sinhala/23248970",
       "cpsUrn": "urn:bbc:content:assetUri:sinhala/23248970",
-      "curie": "http://www.bbc.co.uk/asset/96eaf247-c838-d849-9dd3-a513103c0593"
+      "curie": "http://www.bbc.co.uk/asset/96eaf247-c838-d849-9dd3-a513103c0593",
+      "assetId": "23248970"
     },
     "type": "MAP",
     "createdBy": "sinhala-v6",
     "language": "si",
-    "lastUpdated": 1568721398740,
+    "lastUpdated": 1588336102942,
     "firstPublished": 1568721388000,
-    "lastPublished": 1568721390000,
+    "lastPublished": 1568721388000,
+    "timestamp": 1568721388000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -30,8 +32,9 @@
       "counterName": "sinhala.media_asset.23248970.page",
       "cps_asset_id": "23248970"
     },
+    "passport": { "taggings": [] },
     "tags": {},
-    "version": "v1.1.0",
+    "version": "v1.2.1",
     "blockTypes": ["media", "paragraph", "list"],
     "includeComments": false
   },
@@ -58,7 +61,8 @@
             "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
+              "nonUk": true,
+              "world": false
             },
             "availableFrom": 1559819809000
           }
@@ -197,11 +201,13 @@
     "locators": {
       "assetUri": "/sinhala/23248970",
       "cpsUrn": "urn:bbc:content:assetUri:sinhala/23248970",
-      "curie": "http://www.bbc.co.uk/asset/96eaf247-c838-d849-9dd3-a513103c0593"
+      "curie": "http://www.bbc.co.uk/asset/96eaf247-c838-d849-9dd3-a513103c0593",
+      "assetId": "23248970"
     },
     "summary": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
-    "timestamp": 1568721398740,
-    "passport": {},
+    "timestamp": 1568721388000,
+    "language": "si",
+    "passport": { "taggings": [] },
     "media": {
       "id": "p01mr6r7",
       "subType": "clip",
@@ -221,10 +227,7 @@
           "duration": 1961,
           "durationISO8601": "PT32M41S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          },
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
           "availableFrom": 1559819809000
         }
       ],
