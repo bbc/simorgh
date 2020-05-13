@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/ukrainian/media-49656852",
       "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-49656852",
-      "curie": "http://www.bbc.co.uk/asset/0b2b6080-932d-de49-aa0b-7a8e5fe18891"
+      "curie": "http://www.bbc.co.uk/asset/0b2b6080-932d-de49-aa0b-7a8e5fe18891",
+      "assetId": "49656852"
     },
     "type": "MAP",
     "createdBy": "ukrainian-v6",
     "language": "uk",
-    "lastUpdated": 1568139632187,
-    "firstPublished": 1568139622,
-    "lastPublished": 1568139623,
+    "lastUpdated": 1588700969253,
+    "firstPublished": 1568139622000,
+    "lastPublished": 1568139622000,
+    "timestamp": 1568139622000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -40,30 +42,16 @@
           "campaignId": "5a988e3e39461b000e9dabfb",
           "campaignName": "WS - Keep me on trend"
         }
-      ]
+      ],
+      "taggings": []
     },
     "tags": {
       "about": [
         {
-          "thingLabel": "Russia",
-          "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
-          "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
-          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
-          "thingSameAs": ["http://sws.geonames.org/2017370/"],
-          "topicName": "Росія",
-          "topicId": "cvjp20qwz33t",
-          "curationList": [
-            {
-              "curationId": "c4649734-7ab0-40ec-8e14-1c527e156c43",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "Politics",
+          "thingLabel": "Політика",
           "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
           "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
-          "thingType": ["Thing", "Theme"],
+          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
           "thingSameAs": ["http://dbpedia.org/resource/Politics"],
           "topicName": "Політика",
           "topicId": "cyx5kzy2wdrt",
@@ -75,14 +63,29 @@
           ]
         },
         {
-          "thingLabel": "Ukraine",
+          "thingLabel": "Росія",
+          "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+          "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+          "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+          "thingSameAs": ["http://sws.geonames.org/2017370/"],
+          "topicName": "Росія",
+          "topicId": "cvjp20qwz33t",
+          "curationList": [
+            {
+              "curationId": "c4649734-7ab0-40ec-8e14-1c527e156c43",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Україна",
           "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
           "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
-          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Place"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Ukraine",
-            "http://sws.geonames.org/690791/",
-            "http://www.wikidata.org/entity/Q212"
+            "http://www.wikidata.org/entity/Q212",
+            "http://sws.geonames.org/690791/"
           ],
           "topicName": "Україна",
           "topicId": "c1gdqr12p11t",
@@ -95,7 +98,7 @@
         }
       ]
     },
-    "version": "v1.0.10",
+    "version": "v1.2.1",
     "blockTypes": ["media", "paragraph"],
     "includeComments": false
   },
@@ -122,22 +125,23 @@
             "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
+              "nonUk": true,
+              "world": false
             },
-            "availableFrom": 1568138022
+            "availableFrom": 1568138022000
           }
         ],
         "imageCopyright": "BBC",
         "type": "media"
       },
       {
-        "text": "Олег Сенцов та Олександр Кольченко розповіли про неволю, повернення і Крим на першій прес-конференції.",
+        "text": "&quot;Поки не обійнявся з донькою, я був дуже спокійний&quot;. ",
         "role": "introduction",
         "markupType": "plain_text",
         "type": "paragraph"
       },
       {
-        "text": "&quot;Поки не обійнявся з донькою, я був дуже спокійний&quot;. ",
+        "text": "Олег Сенцов та Олександр Кольченко розповіли про неволю, повернення і Крим на першій прес-конференції.",
         "markupType": "plain_text",
         "type": "paragraph"
       },
@@ -156,10 +160,12 @@
     "locators": {
       "assetUri": "/ukrainian/media-49656852",
       "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-49656852",
-      "curie": "http://www.bbc.co.uk/asset/0b2b6080-932d-de49-aa0b-7a8e5fe18891"
+      "curie": "http://www.bbc.co.uk/asset/0b2b6080-932d-de49-aa0b-7a8e5fe18891",
+      "assetId": "49656852"
     },
     "summary": "Звільнені політв'язні дали свою першу прес-конференцію.",
-    "timestamp": 1568139632187,
+    "timestamp": 1568139622000,
+    "language": "uk",
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -170,7 +176,8 @@
           "campaignId": "5a988e3e39461b000e9dabfb",
           "campaignName": "WS - Keep me on trend"
         }
-      ]
+      ],
+      "taggings": []
     },
     "media": {
       "id": "p07mz53p",
@@ -191,11 +198,8 @@
           "duration": 197,
           "durationISO8601": "PT3M17S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          },
-          "availableFrom": 1568138022
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1568138022000
         }
       ],
       "imageCopyright": "BBC",

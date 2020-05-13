@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/punjabi/media-23248705",
       "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-23248705",
-      "curie": "http://www.bbc.co.uk/asset/bf82d577-f00b-494f-b100-9bac79a82594"
+      "curie": "http://www.bbc.co.uk/asset/bf82d577-f00b-494f-b100-9bac79a82594",
+      "assetId": "23248705"
     },
     "type": "MAP",
     "createdBy": "punjabi-v6",
     "language": "pa",
-    "lastUpdated": 1568389321573,
+    "lastUpdated": 1588333324789,
     "firstPublished": 1568389310000,
-    "lastPublished": 1568389311000,
+    "lastPublished": 1568389310000,
+    "timestamp": 1568389310000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -30,9 +32,18 @@
       "counterName": "punjabi.embedded_media.media_asset.23248705.page",
       "cps_asset_id": "23248705"
     },
+    "passport": { "taggings": [] },
     "tags": {},
-    "version": "v1.1.0",
-    "blockTypes": ["media", "paragraph", "list", "image"],
+    "version": "v1.2.1",
+    "blockTypes": [
+      "media",
+      "paragraph",
+      "heading",
+      "subheading",
+      "crosshead",
+      "list",
+      "image"
+    ],
     "includeComments": false
   },
   "content": {
@@ -41,12 +52,14 @@
         "id": "p01kx42s",
         "subType": "clip",
         "format": "video",
-        "title": "alt-text world service clip",
+        "title": "トランプ氏、香港人権法案に署名　中国は反発",
         "synopses": {
-          "short": "short"
+          "short": "トランプ氏、香港人権法案に署名　中国は反発",
+          "long": "トランプ氏、香港人権法案に署名　中国は反発",
+          "medium": "トランプ氏、香港人権法案に署名　中国は反発"
         },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
-        "embedding": true,
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
+        "embedding": false,
         "advertising": true,
         "caption": "short",
         "versions": [
@@ -58,7 +71,8 @@
             "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
+              "nonUk": true,
+              "world": false
             },
             "availableFrom": 1545304011000
           }
@@ -72,19 +86,19 @@
         "type": "paragraph"
       },
       {
-        "text": "<bold>ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।</bold><bold> heading </bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
+        "text": "ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। heading ",
+        "markupType": "plain_text",
+        "type": "heading"
       },
       {
-        "text": "<bold><italic>ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।</italic></bold><bold><italic> subheading</italic></bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
+        "text": "ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। subheading",
+        "markupType": "plain_text",
+        "type": "subheading"
       },
       {
-        "text": "<bold>ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। </bold><bold>crosshead </bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
+        "text": "ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। crosshead ",
+        "markupType": "plain_text",
+        "type": "crosshead"
       },
       {
         "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ਦੇ <bold>ਪ੍ਰਧਾਨ ਪਿਆਰਾ ਲਾਲ ਸੇਠ ਨੇ ਕਿਹਾ ਕਿ ਦੇਸ਼ 'ਚ ਖੇਤੀਬਾੜੀ ਤੋਂ ਬਾਅ</bold>ਦ ਕੱਪੜਾ ਉਦਯੋਗ ਦੂਜਾ ਅਜਿਹਾ ਸ਼ਕਤੀਸ਼ਾਲੀ ਸਮੂਹ ਹੈ, ਜੋ ਵੱਧਦੀ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ ਰੋਕਣ ਲਈ ਪੂਰੇ ਦੇਸ਼ ਲਈ ਸਹਾਇਕ ਸਿੱਧ ਹੋ ਰਿਹਾ ਹੈ ਅਤੇ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ  ਦੂਰ ਕਰਨ ਦੇ ਨਾਲ ਇਸ ਉਦਯੋਗ ਦਾ ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ਇਨਕਮ ਟੈਕਸ ਦੇਣ ਵਿਚ ਵੀ ਵੱਡਾ ਹੱਥ ਹੈ।ਅੰਮ੍ਰਿਤਸਰ, (ਇੰਦਰਜੀਤ) - ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ਦੇ ਪ੍ਰਧਾਨ ਪਿਆਰਾ ਲਾਲ ਸੇਠ ਨੇ ਕਿਹਾ ਕਿ ਦੇਸ਼ 'ਚ ਖੇਤੀਬਾੜੀ ਤੋਂ ਬਾਅਦ ਕੱਪੜਾ ਉਦਯੋਗ ਦੂਜਾ ਅਜਿਹਾ ਸ਼ਕਤੀਸ਼ਾਲੀ ਸਮੂਹ ਹੈ, ਜੋ ਵੱਧਦੀ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ ਰੋਕਣ ਲਈ ਪੂਰੇ ਦੇਸ਼ ਲਈ ਸਹਾਇਕ ਸਿੱਧ<link><caption> ਹੋ ਰਿਹਾ ਹੈ ਅਤੇ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ ਦੂ</caption><altText> ਹੋ ਰਿਹਾ ਹੈ ਅਤੇ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ ਦੂ</altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>ਰ ਕਰਨ ਦੇ ਨਾਲ ਇਸ ਉਦਯੋਗ ਦਾ<bold> ਇਨਕਮ ਟੈਕਸ ਦੇਣ ਵਿਚ ਵੀ ਵੱਡਾ ਹੱਥ ਹੈ।</bold>",
@@ -178,21 +192,25 @@
     "locators": {
       "assetUri": "/punjabi/media-23248705",
       "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-23248705",
-      "curie": "http://www.bbc.co.uk/asset/bf82d577-f00b-494f-b100-9bac79a82594"
+      "curie": "http://www.bbc.co.uk/asset/bf82d577-f00b-494f-b100-9bac79a82594",
+      "assetId": "23248705"
     },
     "summary": "ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।",
-    "timestamp": 1568389321573,
-    "passport": {},
+    "timestamp": 1568389310000,
+    "language": "pa",
+    "passport": { "taggings": [] },
     "media": {
       "id": "p01kx42s",
       "subType": "clip",
       "format": "video",
-      "title": "alt-text world service clip",
+      "title": "トランプ氏、香港人権法案に署名　中国は反発",
       "synopses": {
-        "short": "short"
+        "short": "トランプ氏、香港人権法案に署名　中国は反発",
+        "long": "トランプ氏、香港人権法案に署名　中国は反発",
+        "medium": "トランプ氏、香港人権法案に署名　中国は反発"
       },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
-      "embedding": true,
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
+      "embedding": false,
       "advertising": true,
       "caption": "short",
       "versions": [
@@ -202,10 +220,7 @@
           "duration": 5,
           "durationISO8601": "PT5S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          },
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
           "availableFrom": 1545304011000
         }
       ],
@@ -238,6 +253,120 @@
       "uri": "/punjabi",
       "type": "simple"
     },
-    "groups": []
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 6",
+              "headline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 6"
+            },
+            "locators": {
+              "assetUri": "/punjabi/international-23129784",
+              "cpsUrn": "urn:bbc:content:assetUri:/punjabi/international-23129784"
+            },
+            "summary": "ਪੁਲੀਸ ਅਧਿਕਾਰੀਆਂ ਨੇ ਅੱਜ ਨਵੀਂ ਕਾਇਮ ਕੀਤੀ ਅਮਨ ਕਮੇਟੀ ਦੀ ਮੀਟਿੰਗ ਸਥਾਨਕ ਐਸ.",
+            "timestamp": 1496632491000,
+            "language": "pa",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63539190",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/23E9/test/_63539190_mediaitem63539189.jpg",
+              "path": "/cpsdevpb/23E9/test/_63539190_mediaitem63539189.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਅਮਨ ਕਮੇਟੀ",
+              "copyrightHolder": "BBBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:punjabi/international-23129784",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 9",
+              "headline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 9"
+            },
+            "locators": {
+              "assetUri": "/punjabi/other-news-23129787",
+              "cpsUrn": "urn:bbc:content:assetUri:/punjabi/other-news-23129787"
+            },
+            "summary": "ਪੁਲੀਸ ਅਧਿਕਾਰੀਆਂ ਨੇ ਅੱਜ ਨਵੀਂ ਕਾਇਮ ਕੀਤੀ ਅਮਨ ਕਮੇਟੀ ਦੀ ਮੀਟਿੰਗ ਸਥਾਨਕ ਐਸ.",
+            "timestamp": 1496632245000,
+            "language": "pa",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63539190",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/23E9/test/_63539190_mediaitem63539189.jpg",
+              "path": "/cpsdevpb/23E9/test/_63539190_mediaitem63539189.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਅਮਨ ਕਮੇਟੀ",
+              "copyrightHolder": "BBBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:punjabi/other-news-23129787",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 4",
+              "headline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 4"
+            },
+            "locators": {
+              "assetUri": "/punjabi/india-23129782",
+              "cpsUrn": "urn:bbc:content:assetUri:/punjabi/india-23129782"
+            },
+            "summary": "ਪੁਲੀਸ ਅਧਿਕਾਰੀਆਂ ਨੇ ਅੱਜ ਨਵੀਂ ਕਾਇਮ ਕੀਤੀ ਅਮਨ ਕਮੇਟੀ ਦੀ ਮੀਟਿੰਗ ਸਥਾਨਕ ਐਸ.",
+            "timestamp": 1496632165000,
+            "language": "pa",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63539190",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/23E9/test/_63539190_mediaitem63539189.jpg",
+              "path": "/cpsdevpb/23E9/test/_63539190_mediaitem63539189.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਅਮਨ ਕਮੇਟੀ",
+              "copyrightHolder": "BBBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:punjabi/india-23129782",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 37",
+              "headline": "ਫਗਵਾੜਾ ’ਚ ਪੁਲੀਸ ਵੱਲੋਂ ਫਲੈਗ ਮਾਰਚ 37"
+            },
+            "locators": {
+              "assetUri": "/punjabi/india-23129865",
+              "cpsUrn": "urn:bbc:content:assetUri:/punjabi/india-23129865"
+            },
+            "summary": "ਪੁਲੀਸ ਅਧਿਕਾਰੀਆਂ ਨੇ ਅੱਜ ਨਵੀਂ ਕਾਇਮ ਕੀਤੀ ਅਮਨ ਕਮੇਟੀ ਦੀ ਮੀਟਿੰਗ ਸਥਾਨਕ ਐਸ.",
+            "timestamp": 1496651173000,
+            "language": "pa",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63539190",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/23E9/test/_63539190_mediaitem63539189.jpg",
+              "path": "/cpsdevpb/23E9/test/_63539190_mediaitem63539189.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ਅਮਨ ਕਮੇਟੀ",
+              "copyrightHolder": "BBBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:punjabi/india-23129865",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
   }
 }
