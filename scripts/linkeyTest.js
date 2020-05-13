@@ -12,7 +12,7 @@ const getServiceName = serviceConfig => {
 
 const getLinks = (serviceConfig, type) => {
   if (serviceConfig.length === 1) {
-    return serviceConfig.default;
+    return serviceConfig.default[type];
   }
 
   const variants = Object.keys(serviceConfig);
