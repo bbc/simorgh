@@ -47,6 +47,8 @@ describe('fetchPageData', () => {
         },
         status: 200,
       });
+
+      expect(fetch).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -156,6 +158,26 @@ describe('fetchPageData', () => {
           status: 500,
           error: `Error: Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
         });
+      });
+
+      it('should retry on failure is maximumAttempts is increased', async () => {
+        fetch.mockResponses(
+          [JSON.stringify({ mock: 'failure' }), { status: 500 }],
+          [JSON.stringify({ mock: 'success' }), { status: 200 }],
+        );
+
+        const response = await fetchPageData(requestedPathname, {
+          maximumAttempts: 2,
+        });
+
+        expect(response).toEqual({
+          json: {
+            mock: 'success',
+          },
+          status: 200,
+        });
+
+        expect(fetch).toHaveBeenCalledTimes(2);
       });
     });
   });

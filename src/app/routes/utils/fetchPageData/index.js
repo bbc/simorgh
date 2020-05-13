@@ -67,19 +67,19 @@ const handleError = e => {
   };
 };
 
-const fetchData = pathname => {
+const fetchData = (pathname, { maximumAttempts = 1 } = {}) => {
   const url = getUrl(pathname);
 
   logger.info(DATA_REQUEST_RECEIVED, { url });
 
-  return fetch(url).then(handleResponse(url));
+  return fetch(url)
+    .then(data => {
+      if (data.status !== 200 && maximumAttempts > 1) {
+        return fetchData(pathname, { maximumAttempts: maximumAttempts - 1 });
+      }
+      return handleResponse(url)(data);
+    })
+    .catch(handleError);
 };
 
-const withRetries = (fn, maximumAttempts, errorHandler) => {
-  if (maximumAttempts <= 1) return (...args) => fn(...args).catch(errorHandler);
-
-  return (...args) =>
-    fn(...args).catch(() => withRetries(fn, maximumAttempts - 1)(...args));
-};
-
-export default withRetries(fetchData, 3, handleError);
+export default fetchData;
