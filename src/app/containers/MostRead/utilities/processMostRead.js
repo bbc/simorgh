@@ -1,5 +1,9 @@
 import pathOr from 'ramda/src/pathOr';
+import nodeLogger from '#lib/logger.node';
+import { MOST_READ_STALE_DATA } from '#lib/logger.const';
 import { mostReadRecordIsFresh } from '.';
+
+const logger = nodeLogger(__filename);
 
 const mostReadItems = ({ data, numberOfItems }) => {
   if (!data) {
@@ -23,6 +27,9 @@ const mostReadItems = ({ data, numberOfItems }) => {
         timestamp,
       }));
   }
+  logger.warn(MOST_READ_STALE_DATA, {
+    message: 'Most read lastUpdatedTimestamp value is greater than 35min',
+  });
   return null;
 };
 
