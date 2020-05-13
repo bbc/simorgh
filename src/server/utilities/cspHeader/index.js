@@ -150,6 +150,7 @@ const directives = {
       'https://ping.chartbeat.net',
       'https://a1.api.bbc.co.uk/hit.xiti',
       'https://news.files.bbci.co.uk',
+      'http://news.files.bbci.co.uk',
       'https://*.akstat.io',
       'https://r.bbci.co.uk',
       'https://pagead2.googlesyndication.com', // ads
@@ -193,6 +194,7 @@ const directives = {
       'https://a1.api.bbc.co.uk/hit.xiti', // ATI analytics
       'https://logws1363.ati-host.net', // ATI analytics
       'https://news.files.bbci.co.uk', // Static Assets
+      'http://news.files.bbci.co.uk',
       'https://news.test.files.bbci.co.uk', // Static Assets
       'https://*.akstat.io',
       'https://r.bbci.co.uk',
