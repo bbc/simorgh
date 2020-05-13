@@ -160,7 +160,7 @@ describe('fetchPageData', () => {
         });
       });
 
-      it('should retry on failure is maximumAttempts is increased', async () => {
+      it('should retry on failure if maximumAttempts is greater than one', async () => {
         fetch.mockResponses(
           [JSON.stringify({ mock: 'failure' }), { status: 500 }],
           [JSON.stringify({ mock: 'success' }), { status: 200 }],
