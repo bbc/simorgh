@@ -41,6 +41,7 @@ export const service = {
     ...baseServiceConfig,
     ads: {
       hasAds: false,
+      advertisementText: 'Advertisement',
     },
     externalLinkText: ', 外部链接',
     frontPageTitle: '主页',
