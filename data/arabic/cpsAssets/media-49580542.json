@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/arabic/media-49580542",
       "cpsUrn": "urn:bbc:content:assetUri:arabic/media-49580542",
-      "curie": "http://www.bbc.co.uk/asset/16dcfb1b-f237-104a-b885-69e758171253"
+      "curie": "http://www.bbc.co.uk/asset/16dcfb1b-f237-104a-b885-69e758171253",
+      "assetId": "49580542"
     },
     "type": "MAP",
     "createdBy": "arabic-v6",
     "language": "ar",
-    "lastUpdated": 1567610668457,
-    "firstPublished": 1567610659,
-    "lastPublished": 1567610659,
+    "lastUpdated": 1588319615667,
+    "firstPublished": 1567610659000,
+    "lastPublished": 1567610659000,
+    "timestamp": 1567610659000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -40,25 +42,19 @@
           "campaignId": "5a988e3e39461b000e9dabfb",
           "campaignName": "WS - Keep me on trend"
         }
-      ]
+      ],
+      "taggings": []
     },
     "tags": {
       "about": [
         {
-          "thingLabel": "United Kingdom",
-          "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
-          "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
-          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
-          "thingSameAs": ["http://sws.geonames.org/2635167/"]
-        },
-        {
-          "thingLabel": "Brexit",
+          "thingLabel": "بريطانيا والاتحاد الأوروبي",
           "thingUri": "http://www.bbc.co.uk/things/f94293fd-ff83-400e-8bc0-89ec01930fce#id",
           "thingId": "f94293fd-ff83-400e-8bc0-89ec01930fce",
-          "thingType": ["Thing", "Event"],
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Event"],
           "thingSameAs": [
-            "http://dbpedia.org/resource/Brexit",
-            "http://www.wikidata.org/entity/Q7888194"
+            "http://www.wikidata.org/entity/Q7888194",
+            "http://dbpedia.org/resource/Brexit"
           ],
           "topicName": "بريطانيا والاتحاد الأوروبي",
           "topicId": "c2dwq2kzzx8t",
@@ -68,10 +64,25 @@
               "curationType": "vivo-stream"
             }
           ]
+        },
+        {
+          "thingLabel": "المملكة المتحدة",
+          "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+          "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
+          "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+          "thingSameAs": ["http://sws.geonames.org/2635167/"],
+          "topicName": "المملكة المتحدة",
+          "topicId": "cxnyk7xky6rt",
+          "curationList": [
+            {
+              "curationId": "bc355278-add9-4fb3-a22c-76ee86c2fa2b",
+              "curationType": "vivo-stream"
+            }
+          ]
         }
       ]
     },
-    "version": "v1.0.10",
+    "version": "v1.2.1",
     "blockTypes": ["media", "paragraph"],
     "includeComments": false
   },
@@ -100,9 +111,10 @@
             "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
+              "nonUk": true,
+              "world": false
             },
-            "availableFrom": 1567610367
+            "availableFrom": 1567610367000
           }
         ],
         "type": "media"
@@ -127,10 +139,12 @@
     "locators": {
       "assetUri": "/arabic/media-49580542",
       "cpsUrn": "urn:bbc:content:assetUri:arabic/media-49580542",
-      "curie": "http://www.bbc.co.uk/asset/16dcfb1b-f237-104a-b885-69e758171253"
+      "curie": "http://www.bbc.co.uk/asset/16dcfb1b-f237-104a-b885-69e758171253",
+      "assetId": "49580542"
     },
     "summary": "زعيم مجلس العموم والعضو البارز في حزب المحافظين جاكوب ريس موغ يستلقي خلال جلسة بالبرلمان البريطاني أثناء كلمات لنواب معارضين لقرار رئيس الوزراء تعليق البرلمان.",
-    "timestamp": 1567610668457,
+    "timestamp": 1567610659000,
+    "language": "ar",
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -141,7 +155,8 @@
           "campaignId": "5a988e3e39461b000e9dabfb",
           "campaignName": "WS - Keep me on trend"
         }
-      ]
+      ],
+      "taggings": []
     },
     "media": {
       "id": "p07mf8wy",
@@ -164,11 +179,8 @@
           "duration": 36,
           "durationISO8601": "PT36S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          },
-          "availableFrom": 1567610367
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1567610367000
         }
       ],
       "type": "media"
@@ -215,8 +227,41 @@
               "cpsUrn": "urn:bbc:content:assetUri:/arabic/media-49558493"
             },
             "summary": "تقرر تعليق عمل البرلمان البريطاني بعد أيام فقط من عودته للاتعقاد في أيلول/ سبتمبر، وقبل أسابيع فقط من موعد خروج بريطانيا من الاتحاد الأوروبي.",
-            "timestamp": 1567443090,
+            "timestamp": 1567443090000,
+            "language": "ar",
             "cpsType": "MAP",
+            "media": {
+              "id": "p07m8g31",
+              "subType": "clip",
+              "format": "video",
+              "title": "لماذا لا يتفق أحد على ما يجري حول خروج بريطانيا من الاتحاد الأوروبي؟",
+              "synopses": {
+                "short": "لماذا لا يتفق أحد على ما يجري حول خروج بريطانيا من الاتحاد الأوروبي؟",
+                "long": "علقت حكومة المملكة المتحدة عمل البرلمان لمدة خمسة أسابيع، وهي خطوة يزعم سياسيو المعارضة أنها \"انقلاب\". \nلكن الحكومة تقول إن القرار يتماشى مع الطريقة التي يعمل بها النظام السياسي البريطاني. \nإذن كيف انتهى الأمر بانقسام البلد وهل هناك مخرج واضح؟",
+                "medium": "تقرر تعليق عمل البرلمان البريطاني بعد أيام فقط من عودة نوابه للالتئام في أيلول / سبتمبر، وقبل اسابيع فقط من موعد خروج بريطانيا من الاتحاد الأوروبي."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m8gr2.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "لماذا لا يتفق أحد على ما يجري حول خروج بريطانيا من الاتحاد الأوروبي؟",
+              "versions": [
+                {
+                  "versionId": "p07m8g3b",
+                  "types": ["Original"],
+                  "duration": 139,
+                  "durationISO8601": "PT2M19S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1567442670000
+                }
+              ],
+              "imageCopyright": "BBC",
+              "type": "media"
+            },
             "indexImage": {
               "id": "108589216",
               "subType": "index",
@@ -228,6 +273,7 @@
               "copyrightHolder": "BBC",
               "type": "image"
             },
+            "mediaType": "Video",
             "id": "urn:bbc:ares::asset:arabic/media-49558493",
             "type": "cps"
           },
@@ -241,8 +287,40 @@
               "cpsUrn": "urn:bbc:content:assetUri:/arabic/media-46509005"
             },
             "summary": "رئيسة الوزراء البريطانية تيريزا ماي تواجه تحديا صعبا يوم الثلاثاء، حين يصوت الأعضاء في مجلس العموم البريطاني على الاتفاق الخاص بالانسحاب من الاتحاد الأوروبي.",
-            "timestamp": 1544441254,
+            "timestamp": 1544441254000,
+            "language": "ar",
             "cpsType": "MAP",
+            "media": {
+              "id": "p06v4rxf",
+              "subType": "clip",
+              "format": "video",
+              "title": "7 سيناريوهات لخروج بريطانيا من الاتحاد الأوروبي",
+              "synopses": {
+                "short": "7 سيناريوهات لخروج بريطانيا من الاتحاد الأوروبي",
+                "long": "تواجه رئيسة الوزراء البريطانية تيريزا ماي تحديا صعبا يوم الثلاثاء، حين يصوت الأعضاء في مجلس العموم البريطاني على الاتفاق الخاص بالانسحاب من الاتحاد الأوروبي. \n\nوكان عدد كبير من نواب البرلمان قد عبروا عن رفضهم لهذا الاتفاق حتى من داخل حزب المحافظين، مما يضع زعيمة الحزب ماي في مأزق صعب قد يعصف بمستقبلها السياسي \n\nتقرير منى با.",
+                "medium": "رئيسة الوزراء البريطانية تيريزا ماي تواجه تحديا صعبا يوم الثلاثاء، حين يصوت الأعضاء في مجلس العموم البريطاني على الاتفاق الخاص بالانسحاب من الاتحاد الأوروبي."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06v4ykq.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "7 سيناريوهات لخروج بريطانيا من الاتحاد الأوروبي",
+              "versions": [
+                {
+                  "versionId": "p06v4yhp",
+                  "types": ["Editorial"],
+                  "duration": 195,
+                  "durationISO8601": "PT3M15S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1544437886000
+                }
+              ],
+              "type": "media"
+            },
             "indexImage": {
               "id": "104716545",
               "subType": "index",
@@ -254,6 +332,7 @@
               "copyrightHolder": "BBC",
               "type": "image"
             },
+            "mediaType": "Video",
             "id": "urn:bbc:ares::asset:arabic/media-46509005",
             "type": "cps"
           },
@@ -267,8 +346,41 @@
               "cpsUrn": "urn:bbc:content:assetUri:/arabic/media-47793693"
             },
             "summary": "قاطع ناشطون في مجال التغير المناخي جلسة كان يناقش خلالها نواب البرلمان البريطاني الخروج من الاتحاد الأوروبي (البريكست) يوم الاثنين 1 نيسان / أبريل.",
-            "timestamp": 1554222549,
+            "timestamp": 1554222549000,
+            "language": "ar",
             "cpsType": "MAP",
+            "media": {
+              "id": "p0759tfw",
+              "subType": "clip",
+              "format": "video",
+              "title": "عراة يقاطعون جلسة البرلمان البريطاني",
+              "synopses": {
+                "short": "ناشطون شبه عراة يقاطعون جلسة البرلمان البريطاني حول أزمة بريكست",
+                "long": "قاطع ناشطون في مجال التغير المناخي جلسة كان يناقش خلالها نواب البرلمان البريطاني الخروج من الاتحاد الأوروبي (البريكست) يوم الاثنين 1 نيسان / أبريل.\nووقف المحتجون لأكثر من 20 دقيقة وهم شبه عراة وموجهين ظهورهم لمجلس النواب. \nوبالرغم من جدية النقاش ومطالب المحتجين، تشتت انتباه البعض، فيما قام البعض الآخر بتلميحات ساخرة عن الموقف.",
+                "medium": "قاطع ناشطون في مجال التغير المناخي جلسة كان يناقش خلالها نواب البرلمان البريطاني الخروج من الاتحاد الأوروبي (البريكست) يوم الاثنين 1 نيسان / أبريل."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0759w54.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "ناشطون ضد التغير المناخي يقاطعون جلسة لنقاش أزمة البريكست شبه عراة",
+              "versions": [
+                {
+                  "versionId": "p0759tg1",
+                  "types": ["Original"],
+                  "duration": 50,
+                  "durationISO8601": "PT50S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1554221942000
+                }
+              ],
+              "imageCopyright": "extinction rebellion",
+              "type": "media"
+            },
             "indexImage": {
               "id": "106275171",
               "subType": "index",
@@ -280,6 +392,7 @@
               "copyrightHolder": "extinction rebellion",
               "type": "image"
             },
+            "mediaType": "Video",
             "id": "urn:bbc:ares::asset:arabic/media-47793693",
             "type": "cps"
           }
