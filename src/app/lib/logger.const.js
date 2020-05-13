@@ -44,6 +44,7 @@ const logCodes = {
 
   // Most Read
   MOST_READ_FETCH_ERROR: 'most_read_fetch_error',
+  MOST_READ_REQUEST_RECEIVED: 'most_read_request_received',
 };
 
 module.exports = logCodes;
