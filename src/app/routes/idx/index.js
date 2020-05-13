@@ -1,5 +1,4 @@
-import IDXPage from '../../pages/IDXPage';
-// import getInitialData from './getInitialData';
+import { IDXPage } from '#pages';
 import { idxPagePath } from '../utils/regex';
 
 export default {

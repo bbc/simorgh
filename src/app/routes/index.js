@@ -15,7 +15,7 @@ export default [
   liveRadio,
   mostRead,
   onDemandRadio,
+  idx,
   error,
   errorNoRouteMatch,
-  idx,
 ];
