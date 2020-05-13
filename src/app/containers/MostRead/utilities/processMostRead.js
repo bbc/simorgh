@@ -1,12 +1,12 @@
 import pathOr from 'ramda/src/pathOr';
 import nodeLogger from '#lib/logger.node';
 import { mostReadRecordIsFresh } from '.';
-import { MOST_READ_DATA_INCOMPLETE_WARNING } from '#lib/logger.const';
+import { MOST_READ_DATA_INCOMPLETE } from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
 const logMissingDataFields = ({ error }) => {
-  logger.warn(MOST_READ_DATA_INCOMPLETE_WARNING, {
+  logger.warn(MOST_READ_DATA_INCOMPLETE, {
     error,
   });
 };
