@@ -17,7 +17,7 @@ jobs:
       name: 'Unit Tests and storybook e2e'
       install: npm ci
       script:
-        - npm run test
+        - npm --version 
     - stage: test
       if: type = push OR (pull_request AND fork = true)
       name: 'Production CI tests'
