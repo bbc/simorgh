@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/afrique/monde-49500638",
       "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-49500638",
-      "curie": "http://www.bbc.co.uk/asset/bd174bc3-4065-cb43-a224-6eff60d2a6d3"
+      "curie": "http://www.bbc.co.uk/asset/bd174bc3-4065-cb43-a224-6eff60d2a6d3",
+      "assetId": "49500638"
     },
     "type": "MAP",
     "createdBy": "afrique-v6",
     "language": "fr",
-    "lastUpdated": 1567779779290,
-    "firstPublished": 1567684700,
-    "lastPublished": 1567779771,
+    "lastUpdated": 1588694662066,
+    "firstPublished": 1567684700000,
+    "lastPublished": 1567684700000,
+    "timestamp": 1567684700000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -48,10 +50,11 @@
           "campaignId": "5a988e3739461b000e9dabfa",
           "campaignName": "WS - Give me perspective"
         }
-      ]
+      ],
+      "taggings": []
     },
     "tags": {},
-    "version": "v1.0.10",
+    "version": "v1.2.1",
     "blockTypes": ["media", "paragraph"],
     "includeComments": false
   },
@@ -64,7 +67,7 @@
         "title": "Tennis: 'Les soeurs Williams' du Cameroun",
         "synopses": {
           "short": "Tennis: 'Les soeurs Williams' du Cameroun",
-          "long": "Linda et Manuella Eloundou ont 16 ans.\nElles se font appeler les Soeurs Williams. \nD'origine camerounaises, elles parcourent le pays et la sous-régions pour agrandir leurs collections de trophées de Tennis. \n\nUn reportage pour l'émission BBC Actu Jeunes https://www.youtube.com/watch?v=CZPSUhWkPoE"
+          "long": "Linda et Manuella Eloundou ont 16 ans. Elles se font appeler les Soeurs Williams. D'origine camerounaises, elles parcourent le pays et la sous-régions pour agrandir leurs collections de trophées de Tennis. Un reportage pour l'émission BBC Actu Jeunes https://www.youtube.com/watch?v=CZPSUhWkPoE"
         },
         "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m881h.jpg",
         "embedding": true,
@@ -79,9 +82,10 @@
             "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
+              "nonUk": true,
+              "world": false
             },
-            "availableFrom": 1567437159
+            "availableFrom": 1567437159000
           }
         ],
         "type": "media"
@@ -124,12 +128,14 @@
               "href": "http://www.bbc.com/afrique/monde-47950831"
             },
             "summary": "Au Royaume-Uni, les femmes noires ont beaucoup plus de risques de mourir de complications liées à la grossesse et à l'accouchement que les femmes blanches.",
-            "timestamp": 1555604396,
+            "timestamp": 1555604396000,
+            "language": "fr",
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
                 "categoryName": "Analysis"
-              }
+              },
+              "taggings": []
             },
             "id": "urn:bbc:ares::asset:afrique/monde-47950831",
             "type": "cps"
@@ -151,12 +157,14 @@
               "href": "http://www.bbc.com/afrique/sports-46838699"
             },
             "summary": "Le joueur de tennis britannique déclare qu'il prévoit de mettre fin à sa carrière après le Grand Chelem de Melbourne.",
-            "timestamp": 1547214809,
+            "timestamp": 1547214809000,
+            "language": "fr",
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
-              }
+              },
+              "taggings": []
             },
             "id": "urn:bbc:ares::asset:afrique/sports-46838699",
             "type": "cps"
@@ -178,12 +186,14 @@
               "href": "http://www.bbc.com/afrique/monde-45900949"
             },
             "summary": "Les femmes dont l'index gauche et l'annulaire sont de longueurs différentes sont plus susceptibles d'être lesbiennes.",
-            "timestamp": 1539875197,
+            "timestamp": 1539875197000,
+            "language": "fr",
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
-              }
+              },
+              "taggings": []
             },
             "id": "urn:bbc:ares::asset:afrique/monde-45900949",
             "type": "cps"
@@ -202,10 +212,12 @@
     "locators": {
       "assetUri": "/afrique/monde-49500638",
       "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-49500638",
-      "curie": "http://www.bbc.co.uk/asset/bd174bc3-4065-cb43-a224-6eff60d2a6d3"
+      "curie": "http://www.bbc.co.uk/asset/bd174bc3-4065-cb43-a224-6eff60d2a6d3",
+      "assetId": "49500638"
     },
     "summary": "Linda et Manuella Eloundou sont des jumelles camerounaise de 16 ans, elles parcourent leur pays et la sous-régions pour agrandir leurs collections de trophées de Tennis.",
-    "timestamp": 1567779779290,
+    "timestamp": 1567684700000,
+    "language": "fr",
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -224,7 +236,8 @@
           "campaignId": "5a988e3739461b000e9dabfa",
           "campaignName": "WS - Give me perspective"
         }
-      ]
+      ],
+      "taggings": []
     },
     "media": {
       "id": "p07m7zw4",
@@ -233,7 +246,7 @@
       "title": "Tennis: 'Les soeurs Williams' du Cameroun",
       "synopses": {
         "short": "Tennis: 'Les soeurs Williams' du Cameroun",
-        "long": "Linda et Manuella Eloundou ont 16 ans.\nElles se font appeler les Soeurs Williams. \nD'origine camerounaises, elles parcourent le pays et la sous-régions pour agrandir leurs collections de trophées de Tennis. \n\nUn reportage pour l'émission BBC Actu Jeunes https://www.youtube.com/watch?v=CZPSUhWkPoE"
+        "long": "Linda et Manuella Eloundou ont 16 ans. Elles se font appeler les Soeurs Williams. D'origine camerounaises, elles parcourent le pays et la sous-régions pour agrandir leurs collections de trophées de Tennis. Un reportage pour l'émission BBC Actu Jeunes https://www.youtube.com/watch?v=CZPSUhWkPoE"
       },
       "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m881h.jpg",
       "embedding": true,
@@ -248,9 +261,10 @@
           "warnings": {},
           "availableTerritories": {
             "uk": true,
-            "nonUk": true
+            "nonUk": true,
+            "world": false
           },
-          "availableFrom": 1567437159
+          "availableFrom": 1567437159000
         }
       ],
       "type": "media"
@@ -297,7 +311,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/afrique/45504155"
             },
             "summary": "Le match qui pose la question de l'égalité des sexes dans le tennis",
-            "timestamp": 1536778453,
+            "timestamp": 1536778453000,
+            "language": "fr",
             "cpsType": "STY",
             "indexImage": {
               "id": "103401879",
@@ -323,8 +338,41 @@
               "cpsUrn": "urn:bbc:content:assetUri:/afrique/45491927"
             },
             "summary": "Le match qui pose la question de l'égalité des sexes dans le tennis",
-            "timestamp": 1536694750,
+            "timestamp": 1536694750000,
+            "language": "fr",
             "cpsType": "MAP",
+            "media": {
+              "id": "p06klsxj",
+              "subType": "clip",
+              "format": "video",
+              "title": "En Sierra Leone, le diamant de la Paix suscite la discorde",
+              "synopses": {
+                "short": "Koyadu, un village Sierra Léonais entre mines de diamants et pauvreté.",
+                "long": "Surnommée le diamant de la paix, une pierre bijou de 709 carats, a été trouvée par le groupe de mineurs d'un pasteur qui l'a remis au gouvernement. Il a ensuite été mis aux enchères et vendu pour 6,5 millions de dollars contre la promesse qu'une partie de l'argent servirait à développer le village de Koyadu. Récit de Raissa Okoi",
+                "medium": "C'est en Sierra Leone qu'a été trouvé l’un des plus gros diamants du monde. Ce bijou de 709 carats été mis aux enchères et vendu pour 6,5 millions de dollars."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06kxf9k.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "Koyadu, un village Sierra Léonais entre mines de diamants et pauvreté.",
+              "versions": [
+                {
+                  "versionId": "p06klsxl",
+                  "types": ["Original"],
+                  "duration": 161,
+                  "durationISO8601": "PT2M41S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1536693951000
+                }
+              ],
+              "imageCopyright": "BBC",
+              "type": "media"
+            },
             "indexImage": {
               "id": "103387562",
               "subType": "index",
@@ -336,6 +384,7 @@
               "copyrightHolder": "BBC",
               "type": "image"
             },
+            "mediaType": "Video",
             "id": "urn:bbc:ares::asset:afrique/45491927",
             "type": "cps"
           }
