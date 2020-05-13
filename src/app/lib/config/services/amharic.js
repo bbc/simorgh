@@ -13,7 +13,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
-      advertisementText: 'ማስታወቂያ',
+      advertisementLabel: 'ማስታወቂያ',
     },
     lang: `am`,
     articleAuthor: `https://www.facebook.com/bbcnews`,

@@ -13,7 +13,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
-      advertisementText: 'اشتہار',
+      advertisementLabel: 'اشتہار',
     },
     lang: 'ur',
     product: 'BBC News',

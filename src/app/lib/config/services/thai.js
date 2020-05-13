@@ -9,7 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
-      advertisementText: 'โฆษณา',
+      advertisementLabel: 'โฆษณา',
     },
     lang: `th`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
