@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import {
@@ -6,30 +6,44 @@ import {
   AMP_ADS_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import {
-  GEL_SPACING_QUAD,
-  GEL_SPACING_TRPL,
-  GEL_SPACING_DBL,
-  GEL_SPACING,
-} from '@bbc/gel-foundations/spacings';
-import { C_LUNAR_LIGHT } from '@bbc/psammead-styles/colours';
+import { GEL_SPACING_DBL, GEL_SPACING } from '@bbc/gel-foundations/spacings';
+import { C_LUNAR_LIGHT, C_RHINO } from '@bbc/psammead-styles/colours';
+import pathOr from 'ramda/src/pathOr';
+import { getBodyCopy } from '@bbc/gel-foundations/typography';
+import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { ServiceContext } from '#contexts/ServiceContext';
 
-const StyledWrapper = styled.div`
+const FullWidthWrapper = styled.div`
   background-color: ${C_LUNAR_LIGHT};
 `;
 
-const StyledAd = styled.div`
-  /* To centre page layout for Group 4+ */
-  margin: 0 auto;
-  width: 100%; /* Needed for IE11 */
+const StyledWrapper = styled.div`
+  margin: 0 auto; /* To centre page layout for Group 4+ */
   text-align: center;
-  padding-top: ${GEL_SPACING_TRPL};
   padding-bottom: ${GEL_SPACING};
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-top: ${GEL_SPACING_QUAD};
     padding-bottom: ${GEL_SPACING_DBL};
     max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
+  }
+`;
+
+const StyledAd = styled.div`
+  display: inline-block;
+`;
+
+const StyledParagraph = styled.p`
+  ${({ script }) => script && getBodyCopy(script)};
+  ${({ service }) => getSansRegular(service)}
+  color: ${C_RHINO};
+  margin: 0; /* Reset */
+  text-transform: uppercase;
+  padding: ${GEL_SPACING} 0;
+  
+  text-align: ${({ dir }) => (dir === 'ltr' ? `right` : `left`)};
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding-top: ${GEL_SPACING_DBL};
   }
 `;
 
@@ -88,40 +102,48 @@ export const AMP_ACCESS_FETCH = service => {
 };
 
 // eslint-disable-next-line react/prop-types
-const AmpAd = ({ service }) => {
+const AmpAd = () => {
+  const { ads, dir, script, service } = useContext(ServiceContext);
+  const advertisementLabel = pathOr(false, ['advertisementLabel'], ads);
+
   return (
-    <StyledWrapper>
-      <Helmet>
-        {AMP_ADS_JS}
-        {AMP_ACCESS_JS}
-        {AMP_ACCESS_FETCH(service)}
-      </Helmet>
-      <div
-        amp-access="toggles.ads.enabled AND geoIp.advertiseCombined"
-        amp-access-hide="true"
-      >
-        <StyledAd>
-          <amp-ad {...ampAdPropsMobile({ service })}>
-            <amp-img
-              placeholder
-              width="320"
-              height="50"
-              src="https://via.placeholder.com/320x50"
-              layout="responsive"
-            />
-          </amp-ad>
-          <amp-ad {...ampAdPropsDesktop({ service })}>
-            <amp-img
-              placeholder
-              width="970"
-              height="250"
-              src="https://via.placeholder.com/970x250"
-              layout="responsive"
-            />
-          </amp-ad>
-        </StyledAd>
-      </div>
-    </StyledWrapper>
+    <FullWidthWrapper>
+      <StyledWrapper>
+        <Helmet>
+          {AMP_ADS_JS}
+          {AMP_ACCESS_JS}
+          {AMP_ACCESS_FETCH(service)}
+        </Helmet>
+        <div
+          // amp-access="toggles.ads.enabled AND geoIp.advertiseCombined"
+          amp-access-hide="true"
+        >
+          <StyledAd>
+            <StyledParagraph script={script} service={service} dir={dir}>
+              {advertisementLabel}
+            </StyledParagraph>
+            <amp-ad {...ampAdPropsMobile({ service })}>
+              <amp-img
+                placeholder
+                width="320"
+                height="50"
+                src="https://via.placeholder.com/320x50"
+                layout="responsive"
+              />
+            </amp-ad>
+            <amp-ad {...ampAdPropsDesktop({ service })}>
+              <amp-img
+                placeholder
+                width="970"
+                height="250"
+                src="https://via.placeholder.com/970x250"
+                layout="responsive"
+              />
+            </amp-ad>
+          </StyledAd>
+        </div>
+      </StyledWrapper>
+    </FullWidthWrapper>
   );
 };
 
