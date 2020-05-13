@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/ukchina/simp/49375846",
       "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/49375846",
-      "curie": "http://www.bbc.co.uk/asset/c30b716c-ff6b-d849-9cc8-0f68e40c74e1"
+      "curie": "http://www.bbc.co.uk/asset/c30b716c-ff6b-d849-9cc8-0f68e40c74e1",
+      "assetId": "49375846"
     },
     "type": "MAP",
     "createdBy": "ukchina-v6",
     "language": "zh-Hans",
-    "lastUpdated": 1566213224765,
-    "firstPublished": 1565970259,
-    "lastPublished": 1566213216,
+    "lastUpdated": 1586829212999,
+    "firstPublished": 1565970259000,
+    "lastPublished": 1565970259000,
+    "timestamp": 1565970259000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -40,10 +42,43 @@
           "campaignId": "5a988e2139461b000e9dabf7",
           "campaignName": "WS - Inspire me"
         }
+      ],
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Japan",
+          "thingUri": "http://www.bbc.co.uk/things/3f53c272-5b8f-4a4f-99de-a857d6726c5b#id",
+          "thingId": "3f53c272-5b8f-4a4f-99de-a857d6726c5b",
+          "thingType": ["core:Thing", "core:Place", "tagging:TagConcept"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Japan",
+            "http://www.wikidata.org/entity/Q17",
+            "http://sws.geonames.org/1861060/"
+          ]
+        },
+        {
+          "thingLabel": "Life",
+          "thingUri": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+          "thingId": "0239ab33-1cfc-4f5d-babb-a8159711af3e",
+          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+          "thingSameAs": []
+        },
+        {
+          "thingLabel": "China",
+          "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+          "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+          "thingSameAs": [
+            "http://sws.geonames.org/1814991/",
+            "http://dbpedia.org/resource/China",
+            "http://www.wikidata.org/entity/Q148"
+          ]
+        }
       ]
     },
-    "tags": {},
-    "version": "v1.0.10",
+    "version": "v1.1.11",
     "blockTypes": ["media", "paragraph", "list"],
     "includeComments": false
   },
@@ -75,9 +110,10 @@
             },
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
+              "nonUk": true,
+              "world": false
             },
-            "availableFrom": 1565921621
+            "availableFrom": 1565921621000
           }
         ],
         "type": "media"
@@ -109,12 +145,14 @@
                   "href": "http://www.bbc.com/ukchina/simp/vert-tra-49007946"
                 },
                 "summary": "去台湾玩还需要理由吗？台湾有山有水，自然景观丰富多样，人情味浓厚，还有吃不完的美食和放松身心灵的温泉。",
-                "timestamp": 1563552098,
+                "timestamp": 1563552098000,
+                "language": "zh-Hans",
                 "passport": {
                   "category": {
                     "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
                     "categoryName": "Feature"
-                  }
+                  },
+                  "taggings": []
                 },
                 "id": "urn:bbc:ares::asset:ukchina/simp/vert-tra-49007946",
                 "type": "cps"
@@ -136,12 +174,14 @@
                   "href": "http://www.bbc.com/ukchina/simp/vert-fut-48773560"
                 },
                 "summary": "位于日本九州的福冈，虽然比不上首都东京受到关注，但福冈正在成为日本的“硅谷”——为初创企业提供成长的沃土。",
-                "timestamp": 1561644756,
+                "timestamp": 1561644756000,
+                "language": "zh-Hans",
                 "passport": {
                   "category": {
                     "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
                     "categoryName": "Feature"
-                  }
+                  },
+                  "taggings": []
                 },
                 "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-48773560",
                 "type": "cps"
@@ -163,12 +203,14 @@
                   "href": "http://www.bbc.com/ukchina/simp/vert-tra-48735307"
                 },
                 "summary": "流水素面是日本最有趣的一种夏日美食习俗：面条随着竹槽中的流水一同流下，你得眼疾手快，用筷子夹出你的面条。",
-                "timestamp": 1561268435,
+                "timestamp": 1561268435000,
+                "language": "zh-Hans",
                 "passport": {
                   "category": {
                     "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
                     "categoryName": "Feature"
-                  }
+                  },
+                  "taggings": []
                 },
                 "id": "urn:bbc:ares::asset:ukchina/simp/vert-tra-48735307",
                 "type": "cps"
@@ -190,10 +232,12 @@
     "locators": {
       "assetUri": "/ukchina/simp/49375846",
       "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/49375846",
-      "curie": "http://www.bbc.co.uk/asset/c30b716c-ff6b-d849-9cc8-0f68e40c74e1"
+      "curie": "http://www.bbc.co.uk/asset/c30b716c-ff6b-d849-9cc8-0f68e40c74e1",
+      "assetId": "49375846"
     },
     "summary": "他出生中国，移民日本后长期在东京红灯区里做拉客的案内人，甚至曾遭黑道绑架勒索，但他现在走上了从政的道路。",
-    "timestamp": 1566213224765,
+    "timestamp": 1565970259000,
+    "language": "zh-Hans",
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
@@ -204,7 +248,8 @@
           "campaignId": "5a988e2139461b000e9dabf7",
           "campaignName": "WS - Inspire me"
         }
-      ]
+      ],
+      "taggings": []
     },
     "media": {
       "id": "p07ksjjp",
@@ -230,11 +275,8 @@
             "short": "Contains some sexual content.",
             "long": "Contains some scenes of a sexual nature."
           },
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          },
-          "availableFrom": 1565921621
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1565921621000
         }
       ],
       "type": "media"
@@ -280,7 +322,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/vert-tra-49007946"
             },
             "summary": "去台湾玩还需要理由吗？台湾有山有水，自然景观丰富多样，人情味浓厚，还有吃不完的美食和放松身心灵的温泉。",
-            "timestamp": 1563552098,
+            "timestamp": 1563552098000,
+            "language": "zh-Hans",
             "cpsType": "STY",
             "indexImage": {
               "id": "107949716",
@@ -307,7 +350,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/vert-fut-48773560"
             },
             "summary": "位于日本九州的福冈，虽然比不上首都东京受到关注，但福冈正在成为日本的“硅谷”——为初创企业提供成长的沃土。",
-            "timestamp": 1561644756,
+            "timestamp": 1561644756000,
+            "language": "zh-Hans",
             "cpsType": "STY",
             "indexImage": {
               "id": "107545287",
@@ -333,7 +377,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/vert-tra-48735307"
             },
             "summary": "流水素面是日本最有趣的一种夏日美食习俗：面条随着竹槽中的流水一同流下，你得眼疾手快，用筷子夹出你的面条。",
-            "timestamp": 1561268435,
+            "timestamp": 1561268435000,
+            "language": "zh-Hans",
             "cpsType": "STY",
             "indexImage": {
               "id": "107504184",
