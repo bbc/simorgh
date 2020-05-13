@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/uzbek/lotin-44512908",
       "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-44512908",
-      "curie": "http://www.bbc.co.uk/asset/24726c25-85f0-6642-85bd-5d211923c145"
+      "curie": "http://www.bbc.co.uk/asset/24726c25-85f0-6642-85bd-5d211923c145",
+      "assetId": "44512908"
     },
     "type": "MAP",
     "createdBy": "uzbek-v6",
     "language": "uz-Latn",
-    "lastUpdated": 1549913304899,
-    "firstPublished": 1529248797,
-    "lastPublished": 1529248799,
+    "lastUpdated": 1588679529823,
+    "firstPublished": 1529248797000,
+    "lastPublished": 1529248797000,
+    "timestamp": 1529248797000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -26,9 +28,9 @@
       "allowPrintingSharingLinks": true
     },
     "analyticsLabels": {
+      "cps_asset_type": "map",
       "counterName": "uzbek.latin.media_asset.44512908.page",
-      "cps_asset_id": "44512908",
-      "cps_asset_type": "map"
+      "cps_asset_id": "44512908"
     },
     "passport": {
       "category": {
@@ -40,10 +42,11 @@
           "campaignId": "5a988e4739461b000e9dabfc",
           "campaignName": "Update me"
         }
-      ]
+      ],
+      "taggings": []
     },
     "tags": {},
-    "version": "v0.4.14",
+    "version": "v1.2.1",
     "blockTypes": ["media", "paragraph"],
     "includeComments": false
   },
@@ -61,7 +64,6 @@
         },
         "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06bc18q.jpg",
         "embedding": true,
-        "warnings": {},
         "advertising": true,
         "caption": "Mirziyoyev Oʻzbekistonni qashshoqlikdan chiqara oladimi?",
         "versions": [
@@ -69,10 +71,14 @@
             "versionId": "p06bc127",
             "types": ["Original"],
             "duration": 372,
+            "durationISO8601": "PT6M12S",
+            "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
-            }
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1529247826000
           }
         ],
         "type": "media"
@@ -122,10 +128,12 @@
     "locators": {
       "assetUri": "/uzbek/lotin-44512908",
       "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-44512908",
-      "curie": "http://www.bbc.co.uk/asset/24726c25-85f0-6642-85bd-5d211923c145"
+      "curie": "http://www.bbc.co.uk/asset/24726c25-85f0-6642-85bd-5d211923c145",
+      "assetId": "44512908"
     },
     "summary": "Oʻtgan hafta Fargʻonaga safari chogʻida Mirziyoyev \"mening eng katta maqsadim - odamlarni boy qilish\", deb aytgan. Focus Economics guruhi Oʻzbekistonni dunyoning eng qashshoq oʻn davlati qatoriga qoʻygan.",
-    "timestamp": 1549913304899,
+    "timestamp": 1529248797000,
+    "language": "uz-Latn",
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -136,7 +144,8 @@
           "campaignId": "5a988e4739461b000e9dabfc",
           "campaignName": "Update me"
         }
-      ]
+      ],
+      "taggings": []
     },
     "media": {
       "id": "p06bc123",
@@ -150,7 +159,6 @@
       },
       "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06bc18q.jpg",
       "embedding": true,
-      "warnings": {},
       "advertising": true,
       "caption": "Mirziyoyev Oʻzbekistonni qashshoqlikdan chiqara oladimi?",
       "versions": [
@@ -158,10 +166,10 @@
           "versionId": "p06bc127",
           "types": ["Original"],
           "duration": 372,
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          }
+          "durationISO8601": "PT6M12S",
+          "warnings": {},
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1529247826000
         }
       ],
       "type": "media"
