@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { string, number, bool, node } from 'prop-types';
+import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import Image, { AmpImg } from '@bbc/psammead-image';
@@ -7,11 +8,15 @@ import { RequestContext } from '#contexts/RequestContext';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
+const ImageWithBackground = styled.div`
+  background: white;
+`;
+
 const renderImage = (imageToRender, lazyLoad, fallback) =>
   lazyLoad ? (
     <>
       <LazyLoad offset={LAZYLOAD_OFFSET} once>
-        {imageToRender}
+        <ImageWithBackground>{imageToRender}</ImageWithBackground>
       </LazyLoad>
       {fallback && <noscript>{imageToRender}</noscript>}
     </>
