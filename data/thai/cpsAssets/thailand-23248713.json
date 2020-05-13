@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/thai/thailand-23248713",
       "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-23248713",
-      "curie": "http://www.bbc.co.uk/asset/745f0123-f073-e24e-bae8-c3eeab061289"
+      "curie": "http://www.bbc.co.uk/asset/745f0123-f073-e24e-bae8-c3eeab061289",
+      "assetId": "23248713"
     },
     "type": "MAP",
     "createdBy": "thai-v6",
     "language": "th",
-    "lastUpdated": 1573487977775,
+    "lastUpdated": 1588336104501,
     "firstPublished": 1568390012000,
-    "lastPublished": 1572951180000,
+    "lastPublished": 1568390012000,
+    "timestamp": 1568390012000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -33,20 +35,21 @@
       "counterName": "thai.thailand.media_asset.23248713.page",
       "cps_asset_id": "23248713"
     },
+    "passport": { "taggings": [] },
     "tags": {},
-    "version": "v1.1.2",
+    "version": "v1.2.1",
     "blockTypes": ["version", "paragraph", "list", "image"],
     "includeComments": false
   },
   "content": {
     "blocks": [
       {
-        "id": "63501296",
+        "id": "63501301",
         "subType": "primary",
         "format": "video",
         "externalId": "journalism_uk_news_stream_01",
         "duration": "PT0S",
-        "caption": "live stream from event",
+        "caption": "Caption",
         "image": {
           "id": "63501301",
           "subType": "thumbnail",
@@ -189,20 +192,20 @@
     "locators": {
       "assetUri": "/thai/thailand-23248713",
       "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-23248713",
-      "curie": "http://www.bbc.co.uk/asset/745f0123-f073-e24e-bae8-c3eeab061289"
+      "curie": "http://www.bbc.co.uk/asset/745f0123-f073-e24e-bae8-c3eeab061289",
+      "assetId": "23248713"
     },
     "summary": "พระบาทสมเด็จพระปรมินทรมหาภูมิพลอดุลยเดช มหิตลาธิเบศรามาธิบดี จักรีนฤบดินทร สยามินทราธิราช บรมนาถบพิตร ทรงเป็นพระมหากษัตริย์ผู้เสวยราชย์ยาวนานที่สุดในประวัติศาสตร์ไทยถึง 70 ปี โดยทรงเป็นที่รักและเทิดทูนของปวงชนชาวไทย ซึ่งพร้อมใจกันถวายพระสมัญญานามให้ทรงเป็นมหาราช",
-    "timestamp": 1573487977775,
-    "passport": {
-      "taggings": []
-    },
+    "timestamp": 1568390012000,
+    "language": "th",
+    "passport": { "taggings": [] },
     "media": {
-      "id": "63501296",
+      "id": "63501301",
       "subType": "primary",
       "format": "video",
       "externalId": "journalism_uk_news_stream_01",
       "duration": "PT0S",
-      "caption": "live stream from event",
+      "caption": "Caption",
       "image": {
         "id": "63501301",
         "subType": "thumbnail",
