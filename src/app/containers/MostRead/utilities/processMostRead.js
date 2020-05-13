@@ -5,12 +5,13 @@ import { MOST_READ_DATA_INCOMPLETE_WARNING } from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
-const getMostReadItemData = record => {
-  const cpsHeadline = pathOr(
-    null,
-    ['promo', 'headlines', 'shortHeadline'],
-    record,
-  );
+const logMissingDataFields = ({ error }) => {
+  logger.warn(MOST_READ_DATA_INCOMPLETE_WARNING, {
+    error,
+  });
+};
+
+const getOptimoItemData = record => {
   const optimoHeadline = pathOr(
     null,
     [
@@ -26,16 +27,30 @@ const getMostReadItemData = record => {
     ],
     record,
   );
-  const cpsLocator = pathOr(null, ['promo', 'locators', 'assetUri'], record);
   const optimoLocator = pathOr(null, ['locators', 'canonicalUrl'], record);
-  const cpsTimestamp = pathOr(null, ['promo', 'timestamp'], record);
   const optimoTimestamp = pathOr(null, ['timestamp'], record);
+  return {
+    id: record.id,
+    title: optimoHeadline,
+    href: optimoLocator,
+    timestamp: optimoTimestamp,
+  };
+};
+
+const getCpsItemData = record => {
+  const cpsHeadline = pathOr(
+    null,
+    ['promo', 'headlines', 'shortHeadline'],
+    record,
+  );
+  const cpsLocator = pathOr(null, ['promo', 'locators', 'assetUri'], record);
+  const cpsTimestamp = pathOr(null, ['promo', 'timestamp'], record);
 
   return {
     id: record.id,
-    title: cpsHeadline || optimoHeadline,
-    href: cpsLocator || optimoLocator,
-    timestamp: cpsTimestamp || optimoTimestamp,
+    title: cpsHeadline,
+    href: cpsLocator,
+    timestamp: cpsTimestamp,
   };
 };
 
@@ -52,23 +67,21 @@ const mostReadItems = ({ data, numberOfItems }) => {
   // in succession. This suggests ATI may be having issues, hence risk of stale data.
   if (isTest || mostReadRecordIsFresh(data.lastRecordTimeStamp)) {
     const items = [];
-    for (let i = 0; i < records.length; i += 1) {
-      const mostReadItemData = getMostReadItemData(records[i]);
+    // eslint-disable-next-line no-restricted-syntax
+    for (const record of records) {
+      const mostReadItemData =
+        record.type === 'optimo'
+          ? getOptimoItemData(record)
+          : getCpsItemData(record);
       const { href, title } = mostReadItemData;
+
       if (href && title) {
-        console.log('INNER ---');
         items.push(mostReadItemData);
+      } else {
+        logMissingDataFields({
+          error: 'Most read item is missing title or link data fields',
+        });
       }
-      logger.info(
-        JSON.stringify(
-          {
-            event: MOST_READ_DATA_INCOMPLETE_WARNING,
-            message: 'Most read item is missing title or link data fields',
-          },
-          null,
-          2,
-        ),
-      );
 
       if (items.length === numberOfItems) {
         break;

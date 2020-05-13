@@ -2,8 +2,6 @@ import processMostRead from './processMostRead';
 import pidginData from '#data/pidgin/mostRead';
 import kyrgyzData from '#data/kyrgyz/mostRead';
 import { setStaleLastRecordTimeStamp } from './testHelpers';
-import loggerMock from '#testHelpers/loggerMock';
-import { MOST_READ_DATA_INCOMPLETE_WARNING } from '#lib/logger.const';
 
 const expectedPidginData = [
   {
@@ -69,7 +67,6 @@ const expectedPidginData = [
   },
 ];
 
-// Kyrgyz uses Optimo data for Most read
 const expectedKyrgyzData = [
   {
     id: 'urn:bbc:ares::article:cn060pe01e5o',
@@ -156,80 +153,56 @@ const missingHrefData = {
 };
 
 describe('filterMostRead', () => {
-  // [
-  //   {
-  //     description: 'should return expected filtered CPS data',
-  //     data: pidginData,
-  //     numberOfItems: 10,
-  //     expectedReturn: expectedPidginData,
-  //   },
-  //   {
-  //     description: 'should return expected filtered Optimo data',
-  //     data: kyrgyzData,
-  //     numberOfItems: 5,
-  //     expectedReturn: expectedKyrgyzData,
-  //   },
-  //   {
-  //     description:
-  //       'should return null when last record CPS time stamp is stale',
-  //     data: setStaleLastRecordTimeStamp(pidginData),
-  //     expectedReturn: null,
-  //   },
-  //   {
-  //     description:
-  //       'should return null when last record Optimo time stamp is stale',
-  //     data: setStaleLastRecordTimeStamp(kyrgyzData),
-  //     expectedReturn: null,
-  //   },
-  //   {
-  //     description: 'should return null when no data is passed',
-  //     data: undefined,
-  //     expectedReturn: null,
-  //   },
-  //   {
-  //     description: 'should return empty array when records does not exist',
-  //     data: { lastRecordTimeStamp: '2100-11-06T16:37:00Z' },
-  //     expectedReturn: [],
-  //   },
-  // ].forEach(({ description, data, numberOfItems, expectedReturn }) => {
-  //   it(description, () => {
-  //     expect(processMostRead({ data, numberOfItems })).toEqual(expectedReturn);
-  //   });
-  // });
-
-  describe('Error logging', () => {
-    [
-      {
-        description:
-          'should log an insufficent data message when most read item title is missing',
-        data: missingTitleData,
-        numberOfItems: 1,
-        expectedReturn: null,
-      },
-      {
-        description:
-          'should log an insufficent data message when most read item href is missing',
-        data: missingHrefData,
-        numberOfItems: 1,
-        expectedReturn: null,
-      },
-    ].forEach(({ description, data, numberOfItems, expectedReturn }) => {
-      it(description, () => {
-        const expectedLog = JSON.stringify(
-          {
-            event: MOST_READ_DATA_INCOMPLETE_WARNING,
-            message: 'Most read item is missing title or link data fields',
-          },
-          null,
-          2,
-        );
-        processMostRead({ data, numberOfItems });
-        console.log('---loggerMock.info', loggerMock.info);
-        expect(loggerMock.info).toHaveBeenCalledWith(expectedLog);
-        expect(processMostRead({ data, numberOfItems })).toEqual(
-          expectedReturn,
-        );
-      });
+  [
+    {
+      description: 'should return expected filtered CPS data',
+      data: pidginData,
+      numberOfItems: 10,
+      expectedReturn: expectedPidginData,
+    },
+    {
+      description: 'should return expected filtered Optimo data',
+      data: kyrgyzData,
+      numberOfItems: 5,
+      expectedReturn: expectedKyrgyzData,
+    },
+    {
+      description:
+        'should return null when last record CPS time stamp is stale',
+      data: setStaleLastRecordTimeStamp(pidginData),
+      expectedReturn: null,
+    },
+    {
+      description:
+        'should return null when last record Optimo time stamp is stale',
+      data: setStaleLastRecordTimeStamp(kyrgyzData),
+      expectedReturn: null,
+    },
+    {
+      description: 'should return null when no data is passed',
+      data: undefined,
+      expectedReturn: null,
+    },
+    {
+      description: 'should return empty array when records does not exist',
+      data: { lastRecordTimeStamp: '2100-11-06T16:37:00Z' },
+      expectedReturn: [],
+    },
+    {
+      description: 'should return null when most read item title is missing',
+      data: missingTitleData,
+      numberOfItems: 1,
+      expectedReturn: null,
+    },
+    {
+      description: 'should return null when most read item href is missing',
+      data: missingHrefData,
+      numberOfItems: 1,
+      expectedReturn: null,
+    },
+  ].forEach(({ description, data, numberOfItems, expectedReturn }) => {
+    it(description, () => {
+      expect(processMostRead({ data, numberOfItems })).toEqual(expectedReturn);
     });
   });
 });
