@@ -7,7 +7,7 @@ const CanonicalAd = () => {
     return null;
   }
 
-  // To be implemented in next feature ticket
+  // To be implemented in the next feature ticket: https://github.com/bbc/simorgh/issues/6182
   return null;
 };
 
