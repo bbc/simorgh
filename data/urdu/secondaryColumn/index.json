@@ -1,0 +1,362 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "کیا سعودی عرب کے حالات واقعی اتنے خراب ہیں؟"
+        },
+        "locators": {
+          "assetUri": "/urdu/world-52644655",
+          "cpsUrn": "urn:bbc:content:assetUri:urdu/world-52644655",
+          "assetId": "52644655"
+        },
+        "summary": "کورونا کی وبا اور تیل کی قیمتوں میں کمی سے سعودی عرب میں ترقیاتی منصوبوں کی تکمیل کا خواب پورا ہوتا دکھائی نہیں دے رہا جس سے یہ سوال پیدا ہوا ہے کہ کیا ولی عہد کا انتہائی سرچڑھا ’وژن 2030 پروگرام‘ اب بھی حاصل کیا جا سکتا ہے یا نہیں۔",
+        "timestamp": 1589365739000,
+        "language": "ur",
+        "byline": {
+          "name": "فرینک گارڈنر",
+          "title": "بی بی سی کے سکیورٹی نامہ نگار",
+          "persons": [
+            {
+              "name": "Frank Gardner",
+              "function": "BBC security correspondent",
+              "thumbnail": "http://c.files.bbci.co.uk/10CEF/production/_96774886_frankgardner.jpg"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+            "categoryName": "Analysis"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112240098",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/15BAC/production/_112240098_36377e03-d1a2-4aab-82af-2f422b241f23.jpg",
+          "path": "/cpsprodpb/15BAC/production/_112240098_36377e03-d1a2-4aab-82af-2f422b241f23.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Donald Trump and Mohammed Bin Salman (28/06/19)",
+          "caption": "اب بھی دنیا سعودی عرب کو نظر انداز نہیں کر سکتی",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:urdu/world-52644655",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ایرانی صدر روحانی: ’شیطانی ٹرمپ انتظامیہ خدا کی طرف سے ایران کا امتحان ہے‘"
+        },
+        "locators": {
+          "assetUri": "/urdu/live/world-52636459",
+          "cpsUrn": "urn:bbc:content:assetUri:urdu/live/world-52636459",
+          "assetId": "52636459"
+        },
+        "summary": "کورونا وائرس کی وجہ سے دنیا بھر میں اب تک 42 لاکھ سے زیادہ افراد متاثر اور دو لاکھ 92 ہزار سے زیادہ ہلاک ہو چکے ہیں۔ ایرانی صدر حسن روحانی کا کہنا ہے کہ صدر ڈونلڈ ٹرمپ کی انتظامیہ ’امریکی تاریخ کی سب سے غیر انسانی اور نااہل انتظامیہ ہے‘۔",
+        "timestamp": 1589310190000,
+        "language": "ur",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "LIV",
+        "indexImage": {
+          "id": "112258492",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/732D/production/_112258492_65bf7f26-fed0-4e3b-9596-13653af707c0.jpg",
+          "path": "/cpsprodpb/732D/production/_112258492_65bf7f26-fed0-4e3b-9596-13653af707c0.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "صدر ٹرمپ کا پتلہ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "commentary": {
+          "order": "descending",
+          "assetUUID": "2820AD4906A50C4392BCD152C0BAF82A",
+          "channels": {
+            "enhancedmobile": "bbc.cps.asset.52636460_EnhancedMobile",
+            "desktop": "bbc.cps.asset.52636460_HighWeb",
+            "highweb": "bbc.cps.asset.52636460_HighWeb",
+            "mobile": "bbc.cps.asset.52636460_EnhancedMobile"
+          }
+        },
+        "isLive": true,
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:urdu/live/world-52636459",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "’وہ ایک نوزائیدہ بچے کی طرف بندوق کا رخ بھی کیسے کر سکتے ہیں‘"
+        },
+        "locators": {
+          "assetUri": "/urdu/regional-52644789",
+          "cpsUrn": "urn:bbc:content:assetUri:urdu/regional-52644789",
+          "assetId": "52644789"
+        },
+        "summary": "منگل کو افغانستان کے دارالحکومت کابل میں تین مسلح حملہ آوروں نے ایک ہسپتال پر حملہ کیا جس میں بچوں اور خواتین سمیت کم از کم چودہ افراد ہلاک جبکہ ایک درجن کے قریب زخمی ہوئے۔",
+        "timestamp": 1589378888000,
+        "language": "ur",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Review",
+            "categoryName": "Review"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112249073",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/90E6/production/_112249073_hi061434174.jpg",
+          "path": "/cpsprodpb/90E6/production/_112249073_hi061434174.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "کابل",
+          "caption": "حملے میں بچ جانے والی چند خواتین گاڑی میں بیٹھی ہیں",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:urdu/regional-52644789",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "چکن ڈرم سٹکس جو گوبھی سے بھی بن سکتی ہیں!"
+        },
+        "locators": {
+          "assetUri": "/urdu/vert-fut-52376367",
+          "cpsUrn": "urn:bbc:content:assetUri:urdu/vert-fut-52376367",
+          "assetId": "52376367"
+        },
+        "summary": "عمر کے ساتھ ساتھ ہماری غذائی ضروریات بھی تبدیلی چاہتی ہیں لیکن ذائقہ اور کھانے کی رغبت بھی کم ہو جاتی ہے، اس لیے بہت سے بوڑھے لوگ کم چیزیں ہی کھاتے ہیں۔ کیا یہ ممکن ہے کہ عمر رسیدہ افراد کے لیے بہتر کھانا بنایا جا سکے؟",
+        "timestamp": 1589352594000,
+        "language": "ur",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112251047",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1211F/production/_112251047_p089gm7f.jpg",
+          "path": "/cpsprodpb/1211F/production/_112251047_p089gm7f.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "کھانا",
+          "copyrightHolder": "Singapore Food Innovation and Resource Centre",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:urdu/vert-fut-52376367",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "کیا مستقبل میں بوسہ اور مصافحہ کرنا معیوب سمجھا جائے گا؟",
+          "overtyped": "مستقبل میں بوسہ اور مصافحہ کرنا معیوب سمجھا جائے گا"
+        },
+        "locators": {
+          "assetUri": "/urdu/vert-fut-52519382",
+          "cpsUrn": "urn:bbc:content:assetUri:urdu/vert-fut-52519382",
+          "assetId": "52519382"
+        },
+        "summary": "شراب خانے، نائٹ کلبوں اور شاپنگ سنٹرز میں نظر آنے والے ہجوم کے مناظر دیکھتے ہی ہمیں ایک جھٹکا لگتا ہے اور عجیب و غریب ردعمل سامنے آتا ہے جو اس بات کا غماز ہے کہ ہمارا دماغ سماجی دوری کو قبول کرنے کے لیے تیار ہو رہا ہے اور اس کی نئی وائرنگ ہو رہی ہے۔",
+        "timestamp": 1589350135000,
+        "language": "ur",
+        "byline": {
+          "name": "کرس سٹوکل واکر",
+          "title": "بی بی سی فیوچر",
+          "persons": [
+            {
+              "name": "Chris Stokel-Walker",
+              "function": "BBC Future"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112251586",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/10BA3/production/_112251586_gettyimages-1196859649.jpg",
+          "path": "/cpsprodpb/10BA3/production/_112251586_gettyimages-1196859649.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "بوسہ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:urdu/vert-fut-52519382",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "فوج کی تنخواہوں میں 20 فیصد اضافے کی تجویز: رقم آئے گی کہاں سے؟"
+        },
+        "locators": {
+          "assetUri": "/urdu/pakistan-52636736",
+          "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-52636736",
+          "assetId": "52636736"
+        },
+        "summary": "ایک ایسے وقت میں جب کورونا کی وبا کی وجہ سے آنے والے دنوں میں پاکستانی معیشت کے لیے شدید مشکل دور کی پیشنگوئی کی جا رہی ہے، پاکستان کی وزارت دفاع نے مسلح افواج کے اہلکاروں کی تنخواہوں میں 20 فیصد اضافے کے لیے وزارت خزانہ کو ایک خط لکها ہے۔",
+        "timestamp": 1589307971000,
+        "language": "ur",
+        "byline": {
+          "name": "فرحت جاوید",
+          "title": "بی بی سی اردو، اسلام آباد",
+          "persons": [
+            {
+              "name": "فرحت جاوید",
+              "function": "بی بی سی اردو، اسلام آباد"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+            "categoryName": "Analysis"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112243563",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/8EB6/production/_112243563_gettyimages-1132141474.jpg",
+          "path": "/cpsprodpb/8EB6/production/_112243563_gettyimages-1132141474.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "آرمی",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:urdu/pakistan-52636736",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "’آپ ہمارے ساتھ یہ کیسے کرسکتی ہیں حلیمہ باجی!‘"
+        },
+        "locators": {
+          "assetUri": "/urdu/pakistan-52636456",
+          "cpsUrn": "urn:bbc:content:assetUri:urdu/pakistan-52636456",
+          "assetId": "52636456"
+        },
+        "summary": "ترک ڈرامے ارطغرل میں اپنے پسندیدہ کرداروں کو نبھانے والے اداکاروں کو پاکستانی مداح بھی سوشل میڈیا پر فالو کرنے لگے ہیں اور شاید یہ امید بھی کہ وہ ویسے ہی ہوں گے جیسے وہ ڈرامے میں نظر آتے ہیں۔",
+        "timestamp": 1589292290000,
+        "language": "ur",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112242746",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/FCD4/production/_112242746_char-2.png",
+          "path": "/cpsprodpb/FCD4/production/_112242746_char-2.png",
+          "height": 576,
+          "width": 1024,
+          "altText": "اسراء بِلگِچ",
+          "copyrightHolder": "TRTErtugrul",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:urdu/pakistan-52636456",
+        "type": "cps"
+      }
+    ]
+  }
