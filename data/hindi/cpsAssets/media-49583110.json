@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/hindi/media-49583110",
       "cpsUrn": "urn:bbc:content:assetUri:hindi/media-49583110",
-      "curie": "http://www.bbc.co.uk/asset/3534b2e5-d04e-0240-a507-284f30240abe"
+      "curie": "http://www.bbc.co.uk/asset/3534b2e5-d04e-0240-a507-284f30240abe",
+      "assetId": "49583110"
     },
     "type": "MAP",
     "createdBy": "hindi-v6",
     "language": "hi",
-    "lastUpdated": 1567669582448,
-    "firstPublished": 1567669572,
-    "lastPublished": 1567669573,
+    "lastUpdated": 1586736031289,
+    "firstPublished": 1567669572000,
+    "lastPublished": 1567669572000,
+    "timestamp": 1567669572000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -40,10 +42,63 @@
           "campaignId": "5a988e3139461b000e9dabf9",
           "campaignName": "WS - Divert me"
         }
+      ],
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "भारतीय जनता पार्टी",
+          "thingUri": "http://www.bbc.co.uk/things/be29b70d-39b5-4875-9bbb-fe13adf2d69b#id",
+          "thingId": "be29b70d-39b5-4875-9bbb-fe13adf2d69b",
+          "thingType": [
+            "core:Organisation",
+            "tagging:TagConcept",
+            "core:Thing"
+          ],
+          "thingSameAs": ["http://dbpedia.org/resource/Bharatiya_Janata_Party"],
+          "topicName": "भारतीय जनता पार्टी",
+          "topicId": "c340qrv0qggt",
+          "curationList": [
+            {
+              "curationId": "5b853c1a-de28-46b3-b74d-17cea51a92b4",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "मध्य प्रदेश",
+          "thingUri": "http://www.bbc.co.uk/things/0de59a76-ca5c-49a7-b5d7-440d7f556f39#id",
+          "thingId": "0de59a76-ca5c-49a7-b5d7-440d7f556f39",
+          "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+          "thingSameAs": ["http://sws.geonames.org/1264542/"],
+          "topicName": "मध्य प्रदेश",
+          "topicId": "c5qvpx0yx9wt",
+          "curationList": [
+            {
+              "curationId": "7cfc0fee-da1c-4cc2-8e21-1eab7891a6f3",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "गुजरात",
+          "thingUri": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
+          "thingId": "4317a084-9a75-42ad-bf1c-2f13ed498cc1",
+          "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Gujarat"],
+          "topicName": "गुजरात",
+          "topicId": "cyx5k2d5514t",
+          "curationList": [
+            {
+              "curationId": "79235393-7a3b-4a46-afd7-4ffbd13c5b11",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
       ]
     },
-    "tags": {},
-    "version": "v1.0.10",
+    "version": "v1.1.11",
     "blockTypes": ["media", "paragraph"],
     "includeComments": false
   },
@@ -72,9 +127,10 @@
             "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
+              "nonUk": true,
+              "world": false
             },
-            "availableFrom": 1567602218
+            "availableFrom": 1567602218000
           }
         ],
         "type": "media"
@@ -110,10 +166,12 @@
     "locators": {
       "assetUri": "/hindi/media-49583110",
       "cpsUrn": "urn:bbc:content:assetUri:hindi/media-49583110",
-      "curie": "http://www.bbc.co.uk/asset/3534b2e5-d04e-0240-a507-284f30240abe"
+      "curie": "http://www.bbc.co.uk/asset/3534b2e5-d04e-0240-a507-284f30240abe",
+      "assetId": "49583110"
     },
     "summary": "सरदार सरोवर बांध का जलस्तर बढ़ने से डूब गए हैं मध्य प्रदेश के कई गांव.",
-    "timestamp": 1567669582448,
+    "timestamp": 1567669572000,
+    "language": "hi",
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -124,7 +182,8 @@
           "campaignId": "5a988e3139461b000e9dabf9",
           "campaignName": "WS - Divert me"
         }
-      ]
+      ],
+      "taggings": []
     },
     "media": {
       "id": "p07mdv1t",
@@ -147,11 +206,8 @@
           "duration": 142,
           "durationISO8601": "PT2M22S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          },
-          "availableFrom": 1567602218
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1567602218000
         }
       ],
       "type": "media"

@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/thai/23122810",
       "cpsUrn": "urn:bbc:content:assetUri:thai/23122810",
-      "curie": "http://www.bbc.co.uk/asset/98300274-552b-364d-863b-e123d2236878"
+      "curie": "http://www.bbc.co.uk/asset/98300274-552b-364d-863b-e123d2236878",
+      "assetId": "23122810"
     },
     "type": "MAP",
     "createdBy": "thai-v6",
     "language": "th",
-    "lastUpdated": 1557824964144,
-    "firstPublished": 1493904083,
-    "lastPublished": 1493904083,
+    "lastUpdated": 1588336105716,
+    "firstPublished": 1493904083000,
+    "lastPublished": 1493904083000,
+    "timestamp": 1493904083000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -30,9 +32,10 @@
       "counterName": "thai.media_asset.23122810.page",
       "cps_asset_id": "23122810"
     },
+    "passport": { "taggings": [] },
     "tags": {},
-    "version": "v1.0.7",
-    "blockTypes": ["media", "paragraph"],
+    "version": "v1.2.1",
+    "blockTypes": ["media"],
     "includeComments": false
   },
   "content": {
@@ -42,10 +45,7 @@
         "subType": "clip",
         "format": "audio",
         "title": "short headline",
-        "synopses": {
-          "short": "long headline",
-          "medium": "summary text"
-        },
+        "synopses": { "short": "long headline", "medium": "summary text" },
         "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019wch0.jpg",
         "embedding": true,
         "advertising": false,
@@ -55,19 +55,17 @@
             "versionId": "p019wcgf",
             "types": ["Original"],
             "duration": 26,
+            "durationISO8601": "PT26S",
             "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
-            }
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1493903412000
           }
         ],
         "type": "media"
-      },
-      {
-        "text": "Plain Text Paragraph",
-        "markupType": "plain_text",
-        "type": "paragraph"
       }
     ]
   },
@@ -79,20 +77,19 @@
     "locators": {
       "assetUri": "/thai/23122810",
       "cpsUrn": "urn:bbc:content:assetUri:thai/23122810",
-      "curie": "http://www.bbc.co.uk/asset/98300274-552b-364d-863b-e123d2236878"
+      "curie": "http://www.bbc.co.uk/asset/98300274-552b-364d-863b-e123d2236878",
+      "assetId": "23122810"
     },
     "summary": "Summary text about our interview with an American",
-    "timestamp": 1557824964144,
-    "passport": {},
+    "timestamp": 1493904083000,
+    "language": "th",
+    "passport": { "taggings": [] },
     "media": {
       "id": "p019wcgc",
       "subType": "clip",
       "format": "audio",
       "title": "short headline",
-      "synopses": {
-        "short": "long headline",
-        "medium": "summary text"
-      },
+      "synopses": { "short": "long headline", "medium": "summary text" },
       "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019wch0.jpg",
       "embedding": true,
       "advertising": false,
@@ -102,11 +99,10 @@
           "versionId": "p019wcgf",
           "types": ["Original"],
           "duration": 26,
+          "durationISO8601": "PT26S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          }
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1493903412000
         }
       ],
       "type": "media"
