@@ -132,7 +132,7 @@ describe('processUnavailableMedia', () => {
       },
     };
     processUnavailableMedia(pageData);
-    expect(loggerMock.warn).toHaveBeenCalledWith(MEDIA_ASSET_REVOKED, {
+    expect(loggerMock.info).toHaveBeenCalledWith(MEDIA_ASSET_REVOKED, {
       url: 'mock-uri',
       mediaBlock: {
         statusCode: 404,
@@ -152,7 +152,7 @@ describe('processUnavailableMedia', () => {
       },
     };
     processUnavailableMedia(pageData);
-    expect(loggerMock.warn).toHaveBeenCalledWith(MEDIA_ASSET_EXPIRED, {
+    expect(loggerMock.info).toHaveBeenCalledWith(MEDIA_ASSET_EXPIRED, {
       url: 'mock-uri',
       mediaBlock: {
         statusCode: 410,
