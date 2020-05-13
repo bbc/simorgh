@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/tigrinya/news-49562338",
       "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-49562338",
-      "curie": "http://www.bbc.co.uk/asset/1e6c9040-cfac-cb44-9a41-e187e92591c8"
+      "curie": "http://www.bbc.co.uk/asset/1e6c9040-cfac-cb44-9a41-e187e92591c8",
+      "assetId": "49562338"
     },
     "type": "MAP",
     "createdBy": "tigrinya-v6",
     "language": "ti",
-    "lastUpdated": 1567493600610,
-    "firstPublished": 1567493591,
-    "lastPublished": 1567493591,
+    "lastUpdated": 1588924429459,
+    "firstPublished": 1567493591000,
+    "lastPublished": 1567493591000,
+    "timestamp": 1567493591000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -40,10 +42,98 @@
           "campaignId": "5a988e2139461b000e9dabf7",
           "campaignName": "WS - Inspire me"
         }
+      ],
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "መሰላት ደቂ ኣንስትዮ",
+          "thingUri": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+          "thingId": "8abd564a-2b8e-401c-9916-34982cb67b55",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Women%27s_rights",
+            "http://www.wikidata.org/entity/Q223569"
+          ],
+          "topicName": "መሰላት ደቂ ኣንስትዮ",
+          "topicId": "cyx5kzz9wyxt",
+          "curationList": [
+            {
+              "curationId": "ab1ff4ea-eda2-4b8b-a6ba-862d114957c5",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "ኢትዮጵያ",
+          "thingUri": "http://www.bbc.co.uk/things/e986aff5-6b26-4638-b468-371d1d9617b4#id",
+          "thingId": "e986aff5-6b26-4638-b468-371d1d9617b4",
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+          "thingSameAs": ["http://sws.geonames.org/337996/"],
+          "topicName": "ኢትዮጵያ",
+          "topicId": "cdr56vrknx6t",
+          "curationList": [
+            {
+              "curationId": "bc3871a0-cc6a-478a-9aab-be8d762f9481",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "ኣርት/ ስነ ጥበብ",
+          "thingUri": "http://www.bbc.co.uk/things/37dcc888-51a7-4470-82d8-8ef2b811d482#id",
+          "thingId": "37dcc888-51a7-4470-82d8-8ef2b811d482",
+          "thingType": ["core:Theme", "tagging:TagConcept", "core:Thing"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q735",
+            "http://dbpedia.org/resource/Art"
+          ],
+          "topicName": "ኣርት/ ስነ ጥበብ",
+          "topicId": "cpzd47z02yjt",
+          "curationList": [
+            {
+              "curationId": "a6e04d37-8fd9-4dc9-96f1-6f8c72da8bdd",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "ኤርትራ",
+          "thingUri": "http://www.bbc.co.uk/things/a6e771f0-8659-456a-9334-94a451fc81a6#id",
+          "thingId": "a6e771f0-8659-456a-9334-94a451fc81a6",
+          "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+          "thingSameAs": ["http://sws.geonames.org/338010/"],
+          "topicName": "ኤርትራ",
+          "topicId": "c1gdqrg28zxt",
+          "curationList": [
+            {
+              "curationId": "3e9b5f75-85c9-4961-9208-b0ab5bfaa39c",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "ደቂ ኣንስትዮ",
+          "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+          "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q467",
+            "http://dbpedia.org/resource/Woman"
+          ],
+          "topicName": "ደቂ ኣንስትዮ",
+          "topicId": "cr50y664ww4t",
+          "curationList": [
+            {
+              "curationId": "1696a502-f6cf-4759-b587-caf52d2563cf",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
       ]
     },
-    "tags": {},
-    "version": "v1.0.10",
+    "version": "v1.2.1",
     "blockTypes": ["media", "paragraph"],
     "includeComments": false
   },
@@ -72,9 +162,10 @@
             "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
+              "nonUk": true,
+              "world": false
             },
-            "availableFrom": 1567493138
+            "availableFrom": 1567493138000
           }
         ],
         "imageCopyright": "BBC",
@@ -95,10 +186,12 @@
     "locators": {
       "assetUri": "/tigrinya/news-49562338",
       "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-49562338",
-      "curie": "http://www.bbc.co.uk/asset/1e6c9040-cfac-cb44-9a41-e187e92591c8"
+      "curie": "http://www.bbc.co.uk/asset/1e6c9040-cfac-cb44-9a41-e187e92591c8",
+      "assetId": "49562338"
     },
     "summary": "ኣብ ዓድዋ እንዳ ማርያም ሸዊቶም ተወሊዳ ዝዓበየት እዝጌሄሩ ገብረኣብዝጊ፡ ጓል 13 ዓመት እንከላ እያ ጭራዋጣ መሊኻ።",
-    "timestamp": 1567493600610,
+    "timestamp": 1567493591000,
+    "language": "ti",
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -109,7 +202,8 @@
           "campaignId": "5a988e2139461b000e9dabf7",
           "campaignName": "WS - Inspire me"
         }
-      ]
+      ],
+      "taggings": []
     },
     "media": {
       "id": "p07m9fhc",
@@ -132,11 +226,8 @@
           "duration": 113,
           "durationISO8601": "PT1M53S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          },
-          "availableFrom": 1567493138
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1567493138000
         }
       ],
       "imageCopyright": "BBC",
