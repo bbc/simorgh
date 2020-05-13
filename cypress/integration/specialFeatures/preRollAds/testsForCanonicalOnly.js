@@ -37,7 +37,7 @@ export default ({ serviceName, pageType, path }) => {
               if (shouldAllowAdsForVideoDuration(jsonData)) {
                 cy.log('Duration condition met');
                 cy.get(
-                  `script[src="https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap.js"]`,
+                  `script[src="https://gn-web-assets.api.bbc.com/ngas/dotcom-preroll.js"]`,
                 ).should('exist');
               } else {
                 cy.log(
