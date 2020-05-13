@@ -204,6 +204,7 @@ export const service = {
         '/afrique/institutionelles/2010/12/000000_schedules_frequencies_afrique',
       frequenciesPageLabel: 'Nos fréquences',
       header: 'Journaux et Magazines',
+      durationLabel: 'Durée %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,
