@@ -1190,23 +1190,7 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/cymrufyw/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/cymrufyw/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/cymrufyw/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostReadPage: { environments: undefined, smoke: false },
     },
   },
   gahuza: {
@@ -2936,23 +2920,7 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/naidheachdan/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/naidheachdan/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/naidheachdan/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostReadPage: { environments: undefined, smoke: false },
     },
   },
   nepali: {
@@ -3171,23 +3139,7 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/news/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/news/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/news/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostReadPage: { environments: undefined, smoke: false },
     },
   },
   pashto: {
@@ -4118,23 +4070,7 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: ['/scotland/popular/read'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/scotland/popular/read'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/scotland/popular/read'],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
+      mostReadPage: { environments: undefined, smoke: false },
     },
   },
   serbianCyr: {
@@ -4268,6 +4204,7 @@ module.exports = () => ({
   },
   serbianLat: {
     name: 'serbian',
+    font: undefined,
     isWorldService: true,
     variant: 'lat',
     pageTypes: {
@@ -4920,6 +4857,7 @@ module.exports = () => ({
   },
   tamil: {
     name: 'tamil',
+    font: undefined,
     isWorldService: true,
     variant: 'default',
     pageTypes: {
