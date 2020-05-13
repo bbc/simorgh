@@ -29,19 +29,35 @@ const StyledGelPageGrid = styled(GelPageGrid)`
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
 `;
 
-const renderEpisode = (
+/* eslint-disable react/prop-types */
+const renderEpisode = ({
   masterBrand,
   episodeId,
   episodeAvailableFrom,
   episodeAvailableUntil,
-) => {
+  promoBrandTitle,
+  shortSynopsis,
+  imageUrl,
+  durationISO8601,
+  releaseDateTimeStamp,
+}) => {
   const episodeAvailability = getEpisodeAvailability(
     episodeAvailableFrom,
     episodeAvailableUntil,
   );
   switch (episodeAvailability) {
     case EPISODE_IS_AVAILABLE:
-      return <AudioPlayerBlock externalId={masterBrand} id={episodeId} />;
+      return (
+        <AudioPlayerBlock
+          externalId={masterBrand}
+          id={episodeId}
+          promoBrandTitle={promoBrandTitle}
+          shortSynopsis={shortSynopsis}
+          imageUrl={imageUrl}
+          durationISO8601={durationISO8601}
+          releaseDateTimeStamp={releaseDateTimeStamp}
+        />
+      );
     case EPISODE_IS_EXPIRED:
       return <AudioPlayerBlock isExpired />;
     case EPISODE_IS_NOT_YET_AVAILABLE:
@@ -49,6 +65,7 @@ const renderEpisode = (
       return null;
   }
 };
+/* eslint-enable react/prop-types */
 
 const OnDemandRadioPage = ({ pageData }) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
@@ -63,6 +80,9 @@ const OnDemandRadioPage = ({ pageData }) => {
     episodeAvailableFrom,
     episodeAvailableUntil,
     releaseDateTimeStamp,
+    promoBrandTitle,
+    durationISO8601,
+    imageUrl,
   } = pageData;
   const { dir } = useContext(ServiceContext);
 
@@ -119,12 +139,17 @@ const OnDemandRadioPage = ({ pageData }) => {
           />
 
           <ParagraphBlock text={summary} />
-          {renderEpisode(
+          {renderEpisode({
             masterBrand,
             episodeId,
             episodeAvailableFrom,
             episodeAvailableUntil,
-          )}
+            promoBrandTitle,
+            shortSynopsis,
+            imageUrl,
+            durationISO8601,
+            releaseDateTimeStamp,
+          })}
         </Grid>
       </StyledGelPageGrid>
     </>
