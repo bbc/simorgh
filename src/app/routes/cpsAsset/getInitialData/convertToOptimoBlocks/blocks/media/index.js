@@ -1,13 +1,13 @@
 import pick from 'ramda/src/pick';
 import path from 'ramda/src/path';
-import is from 'ramda/src/is';
 
 import nodeLogger from '#lib/logger.node';
 import { MEDIA_MISSING_FIELD } from '#lib/logger.const';
+import getPlaceholderImageUrl, {
+  FALLBACK_PLACEHOLDER_IMAGE_URL,
+} from '../../../../../utils/getPlaceholderImageUrl';
 
 const logger = nodeLogger(__filename);
-
-const FALLBACK_PLACEHOLDER_IMAGE_URL = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}images/media_placeholder.png`;
 
 const generateVideoBlock = block => {
   const generatedBlock = {
@@ -45,14 +45,6 @@ const generateVideoBlock = block => {
   return generatedBlock;
 };
 
-const generatePlaceholderImageUrl = imageUrl => {
-  if (imageUrl && is(String, imageUrl)) {
-    return `https://${imageUrl.replace('$recipe', '1024x576')}`;
-  }
-
-  return FALLBACK_PLACEHOLDER_IMAGE_URL;
-};
-
 const generateImageBlock = block => ({
   type: 'image',
   model: {
@@ -61,7 +53,7 @@ const generateImageBlock = block => ({
         type: 'rawImage',
         model: {
           copyrightHolder: block.imageCopyright,
-          locator: generatePlaceholderImageUrl(block.imageUrl),
+          locator: getPlaceholderImageUrl(block.imageUrl),
           originCode: 'pips',
         },
       },
