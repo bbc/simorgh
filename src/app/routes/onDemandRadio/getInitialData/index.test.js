@@ -24,7 +24,7 @@ describe('Get initial data for on demand radio', () => {
     expect(pageData.metadata.type).toEqual('On Demand Radio');
     expect(pageData.promoBrandTitle).toEqual('ماښامنۍ خپرونه');
     expect(pageData.durationISO8601).toEqual('PT29M30S');
-    expect(pageData.imageUrl).toEqual(
+    expect(pageData.placeholderImageUrl).toEqual(
       'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
     );
   });

@@ -1,7 +1,7 @@
 import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
-import getPlaceholderImageUrl from '../../utils/getPlaceholderImageUrl';
+import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
 
 const getBrandTitle = path(['metadata', 'title']);
 const getLanguage = path(['metadata', 'language']);
@@ -44,8 +44,8 @@ const getDurationISO8601 = path([
   0,
   'durationISO8601',
 ]);
-const getImageUrl = json =>
-  getPlaceholderImageUrl(path(['promo', 'media', 'imageUrl'], json));
+const getPlaceholderImageUrl = json =>
+  getPlaceholderImageUrlUtil(path(['promo', 'media', 'imageUrl'], json));
 
 export default async ({ path: pathname }) => {
   const onDemandRadioDataPath = overrideRendererOnTest(pathname);
@@ -73,7 +73,7 @@ export default async ({ path: pathname }) => {
         pageIdentifier: getPageIdentifier(json),
         promoBrandTitle: getPromoBrandTitle(json),
         durationISO8601: getDurationISO8601(json),
-        imageUrl: getImageUrl(json),
+        placeholderImageUrl: getPlaceholderImageUrl(json),
         ...pageType,
       },
     }),

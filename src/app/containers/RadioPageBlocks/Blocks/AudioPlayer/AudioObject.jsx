@@ -8,7 +8,7 @@ const AudioObject = ({
   shortSynopsis,
   durationISO8601,
   embedUrl,
-  imageUrl,
+  placeholderImageUrl,
   releaseDateTimeStamp,
 }) => {
   const metadata = {
@@ -17,7 +17,7 @@ const AudioObject = ({
     name: promoBrandTitle,
     description: shortSynopsis,
     duration: durationISO8601,
-    thumbnailUrl: imageUrl,
+    thumbnailUrl: placeholderImageUrl,
     uploadDate: new Date(releaseDateTimeStamp).toISOString(),
     embedURL: embedUrl,
   };
@@ -34,7 +34,7 @@ AudioObject.propTypes = {
   shortSynopsis: string,
   durationISO8601: string,
   embedUrl: string,
-  imageUrl: string,
+  placeholderImageUrl: string,
   releaseDateTimeStamp: number,
 };
 
@@ -43,7 +43,7 @@ AudioObject.defaultProps = {
   shortSynopsis: '',
   durationISO8601: '',
   embedUrl: '',
-  imageUrl: '',
+  placeholderImageUrl: '',
   releaseDateTimeStamp: null,
 };
 
