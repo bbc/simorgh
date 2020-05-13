@@ -98,7 +98,10 @@ const AmpAd = ({ service }) => {
         {AMP_ACCESS_JS}
         {AMP_ACCESS_FETCH(service)}
       </Helmet>
-      <div amp-access-hide="true">
+      <div
+        amp-access="toggles.ads.enabled AND geoIp.advertiseCombined"
+        amp-access-hide="true"
+      >
         <StyledAd>
           <amp-ad {...ampAdPropsMobile({ service })}>
             <amp-img
