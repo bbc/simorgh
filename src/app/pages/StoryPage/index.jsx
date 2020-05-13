@@ -70,6 +70,11 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
   const mostReadInitialData = path(['mostRead'], pageData);
+  const topStoriesInitialData = path(
+    ['secondaryColumn', 'topStories'],
+    pageData,
+  );
+  const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
 
   const componentsToRender = {
     fauxHeadline,
@@ -252,10 +257,16 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           parentColumns={gridColumns}
         >
           <ResponsiveComponentWrapper>
-            <TopStories parentColumns={gridColsSecondary} />
+            <TopStories
+              content={topStoriesInitialData}
+              parentColumns={gridColsSecondary}
+            />
           </ResponsiveComponentWrapper>
           <ResponsiveComponentWrapper>
-            <FeaturesAnalysis parentColumns={gridColsSecondary} />
+            <FeaturesAnalysis
+              content={featuresInitialData}
+              parentColumns={gridColsSecondary}
+            />
           </ResponsiveComponentWrapper>
           <ComponentWrapper>
             <MostReadContainer

@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/japanese/video-23248670",
       "cpsUrn": "urn:bbc:content:assetUri:japanese/video-23248670",
-      "curie": "http://www.bbc.co.uk/asset/64b02b74-b51f-8442-88ca-e7c7b5618dee"
+      "curie": "http://www.bbc.co.uk/asset/64b02b74-b51f-8442-88ca-e7c7b5618dee",
+      "assetId": "23248670"
     },
     "type": "MAP",
     "createdBy": "japanese",
     "language": "ja",
-    "lastUpdated": 1568820077296,
+    "lastUpdated": 1588335940563,
     "firstPublished": 1568384257000,
-    "lastPublished": 1568820069000,
+    "lastPublished": 1568384257000,
+    "timestamp": 1568384257000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -30,8 +32,21 @@
       "counterName": "japanese.video.media_asset.23248670.page",
       "cps_asset_id": "23248670"
     },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5ad86265c93a9f000eecb254",
+          "campaignName": "Educate me"
+        }
+      ],
+      "taggings": []
+    },
     "tags": {},
-    "version": "v1.1.2",
+    "version": "v1.2.1",
     "blockTypes": ["media", "paragraph", "list", "image"],
     "includeComments": false
   },
@@ -41,12 +56,14 @@
         "id": "p01kx42s",
         "subType": "clip",
         "format": "video",
-        "title": "alt-text world service clip",
+        "title": "トランプ氏、香港人権法案に署名　中国は反発",
         "synopses": {
-          "short": "short"
+          "short": "トランプ氏、香港人権法案に署名　中国は反発",
+          "long": "トランプ氏、香港人権法案に署名　中国は反発",
+          "medium": "トランプ氏、香港人権法案に署名　中国は反発"
         },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
-        "embedding": true,
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
+        "embedding": false,
         "advertising": true,
         "caption": "short",
         "versions": [
@@ -58,7 +75,8 @@
             "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
+              "nonUk": true,
+              "world": false
             },
             "availableFrom": 1545304011000
           }
@@ -197,7 +215,7 @@
           {
             "headlines": {
               "shortHeadline": "WSMEDIA - 英首相「女王だましていない」　閉会違法の判決に反論",
-              "headline": "英首相「女王だましていない」　閉会違法の判決に反論",
+              "headline": "英首相「女王だましていない」　閉会違法の判決に反論 Updated",
               "overtyped": "WSMEDIA - 英首相「女王だましていない」　閉会違法の判決に反論"
             },
             "locators": {
@@ -205,11 +223,13 @@
             },
             "summary": "英首相「女王だましていない」　閉会違法の判決に反論",
             "timestamp": 1568384257000,
+            "language": "ja",
             "passport": {
               "category": {
-                "categoryId": "",
-                "categoryName": ""
-              }
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "taggings": []
             },
             "id": "urn:bbc:ares::asset:japanese/video-23248670",
             "type": "cps"
@@ -223,26 +243,42 @@
   "promo": {
     "headlines": {
       "shortHeadline": "WSMEDIA - 英首相「女王だましていない」　閉会違法の判決に反論",
-      "headline": "英首相「女王だましていない」　閉会違法の判決に反論"
+      "headline": "英首相「女王だましていない」　閉会違法の判決に反論 Updated"
     },
     "locators": {
       "assetUri": "/japanese/video-23248670",
       "cpsUrn": "urn:bbc:content:assetUri:japanese/video-23248670",
-      "curie": "http://www.bbc.co.uk/asset/64b02b74-b51f-8442-88ca-e7c7b5618dee"
+      "curie": "http://www.bbc.co.uk/asset/64b02b74-b51f-8442-88ca-e7c7b5618dee",
+      "assetId": "23248670"
     },
     "summary": "英首相「女王だましていない」　閉会違法の判決に反論",
-    "timestamp": 1568820077296,
-    "passport": {},
+    "timestamp": 1568384257000,
+    "language": "ja",
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5ad86265c93a9f000eecb254",
+          "campaignName": "Educate me"
+        }
+      ],
+      "taggings": []
+    },
     "media": {
       "id": "p01kx42s",
       "subType": "clip",
       "format": "video",
-      "title": "alt-text world service clip",
+      "title": "トランプ氏、香港人権法案に署名　中国は反発",
       "synopses": {
-        "short": "short"
+        "short": "トランプ氏、香港人権法案に署名　中国は反発",
+        "long": "トランプ氏、香港人権法案に署名　中国は反発",
+        "medium": "トランプ氏、香港人権法案に署名　中国は反発"
       },
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
-      "embedding": true,
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
+      "embedding": false,
       "advertising": true,
       "caption": "short",
       "versions": [
@@ -252,10 +288,7 @@
           "duration": 5,
           "durationISO8601": "PT5S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          },
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
           "availableFrom": 1545304011000
         }
       ],
@@ -288,6 +321,40 @@
       "uri": "/japanese",
       "type": "simple"
     },
-    "groups": []
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "バンコク爆発　防犯カメラ映像の男を捜査と",
+              "headline": "バンコク爆発　防犯カメラ映像の男を捜査と"
+            },
+            "locators": {
+              "assetUri": "/japanese/23003043",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/23003043"
+            },
+            "summary": "タイのプラユット暫定首相は18日、バンコク中心部の爆弾事件についてタイにとって「過去最悪の攻撃」と述べた。",
+            "timestamp": 1439882732000,
+            "language": "ja",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63465597",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/136C4/test/_63465597_63465595.jpg",
+              "path": "/cpsdevpb/136C4/test/_63465597_63465595.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "バンコク中心部の爆発は外国人を標的にしたと見られる。",
+              "caption": "バンコク中心部の爆発は外国人を標的にしたと見られる。",
+              "copyrightHolder": "EPA",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:japanese/23003043",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
   }
 }

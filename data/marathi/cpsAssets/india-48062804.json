@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/marathi/india-48062804",
       "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48062804",
-      "curie": "http://www.bbc.co.uk/asset/1eee2a26-cc27-7b46-b3ef-6c11f3b9b75d"
+      "curie": "http://www.bbc.co.uk/asset/1eee2a26-cc27-7b46-b3ef-6c11f3b9b75d",
+      "assetId": "48062804"
     },
     "type": "MAP",
     "createdBy": "marathi-v6",
     "language": "mr",
-    "lastUpdated": 1567140407240,
-    "firstPublished": 1556267989,
-    "lastPublished": 1567140400,
+    "lastUpdated": 1588842299559,
+    "firstPublished": 1556267989000,
+    "lastPublished": 1567140400000,
+    "timestamp": 1567140400000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -40,22 +42,16 @@
           "campaignId": "5a988e3739461b000e9dabfa",
           "campaignName": "WS - Give me perspective"
         }
-      ]
+      ],
+      "taggings": []
     },
     "tags": {
       "about": [
         {
-          "thingLabel": "Mumbai",
-          "thingUri": "http://www.bbc.co.uk/things/63e7a026-c846-4223-a447-9a64f890e355#id",
-          "thingId": "63e7a026-c846-4223-a447-9a64f890e355",
-          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
-          "thingSameAs": ["http://sws.geonames.org/1275339/"]
-        },
-        {
-          "thingLabel": "Politics",
+          "thingLabel": "राजकारण",
           "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
           "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
-          "thingType": ["Theme", "Thing"],
+          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
           "thingSameAs": ["http://dbpedia.org/resource/Politics"],
           "topicName": "राजकारण",
           "topicId": "cpzd4kdx4rgt",
@@ -67,15 +63,38 @@
           ]
         },
         {
-          "thingLabel": "India elections 2019",
+          "thingLabel": "मुंबई",
+          "thingUri": "http://www.bbc.co.uk/things/63e7a026-c846-4223-a447-9a64f890e355#id",
+          "thingId": "63e7a026-c846-4223-a447-9a64f890e355",
+          "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+          "thingSameAs": ["http://sws.geonames.org/1275339/"],
+          "topicName": "मुंबई",
+          "topicId": "cpzd4kdyg05t",
+          "curationList": [
+            {
+              "curationId": "30333dbd-7feb-4fb9-b80a-236db2b28f38",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "लोकसभा निवडणूक 2019",
           "thingUri": "http://www.bbc.co.uk/things/d570283c-0815-4ac7-859d-60ce334f2e57#id",
           "thingId": "d570283c-0815-4ac7-859d-60ce334f2e57",
-          "thingType": ["Event", "Thing"],
-          "thingSameAs": []
+          "thingType": ["tagging:TagConcept", "core:Event", "core:Thing"],
+          "thingSameAs": [],
+          "topicName": "लोकसभा निवडणूक 2019",
+          "topicId": "c8v41el8lwkt",
+          "curationList": [
+            {
+              "curationId": "7c78c8da-6027-49dd-a8aa-382afd010896",
+              "curationType": "vivo-stream"
+            }
+          ]
         }
       ]
     },
-    "version": "v1.0.10",
+    "version": "v1.2.1",
     "blockTypes": ["media", "paragraph", "heading", "list", "social_embed"],
     "includeComments": false
   },
@@ -104,9 +123,10 @@
             "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
+              "nonUk": true,
+              "world": false
             },
-            "availableFrom": 1556266830
+            "availableFrom": 1556266830000
           }
         ],
         "imageCopyright": "BBC",
@@ -159,12 +179,14 @@
                   "href": "http://www.bbc.com/marathi/india-48061877"
                 },
                 "summary": "वक्षामधून दूध बाहेर येण्याची ही रचना नेमकी कशी आहे, हे खूप कमी जणांना माहिती आहे आणि त्यामुळेच इंटरनेटवर व्हायरल झालेल्या फोटोवर आलेल्या प्रतिक्रियांपैकी बऱ्याच नकारार्थी आहेत.",
-                "timestamp": 1556257336,
+                "timestamp": 1556257336000,
+                "language": "mr",
                 "passport": {
                   "category": {
                     "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                     "categoryName": "News"
-                  }
+                  },
+                  "taggings": []
                 },
                 "id": "urn:bbc:ares::asset:marathi/india-48061877",
                 "type": "cps"
@@ -186,12 +208,14 @@
                   "href": "http://www.bbc.com/marathi/india-48021000"
                 },
                 "summary": "'A/C भारत सरकार' हा आदिवासींचा असा समुदाय आहे जो स्वतःला भारताचा खरा शासनकर्ता मानतो. तसंच केंद्रात आणि राज्यात असलेल्या सरकारला फक्त संस्था म्हणून मानतो.",
-                "timestamp": 1556210296,
+                "timestamp": 1556210296000,
+                "language": "mr",
                 "passport": {
                   "category": {
                     "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
                     "categoryName": "Feature"
-                  }
+                  },
+                  "taggings": []
                 },
                 "id": "urn:bbc:ares::asset:marathi/india-48021000",
                 "type": "cps"
@@ -213,12 +237,14 @@
                   "href": "http://www.bbc.com/marathi/india-48038829"
                 },
                 "summary": "आपण कसत असलेला वनजमिनीचा पट्टा आपल्या नावावर होईल, या आशेने शेकूबाई मुंबईत आल्या. पण वर्ष उलटल्यानंतरही त्यांना जमीन मिळाली नाही.",
-                "timestamp": 1556163404,
+                "timestamp": 1556163404000,
+                "language": "mr",
                 "passport": {
                   "category": {
                     "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                     "categoryName": "News"
-                  }
+                  },
+                  "taggings": []
                 },
                 "id": "urn:bbc:ares::asset:marathi/india-48038829",
                 "type": "cps"
@@ -233,6 +259,7 @@
       {
         "href": "https://www.youtube.com/watch?v=Ydos7-8zUAg",
         "source": "youtube",
+        "id": "Ydos7-8zUAg",
         "type": "social_embed"
       },
       {
@@ -250,10 +277,12 @@
     "locators": {
       "assetUri": "/marathi/india-48062804",
       "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48062804",
-      "curie": "http://www.bbc.co.uk/asset/1eee2a26-cc27-7b46-b3ef-6c11f3b9b75d"
+      "curie": "http://www.bbc.co.uk/asset/1eee2a26-cc27-7b46-b3ef-6c11f3b9b75d",
+      "assetId": "48062804"
     },
     "summary": "बीबीसी मराठीच्या वारली आदिवासींच्या व्हर्च्युअल रिअॅलिटी फिल्मला मानाचा डिजिपब वर्ल्ड अवॉर्ड मिळाला आहे.",
-    "timestamp": 1567140407240,
+    "timestamp": 1567140400000,
+    "language": "mr",
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
@@ -264,7 +293,8 @@
           "campaignId": "5a988e3739461b000e9dabfa",
           "campaignName": "WS - Give me perspective"
         }
-      ]
+      ],
+      "taggings": []
     },
     "media": {
       "id": "p077hz5t",
@@ -287,11 +317,8 @@
           "duration": 491,
           "durationISO8601": "PT8M11S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          },
-          "availableFrom": 1556266830
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1556266830000
         }
       ],
       "imageCopyright": "BBC",
