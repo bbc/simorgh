@@ -22,6 +22,7 @@ import { shouldRenderLastUpdated } from '../utilities';
 import LastUpdated from './LastUpdated';
 import processMostRead from '../utilities/processMostRead';
 import mostReadShape from '../utilities/mostReadShape';
+import { MOST_READ_FETCH_ERROR } from '#lib/logger.const';
 
 const logger = webLogger();
 
@@ -67,7 +68,18 @@ const CanonicalMostRead = ({
       const fetchMostReadData = pathname =>
         fetch(pathname, { mode: 'no-cors' })
           .then(handleResponse)
-          .catch(e => logger.error(`HTTP Error: "${e}"`));
+          .catch(error => {
+            logger.error(
+              JSON.stringify(
+                {
+                  event: MOST_READ_FETCH_ERROR,
+                  message: error.toString(),
+                },
+                null,
+                2,
+              ),
+            );
+          });
 
       fetchMostReadData(endpoint);
     }
