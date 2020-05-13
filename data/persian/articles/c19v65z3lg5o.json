@@ -652,7 +652,32 @@
       "optimoUrn": "urn:bbc:optimo:asset:c19v65z3lg5o",
       "canonicalUrl": "https://www.bbc.com/persian/articles/c19v65z3lg5o"
     },
-    "summary": "",
+    "summary": {
+      "blocks": [
+        {
+          "model": {
+            "blocks": [
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "attributes": [],
+                        "text": ""
+                      },
+                      "type": "fragment"
+                    }
+                  ],
+                  "text": ""
+                },
+                "type": "paragraph"
+              }
+            ]
+          },
+          "type": "text"
+        }
+      ]
+    },
     "timestamp": 1560347946274,
     "id": "urn:bbc:ares::article:c19v65z3lg5o",
     "type": "cps"
