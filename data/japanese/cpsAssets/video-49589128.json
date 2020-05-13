@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/japanese/video-49589128",
       "cpsUrn": "urn:bbc:content:assetUri:japanese/video-49589128",
-      "curie": "http://www.bbc.co.uk/asset/2d677828-84a8-bb4d-88a9-6d0226b445d7"
+      "curie": "http://www.bbc.co.uk/asset/2d677828-84a8-bb4d-88a9-6d0226b445d7",
+      "assetId": "49589128"
     },
     "type": "MAP",
     "createdBy": "japanese",
     "language": "ja",
-    "lastUpdated": 1567665709024,
-    "firstPublished": 1567665697,
-    "lastPublished": 1567665698,
+    "lastUpdated": 1588699501678,
+    "firstPublished": 1567665697000,
+    "lastPublished": 1567665697000,
+    "timestamp": 1567665697000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -34,26 +36,16 @@
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
         "categoryName": "News"
-      }
+      },
+      "taggings": []
     },
     "tags": {
       "about": [
         {
-          "thingLabel": "China",
-          "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
-          "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
-          "thingType": ["geoname:GeoTagConcept", "Place", "Thing"],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/China",
-            "http://sws.geonames.org/1814991/",
-            "http://www.wikidata.org/entity/Q148"
-          ]
-        },
-        {
-          "thingLabel": "Policing",
+          "thingLabel": "警察",
           "thingUri": "http://www.bbc.co.uk/things/8470b75a-3b8c-42cb-9921-5953515d07cc#id",
           "thingId": "8470b75a-3b8c-42cb-9921-5953515d07cc",
-          "thingType": ["nsl:Topic", "Thing", "Theme"],
+          "thingType": ["core:Thing", "core:Theme", "tagging:TagConcept"],
           "thingSameAs": ["http://dbpedia.org/resource/Police"],
           "topicName": "警察",
           "topicId": "cyx5k20qg2gt",
@@ -65,10 +57,25 @@
           ]
         },
         {
-          "thingLabel": "Hong Kong",
+          "thingLabel": "法律",
+          "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+          "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
+          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Law"],
+          "topicName": "法律",
+          "topicId": "cxnyk30526wt",
+          "curationList": [
+            {
+              "curationId": "ffe538f0-6f6f-4162-983a-b340eb716592",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "香港",
           "thingUri": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id",
           "thingId": "a3b15769-775e-471d-a511-a7b78f346859",
-          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
           "thingSameAs": ["http://sws.geonames.org/1819729/"],
           "topicName": "香港",
           "topicId": "c404vnxy867t",
@@ -80,15 +87,27 @@
           ]
         },
         {
-          "thingLabel": "Law and order",
-          "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
-          "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
-          "thingType": ["Thing", "Theme"],
-          "thingSameAs": ["http://dbpedia.org/resource/Law"]
+          "thingLabel": "中国",
+          "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+          "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+          "thingSameAs": [
+            "http://sws.geonames.org/1814991/",
+            "http://dbpedia.org/resource/China",
+            "http://www.wikidata.org/entity/Q148"
+          ],
+          "topicName": "中国",
+          "topicId": "cnq68k017grt",
+          "curationList": [
+            {
+              "curationId": "a6624364-c35d-4891-b74b-9f85c0de5244",
+              "curationType": "vivo-stream"
+            }
+          ]
         }
       ]
     },
-    "version": "v1.0.10",
+    "version": "v1.2.1",
     "blockTypes": ["media", "paragraph"],
     "includeComments": false
   },
@@ -99,9 +118,7 @@
         "subType": "clip",
         "format": "video",
         "title": "香港長官、政情不安を鎮める「4つの方策」とは",
-        "synopses": {
-          "short": "香港長官、政情不安を鎮める「4つの方策」とは"
-        },
+        "synopses": { "short": "香港長官、政情不安を鎮める「4つの方策」とは" },
         "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mhkyl.jpg",
         "embedding": true,
         "advertising": true,
@@ -115,9 +132,10 @@
             "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
+              "nonUk": true,
+              "world": false
             },
-            "availableFrom": 1567665589
+            "availableFrom": 1567665589000
           }
         ],
         "imageCopyright": "BBC",
@@ -158,24 +176,25 @@
     "locators": {
       "assetUri": "/japanese/video-49589128",
       "cpsUrn": "urn:bbc:content:assetUri:japanese/video-49589128",
-      "curie": "http://www.bbc.co.uk/asset/2d677828-84a8-bb4d-88a9-6d0226b445d7"
+      "curie": "http://www.bbc.co.uk/asset/2d677828-84a8-bb4d-88a9-6d0226b445d7",
+      "assetId": "49589128"
     },
     "summary": "香港の林鄭月娥（キャリー･ラム）行政長官は4日、政情不安を鎮めるための4つの方策を明らかにした。",
-    "timestamp": 1567665709024,
+    "timestamp": 1567665697000,
+    "language": "ja",
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
         "categoryName": "News"
-      }
+      },
+      "taggings": []
     },
     "media": {
       "id": "p07mhkm2",
       "subType": "clip",
       "format": "video",
       "title": "香港長官、政情不安を鎮める「4つの方策」とは",
-      "synopses": {
-        "short": "香港長官、政情不安を鎮める「4つの方策」とは"
-      },
+      "synopses": { "short": "香港長官、政情不安を鎮める「4つの方策」とは" },
       "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mhkyl.jpg",
       "embedding": true,
       "advertising": true,
@@ -187,11 +206,8 @@
           "duration": 90,
           "durationISO8601": "PT1M30S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          },
-          "availableFrom": 1567665589
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1567665589000
         }
       ],
       "imageCopyright": "BBC",
@@ -238,7 +254,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/japanese/49589101"
             },
             "summary": "香港の林鄭月娥（キャリー･ラム）行政長官は4日、3カ月に及ぶ反政府デモの発端となった「逃亡犯条例」の改定案を撤回する意向を示した。一方、デモ指導者は、今後も抗議を続けるとしている。",
-            "timestamp": 1567648671,
+            "timestamp": 1567648671000,
+            "language": "ja",
             "cpsType": "STY",
             "indexImage": {
               "id": "108611578",
@@ -264,7 +281,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/japanese/49560679"
             },
             "summary": "反政府デモが続く香港で、林鄭月娥（キャリー･ラム）行政長官が「辞任したい」と述べた音声がメディアに流出した。林鄭氏は3日、記者会見を開き、辞任を申し出たことはないと説明して火消しにつとめた。",
-            "timestamp": 1567491475,
+            "timestamp": 1567491475000,
+            "language": "ja",
             "cpsType": "STY",
             "indexImage": {
               "id": "108591486",
@@ -291,7 +309,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/japanese/49547518"
             },
             "summary": "反政府デモが続く香港で、学校の新年度が始まった2日、何千人もの中高生と大学生が授業をボイコットした。",
-            "timestamp": 1567415524,
+            "timestamp": 1567415524000,
+            "language": "ja",
             "cpsType": "STY",
             "indexImage": {
               "id": "108578550",

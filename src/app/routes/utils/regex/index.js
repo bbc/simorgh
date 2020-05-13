@@ -14,6 +14,7 @@ import {
   getMostReadPageRegex,
   getMostReadDataRegex,
   getIDXPageRegex,
+  getSecondaryColumnDataRegex,
 } from './utils';
 
 const allServices = Object.keys(services);
@@ -46,5 +47,9 @@ export const legacyAssetPageDataPath = `${legacyAssetPagePath}.json`;
 
 export const mostReadPagePath = getMostReadPageRegex(allServices);
 export const mostReadDataRegexPath = getMostReadDataRegex(allServices);
+
+export const secondaryColumnDataRegexPath = getSecondaryColumnDataRegex(
+  allServices,
+);
 
 export const idxPagePath = getIDXPageRegex();
