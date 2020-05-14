@@ -16,7 +16,7 @@ const directives = {
       'https://securepubads.g.doubleclick.net', // ads
       'https://pagead2.googlesyndication.com', // ads
       'https://tpc.googlesyndication.com', // ads
-      'https://a1.api.bbc.co.uk/hit.xiti', // ATI
+      'https://a1.api.bbc.co.uk', // ATI
       'https://toggles.api.bbci.co.uk', // Toggles service
       'https://cdn.ampproject.org', // AMP
       'https://*.ampproject.net', // Social Embeds
@@ -33,7 +33,7 @@ const directives = {
       'https://securepubads.g.doubleclick.net', // ads
       'https://pagead2.googlesyndication.com', // ads
       'https://tpc.googlesyndication.com', // ads
-      'https://a1.api.bbc.co.uk/hit.xiti', // ATI
+      'https://a1.api.bbc.co.uk', // ATI
       'https://toggles.api.bbci.co.uk', // Toggles service
       'https://cookie-oven.api.bbc.com', // Cookie banner
       'https://cookie-oven.api.bbc.co.uk', // Cookie banner
@@ -129,7 +129,7 @@ const directives = {
     ampLive: [
       'https://ichef.bbci.co.uk',
       'https://ping.chartbeat.net',
-      'https://a1.api.bbc.co.uk/hit.xiti',
+      'https://a1.api.bbc.co.uk',
       'https://news.files.bbci.co.uk',
       'https://*.akstat.io',
       'https://r.bbci.co.uk',
@@ -146,7 +146,7 @@ const directives = {
     canonicalLive: [
       'https://ichef.bbci.co.uk',
       'https://ping.chartbeat.net',
-      'https://a1.api.bbc.co.uk/hit.xiti',
+      'https://a1.api.bbc.co.uk',
       'https://news.files.bbci.co.uk',
       'https://*.akstat.io',
       'https://r.bbci.co.uk',
@@ -166,7 +166,7 @@ const directives = {
       'https://ichef.bbci.co.uk', // Images
       'https://ichef.test.bbci.co.uk', // Images
       'https://ping.chartbeat.net', // Chartbeat
-      'https://a1.api.bbc.co.uk/hit.xiti', // ATI analytics
+      'https://a1.api.bbc.co.uk', // ATI analytics
       'https://logws1363.ati-host.net', // ATI analytics
       'https://news.files.bbci.co.uk', // Static Assets
       'https://news.test.files.bbci.co.uk', // Static Assets
@@ -188,7 +188,7 @@ const directives = {
       'https://ichef.bbci.co.uk', // Images
       'https://ichef.test.bbci.co.uk', // Images
       'https://ping.chartbeat.net', // Chartbeat
-      'https://a1.api.bbc.co.uk/hit.xiti', // ATI analytics
+      'https://a1.api.bbc.co.uk', // ATI analytics
       'https://logws1363.ati-host.net', // ATI analytics
       'https://news.files.bbci.co.uk', // Static Assets
       'https://news.test.files.bbci.co.uk', // Static Assets
