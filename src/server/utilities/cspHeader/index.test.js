@@ -296,7 +296,6 @@ describe('cspHeader', () => {
         'https://a1.api.bbc.co.uk/hit.xiti',
         'https://logws1363.ati-host.net',
         'https://news.files.bbci.co.uk',
-        'http://news.files.bbci.co.uk',
         'https://news.test.files.bbci.co.uk',
         'https://*.akstat.io',
         'https://r.bbci.co.uk',

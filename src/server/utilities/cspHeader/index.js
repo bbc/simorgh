@@ -194,7 +194,6 @@ const directives = {
       'https://a1.api.bbc.co.uk/hit.xiti', // ATI analytics
       'https://logws1363.ati-host.net', // ATI analytics
       'https://news.files.bbci.co.uk', // Static Assets
-      'http://news.files.bbci.co.uk',
       'https://news.test.files.bbci.co.uk', // Static Assets
       'https://*.akstat.io',
       'https://r.bbci.co.uk',
