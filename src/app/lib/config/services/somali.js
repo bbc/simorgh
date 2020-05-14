@@ -199,6 +199,7 @@ export const service = {
       onFrontPage: true,
       frontPagePosition: 'Features',
       header: 'Barnaamijyada Idaacadda',
+      durationLabel: 'Muddada %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,
