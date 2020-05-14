@@ -12,8 +12,16 @@ export default () => {
       const navigationItemEls = document.querySelector(
         'header nav ul > li > a',
       );
-
       expect(navigationItemEls).toBeInTheDocument();
+    });
+
+    const navigationLinks = document.querySelectorAll('header nav a');
+    navigationLinks.forEach(navigationLink => {
+      it(`I can see a navigation link: ${navigationLink.textContent}`, () => {
+        expect(navigationLink).toBeInTheDocument();
+        expect(navigationLink.textContent).toBeTruthy();
+        expect(navigationLink.getAttribute('href')).toMatchSnapshot();
+      });
     });
 
     it('I can see a skip to content link', () => {

@@ -2,7 +2,6 @@ export default () => {
   describe('Footer', () => {
     it('I can see the footer copyright and external linking text', () => {
       const footerCopyrightEl = document.querySelector('footer div p');
-
       expect(footerCopyrightEl).toBeInTheDocument();
       expect(footerCopyrightEl.textContent).toBeTruthy();
       expect(footerCopyrightEl.textContent).toMatchSnapshot();
@@ -22,6 +21,15 @@ export default () => {
       expect(brandingLinkEl.tagName).toEqual('A');
       expect(brandingLinkEl.getAttribute('href')).toMatchSnapshot();
       expect(brandingImageEl).toBeInTheDocument();
+    });
+
+    const footerLinks = document.querySelectorAll('footer a');
+    footerLinks.forEach(link => {
+      it(`I can see a link: ${link.textContent}`, () => {
+        expect(link).toBeInTheDocument();
+        expect(link.textContent).toBeTruthy();
+        expect(link.getAttribute('href')).toMatchSnapshot();
+      });
     });
   });
 };

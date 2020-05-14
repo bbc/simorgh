@@ -10,7 +10,85 @@ exports[`Canonical Media Asset Page Analytics ATI: https://logws1363.ati-host.ne
 
 exports[`Canonical Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
+exports[`Canonical Media Asset Page Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link: BBC News, فارسی 1`] = `"/persian"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link: تماس با بی بی سی 1`] = `"https://www.bbc.com/persian/institutional-37542244"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link: درباره بی بی سی 1`] = `"https://www.bbc.com/persian/institutional-37474136"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link: سیاست حفظ حریم خصوصی 1`] = `"https://www.bbc.com/persian/institutional-37540067"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link: سیاست ما درباره لینک دادن به سایت های دیگر. 1`] = `"https://www.bbc.com/persian/institutional/2011/04/000001_links"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link: شرایط استفاده 1`] = `"https://www.bbc.com/persian/institutional-37474133"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link: چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟ 1`] = `"https://www.bbc.com/persian/institutional-49283091"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link: کوکی ها 1`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
 exports[`Canonical Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: افغانستان 1`] = `"/persian/afghanistan"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: افغانستان 2`] = `"/persian/afghanistan"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: اقتصاد 1`] = `"/persian/business"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: اقتصاد 2`] = `"/persian/business"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: ايران 1`] = `"/persian/iran"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: ايران 2`] = `"/persian/iran"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: تلویزیون 1`] = `"/persian/tv-and-radio-37434377"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: تلویزیون 2`] = `"/persian/tv-and-radio-37434377"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: جهان 1`] = `"/persian/world"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: جهان 2`] = `"/persian/world"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: دانش 1`] = `"/persian/science"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: دانش 2`] = `"/persian/science"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: رادیو 1`] = `"/persian/tv-and-radio-37434376"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: رادیو 2`] = `"/persian/tv-and-radio-37434376"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: صفحه اول 1`] = `"/persian"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: صفحه اول 2`] = `"/persian"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: ناظران می‌گویند 1`] = `"/persian/blogs/viewpoints"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: ناظران می‌گویند 2`] = `"/persian/blogs/viewpoints"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: هنر 1`] = `"/persian/arts"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: هنر 2`] = `"/persian/arts"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: وبلاگ‌ها 1`] = `"/persian/services/2012/01/000000_blogs_list"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: وبلاگ‌ها 2`] = `"/persian/services/2012/01/000000_blogs_list"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: ورزش 1`] = `"/persian/sport"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: ورزش 2`] = `"/persian/sport"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: ویدیو 1`] = `"/persian/media/video"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: ویدیو 2`] = `"/persian/media/video"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: پخش زنده 1`] = `"/persian/media-49522521"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: پخش زنده 2`] = `"/persian/media-49522521"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: کرونا 1`] = `"/persian/science-52004647"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: کرونا 2`] = `"/persian/science-52004647"`;
 
 exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, فارسی"`;
 
@@ -60,7 +138,7 @@ exports[`Canonical Media Asset Page SEO Icons : 192x192 1`] = `"https://news.fil
 
 exports[`Canonical Media Asset Page SEO Lang attribute 1`] = `"fa"`;
 
-exports[`Canonical Media Asset Page SEO Linked data 1`] = `
+exports[`Canonical Media Asset Page SEO Linked data Article 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "Article",
@@ -102,6 +180,19 @@ Object {
   },
   "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
   "url": "http://localhost:7080/persian/iran-23231114",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Linked data AudioObject 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "AudioObject",
+  "description": "Trump long headline",
+  "duration": "PT26S",
+  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa",
+  "name": "Trump short headline",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01lmkk5.jpg",
+  "uploadDate": "2019-02-15T12:37:28.000Z",
 }
 `;
 
