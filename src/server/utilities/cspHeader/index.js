@@ -73,6 +73,7 @@ const directives = {
       'https://cookie-oven.test.api.bbc.com', // Cookie banner
       'https://cookie-oven.test.api.bbc.co.uk', // Cookie banner
       'https://www.bbc.co.uk', // STY include indepthtoolkit
+      'https://news.files.bbci.co.uk', // STY include
       'https://news.test.files.bbci.co.uk', // STY include
       "'self'",
     ],
@@ -150,7 +151,6 @@ const directives = {
       'https://ping.chartbeat.net',
       'https://a1.api.bbc.co.uk/hit.xiti',
       'https://news.files.bbci.co.uk',
-      'http://news.files.bbci.co.uk',
       'https://*.akstat.io',
       'https://r.bbci.co.uk',
       'https://pagead2.googlesyndication.com', // ads
@@ -235,7 +235,6 @@ const directives = {
       'http://www.instagram.com', // Social Embeds
       'https://cdn.syndication.twimg.com', // Social Embeds
       'https://static.bbc.co.uk', // STY include
-      'http://static.bbc.co.uk', // STY include
       "'self'",
       "'unsafe-inline'",
     ],
@@ -264,9 +263,7 @@ const directives = {
       'http://www.instagram.com', // Social Embeds
       'https://cdn.syndication.twimg.com', // Social Embeds
       'https://static.stage.bbc.co.uk', // STY include
-      'http://static.stage.bbc.co.uk', // STY include
       'https://static.bbc.co.uk', // STY include
-      'http://static.bbc.co.uk', // STY include
       "'self'",
       "'unsafe-inline'",
     ],
@@ -281,10 +278,7 @@ const directives = {
       'https://platform.twitter.com', // Social Embeds
       'https://ton.twimg.com', // Social Embeds
       'https://news.test.files.bbci.co.uk', // STY includes
-      'https://static.stage.bbc.co.uk', // STY include
-      'http://static.stage.bbc.co.uk', // STY include
       'https://static.bbc.co.uk', // STY include
-      'http://static.bbc.co.uk', // STY include
       "'unsafe-inline'",
     ],
     ampNonLive: [
@@ -297,9 +291,7 @@ const directives = {
       'https://ton.twimg.com', // Social Embeds
       'https://news.test.files.bbci.co.uk', // STY includes
       'https://static.stage.bbc.co.uk', // STY include
-      'http://static.stage.bbc.co.uk', // STY include
       'https://static.bbc.co.uk', // STY include
-      'http://static.bbc.co.uk', // STY include
       "'unsafe-inline'",
     ],
   },
