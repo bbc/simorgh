@@ -9,7 +9,7 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { GEL_SPACING_DBL, GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import { C_LUNAR_LIGHT, C_RHINO } from '@bbc/psammead-styles/colours';
 import pathOr from 'ramda/src/pathOr';
-import { getBodyCopy } from '@bbc/gel-foundations/typography';
+import { getMinion } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { ServiceContext } from '#contexts/ServiceContext';
 
@@ -33,7 +33,7 @@ const StyledAd = styled.div`
 `;
 
 const StyledParagraph = styled.p`
-  ${({ script }) => script && getBodyCopy(script)};
+  ${({ script }) => script && getMinion(script)};
   ${({ service }) => getSansRegular(service)}
   color: ${C_RHINO};
   margin: 0; /* Reset */
