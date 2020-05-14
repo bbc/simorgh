@@ -20,11 +20,9 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
       let embedUrl;
 
       beforeEach(() => {
-        cy.request(`${Cypress.env('currentPath')}.json?renderer_env=live`).then(
-          ({ body }) => {
-            embedUrl = getEmbedUrl(body, lang);
-          },
-        );
+        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+          embedUrl = getEmbedUrl(body, lang);
+        });
       });
 
       it('should be rendered', () => {
