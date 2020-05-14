@@ -1841,8 +1841,8 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/indonesia/bbc_indonesian_radio/w172xh26yzb93p7'],
+            enabled: true,
           },
           local: {
             paths: ['/indonesia/bbc_indonesian_radio/w172xh267fpn19l'],
