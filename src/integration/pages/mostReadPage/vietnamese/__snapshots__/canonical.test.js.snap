@@ -6,7 +6,61 @@ exports[`Canonical Most Read Page Analytics ATI: https://logws1363.ati-host.net?
 
 exports[`Canonical Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/vietnamese"`;
 
+exports[`Canonical Most Read Page Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Canonical Most Read Page Footer I can see a link: BBC News, Tiếng Việt 1`] = `"/vietnamese"`;
+
+exports[`Canonical Most Read Page Footer I can see a link: Chính sách riêng tư 1`] = `"https://www.bbc.com/vietnamese/institutional-37623841"`;
+
+exports[`Canonical Most Read Page Footer I can see a link: Cookies 1`] = `"https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html"`;
+
+exports[`Canonical Most Read Page Footer I can see a link: Liên hệ BBC 1`] = `"https://www.bbc.com/vietnamese/institutional-37623842"`;
+
+exports[`Canonical Most Read Page Footer I can see a link: Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
+exports[`Canonical Most Read Page Footer I can see a link: Tại sao bạn có thể tin tưởng BBC News 1`] = `"https://www.bbc.com/vietnamese/institutional-49283563"`;
+
+exports[`Canonical Most Read Page Footer I can see a link: Về BBC 1`] = `"https://www.bbc.com/vietnamese/institutional-37623840"`;
+
+exports[`Canonical Most Read Page Footer I can see a link: Điều khoản sử dụng 1`] = `"https://www.bbc.com/vietnamese/institutional-37622991"`;
+
 exports[`Canonical Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC không chịu trách nhiệm nội dung các trang ngoài. Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài"`;
+
+exports[`Canonical Most Read Page Header I can see a navigation link: Diễn đàn 1`] = `"/vietnamese/forum"`;
+
+exports[`Canonical Most Read Page Header I can see a navigation link: Diễn đàn 2`] = `"/vietnamese/forum"`;
+
+exports[`Canonical Most Read Page Header I can see a navigation link: Học tiếng Anh 1`] = `"/vietnamese/english"`;
+
+exports[`Canonical Most Read Page Header I can see a navigation link: Học tiếng Anh 2`] = `"/vietnamese/english"`;
+
+exports[`Canonical Most Read Page Header I can see a navigation link: Kinh tế 1`] = `"/vietnamese/business"`;
+
+exports[`Canonical Most Read Page Header I can see a navigation link: Kinh tế 2`] = `"/vietnamese/business"`;
+
+exports[`Canonical Most Read Page Header I can see a navigation link: Nhịp sống mới 1`] = `"/vietnamese/magazine"`;
+
+exports[`Canonical Most Read Page Header I can see a navigation link: Nhịp sống mới 2`] = `"/vietnamese/magazine"`;
+
+exports[`Canonical Most Read Page Header I can see a navigation link: Thể thao 1`] = `"/vietnamese/sport"`;
+
+exports[`Canonical Most Read Page Header I can see a navigation link: Thể thao 2`] = `"/vietnamese/sport"`;
+
+exports[`Canonical Most Read Page Header I can see a navigation link: Thế giới 1`] = `"/vietnamese/world"`;
+
+exports[`Canonical Most Read Page Header I can see a navigation link: Thế giới 2`] = `"/vietnamese/world"`;
+
+exports[`Canonical Most Read Page Header I can see a navigation link: Tin chính 1`] = `"/vietnamese"`;
+
+exports[`Canonical Most Read Page Header I can see a navigation link: Tin chính 2`] = `"/vietnamese"`;
+
+exports[`Canonical Most Read Page Header I can see a navigation link: Video 1`] = `"/vietnamese/media/video"`;
+
+exports[`Canonical Most Read Page Header I can see a navigation link: Video 2`] = `"/vietnamese/media/video"`;
+
+exports[`Canonical Most Read Page Header I can see a navigation link: Việt Nam 1`] = `"/vietnamese/vietnam"`;
+
+exports[`Canonical Most Read Page Header I can see a navigation link: Việt Nam 2`] = `"/vietnamese/vietnam"`;
 
 exports[`Canonical Most Read Page Header I can see the branding 1`] = `"BBC News, Tiếng Việt"`;
 
@@ -44,7 +98,7 @@ exports[`Canonical Most Read Page SEO Heading level 1 1`] = `"Đọc nhiều nh�
 
 exports[`Canonical Most Read Page SEO Lang attribute 1`] = `"vi"`;
 
-exports[`Canonical Most Read Page SEO Linked data 1`] = `
+exports[`Canonical Most Read Page SEO Linked data WebPage 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "WebPage",

@@ -54,10 +54,6 @@ exports[`Canonical Media Asset Page Header I can see a navigation link: رادی
 
 exports[`Canonical Media Asset Page Header I can see a navigation link: رادیو 2`] = `"/persian/tv-and-radio-37434376"`;
 
-exports[`Canonical Media Asset Page Header I can see a navigation link: صفحات ویژه 1`] = `"/persian/world-37434378"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: صفحات ویژه 2`] = `"/persian/world-37434378"`;
-
 exports[`Canonical Media Asset Page Header I can see a navigation link: صفحه اول 1`] = `"/persian"`;
 
 exports[`Canonical Media Asset Page Header I can see a navigation link: صفحه اول 2`] = `"/persian"`;
@@ -112,7 +108,7 @@ exports[`Canonical Media Asset Page SEO Heading level 1 1`] = `"Trump long headl
 
 exports[`Canonical Media Asset Page SEO Lang attribute 1`] = `"fa"`;
 
-exports[`Canonical Media Asset Page SEO Linked data : Article 1`] = `
+exports[`Canonical Media Asset Page SEO Linked data Article 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "Article",
@@ -157,7 +153,7 @@ Object {
 }
 `;
 
-exports[`Canonical Media Asset Page SEO Linked data : AudioObject 1`] = `
+exports[`Canonical Media Asset Page SEO Linked data AudioObject 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "AudioObject",

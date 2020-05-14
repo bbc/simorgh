@@ -177,12 +177,13 @@ export default () => {
       );
 
       schemaScripts.forEach(script => {
-        it('', () => {
+        const scriptContent = JSON.parse(script.textContent);
+        const type = scriptContent['@type'];
+
+        it(`${type}`, () => {
           expect(script).toBeInTheDocument();
           expect(script.textContent).toBeTruthy();
-          const scriptContent = JSON.parse(script.textContent);
-          const type = scriptContent['@type'];
-          expect(scriptContent).toMatchSnapshot(type);
+          expect(scriptContent).toMatchSnapshot();
         });
       });
     });

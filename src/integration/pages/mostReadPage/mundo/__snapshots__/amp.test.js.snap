@@ -107,7 +107,73 @@ Object {
 
 exports[`AMP Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
+exports[`AMP Most Read Page Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`AMP Most Read Page Footer I can see a link: BBC News, Mundo 1`] = `"/mundo"`;
+
+exports[`AMP Most Read Page Footer I can see a link: Contacta a la BBC 1`] = `"https://www.bbc.com/mundo/institucional-36400011"`;
+
+exports[`AMP Most Read Page Footer I can see a link: Cookies 1`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+
+exports[`AMP Most Read Page Footer I can see a link: Lee sobre nuestra postura acerca de enlaces externos. 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
+exports[`AMP Most Read Page Footer I can see a link: Política de privacidad 1`] = `"https://www.bbc.com/mundo/institucional-36400009"`;
+
+exports[`AMP Most Read Page Footer I can see a link: Por qué puedes confiar en la BBC 1`] = `"https://www.bbc.com/mundo/institucional-51359666"`;
+
+exports[`AMP Most Read Page Footer I can see a link: Sobre la BBC 1`] = `"https://www.bbc.com/mundo/institucional-36400007"`;
+
+exports[`AMP Most Read Page Footer I can see a link: Términos de uso 1`] = `"https://www.bbc.com/mundo/institucional-36400005"`;
+
 exports[`AMP Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: América Latina 1`] = `"/mundo/america_latina"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: América Latina 2`] = `"/mundo/america_latina"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Centroamérica Cuenta 1`] = `"/mundo/noticias-43826245"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Centroamérica Cuenta 2`] = `"/mundo/noticias-43826245"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Ciencia 1`] = `"/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Ciencia 2`] = `"/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Cultura 1`] = `"/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Cultura 2`] = `"/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Deportes 1`] = `"/mundo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Deportes 2`] = `"/mundo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Economía 1`] = `"/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Economía 2`] = `"/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Hay Festival 1`] = `"/mundo/noticias-36795069"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Hay Festival 2`] = `"/mundo/noticias-36795069"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Internacional 1`] = `"/mundo/internacional"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Internacional 2`] = `"/mundo/internacional"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Noticias 1`] = `"/mundo"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Noticias 2`] = `"/mundo"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Salud 1`] = `"/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Salud 2`] = `"/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Tecnología 1`] = `"/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Tecnología 2`] = `"/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Video 1`] = `"/mundo/media/video"`;
+
+exports[`AMP Most Read Page Header I can see a navigation link: Video 2`] = `"/mundo/media/video"`;
 
 exports[`AMP Most Read Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
@@ -145,7 +211,7 @@ exports[`AMP Most Read Page SEO Heading level 1 1`] = `"Más leídas"`;
 
 exports[`AMP Most Read Page SEO Lang attribute 1`] = `"es"`;
 
-exports[`AMP Most Read Page SEO Linked data 1`] = `
+exports[`AMP Most Read Page SEO Linked data WebPage 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "WebPage",

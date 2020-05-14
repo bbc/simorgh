@@ -20,7 +20,7 @@ exports[`Canonical Front Page Footer I can see a link: شروط الاستخدا
 
 exports[`Canonical Front Page Footer I can see a link: عن بي بي سي 1`] = `"https://www.bbc.com/arabic/institutional-37731352"`;
 
-exports[`Canonical Front Page Footer I can see a link: لماذا يمكنك الإعتماد على أخبار بي بي سي 1`] = `"https://www.bbc.com/arabic/institutional-49283069"`;
+exports[`Canonical Front Page Footer I can see a link: لماذا يمكنك الاعتماد على أخبار بي بي سي 1`] = `"https://www.bbc.com/arabic/institutional-49283069"`;
 
 exports[`Canonical Front Page Footer I can see a link: ملفات الارتباط Cookies 1`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
 
@@ -80,7 +80,7 @@ exports[`Canonical Front Page SEO Heading level 1 1`] = `"BBC News, عربي - �
 
 exports[`Canonical Front Page SEO Lang attribute 1`] = `"ar"`;
 
-exports[`Canonical Front Page SEO Linked data : WebPage 1`] = `
+exports[`Canonical Front Page SEO Linked data WebPage 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "WebPage",

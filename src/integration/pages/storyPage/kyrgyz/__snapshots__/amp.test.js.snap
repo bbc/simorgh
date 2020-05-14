@@ -107,7 +107,57 @@ Object {
 
 exports[`AMP Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
 
+exports[`AMP Story Page Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`AMP Story Page Footer I can see a link: BBC News, Кыргыз КызMATы 1`] = `"/kyrgyz"`;
+
+exports[`AMP Story Page Footer I can see a link: Cookies 1`] = `"https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html"`;
+
+exports[`AMP Story Page Footer I can see a link: Башка интернет сайттардын мазмуну боюнча биздин позиция. 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
+exports[`AMP Story Page Footer I can see a link: Би-Би-Си жөнүндө 1`] = `"https://www.bbc.com/kyrgyz/institutional-38157281"`;
+
+exports[`AMP Story Page Footer I can see a link: Би-Би-Си менен байланышыңыз 1`] = `"https://www.bbc.com/kyrgyz/institutional-38157284"`;
+
+exports[`AMP Story Page Footer I can see a link: Колдонуу эрежелери 1`] = `"https://www.bbc.com/kyrgyz/institutional-38157280"`;
+
+exports[`AMP Story Page Footer I can see a link: Купуялык 1`] = `"https://www.bbc.com/kyrgyz/institutional-38157282"`;
+
+exports[`AMP Story Page Footer I can see a link: Эмнеге BBC News ишенсе болот? 1`] = `"https://www.bbc.com/kyrgyz/institutional-49677275"`;
+
 exports[`AMP Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
+
+exports[`AMP Story Page Header I can see a navigation link: Башталгыч бет 1`] = `"/kyrgyz"`;
+
+exports[`AMP Story Page Header I can see a navigation link: Башталгыч бет 2`] = `"/kyrgyz"`;
+
+exports[`AMP Story Page Header I can see a navigation link: Блог 1`] = `"/kyrgyz/blog"`;
+
+exports[`AMP Story Page Header I can see a navigation link: Блог 2`] = `"/kyrgyz/blog"`;
+
+exports[`AMP Story Page Header I can see a navigation link: Видео 1`] = `"/kyrgyz/media/video"`;
+
+exports[`AMP Story Page Header I can see a navigation link: Видео 2`] = `"/kyrgyz/media/video"`;
+
+exports[`AMP Story Page Header I can see a navigation link: Дүйнө 1`] = `"/kyrgyz/world"`;
+
+exports[`AMP Story Page Header I can see a navigation link: Дүйнө 2`] = `"/kyrgyz/world"`;
+
+exports[`AMP Story Page Header I can see a navigation link: Журнал 1`] = `"/kyrgyz/magazine"`;
+
+exports[`AMP Story Page Header I can see a navigation link: Журнал 2`] = `"/kyrgyz/magazine"`;
+
+exports[`AMP Story Page Header I can see a navigation link: Кыргызстан 1`] = `"/kyrgyz/kyrgyzstan"`;
+
+exports[`AMP Story Page Header I can see a navigation link: Кыргызстан 2`] = `"/kyrgyz/kyrgyzstan"`;
+
+exports[`AMP Story Page Header I can see a navigation link: Маданият/Илим 1`] = `"/kyrgyz/entertainment"`;
+
+exports[`AMP Story Page Header I can see a navigation link: Маданият/Илим 2`] = `"/kyrgyz/entertainment"`;
+
+exports[`AMP Story Page Header I can see a navigation link: Сапар TV 1`] = `"/kyrgyz/sapartv"`;
+
+exports[`AMP Story Page Header I can see a navigation link: Сапар TV 2`] = `"/kyrgyz/sapartv"`;
 
 exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
@@ -125,7 +175,7 @@ exports[`AMP Story Page SEO Heading level 1 1`] = `"Test STY for social embeds"`
 
 exports[`AMP Story Page SEO Lang attribute 1`] = `"ky"`;
 
-exports[`AMP Story Page SEO Linked data 1`] = `
+exports[`AMP Story Page SEO Linked data NewsArticle 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "NewsArticle",

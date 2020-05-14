@@ -92,7 +92,7 @@ exports[`Canonical Articles SEO Heading level 1 1`] = `"Este es el titular de es
 
 exports[`Canonical Articles SEO Lang attribute 1`] = `"es"`;
 
-exports[`Canonical Articles SEO Linked data : Article 1`] = `
+exports[`Canonical Articles SEO Linked data Article 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "Article",
@@ -137,7 +137,7 @@ Object {
 }
 `;
 
-exports[`Canonical Articles SEO Linked data : VideoObject 1`] = `
+exports[`Canonical Articles SEO Linked data VideoObject 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "VideoObject",
