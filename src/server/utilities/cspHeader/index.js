@@ -300,7 +300,7 @@ const directives = {
     ],
     canonical: [
       'https://gel.files.bbci.co.uk',
-      'https://ws-downloads.files.bbci.co.uk',
+      'https://ws-downloads.files.bbci.co.uk', // STY includes
       'https://static.bbci.co.uk', // STY includes
     ],
   },
