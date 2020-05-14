@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/portuguese/geral-49602758",
       "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-49602758",
-      "curie": "http://www.bbc.co.uk/asset/0bff94de-2253-a145-be0f-926c848991fd"
+      "curie": "http://www.bbc.co.uk/asset/0bff94de-2253-a145-be0f-926c848991fd",
+      "assetId": "49602758"
     },
     "type": "MAP",
     "createdBy": "brasil-v6",
     "language": "pt-BR",
-    "lastUpdated": 1567799288203,
-    "firstPublished": 1567799208,
-    "lastPublished": 1567799209,
+    "lastUpdated": 1588761519035,
+    "firstPublished": 1567799208000,
+    "lastPublished": 1567799208000,
+    "timestamp": 1567799208000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -40,43 +42,44 @@
           "campaignId": "5a988e3739461b000e9dabfa",
           "campaignName": "WS - Give me perspective"
         }
-      ]
+      ],
+      "taggings": []
     },
     "tags": {
       "about": [
         {
+          "thingLabel": "Health",
+          "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+          "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+          "thingType": ["core:Thing", "core:Theme", "tagging:TagConcept"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Health",
+            "http://www.wikidata.org/entity/Q12147"
+          ]
+        },
+        {
           "thingLabel": "Cancer",
           "thingUri": "http://www.bbc.co.uk/things/583f320b-e25a-433c-ad39-b637a4f27866#id",
           "thingId": "583f320b-e25a-433c-ad39-b637a4f27866",
-          "thingType": ["Thing", "Theme"],
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
           "thingSameAs": [
-            "http://dbpedia.org/resource/Cancer",
-            "http://www.wikidata.org/entity/Q12078"
+            "http://www.wikidata.org/entity/Q12078",
+            "http://dbpedia.org/resource/Cancer"
           ]
         },
         {
           "thingLabel": "Stem cells",
           "thingUri": "http://www.bbc.co.uk/things/58e41e89-4d5e-4af6-b707-8e012bf861b6#id",
           "thingId": "58e41e89-4d5e-4af6-b707-8e012bf861b6",
-          "thingType": ["Thing", "Theme"],
+          "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Stem_cell",
             "http://www.wikidata.org/entity/Q48196"
           ]
-        },
-        {
-          "thingLabel": "Health",
-          "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
-          "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
-          "thingType": ["Thing", "Theme"],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Health",
-            "http://www.wikidata.org/entity/Q12147"
-          ]
         }
       ]
     },
-    "version": "v1.0.10",
+    "version": "v1.2.1",
     "blockTypes": ["media", "paragraph", "list", "image", "social_embed"],
     "includeComments": false
   },
@@ -105,9 +108,10 @@
             "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
+              "nonUk": true,
+              "world": false
             },
-            "availableFrom": 1567798828
+            "availableFrom": 1567798828000
           }
         ],
         "imageCopyright": "BBC",
@@ -140,12 +144,14 @@
                   "href": "http://www.bbc.com/portuguese/internacional-49600608"
                 },
                 "summary": "Segundo cardiologista, jovens não têm proteção extra no coração como mais velhos; Danilo Feliciano de Moraes, filho mais velho do ex-jogador Cafu, morreu após sofrer infarto enquanto jogava futebol.",
-                "timestamp": 1567706265,
+                "timestamp": 1567706265000,
+                "language": "pt-BR",
                 "passport": {
                   "category": {
                     "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
                     "categoryName": "Analysis"
-                  }
+                  },
+                  "taggings": []
                 },
                 "id": "urn:bbc:ares::asset:portuguese/internacional-49600608",
                 "type": "cps"
@@ -167,12 +173,14 @@
                   "href": "http://www.bbc.com/portuguese/geral-49569915"
                 },
                 "summary": "Além de provocar microcefalia em bebês, vírus tem efeito em células neurais maduras, provocando, em alguns casos, perda de memória e outros prejuízos neurológico, segundo pesquisa realizada na UFRJ.",
-                "timestamp": 1567678027,
+                "timestamp": 1567678027000,
+                "language": "pt-BR",
                 "passport": {
                   "category": {
                     "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                     "categoryName": "News"
-                  }
+                  },
+                  "taggings": []
                 },
                 "id": "urn:bbc:ares::asset:portuguese/geral-49569915",
                 "type": "cps"
@@ -229,16 +237,19 @@
       {
         "href": "https://www.youtube.com/watch?v=uflBBRUJCfk",
         "source": "youtube",
+        "id": "uflBBRUJCfk",
         "type": "social_embed"
       },
       {
         "href": "https://www.youtube.com/watch?v=t0WiAn_TIkI",
         "source": "youtube",
+        "id": "t0WiAn_TIkI",
         "type": "social_embed"
       },
       {
         "href": "https://www.youtube.com/watch?v=8w-M0y8CmuU",
         "source": "youtube",
+        "id": "8w-M0y8CmuU",
         "type": "social_embed"
       }
     ]
@@ -251,10 +262,12 @@
     "locators": {
       "assetUri": "/portuguese/geral-49602758",
       "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-49602758",
-      "curie": "http://www.bbc.co.uk/asset/0bff94de-2253-a145-be0f-926c848991fd"
+      "curie": "http://www.bbc.co.uk/asset/0bff94de-2253-a145-be0f-926c848991fd",
+      "assetId": "49602758"
     },
     "summary": "Astrid, de 42 anos, tem leucemia e corre contra o tempo para encontrar um doador.",
-    "timestamp": 1567799288203,
+    "timestamp": 1567799208000,
+    "language": "pt-BR",
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -265,7 +278,8 @@
           "campaignId": "5a988e3739461b000e9dabfa",
           "campaignName": "WS - Give me perspective"
         }
-      ]
+      ],
+      "taggings": []
     },
     "media": {
       "id": "p07mnyz5",
@@ -288,11 +302,8 @@
           "duration": 213,
           "durationISO8601": "PT3M33S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          },
-          "availableFrom": 1567798828
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1567798828000
         }
       ],
       "imageCopyright": "BBC",
