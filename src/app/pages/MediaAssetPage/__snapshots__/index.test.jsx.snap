@@ -23,7 +23,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
               role="main"
             >
               <h1
-                class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                 id="content"
                 tabindex="-1"
               >
@@ -69,14 +69,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 >
                   13 сентябр 2019
                 </time>
-                <div>
-                  <time
-                    class="StyledTimestamp-um718p-0 bAgcOD"
-                    datetime="2019-11-06"
-                  >
-                    Янгиланди 6 ноябр 2019
-                  </time>
-                </div>
               </div>
               <div
                 class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
@@ -326,7 +318,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                           role="text"
                         >
                           <span
-                            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                            class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                           >
                             Сурат манбаси, 
                           </span>
@@ -394,7 +386,7 @@ exports[`Media Asset Page should render component 1`] = `
               role="main"
             >
               <h1
-                class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                 id="content"
                 tabindex="-1"
               >
@@ -822,7 +814,7 @@ exports[`Media Asset Page should render component 1`] = `
                           role="text"
                         >
                           <span
-                            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                            class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                           >
                             Wia dis foto come from, 
                           </span>
@@ -841,7 +833,7 @@ exports[`Media Asset Page should render component 1`] = `
                         class="Caption-sc-16x70so-0 bjgllj"
                       >
                         <span
-                          class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                          class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                         >
                           Wetin we call dis foto, 
                         </span>
@@ -877,7 +869,7 @@ exports[`Media Asset Page should render component 1`] = `
                           role="text"
                         >
                           <span
-                            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                            class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                           >
                             Wia dis foto come from, 
                           </span>
@@ -896,7 +888,7 @@ exports[`Media Asset Page should render component 1`] = `
                         class="Caption-sc-16x70so-0 bjgllj"
                       >
                         <span
-                          class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                          class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                         >
                           Wetin we call dis foto, 
                         </span>
@@ -1183,7 +1175,7 @@ exports[`Media Asset Page should render component 1`] = `
                                 role="text"
                               >
                                 <span
-                                  class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                                  class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                                 >
                                   Image gallery, 
                                 </span>
@@ -1281,7 +1273,7 @@ exports[`Media Asset Page should render component 1`] = `
                                 role="text"
                               >
                                 <span
-                                  class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                                  class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                                 >
                                   Audio, 
                                 </span>
@@ -1289,7 +1281,7 @@ exports[`Media Asset Page should render component 1`] = `
                                   BBC News Pidgin One Minute News
                                 </span>
                                 <span
-                                  class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                                  class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                                 >
                                   , 0,15
                                 </span>

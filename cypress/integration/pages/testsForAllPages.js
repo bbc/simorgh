@@ -79,45 +79,48 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           it('should have the correct shared metadata', () => {
             cy.request(`${Cypress.env('currentPath')}.json`).then(
               ({ body }) => {
-                const mediaAssetPageType = 'mediaAssetPage';
-                const articlesPageType = 'articles';
-                const photoGalleryPageType = 'photoGalleryPage';
-                const storyPageType = 'storyPage';
-
-                const cpsPageTypes = [
-                  mediaAssetPageType,
-                  photoGalleryPageType,
-                  storyPageType,
-                ];
-
-                const { indexImage } = body.promo;
-                const imagePath = indexImage ? indexImage.path : null;
-
-                const imageAltText =
-                  indexImage &&
-                  cpsPageTypes.includes(pageType) &&
-                  indexImage.altText
-                    ? indexImage.altText
-                    : appConfig[config[service].name][variant]
-                        .defaultImageAltText;
-
-                const imageSrc =
-                  imagePath && cpsPageTypes.includes(pageType)
-                    ? getBrandedImage({
-                        imagePath,
-                        serviceName: config[service].name,
-                      })
-                    : appConfig[config[service].name][variant].defaultImage;
-
-                const ogType = [
-                  articlesPageType,
-                  mediaAssetPageType,
-                  photoGalleryPageType,
-                  storyPageType,
-                ].includes(pageType)
-                  ? 'article'
-                  : 'website';
-
+                let description;
+                let title;
+                switch (pageType) {
+                  case 'articles':
+                    description =
+                      (typeof body.promo.summary === 'string'
+                        ? body.promo.summary
+                        : body.promo.summary.blocks[0].model.blocks[0].model
+                            .blocks[0].model.text) ||
+                      body.promo.headlines.seoHeadline;
+                    title = body.promo.headlines.seoHeadline;
+                    break;
+                  case 'frontPage':
+                    description = body.metadata.summary;
+                    title =
+                      appConfig[config[service].name][variant].frontPageTitle;
+                    break;
+                  case 'liveRadio':
+                    description = body.promo.summary;
+                    title = body.promo.name;
+                    break;
+                  case 'mediaAssetPage':
+                    description = body.promo.summary;
+                    title = body.promo.headlines.headline;
+                    break;
+                  case 'photoGalleryPage':
+                    description = body.promo.summary;
+                    title = body.promo.headlines.headline;
+                    break;
+                  case 'storyPage':
+                    description = body.promo.summary;
+                    title = body.promo.headlines.headline;
+                    break;
+                  default:
+                    description = '';
+                    title = '';
+                }
+                /* Note that if updating these, also do the same for errorPage404/tests.js */
+                const pageTitle = `${title} - ${
+                  appConfig[config[service].name][variant].brandName
+                }`;
+                
                 cy.get('head').within(() => {
                   cy.get('meta[property="fb:admins"]').should(
                     'have.attr',

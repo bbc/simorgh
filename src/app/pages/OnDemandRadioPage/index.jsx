@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
-import { string, number, shape } from 'prop-types';
 import styled from 'styled-components';
+import { shape, string, number } from 'prop-types';
 import MetadataContainer from '../../containers/Metadata';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import HeadingBlock from '#containers/RadioPageBlocks/Blocks/Heading';
+import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
 import AudioPlayerBlock from '#containers/RadioPageBlocks/Blocks/AudioPlayer';
 
@@ -29,19 +29,35 @@ const StyledGelPageGrid = styled(GelPageGrid)`
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
 `;
 
-const renderEpisode = (
+/* eslint-disable react/prop-types */
+const renderEpisode = ({
   masterBrand,
   episodeId,
   episodeAvailableFrom,
   episodeAvailableUntil,
-) => {
+  promoBrandTitle,
+  shortSynopsis,
+  thumbnailImageUrl,
+  durationISO8601,
+  releaseDateTimeStamp,
+}) => {
   const episodeAvailability = getEpisodeAvailability(
     episodeAvailableFrom,
     episodeAvailableUntil,
   );
   switch (episodeAvailability) {
     case EPISODE_IS_AVAILABLE:
-      return <AudioPlayerBlock externalId={masterBrand} id={episodeId} />;
+      return (
+        <AudioPlayerBlock
+          externalId={masterBrand}
+          id={episodeId}
+          promoBrandTitle={promoBrandTitle}
+          shortSynopsis={shortSynopsis}
+          thumbnailImageUrl={thumbnailImageUrl}
+          durationISO8601={durationISO8601}
+          releaseDateTimeStamp={releaseDateTimeStamp}
+        />
+      );
     case EPISODE_IS_EXPIRED:
       return <AudioPlayerBlock isExpired />;
     case EPISODE_IS_NOT_YET_AVAILABLE:
@@ -49,13 +65,13 @@ const renderEpisode = (
       return null;
   }
 };
+/* eslint-enable react/prop-types */
 
 const OnDemandRadioPage = ({ pageData }) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
   const {
     language,
     brandTitle,
-    episodeTitle,
     headline,
     summary,
     shortSynopsis,
@@ -63,6 +79,10 @@ const OnDemandRadioPage = ({ pageData }) => {
     episodeId,
     episodeAvailableFrom,
     episodeAvailableUntil,
+    releaseDateTimeStamp,
+    promoBrandTitle,
+    durationISO8601,
+    thumbnailImageUrl,
   } = pageData;
   const { dir } = useContext(ServiceContext);
 
@@ -112,15 +132,24 @@ const OnDemandRadioPage = ({ pageData }) => {
           }}
           margins={{ group0: true, group1: true, group2: true, group3: true }}
         >
-          <HeadingBlock idAttr={idAttr} text={brandTitle} />
-          <ParagraphBlock text={episodeTitle} />
+          <OnDemandHeadingBlock
+            idAttr={idAttr}
+            brandTitle={brandTitle}
+            releaseDateTimeStamp={releaseDateTimeStamp}
+          />
+
           <ParagraphBlock text={summary} />
-          {renderEpisode(
+          {renderEpisode({
             masterBrand,
             episodeId,
             episodeAvailableFrom,
             episodeAvailableUntil,
-          )}
+            promoBrandTitle,
+            shortSynopsis,
+            thumbnailImageUrl,
+            durationISO8601,
+            releaseDateTimeStamp,
+          })}
         </Grid>
       </StyledGelPageGrid>
     </>
@@ -130,12 +159,12 @@ const OnDemandRadioPage = ({ pageData }) => {
 OnDemandRadioPage.propTypes = {
   pageData: shape({
     brandTitle: string,
-    episodeTitle: string,
     headline: string,
     summary: string,
     language: string,
     episodeAvailableFrom: number,
     episodeAvailableUntil: number,
+    releaseDateTimeStamp: number,
   }).isRequired,
 };
 
