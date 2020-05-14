@@ -182,7 +182,7 @@ export default () => {
 
         it(`${type}`, () => {
           expect(script).toBeInTheDocument();
-          expect(script.textContent).toBeTruthy();
+          expect(scriptContent).toBeTruthy();
           expect(scriptContent).toMatchSnapshot();
         });
       });
