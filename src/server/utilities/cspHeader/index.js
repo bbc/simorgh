@@ -276,7 +276,7 @@ const directives = {
       'https://news.files.bbci.co.uk', // STY include styles
       'https://platform.twitter.com', // Social Embeds
       'https://ton.twimg.com', // Social Embeds
-      'https://news.test.files.bbci.co.uk', // STY includes
+      'https://news.files.bbci.co.uk', // STY includes
       'https://static.bbc.co.uk', // STY include
       "'unsafe-inline'",
     ],
@@ -288,6 +288,7 @@ const directives = {
       'https://news.files.bbci.co.uk', // STY include styles
       'https://platform.twitter.com', // Social Embeds
       'https://ton.twimg.com', // Social Embeds
+      'https://news.files.bbci.co.uk', // STY includes
       'https://news.test.files.bbci.co.uk', // STY includes
       'https://static.bbc.co.uk', // STY include
       "'unsafe-inline'",
