@@ -72,7 +72,7 @@ const CanonicalMostRead = ({
 
       const fetchMostReadData = pathname =>
         fetch(pathname, { mode: 'no-cors' })
-          .then(handleResponse)
+          .then(handleResponse(pathname))
           .catch(error => {
             logger.error(
               JSON.stringify(

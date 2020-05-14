@@ -11,6 +11,11 @@ import {
   setStaleLastRecordTimeStamp,
 } from '../utilities/testHelpers';
 import CanonicalMostRead from '.';
+import loggerMock from '#testHelpers/loggerMock';
+import {
+  MOST_READ_REQUEST_RECEIVED,
+  MOST_READ_FETCH_ERROR,
+} from '#lib/logger.const';
 
 /* eslint-disable react/prop-types */
 const MostReadCanonicalWithContext = ({
@@ -195,5 +200,31 @@ describe('MostReadContainerCanonical', () => {
       });
       expect(container).toBeEmpty();
     });
+  });
+
+  describe('Error logging', () => {
+    it('should return MOST_READ_REQUEST_RECEIVED when most read is client side rendered', () => {
+      render(
+        <MostReadCanonicalWithContext
+          service="pidgin"
+          endpoint="www.test.bbc.com/pidgin/mostread.json"
+        />,
+      );
+      expect(loggerMock.info).toHaveBeenCalledWith(
+        MOST_READ_REQUEST_RECEIVED,
+        {},
+      );
+    });
+
+    // it('should return MOST_READ_FETCH_ERROR when data fetching fails', () => {
+    //   fetch.mockResponse(
+    //     JSON.stringify(setFreshPromoTimestamp(pidginMostReadData)),
+    //     404,
+    //   );
+
+    //   expect(loggerMock.error).toHaveBeenCalledWith(MOST_READ_FETCH_ERROR, {
+    //     error: 'Error',
+    //   });
+    // });
   });
 });
