@@ -105,6 +105,19 @@ Object {
 }
 `;
 
+exports[`AMP Front Page Analytics chartbeat 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "Index",
+    "domain": "test.bbc.co.uk",
+    "sections": "Arabic, Arabic - IDX",
+    "title": "الرئيسية - BBC News عربي",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
 exports[`AMP Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
 exports[`AMP Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
