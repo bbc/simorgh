@@ -69,16 +69,6 @@ exports[`SocialEmbedContainer AMP should render correctly 1`] = `
   max-width: 31.25rem;
 }
 
-.c1 .twitter-tweet,
-.c1 .instagram-media {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-.c1 .instagram-media {
-  min-width: auto !important;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c3 {
     line-height: 1.125rem;
@@ -227,6 +217,11 @@ exports[`SocialEmbedContainer Canonical should render correctly 1`] = `
   justify-content: center;
 }
 
+.c4 .twitter-tweet {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
 .c0 {
   grid-column: 1 / span 6;
 }
@@ -236,16 +231,6 @@ exports[`SocialEmbedContainer Canonical should render correctly 1`] = `
   margin-left: auto;
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
-}
-
-.c1 .twitter-tweet,
-.c1 .instagram-media {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-.c1 .instagram-media {
-  min-width: auto !important;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -465,16 +450,6 @@ exports[`SocialEmbedContainer Canonical should render correctly without an embed
   margin-left: auto;
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
-}
-
-.c1 .twitter-tweet,
-.c1 .instagram-media {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-.c1 .instagram-media {
-  min-width: auto !important;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, wait } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import RadioSchedulesWithContext from './utilities/testHelpers';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
@@ -14,7 +14,7 @@ describe('RadioScheduleData', () => {
     const { container } = render(
       <RadioSchedulesWithContext service="arabic" />,
     );
-    await wait(() => {
+    await waitFor(() => {
       expect(container).toBeEmpty();
     });
   });
@@ -24,7 +24,7 @@ describe('RadioScheduleData', () => {
     const { container } = render(
       <RadioSchedulesWithContext service="arabic" radioScheduleToggle />,
     );
-    await wait(() => {
+    await waitFor(() => {
       expect(container.querySelectorAll('li').length).toEqual(4);
     });
   });
@@ -34,7 +34,7 @@ describe('RadioScheduleData', () => {
     const { container } = render(
       <RadioSchedulesWithContext service="arabic" radioScheduleToggle isAmp />,
     );
-    await wait(() => {
+    await waitFor(() => {
       expect(container).toBeEmpty();
     });
   });

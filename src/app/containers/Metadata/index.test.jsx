@@ -2,6 +2,7 @@ import React from 'react';
 import { render, waitForDomChange } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MetadataContainer from './index';
+
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   articleDataNews,
@@ -11,6 +12,7 @@ import services from '#server/utilities/serviceConfigs';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import frontPageData from '#data/igbo/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
+import { getSummary } from '#lib/utilities/parseAssetData/index';
 
 const dotComOrigin = 'https://www.bbc.com';
 const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
@@ -18,7 +20,7 @@ const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
 const getArticleMetadataProps = data => ({
   title: data.promo.headlines.seoHeadline,
   lang: data.metadata.passport.language,
-  description: data.promo.summary,
+  description: getSummary(data),
   openGraphType: 'article',
   aboutTags: articleDataNews.metadata.tags.about,
   mentionsTags: articleDataNews.metadata.tags.mentions,

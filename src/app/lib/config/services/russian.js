@@ -191,6 +191,8 @@ export const service = {
           endTextVisuallyHidden: 'Контент из %provider_name% окончен',
         },
       },
+      topStoriesTitle: 'Главное',
+      featuresAnalysisTitle: 'Журнал',
     },
     brandSVG,
     mostRead: {

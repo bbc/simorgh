@@ -184,6 +184,8 @@ export const service = {
           endTextVisuallyHidden: 'Dhammaadka %provider_name% boggan',
         },
       },
+      topStoriesTitle: 'Wararka ugu waaweyn',
+      featuresAnalysisTitle: 'Xul',
     },
     brandSVG,
     mostRead: {
@@ -197,6 +199,7 @@ export const service = {
       onFrontPage: true,
       frontPagePosition: 'Features',
       header: 'Barnaamijyada Idaacadda',
+      durationLabel: 'Muddada %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,
