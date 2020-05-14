@@ -13,12 +13,13 @@ const adJsonAttributes = {
   },
 };
 
-const renderAmpAd = () =>
-  render(
-    <ServiceContextProvider service="pidgin">
-      <AmpAd service="pidgin" />
-    </ServiceContextProvider>,
-  );
+const adWithContext = (service = 'pidgin') => (
+  <ServiceContextProvider service={service}>
+    <AmpAd />
+  </ServiceContextProvider>
+);
+
+const renderAmpAd = service => render(adWithContext(service));
 
 describe('AMP Ads', () => {
   beforeAll(() => {
@@ -32,7 +33,7 @@ describe('AMP Ads', () => {
   describe('Snapshots', () => {
     shouldMatchSnapshot(
       'should correctly render an AMP leaderboard ad',
-      <AmpAd service="pidgin" />,
+      adWithContext(),
     );
   });
 
