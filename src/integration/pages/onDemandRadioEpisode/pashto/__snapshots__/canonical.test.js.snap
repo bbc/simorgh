@@ -78,3 +78,5 @@ exports[`Canonical On Demand Radio Episode SEO Twitter image src 1`] = `"https:/
 exports[`Canonical On Demand Radio Episode SEO Twitter site 1`] = `"@bbcpashto"`;
 
 exports[`Canonical On Demand Radio Episode SEO Twitter title 1`] = `"ماښامنۍ خپرونه - BBC News پښتو"`;
+
+exports[`Canonical On Demand Radio Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"ماښامنۍ خپرونه, ۱ می ۲۰۲۰"`;

@@ -179,3 +179,5 @@ exports[`AMP On Demand Radio Episode SEO Twitter image src 1`] = `"https://news.
 exports[`AMP On Demand Radio Episode SEO Twitter site 1`] = `"@bbcpashto"`;
 
 exports[`AMP On Demand Radio Episode SEO Twitter title 1`] = `"ماښامنۍ خپرونه - BBC News پښتو"`;
+
+exports[`AMP On Demand Radio Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"ماښامنۍ خپرونه, ۱ می ۲۰۲۰"`;
