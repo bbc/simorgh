@@ -63,7 +63,7 @@ const AudioPlayer = ({
   promoBrandTitle,
   shortSynopsis,
   durationISO8601,
-  placeholderImageUrl,
+  thumbnailImageUrl,
   releaseDateTimeStamp,
 }) => {
   const { liveRadioOverrides, lang, translations, service } = useContext(
@@ -142,7 +142,7 @@ const AudioPlayer = ({
           shortSynopsis={shortSynopsis}
           durationISO8601={durationISO8601}
           embedUrl={embedUrl}
-          placeholderImageUrl={placeholderImageUrl}
+          thumbnailImageUrl={thumbnailImageUrl}
           releaseDateTimeStamp={releaseDateTimeStamp}
         />
       )}
@@ -158,7 +158,7 @@ AudioPlayer.propTypes = {
   promoBrandTitle: string,
   shortSynopsis: string,
   durationISO8601: string,
-  placeholderImageUrl: string,
+  thumbnailImageUrl: string,
   releaseDateTimeStamp: number,
 };
 
@@ -170,7 +170,7 @@ AudioPlayer.defaultProps = {
   promoBrandTitle: '',
   shortSynopsis: '',
   durationISO8601: '',
-  placeholderImageUrl: '',
+  thumbnailImageUrl: '',
   releaseDateTimeStamp: null,
 };
 

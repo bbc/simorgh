@@ -8,8 +8,7 @@ const props = {
   durationISO8601: 'PT29M30S',
   embedUrl:
     'https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/externalId/id/ko?morph_env=live',
-  placeholderImageUrl:
-    'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
+  thumbnailImageUrl: 'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
   releaseDateTimeStamp: 1587655800000,
 };
 

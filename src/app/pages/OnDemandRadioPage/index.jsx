@@ -37,7 +37,7 @@ const renderEpisode = ({
   episodeAvailableUntil,
   promoBrandTitle,
   shortSynopsis,
-  placeholderImageUrl,
+  thumbnailImageUrl,
   durationISO8601,
   releaseDateTimeStamp,
 }) => {
@@ -53,7 +53,7 @@ const renderEpisode = ({
           id={episodeId}
           promoBrandTitle={promoBrandTitle}
           shortSynopsis={shortSynopsis}
-          placeholderImageUrl={placeholderImageUrl}
+          thumbnailImageUrl={thumbnailImageUrl}
           durationISO8601={durationISO8601}
           releaseDateTimeStamp={releaseDateTimeStamp}
         />
@@ -82,7 +82,7 @@ const OnDemandRadioPage = ({ pageData }) => {
     releaseDateTimeStamp,
     promoBrandTitle,
     durationISO8601,
-    placeholderImageUrl,
+    thumbnailImageUrl,
   } = pageData;
   const { dir } = useContext(ServiceContext);
 
@@ -146,7 +146,7 @@ const OnDemandRadioPage = ({ pageData }) => {
             episodeAvailableUntil,
             promoBrandTitle,
             shortSynopsis,
-            placeholderImageUrl,
+            thumbnailImageUrl,
             durationISO8601,
             releaseDateTimeStamp,
           })}

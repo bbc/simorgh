@@ -20,8 +20,7 @@ const defaultAudioPlayerProps = {
   promoBrandTitle: 'ماښامنۍ خپرونه',
   shortSynopsis: 'د بي بي سي ورلډ سروس څخه پروګرام کول',
   durationISO8601: 'PT29M30S',
-  placeholderImageUrl:
-    'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
+  thumbnailImageUrl: 'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
   releaseDateTimeStamp: 1587655800000,
 };
 

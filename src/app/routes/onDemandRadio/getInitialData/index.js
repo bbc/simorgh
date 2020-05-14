@@ -44,7 +44,7 @@ const getDurationISO8601 = path([
   0,
   'durationISO8601',
 ]);
-const getPlaceholderImageUrl = json =>
+const getThumbnailImageUrl = json =>
   getPlaceholderImageUrlUtil(path(['promo', 'media', 'imageUrl'], json));
 
 export default async ({ path: pathname }) => {
@@ -73,7 +73,7 @@ export default async ({ path: pathname }) => {
         pageIdentifier: getPageIdentifier(json),
         promoBrandTitle: getPromoBrandTitle(json),
         durationISO8601: getDurationISO8601(json),
-        placeholderImageUrl: getPlaceholderImageUrl(json),
+        thumbnailImageUrl: getThumbnailImageUrl(json),
         ...pageType,
       },
     }),
