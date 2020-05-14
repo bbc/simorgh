@@ -16,11 +16,11 @@ export default () => {
   });
 
   it('I can see the episode title', () => {
-    const brandTitleEl = document.querySelector('h1 span span:last-child');
+    const episodeTitleEl = document.querySelector('h1 span span:last-child');
 
-    expect(brandTitleEl).toBeInTheDocument();
-    expect(brandTitleEl.textContent).toBeTruthy();
-    expect(brandTitleEl.textContent).toMatchSnapshot();
+    expect(episodeTitleEl).toBeInTheDocument();
+    expect(episodeTitleEl.textContent).toBeTruthy();
+    expect(episodeTitleEl.textContent).toMatchSnapshot();
   });
 
   it('I can see the episode summary', () => {
