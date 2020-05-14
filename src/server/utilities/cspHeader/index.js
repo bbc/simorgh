@@ -262,7 +262,6 @@ const directives = {
       'https://www.instagram.com', // Social Embeds
       'http://www.instagram.com', // Social Embeds
       'https://cdn.syndication.twimg.com', // Social Embeds
-      'https://static.stage.bbc.co.uk', // STY include
       'https://static.bbc.co.uk', // STY include
       "'self'",
       "'unsafe-inline'",
@@ -290,7 +289,6 @@ const directives = {
       'https://platform.twitter.com', // Social Embeds
       'https://ton.twimg.com', // Social Embeds
       'https://news.test.files.bbci.co.uk', // STY includes
-      'https://static.stage.bbc.co.uk', // STY include
       'https://static.bbc.co.uk', // STY include
       "'unsafe-inline'",
     ],
