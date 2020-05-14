@@ -75,6 +75,12 @@ const StoryPage = ({
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
+  const mostReadInitialData = path(['mostRead'], pageData);
+  const topStoriesInitialData = path(
+    ['secondaryColumn', 'topStories'],
+    pageData,
+  );
+  const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
 
   const componentsToRender = {
     fauxHeadline,
@@ -257,10 +263,10 @@ const StoryPage = ({
           parentColumns={gridColumns}
         >
           <ResponsiveComponentWrapper>
-            <TopStories />
+            <TopStories content={topStoriesInitialData} />
           </ResponsiveComponentWrapper>
           <ResponsiveComponentWrapper>
-            <FeaturesAnalysis />
+            <FeaturesAnalysis content={featuresInitialData} />
           </ResponsiveComponentWrapper>
           <ComponentWrapper>
             <MostReadContainer
@@ -268,6 +274,7 @@ const StoryPage = ({
               columnLayout="oneColumn"
               size="small"
               wrapper={MostReadWrapper}
+              initialData={mostReadInitialData}
             />
           </ComponentWrapper>
         </GridSecondaryColumn>

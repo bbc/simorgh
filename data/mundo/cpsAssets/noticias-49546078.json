@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/mundo/noticias-49546078",
       "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-49546078",
-      "curie": "http://www.bbc.co.uk/asset/86a2be8b-f0e4-5847-ba80-3e9b24bed2e2"
+      "curie": "http://www.bbc.co.uk/asset/86a2be8b-f0e4-5847-ba80-3e9b24bed2e2",
+      "assetId": "49546078"
     },
     "type": "MAP",
     "createdBy": "mundo-v6",
     "language": "es",
-    "lastUpdated": 1567754881195,
-    "firstPublished": 1567369729,
-    "lastPublished": 1567754873,
+    "lastUpdated": 1588690272627,
+    "firstPublished": 1567369729000,
+    "lastPublished": 1567369729000,
+    "timestamp": 1567369729000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -40,48 +42,16 @@
           "campaignId": "5a988e3739461b000e9dabfa",
           "campaignName": "WS - Give me perspective"
         }
-      ]
+      ],
+      "taggings": []
     },
     "tags": {
       "about": [
         {
-          "thingLabel": "Science",
-          "thingUri": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
-          "thingId": "0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
-          "thingType": ["Thing", "Theme"],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Science",
-            "http://www.wikidata.org/entity/Q336"
-          ],
-          "topicName": "Ciencia",
-          "topicId": "ckdxnw959n7t",
-          "curationList": [
-            {
-              "curationId": "36f98027-2c01-416c-8e10-9e8d125c39e7",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "Hurricane Dorian",
-          "thingUri": "http://www.bbc.co.uk/things/67202fae-2bc2-43b5-9f07-9b9268e541ea#id",
-          "thingId": "67202fae-2bc2-43b5-9f07-9b9268e541ea",
-          "thingType": ["Thing", "Event"],
-          "thingSameAs": [],
-          "topicName": "Huracán Dorian",
-          "topicId": "cgxjr8vz7vgt",
-          "curationList": [
-            {
-              "curationId": "6083fc56-6453-4d39-a90e-e4a2d424e2a6",
-              "curationType": "vivo-stream"
-            }
-          ]
-        },
-        {
-          "thingLabel": "United States",
+          "thingLabel": "Estados Unidos",
           "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
           "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
-          "thingType": ["nsl:Topic", "Thing", "Place", "geoname:GeoTagConcept"],
+          "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
           "thingSameAs": ["http://sws.geonames.org/6252001/"],
           "topicName": "Estados Unidos",
           "topicId": "cdr5613yzwqt",
@@ -93,13 +63,28 @@
           ]
         },
         {
-          "thingLabel": "Space exploration",
+          "thingLabel": "Huracán",
+          "thingUri": "http://www.bbc.co.uk/things/cc90f0c6-deaa-4bf7-9629-187471e7d115#id",
+          "thingId": "cc90f0c6-deaa-4bf7-9629-187471e7d115",
+          "thingType": ["core:Thing", "core:Theme", "tagging:TagConcept"],
+          "thingSameAs": ["http://en.wikipedia.org/entity/Tropical_cyclone"],
+          "topicName": "Huracán",
+          "topicId": "c7zp524p982t",
+          "curationList": [
+            {
+              "curationId": "5e5a867c-c54f-4db6-a6f3-d77b0be379f4",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Espacio",
           "thingUri": "http://www.bbc.co.uk/things/84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc#id",
           "thingId": "84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc",
-          "thingType": ["Thing", "Theme"],
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
           "thingSameAs": [
-            "http://dbpedia.org/resource/Space_exploration",
-            "http://www.wikidata.org/entity/Q180046"
+            "http://www.wikidata.org/entity/Q180046",
+            "http://dbpedia.org/resource/Space_exploration"
           ],
           "topicName": "Espacio",
           "topicId": "c06gq9v00w1t",
@@ -111,23 +96,41 @@
           ]
         },
         {
-          "thingLabel": "Hurricanes",
-          "thingUri": "http://www.bbc.co.uk/things/cc90f0c6-deaa-4bf7-9629-187471e7d115#id",
-          "thingId": "cc90f0c6-deaa-4bf7-9629-187471e7d115",
-          "thingType": ["Thing", "Theme"],
-          "thingSameAs": ["http://en.wikipedia.org/entity/Tropical_cyclone"],
-          "topicName": "Huracán",
-          "topicId": "c7zp524p982t",
+          "thingLabel": "Ciencia",
+          "thingUri": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+          "thingId": "0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q336",
+            "http://dbpedia.org/resource/Science"
+          ],
+          "topicName": "Ciencia",
+          "topicId": "ckdxnw959n7t",
           "curationList": [
             {
-              "curationId": "5e5a867c-c54f-4db6-a6f3-d77b0be379f4",
+              "curationId": "36f98027-2c01-416c-8e10-9e8d125c39e7",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Huracán Dorian",
+          "thingUri": "http://www.bbc.co.uk/things/67202fae-2bc2-43b5-9f07-9b9268e541ea#id",
+          "thingId": "67202fae-2bc2-43b5-9f07-9b9268e541ea",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+          "thingSameAs": [],
+          "topicName": "Huracán Dorian",
+          "topicId": "cgxjr8vz7vgt",
+          "curationList": [
+            {
+              "curationId": "6083fc56-6453-4d39-a90e-e4a2d424e2a6",
               "curationType": "vivo-stream"
             }
           ]
         }
       ]
     },
-    "version": "v1.0.10",
+    "version": "v1.2.1",
     "blockTypes": ["media", "paragraph", "list"],
     "includeComments": false
   },
@@ -156,9 +159,10 @@
             "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
+              "nonUk": true,
+              "world": false
             },
-            "availableFrom": 1567365024
+            "availableFrom": 1567365024000
           }
         ],
         "imageCopyright": "NASA",
@@ -191,16 +195,16 @@
                   "headline": "Huracán Dorian: la tormenta se debilita frente a la costa sureste de EE.UU.",
                   "overtyped": "Huracán Dorian: la tormenta de categoría 5 toca tierra y es la más devastadora para el norte de las Bahamas desde que se tienen registros"
                 },
-                "locators": {
-                  "href": "http://www.bbc.com/mundo/49519843"
-                },
+                "locators": { "href": "http://www.bbc.com/mundo/49519843" },
                 "summary": "Dorian se debilitó este viernes a categoría de intensidad 1 frente a la costa de Carolina del Norte, donde se prevé que toque tierra en las próximas horas.",
-                "timestamp": 1567754872,
+                "timestamp": 1567754872000,
+                "language": "es",
                 "passport": {
                   "category": {
                     "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                     "categoryName": "News"
-                  }
+                  },
+                  "taggings": []
                 },
                 "id": "urn:bbc:ares::asset:mundo/49519843",
                 "type": "cps"
@@ -222,12 +226,14 @@
                   "href": "http://www.bbc.com/mundo/media-49546075"
                 },
                 "summary": "El Centro Nacional de Huracanes de Estados Unidos describe al huracán Dorian como \"extremadamente peligroso\" y se esperan vientos devastadores y fuertes lluvias.",
-                "timestamp": 1567360558,
+                "timestamp": 1567360558000,
+                "language": "es",
                 "passport": {
                   "category": {
                     "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                     "categoryName": "News"
-                  }
+                  },
+                  "taggings": []
                 },
                 "id": "urn:bbc:ares::asset:mundo/media-49546075",
                 "type": "cps"
@@ -249,10 +255,12 @@
     "locators": {
       "assetUri": "/mundo/noticias-49546078",
       "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-49546078",
-      "curie": "http://www.bbc.co.uk/asset/86a2be8b-f0e4-5847-ba80-3e9b24bed2e2"
+      "curie": "http://www.bbc.co.uk/asset/86a2be8b-f0e4-5847-ba80-3e9b24bed2e2",
+      "assetId": "49546078"
     },
     "summary": "La Estación Espacial Internacional capturó imágenes del huracán Dorian mientras azotaba las Bahamas este domingo.",
-    "timestamp": 1567754881195,
+    "timestamp": 1567369729000,
+    "language": "es",
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -263,7 +271,8 @@
           "campaignId": "5a988e3739461b000e9dabfa",
           "campaignName": "WS - Give me perspective"
         }
-      ]
+      ],
+      "taggings": []
     },
     "media": {
       "id": "p07m6bn3",
@@ -286,11 +295,8 @@
           "duration": 39,
           "durationISO8601": "PT39S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          },
-          "availableFrom": 1567365024
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1567365024000
         }
       ],
       "imageCopyright": "NASA",
@@ -338,7 +344,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/mundo/49519843"
             },
             "summary": "Dorian se debilitó este viernes a categoría de intensidad 1 frente a la costa de Carolina del Norte, donde se prevé que toque tierra en las próximas horas.",
-            "timestamp": 1567754872,
+            "timestamp": 1567754872000,
+            "language": "es",
             "cpsType": "STY",
             "indexImage": {
               "id": "108636927",
@@ -365,7 +372,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-49530894"
             },
             "summary": "El mismo Centro Nacional de Huracanes de Estados Unidos, una de las máximas autoridades a nivel mundial en el tema, ha estado reconociendo \"la incertidumbre en el pronóstico de la trayectoria\" de Dorian, que amenaza Florida.",
-            "timestamp": 1567390439,
+            "timestamp": 1567390439000,
+            "language": "es",
             "cpsType": "STY",
             "indexImage": {
               "id": "108560669",
@@ -392,7 +400,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-49532705"
             },
             "summary": "El \"cono de incertidumbre\" que elabora el Centro de Huracanes de Estados Unidos muestra diferentes datos sobre una tormenta. Pero ¿sabes realmente lo que predice?",
-            "timestamp": 1567209982,
+            "timestamp": 1567209982000,
+            "language": "es",
             "cpsType": "STY",
             "indexImage": {
               "id": "108562918",
