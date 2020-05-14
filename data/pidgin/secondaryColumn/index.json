@@ -1,0 +1,467 @@
+{
+  "topStories":[
+    {
+      "headlines":{
+        "headline":"ATMs across the country"
+      },
+      "locators":{
+        "assetUri":"/pidgin/23248287",
+        "cpsUrn":"urn:bbc:content:assetUri:pidgin/23248287",
+        "assetId":"23248287"
+      },
+      "summary":"Here we have an article about a particular topic",
+      "timestamp":1568109680000,
+      "language":"pcm",
+      "passport":{
+        "category":{
+          "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+          "categoryName":"News"
+        },
+        "campaigns":[
+          {
+            "campaignId":"5ad8624cc93a9f000eecb252",
+            "campaignName":"DigiHub"
+          }
+        ],
+        "taggings":[
+
+        ]
+      },
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63721223",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/7DD4/test/_63721223_image1.jpg",
+        "path":"/cpsdevpb/7DD4/test/_63721223_image1.jpg",
+        "height":549,
+        "width":976,
+        "altText":"-",
+        "copyrightHolder":"-",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "prominence":"standard",
+      "section":{
+        "subType":"IDX",
+        "name":"Domot",
+        "uri":"/pidgin/front_page",
+        "type":"simple"
+      },
+      "id":"urn:bbc:ares::asset:pidgin/23248287",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Jacob Zuma: Staying!!!"
+      },
+      "locators":{
+        "assetUri":"/pidgin/tori-23146434",
+        "cpsUrn":"urn:bbc:content:assetUri:pidgin/tori-23146434",
+        "assetId":"23146434"
+      },
+      "summary":"Lawmakers for South Africa Parliament don vote make President Jacob Zuma continue dey run things for government.",
+      "timestamp":1502218339000,
+      "language":"pcm",
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63586084",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/BBC4/test/_63586084_zuma.jpg",
+        "path":"/cpsdevpb/BBC4/test/_63586084_zuma.jpg",
+        "height":351,
+        "width":624,
+        "altText":"Jacob Zuma na cat with nine lives",
+        "caption":"Zuma dey laugh last",
+        "copyrightHolder":"Getty AFP",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "prominence":"standard",
+      "id":"urn:bbc:ares::asset:pidgin/tori-23146434",
+      "type":"cps"
+    },
+    {
+      "name":"Feature promo",
+      "summary":"Feature promo summary",
+      "indexImage":{
+        "id":"63603127",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/119C2/test/_63603127_78f41206-ccc7-43e2-92a1-3255208a606e.jpg",
+        "path":"/cpsdevpb/119C2/test/_63603127_78f41206-ccc7-43e2-92a1-3255208a606e.jpg",
+        "height":549,
+        "width":976,
+        "altText":"slavery",
+        "caption":"Ghanaians in chains in Libya",
+        "copyrightHolder":"Reuters",
+        "type":"image"
+      },
+      "uri":"https://www.bbc.co.uk/news",
+      "contentType":"Feature",
+      "assetTypeCode":"PRO",
+      "timestamp":1575644451000,
+      "type":"link"
+    }
+  ],
+  "features":[
+    {
+      "headlines":{
+        "headline":"How Lagos Dey Fight Lassa Fever"
+      },
+      "locators":{
+        "assetUri":"/pidgin/tori-23146625",
+        "cpsUrn":"urn:bbc:content:assetUri:pidgin/tori-23146625",
+        "assetId":"23146625"
+      },
+      "summary":"100 workers for LUTH dey under observation after two people die from Lassa Fever.",
+      "timestamp":1502300525000,
+      "language":"pcm",
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63586234",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/A904/test/_63586234_lassalagos.jpg",
+        "path":"/cpsdevpb/A904/test/_63586234_lassalagos.jpg",
+        "height":351,
+        "width":624,
+        "altText":"Nurses for LUTH isolation Center",
+        "caption":"Lassa Fever don show again for Nigeria",
+        "copyrightHolder":"BBC",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "id":"urn:bbc:ares::asset:pidgin/tori-23146625",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson"
+      },
+      "locators":{
+        "assetUri":"/pidgin/media-23267821",
+        "cpsUrn":"urn:bbc:content:assetUri:pidgin/media-23267821",
+        "assetId":"23267821"
+      },
+      "summary":"Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.",
+      "timestamp":1581940273000,
+      "language":"pcm",
+      "cpsType":"MAP",
+      "media":{
+        "id":"p01p5qfc",
+        "subType":"clip",
+        "format":"video",
+        "title":"Justin Trudeau wins Canadian election with minority government",
+        "synopses":{
+          "short":"Voters take to the polls in the Canadian election",
+          "long":"Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.Th BBC's Lyce Ducette reports.",
+          "medium":"Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote."
+        },
+        "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01p5ql9.jpg",
+        "embedding":true,
+        "advertising":true,
+        "caption":"Canada's general election took place on Monday 22 October",
+        "versions":[
+          {
+            "versionId":"p01p5qff",
+            "types":[
+              "Original"
+            ],
+            "duration":67,
+            "durationISO8601":"PT1M7S",
+            "warnings":{
+
+            },
+            "availableTerritories":{
+              "uk":true,
+              "nonUk":true,
+              "world":false
+            },
+            "availableFrom":1571751302000
+          }
+        ],
+        "type":"media"
+      },
+      "indexImage":{
+        "id":"63731474",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/B935/test/_63731474_p01p5ql9.jpg",
+        "path":"/cpsdevpb/B935/test/_63731474_p01p5ql9.jpg",
+        "height":576,
+        "width":1024,
+        "altText":"Keyframe #2",
+        "copyrightHolder":"AFP",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "id":"urn:bbc:ares::asset:pidgin/media-23267821",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Kojey Radical: Why gigs feel like football matches"
+      },
+      "locators":{
+        "assetUri":"/pidgin/23267823",
+        "cpsUrn":"urn:bbc:content:assetUri:pidgin/23267823",
+        "assetId":"23267823"
+      },
+      "summary":"Kojey Radical and guests discuss how to write about something you’ve not experienced.",
+      "timestamp":1581940421000,
+      "language":"pcm",
+      "cpsType":"MAP",
+      "media":{
+        "id":"23267824",
+        "subType":"index",
+        "format":"audio",
+        "externalId":"w3csz54v",
+        "entityType":"Episode",
+        "caption":"Kojey Radical and guests discuss how to write about something you’ve not experienced.",
+        "statusCode":410,
+        "statusMessage":"Asset could not be found. Perhaps it was withdrawn.",
+        "type":"external_vpid"
+      },
+      "indexImage":{
+        "id":"63721223",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/7DD4/test/_63721223_image1.jpg",
+        "path":"/cpsdevpb/7DD4/test/_63721223_image1.jpg",
+        "height":549,
+        "width":976,
+        "altText":"-",
+        "copyrightHolder":"-",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "section":{
+        "subType":"IDX",
+        "name":"Domot",
+        "uri":"/pidgin/front_page",
+        "type":"simple"
+      },
+      "id":"urn:bbc:ares::asset:pidgin/23267823",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Libya: omo ile Ghana márùndínláàdóje pada sile"
+      },
+      "locators":{
+        "assetUri":"/pidgin/tori-23169387",
+        "cpsUrn":"urn:bbc:content:assetUri:pidgin/tori-23169387",
+        "assetId":"23169387"
+      },
+      "summary":"Omo Orileede Ghana to le ni márùndínláàdóje ti pada sile lati Libya ti won ti lo se atipo, leyin ti fonran fihan wipe won n ta won bi eru.",
+      "timestamp":1512472247000,
+      "language":"pcm",
+      "byline":{
+        "name":"By Funmi Jokotade",
+        "title":"BBC News, Nigeria",
+        "persons":[
+          {
+            "name":"Chris Sanctus Okereke",
+            "function":"Broadcast Journalist"
+          }
+        ]
+      },
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63603618",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/13EDE/test/_63603618_040299897-1.jpg",
+        "path":"/cpsdevpb/13EDE/test/_63603618_040299897-1.jpg",
+        "height":549,
+        "width":976,
+        "altText":"MIGRANTS",
+        "caption":"atipo lati ile adunlawo fi emi ara won wewu lati lo soke okun",
+        "copyrightHolder":"AFP",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "id":"urn:bbc:ares::asset:pidgin/tori-23169387",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Like Scaramucci, Like Others"
+      },
+      "locators":{
+        "assetUri":"/news/world-africa-23143884",
+        "cpsUrn":"urn:bbc:content:assetUri:news/world-africa-23143884",
+        "assetId":"23143884"
+      },
+      "summary":"President Trump sack Anthony Scaramucci after ten days for office, but wetin happen to Scaramucci don happen to other people before.",
+      "timestamp":1502195546000,
+      "language":"en-gb",
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63582573",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/9298/test/_63582573_scaramucci.jpg",
+        "path":"/cpsdevpb/9298/test/_63582573_scaramucci.jpg",
+        "height":549,
+        "width":976,
+        "altText":"Anthony Scaramucci na former Communications Director for White House",
+        "copyrightHolder":"Reuters",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "section":{
+        "subType":"IDX",
+        "name":"Africa",
+        "uri":"/news/world/africa",
+        "type":"simple"
+      },
+      "site":{
+        "subType":"site",
+        "name":"BBC News",
+        "uri":"/news",
+        "type":"simple"
+      },
+      "id":"urn:bbc:ares::asset:news/world-africa-23143884",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Anambra Attack: 'My Friend Uchenna na Nice Girl'- Gabros"
+      },
+      "locators":{
+        "assetUri":"/pidgin/tori-23146975",
+        "cpsUrn":"urn:bbc:content:assetUri:pidgin/tori-23146975",
+        "assetId":"23146975"
+      },
+      "summary":"Chukwuka Gabros tell BBC about Im friend wey die for the church attack for Ozubulu, Anambra State.",
+      "timestamp":1502309407000,
+      "language":"pcm",
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63587724",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/A71A/test/_63587724_jane7.jpg",
+        "path":"/cpsdevpb/A71A/test/_63587724_jane7.jpg",
+        "height":351,
+        "width":624,
+        "altText":"Uchenna Obunadike",
+        "caption":"Uchenna Obunadike die for the Anambra church attack",
+        "copyrightHolder":"Uchenna Obunadike/Facebook",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "id":"urn:bbc:ares::asset:pidgin/tori-23146975",
+      "type":"cps"
+    },
+    {
+      "name":"Man City vs West Ham: Bad weather force Premier League to cancel Sunday match",
+      "summary":"Man City vs West Ham: Bad weather force Premier League to cancel Sunday match",
+      "indexImage":{
+        "id":"63731494",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/C105/test/_63731494__110870927_climategrief5.jpg",
+        "path":"/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg",
+        "height":351,
+        "width":624,
+        "altText":"E dey good for your",
+        "caption":"E dey good for your wellbeing to reconnect wit nature",
+        "copyrightHolder":"BBC",
+        "type":"image"
+      },
+      "uri":"https://www.bbc.com/pidgin/sport-51434980",
+      "contentType":"RadioBulletin",
+      "assetTypeCode":"PRO",
+      "timestamp":1581941235000,
+      "type":"link"
+    },
+    {
+      "headlines":{
+        "headline":"Anambra Church: Police Arrest 3"
+      },
+      "locators":{
+        "assetUri":"/pidgin/tori-23145776",
+        "cpsUrn":"urn:bbc:content:assetUri:pidgin/tori-23145776",
+        "assetId":"23145776"
+      },
+      "summary":"Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp",
+      "timestamp":1502217403000,
+      "language":"pcm",
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63585532",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/5C06/test/_63585532_ozubuluchurch.jpg",
+        "path":"/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg",
+        "height":351,
+        "width":624,
+        "altText":"One gun enter St. Phillips Church for Ozubulu, Anambra and shoot and kill 11 people, injure 18 others",
+        "caption":"Di attack happen for inside St. Philip Catholic Chirch Ozubulu",
+        "copyrightHolder":"BBC",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "id":"urn:bbc:ares::asset:pidgin/tori-23145776",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Kenya Decides 2017 in Pictures"
+      },
+      "locators":{
+        "assetUri":"/pidgin/23146654",
+        "cpsUrn":"urn:bbc:content:assetUri:pidgin/23146654",
+        "assetId":"23146654"
+      },
+      "summary":"This na some of the picture wey our eye see as Kenya people go vote for election today",
+      "timestamp":1502222360000,
+      "language":"pcm",
+      "cpsType":"PGL",
+      "indexImage":{
+        "id":"63586070",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/1B9C/test/_63586070_kenya.jpg",
+        "path":"/cpsdevpb/1B9C/test/_63586070_kenya.jpg",
+        "height":351,
+        "width":624,
+        "altText":"This man leather no be for here",
+        "caption":"See Obama for di corner",
+        "copyrightHolder":"BBC",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "section":{
+        "subType":"IDX",
+        "name":"Domot",
+        "uri":"/pidgin/front_page",
+        "type":"simple"
+      },
+      "id":"urn:bbc:ares::asset:pidgin/23146654",
+      "type":"cps"
+    }
+  ]
+}

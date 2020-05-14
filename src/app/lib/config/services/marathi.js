@@ -175,6 +175,8 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% पोस्ट समाप्त',
         },
       },
+      topStoriesTitle: 'मोठ्या बातम्या',
+      featuresAnalysisTitle: 'Features',
     },
     brandSVG,
     mostRead: {
@@ -251,10 +253,6 @@ export const service = {
       {
         title: 'लोकप्रिय',
         url: '/marathi/popular/read',
-      },
-      {
-        title: '#ISWOTY',
-        url: '/marathi/resources/idt-43ff5603-f85f-47c1-972f-097e67eeb035',
       },
     ],
   },

@@ -1,20 +1,19 @@
 import React, { useContext } from 'react';
-import { bool, string, oneOf } from 'prop-types';
+import { oneOf, string, elementType, bool } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import Canonical from './Canonical';
-
-const getMostReadEndpoint = ({ service, variant }) =>
-  variant
-    ? `/${service}/mostread/${variant}.json`
-    : `/${service}/mostread.json`;
+import mostReadShape from './utilities/mostReadShape';
+import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 
 const MostReadContainer = ({
   mostReadEndpointOverride,
+  initialData,
   columnLayout,
-  constrainMaxWidth,
-  isOnFrontPage,
+  size,
+  wrapper,
+  serverRenderOnAmp,
 }) => {
   const { variant, isAmp } = useContext(RequestContext);
   const {
@@ -24,9 +23,16 @@ const MostReadContainer = ({
 
   const { enabled } = useToggle('mostRead');
 
-  const mostReadEnabled = !isAmp && enabled && hasMostRead;
+  const mostReadToggleEnabled = enabled && hasMostRead;
 
-  if (!mostReadEnabled) {
+  // Do not render most read when a toggle is disabled
+  if (!mostReadToggleEnabled) {
+    return null;
+  }
+
+  // Do not render on AMP when it is not the most read page
+  // We only want to render most read on AMP for the "/popular/read" pages
+  if (isAmp && !serverRenderOnAmp) {
     return null;
   }
 
@@ -35,26 +41,31 @@ const MostReadContainer = ({
 
   return (
     <Canonical
+      initialData={initialData}
       endpoint={endpoint}
-      constrainMaxWidth={constrainMaxWidth}
+      wrapper={wrapper}
       columnLayout={columnLayout}
-      isOnFrontPage={isOnFrontPage}
+      size={size}
     />
   );
 };
 
 MostReadContainer.propTypes = {
   mostReadEndpointOverride: string,
-  constrainMaxWidth: bool,
   columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
-  isOnFrontPage: bool,
+  size: oneOf(['default', 'small']),
+  initialData: mostReadShape,
+  wrapper: elementType,
+  serverRenderOnAmp: bool,
 };
 
 MostReadContainer.defaultProps = {
-  mostReadEndpointOverride: null,
-  constrainMaxWidth: false,
+  mostReadEndpointOverride: undefined,
   columnLayout: 'multiColumn',
-  isOnFrontPage: false,
+  size: 'default',
+  initialData: undefined,
+  wrapper: undefined,
+  serverRenderOnAmp: false,
 };
 
 export default MostReadContainer;

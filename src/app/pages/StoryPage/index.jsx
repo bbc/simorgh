@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
+import { node } from 'prop-types';
 import styled from 'styled-components';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
+import SectionLabel from '@bbc/psammead-section-label';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
@@ -38,7 +40,12 @@ import Include from '#containers/Include';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
-  const { dir } = useContext(ServiceContext);
+  const {
+    dir,
+    mostRead: { header },
+    script,
+    service,
+  } = useContext(ServiceContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const category = path(
     ['promo', 'passport', 'category', 'categoryName'],
@@ -62,6 +69,12 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
+  const mostReadInitialData = path(['mostRead'], pageData);
+  const topStoriesInitialData = path(
+    ['secondaryColumn', 'topStories'],
+    pageData,
+  );
+  const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
 
   const componentsToRender = {
     fauxHeadline,
@@ -128,6 +141,30 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       padding: ${GEL_SPACING_DBL};
     }
   `;
+
+  const MostReadSection = styled.section.attrs(() => ({
+    role: 'region',
+    'aria-labelledby': 'Most-Read',
+    'data-e2e': 'most-read',
+  }))``;
+
+  const MostReadWrapper = ({ children }) => (
+    <MostReadSection>
+      <SectionLabel
+        script={script}
+        labelId="Most-Read"
+        service={service}
+        dir={dir}
+      >
+        {header}
+      </SectionLabel>
+      {children}
+    </MostReadSection>
+  );
+
+  MostReadWrapper.propTypes = {
+    children: node.isRequired,
+  };
 
   const gridColumns = {
     group0: 8,
@@ -217,15 +254,18 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           parentColumns={gridColumns}
         >
           <ResponsiveComponentWrapper>
-            <TopStories />
+            <TopStories content={topStoriesInitialData} />
           </ResponsiveComponentWrapper>
           <ResponsiveComponentWrapper>
-            <FeaturesAnalysis />
+            <FeaturesAnalysis content={featuresInitialData} />
           </ResponsiveComponentWrapper>
           <ComponentWrapper>
             <MostReadContainer
               mostReadEndpointOverride={mostReadEndpointOverride}
               columnLayout="oneColumn"
+              size="small"
+              wrapper={MostReadWrapper}
+              initialData={mostReadInitialData}
             />
           </ComponentWrapper>
         </GridSecondaryColumn>

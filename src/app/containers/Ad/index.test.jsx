@@ -20,7 +20,13 @@ const toggleContextMock = {
 };
 
 describe('Ad Container', () => {
-  process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+  beforeAll(() => {
+    process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+  });
+
+  afterAll(() => {
+    delete process.env.SIMORGH_TOGGLES_URL;
+  });
 
   describe('Snapshots', () => {
     shouldMatchSnapshot(

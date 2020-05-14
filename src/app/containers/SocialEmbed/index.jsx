@@ -19,27 +19,11 @@ import createTranslations from './translations';
  */
 const MAX_WIDTH = '31.25rem';
 
-/**
- * providerStyles normalises styles applied to oEmbeds by certain
- * providers. This gives us a good foundation for further styling.
- */
-const providerStyles = `
-  .twitter-tweet,
-  .instagram-media {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-  }
-  .instagram-media {
-    min-width: auto !important;
-  }
-`;
-
 const Wrapper = styled.div`
   margin-right: auto;
   margin-left: auto;
   margin-bottom: ${GEL_SPACING_TRPL};
   max-width: ${MAX_WIDTH};
-  ${providerStyles}
 `;
 
 const SocialEmbedContainer = ({ blocks }) => {
@@ -54,14 +38,14 @@ const SocialEmbedContainer = ({ blocks }) => {
 
   const id = path(['id'], model);
   const href = path(['href'], model);
-  if (!id || !href) return null;
+  if (!href) return null;
 
   const oEmbed = path(['embed', 'oembed'], model);
 
   const {
     fallback: fallbackTranslations,
     skipLink: skipLinkTranslations,
-    captionTranslations,
+    caption: captionTranslations,
   } = createTranslations({ translations, index });
 
   const fallback = {

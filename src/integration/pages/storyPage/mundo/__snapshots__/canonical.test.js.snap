@@ -2,11 +2,15 @@
 
 exports[`Canonical Story Page A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
 
+exports[`Canonical Story Page Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=62&p=world::mundo.world.story.51266689.page&x1=[urn:bbc:cps:faf2993a-dcc0-0746-81a6-a6aca4cd59b1]&x2=[responsive]&x3=[news-mundo]&x4=[es]&x7=[article]&x8=[simorgh-nojs]&x9=[Brexit:+qué+cambiará+para+visitar,+trabajar+y+estudiar+en+Reino+Unido+tras+la+salida+del+país+de+la+Unión+Europea+-+BBC+News+Mundo]&x11=[2020-01-30T06:35:49.000Z]&x12=[2020-01-31T23:08:08.000Z]&x13=[Europe~United+Kingdom~Culture~European+Union~Economics~Brexit]&x14=[0b0bfd5a-81b8-43fa-91fc-57f1fcd24487~2e91364c-5c77-4660-b76e-d76202785e64~6a73afa3-ea6b-45c1-80bb-49060b99f864~9a18805c-fb88-40ba-9763-bcc121d5d55c~ca170ae3-99c1-48db-9b67-2866f85e7342~f94293fd-ff83-400e-8bc0-89ec01930fce]&x16=[WS%20-%20Give%20me%20perspective]&x17=[Explainer]"`;
+
 exports[`Canonical Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
 exports[`Canonical Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
+
+exports[`Canonical Story Page I can see an image with a caption 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
 
 exports[`Canonical Story Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
 
@@ -140,3 +144,7 @@ exports[`Canonical Story Page SEO Twitter image src 1`] = `"http://ichef.test.bb
 exports[`Canonical Story Page SEO Twitter site 1`] = `"@bbcmundo"`;
 
 exports[`Canonical Story Page SEO Twitter title 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
+
+exports[`Canonical Story Page Social Embeds I can see the skip link 1`] = `"Saltar contenido de YouTube, 1"`;
+
+exports[`Canonical Story Page Social Embeds I can see the skip link destination 1`] = `"Fin del contenido de YouTube, 1"`;

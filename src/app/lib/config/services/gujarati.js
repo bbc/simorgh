@@ -175,6 +175,8 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% કન્ટેન્ટ પૂર્ણ',
         },
       },
+      topStoriesTitle: 'નવાજૂની',
+      featuresAnalysisTitle: 'Features',
     },
     brandSVG,
     mostRead: {
@@ -250,10 +252,6 @@ export const service = {
       {
         title: 'આંતરરાષ્ટ્રીય',
         url: '/gujarati/international',
-      },
-      {
-        title: '#ISWOTY',
-        url: '/gujarati/resources/idt-0370808c-2dea-4f55-b69f-309a2881ef25',
       },
     ],
   },

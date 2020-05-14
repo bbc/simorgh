@@ -179,6 +179,8 @@ export const service = {
           endTextVisuallyHidden: 'Охири %provider_name% пост',
         },
       },
+      topStoriesTitle: 'Бош мақола',
+      featuresAnalysisTitle: 'Муҳаррир танлови',
     },
     brandSVG,
     mostRead: {

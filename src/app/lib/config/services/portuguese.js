@@ -183,6 +183,8 @@ export const service = {
           endTextVisuallyHidden: 'Final de %provider_name% post',
         },
       },
+      topStoriesTitle: 'Principais notícias',
+      featuresAnalysisTitle: 'Leia mais',
     },
     brandSVG,
     mostRead: {

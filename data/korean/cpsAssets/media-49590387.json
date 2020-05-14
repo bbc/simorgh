@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/korean/media-49590387",
       "cpsUrn": "urn:bbc:content:assetUri:korean/media-49590387",
-      "curie": "http://www.bbc.co.uk/asset/b20bff64-6037-6a43-a2a5-83a361e9123d"
+      "curie": "http://www.bbc.co.uk/asset/b20bff64-6037-6a43-a2a5-83a361e9123d",
+      "assetId": "49590387"
     },
     "type": "MAP",
     "createdBy": "korean-v6",
     "language": "ko",
-    "lastUpdated": 1567662045636,
-    "firstPublished": 1567662036,
-    "lastPublished": 1567662037,
+    "lastUpdated": 1588690633839,
+    "firstPublished": 1567662036000,
+    "lastPublished": 1567662036000,
+    "timestamp": 1567662036000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -36,18 +38,55 @@
         "categoryName": "Feature"
       },
       "campaigns": [
-        {
-          "campaignId": "5a988e1739461b000e9dabf6",
-          "campaignName": "WS - CS"
-        },
+        { "campaignId": "5a988e1739461b000e9dabf6", "campaignName": "WS - CS" },
         {
           "campaignId": "5a988e3139461b000e9dabf9",
           "campaignName": "WS - Divert me"
         }
+      ],
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "미술",
+          "thingUri": "http://www.bbc.co.uk/things/37dcc888-51a7-4470-82d8-8ef2b811d482#id",
+          "thingId": "37dcc888-51a7-4470-82d8-8ef2b811d482",
+          "thingType": ["core:Theme", "tagging:TagConcept", "core:Thing"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q735",
+            "http://dbpedia.org/resource/Art"
+          ],
+          "topicName": "미술",
+          "topicId": "cqywjk01r9dt",
+          "curationList": [
+            {
+              "curationId": "80584c4e-29ce-4a43-8014-df56f31f0717",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "우주",
+          "thingUri": "http://www.bbc.co.uk/things/58d96fa3-becf-4fb9-8d1d-3a772bf88f59#id",
+          "thingId": "58d96fa3-becf-4fb9-8d1d-3a772bf88f59",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Outer_space",
+            "http://www.wikidata.org/entity/Q4169"
+          ],
+          "topicName": "우주",
+          "topicId": "c2dwqjn1j3kt",
+          "curationList": [
+            {
+              "curationId": "87a5cef5-5619-4bd7-aaa9-9f7a78cea434",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
       ]
     },
-    "tags": {},
-    "version": "v1.0.10",
+    "version": "v1.2.1",
     "blockTypes": ["media", "paragraph", "list"],
     "includeComments": false
   },
@@ -74,9 +113,10 @@
             "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
+              "nonUk": true,
+              "world": false
             },
-            "availableFrom": 1567660271
+            "availableFrom": 1567660271000
           }
         ],
         "imageCopyright": "BBC",
@@ -114,12 +154,14 @@
                   "href": "http://www.bbc.com/korean/international-49330977"
                 },
                 "summary": "크로아티아의 네레트바 강 삼각주 모래는 해변 아트에 자주 쓰인다.",
-                "timestamp": 1566279408,
+                "timestamp": 1566279408000,
+                "language": "ko",
                 "passport": {
                   "category": {
                     "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                     "categoryName": "News"
-                  }
+                  },
+                  "taggings": []
                 },
                 "id": "urn:bbc:ares::asset:korean/international-49330977",
                 "type": "cps"
@@ -147,12 +189,14 @@
                   "href": "http://www.bbc.com/korean/international-47597527"
                 },
                 "summary": "조개껍질 등 천연재료로 조각상을 만들던 캐나다의 한 여성이 중증 중금속 중독 진단을 받았다. 그녀를 죽음으로 몰고 간 침묵의 살인자는 과연 누구였을까",
-                "timestamp": 1553560976,
+                "timestamp": 1553560976000,
+                "language": "ko",
                 "passport": {
                   "category": {
                     "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
                     "categoryName": "Feature"
-                  }
+                  },
+                  "taggings": []
                 },
                 "id": "urn:bbc:ares::asset:korean/international-47597527",
                 "type": "cps"
@@ -174,25 +218,25 @@
     "locators": {
       "assetUri": "/korean/media-49590387",
       "cpsUrn": "urn:bbc:content:assetUri:korean/media-49590387",
-      "curie": "http://www.bbc.co.uk/asset/b20bff64-6037-6a43-a2a5-83a361e9123d"
+      "curie": "http://www.bbc.co.uk/asset/b20bff64-6037-6a43-a2a5-83a361e9123d",
+      "assetId": "49590387"
     },
     "summary": "이것은 달을 걷는 우주인이 아니다. 움푹 패인 채 방치된 인도의 도로다.",
-    "timestamp": 1567662045636,
+    "timestamp": 1567662036000,
+    "language": "ko",
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
         "categoryName": "Feature"
       },
       "campaigns": [
-        {
-          "campaignId": "5a988e1739461b000e9dabf6",
-          "campaignName": "WS - CS"
-        },
+        { "campaignId": "5a988e1739461b000e9dabf6", "campaignName": "WS - CS" },
         {
           "campaignId": "5a988e3139461b000e9dabf9",
           "campaignName": "WS - Divert me"
         }
-      ]
+      ],
+      "taggings": []
     },
     "media": {
       "id": "p07mhc39",
@@ -213,11 +257,8 @@
           "duration": 58,
           "durationISO8601": "PT58S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          },
-          "availableFrom": 1567660271
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1567660271000
         }
       ],
       "imageCopyright": "BBC",
@@ -264,8 +305,39 @@
               "cpsUrn": "urn:bbc:content:assetUri:/korean/international-49330977"
             },
             "summary": "크로아티아의 네레트바 강 삼각주 모래는 해변 아트에 자주 쓰인다.",
-            "timestamp": 1566279408,
+            "timestamp": 1566279408000,
+            "language": "ko",
             "cpsType": "MAP",
+            "media": {
+              "id": "p07l347c",
+              "subType": "clip",
+              "format": "video",
+              "title": "해변 모래로 작품을 만드는 예술가 (영상)",
+              "synopses": {
+                "short": "해변 모래로 작품을 만드는 예술가 (영상)",
+                "long": "크로아티아의 네레트바 강 삼각주 모래는 해변 아트에 자주 쓰인다.  \n니콜라 팔러도 이 곳 모래를 이용해 예술 작품을 만든다. \n그는 이 모래로 만들어지는 예술 작품이 자연의 섭리와 닿아있다고 말한다. \n그의 작품은 밀물, 썰물과 함께 사라진다. \n하지만 니콜라는 작품이 그저 형태를 바꿀 뿐이라고 믿는다. \n(자세한 내용은 영상을 확인해주세요.)"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07l34dq.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "해변 모래로 작품을 만드는 예술가 (영상)",
+              "versions": [
+                {
+                  "versionId": "p07l347f",
+                  "types": ["Original"],
+                  "duration": 66,
+                  "durationISO8601": "PT1M6S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1566277256000
+                }
+              ],
+              "type": "media"
+            },
             "indexImage": {
               "id": "108334964",
               "subType": "index",
@@ -277,6 +349,7 @@
               "copyrightHolder": "BBC",
               "type": "image"
             },
+            "mediaType": "Video",
             "id": "urn:bbc:ares::asset:korean/international-49330977",
             "type": "cps"
           },
@@ -290,7 +363,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/korean/international-47597527"
             },
             "summary": "조개껍질 등 천연재료로 조각상을 만들던 캐나다의 한 여성이 중증 중금속 중독 진단을 받았다. 그녀를 죽음으로 몰고 간 침묵의 살인자는 과연 누구였을까",
-            "timestamp": 1553560976,
+            "timestamp": 1553560976000,
+            "language": "ko",
             "cpsType": "STY",
             "indexImage": {
               "id": "105165517",

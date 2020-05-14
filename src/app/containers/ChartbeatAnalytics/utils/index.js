@@ -34,6 +34,8 @@ export const getType = (pageType, shorthand = false) => {
       return 'article-media-asset';
     case 'media':
       return 'Radio';
+    case 'mostRead':
+      return 'Most Read';
     default:
       return null;
   }
@@ -78,7 +80,7 @@ export const buildSections = ({
   }
 };
 
-export const getTitle = (pageType, pageData, brandName) => {
+export const getTitle = ({ pageType, pageData, brandName, title }) => {
   switch (pageType) {
     case 'frontPage':
     case 'index':
@@ -89,16 +91,14 @@ export const getTitle = (pageType, pageData, brandName) => {
       return path(['promo', 'headlines', 'headline'], pageData);
     case 'media':
       return path(['pageTitle'], pageData);
+    case 'mostRead':
+      return `${title} - ${brandName}`;
     default:
       return null;
   }
 };
 
-const getRadioContentType = pageData => {
-  const contentType = path(['contentType'], pageData);
-  // workaround until contentType value is fixed by ARES
-  return contentType === 'player-live' ? contentType : 'player-episode';
-};
+const getRadioContentType = pageData => path(['contentType'], pageData);
 
 export const getConfig = ({
   isAmp,
@@ -111,9 +111,15 @@ export const getConfig = ({
   origin,
   previousPath,
   chartbeatDomain,
+  mostReadTitle,
 }) => {
   const referrer = getReferrer(platform, origin, previousPath);
-  const title = getTitle(pageType, data, brandName);
+  const title = getTitle({
+    pageType,
+    pageData: data,
+    brandName,
+    title: mostReadTitle,
+  });
   const domain = env !== 'live' ? 'test.bbc.co.uk' : chartbeatDomain;
   const sectionName = path(['relatedContent', 'section', 'name'], data);
   const categoryName = path(
@@ -136,7 +142,7 @@ export const getConfig = ({
     sections,
     uid: chartbeatUID,
     title,
-    virtualReferrer: referrer,
+    virtualReferrer: referrer && decodeURIComponent(referrer),
     ...(isAmp && { contentType }),
     ...(!isAmp && {
       type: contentType,

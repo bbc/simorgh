@@ -10,9 +10,9 @@
     "type": "MAP",
     "createdBy": "uzbek-v6",
     "language": "uz-Cyrl",
-    "lastUpdated": 1584527334498,
+    "lastUpdated": 1588679351841,
     "firstPublished": 1569250368000,
-    "lastPublished": 1584527327000,
+    "lastPublished": 1569250368000,
     "timestamp": 1569250368000,
     "options": {
       "isIgorSeoTagsEnabled": false,
@@ -32,8 +32,9 @@
       "counterName": "uzbek.embedded_video.media_asset.49799366.page",
       "cps_asset_id": "49799366"
     },
+    "passport": { "taggings": [] },
     "tags": {},
-    "version": "v1.1.8",
+    "version": "v1.2.1",
     "blockTypes": ["media", "paragraph"],
     "includeComments": false
   },
@@ -100,9 +101,7 @@
     "summary": "BBC News Uzbek билан инглиз тилини ўрганинг! Хитой ва инглиз тиллари глобал етакчилик учун курашмоқдами?",
     "timestamp": 1569250368000,
     "language": "uz-Cyrl",
-    "passport": {
-      "taggings": []
-    },
+    "passport": { "taggings": [] },
     "media": {
       "id": "p07p3gkd",
       "subType": "clip",
@@ -123,11 +122,7 @@
           "duration": 107,
           "durationISO8601": "PT1M47S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true,
-            "world": false
-          },
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
           "availableFrom": 1569250223000
         }
       ],
@@ -316,7 +311,7 @@
               "cpsUrn": "urn:bbc:content:assetUri:/russian/learning-english-37095319"
             },
             "summary": "Английский язык: видео, уроки, тесты BBC Learning English, новости на английском, мультфильмы, лайфхаки, викторины \"Проверь себя\": здесь - ответ на вопрос \"Как выучить английский самостоятельно и бесплатно?\"",
-            "timestamp": 1584446661000,
+            "timestamp": 1585920238000,
             "language": "ru",
             "cpsType": "STY",
             "indexImage": {

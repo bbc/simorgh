@@ -2,7 +2,7 @@ import pathOr from 'ramda/src/pathOr';
 import deepClone from 'ramda/src/clone';
 import path from 'ramda/src/path';
 import { singleTextBlock } from '#app/models/blocks';
-import insertBlockAfterHeadline from '../helpers';
+import { insertBlockAfterHeadline } from '../helpers';
 
 const getSummary = json => {
   const summary = pathOr(null, ['promo', 'summary'], json);

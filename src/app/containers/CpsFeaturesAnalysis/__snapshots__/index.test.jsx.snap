@@ -74,7 +74,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 class="Headline-sc-1dvfmi3-3 hSJrur"
               >
                 <a
-                  class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
+                  class="Link-sc-1dvfmi3-5 jeUMCT"
                   href="/igbo/afirika-23252735"
                 >
                   STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
@@ -128,7 +128,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 class="Headline-sc-1dvfmi3-3 hSJrur"
               >
                 <a
-                  class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
+                  class="Link-sc-1dvfmi3-5 jeUMCT"
                   href="/igbo/afirika-49666505"
                 >
                   Robert Mugabe: Zimbabwe eferela nwa amadi a aka
@@ -223,7 +223,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
               class="Headline-sc-1dvfmi3-3 hSJrur"
             >
               <a
-                class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
+                class="Link-sc-1dvfmi3-5 jeUMCT"
                 href="/igbo/afirika-23252735"
               >
                 STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?

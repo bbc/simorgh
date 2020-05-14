@@ -27,9 +27,13 @@ const ToggleContextProvider = ({ children, service, origin }) => {
     if (shouldFetchAndUpdateToggles) {
       const fetchAndUpdateToggles = async () => {
         try {
-          const response = await fetch(
-            constructTogglesEndpoint(service, origin),
-          );
+          const url = constructTogglesEndpoint(service, origin);
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error(
+              `Unexpected response (HTTP status code ${response.status}) when requesting ${url}`,
+            );
+          }
 
           const jsonData = await response.json();
 

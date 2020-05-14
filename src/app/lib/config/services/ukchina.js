@@ -236,6 +236,8 @@ export const service = {
           endTextVisuallyHidden: '结尾 %provider_name% 帖子 ',
         },
       },
+      topStoriesTitle: '头条内容',
+      featuresAnalysisTitle: 'Features',
     },
   },
   trad: {
@@ -431,6 +433,8 @@ export const service = {
           endTextVisuallyHidden: '結尾 %provider_name% 帖子',
         },
       },
+      topStoriesTitle: '頭條內容',
+      featuresAnalysisTitle: 'Features',
     },
   },
 };

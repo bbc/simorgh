@@ -176,6 +176,8 @@ export const service = {
           endTextVisuallyHidden: 'पोस्ट %provider_name% समाप्त',
         },
       },
+      topStoriesTitle: 'मुख्य समाचार',
+      featuresAnalysisTitle: 'अन‌ि यो पनि',
     },
     brandSVG,
     mostRead: {

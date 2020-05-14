@@ -60,6 +60,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c21:before {
@@ -893,7 +894,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               <span
                 class="c22"
               >
-                 Duration 2،00،00 
+                 المدة 2،00،00 
               </span>
               <span
                 aria-hidden="true"
@@ -1020,7 +1021,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               <span
                 class="c22"
               >
-                 Duration 02،00 
+                 المدة 02،00 
               </span>
               <span
                 aria-hidden="true"
@@ -1147,7 +1148,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               <span
                 class="c22"
               >
-                 Duration 06،00 
+                 المدة 06،00 
               </span>
               <span
                 aria-hidden="true"
@@ -1275,7 +1276,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               <span
                 class="c22"
               >
-                 Duration 1،30،30 
+                 المدة 1،30،30 
               </span>
               <span
                 aria-hidden="true"
@@ -1358,6 +1359,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 .c21:before {
@@ -2191,7 +2193,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               <span
                 class="c22"
               >
-                 Duration 2،00،00 
+                 المدة 2،00،00 
               </span>
               <span
                 aria-hidden="true"
@@ -2318,7 +2320,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               <span
                 class="c22"
               >
-                 Duration 02،00 
+                 المدة 02،00 
               </span>
               <span
                 aria-hidden="true"
@@ -2445,7 +2447,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               <span
                 class="c22"
               >
-                 Duration 06،00 
+                 المدة 06،00 
               </span>
               <span
                 aria-hidden="true"
@@ -2573,7 +2575,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
               <span
                 class="c22"
               >
-                 Duration 1،30،30 
+                 المدة 1،30،30 
               </span>
               <span
                 aria-hidden="true"

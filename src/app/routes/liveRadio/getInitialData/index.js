@@ -19,6 +19,7 @@ export default async ({ path: pathname }) => {
   const liveRadioDataPath = overrideRendererOnTest(pathname);
   const { json, ...rest } = await fetchPageData(liveRadioDataPath);
   const contentData = path(['content'], json);
+  const pageType = { metadata: { type: 'Live Radio' } };
 
   return {
     ...rest,
@@ -32,6 +33,7 @@ export default async ({ path: pathname }) => {
         pageTitle: getPageTitle(json),
         contentType: getContentType(json),
         pageIdentifier: getPageIdentifier(json),
+        ...pageType,
       },
     }),
   };

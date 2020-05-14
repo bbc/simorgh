@@ -65,3 +65,18 @@ export const getErrorPageRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/:errorCode(${errorCodeRegex}):variant(${variantRegex})?`;
 };
+
+export const getMostReadPageRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex}):variant(${variantRegex})?/popular/read:amp(${ampRegex})?`;
+};
+
+export const getMostReadDataRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex})/mostread:variant(${variantRegex})?.json`;
+};
+
+export const getSecondaryColumnDataRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex})/sty-secondary-column:variant(${variantRegex})?.json`;
+};
