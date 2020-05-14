@@ -10,18 +10,9 @@ const IncludeContainer = ({ html, type }) => {
   const { isAmp } = useContext(RequestContext);
   const { enabled } = useToggle('include');
 
-  const supportedTypes = {
-    idt2: 'idt2',
-    vj: 'vj',
-    idt1: 'idt1',
-  };
+  const supportedTypes = ['idt1', 'idt2', 'vj'];
 
-  const shouldNotRenderInclude =
-    isAmp || !enabled || !html || !supportedTypes[type];
-
-  if (shouldNotRenderInclude) {
-    return null;
-  }
+  if (isAmp || !enabled || !html || !supportedTypes.includes(type)) return null;
 
   // This is a list of include types that depend on the javascript module loader requireJs.
   // These includes were built to work within the BBC's legacy publishing platform (the PAL)
