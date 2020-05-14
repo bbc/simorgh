@@ -6,7 +6,7 @@ import mostRead from './mostRead';
 import onDemandRadio from './onDemandRadio';
 import error from './error';
 import errorNoRouteMatch from './errorNoRouteMatch';
-import index from './idx';
+import IDX from './idx';
 
 export default [
   article,
@@ -15,7 +15,7 @@ export default [
   liveRadio,
   mostRead,
   onDemandRadio,
-  index,
+  IDX,
   error,
   errorNoRouteMatch, // When none of the above routes match, it will fall to this.
   // Please ensure that when adding new pages, it is above this check in the array.

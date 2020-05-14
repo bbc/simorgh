@@ -1,12 +1,12 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import IndexPage from '.';
+import IDXPage from '.';
 
-describe('IndexPage', () => {
+describe('IDXPage', () => {
   describe('Snapshots', () => {
     shouldMatchSnapshot(
       'should correctly render a blank page with HOC components',
-      <IndexPage />,
+      <IDXPage />,
     );
   });
 });
