@@ -245,7 +245,10 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
-          <CpsRelatedContent content={relatedContent} />
+          <CpsRelatedContent
+            content={relatedContent}
+            parentColumns={gridColsMain}
+          />
         </Grid>
         <GridSecondaryColumn
           item
@@ -254,10 +257,16 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           parentColumns={gridColumns}
         >
           <ResponsiveComponentWrapper>
-            <TopStories content={topStoriesInitialData} />
+            <TopStories
+              content={topStoriesInitialData}
+              parentColumns={gridColsSecondary}
+            />
           </ResponsiveComponentWrapper>
           <ResponsiveComponentWrapper>
-            <FeaturesAnalysis content={featuresInitialData} />
+            <FeaturesAnalysis
+              content={featuresInitialData}
+              parentColumns={gridColsSecondary}
+            />
           </ResponsiveComponentWrapper>
           <ComponentWrapper>
             <MostReadContainer
