@@ -1,6 +1,6 @@
 /**
  * @service pashto
- * @pathname /pashto/bbc_pashto_radio/w172x8nvf4bchz5
+ * @pathname /pashto/bbc_pashto_radio/w3ct0lz1
  */
 
 import runCrossPlatformTests from '../crossPlatformTests';

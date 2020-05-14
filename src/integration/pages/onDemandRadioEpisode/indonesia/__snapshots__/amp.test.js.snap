@@ -10,6 +10,17 @@ Object {
       "promptUI": "consent-prompt",
     },
   },
+  "policy": Object {
+    "default": Object {
+      "timeout": Object {
+        "fallbackAction": "reject",
+        "seconds": 0,
+      },
+      "waitFor": Object {
+        "user-consent": Array [],
+      },
+    },
+  },
 }
 `;
 
@@ -78,7 +89,7 @@ exports[`AMP On Demand Radio Episode Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=54&p=indonesian.bbc_indonesian_radio.w172x6r5000f38s.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:pips:w172x6r5000f38s]&x2=[amp]&x3=[news-indonesia]&x4=[id]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[Dunia+Pagi+Ini+-+BBC+News+Indonesia]",
+    "pageview": "\${base}s=598343&s2=54&p=indonesian.bbc_indonesian_radio.w172xh267fpn19l.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:pips:w172xh267fpn19l]&x2=[amp]&x3=[news-indonesia]&x4=[id]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[Dunia+Pagi+Ini+-+BBC+News+Indonesia]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -100,17 +111,15 @@ exports[`AMP On Demand Radio Episode Footer I can see the footer copyright and e
 
 exports[`AMP On Demand Radio Episode Header I can see the branding 1`] = `"BBC News, Indonesia"`;
 
-exports[`AMP On Demand Radio Episode I can see the brand title 1`] = `"Dunia Pagi Ini"`;
+exports[`AMP On Demand Radio Episode I can see the brand and episode title 1`] = `"Dunia Pagi Ini, 27 April 2020"`;
 
 exports[`AMP On Demand Radio Episode I can see the episode summary 1`] = `"Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."`;
 
-exports[`AMP On Demand Radio Episode I can see the episode title 1`] = `"05/03/2020 GMT"`;
-
 exports[`AMP On Demand Radio Episode Media player embed A11y I can read the media player title 1`] = `"Pemutar Audio"`;
 
-exports[`AMP On Demand Radio Episode Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/indonesia/bbc_indonesian_radio/w172x6r5000f38s/id/amp?morph_env=live"`;
+exports[`AMP On Demand Radio Episode Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/indonesia/bbc_indonesian_radio/w172xh267fpn19l/id/amp?morph_env=live"`;
 
-exports[`AMP On Demand Radio Episode SEO Canonical link 1`] = `"http://localhost:7080/indonesia/bbc_indonesian_radio/w172x6r5000f38s"`;
+exports[`AMP On Demand Radio Episode SEO Canonical link 1`] = `"http://localhost:7080/indonesia/bbc_indonesian_radio/w172xh267fpn19l"`;
 
 exports[`AMP On Demand Radio Episode SEO Dir attribute 1`] = `"ltr"`;
 
@@ -118,9 +127,22 @@ exports[`AMP On Demand Radio Episode SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`AMP On Demand Radio Episode SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`AMP On Demand Radio Episode SEO Heading level 1 1`] = `"Dunia Pagi Ini"`;
+exports[`AMP On Demand Radio Episode SEO Heading level 1 1`] = `"Dunia Pagi Ini, 27 April 2020"`;
 
 exports[`AMP On Demand Radio Episode SEO Lang attribute 1`] = `"id"`;
+
+exports[`AMP On Demand Radio Episode SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "AudioObject",
+  "description": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+  "duration": "PT15M30S",
+  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/media/indonesia/bbc_indonesian_radio/w172xh267fpn19l/id/amp?morph_env=live",
+  "name": "Dunia Pagi Ini",
+  "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b4828.png",
+  "uploadDate": "2020-04-27T00:00:00.000Z",
+}
+`;
 
 exports[`AMP On Demand Radio Episode SEO OG description 1`] = `"Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."`;
 
@@ -136,7 +158,7 @@ exports[`AMP On Demand Radio Episode SEO OG title 1`] = `"Dunia Pagi Ini - BBC N
 
 exports[`AMP On Demand Radio Episode SEO OG type 1`] = `"website"`;
 
-exports[`AMP On Demand Radio Episode SEO OG url 1`] = `"http://localhost:7080/indonesia/bbc_indonesian_radio/w172x6r5000f38s"`;
+exports[`AMP On Demand Radio Episode SEO OG url 1`] = `"http://localhost:7080/indonesia/bbc_indonesian_radio/w172xh267fpn19l"`;
 
 exports[`AMP On Demand Radio Episode SEO Page title 1`] = `"Dunia Pagi Ini - BBC News Indonesia"`;
 

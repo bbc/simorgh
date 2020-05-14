@@ -10,6 +10,17 @@ Object {
       "promptUI": "consent-prompt",
     },
   },
+  "policy": Object {
+    "default": Object {
+      "timeout": Object {
+        "fallbackAction": "reject",
+        "seconds": 0,
+      },
+      "waitFor": Object {
+        "user-consent": Array [],
+      },
+    },
+  },
 }
 `;
 
@@ -78,7 +89,7 @@ exports[`AMP On Demand Radio Episode Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=68&p=pashto.bbc_pashto_radio.w172x8nvf4bchz5.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:pips:w172x8nvf4bchz5]&x2=[amp]&x3=[news-pashto]&x4=[ps]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[وروستي+خبرونه+-+BBC+News+پښتو]",
+    "pageview": "\${base}s=598343&s2=68&p=pashto.bbc_pashto_radio.w3ct0lz1.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:pips:w3ct0lz1]&x2=[amp]&x3=[news-pashto]&x4=[ps]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[ماښامنۍ+خپرونه+-+BBC+News+پښتو]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -100,17 +111,15 @@ exports[`AMP On Demand Radio Episode Footer I can see the footer copyright and e
 
 exports[`AMP On Demand Radio Episode Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
-exports[`AMP On Demand Radio Episode I can see the brand title 1`] = `"وروستي خبرونه"`;
+exports[`AMP On Demand Radio Episode I can see the brand and episode title 1`] = `"ماښامنۍ خپرونه, ۱ می ۲۰۲۰"`;
 
-exports[`AMP On Demand Radio Episode I can see the episode summary 1`] = `"د نړۍ وروستي خبرونه"`;
-
-exports[`AMP On Demand Radio Episode I can see the episode title 1`] = `"04/02/2020 GMT"`;
+exports[`AMP On Demand Radio Episode I can see the episode summary 1`] = `"د بي بي سي ورلډ سروس څخه پروګرام کول"`;
 
 exports[`AMP On Demand Radio Episode Media player embed A11y I can read the media player title 1`] = `"اډیو پلیئر"`;
 
-exports[`AMP On Demand Radio Episode Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w172x8nvf4bchz5/ps/amp?morph_env=live"`;
+exports[`AMP On Demand Radio Episode Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps/amp?morph_env=live"`;
 
-exports[`AMP On Demand Radio Episode SEO Canonical link 1`] = `"http://localhost:7080/pashto/bbc_pashto_radio/w172x8nvf4bchz5"`;
+exports[`AMP On Demand Radio Episode SEO Canonical link 1`] = `"http://localhost:7080/pashto/bbc_pashto_radio/w3ct0lz1"`;
 
 exports[`AMP On Demand Radio Episode SEO Dir attribute 1`] = `"rtl"`;
 
@@ -118,11 +127,24 @@ exports[`AMP On Demand Radio Episode SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`AMP On Demand Radio Episode SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`AMP On Demand Radio Episode SEO Heading level 1 1`] = `"وروستي خبرونه"`;
+exports[`AMP On Demand Radio Episode SEO Heading level 1 1`] = `"ماښامنۍ خپرونه, ۱ می ۲۰۲۰"`;
 
 exports[`AMP On Demand Radio Episode SEO Lang attribute 1`] = `"ps"`;
 
-exports[`AMP On Demand Radio Episode SEO OG description 1`] = `"د نړۍ وروستي خبرونه"`;
+exports[`AMP On Demand Radio Episode SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "AudioObject",
+  "description": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+  "duration": "PT29M30S",
+  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps/amp?morph_env=live",
+  "name": "ماښامنۍ خپرونه",
+  "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg",
+  "uploadDate": "2020-05-01T00:00:00.000Z",
+}
+`;
+
+exports[`AMP On Demand Radio Episode SEO OG description 1`] = `"د بي بي سي ورلډ سروس څخه پروګرام کول"`;
 
 exports[`AMP On Demand Radio Episode SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"`;
 
@@ -132,13 +154,13 @@ exports[`AMP On Demand Radio Episode SEO OG locale 1`] = `"ps"`;
 
 exports[`AMP On Demand Radio Episode SEO OG site name 1`] = `"BBC News پښتو"`;
 
-exports[`AMP On Demand Radio Episode SEO OG title 1`] = `"وروستي خبرونه - BBC News پښتو"`;
+exports[`AMP On Demand Radio Episode SEO OG title 1`] = `"ماښامنۍ خپرونه - BBC News پښتو"`;
 
 exports[`AMP On Demand Radio Episode SEO OG type 1`] = `"website"`;
 
-exports[`AMP On Demand Radio Episode SEO OG url 1`] = `"http://localhost:7080/pashto/bbc_pashto_radio/w172x8nvf4bchz5"`;
+exports[`AMP On Demand Radio Episode SEO OG url 1`] = `"http://localhost:7080/pashto/bbc_pashto_radio/w3ct0lz1"`;
 
-exports[`AMP On Demand Radio Episode SEO Page title 1`] = `"وروستي خبرونه - BBC News پښتو"`;
+exports[`AMP On Demand Radio Episode SEO Page title 1`] = `"ماښامنۍ خپرونه - BBC News پښتو"`;
 
 exports[`AMP On Demand Radio Episode SEO Robots meta tag 1`] = `"noodp,noydir"`;
 
@@ -146,7 +168,7 @@ exports[`AMP On Demand Radio Episode SEO Twitter card 1`] = `"summary_large_imag
 
 exports[`AMP On Demand Radio Episode SEO Twitter creator 1`] = `"@bbcpashto"`;
 
-exports[`AMP On Demand Radio Episode SEO Twitter description 1`] = `"د نړۍ وروستي خبرونه"`;
+exports[`AMP On Demand Radio Episode SEO Twitter description 1`] = `"د بي بي سي ورلډ سروس څخه پروګرام کول"`;
 
 exports[`AMP On Demand Radio Episode SEO Twitter image alt 1`] = `"BBC News پښتو"`;
 
@@ -154,4 +176,4 @@ exports[`AMP On Demand Radio Episode SEO Twitter image src 1`] = `"https://news.
 
 exports[`AMP On Demand Radio Episode SEO Twitter site 1`] = `"@bbcpashto"`;
 
-exports[`AMP On Demand Radio Episode SEO Twitter title 1`] = `"وروستي خبرونه - BBC News پښتو"`;
+exports[`AMP On Demand Radio Episode SEO Twitter title 1`] = `"ماښامنۍ خپرونه - BBC News پښتو"`;
