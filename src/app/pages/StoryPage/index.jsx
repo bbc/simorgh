@@ -39,12 +39,7 @@ import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const StoryPage = ({
-  pageData,
-  mostReadEndpointOverride,
-  topStoriesOverride,
-  featuresAnalysisOverride,
-}) => {
+const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
     dir,
     mostRead: { header },
@@ -250,7 +245,10 @@ const StoryPage = ({
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
-          <CpsRelatedContent content={relatedContent} />
+          <CpsRelatedContent
+            content={relatedContent}
+            parentColumns={gridColsMain}
+          />
         </Grid>
         <GridSecondaryColumn
           item
@@ -259,11 +257,15 @@ const StoryPage = ({
           parentColumns={gridColumns}
         >
           <ResponsiveComponentWrapper>
-            <TopStories content={topStoriesInitialData || topStoriesOverride} />
+            <TopStories
+              content={topStoriesInitialData}
+              parentColumns={gridColsSecondary}
+            />
           </ResponsiveComponentWrapper>
           <ResponsiveComponentWrapper>
             <FeaturesAnalysis
-              content={featuresInitialData || featuresAnalysisOverride}
+              content={featuresInitialData}
+              parentColumns={gridColsSecondary}
             />
           </ResponsiveComponentWrapper>
           <ComponentWrapper>
