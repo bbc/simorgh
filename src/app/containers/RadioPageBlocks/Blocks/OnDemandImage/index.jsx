@@ -24,7 +24,7 @@ const getSrc = (imageUrl, size) =>
 const getSrcSet = imageUrl =>
   `${getSrc(imageUrl, '112x112')} 400w,${getSrc(imageUrl, '224x224')} 1008w`;
 
-const OnDemandEpisodeImage = ({ imageUrl, dir }) => {
+const OnDemandImage = ({ imageUrl, dir }) => {
   const { isAmp } = useContext(RequestContext);
   const { defaultImageAltText: alt } = useContext(ServiceContext);
   const height = 224;
@@ -49,13 +49,13 @@ const OnDemandEpisodeImage = ({ imageUrl, dir }) => {
   );
 };
 
-OnDemandEpisodeImage.propTypes = {
+OnDemandImage.propTypes = {
   imageUrl: string.isRequired,
   dir: string,
 };
 
-OnDemandEpisodeImage.defaultProps = {
+OnDemandImage.defaultProps = {
   dir: 'ltr',
 };
 
-export default OnDemandEpisodeImage;
+export default OnDemandImage;

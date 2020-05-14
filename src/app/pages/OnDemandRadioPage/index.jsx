@@ -10,7 +10,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
 import AudioPlayerBlock from '#containers/RadioPageBlocks/Blocks/AudioPlayer';
-import EpisodeImage from '#containers/RadioPageBlocks/Blocks/OnDemandEpisodeImage';
+import EpisodeImage from '#containers/RadioPageBlocks/Blocks/OnDemandImage';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 const EPISODE_IS_AVAILABLE = 'available';

@@ -3,7 +3,7 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import OnDemandEpisodeImage from '.';
+import OnDemandImage from '.';
 
 const component = (url, isAmp, service) => (
   <ServiceContextProvider service={service}>
@@ -13,7 +13,7 @@ const component = (url, isAmp, service) => (
       pageType="media"
       pathname="/path"
     >
-      <OnDemandEpisodeImage imageUrl={url} />
+      <OnDemandImage imageUrl={url} />
     </RequestContextProvider>
   </ServiceContextProvider>
 );
