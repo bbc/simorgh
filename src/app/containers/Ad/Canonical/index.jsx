@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { string } from 'prop-types';
 import { Helmet } from 'react-helmet';
-import useToggle from '#hooks/useToggle';
 
 const AdSlot = ({ type }) => {
   const location = useLocation();
@@ -30,13 +29,7 @@ const CanonicalAd = () => {
         playerAds: false,
       });
     }
-  }, []);
-
-  const { enabled: adsEnabled } = useToggle('ads');
-
-  if (!adsEnabled) {
-    return null;
-  }
+  });
 
   return (
     <>
