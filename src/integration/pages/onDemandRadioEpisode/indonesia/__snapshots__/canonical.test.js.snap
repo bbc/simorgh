@@ -10,9 +10,11 @@ exports[`Canonical On Demand Radio Episode Footer I can see the footer copyright
 
 exports[`Canonical On Demand Radio Episode Header I can see the branding 1`] = `"BBC News, Indonesia"`;
 
-exports[`Canonical On Demand Radio Episode I can see the brand and episode title 1`] = `"Dunia Pagi Ini, 27 April 2020"`;
+exports[`Canonical On Demand Radio Episode I can see the brand title 1`] = `"Dunia Pagi Ini"`;
 
 exports[`Canonical On Demand Radio Episode I can see the episode summary 1`] = `"Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."`;
+
+exports[`Canonical On Demand Radio Episode I can see the episode title 1`] = `"27 April 2020"`;
 
 exports[`Canonical On Demand Radio Episode Media player embed A11y I can read the media player title 1`] = `"Pemutar Audio"`;
 
