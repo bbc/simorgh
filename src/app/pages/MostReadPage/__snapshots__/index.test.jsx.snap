@@ -553,6 +553,11 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
       content="De one we dem de read well well - BBC News Pidgin"
       name="twitter:title"
     />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"WebPage","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"De one we dem de read well well"}}
+    </script>
   </head>
   <body>
     <div>
