@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { shape, string, number } from 'prop-types';
+import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import MetadataContainer from '../../containers/Metadata';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
@@ -37,6 +38,10 @@ const getEpisodeAvailability = (availableFrom, availableUntil) => {
 const StyledGelPageGrid = styled(GelPageGrid)`
   width: 100%;
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
+`;
+
+const StyledGelWrapperGrid = styled(GelPageGrid)`
+  padding-top: ${GEL_SPACING_TRPL};
 `;
 
 /* eslint-disable react/prop-types */
@@ -123,7 +128,7 @@ const OnDemandRadioPage = ({ pageData }) => {
           columns={getGroups(6, 6, 6, 6, 6, 12)}
           margins={getGroups(true, true, true, true, false, false)}
         >
-          <Grid
+          <StyledGelWrapperGrid
             dir={oppDir}
             columns={getGroups(6, 6, 6, 6, 6, 6)}
             enableGelGutters
@@ -139,7 +144,7 @@ const OnDemandRadioPage = ({ pageData }) => {
             <Grid dir={dir} item columns={getGroups(0, 0, 2, 2, 2, 2)}>
               <EpisodeImage imageUrl={imageUrl} dir={dir} />
             </Grid>
-          </Grid>
+          </StyledGelWrapperGrid>
           {renderEpisode({
             masterBrand,
             episodeId,
