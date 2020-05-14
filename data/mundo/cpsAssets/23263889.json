@@ -408,7 +408,7 @@
       {
         "required": false,
         "tile": "A quiz!",
-        "href": "/indepthtoolkit/quizzes/sistema_solar_Quiz_Mundo/syndicated?app-clickable=true&app-image=http%3A%2F%2Fnews.files.bbci.co.uk%2Fvj%2Flive%2Fidt-images%2Fquizzes-quiz_cta%2Fstart_geh2q.png",
+        "href": "/indepthtoolkit/data-pics/Env_Test_2",
         "platform": "highweb",
         "type": "include"
       },

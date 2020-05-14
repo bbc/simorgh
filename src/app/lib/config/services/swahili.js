@@ -179,6 +179,8 @@ export const service = {
           endTextVisuallyHidden: 'Mwisho wa %provider_name% ujumbe',
         },
       },
+      topStoriesTitle: 'Habari kuu',
+      featuresAnalysisTitle: 'Gumzo mitandaoni',
     },
     brandSVG,
     mostRead: {
@@ -192,6 +194,7 @@ export const service = {
       onFrontPage: true,
       frontPagePosition: 'Features',
       header: 'Vipindi vya Redio',
+      durationLabel: 'Muda %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

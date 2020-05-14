@@ -22,6 +22,8 @@ exports[`IncludeContainer should not render any HTML when include toggle is disa
 </div>
 `;
 
+exports[`IncludeContainer should not render any HTML when its an amp page 1`] = `<div />`;
+
 exports[`IncludeContainer should render HTML when include toggle is enabled 1`] = `
 <div>
   <div

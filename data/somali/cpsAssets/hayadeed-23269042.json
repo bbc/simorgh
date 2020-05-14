@@ -1,181 +1,164 @@
 {
+  "metadata": {
+    "id": "urn:bbc:ares::asset:somali/hayadeed-23269042",
+    "locators": {
+      "assetUri": "/somali/hayadeed-23269042",
+      "cpsUrn": "urn:bbc:content:assetUri:somali/hayadeed-23269042",
+      "curie": "http://www.bbc.co.uk/asset/53b6eaa9-125c-6440-93cb-4c60607551a0",
+      "assetId": "23269042"
+    },
+    "type": "MAP",
+    "createdBy": "somali-v6",
+    "language": "so",
+    "lastUpdated": 1588335919609,
+    "firstPublished": 1583166801000,
+    "lastPublished": 1583166801000,
+    "timestamp": 1583166801000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "somali.institutional.media_asset.23269042.page",
+      "cps_asset_id": "23269042"
+    },
+    "passport": { "taggings": [] },
+    "tags": {},
+    "version": "v1.2.1",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false
+  },
   "content": {
     "blocks": [
       {
-        "advertising": false,
-        "caption": "Some audio from a supermarket checkout in Birmingham",
-        "embedding": false,
-        "format": "audio",
         "id": "p01m7d07",
-        "imageCopyright": "Getty Images",
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
         "subType": "clip",
+        "format": "audio",
+        "title": "Birmingham checkout",
         "synopses": {
           "short": "Some audio from a supermarket checkout in Birmingham"
         },
-        "title": "Birmingham checkout",
-        "type": "media",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+        "embedding": false,
+        "advertising": false,
+        "caption": "Some audio from a supermarket checkout in Birmingham",
         "versions": [
           {
-            "availableFrom": 1555067395000,
-            "availableTerritories": {
-              "nonUk": true,
-              "uk": true,
-              "world": false
-            },
+            "versionId": "p01m7d09",
+            "types": ["Original"],
             "duration": 127,
             "durationISO8601": "PT2M7S",
-            "types": ["Original"],
-            "versionId": "p01m7d09",
             "warnings": {
-              "long": "Contains some strong language.",
-              "short": "Contains some strong language."
-            }
+              "short": "Contains some strong language.",
+              "long": "Contains some strong language."
+            },
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1555067395000
           }
-        ]
+        ],
+        "imageCopyright": "Getty Images",
+        "type": "media"
       },
       {
-        "markupType": "plain_text",
         "text": "Qaar kamid ah waxay xilka qabteen iyagoo leh hanti ama kasoo jeedaa qoys hanti leh, halka kuwa kalena ay ka yimaadeen qoysas aan waxba heysanin.",
+        "markupType": "plain_text",
         "type": "paragraph"
       },
       {
-        "markupType": "plain_text",
         "text": "Warbaahinta Fox News ee dalka Mareykanka ayaa warbixin ka qortay shanta madaxweyne ee ugu hantida badnaa ee qabtay hogaanka dalkaasi.",
+        "markupType": "plain_text",
         "type": "paragraph"
       },
-      {
-        "markupType": "plain_text",
-        "text": "Heading",
-        "type": "paragraph"
-      },
-      {
-        "markupType": "plain_text",
-        "text": "Subheading",
-        "type": "paragraph"
-      },
-      {
-        "markupType": "plain_text",
-        "text": "Crosshead",
-        "type": "paragraph"
-      }
+      { "text": "Heading", "markupType": "plain_text", "type": "paragraph" },
+      { "text": "Subheading", "markupType": "plain_text", "type": "paragraph" },
+      { "text": "Crosshead", "markupType": "plain_text", "type": "paragraph" }
     ]
-  },
-  "metadata": {
-    "analyticsLabels": {
-      "counterName": "somali.institutional.media_asset.23269042.page",
-      "cps_asset_id": "23269042",
-      "cps_asset_type": "map"
-    },
-    "blockTypes": ["media", "paragraph"],
-    "createdBy": "somali-v6",
-    "firstPublished": 1583166801000,
-    "id": "urn:bbc:ares::asset:somali/hayadeed-23269042",
-    "includeComments": false,
-    "language": "so",
-    "lastPublished": 1583166804000,
-    "lastUpdated": 1583166810210,
-    "locators": {
-      "assetId": "23269042",
-      "assetUri": "/somali/hayadeed-23269042",
-      "cpsUrn": "urn:bbc:content:assetUri:somali/hayadeed-23269042",
-      "curie": "http://www.bbc.co.uk/asset/53b6eaa9-125c-6440-93cb-4c60607551a0"
-    },
-    "options": {
-      "allowDateStamp": true,
-      "allowHeadline": true,
-      "allowPrintingSharingLinks": true,
-      "allowRelatedStoriesBox": true,
-      "allowRightHandSide": true,
-      "hasNewsTracker": false,
-      "includeComments": false,
-      "isBreakingNews": false,
-      "isFactCheck": false,
-      "isIgorSeoTagsEnabled": false,
-      "isKeyContent": false
-    },
-    "tags": {},
-    "timestamp": 1583166801000,
-    "type": "MAP",
-    "version": "v1.1.6"
   },
   "promo": {
     "headlines": {
-      "headline": "Somali CPS test Shanta madaxweyne ee ugu taajirsanaa Mareykanka",
-      "shortHeadline": "Birmingham checkout"
+      "shortHeadline": "Birmingham checkout",
+      "headline": "Somali CPS test Shanta madaxweyne ee ugu taajirsanaa Mareykanka"
     },
-    "id": "urn:bbc:ares::asset:somali/hayadeed-23269042",
-    "indexImage": {
-      "altText": "England star Fran Kirby",
-      "copyrightHolder": "Getty Images",
-      "height": 576,
-      "href": "http://b.files.bbci.co.uk/17AFF/test/_63732079_p01mt2kt.jpg",
-      "id": "63732079",
-      "path": "/cpsdevpb/17AFF/test/_63732079_p01mt2kt.jpg",
-      "subType": "index",
-      "type": "image",
-      "width": 1024
-    },
-    "language": "so",
     "locators": {
-      "assetId": "23269042",
       "assetUri": "/somali/hayadeed-23269042",
       "cpsUrn": "urn:bbc:content:assetUri:somali/hayadeed-23269042",
-      "curie": "http://www.bbc.co.uk/asset/53b6eaa9-125c-6440-93cb-4c60607551a0"
-    },
-    "media": {
-      "advertising": false,
-      "caption": "Some audio from a supermarket checkout in Birmingham",
-      "embedding": false,
-      "format": "audio",
-      "id": "p01m7d07",
-      "imageCopyright": "Getty Images",
-      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
-      "subType": "clip",
-      "synopses": {
-        "short": "Some audio from a supermarket checkout in Birmingham"
-      },
-      "title": "Birmingham checkout",
-      "type": "media",
-      "versions": [
-        {
-          "availableFrom": 1555067395000,
-          "availableTerritories": {
-            "nonUk": true,
-            "uk": true,
-            "world": false
-          },
-          "duration": 127,
-          "durationISO8601": "PT2M7S",
-          "types": ["Original"],
-          "versionId": "p01m7d09",
-          "warnings": {
-            "long": "Contains some strong language.",
-            "short": "Contains some strong language."
-          }
-        }
-      ]
-    },
-    "passport": {
-      "taggings": []
+      "curie": "http://www.bbc.co.uk/asset/53b6eaa9-125c-6440-93cb-4c60607551a0",
+      "assetId": "23269042"
     },
     "summary": "Somali",
     "timestamp": 1583166801000,
+    "language": "so",
+    "passport": { "taggings": [] },
+    "media": {
+      "id": "p01m7d07",
+      "subType": "clip",
+      "format": "audio",
+      "title": "Birmingham checkout",
+      "synopses": {
+        "short": "Some audio from a supermarket checkout in Birmingham"
+      },
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+      "embedding": false,
+      "advertising": false,
+      "caption": "Some audio from a supermarket checkout in Birmingham",
+      "versions": [
+        {
+          "versionId": "p01m7d09",
+          "types": ["Original"],
+          "duration": 127,
+          "durationISO8601": "PT2M7S",
+          "warnings": {
+            "short": "Contains some strong language.",
+            "long": "Contains some strong language."
+          },
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1555067395000
+        }
+      ],
+      "imageCopyright": "Getty Images",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "63732079",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/17AFF/test/_63732079_p01mt2kt.jpg",
+      "path": "/cpsdevpb/17AFF/test/_63732079_p01mt2kt.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "England star Fran Kirby",
+      "copyrightHolder": "Getty Images",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:somali/hayadeed-23269042",
     "type": "cps"
   },
   "relatedContent": {
-    "groups": [],
     "section": {
-      "name": "Institutional",
       "subType": "index",
-      "type": "simple",
-      "uri": "/somali/institutional"
+      "name": "Institutional",
+      "uri": "/somali/institutional",
+      "type": "simple"
     },
     "site": {
-      "name": "Somali",
       "subType": "site",
-      "type": "simple",
-      "uri": "/somali"
-    }
+      "name": "Somali",
+      "uri": "/somali",
+      "type": "simple"
+    },
+    "groups": []
   }
 }
