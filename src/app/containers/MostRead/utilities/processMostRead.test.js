@@ -1,5 +1,6 @@
 import processMostRead from './processMostRead';
 import pidginData from '#data/pidgin/mostRead';
+import kyrgyzData from '#data/kyrgyz/mostRead';
 import { setStaleLastRecordTimeStamp } from './testHelpers';
 
 const expectedPidginData = [
@@ -66,17 +67,115 @@ const expectedPidginData = [
   },
 ];
 
+const expectedKyrgyzData = [
+  {
+    id: 'urn:bbc:ares::article:cn060pe01e5o',
+    title: 'Hello promos',
+    href: 'https://www.bbc.com/news/articles/cn060pe01e5o',
+    timestamp: 1586266369329,
+  },
+  {
+    id: 'urn:bbc:ares::article:c736f039b88',
+    title: 'Hello promos',
+    href: 'https://www.bbc.com/news/articles/c736f039b88',
+    timestamp: 1586266369329,
+  },
+  {
+    id: 'urn:bbc:ares::article:c736f039bwx',
+    title: 'Hello promos',
+    href: 'https://www.bbc.com/news/articles/c736f039bwx',
+    timestamp: 1586266369329,
+  },
+  {
+    id: 'urn:bbc:ares::article:cn060pe0qwer',
+    title: 'Hello promos',
+    href: 'https://www.bbc.com/news/articles/cn060pe0qwer',
+    timestamp: 1586266369329,
+  },
+  {
+    id: 'urn:bbc:ares::article:cn060pe01e59',
+    title: 'Hello promos',
+    href: 'https://www.bbc.com/news/articles/cn060pe01e59',
+    timestamp: 1586266369329,
+  },
+];
+
+const missingTitleData = {
+  locators: {
+    canonicalUrl: 'https://www.bbc.com/news/articles/cn060pe01e5o',
+  },
+  timestamp: 1586266369329,
+  headlines: {
+    promoHeadline: {
+      blocks: [
+        {
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                type: 'paragraph',
+                model: {
+                  text: null,
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+};
+
+const missingHrefData = {
+  locators: {
+    canonicalUrl: null,
+  },
+  timestamp: 1586266369329,
+  headlines: {
+    promoHeadline: {
+      blocks: [
+        {
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                type: 'paragraph',
+                model: {
+                  text: 'Most read item title',
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+};
+
 describe('filterMostRead', () => {
   [
     {
-      description: 'should return expected filtered data',
+      description: 'should return expected filtered CPS data',
       data: pidginData,
       numberOfItems: 10,
       expectedReturn: expectedPidginData,
     },
     {
-      description: 'should return null when last record time stamp is stale',
+      description: 'should return expected filtered Optimo data',
+      data: kyrgyzData,
+      numberOfItems: 5,
+      expectedReturn: expectedKyrgyzData,
+    },
+    {
+      description:
+        'should return null when last record CPS time stamp is stale',
       data: setStaleLastRecordTimeStamp(pidginData),
+      expectedReturn: null,
+    },
+    {
+      description:
+        'should return null when last record Optimo time stamp is stale',
+      data: setStaleLastRecordTimeStamp(kyrgyzData),
       expectedReturn: null,
     },
     {
@@ -88,6 +187,18 @@ describe('filterMostRead', () => {
       description: 'should return empty array when records does not exist',
       data: { lastRecordTimeStamp: '2100-11-06T16:37:00Z' },
       expectedReturn: [],
+    },
+    {
+      description: 'should return null when most read item title is missing',
+      data: missingTitleData,
+      numberOfItems: 1,
+      expectedReturn: null,
+    },
+    {
+      description: 'should return null when most read item href is missing',
+      data: missingHrefData,
+      numberOfItems: 1,
+      expectedReturn: null,
     },
   ].forEach(({ description, data, numberOfItems, expectedReturn }) => {
     it(description, () => {

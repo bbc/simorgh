@@ -1,0 +1,636 @@
+{
+  "topStories":[
+    {
+      "headlines":{
+        "headline":"DSS: Wepụ aka enwe n'ofe na Benue"
+      },
+      "locators":{
+        "assetUri":"/igbo/23182501",
+        "cpsUrn":"urn:bbc:content:assetUri:igbo/23182501",
+        "assetId":"23182501"
+      },
+      "summary":"DSS achọpụtala n'aka ndị ISS dị na mkpamkpa nke na-akpa na Naijirịa ugbua nke gosiri na ọbughị nanị ndị Fulani na-achụ ehị na-kpa arụa",
+      "timestamp":1569404215000,
+      "language":"ig",
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63652794",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/C23D/test/_63652794_hi043976049.jpg",
+        "path":"/cpsdevpb/C23D/test/_63652794_hi043976049.jpg",
+        "height":549,
+        "width":976,
+        "altText":"DSS na Benue Steeti",
+        "caption":"Ndị Benue e werela anya ha hụ ntị ha n'aka ndị Fulanị na-Achụ ehị",
+        "copyrightHolder":"PIUS UTOMI EKPEI",
+        "type":"image"
+      },
+      "imageThumbnail":{
+        "id":"63652744",
+        "subType":"index-thumbnail",
+        "href":"http://b.files.bbci.co.uk/AEB5/test/_63652744_hi043976300.jpg",
+        "path":"/cpsdevpb/AEB5/test/_63652744_hi043976300.jpg",
+        "height":180,
+        "width":320,
+        "altText":"DSS na Benue Steeti",
+        "caption":"Peter Zion na akọ ka ya ihe siri ga n'aka ndị Fulani na-achụ ehi",
+        "copyrightHolder":"Reuters",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "prominence":"standard",
+      "section":{
+        "subType":"IDX",
+        "name":"Ogbako",
+        "uri":"/igbo/front_page",
+        "type":"simple"
+      },
+      "overtypedSummary":"DSS achọpụtala n'aka ndị ISIS dị na mkpamkpa nke na-akpa na Naijirịa ugbua nke gosiri na ọbughị nanị ndị Fulani na-achụ ehị na-kpa arụa",
+      "id":"urn:bbc:ares::asset:igbo/23182501",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Test m̀ịṅị̀ịọ́ụ̄ please ignore"
+      },
+      "locators":{
+        "assetUri":"/igbo/live/institutional-23162153",
+        "cpsUrn":"urn:bbc:content:assetUri:igbo/live/institutional-23162153",
+        "assetId":"23162153"
+      },
+      "summary":"New Test m̀ịṅị̀ịọ́ụ̄ please ignore, test summary",
+      "timestamp":1509636530000,
+      "language":"ig",
+      "passport":{
+        "category":{
+          "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+          "categoryName":"News"
+        },
+        "taggings":[
+
+        ]
+      },
+      "cpsType":"LIV",
+      "indexImage":{
+        "id":"63598670",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/1E09/test/_63598670_2018_toyota_camry_le_02_low.jpg",
+        "path":"/cpsdevpb/1E09/test/_63598670_2018_toyota_camry_le_02_low.jpg",
+        "height":295,
+        "width":524,
+        "altText":"test",
+        "caption":"test",
+        "copyrightHolder":"BBC",
+        "type":"image"
+      },
+      "commentary":{
+        "order":"descending",
+        "assetUUID":"71D8556D07F28940915710A332CCD28A",
+        "channels":{
+          "enhancedmobile":"bbc.cps.asset.23162154_EnhancedMobile",
+          "desktop":"bbc.cps.asset.23162154_HighWeb",
+          "highweb":"bbc.cps.asset.23162154_HighWeb",
+          "mobile":"bbc.cps.asset.23162154_EnhancedMobile"
+        }
+      },
+      "isLive":true,
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "prominence":"standard",
+      "id":"urn:bbc:ares::asset:igbo/live/institutional-23162153",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Akụkọ BBC Igbo na Nkeji"
+      },
+      "locators":{
+        "assetUri":"/igbo/23183171",
+        "cpsUrn":"urn:bbc:content:assetUri:igbo/23183171",
+        "assetId":"23183171"
+      },
+      "summary":"Akụkọ ihe na-eme n'ụwa niile",
+      "timestamp":1516641903000,
+      "language":"ig",
+      "cpsType":"MAP",
+      "media":{
+        "id":"p01g1tyl",
+        "subType":"clip",
+        "format":"audio",
+        "title":"Akụkọ BBC Igbo na Nkeji",
+        "synopses":{
+          "short":"Akụkọ ihe na-eme n'ụwa niile"
+        },
+        "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01g1v11.jpg",
+        "embedding":true,
+        "advertising":true,
+        "caption":"Akụkọ ihe na-eme n'ụwa niile",
+        "versions":[
+          {
+            "versionId":"p01g1tyr",
+            "types":[
+              "Original"
+            ],
+            "duration":58,
+            "durationISO8601":"PT58S",
+            "warnings":{
+
+            },
+            "availableTerritories":{
+              "uk":true,
+              "nonUk":true,
+              "world":false
+            },
+            "availableFrom":1516641499000
+          }
+        ],
+        "type":"media"
+      },
+      "indexImage":{
+        "id":"63652934",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/AB95/test/_63652934_p01g1v11.jpg",
+        "path":"/cpsdevpb/AB95/test/_63652934_p01g1v11.jpg",
+        "height":549,
+        "width":976,
+        "altText":"Akụkọ ihe na-eme n'ụwa niile",
+        "caption":"Akụkọ BBC Igbo na Nkeji",
+        "copyrightHolder":"BBC",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "prominence":"standard",
+      "section":{
+        "subType":"IDX",
+        "name":"Ogbako",
+        "uri":"/igbo/front_page",
+        "type":"simple"
+      },
+      "id":"urn:bbc:ares::asset:igbo/23183171",
+      "type":"cps"
+    }
+  ],
+  "features":[
+    {
+      "headlines":{
+        "headline":"Lee ihe Barcelona mere Real Betis"
+      },
+      "locators":{
+        "assetUri":"/igbo/23182930",
+        "cpsUrn":"urn:bbc:content:assetUri:igbo/23182930",
+        "assetId":"23182930"
+      },
+      "summary":"Barcelona emerigo Real Betis na asọmpị La Liga",
+      "timestamp":1516616035000,
+      "language":"ig",
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63652810",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/0721/test/_63652810_hi016761180.jpg",
+        "path":"/cpsdevpb/0721/test/_63652810_hi016761180.jpg",
+        "height":549,
+        "width":976,
+        "altText":"Lionel Messi",
+        "caption":"Messi nwere ọtụtụ ntuli ugo di ichiche",
+        "copyrightHolder":"AFP/Getty Images",
+        "type":"image"
+      },
+      "imageThumbnail":{
+        "id":"63652822",
+        "subType":"index-thumbnail",
+        "href":"http://b.files.bbci.co.uk/5929/test/_63652822_hi016761180.jpg",
+        "path":"/cpsdevpb/5929/test/_63652822_hi016761180.jpg",
+        "height":180,
+        "width":320,
+        "altText":"Lionel Messi",
+        "caption":"Messi nwere ọtụtụ ntuli ugo di ichiche",
+        "copyrightHolder":"AFP/Getty Images",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "section":{
+        "subType":"IDX",
+        "name":"Ogbako",
+        "uri":"/igbo/front_page",
+        "type":"simple"
+      },
+      "id":"urn:bbc:ares::asset:igbo/23182930",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Aubameyang nwere ike ifu ndị Arsenal ọnụ ego karịrị nderi pounds iri ise"
+      },
+      "locators":{
+        "assetUri":"/igbo/23182890",
+        "cpsUrn":"urn:bbc:content:assetUri:igbo/23182890",
+        "assetId":"23182890"
+      },
+      "summary":"Agbu a ndị otu bọọlụ Arsenal na Dortmund ebidola mkparịta ụka maka azụma ahịa Aubameyang dịka ọ ga-abụ onye kacha oke ọnụ ahịa ndị Arsenal ga-azụ.",
+      "timestamp":1516546304000,
+      "language":"ig",
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63652604",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/9EB1/test/_63652604_aubameyang.jpg",
+        "path":"/cpsdevpb/9EB1/test/_63652604_aubameyang.jpg",
+        "height":549,
+        "width":976,
+        "altText":"Aubameyang enyela ọkpụ goolu iri na atọ n'ime asọmpi iri na ise na oge a",
+        "caption":"Aubameyang enyela ọkpụ goolu iri na atọ n'ime asọmpi iri na ise na oge a",
+        "copyrightHolder":"Getty Images",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "section":{
+        "subType":"IDX",
+        "name":"Ogbako",
+        "uri":"/igbo/front_page",
+        "type":"simple"
+      },
+      "id":"urn:bbc:ares::asset:igbo/23182890",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"\"Alexis Sanchez ga-abanye Manchester united ma ọ buru na.....\" Wenger"
+      },
+      "locators":{
+        "assetUri":"/igbo/23182810",
+        "cpsUrn":"urn:bbc:content:assetUri:igbo/23182810",
+        "assetId":"23182810"
+      },
+      "summary":"Onye nchikwa Arsenal ,Arsene wenger ekwuola na Alexis Sanchez ga-abanye Manchester United ma ọ buru na Henrikh Mkhitaryan bata otu Arsenal",
+      "timestamp":1516523377000,
+      "language":"ig",
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63652456",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/FF91/test/_63652456_henrykandsanchez.jpg",
+        "path":"/cpsdevpb/FF91/test/_63652456_henrykandsanchez.jpg",
+        "height":549,
+        "width":976,
+        "altText":"Alexis Sanchez gawa Manchester United,Henrikh Mkhitaryan a bata Arsenal Fc",
+        "caption":"Alexis Sanchez gawa Manchester United,Henrikh Mkhitaryan a bata Arsenal Fc",
+        "copyrightHolder":"SANCHEZ AND HENRIKH'S TWITTER PAGE",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "section":{
+        "subType":"IDX",
+        "name":"Ogbako",
+        "uri":"/igbo/front_page",
+        "type":"simple"
+      },
+      "id":"urn:bbc:ares::asset:igbo/23182810",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Dịka osi ga n'ime asọmpi Premier League"
+      },
+      "locators":{
+        "assetUri":"/igbo/23182766",
+        "cpsUrn":"urn:bbc:content:assetUri:igbo/23182766",
+        "assetId":"23182766"
+      },
+      "summary":"Asọmpi Premier league ndị ụbọchị taa akwakọrọla ọnụ, a na wetara gi osi ga. ebe otu egwuregwu ndị ama ama nwetachara mmeri n'asọmpi ha.",
+      "timestamp":1516479191000,
+      "language":"ig",
+      "passport":{
+        "category":{
+          "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+          "categoryName":"News"
+        },
+        "taggings":[
+
+        ]
+      },
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63652413",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/7AC1/test/_63652413_arsenalwin.jpg",
+        "path":"/cpsdevpb/7AC1/test/_63652413_arsenalwin.jpg",
+        "height":549,
+        "width":976,
+        "altText":"Iwobi, Nacho,koscielny na Lacazette bụ ndị nyere Arsenal goolu",
+        "caption":"Iwobi, Nacho,koscielny na Lacazette bụ ndị nyere Arsenal goolu",
+        "copyrightHolder":"BBC",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "section":{
+        "subType":"IDX",
+        "name":"Ogbako",
+        "uri":"/igbo/front_page",
+        "type":"simple"
+      },
+      "id":"urn:bbc:ares::asset:igbo/23182766",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Djokovic enwela mmeri Agbanyeghị ihe mmerụ ahụ"
+      },
+      "locators":{
+        "assetUri":"/igbo/23182760",
+        "cpsUrn":"urn:bbc:content:assetUri:igbo/23182760",
+        "assetId":"23182760"
+      },
+      "summary":"Onye ama ama n'egwuregwu teenisi bụ Novak Djokovic agafela na agba nke anọ n'ihe egwuregwu teenisi nke Australian Open.",
+      "timestamp":1516453874000,
+      "language":"ig",
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63652259",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/173F9/test/_63652259_djokovuic.jpg",
+        "path":"/cpsdevpb/173F9/test/_63652259_djokovuic.jpg",
+        "height":549,
+        "width":976,
+        "altText":"Enyere Djokovic nleta ahụ maka mmerụ ahụ ukwu n'oge nke abụọ n'ime asọmpi ahụ",
+        "caption":"Enyere Djokovic nleta ahụ maka mmerụ ahụ ukwu n'oge nke abụọ n'ime asọmpi ahụ",
+        "copyrightHolder":"Getty Images",
+        "type":"image"
+      },
+      "imageThumbnail":{
+        "id":"63652261",
+        "subType":"index-thumbnail",
+        "href":"http://b.files.bbci.co.uk/3F61/test/_63652261_djokovuic.jpg",
+        "path":"/cpsdevpb/3F61/test/_63652261_djokovuic.jpg",
+        "height":180,
+        "width":320,
+        "altText":"Enyere Djokovic nleta ahụ maka mmerụ ahụ ukwu n'oge nke abụọ n'ime asọmpi ahụ",
+        "caption":"Enyere Djokovic nleta ahụ maka mmerụ ahụ ukwu n'oge nke abụọ n'ime asọmpi ahụ",
+        "copyrightHolder":"Getty Images",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "section":{
+        "subType":"IDX",
+        "name":"Ogbako",
+        "uri":"/igbo/front_page",
+        "type":"simple"
+      },
+      "id":"urn:bbc:ares::asset:igbo/23182760",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"CHAN: Naịjirịa na Guinea nọ na ịrụ Group C"
+      },
+      "locators":{
+        "assetUri":"/igbo/23182710",
+        "cpsUrn":"urn:bbc:content:assetUri:igbo/23182710",
+        "assetId":"23182710"
+      },
+      "summary":"Naịjirịa meriri Libya 1-0. Guinia meriri Equatorial Guinea 1-0 eji bụkọtara ndị isi na group C na CHAN",
+      "timestamp":1516429673000,
+      "language":"ig",
+      "passport":{
+        "category":{
+          "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+          "categoryName":"News"
+        },
+        "taggings":[
+
+        ]
+      },
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63652178",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/15455/test/_63652178__99669146_gettyimages-598982540.jpg",
+        "path":"/cpsdevpb/15455/test/_63652178__99669146_gettyimages-598982540.jpg",
+        "height":549,
+        "width":976,
+        "altText":"Salisu Yusuf",
+        "caption":"Salisu Yusuf bụ onye na akuzị ndi Super Eagles na CHAN",
+        "copyrightHolder":"Getty Images",
+        "type":"image"
+      },
+      "imageThumbnail":{
+        "id":"63652179",
+        "subType":"index-thumbnail",
+        "href":"http://b.files.bbci.co.uk/17B65/test/_63652179__99669146_gettyimages-598982540.jpg",
+        "path":"/cpsdevpb/17B65/test/_63652179__99669146_gettyimages-598982540.jpg",
+        "height":180,
+        "width":320,
+        "altText":"Salisu Yusuf",
+        "caption":"Salisu Yusuf bụ onye na akuzị ndi Super Eagles na CHAN",
+        "copyrightHolder":"Getty Images",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "section":{
+        "subType":"IDX",
+        "name":"Ogbako",
+        "uri":"/igbo/front_page",
+        "type":"simple"
+      },
+      "id":"urn:bbc:ares::asset:igbo/23182710",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"A gbabguola Don Wani"
+      },
+      "locators":{
+        "assetUri":"/igbo/23177465",
+        "cpsUrn":"urn:bbc:content:assetUri:igbo/23177465",
+        "assetId":"23177465"
+      },
+      "summary":"Azịza ọnụ onye DSP Omoni, Uweoji nke Rivers Steeti",
+      "timestamp":1515333567000,
+      "language":"ig",
+      "cpsType":"MAP",
+      "media":{
+        "id":"p01ftg81",
+        "subType":"clip",
+        "format":"audio",
+        "title":"A gbabguola Don Wani",
+        "synopses":{
+          "short":"Azịza ọnụ onye DSP Omoni, Uweoji nke Rivers Steeti"
+        },
+        "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01ftg9y.jpg",
+        "embedding":true,
+        "advertising":true,
+        "caption":"Azịza ọnụ onye DSP Omoni, Uweoji nke Rivers Steeti",
+        "versions":[
+          {
+            "versionId":"p01ftg83",
+            "types":[
+              "Original"
+            ],
+            "duration":49,
+            "durationISO8601":"PT49S",
+            "warnings":{
+
+            },
+            "availableTerritories":{
+              "uk":true,
+              "nonUk":true,
+              "world":false
+            },
+            "availableFrom":1515332979000
+          }
+        ],
+        "type":"media"
+      },
+      "indexImage":{
+        "id":"63642155",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/D754/test/_63642155_p01ftg8v.jpg",
+        "path":"/cpsdevpb/D754/test/_63642155_p01ftg8v.jpg",
+        "height":1152,
+        "width":2048,
+        "altText":"A gbabguola Don Wani",
+        "caption":"A gbabguola Don Wani",
+        "copyrightHolder":"Dan Omoni facebook",
+        "type":"image"
+      },
+      "imageThumbnail":{
+        "id":"63642157",
+        "subType":"index-thumbnail",
+        "href":"http://b.files.bbci.co.uk/12574/test/_63642157_p01ftg8v.jpg",
+        "path":"/cpsdevpb/12574/test/_63642157_p01ftg8v.jpg",
+        "height":180,
+        "width":320,
+        "altText":"A gbabguola Don Wani",
+        "caption":"A gbabguola Don Wani",
+        "copyrightHolder":"Dan Omoni facebook",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "section":{
+        "subType":"IDX",
+        "name":"Ogbako",
+        "uri":"/igbo/front_page",
+        "type":"simple"
+      },
+      "id":"urn:bbc:ares::asset:igbo/23177465",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"O nwere ihe o mere ma Dino Melaye nọrọ n'egwu m?"
+      },
+      "locators":{
+        "assetUri":"/igbo/23173771",
+        "cpsUrn":"urn:bbc:content:assetUri:igbo/23173771",
+        "assetId":"23173771"
+      },
+      "summary":"'Kach' Nwa minista Ibe Kachikwu tinyere Sinetọ Dino Melaye n'ime ihe onyonyo egwu ọ gụrụ mana ọnaghị atọ ndi Naijurịa ọchị",
+      "timestamp":1513780526000,
+      "language":"ig",
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63625503",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/7758/test/_63625503_kachdino.png",
+        "path":"/cpsdevpb/7758/test/_63625503_kachdino.png",
+        "height":549,
+        "width":976,
+        "altText":"Iwe ndị mmadụ bụ na nwa minista steeti na mmanụ agbịdị na sinetọ onye arụmarụ ụka na enwe mmekọ",
+        "caption":"Iwe ndị mmadụ bụ na nwa minista steeti na mmanụ agbịdị na sinetọ onye arụmarụ ụka na enwe mmekọ",
+        "copyrightHolder":"BBC",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "section":{
+        "subType":"IDX",
+        "name":"Ogbako",
+        "uri":"/igbo/front_page",
+        "type":"simple"
+      },
+      "id":"urn:bbc:ares::asset:igbo/23173771",
+      "type":"cps"
+    },
+    {
+      "headlines":{
+        "headline":"Ọkụ Festac: Ajọ ọnwụnwa nke keresimesi"
+      },
+      "locators":{
+        "assetUri":"/igbo/23174391",
+        "cpsUrn":"urn:bbc:content:assetUri:igbo/23174391",
+        "assetId":"23174391"
+      },
+      "summary":"Ọkụ a tapiala nkwa ahịa karịrị nari nde Naira na Legọs",
+      "timestamp":1513863812000,
+      "language":"ig",
+      "cpsType":"STY",
+      "indexImage":{
+        "id":"63626250",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/148E/test/_63626250_chinedu.jpg",
+        "path":"/cpsdevpb/148E/test/_63626250_chinedu.jpg",
+        "height":549,
+        "width":976,
+        "altText":"ọkụ gbara na-Festac town Legọs",
+        "caption":"Ọkọchị bụ oge ọkụ mberede ji awakpo ndi madu",
+        "copyrightHolder":"BBC Pidgin Unit",
+        "type":"image"
+      },
+      "imageThumbnail":{
+        "id":"63626282",
+        "subType":"index-thumbnail",
+        "href":"http://b.files.bbci.co.uk/6E66/test/_63626282_burntbridge.jpg",
+        "path":"/cpsdevpb/6E66/test/_63626282_burntbridge.jpg",
+        "height":180,
+        "width":320,
+        "altText":"Akwa miri nke Festac",
+        "caption":"Gọọment ndị Legọs e mechiela akwa mmiri si Amuwo Odofin gafe Festac ebe ọkụ gbara",
+        "copyrightHolder":"BBC Pidgin Unit",
+        "type":"image"
+      },
+      "options":{
+        "isBreakingNews":false,
+        "isFactCheck":false
+      },
+      "section":{
+        "subType":"IDX",
+        "name":"Ogbako",
+        "uri":"/igbo/front_page",
+        "type":"simple"
+      },
+      "id":"urn:bbc:ares::asset:igbo/23174391",
+      "type":"cps"
+    }
+  ]
+}

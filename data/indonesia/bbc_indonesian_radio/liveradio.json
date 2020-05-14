@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "id": "urn:bbc:ares::ws_live:bbc_indonesian_radio",
+    "id": "urn:bbc:ares:ws_media:live:bbc_indonesian_radio",
     "locators": {
       "pipsUrn": "urn:bbc:pips:bbc_indonesian_radio"
     },
