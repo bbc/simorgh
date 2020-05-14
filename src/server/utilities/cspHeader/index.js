@@ -296,7 +296,7 @@ const directives = {
   fontSrc: {
     amp: [
       'https://gel.files.bbci.co.uk', // STY includes
-      'https://ws-downloads.files.bbci.co.uk',
+      'https://ws-downloads.files.bbci.co.uk', //STY includes
     ],
     canonical: [
       'https://gel.files.bbci.co.uk',
