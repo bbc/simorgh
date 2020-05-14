@@ -22,5 +22,5 @@
   "defaultCommandTimeout": 10000,
   "pageLoadTimeout": 100000,
   "responseTimeout": 50000,
-  "testFiles": ["**/pages/frontPage/**"]
+  "testFiles": ["**/pages/articles/**"]
 }
