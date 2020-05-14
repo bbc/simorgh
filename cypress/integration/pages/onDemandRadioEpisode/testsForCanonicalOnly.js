@@ -34,6 +34,29 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       });
     });
 
+    describe('Brand image visible above 400, not visible below 400', () => {
+      // This is how you can test more than one viewport, but for speed we probably want to just test
+      // on one viewport below breakpoint and one default above breakpoint
+      // We will not need to use the array then, and can just use two cy.viewport commands
+      const sizesBelowBreakpoint = ['iphone-6'];
+
+      sizesBelowBreakpoint.forEach(size => {
+        // make assertions on the image using
+        // an array of different viewports
+        it(`Should display image on ${size} screen`, () => {
+          if (Cypress._.isArray(size)) {
+            cy.viewport(size[0], size[1]);
+          } else {
+            cy.viewport(size);
+          }
+
+          cy.visit(`${Cypress.env('currentPath')}`);
+          // Just using hamburger menu button as an example until the image is on test
+          cy.get('nav').find('button').should('be.visible');
+        });
+      });
+    });
+
     describe('Chartbeat', () => {
       if (envConfig.chartbeatEnabled) {
         it('should have a script with src value set to chartbeat source', () => {
