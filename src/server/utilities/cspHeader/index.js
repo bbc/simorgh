@@ -299,7 +299,7 @@ const directives = {
       'https://ws-downloads.files.bbci.co.uk', //STY includes
     ],
     canonical: [
-      'https://gel.files.bbci.co.uk',
+      'https://gel.files.bbci.co.uk', // STY includes
       'https://ws-downloads.files.bbci.co.uk', // STY includes
       'https://static.bbci.co.uk', // STY includes
     ],
