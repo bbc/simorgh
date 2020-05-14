@@ -18,5 +18,5 @@ export default [
   IDX,
   error,
   errorNoRouteMatch, // When none of the above routes match, it will fall to this.
-  // Please ensure that when adding new pages, it is above this check in the array.
+  // Please ensure that when adding new pages, it is above this element in the array.
 ];
