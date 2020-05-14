@@ -41,6 +41,9 @@ const logCodes = {
 
   // Block Types
   UNSUPPORTED_BLOCK_TYPE: 'unsupported_block_type',
+
+  // Most Read
+  MOST_READ_DATA_INCOMPLETE: 'most_read_data_incomplete',
 };
 
 module.exports = logCodes;

@@ -25,6 +25,11 @@ describe('Get initial data for on demand radio', () => {
     expect(pageData.imageUrl).toEqual(
       'ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg',
     );
+    expect(pageData.promoBrandTitle).toEqual('ماښامنۍ خپرونه');
+    expect(pageData.durationISO8601).toEqual('PT29M30S');
+    expect(pageData.thumbnailImageUrl).toEqual(
+      'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
+    );
   });
 
   it('should override renderer on test', async () => {
