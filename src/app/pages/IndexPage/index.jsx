@@ -2,8 +2,8 @@ import React from 'react';
 
 const IndexPage = () => {
   return (
-    <main>
-      <div />
+    <main role="main">
+      <h1 id="content">Index Page</h1>
     </main>
   );
 };

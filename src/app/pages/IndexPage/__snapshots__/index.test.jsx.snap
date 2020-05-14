@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`IndexPage should correctly render a blank page with HOC components 1`] = `
-<main>
-  <div />
+exports[`IndexPage Snapshots should correctly render a blank page with HOC components 1`] = `
+<main
+  role="main"
+>
+  <h1
+    id="content"
+  >
+    Index Page
+  </h1>
 </main>
 `;
