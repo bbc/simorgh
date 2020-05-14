@@ -2,9 +2,19 @@
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
 import { Helmet } from 'react-helmet';
+import styled from 'styled-components';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
+
+/**
+ * Prevent Includes from being wider than their parent, whilst
+ * allowing localised horizontal scrolling for content that is.
+ */
+const Include = styled.div`
+  max-width: 100%;
+  overflow: scroll hidden;
+`;
 
 const IncludeContainer = ({ html, type }) => {
   const { isAmp } = useContext(RequestContext);
@@ -29,27 +39,21 @@ const IncludeContainer = ({ html, type }) => {
   const configureAdditionalScripts = `require.config({ paths:${paths} });`;
 
   return (
-    <>
+    <GridItemConstrainedMedium>
       {requireIncludeTypes.includes(type) && (
         <Helmet>
           <script
             type="text/javascript"
             src="https://news.files.bbci.co.uk/include/vjassets/js/vendor/require-2.1.20b.min.js"
           />
-          {/* 
-           A map of legacy modules is configured here, they are defined as require modules and 
-           and may be required by the include dangerously set below
-           */}
           <script>{configureAdditionalScripts}</script>
         </Helmet>
       )}
-      <GridItemConstrainedMedium>
-        <div
-          suppressHydrationWarning
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </GridItemConstrainedMedium>
-    </>
+      <Include
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+    </GridItemConstrainedMedium>
   );
 };
 
