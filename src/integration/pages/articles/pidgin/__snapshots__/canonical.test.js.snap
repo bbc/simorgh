@@ -2,7 +2,7 @@
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"Waka go wetin de inside"`;
 
-exports[`Canonical Articles Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=70&p=news::pidgin.news.story.51745682.page&x1=[urn:bbc:cps:53870d86-88c5-6f4d-a260-f97c68606458]&x2=[responsive]&x3=[news-pidgin]&x4=[pcm]&x7=[article]&x8=[simorgh-nojs]&x9=[Adams+Oshiomhole+say+'I+still+be+APC+National+Chairman'+-+BBC+News+Pidgin]&x11=[2020-03-04T18:58:43.000Z]&x12=[2020-03-04T19:27:57.000Z]&x13=[Nigeria~Nigeria+politics]&x14=[3d5d5e30-dd50-4041-96d5-c970b20005b9~7d65828a-85c1-41f4-96cf-c758da75e401]&x16=[WS%20-%20Keep%20me%20on%20trend~WS%20-%20Update%20me]&x17=[News]"`;
+exports[`Canonical Articles Analytics ATI 1`] = `"https://logws1363.ati-host.net?s=598343&s2=70&p=news::pidgin.news.story.51745682.page&x1=[urn:bbc:cps:53870d86-88c5-6f4d-a260-f97c68606458]&x2=[responsive]&x3=[news-pidgin]&x4=[pcm]&x7=[article]&x8=[simorgh-nojs]&x9=[Adams+Oshiomhole+say+'I+still+be+APC+National+Chairman'+-+BBC+News+Pidgin]&x11=[2020-03-04T18:58:43.000Z]&x12=[2020-03-04T19:27:57.000Z]&x13=[Nigeria~Nigeria+politics]&x14=[3d5d5e30-dd50-4041-96d5-c970b20005b9~7d65828a-85c1-41f4-96cf-c758da75e401]&x16=[WS%20-%20Keep%20me%20on%20trend~WS%20-%20Update%20me]&x17=[News]"`;
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
