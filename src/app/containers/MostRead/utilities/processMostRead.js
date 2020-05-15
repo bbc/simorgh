@@ -87,7 +87,7 @@ const mostReadItems = ({ data, numberOfItems }) => {
     return items;
   }
   logger.warn(MOST_READ_STALE_DATA, {
-    message: 'Most read lastUpdatedTimestamp value is greater than 35min',
+    message: `Most read lastUpdatedTimestamp - ${data.lastRecordTimeStamp} value is greater than 35min`,
   });
   return null;
 };

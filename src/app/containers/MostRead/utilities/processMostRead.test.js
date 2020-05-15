@@ -257,7 +257,7 @@ describe('filterMostRead', () => {
         numberOfItems: 10,
       });
       expect(nodeLogger.warn).toHaveBeenCalledWith(MOST_READ_STALE_DATA, {
-        message: 'Most read lastUpdatedTimestamp value is greater than 35min',
+        message: `Most read lastUpdatedTimestamp - 2019-11-06T16:28:00Z value is greater than 35min`,
       });
     });
   });
