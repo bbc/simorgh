@@ -226,7 +226,7 @@ describe('ToggleContext with feature toggles', () => {
     });
 
     describe('given the local ads toggle is true and the fetching of toggles is true and the remote ads toggle value is true', () => {
-      it('should not render enable ads or render test component if toggles endpoint throws an error', async () => {
+      it('should not enable ads or render test component if toggles endpoint throws an error', async () => {
         fetchMock.mock(togglesUrl, 500);
         togglesConfig.local.ads.enabled = false;
 
