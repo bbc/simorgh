@@ -100,6 +100,7 @@ const OnDemandRadioPage = ({ pageData }) => {
     durationISO8601,
     thumbnailImageUrl,
   } = pageData;
+
   const { dir } = useContext(ServiceContext);
   const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
 
