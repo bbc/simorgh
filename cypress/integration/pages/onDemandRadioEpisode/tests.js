@@ -28,6 +28,26 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
       });
     });
 
+    describe('Brand image visible above 400, not visible below 400', () => {
+      const sizesBelowBreakpoint = ['iphone-6'];
+
+      sizesBelowBreakpoint.forEach(size => {
+        // make assertions on the image using
+        // an array of different viewports
+        it(`Should display image on ${size} screen`, () => {
+          if (Cypress._.isArray(size)) {
+            cy.viewport(size[0], size[1]);
+          } else {
+            cy.viewport(size);
+          }
+
+          cy.visit(`${Cypress.env('currentPath')}.amp`);
+          // Just using hamburger menu button as an example until the image is on test
+          cy.get('nav').find('button').should('be.visible');
+        });
+      });
+    });
+
     describe('LinkedData', () => {
       // will be addressed by this https://github.com/bbc/simorgh/issues/3117
       it.skip('should include mainEntityOfPage in the LinkedData', () => {
