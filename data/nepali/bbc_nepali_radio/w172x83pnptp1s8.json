@@ -1,26 +1,27 @@
 {
   "metadata": {
     "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172x83pnptp1s8",
-    "locators": {},
+    "locators": { "pid": "w172x83pnptp1s8", "brandPid": "p0340xzt" },
     "type": "WSRADIO",
     "createdBy": "bbc_nepali_radio",
     "language": "ne",
-    "lastUpdated": 1583601860035,
+    "lastUpdated": 1589529870679,
     "firstPublished": 1582508121000,
     "lastPublished": 1582508121000,
+    "timestamp": 1582508121000,
     "options": {},
     "analyticsLabels": {
       "pageTitle": "विहानीपख - BBC News नेपाली",
       "pageIdentifier": "nepali.bbc_nepali_radio.w172x83pnptp1s8.page",
       "producerId": "63",
-      "contentType": "player-ondemand",
+      "contentType": "player-episode",
       "producer": "NEPALI"
     },
-    "passport": null,
     "tags": {},
-    "version": "v1.1.3",
+    "version": "v1.3.0",
     "blockTypes": ["media"],
-    "title": "विहानीपख"
+    "title": "विहानीपख",
+    "releaseDateTimeStamp": 1583452800000
   },
   "content": {
     "blocks": [
@@ -30,117 +31,79 @@
         "format": "Audio",
         "title": "06/03/2020 GMT",
         "synopses": {
-          "short": "बीबीसी नेेपाली सेवाको हरेक दिन विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
-          "medium": "बीबीसी नेेपाली सेवाको हरेक दिन विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
+          "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
+          "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
         },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
         "embedding": false,
         "advertising": false,
-        "versions": [
-          {
-            "versionId": "w1mshdtbpy1vjvt",
-            "types": ["Original"],
-            "duration": 900,
-            "durationISO8601": "PT15M",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": false,
-              "nonUk": false,
-              "world": true
-            },
-            "availableUntil": 1586051070000,
-            "availableFrom": 1583459070000
-          }
-        ],
-        "imageCopyright": null
+        "versions": [],
+        "type": "media"
       }
     ]
   },
   "promo": {
-    "headlines": {
-      "headline": "विहानीपख"
-    },
-    "locators": {
-      "pid": "w172x83pnptp1s8"
-    },
+    "headlines": { "headline": "विहानीपख" },
+    "locators": { "pid": "w172x83pnptp1s8", "brandPid": "p0340xzt" },
     "media": {
       "id": "w172x83pnptp1s8",
       "subType": "episode",
       "format": "Audio",
       "title": "06/03/2020 GMT",
       "synopses": {
-        "short": "बीबीसी नेेपाली सेवाको हरेक दिन विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
-        "medium": "बीबीसी नेेपाली सेवाको हरेक दिन विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
+        "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
+        "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
       },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
       "embedding": false,
       "advertising": false,
-      "versions": [
-        {
-          "versionId": "w1mshdtbpy1vjvt",
-          "types": ["Original"],
-          "duration": 900,
-          "durationISO8601": "PT15M",
-          "warnings": {},
-          "availableTerritories": {
-            "uk": false,
-            "nonUk": false,
-            "world": true
-          },
-          "availableUntil": 1586051070000,
-          "availableFrom": 1583459070000
-        }
-      ],
-      "imageCopyright": null
+      "versions": [],
+      "type": "media"
     },
     "indexImage": {
       "id": "",
       "subType": "index",
-      "href": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
-      "path": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
       "height": 0,
       "width": 0,
       "altText": null,
-      "copyrightHolder": null
+      "copyrightHolder": null,
+      "type": "image"
     },
-    "brand": {
-      "pid": "p0340xzt",
-      "title": "विहानीपख"
-    },
-    "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172x83pnptp1s8"
+    "brand": { "pid": "p0340xzt", "title": "विहानीपख" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172x83pnptp1s8",
+    "type": "ws_radio"
   },
   "relatedContent": {
     "site": {
       "subType": "site",
       "name": "Nepali",
-      "uri": "/nepali"
+      "uri": "/nepali",
+      "type": "simple"
     },
     "groups": [
       {
         "type": "other-episode",
         "promos": [
           {
-            "headlines": {
-              "headline": "विहानीपख"
-            },
-            "locators": {
-              "pid": "w172x83pnptl4w5"
-            },
+            "headlines": { "headline": "विहानीपख" },
+            "locators": { "pid": "w172xhtm2rj2htn", "brandPid": "p0340xzt" },
             "media": {
-              "id": "w172x83pnptl4w5",
+              "id": "w172xhtm2rj2htn",
               "subType": "episode",
               "format": "Audio",
-              "title": "05/03/2020 GMT",
+              "title": "15/05/2020 GMT",
               "synopses": {
-                "short": "बीबीसी नेेपाली सेवाको हरेक दिन विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
-                "medium": "बीबीसी नेेपाली सेवाको हरेक दिन विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
+                "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
+                "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshdtbpy1rmyq",
+                  "versionId": "w1mshnqfnzvngn6",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
@@ -150,50 +113,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585964670000,
-                  "availableFrom": 1583372670000
+                  "availableUntil": 1592099070000,
+                  "availableFrom": 1589507070000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p0340xzt",
-              "title": "विहानीपख"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172x83pnptl4w5"
+            "brand": { "pid": "p0340xzt", "title": "विहानीपख" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xhtm2rj2htn",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "विहानीपख"
-            },
-            "locators": {
-              "pid": "w172x83pnpth7z2"
-            },
+            "headlines": { "headline": "विहानीपख" },
+            "locators": { "pid": "w172xhtm2rhzlxk", "brandPid": "p0340xzt" },
             "media": {
-              "id": "w172x83pnpth7z2",
+              "id": "w172xhtm2rhzlxk",
               "subType": "episode",
               "format": "Audio",
-              "title": "04/03/2020 GMT",
+              "title": "14/05/2020 GMT",
               "synopses": {
-                "short": "बीबीसी नेेपाली सेवाको हरेक दिन विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
-                "medium": "बीबीसी नेेपाली सेवाको हरेक दिन विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
+                "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
+                "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshdtbpy1nr1m",
+                  "versionId": "w1mshnqfnzvkkr3",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
@@ -203,50 +161,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585878270000,
-                  "availableFrom": 1583286270000
+                  "availableUntil": 1592012670000,
+                  "availableFrom": 1589420670000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p0340xzt",
-              "title": "विहानीपख"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172x83pnpth7z2"
+            "brand": { "pid": "p0340xzt", "title": "विहानीपख" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xhtm2rhzlxk",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "विहानीपख"
-            },
-            "locators": {
-              "pid": "w172x83pnptdc1z"
-            },
+            "headlines": { "headline": "विहानीपख" },
+            "locators": { "pid": "w172xhtm2rhwq0g", "brandPid": "p0340xzt" },
             "media": {
-              "id": "w172x83pnptdc1z",
+              "id": "w172xhtm2rhwq0g",
               "subType": "episode",
               "format": "Audio",
-              "title": "03/03/2020 GMT",
+              "title": "13/05/2020 GMT",
               "synopses": {
-                "short": "बीबीसी नेेपाली सेवाको हरेक दिन विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
-                "medium": "बीबीसी नेेपाली सेवाको हरेक दिन विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
+                "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
+                "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshdtbpy1kv4j",
+                  "versionId": "w1mshnqfnzvgnv0",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
@@ -256,50 +209,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585791870000,
-                  "availableFrom": 1583199870000
+                  "availableUntil": 1591926270000,
+                  "availableFrom": 1589334270000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p0340xzt",
-              "title": "विहानीपख"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172x83pnptdc1z"
+            "brand": { "pid": "p0340xzt", "title": "विहानीपख" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xhtm2rhwq0g",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "विहानीपख"
-            },
-            "locators": {
-              "pid": "w172x83pnpt9g4w"
-            },
+            "headlines": { "headline": "विहानीपख" },
+            "locators": { "pid": "w172xhtm2rhst3c", "brandPid": "p0340xzt" },
             "media": {
-              "id": "w172x83pnpt9g4w",
+              "id": "w172xhtm2rhst3c",
               "subType": "episode",
               "format": "Audio",
-              "title": "02/03/2020 GMT",
+              "title": "12/05/2020 GMT",
               "synopses": {
-                "short": "बीबीसी नेेपाली सेवाको हरेक दिन विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
-                "medium": "बीबीसी नेेपाली सेवाको हरेक दिन विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
+                "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
+                "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshdtbpy1gy7f",
+                  "versionId": "w1mshnqfnzvcrxx",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
@@ -309,50 +257,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585705470000,
-                  "availableFrom": 1583113470000
+                  "availableUntil": 1591839870000,
+                  "availableFrom": 1589247870000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p0340xzt",
-              "title": "विहानीपख"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172x83pnpt9g4w"
+            "brand": { "pid": "p0340xzt", "title": "विहानीपख" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xhtm2rhst3c",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "विहानीपख"
-            },
-            "locators": {
-              "pid": "w172x83p9fhwx5f"
-            },
+            "headlines": { "headline": "विहानीपख" },
+            "locators": { "pid": "w172xhtm2rhpx68", "brandPid": "p0340xzt" },
             "media": {
-              "id": "w172x83p9fhwx5f",
+              "id": "w172xhtm2rhpx68",
               "subType": "episode",
               "format": "Audio",
-              "title": "28/02/2020 GMT",
+              "title": "11/05/2020 GMT",
               "synopses": {
-                "short": "बीबीसी नेेपाली सेवाको हरेक दिन विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
-                "medium": "बीबीसी नेेपाली सेवाको हरेक दिन विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
+                "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
+                "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshdtbbnr2d7z",
+                  "versionId": "w1mshnqfnzv8w0t",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
@@ -362,50 +305,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585446270000,
-                  "availableFrom": 1582854270000
+                  "availableUntil": 1591753470000,
+                  "availableFrom": 1589161470000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p0340xzt",
-              "title": "विहानीपख"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172x83p9fhwx5f"
+            "brand": { "pid": "p0340xzt", "title": "विहानीपख" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xhtm2rhpx68",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "विहानीपख"
-            },
-            "locators": {
-              "pid": "w172x83p9fht08b"
-            },
+            "headlines": { "headline": "विहानीपख" },
+            "locators": { "pid": "w172xhtlqh69c6t", "brandPid": "p0340xzt" },
             "media": {
-              "id": "w172x83p9fht08b",
+              "id": "w172xhtlqh69c6t",
               "subType": "episode",
               "format": "Audio",
-              "title": "27/02/2020 GMT",
+              "title": "08/05/2020 GMT",
               "synopses": {
-                "short": "बीबीसी नेेपाली सेवाको हरेक दिन विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
-                "medium": "बीबीसी नेेपाली सेवाको हरेक दिन विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
+                "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
+                "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshdtbbnqzhbw",
+                  "versionId": "w1mshnqf9qjwb1c",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
@@ -415,50 +353,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585359870000,
-                  "availableFrom": 1582767870000
+                  "availableUntil": 1591494270000,
+                  "availableFrom": 1588902270000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p0340xzt",
-              "title": "विहानीपख"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172x83p9fht08b"
+            "brand": { "pid": "p0340xzt", "title": "विहानीपख" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xhtlqh69c6t",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "विहानीपख"
-            },
-            "locators": {
-              "pid": "w172x83p9fhq3c7"
-            },
+            "headlines": { "headline": "विहानीपख" },
+            "locators": { "pid": "w172xhtlqh66g9q", "brandPid": "p0340xzt" },
             "media": {
-              "id": "w172x83p9fhq3c7",
+              "id": "w172xhtlqh66g9q",
               "subType": "episode",
               "format": "Audio",
-              "title": "26/02/2020 GMT",
+              "title": "07/05/2020 GMT",
               "synopses": {
-                "short": "बीबीसी नेेपाली सेवाको हरेक दिन विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
-                "medium": "बीबीसी नेेपाली सेवाको हरेक दिन विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
+                "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
+                "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshdtbbnqwlfs",
+                  "versionId": "w1mshnqf9qjsf48",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
@@ -468,50 +401,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585273470000,
-                  "availableFrom": 1582681470000
+                  "availableUntil": 1591407870000,
+                  "availableFrom": 1588815870000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p0340xzt",
-              "title": "विहानीपख"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172x83p9fhq3c7"
+            "brand": { "pid": "p0340xzt", "title": "विहानीपख" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xhtlqh66g9q",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "विहानीपख"
-            },
-            "locators": {
-              "pid": "w172x83p9fhm6g4"
-            },
+            "headlines": { "headline": "विहानीपख" },
+            "locators": { "pid": "w172xhtlqh63kdm", "brandPid": "p0340xzt" },
             "media": {
-              "id": "w172x83p9fhm6g4",
+              "id": "w172xhtlqh63kdm",
               "subType": "episode",
               "format": "Audio",
-              "title": "25/02/2020 GMT",
+              "title": "06/05/2020 GMT",
               "synopses": {
-                "short": "बीबीसी नेेपाली सेवाको हरेक दिन विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
-                "medium": "बीबीसी नेेपाली सेवाको हरेक दिन विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
+                "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
+                "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshdtbbnqspjp",
+                  "versionId": "w1mshnqf9qjpj75",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
@@ -521,27 +449,26 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585187070000,
-                  "availableFrom": 1582595070000
+                  "availableUntil": 1591321470000,
+                  "availableFrom": 1588729470000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p0340xzt",
-              "title": "विहानीपख"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172x83p9fhm6g4"
+            "brand": { "pid": "p0340xzt", "title": "विहानीपख" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xhtlqh63kdm",
+            "type": "ws_radio"
           }
         ]
       }
