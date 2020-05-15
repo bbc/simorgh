@@ -1,25 +1,6 @@
-/* eslint-disable react/jsx-curly-brace-presence */
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { string } from 'prop-types';
 import { Helmet } from 'react-helmet';
-
-const AdSlot = ({ type }) => {
-  const location = useLocation();
-  useEffect(() => {
-    if (window.dotcom) {
-      window.dotcom.cmd.push(() => {
-        window.dotcom.ads.registerSlot(type);
-      });
-    }
-  }, [location, type]);
-
-  return <div id={`dotcom-${type}`} className="dotcom-ad" />;
-};
-
-AdSlot.propTypes = {
-  type: string.isRequired,
-};
+import AdSlot from './AdSlot';
 
 const CanonicalAd = () => {
   useEffect(() => {

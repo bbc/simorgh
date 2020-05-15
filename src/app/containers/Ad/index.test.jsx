@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -42,7 +43,9 @@ describe('Ad Container', () => {
           pathname="/pidgin"
         >
           <ToggleContext.Provider value={toggleContextMock}>
-            <AdContainer />
+            <BrowserRouter>
+              <AdContainer />
+            </BrowserRouter>
           </ToggleContext.Provider>
         </RequestContextProvider>
       </ServiceContextProvider>,
@@ -61,7 +64,9 @@ describe('Ad Container', () => {
           pathname="/news"
         >
           <ToggleContext.Provider value={toggleContextMock}>
-            <AdContainer />
+            <BrowserRouter>
+              <AdContainer />
+            </BrowserRouter>
           </ToggleContext.Provider>
         </RequestContextProvider>
       </ServiceContextProvider>,
@@ -80,7 +85,9 @@ describe('Ad Container', () => {
           pathname="/pidgin"
         >
           <ToggleContext.Provider value={toggleContextMock}>
-            <AdContainer />
+            <BrowserRouter>
+              <AdContainer />
+            </BrowserRouter>
           </ToggleContext.Provider>
         </RequestContextProvider>
       </ServiceContextProvider>,
@@ -99,7 +106,9 @@ describe('Ad Container', () => {
           pathname="/news"
         >
           <ToggleContext.Provider value={toggleContextMock}>
-            <AdContainer />
+            <BrowserRouter>
+              <AdContainer />
+            </BrowserRouter>
           </ToggleContext.Provider>
         </RequestContextProvider>
       </ServiceContextProvider>,
