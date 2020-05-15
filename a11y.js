@@ -1,4 +1,4 @@
-const pathOr = require('ramda/src/pathOr');
+const path = require('ramda/src/path');
 
 global.Cypress = { env: () => {} }; // Fake Cypress.env
 const services = require('./cypress/support/config/services');
@@ -9,7 +9,7 @@ const services = require('./cypress/support/config/services');
 const pageWidths = [360];
 const baseUrl = 'http://localhost:7080';
 
-const getPageTypes = service => pathOr(null, [service, 'pageTypes'], services);
+const getPageTypes = service => path([service, 'pageTypes'], services);
 
 const getSmokePaths = config => {
   const { environments, smoke } = config;
@@ -19,9 +19,9 @@ const getSmokePaths = config => {
 const getUrls = pageType =>
   Object.keys(services)
     .map(getPageTypes)
-    .map(pageTypes => pathOr(null, [pageType], pageTypes))
+    .map(path([pageType]))
     .map(getSmokePaths)
-    .filter(page => !!page)
+    .filter(Boolean)
     .map(url => `${baseUrl}${url}`);
 
 // '/html/head/iframe' Added to prevent false negatives from mPulse beacon
