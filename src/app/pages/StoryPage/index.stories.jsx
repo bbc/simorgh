@@ -39,12 +39,6 @@ const withSecondaryColumnsKnob = pageData => storyFn => {
   };
   return storyFn(storyProps);
 };
-
-const styStories = storiesOf('Pages|Story Page', module);
-
-styStories.addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
-styStories.addDecorator(withKnobs);
-
 [
   {
     service: 'mundo',
@@ -55,7 +49,9 @@ styStories.addDecorator(withKnobs);
     pageData: persianPageData,
   },
 ].forEach(({ service, pageData }) => {
-  styStories
+  return storiesOf('Pages|Story Page', module)
+    .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
+    .addDecorator(withKnobs)
     .addDecorator(withSecondaryColumnsKnob(pageData))
     .add(service, ({ data }) => {
       return (
