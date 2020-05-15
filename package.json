@@ -5,8 +5,8 @@
   "main": "./src/client.js",
   "scripts": {
     "amp:validate": "wait-on -t 20000 http://localhost:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost:7080/igbo.amp && amphtml-validator http://localhost:7080/korean/bbc_korean_radio/liveradio.amp && amphtml-validator http://localhost:7080/pidgin/23248703.amp && amphtml-validator http://localhost:7080/azeri/multimedia/2015/08/150804_azeri_test.amp",
-    "bbcA11y": "wait-on -t 20000 http://localhost:7080/news/articles/cn7k01xp8kxo && bbc-a11y",
-    "bbcA11y:ci": "wait-on -t 20000 http://localhost:7080/news/articles/cn7k01xp8kxo && xvfb-run -a bbc-a11y",
+    "bbcA11y": "wait-on -t 20000 http://localhost:7080/status && bbc-a11y",
+    "bbcA11y:ci": "wait-on -t 20000 http://localhost:7080/status && xvfb-run -a bbc-a11y",
     "build:local": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack",
     "build": "npm run build:local && node ./scripts/bundleSize.js",
     "build:profile": "rm -rf build && cp envConfig/local.env .env && IS_PROD_PROFILE=true NODE_ENV=production webpack",
