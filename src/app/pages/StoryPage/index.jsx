@@ -70,11 +70,16 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
   const mostReadInitialData = path(['mostRead'], pageData);
-  const topStoriesInitialData = path(
+  const topStoriesInitialData = pathOr(
+    [],
     ['secondaryColumn', 'topStories'],
     pageData,
   );
-  const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
+  const featuresInitialData = pathOr(
+    [],
+    ['secondaryColumn', 'features'],
+    pageData,
+  );
 
   const hasTopStoriesData = !!topStoriesInitialData.length;
   const hasFeaturesData = !!featuresInitialData.length;
@@ -225,6 +230,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     group4: 4,
     group5: 4,
   };
+  console.log('yaaay');
 
   return (
     <>
