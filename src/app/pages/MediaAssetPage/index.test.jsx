@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { render, waitForDomChange } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { StaticRouter } from 'react-router-dom';
 import path from 'ramda/src/path';
@@ -129,25 +129,6 @@ describe('Media Asset Page', () => {
   });
 
   it('should render the index image as metadata image', async () => {
-    await waitForDomChange({
-      container: document.querySelector('head'),
-    });
-
-    const actual = Array.from(
-      document.querySelectorAll(
-        'head > meta[property*="image"], head > meta[name*="image"]',
-      ),
-    ).map(tag =>
-      tag.hasAttribute('property')
-        ? {
-            property: tag.getAttribute('property'),
-            content: tag.getAttribute('content'),
-          }
-        : {
-            name: tag.getAttribute('name'),
-            content: tag.getAttribute('content'),
-          },
-    );
     const expected = [
       {
         property: 'og:image',
@@ -163,7 +144,25 @@ describe('Media Asset Page', () => {
       },
     ];
 
-    expect(actual).toEqual(expected);
+    await waitFor(() => {
+      const actual = Array.from(
+        document.querySelectorAll(
+          'head > meta[property*="image"], head > meta[name*="image"]',
+        ),
+      ).map(tag =>
+        tag.hasAttribute('property')
+          ? {
+              property: tag.getAttribute('property'),
+              content: tag.getAttribute('content'),
+            }
+          : {
+              name: tag.getAttribute('name'),
+              content: tag.getAttribute('content'),
+            },
+      );
+
+      expect(actual).toEqual(expected);
+    });
   });
 
   it('should render component', () => {
