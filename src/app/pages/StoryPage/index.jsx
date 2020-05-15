@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { node } from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
@@ -76,6 +76,12 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   );
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
 
+  const hasTopStoriesData = !!topStoriesInitialData.length;
+  const hasFeaturesData = !!featuresInitialData.length;
+  const removeMostReadLabelTopMargin = !(
+    hasTopStoriesData && hasTopStoriesData
+  );
+
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
@@ -148,16 +154,25 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     'data-e2e': 'most-read',
   }))``;
 
+  const SectionLabelWrapper = styled(SectionLabel)`
+    ${({ removeTopMargin }) =>
+      removeTopMargin &&
+      css`
+        margin-top: 0;
+      `}
+  `;
+
   const MostReadWrapper = ({ children }) => (
     <MostReadSection>
-      <SectionLabel
+      <SectionLabelWrapper
         script={script}
         labelId="Most-Read"
         service={service}
         dir={dir}
+        removeTopMargin={removeMostReadLabelTopMargin}
       >
         {header}
-      </SectionLabel>
+      </SectionLabelWrapper>
       {children}
     </MostReadSection>
   );
@@ -256,18 +271,22 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           columns={gridColsSecondary}
           parentColumns={gridColumns}
         >
-          <ResponsiveComponentWrapper>
-            <TopStories
-              content={topStoriesInitialData}
-              parentColumns={gridColsSecondary}
-            />
-          </ResponsiveComponentWrapper>
-          <ResponsiveComponentWrapper>
-            <FeaturesAnalysis
-              content={featuresInitialData}
-              parentColumns={gridColsSecondary}
-            />
-          </ResponsiveComponentWrapper>
+          {hasTopStoriesData && (
+            <ResponsiveComponentWrapper>
+              <TopStories
+                content={topStoriesInitialData}
+                parentColumns={gridColsSecondary}
+              />
+            </ResponsiveComponentWrapper>
+          )}
+          {hasFeaturesData && (
+            <ResponsiveComponentWrapper>
+              <FeaturesAnalysis
+                content={featuresInitialData}
+                parentColumns={gridColsSecondary}
+              />
+            </ResponsiveComponentWrapper>
+          )}
           <ComponentWrapper>
             <MostReadContainer
               mostReadEndpointOverride={mostReadEndpointOverride}
