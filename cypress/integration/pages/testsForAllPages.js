@@ -4,6 +4,7 @@ import appConfig from '../../../src/server/utilities/serviceConfigs';
 import describeForEuOnly from '../../support/helpers/describeForEuOnly';
 import getBrandedImage from '../../support/helpers/getBrandedImage';
 import useAppToggles from '../../support/helpers/useAppToggles';
+import pageTypeSomeTestsNotRun from '../../support/helpers/pageTypeSomeTestsNotRun';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -44,7 +45,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           .should('have.attr', 'tabindex', '-1');
       });
 
-      if (pageType !== 'errorPage404') {
+      if (!pageTypeSomeTestsNotRun) {
         it('should include the canonical URL', () => {
           cy.get('head link[rel="canonical"]').should(
             'have.attr',

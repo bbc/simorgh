@@ -13,6 +13,24 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
       it('should have mostread component rendered ', () => {
         cy.get('main').should('have.attr', 'data-e2e', 'most-read');
       });
+      if (Cypress.env('APP_ENV') !== 'local') {
+        it('should have articles list each linking to article page', () => {
+          cy.get('main ol[role="list"]>li')
+            .eq(0)
+            .within(() => {
+              cy.get('a')
+                .should('have.attr', 'href')
+                .then(href => {
+                  cy.request({
+                    url: href,
+                    failOnStatusCode: false,
+                  }).then(resp => {
+                    expect(resp.status).to.not.equal(404);
+                  });
+                });
+            });
+        });
+      }
     });
   });
 };
