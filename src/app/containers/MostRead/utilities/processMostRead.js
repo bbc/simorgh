@@ -8,12 +8,6 @@ import {
 
 const logger = nodeLogger(__filename);
 
-const logMissingDataFields = ({ error }) => {
-  logger.warn(MOST_READ_DATA_INCOMPLETE, {
-    error,
-  });
-};
-
 const getOptimoItemData = record => {
   const optimoHeadline = pathOr(
     null,
@@ -81,8 +75,8 @@ const mostReadItems = ({ data, numberOfItems }) => {
       if (href && title) {
         items.push(mostReadItemData);
       } else {
-        logMissingDataFields({
-          error: 'Most read item is missing title or link data fields',
+        logger.warn(MOST_READ_DATA_INCOMPLETE, {
+          message: 'Most read item is missing title or link data fields',
         });
       }
 

@@ -1,7 +1,12 @@
+import nodeLogger from '#testHelpers/loggerMock';
 import processMostRead from './processMostRead';
 import pidginData from '#data/pidgin/mostRead';
 import kyrgyzData from '#data/kyrgyz/mostRead';
 import { setStaleLastRecordTimeStamp } from './testHelpers';
+import {
+  MOST_READ_DATA_INCOMPLETE,
+  MOST_READ_STALE_DATA,
+} from '#lib/logger.const';
 
 const expectedPidginData = [
   {
@@ -101,55 +106,65 @@ const expectedKyrgyzData = [
 ];
 
 const missingTitleData = {
-  locators: {
-    canonicalUrl: 'https://www.bbc.com/news/articles/cn060pe01e5o',
-  },
-  timestamp: 1586266369329,
-  headlines: {
-    promoHeadline: {
-      blocks: [
-        {
-          type: 'text',
-          model: {
-            blocks: [
-              {
-                type: 'paragraph',
-                model: {
-                  text: null,
-                },
+  lastRecordTimeStamp: '2030-01-01T17:00:00Z',
+  records: [
+    {
+      locators: {
+        canonicalUrl: 'https://www.bbc.com/news/articles/cn060pe01e5o',
+      },
+      timestamp: 1558434642016,
+      headlines: {
+        promoHeadline: {
+          blocks: [
+            {
+              type: 'text',
+              model: {
+                blocks: [
+                  {
+                    type: 'paragraph',
+                    model: {
+                      text: null,
+                    },
+                  },
+                ],
               },
-            ],
-          },
+            },
+          ],
         },
-      ],
+      },
     },
-  },
+  ],
 };
 
 const missingHrefData = {
-  locators: {
-    canonicalUrl: null,
-  },
-  timestamp: 1586266369329,
-  headlines: {
-    promoHeadline: {
-      blocks: [
-        {
-          type: 'text',
-          model: {
-            blocks: [
-              {
-                type: 'paragraph',
-                model: {
-                  text: 'Most read item title',
-                },
+  lastRecordTimeStamp: '2030-01-01T17:00:00Z',
+  records: [
+    {
+      locators: {
+        canonicalUrl: null,
+      },
+      timestamp: 1558434642016,
+      headlines: {
+        promoHeadline: {
+          blocks: [
+            {
+              type: 'text',
+              model: {
+                blocks: [
+                  {
+                    type: 'paragraph',
+                    model: {
+                      text: 'Most read item title',
+                    },
+                  },
+                ],
               },
-            ],
-          },
+            },
+          ],
         },
-      ],
+      },
     },
-  },
+  ],
 };
 
 describe('filterMostRead', () => {
@@ -192,17 +207,58 @@ describe('filterMostRead', () => {
       description: 'should return null when most read item title is missing',
       data: missingTitleData,
       numberOfItems: 1,
-      expectedReturn: null,
+      expectedReturn: [],
     },
     {
       description: 'should return null when most read item href is missing',
       data: missingHrefData,
       numberOfItems: 1,
-      expectedReturn: null,
+      expectedReturn: [],
     },
   ].forEach(({ description, data, numberOfItems, expectedReturn }) => {
     it(description, () => {
       expect(processMostRead({ data, numberOfItems })).toEqual(expectedReturn);
+    });
+  });
+
+  describe('Logging', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+
+    [
+      {
+        description:
+          'should log MOST_READ_DATA_INCOMPLETE when most read item title is missing',
+        data: missingTitleData,
+        numberOfItems: 1,
+      },
+      {
+        description:
+          'should log MOST_READ_DATA_INCOMPLETE when most read item href is missing',
+        data: missingHrefData,
+        numberOfItems: 1,
+      },
+    ].forEach(({ description, data, numberOfItems }) => {
+      it(description, () => {
+        processMostRead({ data, numberOfItems });
+        expect(nodeLogger.warn).toHaveBeenCalledWith(
+          MOST_READ_DATA_INCOMPLETE,
+          {
+            message: 'Most read item is missing title or link data fields',
+          },
+        );
+      });
+    });
+
+    it('should log MOST_READ_STALE_DATA when lastRecordTimestamp is greater than 35min', () => {
+      processMostRead({
+        data: setStaleLastRecordTimeStamp(pidginData),
+        numberOfItems: 10,
+      });
+      expect(nodeLogger.warn).toHaveBeenCalledWith(MOST_READ_STALE_DATA, {
+        message: 'Most read lastUpdatedTimestamp value is greater than 35min',
+      });
     });
   });
 });

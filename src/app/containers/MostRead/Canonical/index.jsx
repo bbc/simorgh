@@ -17,7 +17,7 @@ import {
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
-import webLogger from '#lib/logger.web';
+import nodeLogger from '#lib/logger.node';
 import { shouldRenderLastUpdated } from '../utilities';
 import LastUpdated from './LastUpdated';
 import processMostRead from '../utilities/processMostRead';
@@ -27,7 +27,7 @@ import {
   MOST_READ_FETCH_ERROR,
 } from '#lib/logger.const';
 
-const logger = webLogger();
+const logger = nodeLogger();
 
 const MarginWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
@@ -74,16 +74,10 @@ const CanonicalMostRead = ({
         fetch(pathname, { mode: 'no-cors' })
           .then(handleResponse(pathname))
           .catch(error => {
-            logger.error(
-              JSON.stringify(
-                {
-                  event: MOST_READ_FETCH_ERROR,
-                  message: error.toString(),
-                },
-                null,
-                2,
-              ),
-            );
+            logger.error(MOST_READ_FETCH_ERROR, {
+              url: pathname,
+              error,
+            });
           });
 
       logger.info(MOST_READ_REQUEST_RECEIVED, { url: endpoint });

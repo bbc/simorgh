@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, act } from '@testing-library/react';
+import nodeLogger from '#testHelpers/loggerMock';
 import arabicMostReadData from '#data/arabic/mostRead';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import nepaliMostReadData from '#data/nepali/mostRead';
@@ -11,7 +12,6 @@ import {
   setStaleLastRecordTimeStamp,
 } from '../utilities/testHelpers';
 import CanonicalMostRead from '.';
-import loggerMock from '#testHelpers/loggerMock';
 import {
   MOST_READ_REQUEST_RECEIVED,
   MOST_READ_FETCH_ERROR,
@@ -202,29 +202,38 @@ describe('MostReadContainerCanonical', () => {
     });
   });
 
-  describe('Error logging', () => {
-    it('should return MOST_READ_REQUEST_RECEIVED when most read is client side rendered', () => {
+  describe('Logging', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+
+    it('should return MOST_READ_REQUEST_RECEIVED when most read data request is received', async () => {
       render(
         <MostReadCanonicalWithContext
           service="pidgin"
           endpoint="www.test.bbc.com/pidgin/mostread.json"
         />,
       );
-      expect(loggerMock.info).toHaveBeenCalledWith(
-        MOST_READ_REQUEST_RECEIVED,
-        {},
-      );
+      expect(nodeLogger.info).toHaveBeenCalledWith(MOST_READ_REQUEST_RECEIVED, {
+        url: `www.test.bbc.com/pidgin/mostread.json`,
+      });
     });
 
-    // it('should return MOST_READ_FETCH_ERROR when data fetching fails', () => {
-    //   fetch.mockResponse(
-    //     JSON.stringify(setFreshPromoTimestamp(pidginMostReadData)),
-    //     404,
-    //   );
+    it('should return MOST_READ_FETCH_ERROR when data fetching fails', () => {
+      fetch.mockResponse('Fetch error', { status: 500 });
 
-    //   expect(loggerMock.error).toHaveBeenCalledWith(MOST_READ_FETCH_ERROR, {
-    //     error: 'Error',
-    //   });
-    // });
+      // render(
+      //   <MostReadCanonicalWithContext
+      //     service="nepali"
+      //     endpoint="www.test.bbc.com/nepali/mostread.json"
+      //   />,
+      // );
+
+      expect(nodeLogger.error).toHaveBeenCalledWith(MOST_READ_FETCH_ERROR, {
+        error:
+          '[FetchError: invalid json response body at reason: Unexpected end of JSON input]',
+        url: 'www.test.bbc.com/pidgin/mostread.json',
+      });
+    });
   });
 });
