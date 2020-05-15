@@ -12,10 +12,7 @@ import {
   setStaleLastRecordTimeStamp,
 } from '../utilities/testHelpers';
 import CanonicalMostRead from '.';
-import {
-  MOST_READ_REQUEST_RECEIVED,
-  MOST_READ_FETCH_ERROR,
-} from '#lib/logger.const';
+import { MOST_READ_REQUEST_RECEIVED } from '#lib/logger.const';
 
 /* eslint-disable react/prop-types */
 const MostReadCanonicalWithContext = ({
@@ -216,23 +213,6 @@ describe('MostReadContainerCanonical', () => {
       );
       expect(nodeLogger.info).toHaveBeenCalledWith(MOST_READ_REQUEST_RECEIVED, {
         url: `www.test.bbc.com/pidgin/mostread.json`,
-      });
-    });
-
-    it('should return MOST_READ_FETCH_ERROR when data fetching fails', () => {
-      fetch.mockResponse('Fetch error', { status: 500 });
-
-      // render(
-      //   <MostReadCanonicalWithContext
-      //     service="nepali"
-      //     endpoint="www.test.bbc.com/nepali/mostread.json"
-      //   />,
-      // );
-
-      expect(nodeLogger.error).toHaveBeenCalledWith(MOST_READ_FETCH_ERROR, {
-        error:
-          '[FetchError: invalid json response body at reason: Unexpected end of JSON input]',
-        url: 'www.test.bbc.com/pidgin/mostread.json',
       });
     });
   });

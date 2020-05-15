@@ -27,7 +27,7 @@ import {
   MOST_READ_FETCH_ERROR,
 } from '#lib/logger.const';
 
-const logger = nodeLogger();
+const logger = nodeLogger(__filename);
 
 const MarginWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
