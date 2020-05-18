@@ -1,0 +1,601 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "ትዊተር ሰራሕተኛታቱ ንሓዋሩ ኣብ ገዝኦም ኮይኖም ክሰርሑ ኣፍቂዱ"
+        },
+        "locators": {
+          "assetUri": "/tigrinya/live/news-52628762",
+          "cpsUrn": "urn:bbc:content:assetUri:tigrinya/live/news-52628762",
+          "assetId": "52628762"
+        },
+        "summary": "ሓሙሽተ ሽሕ ሰራሕተኛታት ትዊተር፡ ንዝሓለፉ ክልተ ኣዋርሕ ብምኽንያት ለበዳ ኮሮናቫይረስ ኣብ ገዝኦም ኮይኖም ክሰርሑ ጸኒሖም። ኣብዚ ዕለት ንዝህልው ኣህጉራውን ዓለማውን ምዕባለታት ኮሮናቫይረስ ኣብዚ ገጽ ብቀጥታ ተኸታተሉ።",
+        "timestamp": 1589257426000,
+        "language": "ti",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "LIV",
+        "indexImage": {
+          "id": "112251026",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/F23F/production/_112251026_0d039fb2-20fe-4a41-a538-96006e913414.jpg",
+          "path": "/cpsprodpb/F23F/production/_112251026_0d039fb2-20fe-4a41-a538-96006e913414.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ዕጽዋ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "commentary": {
+          "order": "descending",
+          "assetUUID": "9E6D49B340D942429F8CE14CAAC9AFBC",
+          "channels": {
+            "enhancedmobile": "bbc.cps.asset.52628763_EnhancedMobile",
+            "desktop": "bbc.cps.asset.52628763_HighWeb",
+            "highweb": "bbc.cps.asset.52628763_HighWeb",
+            "mobile": "bbc.cps.asset.52628763_EnhancedMobile"
+          }
+        },
+        "isLive": true,
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "special",
+        "id": "urn:bbc:ares::asset:tigrinya/live/news-52628762",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "መወሸቢ ማእከላት ክልል ትግራይ እንታይ ይመስሉ?"
+        },
+        "locators": {
+          "assetUri": "/tigrinya/news-52644942",
+          "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-52644942",
+          "assetId": "52644942"
+        },
+        "summary": "ኣብ ዝሓለፈ ሰሙን ኣብ ትግራይ ሽዱሽተ ብኮሮናቫይረስ ዝተለኸፉ ሰባት ተረኺቦም'ዮም። እዚ ኣብቲ ክልል ዘጋጥም ለበዳ ከየዕብዮ ይስጋእ።",
+        "timestamp": 1589376743000,
+        "language": "ti",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+            "categoryName": "Explainer"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112251959",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/176AB/production/_112251959_175fe8b2-0448-4f59-ab10-cc0f9d201292.jpg",
+          "path": "/cpsprodpb/176AB/production/_112251959_175fe8b2-0448-4f59-ab10-cc0f9d201292.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ኣብ ዞባ ደቡብ ዝርከብ መወሸቢ ማእከል",
+          "copyrightHolder": "Hagos Gedefay/Twitter",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "special",
+        "id": "urn:bbc:ares::asset:tigrinya/news-52644942",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ኣብ ሊባኖስ ዝነብራ ኢትዮጵያውያን “ኣብ ከቢድ ጸገም ንርከብ” ኢለን"
+        },
+        "locators": {
+          "assetUri": "/tigrinya/news-52652133",
+          "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-52652133",
+          "assetId": "52652133"
+        },
+        "summary": "ሊባኖስ ካብ ሎሚ መዓልቲ ምሸት ጀሚሩ ንተኸታተልቲ ሓሙሽተ መዓልታት ዝኾነ ሰብ ካብ ገዝኡ ከይወጽእ ውሳነ ኣሕሊፋላ። በዚ ምኽንያት ካብ ዕለት ናብ ዕለት ናብራ እናኸበዶም ይመጽእ ከምዘሎ ኣብኡ ዝነብሩ ኢትዮጵያውያን ይዛረቡ",
+        "timestamp": 1589377993000,
+        "language": "ti",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+            "categoryName": "Explainer"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "109241269",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/177D6/production/_109241269_lebanon.jpg",
+          "path": "/cpsprodpb/177D6/production/_109241269_lebanon.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ኣብ ስራሕ ዝተዋፈረት መንእሰይ",
+          "copyrightHolder": "This is Lebanon/FB page",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112258199",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/18371/production/_112258199_lebanon.jpg",
+          "path": "/cpsprodpb/18371/production/_112258199_lebanon.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "ኣብ ስራሕ ዝተዋፈረት መንእሰይ",
+          "copyrightHolder": "This is Lebanon/FB page",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "special",
+        "id": "urn:bbc:ares::asset:tigrinya/news-52652133",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "ኣብ እዋን ዕጽዋ ጾታዊ ጎነጽ ብዕጽፍታት ይውስኽ እሎ"
+        },
+        "locators": {
+          "assetUri": "/tigrinya/news-52597508",
+          "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-52597508",
+          "assetId": "52597508"
+        },
+        "summary": "ኣብ እዋን ዕጽዋ ኮሮናቫይረስ፡ ጾታዊ ጎነጽ ብዕጽፍታት ይውስኽ እሎ",
+        "timestamp": 1589009965000,
+        "language": "ti",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+            "categoryName": "Explainer"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112099872",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/6CFB/production/_112099872_23b239c0-586d-4634-9fc7-5e0427051057.jpg",
+          "path": "/cpsprodpb/6CFB/production/_112099872_23b239c0-586d-4634-9fc7-5e0427051057.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ዕጽዋ",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:tigrinya/news-52597508",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ስግኣት ኣብ ሱዳን ዘለው ኤርትራውያንን ኢትዮጵያውያንን"
+        },
+        "locators": {
+          "assetUri": "/tigrinya/news-52597400",
+          "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-52597400",
+          "assetId": "52597400"
+        },
+        "summary": "እቲ ሕብረሰተብና ብቤተሰብ ተሓጊዙ፣ ብውልቁ ሰሪሑ ግን ብጉጅለ ተኣኪቡ ዝነብር ስለ ዝኾነ፡ ካብታ ኩሉ ነገር ጠጠው ዝበለላ ዕለት ጀሚሩ ብፍላይ ኣብ ናይ ጉልበት ስራሕ ዝሰርሕ ሰብ መዓልታዊ ዝረኽባ እቶት ስለ ዝተዓጸየቶ ካብ መጠን ንላዕሊ ይጽገም እዩ ዘሎ።",
+        "timestamp": 1589011975000,
+        "language": "ti",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+            "categoryName": "Analysis"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112212102",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/4E99/production/_112212102_gettyimages-858410526.jpg",
+          "path": "/cpsprodpb/4E99/production/_112212102_gettyimages-858410526.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ሱዳን",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:tigrinya/news-52597400",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ዓቕሚ መርመራ ኮሮናቫይረስ ሃገራት ኣፍሪቃ እንታይ ይመስል?"
+        },
+        "locators": {
+          "assetUri": "/tigrinya/news-52591558",
+          "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-52591558",
+          "assetId": "52591558"
+        },
+        "summary": "ኣብ ኣፍሪቃ ንኣሽቱ ሃገራት ልዕሊ እተን ዓበይቲ ሃገራት'የን ኣብ መስርሕ መርመራ ዓቢ ዓወት ዘመዝግባ ዘለዋ።",
+        "timestamp": 1588949830000,
+        "language": "ti",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+            "categoryName": "Explainer"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112076773",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/9387/production/_112076773_nigeria_swab.jpg",
+          "path": "/cpsprodpb/9387/production/_112076773_nigeria_swab.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "መርመራ ኣብ ናይጄሪያ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:tigrinya/news-52591558",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ኮሮናቫይረስ፡ 'ናይ ሎሚ ኣንበጣ ናይ ሎሚ . . . ፍሉያት'ዮም'",
+          "overtyped": "ኮሮናቫይረስ፡ 'ናይ ሎሚ ኣንበጣ፡ ናይ ሎሚ . . . ፍሉያት'ዮም'  "
+        },
+        "locators": {
+          "assetUri": "/tigrinya/news-52533575",
+          "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-52533575",
+          "assetId": "52533575"
+        },
+        "summary": "እዚ ኣብ ልዕሊ ኣእኻልን መሃጋጫ ጥሪትን ዕንወት ዘውርድ ዘሎ ወራር ዕስለ ኣንበጣ ኣብ ዝዓለፈ ርብዒ ዘመን ዘይተርኣየ ምዃኑ ሰብ ሞያ ይገልጹ። ብመሰረት መጽናዕቲ ውድብ መግብን ሕርሻን (ፋኦ) ሓደ ዕስለ ኣንበጣ፡ ናይ ዓመት መግቢ ናይ 2,500 ሰባት ክበልዕ ይኽእል።",
+        "timestamp": 1588916222000,
+        "language": "ti",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112106492",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/7314/production/_112106492_gettyimages-1205776132.jpg",
+          "path": "/cpsprodpb/7314/production/_112106492_gettyimages-1205776132.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ኣንበጣ በረኻ",
+          "caption": "ውድብ ሕቡራት ሃገራት፡ ኣብዚ ዓመት ተኸሲቱ ዘሎ ወራር ኣንበጣ ኣብ ልዕሊ ዘራእቲ ከቢድ ሓደጋ ከም ዘብጽሕን ውሕስና መግቢ ብሚሊዮን ዝቑጸሩ ሰባት ከም ዝሃስን የጠንቅቕ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:tigrinya/news-52533575",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ካብ ዘሕዝን ገጻት ኮሮናቫይረስ"
+        },
+        "locators": {
+          "assetUri": "/tigrinya/news-52589265",
+          "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-52589265",
+          "assetId": "52589265"
+        },
+        "summary": "እቶም በቲ ሓደጋ ዝሞቱ ሰባት፡ ናብ ዓዶም ክኸዱ ኣንቂሎም ናብ መጸበዪ ባቡር ይኸዱ ኣብ ዝነበሩሉ እዋን፡ ብድቃስ ተሳዒሮም ኣብቲ መገዲ ከም ዝደቀሱ ይግለጽ።",
+        "timestamp": 1589003969000,
+        "language": "ti",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112212064",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/B3C5/production/_112212064_gettyimages-1023273132.jpg",
+          "path": "/cpsprodpb/B3C5/production/_112212064_gettyimages-1023273132.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ህንዲ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:tigrinya/news-52589265",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "“ኢትዮጵያ ዘጓንፋ ዘሎ ሓጓፍ፡ ሕገ-መንግስታዊ ጥራሕ ዘይኮነስ ፖለቲካዊ ቅልውላው እዩ” ፕሮፌሰር ትሮንቮል"
+        },
+        "locators": {
+          "assetUri": "/tigrinya/news-52570048",
+          "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-52570048",
+          "assetId": "52570048"
+        },
+        "summary": "ኣብዚ ኣብ ወርሒ ጉንቦት ክካየድ ዝነበሮ መረጻ ኢትዮጵያ፡ ኣብ መወዳእታ ወርሒ ነሓሰ ክካየድ እዩ ትልሚ ተታሒዙዎ ነይሩ። ሕዚ'ውን፡ ብሰንኪ ኮቪድ 19፡ ቦርድ መረጻ እታ ሃገር እቲ ሃገራዊ መረጻ ንዘይተፈለጠ እዋን ክናዋሕ ወሲኑ።",
+        "timestamp": 1588835453000,
+        "language": "ti",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+            "categoryName": "Analysis"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            },
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112176148",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/148C7/production/_112176148_whatsappimage2020-05-07at09.35.49.jpg",
+          "path": "/cpsprodpb/148C7/production/_112176148_whatsappimage2020-05-07at09.35.49.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "መረፃ ኢትዮጵያ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112176323",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/7E6F/production/_112176323_whatsappimage2020-05-07at09.35.49.jpg",
+          "path": "/cpsprodpb/7E6F/production/_112176323_whatsappimage2020-05-07at09.35.49.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "መረፃ ኢትዮጵያ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:tigrinya/news-52570048",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ባህርይን ጠባይን ስርዓት ኤርትራ ዘንቀሎ ቅልውላው"
+        },
+        "locators": {
+          "assetUri": "/tigrinya/news-52452719",
+          "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-52452719",
+          "assetId": "52452719"
+        },
+        "summary": "ሃገራዊ ባይቶ እታ ሃገር፡ ድሕሪ እቲ ንጉጅለ-15 ኪኹንን ኣብ ሕዳር 2002 ዘካየዶ ኣኼባ ዳግማይ ኣይተጋብአን። ድሕሪ ዕርቀ ሰላም ኢትዮ ኤርትራ ካቢነ ምኒስተራት ንቡርን ስሩዕን ኣኼብኡ ኣቋሪጹ እዩ።",
+        "timestamp": 1588139840000,
+        "language": "ti",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+            "categoryName": "Analysis"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112011147",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1217F/production/_112011147_gettyimages-1059873998.jpg",
+          "path": "/cpsprodpb/1217F/production/_112011147_gettyimages-1059873998.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ፕረዚደንት ኢሰይያስ ምስ ቀዳማይ ሚኒስተር ኢትዮጵያ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112018039",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/16B99/production/_112018039_gettyimages-1059873998.jpg",
+          "path": "/cpsprodpb/16B99/production/_112018039_gettyimages-1059873998.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "ፕረዚደንት ኢሰይያስ ምስ ቀዳማይ ሚኒስተር ኢትዮጵያ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:tigrinya/news-52452719",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ዓለምለኻዊ ማዕከን ገንዘብ ንኢትዮጵያ 411 ሚልዮን ዶላር ከምዝህባ ኣፍሊጡ"
+        },
+        "locators": {
+          "assetUri": "/tigrinya/52498085",
+          "cpsUrn": "urn:bbc:content:assetUri:tigrinya/52498085",
+          "assetId": "52498085"
+        },
+        "summary": "ድምር ዕዳ ኢትዮጵያ 52.57 ቢልዮን ዶላር ከም ዝበጽሕ ሚንስትሪ ገንዘብ ኢትዮጵያ ኣብ 2019 ኣብ ዘውጽኦ መግለጺ ሓቢሩ ነይሩ።",
+        "timestamp": 1588320301000,
+        "language": "ti",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112055430",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/0D7F/production/_112055430_gettyimages-170550403.jpg",
+          "path": "/cpsprodpb/0D7F/production/_112055430_gettyimages-170550403.jpg",
+          "height": 360,
+          "width": 640,
+          "altText": "ዓለምለኻዊ ማዕከን ገንዘብ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "ዜና",
+          "uri": "/tigrinya/front_page",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:tigrinya/52498085",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ኮሮናቫይረስ: ንደቃ እምኒ ከተብስል ዝተርኣየት ኣደ"
+        },
+        "locators": {
+          "assetUri": "/tigrinya/news-52499509",
+          "cpsUrn": "urn:bbc:content:assetUri:tigrinya/news-52499509",
+          "assetId": "52499509"
+        },
+        "summary": "\"የታልሎም ምህላወይ ከም ዝፈለጡ ክነግሩኒ ጀሚሮም፤ ግና ካልእ ክገብሮ ዝኽእል ነገር ኣይነበረን\" ኢላ።",
+        "timestamp": 1588318730000,
+        "language": "ti",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112052586",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/10BAD/production/_112052586_peninahbahatikitsao.jpg",
+          "path": "/cpsprodpb/10BAD/production/_112052586_peninahbahatikitsao.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ፐኒና ባካቲ ኪሳዎ",
+          "copyrightHolder": "Caroline Mwawasi/TUKO",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:tigrinya/news-52499509",
+        "type": "cps"
+      }
+    ]
+  }
