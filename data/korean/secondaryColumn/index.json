@@ -1,0 +1,594 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "이태원 클럽발 코로나19 3차 감염 의심사례도 발생"
+        },
+        "locators": {
+          "assetUri": "/korean/news-52645316",
+          "cpsUrn": "urn:bbc:content:assetUri:korean/news-52645316",
+          "assetId": "52645316"
+        },
+        "summary": "서울과 인천에서는 3차 감염 의심 사례가 나왔다.",
+        "timestamp": 1589356204000,
+        "language": "ko",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112252276",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/10699/production/_112252276_incheon-covid19test.jpg",
+          "path": "/cpsprodpb/10699/production/_112252276_incheon-covid19test.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "인천 미추홀구청에 마련된 코로나19 선별진료소에서 한 어린이가 코로나19 검사를 받고 있다",
+          "caption": "인천 미추홀구청에 마련된 코로나19 선별진료소에서 한 어린이가 코로나19 검사를 받고 있다",
+          "copyrightHolder": "뉴스1",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:korean/news-52645316",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "영국, 코로나19 실제 사망자 5만명에 가까워"
+        },
+        "locators": {
+          "assetUri": "/korean/international-52643389",
+          "cpsUrn": "urn:bbc:content:assetUri:korean/international-52643389",
+          "assetId": "52643389"
+        },
+        "summary": "영국에서 코로나19로 인해 사망한 사람의 수는 매일 공표되는 수치의 두 배에 가깝다.",
+        "timestamp": 1589339374000,
+        "language": "ko",
+        "byline": {
+          "name": "  로버트 커프",
+          "title": "BBC 통계 책임자",
+          "persons": [
+            {
+              "name": "윤인경",
+              "function": "BBC 코리아"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+            "categoryName": "Analysis"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111698013",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/7971/production/_111698013_gettyimages-1214095767.jpg",
+          "path": "/cpsprodpb/7971/production/_111698013_gettyimages-1214095767.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "바이러스 그래픽",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:korean/international-52643389",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "사회적 거리두기 위해 등장한 로봇"
+        },
+        "locators": {
+          "assetUri": "/korean/news-52644585",
+          "cpsUrn": "urn:bbc:content:assetUri:korean/news-52644585",
+          "assetId": "52644585"
+        },
+        "summary": "로봇에는 카메라와 확성기가 부착돼 있으며, 사람들에게 거리를 유지하라고 안내한다.",
+        "timestamp": 1589351275000,
+        "language": "ko",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "MAP",
+        "media": {
+          "id": "p08d0czd",
+          "subType": "clip",
+          "format": "video",
+          "title": "사회적 거리두기 위해 등장한 로봇",
+          "synopses": {
+            "short": "사회적 거리두기를 위해 로봇도 등장했다."
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08d0d2v.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "사회적 거리두기를 위해 로봇도 등장했다.",
+          "versions": [
+            {
+              "versionId": "p08d0czh",
+              "types": [
+                "Original"
+              ],
+              "duration": 80,
+              "durationISO8601": "PT1M20S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableFrom": 1589350643000
+            }
+          ],
+          "imageCopyright": "BBC",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "112251675",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/E10F/production/_112251675_p08d0d2v.jpg",
+          "path": "/cpsprodpb/E10F/production/_112251675_p08d0d2v.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Keyframe #1",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:korean/news-52644585",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "클럽발 코로나19 감염 확산...등교일 일주일씩 추가 연기"
+        },
+        "locators": {
+          "assetUri": "/korean/news-52614790",
+          "cpsUrn": "urn:bbc:content:assetUri:korean/news-52614790",
+          "assetId": "52614790"
+        },
+        "summary": "서울시와 인천시 교육청 모두 예정된 등교 수업 운영방안 발표 일정을 연기했다.",
+        "timestamp": 1589186966000,
+        "language": "ko",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112226643",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/8766/production/_112226643_origin_.jpg",
+          "path": "/cpsprodpb/8766/production/_112226643_origin_.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "11일 서울 송파구 고등학교의 텅 빈 고3 교실 모습",
+          "caption": "11일 서울 송파구 고등학교의 텅 빈 고3 교실 모습",
+          "copyrightHolder": "뉴스1",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:korean/news-52614790",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "긴급재난지원금 포인트 총 정리, '나는 얼마나 받을 수 있을까?'"
+        },
+        "locators": {
+          "assetUri": "/korean/52613003",
+          "cpsUrn": "urn:bbc:content:assetUri:korean/52613003",
+          "assetId": "52613003"
+        },
+        "summary": "오늘 11일부터 오전 7시부터 정부 긴급재난지원금의 신용카드, 체크카드 포인트 지급이 시작됐다. 나는 어떻게, 어디서, 얼마나 받을 수 있을까?",
+        "timestamp": 1589179864000,
+        "language": "ko",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "98667758",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/14F10/production/_98667758_976549gettyimages-641051056.jpg",
+          "path": "/cpsprodpb/14F10/production/_98667758_976549gettyimages-641051056.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "A pile of credit cards",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "홈페이지",
+          "uri": "/korean/front_page",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:korean/52613003",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "독일에서 봉쇄를 완화하자 코로나19 감염률이 늘었다"
+        },
+        "locators": {
+          "assetUri": "/korean/news-52612995",
+          "cpsUrn": "urn:bbc:content:assetUri:korean/news-52612995",
+          "assetId": "52612995"
+        },
+        "summary": "앙겔라 메르켈 총리는 지난 6일 독일 16개주 지사들과 회의를 가진 후 전국적인 봉쇄의 전반적인 완화를 발표했다.",
+        "timestamp": 1589167016000,
+        "language": "ko",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112220086",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/109A2/production/_112220086_061173788.jpg",
+          "path": "/cpsprodpb/109A2/production/_112220086_061173788.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Staff at a drive-through testing centre in Berlin",
+          "caption": "Germany has introduced a mass testing regime, including drive-through centres like this one in Berlin",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:korean/news-52612995",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "인도-중국 군인들 국경 지역에서 난투극"
+        },
+        "locators": {
+          "assetUri": "/korean/news-52612985",
+          "cpsUrn": "urn:bbc:content:assetUri:korean/news-52612985",
+          "assetId": "52612985"
+        },
+        "summary": "양국은 3400km에 이르는 공유 국경을 두고 분쟁하고 있다.",
+        "timestamp": 1589169474000,
+        "language": "ko",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112220090",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/232A/production/_112220090_gettyimages-82077247.jpg",
+          "path": "/cpsprodpb/232A/production/_112220090_gettyimages-82077247.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "중국과 인도는 과거부터 국경을 두고 분쟁해왔다",
+          "caption": "중국과 인도는 과거부터 국경을 두고 분쟁해왔다",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:korean/news-52612985",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "전 세계 코로나19 확진자 400만 명 넘었다"
+        },
+        "locators": {
+          "assetUri": "/korean/news-52540746",
+          "cpsUrn": "urn:bbc:content:assetUri:korean/news-52540746",
+          "assetId": "52540746"
+        },
+        "summary": "신종 코로나바이러스 감염증(코로나19) 확진자가 전 세계적으로 400만 명을 넘어섰다.",
+        "timestamp": 1589077372000,
+        "language": "ko",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112217272",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/6A87/production/_112217272_gettyimages-1223498200-594x594.jpg",
+          "path": "/cpsprodpb/6A87/production/_112217272_gettyimages-1223498200-594x594.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "전문가들은 검사율이 낮은 국가가 많아 실제 확진자 수는 이보다 높을 것이라고 경고했다.",
+          "caption": "전문가들은 검사율이 낮은 국가가 많아 실제 확진자 수는 이보다 높을 것이라고 경고했다.",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:korean/news-52540746",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "'코로나19 낙인에 게이 낙인' 이태원 클럽 기사에 두번 우는 성소수자들"
+        },
+        "locators": {
+          "assetUri": "/korean/news-52586331",
+          "cpsUrn": "urn:bbc:content:assetUri:korean/news-52586331",
+          "assetId": "52586331"
+        },
+        "summary": "확진자를 \"동성애 성향\"이라고 표현하면서 코로나19 확진자의 성 정체성에 대한 추측이 난무하는 일이 벌어졌다.",
+        "timestamp": 1588928981000,
+        "language": "ko",
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112203626",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/F4A6/production/_112203626_origin_1929.jpg",
+          "path": "/cpsprodpb/F4A6/production/_112203626_origin_1929.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "이태원 클럽",
+          "caption": "용산구의 한 클럽에 코로나19 확진 환자가 다녀가 지역 내 집단감염이 우려된다",
+          "copyrightHolder": "NEWS1",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:korean/news-52586331",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "자신이 코로나19 확진자라는 걸 대통령의 TV 발표로 알게 된 여성"
+        },
+        "locators": {
+          "assetUri": "/korean/features-52555004",
+          "cpsUrn": "urn:bbc:content:assetUri:korean/features-52555004",
+          "assetId": "52555004"
+        },
+        "summary": "시타 트야스타미는 대통령의 발표로 인도네시아의 코로나19 상징 인물이 돼버렸다.",
+        "timestamp": 1588824560000,
+        "language": "ko",
+        "byline": {
+          "name": "조슈아 니벳",
+          "title": "BBC News",
+          "persons": [
+            {
+              "name": "Joshua Nevett",
+              "function": "BBC News"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112106648",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/14AB4/production/_112106648_indonesiacaseoneindex.jpg",
+          "path": "/cpsprodpb/14AB4/production/_112106648_indonesiacaseoneindex.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Sita Tyasutami",
+          "caption": "Sita Tyasutami was in hospital when the Indonesian president announced her diagnosis",
+          "copyrightHolder": "Ardito Kodijat",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:korean/features-52555004",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "'이사 간다면? 8월까지 다 못쓰면?' 긴급재난지원금 Q&A"
+        },
+        "locators": {
+          "assetUri": "/korean/news-52526903",
+          "cpsUrn": "urn:bbc:content:assetUri:korean/news-52526903",
+          "assetId": "52526903"
+        },
+        "summary": "지자체 재정에 따라 지급 금액이 다른 지역이 있다.",
+        "timestamp": 1588575836000,
+        "language": "ko",
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112101519",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/16576/production/_112101519_origin_280.jpg",
+          "path": "/cpsprodpb/16576/production/_112101519_origin_280.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "긴급재난지원금 안내 게시물",
+          "copyrightHolder": "뉴스1",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:korean/news-52526903",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "총각엄마와 10명의 아이들의 좌충우돌 온라인 개학 일기"
+        },
+        "locators": {
+          "assetUri": "/korean/news-52357926",
+          "cpsUrn": "urn:bbc:content:assetUri:korean/news-52357926",
+          "assetId": "52357926"
+        },
+        "summary": "북한에서 온 10명의 아이들과 함께 살고 있는 총각엄마 김태훈 씨의 바쁜 하루를 들여다봤다.",
+        "timestamp": 1588427563000,
+        "language": "ko",
+        "byline": {
+          "name": "이윤녕",
+          "title": "BBC 코리아",
+          "persons": [
+            {
+              "name": "윤인경",
+              "function": "BBC 코리아"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112091660",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/19DB/production/_112091660_kakaotalk_20200420_185442646_06.jpg",
+          "path": "/cpsprodpb/19DB/production/_112091660_kakaotalk_20200420_185442646_06.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": ".",
+          "copyrightHolder": "김태훈 씨 제공",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112091662",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/67FB/production/_112091662_kakaotalk_20200420_185442646_06.jpg",
+          "path": "/cpsprodpb/67FB/production/_112091662_kakaotalk_20200420_185442646_06.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": ".",
+          "copyrightHolder": "김태훈 씨 제공",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:korean/news-52357926",
+        "type": "cps"
+      }
+    ]
+  }

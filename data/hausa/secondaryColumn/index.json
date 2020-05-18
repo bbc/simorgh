@@ -1,0 +1,221 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "Wane ne sabon Shugaban Ma'aikatan fadar Shugaba Buhari?"
+        },
+        "locators": {
+          "assetUri": "/hausa/labarai-52646217",
+          "cpsUrn": "urn:bbc:content:assetUri:hausa/labarai-52646217",
+          "assetId": "52646217"
+        },
+        "summary": "Shugaba Buhari ya nada Ibrahim Gambari ne bayan kusan wata guda da rasuwar Malam Abba Kyari",
+        "timestamp": 1589367194000,
+        "language": "ha",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112246680",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/21D8/production/_112246680_gettyimages-136059594.jpg",
+          "path": "/cpsprodpb/21D8/production/_112246680_gettyimages-136059594.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Ibrahim Gambari",
+          "caption": "Prof. Gambari na ogbonge scholar-diplomat wey don hold top-top positions for United Nations",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:hausa/labarai-52646217",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "'Mutum 20,000 ka iya kamuwa da korona a Jigawa'"
+        },
+        "locators": {
+          "assetUri": "/hausa/live/labarai-52635545",
+          "cpsUrn": "urn:bbc:content:assetUri:hausa/live/labarai-52635545",
+          "assetId": "52635545"
+        },
+        "summary": "Wannan shafi na kawo muku bayanai da rahotanni kai tsaye kuma da dumi-duminsu dangane da annobar korona da ma wasu karin batutuwa da ke wakana a fadin duniya.",
+        "timestamp": 1589356878000,
+        "language": "ha",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "LIV",
+        "indexImage": {
+          "id": "112248500",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/0248/production/_112248500_sanka.jpg",
+          "path": "/cpsprodpb/0248/production/_112248500_sanka.jpg",
+          "height": 351,
+          "width": 624,
+          "altText": "Badaru",
+          "copyrightHolder": "Twitter/Badaru",
+          "type": "image"
+        },
+        "commentary": {
+          "order": "descending",
+          "assetUUID": "87534A9650A15843BAD47B05F139C484",
+          "channels": {
+            "enhancedmobile": "bbc.cps.asset.52635546_EnhancedMobile",
+            "desktop": "bbc.cps.asset.52635546_HighWeb",
+            "highweb": "bbc.cps.asset.52635546_HighWeb",
+            "mobile": "bbc.cps.asset.52635546_EnhancedMobile"
+          }
+        },
+        "isLive": true,
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:hausa/live/labarai-52635545",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Kananan yara kusan 1000 ka iya mutuwa kullum a Najeriya - UNICEF"
+        },
+        "locators": {
+          "assetUri": "/hausa/labarai-52647290",
+          "cpsUrn": "urn:bbc:content:assetUri:hausa/labarai-52647290",
+          "assetId": "52647290"
+        },
+        "summary": "Asusun Kula da Kananan Yara na Majalisar Dinkin Duniya, UNICEF ya yi gargadin cewa yara 'yan kasa da shekara biyar ka iya mutuwa saboda yadda cutar korona ke kawo tsaiko ga harkar asibitoci.",
+        "timestamp": 1589374470000,
+        "language": "ha",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112257276",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/106CB/production/_112257276_jariri2.jpg",
+          "path": "/cpsprodpb/106CB/production/_112257276_jariri2.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Jariri",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:hausa/labarai-52647290",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "Minti Daya Da BBC Na Rana 13/05/2020"
+        },
+        "locators": {
+          "assetUri": "/hausa/labarai-52626236",
+          "cpsUrn": "urn:bbc:content:assetUri:hausa/labarai-52626236",
+          "assetId": "52626236"
+        },
+        "summary": "Minti Daya Da BBC Na Rana 13/05/2020",
+        "timestamp": 1589314763000,
+        "language": "ha",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "MAP",
+        "media": {
+          "id": "p08d114c",
+          "subType": "clip",
+          "format": "audio",
+          "title": "Minti Daya Da BBC Na Rana 13/05/2020",
+          "synopses": {
+            "short": "Minti Daya Da BBC Na Rana 13/05/2020",
+            "long": "Minti Daya Da BBC Na Rana 13/05/2020",
+            "medium": "Minti Daya Da BBC Na Rana 13/05/2020"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02y5lv6.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "Minti Daya Da BBC Na Rana 13/05/2020",
+          "versions": [
+            {
+              "versionId": "p08d114m",
+              "types": [
+                "Original"
+              ],
+              "duration": 64,
+              "durationISO8601": "PT1M4S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableFrom": 1589366149000
+            }
+          ],
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "112254809",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/162DD/production/_112254809_p02y5lv6.jpg",
+          "path": "/cpsprodpb/162DD/production/_112254809_p02y5lv6.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "ws_programme_1024.jpg",
+          "copyrightHolder": "ws_programme_1024.jpg",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:hausa/labarai-52626236",
+        "type": "cps"
+      }
+    ]
+  }

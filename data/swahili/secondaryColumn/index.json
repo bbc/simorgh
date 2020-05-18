@@ -1,0 +1,568 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "Madereva 25 kutoka Tanzania wazuiwa kuingia Kenya baada ya kukutwa na corona"
+        },
+        "locators": {
+          "assetUri": "/swahili/habari-52646916",
+          "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-52646916",
+          "assetId": "52646916"
+        },
+        "summary": "Katika mkutano wake na wanahabari naibu waziri wa Afya Rashid Aman amesema kwamba maabara 2 za kuhama hama zitazinduliwa katika mpaka wa Namanga ili kuimarisha upimaji wa wagonjwa wapya.",
+        "timestamp": 1589377413000,
+        "language": "sw",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "97722846",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/FD36/production/_97722846_b464b65c-eaac-418d-acd3-6b97bf8ce4d3.jpg",
+          "path": "/cpsprodpb/FD36/production/_97722846_b464b65c-eaac-418d-acd3-6b97bf8ce4d3.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "HABARI ZA HIVI PUNDE",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": true,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:swahili/habari-52646916",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Ubalozi wa Marekani waonya juu ya hatari ya corona Tanzania"
+        },
+        "locators": {
+          "assetUri": "/swahili/52643536",
+          "cpsUrn": "urn:bbc:content:assetUri:swahili/52643536",
+          "assetId": "52643536"
+        },
+        "summary": "Hatari ya kupata maambukizi ya Corona jijini Dar es Salaam ni kubwa sana. Licha ya kwamba taarifa hazitolewi mara kwa mara, ubalozi wa Marekani Tanzania waeleza.",
+        "timestamp": 1589361572000,
+        "language": "sw",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112255052",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/61DF/production/_112255052_usflag.png",
+          "path": "/cpsprodpb/61DF/production/_112255052_usflag.png",
+          "height": 482,
+          "width": 856,
+          "altText": "Bendera ya Tanzania",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "section": {
+          "subType": "IDX",
+          "name": "Swahili",
+          "uri": "/swahili/front_page",
+          "type": "simple"
+        },
+        "overtypedSummary": "Ubalozi wa Marekani nchini Tanzania umewaonya raia wake waishio nchini humo kuchukua tahadhari juu ya hatari ya maambukizo ya corona. ",
+        "id": "urn:bbc:ares::asset:swahili/52643536",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Wahubiri wanaoamini hakuna virusi vya corona"
+        },
+        "locators": {
+          "assetUri": "/swahili/habari-52646912",
+          "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-52646912",
+          "assetId": "52646912"
+        },
+        "summary": "Kuanzia Kusini hadi Amerika Kaskazini makundi mbalimbali ya Kievanjelisti yalikuwa yanaongoza kati ya yale yanayokiuka hatua ya kutokaribiana kama njia ya kukabiliana na janga la corona ambalo linaendelea kusababisha maafa makubwa katika bara hilo.",
+        "timestamp": 1589374454000,
+        "language": "sw",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112256729",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/16A5D/production/_112256729_124a84b6-84fe-49ac-83a8-65d100896e6c.jpg",
+          "path": "/cpsprodpb/16A5D/production/_112256729_124a84b6-84fe-49ac-83a8-65d100896e6c.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Ibada ya Evangelisti katika Santo Domingo wakati wa wiki takatifu",
+          "caption": "Ibada ya Evangelisti katika Santo Domingo wakati wa wiki takatifu",
+          "copyrightHolder": "AFP",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:swahili/habari-52646912",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "Kwa nini mfungwa huyu ameshindwa kurudi nyumbani baada ya kuachiliwa?"
+        },
+        "locators": {
+          "assetUri": "/swahili/habari-52618831",
+          "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-52618831",
+          "assetId": "52618831"
+        },
+        "summary": "Arif (ambaye sio jina lake halisi) alipoachiliwa huru kutoka gerezani magharibi mwa India machi 31, alikuwa na hamu sana ya kurejea nyumbani.",
+        "timestamp": 1589197562000,
+        "language": "sw",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112227890",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/2690/production/_112227890_bdbbc93d-ebc9-401b-bfdc-46e18a63e97c.jpg",
+          "path": "/cpsprodpb/2690/production/_112227890_bdbbc93d-ebc9-401b-bfdc-46e18a63e97c.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "zaidi ya wafungwa 20,000 wameachiliwa huru ili kupunguza idadi yao",
+          "caption": "zaidi ya wafungwa 20,000 wameachiliwa huru ili kupunguza idadi yao",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:swahili/habari-52618831",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Profesa kutoka China aliyekuwa akitafiti corona auawa Marekani"
+        },
+        "locators": {
+          "assetUri": "/swahili/habari-52570947",
+          "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-52570947",
+          "assetId": "52570947"
+        },
+        "summary": "Polisi nchini Marekani wanadai huenda mauaji hayo ni ya kimapenzi.",
+        "timestamp": 1588836019000,
+        "language": "sw",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112174300",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/015B/production/_112174300_bingliu2.jpg",
+          "path": "/cpsprodpb/015B/production/_112174300_bingliu2.jpg",
+          "height": 309,
+          "width": 549,
+          "altText": "Bing Liu",
+          "copyrightHolder": "University of Pittsburgh",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "overtypedSummary": " ",
+        "id": "urn:bbc:ares::asset:swahili/habari-52570947",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "'Ilinilazimu nianze kuuza kila kitu nilichokuwa nacho'Angela alihadaiwa kimapenzi",
+          "overtyped": " 'Ilinilazimu nianze kuuza kila kitu nilichokuwa nacho'Angela alihadaiwa kimapenzi"
+        },
+        "locators": {
+          "assetUri": "/swahili/habari-52548854",
+          "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-52548854",
+          "assetId": "52548854"
+        },
+        "summary": "Alikua na umri wa chini kidogo ya miaka 20 alipokutana na mwanaume ambaye anasema alimpenda sana kiasi kwamba, alihisi kuwa huyo ndiye angelikua mumewe wa kuishi nae maisha yake yote hapa duniani.",
+        "timestamp": 1588733836000,
+        "language": "sw",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112159382",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/6EEB/production/_112159382_d075d589-d203-4247-8992-d0b212ac6a07.jpg",
+          "path": "/cpsprodpb/6EEB/production/_112159382_d075d589-d203-4247-8992-d0b212ac6a07.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Maisha aliyoyapitia Angela Nzilani yamemfanya awe mtoa ushauri nasaha kwa watu ambao wako kwenye mahusiano ya kimapenzi.",
+          "caption": "Maisha aliyoyapitia Angela Nzilani yamemfanya awe mtoa ushauri nasaha kwa watu ambao wako kwenye mahusiano ya kimapenzi.",
+          "copyrightHolder": "Angela Nzilani",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "overtypedSummary": " ",
+        "id": "urn:bbc:ares::asset:swahili/habari-52548854",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Jinsi Hitler alivyokufa miaka 75 iliopita na hatma ya mwili wake"
+        },
+        "locators": {
+          "assetUri": "/swahili/habari-52522060",
+          "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-52522060",
+          "assetId": "52522060"
+        },
+        "summary": "Mei 1 1945, taarifa za za kifo cha Hitler zilivyoshangaza dunian na kuonekana kutamatisha Vita ya Pili ya Dunia",
+        "timestamp": 1588519263000,
+        "language": "sw",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111984161",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/3F14/production/_111984161_gettyimages-515168000.jpg",
+          "path": "/cpsprodpb/3F14/production/_111984161_gettyimages-515168000.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Adolf Hitler",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:swahili/habari-52522060",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Mama apikia watoto wake mawe kwa kukosa chakula"
+        },
+        "locators": {
+          "assetUri": "/swahili/habari-52488225",
+          "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-52488225",
+          "assetId": "52488225"
+        },
+        "summary": "Mjane mmoja nchini Kenya amepikia watoto wake mawe kuwadanganya kwamba chakula kinaiva.",
+        "timestamp": 1588245196000,
+        "language": "sw",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112046073",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/90C8/production/_112046073_cooking.png",
+          "path": "/cpsprodpb/90C8/production/_112046073_cooking.png",
+          "height": 549,
+          "width": 976,
+          "altText": "Mapishi yakiendelea",
+          "caption": "Mapishi yakiendelea",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "overtypedSummary": "  ",
+        "id": "urn:bbc:ares::asset:swahili/habari-52488225",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Changamoto za wanawake wanaoishi na ulemavu wa ngozi"
+        },
+        "locators": {
+          "assetUri": "/swahili/habari-52467090",
+          "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-52467090",
+          "assetId": "52467090"
+        },
+        "summary": "Ulemavu wa ngozi husababishwa na ngozi kushindwa kutengeneza viini vya melanin vinavyohusika kwa kiasi kikubwa na utengenezaji wa rangi ya ngozi ya kila binadamu",
+        "timestamp": 1588132442000,
+        "language": "sw",
+        "byline": {
+          "name": "Anne Ngugi",
+          "title": "BBC Swahili",
+          "persons": [
+            {
+              "name": "Anne Ngugi",
+              "function": "BBC Swahili"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112017310",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/055B/production/_112017310_83e8dbb7-73d5-4d3d-80b0-a7a42c6de03c.jpg",
+          "path": "/cpsprodpb/055B/production/_112017310_83e8dbb7-73d5-4d3d-80b0-a7a42c6de03c.jpg",
+          "height": 608,
+          "width": 1080,
+          "altText": "Maria Nzomo anayeishi na tatizo la ulemavu wa ngozi",
+          "copyrightHolder": "Maria Nzomo",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "overtypedSummary": " ",
+        "id": "urn:bbc:ares::asset:swahili/habari-52467090",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Kwa nini ugonjwa wa corona ni hatari kwa wanaume zaidi ya wanawake?"
+        },
+        "locators": {
+          "assetUri": "/swahili/habari-52467316",
+          "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-52467316",
+          "assetId": "52467316"
+        },
+        "summary": "Wanaume wengi wamekutwa na ugonjwa huo zaidi na wanaonekana kupatwa na maafa mabaya.",
+        "timestamp": 1588146838000,
+        "language": "sw",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112018932",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/5DAD/production/_112018932_4649e90d-2685-4c3e-aff0-9a64cb0a3384.jpg",
+          "path": "/cpsprodpb/5DAD/production/_112018932_4649e90d-2685-4c3e-aff0-9a64cb0a3384.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Harakati za kuwapima Covid-19 raia wa Afrika kusini",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "overtypedSummary": " ",
+        "id": "urn:bbc:ares::asset:swahili/habari-52467316",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Mwanamume anayezika watu waliokufa kwa corona"
+        },
+        "locators": {
+          "assetUri": "/swahili/habari-52470950",
+          "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-52470950",
+          "assetId": "52470950"
+        },
+        "summary": "Abdul Malabari amechukua jukumu la kuzika watu waliokufa kwa virusi vya corona nchini India",
+        "timestamp": 1588162022000,
+        "language": "sw",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111975708",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/13B75/production/_111975708_2.jpg",
+          "path": "/cpsprodpb/13B75/production/_111975708_2.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Health workers in PPE suits and family members perform funeral prayers before the burial of a coronavirus disease in Delhi.",
+          "caption": "Mara nyingi wahudumu wa afya huwa wanahudhuria mazishi hayo kama hatua ya kuzia maambukizi ya corona",
+          "copyrightHolder": "Hindustan Times",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "overtypedSummary": " ",
+        "id": "urn:bbc:ares::asset:swahili/habari-52470950",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Jinsi corona 'inavyomfaidisha' mtu tajiri zaidi duniani"
+        },
+        "locators": {
+          "assetUri": "/swahili/habari-52350488",
+          "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-52350488",
+          "assetId": "52350488"
+        },
+        "summary": "Matajiri 500 duniani wamepoteza kiasi cha dola bilioni 553 kwa mwaka huu mpaka hivi sasa.",
+        "timestamp": 1587366517000,
+        "language": "sw",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111788008",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/138D8/production/_111788008_bezos.jpg",
+          "path": "/cpsprodpb/138D8/production/_111788008_bezos.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Amazon founder and chief executive Jeff Bezos",
+          "caption": "Amazon founder and chief executive Jeff Bezos",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "overtypedSummary": " ",
+        "id": "urn:bbc:ares::asset:swahili/habari-52350488",
+        "type": "cps"
+      }
+    ]
+  }
