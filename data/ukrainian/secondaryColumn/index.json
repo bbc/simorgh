@@ -1,0 +1,604 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "Світовій економіці загрожує криза століття, попередив МВФ. Але все набагато гірше"
+        },
+        "locators": {
+          "assetUri": "/ukrainian/features-52647088",
+          "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-52647088",
+          "assetId": "52647088"
+        },
+        "summary": "Коронавірус придушив світову економіку і коштуватиме їй 9 трлн доларів, підрахував нещодавно МВФ. Через місяць фонд визнав, що помилився. З'ясувалося, що все набагато серйозніше: коронакриза лише набирає обертів. Але є й хороші новини.",
+        "timestamp": 1589373537000,
+        "language": "uk",
+        "byline": {
+          "name": "Олексій Калмиков",
+          "title": "ВВС",
+          "persons": [
+            {
+              "name": "Алексей Калмыков",
+              "function": "Би-би-си"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112250121",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/2F49/production/_112250121_gettyimages-1212461062.jpg",
+          "path": "/cpsprodpb/2F49/production/_112250121_gettyimages-1212461062.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Манекен в маске у магазина в Кельне",
+          "caption": "Живым здесь не место. Коронавирус распугал потребителей - мотор мировой экономики",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:ukrainian/features-52647088",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "У Міненерго підтвердили ідею \"майнінгу\" на АЕС"
+        },
+        "locators": {
+          "assetUri": "/ukrainian/news-52646750",
+          "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-52646750",
+          "assetId": "52646750"
+        },
+        "summary": "Виконувачка обов'язків міністра енергетики Ольга Буславець заявила, що уряд дійсно розглядає можливість використання потужностей атомних станцій для роботи \"дата-центрів\".",
+        "timestamp": 1589379905000,
+        "language": "uk",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112253133",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/816F/production/_112253133_miningafp.jpg",
+          "path": "/cpsprodpb/816F/production/_112253133_miningafp.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "\"Майнінг\" криптовалют потребує великих витрат електроенергії. В українських АЕС з'явилася зайва - вважають в Міненерго",
+          "caption": "\"Майнінг\" криптовалют потребує великих витрат електроенергії. В українських АЕС з'явилася зайва - вважають в Міненерго",
+          "copyrightHolder": "AFP",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112253134",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/A87F/production/_112253134_miningafp.jpg",
+          "path": "/cpsprodpb/A87F/production/_112253134_miningafp.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "\"Майнінг\" криптовалют потребує великих витрат електроенергії. В українських АЕС з'явилася зайва - вважають в Міненерго",
+          "caption": "\"Майнінг\" криптовалют потребує великих витрат електроенергії. В українських АЕС з'явилася зайва - вважають в Міненерго",
+          "copyrightHolder": "AFP",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:ukrainian/news-52646750",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Євросоюз обіцяє туристичний сезон цього літа"
+        },
+        "locators": {
+          "assetUri": "/ukrainian/news-52647124",
+          "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-52647124",
+          "assetId": "52647124"
+        },
+        "summary": "Європейська комісія пропонує поступове відкриття кордонів, щоб відновити роботу туристичної індустрії, яка сильно постраждала від пандемії коронавірусу.",
+        "timestamp": 1589377986000,
+        "language": "uk",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112258243",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/85ED/production/_112258243_gettyimages-1209563782.jpg",
+          "path": "/cpsprodpb/85ED/production/_112258243_gettyimages-1209563782.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "roma",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:ukrainian/news-52647124",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "\"Заплакала і хотіла поїхати з міста\". Як Коломия втрапила у скандал і до чого тут єврейська громада"
+        },
+        "locators": {
+          "assetUri": "/ukrainian/features-52638122",
+          "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-52638122",
+          "assetId": "52638122"
+        },
+        "summary": "Поліція зажадала отримати особисті дані представників єврейської громади Коломиї. Результат - скандал, який не оминули увагою навіть західні ЗМІ.",
+        "timestamp": 1589299787000,
+        "language": "uk",
+        "byline": {
+          "name": "Ліля Хомишин ",
+          "title": "для BBC News Україна, Прикарпаття",
+          "persons": [
+            {
+              "name": "윤인경",
+              "function": "BBC 코리아"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112246274",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/B8A0/production/_112246274_gettyimages-951144506.jpg",
+          "path": "/cpsprodpb/B8A0/production/_112246274_gettyimages-951144506.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Іудей",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112246276",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/106C0/production/_112246276_gettyimages-951144506.jpg",
+          "path": "/cpsprodpb/106C0/production/_112246276_gettyimages-951144506.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Іудей",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "overtypedSummary": "Поліція зажадала отримати особисті дані представників єврейської громади Коломиї. Результат - скандал, який не оминули увагою західні ЗМІ.",
+        "id": "urn:bbc:ares::asset:ukrainian/features-52638122",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Як Мінськ рятує українців, які через коронавірус застрягли за кордоном"
+        },
+        "locators": {
+          "assetUri": "/ukrainian/features-52635323",
+          "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-52635323",
+          "assetId": "52635323"
+        },
+        "summary": "Багато українців через пандемію опинились заблокованими далеко за кордоном: через закриття українського неба дістатись додому їм дуже складно.",
+        "timestamp": 1589288547000,
+        "language": "uk",
+        "byline": {
+          "name": "Віталій Червоненко",
+          "title": "BBC News Україна",
+          "persons": [
+            {
+              "name": "Віталій Червоненко",
+              "function": "BBC News Україна"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112241695",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/E8DE/production/_112241695_gettyimages-1160105235.jpg",
+          "path": "/cpsprodpb/E8DE/production/_112241695_gettyimages-1160105235.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Бєлавіа",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:ukrainian/features-52635323",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Додаток \"Дія\" звинуватили у \"зливі\" персональних даних українців. Влада заперечує"
+        },
+        "locators": {
+          "assetUri": "/ukrainian/news-52636988",
+          "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-52636988",
+          "assetId": "52636988"
+        },
+        "summary": "В розпорядженні телеграм-каналу, що торгує персональними даними українців, опинилися мільйони водійських посвідчень. Звідки вони і до чого тут додаток \"Дія\"?",
+        "timestamp": 1589293731000,
+        "language": "uk",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112245771",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/455A/production/_112245771_gettyimages-1198914580.jpg",
+          "path": "/cpsprodpb/455A/production/_112245771_gettyimages-1198914580.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Додаток \"Дія\". Презентація за участю Арсена Авакова",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112245773",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/937A/production/_112245773_gettyimages-1198914580.jpg",
+          "path": "/cpsprodpb/937A/production/_112245773_gettyimages-1198914580.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Додаток \"Дія\". Презентація за участю Арсена Авакова",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:ukrainian/news-52636988",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "\"Дау. Бабин Яр\": як Ілля Хржановський взявся за меморіал Голокосту і розлютив українців"
+        },
+        "locators": {
+          "assetUri": "/ukrainian/features-52620260",
+          "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-52620260",
+          "assetId": "52620260"
+        },
+        "summary": "Меморіал у Бабиному Яру опинився під загрозою. Критики називають його \"Голокост-Діснеєм\" і вимагають звільнити керівника проєкту. У скандалі навколо меморіалу переплелися конфлікт Росії та України, пам'ять Голокосту і кордони художнього висловлювання.",
+        "timestamp": 1589281936000,
+        "language": "uk",
+        "byline": {
+          "name": "Григор Атанесян",
+          "title": "ВВС",
+          "persons": [
+            {
+              "name": "Григор Атанесян",
+              "function": "Би-би-си"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112214686",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/10C21/production/_112214686_1a2bd1d4-60a5-4331-a8de-5410d0478816.jpg",
+          "path": "/cpsprodpb/10C21/production/_112214686_1a2bd1d4-60a5-4331-a8de-5410d0478816.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Мероприятие в Киеве в память жертв нацистских преступлений в Бабьем Яру",
+          "copyrightHolder": "AFP",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:ukrainian/features-52620260",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "\"Секс став для мене випробуванням\": чому українки живуть без оргазмів"
+        },
+        "locators": {
+          "assetUri": "/ukrainian/features-52554089",
+          "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-52554089",
+          "assetId": "52554089"
+        },
+        "summary": "У добу доступної інформації та моди на розкутість мільйони українок страждають від старої проблеми, коли секс є, а оргазмів немає.",
+        "timestamp": 1589210358000,
+        "language": "uk",
+        "byline": {
+          "name": "Галина Корба",
+          "title": "ВВС News Україна",
+          "persons": [
+            {
+              "name": "Галина Корба",
+              "function": "ВВС News Україна"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112164672",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/6BFE/production/_112164672_gettyimages-88804044.jpg",
+          "path": "/cpsprodpb/6BFE/production/_112164672_gettyimages-88804044.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "пара",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112206033",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/8124/production/_112206033_gettyimages-88804044.jpg",
+          "path": "/cpsprodpb/8124/production/_112206033_gettyimages-88804044.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "пара",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:ukrainian/features-52554089",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Застрягли в морі через коронавірус: як моряків всього світу заблокували на суднах"
+        },
+        "locators": {
+          "assetUri": "/ukrainian/features-52575658",
+          "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-52575658",
+          "assetId": "52575658"
+        },
+        "summary": "Через пандемію моряки в усьому світі не мають можливості висадитися на берег та провести ротацію, оскільки порти заборонили трансфер екіпажів.",
+        "timestamp": 1589257018000,
+        "language": "uk",
+        "byline": {
+          "name": "Говард Мусто і Сем Проффітт",
+          "title": "Бізнес-кореспонденти ВВС",
+          "persons": [
+            {
+              "name": "Howard Mustoe and Sam Proffitt",
+              "function": "BBC business reporters"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112098723",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/8015/production/_112098723_gettyimages-1131702041.jpg",
+          "path": "/cpsprodpb/8015/production/_112098723_gettyimages-1131702041.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "containers",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:ukrainian/features-52575658",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "\"Як я захворіла на Covid-19, одужала і стала донором\""
+        },
+        "locators": {
+          "assetUri": "/ukrainian/features-52559008",
+          "cpsUrn": "urn:bbc:content:assetUri:ukrainian/features-52559008",
+          "assetId": "52559008"
+        },
+        "summary": "Юлія Кикоть з Черкас підхопила коронавірус у березні, а одужавши, стала доноркою плазми для розробки ліків від вірусу.",
+        "timestamp": 1588774722000,
+        "language": "uk",
+        "byline": {
+          "name": "Мирослава Станкевич",
+          "title": "для BBC News Україна, Черкаси",
+          "persons": [
+            {
+              "name": "Мирослава Пеца",
+              "function": "BBC News Україна"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112163767",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/12BC0/production/_112163767_mediaitem112163766.jpg",
+          "path": "/cpsprodpb/12BC0/production/_112163767_mediaitem112163766.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "\"Як я захворіла на Covid-19, одужала і стала донором\"",
+          "copyrightHolder": "Мирослава Станкевич",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:ukrainian/features-52559008",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Коли запрацює метро, кіно та ресторани: уряд показав план виходу з карантину"
+        },
+        "locators": {
+          "assetUri": "/ukrainian/news-52420568",
+          "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-52420568",
+          "assetId": "52420568"
+        },
+        "summary": "Кабінет міністрів представив детальний план виходу з карантину.",
+        "timestamp": 1588755685000,
+        "language": "uk",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111930709",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1624F/production/_111930709_963170.jpg",
+          "path": "/cpsprodpb/1624F/production/_111930709_963170.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "карантин",
+          "copyrightHolder": "UNIAN",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "111930711",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/2DB7/production/_111930711_963170.jpg",
+          "path": "/cpsprodpb/2DB7/production/_111930711_963170.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "карантин",
+          "copyrightHolder": "UNIAN",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:ukrainian/news-52420568",
+        "type": "cps"
+      }
+    ]
+  }
