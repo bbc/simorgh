@@ -1841,11 +1841,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/indonesia/bbc_indonesian_radio/w172xh26yzb93p7'],
+            paths: ['/indonesia/bbc_indonesian_radio'],
             enabled: true,
           },
           local: {
-            paths: ['/indonesia/bbc_indonesian_radio/w172xh267fpn19l'],
+            paths: ['/indonesia/bbc_indonesian_radio'],
             enabled: true,
           },
         },
