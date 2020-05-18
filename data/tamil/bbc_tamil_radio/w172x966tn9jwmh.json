@@ -1,26 +1,27 @@
 {
   "metadata": {
     "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172x966tn9jwmh",
-    "locators": {},
+    "locators": { "pid": "w172x966tn9jwmh", "brandPid": "p03412jh" },
     "type": "WSRADIO",
     "createdBy": "bbc_tamil_radio",
     "language": "ta",
-    "lastUpdated": 1583601860035,
+    "lastUpdated": 1589529870679,
     "firstPublished": 1582557978000,
     "lastPublished": 1582557978000,
+    "timestamp": 1582557978000,
     "options": {},
     "analyticsLabels": {
       "pageTitle": "பிபிசி தமிழோசை செய்தியறிக்கை - BBC News தமிழ்",
       "pageIdentifier": "tamil.bbc_tamil_radio.w172x966tn9jwmh.page",
       "producerId": "87",
-      "contentType": "player-ondemand",
+      "contentType": "player-episode",
       "producer": "TAMIL"
     },
-    "passport": null,
     "tags": {},
-    "version": "v1.1.3",
+    "version": "v1.3.0",
     "blockTypes": ["media"],
-    "title": "பிபிசி தமிழோசை செய்தியறிக்கை"
+    "title": "பிபிசி தமிழோசை செய்தியறிக்கை",
+    "releaseDateTimeStamp": 1583452800000
   },
   "content": {
     "blocks": [
@@ -33,36 +34,17 @@
           "short": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி",
           "medium": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி"
         },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
         "embedding": false,
         "advertising": false,
-        "versions": [
-          {
-            "versionId": "w1mshfwwypf2xhj",
-            "types": ["Original"],
-            "duration": 300,
-            "durationISO8601": "PT5M",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": false,
-              "nonUk": false,
-              "world": true
-            },
-            "availableUntil": 1586100600000,
-            "availableFrom": 1583508600000
-          }
-        ],
-        "imageCopyright": null
+        "versions": [],
+        "type": "media"
       }
     ]
   },
   "promo": {
-    "headlines": {
-      "headline": "பிபிசி தமிழோசை செய்தியறிக்கை"
-    },
-    "locators": {
-      "pid": "w172x966tn9jwmh"
-    },
+    "headlines": { "headline": "பிபிசி தமிழோசை செய்தியறிக்கை" },
+    "locators": { "pid": "w172x966tn9jwmh", "brandPid": "p03412jh" },
     "media": {
       "id": "w172x966tn9jwmh",
       "subType": "episode",
@@ -72,75 +54,56 @@
         "short": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி",
         "medium": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி"
       },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
       "embedding": false,
       "advertising": false,
-      "versions": [
-        {
-          "versionId": "w1mshfwwypf2xhj",
-          "types": ["Original"],
-          "duration": 300,
-          "durationISO8601": "PT5M",
-          "warnings": {},
-          "availableTerritories": {
-            "uk": false,
-            "nonUk": false,
-            "world": true
-          },
-          "availableUntil": 1586100600000,
-          "availableFrom": 1583508600000
-        }
-      ],
-      "imageCopyright": null
+      "versions": [],
+      "type": "media"
     },
     "indexImage": {
       "id": "",
       "subType": "index",
-      "href": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-      "path": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
       "height": 0,
       "width": 0,
       "altText": null,
-      "copyrightHolder": null
+      "copyrightHolder": null,
+      "type": "image"
     },
-    "brand": {
-      "pid": "p03412jh",
-      "title": "பிபிசி தமிழோசை செய்தியறிக்கை"
-    },
-    "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172x966tn9jwmh"
+    "brand": { "pid": "p03412jh", "title": "பிபிசி தமிழோசை செய்தியறிக்கை" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172x966tn9jwmh",
+    "type": "ws_radio"
   },
   "relatedContent": {
     "site": {
       "subType": "site",
       "name": "Tamil",
-      "uri": "/tamil"
+      "uri": "/tamil",
+      "type": "simple"
     },
     "groups": [
       {
         "type": "other-episode",
         "promos": [
           {
-            "headlines": {
-              "headline": "பிபிசி தமிழோசை செய்தியறிக்கை"
-            },
-            "locators": {
-              "pid": "w172x966tn9fzqd"
-            },
+            "headlines": { "headline": "பிபிசி தமிழோசை செய்தியறிக்கை" },
+            "locators": { "pid": "w172xjw6jkr1hz1", "brandPid": "p03412jh" },
             "media": {
-              "id": "w172x966tn9fzqd",
+              "id": "w172xjw6jkr1hz1",
               "subType": "episode",
               "format": "Audio",
-              "title": "05/03/2020 GMT",
+              "title": "14/05/2020 GMT",
               "synopses": {
                 "short": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி",
                 "medium": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshfwwypf00lf",
+                  "versionId": "w1mshps93pkc3l4",
                   "types": ["Original"],
                   "duration": 300,
                   "durationISO8601": "PT5M",
@@ -150,50 +113,48 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1586014200000,
-                  "availableFrom": 1583422200000
+                  "availableUntil": 1590075000000,
+                  "availableFrom": 1589470200000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
             "brand": {
               "pid": "p03412jh",
               "title": "பிபிசி தமிழோசை செய்தியறிக்கை"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172x966tn9fzqd"
+            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172xjw6jkr1hz1",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "பிபிசி தமிழோசை செய்தியறிக்கை"
-            },
-            "locators": {
-              "pid": "w172x966tn9c2t9"
-            },
+            "headlines": { "headline": "பிபிசி தமிழோசை செய்தியறிக்கை" },
+            "locators": { "pid": "w172xjw6jkqym1y", "brandPid": "p03412jh" },
             "media": {
-              "id": "w172x966tn9c2t9",
+              "id": "w172xjw6jkqym1y",
               "subType": "episode",
               "format": "Audio",
-              "title": "04/03/2020 GMT",
+              "title": "13/05/2020 GMT",
               "synopses": {
                 "short": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி",
                 "medium": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshfwwypdx3pb",
+                  "versionId": "w1mshps93pk86p1",
                   "types": ["Original"],
                   "duration": 300,
                   "durationISO8601": "PT5M",
@@ -203,50 +164,48 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585927800000,
-                  "availableFrom": 1583335800000
+                  "availableUntil": 1589988600000,
+                  "availableFrom": 1589383800000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
             "brand": {
               "pid": "p03412jh",
               "title": "பிபிசி தமிழோசை செய்தியறிக்கை"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172x966tn9c2t9"
+            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172xjw6jkqym1y",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "பிபிசி தமிழோசை செய்தியறிக்கை"
-            },
-            "locators": {
-              "pid": "w172x966tn985x6"
-            },
+            "headlines": { "headline": "பிபிசி தமிழோசை செய்தியறிக்கை" },
+            "locators": { "pid": "w172xjw6jkqvq4v", "brandPid": "p03412jh" },
             "media": {
-              "id": "w172x966tn985x6",
+              "id": "w172xjw6jkqvq4v",
               "subType": "episode",
               "format": "Audio",
-              "title": "03/03/2020 GMT",
+              "title": "12/05/2020 GMT",
               "synopses": {
                 "short": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி",
                 "medium": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshfwwypdt6s7",
+                  "versionId": "w1mshps93pk59ry",
                   "types": ["Original"],
                   "duration": 300,
                   "durationISO8601": "PT5M",
@@ -256,50 +215,48 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585841400000,
-                  "availableFrom": 1583249400000
+                  "availableUntil": 1589902200000,
+                  "availableFrom": 1589297400000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
             "brand": {
               "pid": "p03412jh",
               "title": "பிபிசி தமிழோசை செய்தியறிக்கை"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172x966tn985x6"
+            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172xjw6jkqvq4v",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "பிபிசி தமிழோசை செய்தியறிக்கை"
-            },
-            "locators": {
-              "pid": "w172x966tn95903"
-            },
+            "headlines": { "headline": "பிபிசி தமிழோசை செய்தியறிக்கை" },
+            "locators": { "pid": "w172xjw6jkqrt7r", "brandPid": "p03412jh" },
             "media": {
-              "id": "w172x966tn95903",
+              "id": "w172xjw6jkqrt7r",
               "subType": "episode",
               "format": "Audio",
-              "title": "02/03/2020 GMT",
+              "title": "11/05/2020 GMT",
               "synopses": {
                 "short": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி",
                 "medium": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshfwwypdq9w4",
+                  "versionId": "w1mshps93pk2dvv",
                   "types": ["Original"],
                   "duration": 300,
                   "durationISO8601": "PT5M",
@@ -309,50 +266,48 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585755000000,
-                  "availableFrom": 1583163000000
+                  "availableUntil": 1589815800000,
+                  "availableFrom": 1589211000000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
             "brand": {
               "pid": "p03412jh",
               "title": "பிபிசி தமிழோசை செய்தியறிக்கை"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172x966tn95903"
+            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172xjw6jkqrt7r",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "பிபிசி தமிழோசை செய்தியறிக்கை"
-            },
-            "locators": {
-              "pid": "w172x966gczrr0n"
-            },
+            "headlines": { "headline": "பிபிசி தமிழோசை செய்தியறிக்கை" },
+            "locators": { "pid": "w172xjw659fc889", "brandPid": "p03412jh" },
             "media": {
-              "id": "w172x966gczrr0n",
+              "id": "w172xjw659fc889",
               "subType": "episode",
               "format": "Audio",
-              "title": "28/02/2020 GMT",
+              "title": "08/05/2020 GMT",
               "synopses": {
                 "short": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி",
                 "medium": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshfwwlf39rwp",
+                  "versionId": "w1mshps8rf7nvwd",
                   "types": ["Original"],
                   "duration": 300,
                   "durationISO8601": "PT5M",
@@ -362,186 +317,29 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585495800000,
-                  "availableFrom": 1582903800000
+                  "availableUntil": 1589556600000,
+                  "availableFrom": 1588951800000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nx5.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
             "brand": {
               "pid": "p03412jh",
               "title": "பிபிசி தமிழோசை செய்தியறிக்கை"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172x966gczrr0n"
-          },
-          {
-            "headlines": {
-              "headline": "பிபிசி தமிழோசை செய்தியறிக்கை"
-            },
-            "locators": {
-              "pid": "w172x966gcznv3k"
-            },
-            "media": {
-              "id": "w172x966gcznv3k",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "27/02/2020 GMT",
-              "synopses": {
-                "short": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி",
-                "medium": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshfwwlf36vzl",
-                  "types": ["Original"],
-                  "duration": 300,
-                  "durationISO8601": "PT5M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1585409400000,
-                  "availableFrom": 1582817400000
-                }
-              ],
-              "imageCopyright": null
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null
-            },
-            "brand": {
-              "pid": "p03412jh",
-              "title": "பிபிசி தமிழோசை செய்தியறிக்கை"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172x966gcznv3k"
-          },
-          {
-            "headlines": {
-              "headline": "பிபிசி தமிழோசை செய்தியறிக்கை"
-            },
-            "locators": {
-              "pid": "w172x966gczky6g"
-            },
-            "media": {
-              "id": "w172x966gczky6g",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "26/02/2020 GMT",
-              "synopses": {
-                "short": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி",
-                "medium": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshfwwlf33z2h",
-                  "types": ["Original"],
-                  "duration": 300,
-                  "durationISO8601": "PT5M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1585323000000,
-                  "availableFrom": 1582731000000
-                }
-              ],
-              "imageCopyright": null
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null
-            },
-            "brand": {
-              "pid": "p03412jh",
-              "title": "பிபிசி தமிழோசை செய்தியறிக்கை"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172x966gczky6g"
-          },
-          {
-            "headlines": {
-              "headline": "பிபிசி தமிழோசை செய்தியறிக்கை"
-            },
-            "locators": {
-              "pid": "w172x966gczh19c"
-            },
-            "media": {
-              "id": "w172x966gczh19c",
-              "subType": "episode",
-              "format": "Audio",
-              "title": "25/02/2020 GMT",
-              "synopses": {
-                "short": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி",
-                "medium": "வார நாட்களில் மட்டும் ஒலிபரப்பாகும் ஐந்து நிமிட உலகச் செய்தியறிக்கை. ஒலிபரப்பாகும் நேரம் 1525 - 1530 ஜிஎம்டி"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1mshfwwlf3125d",
-                  "types": ["Original"],
-                  "duration": 300,
-                  "durationISO8601": "PT5M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableUntil": 1585236600000,
-                  "availableFrom": 1582644600000
-                }
-              ],
-              "imageCopyright": null
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null
-            },
-            "brand": {
-              "pid": "p03412jh",
-              "title": "பிபிசி தமிழோசை செய்தியறிக்கை"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172x966gczh19c"
+            "id": "urn:bbc:ares:ws_media:page:bbc_tamil_radio/w172xjw659fc889",
+            "type": "ws_radio"
           }
         ]
       }

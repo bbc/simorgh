@@ -1,26 +1,27 @@
 {
   "metadata": {
     "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct01yb",
-    "locators": {},
+    "locators": { "pid": "w3ct01yb", "brandPid": "p030vh39" },
     "type": "WSRADIO",
     "createdBy": "bbc_arabic_radio",
     "language": "ar",
-    "lastUpdated": 1583601860035,
+    "lastUpdated": 1589529753485,
     "firstPublished": 1582584617000,
     "lastPublished": 1582584617000,
+    "timestamp": 1582584617000,
     "options": {},
     "analyticsLabels": {
       "pageTitle": "نقطة حوار - BBC News Arabic",
       "pageIdentifier": "arabic.bbc_arabic_radio.w3ct01yb.page",
       "producerId": "5",
-      "contentType": "player-ondemand",
+      "contentType": "player-episode",
       "producer": "ARABIC"
     },
-    "passport": null,
     "tags": {},
-    "version": "v1.1.3",
+    "version": "v1.3.0",
     "blockTypes": ["media"],
-    "title": "نقطة حوار"
+    "title": "نقطة حوار",
+    "releaseDateTimeStamp": 1583452800000
   },
   "content": {
     "blocks": [
@@ -33,36 +34,17 @@
           "short": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت",
           "medium": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت"
         },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
         "embedding": false,
         "advertising": false,
-        "versions": [
-          {
-            "versionId": "w4hqvm8h",
-            "types": ["Original"],
-            "duration": 1440,
-            "durationISO8601": "PT24M",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": false,
-              "nonUk": false,
-              "world": true
-            },
-            "availableUntil": 1586140200000,
-            "availableFrom": 1583533800000
-          }
-        ],
-        "imageCopyright": null
+        "versions": [],
+        "type": "media"
       }
     ]
   },
   "promo": {
-    "headlines": {
-      "headline": "نقطة حوار"
-    },
-    "locators": {
-      "pid": "w3ct01yb"
-    },
+    "headlines": { "headline": "نقطة حوار" },
+    "locators": { "pid": "w3ct01yb", "brandPid": "p030vh39" },
     "media": {
       "id": "w3ct01yb",
       "subType": "episode",
@@ -72,75 +54,56 @@
         "short": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت",
         "medium": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت"
       },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
       "embedding": false,
       "advertising": false,
-      "versions": [
-        {
-          "versionId": "w4hqvm8h",
-          "types": ["Original"],
-          "duration": 1440,
-          "durationISO8601": "PT24M",
-          "warnings": {},
-          "availableTerritories": {
-            "uk": false,
-            "nonUk": false,
-            "world": true
-          },
-          "availableUntil": 1586140200000,
-          "availableFrom": 1583533800000
-        }
-      ],
-      "imageCopyright": null
+      "versions": [],
+      "type": "media"
     },
     "indexImage": {
       "id": "",
       "subType": "index",
-      "href": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
-      "path": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
       "height": 0,
       "width": 0,
       "altText": null,
-      "copyrightHolder": null
+      "copyrightHolder": null,
+      "type": "image"
     },
-    "brand": {
-      "pid": "p030vh39",
-      "title": "نقطة حوار"
-    },
-    "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct01yb"
+    "brand": { "pid": "p030vh39", "title": "نقطة حوار" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct01yb",
+    "type": "ws_radio"
   },
   "relatedContent": {
     "site": {
       "subType": "site",
       "name": "Arabic",
-      "uri": "/arabic"
+      "uri": "/arabic",
+      "type": "simple"
     },
     "groups": [
       {
         "type": "other-episode",
         "promos": [
           {
-            "headlines": {
-              "headline": "نقطة حوار"
-            },
-            "locators": {
-              "pid": "w3ct021q"
-            },
+            "headlines": { "headline": "نقطة حوار" },
+            "locators": { "pid": "w3ct094h", "brandPid": "p030vh39" },
             "media": {
-              "id": "w3ct021q",
+              "id": "w3ct094h",
               "subType": "episode",
               "format": "Audio",
-              "title": "04/03/2020 GMT",
+              "title": "13/05/2020 GMT",
               "synopses": {
                 "short": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت",
                 "medium": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvmcw",
+                  "versionId": "w4hqvvyd",
                   "types": ["Original"],
                   "duration": 1440,
                   "durationISO8601": "PT24M",
@@ -150,50 +113,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1586194200000,
-                  "availableFrom": 1583361000000
+                  "availableUntil": 1592134200000,
+                  "availableFrom": 1589412600000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p030vh39",
-              "title": "نقطة حوار"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct021q"
+            "brand": { "pid": "p030vh39", "title": "نقطة حوار" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct094h",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "نقطة حوار"
-            },
-            "locators": {
-              "pid": "w3ct020l"
-            },
+            "headlines": { "headline": "نقطة حوار" },
+            "locators": { "pid": "w3ct093c", "brandPid": "p030vh39" },
             "media": {
-              "id": "w3ct020l",
+              "id": "w3ct093c",
               "subType": "episode",
               "format": "Audio",
-              "title": "02/03/2020 GMT",
+              "title": "11/05/2020 GMT",
               "synopses": {
                 "short": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت",
                 "medium": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvmbr",
+                  "versionId": "w4hqvvx8",
                   "types": ["Original"],
                   "duration": 1440,
                   "durationISO8601": "PT24M",
@@ -203,50 +161,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585913400000,
-                  "availableFrom": 1583188200000
+                  "availableUntil": 1591961400000,
+                  "availableFrom": 1589239800000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p030vh39",
-              "title": "نقطة حوار"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct020l"
+            "brand": { "pid": "p030vh39", "title": "نقطة حوار" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct093c",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "نقطة حوار"
-            },
-            "locators": {
-              "pid": "w3ct01y9"
-            },
+            "headlines": { "headline": "نقطة حوار" },
+            "locators": { "pid": "w3ct0908", "brandPid": "p030vh39" },
             "media": {
-              "id": "w3ct01y9",
+              "id": "w3ct0908",
               "subType": "episode",
               "format": "Audio",
-              "title": "28/02/2020 GMT",
+              "title": "08/05/2020 GMT",
               "synopses": {
                 "short": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت",
                 "medium": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvm8g",
+                  "versionId": "w4hqvvt5",
                   "types": ["Original"],
                   "duration": 1440,
                   "durationISO8601": "PT24M",
@@ -256,50 +209,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585740600000,
-                  "availableFrom": 1582929000000
+                  "availableUntil": 1591795800000,
+                  "availableFrom": 1588980600000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p030vh39",
-              "title": "نقطة حوار"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct01y9"
+            "brand": { "pid": "p030vh39", "title": "نقطة حوار" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct0908",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "نقطة حوار"
-            },
-            "locators": {
-              "pid": "w3ct021p"
-            },
+            "headlines": { "headline": "نقطة حوار" },
+            "locators": { "pid": "w3ct094g", "brandPid": "p030vh39" },
             "media": {
-              "id": "w3ct021p",
+              "id": "w3ct094g",
               "subType": "episode",
               "format": "Audio",
-              "title": "26/02/2020 GMT",
+              "title": "06/05/2020 GMT",
               "synopses": {
                 "short": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت",
                 "medium": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvmcv",
+                  "versionId": "w4hqvvyc",
                   "types": ["Original"],
                   "duration": 1440,
                   "durationISO8601": "PT24M",
@@ -309,50 +257,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585621800000,
-                  "availableFrom": 1582756200000
+                  "availableUntil": 1591691400000,
+                  "availableFrom": 1588807800000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p030vh39",
-              "title": "نقطة حوار"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct021p"
+            "brand": { "pid": "p030vh39", "title": "نقطة حوار" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct094g",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "نقطة حوار"
-            },
-            "locators": {
-              "pid": "w3ct020k"
-            },
+            "headlines": { "headline": "نقطة حوار" },
+            "locators": { "pid": "w3ct093b", "brandPid": "p030vh39" },
             "media": {
-              "id": "w3ct020k",
+              "id": "w3ct093b",
               "subType": "episode",
               "format": "Audio",
-              "title": "24/02/2020 GMT",
+              "title": "04/05/2020 GMT",
               "synopses": {
                 "short": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت",
                 "medium": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvmbq",
+                  "versionId": "w4hqvvx7",
                   "types": ["Original"],
                   "duration": 1440,
                   "durationISO8601": "PT24M",
@@ -362,50 +305,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585308600000,
-                  "availableFrom": 1582583400000
+                  "availableUntil": 1591356600000,
+                  "availableFrom": 1588635000000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p030vh39",
-              "title": "نقطة حوار"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct020k"
+            "brand": { "pid": "p030vh39", "title": "نقطة حوار" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct093b",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "نقطة حوار"
-            },
-            "locators": {
-              "pid": "w3ct01y8"
-            },
+            "headlines": { "headline": "نقطة حوار" },
+            "locators": { "pid": "w3ct0907", "brandPid": "p030vh39" },
             "media": {
-              "id": "w3ct01y8",
+              "id": "w3ct0907",
               "subType": "episode",
               "format": "Audio",
-              "title": "21/02/2020 GMT",
+              "title": "01/05/2020 GMT",
               "synopses": {
                 "short": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت",
                 "medium": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvm8f",
+                  "versionId": "w4hqvvt4",
                   "types": ["Original"],
                   "duration": 1440,
                   "durationISO8601": "PT24M",
@@ -415,50 +353,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585135800000,
-                  "availableFrom": 1582324200000
+                  "availableUntil": 1591191000000,
+                  "availableFrom": 1588375800000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p030vh39",
-              "title": "نقطة حوار"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct01y8"
+            "brand": { "pid": "p030vh39", "title": "نقطة حوار" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct0907",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "نقطة حوار"
-            },
-            "locators": {
-              "pid": "w3ct021n"
-            },
+            "headlines": { "headline": "نقطة حوار" },
+            "locators": { "pid": "w3ct094f", "brandPid": "p030vh39" },
             "media": {
-              "id": "w3ct021n",
+              "id": "w3ct094f",
               "subType": "episode",
               "format": "Audio",
-              "title": "19/02/2020 GMT",
+              "title": "29/04/2020 GMT",
               "synopses": {
                 "short": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت",
                 "medium": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvmct",
+                  "versionId": "w4hqvvyb",
                   "types": ["Original"],
                   "duration": 1440,
                   "durationISO8601": "PT24M",
@@ -468,50 +401,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585017000000,
-                  "availableFrom": 1582151400000
+                  "availableUntil": 1591086600000,
+                  "availableFrom": 1588203000000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p030vh39",
-              "title": "نقطة حوار"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct021n"
+            "brand": { "pid": "p030vh39", "title": "نقطة حوار" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct094f",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "نقطة حوار"
-            },
-            "locators": {
-              "pid": "w3ct020j"
-            },
+            "headlines": { "headline": "نقطة حوار" },
+            "locators": { "pid": "w3ct0939", "brandPid": "p030vh39" },
             "media": {
-              "id": "w3ct020j",
+              "id": "w3ct0939",
               "subType": "episode",
               "format": "Audio",
-              "title": "17/02/2020 GMT",
+              "title": "27/04/2020 GMT",
               "synopses": {
                 "short": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت",
                 "medium": "برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqvmbp",
+                  "versionId": "w4hqvvx6",
                   "types": ["Original"],
                   "duration": 1440,
                   "durationISO8601": "PT24M",
@@ -521,27 +449,26 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1584703800000,
-                  "availableFrom": 1581978600000
+                  "availableUntil": 1590751800000,
+                  "availableFrom": 1588030200000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035djt9.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p030vh39",
-              "title": "نقطة حوار"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct020j"
+            "brand": { "pid": "p030vh39", "title": "نقطة حوار" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/w3ct0939",
+            "type": "ws_radio"
           }
         ]
       }
