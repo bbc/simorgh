@@ -1,0 +1,545 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "Gabadhii Soomaaliya laga sii daayay oo \"Muslimnimadeeda loogu hanjabayo\""
+        },
+        "locators": {
+          "assetUri": "/somali/war-52644957",
+          "cpsUrn": "urn:bbc:content:assetUri:somali/war-52644957",
+          "assetId": "52644957"
+        },
+        "summary": "Xubnaha ka tirsan garabka midigta fog ee Talyaaniga ayaa bilaabay olole ka dhan ah gabadhan oo naceyb abuuri karo sida ay ku warrantay wakaaladda wararka ee Reuters.",
+        "timestamp": 1589369405000,
+        "language": "so",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112254862",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/68DD/production/_112254862_gettyimages-1212651810.jpg",
+          "path": "/cpsprodpb/68DD/production/_112254862_gettyimages-1212651810.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Silvia Romano ayaa dib loogu celiyay Taliyaaniga",
+          "caption": "Silvia Romano ayaa dib loogu celiyay Taliyaaniga",
+          "copyrightHolder": "Getty Images/Pier Marco Tacca",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "overtypedSummary": " ",
+        "id": "urn:bbc:ares::asset:somali/war-52644957",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "MSF: Wixii karaankeenna ah ayaan ka qabaneynaa xaaladda Soomaaliya"
+        },
+        "locators": {
+          "assetUri": "/somali/war-52650406",
+          "cpsUrn": "urn:bbc:content:assetUri:somali/war-52650406",
+          "assetId": "52650406"
+        },
+        "summary": "Hay'adda Dhakhaatiirta aan xuduudda lahayn ee MSF ayaa walaac ka muujisay xaalad ay ku qeexday \"khalkhal bani'aadannimo\" oo ka jirta Soomaaliya, xilli ay isugu darsameen saameynta xanuunka coronavirus iyo fatahaado.",
+        "timestamp": 1589376081000,
+        "language": "so",
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112256824",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/A771/production/_112256824_7509c4ac-e559-4330-832b-4481815accf3.jpg",
+          "path": "/cpsprodpb/A771/production/_112256824_7509c4ac-e559-4330-832b-4481815accf3.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Kiisaska Covid-19 ee Soomaaliya ayaa kor u dhaafay 1,000",
+          "caption": "Kiisaska Covid-19 ee Soomaaliya ayaa kor u dhaafay 1,000",
+          "copyrightHolder": "MSF",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "overtypedSummary": " ",
+        "id": "urn:bbc:ares::asset:somali/war-52650406",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "'Masaajidkii wuxuu noqday bad waa in aad dabbaal ku tegtaa'"
+        },
+        "locators": {
+          "assetUri": "/somali/live/52644765",
+          "cpsUrn": "urn:bbc:content:assetUri:somali/live/52644765",
+          "assetId": "52644765"
+        },
+        "summary": "Tabinta tooska ah ee BBC Somali",
+        "timestamp": 1589352332000,
+        "language": "so",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "LIV",
+        "indexImage": {
+          "id": "112252061",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/3E99/production/_112252061_mediaitem112252059.jpg",
+          "path": "/cpsprodpb/3E99/production/_112252061_mediaitem112252059.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": ".",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "commentary": {
+          "order": "descending",
+          "assetUUID": "C81D28EFC9FC744B9B74390FC2538201",
+          "channels": {
+            "enhancedmobile": "bbc.cps.asset.52644766_EnhancedMobile",
+            "desktop": "bbc.cps.asset.52644766_HighWeb",
+            "highweb": "bbc.cps.asset.52644766_HighWeb",
+            "mobile": "bbc.cps.asset.52644766_EnhancedMobile"
+          }
+        },
+        "isLive": true,
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:somali/live/52644765",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "Kiisaska Corona virus ee daafaha caalamka"
+        },
+        "locators": {
+          "assetUri": "/somali/war-52403641",
+          "cpsUrn": "urn:bbc:content:assetUri:somali/war-52403641",
+          "assetId": "52403641"
+        },
+        "summary": "Kiisaska Corona virus ee daafaha caalamka",
+        "timestamp": 1587661431000,
+        "language": "so",
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111917113",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/79C3/production/_111917113_index_world_interactive_976.png",
+          "path": "/cpsprodpb/79C3/production/_111917113_index_world_interactive_976.png",
+          "height": 549,
+          "width": 976,
+          "altText": "Kiisaska Corona virus ee daafaha caalamka",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "111917115",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/C7E3/production/_111917115_index_world_interactive_976.png",
+          "path": "/cpsprodpb/C7E3/production/_111917115_index_world_interactive_976.png",
+          "height": 180,
+          "width": 320,
+          "altText": "Kiisaska Corona virus ee daafaha caalamka",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "overtypedSummary": " ",
+        "id": "urn:bbc:ares::asset:somali/war-52403641",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Gabar Talyaani ah oo Soomaaliya lagu haystay oo dalkeedii lagu celiyay"
+        },
+        "locators": {
+          "assetUri": "/somali/war-52611536",
+          "cpsUrn": "urn:bbc:content:assetUri:somali/war-52611536",
+          "assetId": "52611536"
+        },
+        "summary": "Silvia Romano, oo ah 25-jir, ayaa waxaa Sabtidii lagu soo daayay howlgal ay gudaha Soomaaliya ka fuliyeen ciidammada sirdoonka Talyaaniga.",
+        "timestamp": 1589160270000,
+        "language": "so",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e1739461b000e9dabf6",
+              "campaignName": "WS - CS"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            },
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112221987",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/13440/production/_112221987_14c79203-a0a9-45e9-adf3-ee2975d40114.jpg",
+          "path": "/cpsprodpb/13440/production/_112221987_14c79203-a0a9-45e9-adf3-ee2975d40114.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Silvia Romano (centre) smiles after arriving at Rome's airport, Italy. Photo: 10 May 2020",
+          "copyrightHolder": "EPA",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:somali/war-52611536",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Maxay Shiinuhu sameyeen islamarkii uu ka dilaacay Corona?"
+        },
+        "locators": {
+          "assetUri": "/somali/war-52616684",
+          "cpsUrn": "urn:bbc:content:assetUri:somali/war-52616684",
+          "assetId": "52616684"
+        },
+        "summary": "Mareykanka iyo dalalka kale ee xulafadiisa ah ayaa su'aalo galiyay in Shiinaha uu daacad ka ahaa la dagaallanka Corona - markii ugu horeysay ee uu cudurka soo ifbaxay.",
+        "timestamp": 1589216439000,
+        "language": "so",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112178586",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/10BEB/production/_112178586_gettyimages-1196987002.jpg",
+          "path": "/cpsprodpb/10BEB/production/_112178586_gettyimages-1196987002.jpg",
+          "height": 562,
+          "width": 1000,
+          "altText": "Chinese President Xi Jinping",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "overtypedSummary": " ",
+        "id": "urn:bbc:ares::asset:somali/war-52616684",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Karantiilka Koranaha iyo diinta Islaamka waxa ay ka tiri"
+        },
+        "locators": {
+          "assetUri": "/somali/war-52587339",
+          "cpsUrn": "urn:bbc:content:assetUri:somali/war-52587339",
+          "assetId": "52587339"
+        },
+        "summary": "Cudurada faafa ayey diinta Islaamka talooyiin badan ka soo saartay, waxaana jiro axaadiis ku soo aroortay.",
+        "timestamp": 1589110824000,
+        "language": "so",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112215734",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/AAE7/production/_112215734_gettyimages-1212257003.jpg",
+          "path": "/cpsprodpb/AAE7/production/_112215734_gettyimages-1212257003.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Sheekh ku cibaadeysanaya masaajid ku yaalla magaalada Berlin ee dalka Jarmalka",
+          "caption": "Sheekh ku cibaadeysanaya masaajid ku yaalla magaalada Berlin ee dalka Jarmalka",
+          "copyrightHolder": "Anadolu Agency",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:somali/war-52587339",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Sidee loo hakiyey cudurkii safmarka ahaa ee 1918 dilay 50 milyan oo qof?"
+        },
+        "locators": {
+          "assetUri": "/somali/war-52598775",
+          "cpsUrn": "urn:bbc:content:assetUri:somali/war-52598775",
+          "assetId": "52598775"
+        },
+        "summary": "Wejigashiga iyo hawada saafigaa qayb weyn ayay ka ciyaareen.",
+        "timestamp": 1589193021000,
+        "language": "so",
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112181096",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/10D9A/production/_112181096_01gettyimages-613476154.jpg",
+          "path": "/cpsprodpb/10D9A/production/_112181096_01gettyimages-613476154.jpg",
+          "height": 1152,
+          "width": 2048,
+          "altText": "Woman in flu mask",
+          "caption": "A woman wears a flu mask during the Spanish flu epidemic",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:somali/war-52598775",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Xog ku saabsan qaar ka mid ah Soomaalida cudurka Covid-19 ugu geeriyoodey UK"
+        },
+        "locators": {
+          "assetUri": "/somali/war-52576249",
+          "cpsUrn": "urn:bbc:content:assetUri:somali/war-52576249",
+          "assetId": "52576249"
+        },
+        "summary": "Kumanaan kun oo qof ayaa dalka UK ugu geeriyooday cudurka Covid19, waxaa dadkaasi ka mid ah ku dhowaad 40 qof oo Soomaali ah, dadkaasi waxay isagu jiraan da'a kasta waayeel iyo carruur kana mid ahaa qaybaha bulshada.",
+        "timestamp": 1588866252000,
+        "language": "so",
+        "byline": {
+          "name": "Mowliid Xaaji Cabdi",
+          "title": "BBC Somali",
+          "persons": [
+            {
+              "name": "Andreas Schleicher",
+              "function": "OECD education director"
+            }
+          ]
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112181667",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/12B4A/production/_112181667_nuradde.jpg",
+          "path": "/cpsprodpb/12B4A/production/_112181667_nuradde.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Nuur Cadde, Ra'iisal wasaarihii hore ee Soomaaliya wuxuu ka mid yahay dadka Soomalaida ee UK ugu dhintay coronavirus",
+          "caption": "Nuur Cadde, Ra'iisal wasaarihii hore ee Soomaaliya wuxuu ka mid yahay dadka Soomalaida ee UK ugu dhintay coronavirus",
+          "copyrightHolder": "SFG",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "overtypedSummary": " ",
+        "id": "urn:bbc:ares::asset:somali/war-52576249",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "7 xeeladood oo kuu sahli kara shukaansiga baraha bulshada"
+        },
+        "locators": {
+          "assetUri": "/somali/war-47951365",
+          "cpsUrn": "urn:bbc:content:assetUri:somali/war-47951365",
+          "assetId": "47951365"
+        },
+        "summary": "Malaayiin qof ayaa maalin walba u gala internet-ka inay helaan qofkii ay nolosha la wadaagi lahaayeen",
+        "timestamp": 1589196659000,
+        "language": "so",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+            "categoryName": "Interactive"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "106316052",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/61E5/production/_106316052_8a.gettyimages-843765612.jpg",
+          "path": "/cpsprodpb/61E5/production/_106316052_8a.gettyimages-843765612.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Shukaansiga baraha bulshada ayaa mararka qaar farxad kuu horseedi kara",
+          "caption": "Shukaansiga baraha bulshada ayaa mararka qaar farxad kuu horseedi kara",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "overtypedSummary": " ",
+        "id": "urn:bbc:ares::asset:somali/war-47951365",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Muxuu yahay xannuunka u dheer Soomaalida UK murugada iyo geerida fayraska corona?"
+        },
+        "locators": {
+          "assetUri": "/somali/war-52597849",
+          "cpsUrn": "urn:bbc:content:assetUri:somali/war-52597849",
+          "assetId": "52597849"
+        },
+        "summary": "Murugada iyo tiiraanyada ay huwan tahay geerida qofka aad jeceshay waa mid ka mid ah waxyaabaha qofka soo wajaha, balse Korona wuxuu soo kordhiyay dhibbaatooyin kale",
+        "timestamp": 1589008961000,
+        "language": "so",
+        "byline": {
+          "name": " Mowliid Xaaji Cabdi",
+          "title": "BBC, London",
+          "persons": [
+            {
+              "name": "Andreas Schleicher",
+              "function": "OECD education director"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111607564",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/B5EA/production/_111607564_funeral3.jpg",
+          "path": "/cpsprodpb/B5EA/production/_111607564_funeral3.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "A mourner watches as the coffin is lowered into the ground during the funeral in the Eternal Gardens Muslim Burial Ground, Chislehurst of Ismail Mohamed Abdulwahab",
+          "caption": "Waxaa lagu aasay xabaalaha Muslimiinta ee Eternal Gardens",
+          "copyrightHolder": "PA Media",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "overtypedSummary": " ",
+        "id": "urn:bbc:ares::asset:somali/war-52597849",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "\"17 sano ayaan macalin ahaa, waxna ma qori karin mana akhrin karin\""
+        },
+        "locators": {
+          "assetUri": "/somali/war-52469699",
+          "cpsUrn": "urn:bbc:content:assetUri:somali/war-52469699",
+          "assetId": "52469699"
+        },
+        "summary": "John Corcoran wuxuu ka qalinjebiyay jaamacad, wuxuuna noqday macallim - balse sir aan caadi ahayn ayuu haystay.",
+        "timestamp": 1588251001000,
+        "language": "so",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e1739461b000e9dabf6",
+              "campaignName": "WS - CS"
+            },
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "100848156",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/FEA0/production/_100848156_corcoran_top_picture976.jpg",
+          "path": "/cpsprodpb/FEA0/production/_100848156_corcoran_top_picture976.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "John Corcoran in 2008",
+          "copyrightHolder": "Alamy",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:somali/war-52469699",
+        "type": "cps"
+      }
+    ]
+  }
