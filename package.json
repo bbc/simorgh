@@ -164,7 +164,7 @@
     "brotli-webpack-plugin": "^1.1.0",
     "chalk": "^4.0.0",
     "chrome-launcher": "^0.13.1",
-    "compression-webpack-plugin": "^3.1.0",
+    "compression-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^5.1.1",
     "cypress": "4.5.0",
     "cypress-multi-reporters": "^1.2.4",
