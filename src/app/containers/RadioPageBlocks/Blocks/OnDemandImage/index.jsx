@@ -19,17 +19,20 @@ const ImageContainer = styled.div`
   }
 `;
 
-const getSrc = (imageUrl, size) =>
+const getSrc = ({ imageUrl, size }) =>
   `https://${imageUrl.replace('$recipe', size)}`;
 const getSrcSet = imageUrl =>
-  `${getSrc(imageUrl, '112x112')} 400w,${getSrc(imageUrl, '224x224')} 1008w`;
+  `${getSrc({ imageUrl, size: '112x112' })} 400w,${getSrc({
+    imageUrl,
+    size: '224x224',
+  })} 1008w`;
 
 const OnDemandImage = ({ imageUrl, dir }) => {
   const { isAmp } = useContext(RequestContext);
   const { defaultImageAltText: alt } = useContext(ServiceContext);
   const height = 224;
   const width = 224;
-  const src = getSrc(imageUrl, '112x112');
+  const src = getSrc({ imageUrl, size: '112x112' });
   const srcset = getSrcSet(imageUrl);
   const imageProps = { src, alt, srcset };
 

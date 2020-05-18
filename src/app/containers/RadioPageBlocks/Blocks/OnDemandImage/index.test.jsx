@@ -5,7 +5,8 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import OnDemandImage from '.';
 
-const component = (url, isAmp, service) => (
+// eslint-disable-next-line react/prop-types
+const component = ({ url, isAmp, service }) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider
       isAmp={isAmp}
@@ -21,16 +22,16 @@ const component = (url, isAmp, service) => (
 describe('AudioPlayer blocks OnDemandHeading', () => {
   shouldMatchSnapshot(
     'should render correctly',
-    component('mock-url', false, 'news'),
+    component({ url: 'mock-url', isAmp: false, service: 'news' }),
   );
 
   it('should ensure the image has the right attributes', () => {
     render(
-      component(
-        'ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg',
-        false,
-        'pashto',
-      ),
+      component({
+        url: 'ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg',
+        isAmp: false,
+        service: 'pashto',
+      }),
     );
     const img = document.querySelector('img');
     expect(img.src).toEqual(
@@ -44,11 +45,11 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
 
   it('should ensure the image has the right attributes for amp', () => {
     render(
-      component(
-        'ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg',
-        true,
-        'afaanoromoo',
-      ),
+      component({
+        url: 'ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg',
+        isAmp: true,
+        service: 'afaanoromoo',
+      }),
     );
     const img = document.querySelector('amp-img');
     expect(img.getAttribute('src')).toEqual(
