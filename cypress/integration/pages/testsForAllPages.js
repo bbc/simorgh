@@ -45,7 +45,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           .should('have.attr', 'tabindex', '-1');
       });
 
-      if (!pageTypeSomeTestsNotRun) {
+      if (!pageTypeSomeTestsNotRun(pageType)) {
         it('should include the canonical URL', () => {
           cy.get('head link[rel="canonical"]').should(
             'have.attr',
