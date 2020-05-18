@@ -9,13 +9,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   service,
   pageType,
 }) =>
-  describe(`testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {
-    describe(`Tests for ${service} ${pageType}`, () => {
-      it('should have a visually hidden top-level header', () => {
-        cy.get('h1').should('have.length', 1);
-      });
-    });
-  });
+  describe(`testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {});
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
 export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = ({
