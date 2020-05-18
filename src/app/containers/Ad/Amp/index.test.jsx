@@ -14,19 +14,19 @@ const adJsonAttributes = {
   },
 };
 
-const adWithContext = (service = 'pidgin') =>
-  render(
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.com"
-      isAmp
-      pageType="frontPage"
-      service={service}
-    >
-      <ServiceContextProvider service={service}>
-        <AmpAd />
-      </ServiceContextProvider>
-    </RequestContextProvider>,
-  );
+const adWithContext = (service = 'pidgin') => (
+  <RequestContextProvider
+    bbcOrigin="https://www.test.bbc.com"
+    isAmp
+    pageType="frontPage"
+    service={service}
+    pathname="/"
+  >
+    <ServiceContextProvider service={service}>
+      <AmpAd />
+    </ServiceContextProvider>
+  </RequestContextProvider>
+);
 
 describe('AMP Ads', () => {
   beforeAll(() => {
@@ -46,14 +46,14 @@ describe('AMP Ads', () => {
 
   describe('Assertions', () => {
     it('should render two leaderboard ads', () => {
-      const { container } = adWithContext();
+      const { container } = render(adWithContext());
       const ampAd = container.querySelectorAll('amp-ad');
 
       expect(ampAd.length).toBe(2);
     });
 
     it('should display ad with values for all of the needed attributes', () => {
-      const { container } = adWithContext();
+      const { container } = render(adWithContext());
 
       const ampAd = container.querySelectorAll('amp-ad');
       ampAd.forEach(ad => {
@@ -72,7 +72,7 @@ describe('AMP Ads', () => {
     });
 
     it('should render an `advertisement` label', () => {
-      const { container } = adWithContext();
+      const { container } = render(adWithContext());
       const p = container.querySelectorAll('p');
 
       expect(p.length).toBeGreaterThanOrEqual(1);
