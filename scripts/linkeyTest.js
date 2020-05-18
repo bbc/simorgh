@@ -24,8 +24,12 @@ const getLinks = (serviceConfig, type) => {
     : { ...serviceConfigVariantOne, ...serviceConfigVariantTwo };
 };
 
+const getAbsoluteUrl = link => {
+  return link.startsWith(/http(s)*:\/\//) ? link : `https://www.bbc.com${link}`;
+};
+
 const fetchResponse = async link => {
-  const fetchStatus = await fetch(link);
+  const fetchStatus = await fetch(link, { timeout: 20000 });
   return fetchStatus.status;
 };
 
@@ -33,9 +37,9 @@ describe(`${getServiceName(service)} navigation links`, () => {
   const navigation = getLinks(service, 'navigation');
 
   navigation.map(nav => {
-    const fullUrl = `https://www.bbc.com${nav.url}`;
-    return it(`should return 200 for ${fullUrl}`, async () => {
-      expect(await fetchResponse(fullUrl)).toEqual(200);
+    const url = getAbsoluteUrl(nav.url);
+    return it(`should return 200 for ${url}`, async () => {
+      expect(await fetchResponse(url)).toEqual(200);
     });
   });
 });
@@ -56,8 +60,9 @@ describe(`${getServiceName(service)} footer links`, () => {
   });
 
   hrefsArray.map(footerHref => {
-    return it(`should return 200 for ${footerHref}`, async () => {
-      expect(await fetchResponse(footerHref)).toEqual(200);
+    const url = getAbsoluteUrl(footerHref);
+    return it(`should return 200 for ${url}`, async () => {
+      expect(await fetchResponse(url)).toEqual(200);
     });
   });
 });

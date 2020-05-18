@@ -19,8 +19,7 @@ fs.readdir(dir, (err, files) => {
     const fileName = `${dir}/${noExtension[0]}.test.js`;
 
     // TO DO: what if no navigation/footer links available
-    // TO DO: check for absolute URLs (e.g. Japanese config)
-    const importConfig = `import { service } from '#lib/config/services/${noExtension[0]}';\n`;
+    const importConfig = `import { service } from './${noExtension[0]}';\n`;
     const testFile = fs.readFileSync('scripts/linkeyTest.js', (error, data) => {
       return data;
     });
