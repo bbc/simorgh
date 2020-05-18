@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, act } from '@testing-library/react';
+import fetchMock from 'fetch-mock';
 import '@testing-library/jest-dom/extend-expect';
 import { setFreshPromoTimestamp } from './utilities/testHelpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -7,6 +8,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import serbianLatMostReadData from '#data/serbian/mostRead/lat';
+import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 import MostReadContainer from '.';
 
 /* eslint-disable react/prop-types */
@@ -47,8 +49,8 @@ const shouldNotRenderMostRead = container =>
   expect(container.querySelector('ol')).not.toBeInTheDocument();
 
 describe('MostReadContainerCanonical Assertion', () => {
-  afterEach(() => {
-    fetch.resetMocks();
+  beforeEach(() => {
+    fetchMock.restore();
   });
 
   [
@@ -126,7 +128,7 @@ describe('MostReadContainerCanonical Assertion', () => {
       serverRenderOnAmp,
     }) => {
       it(description, async () => {
-        fetch.mockResponse(JSON.stringify(dataResponse));
+        fetchMock.mock(getMostReadEndpoint({ service, variant }), dataResponse);
 
         let container;
         await act(async () => {
