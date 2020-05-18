@@ -1,0 +1,442 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "ما خطورة المشاكل التي تواجهها السعودية؟"
+        },
+        "locators": {
+          "assetUri": "/arabic/middleeast-52649577",
+          "cpsUrn": "urn:bbc:content:assetUri:arabic/middleeast-52649577",
+          "assetId": "52649577"
+        },
+        "summary": "السعودية، وهي الدولة التي كانت تشتهر بأنها لا تفرض أي ضرائب على مواطنيها، أعلنت مضاعفة الضريبة المضافة ثلاث مرات من 5 في المئة إلى 15 في المئة وإيقاف صرف بدل غلاء المعيشة اعتبارا من الشهر القادم.",
+        "timestamp": 1589372656000,
+        "language": "ar",
+        "byline": {
+          "name": "فرانك  غاردنر",
+          "title": "محرر الشؤون الأمنية ",
+          "persons": [
+            {
+              "name": "فرانك غاردنر",
+              "function": "محرر الشؤون الأمنية"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112240105",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/C3B8/production/_112240105_gettyimages-1129844897.jpg",
+          "path": "/cpsprodpb/C3B8/production/_112240105_gettyimages-1129844897.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "إعلان يحمل صورة ولي العهد السعودي",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "slideshow",
+        "id": "urn:bbc:ares::asset:arabic/middleeast-52649577",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "البرازيل تسجل أكبر عدد وفيات بفيروس كورونا في البلاد في يوم واحد"
+        },
+        "locators": {
+          "assetUri": "/arabic/world-52649023",
+          "cpsUrn": "urn:bbc:content:assetUri:arabic/world-52649023",
+          "assetId": "52649023"
+        },
+        "summary": "عدد الوفيات بفيروس كورونا في البرازيل يرتفع إلى أعلى مستوى يومي، مسجلا 881 حالة، منذ بدء انتشار الوباء، وذلك بعد أيام من ظهور تقارير ترجح وصول الفيروس إلى البلاد قبل نحو شهرين من التاريخ المعلن رسميا.",
+        "timestamp": 1589377817000,
+        "language": "ar",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112255011",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/2B2F/production/_112255011_20be937c-d343-4947-adfc-7a9816fedcf7.jpg",
+          "path": "/cpsprodpb/2B2F/production/_112255011_20be937c-d343-4947-adfc-7a9816fedcf7.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "كشف درجة الحرارة",
+          "caption": "قالت مصادر أكاديمية في البرازيل إن اختبار الكشف عن فيروس كورونا لا يجرى إلا للحالات التي تتوجه إلى المستشفيات بسبب الأعراض",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "slideshow",
+        "id": "urn:bbc:ares::asset:arabic/world-52649023",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "الاقتصاد البريطاني ينكمش بأسرع وتيرة منذ الأزمة المالية العالمية"
+        },
+        "locators": {
+          "assetUri": "/arabic/business-52650157",
+          "cpsUrn": "urn:bbc:content:assetUri:arabic/business-52650157",
+          "assetId": "52650157"
+        },
+        "summary": "اقتصاد المملكة المتحدة يشهد أسرع انكماش له منذ الأزمة المالية التي شهدها العالم عام 2008.",
+        "timestamp": 1589377951000,
+        "language": "ar",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112223629",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/169D8/production/_112223629_gettyimages-1211920916.jpg",
+          "path": "/cpsprodpb/169D8/production/_112223629_gettyimages-1211920916.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "عامل بناء",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "slideshow",
+        "id": "urn:bbc:ares::asset:arabic/business-52650157",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "مبادرات إنسانية لمساعدة محتاجين"
+        },
+        "locators": {
+          "assetUri": "/arabic/middleeast-52638393",
+          "cpsUrn": "urn:bbc:content:assetUri:arabic/middleeast-52638393",
+          "assetId": "52638393"
+        },
+        "summary": "تأثرت كل البلدان بانتشار فيروس كورونا وفقد الملايين وظائفهم وأعمالهم، ولكن ماذا عن الذين يعيشون في دولة ممزقة نتيجة عقد من الحروب ولا مصدر دخل لهم و لا معيل؟",
+        "timestamp": 1589350635000,
+        "language": "ar",
+        "byline": {
+          "name": "هيفار حسن",
+          "title": "بي بي سي - لندن",
+          "persons": [
+            {
+              "name": "هيفار حسن",
+              "function": "بي بي سي - لندن"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112251912",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/559B/production/_112251912_displaedsyiangirlhappyforrecieveingbread.jpg",
+          "path": "/cpsprodpb/559B/production/_112251912_displaedsyiangirlhappyforrecieveingbread.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "فتاة سورية",
+          "copyrightHolder": "BAKR ALKASEM",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:arabic/middleeast-52638393",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "تجارب في مواجهة الموت من أربع قارات"
+        },
+        "locators": {
+          "assetUri": "/arabic/world-52621188",
+          "cpsUrn": "urn:bbc:content:assetUri:arabic/world-52621188",
+          "assetId": "52621188"
+        },
+        "summary": "في اليوم العالمي للممرضات اللواتي يخاطرن بحياتهن الآن من أجل إنقاذ الآخرين من الموت نقدم أربع تجارب من أربع قارات حول العالم.",
+        "timestamp": 1589260742000,
+        "language": "ar",
+        "byline": {
+          "name": "سواميناثان ناتاراجان",
+          "title": "بي بي سي",
+          "persons": [
+            {
+              "name": "سواميناثان ناتاراجان",
+              "function": "بي بي سي"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112217333",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/825B/production/_112217333_c3b.jpg",
+          "path": "/cpsprodpb/825B/production/_112217333_c3b.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Gabriela holding the hand of a patient during her final hours",
+          "caption": "Nurses sometimes sit next to dying patients and comfort them in their final hours",
+          "copyrightHolder": "Gabriela Serano",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:arabic/world-52621188",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "كيف تواجه قناة السويس لجوء بعض السفن إلى طريق رأس الرجاء الصالح؟"
+        },
+        "locators": {
+          "assetUri": "/arabic/middleeast-52634918",
+          "cpsUrn": "urn:bbc:content:assetUri:arabic/middleeast-52634918",
+          "assetId": "52634918"
+        },
+        "summary": "تراجع أسعار النفط في الفترة الأخيرة إضافة إلى تراجع حركة التجارة العالمية، بسبب تداعيات تفشي فيروس كورونا، يدفع بعض سفن الشحن إلى اختيار طريق رأس الرجاء الصالح بدلا من عبور قناة السويس، بهدف خفض التكلفة.",
+        "timestamp": 1589301656000,
+        "language": "ar",
+        "byline": {
+          "name": "أحمد عمر",
+          "title": "القاهرة",
+          "persons": [
+            {
+              "name": "أحمد عمر",
+              "function": "القاهرة"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112242803",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/7868/production/_112242803_76e27461-aedd-40c3-bbbd-7ffae799ce39.jpg",
+          "path": "/cpsprodpb/7868/production/_112242803_76e27461-aedd-40c3-bbbd-7ffae799ce39.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "سفينة شحن",
+          "caption": "شهدت حركة التجارة العالمية تراجعا بسبب تداعيات وباء كورونا",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:arabic/middleeast-52634918",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "فيروس كورونا: اليمن بين انتشار الوباء واتّساع النزاع"
+        },
+        "locators": {
+          "assetUri": "/arabic/middleeast-52637835",
+          "cpsUrn": "urn:bbc:content:assetUri:arabic/middleeast-52637835",
+          "assetId": "52637835"
+        },
+        "summary": "اليمن يعيش في محنة كبرى مع النزاع بين الأطراف المختلف وفي ظل تفاقم وباء كورونا الذي لا يمكن التكهن بنتائجه ومداها، خصوصاً مع عجز هيئات دولية كثيرة عن العمل فيه على نحو محايد ومستقل.",
+        "timestamp": 1589302565000,
+        "language": "ar",
+        "byline": {
+          "name": "أنور  العنسي",
+          "title": "بي بي سي - لندن",
+          "persons": [
+            {
+              "name": "أنور العنسي",
+              "function": "بي بي سي - لندن"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112242447",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/122B8/production/_112242447_yemen3.jpg",
+          "path": "/cpsprodpb/122B8/production/_112242447_yemen3.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "إجراءات التعقيم في اليمن",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:arabic/middleeast-52637835",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "نصائح لمواجهة القلق من الحياة ما بعد الإغلاق"
+        },
+        "locators": {
+          "assetUri": "/arabic/science-and-tech-52622216",
+          "cpsUrn": "urn:bbc:content:assetUri:arabic/science-and-tech-52622216",
+          "assetId": "52622216"
+        },
+        "summary": "بينما تخفف بعض الدول القيود التي فرضتها إثر إنتشار وباء كورونا، يلاحظ خبراء الصحة العقلية بزوغ ظاهرة جديدة ألا وهي القلق بشأن الحياة ما بعد الإغلاق.",
+        "timestamp": 1589254988000,
+        "language": "ar",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112232135",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/CF83/production/_112232135_whatsubject.jpg",
+          "path": "/cpsprodpb/CF83/production/_112232135_whatsubject.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "تقول أكانشكا \"خذوا كل شيء ببساطة، ولا تتعبوا أنفسكم بأشياء جديدة على حين غرة. أنا شخصيا لن أحضر الحفلات يوميا\".",
+          "caption": "تقول أكانشكا \"خذوا كل شيء ببساطة، ولا تتعبوا أنفسكم بأشياء جديدة على حين غرة. أنا شخصيا لن أحضر الحفلات يوميا\".",
+          "copyrightHolder": "AKANSHKA BHATIA",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:arabic/science-and-tech-52622216",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "جهزت نفسي ضد فيروس كورونا منذ عشرين عاماً"
+        },
+        "locators": {
+          "assetUri": "/arabic/world-52608474",
+          "cpsUrn": "urn:bbc:content:assetUri:arabic/world-52608474",
+          "assetId": "52608474"
+        },
+        "summary": "هذه تجربة شخص كان يعاني من \"الاضطراب الوسواسي القهري\" وكيف أن تجربته أفادته في مواجهة فيروس كورونا.",
+        "timestamp": 1589172670000,
+        "language": "ar",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112221956",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/10178/production/_112221956__112204031_976xlaundromat.jpg",
+          "path": "/cpsprodpb/10178/production/_112221956__112204031_976xlaundromat.jpg",
+          "height": 351,
+          "width": 624,
+          "altText": "صورة رمزية",
+          "caption": "كان بيتر احيانا يستحم ثلاث مرات في الليلة الواحدة",
+          "copyrightHolder": "Emma Russell",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:arabic/world-52608474",
+        "type": "cps"
+      }
+    ]
+  }
