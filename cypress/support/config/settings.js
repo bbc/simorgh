@@ -162,6 +162,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/afaanoromoo/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/afaanoromoo/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/afaanoromoo/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   afrique: {
@@ -332,6 +349,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/afrique/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/afrique/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/afrique/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   amharic: {
@@ -492,6 +526,23 @@ module.exports = () => ({
           },
           local: {
             paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/amharic/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/amharic/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/amharic/popular/read'],
             enabled: false,
           },
         },
@@ -664,6 +715,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/arabic/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/arabic/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/arabic/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   azeri: {
@@ -797,6 +865,23 @@ module.exports = () => ({
           },
           local: {
             paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/azeri/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/azeri/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/azeri/popular/read'],
             enabled: false,
           },
         },
@@ -972,6 +1057,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/bengali/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/bengali/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/bengali/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   burmese: {
@@ -1142,6 +1244,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/burmese/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/burmese/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/burmese/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   cymrufyw: {
@@ -1207,6 +1326,7 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
+      mostReadPage: { environments: undefined, smoke: false },
     },
   },
   gahuza: {
@@ -1377,6 +1497,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/gahuza/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/gahuza/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/gahuza/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   gujarati: {
@@ -1505,6 +1642,23 @@ module.exports = () => ({
           },
           local: {
             paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/gujarati/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/gujarati/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/gujarati/popular/read'],
             enabled: false,
           },
         },
@@ -1679,6 +1833,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/hausa/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/hausa/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/hausa/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   hindi: {
@@ -1846,6 +2017,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/hindi/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/hindi/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/hindi/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   igbo: {
@@ -1975,6 +2163,23 @@ module.exports = () => ({
           local: {
             paths: ['/igbo/afirika-23252735'],
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/igbo/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/igbo/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/igbo/popular/read'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -2149,6 +2354,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/indonesia/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/indonesia/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/indonesia/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   japanese: {
@@ -2277,6 +2499,23 @@ module.exports = () => ({
           },
           local: {
             paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/japanese/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/japanese/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/japanese/popular/read'],
             enabled: false,
           },
         },
@@ -2442,6 +2681,23 @@ module.exports = () => ({
           },
           local: {
             paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/korean/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/korean/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/korean/popular/read'],
             enabled: false,
           },
         },
@@ -2617,6 +2873,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/kyrgyz/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/kyrgyz/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/kyrgyz/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   marathi: {
@@ -2745,6 +3018,23 @@ module.exports = () => ({
           },
           local: {
             paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/marathi/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/marathi/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/marathi/popular/read'],
             enabled: false,
           },
         },
@@ -2888,6 +3178,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/mundo/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/mundo/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/mundo/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   naidheachdan: {
@@ -2953,6 +3260,7 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
+      mostReadPage: { environments: undefined, smoke: false },
     },
   },
   nepali: {
@@ -3123,6 +3431,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/nepali/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/nepali/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/nepali/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   news: {
@@ -3188,6 +3513,7 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
+      mostReadPage: { environments: undefined, smoke: false },
     },
   },
   pashto: {
@@ -3353,6 +3679,23 @@ module.exports = () => ({
           },
           local: {
             paths: ['/pashto/23289748'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/pashto/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/pashto/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/pashto/popular/read'],
             enabled: false,
           },
         },
@@ -3542,6 +3885,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/persian/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/persian/popular/read'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/persian/popular/read'],
+            enabled: true,
+          },
+        },
+        smoke: true,
+      },
     },
   },
   pidgin: {
@@ -3666,6 +4026,23 @@ module.exports = () => ({
           },
           local: {
             paths: ['/pidgin/tori-51745682'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/pidgin/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/pidgin/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/pidgin/popular/read'],
             enabled: false,
           },
         },
@@ -3809,6 +4186,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/portuguese/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/portuguese/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/portuguese/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   punjabi: {
@@ -3936,6 +4330,23 @@ module.exports = () => ({
           },
           local: {
             paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/punjabi/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/punjabi/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/punjabi/popular/read'],
             enabled: false,
           },
         },
@@ -4070,6 +4481,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/russian/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/russian/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/russian/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   scotland: {
@@ -4135,6 +4563,7 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
+      mostReadPage: { environments: undefined, smoke: false },
     },
   },
   serbianCyr: {
@@ -4264,6 +4693,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/serbian/cyr/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/serbian/cyr/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/serbian/cyr/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   serbianLat: {
@@ -4388,6 +4834,23 @@ module.exports = () => ({
           },
           local: {
             paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/serbian/lat/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/serbian/lat/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/serbian/lat/popular/read'],
             enabled: false,
           },
         },
@@ -4562,6 +5025,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/sinhala/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/sinhala/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/sinhala/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   somali: {
@@ -4731,6 +5211,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/somali/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/somali/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/somali/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   sport: {
@@ -4747,6 +5244,7 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
+      mostReadPage: { environments: undefined, smoke: false },
     },
   },
   swahili: {
@@ -4912,6 +5410,23 @@ module.exports = () => ({
           },
           local: {
             paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/swahili/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/swahili/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/swahili/popular/read'],
             enabled: false,
           },
         },
@@ -5087,6 +5602,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/tamil/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/tamil/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/tamil/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   telugu: {
@@ -5220,6 +5752,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/telugu/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/telugu/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/telugu/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   thai: {
@@ -5348,6 +5897,23 @@ module.exports = () => ({
           },
           local: {
             paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/thai/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/thai/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/thai/popular/read'],
             enabled: false,
           },
         },
@@ -5518,6 +6084,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/tigrinya/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/tigrinya/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/tigrinya/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   turkce: {
@@ -5651,6 +6234,23 @@ module.exports = () => ({
           },
           local: {
             paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/turkce/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/turkce/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/turkce/popular/read'],
             enabled: false,
           },
         },
@@ -5791,6 +6391,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/ukchina/simp/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/ukchina/simp/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/ukchina/simp/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   ukchinaTrad: {
@@ -5921,6 +6538,23 @@ module.exports = () => ({
           },
           local: {
             paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/ukchina/trad/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/ukchina/trad/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/ukchina/trad/popular/read'],
             enabled: false,
           },
         },
@@ -6062,6 +6696,23 @@ module.exports = () => ({
           },
           local: {
             paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/ukrainian/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/ukrainian/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/ukrainian/popular/read'],
             enabled: false,
           },
         },
@@ -6232,6 +6883,23 @@ module.exports = () => ({
           },
           local: {
             paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/urdu/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/urdu/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/urdu/popular/read'],
             enabled: false,
           },
         },
@@ -6411,6 +7079,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/uzbek/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/uzbek/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/uzbek/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   vietnamese: {
@@ -6549,6 +7234,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/vietnamese/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/vietnamese/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/vietnamese/popular/read'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   yoruba: {
@@ -6677,6 +7379,23 @@ module.exports = () => ({
           },
           local: {
             paths: ['/yoruba/afrika-23252769'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/yoruba/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/yoruba/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/yoruba/popular/read'],
             enabled: false,
           },
         },
@@ -6817,6 +7536,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/zhongwen/simp/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/zhongwen/simp/popular/read'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/zhongwen/simp/popular/read'],
+            enabled: true,
+          },
+        },
+        smoke: true,
+      },
     },
   },
   zhongwenTrad: {
@@ -6947,6 +7683,23 @@ module.exports = () => ({
           },
           local: {
             paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: {
+        environments: {
+          live: {
+            paths: ['/zhongwen/trad/popular/read'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/zhongwen/trad/popular/read'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/zhongwen/trad/popular/read'],
             enabled: false,
           },
         },

@@ -4,7 +4,7 @@ import { render, getByText, getByRole } from '@testing-library/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import OnDemandHeading from '.';
 
-const wrapper = (
+const component = (
   <ServiceContextProvider service="news">
     <OnDemandHeading
       brandTitle="Dunia Pagi Ini"
@@ -16,10 +16,10 @@ const wrapper = (
 );
 
 describe('AudioPlayer blocks OnDemandHeading', () => {
-  shouldMatchSnapshot('should render correctly', wrapper);
+  shouldMatchSnapshot('should render correctly', component);
 
   it('should have semantic h1 with child span with role attribute = text so that screen readers read the BrandTitle and Datestamp in one go', () => {
-    render(wrapper);
+    render(component);
 
     const outerH1 = document.querySelector('h1');
     const spanWithAriaRoleText = getByRole(outerH1, 'text');
@@ -30,7 +30,7 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
   });
 
   it('should have visually hidden comma so screenreaders pause when reading', () => {
-    render(wrapper);
+    render(component);
 
     const visuallyHiddenComma = document.querySelector(
       'span[class^="VisuallyHiddenText"]',

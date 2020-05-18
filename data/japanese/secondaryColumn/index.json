@@ -1,0 +1,435 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "アフガニスタンの病院で銃撃　新生児や母親など12人が死亡"
+        },
+        "locators": {
+          "assetUri": "/japanese/52643045",
+          "cpsUrn": "urn:bbc:content:assetUri:japanese/52643045",
+          "assetId": "52643045"
+        },
+        "summary": "アフガニスタンの首都カブールで12日朝、病院が武装集団に襲撃され、赤ちゃん2人と母親や看護師など12人が死亡した。また、子どもを含む15人が負傷した。",
+        "timestamp": 1589342281000,
+        "language": "ja",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112241665",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/DD26/production/_112241665_mediaitem112238741.jpg",
+          "path": "/cpsprodpb/DD26/production/_112241665_mediaitem112238741.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "An Afghan security personnel carries a newborn baby from a hospital, at the site of an attack in Kabul on May 12, 2020.",
+          "copyrightHolder": "AFP",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "ホーム",
+          "uri": "/japanese/front_page",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:japanese/52643045",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "トトロの描き方、コツは……？　ジブリ映画プロデューサーが伝授"
+        },
+        "locators": {
+          "assetUri": "/japanese/video-52631922",
+          "cpsUrn": "urn:bbc:content:assetUri:japanese/video-52631922",
+          "assetId": "52631922"
+        },
+        "summary": "スタジオジブリの映画プロデューサー、鈴木敏夫氏が、世界的に有名なキャラクター「トトロ」の描き方をファンに披露した。",
+        "timestamp": 1589332753000,
+        "language": "ja",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "MAP",
+        "media": {
+          "id": "p08d05n6",
+          "subType": "clip",
+          "format": "video",
+          "title": "トトロの描き方、コツは……？　ジブリ映画プロデューサーが伝授",
+          "synopses": {
+            "short": "トトロの描き方、コツは……？　ジブリ映画プロデューサーが伝授"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08d05rf.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "トトロの描き方、コツは……？　ジブリ映画プロデューサーが伝授",
+          "versions": [
+            {
+              "versionId": "p08d05n8",
+              "types": [
+                "Original"
+              ],
+              "duration": 62,
+              "durationISO8601": "PT1M2S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableFrom": 1589332559000
+            }
+          ],
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "112238986",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/10D77/production/_112238986_p08cxygr.jpg",
+          "path": "/cpsprodpb/10D77/production/_112238986_p08cxygr.jpg",
+          "height": 1152,
+          "width": 2048,
+          "altText": "A drawing of Totoro",
+          "copyrightHolder": "AFP",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "動画",
+          "uri": "/japanese/video",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:japanese/video-52631922",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "新型ウイルス感染の力士が死亡、28歳"
+        },
+        "locators": {
+          "assetUri": "/japanese/52645502",
+          "cpsUrn": "urn:bbc:content:assetUri:japanese/52645502",
+          "assetId": "52645502"
+        },
+        "summary": "日本相撲協会（JSA）は13日、新型コロナウイルスによる感染症（COVID-19）で入院していた28歳の力士が亡くなったと発表した。高田川部屋に所属する三段目の勝武士（しょうぶし、本名・末武清孝さん）は、COVID-19による多臓器不全で亡くなった。",
+        "timestamp": 1589365672000,
+        "language": "ja",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "100708484",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/BD60/production/_100708484_gettyimages-55886103.jpg",
+          "path": "/cpsprodpb/BD60/production/_100708484_gettyimages-55886103.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "（資料写真）",
+          "caption": "（資料写真）",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "ホーム",
+          "uri": "/japanese/front_page",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:japanese/52645502",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "「回復者の心の健康」をどう守るか　イタリアでの取り組み"
+        },
+        "locators": {
+          "assetUri": "/japanese/features-and-analysis-52612696",
+          "cpsUrn": "urn:bbc:content:assetUri:japanese/features-and-analysis-52612696",
+          "assetId": "52612696"
+        },
+        "summary": "死への恐怖、不安、うつ、怒り、パニック障害、不眠症、そして生き延びたことの罪悪感。戦争や自然災害を経験した人が受ける影響が現在、新型コロナウイルスから回復した人の共通の症状となっている。",
+        "timestamp": 1589184343000,
+        "language": "ja",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112227411",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/2CD0/production/_112227411_mediaitem112207496.jpg",
+          "path": "/cpsprodpb/2CD0/production/_112227411_mediaitem112207496.jpg",
+          "height": 1152,
+          "width": 2048,
+          "altText": "Patient arrives at Tor Vergata Covid hospital in Rome on 6 May",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "読み物・解説",
+          "uri": "/japanese/features_and_analysis",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:japanese/features-and-analysis-52612696",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "【解説】 ジョンソン氏は不可能を可能にしようとしてる？　制限緩和を発表"
+        },
+        "locators": {
+          "assetUri": "/japanese/features-and-analysis-52613366",
+          "cpsUrn": "urn:bbc:content:assetUri:japanese/features-and-analysis-52613366",
+          "assetId": "52613366"
+        },
+        "summary": "ジョンソン首相は新型コロナウイルスを抑えながら、普通の生活を再開させようとしている。だが両立は可能なのだろうか？",
+        "timestamp": 1589180054000,
+        "language": "ja",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112225302",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/4F80/production/_112225302_yygettyimages-1210444671.jpg",
+          "path": "/cpsprodpb/4F80/production/_112225302_yygettyimages-1210444671.jpg",
+          "height": 1152,
+          "width": 2048,
+          "altText": "Woman in an otherwise deserted Regent St, London",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "読み物・解説",
+          "uri": "/japanese/features_and_analysis",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:japanese/features-and-analysis-52613366",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "イギリスのロックダウン緩和計画、変更点は？"
+        },
+        "locators": {
+          "assetUri": "/japanese/features-and-analysis-52612672",
+          "cpsUrn": "urn:bbc:content:assetUri:japanese/features-and-analysis-52612672",
+          "assetId": "52612672"
+        },
+        "summary": "イギリスのボリス・ジョンソン首相は10日、イングランドで新型コロナウイルスによる感染症（COVID-19）対策のロックダウン（都市封鎖）を緩和し、経済を再開させる計画を明らかにした。",
+        "timestamp": 1589172859000,
+        "language": "ja",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112223769",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/179DC/production/_112223769_mediaitem112223768.jpg",
+          "path": "/cpsprodpb/179DC/production/_112223769_mediaitem112223768.jpg",
+          "height": 432,
+          "width": 768,
+          "altText": "Factory worker",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "読み物・解説",
+          "uri": "/japanese/features_and_analysis",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:japanese/features-and-analysis-52612672",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "マフィアの「施し」にすがるイタリア市民　都市封鎖の裏で"
+        },
+        "locators": {
+          "assetUri": "/japanese/features-and-analysis-52588161",
+          "cpsUrn": "urn:bbc:content:assetUri:japanese/features-and-analysis-52588161",
+          "assetId": "52588161"
+        },
+        "summary": "新型ウイルス危機で首が回らなくなる人が増えているイタリアでは、政府に代わって、よく知られた「恩人」が支援の空白を満たしている。",
+        "timestamp": 1589170140000,
+        "language": "ja",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112208156",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/FE9C/production/_112208156_mafioso-nc.png",
+          "path": "/cpsprodpb/FE9C/production/_112208156_mafioso-nc.png",
+          "height": 1152,
+          "width": 2048,
+          "altText": "A mafioso smoking a cigar. The smoke coming out of it is green, and resembles a virus. He is overlooking the Sicilian city of Palermo,",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "読み物・解説",
+          "uri": "/japanese/features_and_analysis",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:japanese/features-and-analysis-52588161",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "【解説】 各国の感染・死者数、比較が難しいのはなぜ？　新型ウイルス"
+        },
+        "locators": {
+          "assetUri": "/japanese/features-and-analysis-52394515",
+          "cpsUrn": "urn:bbc:content:assetUri:japanese/features-and-analysis-52394515",
+          "assetId": "52394515"
+        },
+        "summary": "新型コロナウイルスの感染者や死者の統計は、国と国で比較できるものなのだろうか？",
+        "timestamp": 1587697007000,
+        "language": "ja",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111908464",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/B590/production/_111908464_index_comparing_stats_976.png",
+          "path": "/cpsprodpb/B590/production/_111908464_index_comparing_stats_976.png",
+          "height": 1152,
+          "width": 2048,
+          "altText": "Comparing stats graphic",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": true
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "読み物・解説",
+          "uri": "/japanese/features_and_analysis",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:japanese/features-and-analysis-52394515",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "新型ウイルス経済支援、最も手厚い国はどこ？"
+        },
+        "locators": {
+          "assetUri": "/japanese/features-and-analysis-52586299",
+          "cpsUrn": "urn:bbc:content:assetUri:japanese/features-and-analysis-52586299",
+          "assetId": "52586299"
+        },
+        "summary": "新型ウイルス対策のロックダウン（都市封鎖）で、各国が緊急事態に陥っている。1930年代以来で最悪の景気後退が予想される中、大規模な経済支援を打ち出している。",
+        "timestamp": 1588930107000,
+        "language": "ja",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112201603",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/7792/production/_112201603_gettyimages-1217136585.jpg",
+          "path": "/cpsprodpb/7792/production/_112201603_gettyimages-1217136585.jpg",
+          "height": 1152,
+          "width": 2048,
+          "altText": "Japan's bailout has been the biggest",
+          "caption": "Japan's spending is among the most aggressive",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "読み物・解説",
+          "uri": "/japanese/features_and_analysis",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:japanese/features-and-analysis-52586299",
+        "type": "cps"
+      }
+    ]
+  }
