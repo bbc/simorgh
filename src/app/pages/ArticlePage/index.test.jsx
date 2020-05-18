@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitForDomChange, waitFor } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import ArticlePage from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -63,13 +63,13 @@ it('should use headline for meta description if summary does not exist', async (
     </Context>,
   );
 
-  await waitForDomChange({
-    container: document.querySelector('head'),
+  await waitFor(() => {
+    expect(
+      document
+        .querySelector('meta[name="description"]')
+        .getAttribute('content'),
+    ).toEqual('Article Headline for SEO');
   });
-
-  expect(
-    document.querySelector('meta[name="description"]').getAttribute('content'),
-  ).toEqual('Article Headline for SEO');
 });
 
 it('should render a news article correctly', async () => {
