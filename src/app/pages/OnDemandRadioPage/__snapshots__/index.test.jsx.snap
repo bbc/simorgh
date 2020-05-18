@@ -1859,8 +1859,8 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
             <img
               alt="BBC News 코리아"
               class="c13"
-              src="https://ichef.bbci.co.uk/images/ic/112x112/p05gxl34.png"
-              srcset="https://ichef.bbci.co.uk/images/ic/112x112/p05gxl34.png 400w,https://ichef.bbci.co.uk/images/ic/224x224/p05gxl34.png 1008w"
+              src="https://ichef.bbci.co.uk/images/ic/112x112/p08b8lzc.png"
+              srcset="https://ichef.bbci.co.uk/images/ic/112x112/p08b8lzc.png 400w,https://ichef.bbci.co.uk/images/ic/224x224/p08b8lzc.png 1008w"
             />
           </div>
         </div>
@@ -2368,8 +2368,8 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
             <img
               alt="BBC News 코리아"
               class="c13"
-              src="https://ichef.bbci.co.uk/images/ic/112x112/p05gxl34.png"
-              srcset="https://ichef.bbci.co.uk/images/ic/112x112/p05gxl34.png 400w,https://ichef.bbci.co.uk/images/ic/224x224/p05gxl34.png 1008w"
+              src="https://ichef.bbci.co.uk/images/ic/112x112/p08b8lzc.png"
+              srcset="https://ichef.bbci.co.uk/images/ic/112x112/p08b8lzc.png 400w,https://ichef.bbci.co.uk/images/ic/224x224/p08b8lzc.png 1008w"
             />
           </div>
         </div>
