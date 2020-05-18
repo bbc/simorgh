@@ -23,7 +23,7 @@ import LastUpdated from './LastUpdated';
 import processMostRead from '../utilities/processMostRead';
 import mostReadShape from '../utilities/mostReadShape';
 import {
-  MOST_READ_REQUEST_RECEIVED,
+  MOST_READ_CLIENT_REQUEST,
   MOST_READ_FETCH_ERROR,
 } from '#lib/logger.const';
 
@@ -70,17 +70,19 @@ const CanonicalMostRead = ({
         setItems(processMostRead({ data: mostReadData, numberOfItems }));
       };
 
-      const fetchMostReadData = pathname =>
-        fetch(pathname, { mode: 'no-cors' })
+      const fetchMostReadData = pathname => {
+        logger.info(MOST_READ_CLIENT_REQUEST, { url: endpoint });
+
+        return fetch(pathname, { mode: 'no-cors' })
           .then(handleResponse(pathname))
           .catch(error => {
             logger.error(MOST_READ_FETCH_ERROR, {
               url: pathname,
-              error,
+              message: error.toString(),
             });
           });
+      };
 
-      logger.info(MOST_READ_REQUEST_RECEIVED, { url: endpoint });
       fetchMostReadData(endpoint);
     }
   }, [
