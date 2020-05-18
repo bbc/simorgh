@@ -49,7 +49,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                   </span>
                 </h1>
                 <div
-                  class="StyledWrapper-lj1cbr-0 cZkolu"
+                  class="StyledWrapper-lj1cbr-0 bQBOhS"
                 >
                   <div
                     amp-access="toggles.ads.enabled AND geoIp.advertiseCombined"

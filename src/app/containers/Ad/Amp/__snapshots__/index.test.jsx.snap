@@ -2,6 +2,10 @@
 
 exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
 .c0 {
+  background-color: #F6F6F6;
+}
+
+.c1 {
   margin: 0 auto;
   width: 100%;
   text-align: center;
@@ -10,7 +14,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
 }
 
 @media (min-width:63rem) {
-  .c0 {
+  .c1 {
     padding-top: 2rem;
     padding-bottom: 1rem;
     max-width: 63rem;
@@ -39,14 +43,14 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
   <body>
     <div>
       <div
-        class=""
+        class="c0"
       >
         <div
           amp-access="toggles.ads.enabled AND geoIp.advertiseCombined"
           amp-access-hide="true"
         >
           <div
-            class="c0"
+            class="c1"
           >
             <amp-ad
               data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
