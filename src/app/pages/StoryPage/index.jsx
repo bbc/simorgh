@@ -230,8 +230,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     group4: 4,
     group5: 4,
   };
-  console.log('yaaay');
-
   return (
     <>
       <CpsMetadata
