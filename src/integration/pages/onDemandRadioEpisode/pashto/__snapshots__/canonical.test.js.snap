@@ -14,8 +14,6 @@ exports[`Canonical On Demand Radio Episode I can see the brand title 1`] = `"م�
 
 exports[`Canonical On Demand Radio Episode I can see the episode summary 1`] = `"د بي بي سي ورلډ سروس څخه پروګرام کول"`;
 
-exports[`Canonical On Demand Radio Episode I can see the episode title 1`] = `"۱ می ۲۰۲۰"`;
-
 exports[`Canonical On Demand Radio Episode Media player embed A11y I can read the media player title 1`] = `"اډیو پلیئر"`;
 
 exports[`Canonical On Demand Radio Episode Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"`;
