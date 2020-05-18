@@ -17,7 +17,7 @@ const AdContainer = () => {
   }
 
   const Ad = isAmp ? Amp : Canonical;
-  return <Ad service={service} />;
+  return <Ad />;
 };
 
 export default AdContainer;

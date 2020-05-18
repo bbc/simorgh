@@ -4,6 +4,7 @@ import '@testing-library/jest-dom/extend-expect';
 import { render } from '@testing-library/react';
 import AmpAd, { AMP_ACCESS_FETCH } from './index';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
 
 const adJsonAttributes = {
   targeting: {
@@ -15,9 +16,16 @@ const adJsonAttributes = {
 
 const adWithContext = (service = 'pidgin') =>
   render(
-    <ServiceContextProvider service={service}>
-      <AmpAd />
-    </ServiceContextProvider>,
+    <RequestContextProvider
+      bbcOrigin="https://www.test.bbc.com"
+      isAmp
+      pageType="frontPage"
+      service={service}
+    >
+      <ServiceContextProvider service={service}>
+        <AmpAd />
+      </ServiceContextProvider>
+    </RequestContextProvider>,
   );
 
 describe('AMP Ads', () => {
