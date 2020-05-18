@@ -41,6 +41,9 @@ const toggles = {
     logMediaPlayerStatus: {
       enabled: false,
     },
+    webVitals: {
+      enabled: true,
+    },
   },
   test: {
     ads: {

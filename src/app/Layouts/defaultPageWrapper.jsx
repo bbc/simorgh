@@ -6,6 +6,7 @@ import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
 import ServiceWorkerContainer from '../containers/ServiceWorker';
 import MPulseBeacon from '../containers/MPulseBeacon';
+import WebVitals from '../containers/WebVitals';
 import { ServiceContext } from '../contexts/ServiceContext';
 
 const PageWrapper = ({ children }) => {
@@ -19,6 +20,7 @@ const PageWrapper = ({ children }) => {
       <ServiceWorkerContainer />
       <ManifestContainer />
       <MPulseBeacon />
+      <WebVitals />
       <HeaderContainer />
       {children}
       <FooterContainer />
