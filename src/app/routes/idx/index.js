@@ -6,5 +6,5 @@ export default {
   exact: true,
   component: IdxPage,
   getInitialData: () => Promise.resolve({ status: 200, pageData: {} }),
-  pageType: 'idx',
+  pageType: 'IDX',
 };
