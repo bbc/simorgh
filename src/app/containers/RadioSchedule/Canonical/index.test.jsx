@@ -1,6 +1,6 @@
 import React from 'react';
 import fetchMock from 'fetch-mock';
-import { render, wait } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import '@testing-library/jest-dom/extend-expect';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
@@ -55,7 +55,7 @@ describe('Canonical RadioSchedule', () => {
         <RadioScheduleWithContext initialData={initialData} />,
       );
 
-      await wait(() => {
+      await waitFor(() => {
         expect(container.querySelectorAll('li').length).toEqual(4);
       });
     });
@@ -70,7 +70,7 @@ describe('Canonical RadioSchedule', () => {
       const { container } = render(
         <RadioScheduleWithContext initialData={initialData} />,
       );
-      await wait(() => {
+      await waitFor(() => {
         expect(container).toBeEmpty();
       });
     });
@@ -85,7 +85,7 @@ describe('Canonical RadioSchedule', () => {
       const { container } = render(
         <RadioScheduleWithContext initialData={initialData} />,
       );
-      await wait(() => {
+      await waitFor(() => {
         expect(container).toBeEmpty();
       });
     });
@@ -103,7 +103,7 @@ describe('Canonical RadioSchedule', () => {
       fetchMock.mock(endpoint, arabicRadioScheduleData);
       const { container } = render(<RadioScheduleWithContext />);
 
-      await wait(() => {
+      await waitFor(() => {
         expect(container.querySelectorAll('li').length).toEqual(4);
       });
     });
@@ -113,7 +113,7 @@ describe('Canonical RadioSchedule', () => {
         schedules: arabicRadioScheduleData.schedules.slice(0, 2),
       });
       const { container } = render(<RadioScheduleWithContext />);
-      await wait(() => {
+      await waitFor(() => {
         expect(container).toBeEmpty();
       });
     });
@@ -123,7 +123,7 @@ describe('Canonical RadioSchedule', () => {
         schedules: [],
       });
       const { container } = render(<RadioScheduleWithContext />);
-      await wait(() => {
+      await waitFor(() => {
         expect(container).toBeEmpty();
       });
     });
@@ -133,7 +133,7 @@ describe('Canonical RadioSchedule', () => {
 
       const { container } = render(<RadioScheduleWithContext />);
 
-      await wait(() => {
+      await waitFor(() => {
         expect(container).toBeEmpty();
       });
     });
@@ -145,7 +145,7 @@ describe('Canonical RadioSchedule', () => {
 
       const { container } = render(<RadioScheduleWithContext />);
 
-      await wait(() => {
+      await waitFor(() => {
         expect(container).toBeEmpty();
       });
     });

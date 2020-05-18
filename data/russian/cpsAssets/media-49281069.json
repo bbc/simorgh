@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/russian/media-49281069",
       "cpsUrn": "urn:bbc:content:assetUri:russian/media-49281069",
-      "curie": "http://www.bbc.co.uk/asset/e84cdf93-4651-994c-b0e4-257a782f944c"
+      "curie": "http://www.bbc.co.uk/asset/e84cdf93-4651-994c-b0e4-257a782f944c",
+      "assetId": "49281069"
     },
     "type": "MAP",
     "createdBy": "russian-v6",
     "language": "ru",
-    "lastUpdated": 1565286287488,
-    "firstPublished": 1565279939,
-    "lastPublished": 1565286277,
+    "lastUpdated": 1588167408785,
+    "firstPublished": 1565279939000,
+    "lastPublished": 1565279939000,
+    "timestamp": 1565279939000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -34,33 +36,50 @@
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
         "categoryName": "News"
-      }
+      },
+      "taggings": []
     },
     "tags": {
       "about": [
         {
-          "thingLabel": "Animals",
-          "thingUri": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
-          "thingId": "14745d1f-885d-4b9f-b28a-24540e7beb15",
-          "thingType": ["Theme", "Thing"],
+          "thingLabel": "Землетрясения",
+          "thingUri": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+          "thingId": "8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8",
+          "thingType": ["core:Thing", "core:Theme", "tagging:TagConcept"],
           "thingSameAs": [
-            "http://dbpedia.org/resource/Animal",
-            "http://www.wikidata.org/entity/Q729"
+            "http://www.wikidata.org/entity/Q7944",
+            "http://dbpedia.org/resource/Earthquake"
+          ],
+          "topicName": "Землетрясения",
+          "topicId": "c0x6y032r15t",
+          "curationList": [
+            {
+              "curationId": "63eb8caf-7f60-42d1-8876-6d117661ff87",
+              "curationType": "vivo-stream"
+            }
           ]
         },
         {
-          "thingLabel": "Earthquakes",
-          "thingUri": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
-          "thingId": "8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8",
-          "thingType": ["Theme", "Thing"],
+          "thingLabel": "Животные",
+          "thingUri": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
+          "thingId": "14745d1f-885d-4b9f-b28a-24540e7beb15",
+          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
           "thingSameAs": [
-            "http://dbpedia.org/resource/Earthquake",
-            "http://www.wikidata.org/entity/Q7944"
+            "http://www.wikidata.org/entity/Q729",
+            "http://dbpedia.org/resource/Animal"
+          ],
+          "topicName": "Животные",
+          "topicId": "c61k92jj6ent",
+          "curationList": [
+            {
+              "curationId": "abebca4b-53f7-4a55-a82b-bbc8ee2aba59",
+              "curationType": "vivo-stream"
+            }
           ]
         }
       ]
     },
-    "version": "v1.0.10",
+    "version": "v1.2.0",
     "blockTypes": ["media", "paragraph"],
     "includeComments": false
   },
@@ -89,9 +108,10 @@
             "warnings": {},
             "availableTerritories": {
               "uk": true,
-              "nonUk": true
+              "nonUk": true,
+              "world": false
             },
-            "availableFrom": 1565264403
+            "availableFrom": 1565264403000
           }
         ],
         "type": "media"
@@ -117,15 +137,18 @@
     "locators": {
       "assetUri": "/russian/media-49281069",
       "cpsUrn": "urn:bbc:content:assetUri:russian/media-49281069",
-      "curie": "http://www.bbc.co.uk/asset/e84cdf93-4651-994c-b0e4-257a782f944c"
+      "curie": "http://www.bbc.co.uk/asset/e84cdf93-4651-994c-b0e4-257a782f944c",
+      "assetId": "49281069"
     },
     "summary": "На северо-восточном побережье Тайваня произошло землетрясение магнитудой 6 баллов. Толчки почувствовали не только люди, но и домашние животные.",
-    "timestamp": 1565286287488,
+    "timestamp": 1565279939000,
+    "language": "ru",
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
         "categoryName": "News"
-      }
+      },
+      "taggings": []
     },
     "media": {
       "id": "p07k34pg",
@@ -148,11 +171,8 @@
           "duration": 39,
           "durationISO8601": "PT39S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true
-          },
-          "availableFrom": 1565264403
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1565264403000
         }
       ],
       "type": "media"
@@ -198,7 +218,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/russian/vert-fut-44971072"
             },
             "summary": "Да, наши коты и кошки мурлычат, когда мы их гладим, но этот специфический вид общения кошки с человеком совсем не обязательно говорит о том, что ваш питомец испытывает удовольствие. Все гораздо сложнее.",
-            "timestamp": 1532778112,
+            "timestamp": 1532778112000,
+            "language": "ru",
             "cpsType": "STY",
             "indexImage": {
               "id": "102703741",
@@ -224,7 +245,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/russian/features-46063733"
             },
             "summary": "Коты гуляют сами по себе. Но где они гуляют и чем занимаются, когда не лежат на коленях своих хозяев томно мурлыкая? Это можно узнать, если повесить на котов небольшие камеры. Смотрите, что получилось.",
-            "timestamp": 1542366690,
+            "timestamp": 1542366690000,
+            "language": "ru",
             "cpsType": "STY",
             "indexImage": {
               "id": "104233153",
@@ -250,7 +272,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/russian/features-42851044"
             },
             "summary": "В нашем представлении кошачья жизнь - это сон с перерывами на обед и безудержные приступы игривости, за которыми неизменно следует очередной \"тихий час\". Но некоторые кошки и коты не спят, а работают, чтобы прокормить себя. Нередко они занимают довольно уважаемые должности.",
-            "timestamp": 1517192039,
+            "timestamp": 1517192039000,
+            "language": "ru",
             "cpsType": "STY",
             "indexImage": {
               "id": "99782895",
@@ -276,7 +299,8 @@
               "cpsUrn": "urn:bbc:content:assetUri:/russian/other-news-45356588"
             },
             "summary": "Чиновники утверждают, что их план позволит защитить местную экосистему. Однако у многих эти замыслы вызвали непонимание.",
-            "timestamp": 1535642574,
+            "timestamp": 1535642574000,
+            "language": "ru",
             "cpsType": "STY",
             "indexImage": {
               "id": "103218319",

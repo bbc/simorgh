@@ -1,6 +1,6 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import { getEmbedUrl } from './helpers';
+import { getEmbedUrl, hasMedia } from './helpers';
 import appToggles from '../../../support/helpers/useAppToggles';
 import envConfig from '../../../support/config/envs';
 
@@ -20,21 +20,19 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     describe('Media Player', () => {
       const language = appConfig[config[service].name][variant].lang;
 
-      it('should be rendered', () => {
+      it('should render an iframe with a valid URL', () => {
         cy.request(`${Cypress.env('currentPath')}.json`).then(
           ({ body: jsonData }) => {
-            const embedUrl = getEmbedUrl(jsonData, language);
-            cy.get(`iframe[src="${embedUrl}"]`).should('be.visible');
-            cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
+            if (hasMedia(jsonData)) {
+              const embedUrl = getEmbedUrl(jsonData, language);
 
-            // Ensure media player is ready
-            cy.get('iframe').then($iframe => {
-              cy.wrap($iframe.prop('contentWindow'), {
-                timeout: 30000,
-              })
-                .its('embeddedMedia.playerInstances.mediaPlayer.ready')
-                .should('eq', true);
-            });
+              cy.get(`iframe[src="${embedUrl}"]`).should('be.visible');
+              cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
+            } else {
+              cy.log(
+                `No media on ${pageType} for ${Cypress.env('currentPath')}`,
+              );
+            }
           },
         );
       });

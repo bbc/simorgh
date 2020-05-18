@@ -1,0 +1,665 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "“በኢትዮጵያ ከ15- 24 ዓመት ያሉ ወጣቶች ለኮሮናቫይረስ ይበልጥ ይጋለጣሉ”"
+        },
+        "locators": {
+          "assetUri": "/amharic/live/news-52634064",
+          "cpsUrn": "urn:bbc:content:assetUri:amharic/live/news-52634064",
+          "assetId": "52634064"
+        },
+        "summary": "በሚሊዮን የሚቆጠሩ ሰዎችን በዓለም ዙሪያ ለህመምና የዳረገውን አስር ሺህዎች የሚሆኑትን ደግሞ ለሞት የዳረገውን የኮሮናቫይረስ በሽታን ከመካከልም ሆነ ለማከም የሚየስችል አስተማማኝ ክትባትም ሆነ መድኃኒት እስካሁን አልተገኘም። ክትባት ወይም መድኃኒት ለማግኘት የሚደረገው ጥረት ግን በከፍተኛ ደረጃ እንደቀጠለ ነው። የጤና ሙያተኞች ግን ከዚህ ባሻገር በሽታውን ለመከላከል አስተማማኝ መንገዶች እንዳሉ በተደጋጋሚ ይመክራሉ። እነሱም እጅን በአግባቡ በተደጋጋሚ መታጠብና አካላዊ ርቀትን መጠበቅ ናቸው። በተጨማሪም በርካታ ሰው ባለበት ቦታ ላይ ጭምብል ማድረግ ይመከራል። እራሳችንንና ሌሎችን ለመጠበቅ ሳንዘናጋ ምክሮቹን ተግባራዊ እናድርግ።",
+        "timestamp": 1589342137000,
+        "language": "am",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "LIV",
+        "indexImage": {
+          "id": "112255644",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/AE6F/production/_112255644_gettyimages-1212201199.jpg",
+          "path": "/cpsprodpb/AE6F/production/_112255644_gettyimages-1212201199.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ሶስት ወጣት ወንዶች በመወያየት ላይ",
+          "copyrightHolder": "Anadolu Agency",
+          "type": "image"
+        },
+        "commentary": {
+          "order": "descending",
+          "assetUUID": "496AEC52E00DD342B844D6634C790443",
+          "channels": {
+            "enhancedmobile": "bbc.cps.asset.52634065_EnhancedMobile",
+            "desktop": "bbc.cps.asset.52634065_HighWeb",
+            "highweb": "bbc.cps.asset.52634065_HighWeb",
+            "mobile": "bbc.cps.asset.52634065_EnhancedMobile"
+          }
+        },
+        "isLive": true,
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "maximum",
+        "id": "urn:bbc:ares::asset:amharic/live/news-52634064",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "በሊባኖስ የሚገኙ ኢትዮጵያውያን ለከፋ ችግር ተጋልጠናል እያሉ ነው"
+        },
+        "locators": {
+          "assetUri": "/amharic/52627587",
+          "cpsUrn": "urn:bbc:content:assetUri:amharic/52627587",
+          "assetId": "52627587"
+        },
+        "summary": "ሊባኖስ ከዛሬ ምሽት ጀምሮ ለተከታታይ አምስት ቀናት ማንም ሰው ከቤቱ እንዳይወጣ ደንግጋለች። የምጣኔ ሃብቷ በተከታታይ በተደረገው ሕዝባዊ ተቃውሞ በተጎዳው ሊባኖስ የሚኖሩ ኢትዮጵያውያን ኑሯችን በየዕለቱ እየከፋ መጥቷል ሲሉ ይናገራሉ። እነዚህ ኢትዮጵያውያ በቤት ሰራተኛነት የሚሰሩት ያለ ደሞዝ እንደሚሰሩ፣ ደሞዛቸውን ቀንሰው በግማሽ የሚሰሩ መኖራቸውን እንዲሁም ከአሰሪዎቻቸው ጋር ወጥተው ለሕገወጥ ስደተኛነት የተጋለጡ እንዳሉ ለቢቢሲ ተናግረዋል።",
+        "timestamp": 1589372242000,
+        "language": "am",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "109241269",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/177D6/production/_109241269_lebanon.jpg",
+          "path": "/cpsprodpb/177D6/production/_109241269_lebanon.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "አንዲት በቤት ውስጥ ሥራ ላይ የተሰማራች ወጣት",
+          "copyrightHolder": "This is Lebanon/FB page",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112248175",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/DF60/production/_112248175_lebanon.jpg",
+          "path": "/cpsprodpb/DF60/production/_112248175_lebanon.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "አንዲት በቤት ውስጥ ሥራ ላይ የተሰማራች ወጣት",
+          "copyrightHolder": "This is Lebanon/FB page",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "maximum",
+        "section": {
+          "subType": "IDX",
+          "name": "ዜና",
+          "uri": "/amharic/front_page",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:amharic/52627587",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "አፍሪካዊቷ ቢሊየነርና የብሩስሊ ፊርማ?"
+        },
+        "locators": {
+          "assetUri": "/amharic/news-52649225",
+          "cpsUrn": "urn:bbc:content:assetUri:amharic/news-52649225",
+          "assetId": "52649225"
+        },
+        "summary": "ከሰሞኑ የሃገሯን ሃብት አራቁታለች የምትባለው የቀድሞው የአንጎላ ፕሬዚዳንት ልጅና ቢሊየነር ኢዛቤል ዶስ ሳንቶስና የቻይናው ዕውቅ የኩንግፉ ስፖርተኛ፣ ፊልም ሰሪና የማርሻል ጥበብ ፈላስፋ ብሩስሊ በአንድ ላይ ስማቸው እየተነሳ ነው።",
+        "timestamp": 1589373669000,
+        "language": "am",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112247678",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1567A/production/_112247678_isabeldossantosallegesuseofforgeddocumentincourt.jpg",
+          "path": "/cpsprodpb/1567A/production/_112247678_isabeldossantosallegesuseofforgeddocumentincourt.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ኢዛቤል ዶስ ሳንቶስ ያቀረበችው መረጃ",
+          "copyrightHolder": "Provided by Powerscourt PR",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "maximum",
+        "id": "urn:bbc:ares::asset:amharic/news-52649225",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "\"ምዕራባውያን ለአፍሪካ ሃገር በቀል መድኃኒቶች ንቀት አለባቸው\" ሲሉ የማዳጋስካሩ ፕሬዚዳንት ተቹ"
+        },
+        "locators": {
+          "assetUri": "/amharic/news-52635909",
+          "cpsUrn": "urn:bbc:content:assetUri:amharic/news-52635909",
+          "assetId": "52635909"
+        },
+        "summary": "የአለም ጤና ድርጅትም ሆነ የምዕራቡ አለም ሃገር በቀል የኮሮናቫይረስ መድሃኒትን የሚተቹት \"ለአፍሪካ ሃገር በቀል መድሃኒት ንቀት ስላላቸውና የበላይ ነን ብለው ስለሚያስቡ ነው\" በማለት ፕሬዚዳንቱ ትችታቸውን ለፈረንሳዩ ሚዲያ ፍራንስ 24 ተናግረዋል።",
+        "timestamp": 1589288166000,
+        "language": "am",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112242300",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/0144/production/_112242300_gettyimages-1210464641-1.jpg",
+          "path": "/cpsprodpb/0144/production/_112242300_gettyimages-1210464641-1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "የማዳጋስካሩ ፕሬዚዳንት አንድሪ ራጆይሊና",
+          "copyrightHolder": "RIJASOLO",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112235938",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/147F1/production/_112235938_gettyimages-1210464641-1.jpg",
+          "path": "/cpsprodpb/147F1/production/_112235938_gettyimages-1210464641-1.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "የማዳጋስካሩ ፕሬዚዳንት አንድሪ ራጆይሊና",
+          "copyrightHolder": "RIJASOLO",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:amharic/news-52635909",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ከኮሮናቫይረስ የትኞቹ ድርጅቶች አተረፉ? እነማንስ ከሰሩ?"
+        },
+        "locators": {
+          "assetUri": "/amharic/news-52629906",
+          "cpsUrn": "urn:bbc:content:assetUri:amharic/news-52629906",
+          "assetId": "52629906"
+        },
+        "summary": "ኮሮናቫይረስ በርካታ የንግድ ዘርፎችን አሽመድምዷል። በተቃራኒው ቀን የወጣላቸው የቴክኖሎጂ ዘርፎችም አሉ። ለመሆኑ የበሽታውን ሥርጭት ተከትሎ የትኞቹ ድርጅቶች አተረፉ? እነማንስ ከሰሩ?",
+        "timestamp": 1589267980000,
+        "language": "am",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+            "categoryName": "Explainer"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112238008",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/138D3/production/_112238008_animalcrossingbezos.jpg",
+          "path": "/cpsprodpb/138D3/production/_112238008_animalcrossingbezos.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ትርፋማ ድርጅቶች",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:amharic/news-52629906",
+        "type": "cps"
+      },
+      {
+        "name": "ቢቢሲ አማርኛ ዜና",
+        "summary": "‎20:29 EAT - 20:44 EAT",
+        "indexImage": {
+          "id": "110294218",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/13D61/production/_110294218_7e2d3c32-8900-4dd3-beb9-1d417d4ca6b5.jpg",
+          "path": "/cpsprodpb/13D61/production/_110294218_7e2d3c32-8900-4dd3-beb9-1d417d4ca6b5.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "BBC",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "uri": "https://www.bbc.com/amharic/bbc_amharic_radio/programmes/w13xttnt",
+        "contentType": "RadioBulletin",
+        "assetTypeCode": "PRO",
+        "timestamp": 1580444033000,
+        "type": "link"
+      },
+      {
+        "headlines": {
+          "headline": "በአፍሪካ ከ63 ሺህ በላይ ሰዎች በኮሮናቫይረስ ቢያዙም የተጣለው ገደብ እየላላ ነው"
+        },
+        "locators": {
+          "assetUri": "/amharic/news-52618799",
+          "cpsUrn": "urn:bbc:content:assetUri:amharic/news-52618799",
+          "assetId": "52618799"
+        },
+        "summary": "የአፍሪካ በሽታ መቆጣጠሪያና መከላከያ ማዕከል አዲስ ያወጣው አሃዝ እንደሚያመለክተው እስካሁን 63 ሺህ 325 በኮቪድ-19 የተያዙ ሰዎች በአህጉሪቱ ውስጥ ተመዝግበዋል። በተጨማሪም 2290 ሰዎች በወረርሽኙ ሳቢያ የሞቱ ሲሆን 21 ሺህ 821 ሰዎች ደግሞ ከቫይረሱ ማገገማቸው ተነግሯል። የወረርሽኙ መስፋፋት ከፍተኛ ደረጃ ላይ የሚደርስበት ጊዜ ገና እንደሆነ ባለሙያዎች እያስጠነቀቁ ቢሆንም በርካታ የአፍሪካ አገራት ለሳምንታት ጥለውት የነበረውን የእንቅስቃሴ ዕገዳ በዚህ ሳምንት ማላላት ጀምረዋል። . . .",
+        "timestamp": 1589198372000,
+        "language": "am",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111640321",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/3010/production/_111640321_corona-graph.jpg",
+          "path": "/cpsprodpb/3010/production/_111640321_corona-graph.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Covid 19 testing",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112228789",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/181DE/production/_112228789_corona-graph.jpg",
+          "path": "/cpsprodpb/181DE/production/_112228789_corona-graph.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Covid 19 testing",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:amharic/news-52618799",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "በአማራ ክልል የትምህርት ቤቶች መዘጋትን ተከትሎ ያለዕድሜ ጋብቻዎች መጨመራቸው ተገለፀ"
+        },
+        "locators": {
+          "assetUri": "/amharic/52588482",
+          "cpsUrn": "urn:bbc:content:assetUri:amharic/52588482",
+          "assetId": "52588482"
+        },
+        "summary": "በአማራ ክልል በሚገኙ የተለያዩ ዞኖች በኮሮናቫይረስ ምክንያት ትምህርት ቤቶች መዘጋታቸውን ተከትሎ ያለ እድሜ ጋብቻ እየጨመረ ስለመሆኑ የአማራ ክልል ሴቶች፣ ህጻናት እና ወጣቶች ቢሮ ምክትል ቢሮ ኃላፊ ወይዘሮ ሠላማዊት አለማየሁ ለቢቢሲ ገለፁ። እንደኃላፊዋ ከሆነ በተለይም በአንዳንድ ዞኖች ላይ በከፍተኛ ደረጃ ጨምሯል።",
+        "timestamp": 1588935260000,
+        "language": "am",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "105499823",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/8083/production/_105499823_gettyimages-641308164-1.jpg",
+          "path": "/cpsprodpb/8083/production/_105499823_gettyimages-641308164-1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ያለ ዕድሜ ጋብቻ",
+          "copyrightHolder": "Eric Lafforgue/Art in All of Us",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112205246",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/FAFA/production/_112205246_gettyimages-641308164-1.jpg",
+          "path": "/cpsprodpb/FAFA/production/_112205246_gettyimages-641308164-1.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "ያለ ዕድሜ ጋብቻ",
+          "copyrightHolder": "Eric Lafforgue/Art in All of Us",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "ዜና",
+          "uri": "/amharic/front_page",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:amharic/52588482",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ዶ/ር ኃይለ ልዑል መኮንን፡ \"ለመጠንቀቅ የሞት ዜና መጠበቅ የለብንም\""
+        },
+        "locators": {
+          "assetUri": "/amharic/news-52590910",
+          "cpsUrn": "urn:bbc:content:assetUri:amharic/news-52590910",
+          "assetId": "52590910"
+        },
+        "summary": "ዶ/ር ኃይለ ልዑል መኮንን፡ \"ለመጠንቀቅ የሞት ዜና መጠበቅ የለብንም\"",
+        "timestamp": 1588938212000,
+        "language": "am",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "MAP",
+        "media": {
+          "id": "p08cnbp1",
+          "subType": "clip",
+          "format": "video",
+          "title": "ዶ/ር ኃይለ ልዑል መኮንን፡ \"ለመጠንቀቅ የሞት ዜና መጠበቅ የለብንም\"",
+          "synopses": {
+            "short": "ዶ/ር ኃይለ ልዑል መኮንን፡ \"ለመጠንቀቅ የሞት ዜና መጠበቅ የለብንም\"",
+            "long": "ዶ/ር ኃይለ ልዑል መኮንን፡ \"ለመጠንቀቅ የሞት ዜና መጠበቅ የለብንም\"",
+            "medium": "ዶ/ር ኃይለ ልዑል መኮንን፡ \"ለመጠንቀቅ የሞት ዜና መጠበቅ የለብንም\""
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08cnbxh.jpg",
+          "embedding": true,
+          "advertising": false,
+          "caption": "ዶ/ር ኃይለ ልዑል መኮንን፡ \"ለመጠንቀቅ የሞት ዜና መጠበቅ የለብንም\"",
+          "versions": [
+            {
+              "versionId": "p08cnbp3",
+              "types": [
+                "Original"
+              ],
+              "duration": 142,
+              "durationISO8601": "PT2M22S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableFrom": 1588937583000
+            }
+          ],
+          "imageCopyright": "ዶ/ር ኃይለ ልዑል",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "112205750",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1676/production/_112205750_p08cnbxh.jpg",
+          "path": "/cpsprodpb/1676/production/_112205750_p08cnbxh.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "ዶ/ር ኃይለ ልዑል መኮንን",
+          "caption": "ዶ/ር ኃይለ ልዑል መኮንን",
+          "copyrightHolder": "ዶ/ር ኃይለ ልዑል",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:amharic/news-52590910",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "በኮሮናቫይረስ ከተቀጠፉ ኢትዮጵያውያን መካከል ጥቂቶቹ"
+        },
+        "locators": {
+          "assetUri": "/amharic/news-52491118",
+          "cpsUrn": "urn:bbc:content:assetUri:amharic/news-52491118",
+          "assetId": "52491118"
+        },
+        "summary": "የተወለዱበትን ቀዬ ለቀው፣ ጨርቄን ማቄን ሳይሉ፣ ከስር መሰረታቸው ተነቅለው በአሜሪካ ያደረጉ ከመቶ በላይ የሚቆጠሩ ኢትዮጵያውያን በበሽታው ህይወታቸውን ማጣታቸው እየተነገረ ነው፤ በርካቶችም በቫይረሱ ተይዘዋል። ቢቢሲ አማርኛ በተለያዩ አገራት በኮሮናቫይረስ ህይወታቸውን ያጡ ኢትዮጵያውያንን ህይወትና ኑሮ በመዳሰስ ለመዘከር አቅዷል። በዚህም ሳምንት ካገኘናቸው ውስጥ የተወሰኑትን እነሆ. . .",
+        "timestamp": 1588566312000,
+        "language": "am",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112094822",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/5941/production/_112094822_coronavictims3.jpg",
+          "path": "/cpsprodpb/5941/production/_112094822_coronavictims3.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "በኮሮና ሀይወታቸውን ያጡት ወገኔ ደበሌ፣ አቶ መንግሥቴ አስረሴና አቶ ዮሴፍ ሲቡ",
+          "caption": "በኮሮና ሀይወታቸውን ያጡት ወገኔ ደበሌ፣ አቶ መንግሥቴ አስረሴና አቶ ዮሴፍ ሲቡ",
+          "copyrightHolder": "Go fund me pages/ Ethiopian Community Association ",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:amharic/news-52491118",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "በየደቂቃው በኮሮናቫይረስ የሚያዙና የሚሞቱ ሰዎች ቁጥርን የሚያሳይ ካርታ"
+        },
+        "locators": {
+          "assetUri": "/amharic/news-51868474",
+          "cpsUrn": "urn:bbc:content:assetUri:amharic/news-51868474",
+          "assetId": "51868474"
+        },
+        "summary": "ከቻይናዋ ሁቤይ ግዛት ተነስቶ ሰው ከማይኖርበት አንታርክቲክ ውጪ ሁሉንም የዓለማችንን አህጉራትን ያዳረሰው የኮሮናቫይረስ ወረርሽኝ በአሁኑ ወቅት የምድራችን ዋነኛ የጤና ስጋት ሆኗል። ኮቪድ-19 በመባል የሚታወቀው ይህ ወረርሽኝ የመተንፈሻ አካልን የሚያጠቃ ሲሆን፤ መጀመሪያ ትኩሳት ቀጥሎም ደረቅ ሳል ከሳምንት በኋላ ደግሞ የትንፋሽ ማጠርን ያስከትላል። እስካሁን በቫይረሱ ወደ ሦስት ሚሊዮን በላይ ሰዎች የተያዙ ሲሆን ከ240 ሺህ በላይ የሚሆኑ ደግሞ ህይወታቸውን አጥተዋል። እስካሁን ባለው ሁኔታ ወረርሽኙን ለመቆጣጠር የሚያስችል ክትባትም ሆነ መድኃኒት አልተገኘም።",
+        "timestamp": 1584083952000,
+        "language": "am",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+            "categoryName": "Interactive"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111883542",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/5FDA/production/_111883542_index_world_interactive_976.png",
+          "path": "/cpsprodpb/5FDA/production/_111883542_index_world_interactive_976.png",
+          "height": 549,
+          "width": 976,
+          "altText": "ኮሮናቫይረስ ምስል",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "111883544",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/ADFA/production/_111883544_index_world_interactive_976.png",
+          "path": "/cpsprodpb/ADFA/production/_111883544_index_world_interactive_976.png",
+          "height": 180,
+          "width": 320,
+          "altText": "ኮሮናቫይረስ ምስል",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:amharic/news-51868474",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "በኮሮናቫይረስ ምክንያት ቤተ ክርስትያን መሄድ ያቆሙት የ89 ዓመት አዛውንት"
+        },
+        "locators": {
+          "assetUri": "/amharic/52558853",
+          "cpsUrn": "urn:bbc:content:assetUri:amharic/52558853",
+          "assetId": "52558853"
+        },
+        "summary": "የኮሮናቫይረስ ወረርሽን ከተከሰተ ወዲህ በርካታ ነገሮች ተቀይረዋል። ሰዎች በተለያዩ መንገዶች የባህሪ ለውጥ አምጥተዋል። ማህበራዊ መስተጋብራቸውን የቀየሩ፣ ደጋግ ልቦች ያላቸው ግለሰቦች ደግሞ እጅ ያጠራቸውን ወገኖች ሲደግፉ ተስተውሏል። የ89 ዓመቱ አዛውንት፣ አቶ ላዕከ ተክለም የዚሁ ምሳሌ ናቸው።",
+        "timestamp": 1588757813000,
+        "language": "am",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+            "categoryName": "Explainer"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "MAP",
+        "media": {
+          "id": "p08cdxjn",
+          "subType": "clip",
+          "format": "video",
+          "title": "በኮሮናቫይረስ ምክንያት ቤተ ክርስትያን መሄድ ያቆሙት የ89 ዓመት አዛውንት",
+          "synopses": {
+            "short": "በኮሮናቫይረስ ምክንያት ቤተ ክርስትያንን መሄድ ያቆሙት የ89 ዓመት ሽማግሌ"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08cdy35.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "በኮሮናቫይረስ ምክንያት ቤተ ክርስትያንን መሄድ ያቆሙት የ89 ዓመት ሽማግሌ",
+          "versions": [
+            {
+              "versionId": "p08cdxjt",
+              "types": [
+                "Original"
+              ],
+              "duration": 107,
+              "durationISO8601": "PT1M47S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableFrom": 1588757003000
+            }
+          ],
+          "imageCopyright": "BBC",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "112164839",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/16E96/production/_112164839_p08cdy35.jpg",
+          "path": "/cpsprodpb/16E96/production/_112164839_p08cdy35.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Keyframe #1",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "ዜና",
+          "uri": "/amharic/front_page",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:amharic/52558853",
+        "type": "cps"
+      }
+    ]
+  }

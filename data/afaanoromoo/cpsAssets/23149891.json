@@ -30,7 +30,11 @@
           }
         ]
       },
-      { "markupType": "plain_text", "text": "test", "type": "paragraph" }
+      {
+        "markupType": "plain_text",
+        "text": "test",
+        "type": "paragraph"
+      }
     ]
   },
   "metadata": {
@@ -45,9 +49,10 @@
     "id": "urn:bbc:ares::asset:afaanoromoo/23149891",
     "includeComments": false,
     "language": "om",
-    "lastPublished": 1580128335000,
-    "lastUpdated": 1580128341788,
+    "lastPublished": 1503567591000,
+    "lastUpdated": 1588336078892,
     "locators": {
+      "assetId": "23149891",
       "assetUri": "/afaanoromoo/23149891",
       "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/23149891",
       "curie": "http://www.bbc.co.uk/asset/c182ef59-3f36-4844-991f-c35f96b98d23"
@@ -65,10 +70,13 @@
       "isIgorSeoTagsEnabled": false,
       "isKeyContent": false
     },
+    "passport": {
+      "taggings": []
+    },
     "tags": {},
     "timestamp": 1503567591000,
     "type": "MAP",
-    "version": "v1.1.4"
+    "version": "v1.2.1"
   },
   "promo": {
     "headlines": {
@@ -87,7 +95,9 @@
       "type": "image",
       "width": 1024
     },
+    "language": "om",
     "locators": {
+      "assetId": "23149891",
       "assetUri": "/afaanoromoo/23149891",
       "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/23149891",
       "curie": "http://www.bbc.co.uk/asset/c182ef59-3f36-4844-991f-c35f96b98d23"
@@ -108,7 +118,11 @@
       "versions": [
         {
           "availableFrom": 1503567046000,
-          "availableTerritories": { "nonUk": true, "uk": true, "world": false },
+          "availableTerritories": {
+            "nonUk": true,
+            "uk": true,
+            "world": false
+          },
           "duration": 53,
           "durationISO8601": "PT53S",
           "types": ["Original"],
@@ -117,7 +131,9 @@
         }
       ]
     },
-    "passport": { "taggings": [] },
+    "passport": {
+      "taggings": []
+    },
     "summary": "Ingilaanditti dorgommiin quba abbudduu miilaatiin, waggaa waggaan ni gaggeefama.",
     "timestamp": 1503567591000,
     "type": "cps"

@@ -1,26 +1,27 @@
 {
   "metadata": {
     "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172x9f9qjcq3lm",
-    "locators": {},
+    "locators": { "pid": "w172x9f9qjcq3lm", "brandPid": "p03414fb" },
     "type": "WSRADIO",
     "createdBy": "bbc_uzbek_radio",
     "language": "uz",
-    "lastUpdated": 1583601860035,
+    "lastUpdated": 1589529753485,
     "firstPublished": 1583569000000,
     "lastPublished": 1583569000000,
+    "timestamp": 1583569000000,
     "options": {},
     "analyticsLabels": {
       "pageTitle": "Би-би-си Афғонистон учун - BBC News O'zbek",
       "pageIdentifier": "uzbek.bbc_uzbek_radio.w172x9f9qjcq3lm.page",
       "producerId": "96",
-      "contentType": "player-ondemand",
+      "contentType": "player-episode",
       "producer": "UZBEK"
     },
-    "passport": null,
     "tags": {},
-    "version": "v1.1.3",
+    "version": "v1.3.0",
     "blockTypes": ["media"],
-    "title": "Би-би-си Афғонистон учун"
+    "title": "Би-би-си Афғонистон учун",
+    "releaseDateTimeStamp": 1583539200000
   },
   "content": {
     "blocks": [
@@ -33,36 +34,17 @@
           "short": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари",
           "medium": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари"
         },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
         "embedding": false,
         "advertising": false,
-        "versions": [
-          {
-            "versionId": "w1mshg4h3svgqjf",
-            "types": ["Original"],
-            "duration": 1800,
-            "durationISO8601": "PT30M",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": false,
-              "nonUk": false,
-              "world": true
-            },
-            "availableUntil": 1586181570000,
-            "availableFrom": 1583589570000
-          }
-        ],
-        "imageCopyright": null
+        "versions": [],
+        "type": "media"
       }
     ]
   },
   "promo": {
-    "headlines": {
-      "headline": "Би-би-си Афғонистон учун"
-    },
-    "locators": {
-      "pid": "w172x9f9qjcq3lm"
-    },
+    "headlines": { "headline": "Би-би-си Афғонистон учун" },
+    "locators": { "pid": "w172x9f9qjcq3lm", "brandPid": "p03414fb" },
     "media": {
       "id": "w172x9f9qjcq3lm",
       "subType": "episode",
@@ -72,75 +54,56 @@
         "short": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари",
         "medium": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари"
       },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
       "embedding": false,
       "advertising": false,
-      "versions": [
-        {
-          "versionId": "w1mshg4h3svgqjf",
-          "types": ["Original"],
-          "duration": 1800,
-          "durationISO8601": "PT30M",
-          "warnings": {},
-          "availableTerritories": {
-            "uk": false,
-            "nonUk": false,
-            "world": true
-          },
-          "availableUntil": 1586181570000,
-          "availableFrom": 1583589570000
-        }
-      ],
-      "imageCopyright": null
+      "versions": [],
+      "type": "media"
     },
     "indexImage": {
       "id": "",
       "subType": "index",
-      "href": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-      "path": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
       "height": 0,
       "width": 0,
       "altText": null,
-      "copyrightHolder": null
+      "copyrightHolder": null,
+      "type": "image"
     },
-    "brand": {
-      "pid": "p03414fb",
-      "title": "Би-би-си Афғонистон учун"
-    },
-    "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172x9f9qjcq3lm"
+    "brand": { "pid": "p03414fb", "title": "Би-би-си Афғонистон учун" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172x9f9qjcq3lm",
+    "type": "ws_radio"
   },
   "relatedContent": {
     "site": {
       "subType": "site",
       "name": "Uzbek",
-      "uri": "/uzbek"
+      "uri": "/uzbek",
+      "type": "simple"
     },
     "groups": [
       {
         "type": "other-episode",
         "promos": [
           {
-            "headlines": {
-              "headline": "Би-би-си Афғонистон учун"
-            },
-            "locators": {
-              "pid": "w172x9f9qjcm6pj"
-            },
+            "headlines": { "headline": "Би-би-си Афғонистон учун" },
+            "locators": { "pid": "w172xk0b3h1ln53", "brandPid": "p03414fb" },
             "media": {
-              "id": "w172x9f9qjcm6pj",
+              "id": "w172xk0b3h1ln53",
               "subType": "episode",
               "format": "Audio",
-              "title": "06/03/2020 GMT",
+              "title": "14/05/2020 GMT",
               "synopses": {
                 "short": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари",
                 "medium": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshg4h3svctmb",
+                  "versionId": "w1mshpxdplvx7s6",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -150,50 +113,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1586095170000,
-                  "availableFrom": 1583503170000
+                  "availableUntil": 1592056770000,
+                  "availableFrom": 1589464770000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p03414fb",
-              "title": "Би-би-си Афғонистон учун"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172x9f9qjcm6pj"
+            "brand": { "pid": "p03414fb", "title": "Би-би-си Афғонистон учун" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xk0b3h1ln53",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "Би-би-си Афғонистон учун"
-            },
-            "locators": {
-              "pid": "w172x9f9qjcj9sf"
-            },
+            "headlines": { "headline": "Би-би-си Афғонистон учун" },
+            "locators": { "pid": "w172xk0b3h1hr80", "brandPid": "p03414fb" },
             "media": {
-              "id": "w172x9f9qjcj9sf",
+              "id": "w172xk0b3h1hr80",
               "subType": "episode",
               "format": "Audio",
-              "title": "05/03/2020 GMT",
+              "title": "13/05/2020 GMT",
               "synopses": {
                 "short": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари",
                 "medium": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshg4h3sv8xq7",
+                  "versionId": "w1mshpxdplvtbw3",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -203,50 +161,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1586008770000,
-                  "availableFrom": 1583416770000
+                  "availableUntil": 1591970370000,
+                  "availableFrom": 1589378370000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p03414fb",
-              "title": "Би-би-си Афғонистон учун"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172x9f9qjcj9sf"
+            "brand": { "pid": "p03414fb", "title": "Би-би-си Афғонистон учун" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xk0b3h1hr80",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "Би-би-си Афғонистон учун"
-            },
-            "locators": {
-              "pid": "w172x9f9qjcfdwb"
-            },
+            "headlines": { "headline": "Би-би-си Афғонистон учун" },
+            "locators": { "pid": "w172xk0b3h1dvbx", "brandPid": "p03414fb" },
             "media": {
-              "id": "w172x9f9qjcfdwb",
+              "id": "w172xk0b3h1dvbx",
               "subType": "episode",
               "format": "Audio",
-              "title": "04/03/2020 GMT",
+              "title": "12/05/2020 GMT",
               "synopses": {
                 "short": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари",
                 "medium": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshg4h3sv60t4",
+                  "versionId": "w1mshpxdplvqfz0",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -256,50 +209,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585922370000,
-                  "availableFrom": 1583330370000
+                  "availableUntil": 1591883970000,
+                  "availableFrom": 1589291970000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p03414fb",
-              "title": "Би-би-си Афғонистон учун"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172x9f9qjcfdwb"
+            "brand": { "pid": "p03414fb", "title": "Би-би-си Афғонистон учун" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xk0b3h1dvbx",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "Би-би-си Афғонистон учун"
-            },
-            "locators": {
-              "pid": "w172x9f9qjcbhz7"
-            },
+            "headlines": { "headline": "Би-би-си Афғонистон учун" },
+            "locators": { "pid": "w172xk0b3h19yft", "brandPid": "p03414fb" },
             "media": {
-              "id": "w172x9f9qjcbhz7",
+              "id": "w172xk0b3h19yft",
               "subType": "episode",
               "format": "Audio",
-              "title": "03/03/2020 GMT",
+              "title": "11/05/2020 GMT",
               "synopses": {
                 "short": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари",
                 "medium": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshg4h3sv33x1",
+                  "versionId": "w1mshpxdplvmk1x",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -309,50 +257,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585835970000,
-                  "availableFrom": 1583243970000
+                  "availableUntil": 1591797570000,
+                  "availableFrom": 1589205570000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p03414fb",
-              "title": "Би-би-си Афғонистон учун"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172x9f9qjcbhz7"
+            "brand": { "pid": "p03414fb", "title": "Би-би-си Афғонистон учун" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xk0b3h19yft",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "Би-би-си Афғонистон учун"
-            },
-            "locators": {
-              "pid": "w172x9f9qjc7m24"
-            },
+            "headlines": { "headline": "Би-би-си Афғонистон учун" },
+            "locators": { "pid": "w172xk09r6r368k", "brandPid": "p03414fb" },
             "media": {
-              "id": "w172x9f9qjc7m24",
+              "id": "w172xk09r6r368k",
               "subType": "episode",
               "format": "Audio",
-              "title": "02/03/2020 GMT",
+              "title": "10/05/2020 GMT",
               "synopses": {
                 "short": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари",
                 "medium": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshg4h3sv06zy",
+                  "versionId": "w1mshpxdbbkdswn",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -362,50 +305,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585749570000,
-                  "availableFrom": 1583157570000
+                  "availableUntil": 1591711170000,
+                  "availableFrom": 1589119170000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p03414fb",
-              "title": "Би-би-си Афғонистон учун"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172x9f9qjc7m24"
+            "brand": { "pid": "p03414fb", "title": "Би-би-си Афғонистон учун" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xk09r6r368k",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "Би-би-си Афғонистон учун"
-            },
-            "locators": {
-              "pid": "w172x9f9c820vww"
-            },
+            "headlines": { "headline": "Би-би-си Афғонистон учун" },
+            "locators": { "pid": "w172xk09r6r09cg", "brandPid": "p03414fb" },
             "media": {
-              "id": "w172x9f9c820vww",
+              "id": "w172xk09r6r09cg",
               "subType": "episode",
               "format": "Audio",
-              "title": "01/03/2020 GMT",
+              "title": "09/05/2020 GMT",
               "synopses": {
                 "short": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари",
                 "medium": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshg4grjjsgtp",
+                  "versionId": "w1mshpxdbbk9wzk",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -415,50 +353,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585663170000,
-                  "availableFrom": 1583071170000
+                  "availableUntil": 1591624770000,
+                  "availableFrom": 1589032770000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p03414fb",
-              "title": "Би-би-си Афғонистон учун"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172x9f9c820vww"
+            "brand": { "pid": "p03414fb", "title": "Би-би-си Афғонистон учун" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xk09r6r09cg",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "Би-би-си Афғонистон учун"
-            },
-            "locators": {
-              "pid": "w172x9f9c81xyzs"
-            },
+            "headlines": { "headline": "Би-би-си Афғонистон учун" },
+            "locators": { "pid": "w172xk09r6qxdgc", "brandPid": "p03414fb" },
             "media": {
-              "id": "w172x9f9c81xyzs",
+              "id": "w172xk09r6qxdgc",
               "subType": "episode",
               "format": "Audio",
-              "title": "29/02/2020 GMT",
+              "title": "08/05/2020 GMT",
               "synopses": {
                 "short": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари",
                 "medium": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshg4grjjpkxl",
+                  "versionId": "w1mshpxdbbk702g",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -468,50 +401,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585576770000,
-                  "availableFrom": 1582984770000
+                  "availableUntil": 1591538370000,
+                  "availableFrom": 1588946370000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p03414fb",
-              "title": "Би-би-си Афғонистон учун"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172x9f9c81xyzs"
+            "brand": { "pid": "p03414fb", "title": "Би-би-си Афғонистон учун" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xk09r6qxdgc",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "Би-би-си Афғонистон учун"
-            },
-            "locators": {
-              "pid": "w172x9f9c81v22p"
-            },
+            "headlines": { "headline": "Би-би-си Афғонистон учун" },
+            "locators": { "pid": "w172xk09r6qthk8", "brandPid": "p03414fb" },
             "media": {
-              "id": "w172x9f9c81v22p",
+              "id": "w172xk09r6qthk8",
               "subType": "episode",
               "format": "Audio",
-              "title": "28/02/2020 GMT",
+              "title": "07/05/2020 GMT",
               "synopses": {
                 "short": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари",
                 "medium": "Би-би-си ўзбек хизматининг Афғонистон учун янгиликлари ва хабарлари"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshg4grjjlp0h",
+                  "versionId": "w1mshpxdbbk435c",
                   "types": ["Original"],
                   "duration": 1800,
                   "durationISO8601": "PT30M",
@@ -521,27 +449,26 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585490370000,
-                  "availableFrom": 1582898370000
+                  "availableUntil": 1591451970000,
+                  "availableFrom": 1588859970000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0755nqh.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8pfx.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p03414fb",
-              "title": "Би-би-си Афғонистон учун"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172x9f9c81v22p"
+            "brand": { "pid": "p03414fb", "title": "Би-би-си Афғонистон учун" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_radio/w172xk09r6qthk8",
+            "type": "ws_radio"
           }
         ]
       }

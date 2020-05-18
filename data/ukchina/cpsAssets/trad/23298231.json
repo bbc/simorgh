@@ -1,0 +1,664 @@
+{
+  "content":{
+     "blocks":[
+        {
+           "altText":"Index image large",
+           "caption":"Index Image Large",
+           "copyrightHolder":"Kaylee Garrick",
+           "height":549,
+           "href":"http://b.files.bbci.co.uk/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+           "id":"63730607",
+           "path":"/cpsdevpb/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+           "positionHint":"full-width",
+           "subType":"body",
+           "type":"image",
+           "width":976
+        },
+        {
+           "markupType":"plain_text",
+           "role":"introduction",
+           "text":"The first paragraph is manually marked up as an &quot;introduction&quot;, which renders it in bold.",
+           "type":"paragraph"
+        },
+        {
+           "markupType":"plain_text",
+           "text":"The next paragraph isn't marked up in any way - it's just &quot;normal&quot;.",
+           "type":"paragraph"
+        },
+        {
+           "markupType":"plain_text",
+           "text":"This is a crosshead",
+           "type":"crosshead"
+        },
+        {
+           "markupType":"candy_xml",
+           "text":"Paragraphs can contain <bold>bold </bold>and <italic>italic </italic>in CPS at the moment, and these are rendered on the page as <bold>bold </bold>and <italic>italic</italic> or <bold><italic>both</italic></bold>.",
+           "type":"paragraph"
+        },
+        {
+           "markupType":"candy_xml",
+           "text":"<bold><italic>Bold and italic can also be rendered together.</italic></bold>",
+           "type":"paragraph"
+        },
+        {
+           "items":[
+              {
+                 "markupType":"plain_text",
+                 "text":"This is a bulleted list",
+                 "type":"listItem"
+              },
+              {
+                 "markupType":"plain_text",
+                 "text":"Bullet 2",
+                 "type":"listItem"
+              },
+              {
+                 "markupType":"plain_text",
+                 "text":"Bullet 3",
+                 "type":"listItem"
+              }
+           ],
+           "numbered":false,
+           "type":"list"
+        },
+        {
+           "markupType":"plain_text",
+           "text":"This is a normal paragraph again.",
+           "type":"paragraph"
+        },
+        {
+           "markupType":"plain_text",
+           "text":"This is a Heading",
+           "type":"heading"
+        },
+        {
+           "markupType":"plain_text",
+           "text":"Normal paragraph.",
+           "type":"paragraph"
+        },
+        {
+           "items":[
+              {
+                 "markupType":"plain_text",
+                 "text":"This is a numbered list",
+                 "type":"listItem"
+              },
+              {
+                 "markupType":"plain_text",
+                 "text":"Number 2",
+                 "type":"listItem"
+              },
+              {
+                 "markupType":"plain_text",
+                 "text":"Number 3, and so on",
+                 "type":"listItem"
+              }
+           ],
+           "numbered":true,
+           "type":"list"
+        },
+        {
+           "altText":"image",
+           "caption":"Body image #1 with caption",
+           "copyrightHolder":"Getty Images",
+           "height":549,
+           "href":"http://b.files.bbci.co.uk/E67B/test/_63730095_b8013ff8-b115-4364-8f1a-67459cd8d9d9.jpg",
+           "id":"63730095",
+           "path":"/cpsdevpb/E67B/test/_63730095_b8013ff8-b115-4364-8f1a-67459cd8d9d9.jpg",
+           "positionHint":"full-width",
+           "subType":"body",
+           "type":"image",
+           "width":976
+        },
+        {
+           "markupType":"plain_text",
+           "text":"Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. ",
+           "type":"paragraph"
+        },
+        {
+           "markupType":"plain_text",
+           "text":"Another paragraph of body text.",
+           "type":"paragraph"
+        },
+        {
+           "markupType":"plain_text",
+           "text":"This is a Subheading",
+           "type":"subheading"
+        },
+        {
+           "markupType":"plain_text",
+           "text":"A grey line appears after a subheading.",
+           "type":"paragraph"
+        },
+        {
+           "markupType":"candy_xml",
+           "text":"This is a paragraph with an <link><caption>inline link</caption><altText>Link</altText><url href=\"https://www.bbc.co.uk/news/uk-scotland-north-east-orkney-shetland-51190283\" platform=\"highweb\"/></link> to an internal site. Here's a link to an <link><caption>external site</caption><altText>Google</altText><url href=\"http://www.google.com\" platform=\"highweb\"/></link>.",
+           "type":"paragraph"
+        },
+        {
+           "markupType":"plain_text",
+           "text":"More normal paragraph text. The body image below doesn't have a caption, but does have copyright.",
+           "type":"paragraph"
+        },
+        {
+           "altText":"Dogs",
+           "copyrightHolder":"Kaylee Garrick",
+           "height":549,
+           "href":"http://b.files.bbci.co.uk/778B/test/_63730603_dogs-kayleegarrick.jpg",
+           "id":"63730603",
+           "path":"/cpsdevpb/778B/test/_63730603_dogs-kayleegarrick.jpg",
+           "positionHint":"full-width",
+           "subType":"body",
+           "type":"image",
+           "width":976
+        },
+        {
+           "markupType":"plain_text",
+           "text":"Social embed examples below for Twitter, YouTube and Instagram.",
+           "type":"paragraph"
+        },
+        {
+           "markupType":"plain_text",
+           "text":"Twitter",
+           "type":"paragraph"
+        },
+        {
+           "embed":{
+              "fallback_image":{
+                 "alt_text":"Twitter post by BBC News (World): From Brad Pitt's message for \"single\" Britain, to crying mums - here are the highlights from the 2020 #Baftas https://t.co/uYu7YY476r pic.twitter.com/66Za5wGsFN",
+                 "fallback_image_height":668,
+                 "fallback_image_width":465
+              },
+              "oembed":{
+                 "author_name":"BBC News (World)",
+                 "author_url":"https://twitter.com/BBCWorld",
+                 "html":"<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">From Brad Pitt&#39;s message for &quot;single&quot; Britain, to crying mums - here are the highlights from the 2020 <a href=\"https://twitter.com/hashtag/Baftas?src=hash&amp;ref_src=twsrc%5Etfw\">#Baftas</a> <a href=\"https://t.co/uYu7YY476r\">https://t.co/uYu7YY476r</a> <a href=\"https://t.co/66Za5wGsFN\">pic.twitter.com/66Za5wGsFN</a></p>&mdash; BBC News (World) (@BBCWorld) <a href=\"https://twitter.com/BBCWorld/status/1224253149176791040?ref_src=twsrc%5Etfw\">February 3, 2020</a></blockquote>\n",
+                 "provider_name":"Twitter",
+                 "provider_url":"https://twitter.com",
+                 "url":"https://twitter.com/BBCWorld/status/1224253149176791040",
+                 "version":"1.0",
+                 "width":550
+              }
+           },
+           "href":"https://twitter.com/BBCWorld/status/1224253149176791040",
+           "id":"1224253149176791040",
+           "source":"twitter",
+           "type":"social_embed"
+        },
+        {
+           "markupType":"plain_text",
+           "text":"YouTube",
+           "type":"paragraph"
+        },
+        {
+           "href":"https://youtu.be/J4KzO1P6gW4",
+           "id":"J4KzO1P6gW4",
+           "source":"youtube",
+           "type":"social_embed"
+        },
+        {
+           "markupType":"plain_text",
+           "text":"Instagram",
+           "type":"paragraph"
+        },
+        {
+           "embed":{
+              "fallback_image":{
+                 "alt_text":"Instagram post by bbcnews: 1917 was the big winner at the Bafta Film Awards, winning seven prizes in total, including best film, best British film, best director and best cinematography. Joker star Joaquin Phoenix was named best actor, while Renee Zellweger was recognised for her portrayal of Judy Garland. Tap the link in our bio to read more about all of the winners at the 2020 Bafta Film Awards. #Baftas #film #awards #BBCNews",
+                 "fallback_image_height":977,
+                 "fallback_image_width":599
+              },
+              "oembed":{
+                 "author_name":"bbcnews",
+                 "author_url":"https://www.instagram.com/bbcnews",
+                 "html":"<blockquote class=\"instagram-media\" data-instgrm-captioned data-instgrm-permalink=\"https://www.instagram.com/p/B8FPf4ZphHi/?utm_source=ig_embed&amp;utm_campaign=loading\" data-instgrm-version=\"12\" style=\" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);\"><div style=\"padding:16px;\"> <a href=\"https://www.instagram.com/p/B8FPf4ZphHi/?utm_source=ig_embed&amp;utm_campaign=loading\" style=\" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;\" target=\"_blank\"> <div style=\" display: flex; flex-direction: row; align-items: center;\"> <div style=\"background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;\"></div> <div style=\"display: flex; flex-direction: column; flex-grow: 1; justify-content: center;\"> <div style=\" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;\"></div> <div style=\" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;\"></div></div></div><div style=\"padding: 19% 0;\"></div> <div style=\"display:block; height:50px; margin:0 auto 12px; width:50px;\"><svg width=\"50px\" height=\"50px\" viewBox=\"0 0 60 60\" version=\"1.1\" xmlns=\"https://www.w3.org/2000/svg\" xmlns:xlink=\"https://www.w3.org/1999/xlink\"><g stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\"><g transform=\"translate(-511.000000, -20.000000)\" fill=\"#000000\"><g><path d=\"M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631\"></path></g></g></g></svg></div><div style=\"padding-top: 8px;\"> <div style=\" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;\"> View this post on Instagram</div></div><div style=\"padding: 12.5% 0;\"></div> <div style=\"display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;\"><div> <div style=\"background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);\"></div> <div style=\"background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;\"></div> <div style=\"background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);\"></div></div><div style=\"margin-left: 8px;\"> <div style=\" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;\"></div> <div style=\" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)\"></div></div><div style=\"margin-left: auto;\"> <div style=\" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);\"></div> <div style=\" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);\"></div> <div style=\" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);\"></div></div></div></a> <p style=\" margin:8px 0 0 0; padding:0 4px;\"> <a href=\"https://www.instagram.com/p/B8FPf4ZphHi/?utm_source=ig_embed&amp;utm_campaign=loading\" style=\" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;\" target=\"_blank\">1917 was the big winner at the Bafta Film Awards, winning seven prizes in total, including best film, best British film, best director and best cinematography. Joker star Joaquin Phoenix was named best actor, while Renee Zellweger was recognised for her portrayal of Judy Garland. Tap the link in our bio to read more about all of the winners at the 2020 Bafta Film Awards. #Baftas #film #awards #BBCNews</a></p> <p style=\" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;\">A post shared by <a href=\"https://www.instagram.com/bbcnews/?utm_source=ig_embed&amp;utm_campaign=loading\" style=\" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;\" target=\"_blank\"> BBC News</a> (@bbcnews) on <time style=\" font-family:Arial,sans-serif; font-size:14px; line-height:17px;\" datetime=\"2020-02-02T22:51:31+00:00\">Feb 2, 2020 at 2:51pm PST</time></p></div></blockquote>",
+                 "provider_name":"Instagram",
+                 "provider_url":"https://www.instagram.com",
+                 "thumbnail_height":640,
+                 "thumbnail_url":"https://scontent-lhr8-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/83773347_141521066875658_5767189503154469737_n.jpg?_nc_ht=scontent-lhr8-1.cdninstagram.com&_nc_cat=102&_nc_ohc=zOTkxJ6YFc8AX_YV12U&oh=ec3b1f097e1ee28e7d86e946861fe176&oe=5EDB6E82",
+                 "thumbnail_width":640,
+                 "title":"1917 was the big winner at the Bafta Film Awards, winning seven prizes in total, including best film, best British film, best director and best cinematography. Joker star Joaquin Phoenix was named best actor, while Renee Zellweger was recognised for her portrayal of Judy Garland. Tap the link in our bio to read more about all of the winners at the 2020 Bafta Film Awards. #Baftas #film #awards #BBCNews",
+                 "version":"1.0",
+                 "width":658
+              }
+           },
+           "href":"https://www.instagram.com/p/B8FPf4ZphHi/?utm_source=ig_web_copy_link",
+           "id":"B8FPf4ZphHi",
+           "source":"instagram",
+           "type":"social_embed"
+        },
+        {
+           "markupType":"plain_text",
+           "text":"Embedded MAP: video",
+           "type":"paragraph"
+        },
+        {
+           "advertising":true,
+           "caption":"They may be tiny, but us humans could learn a thing or two from ants.",
+           "embedding":true,
+           "format":"video",
+           "id":"p01k6msm",
+           "imageCopyright":"BBC",
+           "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+           "subType":"clip",
+           "synopses":{
+              "short":"They may be tiny, but us humans could learn a thing or two from ants."
+           },
+           "title":"Five things ants can teach us about management",
+           "type":"media",
+           "versions":[
+              {
+                 "availableFrom":1540218932000,
+                 "availableTerritories":{
+                    "nonUk":true,
+                    "uk":true,
+                    "world":false
+                 },
+                 "duration":191,
+                 "durationISO8601":"PT3M11S",
+                 "types":[
+                    "Original"
+                 ],
+                 "versionId":"p01k6msp",
+                 "warnings":{
+                    "long":"Contains strong language and adult humour.",
+                    "short":"Contains strong language and adult humour."
+                 }
+              }
+           ]
+        },
+        {
+           "markupType":"plain_text",
+           "text":"Embedded MAP: audio",
+           "type":"paragraph"
+        },
+        {
+           "advertising":false,
+           "caption":"Some audio from a supermarket checkout in Birmingham",
+           "embedding":false,
+           "format":"audio",
+           "id":"p01m7d07",
+           "imageCopyright":"Getty Images",
+           "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+           "subType":"clip",
+           "synopses":{
+              "short":"Some audio from a supermarket checkout in Birmingham"
+           },
+           "title":"Birmingham checkout",
+           "type":"media",
+           "versions":[
+              {
+                 "availableFrom":1555067395000,
+                 "availableTerritories":{
+                    "nonUk":true,
+                    "uk":true,
+                    "world":false
+                 },
+                 "duration":127,
+                 "durationISO8601":"PT2M7S",
+                 "types":[
+                    "Original"
+                 ],
+                 "versionId":"p01m7d09",
+                 "warnings":{
+                    "long":"Contains some strong language.",
+                    "short":"Contains some strong language."
+                 }
+              }
+           ]
+        },
+        {
+           "markupType":"plain_text",
+           "text":"Includes: VisJo",
+           "type":"paragraph"
+        },
+        {
+           "href":"/include/vjamericas/176-eclipse-lookup/mundo/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png",
+           "platform":"highweb",
+           "required":false,
+           "title":"Include from VisJo",
+           "type":"include"
+        },
+        {
+           "markupType":"plain_text",
+           "text":"Includes: IDT2",
+           "type":"paragraph"
+        },
+        {
+           "href":"/idt2/41a6ad82-8bad-482e-9645-301af4a8e857",
+           "platform":"highweb",
+           "required":false,
+           "title":"IDT2 Include",
+           "type":"include"
+        },
+        {
+           "markupType":"plain_text",
+           "text":"Includes: IDT1: A quiz!",
+           "type":"paragraph"
+        },
+        {
+           "href":"/indepthtoolkit/quizzes/sistema_solar_Quiz_Mundo/syndicated?app-clickable=true&app-image=http%3A%2F%2Fnews.files.bbci.co.uk%2Fvj%2Flive%2Fidt-images%2Fquizzes-quiz_cta%2Fstart_geh2q.png",
+           "platform":"highweb",
+           "required":false,
+           "title":"A quiz!",
+           "type":"include"
+        },
+        {
+           "markupType":"plain_text",
+           "text":"Here come some different shape images:",
+           "type":"paragraph"
+        },
+        {
+           "markupType":"plain_text",
+           "text":"Square:",
+           "type":"paragraph"
+        },
+        {
+           "altText":"Prince Charles",
+           "caption":"Prince Charles at a party",
+           "copyrightHolder":"BBC",
+           "height":1546,
+           "href":"http://b.files.bbci.co.uk/9CB1/test/_63731104_hi000087716.jpg",
+           "id":"63731104",
+           "path":"/cpsdevpb/9CB1/test/_63731104_hi000087716.jpg",
+           "positionHint":"full-width",
+           "subType":"body",
+           "type":"image",
+           "width":1546
+        },
+        {
+           "markupType":"plain_text",
+           "text":"Portrait:",
+           "type":"paragraph"
+        },
+        {
+           "altText":"Patrick Stewart",
+           "caption":"Is this Captain Picard or Hercule Poirot?",
+           "copyrightHolder":"BBC",
+           "height":768,
+           "href":"http://b.files.bbci.co.uk/111E1/test/_63731107_tv000191235.jpg",
+           "id":"63731107",
+           "path":"/cpsdevpb/111E1/test/_63731107_tv000191235.jpg",
+           "positionHint":"full-width",
+           "subType":"body",
+           "type":"image",
+           "width":576
+        },
+        {
+           "markupType":"plain_text",
+           "text":"Random:",
+           "type":"paragraph"
+        },
+        {
+           "altText":"Centre Court at Wimbledon",
+           "caption":"This image is a random shape",
+           "copyrightHolder":"BBC",
+           "height":549,
+           "href":"http://b.files.bbci.co.uk/16001/test/_63731109_tv000050092.jpg",
+           "id":"63731109",
+           "path":"/cpsdevpb/16001/test/_63731109_tv000050092.jpg",
+           "positionHint":"full-width",
+           "subType":"body",
+           "type":"image",
+           "width":700
+        },
+        {
+           "markupType":"plain_text",
+           "text":"This is the end",
+           "type":"paragraph"
+        }
+     ]
+  },
+  "metadata":{
+     "analyticsLabels":{
+        "counterName":"ukchinasimp.story.23298231.page",
+        "cps_asset_id":"23298231",
+        "cps_asset_type":"sty"
+     },
+     "blockTypes":[
+        "image",
+        "paragraph",
+        "crosshead",
+        "list",
+        "heading",
+        "subheading",
+        "social_embed",
+        "media",
+        "include"
+     ],
+     "createdBy":"ukchina-v6",
+     "firstPublished":1588785011000,
+     "id":"urn:bbc:ares::asset:ukchina/simp/23298231",
+     "includeComments":false,
+     "language":"zh-Hans",
+     "lastPublished":1588785011000,
+     "lastUpdated":1588785149887,
+     "locators":{
+        "assetId":"23298231",
+        "assetUri":"/ukchina/simp/23298231",
+        "cpsUrn":"urn:bbc:content:assetUri:ukchina/simp/23298231",
+        "curie":"http://www.bbc.co.uk/asset/9d4c58dc-446e-fc46-b00b-569300d9aec5"
+     },
+     "options":{
+        "allowAdvertising":true,
+        "allowDateStamp":true,
+        "allowHeadline":true,
+        "allowPrintingSharingLinks":true,
+        "allowRelatedStoriesBox":true,
+        "allowRightHandSide":true,
+        "hasContentWarning":false,
+        "hasNewsTracker":false,
+        "includeComments":false,
+        "isBreakingNews":false,
+        "isFactCheck":false,
+        "isIgorSeoTagsEnabled":false,
+        "isKeyContent":false,
+        "suitableForSyndication":true
+     },
+     "passport":{
+        "campaigns":[
+           {
+              "campaignId":"5ad86270c93a9f000eecb255",
+              "campaignName":"Amuse me"
+           }
+        ],
+        "category":{
+           "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+           "categoryName":"News"
+        },
+        "taggings":[
+
+        ]
+     },
+     "tags":{
+        "about":[
+           {
+              "thingId":"0239ab33-1cfc-4f5d-babb-a8159711af3e",
+              "thingLabel":"Life",
+              "thingSameAs":[
+
+              ],
+              "thingType":[
+                 "tagging:TagConcept",
+                 "core:Theme",
+                 "core:Thing"
+              ],
+              "thingUri":"http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id"
+           },
+           {
+              "thingId":"e7539dc8-5cfb-413a-b4fe-0ad77bc665aa",
+              "thingLabel":"Fake news",
+              "thingSameAs":[
+                 "http://dbpedia.org/resource/Fake_news",
+                 "http://www.wikidata.org/entity/Q28549308"
+              ],
+              "thingType":[
+                 "core:Theme",
+                 "tagging:TagConcept",
+                 "core:Thing"
+              ],
+              "thingUri":"http://www.bbc.co.uk/things/e7539dc8-5cfb-413a-b4fe-0ad77bc665aa#id"
+           }
+        ]
+     },
+     "timestamp":1588785011000,
+     "type":"STY",
+     "version":"v1.2.1"
+  },
+  "promo":{
+     "byline":{
+        "name":"James Bond",
+        "persons":[
+           {
+              "function":"Spy",
+              "name":"James Bond"
+           }
+        ],
+        "title":"Spy"
+     },
+     "headlines":{
+        "headline":"WS STY TEST - Full Headline",
+        "shortHeadline":"WS STY TEST - Headline"
+     },
+     "id":"urn:bbc:ares::asset:ukchina/simp/23298231",
+     "indexImage":{
+        "altText":"Index image large",
+        "caption":"Index Image Large",
+        "copyrightHolder":"Kaylee Garrick",
+        "height":549,
+        "href":"http://b.files.bbci.co.uk/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+        "id":"63730607",
+        "path":"/cpsdevpb/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+        "subType":"index",
+        "type":"image",
+        "width":976
+     },
+     "language":"zh-Hans",
+     "locators":{
+        "assetId":"23298231",
+        "assetUri":"/ukchina/simp/23298231",
+        "cpsUrn":"urn:bbc:content:assetUri:ukchina/simp/23298231",
+        "curie":"http://www.bbc.co.uk/asset/9d4c58dc-446e-fc46-b00b-569300d9aec5"
+     },
+     "passport":{
+        "campaigns":[
+           {
+              "campaignId":"5ad86270c93a9f000eecb255",
+              "campaignName":"Amuse me"
+           }
+        ],
+        "category":{
+           "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+           "categoryName":"News"
+        },
+        "taggings":[
+
+        ]
+     },
+     "summary":"This is the summary",
+     "timestamp":1588785011000,
+     "type":"cps"
+  },
+  "relatedContent":{
+     "groups":[
+        {
+           "promos":[
+              {
+                 "cpsType":"STY",
+                 "headlines":{
+                    "headline":"Mambo makuu kuhusu makubaliano mapya ya amani Sudan Kusini",
+                    "shortHeadline":"Wapinzani waafikiana nchini South Sudan"
+                 },
+                 "id":"urn:bbc:ares::asset:swahili/23210641",
+                 "indexImage":{
+                    "altText":"A Sudanese man gathers branches to build his destroyed house in Abyei.",
+                    "caption":"A Sudanese man gathers branches as he a builds a new roof for his destroyed house in Abyei.",
+                    "copyrightHolder":"BBC",
+                    "height":549,
+                    "href":"http://b.files.bbci.co.uk/1715E/test/_63685549_c5daa10f-fea1-48bb-9570-dd61904a22bc.jpg",
+                    "id":"63685549",
+                    "path":"/cpsdevpb/1715E/test/_63685549_c5daa10f-fea1-48bb-9570-dd61904a22bc.jpg",
+                    "subType":"index",
+                    "type":"image",
+                    "width":976
+                 },
+                 "language":"sw",
+                 "locators":{
+                    "assetUri":"/swahili/23210641",
+                    "cpsUrn":"urn:bbc:content:assetUri:/swahili/23210641"
+                 },
+                 "summary":"Mahasimu nchini Sudan Kusini wameweka saini makubaliano ya kugawana madaraka huku Rais Salva Kirr akitoa wito wa kutaka kuwepo amani kwenye nchi ambapo vita vya wenyewe kwa wenyewe vimesababisha vifo vya maelfu ya watu.",
+                 "timestamp":1533557370000,
+                 "type":"cps"
+              },
+              {
+                 "cpsType":"MAP",
+                 "headlines":{
+                    "headline":"Audio map page test",
+                    "shortHeadline":"Audio map page test"
+                 },
+                 "id":"urn:bbc:ares::asset:mundo/23245765",
+                 "language":"es",
+                 "locators":{
+                    "assetUri":"/mundo/23245765",
+                    "cpsUrn":"urn:bbc:content:assetUri:/mundo/23245765"
+                 },
+                 "mediaType":"Audio",
+                 "summary":"Audio map page test",
+                 "timestamp":1564757533000,
+                 "type":"cps"
+              },
+              {
+                 "cpsType":"PGL",
+                 "headlines":{
+                    "headline":"Your pictures: Breakfast",
+                    "shortHeadline":"Your pictures: Breakfast"
+                 },
+                 "id":"urn:bbc:ares::asset:mundo/noticias-america-latina-23048887",
+                 "language":"es",
+                 "locators":{
+                    "assetUri":"/mundo/noticias-america-latina-23048887",
+                    "cpsUrn":"urn:bbc:content:assetUri:/mundo/noticias-america-latina-23048887"
+                 },
+                 "summary":"Readers' photos on the theme breakfast.",
+                 "timestamp":1464780136000,
+                 "type":"cps"
+              },
+              {
+                 "name":"I am a podcast",
+                 "type":"link",
+                 "uri":"https://www.bbc.com"
+              }
+           ],
+           "type":"see-alsos"
+        },
+        {
+           "promos":[
+              {
+                 "name":"Related URL Link 1",
+                 "type":"link",
+                 "uri":"http://www.bbc.co.uk"
+              },
+              {
+                 "name":"Related URL Link 2",
+                 "type":"link",
+                 "uri":"http://www.bbc.co.uk/news"
+              }
+           ],
+           "type":"related-urls"
+        }
+     ],
+     "section":{
+        "name":"主页",
+        "subType":"index",
+        "type":"simple",
+        "uri":"/ukchina/simp/front_page"
+     },
+     "site":{
+        "name":"BBC英伦网",
+        "subType":"site",
+        "type":"simple",
+        "uri":"/ukchina/simp"
+     }
+  }
+}
