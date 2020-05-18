@@ -73,23 +73,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: {
         environments: {
           live: {
@@ -251,23 +234,6 @@ module.exports = () => ({
           local: {
             paths: ['/afrique/bbc_afrique_radio/liveradio'],
             enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
           },
         },
         smoke: false,
@@ -442,23 +408,6 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: {
         environments: {
           live: {
@@ -624,23 +573,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: ['/arabic/popular/read'],
-            enabled: true,
-          },
-        },
-        smoke: true,
-      },
       onDemandRadioEpisode: {
         environments: {
           live: {
@@ -792,23 +724,6 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -959,23 +874,6 @@ module.exports = () => ({
           local: {
             paths: ['/bengali/bbc_bangla_radio/liveradio'],
             enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
           },
         },
         smoke: false,
@@ -1150,23 +1048,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: {
         environments: {
           live: {
@@ -1305,23 +1186,6 @@ module.exports = () => ({
       },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
@@ -1399,23 +1263,6 @@ module.exports = () => ({
           local: {
             paths: ['/gahuza/bbc_gahuza_radio/liveradio'],
             enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
           },
         },
         smoke: false,
@@ -1574,23 +1421,6 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -1736,23 +1566,6 @@ module.exports = () => ({
           local: {
             paths: ['/hausa/bbc_hausa_radio/liveradio'],
             enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
           },
         },
         smoke: false,
@@ -1926,23 +1739,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: {
         environments: {
           live: {
@@ -2094,23 +1890,6 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -2256,23 +2035,6 @@ module.exports = () => ({
           local: {
             paths: ['/indonesia/bbc_indonesian_radio/liveradio'],
             enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
           },
         },
         smoke: false,
@@ -2431,23 +2193,6 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -2593,23 +2338,6 @@ module.exports = () => ({
           local: {
             paths: ['/korean/bbc_korean_radio/liveradio'],
             enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
           },
         },
         smoke: false,
@@ -2779,23 +2507,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: {
         environments: {
           live: {
@@ -2950,23 +2661,6 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -3100,23 +2794,6 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -3239,23 +2916,6 @@ module.exports = () => ({
       },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
@@ -3333,23 +2993,6 @@ module.exports = () => ({
           local: {
             paths: ['/nepali/bbc_nepali_radio/liveradio'],
             enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
           },
         },
         smoke: false,
@@ -3492,23 +3135,6 @@ module.exports = () => ({
       },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
@@ -3586,23 +3212,6 @@ module.exports = () => ({
           local: {
             paths: ['/pashto/bbc_pashto_radio/liveradio'],
             enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
           },
         },
         smoke: false,
@@ -3786,23 +3395,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: {
         environments: {
           live: {
@@ -3962,23 +3554,6 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -4108,23 +3683,6 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -4262,23 +3820,6 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -4412,23 +3953,6 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -4542,23 +4066,6 @@ module.exports = () => ({
       },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
@@ -4624,23 +4131,6 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -4770,23 +4260,6 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -4928,23 +4401,6 @@ module.exports = () => ({
           local: {
             paths: ['/sinhala/bbc_sinhala_radio/liveradio'],
             enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
           },
         },
         smoke: false,
@@ -5117,23 +4573,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: {
         environments: {
           live: {
@@ -5239,7 +4678,6 @@ module.exports = () => ({
       errorPage404: { environments: undefined, smoke: false },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: { environments: undefined, smoke: false },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
@@ -5317,23 +4755,6 @@ module.exports = () => ({
           local: {
             paths: ['/swahili/bbc_swahili_radio/liveradio'],
             enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
           },
         },
         smoke: false,
@@ -5508,23 +4929,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: {
         environments: {
           live: {
@@ -5679,23 +5083,6 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -5829,23 +5216,6 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -5991,23 +5361,6 @@ module.exports = () => ({
           local: {
             paths: ['/tigrinya/bbc_tigrinya_radio/liveradio'],
             enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
           },
         },
         smoke: false,
@@ -6161,23 +5514,6 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -6316,23 +5652,6 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -6468,23 +5787,6 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -6620,23 +5922,6 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -6790,23 +6075,6 @@ module.exports = () => ({
           local: {
             paths: ['/urdu/bbc_urdu_radio/liveradio'],
             enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
           },
         },
         smoke: false,
@@ -6981,23 +6249,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: {
         environments: {
           live: {
@@ -7156,23 +6407,6 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -7311,23 +6545,6 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -7461,23 +6678,6 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -7613,23 +6813,6 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      mostReadPage: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: [],
-            enabled: false,
-          },
-        },
-        smoke: false,
-      },
       onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
