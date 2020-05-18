@@ -177,10 +177,7 @@ describe('Story Page', () => {
   it('should render correctly when the secondary column data is not available', async () => {
     fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
     fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
-    fetchMock.mock('http://localhost/pidgin/sty-secondary-column.json', {
-      topStories: [],
-      features: [],
-    });
+    fetchMock.mock('http://localhost/pidgin/sty-secondary-column.json', {});
 
     const { pageData } = await getInitialData({
       path: '/some-cps-sty-path',

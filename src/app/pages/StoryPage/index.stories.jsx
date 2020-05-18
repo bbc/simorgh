@@ -23,12 +23,12 @@ const withSecondaryColumnsKnob = pageData => storyFn => {
   );
 
   const secondaryColumn = {
-    topStories: selectedColumns.includes('topStories')
-      ? []
-      : pageData.secondaryColumn.topStories,
-    features: selectedColumns.includes('features')
-      ? []
-      : pageData.secondaryColumn.features,
+    ...(!selectedColumns.includes('topStories') && {
+      topStories: pageData.secondaryColumn.features,
+    }),
+    ...(!selectedColumns.includes('features') && {
+      features: pageData.secondaryColumn.features,
+    }),
   };
 
   const storyProps = {

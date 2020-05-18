@@ -70,21 +70,14 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
   const mostReadInitialData = path(['mostRead'], pageData);
-  const topStoriesInitialData = pathOr(
-    [],
+  const topStoriesInitialData = path(
     ['secondaryColumn', 'topStories'],
     pageData,
   );
-  const featuresInitialData = pathOr(
-    [],
-    ['secondaryColumn', 'features'],
-    pageData,
-  );
+  const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
 
-  const hasTopStoriesData = !!topStoriesInitialData.length;
-  const hasFeaturesData = !!featuresInitialData.length;
   const removeMostReadLabelTopMargin = !(
-    hasTopStoriesData && hasTopStoriesData
+    topStoriesInitialData && featuresInitialData
   );
 
   const componentsToRender = {
@@ -275,7 +268,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           columns={gridColsSecondary}
           parentColumns={gridColumns}
         >
-          {hasTopStoriesData && (
+          {topStoriesInitialData && (
             <ResponsiveComponentWrapper>
               <TopStories
                 content={topStoriesInitialData}
@@ -283,7 +276,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               />
             </ResponsiveComponentWrapper>
           )}
-          {hasFeaturesData && (
+          {featuresInitialData && (
             <ResponsiveComponentWrapper>
               <FeaturesAnalysis
                 content={featuresInitialData}
