@@ -1,7 +1,10 @@
 {
   "metadata": {
     "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172x8nvf4bchz5",
-    "locators": { "pid": "w172x8nvf4bchz5", "brandPid": "p0340yr4" },
+    "locators": {
+      "pid": "w172x8nvf4bchz5",
+      "brandPid": "p0340yr4"
+    },
     "type": "WSRADIO",
     "createdBy": "bbc_pashto_radio",
     "language": "ps",
@@ -20,7 +23,8 @@
     "tags": {},
     "version": "v1.3.0",
     "blockTypes": ["media"],
-    "title": "وروستي خبرونه"
+    "title": "وروستي خبرونه",
+    "releaseDateTimeStamp": 1580774400000
   },
   "content": {
     "blocks": [
@@ -42,8 +46,13 @@
     ]
   },
   "promo": {
-    "headlines": { "headline": "وروستي خبرونه" },
-    "locators": { "pid": "w172x8nvf4bchz5", "brandPid": "p0340yr4" },
+    "headlines": {
+      "headline": "وروستي خبرونه"
+    },
+    "locators": {
+      "pid": "w172x8nvf4bchz5",
+      "brandPid": "p0340yr4"
+    },
     "media": {
       "id": "w172x8nvf4bchz5",
       "subType": "episode",
@@ -70,7 +79,10 @@
       "copyrightHolder": null,
       "type": "image"
     },
-    "brand": { "pid": "p0340yr4", "title": "وروستي خبرونه" },
+    "brand": {
+      "pid": "p0340yr4",
+      "title": "وروستي خبرونه"
+    },
     "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172x8nvf4bchz5",
     "type": "ws_radio"
   },
@@ -86,8 +98,13 @@
         "type": "other-episode",
         "promos": [
           {
-            "headlines": { "headline": "وروستي خبرونه" },
-            "locators": { "pid": "w172xjcj6ky2b2f", "brandPid": "p0340yr4" },
+            "headlines": {
+              "headline": "وروستي خبرونه"
+            },
+            "locators": {
+              "pid": "w172xjcj6ky2b2f",
+              "brandPid": "p0340yr4"
+            },
             "media": {
               "id": "w172xjcj6ky2b2f",
               "subType": "episode",
@@ -129,13 +146,21 @@
               "copyrightHolder": null,
               "type": "image"
             },
-            "brand": { "pid": "p0340yr4", "title": "وروستي خبرونه" },
+            "brand": {
+              "pid": "p0340yr4",
+              "title": "وروستي خبرونه"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcj6ky2b2f",
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "وروستي خبرونه" },
-            "locators": { "pid": "w172xjcj6ky26b9", "brandPid": "p0340yr4" },
+            "headlines": {
+              "headline": "وروستي خبرونه"
+            },
+            "locators": {
+              "pid": "w172xjcj6ky26b9",
+              "brandPid": "p0340yr4"
+            },
             "media": {
               "id": "w172xjcj6ky26b9",
               "subType": "episode",
@@ -177,13 +202,21 @@
               "copyrightHolder": null,
               "type": "image"
             },
-            "brand": { "pid": "p0340yr4", "title": "وروستي خبرونه" },
+            "brand": {
+              "pid": "p0340yr4",
+              "title": "وروستي خبرونه"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcj6ky26b9",
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "وروستي خبرونه" },
-            "locators": { "pid": "w172xjcj6ky22l5", "brandPid": "p0340yr4" },
+            "headlines": {
+              "headline": "وروستي خبرونه"
+            },
+            "locators": {
+              "pid": "w172xjcj6ky22l5",
+              "brandPid": "p0340yr4"
+            },
             "media": {
               "id": "w172xjcj6ky22l5",
               "subType": "episode",
@@ -225,13 +258,21 @@
               "copyrightHolder": null,
               "type": "image"
             },
-            "brand": { "pid": "p0340yr4", "title": "وروستي خبرونه" },
+            "brand": {
+              "pid": "p0340yr4",
+              "title": "وروستي خبرونه"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcj6ky22l5",
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "وروستي خبرونه" },
-            "locators": { "pid": "w172xjcj6ky1yv1", "brandPid": "p0340yr4" },
+            "headlines": {
+              "headline": "وروستي خبرونه"
+            },
+            "locators": {
+              "pid": "w172xjcj6ky1yv1",
+              "brandPid": "p0340yr4"
+            },
             "media": {
               "id": "w172xjcj6ky1yv1",
               "subType": "episode",
@@ -273,13 +314,21 @@
               "copyrightHolder": null,
               "type": "image"
             },
-            "brand": { "pid": "p0340yr4", "title": "وروستي خبرونه" },
+            "brand": {
+              "pid": "p0340yr4",
+              "title": "وروستي خبرونه"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcj6ky1yv1",
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "وروستي خبرونه" },
-            "locators": { "pid": "w172xjcj6ky1v2x", "brandPid": "p0340yr4" },
+            "headlines": {
+              "headline": "وروستي خبرونه"
+            },
+            "locators": {
+              "pid": "w172xjcj6ky1v2x",
+              "brandPid": "p0340yr4"
+            },
             "media": {
               "id": "w172xjcj6ky1v2x",
               "subType": "episode",
@@ -321,13 +370,21 @@
               "copyrightHolder": null,
               "type": "image"
             },
-            "brand": { "pid": "p0340yr4", "title": "وروستي خبرونه" },
+            "brand": {
+              "pid": "p0340yr4",
+              "title": "وروستي خبرونه"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcj6ky1v2x",
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "وروستي خبرونه" },
-            "locators": { "pid": "w172xjcj6ky1qbs", "brandPid": "p0340yr4" },
+            "headlines": {
+              "headline": "وروستي خبرونه"
+            },
+            "locators": {
+              "pid": "w172xjcj6ky1qbs",
+              "brandPid": "p0340yr4"
+            },
             "media": {
               "id": "w172xjcj6ky1qbs",
               "subType": "episode",
@@ -369,13 +426,21 @@
               "copyrightHolder": null,
               "type": "image"
             },
-            "brand": { "pid": "p0340yr4", "title": "وروستي خبرونه" },
+            "brand": {
+              "pid": "p0340yr4",
+              "title": "وروستي خبرونه"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcj6ky1qbs",
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "وروستي خبرونه" },
-            "locators": { "pid": "w172xjcj6kxzjxg", "brandPid": "p0340yr4" },
+            "headlines": {
+              "headline": "وروستي خبرونه"
+            },
+            "locators": {
+              "pid": "w172xjcj6kxzjxg",
+              "brandPid": "p0340yr4"
+            },
             "media": {
               "id": "w172xjcj6kxzjxg",
               "subType": "episode",
@@ -417,13 +482,21 @@
               "copyrightHolder": null,
               "type": "image"
             },
-            "brand": { "pid": "p0340yr4", "title": "وروستي خبرونه" },
+            "brand": {
+              "pid": "p0340yr4",
+              "title": "وروستي خبرونه"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcj6kxzjxg",
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "وروستي خبرونه" },
-            "locators": { "pid": "w172xjcj6kxzf5b", "brandPid": "p0340yr4" },
+            "headlines": {
+              "headline": "وروستي خبرونه"
+            },
+            "locators": {
+              "pid": "w172xjcj6kxzf5b",
+              "brandPid": "p0340yr4"
+            },
             "media": {
               "id": "w172xjcj6kxzf5b",
               "subType": "episode",
@@ -465,7 +538,10 @@
               "copyrightHolder": null,
               "type": "image"
             },
-            "brand": { "pid": "p0340yr4", "title": "وروستي خبرونه" },
+            "brand": {
+              "pid": "p0340yr4",
+              "title": "وروستي خبرونه"
+            },
             "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcj6kxzf5b",
             "type": "ws_radio"
           }
