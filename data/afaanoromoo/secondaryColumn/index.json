@@ -1,0 +1,607 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "Itoophiyaa - nama 2650 keessaa lama irratti Covid-19 argame"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/live/oduu-52592019",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/live/oduu-52592019",
+          "assetId": "52592019"
+        },
+        "summary": "Itoophiyaan sa'aa 24 dabre keessa namoota 2650f qorannoo Koroonaavaayirasii kan taasiste yogguu tahu, namoota 2 irratti vaayirasichi argamuu Ministeerri Fayyaa biyyattii ya beeksise.",
+        "timestamp": 1589343651000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "LIV",
+        "indexImage": {
+          "id": "112251971",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/45FB/production/_112251971_gettyimages-1212201190.jpg",
+          "path": "/cpsprodpb/45FB/production/_112251971_gettyimages-1212201190.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Shamarran maaskii uffatanii deeman, Finfinnee 2020",
+          "copyrightHolder": "Anadolu Agency",
+          "type": "image"
+        },
+        "commentary": {
+          "order": "descending",
+          "assetUUID": "682E291DB2D4B7498628D4303329DD27",
+          "channels": {
+            "enhancedmobile": "bbc.cps.asset.52592020_EnhancedMobile",
+            "desktop": "bbc.cps.asset.52592020_HighWeb",
+            "highweb": "bbc.cps.asset.52592020_HighWeb",
+            "mobile": "bbc.cps.asset.52592020_EnhancedMobile"
+          }
+        },
+        "isLive": true,
+        "imageThumbnail": {
+          "id": "112251973",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/941B/production/_112251973_gettyimages-1212201190.jpg",
+          "path": "/cpsprodpb/941B/production/_112251973_gettyimages-1212201190.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Shamarran maaskii uffatanii deeman, Finfinnee 2020",
+          "copyrightHolder": "Anadolu Agency",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:afaanoromoo/live/oduu-52592019",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Covid-19 ittisuuf daangaawwan biyyoota ollaarratti tarkaanfii akkamiitu fudhatamaa jira?"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-52628774",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-52628774",
+          "assetId": "52628774"
+        },
+        "summary": "Itoophiyaatti namni koronaavaayirasiin irratti argame jalqaba kan mirkanaa'e ji'a lama dura. Yeroo sanarraa kaasee laakkoofsi namoota dhibee kanaan qabamanii dabalaa kan jiru yoo ta'u, naannolee biyyattii gara garaa keessattis namoonni vaayirasichaan qabamaa jiru.",
+        "timestamp": 1589377249000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112240181",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/46B8/production/_112240181_4bdd1aee-d613-4208-a668-795cb1deb969.jpg",
+          "path": "/cpsprodpb/46B8/production/_112240181_4bdd1aee-d613-4208-a668-795cb1deb969.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Daandiidaangaa Itoophiyaa geessu",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112257707",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/11477/production/_112257707_whatsappimage2020-05-12at3.51.00pm.jpg",
+          "path": "/cpsprodpb/11477/production/_112257707_whatsappimage2020-05-12at3.51.00pm.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Namoonni Ayizuurratti fe'amanii",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-52628774",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Eertiraan weerara koroonaavaayirasii irra aantee?"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-52634228",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-52634228",
+          "assetId": "52634228"
+        },
+        "summary": "Eertiraatti lakkoofsi namoota vaayirasichaan qabamanii 39 kan gahe guyyoota 24 dura ture. Guyyoota 24 darbaniif namni haaraan dhibee kanaan qabame hin jiru.",
+        "timestamp": 1589353494000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112251515",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/C93B/production/_112251515_gettyimages-1134354245.jpg",
+          "path": "/cpsprodpb/C93B/production/_112251515_gettyimages-1134354245.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Alaabaa Eertiraa",
+          "copyrightHolder": "David McNew",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112251517",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/1175B/production/_112251517_gettyimages-1134354245.jpg",
+          "path": "/cpsprodpb/1175B/production/_112251517_gettyimages-1134354245.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Alaabaa Eertiraa",
+          "copyrightHolder": "David McNew",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-52634228",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "'Komiin sagaleen Obbo Lammaa OBN irraa uggurameera jedhu qulqulleessuu dandeenya'"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-52597585",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-52597585",
+          "assetId": "52597585"
+        },
+        "summary": "Miseensi Boordii OBN akkasumas Hoogganaan Biiroo Dhimmoota Kominikeeshinii Naannoo Oromiyaa Obbo Geetaachoo Baalchaa haasaan Obbo Lammaa Magarsaa OBN irratti akka hin dabarre dhorkamuu quba hin qbau jedhan.",
+        "timestamp": 1589006476000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112212595",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/E881/production/_112212595_gettyimages-944717908.jpg",
+          "path": "/cpsprodpb/E881/production/_112212595_gettyimages-944717908.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Pirezidant Lammaa Magarsaa",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112212727",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/11C11/production/_112212727_gettyimages-944717908.jpg",
+          "path": "/cpsprodpb/11C11/production/_112212727_gettyimages-944717908.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Pirezidant Lammaa Magarsaa",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-52597585",
+        "type": "cps"
+      },
+      {
+        "name": "Oduu BBC Afaan Oromoo",
+        "summary": "‎20:49 EAT - 21:04 EAT",
+        "indexImage": {
+          "id": "110294218",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/13D61/production/_110294218_7e2d3c32-8900-4dd3-beb9-1d417d4ca6b5.jpg",
+          "path": "/cpsprodpb/13D61/production/_110294218_7e2d3c32-8900-4dd3-beb9-1d417d4ca6b5.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "BBC",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "uri": "https://www.bbc.com/afaanoromoo/bbc_oromo_radio/programmes/w13xttnw",
+        "contentType": "RadioBulletin",
+        "assetTypeCode": "PRO",
+        "timestamp": 1580399635000,
+        "type": "link"
+      },
+      {
+        "headlines": {
+          "headline": "Fooyya’iinsi iskeelii mindaa barsiisota Oromiyaa eessa gahe?"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-52586551",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-52586551",
+          "assetId": "52586551"
+        },
+        "summary": "Dhimmi kaffaltii fooyya'iinsa iskeelii mindaa barsiisotaa Adeemsarra kan jirudha malee kan dagatame mitii jedhe Biiroo Barnoota Oromiyaa.",
+        "timestamp": 1589090502000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112203915",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/CADA/production/_112203915_gettyimages-865814108.jpg",
+          "path": "/cpsprodpb/CADA/production/_112203915_gettyimages-865814108.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Barsiistuu daree barnootaa keessa ijaajjitu",
+          "copyrightHolder": "AFP Contributor",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112203917",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/118FA/production/_112203917_gettyimages-865814108.jpg",
+          "path": "/cpsprodpb/118FA/production/_112203917_gettyimages-865814108.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Barsiistuu daree barnootaa keessa ijaajjitu",
+          "copyrightHolder": "AFP Contributor",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-52586551",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Loltoonni Itoophiyaa xiyyaara Keeniyaa dogoggoraan haleeluu amanan"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-52597393",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-52597393",
+          "assetId": "52597393"
+        },
+        "summary": "Loltoonni Itoophiyaa tibba darbe xiyaara Keeniyaa haleelaniiru jedhamanii himataman dhuguma haleeluusaanii amanan.",
+        "timestamp": 1589016999000,
+        "language": "om",
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112150279",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/17BB5/production/_112150279_exl_7kaxsaea8bg.jpg",
+          "path": "/cpsprodpb/17BB5/production/_112150279_exl_7kaxsaea8bg.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Bakka xiyyaarri kun itti kufte",
+          "copyrightHolder": "@HarunMaruf",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112212731",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/3599/production/_112212731_exl_7kaxsaea8bg.jpg",
+          "path": "/cpsprodpb/3599/production/_112212731_exl_7kaxsaea8bg.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Bakka xiyyaarri kun itti kufte",
+          "copyrightHolder": "@HarunMaruf",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-52597393",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Adaamaa: Magaala ofeeggannoo Covid-19 adda kutteefi gatii qaalii kanfaluu dandeessu"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/52586546",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/52586546",
+          "assetId": "52586546"
+        },
+        "summary": "Dhibeen covid -19 erga Itoophiyaatti argamee ji'oota lamatti dhihaateera. Magaala Finfinneetti aanuudhaan magaalli dhibeen kun jalqaba keessatti argamemmoo Magaala Adaamaati.",
+        "timestamp": 1588915480000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112201975",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/E236/production/_112201975_adama1.jpg",
+          "path": "/cpsprodpb/E236/production/_112201975_adama1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Gabaa magaalaa Adaamaa",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112201980",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/22CE/production/_112201980_adama1.jpg",
+          "path": "/cpsprodpb/22CE/production/_112201980_adama1.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Gabaa magaalaa Adaamaa",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "Oduu",
+          "uri": "/afaanoromoo/front_page",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/52586546",
+        "type": "cps"
+      },
+      {
+        "name": "Biyyoota gaanfa Afriikaa weerarri awwaanisaa yaaddoo itti ta'e kamii?",
+        "summary": "Biyyoota gaanfa Afriikaa weerarri awwaanisaa yaaddoo itti ta'e kamii?",
+        "indexImage": {
+          "id": "112178131",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/3383/production/_112178131_locust_index_promo_976.png",
+          "path": "/cpsprodpb/3383/production/_112178131_locust_index_promo_976.png",
+          "height": 549,
+          "width": 976,
+          "altText": "Awwaanisa",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "uri": "https://www.bbc.com/afaanoromoo/resources/idt-e8bbdcf5-0d34-4a16-89b7-7fe410b292e0",
+        "contentType": "Text",
+        "assetTypeCode": "PRO",
+        "timestamp": 1588759181000,
+        "type": "link"
+      },
+      {
+        "headlines": {
+          "headline": "OBN sagalee Obboo Lammaa ugguruun gaazexeessitoota mufachiise"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-52576618",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-52576618",
+          "assetId": "52576618"
+        },
+        "summary": "Mootummaa Naannoo Oromiyaan kan bulu 'Oromia Broadcasting Network' sagaleen Ministira Ittisaa Itoophiyaa Obbo Lammaa Magarsaa akka qilleensarra hin baane dhorkuun gaazexeesitoota dhaabbatichaa biratti mufii uume.",
+        "timestamp": 1588866270000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112184373",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/91E4/production/_112184373_337115a6-c8bb-466f-b7ea-785df1fa12e7.jpg",
+          "path": "/cpsprodpb/91E4/production/_112184373_337115a6-c8bb-466f-b7ea-785df1fa12e7.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Loogo OBN",
+          "copyrightHolder": "OBN",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112184375",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/E004/production/_112184375_337115a6-c8bb-466f-b7ea-785df1fa12e7.jpg",
+          "path": "/cpsprodpb/E004/production/_112184375_337115a6-c8bb-466f-b7ea-785df1fa12e7.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Loogo OBN",
+          "copyrightHolder": "OBN",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-52576618",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "'Mootummaan heeraafi nageenya ummataa balaarraa eeguuf tarkaanfiitti deema'"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-52572246",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-52572246",
+          "assetId": "52572246"
+        },
+        "summary": "Rakkoolee siyaasaafi hanqina qophiitiin yeroo qabameef irraa dabarfamaa kan yoona ga’e filannoon Itoophiyaa marsaa 6ffaan ammas sababa biyyi weerara koronaavaayirasii waliin wallaansootti jirtuuf yeroo biraatti akka dabarfamu Boordiin Filannoo Biyyaalessaa murteesseera.",
+        "timestamp": 1588841256000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112177114",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/A0D9/production/_112177114_gettyimages-1158938409-1.jpg",
+          "path": "/cpsprodpb/A0D9/production/_112177114_gettyimages-1158938409-1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "MM Abiy Ahmed",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112177432",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/5BB5/production/_112177432_gettyimages-1158938409-1.jpg",
+          "path": "/cpsprodpb/5BB5/production/_112177432_gettyimages-1158938409-1.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "MM Abiy Ahmed",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-52572246",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Pirezedantiin Eertiraa Isaayyaas Af-warqii maaliif Itoophiyaa dhaqan?"
+        },
+        "locators": {
+          "assetUri": "/afaanoromoo/oduu-52568148",
+          "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/oduu-52568148",
+          "assetId": "52568148"
+        },
+        "summary": "Lammiin Eertiraa mirga namoomaaf falmu Dassibal Mahaarii garuu, daawwaannaan pirezedant Isaayyas ‘dogoggora seenaati’jechuun qeeqan",
+        "timestamp": 1588828452000,
+        "language": "om",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112175460",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1939/production/_112175460_gettyimages-998639016.jpg",
+          "path": "/cpsprodpb/1939/production/_112175460_gettyimages-998639016.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Isaayaas Af-warqiifi Abiy Ahmed",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112175462",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/6759/production/_112175462_gettyimages-998639016.jpg",
+          "path": "/cpsprodpb/6759/production/_112175462_gettyimages-998639016.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Isaayaas Af-warqiifi Abiy Ahmed",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:afaanoromoo/oduu-52568148",
+        "type": "cps"
+      }
+    ]
+  }

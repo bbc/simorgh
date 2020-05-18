@@ -1,0 +1,474 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "Məhbusun qardaşı: \"Hər dəfə Salehlə danışanda deyirdi ki, burada xəstəlik var, camaat qızdırmadan qırılır\""
+        },
+        "locators": {
+          "assetUri": "/azeri/azerbaijan-52638420",
+          "cpsUrn": "urn:bbc:content:assetUri:azeri/azerbaijan-52638420",
+          "assetId": "52638420"
+        },
+        "summary": "13 saylı cəzaçəkmə müəssisəsindəki məhbuslardan biri Saleh Rüstəmovun qardaşı Taleh Rüstəmov deyir ki, həm qardaşından, həm də digər şəxslərdən sözügedən cəzaçəkmə müəssisəsindən hər gün 15-20 məhbusun koronavirusa görə xəstəxanaya aparıldığını öyrənib. Penitensiar Xidmətdən iddialara cavab almaq mümkün olmayıb.",
+        "timestamp": 1589378435000,
+        "language": "az",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "100317433",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/82BF/production/_100317433_842926188.jpg",
+          "path": "/cpsprodpb/82BF/production/_100317433_842926188.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "əfv, məhbuslar, siyasi məhbuslar, Novruz bayramı",
+          "caption": "Əliməmməd Nuriyev: \"Ola bilər ki, Novruz bayramı ərəfəsində əfv sərəncamı olmasın\"",
+          "copyrightHolder": "SEBASTIEN BOZON/AFP/Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:azeri/azerbaijan-52638420",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "\"Eurohome\" niyə yenidən yandı?"
+        },
+        "locators": {
+          "assetUri": "/azeri/azerbaijan-52648649",
+          "cpsUrn": "urn:bbc:content:assetUri:azeri/azerbaijan-52648649",
+          "assetId": "52648649"
+        },
+        "summary": "Bu gün Baş Prokurorluq Binəqədi rayonu ərazisindəki \"Eurohome\" tikinti malları bazarında yanğınla bağlı cinayət işi açıldığını elan edib.",
+        "timestamp": 1589372288000,
+        "language": "az",
+        "byline": {
+          "name": "İlkin Həsənov",
+          "title": "Bakı, BBC News Azərbaycanca",
+          "persons": [
+            {
+              "name": "İlkin Həsənov",
+              "function": "Bakı, BBC News Azərbaycanca"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112251076",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/105C7/production/_112251076_eurohomeyann2photo.jpg",
+          "path": "/cpsprodpb/105C7/production/_112251076_eurohomeyann2photo.jpg",
+          "height": 1080,
+          "width": 1920,
+          "altText": "Binəqədi rayonu ərazisindəki \"Eurohome\" tikinti malları bazarında",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:azeri/azerbaijan-52648649",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Azərbaycanda koronavirusa yoluxanların sayı birdən-birə niyə artdı?"
+        },
+        "locators": {
+          "assetUri": "/azeri/azerbaijan-52556712",
+          "cpsUrn": "urn:bbc:content:assetUri:azeri/azerbaijan-52556712",
+          "assetId": "52556712"
+        },
+        "summary": "Azərbaycanda Covid-19 virusuna yoluxanların sayı aprelin 30-dan bəri iki dəfədən çox artıb. TƏBİB-in məlumatlarına əsasən, aprelin 13-də ən çox, 847 aktiv xəstə var idisə, sonrakı günlər ərzində xəstələrin sayı kəskin aşağı düşmüşdü.",
+        "timestamp": 1589363473000,
+        "language": "az",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112245575",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/E0D2/production/_112245575_222222.jpg",
+          "path": "/cpsprodpb/E0D2/production/_112245575_222222.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Azərbaycanda koronavirusa yoluxanların sayı niyə artır?",
+          "copyrightHolder": "Aziz Karimov/Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:azeri/azerbaijan-52556712",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "Bakı, London, Moskva səmalarında təyyarələrin hərəkəti - Karantindən əvvəl və sonra"
+        },
+        "locators": {
+          "assetUri": "/azeri/azerbaijan-52473829",
+          "cpsUrn": "urn:bbc:content:assetUri:azeri/azerbaijan-52473829",
+          "assetId": "52473829"
+        },
+        "summary": "Bakı, Moskva, London, Kiyev, İtaliya, Çin, ABŞ və digər ölkələrdə təyyarə uçuşları necə azalıb? BBC \"Flightradar24\" xidmətinin hava yolu xəritələrini dərc edərək fevralın ortalarından aprelin sonunadək olan trafiki müqayisə edib.",
+        "timestamp": 1588248684000,
+        "language": "az",
+        "byline": {
+          "name": "Pavel Aksenov, Olesya Volkova",
+          "title": "BBC",
+          "persons": [
+            {
+              "name": "Dan Egan",
+              "function": ""
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+            "categoryName": "Interactive"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112013819",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/166B7/production/_112013819_976-main-19-27-nc.png",
+          "path": "/cpsprodpb/166B7/production/_112013819_976-main-19-27-nc.png",
+          "height": 549,
+          "width": 976,
+          "altText": "Данные Flightradar20",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:azeri/azerbaijan-52473829",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Azərbaycanda koronavirusa niyə inanmırlar?"
+        },
+        "locators": {
+          "assetUri": "/azeri/azerbaijan-52497946",
+          "cpsUrn": "urn:bbc:content:assetUri:azeri/azerbaijan-52497946",
+          "assetId": "52497946"
+        },
+        "summary": "Azərbaycanda insanların koronavirusun mövcudluğunu şübhə altına alması və ya \"deyildiyi qədər təhlükəli\" olmamasına dair fikirlərin səbəbləri nələrdir? Bəzi təhlilçilər hesab edir ki, bu inamsızlıq \"siyasi səbəblərdən qaynaqlanır\". Bəs, ayrı-ayrı şəxslərin inamsızlığı ciddi problemlər yarada bilərmi?",
+        "timestamp": 1588849723000,
+        "language": "az",
+        "byline": {
+          "name": "Aygül Mehman",
+          "title": "BBC News Azərbaycanca",
+          "persons": [
+            {
+              "name": "Aygül Mehman",
+              "function": "BBC News Azərbaycanca"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112175434",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/A9C1/production/_112175434_gettyimages-1211716674.jpg",
+          "path": "/cpsprodpb/A9C1/production/_112175434_gettyimages-1211716674.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Bakı, Nizami küçəsi",
+          "copyrightHolder": "Anadolu Agency/Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:azeri/azerbaijan-52497946",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Koronavirus: İtaliya mafiyası epidemiyadan necə faydalanır?"
+        },
+        "locators": {
+          "assetUri": "/azeri/international-52556704",
+          "cpsUrn": "urn:bbc:content:assetUri:azeri/international-52556704",
+          "assetId": "52556704"
+        },
+        "summary": "Koronavirus epidemiyası minlərlə insanın həyatına son qoymaqdaykən İtaliya mafiyası bu vəziyyətdən yararlanmaqla məşğuldur. Məmurların dediyinə görə, xeyli sayda insan mafiyanın uzatdığı \"yardım əlini\" tutmaq məcburiyyətində qalıb.",
+        "timestamp": 1588749564000,
+        "language": "az",
+        "byline": {
+          "name": "Sofia Bettiza",
+          "title": "BBC Dünya Xidməti",
+          "persons": [
+            {
+              "name": "Sofia Bettiza",
+              "function": "Researcher, BBC News, Brussels"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112097867",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/12C4F/production/_112097867_1.2.png",
+          "path": "/cpsprodpb/12C4F/production/_112097867_1.2.png",
+          "height": 549,
+          "width": 976,
+          "altText": "Siqar çəkən mafiya üzvü",
+          "copyrightHolder": "Jilla Dastmalchi",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:azeri/international-52556704",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Koronavirus: təcriddən sonra bərbərxananı açmağın yolu"
+        },
+        "locators": {
+          "assetUri": "/azeri/international-52552278",
+          "cpsUrn": "urn:bbc:content:assetUri:azeri/international-52552278",
+          "assetId": "52552278"
+        },
+        "summary": "Almaniya koronavirusa görə yeridilmiş karantin qaydalarını zəiflədən ölkələr cərgəsinə sonuncu qoşulub, amma Avropa boyu bərbərxanalar  bu vəziyyətdən çıxmağın yollarını axtarır.",
+        "timestamp": 1588740593000,
+        "language": "az",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112106130",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/0C58/production/_112106130_tv061312167.jpg",
+          "path": "/cpsprodpb/0C58/production/_112106130_tv061312167.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Yeni qaydalara görə, salonlarda hər bir müştəridən sonra onun üstünə sərilən örtüklər yuyulmalıdır.",
+          "caption": "Yeni qaydalara görə, salonlarda hər bir müştəridən sonra onun üstünə sərilən örtüklər yuyulmalıdır.",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:azeri/international-52552278",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Koronavirus insanlara hansı heyvandan keçib? Bunu bəlkə də, heç vaxt bilməyəcəyik"
+        },
+        "locators": {
+          "assetUri": "/azeri/azerbaijan-52541460",
+          "cpsUrn": "urn:bbc:content:assetUri:azeri/azerbaijan-52541460",
+          "assetId": "52541460"
+        },
+        "summary": "Ümumdünya Səhiyyə Təşkilatı (ÜST) aparılan araşdırmalara istinadən, koronavirusun \"təbii mənbəyi\" olduğunu açıqlasa da, bəzi alimlər bu infeksiyaya ilk yoluxmanın necə baş verdiyinin \"heç vaxt bilinməyəcəyini\" deyirlər.",
+        "timestamp": 1588686613000,
+        "language": "az",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112156238",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/14541/production/_112156238_9991b3ae-ba9a-41a2-88c8-0a74c0c77d1b.jpg",
+          "path": "/cpsprodpb/14541/production/_112156238_9991b3ae-ba9a-41a2-88c8-0a74c0c77d1b.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "bu gün koronavirus Azərbaycan",
+          "caption": "Koronavirusa ilk yoluxma faktı Uhandakı dəniz məhsulları bazarında qeydə alınmışdı.",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:azeri/azerbaijan-52541460",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "190 manat yardımı almaq üçün sualları olanlar - bu yazı sizin üçündür"
+        },
+        "locators": {
+          "assetUri": "/azeri/azerbaijan-52286800",
+          "cpsUrn": "urn:bbc:content:assetUri:azeri/azerbaijan-52286800",
+          "assetId": "52286800"
+        },
+        "summary": "Koronavirusla bağlı karantin günlərində birdəfəlik 190 manat yardım aid suallara bu gün BBC News Azərbaycanca cavab verir. Emailimizə göndərdiyiniz sualların cavabı buradadır.",
+        "timestamp": 1588242292000,
+        "language": "az",
+        "byline": {
+          "name": "Aygül Mehman",
+          "title": "BBC News Azərbaycanca",
+          "persons": [
+            {
+              "name": "Aygül Mehman",
+              "function": "BBC News Azərbaycanca"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+            "categoryName": "Explainer"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112045399",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1841A/production/_112045399_gettyimages-1207643363.jpg",
+          "path": "/cpsprodpb/1841A/production/_112045399_gettyimages-1207643363.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Baki",
+          "copyrightHolder": "Anadolu Agency/Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:azeri/azerbaijan-52286800",
+        "type": "cps"
+      }
+    ]
+  }

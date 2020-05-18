@@ -1,0 +1,558 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "'ශ්‍රී ලංකාවේ ප්‍රචණ්ඩ ක්‍රියාවලට දායක වූ' බව ෆේස්බුක් පිළිගනී"
+        },
+        "locators": {
+          "assetUri": "/sinhala/sri-lanka-52647621",
+          "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-52647621",
+          "assetId": "52647621"
+        },
+        "summary": "ශ්‍රී ලංකාවේ මුස්ලිම් විරෝධී ප්‍රචණ්ඩ ක්‍රියාවලට ෆේස්බුක් සමාජ ජාලය බලපෑ බවට එම සමාගම සිය ක්‍රියාකාරීත්වය සම්බන්ධයෙන් සිදු කළ අධ්‍යයනයකින් තහවුරු වී තිබේ.",
+        "timestamp": 1589369021000,
+        "language": "si",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112254640",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1225/production/_112254640_img-8249-2.jpg",
+          "path": "/cpsprodpb/1225/production/_112254640_img-8249-2.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "තෙල්දෙණිය",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:sinhala/sri-lanka-52647621",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "කොරෝනා වෛරසය: වූහාන් පළාතෙන් අලුත් ආසාදිතයන් පිරිසක්"
+        },
+        "locators": {
+          "assetUri": "/sinhala/world-52637654",
+          "cpsUrn": "urn:bbc:content:assetUri:sinhala/world-52637654",
+          "assetId": "52637654"
+        },
+        "summary": "නව කොරෝනාවෛරසය මුලින්ම වාර්තා වූ චීනයේ වූහාන් නගරයෙන් නැවතත් ආසාදිතයන් පිරිසක් වාර්තා වී තිබේ.",
+        "timestamp": 1589338924000,
+        "language": "si",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112242137",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/11DA4/production/_112242137_whatsubject.jpg",
+          "path": "/cpsprodpb/11DA4/production/_112242137_whatsubject.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "අප්‍රේල් 3 වැනිදා පටන් මෙම නගරයෙන් කිසිදු කොරෝනාවෛරස් රෝගියෙකු වාර්තා වී නොතිබුණි",
+          "caption": "අප්‍රේල් 3 වැනිදා පටන් මෙම නගරයෙන් කිසිදු කොරෝනාවෛරස් රෝගියෙකු වාර්තා වී නොතිබුණි",
+          "copyrightHolder": "GETTY IMAGES",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:sinhala/world-52637654",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "පීබී ජයසුන්දරගේ 'පෞද්ගලික' ඉල්ලීම ගැන සේවක ප්‍රතිචාර"
+        },
+        "locators": {
+          "assetUri": "/sinhala/sri-lanka-52633038",
+          "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-52633038",
+          "assetId": "52633038"
+        },
+        "summary": "කෝප් කමිටුවේ හිටපු සභාපති සුනිල් හඳුන්නෙත්ති පවසා තිබුණේ, එම ලිපිය \"පෞද්ගලික ආයාචනයක් ලෙස පිළිගත නොහැකි\" බවය.",
+        "timestamp": 1589285940000,
+        "language": "si",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112240088",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/157C4/production/_112240088_a060d1b2-3814-411a-8f5d-46ac68934861.jpg",
+          "path": "/cpsprodpb/157C4/production/_112240088_a060d1b2-3814-411a-8f5d-46ac68934861.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ජනාධිපති ලේකම් ආචාර්ය පී බී ජයසුන්දර",
+          "caption": "ජනාධිපති ලේකම් ආචාර්ය පී බී ජයසුන්දර",
+          "copyrightHolder": "PMD",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:sinhala/sri-lanka-52633038",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "පුතා ශ්‍රී ලංකාවට ගෙන ඒම ගැන මහින්ද දේශප්‍රියගේ කරුණු දැක්වීම"
+        },
+        "locators": {
+          "assetUri": "/sinhala/sri-lanka-52562024",
+          "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-52562024",
+          "assetId": "52562024"
+        },
+        "summary": "නෙදර්ලන්තයේ ඉගෙනුම ලබමින් සිටි සිය පුත්‍රයා යළි මෙරටට ගෙන්වා ගැනීම සඳහා නිල තත්ත්වය භාවිත කළ බවට මැතිවරණ කොමිසමේ සභාපති මහින්ද දේශප්‍රියට එරෙහිව විවේචන එල්ලවෙමින් පවතී.",
+        "timestamp": 1588777899000,
+        "language": "si",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112163241",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/379C/production/_112163241_7495e091-764b-4607-b44a-f0532db96f09.jpg",
+          "path": "/cpsprodpb/379C/production/_112163241_7495e091-764b-4607-b44a-f0532db96f09.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "පුතා ශ්‍රී ලංකාවට ගෙන ඒම ගැන මහින්ද දේශප්‍රියගේ කරුණු දැක්වීම",
+          "copyrightHolder": "Vidura Deshapriya/Facebook",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:sinhala/sri-lanka-52562024",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "කොරෝනා වෛරසය හමුවේ ශ්‍රී ලංකාවේ පෞද්ගලික අංශයේ 'සේවක කප්පාදුවක්' ගැන චෝදනා"
+        },
+        "locators": {
+          "assetUri": "/sinhala/sri-lanka-52527384",
+          "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-52527384",
+          "assetId": "52527384"
+        },
+        "summary": "\"සියලු පාර්ශව නියෝජනය කරන ජාතික කම්කරු උපදේශන සභාවක් කැඳවා හාම්පුතුන්ගේ ප්‍රශ්න වගේ ම සේවකයින්ගේ ප්‍රශ්නත් කතා කරල එකගතාවකට එන්න පුළුවන්.\"",
+        "timestamp": 1588594203000,
+        "language": "si",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112101001",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/271A/production/_112101001_2dfa1157-b7d9-4cb3-9c6d-b9da0d289259.jpg",
+          "path": "/cpsprodpb/271A/production/_112101001_2dfa1157-b7d9-4cb3-9c6d-b9da0d289259.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "පෞද්ගලික අංශයේ 'සේවක කප්පාදුවක්' ගැන අනතුරු ඇගවීම්",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:sinhala/sri-lanka-52527384",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "කොරෝනා වෛරස ප්‍රතිකාර: ඖෂධයක් ලැබෙන්නේ කවදා ද?"
+        },
+        "locators": {
+          "assetUri": "/sinhala/world-52511621",
+          "cpsUrn": "urn:bbc:content:assetUri:sinhala/world-52511621",
+          "assetId": "52511621"
+        },
+        "summary": "ඉබෝලා රෝගයට ප්‍රතිකාර කිරීම සඳහා නිපදවූ ප්‍රතිවෛරස නාශකයක් වන 'රෙම්ඩිසිවියර්' (remdesivir) නවතම සායනික අත්හදා බැලීම්වලට යොදා ගන්නා අතර, එහි යම් ප්‍රගතියක් නිරීක්ෂණය වී තිබේ.",
+        "timestamp": 1588580856000,
+        "language": "si",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112087885",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/E5FE/production/_112087885_52511621.jpg",
+          "path": "/cpsprodpb/E5FE/production/_112087885_52511621.jpg",
+          "height": 371,
+          "width": 660,
+          "altText": "මේ වන විට ලොව පුරා විවිධ ඖෂධ වර්ග 150 කට වැඩි ප්‍රමාණයක් පිලිබඳ පර්යේෂණය සිදු කෙරෙමින් පවතී",
+          "caption": "මේ වන විට ලොව පුරා විවිධ ඖෂධ වර්ග 150 කට වැඩි ප්‍රමාණයක් පිලිබඳ පර්යේෂණය සිදු කෙරෙමින් පවතී",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:sinhala/world-52511621",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ජනාධිපතිට මුදල් වියදම් කිරීමට දැන් බලයක් තිබේ ද?"
+        },
+        "locators": {
+          "assetUri": "/sinhala/sri-lanka-52491269",
+          "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-52491269",
+          "assetId": "52491269"
+        },
+        "summary": "ජනාධිපතිට මුදල් වියදම් කිරීමට දැන් බලයක් තිබේ ද යන්න ගැන තර්ක කිරීමට ආණ්ඩු පක්ෂය සහ විපක්ෂය සාක්ෂි කරගන්නා ව්‍යවස්ථාවේ එක ම වගන්තිය.",
+        "timestamp": 1588302639000,
+        "language": "si",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+            "categoryName": "Analysis"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112050268",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/150BD/production/_112050268_c82afd2f-40ce-4896-842f-9567374dbd54.jpg",
+          "path": "/cpsprodpb/150BD/production/_112050268_c82afd2f-40ce-4896-842f-9567374dbd54.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "President Gotabhaya Rajapaksa",
+          "copyrightHolder": "Gotabhaya Rajapaksa/FB",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:sinhala/sri-lanka-52491269",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "COVID -19 ආර්ථික අභියෝගය ගැන ශ්‍රී ලංකා මහ බැංකුවේ තක්සේරුව"
+        },
+        "locators": {
+          "assetUri": "/sinhala/sri-lanka-52474130",
+          "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-52474130",
+          "assetId": "52474130"
+        },
+        "summary": "COVID -19 රෝගයේ ව්‍යාප්තිය ශ්‍රී ලංකාව තුළ වැඩි වීමට හේතු වූ ප්‍රධාන කරුණු තුනක් ශ්‍රී ලංකා මහ බැංකුවේ 2019 වාර්ෂික වාර්තාවට ඇතුළත් කර තිබේ.",
+        "timestamp": 1588217169000,
+        "language": "si",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+            "categoryName": "Analysis"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112019085",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/E2EB/production/_112019085_bb82ba43-a677-4402-9e05-5a17243bc393.jpg",
+          "path": "/cpsprodpb/E2EB/production/_112019085_bb82ba43-a677-4402-9e05-5a17243bc393.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "වාර්තාව අගමැතිවරයාට භාර දුන් අවස්තාව",
+          "copyrightHolder": "News.lk",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:sinhala/sri-lanka-52474130",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "කොරෝනා වෛරසය: මැයි 11 පාසල් ඇරෙයි ද?"
+        },
+        "locators": {
+          "assetUri": "/sinhala/sri-lanka-52438537",
+          "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-52438537",
+          "assetId": "52438537"
+        },
+        "summary": "බීබීසී සිංහල සේවය සමඟ අදහස් දැක්වූ දෙමාපියන් කිහිප දෙනෙකු ද ප්‍රකාශ කළේ, පාසල් ආරම්භ කළ ද සිය දරුවන් පාසල් යැවීමට බියකින් පසුවන බවය.",
+        "timestamp": 1588164911000,
+        "language": "si",
+        "byline": {
+          "name": "කුමුදු ජයවර්ධන",
+          "title": "බීබීසී සිංහල",
+          "persons": [
+            {
+              "name": "කුමුදු ජයවර්ධන",
+              "function": "බීබීසී සිංහල"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111336476",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/10787/production/_111336476_c7e35b40-6d8d-4993-9331-aa6abb570e70.jpg",
+          "path": "/cpsprodpb/10787/production/_111336476_c7e35b40-6d8d-4993-9331-aa6abb570e70.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "getty",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:sinhala/sri-lanka-52438537",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "කොරෝනා පාලනයේදී 'අදහස් ප්‍රකාශ කිරීමේ නිදහස සීමා කිරීම'"
+        },
+        "locators": {
+          "assetUri": "/sinhala/sri-lanka-52458539",
+          "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-52458539",
+          "assetId": "52458539"
+        },
+        "summary": "කොරෝනාවෛරසය ව්‍යාප්ත වීම පාලනය කිරීමට පියවර ගන්නා අතරවාරයේ අදහස් ප්‍රකාශ කිරීමේ නිදහස සීමා කිරීම සම්බන්ධයෙන් මානව හිමිකම් කොමිසමෙන් පොලිස්පතිට ලිපියක්.",
+        "timestamp": 1588085579000,
+        "language": "si",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112009670",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1E0A/production/_112009670_cfc15e74-6764-4de2-a538-f1982208ecc7.jpg",
+          "path": "/cpsprodpb/1E0A/production/_112009670_cfc15e74-6764-4de2-a538-f1982208ecc7.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ආචාර්ය දීපිකා උඩගම",
+          "caption": "ආචාර්ය දීපිකා උඩගම",
+          "copyrightHolder": "HRCSL",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:sinhala/sri-lanka-52458539",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "හදිසියේ 'බොඩි බෑග්' දහසක් ඉල්ලන්නේ ඇයි ?"
+        },
+        "locators": {
+          "assetUri": "/sinhala/sri-lanka-52445131",
+          "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-52445131",
+          "assetId": "52445131"
+        },
+        "summary": "\"බොඩි බෑග් කියන්නේ Covid -19 සඳහාම අලුතින් නිර්මාණය වූ දෙයක් නොවේ. ආපදා අවස්ථාවල, පාස්කු ප්‍රහාරය වෙලාවේ අපි මෘත දේහයන් බහාලන්න මේවා භාවිත කළා.\"",
+        "timestamp": 1587997983000,
+        "language": "si",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111977984",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/BF51/production/_111977984_863438cb-10e5-436b-b0e5-90fa231db7f9.jpg",
+          "path": "/cpsprodpb/BF51/production/_111977984_863438cb-10e5-436b-b0e5-90fa231db7f9.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "නාවික හමුදාව",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:sinhala/sri-lanka-52445131",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "පාර්ලිමේන්තුව විසුරුවා හැරීමේ නියෝගය 'යළි කැඳවන්න'"
+        },
+        "locators": {
+          "assetUri": "/sinhala/sri-lanka-52387477",
+          "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-52387477",
+          "assetId": "52387477"
+        },
+        "summary": "කොරෝනා වෛරසය පැතිර යාම හමුවේ උද්ගතව ඇති තත්ත්වය සලකා බලා පාර්ලිමේන්තුව විසුරුවා හැරීමට මාර්තු දෙවෙනිදා දුන් නියෝගය ආපසු කැඳවන ලෙස විරුද්ධ පක්ෂ ඉල්ලීමක් කරති.",
+        "timestamp": 1587714948000,
+        "language": "si",
+        "byline": {
+          "name": "සරෝජ් පතිරණ ",
+          "title": "BBC සිංහල ",
+          "persons": [
+            {
+              "name": "Abdujalil Abdurasulov",
+              "function": "BBC News Almata"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+            "categoryName": "Analysis"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112009538",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/14686/production/_112009538_d8c37a1c-79ed-49f1-b911-17248a800448.jpg",
+          "path": "/cpsprodpb/14686/production/_112009538_d8c37a1c-79ed-49f1-b911-17248a800448.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "විරුද්ධ පක්ෂවල නායකයෝ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:sinhala/sri-lanka-52387477",
+        "type": "cps"
+      }
+    ]
+  }
