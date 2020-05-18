@@ -1,0 +1,259 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "করোনাভাইরাস নিয়ে পশ্চিমবঙ্গে হিন্দু মুসলিম দাঙ্গা"
+        },
+        "locators": {
+          "assetUri": "/bengali/live/52612973",
+          "cpsUrn": "urn:bbc:content:assetUri:bengali/live/52612973",
+          "assetId": "52612973"
+        },
+        "summary": "করোনাভাইরাস নিয়ে বাংলাদেশ বিশ্বের সকল খবর নিয়ে বিবিসি বাংলার এই লাইভ পাতা। এখানে দিনভর পাওয়া যাবে বিশ্লেষণ, মতামত ও পরিসংখ্যান।",
+        "timestamp": 1589340249000,
+        "language": "bn",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "LIV",
+        "indexImage": {
+          "id": "112256572",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/6BAD/production/_112256572_62b8a49c-0d68-4918-a9ad-bb0edde4d4fa.png",
+          "path": "/cpsprodpb/6BAD/production/_112256572_62b8a49c-0d68-4918-a9ad-bb0edde4d4fa.png",
+          "height": 351,
+          "width": 624,
+          "altText": "করোনাভাইরাস নিয়ে পশ্চিমবঙ্গে হিন্দু মুসলিম দাঙ্গা",
+          "caption": "করোনাভাইরাস নিয়ে পশ্চিমবঙ্গে হিন্দু মুসলিম দাঙ্গা",
+          "copyrightHolder": "Twitter",
+          "type": "image"
+        },
+        "commentary": {
+          "order": "descending",
+          "assetUUID": "AC3DA33AF6BCE54F94CAE9B3FE362836",
+          "channels": {
+            "enhancedmobile": "bbc.cps.asset.52612974_EnhancedMobile",
+            "desktop": "bbc.cps.asset.52612974_HighWeb",
+            "highweb": "bbc.cps.asset.52612974_HighWeb",
+            "mobile": "bbc.cps.asset.52612974_EnhancedMobile"
+          }
+        },
+        "isLive": true,
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ, বিশ্লেষণ",
+          "uri": "/bengali/front_page",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:bengali/live/52612973",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ব্রিটেনে মৃতের সংখ্যা যা বলা হচ্ছে তার থেকে অনেক বেশি?"
+        },
+        "locators": {
+          "assetUri": "/bengali/news-52650396",
+          "cpsUrn": "urn:bbc:content:assetUri:bengali/news-52650396",
+          "assetId": "52650396"
+        },
+        "summary": "ব্রিটেনে প্রতিদিনের সংবাদ ব্রিফিংয়ে সরকার মৃতের যে পরিসংখ্যান দিচ্ছে বিশেষজ্ঞরা বলছেন প্রকৃত সংখ্যা তার প্রায় দ্বিগুণ। প্রকৃত চিত্রটা আসলে কী?",
+        "timestamp": 1589377480000,
+        "language": "bn",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112256563",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/8ED5/production/_112256563__111698013_gettyimages-1214095767.jpg",
+          "path": "/cpsprodpb/8ED5/production/_112256563__111698013_gettyimages-1214095767.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "যুক্তরাজ্যে কোভিড নিয়ে মৃত্যুর সংখ্যা প্রতিদিন সরকারি ব্রিফিংএ জানানো হয়",
+          "caption": "যুক্তরাজ্যে কোভিড-১৯ এ মৃত্যুর সংখ্যা প্রতিদিন সরকারি ব্রিফিংএ জানানো হয়",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:bengali/news-52650396",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "সৌদিসহ মধ্যপ্রাচ্যের শ্রমবাজার আগের অবস্থায় আর ফিরবে?"
+        },
+        "locators": {
+          "assetUri": "/bengali/news-52650486",
+          "cpsUrn": "urn:bbc:content:assetUri:bengali/news-52650486",
+          "assetId": "52650486"
+        },
+        "summary": "করোনাভাইরাস মহামারির অবসান হলেও সৌদি আরবসহ মধ্যপ্রাচ্যের দেশগুলোতে বাংলাদেশের শ্রমবাজার আর আগের অবস্থায় ফিরবে কি না তা নিয়ে দেখা দিয়েছে বড় সংশয়।",
+        "timestamp": 1589377031000,
+        "language": "bn",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112256545",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/D525/production/_112256545_e5138a71-f7a0-4d50-a91f-c8b52df803be.jpg",
+          "path": "/cpsprodpb/D525/production/_112256545_e5138a71-f7a0-4d50-a91f-c8b52df803be.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "মধ্যপ্রাচ্যে নির্মাণ খাতে কাজ করেন এশিয়ার বিভিন্ন দেশের শ্রমিকরা",
+          "caption": "মধ্যপ্রাচ্যে নির্মাণ খাতে কাজ করেন এশিয়ার বিভিন্ন দেশের শ্রমিকরা",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:bengali/news-52650486",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "এডিটার'স মেইলবক্স: করোনাভাইরাস ওষুধ রেমডেসিভির আর লকডাউন নিয়ে আলোচনা"
+        },
+        "locators": {
+          "assetUri": "/bengali/news-52592532",
+          "cpsUrn": "urn:bbc:content:assetUri:bengali/news-52592532",
+          "assetId": "52592532"
+        },
+        "summary": "বাংলাদেশে অনেকে দোকান-পাট খুলে দেয়া এবং মসজিদে জামাতে নামাজ পড়ার ওপর বিধি-নিষেধ শিথিল করা নিয়ে চিন্তিত।",
+        "timestamp": 1588951678000,
+        "language": "bn",
+        "byline": {
+          "name": "সাবির মুস্তাফা",
+          "title": "সম্পাদক, বিবিসি নিউজ বাংলা",
+          "persons": [
+            {
+              "name": "সাবির মুস্তাফা",
+              "function": "সম্পাদক, বিবিসি নিউজ বাংলা",
+              "thumbnail": "http://c.files.bbci.co.uk/DB89/production/_99910265_me.png"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/AskTheAudience",
+            "categoryName": "Ask the Audience"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112208459",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/174F8/production/_112208459_gettyimages-1211709639.jpg",
+          "path": "/cpsprodpb/174F8/production/_112208459_gettyimages-1211709639.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ঢাকায় একজন গৃহহীন নারী সুয়েজ পাইপে বসে আছেন, ০৪-০৫-২০২০।",
+          "caption": "লকডাউনের বাস্তবতা: মানুষ চরম সংকটময় মুহূর্ত পার করছে।",
+          "copyrightHolder": "Barcroft Media",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:bengali/news-52592532",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "আমার চোখে বিশ্ব: অধিকার বঞ্চিত ভারতে লক্ষ শিশু সঙ্কটের মুখে"
+        },
+        "locators": {
+          "assetUri": "/bengali/news-52577866",
+          "cpsUrn": "urn:bbc:content:assetUri:bengali/news-52577866",
+          "assetId": "52577866"
+        },
+        "summary": "এতদিন গ্রাম ছেড়ে যারা শহরমুখী হয়েছেন বাঁচার তাগিদে। কিন্তু সেই যাত্রার অভিমুখ যেন রাতারাতি বদলে গ্রামমুখী হয়ে উঠল।",
+        "timestamp": 1588933585000,
+        "language": "bn",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+            "categoryName": "Opinion"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112180984",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/BF0C/production/_112180984_malabi_new1.jpg",
+          "path": "/cpsprodpb/BF0C/production/_112180984_malabi_new1.jpg",
+          "height": 1152,
+          "width": 2048,
+          "altText": "মালবী গুপ্ত",
+          "caption": "মালবী গুপ্ত",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:bengali/news-52577866",
+        "type": "cps"
+      }
+    ]
+  }
