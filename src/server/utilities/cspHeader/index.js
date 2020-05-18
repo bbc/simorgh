@@ -295,12 +295,12 @@ const directives = {
   },
   fontSrc: {
     amp: [
-      'https://gel.files.bbci.co.uk', // STY includes
-      'https://ws-downloads.files.bbci.co.uk', // STY includes
+      'https://gel.files.bbci.co.uk', // Reith fonts
+      'https://ws-downloads.files.bbci.co.uk', // Other WS fonts
     ],
     canonical: [
-      'https://gel.files.bbci.co.uk', // STY includes
-      'https://ws-downloads.files.bbci.co.uk', // STY includes
+      'https://gel.files.bbci.co.uk', // Reith fonts
+      'https://ws-downloads.files.bbci.co.uk', // Other WS fonts
       'https://static.bbci.co.uk', // STY includes
     ],
   },
