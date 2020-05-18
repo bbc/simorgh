@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
-import { RequestContext } from '#contexts/RequestContext';
-import { ServiceContext } from '#contexts/ServiceContext';
-import Amp from './Amp';
 import useToggle from '#hooks/useToggle';
+import { RequestContext } from '../../contexts/RequestContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import Amp from './Amp';
+import Canonical from './Canonical';
 
 const AdContainer = () => {
   const { isAmp } = useContext(RequestContext);
@@ -11,16 +12,12 @@ const AdContainer = () => {
   const hasAds = pathOr(false, ['hasAds'], ads);
   const { enabled: adsEnabled } = useToggle('ads');
 
-  if (!adsEnabled || !hasAds) {
+  if (!hasAds || !adsEnabled) {
     return null;
   }
 
-  // const Ad = isAmp ? Amp : Canonical;
-  if (isAmp) {
-    return <Amp />;
-  }
-
-  return null;
+  const Ad = isAmp ? Amp : Canonical;
+  return <Ad service={service} />;
 };
 
 export default AdContainer;

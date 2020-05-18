@@ -1,26 +1,27 @@
 {
   "metadata": {
     "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172x9dx052c8sr",
-    "locators": {},
+    "locators": { "pid": "w172x9dx052c8sr", "brandPid": "p03413l5" },
     "type": "WSRADIO",
     "createdBy": "bbc_urdu_radio",
     "language": "ur",
-    "lastUpdated": 1583601860035,
+    "lastUpdated": 1589529753485,
     "firstPublished": 1583569000000,
     "lastPublished": 1583569000000,
+    "timestamp": 1583569000000,
     "options": {},
     "analyticsLabels": {
       "pageTitle": "بی بی سی اردو نیوز بلیٹن - BBC News اردو",
       "pageIdentifier": "urdu.bbc_urdu_radio.w172x9dx052c8sr.page",
       "producerId": "95",
-      "contentType": "player-ondemand",
+      "contentType": "player-episode",
       "producer": "URDU"
     },
-    "passport": null,
     "tags": {},
-    "version": "v1.1.3",
+    "version": "v1.3.0",
     "blockTypes": ["media"],
-    "title": "بی بی سی اردو نیوز بلیٹن"
+    "title": "بی بی سی اردو نیوز بلیٹن",
+    "releaseDateTimeStamp": 1583539200000
   },
   "content": {
     "blocks": [
@@ -33,36 +34,17 @@
           "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
           "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
         },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
         "embedding": false,
         "advertising": false,
-        "versions": [
-          {
-            "versionId": "w1mshg42dfk3wqk",
-            "types": ["Original"],
-            "duration": 600,
-            "durationISO8601": "PT10M",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": false,
-              "nonUk": false,
-              "world": true
-            },
-            "availableUntil": 1586175000000,
-            "availableFrom": 1583583000000
-          }
-        ],
-        "imageCopyright": null
+        "versions": [],
+        "type": "media"
       }
     ]
   },
   "promo": {
-    "headlines": {
-      "headline": "بی بی سی اردو نیوز بلیٹن"
-    },
-    "locators": {
-      "pid": "w172x9dx052c8sr"
-    },
+    "headlines": { "headline": "بی بی سی اردو نیوز بلیٹن" },
+    "locators": { "pid": "w172x9dx052c8sr", "brandPid": "p03413l5" },
     "media": {
       "id": "w172x9dx052c8sr",
       "subType": "episode",
@@ -72,75 +54,56 @@
         "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
         "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
       },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
       "embedding": false,
       "advertising": false,
-      "versions": [
-        {
-          "versionId": "w1mshg42dfk3wqk",
-          "types": ["Original"],
-          "duration": 600,
-          "durationISO8601": "PT10M",
-          "warnings": {},
-          "availableTerritories": {
-            "uk": false,
-            "nonUk": false,
-            "world": true
-          },
-          "availableUntil": 1586175000000,
-          "availableFrom": 1583583000000
-        }
-      ],
-      "imageCopyright": null
+      "versions": [],
+      "type": "media"
     },
     "indexImage": {
       "id": "",
       "subType": "index",
-      "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
-      "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
       "height": 0,
       "width": 0,
       "altText": null,
-      "copyrightHolder": null
+      "copyrightHolder": null,
+      "type": "image"
     },
-    "brand": {
-      "pid": "p03413l5",
-      "title": "بی بی سی اردو نیوز بلیٹن"
-    },
-    "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172x9dx052c8sr"
+    "brand": { "pid": "p03413l5", "title": "بی بی سی اردو نیوز بلیٹن" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172x9dx052c8sr",
+    "type": "ws_radio"
   },
   "relatedContent": {
     "site": {
       "subType": "site",
       "name": "Urdu",
-      "uri": "/urdu"
+      "uri": "/urdu",
+      "type": "simple"
     },
     "groups": [
       {
         "type": "other-episode",
         "promos": [
           {
-            "headlines": {
-              "headline": "بی بی سی اردو نیوز بلیٹن"
-            },
-            "locators": {
-              "pid": "w172x9dx052cj90"
-            },
+            "headlines": { "headline": "بی بی سی اردو نیوز بلیٹن" },
+            "locators": { "pid": "w172xjzxd3r81vh", "brandPid": "p03413l5" },
             "media": {
-              "id": "w172x9dx052cj90",
+              "id": "w172xjzxd3r81vh",
               "subType": "episode",
               "format": "Audio",
-              "title": "07/03/2020 GMT",
+              "title": "14/05/2020 GMT",
               "synopses": {
                 "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
                 "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshg42dfk446t",
+                  "versionId": "w1mshpwzz7kkngl",
                   "types": ["Original"],
                   "duration": 600,
                   "durationISO8601": "PT10M",
@@ -150,50 +113,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1586182200000,
-                  "availableFrom": 1583590200000
+                  "availableUntil": 1592057400000,
+                  "availableFrom": 1589465400000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p03413l5",
-              "title": "بی بی سی اردو نیوز بلیٹن"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172x9dx052cj90"
+            "brand": { "pid": "p03413l5", "title": "بی بی سی اردو نیوز بلیٹن" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xjzxd3r81vh",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "بی بی سی اردو نیوز بلیٹن"
-            },
-            "locators": {
-              "pid": "w172x9dx052cdjw"
-            },
+            "headlines": { "headline": "بی بی سی اردو نیوز بلیٹن" },
+            "locators": { "pid": "w172xjzxd3r7y3c", "brandPid": "p03413l5" },
             "media": {
-              "id": "w172x9dx052cdjw",
+              "id": "w172xjzxd3r7y3c",
               "subType": "episode",
               "format": "Audio",
-              "title": "07/03/2020 GMT",
+              "title": "14/05/2020 GMT",
               "synopses": {
                 "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
                 "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshg42dfk40gp",
+                  "versionId": "w1mshpwzz7kkjqg",
                   "types": ["Original"],
                   "duration": 600,
                   "durationISO8601": "PT10M",
@@ -203,50 +161,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1586178600000,
-                  "availableFrom": 1583586600000
+                  "availableUntil": 1592053800000,
+                  "availableFrom": 1589461800000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p03413l5",
-              "title": "بی بی سی اردو نیوز بلیٹن"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172x9dx052cdjw"
+            "brand": { "pid": "p03413l5", "title": "بی بی سی اردو نیوز بلیٹن" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xjzxd3r7y3c",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "بی بی سی اردو نیوز بلیٹن"
-            },
-            "locators": {
-              "pid": "w172x9dx0528mcx"
-            },
+            "headlines": { "headline": "بی بی سی اردو نیوز بلیٹن" },
+            "locators": { "pid": "w172xjzxd3r7tc7", "brandPid": "p03413l5" },
             "media": {
-              "id": "w172x9dx0528mcx",
+              "id": "w172xjzxd3r7tc7",
               "subType": "episode",
               "format": "Audio",
-              "title": "06/03/2020 GMT",
+              "title": "14/05/2020 GMT",
               "synopses": {
                 "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
                 "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshg42dfk179q",
+                  "versionId": "w1mshpwzz7kkdzb",
                   "types": ["Original"],
                   "duration": 600,
                   "durationISO8601": "PT10M",
@@ -256,50 +209,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1586095800000,
-                  "availableFrom": 1583503800000
+                  "availableUntil": 1592050200000,
+                  "availableFrom": 1589458200000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p03413l5",
-              "title": "بی بی سی اردو نیوز بلیٹن"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172x9dx0528mcx"
+            "brand": { "pid": "p03413l5", "title": "بی بی سی اردو نیوز بلیٹن" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xjzxd3r7tc7",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "بی بی سی اردو نیوز بلیٹن"
-            },
-            "locators": {
-              "pid": "w172x9dx0528hms"
-            },
+            "headlines": { "headline": "بی بی سی اردو نیوز بلیٹن" },
+            "locators": { "pid": "w172xjzxd3r54yd", "brandPid": "p03413l5" },
             "media": {
-              "id": "w172x9dx0528hms",
+              "id": "w172xjzxd3r54yd",
               "subType": "episode",
               "format": "Audio",
-              "title": "06/03/2020 GMT",
+              "title": "13/05/2020 GMT",
               "synopses": {
                 "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
                 "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshg42dfk13kl",
+                  "versionId": "w1mshpwzz7kgrkh",
                   "types": ["Original"],
                   "duration": 600,
                   "durationISO8601": "PT10M",
@@ -309,50 +257,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1586092200000,
-                  "availableFrom": 1583500200000
+                  "availableUntil": 1591971000000,
+                  "availableFrom": 1589379000000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p03413l5",
-              "title": "بی بی سی اردو نیوز بلیٹن"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172x9dx0528hms"
+            "brand": { "pid": "p03413l5", "title": "بی بی سی اردو نیوز بلیٹن" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xjzxd3r54yd",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "بی بی سی اردو نیوز بلیٹن"
-            },
-            "locators": {
-              "pid": "w172x9dx0528cwn"
-            },
+            "headlines": { "headline": "بی بی سی اردو نیوز بلیٹن" },
+            "locators": { "pid": "w172xjzxd3r5168", "brandPid": "p03413l5" },
             "media": {
-              "id": "w172x9dx0528cwn",
+              "id": "w172xjzxd3r5168",
               "subType": "episode",
               "format": "Audio",
-              "title": "06/03/2020 GMT",
+              "title": "13/05/2020 GMT",
               "synopses": {
                 "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
                 "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshg42dfk0ztg",
+                  "versionId": "w1mshpwzz7kgmtc",
                   "types": ["Original"],
                   "duration": 600,
                   "durationISO8601": "PT10M",
@@ -362,50 +305,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1586088600000,
-                  "availableFrom": 1583496600000
+                  "availableUntil": 1591967400000,
+                  "availableFrom": 1589375400000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p03413l5",
-              "title": "بی بی سی اردو نیوز بلیٹن"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172x9dx0528cwn"
+            "brand": { "pid": "p03413l5", "title": "بی بی سی اردو نیوز بلیٹن" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xjzxd3r5168",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "بی بی سی اردو نیوز بلیٹن"
-            },
-            "locators": {
-              "pid": "w172x9dx0525qgt"
-            },
+            "headlines": { "headline": "بی بی سی اردو نیوز بلیٹن" },
+            "locators": { "pid": "w172xjzxd3r4xg4", "brandPid": "p03413l5" },
             "media": {
-              "id": "w172x9dx0525qgt",
+              "id": "w172xjzxd3r4xg4",
               "subType": "episode",
               "format": "Audio",
-              "title": "05/03/2020 GMT",
+              "title": "13/05/2020 GMT",
               "synopses": {
                 "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
                 "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshg42dfjybdm",
+                  "versionId": "w1mshpwzz7kgj27",
                   "types": ["Original"],
                   "duration": 600,
                   "durationISO8601": "PT10M",
@@ -415,50 +353,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1586009400000,
-                  "availableFrom": 1583417400000
+                  "availableUntil": 1591963800000,
+                  "availableFrom": 1589371800000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p03413l5",
-              "title": "بی بی سی اردو نیوز بلیٹن"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172x9dx0525qgt"
+            "brand": { "pid": "p03413l5", "title": "بی بی سی اردو نیوز بلیٹن" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xjzxd3r4xg4",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "بی بی سی اردو نیوز بلیٹن"
-            },
-            "locators": {
-              "pid": "w172x9dx0525lqp"
-            },
+            "headlines": { "headline": "بی بی سی اردو نیوز بلیٹن" },
+            "locators": { "pid": "w172xjzxd3r2819", "brandPid": "p03413l5" },
             "media": {
-              "id": "w172x9dx0525lqp",
+              "id": "w172xjzxd3r2819",
               "subType": "episode",
               "format": "Audio",
-              "title": "05/03/2020 GMT",
+              "title": "12/05/2020 GMT",
               "synopses": {
                 "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
                 "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshg42dfjy6nh",
+                  "versionId": "w1mshpwzz7kcvnd",
                   "types": ["Original"],
                   "duration": 600,
                   "durationISO8601": "PT10M",
@@ -468,50 +401,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1586005800000,
-                  "availableFrom": 1583413800000
+                  "availableUntil": 1591884600000,
+                  "availableFrom": 1589292600000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p03413l5",
-              "title": "بی بی سی اردو نیوز بلیٹن"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172x9dx0525lqp"
+            "brand": { "pid": "p03413l5", "title": "بی بی سی اردو نیوز بلیٹن" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xjzxd3r2819",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "بی بی سی اردو نیوز بلیٹن"
-            },
-            "locators": {
-              "pid": "w172x9dx0525gzk"
-            },
+            "headlines": { "headline": "بی بی سی اردو نیوز بلیٹن" },
+            "locators": { "pid": "w172xjzxd3r2495", "brandPid": "p03413l5" },
             "media": {
-              "id": "w172x9dx0525gzk",
+              "id": "w172xjzxd3r2495",
               "subType": "episode",
               "format": "Audio",
-              "title": "05/03/2020 GMT",
+              "title": "12/05/2020 GMT",
               "synopses": {
                 "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
                 "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshg42dfjy2xc",
+                  "versionId": "w1mshpwzz7kcqx8",
                   "types": ["Original"],
                   "duration": 600,
                   "durationISO8601": "PT10M",
@@ -521,27 +449,26 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1586002200000,
-                  "availableFrom": 1583410200000
+                  "availableUntil": 1591881000000,
+                  "availableFrom": 1589289000000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23yf.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p03413l5",
-              "title": "بی بی سی اردو نیوز بلیٹن"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172x9dx0525gzk"
+            "brand": { "pid": "p03413l5", "title": "بی بی سی اردو نیوز بلیٹن" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_urdu_radio/w172xjzxd3r2495",
+            "type": "ws_radio"
           }
         ]
       }
