@@ -1,0 +1,646 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "حادثه شلیک به ناوچه کنارک؛ رهبر و رئیس جمهوری ایران دستور رسیدگی دادند"
+        },
+        "locators": {
+          "assetUri": "/persian/iran-52643905",
+          "cpsUrn": "urn:bbc:content:assetUri:persian/iran-52643905",
+          "assetId": "52643905"
+        },
+        "summary": "رهبر و رئیس جمهوری ایران دستور رسیدگی به حادثه شلیک به ناوچه کنارک را صادر کردند. همزمان فرمانده ارتش هم گفته چهار گروه کارشناسی نظامی در حال رسیدگی به موضوع هستند. علت این حادثه هنوز به طور رسمی اعلام نشده است.",
+        "timestamp": 1589379749000,
+        "language": "fa",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112251855",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/DA07/production/_112251855_0e66b10b-7762-4430-bb93-f2610f2ad79f.jpg",
+          "path": "/cpsprodpb/DA07/production/_112251855_0e66b10b-7762-4430-bb93-f2610f2ad79f.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "در حادثه ناوچه کنارک ۱۹ نفر جان خود را از دست داده و ۱۵ نفر نیز مجروح شده‌اند",
+          "caption": "در حادثه ناوچه کنارک ۱۹ نفر جان خود را از دست داده و ۱۵ نفر نیز مجروح شده‌اند",
+          "copyrightHolder": "IRNA",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:persian/iran-52643905",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "زندانیان ایرانی در آمریکا چه کسانی هستند؟"
+        },
+        "locators": {
+          "assetUri": "/persian/iran-features-52638072",
+          "cpsUrn": "urn:bbc:content:assetUri:persian/iran-features-52638072",
+          "assetId": "52638072"
+        },
+        "summary": "نام زندانیان آمریکایی یا دوتابعیتی در ایران بارها در خبرها و اظهارات مقام‌های رسمی آمده اما کمتر نامی از زندانیان ایرانی در آمریکا به میان آمده و مقام‌های ایران درباره این که خواهان آزادی چه کسانی هستند اطلاعات چندانی نداده‌اند. با بررسی اسناد وزارت دادگستری آمریکا به فهرستی از ایرانیانی رسیدیم که بعضا دوتابعیتی هستند و بیشتر آنها به دلیل نقض تحریم‌های ایران یا به نوعی ارتباط با حکومت ایران در آمریکا زندانی شده‌اند. بعضی به قید وثیقه آزادند یا در انتظار اخراج از خاک آمریکا هستند.",
+        "timestamp": 1589376372000,
+        "language": "fa",
+        "byline": {
+          "name": "رضا ثابتی - پریزاد نوبخت",
+          "title": "بی‌بی‌سی",
+          "persons": [
+            {
+              "name": "رضا ثابتی",
+              "function": "بی‌بی‌سی"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112248201",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/282C/production/_112248201_2a5b3017-d839-4af4-a867-bae5e24d93a0.jpg",
+          "path": "/cpsprodpb/282C/production/_112248201_2a5b3017-d839-4af4-a867-bae5e24d93a0.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "مسعود سلیمانی بعد از بازگشت به ایران در کنار محمد جواد ظریف وزیر امور خارجه -آقای سلیمانی که در آمریکا زندانی بود، آذر 98 با ژیائو وانگ، زندانی چینی تبار آمریکایی مبادله شد",
+          "caption": "مسعود سلیمانی بعد از بازگشت به ایران در کنار محمد جواد ظریف وزیر امور خارجه - آقای سلیمانی که در آمریکا زندانی بود، آذر 98 با ژیائو وانگ، زندانی چینی تبار آمریکایی مبادله شد",
+          "copyrightHolder": "mfa.ir",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "section": {
+          "subType": "IDX",
+          "name": "تحلیل و گزارش - ایران",
+          "uri": "/persian/iran_features",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:persian/iran-features-52638072",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ایستگاه خبر؛ زن ۱۱۳ ساله اسپانیایی کرونا را شکست داد"
+        },
+        "locators": {
+          "assetUri": "/persian/live/52643901",
+          "cpsUrn": "urn:bbc:content:assetUri:persian/live/52643901",
+          "assetId": "52643901"
+        },
+        "summary": "لحظه به لحظه با خبرهای ایستگاه خبر؛ چهارشنبه ۲۴ اردیبهشت ۱۳۹۹ از ایران، افغانستان، جهان، ورزش، دنیای هنر و سرگرمی...",
+        "timestamp": 1589346211000,
+        "language": "fa",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "LIV",
+        "indexImage": {
+          "id": "112102541",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/38B8/production/_112102541_istgah_index4_persian-nc.png",
+          "path": "/cpsprodpb/38B8/production/_112102541_istgah_index4_persian-nc.png",
+          "height": 945,
+          "width": 1680,
+          "altText": "ایستگاه",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "commentary": {
+          "order": "descending",
+          "assetUUID": "D8DD43835B787842840C98E20A600823",
+          "channels": {
+            "enhancedmobile": "bbc.cps.asset.52643902_EnhancedMobile",
+            "desktop": "bbc.cps.asset.52643902_HighWeb",
+            "highweb": "bbc.cps.asset.52643902_HighWeb",
+            "mobile": "bbc.cps.asset.52643902_EnhancedMobile"
+          }
+        },
+        "isLive": true,
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "section": {
+          "subType": "IDX",
+          "name": "صفحه اول",
+          "uri": "/persian/front_page",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:persian/live/52643901",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "کرونا؛ چطور شهری مناسب یک بیماری همه‌گیر بسازیم؟"
+        },
+        "locators": {
+          "assetUri": "/persian/magazine-52600635",
+          "cpsUrn": "urn:bbc:content:assetUri:persian/magazine-52600635",
+          "assetId": "52600635"
+        },
+        "summary": "ویروس جدید کرونا به سرعت در شهرهای دنیا شیوع یافته‌است. این ویروس چطور می‌تواند طرز تفکر ما نسبت به طراحی شهری در آینده را تغییر دهد؟",
+        "timestamp": 1589358405000,
+        "language": "fa",
+        "byline": {
+          "name": "هریت کونستبل ",
+          "title": "بی‌بی‌سی",
+          "persons": [
+            {
+              "name": "Harriet Constable",
+              "function": "Da BBC Earth"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+            "categoryName": "Analysis"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e1739461b000e9dabf6",
+              "campaignName": "WS - CS"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111982290",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/240C/production/_111982290_p08bf16p-1.jpg",
+          "path": "/cpsprodpb/240C/production/_111982290_p08bf16p-1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "خیابانی شلوغ در چین",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:persian/magazine-52600635",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "پرونده‌های رازآلود 'آتش خودی' در ایران"
+        },
+        "locators": {
+          "assetUri": "/persian/iran-features-52636611",
+          "cpsUrn": "urn:bbc:content:assetUri:persian/iran-features-52636611",
+          "assetId": "52636611"
+        },
+        "summary": "در تاریخ نگاری رسمی جنگ ایران و عراق و دوران پس از آن، به ندرت به تلفات ناشی از \"آتش خودی\" اشاره شده و بسیاری از پرونده‌های مرتبط، کماکان در هاله‌ای از ابهام قرار دارند.",
+        "timestamp": 1589298078000,
+        "language": "fa",
+        "byline": {
+          "name": "حسین باستانی",
+          "title": " بی‌بی‌سی",
+          "persons": [
+            {
+              "name": "Dan Egan",
+              "function": ""
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112243339",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/16C96/production/_112243339_mediaitem112243338.jpg",
+          "path": "/cpsprodpb/16C96/production/_112243339_mediaitem112243338.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ناوچه \"کنارک\")",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "تحلیل و گزارش - ایران",
+          "uri": "/persian/iran_features",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:persian/iran-features-52636611",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ویروس کرونا؛ رکود اقتصادی و چهار سناریو برای بهبود اقتصاد جهان"
+        },
+        "locators": {
+          "assetUri": "/persian/business-52635033",
+          "cpsUrn": "urn:bbc:content:assetUri:persian/business-52635033",
+          "assetId": "52635033"
+        },
+        "summary": "صندوق بین المللی پول پیش بینی کرده که شیوع کرونا در جهان اقتصاد جهان را وارد شدیدترین رکود از زمان 'رکورد بزرگ' می‌کند؛ اما این رکود چقدر طول می‌کشد و اقتصاد جهان چه زمانی بهبود می‌یابد؟ در این مطلب به چهار سناریوی احتمالی اشاره شده است.",
+        "timestamp": 1589299213000,
+        "language": "fa",
+        "byline": {
+          "name": "استفانیا گوزر",
+          "title": "بی‌بی‌سی",
+          "persons": [
+            {
+              "name": "سعید توفیقی",
+              "function": "بی‌بی‌سی"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112229704",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/9F58/production/_112229704_ffa8c400-58d5-4f04-b63f-a75a958dbea2.jpg",
+          "path": "/cpsprodpb/9F58/production/_112229704_ffa8c400-58d5-4f04-b63f-a75a958dbea2.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "کووید",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:persian/business-52635033",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "بیماری جدید مرتبط با کرونا در کودکان با علایمی شبیه بیماری کاوازاکی"
+        },
+        "locators": {
+          "assetUri": "/persian/magazine-52419699",
+          "cpsUrn": "urn:bbc:content:assetUri:persian/magazine-52419699",
+          "assetId": "52419699"
+        },
+        "summary": "نگرانی نسبت به بروز یک سندرم التهابی یا بیماری ناشناخته‌ای دیگر که ممکن است با ویروس کرونا مرتبط باشد در میان کودکان بریتانیا رو به افزایش است. این بیماران کم سن و سال که به گروه‌های سنی مختلف تعلق دارند همگی به شدت بیمار بوده‌ و علائمی شبیه به بیماری کاوازاکی و سندروم شوک سمی داشته‌اند.",
+        "timestamp": 1589366467000,
+        "language": "fa",
+        "byline": {
+          "name": "میشل رابرتس",
+          "title": "دبیر بخش بهداشتی بی‌بی‌سی",
+          "persons": [
+            {
+              "name": "Michelle Roberts",
+              "function": "Health editor, BBC News online",
+              "thumbnail": "http://c.files.bbci.co.uk/460C/production/_111623971_img_1584-2.jpg"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+            "categoryName": "Explainer"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e1739461b000e9dabf6",
+              "campaignName": "WS - CS"
+            },
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111365637",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/11FB8/production/_111365637_gettyimages-1204264776-1.jpg",
+          "path": "/cpsprodpb/11FB8/production/_111365637_gettyimages-1204264776-1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ویروس",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:persian/magazine-52419699",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "کرونا و وسواس؛ 'انگار بیست سال بود برای این روزها تمرین می‌کردم'"
+        },
+        "locators": {
+          "assetUri": "/persian/science-52633369",
+          "cpsUrn": "urn:bbc:content:assetUri:persian/science-52633369",
+          "assetId": "52633369"
+        },
+        "summary": "روی زمین آشپزخانه نشسته بودم و بسته غلات صبحانه (سیریال) را ضدعفونی می‌کردم که ناگهان نکته‌ای برایم آشکار شد، انگار بیست سال است که خودم را برای همه‌گیری جهانی کرونا آماده می‌کردم. پرشکان در نوجوانی تشخیص دادند که من اختلال وسواسی-اجباری یا همان به اصطلاح وسواس دارم. من نزدیک به دو سوم عمرم، از وحشت از میکروب عذاب کشیده‌ام؛ از اینکه این عوامل بیماری‌زا چگونه منتقل می‌شوند و من چگونه خود را از آنها دور نگه دارم. همین باعث شد با احتیاط‌های بهداشتی که الان مردم در تمام دنیا در پیش گرفته‌اند خیلی خوب آشنا باشم.",
+        "timestamp": 1589301005000,
+        "language": "fa",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112242293",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/9938/production/_112242293_f5ea1347-7c91-4a9e-9a7f-61cc2ef760ff.jpg",
+          "path": "/cpsprodpb/9938/production/_112242293_f5ea1347-7c91-4a9e-9a7f-61cc2ef760ff.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "شستن دست",
+          "copyrightHolder": "EMMA RUSSELL",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:persian/science-52633369",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "رضا رحمانی وزیر عزل شده صنعت، معدن و تجارت کیست و چرا برکنار شد؟"
+        },
+        "locators": {
+          "assetUri": "/persian/iran-features-52634791",
+          "cpsUrn": "urn:bbc:content:assetUri:persian/iran-features-52634791",
+          "assetId": "52634791"
+        },
+        "summary": "رضا رحمانی که حالا دیگر باید او را وزیر پیشین صنعت، معدن و تجارت بنامیم، توانست کاری کند تا عنوان \"نخستین\" وزیر برکنار شده، معزول یا اخراجی کابینه حسن روحانی را به خود اختصاص دهد. اما او که بود و چرا عزل شد؟",
+        "timestamp": 1589287436000,
+        "language": "fa",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112241954",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/B35A/production/_112241954_e1b027c9-bea4-4ad1-be12-c85a1f0d7eb0.jpg",
+          "path": "/cpsprodpb/B35A/production/_112241954_e1b027c9-bea4-4ad1-be12-c85a1f0d7eb0.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "رضا رحمانی وزیر پیشین صنعت، معدن و تجارت",
+          "caption": "رضا رحمانی وزیر پیشین صنعت، معدن و تجارت",
+          "copyrightHolder": "ISNA",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "تحلیل و گزارش - ایران",
+          "uri": "/persian/iran_features",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:persian/iran-features-52634791",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "روز جهانی پرستار؛ 'خیلی خوب بود اگر مردم قدر کار ما را می‌دانستند'"
+        },
+        "locators": {
+          "assetUri": "/persian/science-52615628",
+          "cpsUrn": "urn:bbc:content:assetUri:persian/science-52615628",
+          "assetId": "52615628"
+        },
+        "summary": "در سراسر دنیا، پرستاران درگیر همه‌گیری جهانی کرونا هستند. این شغل به سلامت روانی و فیزیکی بعضی از آنها لطمه شدیدی زده است و تعداد زیادی هم به دلیل این بیماری جان خود را از دست داده‌اند. در روز جهانی پرستار، بی‌بی‌سی با دو پرستار در ایران و چهار پرستار در چهار قاره دنیا درباره زندگی در خط مقدم مبارزه با کرونا صحبت کرده است.",
+        "timestamp": 1589257388000,
+        "language": "fa",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112231289",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/17FA5/production/_112231289_e5694506-f8e9-48eb-971c-37efc002c3ce.jpg",
+          "path": "/cpsprodpb/17FA5/production/_112231289_e5694506-f8e9-48eb-971c-37efc002c3ce.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "iran",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:persian/science-52615628",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "۵ نکته برای این که بهتر بخوابید"
+        },
+        "locators": {
+          "assetUri": "/persian/magazine-52597793",
+          "cpsUrn": "urn:bbc:content:assetUri:persian/magazine-52597793",
+          "assetId": "52597793"
+        },
+        "summary": "کیسه‌ٔ آب‌جوش را آماده کردید، یک ساعت هم هست که به تلفن‌تان نگاه نکردید، ششصد‌ تا گوسفند را هم از اول تا آخر و از آخر به اول شمردید اما هنوز که هنوز است خواب‌تان نبرده است. شما هم همین مشکل را دارید؟",
+        "timestamp": 1589257585000,
+        "language": "fa",
+        "byline": {
+          "name": "مانیش پاندی",
+          "title": "بی‌بی‌سی",
+          "persons": [
+            {
+              "name": "Manish Pandey",
+              "function": "Newsbeat reporter"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+            "categoryName": "Explainer"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111833592",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/735D/production/_111833592_insomnia2.jpg",
+          "path": "/cpsprodpb/735D/production/_111833592_insomnia2.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "بی خواب",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:persian/magazine-52597793",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "تیم ملی زنان یا فدراسیون فوتبال آمریکا؛ کدام طرف حرف حساب می‌زند؟"
+        },
+        "locators": {
+          "assetUri": "/persian/sport-52608634",
+          "cpsUrn": "urn:bbc:content:assetUri:persian/sport-52608634",
+          "assetId": "52608634"
+        },
+        "summary": "بازیکنان تیم ملی فوتبال زنان آمریکا می‌گویند شکست‌شان در دادگاه فدرال برای دریافت حقوق برابر با مردان در برابر فدراسیون فوتبال این کشور را نمی‌پذیرند و درخواست تجدیدنظر می‌دهند. با ادامه این دعوای حقوقی، بحث درباره نابرابری حقوق زنان و مردان در فوتبال دوباره بالا گرفته است.",
+        "timestamp": 1589276945000,
+        "language": "fa",
+        "byline": {
+          "name": "سینا  حاتمی",
+          "title": "خبرنگار ورزشی",
+          "persons": [
+            {
+              "name": "سینا حاتمی",
+              "function": "خبرنگار ورزشی"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112221293",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/992C/production/_112221293_rapinoe_getty.jpg",
+          "path": "/cpsprodpb/992C/production/_112221293_rapinoe_getty.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "US Women's striker Megan Rapinoe prepares to lead the team out at the SheBelieves cup with her jersey turned inside out to hide the badge",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:persian/sport-52608634",
+        "type": "cps"
+      }
+    ]
+  }
