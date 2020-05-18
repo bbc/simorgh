@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { render } from '@testing-library/react';
+import { render, getByAltText } from '@testing-library/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import OnDemandImage from '.';
@@ -26,14 +26,14 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
   );
 
   it('should ensure the image has the right attributes', () => {
-    render(
+    const { container } = render(
       component({
         url: 'ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg',
         isAmp: false,
         service: 'pashto',
       }),
     );
-    const img = document.querySelector('img');
+    const img = getByAltText(container, 'BBC News پښتو');
     expect(img.src).toEqual(
       'https://ichef.bbci.co.uk/images/ic/112x112/p063j1dv.jpg',
     );
@@ -45,14 +45,14 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
   });
 
   it('should ensure the image has the right attributes for amp', () => {
-    render(
+    const { container } = render(
       component({
         url: 'ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg',
         isAmp: true,
         service: 'afaanoromoo',
       }),
     );
-    const img = document.querySelector('amp-img');
+    const img = container.querySelector('amp-img');
     expect(img.getAttribute('src')).toEqual(
       'https://ichef.bbci.co.uk/images/ic/112x112/p063j1dv.jpg',
     );
