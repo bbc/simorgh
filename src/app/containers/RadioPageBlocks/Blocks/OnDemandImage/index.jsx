@@ -10,10 +10,11 @@ import { GEL_GROUP_1_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 
+const paddingDir = ({ dir }) => `padding-${dir === 'rtl' ? 'left' : 'right'}`;
+
 const ImageContainer = styled.div`
-  padding: ${GEL_SPACING_QUAD}
-    ${({ dir }) => (dir === 'ltr' ? GEL_SPACING_DBL : 0)} ${GEL_SPACING_QUAD}
-    ${({ dir }) => (dir === 'ltr' ? 0 : GEL_SPACING_DBL)};
+  padding: ${GEL_SPACING_QUAD} 0;
+  ${paddingDir}: ${GEL_SPACING_DBL};
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     display: none;
   }
@@ -22,10 +23,10 @@ const ImageContainer = styled.div`
 const getSrc = ({ imageUrl, size }) =>
   `https://${imageUrl.replace('$recipe', size)}`;
 const getSrcSet = imageUrl =>
-  `${getSrc({ imageUrl, size: '112x112' })} 400w,${getSrc({
+  `${getSrc({ imageUrl, size: '112x112' })} 112w,${getSrc({
     imageUrl,
     size: '224x224',
-  })} 1008w`;
+  })} 224w`;
 
 const OnDemandImage = ({ imageUrl, dir }) => {
   const { isAmp } = useContext(RequestContext);
@@ -34,6 +35,7 @@ const OnDemandImage = ({ imageUrl, dir }) => {
   const width = 224;
   const src = getSrc({ imageUrl, size: '112x112' });
   const srcset = getSrcSet(imageUrl);
+  const sizes = '(min-width: 1007px) 112px, 100vw';
   const imageProps = { src, alt, srcset };
 
   return (
@@ -46,7 +48,7 @@ const OnDemandImage = ({ imageUrl, dir }) => {
           width={width}
         />
       ) : (
-        <Image {...imageProps} />
+        <Image {...imageProps} sizes={sizes} />
       )}
     </ImageContainer>
   );
