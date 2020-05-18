@@ -1,0 +1,631 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "“วันนี้ทำตัวลำบาก เพราะผมเป็นคนไทยที่เขาไม่ให้เป็นคนไทย”"
+        },
+        "locators": {
+          "assetUri": "/thai/thailand-52638142",
+          "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-52638142",
+          "assetId": "52638142"
+        },
+        "summary": "อดีตนายกรัฐมนตรีที่ยังมีคดีค้างศาลไทยกับความเคลื่อนไหวล่าสุดท่ามกลางวิกฤตโรคระบาด",
+        "timestamp": 1589365930000,
+        "language": "th",
+        "byline": {
+          "name": "เรื่องโดย อิสสริยา พรายทองแย้ม ",
+          "title": "วิดีโอโดย ทศพล ชัยสัมฤทธิ์ผล ",
+          "persons": [
+            {
+              "name": "อิสสริยา พรายทองแย้ม",
+              "function": "บรรณาธิการวางแผนข่าว"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112245646",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/FC8E/production/_112245646_thaksin2.jpg",
+          "path": "/cpsprodpb/FC8E/production/_112245646_thaksin2.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "นายทักษิณ ชินวัตร",
+          "copyrightHolder": "Tossapol Chaisamritpol/BBCThai",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:thai/thailand-52638142",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ซาอุดีอาระเบียกับศึกรอบด้าน"
+        },
+        "locators": {
+          "assetUri": "/thai/international-52651270",
+          "cpsUrn": "urn:bbc:content:assetUri:thai/international-52651270",
+          "assetId": "52651270"
+        },
+        "summary": "ท่ามกลางภาวะโรคระบาดที่ส่งผลกระทบไปทั่วโลก ซาอุดีอาระเบียเจอศึกหนักเรื่องราคาน้ำมันและปัญหาความสัมพันธ์กับนานาชาติด้วย ประเทศกำลังประสบปัญหาอะไรบ้าง และหนักหนาแค่ไหนกัน",
+        "timestamp": 1589377766000,
+        "language": "th",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112258099",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1830D/production/_112258099__112240105_gettyimages-1129844897.jpg",
+          "path": "/cpsprodpb/1830D/production/_112258099__112240105_gettyimages-1129844897.jpg",
+          "height": 351,
+          "width": 624,
+          "altText": "เจ้าชายโมฮัมเหม็ด บิน ซัลมาน",
+          "caption": "เจ้าชายโมฮัมเหม็ด บิน ซัลมานได้รับความนิยมสูงภายในประเทศ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:thai/international-52651270",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ระบบอุปถัมภ์-อำนาจนิยมในโรงเรียน ต้นเหตุครูล่วงละเมิดทางเพศเด็ก"
+        },
+        "locators": {
+          "assetUri": "/thai/thailand-52643849",
+          "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-52643849",
+          "assetId": "52643849"
+        },
+        "summary": "นายณัฏฐพล ทีปสุวรรณ รัฐมนตรีว่าการกระทรวงศึกษาธิการยอมรับกับบีบีซีไทยว่า ที่ผ่านมา ศธ. ไม่ได้แก้ปัญหาเรื่องการล่วงละเมิดทางเพศในโรงเรียนอย่างจริงจัง",
+        "timestamp": 1589373487000,
+        "language": "th",
+        "byline": {
+          "name": "กุลธิดา  สามะพุทธิ",
+          "title": "ผู้สื่อข่าวบีบีซีไทย",
+          "persons": [
+            {
+              "name": "กุลธิดา สามะพุทธิ",
+              "function": "ผู้สื่อข่าวบีบีซีไทย"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112252516",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/F055/production/_112252516_96607777_554858631838351_7643152748594069504_n.jpg",
+          "path": "/cpsprodpb/F055/production/_112252516_96607777_554858631838351_7643152748594069504_n.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "แถลงข่าว",
+          "caption": "ตัวแทนองค์กรที่ทำงานด้านเด็กและเยาวชนเดินทางไปที่กระทรวงยุติธรรมเพื่อเรียกร้องให้เจ้าหน้าที่คุ้มครองเด็กหญิงผู้เสียหายจากการถูกครูล่วงละเมิดทางเพศ",
+          "copyrightHolder": "มูลนิธิเด็กเยาวชนและครอบครัว",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112256913",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/7CDD/production/_112256913_96607777_554858631838351_7643152748594069504_n.jpg",
+          "path": "/cpsprodpb/7CDD/production/_112256913_96607777_554858631838351_7643152748594069504_n.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "แถลงข่าว",
+          "caption": "ตัวแทนองค์กรที่ทำงานด้านเด็กและเยาวชนเดินทางไปที่กระทรวงยุติธรรมเพื่อเรียกร้องให้เจ้าหน้าที่คุ้มครองเด็กหญิงผู้เสียหายจากการถูกครูล่วงละเมิดทางเพศ",
+          "copyrightHolder": "มูลนิธิเด็กเยาวชนและครอบครัว",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:thai/thailand-52643849",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "ไวรัสโรคโควิด-19 อาจกำลังมีวิวัฒนาการ ปรับตัวเพื่อให้มนุษย์ติดเชื้อง่ายขึ้น"
+        },
+        "locators": {
+          "assetUri": "/thai/international-52615475",
+          "cpsUrn": "urn:bbc:content:assetUri:thai/international-52615475",
+          "assetId": "52615475"
+        },
+        "summary": "นักวิทยาศาสตร์จับตาการกลายพันธุ์ของเชื้อไวรัสโคโรนาสายพันธุ์ใหม่ หวั่นส่งผลกระทบต่อการพัฒนาวัคซีน",
+        "timestamp": 1589185414000,
+        "language": "th",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112226847",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1246E/production/_112226847_covidvaccinereuters.png",
+          "path": "/cpsprodpb/1246E/production/_112226847_covidvaccinereuters.png",
+          "height": 549,
+          "width": 976,
+          "altText": "วัคซีน",
+          "caption": "การกลายพันธุ์ตรงส่วนหนามของไวรัส อาจส่งผลเสียต่อการพัฒนาวัคซีนโรคโควิด-19 ได้",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:thai/international-52615475",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "โควิด-19 เปลี่ยนแปลงสภาพอากาศโลกอย่างไร"
+        },
+        "locators": {
+          "assetUri": "/thai/features-52585708",
+          "cpsUrn": "urn:bbc:content:assetUri:thai/features-52585708",
+          "assetId": "52585708"
+        },
+        "summary": "เมื่อการระบาดครั้งใหญ่ของเชื้อไวรัสโคโรนาทำให้การปล่อยก๊าซเรือนกระจกลดลง แล้วเหตุการณ์นี้มีผลทำให้เกิดการเปลี่ยนแปลงของสภาพภูมิอากาศหรือไม่",
+        "timestamp": 1588930651000,
+        "language": "th",
+        "byline": {
+          "name": "แมท  แม็คกราธ",
+          "title": "ผู้สื่อข่าวสิ่งแวดล้อม บีบีซี ",
+          "persons": [
+            {
+              "name": "แมท แม็คกราธ",
+              "function": "ผู้สื่อข่าวสิ่งแวดล้อม บีบีซี"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112164551",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/3CBA/production/_112164551_climate_change_promo_cv.jpg",
+          "path": "/cpsprodpb/3CBA/production/_112164551_climate_change_promo_cv.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Promo image",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112201229",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/16832/production/_112201229_climate_change_promo_cv.jpg",
+          "path": "/cpsprodpb/16832/production/_112201229_climate_change_promo_cv.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Promo image",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:thai/features-52585708",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "โรคอ้วนในพระสงฆ์ เรื่องที่ญาติโยมช่วยได้"
+        },
+        "locators": {
+          "assetUri": "/thai/thailand-52552490",
+          "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-52552490",
+          "assetId": "52552490"
+        },
+        "summary": "สถานการณ์โรคอ้วนในพระสงฆ์เกิดขึ้นมานับสิบปีแล้ว แต่เพิ่งได้รับความสนใจจากหน่วยงานที่เกี่ยวข้องเมื่อไม่นานมานี้ ผลการวิจัยเชิงลึกชี้ให้เห็นว่าสาเหตุหลักมาจากการฉันอาหารที่มีน้ำตาลสูง และขาดการออกกำลังกาย",
+        "timestamp": 1588706808000,
+        "language": "th",
+        "byline": {
+          "name": "สุชีรา มาไกวร์",
+          "title": "ผู้สื่อข่าววิดีโอ บีบีซีไทย",
+          "persons": [
+            {
+              "name": "สุชีรา มาไกวร์",
+              "function": "ผู้สื่อข่าววิดีโอ บีบีซีไทย"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112160011",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/2AFE/production/_112160011_thumbnail.jpg",
+          "path": "/cpsprodpb/2AFE/production/_112160011_thumbnail.jpg",
+          "height": 1080,
+          "width": 1920,
+          "altText": "ตรวจสุขภาพพระสงฆ์",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:thai/thailand-52552490",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "วิดีโอคอลช่วยให้ชายคนนี้ได้อยู่ข้าง ๆ แม่ที่กำลังจะตาย"
+        },
+        "locators": {
+          "assetUri": "/thai/international-52594473",
+          "cpsUrn": "urn:bbc:content:assetUri:thai/international-52594473",
+          "assetId": "52594473"
+        },
+        "summary": "\"ในโลกแห่งการล็อกดาวน์ มือถือเป็นสิ่งเดียวที่เชื่อมตัวแม่กับโลกภายนอก\"",
+        "timestamp": 1588987593000,
+        "language": "th",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111930388",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/158EF/production/_111930388_andrewandkathleenwithblurmedium.jpg",
+          "path": "/cpsprodpb/158EF/production/_111930388_andrewandkathleenwithblurmedium.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Kathleen and Andrew Webb",
+          "caption": "แอนดรูว์และแม่",
+          "copyrightHolder": "Andrew Webb",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112209380",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/20C6/production/_112209380_andrewandkathleenwithblurmedium.jpg",
+          "path": "/cpsprodpb/20C6/production/_112209380_andrewandkathleenwithblurmedium.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Kathleen and Andrew Webb",
+          "caption": "แอนดรูว์และแม่",
+          "copyrightHolder": "Andrew Webb",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:thai/international-52594473",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "“เรามีความหวังทุกคนที่รักษา” เรื่องเล่าจากหมอโควิด รพ.จุฬาฯ"
+        },
+        "locators": {
+          "assetUri": "/thai/thailand-52511893",
+          "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-52511893",
+          "assetId": "52511893"
+        },
+        "summary": "โควิดไดอารีจากนายแพทย์หนุ่มหัวหน้าศูนย์โรคอุบัติใหม่ทางคลินิก รพ.จุฬาฯ นับตั้งแต่วันแรกที่รู้ว่าประเทศไทยกำลังต้องเจอกับโรคระบาด และเรื่องเล่าของการรักษาผู้ป่วยหนักให้พวกเขาได้กลับบ้าน",
+        "timestamp": 1588403073000,
+        "language": "th",
+        "byline": {
+          "name": "ธันยพร บัวทอง",
+          "title": "ผู้สื่อข่าวบีบีซีไทย",
+          "persons": [
+            {
+              "name": "ธันยพร บัวทอง",
+              "function": "ผู้สื่อข่าวบีบีซีไทย"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112088301",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/2894/production/_112088301_061261780.jpg",
+          "path": "/cpsprodpb/2894/production/_112088301_061261780.jpg",
+          "height": 432,
+          "width": 768,
+          "altText": "Reuters",
+          "caption": "ทีมแพทย์พยาบาลกำลังเตรียมผู้ป่วยเพื่อเข้าการทำซีทีสแกน",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112088304",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/9DC4/production/_112088304_061261780.jpg",
+          "path": "/cpsprodpb/9DC4/production/_112088304_061261780.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Reuters",
+          "caption": "ทีมแพทย์พยาบาลกำลังเตรียมผู้ป่วยเพื่อเข้าการทำซีทีสแกน",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:thai/thailand-52511893",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "เทคโนโลยีติดตามตัวผู้ติดเชื้อในเกาหลีใต้"
+        },
+        "locators": {
+          "assetUri": "/thai/international-52610267",
+          "cpsUrn": "urn:bbc:content:assetUri:thai/international-52610267",
+          "assetId": "52610267"
+        },
+        "summary": "อัตราผู้ติดเชื้อในเกาหลีใต้ในช่วงแรกอยู่ในภาวะน่าเป็นห่วง แต่รัฐบาลสามารถคุมสถานการณ์ได้ทันท่วงทีด้วยการใช้เทคโนโลยีติดตามตัวเพื่อแกะรอยผู้ติดเชื้อ และแจ้งเตือนผู้มีความเสี่ยง",
+        "timestamp": 1589156746000,
+        "language": "th",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "MAP",
+        "media": {
+          "id": "p08csx51",
+          "subType": "clip",
+          "format": "video",
+          "title": "โควิด-19: เกาหลีใต้ชะลอกราฟการติดเชื้อได้อย่างไร",
+          "synopses": {
+            "short": "โควิด-19: เกาหลีใต้ชะลอกราฟการติดเชื้อได้อย่างไร"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08csxjm.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "โควิด-19: เกาหลีใต้ชะลอกราฟการติดเชื้อได้อย่างไร",
+          "versions": [
+            {
+              "versionId": "p08csx54",
+              "types": [
+                "Original"
+              ],
+              "duration": 112,
+              "durationISO8601": "PT1M52S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableFrom": 1589130180000
+            }
+          ],
+          "imageCopyright": "BBC",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "112223050",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/13A8/production/_112223050_p08csxjm.jpg",
+          "path": "/cpsprodpb/13A8/production/_112223050_p08csxjm.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "สวนสาธารณะในเกาหลีใต้",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112223052",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/61C8/production/_112223052_p08csxjm.jpg",
+          "path": "/cpsprodpb/61C8/production/_112223052_p08csxjm.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "สวนสาธารณะในเกาหลีใต้",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:thai/international-52610267",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "พบแอนติบอดีพิเศษในลามา ใช้ป้องกันและรักษาโรคโควิด-19 ได้"
+        },
+        "locators": {
+          "assetUri": "/thai/international-52573226",
+          "cpsUrn": "urn:bbc:content:assetUri:thai/international-52573226",
+          "assetId": "52573226"
+        },
+        "summary": "ผลการศึกษาของทีมนักวิทยาศาสตร์ชี้ว่าแอนติบอดีของลามา ซึ่งเคยใช้ยับยั้งการก่อโรคและลบล้างฤทธิ์ของไวรัสได้ผลมาแล้วหลายชนิด มีประสิทธิภาพแบบเดียวกันในการป้องกันและกำจัดไวรัสซาร์สซีโอวีทู (SARS-CoV-2) ที่ก่อโรคโควิด-19 ด้วย",
+        "timestamp": 1588850940000,
+        "language": "th",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112177837",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/12095/production/_112177837_whitellamagettyimages.png",
+          "path": "/cpsprodpb/12095/production/_112177837_whitellamagettyimages.png",
+          "height": 549,
+          "width": 976,
+          "altText": "ตัวลามา",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:thai/international-52573226",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "\"เมื่ออู่ฮั่นปิด ทุกอย่างก็จบ\" อนาคตที่ยังไม่พบของกล้วยไม้ไทย"
+        },
+        "locators": {
+          "assetUri": "/thai/thailand-52482493",
+          "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-52482493",
+          "assetId": "52482493"
+        },
+        "summary": "ธุรกิจส่งออกกล้วยไม้ไทยมูลค่าเกือบ 3 พันล้านบาทต่อปีกำลังเหี่ยวเฉาจากการระบาดหนักของโรคโควิด-19 ในตลาดส่งออกหลัก รวมทั้งการล็อกดาวน์และเคอร์ฟิวที่กระทบการขนส่ง",
+        "timestamp": 1588312891000,
+        "language": "th",
+        "byline": {
+          "name": "วัชชิรานนท์  ทองเทพ  & วสวัตติ์ ลุขะรัง",
+          "title": "ผู้สื่อข่าวบีบีซีไทย",
+          "persons": [
+            {
+              "name": "วัชชิรานนท์ ทองเทพ",
+              "function": "ผู้สื่อข่าวบีบีซีไทย"
+            },
+            {
+              "name": "วสวัตติ์ ลุขะรัง",
+              "function": "ผู้สื่อข่าววิดีโอ"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112040739",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/16E08/production/_112040739_13a4917c-5d56-4253-8119-f764bb49d9e5.jpg",
+          "path": "/cpsprodpb/16E08/production/_112040739_13a4917c-5d56-4253-8119-f764bb49d9e5.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ภาพคนงานในสวนกล้วยไม้ที่ จ.ราชบุรี",
+          "copyrightHolder": "Wasawat Lukharang/BBC Thai",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112041505",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/C552/production/_112041505_13a4917c-5d56-4253-8119-f764bb49d9e5.jpg",
+          "path": "/cpsprodpb/C552/production/_112041505_13a4917c-5d56-4253-8119-f764bb49d9e5.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "ภาพคนงานในสวนกล้วยไม้ที่ จ.ราชบุรี",
+          "copyrightHolder": "Wasawat Lukharang/BBC Thai",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:thai/thailand-52482493",
+        "type": "cps"
+      }
+    ]
+  }
