@@ -4682,7 +4682,6 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
-      mostReadPage: { environments: undefined, smoke: false },
     },
   },
   swahili: {
