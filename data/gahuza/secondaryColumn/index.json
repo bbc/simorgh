@@ -1,0 +1,366 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "Rwanda: Yarokotse ubwicanyi ‘bumugambiriye’ nyuma arafungwa"
+        },
+        "locators": {
+          "assetUri": "/gahuza/amakuru-52651150",
+          "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-52651150",
+          "assetId": "52651150"
+        },
+        "summary": "Théophile Ntirutwa yigeze gufungwa mu 2016 mu gihe kimwe n'abandi bari mu ishyaka FDU-Inkingi nka Boniface Twagirimana, Fabien Twagirayezu, Léonille Gasengayire na Gratien Nsabiyaremye.",
+        "timestamp": 1589375334000,
+        "language": "rw",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112253124",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/A497/production/_112253124_theophilentirutwa.jpg",
+          "path": "/cpsprodpb/A497/production/_112253124_theophilentirutwa.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Théophile Ntirutwa",
+          "caption": "Théophile Ntirutwa mukwa mbere aheruka yabwiye umunyamakuru mu Rwanda ibyamubayeho",
+          "copyrightHolder": "Umubavu",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "none",
+        "id": "urn:bbc:ares::asset:gahuza/amakuru-52651150",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Abarundi bo bipfuza iki kuri Perezida bazotora?"
+        },
+        "locators": {
+          "assetUri": "/gahuza/amakuru-52644192",
+          "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-52644192",
+          "assetId": "52644192"
+        },
+        "summary": "Kureka kwibona mu moko, kwubaka amabarabara, kwubaka isoko nkuru ya Bujumbura, kurwanya ubushomeri mu rwaruka, kunagura imigenderanire n'amakungu, kugira icegera c'umukuru w'igihugu w'Umutwa...bimwe muri vyinshi bipfuza.",
+        "timestamp": 1589360120000,
+        "language": "rw",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112252870",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1E91/production/_112252870_amatora.jpg",
+          "path": "/cpsprodpb/1E91/production/_112252870_amatora.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Aha ni mu matora ku ibwirizwa shingiro ry'u Burundi mu 2018",
+          "caption": "Aha ni mu matora ku ibwirizwa shingiro ry'u Burundi mu 2018",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "none",
+        "id": "urn:bbc:ares::asset:gahuza/amakuru-52644192",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Ibyago byo kwandura Covid-19 i Dar es Salaam biri hejuru cyane – Ambasade ya US"
+        },
+        "locators": {
+          "assetUri": "/gahuza/amakuru-52646583",
+          "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-52646583",
+          "assetId": "52646583"
+        },
+        "summary": "Mu itangazo riburira ku buzima, iyi ambasade ivuga ko hari ukwiyongera kwihuse kw'iki cyorezo muri Dar es Salaam, umurwa mukuru w'ubukungu, no mu bindi bice by'igihugu.",
+        "timestamp": 1589364633000,
+        "language": "rw",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112253118",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/13CEF/production/_112253118_dar.jpg",
+          "path": "/cpsprodpb/13CEF/production/_112253118_dar.jpg",
+          "height": 562,
+          "width": 1000,
+          "altText": "Dar",
+          "caption": "Mu murwa mukuru w'ubucuruzi wa Tanzania niho havugwa abantu benshi banduye coronavirus mu gihugu",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "none",
+        "id": "urn:bbc:ares::asset:gahuza/amakuru-52646583",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "2005 – 2020: Nkurunziza yahaye iki Abarundi mu vyo yabemereye?"
+        },
+        "locators": {
+          "assetUri": "/gahuza/amakuru-52618917",
+          "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-52618917",
+          "assetId": "52618917"
+        },
+        "summary": "Umwimbu mbumbe w'umunyagihugu ku mwaka (GDP per capita) wari amadorari ya Amerika $110 mu 2005, mu 2018 wari ugeze ku $271.",
+        "timestamp": 1589196183000,
+        "language": "rw",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112229136",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/F6D8/production/_112229136_gettyimages-1171502195.jpg",
+          "path": "/cpsprodpb/F6D8/production/_112229136_gettyimages-1171502195.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Perezida Nkurunziza",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:gahuza/amakuru-52618917",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Amatora mu Burundi 2020: Abakandida bitoza hamwe n'ivyo bashira imbere"
+        },
+        "locators": {
+          "assetUri": "/gahuza/amakuru-52567928",
+          "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-52567928",
+          "assetId": "52567928"
+        },
+        "summary": "Ku tariki 20/05/2020 abarundi babifitiye uburenganzira bazokwihitiramwo umukuru w'igihugu azobarongora mu myaka indwi iri imbere",
+        "timestamp": 1588801949000,
+        "language": "rw",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+            "categoryName": "Explainer"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112179849",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/172B1/production/_112179849_finalabakandidaburundi.jpg",
+          "path": "/cpsprodpb/172B1/production/_112179849_finalabakandidaburundi.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Abakandida; Ndayishimiye, Sindimwo, Ngendakumana, Nahimana, Rohero, Rwasa na Ndayizeye",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:gahuza/amakuru-52567928",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Kurasana nanone kw'ingabo z'u Rwanda n'iz'u Burundi"
+        },
+        "locators": {
+          "assetUri": "/gahuza/amakuru-52605499",
+          "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-52605499",
+          "assetId": "52605499"
+        },
+        "summary": "Itangazo ry'ingabo z'u Rwanda rivuga ko iyo mirwano yaturutse ku itsinda ry'abarobyi b'Abarundi \"binjiye binyuranyije n'amategeko mu mazi y'u Rwanda mu kiyaga Rweru\". Ntacyo igisirikare cy'u Burundi kiratangaza ku mugaragaro.",
+        "timestamp": 1589102998000,
+        "language": "rw",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112219423",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/7EEB/production/_112219423_rwandaburundi.jpg",
+          "path": "/cpsprodpb/7EEB/production/_112219423_rwandaburundi.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Imyenda ya gisirikare ku mpande zombi",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:gahuza/amakuru-52605499",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Rwanda: Ijwi ry'abapfushije ababo mu mvura muri Gakenke"
+        },
+        "locators": {
+          "assetUri": "/gahuza/amakuru-52587626",
+          "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-52587626",
+          "assetId": "52587626"
+        },
+        "summary": "Bwana Maniriho wo mu kagari ka Rwa, mu murenge wa Muzo mu karere ka Gakenke inkangu yagwiriye inzu ye aryamye n'umugore n'abana batatu, nubwo yari yakomeretse yabashije kurokora umugore n'umwana umwe.",
+        "timestamp": 1588937941000,
+        "language": "rw",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112203423",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/7EAE/production/_112203423_gakenke1.jpg",
+          "path": "/cpsprodpb/7EAE/production/_112203423_gakenke1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Abantu benshi bapfuye bagwiriwe n'inzu zabo",
+          "caption": "Abantu benshi bapfuye bagwiriwe n'inzu zabo, iyi ni imwe muzaguye mu murenge wa Muzo",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:gahuza/amakuru-52587626",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Burundi - Rwanda: Umunsi w'ubwisanzure bw'itangazamakuru ubusanze he?"
+        },
+        "locators": {
+          "assetUri": "/gahuza/amakuru-52519414",
+          "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-52519414",
+          "assetId": "52519414"
+        },
+        "summary": "\"Itangazamakuru ridatinya kandi ritabogamye\", uyu mwaka ni yo ntero y'umunsi mpuzamahanga w'ubwisanzure bw'itangazamakuru wizihizwa ku isi tariki ya 3 y'ukwa gatanu buri mwaka.",
+        "timestamp": 1588491126000,
+        "language": "rw",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112094694",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/C1F1/production/_112094694_pressfreedomphoto.jpg",
+          "path": "/cpsprodpb/C1F1/production/_112094694_pressfreedomphoto.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Abanyamakuru b'ikinyamakuru Iwacu mu Burundi mu 2015 mu kwizihiza umunsi w'ubwisanzure bw'itangazamakuru bagaragaje ko batisanzuye mu kazi kabo",
+          "caption": "Abanyamakuru b'ikinyamakuru Iwacu mu Burundi mu 2015 mu kwizihiza umunsi w'ubwisanzure bw'itangazamakuru bagaragaje ko batisanzuye mu kazi kabo",
+          "copyrightHolder": "Getty Images ",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:gahuza/amakuru-52519414",
+        "type": "cps"
+      }
+    ]
+  }

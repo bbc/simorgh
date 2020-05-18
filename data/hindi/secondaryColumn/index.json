@@ -1,0 +1,626 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "कोरोना वायरस: मोदी के 'लोकल को लेकर वोकल' एजेंडे पर अमित शाह ने उठाया पहला क़दम"
+        },
+        "locators": {
+          "assetUri": "/hindi/live/india-52641255",
+          "cpsUrn": "urn:bbc:content:assetUri:hindi/live/india-52641255",
+          "assetId": "52641255"
+        },
+        "summary": "कहा जा रहा था कि कोरोना वायरस के बाद की दुनिया पहले की दुनिया से बिल्कुल अलग होगी. लगता है कि इसकी शुरुआत भारत ने कर दी है.",
+        "timestamp": 1589309530000,
+        "language": "hi",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            },
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "LIV",
+        "indexImage": {
+          "id": "112252147",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1218D/production/_112252147_gettyimages-453387828.jpg",
+          "path": "/cpsprodpb/1218D/production/_112252147_gettyimages-453387828.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "मोदी",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "commentary": {
+          "order": "descending",
+          "assetUUID": "1F9A2048D9B4AD4DBB9B05D5D49775BC",
+          "channels": {
+            "enhancedmobile": "bbc.cps.asset.52641256_EnhancedMobile",
+            "desktop": "bbc.cps.asset.52641256_HighWeb",
+            "highweb": "bbc.cps.asset.52641256_HighWeb",
+            "mobile": "bbc.cps.asset.52641256_EnhancedMobile"
+          }
+        },
+        "isLive": true,
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:hindi/live/india-52641255",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "कोरोना वैक्सीन: लोगों तक पहुँचने में लग सकते हैं ढाई साल"
+        },
+        "locators": {
+          "assetUri": "/hindi/international-52644181",
+          "cpsUrn": "urn:bbc:content:assetUri:hindi/international-52644181",
+          "assetId": "52644181"
+        },
+        "summary": "विश्व स्वास्थ्य संगठन के विशेष दूत डेविड नाबारो ने बीबीसी के साथ विशेष बातचीत में कहा कि भारत के बड़े शहरों में ज़्यादा ख़तरा है.",
+        "timestamp": 1589362103000,
+        "language": "hi",
+        "byline": {
+          "name": "नितिन श्रीवास्तव",
+          "title": "बीबीसी संवाददाता",
+          "persons": [
+            {
+              "name": "Flora Carmichael & Marianna Spring",
+              "function": "BBC Trending"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+            "categoryName": "Opinion"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112251945",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/D683/production/_112251945_74f14b91-efef-449d-b049-c33aae768afa.jpg",
+          "path": "/cpsprodpb/D683/production/_112251945_74f14b91-efef-449d-b049-c33aae768afa.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "कोरोना वैक्सीन",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:hindi/international-52644181",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "अफ्रीकी जंगल में समुद्री लुटेरों के कब्ज़े में 70 दिनों तक बंधक रहे भारतीय नाविकों की कहानी",
+          "overtyped": "अफ्रीका में समुद्री लुटेरों के कब्ज़े में रहे भारतीय नाविकों की कहानी"
+        },
+        "locators": {
+          "assetUri": "/hindi/magazine-52631494",
+          "cpsUrn": "urn:bbc:content:assetUri:hindi/magazine-52631494",
+          "assetId": "52631494"
+        },
+        "summary": "कहानी सुदीप चौधरी की जिन्हें गिनी की खाड़ी के नज़दीक समुद्री लुटेरों ने अगवा कर लिया था, 70 दिनों की जद्दोजहद के बाद उन्हें आख़िरकार आज़ादी मिली.",
+        "timestamp": 1589348028000,
+        "language": "hi",
+        "byline": {
+          "name": "केविन पोनियाह",
+          "title": "बीबीसी न्यूज़  ",
+          "persons": [
+            {
+              "name": "अभिजीत श्रीवास्तव",
+              "function": "बीबीसी संवाददाता"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e1739461b000e9dabf6",
+              "campaignName": "WS - CS"
+            },
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111790564",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/B5AD/production/_111790564_976image4.png",
+          "path": "/cpsprodpb/B5AD/production/_111790564_976image4.png",
+          "height": 549,
+          "width": 976,
+          "altText": "कॉम्पोज़िट तस्वीर",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:hindi/magazine-52631494",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "कोरोना वायरसः नियम तोड़ने वालों की शिकायत करना कितना सही?"
+        },
+        "locators": {
+          "assetUri": "/hindi/international-52577405",
+          "cpsUrn": "urn:bbc:content:assetUri:hindi/international-52577405",
+          "assetId": "52577405"
+        },
+        "summary": "क्या यह एक नागरिक के तौर पर आपका कर्तव्य है या यह अपने पड़ोसियों पर नज़र रखना है?",
+        "timestamp": 1589125041000,
+        "language": "hi",
+        "byline": {
+          "name": "फ्रांसेस माओ",
+          "title": "बीबीसी न्यूज़",
+          "persons": [
+            {
+              "name": "Ivonne Toro Agurto",
+              "function": "La Tercera"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112180418",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/13E00/production/_112180418_51f77a18-5991-4d6e-880b-a519e56424f0.jpg",
+          "path": "/cpsprodpb/13E00/production/_112180418_51f77a18-5991-4d6e-880b-a519e56424f0.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "कोरोना लॉकडाउन",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:hindi/international-52577405",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "कोरोना पर पश्चिम बंगाल में हिंसा, ममता ने लगाया बीजेपी पर हिंसा भड़काने का आरोप",
+          "overtyped": "पश्चिम बंगाल में हिंसा, ममता ने लगाया बीजेपी पर हिंसा भड़काने का आरोप"
+        },
+        "locators": {
+          "assetUri": "/hindi/india-52642343",
+          "cpsUrn": "urn:bbc:content:assetUri:hindi/india-52642343",
+          "assetId": "52642343"
+        },
+        "summary": "पश्चिम बंगाल के हुगली ज़िले में दो गुटों में हिंसा-आगजनी के बाद धारा 144 लागू कर दिया गया है. बीजेपी और तृणमूल कांग्रेस के बीच आरोप-प्रत्यारोप तेज़",
+        "timestamp": 1589317263000,
+        "language": "hi",
+        "byline": {
+          "name": "प्रभाकर मणि तिवारी",
+          "title": "कोलकाता से बीबीसी हिंदी के लिए",
+          "persons": [
+            {
+              "name": "अनंत प्रकाश",
+              "function": "बीबीसी संवाददाता"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112249654",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/B27E/production/_112249654_cm.jpg",
+          "path": "/cpsprodpb/B27E/production/_112249654_cm.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ममता बनर्जी",
+          "copyrightHolder": "Sanjay Das/BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:hindi/india-52642343",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "कोरोना लॉकडाउनः नाइजीरियाई सेक्स वर्कर का संघर्ष"
+        },
+        "locators": {
+          "assetUri": "/hindi/international-52601626",
+          "cpsUrn": "urn:bbc:content:assetUri:hindi/international-52601626",
+          "assetId": "52601626"
+        },
+        "summary": "नाइजीरिया में लॉकडाउन में फँसी एक सेक्स वर्कर की आपबीती.",
+        "timestamp": 1589283570000,
+        "language": "hi",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112215820",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/0B23/production/_112215820_nigeriansexworker.jpg",
+          "path": "/cpsprodpb/0B23/production/_112215820_nigeriansexworker.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "नाइजीरियाई सेक्स वर्कर",
+          "copyrightHolder": "PIUS UTOMI EKPEI/Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:hindi/international-52601626",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "कोरोना लॉकडाउन: प्रवासी मज़दूरों के लिए क्या कर रही हैं राज्य सरकारें",
+          "overtyped": "कोरोना लॉकडाउन: प्रवासी मज़दूरों के लिए क्या कर रही हैं राज्य सरकारें"
+        },
+        "locators": {
+          "assetUri": "/hindi/india-52635943",
+          "cpsUrn": "urn:bbc:content:assetUri:hindi/india-52635943",
+          "assetId": "52635943"
+        },
+        "summary": "बिहार, झारखंड, उत्तर प्रदेश और मध्य प्रदेश में पहुंचे प्रवासी मज़दूरों की हालत कैसी और क्या है राज्य सरकार की तैयारी?",
+        "timestamp": 1589289941000,
+        "language": "hi",
+        "byline": {
+          "name": "टीम बीबीसी हिंदी",
+          "title": "नई दिल्ली",
+          "persons": [
+            {
+              "name": "दिलनवाज़ पाशा",
+              "function": "बीबीसी संवाददाता"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112243043",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/84F2/production/_112243043_gettyimages-1212735538.jpg",
+          "path": "/cpsprodpb/84F2/production/_112243043_gettyimages-1212735538.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "प्रवासी मज़दूर",
+          "copyrightHolder": "Hindustan Times/Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:hindi/india-52635943",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "कोरोना वायरस: मां के साथ वीडियो कॉल पर था, जब वो हमेशा के लिए सो गईं",
+          "overtyped": "कोरोना: मां के साथ वीडियो कॉल पर था, जब वो हमेशा के लिए सो गईं"
+        },
+        "locators": {
+          "assetUri": "/hindi/international-52608486",
+          "cpsUrn": "urn:bbc:content:assetUri:hindi/international-52608486",
+          "assetId": "52608486"
+        },
+        "summary": "बीबीसी के प्रोड्यूसर एंड्रयू वेब अपनी माँ के अंतिम समय में उनसे मिलने अस्पताल नहीं जा पाए.",
+        "timestamp": 1589208319000,
+        "language": "hi",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112222013",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/792E/production/_112222013_c15cd897-7ab4-42f2-a65b-92727834e878.jpg",
+          "path": "/cpsprodpb/792E/production/_112222013_c15cd897-7ab4-42f2-a65b-92727834e878.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "एंडर्यू वेब अपनी मां के साथ",
+          "copyrightHolder": "ANDREW WEBB",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:hindi/international-52608486",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "मोदी: आत्मनिर्भर भारत के लिए 20 लाख करोड़ का आर्थिक पैकेज",
+          "overtyped": "प्रधानमंत्री मोदी के भाषण की मुख्य बातें यहां जानिए"
+        },
+        "locators": {
+          "assetUri": "/hindi/india-52636905",
+          "cpsUrn": "urn:bbc:content:assetUri:hindi/india-52636905",
+          "assetId": "52636905"
+        },
+        "summary": "लॉकडाउन आगे बढ़ाने की अटकलों के बीच प्रधानमंत्री नरेंद्र मोदी ने देश को संबोधित किया. कोरोना वायरस फैलने के बाद ये मोदी का राष्ट्र के नाम छठा संबोधन था.",
+        "timestamp": 1589291728000,
+        "language": "hi",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112243106",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/EAE6/production/_112243106_modi.jpg",
+          "path": "/cpsprodpb/EAE6/production/_112243106_modi.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "नरेंद्र मोदी",
+          "copyrightHolder": "Anadolu Agency",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:hindi/india-52636905",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "गुजरात के क़ानून मंत्री भूपेंद्र सिंह चुडास्मा का चुनाव रद्द करने का आदेश",
+          "overtyped": "गुजरात के क़ानून मंत्री का चुनाव रद्द करने का आदेश"
+        },
+        "locators": {
+          "assetUri": "/hindi/india-52629941",
+          "cpsUrn": "urn:bbc:content:assetUri:hindi/india-52629941",
+          "assetId": "52629941"
+        },
+        "summary": "गुजरात उच्च न्यायालय ने ढोलका विधानसभा सीट के चुनाव को रद्द करने का आदेश दिया है.",
+        "timestamp": 1589268423000,
+        "language": "hi",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112237697",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/13739/production/_112237697_88279375_3011056532248282_3051639843663642624_n.jpg",
+          "path": "/cpsprodpb/13739/production/_112237697_88279375_3011056532248282_3051639843663642624_n.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "भूपेंद्र सिंह चुडास्मा",
+          "copyrightHolder": "BHUPENDRASINH CHUDASAMA SOCIAL",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:hindi/india-52629941",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "सूरत में मजदूर की पिटाई का वीडियो वायरल, क्या है पूरा मामला",
+          "overtyped": "सूरत में मजदूर की पिटाई का वीडियो वायरल, क्या है पूरा मामला"
+        },
+        "locators": {
+          "assetUri": "/hindi/india-52612401",
+          "cpsUrn": "urn:bbc:content:assetUri:hindi/india-52612401",
+          "assetId": "52612401"
+        },
+        "summary": "इस वायरल वीडियो को झारखंड में गोड्डा के बीजेपी सांसद और कांग्रेस सोशल मीडिया के राष्ट्रीय संयोजक समेत कई लोगों ने ट्वीट किया था.",
+        "timestamp": 1589259715000,
+        "language": "hi",
+        "byline": {
+          "name": "रवि प्रकाश ",
+          "title": "रांची से, बीबीसी हिंदी के लिए",
+          "persons": [
+            {
+              "name": "Ivonne Toro Agurto",
+              "function": "La Tercera"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112224611",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/2D7A/production/_112224611_1.jpg",
+          "path": "/cpsprodpb/2D7A/production/_112224611_1.jpg",
+          "height": 360,
+          "width": 640,
+          "altText": "वासुदेव शर्मा",
+          "caption": "वासुदेव शर्मा",
+          "copyrightHolder": "MOHAN MANDAL",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:hindi/india-52612401",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "कोरोना वायरस: लॉकडाउन के बाद कैसे कटेंगे बाल"
+        },
+        "locators": {
+          "assetUri": "/hindi/international-52565188",
+          "cpsUrn": "urn:bbc:content:assetUri:hindi/international-52565188",
+          "assetId": "52565188"
+        },
+        "summary": "कोरोनावायरस के हमले से पहले बाल कटाना भले ही सुकून भरा या झंझट का काम रहा हो लेकिन अब यह पहले जैसा अहसास नहीं रहने वाला.",
+        "timestamp": 1589280363000,
+        "language": "hi",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112171808",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/13BB1/production/_112171808_gettyimages-1211940753.jpg",
+          "path": "/cpsprodpb/13BB1/production/_112171808_gettyimages-1211940753.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "कोरोना लॉकडाउन",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:hindi/international-52565188",
+        "type": "cps"
+      }
+    ]
+  }

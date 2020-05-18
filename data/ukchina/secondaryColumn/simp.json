@@ -1,0 +1,66 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "新鲜的不一定最好 冷冻蔬果和罐头蔬果的好处"
+        },
+        "locators": {
+          "assetUri": "/ukchina/simp/52517627",
+          "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/52517627",
+          "assetId": "52517627"
+        },
+        "summary": "人们通常觉得罐头和冷冻的蔬菜水果营养价值不如新鲜的水果和蔬菜，但真的是这样吗？",
+        "timestamp": 1588443394000,
+        "language": "zh-Hans",
+        "byline": {
+          "name": "杰西卡·布朗",
+          "title": "（Jessica Brown）",
+          "persons": [
+            {
+              "name": "Dan Egan",
+              "function": ""
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112086982",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/7128/production/_112086982_16c10153-f29f-49b3-857a-7ea4b4535e5c.jpg",
+          "path": "/cpsprodpb/7128/production/_112086982_16c10153-f29f-49b3-857a-7ea4b4535e5c.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "新鲜的水果和沙拉不能取代",
+          "caption": "新鲜的水果和沙拉不能取代",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "section": {
+          "subType": "IDX",
+          "name": "主页",
+          "uri": "/ukchina/simp/front_page",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:ukchina/simp/52517627",
+        "type": "cps"
+      }
+    ]
+  }
