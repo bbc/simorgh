@@ -1,0 +1,621 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "Aláàfin gbé àṣẹ kalẹ̀ láti dènà àtúnṣẹ̀ ìṣẹ̀lẹ̀ 'Soka'nílùú Ọ̀yọ̀"
+        },
+        "locators": {
+          "assetUri": "/yoruba/afrika-52226602",
+          "cpsUrn": "urn:bbc:content:assetUri:yoruba/afrika-52226602",
+          "assetId": "52226602"
+        },
+        "summary": "Aṣẹ alaafin lo ṣokunfa kiko awọn katakata nlanla ls si ilẹ naa lati fa awọn igbo naa kuro.",
+        "timestamp": 1589373455000,
+        "language": "yo",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            },
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            },
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112256886",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/10D01/production/_112256886_67073145_1240891376095128_1279398930379592970_n.jpg",
+          "path": "/cpsprodpb/10D01/production/_112256886_67073145_1240891376095128_1279398930379592970_n.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Alaafin",
+          "copyrightHolder": "Alaafin",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:yoruba/afrika-52226602",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Ìṣẹ́jú kan BBC"
+        },
+        "locators": {
+          "assetUri": "/yoruba/media-42985961",
+          "cpsUrn": "urn:bbc:content:assetUri:yoruba/media-42985961",
+          "assetId": "42985961"
+        },
+        "summary": "Àkójọpọ̀ ìsẹ̀lẹ̀ jákèjádò àgbáyé láàárín ìṣẹ́jú kan lórí BBC.",
+        "timestamp": 1589372259000,
+        "language": "yo",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "MAP",
+        "media": {
+          "id": "p08d1k6l",
+          "subType": "clip",
+          "format": "audio",
+          "title": "Ìṣẹ́jú kan BBC",
+          "synopses": {
+            "short": "Ìsẹ̀lẹ̀ jákèjádò orílẹ̀èdè àgbáyé láàárín ìṣẹ́jú kan",
+            "medium": "Àkójọpọ̀ ìsẹ̀lẹ̀ jákèjádò àgbáyé láàárín ìṣẹ́jú kan lórí BBC."
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08d1kgk.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "Ìsẹ̀lẹ̀ jákèjádò orílẹ̀èdè àgbáyé láàárín ìṣẹ́jú kan",
+          "versions": [
+            {
+              "versionId": "p08d1k6q",
+              "types": [
+                "Original"
+              ],
+              "duration": 60,
+              "durationISO8601": "PT1M",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableUntil": 1589458415000,
+              "availableFrom": 1589372015000
+            }
+          ],
+          "imageCopyright": "BBC",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "112256693",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/9AF1/production/_112256693_p08d1kgk.jpg",
+          "path": "/cpsprodpb/9AF1/production/_112256693_p08d1kgk.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Ìṣẹ́jú kan BBC",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:yoruba/media-42985961",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Ọjọ́ tí inú mi dùn jùlọ láyé lọjọ́ tí mo gba físà Amẹ́ríkà- Sanyeri"
+        },
+        "locators": {
+          "assetUri": "/yoruba/afrika-52650416",
+          "cpsUrn": "urn:bbc:content:assetUri:yoruba/afrika-52650416",
+          "assetId": "52650416"
+        },
+        "summary": "Sanyeri wá sísọ lójú rẹ pé iṣẹ́ aránsọ ni bàbá òun fẹ́ kí òun kọ́, kí òun tó yan iṣẹ́ tíátà ní ààyò.",
+        "timestamp": 1589375832000,
+        "language": "yo",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112256787",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/133AD/production/_112256787_afonja1.jpg",
+          "path": "/cpsprodpb/133AD/production/_112256787_afonja1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Olaniyi Afonja",
+          "copyrightHolder": "Instagram/sanyeri12",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:yoruba/afrika-52650416",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "Ṣé ẹ lè kí Liverpool kú oríire báyìí? Premier League yóò bẹ̀rẹ̀ padà lóṣù kẹfà"
+        },
+        "locators": {
+          "assetUri": "/yoruba/ere-idaraya-52626973",
+          "cpsUrn": "urn:bbc:content:assetUri:yoruba/ere-idaraya-52626973",
+          "assetId": "52626973"
+        },
+        "summary": "Ijọba ilẹ Gẹẹsi rọ awọn ẹgbẹ agbabọọlu ogun to wa ninu idije naa lati gba awọn ifẹsẹwọnsẹ to ku lawọn papa iṣere mii yatọ si ti wọn.",
+        "timestamp": 1589227339000,
+        "language": "yo",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112235390",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/2489/production/_112235390_epl.jpg",
+          "path": "/cpsprodpb/2489/production/_112235390_epl.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Awọn agbabọọlu Liverpool",
+          "copyrightHolder": "Twitter/Liverpool FC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:yoruba/ere-idaraya-52626973",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "NFF fi #30,000 kún #10,000 owó ìrànwọ́ oṣooṣù fún ìyá Rashidi Yekini àti Samuel Okwaraji"
+        },
+        "locators": {
+          "assetUri": "/yoruba/afrika-52570213",
+          "cpsUrn": "urn:bbc:content:assetUri:yoruba/afrika-52570213",
+          "assetId": "52570213"
+        },
+        "summary": "Rashidi Yekini ṣi ni aṣiwaju atamatase agbabọọlu fun ilẹ Naijiria ninu itan.",
+        "timestamp": 1588937945000,
+        "language": "yo",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112205713",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/7C06/production/_112205713_yekinii.jpg",
+          "path": "/cpsprodpb/7C06/production/_112205713_yekinii.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Yekini",
+          "copyrightHolder": "Others",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:yoruba/afrika-52570213",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Real Madrid ń gbáradì láti ra Paul Pogba pẹ̀lúu £70m"
+        },
+        "locators": {
+          "assetUri": "/yoruba/52426195",
+          "cpsUrn": "urn:bbc:content:assetUri:yoruba/52426195",
+          "assetId": "52426195"
+        },
+        "summary": "Ṣaaju ni Real Madrid ti gbiyanu lati ra agbabọọlu naa lọdun to kọja ṣugbọn idunadura ọhun fori ṣọpọn.",
+        "timestamp": 1588521018000,
+        "language": "yo",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112097656",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1008F/production/_112097656_gettyimages-1196073144.jpg",
+          "path": "/cpsprodpb/1008F/production/_112097656_gettyimages-1196073144.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Pogba",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "Àbáwọlé",
+          "uri": "/yoruba/front_page",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:yoruba/52426195",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Àwọn jẹsí tó gbajúmọ̀ nínú ìtàn ìdíje bọ́ọ́lù"
+        },
+        "locators": {
+          "assetUri": "/yoruba/ere-idaraya-52314356",
+          "cpsUrn": "urn:bbc:content:assetUri:yoruba/ere-idaraya-52314356",
+          "assetId": "52314356"
+        },
+        "summary": "Àkójọpọ̀ díẹ̀ lára àwọn jẹsí tó gbajúmọ̀ nínú ìtàn ìdíje bọ́ọ́lù.",
+        "timestamp": 1588243056000,
+        "language": "yo",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Review",
+            "categoryName": "Review"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111826695",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/E90E/production/_111826695_manu.jpg",
+          "path": "/cpsprodpb/E90E/production/_111826695_manu.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Man U",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:yoruba/ere-idaraya-52314356",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Ṣé o láyà: Ẹ wo àkójọpọ̀ àwọn ǹkan ti o máa n wáyé lẹyin ìtàgé lásiko iṣẹ́ ìfọ̀rọ̀wánilẹ́nu wò"
+        },
+        "locators": {
+          "assetUri": "/yoruba/afrika-52597648",
+          "cpsUrn": "urn:bbc:content:assetUri:yoruba/afrika-52597648",
+          "assetId": "52597648"
+        },
+        "summary": "Ọ̀pọ̀ àwọn olólùfẹ́ ilé Iṣẹ́ BBC to ti kópa nínú ètò \"Ṣo o láyà\" lo ti ṣé bẹ́bẹ kí a to yọ diẹ̀ fun ìgbádun yín",
+        "timestamp": 1589023217000,
+        "language": "yo",
+        "cpsType": "MAP",
+        "media": {
+          "id": "p08cqg7f",
+          "subType": "clip",
+          "format": "video",
+          "title": "Ṣé o láyà: Ẹ wo àkójọpọ̀ àwọn ǹkan ti o máa n wáyé lẹyin kámẹra lásiko iṣẹ́",
+          "synopses": {
+            "short": "Ṣé o láyà: Ẹ wo àkójọpọ̀ àwọn ǹkan ti o máa n wáyé lẹyin kámẹra lásiko iṣẹ́",
+            "medium": "Ọ̀pọ̀ àwọn olólùfẹ́ ilé Iṣẹ́ BBC to ti kópa nínú ètò  \"Ṣo o láyà\" lo ti ṣé bẹ́bẹ kí a to yọ diẹ̀ fun ìgbádun yín"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08cqgfn.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "Ṣé o láyà: Ẹ wo àkójọpọ̀ àwọn ǹkan ti o máa n wáyé lẹyin kámẹra lásiko iṣẹ́",
+          "versions": [
+            {
+              "versionId": "p08cqg7k",
+              "types": [
+                "Original"
+              ],
+              "duration": 188,
+              "durationISO8601": "PT3M8S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableFrom": 1589005132000
+            }
+          ],
+          "imageCopyright": "BBC",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "112214880",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/2289/production/_112214880_jaye1.jpg",
+          "path": "/cpsprodpb/2289/production/_112214880_jaye1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Jaiye Kuti",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:yoruba/afrika-52597648",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Wọ́n ti fi ẹ̀sùn \"ghost worker\" kan ọmọ olórí òṣìṣẹ́ ìjọba ìpínlè Oyo"
+        },
+        "locators": {
+          "assetUri": "/yoruba/51284047",
+          "cpsUrn": "urn:bbc:content:assetUri:yoruba/51284047",
+          "assetId": "51284047"
+        },
+        "summary": "Awuyewuye ọhún bẹrẹ nígbà tí Ayobami ati ọrẹ rẹ, Sulaimon n jiyàn lori iha ti ìjọba ìpínlè Oyo kọ sí àjàkálẹ̀ àrùn Coronavirus.",
+        "timestamp": 1589115264000,
+        "language": "yo",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "110679000",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/0061/production/_110679000_0013d53c-9c30-4765-b9b5-6a9a6c9bda93.jpg",
+          "path": "/cpsprodpb/0061/production/_110679000_0013d53c-9c30-4765-b9b5-6a9a6c9bda93.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Makinde",
+          "caption": "Oyo LGA Chairmen: Malami, IGP àti alága APC ni yóò káwọ pọ̀'yìn rojọ l'Oyo",
+          "copyrightHolder": "Makinde",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "Àbáwọlé",
+          "uri": "/yoruba/front_page",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:yoruba/51284047",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "'Pọ́ńbélé Yorùbá ni mí, n ò sì ní tijú rẹ níbikíbi'"
+        },
+        "locators": {
+          "assetUri": "/yoruba/afrika-45963397",
+          "cpsUrn": "urn:bbc:content:assetUri:yoruba/afrika-45963397",
+          "assetId": "45963397"
+        },
+        "summary": "Ẹgbẹ́ Atunbi dá dúró gedegbe, ó sì ń ṣe igbe lárugẹ àṣà, kò fi ti òṣèlú àti ẹ̀sìn ṣe.",
+        "timestamp": 1589107976000,
+        "language": "yo",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "Educate me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "104016660",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1A05/production/_104016660_4b9430bd-9b5a-450a-a17e-d8c3dc08582b.jpg",
+          "path": "/cpsprodpb/1A05/production/_104016660_4b9430bd-9b5a-450a-a17e-d8c3dc08582b.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Iku babayeye Alaafin of Oyo",
+          "caption": "Iku babayeye Alaafin of Oyo",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:yoruba/afrika-45963397",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Wo bí o ṣe lè se ọbẹ̀ ẹ̀fọ́ yìí àti àwọn oúnjẹ Yorùbá aládùn míràn"
+        },
+        "locators": {
+          "assetUri": "/yoruba/afrika-51595692",
+          "cpsUrn": "urn:bbc:content:assetUri:yoruba/afrika-51595692",
+          "assetId": "51595692"
+        },
+        "summary": "Awọn ounjẹ Yoruba naa gbajumọ pupọ, ti awọn ẹya miran gan si kundun lati maa jẹ wọn nitori adun wọn ati bi wọn se n se ara loore si.",
+        "timestamp": 1589112988000,
+        "language": "yo",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            },
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "110997331",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/3443/production/_110997331_a7292d37-6efb-4347-819b-67509cfa909e.jpg",
+          "path": "/cpsprodpb/3443/production/_110997331_a7292d37-6efb-4347-819b-67509cfa909e.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Ẹfọ riro",
+          "copyrightHolder": "Others",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:yoruba/afrika-51595692",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Àlàyé rèé lóríi ìdí tí wọ́n fi ń pe aya ní ìyàwó"
+        },
+        "locators": {
+          "assetUri": "/yoruba/afrika-49289065",
+          "cpsUrn": "urn:bbc:content:assetUri:yoruba/afrika-49289065",
+          "assetId": "49289065"
+        },
+        "summary": "Itan yii kọ̀ wa lati maa ni ipamọra, ifarada, atẹ́mọ̀ra ati suuru ninu ohunkohun.",
+        "timestamp": 1588942513000,
+        "language": "yo",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "108257846",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/FD6B/production/_108257846_iyawo.jpg4.jpg",
+          "path": "/cpsprodpb/FD6B/production/_108257846_iyawo.jpg4.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Iyawo tuntun ati ọmọ iyawo",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:yoruba/afrika-49289065",
+        "type": "cps"
+      }
+    ]
+  }
