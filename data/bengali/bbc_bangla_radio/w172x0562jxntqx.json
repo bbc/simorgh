@@ -1,26 +1,27 @@
 {
   "metadata": {
     "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172x0562jxntqx",
-    "locators": {},
+    "locators": { "pid": "w172x0562jxntqx", "brandPid": "p030vjwg" },
     "type": "WSRADIO",
     "createdBy": "bbc_bangla_radio",
     "language": "bn",
-    "lastUpdated": 1583601860035,
+    "lastUpdated": 1589529753485,
     "firstPublished": 1583569000000,
     "lastPublished": 1583569000000,
+    "timestamp": 1583569000000,
     "options": {},
     "analyticsLabels": {
       "pageTitle": "প্রবাহ - BBC News বাংলা",
       "pageIdentifier": "bengali.bbc_bangla_radio.w172x0562jxntqx.page",
       "producerId": "31",
-      "contentType": "player-ondemand",
+      "contentType": "player-episode",
       "producer": "BENGALI"
     },
-    "passport": null,
     "tags": {},
-    "version": "v1.1.3",
+    "version": "v1.3.0",
     "blockTypes": ["media"],
-    "title": "প্রবাহ"
+    "title": "প্রবাহ",
+    "releaseDateTimeStamp": 1583539200000
   },
   "content": {
     "blocks": [
@@ -33,36 +34,17 @@
           "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
           "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
         },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
         "embedding": false,
         "advertising": false,
-        "versions": [
-          {
-            "versionId": "w1msh4hq5vv29zd",
-            "types": ["Original"],
-            "duration": 1770,
-            "durationISO8601": "PT29M30S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": false,
-              "nonUk": false,
-              "world": true
-            },
-            "availableUntil": 1586181570000,
-            "availableFrom": 1583589570000
-          }
-        ],
-        "imageCopyright": null
+        "versions": [],
+        "type": "media"
       }
     ]
   },
   "promo": {
-    "headlines": {
-      "headline": "প্রবাহ"
-    },
-    "locators": {
-      "pid": "w172x0562jxntqx"
-    },
+    "headlines": { "headline": "প্রবাহ" },
+    "locators": { "pid": "w172x0562jxntqx", "brandPid": "p030vjwg" },
     "media": {
       "id": "w172x0562jxntqx",
       "subType": "episode",
@@ -72,75 +54,56 @@
         "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
         "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
       },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
       "embedding": false,
       "advertising": false,
-      "versions": [
-        {
-          "versionId": "w1msh4hq5vv29zd",
-          "types": ["Original"],
-          "duration": 1770,
-          "durationISO8601": "PT29M30S",
-          "warnings": {},
-          "availableTerritories": {
-            "uk": false,
-            "nonUk": false,
-            "world": true
-          },
-          "availableUntil": 1586181570000,
-          "availableFrom": 1583589570000
-        }
-      ],
-      "imageCopyright": null
+      "versions": [],
+      "type": "media"
     },
     "indexImage": {
       "id": "",
       "subType": "index",
-      "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
-      "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
       "height": 0,
       "width": 0,
       "altText": null,
-      "copyrightHolder": null
+      "copyrightHolder": null,
+      "type": "image"
     },
-    "brand": {
-      "pid": "p030vjwg",
-      "title": "প্রবাহ"
-    },
-    "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172x0562jxntqx"
+    "brand": { "pid": "p030vjwg", "title": "প্রবাহ" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172x0562jxntqx",
+    "type": "ws_radio"
   },
   "relatedContent": {
     "site": {
       "subType": "site",
       "name": "Bengali",
-      "uri": "/bengali"
+      "uri": "/bengali",
+      "type": "simple"
     },
     "groups": [
       {
         "type": "other-episode",
         "promos": [
           {
-            "headlines": {
-              "headline": "প্রবাহ"
-            },
-            "locators": {
-              "pid": "w172x0562jxkxtt"
-            },
+            "headlines": { "headline": "প্রবাহ" },
+            "locators": { "pid": "w172xdwhxtlr99v", "brandPid": "p030vjwg" },
             "media": {
-              "id": "w172x0562jxkxtt",
+              "id": "w172xdwhxtlr99v",
               "subType": "episode",
               "format": "Audio",
-              "title": "06/03/2020 GMT",
+              "title": "14/05/2020 GMT",
               "synopses": {
                 "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
                 "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1msh4hq5vtzf29",
+                  "versionId": "w1mshks1fcl72kc",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -150,50 +113,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1586095170000,
-                  "availableFrom": 1583503170000
+                  "availableUntil": 1592056770000,
+                  "availableFrom": 1589464770000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p030vjwg",
-              "title": "প্রবাহ"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172x0562jxkxtt"
+            "brand": { "pid": "p030vjwg", "title": "প্রবাহ" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xdwhxtlr99v",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "প্রবাহ"
-            },
-            "locators": {
-              "pid": "w172x0562jxh0xq"
-            },
+            "headlines": { "headline": "প্রবাহ" },
+            "locators": { "pid": "w172xdwhxtlnddr", "brandPid": "p030vjwg" },
             "media": {
-              "id": "w172x0562jxh0xq",
+              "id": "w172xdwhxtlnddr",
               "subType": "episode",
               "format": "Audio",
-              "title": "05/03/2020 GMT",
+              "title": "13/05/2020 GMT",
               "synopses": {
                 "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
                 "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1msh4hq5vtwj56",
+                  "versionId": "w1mshks1fcl45n8",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -203,50 +161,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1586008770000,
-                  "availableFrom": 1583416770000
+                  "availableUntil": 1591970370000,
+                  "availableFrom": 1589378370000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p030vjwg",
-              "title": "প্রবাহ"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172x0562jxh0xq"
+            "brand": { "pid": "p030vjwg", "title": "প্রবাহ" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xdwhxtlnddr",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "প্রবাহ"
-            },
-            "locators": {
-              "pid": "w172x0562jxd40m"
-            },
+            "headlines": { "headline": "প্রবাহ" },
+            "locators": { "pid": "w172xdwhxtlkhhn", "brandPid": "p030vjwg" },
             "media": {
-              "id": "w172x0562jxd40m",
+              "id": "w172xdwhxtlkhhn",
               "subType": "episode",
               "format": "Audio",
-              "title": "04/03/2020 GMT",
+              "title": "12/05/2020 GMT",
               "synopses": {
                 "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
                 "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1msh4hq5vtsm83",
+                  "versionId": "w1mshks1fcl18r5",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -256,50 +209,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585922370000,
-                  "availableFrom": 1583330370000
+                  "availableUntil": 1591883970000,
+                  "availableFrom": 1589291970000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p030vjwg",
-              "title": "প্রবাহ"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172x0562jxd40m"
+            "brand": { "pid": "p030vjwg", "title": "প্রবাহ" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xdwhxtlkhhn",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "প্রবাহ"
-            },
-            "locators": {
-              "pid": "w172x0562jx973j"
-            },
+            "headlines": { "headline": "প্রবাহ" },
+            "locators": { "pid": "w172xdwhxtlgllk", "brandPid": "p030vjwg" },
             "media": {
-              "id": "w172x0562jx973j",
+              "id": "w172xdwhxtlgllk",
               "subType": "episode",
               "format": "Audio",
-              "title": "03/03/2020 GMT",
+              "title": "11/05/2020 GMT",
               "synopses": {
                 "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
                 "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1msh4hq5vtpqc0",
+                  "versionId": "w1mshks1fckycv2",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -309,50 +257,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585835970000,
-                  "availableFrom": 1583243970000
+                  "availableUntil": 1591797570000,
+                  "availableFrom": 1589205570000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p030vjwg",
-              "title": "প্রবাহ"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172x0562jx973j"
+            "brand": { "pid": "p030vjwg", "title": "প্রবাহ" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xdwhxtlgllk",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "প্রবাহ"
-            },
-            "locators": {
-              "pid": "w172x0562jx6b6f"
-            },
+            "headlines": { "headline": "প্রবাহ" },
+            "locators": { "pid": "w172xdwhkk97vf9", "brandPid": "p030vjwg" },
             "media": {
-              "id": "w172x0562jx6b6f",
+              "id": "w172xdwhkk97vf9",
               "subType": "episode",
               "format": "Audio",
-              "title": "02/03/2020 GMT",
+              "title": "10/05/2020 GMT",
               "synopses": {
                 "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
                 "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1msh4hq5vtltfx",
+                  "versionId": "w1mshks1238qmnt",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -362,50 +305,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585749570000,
-                  "availableFrom": 1583157570000
+                  "availableUntil": 1591711170000,
+                  "availableFrom": 1589119170000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p030vjwg",
-              "title": "প্রবাহ"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172x0562jx6b6f"
+            "brand": { "pid": "p030vjwg", "title": "প্রবাহ" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xdwhkk97vf9",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "প্রবাহ"
-            },
-            "locators": {
-              "pid": "w172x055q8lzl15"
-            },
+            "headlines": { "headline": "প্রবাহ" },
+            "locators": { "pid": "w172xdwhkk94yj6", "brandPid": "p030vjwg" },
             "media": {
-              "id": "w172x055q8lzl15",
+              "id": "w172xdwhkk94yj6",
               "subType": "episode",
               "format": "Audio",
-              "title": "01/03/2020 GMT",
+              "title": "09/05/2020 GMT",
               "synopses": {
                 "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
                 "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1msh4hptljd28n",
+                  "versionId": "w1mshks1238mqrq",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -415,50 +353,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585663170000,
-                  "availableFrom": 1583071170000
+                  "availableUntil": 1591624770000,
+                  "availableFrom": 1589032770000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p030vjwg",
-              "title": "প্রবাহ"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172x055q8lzl15"
+            "brand": { "pid": "p030vjwg", "title": "প্রবাহ" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xdwhkk94yj6",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "প্রবাহ"
-            },
-            "locators": {
-              "pid": "w172x055q8lwp42"
-            },
+            "headlines": { "headline": "প্রবাহ" },
+            "locators": { "pid": "w172xdwhkk921m3", "brandPid": "p030vjwg" },
             "media": {
-              "id": "w172x055q8lwp42",
+              "id": "w172xdwhkk921m3",
               "subType": "episode",
               "format": "Audio",
-              "title": "29/02/2020 GMT",
+              "title": "08/05/2020 GMT",
               "synopses": {
                 "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
                 "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1msh4hptlj95ck",
+                  "versionId": "w1mshks1238jtvm",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -468,50 +401,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585576770000,
-                  "availableFrom": 1582984770000
+                  "availableUntil": 1591538370000,
+                  "availableFrom": 1588946370000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p030vjwg",
-              "title": "প্রবাহ"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172x055q8lwp42"
+            "brand": { "pid": "p030vjwg", "title": "প্রবাহ" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xdwhkk921m3",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "প্রবাহ"
-            },
-            "locators": {
-              "pid": "w172x055q8lss6z"
-            },
+            "headlines": { "headline": "প্রবাহ" },
+            "locators": { "pid": "w172xdwhkk8z4q0", "brandPid": "p030vjwg" },
             "media": {
-              "id": "w172x055q8lss6z",
+              "id": "w172xdwhkk8z4q0",
               "subType": "episode",
               "format": "Audio",
-              "title": "28/02/2020 GMT",
+              "title": "07/05/2020 GMT",
               "synopses": {
                 "short": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক",
                 "medium": "বিবিসি বাংলা থেকে সংবাদ, সমসাময়িক ঘটনা, বিশেষ প্রতিবেদন, খেলা-ধুলা, ফোন-ইন আর বিতর্ক"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1msh4hptlj68gg",
+                  "versionId": "w1mshks1238fxyj",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -521,27 +449,26 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585490370000,
-                  "availableFrom": 1582898370000
+                  "availableUntil": 1591451970000,
+                  "availableFrom": 1588859970000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dk27.jpg",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b2kb7.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "p030vjwg",
-              "title": "প্রবাহ"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172x055q8lss6z"
+            "brand": { "pid": "p030vjwg", "title": "প্রবাহ" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_bangla_radio/w172xdwhkk8z4q0",
+            "type": "ws_radio"
           }
         ]
       }
