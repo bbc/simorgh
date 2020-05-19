@@ -50,13 +50,11 @@ export default () => {
   );
 
   if (relatedContentLinks) {
-    it('I can see related content', () => {
-      relatedContentLinks.forEach(relatedContentLink => {
+    relatedContentLinks.forEach(relatedContentLink => {
+      it(`I can see related content: ${relatedContentLink.textContent}`, () => {
         expect(relatedContentLink).toBeInTheDocument();
         expect(relatedContentLink.textContent).toBeTruthy();
-        expect(relatedContentLink.getAttribute('href')).toMatchSnapshot(
-          relatedContentLink.textContent,
-        );
+        expect(relatedContentLink.getAttribute('href')).toMatchSnapshot();
       });
     });
   }
