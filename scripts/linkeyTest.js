@@ -25,7 +25,8 @@ const getLinks = (serviceConfig, type) => {
 };
 
 const getAbsoluteUrl = link => {
-  return link.startsWith(/http(s)*:\/\//) ? link : `https://www.bbc.com${link}`;
+  const regex = /^http(s)*:\/\//;
+  return regex.test(link) ? link : `https://www.bbc.com${link}`;
 };
 
 const fetchResponse = async link => {
