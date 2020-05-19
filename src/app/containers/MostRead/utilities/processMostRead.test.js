@@ -106,73 +106,78 @@ const expectedKyrgyzData = [
   },
 ];
 
-const missingTitleData = {
-  lastRecordTimeStamp: '2030-01-01T17:00:00Z',
-  records: [
-    {
-      promo: {
-        locators: {
-          canonicalUrl: 'https://www.bbc.com/news/articles/cn060pe01e5o',
-        },
-        timestamp: 1558434642016,
-        headlines: {
-          promoHeadline: {
-            blocks: [
-              {
-                type: 'text',
-                model: {
-                  blocks: [
-                    {
-                      type: 'paragraph',
-                      model: {
-                        text: null,
-                      },
-                    },
-                  ],
+const missingTitleOptimoPromo = {
+  id: '047da657-5014-de4b-8aec-5192ae52520b',
+  promo: {
+    type: 'optimo',
+    locators: {
+      canonicalUrl: 'https://www.bbc.com/news/articles/cn060pe01e5o',
+    },
+    timestamp: 1558434642016,
+    headlines: {
+      promoHeadline: {
+        blocks: [
+          {
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  type: 'paragraph',
+                  model: {
+                    text: null,
+                  },
                 },
-              },
-            ],
+              ],
+            },
           },
-        },
+        ],
       },
     },
-  ],
+  },
 };
 
-const missingHrefData = {
-  lastRecordTimeStamp: '2030-01-01T17:00:00Z',
-  records: [
-    {
-      promo: {
-        locators: {
-          canonicalUrl: null,
-        },
-        timestamp: 1558434642016,
-        headlines: {
-          promoHeadline: {
-            blocks: [
-              {
-                type: 'text',
-                model: {
-                  blocks: [
-                    {
-                      type: 'paragraph',
-                      model: {
-                        text: 'Most read item title',
-                      },
-                    },
-                  ],
+const missingHrefOptimoPromo = {
+  id: '047da657-5014-de4b-8aec-5192ae52520a',
+  promo: {
+    type: 'optimo',
+    locators: {
+      canonicalUrl: null,
+    },
+    timestamp: 1558434642016,
+    headlines: {
+      promoHeadline: {
+        blocks: [
+          {
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  type: 'paragraph',
+                  model: {
+                    text: 'Most read item title',
+                  },
                 },
-              },
-            ],
+              ],
+            },
           },
-        },
+        ],
       },
     },
-  ],
+  },
 };
 
-describe('filterMostRead', () => {
+// Returns kyrgyz fixture data with a invalid promo as the first record
+const kyrgyzDataWithInvalidPromo = invalidPromo => {
+  const kyrgyzRecords = kyrgyzData.records;
+  kyrgyzRecords.unshift(invalidPromo);
+
+  return {
+    lastRecordTimeStamp: '2030-01-01T17:00:00Z',
+    records: kyrgyzRecords,
+  };
+};
+
+describe('processMostRead', () => {
   [
     {
       description: 'should return expected filtered CPS data',
@@ -209,16 +214,16 @@ describe('filterMostRead', () => {
       expectedReturn: [],
     },
     {
-      description: 'should return null when most read item title is missing',
-      data: missingTitleData,
-      numberOfItems: 1,
-      expectedReturn: [],
+      description: 'should skip array item if it contains invalid title value',
+      data: kyrgyzDataWithInvalidPromo(missingTitleOptimoPromo),
+      numberOfItems: 5,
+      expectedReturn: expectedKyrgyzData,
     },
     {
-      description: 'should return null when most read item href is missing',
-      data: missingHrefData,
-      numberOfItems: 1,
-      expectedReturn: [],
+      description: 'should skip array item if it contains invalid title value',
+      data: kyrgyzDataWithInvalidPromo(missingHrefOptimoPromo),
+      numberOfItems: 5,
+      expectedReturn: expectedKyrgyzData,
     },
   ].forEach(({ description, data, numberOfItems, expectedReturn }) => {
     it(description, () => {
@@ -235,14 +240,14 @@ describe('filterMostRead', () => {
       {
         description:
           'should log MOST_READ_DATA_INCOMPLETE when most read item title is missing',
-        data: missingTitleData,
-        numberOfItems: 1,
+        data: kyrgyzDataWithInvalidPromo(missingTitleOptimoPromo),
+        numberOfItems: 5,
       },
       {
         description:
           'should log MOST_READ_DATA_INCOMPLETE when most read item href is missing',
-        data: missingHrefData,
-        numberOfItems: 1,
+        data: kyrgyzDataWithInvalidPromo(missingHrefOptimoPromo),
+        numberOfItems: 5,
       },
     ].forEach(({ description, data, numberOfItems }) => {
       it(description, () => {
