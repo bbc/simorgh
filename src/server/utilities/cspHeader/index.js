@@ -343,6 +343,7 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'script-src': generateScriptSrc({ isAmp, isLive }),
     'style-src': generateStyleSrc({ isAmp, isLive }),
     'worker-src': generateWorkerSrc({ isAmp }),
+    'report-to': 'default',
   },
 });
 
