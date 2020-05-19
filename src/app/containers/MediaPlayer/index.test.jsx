@@ -68,11 +68,18 @@ it('should contain the noscript tag for no-JS scenarios ', () => {
   expect(document.querySelector('noscript')).toBeInTheDocument();
 });
 
+const enableLogMediaPlayerStatus = flag => {
+  defaultToggles[
+    process.env.SIMORGH_APP_ENV || 'local'
+  ].logMediaPlayerStatus.enabled = flag;
+};
+
 describe('log MediaPlayer status', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     logEmbedSourceStatus.mockImplementationOnce(() => jest.fn());
     onClient.mockReturnValue(false);
+    enableLogMediaPlayerStatus(true);
   });
 
   it('should log embed source status code when player is loaded', () => {
@@ -88,9 +95,7 @@ describe('log MediaPlayer status', () => {
   });
 
   it('should not log when toggle is disabled', () => {
-    defaultToggles[
-      process.env.SIMORGH_APP_ENV || 'local'
-    ].logMediaPlayerStatus.enabled = false;
+    enableLogMediaPlayerStatus(false);
     render(VideoCanonicalWithCaption);
 
     expect(logEmbedSourceStatus).not.toHaveBeenCalled();
@@ -98,9 +103,6 @@ describe('log MediaPlayer status', () => {
 
   it('should only log on server', () => {
     onClient.mockReturnValue(true);
-    defaultToggles[
-      process.env.SIMORGH_APP_ENV || 'local'
-    ].logMediaPlayerStatus.enabled = true;
     render(VideoCanonicalWithCaption);
 
     expect(logEmbedSourceStatus).not.toHaveBeenCalled();
