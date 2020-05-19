@@ -69,85 +69,90 @@ const expectedPidginData = [
 
 const expectedKyrgyzData = [
   {
-    id: 'urn:bbc:ares::article:cn060pe01e5o',
-    title: 'Hello promos',
-    href: 'https://www.bbc.com/news/articles/cn060pe01e5o',
-    timestamp: 1586266369329,
+    id: 'ad632121-eff8-9542-85d5-d099fb4ccbb3',
+    title: '"Шейшепти көрсөт": Кавказдагы эскиден келе жаткан үйлөнүү салттары',
+    href: '/kyrgyz/magazine-48659975',
+    timestamp: 1560768556000,
   },
   {
-    id: 'urn:bbc:ares::article:c736f039b88',
-    title: 'Hello promos',
-    href: 'https://www.bbc.com/news/articles/c736f039b88',
-    timestamp: 1586266369329,
+    id: 'urn:bbc:optimo:c419vkyvj2go',
+    title:
+      'Бишкек: карылар үйүндөгү нааразылык, улгайган кишилерге ким кол көтөрдү?    ',
+    href: 'https://www.bbc.com/kyrgyz/articles/c419vkyvj2go',
+    timestamp: 1588952256682,
   },
   {
-    id: 'urn:bbc:ares::article:c736f039bwx',
-    title: 'Hello promos',
-    href: 'https://www.bbc.com/news/articles/c736f039bwx',
-    timestamp: 1586266369329,
+    id: '3439531c-2704-a647-b234-5290647837d3',
+    title: 'Атак-даңкты жакшы көргөн Брежнев',
+    href: '/kyrgyz/entertainment-43151726',
+    timestamp: 1519278452000,
   },
   {
-    id: 'urn:bbc:ares::article:cn060pe0qwer',
-    title: 'Hello promos',
-    href: 'https://www.bbc.com/news/articles/cn060pe0qwer',
-    timestamp: 1586266369329,
+    id: '891e5a23-9eee-8248-b99f-9e1c1d77e97e',
+    title: 'Кытай жылына 6 миллиард таракан өстүрөт. Эмнеге?',
+    href: '/kyrgyz/magazine-43919283',
+    timestamp: 1524824448000,
   },
   {
-    id: 'urn:bbc:ares::article:cn060pe01e59',
-    title: 'Hello promos',
-    href: 'https://www.bbc.com/news/articles/cn060pe01e59',
-    timestamp: 1586266369329,
+    id: '301f5663-e391-6345-9bc2-1d019db3a331',
+    title: '“Өкмөттүн адвокаты”: сын жукпаган спикер',
+    href: '/kyrgyz/kyrgyzstan-52648816',
+    timestamp: 1589537631000,
   },
 ];
 
 const missingTitleData = {
-  locators: {
-    canonicalUrl: 'https://www.bbc.com/news/articles/cn060pe01e5o',
-  },
-  timestamp: 1586266369329,
-  headlines: {
-    promoHeadline: {
-      blocks: [
-        {
-          type: 'text',
-          model: {
-            blocks: [
-              {
-                type: 'paragraph',
-                model: {
-                  text: null,
+  promo: {
+    locators: {
+      canonicalUrl: 'https://www.bbc.com/news/articles/cn060pe01e5o',
+    },
+    timestamp: 1586266369329,
+    headlines: {
+      promoHeadline: {
+        blocks: [
+          {
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  type: 'paragraph',
+                  model: {
+                    text: null,
+                  },
                 },
-              },
-            ],
+              ],
+            },
           },
-        },
-      ],
+        ],
+      },
     },
   },
 };
 
 const missingHrefData = {
-  locators: {
-    canonicalUrl: null,
-  },
-  timestamp: 1586266369329,
-  headlines: {
-    promoHeadline: {
-      blocks: [
-        {
-          type: 'text',
-          model: {
-            blocks: [
-              {
-                type: 'paragraph',
-                model: {
-                  text: 'Most read item title',
+  promo: {
+    locators: {
+      canonicalUrl: null,
+    },
+    timestamp: 1586266369329,
+    headlines: {
+      promoHeadline: {
+        blocks: [
+          {
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  type: 'paragraph',
+                  model: {
+                    text: 'Most read item title',
+                  },
                 },
-              },
-            ],
+              ],
+            },
           },
-        },
-      ],
+        ],
+      },
     },
   },
 };
