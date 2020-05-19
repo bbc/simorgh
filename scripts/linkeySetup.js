@@ -15,21 +15,24 @@ fs.readdir(dir, (err, files) => {
   }
 
   return files.forEach(configFileName => {
-    const noExtension = configFileName.split('.');
-    const fileName = `${dir}/${noExtension[0]}.test.js`;
+    const fileName = configFileName.split('.');
 
-    // TO DO: what if no navigation/footer links available
-    const importConfig = `import { service } from './${noExtension[0]}';\n`;
+    const importConfig = `import { service } from './${fileName[0]}';\n`;
     const testFile = fs.readFileSync('scripts/linkeyTest.js', (error, data) => {
       return data;
     });
 
-    if (excludes.indexOf(noExtension[0]) >= 0) {
+    if (excludes.indexOf(fileName[0]) >= 0) {
       return null;
     }
 
-    return fs.writeFile(fileName, importConfig + testFile, 'utf8', error => {
-      if (error) throw error;
-    });
+    return fs.writeFile(
+      `${dir}/${fileName[0]}.test.js`,
+      importConfig + testFile,
+      'utf8',
+      error => {
+        if (error) throw error;
+      },
+    );
   });
 });
