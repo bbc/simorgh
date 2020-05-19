@@ -2,6 +2,8 @@
 
 exports[`Canonical Media Asset Page A11y I can see the skip to content link 1`] = `"إذهب الى المحتوى"`;
 
+exports[`Canonical Media Asset Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=5&amp;p=multimedia::arabic.multimedia.2014.05.140515_kenia_children_sex_trade.page&amp;x1=[urn:bbc:topcat:1f8e72ae-dc24-11e3-82f1-aed33db9bd6e]&amp;x2=[responsive]&amp;x3=[news-arabic]&amp;x4=[ar]&amp;x7=[article-media-asset]&amp;x8=[simorgh-nojs]&amp;x9=[أطفال+كينيون+يمارسون+الجنس+مع+السياح+من+أجل+مبالغ+مغرية+-+BBC+News+عربي]&amp;x11=[2014-05-15T11:29:05.000Z]&amp;x12=[2014-05-15T11:32:17.000Z]\\"/>"`;
+
 exports[`Canonical Media Asset Page Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=5&p=multimedia::arabic.multimedia.2014.05.140515_kenia_children_sex_trade.page&x1=[urn:bbc:topcat:1f8e72ae-dc24-11e3-82f1-aed33db9bd6e]&x2=[responsive]&x3=[news-arabic]&x4=[ar]&x7=[article-media-asset]&x8=[simorgh-nojs]&x9=[أطفال+كينيون+يمارسون+الجنس+مع+السياح+من+أجل+مبالغ+مغرية+-+BBC+News+عربي]&x11=[2014-05-15T11:29:05.000Z]&x12=[2014-05-15T11:32:17.000Z]"`;
 
 exports[`Canonical Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
@@ -19,6 +21,8 @@ exports[`Canonical Media Asset Page I can see the headline 1`] = `"أطفال ك
 exports[`Canonical Media Asset Page I can see the timestamp 1`] = `"15 مايو/ أيار 2014"`;
 
 exports[`Canonical Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"مشغل وسائط"`;
+
+exports[`Canonical Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/legacy/arabic/multimedia/2014/05/140515_kenia_children_sex_trade/32017394/ar"`;
 
 exports[`Canonical Media Asset Page Media Player should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/legacy/arabic/multimedia/2014/05/140515_kenia_children_sex_trade/32017394/ar"`;
 

@@ -6,7 +6,7 @@ export default () => {
       expect(mediaPlayerIframe).toBeInTheDocument();
     });
 
-    it('should be rendered', () => {
+    it('iframe with valid URL should be rendered', () => {
       expect(mediaPlayerIframe.getAttribute('src')).toBeTruthy();
       expect(mediaPlayerIframe.getAttribute('src')).toMatchSnapshot();
     });
