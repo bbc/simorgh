@@ -202,7 +202,7 @@ describe('MostReadContainerCanonical', () => {
   });
 
   describe('Logging', () => {
-    it('should return MOST_READ_REQUEST_RECEIVED when most read data request is received', async () => {
+    it('should return MOST_READ_CLIENT_REQUEST when most read data request is received', async () => {
       await act(async () => {
         await render(
           <MostReadCanonicalWithContext
