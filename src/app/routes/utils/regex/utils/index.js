@@ -6,7 +6,7 @@ const legacyAssetUriRegex =
 const variantRegex = '/simp|/trad|/cyr|/lat';
 const articleLocalRegex = 'articles|erthyglau|sgeulachdan';
 const mediaIdRegex = '[a-z0-9]+';
-const radioServiceIdRegex = 'bbc_[a-z]+_radio';
+const radioMasterBrandRegex = 'bbc_[a-z]+_radio';
 const errorCodeRegex = '404|500';
 
 const getServiceRegex = services => services.join('|');
@@ -53,12 +53,12 @@ export const getLegacyAssetRegex = services => {
 
 export const getLiveRadioRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/:serviceId(${radioServiceIdRegex})/:mediaId(liveRadio):amp(${ampRegex})?`;
+  return `/:service(${serviceRegex})/:serviceId(${radioMasterBrandRegex})/:mediaId(liveRadio):amp(${ampRegex})?`;
 };
 
 export const getOnDemandRadioRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/:serviceId(${radioServiceIdRegex})(/programmes)?/:mediaId(${mediaIdRegex}):amp(${ampRegex})?`;
+  return `/:service(${serviceRegex})/:serviceId(${radioMasterBrandRegex})(/programmes)?/:mediaId(${mediaIdRegex}):amp(${ampRegex})?`;
 };
 
 export const getErrorPageRegex = services => {
