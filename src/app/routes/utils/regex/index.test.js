@@ -201,6 +201,8 @@ describe('radioAndTvPath', () => {
     '/persian/bbc_marathi_tv/livetv', // service with non matching live tv service id
     '/persian/bbc_abcdefg_radio/hijklmn', // onDemand radio with a-z inside service id and for media id
     '/arabic/bbc_arabic_radio/radioschedule', // default radio schedule route
+    '/indonesia/bbc_indonesian_radio/programmes/w34rfd4k', // onDemand radio brand any media id
+    '/indonesia/bbc_indonesian_radio/programmes/w34rfd4k.amp', // onDemand radio brand amp any media id
   ];
   shouldMatchValidRoutes(validRoutes, radioAndTvPath);
 });
@@ -250,6 +252,7 @@ describe('radioAndTvRegexPathsArray', () => {
       '/indonesia/bbc_indonesian_radio/w34rfd4k',
       '/persian/bbc_persian_radio/abcd1234',
       '/hausa/bbc_hausa_radio/abcd1234.amp',
+      '/indonesia/bbc_indonesian_radio/programmes/w34rfd4k',
     ];
     shouldMatchValidRoutes(validRoutes, radioAndTvPath);
 
@@ -259,21 +262,13 @@ describe('radioAndTvRegexPathsArray', () => {
       '/foobar/bbc_hausa_radio/abcd1234',
       '/persian/foobar/abcd1234',
       '/persian/foobar/abcd1234.amp',
+      '/indonesia/bbc_indonesian_radio/programmes/',
+      '/marathi/bbc_marathi_tv/', // live tv with no media id
+      '/marathi/bbc_marathi_tv/.amp', // live tv with no media id amp
+      '/blah/bbc_hausa_radio/livetv', // live radio w/ unknown service
     ];
     shouldNotMatchInvalidRoutes(invalidRoutes, radioAndTvPath);
   });
-
-  const invalidRoutes = [
-    '/hausa/bbc_hausa_radio/', // onDemand radio with no media id
-    '/hausa/bbc_hausa_radio/.amp', // onDemand radio with no media id amp
-    '/foobar/bbc_hausa_radio/abcd1234', // onDemand radio w/ unknown service
-    '/persian/foobar/abcd1234', // onDemand radio w/ non-formatted service id
-    '/persian/foobar/abcd1234.amp', // onDemand radio w/ non-formatted service id amp
-    '/marathi/bbc_marathi_tv/', // live tv with no media id
-    '/marathi/bbc_marathi_tv/.amp', // live tv with no media id amp
-    '/blah/bbc_hausa_radio/livetv', // live radio w/ unknown service
-  ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, radioAndTvPath);
 });
 
 describe('liveRadioRegexPathsArray', () => {
@@ -286,24 +281,15 @@ describe('liveRadioRegexPathsArray', () => {
     shouldMatchValidRoutes(validRoutes, liveRadioPath);
 
     const invalidRoutes = [
-      '/hausa/bbc_hausa_radio/',
-      '/hausa/bbc_hausa_radio/.amp',
-      '/foobar/bbc_hausa_radio/liveradio',
-      '/persian/foobar/liveradio',
-      '/persian/foobar/liveradio.amp',
+      '/hausa/bbc_hausa_radio/', // live radio with no media id
+      '/hausa/bbc_hausa_radio/.amp', // live radio with no media id amp
+      '/foobar/bbc_hausa_radio/liveradio', // live radio w/ unknown service
+      '/persian/foobar/liveradio', // live radio w/ non-formatted service id
+      '/persian/foobar/liveradio.amp', // live radio w/ non-formatted service id amp
+      '/blah/bbc_hausa_radio/livetv', // live radio w/ unknown service
     ];
     shouldNotMatchInvalidRoutes(invalidRoutes, liveRadioPath);
   });
-
-  const invalidRoutes = [
-    '/hausa/bbc_hausa_radio/', // live radio with no media id
-    '/hausa/bbc_hausa_radio/.amp', // live radio with no media id amp
-    '/foobar/bbc_hausa_radio/liveradio', // live radio w/ unknown service
-    '/persian/foobar/liveradio', // live radio w/ non-formatted service id
-    '/persian/foobar/liveradio.amp', // live radio w/ non-formatted service id amp
-    '/blah/bbc_hausa_radio/livetv', // live radio w/ unknown service
-  ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, liveRadioPath);
 });
 
 describe('cpsAssetPagePath', () => {
