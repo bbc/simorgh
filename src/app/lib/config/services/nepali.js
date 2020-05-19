@@ -204,7 +204,7 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/nepali/institutional-38157764',
           text: 'प्रयोगका सर्तहरू',
         },
         {
@@ -212,7 +212,7 @@ export const service = {
           text: 'बीबीसीको बारेमा',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/nepali/institutional-38157767',
           text: 'गोपनीयता नीति',
         },
         {
@@ -220,7 +220,7 @@ export const service = {
           text: 'कुकीज',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/nepali/institutional-38159617',
           text: 'बीबीसीलाई सम्पर्क गर्नुहोस्',
         },
         {
