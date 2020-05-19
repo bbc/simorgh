@@ -35,7 +35,7 @@ const OnDemandImage = ({ imageUrl, dir }) => {
   const width = 224;
   const src = getSrc({ imageUrl, size: '112x112' });
   const srcset = getSrcSet(imageUrl);
-  const sizes = '(min-width: 1008px) 228px, 35vw';
+  const sizes = '(min-width: 1008px) 228px, 30vw';
   const imageProps = { src, alt, srcset };
 
   return (
