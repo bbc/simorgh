@@ -28,6 +28,25 @@ const renderFeaturesAnalysis = ({
   );
 };
 
+const renderFeaturesAnalysisNull = ({
+  bbcOrigin = 'https://www.test.bbc.co.uk',
+} = {}) => {
+  return render(
+    <ServiceContextProvider service="pidgin">
+      <RequestContextProvider
+        bbcOrigin={bbcOrigin}
+        isAmp={false}
+        pageType="STY"
+        pathname="/pidgin/tori-49450859"
+        service="pidgin"
+        statusCode={200}
+      >
+        <FeaturesAnalysis content={[]} enableGridWrapper />
+      </RequestContextProvider>
+    </ServiceContextProvider>,
+  );
+};
+
 describe('CpsRelatedContent', () => {
   it('should render Story Feature components when given appropriate data', () => {
     // Ensure fixture still has features
@@ -70,5 +89,12 @@ describe('CpsRelatedContent', () => {
   it('should have an [id] #features-analysis-heading', () => {
     renderFeaturesAnalysis();
     expect(document.querySelector(`#features-analysis-heading`)).toBeTruthy();
+  });
+
+  it('should not render Top Stories components if no data is passed', () => {
+    renderFeaturesAnalysisNull();
+    expect(document.querySelectorAll(`li[class^='StoryPromoLi']`).length).toBe(
+      0,
+    );
   });
 });
