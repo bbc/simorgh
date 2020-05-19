@@ -32,18 +32,25 @@ const StyledAd = styled.div`
   display: inline-block;
 `;
 
-const StyledParagraph = styled.p`
+const StyledLink = styled.a`
   ${({ script }) => script && getMinion(script)};
   ${({ service }) => getSansRegular(service)}
   color: ${C_RHINO};
   margin: 0; /* Reset */
+  text-decoration: none;
   text-transform: uppercase;
+  display: block;
   padding: ${GEL_SPACING} 0;
   
   text-align: ${({ dir }) => (dir === 'ltr' ? `right` : `left`)};
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     padding-top: ${GEL_SPACING_DBL};
+  }
+  
+  &:hover,
+  &:focus {
+    text-decoration: underline;
   }
 `;
 
@@ -103,8 +110,10 @@ export const AMP_ACCESS_FETCH = service => {
 
 // eslint-disable-next-line react/prop-types
 const AmpAd = () => {
-  const { ads, dir, script, service } = useContext(ServiceContext);
+  const { ads, dir, script, service, footer } = useContext(ServiceContext);
   const advertisementLabel = pathOr(false, ['advertisementLabel'], ads);
+  const links = pathOr(false, ['links'], footer);
+  const labelLink = pathOr('', ['href'], links[3]);
 
   return (
     <FullWidthWrapper>
@@ -115,13 +124,18 @@ const AmpAd = () => {
           {AMP_ACCESS_FETCH(service)}
         </Helmet>
         <div
-          // amp-access="toggles.ads.enabled AND geoIp.advertiseCombined"
+          amp-access="toggles.ads.enabled AND geoIp.advertiseCombined"
           amp-access-hide="true"
         >
           <StyledAd>
-            <StyledParagraph script={script} service={service} dir={dir}>
+            <StyledLink
+              href={labelLink}
+              script={script}
+              service={service}
+              dir={dir}
+            >
               {advertisementLabel}
-            </StyledParagraph>
+            </StyledLink>
             <amp-ad {...ampAdPropsMobile({ service })}>
               <amp-img
                 placeholder

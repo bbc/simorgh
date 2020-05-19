@@ -73,10 +73,10 @@ describe('AMP Ads', () => {
 
     it('should render an `advertisement` label', () => {
       const { container } = render(adWithContext());
-      const p = container.querySelectorAll('p');
+      const links = container.querySelectorAll('a');
 
-      expect(p.length).toBeGreaterThanOrEqual(1);
-      expect(p[0].textContent).toEqual('Tori we dem pay for');
+      expect(links.length).toBeGreaterThanOrEqual(1);
+      expect(links[0].textContent).toEqual('Tori we dem pay for');
     });
 
     describe('AMP_ACCESS_FETCH', () => {

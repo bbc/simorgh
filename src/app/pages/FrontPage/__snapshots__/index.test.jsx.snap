@@ -55,17 +55,19 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                     class="StyledWrapper-lj1cbr-1 dKYaue"
                   >
                     <div
+                      amp-access="toggles.ads.enabled AND geoIp.advertiseCombined"
                       amp-access-hide="true"
                     >
                       <div
                         class="StyledAd-lj1cbr-2 jVyjdQ"
                       >
-                        <p
-                          class="StyledParagraph-lj1cbr-3 fDFUdT"
+                        <a
+                          class="StyledLink-lj1cbr-3 exCFng"
                           dir="ltr"
+                          href="https://www.bbc.co.uk/usingthebbc/cookies/"
                         >
                           Tori we dem pay for
-                        </p>
+                        </a>
                         <amp-ad
                           data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
                           data-amp-slot-index="0"

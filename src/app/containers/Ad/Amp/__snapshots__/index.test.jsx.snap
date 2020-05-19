@@ -23,9 +23,18 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
   font-style: normal;
   color: #5A5A5A;
   margin: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   text-transform: uppercase;
+  display: block;
   padding: 0.5rem 0;
   text-align: right;
+}
+
+.c3:hover,
+.c3:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 @media (min-width:63rem) {
@@ -83,17 +92,19 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
           class="c1"
         >
           <div
+            amp-access="toggles.ads.enabled AND geoIp.advertiseCombined"
             amp-access-hide="true"
           >
             <div
               class="c2"
             >
-              <p
+              <a
                 class="c3"
                 dir="ltr"
+                href="https://www.bbc.co.uk/usingthebbc/cookies/"
               >
                 Tori we dem pay for
-              </p>
+              </a>
               <amp-ad
                 data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
                 data-amp-slot-index="0"
