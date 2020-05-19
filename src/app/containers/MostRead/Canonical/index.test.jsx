@@ -217,7 +217,7 @@ describe('MostReadContainerCanonical', () => {
       });
     });
 
-    it('should return MOST_READ_FETCH_ERROR when most read data request is not received', async () => {
+    it('should log MOST_READ_FETCH_ERROR when most read data request is not received', async () => {
       fetchMock.mock('www.test.bbc.com/pidgin/mostread.json', 500);
 
       await act(async () => {
