@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { arrayOf, shape, number } from 'prop-types';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 
-import topStories from '#pages/StoryPage/topStories.json';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
@@ -50,7 +49,7 @@ TopStories.propTypes = {
 };
 
 TopStories.defaultProps = {
-  content: topStories, // TODO: rm this https://github.com/bbc/simorgh/issues/5765
+  content: [],
   parentColumns: null,
 };
 
