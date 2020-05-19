@@ -119,6 +119,10 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     }
   `;
 
+  const GridPrimaryColumn = styled(Grid)`
+    max-width: 100%;
+  `;
+
   const GridSecondaryColumn = styled(Grid)`
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
       margin-top: ${GEL_SPACING_QUAD};
@@ -241,7 +245,12 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         enableGelGutters
         margins={gridMargins}
       >
-        <Grid item dir={dir} columns={gridColsMain} startOffset={gridOffset}>
+        <GridPrimaryColumn
+          item
+          dir={dir}
+          columns={gridColsMain}
+          startOffset={gridOffset}
+        >
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
@@ -249,7 +258,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
             content={relatedContent}
             parentColumns={gridColsMain}
           />
-        </Grid>
+        </GridPrimaryColumn>
         <GridSecondaryColumn
           item
           dir={dir}
