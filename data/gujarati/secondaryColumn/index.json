@@ -1,0 +1,697 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "નાના ઉદ્યોગોને વગર ગૅરંટીની ત્રણ લાખ કરોડ રૂપિયાની લૉન : નિર્મલા સીતારમણ"
+        },
+        "locators": {
+          "assetUri": "/gujarati/india-52648018",
+          "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-52648018",
+          "assetId": "52648018"
+        },
+        "summary": "નાણામંત્રીએ પત્રકાર પરિષદમાં આત્મનિર્ભર ભારત અભિયાન માટેના પૅકેજની રૂપરેખા જાહેર કરી",
+        "timestamp": 1589366945000,
+        "language": "gu",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112254356",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/FF41/production/_112254356_97ef8cfa-8eab-4b68-9f9f-8d21c25b5479.jpg",
+          "path": "/cpsprodpb/FF41/production/_112254356_97ef8cfa-8eab-4b68-9f9f-8d21c25b5479.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "નિર્મલા સીતારમણ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112254358",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/14D61/production/_112254358_97ef8cfa-8eab-4b68-9f9f-8d21c25b5479.jpg",
+          "path": "/cpsprodpb/14D61/production/_112254358_97ef8cfa-8eab-4b68-9f9f-8d21c25b5479.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "નિર્મલા સીતારમણ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:gujarati/india-52648018",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ગુજરાત કોરોના અપડેટ : મહામારી વચ્ચે આજે કૅબિનેટની બેઠક"
+        },
+        "locators": {
+          "assetUri": "/gujarati/international-52618867",
+          "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-52618867",
+          "assetId": "52618867"
+        },
+        "summary": "ગુજરાતમાં કોરોના સંબંધિત અપડેટ્સ જાણવા માટે અહીં ક્લિક કરો.",
+        "timestamp": 1589371538000,
+        "language": "gu",
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112233115",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/C7BD/production/_112233115_2c6114bd-0341-4610-8ec1-0bff1bac8fcb.jpg",
+          "path": "/cpsprodpb/C7BD/production/_112233115_2c6114bd-0341-4610-8ec1-0bff1bac8fcb.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "કોરોના વાઇરસ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112240260",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/183C/production/_112240260_worker.jpg",
+          "path": "/cpsprodpb/183C/production/_112240260_worker.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "ટિકિટ સાથે શ્રમિકની તસવીર",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:gujarati/international-52618867",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "આત્મનિર્ભર ભારત શક્ય છે કે હથેળીમાં દેખાડાય છે?"
+        },
+        "locators": {
+          "assetUri": "/gujarati/india-52647651",
+          "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-52647651",
+          "assetId": "52647651"
+        },
+        "summary": "વડા પ્રધાન નરેન્દ્ર મોદીએ દેશવાસીઓને સ્થાનિક સ્તરે ઉત્પાદિત ચીજો ખરીદવા માટે આહ્વાન કર્યું.",
+        "timestamp": 1589365040000,
+        "language": "gu",
+        "byline": {
+          "name": "ઝુબેર અહમદ",
+          "title": "બીબીસી સંવાદદાતા",
+          "persons": [
+            {
+              "name": ". .",
+              "function": "."
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112254075",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/DED5/production/_112254075_gettyimages-995745414.jpg",
+          "path": "/cpsprodpb/DED5/production/_112254075_gettyimages-995745414.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ભારતીયોની શક્તિની તસવીર",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112254350",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/14E1/production/_112254350_gettyimages-995745414.jpg",
+          "path": "/cpsprodpb/14E1/production/_112254350_gettyimages-995745414.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "ભારતીયોની શક્તિની તસવીર",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:gujarati/india-52647651",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "ભૂપેન્દ્રસિંહ ચુડાસમા 327 મતોએ જીતેલી ધોળકાની ચૂંટણી હાઈકોર્ટમાં કેવી રીતે હારી ગયા?"
+        },
+        "locators": {
+          "assetUri": "/gujarati/india-52629161",
+          "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-52629161",
+          "assetId": "52629161"
+        },
+        "summary": "1962થી કૉંગ્રેસનો ગઢ ગણાતી ધોળકાની બેઠક ભૂપેન્દ્રસિંહે 1990માં ભાજપ માટે જીતી હતી.",
+        "timestamp": 1589272415000,
+        "language": "gu",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112238289",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/17FEB/production/_112238289_87021302_2970991626254773_193727764061224960_o.jpg",
+          "path": "/cpsprodpb/17FEB/production/_112238289_87021302_2970991626254773_193727764061224960_o.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ભૂપેન્દ્રસિંહ ચુડાસમા",
+          "copyrightHolder": "BHUPENDRASINH CHUDASAMA SOCIAL",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:gujarati/india-52629161",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "મોદીએ દેશને આત્મનિર્ભર બનાવવા કચ્છનું ઉદાહરણ કેમ આપ્યું?"
+        },
+        "locators": {
+          "assetUri": "/gujarati/india-52637353",
+          "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-52637353",
+          "assetId": "52637353"
+        },
+        "summary": "26 જાન્યુઆરી 2001ના ગુજરાતના કચ્છમાં 7.7ની તીવ્રતાના ભૂકંપે હજારો નાગરિકોનો ભોગ લીધો હતો.",
+        "timestamp": 1589336524000,
+        "language": "gu",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112248187",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/13168/production/_112248187_kutch-3.jpg",
+          "path": "/cpsprodpb/13168/production/_112248187_kutch-3.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "કચ્છના ઉદ્યોગની તસવીર",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:gujarati/india-52637353",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ઇન્ટરનેશનલ નર્સિસ ડે : જીવ જોખમમાં મૂકી ફરજ બજાવતાં કોરોના વૉરિયર"
+        },
+        "locators": {
+          "assetUri": "/gujarati/international-52629160",
+          "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-52629160",
+          "assetId": "52629160"
+        },
+        "summary": "કોરોનાની માહમારીનો ખોફ ચારેતરફ છે ત્યારે પ્રથમ હરોળમાં કામ કરતાં લોકોની વાત.",
+        "timestamp": 1589282987000,
+        "language": "gu",
+        "byline": {
+          "name": "સ્વામીનાથન નટરાજન",
+          "title": "બીબીસી ન્યૂઝ",
+          "persons": [
+            {
+              "name": ". .",
+              "function": "."
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112237639",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/16DE9/production/_112237639_48659432-697d-4419-ab60-b08323eb9d04.jpg",
+          "path": "/cpsprodpb/16DE9/production/_112237639_48659432-697d-4419-ab60-b08323eb9d04.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ગેબ્રિયેલા સેરાનો",
+          "caption": "ગેબ્રિયેલા સેરાનો",
+          "copyrightHolder": "GABRIELA SERRANO",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112238153",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/896F/production/_112238153_08ef7d4a-9a7b-40ea-8160-c102f25f82e9.jpg",
+          "path": "/cpsprodpb/896F/production/_112238153_08ef7d4a-9a7b-40ea-8160-c102f25f82e9.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "નર્સ",
+          "copyrightHolder": "GABRIELA SERRANO",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:gujarati/international-52629160",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "કોરોના વાઇરસ મહામારી વચ્ચે ગુજરાતમાં મજૂરોના અધિકારો પર ફટકો"
+        },
+        "locators": {
+          "assetUri": "/gujarati/india-52605183",
+          "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-52605183",
+          "assetId": "52605183"
+        },
+        "summary": "લઘુ, નાના અને મોટા ઉદ્યોગોમાં ભારતીય તથા વિદેશી ઉદ્યોગપતિઓને છૂટ જાહેર કરી.",
+        "timestamp": 1589109062000,
+        "language": "gu",
+        "byline": {
+          "name": "સલમાન રાવી",
+          "title": "બીબીસી સંવાદદાતા",
+          "persons": [
+            {
+              "name": ". .",
+              "function": "."
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112219140",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/105F/production/_112219140_labour-1.jpg",
+          "path": "/cpsprodpb/105F/production/_112219140_labour-1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "મહિલા શ્રમિકની તસવીર",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112219502",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/506F/production/_112219502_labour-1.jpg",
+          "path": "/cpsprodpb/506F/production/_112219502_labour-1.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "મહિલા શ્રમિકની તસવીર",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:gujarati/india-52605183",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "જળવાયુ પરિવર્તન : વિશ્વના ત્રણ અબજ લોકોના માથે ઝળૂંબતું મોટું જોખમ"
+        },
+        "locators": {
+          "assetUri": "/gujarati/india-52586777",
+          "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-52586777",
+          "assetId": "52586777"
+        },
+        "summary": "વૈજ્ઞાનિક અને ઔદ્યોગિક સંશોધન પરિષદે એક નવા પ્રકારનો ટેસ્ટ શોધવાનો દાવો કર્યો છે.",
+        "timestamp": 1589081963000,
+        "language": "gu",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112205387",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1320E/production/_112205387_070d8ca2-b28b-4322-abd2-0001f1fb6f3f.jpg",
+          "path": "/cpsprodpb/1320E/production/_112205387_070d8ca2-b28b-4322-abd2-0001f1fb6f3f.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "જળવાયુ પરિવર્તન",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112218346",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/FB7D/production/_112218346_070d8ca2-b28b-4322-abd2-0001f1fb6f3f.jpg",
+          "path": "/cpsprodpb/FB7D/production/_112218346_070d8ca2-b28b-4322-abd2-0001f1fb6f3f.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "જળવાયુ પરિવર્તન",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:gujarati/india-52586777",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "એ શખ્સ જેણે પોતાના પર રસીના પ્રયોગો કરીને ભારતને મહામારીઓમાંથી બચાવ્યું"
+        },
+        "locators": {
+          "assetUri": "/gujarati/india-52591420",
+          "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-52591420",
+          "assetId": "52591420"
+        },
+        "summary": "યુક્રેનમાં જન્મેલા વૉલ્દમર મોર્દેચાઇ હૉફકિને જીવનના બે દાયકા ભારતમાં વિતાવ્યા.",
+        "timestamp": 1589022225000,
+        "language": "gu",
+        "byline": {
+          "name": "હરજિંદર",
+          "title": "વરિષ્ઠ પત્રકાર, બીબીસી હિન્દી માટે ",
+          "persons": [
+            {
+              "name": ". .",
+              "function": "."
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            },
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112206167",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/12980/production/_112206167_fd807f11-2c6c-4c20-96a2-cdb429083228.jpg",
+          "path": "/cpsprodpb/12980/production/_112206167_fd807f11-2c6c-4c20-96a2-cdb429083228.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "હૉફકિન",
+          "caption": "હૉફકિન",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112206420",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/099C/production/_112206420_fd807f11-2c6c-4c20-96a2-cdb429083228.jpg",
+          "path": "/cpsprodpb/099C/production/_112206420_fd807f11-2c6c-4c20-96a2-cdb429083228.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "હૉફકિન",
+          "caption": "હૉફકિન",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:gujarati/india-52591420",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "અમદાવાદની હોટેલોમાં કોરોનાના દર્દીઓની કઈ રીતે સારવાર થઈ રહી છે?"
+        },
+        "locators": {
+          "assetUri": "/gujarati/india-52561469",
+          "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-52561469",
+          "assetId": "52561469"
+        },
+        "summary": "કયા દર્દીઓને હોટેલમાં સારવાર મળી શકે અને એ માટે શું કરવું પડે?",
+        "timestamp": 1588923331000,
+        "language": "gu",
+        "byline": {
+          "name": "તેજસ વૈદ્ય ",
+          "title": "બીબીસી સંવાદદાતા",
+          "persons": [
+            {
+              "name": ". .",
+              "function": "."
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112167499",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/18494/production/_112167499__111920536_1.jpg",
+          "path": "/cpsprodpb/18494/production/_112167499__111920536_1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "પ્રતીકાત્મક તસવીર",
+          "caption": "પ્રતીકાત્મક તસવીર",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:gujarati/india-52561469",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "આરોગ્યસેતુ ઍપ: દેશના નવ કરોડ મોબાઇલ-ડેટા જોખમમાં?"
+        },
+        "locators": {
+          "assetUri": "/gujarati/international-52557364",
+          "cpsUrn": "urn:bbc:content:assetUri:gujarati/international-52557364",
+          "assetId": "52557364"
+        },
+        "summary": "ફ્રાન્સના એથિકલ હૅકરે ટેકનોલોજિકલ ખામી ખુલી પાડી; અગાઉ આધારકાર્ડના ડેટાની ખામી ખુલ્લી પાડેલી.",
+        "timestamp": 1588766736000,
+        "language": "gu",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112163616",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/F0C4/production/_112163616_aarogya.jpg",
+          "path": "/cpsprodpb/F0C4/production/_112163616_aarogya.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "આરોગ્યસેતુની ઍપ્લિકેશન",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:gujarati/international-52557364",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "નરેન્દ્ર મોદીના 20 લાખ કરોડના પૅકેજથી ગરીબ મજૂરોનું કેટલું ભલું થશે? - દૃષ્ટિકોણ"
+        },
+        "locators": {
+          "assetUri": "/gujarati/india-52645622",
+          "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-52645622",
+          "assetId": "52645622"
+        },
+        "summary": "'એમણે એ સવાલોના જવાબ હકીકતમાં આપ્યા જ નહીં જે તમે સાંભળવા માગો છો.'",
+        "timestamp": 1589358551000,
+        "language": "gu",
+        "byline": {
+          "name": "આલોક જોશી",
+          "title": "વરિષ્ઠ પત્રકાર, બીબીસી ગુજરાતી માટે",
+          "persons": [
+            {
+              "name": ". .",
+              "function": "."
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+            "categoryName": "Opinion"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112252563",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/8EAD/production/_112252563_1.jpg",
+          "path": "/cpsprodpb/8EAD/production/_112252563_1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "મજૂર",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:gujarati/india-52645622",
+        "type": "cps"
+      }
+    ]
+  }
