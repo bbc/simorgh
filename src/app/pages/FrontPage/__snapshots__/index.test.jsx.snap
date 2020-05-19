@@ -67,7 +67,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                         data-slot="/4817/bbccom.test.site.amp.news"
                         height="50"
                         json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"pidgin\\"}}"
-                        media="(max-width: 599px)"
+                        media="(max-width: 62.9375rem)"
                         type="doubleclick"
                         width="320"
                       >
@@ -88,7 +88,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                         data-slot="/4817/bbccom.test.site.amp.news"
                         height="250"
                         json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"pidgin\\"}}"
-                        media="(min-width: 600px)"
+                        media="(min-width: 63rem)"
                         type="doubleclick"
                         width="970"
                       >

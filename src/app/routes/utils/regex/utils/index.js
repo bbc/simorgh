@@ -58,7 +58,7 @@ export const getLiveRadioRegex = services => {
 
 export const getRadioAndTVRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/:serviceId(${mediaServiceIdRegex})/:mediaId(${mediaIdRegex}):amp(${ampRegex})?`;
+  return `/:service(${serviceRegex})/:serviceId(${mediaServiceIdRegex})(/programmes)?/:mediaId(${mediaIdRegex}):amp(${ampRegex})?`;
 };
 
 export const getErrorPageRegex = services => {
