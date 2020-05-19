@@ -21,23 +21,20 @@ export default () => {
         const h4 = indexAlsos.querySelector('h4');
         expect(h4.textContent).toMatchSnapshot();
 
-        const data = window.SIMORGH_DATA;
-
-        if (data) {
-          const topStoriesGroup = data.pageData.content.groups[0].items[0];
+        if (window.SIMORGH_DATA) {
+          const topStoriesGroup =
+            window.SIMORGH_DATA.pageData.content.groups[0].items[0];
           const { relatedItems } = topStoriesGroup;
 
           if (relatedItems.length > 1) {
-            expect(indexAlsos.getElementsByTagName('ul')).toHaveLength(1);
+            expect(indexAlsos.querySelector('ul')).toBeInTheDocument();
             expect(indexAlsos.getElementsByTagName('li')).toHaveLength(
               relatedItems.length,
             );
           } else {
-            const { headline } = relatedItems[0].headlines;
-
-            expect(indexAlsos.querySelector('div a span').innerHTML).toEqual(
-              headline,
-            );
+            expect(
+              indexAlsos.querySelector('div a span').innerHTML,
+            ).toMatchSnapshot();
           }
         }
       }
