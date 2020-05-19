@@ -18,8 +18,6 @@ exports[`Canonical Media Asset Page Media Player a11y assistive technology can r
 
 exports[`Canonical Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa"`;
 
-exports[`Canonical Media Asset Page Media Player should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa"`;
-
 exports[`Canonical Media Asset Page SEO Canonical link 1`] = `"http://localhost:7080/persian/iran-23231114"`;
 
 exports[`Canonical Media Asset Page SEO Dir attribute 1`] = `"rtl"`;

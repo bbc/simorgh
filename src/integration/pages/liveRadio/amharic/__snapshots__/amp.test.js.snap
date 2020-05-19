@@ -132,8 +132,6 @@ exports[`AMP Live Radio Media Player a11y assistive technology can read the medi
 
 exports[`AMP Live Radio Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp?morph_env=live"`;
 
-exports[`AMP Live Radio Media Player should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp?morph_env=live"`;
-
 exports[`AMP Live Radio SEO Canonical link 1`] = `"http://localhost:7080/amharic/bbc_amharic_radio/liveradio"`;
 
 exports[`AMP Live Radio SEO Dir attribute 1`] = `"ltr"`;
