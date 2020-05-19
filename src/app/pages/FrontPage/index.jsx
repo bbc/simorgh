@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment, useContext } from 'react';
+import { Helmet } from 'react-helmet';
 import { string, node } from 'prop-types';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
@@ -134,6 +135,15 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
 
   return (
     <>
+      <Helmet
+        script={[
+          {
+            type: 'text/javascript',
+            // Once the Ad script has loaded, ads pushed to `cmd` are rendered
+            innerHTML: 'window.dotcom = window.dotcom || { cmd: [] };',
+          },
+        ]}
+      />
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
