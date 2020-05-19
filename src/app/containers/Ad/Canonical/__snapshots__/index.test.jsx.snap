@@ -4,7 +4,7 @@ exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderb
 <html>
   <head>
     <script
-      src="https://gn-web-assets.api.bbc.com/ngas/beta/dotcom-bootstrap.js"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
     />
   </head>
   <body>

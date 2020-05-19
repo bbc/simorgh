@@ -4,7 +4,7 @@ exports[`Ad Container Snapshots should correctly render a Canonical ad 1`] = `
 <html>
   <head>
     <script
-      src="https://gn-web-assets.api.bbc.com/ngas/beta/dotcom-bootstrap.js"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
     />
   </head>
   <body>
@@ -124,7 +124,7 @@ exports[`Ad Container Snapshots should not render a Canonical ad for News 1`] = 
 <html>
   <head>
     <script
-      src="https://gn-web-assets.api.bbc.com/ngas/beta/dotcom-bootstrap.js"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
     />
   </head>
   <body>
