@@ -115,9 +115,9 @@ export const AMP_ACCESS_FETCH = service => {
 // eslint-disable-next-line react/prop-types
 const AmpAd = () => {
   const { ads, dir, script, service, footer } = useContext(ServiceContext);
-  const advertisementLabel = pathOr(false, ['advertisementLabel'], ads);
-  const links = pathOr(false, ['links'], footer);
-  const labelLink = pathOr('', ['href'], links[3]);
+  const label = pathOr('Advertisement', ['advertisementLabel'], ads);
+  const links = pathOr(null, ['links'], footer);
+  const labelLink = links && pathOr(null, ['href'], links[3]);
 
   return (
     <FullWidthWrapper>
@@ -138,7 +138,7 @@ const AmpAd = () => {
               service={service}
               dir={dir}
             >
-              {advertisementLabel}
+              {label}
             </StyledLink>
             <amp-ad {...ampAdPropsMobile({ service })}>
               <amp-img
