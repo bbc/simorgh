@@ -114,6 +114,15 @@ describe('MostReadContainerCanonical Assertion', () => {
       dataResponse: setFreshPromoTimestamp(pidginMostReadData),
       serverRenderOnAmp: true,
     },
+    {
+      description: 'should not render most read when dataResponse is empty',
+      service: 'pidgin',
+      mostReadToggle: true,
+      isAmp: false,
+      variant: null,
+      renderExpectation: shouldNotRenderMostRead,
+      dataResponse: null,
+    },
   ].forEach(
     ({
       description,
