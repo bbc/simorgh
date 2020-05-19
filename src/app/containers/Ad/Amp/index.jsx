@@ -5,10 +5,13 @@ import {
   AMP_ACCESS_JS,
   AMP_ADS_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import {
-  GEL_SPACING_QUAD,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
+import {
   GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
   GEL_SPACING_DBL,
   GEL_SPACING,
 } from '@bbc/gel-foundations/spacings';
@@ -44,7 +47,7 @@ const constructAdJsonData = ({ service }) => ({
 const ampAdPropsMobile = ({ service }) => ({
   'data-block-on-consent': 'default',
   'data-npa-on-unknown-consent': 'true',
-  media: '(max-width: 599px)',
+  media: `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
   type: 'doubleclick',
   width: '320',
   height: '50',
@@ -58,7 +61,7 @@ const ampAdPropsMobile = ({ service }) => ({
 const ampAdPropsDesktop = ({ service }) => ({
   'data-block-on-consent': 'default',
   'data-npa-on-unknown-consent': 'true',
-  media: '(min-width: 600px)',
+  media: `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN})`,
   type: 'doubleclick',
   width: '970',
   height: '250',
