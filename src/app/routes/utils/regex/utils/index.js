@@ -8,6 +8,7 @@ const articleLocalRegex = 'articles|erthyglau|sgeulachdan';
 const mediaIdRegex = '[a-z0-9]+';
 const radioMasterBrandRegex = 'bbc_[a-z]+_radio';
 const errorCodeRegex = '404|500';
+const idxRegex = 'persian/afghanistan|ukrainian/ukraine_in_russian';
 
 const getServiceRegex = services => services.join('|');
 
@@ -79,4 +80,8 @@ export const getMostReadDataRegex = services => {
 export const getSecondaryColumnDataRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/sty-secondary-column:variant(${variantRegex})?.json`;
+};
+
+export const getIdxPageRegex = () => {
+  return `/:idx(${idxRegex}):amp(${ampRegex})?`;
 };
