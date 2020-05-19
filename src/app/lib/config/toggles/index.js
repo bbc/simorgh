@@ -39,7 +39,7 @@ const toggles = {
       enabled: true,
     },
     logMediaPlayerStatus: {
-      enabled: true,
+      enabled: false,
     },
   },
   test: {
@@ -82,7 +82,7 @@ const toggles = {
       enabled: true,
     },
     logMediaPlayerStatus: {
-      enabled: true,
+      enabled: false,
     },
   },
   live: {
@@ -125,7 +125,7 @@ const toggles = {
       enabled: true,
     },
     logMediaPlayerStatus: {
-      enabled: true,
+      enabled: false,
     },
   },
 };

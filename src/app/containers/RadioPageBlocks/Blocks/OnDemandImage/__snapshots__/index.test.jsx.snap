@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
+.c1 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
+.c0 {
+  padding: 2rem 0;
+  padding-right: 1rem;
+}
+
+@media (max-width:24.9375rem) {
+  .c0 {
+    display: none;
+  }
+}
+
+<div
+  class="c0"
+  dir="ltr"
+>
+  <img
+    alt="BBC News"
+    class="c1"
+    sizes="(min-width: 1007px) 112px, 100vw"
+    src="https://mock-url"
+    srcset="https://mock-url 112w,https://mock-url 224w"
+  />
+</div>
+`;
