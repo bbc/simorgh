@@ -46,7 +46,7 @@ export default () => {
   }
 
   const relatedContentLinks = document.querySelectorAll(
-    'section[data-e2e="related-content"] a',
+    '[data-e2e="related-content"] a',
   );
 
   if (relatedContentLinks) {
