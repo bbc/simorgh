@@ -6,7 +6,49 @@ exports[`Canonical On Demand Radio Episode Analytics ATI 1`] = `"<img height=\\"
 
 exports[`Canonical On Demand Radio Episode Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/indonesia"`;
 
+exports[`Canonical On Demand Radio Episode Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Canonical On Demand Radio Episode Footer I can see a link: Alasan Anda dapat mempercayai BBC News 1`] = `"https://www.bbc.com/indonesia/institutional-49283175"`;
+
+exports[`Canonical On Demand Radio Episode Footer I can see a link: BBC News, Indonesia 1`] = `"/indonesia"`;
+
+exports[`Canonical On Demand Radio Episode Footer I can see a link: Baca tentang peraturan baru terkait link eksternal. 1`] = `"https://www.bbc.com/indonesia/institutional/2011/02/000001_links"`;
+
+exports[`Canonical On Demand Radio Episode Footer I can see a link: Cookies 1`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`Canonical On Demand Radio Episode Footer I can see a link: Hubungi BBC 1`] = `"https://www.bbc.com/indonesia/institutional-37818427"`;
+
+exports[`Canonical On Demand Radio Episode Footer I can see a link: Kebijakan tentang Privasi 1`] = `"https://www.bbc.com/indonesia/institutional-37818425"`;
+
+exports[`Canonical On Demand Radio Episode Footer I can see a link: Mengenai BBC 1`] = `"https://www.bbc.com/indonesia/institutional-37818424"`;
+
+exports[`Canonical On Demand Radio Episode Footer I can see a link: Peraturan Penggunaan 1`] = `"https://www.bbc.com/indonesia/institutional-37818421"`;
+
 exports[`Canonical On Demand Radio Episode Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: Berita 1`] = `"/indonesia"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: Berita 2`] = `"/indonesia"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: Dunia 1`] = `"/indonesia/dunia"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: Dunia 2`] = `"/indonesia/dunia"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: Indonesia 1`] = `"/indonesia/topics/cjgn7k8yx4gt"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: Indonesia 2`] = `"/indonesia/topics/cjgn7k8yx4gt"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: Liputan Mendalam 1`] = `"/indonesia/laporan-khusus-51267199"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: Liputan Mendalam 2`] = `"/indonesia/laporan-khusus-51267199"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: Majalah 1`] = `"/indonesia/majalah-51456120"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: Majalah 2`] = `"/indonesia/majalah-51456120"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: Viral 1`] = `"/indonesia/topics/cn5w7g2nq6dt"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: Viral 2`] = `"/indonesia/topics/cn5w7g2nq6dt"`;
 
 exports[`Canonical On Demand Radio Episode Header I can see the branding 1`] = `"BBC News, Indonesia"`;
 
@@ -32,7 +74,7 @@ exports[`Canonical On Demand Radio Episode SEO Heading level 1 1`] = `"Dunia Pag
 
 exports[`Canonical On Demand Radio Episode SEO Lang attribute 1`] = `"id"`;
 
-exports[`Canonical On Demand Radio Episode SEO Linked data 1`] = `
+exports[`Canonical On Demand Radio Episode SEO Linked data AudioObject 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "AudioObject",
