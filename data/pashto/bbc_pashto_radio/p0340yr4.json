@@ -1,0 +1,582 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_pashto_radio/p0340yr4",
+    "locators": {
+      "pid": "w172xjcjkv7gw1w",
+      "brandPid": "p0340yr4"
+    },
+    "type": "WSRADIO",
+    "createdBy": "bbc_pashto_radio",
+    "language": "ps",
+    "lastUpdated": 1589548803280,
+    "firstPublished": 1589802647000,
+    "lastPublished": 1589802647000,
+    "timestamp": 1589802647000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "وروستي خبرونه - BBC News پښتو",
+      "pageIdentifier": "pashto.bbc_pashto_radio.w172xjcjkv7gw1w.page",
+      "producerId": "68",
+      "contentType": "player-episode",
+      "producer": "PASHTO"
+    },
+    "tags": {},
+    "version": "v1.3.0",
+    "blockTypes": ["media"],
+    "title": "وروستي خبرونه",
+    "releaseDateTimeStamp": 1589760000000
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "w172xjcjkv7gw1w",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "18/05/2020 GMT",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w1mshp8nm178vqm",
+            "types": ["Original"],
+            "duration": 180,
+            "durationISO8601": "PT3M",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1590404580000,
+            "availableFrom": 1589799780000
+          }
+        ],
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "وروستي خبرونه"
+    },
+    "locators": {
+      "pid": "w172xjcjkv7gw1w",
+      "brandPid": "p0340yr4"
+    },
+    "media": {
+      "id": "w172xjcjkv7gw1w",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "18/05/2020 GMT",
+      "synopses": {
+        "short": "د نړۍ وروستي خبرونه",
+        "medium": "د نړۍ وروستي خبرونه"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "w1mshp8nm178vqm",
+          "types": ["Original"],
+          "duration": 180,
+          "durationISO8601": "PT3M",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": false,
+            "nonUk": false,
+            "world": true
+          },
+          "availableUntil": 1590404580000,
+          "availableFrom": 1589799780000
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "brand": {
+      "pid": "p0340yr4",
+      "title": "وروستي خبرونه"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcjkv7gw1w",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Pashto",
+      "uri": "/pashto",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": {
+              "headline": "وروستي خبرونه"
+            },
+            "locators": {
+              "pid": "w172xjcjkv7gr9r",
+              "brandPid": "p0340yr4"
+            },
+            "media": {
+              "id": "w172xjcjkv7gr9r",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "18/05/2020 GMT",
+              "synopses": {
+                "short": "د نړۍ وروستي خبرونه",
+                "medium": "د نړۍ وروستي خبرونه"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshp8nm178qzh",
+                  "types": ["Original"],
+                  "duration": 180,
+                  "durationISO8601": "PT3M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1590400980000,
+                  "availableFrom": 1589796180000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "p0340yr4",
+              "title": "وروستي خبرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcjkv7gr9r",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "وروستي خبرونه"
+            },
+            "locators": {
+              "pid": "w172xjcjkv7gmkm",
+              "brandPid": "p0340yr4"
+            },
+            "media": {
+              "id": "w172xjcjkv7gmkm",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "18/05/2020 GMT",
+              "synopses": {
+                "short": "د نړۍ وروستي خبرونه",
+                "medium": "د نړۍ وروستي خبرونه"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshp8nm178m7c",
+                  "types": ["Original"],
+                  "duration": 180,
+                  "durationISO8601": "PT3M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1590397380000,
+                  "availableFrom": 1589792580000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "p0340yr4",
+              "title": "وروستي خبرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcjkv7gmkm",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "وروستي خبرونه"
+            },
+            "locators": {
+              "pid": "w172xjcjkv7ghth",
+              "brandPid": "p0340yr4"
+            },
+            "media": {
+              "id": "w172xjcjkv7ghth",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "18/05/2020 GMT",
+              "synopses": {
+                "short": "د نړۍ وروستي خبرونه",
+                "medium": "د نړۍ وروستي خبرونه"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshp8nm178hh7",
+                  "types": ["Original"],
+                  "duration": 180,
+                  "durationISO8601": "PT3M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1590393780000,
+                  "availableFrom": 1589788980000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "p0340yr4",
+              "title": "وروستي خبرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcjkv7ghth",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "وروستي خبرونه"
+            },
+            "locators": {
+              "pid": "w172xjcjkv7gd2c",
+              "brandPid": "p0340yr4"
+            },
+            "media": {
+              "id": "w172xjcjkv7gd2c",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "18/05/2020 GMT",
+              "synopses": {
+                "short": "د نړۍ وروستي خبرونه",
+                "medium": "د نړۍ وروستي خبرونه"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshp8nm178cr3",
+                  "types": ["Original"],
+                  "duration": 180,
+                  "durationISO8601": "PT3M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1590390180000,
+                  "availableFrom": 1589785380000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "p0340yr4",
+              "title": "وروستي خبرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcjkv7gd2c",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "وروستي خبرونه"
+            },
+            "locators": {
+              "pid": "w172xjcjkv7g8b7",
+              "brandPid": "p0340yr4"
+            },
+            "media": {
+              "id": "w172xjcjkv7g8b7",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "18/05/2020 GMT",
+              "synopses": {
+                "short": "د نړۍ وروستي خبرونه",
+                "medium": "د نړۍ وروستي خبرونه"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshp8nm1787zz",
+                  "types": ["Original"],
+                  "duration": 180,
+                  "durationISO8601": "PT3M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1590386580000,
+                  "availableFrom": 1589781780000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "p0340yr4",
+              "title": "وروستي خبرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcjkv7g8b7",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "وروستي خبرونه"
+            },
+            "locators": {
+              "pid": "w172xjcjkv7d2wx",
+              "brandPid": "p0340yr4"
+            },
+            "media": {
+              "id": "w172xjcjkv7d2wx",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "17/05/2020 GMT",
+              "synopses": {
+                "short": "د نړۍ وروستي خبرونه",
+                "medium": "د نړۍ وروستي خبرونه"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshp8nm1762kn",
+                  "types": ["Original"],
+                  "duration": 180,
+                  "durationISO8601": "PT3M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1590321780000,
+                  "availableFrom": 1589716980000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "p0340yr4",
+              "title": "وروستي خبرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcjkv7d2wx",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "وروستي خبرونه"
+            },
+            "locators": {
+              "pid": "w172xjcjkv7cz4s",
+              "brandPid": "p0340yr4"
+            },
+            "media": {
+              "id": "w172xjcjkv7cz4s",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "17/05/2020 GMT",
+              "synopses": {
+                "short": "د نړۍ وروستي خبرونه",
+                "medium": "د نړۍ وروستي خبرونه"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshp8nm175ytj",
+                  "types": ["Original"],
+                  "duration": 180,
+                  "durationISO8601": "PT3M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1590318180000,
+                  "availableFrom": 1589713380000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "p0340yr4",
+              "title": "وروستي خبرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcjkv7cz4s",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "وروستي خبرونه"
+            },
+            "locators": {
+              "pid": "w172xjcjkv7cvdn",
+              "brandPid": "p0340yr4"
+            },
+            "media": {
+              "id": "w172xjcjkv7cvdn",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "17/05/2020 GMT",
+              "synopses": {
+                "short": "د نړۍ وروستي خبرونه",
+                "medium": "د نړۍ وروستي خبرونه"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshp8nm175v2d",
+                  "types": ["Original"],
+                  "duration": 180,
+                  "durationISO8601": "PT3M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1590314580000,
+                  "availableFrom": 1589709780000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "p0340yr4",
+              "title": "وروستي خبرونه"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172xjcjkv7cvdn",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}

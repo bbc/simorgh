@@ -1,0 +1,60 @@
+{
+  "topStories": [
+    {
+      "headlines": {
+        "headline": "向隔離狀態的宇航員學習如何獨處"
+      },
+      "locators": {
+        "assetUri": "/ukchina/trad/vert-fut-52645612",
+        "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/vert-fut-52645612",
+        "assetId": "52645612"
+      },
+      "summary": "很多人都正在迅速學習適應自我隔離的狀態。但有些人的工作就要求必須獨處，我們能從這些人那裏學到什麼呢？",
+      "timestamp": 1589358839000,
+      "language": "zh-Hant",
+      "byline": {
+        "name": "蒂芙妮·溫",
+        "title": "Tiffanie Wen",
+        "persons": [
+          {
+            "name": "Dan Egan",
+            "function": ""
+          }
+        ]
+      },
+      "passport": {
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+          "categoryName": "Explainer"
+        },
+        "campaigns": [
+          {
+            "campaignId": "5a988e2939461b000e9dabf8",
+            "campaignName": "WS - Educate me"
+          }
+        ],
+        "taggings": []
+      },
+      "cpsType": "STY",
+      "indexImage": {
+        "id": "112252682",
+        "subType": "index",
+        "href": "http://c.files.bbci.co.uk/6FD1/production/_112252682_3.jpg",
+        "path": "/cpsprodpb/6FD1/production/_112252682_3.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "美國航空航天局前宇航員凱利說，他發現花一些時間進行有趣的瑣碎活動是至關重要的。",
+        "caption": "美國航空航天局前宇航員凱利說，他發現花一些時間進行有趣的瑣碎活動是至關重要的。",
+        "copyrightHolder": "Nasa/Getty",
+        "type": "image"
+      },
+      "options": {
+        "isBreakingNews": false,
+        "isFactCheck": false
+      },
+      "prominence": "standard",
+      "id": "urn:bbc:ares::asset:ukchina/trad/vert-fut-52645612",
+      "type": "cps"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { shape, string, number } from 'prop-types';
+import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import MetadataContainer from '../../containers/Metadata';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
@@ -9,11 +10,21 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
 import AudioPlayerBlock from '#containers/RadioPageBlocks/Blocks/AudioPlayer';
+import EpisodeImage from '#containers/RadioPageBlocks/Blocks/OnDemandImage';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 const EPISODE_IS_AVAILABLE = 'available';
 const EPISODE_IS_EXPIRED = 'expired';
 const EPISODE_IS_NOT_YET_AVAILABLE = 'not-yet-available';
+
+const getGroups = (zero, one, two, three, four, five) => ({
+  group0: zero,
+  group1: one,
+  group2: two,
+  group3: three,
+  group4: four,
+  group5: five,
+});
 
 const getEpisodeAvailability = (availableFrom, availableUntil) => {
   const timeNow = Date.now();
@@ -27,6 +38,10 @@ const getEpisodeAvailability = (availableFrom, availableUntil) => {
 const StyledGelPageGrid = styled(GelPageGrid)`
   width: 100%;
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
+`;
+
+const StyledGelWrapperGrid = styled(GelPageGrid)`
+  padding-top: ${GEL_SPACING_TRPL};
 `;
 
 /* eslint-disable react/prop-types */
@@ -80,11 +95,14 @@ const OnDemandRadioPage = ({ pageData }) => {
     episodeAvailableFrom,
     episodeAvailableUntil,
     releaseDateTimeStamp,
+    imageUrl,
     promoBrandTitle,
     durationISO8601,
     thumbnailImageUrl,
   } = pageData;
+
   const { dir } = useContext(ServiceContext);
+  const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
 
   return (
     <>
@@ -101,44 +119,33 @@ const OnDemandRadioPage = ({ pageData }) => {
         forwardedAs="main"
         role="main"
         dir={dir}
-        columns={{
-          group0: 6,
-          group1: 6,
-          group2: 6,
-          group3: 6,
-          group4: 8,
-          group5: 20,
-        }}
+        columns={getGroups(6, 6, 6, 6, 8, 20)}
         enableGelGutters
       >
         <Grid
           item
           dir={dir}
-          startOffset={{
-            group0: 1,
-            group1: 1,
-            group2: 1,
-            group3: 1,
-            group4: 2,
-            group5: 5,
-          }}
-          columns={{
-            group0: 6,
-            group1: 6,
-            group2: 6,
-            group3: 6,
-            group4: 6,
-            group5: 12,
-          }}
-          margins={{ group0: true, group1: true, group2: true, group3: true }}
+          startOffset={getGroups(1, 1, 1, 1, 2, 5)}
+          columns={getGroups(6, 6, 6, 6, 6, 12)}
+          margins={getGroups(true, true, true, true, false, false)}
         >
-          <OnDemandHeadingBlock
-            idAttr={idAttr}
-            brandTitle={brandTitle}
-            releaseDateTimeStamp={releaseDateTimeStamp}
-          />
-
-          <ParagraphBlock text={summary} />
+          <StyledGelWrapperGrid
+            dir={oppDir}
+            columns={getGroups(6, 6, 6, 6, 6, 6)}
+            enableGelGutters
+          >
+            <Grid dir={dir} item columns={getGroups(6, 6, 4, 4, 4, 4)}>
+              <OnDemandHeadingBlock
+                idAttr={idAttr}
+                brandTitle={brandTitle}
+                releaseDateTimeStamp={releaseDateTimeStamp}
+              />
+              <ParagraphBlock text={summary} />
+            </Grid>
+            <Grid dir={dir} item columns={getGroups(0, 0, 2, 2, 2, 2)}>
+              <EpisodeImage imageUrl={imageUrl} dir={dir} />
+            </Grid>
+          </StyledGelWrapperGrid>
           {renderEpisode({
             masterBrand,
             episodeId,
@@ -165,6 +172,7 @@ OnDemandRadioPage.propTypes = {
     episodeAvailableFrom: number,
     episodeAvailableUntil: number,
     releaseDateTimeStamp: number,
+    imageUrl: string,
   }).isRequired,
 };
 
