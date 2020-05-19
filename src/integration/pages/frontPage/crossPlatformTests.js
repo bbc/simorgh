@@ -10,19 +10,35 @@ export default () => {
   });
 
   it('I can see Index Alsos', () => {
-    const serviceHasIndexAlsos = service === 'thai';
+    const topStories = document.querySelector(
+      '[aria-labelledby="Top-stories"]',
+    );
 
-    if (serviceHasIndexAlsos) {
-      const topStories = document.querySelector(
-        '[aria-labelledby="Top-stories"]',
-      );
+    if (topStories) {
+      const indexAlsos = topStories.querySelector('[data-e2e=index-alsos]');
 
-      if (topStories) {
-        const indexAlsos = topStories.querySelector('[data-e2e=index-alsos]');
+      if (indexAlsos) {
+        const h4 = indexAlsos.querySelector('h4');
+        expect(h4.textContent).toMatchSnapshot();
 
-        if (indexAlsos) {
-          const h4 = indexAlsos.querySelector('h4');
-          expect(h4.textContent).toEqual('อ่านข่าวนี้เพิ่มเติม');
+        const data = window.SIMORGH_DATA;
+
+        if (data) {
+          const topStoriesGroup = data.pageData.content.groups[0].items[0];
+          const { relatedItems } = topStoriesGroup;
+
+          if (relatedItems.length > 1) {
+            expect(indexAlsos.getElementsByTagName('ul')).toHaveLength(1);
+            expect(indexAlsos.getElementsByTagName('li')).toHaveLength(
+              relatedItems.length,
+            );
+          } else {
+            const { headline } = relatedItems[0].headlines;
+
+            expect(indexAlsos.querySelector('div a span').innerHTML).toEqual(
+              headline,
+            );
+          }
         }
       }
     }
