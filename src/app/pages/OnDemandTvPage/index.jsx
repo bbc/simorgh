@@ -6,8 +6,6 @@ import MetadataContainer from '../../containers/Metadata';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
-import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
-import EpisodeImage from '#containers/RadioPageBlocks/Blocks/OnDemandImage';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
@@ -35,10 +33,8 @@ const OnDemandTvPage = ({ pageData }) => {
     language,
     brandTitle,
     headline,
-    summary,
     shortSynopsis,
     releaseDateTimeStamp,
-    imageUrl,
   } = pageData;
 
   const { dir } = useContext(ServiceContext);
@@ -78,10 +74,6 @@ const OnDemandTvPage = ({ pageData }) => {
                 brandTitle={brandTitle}
                 releaseDateTimeStamp={releaseDateTimeStamp}
               />
-              <ParagraphBlock text={summary} />
-            </Grid>
-            <Grid dir={dir} item columns={getGroups(0, 0, 2, 2, 2, 2)}>
-              <EpisodeImage imageUrl={imageUrl} dir={dir} />
             </Grid>
           </StyledGelWrapperGrid>
         </Grid>
