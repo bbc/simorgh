@@ -10,6 +10,8 @@ exports[`Canonical Front Page Footer I can see the footer copyright and external
 
 exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, ไทย"`;
 
+exports[`Canonical Front Page I can see Index Alsos 1`] = `"อ่านข่าวนี้เพิ่มเติม"`;
+
 exports[`Canonical Front Page SEO Canonical link 1`] = `"http://localhost:7080/thai"`;
 
 exports[`Canonical Front Page SEO Dir attribute 1`] = `"ltr"`;

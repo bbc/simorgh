@@ -111,6 +111,8 @@ exports[`AMP Front Page Footer I can see the footer copyright and external linki
 
 exports[`AMP Front Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
+exports[`AMP Front Page I can see Index Alsos 1`] = `"المزيد حول هذه القصة"`;
+
 exports[`AMP Front Page I can see Useful Links 1`] = `"وظائف شاغرة في بي بي سي عربي"`;
 
 exports[`AMP Front Page I can see Useful Links 2`] = `"أكاديمية بي بي سي: اكتشف... تعلم.. .تطور"`;
