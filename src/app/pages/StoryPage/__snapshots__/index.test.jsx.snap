@@ -1801,6 +1801,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                 <section
                   aria-labelledby="related-content-heading"
                   class="c31"
+                  data-e2e="related-content"
                   role="region"
                 >
                   <div
@@ -1844,6 +1845,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   <section
                     aria-labelledby="top-stories-heading"
                     class="c31"
+                    data-e2e="related-content"
                     role="region"
                   >
                     <div
@@ -2030,6 +2032,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   <section
                     aria-labelledby="features-analysis-heading"
                     class="c31"
+                    data-e2e="related-content"
                     role="region"
                   >
                     <div
@@ -4659,6 +4662,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     <section
                       aria-labelledby="related-content-heading"
                       class="c33"
+                      data-e2e="related-content"
                       role="region"
                     >
                       <div
@@ -4702,6 +4706,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       <section
                         aria-labelledby="top-stories-heading"
                         class="c33"
+                        data-e2e="related-content"
                         role="region"
                       >
                         <div
@@ -4848,6 +4853,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       <section
                         aria-labelledby="features-analysis-heading"
                         class="c33"
+                        data-e2e="related-content"
                         role="region"
                       >
                         <div
