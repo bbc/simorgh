@@ -1,6 +1,5 @@
 import envConfig from '../../support/config/envs';
 import config from '../../support/config/services';
-import pageTypeSomeTestsNotRun from '../../support/helpers/pageTypeSomeTestsNotRun';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -16,7 +15,7 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
   service,
   pageType,
 }) => {
-  if (!pageTypeSomeTestsNotRun) {
+  if (pageType !== 'errorPage404') {
     describe(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
       if (Cypress.env('SMOKE')) {
         describe('ATI', () => {

@@ -1,5 +1,4 @@
 import envConfig from '../../support/config/envs';
-import pageTypeSomeTestsNotRun from '../../support/helpers/pageTypeSomeTestsNotRun';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -13,7 +12,7 @@ export const testsThatFollowSmokeTestConfigForAllAMPPages = ({
   pageType,
 }) => {
   describe(`Running testsForAllAMPPages for ${service} ${pageType}`, () => {
-    if (!pageTypeSomeTestsNotRun) {
+    if (pageType !== 'errorPage404') {
       it('should have an AMP attribute on the page', () => {
         cy.get('html').should('have.attr', 'amp');
       });
