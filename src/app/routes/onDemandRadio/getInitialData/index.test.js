@@ -22,10 +22,13 @@ describe('Get initial data for on demand radio', () => {
     expect(pageData.summary).toEqual('د بي بي سي ورلډ سروس څخه پروګرام کول');
     expect(pageData.language).toEqual('ps');
     expect(pageData.metadata.type).toEqual('On Demand Radio');
+    expect(pageData.imageUrl).toEqual(
+      'ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png',
+    );
     expect(pageData.promoBrandTitle).toEqual('ماښامنۍ خپرونه');
     expect(pageData.durationISO8601).toEqual('PT29M30S');
     expect(pageData.thumbnailImageUrl).toEqual(
-      'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
+      'https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png',
     );
   });
 
