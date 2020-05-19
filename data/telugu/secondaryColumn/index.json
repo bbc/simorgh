@@ -1,0 +1,715 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "నిర్మలా సీతారామన్: స్వయం సమృద్ధ భారత్ సాకారమే ఆత్మనిర్భర్ అభియాన్ ఉద్దేశం"
+        },
+        "locators": {
+          "assetUri": "/telugu/india-52647369",
+          "cpsUrn": "urn:bbc:content:assetUri:telugu/india-52647369",
+          "assetId": "52647369"
+        },
+        "summary": "ప్రధాని నరేంద్ర మోదీ ప్రకటించిన ఆత్మనిర్భర్ అభియాన్ ప్యాకేజీ వివరాలను ఆర్థిక మంత్రి నిర్మలా సీతారామన్ వివరించారు. అసలు ఆత్మనిర్భర్ అంటే స్వీయ ఆధారిత అని అర్థం అని ఆర్థిక మంత్రి నిర్మలా సీతారామన్ వివరించారు.",
+        "timestamp": 1589366602000,
+        "language": "te",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112256078",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/15419/production/_112256078_gettyimages-1212845761.jpg",
+          "path": "/cpsprodpb/15419/production/_112256078_gettyimages-1212845761.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "నిర్మలా సీతారామన్",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:telugu/india-52647369",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "కాకినాడ సమీపంలోని మడ అడవులకు ముప్పు ఉందా? ప్రభుత్వం, ప్రతిపక్షాలు ఏమంటున్నాయి?"
+        },
+        "locators": {
+          "assetUri": "/telugu/india-52647394",
+          "cpsUrn": "urn:bbc:content:assetUri:telugu/india-52647394",
+          "assetId": "52647394"
+        },
+        "summary": "కాకినాడ సముద్ర తీరంలో ఉన్న మడ అడవుల ప్రాంతం అని చెబుతున్న భూముల చుట్టూ మళ్లీ వివాదం మొదలైంది. పేదలకు ఇళ్ల స్థలాల పేరుతో మడ అడవులు విస్తరించి ఉన్న ప్రాంతాన్ని ప్రభుత్వం లేఔట్‌లుగా మార్చేస్తోందని మత్స్యకారులు, పర్యావరణ వేత్తలు, ప్రతిపక్షాలు ఆందోళన చేస్తున్నాయి. ప్రభుత్వం మాత్రం ఆ ఆరోపణల్లో నిజం లేదంటోంది.",
+        "timestamp": 1589371018000,
+        "language": "te",
+        "byline": {
+          "name": "వి.శంకర్",
+          "title": "బీబీసీ ప్రతినిధి",
+          "persons": [
+            {
+              "name": "Ivonne Toro Agurto",
+              "function": "La Tercera"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112255387",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/13213/production/_112255387_img-20200512-wa0025.jpg",
+          "path": "/cpsprodpb/13213/production/_112255387_img-20200512-wa0025.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "మడ అడవులు",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:telugu/india-52647394",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "కరోనావైరస్: 'అమెరికాలో అధికారిక లెక్కల కన్నా ఎక్కువ మందే చనిపోయారు' - డాక్టర్ ఫౌచీ"
+        },
+        "locators": {
+          "assetUri": "/telugu/international-52645506",
+          "cpsUrn": "urn:bbc:content:assetUri:telugu/international-52645506",
+          "assetId": "52645506"
+        },
+        "summary": "ప్రపంచ దేశాల్లో ఇప్పటివరకు 2,91,981 మంది ప్రాణాలు కోల్పోయారు. కరోనా కేసులు అత్యధికంగా ఉన్న దేశాల జాబితాలో అమెరికా తరువాత స్థానానికి రష్యా చేరుకుంది. అమెరికాలో 13.69 లక్షల కేసులు నమోదు కాగా, రష్యాలో స్పెయిన్, బ్రిటన్‌ల కన్నా ఎక్కువగా 2.32 లక్షల కేసులు నమోదయ్యాయి.",
+        "timestamp": 1589358369000,
+        "language": "te",
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112239081",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/46AD/production/_112239081_gettyimages-1220452905-1.jpg",
+          "path": "/cpsprodpb/46AD/production/_112239081_gettyimages-1220452905-1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ఆంథోనీ ఫౌచీ",
+          "caption": "అమెరికా అధ్యక్షుడు డోనల్డ్ ట్రంప్‌తో అంటువ్యాధుల నివారణ జాతీయ సంస్థ డైరెక్టర్ ఆంథోనీ ఫౌచీ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112252763",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/8F75/production/_112252763_whatsubject.jpg",
+          "path": "/cpsprodpb/8F75/production/_112252763_whatsubject.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "కరోనా వైరస్",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:telugu/international-52645506",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "నరేంద్ర మోదీ:లాక్‌డౌన్-4 వివరాలు త్వరలో ... రూ. 20 లక్షల కోట్లతో 'ఆత్మనిర్భర భారత్ అభియాన్'"
+        },
+        "locators": {
+          "assetUri": "/telugu/india-52512123",
+          "cpsUrn": "urn:bbc:content:assetUri:telugu/india-52512123",
+          "assetId": "52512123"
+        },
+        "summary": "కరోనావైరస్ సంక్షోభాన్ని ఎదుర్కొంనేందుకు ఓ ప్రత్యేక ఆర్థిక ప్యాకేజీ ప్రకటిస్తున్నా. ఆత్మనిర్భర్ భారత్ అభియాన్ పేరుతో ప్రకటించే ఈ ఆర్థిక ప్యాకేజీ చిన్న, మధ్యతరహా పరిశ్రమలకు ఊతమిచ్చేందుకు దోహదం చేస్తుంది. ఈ ప్యాకేజీ విలువ దాదాపు రూ.20 లక్షల కోట్లు. కరోనావైరస్ చాలాకాలం పాటు మన జీవితాల్లో ఉంటుందని నిపుణులు చెబుతున్నారు.",
+        "timestamp": 1589294081000,
+        "language": "te",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112245721",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/31D2/production/_112245721_mediaitem112245720.jpg",
+          "path": "/cpsprodpb/31D2/production/_112245721_mediaitem112245720.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "మోదీ",
+          "copyrightHolder": "ANI",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:telugu/india-52512123",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "కరోనావైరస్: మళ్ళీ మనం ఎప్పటికైనా కరచాలనం చేసుకోగలమా?",
+          "overtyped": "కరోనావైరస్: మళ్ళీ మనం ఎప్పటికైనా కరచాలనం చేసుకోగలమా"
+        },
+        "locators": {
+          "assetUri": "/telugu/international-52598610",
+          "cpsUrn": "urn:bbc:content:assetUri:telugu/international-52598610",
+          "assetId": "52598610"
+        },
+        "summary": "వేల ఏళ్లుగా మనుషుల మధ్య ఆత్మీయ పలకరింపునకు సంకేతంగా వర్ధిల్లుతూ వచ్చిన కరచాలన సంప్రదాయం కరోనావైరస్ దాడికి అంతరించిపోయినట్లేనా? అసలు కరచాలనం చరిత్ర ఏమిటి? పరస్పర ఆత్మీయ స్పర్శకు ప్రత్యామ్నాయాలేమిటి?",
+        "timestamp": 1589182167000,
+        "language": "te",
+        "byline": {
+          "name": "జేమ్స్ జెఫ్రీ",
+          "title": "బీబీసీ కోసం",
+          "persons": [
+            {
+              "name": "윤인경",
+              "function": "BBC 코리아"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112181609",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/161FA/production/_112181609_adam-nc.jpg",
+          "path": "/cpsprodpb/161FA/production/_112181609_adam-nc.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "కరచాలనం",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112225085",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/E2C4/production/_112225085_adam-nc.jpg",
+          "path": "/cpsprodpb/E2C4/production/_112225085_adam-nc.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "కరచాలనం",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:telugu/international-52598610",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "కరోనావైరస్: భారత్‌లో కోవిడ్ కేసులు జూన్-జూలై నాటికి 'పీక్'కు చేరుకుంటాయా?",
+          "overtyped": "కరోనావైరస్: భారత్‌లో కోవిడ్ కేసులు జూన్-జూలై నాటికి 'పీక్'కు చేరుకుంటాయా"
+        },
+        "locators": {
+          "assetUri": "/telugu/india-52609003",
+          "cpsUrn": "urn:bbc:content:assetUri:telugu/india-52609003",
+          "assetId": "52609003"
+        },
+        "summary": "భారతదేశంలో కరోనావైరస్ కేసులు జూన్-జులైలో పీక్ (గరిష్ఠ స్థాయి)కు చేరుకుంటాయని ఎయిమ్స్ డైరెక్టర్ రణ్‌దీప్ గులెరియా ఏ అంచనాతో చెప్పారు? ఆ అంచనా వెనుక శాస్త్రీయ అధ్యయనాలు ఏమైనా ఉన్నాయా? అసలు పీక్‌ను ఎలా నిర్వచించాలి?",
+        "timestamp": 1589161044000,
+        "language": "te",
+        "byline": {
+          "name": "సరోజ్ సింగ్",
+          "title": "బీబీసీ ప్రతినిధి",
+          "persons": [
+            {
+              "name": "윤인경",
+              "function": "BBC 코리아"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+            "categoryName": "Analysis"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112224691",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/4CBA/production/_112224691_coro.jpg",
+          "path": "/cpsprodpb/4CBA/production/_112224691_coro.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "కరోనా",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112224693",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/9ADA/production/_112224693_coro.jpg",
+          "path": "/cpsprodpb/9ADA/production/_112224693_coro.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "కరోనా",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:telugu/india-52609003",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "కరోనావైరస్ సాకుతో కార్మికుల హక్కులపై వేటు.. మూడేళ్ల వరకూ కొన్ని చట్టాలు రద్దు"
+        },
+        "locators": {
+          "assetUri": "/telugu/india-52603910",
+          "cpsUrn": "urn:bbc:content:assetUri:telugu/india-52603910",
+          "assetId": "52603910"
+        },
+        "summary": "కరోనావైరస్ నేపథ్యంలో కొన్ని రాష్ట్రాలు కొన్ని కార్మిక చట్టాలను మూడేళ్ల పాటు రద్దు చేస్తూ నిర్ణయం తీసుకోవడం కార్మికులకు ఆగ్రహం తెప్పిస్తోంది. రాష్ట్రాలు ఏ చట్టాలను లక్ష్యంగా చేసుకున్నాయంటే..",
+        "timestamp": 1589085498000,
+        "language": "te",
+        "byline": {
+          "name": "సల్మాన్ రావి",
+          "title": "బీబీసీ ప్రతినిధి",
+          "persons": [
+            {
+              "name": "آصف حسینی",
+              "function": "پژوهش‌کر مطالعات صلح و منازعه"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112212209",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1606D/production/_112212209_gettyimages-108878680.jpg",
+          "path": "/cpsprodpb/1606D/production/_112212209_gettyimages-108878680.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "లక్ష్యంగా కార్మిక చట్టాలు",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112218602",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/50C9/production/_112218602_gettyimages-108878680.jpg",
+          "path": "/cpsprodpb/50C9/production/_112218602_gettyimages-108878680.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "లక్ష్యంగా కార్మిక చట్టాలు",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:telugu/india-52603910",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "కరోనావైరస్‌లో వందల సంఖ్యలో కొత్త మ్యుటేషన్లు: పరిశోధనలో ఉన్న వ్యాక్సీన్లు పనికి రాకుండా పోతాయా?",
+          "overtyped": "కరోనావైరస్‌లో వందల సంఖ్యలో కొత్త మ్యుటేషన్లు: పరిశోధనలో ఉన్న వ్యాక్సీన్లు పనికి రాకుండా పోతాయా"
+        },
+        "locators": {
+          "assetUri": "/telugu/international-52566408",
+          "cpsUrn": "urn:bbc:content:assetUri:telugu/international-52566408",
+          "assetId": "52566408"
+        },
+        "summary": "మ్యుటేషన్ అంటే వైరస్ జన్యు నిర్మాణంలో మార్పులు రావడం. ఇలా జరగడం చాలా సహజమైన విషయం. కానీ మ్యుటేషన్లలో ఏవీ వ్యాధిని మరింత ప్రమాదకారిగా మార్చగలవన్నది అసలు ప్రశ్న.",
+        "timestamp": 1589037855000,
+        "language": "te",
+        "byline": {
+          "name": "రేచెల్ ష్రాయెర్",
+          "title": "బీబీసీ ప్రతినిధి",
+          "persons": [
+            {
+              "name": "Ivonne Toro Agurto",
+              "function": "La Tercera"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112215041",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/36E3/production/_112215041_b2819969-31fe-4961-bce6-f292472377ab.jpg",
+          "path": "/cpsprodpb/36E3/production/_112215041_b2819969-31fe-4961-bce6-f292472377ab.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "కరోనావైరస్‌ నిర్మాణంలో ప్రత్యేకంగా కనిపిస్తున్న ‘స్పైక్’లో వస్తున్న మార్పులపై పరిశోధకులు దృష్టిపెట్టారు",
+          "caption": "కరోనావైరస్‌ నిర్మాణంలో ప్రత్యేకంగా కనిపిస్తున్న ‘స్పైక్’లో వస్తున్న మార్పులపై పరిశోధకులు దృష్టిపెట్టారు",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:telugu/international-52566408",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "భారత్‌లో 60వేలకు చేరువలో పాజిటివ్ కేసులు, 2వేలకు దగ్గరలో మరణాలు; ప్రపంచవ్యాప్తంగా దాదాపు 40 లక్షల మంది బాధితులు"
+        },
+        "locators": {
+          "assetUri": "/telugu/live/international-52596583",
+          "cpsUrn": "urn:bbc:content:assetUri:telugu/live/international-52596583",
+          "assetId": "52596583"
+        },
+        "summary": "భారత్‌లో కరోనావైరస్ కేసులు 60వేలకు చేరువలో ఉన్నాయి. మరణాల సంఖ్య 2వేలను సమీపిస్తోంది. ప్రపంచవ్యాప్తంగా కరోనావైరస్ కేసులు 40 లక్షలకు చేరువయ్యాయి. ఇప్పటివరకూ 2.75 లక్షల మంది మరణించారు. అమెరికాలో 13 లక్షలకు చేరువలో బాధితుల సంఖ్య ఉంది. ఈ ఒక్క దేశంలోనే 77వేలకుపైగా రోగులు మరణించారు.",
+        "timestamp": 1588985819000,
+        "language": "te",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "LIV",
+        "indexImage": {
+          "id": "112214335",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/D05D/production/_112214335_gettyimages-1212266444.jpg",
+          "path": "/cpsprodpb/D05D/production/_112214335_gettyimages-1212266444.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "కరోనావైరస్ ఫేస్ మాస్క్",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "commentary": {
+          "order": "descending",
+          "assetUUID": "CE857D35E8547C4083A5CF40A772DE7F",
+          "channels": {
+            "enhancedmobile": "bbc.cps.asset.52596584_EnhancedMobile",
+            "desktop": "bbc.cps.asset.52596584_HighWeb",
+            "highweb": "bbc.cps.asset.52596584_HighWeb",
+            "mobile": "bbc.cps.asset.52596584_EnhancedMobile"
+          }
+        },
+        "imageThumbnail": {
+          "id": "112211394",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/C09F/production/_112211394_exhhsacuwaaxrmr.jpg",
+          "path": "/cpsprodpb/C09F/production/_112211394_exhhsacuwaaxrmr.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "ఎయిర్ ఇండియా ఎక్స్‌ప్రెస్ విమానం",
+          "copyrightHolder": "ANI",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:telugu/live/international-52596583",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "లాక్ డౌన్ ఎఫెక్ట్: పని మనుషులను పనుల్లోకి పిలవాలా? వద్దా? కోట్లాది కుటుంబాలను వేధిస్తున్న ప్రశ్న"
+        },
+        "locators": {
+          "assetUri": "/telugu/india-52555647",
+          "cpsUrn": "urn:bbc:content:assetUri:telugu/india-52555647",
+          "assetId": "52555647"
+        },
+        "summary": "భారతదేశంలో లాక్ డౌన్ పొడిగించారు. అయితే, సడలించిన నిబంధనల్లో ఇళ్లల్లో పని చేసే వాళ్ళని పనుల్లోకి పిలవవచ్చని చెప్పారు. కానీ, వారిని పనుల్లోకి పిలవాలా వద్దా అనే ప్రశ్న మాత్రం కోట్లాది కుటుంబాల్ని వేధిస్తోంది.",
+        "timestamp": 1588985508000,
+        "language": "te",
+        "byline": {
+          "name": "గీత పాండే ",
+          "title": "బీబీసీ న్యూస్",
+          "persons": [
+            {
+              "name": "آصف حسینی",
+              "function": "پژوهش‌کر مطالعات صلح و منازعه"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e1739461b000e9dabf6",
+              "campaignName": "WS - CS"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112104529",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1697C/production/_112104529_gettyimages-1210778342.jpg",
+          "path": "/cpsprodpb/1697C/production/_112104529_gettyimages-1210778342.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "పని కోల్పోయిన పని మనుషుల్లో పుష్పా సర్దార్ కూడా ఒకరు",
+          "caption": "లాక్‌డౌన్ వల్ల పని కోల్పోయిన పని మనుషుల్లో పుష్పా సర్దార్ కూడా ఒకరు",
+          "copyrightHolder": "NurPhoto",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112205230",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/0CB2/production/_112205230_gettyimages-1210778342.jpg",
+          "path": "/cpsprodpb/0CB2/production/_112205230_gettyimages-1210778342.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "పని కోల్పోయిన పని మనుషుల్లో పుష్పా సర్దార్ కూడా ఒకరు",
+          "caption": "లాక్‌డౌన్ వల్ల పని కోల్పోయిన పని మనుషుల్లో పుష్పా సర్దార్ కూడా ఒకరు",
+          "copyrightHolder": "NurPhoto",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:telugu/india-52555647",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "నేసిన బట్టలు కొనేవారూ లేరు.. పని చేసేందుకు సరకూ లేదు: చేనేత కార్మికులపై లాక్‌డౌన్ ఎఫెక్ట్"
+        },
+        "locators": {
+          "assetUri": "/telugu/india-52586506",
+          "cpsUrn": "urn:bbc:content:assetUri:telugu/india-52586506",
+          "assetId": "52586506"
+        },
+        "summary": "ఒక అంచనా ప్రకారం ఒక్క తెలంగాణలోనే చేనేత కార్మికుల దగ్గర వంద కోట్ల రూపాయల విలువైన వస్త్రాలు ఉండిపోయాయి. తెలంగాణలో సగటున నెలకు 40-50 కోట్ల రూపాయల విలువైన చేనేత వస్త్రాలు ఉత్పత్తి అవుతాయి. వాటిలో సగం పట్టు చీరలే.",
+        "timestamp": 1588921446000,
+        "language": "te",
+        "byline": {
+          "name": "బళ్ల సతీశ్ ",
+          "title": "బీబీసీ ప్రతినిధి",
+          "persons": [
+            {
+              "name": "Ivonne Toro Agurto",
+              "function": "La Tercera"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112202577",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/12ED0/production/_112202577_gettyimages-476501603.jpg",
+          "path": "/cpsprodpb/12ED0/production/_112202577_gettyimages-476501603.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "చేనేత",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112202231",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/33A4/production/_112202231_whatsappimage2018-11-23at7.51.21pm-4.jpg",
+          "path": "/cpsprodpb/33A4/production/_112202231_whatsappimage2018-11-23at7.51.21pm-4.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "చేనేత",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:telugu/india-52586506",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "లాక్‌డౌన్ ఎఫెక్ట్: ఏపీలో ప్రజలకు కరెంటు బిల్లుల షాక్... అదనపు భారం వేయలేదంటున్న ప్రభుత్వం"
+        },
+        "locators": {
+          "assetUri": "/telugu/india-52619951",
+          "cpsUrn": "urn:bbc:content:assetUri:telugu/india-52619951",
+          "assetId": "52619951"
+        },
+        "summary": "ఏప్రిల్, మే నెలలకు వచ్చిన విద్యుత్ బిల్లు ఎప్పుడూ వచ్చే దానికి రెట్టింపు స్థాయిలో ఉందని కొందరు వినియోగదారులు ఆందోళన వ్యక్తం చేస్తున్నారు. వేసవి కాబట్టి విద్యుత్ వినియోగం పెరగడం వల్లే అలా బిల్లులు వచ్చి ఉంటాయని ప్రభుత్వం అంటోంది.",
+        "timestamp": 1589249458000,
+        "language": "te",
+        "byline": {
+          "name": "వి. శంకర్",
+          "title": "బీబీసీ కోసం ",
+          "persons": [
+            {
+              "name": "윤인경",
+              "function": "BBC 코리아"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112229674",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/BA4C/production/_112229674_52619951.jpg",
+          "path": "/cpsprodpb/BA4C/production/_112229674_52619951.jpg",
+          "height": 548,
+          "width": 974,
+          "altText": "ఏపీలో ప్రస్తుతం మూడు డిస్కంల ద్వారా విద్యుత్ పంపిణీ జరుగుతోంది",
+          "caption": "ఏపీలో ప్రస్తుతం మూడు డిస్కంల ద్వారా విద్యుత్ పంపిణీ జరుగుతోంది",
+          "copyrightHolder": "GETTY IMAGES",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112236495",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/E847/production/_112236495_whatsubject.jpg",
+          "path": "/cpsprodpb/E847/production/_112236495_whatsubject.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "ఏపీలో ప్రస్తుతం మూడు డిస్కంల ద్వారా విద్యుత్ పంపిణీ జరుగుతోంది",
+          "caption": "ఏపీలో ప్రస్తుతం మూడు డిస్కంల ద్వారా విద్యుత్ పంపిణీ జరుగుతోంది",
+          "copyrightHolder": "GETTY IMAGES",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:telugu/india-52619951",
+        "type": "cps"
+      }
+    ]
+  }

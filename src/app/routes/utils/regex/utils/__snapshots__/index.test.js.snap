@@ -22,7 +22,7 @@ exports[`regex utils snapshots should create expected regex from getMostReadData
 
 exports[`regex utils snapshots should create expected regex from getMostReadPageRegex 1`] = `"/:service(news|persian|igbo):variant(/simp|/trad|/cyr|/lat)?/popular/read:amp(.amp)?"`;
 
-exports[`regex utils snapshots should create expected regex from getRadioAndTVRegex 1`] = `"/:service(news|persian|igbo)/:serviceId(bbc_[a-z]+_radio|bbc_[a-z]+_tv)/:mediaId([a-z0-9]+):amp(.amp)?"`;
+exports[`regex utils snapshots should create expected regex from getRadioAndTVRegex 1`] = `"/:service(news|persian|igbo)/:serviceId(bbc_[a-z]+_radio|bbc_[a-z]+_tv)(/programmes)?/:mediaId([a-z0-9]+):amp(.amp)?"`;
 
 exports[`regex utils snapshots should create expected regex from getSecondaryColumnDataRegex 1`] = `"/:service(news|persian|igbo)/sty-secondary-column:variant(/simp|/trad|/cyr|/lat)?.json"`;
 

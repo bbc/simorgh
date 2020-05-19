@@ -1,0 +1,641 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "ਕੋਰੋਨਾਵਾਇਰਸ ਅਪਡੇਟ: ਹੁਣ 30 ਨਵੰਬਰ ਤੱਕ ਭਰ ਸਕਦੇ ਰਿਟਰਨ, ਪੀਐੱਫ ’ਚ ਯੋਗਦਾਨ ਨੂੰ 10 ਫੀਸਦੀ ਕੀਤਾ ਗਿਆ"
+        },
+        "locators": {
+          "assetUri": "/punjabi/live/india-52643005",
+          "cpsUrn": "urn:bbc:content:assetUri:punjabi/live/india-52643005",
+          "assetId": "52643005"
+        },
+        "summary": "ਦੁਨੀਆਂ ਭਰ ਵਿੱਚ ਕੋਰੋਨਾਵਾਇਰਸ ਦੇ ਮਾਮਲੇ 42 ਲੱਖ ਪਾਰ ਕਰ ਚੁੱਕੇ ਹਨ ਤੇ 2.87 ਲੱਖ ਤੋਂ ਵੱਧ ਲੋਕਾਂ ਦੀ ਮੌਤ ਹੋਈ ਹੈ।",
+        "timestamp": 1589331714000,
+        "language": "pa",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "LIV",
+        "indexImage": {
+          "id": "112255464",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/B577/production/_112255464_mediaitem112255463.jpg",
+          "path": "/cpsprodpb/B577/production/_112255464_mediaitem112255463.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ਕੋਰੋਨਾਵਾਇਰਸ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "commentary": {
+          "order": "descending",
+          "assetUUID": "9A71EC596024CA43BE6DF5E60DF433B8",
+          "channels": {
+            "enhancedmobile": "bbc.cps.asset.52643006_EnhancedMobile",
+            "desktop": "bbc.cps.asset.52643006_HighWeb",
+            "highweb": "bbc.cps.asset.52643006_HighWeb",
+            "mobile": "bbc.cps.asset.52643006_EnhancedMobile"
+          }
+        },
+        "isLive": true,
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:punjabi/live/india-52643005",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ਕੋਰੋਨਾਵਾਇਰਸ ਲੌਕਡਾਊਨ: ਆਰਥਿਕ ਵਿਸ਼ੇਸ਼ ਪੈਕੇਜ ‘ਚ ਮੋਦੀ ਸਰਕਾਰ ਨੇ ਕੀ ਦਿੱਤਾ?"
+        },
+        "locators": {
+          "assetUri": "/punjabi/india-52651850",
+          "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-52651850",
+          "assetId": "52651850"
+        },
+        "summary": "ਵਿੱਤ ਮੰਤਰੀ ਨਿਰਮਲਾ ਸੀਤਾਰਮਨ ਨੇ ਐਲਾਨ ਕੀਤਾ ਹੈ ਕਿ ਨੇ ਮੱਧਮ ਅਤੇ ਛੋਟੇ ਉਦਯੋਗਾਂ ਲਈ 3 ਲੱਖ ਕਰੋੜ ਦੇ ਬਿਨਾਂ ਗਾਰੰਟੀ ਵਾਲੇ ਲੋਨ ਦਿੱਤੇ ਜਾਣਗੇ।",
+        "timestamp": 1589378548000,
+        "language": "pa",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112254157",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/12589/production/_112254157_gettyimages-1212846208.jpg",
+          "path": "/cpsprodpb/12589/production/_112254157_gettyimages-1212846208.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ਕੋਰੋਨਾਵਾਇਰਸ",
+          "caption": "ਟੀਡੀਐਸ ਦੀਆਂ ਦਰਾਂ ਸਾਰੇ ਗੈਰ-ਤਨਖਾਹਦਾਰ ਲੋਕਾਂ ਲਈ 25 ਪ੍ਰਤੀਸ਼ਤ ਘਟਾ ਦਿੱਤੀਆਂ ਗਈਆਂ ਹਨ ਅਤੇ ਇਸ ਨਾਲ ਆਮ ਲੋਕਾਂ ਨੂੰ ਪੰਜਾਹ ਹਜ਼ਾਰ ਕਰੋੜ ਦਾ ਲਾਭ ਮਿਲੇਗਾ।",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:punjabi/india-52651850",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ਪੀਐੱਮ ਮੋਦੀ ਦਾ ਆਤਮ ਨਿਰਭਰਤਾ ਦਾ ਵਿਚਾਰ ਮੌਜੂਦਾ ਹਾਲਾਤ ਵਿੱਚ ਭਾਰਤ ਲਈ ਕਿੰਨਾ ਸੌਖਾ ਤੇ ਕਿੰਨਾ ਔਖਾ"
+        },
+        "locators": {
+          "assetUri": "/punjabi/india-52644343",
+          "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-52644343",
+          "assetId": "52644343"
+        },
+        "summary": "ਪ੍ਰਧਾਨ ਮੰਤਰੀ ਨਰਿੰਦਰ ਮੋਦੀ ਨੇ ਇੱਕ ਨਵੇਂ ਅਤੇ “ਆਤਮ ਨਿਰਭਰ” ਭਾਰਤ ਦਾ ਵਾਅਦਾ ਕੀਤਾ ਹੈ।",
+        "timestamp": 1589353590000,
+        "language": "pa",
+        "byline": {
+          "name": "ਜ਼ੁਬੈਰ ਅਹਿਮਦ",
+          "title": "ਬੀਬੀਸੀ ਪੱਤਰਕਾਰ",
+          "persons": [
+            {
+              "name": "इकबाल अहमद",
+              "function": "बीबीसी संवाददाता"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112251627",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/11BA7/production/_112251627_whatsubject.jpg",
+          "path": "/cpsprodpb/11BA7/production/_112251627_whatsubject.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ਆਤਮ ਨਿਰਭਰ ਹੋਣ ਲਈ ਭਾਰਤ ਨੂੰ ਵਿਸ਼ਵ ਵਾਪਰ ਸੰਗਠਨ ਦੀਆਂ ਸ਼ਰਤਾਂ ਦਾ ਉਲੰਘਣ ਵੀ ਕਰਨਾ ਪੈ ਸਕਦਾ ਹੈ",
+          "caption": "ਆਤਮ ਨਿਰਭਰ ਹੋਣ ਲਈ ਭਾਰਤ ਨੂੰ ਵਿਸ਼ਵ ਵਾਪਰ ਸੰਗਠਨ ਦੀਆਂ ਸ਼ਰਤਾਂ ਦਾ ਉਲੰਘਣ ਵੀ ਕਰਨਾ ਪੈ ਸਕਦਾ ਹੈ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:punjabi/india-52644343",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "ਕੋਰੋਨਾਵਾਇਰਸ ਦੇ ਟੈਸਟ ਬਾਰੇ ਭਾਰਤ ਦੇ ਇਹ ਦੋ ਵਿਗਿਆਨੀ ਕੀ 'ਕਮਾਲ' ਕਰਨ ਵਾਲੇ ਹਨ"
+        },
+        "locators": {
+          "assetUri": "/punjabi/india-52586916",
+          "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-52586916",
+          "assetId": "52586916"
+        },
+        "summary": "ਭਾਰਤ ਵਿੱਚ ਤਿਆਰ ਕੀਤੇ ਜਾ ਰਹੇ ਨਵੇਂ ਫੇਲੂਦਾ ਟੈਸਟ ਨਾਲ ਕੋਰੋਨਾਵਾਇਰਸ ਦਾ ਕੁਝ ਘੰਟਿਆਂ ਵਿੱਚ ਹੀ ਪਤਾ ਲਾਇਆ ਜਾ ਸਕਦਾ ਹੈ।",
+        "timestamp": 1589110336000,
+        "language": "pa",
+        "byline": {
+          "name": "ਸਰੋਜ ਸਿੰਘ",
+          "title": "ਬੀਬੀਸੀ ਪੱਤਰਕਾਰ",
+          "persons": [
+            {
+              "name": "بهار مهر و تابش فروغ",
+              "function": "پژوهشگر بین الملل"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112208663",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/8F48/production/_112208663_7e8f4377-16f0-49fd-86f8-9bb117031298.jpg",
+          "path": "/cpsprodpb/8F48/production/_112208663_7e8f4377-16f0-49fd-86f8-9bb117031298.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ਸੌਵਿਕ ਮੈਤੀ ਅਤੇ ਦੇਬਜਯੋਤੀ ਚੱਕਰਵਰਤੀ",
+          "caption": "ਸੌਵਿਕ ਮੈਤੀ ਅਤੇ ਦੇਬਜਯੋਤੀ ਚੱਕਰਵਰਤੀ",
+          "copyrightHolder": "BBC/Debojyoti",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:punjabi/india-52586916",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ਕੈਂਸਰ ਪੀੜਤ ਸਿਹਤ ਮੁਲਾਜ਼ਮ ਜੋ ਆਪਣੀ ਪਰਵਾਹ ਕੀਤੇ ਬਿਨਾਂ ਲੋਕਾਂ ਨੂੰ ਕੋਰੋਨਾਵਾਇਰਸ ਬਾਰੇ ਜਾਗਰੂਕ ਕਰ ਰਹੀ ਹੈ"
+        },
+        "locators": {
+          "assetUri": "/punjabi/india-52564971",
+          "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-52564971",
+          "assetId": "52564971"
+        },
+        "summary": "ਰਮਾ ਇੱਕ ਸਿਹਤ ਕਰਮਚਾਰੀ ਹੈ ਜੋ ਮਹਾਂਮਾਰੀ ਨਾਲ ਲੜਨ ਵਿੱਚ ਸਹਾਇਤਾ ਕਰ ਰਹੀ ਹੈ। ਬੀਬੀਸੀ ਹਿੰਦੀ ਦੀ ਸੁਸ਼ੀਲਾ ਸਿੰਘ ਦੀ ਰਿਪੋਰਟ ਅਨੁਸਾਰ, ਉਹ ਕੈਂਸਰ ਨਾਲ ਵੀ ਜੂਝ ਰਹੀ ਹੈ।",
+        "timestamp": 1589110351000,
+        "language": "pa",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112201658",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/14E6A/production/_112201658_b7cf9e74-3174-4f3e-b9d0-422db59d04d5.jpg",
+          "path": "/cpsprodpb/14E6A/production/_112201658_b7cf9e74-3174-4f3e-b9d0-422db59d04d5.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ਕੋਰੋਨਾਵਾਇਰਸ",
+          "caption": "ਰਮਾ ਇੱਕ ਕਮਿਉਨਿਟੀ ਸਿਹਤ ਕਰਮਚਾਰੀ ਹੈ ਜੋ ਮਹਾਂਮਾਰੀ ਨਾਲ ਲੜਨ ਵਿੱਚ ਸਹਾਇਤਾ ਕਰ ਰਹੀ ਹੈ।",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:punjabi/india-52564971",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ਕੋਰੋਨਾਵਾਇਰਸ: ਭਾਰਤ ਤੋਂ ਲੈ ਕੇ ਅਮਰੀਕਾ ਤੱਕ ਜੋੜਿਆਂ ਨੇ ਜ਼ੂਮ ਐਪ ਜ਼ਰੀਏ ਕਰਵਾਇਆ ਵਿਆਹ"
+        },
+        "locators": {
+          "assetUri": "/punjabi/international-52515584",
+          "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-52515584",
+          "assetId": "52515584"
+        },
+        "summary": "ਕੋਰੋਨਾਵਾਇਰਸ ਕਾਰਨ ਦੁਨੀਆਂ ਦੇ ਜ਼ਿਆਦਾਤਰ ਦੇਸ਼ਾਂ ਵਿੱਚ ਲੌਕਡਾਊਨ ਕੀਤਾ ਗਿਆ ਹੈ ਜਿਸ ਕਾਰਨ ਕਈਆਂ ਦੇ ਵਿਆਹ ਵੀ ਨਹੀਂ ਹੋ ਪਾ ਰਹੇ ਹਨ।",
+        "timestamp": 1588504876000,
+        "language": "pa",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e1739461b000e9dabf6",
+              "campaignName": "WS - CS"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "MAP",
+        "media": {
+          "id": "p08c2wgj",
+          "subType": "clip",
+          "format": "video",
+          "title": "ਕੋਰੋਨਾਵਾਇਰਸ: ਭਾਰਤ ਤੋਂ ਲੈ ਕੇ ਅਮਰੀਕਾ ਤੱਕ ਜੋਡ਼ਿਆ ਨੇ ਜ਼ੂਮ ਐਪ ਜਰੀਏ ਕਰਵਾਇਆ ਵਿਆਹ",
+          "synopses": {
+            "short": "ਕੋਰੋਨਾਵਾਇਰਸ: ਭਾਰਤ ਤੋਂ ਲੈ ਕੇ ਅਮਰੀਕਾ ਤੱਕ ਜੋਡ਼ਿਆ ਨੇ ਜ਼ੂਮ ਐਪ ਜਰੀਏ ਕਰਵਾਇਆ ਵਿਆਹ",
+            "long": "ਕੋਰੋਨਾਵਾਇਰਸ ਕਾਰਨ ਦੁਨੀਆਂ ਦੇ ਜ਼ਿਆਦਾਤਰ ਦੇਸ਼ਾਂ ਵਿੱਚ ਲੌਕਡਾਊਨ ਕੀਤਾ ਗਿਆ ਹੈ ਜਿਸ ਕਾਰਨ ਕਈਆਂ ਦੇ ਵਿਆਹ ਵੀ ਨਹੀਂ ਹੋ ਪਾ ਰਹੇ। ਅਜਿਹੇ ਹੀ ਤਿੰਨ ਵੱਖ-ਵੱਖ ਦੇਸ਼ਾਂ ਦੇ ਜੋਡ਼ੇ ਹਨ ਜਿਨ੍ਹਾਂ ਨੇ ਜ਼ੂਮ ਐਪ ਜ਼ਰੀਏ ਵਿਆਹ ਕਰਵਾਇਆ। ਆਓ ਵੇਖੀਏ ਕਿਵੇਂ ਹੋਏ ਇਹ ਵਿਆਹ।",
+            "medium": "ਕੋਰੋਨਾਵਾਇਰਸ ਕਾਰਨ ਦੁਨੀਆਂ ਦੇ ਜ਼ਿਆਦਾਤਰ ਦੇਸ਼ਾਂ ਵਿੱਚ ਲੌਕਡਾਊਨ ਕੀਤਾ ਗਿਆ ਹੈ ਜਿਸ ਕਾਰਨ ਕਈਆਂ ਦੇ ਵਿਆਹ ਵੀ ਨਹੀਂ ਹੋ ਪਾ ਰਹੇ।"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08c4hp1.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "ਕੋਰੋਨਾਵਾਇਰਸ: ਭਾਰਤ ਤੋਂ ਲੈ ਕੇ ਅਮਰੀਕਾ ਤੱਕ ਜੋਡ਼ਿਆ ਨੇ ਜ਼ੂਮ ਐਪ ਜਰੀਏ ਕਰਵਾਇਆ ਵਿਆਹ",
+          "versions": [
+            {
+              "versionId": "p08c2wgl",
+              "types": [
+                "Original"
+              ],
+              "duration": 207,
+              "durationISO8601": "PT3M27S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableFrom": 1588424001000
+            }
+          ],
+          "imageCopyright": "BBC",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "112095632",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/5C6B/production/_112095632_p08c2wp5.jpg",
+          "path": "/cpsprodpb/5C6B/production/_112095632_p08c2wp5.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "coronavirus",
+          "copyrightHolder": "Shadi.com",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:punjabi/international-52515584",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ਕੋਰੋਨਾਵਾਇਰਸ ਨੂੰ ਪਹਿਲੀ ਵਾਰ ਦੇਖਣ ਵਾਲੀ ਸਾਇੰਟਿਸਟ ਬਾਰੇ ਜਾਣੋ"
+        },
+        "locators": {
+          "assetUri": "/punjabi/india-52482028",
+          "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-52482028",
+          "assetId": "52482028"
+        },
+        "summary": "ਕੋਰੋਨਾਵਾਇਰਸ ਦੀਆਂ ਕਿੱਟਾਂ ਤੋਂ ਮੁਨਾਫ਼ਾ ਕਿਵੇਂ ਅਤੇ ਬੱਚਿਆਂ ਵਿੱਚ ਕੀ ਦਿੱਖ ਰਹੇ ਹਨ ਨਵੇਂ ਲੱਛਣ",
+        "timestamp": 1588311632000,
+        "language": "pa",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112039870",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1ED5/production/_112039870_whatsubject.jpg",
+          "path": "/cpsprodpb/1ED5/production/_112039870_whatsubject.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ਵਿਸ਼ਾਣੂ ਵਿਗਿਆਨੀ (ਵਾਇਰੌਲੌਜਿਸਟ) ਜੂਨ ਅਲਮੇਡਾ ਦਾ ਜਨਮ ਸਾਲ 1930 ਵਿੱਚ ਹੋਇਆ",
+          "caption": "ਵਿਸ਼ਾਣੂ ਵਿਗਿਆਨੀ (ਵਾਇਰੌਲੌਜਿਸਟ) ਜੂਨ ਅਲਮੇਡਾ ਦਾ ਜਨਮ ਸਾਲ 1930 ਵਿੱਚ ਹੋਇਆ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:punjabi/india-52482028",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ਕੋਰੋਨਾਵਾਇਰਸ: ਪਠਾਨਕੋਟ ‘ਚ ਚਿੱਤਰਕਾਰੀ ਰਾਹੀਂ ਲੋਕਾਂ ਨੂੰ ਕੀਤਾ ਜਾ ਰਿਹਾ ਜਾਗਰੂਕ"
+        },
+        "locators": {
+          "assetUri": "/punjabi/media-52515590",
+          "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-52515590",
+          "assetId": "52515590"
+        },
+        "summary": "ਪਠਾਨਕੋਟ ਵਿੱਚ ਕੁਝ ਚਿੱਤਰਕਾਰਾਂ ਨੇ ਜਾਗਰੂਕਤਾ ਫੈਲਾਉਣ ਲਈ ਸੜਕਾਂ 'ਤੇ ਚਿੱਤਰ ਬਣਾਏ ਹਨ। ਕੋਰੋਨਾਵਾਇਰਸ ਖ਼ਿਲਾਫ਼ ਜਾਗਰੂਕ ਕਰਨ ਲਈ ਇਹ ਚਿੱਤਰ ਬਣਾਏ ਗਏ ਹਨ।",
+        "timestamp": 1588430545000,
+        "language": "pa",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "MAP",
+        "media": {
+          "id": "p08c31d1",
+          "subType": "clip",
+          "format": "video",
+          "title": "ਕੋਰੋਨਾਵਾਇਰਸ: ਪਠਾਨਕੋਟ ‘ਚ ਚਿੱਤਰਕਾਰੀ ਰਾਹੀਂ ਲੋਕਾਂ ਨੂੰ ਕੀਤਾ ਜਾ ਰਿਹਾ ਜਾਗਰੂਕ",
+          "synopses": {
+            "short": "ਕੋਰੋਨਾਵਾਇਰਸ: ਪਠਾਨਕੋਟ ‘ਚ ਚਿੱਤਰਕਾਰੀ ਰਾਹੀਂ ਲੋਕਾਂ ਨੂੰ ਕੀਤਾ ਜਾ ਰਿਹਾ ਜਾਗਰੂਕ",
+            "long": "ਪਠਾਨਕੋਟ ਵਿੱਚ ਕੁਝ ਚਿੱਤਰਕਾਰਾਂ ਨੇ ਜਾਗਰੂਕਤਾ ਫੈਲਾਉਣ ਲਈ ਸਡ਼ਕਾਂ 'ਤੇ ਚਿੱਤਰ ਬਣਾਏ ਹਨ।  ਕੋਰੋਨਾਵਾਇਰਸ ਖ਼ਿਲਾਫ਼ ਜਾਗਰੂਕ ਕਰਨ ਲਈ ਇਹ ਚਿੱਤਰ ਬਣਾਏ ਗਏ ਹਨ। \nਐਡਿਟ: ਰਾਜਨ ਪਪਨੇਜਾ",
+            "medium": "ਪਠਾਨਕੋਟ ਵਿੱਚ ਕੁਝ ਚਿੱਤਰਕਾਰਾਂ ਨੇ ਜਾਗਰੂਕਤਾ ਫੈਲਾਉਣ ਲਈ ਸਡ਼ਕਾਂ 'ਤੇ ਚਿੱਤਰ ਬਣਾਏ ਹਨ।  ਕੋਰੋਨਾਵਾਇਰਸ ਖ਼ਿਲਾਫ਼ ਜਾਗਰੂਕ ਕਰਨ ਲਈ ਇਹ ਚਿੱਤਰ ਬਣਾਏ ਗਏ ਹਨ।"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08c35bd.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "ਕੋਰੋਨਾਵਾਇਰਸ: ਪਠਾਨਕੋਟ ‘ਚ ਚਿੱਤਰਕਾਰੀ ਰਾਹੀਂ ਲੋਕਾਂ ਨੂੰ ਕੀਤਾ ਜਾ ਰਿਹਾ ਜਾਗਰੂਕ",
+          "versions": [
+            {
+              "versionId": "p08c31d3",
+              "types": [
+                "Original"
+              ],
+              "duration": 93,
+              "durationISO8601": "PT1M33S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableFrom": 1588427182000
+            }
+          ],
+          "imageCopyright": "BBC",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "112091319",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/164B7/production/_112091319_p08c31mm.jpg",
+          "path": "/cpsprodpb/164B7/production/_112091319_p08c31mm.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "coronavirus",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:punjabi/media-52515590",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ਕੋਰੋਨਾਵਾਇਰਸ ਤੇ ਪਲਾਜ਼ਮਾ ਥੈਰੇਪੀ: ਮਰੀਜ਼ਾਂ ਨੂੰ ਪਲਾਜ਼ਮਾ ਡੋਨੇਟ ਕਰਨ ਵਾਲਿਆਂ ਨੂੰ ਸੁਣੋ"
+        },
+        "locators": {
+          "assetUri": "/punjabi/india-52442961",
+          "cpsUrn": "urn:bbc:content:assetUri:punjabi/india-52442961",
+          "assetId": "52442961"
+        },
+        "summary": "ਦਿੱਲੀ ਦੇ ਮੁੱਖ ਮੰਤਰੀ ਅਰਵਿੰਦ ਕੇਜਰੀਵਾਲ ਨੇ ਦੱਸਿਆ ਸੀ ਕਿ ਕੋਰੋਨਾਵਾਇਰ ਦੇ ਮਰੀਜ਼ਾਂ ਉੱਤੇ ਪਲਾਜ਼ਮਾ ਥੈਰੇਪੀ ਦੇ ਸਿੱਟੇ ਉਤਸ਼ਾਹਜਨਕ ਹਨ",
+        "timestamp": 1587996141000,
+        "language": "pa",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "MAP",
+        "media": {
+          "id": "p08bm43d",
+          "subType": "clip",
+          "format": "video",
+          "title": "ਕੋਰੋਨਾਵਾਇਰਸ: ਜਾਣੋ, ਕੀ ਕਹਿੰਦੇ ਨੇ ਪਲਾਜ਼ਮਾ ਦਾਨ ਕਰਨ ਵਾਲੇ",
+          "synopses": {
+            "short": "ਕੋਰੋਨਾਵਾਇਰਸ: ਜਾਣੋ, ਕੀ ਕਹਿੰਦੇ ਨੇ ਪਲਾਜ਼ਮਾ ਦਾਨ ਕਰਨ ਵਾਲੇ",
+            "long": "26 ਅਪ੍ਰੈਲ ਨੂੰ ਦਿੱਲੀ ਦੇ ਮੁੱਖ ਮੰਤਰੀ ਅਰਵਿੰਦ ਕੇਜਰੀਵਾਲ ਨੇ ਦੱਸਿਆ ਸੀ ਕਿ ਕੋਰੋਨਾਵਾਇਰ ਦੇ ਮਰੀਜ਼ਾਂ ਉੱਤੇ ਪਲਾਜ਼ਮਾ ਥੈਰੇਪੀ ਦੇ ਸਿੱਟੇ ਉਤਸ਼ਾਹਜਨਕ ਹਨ।\nਉਨ੍ਹਾਂ ਨੇ ਹਰੇਕ ਤਬਕੇ ਦੇ ਲੋਕ, ਜੋ ਕੋਰੋਨਾਵਾਇਰਸ ਦੀ ਲਾਗ ਤੋਂ ਠੀਕ ਹੋਏ ਹਨ ਉਨ੍ਹਾਂ ਨੂੰ ਆਪਣਾ ਪਾਲਜ਼ਮਾ ਦਾਨ ਕਰਨ ਲਈ ਵੀ ਅਪੀਲ ਕੀਤੀ ਸੀ।\nਇਸ ਤੋਂ ਬਾਅਦ ਤਬਰੇਜ਼ ਖਾਨ, ਡਾ.ਉਬੈਦ ਆਮਿਰ ਅਤੇ ਅਨੁਜ ਸ਼ਰਮਾ ਨੇ ਆਪਣਾ ਪਲਾਜ਼ਮਾ ਦਾਨ ਕਰਕੇ ਤਜਰਬਾ ਸਾਂਝਾ ਕੀਤਾ।",
+            "medium": "ਦਿੱਲੀ ਦੇ ਮੁੱਖ ਮੰਤਰੀ ਅਰਵਿੰਦ ਕੇਜਰੀਵਾਲ ਨੇ ਦੱਸਿਆ ਸੀ ਕਿ ਕੋਰੋਨਾਵਾਇਰ ਦੇ ਮਰੀਜ਼ਾਂ ਉੱਤੇ ਪਲਾਜ਼ਮਾ ਥੈਰੇਪੀ ਦੇ ਸਿੱਟੇ ਉਤਸ਼ਾਹਜਨਕ ਹਨ"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08bm701.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "ਕੋਰੋਨਾਵਾਇਰਸ: ਜਾਣੋ, ਕੀ ਕਹਿੰਦੇ ਨੇ ਪਲਾਜ਼ਮਾ ਦਾਨ ਕਰਨ ਵਾਲੇ",
+          "versions": [
+            {
+              "versionId": "p08bm67b",
+              "types": [
+                "Editorial"
+              ],
+              "duration": 192,
+              "durationISO8601": "PT3M12S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableFrom": 1587994030000
+            }
+          ],
+          "imageCopyright": "BBC",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "111979509",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/161E5/production/_111979509_p08bm4gr.jpg",
+          "path": "/cpsprodpb/161E5/production/_111979509_p08bm4gr.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ਕੋਰੋਨਾਵਾਇਰਸ",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:punjabi/india-52442961",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ਕੋਰੋਨਾਵਾਇਰਸ ਦੇ ਟੀਕੇ ਦਾ ਯੂਕੇ ’ਚ ਹੋਏ ਪਹਿਲੇ ਮਨੁੱਖੀ ਟ੍ਰਾਇਲ 'ਚ ਹਿੱਸਾ ਲੈਣ ਵਾਲੇ ਕੀ ਕਹਿੰਦੇ"
+        },
+        "locators": {
+          "assetUri": "/punjabi/international-52414568",
+          "cpsUrn": "urn:bbc:content:assetUri:punjabi/international-52414568",
+          "assetId": "52414568"
+        },
+        "summary": "ਯੂਰਪ ’ਚ ਕੋਰੋਨਾਵਾਇਰਸ ਦੇ ਟੀਕੇ ਲਈ ਪਹਿਲਾ ਮਨੁੱਖੀ ਟ੍ਰਾਇਲ ਹੋ ਗਿਆ ਹੈ ਅਤੇ ਇਸ ਲਈ ਚੁਣੇ ਗਏ 800 ਵਲੰਟਰੀਅਰਾਂ ’ਚੋਂ ਦੋ ਨੂੰ ਟੀਕੇ ਵੀ ਲਗਾਏ ਗਏ ਹਨ",
+        "timestamp": 1587787254000,
+        "language": "pa",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e1739461b000e9dabf6",
+              "campaignName": "WS - CS"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "MAP",
+        "media": {
+          "id": "p08bdhwn",
+          "subType": "clip",
+          "format": "video",
+          "title": "ਕੋਰੋਨਾਵਾਇਰਸ: ਯੂਰਪ ’ਚ ਹੋਇਆ ਟੀਕੇ ਲਈ ਪਹਿਲਾ ਮਨੁੱਖੀ ਟ੍ਰਾਇਲ",
+          "synopses": {
+            "short": "ਕੋਰੋਨਾਵਾਇਰਸ: ਯੂਰਪ ’ਚ ਹੋਇਆ ਟੀਕੇ ਲਈ ਪਹਿਲਾ ਮਨੁੱਖੀ ਟ੍ਰਾਇਲ",
+            "long": "ਯੂਰਪ ’ਚ ਕੋਰੋਨਾਵਾਇਰਸ ਦੇ ਟੀਕੇ ਲਈ ਪਹਿਲਾ ਮਨੁੱਖੀ ਟ੍ਰਾਇਲ ਹੋ ਗਿਆ ਹੈ ਅਤੇ ਇਸ ਲਈ ਚੁਣੇ ਗਏ 800 ਵਲੰਟਰੀਅਰਾਂ ’ਚੋਂ ਦੋ ਨੂੰ ਟੀਕੇ ਵੀ ਲਗਾਏ ਗਏ ਹਨ\nਟੀਕਾ ਓਕਸਫੋਰਡ ਯੂਨੀਵਰਸਿਟੀ ਦੀ ਟੀਮ ਵੱਲੋਂ ਤਿਆਰ ਕੀਤਾ ਗਿਆ ਹੈ।",
+            "medium": "ਟੀਕਾ ਓਕਸਫੋਰਡ ਯੂਨੀਵਰਸਿਟੀ ਦੀ ਟੀਮ ਵੱਲੋਂ ਤਿਆਰ ਕੀਤਾ ਗਿਆ ਹੈ।"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08bgc9t.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "ਕੋਰੋਨਾਵਾਇਰਸ: ਯੂਰਪ ’ਚ ਹੋਇਆ ਟੀਕੇ ਲਈ ਪਹਿਲਾ ਮਨੁੱਖ ਟ੍ਰਾਇਲ",
+          "versions": [
+            {
+              "versionId": "p08bdhwt",
+              "types": [
+                "Original"
+              ],
+              "duration": 79,
+              "durationISO8601": "PT1M19S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableFrom": 1587736441000
+            }
+          ],
+          "imageCopyright": "BBC",
+          "type": "media"
+        },
+        "indexImage": {
+          "id": "111935417",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1171D/production/_111935417_mediaitem111935416.jpg",
+          "path": "/cpsprodpb/1171D/production/_111935417_mediaitem111935416.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ਕੋਰੋਨਾਵਾਇਰਸ",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:punjabi/international-52414568",
+        "type": "cps"
+      },
+      {
+        "name": "ਦੇਸ ਭਰ ਤੋਂ ਕੁਝ ਪ੍ਰੇਰਣਾਦਾਇਕ ਕਹਾਣੀਆਂ",
+        "summary": "ਉਨ੍ਹਾਂ ਮਰਦਾਂ ਤੇ ਔਰਤਾਂ ਦੀਆਂ ਕਹਾਣੀਆਂ ਜਿਨ੍ਹਾਂ ਨੇ ਮੁਸ਼ਕਲਾਂ ਦਾ ਸਾਹਮਣਾ ਕਰਦਿਆਂ ਕਾਮਯਾਬੀ ਹਾਸਿਲ ਕੀਤੀ",
+        "indexImage": {
+          "id": "108726770",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1E52/production/_108726770_p07mxfnp.jpg",
+          "path": "/cpsprodpb/1E52/production/_108726770_p07mxfnp.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ਰੂਮਾ ਦੇਵੀ",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "uri": "https://www.bbc.com/punjabi/india-52503417",
+        "contentType": "Text",
+        "assetTypeCode": "PRO",
+        "timestamp": 1588439056000,
+        "type": "link"
+      }
+    ]
+  }
