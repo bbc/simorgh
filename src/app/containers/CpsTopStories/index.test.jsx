@@ -28,6 +28,25 @@ const renderTopStories = ({
   );
 };
 
+const renderTopStoriesNull = ({
+  bbcOrigin = 'https://www.test.bbc.co.uk',
+} = {}) => {
+  return render(
+    <ServiceContextProvider service="pidgin">
+      <RequestContextProvider
+        bbcOrigin={bbcOrigin}
+        isAmp={false}
+        pageType="STY"
+        pathname="/pidgin/tori-49450859"
+        service="pidgin"
+        statusCode={200}
+      >
+        <TopStories content={[]} />
+      </RequestContextProvider>
+    </ServiceContextProvider>,
+  );
+};
+
 describe('CpsRelatedContent', () => {
   it('should render Top Stories components when given appropriate data', () => {
     // Ensure fixture still has top stories
@@ -72,5 +91,17 @@ describe('CpsRelatedContent', () => {
   it('should have an [id] #top-stories-heading', () => {
     renderTopStories();
     expect(document.querySelector(`#top-stories-heading`)).toBeTruthy();
+  });
+
+  it('should not render images for Top Stories components', () => {
+    renderTopStories();
+    expect(document.querySelector('img')).not.toBeInTheDocument();
+  });
+
+  it('should not render Top Stories components if no data is passed', () => {
+    renderTopStoriesNull();
+    expect(document.querySelectorAll(`li[class^='StoryPromoLi']`).length).toBe(
+      0,
+    );
   });
 });
