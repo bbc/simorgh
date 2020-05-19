@@ -17,7 +17,7 @@ const CanonicalAd = () => {
       <Helmet>
         <script src="https://gn-web-assets.api.bbc.com/ngas/beta/dotcom-bootstrap.js" />
       </Helmet>
-      <AdSlot type="leaderboard" />
+      <AdSlot uniqueId="leaderboard" />
     </>
   );
 };

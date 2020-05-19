@@ -1,22 +1,20 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import { string } from 'prop-types';
 
-const AdSlot = ({ type }) => {
-  const location = useLocation();
+const AdSlot = ({ uniqueId }) => {
   useEffect(() => {
     if (window.dotcom) {
       window.dotcom.cmd.push(() => {
-        window.dotcom.ads.registerSlot(type);
+        window.dotcom.ads.registerSlot(uniqueId);
       });
     }
-  }, [type, location]);
+  }, [uniqueId]);
 
-  return <div id={`dotcom-${type}`} className="dotcom-ad" />;
+  return <div id={`dotcom-${uniqueId}`} className="dotcom-ad" />;
 };
 
 AdSlot.propTypes = {
-  type: string.isRequired,
+  uniqueId: string.isRequired,
 };
 
 export default AdSlot;

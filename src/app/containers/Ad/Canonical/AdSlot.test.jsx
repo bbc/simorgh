@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import { BrowserRouter } from 'react-router-dom';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import '@testing-library/jest-dom/extend-expect';
 import AdSlot from './AdSlot';
@@ -10,9 +9,7 @@ describe('CanonicalAds Ads', () => {
   describe('Snapshots', () => {
     shouldMatchSnapshot(
       'should correctly render an AdSlot with leaderboard id',
-      <BrowserRouter>
-        <AdSlot type="leaderboard" />
-      </BrowserRouter>,
+      <AdSlot uniqueId="leaderboard" />,
     );
   });
 
@@ -35,12 +32,7 @@ describe('CanonicalAds Ads', () => {
     it('should call dotcom cmd.push with ad registration', () => {
       act(() => {
         const container = document.createElement('div');
-        ReactDOM.render(
-          <BrowserRouter>
-            <AdSlot type="leaderboard" />
-          </BrowserRouter>,
-          container,
-        );
+        ReactDOM.render(<AdSlot uniqueId="leaderboard" />, container);
       });
 
       expect(push).toHaveBeenCalledTimes(1);

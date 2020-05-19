@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import { BrowserRouter } from 'react-router-dom';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import '@testing-library/jest-dom/extend-expect';
 import CanonicalAd from './index';
@@ -10,9 +9,7 @@ describe('CanonicalAds Ads', () => {
   describe('Snapshots', () => {
     shouldMatchSnapshot(
       'should correctly render an Canonical leaderboard ad with dotcom-bootstrap script',
-      <BrowserRouter>
-        <CanonicalAd service="pidgin" />
-      </BrowserRouter>,
+      <CanonicalAd service="pidgin" />,
     );
   });
 
@@ -35,12 +32,7 @@ describe('CanonicalAds Ads', () => {
     it('should call dotcom bootstrap to enable pageAds and disable playerAds', () => {
       act(() => {
         const container = document.createElement('div');
-        ReactDOM.render(
-          <BrowserRouter>
-            <CanonicalAd />
-          </BrowserRouter>,
-          container,
-        );
+        ReactDOM.render(<CanonicalAd />, container);
       });
 
       expect(bootstrap).toHaveBeenCalledTimes(1);
