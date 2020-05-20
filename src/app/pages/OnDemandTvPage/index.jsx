@@ -20,7 +20,7 @@ const StyledGelPageGrid = styled(GelPageGrid)`
 `;
 
 const OnDemandTvPage = ({ pageData }) => {
-  const { language, headline, shortSynopsis } = pageData;
+  const { language, headline, shortSynopsis, brandTitle } = pageData;
 
   const { dir } = useContext(ServiceContext);
 
@@ -40,7 +40,7 @@ const OnDemandTvPage = ({ pageData }) => {
         columns={getGroups(6, 6, 6, 6, 8, 20)}
         enableGelGutters
       >
-        <h1>On Demand TV</h1>
+        <h1>{brandTitle}</h1>
       </StyledGelPageGrid>
     </>
   );
