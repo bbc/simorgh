@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment, useContext } from 'react';
-import { Helmet } from 'react-helmet';
 import { string, node } from 'prop-types';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
@@ -30,6 +29,7 @@ import MetadataContainer from '#containers/Metadata';
 import MostReadContainer from '#containers/MostRead';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import AdContainer from '#containers/Ad';
+import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
@@ -131,24 +131,6 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
       mostReadEndpointOverride={mostReadEndpointOverride}
       columnLayout="twoColumn"
       wrapper={MostReadWrapper}
-    />
-  );
-
-  const CanonicalAdBootstrapJs = () => (
-    <Helmet
-      script={[
-        {
-          type: 'text/javascript',
-          // Once the Ad script has loaded, ads pushed to `cmd` are rendered
-          innerHTML: `
-            window.dotcom = window.dotcom || { cmd: [] };
-            window.dotcomConfig = {
-              pageAds: true,
-              playerAds: false,
-            };
-          `,
-        },
-      ]}
     />
   );
 
