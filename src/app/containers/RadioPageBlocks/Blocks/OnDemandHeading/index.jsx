@@ -8,6 +8,7 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING,
   GEL_SPACING_TRPL,
+  GEL_SPACING_SEPT,
 } from '@bbc/gel-foundations/spacings';
 import { MEDIA_QUERY_TYPOGRAPHY } from '@bbc/gel-foundations/breakpoints';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
@@ -27,7 +28,7 @@ const BrandTitle = styled.span`
   padding-bottom: ${GEL_SPACING};
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
     padding-bottom: 0;
-    line-height: 3.5rem;
+    line-height: ${GEL_SPACING_SEPT};
   }
 `;
 
