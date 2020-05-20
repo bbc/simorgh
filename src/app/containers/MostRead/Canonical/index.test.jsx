@@ -231,7 +231,7 @@ describe('MostReadContainerCanonical', () => {
 
       expect(nodeLogger.error).toHaveBeenCalledWith(MOST_READ_FETCH_ERROR, {
         url: `www.test.bbc.com/pidgin/mostread.json`,
-        message:
+        error:
           'Error: Unexpected response (HTTP status code 500) when requesting www.test.bbc.com/pidgin/mostread.json',
       });
     });
