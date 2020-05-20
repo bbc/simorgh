@@ -104,6 +104,9 @@ const StoryPromoContainer = ({
   const isStoryPromoPodcast =
     isAssetTypeCode === 'PRO' &&
     pathOr(null, ['contentType'], item) === 'Podcast';
+  const isContentTypeGuide =
+    isAssetTypeCode === 'PRO' &&
+    pathOr(null, ['contentType'], item) === 'Guide';
 
   const { headline, url, isLive } = getHeadlineUrlAndLive(
     item,
@@ -182,20 +185,24 @@ const StoryPromoContainer = ({
           {promoSummary}
         </Summary>
       )}
-      {timestamp && !isStoryPromoPodcast && !isRecommendation && !isLive && (
-        <Timestamp
-          altCalendar={altCalendar}
-          locale={datetimeLocale}
-          timestamp={timestamp}
-          dateTimeFormat="YYYY-MM-DD"
-          format="LL"
-          script={script}
-          padding={false}
-          service={service}
-          timezone={timezone}
-          isRelative={isTenHoursAgo(timestamp)}
-        />
-      )}
+      {timestamp &&
+        !isStoryPromoPodcast &&
+        !isContentTypeGuide &&
+        !isRecommendation &&
+        !isLive && (
+          <Timestamp
+            altCalendar={altCalendar}
+            locale={datetimeLocale}
+            timestamp={timestamp}
+            dateTimeFormat="YYYY-MM-DD"
+            format="LL"
+            script={script}
+            padding={false}
+            service={service}
+            timezone={timezone}
+            isRelative={isTenHoursAgo(timestamp)}
+          />
+        )}
       {promoType === 'top' && relatedItems && (
         <IndexAlsosContainer
           alsoItems={relatedItems}
