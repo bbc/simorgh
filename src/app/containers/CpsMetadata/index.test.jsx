@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitForDomChange } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -35,14 +35,6 @@ const mapProps = {
   imageAltText: 'connectionAltText',
 };
 
-const renderMetadataToDocument = async Component => {
-  render(Component);
-
-  await waitForDomChange({
-    container: document.querySelector('head'),
-  });
-};
-
 describe('CpsMetadata get branded image', () => {
   afterEach(() => {
     delete process.env.SIMORGH_APP_ENV;
@@ -51,26 +43,10 @@ describe('CpsMetadata get branded image', () => {
   it('should render the expected metadata tags', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
 
-    await renderMetadataToDocument(
+    render(
       <Context service="news">
         <CpsMetadata {...mapProps} />
       </Context>,
-    );
-
-    const actual = Array.from(
-      document.querySelectorAll(
-        'head > meta[name^="article:"], head > meta[property*="image"], head > meta[name*="image"]',
-      ),
-    ).map(tag =>
-      tag.hasAttribute('property')
-        ? {
-            property: tag.getAttribute('property'),
-            content: tag.getAttribute('content'),
-          }
-        : {
-            name: tag.getAttribute('name'),
-            content: tag.getAttribute('content'),
-          },
     );
 
     const expected = [
@@ -91,7 +67,25 @@ describe('CpsMetadata get branded image', () => {
       { content: '2018-01-01T13:00:00.000Z', name: 'article:modified_time' },
     ];
 
-    expect(actual).toEqual(expected);
+    await waitFor(() => {
+      const actual = Array.from(
+        document.querySelectorAll(
+          'head > meta[name^="article:"], head > meta[property*="image"], head > meta[name*="image"]',
+        ),
+      ).map(tag =>
+        tag.hasAttribute('property')
+          ? {
+              property: tag.getAttribute('property'),
+              content: tag.getAttribute('content'),
+            }
+          : {
+              name: tag.getAttribute('name'),
+              content: tag.getAttribute('content'),
+            },
+      );
+
+      expect(actual).toEqual(expected);
+    });
   });
 });
 

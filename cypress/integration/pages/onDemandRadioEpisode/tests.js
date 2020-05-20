@@ -7,53 +7,19 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 // For testing feastures that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
   describe(`Tests for ${service} ${pageType}`, () => {
-    describe('On Demand Radio body', () => {
-      it('should render a H1, which contains/displays a styled headline', () => {
-        cy.request(`${Cypress.env('currentPath')}.json?renderer_env=live`).then(
-          ({ body }) => {
-            cy.get('h1').should('contain', body.promo.headlines.headline);
-          },
-        );
+    describe('Brand image visible above 400px, not visible below 400px', () => {
+      it(`Should display image on default viewport (1000x660))`, () => {
+        cy.request(`${Cypress.env('currentPath')}.json`);
+        cy.get('div[class^="ImageContainer"]').find('img');
       });
 
-      it('should render a paragraph, which contains/displays a styled summary', () => {
-        cy.request(`${Cypress.env('currentPath')}.json?renderer_env=live`).then(
-          ({ body }) => {
-            cy.get('[role="main"] p').should(
-              'contain',
-              body.promo.media.synopses.medium,
-            );
-          },
-        );
-      });
-    });
+      it(`Should not display image on iphone-6 screen (375x667)`, () => {
+        cy.viewport('iphone-6');
 
-    describe('Brand image visible above 400, not visible below 400', () => {
-      const sizesBelowBreakpoint = ['iphone-6'];
-
-      sizesBelowBreakpoint.forEach(size => {
-        // make assertions on the image using
-        // an array of different viewports
-        it(`Should display image on ${size} screen`, () => {
-          if (Cypress._.isArray(size)) {
-            cy.viewport(size[0], size[1]);
-          } else {
-            cy.viewport(size);
-          }
-
-          cy.visit(`${Cypress.env('currentPath')}.amp`);
-          // Just using hamburger menu button as an example until the image is on test
-          cy.get('nav').find('button').should('be.visible');
-        });
-      });
-    });
-
-    describe('LinkedData', () => {
-      // will be addressed by this https://github.com/bbc/simorgh/issues/3117
-      it.skip('should include mainEntityOfPage in the LinkedData', () => {
-        cy.get('script[type="application/ld+json"]')
-          .should('contain', 'mainEntityOfPage')
-          .and('contain', 'headline');
+        cy.request(`${Cypress.env('currentPath')}.json`);
+        cy.get('div[class^="ImageContainer"]')
+          .find('img')
+          .should('not.be.visible');
       });
     });
   });
