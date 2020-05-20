@@ -36,7 +36,7 @@ const StyledAd = styled.div`
   display: inline-block;
 `;
 
-const StyledLink = styled.a`
+const StyledLink = styled.a.attrs({ tabIndex: '-1' })`
   ${({ script }) => script && getMinion(script)};
   ${({ service }) => getSansRegular(service)}
   color: ${C_RHINO};
@@ -137,7 +137,6 @@ const AmpAd = () => {
               script={script}
               service={service}
               dir={dir}
-              tabIndex="-1"
             >
               {label}
             </StyledLink>
