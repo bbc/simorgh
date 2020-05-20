@@ -11,7 +11,7 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import { MEDIA_QUERY_TYPOGRAPHY } from '@bbc/gel-foundations/breakpoints';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
-import { getBodyCopy } from '@bbc/gel-foundations/typography';
+import { getDoublePica } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { ServiceContext } from '#contexts/ServiceContext';
 
@@ -26,11 +26,12 @@ const BrandTitle = styled.span`
   padding-bottom: ${GEL_SPACING};
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
     padding-bottom: 0;
+    line-height: 3.5rem;
   }
 `;
 
 const Datestamp = styled.span`
-  ${({ script }) => script && getBodyCopy(script)};
+  ${({ script }) => script && getDoublePica(script)};
   ${({ service }) => getSansRegular(service)};
   color: ${C_SHADOW};
   margin: 0;
