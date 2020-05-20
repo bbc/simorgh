@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import styled from 'styled-components';
 import { string, number, bool, node } from 'prop-types';
 import LazyLoad from 'react-lazyload';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
@@ -20,10 +19,6 @@ const renderImage = (imageToRender, lazyLoad, fallback) =>
     imageToRender
   );
 
-const ImageWithoutPlaceholder = styled(ImagePlaceholder)`
-  background: none;
-`;
-
 const ImageWithPlaceholder = ({
   alt,
   children,
@@ -40,14 +35,13 @@ const ImageWithPlaceholder = ({
 }) => {
   const { isAmp } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
-  const ImageParent = isLoaded ? ImageWithoutPlaceholder : ImagePlaceholder;
   const imageProps = { alt, src, sizes, width, srcset, fade };
   const imageToRender = (
     <Image onLoad={() => setIsLoaded(true)} {...imageProps} />
   );
 
   return (
-    <ImageParent ratio={ratio}>
+    <ImagePlaceholder css={isLoaded && `background: none`} ratio={ratio}>
       {isAmp ? (
         <AmpImg
           alt={alt}
@@ -61,7 +55,7 @@ const ImageWithPlaceholder = ({
         renderImage(imageToRender, lazyLoad, fallback)
       )}
       {children}
-    </ImageParent>
+    </ImagePlaceholder>
   );
 };
 
