@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { string, number } from 'prop-types';
-import { C_EBON } from '@bbc/psammead-styles/colours';
 import styled from 'styled-components';
 import { Headline } from '@bbc/psammead-headings';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
@@ -24,7 +23,6 @@ const StyledHeadline = styled(Headline)`
 
 const BrandTitle = styled.span`
   display: block;
-  color: ${C_EBON};
   padding-bottom: ${GEL_SPACING};
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
     padding-bottom: 0;
@@ -35,7 +33,6 @@ const BrandTitle = styled.span`
 const Datestamp = styled.span`
   ${({ script }) => script && getDoublePica(script)};
   ${({ service }) => getSansRegular(service)};
-  color: ${C_EBON};
   margin: 0;
 `;
 
