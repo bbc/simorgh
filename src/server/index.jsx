@@ -66,7 +66,6 @@ const constructDataFilePath = ({
   switch (pageType) {
     case 'frontpage':
     case 'mostRead':
-    case 'idx':
     case 'secondaryColumn':
       dataPath = `${variant || 'index'}.json`;
       break;
