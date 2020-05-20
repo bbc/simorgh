@@ -3,7 +3,6 @@ import { string } from 'prop-types';
 import { C_EBON } from '@bbc/psammead-styles/colours';
 import styled from 'styled-components';
 import { Headline } from '@bbc/psammead-headings';
-
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const StyledHeadline = styled(Headline)`
