@@ -3208,7 +3208,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/pashto/bbc_pashto_radio/$latestEpisodeId'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/pashto/bbc_pashto_radio/w3ct0lz1'],
