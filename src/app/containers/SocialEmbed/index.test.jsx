@@ -7,13 +7,26 @@ import { twitterBlock, twitterBlockNoEmbed } from './fixtures';
 
 describe('SocialEmbedContainer', () => {
   describe('Canonical', () => {
-    shouldMatchSnapshot(
-      'should render correctly',
-      withContexts(SocialEmbedContainer, {
-        isAmp: false,
-        isEnabled: true,
-      })({ blocks: [twitterBlock] }),
-    );
+    it('should render and unmount correctly', () => {
+      const { container, unmount } = render(
+        withContexts(SocialEmbedContainer, {
+          isAmp: false,
+          isEnabled: true,
+        })({ blocks: [twitterBlock] }),
+      );
+      expect(container.firstChild).toMatchSnapshot();
+      expect(
+        document.querySelector(
+          'head script[src="https://platform.twitter.com/widgets.js"]',
+        ),
+      ).toBeTruthy();
+      unmount();
+      expect(
+        document.querySelector(
+          'head script[src="https://platform.twitter.com/widgets.js"]',
+        ),
+      ).toBeFalsy();
+    });
 
     it('should not render when disabled', () => {
       const { container } = render(
