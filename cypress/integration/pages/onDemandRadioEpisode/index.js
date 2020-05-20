@@ -31,12 +31,11 @@ Object.keys(services)
     const testArgs = { service, pageType, variant };
 
     describe(`${service} - ${pageType}`, () => {
-      let currentPath = path;
       beforeEach(() => {
-        currentPath = getCurrentPath(path);
+        getCurrentPath(path);
       });
 
-      describe(`${currentPath} - Canonical`, () => {
+      describe(`${Cypress.env('currentPath')} - Canonical`, () => {
         beforeEach(() => {
           visitPage(Cypress.env('currentPath'), pageType);
         });
@@ -45,7 +44,7 @@ Object.keys(services)
         runCanonicalTests(testArgs);
       });
 
-      describe(`${currentPath} - AMP`, () => {
+      describe(`${Cypress.env('currentPath')} - AMP`, () => {
         beforeEach(() => {
           visitPage(`${Cypress.env('currentPath')}.amp`, pageType);
         });
