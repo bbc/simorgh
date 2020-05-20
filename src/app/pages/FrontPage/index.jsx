@@ -140,7 +140,13 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         {
           type: 'text/javascript',
           // Once the Ad script has loaded, ads pushed to `cmd` are rendered
-          innerHTML: 'window.dotcom = window.dotcom || { cmd: [] };',
+          innerHTML: `
+            window.dotcom = window.dotcom || { cmd: [] };
+            window.dotcomConfig = {
+              pageAds: true,
+              playerAds: false,
+            };
+          `,
         },
       ]}
     />
