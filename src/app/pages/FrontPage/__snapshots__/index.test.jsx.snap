@@ -863,10 +863,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </span>
                 </h1>
                 <div
-                  class="dotcom-ad"
-                  id="dotcom-leaderboard"
-                />
-                <div
                   class="StyledFrontPageDiv-sc-58u5qv-0 fCyXlu"
                 >
                   <section
