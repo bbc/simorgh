@@ -601,9 +601,9 @@ describe('Server', () => {
 
   describe('IDX json', () => {
     it('should serve a file for valid idx paths', async () => {
-      const { body } = await makeRequest('/persian/afghanistan/index.json');
+      const { body } = await makeRequest('/persian/afghanistan.json');
       expect(body).toEqual(
-        expect.objectContaining({ records: expect.any(Object) }),
+        expect.objectContaining({ content: expect.any(Object) }),
       );
     });
     it('should respond with a 500 for non-existing services', async () => {
