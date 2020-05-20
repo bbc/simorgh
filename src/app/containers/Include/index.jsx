@@ -39,7 +39,7 @@ const IncludeContainer = ({ html, type }) => {
   const configureAdditionalScripts = `require.config({ paths:${paths} });`;
 
   const IncludeGrid = styled(GridItemConstrainedMedium)`
-    display: 'grid';
+    display: grid;
   `;
 
   return (
