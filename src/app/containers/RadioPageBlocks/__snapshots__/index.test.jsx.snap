@@ -11,6 +11,7 @@ exports[`Radio Page Blocks should match snapshot for AMP 1`] = `
   display: block;
   margin: 0;
   padding: 2rem 0;
+  color: #222222;
 }
 
 .c3 {
@@ -150,6 +151,7 @@ exports[`Radio Page Blocks should match snapshot for Canonical 1`] = `
   display: block;
   margin: 0;
   padding: 2rem 0;
+  color: #222222;
 }
 
 .c3 {

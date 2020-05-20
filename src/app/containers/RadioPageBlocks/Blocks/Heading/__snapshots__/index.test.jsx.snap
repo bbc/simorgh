@@ -11,6 +11,7 @@ exports[`MediaPageBlocks Heading should render correctly 1`] = `
   display: block;
   margin: 0;
   padding: 2rem 0;
+  color: #222222;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
