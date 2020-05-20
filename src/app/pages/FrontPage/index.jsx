@@ -23,6 +23,7 @@ import {
 import SectionLabel from '@bbc/psammead-section-label';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
+import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '#containers/FrontPageSection';
 import MetadataContainer from '#containers/Metadata';
@@ -133,23 +134,23 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     />
   );
 
+  const CanonicalAdBootstrapJs = () => (
+    <Helmet
+      script={[
+        {
+          type: 'text/javascript',
+          // Once the Ad script has loaded, ads pushed to `cmd` are rendered
+          innerHTML: 'window.dotcom = window.dotcom || { cmd: [] };',
+        },
+      ]}
+    />
+  );
+
+  const { isAmp } = useContext(RequestContext);
+
   return (
     <>
-      <Helmet
-        script={[
-          {
-            type: 'text/javascript',
-            // Ad config will be used once dotcom script is loaded
-            innerHTML: `
-              window.dotcom = window.dotcom || { cmd: [] };
-              window.dotcomConfig = {
-                pageAds: true,
-                playerAds: false,
-              };
-            `,
-          },
-        ]}
-      />
+      {!isAmp && <CanonicalAdBootstrapJs />}
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
