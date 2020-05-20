@@ -66,11 +66,11 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/ukchina/simp/institutional-38732865',
           text: '使用条款',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/ukchina/simp/institutional-38733670',
           text: '隐私政策',
         },
         {
@@ -78,7 +78,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/ukchina/simp/institutional-38733406',
           text: '联络BBC',
         },
         {
@@ -269,11 +269,11 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/ukchina/trad/institutional-38732865',
           text: '使用條款',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/ukchina/trad/institutional-38733670',
           text: '隱私政策',
         },
         {
@@ -281,7 +281,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/ukchina/trad/institutional-38733406',
           text: '聯絡BBC',
         },
         {
