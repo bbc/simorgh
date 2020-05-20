@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { string, number, bool, node } from 'prop-types';
-import styled from 'styled-components';
 import LazyLoad from 'react-lazyload';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import Image, { AmpImg } from '@bbc/psammead-image';
@@ -20,10 +19,6 @@ const renderImage = (imageToRender, lazyLoad, fallback) =>
     imageToRender
   );
 
-const ImageWithoutPlaceholder = styled(ImagePlaceholder)`
-  background: none;
-`;
-
 const ImageWithPlaceholder = ({
   alt,
   children,
@@ -39,18 +34,14 @@ const ImageWithPlaceholder = ({
   width,
 }) => {
   const { isAmp } = useContext(RequestContext);
-  const [showPlaceholder, setShowPlaceholder] = useState(true);
-
-  const ImageParent = showPlaceholder
-    ? ImagePlaceholder
-    : ImageWithoutPlaceholder;
+  const [hidePlaceholder, setHidePlaceholder] = useState(false);
   const imageProps = { alt, src, sizes, width, srcset, fade };
   const imageToRender = (
-    <Image onLoad={() => setShowPlaceholder(false)} {...imageProps} />
+    <Image onLoad={() => setHidePlaceholder(true)} {...imageProps} />
   );
 
   return (
-    <ImageParent ratio={ratio}>
+    <ImagePlaceholder css={hidePlaceholder && `background: none`} ratio={ratio}>
       {isAmp ? (
         <AmpImg
           alt={alt}
@@ -64,7 +55,7 @@ const ImageWithPlaceholder = ({
         renderImage(imageToRender, lazyLoad, fallback)
       )}
       {children}
-    </ImageParent>
+    </ImagePlaceholder>
   );
 };
 
