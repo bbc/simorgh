@@ -38,8 +38,12 @@ const IncludeContainer = ({ html, type }) => {
 
   const configureAdditionalScripts = `require.config({ paths:${paths} });`;
 
+  const IncludeGrid = styled(GridItemConstrainedMedium)`
+    display: 'grid';
+  `;
+
   return (
-    <GridItemConstrainedMedium>
+    <IncludeGrid>
       {requireIncludeTypes.includes(type) && (
         <Helmet>
           <script
@@ -53,7 +57,7 @@ const IncludeContainer = ({ html, type }) => {
         suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: html }}
       />
-    </GridItemConstrainedMedium>
+    </IncludeGrid>
   );
 };
 
