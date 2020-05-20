@@ -222,7 +222,6 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   display: block;
   margin: 0;
   padding: 2rem 0;
-  color: #222222;
 }
 
 .c6 {
@@ -246,7 +245,6 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
-  color: #222222;
 }
 
 .c1 {
@@ -473,7 +471,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   display: block;
   margin: 0;
   padding: 2rem 0;
-  color: #222222;
 }
 
 .c6 {
@@ -497,7 +494,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
-  color: #222222;
 }
 
 .c1 {
