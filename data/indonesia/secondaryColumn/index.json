@@ -1,0 +1,599 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "Inggris 'kemungkinan besar' alami resesi, angkatan kerja muda merasa 'kehilangan arah'"
+        },
+        "locators": {
+          "assetUri": "/indonesia/dunia-52648325",
+          "cpsUrn": "urn:bbc:content:assetUri:indonesia/dunia-52648325",
+          "assetId": "52648325"
+        },
+        "summary": "Para pekerja muda di Inggris khawatir mereka tidak akan mendapatkan kerja setelah pandemi virus corona mereda sekalipun, sementara Menteri Keuangan Rishi Sunak memperingatkan Inggris \"mengalami resesi signifikan.\"",
+        "timestamp": 1589378988000,
+        "language": "id",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112257451",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/3C73/production/_112257451_b69fc424-8685-4ab6-ae0f-a6879919cf51.jpg",
+          "path": "/cpsprodpb/3C73/production/_112257451_b69fc424-8685-4ab6-ae0f-a6879919cf51.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "warga melewati Tower Bridge",
+          "caption": "Dalam pidato tanggal 10 Mei, PM Inggrs Boris Johnson mengatakan mereka yang tak bisa bekerja dari rumah, dipersilakan kembali bekerja.",
+          "copyrightHolder": "EPA",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:indonesia/dunia-52648325",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Virus corona di Afrika: Ada apa di balik rendahnya angka penyebaran Covid-19?"
+        },
+        "locators": {
+          "assetUri": "/indonesia/dunia-52620045",
+          "cpsUrn": "urn:bbc:content:assetUri:indonesia/dunia-52620045",
+          "assetId": "52620045"
+        },
+        "summary": "Sekitar tiga bulan setelah kasus pertama virus corona di Afrika, benua itu tetap mencatat angka infeksi dan kematian cukup rendah dibandingkan negara-negara lain. Salah satu faktor adalah negara-negara di benua itu bertindak lebih cepat.",
+        "timestamp": 1589375549000,
+        "language": "id",
+        "byline": {
+          "name": "Norberto Paredes",
+          "title": "BBC World Service",
+          "persons": [
+            {
+              "name": "Dan Egan",
+              "function": ""
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112229351",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/3C20/production/_112229351_b1462372-b78a-4f1b-bb6d-10251db6b3e1.jpg",
+          "path": "/cpsprodpb/3C20/production/_112229351_b1462372-b78a-4f1b-bb6d-10251db6b3e1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "anak-anak Afrika",
+          "caption": "Jumlah infeksi virus corona di Afrika tercatat 55.000 kasus.",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:indonesia/dunia-52620045",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Seberapa parah krisis di Arab Saudi?"
+        },
+        "locators": {
+          "assetUri": "/indonesia/dunia-52644985",
+          "cpsUrn": "urn:bbc:content:assetUri:indonesia/dunia-52644985",
+          "assetId": "52644985"
+        },
+        "summary": "Arab Saudi tidak lagi membayarkan subsidi bulanan biaya hidup mulai Juni. Keputusan ini diambil setelah harga minyak dunia anjlok hampir 50% dibanding harga tahun lalu.",
+        "timestamp": 1589368875000,
+        "language": "id",
+        "byline": {
+          "name": "Frank Gardner",
+          "title": "Koresponden keamanan BBC",
+          "persons": [
+            {
+              "name": "Frank Gardner",
+              "function": "BBC security correspondent",
+              "thumbnail": "http://c.files.bbci.co.uk/10CEF/production/_96774886_frankgardner.jpg"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112240105",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/C3B8/production/_112240105_gettyimages-1129844897.jpg",
+          "path": "/cpsprodpb/C3B8/production/_112240105_gettyimages-1129844897.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Mohammed Bin Salman",
+          "caption": "Billboard yang menampilkan foto Muhammad bin Salman tersebar di berbagai pelosok Arab Saudi.",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:indonesia/dunia-52644985",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "Pemenjaraan aktivis Safoora Zargar yang tengah hamil di India, ‘wajah penindasan negara terhadap kebebasan berpendapat’"
+        },
+        "locators": {
+          "assetUri": "/indonesia/dunia-52628790",
+          "cpsUrn": "urn:bbc:content:assetUri:indonesia/dunia-52628790",
+          "assetId": "52628790"
+        },
+        "summary": "Safoora Zargar adalah satu di antara beberapa mahasiswa Muslim dan aktivis di India yang dipenjara sepanjang 'lockdown' Covid-19.",
+        "timestamp": 1589349761000,
+        "language": "id",
+        "byline": {
+          "name": "Geeta Pandey",
+          "title": "BBC News, Delhi",
+          "persons": [
+            {
+              "name": "Geeta Pandey",
+              "function": "BBC News, Delhi"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112222024",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/A426/production/_112222024_photo-2020-05-04-12-17-38.jpg",
+          "path": "/cpsprodpb/A426/production/_112222024_photo-2020-05-04-12-17-38.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Safoora Zargar",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:indonesia/dunia-52628790",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Rusia catat kasus positif virus corona terbanyak kedua di dunia, jubir Putin mengidap Covid-19"
+        },
+        "locators": {
+          "assetUri": "/indonesia/dunia-52627313",
+          "cpsUrn": "urn:bbc:content:assetUri:indonesia/dunia-52627313",
+          "assetId": "52627313"
+        },
+        "summary": "Rusia mencatat terdapat lebih dari 232.000 kasus positif virus corona pada Rabu (13/05), yang menempatkan negara itu pada urutan kedua kasus terbanyak di dunia setelah Amerika Serikat.",
+        "timestamp": 1589330192000,
+        "language": "id",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112250139",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/16BB1/production/_112250139_reuters-tv061442295.jpg",
+          "path": "/cpsprodpb/16BB1/production/_112250139_reuters-tv061442295.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "rusia",
+          "caption": "Seorang tenaga medis membawa seorang pasien ke sebuah rumah sakit di Moskow. Sejauh ini Moskow adalah pusat penyebaran di Rusia. Lebih dari setengah jumlah kasus positif dan jumlah kematian terkait Covid-19 berada di Moskow.",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:indonesia/dunia-52627313",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Kisah guru di Jawa Barat mendatangi rumah murid-muridnya yang tidak punya gawai dan sulit akses siaran televisi"
+        },
+        "locators": {
+          "assetUri": "/indonesia/majalah-52642997",
+          "cpsUrn": "urn:bbc:content:assetUri:indonesia/majalah-52642997",
+          "assetId": "52642997"
+        },
+        "summary": "Pandemi corona mendorong pemerintah memberlakukan pembelajaran jarak jauh (PJJ) secara daring, juga melalui siaran TVRI. Namun, realitanya, tidak semua siswa mampu melakukan PJJ, terutama yang tinggal di daerah terpencil dan belum memiliki gawai, bahkan tidak terjangkau sinyal televisi.",
+        "timestamp": 1589336440000,
+        "language": "id",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112250293",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/9925/production/_112250293_ecf1bf03-7d35-4c29-becc-b8951bdda60d.jpg",
+          "path": "/cpsprodpb/9925/production/_112250293_ecf1bf03-7d35-4c29-becc-b8951bdda60d.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ujang",
+          "caption": "Ujang Setiawan Firdaus memacu motornya menuju rumah-rumah muridnya di Kabupaten Garut, Jawa Barat.",
+          "copyrightHolder": "Yuli Saputra",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:indonesia/majalah-52642997",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Seorang pekerja kereta api Inggris meninggal akibat virus corona setelah diludahi pria tak dikenal"
+        },
+        "locators": {
+          "assetUri": "/indonesia/dunia-52643450",
+          "cpsUrn": "urn:bbc:content:assetUri:indonesia/dunia-52643450",
+          "assetId": "52643450"
+        },
+        "summary": "Seorang pekerja layanan tiket kereta api di Inggris meninggal dunia karena terjangkit virus corona setelah diludahi oleh seorang pria yang mengaku terpapar Covid-19.",
+        "timestamp": 1589357063000,
+        "language": "id",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112240148",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/14888/production/_112240148_belly1.jpg",
+          "path": "/cpsprodpb/14888/production/_112240148_belly1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Belly Mujinga",
+          "caption": "Staf di kantor layanan tiket kereta api, Belly Mujinga meninggal dunia akibat terjangkit virus corona April lalu.",
+          "copyrightHolder": "Family handout",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:indonesia/dunia-52643450",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Bagaimana mutasi memberi petunjuk tentang penyebaran dan asal-usul virus corona"
+        },
+        "locators": {
+          "assetUri": "/indonesia/dunia-52574909",
+          "cpsUrn": "urn:bbc:content:assetUri:indonesia/dunia-52574909",
+          "assetId": "52574909"
+        },
+        "summary": "Para ilmuwan mengamati mutasi pada materi genetik virus penyebab Covid-19 untuk menjabarkan penyebaran dan asal-usul virus corona. Data dari Indonesia masih sangat minim.",
+        "timestamp": 1589294038000,
+        "language": "id",
+        "byline": {
+          "name": "Pijar Anugerah",
+          "title": "BBC News Indonesia",
+          "persons": [
+            {
+              "name": "Rachel Schraer",
+              "function": "Health reporter"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112170389",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/18003/production/_112170389_smallergettyimages-1204224469-1.jpg",
+          "path": "/cpsprodpb/18003/production/_112170389_smallergettyimages-1204224469-1.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Coronavirus up close",
+          "caption": "Researchers have been tracking changes to the 'spike' of the virus",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:indonesia/dunia-52574909",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "'Perempuan tertua di Spanyol' berhasil menaklukkan virus corona di usia 113 tahun"
+        },
+        "locators": {
+          "assetUri": "/indonesia/majalah-52642572",
+          "cpsUrn": "urn:bbc:content:assetUri:indonesia/majalah-52642572",
+          "assetId": "52642572"
+        },
+        "summary": "Di usia 113 tahun, Maria Branyas tidak hanya berhasil menaklukkan virus corona, tetapi juga mampu bertahan hidup selama pandemi flu Spanyol pada 1918-1919 dan Perang Saudara Spanyol 1936-1939.",
+        "timestamp": 1589332411000,
+        "language": "id",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112250076",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/105BD/production/_112250076_mediaitem112246046.jpg",
+          "path": "/cpsprodpb/105BD/production/_112250076_mediaitem112246046.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Stock photo of woman being tested",
+          "caption": "Maria Branyas suffered only mild symptoms",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:indonesia/majalah-52642572",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Wacana simulasi pelonggaran PSBB: 'Apa yang mau dilonggarkan? Ini sudah longgar sekali'"
+        },
+        "locators": {
+          "assetUri": "/indonesia/indonesia-52631514",
+          "cpsUrn": "urn:bbc:content:assetUri:indonesia/indonesia-52631514",
+          "assetId": "52631514"
+        },
+        "summary": "Rencana Gugus Tugas Percepatan Penanganan Covid-19 melakukan simulasi pelonggaran Pembatasan Sosial Berskala Besar (PSBB) dikritik ahli epidemiologi, yang menyebut rencana itu terlalu dini dan tanpa indikator keberhasilan yang jelas.",
+        "timestamp": 1589328079000,
+        "language": "id",
+        "byline": {
+          "name": "Callistasia  Wijaya",
+          "title": "Wartawan BBC News Indonesia",
+          "persons": [
+            {
+              "name": "Callistasia Wijaya",
+              "function": "Wartawan BBC News Indonesia"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112250132",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/5A41/production/_112250132_afp-tv061079868.jpg",
+          "path": "/cpsprodpb/5A41/production/_112250132_afp-tv061079868.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "bekasi",
+          "caption": "Suasana sebuah pasar di Bekasi saat pemberlakuan Pembatasan Sosial Berskala Besar (PSBB).",
+          "copyrightHolder": "AFP/Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:indonesia/indonesia-52631514",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Dua bayi dan sejumlah perawat tewas akibat serangan bersenjata di rumah sakit Afghanistan"
+        },
+        "locators": {
+          "assetUri": "/indonesia/dunia-52642563",
+          "cpsUrn": "urn:bbc:content:assetUri:indonesia/dunia-52642563",
+          "assetId": "52642563"
+        },
+        "summary": "Sejumlah orang meninggal, termasuk dua orang bayi, akibat serangan kelompok militan di sebuah rumah sakit di ibu kota Afghanistan, Kabul.",
+        "timestamp": 1589326515000,
+        "language": "id",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112242207",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/11250/production/_112242207_mediaitem112242206.jpg",
+          "path": "/cpsprodpb/11250/production/_112242207_mediaitem112242206.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "An Afghan soldier shifts a baby at the scene of an attack at MSF (Doctors without Borders) hospital, in Kabul, Afghanistan, 12 May 2020.",
+          "caption": "An Afghan soldier cradles a baby in his arms after the attack in Kabul",
+          "copyrightHolder": "EPA",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:indonesia/dunia-52642563",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Keluarga korban Semanggi I dan II gugat Jaksa Agung ke PTUN, mengapa kasus ini 'mangkrak' selama 22 tahun?"
+        },
+        "locators": {
+          "assetUri": "/indonesia/indonesia-52634302",
+          "cpsUrn": "urn:bbc:content:assetUri:indonesia/indonesia-52634302",
+          "assetId": "52634302"
+        },
+        "summary": "Keluarga Korban Semanggi I dan II menggugat Jaksa Agung ST Burhanuddin ke Pengadilan Tata Usaha Negara (PTUN) Jakarta, Selasa (12/05), atas pernyataannya yang menyebut peristiwa Semanggi I dan II bukan termasuk pelanggaran HAM berat.",
+        "timestamp": 1589286568000,
+        "language": "id",
+        "byline": {
+          "name": "Ayomi Amindoni",
+          "title": "Wartawan BBC News Indonesia",
+          "persons": [
+            {
+              "name": "Ayomi Amindoni",
+              "function": "Wartawan BBC News Indonesia"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+            "categoryName": "Analysis"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112240722",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/58B0/production/_112240722_4688707a-515b-4f94-ad37-7f9f8699d08e.jpg",
+          "path": "/cpsprodpb/58B0/production/_112240722_4688707a-515b-4f94-ad37-7f9f8699d08e.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "aksi kamisan",
+          "copyrightHolder": "KOMPAS.com/GARRY LOTULUNG",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:indonesia/indonesia-52634302",
+        "type": "cps"
+      }
+    ]
+  }

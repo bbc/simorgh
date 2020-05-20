@@ -1,0 +1,691 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "Le paludisme \"complètement stoppé\" par un microbe"
+        },
+        "locators": {
+          "assetUri": "/afrique/region-52536579",
+          "cpsUrn": "urn:bbc:content:assetUri:afrique/region-52536579",
+          "assetId": "52536579"
+        },
+        "summary": "Les scientifiques ont découvert un microbe qui protège complètement les moustiques de l'infection par le paludisme.",
+        "timestamp": 1588664285000,
+        "language": "fr",
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112109640",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1252/production/_112109640_52536579.jpg",
+          "path": "/cpsprodpb/1252/production/_112109640_52536579.jpg",
+          "height": 351,
+          "width": 624,
+          "altText": "Les moustiquaires ont contribué à réduire le nombre de personnes infectées par la malaria dans le monde",
+          "caption": "Les moustiquaires ont contribué à réduire le nombre de personnes infectées par la malaria dans le monde",
+          "copyrightHolder": "Getty",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112112677",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/12F35/production/_112112677_whatsubject.jpg",
+          "path": "/cpsprodpb/12F35/production/_112112677_whatsubject.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Les moustiquaires ont contribué à réduire le nombre de personnes infectées par la malaria dans le monde",
+          "caption": "Les moustiquaires ont contribué à réduire le nombre de personnes infectées par la malaria dans le monde",
+          "copyrightHolder": "Getty",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:afrique/region-52536579",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Ouganda : la population solidaire du gouvernement face au Covid-19"
+        },
+        "locators": {
+          "assetUri": "/afrique/region-52540592",
+          "cpsUrn": "urn:bbc:content:assetUri:afrique/region-52540592",
+          "assetId": "52540592"
+        },
+        "summary": "En Ouganda, la population a fait un don de 6 millions de dollars au gouvernement. Cette somme vise à soutenir les autorités dans la lutte contre le covid-19.",
+        "timestamp": 1588658894000,
+        "language": "fr",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112150342",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/5EF1/production/_112150342_8ddcc379-6fa7-4f4b-bcf7-76af9b0f1510.jpg",
+          "path": "/cpsprodpb/5EF1/production/_112150342_8ddcc379-6fa7-4f4b-bcf7-76af9b0f1510.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Le confinement national imposé par les autorités face au Covid-19 a provoqué une insécurité alimentaire",
+          "caption": "Des citoyens et des entreprises ont offert au gouvernement plus de 50 voitures 4x4 et des ambulances.",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112150344",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/AD11/production/_112150344_8ddcc379-6fa7-4f4b-bcf7-76af9b0f1510.jpg",
+          "path": "/cpsprodpb/AD11/production/_112150344_8ddcc379-6fa7-4f4b-bcf7-76af9b0f1510.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Le confinement national imposé par les autorités face au Covid-19 a provoqué une insécurité alimentaire",
+          "caption": "Des citoyens et des entreprises ont offert au gouvernement plus de 50 voitures 4x4 et des ambulances.",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:afrique/region-52540592",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Un avion transportant du matériel médical s’écrase en Somalie"
+        },
+        "locators": {
+          "assetUri": "/afrique/region-52540590",
+          "cpsUrn": "urn:bbc:content:assetUri:afrique/region-52540590",
+          "assetId": "52540590"
+        },
+        "summary": "Un avion avec à son bord six personnes s'est écrasé lundi dans le Sud-Ouest de la Somalie. Il transportait des fournitures d'aide à la lutte contre le coronavirus.",
+        "timestamp": 1588652426000,
+        "language": "fr",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112149098",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/15C06/production/_112149098_5ce4d9b9-cec8-4923-9119-176a59516dfd.jpg",
+          "path": "/cpsprodpb/15C06/production/_112149098_5ce4d9b9-cec8-4923-9119-176a59516dfd.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Pas de survivants dans le crash lundi soir d'un avion de la société African Airways dans le Sud-Ouest de la Somalie",
+          "caption": "Un avion de la société African Airways s'est écrasé en tentant d'atterrir à Bardale dans le Sud-Ouest de la Somalie",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112149100",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/00C2/production/_112149100_5ce4d9b9-cec8-4923-9119-176a59516dfd.jpg",
+          "path": "/cpsprodpb/00C2/production/_112149100_5ce4d9b9-cec8-4923-9119-176a59516dfd.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Pas de survivants dans le crash lundi soir d'un avion de la société African Airways dans le Sud-Ouest de la Somalie",
+          "caption": "Un avion de la société African Airways s'est écrasé en tentant d'atterrir à Bardale dans le Sud-Ouest de la Somalie",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:afrique/region-52540590",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "Ces médecins confrontés au racisme des patients"
+        },
+        "locators": {
+          "assetUri": "/afrique/region-52402937",
+          "cpsUrn": "urn:bbc:content:assetUri:afrique/region-52402937",
+          "assetId": "52402937"
+        },
+        "summary": "Alors que beaucoup de gens applaudissent les efforts des médecins et des infirmières, le Covid-19 révèle aussi des préjugés profondément ancrés chez certains de leurs patients.",
+        "timestamp": 1588145452000,
+        "language": "fr",
+        "byline": {
+          "name": "Par Tom Donkin",
+          "title": "BBC World Service ",
+          "persons": [
+            {
+              "name": "Thomas Dahlhaus",
+              "function": "BBC World Service"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111835698",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/15E35/production/_111835698_liang2.png",
+          "path": "/cpsprodpb/15E35/production/_111835698_liang2.png",
+          "height": 549,
+          "width": 976,
+          "altText": "Dr Rhea Liang in an operating theatre",
+          "copyrightHolder": "Rhea Liang",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:afrique/region-52402937",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Le Cameroun assouplit ses mesures de lutte contre le Covid-19"
+        },
+        "locators": {
+          "assetUri": "/afrique/52496808",
+          "cpsUrn": "urn:bbc:content:assetUri:afrique/52496808",
+          "assetId": "52496808"
+        },
+        "summary": "Ces différentes mesures \"ont entrainé des distorsions économiques et sociales, dont les effets se font ressentir dans plusieurs secteurs d’activités\" selon le gouvernement.",
+        "timestamp": 1588302960000,
+        "language": "fr",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112054662",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/6815/production/_112054662_gettyimages-1205430323-594x594.jpg",
+          "path": "/cpsprodpb/6815/production/_112054662_gettyimages-1205430323-594x594.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Des taxis circulant devant l'hôpital central de Yaoundé.",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112054664",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/B635/production/_112054664_gettyimages-1205430323-594x594.jpg",
+          "path": "/cpsprodpb/B635/production/_112054664_gettyimages-1205430323-594x594.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Des taxis circulant devant l'hôpital central de Yaoundé.",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:afrique/52496808",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Cas de Coronavirus: l'impact à travers le monde"
+        },
+        "locators": {
+          "assetUri": "/afrique/monde-52296932",
+          "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-52296932",
+          "assetId": "52296932"
+        },
+        "summary": "Cette carte réalisée par la BBC et mise à jour automatiquement révèle l'expansion du coronavirus dans le monde depuis son apparition dans la province du Hubei en décembre 2019.",
+        "timestamp": 1587853587000,
+        "language": "fr",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+            "categoryName": "Interactive"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e1739461b000e9dabf6",
+              "campaignName": "WS - CS"
+            },
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111953988",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/15B67/production/_111953988_mediaitem111953987.jpg",
+          "path": "/cpsprodpb/15B67/production/_111953988_mediaitem111953987.jpg",
+          "height": 394,
+          "width": 700,
+          "altText": "Cas de Coronavirus: l'impact à travers le monde",
+          "caption": "Cas de Coronavirus: l'impact à travers le monde",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "111953990",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/26CF/production/_111953990_mediaitem111953987.jpg",
+          "path": "/cpsprodpb/26CF/production/_111953990_mediaitem111953987.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Cas de Coronavirus: l'impact à travers le monde",
+          "caption": "Cas de Coronavirus: l'impact à travers le monde",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:afrique/monde-52296932",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Mort de Denis Goldberg, vétéran de la lutte anti-apartheid"
+        },
+        "locators": {
+          "assetUri": "/afrique/region-52496807",
+          "cpsUrn": "urn:bbc:content:assetUri:afrique/region-52496807",
+          "assetId": "52496807"
+        },
+        "summary": "Au début des années 60, comparant le régime d'apartheid aux nazis, il a décidé de rejoindre la résistance armée. Il a été emprisonné pendant plus de 20 ans.",
+        "timestamp": 1588298495000,
+        "language": "fr",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            },
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112054162",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/6621/production/_112054162_gettyimages-173303930-594x594.jpg",
+          "path": "/cpsprodpb/6621/production/_112054162_gettyimages-173303930-594x594.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Denis Goldberg assis dans une ferme en Afrique du Sud",
+          "caption": "Denis Goldberg était le fils de Juifs britanniques qui avaient émigré en Afrique du Sud.",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112054656",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/1006D/production/_112054656_gettyimages-173303930-594x594.jpg",
+          "path": "/cpsprodpb/1006D/production/_112054656_gettyimages-173303930-594x594.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Denis Goldberg assis dans une ferme en Afrique du Sud",
+          "caption": "Denis Goldberg était le fils de Juifs britanniques qui avaient émigré en Afrique du Sud.",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:afrique/region-52496807",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Coronavirus : \"un milliard de personnes pourraient être infectées\""
+        },
+        "locators": {
+          "assetUri": "/afrique/region-52479396",
+          "cpsUrn": "urn:bbc:content:assetUri:afrique/region-52479396",
+          "assetId": "52479396"
+        },
+        "summary": "Un milliard de personnes pourraient être infectées par le coronavirus à travers le monde si les pays les plus vulnérables ne reçoivent pas une aide urgente, a averti une organisation caritative.",
+        "timestamp": 1588183028000,
+        "language": "fr",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112024076",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/105E2/production/_112024076_76b7dbf8-6b6d-48a5-82ad-bff33c7ee563.jpg",
+          "path": "/cpsprodpb/105E2/production/_112024076_76b7dbf8-6b6d-48a5-82ad-bff33c7ee563.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Des mesures sont prises dans les aéroports pour enrayer la propagation du Covid-19",
+          "caption": "Des mesures sont prises dans les aéroports pour enrayer la propagation du Covid-19",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:afrique/region-52479396",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Alerte au coronavirus: un syndrome rare observé chez des enfants"
+        },
+        "locators": {
+          "assetUri": "/afrique/region-52472677",
+          "cpsUrn": "urn:bbc:content:assetUri:afrique/region-52472677",
+          "assetId": "52472677"
+        },
+        "summary": "Des symptômes inquiétant ont été observé chez des enfants atteint du coronavirus en Angleterre et dans certains pays d’Europe.",
+        "timestamp": 1588162760000,
+        "language": "fr",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112021848",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/14B4C/production/_112021848_4ed8c539-79d8-4960-8892-4fe8157222aa.jpg",
+          "path": "/cpsprodpb/14B4C/production/_112021848_4ed8c539-79d8-4960-8892-4fe8157222aa.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Les enfants développent rarement des formes graves de Covid-19",
+          "caption": "Les enfants développent rarement des formes graves de Covid-19",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112021850",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/16B4/production/_112021850_4ed8c539-79d8-4960-8892-4fe8157222aa.jpg",
+          "path": "/cpsprodpb/16B4/production/_112021850_4ed8c539-79d8-4960-8892-4fe8157222aa.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Les enfants développent rarement des formes graves de Covid-19",
+          "caption": "Les enfants développent rarement des formes graves de Covid-19",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:afrique/region-52472677",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Le mystère des morts en cascade à Kano au Nigeria"
+        },
+        "locators": {
+          "assetUri": "/afrique/region-52473250",
+          "cpsUrn": "urn:bbc:content:assetUri:afrique/region-52473250",
+          "assetId": "52473250"
+        },
+        "summary": "Qu'est-ce qui se cache derrière les morts inexpliquées de Kano au Nigeria ?",
+        "timestamp": 1588175462000,
+        "language": "fr",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112024073",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/90B2/production/_112024073_0871c8ec-c21e-4fea-bbc1-4aac00733e93.jpg",
+          "path": "/cpsprodpb/90B2/production/_112024073_0871c8ec-c21e-4fea-bbc1-4aac00733e93.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Le président nigérian Muhammadu Buhari",
+          "caption": "Le président nigérian Muhammadu Buhari",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112037542",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/5FFD/production/_112037542_0871c8ec-c21e-4fea-bbc1-4aac00733e93.jpg",
+          "path": "/cpsprodpb/5FFD/production/_112037542_0871c8ec-c21e-4fea-bbc1-4aac00733e93.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Le président nigérian Muhammadu Buhari",
+          "caption": "Le président nigérian Muhammadu Buhari",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:afrique/region-52473250",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Coronavirus: quels sont les derniers symptômes ?"
+        },
+        "locators": {
+          "assetUri": "/afrique/region-52374442",
+          "cpsUrn": "urn:bbc:content:assetUri:afrique/region-52374442",
+          "assetId": "52374442"
+        },
+        "summary": "Alors que le virus Covid-19 provoque un blocage dans le monde entier, nous en apprenons davantage sur ses symptômes. Qu'est-ce qu'une toux sèche, quelle est la probabilité de vivre ou de mourir et combien de personnes sont asymptomatiques?",
+        "timestamp": 1587551210000,
+        "language": "fr",
+        "byline": {
+          "name": "By Pablo Uchoa",
+          "title": "BBC Brasil",
+          "persons": [
+            {
+              "name": "Pablo Uchoa",
+              "function": "BBC Brasil"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111877475",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/E085/production/_111877475_1.what_you_need_to_do.png",
+          "path": "/cpsprodpb/E085/production/_111877475_1.what_you_need_to_do.png",
+          "height": 549,
+          "width": 976,
+          "altText": "Que faire",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "111877477",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/12EA5/production/_111877477_1.what_you_need_to_do.png",
+          "path": "/cpsprodpb/12EA5/production/_111877477_1.what_you_need_to_do.png",
+          "height": 180,
+          "width": 320,
+          "altText": "Que faire",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:afrique/region-52374442",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "\"Les masques faciaux ont sauvé mon atelier de couture\""
+        },
+        "locators": {
+          "assetUri": "/afrique/region-52449160",
+          "cpsUrn": "urn:bbc:content:assetUri:afrique/region-52449160",
+          "assetId": "52449160"
+        },
+        "summary": "Au Sénégal, le business des masques faciaux redonne un nouveau souffle à l'économie informelle",
+        "timestamp": 1588094325000,
+        "language": "fr",
+        "byline": {
+          "name": "Ndèye Khady  LO",
+          "title": "Senior Journaliste/Digital",
+          "persons": [
+            {
+              "name": "Ndèye Khady LO",
+              "function": "Senior Journaliste/Digital",
+              "thumbnail": "http://c.files.bbci.co.uk/E50D/production/_101973685_mediaitem95573612.jpg"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111995629",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/169F3/production/_111995629_3a9adf16-20ce-41ca-bed0-6619e49d3cba.jpg",
+          "path": "/cpsprodpb/169F3/production/_111995629_3a9adf16-20ce-41ca-bed0-6619e49d3cba.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Khadim Diop en train d'emballer ses masques avant de les livrer",
+          "caption": "Khadim Diop en train d'emballer ses masques avant de les livrer",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "111996606",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/ECFD/production/_111996606_3a9adf16-20ce-41ca-bed0-6619e49d3cba.jpg",
+          "path": "/cpsprodpb/ECFD/production/_111996606_3a9adf16-20ce-41ca-bed0-6619e49d3cba.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Khadim Diop en train d'emballer ses masques avant de les livrer",
+          "caption": "Khadim Diop en train d'emballer ses masques avant de les livrer",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:afrique/region-52449160",
+        "type": "cps"
+      }
+    ]
+  }

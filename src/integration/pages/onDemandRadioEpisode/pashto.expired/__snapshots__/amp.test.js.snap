@@ -6,6 +6,6 @@ exports[`AMP On Demand Radio Episode Expired Episode I can see the brand title 1
 
 exports[`AMP On Demand Radio Episode Expired Episode I can see the episode summary 1`] = `"د نړۍ وروستي خبرونه"`;
 
-exports[`AMP On Demand Radio Episode Expired Episode I can see the episode title 1`] = `"۱۵ می ۲۰۲۰"`;
+exports[`AMP On Demand Radio Episode Expired Episode I can see the episode title 1`] = `"۴ فبروري ۲۰۲۰"`;
 
-exports[`AMP On Demand Radio Episode Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"وروستي خبرونه, ۱۵ می ۲۰۲۰"`;
+exports[`AMP On Demand Radio Episode Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"وروستي خبرونه, ۴ فبروري ۲۰۲۰"`;
