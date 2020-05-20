@@ -151,7 +151,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                             class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                           >
                             <div
-                              class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                              class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                             >
                               <amp-img
                                 alt="Senator Ahmad Lawan and Ali Ndume"
@@ -297,7 +297,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                               class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                               >
                                 <amp-img
                                   alt="Messi, Iwobi, Ronaldo"
@@ -352,7 +352,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                               class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                               >
                                 <amp-img
                                   alt="A lone Koala perches in a eucalyptus tree"
@@ -438,7 +438,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                               class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                               >
                                 <amp-img
                                   alt="Rashidi"
@@ -493,7 +493,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                               class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                               >
                                 <amp-img
                                   alt="all-time African XI promo image"
@@ -548,7 +548,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                               class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                               >
                                 <amp-img
                                   alt="all-time African XI promo image"
@@ -603,7 +603,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                               class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                               >
                                 <amp-img
                                   alt="all-time African XI promo image"
@@ -681,7 +681,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                               class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                               >
                                 <amp-img
                                   alt="Sane"
@@ -736,7 +736,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                               class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                               >
                                 <amp-img
                                   alt="A lone Koala perches in a eucalyptus tree"
@@ -910,7 +910,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                           >
                             <div
-                              class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                              class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                             >
                               <img
                                 alt="Senator Ahmad Lawan and Ali Ndume"
@@ -1056,7 +1056,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                               >
                                 <div
                                   class="lazyload-placeholder"
@@ -1106,7 +1106,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                               >
                                 <div
                                   class="lazyload-placeholder"
@@ -1187,7 +1187,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                               >
                                 <div
                                   class="lazyload-placeholder"
@@ -1237,7 +1237,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                               >
                                 <div
                                   class="lazyload-placeholder"
@@ -1287,7 +1287,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                               >
                                 <div
                                   class="lazyload-placeholder"
@@ -1337,7 +1337,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                               >
                                 <div
                                   class="lazyload-placeholder"
@@ -1410,7 +1410,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                               >
                                 <div
                                   class="lazyload-placeholder"
@@ -1460,7 +1460,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                               >
                                 <div
                                   class="lazyload-placeholder"
