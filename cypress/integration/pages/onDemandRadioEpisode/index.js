@@ -1,59 +1,56 @@
+/* eslint-disable no-console */
 import services from '../../../support/config/services';
 import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
 import getPaths from '../../../support/helpers/getPaths';
 import visitPage from '../../../support/helpers/visitPage';
+import getAppEnv from '../../../support/helpers/getAppEnv';
 
-import { testsThatFollowSmokeTestConfigForAMPOnly } from './testsForAMPOnly';
-import { testsThatFollowSmokeTestConfigForCanonicalOnly } from './testsForCanonicalOnly';
-
-const runAmpTests = testsThatFollowSmokeTestConfigForAMPOnly;
-const runCanonicalTests = testsThatFollowSmokeTestConfigForCanonicalOnly;
+import runAmpTests from './testsForAMPOnly';
+import runCanonicalTests from './testsForCanonicalOnly';
+import runCrossPlatformTests from './tests';
+import { getEpisodeId } from './helpers';
 
 const pageType = 'onDemandRadioEpisode';
 
+const getCurrentPath = async path => {
+  let currentPath = path;
+  if (getAppEnv() !== 'local') {
+    const episodeId = await getEpisodeId(path);
+    currentPath = path.replace('$latestEpisodeId', episodeId);
+  }
+  Cypress.env('currentPath', currentPath);
+  return currentPath;
+};
+
 Object.keys(services)
   .filter(service => serviceHasPageType(service, pageType))
-  .forEach(serviceId => {
-    const { variant, name: service } = services[serviceId];
+  .forEach(service => {
+    const [path] = getPaths(service, pageType);
+    const { variant } = services[service];
 
-    const enabledPaths = getPaths(serviceId, pageType);
+    const testArgs = { service, pageType, variant };
 
-    let currentPath;
-    if (enabledPaths.length > 0) {
-      // Get the latest episode for this service from live
-      const scheduleDataPath = `https://www.bbc.com/${enabledPaths[0]}/schedule.json`;
-
-      fetch(`${scheduleDataPath}`).then(({ body: scheduleJsonData }) => {
-        const episodeId = scheduleJsonData.schedules[0].episode.pid;
-        currentPath = `${enabledPaths[0]}/${episodeId}`;
-      });
-    }
-
-    console.log(currentPath);
-
-    let testArgs;
-    fetch(`${currentPath}.json`).then(({ body: jsonData }) => {
-      testArgs = {
-        service,
-        pageType,
-        variant,
-        jsonData,
-      };
-    });
-
-    describe(` - ${currentPath} - Canonical`, () => {
-      before(() => {
-        visitPage(currentPath, pageType);
+    describe(`${service}`, () => {
+      beforeEach(() => {
+        getCurrentPath(path);
       });
 
-      runCanonicalTests(testArgs);
-    });
+      describe(`${Cypress.env('currentPath')} - Canonical`, () => {
+        beforeEach(() => {
+          visitPage(Cypress.env('currentPath'), pageType);
+        });
 
-    describe(`${pageType} - ${currentPath} - AMP`, () => {
-      before(() => {
-        visitPage(`${currentPath}.amp`, pageType);
+        runCrossPlatformTests(testArgs);
+        runCanonicalTests(testArgs);
       });
 
-      runAmpTests(testArgs);
+      describe(`${Cypress.env('currentPath')} - AMP`, () => {
+        beforeEach(() => {
+          visitPage(`${Cypress.env('currentPath')}.amp`, pageType);
+        });
+
+        runCrossPlatformTests(testArgs);
+        runAmpTests(testArgs);
+      });
     });
   });

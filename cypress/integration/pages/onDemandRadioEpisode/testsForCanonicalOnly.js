@@ -1,55 +1,42 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
-import getEmbedUrl from './helpers';
+import { getEmbedUrl, hasMedia, getOnDemandRadioDataEndpoint } from './helpers';
+import appToggles from '../../../support/helpers/useAppToggles';
 
-// For testing important features that differ between services, e.g. Timestamps.
-// We recommend using inline conditional logic to limit tests to services which differ.
-export const testsThatAlwaysRunForCanonicalOnly = ({ service, pageType }) => {
-  describe(`No testsToAlwaysRunForCanonicalOnly to run for ${service} ${pageType}`, () => {});
-};
+export default ({ service, pageType, variant }) => {
+  describe('Audio Player', () => {
+    it('should render an iframe with a valid URL', () => {
+      const { lang: language, service: serviceName } = appConfig[service][
+        variant
+      ];
 
-// For testing feastures that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
-  service,
-  pageType,
-  variant,
-}) =>
-  describe(`testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {
-    describe('Audio Player', () => {
-      const { lang } = appConfig[service][variant];
-      let embedUrl;
+      cy.request(getOnDemandRadioDataEndpoint()).then(({ body: jsonData }) => {
+        if (hasMedia(jsonData)) {
+          const embedUrl = getEmbedUrl({
+            jsonData,
+            service: serviceName,
+            language,
+          });
 
-      beforeEach(() => {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-          embedUrl = getEmbedUrl(body, lang);
-        });
+          cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
+          cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
+        } else {
+          cy.log(
+            `No media present on ${pageType} for ${Cypress.env('currentPath')}`,
+          );
+        }
       });
-
-      it('should be rendered', () => {
-        cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
-      });
-
-      it('embed URL should be reachable', () => {
-        cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
-      });
-    });
-
-    describe('Chartbeat', () => {
-      if (envConfig.chartbeatEnabled) {
-        it('should have a script with src value set to chartbeat source', () => {
-          cy.hasScriptWithChartbeatSrc();
-        });
-        it('should have chartbeat config set to window object', () => {
-          cy.hasGlobalChartbeatConfig();
-        });
-      }
     });
   });
 
-// For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
-export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = ({
-  service,
-  pageType,
-}) => {
-  describe(`No testsToNeverSmokeTestForCanonicalOnly to run for ${service} ${pageType}`, () => {});
+  describe('Chartbeat', () => {
+    if (appToggles.chartbeatAnalytics.enabled && envConfig.chartbeatEnabled) {
+      it('should have a script with src value set to chartbeat source', () => {
+        cy.hasScriptWithChartbeatSrc();
+      });
+      it('should have chartbeat config set to window object', () => {
+        cy.hasGlobalChartbeatConfig();
+      });
+    }
+  });
 };
