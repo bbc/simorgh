@@ -81,7 +81,7 @@ const mostReadItems = ({ data, numberOfItems }) => {
         items.push(mostReadItemData);
       } else {
         logger.warn(MOST_READ_DATA_INCOMPLETE, {
-          message: 'Most read item is missing title or link data fields',
+          message: `Most read data promo has href: ${href} and title: ${title}`,
         });
       }
 

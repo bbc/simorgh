@@ -241,21 +241,25 @@ describe('processMostRead', () => {
         description:
           'should log MOST_READ_DATA_INCOMPLETE when most read item title is missing',
         data: kyrgyzDataWithInvalidPromo(missingTitleOptimoPromo),
+        message:
+          'Most read data promo has href: null and title: Most read item title',
         numberOfItems: 5,
       },
       {
         description:
           'should log MOST_READ_DATA_INCOMPLETE when most read item href is missing',
         data: kyrgyzDataWithInvalidPromo(missingHrefOptimoPromo),
+        message:
+          'Most read data promo has href: https://www.bbc.com/news/articles/cn060pe01e5o and title: null',
         numberOfItems: 5,
       },
-    ].forEach(({ description, data, numberOfItems }) => {
+    ].forEach(({ description, data, message, numberOfItems }) => {
       it(description, () => {
         processMostRead({ data, numberOfItems });
         expect(nodeLogger.warn).toHaveBeenCalledWith(
           MOST_READ_DATA_INCOMPLETE,
           {
-            message: 'Most read item is missing title or link data fields',
+            message,
           },
         );
       });

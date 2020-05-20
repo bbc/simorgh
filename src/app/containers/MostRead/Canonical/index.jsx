@@ -73,12 +73,12 @@ const CanonicalMostRead = ({
       const fetchMostReadData = pathname => {
         logger.info(MOST_READ_CLIENT_REQUEST, { url: endpoint });
 
-        return fetch(pathname, { mode: 'no-cors' })
+        return fetch(pathname)
           .then(handleResponse(pathname))
           .catch(error => {
             logger.error(MOST_READ_FETCH_ERROR, {
               url: pathname,
-              message: error.toString(),
+              error: error.toString(),
             });
           });
       };
