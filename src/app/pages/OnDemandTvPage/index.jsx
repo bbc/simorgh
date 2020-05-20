@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { shape, string, number } from 'prop-types';
+import { shape, string } from 'prop-types';
 import MetadataContainer from '../../containers/Metadata';
 import { GelPageGrid } from '#app/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -49,13 +49,6 @@ const OnDemandTvPage = ({ pageData }) => {
 OnDemandTvPage.propTypes = {
   pageData: shape({
     brandTitle: string,
-    headline: string,
-    summary: string,
-    language: string,
-    episodeAvailableFrom: number,
-    episodeAvailableUntil: number,
-    releaseDateTimeStamp: number,
-    imageUrl: string,
   }).isRequired,
 };
 

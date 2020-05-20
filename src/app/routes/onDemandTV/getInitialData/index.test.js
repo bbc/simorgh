@@ -17,20 +17,11 @@ describe('Get initial data for on demand tv', () => {
       path: 'mock-on-demand-tv-path',
     });
 
-    expect(pageData.headline).toEqual('نړۍ دا وخت');
-    expect(pageData.releaseDateTimeStamp).toEqual(1589328000000);
-    expect(pageData.summary).toEqual(
-      'د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.',
-    );
     expect(pageData.language).toEqual('ps');
-    expect(pageData.metadata.type).toEqual('On Demand TV');
-    expect(pageData.imageUrl).toEqual(
-      'ichef.bbci.co.uk/images/ic/$recipe/p06cy5rd.png',
-    );
-    expect(pageData.promoBrandTitle).toEqual('نړۍ دا وخت');
-    expect(pageData.durationISO8601).toEqual('PT24M');
-    expect(pageData.thumbnailImageUrl).toEqual(
-      'https://ichef.bbci.co.uk/images/ic/1024x576/p06cy5rd.png',
+    expect(pageData.brandTitle).toEqual('نړۍ دا وخت');
+    expect(pageData.headline).toEqual('نړۍ دا وخت');
+    expect(pageData.shortSynopsis).toEqual(
+      'د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.',
     );
   });
 
