@@ -103,7 +103,8 @@ exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
               <a
                 class="c3"
                 dir="ltr"
-                href="https://www.bbc.co.uk/usingthebbc/cookies/"
+                href="https://www.bbc.com/usingthebbc/cookies/"
+                tabindex="-1"
               >
                 Tori we dem pay for
               </a>

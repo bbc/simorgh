@@ -102,6 +102,8 @@ const AMP_ACCESS_DATA = endpoint => ({
   },
 });
 
+const LABEL_LINK = 'https://www.bbc.com/usingthebbc/cookies/';
+
 export const AMP_ACCESS_FETCH = service => {
   const togglesEndpoint = `${process.env.SIMORGH_TOGGLES_URL}/toggles?application=simorgh&service=${service}&geoiplookup=true`;
 
@@ -114,10 +116,8 @@ export const AMP_ACCESS_FETCH = service => {
 
 // eslint-disable-next-line react/prop-types
 const AmpAd = () => {
-  const { ads, dir, script, service, footer } = useContext(ServiceContext);
+  const { ads, dir, script, service } = useContext(ServiceContext);
   const label = pathOr('Advertisement', ['advertisementLabel'], ads);
-  const links = pathOr(null, ['links'], footer);
-  const labelLink = links && pathOr(null, ['href'], links[3]);
 
   return (
     <FullWidthWrapper>
@@ -133,10 +133,11 @@ const AmpAd = () => {
         >
           <StyledAd>
             <StyledLink
-              href={labelLink}
+              href={LABEL_LINK}
               script={script}
               service={service}
               dir={dir}
+              tabIndex="-1"
             >
               {label}
             </StyledLink>
