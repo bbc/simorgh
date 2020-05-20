@@ -607,7 +607,9 @@ describe('Server', () => {
       );
     });
     it('should respond with a 500 for non-existing services', async () => {
-      const { statusCode } = await makeRequest('/some-service/index.json');
+      const { statusCode } = await makeRequest(
+        '/some-service/ukraine_in_russian.json',
+      );
       expect(statusCode).toEqual(500);
     });
   });
