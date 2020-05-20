@@ -42,6 +42,13 @@ export const buildATIPageTrackPath = ({
   categoryName,
   campaigns,
 }) => {
+  const href = getHref(platform);
+  const referrer = getReferrer(platform, origin, previousPath);
+
+  const x5Value = platform === 'amp' ? href : href && encodeURIComponent(href);
+  const x6Value =
+    platform === 'amp' ? referrer : referrer && encodeURIComponent(referrer);
+
   const pageViewBeaconValues = [
     {
       key: 's',
@@ -108,13 +115,13 @@ export const buildATIPageTrackPath = ({
     {
       key: 'x5',
       description: 'url',
-      value: getHref(platform),
+      value: x5Value,
       wrap: true,
     },
     {
       key: 'x6',
       description: 'referrer url',
-      value: getReferrer(platform, origin, previousPath),
+      value: x6Value,
       wrap: true,
     },
     { key: 'x7', description: 'content type', value: contentType, wrap: true },
