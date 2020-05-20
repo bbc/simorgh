@@ -1,6 +1,10 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
-import { getEmbedUrl, hasMedia, getOnDemandRadioDataEndpoint } from './helpers';
+import {
+  getEmbedUrl,
+  hasMedia,
+  getOnDemandRadioDataEndpoint,
+} from './utilities';
 import appToggles from '../../../support/helpers/useAppToggles';
 
 export default ({ service, pageType, variant }) => {

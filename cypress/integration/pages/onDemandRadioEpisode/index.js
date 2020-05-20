@@ -8,7 +8,7 @@ import getAppEnv from '../../../support/helpers/getAppEnv';
 import runAmpTests from './testsForAMPOnly';
 import runCanonicalTests from './testsForCanonicalOnly';
 import runCrossPlatformTests from './tests';
-import { getEpisodeId } from './helpers';
+import { getEpisodeId } from './utilities';
 
 const pageType = 'onDemandRadioEpisode';
 
@@ -30,12 +30,13 @@ Object.keys(services)
 
     const testArgs = { service, pageType, variant };
 
-    describe(`${service}`, () => {
+    describe(`${service} - ${pageType}`, () => {
+      let currentPath = path;
       beforeEach(() => {
-        getCurrentPath(path);
+        currentPath = getCurrentPath(path);
       });
 
-      describe(`${Cypress.env('currentPath')} - Canonical`, () => {
+      describe(`${currentPath} - Canonical`, () => {
         beforeEach(() => {
           visitPage(Cypress.env('currentPath'), pageType);
         });
@@ -44,7 +45,7 @@ Object.keys(services)
         runCanonicalTests(testArgs);
       });
 
-      describe(`${Cypress.env('currentPath')} - AMP`, () => {
+      describe(`${currentPath} - AMP`, () => {
         beforeEach(() => {
           visitPage(`${Cypress.env('currentPath')}.amp`, pageType);
         });

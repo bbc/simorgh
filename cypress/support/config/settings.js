@@ -1739,23 +1739,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: ['/hindi/bbc_hindi_radio/liveradio'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
+      onDemandRadioEpisode: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
