@@ -19,6 +19,7 @@ import {
   mostReadDataRegexPath,
   legacyAssetPageDataPath,
   secondaryColumnDataRegexPath,
+  IdxDataRegexPath,
 } from '../app/routes/utils/regex';
 import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
@@ -65,6 +66,7 @@ const constructDataFilePath = ({
   switch (pageType) {
     case 'frontpage':
     case 'mostRead':
+    case 'idx':
     case 'secondaryColumn':
       dataPath = `${variant || 'index'}.json`;
       break;
@@ -222,6 +224,12 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
         variant,
       });
 
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(IdxDataRegexPath, async (res, next) => {
+      const dataFilePath = constructDataFilePath({
+        pageType: 'idx',
+      });
       sendDataFile(res, dataFilePath, next);
     })
     .get('/ckns_policy/*', (req, res) => {

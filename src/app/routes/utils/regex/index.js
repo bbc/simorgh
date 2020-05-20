@@ -53,3 +53,4 @@ export const secondaryColumnDataRegexPath = getSecondaryColumnDataRegex(
 );
 
 export const IdxPagePath = getIdxPageRegex();
+export const IdxDataRegexPath = `${IdxPagePath}.json`;

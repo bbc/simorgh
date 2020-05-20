@@ -599,6 +599,19 @@ describe('Server', () => {
     });
   });
 
+  describe('IDX json', () => {
+    it('should serve a file for valid idx paths', async () => {
+      const { body } = await makeRequest('/persian/afghanistan/index.json');
+      expect(body).toEqual(
+        expect.objectContaining({ records: expect.any(Object) }),
+      );
+    });
+    it('should respond with a 500 for non-existing services', async () => {
+      const { statusCode } = await makeRequest('/some-service/index.json');
+      expect(statusCode).toEqual(500);
+    });
+  });
+
   describe('Data', () => {
     describe('for articles', () => {
       it('should respond with JSON', async () => {
