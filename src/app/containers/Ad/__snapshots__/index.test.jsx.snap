@@ -24,7 +24,6 @@ exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
   font-weight: 400;
   font-style: normal;
   color: #5A5A5A;
-  margin: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: uppercase;

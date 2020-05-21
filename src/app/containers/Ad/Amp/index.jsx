@@ -40,7 +40,6 @@ const StyledLink = styled.a.attrs({ tabIndex: '-1' })`
   ${({ script }) => script && getMinion(script)};
   ${({ service }) => getSansRegular(service)}
   color: ${C_RHINO};
-  margin: 0; /* Reset */
   text-decoration: none;
   text-transform: uppercase;
   display: block;
