@@ -19,7 +19,7 @@ import {
   mostReadDataRegexPath,
   legacyAssetPageDataPath,
   secondaryColumnDataRegexPath,
-  IdxDataRegexPath,
+  IdxDataPath,
 } from '../app/routes/utils/regex';
 import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
@@ -225,7 +225,7 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
 
       sendDataFile(res, dataFilePath, next);
     })
-    .get(IdxDataRegexPath, async ({ params }, res, next) => {
+    .get(IdxDataPath, async ({ params }, res, next) => {
       const { idx } = params;
       const dataFilePath = path.join(process.cwd(), 'data', idx, 'index.json');
       sendDataFile(res, dataFilePath, next);
