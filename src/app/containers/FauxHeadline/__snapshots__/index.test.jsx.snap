@@ -37,33 +37,33 @@ exports[`FauxHeadline with headline data should render correctly 1`] = `
   }
 }
 
-@media (max-width:63rem) {
-  .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
+@media (max-width:14.9375rem) {
   .c0 {
     padding: 0 0.5rem;
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
     padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: block;
   }
 }
 
@@ -75,6 +75,7 @@ exports[`FauxHeadline with headline data should render correctly 1`] = `
 
 <div
   class="c0"
+  dir="ltr"
 >
   <strong
     aria-hidden="true"
@@ -122,33 +123,33 @@ exports[`FauxHeadline with plain text headline should render <strong> containing
   }
 }
 
-@media (max-width:63rem) {
-  .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
+@media (max-width:14.9375rem) {
   .c0 {
     padding: 0 0.5rem;
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
     padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: block;
   }
 }
 
@@ -160,6 +161,7 @@ exports[`FauxHeadline with plain text headline should render <strong> containing
 
 <div
   class="c0"
+  dir="ltr"
 >
   <strong
     aria-hidden="true"

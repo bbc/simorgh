@@ -4,11 +4,12 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 <DocumentFragment>
   <section
     aria-labelledby="related-content-heading"
-    class="GridWrapper-sc-12lwanc-0 hgpaqH"
+    class="GridWrapper-sc-12lwanc-0 eJyVSm"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
+      class="GridComponent-nf79gm-0 kOvICM"
+      dir="ltr"
     >
       <div
         class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT"
@@ -37,7 +38,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
         </h2>
       </div>
       <ul
-        class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+        class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 llgZHm"
         dir="ltr"
         role="list"
       >
@@ -227,11 +228,12 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 <DocumentFragment>
   <section
     aria-labelledby="related-content-heading"
-    class="GridWrapper-sc-12lwanc-0 hgpaqH"
+    class="GridWrapper-sc-12lwanc-0 eJyVSm"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
+      class="GridComponent-nf79gm-0 kOvICM"
+      dir="ltr"
     >
       <div
         class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT"

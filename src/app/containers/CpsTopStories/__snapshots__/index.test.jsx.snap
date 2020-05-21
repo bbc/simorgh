@@ -4,11 +4,12 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 <DocumentFragment>
   <section
     aria-labelledby="top-stories-heading"
-    class="GridWrapper-sc-12lwanc-0 hgpaqH"
+    class="GridWrapper-sc-12lwanc-0 eJyVSm"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
+      class="GridComponent-nf79gm-0 kOvICM"
+      dir="ltr"
     >
       <div
         class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT"
@@ -120,11 +121,12 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 <DocumentFragment>
   <section
     aria-labelledby="top-stories-heading"
-    class="GridWrapper-sc-12lwanc-0 hgpaqH"
+    class="GridWrapper-sc-12lwanc-0 eJyVSm"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
+      class="GridComponent-nf79gm-0 kOvICM"
+      dir="ltr"
     >
       <div
         class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT"

@@ -125,13 +125,43 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 }
 
 .c0 {
+  max-width: 46.4rem;
   margin: 0 auto;
-  padding-bottom: 2rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   padding-bottom: 1.5rem;
+}
+
+@media (max-width:14.9375rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    display: block;
+  }
 }
 
 @media (max-width:25rem) {
@@ -224,36 +254,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 @supports (display:grid) {
   .c3 {
     max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c1 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
   }
 }
 
@@ -492,46 +492,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
 @media (min-width:63rem) {
   .c0 {
     padding-bottom: 2rem;
@@ -560,6 +520,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
             >
               <div
                 class="c1"
+                dir="ltr"
               >
                 <h1
                   class="c2"
@@ -1555,8 +1516,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 }
 
 .c0 {
+  max-width: 46.4rem;
   margin: 0 auto;
-  padding-bottom: 2rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -1566,6 +1527,36 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 
 .c4 {
   padding-bottom: 1rem;
+}
+
+@media (max-width:14.9375rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    display: block;
+  }
 }
 
 @media (max-width:25rem) {
@@ -1658,36 +1649,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 @supports (display:grid) {
   .c3 {
     max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c1 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
   }
 }
 
@@ -1940,46 +1901,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
-  }
-}
-
 @media (min-width:63rem) {
   .c0 {
     padding-bottom: 2rem;
@@ -2015,6 +1936,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                 >
                   <div
                     class="c1"
+                    dir="ltr"
                   >
                     <h1
                       class="c2"
@@ -2888,7 +2810,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
     </script>
   </head>
   <body>
-    .c39 {
+    .c38 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -2897,7 +2819,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   height: 0.8125rem;
 }
 
-.c21 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2907,7 +2829,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   flex-direction: column;
 }
 
-.c22 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2926,7 +2848,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   align-items: baseline;
 }
 
-.c23 {
+.c22 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2946,25 +2868,25 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   align-items: center;
 }
 
-.c19 {
+.c18 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c17 {
+.c16 {
   position: relative;
   z-index: 0;
   margin-top: 2rem;
 }
 
-.c20 {
+.c19 {
   margin: 0;
   padding: 0;
 }
 
 .c15 {
+  max-width: 46.4rem;
   margin: 0 auto;
-  padding-bottom: 2rem;
 }
 
 .c3 {
@@ -3073,7 +2995,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   padding-bottom: 1rem;
 }
 
-.c36 {
+.c35 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -3083,53 +3005,53 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   font-style: normal;
 }
 
-.c26 {
+.c25 {
   padding: 0.5rem 0 1rem;
 }
 
-.c26:first-child {
+.c25:first-child {
   padding-top: 0;
 }
 
-.c26:last-child {
+.c25:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c24 {
+.c23 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c29 {
+.c28 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c32 {
+.c31 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c28 {
+.c27 {
   position: relative;
 }
 
-.c30 {
+.c29 {
   position: relative;
 }
 
-.c31 > * {
+.c30 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c33 {
+.c32 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -3140,7 +3062,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   line-height: 1.25rem;
 }
 
-.c35 {
+.c34 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3151,7 +3073,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   padding-bottom: 0.5rem;
 }
 
-.c34 {
+.c33 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -3159,7 +3081,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   overflow-wrap: break-word;
 }
 
-.c34:before {
+.c33:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -3171,17 +3093,17 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   z-index: 1;
 }
 
-.c34:hover,
-.c34:focus {
+.c33:hover,
+.c33:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c34:visited {
+.c33:visited {
   color: #6E6E73;
 }
 
-.c37 {
+.c36 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3192,7 +3114,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   display: block;
 }
 
-.c38 {
+.c37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3204,17 +3126,13 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   height: 100%;
 }
 
-.c16 {
-  margin-bottom: 1rem;
-}
-
-.c18 {
+.c17 {
   margin-top: 0;
 }
 
 .c0 {
+  max-width: 46.4rem;
   margin: 0 auto;
-  padding-bottom: 2rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -3227,7 +3145,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c21 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -3236,39 +3154,39 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c23 {
+  .c22 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c23 {
+  .c22 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c23 {
+  .c22 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c23 {
+  .c22 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c19 {
+  .c18 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c19 {
+  .c18 {
     position: absolute;
     left: 0;
     right: 0;
@@ -3277,54 +3195,159 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width:37.5rem) {
-  .c17 {
+  .c16 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c17 {
+  .c16 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c15 {
-    grid-column-gap: 0.5rem;
+@media (max-width:14.9375rem) {
+  .c1 {
+    padding: 0 0.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c15 {
-    grid-column-gap: 1rem;
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    padding: 0 0.5rem;
   }
 }
 
-@media (max-width:62.9375rem) {
-  .c15 {
-    grid-template-columns: repeat(6,1fr);
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    padding: 0 1rem;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c15 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c15 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
   }
 }
 
 @supports (display:grid) {
-  .c15 {
+  .c1 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c24 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c24 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c24 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c24 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c24 {
+    width: calc(133.33333333333334%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c24 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c24 {
     display: grid;
-    max-width: initial;
-    margin: initial;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c26 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c26 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c26 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c26 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c26 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c26 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c26 {
+    display: block;
   }
 }
 
@@ -3364,36 +3387,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 @supports (display:grid) {
   .c3 {
     max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c1 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
   }
 }
 
@@ -3550,132 +3543,65 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c36 {
+  .c35 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c36 {
+  .c35 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-@supports (display:grid) {
-  .c25 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c27 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c27 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c27 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c27 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c27 {
-    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c27 {
-    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c27 {
-    display: block;
-  }
-}
-
 @media (max-width:62.9375rem) {
-  .c26 {
+  .c25 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c26 {
+  .c25 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c26 {
+  .c25 {
     padding: 0 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c26:first-child {
+  .c25:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c29 {
+  .c28 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c29 {
+  .c28 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c32 {
+  .c31 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c32 {
+  .c31 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -3683,7 +3609,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c32 {
+  .c31 {
     display: block;
     width: initial;
     padding: initial;
@@ -3692,7 +3618,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c28 {
+  .c27 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -3700,148 +3626,72 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width:25rem) {
-  .c31 {
+  .c30 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c31 > * {
+  .c30 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c33 {
+  .c32 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c32 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c35 {
+  .c34 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c35 {
+  .c34 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c35 {
+  .c34 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c35 {
+  .c34 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c37 {
+  .c36 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c37 {
+  .c36 {
     font-size: 0.75rem;
     line-height: 1rem;
-  }
-}
-
-@media (max-width:63rem) {
-  .c16 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c16 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c16 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c16 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c16 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c16 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
   }
 }
 
@@ -3880,6 +3730,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                 >
                   <div
                     class="c1"
+                    dir="ltr"
                   >
                     <h1
                       class="c2"
@@ -4355,25 +4206,26 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                   role="region"
                 >
                   <div
-                    class="c16"
+                    class="c1"
+                    dir="ltr"
                   >
                     <div
-                      class="c17 c18"
+                      class="c16 c17"
                     >
                       <div
-                        class="c19"
+                        class="c18"
                       />
                       <h2
-                        class="c20"
+                        class="c19"
                       >
                         <span
-                          class="c21"
+                          class="c20"
                         >
                           <span
-                            class="c22"
+                            class="c21"
                           >
                             <span
-                              class="c23"
+                              class="c22"
                               dir="ltr"
                               id="related-content-heading"
                             >
@@ -4384,24 +4236,24 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                       </h2>
                     </div>
                     <ul
-                      class="c24 c25"
+                      class="c23 c24"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="c26 c27"
+                        class="c25 c26"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="c28"
+                          class="c27"
                         >
                           <div
-                            class="c29"
+                            class="c28"
                             dir="ltr"
                           >
                             <div
-                              class="c30"
+                              class="c29"
                             >
                               <div
                                 class="c11"
@@ -4411,19 +4263,19 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                                 />
                               </div>
                               <div
-                                class="c31"
+                                class="c30"
                               />
                             </div>
                           </div>
                           <div
-                            class="c32"
+                            class="c31"
                             dir="ltr"
                           >
                             <h3
-                              class="c33"
+                              class="c32"
                             >
                               <a
-                                class="c34"
+                                class="c33"
                                 href="/pidgin/media-45132087"
                               >
                                 <span
@@ -4441,12 +4293,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                               </a>
                             </h3>
                             <p
-                              class="c35"
+                              class="c34"
                             >
                               Bole festival showcase di different types of bole dem.
                             </p>
                             <time
-                              class="c36"
+                              class="c35"
                               datetime="2018-08-09"
                             >
                               9th August 2018
@@ -4455,37 +4307,37 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         </div>
                       </li>
                       <li
-                        class="c26 c27"
+                        class="c25 c26"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="c28"
+                          class="c27"
                         >
                           <div
-                            class="c29"
+                            class="c28"
                             dir="ltr"
                           >
                             <div
-                              class="c30"
+                              class="c29"
                             >
                               <div
                                 class="c11"
                               />
                               <div
-                                class="c31"
+                                class="c30"
                               >
                                 <div
                                   aria-hidden="true"
-                                  class="c37"
+                                  class="c36"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="c38"
+                                    class="c37"
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="c39"
+                                      class="c38"
                                       focusable="false"
                                       height="13px"
                                       viewBox="0 0 32 26"
@@ -4506,14 +4358,14 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                             </div>
                           </div>
                           <div
-                            class="c32"
+                            class="c31"
                             dir="ltr"
                           >
                             <h3
-                              class="c33"
+                              class="c32"
                             >
                               <a
-                                class="c34"
+                                class="c33"
                                 href="/pidgin/tori-45242255"
                               >
                                 <span
@@ -4532,12 +4384,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                               </a>
                             </h3>
                             <p
-                              class="c35"
+                              class="c34"
                             >
                               Jollof Festival happun for Lagos Nigeria on Sunday and na time for pipo wey show to sample West Africa fine food dem.
                             </p>
                             <time
-                              class="c36"
+                              class="c35"
                               datetime="2018-08-19"
                             >
                               19th August 2018
@@ -4680,8 +4532,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 }
 
 .c0 {
+  max-width: 46.4rem;
   margin: 0 auto;
-  padding-bottom: 2rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -4691,6 +4543,36 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 
 .c4 {
   padding-bottom: 1rem;
+}
+
+@media (max-width:14.9375rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c1 {
+    display: block;
+  }
 }
 
 @media (max-width:25rem) {
@@ -4729,36 +4611,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 @supports (display:grid) {
   .c3 {
     max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c1 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
   }
 }
 
@@ -4911,46 +4763,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   .c5 {
     font-size: 0.8125rem;
     line-height: 1rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
   }
 }
 
@@ -5210,6 +5022,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                 >
                   <div
                     class="c1"
+                    dir="ltr"
                   >
                     <h1
                       class="c2"
@@ -5892,7 +5705,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
     </script>
   </head>
   <body>
-    .c40 {
+    .c39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5902,7 +5715,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   flex-direction: column;
 }
 
-.c41 {
+.c40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5921,7 +5734,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   align-items: baseline;
 }
 
-.c42 {
+.c41 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5941,25 +5754,25 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   align-items: center;
 }
 
-.c38 {
+.c37 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c36 {
+.c35 {
   position: relative;
   z-index: 0;
   margin-top: 2rem;
 }
 
-.c39 {
+.c38 {
   margin: 0;
   padding: 0;
 }
 
 .c34 {
+  max-width: 46.4rem;
   margin: 0 auto;
-  padding-bottom: 2rem;
 }
 
 .c3 {
@@ -6059,7 +5872,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   font-style: normal;
 }
 
-.c50 {
+.c49 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -6282,7 +6095,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   padding-bottom: 1rem;
 }
 
-.c56 {
+.c55 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -6292,53 +6105,53 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   font-style: normal;
 }
 
-.c45 {
+.c44 {
   padding: 0.5rem 0 1rem;
 }
 
-.c45:first-child {
+.c44:first-child {
   padding-top: 0;
 }
 
-.c45:last-child {
+.c44:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c43 {
+.c42 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c48 {
+.c47 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c52 {
+.c51 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c47 {
+.c46 {
   position: relative;
 }
 
-.c49 {
+.c48 {
   position: relative;
 }
 
-.c51 > * {
+.c50 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c53 {
+.c52 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -6349,7 +6162,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   line-height: 1.25rem;
 }
 
-.c55 {
+.c54 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -6360,7 +6173,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   padding-bottom: 0.5rem;
 }
 
-.c54 {
+.c53 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -6368,7 +6181,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   overflow-wrap: break-word;
 }
 
-.c54:before {
+.c53:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -6380,27 +6193,23 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   z-index: 1;
 }
 
-.c54:hover,
-.c54:focus {
+.c53:hover,
+.c53:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c54:visited {
+.c53:visited {
   color: #6E6E73;
 }
 
-.c35 {
-  margin-bottom: 1rem;
-}
-
-.c37 {
+.c36 {
   margin-top: 0;
 }
 
 .c0 {
+  max-width: 46.4rem;
   margin: 0 auto;
-  padding-bottom: 2rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -6413,7 +6222,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width:37.5rem) {
-  .c41 {
+  .c40 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -6422,39 +6231,39 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c42 {
+  .c41 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c42 {
+  .c41 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c42 {
+  .c41 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c42 {
+  .c41 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c38 {
+  .c37 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c38 {
+  .c37 {
     position: absolute;
     left: 0;
     right: 0;
@@ -6463,54 +6272,159 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width:37.5rem) {
-  .c36 {
+  .c35 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c36 {
+  .c35 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c34 {
-    grid-column-gap: 0.5rem;
+@media (max-width:14.9375rem) {
+  .c1 {
+    padding: 0 0.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c34 {
-    grid-column-gap: 1rem;
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    padding: 0 0.5rem;
   }
 }
 
-@media (max-width:62.9375rem) {
-  .c34 {
-    grid-template-columns: repeat(6,1fr);
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    padding: 0 1rem;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c34 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c34 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
   }
 }
 
 @supports (display:grid) {
-  .c34 {
+  .c1 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c43 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c43 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c43 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c43 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c43 {
+    width: calc(133.33333333333334%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c43 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c43 {
     display: grid;
-    max-width: initial;
-    margin: initial;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c45 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c45 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c45 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c45 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c45 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c45 {
+    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c45 {
+    display: block;
   }
 }
 
@@ -6604,36 +6518,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 @supports (display:grid) {
   .c3 {
     max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c1 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c1 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c1 {
-    padding: 0 1rem;
   }
 }
 
@@ -6887,132 +6771,65 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c56 {
+  .c55 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c56 {
+  .c55 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-@supports (display:grid) {
-  .c44 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c46 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c46 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c46 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c46 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c46 {
-    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c46 {
-    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c46 {
-    display: block;
-  }
-}
-
 @media (max-width:62.9375rem) {
-  .c45 {
+  .c44 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c45 {
+  .c44 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c45 {
+  .c44 {
     padding: 0 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c45:first-child {
+  .c44:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c48 {
+  .c47 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c48 {
+  .c47 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c52 {
+  .c51 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c52 {
+  .c51 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -7020,7 +6837,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c52 {
+  .c51 {
     display: block;
     width: initial;
     padding: initial;
@@ -7029,7 +6846,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c47 {
+  .c46 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -7037,134 +6854,58 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width:25rem) {
-  .c51 {
+  .c50 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c51 > * {
+  .c50 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c53 {
+  .c52 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c53 {
+  .c52 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c55 {
+  .c54 {
     font-size: 0.9375rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c55 {
+  .c54 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c55 {
+  .c54 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c55 {
+  .c54 {
     display: none;
     visibility: hidden;
-  }
-}
-
-@media (max-width:63rem) {
-  .c35 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c35 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c35 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c35 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c35 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c35 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    grid-column-gap: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c0 {
-    grid-template-columns: repeat(6,1fr);
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
-    max-width: 45.5rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
-    max-width: 46.4rem;
-  }
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    max-width: initial;
-    margin: initial;
   }
 }
 
@@ -7203,6 +6944,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                 >
                   <div
                     class="c1"
+                    dir="ltr"
                   >
                     <h1
                       class="c2"
@@ -8283,25 +8025,26 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   role="region"
                 >
                   <div
-                    class="c35"
+                    class="c1"
+                    dir="ltr"
                   >
                     <div
-                      class="c36 c37"
+                      class="c35 c36"
                     >
                       <div
-                        class="c38"
+                        class="c37"
                       />
                       <h2
-                        class="c39"
+                        class="c38"
                       >
                         <span
-                          class="c40"
+                          class="c39"
                         >
                           <span
-                            class="c41"
+                            class="c40"
                           >
                             <span
-                              class="c42"
+                              class="c41"
                               dir="ltr"
                               id="related-content-heading"
                             >
@@ -8312,58 +8055,58 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                       </h2>
                     </div>
                     <ul
-                      class="c43 c44"
+                      class="c42 c43"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="c45 c46"
+                        class="c44 c45"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="c47"
+                          class="c46"
                         >
                           <div
-                            class="c48"
+                            class="c47"
                             dir="ltr"
                           >
                             <div
-                              class="c49"
+                              class="c48"
                             >
                               <div
-                                class="c50"
+                                class="c49"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="c51"
+                                class="c50"
                               />
                             </div>
                           </div>
                           <div
-                            class="c52"
+                            class="c51"
                             dir="ltr"
                           >
                             <h3
-                              class="c53"
+                              class="c52"
                             >
                               <a
-                                class="c54"
+                                class="c53"
                                 href="/azeri/azerbaijan-44124647"
                               >
                                 ADR və Qazaxdan Qarsadək müsəlman dəhlizi ideyası
                               </a>
                             </h3>
                             <p
-                              class="c55"
+                              class="c54"
                             >
                               Bu il Azərbaycan Demokratik Respublikasının elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca bu ərəfədə Azərbaycan xalqının epik və mühüm günlərini həftəlik esselərlə təqdim edir.
                             </p>
                             <time
-                              class="c56"
+                              class="c55"
                               datetime="2018-05-17"
                             >
                               17 May 2018
@@ -8372,53 +8115,53 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                       </li>
                       <li
-                        class="c45 c46"
+                        class="c44 c45"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="c47"
+                          class="c46"
                         >
                           <div
-                            class="c48"
+                            class="c47"
                             dir="ltr"
                           >
                             <div
-                              class="c49"
+                              class="c48"
                             >
                               <div
-                                class="c50"
+                                class="c49"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="c51"
+                                class="c50"
                               />
                             </div>
                           </div>
                           <div
-                            class="c52"
+                            class="c51"
                             dir="ltr"
                           >
                             <h3
-                              class="c53"
+                              class="c52"
                             >
                               <a
-                                class="c54"
+                                class="c53"
                                 href="/azeri/azerbaijan-43540056"
                               >
                                 ADR-100: Türk Əsgəri üçün Cəbrayıl çörəyi
                               </a>
                             </h3>
                             <p
-                              class="c55"
+                              class="c54"
                             >
                               ADR-100 layihəmizdə növbəti yazı: 1918-ci il martın 3-də Bolşeviklər Almaniya, Bolqarıstan, Avstriya-Macarıstan və Osmanlı nümayəndələri ilə Brest-Litovsk Sülh Sazişi imzalayır. İmzalanma Bakının azadlığı ilə nəticələnən bir sıra hadisələrə səbəb olur.
                             </p>
                             <time
-                              class="c56"
+                              class="c55"
                               datetime="2018-03-27"
                             >
                               27 Mart 2018
@@ -8427,53 +8170,53 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                       </li>
                       <li
-                        class="c45 c46"
+                        class="c44 c45"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="c47"
+                          class="c46"
                         >
                           <div
-                            class="c48"
+                            class="c47"
                             dir="ltr"
                           >
                             <div
-                              class="c49"
+                              class="c48"
                             >
                               <div
-                                class="c50"
+                                class="c49"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="c51"
+                                class="c50"
                               />
                             </div>
                           </div>
                           <div
-                            class="c52"
+                            class="c51"
                             dir="ltr"
                           >
                             <h3
-                              class="c53"
+                              class="c52"
                             >
                               <a
-                                class="c54"
+                                class="c53"
                                 href="/azeri/azerbaijan-44022776"
                               >
                                 Borçalı: Tortdan hərəyə bir tikə - təkbaşına isə onu yemək olmaz
                               </a>
                             </h3>
                             <p
-                              class="c55"
+                              class="c54"
                             >
                               #ADR100 layihəmizdə: 1918-1920-ci illərdə Gürcüstanla Azərbaycan arasında əməkdaşlıq yeni respublikalar üçün olduqca mühüm idi. Eyni zamanda Bakı ilə Tbilisi arasında gərginlik yaradan məsələlər mövcud idi. Belə məsələlərdən biri də ərazi mübahisələri idi.
                             </p>
                             <time
-                              class="c56"
+                              class="c55"
                               datetime="2018-05-10"
                             >
                               10 May 2018
@@ -8482,53 +8225,53 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                       </li>
                       <li
-                        class="c45 c46"
+                        class="c44 c45"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="c47"
+                          class="c46"
                         >
                           <div
-                            class="c48"
+                            class="c47"
                             dir="ltr"
                           >
                             <div
-                              class="c49"
+                              class="c48"
                             >
                               <div
-                                class="c50"
+                                class="c49"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="c51"
+                                class="c50"
                               />
                             </div>
                           </div>
                           <div
-                            class="c52"
+                            class="c51"
                             dir="ltr"
                           >
                             <h3
-                              class="c53"
+                              class="c52"
                             >
                               <a
-                                class="c54"
+                                class="c53"
                                 href="/azeri/azerbaijan-43713137"
                               >
                                 Cümhuriyyət hökuməti Azərbaycanı necə idarə edirdi? İlk 6 ayın hadisələri
                               </a>
                             </h3>
                             <p
-                              class="c55"
+                              class="c54"
                             >
                               1918-ci il mayın 28-də Azərbaycanın istiqlaliyyəti elan olunanda bu hadisədən bir gün əvvəl dağılmış Zaqafqaziya Seyminin 44 nəfər müsəlman nümayəndəsi Tiflisdə toplanır və özlərini Azərbaycanın Milli Şurası elan edirlər.
                             </p>
                             <time
-                              class="c56"
+                              class="c55"
                               datetime="2018-04-10"
                             >
                               10 Aprel 2018
@@ -8537,53 +8280,53 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                       </li>
                       <li
-                        class="c45 c46"
+                        class="c44 c45"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="c47"
+                          class="c46"
                         >
                           <div
-                            class="c48"
+                            class="c47"
                             dir="ltr"
                           >
                             <div
-                              class="c49"
+                              class="c48"
                             >
                               <div
-                                class="c50"
+                                class="c49"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="c51"
+                                class="c50"
                               />
                             </div>
                           </div>
                           <div
-                            class="c52"
+                            class="c51"
                             dir="ltr"
                           >
                             <h3
-                              class="c53"
+                              class="c52"
                             >
                               <a
-                                class="c54"
+                                class="c53"
                                 href="/azeri/azerbaijan-37688691"
                               >
                                 1918-1991: Bir müstəqilliyin iki bəyanı
                               </a>
                             </h3>
                             <p
-                              class="c55"
+                              class="c54"
                             >
                               25 il əvvəl bu gün Azərbaycan çökməkdə olan Sovet İttifaqından özünün müstəqillyini bəyan edib. Bu, Azərbaycan Respublikasının ikinci doğuluşu idi.
                             </p>
                             <time
-                              class="c56"
+                              class="c55"
                               datetime="2016-10-18"
                             >
                               18 Oktyabr 2016
@@ -8592,41 +8335,41 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                       </li>
                       <li
-                        class="c45 c46"
+                        class="c44 c45"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="c47"
+                          class="c46"
                         >
                           <div
-                            class="c48"
+                            class="c47"
                             dir="ltr"
                           >
                             <div
-                              class="c49"
+                              class="c48"
                             >
                               <div
-                                class="c50"
+                                class="c49"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="c51"
+                                class="c50"
                               />
                             </div>
                           </div>
                           <div
-                            class="c52"
+                            class="c51"
                             dir="ltr"
                           >
                             <h3
-                              class="c53"
+                              class="c52"
                             >
                               <a
-                                class="c54"
+                                class="c53"
                                 href="/azeri/azerbaijan-37691096"
                               >
                                 <span
@@ -8644,12 +8387,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               </a>
                             </h3>
                             <p
-                              class="c55"
+                              class="c54"
                             >
                               Çərşənbə axşamı şəhər sakinləri BBC Azərbaycancanın "Müstəqillik sizə nə verib?" sualını cavablandırıb.
                             </p>
                             <time
-                              class="c56"
+                              class="c55"
                               datetime="2016-10-18"
                             >
                               18 Oktyabr 2016
@@ -8658,53 +8401,53 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                       </li>
                       <li
-                        class="c45 c46"
+                        class="c44 c45"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="c47"
+                          class="c46"
                         >
                           <div
-                            class="c48"
+                            class="c47"
                             dir="ltr"
                           >
                             <div
-                              class="c49"
+                              class="c48"
                             >
                               <div
-                                class="c50"
+                                class="c49"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="c51"
+                                class="c50"
                               />
                             </div>
                           </div>
                           <div
-                            class="c52"
+                            class="c51"
                             dir="ltr"
                           >
                             <h3
-                              class="c53"
+                              class="c52"
                             >
                               <a
-                                class="c54"
+                                class="c53"
                                 href="/azeri/azerbaijan-43499221"
                               >
                                 1918-ci ilə baxış: Mayın 28-nə aparan o yaz günlərində həyat necə idi?
                               </a>
                             </h3>
                             <p
-                              class="c55"
+                              class="c54"
                             >
                               Bu il Azərbaycan Demokratik Respublikasının elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca bu ərəfədə Azərbaycan xalqının epik və mühüm günlərini həftəlik esselərlə təqdim edəcək.
                             </p>
                             <time
-                              class="c56"
+                              class="c55"
                               datetime="2018-03-22"
                             >
                               22 Mart 2018
@@ -8713,53 +8456,53 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                       </li>
                       <li
-                        class="c45 c46"
+                        class="c44 c45"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="c47"
+                          class="c46"
                         >
                           <div
-                            class="c48"
+                            class="c47"
                             dir="ltr"
                           >
                             <div
-                              class="c49"
+                              class="c48"
                             >
                               <div
-                                class="c50"
+                                class="c49"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="c51"
+                                class="c50"
                               />
                             </div>
                           </div>
                           <div
-                            class="c52"
+                            class="c51"
                             dir="ltr"
                           >
                             <h3
-                              class="c53"
+                              class="c52"
                             >
                               <a
-                                class="c54"
+                                class="c53"
                                 href="/azeri/azerbaijan-44004471"
                               >
                                 #ADR100 Zaqatala: Azərbaycanın qalib gəldiyi mübahisə
                               </a>
                             </h3>
                             <p
-                              class="c55"
+                              class="c54"
                             >
                               Bir çox azərbaycanlı və gürcüstanlı siyasətçiləri anlayırdılar ki, onların içində olduğu həssas dövrdən salamat çıxmaq üçün iqtisadi, siyasi və hərbi müttəfiqlik vacibdir. Eyni zamanda hər iki respublika arasında bir sıra mübahisələr də mövcud idi.
                             </p>
                             <time
-                              class="c56"
+                              class="c55"
                               datetime="2018-05-04"
                             >
                               4 May 2018
@@ -8768,53 +8511,53 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         </div>
                       </li>
                       <li
-                        class="c45 c46"
+                        class="c44 c45"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="c47"
+                          class="c46"
                         >
                           <div
-                            class="c48"
+                            class="c47"
                             dir="ltr"
                           >
                             <div
-                              class="c49"
+                              class="c48"
                             >
                               <div
-                                class="c50"
+                                class="c49"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="c51"
+                                class="c50"
                               />
                             </div>
                           </div>
                           <div
-                            class="c52"
+                            class="c51"
                             dir="ltr"
                           >
                             <h3
-                              class="c53"
+                              class="c52"
                             >
                               <a
-                                class="c54"
+                                class="c53"
                                 href="/azeri/azerbaijan-43870815"
                               >
                                 Cümhuriyyət hökumətinin İranla əlaqələri necə idi?
                               </a>
                             </h3>
                             <p
-                              class="c55"
+                              class="c54"
                             >
                               İranın Xəzər sahilinə çıxan bölgələrində Azərbaycan Respublikasını böyük ticari imkanlar gözləyirdi. İran ixracatının 60-70 faizinin istehsalı ənənəvi olaraq məhz həmin regionun payına düşüb. Azərbaycan və xüsusilə Bakı-Batumi dəhlizi isə Avropa bazarına aparan təbii çıxış idi. Bəs milli hökümət iqtisadi imkanları gəlirli xarici ticarətə çevirə bildimi?
                             </p>
                             <time
-                              class="c56"
+                              class="c55"
                               datetime="2018-04-29"
                             >
                               29 Aprel 2018

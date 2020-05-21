@@ -1,11 +1,8 @@
 import { node, number } from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_QUAD,
-} from '@bbc/gel-foundations/spacings';
+import Grid from '@bbc/psammead-grid';
+import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
@@ -13,11 +10,9 @@ import {
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import {
-  layoutGridWrapper,
   layoutGridItemSmall,
   layoutGridItemMedium,
   layoutGridItemMediumNoMargin,
-  layoutGridItemLarge,
   layoutGridItemLargeNoMargin,
   nestedGridItemSmallCss,
   nestedGridItemMediumCss,
@@ -28,8 +23,8 @@ import {
 } from '../layoutGrid';
 
 export const GridWrapper = styled.div`
-  ${layoutGridWrapper};
-  padding-bottom: ${GEL_SPACING_QUAD};
+  max-width: 46.4rem;
+  margin: 0 auto;
 `;
 
 export const GridItemConstrainedSmall = styled.div`
@@ -44,9 +39,35 @@ export const GridItemConstrainedMediumNoMargin = styled.div`
   ${layoutGridItemMediumNoMargin};
 `;
 
-export const GridItemConstrainedLarge = styled.div`
-  ${layoutGridItemLarge};
-`;
+export const GridItemConstrainedLarge = ({ children }) => {
+  const margins = {
+    group0: true,
+    group1: true,
+    group2: true,
+    group3: true,
+    group4: false,
+    group5: false,
+  };
+
+  const columns = {
+    group0: 6,
+    group1: 6,
+    group2: 6,
+    group3: 6,
+    group4: 6,
+    group5: 8,
+  };
+
+  return (
+    <Grid item columns={columns} margins={margins}>
+      {children}
+    </Grid>
+  );
+};
+
+GridItemConstrainedLarge.propTypes = {
+  children: node.isRequired,
+};
 
 export const GridItemConstrainedLargeNoMargin = styled.div`
   ${layoutGridItemLargeNoMargin};
