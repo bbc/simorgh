@@ -10,6 +10,18 @@ exports[`Canonical Front Page Footer I can see the footer copyright and external
 
 exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
+exports[`Canonical Front Page I can see Index Alsos 1`] = `"المزيد حول هذه القصة"`;
+
+exports[`Canonical Front Page I can see Useful Links 1`] = `"وظائف شاغرة في بي بي سي عربي"`;
+
+exports[`Canonical Front Page I can see Useful Links 2`] = `"أكاديمية بي بي سي: اكتشف... تعلم.. .تطور"`;
+
+exports[`Canonical Front Page I can see Useful Links 3`] = `"ثمانون عاما على بي بي سي عربي: من"`;
+
+exports[`Canonical Front Page I can see Useful Links 4`] = `"مدونة المرأة: علامات"`;
+
+exports[`Canonical Front Page I can see Useful Links 5`] = `"شركاؤنا"`;
+
 exports[`Canonical Front Page SEO Canonical link 1`] = `"http://localhost:7080/arabic"`;
 
 exports[`Canonical Front Page SEO Dir attribute 1`] = `"rtl"`;
