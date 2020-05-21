@@ -30,7 +30,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 dir="ltr"
                 id="features-analysis-heading"
               >
-                Features & Analysis
+                Features
               </span>
             </span>
           </span>
@@ -184,7 +184,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
                 dir="ltr"
                 id="features-analysis-heading"
               >
-                Features & Analysis
+                Features
               </span>
             </span>
           </span>
