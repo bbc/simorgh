@@ -35,13 +35,13 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
     );
     const img = getByAltText(container, 'BBC News پښتو');
     expect(img.src).toEqual(
-      'https://ichef.bbci.co.uk/images/ic/112x112/p063j1dv.jpg',
+      'https://ichef.bbci.co.uk/images/ic/128x128/p063j1dv.jpg',
     );
     expect(img.alt).toEqual('BBC News پښتو');
     expect(img.srcset).toEqual(
-      'https://ichef.bbci.co.uk/images/ic/112x112/p063j1dv.jpg 112w,https://ichef.bbci.co.uk/images/ic/224x224/p063j1dv.jpg 224w',
+      'https://ichef.bbci.co.uk/images/ic/128x128/p063j1dv.jpg 128w,https://ichef.bbci.co.uk/images/ic/240x240/p063j1dv.jpg 240w,https://ichef.bbci.co.uk/images/ic/480x480/p063j1dv.jpg 480w',
     );
-    expect(img.sizes).toEqual('(min-width: 1007px) 112px, 100vw');
+    expect(img.sizes).toEqual('(min-width: 1008px) 228px, 30vw');
   });
 
   it('should ensure the image has the right attributes for amp', () => {
@@ -54,12 +54,12 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
     );
     const img = container.querySelector('amp-img');
     expect(img.getAttribute('src')).toEqual(
-      'https://ichef.bbci.co.uk/images/ic/112x112/p063j1dv.jpg',
+      'https://ichef.bbci.co.uk/images/ic/128x128/p063j1dv.jpg',
     );
     expect(img.getAttribute('alt')).toEqual('BBC News Afaan Oromoo');
     expect(img.getAttribute('layout')).toEqual('responsive');
     expect(img.getAttribute('srcset')).toEqual(
-      'https://ichef.bbci.co.uk/images/ic/112x112/p063j1dv.jpg 112w,https://ichef.bbci.co.uk/images/ic/224x224/p063j1dv.jpg 224w',
+      'https://ichef.bbci.co.uk/images/ic/128x128/p063j1dv.jpg 128w,https://ichef.bbci.co.uk/images/ic/240x240/p063j1dv.jpg 240w,https://ichef.bbci.co.uk/images/ic/480x480/p063j1dv.jpg 480w',
     );
   });
 });
