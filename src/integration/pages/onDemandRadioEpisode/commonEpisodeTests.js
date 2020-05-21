@@ -23,14 +23,6 @@ export default () => {
     expect(episodeSummaryEl.textContent).toMatchSnapshot();
   });
 
-  it('I can see the hero image', () => {
-    const imageEl = document.querySelector('main div img');
-
-    expect(imageEl).toBeInTheDocument();
-    expect(imageEl).toBeTruthy();
-    expect(imageEl.getAttribute('src')).toMatchSnapshot();
-  });
-
   describe('a11y', () => {
     it('Assistive technology reads the brand and episode title as the headline', () => {
       const headlineEl = document.querySelector(
