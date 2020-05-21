@@ -22,10 +22,31 @@ import {
   gridContainerLargeCss,
 } from '../layoutGrid';
 
-export const GridWrapper = styled.div`
+export const MediumContentWrapper = styled.div`
   max-width: 46.4rem;
   margin: 0 auto;
 `;
+
+export const GridWrapper = ({ children }) => {
+  const columns = {
+    group0: 6,
+    group1: 6,
+    group2: 6,
+    group3: 6,
+    group4: 6,
+    group5: 12,
+  };
+
+  return (
+    <MediumContentWrapper>
+      <Grid columns={columns}>{children}</Grid>
+    </MediumContentWrapper>
+  );
+};
+
+GridWrapper.propTypes = {
+  children: node.isRequired,
+};
 
 export const GridItemConstrainedSmall = styled.div`
   ${layoutGridItemSmall};
@@ -55,7 +76,7 @@ export const GridItemConstrainedLarge = ({ children }) => {
     group2: 6,
     group3: 6,
     group4: 6,
-    group5: 8,
+    group5: 12,
   };
 
   return (

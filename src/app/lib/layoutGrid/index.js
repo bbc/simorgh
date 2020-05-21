@@ -112,10 +112,10 @@ export const layoutGridItemLargeNoMargin = css`
     grid-column: 1 / span 6;
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    grid-column: 3 / span 6;
+    grid-column: 1 / span 6;
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    grid-column: 6 / span 12;
+    grid-column: 1 / span 12;
   }
 `;
 
@@ -138,12 +138,11 @@ export const layoutGridItemMediumNoMargin = css`
       padding.group3 ? `padding: 0 ${padding.group3}` : ''};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    grid-column: 3 / span 5;
+    grid-column: 1 / span 5;
     max-width: ${fiveOfSixColumnsMaxWidthGroup4};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    grid-column: ${props => props.gridColumnStart} / span
-      ${props => specifiedOrMaximum(props.gridSpan, 22)};
+    grid-column: 1 / span ${props => specifiedOrMaximum(props.gridSpan, 22)};
     max-width: ${tenOfTwelveColumnsMaxWidthGroup5};
   }
 
@@ -176,11 +175,11 @@ export const layoutGridItemSmall = css`
       padding.group3 ? `padding: 0 ${padding.group3}` : ''};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    grid-column: 3 / span 4;
+    grid-column: 1 / span 4;
     max-width: ${fourOfSixColumnsMaxWidthGroup4};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    grid-column: 6 / span 8;
+    grid-column: 1 / span 8;
     max-width: ${eightOfTwelveColumnsMaxWidthGroup5};
   }
 

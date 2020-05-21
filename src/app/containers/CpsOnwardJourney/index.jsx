@@ -15,7 +15,7 @@ import Grid from '@bbc/psammead-grid';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import {
-  GridWrapper as LegacyGridWrapper,
+  MediumContentWrapper,
   GridItemConstrainedLarge,
 } from '#lib/styledGrid';
 import { gelGridMargin } from '#app/lib/layoutGrid';
@@ -108,11 +108,11 @@ const CpsOnwardJourney = ({
         {children}
       </Wrapper>
     ) : (
-      <LegacyGridWrapper {...a11yAttributes}>
+      <MediumContentWrapper {...a11yAttributes}>
         <LegacyGridItemConstrainedLarge>
           {children}
         </LegacyGridItemConstrainedLarge>
-      </LegacyGridWrapper>
+      </MediumContentWrapper>
     );
 
   CpsOnwardJourneyWrapper.propTypes = {

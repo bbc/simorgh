@@ -15,7 +15,12 @@ import {
 
 describe('Styled GridWrapper items', () => {
   describe('GridWrapper', () => {
-    shouldMatchSnapshot('should render correctly', <GridWrapper />);
+    shouldMatchSnapshot(
+      'should render correctly',
+      <GridWrapper>
+        <div>content</div>
+      </GridWrapper>,
+    );
   });
 
   describe('GridItemConstrainedSmall', () => {

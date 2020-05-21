@@ -8,7 +8,7 @@ import {
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { GridWrapper } from '#lib/styledGrid';
+import { MediumContentWrapper, GridWrapper } from '#lib/styledGrid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -65,7 +65,7 @@ const PhotoGalleryPage = ({ pageData }) => {
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
   };
 
-  const StyledGrid = styled(GridWrapper)`
+  const StyledGrid = styled(MediumContentWrapper)`
     flex-grow: 1;
     padding-bottom: ${GEL_SPACING_TRPL};
 
@@ -106,7 +106,9 @@ const PhotoGalleryPage = ({ pageData }) => {
       />
       <ATIAnalytics data={pageData} />
       <StyledGrid as="main" role="main">
-        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+        <GridWrapper>
+          <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+        </GridWrapper>
       </StyledGrid>
       <CpsRelatedContent content={relatedContent} enableGridWrapper />
     </>

@@ -806,14 +806,14 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c5 {
-    grid-column: 3 / span 5;
+    grid-column: 1 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
   .c5 {
-    grid-column: 6 / span 10;
+    grid-column: 1 / span 10;
     max-width: 38.5rem;
   }
 }
@@ -832,13 +832,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c11 {
-    grid-column: 3 / span 6;
+    grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:80rem) {
   .c11 {
-    grid-column: 6 / span 12;
+    grid-column: 1 / span 12;
   }
 }
 
@@ -3383,14 +3383,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c5 {
-    grid-column: 3 / span 5;
+    grid-column: 1 / span 5;
     max-width: 37.75rem;
   }
 }
 
 @media (min-width:80rem) {
   .c5 {
-    grid-column: 6 / span 10;
+    grid-column: 1 / span 10;
     max-width: 38.5rem;
   }
 }
@@ -3409,13 +3409,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c11 {
-    grid-column: 3 / span 6;
+    grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:80rem) {
   .c11 {
-    grid-column: 6 / span 12;
+    grid-column: 1 / span 12;
   }
 }
 

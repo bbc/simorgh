@@ -19,7 +19,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
           >
             <noscript />
             <main
-              class="GridWrapper-sc-12lwanc-0 StyledGrid-oo43dv-0 dinMtW"
+              class="MediumContentWrapper-sc-12lwanc-0 StyledGrid-oo43dv-0 dinMtW"
               role="main"
             >
               <h1
@@ -30,7 +30,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 Ўзбек деҳқонининг косаси нега оқармайдиshort
               </h1>
               <div
-                class="GridComponent-nf79gm-0 kOvICM"
+                class="GridComponent-nf79gm-0 jkNDkL"
                 dir="ltr"
               >
                 <figure
@@ -52,7 +52,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </figure>
               </div>
               <div
-                class="GridComponent-nf79gm-0 kOvICM"
+                class="GridComponent-nf79gm-0 jkNDkL"
                 dir="ltr"
               >
                 <strong
@@ -63,7 +63,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </strong>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-oo43dv-1 jqCfrG"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm StyledTimestamp-oo43dv-1 jqCfrG"
               >
                 <time
                   class="StyledTimestamp-um718p-0 bAgcOD"
@@ -73,7 +73,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </time>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -84,7 +84,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -98,7 +98,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -120,7 +120,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -134,7 +134,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -150,7 +150,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -163,7 +163,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -172,7 +172,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -181,7 +181,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -190,7 +190,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -199,7 +199,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <div
                   class="Wrapper-e2169q-0 kopXQT"
@@ -239,7 +239,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </div>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <div
                   class="Wrapper-e2169q-0 kopXQT"
@@ -297,7 +297,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </div>
               </div>
               <div
-                class="GridItemConstrainedLargeNoMargin-sc-12lwanc-4 kSnrmx"
+                class="GridItemConstrainedLargeNoMargin-sc-12lwanc-4 cvlShg"
               >
                 <figure
                   class="Figure-sc-6a3dhy-0 gJUCFc"
@@ -339,7 +339,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </figure>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -348,7 +348,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -384,7 +384,7 @@ exports[`Media Asset Page should render component 1`] = `
           >
             <noscript />
             <main
-              class="GridWrapper-sc-12lwanc-0 StyledGrid-oo43dv-0 dinMtW"
+              class="MediumContentWrapper-sc-12lwanc-0 StyledGrid-oo43dv-0 dinMtW"
               role="main"
             >
               <h1
@@ -395,7 +395,7 @@ exports[`Media Asset Page should render component 1`] = `
                 Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
               </h1>
               <div
-                class="GridComponent-nf79gm-0 kOvICM"
+                class="GridComponent-nf79gm-0 jkNDkL"
                 dir="ltr"
               >
                 <figure
@@ -417,7 +417,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </figure>
               </div>
               <div
-                class="GridComponent-nf79gm-0 kOvICM"
+                class="GridComponent-nf79gm-0 jkNDkL"
                 dir="ltr"
               >
                 <strong
@@ -428,7 +428,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </strong>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-oo43dv-1 jqCfrG"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm StyledTimestamp-oo43dv-1 jqCfrG"
               >
                 <time
                   class="StyledTimestamp-um718p-0 bAgcOD"
@@ -446,7 +446,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -457,7 +457,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <h2
                   class="SubHeading-sc-1kh1qhu-1 jHLqCp"
@@ -468,7 +468,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <h2
                   class="SubHeading-sc-1kh1qhu-1 jHLqCp"
@@ -479,7 +479,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <h2
                   class="SubHeading-sc-1kh1qhu-1 jHLqCp"
@@ -490,7 +490,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </h2>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -499,7 +499,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -508,7 +508,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <div
                   class="Wrapper-e2169q-0 kopXQT"
@@ -588,7 +588,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -597,7 +597,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <div
                   class="Wrapper-e2169q-0 kopXQT"
@@ -677,7 +677,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -707,7 +707,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -716,7 +716,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -725,7 +725,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -734,7 +734,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -743,7 +743,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -752,7 +752,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -761,7 +761,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -770,7 +770,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -779,7 +779,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -795,7 +795,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="GridItemConstrainedLargeNoMargin-sc-12lwanc-4 kSnrmx"
+                class="GridItemConstrainedLargeNoMargin-sc-12lwanc-4 cvlShg"
               >
                 <figure
                   class="Figure-sc-6a3dhy-0 gJUCFc"
@@ -850,7 +850,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </figure>
               </div>
               <div
-                class="GridItemConstrainedLargeNoMargin-sc-12lwanc-4 kSnrmx"
+                class="GridItemConstrainedLargeNoMargin-sc-12lwanc-4 cvlShg"
               >
                 <figure
                   class="Figure-sc-6a3dhy-0 gJUCFc"
@@ -905,7 +905,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </figure>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <div
                   class="Wrapper-e2169q-0 kopXQT"
@@ -943,7 +943,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </div>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -952,7 +952,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </p>
               </div>
               <div
-                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+                class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
               >
                 <p
                   class="Paragraph-k859h4-0 hymSIv"
@@ -963,11 +963,11 @@ exports[`Media Asset Page should render component 1`] = `
             </main>
             <section
               aria-labelledby="related-content-heading"
-              class="GridWrapper-sc-12lwanc-0 eJyVSm"
+              class="MediumContentWrapper-sc-12lwanc-0 fAOaxP"
               role="region"
             >
               <div
-                class="GridComponent-nf79gm-0 kOvICM"
+                class="GridComponent-nf79gm-0 jkNDkL"
                 dir="ltr"
               >
                 <div
@@ -997,7 +997,7 @@ exports[`Media Asset Page should render component 1`] = `
                   </h2>
                 </div>
                 <ul
-                  class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 llgZHm"
+                  class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 kLhYsb"
                   dir="ltr"
                   role="list"
                 >

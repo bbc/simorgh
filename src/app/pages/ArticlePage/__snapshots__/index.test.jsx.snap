@@ -11,28 +11,33 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
     role="main"
   >
     <div
-      class="GridWrapper-sc-12lwanc-0 eJyVSm"
+      class="MediumContentWrapper-sc-12lwanc-0 fAOaxP"
     >
       <div
-        class="GridComponent-nf79gm-0 kOvICM"
+        class="GridComponent-nf79gm-0 bPwggv"
         dir="ltr"
       >
-        <h1
-          class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
-          id="content"
-          tabindex="-1"
+        <div
+          class="GridComponent-nf79gm-0 jkNDkL"
+          dir="ltr"
         >
-          Article Headline in Pidgin
-        </h1>
-      </div>
-      <div
-        class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
-      >
-        <p
-          class="Paragraph-k859h4-0 hymSIv"
+          <h1
+            class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
+            id="content"
+            tabindex="-1"
+          >
+            Article Headline in Pidgin
+          </h1>
+        </div>
+        <div
+          class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
         >
-          A paragraph in Pidgin.
-        </p>
+          <p
+            class="Paragraph-k859h4-0 hymSIv"
+          >
+            A paragraph in Pidgin.
+          </p>
+        </div>
       </div>
     </div>
   </main>
@@ -503,28 +508,33 @@ exports[`should render a news article correctly 1`] = `
     role="main"
   >
     <div
-      class="GridWrapper-sc-12lwanc-0 eJyVSm"
+      class="MediumContentWrapper-sc-12lwanc-0 fAOaxP"
     >
       <div
-        class="GridComponent-nf79gm-0 kOvICM"
+        class="GridComponent-nf79gm-0 bPwggv"
         dir="ltr"
       >
-        <h1
-          class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 aNHLE"
-          id="content"
-          tabindex="-1"
+        <div
+          class="GridComponent-nf79gm-0 jkNDkL"
+          dir="ltr"
         >
-          Article Headline
-        </h1>
-      </div>
-      <div
-        class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
-      >
-        <p
-          class="Paragraph-k859h4-0 dSVJxu"
+          <h1
+            class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 aNHLE"
+            id="content"
+            tabindex="-1"
+          >
+            Article Headline
+          </h1>
+        </div>
+        <div
+          class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
         >
-          A paragraph.
-        </p>
+          <p
+            class="Paragraph-k859h4-0 dSVJxu"
+          >
+            A paragraph.
+          </p>
+        </div>
       </div>
     </div>
   </main>
@@ -542,28 +552,33 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
     role="main"
   >
     <div
-      class="GridWrapper-sc-12lwanc-0 eJyVSm"
+      class="MediumContentWrapper-sc-12lwanc-0 fAOaxP"
     >
       <div
-        class="GridComponent-nf79gm-0 kOvICM"
+        class="GridComponent-nf79gm-0 bPwggv"
         dir="ltr"
       >
-        <h1
-          class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 bYbRDq"
-          id="content"
-          tabindex="-1"
+        <div
+          class="GridComponent-nf79gm-0 jkNDkL"
+          dir="ltr"
         >
-          سرصفحه مقاله
-        </h1>
-      </div>
-      <div
-        class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
-      >
-        <p
-          class="Paragraph-k859h4-0 jfPMLX"
+          <h1
+            class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 bYbRDq"
+            id="content"
+            tabindex="-1"
+          >
+            سرصفحه مقاله
+          </h1>
+        </div>
+        <div
+          class="GridItemConstrainedMedium-sc-12lwanc-2 hPyVJm"
         >
-          یک پاراگراف.
-        </p>
+          <p
+            class="Paragraph-k859h4-0 jfPMLX"
+          >
+            یک پاراگراف.
+          </p>
+        </div>
       </div>
     </div>
   </main>

@@ -33,13 +33,13 @@ exports[`Image with data should render a lazyload container instead of an image 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    grid-column: 3 / span 6;
+    grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    grid-column: 6 / span 12;
+    grid-column: 1 / span 12;
   }
 }
 
@@ -177,13 +177,13 @@ exports[`Image with data should render an image with alt text 1`] = `
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    grid-column: 3 / span 6;
+    grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    grid-column: 6 / span 12;
+    grid-column: 1 / span 12;
   }
 }
 
@@ -384,13 +384,13 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    grid-column: 3 / span 6;
+    grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    grid-column: 6 / span 12;
+    grid-column: 1 / span 12;
   }
 }
 
@@ -568,13 +568,13 @@ exports[`Image with data should render an image with alt text and offscreen copy
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    grid-column: 3 / span 6;
+    grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    grid-column: 6 / span 12;
+    grid-column: 1 / span 12;
   }
 }
 
@@ -750,13 +750,13 @@ exports[`Image with data should render an image with other originCode - this wou
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
-    grid-column: 3 / span 6;
+    grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:80rem) {
   .c0 {
-    grid-column: 6 / span 12;
+    grid-column: 1 / span 12;
   }
 }
 
