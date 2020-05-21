@@ -1,6 +1,6 @@
 export default () => {
   it('I can see the hero image', () => {
-    const imageEl = document.querySelector('main div amp-img img');
+    const imageEl = document.querySelector('main amp-img');
 
     expect(imageEl).toBeInTheDocument();
     expect(imageEl).toBeTruthy();
