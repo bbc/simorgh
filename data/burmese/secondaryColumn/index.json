@@ -1,0 +1,348 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "မီးလောင်မှုတွေ ဖြစ်ခဲ့လို့ အသက်ရှူစက်တချို့ သုံးတာ ရုရှားရပ်ထား"
+        },
+        "locators": {
+          "assetUri": "/burmese/world-52646340",
+          "cpsUrn": "urn:bbc:content:assetUri:burmese/world-52646340",
+          "assetId": "52646340"
+        },
+        "summary": "ရုရှားထုတ် အသက်ရှူစက် တချို့ကို မသုံးဘဲ ရပ်ထားတယ်လို့ ကျန်းမာရေး အာဏာပိုင်တွေက ပြောပါတယ်။",
+        "timestamp": 1589375568000,
+        "language": "my",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112257380",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/20B7/production/_112257380_gettyimages-1212817497.jpg",
+          "path": "/cpsprodpb/20B7/production/_112257380_gettyimages-1212817497.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "မေလ ၁၂ ရက် မီးလောင်မှု",
+          "caption": "မေလ ၁၂ ရက် မီးလောင်မှု",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "live",
+        "id": "urn:bbc:ares::asset:burmese/world-52646340",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "စပိန် အသက်အကြီးဆုံး အမျိုးသမီး ကိုရိုနာကနေ လွတ်မြောက်"
+        },
+        "locators": {
+          "assetUri": "/burmese/world-52648881",
+          "cpsUrn": "urn:bbc:content:assetUri:burmese/world-52648881",
+          "assetId": "52648881"
+        },
+        "summary": "အသက် ၁၁၃ နှစ် စပိန် အသက်အကြီးဆုံး အမျိုးသမီး ကိုရိုနာကနေ လွတ်မြောက်",
+        "timestamp": 1589370449000,
+        "language": "my",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112254738",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/14721/production/_112254738_52648881.jpg",
+          "path": "/cpsprodpb/14721/production/_112254738_52648881.jpg",
+          "height": 346,
+          "width": 615,
+          "altText": "မာရီယာမှာ ကိုရိုနာ လက္ခဏာ အနည်းငယ်ပဲခံစားရ",
+          "caption": "မာရီယာမှာ ကိုရိုနာ လက္ခဏာ အနည်းငယ်ပဲခံစားရ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112255246",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/FAFF/production/_112255246_nhssandwellandwestbirmingham.jpg",
+          "path": "/cpsprodpb/FAFF/production/_112255246_nhssandwellandwestbirmingham.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "အသက် ၁၁၃ နှစ် စပိန် အသက်အကြီးဆုံး အမျိုးသမီး",
+          "copyrightHolder": "NHS Sandwell and West Birmingham",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "live",
+        "id": "urn:bbc:ares::asset:burmese/world-52648881",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "မြန်မာ့ အိမ်မွေးဆင်တွေကို မိုက်ခရိုချစ်ပ်တပ်ပြီး မှတ်ပုံတင်"
+        },
+        "locators": {
+          "assetUri": "/burmese/burma-52632157",
+          "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-52632157",
+          "assetId": "52632157"
+        },
+        "summary": "\"ဆင်ရဲ့ ခန္ဓာကိုယ် နားရွက်နောက်နား ထဲ မိုက်ခရိုချစ်ပ်ကို ထည့်တာပါ၊ ဒါတပ် လိုက်ပေးပြီးသွားရင် ဆင်နဲ့ ပတ်သက်တဲ့ အချက်အလက်တွေကို မိုက်ခရိုချစ်ပ် ဖတ်လိုက်တာနဲ့ ချက်ချင်းသိရမှာပါ\" - မြန်မာ့သစ်လုပ်ငန်း သစ်ထုတ်ရေးဌာန ဒုတိယ အထွေထွေမန်နေဂျာ ဦးကျော်ထိုက်",
+        "timestamp": 1589369867000,
+        "language": "my",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112239671",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/451D/production/_112239671_gettyimages-91588202.jpg",
+          "path": "/cpsprodpb/451D/production/_112239671_gettyimages-91588202.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "၂၀၀၉ ခုနှစ်တုန်းက ဖိုးကြား ဆင်ထိန်းသိမ်းရေးစခန်းက ဆင်တချို့ကို တွေ့ရစဉ်",
+          "caption": "၂၀၀၉ ခုနှစ်တုန်းက ဖိုးကြား ဆင်ထိန်းသိမ်းရေးစခန်းက ဆင်တချို့ကို တွေ့ရစဉ်",
+          "copyrightHolder": "STR/AFP via Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "live",
+        "id": "urn:bbc:ares::asset:burmese/burma-52632157",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "ဗိုလ်ချုပ်ထိန်မောင် သို့မဟုတ် ကေအန်ယူ ဝါရင့်တော်လှန်ရေးသမားတစ်ဦး"
+        },
+        "locators": {
+          "assetUri": "/burmese/burma-52532096",
+          "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-52532096",
+          "assetId": "52532096"
+        },
+        "summary": "ကွယ်လွန်ချိန်မှာ အသက် ၉၄ နှစ် အရွယ်ရှိပြီးတော့ စျာပနအခမ်းအနားကို မေလ ၅ ရက် မွန်းလွဲ ၂ နာရီမှာ ဌာနချုပ် ထို့ကော့ကိုးရှိ အာဇာနည်ဗိမာန်မှာ ခရစ်ယာန် ဘာသာထုံးတမ်းအရ ဂူသွင်းမယ်လို့ သိရပါတယ်။",
+        "timestamp": 1588603002000,
+        "language": "my",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            },
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112108301",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/288C/production/_112108301_95424300_699707624109664_3971395575294722048_n.jpg",
+          "path": "/cpsprodpb/288C/production/_112108301_95424300_699707624109664_3971395575294722048_n.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "၁၉၄၉ ဖေဖေါ်ဝါရီလ ၁ ရက်နေ့မှာ အမှတ် ၁ ကရင်သေနတ်ကိုင်တပ်ရင်းတောခိုရာမှာပါသွားခဲ့",
+          "caption": "၁၉၄၉ ဖေဖေါ်ဝါရီလ ၁ ရက်နေ့မှာ အမှတ် ၁ ကရင်သေနတ်ကိုင်တပ်ရင်းတောခိုရာမှာပါသွားခဲ့",
+          "copyrightHolder": "KNU/KNLA - PC  ",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:burmese/burma-52532096",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ကိုဗစ်မှာ ကူရင်း တရုတ်သိက္ခာ ပြန်ဆယ်တဲ့ ဂျက်မာ"
+        },
+        "locators": {
+          "assetUri": "/burmese/world-52449628",
+          "cpsUrn": "urn:bbc:content:assetUri:burmese/world-52449628",
+          "assetId": "52449628"
+        },
+        "summary": "ဂျက်မာရဲ့ ဖောင်ဒေးရှင်းတွေက နိုင်ငံရေး အကဲဆတ်တဲ့ အီရန်၊အစ္စရေး၊ ရုရှားနဲ့ အမေရိကန်တို့ လိုနေရာတွေကိုတောင် အကူအညီတွေ ပို့ပေးခဲ့ပါတယ်။",
+        "timestamp": 1588178537000,
+        "language": "my",
+        "byline": {
+          "name": " ဆယ်လီရာ ဟက်တန်",
+          "title": "ဘီဘီစီ သတင်းဌာန",
+          "persons": [
+            {
+              "name": "Abdujalil Abdurasulov",
+              "function": "BBC News Almata"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111271378",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/15515/production/_111271378_gettyimages-1192058124.jpg",
+          "path": "/cpsprodpb/15515/production/_111271378_gettyimages-1192058124.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "အလီဘာဘာ အုပ်စု ပူးတွဲ တည်ထောင်သူ ဂျက်မာ",
+          "caption": "အလီဘာဘာ အုပ်စု ပူးတွဲ တည်ထောင်သူ ဂျက်မာ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:burmese/world-52449628",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ရုရှားဘီလျံနာ ကတော်ဟောင်းရဲ့ အမှောင်ခြမ်းကဘဝ"
+        },
+        "locators": {
+          "assetUri": "/burmese/world-52362727",
+          "cpsUrn": "urn:bbc:content:assetUri:burmese/world-52362727",
+          "assetId": "52362727"
+        },
+        "summary": "လန်ဒန်နဲ့ ကမ္ဘာအနှံ့မှာလည်း သူတို့ပိုင်တဲ့ အိမ်တွေရှိခဲ့ပါတယ်။ ဒါပေမယ့် ဒီလိုအားကျစရာကောင်းတဲ့ဘဝနောက်ကွယ်မှာ ကြေကွဲစရာတွေလည်း ရှိနေပါတယ်။",
+        "timestamp": 1587486674000,
+        "language": "my",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111526860",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1ACE/production/_111526860_1.jpg",
+          "path": "/cpsprodpb/1ACE/production/_111526860_1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "အင်္ဂလိပ်စာသင်ဖို့ငှားခဲ့တာကစပြီး ရုရှားဘီလျံနာ ဆာဂေးပူဂါချော့နဲ့အလက်ဇ န်းဒါးတော်စတွိုင်းတို့တွေ့ဆုံခဲ့",
+          "caption": "အင်္ဂလိပ်စာသင်ဖို့ငှားခဲ့တာကစပြီး ရုရှားဘီလျံနာ ဆာဂေးပူဂါချော့နဲ့အလက်ဇ န်းဒါးတော်စတွိုင်းတို့တွေ့ဆုံခဲ့",
+          "copyrightHolder": "Alexandra Tolstoy & Sergei Pugachev",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:burmese/world-52362727",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "နှာခေါင်းစည်း အရနောက်ကျလွန်းမယ်လို့ သတိပေးရင်း ကိုဗစ်နဲ့ကွယ်လွန်ခဲ့ရသူ မြန်မာဆရာဝန်"
+        },
+        "locators": {
+          "assetUri": "/burmese/burma-52341237",
+          "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-52341237",
+          "assetId": "52341237"
+        },
+        "summary": "ကိုရိုနာဗိုင်းရပ်စ် ကူးစက်မှုတွေကြား နှာခေါင်းစည်းနဲ့ အကာအကွယ်တွေ လိုအပ်နေချိန် စွန့်စားကုသရင်း သေဆုံးခဲ့တဲ့ ယူကေက မြန်မာဆရာဝန် တစ်ဦး။",
+        "timestamp": 1587249107000,
+        "language": "my",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111847341",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/3826/production/_111847341_93518037_857600108092481_2195485946256818176_n.jpg",
+          "path": "/cpsprodpb/3826/production/_111847341_93518037_857600108092481_2195485946256818176_n.jpg",
+          "height": 294,
+          "width": 523,
+          "altText": "Peter Tun",
+          "copyrightHolder": "Peter Tun Facebook",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:burmese/burma-52341237",
+        "type": "cps"
+      }
+    ]
+  }

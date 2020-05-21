@@ -22,7 +22,7 @@ const faultTolerantDomFetch = url =>
       }
 
       try {
-        const dom = await JSDOM.fromURL(url);
+        const dom = await JSDOM.fromURL(url, { runScripts: 'dangerously' });
 
         resolve(dom);
       } catch (error) {

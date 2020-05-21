@@ -1,0 +1,403 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "Kinh tế Anh ‘có thể suy thoái mạnh vì Covid-19’"
+        },
+        "locators": {
+          "assetUri": "/vietnamese/business-52651545",
+          "cpsUrn": "urn:bbc:content:assetUri:vietnamese/business-52651545",
+          "assetId": "52651545"
+        },
+        "summary": "Bộ trưởng Tài chính Anh cảnh báo Vương quốc Anh đối mặt rủi ro suy thoái kinh tế sâu sắc, sau khi số liệu cho thấy kinh tế sụt giảm gần 6% trong tháng Ba.",
+        "timestamp": 1589375673000,
+        "language": "vi",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111996580",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/2179/production/_111996580_pa-52149571.jpg",
+          "path": "/cpsprodpb/2179/production/_111996580_pa-52149571.jpg",
+          "height": 1152,
+          "width": 2048,
+          "altText": "Woman shopping at Tesco",
+          "copyrightHolder": "PA Media",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:vietnamese/business-52651545",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "VN: Hoãn luật biểu tình vì 'chưa có hòa bình từ 1975'"
+        },
+        "locators": {
+          "assetUri": "/vietnamese/forum-52647824",
+          "cpsUrn": "urn:bbc:content:assetUri:vietnamese/forum-52647824",
+          "assetId": "52647824"
+        },
+        "summary": "Ý kiến nói 'bên thắng cuộc' nay vẫn thấy xung quanh họ 'toàn thế lực thù địch' vì chưa làm được 'hòa hợp hoà giải' dân tộc.",
+        "timestamp": 1589364904000,
+        "language": "vi",
+        "byline": {
+          "name": "Nguyễn Quang Duy",
+          "title": "Gửi cho BBC từ Melbourne, Úc",
+          "persons": [
+            {
+              "name": "Quang Duy Nguyễn",
+              "function": "Gửi cho BBC từ Melbourne, Úc"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+            "categoryName": "Opinion"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112254255",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/D7CD/production/_112254255_whatsubject.jpg",
+          "path": "/cpsprodpb/D7CD/production/_112254255_whatsubject.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Sài Gòn năm 1970",
+          "caption": "Sài Gòn năm 1970",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "section": {
+          "subType": "IDX",
+          "name": "Diễn đàn",
+          "uri": "/vietnamese/forum",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:vietnamese/forum-52647824",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Mỹ đưa tàu hải quân vào Biển Đông để 'hỗ trợ tự do hàng hải'"
+        },
+        "locators": {
+          "assetUri": "/vietnamese/world-52645446",
+          "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-52645446",
+          "assetId": "52645446"
+        },
+        "summary": "Tàu tác chiến ven bờ lớp Independence USS Gabrielle Giffords (LCS 10) đã triển khai hoạt động ở khu vực Biển Đông từ 12/5.",
+        "timestamp": 1589366937000,
+        "language": "vi",
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112254963",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/9051/production/_112254963_bee22241-e6bf-4262-aa47-fedf8a9f94be.jpg",
+          "path": "/cpsprodpb/9051/production/_112254963_bee22241-e6bf-4262-aa47-fedf8a9f94be.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Tàu tác chiến ven bờ lớp Independence USS Gabrielle Giffords",
+          "caption": "Tàu tác chiến ven bờ lớp Independence USS Gabrielle Giffords",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:vietnamese/world-52645446",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "Ta cần làm gì để bảo vệ thế giới thời hậu Covid-19?"
+        },
+        "locators": {
+          "assetUri": "/vietnamese/vert-tra-52612585",
+          "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vert-tra-52612585",
+          "assetId": "52612585"
+        },
+        "summary": "Lệnh cấm đi lại, ngừng bay, đóng cửa đã khiến Trái Đất chứng kiến bao sinh vật trở lại khi con người phải ở trong nhà. Ta sẽ làm gì để bảo vệ thế giới đó?",
+        "timestamp": 1589206408000,
+        "language": "vi",
+        "byline": {
+          "name": "Chloe Berge",
+          "title": "BBC Travel",
+          "persons": [
+            {
+              "name": ". .",
+              "function": "BBC News"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112231544",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/ADE1/production/_112231544_9d64b8e2-e1fb-4c34-91eb-eed4ed60a99f.jpg",
+          "path": "/cpsprodpb/ADE1/production/_112231544_9d64b8e2-e1fb-4c34-91eb-eed4ed60a99f.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Getty Images",
+          "caption": "Các dòng kênh ở Venice hiện giờ có vẻ trong hơn vì số lượng thuyền du lịch giảm đáng kể",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:vietnamese/vert-tra-52612585",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Reuters: Tài liệu nội bộ cảnh báo TQ đối mặt tâm lý bài Trung toàn cầu sau dịch Covid-19"
+        },
+        "locators": {
+          "assetUri": "/vietnamese/world-52597021",
+          "cpsUrn": "urn:bbc:content:assetUri:vietnamese/world-52597021",
+          "assetId": "52597021"
+        },
+        "summary": "Tài liệu này cũng nói Trung Quốc có thể cần phải chuẩn bị cho một tình huống xấu nhất là xung đột quân sự với Mỹ.",
+        "timestamp": 1588996234000,
+        "language": "vi",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112211781",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/4917/production/_112211781_gettyimages-2130279.jpg",
+          "path": "/cpsprodpb/4917/production/_112211781_gettyimages-2130279.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "China, protests",
+          "copyrightHolder": "MIKE CLARKE/Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:vietnamese/world-52597021",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Covid-19 và sự lựa chọn đau đớn cho ai được sống"
+        },
+        "locators": {
+          "assetUri": "/vietnamese/vert-fut-52561896",
+          "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vert-fut-52561896",
+          "assetId": "52561896"
+        },
+        "summary": "Thiếu thiết bị, giường và nhân viên có nghĩa là các bác sĩ phải đưa ra một quyết định khủng khiếp giữa đại dịch hiện nay.",
+        "timestamp": 1588768941000,
+        "language": "vi",
+        "byline": {
+          "name": "Abigail Beall ",
+          "title": "BBC Future",
+          "persons": [
+            {
+              "name": "Quynh Le",
+              "function": "BBC Vietnamese"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112168067",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/12936/production/_112168067_whatsubject.jpg",
+          "path": "/cpsprodpb/12936/production/_112168067_whatsubject.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Đồ bảo hộ mà nhân viên y tế phải mặc có thể khiến toàn bộ trải nghiệm trở nên đáng sợ hơn đối với bệnh nhân Covid-19",
+          "caption": "Đồ bảo hộ mà nhân viên y tế phải mặc có thể khiến toàn bộ trải nghiệm trở nên đáng sợ hơn đối với bệnh nhân Covid-19",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:vietnamese/vert-fut-52561896",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Covid-19: Những phi cơ nghỉ bay được cất giữ thế nào?"
+        },
+        "locators": {
+          "assetUri": "/vietnamese/vert-cap-52505162",
+          "cpsUrn": "urn:bbc:content:assetUri:vietnamese/vert-cap-52505162",
+          "assetId": "52505162"
+        },
+        "summary": "Buộc cắt giảm hầu hết các chuyến bay do virus corona, các hàng hãng không phải thuê chỗ đỗ phi cơ và bỏ chi phí tốn kém để bảo dưỡng.",
+        "timestamp": 1588511055000,
+        "language": "vi",
+        "byline": {
+          "name": "John Walton",
+          "title": "BBC Worklife",
+          "persons": [
+            {
+              "name": ". .",
+              "function": "."
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112028891",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/4DAA/production/_112028891_811032ea-8e74-4acf-a07d-63acb063f28c.jpg",
+          "path": "/cpsprodpb/4DAA/production/_112028891_811032ea-8e74-4acf-a07d-63acb063f28c.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "Other",
+          "copyrightHolder": "Other",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:vietnamese/vert-cap-52505162",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "30/04/1975: Vào Nam rồi ra đi, u tôi không về lại quê ngoài Bắc"
+        },
+        "locators": {
+          "assetUri": "/vietnamese/forum-52506303",
+          "cpsUrn": "urn:bbc:content:assetUri:vietnamese/forum-52506303",
+          "assetId": "52506303"
+        },
+        "summary": "Ông Bùi Văn Phú nhớ lần thăm quê ở Nam Định và người thân, bạn bè đã hy sinh cho đất nước được hòa bình.",
+        "timestamp": 1588410666000,
+        "language": "vi",
+        "byline": {
+          "name": "Bùi Văn Phú",
+          "title": "Gửi đến BBC từ Berkeley, California ",
+          "persons": [
+            {
+              "name": "Dan Egan",
+              "function": ""
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+            "categoryName": "Opinion"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112089614",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/A2E2/production/_112089614_buivanphu_20200430_quehuonghoabinhthongnhat_h08_u_tet2020.jpg",
+          "path": "/cpsprodpb/A2E2/production/_112089614_buivanphu_20200430_quehuonghoabinhthongnhat_h08_u_tet2020.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Gia đình tác giả Bùi Văn Phú tại California dịp Tết Nguyên đán 2020",
+          "caption": "Gia đình tác giả Bùi Văn Phú tại California dịp Tết Nguyên đán 2020",
+          "copyrightHolder": "Bui Van Phu",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "section": {
+          "subType": "IDX",
+          "name": "Diễn đàn",
+          "uri": "/vietnamese/forum",
+          "type": "simple"
+        },
+        "id": "urn:bbc:ares::asset:vietnamese/forum-52506303",
+        "type": "cps"
+      }
+    ]
+  }
