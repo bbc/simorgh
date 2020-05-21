@@ -181,6 +181,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'ප්‍රධාන පුවත',
+      featuresAnalysisTitle: 'දැක්ම',
     },
     brandSVG,
     mostRead: {
@@ -206,11 +208,11 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/sinhala/institutional-36017568',
           text: 'භාවිතයේ කොන්දේසි',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/sinhala/institutional-36019591',
           text: 'පෞද්ගලිකත්ව ප්‍රතිපත්තිය',
         },
         {
@@ -218,7 +220,7 @@ export const service = {
           text: 'කුකීස්',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/sinhala/institutional-36019593',
           text: 'බීබීසී අමතන්න',
         },
         {

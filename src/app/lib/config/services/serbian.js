@@ -267,6 +267,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'Najvažnije',
+      featuresAnalysisTitle: 'Features',
     },
   },
   cyr: {
@@ -496,6 +498,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'Најважније',
+      featuresAnalysisTitle: 'Features',
     },
   },
 };

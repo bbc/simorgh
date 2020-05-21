@@ -6,44 +6,48 @@ import {
   AMP_ADS_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
 import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
+  GEL_SPACING_DBL,
+  GEL_SPACING,
 } from '@bbc/gel-foundations/spacings';
+import { C_LUNAR_LIGHT } from '@bbc/psammead-styles/colours';
+
+const StyledWrapper = styled.div`
+  background-color: ${C_LUNAR_LIGHT};
+`;
 
 const StyledAd = styled.div`
   /* To centre page layout for Group 4+ */
   margin: 0 auto;
   width: 100%; /* Needed for IE11 */
   text-align: center;
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_TRPL};
-  }
+  padding-top: ${GEL_SPACING_TRPL};
+  padding-bottom: ${GEL_SPACING};
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_QUAD};
+    padding-top: ${GEL_SPACING_QUAD};
+    padding-bottom: ${GEL_SPACING_DBL};
     max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
   }
 `;
 
-const constructAdJsonData = ({ service }) => {
-  const data = {
-    targeting: {
-      slot: 'leaderboard',
-      asset_type: 'index',
-      channel: service,
-    },
-  };
-
-  return data;
-};
+const constructAdJsonData = ({ service }) => ({
+  targeting: {
+    slot: 'leaderboard',
+    asset_type: 'index',
+    channel: service,
+  },
+});
 
 const ampAdPropsMobile = ({ service }) => ({
-  media: '(max-width: 599px)',
+  'data-block-on-consent': 'default',
+  'data-npa-on-unknown-consent': 'true',
+  media: `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
   type: 'doubleclick',
   width: '320',
   height: '50',
@@ -55,7 +59,9 @@ const ampAdPropsMobile = ({ service }) => ({
 });
 
 const ampAdPropsDesktop = ({ service }) => ({
-  media: '(min-width: 600px)',
+  'data-block-on-consent': 'default',
+  'data-npa-on-unknown-consent': 'true',
+  media: `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN})`,
   type: 'doubleclick',
   width: '970',
   height: '250',
@@ -69,9 +75,12 @@ const ampAdPropsDesktop = ({ service }) => ({
 const AMP_ACCESS_DATA = endpoint => ({
   authorization: endpoint,
   noPingback: true,
+  authorizationFallbackResponse: {
+    error: true,
+  },
 });
 
-const AMP_ACCESS_FETCH = service => {
+export const AMP_ACCESS_FETCH = service => {
   const togglesEndpoint = `${process.env.SIMORGH_TOGGLES_URL}/toggles?application=simorgh&service=${service}&geoiplookup=true`;
 
   return (
@@ -84,7 +93,7 @@ const AMP_ACCESS_FETCH = service => {
 // eslint-disable-next-line react/prop-types
 const AmpAd = ({ service }) => {
   return (
-    <>
+    <StyledWrapper>
       <Helmet>
         {AMP_ADS_JS}
         {AMP_ACCESS_JS}
@@ -115,7 +124,7 @@ const AmpAd = ({ service }) => {
           </amp-ad>
         </StyledAd>
       </div>
-    </>
+    </StyledWrapper>
   );
 };
 

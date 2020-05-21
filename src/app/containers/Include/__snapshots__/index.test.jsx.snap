@@ -9,7 +9,9 @@ exports[`IncludeContainer should not render any HTML when include toggle is disa
   <div
     class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
   >
-    <div>
+    <div
+      class="Include-zso27i-0 dXHWeh"
+    >
       <div>
         Visual Journalism Markup
       </div>
@@ -22,12 +24,16 @@ exports[`IncludeContainer should not render any HTML when include toggle is disa
 </div>
 `;
 
+exports[`IncludeContainer should not render any HTML when its an amp page 1`] = `<div />`;
+
 exports[`IncludeContainer should render HTML when include toggle is enabled 1`] = `
 <div>
   <div
     class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
   >
-    <div>
+    <div
+      class="Include-zso27i-0 dXHWeh"
+    >
       <div>
         Visual Journalism Markup
       </div>

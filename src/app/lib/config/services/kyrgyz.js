@@ -180,6 +180,8 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% посттун аягы',
         },
       },
+      topStoriesTitle: 'Башкы кабарлар',
+      featuresAnalysisTitle: 'Редактордун тандоосу',
     },
     brandSVG,
     mostRead: {

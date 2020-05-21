@@ -175,7 +175,6 @@ export default () => {
       const linkedDataEl = document.querySelector(
         'script[type="application/ld+json"]',
       );
-
       expect(linkedDataEl).toBeInTheDocument();
       expect(linkedDataEl.textContent).toBeTruthy();
       expect(JSON.parse(linkedDataEl.textContent)).toMatchSnapshot();

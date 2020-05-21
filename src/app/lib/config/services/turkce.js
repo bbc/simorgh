@@ -180,6 +180,8 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% paylaşımının sonu',
         },
       },
+      topStoriesTitle: 'Manşet haber',
+      featuresAnalysisTitle: 'Aramızda Kalmasın',
     },
     brandSVG,
     mostRead: {

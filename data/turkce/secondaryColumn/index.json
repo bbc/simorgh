@@ -1,0 +1,267 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "Türkiye ve dünyadaki temas takip uygulamaları güvenli mi, hak ve mahremiyet ihlallerine yol açar mı?"
+        },
+        "locators": {
+          "assetUri": "/turkce/haberler-dunya-52638919",
+          "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-dunya-52638919",
+          "assetId": "52638919"
+        },
+        "summary": "Türkiye dahil dünya genelinde birçok ülke Covid-19 salgınını kontrol altına almak için cep telefonlarına temas takip uygulamaları indirilmesini istiyor. Ama çok sayıda veri toplayan bu modellerin insan hakları, mahremiyet ve kişisel veri güvenliğine tehdit oluşturduğu kaygısı da var. Çağıl Kasapoğlu'nun haberi.",
+        "timestamp": 1589349025000,
+        "language": "tr",
+        "byline": {
+          "name": "Çağıl Kasapoğlu",
+          "title": "BBC Türkçe",
+          "persons": [
+            {
+              "name": "Çağıl Kasapoğlu",
+              "function": "BBC Türkçe"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112246284",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/BC88/production/_112246284_gettyimages-1209538070.jpg",
+          "path": "/cpsprodpb/BC88/production/_112246284_gettyimages-1209538070.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Covid-19 uygulamaları",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:turkce/haberler-dunya-52638919",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Twitter, personeline bundan böyle hep evden çalışabileceklerini söyledi"
+        },
+        "locators": {
+          "assetUri": "/turkce/live/haberler-dunya-52591045",
+          "cpsUrn": "urn:bbc:content:assetUri:turkce/live/haberler-dunya-52591045",
+          "assetId": "52591045"
+        },
+        "summary": "Koronavirüs salgını döneminde çalışanlarına evden çalışma zorunluluğu getiren Twitter, isteyen çalışanlarının salgın atlatıldıktan sonra da evden çalışma sistemine devam edebileceğini açıkladı. Facebook ve Google da çalışanlarına yıl sonuna kadar evden çalışma seçeneği sunmuştu. Dünya genelinde koronavirüs vaka sayısı 4 milyon 262 bine çıktı. Gelişmeler canlı anlatım sayfamızda.",
+        "timestamp": 1589350732000,
+        "language": "tr",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "LIV",
+        "indexImage": {
+          "id": "112207155",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/D782/production/_112207155__112236461_gettyimages-1209519827.jpg",
+          "path": "/cpsprodpb/D782/production/_112207155__112236461_gettyimages-1209519827.jpg",
+          "height": 371,
+          "width": 660,
+          "altText": "twitter logo",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "commentary": {
+          "order": "descending",
+          "assetUUID": "D54D82859CC04042888044C26235218F",
+          "channels": {
+            "enhancedmobile": "bbc.cps.asset.52591046_EnhancedMobile",
+            "desktop": "bbc.cps.asset.52591046_HighWeb",
+            "highweb": "bbc.cps.asset.52591046_HighWeb",
+            "mobile": "bbc.cps.asset.52591046_EnhancedMobile"
+          }
+        },
+        "isLive": true,
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:turkce/live/haberler-dunya-52591045",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Kabil'deki kadın doğum hastanesine yapılan saldırıda hayatını kaybedenlerin sayısı 24'e çıktı"
+        },
+        "locators": {
+          "assetUri": "/turkce/haberler-dunya-52636888",
+          "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-dunya-52636888",
+          "assetId": "52636888"
+        },
+        "summary": "Afganistan'ın başkenti Kabil'de, yeni doğan bebeklerin de olduğu bir kadın doğum hastanesine polis üniformalı kişilerce yapılan saldırıda hayatını kaybedenlerin sayısı 24'e çıktı. Yaşamını yitirenler arasında yeni doğan bebekler, anneler ve hemşireler var.",
+        "timestamp": 1589370696000,
+        "language": "tr",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112253741",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/398F/production/_112253741_65d02310-5989-4688-849e-8fe3e984eecc.jpg",
+          "path": "/cpsprodpb/398F/production/_112253741_65d02310-5989-4688-849e-8fe3e984eecc.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Güvenlik güçleri hastaneyi tahliye etti.",
+          "caption": "Güvenlik güçleri hastaneyi tahliye etti.",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:turkce/haberler-dunya-52636888",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "Aramızda Kalmasın: 'Kızlık zarımı diktirdim, toplum beni buna zorladı'",
+          "overtyped": "'Kızlık zarımı diktirdim, toplum beni buna zorladı'"
+        },
+        "locators": {
+          "assetUri": "/turkce/haberler-turkiye-51801815",
+          "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-turkiye-51801815",
+          "assetId": "51801815"
+        },
+        "summary": "BBC Türkçe'nin kadınların cinsel sağlığı ve sorunlarıyla ilgili hazırladığı \"Aramızda Kalmasın\" adlı serinin ilk bölümünde kızlık zarını diktiren bir kadın yaşadıklarını ve neden bu operasyonu yaptırdığını; uzmanlar da, kızlık zarının toplumda nasıl görüldüğünü ve ne gibi yanlış sembollere dönüştüğünü anlatıyor. Berza Şimşek'in haberi.",
+        "timestamp": 1583798641000,
+        "language": "tr",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111196287",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/131BD/production/_111196287_kizlik.jpg",
+          "path": "/cpsprodpb/131BD/production/_111196287_kizlik.jpg",
+          "height": 1080,
+          "width": 1920,
+          "altText": "Gelin kuşağı",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:turkce/haberler-turkiye-51801815",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "'Vajinismus oldum, tedavisi nedir?'"
+        },
+        "locators": {
+          "assetUri": "/turkce/haberler-turkiye-51818257",
+          "cpsUrn": "urn:bbc:content:assetUri:turkce/haberler-turkiye-51818257",
+          "assetId": "51818257"
+        },
+        "summary": "Aramızda Kalmasın serisinin bu bölümünde vajinismus var. Türkiye'de kadınların en sık yaşadığı cinsel sağlık sorunlarından biri olan vajinismus genellikle psikolojik nedenlere bağlanıyor. İlişkiye girememe durumu uzmanlara göre toplumda ve aile içinde paylaşılan yanlış bilgilere ve baskılardan kaynaklanıyor. Vajinismus nedir? Tedavisi nasıl oluyor?",
+        "timestamp": 1583861663000,
+        "language": "tr",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111205348",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1497E/production/_111205348_vajinismus_pic.jpg",
+          "path": "/cpsprodpb/1497E/production/_111205348_vajinismus_pic.jpg",
+          "height": 651,
+          "width": 1157,
+          "altText": "Vajinismus",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "111205347",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/1226E/production/_111205347_vajinismus_pic.jpg",
+          "path": "/cpsprodpb/1226E/production/_111205347_vajinismus_pic.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Vajinismus",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:turkce/haberler-turkiye-51818257",
+        "type": "cps"
+      }
+    ]
+  }

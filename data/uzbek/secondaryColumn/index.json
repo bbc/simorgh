@@ -1,0 +1,641 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "Коронавирус: Ўзбекистон Россиядан сотиб олиши айтилган ИВЛ аппаратлари ёниб кетмоқда"
+        },
+        "locators": {
+          "assetUri": "/uzbek/uzbekistan-52649213",
+          "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-52649213",
+          "assetId": "52649213"
+        },
+        "summary": "Россиянинг икки шифохонасида ИВЛ аппаратида чиққан ёнғинда 6 бемор ҳаётдан кўз юмган. Уралдаги заводда ишлаб чиқарилган \"Авента-М\" аппарати вақтинча тақиқланган. Ўзбекистон ҳукумати Соғлиқни сақлаш вазирлигига Уралдаги заводдан 500 та аппаратни тендерсиз сотиб олишга рухсат берган эди.",
+        "timestamp": 1589379434000,
+        "language": "uz-Cyrl",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112257076",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/10603/production/_112257076_gettyimages-1211400679.jpg",
+          "path": "/cpsprodpb/10603/production/_112257076_gettyimages-1211400679.jpg",
+          "height": 351,
+          "width": 624,
+          "altText": "ИВЛ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112257078",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/15423/production/_112257078_gettyimages-1211400679.jpg",
+          "path": "/cpsprodpb/15423/production/_112257078_gettyimages-1211400679.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "ИВЛ",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "maximum",
+        "id": "urn:bbc:ares::asset:uzbek/uzbekistan-52649213",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Сардоба саволлари: Алишер Усмонов берган $10 миллион қаерда? Ўзбекистон",
+          "overtyped": "Сардоба саволлари: Алишер Усмонов берган $10 миллион қаерда? Ўзбекистон"
+        },
+        "locators": {
+          "assetUri": "/uzbek/uzbekistan-52642463",
+          "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-52642463",
+          "assetId": "52642463"
+        },
+        "summary": "Сардоба фожиаси ортидан жавобсиз саволлар кўпайган. Уйсиз қолган одамларга ҳовли-жойлари ва мол-мулклари тиклаб бериладими? Давлат уларга қанчадан ёрдам пули ажратади ёки йўқ? Сардобаликлар учун Алишер Усмонов берган 10 миллион доллар қаерда?",
+        "timestamp": 1589366471000,
+        "language": "uz-Cyrl",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+            "categoryName": "Analysis"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112252719",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1664D/production/_112252719_gettyimages-1133140415-594x594.jpg",
+          "path": "/cpsprodpb/1664D/production/_112252719_gettyimages-1133140415-594x594.jpg",
+          "height": 360,
+          "width": 640,
+          "altText": "Алишер Усмонов",
+          "copyrightHolder": "Mikhail Svetlov/GettyImages",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "maximum",
+        "overtypedSummary": "Сардоба фожиаси атрофида жавобсиз саволлар кўпайган. Уйсиз қолган одамларга  ҳовли-жойлари ва мол-мулклари тўлиқ тиклаб бериладими? Давлат уларга қанчадан ёрдам пули ажратади ёки йўқ? Сардобаликлар учун Алишер Усмонов берган 10 миллион доллар қаерда?  ",
+        "id": "urn:bbc:ares::asset:uzbek/uzbekistan-52642463",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Ўзбекистон чигиртка офатига ҳам тайёр туриши керакми?"
+        },
+        "locators": {
+          "assetUri": "/uzbek/central-asia-52638699",
+          "cpsUrn": "urn:bbc:content:assetUri:uzbek/central-asia-52638699",
+          "assetId": "52638699"
+        },
+        "summary": "Иккинчи йилдирки, олимлар ва халқаро ташкилотлар ёз ойларида чигиртка офати минглаб гектар майдондаги экинларга қирон келтириши ва миллионлаб инсонлар очарчилик хавфи билан юзма-юз келишидан огоҳлантирмоқдалар.",
+        "timestamp": 1589368464000,
+        "language": "uz-Cyrl",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112246553",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/8AEC/production/_112246553_51378322-8401-4776-9532-320e34667d47.jpg",
+          "path": "/cpsprodpb/8AEC/production/_112246553_51378322-8401-4776-9532-320e34667d47.jpg",
+          "height": 360,
+          "width": 640,
+          "altText": "Африкада чигиртка балоси",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "maximum",
+        "id": "urn:bbc:ares::asset:uzbek/central-asia-52638699",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "Хотира: Ўзбек Жамиласи ёхуд Узбечка - урушдаги ўзбек аёли сиймосига назар"
+        },
+        "locators": {
+          "assetUri": "/uzbek/uzbekistan-52598902",
+          "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-52598902",
+          "assetId": "52598902"
+        },
+        "summary": "Москвадаги \"Вече\" нашриётида ўзбек ёзувчиси Бахтиёр Абдуғафурнинг \"Узбечка\" номли романи нашрдан чиққан. Роман Ўзбекистоннинг янги тарихида Иккинчи жаҳон уруши мавзуси қаламга олинган илк асарлардан бўлган.",
+        "timestamp": 1589021874000,
+        "language": "uz-Cyrl",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112213658",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/14E7F/production/_112213658_uz1.jpg",
+          "path": "/cpsprodpb/14E7F/production/_112213658_uz1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "\"Узбечка\"",
+          "copyrightHolder": "Courtesy",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112213660",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/19E7/production/_112213660_uz1.jpg",
+          "path": "/cpsprodpb/19E7/production/_112213660_uz1.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "\"Узбечка\"",
+          "copyrightHolder": "Courtesy",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:uzbek/uzbekistan-52598902",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Ким қанча: давлатлар карантиндаги аҳолисига қанча пул беряпти? Коронавирус O’zbekiston"
+        },
+        "locators": {
+          "assetUri": "/uzbek/world-52592170",
+          "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-52592170",
+          "assetId": "52592170"
+        },
+        "summary": "Халқаро валюта жамғармасига кўра, 7 апрелга келиб жаҳон бўйлаб давлатлар фавқулодда молиявий кўмак чоралари учун 4,5 триллион доллар ажратишган. Охирги ҳафталарда бу кўрсаткич фақат ўсиб борди.",
+        "timestamp": 1588944311000,
+        "language": "uz-Cyrl",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+            "categoryName": "Analysis"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112207054",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/B00E/production/_112207054_11.png",
+          "path": "/cpsprodpb/B00E/production/_112207054_11.png",
+          "height": 549,
+          "width": 976,
+          "altText": "Ҳиндистон кўрсатаётган ёрдам ичида қашшоқлар учун гуруч ва нўхот ҳам бор",
+          "caption": "Ҳиндистон кўрсатаётган ёрдам ичида қашшоқлар учун гуруч ва нўхот ҳам бор",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112207221",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/2FEE/production/_112207221_11.png",
+          "path": "/cpsprodpb/2FEE/production/_112207221_11.png",
+          "height": 180,
+          "width": 320,
+          "altText": "Ҳиндистон кўрсатаётган ёрдам ичида қашшоқлар учун гуруч ва нўхот ҳам бор",
+          "caption": "Ҳиндистон кўрсатаётган ёрдам ичида қашшоқлар учун гуруч ва нўхот ҳам бор",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:uzbek/world-52592170",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Коронавирус: ўлим тўшагида ўқилган никоҳ - бўлган воқеа"
+        },
+        "locators": {
+          "assetUri": "/uzbek/world-52390143",
+          "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-52390143",
+          "assetId": "52390143"
+        },
+        "summary": "Ўлим тўшагида тўй. Бу никоҳ маросими коронавирус касаллари даволанадиган касалхонада бўлиб ўтди. Сўнгги нафасини олаётган куёв ва қаллиғи шифохонада оила қурдилар. Ушбу муҳаббат қиссаси қандай тугади?",
+        "timestamp": 1588144691000,
+        "language": "uz-Cyrl",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            },
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111902138",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/144B0/production/_111902138_diary-rings.jpg",
+          "path": "/cpsprodpb/144B0/production/_111902138_diary-rings.jpg",
+          "height": 371,
+          "width": 660,
+          "altText": "Никоҳ узуклари",
+          "caption": "Келин-куёв учун ясалган никоҳ узуклари.",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:uzbek/world-52390143",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Дин ва дунё: Исломдан завқланиш - Британиянинг биринчи мусулмонлари"
+        },
+        "locators": {
+          "assetUri": "/uzbek/world-52521144",
+          "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-52521144",
+          "assetId": "52521144"
+        },
+        "summary": "Британия Империяси қудратнинг чўққисига чиққан 19-асрда бир гуруҳ британ аслзодалари ўз эътиқодидан воз кечиб, Исломга юзланган.",
+        "timestamp": 1588590690000,
+        "language": "uz-Cyrl",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e1739461b000e9dabf6",
+              "campaignName": "WS - CS"
+            },
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "106968859",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1768E/production/_106968859_lec.jpg",
+          "path": "/cpsprodpb/1768E/production/_106968859_lec.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Lady Evelyn with her husband and child",
+          "caption": "Lady Evelyn, pictured with her husband John Cobbold, felt she was \"Muslim at heart\"",
+          "copyrightHolder": "Philip Hope-Cobbold",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:uzbek/world-52521144",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Рамазон ва карантин: Бўм-бўш Каъба, ёпиқ масжид ва кўчадаги муслима - суратлар",
+          "overtyped": "Рамазон ва карантин: бўм-бўш Каъба, ёпиқ масжид ва кўчадаги муслима - суратли саёҳат"
+        },
+        "locators": {
+          "assetUri": "/uzbek/world-52431898",
+          "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-52431898",
+          "assetId": "52431898"
+        },
+        "summary": "Коронавирус пандемияси боис аксар мусулмон давлатлари ё қисман, ё тўлиқ карантинда қолмоқда. Масжидлар ёпилган, кўчалар кимсасиз. Вирус Рамазон, рўза ва тақвони қанчалик ўзгартира олди ёки йўқ?",
+        "timestamp": 1587911641000,
+        "language": "uz-Cyrl",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e1739461b000e9dabf6",
+              "campaignName": "WS - CS"
+            },
+            {
+              "campaignId": "5a988e2139461b000e9dabf7",
+              "campaignName": "WS - Inspire me"
+            },
+            {
+              "campaignId": "5a988e3139461b000e9dabf9",
+              "campaignName": "WS - Divert me"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111973884",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/BEC5/production/_111973884_tashkentmosque2.jpg",
+          "path": "/cpsprodpb/BEC5/production/_111973884_tashkentmosque2.jpg",
+          "height": 360,
+          "width": 640,
+          "altText": "Тошкент",
+          "caption": "Рамазонда гавжум бўладиган Ўзбекистон масжидлари ҳам карантинда ёпиқ.",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:uzbek/world-52431898",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Россия буғдой экспортини тақиқлади, Ўзбекистонда ун қимматлайдими?"
+        },
+        "locators": {
+          "assetUri": "/uzbek/central-asia-52442453",
+          "cpsUrn": "urn:bbc:content:assetUri:uzbek/central-asia-52442453",
+          "assetId": "52442453"
+        },
+        "summary": "Россия буғдойини 1 июлгача четга олиб чиқишни тақиқлади. Россия Қишлоқ хўжалиги вазирлигига кўра, фақат ЕвроОсиё Иқтисодий Иттифоқига аъзо мамлакатларгагина буғдой экспортига рухсат этилади.",
+        "timestamp": 1588076419000,
+        "language": "uz-Cyrl",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+            "categoryName": "Analysis"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            },
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111982770",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1E30/production/_111982770_bb165c8a-0550-4dcb-bb18-2aa380d79ba6.jpg",
+          "path": "/cpsprodpb/1E30/production/_111982770_bb165c8a-0550-4dcb-bb18-2aa380d79ba6.jpg",
+          "height": 351,
+          "width": 624,
+          "altText": "Россиядаги буғдой даласида ҳосил йиғиш",
+          "copyrightHolder": "AFP",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:uzbek/central-asia-52442453",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Коронавирус бўлган одамларга у қайта юқмайди деган кафолат йўқ"
+        },
+        "locators": {
+          "assetUri": "/uzbek/world-52430883",
+          "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-52430883",
+          "assetId": "52430883"
+        },
+        "summary": "Коронавирус юқтирган одамларда иммунитет шаклланиб, вирус қайта юқмаслигига кафолат йўқ. ЖССТ баёнотига кўра, ўтказилган тадқиқотлар вирусни юқтириб, тузалган одамлар энди ундан ҳимояланган, деган хулосани бермаган. Бу хулоса сиз, карантин ва ҳаётингиз учун учун нимани англатади?",
+        "timestamp": 1587888688000,
+        "language": "uz-Cyrl",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111955658",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/14E97/production/_111955658_76a53714-0679-4c95-841f-c4bd547253e2.jpg",
+          "path": "/cpsprodpb/14E97/production/_111955658_76a53714-0679-4c95-841f-c4bd547253e2.jpg",
+          "height": 391,
+          "width": 695,
+          "altText": "Вирусга текшириш",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:uzbek/world-52430883",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Ўзбекистон, коронавирус: Россия, мигрантлар: ўзбекистонликларнинг жасадлари қандай етказилаяпти?",
+          "overtyped": "Ўзбекистон, коронавирус: Россия, мигрантлар: ўзбекистонликларнинг жасадлари қандай етказилаяпти?"
+        },
+        "locators": {
+          "assetUri": "/uzbek/uzbekistan-52401943",
+          "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-52401943",
+          "assetId": "52401943"
+        },
+        "summary": "Россияда вафот этган ўзбекистонликларнинг жасадлари ватанига қуруқлик орқали етказила бошланди. \"200-юк\" ортилган биринчи машина Россиядан Ўзбекистонга 15 апрел куни жўнатилган ва 5 кунда Тошкентга етиб борган.",
+        "timestamp": 1587657192000,
+        "language": "uz-Cyrl",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            },
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111911153",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/8927/production/_111911153_200.jpg",
+          "path": "/cpsprodpb/8927/production/_111911153_200.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Ўзбекистонликлар жасади юкланган автомобиллар",
+          "copyrightHolder": "official",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:uzbek/uzbekistan-52401943",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Коронавирус: Руҳий саломатлик, асабларни қандай асраймиз? Дунё ва Ўзбекистон"
+        },
+        "locators": {
+          "assetUri": "/uzbek/world-51908014",
+          "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-51908014",
+          "assetId": "51908014"
+        },
+        "summary": "Коровирус тарқалганида қандай қилиб руҳий саломатликни асраш мумкин?",
+        "timestamp": 1586869087000,
+        "language": "uz-Cyrl",
+        "byline": {
+          "name": "Кўрсти Бриювер ",
+          "title": "BBC News",
+          "persons": [
+            {
+              "name": "Kirstie Brewer",
+              "function": "BBC News"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+            "categoryName": "Explainer"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111774095",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/E6A7/production/_111774095_index_mental_health_976.png",
+          "path": "/cpsprodpb/E6A7/production/_111774095_index_mental_health_976.png",
+          "height": 549,
+          "width": 976,
+          "altText": "Image showing someone choosing to mute their phone to avoid anxiety-inducing news on coronavirus",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:uzbek/world-51908014",
+        "type": "cps"
+      }
+    ]
+  }

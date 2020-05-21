@@ -1,14 +1,16 @@
 import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
+import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
 
 const getBrandTitle = path(['metadata', 'title']);
 const getLanguage = path(['metadata', 'language']);
-const getEpisodeTitle = path(['content', 'blocks', '0', 'title']);
+const getEpisodeTitle = path(['content', 'blocks', 0, 'title']);
 const getHeadline = path(['promo', 'headlines', 'headline']);
 const getShortSynopsis = path(['promo', 'media', 'synopses', 'short']);
-const getSummary = path(['content', 'blocks', '0', 'synopses', 'short']);
-const getEpisodeId = path(['content', 'blocks', '0', 'id']);
+const getSummary = path(['content', 'blocks', 0, 'synopses', 'short']);
+const getEpisodeId = path(['content', 'blocks', 0, 'id']);
+const getImageUrl = path(['content', 'blocks', 0, 'imageUrl']);
 const getId = path(['metadata', 'id']);
 const getMasterBrand = path(['metadata', 'createdBy']);
 const getContentType = path(['metadata', 'analyticsLabels', 'contentType']);
@@ -34,10 +36,22 @@ const getEpisodeAvailableUntil = path([
   '0',
   'availableUntil',
 ]);
+const getReleaseDateTimeStamp = path(['metadata', 'releaseDateTimeStamp']);
+const getPromoBrandTitle = path(['promo', 'brand', 'title']);
+const getDurationISO8601 = path([
+  'promo',
+  'media',
+  'versions',
+  0,
+  'durationISO8601',
+]);
+const getThumbnailImageUrl = json =>
+  getPlaceholderImageUrlUtil(path(['promo', 'media', 'imageUrl'], json));
 
 export default async ({ path: pathname }) => {
   const onDemandRadioDataPath = overrideRendererOnTest(pathname);
   const { json, ...rest } = await fetchPageData(onDemandRadioDataPath);
+  const pageType = { metadata: { type: 'On Demand Radio' } };
 
   return {
     ...rest,
@@ -55,8 +69,14 @@ export default async ({ path: pathname }) => {
         masterBrand: getMasterBrand(json),
         episodeAvailableFrom: getEpisodeAvailableFrom(json),
         episodeAvailableUntil: getEpisodeAvailableUntil(json),
+        releaseDateTimeStamp: getReleaseDateTimeStamp(json),
         pageTitle: getPageTitle(json),
         pageIdentifier: getPageIdentifier(json),
+        imageUrl: getImageUrl(json),
+        promoBrandTitle: getPromoBrandTitle(json),
+        durationISO8601: getDurationISO8601(json),
+        thumbnailImageUrl: getThumbnailImageUrl(json),
+        ...pageType,
       },
     }),
   };

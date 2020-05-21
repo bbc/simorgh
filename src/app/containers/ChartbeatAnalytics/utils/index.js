@@ -98,11 +98,7 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
   }
 };
 
-const getRadioContentType = pageData => {
-  const contentType = path(['contentType'], pageData);
-  // workaround until contentType value is fixed by ARES
-  return contentType === 'player-live' ? contentType : 'player-episode';
-};
+const getRadioContentType = pageData => path(['contentType'], pageData);
 
 export const getConfig = ({
   isAmp,
@@ -146,7 +142,7 @@ export const getConfig = ({
     sections,
     uid: chartbeatUID,
     title,
-    virtualReferrer: decodeURIComponent(referrer),
+    virtualReferrer: referrer && decodeURIComponent(referrer),
     ...(isAmp && { contentType }),
     ...(!isAmp && {
       type: contentType,

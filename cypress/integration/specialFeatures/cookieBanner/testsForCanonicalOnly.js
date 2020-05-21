@@ -1,7 +1,13 @@
-import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import config from '../../../support/config/services';
 import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
 import getPaths from '../../../support/helpers/getPaths';
+import {
+  getCookieBanner,
+  getCookieBannerAccept,
+  getCookieBannerReject,
+  getPrivacyBanner,
+  getPrivacyBannerAccept,
+} from '../utilities/cookiePrivacyBanner';
 
 // Limited to 1 UK & 1 WS service when a smoke test due to time test takes to run per page.
 // This is why this file doesn't check smoke test values.
@@ -21,42 +27,6 @@ const assertCookieExpiryDate = (cookieName, timestamp) => {
     );
   });
 };
-
-const getPrivacyBanner = (service, variant) =>
-  cy.contains(
-    appConfig[config[service].name][variant].translations.consentBanner.privacy
-      .title,
-  );
-const getCookieBanner = (service, variant) =>
-  cy.contains(
-    appConfig[config[service].name][variant].translations.consentBanner.cookie
-      .title,
-  );
-const getPrivacyBannerContainer = (service, variant) =>
-  getPrivacyBanner(service, variant).parent();
-const getCookieBannerContainer = (service, variant) =>
-  getCookieBanner(service, variant).parent();
-const getPrivacyBannerAccept = (service, variant) =>
-  getPrivacyBannerContainer(service, variant)
-    .find('button')
-    .contains(
-      appConfig[config[service].name][variant].translations.consentBanner
-        .privacy.accept,
-    );
-const getCookieBannerAccept = (service, variant) =>
-  getCookieBannerContainer(service, variant)
-    .find('button')
-    .contains(
-      appConfig[config[service].name][variant].translations.consentBanner.cookie
-        .accept,
-    );
-const getCookieBannerReject = (service, variant) =>
-  getCookieBannerContainer(service, variant)
-    .find('a')
-    .contains(
-      appConfig[config[service].name][variant].translations.consentBanner.cookie
-        .reject,
-    );
 
 const ensureCookieExpiryDates = () => {
   const inOneYear = (new Date() / 1000 + 60 * 60 * 24 * 365).toFixed();

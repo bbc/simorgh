@@ -1,5 +1,6 @@
 import processMostRead from './processMostRead';
 import pidginData from '#data/pidgin/mostRead';
+import kyrgyzData from '#data/kyrgyz/mostRead';
 import { setStaleLastRecordTimeStamp } from './testHelpers';
 
 const expectedPidginData = [
@@ -66,17 +67,120 @@ const expectedPidginData = [
   },
 ];
 
+const expectedKyrgyzData = [
+  {
+    id: 'ad632121-eff8-9542-85d5-d099fb4ccbb3',
+    title: '"Шейшепти көрсөт": Кавказдагы эскиден келе жаткан үйлөнүү салттары',
+    href: '/kyrgyz/magazine-48659975',
+    timestamp: 1560768556000,
+  },
+  {
+    id: 'urn:bbc:optimo:c419vkyvj2go',
+    title:
+      'Бишкек: карылар үйүндөгү нааразылык, улгайган кишилерге ким кол көтөрдү?    ',
+    href: 'https://www.bbc.com/kyrgyz/articles/c419vkyvj2go',
+    timestamp: 1588952256682,
+  },
+  {
+    id: '3439531c-2704-a647-b234-5290647837d3',
+    title: 'Атак-даңкты жакшы көргөн Брежнев',
+    href: '/kyrgyz/entertainment-43151726',
+    timestamp: 1519278452000,
+  },
+  {
+    id: '891e5a23-9eee-8248-b99f-9e1c1d77e97e',
+    title: 'Кытай жылына 6 миллиард таракан өстүрөт. Эмнеге?',
+    href: '/kyrgyz/magazine-43919283',
+    timestamp: 1524824448000,
+  },
+  {
+    id: '301f5663-e391-6345-9bc2-1d019db3a331',
+    title: '“Өкмөттүн адвокаты”: сын жукпаган спикер',
+    href: '/kyrgyz/kyrgyzstan-52648816',
+    timestamp: 1589537631000,
+  },
+];
+
+const missingTitleData = {
+  promo: {
+    locators: {
+      canonicalUrl: 'https://www.bbc.com/news/articles/cn060pe01e5o',
+    },
+    timestamp: 1586266369329,
+    headlines: {
+      promoHeadline: {
+        blocks: [
+          {
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  type: 'paragraph',
+                  model: {
+                    text: null,
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  },
+};
+
+const missingHrefData = {
+  promo: {
+    locators: {
+      canonicalUrl: null,
+    },
+    timestamp: 1586266369329,
+    headlines: {
+      promoHeadline: {
+        blocks: [
+          {
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  type: 'paragraph',
+                  model: {
+                    text: 'Most read item title',
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  },
+};
+
 describe('filterMostRead', () => {
   [
     {
-      description: 'should return expected filtered data',
+      description: 'should return expected filtered CPS data',
       data: pidginData,
       numberOfItems: 10,
       expectedReturn: expectedPidginData,
     },
     {
-      description: 'should return null when last record time stamp is stale',
+      description: 'should return expected filtered Optimo data',
+      data: kyrgyzData,
+      numberOfItems: 5,
+      expectedReturn: expectedKyrgyzData,
+    },
+    {
+      description:
+        'should return null when last record CPS time stamp is stale',
       data: setStaleLastRecordTimeStamp(pidginData),
+      expectedReturn: null,
+    },
+    {
+      description:
+        'should return null when last record Optimo time stamp is stale',
+      data: setStaleLastRecordTimeStamp(kyrgyzData),
       expectedReturn: null,
     },
     {
@@ -88,6 +192,18 @@ describe('filterMostRead', () => {
       description: 'should return empty array when records does not exist',
       data: { lastRecordTimeStamp: '2100-11-06T16:37:00Z' },
       expectedReturn: [],
+    },
+    {
+      description: 'should return null when most read item title is missing',
+      data: missingTitleData,
+      numberOfItems: 1,
+      expectedReturn: null,
+    },
+    {
+      description: 'should return null when most read item href is missing',
+      data: missingHrefData,
+      numberOfItems: 1,
+      expectedReturn: null,
     },
   ].forEach(({ description, data, numberOfItems, expectedReturn }) => {
     it(description, () => {

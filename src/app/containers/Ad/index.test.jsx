@@ -20,7 +20,13 @@ const toggleContextMock = {
 };
 
 describe('Ad Container', () => {
-  process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+  beforeAll(() => {
+    process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+  });
+
+  afterAll(() => {
+    delete process.env.SIMORGH_TOGGLES_URL;
+  });
 
   describe('Snapshots', () => {
     shouldMatchSnapshot(
@@ -49,6 +55,44 @@ describe('Ad Container', () => {
           bbcOrigin="https://www.test.bbc.co.uk"
           id="c0000000000o"
           isAmp
+          pageType="frontPage"
+          service="news"
+          statusCode={200}
+          pathname="/news"
+        >
+          <ToggleContext.Provider value={toggleContextMock}>
+            <AdContainer />
+          </ToggleContext.Provider>
+        </RequestContextProvider>
+      </ServiceContextProvider>,
+    );
+
+    shouldMatchSnapshot(
+      'should correctly render a Canonical ad',
+      <ServiceContextProvider service="pidgin">
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          id="c0000000000o"
+          isAmp={false}
+          pageType="frontPage"
+          service="pidgin"
+          statusCode={200}
+          pathname="/pidgin"
+        >
+          <ToggleContext.Provider value={toggleContextMock}>
+            <AdContainer />
+          </ToggleContext.Provider>
+        </RequestContextProvider>
+      </ServiceContextProvider>,
+    );
+
+    shouldMatchSnapshot(
+      'should not render a Canonical ad for News',
+      <ServiceContextProvider service="news">
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          id="c0000000000o"
+          isAmp={false}
           pageType="frontPage"
           service="news"
           statusCode={200}
