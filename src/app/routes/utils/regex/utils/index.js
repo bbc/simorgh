@@ -7,6 +7,7 @@ const variantRegex = '/simp|/trad|/cyr|/lat';
 const articleLocalRegex = 'articles|erthyglau|sgeulachdan';
 const mediaIdRegex = '[a-z0-9]+';
 const radioMasterBrandRegex = 'bbc_[a-z]+_radio';
+const tvMasterBrandRegex = 'bbc_[a-z]+_tv';
 const errorCodeRegex = '404|500';
 const idxRegex = 'persian/afghanistan|ukrainian/ukraine_in_russian';
 
@@ -60,6 +61,11 @@ export const getLiveRadioRegex = services => {
 export const getOnDemandRadioRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/:serviceId(${radioMasterBrandRegex})(/programmes)?/:mediaId(${mediaIdRegex}):amp(${ampRegex})?`;
+};
+
+export const getOnDemandTvRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex})/:serviceId(${tvMasterBrandRegex})(/tv_programmes)?/:mediaId(${mediaIdRegex}):amp(${ampRegex})?`;
 };
 
 export const getErrorPageRegex = services => {
