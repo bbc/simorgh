@@ -16,7 +16,7 @@ import {
 } from './testsForCanonicalOnly';
 
 const testsForPage = {
-  pageType: 'onDemandRadioEpisode',
+  pageType: 'onDemandRadio',
   testsThatAlwaysRun,
   testsThatAlwaysRunForCanonicalOnly,
   testsThatAlwaysRunForAMPOnly,

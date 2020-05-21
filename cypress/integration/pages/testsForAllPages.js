@@ -229,10 +229,6 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                     description = body.promo.summary;
                     title = body.promo.headlines.headline;
                     break;
-                  case 'onDemandRadioEpisode':
-                    description = body.promo.media.synopses.medium;
-                    title = body.promo.headlines.headline;
-                    break;
                   case 'photoGalleryPage':
                     description = body.promo.summary;
                     title = body.promo.headlines.headline;
