@@ -159,6 +159,7 @@ describe('cspHeader', () => {
         'https://static.bbc.co.uk',
         "'self'",
         "'unsafe-inline'",
+        "'unsafe-eval'",
       ],
       styleSrcExpectation: [
         'https://news.files.bbci.co.uk',
@@ -330,6 +331,7 @@ describe('cspHeader', () => {
         'https://static.bbc.co.uk',
         "'self'",
         "'unsafe-inline'",
+        "'unsafe-eval'",
       ],
       styleSrcExpectation: [
         'https://news.files.bbci.co.uk',

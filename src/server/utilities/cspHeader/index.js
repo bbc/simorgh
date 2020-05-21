@@ -236,6 +236,7 @@ const directives = {
       'https://static.bbc.co.uk', // STY include
       "'self'",
       "'unsafe-inline'",
+      "'unsafe-eval'",
     ],
     ampNonLive: [
       'https://news.files.bbci.co.uk', // STY include
@@ -264,6 +265,7 @@ const directives = {
       'https://static.bbc.co.uk', // STY include
       "'self'",
       "'unsafe-inline'",
+      "'unsafe-eval'",
     ],
   },
   styleSrc: {
