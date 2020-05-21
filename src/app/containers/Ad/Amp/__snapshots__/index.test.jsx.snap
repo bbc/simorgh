@@ -31,8 +31,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
   text-align: right;
 }
 
-.c3:hover,
-.c3:focus {
+.c3:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }

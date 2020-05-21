@@ -33,8 +33,7 @@ exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
   text-align: right;
 }
 
-.c3:hover,
-.c3:focus {
+.c3:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }

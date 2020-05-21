@@ -52,8 +52,7 @@ const StyledLink = styled.a.attrs({ tabIndex: '-1' })`
     padding-top: ${GEL_SPACING_DBL};
   }
   
-  &:hover,
-  &:focus {
+  &:hover {
     text-decoration: underline;
   }
 `;
