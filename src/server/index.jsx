@@ -16,6 +16,7 @@ import {
   frontPageSwPath,
   cpsAssetPageDataPath,
   onDemandRadioDataPath,
+  onDemandTvDataPath,
   mostReadDataRegexPath,
   legacyAssetPageDataPath,
   secondaryColumnDataRegexPath,
@@ -179,6 +180,19 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
       sendDataFile(res, dataFilePath, next);
     })
     .get(onDemandRadioDataPath, async ({ params }, res, next) => {
+      const { service, serviceId, mediaId } = params;
+
+      const dataFilePath = path.join(
+        process.cwd(),
+        'data',
+        service,
+        serviceId,
+        mediaId,
+      );
+
+      sendDataFile(res, `${dataFilePath}.json`, next);
+    })
+    .get(onDemandTvDataPath, async ({ params }, res, next) => {
       const { service, serviceId, mediaId } = params;
 
       const dataFilePath = path.join(
