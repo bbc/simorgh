@@ -22,7 +22,8 @@ const StyledHeadline = styled(Headline)`
 `;
 
 const BrandTitle = styled.span`
-  display: block;
+  display: inline-block;
+  width: 100%;
   padding-bottom: ${GEL_SPACING};
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
     padding-bottom: 0;
