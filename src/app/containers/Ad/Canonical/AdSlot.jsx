@@ -3,11 +3,9 @@ import { string } from 'prop-types';
 
 const AdSlot = ({ uniqueId }) => {
   useEffect(() => {
-    if (window.dotcom) {
-      window.dotcom.cmd.push(() => {
-        window.dotcom.ads.registerSlot(uniqueId);
-      });
-    }
+    window.dotcom.cmd.push(() => {
+      window.dotcom.ads.registerSlot(uniqueId);
+    });
   }, [uniqueId]);
 
   return <div id={`dotcom-${uniqueId}`} className="dotcom-ad" />;
