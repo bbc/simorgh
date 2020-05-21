@@ -21,21 +21,25 @@ const ImageContainer = styled.div`
 `;
 
 const getSrc = ({ imageUrl, size }) =>
-  `https://${imageUrl.replace('$recipe', size)}`;
-const getSrcSet = imageUrl =>
-  `${getSrc({ imageUrl, size: '112x112' })} 112w,${getSrc({
-    imageUrl,
-    size: '224x224',
-  })} 224w`;
+  `https://${imageUrl.replace('$recipe', `${size}x${size}`)}`;
+
+const getSrcSet = ({ imageUrl, sizes }) =>
+  sizes.map(size => `${getSrc({ imageUrl, size })} ${size}w`).join(',');
+
+const smallImageSize = 128;
+const mediumImageSize = 240;
+const largeImageSize = 480;
 
 const OnDemandImage = ({ imageUrl, dir }) => {
   const { isAmp } = useContext(RequestContext);
   const { defaultImageAltText: alt } = useContext(ServiceContext);
-  const height = 224;
-  const width = 224;
-  const src = getSrc({ imageUrl, size: '112x112' });
-  const srcset = getSrcSet(imageUrl);
-  const sizes = '(min-width: 1007px) 112px, 100vw';
+
+  const src = getSrc({ imageUrl, size: smallImageSize });
+  const srcset = getSrcSet({
+    imageUrl,
+    sizes: [smallImageSize, mediumImageSize, largeImageSize],
+  });
+  const sizes = '(min-width: 1008px) 228px, 30vw';
   const imageProps = { src, alt, srcset };
 
   return (
@@ -44,8 +48,8 @@ const OnDemandImage = ({ imageUrl, dir }) => {
         <AmpImg
           {...imageProps}
           layout="responsive"
-          height={height}
-          width={width}
+          height={mediumImageSize}
+          width={mediumImageSize}
         />
       ) : (
         <Image {...imageProps} sizes={sizes} />
