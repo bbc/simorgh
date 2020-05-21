@@ -130,6 +130,13 @@ const StoryPromoContainer = ({
   // If mediaStatusCode is visible, there is an error in rendering the block
   const mediaStatuscode = pathOr(null, ['media', 'statusCode'], item);
 
+  const displayTimestamp =
+    timestamp &&
+    !isStoryPromoPodcast &&
+    !isContentTypeGuide &&
+    !isRecommendation &&
+    !isLive;
+
   if (cpsType === 'MAP' && mediaStatuscode) {
     logger.warn(MEDIA_MISSING, {
       url: pathOr(null, ['section', 'uri'], item),
@@ -185,24 +192,20 @@ const StoryPromoContainer = ({
           {promoSummary}
         </Summary>
       )}
-      {timestamp &&
-        !isStoryPromoPodcast &&
-        !isContentTypeGuide &&
-        !isRecommendation &&
-        !isLive && (
-          <Timestamp
-            altCalendar={altCalendar}
-            locale={datetimeLocale}
-            timestamp={timestamp}
-            dateTimeFormat="YYYY-MM-DD"
-            format="LL"
-            script={script}
-            padding={false}
-            service={service}
-            timezone={timezone}
-            isRelative={isTenHoursAgo(timestamp)}
-          />
-        )}
+      {displayTimestamp && (
+        <Timestamp
+          altCalendar={altCalendar}
+          locale={datetimeLocale}
+          timestamp={timestamp}
+          dateTimeFormat="YYYY-MM-DD"
+          format="LL"
+          script={script}
+          padding={false}
+          service={service}
+          timezone={timezone}
+          isRelative={isTenHoursAgo(timestamp)}
+        />
+      )}
       {promoType === 'top' && relatedItems && (
         <IndexAlsosContainer
           alsoItems={relatedItems}
