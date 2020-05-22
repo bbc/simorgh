@@ -19,7 +19,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
           >
             <noscript />
             <main
-              class="GridWrapper-sc-12lwanc-1 StyledGrid-oo43dv-0 jHslwF"
+              class="MediumContentContainer-sc-12lwanc-0 StyledGrid-oo43dv-0 fBlzsH"
               role="main"
             >
               <h1
@@ -396,7 +396,7 @@ exports[`Media Asset Page should render component 1`] = `
           >
             <noscript />
             <main
-              class="GridWrapper-sc-12lwanc-1 StyledGrid-oo43dv-0 jHslwF"
+              class="MediumContentContainer-sc-12lwanc-0 StyledGrid-oo43dv-0 fBlzsH"
               role="main"
             >
               <h1

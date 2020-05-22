@@ -11,7 +11,7 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 
 import pathOr from 'ramda/src/pathOr';
 import MediaMessage from './MediaMessage';
-import { GridWrapper } from '#lib/styledGrid';
+import { MediumContentContainer } from '#lib/styledGrid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -86,8 +86,7 @@ const MediaAssetPage = ({ pageData }) => {
     unavailableMedia: MediaMessage,
   };
 
-  const StyledGrid = styled(GridWrapper)`
-    width: 100%;
+  const StyledGrid = styled(MediumContentContainer)`
     padding-bottom: ${GEL_SPACING_TRPL};
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
       padding-bottom: ${GEL_SPACING_QUAD};
