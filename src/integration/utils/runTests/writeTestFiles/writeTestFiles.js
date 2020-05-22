@@ -11,8 +11,8 @@ module.exports = () => {
     pageTypes.forEach(pageType => {
       const pathnames = getPathnames(service, pageType);
 
-      pathnames.forEach(pathname => {
-        writeTestFile({ service, pageType, pathname });
+      pathnames.forEach(({ path, globals }) => {
+        writeTestFile({ service, pageType, pathname: path, globals });
       });
     });
   });

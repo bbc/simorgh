@@ -5,10 +5,16 @@ const path = require('path');
 const prettifyContent = require('./prettifyContent');
 const { SERVICES_TESTS_DIR } = require('../constants');
 
-const getTestHead = ({ service, pathname }) => `
+const getTestGlobals = (globals = []) =>
+  Object.entries(globals)
+    .map(([key, value]) => `* @${key} ${value}`)
+    .join('\n');
+
+const getTestHead = ({ service, pathname, globals }) => `
   /**
    * @service ${service}
    * @pathname ${pathname}
+   ${getTestGlobals(globals)}
    */
 `;
 
@@ -24,8 +30,8 @@ const getCanonicalTestBody = ({ service, pageType }) => `
   describe('Canonical ${service} ${pageType}', runCanonicalTests);
 `;
 
-module.exports = ({ service, pageType, pathname }) => {
-  const testHead = getTestHead({ service, pathname });
+module.exports = ({ service, pageType, pathname, globals }) => {
+  const testHead = getTestHead({ service, pathname, globals });
 
   const ampTestContent = prettifyContent(`
     ${testHead}

@@ -1,14 +1,12 @@
 import {
-  runCommonCrossPlatformTests,
+  // runCommonCrossPlatformTests, linked data missing
   runMediaPlayerEmbedTests,
 } from '../../common';
 
 export default () => {
-  const EPISODE_IS_EXPIRED = false; // temporary
+  // runCommonCrossPlatformTests(); linked data missing
 
-  runCommonCrossPlatformTests();
-
-  if (EPISODE_IS_EXPIRED) {
+  if (global.isExpired) {
     describe('Expired Episode', () => {
       it(`I can see the 'Content is not available' placeholder`, () => {
         const contentNotAvailableEl = document.querySelector('main div strong');
