@@ -90,7 +90,6 @@ module.exports = {
     articles: ['/igbo/articles/cr1lw620ygjo'],
     mediaAssetPage: ['/igbo/media-23256786'],
     // PGL: ['/igbo/afirika-49666505'],
-    storyPage: ['/igbo/afirika-23252735'],
   },
 
   indonesia: {
@@ -98,6 +97,10 @@ module.exports = {
     articles: ['/indonesia/articles/c0q2zq8pzvzo'],
     liveRadio: ['/indonesia/bbc_indonesian_radio/liveradio'],
     mediaAssetPage: ['/indonesia/media-23269037'],
+    onDemandRadioEpisode: [
+      '/indonesia/bbc_indonesian_radio/w172xh267fpn19l',
+      // '/indonesia/bbc_indonesian_radio/w172x6r5000f38s', // expired
+    ],
     // PGL: ['/indonesia/indonesia-41635759'],
   },
 
@@ -122,6 +125,7 @@ module.exports = {
     liveRadio: ['/kyrgyz/bbc_kyrgyz_radio/liveradio'],
     mediaAssetPage: ['/kyrgyz/media-23257484'],
     // PGL: ['/kyrgyz/world-40847556'],
+    storyPage: ['/kyrgyz/23292889'],
   },
 
   marathi: {
@@ -135,6 +139,8 @@ module.exports = {
     frontPage: ['/mundo'],
     articles: ['/mundo/articles/ce42wzqr2mko'],
     // PGL: ['/mundo/deportes-36935058'],
+    mostReadPage: ['/mundo/popular/read'],
+    storyPage: ['/mundo/noticias-internacional-51266689'],
   },
 
   naidheachdan: {
@@ -158,6 +164,11 @@ module.exports = {
     articles: ['/pashto/articles/cyjmdl92z3ro'],
     liveRadio: ['/pashto/bbc_pashto_radio/liveradio'],
     mediaAssetPage: ['/pashto/media-23257523'],
+    onDemandRadioEpisode: [
+      '/pashto/bbc_pashto_radio/w3ct0lz1',
+      // '/pashto/bbc_pashto_radio/w172x8nvf4bchz5', // expired
+      '/pashto/bbc_pashto_radio/p0340yr4', // brand
+    ],
     // PGL: ['/pashto/arts-and-literature-50230813'],
   },
 
@@ -308,6 +319,7 @@ module.exports = {
     frontPage: ['/vietnamese'],
     articles: ['/vietnamese/articles/c3y59g5zm19o'],
     mediaAssetPage: ['/vietnamese/23222411'],
+    mostReadPage: ['/vietnamese/popular/read'],
     // PGL: ['/vietnamese/world-48605529'],
   },
 

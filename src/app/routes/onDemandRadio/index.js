@@ -1,9 +1,9 @@
 import { OnDemandRadioPage } from '#pages';
-import { radioAndTvPath } from '../utils/regex';
+import { onDemandRadioPath } from '../utils/regex';
 import getInitialData from './getInitialData';
 
 export default {
-  path: radioAndTvPath,
+  path: onDemandRadioPath,
   exact: true,
   component: OnDemandRadioPage,
   getInitialData,
