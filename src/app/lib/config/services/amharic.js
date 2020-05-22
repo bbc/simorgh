@@ -168,7 +168,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'እንዳያመልጥዎ',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'ከየፈርጁ',
     },
     brandSVG,
     mostRead: {
