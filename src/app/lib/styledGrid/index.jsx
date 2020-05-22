@@ -43,10 +43,107 @@ export const MediumGridWrapper = ({ children }) => {
     group5: 12,
   };
 
-  return <Grid columns={columns}>{children}</Grid>;
+  return (
+    <Grid enableGelGutters columns={columns}>
+      {children}
+    </Grid>
+  );
 };
 
 MediumGridWrapper.propTypes = {
+  children: node.isRequired,
+};
+
+export const GridItem = ({ children }) => {
+  const columns = {
+    group0: 6,
+    group1: 6,
+    group2: 6,
+    group3: 6,
+    group4: 6,
+    group5: 12,
+  };
+
+  const margins = {
+    group0: true,
+    group1: true,
+    group2: true,
+    group3: true,
+    group4: false,
+    group5: false,
+  };
+
+  return (
+    <Grid item columns={columns} margins={margins}>
+      {children}
+    </Grid>
+  );
+};
+
+GridItem.propTypes = {
+  children: node.isRequired,
+};
+
+export const GridItemSmall = ({ children }) => {
+  const columns = {
+    group0: 6,
+    group1: 6,
+    group2: 6,
+    group3: 6,
+    group4: 6,
+    group5: 8,
+  };
+
+  return (
+    <Grid item columns={columns}>
+      {children}
+    </Grid>
+  );
+};
+
+GridItemSmall.propTypes = {
+  children: node.isRequired,
+};
+
+export const GridItemLargeNoMargin = ({ children }) => {
+  const columns = {
+    group0: 6,
+    group1: 6,
+    group2: 6,
+    group3: 6,
+    group4: 6,
+    group5: 12,
+  };
+
+  return (
+    <Grid item columns={columns}>
+      {children}
+    </Grid>
+  );
+};
+
+GridItemLargeNoMargin.propTypes = {
+  children: node.isRequired,
+};
+
+export const GridItemMedium = ({ children }) => {
+  const columns = {
+    group0: 6,
+    group1: 6,
+    group2: 6,
+    group3: 6,
+    group4: 6,
+    group5: 10,
+  };
+
+  return (
+    <Grid item columns={columns}>
+      {children}
+    </Grid>
+  );
+};
+
+GridItemMedium.propTypes = {
   children: node.isRequired,
 };
 

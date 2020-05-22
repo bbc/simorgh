@@ -25,21 +25,9 @@ exports[`Image with data should render a lazyload container instead of an image 
   grid-column-gap: 1rem;
 }
 
-@media (max-width:63rem) {
+@supports (display:grid) {
   .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 12;
+    display: block;
   }
 }
 
@@ -105,6 +93,7 @@ exports[`Image with data should render a lazyload container instead of an image 
 
 <div
   class="c0"
+  dir="ltr"
 >
   <figure
     class="c1"
@@ -169,21 +158,9 @@ exports[`Image with data should render an image with alt text 1`] = `
   grid-column-gap: 1rem;
 }
 
-@media (max-width:63rem) {
+@supports (display:grid) {
   .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 12;
+    display: block;
   }
 }
 
@@ -249,6 +226,7 @@ exports[`Image with data should render an image with alt text 1`] = `
 
 <div
   class="c0"
+  dir="ltr"
 >
   <figure
     class="c1"
@@ -376,21 +354,9 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   }
 }
 
-@media (max-width:63rem) {
+@supports (display:grid) {
   .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 12;
+    display: block;
   }
 }
 
@@ -456,6 +422,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 
 <div
   class="c0"
+  dir="ltr"
 >
   <figure
     class="c1"
@@ -560,21 +527,9 @@ exports[`Image with data should render an image with alt text and offscreen copy
   grid-column-gap: 1rem;
 }
 
-@media (max-width:63rem) {
+@supports (display:grid) {
   .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 12;
+    display: block;
   }
 }
 
@@ -640,6 +595,7 @@ exports[`Image with data should render an image with alt text and offscreen copy
 
 <div
   class="c0"
+  dir="ltr"
 >
   <figure
     class="c1"
@@ -742,21 +698,9 @@ exports[`Image with data should render an image with other originCode - this wou
   grid-column-gap: 1rem;
 }
 
-@media (max-width:63rem) {
+@supports (display:grid) {
   .c0 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c0 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c0 {
-    grid-column: 6 / span 12;
+    display: block;
   }
 }
 
@@ -822,6 +766,7 @@ exports[`Image with data should render an image with other originCode - this wou
 
 <div
   class="c0"
+  dir="ltr"
 >
   <figure
     class="c1"

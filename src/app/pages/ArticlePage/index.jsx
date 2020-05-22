@@ -27,7 +27,7 @@ import text from '#containers/Text';
 import image from '#containers/Image';
 import Blocks from '#containers/Blocks';
 import timestamp from '#containers/ArticleTimestamp';
-import { GridWrapper } from '#lib/styledGrid';
+import { MediumContentContainer, MediumGridWrapper } from '#lib/styledGrid';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
@@ -54,10 +54,6 @@ const componentsToRender = {
   image,
   timestamp,
 };
-
-const StyledMain = styled.main`
-  flex-grow: 1;
-`;
 
 const MostReadSection = styled.section.attrs(() => ({
   role: 'region',
@@ -138,14 +134,14 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         dateModified={lastPublished}
         aboutTags={aboutTags}
       />
-      <StyledMain role="main">
-        <GridWrapper>
+      <MediumContentContainer role="main" as="main">
+        <MediumGridWrapper>
           <Blocks
             blocks={path(['content', 'model', 'blocks'], pageData)}
             componentsToRender={componentsToRender}
           />
-        </GridWrapper>
-      </StyledMain>
+        </MediumGridWrapper>
+      </MediumContentContainer>
       <MostReadContainer
         mostReadEndpointOverride={mostReadEndpointOverride}
         wrapper={MostReadWrapper}

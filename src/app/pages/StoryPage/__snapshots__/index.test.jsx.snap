@@ -710,6 +710,42 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (max-width:14.9375rem) {
+  .c3 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c3 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c3 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c11 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
   .c40 {
     width: calc(100%);
     display: inline-block;
@@ -799,54 +835,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @supports (display:grid) {
   .c5 {
     max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c3 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c3 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c3 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c3 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c3 {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width:63rem) {
-  .c11 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c11 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c11 {
-    grid-column: 6 / span 12;
   }
 }
 
@@ -1349,6 +1337,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                 >
                   <div
                     class="c3"
+                    dir="ltr"
                   >
                     <h1
                       class="c4"
@@ -1385,6 +1374,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c11"
+                    dir="ltr"
                   >
                     <figure
                       class="c12"
@@ -1442,7 +1432,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     </figure>
                   </div>
                   <div
-                    class="c5"
+                    class="c3"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1462,7 +1453,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     </p>
                   </div>
                   <div
-                    class="c5"
+                    class="c3"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1534,7 +1526,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     </div>
                   </div>
                   <div
-                    class="c5"
+                    class="c3"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1555,6 +1548,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="c11"
+                    dir="ltr"
                   >
                     <figure
                       class="c12"
@@ -1596,7 +1590,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     </figure>
                   </div>
                   <div
-                    class="c5"
+                    class="c3"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1607,7 +1602,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     </p>
                   </div>
                   <div
-                    class="c5"
+                    class="c3"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1616,7 +1612,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     </p>
                   </div>
                   <div
-                    class="c5"
+                    class="c3"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1627,7 +1624,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     </p>
                   </div>
                   <div
-                    class="c5"
+                    class="c3"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1693,7 +1691,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     </div>
                   </div>
                   <div
-                    class="c5"
+                    class="c3"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1745,7 +1744,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     </h2>
                   </div>
                   <div
-                    class="c5"
+                    class="c3"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1765,7 +1765,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     </h2>
                   </div>
                   <div
-                    class="c5"
+                    class="c3"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1774,7 +1775,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     </p>
                   </div>
                   <div
-                    class="c5"
+                    class="c3"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -1789,7 +1791,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     </p>
                   </div>
                   <div
-                    class="c5"
+                    class="c3"
+                    dir="ltr"
                   >
                     <p
                       class="c21"
@@ -2613,7 +2616,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 `;
 
 exports[`Story Page snapshots should match snapshot for STY 1`] = `
-.c61 {
+.c60 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -2622,7 +2625,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 0.75rem;
 }
 
-.c63 {
+.c62 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -2631,7 +2634,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 0.75rem;
 }
 
-.c64 {
+.c63 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -2640,7 +2643,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 0.8125rem;
 }
 
-.c38 {
+.c37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2650,7 +2653,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   flex-direction: column;
 }
 
-.c39 {
+.c38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2669,7 +2672,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   align-items: baseline;
 }
 
-.c40 {
+.c39 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2689,23 +2692,23 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   align-items: center;
 }
 
-.c36 {
+.c35 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c34 {
+.c33 {
   position: relative;
   z-index: 0;
   margin-top: 2rem;
 }
 
-.c37 {
+.c36 {
   margin: 0;
   padding: 0;
 }
 
-.c32 {
+.c31 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2716,7 +2719,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding: 1.5rem 0;
 }
 
-.c25 {
+.c24 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -2749,7 +2752,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   outline: none;
 }
 
-.c23 {
+.c22 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2760,20 +2763,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   margin: 0;
 }
 
-.c24 {
+.c23 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c24:visited {
+.c23:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c24:focus,
-.c24:hover {
+.c23:focus,
+.c23:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -2857,7 +2860,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   transition: visibility 0.2s linear;
 }
 
-.c22 {
+.c21 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -2868,11 +2871,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.c22:last-child {
+.c21:last-child {
   padding-bottom: 1rem;
 }
 
-.c52 {
+.c51 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -2882,39 +2885,39 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   font-style: normal;
 }
 
-.c30 {
+.c29 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c46 {
+.c45 {
   padding: 0.5rem 0 1rem;
 }
 
-.c46:first-child {
+.c45:first-child {
   padding-top: 0;
 }
 
-.c46:last-child {
+.c45:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c45 {
+.c44 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c53 {
+.c52 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c48 {
+.c47 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -2922,40 +2925,40 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   width: 100%;
 }
 
-.c48 >div {
+.c47 >div {
   vertical-align: middle;
 }
 
-.c48 >div {
+.c47 >div {
   display: inline-block;
   vertical-align: initial;
 }
 
-.c48 svg {
+.c47 svg {
   margin: 0;
 }
 
-.c56 {
+.c55 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c47 {
+.c46 {
   position: relative;
 }
 
-.c54 {
+.c53 {
   position: relative;
 }
 
-.c55 > * {
+.c54 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c49 {
+.c48 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -2967,7 +2970,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   display: inline;
 }
 
-.c57 {
+.c56 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -2978,7 +2981,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   line-height: 1.25rem;
 }
 
-.c51 {
+.c50 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2990,7 +2993,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-top: 0.5rem;
 }
 
-.c58 {
+.c57 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3001,7 +3004,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c50 {
+.c49 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -3009,7 +3012,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   overflow-wrap: break-word;
 }
 
-.c50:before {
+.c49:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -3021,17 +3024,17 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   z-index: 1;
 }
 
-.c50:hover,
-.c50:focus {
+.c49:hover,
+.c49:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c50:visited {
+.c49:visited {
   color: #6E6E73;
 }
 
-.c59 {
+.c58 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3042,7 +3045,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   display: block;
 }
 
-.c60 {
+.c59 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3054,11 +3057,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 100%;
 }
 
-.c62 {
+.c61 {
   padding: 0 0.25rem;
 }
 
-.c27 {
+.c26 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3068,7 +3071,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   list-style-type: none;
 }
 
-.c27 > li::before {
+.c26 > li::before {
   content: ' ';
   display: inline-block;
   width: 2rem;
@@ -3076,27 +3079,27 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   margin-left: -2rem;
 }
 
-.c28 {
+.c27 {
   margin-bottom: 1rem;
 }
 
-.c26 {
+.c25 {
   margin-bottom: 1.5rem;
 }
 
-.c29 {
+.c28 {
   margin-top: 0.5rem;
 }
 
-.c29 figure {
+.c28 figure {
   padding-bottom: 0;
 }
 
-.c33 {
+.c32 {
   margin-bottom: 1rem;
 }
 
-.c35 {
+.c34 {
   margin-top: 0;
 }
 
@@ -3132,10 +3135,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   color: #5A5A5A;
 }
 
-.c21 {
-  padding-bottom: 1rem;
-}
-
 .c6 {
   padding-bottom: 1rem;
 }
@@ -3149,16 +3148,16 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   margin: 0 auto;
 }
 
-.c65 {
+.c64 {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
 
-.c44 {
+.c43 {
   margin-bottom: 1.5rem;
 }
 
-.c31 {
+.c30 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -3169,7 +3168,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c39 {
+  .c38 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -3178,39 +3177,39 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c40 {
+  .c39 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c40 {
+  .c39 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c40 {
+  .c39 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c40 {
+  .c39 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c36 {
+  .c35 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c36 {
+  .c35 {
     position: absolute;
     left: 0;
     right: 0;
@@ -3219,33 +3218,33 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c34 {
+  .c33 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c34 {
+  .c33 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c32 {
+  .c31 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c32 {
+  .c31 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c32 {
+  .c31 {
     padding-top: 2rem;
   }
 }
@@ -3336,7 +3335,43 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (max-width:14.9375rem) {
-  .c42 {
+  .c3 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c3 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c3 {
+    display: block;
+  }
+}
+
+@supports (display:grid) {
+  .c11 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c41 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -3344,7 +3379,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c42 {
+  .c41 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -3352,7 +3387,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c42 {
+  .c41 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -3360,7 +3395,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c42 {
+  .c41 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -3368,7 +3403,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c42 {
+  .c41 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -3376,7 +3411,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c42 {
+  .c41 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -3384,7 +3419,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (display:grid) {
-  .c42 {
+  .c41 {
     display: block;
   }
 }
@@ -3425,54 +3460,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @supports (display:grid) {
   .c5 {
     max-width: initial;
-  }
-}
-
-@media (max-width:63rem) {
-  .c3 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c3 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c3 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c3 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c3 {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width:63rem) {
-  .c11 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c11 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c11 {
-    grid-column: 6 / span 12;
   }
 }
 
@@ -3557,14 +3544,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c23 {
+  .c22 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c23 {
+  .c22 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -3597,79 +3584,79 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
+  .c21 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c21 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c52 {
+  .c51 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c52 {
+  .c51 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c46 {
+  .c45 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c46 {
+  .c45 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c46 {
+  .c45 {
     padding: 0 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c46:first-child {
+  .c45:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c53 {
+  .c52 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c53 {
+  .c52 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c48 {
+  .c47 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c48 {
+  .c47 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -3677,7 +3664,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c48 {
+  .c47 {
     display: block;
     width: initial;
     padding: initial;
@@ -3687,13 +3674,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c56 {
+  .c55 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c56 {
+  .c55 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -3701,7 +3688,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c56 {
+  .c55 {
     display: block;
     width: initial;
     padding: initial;
@@ -3710,7 +3697,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c47 {
+  .c46 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -3718,200 +3705,200 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c55 {
+  .c54 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c55 > * {
+  .c54 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c49 {
+  .c48 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c49 {
+  .c48 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c57 {
+  .c56 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c57 {
+  .c56 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c51 {
+  .c50 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c51 {
+  .c50 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c51 {
+  .c50 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c51 {
+  .c50 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c58 {
+  .c57 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c58 {
+  .c57 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c58 {
+  .c57 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c58 {
+  .c57 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c59 {
+  .c58 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c59 {
+  .c58 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c27 {
+  .c26 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c27 {
+  .c26 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c29 {
+  .c28 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c29 {
+  .c28 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c29 {
+  .c28 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c29 {
+  .c28 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c29 {
+  .c28 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c29 {
+  .c28 {
     margin-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c29 {
+  .c28 {
     padding-top: 0.5rem;
     margin-top: 2rem;
   }
 }
 
 @media (max-width:25rem) {
-  .c33 {
+  .c32 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c33 {
+  .c32 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c32 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c41 {
+  .c40 {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c41 {
+  .c40 {
     padding-bottom: 1.5rem;
   }
 }
@@ -3919,12 +3906,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @media (min-width:37.5rem) {
   .c8 {
     font-size: 0.875rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c21 {
-    padding-bottom: 1.5rem;
   }
 }
 
@@ -3941,13 +3922,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:63rem) {
-  .c43 {
+  .c42 {
     margin-top: 2rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c44 {
+  .c43 {
     padding: 1rem;
   }
 }
@@ -4208,6 +4189,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     >
                       <div
                         class="c3"
+                        dir="ltr"
                       >
                         <h1
                           class="c4"
@@ -4244,6 +4226,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c11"
+                        dir="ltr"
                       >
                         <figure
                           class="c12"
@@ -4301,26 +4284,28 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </figure>
                       </div>
                       <div
-                        class="c5 c21"
+                        class="c3"
+                        dir="ltr"
                       >
                         <time
-                          class="c22"
+                          class="c21"
                           datetime="2019-10-23"
                         >
                           23 October 2019
                         </time>
                       </div>
                       <div
-                        class="c5"
+                        class="c3"
+                        dir="ltr"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           <b>
                              This is introduction text, it should be bold by default, but also support 
                           </b>
                           <a
-                            class="c24"
+                            class="c23"
                             href="https://bbc.com/pidgin/23248703"
                           >
                             inline links
@@ -4331,20 +4316,21 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </p>
                       </div>
                       <div
-                        class="c5"
+                        class="c3"
+                        dir="ltr"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           <i
-                            class="c25"
+                            class="c24"
                           >
                             <b>
                               This is a subheadline! that has 
                             </b>
                           </i>
                           <a
-                            class="c24"
+                            class="c23"
                             href="https://bbc.com/pidgin/23248703"
                           >
                             a link
@@ -4355,21 +4341,21 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         class="c5"
                       >
                         <div
-                          class="c26"
+                          class="c25"
                         >
                           <ul
-                            class="c27"
+                            class="c26"
                             dir="ltr"
                             role="list"
                           >
                             <li
-                              class="c28"
+                              class="c27"
                               role="listitem"
                             >
                               This is a unordered list
                             </li>
                             <li
-                              class="c28"
+                              class="c27"
                               role="listitem"
                             >
                               It can have 
@@ -4379,22 +4365,22 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                in it
                             </li>
                             <li
-                              class="c28"
+                              class="c27"
                               role="listitem"
                             >
                               <a
-                                class="c24"
+                                class="c23"
                                 href="https://bbc.com/pidgin/23248703"
                               >
                                 It can also have links
                               </a>
                             </li>
                             <li
-                              class="c28"
+                              class="c27"
                               role="listitem"
                             >
                               <i
-                                class="c25"
+                                class="c24"
                               >
                                 It can even have italic text in it!
                               </i>
@@ -4403,14 +4389,15 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c5"
+                        class="c3"
+                        dir="ltr"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           Feta the big cheese macaroni cheese. 
                           <a
-                            class="c24"
+                            class="c23"
                             href="https://bbc.com/pidgin/23248703"
                           >
                             Caerphilly danish fontina
@@ -4424,6 +4411,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </div>
                       <div
                         class="c11"
+                        dir="ltr"
                       >
                         <figure
                           class="c12"
@@ -4465,10 +4453,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </figure>
                       </div>
                       <div
-                        class="c5"
+                        class="c3"
+                        dir="ltr"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           <b>
                             Start of localised text
@@ -4476,19 +4465,21 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </p>
                       </div>
                       <div
-                        class="c5"
+                        class="c3"
+                        dir="ltr"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.
                         </p>
                       </div>
                       <div
-                        class="c5"
+                        class="c3"
+                        dir="ltr"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           <b>
                             End of localised text
@@ -4496,14 +4487,15 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </p>
                       </div>
                       <div
-                        class="c5"
+                        class="c3"
+                        dir="ltr"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           Rubber cheese macaroni 
                           <i
-                            class="c25"
+                            class="c24"
                           >
                             cheese cottage cheese
                           </i>
@@ -4514,21 +4506,21 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         class="c5"
                       >
                         <div
-                          class="c26"
+                          class="c25"
                         >
                           <ul
-                            class="c27"
+                            class="c26"
                             dir="ltr"
                             role="list"
                           >
                             <li
-                              class="c28"
+                              class="c27"
                               role="listitem"
                             >
                               This is a ordered list
                             </li>
                             <li
-                              class="c28"
+                              class="c27"
                               role="listitem"
                             >
                               It can have 
@@ -4538,22 +4530,22 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                in it
                             </li>
                             <li
-                              class="c28"
+                              class="c27"
                               role="listitem"
                             >
                               <a
-                                class="c24"
+                                class="c23"
                                 href="https://bbc.com/pidgin/23248703"
                               >
                                 It can also have links
                               </a>
                             </li>
                             <li
-                              class="c28"
+                              class="c27"
                               role="listitem"
                             >
                               <i
-                                class="c25"
+                                class="c24"
                               >
                                 It can even have italic text in it!
                               </i>
@@ -4562,27 +4554,28 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c5"
+                        class="c3"
+                        dir="ltr"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
                         </p>
                       </div>
                       <div
-                        class="c29"
+                        class="c28"
                       >
                         <figure
                           class="c12"
                         >
                           <div
-                            class="c30"
+                            class="c29"
                           >
                             <iframe
                               allow="autoplay; fullscreen"
                               allowfullscreen=""
-                              class="c31"
+                              class="c30"
                               scrolling="no"
                               src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                               title="Media player"
@@ -4595,7 +4588,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         class="c5"
                       >
                         <h2
-                          class="c32"
+                          class="c31"
                           id="This-is-a-heading"
                           tabindex="-1"
                         >
@@ -4603,10 +4596,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </h2>
                       </div>
                       <div
-                        class="c5"
+                        class="c3"
+                        dir="ltr"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
                         </p>
@@ -4615,7 +4609,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         class="c5"
                       >
                         <h2
-                          class="c32"
+                          class="c31"
                           id="This-is-a-crosshead"
                           tabindex="-1"
                         >
@@ -4623,23 +4617,25 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </h2>
                       </div>
                       <div
-                        class="c5"
+                        class="c3"
+                        dir="ltr"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
                         </p>
                       </div>
                       <div
-                        class="c5"
+                        class="c3"
+                        dir="ltr"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           <a
                             aria-label="This is an external link to google!, outside"
-                            class="c24"
+                            class="c23"
                             href="https://www.google.com/"
                           >
                             This is an external link to google!
@@ -4647,10 +4643,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </p>
                       </div>
                       <div
-                        class="c5"
+                        class="c3"
+                        dir="ltr"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
                         </p>
@@ -4658,26 +4655,26 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     </main>
                     <section
                       aria-labelledby="related-content-heading"
-                      class="c33"
+                      class="c32"
                       role="region"
                     >
                       <div
-                        class="c34 c35"
+                        class="c33 c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         />
                         <h2
-                          class="c37"
+                          class="c36"
                         >
                           <span
-                            class="c38"
+                            class="c37"
                           >
                             <span
-                              class="c39"
+                              class="c38"
                             >
                               <span
-                                class="c40"
+                                class="c39"
                                 dir="ltr"
                                 id="related-content-heading"
                               >
@@ -4688,39 +4685,39 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </h2>
                       </div>
                       <div
-                        class="c41"
+                        class="c40"
                       />
                     </section>
                   </div>
                   <div
-                    class="c42 c43"
+                    class="c41 c42"
                     dir="ltr"
                   >
                     <div
-                      class="c44"
+                      class="c43"
                     >
                       <section
                         aria-labelledby="top-stories-heading"
-                        class="c33"
+                        class="c32"
                         role="region"
                       >
                         <div
-                          class="c34 c35"
+                          class="c33 c34"
                         >
                           <div
-                            class="c36"
+                            class="c35"
                           />
                           <h2
-                            class="c37"
+                            class="c36"
                           >
                             <span
-                              class="c38"
+                              class="c37"
                             >
                               <span
-                                class="c39"
+                                class="c38"
                               >
                                 <span
-                                  class="c40"
+                                  class="c39"
                                   dir="ltr"
                                   id="top-stories-heading"
                                 >
@@ -4731,37 +4728,37 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           </h2>
                         </div>
                         <ul
-                          class="c45"
+                          class="c44"
                           role="list"
                         >
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c48"
+                                class="c47"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c49"
+                                  class="c48"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="/pidgin/23248287"
                                   >
                                     ATMs across the country
                                   </a>
                                 </h3>
                                 <p
-                                  class="c51"
+                                  class="c50"
                                 >
                                   Here we have an article about a particular topic
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2019-09-10"
                                 >
                                   10th September 2019
@@ -4770,33 +4767,33 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </li>
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c48"
+                                class="c47"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c49"
+                                  class="c48"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="/pidgin/tori-23146434"
                                   >
                                     Jacob Zuma: Staying!!!
                                   </a>
                                 </h3>
                                 <p
-                                  class="c51"
+                                  class="c50"
                                 >
                                   Lawmakers for South Africa Parliament don vote make President Jacob Zuma continue dey run things for government.
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2017-08-08"
                                 >
                                   8th August 2017
@@ -4805,33 +4802,33 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </li>
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c48"
+                                class="c47"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c49"
+                                  class="c48"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="https://www.bbc.co.uk/news"
                                   >
                                     Feature promo
                                   </a>
                                 </h3>
                                 <p
-                                  class="c51"
+                                  class="c50"
                                 >
                                   Feature promo summary
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2019-12-06"
                                 >
                                   6th December 2019
@@ -4843,30 +4840,30 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </section>
                     </div>
                     <div
-                      class="c44"
+                      class="c43"
                     >
                       <section
                         aria-labelledby="features-analysis-heading"
-                        class="c33"
+                        class="c32"
                         role="region"
                       >
                         <div
-                          class="c34 c35"
+                          class="c33 c34"
                         >
                           <div
-                            class="c36"
+                            class="c35"
                           />
                           <h2
-                            class="c37"
+                            class="c36"
                           >
                             <span
-                              class="c38"
+                              class="c37"
                             >
                               <span
-                                class="c39"
+                                class="c38"
                               >
                                 <span
-                                  class="c40"
+                                  class="c39"
                                   dir="ltr"
                                   id="features-analysis-heading"
                                 >
@@ -4877,22 +4874,22 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           </h2>
                         </div>
                         <ul
-                          class="c45"
+                          class="c44"
                           role="list"
                         >
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c53"
+                                class="c52"
                                 dir="ltr"
                               >
                                 <div
-                                  class="c54"
+                                  class="c53"
                                 >
                                   <div
                                     class="c15"
@@ -4902,31 +4899,31 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     />
                                   </div>
                                   <div
-                                    class="c55"
+                                    class="c54"
                                   />
                                 </div>
                               </div>
                               <div
-                                class="c56"
+                                class="c55"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c57"
+                                  class="c56"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="/pidgin/tori-23146625"
                                   >
                                     How Lagos Dey Fight Lassa Fever
                                   </a>
                                 </h3>
                                 <p
-                                  class="c58"
+                                  class="c57"
                                 >
                                   100 workers for LUTH dey under observation after two people die from Lassa Fever.
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2017-08-09"
                                 >
                                   9th August 2017
@@ -4935,18 +4932,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </li>
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c53"
+                                class="c52"
                                 dir="ltr"
                               >
                                 <div
-                                  class="c54"
+                                  class="c53"
                                 >
                                   <div
                                     class="c15"
@@ -4956,19 +4953,19 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     />
                                   </div>
                                   <div
-                                    class="c55"
+                                    class="c54"
                                   >
                                     <div
                                       aria-hidden="true"
-                                      class="c59"
+                                      class="c58"
                                       dir="ltr"
                                     >
                                       <div
-                                        class="c60"
+                                        class="c59"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="c61"
+                                          class="c60"
                                           focusable="false"
                                           height="12px"
                                           viewBox="0 0 32 32"
@@ -4979,7 +4976,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                           />
                                         </svg>
                                         <time
-                                          class="c62"
+                                          class="c61"
                                           datetime="PT1M7S"
                                         >
                                           1:07
@@ -4990,14 +4987,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="c56"
+                                class="c55"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c57"
+                                  class="c56"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="/pidgin/media-23267821"
                                   >
                                     <span
@@ -5021,12 +5018,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   </a>
                                 </h3>
                                 <p
-                                  class="c58"
+                                  class="c57"
                                 >
                                   Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2020-02-17"
                                 >
                                   17th February 2020
@@ -5035,18 +5032,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </li>
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c53"
+                                class="c52"
                                 dir="ltr"
                               >
                                 <div
-                                  class="c54"
+                                  class="c53"
                                 >
                                   <div
                                     class="c15"
@@ -5056,19 +5053,19 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     />
                                   </div>
                                   <div
-                                    class="c55"
+                                    class="c54"
                                   >
                                     <div
                                       aria-hidden="true"
-                                      class="c59"
+                                      class="c58"
                                       dir="ltr"
                                     >
                                       <div
-                                        class="c60"
+                                        class="c59"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="c63"
+                                          class="c62"
                                           focusable="false"
                                           height="12px"
                                           viewBox="0 0 13 12"
@@ -5087,14 +5084,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="c56"
+                                class="c55"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c57"
+                                  class="c56"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="/pidgin/23267823"
                                   >
                                     <span
@@ -5113,12 +5110,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   </a>
                                 </h3>
                                 <p
-                                  class="c58"
+                                  class="c57"
                                 >
                                   Kojey Radical and guests discuss how to write about something you’ve not experienced.
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2020-02-17"
                                 >
                                   17th February 2020
@@ -5127,18 +5124,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </li>
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c53"
+                                class="c52"
                                 dir="ltr"
                               >
                                 <div
-                                  class="c54"
+                                  class="c53"
                                 >
                                   <div
                                     class="c15"
@@ -5148,31 +5145,31 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     />
                                   </div>
                                   <div
-                                    class="c55"
+                                    class="c54"
                                   />
                                 </div>
                               </div>
                               <div
-                                class="c56"
+                                class="c55"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c57"
+                                  class="c56"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="/pidgin/tori-23169387"
                                   >
                                     Libya: omo ile Ghana márùndínláàdóje pada sile
                                   </a>
                                 </h3>
                                 <p
-                                  class="c58"
+                                  class="c57"
                                 >
                                   Omo Orileede Ghana to le ni márùndínláàdóje ti pada sile lati Libya ti won ti lo se atipo, leyin ti fonran fihan wipe won n ta won bi eru.
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2017-12-05"
                                 >
                                   5th December 2017
@@ -5181,18 +5178,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </li>
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c53"
+                                class="c52"
                                 dir="ltr"
                               >
                                 <div
-                                  class="c54"
+                                  class="c53"
                                 >
                                   <div
                                     class="c15"
@@ -5202,31 +5199,31 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     />
                                   </div>
                                   <div
-                                    class="c55"
+                                    class="c54"
                                   />
                                 </div>
                               </div>
                               <div
-                                class="c56"
+                                class="c55"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c57"
+                                  class="c56"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="/news/world-africa-23143884"
                                   >
                                     Like Scaramucci, Like Others
                                   </a>
                                 </h3>
                                 <p
-                                  class="c58"
+                                  class="c57"
                                 >
                                   President Trump sack Anthony Scaramucci after ten days for office, but wetin happen to Scaramucci don happen to other people before.
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2017-08-08"
                                 >
                                   8th August 2017
@@ -5235,18 +5232,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </li>
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c53"
+                                class="c52"
                                 dir="ltr"
                               >
                                 <div
-                                  class="c54"
+                                  class="c53"
                                 >
                                   <div
                                     class="c15"
@@ -5256,31 +5253,31 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     />
                                   </div>
                                   <div
-                                    class="c55"
+                                    class="c54"
                                   />
                                 </div>
                               </div>
                               <div
-                                class="c56"
+                                class="c55"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c57"
+                                  class="c56"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="/pidgin/tori-23146975"
                                   >
                                     Anambra Attack: 'My Friend Uchenna na Nice Girl'- Gabros
                                   </a>
                                 </h3>
                                 <p
-                                  class="c58"
+                                  class="c57"
                                 >
                                   Chukwuka Gabros tell BBC about Im friend wey die for the church attack for Ozubulu, Anambra State.
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2017-08-09"
                                 >
                                   9th August 2017
@@ -5289,18 +5286,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </li>
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c53"
+                                class="c52"
                                 dir="ltr"
                               >
                                 <div
-                                  class="c54"
+                                  class="c53"
                                 >
                                   <div
                                     class="c15"
@@ -5310,31 +5307,31 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     />
                                   </div>
                                   <div
-                                    class="c55"
+                                    class="c54"
                                   />
                                 </div>
                               </div>
                               <div
-                                class="c56"
+                                class="c55"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c57"
+                                  class="c56"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="https://www.bbc.com/pidgin/sport-51434980"
                                   >
                                     Man City vs West Ham: Bad weather force Premier League to cancel Sunday match
                                   </a>
                                 </h3>
                                 <p
-                                  class="c58"
+                                  class="c57"
                                 >
                                   Man City vs West Ham: Bad weather force Premier League to cancel Sunday match
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2020-02-17"
                                 >
                                   17th February 2020
@@ -5343,18 +5340,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </li>
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c53"
+                                class="c52"
                                 dir="ltr"
                               >
                                 <div
-                                  class="c54"
+                                  class="c53"
                                 >
                                   <div
                                     class="c15"
@@ -5364,31 +5361,31 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     />
                                   </div>
                                   <div
-                                    class="c55"
+                                    class="c54"
                                   />
                                 </div>
                               </div>
                               <div
-                                class="c56"
+                                class="c55"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c57"
+                                  class="c56"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="/pidgin/tori-23145776"
                                   >
                                     Anambra Church: Police Arrest 3
                                   </a>
                                 </h3>
                                 <p
-                                  class="c58"
+                                  class="c57"
                                 >
                                   Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2017-08-08"
                                 >
                                   8th August 2017
@@ -5397,18 +5394,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </li>
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c53"
+                                class="c52"
                                 dir="ltr"
                               >
                                 <div
-                                  class="c54"
+                                  class="c53"
                                 >
                                   <div
                                     class="c15"
@@ -5418,19 +5415,19 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     />
                                   </div>
                                   <div
-                                    class="c55"
+                                    class="c54"
                                   >
                                     <div
                                       aria-hidden="true"
-                                      class="c59"
+                                      class="c58"
                                       dir="ltr"
                                     >
                                       <div
-                                        class="c60"
+                                        class="c59"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="c64"
+                                          class="c63"
                                           focusable="false"
                                           height="13px"
                                           viewBox="0 0 32 26"
@@ -5451,14 +5448,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="c56"
+                                class="c55"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c57"
+                                  class="c56"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="/pidgin/23146654"
                                   >
                                     <span
@@ -5477,12 +5474,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   </a>
                                 </h3>
                                 <p
-                                  class="c58"
+                                  class="c57"
                                 >
                                   This na some of the picture wey our eye see as Kenya people go vote for election today
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2017-08-08"
                                 >
                                   8th August 2017
@@ -5494,7 +5491,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </section>
                     </div>
                     <div
-                      class="c65"
+                      class="c64"
                     />
                   </div>
                 </div>

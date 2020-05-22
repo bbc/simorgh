@@ -7,14 +7,16 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
     chartbeat
   </div>
   <main
-    class="StyledMain-sc-1onvfv8-0 hAQCOp"
+    class="MediumContentContainer-sc-12lwanc-0 ggHMgf"
     role="main"
   >
     <div
-      class="GridWrapper-sc-12lwanc-1 iLHPXV"
+      class="GridComponent-nf79gm-0 cMJFwl"
+      dir="ltr"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-5 dBAoSC"
+        class="GridComponent-nf79gm-0 jkNDkL"
+        dir="ltr"
       >
         <h1
           class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
@@ -25,7 +27,8 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
         </h1>
       </div>
       <div
-        class="GridItemConstrainedMedium-sc-12lwanc-3 imiJTj"
+        class="GridComponent-nf79gm-0 jkNDkL"
+        dir="ltr"
       >
         <p
           class="Paragraph-k859h4-0 hymSIv"
@@ -37,7 +40,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   </main>
   <section
     aria-labelledby="Most-Read"
-    class="MostReadSection-sc-1onvfv8-1 jcKdxx"
+    class="MostReadSection-sc-1onvfv8-0 jfftyq"
     data-e2e="most-read"
     role="region"
   >
@@ -498,14 +501,16 @@ exports[`should render a news article correctly 1`] = `
     chartbeat
   </div>
   <main
-    class="StyledMain-sc-1onvfv8-0 hAQCOp"
+    class="MediumContentContainer-sc-12lwanc-0 ggHMgf"
     role="main"
   >
     <div
-      class="GridWrapper-sc-12lwanc-1 iLHPXV"
+      class="GridComponent-nf79gm-0 cMJFwl"
+      dir="ltr"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-5 dBAoSC"
+        class="GridComponent-nf79gm-0 jkNDkL"
+        dir="ltr"
       >
         <h1
           class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 aNHLE"
@@ -516,7 +521,8 @@ exports[`should render a news article correctly 1`] = `
         </h1>
       </div>
       <div
-        class="GridItemConstrainedMedium-sc-12lwanc-3 imiJTj"
+        class="GridComponent-nf79gm-0 jkNDkL"
+        dir="ltr"
       >
         <p
           class="Paragraph-k859h4-0 dSVJxu"
@@ -536,14 +542,16 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
     chartbeat
   </div>
   <main
-    class="StyledMain-sc-1onvfv8-0 hAQCOp"
+    class="MediumContentContainer-sc-12lwanc-0 ggHMgf"
     role="main"
   >
     <div
-      class="GridWrapper-sc-12lwanc-1 iLHPXV"
+      class="GridComponent-nf79gm-0 cMJFwl"
+      dir="ltr"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-5 dBAoSC"
+        class="GridComponent-nf79gm-0 jkNDkL"
+        dir="ltr"
       >
         <h1
           class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 bYbRDq"
@@ -554,7 +562,8 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
         </h1>
       </div>
       <div
-        class="GridItemConstrainedMedium-sc-12lwanc-3 imiJTj"
+        class="GridComponent-nf79gm-0 jkNDkL"
+        dir="ltr"
       >
         <p
           class="Paragraph-k859h4-0 jfPMLX"
@@ -566,7 +575,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   </main>
   <section
     aria-labelledby="Most-Read"
-    class="MostReadSection-sc-1onvfv8-1 jcKdxx"
+    class="MostReadSection-sc-1onvfv8-0 jfftyq"
     data-e2e="most-read"
     role="region"
   >
