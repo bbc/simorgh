@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical tigrinya mediaAssetPage A11y I can see the skip to content link 1`] = `"ናብቲ ትሕዝቶ ቀጽሉ"`;
+
+exports[`Canonical tigrinya mediaAssetPage Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=91&amp;p=news::tigrinya.news.media_asset.23263262.page&amp;x1=[urn:bbc:cps:2494dfe3-6374-414a-91d4-8a62cb9c7152]&amp;x2=[responsive]&amp;x3=[news-tigrinya]&amp;x4=[ti]&amp;x7=[article-media-asset]&amp;x8=[simorgh-nojs]&amp;x9=[Test+Tigrinya+Audio+MAP+Some+audio+from+a+supermarket+checkout+in+Birmingham+-+BBC+News+ትግርኛ]&amp;x11=[2020-01-29T13:23:29.000Z]&amp;x12=[2020-01-29T13:23:29.000Z]\\"/>"`;
+
+exports[`Canonical tigrinya mediaAssetPage Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/tigrinya"`;
+
+exports[`Canonical tigrinya mediaAssetPage Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. ቢቢሲ፡ ንትሕዝቶ ካልኦት መርበባት ሓበሬታ ሓላፍነት ኣይወስድን። ብዛዕባ ምስ ናይ ደገ መርበባት እንገብሮ መላግቦታት ዘለና ኣረኣእያ ንምርዳእ ኣንብቡ።"`;
+
+exports[`Canonical tigrinya mediaAssetPage Header I can see the branding 1`] = `"BBC News, ትግርኛ"`;
+
+exports[`Canonical tigrinya mediaAssetPage I can see the headline 1`] = `"Test Tigrinya Audio MAP Some audio from a supermarket checkout in Birmingham"`;
+
+exports[`Canonical tigrinya mediaAssetPage I can see the timestamp 1`] = `"29 ጥሪ 2020"`;
+
+exports[`Canonical tigrinya mediaAssetPage Media player embed A11y I can read the media player title 1`] = `"Media player"`;
+
+exports[`Canonical tigrinya mediaAssetPage Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/tigrinya/news-23263262/p01m7d09/ti"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO Canonical link 1`] = `"http://localhost:7080/tigrinya/news-23263262"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO Heading level 1 1`] = `"Test Tigrinya Audio MAP Some audio from a supermarket checkout in Birmingham"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO Lang attribute 1`] = `"ti"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png",
+      "width": 1024,
+    },
+    "name": "BBC News ትግርኛ",
+    "noBylinesPolicy": "https://www.bbc.com/tigrinya/institutional-49283259#authorexpertise",
+  },
+  "dateModified": "2020-01-29T13:23:29.000Z",
+  "datePublished": "2020-01-29T13:23:29.000Z",
+  "headline": "Test Tigrinya Audio MAP Some audio from a supermarket checkout in Birmingham",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/tigrinya/news-23263262",
+    "@type": "WebPage",
+    "name": "Test Tigrinya Audio MAP Some audio from a supermarket checkout in Birmingham",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png",
+      "width": 1024,
+    },
+    "name": "BBC News ትግርኛ",
+    "publishingPrinciples": "https://www.bbc.com/tigrinya/institutional-49283259",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png",
+  "url": "http://localhost:7080/tigrinya/news-23263262",
+}
+`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO OG description 1`] = `"audio"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_tigrinya/6DC7/test/_63730182_p01mt2kt.jpg"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO OG image alt 1`] = `"England star Fran Kirby"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO OG locale 1`] = `"ti-ET"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO OG site name 1`] = `"BBC News ትግርኛ"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO OG title 1`] = `"Test Tigrinya Audio MAP Some audio from a supermarket checkout in Birmingham - BBC News ትግርኛ"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO OG type 1`] = `"article"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO OG url 1`] = `"http://localhost:7080/tigrinya/news-23263262"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO Page title 1`] = `"Test Tigrinya Audio MAP Some audio from a supermarket checkout in Birmingham - BBC News ትግርኛ"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO Twitter creator 1`] = `"@bbcnews"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO Twitter description 1`] = `"audio"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO Twitter image alt 1`] = `"England star Fran Kirby"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_tigrinya/6DC7/test/_63730182_p01mt2kt.jpg"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO Twitter site 1`] = `"@bbcnews"`;
+
+exports[`Canonical tigrinya mediaAssetPage SEO Twitter title 1`] = `"Test Tigrinya Audio MAP Some audio from a supermarket checkout in Birmingham - BBC News ትግርኛ"`;

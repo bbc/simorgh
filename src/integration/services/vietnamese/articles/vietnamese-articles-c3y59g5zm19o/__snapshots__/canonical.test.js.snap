@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical vietnamese articles A11y I can see the skip to content link 1`] = `"Bỏ qua để xem nội dung"`;
+
+exports[`Canonical vietnamese articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=97&amp;p=vietnamese.articles.c3y59g5zm19o.page&amp;x1=[urn:bbc:optimo:c3y59g5zm19o]&amp;x2=[responsive]&amp;x3=[news-vietnamese]&amp;x4=[vi]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[Đây+là+tiêu+đề+SEO+của+bài+viết+thử+nghiệm+này]&amp;x11=[2019-07-12T13:09:10.490Z]&amp;x12=[2019-07-12T13:09:10.490Z]\\"/>"`;
+
+exports[`Canonical vietnamese articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/vietnamese"`;
+
+exports[`Canonical vietnamese articles Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC không chịu trách nhiệm nội dung các trang ngoài. Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài"`;
+
+exports[`Canonical vietnamese articles Header I can see the branding 1`] = `"BBC News, Tiếng Việt"`;
+
+exports[`Canonical vietnamese articles I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/f97b/test/0a203570-de25-11e9-b23c-f1ac9644bb55.jpg"`;
+
+exports[`Canonical vietnamese articles I can see an image with a caption 2`] = `"Chụp lại hình ảnh, Hình ảnh thử nghiệm này, bản quyền BBC, cho thấy một bản đồ của Pháp. Hình ảnh nằm trong ba khối đầu tiên và có chú thích này."`;
+
+exports[`Canonical vietnamese articles SEO Canonical link 1`] = `"http://localhost:7080/vietnamese/articles/c3y59g5zm19o"`;
+
+exports[`Canonical vietnamese articles SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical vietnamese articles SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical vietnamese articles SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical vietnamese articles SEO Heading level 1 1`] = `"Đây là tiêu đề của bài viết thử nghiệm này"`;
+
+exports[`Canonical vietnamese articles SEO Lang attribute 1`] = `"vi"`;
+
+exports[`Canonical vietnamese articles SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
+      "width": 1024,
+    },
+    "name": "BBC News Tiếng Việt",
+    "noBylinesPolicy": "https://www.bbc.com/vietnamese/institutional-49283563#authorexpertise",
+  },
+  "dateModified": "2019-07-12T13:09:10.490Z",
+  "datePublished": "2019-07-12T13:09:10.490Z",
+  "headline": "Đây là tiêu đề SEO của bài viết thử nghiệm này",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/vietnamese/articles/c3y59g5zm19o",
+    "@type": "WebPage",
+    "name": "Đây là tiêu đề SEO của bài viết thử nghiệm này",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
+      "width": 1024,
+    },
+    "name": "BBC News Tiếng Việt",
+    "publishingPrinciples": "https://www.bbc.com/vietnamese/institutional-49283563",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
+  "url": "http://localhost:7080/vietnamese/articles/c3y59g5zm19o",
+}
+`;
+
+exports[`Canonical vietnamese articles SEO OG description 1`] = `"Đây là tiêu đề SEO của bài viết thử nghiệm này"`;
+
+exports[`Canonical vietnamese articles SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png"`;
+
+exports[`Canonical vietnamese articles SEO OG image alt 1`] = `"BBC News Tiếng Việt"`;
+
+exports[`Canonical vietnamese articles SEO OG locale 1`] = `"vi-VN"`;
+
+exports[`Canonical vietnamese articles SEO OG site name 1`] = `"BBC News Tiếng Việt"`;
+
+exports[`Canonical vietnamese articles SEO OG title 1`] = `"Đây là tiêu đề SEO của bài viết thử nghiệm này - BBC News Tiếng Việt"`;
+
+exports[`Canonical vietnamese articles SEO OG type 1`] = `"article"`;
+
+exports[`Canonical vietnamese articles SEO OG url 1`] = `"http://localhost:7080/vietnamese/articles/c3y59g5zm19o"`;
+
+exports[`Canonical vietnamese articles SEO Page title 1`] = `"Đây là tiêu đề SEO của bài viết thử nghiệm này - BBC News Tiếng Việt"`;
+
+exports[`Canonical vietnamese articles SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical vietnamese articles SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical vietnamese articles SEO Twitter creator 1`] = `"@bbcvietnamese"`;
+
+exports[`Canonical vietnamese articles SEO Twitter description 1`] = `"Đây là tiêu đề SEO của bài viết thử nghiệm này"`;
+
+exports[`Canonical vietnamese articles SEO Twitter image alt 1`] = `"BBC News Tiếng Việt"`;
+
+exports[`Canonical vietnamese articles SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png"`;
+
+exports[`Canonical vietnamese articles SEO Twitter site 1`] = `"@bbcvietnamese"`;
+
+exports[`Canonical vietnamese articles SEO Twitter title 1`] = `"Đây là tiêu đề SEO của bài viết thử nghiệm này - BBC News Tiếng Việt"`;
