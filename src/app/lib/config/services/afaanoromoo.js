@@ -173,7 +173,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'Isin hin darbiin',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: `Maaltu haasa'ama?`,
     },
     brandSVG,
     mostRead: {
