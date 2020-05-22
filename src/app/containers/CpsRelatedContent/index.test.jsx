@@ -118,6 +118,6 @@ describe('CpsRelatedContent', () => {
   });
   it('should render a default title if translations are not available', () => {
     renderRelatedContentNoTitle();
-    expect(screen.getByText(`Top Stories`)).toBeTruthy();
+    expect(screen.getByText(`Related Content`)).toBeTruthy();
   });
 });
