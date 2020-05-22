@@ -17,13 +17,17 @@ import {
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
-import webLogger from '#lib/logger.web';
+import nodeLogger from '#lib/logger.node';
 import { shouldRenderLastUpdated } from '../utilities';
 import LastUpdated from './LastUpdated';
 import processMostRead from '../utilities/processMostRead';
 import mostReadShape from '../utilities/mostReadShape';
+import {
+  MOST_READ_CLIENT_REQUEST,
+  MOST_READ_FETCH_ERROR,
+} from '#lib/logger.const';
 
-const logger = webLogger();
+const logger = nodeLogger(__filename);
 
 const MarginWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
@@ -56,18 +60,28 @@ const CanonicalMostRead = ({
 
   useEffect(() => {
     if (!items) {
-      const handleResponse = async response => {
+      const handleResponse = url => async response => {
         if (!response.ok) {
-          throw Error(response.statusText);
+          throw Error(
+            `Unexpected response (HTTP status code ${response.status}) when requesting ${url}`,
+          );
         }
         const mostReadData = await response.json();
         setItems(processMostRead({ data: mostReadData, numberOfItems }));
       };
 
-      const fetchMostReadData = pathname =>
-        fetch(pathname, { mode: 'no-cors' })
-          .then(handleResponse)
-          .catch(e => logger.error(`HTTP Error: "${e}"`));
+      const fetchMostReadData = pathname => {
+        logger.info(MOST_READ_CLIENT_REQUEST, { url: endpoint });
+
+        return fetch(pathname)
+          .then(handleResponse(pathname))
+          .catch(error => {
+            logger.error(MOST_READ_FETCH_ERROR, {
+              url: pathname,
+              error: error.toString(),
+            });
+          });
+      };
 
       fetchMostReadData(endpoint);
     }
