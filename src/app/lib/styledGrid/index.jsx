@@ -10,6 +10,7 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import Grid from '@bbc/psammead-grid';
@@ -29,8 +30,10 @@ import {
 } from '../layoutGrid';
 
 export const MediumContentContainer = styled.div`
-  max-width: 46.4rem;
-  margin: 0 auto;
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    margin: 0 auto;
+    max-width: 46.4rem;
+  }
 `;
 
 export const MediumGridWrapper = ({ children }) => {
@@ -86,16 +89,25 @@ GridItem.propTypes = {
 
 export const GridItemSmall = ({ children }) => {
   const columns = {
-    group0: 6,
-    group1: 6,
-    group2: 6,
-    group3: 6,
-    group4: 6,
+    group0: 4,
+    group1: 4,
+    group2: 4,
+    group3: 4,
+    group4: 4,
     group5: 8,
   };
 
+  const margins = {
+    group0: true,
+    group1: true,
+    group2: true,
+    group3: false,
+    group4: false,
+    group5: false,
+  };
+
   return (
-    <Grid item columns={columns}>
+    <Grid item columns={columns} margins={margins}>
       {children}
     </Grid>
   );
