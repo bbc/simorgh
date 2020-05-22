@@ -20,24 +20,52 @@ exports[`Headings with headline data should render correctly 1`] = `
 @media (max-width:14.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -101,24 +129,52 @@ exports[`Headings with plain text headline should render h1 containing correct t
 @media (max-width:14.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -270,24 +326,52 @@ exports[`Headings with rich text headline with bold text should render h1 with <
 @media (max-width:14.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -361,24 +445,52 @@ exports[`Headings with rich text headline with italic text should render h1 with
 @media (max-width:14.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -454,24 +566,52 @@ exports[`Headings with rich text should render headline with bold & italic text 
 @media (max-width:14.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -549,24 +689,52 @@ exports[`Headings with rich text should render headline with italic & bold text 
 @media (max-width:14.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -644,24 +812,52 @@ exports[`Headings with rich text with different attributes should render headlin
 @media (max-width:14.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 

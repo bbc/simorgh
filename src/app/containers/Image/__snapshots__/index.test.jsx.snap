@@ -25,6 +25,54 @@ exports[`Image with data should render a lazyload container instead of an image 
   grid-column-gap: 1rem;
 }
 
+@media (max-width:14.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
 @supports (display:grid) {
   .c0 {
     display: block;
@@ -156,6 +204,54 @@ exports[`Image with data should render an image with alt text 1`] = `
 .c2 {
   display: grid;
   grid-column-gap: 1rem;
+}
+
+@media (max-width:14.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
 }
 
 @supports (display:grid) {
@@ -354,6 +450,54 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
 @supports (display:grid) {
   .c0 {
     display: block;
@@ -527,6 +671,54 @@ exports[`Image with data should render an image with alt text and offscreen copy
   grid-column-gap: 1rem;
 }
 
+@media (max-width:14.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
 @supports (display:grid) {
   .c0 {
     display: block;
@@ -696,6 +888,54 @@ exports[`Image with data should render an image with other originCode - this wou
 .c2 {
   display: grid;
   grid-column-gap: 1rem;
+}
+
+@media (max-width:14.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
 }
 
 @supports (display:grid) {

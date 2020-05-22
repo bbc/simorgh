@@ -128,6 +128,54 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   padding-bottom: 1.5rem;
 }
 
+@media (max-width:14.9375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
 @supports (display:grid) {
   .c1 {
     display: grid;
@@ -138,24 +186,52 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 @media (max-width:14.9375rem) {
   .c2 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -168,30 +244,106 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 @media (max-width:14.9375rem) {
   .c4 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c4 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c4 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c4 {
     padding: 0 1rem;
+    width: calc(83.33333333333333%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c4 {
+    width: calc(83.33333333333333%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c4 {
+    width: calc(83.33333333333333%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @supports (display:grid) {
   .c4 {
     display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c6 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -1497,6 +1649,54 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   padding-bottom: 1.5rem;
 }
 
+@media (max-width:14.9375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
 @supports (display:grid) {
   .c1 {
     display: grid;
@@ -1507,24 +1707,52 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 @media (max-width:14.9375rem) {
   .c2 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -1537,30 +1765,106 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 @media (max-width:14.9375rem) {
   .c4 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c4 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c4 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c4 {
     padding: 0 1rem;
+    width: calc(83.33333333333333%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c4 {
+    width: calc(83.33333333333333%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c4 {
+    width: calc(83.33333333333333%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @supports (display:grid) {
   .c4 {
     display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -3147,6 +3451,54 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
 @supports (display:grid) {
   .c1 {
     display: grid;
@@ -3157,24 +3509,52 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 @media (max-width:14.9375rem) {
   .c2 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -3187,30 +3567,106 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 @media (max-width:14.9375rem) {
   .c4 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c4 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c4 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c4 {
     padding: 0 1rem;
+    width: calc(83.33333333333333%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c4 {
+    width: calc(83.33333333333333%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c4 {
+    width: calc(83.33333333333333%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @supports (display:grid) {
   .c4 {
     display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -4508,6 +4964,54 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   padding-bottom: 1.5rem;
 }
 
+@media (max-width:14.9375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
 @supports (display:grid) {
   .c1 {
     display: grid;
@@ -4518,24 +5022,52 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 @media (max-width:14.9375rem) {
   .c2 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -4548,30 +5080,106 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 @media (max-width:14.9375rem) {
   .c4 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c4 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c4 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c4 {
     padding: 0 1rem;
+    width: calc(83.33333333333333%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c4 {
+    width: calc(83.33333333333333%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c4 {
+    width: calc(83.33333333333333%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @supports (display:grid) {
   .c4 {
     display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -6241,6 +6849,54 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
 @supports (display:grid) {
   .c1 {
     display: grid;
@@ -6251,24 +6907,52 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 @media (max-width:14.9375rem) {
   .c2 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -6281,30 +6965,106 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 @media (max-width:14.9375rem) {
   .c4 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c4 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c4 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c4 {
     padding: 0 1rem;
+    width: calc(83.33333333333333%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c4 {
+    width: calc(83.33333333333333%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c4 {
+    width: calc(83.33333333333333%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @supports (display:grid) {
   .c4 {
     display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c7 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 

@@ -59,24 +59,52 @@ exports[`CpsTextContainer with data should render correctly 1`] = `
 @media (max-width:14.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c0 {
     padding: 0 0.5rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c0 {
     padding: 0 1rem;
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0 {
     padding: 0 1rem;
+    width: calc(83.33333333333333%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    width: calc(83.33333333333333%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    width: calc(83.33333333333333%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 

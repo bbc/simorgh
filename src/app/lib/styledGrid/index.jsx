@@ -54,7 +54,11 @@ const mediumColumns = {
 
 export const MediumGridWrapper = ({ children }) => {
   return (
-    <Grid enableGelGutters columns={defaultColumns}>
+    <Grid
+      enableGelGutters
+      parentColumns={defaultColumns}
+      columns={defaultColumns}
+    >
       {children}
     </Grid>
   );
@@ -75,7 +79,12 @@ export const GridItem = ({ children }) => {
   };
 
   return (
-    <Grid item columns={mediumColumns} margins={margins}>
+    <Grid
+      item
+      parentColumns={defaultColumns}
+      columns={mediumColumns}
+      margins={margins}
+    >
       {children}
     </Grid>
   );
@@ -105,7 +114,12 @@ export const GridItemSmall = ({ children }) => {
   };
 
   return (
-    <Grid item columns={columns} margins={margins}>
+    <Grid
+      parentColumnd={defaultColumns}
+      item
+      columns={columns}
+      margins={margins}
+    >
       {children}
     </Grid>
   );
@@ -137,7 +151,12 @@ export const GridItemLarge = ({ children, enableMargins }) => {
   const margins = enableMargins ? gridMargins : noMargins;
 
   return (
-    <Grid item columns={defaultColumns} margins={margins}>
+    <Grid
+      item
+      columns={defaultColumns}
+      margins={margins}
+      parentColumns={defaultColumns}
+    >
       {children}
     </Grid>
   );
@@ -154,7 +173,7 @@ GridItemLarge.defaultProps = {
 
 export const GridItemMedium = ({ children }) => {
   return (
-    <Grid item columns={mediumColumns}>
+    <Grid item columns={mediumColumns} parentColumns={defaultColumns}>
       {children}
     </Grid>
   );

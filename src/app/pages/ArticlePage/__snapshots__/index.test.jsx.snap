@@ -11,11 +11,11 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
     role="main"
   >
     <div
-      class="GridComponent-nf79gm-0 cMJFwl"
+      class="GridComponent-nf79gm-0 ckiXbw"
       dir="ltr"
     >
       <div
-        class="GridComponent-nf79gm-0 jkNDkL"
+        class="GridComponent-nf79gm-0 fZRaHP"
         dir="ltr"
       >
         <h1
@@ -27,7 +27,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
         </h1>
       </div>
       <div
-        class="GridComponent-nf79gm-0 dHalIG"
+        class="GridComponent-nf79gm-0 ciLAht"
         dir="ltr"
       >
         <p
@@ -505,11 +505,11 @@ exports[`should render a news article correctly 1`] = `
     role="main"
   >
     <div
-      class="GridComponent-nf79gm-0 cMJFwl"
+      class="GridComponent-nf79gm-0 ckiXbw"
       dir="ltr"
     >
       <div
-        class="GridComponent-nf79gm-0 jkNDkL"
+        class="GridComponent-nf79gm-0 fZRaHP"
         dir="ltr"
       >
         <h1
@@ -521,7 +521,7 @@ exports[`should render a news article correctly 1`] = `
         </h1>
       </div>
       <div
-        class="GridComponent-nf79gm-0 dHalIG"
+        class="GridComponent-nf79gm-0 ciLAht"
         dir="ltr"
       >
         <p
@@ -546,11 +546,11 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
     role="main"
   >
     <div
-      class="GridComponent-nf79gm-0 cMJFwl"
+      class="GridComponent-nf79gm-0 ckiXbw"
       dir="ltr"
     >
       <div
-        class="GridComponent-nf79gm-0 jkNDkL"
+        class="GridComponent-nf79gm-0 fZRaHP"
         dir="ltr"
       >
         <h1
@@ -562,7 +562,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
         </h1>
       </div>
       <div
-        class="GridComponent-nf79gm-0 dHalIG"
+        class="GridComponent-nf79gm-0 ciLAht"
         dir="ltr"
       >
         <p
