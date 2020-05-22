@@ -168,8 +168,8 @@ export const GridItemMedium = ({ children }) => {
     group0: 6,
     group1: 6,
     group2: 6,
-    group3: 6,
-    group4: 6,
+    group3: 5,
+    group4: 5,
     group5: 10,
   };
 
