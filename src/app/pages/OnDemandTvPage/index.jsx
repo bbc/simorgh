@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { shape, string } from 'prop-types';
+import ATIAnalytics from '../../containers/ATIAnalytics';
 import MetadataContainer from '../../containers/Metadata';
 import { GelPageGrid } from '#app/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -26,6 +27,7 @@ const OnDemandTvPage = ({ pageData }) => {
 
   return (
     <>
+      <ATIAnalytics data={pageData} />
       <MetadataContainer
         title={headline}
         lang={language}

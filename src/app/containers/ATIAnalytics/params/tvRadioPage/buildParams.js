@@ -1,7 +1,7 @@
 import { buildATIPageTrackPath } from '../../atiUrl';
 import { LIBRARY_VERSION } from '../../../../lib/analyticsUtils';
 
-export const buildRadioATIParams = (
+export const buildTvRadioATIParams = (
   pageData,
   requestContext,
   serviceContext,
@@ -13,9 +13,20 @@ export const buildRadioATIParams = (
     service,
   } = serviceContext;
 
-  const { id, language, pageTitle, pageIdentifier, contentType } = pageData;
+  const {
+    id,
+    language,
+    pageTitle,
+    pageIdentifier,
+    contentType,
+    masterBrand,
+  } = pageData;
 
   const isLiveRadio = contentType === 'player-live';
+  const isTvBrand = () => {
+    const mediaType = masterBrand.split('_').pop();
+    return mediaType === 'tv';
+  };
 
   const getContentId = assetType => {
     const guid = id.split('/').pop();
@@ -25,7 +36,7 @@ export const buildRadioATIParams = (
 
   return {
     appName: atiAnalyticsAppName,
-    contentId: isLiveRadio ? id : getContentId('pips'),
+    contentId: isLiveRadio || isTvBrand() ? id : getContentId('pips'),
     contentType,
     language,
     pageIdentifier,
@@ -38,8 +49,12 @@ export const buildRadioATIParams = (
   };
 };
 
-export const buildRadioATIUrl = (pageData, requestContext, serviceContext) => {
+export const buildTvRadioATIUrl = (
+  pageData,
+  requestContext,
+  serviceContext,
+) => {
   return buildATIPageTrackPath(
-    buildRadioATIParams(pageData, requestContext, serviceContext),
+    buildTvRadioATIParams(pageData, requestContext, serviceContext),
   );
 };
