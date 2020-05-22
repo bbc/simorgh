@@ -1,18 +1,11 @@
 import envConfig from '../../../support/config/envs';
 
 // the externalId `bbc_oromo_radio` is overriden to `bbc_afaanoromoo` in production code
-const getBrandId = externalId => {
-  return externalId === 'bbc_oromo_radio'
-    ? 'bbc_afaanoromoo_radio'
-    : externalId;
-};
+const getBrandId = externalId =>
+  externalId.replace('bbc_oromo_radio', 'bbc_afaanoromoo_radio');
 
-const getServiceName = producerName => {
-  const producerNameLowerCase = producerName.toLowerCase();
-  return producerNameLowerCase === 'indonesian'
-    ? 'indonesia'
-    : producerNameLowerCase;
-};
+const getServiceName = producerName =>
+  producerName.toLowerCase().replace('indonesian', 'indonesia');
 
 export default (body, language) => {
   const externalId = body.metadata.createdBy;
