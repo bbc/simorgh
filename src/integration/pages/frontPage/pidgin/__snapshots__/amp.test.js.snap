@@ -113,19 +113,6 @@ exports[`AMP Front Page Header I can see the branding 1`] = `"BBC News, Pidgin"`
 
 exports[`AMP Front Page I can see Index Alsos 1`] = `"Another thing we de for inside dis tori"`;
 
-exports[`AMP Front Page I can see a Story Promo 1`] = `
-<amp-img
-  alt="Senator Ahmad Lawan and Ali Ndume"
-  attribution="Other"
-  height="549"
-  layout="responsive"
-  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
-  width="976"
-/>
-`;
-
-exports[`AMP Front Page I can see a Story Promo 2`] = `"AS E DE HAPPEN Senators don begin vote for Senate President"`;
-
 exports[`AMP Front Page I can see sections 1`] = `"Top tori"`;
 
 exports[`AMP Front Page I can see sections 2`] = `"Yarn Me Tori"`;
@@ -220,3 +207,16 @@ exports[`AMP Front Page SEO Twitter image src 1`] = `"https://news.files.bbci.co
 exports[`AMP Front Page SEO Twitter site 1`] = `"@BBCNews"`;
 
 exports[`AMP Front Page SEO Twitter title 1`] = `"Domot - BBC News Pidgin"`;
+
+exports[`AMP Front Page Story Promo I can see a headline 1`] = `"AS E DE HAPPEN Senators don begin vote for Senate President"`;
+
+exports[`AMP Front Page Story Promo I can see an image 1`] = `
+<amp-img
+  alt="Senator Ahmad Lawan and Ali Ndume"
+  attribution="Other"
+  height="549"
+  layout="responsive"
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
+  width="976"
+/>
+`;

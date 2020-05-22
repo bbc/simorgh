@@ -18,20 +18,30 @@ export default () => {
     }
   });
 
-  it('I can see a Story Promo', () => {
-    const section = document.querySelector('section');
+  describe('Story Promo', () => {
+    it('I can see an image', () => {
+      const section = document.querySelector('section');
 
-    if (section) {
-      expect(section).toBeInTheDocument();
+      if (section) {
+        expect(section).toBeInTheDocument();
 
-      const imageEl = section.getElementsByTagName('img')[0];
-      expect(imageEl).toBeInTheDocument();
-      expect(imageEl).toMatchSnapshot();
+        const imageEl = section.getElementsByTagName('img')[0];
+        expect(imageEl).toBeInTheDocument();
+        expect(imageEl).toMatchSnapshot();
+      }
+    });
 
-      const h3El = section.querySelector('h3');
-      expect(h3El).toBeInTheDocument();
-      expect(h3El.textContent).toBeTruthy();
-      expect(h3El.textContent).toMatchSnapshot();
-    }
+    it('I can see a headline', () => {
+      const section = document.querySelector('section');
+
+      if (section) {
+        expect(section).toBeInTheDocument();
+
+        const h3El = section.querySelector('h3');
+        expect(h3El).toBeInTheDocument();
+        expect(h3El.textContent).toBeTruthy();
+        expect(h3El.textContent).toMatchSnapshot();
+      }
+    });
   });
 };
