@@ -266,7 +266,6 @@ const directives = {
       'https://mybbc-analytics.files.bbci.co.uk',
       'https://emp.bbci.co.uk',
       'https://static.bbci.co.uk',
-      'http://static.bbc.co.uk', // for localhost STY include
       'http://*.chartbeat.com', // for localhost canonical connecting via http
       'http://localhost:1124', // for localhost canonical JavaScript
       'https://platform.twitter.com', // Social Embeds
@@ -274,6 +273,7 @@ const directives = {
       'http://www.instagram.com', // Social Embeds
       'https://cdn.syndication.twimg.com', // Social Embeds
       'https://static.bbc.co.uk', // STY include
+      'http://static.bbc.co.uk', // for localhost STY include
       'https://www.bbc.co.uk', // STY include
       "'self'",
       "'unsafe-inline'",
