@@ -33,18 +33,7 @@ exports[`Canonical Front Page I can see a Story Promo 1`] = `
 />
 `;
 
-exports[`Canonical Front Page I can see a Story Promo 2`] = `
-<h3
-  class="Headline-sc-1dvfmi3-3 QNSVY"
->
-  <a
-    class="Link-sc-1dvfmi3-5 jeUMCT"
-    href="/arabic/middleeast-48959573"
-  >
-    المجلس العسكري في السودان يعلن إحباط "محاولة انقلابية"
-  </a>
-</h3>
-`;
+exports[`Canonical Front Page I can see a Story Promo 2`] = `"المجلس العسكري في السودان يعلن إحباط \\"محاولة انقلابية\\""`;
 
 exports[`Canonical Front Page I can see sections 1`] = `"الخبر الرئيسي"`;
 

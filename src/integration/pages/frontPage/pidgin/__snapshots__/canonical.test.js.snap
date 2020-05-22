@@ -23,28 +23,7 @@ exports[`Canonical Front Page I can see a Story Promo 1`] = `
 />
 `;
 
-exports[`Canonical Front Page I can see a Story Promo 2`] = `
-<h3
-  class="Headline-sc-1dvfmi3-3 fccgro"
->
-  <a
-    class="Link-sc-1dvfmi3-5 jeUMCT"
-    href="/pidgin/live/tori-48591362"
-  >
-    <span
-      role="text"
-    >
-      <span
-        class="StyledSpan-sc-5gbj69-0 jbxGSs"
-        dir="ltr"
-      >
-        AS E DE HAPPEN 
-      </span>
-      Senators don begin vote for Senate President
-    </span>
-  </a>
-</h3>
-`;
+exports[`Canonical Front Page I can see a Story Promo 2`] = `"AS E DE HAPPEN Senators don begin vote for Senate President"`;
 
 exports[`Canonical Front Page I can see sections 1`] = `"Top tori"`;
 

@@ -24,15 +24,14 @@ export default () => {
     if (section) {
       expect(section).toBeInTheDocument();
 
-      const img = section.getElementsByTagName('img')[0];
+      const imageEl = section.getElementsByTagName('img')[0];
+      expect(imageEl).toBeInTheDocument();
+      expect(imageEl).toMatchSnapshot();
 
-      expect(img).toBeInTheDocument();
-      expect(img).toMatchSnapshot();
-
-      const h3 = section.querySelector('h3');
-
-      expect(h3).toBeInTheDocument();
-      expect(h3).toMatchSnapshot();
+      const h3El = section.querySelector('h3');
+      expect(h3El).toBeInTheDocument();
+      expect(h3El.textContent).toBeTruthy();
+      expect(h3El.textContent).toMatchSnapshot();
     }
   });
 };

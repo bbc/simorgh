@@ -18,10 +18,11 @@ export default () => {
       sections.forEach(section => {
         expect(section).toBeInTheDocument();
 
-        const h2 = section.querySelector('h2');
-        expect(h2).toBeInTheDocument();
-        expect(h2.textContent).toBeTruthy();
-        expect(h2.textContent).toMatchSnapshot();
+        const h2El = section.querySelector('h2');
+
+        expect(h2El).toBeInTheDocument();
+        expect(h2El.textContent).toBeTruthy();
+        expect(h2El.textContent).toMatchSnapshot();
       });
     }
   });
