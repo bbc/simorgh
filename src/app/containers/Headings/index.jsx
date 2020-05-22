@@ -8,7 +8,7 @@ import { headlineModelPropTypes } from '#models/propTypes/headline';
 import Fragment from '../Fragment';
 import Blocks from '../Blocks';
 import idSanitiser from '#lib/utilities/idSanitiser';
-import { GridItem, GridItemConstrainedMedium } from '#lib/styledGrid';
+import { GridItemLarge, GridItemConstrainedMedium } from '#lib/styledGrid';
 
 const StyledHeadline = styled(Headline)`
   :focus {
@@ -22,7 +22,7 @@ const Headings = {
 };
 
 const GridConstraints = {
-  headline: GridItem,
+  headline: GridItemLarge,
   subheadline: GridItemConstrainedMedium,
 };
 
@@ -55,7 +55,7 @@ const HeadingsContainer = ({ blocks, type }) => {
   const id = type === 'headline' ? headingId : subHeadingId;
 
   return (
-    <GridConstrain>
+    <GridConstrain enableMargins>
       <Heading script={script} service={service} id={id} tabIndex="-1">
         {renderText()}
       </Heading>

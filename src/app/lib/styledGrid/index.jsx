@@ -1,4 +1,4 @@
-import { node, number } from 'prop-types';
+import { node, number, bool } from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import {
@@ -117,7 +117,7 @@ GridItemSmall.propTypes = {
   children: node.isRequired,
 };
 
-export const GridItemLargeNoMargin = ({ children }) => {
+export const GridItemLarge = ({ children, enableMargins }) => {
   const columns = {
     group0: 6,
     group1: 6,
@@ -127,15 +127,40 @@ export const GridItemLargeNoMargin = ({ children }) => {
     group5: 12,
   };
 
+  const noMargins = {
+    group0: false,
+    group1: false,
+    group2: false,
+    group3: false,
+    group4: false,
+    group5: false,
+  };
+
+  const gridMargins = {
+    group0: true,
+    group1: true,
+    group2: true,
+    group3: true,
+    group4: false,
+    group5: false,
+  };
+
+  const margins = enableMargins ? gridMargins : noMargins;
+
   return (
-    <Grid item columns={columns}>
+    <Grid item columns={columns} margins={margins}>
       {children}
     </Grid>
   );
 };
 
-GridItemLargeNoMargin.propTypes = {
+GridItemLarge.propTypes = {
   children: node.isRequired,
+  enableMargins: bool,
+};
+
+GridItemLarge.defaultProps = {
+  enableMargins: false,
 };
 
 export const GridItemMedium = ({ children }) => {

@@ -2,11 +2,7 @@ import React from 'react';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { imageModelPropTypes } from '#models/propTypes/image';
 import ArticleFigure from '../ArticleFigure';
-import {
-  GridItemMedium,
-  GridItemSmall,
-  GridItemLargeNoMargin,
-} from '#lib/styledGrid';
+import { GridItemMedium, GridItemSmall, GridItemLarge } from '#lib/styledGrid';
 import { createSrcset } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
 import urlWithPageAnchor from '#lib/utilities/pageAnchor';
@@ -58,7 +54,7 @@ const ImageContainer = ({ blocks, position }) => {
   const srcSet = createSrcset(originCode, locator, width);
   const lazyLoad = shouldLazyLoad(position);
 
-  let Wrapper = GridItemLargeNoMargin;
+  let Wrapper = GridItemLarge;
 
   if (height === width) {
     Wrapper = GridItemMedium;
