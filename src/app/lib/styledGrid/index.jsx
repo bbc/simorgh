@@ -36,18 +36,25 @@ export const MediumContentContainer = styled.div`
   }
 `;
 
-export const MediumGridWrapper = ({ children }) => {
-  const columns = {
-    group0: 6,
-    group1: 6,
-    group2: 6,
-    group3: 6,
-    group4: 6,
-    group5: 12,
-  };
+const defaultColumns = {
+  group0: 6,
+  group1: 6,
+  group2: 6,
+  group3: 6,
+  group4: 6,
+  group5: 12,
+};
 
+const mediumColumns = {
+  ...defaultColumns,
+  group3: 5,
+  group4: 5,
+  group5: 10,
+};
+
+export const MediumGridWrapper = ({ children }) => {
   return (
-    <Grid enableGelGutters columns={columns}>
+    <Grid enableGelGutters columns={defaultColumns}>
       {children}
     </Grid>
   );
@@ -58,15 +65,6 @@ MediumGridWrapper.propTypes = {
 };
 
 export const GridItem = ({ children }) => {
-  const columns = {
-    group0: 6,
-    group1: 6,
-    group2: 6,
-    group3: 5,
-    group4: 5,
-    group5: 10,
-  };
-
   const margins = {
     group0: true,
     group1: true,
@@ -77,7 +75,7 @@ export const GridItem = ({ children }) => {
   };
 
   return (
-    <Grid item columns={columns} margins={margins}>
+    <Grid item columns={mediumColumns} margins={margins}>
       {children}
     </Grid>
   );
@@ -118,15 +116,6 @@ GridItemSmall.propTypes = {
 };
 
 export const GridItemLarge = ({ children, enableMargins }) => {
-  const columns = {
-    group0: 6,
-    group1: 6,
-    group2: 6,
-    group3: 6,
-    group4: 6,
-    group5: 12,
-  };
-
   const noMargins = {
     group0: false,
     group1: false,
@@ -148,7 +137,7 @@ export const GridItemLarge = ({ children, enableMargins }) => {
   const margins = enableMargins ? gridMargins : noMargins;
 
   return (
-    <Grid item columns={columns} margins={margins}>
+    <Grid item columns={defaultColumns} margins={margins}>
       {children}
     </Grid>
   );
@@ -164,17 +153,8 @@ GridItemLarge.defaultProps = {
 };
 
 export const GridItemMedium = ({ children }) => {
-  const columns = {
-    group0: 6,
-    group1: 6,
-    group2: 6,
-    group3: 5,
-    group4: 5,
-    group5: 10,
-  };
-
   return (
-    <Grid item columns={columns}>
+    <Grid item columns={mediumColumns}>
       {children}
     </Grid>
   );
