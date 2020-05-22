@@ -113,6 +113,58 @@ exports[`AMP Front Page Header I can see the branding 1`] = `"BBC News, Pidgin"`
 
 exports[`AMP Front Page I can see Index Alsos 1`] = `"Another thing we de for inside dis tori"`;
 
+exports[`AMP Front Page I can see a Story Promo 1`] = `
+<amp-img
+  alt="Senator Ahmad Lawan and Ali Ndume"
+  attribution="Other"
+  height="549"
+  layout="responsive"
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
+  width="976"
+/>
+`;
+
+exports[`AMP Front Page I can see a Story Promo 2`] = `
+<h3
+  class="Headline-sc-1dvfmi3-3 fccgro"
+>
+  <a
+    class="Link-sc-1dvfmi3-5 jeUMCT"
+    href="/pidgin/live/tori-48591362"
+  >
+    <span
+      role="text"
+    >
+      <span
+        class="StyledSpan-sc-5gbj69-0 jbxGSs"
+        dir="ltr"
+      >
+        AS E DE HAPPEN 
+      </span>
+      Senators don begin vote for Senate President
+    </span>
+  </a>
+</h3>
+`;
+
+exports[`AMP Front Page I can see sections 1`] = `"Top tori"`;
+
+exports[`AMP Front Page I can see sections 2`] = `"Yarn Me Tori"`;
+
+exports[`AMP Front Page I can see sections 3`] = `"Sport (click for more tori) See everitin"`;
+
+exports[`AMP Front Page I can see sections 4`] = `"Ginger me"`;
+
+exports[`AMP Front Page I can see sections 5`] = `"Informate me"`;
+
+exports[`AMP Front Page I can see sections 6`] = `"Special reports 2"`;
+
+exports[`AMP Front Page I can see sections 7`] = `"2018 World Cup"`;
+
+exports[`AMP Front Page I can see sections 8`] = `"Podcast"`;
+
+exports[`AMP Front Page I can see the headline 1`] = `"BBC News, Pidgin - Home"`;
+
 exports[`AMP Front Page SEO Canonical link 1`] = `"http://localhost:7080/pidgin"`;
 
 exports[`AMP Front Page SEO Dir attribute 1`] = `"ltr"`;

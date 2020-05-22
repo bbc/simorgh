@@ -123,6 +123,70 @@ exports[`AMP Front Page I can see Useful Links 4`] = `"مدونة المرأة: 
 
 exports[`AMP Front Page I can see Useful Links 5`] = `"شركاؤنا"`;
 
+exports[`AMP Front Page I can see a Story Promo 1`] = `
+<amp-img
+  alt="متظاهرون يحتفلون بالتوصل لاتفاق بين المجلس العسكري والمتظاهرين"
+  attribution="Reuters"
+  height="549"
+  layout="responsive"
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg"
+  width="976"
+/>
+`;
+
+exports[`AMP Front Page I can see a Story Promo 2`] = `
+<h3
+  class="Headline-sc-1dvfmi3-3 QNSVY"
+>
+  <a
+    class="Link-sc-1dvfmi3-5 jeUMCT"
+    href="/arabic/middleeast-48959573"
+  >
+    المجلس العسكري في السودان يعلن إحباط "محاولة انقلابية"
+  </a>
+</h3>
+`;
+
+exports[`AMP Front Page I can see sections 1`] = `"الخبر الرئيسي"`;
+
+exports[`AMP Front Page I can see sections 2`] = `"فيديوالمزيد"`;
+
+exports[`AMP Front Page I can see sections 3`] = `"تقارير خاصةالمزيد"`;
+
+exports[`AMP Front Page I can see sections 4`] = `"مرأةالمزيد"`;
+
+exports[`AMP Front Page I can see sections 5`] = `"صحةالمزيد"`;
+
+exports[`AMP Front Page I can see sections 6`] = `"اقتصادالمزيد"`;
+
+exports[`AMP Front Page I can see sections 7`] = `"علوم وتكنولوجياالمزيد"`;
+
+exports[`AMP Front Page I can see sections 8`] = `"ثقافة وفنونالمزيد"`;
+
+exports[`AMP Front Page I can see sections 9`] = `"رياضةالمزيد"`;
+
+exports[`AMP Front Page I can see sections 10`] = `"برامجناالمزيد"`;
+
+exports[`AMP Front Page I can see sections 11`] = `"عرض الصحف"`;
+
+exports[`AMP Front Page I can see sections 12`] = `"مجلةالمزيد"`;
+
+exports[`AMP Front Page I can see sections 13`] = `"شارك برأيك:المزيد"`;
+
+exports[`AMP Front Page I can see sections 14`] = `"بي بي سي ترندالمزيد"`;
+
+exports[`AMP Front Page I can see sections 15`] = `"بالصورالمزيد"`;
+
+exports[`AMP Front Page I can see sections 16`] = `"مباشر"`;
+
+exports[`AMP Front Page I can see sections 17`] = `"اخترنا لكم"`;
+
+exports[`AMP Front Page I can see sections 18`] = `"بطولة كأس العالم 2018المزيد"`;
+
+exports[`AMP Front Page I can see sections 19`] = `"روابط لبي بي سي"`;
+
+exports[`AMP Front Page I can see the headline 1`] = `"BBC News, عربي - الرئيسية"`;
+
 exports[`AMP Front Page SEO Canonical link 1`] = `"http://localhost:7080/arabic"`;
 
 exports[`AMP Front Page SEO Dir attribute 1`] = `"rtl"`;

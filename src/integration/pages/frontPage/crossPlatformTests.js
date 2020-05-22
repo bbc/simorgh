@@ -3,10 +3,27 @@ import { runCommonCrossPlatformTests } from '../../common';
 export default () => {
   runCommonCrossPlatformTests();
 
-  it('I can see at least one section', () => {
-    const sect = document.querySelector('section');
+  it('I can see the headline', () => {
+    const h1El = document.querySelector('h1');
 
-    expect(sect).toBeInTheDocument();
+    expect(h1El).toBeInTheDocument();
+    expect(h1El.textContent).toBeTruthy();
+    expect(h1El.textContent).toMatchSnapshot();
+  });
+
+  it('I can see sections', () => {
+    const sections = document.querySelectorAll('section');
+
+    if (sections) {
+      sections.forEach(section => {
+        expect(section).toBeInTheDocument();
+
+        const h2 = section.querySelector('h2');
+        expect(h2).toBeInTheDocument();
+        expect(h2.textContent).toBeTruthy();
+        expect(h2.textContent).toMatchSnapshot();
+      });
+    }
   });
 
   it('I can see Index Alsos', () => {

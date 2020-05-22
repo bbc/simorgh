@@ -12,6 +12,58 @@ exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, Pi
 
 exports[`Canonical Front Page I can see Index Alsos 1`] = `"Another thing we de for inside dis tori"`;
 
+exports[`Canonical Front Page I can see a Story Promo 1`] = `
+<img
+  alt="Senator Ahmad Lawan and Ali Ndume"
+  class="StyledImg-sc-7vx2mr-0 hIxkbt"
+  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 660w"
+  width="976"
+/>
+`;
+
+exports[`Canonical Front Page I can see a Story Promo 2`] = `
+<h3
+  class="Headline-sc-1dvfmi3-3 fccgro"
+>
+  <a
+    class="Link-sc-1dvfmi3-5 jeUMCT"
+    href="/pidgin/live/tori-48591362"
+  >
+    <span
+      role="text"
+    >
+      <span
+        class="StyledSpan-sc-5gbj69-0 jbxGSs"
+        dir="ltr"
+      >
+        AS E DE HAPPEN 
+      </span>
+      Senators don begin vote for Senate President
+    </span>
+  </a>
+</h3>
+`;
+
+exports[`Canonical Front Page I can see sections 1`] = `"Top tori"`;
+
+exports[`Canonical Front Page I can see sections 2`] = `"Yarn Me Tori"`;
+
+exports[`Canonical Front Page I can see sections 3`] = `"Sport (click for more tori) See everitin"`;
+
+exports[`Canonical Front Page I can see sections 4`] = `"Ginger me"`;
+
+exports[`Canonical Front Page I can see sections 5`] = `"Informate me"`;
+
+exports[`Canonical Front Page I can see sections 6`] = `"Special reports 2"`;
+
+exports[`Canonical Front Page I can see sections 7`] = `"2018 World Cup"`;
+
+exports[`Canonical Front Page I can see sections 8`] = `"Podcast"`;
+
+exports[`Canonical Front Page I can see the headline 1`] = `"BBC News, Pidgin - Home"`;
+
 exports[`Canonical Front Page SEO Canonical link 1`] = `"http://localhost:7080/pidgin"`;
 
 exports[`Canonical Front Page SEO Dir attribute 1`] = `"ltr"`;
