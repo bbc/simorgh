@@ -10,11 +10,10 @@ const getTestGlobals = (globals = []) =>
     .map(([key, value]) => `* @${key} ${value}`)
     .join('\n');
 
-const getTestHead = ({ service, pathname, globals }) => `
+const getTestHead = ({ service, pathname, testGlobals }) => `
   /**
    * @service ${service}
-   * @pathname ${pathname}
-   ${getTestGlobals(globals)}
+   * @pathname ${pathname}${testGlobals ? `\n${testGlobals}` : ''}
    */
 `;
 
@@ -31,7 +30,11 @@ const getCanonicalTestBody = ({ service, pageType }) => `
 `;
 
 module.exports = ({ service, pageType, pathname, globals }) => {
-  const testHead = getTestHead({ service, pathname, globals });
+  const testHead = getTestHead({
+    service,
+    pathname,
+    testGlobals: getTestGlobals(globals),
+  });
 
   const ampTestContent = prettifyContent(`
     ${testHead}

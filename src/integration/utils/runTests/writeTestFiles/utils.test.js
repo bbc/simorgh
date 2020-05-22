@@ -1,11 +1,4 @@
-const {
-  getPageTypes,
-  getPathnames,
-  hasVariants,
-  getVariants,
-  getVariantPageTypes,
-  getVariantPathnames,
-} = require('./utils');
+const { getPageTypes, getPathnames } = require('./utils');
 
 jest.mock('../constants/services', () => ({
   persian: {
@@ -49,40 +42,6 @@ describe('getPathname', () => {
   it("should get the pathname of a service's page type", () => {
     const actual = getPathnames('persian', 'PGL');
     const expected = ['/persian/magazine-49281981'];
-
-    expect(actual).toEqual(expected);
-  });
-});
-
-describe('hasVariants', () => {
-  it('should return a boolean to reflect if a service has a variant', () => {
-    expect(hasVariants('persian')).toEqual(false);
-    expect(hasVariants('zhongwen')).toEqual(true);
-  });
-});
-
-describe('getVariants', () => {
-  it("should get a service's variants", () => {
-    const actual = getVariants('zhongwen');
-    const expected = ['simp', 'trad'];
-
-    expect(actual).toEqual(expected);
-  });
-});
-
-describe('getVariantPageTypes', () => {
-  it("should get a service variant's page types", () => {
-    const actual = getVariantPageTypes('zhongwen', 'simp');
-    const expected = ['frontPage', 'articles'];
-
-    expect(actual).toEqual(expected);
-  });
-});
-
-describe('getVariantPathname', () => {
-  it("should get a service variant's page type's pathname", () => {
-    const actual = getVariantPathnames('zhongwen', 'simp', 'articles');
-    const expected = ['/zhongwen/articles/c3xd4x9prgyo/simp'];
 
     expect(actual).toEqual(expected);
   });

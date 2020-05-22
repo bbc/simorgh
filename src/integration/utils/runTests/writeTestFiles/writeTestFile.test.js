@@ -15,11 +15,12 @@ const getExpectedFileContent = ({
   pathname,
   expectedImports,
   expectedDescribeBlock,
+  expectedGlobals = '',
 }) =>
   prettifyContent(`
   /**
    * @service ${service}
-   * @pathname ${pathname}
+   * @pathname ${pathname}${expectedGlobals}
    */
 
   ${expectedImports}
@@ -27,12 +28,18 @@ const getExpectedFileContent = ({
   ${expectedDescribeBlock}
 `);
 
-const runTests = ({ service, pageType, pathname, expectedTestDir }) => {
-  afterEach(() => {
-    fs.writeFileSync.mockClear();
-    fs.mkdirSync.mockClear();
-  });
+afterEach(() => {
+  fs.writeFileSync.mockClear();
+  fs.mkdirSync.mockClear();
+});
 
+const runTests = ({
+  service,
+  pageType,
+  pathname,
+  expectedTestDir,
+  expectedGlobals,
+}) => {
   it('should create the directory for the generated tests to go in', () => {
     const [dirPath] = fs.mkdirSync.mock.calls[0];
 
@@ -59,6 +66,7 @@ const runTests = ({ service, pageType, pathname, expectedTestDir }) => {
           pathname,
           expectedImports,
           expectedDescribeBlock,
+          expectedGlobals,
         }),
       );
     });
@@ -83,6 +91,7 @@ const runTests = ({ service, pageType, pathname, expectedTestDir }) => {
           pathname,
           expectedImports,
           expectedDescribeBlock,
+          expectedGlobals,
         }),
       );
     });
@@ -107,5 +116,31 @@ describe('should generate test files from a given test example', () => {
     pageType,
     pathname,
     expectedTestDir: 'persian/liveRadio/persian-bbc_persian_radio-liveradio',
+  });
+});
+
+describe('should generate test files from a given test example with added global values', () => {
+  const service = 'persian';
+  const pageType = 'liveRadio';
+  const pathname = '/persian/bbc_persian_radio/liveradio';
+
+  beforeEach(() => {
+    writeTestFile({
+      service,
+      pageType,
+      pathname,
+      globals: {
+        hasNavigation: false,
+        isExpired: true,
+      },
+    });
+  });
+
+  runTests({
+    service,
+    pageType,
+    pathname,
+    expectedTestDir: 'persian/liveRadio/persian-bbc_persian_radio-liveradio',
+    expectedGlobals: `\n* @hasNavigation false\n* @isExpired true`,
   });
 });
