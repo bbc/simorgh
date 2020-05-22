@@ -182,7 +182,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'Isi akụkọ',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'Kọwaara m isi akụkọ',
     },
     mostRead: {
       header: 'Akachasị Gụọ',
