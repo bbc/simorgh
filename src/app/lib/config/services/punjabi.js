@@ -167,7 +167,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'ਤਾਜ਼ਾ ਘਟਨਾਕ੍ਰਮ',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'ਦ੍ਰਿਸ਼ਟੀਕੋਣ',
     },
     brandSVG,
     mostRead: {

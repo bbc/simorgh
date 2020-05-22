@@ -173,7 +173,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'Berita Utama',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'Majalah',
     },
     brandSVG,
     mostRead: {
