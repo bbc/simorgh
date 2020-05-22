@@ -1,7 +1,12 @@
+import nodeLogger from '#testHelpers/loggerMock';
 import processMostRead from './processMostRead';
 import pidginData from '#data/pidgin/mostRead';
 import kyrgyzData from '#data/kyrgyz/mostRead';
 import { setStaleLastRecordTimeStamp } from './testHelpers';
+import {
+  MOST_READ_DATA_INCOMPLETE,
+  MOST_READ_STALE_DATA,
+} from '#lib/logger.const';
 
 const expectedPidginData = [
   {
@@ -101,12 +106,14 @@ const expectedKyrgyzData = [
   },
 ];
 
-const missingTitleData = {
+const missingTitleOptimoPromo = {
+  id: '047da657-5014-de4b-8aec-5192ae52520b',
   promo: {
+    type: 'optimo',
     locators: {
       canonicalUrl: 'https://www.bbc.com/news/articles/cn060pe01e5o',
     },
-    timestamp: 1586266369329,
+    timestamp: 1558434642016,
     headlines: {
       promoHeadline: {
         blocks: [
@@ -129,12 +136,14 @@ const missingTitleData = {
   },
 };
 
-const missingHrefData = {
+const missingHrefOptimoPromo = {
+  id: '047da657-5014-de4b-8aec-5192ae52520a',
   promo: {
+    type: 'optimo',
     locators: {
       canonicalUrl: null,
     },
-    timestamp: 1586266369329,
+    timestamp: 1558434642016,
     headlines: {
       promoHeadline: {
         blocks: [
@@ -157,7 +166,18 @@ const missingHrefData = {
   },
 };
 
-describe('filterMostRead', () => {
+// Returns kyrgyz fixture data with a invalid promo as the first record
+const kyrgyzDataWithInvalidPromo = invalidPromo => {
+  const kyrgyzRecords = kyrgyzData.records;
+  kyrgyzRecords.unshift(invalidPromo);
+
+  return {
+    lastRecordTimeStamp: '2030-01-01T17:00:00Z',
+    records: kyrgyzRecords,
+  };
+};
+
+describe('processMostRead', () => {
   [
     {
       description: 'should return expected filtered CPS data',
@@ -194,20 +214,65 @@ describe('filterMostRead', () => {
       expectedReturn: [],
     },
     {
-      description: 'should return null when most read item title is missing',
-      data: missingTitleData,
-      numberOfItems: 1,
-      expectedReturn: null,
+      description: 'should skip array item if it contains invalid title value',
+      data: kyrgyzDataWithInvalidPromo(missingTitleOptimoPromo),
+      numberOfItems: 5,
+      expectedReturn: expectedKyrgyzData,
     },
     {
-      description: 'should return null when most read item href is missing',
-      data: missingHrefData,
-      numberOfItems: 1,
-      expectedReturn: null,
+      description: 'should skip array item if it contains invalid title value',
+      data: kyrgyzDataWithInvalidPromo(missingHrefOptimoPromo),
+      numberOfItems: 5,
+      expectedReturn: expectedKyrgyzData,
     },
   ].forEach(({ description, data, numberOfItems, expectedReturn }) => {
     it(description, () => {
       expect(processMostRead({ data, numberOfItems })).toEqual(expectedReturn);
+    });
+  });
+
+  describe('Logging', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+
+    [
+      {
+        description:
+          'should log MOST_READ_DATA_INCOMPLETE when most read item title is missing',
+        data: kyrgyzDataWithInvalidPromo(missingTitleOptimoPromo),
+        message:
+          'Most read data promo has href: null and title: Most read item title',
+        numberOfItems: 5,
+      },
+      {
+        description:
+          'should log MOST_READ_DATA_INCOMPLETE when most read item href is missing',
+        data: kyrgyzDataWithInvalidPromo(missingHrefOptimoPromo),
+        message:
+          'Most read data promo has href: https://www.bbc.com/news/articles/cn060pe01e5o and title: null',
+        numberOfItems: 5,
+      },
+    ].forEach(({ description, data, message, numberOfItems }) => {
+      it(description, () => {
+        processMostRead({ data, numberOfItems });
+        expect(nodeLogger.warn).toHaveBeenCalledWith(
+          MOST_READ_DATA_INCOMPLETE,
+          {
+            message,
+          },
+        );
+      });
+    });
+
+    it('should log MOST_READ_STALE_DATA when lastRecordTimestamp is greater than 35min', () => {
+      processMostRead({
+        data: setStaleLastRecordTimeStamp(pidginData),
+        numberOfItems: 10,
+      });
+      expect(nodeLogger.warn).toHaveBeenCalledWith(MOST_READ_STALE_DATA, {
+        message: `Most read lastUpdatedTimestamp - 2019-11-06T16:28:00Z value is greater than 35min`,
+      });
     });
   });
 });
