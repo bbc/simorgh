@@ -42,7 +42,7 @@ const renderRelatedContentNoTitle = ({
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
         isAmp={false}
-        pageType="MAP"
+        pageType="STY"
         pathname="/pidgin/tori-49450859"
         service="pidgin"
         statusCode={200}
@@ -118,6 +118,6 @@ describe('CpsRelatedContent', () => {
   });
   it('should render a default title if translations are not available', () => {
     renderRelatedContentNoTitle();
-    expect(screen.getByText(`Related Content`)).toBeTruthy();
+    expect(screen.getByText(`Related content`)).toBeTruthy();
   });
 });

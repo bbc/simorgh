@@ -57,7 +57,7 @@ const renderTopStoriesNoTitle = ({
         bbcOrigin={bbcOrigin}
         isAmp={false}
         pageType="STY"
-        pathname="/news/tori-49450859"
+        pathname="/pidgin/tori-49450859"
         service="pidgin"
         statusCode={200}
       >
