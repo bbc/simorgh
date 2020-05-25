@@ -4,7 +4,7 @@ const amphtmlValidator = require('amphtml-validator');
 const { getPageUrls } = require('../../cypress/support/helpers/getPageUrls');
 
 const environment = 'local';
-const isSmoke = false;
+const isSmoke = true;
 const baseUrl = 'http://localhost:7080';
 const pageTypes = [
   'frontPage',
@@ -30,7 +30,7 @@ const printResult = result => {
     if (error.specUrl !== null) {
       msg += ` (see ${error.specUrl})`;
     }
-    (error.severity === 'ERROR' ? console.error : console.warn)(msg);
+    console.error(msg);
   });
   console.log('\n');
 };
@@ -71,5 +71,9 @@ const runValidator = async verbose => {
 };
 
 module.exports = {
+  getPageString,
+  printResult,
+  printSummary,
   runValidator,
+  validate,
 };
