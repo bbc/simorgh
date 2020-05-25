@@ -111,6 +111,8 @@ exports[`AMP Front Page Footer I can see the footer copyright and external linki
 
 exports[`AMP Front Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
+exports[`AMP Front Page I can see Index Alsos 1`] = `"Another thing we de for inside dis tori"`;
+
 exports[`AMP Front Page SEO Canonical link 1`] = `"http://localhost:7080/pidgin"`;
 
 exports[`AMP Front Page SEO Dir attribute 1`] = `"ltr"`;
