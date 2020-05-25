@@ -146,7 +146,7 @@
     "@bbc/psammead-storybook-helpers": "^8.3.1",
     "@bbc/psammead-test-helpers": "^3.1.5",
     "@loadable/babel-plugin": "^5.12.0",
-    "@storybook/addon-knobs": "^5.3.18",
+    "@storybook/addon-knobs": "^5.3.19",
     "@storybook/react": "^5.3.18",
     "@storybook/theming": "^5.3.18",
     "@testing-library/dom": "^7.5.7",
