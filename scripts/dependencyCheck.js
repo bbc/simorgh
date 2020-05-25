@@ -11,6 +11,7 @@ const options = {
     'isarray',
     'jest-environment-jsdom',
     '@testing-library/dom',
+    'node-fetch',
   ],
 };
 
@@ -34,7 +35,7 @@ depcheck(
     }, {});
 
     console.log(`${Object.keys(missingFiltered).length} missing dependencies.`);
-    Object.keys(missingFiltered).forEach((key) => {
+    Object.keys(missingFiltered).forEach(key => {
       console.log(key);
       console.log(`  ${missingFiltered[key].join('\n  ')}`);
     });
