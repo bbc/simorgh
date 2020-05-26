@@ -1334,11 +1334,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/gahuza/23299713'],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/gahuza/23299713'],
             enabled: false,
           },
         },
@@ -5700,11 +5700,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/ukchina/simp/23298231'],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/ukchina/simp/23298231'],
             enabled: false,
           },
         },
@@ -5835,15 +5835,15 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/ukchina/simp/23298231'],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/ukchina/trad/23298231'],
             enabled: false,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostReadPage: {
         environments: {
