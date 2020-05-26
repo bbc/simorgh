@@ -103,12 +103,14 @@ describe('cspHeader', () => {
         'https://cookie-oven.api.bbc.com',
         'https://cookie-oven.api.bbc.co.uk',
         'https://www.bbc.co.uk',
+        'https://news.files.bbci.co.uk',
         "'self'",
       ],
       defaultSrcExpectation: ["'self'"],
       fontSrcExpectation: [
         'https://gel.files.bbci.co.uk',
         'https://ws-downloads.files.bbci.co.uk',
+        'https://static.bbci.co.uk',
       ],
       frameSrcExpectation: [
         'https://polling.bbc.co.uk',
@@ -154,6 +156,7 @@ describe('cspHeader', () => {
         'https://www.instagram.com',
         'http://www.instagram.com',
         'https://cdn.syndication.twimg.com',
+        'https://static.bbc.co.uk',
         "'self'",
         "'unsafe-inline'",
       ],
@@ -161,6 +164,8 @@ describe('cspHeader', () => {
         'https://news.files.bbci.co.uk',
         'https://platform.twitter.com',
         'https://ton.twimg.com',
+        'https://news.files.bbci.co.uk',
+        'https://static.bbc.co.uk',
         "'unsafe-inline'",
       ],
       workerSrcExpectation: ["'self'"],
@@ -259,12 +264,15 @@ describe('cspHeader', () => {
         'https://cookie-oven.test.api.bbc.com',
         'https://cookie-oven.test.api.bbc.co.uk',
         'https://www.bbc.co.uk',
+        'https://news.files.bbci.co.uk',
+        'https://news.test.files.bbci.co.uk',
         "'self'",
       ],
       defaultSrcExpectation: ["'self'"],
       fontSrcExpectation: [
         'https://gel.files.bbci.co.uk',
         'https://ws-downloads.files.bbci.co.uk',
+        'https://static.bbci.co.uk',
       ],
       frameSrcExpectation: [
         'https://polling.bbc.co.uk',
@@ -319,6 +327,7 @@ describe('cspHeader', () => {
         'https://www.instagram.com',
         'http://www.instagram.com',
         'https://cdn.syndication.twimg.com',
+        'https://static.bbc.co.uk',
         "'self'",
         "'unsafe-inline'",
       ],
@@ -326,6 +335,9 @@ describe('cspHeader', () => {
         'https://news.files.bbci.co.uk',
         'https://platform.twitter.com',
         'https://ton.twimg.com',
+        'https://news.files.bbci.co.uk',
+        'https://news.test.files.bbci.co.uk',
+        'https://static.bbc.co.uk',
         "'unsafe-inline'",
       ],
       workerSrcExpectation: ["'self'"],
@@ -364,7 +376,7 @@ describe('cspHeader', () => {
         });
 
         it(`Then it has this fontSrc`, () => {
-          expect(generateFontSrc()).toEqual(fontSrcExpectation);
+          expect(generateFontSrc({ isAmp })).toEqual(fontSrcExpectation);
         });
 
         it(`Then it has this frameSrc`, () => {
@@ -423,7 +435,8 @@ describe('cspHeader', () => {
             `img-src ${imgSrcExpectation.join(' ')}; ` +
             `script-src ${scriptSrcExpectation.join(' ')}; ` +
             `style-src ${styleSrcExpectation.join(' ')}; ` +
-            `worker-src ${workerSrcExpectation.join(' ')}`;
+            `worker-src ${workerSrcExpectation.join(' ')}; ` +
+            `report-to default`;
 
           expect(headers['Content-Security-Policy']).toEqual(
             expectedCSPHeaderString,

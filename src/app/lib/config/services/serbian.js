@@ -44,6 +44,7 @@ export const service = {
     ...baseServiceConfig,
     ads: {
       hasAds: false,
+      advertisementLabel: 'Advertisement',
     },
     articleTimestampPrefix: 'Ažurirano',
     brandName: 'BBC News na srpskom',
@@ -268,7 +269,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'Najvažnije',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'Reportaže',
     },
   },
   cyr: {
@@ -499,7 +500,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'Најважније',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'Репортаже',
     },
   },
 };

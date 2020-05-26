@@ -1,5 +1,7 @@
 import React from 'react';
 import { render, act } from '@testing-library/react';
+import fetchMock from 'fetch-mock';
+import nodeLogger from '#testHelpers/loggerMock';
 import arabicMostReadData from '#data/arabic/mostRead';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import nepaliMostReadData from '#data/nepali/mostRead';
@@ -11,6 +13,10 @@ import {
   setStaleLastRecordTimeStamp,
 } from '../utilities/testHelpers';
 import CanonicalMostRead from '.';
+import {
+  MOST_READ_CLIENT_REQUEST,
+  MOST_READ_FETCH_ERROR,
+} from '#lib/logger.const';
 
 /* eslint-disable react/prop-types */
 const MostReadCanonicalWithContext = ({
@@ -29,8 +35,9 @@ const MostReadCanonicalWithContext = ({
 );
 
 describe('MostReadContainerCanonical', () => {
-  afterEach(() => {
-    fetch.resetMocks();
+  beforeEach(() => {
+    jest.clearAllMocks();
+    fetchMock.restore();
   });
 
   [
@@ -39,14 +46,12 @@ describe('MostReadContainerCanonical', () => {
       service: 'pidgin',
       numberOfItems: 10,
       mostReadData: pidginMostReadData,
-      endpoint: 'www.test.bbc.com/pidgin/mostread.json',
     },
     {
       description: 'should render 5 list items for nepali from server data',
       service: 'nepali',
       numberOfItems: 5,
       mostReadData: nepaliMostReadData,
-      endpoint: 'www.test.bbc.com/nepali/mostread.json',
       initialData: nepaliMostReadData,
     },
     {
@@ -54,21 +59,13 @@ describe('MostReadContainerCanonical', () => {
       service: 'kyrgyz',
       numberOfItems: 5,
       mostReadData: kyrgyzMostReadData,
-      endpoint: 'www.test.bbc.com/kyrgyz/mostread.json',
     },
   ].forEach(
-    ({
-      description,
-      service,
-      numberOfItems,
-      mostReadData,
-      endpoint,
-      initialData,
-    }) => {
+    ({ description, service, numberOfItems, mostReadData, initialData }) => {
       it(description, async () => {
-        fetch.mockResponse(
-          JSON.stringify(setFreshPromoTimestamp(mostReadData)),
-        );
+        const endpoint = `www.test.bbc.com/${service}/mostread.json`;
+
+        fetchMock.mock(endpoint, setFreshPromoTimestamp(mostReadData));
 
         let container;
         await act(async () => {
@@ -87,9 +84,9 @@ describe('MostReadContainerCanonical', () => {
         expect(container.querySelectorAll('li a').textContent).not.toBeNull();
 
         if (initialData) {
-          expect(fetch).not.toBeCalled();
+          expect(fetchMock.calls(endpoint).length).toBeFalsy();
         } else {
-          expect(fetch).toBeCalled();
+          expect(fetchMock.calls(endpoint).length).toBeTruthy();
         }
       });
     },
@@ -108,7 +105,10 @@ describe('MostReadContainerCanonical', () => {
     },
   ].forEach(({ service, expectedTime, mostReadData }) => {
     it(`should render last updated ${service} when promo timestamp is stale`, async () => {
-      fetch.mockResponse(JSON.stringify(setStalePromoTimestamp(mostReadData)));
+      fetchMock.mock(
+        `www.test.bbc.com/${service}/mostread.json`,
+        setStalePromoTimestamp(mostReadData),
+      );
 
       let container;
       await act(async () => {
@@ -137,7 +137,10 @@ describe('MostReadContainerCanonical', () => {
     },
   ].forEach(({ service, mostReadData }) => {
     it(`should not render last updated for ${service} when promo timestamp is fresh`, async () => {
-      fetch.mockResponse(JSON.stringify(setFreshPromoTimestamp(mostReadData)));
+      fetchMock.mock(
+        `www.test.bbc.com/${service}/mostread.json`,
+        setFreshPromoTimestamp(mostReadData),
+      );
 
       let container;
       await act(async () => {
@@ -151,49 +154,86 @@ describe('MostReadContainerCanonical', () => {
 
       expect(container.querySelectorAll('time').length).toEqual(0);
     });
+  });
 
-    it(`should render with wrapper`, async () => {
-      fetch.mockResponse(
-        JSON.stringify(setFreshPromoTimestamp(nepaliMostReadData)),
-      );
+  it(`should render with wrapper`, async () => {
+    fetch.mockResponse(
+      JSON.stringify(setFreshPromoTimestamp(nepaliMostReadData)),
+    );
 
-      /* eslint-disable-next-line react/prop-types */
-      const MockWrapper = ({ children }) => (
-        <div>
-          <h1>Most Read</h1>
-          {children}
-        </div>
-      );
+    /* eslint-disable-next-line react/prop-types */
+    const MockWrapper = ({ children }) => (
+      <div>
+        <h1>Most Read</h1>
+        {children}
+      </div>
+    );
 
-      let container;
-      await act(async () => {
-        container = await render(
-          <MostReadCanonicalWithContext
-            service="nepali"
-            endpoint="www.test.bbc.com/nepali/mostread.json"
-            wrapper={MockWrapper}
-          />,
-        ).container;
-      });
-
-      expect(container.querySelector('h1').textContent).toEqual('Most Read');
+    let container;
+    await act(async () => {
+      container = await render(
+        <MostReadCanonicalWithContext
+          service="nepali"
+          endpoint="www.test.bbc.com/nepali/mostread.json"
+          wrapper={MockWrapper}
+        />,
+      ).container;
     });
 
-    it(`should not render most read when lastRecordTimeStamp is not fresh`, async () => {
-      fetch.mockResponse(
-        JSON.stringify(setStaleLastRecordTimeStamp(arabicMostReadData)),
-      );
+    expect(container.querySelector('h1').textContent).toEqual('Most Read');
+  });
 
-      let container;
+  it(`should not render most read when lastRecordTimeStamp is not fresh`, async () => {
+    fetchMock.mock(
+      `www.test.bbc.com/arabic/mostread.json`,
+      setStaleLastRecordTimeStamp(arabicMostReadData),
+    );
+
+    let container;
+    await act(async () => {
+      container = await render(
+        <MostReadCanonicalWithContext
+          service="arabic"
+          endpoint="www.test.bbc.com/arabic/mostread.json"
+        />,
+      ).container;
+    });
+    expect(container).toBeEmpty();
+  });
+
+  describe('Logging', () => {
+    it('should log MOST_READ_CLIENT_REQUEST when most read data request is received', async () => {
       await act(async () => {
-        container = await render(
+        await render(
           <MostReadCanonicalWithContext
-            service="arabic"
-            endpoint="www.test.bbc.com/arabic/mostread.json"
+            service="pidgin"
+            endpoint="www.test.bbc.com/pidgin/mostread.json"
           />,
-        ).container;
+        );
       });
-      expect(container).toBeEmpty();
+
+      expect(nodeLogger.info).toHaveBeenCalledWith(MOST_READ_CLIENT_REQUEST, {
+        url: `www.test.bbc.com/pidgin/mostread.json`,
+      });
+    });
+
+    it('should log MOST_READ_FETCH_ERROR when most read data request is not received', async () => {
+      fetchMock.mock('www.test.bbc.com/pidgin/mostread.json', 500);
+
+      await act(async () => {
+        await render(
+          <MostReadCanonicalWithContext
+            service="pidgin"
+            endpoint="www.test.bbc.com/pidgin/mostread.json"
+          />,
+        );
+      });
+
+      expect(nodeLogger.error).toHaveBeenCalledWith(MOST_READ_FETCH_ERROR, {
+        url: `www.test.bbc.com/pidgin/mostread.json`,
+        error:
+          'Error: Unexpected response (HTTP status code 500) when requesting www.test.bbc.com/pidgin/mostread.json',
+      });
     });
   });
 });

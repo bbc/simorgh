@@ -192,6 +192,57 @@ exports[`AMP Front Page SEO Apple Touch Icon: 512x512 1`] = `"https://news.files
 exports[`AMP Front Page SEO Apple Touch Icon: default 1`] = `"http://localhost:7080/arabic/images/icons/icon-192x192.png"`;
 
 exports[`AMP Front Page SEO Apple Touch Startup Image 1`] = `"https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-512x512.png"`;
+exports[`AMP Front Page I can see Index Alsos 1`] = `"المزيد حول هذه القصة"`;
+
+exports[`AMP Front Page I can see Useful Links 1`] = `"وظائف شاغرة في بي بي سي عربي"`;
+
+exports[`AMP Front Page I can see Useful Links 2`] = `"أكاديمية بي بي سي: اكتشف... تعلم.. .تطور"`;
+
+exports[`AMP Front Page I can see Useful Links 3`] = `"ثمانون عاما على بي بي سي عربي: من"`;
+
+exports[`AMP Front Page I can see Useful Links 4`] = `"مدونة المرأة: علامات"`;
+
+exports[`AMP Front Page I can see Useful Links 5`] = `"شركاؤنا"`;
+
+exports[`AMP Front Page I can see sections 1`] = `"الخبر الرئيسي"`;
+
+exports[`AMP Front Page I can see sections 2`] = `"فيديوالمزيد"`;
+
+exports[`AMP Front Page I can see sections 3`] = `"تقارير خاصةالمزيد"`;
+
+exports[`AMP Front Page I can see sections 4`] = `"مرأةالمزيد"`;
+
+exports[`AMP Front Page I can see sections 5`] = `"صحةالمزيد"`;
+
+exports[`AMP Front Page I can see sections 6`] = `"اقتصادالمزيد"`;
+
+exports[`AMP Front Page I can see sections 7`] = `"علوم وتكنولوجياالمزيد"`;
+
+exports[`AMP Front Page I can see sections 8`] = `"ثقافة وفنونالمزيد"`;
+
+exports[`AMP Front Page I can see sections 9`] = `"رياضةالمزيد"`;
+
+exports[`AMP Front Page I can see sections 10`] = `"برامجناالمزيد"`;
+
+exports[`AMP Front Page I can see sections 11`] = `"عرض الصحف"`;
+
+exports[`AMP Front Page I can see sections 12`] = `"مجلةالمزيد"`;
+
+exports[`AMP Front Page I can see sections 13`] = `"شارك برأيك:المزيد"`;
+
+exports[`AMP Front Page I can see sections 14`] = `"بي بي سي ترندالمزيد"`;
+
+exports[`AMP Front Page I can see sections 15`] = `"بالصورالمزيد"`;
+
+exports[`AMP Front Page I can see sections 16`] = `"مباشر"`;
+
+exports[`AMP Front Page I can see sections 17`] = `"اخترنا لكم"`;
+
+exports[`AMP Front Page I can see sections 18`] = `"بطولة كأس العالم 2018المزيد"`;
+
+exports[`AMP Front Page I can see sections 19`] = `"روابط لبي بي سي"`;
+
+exports[`AMP Front Page I can see the headline 1`] = `"BBC News, عربي - الرئيسية"`;
 
 exports[`AMP Front Page SEO Canonical link 1`] = `"http://localhost:7080/arabic"`;
 
@@ -275,3 +326,16 @@ exports[`AMP Front Page SEO Twitter image src 1`] = `"https://news.files.bbci.co
 exports[`AMP Front Page SEO Twitter site 1`] = `"@BBCArabic"`;
 
 exports[`AMP Front Page SEO Twitter title 1`] = `"الرئيسية - BBC News عربي"`;
+
+exports[`AMP Front Page Story Promo I can see a headline 1`] = `"المجلس العسكري في السودان يعلن إحباط \\"محاولة انقلابية\\""`;
+
+exports[`AMP Front Page Story Promo I can see an image 1`] = `
+<amp-img
+  alt="متظاهرون يحتفلون بالتوصل لاتفاق بين المجلس العسكري والمتظاهرين"
+  attribution="Reuters"
+  height="549"
+  layout="responsive"
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg"
+  width="976"
+/>
+`;

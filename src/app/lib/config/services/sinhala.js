@@ -13,6 +13,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'වෙළෙඳ දැන්වීමක් ',
     },
     lang: `si`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -208,11 +209,11 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/sinhala/institutional-36017568',
           text: 'භාවිතයේ කොන්දේසි',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/sinhala/institutional-36019591',
           text: 'පෞද්ගලිකත්ව ප්‍රතිපත්තිය',
         },
         {
@@ -220,7 +221,7 @@ export const service = {
           text: 'කුකීස්',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/sinhala/institutional-36019593',
           text: 'බීබීසී අමතන්න',
         },
         {

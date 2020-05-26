@@ -1,7 +1,12 @@
+import nodeLogger from '#testHelpers/loggerMock';
 import processMostRead from './processMostRead';
 import pidginData from '#data/pidgin/mostRead';
 import kyrgyzData from '#data/kyrgyz/mostRead';
 import { setStaleLastRecordTimeStamp } from './testHelpers';
+import {
+  MOST_READ_DATA_INCOMPLETE,
+  MOST_READ_STALE_DATA,
+} from '#lib/logger.const';
 
 const expectedPidginData = [
   {
@@ -69,90 +74,110 @@ const expectedPidginData = [
 
 const expectedKyrgyzData = [
   {
-    id: 'urn:bbc:ares::article:cn060pe01e5o',
-    title: 'Hello promos',
-    href: 'https://www.bbc.com/news/articles/cn060pe01e5o',
-    timestamp: 1586266369329,
+    id: 'ad632121-eff8-9542-85d5-d099fb4ccbb3',
+    title: '"Шейшепти көрсөт": Кавказдагы эскиден келе жаткан үйлөнүү салттары',
+    href: '/kyrgyz/magazine-48659975',
+    timestamp: 1560768556000,
   },
   {
-    id: 'urn:bbc:ares::article:c736f039b88',
-    title: 'Hello promos',
-    href: 'https://www.bbc.com/news/articles/c736f039b88',
-    timestamp: 1586266369329,
+    id: 'urn:bbc:optimo:c419vkyvj2go',
+    title:
+      'Бишкек: карылар үйүндөгү нааразылык, улгайган кишилерге ким кол көтөрдү?    ',
+    href: 'https://www.bbc.com/kyrgyz/articles/c419vkyvj2go',
+    timestamp: 1588952256682,
   },
   {
-    id: 'urn:bbc:ares::article:c736f039bwx',
-    title: 'Hello promos',
-    href: 'https://www.bbc.com/news/articles/c736f039bwx',
-    timestamp: 1586266369329,
+    id: '3439531c-2704-a647-b234-5290647837d3',
+    title: 'Атак-даңкты жакшы көргөн Брежнев',
+    href: '/kyrgyz/entertainment-43151726',
+    timestamp: 1519278452000,
   },
   {
-    id: 'urn:bbc:ares::article:cn060pe0qwer',
-    title: 'Hello promos',
-    href: 'https://www.bbc.com/news/articles/cn060pe0qwer',
-    timestamp: 1586266369329,
+    id: '891e5a23-9eee-8248-b99f-9e1c1d77e97e',
+    title: 'Кытай жылына 6 миллиард таракан өстүрөт. Эмнеге?',
+    href: '/kyrgyz/magazine-43919283',
+    timestamp: 1524824448000,
   },
   {
-    id: 'urn:bbc:ares::article:cn060pe01e59',
-    title: 'Hello promos',
-    href: 'https://www.bbc.com/news/articles/cn060pe01e59',
-    timestamp: 1586266369329,
+    id: '301f5663-e391-6345-9bc2-1d019db3a331',
+    title: '“Өкмөттүн адвокаты”: сын жукпаган спикер',
+    href: '/kyrgyz/kyrgyzstan-52648816',
+    timestamp: 1589537631000,
   },
 ];
 
-const missingTitleData = {
-  locators: {
-    canonicalUrl: 'https://www.bbc.com/news/articles/cn060pe01e5o',
-  },
-  timestamp: 1586266369329,
-  headlines: {
-    promoHeadline: {
-      blocks: [
-        {
-          type: 'text',
-          model: {
-            blocks: [
-              {
-                type: 'paragraph',
-                model: {
-                  text: null,
+const missingTitleOptimoPromo = {
+  id: '047da657-5014-de4b-8aec-5192ae52520b',
+  promo: {
+    type: 'optimo',
+    locators: {
+      canonicalUrl: 'https://www.bbc.com/news/articles/cn060pe01e5o',
+    },
+    timestamp: 1558434642016,
+    headlines: {
+      promoHeadline: {
+        blocks: [
+          {
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  type: 'paragraph',
+                  model: {
+                    text: null,
+                  },
                 },
-              },
-            ],
+              ],
+            },
           },
-        },
-      ],
+        ],
+      },
     },
   },
 };
 
-const missingHrefData = {
-  locators: {
-    canonicalUrl: null,
-  },
-  timestamp: 1586266369329,
-  headlines: {
-    promoHeadline: {
-      blocks: [
-        {
-          type: 'text',
-          model: {
-            blocks: [
-              {
-                type: 'paragraph',
-                model: {
-                  text: 'Most read item title',
+const missingHrefOptimoPromo = {
+  id: '047da657-5014-de4b-8aec-5192ae52520a',
+  promo: {
+    type: 'optimo',
+    locators: {
+      canonicalUrl: null,
+    },
+    timestamp: 1558434642016,
+    headlines: {
+      promoHeadline: {
+        blocks: [
+          {
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  type: 'paragraph',
+                  model: {
+                    text: 'Most read item title',
+                  },
                 },
-              },
-            ],
+              ],
+            },
           },
-        },
-      ],
+        ],
+      },
     },
   },
 };
 
-describe('filterMostRead', () => {
+// Returns kyrgyz fixture data with a invalid promo as the first record
+const kyrgyzDataWithInvalidPromo = invalidPromo => {
+  const kyrgyzRecords = kyrgyzData.records;
+  kyrgyzRecords.unshift(invalidPromo);
+
+  return {
+    lastRecordTimeStamp: '2030-01-01T17:00:00Z',
+    records: kyrgyzRecords,
+  };
+};
+
+describe('processMostRead', () => {
   [
     {
       description: 'should return expected filtered CPS data',
@@ -189,20 +214,65 @@ describe('filterMostRead', () => {
       expectedReturn: [],
     },
     {
-      description: 'should return null when most read item title is missing',
-      data: missingTitleData,
-      numberOfItems: 1,
-      expectedReturn: null,
+      description: 'should skip array item if it contains invalid title value',
+      data: kyrgyzDataWithInvalidPromo(missingTitleOptimoPromo),
+      numberOfItems: 5,
+      expectedReturn: expectedKyrgyzData,
     },
     {
-      description: 'should return null when most read item href is missing',
-      data: missingHrefData,
-      numberOfItems: 1,
-      expectedReturn: null,
+      description: 'should skip array item if it contains invalid title value',
+      data: kyrgyzDataWithInvalidPromo(missingHrefOptimoPromo),
+      numberOfItems: 5,
+      expectedReturn: expectedKyrgyzData,
     },
   ].forEach(({ description, data, numberOfItems, expectedReturn }) => {
     it(description, () => {
       expect(processMostRead({ data, numberOfItems })).toEqual(expectedReturn);
+    });
+  });
+
+  describe('Logging', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+
+    [
+      {
+        description:
+          'should log MOST_READ_DATA_INCOMPLETE when most read item title is missing',
+        data: kyrgyzDataWithInvalidPromo(missingTitleOptimoPromo),
+        message:
+          'Most read data promo has href: null and title: Most read item title',
+        numberOfItems: 5,
+      },
+      {
+        description:
+          'should log MOST_READ_DATA_INCOMPLETE when most read item href is missing',
+        data: kyrgyzDataWithInvalidPromo(missingHrefOptimoPromo),
+        message:
+          'Most read data promo has href: https://www.bbc.com/news/articles/cn060pe01e5o and title: null',
+        numberOfItems: 5,
+      },
+    ].forEach(({ description, data, message, numberOfItems }) => {
+      it(description, () => {
+        processMostRead({ data, numberOfItems });
+        expect(nodeLogger.warn).toHaveBeenCalledWith(
+          MOST_READ_DATA_INCOMPLETE,
+          {
+            message,
+          },
+        );
+      });
+    });
+
+    it('should log MOST_READ_STALE_DATA when lastRecordTimestamp is greater than 35min', () => {
+      processMostRead({
+        data: setStaleLastRecordTimeStamp(pidginData),
+        numberOfItems: 10,
+      });
+      expect(nodeLogger.warn).toHaveBeenCalledWith(MOST_READ_STALE_DATA, {
+        message: `Most read lastUpdatedTimestamp - 2019-11-06T16:28:00Z value is greater than 35min`,
+      });
     });
   });
 });

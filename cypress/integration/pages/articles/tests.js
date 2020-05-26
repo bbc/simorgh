@@ -1,4 +1,3 @@
-import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import appToggles from '../../../support/helpers/useAppToggles';
@@ -81,14 +80,7 @@ export const testsThatFollowSmokeTestConfig = ({
 
       if (serviceHasFigure(service)) {
         it('should have a placeholder image', () => {
-          cy.get('figure div div div')
-            .eq(0)
-            .should(el => {
-              expect(el).to.have.css(
-                'background-image',
-                `url("data:image/svg+xml;base64,${BBC_BLOCKS}")`,
-              );
-            });
+          cy.get('figure div div div').eq(0).should('be.visible');
         });
 
         if (serviceHasCaption(service)) {
