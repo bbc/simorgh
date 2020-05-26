@@ -5,31 +5,37 @@ These tests use the [Jest](#what-is-jest) test runner and operate in a custom [J
 ## Getting started
 
 To run the tests against all 40+ services:
+
 ```
 npm run test:integration
 ```
 
 To run tests for a single service with the watch task:
+
 ```
 npm run test:integration -- --services=amharic --watch
 ```
 
 To run tests for selected services:
+
 ```
 npm run test:integration -- --services=korean,persian,amharic
 ```
 
 To run tests for a single service with the watch task and webpack hot reloading of application code:
+
 ```
 npm run test:integration -- --services=korean --watch --dev
 ```
 
 To run tests in CI so they fail if a snapshot was not captured:
+
 ```
 npm run test:integration:ci
 ```
 
 To stop running tests immediately when there is a failure - NB this is useful when you want to reduce noise if there are a lot of failing tests and you want to inspect one failing test at a time:
+
 ```
 npm run test:integration -- --bail
 ```
@@ -109,7 +115,6 @@ An example of an `amp.test.js` test file that imports all AMP tests for a Pidgin
 import runAmpTests from '../../../pages/articles/ampTests';
 
 describe('AMP pidgin articles', runAmpTests);
-
 ```
 
 The `canonical.test.js` equivalent looks like:
@@ -123,12 +128,12 @@ The `canonical.test.js` equivalent looks like:
 import runCanonicalTests from '../../../pages/articles/canonicalTests';
 
 describe('Canonical pidgin articles', runCanonicalTests);
-
 ```
 
 Writing and maintaining these test files for 40+ services and all their page types would be very difficult to do manually so these files are generated from a config file found in [`src/integration/utils/runTests/constants/services.js`](https://github.com/bbc/simorgh/blob/latest/src/integration/utils/runTests/constants/services.js). This config file contains all services and service variants with examples of urls for every page type to run tests against. Every time tests are run, the test files are regenerated from this config file to ensure they are up to date.
 
 ### How do the `amp.test.js` and `canonical.test.js` files work?
+
 Each file contains 2 necessary [docblock pragmas](#what-is-a-docblock-pragma) - `@service` and `@pathname`.
 
 The `@pathname` is the part of the url that is everything after `https://bbc.com` and in this example it is `/mundo/articles/ce42wzqr2mko`. If you visit `https://bbc.com/mundo/articles/ce42wzqr2mko` (**NB** this is the canonical url - for the AMP url just add `.amp` on the end) you will see this is a Mundo article page and it is what we are going to test.
@@ -138,6 +143,66 @@ The `@service` is parsed and added to the global scope of every test suite to se
 Before our tests run, a custom test environment [setup file](https://github.com/bbc/simorgh/tree/latest/src/integration/integrationTestEnvironment.js) parses the `@pathname` dockblock pragma and constructs the url. JSDOM then visits the url to get the DOM trees that we can use to run our tests against.
 
 The benefit of abstracting the page rendering away from test files in a custom Jest environment is that it removes the test setup boilerplate from each test suite which would contain asynchronous handling of rendering the page. Also, since all the page rendering handling is done in one place, if we ever decide to switch to a different page rendering framework, but still want to use Jest as our test runner, then we can simply switch the JSDOM setup out of the custom test environment file and replace it with another page rendering framework. As long as we still pass a DOM implementation (`window.document` object) to the test files then our tests should still work as expected.
+
+### Conditionally run tests for services
+
+If you do not want to run certain tests for certain services you can do something like the following:
+
+```js
+if (service !== 'scotland') {
+  it('I can see the navigation', () => {
+    const navigationItemEls = document.querySelector('header nav ul > li > a');
+
+    expect(navigationItemEls).toBeInTheDocument();
+  });
+}
+```
+
+In this example, the `scotland` service does not have a navigation bar so we should not run tests that checks it is in the document.
+
+### Conditionally run tests for features
+
+If you want to run tests for features that are only present on some test URLs then you can declare these features in the services config against the specific URL in a `globals` object. For example, in `src/integration/utils/runTests/constants/services.js` the `igbo` service's `mediaAssetPage` test URL has a bulleted list and related content feature. Not every media asset page will have these features.
+
+```js
+  igbo: {
+    frontPage: [{ path: '/igbo' }],
+    articles: [{ path: '/igbo/articles/cr1lw620ygjo' }],
+    mediaAssetPage: [
+      {
+        path: '/igbo/media-23256786',
+        globals: {
+          hasBulletedList: true,
+          hasRelatedContent: true,
+        },
+      },
+    ],
+  },
+```
+
+Then in our `mediaAssetPage` tests you can do:
+
+```js
+if (global.hasBulletedList) {
+  it('I can see the bulleted list item', () => {
+    const bulletedListEl = document.querySelector('main ul[role="list"]');
+
+    expect(bulletedListEl).toBeInTheDocument();
+    expect(bulletedListEl.textContent).toBeTruthy();
+    expect(bulletedListEl.textContent).toMatchSnapshot();
+  });
+}
+
+if (global.hasRelatedContent) {
+  it('I can see the related content', () => {
+    const releatedContentEl = document.querySelector('section [role="list"]');
+
+    expect(releatedContentEl).toBeInTheDocument();
+    expect(releatedContentEl.textContent).toBeTruthy();
+    expect(releatedContentEl.textContent).toMatchSnapshot();
+  });
+}
+```
 
 ### Directory Structure
 
