@@ -7,9 +7,9 @@ export default () => {
     const imageEl = document.querySelector(
       'main figure img, main figure amp-img',
     );
-    const imageCaptionEl = document.querySelector('main figure figcaption');
-
     expect(imageEl).toBeInTheDocument();
+
+    const imageCaptionEl = document.querySelector('main figure figcaption');
     expect(imageCaptionEl).toBeInTheDocument();
     expect(imageCaptionEl.textContent).toBeTruthy();
     expect(imageCaptionEl.textContent).toMatchSnapshot();
