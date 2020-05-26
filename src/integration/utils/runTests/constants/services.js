@@ -41,7 +41,12 @@ module.exports = {
     articles: [{ path: '/bengali/articles/c6p3yp5zzmeo' }],
     liveRadio: [{ path: '/bengali/bbc_bangla_radio/liveradio' }],
     mediaAssetPage: [
-      { path: '/bengali/media-23269006', hasBulletedList: true },
+      {
+        path: '/bengali/media-23269006',
+        globals: {
+          hasBulletedList: true,
+        },
+      },
     ],
     // PGL: ['/bengali/news-38827173'],
   },
@@ -51,7 +56,12 @@ module.exports = {
     articles: [{ path: '/burmese/articles/cn0exdy1jzvo' }],
     liveRadio: [{ path: '/burmese/bbc_burmese_radio/liveradio' }],
     mediaAssetPage: [
-      { path: '/burmese/media-23269011', hasBulletedList: true },
+      {
+        path: '/burmese/media-23269011',
+        globals: {
+          hasBulletedList: true,
+        },
+      },
     ],
     // PGL: ['/burmese/media-47680015'],
   },
@@ -79,7 +89,14 @@ module.exports = {
     frontPage: [{ path: '/hausa' }],
     articles: [{ path: '/hausa/articles/c2nr6xqmnewo' }],
     liveRadio: [{ path: '/hausa/bbc_hausa_radio/liveradio' }],
-    mediaAssetPage: [{ path: '/hausa/23269030', hasBulletedList: true }],
+    mediaAssetPage: [
+      {
+        path: '/hausa/23269030',
+        globals: {
+          hasBulletedList: true,
+        },
+      },
+    ],
   },
 
   hindi: {
@@ -95,8 +112,10 @@ module.exports = {
     mediaAssetPage: [
       {
         path: '/igbo/media-23256786',
-        hasBulletedList: true,
-        hasRelatedContent: true,
+        globals: {
+          hasBulletedList: true,
+          hasRelatedContent: true,
+        },
       },
     ],
     // PGL: ['/igbo/afirika-49666505'],
@@ -111,7 +130,9 @@ module.exports = {
       { path: '/indonesia/bbc_indonesian_radio/w172xh267fpn19l' },
       {
         path: '/indonesia/bbc_indonesian_radio/w172x6r5000f38s',
-        globals: { isExpired: true },
+        globals: {
+          isExpired: true,
+        },
       },
     ],
     // PGL: ['/indonesia/indonesia-41635759'],
@@ -121,7 +142,12 @@ module.exports = {
     frontPage: [{ path: '/japanese' }],
     articles: [{ path: '/japanese/articles/cdd6p3r9g7jo' }],
     mediaAssetPage: [
-      { path: '/japanese/video-23248670', hasBulletedList: true },
+      {
+        path: '/japanese/video-23248670',
+        globals: {
+          hasBulletedList: true,
+        },
+      },
     ],
     // PGL: ['/japanese/features-and-analysis-42786589'],
   },
@@ -133,8 +159,10 @@ module.exports = {
     mediaAssetPage: [
       {
         path: '/korean/media-23248686',
-        hasBulletedList: true,
-        hasRelatedContent: true,
+        globals: {
+          hasBulletedList: true,
+          hasRelatedContent: true,
+        },
       },
     ],
     // PGL: ['/korean/features-41397333'],
@@ -189,7 +217,9 @@ module.exports = {
       { path: '/pashto/bbc_pashto_radio/w3ct0lz1' },
       {
         path: '/pashto/bbc_pashto_radio/w172x8nvf4bchz5',
-        globals: { isExpired: true },
+        globals: {
+          isExpired: true,
+        },
       },
       { path: '/pashto/bbc_pashto_radio/p0340yr4' },
     ],
@@ -213,8 +243,10 @@ module.exports = {
     mediaAssetPage: [
       {
         path: '/pidgin/23248703',
-        hasBulletedList: true,
-        hasRelatedContent: true,
+        globals: {
+          hasBulletedList: true,
+          hasRelatedContent: true,
+        },
       },
     ],
     // PGL: ['/pidgin/sport-23252855'],
@@ -232,8 +264,10 @@ module.exports = {
     mediaAssetPage: [
       {
         path: '/punjabi/media-23248705',
-        hasBulletedList: true,
-        hasRelatedContent: true,
+        globals: {
+          hasBulletedList: true,
+          hasRelatedContent: true,
+        },
       },
     ],
     // PGL: ['/punjabi/india-42928885'],
@@ -262,7 +296,14 @@ module.exports = {
     frontPage: [{ path: '/sinhala' }],
     articles: [{ path: '/sinhala/articles/c45w255zlexo' }],
     liveRadio: [{ path: '/sinhala/bbc_sinhala_radio/liveradio' }],
-    mediaAssetPage: [{ path: '/sinhala/23248970', hasBulletedList: true }],
+    mediaAssetPage: [
+      {
+        path: '/sinhala/23248970',
+        globals: {
+          hasBulletedList: true,
+        },
+      },
+    ],
     // PGL: ['/sinhala/world-37657374'],
   },
 
@@ -294,7 +335,12 @@ module.exports = {
     frontPage: [{ path: '/telugu' }],
     articles: [{ path: '/telugu/articles/cq0y4008d4vo' }],
     mediaAssetPage: [
-      { path: '/telugu/international-23263261', hasBulletedList: true },
+      {
+        path: '/telugu/international-23263261',
+        globals: {
+          hasBulletedList: true,
+        },
+      },
     ],
     // PGL: ['/telugu/india-42321552'],
   },
@@ -350,7 +396,12 @@ module.exports = {
     articles: [{ path: '/uzbek/articles/cxj3rjxm6r0o' }],
     liveRadio: [{ path: '/uzbek/bbc_uzbek_radio/liveradio' }],
     mediaAssetPage: [
-      { path: '/uzbek/world-23053613', hasRelatedContent: true },
+      {
+        path: '/uzbek/world-23053613',
+        globals: {
+          hasRelatedContent: true,
+        },
+      },
     ],
     // PGL: ['/uzbek/central-asia-46716844'],
   },
@@ -369,8 +420,10 @@ module.exports = {
     mediaAssetPage: [
       {
         path: '/yoruba/media-23256797',
-        hasBulletedList: true,
-        hasRelatedContent: true,
+        globals: {
+          hasBulletedList: true,
+          hasRelatedContent: true,
+        },
       },
     ],
     // PGL: ['/yoruba/media-50970014'],
