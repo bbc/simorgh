@@ -178,7 +178,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'Ìròyìn tó ṣe kókó',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'Ìwádìí kíkún lóríi kókó ìròyìn ',
     },
     brandSVG,
     mostRead: {
