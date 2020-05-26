@@ -286,6 +286,16 @@ We have [Jest](https://facebook.github.io/jest) unit tests that can be run with 
 
 `npm test` runs both sets of these.
 
+### Integration tests
+
+We use Jest to run integration tests for our pages in a JSDOM environment.
+
+```
+npm run test:integration
+```
+
+It is recommended to look over the [integration tests README](https://github.com/bbc/simorgh/tree/latest/src/integration/README.md) to gain a fuller understanding on how to write and run these tests.
+
 ### End-to-end tests
 
 #### Main application
