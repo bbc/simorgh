@@ -18,9 +18,15 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
     describe('Audio Player', () => {
       const { lang } = appConfig[service][variant];
       let embedUrl;
+      let override;
 
       beforeEach(() => {
-        cy.request(`${Cypress.env('currentPath')}.json?renderer_env=live`).then(
+        if (Cypress.env('APP_ENV') === 'test') {
+          override = '?renderer_env=live';
+        } else {
+          override = '';
+        }
+        cy.request(`${Cypress.env('currentPath')}.json${override}`).then(
           ({ body }) => {
             embedUrl = getEmbedUrl(body, lang);
           },
