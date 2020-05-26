@@ -46,7 +46,7 @@ export const buildATIPageTrackPath = ({
   const referrer = getReferrer(platform, origin, previousPath);
 
   // We use amp variable substitutes to get the href and referrer and these cannot be manipulated
-  // For canonical, we have a requirement to encode the x5 and x6 value twice. Soruce issue: https://github.com/bbc/simorgh/pull/6593
+  // For canonical, we have a requirement to encode the x5 and x6 value twice. Source issue: https://github.com/bbc/simorgh/pull/6593
   const x5Value = platform === 'amp' ? href : href && encodeURIComponent(href);
   const x6Value =
     platform === 'amp' ? referrer : referrer && encodeURIComponent(referrer);
