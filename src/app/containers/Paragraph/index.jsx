@@ -14,7 +14,7 @@ const ParagraphContainer = ({ blocks }) => {
   const { script, service } = useContext(ServiceContext);
 
   return (
-    <GridItem>
+    <GridItem enableMargins>
       <Paragraph script={script} service={service}>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </Paragraph>

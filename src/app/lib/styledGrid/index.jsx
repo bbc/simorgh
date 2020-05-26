@@ -52,6 +52,15 @@ const mediumColumns = {
   group5: 10,
 };
 
+const noMargins = {
+  group0: false,
+  group1: false,
+  group2: false,
+  group3: false,
+  group4: false,
+  group5: false,
+};
+
 export const GridWrapperMedium = ({ children }) => {
   return (
     <Grid
@@ -68,8 +77,8 @@ GridWrapperMedium.propTypes = {
   children: node.isRequired,
 };
 
-export const GridItem = ({ children }) => {
-  const margins = {
+export const GridItem = ({ children, enableMargins }) => {
+  const gridMargins = {
     group0: true,
     group1: true,
     group2: true,
@@ -77,6 +86,8 @@ export const GridItem = ({ children }) => {
     group4: false,
     group5: false,
   };
+
+  const margins = enableMargins ? gridMargins : noMargins;
 
   return (
     <Grid
@@ -92,6 +103,11 @@ export const GridItem = ({ children }) => {
 
 GridItem.propTypes = {
   children: node.isRequired,
+  enableMargins: bool,
+};
+
+GridItem.defaultProps = {
+  enableMargins: false,
 };
 
 export const GridItemSmall = ({ children }) => {
@@ -130,15 +146,6 @@ GridItemSmall.propTypes = {
 };
 
 export const GridItemLarge = ({ children, enableMargins }) => {
-  const noMargins = {
-    group0: false,
-    group1: false,
-    group2: false,
-    group3: false,
-    group4: false,
-    group5: false,
-  };
-
   const gridMargins = {
     group0: true,
     group1: true,
@@ -170,19 +177,6 @@ GridItemLarge.propTypes = {
 GridItemLarge.defaultProps = {
   enableMargins: false,
 };
-
-export const GridItemMedium = ({ children }) => {
-  return (
-    <Grid item columns={mediumColumns} parentColumns={defaultColumns}>
-      {children}
-    </Grid>
-  );
-};
-
-GridItemMedium.propTypes = {
-  children: node.isRequired,
-};
-
 export const GridWrapper = styled.div`
   ${layoutGridWrapper};
   padding-bottom: ${GEL_SPACING_QUAD};
