@@ -178,7 +178,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'ముఖ్యమైన కథనాలు',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'ఫీచర్లు',
     },
     brandSVG,
     mostRead: {

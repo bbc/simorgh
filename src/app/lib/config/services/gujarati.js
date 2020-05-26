@@ -177,7 +177,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'નવાજૂની',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'બીબીસી વિશેષ',
     },
     brandSVG,
     mostRead: {

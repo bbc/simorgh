@@ -179,7 +179,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'Top Tori',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'Informate me',
     },
     mostRead: {
       header: 'De one we dem de read well well',

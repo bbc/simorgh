@@ -269,7 +269,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'Najvažnije',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'Reportaže',
     },
   },
   cyr: {
@@ -500,7 +500,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'Најважније',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'Репортаже',
     },
   },
 };

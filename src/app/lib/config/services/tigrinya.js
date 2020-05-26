@@ -170,7 +170,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'ዜናታት',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'ኣዘራረብቲ ዛዕባታት',
     },
     brandSVG,
     mostRead: {
