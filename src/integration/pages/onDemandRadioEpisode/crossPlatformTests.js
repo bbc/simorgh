@@ -6,6 +6,20 @@ import {
 export default () => {
   // runCommonCrossPlatformTests(); linked data missing
 
+  if (global.isExpired) {
+    describe('Expired Episode', () => {
+      it(`I can see the 'Content is not available' placeholder`, () => {
+        const contentNotAvailableEl = document.querySelector('main div strong');
+
+        expect(contentNotAvailableEl).toBeInTheDocument();
+        expect(contentNotAvailableEl.textContent).toBeTruthy();
+        expect(contentNotAvailableEl.textContent).toMatchSnapshot();
+      });
+    });
+  } else {
+    runMediaPlayerEmbedTests();
+  }
+
   it('I can see the brand title', () => {
     const brandTitleEl = document.querySelector('h1 span span:first-child');
 
@@ -41,18 +55,4 @@ export default () => {
       expect(headlineEl.textContent).toMatchSnapshot();
     });
   });
-
-  if (global.isExpired) {
-    describe('Expired Episode', () => {
-      it(`I can see the 'Content is not available' placeholder`, () => {
-        const contentNotAvailableEl = document.querySelector('main div strong');
-
-        expect(contentNotAvailableEl).toBeInTheDocument();
-        expect(contentNotAvailableEl.textContent).toBeTruthy();
-        expect(contentNotAvailableEl.textContent).toMatchSnapshot();
-      });
-    });
-  } else {
-    runMediaPlayerEmbedTests();
-  }
 };
