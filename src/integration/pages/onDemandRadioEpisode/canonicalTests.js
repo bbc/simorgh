@@ -2,10 +2,15 @@ import {
   runCoreCanonicalTests,
   runCanonicalAnalyticsTests,
 } from '../../common';
-import runCanonicalOnlyEpisodeTests from './canonicalOnlyEpisodeTests';
 
 export default () => {
   runCoreCanonicalTests();
   runCanonicalAnalyticsTests();
-  runCanonicalOnlyEpisodeTests();
+  it('I can see the hero image on canonical', () => {
+    const imageEl = document.querySelector('main img');
+
+    expect(imageEl).toBeInTheDocument();
+    expect(imageEl).toBeTruthy();
+    expect(imageEl.getAttribute('src')).toMatchSnapshot();
+  });
 };

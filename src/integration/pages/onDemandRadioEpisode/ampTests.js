@@ -1,8 +1,13 @@
 import { runCoreAmpTests, runAmpAnalyticsTests } from '../../common';
-import runAmpOnlyEpisodeTests from './ampOnlyEpisodeTests';
 
 export default () => {
   runCoreAmpTests();
   runAmpAnalyticsTests();
-  runAmpOnlyEpisodeTests();
+  it('I can see the hero image on amp', () => {
+    const imageEl = document.querySelector('main amp-img');
+
+    expect(imageEl).toBeInTheDocument();
+    expect(imageEl).toBeTruthy();
+    expect(imageEl.getAttribute('src')).toMatchSnapshot();
+  });
 };
