@@ -286,7 +286,12 @@ module.exports = {
   serbian: {
     frontPage: [{ path: '/serbian/cyr' /* '/serbian/lat' 404ing */ }],
     articles: [
-      { path: '/serbian/articles/c805k05kr73o/cyr' },
+      {
+        path: '/serbian/articles/c805k05kr73o/cyr',
+        globals: {
+          hasImageWithCaption: false,
+        },
+      },
       /* '/serbian/articles/c805k05kr73o/lat' 404ing */
     ],
     // PGL: ['/serbian/srbija-46748932/lat'],
@@ -370,8 +375,18 @@ module.exports = {
   ukchina: {
     frontPage: [{ path: '/ukchina/simp' }, { path: '/ukchina/trad' }],
     articles: [
-      { path: '/ukchina/articles/c0e8weny66ko/simp' },
-      { path: '/ukchina/articles/c0e8weny66ko/trad' },
+      {
+        path: '/ukchina/articles/c0e8weny66ko/simp',
+        globals: {
+          hasImageWithCaption: false,
+        },
+      },
+      {
+        path: '/ukchina/articles/c0e8weny66ko/trad',
+        globals: {
+          hasImageWithCaption: false,
+        },
+      },
     ],
     // PGL: ['/ukchina/trad/cool-britannia-38434549'],
   },
@@ -393,7 +408,14 @@ module.exports = {
 
   uzbek: {
     frontPage: [{ path: '/uzbek' }],
-    articles: [{ path: '/uzbek/articles/cxj3rjxm6r0o' }],
+    articles: [
+      {
+        path: '/uzbek/articles/cxj3rjxm6r0o',
+        globals: {
+          hasImageWithCaption: false,
+        },
+      },
+    ],
     liveRadio: [{ path: '/uzbek/bbc_uzbek_radio/liveradio' }],
     mediaAssetPage: [
       {
@@ -432,8 +454,18 @@ module.exports = {
   zhongwen: {
     frontPage: [{ path: '/zhongwen/simp' }, { path: '/zhongwen/trad' }],
     articles: [
-      { path: '/zhongwen/articles/c3xd4x9prgyo/simp' },
-      { path: '/zhongwen/articles/c3xd4x9prgyo/trad' },
+      {
+        path: '/zhongwen/articles/c3xd4x9prgyo/simp',
+        globals: {
+          hasImageWithCaption: false,
+        },
+      },
+      {
+        path: '/zhongwen/articles/c3xd4x9prgyo/trad',
+        globals: {
+          hasImageWithCaption: false,
+        },
+      },
     ],
     // PGL: ['/zhongwen/trad/chinese-news-49065935'],
   },
