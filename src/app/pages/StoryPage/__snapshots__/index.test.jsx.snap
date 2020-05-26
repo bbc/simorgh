@@ -3269,6 +3269,10 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   color: #5A5A5A;
 }
 
+.c21 {
+  padding-bottom: 1rem;
+}
+
 .c6 {
   padding-bottom: 1rem;
 }
@@ -3576,60 +3580,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @supports (display:grid) {
   .c11 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c21 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c21 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c21 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c21 {
-    width: calc(83.33333333333333%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c21 {
-    width: calc(83.33333333333333%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c21 {
-    width: calc(83.33333333333333%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c21 {
     display: block;
   }
 }
@@ -4232,6 +4182,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:63rem) {
+  .c21 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
   .c6 {
     padding-bottom: 1.5rem;
   }
@@ -4606,8 +4562,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </figure>
                       </div>
                       <div
-                        class="c21"
-                        dir="ltr"
+                        class="c5 c21"
                       >
                         <time
                           class="c22"

@@ -61,8 +61,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 </strong>
               </div>
               <div
-                class="GridComponent-nf79gm-0 eRZeLk"
-                dir="ltr"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 imiJTj StyledTimestamp-oo43dv-1 jqCfrG"
               >
                 <time
                   class="StyledTimestamp-um718p-0 bAgcOD"
@@ -438,8 +437,7 @@ exports[`Media Asset Page should render component 1`] = `
                 </strong>
               </div>
               <div
-                class="GridComponent-nf79gm-0 eRZeLk"
-                dir="ltr"
+                class="GridItemConstrainedMedium-sc-12lwanc-3 imiJTj StyledTimestamp-oo43dv-1 jqCfrG"
               >
                 <time
                   class="StyledTimestamp-um718p-0 bAgcOD"
