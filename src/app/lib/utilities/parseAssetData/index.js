@@ -6,7 +6,20 @@ export const getArticleId = path(['metadata', 'id']);
 
 export const getHeadline = path(['promo', 'headlines', 'seoHeadline']);
 
-export const getSummary = path(['promo', 'summary']);
+export const getSummary = path([
+  'promo',
+  'summary',
+  'blocks',
+  '0',
+  'model',
+  'blocks',
+  '0',
+  'model',
+  'blocks',
+  '0',
+  'model',
+  'text',
+]);
 
 export const getFirstPublished = articleData =>
   getISOStringDate(path(['metadata', 'firstPublished'], articleData));

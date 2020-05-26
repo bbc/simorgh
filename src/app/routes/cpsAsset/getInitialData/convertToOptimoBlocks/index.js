@@ -23,6 +23,10 @@ const handleMissingType = (block, json, assetType) =>
     assetType,
   });
 
+// Pass external_vpid blocks through to be filtered by processUnavailableMedia
+// eslint-disable-next-line camelcase
+const external_vpid = block => block;
+
 const typesToConvert = {
   crosshead: subheadline,
   heading: subheadline,
@@ -31,6 +35,7 @@ const typesToConvert = {
   paragraph,
   list,
   media,
+  external_vpid,
   version,
   legacyMedia,
   include,

@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: '광고',
     },
     lang: `ko`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -169,6 +170,8 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% 포스트 마침',
         },
       },
+      topStoriesTitle: '주요뉴스',
+      featuresAnalysisTitle: '이 시간 이슈',
     },
     brandSVG,
     mostRead: {
@@ -182,6 +185,7 @@ export const service = {
       onFrontPage: true,
       frontPagePosition: 'Section 1',
       header: 'BBC 코리아 라디오',
+      durationLabel: '방송 길이 %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

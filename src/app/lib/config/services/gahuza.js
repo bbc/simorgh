@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'Kwamamaza',
     },
     lang: `rw`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -174,6 +175,8 @@ export const service = {
           endTextVisuallyHidden: 'Impera ya %provider_name% ubutumwa',
         },
       },
+      topStoriesTitle: "Inkuru iri kw'isonga",
+      featuresAnalysisTitle: 'Ivyo BBC Gahuza ibahitiramwo',
     },
     brandSVG,
     mostRead: {
@@ -185,6 +188,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
+      durationLabel: 'Umwanya, %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

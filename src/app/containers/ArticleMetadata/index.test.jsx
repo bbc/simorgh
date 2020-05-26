@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitForDomChange } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -41,27 +41,12 @@ const propsForNewsInternational = {
   description: articleDataNews.promo.headlines.seoHeadline,
 };
 
-const renderMetadataToDocument = async Component => {
-  render(Component);
-
-  await waitForDomChange({
-    container: document.querySelector('head'),
-  });
-};
-
 it('should render the article tags', async () => {
-  await renderMetadataToDocument(
+  render(
     <Context service="news">
       <ArticleMetadata {...propsForNewsInternational} />
     </Context>,
   );
-
-  const actual = Array.from(
-    document.querySelectorAll('head > meta[name^="article:"]'),
-  ).map(tag => ({
-    name: tag.getAttribute('name'),
-    content: tag.getAttribute('content'),
-  }));
 
   const expected = [
     { content: 'Royal Wedding 2018', name: 'article:tag' },
@@ -72,10 +57,20 @@ it('should render the article tags', async () => {
     { content: '2018-01-01T12:01:00.000Z', name: 'article:published_time' },
   ];
 
-  expect(actual).toEqual(expected);
+  await waitFor(() => {
+    const actual = Array.from(
+      document.querySelectorAll('head > meta[name^="article:"]'),
+    ).map(tag => ({
+      name: tag.getAttribute('name'),
+      content: tag.getAttribute('content'),
+    }));
+
+    expect(actual).toEqual(expected);
+  });
 });
+
 it('should render the article section meta tag if section provided', async () => {
-  await renderMetadataToDocument(
+  render(
     <Context service="news">
       <ArticleMetadata
         {...propsForNewsInternational}
@@ -84,11 +79,13 @@ it('should render the article section meta tag if section provided', async () =>
     </Context>,
   );
 
-  expect(
-    document
-      .querySelector('head > meta[name="article:section"]')
-      .getAttribute('content'),
-  ).toEqual('Mock Article Section');
+  await waitFor(() => {
+    expect(
+      document
+        .querySelector('head > meta[name="article:section"]')
+        .getAttribute('content'),
+    ).toEqual('Mock Article Section');
+  });
 });
 
 shouldMatchSnapshot(

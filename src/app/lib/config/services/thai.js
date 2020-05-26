@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'โฆษณา',
     },
     lang: `th`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
@@ -172,6 +173,8 @@ export const service = {
           endTextVisuallyHidden: 'สิ้นสุด %provider_name% โพสต์',
         },
       },
+      topStoriesTitle: 'ข่าวเด่น',
+      featuresAnalysisTitle: 'เรื่องน่าสนใจ',
     },
     brandSVG,
     mostRead: {

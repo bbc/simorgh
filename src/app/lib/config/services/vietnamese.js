@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'Quảng cáo',
     },
     lang: `vi`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -168,6 +169,8 @@ export const service = {
           endTextVisuallyHidden: 'Cuối %provider_name% tin',
         },
       },
+      topStoriesTitle: 'Tin chính',
+      featuresAnalysisTitle: 'Góc nhìn và chuyên mục',
     },
     brandSVG,
     mostRead: {

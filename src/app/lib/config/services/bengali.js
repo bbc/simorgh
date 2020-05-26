@@ -13,6 +13,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'বিজ্ঞাপন',
     },
     lang: `bn`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -180,6 +181,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'প্রধান খবর',
+      featuresAnalysisTitle: 'চিঠিপত্র ও মতামত',
     },
     brandSVG,
     mostRead: {
@@ -191,6 +194,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
+      durationLabel: 'Duration %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,
@@ -241,6 +245,10 @@ export const service = {
       {
         title: 'মূলপাতা',
         url: '/bengali',
+      },
+      {
+        title: 'করোনাভাইরাস',
+        url: '/bengali/news-51941294',
       },
       {
         title: 'ভিডিও',

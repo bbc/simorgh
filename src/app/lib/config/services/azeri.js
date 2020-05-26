@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'Reklam',
     },
     lang: `az`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -169,6 +170,8 @@ export const service = {
           endTextVisuallyHidden: 'Paylaşımın sonu %provider_name%',
         },
       },
+      topStoriesTitle: 'Bu günün xəbərləri',
+      featuresAnalysisTitle: 'Bunları da oxuyun',
     },
     brandSVG,
     mostRead: {

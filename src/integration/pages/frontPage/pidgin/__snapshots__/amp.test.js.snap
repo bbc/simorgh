@@ -10,6 +10,17 @@ Object {
       "promptUI": "consent-prompt",
     },
   },
+  "policy": Object {
+    "default": Object {
+      "timeout": Object {
+        "fallbackAction": "reject",
+        "seconds": 0,
+      },
+      "waitFor": Object {
+        "user-consent": Array [],
+      },
+    },
+  },
 }
 `;
 
@@ -78,7 +89,7 @@ exports[`AMP Front Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=70&p=pidgin.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:52f3c7b1-83ed-2338-e050-17ac8045cd94]&x2=[amp]&x3=[news-pidgin]&x4=[pcm]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[Domot+-+BBC+News+Pidgin]&x11=[1970-01-18T08:30:40.608Z]&x12=[1970-01-19T01:24:09.011Z]",
+    "pageview": "\${base}s=598343&s2=70&p=pidgin.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:52f3c7b1-83ed-2338-e050-17ac8045cd94]&x2=[amp]&x3=[news-pidgin]&x4=[pcm]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[Domot+-+BBC+News+Pidgin]&x11=[1970-01-18T08:30:40.608Z]&x12=[1970-01-19T01:24:09.011Z]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -99,6 +110,26 @@ exports[`AMP Front Page Footer I can click on the BBC branding and it would take
 exports[`AMP Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`AMP Front Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
+
+exports[`AMP Front Page I can see Index Alsos 1`] = `"Another thing we de for inside dis tori"`;
+
+exports[`AMP Front Page I can see sections 1`] = `"Top tori"`;
+
+exports[`AMP Front Page I can see sections 2`] = `"Yarn Me Tori"`;
+
+exports[`AMP Front Page I can see sections 3`] = `"Sport (click for more tori) See everitin"`;
+
+exports[`AMP Front Page I can see sections 4`] = `"Ginger me"`;
+
+exports[`AMP Front Page I can see sections 5`] = `"Informate me"`;
+
+exports[`AMP Front Page I can see sections 6`] = `"Special reports 2"`;
+
+exports[`AMP Front Page I can see sections 7`] = `"2018 World Cup"`;
+
+exports[`AMP Front Page I can see sections 8`] = `"Podcast"`;
+
+exports[`AMP Front Page I can see the headline 1`] = `"BBC News, Pidgin - Home"`;
 
 exports[`AMP Front Page SEO Canonical link 1`] = `"http://localhost:7080/pidgin"`;
 
@@ -176,3 +207,16 @@ exports[`AMP Front Page SEO Twitter image src 1`] = `"https://news.files.bbci.co
 exports[`AMP Front Page SEO Twitter site 1`] = `"@BBCNews"`;
 
 exports[`AMP Front Page SEO Twitter title 1`] = `"Domot - BBC News Pidgin"`;
+
+exports[`AMP Front Page Story Promo I can see a headline 1`] = `"AS E DE HAPPEN Senators don begin vote for Senate President"`;
+
+exports[`AMP Front Page Story Promo I can see an image 1`] = `
+<amp-img
+  alt="Senator Ahmad Lawan and Ali Ndume"
+  attribution="Other"
+  height="549"
+  layout="responsive"
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
+  width="976"
+/>
+`;

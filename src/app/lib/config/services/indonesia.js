@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'Iklan',
     },
     lang: `id`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -172,6 +173,8 @@ export const service = {
           endTextVisuallyHidden: 'Lompati %provider_name% pesan',
         },
       },
+      topStoriesTitle: 'Berita Utama',
+      featuresAnalysisTitle: 'Majalah',
     },
     brandSVG,
     mostRead: {
@@ -183,6 +186,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
+      durationLabel: 'Duration %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

@@ -13,6 +13,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'إعلان',
     },
     lang: 'ar',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -98,18 +99,18 @@ export const service = {
       consentBanner: {
         privacy: {
           title:
-            'لقد حدّثنا سياستنا المتعلقة بالخصوصية وبالشروط الخاصة بملفات الارتباط (الكوكيز)',
+            'لقد حدّثنا سياستنا المتعلقة بالخصوصية وبالشروط الخاصة بملفات الارتباط Cookies',
           description: {
             uk: {
               first:
-                'لقد أدخلنا تغييرات مهمة على سياستنا المتعلقة بالخصوصية وعلى الشروط الخاصة بملفات الارتباط (الكوكيز)، ويهمنا أن تكونوا ملمين بما قد تعني هذه التغييرات بالنسبة لكم ولبياناتكم',
+                'لقد أدخلنا تغييرات مهمة على سياستنا المتعلقة بالخصوصية وعلى الشروط الخاصة بملفات الارتباط Cookies، ويهمنا أن تكونوا ملمين بما قد تعني هذه التغييرات بالنسبة لكم ولبياناتكم',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                'لقد أدخلنا تغييرات مهمة على سياستنا المتعلقة بالخصوصية وعلى الشروط الخاصة بملفات الارتباط (الكوكيز)، ويهمنا أن تكونوا ملمين بما قد تعني هذه التغييرات بالنسبة لكم ولبياناتكم',
+                'لقد أدخلنا تغييرات مهمة على سياستنا المتعلقة بالخصوصية وعلى الشروط الخاصة بملفات الارتباط Cookies، ويهمنا أن تكونوا ملمين بما قد تعني هذه التغييرات بالنسبة لكم ولبياناتكم',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -124,17 +125,17 @@ export const service = {
           description: {
             uk: {
               first: 'نستخدم ',
-              linkText: 'ملفات ارتباط (كوكيز)',
+              linkText: 'ملفات ارتباط',
               last:
-                ' لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الكوكيز.',
+                ' لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الملفات cookies .',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
               first: 'نستخدم نحن وشركاؤنا تقنيات مثل ',
-              linkText: 'الكوكيز',
+              linkText: 'ملفات الارتباط',
               last:
-                '، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولاضفاء مسحة شخصية للمحتوى والاعلانات الموجهة إليك. الرجاء إعلامنا إذا كنت موافقا على ذلك.',
+                '، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولجعل المحتوى والاعلانات، الموجهة إليك، شخصية. الرجاء إعلامنا إذا كنت موافقا على ذلك.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -180,6 +181,8 @@ export const service = {
           endTextVisuallyHidden: 'نهاية %provider_name% مشاركة',
         },
       },
+      topStoriesTitle: 'الخبر الرئيسي',
+      featuresAnalysisTitle: 'اخترنا لكم',
     },
     brandSVG,
     mostRead: {
@@ -196,6 +199,7 @@ export const service = {
         '/arabic/institutional/2011/01/000000_frequencies_radio',
       frequenciesPageLabel: 'استقبال البث',
       header: 'أحدث نشرة أخبار',
+      durationLabel: 'المدة %duration%',
     },
     recommendations: {
       hasStoryRecommendations: true,
@@ -203,7 +207,7 @@ export const service = {
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/arabic/institutional-49283069',
-        text: 'لماذا يمكنك الإعتماد على أخبار بي بي سي',
+        text: 'لماذا يمكنك الاعتماد على أخبار بي بي سي',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',

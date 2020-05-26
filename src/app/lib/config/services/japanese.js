@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: '広告',
     },
     lang: `ja`,
     articleAuthor: `https://www.facebook.com/bbcnews/`,
@@ -167,6 +168,8 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% の投稿の終わり',
         },
       },
+      topStoriesTitle: 'トップ記事',
+      featuresAnalysisTitle: '読み物・解説',
     },
     brandSVG,
     mostRead: {

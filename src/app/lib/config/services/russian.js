@@ -18,6 +18,7 @@ export const service = {
   default: {
     ads: {
       hasAds: true,
+      advertisementLabel: 'Реклама',
     },
     lang: `ru`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -191,6 +192,8 @@ export const service = {
           endTextVisuallyHidden: 'Контент из %provider_name% окончен',
         },
       },
+      topStoriesTitle: 'Главное',
+      featuresAnalysisTitle: 'Журнал',
     },
     brandSVG,
     mostRead: {

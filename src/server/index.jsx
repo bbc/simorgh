@@ -15,9 +15,12 @@ import {
   frontPageManifestPath,
   frontPageSwPath,
   cpsAssetPageDataPath,
-  radioAndTvDataPath,
+  onDemandRadioDataPath,
+  onDemandTvDataPath,
   mostReadDataRegexPath,
   legacyAssetPageDataPath,
+  secondaryColumnDataRegexPath,
+  IdxDataPath,
 } from '../app/routes/utils/regex';
 import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
@@ -64,6 +67,7 @@ const constructDataFilePath = ({
   switch (pageType) {
     case 'frontpage':
     case 'mostRead':
+    case 'secondaryColumn':
       dataPath = `${variant || 'index'}.json`;
       break;
     case 'cpsAssets':
@@ -176,7 +180,20 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
 
       sendDataFile(res, dataFilePath, next);
     })
-    .get(radioAndTvDataPath, async ({ params }, res, next) => {
+    .get(onDemandRadioDataPath, async ({ params }, res, next) => {
+      const { service, serviceId, mediaId } = params;
+
+      const dataFilePath = path.join(
+        process.cwd(),
+        'data',
+        service,
+        serviceId,
+        mediaId,
+      );
+
+      sendDataFile(res, `${dataFilePath}.json`, next);
+    })
+    .get(onDemandTvDataPath, async ({ params }, res, next) => {
       const { service, serviceId, mediaId } = params;
 
       const dataFilePath = path.join(
@@ -210,6 +227,21 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
         assetUri,
         variant,
       });
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(secondaryColumnDataRegexPath, async ({ params }, res, next) => {
+      const { service, variant } = params;
+      const dataFilePath = constructDataFilePath({
+        pageType: 'secondaryColumn',
+        service,
+        variant,
+      });
+
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(IdxDataPath, async ({ params }, res, next) => {
+      const { idx } = params;
+      const dataFilePath = path.join(process.cwd(), 'data', idx, 'index.json');
       sendDataFile(res, dataFilePath, next);
     })
     .get('/ckns_policy/*', (req, res) => {
@@ -284,7 +316,7 @@ server
         logger.info(ROUTING_INFORMATION, {
           url,
           status,
-          pageType: pathOr('Error', ['pageData', 'metadata', 'type'], data),
+          pageType: pathOr('Unknown', ['pageData', 'metadata', 'type'], data),
         });
 
         if (result.redirectUrl) {

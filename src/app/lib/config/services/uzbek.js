@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'Реклама',
     },
     lang: `uz-Cyrl`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -179,6 +180,8 @@ export const service = {
           endTextVisuallyHidden: 'Охири %provider_name% пост',
         },
       },
+      topStoriesTitle: 'Бош мақола',
+      featuresAnalysisTitle: 'Муҳаррир танлови',
     },
     brandSVG,
     mostRead: {

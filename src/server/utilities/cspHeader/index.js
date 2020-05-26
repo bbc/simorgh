@@ -38,6 +38,7 @@ const directives = {
       'https://cookie-oven.api.bbc.com', // Cookie banner
       'https://cookie-oven.api.bbc.co.uk', // Cookie banner
       'https://www.bbc.co.uk', // STY include indepthtoolkit
+      'https://news.files.bbci.co.uk', // STY include
       "'self'",
     ],
     ampNonLive: [
@@ -72,6 +73,8 @@ const directives = {
       'https://cookie-oven.test.api.bbc.com', // Cookie banner
       'https://cookie-oven.test.api.bbc.co.uk', // Cookie banner
       'https://www.bbc.co.uk', // STY include indepthtoolkit
+      'https://news.files.bbci.co.uk', // STY include
+      'https://news.test.files.bbci.co.uk', // STY include
       "'self'",
     ],
   },
@@ -159,6 +162,7 @@ const directives = {
       'https://platform.twitter.com', // Social Embeds
       'https://pbs.twimg.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
+      'https://ton.twimg.com', // Social Embeds
       "data: 'self'", // needed at the end to maintain proper order
     ],
     ampNonLive: [
@@ -204,6 +208,7 @@ const directives = {
       'https://platform.twitter.com', // Social Embeds
       'https://pbs.twimg.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
+      'https://ton.twimg.com', // Social Embeds
       "data: 'self'", // needed at the end to maintain proper order
     ],
   },
@@ -228,6 +233,7 @@ const directives = {
       'https://www.instagram.com', // Social Embeds
       'http://www.instagram.com', // Social Embeds
       'https://cdn.syndication.twimg.com', // Social Embeds
+      'https://static.bbc.co.uk', // STY include
       "'self'",
       "'unsafe-inline'",
     ],
@@ -255,6 +261,7 @@ const directives = {
       'https://www.instagram.com', // Social Embeds
       'http://www.instagram.com', // Social Embeds
       'https://cdn.syndication.twimg.com', // Social Embeds
+      'https://static.bbc.co.uk', // STY include
       "'self'",
       "'unsafe-inline'",
     ],
@@ -267,6 +274,9 @@ const directives = {
     canonicalLive: [
       'https://news.files.bbci.co.uk', // STY include styles
       'https://platform.twitter.com', // Social Embeds
+      'https://ton.twimg.com', // Social Embeds
+      'https://news.files.bbci.co.uk', // STY includes
+      'https://static.bbc.co.uk', // STY include
       "'unsafe-inline'",
     ],
     ampNonLive: [
@@ -276,7 +286,22 @@ const directives = {
     canonicalNonLive: [
       'https://news.files.bbci.co.uk', // STY include styles
       'https://platform.twitter.com', // Social Embeds
+      'https://ton.twimg.com', // Social Embeds
+      'https://news.files.bbci.co.uk', // STY includes
+      'https://news.test.files.bbci.co.uk', // STY includes
+      'https://static.bbc.co.uk', // STY include
       "'unsafe-inline'",
+    ],
+  },
+  fontSrc: {
+    amp: [
+      'https://gel.files.bbci.co.uk', // Reith fonts
+      'https://ws-downloads.files.bbci.co.uk', // Other WS fonts
+    ],
+    canonical: [
+      'https://gel.files.bbci.co.uk', // Reith fonts
+      'https://ws-downloads.files.bbci.co.uk', // Other WS fonts
+      'https://static.bbci.co.uk', // STY includes
     ],
   },
 };
@@ -292,10 +317,8 @@ export const generateConnectSrc = ({ isAmp, isLive }) => {
 
 export const generateDefaultSrc = () => ["'self'"];
 
-export const generateFontSrc = () => [
-  'https://gel.files.bbci.co.uk',
-  'https://ws-downloads.files.bbci.co.uk',
-];
+export const generateFontSrc = ({ isAmp }) =>
+  isAmp ? directives.fontSrc.amp : directives.fontSrc.canonical;
 
 export const generateFrameSrc = ({ isAmp, isLive }) => {
   if (!isLive && isAmp) return directives.frameSrc.ampNonLive;
@@ -333,12 +356,13 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'default-src': generateDefaultSrc(),
     'child-src': generateChildSrc({ isAmp }),
     'connect-src': generateConnectSrc({ isAmp, isLive }),
-    'font-src': generateFontSrc(),
+    'font-src': generateFontSrc({ isAmp }),
     'frame-src': generateFrameSrc({ isAmp, isLive }),
     'img-src': generateImgSrc({ isAmp, isLive }),
     'script-src': generateScriptSrc({ isAmp, isLive }),
     'style-src': generateStyleSrc({ isAmp, isLive }),
     'worker-src': generateWorkerSrc({ isAmp }),
+    'report-to': 'default',
   },
 });
 

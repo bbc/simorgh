@@ -174,6 +174,12 @@ export const buildATIPageTrackPath = ({
       value: isLocServeCookieSet(),
       wrap: true,
     },
+    {
+      key: 'ref',
+      description: 'referrer url',
+      value: getReferrer(platform, origin, previousPath),
+      wrap: false,
+    },
   ];
 
   return getAtiUrl(pageViewBeaconValues);

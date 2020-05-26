@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'Talla',
     },
     lang: `ha`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -177,6 +178,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'Babban Labari',
+      featuresAnalysisTitle: 'Minti Daya Da BBC',
     },
     brandSVG,
     mostRead: {
@@ -192,6 +195,7 @@ export const service = {
       frequenciesPageUrl: '/hausa/institutional/2011/11/000001_mitocinmu',
       frequenciesPageLabel: 'Mitocinmu da sauko da sautin labarai',
       header: 'Shirye-shiryenmu',
+      durationLabel: 'Tsawon lokaci %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,
@@ -212,7 +216,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/hausa/game-da-mu-37377088',
-          text: 'Dangane da BBC',
+          text: 'A game da BBC',
         },
         {
           href: 'https://www.bbc.com/hausa/game-da-mu-37377090',

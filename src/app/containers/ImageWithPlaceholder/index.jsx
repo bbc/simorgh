@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { string, number, bool, node } from 'prop-types';
 import LazyLoad from 'react-lazyload';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
@@ -34,12 +34,14 @@ const ImageWithPlaceholder = ({
   width,
 }) => {
   const { isAmp } = useContext(RequestContext);
-
+  const [isLoaded, setIsLoaded] = useState(false);
   const imageProps = { alt, src, sizes, width, srcset, fade };
-  const imageToRender = <Image {...imageProps} />;
+  const imageToRender = (
+    <Image onLoad={() => setIsLoaded(true)} {...imageProps} />
+  );
 
   return (
-    <ImagePlaceholder ratio={ratio}>
+    <ImagePlaceholder css={isLoaded && `background: none`} ratio={ratio}>
       {isAmp ? (
         <AmpImg
           alt={alt}

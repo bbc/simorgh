@@ -108,7 +108,7 @@ pipeline {
     CI = true
   }
   parameters {
-    string(name: 'SLACK_CHANNEL', defaultValue: '#si_repo-simorgh', description: 'The Slack channel where the build status is posted.')
+    string(name: 'SLACK_CHANNEL', defaultValue: '#simorgh-alerts', description: 'The Slack channel where the build status is posted.')
     booleanParam(name: 'SKIP_OOH_CHECK', defaultValue: false, description: 'Allow Simorgh deployment to LIVE outside the set Out of Hours (O.O.H) time span.')
   }
   stages {
@@ -266,15 +266,21 @@ pipeline {
         //   wait: false
         // )
         unstash 'simorgh'
-        build(
-          job: 'simorgh-infrastructure-test/latest',
-          parameters: [
-            [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
-            booleanParam(name: 'SKIP_OOH_CHECK', value: params.SKIP_OOH_CHECK)
-          ],
-          propagate: true,
-          wait: true
-        )
+        script {
+          def run = build(
+            job: 'simorgh-infrastructure-test/latest',
+            parameters: [
+              [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
+              booleanParam(name: 'SKIP_OOH_CHECK', value: params.SKIP_OOH_CHECK)
+            ],
+            propagate: true,
+            wait: true
+          )
+          echo "Child variables: ${run.buildVariables}"
+          if (run.buildVariables.COSMOS_VERSION) {
+            currentBuild.description = "Cosmos release ${run.buildVariables.COSMOS_VERSION}"
+          }
+        }
       }
     }
   }

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { cleanup, render, waitForElement } from '@testing-library/react';
+import { cleanup, render, waitFor } from '@testing-library/react';
 import withContext from '.';
 
 const NewContext = React.createContext({});
@@ -28,7 +28,7 @@ describe('withContext', () => {
       </ContextProviderWithData>,
     );
 
-    await waitForElement(() => container.querySelector('span'));
+    await waitFor(() => container.querySelector('span'));
 
     expect(container.firstChild.innerHTML).toEqual('dummy text');
   });
@@ -50,7 +50,7 @@ describe('withContext', () => {
       </ContextProviderWithData>,
     );
 
-    await waitForElement(() => container.querySelector('span'));
+    await waitFor(() => container.querySelector('span'));
 
     expect(container.firstChild.innerHTML).toEqual('dummy text');
   });

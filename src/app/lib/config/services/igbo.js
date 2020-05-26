@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'Mgbasa ozi',
     },
     lang: 'ig',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -181,6 +182,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'Isi akụkọ',
+      featuresAnalysisTitle: 'Kọwaara m isi akụkọ',
     },
     mostRead: {
       header: 'Akachasị Gụọ',

@@ -13,6 +13,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'اشتہار',
     },
     lang: 'ur',
     product: 'BBC News',
@@ -172,6 +173,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'اہم خبریں',
+      featuresAnalysisTitle: 'فیچر اور تجزیے',
     },
     brandSVG,
     mostRead: {
@@ -183,6 +186,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
+      durationLabel: 'دورانیہ %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

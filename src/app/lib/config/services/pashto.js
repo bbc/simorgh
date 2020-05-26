@@ -14,6 +14,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'اعلان',
     },
     lang: 'ps',
     product: 'BBC News',
@@ -183,6 +184,8 @@ export const service = {
           endTextVisuallyHidden: 'د ‍پوسټ %provider_name% پای',
         },
       },
+      topStoriesTitle: 'مهم خبرونه',
+      featuresAnalysisTitle: 'ځانګړي مطالب',
     },
     brandSVG,
     mostRead: {
@@ -198,6 +201,7 @@ export const service = {
       frequenciesPageUrl: '/pashto/institutional/2012/03/000001_frequencies',
       frequenciesPageLabel: 'راديويي څپې',
       header: 'تازه خبرونه واورئ',
+      durationLabel: '%duration% موده',
     },
     recommendations: {
       hasStoryRecommendations: false,

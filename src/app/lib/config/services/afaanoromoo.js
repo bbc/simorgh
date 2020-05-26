@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'Beeksiisa',
     },
     lang: `om`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -172,6 +173,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'Isin hin darbiin',
+      featuresAnalysisTitle: `Maaltu haasa'ama?`,
     },
     brandSVG,
     mostRead: {
@@ -183,6 +186,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
+      durationLabel: 'Duration %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

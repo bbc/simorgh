@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: true,
+      advertisementLabel: 'Tori we dem pay for',
     },
     lang: 'pcm',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -177,6 +178,8 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      topStoriesTitle: 'Top Tori',
+      featuresAnalysisTitle: 'Informate me',
     },
     mostRead: {
       header: 'De one we dem de read well well',
