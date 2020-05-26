@@ -23,20 +23,20 @@ export default () => {
     expect(timestampEl.textContent).toMatchSnapshot();
   });
 
-  const bulletedListEl = document.querySelector('main ul[role="list"]');
-
-  if (bulletedListEl) {
+  if (global.hasBulletedList) {
     it('I can see the bulleted list item', () => {
+      const bulletedListEl = document.querySelector('main ul[role="list"]');
+
       expect(bulletedListEl).toBeInTheDocument();
       expect(bulletedListEl.textContent).toBeTruthy();
       expect(bulletedListEl.textContent).toMatchSnapshot();
     });
   }
 
-  const releatedContentEl = document.querySelector('section [role="list"]');
-
-  if (releatedContentEl) {
+  if (global.hasRelatedContent) {
     it('I can see the related content', () => {
+      const releatedContentEl = document.querySelector('section [role="list"]');
+
       expect(releatedContentEl).toBeInTheDocument();
       expect(releatedContentEl.textContent).toBeTruthy();
       expect(releatedContentEl.textContent).toMatchSnapshot();
