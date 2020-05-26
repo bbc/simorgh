@@ -1866,7 +1866,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               dir="ltr"
                               id="top-stories-heading"
                             >
-                              Top Stories
+                              Top Tori
                             </span>
                           </span>
                         </span>
@@ -2052,7 +2052,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               dir="ltr"
                               id="features-analysis-heading"
                             >
-                              Features & Analysis
+                              Informate me
                             </span>
                           </span>
                         </span>
@@ -6387,7 +6387,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   dir="ltr"
                                   id="top-stories-heading"
                                 >
-                                  Top Stories
+                                  Top Tori
                                 </span>
                               </span>
                             </span>
@@ -6533,7 +6533,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   dir="ltr"
                                   id="features-analysis-heading"
                                 >
-                                  Features & Analysis
+                                  Informate me
                                 </span>
                               </span>
                             </span>
