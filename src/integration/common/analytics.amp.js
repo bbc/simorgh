@@ -1,6 +1,6 @@
 export default () => {
   describe('Analytics', () => {
-    it('ATI', () => {
+    it('should match ATI AMP analytics script tag', () => {
       expect(
         JSON.parse(
           document.querySelector(

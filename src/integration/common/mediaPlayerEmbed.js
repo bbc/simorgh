@@ -1,17 +1,25 @@
 export default () => {
   describe('Media player embed', () => {
-    it('I can see the media player embed', () => {
-      const audioPlayerIframe = document.querySelector('iframe, amp-iframe');
+    const mediaPlayerEl = document.querySelector('iframe, amp-iframe');
 
-      expect(audioPlayerIframe.getAttribute('src')).toMatchSnapshot();
+    it('should be in the document', () => {
+      expect(mediaPlayerEl).toBeInTheDocument();
+    });
+
+    it('should have a src attribute value', () => {
+      expect(mediaPlayerEl.getAttribute('title')).toBeTruthy();
+    });
+
+    it('should match src attribute value', () => {
+      expect(mediaPlayerEl.getAttribute('src')).toMatchSnapshot();
     });
 
     describe('A11y', () => {
-      it('I can read the media player title', () => {
-        const mediaPlayerEl = document.querySelector('iframe, amp-iframe');
-
-        expect(mediaPlayerEl).toBeInTheDocument();
+      it('should have a title attribute value', () => {
         expect(mediaPlayerEl.getAttribute('title')).toBeTruthy();
+      });
+
+      it('should match title attribute value', () => {
         expect(mediaPlayerEl.getAttribute('title')).toMatchSnapshot();
       });
     });

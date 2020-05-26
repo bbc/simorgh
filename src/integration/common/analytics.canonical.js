@@ -1,6 +1,6 @@
 export default () => {
   describe('Analytics', () => {
-    it('ATI', () => {
+    it('should match ATI noscript tag', () => {
       const noscriptImage = document.querySelector('noscript').innerHTML;
 
       expect(noscriptImage).toMatchSnapshot();

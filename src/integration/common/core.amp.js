@@ -14,7 +14,7 @@ export default () => {
     });
   });
 
-  it('AMP Geo config', () => {
+  it('should match AMP Geo config', () => {
     expect(
       JSON.parse(
         document.querySelector('body amp-geo > script[type="application/json"]')
@@ -23,7 +23,7 @@ export default () => {
     ).toMatchSnapshot();
   });
 
-  it('AMP Consent config', () => {
+  it('should match AMP Consent config', () => {
     expect(
       JSON.parse(
         document.querySelector(

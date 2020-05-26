@@ -1,19 +1,29 @@
 export default () => {
   describe('A11y', () => {
-    it('I can see the skip to content link', () => {
-      const skipToContentEl = document.querySelector('[href="#content"]');
+    describe('Skip to content link', () => {
+      const skipToContentEl = document.querySelector('a[href="#content"]');
 
-      expect(skipToContentEl).toBeInTheDocument();
-      expect(skipToContentEl.textContent).toBeTruthy();
-      expect(skipToContentEl.textContent).toMatchSnapshot();
+      it('should be in the document', () => {
+        expect(skipToContentEl).toBeInTheDocument();
+      });
+
+      it('should have text', () => {
+        expect(skipToContentEl.textContent).toBeTruthy();
+      });
+
+      it('should match text', () => {
+        expect(skipToContentEl.textContent).toMatchSnapshot();
+      });
     });
 
-    it('Headline in main content', () => {
-      const accessibleH1El = document.querySelector(
-        'h1[id="content"][tabindex="-1"]',
-      );
+    it('Accessible main headline', () => {
+      const headingEl = document.querySelector('h1');
+      const headingId = headingEl.getAttribute('id');
+      const headingTabIndex = headingEl.getAttribute('tabindex');
 
-      expect(accessibleH1El).toBeInTheDocument();
+      expect(headingEl).toBeInTheDocument();
+      expect(headingId).toBe('content');
+      expect(headingTabIndex).toBe('-1');
     });
   });
 };

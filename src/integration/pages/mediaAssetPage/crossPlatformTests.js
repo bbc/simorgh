@@ -1,45 +1,63 @@
 import {
   runCommonCrossPlatformTests,
   runMediaPlayerEmbedTests,
+  runHeadlineTests,
 } from '../../common';
 
 export default () => {
   runCommonCrossPlatformTests();
   runMediaPlayerEmbedTests();
+  runHeadlineTests();
 
-  it('I can see the headline', () => {
-    const headlineEl = document.querySelector('h1[id="content"]');
-
-    expect(headlineEl).toBeInTheDocument();
-    expect(headlineEl.textContent).toBeTruthy();
-    expect(headlineEl.textContent).toMatchSnapshot();
-  });
-
-  it('I can see the timestamp', () => {
+  describe('Timestamp', () => {
     const timestampEl = document.querySelector('time');
 
-    expect(timestampEl).toBeInTheDocument();
-    expect(timestampEl.textContent).toBeTruthy();
-    expect(timestampEl.textContent).toMatchSnapshot();
+    it('should be in the document', () => {
+      expect(timestampEl).toBeInTheDocument();
+    });
+
+    it('should have text', () => {
+      expect(timestampEl.textContent).toBeTruthy();
+    });
+
+    it('should match text', () => {
+      expect(timestampEl.textContent).toMatchSnapshot();
+    });
   });
 
-  const bulletedListEl = document.querySelector('main ul[role="list"]');
+  if (global.hasBulletedList) {
+    describe('Bulleted list item', () => {
+      const bulletedListEl = document.querySelector('main ul[role="list"]');
 
-  if (bulletedListEl) {
-    it('I can see the bulleted list item', () => {
-      expect(bulletedListEl).toBeInTheDocument();
-      expect(bulletedListEl.textContent).toBeTruthy();
-      expect(bulletedListEl.textContent).toMatchSnapshot();
+      it('should be in the document', () => {
+        expect(bulletedListEl).toBeInTheDocument();
+      });
+
+      it('should have text', () => {
+        expect(bulletedListEl.textContent).toBeTruthy();
+      });
+
+      it('should match text', () => {
+        expect(bulletedListEl.textContent).toMatchSnapshot();
+      });
     });
   }
 
-  const releatedContentEl = document.querySelector('section [role="list"]');
+  if (global.hasRelatedContent) {
+    describe('Related content', () => {
+      const relatedContentEl = document.querySelector('section [role="list"]');
 
-  if (releatedContentEl) {
-    it('I can see the related content', () => {
-      expect(releatedContentEl).toBeInTheDocument();
-      expect(releatedContentEl.textContent).toBeTruthy();
-      expect(releatedContentEl.textContent).toMatchSnapshot();
+      it('should be in the document', () => {
+        expect(relatedContentEl).toBeInTheDocument();
+      });
+
+      it('should have text', () => {
+        expect(relatedContentEl.textContent).toBeTruthy();
+      });
+
+      it('should match text', () => {
+        expect(relatedContentEl.textContent).toMatchSnapshot();
+      });
     });
   }
 };

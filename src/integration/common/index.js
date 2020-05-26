@@ -5,6 +5,8 @@ import runCoreAmpTests from './core.amp';
 import runCoreCanonicalTests from './core.canonical';
 import runFooterTests from './footer';
 import runHeaderTests from './header';
+import runHeadlineTests from './headline';
+import runImageWithCaptionTests from './imageWithCaption';
 import runMediaPlayerEmbedTests from './mediaPlayerEmbed';
 import runPerformanceTests from './performance';
 import runSEOTests from './SEO';
@@ -26,6 +28,8 @@ export {
   runCoreCanonicalTests,
   runFooterTests,
   runHeaderTests,
+  runHeadlineTests,
+  runImageWithCaptionTests,
   runMediaPlayerEmbedTests,
   runPerformanceTests,
   runSEOTests,

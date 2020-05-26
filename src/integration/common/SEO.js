@@ -1,183 +1,198 @@
-const getMetaTagContent = selector =>
-  document.querySelector(selector).getAttribute('content');
+const runMetaTagTest = metaTagSelector => {
+  const metaTagEl = document.querySelector(`head ${metaTagSelector}`);
+  const metaTagContent = metaTagEl.getAttribute('content');
+
+  it('should be in the document', () => {
+    expect(metaTagEl).toBeInTheDocument();
+  });
+
+  it('should have content', () => {
+    expect(metaTagContent).toBeTruthy();
+  });
+
+  it('should match content', () => {
+    expect(metaTagContent).toMatchSnapshot();
+  });
+};
 
 export default () => {
   describe('SEO', () => {
-    it('Page title', () => {
+    describe('Page title', () => {
       const pageTitleEl = document.querySelector('title');
+      const pageTitleText = pageTitleEl.textContent;
 
-      expect(pageTitleEl).toBeInTheDocument();
-      expect(pageTitleEl.textContent).toBeTruthy();
-      expect(pageTitleEl.textContent).toMatchSnapshot();
+      it('should be in the document', () => {
+        expect(pageTitleEl).toBeInTheDocument();
+      });
+
+      it('should have text', () => {
+        expect(pageTitleText).toBeTruthy();
+      });
+
+      it('should match text', () => {
+        expect(pageTitleText).toMatchSnapshot();
+      });
     });
 
-    it('Heading level 1', () => {
+    describe('Heading level 1', () => {
       const headingEl = document.querySelector('h1');
+      const headingText = headingEl.textContent;
 
-      expect(headingEl).toBeInTheDocument();
-      expect(headingEl.textContent).toBeTruthy();
-      expect(headingEl.textContent).toMatchSnapshot();
+      it('should be in the document', () => {
+        expect(headingEl).toBeInTheDocument();
+      });
+
+      it('should have text', () => {
+        expect(headingText).toBeTruthy();
+      });
+
+      it('should match text', () => {
+        expect(headingText).toMatchSnapshot();
+      });
     });
 
-    it('Canonical link', () => {
+    describe('Canonical link', () => {
       const canonicalEl = document.querySelector('head link[rel="canonical"]');
+      const canonicalUrl = canonicalEl.getAttribute('href');
 
-      expect(canonicalEl.getAttribute('href')).toMatchSnapshot();
+      it('should be in the document', () => {
+        expect(canonicalEl).toBeInTheDocument();
+      });
+
+      it('should have url', () => {
+        expect(canonicalUrl).toBeTruthy();
+      });
+
+      it('should match url', () => {
+        expect(canonicalUrl).toMatchSnapshot();
+      });
     });
 
-    it('Robots meta tag', () => {
-      const robotsEl = document.querySelector('head meta[name="robots"]');
-      const robotsContent = robotsEl.getAttribute('content');
-
-      expect(robotsContent).toMatchSnapshot();
-    });
-
-    it('Lang attribute', () => {
+    describe('Lang attribute', () => {
       const htmlEl = document.querySelector('html');
+      const language = htmlEl.getAttribute('lang');
 
       expect(htmlEl.getAttribute('lang')).toMatchSnapshot();
+
+      it('should be in the document', () => {
+        expect(htmlEl).toBeInTheDocument();
+      });
+
+      it('should have lang value', () => {
+        expect(language).toBeTruthy();
+      });
+
+      it('should match lang value', () => {
+        expect(language).toMatchSnapshot();
+      });
     });
 
-    it('Dir attribute', () => {
+    describe('Dir attribute', () => {
       const htmlEl = document.querySelector('html');
+      const readingDirection = htmlEl.getAttribute('dir');
 
-      expect(htmlEl.getAttribute('dir')).toMatchSnapshot();
+      it('should be in the document', () => {
+        expect(htmlEl).toBeInTheDocument();
+      });
+
+      it('should have dir value', () => {
+        expect(readingDirection).toBeTruthy();
+      });
+
+      it('should match dir value', () => {
+        expect(readingDirection).toMatchSnapshot();
+      });
     });
 
-    it('FB admins', () => {
-      const metaTagContent = getMetaTagContent('meta[property="fb:admins"]');
-
-      expect(metaTagContent).toBeTruthy();
-      expect(metaTagContent).toMatchSnapshot();
+    describe('Robots meta tag', () => {
+      runMetaTagTest('meta[name="robots"]');
     });
 
-    it('FB app ID', () => {
-      const metaTagContent = getMetaTagContent('meta[property="fb:app_id"]');
-
-      expect(metaTagContent).toBeTruthy();
-      expect(metaTagContent).toMatchSnapshot();
+    describe('FB admins', () => {
+      runMetaTagTest('meta[property="fb:admins"]');
     });
 
-    it('OG image', () => {
-      const metaTagContent = getMetaTagContent('meta[property="og:image"]');
-
-      expect(metaTagContent).toBeTruthy();
-      expect(metaTagContent).toMatchSnapshot();
+    describe('FB app ID', () => {
+      runMetaTagTest('meta[property="fb:app_id"]');
     });
 
-    it('OG image alt', () => {
-      const metaTagContent = getMetaTagContent('meta[property="og:image:alt"]');
-
-      expect(metaTagContent).toBeTruthy();
-      expect(metaTagContent).toMatchSnapshot();
+    describe('OG image', () => {
+      runMetaTagTest('meta[property="og:image"]');
     });
 
-    it('OG locale', () => {
-      const metaTagContent = getMetaTagContent('meta[property="og:locale"]');
-
-      expect(metaTagContent).toBeTruthy();
-      expect(metaTagContent).toMatchSnapshot();
+    describe('OG image alt', () => {
+      runMetaTagTest('meta[property="og:image:alt"]');
     });
 
-    it('OG type', () => {
-      const metaTagContent = getMetaTagContent('meta[property="og:type"]');
-
-      expect(metaTagContent).toBeTruthy();
-      expect(metaTagContent).toMatchSnapshot();
+    describe('OG locale', () => {
+      runMetaTagTest('meta[property="og:locale"]');
     });
 
-    it('OG url', () => {
-      const metaTagContent = getMetaTagContent('meta[property="og:url"]');
-
-      expect(metaTagContent).toBeTruthy();
-      expect(metaTagContent).toMatchSnapshot();
+    describe('OG type', () => {
+      runMetaTagTest('meta[property="og:type"]');
     });
 
-    it('OG site name', () => {
-      const metaTagContent = getMetaTagContent('meta[property="og:site_name"]');
-
-      expect(metaTagContent).toBeTruthy();
-      expect(metaTagContent).toMatchSnapshot();
+    describe('OG url', () => {
+      runMetaTagTest('meta[property="og:url"]');
     });
 
-    it('Twitter card', () => {
-      const metaTagContent = getMetaTagContent('meta[name="twitter:card"]');
-
-      expect(metaTagContent).toBeTruthy();
-      expect(metaTagContent).toMatchSnapshot();
+    describe('OG site name', () => {
+      runMetaTagTest('meta[property="og:site_name"]');
     });
 
-    it('Twitter creator', () => {
-      const metaTagContent = getMetaTagContent('meta[name="twitter:creator"]');
-
-      expect(metaTagContent).toBeTruthy();
-      expect(metaTagContent).toMatchSnapshot();
+    describe('Twitter card', () => {
+      runMetaTagTest('meta[name="twitter:card"]');
     });
 
-    it('Twitter image alt', () => {
-      const metaTagContent = getMetaTagContent(
-        'meta[name="twitter:image:alt"]',
-      );
-
-      expect(metaTagContent).toBeTruthy();
-      expect(metaTagContent).toMatchSnapshot();
+    describe('Twitter creator', () => {
+      runMetaTagTest('meta[name="twitter:creator"]');
     });
 
-    it('Twitter image src', () => {
-      const metaTagContent = getMetaTagContent(
-        'meta[name="twitter:image:src"]',
-      );
-
-      expect(metaTagContent).toBeTruthy();
-      expect(metaTagContent).toMatchSnapshot();
+    describe('Twitter image alt', () => {
+      runMetaTagTest('meta[name="twitter:image:alt"]');
     });
 
-    it('Twitter site', () => {
-      const metaTagContent = getMetaTagContent('meta[name="twitter:site"]');
-
-      expect(metaTagContent).toBeTruthy();
-      expect(metaTagContent).toMatchSnapshot();
+    describe('Twitter image src', () => {
+      runMetaTagTest('meta[name="twitter:image:src"]');
     });
 
-    it('OG description', () => {
-      const metaTagContent = getMetaTagContent(
-        'meta[property="og:description"]',
-      );
-
-      expect(metaTagContent).toBeTruthy();
-      expect(metaTagContent).toMatchSnapshot();
+    describe('Twitter site', () => {
+      runMetaTagTest('meta[name="twitter:site"]');
     });
 
-    it('OG title', () => {
-      const metaTagContent = getMetaTagContent('meta[property="og:title"]');
-
-      expect(metaTagContent).toBeTruthy();
-      expect(metaTagContent).toMatchSnapshot();
+    describe('OG description', () => {
+      runMetaTagTest('meta[property="og:description"]');
     });
 
-    it('Twitter description', () => {
-      const metaTagContent = getMetaTagContent(
-        'meta[name="twitter:description"]',
-      );
-
-      expect(metaTagContent).toBeTruthy();
-      expect(metaTagContent).toMatchSnapshot();
+    describe('OG title', () => {
+      runMetaTagTest('meta[property="og:title"]');
     });
 
-    it('Twitter title', () => {
-      const metaTagContent = getMetaTagContent('meta[name="twitter:title"]');
-
-      expect(metaTagContent).toBeTruthy();
-      expect(metaTagContent).toMatchSnapshot();
+    describe('Twitter description', () => {
+      runMetaTagTest('meta[name="twitter:description"]');
     });
 
-    it('Linked data', () => {
+    describe('Twitter title', () => {
+      runMetaTagTest('meta[name="twitter:title"]');
+    });
+
+    describe('Linked data', () => {
       const linkedDataEl = document.querySelector(
         'script[type="application/ld+json"]',
       );
-      expect(linkedDataEl).toBeInTheDocument();
-      expect(linkedDataEl.textContent).toBeTruthy();
-      expect(JSON.parse(linkedDataEl.textContent)).toMatchSnapshot();
+      const linkedDataContent = linkedDataEl.textContent;
+
+      it('should be in the document', () => {
+        expect(linkedDataEl).toBeInTheDocument();
+      });
+
+      it('should have content', () => {
+        expect(linkedDataContent).toBeTruthy();
+      });
+
+      it('should match content', () => {
+        expect(JSON.parse(linkedDataContent)).toMatchSnapshot();
+      });
     });
   });
 };

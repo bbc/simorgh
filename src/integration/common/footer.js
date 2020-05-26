@@ -1,27 +1,40 @@
 export default () => {
   describe('Footer', () => {
-    it('I can see the footer copyright and external linking text', () => {
+    describe('Branding', () => {
+      const logo = document.querySelector('footer svg');
+
+      it('should be in the document', () => {
+        expect(logo).toBeInTheDocument();
+      });
+
+      it('should have text', () => {
+        expect(logo.parentNode.textContent).toBeTruthy();
+      });
+
+      it('should match text', () => {
+        expect(logo.parentNode.textContent).toMatchSnapshot();
+      });
+
+      it('should be wrapped in anchor with href that matches value', () => {
+        expect(logo.parentNode.tagName).toEqual('A');
+        expect(logo.parentNode.getAttribute('href')).toMatchSnapshot();
+      });
+    });
+
+    describe('Copyright and external linking text', () => {
       const footerCopyrightEl = document.querySelector('footer div p');
 
-      expect(footerCopyrightEl).toBeInTheDocument();
-      expect(footerCopyrightEl.textContent).toBeTruthy();
-      expect(footerCopyrightEl.textContent).toMatchSnapshot();
-    });
+      it('should be in the document', () => {
+        expect(footerCopyrightEl).toBeInTheDocument();
+      });
 
-    it('I can see the BBC branding', () => {
-      const brandingEl = document.querySelector('footer svg');
+      it('should have text', () => {
+        expect(footerCopyrightEl.textContent).toBeTruthy();
+      });
 
-      expect(brandingEl).toBeInTheDocument();
-    });
-
-    it('I can click on the BBC branding and it would take me to the homepage', () => {
-      const brandingEl = document.querySelector('footer svg');
-      const brandingLinkEl = brandingEl.parentNode;
-      const brandingImageEl = brandingLinkEl.querySelector('svg');
-
-      expect(brandingLinkEl.tagName).toEqual('A');
-      expect(brandingLinkEl.getAttribute('href')).toMatchSnapshot();
-      expect(brandingImageEl).toBeInTheDocument();
+      it('should match text', () => {
+        expect(footerCopyrightEl.textContent).toMatchSnapshot();
+      });
     });
   });
 };

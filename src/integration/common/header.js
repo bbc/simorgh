@@ -1,29 +1,41 @@
 export default () => {
   describe('Header', () => {
-    it('I can see the branding', () => {
+    describe('Branding', () => {
       const logo = document.querySelector('header svg');
 
-      expect(logo).toBeInTheDocument();
-      expect(logo.parentNode.textContent).toBeTruthy();
-      expect(logo.parentNode.textContent).toMatchSnapshot();
+      it('should be in the document', () => {
+        expect(logo).toBeInTheDocument();
+      });
+
+      it('should have text', () => {
+        expect(logo.parentNode.textContent).toBeTruthy();
+      });
+
+      it('should match text', () => {
+        expect(logo.parentNode.textContent).toMatchSnapshot();
+      });
     });
 
     if (service !== 'scotland') {
-      it('I can see the navigation', () => {
+      describe('Navigation', () => {
         const navigationItemEls = document.querySelector(
           'header nav ul > li > a',
         );
 
-        expect(navigationItemEls).toBeInTheDocument();
+        it('should be in the document', () => {
+          expect(navigationItemEls).toBeInTheDocument();
+        });
       });
     }
 
-    it('I can see a skip to content link', () => {
+    describe('Skip to content', () => {
       const skipToContentEl = document.querySelector(
         'header [href="#content"]',
       );
 
-      expect(skipToContentEl).toBeInTheDocument();
+      it('should be in the document', () => {
+        expect(skipToContentEl).toBeInTheDocument();
+      });
     });
   });
 };

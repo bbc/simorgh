@@ -9,7 +9,7 @@ export default () => {
   runCoreCanonicalTests();
   runCanonicalAnalyticsTests();
 
-  it('I can see a radio schedule component with an id', () => {
+  it('Radio schedule', () => {
     const hasRadioSchedule = [
       'afrique',
       'arabic',

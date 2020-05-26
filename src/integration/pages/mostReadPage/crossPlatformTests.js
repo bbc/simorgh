@@ -1,23 +1,25 @@
-import { runCommonCrossPlatformTests } from '../../common';
+import { runCommonCrossPlatformTests, runHeadlineTests } from '../../common';
 
 export default () => {
   runCommonCrossPlatformTests();
 
-  it('I can see the headline', () => {
-    const h1El = document.querySelector('h1');
+  runHeadlineTests();
 
-    expect(h1El).toBeInTheDocument();
-    expect(h1El).toBeTruthy();
-    expect(h1El.textContent).toMatchSnapshot();
-  });
-
-  it('I can see the list items', () => {
+  describe('List items', () => {
     const listItemElements = document.querySelectorAll('main ol li');
 
     listItemElements.forEach(itemEl => {
-      expect(itemEl).toBeInTheDocument();
-      expect(itemEl).toBeTruthy();
-      expect(itemEl.textContent).toMatchSnapshot();
+      it('should be in the document', () => {
+        expect(itemEl).toBeInTheDocument();
+      });
+
+      it('should have text', () => {
+        expect(itemEl).toBeTruthy();
+      });
+
+      it('should match text', () => {
+        expect(itemEl.textContent).toMatchSnapshot();
+      });
     });
   });
 };

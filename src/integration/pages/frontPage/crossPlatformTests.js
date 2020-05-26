@@ -3,13 +3,15 @@ import { runCommonCrossPlatformTests } from '../../common';
 export default () => {
   runCommonCrossPlatformTests();
 
-  it('I can see at least one section', () => {
-    const sect = document.querySelector('section');
+  describe('Section', () => {
+    const sectionEl = document.querySelector('section');
 
-    expect(sect).toBeInTheDocument();
+    it('should have at least one section', () => {
+      expect(sectionEl).toBeInTheDocument();
+    });
   });
 
-  it('I can see Index Alsos', () => {
+  describe('Index Alsos', () => {
     const topStories = document.querySelector(
       '[aria-labelledby="Top-stories"]',
     );
@@ -19,7 +21,10 @@ export default () => {
 
       if (indexAlsos) {
         const h4 = indexAlsos.querySelector('h4');
-        expect(h4.textContent).toMatchSnapshot();
+
+        it('should have heading matching text', () => {
+          expect(h4.textContent).toMatchSnapshot();
+        });
 
         if (window.SIMORGH_DATA) {
           const topStoriesGroup =
@@ -27,30 +32,45 @@ export default () => {
           const { relatedItems } = topStoriesGroup;
 
           if (relatedItems.length > 1) {
-            expect(indexAlsos.querySelector('ul')).toBeInTheDocument();
-            expect(indexAlsos.getElementsByTagName('li')).toHaveLength(
-              relatedItems.length,
-            );
+            it('should be in the document', () => {
+              expect(indexAlsos.querySelector('ul')).toBeInTheDocument();
+            });
+
+            it('should render all items', () => {
+              expect(indexAlsos.getElementsByTagName('li')).toHaveLength(
+                relatedItems.length,
+              );
+            });
           } else {
-            expect(
-              indexAlsos.querySelector('div a span').innerHTML,
-            ).toMatchSnapshot();
+            it('should match text', () => {
+              expect(
+                indexAlsos.querySelector('div a span').textContent,
+              ).toMatchSnapshot();
+            });
           }
         }
       }
     }
   });
 
-  it('I can see Useful Links', () => {
-    const usefulLinks = document.querySelector('[data-e2e=useful-links]');
+  describe('Useful Links', () => {
+    const usefulLinksEl = document.querySelector('[data-e2e=useful-links]');
 
-    if (usefulLinks) {
-      const links = usefulLinks.querySelectorAll('a');
+    if (usefulLinksEl) {
+      const links = usefulLinksEl.querySelectorAll('a');
 
       links.forEach(linkEl => {
-        expect(linkEl).toBeInTheDocument();
-        expect(linkEl.textContent).toBeTruthy();
-        expect(linkEl.textContent).toMatchSnapshot();
+        it('should be in the document', () => {
+          expect(linkEl).toBeInTheDocument();
+        });
+
+        it('should have text', () => {
+          expect(linkEl.textContent).toBeTruthy();
+        });
+
+        it('should match text', () => {
+          expect(linkEl.textContent).toMatchSnapshot();
+        });
       });
     }
   });
