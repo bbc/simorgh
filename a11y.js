@@ -24,9 +24,6 @@ const getUrls = pageType =>
     .filter(page => !!page)
     .map(url => `${baseUrl}${url}`);
 
-// '/html/head/iframe' Added to prevent false negatives from mPulse beacon
-// which creates iframe in document head
-
 // '//div[@id='root']/main/div/div/div/div/iframe' Added to hide
 // iframe errors to be fixed in https://github.com/bbc/bbc-a11y/issues/298
 
@@ -35,27 +32,14 @@ const getUrls = pageType =>
 // https://github.com/bbc/simorgh/issues/5222
 
 const pageTypes = {
-  frontPage: [
-    '/html/head/iframe',
-    "//div[@id='root']/header/nav/div/div[1]/div/ul",
-  ],
-  articles: [
-    '/html/head/iframe',
-    "//div[@id='root']/header/nav/div/div[1]/div/ul",
-  ],
+  frontPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
+  articles: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   liveRadio: [
-    '/html/head/iframe',
     "//div[@id='root']/main/div/div/div/iframe",
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
   ],
-  photoGalleryPage: [
-    '/html/head/iframe',
-    "//div[@id='root']/header/nav/div/div[1]/div/ul",
-  ],
-  mostReadPage: [
-    '/html/head/iframe',
-    "//div[@id='root']/header/nav/div/div[1]/div/ul",
-  ],
+  photoGalleryPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
+  mostReadPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   storyPage: [
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
     '/iframe', // known issue above with iframes should be revisited once https://github.com/bbc/bbc-a11y/pull/313 gets merged.
