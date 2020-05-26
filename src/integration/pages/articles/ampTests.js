@@ -1,7 +1,8 @@
 import runCrossPlatformTests from './crossPlatformTests';
-import { runCoreAmpTests } from '../../common';
+import { runCoreAmpTests, runAmpAnalyticsTests } from '../../common';
 
 export default () => {
   runCrossPlatformTests();
   runCoreAmpTests();
+  runAmpAnalyticsTests();
 };
