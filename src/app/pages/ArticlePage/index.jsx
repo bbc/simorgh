@@ -27,7 +27,7 @@ import text from '#containers/Text';
 import image from '#containers/Image';
 import Blocks from '#containers/Blocks';
 import timestamp from '#containers/ArticleTimestamp';
-import { MediumContentContainer, MediumGridWrapper } from '#lib/styledGrid';
+import { MediumContentContainer, GridWrapperMedium } from '#lib/styledGrid';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
@@ -135,12 +135,12 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         aboutTags={aboutTags}
       />
       <MediumContentContainer role="main" as="main">
-        <MediumGridWrapper>
+        <GridWrapperMedium>
           <Blocks
             blocks={path(['content', 'model', 'blocks'], pageData)}
             componentsToRender={componentsToRender}
           />
-        </MediumGridWrapper>
+        </GridWrapperMedium>
       </MediumContentContainer>
       <MostReadContainer
         mostReadEndpointOverride={mostReadEndpointOverride}

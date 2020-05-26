@@ -52,7 +52,7 @@ const mediumColumns = {
   group5: 10,
 };
 
-export const MediumGridWrapper = ({ children }) => {
+export const GridWrapperMedium = ({ children }) => {
   return (
     <Grid
       enableGelGutters
@@ -64,7 +64,7 @@ export const MediumGridWrapper = ({ children }) => {
   );
 };
 
-MediumGridWrapper.propTypes = {
+GridWrapperMedium.propTypes = {
   children: node.isRequired,
 };
 
