@@ -41,6 +41,7 @@ export const service = {
     ...baseServiceConfig,
     ads: {
       hasAds: false,
+      advertisementLabel: '广告',
     },
     externalLinkText: ', 外部链接',
     frontPageTitle: '主页',
@@ -244,6 +245,7 @@ export const service = {
     ...baseServiceConfig,
     ads: {
       hasAds: false,
+      advertisementLabel: '廣告',
     },
     lang: `zh-hant`,
     locale: `zh-hant`,
