@@ -93,8 +93,6 @@ module.exports = ({
     },
     plugins: [
       // copy static files otherwise untouched by Webpack, e.g. favicon
-
-      // you should change new CopyPlugin(patterns, options) to new CopyPlugin({ patterns, options })
       new CopyWebpackPlugin({
         patterns: [{ from: 'public' }],
       }),
