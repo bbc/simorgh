@@ -8,8 +8,10 @@ import ServiceWorkerContainer from '../containers/ServiceWorker';
 import MPulseBeacon from '../containers/MPulseBeacon';
 import WebVitals from '../containers/WebVitals';
 import { ServiceContext } from '../contexts/ServiceContext';
+import useWebVitals from '#hooks/useWebVitals';
 
 const PageWrapper = ({ children }) => {
+  useWebVitals();
   const { fonts: fontFunctions } = useContext(ServiceContext);
 
   const fonts = fontFunctions.map(getFonts => getFonts());
@@ -20,7 +22,7 @@ const PageWrapper = ({ children }) => {
       <ServiceWorkerContainer />
       <ManifestContainer />
       <MPulseBeacon />
-      <WebVitals />
+      {/* <WebVitals /> */}
       <HeaderContainer />
       {children}
       <FooterContainer />
