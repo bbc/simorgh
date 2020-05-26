@@ -116,6 +116,7 @@ describe('Timestamp rules', () => {
       metadata: {
         firstPublished: 1514808060000,
         lastPublished: 1514811600000,
+        type: 'article',
       },
       content: {
         model: {
