@@ -31,6 +31,11 @@ def runProductionTests(){
   sh 'npm prune --production'
 }
 
+def runChromaticTests(){
+  sh 'make install'
+  sh 'make testChromatic'
+}
+
 def getCommitInfo = {
   appGitCommit = sh(returnStdout: true, script: "git rev-parse HEAD")
   appGitCommitAuthor = sh(returnStdout: true, script: "git --no-pager show -s --format='%an' ${appGitCommit}").trim()
@@ -151,6 +156,20 @@ pipeline {
           }
           steps {
             runProductionTests()
+          }
+        }
+        stage ('Test Chromatic') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            setupCodeCoverage()
+            withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
+              runChromaticTests()
+            }
           }
         }
       }
