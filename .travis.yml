@@ -1,8 +1,6 @@
 # All Travis builds are a redundancy against Jenkins failures, except that we also use
 # this for running builds on PRs from forks, because we're OSS friendly. :)
 language: node_js
-matrix:
-  fast_finish: true
 cache:
   directories:
     # Cache only the folder with Cypress binary, other caching takes longer and saves
@@ -13,6 +11,7 @@ before_install:
   - npm install -g @lhci/cli@0.4.x
 script: echo "npm test temporarily disabled"
 jobs:
+  fast_finish: true
   include:
     - stage: test
       if: type = push OR (pull_request AND fork = true)
