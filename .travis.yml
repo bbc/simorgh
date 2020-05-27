@@ -15,10 +15,26 @@ jobs:
   include:
     - stage: test
       if: type = push OR (pull_request AND fork = true)
-      name: 'Unit Tests and storybook e2e'
+      name: 'Linting and Deps'
       install: npm ci
       script:
-        - npm run test
+        - npm run test:lint
+        - npm run test:dependencies
+    - stage: test
+      if: type = push OR (pull_request AND fork = true)
+      name: 'Unit Tests'
+      install: npm ci
+      script:
+        - npm run test:unit
+    - stage: test
+      if: type = push OR (pull_request AND fork = true)
+      name: 'Integration and AMP'
+      before_install: npm install -g npm-run-all
+      install: npm ci
+      script:
+        - npm run build -- --hide-modules --colors
+        - run-p --race start amp:validate
+        - run-p --race start test:integration:ci
     - stage: test
       if: type = push OR (pull_request AND fork = true)
       name: 'Production CI tests'
