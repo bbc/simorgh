@@ -7,7 +7,9 @@ describe('Index Heading', () => {
   describe('snapshot', () => {
     shouldMatchSnapshot(
       'should render correctly',
-      <IndexHeading script={latin} service="news" />,
+      <IndexHeading script={latin} service="news">
+        Index Heading
+      </IndexHeading>,
     );
   });
 });
