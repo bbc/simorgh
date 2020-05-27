@@ -3,6 +3,8 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import '@testing-library/jest-dom/extend-expect';
 import { render } from '@testing-library/react';
 import AmpAd, { AMP_ACCESS_FETCH } from './index';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
 
 const adJsonAttributes = {
   targeting: {
@@ -11,6 +13,20 @@ const adJsonAttributes = {
     channel: 'pidgin',
   },
 };
+
+const adWithContext = (service = 'pidgin') => (
+  <RequestContextProvider
+    bbcOrigin="https://www.test.bbc.com"
+    isAmp
+    pageType="frontPage"
+    service={service}
+    pathname="/"
+  >
+    <ServiceContextProvider service={service}>
+      <AmpAd />
+    </ServiceContextProvider>
+  </RequestContextProvider>
+);
 
 describe('AMP Ads', () => {
   beforeAll(() => {
@@ -24,20 +40,20 @@ describe('AMP Ads', () => {
   describe('Snapshots', () => {
     shouldMatchSnapshot(
       'should correctly render an AMP leaderboard ad',
-      <AmpAd service="pidgin" />,
+      adWithContext(),
     );
   });
 
   describe('Assertions', () => {
     it('should render two leaderboard ads', () => {
-      const { container } = render(<AmpAd service="pidgin" />);
+      const { container } = render(adWithContext());
       const ampAd = container.querySelectorAll('amp-ad');
 
       expect(ampAd.length).toBe(2);
     });
 
     it('should display ad with values for all of the needed attributes', () => {
-      const { container } = render(<AmpAd service="pidgin" />);
+      const { container } = render(adWithContext());
 
       const ampAd = container.querySelectorAll('amp-ad');
       ampAd.forEach(ad => {
@@ -53,6 +69,14 @@ describe('AMP Ads', () => {
         expect(ad).toHaveAttribute('data-a4a-upgrade-type');
         expect(ad).toHaveAttribute('json', JSON.stringify(adJsonAttributes));
       });
+    });
+
+    it('should render an `advertisement` label', () => {
+      const { container } = render(adWithContext());
+      const links = container.querySelectorAll('a');
+      const advertisementLabel = links && links[0];
+      expect(advertisementLabel.textContent).toEqual('Tori we dem pay for');
+      expect(advertisementLabel).toHaveAttribute('tabIndex', '-1');
     });
 
     describe('AMP_ACCESS_FETCH', () => {

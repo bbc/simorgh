@@ -1,0 +1,626 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "लघु आणि कुटीर उद्योगांसाठी 3 लाख कोटी रुपयांची कर्ज योजना"
+        },
+        "locators": {
+          "assetUri": "/marathi/live/india-52639198",
+          "cpsUrn": "urn:bbc:content:assetUri:marathi/live/india-52639198",
+          "assetId": "52639198"
+        },
+        "summary": "अर्थमंत्री निर्मला सीतारमण यांनी लघु आणि कुटीर उद्योगांसाठी 3 लाख कोटी रुपयांची कर्ज योजना जाहीर केली.",
+        "timestamp": 1589331129000,
+        "language": "mr",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "LIV",
+        "indexImage": {
+          "id": "112255744",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/AED3/production/_112255744_nirmalasitraraman.jpg",
+          "path": "/cpsprodpb/AED3/production/_112255744_nirmalasitraraman.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "निर्मला सीतारमन",
+          "copyrightHolder": "Ani",
+          "type": "image"
+        },
+        "commentary": {
+          "order": "descending",
+          "assetUUID": "FA75434E0CDD934E96E9798B682F20CB",
+          "channels": {
+            "enhancedmobile": "bbc.cps.asset.52643025_EnhancedMobile",
+            "desktop": "bbc.cps.asset.52643025_HighWeb",
+            "highweb": "bbc.cps.asset.52643025_HighWeb",
+            "mobile": "bbc.cps.asset.52643025_EnhancedMobile"
+          }
+        },
+        "isLive": true,
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:marathi/live/india-52639198",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "मोदी सरकारच्या 20 लाख कोटींच्या पॅकेजमुळे अर्थव्यवस्था किती 'आत्मनिर्भर' होणार?"
+        },
+        "locators": {
+          "assetUri": "/marathi/india-52530473",
+          "cpsUrn": "urn:bbc:content:assetUri:marathi/india-52530473",
+          "assetId": "52530473"
+        },
+        "summary": "आपल्या भाषणात पंतप्रधान नरेंद्र मोदी यांनी स्वावलंबनाचे अनेक दाखले दिले आणि या उद्देशाची पूर्तता करणार असल्याचा संकल्पही सोडला.",
+        "timestamp": 1589345204000,
+        "language": "mr",
+        "byline": {
+          "name": "झुबैर अहमद ",
+          "title": "बीबीसी प्रतिनिधी",
+          "persons": [
+            {
+              "name": "Ivonne Toro Agurto",
+              "function": "La Tercera"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112058019",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/163CD/production/_112058019_gettyimages-456084634.jpg",
+          "path": "/cpsprodpb/163CD/production/_112058019_gettyimages-456084634.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "नरेंद्र मोदी",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:marathi/india-52530473",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "निर्मला सीतारमण: लघु आणि कुटीर उद्योगांना चालना देणार"
+        },
+        "locators": {
+          "assetUri": "/marathi/india-52644701",
+          "cpsUrn": "urn:bbc:content:assetUri:marathi/india-52644701",
+          "assetId": "52644701"
+        },
+        "summary": "'आत्मनिर्भर भारत' या अभियानासाठी पंतप्रधानांनी 20 लाख कोटी रुपयांच्या पॅकेजची घोषणा केली आहे. हे पॅकेज सकल राष्ट्रीय उत्पनाच्या 10 टक्के असल्याचंही त्यांनी नमूद केलं.",
+        "timestamp": 1589366858000,
+        "language": "mr",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112251228",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/14127/production/_112251228_4abd45d6-0a63-417e-9c91-4120de50a762.jpg",
+          "path": "/cpsprodpb/14127/production/_112251228_4abd45d6-0a63-417e-9c91-4120de50a762.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "निर्मला सीतारमण",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:marathi/india-52644701",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "विधान परिषद निवडणुकीत उद्धव ठाकरेंनी भाजप समोर नमतं घेतलं का ?"
+        },
+        "locators": {
+          "assetUri": "/marathi/india-52628596",
+          "cpsUrn": "urn:bbc:content:assetUri:marathi/india-52628596",
+          "assetId": "52628596"
+        },
+        "summary": "विधान परिषदेच्या निवडणुकीत भाजपच्या आक्रमक रणनीतीसमोर मुख्यमंत्री उद्धव ठाकरे यांनी नमतं घेतलं आहे का? त्याची काही राजकीय कारणं आहेत का?",
+        "timestamp": 1589268408000,
+        "language": "mr",
+        "byline": {
+          "name": "प्राजक्ता पोळ ",
+          "title": "बीबीसी मराठीसाठी ",
+          "persons": [
+            {
+              "name": "Abdujalil Abdurasulov",
+              "function": "BBC News Almata"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112236640",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1237/production/_112236640_540dff56-17e6-48c4-8d2b-fa937c904cb2.jpg",
+          "path": "/cpsprodpb/1237/production/_112236640_540dff56-17e6-48c4-8d2b-fa937c904cb2.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "उद्धव ठाकरे, शिवसेना, महाविकास आघाडी, भाजप",
+          "caption": "मुख्यमंत्री उद्धव ठाकरे",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:marathi/india-52628596",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "'महाराष्ट्रात अडकलेले परराज्यातील लोक परत घरी चाललेत पण आमचं काय?'"
+        },
+        "locators": {
+          "assetUri": "/marathi/india-52628004",
+          "cpsUrn": "urn:bbc:content:assetUri:marathi/india-52628004",
+          "assetId": "52628004"
+        },
+        "summary": "कामानिमित्ताने घरापासून दूर राहणाऱ्या आणि घरी जाण्याची इच्छा असणाऱ्या राज्यातील स्थलांतरितांचं काय?",
+        "timestamp": 1589274988000,
+        "language": "mr",
+        "byline": {
+          "name": "हर्षल आकुडे ",
+          "title": "बीबीसी मराठी प्रतिनिधी ",
+          "persons": [
+            {
+              "name": "Abdujalil Abdurasulov",
+              "function": "BBC News Almata"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112236627",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/11BD7/production/_112236627_0f6a50a5-22eb-47ed-a001-19632396a69f.jpg",
+          "path": "/cpsprodpb/11BD7/production/_112236627_0f6a50a5-22eb-47ed-a001-19632396a69f.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "कोरोना, स्थलांतर, वाहतूक",
+          "caption": "स्थलांतरित कामगार",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:marathi/india-52628004",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ऐन लॉकडाऊनमध्ये तुरुंगातून सुटलेल्या मराठी माणसाची गोष्ट"
+        },
+        "locators": {
+          "assetUri": "/marathi/india-52623890",
+          "cpsUrn": "urn:bbc:content:assetUri:marathi/india-52623890",
+          "assetId": "52623890"
+        },
+        "summary": "लॉकडाऊननं सर्व स्तरातील माणसांवर सर्व बाजूंना आघात केलाय. अनेकांचं जगणं विस्कटून गेलंय. मूळचा रायगड जिल्ह्यातील असलेल्या आरिफची (नाव बदलेलं आहे) कहाणीही अशीच आहे.",
+        "timestamp": 1589263433000,
+        "language": "mr",
+        "byline": {
+          "name": "सौतिक बिस्वास",
+          "title": "बीबीसी प्रतिनिधी",
+          "persons": [
+            {
+              "name": "Soutik Biswas",
+              "function": "India correspondent",
+              "url": "/news/correspondents/soutikbiswas",
+              "correspondentId": "soutikbiswas",
+              "thumbnail": "http://news.bbcimg.co.uk/media/images/58142000/jpg/_58142642_biswas-252x192.jpg",
+              "correspondentImage": {
+                "height": 200,
+                "width": 200,
+                "href": "http://c.files.bbci.co.uk/4481/production/_90873571_mediaitem58415593.jpg",
+                "originCode": "cpsprodpb",
+                "altText": "Soutik Biswas",
+                "copyrightHolder": "bbc"
+              }
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112233661",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/40F9/production/_112233661_inmates.jpg",
+          "path": "/cpsprodpb/40F9/production/_112233661_inmates.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "कैदी",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:marathi/india-52623890",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "‘मुंबईत कोरोनाचा कम्युनिटी स्प्रेड झाल्याची शक्यता’"
+        },
+        "locators": {
+          "assetUri": "/marathi/india-52628318",
+          "cpsUrn": "urn:bbc:content:assetUri:marathi/india-52628318",
+          "assetId": "52628318"
+        },
+        "summary": "मुंबईसह महाराष्ट्रात काही भागांमध्ये कोरोना व्हायरसचा सामुदायिक संसर्ग म्हणजेच कम्युनिटी स्प्रेड झाल्याची शक्यता राज्याचे रोग सर्वेक्षण अधिकारी डॉ. प्रदीप आवटे यांनी व्यक्त केलीय.",
+        "timestamp": 1589259010000,
+        "language": "mr",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112023141",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/3734/production/_112023141_swabtestani.jpg",
+          "path": "/cpsprodpb/3734/production/_112023141_swabtestani.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "कोरोना",
+          "copyrightHolder": "ANI",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:marathi/india-52628318",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "लॉकडाऊनमुळे शेतमालाच्या मार्केटिंगमध्ये असे होत आहेत मोठे बदल"
+        },
+        "locators": {
+          "assetUri": "/marathi/india-52608558",
+          "cpsUrn": "urn:bbc:content:assetUri:marathi/india-52608558",
+          "assetId": "52608558"
+        },
+        "summary": "शेतमाल थेट ग्राहकांना विकण्याचे दोन फायदे आहेत. एका बाजुला मंडई किंवा मार्केट यार्डात होणारी गर्दी टाळली जातेय. तर दुसऱ्या बाजुला शेतकऱ्यांना आणि ग्राहकांना शेतमालाचा रास्त भाव मिळत आहे.",
+        "timestamp": 1589163010000,
+        "language": "mr",
+        "byline": {
+          "name": "गणेश पोळ",
+          "title": "बीबीसी मराठी प्रतिनिधी ",
+          "persons": [
+            {
+              "name": "Abdujalil Abdurasulov",
+              "function": "BBC News Almata"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112222110",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/0462/production/_112222110_manus.jpg",
+          "path": "/cpsprodpb/0462/production/_112222110_manus.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "शेतकरी, कृषी, शेती, महाराष्ट्र, कोरोना",
+          "caption": "शेतकऱ्यांचा माल ग्राहकांपर्यंत पोहोचतो आहे का?",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:marathi/india-52608558",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "एसटी प्रवास सरसकट सर्वांसाठी मोफत नाही, राज्य सरकारचा नवा निर्णय"
+        },
+        "locators": {
+          "assetUri": "/marathi/india-52600127",
+          "cpsUrn": "urn:bbc:content:assetUri:marathi/india-52600127",
+          "assetId": "52600127"
+        },
+        "summary": "कोरोनामुळे लागू झालेल्या लॉकडाऊन काळात राज्यात अडकलेल्या व्यक्तींना गावी परतण्यासाठी एसटीची मोफत सेवा पुरवली जाणार आहे.",
+        "timestamp": 1589182534000,
+        "language": "mr",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112218498",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/15D89/production/_112218498_gettyimages-813932358-1.jpg",
+          "path": "/cpsprodpb/15D89/production/_112218498_gettyimages-813932358-1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "एसटी बस",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:marathi/india-52600127",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ठाकरे सरकारच्या दिशेने कोरोना संकटांचे इंजिन आणि आव्हानांचे डबे"
+        },
+        "locators": {
+          "assetUri": "/marathi/india-52599387",
+          "cpsUrn": "urn:bbc:content:assetUri:marathi/india-52599387",
+          "assetId": "52599387"
+        },
+        "summary": "कोव्हिड आणि लॉकडाऊन या चक्रव्यूहात सरकार असं काही अडकलंय की, तातडीनं काही पावलं टाकली नाहीत, तर सरकार आणि त्याचं असलं-नसलेलं गुडविल दोन्ही धारातीर्थी पडेल.",
+        "timestamp": 1589076316000,
+        "language": "mr",
+        "byline": {
+          "name": "सुहास पळशीकर",
+          "title": "ज्येष्ठ राजकीय विश्लेषक",
+          "persons": [
+            {
+              "name": "Dan Egan",
+              "function": ""
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112216631",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/355D/production/_112216631_mahazone-1.png",
+          "path": "/cpsprodpb/355D/production/_112216631_mahazone-1.png",
+          "height": 549,
+          "width": 976,
+          "altText": "उद्धव ठाकरे",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:marathi/india-52599387",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "मुंबईत कोरोनासाठी युद्धपातळीवर असं उभं राहतंय 1000 खाटांचं स्पेशल हॉस्पिटल"
+        },
+        "locators": {
+          "assetUri": "/marathi/india-52059011",
+          "cpsUrn": "urn:bbc:content:assetUri:marathi/india-52059011",
+          "assetId": "52059011"
+        },
+        "summary": "हे सेंटर लवकरात लवकर तयार करण्यात यावं यासाठी 600 पेक्षा जास्त कामगार दोन शिफ्टमध्ये काम करत आहेत.",
+        "timestamp": 1588834168000,
+        "language": "mr",
+        "byline": {
+          "name": "मयांक भागवत ",
+          "title": "मुक्त पत्रकार  ",
+          "persons": [
+            {
+              "name": "윤인경",
+              "function": "BBC 코리아"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112174683",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/96F7/production/_112174683_whatsappimage2020-05-07at11.29.45am-2.jpg",
+          "path": "/cpsprodpb/96F7/production/_112174683_whatsappimage2020-05-07at11.29.45am-2.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "मुंबईतील रुग्णालय",
+          "copyrightHolder": "MayankBhagwat",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:marathi/india-52059011",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "औरंगाबाद : चिरडलेल्या कामगारांच्या नातेवाईकांना 5 लाखांची मदत जाहीर"
+        },
+        "locators": {
+          "assetUri": "/marathi/india-52586060",
+          "cpsUrn": "urn:bbc:content:assetUri:marathi/india-52586060",
+          "assetId": "52586060"
+        },
+        "summary": "जालन्यातून मध्य प्रदेशमध्ये हे मजूर पायी परतत होते.",
+        "timestamp": 1588917570000,
+        "language": "mr",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112201217",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/1162A/production/_112201217_exdqos0u4aelgdm.jpg",
+          "path": "/cpsprodpb/1162A/production/_112201217_exdqos0u4aelgdm.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "औरंगाबाद घटना",
+          "copyrightHolder": "ANI",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:marathi/india-52586060",
+        "type": "cps"
+      }
+    ]
+  }

@@ -1,15 +1,21 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, number } from 'prop-types';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
+import { pathOr } from 'ramda';
 
-import featuresAnalysis from '#pages/StoryPage/featuresAnalysis.json';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 
 const FeaturesAnalysis = ({ content, parentColumns }) => {
-  const { dir } = useContext(ServiceContext);
+  const { dir, translations } = useContext(ServiceContext);
+
+  const title = pathOr(
+    'Features & Analysis',
+    ['featuresAnalysisTitle'],
+    translations,
+  );
 
   const singleTransform = promo => (
     <StoryPromo item={promo} dir={dir} displayImage />
@@ -28,7 +34,7 @@ const FeaturesAnalysis = ({ content, parentColumns }) => {
   return (
     <CpsOnwardJourney
       labelId="features-analysis-heading"
-      title="Features &amp; Analysis"
+      title={title}
       content={content}
       parentColumns={parentColumns}
       singleTransform={singleTransform}
@@ -50,7 +56,7 @@ FeaturesAnalysis.propTypes = {
 };
 
 FeaturesAnalysis.defaultProps = {
-  content: featuresAnalysis, // TODO: rm this https://github.com/bbc/simorgh/issues/5765
+  content: [],
   parentColumns: null,
 };
 

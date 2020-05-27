@@ -2,13 +2,67 @@
 
 exports[`Canonical Front Page A11y I can see the skip to content link 1`] = `"إذهب الى المحتوى"`;
 
-exports[`Canonical Front Page Analytics ATI 1`] = `"https://logws1363.ati-host.net?s=598343&s2=5&p=arabic.page&x1=[urn:bbc:cps:3f0c7dec-d826-8578-e050-380a4e807810]&x2=[responsive]&x3=[news-arabic]&x4=[ar]&x7=[index-home]&x8=[simorgh-nojs]&x9=[الرئيسية+-+BBC+News+عربي]&x11=[1970-01-18T02:13:01.429Z]&x12=[1970-01-19T02:08:48.876Z]"`;
+exports[`Canonical Front Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=5&amp;p=arabic.page&amp;x1=[urn:bbc:cps:3f0c7dec-d826-8578-e050-380a4e807810]&amp;x2=[responsive]&amp;x3=[news-arabic]&amp;x4=[ar]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[الرئيسية+-+BBC+News+عربي]&amp;x11=[1970-01-18T02:13:01.429Z]&amp;x12=[1970-01-19T02:08:48.876Z]\\"/>"`;
 
 exports[`Canonical Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
 exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
 exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, عربي"`;
+
+exports[`Canonical Front Page I can see Index Alsos 1`] = `"المزيد حول هذه القصة"`;
+
+exports[`Canonical Front Page I can see Useful Links 1`] = `"وظائف شاغرة في بي بي سي عربي"`;
+
+exports[`Canonical Front Page I can see Useful Links 2`] = `"أكاديمية بي بي سي: اكتشف... تعلم.. .تطور"`;
+
+exports[`Canonical Front Page I can see Useful Links 3`] = `"ثمانون عاما على بي بي سي عربي: من"`;
+
+exports[`Canonical Front Page I can see Useful Links 4`] = `"مدونة المرأة: علامات"`;
+
+exports[`Canonical Front Page I can see Useful Links 5`] = `"شركاؤنا"`;
+
+exports[`Canonical Front Page I can see sections 1`] = `"الخبر الرئيسي"`;
+
+exports[`Canonical Front Page I can see sections 2`] = `"فيديوالمزيد"`;
+
+exports[`Canonical Front Page I can see sections 3`] = `"تقارير خاصةالمزيد"`;
+
+exports[`Canonical Front Page I can see sections 4`] = `"مرأةالمزيد"`;
+
+exports[`Canonical Front Page I can see sections 5`] = `"صحةالمزيد"`;
+
+exports[`Canonical Front Page I can see sections 6`] = `"اقتصادالمزيد"`;
+
+exports[`Canonical Front Page I can see sections 7`] = `"علوم وتكنولوجياالمزيد"`;
+
+exports[`Canonical Front Page I can see sections 8`] = `"ثقافة وفنونالمزيد"`;
+
+exports[`Canonical Front Page I can see sections 9`] = `"رياضةالمزيد"`;
+
+exports[`Canonical Front Page I can see sections 10`] = `"برامجناالمزيد"`;
+
+exports[`Canonical Front Page I can see sections 11`] = `"عرض الصحف"`;
+
+exports[`Canonical Front Page I can see sections 12`] = `"مجلةالمزيد"`;
+
+exports[`Canonical Front Page I can see sections 13`] = `"شارك برأيك:المزيد"`;
+
+exports[`Canonical Front Page I can see sections 14`] = `"بي بي سي ترندالمزيد"`;
+
+exports[`Canonical Front Page I can see sections 15`] = `"بالصورالمزيد"`;
+
+exports[`Canonical Front Page I can see sections 16`] = `"مباشر"`;
+
+exports[`Canonical Front Page I can see sections 17`] = `"أحدث نشرة أخبار"`;
+
+exports[`Canonical Front Page I can see sections 18`] = `"اخترنا لكم"`;
+
+exports[`Canonical Front Page I can see sections 19`] = `"بطولة كأس العالم 2018المزيد"`;
+
+exports[`Canonical Front Page I can see sections 20`] = `"روابط لبي بي سي"`;
+
+exports[`Canonical Front Page I can see the headline 1`] = `"BBC News, عربي - الرئيسية"`;
 
 exports[`Canonical Front Page SEO Canonical link 1`] = `"http://localhost:7080/arabic"`;
 
@@ -86,3 +140,16 @@ exports[`Canonical Front Page SEO Twitter image src 1`] = `"https://news.files.b
 exports[`Canonical Front Page SEO Twitter site 1`] = `"@BBCArabic"`;
 
 exports[`Canonical Front Page SEO Twitter title 1`] = `"الرئيسية - BBC News عربي"`;
+
+exports[`Canonical Front Page Story Promo I can see a headline 1`] = `"المجلس العسكري في السودان يعلن إحباط \\"محاولة انقلابية\\""`;
+
+exports[`Canonical Front Page Story Promo I can see an image 1`] = `
+<img
+  alt="متظاهرون يحتفلون بالتوصل لاتفاق بين المجلس العسكري والمتظاهرين"
+  class="StyledImg-sc-7vx2mr-0 hIxkbt"
+  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 660w"
+  width="976"
+/>
+`;
