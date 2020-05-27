@@ -1334,11 +1334,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/gahuza/23299713'],
+            paths: ['/gahuza/23307435'],
             enabled: true,
           },
           local: {
-            paths: ['/gahuza/23299713'],
+            paths: ['/gahuza/23307435'],
             enabled: true,
           },
         },
@@ -5700,11 +5700,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/ukchina/simp/23298231'],
+            paths: [],
             enabled: true,
           },
           local: {
-            paths: ['/ukchina/simp/23298231'],
+            paths: [],
             enabled: true,
           },
         },
@@ -5835,11 +5835,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/ukchina/simp/23298231'],
+            paths: [],
             enabled: true,
           },
           local: {
-            paths: ['/ukchina/trad/23298231'],
+            paths: [],
             enabled: true,
           },
         },
