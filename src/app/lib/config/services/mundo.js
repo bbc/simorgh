@@ -18,6 +18,7 @@ export const service = {
   default: {
     ads: {
       hasAds: true,
+      advertisementLabel: 'Publicidad',
     },
     lang: `es`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
