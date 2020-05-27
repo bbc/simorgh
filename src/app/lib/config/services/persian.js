@@ -14,6 +14,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'آگهی',
     },
     lang: 'fa',
     product: 'BBC News',

@@ -44,6 +44,7 @@ export const service = {
     ...baseServiceConfig,
     ads: {
       hasAds: false,
+      advertisementLabel: 'Advertisement',
     },
     articleTimestampPrefix: 'Ažurirano',
     brandName: 'BBC News na srpskom',
