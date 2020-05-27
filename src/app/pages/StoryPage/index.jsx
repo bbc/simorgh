@@ -210,7 +210,6 @@ const StoryPage = ({ pageData }) => {
     group4: 4,
     group5: 4,
   };
-
   return (
     <>
       <CpsMetadata
@@ -256,18 +255,22 @@ const StoryPage = ({ pageData }) => {
           columns={gridColsSecondary}
           parentColumns={gridColumns}
         >
-          <ResponsiveComponentWrapper>
-            <TopStories
-              content={topStoriesInitialData}
-              parentColumns={gridColsSecondary}
-            />
-          </ResponsiveComponentWrapper>
-          <ResponsiveComponentWrapper>
-            <FeaturesAnalysis
-              content={featuresInitialData}
-              parentColumns={gridColsSecondary}
-            />
-          </ResponsiveComponentWrapper>
+          {topStoriesInitialData && (
+            <ResponsiveComponentWrapper>
+              <TopStories
+                content={topStoriesInitialData}
+                parentColumns={gridColsSecondary}
+              />
+            </ResponsiveComponentWrapper>
+          )}
+          {featuresInitialData && (
+            <ResponsiveComponentWrapper>
+              <FeaturesAnalysis
+                content={featuresInitialData}
+                parentColumns={gridColsSecondary}
+              />
+            </ResponsiveComponentWrapper>
+          )}
           <ComponentWrapper>
             <MostReadContainer
               columnLayout="oneColumn"
