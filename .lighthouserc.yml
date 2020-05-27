@@ -1,0 +1,13 @@
+ci:
+  collect:
+    numberOfRuns: 3
+    startServerCommand: npm start
+    url:
+      - http://localhost:7080/mundo # Frontpage
+      - http://localhost:7080/news/articles/c0g992jmmkko # Article
+      - http://localhost:7080/mundo/23263889 # CPS STY
+      - http://localhost:7080/pidgin/sport-23252855 # CPS PGL
+  assert:
+    preset: lighthouse:recommended
+  upload:
+    target: temporary-public-storage
