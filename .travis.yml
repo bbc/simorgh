@@ -8,8 +8,6 @@ cache:
     # Cache only the folder with Cypress binary, other caching takes longer and saves
     # less time, therefore this is more efficient than caching all.
     - ~/.cache/Cypress
-before_install:
-  - sudo apt-get install -y libgconf-2-4
 jobs:
   fast_finish: true
   include:
@@ -38,6 +36,7 @@ jobs:
     - stage: test
       if: type = push OR (pull_request AND fork = true)
       name: 'Production CI tests'
+      before_install: sudo apt-get install -y libgconf-2-4
       install: npm ci
       addons:
         chrome: stable
