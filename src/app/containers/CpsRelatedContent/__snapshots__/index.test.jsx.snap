@@ -58,7 +58,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                 class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
               >
                 <div
-                  class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                  class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                 >
                   <div
                     class="lazyload-placeholder"
@@ -124,7 +124,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                 class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
               >
                 <div
-                  class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                  class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                 >
                   <div
                     class="lazyload-placeholder"
@@ -179,7 +179,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                 class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
               >
                 <div
-                  class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                  class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                 >
                   <div
                     class="lazyload-placeholder"
@@ -275,7 +275,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
               class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
             >
               <div
-                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
               >
                 <div
                   class="lazyload-placeholder"

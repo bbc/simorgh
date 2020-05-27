@@ -31,7 +31,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
                 dir="ltr"
                 id="top-stories-heading"
               >
-                Top Stories
+                Top Tori
               </span>
             </span>
           </span>
@@ -148,7 +148,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
                 dir="ltr"
                 id="top-stories-heading"
               >
-                Top Stories
+                Top Tori
               </span>
             </span>
           </span>
