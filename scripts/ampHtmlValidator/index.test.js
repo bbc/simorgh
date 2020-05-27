@@ -1,11 +1,11 @@
-const fetch = require('node-fetch');
+const fetch = require('isomorphic-fetch');
 
 jest.mock('../../cypress/support/helpers/getPageUrls', () => {
   return {
     getPageUrls: () => [['/amharic/bbc_amharic_radio/liveradio']],
   };
 });
-jest.mock('node-fetch');
+jest.mock('isomorphic-fetch');
 fetch.mockImplementation(() => ({ text: () => '<html amp></html>' }));
 const log = jest.spyOn(global.console, 'log');
 log.mockImplementation(jest.fn);

@@ -11,7 +11,6 @@ const options = {
     'isarray',
     'jest-environment-jsdom',
     '@testing-library/dom',
-    'node-fetch',
   ],
 };
 

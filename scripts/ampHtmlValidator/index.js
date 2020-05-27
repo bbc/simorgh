@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-const fetch = require('node-fetch');
+const fetch = require('isomorphic-fetch');
 const amphtmlValidator = require('amphtml-validator');
 const { getPageUrls } = require('../../cypress/support/helpers/getPageUrls');
 
@@ -12,7 +12,8 @@ const pageTypes = [
   'liveRadio',
   'photoGalleryPage',
   'mostReadPage',
-  'liveRadio',
+  'onDemandRadioEpisode',
+  'mediaAssetPage',
 ];
 
 const getPageString = async url => {
