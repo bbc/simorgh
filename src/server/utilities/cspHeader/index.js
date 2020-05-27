@@ -9,9 +9,7 @@ https://github.com/bbc/simorgh-infrastructure/blob/latest/documentation/updating
 const directives = {
   connectSrc: {
     ampLive: [
-      'https://*.akstat.io',
       'https://*.akamaihd.net',
-      'https://c.go-mpulse.net',
       'https://adservice.google.com', // ads
       'https://securepubads.g.doubleclick.net', // ads
       'https://pagead2.googlesyndication.com', // ads
@@ -26,9 +24,7 @@ const directives = {
       "'self'",
     ],
     canonicalLive: [
-      'https://*.akstat.io',
       'https://*.akamaihd.net',
-      'https://c.go-mpulse.net',
       'https://adservice.google.com', // ads
       'https://securepubads.g.doubleclick.net', // ads
       'https://pagead2.googlesyndication.com', // ads
@@ -42,9 +38,7 @@ const directives = {
       "'self'",
     ],
     ampNonLive: [
-      'https://*.akstat.io',
       'https://*.akamaihd.net',
-      'https://c.go-mpulse.net',
       'https://adservice.google.com', // ads
       'https://securepubads.g.doubleclick.net', // ads
       'https://pagead2.googlesyndication.com', // ads
@@ -59,9 +53,7 @@ const directives = {
       "'self'",
     ],
     canonicalNonLive: [
-      'https://*.akstat.io',
       'https://*.akamaihd.net',
-      'https://c.go-mpulse.net',
       'https://adservice.google.com', // ads
       'https://securepubads.g.doubleclick.net', // ads
       'https://pagead2.googlesyndication.com', // ads
@@ -134,7 +126,6 @@ const directives = {
       'https://ping.chartbeat.net',
       'https://a1.api.bbc.co.uk/hit.xiti',
       'https://news.files.bbci.co.uk',
-      'https://*.akstat.io',
       'https://r.bbci.co.uk',
       'https://pagead2.googlesyndication.com', // ads
       'https://securepubads.g.doubleclick.net', // ads
@@ -151,7 +142,6 @@ const directives = {
       'https://ping.chartbeat.net',
       'https://a1.api.bbc.co.uk/hit.xiti',
       'https://news.files.bbci.co.uk',
-      'https://*.akstat.io',
       'https://r.bbci.co.uk',
       'https://pagead2.googlesyndication.com', // ads
       'https://securepubads.g.doubleclick.net', // ads
@@ -173,7 +163,6 @@ const directives = {
       'https://logws1363.ati-host.net', // ATI analytics
       'https://news.files.bbci.co.uk', // Static Assets
       'https://news.test.files.bbci.co.uk', // Static Assets
-      'https://*.akstat.io',
       'https://r.bbci.co.uk',
       'https://pagead2.googlesyndication.com', // ads
       'https://securepubads.g.doubleclick.net', // ads
@@ -195,7 +184,6 @@ const directives = {
       'https://logws1363.ati-host.net', // ATI analytics
       'https://news.files.bbci.co.uk', // Static Assets
       'https://news.test.files.bbci.co.uk', // Static Assets
-      'https://*.akstat.io',
       'https://r.bbci.co.uk',
       'https://pagead2.googlesyndication.com', // ads
       'https://securepubads.g.doubleclick.net', // ads
@@ -217,7 +205,6 @@ const directives = {
       'https://news.files.bbci.co.uk', // STY include
       'https://cdn.ampproject.org',
       'https://*.chartbeat.com',
-      'https://*.go-mpulse.net',
       'https://platform.twitter.com', // Social Embeds, <amp-twitter />
       "'self'",
       "'unsafe-inline'",
@@ -225,7 +212,6 @@ const directives = {
     canonicalLive: [
       'https://news.files.bbci.co.uk',
       'https://*.chartbeat.com',
-      'https://*.go-mpulse.net',
       'https://mybbc-analytics.files.bbci.co.uk',
       'https://emp.bbci.co.uk',
       'https://static.bbci.co.uk',
@@ -242,7 +228,6 @@ const directives = {
       'https://news.test.files.bbci.co.uk', // STY include
       'https://cdn.ampproject.org',
       'https://*.chartbeat.com',
-      'https://*.go-mpulse.net',
       'https://platform.twitter.com', // Social Embeds, <amp-twitter />
       "'self'",
       "'unsafe-inline'",
@@ -251,7 +236,6 @@ const directives = {
       'https://news.files.bbci.co.uk',
       'https://news.test.files.bbci.co.uk',
       'https://*.chartbeat.com',
-      'https://*.go-mpulse.net',
       'https://mybbc-analytics.files.bbci.co.uk',
       'https://emp.bbci.co.uk',
       'https://static.bbci.co.uk',
