@@ -8,15 +8,12 @@ cache:
     # Cache only the folder with Cypress binary, other caching takes longer and saves
     # less time, therefore this is more efficient than caching all.
     - ~/.cache/Cypress
-
 install: npm ci
-
 jobs:
   include:
     - stage: test
       if: type = push OR (pull_request AND fork = true)
       name: 'Unit Tests and storybook e2e'
-      install: npm ci
       script:
         - npm run test
     - stage: test
@@ -24,7 +21,6 @@ jobs:
       name: 'Production CI tests'
       before_install:
         - sudo apt-get install -y libgconf-2-4
-      install: npm ci
       addons:
         chrome: stable
       script:
