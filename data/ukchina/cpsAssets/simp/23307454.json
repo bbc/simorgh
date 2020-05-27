@@ -1,0 +1,562 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:ukchina/simp/23307454",
+    "locators": {
+      "assetUri": "/ukchina/simp/23307454",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/23307454",
+      "curie": "http://www.bbc.co.uk/asset/d377a209-04a6-f843-b011-4315f61cbbac",
+      "assetId": "23307454"
+    },
+    "type": "STY",
+    "createdBy": "ukchina-v6",
+    "language": "zh-Hans",
+    "lastUpdated": 1590573411811,
+    "firstPublished": 1590568580000,
+    "lastPublished": 1590568580000,
+    "timestamp": 1590568580000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "ukchinasimp.story.23307454.page",
+      "cps_asset_id": "23307454"
+    },
+    "passport": {
+      "taggings": []
+    },
+    "tags": {},
+    "version": "v1.3.0",
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "crosshead",
+      "list",
+      "heading",
+      "subheading",
+      "media"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "63730607",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+        "path": "/cpsdevpb/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Index image large",
+        "caption": "Index Image Large",
+        "copyrightHolder": "Kaylee Garrick",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "The first paragraph is manually marked up as an &quot;introduction&quot;, which renders it in bold.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "The next paragraph isn't marked up in any way - it's just &quot;normal&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "This is a crosshead",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Paragraphs can contain <bold>bold </bold>and <italic>italic </italic>in CPS at the moment, and these are rendered on the page as <bold>bold </bold>and <italic>italic</italic> or <bold><italic>both</italic></bold>.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold><italic>Bold and italic can also be rendered together.</italic></bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "This is a bulleted list",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "Bullet 2",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "Bullet 3",
+            "markupType": "plain_text",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "This is a normal paragraph again.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "This is a Heading",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "Normal paragraph.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": true,
+        "items": [
+          {
+            "text": "This is a numbered list",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "Number 2",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "Number 3, and so on",
+            "markupType": "plain_text",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "id": "63730095",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/E67B/test/_63730095_b8013ff8-b115-4364-8f1a-67459cd8d9d9.jpg",
+        "path": "/cpsdevpb/E67B/test/_63730095_b8013ff8-b115-4364-8f1a-67459cd8d9d9.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "image",
+        "caption": "Body image #1 with caption",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Another paragraph of body text.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "This is a Subheading",
+        "markupType": "plain_text",
+        "type": "subheading"
+      },
+      {
+        "text": "A grey line appears after a subheading.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "This is a paragraph with an <link><caption>inline link</caption><altText>Link</altText><url href=\"https://www.bbc.co.uk/news/uk-scotland-north-east-orkney-shetland-51190283\" platform=\"highweb\"/></link> to an internal site. Here's a link to an <link><caption>external site</caption><altText>Google</altText><url href=\"http://www.google.com\" platform=\"highweb\"/></link>.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "More normal paragraph text. The body image below doesn't have a caption, but does have copyright.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "63730603",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/778B/test/_63730603_dogs-kayleegarrick.jpg",
+        "path": "/cpsdevpb/778B/test/_63730603_dogs-kayleegarrick.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Dogs",
+        "copyrightHolder": "Kaylee Garrick",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Social embed examples below for Twitter, YouTube and Instagram.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Twitter",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Social embed intentionally removed",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "YouTube",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Social embed intentionally removed by Jim",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Instagram",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Social embed intentionally removed",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Embedded MAP: video",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "p01k6msm",
+        "subType": "clip",
+        "format": "video",
+        "title": "Five things ants can teach us about management",
+        "synopses": {
+          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+        },
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+        "versions": [
+          {
+            "versionId": "p01k6msp",
+            "types": [
+              "Original"
+            ],
+            "duration": 191,
+            "durationISO8601": "PT3M11S",
+            "warnings": {
+              "short": "Contains strong language and adult humour.",
+              "long": "Contains strong language and adult humour."
+            },
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1540218932000
+          }
+        ],
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "Embedded MAP: audio",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "p01m7d07",
+        "subType": "clip",
+        "format": "audio",
+        "title": "Birmingham checkout",
+        "synopses": {
+          "short": "Some audio from a supermarket checkout in Birmingham"
+        },
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+        "embedding": false,
+        "advertising": false,
+        "caption": "Some audio from a supermarket checkout in Birmingham",
+        "versions": [
+          {
+            "versionId": "p01m7d09",
+            "types": [
+              "Original"
+            ],
+            "duration": 127,
+            "durationISO8601": "PT2M7S",
+            "warnings": {
+              "short": "Contains some strong language.",
+              "long": "Contains some strong language."
+            },
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1555067395000
+          }
+        ],
+        "imageCopyright": "Getty Images",
+        "type": "media"
+      },
+      {
+        "text": "Includes: VisJo",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Include intentionally removed by Jim",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Includes: IDT2",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Include intentionally removed",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Includes: IDT1: A quiz!",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Include intentionally removed",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Here come some different shape images:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Square:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "63731104",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/9CB1/test/_63731104_hi000087716.jpg",
+        "path": "/cpsdevpb/9CB1/test/_63731104_hi000087716.jpg",
+        "height": 1546,
+        "width": 1546,
+        "altText": "Prince Charles",
+        "caption": "Prince Charles at a party",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Portrait:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "63731107",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/111E1/test/_63731107_tv000191235.jpg",
+        "path": "/cpsdevpb/111E1/test/_63731107_tv000191235.jpg",
+        "height": 768,
+        "width": 576,
+        "altText": "Patrick Stewart",
+        "caption": "Is this Captain Picard or Hercule Poirot?",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Random:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "63731109",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/16001/test/_63731109_tv000050092.jpg",
+        "path": "/cpsdevpb/16001/test/_63731109_tv000050092.jpg",
+        "height": 549,
+        "width": 700,
+        "altText": "Centre Court at Wimbledon",
+        "caption": "This image is a random shape",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "This is the end",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "WS STY TEST - Headline",
+      "headline": "WS STY TEST - Full Headline"
+    },
+    "locators": {
+      "assetUri": "/ukchina/simp/23307454",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/23307454",
+      "curie": "http://www.bbc.co.uk/asset/d377a209-04a6-f843-b011-4315f61cbbac",
+      "assetId": "23307454"
+    },
+    "summary": "This is the summary",
+    "timestamp": 1590568580000,
+    "language": "zh-Hans",
+    "byline": {
+      "name": "James Bond",
+      "title": "Spy",
+      "persons": [
+        {
+          "name": "James Bond",
+          "function": "Spy"
+        }
+      ]
+    },
+    "passport": {
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "63730607",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+      "path": "/cpsdevpb/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Index image large",
+      "caption": "Index Image Large",
+      "copyrightHolder": "Kaylee Garrick",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:ukchina/simp/23307454",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "主页",
+      "uri": "/ukchina/simp/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC英伦网",
+      "uri": "/ukchina/simp",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Wapinzani waafikiana nchini South Sudan",
+              "headline": "Mambo makuu kuhusu makubaliano mapya ya amani Sudan Kusini"
+            },
+            "locators": {
+              "assetUri": "/swahili/23210641",
+              "cpsUrn": "urn:bbc:content:assetUri:/swahili/23210641"
+            },
+            "summary": "Mahasimu nchini Sudan Kusini wameweka saini makubaliano ya kugawana madaraka huku Rais Salva Kirr akitoa wito wa kutaka kuwepo amani kwenye nchi ambapo vita vya wenyewe kwa wenyewe vimesababisha vifo vya maelfu ya watu.",
+            "timestamp": 1533557370000,
+            "language": "sw",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63685549",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/1715E/test/_63685549_c5daa10f-fea1-48bb-9570-dd61904a22bc.jpg",
+              "path": "/cpsdevpb/1715E/test/_63685549_c5daa10f-fea1-48bb-9570-dd61904a22bc.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "A Sudanese man gathers branches to build his destroyed house in Abyei.",
+              "caption": "A Sudanese man gathers branches as he a builds a new roof for his destroyed house in Abyei.",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:swahili/23210641",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Audio map page test",
+              "headline": "Audio map page test"
+            },
+            "locators": {
+              "assetUri": "/mundo/23245765",
+              "cpsUrn": "urn:bbc:content:assetUri:/mundo/23245765"
+            },
+            "summary": "Audio map page test",
+            "timestamp": 1564757533000,
+            "language": "es",
+            "cpsType": "MAP",
+            "mediaType": "Audio",
+            "id": "urn:bbc:ares::asset:mundo/23245765",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Your pictures: Breakfast",
+              "headline": "Your pictures: Breakfast"
+            },
+            "locators": {
+              "assetUri": "/mundo/noticias-america-latina-23048887",
+              "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-america-latina-23048887"
+            },
+            "summary": "Readers' photos on the theme breakfast.",
+            "timestamp": 1464780136000,
+            "language": "es",
+            "cpsType": "PGL",
+            "id": "urn:bbc:ares::asset:mundo/noticias-america-latina-23048887",
+            "type": "cps"
+          },
+          {
+            "name": "I am a podcast",
+            "uri": "https://www.bbc.com",
+            "type": "link"
+          }
+        ]
+      },
+      {
+        "type": "related-urls",
+        "promos": [
+          {
+            "name": "Related URL Link 1",
+            "uri": "http://www.bbc.co.uk",
+            "type": "link"
+          },
+          {
+            "name": "Related URL Link 2",
+            "uri": "http://www.bbc.co.uk/news",
+            "type": "link"
+          }
+        ]
+      }
+    ]
+  }
+}
