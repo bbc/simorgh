@@ -51,6 +51,13 @@ const insertTimestampBlock = (originalJson, timestampBlock) => {
     } else if (imageOrAresMediaFirst(mainBlocks)) {
       json.content.model.blocks = [
         ...headlineBlocks,
+        mainBlocks[0],
+        timestampBlock,
+        ...mainBlocks.slice(1),
+      ];
+    } else {
+      json.content.model.blocks = [
+        ...headlineBlocks,
         timestampBlock,
         ...mainBlocks,
       ];
