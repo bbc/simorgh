@@ -12,7 +12,7 @@ before_install:
   - sudo apt-get install -y libgconf-2-4
 jobs:
   include:
-    - stage: lhci
+    - stage: test
       name: 'Lighthouse Tests'
       addons:
         chrome: stable
