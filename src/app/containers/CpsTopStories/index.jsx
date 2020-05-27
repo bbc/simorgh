@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, number } from 'prop-types';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
+import { pathOr } from 'ramda';
 
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -8,7 +9,9 @@ import StoryPromo from '../StoryPromo';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 
 const TopStories = ({ content, parentColumns }) => {
-  const { dir } = useContext(ServiceContext);
+  const { dir, translations } = useContext(ServiceContext);
+
+  const title = pathOr('Top Stories', ['topStoriesTitle'], translations);
 
   const singleTransform = promo => (
     <StoryPromo item={promo} dir={dir} displayImage={false} />
@@ -27,7 +30,7 @@ const TopStories = ({ content, parentColumns }) => {
   return (
     <CpsOnwardJourney
       labelId="top-stories-heading"
-      title="Top Stories"
+      title={title}
       content={content}
       parentColumns={parentColumns}
       singleTransform={singleTransform}
