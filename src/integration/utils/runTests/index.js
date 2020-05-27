@@ -63,11 +63,11 @@ const runTests = () =>
     child.on('exit', resolve);
   });
 
-const spinner = ora('Creating test files').start();
+const spinner = ora('Creating test files...').start();
 writeTestFiles();
 
 if (isCI) {
-  spinner.text = 'Running tests';
+  spinner.text = 'Running tests...';
   spinner.stop();
   runTests();
 } else {
@@ -75,17 +75,19 @@ if (isCI) {
     .then(() => {
       if (isDev) return Promise.resolve();
 
-      spinner.text = 'Building app';
+      spinner.text = 'Building app...';
       return buildApp();
     })
     .then(() => {
-      spinner.text = isDev ? 'Starting app in developer mode' : 'Starting app';
+      spinner.text = isDev
+        ? 'Starting app in developer mode...'
+        : 'Starting app...';
       return startApp();
     })
     .then(
       () =>
         new Promise(resolve => {
-          spinner.text = 'Running tests';
+          spinner.text = 'Running tests...';
           setTimeout(() => {
             spinner.stop();
             resolve();
