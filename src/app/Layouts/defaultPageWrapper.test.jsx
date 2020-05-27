@@ -5,10 +5,6 @@ import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { ToggleContext } from '../contexts/ToggleContext';
 import { RequestContext } from '../contexts/RequestContext';
 
-jest.mock('../containers/MPulseBeacon', () => () => (
-  <p>I am the mPulse component</p>
-));
-
 jest.mock('@bbc/psammead-styles/global-styles', () => () => (
   <p>I am the GlobalStyles component</p>
 ));
@@ -23,11 +19,7 @@ describe('defaultPageWrapper', () => {
   };
 
   const defaultToggles = {
-    test: {
-      mpulse: {
-        enabled: false,
-      },
-    },
+    test: {},
   };
 
   shouldMatchSnapshot(

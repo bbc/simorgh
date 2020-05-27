@@ -6,8 +6,10 @@ const legacyAssetUriRegex =
 const variantRegex = '/simp|/trad|/cyr|/lat';
 const articleLocalRegex = 'articles|erthyglau|sgeulachdan';
 const mediaIdRegex = '[a-z0-9]+';
-const mediaServiceIdRegex = 'bbc_[a-z]+_radio|bbc_[a-z]+_tv';
+const radioMasterBrandRegex = 'bbc_[a-z]+_radio';
+const tvMasterBrandRegex = 'bbc_[a-z]+_tv';
 const errorCodeRegex = '404|500';
+const idxRegex = 'persian/afghanistan|ukrainian/ukraine_in_russian';
 
 const getServiceRegex = services => services.join('|');
 
@@ -53,12 +55,17 @@ export const getLegacyAssetRegex = services => {
 
 export const getLiveRadioRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/:serviceId(${mediaServiceIdRegex})/:mediaId(liveRadio):amp(${ampRegex})?`;
+  return `/:service(${serviceRegex})/:serviceId(${radioMasterBrandRegex})/:mediaId(liveRadio):amp(${ampRegex})?`;
 };
 
-export const getRadioAndTVRegex = services => {
+export const getOnDemandRadioRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/:serviceId(${mediaServiceIdRegex})(/programmes)?/:mediaId(${mediaIdRegex}):amp(${ampRegex})?`;
+  return `/:service(${serviceRegex})/:serviceId(${radioMasterBrandRegex})(/programmes)?/:mediaId(${mediaIdRegex}):amp(${ampRegex})?`;
+};
+
+export const getOnDemandTvRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex})/:serviceId(${tvMasterBrandRegex})(/tv_programmes)?/:mediaId(${mediaIdRegex}):amp(${ampRegex})?`;
 };
 
 export const getErrorPageRegex = services => {
@@ -79,4 +86,8 @@ export const getMostReadDataRegex = services => {
 export const getSecondaryColumnDataRegex = services => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/sty-secondary-column:variant(${variantRegex})?.json`;
+};
+
+export const getIdxPageRegex = () => {
+  return `/:idx(${idxRegex}):amp(${ampRegex})?`;
 };

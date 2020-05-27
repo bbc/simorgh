@@ -1334,12 +1334,12 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/gahuza/23307435'],
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: ['/gahuza/23307435'],
+            enabled: true,
           },
         },
         smoke: false,
@@ -2825,11 +2825,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/mundo/deportes-36935058'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/mundo/noticias-23147451'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/mundo/deportes-36935058'],
@@ -2853,7 +2853,7 @@ module.exports = () => ({
             enabled: false,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostReadPage: {
         environments: {
@@ -3447,11 +3447,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/persian/magazine-49281981'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/persian/23104784'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/persian/magazine-49281981'],
@@ -3576,11 +3576,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/pidgin/50913502'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/pidgin/sport-23252855'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/pidgin/sport-23252855'],
@@ -5700,12 +5700,12 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/ukchina/simp/23307454'],
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: ['/ukchina/simp/23307454'],
+            enabled: true,
           },
         },
         smoke: false,
@@ -5835,15 +5835,15 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/ukchina/trad/23307454'],
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: ['/ukchina/trad/23307454'],
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostReadPage: {
         environments: {
