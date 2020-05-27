@@ -9,10 +9,10 @@ const isSmoke = true;
 const baseUrl = 'http://localhost:7080';
 
 /**
- * Suppress iframe errors -> '//div[@id='root']/main/div/div/div/div/iframe' 
+ * Suppress iframe errors -> '//div[@id='root']/main/div/div/div/div/iframe'
  * To be fixed in https://github.com/bbc/bbc-a11y/issues/298
- * 
- * Suppress errors in scrollable navigation for RTL languages -> '//div[@id='root']/header/nav/div/div[1]/div/ul' 
+ *
+ * Suppress errors in scrollable navigation for RTL languages -> '//div[@id='root']/header/nav/div/div[1]/div/ul'
  * To be fixed in https://github.com/bbc/simorgh/issues/5222
  */
 
@@ -30,7 +30,8 @@ const pageTypes = {
     '/iframe', // known issue above with iframes should be revisited once https://github.com/bbc/bbc-a11y/pull/313 gets merged.
     "//div[@id='root']/div/div[1]/main/div[37]/div/div/div", // issue with IDT2 includes
   ],
-  onDemandRadio: [
+  onDemandRadioEpisode: [
+    'iframe',
     "//div[@id='root']/main/div/div/div/iframe",
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
   ],
