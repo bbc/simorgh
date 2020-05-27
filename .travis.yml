@@ -48,7 +48,9 @@ jobs:
       name: 'BBC A11y and Audit CI'
       addons:
         chrome: stable
-      before_install: npm install -g npm-run-all bbc-a11y audit-ci
+      before_install:
+        - sudo apt-get install -y libgconf-2-4
+        - npm install -g npm-run-all bbc-a11y audit-ci
       script:
         - npm run build
         - npm prune --production
