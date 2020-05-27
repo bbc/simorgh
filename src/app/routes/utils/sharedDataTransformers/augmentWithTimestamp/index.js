@@ -3,7 +3,6 @@ import deepClone from 'ramda/src/clone';
 import pathOr from 'ramda/src/pathOr';
 
 const augmentWithTimestamp = jsonRaw => {
-  console.log('jsonRaw:', jsonRaw)
   // safely get deeply nested JSON values
   const firstPublished = pathOr(null, ['metadata', 'firstPublished'], jsonRaw);
   const lastPublished = pathOr(null, ['metadata', 'lastPublished'], jsonRaw);
@@ -35,7 +34,6 @@ export default augmentWithTimestamp;
  */
 const insertTimestampBlock = (originalJson, timestampBlock) => {
   const json = deepClone(originalJson); // make a copy so we don't corrupt the input
-  console.log('json: ', json)
   const { headlineBlocks, mainBlocks } = splitBlocksByHeadline(
     json.content.model.blocks,
   );
