@@ -2825,11 +2825,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/mundo/deportes-36935058'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/mundo/noticias-23147451'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/mundo/deportes-36935058'],
@@ -3447,11 +3447,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/persian/magazine-49281981'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/persian/23104784'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/persian/magazine-49281981'],
@@ -3576,11 +3576,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/pidgin/50913502'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/pidgin/sport-23252855'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/pidgin/sport-23252855'],
