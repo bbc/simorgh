@@ -21,8 +21,7 @@ jobs:
       addons:
         chrome: stable
       script:
-        - npm run build
-        - lhci autorun
+        - npm run build && lhci autorun
     # - stage: test
     #   if: type = push OR (pull_request AND fork = true)
     #   name: 'Unit Tests and storybook e2e'
