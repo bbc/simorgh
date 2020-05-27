@@ -10,6 +10,7 @@ cache:
     - ~/.cache/Cypress
 install: npm ci
 jobs:
+  fast_finish: true
   include:
     - stage: test
       if: type = push OR (pull_request AND fork = true)
