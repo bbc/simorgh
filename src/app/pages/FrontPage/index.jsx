@@ -19,13 +19,15 @@ import {
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
 } from '@bbc/gel-foundations/spacings';
-import SectionLabel from '@bbc/psammead-section-label';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '#containers/FrontPageSection';
 import MetadataContainer from '#containers/Metadata';
-import MostReadContainer from '#containers/MostRead';
+import MostReadContainer, {
+  MostReadSection,
+  MostReadSectionLabel,
+} from '#containers/MostRead';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import AdContainer from '#containers/Ad';
 import LinkedData from '#containers/LinkedData';
@@ -60,11 +62,7 @@ export const StyledFrontPageDiv = styled.div`
   }
 `;
 
-const MostReadSection = styled.section.attrs(() => ({
-  role: 'region',
-  'aria-labelledby': 'Most-Read',
-  'data-e2e': 'most-read',
-}))`
+const FrontPageMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
   margin: 0 auto;
   width: 100%; /* Needed for IE11 */
@@ -80,10 +78,6 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     translations,
     frontPageTitle,
     radioSchedule,
-    service,
-    script,
-    dir,
-    mostRead: { header },
   } = useContext(ServiceContext);
 
   const home = path(['home'], translations);
@@ -107,17 +101,10 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     findIndex(group => group.type === 'useful-links')(groups) > -1;
 
   const MostReadWrapper = ({ children }) => (
-    <MostReadSection>
-      <SectionLabel
-        script={script}
-        labelId="Most-Read"
-        service={service}
-        dir={dir}
-      >
-        {header}
-      </SectionLabel>
+    <FrontPageMostReadSection>
+      <MostReadSectionLabel />
       {children}
-    </MostReadSection>
+    </FrontPageMostReadSection>
   );
 
   MostReadWrapper.propTypes = {

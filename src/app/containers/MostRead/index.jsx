@@ -1,11 +1,39 @@
 import React, { useContext } from 'react';
 import { oneOf, string, elementType, bool } from 'prop-types';
+import styled from 'styled-components';
+import SectionLabel from '@bbc/psammead-section-label';
+import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import Canonical from './Canonical';
 import mostReadShape from './utilities/mostReadShape';
 import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
+
+export const MostReadSection = styled.section.attrs({
+  role: 'region',
+  'aria-labelledby': 'Most-Read',
+  'data-e2e': 'most-read',
+})``;
+
+export const MostReadSectionLabel = () => {
+  const {
+    service,
+    script,
+    dir,
+    mostRead: { header },
+  } = useContext(ServiceContext);
+  return (
+    <SectionLabel
+      script={script}
+      labelId="Most-Read"
+      service={service}
+      dir={dir}
+    >
+      {header}
+    </SectionLabel>
+  );
+};
 
 const MostReadContainer = ({
   mostReadEndpointOverride,
@@ -14,11 +42,13 @@ const MostReadContainer = ({
   size,
   wrapper,
   serverRenderOnAmp,
+  isOnIdxPage,
 }) => {
   const { variant, isAmp } = useContext(RequestContext);
   const {
     service,
     mostRead: { hasMostRead },
+    idxPage,
   } = useContext(ServiceContext);
 
   const { enabled } = useToggle('mostRead');
@@ -27,6 +57,12 @@ const MostReadContainer = ({
 
   // Do not render most read when a toggle is disabled
   if (!mostReadToggleEnabled) {
+    return null;
+  }
+
+  // Do not render most read on idx page when toggle on idx-pages is disabled
+  const idxPageHasMostRead = pathOr(false, ['hasMostRead'], idxPage);
+  if (isOnIdxPage && !idxPageHasMostRead) {
     return null;
   }
 
@@ -57,6 +93,7 @@ MostReadContainer.propTypes = {
   initialData: mostReadShape,
   wrapper: elementType,
   serverRenderOnAmp: bool,
+  isOnIdxPage: bool,
 };
 
 MostReadContainer.defaultProps = {
@@ -66,6 +103,7 @@ MostReadContainer.defaultProps = {
   initialData: undefined,
   wrapper: undefined,
   serverRenderOnAmp: false,
+  isOnIdxPage: false,
 };
 
 export default MostReadContainer;

@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import styled from 'styled-components';
 import { string, node } from 'prop-types';
-import SectionLabel from '@bbc/psammead-section-label';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -32,7 +31,10 @@ import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import LinkedData from '#containers/LinkedData';
-import MostReadContainer from '#containers/MostRead';
+import MostReadContainer, {
+  MostReadSection,
+  MostReadSectionLabel,
+} from '#containers/MostRead';
 import {
   getArticleId,
   getHeadline,
@@ -59,11 +61,7 @@ const StyledMain = styled.main`
   flex-grow: 1;
 `;
 
-const MostReadSection = styled.section.attrs(() => ({
-  role: 'region',
-  'aria-labelledby': 'Most-Read',
-  'data-e2e': 'most-read',
-}))`
+const ArticlePageMostReadSection = styled(MostReadSection)`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     margin: 0 ${GEL_MARGIN_BELOW_400PX} ${GEL_SPACING_TRPL};
   }
@@ -82,13 +80,7 @@ const MostReadSection = styled.section.attrs(() => ({
 `;
 
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
-  const {
-    articleAuthor,
-    service,
-    script,
-    dir,
-    mostRead: { header },
-  } = useContext(ServiceContext);
+  const { articleAuthor } = useContext(ServiceContext);
   const headline = getHeadline(pageData);
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
@@ -96,17 +88,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const aboutTags = getAboutTags(pageData);
 
   const MostReadWrapper = ({ children }) => (
-    <MostReadSection>
-      <SectionLabel
-        script={script}
-        labelId="Most-Read"
-        service={service}
-        dir={dir}
-      >
-        {header}
-      </SectionLabel>
+    <ArticlePageMostReadSection>
+      <MostReadSectionLabel />
       {children}
-    </MostReadSection>
+    </ArticlePageMostReadSection>
   );
 
   MostReadWrapper.propTypes = {
