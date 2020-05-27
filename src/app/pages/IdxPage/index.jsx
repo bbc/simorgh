@@ -1,10 +1,12 @@
 import React from 'react';
+import { StyledMain } from '#lib/pageStyles';
+import IndexHeading from '#containers/IndexHeading';
 
 const IdxPage = () => {
   return (
-    <main role="main">
-      <h1 id="content">IDX Page</h1>
-    </main>
+    <StyledMain>
+      <IndexHeading id="content">IDX Page</IndexHeading>
+    </StyledMain>
   );
 };
 

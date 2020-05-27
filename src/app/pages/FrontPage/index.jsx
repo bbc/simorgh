@@ -16,8 +16,6 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
-  GEL_MARGIN_BELOW_400PX,
-  GEL_MARGIN_ABOVE_400PX,
 } from '@bbc/gel-foundations/spacings';
 import SectionLabel from '@bbc/psammead-section-label';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
@@ -31,13 +29,10 @@ import AdContainer from '#containers/Ad';
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import { PageMarginStyles } from '#lib/pageStyles';
 
 export const StyledFrontPageDiv = styled.div`
-  /* To add GEL Margins */
-  margin: 0 ${GEL_MARGIN_BELOW_400PX};
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin: 0 ${GEL_MARGIN_ABOVE_400PX};
-  }
+  ${PageMarginStyles}
 
   /* To add extra spacing */
   padding-top: ${GEL_SPACING};
