@@ -12,6 +12,16 @@ before_install:
   - sudo apt-get install -y libgconf-2-4
 jobs:
   include:
+    - stage: lhci
+      name: 'Lighthouse Tests'
+      addons:
+        chrome: stable
+      before_install:
+        - npm install -g @lhci/cli@0.4.x
+      install: npm ci
+      script:
+        - npm run build
+        - lhci autorun
     - stage: test
       if: type = push OR (pull_request AND fork = true)
       name: 'Unit Tests and storybook e2e'
