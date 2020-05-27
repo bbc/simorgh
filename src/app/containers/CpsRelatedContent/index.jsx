@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, number } from 'prop-types';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
+import { pathOr } from 'ramda';
 
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -10,6 +11,8 @@ import CpsOnwardJourney from '../CpsOnwardJourney';
 
 const CpsRelatedContent = ({ content, parentColumns }) => {
   const { dir, translations } = useContext(ServiceContext);
+
+  const title = pathOr('Related Content', ['relatedContent'], translations);
 
   const singleTransform = promo => <StoryPromo item={promo} dir={dir} />;
 
@@ -51,7 +54,7 @@ const CpsRelatedContent = ({ content, parentColumns }) => {
   return (
     <CpsOnwardJourney
       labelId="related-content-heading"
-      title={translations.relatedContent}
+      title={title}
       content={content}
       parentColumns={parentColumns}
       singleTransform={singleTransform}
