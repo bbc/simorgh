@@ -11,6 +11,7 @@ cache:
 before_install:
   - sudo apt-get install -y libgconf-2-4
   - npm install -g @lhci/cli@0.4.x
+script: echo "npm test temporarily disabled"
 jobs:
   include:
     - stage: test
