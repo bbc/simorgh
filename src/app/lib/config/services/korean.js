@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: '광고',
     },
     lang: `ko`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -170,7 +171,7 @@ export const service = {
         },
       },
       topStoriesTitle: '주요뉴스',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: '이 시간 이슈',
     },
     brandSVG,
     mostRead: {

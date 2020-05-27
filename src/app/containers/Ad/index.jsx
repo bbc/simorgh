@@ -8,7 +8,7 @@ import Canonical from './Canonical';
 
 const AdContainer = () => {
   const { isAmp } = useContext(RequestContext);
-  const { service, ads } = useContext(ServiceContext);
+  const { ads } = useContext(ServiceContext);
   const hasAds = pathOr(false, ['hasAds'], ads);
   const { enabled: adsEnabled } = useToggle('ads');
 
@@ -17,7 +17,7 @@ const AdContainer = () => {
   }
 
   const Ad = isAmp ? Amp : Canonical;
-  return <Ad service={service} />;
+  return <Ad />;
 };
 
 export default AdContainer;
