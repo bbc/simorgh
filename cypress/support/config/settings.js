@@ -114,15 +114,27 @@ module.exports = () => ({
       photoGalleryPage: {
         environments: {
           live: {
-            paths: ['/afaanoromoo/oduu-50716382'],
-            enabled: false,
+            paths: [
+              '/pidgin/tori-49221071',
+              '/mundo/deportes-36935058', // PGL LTR
+              '/persian/magazine-49281981', // PGL RTL
+            ],
+            enabled: true,
           },
           test: {
-            paths: ['/afaanoromoo/oduu-23141286'],
-            enabled: false,
+            paths: [
+              '/pidgin/media-23133346',
+              '/mundo/23100337', // PGL LRT
+              '/persian/world-23080171', // PGL RTL
+            ],
+            enabled: true,
           },
           local: {
-            paths: ['/afaanoromoo/oduu-41217768'],
+            paths: [
+              '/pidgin/tori-49221071',
+              '/mundo/deportes-36935058', // PGL LTR
+              '/persian/magazine-49281981', // PGL RTL
+            ],
             enabled: true,
           },
         },
