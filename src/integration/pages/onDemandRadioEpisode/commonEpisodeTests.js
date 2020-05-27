@@ -27,7 +27,7 @@ export default () => {
     const imageEl = document.querySelector('main amp-img, main img');
 
     expect(imageEl).toBeInTheDocument();
-    expect(imageEl).toBeTruthy();
+    expect(imageEl.getAttribute('src')).toBeTruthy();
     expect(imageEl.getAttribute('src')).toMatchSnapshot();
   });
 
