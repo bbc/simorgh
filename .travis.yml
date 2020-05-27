@@ -34,14 +34,15 @@ jobs:
     - stage: test
       if: type = push OR (pull_request AND fork = true)
       name: 'Production CI tests'
-      before_install: sudo apt-get install -y libgconf-2-4
+      before_install:
+        - sudo apt-get install -y libgconf-2-4
+        - npm install -g npm-run-all puppeteer cypress@3.4.1
       addons:
         chrome: stable
-      before_install: npm install -g npm-run-all puppeteer cypress@3.4.1
       script:
         - npm run build
         - npm prune --production
-        - CYPRESS_SKIP_EU=true npm run start && run-p cypress:ci test:puppeteer 
+        - CYPRESS_SKIP_EU=true npm run start && run-p cypress:ci test:puppeteer
     - stage: test
       if: type = push OR (pull_request AND fork = true)
       name: 'BBC A11y and Audit CI'
