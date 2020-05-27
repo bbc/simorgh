@@ -14,19 +14,45 @@ jobs:
   include:
     - stage: test
       if: type = push OR (pull_request AND fork = true)
-      name: 'Unit Tests and storybook e2e'
+      name: 'Linting and Deps'
       script:
-        - npm run test
+        - npm run test:lint
+        - npm run test:dependencies
+    - stage: test
+      if: type = push OR (pull_request AND fork = true)
+      name: 'Unit Tests'
+      script:
+        - npm run test:unit
+    - stage: test
+      if: type = push OR (pull_request AND fork = true)
+      name: 'Integration and AMP'
+      before_install: npm install -g npm-run-all
+      script:
+        - npm run build -- --hide-modules --colors
+        - run-p --race start amp:validate
+        - run-p --race start test:integration:ci
     - stage: test
       if: type = push OR (pull_request AND fork = true)
       name: 'Production CI tests'
-      before_install:
-        - sudo apt-get install -y libgconf-2-4
+      before_install: sudo apt-get install -y libgconf-2-4
       addons:
         chrome: stable
+      before_install: npm install -g npm-run-all puppeteer cypress@3.4.1
       script:
         - npm run build
         - npm prune --production
-        - CYPRESS_SKIP_EU=true npm run test:ci
+        - CYPRESS_SKIP_EU=true npm run start && run-p cypress:ci test:puppeteer 
+    - stage: test
+      if: type = push OR (pull_request AND fork = true)
+      name: 'BBC A11y and Audit CI'
+      addons:
+        chrome: stable
+      before_install: npm install -g npm-run-all bbc-a11y audit-ci
+      script:
+        - npm run build
+        - npm prune --production
+        - npm run start
+        - run-p bbcA11y:ci lighthouse && audit-ci --low --whitelist http-proxy markdown-to-jsx
+
 notifications:
   email: false
