@@ -24,6 +24,6 @@ export const template = `
 %cB%c %cB%c %cC%c %c NEWS
 %c
 %cHi there! Do you want to help build a fast and accessible web experience used
-by over 300 million people around the world each month? We're hiring people for
+by over 500 million people around the world each month? We're hiring people for
 all sorts of roles. Head on over to %chttps://bbc.github.io/join-us/%c to find out more!
 `;
