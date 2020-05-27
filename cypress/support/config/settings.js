@@ -5700,11 +5700,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/ukchina/simp/23307454'],
             enabled: true,
           },
           local: {
-            paths: [],
+            paths: ['/ukchina/simp/23307454'],
             enabled: true,
           },
         },
@@ -5835,11 +5835,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/ukchina/trad/23307454'],
             enabled: true,
           },
           local: {
-            paths: [],
+            paths: ['/ukchina/trad/23307454'],
             enabled: true,
           },
         },
