@@ -10,7 +10,7 @@ const stories = storiesOf('Pages|Most Read Page', module);
 [
   {
     service: 'pidgin',
-    variant: 'null',
+    variant: 'default',
     pageData: pidginMostReadData,
   },
   {
