@@ -140,7 +140,7 @@ pipeline {
           }
           steps {
             setupCodeCoverage()
-            withCredentials([string(credentialsId: 'simorgh-cc-test-reporter-id', variable: 'CC_TEST_REPORTER_ID'), string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
+            withCredentials([string(credentialsId: 'simorgh-cc-test-reporter-id', variable: 'CC_TEST_REPORTER_ID')]) {
               runDevelopmentTests()
               sh './cc-test-reporter after-build -t lcov --debug --exit-code 0'
 
@@ -195,7 +195,7 @@ pipeline {
           }
           steps {
             setupCodeCoverage()
-            withCredentials([string(credentialsId: 'simorgh-cc-test-reporter-id', variable: 'CC_TEST_REPORTER_ID'), string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
+            withCredentials([string(credentialsId: 'simorgh-cc-test-reporter-id', variable: 'CC_TEST_REPORTER_ID')]) {
               runDevelopmentTests()
               sh './cc-test-reporter after-build -t lcov --debug --exit-code 0'
             }
