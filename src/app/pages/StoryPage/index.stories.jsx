@@ -31,7 +31,6 @@ styStories.addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
           status={200}
           pageData={pageData}
           service={service}
-          mostReadEndpointOverride="./data/mundo/mostRead/index.json"
         />
       </BrowserRouter>
     );

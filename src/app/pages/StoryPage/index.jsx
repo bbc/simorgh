@@ -39,7 +39,7 @@ import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
+const StoryPage = ({ pageData }) => {
   const {
     dir,
     mostRead: { header },
@@ -270,7 +270,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           </ResponsiveComponentWrapper>
           <ComponentWrapper>
             <MostReadContainer
-              mostReadEndpointOverride={mostReadEndpointOverride}
               columnLayout="oneColumn"
               size="small"
               wrapper={MostReadWrapper}
