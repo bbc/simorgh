@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP zhongwen frontPage A11y I can see the skip to content link 1`] = `"跳過此內容"`;
+
+exports[`AMP zhongwen frontPage AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+  "policy": Object {
+    "default": Object {
+      "timeout": Object {
+        "fallbackAction": "reject",
+        "seconds": 0,
+      },
+      "waitFor": Object {
+        "user-consent": Array [],
+      },
+    },
+  },
+}
+`;
+
+exports[`AMP zhongwen frontPage AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+  },
+}
+`;
+
+exports[`AMP zhongwen frontPage Analytics ATI 1`] = `
+Object {
+  "requests": Object {
+    "base": "https://logws1363.ati-host.net?",
+    "pageview": "\${base}s=598343&s2=38&p=zhongwentrad.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:426d2030-e2dc-5202-e050-380a4e80578e]&x2=[amp]&x3=[news-zhongwen]&x4=[zh-Hant]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[主頁+-+BBC+News+中文]&x11=[2016-11-29T14:34:24.000Z]&x12=[2019-09-08T18:37:43.000Z]&ref=\${documentReferrer}",
+  },
+  "transport": Object {
+    "beacon": false,
+    "image": true,
+    "xhrpost": false,
+  },
+  "triggers": Object {
+    "trackPageview": Object {
+      "on": "visible",
+      "request": "pageview",
+    },
+  },
+}
+`;
+
+exports[`AMP zhongwen frontPage Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/zhongwen"`;
+
+exports[`AMP zhongwen frontPage Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC對外部網站內容不負責任。 閱讀了解我們對待外部鏈接的做法。"`;
+
+exports[`AMP zhongwen frontPage Header I can see the branding 1`] = `"BBC News, 中文"`;
+
+exports[`AMP zhongwen frontPage I can see Index Alsos 1`] = `"更多相關內容"`;
+
+exports[`AMP zhongwen frontPage I can see sections 1`] = `"Top story - Zhongwen"`;
+
+exports[`AMP zhongwen frontPage I can see sections 2`] = `"必看"`;
+
+exports[`AMP zhongwen frontPage I can see sections 3`] = `"新聞時事 趨勢動態"`;
+
+exports[`AMP zhongwen frontPage I can see sections 4`] = `"知識資訊 觀點角度"`;
+
+exports[`AMP zhongwen frontPage I can see sections 5`] = `"播客精選瀏覽全部"`;
+
+exports[`AMP zhongwen frontPage I can see sections 6`] = `"BBC學院瀏覽全部"`;
+
+exports[`AMP zhongwen frontPage I can see sections 7`] = `"瀏覽協助"`;
+
+exports[`AMP zhongwen frontPage I can see the headline 1`] = `"BBC News, 中文 - 主頁"`;
+
+exports[`AMP zhongwen frontPage SEO Canonical link 1`] = `"http://localhost:7080/zhongwen/trad"`;
+
+exports[`AMP zhongwen frontPage SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`AMP zhongwen frontPage SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`AMP zhongwen frontPage SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP zhongwen frontPage SEO Heading level 1 1`] = `"BBC News, 中文 - 主頁"`;
+
+exports[`AMP zhongwen frontPage SEO Lang attribute 1`] = `"zh-Hant"`;
+
+exports[`AMP zhongwen frontPage SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/zhongwen/trad",
+    "@type": "WebPage",
+    "name": "主頁",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png",
+      "width": 1024,
+    },
+    "name": "BBC News 中文",
+    "publishingPrinciples": "https://www.bbc.com/zhongwen/trad/institutional-51359584",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png",
+  "url": "http://localhost:7080/zhongwen/trad",
+}
+`;
+
+exports[`AMP zhongwen frontPage SEO OG description 1`] = `"BBC中文網是面向全球華人並每日更新的新聞資訊網站，提供客觀及時和凖確的內容以及對新聞故事的深入分析和評論。我們也提供繁體版臉書。"`;
+
+exports[`AMP zhongwen frontPage SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"`;
+
+exports[`AMP zhongwen frontPage SEO OG image alt 1`] = `"BBC News 中文"`;
+
+exports[`AMP zhongwen frontPage SEO OG locale 1`] = `"zh-hant"`;
+
+exports[`AMP zhongwen frontPage SEO OG site name 1`] = `"BBC News 中文"`;
+
+exports[`AMP zhongwen frontPage SEO OG title 1`] = `"主頁 - BBC News 中文"`;
+
+exports[`AMP zhongwen frontPage SEO OG type 1`] = `"website"`;
+
+exports[`AMP zhongwen frontPage SEO OG url 1`] = `"http://localhost:7080/zhongwen/trad"`;
+
+exports[`AMP zhongwen frontPage SEO Page title 1`] = `"主頁 - BBC News 中文"`;
+
+exports[`AMP zhongwen frontPage SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`AMP zhongwen frontPage SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP zhongwen frontPage SEO Twitter creator 1`] = `"@bbcchinese"`;
+
+exports[`AMP zhongwen frontPage SEO Twitter description 1`] = `"BBC中文網是面向全球華人並每日更新的新聞資訊網站，提供客觀及時和凖確的內容以及對新聞故事的深入分析和評論。我們也提供繁體版臉書。"`;
+
+exports[`AMP zhongwen frontPage SEO Twitter image alt 1`] = `"BBC News 中文"`;
+
+exports[`AMP zhongwen frontPage SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"`;
+
+exports[`AMP zhongwen frontPage SEO Twitter site 1`] = `"@bbcchinese"`;
+
+exports[`AMP zhongwen frontPage SEO Twitter title 1`] = `"主頁 - BBC News 中文"`;
+
+exports[`AMP zhongwen frontPage Story Promo I can see a headline 1`] = `"TRAD - 香港示威者為何希望美國會通過人權民主法案"`;
+
+exports[`AMP zhongwen frontPage Story Promo I can see an image 1`] = `
+<amp-img
+  alt="示威者星期日下午開始在中環地鐵站口縱火，地鐵站兩旁是中環名牌商業購物區。"
+  attribution="EPA"
+  height="576"
+  layout="responsive"
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/5195/production/_108658802_hi056347143_01.jpg"
+  width="1024"
+/>
+`;

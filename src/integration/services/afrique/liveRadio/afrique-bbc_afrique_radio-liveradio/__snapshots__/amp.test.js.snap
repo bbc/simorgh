@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP afrique liveRadio A11y I can see the skip to content link 1`] = `"Aller au contenu"`;
+
+exports[`AMP afrique liveRadio AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+  "policy": Object {
+    "default": Object {
+      "timeout": Object {
+        "fallbackAction": "reject",
+        "seconds": 0,
+      },
+      "waitFor": Object {
+        "user-consent": Array [],
+      },
+    },
+  },
+}
+`;
+
+exports[`AMP afrique liveRadio AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+  },
+}
+`;
+
+exports[`AMP afrique liveRadio Analytics ATI 1`] = `
+Object {
+  "requests": Object {
+    "base": "https://logws1363.ati-host.net?",
+    "pageview": "\${base}s=598343&s2=3&p=afrique.bbc_afrique_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:ares:ws_media:live:bbc_afrique_radio]&x2=[amp]&x3=[news-afrique]&x4=[fr]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[BBC+Afrique+Radio+-+BBC+News+Afrique]&ref=\${documentReferrer}",
+  },
+  "transport": Object {
+    "beacon": false,
+    "image": true,
+    "xhrpost": false,
+  },
+  "triggers": Object {
+    "trackPageview": Object {
+      "on": "visible",
+      "request": "pageview",
+    },
+  },
+}
+`;
+
+exports[`AMP afrique liveRadio Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/afrique"`;
+
+exports[`AMP afrique liveRadio Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC n'est pas responsable du contenu des sites externes. Découvrez notre approche en matière de liens externes."`;
+
+exports[`AMP afrique liveRadio Header I can see the branding 1`] = `"BBC News, Afrique"`;
+
+exports[`AMP afrique liveRadio I can see the headline 1`] = `"BBC Afrique Radio"`;
+
+exports[`AMP afrique liveRadio I can see the summary 1`] = `"Infos, musique et sports"`;
+
+exports[`AMP afrique liveRadio Media player embed A11y I can read the media player title 1`] = `"Lecteur audio"`;
+
+exports[`AMP afrique liveRadio Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr/amp?morph_env=live"`;
+
+exports[`AMP afrique liveRadio SEO Canonical link 1`] = `"http://localhost:7080/afrique/bbc_afrique_radio/liveradio"`;
+
+exports[`AMP afrique liveRadio SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`AMP afrique liveRadio SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`AMP afrique liveRadio SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP afrique liveRadio SEO Heading level 1 1`] = `"BBC Afrique Radio"`;
+
+exports[`AMP afrique liveRadio SEO Lang attribute 1`] = `"fr"`;
+
+exports[`AMP afrique liveRadio SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "RadioChannel",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/afrique/bbc_afrique_radio/liveradio",
+    "@type": "WebPage",
+    "name": "BBC Afrique Radio",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png",
+      "width": 1024,
+    },
+    "name": "BBC News Afrique",
+    "publishingPrinciples": "https://www.bbc.com/afrique/institutionelles-49283281",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png",
+  "url": "http://localhost:7080/afrique/bbc_afrique_radio/liveradio",
+}
+`;
+
+exports[`AMP afrique liveRadio SEO OG description 1`] = `"Infos, musique et sports"`;
+
+exports[`AMP afrique liveRadio SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png"`;
+
+exports[`AMP afrique liveRadio SEO OG image alt 1`] = `"BBC News Afrique"`;
+
+exports[`AMP afrique liveRadio SEO OG locale 1`] = `"fr"`;
+
+exports[`AMP afrique liveRadio SEO OG site name 1`] = `"BBC News Afrique"`;
+
+exports[`AMP afrique liveRadio SEO OG title 1`] = `"BBC Afrique Radio - BBC News Afrique"`;
+
+exports[`AMP afrique liveRadio SEO OG type 1`] = `"website"`;
+
+exports[`AMP afrique liveRadio SEO OG url 1`] = `"http://localhost:7080/afrique/bbc_afrique_radio/liveradio"`;
+
+exports[`AMP afrique liveRadio SEO Page title 1`] = `"BBC Afrique Radio - BBC News Afrique"`;
+
+exports[`AMP afrique liveRadio SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`AMP afrique liveRadio SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP afrique liveRadio SEO Twitter creator 1`] = `"@bbcafrique"`;
+
+exports[`AMP afrique liveRadio SEO Twitter description 1`] = `"Infos, musique et sports"`;
+
+exports[`AMP afrique liveRadio SEO Twitter image alt 1`] = `"BBC News Afrique"`;
+
+exports[`AMP afrique liveRadio SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png"`;
+
+exports[`AMP afrique liveRadio SEO Twitter site 1`] = `"@bbcafrique"`;
+
+exports[`AMP afrique liveRadio SEO Twitter title 1`] = `"BBC Afrique Radio - BBC News Afrique"`;

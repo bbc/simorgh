@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical gujarati frontPage A11y I can see the skip to content link 1`] = `"કન્ટેન્ટ પર જાવ"`;
+
+exports[`Canonical gujarati frontPage Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=50&amp;p=gujarati.page&amp;x1=[urn:bbc:cps:527bce4b-fe2a-ea99-e050-17ac80454dc1]&amp;x2=[responsive]&amp;x3=[news-gujarati]&amp;x4=[gu]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[સમાચાર+-+BBC+News+ગુજરાતી]&amp;x11=[1970-01-18T08:10:01.909Z]&amp;x12=[1970-01-19T02:08:51.305Z]\\"/>"`;
+
+exports[`Canonical gujarati frontPage Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gujarati"`;
+
+exports[`Canonical gujarati frontPage Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. બહારની વેબસાઇટ્સની સામગ્રી માટે બીબીસી જવાબદાર નથી. બહારની વેબસાઇટ્સની લિંક આપવા અંગેની અમારી નીતિ વિશે વાંચો"`;
+
+exports[`Canonical gujarati frontPage Header I can see the branding 1`] = `"BBC News, ગુજરાતી"`;
+
+exports[`Canonical gujarati frontPage I can see Index Alsos 1`] = `"સંબંધિત સમાચાર"`;
+
+exports[`Canonical gujarati frontPage I can see sections 1`] = `"નવાજૂની "`;
+
+exports[`Canonical gujarati frontPage I can see sections 2`] = `"આંતરરાષ્ટ્રીય સમાચાર"`;
+
+exports[`Canonical gujarati frontPage I can see sections 3`] = `"બીબીસી વિશેષ"`;
+
+exports[`Canonical gujarati frontPage I can see sections 4`] = `"મજાની વાત"`;
+
+exports[`Canonical gujarati frontPage I can see sections 5`] = `" પરિપ્રેક્ષ્ય "`;
+
+exports[`Canonical gujarati frontPage I can see sections 6`] = `"હૃદયસ્પર્શી "`;
+
+exports[`Canonical gujarati frontPage I can see sections 7`] = `"ટીવી બુલેટિન"`;
+
+exports[`Canonical gujarati frontPage I can see the headline 1`] = `"BBC News, ગુજરાતી - સમાચાર"`;
+
+exports[`Canonical gujarati frontPage SEO Canonical link 1`] = `"http://localhost:7080/gujarati"`;
+
+exports[`Canonical gujarati frontPage SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical gujarati frontPage SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical gujarati frontPage SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical gujarati frontPage SEO Heading level 1 1`] = `"BBC News, ગુજરાતી - સમાચાર"`;
+
+exports[`Canonical gujarati frontPage SEO Lang attribute 1`] = `"gu"`;
+
+exports[`Canonical gujarati frontPage SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gujarati.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/gujarati",
+    "@type": "WebPage",
+    "name": "સમાચાર",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gujarati.png",
+      "width": 1024,
+    },
+    "name": "BBC News ગુજરાતી",
+    "publishingPrinciples": "https://www.bbc.com/gujarati/institutional-50409883",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/gujarati.png",
+  "url": "http://localhost:7080/gujarati",
+}
+`;
+
+exports[`Canonical gujarati frontPage SEO OG description 1`] = `"બ્રેકિંગ ન્યુઝ, હવામાન, વેપાર, મનોરંજન, ગુજરાત, ભારત અને વિશ્વના સમાચાર, વિશ્લેષણ, BBCના ખાસ અહેવાલો, ટીવી બુલેટિન, વિડિઓ અને ફોટો ગેલેરી."`;
+
+exports[`Canonical gujarati frontPage SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/gujarati.png"`;
+
+exports[`Canonical gujarati frontPage SEO OG image alt 1`] = `"BBC News ગુજરાતી"`;
+
+exports[`Canonical gujarati frontPage SEO OG locale 1`] = `"gu-IN"`;
+
+exports[`Canonical gujarati frontPage SEO OG site name 1`] = `"BBC News ગુજરાતી"`;
+
+exports[`Canonical gujarati frontPage SEO OG title 1`] = `"સમાચાર - BBC News ગુજરાતી"`;
+
+exports[`Canonical gujarati frontPage SEO OG type 1`] = `"website"`;
+
+exports[`Canonical gujarati frontPage SEO OG url 1`] = `"http://localhost:7080/gujarati"`;
+
+exports[`Canonical gujarati frontPage SEO Page title 1`] = `"સમાચાર - BBC News ગુજરાતી"`;
+
+exports[`Canonical gujarati frontPage SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical gujarati frontPage SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical gujarati frontPage SEO Twitter creator 1`] = `"@bbcnewsgujarati"`;
+
+exports[`Canonical gujarati frontPage SEO Twitter description 1`] = `"બ્રેકિંગ ન્યુઝ, હવામાન, વેપાર, મનોરંજન, ગુજરાત, ભારત અને વિશ્વના સમાચાર, વિશ્લેષણ, BBCના ખાસ અહેવાલો, ટીવી બુલેટિન, વિડિઓ અને ફોટો ગેલેરી."`;
+
+exports[`Canonical gujarati frontPage SEO Twitter image alt 1`] = `"BBC News ગુજરાતી"`;
+
+exports[`Canonical gujarati frontPage SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/gujarati.png"`;
+
+exports[`Canonical gujarati frontPage SEO Twitter site 1`] = `"@bbcnewsgujarati"`;
+
+exports[`Canonical gujarati frontPage SEO Twitter title 1`] = `"સમાચાર - BBC News ગુજરાતી"`;
+
+exports[`Canonical gujarati frontPage Story Promo I can see a headline 1`] = `"ADC બૅન્ક બદનક્ષી કેસ : અમદાવાદની અદાલતે રાહુલ ગાંધીના જામીન મંજૂર કર્યા"`;
+
+exports[`Canonical gujarati frontPage Story Promo I can see an image 1`] = `
+<img
+  alt="રાહુલ ગાંધી"
+  class="StyledImg-sc-7vx2mr-0 hIxkbt"
+  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/13AA0/production/_107844508_gettyimages-1145824335.jpg"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/13AA0/production/_107844508_gettyimages-1145824335.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/13AA0/production/_107844508_gettyimages-1145824335.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/13AA0/production/_107844508_gettyimages-1145824335.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/13AA0/production/_107844508_gettyimages-1145824335.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/13AA0/production/_107844508_gettyimages-1145824335.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/13AA0/production/_107844508_gettyimages-1145824335.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/13AA0/production/_107844508_gettyimages-1145824335.jpg 660w"
+  width="976"
+/>
+`;

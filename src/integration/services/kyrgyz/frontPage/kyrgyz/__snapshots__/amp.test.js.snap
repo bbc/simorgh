@@ -1,0 +1,232 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP kyrgyz frontPage A11y I can see the skip to content link 1`] = `"Сайтка өтүү"`;
+
+exports[`AMP kyrgyz frontPage AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+  "policy": Object {
+    "default": Object {
+      "timeout": Object {
+        "fallbackAction": "reject",
+        "seconds": 0,
+      },
+      "waitFor": Object {
+        "user-consent": Array [],
+      },
+    },
+  },
+}
+`;
+
+exports[`AMP kyrgyz frontPage AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+  },
+}
+`;
+
+exports[`AMP kyrgyz frontPage Analytics ATI 1`] = `
+Object {
+  "requests": Object {
+    "base": "https://logws1363.ati-host.net?",
+    "pageview": "\${base}s=598343&s2=58&p=kyrgyz.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:4028e9a1-9e59-445c-e050-380a4e8046dc]&x2=[amp]&x3=[news-kyrgyz]&x4=[ky]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[Башталгыч+бет+-+BBC+News+Кыргыз+Кызматы]&x11=[1970-01-18T02:32:07.973Z]&x12=[1970-01-19T02:08:51.312Z]&ref=\${documentReferrer}",
+  },
+  "transport": Object {
+    "beacon": false,
+    "image": true,
+    "xhrpost": false,
+  },
+  "triggers": Object {
+    "trackPageview": Object {
+      "on": "visible",
+      "request": "pageview",
+    },
+  },
+}
+`;
+
+exports[`AMP kyrgyz frontPage Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
+
+exports[`AMP kyrgyz frontPage Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
+
+exports[`AMP kyrgyz frontPage Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
+
+exports[`AMP kyrgyz frontPage I can see Index Alsos 1`] = `"Тема боюнча башка макалалар"`;
+
+exports[`AMP kyrgyz frontPage I can see sections 1`] = `"Top Story – Kyrgyz"`;
+
+exports[`AMP kyrgyz frontPage I can see sections 2`] = `"Видео/АудиоБаарын көрүү"`;
+
+exports[`AMP kyrgyz frontPage I can see sections 3`] = `"Би-Би-Си \\"САПАР\\"Баарын көрүү"`;
+
+exports[`AMP kyrgyz frontPage I can see sections 4`] = `"ДүйнөБаарын көрүү"`;
+
+exports[`AMP kyrgyz frontPage I can see sections 5`] = `"КыргызстанБаарын көрүү"`;
+
+exports[`AMP kyrgyz frontPage I can see sections 6`] = `"ЭкономикаБаарын көрүү"`;
+
+exports[`AMP kyrgyz frontPage I can see sections 7`] = `"КоомБаарын көрүү"`;
+
+exports[`AMP kyrgyz frontPage I can see sections 8`] = `"Тарых Маданият ИлимБаарын көрүү"`;
+
+exports[`AMP kyrgyz frontPage I can see sections 9`] = `"ЖурналБаарын көрүү"`;
+
+exports[`AMP kyrgyz frontPage I can see sections 10`] = `"Көз ирмемБаарын көрүү"`;
+
+exports[`AMP kyrgyz frontPage I can see sections 11`] = `"Би-Би-Си ТВ жаңылыктары"`;
+
+exports[`AMP kyrgyz frontPage I can see sections 12`] = `"Редактордун тандоосуБаарын көрүү"`;
+
+exports[`AMP kyrgyz frontPage I can see sections 13`] = `"Би-Би-Си АкадемиясыБаарын көрүү"`;
+
+exports[`AMP kyrgyz frontPage I can see the headline 1`] = `"BBC News, Кыргыз КызMATы - Башталгыч бет"`;
+
+exports[`AMP kyrgyz frontPage SEO Canonical link 1`] = `"http://localhost:7080/kyrgyz"`;
+
+exports[`AMP kyrgyz frontPage SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`AMP kyrgyz frontPage SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`AMP kyrgyz frontPage SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP kyrgyz frontPage SEO Heading level 1 1`] = `"BBC News, Кыргыз КызMATы - Башталгыч бет"`;
+
+exports[`AMP kyrgyz frontPage SEO Lang attribute 1`] = `"ky"`;
+
+exports[`AMP kyrgyz frontPage SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/kyrgyz",
+    "@type": "WebPage",
+    "name": "Башталгыч бет",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+      "width": 1024,
+    },
+    "name": "BBC News Кыргыз Кызматы",
+    "publishingPrinciples": "https://www.bbc.com/kyrgyz/institutional-49677275",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+  "url": "http://localhost:7080/kyrgyz",
+}
+`;
+
+exports[`AMP kyrgyz frontPage SEO OG description 1`] = `"Дүйнөлүк кабарлар, саясат, экономика, спорт, Кыргызстандагы урунттуу окуялар, аналитика, жаңылыктар, соңку кабарлар, маектер. Би-Би-Си Кыргыз кызматынын сайтынан окуңуз."`;
+
+exports[`AMP kyrgyz frontPage SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png"`;
+
+exports[`AMP kyrgyz frontPage SEO OG image alt 1`] = `"BBC News Кыргыз КызMATы"`;
+
+exports[`AMP kyrgyz frontPage SEO OG locale 1`] = `"ky-KG"`;
+
+exports[`AMP kyrgyz frontPage SEO OG site name 1`] = `"BBC News Кыргыз Кызматы"`;
+
+exports[`AMP kyrgyz frontPage SEO OG title 1`] = `"Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы"`;
+
+exports[`AMP kyrgyz frontPage SEO OG type 1`] = `"website"`;
+
+exports[`AMP kyrgyz frontPage SEO OG url 1`] = `"http://localhost:7080/kyrgyz"`;
+
+exports[`AMP kyrgyz frontPage SEO Page title 1`] = `"Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы"`;
+
+exports[`AMP kyrgyz frontPage SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`AMP kyrgyz frontPage SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP kyrgyz frontPage SEO Twitter creator 1`] = `"@bbckyrgyz"`;
+
+exports[`AMP kyrgyz frontPage SEO Twitter description 1`] = `"Дүйнөлүк кабарлар, саясат, экономика, спорт, Кыргызстандагы урунттуу окуялар, аналитика, жаңылыктар, соңку кабарлар, маектер. Би-Би-Си Кыргыз кызматынын сайтынан окуңуз."`;
+
+exports[`AMP kyrgyz frontPage SEO Twitter image alt 1`] = `"BBC News Кыргыз КызMATы"`;
+
+exports[`AMP kyrgyz frontPage SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png"`;
+
+exports[`AMP kyrgyz frontPage SEO Twitter site 1`] = `"@bbckyrgyz"`;
+
+exports[`AMP kyrgyz frontPage SEO Twitter title 1`] = `"Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы"`;
+
+exports[`AMP kyrgyz frontPage Story Promo I can see a headline 1`] = `"\\"Атамбаевдин репрессиясы\\": \\"Ата Мекен\\" президентке кайрылды"`;
+
+exports[`AMP kyrgyz frontPage Story Promo I can see an image 1`] = `
+<amp-img
+  alt="\\"Ата Мекен\\" партиясы президентке кайрылды"
+  attribution="Social media"
+  height="549"
+  layout="responsive"
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/3FEC/production/_107846361_ae419ccd-41fd-4dd7-8390-3bd82e70cda2.jpg"
+  width="976"
+/>
+`;

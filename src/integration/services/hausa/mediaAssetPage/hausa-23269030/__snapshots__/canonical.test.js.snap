@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical hausa mediaAssetPage A11y I can see the skip to content link 1`] = `"Tsallaka zuwa abubuwan da ke ciki"`;
+
+exports[`Canonical hausa mediaAssetPage Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=51&amp;p=hausa.media_asset.23269030.page&amp;x1=[urn:bbc:cps:6df6257b-2fdd-0344-9382-bad1fe40e0b2]&amp;x2=[responsive]&amp;x3=[news-hausa]&amp;x4=[ha]&amp;x7=[article-media-asset]&amp;x8=[simorgh-nojs]&amp;x9=[Lafiya+Zinariya:+Me+ke+sa+mata+kunzugu+da+tsumma+ko+safa?+-+BBC+News+Hausa]&amp;x11=[2020-03-02T16:25:03.000Z]&amp;x12=[2020-03-02T16:25:03.000Z]\\"/>"`;
+
+exports[`Canonical hausa mediaAssetPage Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hausa"`;
+
+exports[`Canonical hausa mediaAssetPage Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
+
+exports[`Canonical hausa mediaAssetPage Header I can see the branding 1`] = `"BBC News, Hausa"`;
+
+exports[`Canonical hausa mediaAssetPage I can see the bulleted list item 1`] = `"Lafiya Zinariya: Jinin haila a tsakanin 'yan mataLafiya Zinariya: Dalilan da ke sa wasu masu jego yunkurin raunata kansu ko jariransuLafiya Zinariya: Ko daukewar jinin al'ada kan shafi jima'in ma'aurata?Lafiya Zinariya: Me ke "`;
+
+exports[`Canonical hausa mediaAssetPage I can see the headline 1`] = `"Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?"`;
+
+exports[`Canonical hausa mediaAssetPage I can see the timestamp 1`] = `"2 Maris 2020"`;
+
+exports[`Canonical hausa mediaAssetPage Media player embed A11y I can read the media player title 1`] = `"Media player"`;
+
+exports[`Canonical hausa mediaAssetPage Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/hausa/23269030/p01k6msp/ha"`;
+
+exports[`Canonical hausa mediaAssetPage SEO Canonical link 1`] = `"http://localhost:7080/hausa/23269030"`;
+
+exports[`Canonical hausa mediaAssetPage SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical hausa mediaAssetPage SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical hausa mediaAssetPage SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical hausa mediaAssetPage SEO Heading level 1 1`] = `"Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?"`;
+
+exports[`Canonical hausa mediaAssetPage SEO Lang attribute 1`] = `"ha"`;
+
+exports[`Canonical hausa mediaAssetPage SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+      "width": 1024,
+    },
+    "name": "BBC News Hausa",
+    "noBylinesPolicy": "https://www.bbc.com/hausa/game-da-mu-49283501#authorexpertise",
+  },
+  "dateModified": "2020-03-02T16:25:03.000Z",
+  "datePublished": "2020-03-02T16:25:03.000Z",
+  "headline": "Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/hausa/23269030",
+    "@type": "WebPage",
+    "name": "Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+      "width": 1024,
+    },
+    "name": "BBC News Hausa",
+    "publishingPrinciples": "https://www.bbc.com/hausa/game-da-mu-49283501",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+  "url": "http://localhost:7080/hausa/23269030",
+}
+`;
+
+exports[`Canonical hausa mediaAssetPage SEO OG description 1`] = `"Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?"`;
+
+exports[`Canonical hausa mediaAssetPage SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png"`;
+
+exports[`Canonical hausa mediaAssetPage SEO OG image alt 1`] = `"BBC News Hausa"`;
+
+exports[`Canonical hausa mediaAssetPage SEO OG locale 1`] = `"ha-GH"`;
+
+exports[`Canonical hausa mediaAssetPage SEO OG site name 1`] = `"BBC News Hausa"`;
+
+exports[`Canonical hausa mediaAssetPage SEO OG title 1`] = `"Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa? - BBC News Hausa"`;
+
+exports[`Canonical hausa mediaAssetPage SEO OG type 1`] = `"article"`;
+
+exports[`Canonical hausa mediaAssetPage SEO OG url 1`] = `"http://localhost:7080/hausa/23269030"`;
+
+exports[`Canonical hausa mediaAssetPage SEO Page title 1`] = `"Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa? - BBC News Hausa"`;
+
+exports[`Canonical hausa mediaAssetPage SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical hausa mediaAssetPage SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical hausa mediaAssetPage SEO Twitter creator 1`] = `"@bbchausa"`;
+
+exports[`Canonical hausa mediaAssetPage SEO Twitter description 1`] = `"Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa?"`;
+
+exports[`Canonical hausa mediaAssetPage SEO Twitter image alt 1`] = `"BBC News Hausa"`;
+
+exports[`Canonical hausa mediaAssetPage SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png"`;
+
+exports[`Canonical hausa mediaAssetPage SEO Twitter site 1`] = `"@bbchausa"`;
+
+exports[`Canonical hausa mediaAssetPage SEO Twitter title 1`] = `"Lafiya Zinariya: Me ke sa mata kunzugu da tsumma ko safa? - BBC News Hausa"`;

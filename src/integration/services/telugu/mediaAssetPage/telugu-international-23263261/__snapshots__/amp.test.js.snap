@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP telugu mediaAssetPage A11y I can see the skip to content link 1`] = `"కంటెంట్‌కు వెళ్లండి"`;
+
+exports[`AMP telugu mediaAssetPage AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+  "policy": Object {
+    "default": Object {
+      "timeout": Object {
+        "fallbackAction": "reject",
+        "seconds": 0,
+      },
+      "waitFor": Object {
+        "user-consent": Array [],
+      },
+    },
+  },
+}
+`;
+
+exports[`AMP telugu mediaAssetPage AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+  },
+}
+`;
+
+exports[`AMP telugu mediaAssetPage Analytics ATI 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "article-media-asset",
+    "domain": "test.bbc.co.uk",
+    "sections": "Telugu, Telugu - అంతర్జాతీయం, Telugu - MAP, Telugu - అంతర్జాతీయం - MAP, Telugu - undefined-category",
+    "title": "Test Telugu MAP",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
+exports[`AMP telugu mediaAssetPage Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/telugu"`;
+
+exports[`AMP telugu mediaAssetPage Footer I can see the footer copyright and external linking text 1`] = `"© 2020  BBC. ఇతర వెబ్‌సైట్లలో సమాచారానికి బీబీసీ బాధ్యత వహించదు. ఇతర వెబ్‌సైట్లకు మా లింకింగ్ విధానం గురించి తెలుసుకోండి."`;
+
+exports[`AMP telugu mediaAssetPage Header I can see the branding 1`] = `"BBC News, తెలుగు"`;
+
+exports[`AMP telugu mediaAssetPage I can see the bulleted list item 1`] = `"AntsMore antsSo many ants"`;
+
+exports[`AMP telugu mediaAssetPage I can see the headline 1`] = `"Test Telugu MAP"`;
+
+exports[`AMP telugu mediaAssetPage I can see the timestamp 1`] = `"29 జనవరి 2020"`;
+
+exports[`AMP telugu mediaAssetPage Media player embed A11y I can read the media player title 1`] = `"మీడియా ప్లేయర్"`;
+
+exports[`AMP telugu mediaAssetPage Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/telugu/international-23263261/p01k6msp/te/amp"`;
+
+exports[`AMP telugu mediaAssetPage SEO Canonical link 1`] = `"http://localhost:7080/telugu/international-23263261"`;
+
+exports[`AMP telugu mediaAssetPage SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`AMP telugu mediaAssetPage SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`AMP telugu mediaAssetPage SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP telugu mediaAssetPage SEO Heading level 1 1`] = `"Test Telugu MAP"`;
+
+exports[`AMP telugu mediaAssetPage SEO Lang attribute 1`] = `"te"`;
+
+exports[`AMP telugu mediaAssetPage SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/telugu.png",
+      "width": 1024,
+    },
+    "name": "BBC News తెలుగు",
+    "noBylinesPolicy": "https://www.bbc.com/telugu/institutional-50420343#authorexpertise",
+  },
+  "dateModified": "2020-01-29T13:05:05.000Z",
+  "datePublished": "2020-01-29T13:05:05.000Z",
+  "headline": "Test Telugu MAP",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/telugu.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/telugu/international-23263261",
+    "@type": "WebPage",
+    "name": "Test Telugu MAP",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/telugu.png",
+      "width": 1024,
+    },
+    "name": "BBC News తెలుగు",
+    "publishingPrinciples": "https://www.bbc.com/telugu/institutional-50420343",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/telugu.png",
+  "url": "http://localhost:7080/telugu/international-23263261",
+}
+`;
+
+exports[`AMP telugu mediaAssetPage SEO OG description 1`] = `"Ants..."`;
+
+exports[`AMP telugu mediaAssetPage SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/telugu.png"`;
+
+exports[`AMP telugu mediaAssetPage SEO OG image alt 1`] = `"BBC News తెలుగు"`;
+
+exports[`AMP telugu mediaAssetPage SEO OG locale 1`] = `"te-IN"`;
+
+exports[`AMP telugu mediaAssetPage SEO OG site name 1`] = `"BBC News తెలుగు"`;
+
+exports[`AMP telugu mediaAssetPage SEO OG title 1`] = `"Test Telugu MAP - BBC News తెలుగు"`;
+
+exports[`AMP telugu mediaAssetPage SEO OG type 1`] = `"article"`;
+
+exports[`AMP telugu mediaAssetPage SEO OG url 1`] = `"http://localhost:7080/telugu/international-23263261"`;
+
+exports[`AMP telugu mediaAssetPage SEO Page title 1`] = `"Test Telugu MAP - BBC News తెలుగు"`;
+
+exports[`AMP telugu mediaAssetPage SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`AMP telugu mediaAssetPage SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP telugu mediaAssetPage SEO Twitter creator 1`] = `"@bbcnewstelugu"`;
+
+exports[`AMP telugu mediaAssetPage SEO Twitter description 1`] = `"Ants..."`;
+
+exports[`AMP telugu mediaAssetPage SEO Twitter image alt 1`] = `"BBC News తెలుగు"`;
+
+exports[`AMP telugu mediaAssetPage SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/telugu.png"`;
+
+exports[`AMP telugu mediaAssetPage SEO Twitter site 1`] = `"@bbcnewstelugu"`;
+
+exports[`AMP telugu mediaAssetPage SEO Twitter title 1`] = `"Test Telugu MAP - BBC News తెలుగు"`;

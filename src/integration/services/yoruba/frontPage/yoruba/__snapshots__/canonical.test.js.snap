@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical yoruba frontPage A11y I can see the skip to content link 1`] = `"Fò kọjá sí nnkan tí ó wà nínú rẹ̀"`;
+
+exports[`Canonical yoruba frontPage Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=107&amp;p=yoruba.page&amp;x1=[urn:bbc:cps:5bc0e956-8797-3f64-e050-17ac2b8c7c23]&amp;x2=[responsive]&amp;x3=[news-yoruba]&amp;x4=[yo]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[Àbáwọlé+-+BBC+News+Yorùbá]&amp;x11=[1970-01-18T10:59:00.185Z]&amp;x12=[1970-01-19T01:43:03.450Z]\\"/>"`;
+
+exports[`Canonical yoruba frontPage Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/yoruba"`;
+
+exports[`Canonical yoruba frontPage Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC kò mọ̀ nípa àwọn ohun tí ó wà ní àwọn ojú òpó tí ó wà ní ìta. Ọwọ́ tí a fi mú ìbáṣepọ̀ ti ìta."`;
+
+exports[`Canonical yoruba frontPage Header I can see the branding 1`] = `"BBC News, Yorùbá"`;
+
+exports[`Canonical yoruba frontPage I can see sections 1`] = `"Ìròyìn tó ṣe kókó"`;
+
+exports[`Canonical yoruba frontPage I can see sections 2`] = `"Ìròyìn àpapọ̀ Nàíjíríà"`;
+
+exports[`Canonical yoruba frontPage I can see sections 3`] = `"Ìwádìí kíkún lóríi kókó ìròyìn"`;
+
+exports[`Canonical yoruba frontPage I can see sections 4`] = `"Eré Ìdárayá (Tẹ ibí fún ìròyìn míràn)Wo gbogbo ẹ̀"`;
+
+exports[`Canonical yoruba frontPage I can see sections 5`] = `"Kọ́milẹ́kọ̀ọ́"`;
+
+exports[`Canonical yoruba frontPage I can see sections 6`] = `"Móríwú"`;
+
+exports[`Canonical yoruba frontPage I can see the headline 1`] = `"BBC News, Yorùbá - Ìròyìn"`;
+
+exports[`Canonical yoruba frontPage SEO Canonical link 1`] = `"http://localhost:7080/yoruba"`;
+
+exports[`Canonical yoruba frontPage SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical yoruba frontPage SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical yoruba frontPage SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical yoruba frontPage SEO Heading level 1 1`] = `"BBC News, Yorùbá - Ìròyìn"`;
+
+exports[`Canonical yoruba frontPage SEO Lang attribute 1`] = `"yo"`;
+
+exports[`Canonical yoruba frontPage SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/yoruba",
+    "@type": "WebPage",
+    "name": "Àbáwọlé",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png",
+      "width": 1024,
+    },
+    "name": "BBC News Yorùbá",
+    "publishingPrinciples": "https://www.bbc.com/yoruba/institutional-48528718",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png",
+  "url": "http://localhost:7080/yoruba",
+}
+`;
+
+exports[`Canonical yoruba frontPage SEO OG description 1`] = `"Ibí yìí lo ti máa rí ojúlówó ìròyìn àjáàbalẹ̀ lórí ojú ọjọ́, ètò ọrọ̀ ajé, ìdánilárayá, òṣèlú, ìròyìn àgbáyé ní ìṣẹ́jú kan àtàwọn míràn. BBC Yorùbá máa ń ṣe ìròyìn àkànṣe, fídíò, ọ̀rọ̀ ẹnu, fọ́tò tó jojú ní gbèsè àti itọ́ni onísọ̀rọ̀-ǹ-gbèsì tó dáńtọ́"`;
+
+exports[`Canonical yoruba frontPage SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png"`;
+
+exports[`Canonical yoruba frontPage SEO OG image alt 1`] = `"BBC News Yorùbá"`;
+
+exports[`Canonical yoruba frontPage SEO OG locale 1`] = `"yo"`;
+
+exports[`Canonical yoruba frontPage SEO OG site name 1`] = `"BBC News Yorùbá"`;
+
+exports[`Canonical yoruba frontPage SEO OG title 1`] = `"Àbáwọlé - BBC News Yorùbá"`;
+
+exports[`Canonical yoruba frontPage SEO OG type 1`] = `"website"`;
+
+exports[`Canonical yoruba frontPage SEO OG url 1`] = `"http://localhost:7080/yoruba"`;
+
+exports[`Canonical yoruba frontPage SEO Page title 1`] = `"Àbáwọlé - BBC News Yorùbá"`;
+
+exports[`Canonical yoruba frontPage SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical yoruba frontPage SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical yoruba frontPage SEO Twitter creator 1`] = `"@BBCNews"`;
+
+exports[`Canonical yoruba frontPage SEO Twitter description 1`] = `"Ibí yìí lo ti máa rí ojúlówó ìròyìn àjáàbalẹ̀ lórí ojú ọjọ́, ètò ọrọ̀ ajé, ìdánilárayá, òṣèlú, ìròyìn àgbáyé ní ìṣẹ́jú kan àtàwọn míràn. BBC Yorùbá máa ń ṣe ìròyìn àkànṣe, fídíò, ọ̀rọ̀ ẹnu, fọ́tò tó jojú ní gbèsè àti itọ́ni onísọ̀rọ̀-ǹ-gbèsì tó dáńtọ́"`;
+
+exports[`Canonical yoruba frontPage SEO Twitter image alt 1`] = `"BBC News Yorùbá"`;
+
+exports[`Canonical yoruba frontPage SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png"`;
+
+exports[`Canonical yoruba frontPage SEO Twitter site 1`] = `"@BBCNews"`;
+
+exports[`Canonical yoruba frontPage SEO Twitter title 1`] = `"Àbáwọlé - BBC News Yorùbá"`;
+
+exports[`Canonical yoruba frontPage Story Promo I can see a headline 1`] = `"Overtyped headline"`;
+
+exports[`Canonical yoruba frontPage Story Promo I can see an image 1`] = `
+<img
+  alt="Kokoro aifojuri to n fa arun iba Ọrẹrẹ"
+  class="StyledImg-sc-7vx2mr-0 hIxkbt"
+  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+  src="https://ichef.bbci.co.uk/news/660/cpsdevpb/E245/test/_63652975_kokorokekeketonfaibaorere.jpg"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsdevpb/E245/test/_63652975_kokorokekeketonfaibaorere.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/E245/test/_63652975_kokorokekeketonfaibaorere.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/E245/test/_63652975_kokorokekeketonfaibaorere.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/E245/test/_63652975_kokorokekeketonfaibaorere.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/E245/test/_63652975_kokorokekeketonfaibaorere.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/E245/test/_63652975_kokorokekeketonfaibaorere.jpg 320w, https://ichef.bbci.co.uk/news/624/cpsdevpb/E245/test/_63652975_kokorokekeketonfaibaorere.jpg 624w"
+  width="624"
+/>
+`;

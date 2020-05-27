@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical afaanoromoo frontPage A11y I can see the skip to content link 1`] = `"Qabiyyeetti darbi"`;
+
+exports[`Canonical afaanoromoo frontPage Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=2&amp;p=afaanoromoo.page&amp;x1=[urn:bbc:cps:506c4a07-5a7b-23bf-e050-17ac8045c197]&amp;x2=[responsive]&amp;x3=[news-afaanoromoo]&amp;x4=[om]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[Oduu+-+BBC+News+Afaan+Oromoo]&amp;x11=[1970-01-18T07:30:06.581Z]&amp;x12=[1970-01-19T02:08:44.804Z]\\"/>"`;
+
+exports[`Canonical afaanoromoo frontPage Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/afaanoromoo"`;
+
+exports[`Canonical afaanoromoo frontPage Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. Qabiyyeewwan maddawwan alaa irraa ta'aniif BBCn itti gaafatamaa miti. Gara geessituu alaatti akkaataa itti hojjennu dubbisi."`;
+
+exports[`Canonical afaanoromoo frontPage Header I can see the branding 1`] = `"BBC News, Afaan Oromoo"`;
+
+exports[`Canonical afaanoromoo frontPage I can see Index Alsos 1`] = `"Odeessa kana irratti dabalata"`;
+
+exports[`Canonical afaanoromoo frontPage I can see sections 1`] = `"Isin hin darbiin "`;
+
+exports[`Canonical afaanoromoo frontPage I can see sections 2`] = `"Waancaa Afriikaa 2019Hunda ilaali"`;
+
+exports[`Canonical afaanoromoo frontPage I can see sections 3`] = `"Maaltu haasa'ama?"`;
+
+exports[`Canonical afaanoromoo frontPage I can see sections 4`] = `"Ajaa'iba"`;
+
+exports[`Canonical afaanoromoo frontPage I can see sections 5`] = `"Barumsaaf"`;
+
+exports[`Canonical afaanoromoo frontPage I can see sections 6`] = `"Waancaa Addunyaa 2018"`;
+
+exports[`Canonical afaanoromoo frontPage I can see the headline 1`] = `"BBC News, Afaan Oromoo - Oduu"`;
+
+exports[`Canonical afaanoromoo frontPage SEO Canonical link 1`] = `"http://localhost:7080/afaanoromoo"`;
+
+exports[`Canonical afaanoromoo frontPage SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical afaanoromoo frontPage SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical afaanoromoo frontPage SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical afaanoromoo frontPage SEO Heading level 1 1`] = `"BBC News, Afaan Oromoo - Oduu"`;
+
+exports[`Canonical afaanoromoo frontPage SEO Lang attribute 1`] = `"om"`;
+
+exports[`Canonical afaanoromoo frontPage SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/afaanoromoo",
+    "@type": "WebPage",
+    "name": "Oduu",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png",
+      "width": 1024,
+    },
+    "name": "BBC News Afaan Oromoo",
+    "publishingPrinciples": "https://www.bbc.com/afaanoromoo/institutional-49281861",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png",
+  "url": "http://localhost:7080/afaanoromoo",
+}
+`;
+
+exports[`Canonical afaanoromoo frontPage SEO OG description 1`] = `"BBC Afaan Oromoo irratti Oduu, Odeessaa fi taateewwan haaraa Itoophiyaa, Afriikaa fi guutuu addunyaa irratti ta’an argattu. Yeroo mara waan haaraa jiru baruuf gara keenya koottaa."`;
+
+exports[`Canonical afaanoromoo frontPage SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png"`;
+
+exports[`Canonical afaanoromoo frontPage SEO OG image alt 1`] = `"BBC News Afaan Oromoo"`;
+
+exports[`Canonical afaanoromoo frontPage SEO OG locale 1`] = `"om-ET"`;
+
+exports[`Canonical afaanoromoo frontPage SEO OG site name 1`] = `"BBC News Afaan Oromoo"`;
+
+exports[`Canonical afaanoromoo frontPage SEO OG title 1`] = `"Oduu - BBC News Afaan Oromoo"`;
+
+exports[`Canonical afaanoromoo frontPage SEO OG type 1`] = `"website"`;
+
+exports[`Canonical afaanoromoo frontPage SEO OG url 1`] = `"http://localhost:7080/afaanoromoo"`;
+
+exports[`Canonical afaanoromoo frontPage SEO Page title 1`] = `"Oduu - BBC News Afaan Oromoo"`;
+
+exports[`Canonical afaanoromoo frontPage SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical afaanoromoo frontPage SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical afaanoromoo frontPage SEO Twitter creator 1`] = `"@BBCNews"`;
+
+exports[`Canonical afaanoromoo frontPage SEO Twitter description 1`] = `"BBC Afaan Oromoo irratti Oduu, Odeessaa fi taateewwan haaraa Itoophiyaa, Afriikaa fi guutuu addunyaa irratti ta’an argattu. Yeroo mara waan haaraa jiru baruuf gara keenya koottaa."`;
+
+exports[`Canonical afaanoromoo frontPage SEO Twitter image alt 1`] = `"BBC News Afaan Oromoo"`;
+
+exports[`Canonical afaanoromoo frontPage SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png"`;
+
+exports[`Canonical afaanoromoo frontPage SEO Twitter site 1`] = `"@BBCNews"`;
+
+exports[`Canonical afaanoromoo frontPage SEO Twitter title 1`] = `"Oduu - BBC News Afaan Oromoo"`;
+
+exports[`Canonical afaanoromoo frontPage Story Promo I can see a headline 1`] = `"Wal qoccoluun paartilee ADWUI biyyattii garam geessa?"`;
+
+exports[`Canonical afaanoromoo frontPage Story Promo I can see an image 1`] = `
+<img
+  alt="ADWUI"
+  class="StyledImg-sc-7vx2mr-0 hIxkbt"
+  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16872/production/_107847229_98.jpg"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/16872/production/_107847229_98.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/16872/production/_107847229_98.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/16872/production/_107847229_98.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/16872/production/_107847229_98.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/16872/production/_107847229_98.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16872/production/_107847229_98.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/16872/production/_107847229_98.jpg 660w"
+  width="976"
+/>
+`;

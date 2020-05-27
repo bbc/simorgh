@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical somali mediaAssetPage A11y I can see the skip to content link 1`] = `"U gudub qaybta macluumaadka"`;
+
+exports[`Canonical somali mediaAssetPage Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=83&amp;p=institutional::somali.institutional.media_asset.23269042.page&amp;x1=[urn:bbc:cps:53b6eaa9-125c-6440-93cb-4c60607551a0]&amp;x2=[responsive]&amp;x3=[news-somali]&amp;x4=[so]&amp;x7=[article-media-asset]&amp;x8=[simorgh-nojs]&amp;x9=[Somali+CPS+test+Shanta+madaxweyne+ee+ugu+taajirsanaa+Mareykanka+-+BBC+News+Somali]&amp;x11=[2020-03-02T16:33:21.000Z]&amp;x12=[2020-03-02T16:33:21.000Z]\\"/>"`;
+
+exports[`Canonical somali mediaAssetPage Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/somali"`;
+
+exports[`Canonical somali mediaAssetPage Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda."`;
+
+exports[`Canonical somali mediaAssetPage Header I can see the branding 1`] = `"BBC News, Somali"`;
+
+exports[`Canonical somali mediaAssetPage I can see the headline 1`] = `"Somali CPS test Shanta madaxweyne ee ugu taajirsanaa Mareykanka"`;
+
+exports[`Canonical somali mediaAssetPage I can see the timestamp 1`] = `"2 Maarso 2020"`;
+
+exports[`Canonical somali mediaAssetPage Media player embed A11y I can read the media player title 1`] = `"Ciyaaridda warbixinnada"`;
+
+exports[`Canonical somali mediaAssetPage Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/somali/hayadeed-23269042/p01m7d09/so"`;
+
+exports[`Canonical somali mediaAssetPage SEO Canonical link 1`] = `"http://localhost:7080/somali/hayadeed-23269042"`;
+
+exports[`Canonical somali mediaAssetPage SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical somali mediaAssetPage SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical somali mediaAssetPage SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical somali mediaAssetPage SEO Heading level 1 1`] = `"Somali CPS test Shanta madaxweyne ee ugu taajirsanaa Mareykanka"`;
+
+exports[`Canonical somali mediaAssetPage SEO Lang attribute 1`] = `"so"`;
+
+exports[`Canonical somali mediaAssetPage SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/somali.png",
+      "width": 1024,
+    },
+    "name": "BBC News Somali",
+    "noBylinesPolicy": "https://www.bbc.com/somali/hayadeed-49283375#authorexpertise",
+  },
+  "dateModified": "2020-03-02T16:33:21.000Z",
+  "datePublished": "2020-03-02T16:33:21.000Z",
+  "headline": "Somali CPS test Shanta madaxweyne ee ugu taajirsanaa Mareykanka",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/somali.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/somali/hayadeed-23269042",
+    "@type": "WebPage",
+    "name": "Somali CPS test Shanta madaxweyne ee ugu taajirsanaa Mareykanka",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/somali.png",
+      "width": 1024,
+    },
+    "name": "BBC News Somali",
+    "publishingPrinciples": "https://www.bbc.com/somali/hayadeed-49283375",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/somali.png",
+  "url": "http://localhost:7080/somali/hayadeed-23269042",
+}
+`;
+
+exports[`Canonical somali mediaAssetPage SEO OG description 1`] = `"Somali"`;
+
+exports[`Canonical somali mediaAssetPage SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_somali/17AFF/test/_63732079_p01mt2kt.jpg"`;
+
+exports[`Canonical somali mediaAssetPage SEO OG image alt 1`] = `"England star Fran Kirby"`;
+
+exports[`Canonical somali mediaAssetPage SEO OG locale 1`] = `"so-SO"`;
+
+exports[`Canonical somali mediaAssetPage SEO OG site name 1`] = `"BBC News Somali"`;
+
+exports[`Canonical somali mediaAssetPage SEO OG title 1`] = `"Somali CPS test Shanta madaxweyne ee ugu taajirsanaa Mareykanka - BBC News Somali"`;
+
+exports[`Canonical somali mediaAssetPage SEO OG type 1`] = `"article"`;
+
+exports[`Canonical somali mediaAssetPage SEO OG url 1`] = `"http://localhost:7080/somali/hayadeed-23269042"`;
+
+exports[`Canonical somali mediaAssetPage SEO Page title 1`] = `"Somali CPS test Shanta madaxweyne ee ugu taajirsanaa Mareykanka - BBC News Somali"`;
+
+exports[`Canonical somali mediaAssetPage SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical somali mediaAssetPage SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical somali mediaAssetPage SEO Twitter creator 1`] = `"@bbcsomali"`;
+
+exports[`Canonical somali mediaAssetPage SEO Twitter description 1`] = `"Somali"`;
+
+exports[`Canonical somali mediaAssetPage SEO Twitter image alt 1`] = `"England star Fran Kirby"`;
+
+exports[`Canonical somali mediaAssetPage SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_somali/17AFF/test/_63732079_p01mt2kt.jpg"`;
+
+exports[`Canonical somali mediaAssetPage SEO Twitter site 1`] = `"@bbcsomali"`;
+
+exports[`Canonical somali mediaAssetPage SEO Twitter title 1`] = `"Somali CPS test Shanta madaxweyne ee ugu taajirsanaa Mareykanka - BBC News Somali"`;

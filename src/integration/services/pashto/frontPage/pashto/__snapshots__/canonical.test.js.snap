@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical pashto frontPage A11y I can see the skip to content link 1`] = `"مطلب ته ورشئ"`;
+
+exports[`Canonical pashto frontPage Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=68&amp;p=pashto.page&amp;x1=[urn:bbc:cps:3df26020-d53b-3e58-e050-380a4e802abd]&amp;x2=[responsive]&amp;x3=[news-pashto]&amp;x4=[ps]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[کور+پاڼه+-+BBC+News+پښتو]&amp;x11=[1970-01-18T01:56:10.635Z]&amp;x12=[1970-01-19T02:08:50.706Z]\\"/>"`;
+
+exports[`Canonical pashto frontPage Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
+
+exports[`Canonical pashto frontPage Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
+
+exports[`Canonical pashto frontPage Header I can see the branding 1`] = `"BBC News, پښتو"`;
+
+exports[`Canonical pashto frontPage I can see sections 1`] = `"Top story - Pashto"`;
+
+exports[`Canonical pashto frontPage I can see sections 2`] = `"انځورونهټول وګورئ"`;
+
+exports[`Canonical pashto frontPage I can see sections 3`] = `"ويډيو او غږټول وګورئ"`;
+
+exports[`Canonical pashto frontPage I can see sections 4`] = `"د بي بي سي پښتو ټلویزیوني خپرونه"`;
+
+exports[`Canonical pashto frontPage I can see sections 5`] = `"تازه خبرونه واورئ"`;
+
+exports[`Canonical pashto frontPage I can see sections 6`] = `"غږیز کتاب"`;
+
+exports[`Canonical pashto frontPage I can see sections 7`] = `"افغانستانټول وګورئ"`;
+
+exports[`Canonical pashto frontPage I can see sections 8`] = `"پښتونخواټول وګورئ"`;
+
+exports[`Canonical pashto frontPage I can see sections 9`] = `"نړۍټول وګورئ"`;
+
+exports[`Canonical pashto frontPage I can see sections 10`] = `"لوبېټول وګورئ"`;
+
+exports[`Canonical pashto frontPage I can see sections 11`] = `"روغتیاټول وګورئ"`;
+
+exports[`Canonical pashto frontPage I can see sections 12`] = `"اقتصادټول وګورئ"`;
+
+exports[`Canonical pashto frontPage I can see sections 13`] = `"ساینس او ټکنالوژيټول وګورئ"`;
+
+exports[`Canonical pashto frontPage I can see sections 14`] = `"هنر او ادبټول وګورئ"`;
+
+exports[`Canonical pashto frontPage I can see sections 15`] = `"ځانګړې پاڼه"`;
+
+exports[`Canonical pashto frontPage I can see sections 16`] = `"ځانګړي مطالب"`;
+
+exports[`Canonical pashto frontPage I can see sections 17`] = `"ورځپاڼې او مهالنۍ"`;
+
+exports[`Canonical pashto frontPage I can see sections 18`] = `"د بي بي سي اکاډیميټول وګورئ"`;
+
+exports[`Canonical pashto frontPage I can see sections 19`] = `"۲۰۱۹ کال کرېکټ نړيوال جامټول وګورئ"`;
+
+exports[`Canonical pashto frontPage I can see the headline 1`] = `"BBC News, پښتو - کور پاڼه"`;
+
+exports[`Canonical pashto frontPage SEO Canonical link 1`] = `"http://localhost:7080/pashto"`;
+
+exports[`Canonical pashto frontPage SEO Dir attribute 1`] = `"rtl"`;
+
+exports[`Canonical pashto frontPage SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical pashto frontPage SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical pashto frontPage SEO Heading level 1 1`] = `"BBC News, پښتو - کور پاڼه"`;
+
+exports[`Canonical pashto frontPage SEO Lang attribute 1`] = `"ps"`;
+
+exports[`Canonical pashto frontPage SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/pashto",
+    "@type": "WebPage",
+    "name": "کور پاڼه",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png",
+      "width": 1024,
+    },
+    "name": "BBC News پښتو",
+    "publishingPrinciples": "https://www.bbc.com/pashto/institutional-49283007",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png",
+  "url": "http://localhost:7080/pashto",
+}
+`;
+
+exports[`Canonical pashto frontPage SEO OG description 1`] = `"د افغانستان، سیمې او نړۍ په اړه تازه خبرونه، رپوټونه، شننې، څېړنې، مرکې، لوبې، ژوندۍ رادیويي خپرونې، ويډیوګانې، ستاسې نظرونه او نور ډېر په زړه پورې مطالب په بي بي سي پښتو انټرنېټ پاڼه کې."`;
+
+exports[`Canonical pashto frontPage SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"`;
+
+exports[`Canonical pashto frontPage SEO OG image alt 1`] = `"BBC News پښتو"`;
+
+exports[`Canonical pashto frontPage SEO OG locale 1`] = `"ps"`;
+
+exports[`Canonical pashto frontPage SEO OG site name 1`] = `"BBC News پښتو"`;
+
+exports[`Canonical pashto frontPage SEO OG title 1`] = `"کور پاڼه - BBC News پښتو"`;
+
+exports[`Canonical pashto frontPage SEO OG type 1`] = `"website"`;
+
+exports[`Canonical pashto frontPage SEO OG url 1`] = `"http://localhost:7080/pashto"`;
+
+exports[`Canonical pashto frontPage SEO Page title 1`] = `"کور پاڼه - BBC News پښتو"`;
+
+exports[`Canonical pashto frontPage SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical pashto frontPage SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical pashto frontPage SEO Twitter creator 1`] = `"@bbcpashto"`;
+
+exports[`Canonical pashto frontPage SEO Twitter description 1`] = `"د افغانستان، سیمې او نړۍ په اړه تازه خبرونه، رپوټونه، شننې، څېړنې، مرکې، لوبې، ژوندۍ رادیويي خپرونې، ويډیوګانې، ستاسې نظرونه او نور ډېر په زړه پورې مطالب په بي بي سي پښتو انټرنېټ پاڼه کې."`;
+
+exports[`Canonical pashto frontPage SEO Twitter image alt 1`] = `"BBC News پښتو"`;
+
+exports[`Canonical pashto frontPage SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"`;
+
+exports[`Canonical pashto frontPage SEO Twitter site 1`] = `"@bbcpashto"`;
+
+exports[`Canonical pashto frontPage SEO Twitter title 1`] = `"کور پاڼه - BBC News پښتو"`;
+
+exports[`Canonical pashto frontPage Story Promo I can see a headline 1`] = `"راشد خان د افغان کرېکټ لوبډلې کپتان وټاکل شو"`;
+
+exports[`Canonical pashto frontPage Story Promo I can see an image 1`] = `
+<img
+  alt="خبر"
+  class="StyledImg-sc-7vx2mr-0 hIxkbt"
+  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/1009/production/_107850140__98403796_breaking_news_centered_976_pashto.png"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/1009/production/_107850140__98403796_breaking_news_centered_976_pashto.png 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/1009/production/_107850140__98403796_breaking_news_centered_976_pashto.png 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/1009/production/_107850140__98403796_breaking_news_centered_976_pashto.png 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/1009/production/_107850140__98403796_breaking_news_centered_976_pashto.png 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/1009/production/_107850140__98403796_breaking_news_centered_976_pashto.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1009/production/_107850140__98403796_breaking_news_centered_976_pashto.png 320w, https://ichef.bbci.co.uk/news/624/cpsprodpb/1009/production/_107850140__98403796_breaking_news_centered_976_pashto.png 624w"
+  width="624"
+/>
+`;

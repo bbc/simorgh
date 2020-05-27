@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP mundo articles A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
+
+exports[`AMP mundo articles AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+  "policy": Object {
+    "default": Object {
+      "timeout": Object {
+        "fallbackAction": "reject",
+        "seconds": 0,
+      },
+      "waitFor": Object {
+        "user-consent": Array [],
+      },
+    },
+  },
+}
+`;
+
+exports[`AMP mundo articles AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+  },
+}
+`;
+
+exports[`AMP mundo articles Analytics ATI 1`] = `
+Object {
+  "requests": Object {
+    "base": "https://logws1363.ati-host.net?",
+    "pageview": "\${base}s=598343&s2=62&p=mundo.articles.ce42wzqr2mko.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:optimo:ce42wzqr2mko]&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[Este+artículo+de+prueba+ha+sido+creado+para+que+podamos+ejecutar+pruebas]&x11=[2019-10-04T10:58:46.977Z]&x12=[2019-10-04T10:58:46.977Z]&ref=\${documentReferrer}",
+  },
+  "transport": Object {
+    "beacon": false,
+    "image": true,
+    "xhrpost": false,
+  },
+  "triggers": Object {
+    "trackPageview": Object {
+      "on": "visible",
+      "request": "pageview",
+    },
+  },
+}
+`;
+
+exports[`AMP mundo articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
+
+exports[`AMP mundo articles Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+
+exports[`AMP mundo articles Header I can see the branding 1`] = `"BBC News, Mundo"`;
+
+exports[`AMP mundo articles I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/ee58/test/4a2f4c00-e695-11e9-88d6-81aa2ccc6d4c.jpg"`;
+
+exports[`AMP mundo articles I can see an image with a caption 2`] = `"Pie de foto, Esta imagen de prueba, copyright BBC, muestra un mapa de Francia. La imagen está en los primeros tres bloques y tiene este título."`;
+
+exports[`AMP mundo articles SEO Canonical link 1`] = `"http://localhost:7080/mundo/articles/ce42wzqr2mko"`;
+
+exports[`AMP mundo articles SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`AMP mundo articles SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`AMP mundo articles SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP mundo articles SEO Heading level 1 1`] = `"Este es el titular de este artículo de prueba."`;
+
+exports[`AMP mundo articles SEO Lang attribute 1`] = `"es"`;
+
+exports[`AMP mundo articles SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+      "width": 1024,
+    },
+    "name": "BBC News Mundo",
+    "noBylinesPolicy": "https://www.bbc.com/mundo/institucional-51359666#authorexpertise",
+  },
+  "dateModified": "2019-10-04T10:58:46.977Z",
+  "datePublished": "2019-10-04T10:58:46.977Z",
+  "headline": "Este artículo de prueba ha sido creado para que podamos ejecutar pruebas",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/mundo/articles/ce42wzqr2mko",
+    "@type": "WebPage",
+    "name": "Este artículo de prueba ha sido creado para que podamos ejecutar pruebas",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+      "width": 1024,
+    },
+    "name": "BBC News Mundo",
+    "publishingPrinciples": "https://www.bbc.com/mundo/institucional-51359666",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+  "url": "http://localhost:7080/mundo/articles/ce42wzqr2mko",
+}
+`;
+
+exports[`AMP mundo articles SEO OG description 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas"`;
+
+exports[`AMP mundo articles SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"`;
+
+exports[`AMP mundo articles SEO OG image alt 1`] = `"BBC News Mundo"`;
+
+exports[`AMP mundo articles SEO OG locale 1`] = `"es-005"`;
+
+exports[`AMP mundo articles SEO OG site name 1`] = `"BBC News Mundo"`;
+
+exports[`AMP mundo articles SEO OG title 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas - BBC News Mundo"`;
+
+exports[`AMP mundo articles SEO OG type 1`] = `"article"`;
+
+exports[`AMP mundo articles SEO OG url 1`] = `"http://localhost:7080/mundo/articles/ce42wzqr2mko"`;
+
+exports[`AMP mundo articles SEO Page title 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas - BBC News Mundo"`;
+
+exports[`AMP mundo articles SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`AMP mundo articles SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP mundo articles SEO Twitter creator 1`] = `"@bbcmundo"`;
+
+exports[`AMP mundo articles SEO Twitter description 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas"`;
+
+exports[`AMP mundo articles SEO Twitter image alt 1`] = `"BBC News Mundo"`;
+
+exports[`AMP mundo articles SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"`;
+
+exports[`AMP mundo articles SEO Twitter site 1`] = `"@bbcmundo"`;
+
+exports[`AMP mundo articles SEO Twitter title 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas - BBC News Mundo"`;
