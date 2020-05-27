@@ -123,7 +123,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/afaanoromoo/oduu-41217768'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
