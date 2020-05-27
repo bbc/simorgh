@@ -1538,7 +1538,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </section>
                   <section
                     aria-labelledby="Most-Read"
-                    class="MostReadSection-sc-58u5qv-1 ilJrAv"
+                    class="MostReadSection-sc-12ef2qh-0 FrontPageMostReadSection-sc-58u5qv-1 fegNWg"
                     data-e2e="most-read"
                     role="region"
                   >
