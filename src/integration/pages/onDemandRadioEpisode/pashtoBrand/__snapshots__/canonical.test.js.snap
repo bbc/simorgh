@@ -18,6 +18,8 @@ exports[`Canonical On Demand Radio Episode I can see the episode title 1`] = `"�
 
 exports[`Canonical On Demand Radio Episode I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png"`;
 
+exports[`Canonical On Demand Radio Episode I can see the hero image on canonical 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png"`;
+
 exports[`Canonical On Demand Radio Episode Media player embed A11y I can read the media player title 1`] = `"اډیو پلیئر"`;
 
 exports[`Canonical On Demand Radio Episode Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w172xjcjkv7gw1w/ps?morph_env=live"`;
