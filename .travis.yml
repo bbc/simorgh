@@ -42,7 +42,7 @@ jobs:
       script:
         - npm run build
         - npm prune --production
-        - CYPRESS_SKIP_EU=true npm run start & run-p cypress:ci test:puppeteer
+        - npm run test:ci:puppeteer
     - stage: test
       if: type = push OR (pull_request AND fork = true)
       name: 'BBC A11y and Audit CI'
@@ -52,7 +52,7 @@ jobs:
       script:
         - npm run build
         - npm prune --production
-        - npm run start & run-p bbcA11y:ci lighthouse && audit-ci --low --whitelist http-proxy markdown-to-jsx
+        - npm run test:ci:a11y
 
 notifications:
   email: false
