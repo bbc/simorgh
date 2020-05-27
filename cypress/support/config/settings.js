@@ -114,28 +114,16 @@ module.exports = () => ({
       photoGalleryPage: {
         environments: {
           live: {
-            paths: [
-              '/pidgin/tori-49221071',
-              '/mundo/deportes-36935058', // PGL LTR
-              '/persian/magazine-49281981', // PGL RTL
-            ],
-            enabled: true,
+            paths: ['/afaanoromoo/oduu-50716382'],
+            enabled: false,
           },
           test: {
-            paths: [
-              '/pidgin/media-23133346',
-              '/mundo/23100337', // PGL LRT
-              '/persian/world-23080171', // PGL RTL
-            ],
-            enabled: true,
+            paths: ['/afaanoromoo/oduu-23141286'],
+            enabled: false,
           },
           local: {
-            paths: [
-              '/pidgin/tori-49221071',
-              '/mundo/deportes-36935058', // PGL LTR
-              '/persian/magazine-49281981', // PGL RTL
-            ],
-            enabled: true,
+            paths: ['/afaanoromoo/oduu-41217768'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -2837,11 +2825,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/mundo/deportes-36935058'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/mundo/noticias-23147451'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/mundo/deportes-36935058'],
@@ -3459,11 +3447,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/persian/magazine-49281981'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/persian/23104784'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/persian/magazine-49281981'],
@@ -3588,11 +3576,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/pidgin/50913502'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/pidgin/sport-23252855'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/pidgin/sport-23252855'],
