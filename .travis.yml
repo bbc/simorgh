@@ -8,8 +8,6 @@ cache:
     # Cache only the folder with Cypress binary, other caching takes longer and saves
     # less time, therefore this is more efficient than caching all.
     - ~/.cache/Cypress
-addons:
-  chrome: stable
 before_install:
   - sudo apt-get install -y libgconf-2-4
   - npm install -g @lhci/cli@0.4.x
@@ -19,24 +17,26 @@ jobs:
       if: type = push OR (pull_request AND fork = true)
       name: 'Lighthouse Tests'
       install: npm ci
-      script:
-        - npm run build
-        - lhci autorun
-    - stage: test
-      if: type = push OR (pull_request AND fork = true)
-      name: 'Unit Tests and storybook e2e'
-      install: npm ci
-      script:
-        - npm run test
-    - stage: test
-      if: type = push OR (pull_request AND fork = true)
-      name: 'Production CI tests'
-      install: npm ci
       addons:
         chrome: stable
       script:
         - npm run build
-        - npm prune --production
-        - CYPRESS_SKIP_EU=true npm run test:ci
+        - lhci autorun
+    # - stage: test
+    #   if: type = push OR (pull_request AND fork = true)
+    #   name: 'Unit Tests and storybook e2e'
+    #   install: npm ci
+    #   script:
+    #     - npm run test
+    # - stage: test
+    #   if: type = push OR (pull_request AND fork = true)
+    #   name: 'Production CI tests'
+    #   install: npm ci
+    #   addons:
+    #     chrome: stable
+    #   script:
+    #     - npm run build
+    #     - npm prune --production
+    #     - CYPRESS_SKIP_EU=true npm run test:ci
 notifications:
   email: false
