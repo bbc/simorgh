@@ -8,16 +8,16 @@ cache:
     # Cache only the folder with Cypress binary, other caching takes longer and saves
     # less time, therefore this is more efficient than caching all.
     - ~/.cache/Cypress
+addons:
+  chrome: stable
 before_install:
   - sudo apt-get install -y libgconf-2-4
+  - npm install -g @lhci/cli@0.4.x
 jobs:
   include:
     - stage: test
+      if: type = push OR (pull_request AND fork = true)
       name: 'Lighthouse Tests'
-      addons:
-        chrome: stable
-      before_install:
-        - npm install -g @lhci/cli@0.4.x
       install: npm ci
       script:
         - npm run build
