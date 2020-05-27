@@ -12,7 +12,13 @@ log.mockImplementation(jest.fn);
 const error = jest.spyOn(global.console, 'error');
 error.mockImplementation(jest.fn);
 
-const { getPageString, printResult, printSummary, validate } = require('.');
+const {
+  getPageString,
+  printResult,
+  printSummary,
+  validate,
+  runValidator,
+} = require('.');
 
 describe('amp validator tests', () => {
   beforeAll(() => {
@@ -82,5 +88,33 @@ describe('amp validator tests', () => {
 
     expect(result).toEqual(expectedResult);
     expect(validateString).toHaveBeenCalledWith('<html amp></html>');
+  });
+
+  it('should print passes when verbose is true', async () => {
+    fetch.mockImplementation(() => ({
+      text: () => `<!doctype html>
+    <html ⚡>
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta name="description" content="This is the AMP Boilerplate.">
+        <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <!-- Import other AMP Extensions here -->
+        <style amp-custom>
+        /* Add your styles here */
+        </style>
+        <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    
+        <link rel="canonical" href=".">
+        <title>My AMP Page</title>
+      </head>
+      <body>
+        <h1>Hello World</h1>
+      </body>
+    </html>`,
+    }));
+    await runValidator(true);
+    expect(log).toBeCalledTimes(29);
   });
 });
