@@ -8,7 +8,6 @@ cache:
     - ~/.cache/Cypress
 before_install:
   - sudo apt-get install -y libgconf-2-4
-  - npm install -g @lhci/cli@0.4.x
 script: echo "npm test temporarily disabled"
 jobs:
   fast_finish: true
@@ -16,9 +15,11 @@ jobs:
     - stage: test
       if: type = push OR (pull_request AND fork = true)
       name: 'Lighthouse Tests'
-      install: npm ci
+      before_install:
+        - npm install -g @lhci/cli@0.4.x
       addons:
         chrome: stable
+      install: npm ci
       script:
         - npm run build
         - lhci autorun
