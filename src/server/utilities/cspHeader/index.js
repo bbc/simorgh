@@ -92,6 +92,8 @@ const directives = {
       'https://platform.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
       'https://syndication.twitter.com', // Social Embeds
+      'https://news.files.bbci.co.uk', // STY include
+      'https://www.bbc.co.uk', // STY include
       "'self'",
     ],
     ampNonLive: [
@@ -117,6 +119,9 @@ const directives = {
       'https://platform.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
       'https://syndication.twitter.com', // Social Embeds
+      'https://news.files.bbci.co.uk', // STY include
+      'https://www.bbc.co.uk', // STY include
+      'http://www.bbc.co.uk', // for localhost STY include
       "'self'",
     ],
   },
@@ -153,6 +158,8 @@ const directives = {
       'https://pbs.twimg.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
       'https://ton.twimg.com', // Social Embeds
+      'https://news.bbcimg.co.uk', // STY include
+      'https://static.bbc.co.uk', // STY include
       "data: 'self'", // needed at the end to maintain proper order
     ],
     ampNonLive: [
@@ -197,6 +204,9 @@ const directives = {
       'https://pbs.twimg.com', // Social Embeds
       'https://i.ytimg.com', // Social Embeds
       'https://ton.twimg.com', // Social Embeds
+      'https://news.bbcimg.co.uk', // STY include
+      'https://static.bbc.co.uk', // STY include
+      'http://static.bbc.co.uk', // localhost STY include
       "data: 'self'", // needed at the end to maintain proper order
     ],
   },
@@ -220,6 +230,7 @@ const directives = {
       'http://www.instagram.com', // Social Embeds
       'https://cdn.syndication.twimg.com', // Social Embeds
       'https://static.bbc.co.uk', // STY include
+      'https://www.bbc.co.uk', // STY include
       "'self'",
       "'unsafe-inline'",
     ],
@@ -246,6 +257,8 @@ const directives = {
       'http://www.instagram.com', // Social Embeds
       'https://cdn.syndication.twimg.com', // Social Embeds
       'https://static.bbc.co.uk', // STY include
+      'http://static.bbc.co.uk', // for localhost STY include
+      'https://www.bbc.co.uk', // STY include
       "'self'",
       "'unsafe-inline'",
     ],
@@ -274,6 +287,7 @@ const directives = {
       'https://news.files.bbci.co.uk', // STY includes
       'https://news.test.files.bbci.co.uk', // STY includes
       'https://static.bbc.co.uk', // STY include
+      'http://static.bbc.co.uk', // STY include
       "'unsafe-inline'",
     ],
   },
