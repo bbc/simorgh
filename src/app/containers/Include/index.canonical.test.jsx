@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
-import IncludeContainer from '.';
+import IncludeContainer from './index.canonical';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 

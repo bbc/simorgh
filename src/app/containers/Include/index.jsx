@@ -1,73 +1,18 @@
-/* eslint-disable react/no-danger */
 import React, { useContext } from 'react';
-import { string } from 'prop-types';
-import { Helmet } from 'react-helmet';
-import styled from 'styled-components';
-import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import { RequestContext } from '#contexts/RequestContext';
+import Canonical from './index.canonical';
+import Amp from './index.amp';
 import useToggle from '#hooks/useToggle';
 
-/**
- * Prevent Includes from being wider than their parent, whilst
- * allowing localised horizontal scrolling for content that is.
- */
-const Include = styled.div`
-  max-width: 100%;
-  overflow: scroll hidden;
-`;
-
-const IncludeContainer = ({ html, type }) => {
+const IncludeContainer = props => {
   const { isAmp } = useContext(RequestContext);
   const { enabled } = useToggle('include');
 
-  const supportedTypes = ['idt1', 'idt2', 'vj'];
+  if (!enabled) return null;
 
-  if (isAmp || !enabled || !html || !supportedTypes.includes(type)) return null;
+  const Container = isAmp ? Amp : Canonical;
 
-  // This is a list of include types that depend on the javascript module loader requireJs.
-  // These includes were built to work within the BBC's legacy publishing platform (the PAL)
-  // that uses requireJS extensively. See https://github.com/bbc/simorgh/issues/5750
-  const requireIncludeTypes = ['vj', 'idt1'];
-
-  const paths = `{
-    'jquery-1':
-      'https://static.bbc.co.uk/frameworks/jquery/0.4.1/sharedmodules/jquery-1.7.2',
-    'istats-1':
-      'https://news.files.bbci.co.uk/include/vjassets/js/vendor/istats-1.0.0.min',
-  }`;
-
-  const configureAdditionalScripts = `require.config({ paths:${paths} });`;
-
-  const IncludeGrid = styled(GridItemConstrainedMedium)`
-    display: grid;
-  `;
-
-  return (
-    <IncludeGrid>
-      {requireIncludeTypes.includes(type) && (
-        <Helmet>
-          <script
-            type="text/javascript"
-            src="https://news.files.bbci.co.uk/include/vjassets/js/vendor/require-2.1.20b.min.js"
-          />
-          <script>{configureAdditionalScripts}</script>
-        </Helmet>
-      )}
-      <Include
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
-    </IncludeGrid>
-  );
-};
-
-IncludeContainer.propTypes = {
-  html: string,
-  type: string.isRequired,
-};
-
-IncludeContainer.defaultProps = {
-  html: null,
+  return <Container {...props} />;
 };
 
 export default IncludeContainer;
