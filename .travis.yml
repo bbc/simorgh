@@ -66,11 +66,11 @@ a11y: &a11y # Runs BBC A11y and Audit-CI
 jobs:
   fast_finish: true
   include:
-    <<: *lint
-    <<: *unit
-    <<: *integration
-    <<: *cypress
-    <<: *a11y
+    - <<: *lint
+    - <<: *unit
+    - <<: *integration
+    - <<: *cypress
+    - <<: *a11y
 
 notifications:
   email: false
