@@ -1,0 +1,756 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cyl1zdr7154o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cyl1zdr7154o",
+      "canonicalUrl": "https://www.bbc.com/news/articles/cyl1zdr7154o"
+    },
+    "type": "article",
+    "createdBy": "News",
+    "language": "en-gb",
+    "lastUpdated": 1590660847217,
+    "firstPublished": 1583335509157,
+    "lastPublished": 1590660841927,
+    "timestamp": 1590660841927,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "passportId": "4204f4e7-182e-4b2a-a0c0-10d0a5bcb0cb",
+      "locator": "urn:bbc:optimo:asset:cyl1zdr7154o",
+      "availability": "AVAILABLE",
+      "taggings": []
+    },
+    "tags": {},
+    "version": "v1.1.10",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "subheadline",
+      "urlLink",
+      "inline",
+      "unorderedList",
+      "listItem",
+      "orderedList",
+      "image",
+      "caption",
+      "altText",
+      "rawImage",
+      "video"
+    ]
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Hi 👋, I'm a headline",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Hi 👋, I'm a headline",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "This is a test article, using Optimo.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "This is a test ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "article",
+                        "attributes": [
+                          "bold"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": ", using Optimo.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Blocks Supported: Subheadline",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Blocks ",
+                              "attributes": []
+                            }
+                          },
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Supported: Subheadline",
+                              "attributes": [
+                                "italic"
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Blocks Supported: Text",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Blocks Supported: Text",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Bold Text",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Bold Text",
+                        "attributes": [
+                          "bold"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Italic Text",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Italic Text",
+                        "attributes": [
+                          "italic"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Bold and Italic Text",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Bold and Italic Text",
+                        "attributes": [
+                          "italic",
+                          "bold"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "",
+                        "attributes": [
+                          "italic",
+                          "bold"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Some text with a link in between",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Some text with ",
+                        "attributes": []
+                      }
+                    },
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "a link",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "a ",
+                              "attributes": []
+                            }
+                          },
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "link",
+                              "attributes": [
+                                "italic"
+                              ]
+                            }
+                          }
+                        ],
+                        "locator": "http://bbc.co.uk/news",
+                        "isExternal": false
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " in between",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Farsi Text (RTL in LTR):",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Farsi Text (RTL in LTR):",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "\n202Bواکنش سیستم ایمنی به کرونا شناخته شد\n202C",
+                  "blocks": [
+                    {
+                      "type": "inline",
+                      "model": {
+                        "text": "واکنش سیستم ایمنی به کرونا شناخته شد",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "واکنش سیستم ایمنی به کرونا شناخته شد",
+                              "attributes": []
+                            }
+                          }
+                        ],
+                        "language": "fa"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Bullets below:",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Bullets below:",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "unorderedList",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Bulleted list",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Bulleted",
+                                    "attributes": [
+                                      "italic",
+                                      "bold"
+                                    ]
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": " list",
+                                    "attributes": [
+                                      "bold"
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Have another",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Have another",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Numbered Bullets below:",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Numbered Bullets below:",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "orderedList",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Numbered list",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Numbered list",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "listItem",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Hello, I'm a list item",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Hello,",
+                                    "attributes": [
+                                      "italic"
+                                    ]
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": " I'm a ",
+                                    "attributes": []
+                                  }
+                                },
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "list item",
+                                    "attributes": [
+                                      "bold"
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Supported Blocks: Image",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Supported Blocks: Image",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "A stream running through a forest",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "A stream running through a forest",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 1024,
+                  "height": 576,
+                  "locator": "d733/test/7572bb40-a0cb-11ea-a5b5-6f65f4bef233.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01k6msm",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Supported Blocks: Media",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Supported Blocks: Media",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01k6msm",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01k6msm",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "Five things ants can teach us about management",
+                        "synopses": {
+                          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+                        "imageCopyright": "BBC",
+                        "embedding": true,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01k6msp",
+                            "types": [
+                              "Original"
+                            ],
+                            "duration": 191,
+                            "durationISO8601": "PT3M11S",
+                            "warnings": {
+                              "short": "Contains strong language and adult humour.",
+                              "long": "Contains strong language and adult humour."
+                            },
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true,
+                              "world": false
+                            },
+                            "availableFrom": 1540218932000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        }
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 1920,
+                              "height": 1080,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg",
+                              "originCode": "mpv",
+                              "copyrightHolder": "BBC"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Ants",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Ants",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "headlines": {
+      "seoHeadline": "This is a headline"
+    },
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cyl1zdr7154o",
+      "canonicalUrl": "https://www.bbc.com/news/articles/cyl1zdr7154o"
+    },
+    "summary": "",
+    "timestamp": 1590660841927,
+    "language": "en-gb",
+    "id": "urn:bbc:ares::article:cyl1zdr7154o",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "News",
+      "uri": "/news",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
