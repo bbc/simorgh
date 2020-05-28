@@ -1,9 +1,14 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { shape, string } from 'prop-types';
+import Grid, { GelPageGrid } from '#app/components/Grid';
+import MediaMessage from '../MediaAssetPage/MediaMessage';
 import MetadataContainer from '../../containers/Metadata';
-import { GelPageGrid } from '#app/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
+import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
+
+const SKIP_LINK_ANCHOR_ID = 'content';
 
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,
@@ -20,7 +25,14 @@ const StyledGelPageGrid = styled(GelPageGrid)`
 `;
 
 const OnDemandTvPage = ({ pageData }) => {
-  const { language, headline, shortSynopsis, brandTitle } = pageData;
+  const idAttr = SKIP_LINK_ANCHOR_ID;
+  const {
+    language,
+    headline,
+    shortSynopsis,
+    brandTitle,
+    releaseDateTimeStamp,
+  } = pageData;
 
   const { dir } = useContext(ServiceContext);
 
@@ -40,7 +52,21 @@ const OnDemandTvPage = ({ pageData }) => {
         columns={getGroups(6, 6, 6, 6, 8, 20)}
         enableGelGutters
       >
-        <h1>{brandTitle}</h1>
+        <Grid
+          item
+          dir={dir}
+          startOffset={getGroups(1, 1, 1, 1, 2, 5)}
+          columns={getGroups(6, 6, 6, 6, 6, 12)}
+          margins={getGroups(true, true, true, true, false, false)}
+        >
+          <MediaMessage />
+          <OnDemandHeadingBlock
+            idAttr={idAttr}
+            brandTitle={brandTitle}
+            releaseDateTimeStamp={releaseDateTimeStamp}
+          />
+          <ParagraphBlock text={shortSynopsis} />
+        </Grid>
       </StyledGelPageGrid>
     </>
   );
