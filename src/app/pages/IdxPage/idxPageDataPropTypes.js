@@ -9,11 +9,11 @@ export const idxPageDataPropTypes = shape({
   }).isRequired,
 });
 
-const frontPagePropTypes = {
+const idxPagePropTypes = {
   isAmp: bool,
   data: idxPageDataPropTypes,
   service: string,
   status: number,
 };
 
-export default frontPagePropTypes;
+export default idxPagePropTypes;

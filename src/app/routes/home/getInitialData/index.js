@@ -1,11 +1,11 @@
 import pipe from 'ramda/src/pipe';
 import pathOr from 'ramda/src/pathOr';
 import fetchPageData from '../../utils/fetchPageData';
-import filterUnknownContentTypes from './filterUnknownContentTypes';
-import filterEmptyGroupItems from './filterEmptyGroupItems';
-import squashTopStories from './squashTopStories';
-import addIdsToItems from './addIdsToItems';
-import filterGroupsWithoutStraplines from './filterGroupsWithoutStraplines';
+import filterUnknownContentTypes from '../../utils/filterUnknownContentTypes';
+import filterEmptyGroupItems from '../../utils/filterEmptyGroupItems';
+import squashTopStories from '../../utils/squashTopStories';
+import addIdsToItems from '../../utils/addIdsToItems';
+import filterGroupsWithoutStraplines from '../../utils/filterGroupsWithoutStraplines';
 import withRadioSchedule from '../../utils/withRadioSchedule';
 import getConfig from '../../utils/getConfig';
 
