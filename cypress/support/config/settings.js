@@ -1726,11 +1726,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/hindi/bbc_hindi_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/hindi/bbc_hindi_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/hindi/bbc_hindi_radio/liveradio'],
