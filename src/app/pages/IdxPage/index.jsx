@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import path from 'ramda/src/path';
-import idxPagePropTypes from './idxPageDataPropTypes';
+import idxPageDataPropTypes from './idxPageDataPropTypes';
 import FrontPageSection from '#containers/FrontPageSection';
 
 const IdxPage = ({ pageData }) => {
@@ -19,7 +19,7 @@ const IdxPage = ({ pageData }) => {
 };
 
 IdxPage.propTypes = {
-  pageData: idxPagePropTypes.isRequired,
+  pageData: idxPageDataPropTypes.isRequired,
 };
 
 export default IdxPage;

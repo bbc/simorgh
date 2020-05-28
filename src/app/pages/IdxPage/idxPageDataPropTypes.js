@@ -1,4 +1,4 @@
-import { arrayOf, bool, shape, string, number } from 'prop-types';
+import { arrayOf, shape } from 'prop-types';
 import { cpsFrontPageMetadataPropTypes } from '#models/propTypes/metadata';
 import groupsPropTypes from '#models/propTypes/frontPageGroup';
 
@@ -9,11 +9,4 @@ export const idxPageDataPropTypes = shape({
   }).isRequired,
 });
 
-const idxPagePropTypes = {
-  isAmp: bool,
-  data: idxPageDataPropTypes,
-  service: string,
-  status: number,
-};
-
-export default idxPagePropTypes;
+export default idxPageDataPropTypes;
