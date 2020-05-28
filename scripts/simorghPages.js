@@ -29,6 +29,7 @@ const generateLinks = (service, env, domain) => {
     mediaAssetPage,
     photoGalleryPage,
     storyPage,
+    mostReadPage,
   } = allServices()[service].pageTypes;
 
   const frontPageURL = getUrl(frontPage, env);
@@ -59,6 +60,11 @@ const generateLinks = (service, env, domain) => {
   const styURL = getUrl(storyPage, env);
   if (styURL) {
     output.push(`[STY](${domain}${styURL})`);
+  }
+
+  const mostReadURL = getUrl(mostReadPage, env);
+  if (mostReadURL) {
+    output.push(`[mostRead](${domain}${mostReadURL})`);
   }
 
   return output.join('<br/>');
