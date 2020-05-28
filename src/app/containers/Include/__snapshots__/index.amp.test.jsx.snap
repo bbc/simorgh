@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AmpIncludeContainer should render for a valid IDT2 include 1`] = `
+<div>
+  <div
+    class="GridItemConstrainedMedium-sc-12lwanc-2 IncludeGrid-sc-108pgna-0 fUkIYP"
+  >
+    <amp-img
+      alt="some alt text"
+      attribution=""
+      fallback="false"
+      height="400"
+      layout="responsive"
+      sizes="(max-width: 500px) 150px, (max-width: 700px) 350px, 550px"
+      src="undefined/"
+      srcset="undefined/ 150w,undefined/ 350w,undefined/ 550w"
+      width="500"
+    />
+  </div>
+</div>
+`;
+
+exports[`AmpIncludeContainer should return null for any include type other than an IDT2 1`] = `<div />`;
+
+exports[`AmpIncludeContainer should return null with invalid IDT2 props 1`] = `<div />`;
