@@ -324,7 +324,7 @@ const simorghLaunchDates = {
     frontPage: '17th March 2020',
     mediaAssetPage: '',
     photoGalleryPage: '24th March 2020',
-    storyPage: '',
+    storyPage: '28th May 2020',
     mostReadPage: '28th May 2020',
   },
   ukchinaTrad: {
@@ -332,7 +332,7 @@ const simorghLaunchDates = {
     frontPage: '17th March 2020',
     mediaAssetPage: '',
     photoGalleryPage: '24th March 2020',
-    storyPage: '',
+    storyPage: '28th May 2020',
     mostReadPage: '28th May 2020',
   },
   ukrainian: {
@@ -381,14 +381,14 @@ const simorghLaunchDates = {
     articles: 'Sept 2019',
     frontPage: '31st March 2020',
     photoGalleryPage: '24th March 2020',
-    storyPage: '28th May 2020',
+    storyPage: '',
     mostReadPage: '28th May 2020',
   },
   zhongwenTrad: {
     articles: 'Sept 2019',
     frontPage: '31st March 2020',
     photoGalleryPage: '24th March 2020',
-    storyPage: '28th May 2020',
+    storyPage: '',
     mostReadPage: '28th May 2020',
   },
 };
