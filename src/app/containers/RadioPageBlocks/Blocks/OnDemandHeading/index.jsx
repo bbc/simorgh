@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { string, number } from 'prop-types';
+import { string, number, bool } from 'prop-types';
 import styled from 'styled-components';
 import { Headline } from '@bbc/psammead-headings';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
@@ -37,7 +37,12 @@ const Datestamp = styled.span`
   margin: 0;
 `;
 
-const HeadingContainer = ({ idAttr, brandTitle, releaseDateTimeStamp }) => {
+const HeadingContainer = ({
+  idAttr,
+  brandTitle,
+  releaseDateTimeStamp,
+  ariaHidden,
+}) => {
   const { script, service, timezone, locale } = useContext(ServiceContext);
 
   const formattedTimestamp = formatUnixTimestamp({
@@ -49,7 +54,13 @@ const HeadingContainer = ({ idAttr, brandTitle, releaseDateTimeStamp }) => {
   });
 
   return (
-    <StyledHeadline script={script} service={service} id={idAttr} tabIndex="-1">
+    <StyledHeadline
+      script={script}
+      service={service}
+      id={idAttr}
+      tabIndex="-1"
+      {...(ariaHidden ? { as: 'strong', 'aria-hidden': 'true' } : {})}
+    >
       <span
         // eslint-disable-next-line jsx-a11y/aria-role
         role="text"
@@ -68,10 +79,12 @@ HeadingContainer.propTypes = {
   idAttr: string,
   brandTitle: string.isRequired,
   releaseDateTimeStamp: number.isRequired,
+  ariaHidden: bool,
 };
 
 HeadingContainer.defaultProps = {
   idAttr: null,
+  ariaHidden: false,
 };
 
 export default HeadingContainer;

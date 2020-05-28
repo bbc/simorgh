@@ -58,6 +58,23 @@ describe('OnDemand TV Brand Page ', () => {
     process.env = { ...env };
   });
 
+  it('a11y - should render a visually hidden headline', async () => {
+    fetch.mockResponse(JSON.stringify(pashtoPageData));
+
+    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    await renderPage({
+      pageData,
+      service: 'pashto',
+    });
+
+    const visuallyHiddenHeadline = document.querySelector(
+      'h1[class^="VisuallyHiddenText"]',
+    );
+
+    expect(visuallyHiddenHeadline).toBeInTheDocument();
+    expect(visuallyHiddenHeadline).toContainHTML('نړۍ دا وخت');
+  });
+
   it('should show the brand title for OnDemand TV Pages', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
@@ -68,6 +85,22 @@ describe('OnDemand TV Brand Page ', () => {
     });
 
     expect(getByText('نړۍ دا وخت')).toBeInTheDocument();
+  });
+
+  it('a11y - should aria-hide the title', async () => {
+    fetch.mockResponse(JSON.stringify(pashtoPageData));
+
+    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    const { container } = await renderPage({
+      pageData,
+      service: 'pashto',
+    });
+
+    const hiddenHeadline = container.getElementsByTagName('strong')[1];
+
+    expect(hiddenHeadline.getAttribute('aria-hidden')).toBeDefined();
+    expect(hiddenHeadline.getAttribute('aria-hidden')).toEqual('true');
+    expect(hiddenHeadline).toContainHTML('نړۍ دا وخت');
   });
 });
 

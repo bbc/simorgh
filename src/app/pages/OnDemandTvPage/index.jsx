@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { shape, string } from 'prop-types';
+import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import MediaMessage from '../MediaAssetPage/MediaMessage';
 import MetadataContainer from '../../containers/Metadata';
@@ -34,7 +36,15 @@ const OnDemandTvPage = ({ pageData }) => {
     releaseDateTimeStamp,
   } = pageData;
 
-  const { dir } = useContext(ServiceContext);
+  const { timezone, locale, dir } = useContext(ServiceContext);
+
+  const formattedTimestamp = formatUnixTimestamp({
+    timestamp: releaseDateTimeStamp,
+    format: 'LL',
+    timezone,
+    locale,
+    isRelative: false,
+  });
 
   return (
     <>
@@ -59,11 +69,15 @@ const OnDemandTvPage = ({ pageData }) => {
           columns={getGroups(6, 6, 6, 6, 6, 12)}
           margins={getGroups(true, true, true, true, false, false)}
         >
+          <VisuallyHiddenText as="h1">
+            {brandTitle}, {formattedTimestamp}
+          </VisuallyHiddenText>
           <MediaMessage />
           <OnDemandHeadingBlock
             idAttr={idAttr}
             brandTitle={brandTitle}
             releaseDateTimeStamp={releaseDateTimeStamp}
+            ariaHidden
           />
           <ParagraphBlock text={shortSynopsis} />
         </Grid>
