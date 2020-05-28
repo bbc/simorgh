@@ -22,7 +22,7 @@ Object {
             class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
           >
             <div
-              class="Bar-sc-1x4gwjz-0 jsgdXU"
+              class="Bar-sc-1x4gwjz-0 kXOyLn"
             />
             <h2
               class="Heading-sc-1x4gwjz-2 eZofTG"
@@ -34,8 +34,8 @@ Object {
                   class="FlexRow-wx5kdp-2 dVBNyZ"
                 >
                   <span
-                    class="Title-wx5kdp-4 BeqZV"
-                    dir="ltr"
+                    class="Title-wx5kdp-4 htLcbq"
+                    dir="rtl"
                     id="WatchListen"
                   >
                     ویدیو و صدا
@@ -46,12 +46,12 @@ Object {
           </div>
           <ul
             class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
-            dir="ltr"
+            dir="rtl"
             role="list"
           >
             <li
               class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 kFXEso"
-              dir="ltr"
+              dir="rtl"
               role="listitem"
             >
               <div
@@ -59,7 +59,7 @@ Object {
               >
                 <div
                   class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <div
                     class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -76,8 +76,8 @@ Object {
                     >
                       <div
                         aria-hidden="true"
-                        class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
-                        dir="ltr"
+                        class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
+                        dir="rtl"
                       >
                         <div
                           class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
@@ -107,10 +107,10 @@ Object {
                 </div>
                 <div
                   class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <h3
-                    class="Headline-sc-1dvfmi3-3 fccgro"
+                    class="Headline-sc-1dvfmi3-3 jDsPwR"
                   >
                     <a
                       class="Link-sc-1dvfmi3-5 jeUMCT"
@@ -122,7 +122,7 @@ Object {
                         <span
                           class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                         >
-                          Video
+                          ویدیو
                           , 
                         </span>
                         <span>
@@ -137,22 +137,22 @@ Object {
                     </a>
                   </h3>
                   <p
-                    class="Summary-sc-1dvfmi3-4 zsDkO"
+                    class="Summary-sc-1dvfmi3-4 eLVbDm"
                   >
                     در حالیکه شمار رسمی مبتلایان به ویروس کرونا از چهار و نیم میلیون نفر عبور کرده، این روزها کشورهای آمریکای لاتین به کانون های اصلی شیوع تبدیل شده‌اند..
                   </p>
                   <time
-                    class="StyledTimestamp-um718p-0 kVWTyt"
+                    class="StyledTimestamp-um718p-0 fMHMrb"
                     datetime="2020-05-19"
                   >
-                    19th May 2020
+                    ۳۰ اردیبهشت ۱۳۹۹ - ۱۹ مه ۲۰۲۰
                   </time>
                 </div>
               </div>
             </li>
             <li
               class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-              dir="ltr"
+              dir="rtl"
               role="listitem"
             >
               <div
@@ -160,7 +160,7 @@ Object {
               >
                 <div
                   class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <div
                     class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -177,8 +177,8 @@ Object {
                     >
                       <div
                         aria-hidden="true"
-                        class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
-                        dir="ltr"
+                        class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
+                        dir="rtl"
                       >
                         <div
                           class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
@@ -208,10 +208,10 @@ Object {
                 </div>
                 <div
                   class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <h3
-                    class="Headline-sc-1dvfmi3-3 hSJrur"
+                    class="Headline-sc-1dvfmi3-3 ecBkfP"
                   >
                     <a
                       class="Link-sc-1dvfmi3-5 jeUMCT"
@@ -223,7 +223,7 @@ Object {
                         <span
                           class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                         >
-                          Video
+                          ویدیو
                           , 
                         </span>
                         <span>
@@ -238,22 +238,22 @@ Object {
                     </a>
                   </h3>
                   <p
-                    class="Summary-sc-1dvfmi3-4 eaCWBB"
+                    class="Summary-sc-1dvfmi3-4 eYboNJ"
                   >
                     مقام‌های محلی غزنی گفته‌اند در حمله صبح امروز طالبان در شهر غزنی در جنوب افغانستان هفت نفر کشته و چهل نفر زخمی شده‌اند.
                   </p>
                   <time
-                    class="StyledTimestamp-um718p-0 kVWTyt"
+                    class="StyledTimestamp-um718p-0 fMHMrb"
                     datetime="2020-05-18"
                   >
-                    18th May 2020
+                    ۲۹ اردیبهشت ۱۳۹۹ - ۱۸ مه ۲۰۲۰
                   </time>
                 </div>
               </div>
             </li>
             <li
               class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-              dir="ltr"
+              dir="rtl"
               role="listitem"
             >
               <div
@@ -261,7 +261,7 @@ Object {
               >
                 <div
                   class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <div
                     class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -278,8 +278,8 @@ Object {
                     >
                       <div
                         aria-hidden="true"
-                        class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
-                        dir="ltr"
+                        class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
+                        dir="rtl"
                       >
                         <div
                           class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
@@ -309,10 +309,10 @@ Object {
                 </div>
                 <div
                   class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <h3
-                    class="Headline-sc-1dvfmi3-3 hSJrur"
+                    class="Headline-sc-1dvfmi3-3 ecBkfP"
                   >
                     <a
                       class="Link-sc-1dvfmi3-5 jeUMCT"
@@ -324,7 +324,7 @@ Object {
                         <span
                           class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                         >
-                          Video
+                          ویدیو
                           , 
                         </span>
                         <span>
@@ -339,22 +339,22 @@ Object {
                     </a>
                   </h3>
                   <p
-                    class="Summary-sc-1dvfmi3-4 eaCWBB"
+                    class="Summary-sc-1dvfmi3-4 eYboNJ"
                   >
                     در افغانستان عبدالله عبدالله با امضای یک توافق از ادعای خود به عنوان رییس جمهوری گذشت و اشرف غنی را به عنوان رییس دولت پذیرفت.
                   </p>
                   <time
-                    class="StyledTimestamp-um718p-0 kVWTyt"
+                    class="StyledTimestamp-um718p-0 fMHMrb"
                     datetime="2020-05-17"
                   >
-                    17th May 2020
+                    ۲۸ اردیبهشت ۱۳۹۹ - ۱۷ مه ۲۰۲۰
                   </time>
                 </div>
               </div>
             </li>
             <li
               class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-              dir="ltr"
+              dir="rtl"
               role="listitem"
             >
               <div
@@ -362,7 +362,7 @@ Object {
               >
                 <div
                   class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <div
                     class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -379,8 +379,8 @@ Object {
                     >
                       <div
                         aria-hidden="true"
-                        class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
-                        dir="ltr"
+                        class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
+                        dir="rtl"
                       >
                         <div
                           class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
@@ -410,10 +410,10 @@ Object {
                 </div>
                 <div
                   class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <h3
-                    class="Headline-sc-1dvfmi3-3 hSJrur"
+                    class="Headline-sc-1dvfmi3-3 ecBkfP"
                   >
                     <a
                       class="Link-sc-1dvfmi3-5 jeUMCT"
@@ -425,7 +425,7 @@ Object {
                         <span
                           class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                         >
-                          Video
+                          ویدیو
                           , 
                         </span>
                         <span>
@@ -440,22 +440,22 @@ Object {
                     </a>
                   </h3>
                   <p
-                    class="Summary-sc-1dvfmi3-4 eaCWBB"
+                    class="Summary-sc-1dvfmi3-4 eYboNJ"
                   >
                     وزارت صحت افغانستان اعلام کرده که شمار قربانیان حمله به بیمارستان کابل به ۲۴ نفر رسیده‌است.
                   </p>
                   <time
-                    class="StyledTimestamp-um718p-0 kVWTyt"
+                    class="StyledTimestamp-um718p-0 fMHMrb"
                     datetime="2020-05-13"
                   >
-                    13th May 2020
+                    ۲۴ اردیبهشت ۱۳۹۹ - ۱۳ مه ۲۰۲۰
                   </time>
                 </div>
               </div>
             </li>
             <li
               class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-              dir="ltr"
+              dir="rtl"
               role="listitem"
             >
               <div
@@ -463,7 +463,7 @@ Object {
               >
                 <div
                   class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <div
                     class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -480,8 +480,8 @@ Object {
                     >
                       <div
                         aria-hidden="true"
-                        class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
-                        dir="ltr"
+                        class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
+                        dir="rtl"
                       >
                         <div
                           class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
@@ -511,10 +511,10 @@ Object {
                 </div>
                 <div
                   class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <h3
-                    class="Headline-sc-1dvfmi3-3 hSJrur"
+                    class="Headline-sc-1dvfmi3-3 ecBkfP"
                   >
                     <a
                       class="Link-sc-1dvfmi3-5 jeUMCT"
@@ -526,7 +526,7 @@ Object {
                         <span
                           class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                         >
-                          Video
+                          ویدیو
                           , 
                         </span>
                         <span>
@@ -541,15 +541,15 @@ Object {
                     </a>
                   </h3>
                   <p
-                    class="Summary-sc-1dvfmi3-4 eaCWBB"
+                    class="Summary-sc-1dvfmi3-4 eYboNJ"
                   >
                     سخنگوی وزارت خارجه ایران، دست داشتن نیروی انتظامی در مرگ شهروندان افغانستان در مرز دو کشور را تکذیب کرده‌است.
                   </p>
                   <time
-                    class="StyledTimestamp-um718p-0 kVWTyt"
+                    class="StyledTimestamp-um718p-0 fMHMrb"
                     datetime="2020-05-12"
                   >
-                    12th May 2020
+                    ۲۳ اردیبهشت ۱۳۹۹ - ۱۲ مه ۲۰۲۰
                   </time>
                 </div>
               </div>
@@ -565,7 +565,7 @@ Object {
             class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
           >
             <div
-              class="Bar-sc-1x4gwjz-0 jsgdXU"
+              class="Bar-sc-1x4gwjz-0 kXOyLn"
             />
             <h2
               class="Heading-sc-1x4gwjz-2 eZofTG"
@@ -577,8 +577,8 @@ Object {
                   class="FlexRow-wx5kdp-2 dVBNyZ"
                 >
                   <span
-                    class="Title-wx5kdp-4 BeqZV"
-                    dir="ltr"
+                    class="Title-wx5kdp-4 htLcbq"
+                    dir="rtl"
                     id="Features"
                   >
                     تحلیل و گزارش
@@ -589,12 +589,12 @@ Object {
           </div>
           <ul
             class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
-            dir="ltr"
+            dir="rtl"
             role="list"
           >
             <li
               class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 kFXEso"
-              dir="ltr"
+              dir="rtl"
               role="listitem"
             >
               <div
@@ -602,7 +602,7 @@ Object {
               >
                 <div
                   class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <div
                     class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -621,10 +621,10 @@ Object {
                 </div>
                 <div
                   class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <h3
-                    class="Headline-sc-1dvfmi3-3 fccgro"
+                    class="Headline-sc-1dvfmi3-3 jDsPwR"
                   >
                     <a
                       class="Link-sc-1dvfmi3-5 jeUMCT"
@@ -634,22 +634,22 @@ Object {
                     </a>
                   </h3>
                   <p
-                    class="Summary-sc-1dvfmi3-4 zsDkO"
+                    class="Summary-sc-1dvfmi3-4 eLVbDm"
                   >
                     چانه‌زنی برای دست‌یابی به یک توافق سیاسی بین اشرف غنی، رئیس جمهوری و عبدالله عبدالله که همزمان با او اعلام ریاست جمهوری کرده بود، از اوایل اسفند/حوت سال گذشته خورشیدی آغاز شد و حدود سه ماه زمان گرفت. مذاکراتی که پشت درهای بسته برگزار می‌شد به قول منابعی که با آنها صحبت کرده‌ام بارها به بن‌بست رسید و جلسات بارها با عصبانیت یکی از دو طرف مذاکره بی‌نتیجه پایان یافت.
                   </p>
                   <time
-                    class="StyledTimestamp-um718p-0 kVWTyt"
+                    class="StyledTimestamp-um718p-0 fMHMrb"
                     datetime="2020-05-20"
                   >
-                    20th May 2020
+                    ۳۱ اردیبهشت ۱۳۹۹ - ۲۰ مه ۲۰۲۰
                   </time>
                 </div>
               </div>
             </li>
             <li
               class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-              dir="ltr"
+              dir="rtl"
               role="listitem"
             >
               <div
@@ -657,7 +657,7 @@ Object {
               >
                 <div
                   class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <div
                     class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -676,10 +676,10 @@ Object {
                 </div>
                 <div
                   class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <h3
-                    class="Headline-sc-1dvfmi3-3 hSJrur"
+                    class="Headline-sc-1dvfmi3-3 ecBkfP"
                   >
                     <a
                       class="Link-sc-1dvfmi3-5 jeUMCT"
@@ -689,22 +689,22 @@ Object {
                     </a>
                   </h3>
                   <p
-                    class="Summary-sc-1dvfmi3-4 eaCWBB"
+                    class="Summary-sc-1dvfmi3-4 eYboNJ"
                   >
                     شیوع ویروس کرونا در افغانستان گردشگری را در این کشور با رکود مواجه کرده و اماکن توریستی از شرق تا غرب و از شمال تا جنوب بر روی گردشگران بسته شده است. از صنعت توریزم که هم دولت نفع می‌برد و هم مردم، حالا با رکود بی‌سابقه مواجه شده است.
                   </p>
                   <time
-                    class="StyledTimestamp-um718p-0 kVWTyt"
+                    class="StyledTimestamp-um718p-0 fMHMrb"
                     datetime="2020-05-19"
                   >
-                    19th May 2020
+                    ۳۰ اردیبهشت ۱۳۹۹ - ۱۹ مه ۲۰۲۰
                   </time>
                 </div>
               </div>
             </li>
             <li
               class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-              dir="ltr"
+              dir="rtl"
               role="listitem"
             >
               <div
@@ -712,7 +712,7 @@ Object {
               >
                 <div
                   class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <div
                     class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -731,10 +731,10 @@ Object {
                 </div>
                 <div
                   class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <h3
-                    class="Headline-sc-1dvfmi3-3 hSJrur"
+                    class="Headline-sc-1dvfmi3-3 ecBkfP"
                   >
                     <a
                       class="Link-sc-1dvfmi3-5 jeUMCT"
@@ -744,22 +744,22 @@ Object {
                     </a>
                   </h3>
                   <p
-                    class="Summary-sc-1dvfmi3-4 eaCWBB"
+                    class="Summary-sc-1dvfmi3-4 eYboNJ"
                   >
                     سانگه صدیقی، فعال سیاسی و مدنی در مطلبی برای صفحه ناظران بی‌بی‌سی فارسی به توافق‌نامه بین محمد اشرف غنی و عبدالله پرداخته است و آن را "زوال دموکراسی" خوانده است.
                   </p>
                   <time
-                    class="StyledTimestamp-um718p-0 kVWTyt"
+                    class="StyledTimestamp-um718p-0 fMHMrb"
                     datetime="2020-05-18"
                   >
-                    18th May 2020
+                    ۲۹ اردیبهشت ۱۳۹۹ - ۱۸ مه ۲۰۲۰
                   </time>
                 </div>
               </div>
             </li>
             <li
               class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-              dir="ltr"
+              dir="rtl"
               role="listitem"
             >
               <div
@@ -767,7 +767,7 @@ Object {
               >
                 <div
                   class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <div
                     class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -786,10 +786,10 @@ Object {
                 </div>
                 <div
                   class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <h3
-                    class="Headline-sc-1dvfmi3-3 hSJrur"
+                    class="Headline-sc-1dvfmi3-3 ecBkfP"
                   >
                     <a
                       class="Link-sc-1dvfmi3-5 jeUMCT"
@@ -799,22 +799,22 @@ Object {
                     </a>
                   </h3>
                   <p
-                    class="Summary-sc-1dvfmi3-4 eaCWBB"
+                    class="Summary-sc-1dvfmi3-4 eYboNJ"
                   >
                     محمد اشرف غنی، رئیس جمهور افغانستان موافقت‌نامه‌ای با عبدالله عبدالله، رئیس اجرایی پیشین امضا کرده است. با امضای این موافقت‌نامه میان دو رقیب سیاسی، جنجال پس از اعلام نتیجه انتخابات اخیر افغانستان پس از نزدیک به پنج ماه پایان یافت. اختلاف بین این دو رهبر چه بود و چگونه حل شد؟
                   </p>
                   <time
-                    class="StyledTimestamp-um718p-0 kVWTyt"
+                    class="StyledTimestamp-um718p-0 fMHMrb"
                     datetime="2020-05-17"
                   >
-                    17th May 2020
+                    ۲۸ اردیبهشت ۱۳۹۹ - ۱۷ مه ۲۰۲۰
                   </time>
                 </div>
               </div>
             </li>
             <li
               class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-              dir="ltr"
+              dir="rtl"
               role="listitem"
             >
               <div
@@ -822,7 +822,7 @@ Object {
               >
                 <div
                   class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <div
                     class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -841,10 +841,10 @@ Object {
                 </div>
                 <div
                   class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <h3
-                    class="Headline-sc-1dvfmi3-3 hSJrur"
+                    class="Headline-sc-1dvfmi3-3 ecBkfP"
                   >
                     <a
                       class="Link-sc-1dvfmi3-5 jeUMCT"
@@ -854,15 +854,15 @@ Object {
                     </a>
                   </h3>
                   <p
-                    class="Summary-sc-1dvfmi3-4 eaCWBB"
+                    class="Summary-sc-1dvfmi3-4 eYboNJ"
                   >
                     نویسنده در این یادداشت که برای صفحه ناظران فرستاده، می‌گوید که "آرمان ایران، داشتنِ نفوذ شبیه به عراق در افغانستان نیست" اما دارای منافع در افغانستان است از جمله صادرات و روابط تجاری و گاهی دشمن مشترک مانند داعش.
                   </p>
                   <time
-                    class="StyledTimestamp-um718p-0 kVWTyt"
+                    class="StyledTimestamp-um718p-0 fMHMrb"
                     datetime="2020-05-16"
                   >
-                    16th May 2020
+                    ۲۷ اردیبهشت ۱۳۹۹ - ۱۶ مه ۲۰۲۰
                   </time>
                 </div>
               </div>
@@ -890,7 +890,7 @@ Object {
           class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
         >
           <div
-            class="Bar-sc-1x4gwjz-0 jsgdXU"
+            class="Bar-sc-1x4gwjz-0 kXOyLn"
           />
           <h2
             class="Heading-sc-1x4gwjz-2 eZofTG"
@@ -902,8 +902,8 @@ Object {
                 class="FlexRow-wx5kdp-2 dVBNyZ"
               >
                 <span
-                  class="Title-wx5kdp-4 BeqZV"
-                  dir="ltr"
+                  class="Title-wx5kdp-4 htLcbq"
+                  dir="rtl"
                   id="WatchListen"
                 >
                   ویدیو و صدا
@@ -914,12 +914,12 @@ Object {
         </div>
         <ul
           class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
-          dir="ltr"
+          dir="rtl"
           role="list"
         >
           <li
             class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 kFXEso"
-            dir="ltr"
+            dir="rtl"
             role="listitem"
           >
             <div
@@ -927,7 +927,7 @@ Object {
             >
               <div
                 class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
-                dir="ltr"
+                dir="rtl"
               >
                 <div
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -944,8 +944,8 @@ Object {
                   >
                     <div
                       aria-hidden="true"
-                      class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
-                      dir="ltr"
+                      class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
+                      dir="rtl"
                     >
                       <div
                         class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
@@ -975,10 +975,10 @@ Object {
               </div>
               <div
                 class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
-                dir="ltr"
+                dir="rtl"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 fccgro"
+                  class="Headline-sc-1dvfmi3-3 jDsPwR"
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 jeUMCT"
@@ -990,7 +990,7 @@ Object {
                       <span
                         class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                       >
-                        Video
+                        ویدیو
                         , 
                       </span>
                       <span>
@@ -1005,22 +1005,22 @@ Object {
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 zsDkO"
+                  class="Summary-sc-1dvfmi3-4 eLVbDm"
                 >
                   در حالیکه شمار رسمی مبتلایان به ویروس کرونا از چهار و نیم میلیون نفر عبور کرده، این روزها کشورهای آمریکای لاتین به کانون های اصلی شیوع تبدیل شده‌اند..
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="StyledTimestamp-um718p-0 fMHMrb"
                   datetime="2020-05-19"
                 >
-                  19th May 2020
+                  ۳۰ اردیبهشت ۱۳۹۹ - ۱۹ مه ۲۰۲۰
                 </time>
               </div>
             </div>
           </li>
           <li
             class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-            dir="ltr"
+            dir="rtl"
             role="listitem"
           >
             <div
@@ -1028,7 +1028,7 @@ Object {
             >
               <div
                 class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="ltr"
+                dir="rtl"
               >
                 <div
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -1045,8 +1045,8 @@ Object {
                   >
                     <div
                       aria-hidden="true"
-                      class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
-                      dir="ltr"
+                      class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
+                      dir="rtl"
                     >
                       <div
                         class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
@@ -1076,10 +1076,10 @@ Object {
               </div>
               <div
                 class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="ltr"
+                dir="rtl"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="Headline-sc-1dvfmi3-3 ecBkfP"
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 jeUMCT"
@@ -1091,7 +1091,7 @@ Object {
                       <span
                         class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                       >
-                        Video
+                        ویدیو
                         , 
                       </span>
                       <span>
@@ -1106,22 +1106,22 @@ Object {
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="Summary-sc-1dvfmi3-4 eYboNJ"
                 >
                   مقام‌های محلی غزنی گفته‌اند در حمله صبح امروز طالبان در شهر غزنی در جنوب افغانستان هفت نفر کشته و چهل نفر زخمی شده‌اند.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="StyledTimestamp-um718p-0 fMHMrb"
                   datetime="2020-05-18"
                 >
-                  18th May 2020
+                  ۲۹ اردیبهشت ۱۳۹۹ - ۱۸ مه ۲۰۲۰
                 </time>
               </div>
             </div>
           </li>
           <li
             class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-            dir="ltr"
+            dir="rtl"
             role="listitem"
           >
             <div
@@ -1129,7 +1129,7 @@ Object {
             >
               <div
                 class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="ltr"
+                dir="rtl"
               >
                 <div
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -1146,8 +1146,8 @@ Object {
                   >
                     <div
                       aria-hidden="true"
-                      class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
-                      dir="ltr"
+                      class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
+                      dir="rtl"
                     >
                       <div
                         class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
@@ -1177,10 +1177,10 @@ Object {
               </div>
               <div
                 class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="ltr"
+                dir="rtl"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="Headline-sc-1dvfmi3-3 ecBkfP"
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 jeUMCT"
@@ -1192,7 +1192,7 @@ Object {
                       <span
                         class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                       >
-                        Video
+                        ویدیو
                         , 
                       </span>
                       <span>
@@ -1207,22 +1207,22 @@ Object {
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="Summary-sc-1dvfmi3-4 eYboNJ"
                 >
                   در افغانستان عبدالله عبدالله با امضای یک توافق از ادعای خود به عنوان رییس جمهوری گذشت و اشرف غنی را به عنوان رییس دولت پذیرفت.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="StyledTimestamp-um718p-0 fMHMrb"
                   datetime="2020-05-17"
                 >
-                  17th May 2020
+                  ۲۸ اردیبهشت ۱۳۹۹ - ۱۷ مه ۲۰۲۰
                 </time>
               </div>
             </div>
           </li>
           <li
             class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-            dir="ltr"
+            dir="rtl"
             role="listitem"
           >
             <div
@@ -1230,7 +1230,7 @@ Object {
             >
               <div
                 class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="ltr"
+                dir="rtl"
               >
                 <div
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -1247,8 +1247,8 @@ Object {
                   >
                     <div
                       aria-hidden="true"
-                      class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
-                      dir="ltr"
+                      class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
+                      dir="rtl"
                     >
                       <div
                         class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
@@ -1278,10 +1278,10 @@ Object {
               </div>
               <div
                 class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="ltr"
+                dir="rtl"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="Headline-sc-1dvfmi3-3 ecBkfP"
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 jeUMCT"
@@ -1293,7 +1293,7 @@ Object {
                       <span
                         class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                       >
-                        Video
+                        ویدیو
                         , 
                       </span>
                       <span>
@@ -1308,22 +1308,22 @@ Object {
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="Summary-sc-1dvfmi3-4 eYboNJ"
                 >
                   وزارت صحت افغانستان اعلام کرده که شمار قربانیان حمله به بیمارستان کابل به ۲۴ نفر رسیده‌است.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="StyledTimestamp-um718p-0 fMHMrb"
                   datetime="2020-05-13"
                 >
-                  13th May 2020
+                  ۲۴ اردیبهشت ۱۳۹۹ - ۱۳ مه ۲۰۲۰
                 </time>
               </div>
             </div>
           </li>
           <li
             class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-            dir="ltr"
+            dir="rtl"
             role="listitem"
           >
             <div
@@ -1331,7 +1331,7 @@ Object {
             >
               <div
                 class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="ltr"
+                dir="rtl"
               >
                 <div
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -1348,8 +1348,8 @@ Object {
                   >
                     <div
                       aria-hidden="true"
-                      class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
-                      dir="ltr"
+                      class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
+                      dir="rtl"
                     >
                       <div
                         class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
@@ -1379,10 +1379,10 @@ Object {
               </div>
               <div
                 class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="ltr"
+                dir="rtl"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="Headline-sc-1dvfmi3-3 ecBkfP"
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 jeUMCT"
@@ -1394,7 +1394,7 @@ Object {
                       <span
                         class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                       >
-                        Video
+                        ویدیو
                         , 
                       </span>
                       <span>
@@ -1409,15 +1409,15 @@ Object {
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="Summary-sc-1dvfmi3-4 eYboNJ"
                 >
                   سخنگوی وزارت خارجه ایران، دست داشتن نیروی انتظامی در مرگ شهروندان افغانستان در مرز دو کشور را تکذیب کرده‌است.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="StyledTimestamp-um718p-0 fMHMrb"
                   datetime="2020-05-12"
                 >
-                  12th May 2020
+                  ۲۳ اردیبهشت ۱۳۹۹ - ۱۲ مه ۲۰۲۰
                 </time>
               </div>
             </div>
@@ -1433,7 +1433,7 @@ Object {
           class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
         >
           <div
-            class="Bar-sc-1x4gwjz-0 jsgdXU"
+            class="Bar-sc-1x4gwjz-0 kXOyLn"
           />
           <h2
             class="Heading-sc-1x4gwjz-2 eZofTG"
@@ -1445,8 +1445,8 @@ Object {
                 class="FlexRow-wx5kdp-2 dVBNyZ"
               >
                 <span
-                  class="Title-wx5kdp-4 BeqZV"
-                  dir="ltr"
+                  class="Title-wx5kdp-4 htLcbq"
+                  dir="rtl"
                   id="Features"
                 >
                   تحلیل و گزارش
@@ -1457,12 +1457,12 @@ Object {
         </div>
         <ul
           class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
-          dir="ltr"
+          dir="rtl"
           role="list"
         >
           <li
             class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 kFXEso"
-            dir="ltr"
+            dir="rtl"
             role="listitem"
           >
             <div
@@ -1470,7 +1470,7 @@ Object {
             >
               <div
                 class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
-                dir="ltr"
+                dir="rtl"
               >
                 <div
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -1489,10 +1489,10 @@ Object {
               </div>
               <div
                 class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
-                dir="ltr"
+                dir="rtl"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 fccgro"
+                  class="Headline-sc-1dvfmi3-3 jDsPwR"
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 jeUMCT"
@@ -1502,22 +1502,22 @@ Object {
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 zsDkO"
+                  class="Summary-sc-1dvfmi3-4 eLVbDm"
                 >
                   چانه‌زنی برای دست‌یابی به یک توافق سیاسی بین اشرف غنی، رئیس جمهوری و عبدالله عبدالله که همزمان با او اعلام ریاست جمهوری کرده بود، از اوایل اسفند/حوت سال گذشته خورشیدی آغاز شد و حدود سه ماه زمان گرفت. مذاکراتی که پشت درهای بسته برگزار می‌شد به قول منابعی که با آنها صحبت کرده‌ام بارها به بن‌بست رسید و جلسات بارها با عصبانیت یکی از دو طرف مذاکره بی‌نتیجه پایان یافت.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="StyledTimestamp-um718p-0 fMHMrb"
                   datetime="2020-05-20"
                 >
-                  20th May 2020
+                  ۳۱ اردیبهشت ۱۳۹۹ - ۲۰ مه ۲۰۲۰
                 </time>
               </div>
             </div>
           </li>
           <li
             class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-            dir="ltr"
+            dir="rtl"
             role="listitem"
           >
             <div
@@ -1525,7 +1525,7 @@ Object {
             >
               <div
                 class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="ltr"
+                dir="rtl"
               >
                 <div
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -1544,10 +1544,10 @@ Object {
               </div>
               <div
                 class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="ltr"
+                dir="rtl"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="Headline-sc-1dvfmi3-3 ecBkfP"
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 jeUMCT"
@@ -1557,22 +1557,22 @@ Object {
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="Summary-sc-1dvfmi3-4 eYboNJ"
                 >
                   شیوع ویروس کرونا در افغانستان گردشگری را در این کشور با رکود مواجه کرده و اماکن توریستی از شرق تا غرب و از شمال تا جنوب بر روی گردشگران بسته شده است. از صنعت توریزم که هم دولت نفع می‌برد و هم مردم، حالا با رکود بی‌سابقه مواجه شده است.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="StyledTimestamp-um718p-0 fMHMrb"
                   datetime="2020-05-19"
                 >
-                  19th May 2020
+                  ۳۰ اردیبهشت ۱۳۹۹ - ۱۹ مه ۲۰۲۰
                 </time>
               </div>
             </div>
           </li>
           <li
             class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-            dir="ltr"
+            dir="rtl"
             role="listitem"
           >
             <div
@@ -1580,7 +1580,7 @@ Object {
             >
               <div
                 class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="ltr"
+                dir="rtl"
               >
                 <div
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -1599,10 +1599,10 @@ Object {
               </div>
               <div
                 class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="ltr"
+                dir="rtl"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="Headline-sc-1dvfmi3-3 ecBkfP"
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 jeUMCT"
@@ -1612,22 +1612,22 @@ Object {
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="Summary-sc-1dvfmi3-4 eYboNJ"
                 >
                   سانگه صدیقی، فعال سیاسی و مدنی در مطلبی برای صفحه ناظران بی‌بی‌سی فارسی به توافق‌نامه بین محمد اشرف غنی و عبدالله پرداخته است و آن را "زوال دموکراسی" خوانده است.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="StyledTimestamp-um718p-0 fMHMrb"
                   datetime="2020-05-18"
                 >
-                  18th May 2020
+                  ۲۹ اردیبهشت ۱۳۹۹ - ۱۸ مه ۲۰۲۰
                 </time>
               </div>
             </div>
           </li>
           <li
             class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-            dir="ltr"
+            dir="rtl"
             role="listitem"
           >
             <div
@@ -1635,7 +1635,7 @@ Object {
             >
               <div
                 class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="ltr"
+                dir="rtl"
               >
                 <div
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -1654,10 +1654,10 @@ Object {
               </div>
               <div
                 class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="ltr"
+                dir="rtl"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="Headline-sc-1dvfmi3-3 ecBkfP"
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 jeUMCT"
@@ -1667,22 +1667,22 @@ Object {
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="Summary-sc-1dvfmi3-4 eYboNJ"
                 >
                   محمد اشرف غنی، رئیس جمهور افغانستان موافقت‌نامه‌ای با عبدالله عبدالله، رئیس اجرایی پیشین امضا کرده است. با امضای این موافقت‌نامه میان دو رقیب سیاسی، جنجال پس از اعلام نتیجه انتخابات اخیر افغانستان پس از نزدیک به پنج ماه پایان یافت. اختلاف بین این دو رهبر چه بود و چگونه حل شد؟
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="StyledTimestamp-um718p-0 fMHMrb"
                   datetime="2020-05-17"
                 >
-                  17th May 2020
+                  ۲۸ اردیبهشت ۱۳۹۹ - ۱۷ مه ۲۰۲۰
                 </time>
               </div>
             </div>
           </li>
           <li
             class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-            dir="ltr"
+            dir="rtl"
             role="listitem"
           >
             <div
@@ -1690,7 +1690,7 @@ Object {
             >
               <div
                 class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="ltr"
+                dir="rtl"
               >
                 <div
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -1709,10 +1709,10 @@ Object {
               </div>
               <div
                 class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="ltr"
+                dir="rtl"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="Headline-sc-1dvfmi3-3 ecBkfP"
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 jeUMCT"
@@ -1722,15 +1722,15 @@ Object {
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="Summary-sc-1dvfmi3-4 eYboNJ"
                 >
                   نویسنده در این یادداشت که برای صفحه ناظران فرستاده، می‌گوید که "آرمان ایران، داشتنِ نفوذ شبیه به عراق در افغانستان نیست" اما دارای منافع در افغانستان است از جمله صادرات و روابط تجاری و گاهی دشمن مشترک مانند داعش.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="StyledTimestamp-um718p-0 fMHMrb"
                   datetime="2020-05-16"
                 >
-                  16th May 2020
+                  ۲۷ اردیبهشت ۱۳۹۹ - ۱۶ مه ۲۰۲۰
                 </time>
               </div>
             </div>

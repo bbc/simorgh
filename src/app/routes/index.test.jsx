@@ -23,7 +23,7 @@ import photoGalleryPageJson from '#data/indonesia/cpsAssets/indonesia-41635759.j
 import storyPageJson from '#data/mundo/cpsAssets/noticias-internacional-51266689.json';
 import featureIndexPageJson from '#data/afrique/cpsAssets/48465371.json';
 import storyPageMostReadData from '#data/pidgin/mostRead/index.json';
-import indexPageJson from '#data/persian/afghanistan/index.json';
+import indexPageJson from '#data/ukrainian/ukraine_in_russian';
 
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
 

@@ -9,13 +9,13 @@ const requestContextData = {
   isAmp: false,
   pageType: 'IDX',
   service: 'persian',
-  pathname: '/pathname',
+  pathname: '/persian/afghanistan',
   data: { status: 200 },
 };
 
 const IdxPageWithContext = () => (
   <RequestContextProvider {...requestContextData}>
-    <ServiceContextProvider service="pidgin">
+    <ServiceContextProvider service="persian">
       <IdxPage pageData={persianAfghanistanIdxData} />
     </ServiceContextProvider>
   </RequestContextProvider>
