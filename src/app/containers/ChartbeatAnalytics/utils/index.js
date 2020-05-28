@@ -105,7 +105,7 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
   }
 };
 
-const getRadioContentType = pageData => path(['contentType'], pageData);
+const getTvRadioContentType = pageData => path(['contentType'], pageData);
 
 export const getConfig = ({
   isAmp,
@@ -145,7 +145,7 @@ export const getConfig = ({
   });
   const cookie = getSylphidCookie();
   const type = getType(pageType);
-  const contentType = pageType === 'media' ? getRadioContentType(data) : type;
+  const contentType = pageType === 'media' ? getTvRadioContentType(data) : type;
   const currentPath = onClient() && window.location.pathname;
   return {
     domain,
