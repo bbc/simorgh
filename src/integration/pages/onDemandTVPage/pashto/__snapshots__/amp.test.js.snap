@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP On Demand T V Page A11y I can see the skip to content link 1`] = `"مطلب ته ورشئ"`;
+
+exports[`AMP On Demand T V Page AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+  "policy": Object {
+    "default": Object {
+      "timeout": Object {
+        "fallbackAction": "reject",
+        "seconds": 0,
+      },
+      "waitFor": Object {
+        "user-consent": Array [],
+      },
+    },
+  },
+}
+`;
+
+exports[`AMP On Demand T V Page AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+  },
+}
+`;
+
+exports[`AMP On Demand T V Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
+
+exports[`AMP On Demand T V Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
+
+exports[`AMP On Demand T V Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
+
+exports[`AMP On Demand T V Page I can see the brand title 1`] = `"نړۍ دا وخت"`;
+
+exports[`AMP On Demand T V Page I can see the episode summary 1`] = `"د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."`;
+
+exports[`AMP On Demand T V Page I can see the episode title 1`] = `"۲۷ می ۲۰۲۰"`;
+
+exports[`AMP On Demand T V Page SEO Canonical link 1`] = `"http://localhost:7080/pashto/bbc_pashto_tv/w13xttn4"`;
+
+exports[`AMP On Demand T V Page SEO Dir attribute 1`] = `"rtl"`;
+
+exports[`AMP On Demand T V Page SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`AMP On Demand T V Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP On Demand T V Page SEO Heading level 1 1`] = `"نړۍ دا وخت, ۲۷ می ۲۰۲۰"`;
+
+exports[`AMP On Demand T V Page SEO Lang attribute 1`] = `"ps"`;
+
+exports[`AMP On Demand T V Page SEO OG description 1`] = `"د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."`;
+
+exports[`AMP On Demand T V Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"`;
+
+exports[`AMP On Demand T V Page SEO OG image alt 1`] = `"BBC News پښتو"`;
+
+exports[`AMP On Demand T V Page SEO OG locale 1`] = `"ps"`;
+
+exports[`AMP On Demand T V Page SEO OG site name 1`] = `"BBC News پښتو"`;
+
+exports[`AMP On Demand T V Page SEO OG title 1`] = `"نړۍ دا وخت - BBC News پښتو"`;
+
+exports[`AMP On Demand T V Page SEO OG type 1`] = `"website"`;
+
+exports[`AMP On Demand T V Page SEO OG url 1`] = `"http://localhost:7080/pashto/bbc_pashto_tv/w13xttn4"`;
+
+exports[`AMP On Demand T V Page SEO Page title 1`] = `"نړۍ دا وخت - BBC News پښتو"`;
+
+exports[`AMP On Demand T V Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`AMP On Demand T V Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP On Demand T V Page SEO Twitter creator 1`] = `"@bbcpashto"`;
+
+exports[`AMP On Demand T V Page SEO Twitter description 1`] = `"د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."`;
+
+exports[`AMP On Demand T V Page SEO Twitter image alt 1`] = `"BBC News پښتو"`;
+
+exports[`AMP On Demand T V Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"`;
+
+exports[`AMP On Demand T V Page SEO Twitter site 1`] = `"@bbcpashto"`;
+
+exports[`AMP On Demand T V Page SEO Twitter title 1`] = `"نړۍ دا وخت - BBC News پښتو"`;
+
+exports[`AMP On Demand T V Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `"نړۍ دا وخت, ۲۷ می ۲۰۲۰"`;
