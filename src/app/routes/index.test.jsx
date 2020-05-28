@@ -26,9 +26,18 @@ import storyPageMostReadData from '#data/pidgin/mostRead/index.json';
 
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
 
+beforeEach(() => {
+  // Mocks out CanonicalAdBootstrapJs script
+  window.dotcom = {
+    bootstrap: jest.fn(),
+    cmd: { push: jest.fn() },
+  };
+});
+
 afterEach(() => {
   jest.clearAllMocks();
   fetchMock.restore();
+  window.dotcom = undefined;
 });
 
 const getMatchingRoute = pathname =>
