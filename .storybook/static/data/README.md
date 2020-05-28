@@ -2,7 +2,7 @@
 
 ## Routing
 
-This files in directory (./storybook/static/data) are hosted on storybook application via the relative path of file from data directory. For example, `.storybook/static/data/russian/mostRead/index.json` will be available here: `https://bbc.github.io/simorgh/russian/mostread.json`.
+This files in directory (./storybook/static/data) are hosted on storybook application via the relative path of file from data directory. For example, `.storybook/static/data/russian/mostread.json` will be available here: `https://bbc.github.io/simorgh/russian/mostread.json`.
 
 ## Reasoning for directory convention
 
