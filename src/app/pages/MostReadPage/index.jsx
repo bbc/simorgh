@@ -127,7 +127,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={header} />
-      <StyledMain>
+      <StyledMain data-e2e="most-read">
         <MostReadContainer
           mostReadEndpointOverride={mostReadEndpointOverride}
           wrapper={MostReadWrapper}
