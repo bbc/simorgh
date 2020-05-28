@@ -1,7 +1,7 @@
 import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
-import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
+import getPlaceholderImageUrl from '../../utils/getPlaceholderImageUrl';
 
 const getBrandTitle = path(['metadata', 'title']);
 const getLanguage = path(['metadata', 'language']);
@@ -18,7 +18,7 @@ const getDurationISO8601 = path([
   'durationISO8601',
 ]);
 const getThumbnailImageUrl = json =>
-  getPlaceholderImageUrlUtil(path(['promo', 'media', 'imageUrl'], json));
+  getPlaceholderImageUrl(path(['promo', 'media', 'imageUrl'], json));
 const getPromoBrandTitle = path(['promo', 'brand', 'title']);
 
 export default async ({ path: pathname }) => {
