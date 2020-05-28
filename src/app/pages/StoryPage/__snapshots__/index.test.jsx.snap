@@ -2977,6 +2977,32 @@ exports[`Story Page should render correctly when the secondary column data is no
   color: #B80000;
 }
 
+.c27 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 0;
+  list-style-type: none;
+}
+
+.c27 > li::before {
+  content: ' ';
+  display: inline-block;
+  width: 2rem;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
+  margin-left: -2rem;
+}
+
+.c28 {
+  margin-bottom: 1rem;
+}
+
+.c26 {
+  margin-bottom: 1.5rem;
+}
+
 .c12 {
   margin: 0;
   padding-bottom: 1.5rem;
@@ -3075,32 +3101,6 @@ exports[`Story Page should render correctly when the secondary column data is no
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
-}
-
-.c27 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-top: 0;
-  list-style-type: none;
-}
-
-.c27 > li::before {
-  content: ' ';
-  display: inline-block;
-  width: 2rem;
-  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
-  margin-left: -2rem;
-}
-
-.c28 {
-  margin-bottom: 1rem;
-}
-
-.c26 {
-  margin-bottom: 1.5rem;
 }
 
 .c29 {
@@ -3447,6 +3447,20 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
+  .c27 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c27 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c20 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
@@ -3622,20 +3636,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 @supports (display:grid) {
   .c42 {
     display: block;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c27 {
-    font-size: 1rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c27 {
-    font-size: 1rem;
-    line-height: 1.375rem;
   }
 }
 
