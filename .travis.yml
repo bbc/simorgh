@@ -39,8 +39,6 @@ cypress: &cypress # Runs Cypress and Puppeteer
   - stage: test
     if: type = push OR (pull_request AND fork = true)
     name: Production CI tests
-    before_install:
-      - sudo apt-get install -y libgconf-2-4
     addons:
       chrome: stable
       apt:
