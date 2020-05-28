@@ -251,31 +251,37 @@ describe('processMostRead', () => {
         description:
           'should log MOST_READ_DATA_INCOMPLETE when most read item title is missing',
         data: kyrgyzDataWithInvalidPromo(missingTitleOptimoPromo),
-        message:
-          "Most read data promo has href: 'null' and title: 'Most read item title' for kyrgyz",
         numberOfItems: 5,
         service: 'kyrgyz',
+        warningContext: {
+          service: 'kyrgyz',
+          title: null,
+          url: 'https://www.bbc.com/news/articles/cn060pe01e5o',
+        },
       },
       {
         description:
           'should log MOST_READ_DATA_INCOMPLETE when most read item href is missing',
         data: kyrgyzDataWithInvalidPromo(missingHrefOptimoPromo),
-        message:
-          "Most read data promo has href: 'https://www.bbc.com/news/articles/cn060pe01e5o' and title: 'null' for kyrgyz",
         numberOfItems: 5,
         service: 'kyrgyz',
+        warningContext: {
+          service: 'kyrgyz',
+          title: 'Most read item title',
+          url: null,
+        },
       },
-    ].forEach(({ description, data, message, numberOfItems, service }) => {
-      it(description, () => {
-        processMostRead({ data, numberOfItems, service });
-        expect(nodeLogger.warn).toHaveBeenCalledWith(
-          MOST_READ_DATA_INCOMPLETE,
-          {
-            message,
-          },
-        );
-      });
-    });
+    ].forEach(
+      ({ description, data, numberOfItems, service, warningContext }) => {
+        it(description, () => {
+          processMostRead({ data, numberOfItems, service });
+          expect(nodeLogger.warn).toHaveBeenCalledWith(
+            MOST_READ_DATA_INCOMPLETE,
+            warningContext,
+          );
+        });
+      },
+    );
 
     it('should log MOST_READ_STALE_DATA when lastRecordTimestamp is greater than 35min', () => {
       processMostRead({
@@ -284,7 +290,9 @@ describe('processMostRead', () => {
         service: 'pidgin',
       });
       expect(nodeLogger.warn).toHaveBeenCalledWith(MOST_READ_STALE_DATA, {
-        message: `Most read lastUpdatedTimestamp - 2019-11-06T16:28:00Z value is greater than 35min for pidgin`,
+        lastRecordTimeStamp: '2019-11-06T16:28:00Z',
+        message: 'lastRecordTimeStamp is greater than 35min for this service',
+        service: 'pidgin',
       });
     });
   });

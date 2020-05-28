@@ -81,7 +81,9 @@ const mostReadItems = ({ data, numberOfItems, service }) => {
         items.push(mostReadItemData);
       } else {
         logger.warn(MOST_READ_DATA_INCOMPLETE, {
-          message: `Most read data promo has href: '${href}' and title: '${title}' for ${service}`,
+          service,
+          title,
+          url: href,
         });
       }
 
@@ -92,7 +94,9 @@ const mostReadItems = ({ data, numberOfItems, service }) => {
     return items;
   }
   logger.warn(MOST_READ_STALE_DATA, {
-    message: `Most read lastUpdatedTimestamp - ${data.lastRecordTimeStamp} value is greater than 35min for ${service}`,
+    message: 'lastRecordTimeStamp is greater than 35min for this service',
+    lastRecordTimeStamp: data.lastRecordTimeStamp,
+    service,
   });
   return null;
 };
