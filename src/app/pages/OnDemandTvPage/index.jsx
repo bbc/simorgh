@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { shape, string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
+import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import MediaMessage from '../MediaAssetPage/MediaMessage';
 import MetadataContainer from '../../containers/Metadata';
@@ -11,6 +12,10 @@ import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHea
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
+
+const StyledGelWrapperGrid = styled.div`
+  padding-top: ${GEL_SPACING_TRPL};
+`;
 
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,
@@ -73,6 +78,12 @@ const OnDemandTvPage = ({ pageData }) => {
             {brandTitle}, {formattedTimestamp}
           </VisuallyHiddenText>
           <MediaMessage />
+          <StyledGelWrapperGrid
+            columns={getGroups(6, 6, 6, 6, 6, 6)}
+            enableGelGutters
+          >
+            <MediaMessage />
+          </StyledGelWrapperGrid>
           <OnDemandHeadingBlock
             idAttr={idAttr}
             brandTitle={brandTitle}
