@@ -1,53 +1,10 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
-import IncludeContainer from './index.canonical';
-import { ToggleContext } from '#contexts/ToggleContext';
-import { RequestContextProvider } from '#contexts/RequestContext';
-
-const defaultToggleState = {
-  include: {
-    enabled: true,
-  },
-};
-
-const toggleStateFalse = {
-  include: {
-    enabled: true,
-  },
-};
+import CanonicalIncludeContainer from './index.canonical';
 
 const fakeMarkup = `<div>Visual Journalism Markup</div><script type="text/javascript" src="localhost/vj.js"></script>`;
 
-// eslint-disable-next-line react/prop-types
-const MockContext = ({ toggleState, isAmp, children }) => (
-  <RequestContextProvider
-    bbcOrigin="https://www.test.bbc.com"
-    isAmp={isAmp || false}
-    pageType="STY"
-    service="news"
-    statusCode={200}
-    pathname="/pathname"
-  >
-    <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
-      {children}
-    </ToggleContext.Provider>
-  </RequestContextProvider>
-);
-
-/* eslint-disable react/prop-types */
-const IncludeContainerWithMockContext = ({
-  toggleState,
-  html,
-  type,
-  isAmp,
-}) => (
-  <MockContext toggleState={toggleState} isAmp={isAmp}>
-    <IncludeContainer html={html} type={type} />
-  </MockContext>
-);
-/* eslint-enable react/prop-types */
-
-describe('IncludeContainer', () => {
+describe('CanonicalIncludeContainer', () => {
   beforeEach(() => {
     window.require = { config: jest.fn() };
   });
@@ -56,58 +13,16 @@ describe('IncludeContainer', () => {
     window.require = null;
   });
 
-  it('should render HTML when include toggle is enabled', async () => {
-    const { container } = render(
-      <IncludeContainerWithMockContext
-        toggleState={defaultToggleState}
-        html={fakeMarkup}
-        type="idt2"
-      />,
-    );
-    expect(container).toMatchSnapshot();
-  });
-
   it('should not render any HTML when html prop is null', async () => {
     const { container } = render(
-      <IncludeContainerWithMockContext
-        toggleState={defaultToggleState}
-        type="idt2"
-        html={null}
-      />,
+      <CanonicalIncludeContainer type="idt2" html={null} />,
     );
     expect(container).toMatchSnapshot();
   });
 
   it('should not render any HTML for an unsupported include type', async () => {
     const { container } = render(
-      <IncludeContainerWithMockContext
-        toggleState={defaultToggleState}
-        html={fakeMarkup}
-        type="idt20"
-      />,
-    );
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should not render any HTML when include toggle is disabled', async () => {
-    const { container } = render(
-      <IncludeContainerWithMockContext
-        toggleState={toggleStateFalse}
-        html={fakeMarkup}
-        type="idt2"
-      />,
-    );
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should not render any HTML when its an amp page', async () => {
-    const { container } = render(
-      <IncludeContainerWithMockContext
-        toggleState={toggleStateFalse}
-        html={fakeMarkup}
-        type="idt2"
-        isAmp
-      />,
+      <CanonicalIncludeContainer html={fakeMarkup} type="idt20" />,
     );
     expect(container).toMatchSnapshot();
   });
@@ -115,11 +30,7 @@ describe('IncludeContainer', () => {
   const runningIncludeTest = includeType => {
     it(`should add require to the page for ${includeType}`, async () => {
       render(
-        <IncludeContainerWithMockContext
-          toggleState={toggleStateFalse}
-          html={fakeMarkup}
-          type={includeType}
-        />,
+        <CanonicalIncludeContainer html={fakeMarkup} type={includeType} />,
       );
 
       await waitFor(() => {
@@ -147,12 +58,12 @@ describe('IncludeContainer', () => {
 
   it(`should add require once for page with multiple vj and idt1 includes`, async () => {
     render(
-      <MockContext toggleState={defaultToggleState}>
-        <IncludeContainer html={fakeMarkup} type="idt1" />
-        <IncludeContainer html={fakeMarkup} type="vj" />
-        <IncludeContainer html={fakeMarkup} type="idt1" />
-        <IncludeContainer html={fakeMarkup} type="vj" />
-      </MockContext>,
+      <>
+        <CanonicalIncludeContainer html={fakeMarkup} type="idt1" />
+        <CanonicalIncludeContainer html={fakeMarkup} type="vj" />
+        <CanonicalIncludeContainer html={fakeMarkup} type="idt1" />
+        <CanonicalIncludeContainer html={fakeMarkup} type="vj" />
+      </>,
     );
 
     await waitFor(() => {
@@ -176,13 +87,7 @@ describe('IncludeContainer', () => {
   });
 
   it(`should not add require to the page for idt2`, async () => {
-    render(
-      <IncludeContainerWithMockContext
-        toggleState={toggleStateFalse}
-        html={fakeMarkup}
-        type="idt2"
-      />,
-    );
+    render(<CanonicalIncludeContainer html={fakeMarkup} type="idt2" />);
 
     await waitFor(() => {
       expect(Array.from(document.querySelectorAll('head script'))).toHaveLength(

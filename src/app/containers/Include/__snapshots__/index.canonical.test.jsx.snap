@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CanonicalIncludeContainer should not render any HTML for an unsupported include type 1`] = `<div />`;
+
+exports[`CanonicalIncludeContainer should not render any HTML when html prop is null 1`] = `<div />`;
