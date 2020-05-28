@@ -1,5 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`AmpIncludeContainer should not render for any include type other than an IDT2 1`] = `<div />`;
+
+exports[`AmpIncludeContainer should not render with invalid IDT2 props 1`] = `<div />`;
+
 exports[`AmpIncludeContainer should render for a valid IDT2 include 1`] = `
 <div>
   <div
@@ -19,7 +23,3 @@ exports[`AmpIncludeContainer should render for a valid IDT2 include 1`] = `
   </div>
 </div>
 `;
-
-exports[`AmpIncludeContainer should return null for any include type other than an IDT2 1`] = `<div />`;
-
-exports[`AmpIncludeContainer should return null with invalid IDT2 props 1`] = `<div />`;

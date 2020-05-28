@@ -42,7 +42,7 @@ describe('AmpIncludeContainer', () => {
     document.body.appendChild(container);
   });
 
-  it('should return null with invalid IDT2 props', async () => {
+  it('should not render with invalid IDT2 props', async () => {
     act(() => {
       ReactDOM.render(<AmpIncludeContainer {...invalidIdt2Props} />, container);
     });
@@ -50,7 +50,7 @@ describe('AmpIncludeContainer', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should return null for any include type other than an IDT2', async () => {
+  it('should not render for any include type other than an IDT2', async () => {
     const props = {
       ...validIdt2Props,
       type: 'vj',
