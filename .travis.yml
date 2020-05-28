@@ -9,54 +9,70 @@ cache:
     # less time, therefore this is more efficient than caching all.
     - ~/.cache/Cypress
 install: npm ci
+
+lint: &lint # Runs linting and dependencies
+  - stage: test
+    if: type = push OR (pull_request AND fork = true)
+    name: Linting and Dependencies
+    script:
+      - npm run test:lint
+      - npm run test:dependencies
+
+unit: &unit # Runs Unit tests
+  - stage: test
+    if: type = push OR (pull_request AND fork = true)
+    name: Unit Tests
+    script:
+      - npm run test:unit
+
+integration: &integration # Runs Integration and AMP Validation
+  - stage: test
+    if: type = push OR (pull_request AND fork = true)
+    name: Integration and AMP
+    before_install: npm install -g npm-run-all
+    script:
+      - npm run build -- --hide-modules --colors
+      - run-p --race start amp:validate
+      - run-p --race start test:integration:ci
+
+cypress: &cypress # Runs Cypress and Puppeteer
+  - stage: test
+    if: type = push OR (pull_request AND fork = true)
+    name: Production CI tests
+    before_install:
+      - sudo apt-get install -y libgconf-2-4
+    addons:
+      chrome: stable
+      apt:
+        packages:
+          - libgconf-2-4
+    script:
+      - npm run build
+      - npm prune --production
+      - npm run test:ci:puppeteer
+
+a11y: &a11y # Runs BBC A11y and Audit-CI
+  - stage: test
+    if: type = push OR (pull_request AND fork = true)
+    name: BBC A11y and Audit CI
+    addons:
+      chrome: stable
+      apt:
+        packages:
+          - libgconf-2-4
+    script:
+      - npm run build
+      - npm prune --production
+      - npm run test:ci:a11y
+
 jobs:
   fast_finish: true
   include:
-    - stage: test
-      if: type = push OR (pull_request AND fork = true)
-      name: 'Linting and Deps'
-      script:
-        - npm run test:lint
-        - npm run test:dependencies
-    - stage: test
-      if: type = push OR (pull_request AND fork = true)
-      name: 'Unit Tests'
-      script:
-        - npm run test:unit
-    - stage: test
-      if: type = push OR (pull_request AND fork = true)
-      name: 'Integration and AMP'
-      before_install: npm install -g npm-run-all
-      script:
-        - npm run build -- --hide-modules --colors
-        - run-p --race start amp:validate
-        - run-p --race start test:integration:ci
-    - stage: test
-      if: type = push OR (pull_request AND fork = true)
-      name: 'Production CI tests'
-      before_install:
-        - sudo apt-get install -y libgconf-2-4
-      addons:
-        chrome: stable
-        apt:
-          packages:
-            - libgconf-2-4
-      script:
-        - npm run build
-        - npm prune --production
-        - npm run test:ci:puppeteer
-    - stage: test
-      if: type = push OR (pull_request AND fork = true)
-      name: 'BBC A11y and Audit CI'
-      addons:
-        chrome: stable
-        apt:
-          packages:
-            - libgconf-2-4
-      script:
-        - npm run build
-        - npm prune --production
-        - npm run test:ci:a11y
+    <<: *lint
+    <<: *unit
+    <<: *integration
+    <<: *cypress
+    <<: *a11y
 
 notifications:
   email: false
