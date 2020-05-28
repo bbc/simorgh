@@ -16,9 +16,11 @@ import {
   frontPageSwPath,
   cpsAssetPageDataPath,
   onDemandRadioDataPath,
+  onDemandTvDataPath,
   mostReadDataRegexPath,
   legacyAssetPageDataPath,
   secondaryColumnDataRegexPath,
+  IdxDataPath,
 } from '../app/routes/utils/regex';
 import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
@@ -191,6 +193,19 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
 
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
+    .get(onDemandTvDataPath, async ({ params }, res, next) => {
+      const { service, serviceId, mediaId } = params;
+
+      const dataFilePath = path.join(
+        process.cwd(),
+        'data',
+        service,
+        serviceId,
+        mediaId,
+      );
+
+      sendDataFile(res, `${dataFilePath}.json`, next);
+    })
     .get(cpsAssetPageDataPath, async ({ params }, res, next) => {
       const { service, assetUri, variant } = params;
 
@@ -222,6 +237,11 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
         variant,
       });
 
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(IdxDataPath, async ({ params }, res, next) => {
+      const { idx } = params;
+      const dataFilePath = path.join(process.cwd(), 'data', idx, 'index.json');
       sendDataFile(res, dataFilePath, next);
     })
     .get('/ckns_policy/*', (req, res) => {
