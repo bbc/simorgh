@@ -23,6 +23,7 @@ import photoGalleryPageJson from '#data/indonesia/cpsAssets/indonesia-41635759.j
 import storyPageJson from '#data/mundo/cpsAssets/noticias-internacional-51266689.json';
 import featureIndexPageJson from '#data/afrique/cpsAssets/48465371.json';
 import storyPageMostReadData from '#data/pidgin/mostRead/index.json';
+import indexPageJson from '#data/persian/afghanistan/index.json';
 
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
 
@@ -281,6 +282,27 @@ it('should route to and render a story page', async () => {
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
     'Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea';
+
+  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+});
+
+it('should route to and render an index page', async () => {
+  const pathname = '/ukrainian/ukraine_in_russian';
+  fetchMock.mock(`http://localhost${pathname}.json`, indexPageJson);
+
+  const { getInitialData, pageType } = getMatchingRoute(pathname);
+  const { pageData } = await getInitialData({
+    path: pathname,
+    service: 'ukrainian',
+  });
+  const { getByText } = renderRouter({
+    pathname,
+    pageData,
+    pageType,
+    service: 'ukrainian',
+  });
+  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
+    'Многие украинцы из-за пандемии оказались заблокированными далеко за границей: из-за закрытия украинского неба добраться домой им очень сложно.';
 
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
