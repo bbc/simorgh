@@ -1,26 +1,7 @@
 import React from 'react';
 import { act, render } from '@testing-library/react';
-import IdxPage from '.';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { RequestContextProvider } from '#contexts/RequestContext';
 import persianMostReadData from '#data/persian/mostRead';
-
-const IDXPageWithContext = () => (
-  <ToggleContextProvider service="pidgin" origin="https://www.test.bbc.com">
-    <RequestContextProvider
-      pageType="IDX"
-      service="persian"
-      pathname="/pathname"
-      data={{ status: 200 }}
-      isAmp={false}
-    >
-      <ServiceContextProvider service="persian">
-        <IdxPage />
-      </ServiceContextProvider>
-    </RequestContextProvider>
-  </ToggleContextProvider>
-);
+import IDXPageWithContext from './testHelpers';
 
 describe('IdxPage', () => {
   beforeEach(async () => {
