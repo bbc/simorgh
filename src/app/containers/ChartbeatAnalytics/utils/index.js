@@ -1,5 +1,6 @@
 import Cookie from 'js-cookie';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import onClient from '../../../lib/utilities/onClient';
 import { getPromoHeadline } from '../../../lib/analyticsUtils/article';
 import { getPageTitle } from '../../../lib/analyticsUtils/frontpage';
@@ -48,6 +49,7 @@ export const buildSections = ({
   chapter,
   sectionName,
   categoryName,
+  masterBrand,
 }) => {
   const addProducer = producer && service !== producer;
   const serviceCap = capitalize(service);
@@ -66,7 +68,12 @@ export const buildSections = ({
     case 'media':
       return [
         serviceCap,
-        ...(pageType ? buildSectionItem(serviceCap, type) : []),
+        ...(pageType
+          ? buildSectionItem(
+              serviceCap,
+              masterBrand.includes('_tv') ? 'TV' : 'Radio',
+            )
+          : []),
         ...(addProducer ? buildSectionArr(serviceCap, producer, type) : []),
         ...(chapter ? buildSectionArr(serviceCap, chapter, type) : []),
       ].join(', ');
@@ -126,16 +133,19 @@ export const getConfig = ({
     ['metadata', 'passport', 'category', 'categoryName'],
     data,
   );
+
+  const masterBrand = pathOr(null, ['masterBrand'], data);
+
   const sections = buildSections({
     service,
     pageType,
     sectionName,
     categoryName,
+    masterBrand,
   });
   const cookie = getSylphidCookie();
   const type = getType(pageType);
-  const contentType = type === 'Radio' ? getRadioContentType(data) : type;
-
+  const contentType = pageType === 'media' ? getRadioContentType(data) : type;
   const currentPath = onClient() && window.location.pathname;
   return {
     domain,
