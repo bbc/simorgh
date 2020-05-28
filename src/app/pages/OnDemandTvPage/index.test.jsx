@@ -80,7 +80,7 @@ it('should show the datestamp correctly for Pashto OnDemand TV Pages', async () 
     service: 'pashto',
   });
 
-  expect(getByText('۱۳ می ۲۰۲۰')).toBeInTheDocument();
+  expect(getByText('۲۷ می ۲۰۲۰')).toBeInTheDocument();
 });
 
 it('should show the summary for OnDemand TV Pages', async () => {
