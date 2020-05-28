@@ -319,15 +319,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/afrique/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/afrique/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/afrique/popular/read'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
@@ -2859,15 +2859,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/mundo/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/mundo/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/mundo/popular/read'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
@@ -3481,7 +3481,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/persian/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/persian/popular/read'],
@@ -4009,15 +4009,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/russian/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/russian/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/russian/popular/read'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
@@ -4187,15 +4187,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/serbian/cyr/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/serbian/cyr/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/serbian/cyr/popular/read'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
@@ -4316,11 +4316,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/serbian/lat/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/serbian/lat/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/serbian/lat/popular/read'],
