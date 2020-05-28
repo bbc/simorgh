@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { oneOf } from 'prop-types';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import {
@@ -64,33 +65,39 @@ const constructAdJsonData = ({ service }) => ({
   },
 });
 
-const ampAdPropsMobile = ({ service }) => ({
-  'data-block-on-consent': 'default',
-  'data-npa-on-unknown-consent': 'true',
-  media: `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
-  type: 'doubleclick',
-  width: '320',
-  height: '50',
-  'data-multi-size': '320x50,300x50',
-  'data-slot': '/4817/bbccom.test.site.amp.news',
-  'data-amp-slot-index': '0',
-  'data-a4a-upgrade-type': 'amp-ad-network-doubleclick-impl',
-  json: JSON.stringify(constructAdJsonData({ service })),
-});
+const slotConfigurations = {
+  leaderboard: {
+    mobile: {
+      width: '320',
+      height: '50',
+      adMultiSize: '320x50,300x50',
+    },
+    desktop: {
+      width: '970',
+      height: '250',
+      adMultiSize: '970x250,728x90',
+    },
+  },
+};
 
-const ampAdPropsDesktop = ({ service }) => ({
-  'data-block-on-consent': 'default',
-  'data-npa-on-unknown-consent': 'true',
-  media: `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN})`,
-  type: 'doubleclick',
-  width: '970',
-  height: '250',
-  'data-multi-size': '970x250,728x90',
-  'data-slot': '/4817/bbccom.test.site.amp.news',
-  'data-amp-slot-index': '0',
-  'data-a4a-upgrade-type': 'amp-ad-network-doubleclick-impl',
-  json: JSON.stringify(constructAdJsonData({ service })),
-});
+const ampAdProps = ({ viewportType, service, slotType }) => {
+  const {
+    [viewportType]: { width, height, adMultiSize },
+  } = slotConfigurations[slotType];
+  return {
+    'data-block-on-consent': 'default',
+    'data-npa-on-unknown-consent': 'true',
+    media: `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
+    type: 'doubleclick',
+    width,
+    height,
+    'data-multi-size': adMultiSize,
+    'data-slot': '/4817/bbccom.test.site.amp.news',
+    'data-amp-slot-index': '0',
+    'data-a4a-upgrade-type': 'amp-ad-network-doubleclick-impl',
+    json: JSON.stringify(constructAdJsonData({ service })),
+  };
+};
 
 const AMP_ACCESS_DATA = endpoint => ({
   authorization: endpoint,
@@ -112,23 +119,20 @@ export const AMP_ACCESS_FETCH = service => {
   );
 };
 
-// eslint-disable-next-line react/prop-types
-const AmpAd = () => {
+const AmpAd = ({ slotType }) => {
   const { ads, dir, script, service } = useContext(ServiceContext);
   const label = pathOr('Advertisement', ['advertisementLabel'], ads);
 
   return (
-    <FullWidthWrapper>
-      <StyledWrapper>
-        <Helmet>
-          {AMP_ADS_JS}
-          {AMP_ACCESS_JS}
-          {AMP_ACCESS_FETCH(service)}
-        </Helmet>
-        <div
-          amp-access="toggles.ads.enabled AND geoIp.advertiseCombined"
-          amp-access-hide="true"
-        >
+    <div amp-access="toggles.ads.enabled" amp-access-hide="true">
+      <FullWidthWrapper>
+        <StyledWrapper>
+          <Helmet>
+            {AMP_ADS_JS}
+            {AMP_ACCESS_JS}
+            {AMP_ACCESS_FETCH(service)}
+          </Helmet>
+
           <StyledAd>
             <StyledLink
               href={LABEL_LINK}
@@ -138,7 +142,9 @@ const AmpAd = () => {
             >
               {label}
             </StyledLink>
-            <amp-ad {...ampAdPropsMobile({ service })}>
+            <amp-ad
+              {...ampAdProps({ viewportType: 'mobile', service, slotType })}
+            >
               <amp-img
                 placeholder
                 width="320"
@@ -147,7 +153,9 @@ const AmpAd = () => {
                 layout="responsive"
               />
             </amp-ad>
-            <amp-ad {...ampAdPropsDesktop({ service })}>
+            <amp-ad
+              {...ampAdProps({ viewportType: 'desktop', service, slotType })}
+            >
               <amp-img
                 placeholder
                 width="970"
@@ -157,10 +165,14 @@ const AmpAd = () => {
               />
             </amp-ad>
           </StyledAd>
-        </div>
-      </StyledWrapper>
-    </FullWidthWrapper>
+        </StyledWrapper>
+      </FullWidthWrapper>
+    </div>
   );
+};
+
+AmpAd.propTypes = {
+  slotType: oneOf(['leaderboard', 'mpu']).isRequired,
 };
 
 export default AmpAd;
