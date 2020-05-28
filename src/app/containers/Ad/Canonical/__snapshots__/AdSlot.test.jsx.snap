@@ -1,25 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CanonicalAds Ads Snapshots should correctly render an AdSlot with leaderboard id 1`] = `
-<html>
-  <head>
-    <script
-      type="text/javascript"
-    >
-      
-            window.dotcom.cmd.push(() =&gt; {
-              window.dotcom.ads.registerSlot('leaderboard');
-            });
-          
-    </script>
-  </head>
-  <body>
-    <div>
-      <div
-        class="dotcom-ad"
-        id="dotcom-leaderboard"
-      />
-    </div>
-  </body>
-</html>
+<div
+  class="dotcom-ad"
+  id="dotcom-leaderboard"
+/>
 `;
