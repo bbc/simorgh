@@ -8,7 +8,6 @@ const getHeadline = path(['promo', 'headlines', 'headline']);
 const getId = path(['metadata', 'id']);
 const getShortSynopsis = path(['promo', 'media', 'synopses', 'short']);
 const getContentType = path(['metadata', 'analyticsLabels', 'contentType']);
-const getMasterBrand = path(['metadata', 'createdBy']);
 const getPageTitle = path(['metadata', 'analyticsLabels', 'pageTitle']);
 const getPageIdentifier = path([
   'metadata',
@@ -31,7 +30,6 @@ export default async ({ path: pathname }) => {
         headline: getHeadline(json),
         shortSynopsis: getShortSynopsis(json),
         contentType: getContentType(json),
-        masterBrand: getMasterBrand(json),
         pageTitle: getPageTitle(json),
         pageIdentifier: getPageIdentifier(json),
         ...pageType,

@@ -17,7 +17,7 @@ export const buildTvRadioATIParams = (
 
   const isLiveRadio = contentType === 'player-live';
 
-  const getOnDemandRadioContentId = () => {
+  const getOnDemandContentId = () => {
     const guid = id.split('/').pop();
     const contentId = `urn:bbc:pips:`.concat(guid);
     return contentId;
@@ -25,7 +25,7 @@ export const buildTvRadioATIParams = (
 
   return {
     appName: atiAnalyticsAppName,
-    contentId: isLiveRadio ? id : getOnDemandRadioContentId(),
+    contentId: isLiveRadio ? id : getOnDemandContentId(),
     contentType,
     language,
     pageIdentifier,
