@@ -1,6 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Ad Container Snapshots should correctly render a Canonical ad 1`] = `<div />`;
+exports[`Ad Container Snapshots should correctly render a Canonical ad 1`] = `
+<html>
+  <head>
+    <script
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+    />
+  </head>
+  <body>
+    <div>
+      <div
+        class="dotcom-ad"
+        id="dotcom-leaderboard"
+      />
+    </div>
+  </body>
+</html>
+`;
 
 exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
 .c0 {
