@@ -1,6 +1,5 @@
 import Cookie from 'js-cookie';
 import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
 import onClient from '../../../lib/utilities/onClient';
 import { getPromoHeadline } from '../../../lib/analyticsUtils/article';
 import { getPageTitle } from '../../../lib/analyticsUtils/frontpage';
@@ -105,7 +104,7 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
   }
 };
 
-const getTvRadioContentType = pageData => path(['contentType'], pageData);
+const getTvRadioContentType = path(['contentType']);
 
 export const getConfig = ({
   isAmp,
@@ -134,7 +133,7 @@ export const getConfig = ({
     data,
   );
 
-  const masterBrand = pathOr(null, ['masterBrand'], data);
+  const masterBrand = path(['masterBrand'], data);
 
   const sections = buildSections({
     service,
