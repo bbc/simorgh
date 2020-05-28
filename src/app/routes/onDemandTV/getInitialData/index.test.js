@@ -18,6 +18,7 @@ describe('Get initial data for on demand tv', () => {
     });
 
     expect(pageData.language).toEqual('ps');
+    expect(pageData.releaseDateTimeStamp).toEqual(1589328000000);
     expect(pageData.brandTitle).toEqual('نړۍ دا وخت');
     expect(pageData.headline).toEqual('نړۍ دا وخت');
     expect(pageData.shortSynopsis).toEqual(
