@@ -6,7 +6,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import Canonical from './Canonical';
 import radioSchedulesShape from './utilities/radioScheduleShape';
-import getRadioScheduleEndpoint from '#lib/utilities/getRadioSchedulesUrls';
+import getRadioScheduleEndpoint from '#lib/utilities/getRadioSchedulesUrl';
 
 const RadioScheduleContainer = ({ initialData }) => {
   const { enabled } = useToggle('radioSchedule');
