@@ -13,30 +13,19 @@ export const buildTvRadioATIParams = (
     service,
   } = serviceContext;
 
-  const {
-    id,
-    language,
-    pageTitle,
-    pageIdentifier,
-    contentType,
-    masterBrand,
-  } = pageData;
+  const { id, language, pageTitle, pageIdentifier, contentType } = pageData;
 
   const isLiveRadio = contentType === 'player-live';
-  const isTvBrand = () => {
-    const mediaType = masterBrand.split('_').pop();
-    return mediaType === 'tv';
-  };
 
-  const getContentId = assetType => {
+  const getOnDemandRadioContentId = () => {
     const guid = id.split('/').pop();
-    const contentId = `urn:bbc:${assetType}:`.concat(guid);
+    const contentId = `urn:bbc:pips:`.concat(guid);
     return contentId;
   };
 
   return {
     appName: atiAnalyticsAppName,
-    contentId: isLiveRadio || isTvBrand() ? id : getContentId('pips'),
+    contentId: isLiveRadio ? id : getOnDemandRadioContentId(),
     contentType,
     language,
     pageIdentifier,

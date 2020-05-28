@@ -13,7 +13,6 @@ const liveRadio = {
   pageIdentifier: 'pageIdentifier',
   pageTitle: 'pageTitle',
   contentType: 'player-live',
-  masterBrand: 'bbc_brand_radio',
 };
 
 const onDemandRadio = {
@@ -22,7 +21,6 @@ const onDemandRadio = {
   pageIdentifier: 'pageIdentifier',
   pageTitle: 'pageTitle',
   contentType: 'player-episode',
-  masterBrand: 'bbc_brand_radio',
 };
 
 const onDemandTv = {
@@ -31,7 +29,6 @@ const onDemandTv = {
   pageIdentifier: 'pageIdentifier',
   pageTitle: 'pageTitle',
   contentType: 'player-episode',
-  masterBrand: 'bbc_brand_tv',
 };
 
 const requestContext = {
@@ -78,7 +75,7 @@ const validOnDemandRadioURLParams = {
 
 const validOnDemandTvURLParams = {
   appName: serviceContext.atiAnalyticsAppName,
-  contentId: 'id',
+  contentId: 'urn:bbc:pips:id',
   contentType: 'player-episode',
   language: 'language',
   pageIdentifier: 'pageIdentifier',
@@ -189,7 +186,7 @@ describe('buildTvRadioATIUrl', () => {
         're=1024x768',
         'hl=00-00-00',
         'lng=en-US',
-        'x1=[id]',
+        'x1=[urn:bbc:pips:id]',
         'x2=[responsive]',
         'x3=[atiAnalyticsAppName]',
         'x4=[language]',
