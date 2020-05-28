@@ -4324,7 +4324,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/serbian/lat/popular/read'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
