@@ -1,0 +1,269 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "altText": "alt tag",
+        "caption": "Test caption for image 1",
+        "copyrightHolder": "BBC",
+        "height": 549,
+        "href": "http://b.files.bbci.co.uk/CECF/test/_63734925_3.jpg",
+        "id": "63734925",
+        "path": "/cpsdevpb/CECF/test/_63734925_3.jpg",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 976
+      },
+      {
+        "markupType": "plain_text",
+        "role": "introduction",
+        "text": "Igitangazamakuru cya leta mu Bushinwa kirashinja ushinzwe ububanyi n'amahanga wa Amerika Mike Pompeo kubeshya nyuma y'uko avuze ko hari &quot;ibimenyetso byinshi&quot; ko coronavirus yavuye muri laboratoire y'i Wuhan.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Ku cyumweru nibwo Bwana Pompeo yavuze ibyo, ariko ntiyavuga ibirenzeho.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Test Includes: IDT1",
+        "type": "crosshead"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "The include has been intentionally removed",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "A paragraph of text after the include. Ku cyumweru nibwo Bwana Pompeo yavuze ibyo, ariko ntiyavuga ibirenzeho.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Test Includes: IDT2",
+        "type": "crosshead"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "The include has been intentionally removed",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "A paragraph of text between the includes. Ku cyumweru nibwo Bwana Pompeo yavuze ibyo, ariko ntiyavuga ibirenzeho.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Test Includes: Visual Journalism with iFrame",
+        "type": "crosshead"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "The include has been intentionally removed",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "A paragraph of text before an include. Ku cyumweru nibwo Bwana Pompeo yavuze ibyo, ariko ntiyavuga ibirenzeho.",
+        "type": "paragraph"
+      },
+      {
+        "href": "/news/special/2016/newsspec_13789/content/iframe/gahuza/index.inc?responsive=true&app-clickable=true&app-image=http%3A%2F%2Fa.files.bbci.co.uk%2Fworldservice%2Flive%2Fassets%2Fimages%2F2016%2F08%2F08%2F160808163046_body_match_ws_app_promo_624.png",
+        "platform": "highweb",
+        "required": false,
+        "title": "Igereranye n'abakinnyi ngorangigo bari muri Olimpike",
+        "type": "include"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Test Includes: Visual Journalism with interactive content",
+        "type": "crosshead"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "A paragraph of text before the include. Ku cyumweru nibwo Bwana Pompeo yavuze ibyo, ariko ntiyavuga ibirenzeho.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "The include has been intentionally removed",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Test Includes: Visual Journalism content with shadow dom include",
+        "type": "crosshead"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "The include has been intentionally removed",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "A paragraph of text after the include. Ku cyumweru nibwo Bwana Pompeo yavuze ibyo, ariko ntiyavuga ibirenzeho.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "gahuza.story.23307435.page",
+      "cps_asset_id": "23307435",
+      "cps_asset_type": "sty"
+    },
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "crosshead",
+      "include"
+    ],
+    "createdBy": "gahuza-v6",
+    "firstPublished": 1590568232000,
+    "id": "urn:bbc:ares::asset:gahuza/23307435",
+    "includeComments": false,
+    "language": "rw",
+    "lastPublished": 1590568232000,
+    "lastUpdated": 1590568240185,
+    "locators": {
+      "assetId": "23307435",
+      "assetUri": "/gahuza/23307435",
+      "cpsUrn": "urn:bbc:content:assetUri:gahuza/23307435",
+      "curie": "http://www.bbc.co.uk/asset/cf2ad68b-11d3-814e-801e-c1a25b4b7bf0"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasContentWarning": false,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false,
+      "suitableForSyndication": true
+    },
+    "passport": {
+      "taggings": []
+    },
+    "tags": {},
+    "timestamp": 1590568232000,
+    "type": "STY",
+    "version": "v1.3.0"
+  },
+  "promo": {
+    "byline": {
+      "name": "Adam Brookes,",
+      "persons": [
+        {
+          "function": "BBC News, Washington",
+          "name": "Adam Brookes,",
+          "thumbnail": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/49626000/jpg/_49626981_adambrookes-1.jpg"
+        }
+      ],
+      "title": "BBC News, Washington"
+    },
+    "headlines": {
+      "headline": "Coronavirus - China: Barasubiza Amerika ibyo ivuga ko iyi virus",
+      "shortHeadline": "Coronavirus - China: Barasubiza Amerika ibyo ivuga ko iyi virus"
+    },
+    "id": "urn:bbc:ares::asset:gahuza/23307435",
+    "language": "rw",
+    "locators": {
+      "assetId": "23307435",
+      "assetUri": "/gahuza/23307435",
+      "cpsUrn": "urn:bbc:content:assetUri:gahuza/23307435",
+      "curie": "http://www.bbc.co.uk/asset/cf2ad68b-11d3-814e-801e-c1a25b4b7bf0"
+    },
+    "passport": {
+      "taggings": []
+    },
+    "summary": "Igitangazamakuru cya leta mu Bushinwa kirashinja ushinzwe ububanyi n'amahanga wa Amerika Mike Pompeo kubeshya nyuma y'uko avuze ko hari \"ibimenyetso byinshi\" ko coronavirus yavuye muri laboratoire y'i Wuhan.",
+    "timestamp": 1590568232000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [
+      {
+        "promos": [
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "Intambara yo kubohoza ikivuko ca Hudaydah yatanguye muri Yemen",
+              "shortHeadline": "Intambara yo kubohoza ikivuko ca Hudaydah yatanguye muri Yemen"
+            },
+            "id": "urn:bbc:ares::asset:gahuza/23204135",
+            "indexImage": {
+              "altText": "ikivuko ca Hudaydah",
+              "caption": "Ikivuko ca Hudaydah muri Yemen kiriko kiragwanirwa",
+              "copyrightHolder": "AFP/Getty",
+              "height": 549,
+              "href": "http://b.files.bbci.co.uk/8226/test/_63681333_002564611-1.jpg",
+              "id": "63681333",
+              "path": "/cpsdevpb/8226/test/_63681333_002564611-1.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 976
+            },
+            "language": "rw",
+            "locators": {
+              "assetUri": "/gahuza/23204135",
+              "cpsUrn": "urn:bbc:content:assetUri:/gahuza/23204135"
+            },
+            "summary": "Urunani rurongowe na Arabia Saudite rwatanguye ibitero ku kivuko gifise akamaro kanini muri Yemen ca Hudaydah, kiri mu minwe y'abagwani.",
+            "timestamp": 1528888682000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "Inama y’umuryango wa Afrika y’ubuseruko yibanda ku ndyane hagati y’Uburundi n’Urwanda",
+              "shortHeadline": "Inama y’umuryango wa Afrika y’ubuseruko yibanda ku ndyane hagati y’Uburundi n’Urwanda"
+            },
+            "id": "urn:bbc:ares::asset:gahuza/23229461",
+            "indexImage": {
+              "altText": "EAC",
+              "caption": "Burundi and Rwanda joined the EAC in 2007 to join Tanzania, Uganda and Kenya",
+              "copyrightHolder": "http://www.statehouse.go.ug",
+              "height": 549,
+              "href": "http://b.files.bbci.co.uk/33F3/test/_63699231_arusha.jpg",
+              "id": "63699231",
+              "path": "/cpsdevpb/33F3/test/_63699231_arusha.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 976
+            },
+            "language": "rw",
+            "locators": {
+              "assetUri": "/gahuza/23229461",
+              "cpsUrn": "urn:bbc:content:assetUri:/gahuza/23229461"
+            },
+            "summary": "Inama y’umuryango wa Afrika y’ubuseruko yibanda ku ndyane hagati y’Uburundi n’Urwanda",
+            "timestamp": 1549019868000,
+            "type": "cps"
+          }
+        ],
+        "type": "see-alsos"
+      }
+    ],
+    "section": {
+      "name": "Urupapuro rw'itangiriro",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/gahuza/front_page"
+    },
+    "site": {
+      "name": "BBC Gahuza",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/gahuza"
+    }
+  }
+}
