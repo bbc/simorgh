@@ -238,7 +238,7 @@ export const service = {
         },
       },
       topStoriesTitle: '头条内容',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: '特别推荐',
     },
   },
   trad: {
@@ -436,7 +436,7 @@ export const service = {
         },
       },
       topStoriesTitle: '頭條內容',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: '特別推薦',
     },
   },
 };
