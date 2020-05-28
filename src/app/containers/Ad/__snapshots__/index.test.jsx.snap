@@ -6,6 +6,15 @@ exports[`Ad Container Snapshots should correctly render a Canonical ad 1`] = `
     <script
       src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
     />
+    <script
+      type="text/javascript"
+    >
+      
+            window.dotcom.cmd.push(() =&gt; {
+              window.dotcom.ads.registerSlot('leaderboard');
+            });
+          
+    </script>
   </head>
   <body>
     <div>

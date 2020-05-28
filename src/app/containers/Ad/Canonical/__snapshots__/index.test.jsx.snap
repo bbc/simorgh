@@ -6,6 +6,15 @@ exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderb
     <script
       src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
     />
+    <script
+      type="text/javascript"
+    >
+      
+            window.dotcom.cmd.push(() =&gt; {
+              window.dotcom.ads.registerSlot('leaderboard');
+            });
+          
+    </script>
   </head>
   <body>
     <div>
