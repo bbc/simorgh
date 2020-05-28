@@ -1,9 +1,10 @@
 import React from 'react';
 import paragraph from '../Paragraph';
+import bulletedList from '../BulletedList';
 import Blocks from '../Blocks';
 import { textModelPropTypes } from '#models/propTypes/text';
 
-const componentsToRender = { paragraph };
+const componentsToRender = { paragraph, unorderedList: bulletedList };
 
 const TextContainer = ({ blocks }) => {
   if (!blocks) return null;

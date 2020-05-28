@@ -6,7 +6,12 @@ import {
 } from '@bbc/psammead-test-helpers';
 import TextContainer from './index';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { paragraphBlock, fragmentBlock } from './fixtures';
+import {
+  paragraphBlock,
+  fragmentBlock,
+  unorderedListBlock,
+  listItemBlock,
+} from './fixtures';
 
 describe('TextContainer', () => {
   describe('with no data', () => {
@@ -31,6 +36,24 @@ describe('TextContainer', () => {
         ]),
         paragraphBlock('mock-id-5', [
           fragmentBlock('mock-id-5.1', 'This is a 5th paragraph block.'),
+        ]),
+        unorderedListBlock('mock-id-6', [
+          listItemBlock('mock-id-6.1', [
+            paragraphBlock('mock-id-6.1.1', [
+              fragmentBlock(
+                'mock-id-6.1.1.1',
+                'This is a 1st list item in an unordered list block.',
+              ),
+            ]),
+          ]),
+          listItemBlock('mock-id-6.2', [
+            paragraphBlock('mock-id-6.2.1', [
+              fragmentBlock(
+                'mock-id-6.2.1.1',
+                'This is a 2nd list item in an unordered list block.',
+              ),
+            ]),
+          ]),
         ]),
       ],
     };

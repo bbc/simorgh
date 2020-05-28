@@ -15,3 +15,19 @@ export const paragraphBlock = (id = null, blocks) => ({
     blocks,
   },
 });
+
+export const unorderedListBlock = (id = null, blocks) => ({
+  id,
+  type: 'unorderedList',
+  model: {
+    blocks,
+  },
+});
+
+export const listItemBlock = (id = null, blocks) => ({
+  id,
+  type: 'listItem',
+  model: {
+    blocks,
+  },
+});
