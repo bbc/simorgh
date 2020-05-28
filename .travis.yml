@@ -38,6 +38,9 @@ jobs:
         - sudo apt-get install -y libgconf-2-4
       addons:
         chrome: stable
+        apt:
+          packages:
+            - libgconf-2-4
       script:
         - npm run build
         - npm prune --production
@@ -47,8 +50,9 @@ jobs:
       name: 'BBC A11y and Audit CI'
       addons:
         chrome: stable
-      before_install:
-        - sudo apt-get install -y libgconf-2-4
+        apt:
+          packages:
+            - libgconf-2-4
       script:
         - npm run build
         - npm prune --production
