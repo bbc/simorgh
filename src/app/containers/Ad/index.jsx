@@ -4,6 +4,7 @@ import useToggle from '#hooks/useToggle';
 import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Amp from './Amp';
+import Canonical from './Canonical';
 
 const AdContainer = () => {
   const { isAmp } = useContext(RequestContext);
@@ -15,10 +16,8 @@ const AdContainer = () => {
     return null;
   }
 
-  if (isAmp) {
-    return <Amp />;
-  }
-  return null;
+  const Ad = isAmp ? Amp : Canonical;
+  return <Ad />;
 };
 
 export default AdContainer;
