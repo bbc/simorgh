@@ -98,6 +98,10 @@ const generateLaunchDates = service => {
     output.push(`__STY__: ${serviceLaunch.storyPage}`);
   }
 
+  if (serviceLaunch.mostReadPage && serviceLaunch.mostReadPage !== '') {
+    output.push(`__Most Read__: ${serviceLaunch.mostReadPage}`);
+  }
+
   return output.join('<br/>');
 };
 
