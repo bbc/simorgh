@@ -6,4 +6,4 @@ This files in directory (./storybook/static/data) are hosted on storybook applic
 
 ## Reasoning for directory convention
 
-Some of our components are fetching data on the client side, therefore we need to need ensure there is data available on the storybook app with the same route path as the simorgh app.
+Some of our components are fetching data on the client side, therefore we need to ensure there is data available on the storybook app with the same route path as the Simorgh app.
