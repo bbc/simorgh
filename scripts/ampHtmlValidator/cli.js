@@ -1,0 +1,3 @@
+const { runValidator } = require('.');
+
+runValidator();

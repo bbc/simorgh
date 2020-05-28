@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import path from 'ramda/src/path';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -23,6 +23,26 @@ const renderRelatedContent = ({
         bbcOrigin={bbcOrigin}
         isAmp={false}
         pageType="MAP"
+        pathname="/pidgin/tori-49450859"
+        service="pidgin"
+        statusCode={200}
+      >
+        <CpsRelatedContent content={content} enableGridWrapper />
+      </RequestContextProvider>
+    </ServiceContextProvider>,
+  );
+};
+
+const renderRelatedContentNoTitle = ({
+  content = promos,
+  bbcOrigin = 'https://www.test.bbc.co.uk',
+} = {}) => {
+  return render(
+    <ServiceContextProvider service="news">
+      <RequestContextProvider
+        bbcOrigin={bbcOrigin}
+        isAmp={false}
+        pageType="STY"
         pathname="/pidgin/tori-49450859"
         service="pidgin"
         statusCode={200}
@@ -95,5 +115,9 @@ describe('CpsRelatedContent', () => {
     });
 
     expect(getByText('February 2009', { exact: false })).not.toBeNull();
+  });
+  it('should render a default title if translations are not available', () => {
+    renderRelatedContentNoTitle();
+    expect(screen.getByText(`Related content`)).toBeTruthy();
   });
 });

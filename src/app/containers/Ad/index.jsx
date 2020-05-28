@@ -4,11 +4,10 @@ import useToggle from '#hooks/useToggle';
 import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Amp from './Amp';
-import Canonical from './Canonical';
 
 const AdContainer = () => {
   const { isAmp } = useContext(RequestContext);
-  const { service, ads } = useContext(ServiceContext);
+  const { ads } = useContext(ServiceContext);
   const hasAds = pathOr(false, ['hasAds'], ads);
   const { enabled: adsEnabled } = useToggle('ads');
 
@@ -16,8 +15,10 @@ const AdContainer = () => {
     return null;
   }
 
-  const Ad = isAmp ? Amp : Canonical;
-  return <Ad service={service} />;
+  if (isAmp) {
+    return <Amp />;
+  }
+  return null;
 };
 
 export default AdContainer;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -42,6 +42,26 @@ const renderTopStoriesNull = ({
         statusCode={200}
       >
         <TopStories content={[]} />
+      </RequestContextProvider>
+    </ServiceContextProvider>,
+  );
+};
+
+const renderTopStoriesNoTitle = ({
+  content = topStories,
+  bbcOrigin = 'https://www.test.bbc.co.uk',
+} = {}) => {
+  return render(
+    <ServiceContextProvider service="news">
+      <RequestContextProvider
+        bbcOrigin={bbcOrigin}
+        isAmp={false}
+        pageType="STY"
+        pathname="/pidgin/tori-49450859"
+        service="pidgin"
+        statusCode={200}
+      >
+        <TopStories content={content} />
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
@@ -103,5 +123,9 @@ describe('CpsRelatedContent', () => {
     expect(document.querySelectorAll(`li[class^='StoryPromoLi']`).length).toBe(
       0,
     );
+  });
+  it('should render a default title if translations are not available', () => {
+    renderTopStoriesNoTitle();
+    expect(screen.getByText(`Top Stories`)).toBeTruthy();
   });
 });
