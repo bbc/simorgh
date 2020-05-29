@@ -12,7 +12,7 @@ const origin = 'http://localhost:7080';
 
 const defaultTvPlayerProps = {
   assetId: 'id',
-  thumbnailImageUrl: 'ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
+  imageUrl: 'ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
   masterBrand: 'bbc_brand_tv',
 };
 
