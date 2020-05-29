@@ -75,7 +75,7 @@ const OnDemandTvPage = ({ pageData }) => {
           >
             <VideoPlayer
               masterBrand={masterBrand}
-              id={episodeId}
+              assetId={episodeId}
               imageUrl={imageUrl}
             />
           </StyledGelWrapperGrid>
@@ -93,7 +93,14 @@ const OnDemandTvPage = ({ pageData }) => {
 
 OnDemandTvPage.propTypes = {
   pageData: shape({
+    language: string,
+    headline: string,
+    shortSynopsis: string,
     brandTitle: string,
+    releaseDateTimeStamp: string,
+    masterBrand: string,
+    episodeId: string,
+    imageUrl: string,
   }).isRequired,
 };
 

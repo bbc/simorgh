@@ -7,11 +7,10 @@ import {
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import { string, bool } from 'prop-types';
+import { string } from 'prop-types';
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
-  MediaMessage,
 } from '@bbc/psammead-media-player';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
@@ -33,19 +32,7 @@ const VideoPlayerWrapper = styled.div`
   }
 `;
 
-const MediaMessageWrapper = styled.div`
-  position: relative;
-  min-height: 165px;
-  margin-bottom: ${GEL_SPACING_QUAD};
-`;
-
-const VideoPlayer = ({
-  id: assetId,
-  idAttr,
-  isExpired,
-  masterBrand,
-  imageUrl,
-}) => {
+const VideoPlayer = ({ assetId, masterBrand, imageUrl }) => {
   const { lang, translations, service } = useContext(ServiceContext);
   const { isAmp, platform } = useContext(RequestContext);
   const location = useLocation();
@@ -57,20 +44,6 @@ const VideoPlayer = ({
     translations,
   );
   const placeholderSrc = getPlaceholderImageUrl(imageUrl);
-
-  if (isExpired) {
-    const expiredContentMessage = pathOr(
-      'This content is no longer available',
-      ['media', 'contentExpired'],
-      translations,
-    );
-
-    return (
-      <MediaMessageWrapper>
-        <MediaMessage service={service} message={expiredContentMessage} />
-      </MediaMessageWrapper>
-    );
-  }
 
   if (!isValidPlatform || !masterBrand || !assetId) return null;
 
@@ -96,7 +69,6 @@ const VideoPlayer = ({
           placeholderSrc={placeholderSrc}
           src={embedUrl}
           title={iframeTitle}
-          id={idAttr}
           noJsMessage={noJsMessage}
           service={service}
         />
@@ -105,7 +77,6 @@ const VideoPlayer = ({
           showPlaceholder={false}
           src={embedUrl}
           title={iframeTitle}
-          id={idAttr}
           service={service}
           mediaInfo={mediaInfo}
           noJsMessage={noJsMessage}
@@ -117,19 +88,9 @@ const VideoPlayer = ({
 };
 
 VideoPlayer.propTypes = {
-  masterBrand: string,
-  id: string,
-  idAttr: string,
-  isExpired: bool,
-  imageUrl: string,
-};
-
-VideoPlayer.defaultProps = {
-  masterBrand: '',
-  id: '',
-  idAttr: null,
-  isExpired: false,
-  imageUrl: '',
+  masterBrand: string.isRequired,
+  assetId: string.isRequired,
+  imageUrl: string.isRequired,
 };
 
 export default VideoPlayer;
