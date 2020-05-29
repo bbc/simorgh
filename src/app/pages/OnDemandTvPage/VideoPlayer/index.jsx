@@ -18,11 +18,6 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import getPlaceholderImageUrl from '../../../routes/utils/getPlaceholderImageUrl';
 
-const MEDIA_INFO = {
-  title: 'On-demand tv',
-  type: 'video',
-};
-
 const VideoPlayerWrapper = styled.div`
   width: calc(100% + ${GEL_SPACING_DBL});
   margin: 0 -${GEL_SPACING};
@@ -37,7 +32,10 @@ const VideoPlayer = ({ assetId, masterBrand, imageUrl }) => {
   const { isAmp, platform } = useContext(RequestContext);
   const location = useLocation();
   const isValidPlatform = ['amp', 'canonical'].includes(platform);
-  const mediaInfo = getMediaInfo();
+  const mediaInfo = {
+    title: 'On-demand tv',
+    type: 'video',
+  };
   const noJsMessage = pathOr(
     `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`,
     ['media', 'noJs'],
