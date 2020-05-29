@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { shape, string } from 'prop-types';
+import { shape, string, number } from 'prop-types';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
@@ -97,7 +97,7 @@ OnDemandTvPage.propTypes = {
     headline: string,
     shortSynopsis: string,
     brandTitle: string,
-    releaseDateTimeStamp: string,
+    releaseDateTimeStamp: number,
     masterBrand: string,
     episodeId: string,
     imageUrl: string,

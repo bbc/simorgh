@@ -99,14 +99,71 @@ it('should show the summary for OnDemand TV Pages', async () => {
   ).toBeInTheDocument();
 });
 
-it('should show the content unavailable message for OnDemand TV Pages', async () => {
+it('should show the video player on canonical with no live override', async () => {
+  process.env.SIMORGH_APP_ENV = 'live';
   fetch.mockResponse(JSON.stringify(pashtoPageData));
-
   const { pageData } = await getInitialData('some-ondemand-tv-path');
-  const { getByText } = await renderPage({
+  const { container } = await renderPage({
     pageData,
     service: 'pashto',
   });
+  const videoPlayerIframeSrc = container
+    .querySelector('iframe')
+    .getAttribute('src');
 
-  expect(getByText('دغه فایل نور د لاسرسي وړ نه دی.')).toBeInTheDocument();
+  expect(videoPlayerIframeSrc).toEqual(
+    'https://polling.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps',
+  );
+});
+
+it('should show the video player on amp with no live override', async () => {
+  process.env.SIMORGH_APP_ENV = 'live';
+  fetch.mockResponse(JSON.stringify(pashtoPageData));
+  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { container } = await renderPage({
+    pageData,
+    service: 'pashto',
+    isAmp: true,
+  });
+  const videoPlayerIframeSrc = container
+    .querySelector('amp-iframe')
+    .getAttribute('src');
+
+  expect(videoPlayerIframeSrc).toEqual(
+    'https://polling.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp',
+  );
+});
+
+it('should show the video player on canonical with live override', async () => {
+  process.env.SIMORGH_APP_ENV = 'test';
+  fetch.mockResponse(JSON.stringify(pashtoPageData));
+  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { container } = await renderPage({
+    pageData,
+    service: 'pashto',
+  });
+  const videoPlayerIframeSrc = container
+    .querySelector('iframe')
+    .getAttribute('src');
+
+  expect(videoPlayerIframeSrc).toEqual(
+    'https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live',
+  );
+});
+
+it('should show the video player on amp with live override', async () => {
+  fetch.mockResponse(JSON.stringify(pashtoPageData));
+  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { container } = await renderPage({
+    pageData,
+    service: 'pashto',
+    isAmp: true,
+  });
+  const videoPlayerIframeSrc = container
+    .querySelector('amp-iframe')
+    .getAttribute('src');
+
+  expect(videoPlayerIframeSrc).toEqual(
+    'https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live',
+  );
 });
