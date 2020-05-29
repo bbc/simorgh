@@ -2,23 +2,12 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import IdxPage from '.';
 import persianAfghanistanIdxData from '#data/persian/afghanistan';
-import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
-const requestContextData = {
-  isAmp: false,
-  pageType: 'IDX',
-  service: 'persian',
-  pathname: '/persian/afghanistan',
-  data: { status: 200 },
-};
-
 const IdxPageWithContext = () => (
-  <RequestContextProvider {...requestContextData}>
-    <ServiceContextProvider service="persian">
-      <IdxPage pageData={persianAfghanistanIdxData} />
-    </ServiceContextProvider>
-  </RequestContextProvider>
+  <ServiceContextProvider service="persian">
+    <IdxPage pageData={persianAfghanistanIdxData} />
+  </ServiceContextProvider>
 );
 
 describe('IdxPage', () => {
@@ -26,6 +15,16 @@ describe('IdxPage', () => {
     it('should render an IDX page correctly', () => {
       const container = render(<IdxPageWithContext />);
       expect(container).toMatchSnapshot();
+    });
+
+    it('should render idx page sections', async () => {
+      const { container } = render(<IdxPageWithContext />);
+
+      const sections = container.querySelectorAll('section');
+      expect(sections).toHaveLength(2);
+      sections.forEach(section => {
+        expect(section.getAttribute('role')).toEqual('region');
+      });
     });
   });
 });
