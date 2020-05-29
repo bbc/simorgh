@@ -18,10 +18,10 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import getPlaceholderImageUrl from '../../../routes/utils/getPlaceholderImageUrl';
 
-const getMediaInfo = () => ({
+const MEDIA_INFO = {
   title: 'On-demand tv',
   type: 'video',
-});
+};
 
 const VideoPlayerWrapper = styled.div`
   width: calc(100% + ${GEL_SPACING_DBL});
