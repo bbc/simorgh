@@ -79,7 +79,6 @@ const OnDemandTvPage = ({ pageData }) => {
           <VisuallyHiddenText as="h1">
             {brandTitle}, {formattedTimestamp}
           </VisuallyHiddenText>
-          <MediaMessage />
           <StyledGelWrapperGrid
             columns={getGroups(6, 6, 6, 6, 6, 6)}
             enableGelGutters
