@@ -8,9 +8,9 @@ import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import OnDemandRadioPage from '.';
-import pashtoPageData from '#data/pashto/bbc_pashto_radio/w172x8nvf4bchz5';
-import koreanPageData from '#data/korean/bbc_korean_radio/w3cszwcg';
-import indonesiaPageData from '#data/indonesia/bbc_indonesian_radio/w172x6r5000f38s';
+import pashtoPageData from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
+import koreanPageData from '#data/korean/bbc_korean_radio/w3ct0kn5';
+import indonesiaPageData from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandRadio/getInitialData';
@@ -105,21 +105,48 @@ describe('OnDemand Radio Page ', () => {
       service: 'pashto',
     });
 
-    expect(getByText('وروستي خبرونه')).toBeInTheDocument();
+    expect(getByText('ماښامنۍ خپرونه')).toBeInTheDocument();
   });
 
-  it('should show the episode title for OnDemand Radio Pages', async () => {
+  it('should show the datestamp correctly for Pashto OnDemand Radio Pages', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
+
+    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    // Check destructuring like this works & amend for other tests
+    const { getByText } = await renderPage({
+      pageData,
+      service: 'pashto',
+    });
+
+    expect(getByText('۱ می ۲۰۲۰')).toBeInTheDocument();
+  });
+
+  it('should show the datestamp correctly for Korean OnDemand Radio Pages', async () => {
+    fetch.mockResponse(JSON.stringify(koreanPageData));
 
     const { pageData: pageDataWithWithoutVideo } = await getInitialData(
       'some-ondemand-radio-path',
     );
     const { getByText } = await renderPage({
       pageData: pageDataWithWithoutVideo,
-      service: 'pashto',
+      service: 'korean',
     });
 
-    expect(getByText('04/02/2020 GMT')).toBeInTheDocument();
+    expect(getByText('2020년 5월 4일')).toBeInTheDocument();
+  });
+
+  it('should show the datestamp correctly for Indonesian OnDemand Radio Pages', async () => {
+    fetch.mockResponse(JSON.stringify(indonesiaPageData));
+
+    const { pageData: pageDataWithWithoutVideo } = await getInitialData(
+      'some-ondemand-radio-path',
+    );
+    const { getByText } = await renderPage({
+      pageData: pageDataWithWithoutVideo,
+      service: 'indonesia',
+    });
+
+    expect(getByText('27 April 2020')).toBeInTheDocument();
   });
 
   it('should show the summary for OnDemand Radio Pages', async () => {
@@ -155,7 +182,7 @@ describe('OnDemand Radio Page ', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3cszwcg/ko?morph_env=live',
+      'https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko?morph_env=live',
     );
   });
 
@@ -175,7 +202,7 @@ describe('OnDemand Radio Page ', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://polling.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3cszwcg/ko',
+      'https://polling.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko',
     );
   });
 
@@ -198,7 +225,7 @@ describe('OnDemand Radio Page ', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      `https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3cszwcg/ko/amp?morph_env=live`,
+      `https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko/amp?morph_env=live`,
     );
   });
 
@@ -222,7 +249,7 @@ describe('OnDemand Radio Page ', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://polling.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3cszwcg/ko/amp',
+      'https://polling.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko/amp',
     );
   });
 

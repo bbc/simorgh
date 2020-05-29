@@ -13,6 +13,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'إعلان',
     },
     lang: 'ar',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -198,6 +199,7 @@ export const service = {
         '/arabic/institutional/2011/01/000000_frequencies_radio',
       frequenciesPageLabel: 'استقبال البث',
       header: 'أحدث نشرة أخبار',
+      durationLabel: 'المدة %duration%',
     },
     recommendations: {
       hasStoryRecommendations: true,

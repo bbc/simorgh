@@ -60,215 +60,227 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             'noodp,noydir',
           );
         });
-
-        it('should have lang attribute matching payload data', () => {
-          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-            const lang =
-              pageType === 'articles'
-                ? body.metadata.passport.language
-                : body.metadata.language;
-
-            cy.get('html').should('have.attr', 'lang', lang);
-          });
-        });
-
-        it('should have the correct shared metadata', () => {
-          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-            const mediaAssetPageType = 'mediaAssetPage';
-            const articlesPageType = 'articles';
-            const photoGalleryPageType = 'photoGalleryPage';
-            const storyPageType = 'storyPage';
-
-            const cpsPageTypes = [
-              mediaAssetPageType,
-              photoGalleryPageType,
-              storyPageType,
-            ];
-
-            const { indexImage } = body.promo;
-            const imagePath = indexImage ? indexImage.path : null;
-
-            const imageAltText =
-              indexImage &&
-              cpsPageTypes.includes(pageType) &&
-              indexImage.altText
-                ? indexImage.altText
-                : appConfig[config[service].name][variant].defaultImageAltText;
-
-            const imageSrc =
-              imagePath && cpsPageTypes.includes(pageType)
-                ? getBrandedImage({
-                    imagePath,
-                    serviceName: config[service].name,
-                  })
-                : appConfig[config[service].name][variant].defaultImage;
-
-            const ogType = [
-              articlesPageType,
-              mediaAssetPageType,
-              photoGalleryPageType,
-              storyPageType,
-            ].includes(pageType)
-              ? 'article'
-              : 'website';
-
-            cy.get('head').within(() => {
-              cy.get('meta[property="fb:admins"]').should(
-                'have.attr',
-                'content',
-                '100004154058350',
-              );
-              cy.get('meta[property="fb:app_id"]').should(
-                'have.attr',
-                'content',
-                '1609039196070050',
-              );
-              cy.get('meta[property="og:image"]').should(
-                'have.attr',
-                'content',
-                imageSrc,
-              );
-              cy.get('meta[property="og:image:alt"]').should(
-                'have.attr',
-                'content',
-                imageAltText,
-              );
-              cy.get('meta[property="og:locale"]').should(
-                'have.attr',
-                'content',
-                appConfig[config[service].name][variant].locale,
-              );
-              cy.get('meta[property="og:type"]').should(
-                'have.attr',
-                'content',
-                ogType,
-              );
-              cy.get('meta[property="og:url"]').should(
-                'have.attr',
-                'content',
-                `${envConfig.baseUrl}${Cypress.env('currentPath')}`,
-              );
-              cy.get('meta[property="og:site_name"]').should(
-                'have.attr',
-                'content',
-                appConfig[config[service].name][variant].brandName,
-              );
-              cy.get('meta[name="twitter:card"]').should(
-                'have.attr',
-                'content',
-                'summary_large_image',
-              );
-              cy.get('meta[name="twitter:creator"]').should(
-                'have.attr',
-                'content',
-                appConfig[config[service].name][variant].twitterCreator,
-              );
-              cy.get('meta[name="twitter:image:alt"]').should(
-                'have.attr',
-                'content',
-                imageAltText,
-              );
-              cy.get('meta[name="twitter:image:src"]').should(
-                'have.attr',
-                'content',
-                imageSrc,
-              );
-              cy.get('meta[name="twitter:site"]').should(
-                'have.attr',
-                'content',
-                appConfig[config[service].name][variant].twitterSite,
-              );
-              cy.get('link[rel="apple-touch-icon"]').each(link => {
-                const url = link.attr('href');
-                cy.request({
-                  url,
-                  failOnStatusCode: false,
-                }).then(resp => {
-                  expect(resp.status).to.equal(200);
-                });
-              });
-            });
-          });
-        });
-
-        it('should have correct title & description metadata', () => {
-          /*
-           * Naidheachdan needs to have correct metadata added to all environments.
-           * afaanoromoo & tigrinya need correct metadata on TEST env
-           * These conditions will be removed in issue https://github.com/bbc/simorgh-infrastructure/issues/679
-           */
-          if (
-            service !== 'naidheachdan' &&
-            !(service === 'afaanoromoo' && Cypress.env('APP_ENV') === 'test') &&
-            !(service === 'tigrinya' && Cypress.env('APP_ENV') === 'test')
-          ) {
+        if (pageType !== 'mostReadPage') {
+          it('should have lang attribute matching payload data', () => {
             cy.request(`${Cypress.env('currentPath')}.json`).then(
               ({ body }) => {
-                let description;
-                let title;
-                switch (pageType) {
-                  case 'articles':
-                    description =
-                      body.promo.summary || body.promo.headlines.seoHeadline;
-                    title = body.promo.headlines.seoHeadline;
-                    break;
-                  case 'frontPage':
-                    description = body.metadata.summary;
-                    title =
-                      appConfig[config[service].name][variant].frontPageTitle;
-                    break;
-                  case 'liveRadio':
-                    description = body.promo.summary;
-                    title = body.promo.name;
-                    break;
-                  case 'mediaAssetPage':
-                    description = body.promo.summary;
-                    title = body.promo.headlines.headline;
-                    break;
-                  case 'photoGalleryPage':
-                    description = body.promo.summary;
-                    title = body.promo.headlines.headline;
-                    break;
-                  case 'storyPage':
-                    description = body.promo.summary;
-                    title = body.promo.headlines.headline;
-                    break;
-                  default:
-                    description = '';
-                    title = '';
-                }
-                /* Note that if updating these, also do the same for errorPage404/tests.js */
-                const pageTitle = `${title} - ${
-                  appConfig[config[service].name][variant].brandName
-                }`;
+                const lang =
+                  pageType === 'articles'
+                    ? body.metadata.passport.language
+                    : body.metadata.language;
+
+                cy.get('html').should('have.attr', 'lang', lang);
+              },
+            );
+          });
+
+          it('should have the correct shared metadata', () => {
+            cy.request(`${Cypress.env('currentPath')}.json`).then(
+              ({ body }) => {
+                const mediaAssetPageType = 'mediaAssetPage';
+                const articlesPageType = 'articles';
+                const photoGalleryPageType = 'photoGalleryPage';
+                const storyPageType = 'storyPage';
+
+                const cpsPageTypes = [
+                  mediaAssetPageType,
+                  photoGalleryPageType,
+                  storyPageType,
+                ];
+
+                const { indexImage } = body.promo;
+                const imagePath = indexImage ? indexImage.path : null;
+
+                const imageAltText =
+                  indexImage &&
+                  cpsPageTypes.includes(pageType) &&
+                  indexImage.altText
+                    ? indexImage.altText
+                    : appConfig[config[service].name][variant]
+                        .defaultImageAltText;
+
+                const imageSrc =
+                  imagePath && cpsPageTypes.includes(pageType)
+                    ? getBrandedImage({
+                        imagePath,
+                        serviceName: config[service].name,
+                      })
+                    : appConfig[config[service].name][variant].defaultImage;
+
+                const ogType = [
+                  articlesPageType,
+                  mediaAssetPageType,
+                  photoGalleryPageType,
+                  storyPageType,
+                ].includes(pageType)
+                  ? 'article'
+                  : 'website';
 
                 cy.get('head').within(() => {
-                  cy.title().should('eq', pageTitle.replace(/ +/g, ' '));
-                  cy.get('meta[property="og:description"]').should(
+                  cy.get('meta[property="fb:admins"]').should(
                     'have.attr',
                     'content',
-                    description,
+                    '100004154058350',
                   );
-                  cy.get('meta[property="og:title"]').should(
+                  cy.get('meta[property="fb:app_id"]').should(
                     'have.attr',
                     'content',
-                    pageTitle,
+                    '1609039196070050',
                   );
-                  cy.get('meta[name="twitter:description"]').should(
+                  cy.get('meta[property="og:image"]').should(
                     'have.attr',
                     'content',
-                    description,
+                    imageSrc,
                   );
-                  cy.get('meta[name="twitter:title"]').should(
+                  cy.get('meta[property="og:image:alt"]').should(
                     'have.attr',
                     'content',
-                    pageTitle,
+                    imageAltText,
                   );
+                  cy.get('meta[property="og:locale"]').should(
+                    'have.attr',
+                    'content',
+                    appConfig[config[service].name][variant].locale,
+                  );
+                  cy.get('meta[property="og:type"]').should(
+                    'have.attr',
+                    'content',
+                    ogType,
+                  );
+                  cy.get('meta[property="og:url"]').should(
+                    'have.attr',
+                    'content',
+                    `${envConfig.baseUrl}${Cypress.env('currentPath')}`,
+                  );
+                  cy.get('meta[property="og:site_name"]').should(
+                    'have.attr',
+                    'content',
+                    appConfig[config[service].name][variant].brandName,
+                  );
+                  cy.get('meta[name="twitter:card"]').should(
+                    'have.attr',
+                    'content',
+                    'summary_large_image',
+                  );
+                  cy.get('meta[name="twitter:creator"]').should(
+                    'have.attr',
+                    'content',
+                    appConfig[config[service].name][variant].twitterCreator,
+                  );
+                  cy.get('meta[name="twitter:image:alt"]').should(
+                    'have.attr',
+                    'content',
+                    imageAltText,
+                  );
+                  cy.get('meta[name="twitter:image:src"]').should(
+                    'have.attr',
+                    'content',
+                    imageSrc,
+                  );
+                  cy.get('meta[name="twitter:site"]').should(
+                    'have.attr',
+                    'content',
+                    appConfig[config[service].name][variant].twitterSite,
+                  );
+                  cy.get('link[rel="apple-touch-icon"]').each(link => {
+                    const url = link.attr('href');
+                    cy.request({
+                      url,
+                      failOnStatusCode: false,
+                    }).then(resp => {
+                      expect(resp.status).to.equal(200);
+                    });
+                  });
                 });
               },
             );
-          }
-        });
+          });
+
+          it('should have correct title & description metadata', () => {
+            /*
+             * Naidheachdan needs to have correct metadata added to all environments.
+             * afaanoromoo & tigrinya need correct metadata on TEST env
+             * These conditions will be removed in issue https://github.com/bbc/simorgh-infrastructure/issues/679
+             */
+            if (
+              service !== 'naidheachdan' &&
+              !(
+                service === 'afaanoromoo' && Cypress.env('APP_ENV') === 'test'
+              ) &&
+              !(service === 'tigrinya' && Cypress.env('APP_ENV') === 'test')
+            ) {
+              cy.request(`${Cypress.env('currentPath')}.json`).then(
+                ({ body }) => {
+                  let description;
+                  let title;
+                  switch (pageType) {
+                    case 'articles':
+                      description =
+                        (typeof body.promo.summary === 'string'
+                          ? body.promo.summary
+                          : body.promo.summary.blocks[0].model.blocks[0].model
+                              .blocks[0].model.text) ||
+                        body.promo.headlines.seoHeadline;
+                      title = body.promo.headlines.seoHeadline;
+                      break;
+                    case 'frontPage':
+                      description = body.metadata.summary;
+                      title =
+                        appConfig[config[service].name][variant].frontPageTitle;
+                      break;
+                    case 'liveRadio':
+                      description = body.promo.summary;
+                      title = body.promo.name;
+                      break;
+                    case 'mediaAssetPage':
+                      description = body.promo.summary;
+                      title = body.promo.headlines.headline;
+                      break;
+                    case 'photoGalleryPage':
+                      description = body.promo.summary;
+                      title = body.promo.headlines.headline;
+                      break;
+                    case 'storyPage':
+                      description = body.promo.summary;
+                      title = body.promo.headlines.headline;
+                      break;
+                    default:
+                      description = '';
+                      title = '';
+                  }
+                  /* Note that if updating these, also do the same for errorPage404/tests.js */
+                  const pageTitle = `${title} - ${
+                    appConfig[config[service].name][variant].brandName
+                  }`;
+
+                  cy.get('head').within(() => {
+                    cy.title().should('eq', pageTitle.replace(/ +/g, ' '));
+                    cy.get('meta[property="og:description"]').should(
+                      'have.attr',
+                      'content',
+                      description,
+                    );
+                    cy.get('meta[property="og:title"]').should(
+                      'have.attr',
+                      'content',
+                      pageTitle,
+                    );
+                    cy.get('meta[name="twitter:description"]').should(
+                      'have.attr',
+                      'content',
+                      description,
+                    );
+                    cy.get('meta[name="twitter:title"]').should(
+                      'have.attr',
+                      'content',
+                      pageTitle,
+                    );
+                  });
+                },
+              );
+            }
+          });
+        }
       }
       /* End of block (pageType !== 'errorPage404') */
 

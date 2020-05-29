@@ -6,11 +6,18 @@ import {
   buildFrontPageATIParams,
   buildFrontPageATIUrl,
 } from './frontpage/buildParams';
-import { buildRadioATIParams, buildRadioATIUrl } from './radioPage/buildParams';
+import {
+  buildTvRadioATIParams,
+  buildTvRadioATIUrl,
+} from './tvRadioPage/buildParams';
 import {
   buildCpsAssetPageATIParams,
   buildCpsAssetPageATIUrl,
 } from './cpsAssetPage/buildParams';
+import {
+  buildMostReadATIParams,
+  buildMostReadATIUrl,
+} from './mostReadPage/buildParams';
 
 const ARTICLE_MEDIA_ASSET = 'article-media-asset';
 const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
@@ -18,7 +25,8 @@ const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
 const pageTypeUrlBuilders = {
   article: buildArticleATIUrl,
   frontPage: buildFrontPageATIUrl,
-  media: buildRadioATIUrl,
+  media: buildTvRadioATIUrl,
+  mostRead: buildMostReadATIUrl,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIUrl(
       data,
@@ -38,7 +46,8 @@ const pageTypeUrlBuilders = {
 const pageTypeParamBuilders = {
   article: buildArticleATIParams,
   frontPage: buildFrontPageATIParams,
-  media: buildRadioATIParams,
+  media: buildTvRadioATIParams,
+  mostRead: buildMostReadATIParams,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIParams(
       data,

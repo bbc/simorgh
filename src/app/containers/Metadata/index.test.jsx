@@ -1,7 +1,8 @@
 import React from 'react';
-import { render, waitForDomChange } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MetadataContainer from './index';
+
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   articleDataNews,
@@ -11,6 +12,7 @@ import services from '#server/utilities/serviceConfigs';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import frontPageData from '#data/igbo/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
+import { getSummary } from '#lib/utilities/parseAssetData/index';
 
 const dotComOrigin = 'https://www.bbc.com';
 const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
@@ -18,7 +20,7 @@ const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
 const getArticleMetadataProps = data => ({
   title: data.promo.headlines.seoHeadline,
   lang: data.metadata.passport.language,
-  description: data.promo.summary,
+  description: getSummary(data),
   openGraphType: 'article',
   aboutTags: articleDataNews.metadata.tags.about,
   mentionsTags: articleDataNews.metadata.tags.mentions,
@@ -99,57 +101,42 @@ const CanonicalMapInternationalOrigin = () => (
   />
 );
 
-const renderMetadataToDocument = async () => {
+it('should render the dir and lang attribute', async () => {
   render(<CanonicalNewsInternationalOrigin />);
 
-  await waitForDomChange({
-    container: document.querySelector('head'),
+  await waitFor(() => {
+    const htmlEl = document.querySelector('html');
+
+    expect(htmlEl.getAttribute('dir')).toEqual('ltr');
+    expect(htmlEl.getAttribute('lang')).toEqual('en-gb');
   });
-};
-
-const renderMapMetadataToDocument = async () => {
-  render(<CanonicalMapInternationalOrigin />);
-
-  await waitForDomChange({
-    container: document.querySelector('head'),
-  });
-};
-
-it('should render the dir and lang attribute', async () => {
-  await renderMetadataToDocument();
-  const htmlEl = document.querySelector('html');
-
-  expect(htmlEl.getAttribute('dir')).toEqual('ltr');
-  expect(htmlEl.getAttribute('lang')).toEqual('en-gb');
 });
 
 it('should render the document title', async () => {
-  await renderMetadataToDocument();
-  const actual = document.querySelector('head > title').innerHTML;
-  const expected = 'Article Headline for SEO - BBC News';
+  render(<CanonicalNewsInternationalOrigin />);
 
-  expect(actual).toEqual(expected);
+  await waitFor(() => {
+    const actual = document.querySelector('head > title').innerHTML;
+
+    expect(actual).toEqual('Article Headline for SEO - BBC News');
+  });
 });
 
 it('should render the canonical link', async () => {
-  await renderMetadataToDocument();
+  render(<CanonicalNewsInternationalOrigin />);
 
-  const actual = document
-    .querySelector('head > link[rel="canonical"]')
-    .getAttribute('href');
-  const expected = 'https://www.bbc.com/news/articles/c0000000001o';
+  await waitFor(() => {
+    const actual = document
+      .querySelector('head > link[rel="canonical"]')
+      .getAttribute('href');
 
-  expect(actual).toEqual(expected);
+    expect(actual).toEqual('https://www.bbc.com/news/articles/c0000000001o');
+  });
 });
 
 it('should render the alternate links', async () => {
-  await renderMetadataToDocument();
-  const actual = Array.from(
-    document.querySelectorAll('head > link[rel="alternate"]'),
-  ).map(tag => ({
-    href: tag.getAttribute('href'),
-    hreflang: tag.getAttribute('hreflang'),
-  }));
+  render(<CanonicalNewsInternationalOrigin />);
+
   const expected = [
     {
       href: 'https://www.bbc.com/news/articles/c0000000001o',
@@ -165,17 +152,21 @@ it('should render the alternate links', async () => {
     },
   ];
 
-  expect(actual).toEqual(expected);
+  await waitFor(() => {
+    const actual = Array.from(
+      document.querySelectorAll('head > link[rel="alternate"]'),
+    ).map(tag => ({
+      href: tag.getAttribute('href'),
+      hreflang: tag.getAttribute('hreflang'),
+    }));
+
+    expect(actual).toEqual(expected);
+  });
 });
 
 it('should render the apple touch icons', async () => {
-  await renderMetadataToDocument();
-  const actual = Array.from(
-    document.querySelectorAll('head > link[rel="apple-touch-icon"]'),
-  ).map(tag => ({
-    href: tag.getAttribute('href'),
-    sizes: tag.getAttribute('sizes'),
-  }));
+  render(<CanonicalNewsInternationalOrigin />);
+
   const expected = [
     {
       href: 'http://localhost:7080/news/images/icons/icon-192x192.png',
@@ -223,18 +214,21 @@ it('should render the apple touch icons', async () => {
     },
   ];
 
-  expect(actual).toEqual(expected);
+  await waitFor(() => {
+    const actual = Array.from(
+      document.querySelectorAll('head > link[rel="apple-touch-icon"]'),
+    ).map(tag => ({
+      href: tag.getAttribute('href'),
+      sizes: tag.getAttribute('sizes'),
+    }));
+
+    expect(actual).toEqual(expected);
+  });
 });
 
 it('should render the icons', async () => {
-  await renderMetadataToDocument();
-  const actual = Array.from(
-    document.querySelectorAll('head > link[rel="icon"]'),
-  ).map(tag => ({
-    href: tag.getAttribute('href'),
-    type: tag.getAttribute('type'),
-    sizes: tag.getAttribute('sizes'),
-  }));
+  render(<CanonicalNewsInternationalOrigin />);
+
   const expected = [
     {
       href:
@@ -256,146 +250,167 @@ it('should render the icons', async () => {
     },
   ];
 
-  expect(actual).toEqual(expected);
+  await waitFor(() => {
+    const actual = Array.from(
+      document.querySelectorAll('head > link[rel="icon"]'),
+    ).map(tag => ({
+      href: tag.getAttribute('href'),
+      type: tag.getAttribute('type'),
+      sizes: tag.getAttribute('sizes'),
+    }));
+
+    expect(actual).toEqual(expected);
+  });
 });
 
 it('should render the favicon', async () => {
-  await renderMetadataToDocument();
-  const favicon = document.querySelector('head > link[rel="shortcut icon"]');
+  render(<CanonicalNewsInternationalOrigin />);
 
-  expect(favicon.getAttribute('href')).toEqual('/favicon.ico');
-  expect(favicon.getAttribute('rel')).toEqual('shortcut icon');
-  expect(favicon.getAttribute('type')).toEqual('image/x-icon');
+  await waitFor(() => {
+    const favicon = document.querySelector('head > link[rel="shortcut icon"]');
+
+    expect(favicon.getAttribute('href')).toEqual('/favicon.ico');
+    expect(favicon.getAttribute('rel')).toEqual('shortcut icon');
+    expect(favicon.getAttribute('type')).toEqual('image/x-icon');
+  });
 });
 
 it('should render the IE X-UA-Compatible meta tag', async () => {
-  await renderMetadataToDocument();
+  render(<CanonicalNewsInternationalOrigin />);
 
-  const actual = document
-    .querySelector('head > meta[http-equiv="X-UA-Compatible"]')
-    .getAttribute('content');
-  const expected = 'IE=edge';
+  await waitFor(() => {
+    const actual = document
+      .querySelector('head > meta[http-equiv="X-UA-Compatible"]')
+      .getAttribute('content');
 
-  expect(actual).toEqual(expected);
+    expect(actual).toEqual('IE=edge');
+  });
 });
 
 it('should render the char set metadata', async () => {
-  await renderMetadataToDocument();
+  render(<CanonicalNewsInternationalOrigin />);
 
-  expect(document.querySelector('head > meta[charset="utf-8"]')).toBeTruthy();
+  await waitFor(() => {
+    expect(document.querySelector('head > meta[charset="utf-8"]')).toBeTruthy();
+  });
 });
 
 it('should render the robots meta tag', async () => {
-  await renderMetadataToDocument();
+  render(<CanonicalNewsInternationalOrigin />);
 
-  const actual = document
-    .querySelector('head > meta[name="robots"]')
-    .getAttribute('content');
   const expected = 'noodp,noydir';
 
-  expect(actual).toEqual(expected);
+  await waitFor(() => {
+    const actual = document
+      .querySelector('head > meta[name="robots"]')
+      .getAttribute('content');
+    expect(actual).toEqual(expected);
+  });
 });
 
 it('should render the theme-colour meta tag', async () => {
-  await renderMetadataToDocument();
+  render(<CanonicalNewsInternationalOrigin />);
 
-  const actual = document
-    .querySelector('head > meta[name="theme-color"]')
-    .getAttribute('content');
-  const expected = '#B80000';
+  await waitFor(() => {
+    const actual = document
+      .querySelector('head > meta[name="theme-color"]')
+      .getAttribute('content');
 
-  expect(actual).toEqual(expected);
+    expect(actual).toEqual('#B80000');
+  });
 });
 
 it('should render the apple-mobile-web-app-title', async () => {
-  await renderMetadataToDocument();
+  render(<CanonicalNewsInternationalOrigin />);
 
-  const actual = document
-    .querySelector('head > meta[name="apple-mobile-web-app-title"]')
-    .getAttribute('content');
-  const expected = 'BBC News';
+  await waitFor(() => {
+    const actual = document
+      .querySelector('head > meta[name="apple-mobile-web-app-title"]')
+      .getAttribute('content');
 
-  expect(actual).toEqual(expected);
+    expect(actual).toEqual('BBC News');
+  });
 });
 
 it('should render the application name meta tag', async () => {
-  await renderMetadataToDocument();
+  render(<CanonicalNewsInternationalOrigin />);
 
-  const actual = document
-    .querySelector('head > meta[name="application-name"]')
-    .getAttribute('content');
-  const expected = 'BBC News';
+  await waitFor(() => {
+    const actual = document
+      .querySelector('head > meta[name="application-name"]')
+      .getAttribute('content');
 
-  expect(actual).toEqual(expected);
+    expect(actual).toEqual('BBC News');
+  });
 });
 
 it('should render the description meta tag', async () => {
-  await renderMetadataToDocument();
+  render(<CanonicalNewsInternationalOrigin />);
 
-  const actual = document
-    .querySelector('head > meta[name="description"]')
-    .getAttribute('content');
-  const expected = 'Article summary.';
+  await waitFor(() => {
+    const actual = document
+      .querySelector('head > meta[name="description"]')
+      .getAttribute('content');
 
-  expect(actual).toEqual(expected);
+    expect(actual).toEqual('Article summary.');
+  });
 });
 
 it('should render the facebook metatags', async () => {
-  await renderMetadataToDocument();
+  render(<CanonicalNewsInternationalOrigin />);
 
-  const fbAdminId = document
-    .querySelector('head > meta[property="fb:admins"]')
-    .getAttribute('content');
-  const fbAppId = document
-    .querySelector('head > meta[property="fb:app_id"]')
-    .getAttribute('content');
-  const fbPages = document
-    .querySelector('head > meta[property="fb:pages"]')
-    .getAttribute('content');
+  await waitFor(() => {
+    const fbAdminId = document
+      .querySelector('head > meta[property="fb:admins"]')
+      .getAttribute('content');
+    const fbAppId = document
+      .querySelector('head > meta[property="fb:app_id"]')
+      .getAttribute('content');
+    const fbPages = document
+      .querySelector('head > meta[property="fb:pages"]')
+      .getAttribute('content');
 
-  expect(fbAdminId).toEqual('100004154058350');
-  expect(fbAppId).toEqual('1609039196070050');
-  expect(fbPages).toEqual(
-    '285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812',
-  );
+    expect(fbAdminId).toEqual('100004154058350');
+    expect(fbAppId).toEqual('1609039196070050');
+    expect(fbPages).toEqual(
+      '285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812',
+    );
+  });
 });
 
 it('should render the mobile-web-app-capable meta tag', async () => {
-  await renderMetadataToDocument();
+  render(<CanonicalNewsInternationalOrigin />);
 
-  const actual = document
-    .querySelector('head > meta[name="mobile-web-app-capable"]')
-    .getAttribute('content');
-  const expected = 'yes';
+  await waitFor(() => {
+    const actual = document
+      .querySelector('head > meta[name="mobile-web-app-capable"]')
+      .getAttribute('content');
 
-  expect(actual).toEqual(expected);
+    expect(actual).toEqual('yes');
+  });
 });
 
 it('should render the msapplication meta tags', async () => {
-  await renderMetadataToDocument();
+  render(<CanonicalNewsInternationalOrigin />);
 
-  const tileColour = document
-    .querySelector('head > meta[name=msapplication-TileColor]')
-    .getAttribute('content');
-  const tileImage = document
-    .querySelector('head > meta[name=msapplication-TileImage]')
-    .getAttribute('content');
+  await waitFor(() => {
+    const tileColour = document
+      .querySelector('head > meta[name=msapplication-TileColor]')
+      .getAttribute('content');
+    const tileImage = document
+      .querySelector('head > meta[name=msapplication-TileImage]')
+      .getAttribute('content');
 
-  expect(tileColour).toEqual('#B80000');
-  expect(tileImage).toEqual(
-    'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png',
-  );
+    expect(tileColour).toEqual('#B80000');
+    expect(tileImage).toEqual(
+      'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png',
+    );
+  });
 });
 
 it('should render the OG metatags', async () => {
-  await renderMetadataToDocument();
+  render(<CanonicalNewsInternationalOrigin />);
 
-  const actual = Array.from(
-    document.querySelectorAll('head > meta[property^="og:"]'),
-  ).map(tag => ({
-    property: tag.getAttribute('property'),
-    content: tag.getAttribute('content'),
-  }));
   const expected = [
     { content: 'Article summary.', property: 'og:description' },
     {
@@ -414,18 +429,21 @@ it('should render the OG metatags', async () => {
     },
   ];
 
-  expect(actual).toEqual(expected);
+  await waitFor(() => {
+    const actual = Array.from(
+      document.querySelectorAll('head > meta[property^="og:"]'),
+    ).map(tag => ({
+      property: tag.getAttribute('property'),
+      content: tag.getAttribute('content'),
+    }));
+
+    expect(actual).toEqual(expected);
+  });
 });
 
 it('should render the twitter metatags', async () => {
-  await renderMetadataToDocument();
+  render(<CanonicalNewsInternationalOrigin />);
 
-  const actual = Array.from(
-    document.querySelectorAll('head > meta[name^="twitter"]'),
-  ).map(tag => ({
-    name: tag.getAttribute('name'),
-    content: tag.getAttribute('content'),
-  }));
   const expected = [
     { content: 'summary_large_image', name: 'twitter:card' },
     { content: '@BBCNews', name: 'twitter:creator' },
@@ -440,18 +458,20 @@ it('should render the twitter metatags', async () => {
     { content: 'Article Headline for SEO - BBC News', name: 'twitter:title' },
   ];
 
-  expect(actual).toEqual(expected);
+  await waitFor(() => {
+    const actual = Array.from(
+      document.querySelectorAll('head > meta[name^="twitter"]'),
+    ).map(tag => ({
+      name: tag.getAttribute('name'),
+      content: tag.getAttribute('content'),
+    }));
+
+    expect(actual).toEqual(expected);
+  });
 });
 
 it('should render the LDP tags', async () => {
-  await renderMetadataToDocument();
-
-  const actual = Array.from(
-    document.querySelectorAll('head > meta[name^="article:tag"]'),
-  ).map(tag => ({
-    name: tag.getAttribute('name'),
-    content: tag.getAttribute('content'),
-  }));
+  render(<CanonicalNewsInternationalOrigin />);
 
   const expected = [
     { content: 'Royal Wedding 2018', name: 'article:tag' },
@@ -459,28 +479,23 @@ it('should render the LDP tags', async () => {
     { content: 'Queen Victoria', name: 'article:tag' },
   ];
 
-  expect(actual).toEqual(expected);
+  await waitFor(() => {
+    const actual = Array.from(
+      document.querySelectorAll('head > meta[name^="article:tag"]'),
+    ).map(tag => ({
+      name: tag.getAttribute('name'),
+      content: tag.getAttribute('content'),
+    }));
+
+    expect(actual).toEqual(expected);
+  });
 });
 
 it('should render the default service image as open graph image', async () => {
-  await renderMetadataToDocument();
+  render(<CanonicalNewsInternationalOrigin />);
+
   const serviceConfig = services.news.default;
 
-  const actual = Array.from(
-    document.querySelectorAll(
-      'head > meta[property*="image"], head > meta[name*="image"]',
-    ),
-  ).map(tag =>
-    tag.hasAttribute('property')
-      ? {
-          property: tag.getAttribute('property'),
-          content: tag.getAttribute('content'),
-        }
-      : {
-          name: tag.getAttribute('name'),
-          content: tag.getAttribute('content'),
-        },
-  );
   const expected = [
     {
       property: 'og:image',
@@ -493,27 +508,31 @@ it('should render the default service image as open graph image', async () => {
       content: serviceConfig.defaultImage,
     },
   ];
-  expect(actual).toEqual(expected);
+
+  await waitFor(() => {
+    const actual = Array.from(
+      document.querySelectorAll(
+        'head > meta[property*="image"], head > meta[name*="image"]',
+      ),
+    ).map(tag =>
+      tag.hasAttribute('property')
+        ? {
+            property: tag.getAttribute('property'),
+            content: tag.getAttribute('content'),
+          }
+        : {
+            name: tag.getAttribute('name'),
+            content: tag.getAttribute('content'),
+          },
+    );
+
+    expect(actual).toEqual(expected);
+  });
 });
 
 it('should render the open graph image if provided', async () => {
-  await renderMapMetadataToDocument();
+  render(<CanonicalMapInternationalOrigin />);
 
-  const actual = Array.from(
-    document.querySelectorAll(
-      'head > meta[property*="image"], head > meta[name*="image"]',
-    ),
-  ).map(tag =>
-    tag.hasAttribute('property')
-      ? {
-          property: tag.getAttribute('property'),
-          content: tag.getAttribute('content'),
-        }
-      : {
-          name: tag.getAttribute('name'),
-          content: tag.getAttribute('content'),
-        },
-  );
   const expected = [
     {
       property: 'og:image',
@@ -528,7 +547,26 @@ it('should render the open graph image if provided', async () => {
         'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
     },
   ];
-  expect(actual).toEqual(expected);
+
+  await waitFor(() => {
+    const actual = Array.from(
+      document.querySelectorAll(
+        'head > meta[property*="image"], head > meta[name*="image"]',
+      ),
+    ).map(tag =>
+      tag.hasAttribute('property')
+        ? {
+            property: tag.getAttribute('property'),
+            content: tag.getAttribute('content'),
+          }
+        : {
+            name: tag.getAttribute('name'),
+            content: tag.getAttribute('content'),
+          },
+    );
+
+    expect(actual).toEqual(expected);
+  });
 });
 
 shouldMatchSnapshot(

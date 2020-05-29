@@ -22,11 +22,12 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import MostReadContainer from '#containers/MostRead';
 import mostReadShape from '#containers/MostRead/utilities/mostReadShape';
 import ATIAnalytics from '#containers/ATIAnalytics';
+import LinkedData from '#containers/LinkedData';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import MetadataContainer from '#containers/Metadata';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 
-const StyledMain = styled.main.attrs({ role: 'main' })`
+const StyledMain = styled.main.attrs({ role: 'main', 'data-e2e': 'most-read' })`
   flex-grow: 1;
   margin: 0 ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -133,13 +134,14 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
         description={`${header} - ${brandName}`}
         openGraphType="website"
       />
-
+      <LinkedData type="WebPage" seoTitle={header} />
       <StyledMain>
         <MostReadContainer
           mostReadEndpointOverride={mostReadEndpointOverride}
           wrapper={MostReadWrapper}
           columnLayout="oneColumn"
           initialData={pageData}
+          serverRenderOnAmp
         />
       </StyledMain>
     </>

@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/uzbek/sport-23248721",
       "cpsUrn": "urn:bbc:content:assetUri:uzbek/sport-23248721",
-      "curie": "http://www.bbc.co.uk/asset/3c6b649a-696c-ea42-8610-5cc80ecacae8"
+      "curie": "http://www.bbc.co.uk/asset/3c6b649a-696c-ea42-8610-5cc80ecacae8",
+      "assetId": "23248721"
     },
     "type": "MAP",
     "createdBy": "uzbek-v6",
     "language": "uz-Cyrl",
-    "lastUpdated": 1573487977500,
+    "lastUpdated": 1588337994631,
     "firstPublished": 1568390606000,
-    "lastPublished": 1573059510000,
+    "lastPublished": 1568390606000,
+    "timestamp": 1568390606000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -33,8 +35,9 @@
       "counterName": "uzbek.sport.media_asset.23248721.page",
       "cps_asset_id": "23248721"
     },
+    "passport": { "taggings": [] },
     "tags": {},
-    "version": "v1.1.2",
+    "version": "v1.2.1",
     "blockTypes": ["version", "paragraph", "list", "image"],
     "includeComments": false
   },
@@ -200,7 +203,8 @@
     "locators": {
       "assetUri": "/uzbek/sport-23248721",
       "cpsUrn": "urn:bbc:content:assetUri:uzbek/sport-23248721",
-      "curie": "http://www.bbc.co.uk/asset/3c6b649a-696c-ea42-8610-5cc80ecacae8"
+      "curie": "http://www.bbc.co.uk/asset/3c6b649a-696c-ea42-8610-5cc80ecacae8",
+      "assetId": "23248721"
     },
     "summary": "Ўзбек деҳқонининг косаси нега оқармайди",
     "timestamp": 1573487977500,

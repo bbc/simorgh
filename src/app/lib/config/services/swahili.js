@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'Matangazo',
     },
     lang: `sw`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -194,6 +195,7 @@ export const service = {
       onFrontPage: true,
       frontPagePosition: 'Features',
       header: 'Vipindi vya Redio',
+      durationLabel: 'Muda %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

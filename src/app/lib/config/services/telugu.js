@@ -10,6 +10,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'వ్యాపార ప్రకటన',
     },
     lang: `te`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -177,7 +178,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'ముఖ్యమైన కథనాలు',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'ఫీచర్లు',
     },
     brandSVG,
     mostRead: {
@@ -254,10 +255,6 @@ export const service = {
       {
         title: 'అంతర్జాతీయం',
         url: '/telugu/international',
-      },
-      {
-        title: '#ISWOTY',
-        url: '/telugu/resources/idt-47054a9b-b97c-4190-bed0-0416210e698b',
       },
     ],
   },

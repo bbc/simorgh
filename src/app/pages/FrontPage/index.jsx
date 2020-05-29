@@ -22,12 +22,14 @@ import {
 import SectionLabel from '@bbc/psammead-section-label';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
+import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '#containers/FrontPageSection';
 import MetadataContainer from '#containers/Metadata';
 import MostReadContainer from '#containers/MostRead';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import AdContainer from '#containers/Ad';
+import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
@@ -136,8 +138,11 @@ const FrontPage = ({
     />
   );
 
+  const { isAmp } = useContext(RequestContext);
+
   return (
     <>
+      {!isAmp && <CanonicalAdBootstrapJs />}
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
@@ -151,8 +156,8 @@ const FrontPage = ({
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}
         </VisuallyHiddenText>
+        <AdContainer />
         <StyledFrontPageDiv>
-          <AdContainer />
           {groups.map((group, index) => (
             <Fragment key={group.title}>
               {group.type === 'useful-links' && renderMostRead()}

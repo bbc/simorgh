@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'Xayeysiin',
     },
     lang: `so`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -199,6 +200,7 @@ export const service = {
       onFrontPage: true,
       frontPagePosition: 'Features',
       header: 'Barnaamijyada Idaacadda',
+      durationLabel: 'Muddada %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

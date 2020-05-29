@@ -14,6 +14,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'آگهی',
     },
     lang: 'fa',
     product: 'BBC News',
@@ -208,6 +209,7 @@ export const service = {
       onFrontPage: false,
       frontPagePosition: '',
       header: 'برنامه‌های رادیو',
+      durationLabel: 'مدت %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,
@@ -309,10 +311,6 @@ export const service = {
       {
         title: 'ناظران می‌گویند',
         url: '/persian/blogs/viewpoints',
-      },
-      {
-        title: 'صفحات ویژه',
-        url: '/persian/world-37434378',
       },
       {
         title: 'وبلاگ‌ها',

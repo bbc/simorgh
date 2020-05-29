@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'Advertisement',
     },
     lang: 'yo',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -178,7 +179,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'Ìròyìn tó ṣe kókó',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'Ìwádìí kíkún lóríi kókó ìròyìn ',
     },
     brandSVG,
     mostRead: {
