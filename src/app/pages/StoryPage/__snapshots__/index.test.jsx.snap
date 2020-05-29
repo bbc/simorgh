@@ -1324,9 +1324,9 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
         <div
           id="DataContainer"
         >
-          <noscript>
-            &lt;img height="1px" width="1px" alt="" style="position:absolute" src="undefineds=598343&amp;idclient=80c6b6f0-58d5-4430-b259-aa11c522cd49&amp;s2=70&amp;p=africa::igbo.africa.story.23252735.page&amp;r=0x0x24x24&amp;re=1024x768&amp;hl=7x9x23&amp;lng=en-US&amp;x1=[urn:bbc:cps:954b3c17-7900-9342-aa1a-6857067770d7]&amp;x2=[responsive]&amp;x3=[news-pidgin]&amp;x4=[ig]&amp;x5=[http%3A%2F%2Flocalhost%2F]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[STY+-+Ọrụ+bekee+na+ịrụrụ+onwe+gị+ọrụ,+kedụ+nk?+-+BBC+News+Pidgin]&amp;x11=[2019-10-23T12:18:59.000Z]&amp;x12=[2019-10-23T12:19:07.000Z]&amp;x13=[World+Cup]&amp;x14=[de6a07ff-47ff-4551-9b71-7494a71aceac]&amp;x16=[Amuse%20me]&amp;x17=[News]"/&gt;
-          </noscript>
+          <div
+            id="ATIAnalytics"
+          />
           <div
             class="c0 c1"
             dir="ltr"
@@ -4177,7 +4177,9 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
               <div
                 id="DataContainer"
               >
-                <noscript />
+                <div
+                  id="ATIAnalytics"
+                />
                 <div
                   class="c0 c1"
                   dir="ltr"

@@ -104,6 +104,11 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   return ContextsContainer;
 });
 
+jest.mock('#containers/ATIAnalytics', () => {
+  const ATIAnalytics = () => <div id="ATIAnalytics" />;
+  return ATIAnalytics;
+});
+
 describe('Story Page', () => {
   afterEach(() => {
     fetchMock.restore();
