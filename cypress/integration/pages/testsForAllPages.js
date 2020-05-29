@@ -327,17 +327,6 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         appConfig[config[service].name][variant].serviceLocalizedName !==
         undefined;
 
-      it('should render the BBC News branding', () => {
-        cy.get('header a').should(
-          'contain',
-          hasLocalisedName
-            ? `${appConfig[config[service].name][variant].product}, ${
-                appConfig[config[service].name][variant].serviceLocalizedName
-              }`
-            : appConfig[config[service].name][variant].product,
-        );
-      });
-
       if (hasLocalisedName) {
         it("should have offscreen text with product's language code set to English", () => {
           cy.get(
@@ -359,21 +348,6 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           ).should('not.have.attr', 'lang', 'en-GB');
         });
       }
-
-      it('should have a visible banner, with a skip to content link', () => {
-        cy.get('header')
-          .should('have.lengthOf', 1)
-          .find('div[class^="Banner"]')
-          .children()
-          .should('have.lengthOf', 1)
-          .children()
-          .should('have.attr', 'href', `/${config[service].name}`)
-          .find('svg')
-          .should('be.visible');
-        cy.get('div[class^="Banner"]')
-          .find('a[class^="SkipLink"]')
-          .should('have.attr', 'href', '#content');
-      });
 
       if (appConfig[config[service].name][variant].navigation) {
         if (
