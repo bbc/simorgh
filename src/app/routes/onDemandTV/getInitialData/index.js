@@ -28,6 +28,7 @@ const getDurationISO8601 = path([
 const getThumbnailImageUrl = json =>
   getPlaceholderImageUrl(path(['promo', 'media', 'imageUrl'], json));
 const getPromoBrandTitle = path(['promo', 'brand', 'title']);
+const getImageUrl = path(['content', 'blocks', 0, 'imageUrl']);
 
 export default async ({ path: pathname }) => {
   const onDemandTvDataPath = overrideRendererOnTest(pathname);
@@ -52,6 +53,7 @@ export default async ({ path: pathname }) => {
         promoBrandTitle: getPromoBrandTitle(json),
         masterBrand: getMasterBrand(json),
         episodeId: getEpisodeId(json),
+        imageUrl: getImageUrl(json),
         ...pageType,
       },
     }),

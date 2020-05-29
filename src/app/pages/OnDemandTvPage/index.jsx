@@ -4,11 +4,11 @@ import { shape, string } from 'prop-types';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
-import MediaMessage from '../MediaAssetPage/MediaMessage';
 import MetadataContainer from '../../containers/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
+import VideoPlayer from './VideoPlayer';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
@@ -38,6 +38,9 @@ const OnDemandTvPage = ({ pageData }) => {
     shortSynopsis,
     brandTitle,
     releaseDateTimeStamp,
+    masterBrand,
+    episodeId,
+    imageUrl,
   } = pageData;
 
   const { dir } = useContext(ServiceContext);
@@ -70,7 +73,11 @@ const OnDemandTvPage = ({ pageData }) => {
             columns={getGroups(6, 6, 6, 6, 6, 6)}
             enableGelGutters
           >
-            <MediaMessage />
+            <VideoPlayer
+              masterBrand={masterBrand}
+              id={episodeId}
+              imageUrl={imageUrl}
+            />
           </StyledGelWrapperGrid>
           <OnDemandHeadingBlock
             idAttr={idAttr}
