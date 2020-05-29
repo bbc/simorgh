@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Story Page should not show the pop-out timestamp when allowDateStamp is false 1`] = `
-<DocumentFragment>
-  .c54 {
+.c53 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -11,7 +10,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   height: 0.75rem;
 }
 
-.c36 {
+.c35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -21,7 +20,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   flex-direction: column;
 }
 
-.c37 {
+.c36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40,7 +39,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   align-items: baseline;
 }
 
-.c38 {
+.c37 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -60,23 +59,23 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   align-items: center;
 }
 
-.c34 {
+.c33 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c32 {
+.c31 {
   position: relative;
   z-index: 0;
   margin-top: 2rem;
 }
 
-.c35 {
+.c34 {
   margin: 0;
   padding: 0;
 }
 
-.c30 {
+.c29 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -87,7 +86,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding: 1.5rem 0;
 }
 
-.c23 {
+.c22 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -120,7 +119,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   outline: none;
 }
 
-.c21 {
+.c20 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -131,20 +130,20 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   margin: 0;
 }
 
-.c22 {
+.c21 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c22:visited {
+.c21:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c22:focus,
-.c22:hover {
+.c21:focus,
+.c21:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
@@ -155,7 +154,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   width: 100%;
 }
 
-.c18 {
+.c17 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -167,7 +166,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   margin: 0;
 }
 
-.c17 {
+.c16 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -181,7 +180,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   left: 0;
 }
 
-.c20 {
+.c19 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -192,27 +191,17 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   width: 100%;
 }
 
-.c20 > p {
+.c19 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c20 > p:last-child {
+.c19 > p:last-child {
   padding-bottom: 0;
 }
 
-.c20 i {
+.c19 i {
   font-style: normal;
-}
-
-.c16 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-  -webkit-animation: eMLfYp 0.2s linear;
-  animation: eMLfYp 0.2s linear;
-  -webkit-transition: visibility 0.2s linear;
-  transition: visibility 0.2s linear;
 }
 
 .c15 {
@@ -228,7 +217,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c50 {
+.c49 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -238,32 +227,32 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   font-style: normal;
 }
 
-.c28 {
+.c27 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c44 {
+.c43 {
   padding: 0.5rem 0 1rem;
 }
 
-.c44:first-child {
+.c43:first-child {
   padding-top: 0;
 }
 
-.c44:last-child {
+.c43:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c43 {
+.c42 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c51 {
+.c50 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -272,14 +261,14 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   margin-right: 0.5rem;
 }
 
-.c55 {
+.c54 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c46 {
+.c45 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -287,40 +276,40 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   width: 100%;
 }
 
-.c46 >div {
+.c45 >div {
   vertical-align: middle;
 }
 
-.c46 >div {
+.c45 >div {
   display: inline-block;
   vertical-align: initial;
 }
 
-.c46 svg {
+.c45 svg {
   margin: 0;
 }
 
-.c58 {
+.c57 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c45 {
+.c44 {
   position: relative;
 }
 
-.c56 {
+.c55 {
   position: relative;
 }
 
-.c57 > * {
+.c56 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c47 {
+.c46 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -332,7 +321,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   display: inline;
 }
 
-.c59 {
+.c58 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -343,7 +332,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   line-height: 1.25rem;
 }
 
-.c49 {
+.c48 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -355,7 +344,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding-top: 0.5rem;
 }
 
-.c60 {
+.c59 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -366,7 +355,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding-bottom: 0.5rem;
 }
 
-.c48 {
+.c47 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -374,7 +363,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   overflow-wrap: break-word;
 }
 
-.c48:before {
+.c47:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -386,17 +375,17 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   z-index: 1;
 }
 
-.c48:hover,
-.c48:focus {
+.c47:hover,
+.c47:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c48:visited {
+.c47:visited {
   color: #6E6E73;
 }
 
-.c61 {
+.c60 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -407,7 +396,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   display: block;
 }
 
-.c52 {
+.c51 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -420,7 +409,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding-right: 0.5rem;
 }
 
-.c53 {
+.c52 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -432,11 +421,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   height: 100%;
 }
 
-.c62 {
+.c61 {
   padding: 0 0.25rem;
 }
 
-.c25 {
+.c24 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -446,7 +435,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   list-style-type: none;
 }
 
-.c25 > li::before {
+.c24 > li::before {
   content: ' ';
   display: inline-block;
   width: 2rem;
@@ -454,27 +443,27 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   margin-left: -2rem;
 }
 
-.c26 {
+.c25 {
   margin-bottom: 1rem;
 }
 
-.c24 {
+.c23 {
   margin-bottom: 1.5rem;
 }
 
-.c27 {
+.c26 {
   margin-top: 0.5rem;
 }
 
-.c27 figure {
+.c26 figure {
   padding-bottom: 0;
 }
 
-.c31 {
+.c30 {
   margin-bottom: 1rem;
 }
 
-.c33 {
+.c32 {
   margin-top: 0;
 }
 
@@ -523,16 +512,16 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   margin: 0 auto;
 }
 
-.c63 {
+.c62 {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
 
-.c42 {
+.c41 {
   margin-bottom: 1.5rem;
 }
 
-.c29 {
+.c28 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -543,7 +532,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:37.5rem) {
-  .c37 {
+  .c36 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -552,39 +541,39 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c38 {
+  .c37 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c38 {
+  .c37 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c38 {
+  .c37 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c38 {
+  .c37 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c34 {
+  .c33 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c34 {
+  .c33 {
     position: absolute;
     left: 0;
     right: 0;
@@ -593,33 +582,33 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:37.5rem) {
-  .c32 {
+  .c31 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c32 {
+  .c31 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c30 {
+  .c29 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c29 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c29 {
     padding-top: 2rem;
   }
 }
@@ -736,25 +725,25 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (max-width:37.4375rem) {
-  .c19 {
+  .c18 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c19 {
+  .c18 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c19 {
+  .c18 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c19 {
+  .c18 {
     grid-column: 1 / span 10;
   }
 }
@@ -792,54 +781,54 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c21 {
+  .c20 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c21 {
+  .c20 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
+  .c19 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c20 {
+  .c19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c20 {
+  .c19 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c20 {
+  .c19 {
     padding: 0.5rem 0 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c50 {
+  .c49 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c50 {
+  .c49 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -931,7 +920,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (max-width:14.9375rem) {
-  .c40 {
+  .c39 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -939,7 +928,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c40 {
+  .c39 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -947,7 +936,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c40 {
+  .c39 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -955,7 +944,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c40 {
+  .c39 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -963,7 +952,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c40 {
+  .c39 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -971,7 +960,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:80rem) {
-  .c40 {
+  .c39 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -979,57 +968,57 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @supports (display:grid) {
-  .c40 {
+  .c39 {
     display: block;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c44 {
+  .c43 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c44 {
+  .c43 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c44 {
+  .c43 {
     padding: 0 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c44:first-child {
+  .c43:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c55 {
+  .c54 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c55 {
+  .c54 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c46 {
+  .c45 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c46 {
+  .c45 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -1037,7 +1026,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c46 {
+  .c45 {
     display: block;
     width: initial;
     padding: initial;
@@ -1047,13 +1036,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:37.5rem) {
-  .c58 {
+  .c57 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c58 {
+  .c57 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -1061,7 +1050,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c58 {
+  .c57 {
     display: block;
     width: initial;
     padding: initial;
@@ -1070,7 +1059,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c45 {
+  .c44 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -1078,214 +1067,214 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:25rem) {
-  .c57 {
+  .c56 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c57 > * {
+  .c56 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c47 {
+  .c46 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c47 {
+  .c46 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c59 {
+  .c58 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c59 {
+  .c58 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c49 {
+  .c48 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c49 {
+  .c48 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c49 {
+  .c48 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c49 {
+  .c48 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c60 {
+  .c59 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c60 {
+  .c59 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c60 {
+  .c59 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c60 {
+  .c59 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c61 {
+  .c60 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c61 {
+  .c60 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c52 {
+  .c51 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c52 {
+  .c51 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c25 {
+  .c24 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c25 {
+  .c24 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c27 {
+  .c26 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c27 {
+  .c26 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c27 {
+  .c26 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c27 {
+  .c26 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c27 {
+  .c26 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c27 {
+  .c26 {
     margin-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c27 {
+  .c26 {
     padding-top: 0.5rem;
     margin-top: 2rem;
   }
 }
 
 @media (max-width:25rem) {
-  .c31 {
+  .c30 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c31 {
+  .c30 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c30 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c39 {
+  .c38 {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c39 {
+  .c38 {
     padding-bottom: 1.5rem;
   }
 }
@@ -1309,507 +1298,515 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:63rem) {
-  .c41 {
+  .c40 {
     margin-top: 2rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c42 {
+  .c41 {
     padding: 1rem;
   }
 }
 
 <div
-    id="ContextsContainer"
+  id="ContextsContainer"
+>
+  <div
+    id="PageWrapperContainer"
   >
     <div
-      id="PageWrapperContainer"
+      id="LoadingContainer"
     >
       <div
-        id="LoadingContainer"
+        id="ErrorContainer"
       >
         <div
-          id="ErrorContainer"
+          id="DataContainer"
         >
+          <noscript>
+            &lt;img height="1px" width="1px" alt="" style="position:absolute" src="undefineds=598343&amp;idclient=80c6b6f0-58d5-4430-b259-aa11c522cd49&amp;s2=70&amp;p=africa::igbo.africa.story.23252735.page&amp;r=0x0x24x24&amp;re=1024x768&amp;hl=7x9x23&amp;lng=en-US&amp;x1=[urn:bbc:cps:954b3c17-7900-9342-aa1a-6857067770d7]&amp;x2=[responsive]&amp;x3=[news-pidgin]&amp;x4=[ig]&amp;x5=[http%3A%2F%2Flocalhost%2F]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[STY+-+Ọrụ+bekee+na+ịrụrụ+onwe+gị+ọrụ,+kedụ+nk?+-+BBC+News+Pidgin]&amp;x11=[2019-10-23T12:18:59.000Z]&amp;x12=[2019-10-23T12:19:07.000Z]&amp;x13=[World+Cup]&amp;x14=[de6a07ff-47ff-4551-9b71-7494a71aceac]&amp;x16=[Amuse%20me]&amp;x17=[News]"/&gt;
+          </noscript>
           <div
-            id="DataContainer"
+            class="c0 c1"
+            dir="ltr"
           >
-            <noscript />
             <div
-              class="c0 c1"
+              class="c2"
               dir="ltr"
             >
-              <div
-                class="c2"
-                dir="ltr"
+              <main
+                role="main"
               >
-                <main
-                  role="main"
+                <div
+                  class="c3"
+                >
+                  <h1
+                    class="c4"
+                    id="content"
+                    tabindex="-1"
+                  >
+                    STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
+                  </h1>
+                </div>
+                <div
+                  class="c5 c6"
                 >
                   <div
-                    class="c3"
+                    class="c7"
                   >
-                    <h1
-                      class="c4"
-                      id="content"
-                      tabindex="-1"
+                    <ul
+                      class="c8"
+                      role="list"
                     >
-                      STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
-                    </h1>
+                      <li
+                        class="c9"
+                        role="listitem"
+                      >
+                        By Andrew Overtyped Marr
+                      </li>
+                      <li
+                        class="c10"
+                        role="listitem"
+                      >
+                        BBC News - Overtyped
+                      </li>
+                    </ul>
                   </div>
-                  <div
-                    class="c5 c6"
+                </div>
+                <div
+                  class="c11"
+                >
+                  <figure
+                    class="c12"
                   >
                     <div
-                      class="c7"
-                    >
-                      <ul
-                        class="c8"
-                        role="list"
-                      >
-                        <li
-                          class="c9"
-                          role="listitem"
-                        >
-                          By Andrew Overtyped Marr
-                        </li>
-                        <li
-                          class="c10"
-                          role="listitem"
-                        >
-                          BBC News - Overtyped
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div
-                    class="c11"
-                  >
-                    <figure
-                      class="c12"
+                      class="c13"
                     >
                       <div
-                        class="c13"
+                        class="c14"
                       >
                         <div
-                          class="c14"
+                          class="c15"
                         >
                           <div
-                            class="c15"
-                          >
-                            <img
-                              alt="Some people at the NTA awards"
-                              class="c16"
-                              src="https://ichef.bbci.co.uk/news/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
-                              srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
-                              width="976"
-                            />
-                            <p
-                              class="c17"
-                              role="text"
-                            >
-                              <span
-                                class="c18"
-                              >
-                                Wia dis foto come from, 
-                              </span>
-                              <span
-                                lang="en-GB"
-                              >
-                                Joe Maher
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                        <div
-                          class="c19"
-                        >
-                          <figcaption
-                            class="c20"
+                            class="lazyload-placeholder"
+                          />
+                          <noscript>
+                            &lt;img srcSet="https://ichef.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w" alt="Some people at the NTA awards" src="https://ichef.bbci.co.uk/news/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg" width="976" class=""/&gt;
+                          </noscript>
+                          <p
+                            class="c16"
+                            role="text"
                           >
                             <span
-                              class="c18"
-                            >
-                              Wetin we call dis foto, 
-                            </span>
-                            <p>
-                              Some people went to the NTA awards recently.
-                            </p>
-                          </figcaption>
-                        </div>
-                      </div>
-                    </figure>
-                  </div>
-                  <div
-                    class="c5"
-                  >
-                    <p
-                      class="c21"
-                    >
-                      <b>
-                         This is introduction text, it should be bold by default, but also support 
-                      </b>
-                      <a
-                        class="c22"
-                        href="https://bbc.com/pidgin/23248703"
-                      >
-                        inline links
-                      </a>
-                      <b>
-                         to other pages.
-                      </b>
-                    </p>
-                  </div>
-                  <div
-                    class="c5"
-                  >
-                    <p
-                      class="c21"
-                    >
-                      <i
-                        class="c23"
-                      >
-                        <b>
-                          This is a subheadline! that has 
-                        </b>
-                      </i>
-                      <a
-                        class="c22"
-                        href="https://bbc.com/pidgin/23248703"
-                      >
-                        a link
-                      </a>
-                    </p>
-                  </div>
-                  <div
-                    class="c5"
-                  >
-                    <div
-                      class="c24"
-                    >
-                      <ul
-                        class="c25"
-                        dir="ltr"
-                        role="list"
-                      >
-                        <li
-                          class="c26"
-                          role="listitem"
-                        >
-                          This is a unordered list
-                        </li>
-                        <li
-                          class="c26"
-                          role="listitem"
-                        >
-                          It can have 
-                          <b>
-                            bold text
-                          </b>
-                           in it
-                        </li>
-                        <li
-                          class="c26"
-                          role="listitem"
-                        >
-                          <a
-                            class="c22"
-                            href="https://bbc.com/pidgin/23248703"
-                          >
-                            It can also have links
-                          </a>
-                        </li>
-                        <li
-                          class="c26"
-                          role="listitem"
-                        >
-                          <i
-                            class="c23"
-                          >
-                            It can even have italic text in it!
-                          </i>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div
-                    class="c5"
-                  >
-                    <p
-                      class="c21"
-                    >
-                      Feta the big cheese macaroni cheese. 
-                      <a
-                        class="c22"
-                        href="https://bbc.com/pidgin/23248703"
-                      >
-                        Caerphilly danish fontina
-                      </a>
-                       queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. 
-                      <b>
-                        Cow cheeseburger
-                      </b>
-                       stilton emmental.
-                    </p>
-                  </div>
-                  <div
-                    class="c11"
-                  >
-                    <figure
-                      class="c12"
-                    >
-                      <div
-                        class="c13"
-                      >
-                        <div
-                          class="c14"
-                        >
-                          <div
-                            class="c15"
-                          >
-                            <div
-                              class="lazyload-placeholder"
-                            />
-                            <noscript />
-                            <p
                               class="c17"
-                              role="text"
                             >
-                              <span
-                                class="c18"
-                              >
-                                Wia dis foto come from, 
-                              </span>
-                              <span
-                                lang="en-GB"
-                              >
-                                Joe Maher
-                              </span>
-                            </p>
-                          </div>
+                              Wia dis foto come from, 
+                            </span>
+                            <span
+                              lang="en-GB"
+                            >
+                              Joe Maher
+                            </span>
+                          </p>
                         </div>
-                        <div
-                          class="c19"
-                        />
                       </div>
-                    </figure>
-                  </div>
-                  <div
-                    class="c5"
-                  >
-                    <p
-                      class="c21"
-                    >
-                      <b>
-                        Start of localised text
-                      </b>
-                    </p>
-                  </div>
-                  <div
-                    class="c5"
-                  >
-                    <p
-                      class="c21"
-                    >
-                      Minista nọ n'isi ụlọọrụ ahụ bụ Hadi Sirika sị na ya agaghị atụrụ ndị mmadụ asị na ya gaghaị arụcha ya bụ ọdọụgbọelụ na Disemba dịka ha kwuburu mana ya ga-eburu isi ụlọọrụ ya ga-gwunye n'Enugu ịhụ na ha rụchara n'Apreelụ.
-                    </p>
-                  </div>
-                  <div
-                    class="c5"
-                  >
-                    <p
-                      class="c21"
-                    >
-                      <b>
-                        End of localised text
-                      </b>
-                    </p>
-                  </div>
-                  <div
-                    class="c5"
-                  >
-                    <p
-                      class="c21"
-                    >
-                      Rubber cheese macaroni 
-                      <i
-                        class="c23"
-                      >
-                        cheese cottage cheese
-                      </i>
-                      . Caerphilly gouda ricotta st. agur blue cheese cheese strings taleggio feta say cheese. The big cheese cheeseburger fondue dolcelatte fromage frais chalk and cheese cheese slices cheddar. Airedale macaroni cheese cheese strings fromage frais.
-                    </p>
-                  </div>
-                  <div
-                    class="c5"
-                  >
-                    <div
-                      class="c24"
-                    >
-                      <ul
-                        class="c25"
-                        dir="ltr"
-                        role="list"
-                      >
-                        <li
-                          class="c26"
-                          role="listitem"
-                        >
-                          This is a ordered list
-                        </li>
-                        <li
-                          class="c26"
-                          role="listitem"
-                        >
-                          It can have 
-                          <b>
-                            bold text
-                          </b>
-                           in it
-                        </li>
-                        <li
-                          class="c26"
-                          role="listitem"
-                        >
-                          <a
-                            class="c22"
-                            href="https://bbc.com/pidgin/23248703"
-                          >
-                            It can also have links
-                          </a>
-                        </li>
-                        <li
-                          class="c26"
-                          role="listitem"
-                        >
-                          <i
-                            class="c23"
-                          >
-                            It can even have italic text in it!
-                          </i>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div
-                    class="c5"
-                  >
-                    <p
-                      class="c21"
-                    >
-                      Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
-                    </p>
-                  </div>
-                  <div
-                    class="c27"
-                  >
-                    <figure
-                      class="c12"
-                    >
                       <div
-                        class="c28"
+                        class="c18"
                       >
-                        <iframe
-                          allow="autoplay; fullscreen"
-                          allowfullscreen=""
-                          class="c29"
-                          scrolling="no"
-                          src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
-                          title="Media player"
-                        />
-                        <noscript />
+                        <figcaption
+                          class="c19"
+                        >
+                          <span
+                            class="c17"
+                          >
+                            Wetin we call dis foto, 
+                          </span>
+                          <p>
+                            Some people went to the NTA awards recently.
+                          </p>
+                        </figcaption>
                       </div>
-                    </figure>
-                  </div>
-                  <div
-                    class="c5"
+                    </div>
+                  </figure>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c20"
                   >
-                    <h2
-                      class="c30"
-                      id="This-is-a-heading"
-                      tabindex="-1"
-                    >
-                      This is a heading!
-                    </h2>
-                  </div>
-                  <div
-                    class="c5"
-                  >
-                    <h2
-                      class="c30"
-                      id="This-is-a-subheading"
-                      tabindex="-1"
-                    >
-                      This is a subheading!
-                    </h2>
-                  </div>
-                  <div
-                    class="c5"
-                  >
-                    <p
+                    <b>
+                       This is introduction text, it should be bold by default, but also support 
+                    </b>
+                    <a
                       class="c21"
+                      href="https://bbc.com/pidgin/23248703"
                     >
-                      Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
-                    </p>
-                  </div>
-                  <div
-                    class="c5"
+                      inline links
+                    </a>
+                    <b>
+                       to other pages.
+                    </b>
+                  </p>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c20"
                   >
-                    <h2
-                      class="c30"
-                      id="This-is-a-crosshead"
-                      tabindex="-1"
+                    <i
+                      class="c22"
                     >
-                      This is a crosshead!
-                    </h2>
-                  </div>
-                  <div
-                    class="c5"
-                  >
-                    <p
+                      <b>
+                        This is a subheadline! that has 
+                      </b>
+                    </i>
+                    <a
                       class="c21"
+                      href="https://bbc.com/pidgin/23248703"
                     >
-                      Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
-                    </p>
-                  </div>
-                  <div
-                    class="c5"
-                  >
-                    <p
-                      class="c21"
-                    >
-                      <a
-                        aria-label="This is an external link to google!, outside"
-                        class="c22"
-                        href="https://www.google.com/"
-                      >
-                        This is an external link to google!
-                      </a>
-                    </p>
-                  </div>
-                  <div
-                    class="c5"
-                  >
-                    <p
-                      class="c21"
-                    >
-                      Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
-                    </p>
-                  </div>
-                </main>
-                <section
-                  aria-labelledby="related-content-heading"
-                  class="c31"
-                  role="region"
+                      a link
+                    </a>
+                  </p>
+                </div>
+                <div
+                  class="c5"
                 >
                   <div
-                    class="c32 c33"
+                    class="c23"
+                  >
+                    <ul
+                      class="c24"
+                      dir="ltr"
+                      role="list"
+                    >
+                      <li
+                        class="c25"
+                        role="listitem"
+                      >
+                        This is a unordered list
+                      </li>
+                      <li
+                        class="c25"
+                        role="listitem"
+                      >
+                        It can have 
+                        <b>
+                          bold text
+                        </b>
+                         in it
+                      </li>
+                      <li
+                        class="c25"
+                        role="listitem"
+                      >
+                        <a
+                          class="c21"
+                          href="https://bbc.com/pidgin/23248703"
+                        >
+                          It can also have links
+                        </a>
+                      </li>
+                      <li
+                        class="c25"
+                        role="listitem"
+                      >
+                        <i
+                          class="c22"
+                        >
+                          It can even have italic text in it!
+                        </i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c20"
+                  >
+                    Feta the big cheese macaroni cheese. 
+                    <a
+                      class="c21"
+                      href="https://bbc.com/pidgin/23248703"
+                    >
+                      Caerphilly danish fontina
+                    </a>
+                     queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. 
+                    <b>
+                      Cow cheeseburger
+                    </b>
+                     stilton emmental.
+                  </p>
+                </div>
+                <div
+                  class="c11"
+                >
+                  <figure
+                    class="c12"
                   >
                     <div
-                      class="c34"
-                    />
-                    <h2
+                      class="c13"
+                    >
+                      <div
+                        class="c14"
+                      >
+                        <div
+                          class="c15"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                          <noscript>
+                            &lt;img srcSet="https://ichef.bbci.co.uk/news/240/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg 800w" alt="That guy from bodyguard at the NTAs" src="https://ichef.bbci.co.uk/news/640/cpsdevpb/B8EE/test/_63724374_gettyimages-1098050396.jpg" width="976" class=""/&gt;
+                          </noscript>
+                          <p
+                            class="c16"
+                            role="text"
+                          >
+                            <span
+                              class="c17"
+                            >
+                              Wia dis foto come from, 
+                            </span>
+                            <span
+                              lang="en-GB"
+                            >
+                              Joe Maher
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="c18"
+                      />
+                    </div>
+                  </figure>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c20"
+                  >
+                    <b>
+                      Start of localised text
+                    </b>
+                  </p>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c20"
+                  >
+                    Minista nọ n'isi ụlọọrụ ahụ bụ Hadi Sirika sị na ya agaghị atụrụ ndị mmadụ asị na ya gaghaị arụcha ya bụ ọdọụgbọelụ na Disemba dịka ha kwuburu mana ya ga-eburu isi ụlọọrụ ya ga-gwunye n'Enugu ịhụ na ha rụchara n'Apreelụ.
+                  </p>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c20"
+                  >
+                    <b>
+                      End of localised text
+                    </b>
+                  </p>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c20"
+                  >
+                    Rubber cheese macaroni 
+                    <i
+                      class="c22"
+                    >
+                      cheese cottage cheese
+                    </i>
+                    . Caerphilly gouda ricotta st. agur blue cheese cheese strings taleggio feta say cheese. The big cheese cheeseburger fondue dolcelatte fromage frais chalk and cheese cheese slices cheddar. Airedale macaroni cheese cheese strings fromage frais.
+                  </p>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <div
+                    class="c23"
+                  >
+                    <ul
+                      class="c24"
+                      dir="ltr"
+                      role="list"
+                    >
+                      <li
+                        class="c25"
+                        role="listitem"
+                      >
+                        This is a ordered list
+                      </li>
+                      <li
+                        class="c25"
+                        role="listitem"
+                      >
+                        It can have 
+                        <b>
+                          bold text
+                        </b>
+                         in it
+                      </li>
+                      <li
+                        class="c25"
+                        role="listitem"
+                      >
+                        <a
+                          class="c21"
+                          href="https://bbc.com/pidgin/23248703"
+                        >
+                          It can also have links
+                        </a>
+                      </li>
+                      <li
+                        class="c25"
+                        role="listitem"
+                      >
+                        <i
+                          class="c22"
+                        >
+                          It can even have italic text in it!
+                        </i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c20"
+                  >
+                    Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
+                  </p>
+                </div>
+                <div
+                  class="c26"
+                >
+                  <figure
+                    class="c12"
+                  >
+                    <div
+                      class="c27"
+                    >
+                      <iframe
+                        allow="autoplay; fullscreen"
+                        allowfullscreen=""
+                        class="c28"
+                        scrolling="no"
+                        src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
+                        title="Media player"
+                      />
+                      <noscript>
+                        &lt;div class=""&gt;&lt;img srcSet="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg 800w" alt="" src="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg" aria-hidden="true" class=""/&gt;&lt;div class=""&gt;&lt;strong class=""&gt;Dem no support media player for your device&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+                      </noscript>
+                    </div>
+                  </figure>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <h2
+                    class="c29"
+                    id="This-is-a-heading"
+                    tabindex="-1"
+                  >
+                    This is a heading!
+                  </h2>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <h2
+                    class="c29"
+                    id="This-is-a-subheading"
+                    tabindex="-1"
+                  >
+                    This is a subheading!
+                  </h2>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c20"
+                  >
+                    Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
+                  </p>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <h2
+                    class="c29"
+                    id="This-is-a-crosshead"
+                    tabindex="-1"
+                  >
+                    This is a crosshead!
+                  </h2>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c20"
+                  >
+                    Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
+                  </p>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c20"
+                  >
+                    <a
+                      aria-label="This is an external link to google!, outside"
+                      class="c21"
+                      href="https://www.google.com/"
+                    >
+                      This is an external link to google!
+                    </a>
+                  </p>
+                </div>
+                <div
+                  class="c5"
+                >
+                  <p
+                    class="c20"
+                  >
+                    Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
+                  </p>
+                </div>
+              </main>
+              <section
+                aria-labelledby="related-content-heading"
+                class="c30"
+                role="region"
+              >
+                <div
+                  class="c31 c32"
+                >
+                  <div
+                    class="c33"
+                  />
+                  <h2
+                    class="c34"
+                  >
+                    <span
                       class="c35"
                     >
                       <span
@@ -1817,42 +1814,228 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       >
                         <span
                           class="c37"
+                          dir="ltr"
+                          id="related-content-heading"
+                        >
+                          Another thing we de for inside dis tori
+                        </span>
+                      </span>
+                    </span>
+                  </h2>
+                </div>
+                <div
+                  class="c38"
+                />
+              </section>
+            </div>
+            <div
+              class="c39 c40"
+              dir="ltr"
+            >
+              <div
+                class="c41"
+              >
+                <section
+                  aria-labelledby="top-stories-heading"
+                  class="c30"
+                  role="region"
+                >
+                  <div
+                    class="c31 c32"
+                  >
+                    <div
+                      class="c33"
+                    />
+                    <h2
+                      class="c34"
+                    >
+                      <span
+                        class="c35"
+                      >
+                        <span
+                          class="c36"
                         >
                           <span
-                            class="c38"
+                            class="c37"
                             dir="ltr"
-                            id="related-content-heading"
+                            id="top-stories-heading"
                           >
-                            Another thing we de for inside dis tori
+                            Top Tori
                           </span>
                         </span>
                       </span>
                     </h2>
                   </div>
-                  <div
-                    class="c39"
-                  />
+                  <ul
+                    class="c42"
+                    role="list"
+                  >
+                    <li
+                      class="c43"
+                      role="listitem"
+                    >
+                      <div
+                        class="c44"
+                      >
+                        <div
+                          class="c45"
+                          dir="ltr"
+                        >
+                          <h3
+                            class="c46"
+                          >
+                            <a
+                              class="c47"
+                              href="/igbo/23182501"
+                            >
+                              DSS: Wepụ aka enwe n'ofe na Benue
+                            </a>
+                          </h3>
+                          <p
+                            class="c48"
+                          >
+                            DSS achọpụtala n'aka ndị ISIS dị na mkpamkpa nke na-akpa na Naijirịa ugbua nke gosiri na ọbughị nanị ndị Fulani na-achụ ehị na-kpa arụa
+                          </p>
+                          <time
+                            class="c49"
+                            datetime="2019-09-25"
+                          >
+                            25th September 2019
+                          </time>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="c43"
+                      role="listitem"
+                    >
+                      <div
+                        class="c44"
+                      >
+                        <div
+                          class="c45"
+                          dir="ltr"
+                        >
+                          <h3
+                            class="c46"
+                          >
+                            <a
+                              class="c47"
+                              href="/igbo/live/institutional-23162153"
+                            >
+                              <span
+                                role="text"
+                              >
+                                <span
+                                  class="c50"
+                                  dir="ltr"
+                                >
+                                  AS E DE HAPPEN 
+                                </span>
+                                Test m̀ịṅị̀ịọ́ụ̄ please ignore
+                              </span>
+                            </a>
+                          </h3>
+                          <p
+                            class="c48"
+                          >
+                            New Test m̀ịṅị̀ịọ́ụ̄ please ignore, test summary
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="c43"
+                      role="listitem"
+                    >
+                      <div
+                        class="c44"
+                      >
+                        <div
+                          class="c45"
+                          dir="ltr"
+                        >
+                          <div
+                            aria-hidden="true"
+                            class="c51"
+                            dir="ltr"
+                          >
+                            <div
+                              class="c52"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="c53"
+                                focusable="false"
+                                height="12px"
+                                viewBox="0 0 13 12"
+                                width="13px"
+                              >
+                                <path
+                                  d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                                />
+                                <path
+                                  d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                          <h3
+                            class="c46"
+                          >
+                            <a
+                              class="c47"
+                              href="/igbo/23183171"
+                            >
+                              <span
+                                role="text"
+                              >
+                                <span
+                                  class="c17"
+                                >
+                                  Audio, 
+                                </span>
+                                <span>
+                                  Akụkọ BBC Igbo na Nkeji
+                                </span>
+                              </span>
+                            </a>
+                          </h3>
+                          <p
+                            class="c48"
+                          >
+                            Akụkọ ihe na-eme n'ụwa niile
+                          </p>
+                          <time
+                            class="c49"
+                            datetime="2018-01-22"
+                          >
+                            22nd January 2018
+                          </time>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </section>
               </div>
               <div
-                class="c40 c41"
-                dir="ltr"
+                class="c41"
               >
-                <div
-                  class="c42"
+                <section
+                  aria-labelledby="features-analysis-heading"
+                  class="c30"
+                  role="region"
                 >
-                  <section
-                    aria-labelledby="top-stories-heading"
-                    class="c31"
-                    role="region"
+                  <div
+                    class="c31 c32"
                   >
                     <div
-                      class="c32 c33"
+                      class="c33"
+                    />
+                    <h2
+                      class="c34"
                     >
-                      <div
-                        class="c34"
-                      />
-                      <h2
+                      <span
                         class="c35"
                       >
                         <span
@@ -1860,760 +2043,570 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         >
                           <span
                             class="c37"
+                            dir="ltr"
+                            id="features-analysis-heading"
                           >
-                            <span
-                              class="c38"
-                              dir="ltr"
-                              id="top-stories-heading"
-                            >
-                              Top Tori
-                            </span>
+                            Informate me
                           </span>
                         </span>
-                      </h2>
-                    </div>
-                    <ul
-                      class="c43"
-                      role="list"
-                    >
-                      <li
-                        class="c44"
-                        role="listitem"
-                      >
-                        <div
-                          class="c45"
-                        >
-                          <div
-                            class="c46"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="c47"
-                            >
-                              <a
-                                class="c48"
-                                href="/igbo/23182501"
-                              >
-                                DSS: Wepụ aka enwe n'ofe na Benue
-                              </a>
-                            </h3>
-                            <p
-                              class="c49"
-                            >
-                              DSS achọpụtala n'aka ndị ISIS dị na mkpamkpa nke na-akpa na Naijirịa ugbua nke gosiri na ọbughị nanị ndị Fulani na-achụ ehị na-kpa arụa
-                            </p>
-                            <time
-                              class="c50"
-                              datetime="2019-09-25"
-                            >
-                              25th September 2019
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c44"
-                        role="listitem"
-                      >
-                        <div
-                          class="c45"
-                        >
-                          <div
-                            class="c46"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="c47"
-                            >
-                              <a
-                                class="c48"
-                                href="/igbo/live/institutional-23162153"
-                              >
-                                <span
-                                  role="text"
-                                >
-                                  <span
-                                    class="c51"
-                                    dir="ltr"
-                                  >
-                                    AS E DE HAPPEN 
-                                  </span>
-                                  Test m̀ịṅị̀ịọ́ụ̄ please ignore
-                                </span>
-                              </a>
-                            </h3>
-                            <p
-                              class="c49"
-                            >
-                              New Test m̀ịṅị̀ịọ́ụ̄ please ignore, test summary
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c44"
-                        role="listitem"
-                      >
-                        <div
-                          class="c45"
-                        >
-                          <div
-                            class="c46"
-                            dir="ltr"
-                          >
-                            <div
-                              aria-hidden="true"
-                              class="c52"
-                              dir="ltr"
-                            >
-                              <div
-                                class="c53"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="c54"
-                                  focusable="false"
-                                  height="12px"
-                                  viewBox="0 0 13 12"
-                                  width="13px"
-                                >
-                                  <path
-                                    d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                                  />
-                                  <path
-                                    d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
-                            <h3
-                              class="c47"
-                            >
-                              <a
-                                class="c48"
-                                href="/igbo/23183171"
-                              >
-                                <span
-                                  role="text"
-                                >
-                                  <span
-                                    class="c18"
-                                  >
-                                    Audio, 
-                                  </span>
-                                  <span>
-                                    Akụkọ BBC Igbo na Nkeji
-                                  </span>
-                                </span>
-                              </a>
-                            </h3>
-                            <p
-                              class="c49"
-                            >
-                              Akụkọ ihe na-eme n'ụwa niile
-                            </p>
-                            <time
-                              class="c50"
-                              datetime="2018-01-22"
-                            >
-                              22nd January 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </section>
-                </div>
-                <div
-                  class="c42"
-                >
-                  <section
-                    aria-labelledby="features-analysis-heading"
-                    class="c31"
-                    role="region"
+                      </span>
+                    </h2>
+                  </div>
+                  <ul
+                    class="c42"
+                    role="list"
                   >
-                    <div
-                      class="c32 c33"
+                    <li
+                      class="c43"
+                      role="listitem"
                     >
                       <div
-                        class="c34"
-                      />
-                      <h2
-                        class="c35"
+                        class="c44"
                       >
-                        <span
-                          class="c36"
+                        <div
+                          class="c54"
+                          dir="ltr"
                         >
-                          <span
-                            class="c37"
+                          <div
+                            class="c55"
                           >
-                            <span
-                              class="c38"
-                              dir="ltr"
-                              id="features-analysis-heading"
+                            <div
+                              class="c15"
                             >
-                              Informate me
-                            </span>
-                          </span>
-                        </span>
-                      </h2>
-                    </div>
-                    <ul
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
+                            <div
+                              class="c56"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="c57"
+                          dir="ltr"
+                        >
+                          <h3
+                            class="c58"
+                          >
+                            <a
+                              class="c47"
+                              href="/igbo/23182930"
+                            >
+                              Lee ihe Barcelona mere Real Betis
+                            </a>
+                          </h3>
+                          <p
+                            class="c59"
+                          >
+                            Barcelona emerigo Real Betis na asọmpị La Liga
+                          </p>
+                          <time
+                            class="c49"
+                            datetime="2018-01-22"
+                          >
+                            22nd January 2018
+                          </time>
+                        </div>
+                      </div>
+                    </li>
+                    <li
                       class="c43"
-                      role="list"
+                      role="listitem"
                     >
-                      <li
+                      <div
                         class="c44"
-                        role="listitem"
                       >
                         <div
-                          class="c45"
+                          class="c54"
+                          dir="ltr"
                         >
                           <div
                             class="c55"
-                            dir="ltr"
                           >
                             <div
-                              class="c56"
+                              class="c15"
                             >
                               <div
-                                class="c15"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="c57"
+                                class="lazyload-placeholder"
                               />
                             </div>
-                          </div>
-                          <div
-                            class="c58"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="c59"
-                            >
-                              <a
-                                class="c48"
-                                href="/igbo/23182930"
-                              >
-                                Lee ihe Barcelona mere Real Betis
-                              </a>
-                            </h3>
-                            <p
-                              class="c60"
-                            >
-                              Barcelona emerigo Real Betis na asọmpị La Liga
-                            </p>
-                            <time
-                              class="c50"
-                              datetime="2018-01-22"
-                            >
-                              22nd January 2018
-                            </time>
+                            <div
+                              class="c56"
+                            />
                           </div>
                         </div>
-                      </li>
-                      <li
+                        <div
+                          class="c57"
+                          dir="ltr"
+                        >
+                          <h3
+                            class="c58"
+                          >
+                            <a
+                              class="c47"
+                              href="/igbo/23182890"
+                            >
+                              Aubameyang nwere ike ifu ndị Arsenal ọnụ ego karịrị nderi pounds iri ise
+                            </a>
+                          </h3>
+                          <p
+                            class="c59"
+                          >
+                            Agbu a ndị otu bọọlụ Arsenal na Dortmund ebidola mkparịta ụka maka azụma ahịa Aubameyang dịka ọ ga-abụ onye kacha oke ọnụ ahịa ndị Arsenal ga-azụ.
+                          </p>
+                          <time
+                            class="c49"
+                            datetime="2018-01-21"
+                          >
+                            21st January 2018
+                          </time>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="c43"
+                      role="listitem"
+                    >
+                      <div
                         class="c44"
-                        role="listitem"
                       >
                         <div
-                          class="c45"
+                          class="c54"
+                          dir="ltr"
                         >
                           <div
                             class="c55"
-                            dir="ltr"
                           >
                             <div
-                              class="c56"
+                              class="c15"
                             >
                               <div
-                                class="c15"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="c57"
+                                class="lazyload-placeholder"
                               />
                             </div>
-                          </div>
-                          <div
-                            class="c58"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="c59"
-                            >
-                              <a
-                                class="c48"
-                                href="/igbo/23182890"
-                              >
-                                Aubameyang nwere ike ifu ndị Arsenal ọnụ ego karịrị nderi pounds iri ise
-                              </a>
-                            </h3>
-                            <p
-                              class="c60"
-                            >
-                              Agbu a ndị otu bọọlụ Arsenal na Dortmund ebidola mkparịta ụka maka azụma ahịa Aubameyang dịka ọ ga-abụ onye kacha oke ọnụ ahịa ndị Arsenal ga-azụ.
-                            </p>
-                            <time
-                              class="c50"
-                              datetime="2018-01-21"
-                            >
-                              21st January 2018
-                            </time>
+                            <div
+                              class="c56"
+                            />
                           </div>
                         </div>
-                      </li>
-                      <li
+                        <div
+                          class="c57"
+                          dir="ltr"
+                        >
+                          <h3
+                            class="c58"
+                          >
+                            <a
+                              class="c47"
+                              href="/igbo/23182810"
+                            >
+                              "Alexis Sanchez ga-abanye Manchester united ma ọ buru na....." Wenger
+                            </a>
+                          </h3>
+                          <p
+                            class="c59"
+                          >
+                            Onye nchikwa Arsenal ,Arsene wenger ekwuola na Alexis Sanchez ga-abanye Manchester United ma ọ buru na Henrikh Mkhitaryan bata otu Arsenal
+                          </p>
+                          <time
+                            class="c49"
+                            datetime="2018-01-21"
+                          >
+                            21st January 2018
+                          </time>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="c43"
+                      role="listitem"
+                    >
+                      <div
                         class="c44"
-                        role="listitem"
                       >
                         <div
-                          class="c45"
+                          class="c54"
+                          dir="ltr"
                         >
                           <div
                             class="c55"
-                            dir="ltr"
                           >
                             <div
-                              class="c56"
+                              class="c15"
                             >
                               <div
-                                class="c15"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="c57"
+                                class="lazyload-placeholder"
                               />
                             </div>
-                          </div>
-                          <div
-                            class="c58"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="c59"
-                            >
-                              <a
-                                class="c48"
-                                href="/igbo/23182810"
-                              >
-                                "Alexis Sanchez ga-abanye Manchester united ma ọ buru na....." Wenger
-                              </a>
-                            </h3>
-                            <p
-                              class="c60"
-                            >
-                              Onye nchikwa Arsenal ,Arsene wenger ekwuola na Alexis Sanchez ga-abanye Manchester United ma ọ buru na Henrikh Mkhitaryan bata otu Arsenal
-                            </p>
-                            <time
-                              class="c50"
-                              datetime="2018-01-21"
-                            >
-                              21st January 2018
-                            </time>
+                            <div
+                              class="c56"
+                            />
                           </div>
                         </div>
-                      </li>
-                      <li
+                        <div
+                          class="c57"
+                          dir="ltr"
+                        >
+                          <h3
+                            class="c58"
+                          >
+                            <a
+                              class="c47"
+                              href="/igbo/23182766"
+                            >
+                              Dịka osi ga n'ime asọmpi Premier League
+                            </a>
+                          </h3>
+                          <p
+                            class="c59"
+                          >
+                            Asọmpi Premier league ndị ụbọchị taa akwakọrọla ọnụ, a na wetara gi osi ga. ebe otu egwuregwu ndị ama ama nwetachara mmeri n'asọmpi ha.
+                          </p>
+                          <time
+                            class="c49"
+                            datetime="2018-01-20"
+                          >
+                            20th January 2018
+                          </time>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="c43"
+                      role="listitem"
+                    >
+                      <div
                         class="c44"
-                        role="listitem"
                       >
                         <div
-                          class="c45"
+                          class="c54"
+                          dir="ltr"
                         >
                           <div
                             class="c55"
-                            dir="ltr"
                           >
                             <div
-                              class="c56"
+                              class="c15"
                             >
                               <div
-                                class="c15"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="c57"
+                                class="lazyload-placeholder"
                               />
                             </div>
-                          </div>
-                          <div
-                            class="c58"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="c59"
-                            >
-                              <a
-                                class="c48"
-                                href="/igbo/23182766"
-                              >
-                                Dịka osi ga n'ime asọmpi Premier League
-                              </a>
-                            </h3>
-                            <p
-                              class="c60"
-                            >
-                              Asọmpi Premier league ndị ụbọchị taa akwakọrọla ọnụ, a na wetara gi osi ga. ebe otu egwuregwu ndị ama ama nwetachara mmeri n'asọmpi ha.
-                            </p>
-                            <time
-                              class="c50"
-                              datetime="2018-01-20"
-                            >
-                              20th January 2018
-                            </time>
+                            <div
+                              class="c56"
+                            />
                           </div>
                         </div>
-                      </li>
-                      <li
+                        <div
+                          class="c57"
+                          dir="ltr"
+                        >
+                          <h3
+                            class="c58"
+                          >
+                            <a
+                              class="c47"
+                              href="/igbo/23182760"
+                            >
+                              Djokovic enwela mmeri Agbanyeghị ihe mmerụ ahụ
+                            </a>
+                          </h3>
+                          <p
+                            class="c59"
+                          >
+                            Onye ama ama n'egwuregwu teenisi bụ Novak Djokovic agafela na agba nke anọ n'ihe egwuregwu teenisi nke Australian Open.
+                          </p>
+                          <time
+                            class="c49"
+                            datetime="2018-01-20"
+                          >
+                            20th January 2018
+                          </time>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="c43"
+                      role="listitem"
+                    >
+                      <div
                         class="c44"
-                        role="listitem"
                       >
                         <div
-                          class="c45"
+                          class="c54"
+                          dir="ltr"
                         >
                           <div
                             class="c55"
-                            dir="ltr"
                           >
                             <div
-                              class="c56"
+                              class="c15"
                             >
                               <div
-                                class="c15"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="c57"
+                                class="lazyload-placeholder"
                               />
                             </div>
-                          </div>
-                          <div
-                            class="c58"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="c59"
-                            >
-                              <a
-                                class="c48"
-                                href="/igbo/23182760"
-                              >
-                                Djokovic enwela mmeri Agbanyeghị ihe mmerụ ahụ
-                              </a>
-                            </h3>
-                            <p
-                              class="c60"
-                            >
-                              Onye ama ama n'egwuregwu teenisi bụ Novak Djokovic agafela na agba nke anọ n'ihe egwuregwu teenisi nke Australian Open.
-                            </p>
-                            <time
-                              class="c50"
-                              datetime="2018-01-20"
-                            >
-                              20th January 2018
-                            </time>
+                            <div
+                              class="c56"
+                            />
                           </div>
                         </div>
-                      </li>
-                      <li
+                        <div
+                          class="c57"
+                          dir="ltr"
+                        >
+                          <h3
+                            class="c58"
+                          >
+                            <a
+                              class="c47"
+                              href="/igbo/23182710"
+                            >
+                              CHAN: Naịjirịa na Guinea nọ na ịrụ Group C
+                            </a>
+                          </h3>
+                          <p
+                            class="c59"
+                          >
+                            Naịjirịa meriri Libya 1-0. Guinia meriri Equatorial Guinea 1-0 eji bụkọtara ndị isi na group C na CHAN
+                          </p>
+                          <time
+                            class="c49"
+                            datetime="2018-01-20"
+                          >
+                            20th January 2018
+                          </time>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="c43"
+                      role="listitem"
+                    >
+                      <div
                         class="c44"
-                        role="listitem"
                       >
                         <div
-                          class="c45"
+                          class="c54"
+                          dir="ltr"
                         >
                           <div
                             class="c55"
-                            dir="ltr"
                           >
                             <div
-                              class="c56"
+                              class="c15"
                             >
                               <div
-                                class="c15"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="c57"
+                                class="lazyload-placeholder"
                               />
                             </div>
-                          </div>
-                          <div
-                            class="c58"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="c59"
-                            >
-                              <a
-                                class="c48"
-                                href="/igbo/23182710"
-                              >
-                                CHAN: Naịjirịa na Guinea nọ na ịrụ Group C
-                              </a>
-                            </h3>
-                            <p
-                              class="c60"
-                            >
-                              Naịjirịa meriri Libya 1-0. Guinia meriri Equatorial Guinea 1-0 eji bụkọtara ndị isi na group C na CHAN
-                            </p>
-                            <time
-                              class="c50"
-                              datetime="2018-01-20"
-                            >
-                              20th January 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="c44"
-                        role="listitem"
-                      >
-                        <div
-                          class="c45"
-                        >
-                          <div
-                            class="c55"
-                            dir="ltr"
-                          >
                             <div
                               class="c56"
                             >
                               <div
-                                class="c15"
+                                aria-hidden="true"
+                                class="c60"
+                                dir="ltr"
                               >
                                 <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="c57"
-                              >
-                                <div
-                                  aria-hidden="true"
-                                  class="c61"
-                                  dir="ltr"
+                                  class="c52"
                                 >
-                                  <div
+                                  <svg
+                                    aria-hidden="true"
                                     class="c53"
+                                    focusable="false"
+                                    height="12px"
+                                    viewBox="0 0 13 12"
+                                    width="13px"
                                   >
-                                    <svg
-                                      aria-hidden="true"
-                                      class="c54"
-                                      focusable="false"
-                                      height="12px"
-                                      viewBox="0 0 13 12"
-                                      width="13px"
-                                    >
-                                      <path
-                                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                                      />
-                                      <path
-                                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                                      />
-                                    </svg>
-                                    <time
-                                      class="c62"
-                                      datetime="PT49S"
-                                    >
-                                      0:49
-                                    </time>
-                                  </div>
+                                    <path
+                                      d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                                    />
+                                    <path
+                                      d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                                    />
+                                  </svg>
+                                  <time
+                                    class="c61"
+                                    datetime="PT49S"
+                                  >
+                                    0:49
+                                  </time>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div
+                        </div>
+                        <div
+                          class="c57"
+                          dir="ltr"
+                        >
+                          <h3
                             class="c58"
-                            dir="ltr"
                           >
-                            <h3
-                              class="c59"
+                            <a
+                              class="c47"
+                              href="/igbo/23177465"
                             >
-                              <a
-                                class="c48"
-                                href="/igbo/23177465"
+                              <span
+                                role="text"
                               >
                                 <span
-                                  role="text"
+                                  class="c17"
                                 >
-                                  <span
-                                    class="c18"
-                                  >
-                                    Audio, 
-                                  </span>
-                                  <span>
-                                    A gbabguola Don Wani
-                                  </span>
-                                  <span
-                                    class="c18"
-                                  >
-                                    , 0,49
-                                  </span>
+                                  Audio, 
                                 </span>
-                              </a>
-                            </h3>
-                            <p
-                              class="c60"
-                            >
-                              Azịza ọnụ onye DSP Omoni, Uweoji nke Rivers Steeti
-                            </p>
-                            <time
-                              class="c50"
-                              datetime="2018-01-07"
-                            >
-                              7th January 2018
-                            </time>
-                          </div>
+                                <span>
+                                  A gbabguola Don Wani
+                                </span>
+                                <span
+                                  class="c17"
+                                >
+                                  , 0,49
+                                </span>
+                              </span>
+                            </a>
+                          </h3>
+                          <p
+                            class="c59"
+                          >
+                            Azịza ọnụ onye DSP Omoni, Uweoji nke Rivers Steeti
+                          </p>
+                          <time
+                            class="c49"
+                            datetime="2018-01-07"
+                          >
+                            7th January 2018
+                          </time>
                         </div>
-                      </li>
-                      <li
+                      </div>
+                    </li>
+                    <li
+                      class="c43"
+                      role="listitem"
+                    >
+                      <div
                         class="c44"
-                        role="listitem"
                       >
                         <div
-                          class="c45"
+                          class="c54"
+                          dir="ltr"
                         >
                           <div
                             class="c55"
-                            dir="ltr"
                           >
                             <div
-                              class="c56"
+                              class="c15"
                             >
                               <div
-                                class="c15"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="c57"
+                                class="lazyload-placeholder"
                               />
                             </div>
-                          </div>
-                          <div
-                            class="c58"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="c59"
-                            >
-                              <a
-                                class="c48"
-                                href="/igbo/23173771"
-                              >
-                                O nwere ihe o mere ma Dino Melaye nọrọ n'egwu m?
-                              </a>
-                            </h3>
-                            <p
-                              class="c60"
-                            >
-                              'Kach' Nwa minista Ibe Kachikwu tinyere Sinetọ Dino Melaye n'ime ihe onyonyo egwu ọ gụrụ mana ọnaghị atọ ndi Naijurịa ọchị
-                            </p>
-                            <time
-                              class="c50"
-                              datetime="2017-12-20"
-                            >
-                              20th December 2017
-                            </time>
+                            <div
+                              class="c56"
+                            />
                           </div>
                         </div>
-                      </li>
-                      <li
+                        <div
+                          class="c57"
+                          dir="ltr"
+                        >
+                          <h3
+                            class="c58"
+                          >
+                            <a
+                              class="c47"
+                              href="/igbo/23173771"
+                            >
+                              O nwere ihe o mere ma Dino Melaye nọrọ n'egwu m?
+                            </a>
+                          </h3>
+                          <p
+                            class="c59"
+                          >
+                            'Kach' Nwa minista Ibe Kachikwu tinyere Sinetọ Dino Melaye n'ime ihe onyonyo egwu ọ gụrụ mana ọnaghị atọ ndi Naijurịa ọchị
+                          </p>
+                          <time
+                            class="c49"
+                            datetime="2017-12-20"
+                          >
+                            20th December 2017
+                          </time>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="c43"
+                      role="listitem"
+                    >
+                      <div
                         class="c44"
-                        role="listitem"
                       >
                         <div
-                          class="c45"
+                          class="c54"
+                          dir="ltr"
                         >
                           <div
                             class="c55"
-                            dir="ltr"
                           >
                             <div
-                              class="c56"
+                              class="c15"
                             >
                               <div
-                                class="c15"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="c57"
+                                class="lazyload-placeholder"
                               />
                             </div>
-                          </div>
-                          <div
-                            class="c58"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="c59"
-                            >
-                              <a
-                                class="c48"
-                                href="/igbo/23174391"
-                              >
-                                Ọkụ Festac: Ajọ ọnwụnwa nke keresimesi
-                              </a>
-                            </h3>
-                            <p
-                              class="c60"
-                            >
-                              Ọkụ a tapiala nkwa ahịa karịrị nari nde Naira na Legọs
-                            </p>
-                            <time
-                              class="c50"
-                              datetime="2017-12-21"
-                            >
-                              21st December 2017
-                            </time>
+                            <div
+                              class="c56"
+                            />
                           </div>
                         </div>
-                      </li>
-                    </ul>
-                  </section>
-                </div>
-                <div
-                  class="c63"
-                />
+                        <div
+                          class="c57"
+                          dir="ltr"
+                        >
+                          <h3
+                            class="c58"
+                          >
+                            <a
+                              class="c47"
+                              href="/igbo/23174391"
+                            >
+                              Ọkụ Festac: Ajọ ọnwụnwa nke keresimesi
+                            </a>
+                          </h3>
+                          <p
+                            class="c59"
+                          >
+                            Ọkụ a tapiala nkwa ahịa karịrị nari nde Naira na Legọs
+                          </p>
+                          <time
+                            class="c49"
+                            datetime="2017-12-21"
+                          >
+                            21st December 2017
+                          </time>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </section>
               </div>
+              <div
+                class="c62"
+              />
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</DocumentFragment>
+</div>
 `;
 
 exports[`Story Page snapshots should match snapshot for STY 1`] = `
-.c61 {
+.c60 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -2622,7 +2615,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 0.75rem;
 }
 
-.c63 {
+.c62 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -2631,7 +2624,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 0.75rem;
 }
 
-.c64 {
+.c63 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -2640,7 +2633,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 0.8125rem;
 }
 
-.c38 {
+.c37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2650,7 +2643,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   flex-direction: column;
 }
 
-.c39 {
+.c38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2669,7 +2662,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   align-items: baseline;
 }
 
-.c40 {
+.c39 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2689,23 +2682,23 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   align-items: center;
 }
 
-.c36 {
+.c35 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c34 {
+.c33 {
   position: relative;
   z-index: 0;
   margin-top: 2rem;
 }
 
-.c37 {
+.c36 {
   margin: 0;
   padding: 0;
 }
 
-.c32 {
+.c31 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2716,7 +2709,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding: 1.5rem 0;
 }
 
-.c25 {
+.c24 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -2728,7 +2721,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   grid-column: 1 / span 6;
 }
 
-.c13 {
+.c15 {
   display: grid;
   grid-column-gap: 1rem;
 }
@@ -2749,7 +2742,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   outline: none;
 }
 
-.c23 {
+.c22 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2760,31 +2753,31 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   margin: 0;
 }
 
-.c24 {
+.c23 {
   color: #222222;
   border-bottom: 1px solid #B80000;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c24:visited {
+.c23:visited {
   color: #6E6E73;
   border-bottom: 1px solid #6E6E73;
 }
 
-.c24:focus,
-.c24:hover {
+.c23:focus,
+.c23:hover {
   border-bottom: 2px solid #B80000;
   color: #B80000;
 }
 
-.c12 {
+.c14 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.c18 {
+.c19 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -2796,7 +2789,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   margin: 0;
 }
 
-.c17 {
+.c18 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34,34,34,0.75);
@@ -2810,7 +2803,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   left: 0;
 }
 
-.c20 {
+.c21 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2821,30 +2814,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   width: 100%;
 }
 
-.c20 > p {
+.c21 > p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.c20 > p:last-child {
+.c21 > p:last-child {
   padding-bottom: 0;
 }
 
-.c20 i {
+.c21 i {
   font-style: normal;
 }
 
-.c16 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-  -webkit-animation: eMLfYp 0.2s linear;
-  animation: eMLfYp 0.2s linear;
-  -webkit-transition: visibility 0.2s linear;
-  transition: visibility 0.2s linear;
-}
-
-.c15 {
+.c17 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -2857,7 +2840,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c22 {
+.c12 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -2868,11 +2851,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-bottom: 0.25rem;
 }
 
-.c22:last-child {
+.c12:last-child {
   padding-bottom: 1rem;
 }
 
-.c52 {
+.c51 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -2882,39 +2865,39 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   font-style: normal;
 }
 
-.c30 {
+.c29 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c46 {
+.c45 {
   padding: 0.5rem 0 1rem;
 }
 
-.c46:first-child {
+.c45:first-child {
   padding-top: 0;
 }
 
-.c46:last-child {
+.c45:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c45 {
+.c44 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c53 {
+.c52 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c48 {
+.c47 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -2922,40 +2905,40 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   width: 100%;
 }
 
-.c48 >div {
+.c47 >div {
   vertical-align: middle;
 }
 
-.c48 >div {
+.c47 >div {
   display: inline-block;
   vertical-align: initial;
 }
 
-.c48 svg {
+.c47 svg {
   margin: 0;
 }
 
-.c56 {
+.c55 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c47 {
+.c46 {
   position: relative;
 }
 
-.c54 {
+.c53 {
   position: relative;
 }
 
-.c55 > * {
+.c54 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c49 {
+.c48 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -2967,7 +2950,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   display: inline;
 }
 
-.c57 {
+.c56 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -2978,7 +2961,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   line-height: 1.25rem;
 }
 
-.c51 {
+.c50 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2990,7 +2973,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-top: 0.5rem;
 }
 
-.c58 {
+.c57 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3001,7 +2984,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c50 {
+.c49 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -3009,7 +2992,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   overflow-wrap: break-word;
 }
 
-.c50:before {
+.c49:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -3021,17 +3004,17 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   z-index: 1;
 }
 
-.c50:hover,
-.c50:focus {
+.c49:hover,
+.c49:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c50:visited {
+.c49:visited {
   color: #6E6E73;
 }
 
-.c59 {
+.c58 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3042,7 +3025,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   display: block;
 }
 
-.c60 {
+.c59 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3054,11 +3037,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 100%;
 }
 
-.c62 {
+.c61 {
   padding: 0 0.25rem;
 }
 
-.c27 {
+.c26 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3068,7 +3051,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   list-style-type: none;
 }
 
-.c27 > li::before {
+.c26 > li::before {
   content: ' ';
   display: inline-block;
   width: 2rem;
@@ -3076,27 +3059,27 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   margin-left: -2rem;
 }
 
-.c28 {
+.c27 {
   margin-bottom: 1rem;
 }
 
-.c26 {
+.c25 {
   margin-bottom: 1.5rem;
 }
 
-.c29 {
+.c28 {
   margin-top: 0.5rem;
 }
 
-.c29 figure {
+.c28 figure {
   padding-bottom: 0;
 }
 
-.c33 {
+.c32 {
   margin-bottom: 1rem;
 }
 
-.c35 {
+.c34 {
   margin-top: 0;
 }
 
@@ -3132,7 +3115,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   color: #5A5A5A;
 }
 
-.c21 {
+.c11 {
   padding-bottom: 1rem;
 }
 
@@ -3149,16 +3132,16 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   margin: 0 auto;
 }
 
-.c65 {
+.c64 {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
 
-.c44 {
+.c43 {
   margin-bottom: 1.5rem;
 }
 
-.c31 {
+.c30 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -3169,7 +3152,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c39 {
+  .c38 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -3178,39 +3161,39 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c40 {
+  .c39 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c40 {
+  .c39 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c40 {
+  .c39 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c40 {
+  .c39 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c36 {
+  .c35 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c36 {
+  .c35 {
     position: absolute;
     left: 0;
     right: 0;
@@ -3219,33 +3202,33 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c34 {
+  .c33 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c34 {
+  .c33 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c32 {
+  .c31 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c32 {
+  .c31 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c32 {
+  .c31 {
     padding-top: 2rem;
   }
 }
@@ -3320,79 +3303,79 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c11 {
+  .c13 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c11 {
+  .c13 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c11 {
+  .c13 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c14 {
+  .c16 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c14 {
+  .c16 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c14 {
+  .c16 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c14 {
+  .c16 {
     grid-column: 1 / span 12;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c19 {
+  .c20 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c19 {
+  .c20 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c19 {
+  .c20 {
     grid-column: 1 / span 5;
   }
 }
 
 @media (min-width:80rem) {
-  .c19 {
+  .c20 {
     grid-column: 1 / span 10;
   }
 }
 
 @media (max-width:79.9375rem) {
-  .c13 {
+  .c15 {
     grid-template-columns: repeat(6,1fr);
   }
 }
 
 @media (min-width:80rem) {
-  .c13 {
+  .c15 {
     grid-template-columns: repeat(12,1fr);
   }
 }
@@ -3418,68 +3401,68 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c23 {
+  .c22 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c23 {
+  .c22 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c20 {
+  .c21 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c20 {
+  .c21 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c20 {
+  .c21 {
     padding: 0.5rem 1rem 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c20 {
+  .c21 {
     padding: 0.5rem 0 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
+  .c12 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c12 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c52 {
+  .c51 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c52 {
+  .c51 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -3571,7 +3554,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (max-width:14.9375rem) {
-  .c42 {
+  .c41 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -3579,7 +3562,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c42 {
+  .c41 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -3587,7 +3570,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c42 {
+  .c41 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -3595,7 +3578,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c42 {
+  .c41 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -3603,7 +3586,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c42 {
+  .c41 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -3611,7 +3594,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c42 {
+  .c41 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -3619,57 +3602,57 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (display:grid) {
-  .c42 {
+  .c41 {
     display: block;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c46 {
+  .c45 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c46 {
+  .c45 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c46 {
+  .c45 {
     padding: 0 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c46:first-child {
+  .c45:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c53 {
+  .c52 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c53 {
+  .c52 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c48 {
+  .c47 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c48 {
+  .c47 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -3677,7 +3660,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c48 {
+  .c47 {
     display: block;
     width: initial;
     padding: initial;
@@ -3687,13 +3670,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c56 {
+  .c55 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c56 {
+  .c55 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -3701,7 +3684,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c56 {
+  .c55 {
     display: block;
     width: initial;
     padding: initial;
@@ -3710,7 +3693,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c47 {
+  .c46 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -3718,200 +3701,200 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c55 {
+  .c54 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c55 > * {
+  .c54 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c49 {
+  .c48 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c49 {
+  .c48 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c57 {
+  .c56 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c57 {
+  .c56 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c51 {
+  .c50 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c51 {
+  .c50 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c51 {
+  .c50 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c51 {
+  .c50 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c58 {
+  .c57 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c58 {
+  .c57 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c58 {
+  .c57 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c58 {
+  .c57 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c59 {
+  .c58 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c59 {
+  .c58 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c27 {
+  .c26 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c27 {
+  .c26 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c29 {
+  .c28 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c29 {
+  .c28 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c29 {
+  .c28 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c29 {
+  .c28 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c29 {
+  .c28 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c29 {
+  .c28 {
     margin-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c29 {
+  .c28 {
     padding-top: 0.5rem;
     margin-top: 2rem;
   }
 }
 
 @media (max-width:25rem) {
-  .c33 {
+  .c32 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c33 {
+  .c32 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c33 {
+  .c32 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c41 {
+  .c40 {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c41 {
+  .c40 {
     padding-bottom: 1.5rem;
   }
 }
@@ -3923,7 +3906,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:63rem) {
-  .c21 {
+  .c11 {
     padding-bottom: 1.5rem;
   }
 }
@@ -3941,13 +3924,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:63rem) {
-  .c43 {
+  .c42 {
     margin-top: 2rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c44 {
+  .c43 {
     padding: 1rem;
   }
 }
@@ -4243,33 +4226,40 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </div>
                       <div
-                        class="c11"
+                        class="c5 c11"
+                      >
+                        <time
+                          class="c12"
+                          datetime="2019-10-23"
+                        >
+                          23 October 2019
+                        </time>
+                      </div>
+                      <div
+                        class="c13"
                       >
                         <figure
-                          class="c12"
+                          class="c14"
                         >
                           <div
-                            class="c13"
+                            class="c15"
                           >
                             <div
-                              class="c14"
+                              class="c16"
                             >
                               <div
-                                class="c15"
+                                class="c17"
                               >
-                                <img
-                                  alt="Some people at the NTA awards"
-                                  class="c16"
-                                  src="https://ichef.bbci.co.uk/news/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
-                                  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
-                                  width="976"
+                                <div
+                                  class="lazyload-placeholder"
                                 />
+                                <noscript />
                                 <p
-                                  class="c17"
+                                  class="c18"
                                   role="text"
                                 >
                                   <span
-                                    class="c18"
+                                    class="c19"
                                   >
                                     Wia dis foto come from, 
                                   </span>
@@ -4282,13 +4272,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               </div>
                             </div>
                             <div
-                              class="c19"
+                              class="c20"
                             >
                               <figcaption
-                                class="c20"
+                                class="c21"
                               >
                                 <span
-                                  class="c18"
+                                  class="c19"
                                 >
                                   Wetin we call dis foto, 
                                 </span>
@@ -4301,26 +4291,16 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </figure>
                       </div>
                       <div
-                        class="c5 c21"
-                      >
-                        <time
-                          class="c22"
-                          datetime="2019-10-23"
-                        >
-                          23 October 2019
-                        </time>
-                      </div>
-                      <div
                         class="c5"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           <b>
                              This is introduction text, it should be bold by default, but also support 
                           </b>
                           <a
-                            class="c24"
+                            class="c23"
                             href="https://bbc.com/pidgin/23248703"
                           >
                             inline links
@@ -4334,17 +4314,17 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         class="c5"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           <i
-                            class="c25"
+                            class="c24"
                           >
                             <b>
                               This is a subheadline! that has 
                             </b>
                           </i>
                           <a
-                            class="c24"
+                            class="c23"
                             href="https://bbc.com/pidgin/23248703"
                           >
                             a link
@@ -4355,21 +4335,21 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         class="c5"
                       >
                         <div
-                          class="c26"
+                          class="c25"
                         >
                           <ul
-                            class="c27"
+                            class="c26"
                             dir="ltr"
                             role="list"
                           >
                             <li
-                              class="c28"
+                              class="c27"
                               role="listitem"
                             >
                               This is a unordered list
                             </li>
                             <li
-                              class="c28"
+                              class="c27"
                               role="listitem"
                             >
                               It can have 
@@ -4379,22 +4359,22 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                in it
                             </li>
                             <li
-                              class="c28"
+                              class="c27"
                               role="listitem"
                             >
                               <a
-                                class="c24"
+                                class="c23"
                                 href="https://bbc.com/pidgin/23248703"
                               >
                                 It can also have links
                               </a>
                             </li>
                             <li
-                              class="c28"
+                              class="c27"
                               role="listitem"
                             >
                               <i
-                                class="c25"
+                                class="c24"
                               >
                                 It can even have italic text in it!
                               </i>
@@ -4406,11 +4386,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         class="c5"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           Feta the big cheese macaroni cheese. 
                           <a
-                            class="c24"
+                            class="c23"
                             href="https://bbc.com/pidgin/23248703"
                           >
                             Caerphilly danish fontina
@@ -4423,30 +4403,30 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </p>
                       </div>
                       <div
-                        class="c11"
+                        class="c13"
                       >
                         <figure
-                          class="c12"
+                          class="c14"
                         >
                           <div
-                            class="c13"
+                            class="c15"
                           >
                             <div
-                              class="c14"
+                              class="c16"
                             >
                               <div
-                                class="c15"
+                                class="c17"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                                 <noscript />
                                 <p
-                                  class="c17"
+                                  class="c18"
                                   role="text"
                                 >
                                   <span
-                                    class="c18"
+                                    class="c19"
                                   >
                                     Wia dis foto come from, 
                                   </span>
@@ -4459,7 +4439,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               </div>
                             </div>
                             <div
-                              class="c19"
+                              class="c20"
                             />
                           </div>
                         </figure>
@@ -4468,7 +4448,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         class="c5"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           <b>
                             Start of localised text
@@ -4479,7 +4459,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         class="c5"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.
                         </p>
@@ -4488,7 +4468,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         class="c5"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           <b>
                             End of localised text
@@ -4499,11 +4479,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         class="c5"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           Rubber cheese macaroni 
                           <i
-                            class="c25"
+                            class="c24"
                           >
                             cheese cottage cheese
                           </i>
@@ -4514,21 +4494,21 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         class="c5"
                       >
                         <div
-                          class="c26"
+                          class="c25"
                         >
                           <ul
-                            class="c27"
+                            class="c26"
                             dir="ltr"
                             role="list"
                           >
                             <li
-                              class="c28"
+                              class="c27"
                               role="listitem"
                             >
                               This is a ordered list
                             </li>
                             <li
-                              class="c28"
+                              class="c27"
                               role="listitem"
                             >
                               It can have 
@@ -4538,22 +4518,22 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                in it
                             </li>
                             <li
-                              class="c28"
+                              class="c27"
                               role="listitem"
                             >
                               <a
-                                class="c24"
+                                class="c23"
                                 href="https://bbc.com/pidgin/23248703"
                               >
                                 It can also have links
                               </a>
                             </li>
                             <li
-                              class="c28"
+                              class="c27"
                               role="listitem"
                             >
                               <i
-                                class="c25"
+                                class="c24"
                               >
                                 It can even have italic text in it!
                               </i>
@@ -4565,24 +4545,24 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         class="c5"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
                         </p>
                       </div>
                       <div
-                        class="c29"
+                        class="c28"
                       >
                         <figure
-                          class="c12"
+                          class="c14"
                         >
                           <div
-                            class="c30"
+                            class="c29"
                           >
                             <iframe
                               allow="autoplay; fullscreen"
                               allowfullscreen=""
-                              class="c31"
+                              class="c30"
                               scrolling="no"
                               src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                               title="Media player"
@@ -4595,7 +4575,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         class="c5"
                       >
                         <h2
-                          class="c32"
+                          class="c31"
                           id="This-is-a-heading"
                           tabindex="-1"
                         >
@@ -4606,7 +4586,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         class="c5"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
                         </p>
@@ -4615,7 +4595,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         class="c5"
                       >
                         <h2
-                          class="c32"
+                          class="c31"
                           id="This-is-a-crosshead"
                           tabindex="-1"
                         >
@@ -4626,7 +4606,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         class="c5"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
                         </p>
@@ -4635,11 +4615,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         class="c5"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           <a
                             aria-label="This is an external link to google!, outside"
-                            class="c24"
+                            class="c23"
                             href="https://www.google.com/"
                           >
                             This is an external link to google!
@@ -4650,7 +4630,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         class="c5"
                       >
                         <p
-                          class="c23"
+                          class="c22"
                         >
                           Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
                         </p>
@@ -4658,26 +4638,26 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     </main>
                     <section
                       aria-labelledby="related-content-heading"
-                      class="c33"
+                      class="c32"
                       role="region"
                     >
                       <div
-                        class="c34 c35"
+                        class="c33 c34"
                       >
                         <div
-                          class="c36"
+                          class="c35"
                         />
                         <h2
-                          class="c37"
+                          class="c36"
                         >
                           <span
-                            class="c38"
+                            class="c37"
                           >
                             <span
-                              class="c39"
+                              class="c38"
                             >
                               <span
-                                class="c40"
+                                class="c39"
                                 dir="ltr"
                                 id="related-content-heading"
                               >
@@ -4688,39 +4668,39 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </h2>
                       </div>
                       <div
-                        class="c41"
+                        class="c40"
                       />
                     </section>
                   </div>
                   <div
-                    class="c42 c43"
+                    class="c41 c42"
                     dir="ltr"
                   >
                     <div
-                      class="c44"
+                      class="c43"
                     >
                       <section
                         aria-labelledby="top-stories-heading"
-                        class="c33"
+                        class="c32"
                         role="region"
                       >
                         <div
-                          class="c34 c35"
+                          class="c33 c34"
                         >
                           <div
-                            class="c36"
+                            class="c35"
                           />
                           <h2
-                            class="c37"
+                            class="c36"
                           >
                             <span
-                              class="c38"
+                              class="c37"
                             >
                               <span
-                                class="c39"
+                                class="c38"
                               >
                                 <span
-                                  class="c40"
+                                  class="c39"
                                   dir="ltr"
                                   id="top-stories-heading"
                                 >
@@ -4731,37 +4711,37 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           </h2>
                         </div>
                         <ul
-                          class="c45"
+                          class="c44"
                           role="list"
                         >
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c48"
+                                class="c47"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c49"
+                                  class="c48"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="/pidgin/23248287"
                                   >
                                     ATMs across the country
                                   </a>
                                 </h3>
                                 <p
-                                  class="c51"
+                                  class="c50"
                                 >
                                   Here we have an article about a particular topic
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2019-09-10"
                                 >
                                   10th September 2019
@@ -4770,33 +4750,33 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </li>
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c48"
+                                class="c47"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c49"
+                                  class="c48"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="/pidgin/tori-23146434"
                                   >
                                     Jacob Zuma: Staying!!!
                                   </a>
                                 </h3>
                                 <p
-                                  class="c51"
+                                  class="c50"
                                 >
                                   Lawmakers for South Africa Parliament don vote make President Jacob Zuma continue dey run things for government.
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2017-08-08"
                                 >
                                   8th August 2017
@@ -4805,33 +4785,33 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </li>
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c48"
+                                class="c47"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c49"
+                                  class="c48"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="https://www.bbc.co.uk/news"
                                   >
                                     Feature promo
                                   </a>
                                 </h3>
                                 <p
-                                  class="c51"
+                                  class="c50"
                                 >
                                   Feature promo summary
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2019-12-06"
                                 >
                                   6th December 2019
@@ -4843,30 +4823,30 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </section>
                     </div>
                     <div
-                      class="c44"
+                      class="c43"
                     >
                       <section
                         aria-labelledby="features-analysis-heading"
-                        class="c33"
+                        class="c32"
                         role="region"
                       >
                         <div
-                          class="c34 c35"
+                          class="c33 c34"
                         >
                           <div
-                            class="c36"
+                            class="c35"
                           />
                           <h2
-                            class="c37"
+                            class="c36"
                           >
                             <span
-                              class="c38"
+                              class="c37"
                             >
                               <span
-                                class="c39"
+                                class="c38"
                               >
                                 <span
-                                  class="c40"
+                                  class="c39"
                                   dir="ltr"
                                   id="features-analysis-heading"
                                 >
@@ -4877,56 +4857,56 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           </h2>
                         </div>
                         <ul
-                          class="c45"
+                          class="c44"
                           role="list"
                         >
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c53"
+                                class="c52"
                                 dir="ltr"
                               >
                                 <div
-                                  class="c54"
+                                  class="c53"
                                 >
                                   <div
-                                    class="c15"
+                                    class="c17"
                                   >
                                     <div
                                       class="lazyload-placeholder"
                                     />
                                   </div>
                                   <div
-                                    class="c55"
+                                    class="c54"
                                   />
                                 </div>
                               </div>
                               <div
-                                class="c56"
+                                class="c55"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c57"
+                                  class="c56"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="/pidgin/tori-23146625"
                                   >
                                     How Lagos Dey Fight Lassa Fever
                                   </a>
                                 </h3>
                                 <p
-                                  class="c58"
+                                  class="c57"
                                 >
                                   100 workers for LUTH dey under observation after two people die from Lassa Fever.
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2017-08-09"
                                 >
                                   9th August 2017
@@ -4935,40 +4915,40 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </li>
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c53"
+                                class="c52"
                                 dir="ltr"
                               >
                                 <div
-                                  class="c54"
+                                  class="c53"
                                 >
                                   <div
-                                    class="c15"
+                                    class="c17"
                                   >
                                     <div
                                       class="lazyload-placeholder"
                                     />
                                   </div>
                                   <div
-                                    class="c55"
+                                    class="c54"
                                   >
                                     <div
                                       aria-hidden="true"
-                                      class="c59"
+                                      class="c58"
                                       dir="ltr"
                                     >
                                       <div
-                                        class="c60"
+                                        class="c59"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="c61"
+                                          class="c60"
                                           focusable="false"
                                           height="12px"
                                           viewBox="0 0 32 32"
@@ -4979,7 +4959,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                           />
                                         </svg>
                                         <time
-                                          class="c62"
+                                          class="c61"
                                           datetime="PT1M7S"
                                         >
                                           1:07
@@ -4990,21 +4970,21 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="c56"
+                                class="c55"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c57"
+                                  class="c56"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="/pidgin/media-23267821"
                                   >
                                     <span
                                       role="text"
                                     >
                                       <span
-                                        class="c18"
+                                        class="c19"
                                       >
                                         Video
                                         , 
@@ -5013,7 +4993,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                         Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson
                                       </span>
                                       <span
-                                        class="c18"
+                                        class="c19"
                                       >
                                         , 1,07
                                       </span>
@@ -5021,12 +5001,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   </a>
                                 </h3>
                                 <p
-                                  class="c58"
+                                  class="c57"
                                 >
                                   Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2020-02-17"
                                 >
                                   17th February 2020
@@ -5035,40 +5015,40 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </li>
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c53"
+                                class="c52"
                                 dir="ltr"
                               >
                                 <div
-                                  class="c54"
+                                  class="c53"
                                 >
                                   <div
-                                    class="c15"
+                                    class="c17"
                                   >
                                     <div
                                       class="lazyload-placeholder"
                                     />
                                   </div>
                                   <div
-                                    class="c55"
+                                    class="c54"
                                   >
                                     <div
                                       aria-hidden="true"
-                                      class="c59"
+                                      class="c58"
                                       dir="ltr"
                                     >
                                       <div
-                                        class="c60"
+                                        class="c59"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="c63"
+                                          class="c62"
                                           focusable="false"
                                           height="12px"
                                           viewBox="0 0 13 12"
@@ -5087,21 +5067,21 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="c56"
+                                class="c55"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c57"
+                                  class="c56"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="/pidgin/23267823"
                                   >
                                     <span
                                       role="text"
                                     >
                                       <span
-                                        class="c18"
+                                        class="c19"
                                       >
                                         Audio
                                         , 
@@ -5113,12 +5093,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   </a>
                                 </h3>
                                 <p
-                                  class="c58"
+                                  class="c57"
                                 >
                                   Kojey Radical and guests discuss how to write about something you’ve not experienced.
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2020-02-17"
                                 >
                                   17th February 2020
@@ -5127,52 +5107,52 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </li>
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c53"
+                                class="c52"
                                 dir="ltr"
                               >
                                 <div
-                                  class="c54"
+                                  class="c53"
                                 >
                                   <div
-                                    class="c15"
+                                    class="c17"
                                   >
                                     <div
                                       class="lazyload-placeholder"
                                     />
                                   </div>
                                   <div
-                                    class="c55"
+                                    class="c54"
                                   />
                                 </div>
                               </div>
                               <div
-                                class="c56"
+                                class="c55"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c57"
+                                  class="c56"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="/pidgin/tori-23169387"
                                   >
                                     Libya: omo ile Ghana márùndínláàdóje pada sile
                                   </a>
                                 </h3>
                                 <p
-                                  class="c58"
+                                  class="c57"
                                 >
                                   Omo Orileede Ghana to le ni márùndínláàdóje ti pada sile lati Libya ti won ti lo se atipo, leyin ti fonran fihan wipe won n ta won bi eru.
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2017-12-05"
                                 >
                                   5th December 2017
@@ -5181,52 +5161,52 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </li>
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c53"
+                                class="c52"
                                 dir="ltr"
                               >
                                 <div
-                                  class="c54"
+                                  class="c53"
                                 >
                                   <div
-                                    class="c15"
+                                    class="c17"
                                   >
                                     <div
                                       class="lazyload-placeholder"
                                     />
                                   </div>
                                   <div
-                                    class="c55"
+                                    class="c54"
                                   />
                                 </div>
                               </div>
                               <div
-                                class="c56"
+                                class="c55"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c57"
+                                  class="c56"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="/news/world-africa-23143884"
                                   >
                                     Like Scaramucci, Like Others
                                   </a>
                                 </h3>
                                 <p
-                                  class="c58"
+                                  class="c57"
                                 >
                                   President Trump sack Anthony Scaramucci after ten days for office, but wetin happen to Scaramucci don happen to other people before.
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2017-08-08"
                                 >
                                   8th August 2017
@@ -5235,52 +5215,52 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </li>
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c53"
+                                class="c52"
                                 dir="ltr"
                               >
                                 <div
-                                  class="c54"
+                                  class="c53"
                                 >
                                   <div
-                                    class="c15"
+                                    class="c17"
                                   >
                                     <div
                                       class="lazyload-placeholder"
                                     />
                                   </div>
                                   <div
-                                    class="c55"
+                                    class="c54"
                                   />
                                 </div>
                               </div>
                               <div
-                                class="c56"
+                                class="c55"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c57"
+                                  class="c56"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="/pidgin/tori-23146975"
                                   >
                                     Anambra Attack: 'My Friend Uchenna na Nice Girl'- Gabros
                                   </a>
                                 </h3>
                                 <p
-                                  class="c58"
+                                  class="c57"
                                 >
                                   Chukwuka Gabros tell BBC about Im friend wey die for the church attack for Ozubulu, Anambra State.
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2017-08-09"
                                 >
                                   9th August 2017
@@ -5289,52 +5269,52 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </li>
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c53"
+                                class="c52"
                                 dir="ltr"
                               >
                                 <div
-                                  class="c54"
+                                  class="c53"
                                 >
                                   <div
-                                    class="c15"
+                                    class="c17"
                                   >
                                     <div
                                       class="lazyload-placeholder"
                                     />
                                   </div>
                                   <div
-                                    class="c55"
+                                    class="c54"
                                   />
                                 </div>
                               </div>
                               <div
-                                class="c56"
+                                class="c55"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c57"
+                                  class="c56"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="https://www.bbc.com/pidgin/sport-51434980"
                                   >
                                     Man City vs West Ham: Bad weather force Premier League to cancel Sunday match
                                   </a>
                                 </h3>
                                 <p
-                                  class="c58"
+                                  class="c57"
                                 >
                                   Man City vs West Ham: Bad weather force Premier League to cancel Sunday match
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2020-02-17"
                                 >
                                   17th February 2020
@@ -5343,52 +5323,52 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </li>
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c53"
+                                class="c52"
                                 dir="ltr"
                               >
                                 <div
-                                  class="c54"
+                                  class="c53"
                                 >
                                   <div
-                                    class="c15"
+                                    class="c17"
                                   >
                                     <div
                                       class="lazyload-placeholder"
                                     />
                                   </div>
                                   <div
-                                    class="c55"
+                                    class="c54"
                                   />
                                 </div>
                               </div>
                               <div
-                                class="c56"
+                                class="c55"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c57"
+                                  class="c56"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="/pidgin/tori-23145776"
                                   >
                                     Anambra Church: Police Arrest 3
                                   </a>
                                 </h3>
                                 <p
-                                  class="c58"
+                                  class="c57"
                                 >
                                   Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2017-08-08"
                                 >
                                   8th August 2017
@@ -5397,40 +5377,40 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </li>
                           <li
-                            class="c46"
+                            class="c45"
                             role="listitem"
                           >
                             <div
-                              class="c47"
+                              class="c46"
                             >
                               <div
-                                class="c53"
+                                class="c52"
                                 dir="ltr"
                               >
                                 <div
-                                  class="c54"
+                                  class="c53"
                                 >
                                   <div
-                                    class="c15"
+                                    class="c17"
                                   >
                                     <div
                                       class="lazyload-placeholder"
                                     />
                                   </div>
                                   <div
-                                    class="c55"
+                                    class="c54"
                                   >
                                     <div
                                       aria-hidden="true"
-                                      class="c59"
+                                      class="c58"
                                       dir="ltr"
                                     >
                                       <div
-                                        class="c60"
+                                        class="c59"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="c64"
+                                          class="c63"
                                           focusable="false"
                                           height="13px"
                                           viewBox="0 0 32 26"
@@ -5451,21 +5431,21 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="c56"
+                                class="c55"
                                 dir="ltr"
                               >
                                 <h3
-                                  class="c57"
+                                  class="c56"
                                 >
                                   <a
-                                    class="c50"
+                                    class="c49"
                                     href="/pidgin/23146654"
                                   >
                                     <span
                                       role="text"
                                     >
                                       <span
-                                        class="c18"
+                                        class="c19"
                                       >
                                         Image gallery
                                         , 
@@ -5477,12 +5457,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   </a>
                                 </h3>
                                 <p
-                                  class="c58"
+                                  class="c57"
                                 >
                                   This na some of the picture wey our eye see as Kenya people go vote for election today
                                 </p>
                                 <time
-                                  class="c52"
+                                  class="c51"
                                   datetime="2017-08-08"
                                 >
                                   8th August 2017
@@ -5494,7 +5474,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </section>
                     </div>
                     <div
-                      class="c65"
+                      class="c64"
                     />
                   </div>
                 </div>

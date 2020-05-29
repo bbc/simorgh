@@ -4,6 +4,7 @@ import { StaticRouter } from 'react-router-dom';
 
 // test helpers
 import { render } from '@testing-library/react';
+import { render as enzymeRender } from 'enzyme';
 import assocPath from 'ramda/src/assocPath';
 import '@testing-library/jest-dom/extend-expect';
 import fetchMock from 'fetch-mock';
@@ -166,11 +167,12 @@ describe('Story Page', () => {
       pageData,
     );
 
-    const { asFragment } = render(
+    // Render using enzyme to capture noscript contents
+    const container = enzymeRender(
       createAssetPage({ pageData: pageDataWithHiddenTimestamp }, 'pidgin'),
     );
 
     expect(document.querySelector('main time')).toBeNull();
-    expect(asFragment()).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });
