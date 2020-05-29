@@ -1,4 +1,4 @@
-import { buildRadioATIParams, buildRadioATIUrl } from './buildParams';
+import { buildTvRadioATIParams, buildTvRadioATIUrl } from './buildParams';
 import * as analyticsUtils from '#lib/analyticsUtils';
 
 analyticsUtils.getAtUserId = jest.fn();
@@ -16,6 +16,14 @@ const liveRadio = {
 };
 
 const onDemandRadio = {
+  id: 'id',
+  language: 'language',
+  pageIdentifier: 'pageIdentifier',
+  pageTitle: 'pageTitle',
+  contentType: 'player-episode',
+};
+
+const onDemandTv = {
   id: 'id',
   language: 'language',
   pageIdentifier: 'pageIdentifier',
@@ -51,7 +59,7 @@ const validLiveRadioURLParams = {
   service: 'service',
 };
 
-const validOnDemandURLParams = {
+const validOnDemandRadioURLParams = {
   appName: serviceContext.atiAnalyticsAppName,
   contentId: 'urn:bbc:pips:id',
   contentType: 'player-episode',
@@ -65,9 +73,23 @@ const validOnDemandURLParams = {
   service: 'service',
 };
 
-describe('buildRadioATIParams', () => {
+const validOnDemandTvURLParams = {
+  appName: serviceContext.atiAnalyticsAppName,
+  contentId: 'urn:bbc:pips:id',
+  contentType: 'player-episode',
+  language: 'language',
+  pageIdentifier: 'pageIdentifier',
+  pageTitle: 'pageTitle',
+  producerId: serviceContext.atiAnalyticsProducerId,
+  statsDestination: requestContext.statsDestination,
+  libraryVersion: analyticsUtils.LIBRARY_VERSION,
+  platform: requestContext.platform,
+  service: 'service',
+};
+
+describe('buildTvRadioATIParams', () => {
   it('should return the correct object for live radio', () => {
-    const result = buildRadioATIParams(
+    const result = buildTvRadioATIParams(
       liveRadio,
       requestContext,
       serviceContext,
@@ -76,18 +98,31 @@ describe('buildRadioATIParams', () => {
   });
 
   it('should return the correct object for onDemand radio', () => {
-    const result = buildRadioATIParams(
+    const result = buildTvRadioATIParams(
       onDemandRadio,
       requestContext,
       serviceContext,
     );
-    expect(result).toEqual(validOnDemandURLParams);
+    expect(result).toEqual(validOnDemandRadioURLParams);
+  });
+
+  it('should return the correct object for onDemand TV', () => {
+    const result = buildTvRadioATIParams(
+      onDemandTv,
+      requestContext,
+      serviceContext,
+    );
+    expect(result).toEqual(validOnDemandTvURLParams);
   });
 });
 
-describe('buildRadioATIUrl', () => {
+describe('buildTvRadioATIUrl', () => {
   it('should return the correct url for live radio', () => {
-    const result = buildRadioATIUrl(liveRadio, requestContext, serviceContext);
+    const result = buildTvRadioATIUrl(
+      liveRadio,
+      requestContext,
+      serviceContext,
+    );
     expect(result).toEqual(
       [
         's=598285',
@@ -110,7 +145,7 @@ describe('buildRadioATIUrl', () => {
   });
 
   it('should return the correct url for onDemand radio', () => {
-    const result = buildRadioATIUrl(
+    const result = buildTvRadioATIUrl(
       onDemandRadio,
       requestContext,
       serviceContext,
@@ -129,6 +164,33 @@ describe('buildRadioATIUrl', () => {
         'x3=[atiAnalyticsAppName]',
         'x4=[language]',
         'x5=[http%253A%252F%252Flocalhost%252F]',
+        'x7=[player-episode]',
+        'x8=[simorgh]',
+        'x9=[pageTitle]',
+      ].join('&'),
+    );
+  });
+
+  it('should return the correct url for onDemand TV', () => {
+    const result = buildTvRadioATIUrl(
+      onDemandTv,
+      requestContext,
+      serviceContext,
+    );
+    expect(result).toEqual(
+      [
+        's=598285',
+        's2=atiAnalyticsProducerId',
+        'p=pageIdentifier',
+        'r=0x0x24x24',
+        're=1024x768',
+        'hl=00-00-00',
+        'lng=en-US',
+        'x1=[urn:bbc:pips:id]',
+        'x2=[responsive]',
+        'x3=[atiAnalyticsAppName]',
+        'x4=[language]',
+        'x5=[http%3A%2F%2Flocalhost%2F]',
         'x7=[player-episode]',
         'x8=[simorgh]',
         'x9=[pageTitle]',

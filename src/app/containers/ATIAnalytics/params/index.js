@@ -6,7 +6,10 @@ import {
   buildFrontPageATIParams,
   buildFrontPageATIUrl,
 } from './frontpage/buildParams';
-import { buildRadioATIParams, buildRadioATIUrl } from './radioPage/buildParams';
+import {
+  buildTvRadioATIParams,
+  buildTvRadioATIUrl,
+} from './tvRadioPage/buildParams';
 import {
   buildCpsAssetPageATIParams,
   buildCpsAssetPageATIUrl,
@@ -22,7 +25,7 @@ const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
 const pageTypeUrlBuilders = {
   article: buildArticleATIUrl,
   frontPage: buildFrontPageATIUrl,
-  media: buildRadioATIUrl,
+  media: buildTvRadioATIUrl,
   mostRead: buildMostReadATIUrl,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIUrl(
@@ -43,7 +46,7 @@ const pageTypeUrlBuilders = {
 const pageTypeParamBuilders = {
   article: buildArticleATIParams,
   frontPage: buildFrontPageATIParams,
-  media: buildRadioATIParams,
+  media: buildTvRadioATIParams,
   mostRead: buildMostReadATIParams,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIParams(
