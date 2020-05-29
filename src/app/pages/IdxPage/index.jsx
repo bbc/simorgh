@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import path from 'ramda/src/path';
-import StyledPageDiv from '#lib/pageStyles';
+import StyledPageDiv from '#lib/pageStyles/styledPageDiv';
 import FrontPageSection from '#containers/FrontPageSection';
 import idxPageDataPropTypes from './idxPageDataPropTypes';
 

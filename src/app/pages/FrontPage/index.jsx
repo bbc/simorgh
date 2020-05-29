@@ -19,7 +19,7 @@ import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstra
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import StyledPageDiv from '#lib/pageStyles';
+import StyledPageDiv from '#lib/pageStyles/styledPageDiv';
 
 const MostReadSection = styled.section.attrs(() => ({
   role: 'region',
