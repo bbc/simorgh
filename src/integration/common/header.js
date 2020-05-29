@@ -21,6 +21,8 @@ export default () => {
       );
 
       expect(navigationItemEls).toBeInTheDocument();
+      expect(navigationItemEls.getAttribute('href')).toBeTruthy();
+      // expect(navigationItemEls.getAttribute('text')).toBeTruthy();
     });
 
     it('I can see a skip to content link', () => {
