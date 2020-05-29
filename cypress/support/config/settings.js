@@ -1331,7 +1331,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['gahuza/amakuru-52821373'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/gahuza/23307435'],
@@ -5696,8 +5696,8 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: ['ukchina/simp/52836902'],
-            enabled: false,
+            paths: ['/ukchina/simp/52836902'],
+            enabled: true,
           },
           test: {
             paths: ['/ukchina/simp/23307454'],
@@ -5832,7 +5832,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['ukchina/trad/52836902'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/ukchina/trad/23307454'],
