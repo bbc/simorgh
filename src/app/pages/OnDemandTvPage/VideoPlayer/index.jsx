@@ -33,7 +33,7 @@ const VideoPlayer = ({ assetId, masterBrand, imageUrl }) => {
   const location = useLocation();
   const isValidPlatform = ['amp', 'canonical'].includes(platform);
   const mediaInfo = {
-    title: 'On-demand tv',
+    title: 'On-demand TV',
     type: 'video',
   };
   const noJsMessage = pathOr(
