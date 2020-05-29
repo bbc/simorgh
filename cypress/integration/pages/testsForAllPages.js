@@ -3,7 +3,6 @@ import envConfig from '../../support/config/envs';
 import appConfig from '../../../src/server/utilities/serviceConfigs';
 import describeForEuOnly from '../../support/helpers/describeForEuOnly';
 import getBrandedImage from '../../support/helpers/getBrandedImage';
-import useAppToggles from '../../support/helpers/useAppToggles';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -323,84 +322,30 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
     });
 
     describe('Header Tests', () => {
-      const hasLocalisedName =
-        appConfig[config[service].name][variant].serviceLocalizedName !==
-        undefined;
+      const serviceName = config[service].name;
+      // limit number of tests to 2 services for navigation toggling
+      const testMobileNav =
+        serviceName === 'ukchina' || serviceName === 'persian';
 
-      if (hasLocalisedName) {
-        it("should have offscreen text with product's language code set to English", () => {
-          cy.get(
-            'header div[class^="Banner"] span[class^="VisuallyHiddenText"] span',
-          ).should('have.attr', 'lang', 'en-GB');
+      if (testMobileNav) {
+        it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
+          cy.viewport(320, 480);
+          cy.get('nav')
+            .find('div[class^="StyledScrollableNav"]')
+            .should('be.visible');
+
+          cy.get('nav')
+            .find('ul[class^="DropdownUl"]')
+            .should('not.be.visible');
+
+          cy.get('nav button').click();
+
+          cy.get('nav')
+            .find('div[class^="StyledScrollableNav"]')
+            .should('not.be.visible');
+
+          cy.get('nav').find('ul[class^="DropdownUl"]').should('be.visible');
         });
-
-        it('should not set the language code for localised name', () => {
-          cy.get(
-            'header div[class^="Banner"] span[class^="VisuallyHiddenText"]',
-          )
-            .eq(0)
-            .should('not.have.attr', 'lang', 'en-GB');
-        });
-      } else {
-        it('should not have a language attribute if no serviceLocalizedName set', () => {
-          cy.get(
-            'header div[class^="Banner"] span[class^="VisuallyHiddenText"]',
-          ).should('not.have.attr', 'lang', 'en-GB');
-        });
-      }
-
-      if (appConfig[config[service].name][variant].navigation) {
-        if (
-          pageType !== 'articles' ||
-          (pageType === 'articles' && useAppToggles.navOnArticles.enabled)
-        ) {
-          it('should have one visible navigation', () => {
-            cy.get('nav')
-              .should('have.lengthOf', 1)
-              .should('be.visible')
-              .find('a[class^="StyledLink"]')
-              .should(
-                'have.attr',
-                'href',
-                appConfig[config[service].name][variant].navigation[0].url,
-              )
-              .should(
-                'contain',
-                appConfig[config[service].name][variant].navigation[0].title,
-              );
-            cy.get('h1')
-              .should('have.lengthOf', 1)
-              .should('have.attr', 'id', 'content');
-          });
-
-          const serviceName = config[service].name;
-          // limit number of tests to 2 services for navigation toggling
-          const testMobileNav =
-            serviceName === 'ukchina' || serviceName === 'persian';
-
-          if (testMobileNav) {
-            it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
-              cy.viewport(320, 480);
-              cy.get('nav')
-                .find('div[class^="StyledScrollableNav"]')
-                .should('be.visible');
-
-              cy.get('nav')
-                .find('ul[class^="DropdownUl"]')
-                .should('not.be.visible');
-
-              cy.get('nav button').click();
-
-              cy.get('nav')
-                .find('div[class^="StyledScrollableNav"]')
-                .should('not.be.visible');
-
-              cy.get('nav')
-                .find('ul[class^="DropdownUl"]')
-                .should('be.visible');
-            });
-          }
-        }
       }
     });
 
