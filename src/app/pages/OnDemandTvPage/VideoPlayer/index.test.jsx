@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  shouldMatchSnapshot,
-  suppressPropWarnings,
-} from '@bbc/psammead-test-helpers';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { BrowserRouter } from 'react-router-dom';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
@@ -41,8 +38,6 @@ describe('VideoPlayer', () => {
       requestContextValue: { platform: 'canonical', isAmp: false, origin },
     }),
   );
-
-  suppressPropWarnings(['placeholderSrc', 'undefined']);
 
   shouldMatchSnapshot(
     'should render correctly for amp',
