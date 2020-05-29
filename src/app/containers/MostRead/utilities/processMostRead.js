@@ -1,20 +1,18 @@
 import pathOr from 'ramda/src/pathOr';
 import nodeLogger from '#lib/logger.node';
 import { mostReadRecordIsFresh } from '.';
-import { MOST_READ_DATA_INCOMPLETE } from '#lib/logger.const';
+import {
+  MOST_READ_DATA_INCOMPLETE,
+  MOST_READ_STALE_DATA,
+} from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
-
-const logMissingDataFields = ({ error }) => {
-  logger.warn(MOST_READ_DATA_INCOMPLETE, {
-    error,
-  });
-};
 
 const getOptimoItemData = record => {
   const optimoHeadline = pathOr(
     null,
     [
+      'promo',
       'headlines',
       'promoHeadline',
       'blocks',
@@ -27,8 +25,12 @@ const getOptimoItemData = record => {
     ],
     record,
   );
-  const optimoLocator = pathOr(null, ['locators', 'canonicalUrl'], record);
-  const optimoTimestamp = pathOr(null, ['timestamp'], record);
+  const optimoLocator = pathOr(
+    null,
+    ['promo', 'locators', 'canonicalUrl'],
+    record,
+  );
+  const optimoTimestamp = pathOr(null, ['promo', 'timestamp'], record);
   return {
     id: record.id,
     title: optimoHeadline,
@@ -70,7 +72,7 @@ const mostReadItems = ({ data, numberOfItems }) => {
     // eslint-disable-next-line no-restricted-syntax
     for (const record of records) {
       const mostReadItemData =
-        record.type === 'optimo'
+        record.promo.type === 'optimo'
           ? getOptimoItemData(record)
           : getCpsItemData(record);
       const { href, title } = mostReadItemData;
@@ -78,8 +80,8 @@ const mostReadItems = ({ data, numberOfItems }) => {
       if (href && title) {
         items.push(mostReadItemData);
       } else {
-        logMissingDataFields({
-          error: 'Most read item is missing title or link data fields',
+        logger.warn(MOST_READ_DATA_INCOMPLETE, {
+          message: `Most read data promo has href: ${href} and title: ${title}`,
         });
       }
 
@@ -89,6 +91,9 @@ const mostReadItems = ({ data, numberOfItems }) => {
     }
     return items;
   }
+  logger.warn(MOST_READ_STALE_DATA, {
+    message: `Most read lastUpdatedTimestamp - ${data.lastRecordTimeStamp} value is greater than 35min`,
+  });
   return null;
 };
 

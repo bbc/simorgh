@@ -5,8 +5,6 @@ import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
 import ServiceWorkerContainer from '../containers/ServiceWorker';
-import MPulseBeacon from '../containers/MPulseBeacon';
-import WebVitals from '../containers/WebVitals';
 import { ServiceContext } from '../contexts/ServiceContext';
 import useWebVitals from '#hooks/useWebVitals';
 
@@ -21,8 +19,6 @@ const PageWrapper = ({ children }) => {
       <GlobalStyles fonts={fonts} />
       <ServiceWorkerContainer />
       <ManifestContainer />
-      <MPulseBeacon />
-      {/* <WebVitals /> */}
       <HeaderContainer />
       {children}
       <FooterContainer />

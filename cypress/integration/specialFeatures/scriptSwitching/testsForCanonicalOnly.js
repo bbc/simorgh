@@ -25,7 +25,7 @@ export default ({
       visitPage(path, pageType);
     });
 
-    it(`should change to the correct script when switching script between ${variant} and ${otherVariant}`, () => {
+    it(`should change to the correct script when switching script from ${variant} to ${otherVariant}`, () => {
       // Accept privacy banner
       getPrivacyBannerAccept(serviceId, variant).click();
 
@@ -33,7 +33,7 @@ export default ({
       getCookieBannerAccept(serviceId, variant).click();
 
       cy.log(
-        `Asserting script switch button, url and document lang against variant: ${variant}`,
+        `Asserting script switch button, url and document lang for variant: ${variant}`,
       );
       allVariantAssertions(serviceName, variant);
 
@@ -41,7 +41,7 @@ export default ({
       clickScriptSwitcher(otherVariant);
 
       cy.log(
-        `Asserting script switch button, url and document lang against other variant: ${otherVariant}`,
+        `Asserting script switch button, url and document lang for other variant: ${otherVariant}`,
       );
       allVariantAssertions(serviceName, otherVariant);
 

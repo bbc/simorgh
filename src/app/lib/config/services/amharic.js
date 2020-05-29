@@ -13,6 +13,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'ማስታወቂያ',
     },
     lang: `am`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -168,7 +169,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'እንዳያመልጥዎ',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'ከየፈርጁ',
     },
     brandSVG,
     mostRead: {

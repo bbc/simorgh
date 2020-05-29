@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'โฆษณา',
     },
     lang: `th`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
@@ -24,12 +25,12 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/thai.png',
     defaultImageAltText: 'BBC News ไทย',
     dir: `ltr`,
-    externalLinkText: ' ลิงก์จากภายนอก',
-    imageCaptionOffscreenText: 'คำบรรยายภาพ ',
-    videoCaptionOffscreenText: 'คำบรรยายวิดีโอ ',
-    audioCaptionOffscreenText: 'คำบรรยายเสียง ',
-    defaultCaptionOffscreenText: 'คำบรรยาย ',
-    imageCopyrightOffscreenText: 'ที่มาของภาพ ',
+    externalLinkText: ', ลิงก์จากภายนอก',
+    imageCaptionOffscreenText: 'คำบรรยายภาพ, ',
+    videoCaptionOffscreenText: 'คำบรรยายวิดีโอ, ',
+    audioCaptionOffscreenText: 'คำบรรยายเสียง, ',
+    defaultCaptionOffscreenText: 'คำบรรยาย, ',
+    imageCopyrightOffscreenText: 'ที่มาของภาพ, ',
     locale: `th-TH`,
     datetimeLocale: 'th',
     service: 'thai',
@@ -54,7 +55,7 @@ export const service = {
       home: 'หน้าแรก',
       currentPage: 'หน้าปัจจุบัน',
       skipLinkText: 'ข้ามไปยังเนื้อหา',
-      relatedContent: 'อ่านข่าวนี้เพิ่มเติม',
+      relatedContent: 'อ่านเรื่องที่เกี่ยวข้อง',
       navMenuText: 'หมวดข่าว',
       mediaAssetPage: {
         mediaPlayer: 'มีเดีย เพลเยอร์',
@@ -73,7 +74,7 @@ export const service = {
             'ค้นหาหน้านี้โดยใช้แถบค้นหาของ บีบีซี',
           ],
           callToActionFirst: 'กรุณาเข้าไปที่โฮมเพจของ ',
-          callToActionLinkText: 'บีบีซีไทย',
+          callToActionLinkText: 'BBC News ไทย',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/thai',
         },
@@ -142,28 +143,29 @@ export const service = {
         },
       },
       media: {
-        noJs: 'อุปกรณ์ของท่านไม่สามารถใช้งานเครื่องเล่นสื่อได้',
-        contentExpired: 'เนื้อหานี้ไม่สามารถใช้งานได้แล้ว',
+        noJs:
+          'โปรดเปิดการใช้งาน JavaScript หรือบราวเซอร์ต่างออกไป เพื่ดูเนื้อหานี้',
+        contentExpired: 'เนื้อหานี้ไม่เป็นที่ปรากฏแล้ว',
         audio: 'เสียง',
         photogallery: 'แกลเลอรีภาพ',
         video: 'วิดีโอ',
         listen: 'ฟัง',
         watch: 'ดูู',
         liveLabel: 'สด',
-        nextLabel: 'NEXT',
+        nextLabel: 'ถัดไป',
         previousRadioShow: 'รายการวิทยุก่อนหน้า',
         nextRadioShow: 'รายการวิทยุถัดไป',
         duration: 'ความยาว',
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'คำบรรยายวิดีโอ ',
+          textPrefixVisuallyHidden: 'คำบรรยายวิดีโอ, ',
           text: 'คำเตือน:เนื้อหาภายนอกอาจมีโฆษณา',
         },
         fallback: {
           text: 'ไม่มีเนื้อหานี้',
           linkText: 'ดูเพิ่มเติมที่ %provider_name%',
-          linkTextSuffixVisuallyHidden: ' ลิงก์จากภายนอก',
+          linkTextSuffixVisuallyHidden: ', ลิงก์จากภายนอก',
           warningText:
             'บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก. นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก.',
         },
@@ -221,16 +223,16 @@ export const service = {
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/thai/institutional-49281839',
-        text: 'ทำไมคุณจึงไว้วางใจ บีบีซี นิวส์ ได้',
+        text: 'ทำไมคุณจึงไว้วางใจ บีบีซี ได้',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก.',
+        text: 'อ่านเกี่ยวกับแนวทางของเราในการติดต่อกับลิงก์ภายนอก',
       },
       links: [
         {
           href: 'https://www.bbc.com/thai/institutional-38403477',
-          text: 'เงื่อนไขการใช้งานของ BBC',
+          text: 'เงื่อนไขการใช้งานของ บีบีซี',
         },
         {
           href: 'https://www.bbc.com/thai/institutional-38403476',
@@ -242,7 +244,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'Cookies',
+          text: 'คุกกีส์',
         },
         {
           href: 'https://www.bbc.com/thai/institutional-37981748',
@@ -256,7 +258,7 @@ export const service = {
         },
       ],
       copyrightText:
-        'บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก.',
+        'บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก. นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก.',
     },
     fonts: [],
     timezone: 'Asia/Bangkok',

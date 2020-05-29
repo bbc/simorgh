@@ -2,7 +2,7 @@
 
 exports[`Canonical On Demand Radio Episode A11y I can see the skip to content link 1`] = `"مطلب ته ورشئ"`;
 
-exports[`Canonical On Demand Radio Episode Analytics ATI 1`] = `"https://logws1363.ati-host.net?s=598343&s2=68&p=pashto.bbc_pashto_radio.w3ct0lz1.page&x1=[urn:bbc:pips:w3ct0lz1]&x2=[responsive]&x3=[news-pashto]&x4=[ps]&x7=[player-episode]&x8=[simorgh-nojs]&x9=[ماښامنۍ+خپرونه+-+BBC+News+پښتو]"`;
+exports[`Canonical On Demand Radio Episode Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=68&amp;p=pashto.bbc_pashto_radio.w3ct0lz1.page&amp;x1=[urn:bbc:pips:w3ct0lz1]&amp;x2=[responsive]&amp;x3=[news-pashto]&amp;x4=[ps]&amp;x7=[player-episode]&amp;x8=[simorgh-nojs]&amp;x9=[ماښامنۍ+خپرونه+-+BBC+News+پښتو]\\"/>"`;
 
 exports[`Canonical On Demand Radio Episode Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
 
@@ -15,6 +15,8 @@ exports[`Canonical On Demand Radio Episode I can see the brand title 1`] = `"م�
 exports[`Canonical On Demand Radio Episode I can see the episode summary 1`] = `"د بي بي سي ورلډ سروس څخه پروګرام کول"`;
 
 exports[`Canonical On Demand Radio Episode I can see the episode title 1`] = `"۱ می ۲۰۲۰"`;
+
+exports[`Canonical On Demand Radio Episode I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png"`;
 
 exports[`Canonical On Demand Radio Episode Media player embed A11y I can read the media player title 1`] = `"اډیو پلیئر"`;
 

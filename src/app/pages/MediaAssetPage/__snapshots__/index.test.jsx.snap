@@ -203,7 +203,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                   class="Wrapper-e2169q-0 kopXQT"
                 >
                   <ul
-                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                    class="BulletedList-sc-13z0d8v-0 vJhtt"
                     dir="ltr"
                     role="list"
                   >
@@ -243,7 +243,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                   class="Wrapper-e2169q-0 kopXQT"
                 >
                   <ul
-                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                    class="BulletedList-sc-13z0d8v-0 vJhtt"
                     dir="ltr"
                     role="list"
                   >
@@ -307,7 +307,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                       class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa"
                     >
                       <div
-                        class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                        class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                       >
                         <div
                           class="lazyload-placeholder"
@@ -510,7 +510,7 @@ exports[`Media Asset Page should render component 1`] = `
                   class="Wrapper-e2169q-0 kopXQT"
                 >
                   <ul
-                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                    class="BulletedList-sc-13z0d8v-0 vJhtt"
                     dir="ltr"
                     role="list"
                   >
@@ -599,7 +599,7 @@ exports[`Media Asset Page should render component 1`] = `
                   class="Wrapper-e2169q-0 kopXQT"
                 >
                   <ul
-                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                    class="BulletedList-sc-13z0d8v-0 vJhtt"
                     dir="ltr"
                     role="list"
                   >
@@ -803,7 +803,7 @@ exports[`Media Asset Page should render component 1`] = `
                       class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa"
                     >
                       <div
-                        class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                        class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                       >
                         <div
                           class="lazyload-placeholder"
@@ -858,7 +858,7 @@ exports[`Media Asset Page should render component 1`] = `
                       class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa"
                     >
                       <div
-                        class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                        class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                       >
                         <div
                           class="lazyload-placeholder"
@@ -907,7 +907,7 @@ exports[`Media Asset Page should render component 1`] = `
                   class="Wrapper-e2169q-0 kopXQT"
                 >
                   <ul
-                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                    class="BulletedList-sc-13z0d8v-0 vJhtt"
                     dir="ltr"
                     role="list"
                   >
@@ -1012,7 +1012,7 @@ exports[`Media Asset Page should render component 1`] = `
                           class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                         >
                           <div
-                            class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                            class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                           >
                             <div
                               class="lazyload-placeholder"
@@ -1067,7 +1067,7 @@ exports[`Media Asset Page should render component 1`] = `
                           class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                         >
                           <div
-                            class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                            class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                           >
                             <div
                               class="lazyload-placeholder"
@@ -1212,7 +1212,7 @@ exports[`Media Asset Page should render component 1`] = `
                           class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                         >
                           <div
-                            class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                            class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                           >
                             <div
                               class="lazyload-placeholder"
