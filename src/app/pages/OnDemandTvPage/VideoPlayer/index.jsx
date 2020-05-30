@@ -11,6 +11,7 @@ import { string } from 'prop-types';
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
+  MediaMessage,
 } from '@bbc/psammead-media-player';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
@@ -27,7 +28,13 @@ const VideoPlayerWrapper = styled.div`
   }
 `;
 
-const VideoPlayer = ({ assetId, masterBrand, imageUrl }) => {
+const landscapeRatio = '56.25%';
+const MediaMessageWrapper = styled.div`
+  padding-top: ${landscapeRatio};
+  position: relative;
+`;
+
+const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
   const { lang, translations, service } = useContext(ServiceContext);
   const { isAmp, platform } = useContext(RequestContext);
   const location = useLocation();
@@ -41,6 +48,20 @@ const VideoPlayer = ({ assetId, masterBrand, imageUrl }) => {
     ['media', 'noJs'],
     translations,
   );
+
+  if (isExpired) {
+    const expiredContentMessage = pathOr(
+      'This content is no longer available',
+      ['media', 'contentExpired'],
+      translations,
+    );
+
+    return (
+      <MediaMessageWrapper>
+        <MediaMessage service={service} message={expiredContentMessage} />
+      </MediaMessageWrapper>
+    );
+  }
   const placeholderSrc = getPlaceholderImageUrl(imageUrl);
 
   if (!isValidPlatform || !masterBrand || !assetId) return null;
@@ -89,6 +110,11 @@ VideoPlayer.propTypes = {
   masterBrand: string.isRequired,
   assetId: string.isRequired,
   imageUrl: string.isRequired,
+  isExpired: string,
+};
+
+VideoPlayer.defaultProps = {
+  isExpired: false,
 };
 
 export default VideoPlayer;
