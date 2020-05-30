@@ -29,6 +29,7 @@ const generateLinks = (service, env, domain) => {
     mediaAssetPage,
     photoGalleryPage,
     storyPage,
+    mostReadPage,
   } = allServices()[service].pageTypes;
 
   const frontPageURL = getUrl(frontPage, env);
@@ -61,6 +62,11 @@ const generateLinks = (service, env, domain) => {
     output.push(`[STY](${domain}${styURL})`);
   }
 
+  const mostReadURL = getUrl(mostReadPage, env);
+  if (mostReadURL) {
+    output.push(`[mostRead](${domain}${mostReadURL})`);
+  }
+
   return output.join('<br/>');
 };
 
@@ -90,6 +96,10 @@ const generateLaunchDates = service => {
 
   if (serviceLaunch.storyPage && serviceLaunch.storyPage !== '') {
     output.push(`__STY__: ${serviceLaunch.storyPage}`);
+  }
+
+  if (serviceLaunch.mostReadPage && serviceLaunch.mostReadPage !== '') {
+    output.push(`__Most Read__: ${serviceLaunch.mostReadPage}`);
   }
 
   return output.join('<br/>');
