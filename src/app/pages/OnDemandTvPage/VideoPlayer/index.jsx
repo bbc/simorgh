@@ -7,7 +7,7 @@ import {
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import { string } from 'prop-types';
+import { string, bool } from 'prop-types';
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
@@ -107,13 +107,16 @@ const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
 };
 
 VideoPlayer.propTypes = {
-  masterBrand: string.isRequired,
-  assetId: string.isRequired,
-  imageUrl: string.isRequired,
-  isExpired: string,
+  masterBrand: string,
+  assetId: string,
+  imageUrl: string,
+  isExpired: bool,
 };
 
 VideoPlayer.defaultProps = {
+  masterBrand: '',
+  assetId: '',
+  imageUrl: '',
   isExpired: false,
 };
 

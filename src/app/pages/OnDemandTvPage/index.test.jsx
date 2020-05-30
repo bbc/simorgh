@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import clone from 'ramda/src/clone';
 import { render, act } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { StaticRouter } from 'react-router-dom';
@@ -166,4 +167,22 @@ it('should show the video player on amp with live override', async () => {
   expect(videoPlayerIframeSrc).toEqual(
     'https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live',
   );
+});
+
+it('should show the expired content message if episode is expired', async () => {
+  const clonedPashtoPageData = clone(pashtoPageData);
+  clonedPashtoPageData.content.blocks[0].versions = [];
+  const pashtoPageDataWithExpiredEpisode = clonedPashtoPageData;
+  fetch.mockResponse(JSON.stringify(pashtoPageDataWithExpiredEpisode));
+  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { container, getByText } = await renderPage({
+    pageData,
+    service: 'pashto',
+  });
+  const audioPlayerIframeEl = container.querySelector('iframe');
+  const expiredMessageEl = getByText('دغه فایل نور د لاسرسي وړ نه دی.');
+
+  expect(audioPlayerIframeEl).not.toBeInTheDocument();
+  expect(expiredMessageEl).toBeInTheDocument();
+  expect(container).toMatchSnapshot();
 });
