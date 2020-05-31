@@ -47,6 +47,10 @@ const logCodes = {
   MOST_READ_CLIENT_REQUEST: 'most_read_client_request',
   MOST_READ_DATA_INCOMPLETE: 'most_read_data_incomplete',
   MOST_READ_STALE_DATA: 'most_read_stale_data',
+
+  // Include
+  INCLUDE_FETCH_ERROR: 'include_fetch_error',
+  INCLUDE_UNSUPPORTED: 'include_unsupported',
 };
 
 module.exports = logCodes;
