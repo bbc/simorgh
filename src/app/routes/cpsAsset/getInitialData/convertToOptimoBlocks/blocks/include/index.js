@@ -1,4 +1,5 @@
 import 'isomorphic-fetch';
+import { INCLUDE_FETCH_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
 
 const logger = nodeLogger(__filename);
@@ -22,22 +23,20 @@ const fetchMarkup = async url => {
     */
     const res = await fetch(url, { timeout: 3000 });
     if (res.status !== 200) {
+      logger.error(INCLUDE_FETCH_ERROR, {
+        status: res.status,
+        url,
+      });
       throw new Error(`Failed to fetch include at: ${url}`);
     } else {
       const html = await res.text();
       return html;
     }
   } catch (e) {
-    logger.error(
-      JSON.stringify(
-        {
-          event: 'include_fetch_error',
-          message: e,
-        },
-        null,
-        2,
-      ),
-    );
+    logger.error(INCLUDE_FETCH_ERROR, {
+      status: e.status,
+      url,
+    });
     return null;
   }
 };
