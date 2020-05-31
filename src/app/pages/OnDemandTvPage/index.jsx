@@ -4,6 +4,7 @@ import { shape, string } from 'prop-types';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
+import LinkedData from '#containers/LinkedData';
 import MediaMessage from '../MediaAssetPage/MediaMessage';
 import MetadataContainer from '../../containers/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -38,6 +39,8 @@ const OnDemandTvPage = ({ pageData }) => {
     shortSynopsis,
     brandTitle,
     releaseDateTimeStamp,
+    firstPublished,
+    lastPublished,
   } = pageData;
 
   const { dir } = useContext(ServiceContext);
@@ -51,7 +54,15 @@ const OnDemandTvPage = ({ pageData }) => {
         description={shortSynopsis}
         openGraphType="website"
       />
-
+      <LinkedData
+        // Do we need showAuthor here?
+        // Check OD radio type value once PRd
+        type="TVEpisode"
+        datePublished={firstPublished}
+        dateModified={lastPublished}
+        seoTitle={headline}
+        headline={headline}
+      />
       <StyledGelPageGrid
         forwardedAs="main"
         role="main"
