@@ -805,7 +805,7 @@ describe('Server', () => {
     describe('for tv brand page', () => {
       it('should respond with JSON', async () => {
         const { body } = await makeRequest(
-          '/pashto/bbc_pashto_tv/w13xttn4.json',
+          '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json',
         );
         expect(body).toEqual(
           expect.objectContaining({ content: expect.any(Object) }),
