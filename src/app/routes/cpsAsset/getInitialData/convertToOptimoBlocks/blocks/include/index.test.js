@@ -1,4 +1,7 @@
+import loggerMock from '#testHelpers/loggerMock'; // Must be imported before convertInclude
+
 import convertInclude from '.';
+import { INCLUDE_FETCH_ERROR } from '#lib/logger.const';
 
 const vjMarkup = `<div>Visual Journalism Markup</div><script type="text/javascript" src="localhost/vj.js"></script>`;
 
@@ -181,7 +184,6 @@ describe('convertInclude', () => {
   });
 
   it('should convert an include block to an idt2 block with html set to null when fetch returns with status other than 200', async () => {
-    jest.mock('#lib/logger.web', () => jest.fn());
     fetch.mockResponse(() => Promise.resolve({ status: 304 }));
     const input = {
       required: false,
@@ -209,6 +211,10 @@ describe('convertInclude', () => {
         timeout: 3000,
       },
     );
+    expect(loggerMock.error).toBeCalledWith(INCLUDE_FETCH_ERROR, {
+      status: 304,
+      url: 'https://foobar.com/includes/idt2/html',
+    });
   });
 
   it('should return null for an unsupported include type', async () => {
