@@ -17,6 +17,8 @@ const StyledGelWrapperGrid = styled.div`
   padding-top: ${GEL_SPACING_TRPL};
 `;
 
+const getISOStringDate = date => new Date(date).toISOString();
+
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,
   group1: one,
@@ -58,8 +60,8 @@ const OnDemandTvPage = ({ pageData }) => {
         // Do we need showAuthor here?
         // Check OD radio type value once PRd
         type="TVEpisode"
-        datePublished={firstPublished}
-        dateModified={lastPublished}
+        datePublished={getISOStringDate(firstPublished)}
+        dateModified={getISOStringDate(lastPublished)}
         seoTitle={headline}
         headline={headline}
       />

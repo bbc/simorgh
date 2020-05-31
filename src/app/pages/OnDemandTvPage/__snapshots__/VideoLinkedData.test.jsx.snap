@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VideoLinkedData should render correctly 1`] = `
+<html>
+  <head>
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"نړۍ دا وخت","description":"د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.","duration":"PT24M","thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg","uploadDate":"2020-05-27T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/masterBrand/id/ps?morph_env=live"}
+    </script>
+  </head>
+  <body>
+    <div />
+  </body>
+</html>
+`;
