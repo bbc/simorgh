@@ -12,6 +12,7 @@ import {
   cpsAssetPageDataPath,
   liveRadioPath,
   onDemandRadioPath,
+  onDemandTvPath,
   mostReadDataRegexPath,
   legacyAssetPagePath,
   legacyAssetPageDataPath,
@@ -202,6 +203,18 @@ describe('onDemandRadioPath', () => {
   shouldMatchValidRoutes(validRoutes, onDemandRadioPath);
 });
 
+describe('onDemandTvPath', () => {
+  const validRoutes = [
+    '/indonesia/bbc_indonesian_tv/tv/w34rfd4k', // onDemand tv any media id
+    '/hausa/bbc_hausa_tv/tv/abcd1234.amp', // onDemand tv amp w/ any media id
+    '/persian/bbc_abcdefg_tv/tv_programmes/hijklmn', // onDemand tv with a-z inside service id and for media id
+    '/arabic/bbc_arabic_tv/tv/jfijefij', // onDemand tv with a-z inside service id and for media id
+    '/indonesia/bbc_indonesian_tv/tv_programmes/w34rfd4k', // onDemand tv brand any media id
+    '/indonesia/bbc_indonesian_tv/tv_programmes/w34rfd4k.amp', // onDemand tv brand amp any media id
+  ];
+  shouldMatchValidRoutes(validRoutes, onDemandTvPath);
+});
+
 describe('liveRadioPath', () => {
   const validRoutes = [
     '/hausa/bbc_hausa_radio/liveradio', // default live radio
@@ -263,6 +276,34 @@ describe('onDemandRadioRegexPathsArray', () => {
       '/blah/bbc_hausa_radio/livetv', // live radio w/ unknown service
     ];
     shouldNotMatchInvalidRoutes(invalidRoutes, onDemandRadioPath);
+  });
+});
+
+describe('onDemandTvRegexPathsArray', () => {
+  describe('should return an array of regexes for the tv config', () => {
+    const validRoutes = [
+      '/indonesia/bbc_indonesian_tv/tv/w34rfd4k',
+      '/indonesia/bbc_indonesian_tv/tv_programmew/w4321',
+      '/indonesia/bbc_indonesian_tv/tv/w34rfd4k.amp',
+      '/indonesia/bbc_indonesian_tv/tv_programmes/w4321.amp',
+      '/persian/persian/tv_programmes/abcd1234.amp',
+      '/persian/persian/tv/abcd4321.amp',
+    ];
+    shouldMatchValidRoutes(validRoutes, onDemandTvPath);
+
+    const invalidRoutes = [
+      '/hausa/bbc_hausa_tv/',
+      '/hausa/bbc_hausa_tv/.amp',
+      '/hausa/bbc_hausa_tv/wr321',
+      '/hausa/bbc_hausa_tv/wr321.amp',
+      '/foobar/bbc_hausa_tv/abcd1234',
+      '/foobar/bbc_hausa_tv/abcd1234.amp',
+      '/persian/foobar/abcd1234',
+      '/persian/foobar/abcd1234.amp',
+      '/indonesia/bbc_indonesian_tv/tv_programmes/',
+      '/indonesia/bbc_indonesian_tv/tv/',
+    ];
+    shouldNotMatchInvalidRoutes(invalidRoutes, onDemandTvPath);
   });
 });
 
