@@ -27,7 +27,7 @@ const fetchMarkup = async url => {
         status: res.status,
         url,
       });
-      throw new Error(`Failed to fetch include at: ${url}`);
+      throw new Error();
     } else {
       const html = await res.text();
       return html;
