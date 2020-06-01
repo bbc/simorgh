@@ -12,8 +12,6 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
 
-const SKIP_LINK_ANCHOR_ID = 'content';
-
 const StyledGelWrapperGrid = styled.div`
   padding-top: ${GEL_SPACING_TRPL};
 `;
@@ -33,7 +31,6 @@ const StyledGelPageGrid = styled(GelPageGrid)`
 `;
 
 const OnDemandTvPage = ({ pageData }) => {
-  const idAttr = SKIP_LINK_ANCHOR_ID;
   const {
     language,
     headline,
@@ -76,7 +73,7 @@ const OnDemandTvPage = ({ pageData }) => {
           columns={getGroups(6, 6, 6, 6, 6, 12)}
           margins={getGroups(true, true, true, true, false, false)}
         >
-          <VisuallyHiddenText as="h1">
+          <VisuallyHiddenText as="h1" tabIndex="-1" id="content">
             {brandTitle}, {formattedTimestamp}
           </VisuallyHiddenText>
           <StyledGelWrapperGrid
@@ -86,7 +83,6 @@ const OnDemandTvPage = ({ pageData }) => {
             <MediaMessage />
           </StyledGelWrapperGrid>
           <OnDemandHeadingBlock
-            idAttr={idAttr}
             brandTitle={brandTitle}
             releaseDateTimeStamp={releaseDateTimeStamp}
             ariaHidden

@@ -101,6 +101,18 @@ describe('OnDemand TV Brand Page ', () => {
     expect(hiddenHeadline).toBeDefined();
     expect(hiddenHeadline).toContainHTML('نړۍ دا وخت');
   });
+
+  it('a11y - should have a "content" id on the h1', async () => {
+    fetch.mockResponse(JSON.stringify(pashtoPageData));
+
+    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    const { container } = await renderPage({
+      pageData,
+      service: 'pashto',
+    });
+
+    expect(container.querySelector('h1#content')).toBeDefined();
+  });
 });
 
 it('should show the datestamp correctly for Pashto OnDemand TV Pages', async () => {
