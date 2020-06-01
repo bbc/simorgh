@@ -11,6 +11,9 @@ export const service = {
       hasAds: false,
       advertisementLabel: 'Реклама',
     },
+    idxPage: {
+      hasRadioSchedule: false,
+    },
     lang: `uk`,
     articleAuthor: `http://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Оновлення даних: ',

@@ -16,6 +16,10 @@ export const service = {
       hasAds: false,
       advertisementLabel: 'آگهی',
     },
+    idxPage: {
+      hasRadioSchedule: true,
+      idxPagePosition: 'Features',
+    },
     lang: 'fa',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
