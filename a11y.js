@@ -8,12 +8,13 @@ const environment = 'local';
 const isSmoke = true;
 const baseUrl = 'http://localhost:7080';
 
-// '//div[@id='root']/main/div/div/div/div/iframe' Added to hide
-// iframe errors to be fixed in https://github.com/bbc/bbc-a11y/issues/298
-
-// '//div[@id='root']/header/nav/div/div[1]/div/ul' Added to hide
-// errors in scrollable navigation for RTL languages to be fixed in
-// https://github.com/bbc/simorgh/issues/5222
+/**
+ * Suppress iframe errors -> '//div[@id='root']/main/div/div/div/div/iframe'
+ * To be fixed in https://github.com/bbc/bbc-a11y/issues/298
+ *
+ * Suppress errors in scrollable navigation for RTL languages -> '//div[@id='root']/header/nav/div/div[1]/div/ul'
+ * To be fixed in https://github.com/bbc/simorgh/issues/5222
+ */
 
 const pageTypes = {
   frontPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
@@ -26,9 +27,15 @@ const pageTypes = {
   mostReadPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   storyPage: [
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
-    '/iframe', // known issue above with iframes should be revisited once https://github.com/bbc/bbc-a11y/pull/313 gets merged.
+    '/iframe', // known issue above with iframes should be revisited once https://github.com/bbc/bbc-a11y/issues/298 is resolved
     "//div[@id='root']/div/div[1]/main/div[37]/div/div/div", // issue with IDT2 includes
   ],
+  onDemandRadioEpisode: [
+    '/iframe', // Can be removed once https://github.com/bbc/bbc-a11y/issues/298 is resolved
+    "//div[@id='root']/main/div/div/div/iframe",
+    "//div[@id='root']/header/nav/div/div[1]/div/ul",
+  ],
+  idxPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
 };
 
 Object.keys(pageTypes).forEach(pageType => {
