@@ -36,6 +36,8 @@ export const getType = (pageType, shorthand = false) => {
       return 'Radio';
     case 'mostRead':
       return 'Most Read';
+    case 'STY':
+      return 'STY';
     default:
       return null;
   }
@@ -99,6 +101,8 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
       return path(['pageTitle'], pageData);
     case 'mostRead':
       return `${title} - ${brandName}`;
+    case 'STY':
+      return `${title}`;
     default:
       return null;
   }

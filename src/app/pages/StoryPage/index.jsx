@@ -13,6 +13,7 @@ import pathOr from 'ramda/src/pathOr';
 import Grid from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
+import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import LinkedData from '#containers/LinkedData';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
@@ -212,6 +213,7 @@ const StoryPage = ({ pageData }) => {
   };
   return (
     <>
+      <ChartbeatAnalytics data={pageData} />
       <CpsMetadata
         title={title}
         language={metadata.language}
