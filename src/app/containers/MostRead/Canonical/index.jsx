@@ -54,7 +54,11 @@ const CanonicalMostRead = ({
     mostRead: { lastUpdated, numberOfItems },
   } = useContext(ServiceContext);
 
-  const filteredData = processMostRead({ data: initialData, numberOfItems });
+  const filteredData = processMostRead({
+    data: initialData,
+    numberOfItems,
+    service,
+  });
 
   const [items, setItems] = useState(filteredData);
 
@@ -67,7 +71,9 @@ const CanonicalMostRead = ({
           );
         }
         const mostReadData = await response.json();
-        setItems(processMostRead({ data: mostReadData, numberOfItems }));
+        setItems(
+          processMostRead({ data: mostReadData, numberOfItems, service }),
+        );
       };
 
       const fetchMostReadData = pathname => {
