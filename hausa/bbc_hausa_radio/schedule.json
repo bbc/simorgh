@@ -1,0 +1,496 @@
+{
+  "schedules": [
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
+      "serviceId": "bbc_hausa_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1583994347000,
+      "publishedTimeStart": 1584945000000,
+      "publishedTimeEnd": 1584946770000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1584945000000,
+      "transmissionTimeEnd": 1584946770000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshc4t80k0zz6.imi:ws.bbc.co.uk/HAUSA1584945000",
+        "pid": "p086czrv"
+      },
+      "brand": {
+        "pid": "p030s4mh",
+        "title": "Shirin Hantsi",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "episode": {
+        "pid": "w172x6g56s9vhwn",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "version": {
+        "pid": "w1mshc4t80k0zz6"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
+      "serviceId": "bbc_hausa_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584019572000,
+      "publishedTimeStart": 1584971970000,
+      "publishedTimeEnd": 1584973770000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1584971970000,
+      "transmissionTimeEnd": 1584973770000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqv9nm.imi:ws.bbc.co.uk/HAUSA1584971970",
+        "pid": "p086frdc"
+      },
+      "brand": {
+        "pid": "p030s4mp",
+        "title": "Shirin Rana",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "episode": {
+        "pid": "w3cszrcx",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "version": {
+        "pid": "w4hqv9nm"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
+      "serviceId": "bbc_hausa_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584041147000,
+      "publishedTimeStart": 1584991770000,
+      "publishedTimeEnd": 1584993570000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1584991770000,
+      "transmissionTimeEnd": 1584993570000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvb21.imi:ws.bbc.co.uk/HAUSA1584991770",
+        "pid": "p086gzh1"
+      },
+      "brand": {
+        "pid": "p030s4mx",
+        "title": "Shirin Yamma",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "episode": {
+        "pid": "w3cszrsb",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "version": {
+        "pid": "w4hqvb21"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
+      "serviceId": "bbc_hausa_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584077146000,
+      "publishedTimeStart": 1585027770000,
+      "publishedTimeEnd": 1585029570000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1585027770000,
+      "transmissionTimeEnd": 1585029570000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqv9zs.imi:ws.bbc.co.uk/HAUSA1585027770",
+        "pid": "p086hw4t"
+      },
+      "brand": {
+        "pid": "p030s4n1",
+        "title": "Shirin Safe",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "episode": {
+        "pid": "w3cszrq2",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "version": {
+        "pid": "w4hqv9zs"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
+      "serviceId": "bbc_hausa_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584080749000,
+      "publishedTimeStart": 1585031400000,
+      "publishedTimeEnd": 1585033170000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1585031400000,
+      "transmissionTimeEnd": 1585033170000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshc4t80k3ww9.imi:ws.bbc.co.uk/HAUSA1585031400",
+        "pid": "p086j01n"
+      },
+      "brand": {
+        "pid": "p030s4mh",
+        "title": "Shirin Hantsi",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "episode": {
+        "pid": "w172x6g56s9ydsr",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "version": {
+        "pid": "w1mshc4t80k3ww9"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
+      "serviceId": "bbc_hausa_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584106061000,
+      "publishedTimeStart": 1585058370000,
+      "publishedTimeEnd": 1585060170000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1585058370000,
+      "transmissionTimeEnd": 1585060170000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqv9qw.imi:ws.bbc.co.uk/HAUSA1585058370",
+        "pid": "p086k8vb"
+      },
+      "brand": {
+        "pid": "p030s4mp",
+        "title": "Shirin Rana",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "episode": {
+        "pid": "w3cszrg5",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "version": {
+        "pid": "w4hqv9qw"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
+      "serviceId": "bbc_hausa_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584127543000,
+      "publishedTimeStart": 1585078170000,
+      "publishedTimeEnd": 1585079970000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1585078170000,
+      "transmissionTimeEnd": 1585079970000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvb6k.imi:ws.bbc.co.uk/HAUSA1585078170",
+        "pid": "p086lnd6"
+      },
+      "brand": {
+        "pid": "p030s4mx",
+        "title": "Shirin Yamma",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "episode": {
+        "pid": "w3cszrxv",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "version": {
+        "pid": "w4hqvb6k"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
+      "serviceId": "bbc_hausa_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584163546000,
+      "publishedTimeStart": 1585114170000,
+      "publishedTimeEnd": 1585115970000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1585114170000,
+      "transmissionTimeEnd": 1585115970000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvb0x.imi:ws.bbc.co.uk/HAUSA1585114170",
+        "pid": "p086mpcm"
+      },
+      "brand": {
+        "pid": "p030s4n1",
+        "title": "Shirin Safe",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "episode": {
+        "pid": "w3cszrr6",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "version": {
+        "pid": "w4hqvb0x"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
+      "serviceId": "bbc_hausa_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584167145000,
+      "publishedTimeStart": 1585117800000,
+      "publishedTimeEnd": 1585119570000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1585117800000,
+      "transmissionTimeEnd": 1585119570000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshc4t80k6ssd.imi:ws.bbc.co.uk/HAUSA1585117800",
+        "pid": "p086mrxm"
+      },
+      "brand": {
+        "pid": "p030s4mh",
+        "title": "Shirin Hantsi",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "episode": {
+        "pid": "w172x6g56sb19pv",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "version": {
+        "pid": "w1mshc4t80k6ssd"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
+      "serviceId": "bbc_hausa_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584192361000,
+      "publishedTimeStart": 1585144770000,
+      "publishedTimeEnd": 1585146570000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1585144770000,
+      "transmissionTimeEnd": 1585146570000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqv9s0.imi:ws.bbc.co.uk/HAUSA1585144770",
+        "pid": "p086nhzb"
+      },
+      "brand": {
+        "pid": "p030s4mp",
+        "title": "Shirin Rana",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "episode": {
+        "pid": "w3cszrh9",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "version": {
+        "pid": "w4hqv9s0"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
+      "serviceId": "bbc_hausa_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584213947000,
+      "publishedTimeStart": 1585164570000,
+      "publishedTimeEnd": 1585166370000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1585164570000,
+      "transmissionTimeEnd": 1585166370000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvb7p.imi:ws.bbc.co.uk/HAUSA1585164570",
+        "pid": "p086p3fz"
+      },
+      "brand": {
+        "pid": "p030s4mx",
+        "title": "Shirin Yamma",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "episode": {
+        "pid": "w3cszryz",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "version": {
+        "pid": "w4hqvb7p"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
+      "serviceId": "bbc_hausa_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1893488400000,
+      "publishedTimeStart": 1893488400000,
+      "publishedTimeEnd": 1893490200000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1893488400000,
+      "transmissionTimeEnd": 1893490200000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqv9yn.imi:ws.bbc.co.uk/HAUSA1585200570",
+        "pid": "p086pmsx"
+      },
+      "brand": {
+        "pid": "p030s4n1",
+        "title": "Shirin Safe",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "episode": {
+        "pid": "w3cszrny",
+        "presentationTitle": "01/01/2030 09:00 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
+        "synopses": {
+          "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
+          "medium": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya."
+        }
+      },
+      "version": {
+        "pid": "w4hqv9yn"
+      }
+    }
+  ]
+}

@@ -1,0 +1,631 @@
+{
+  "schedules": [
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_persian_radio",
+      "serviceId": "bbc_persian_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584026882000,
+      "publishedTimeStart": 1584975600000,
+      "publishedTimeEnd": 1584979170000,
+      "publishedTimeDuration": "PT59M30S",
+      "transmissionTimeStart": 1584975630000,
+      "transmissionTimeEnd": 1584979170000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7lr05dzh92.imi:ws.bbc.co.uk/FARSA1584975600",
+        "pid": "p086g6c4"
+      },
+      "brand": {
+        "pid": "p04dd403",
+        "title": "جام جهان نما",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mt9.jpg",
+        "synopses": {
+          "short": "پخش زنده بولتن خبری تلویزیون فارسی بی بی سی و برنامه نوبت شما",
+          "medium": "پخش زنده بولتن خبری تلویزیون فارسی بی بی سی و برنامه نوبت شما"
+        }
+      },
+      "episode": {
+        "pid": "w172x33cf2n681t",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mt9.jpg",
+        "synopses": {
+          "short": "پخش زنده بولتن خبری تلویزیون فارسی بی بی سی و برنامه نوبت شما",
+          "medium": "پخش زنده بولتن خبری تلویزیون فارسی بی بی سی و برنامه نوبت شما"
+        }
+      },
+      "version": {
+        "pid": "w1msh7lr05dzh92"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_persian_radio",
+      "serviceId": "bbc_persian_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584066406000,
+      "publishedTimeStart": 1585017060000,
+      "publishedTimeEnd": 1585017240000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1585017060000,
+      "transmissionTimeEnd": 1585017240000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7m4qjqcjm5.imi:ws.bbc.co.uk/FARSA1585017060",
+        "pid": "p086hnrg"
+      },
+      "brand": {
+        "pid": "p0340vyw",
+        "title": "خبرهای ایران و جهان",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی",
+          "medium": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی"
+        }
+      },
+      "episode": {
+        "pid": "w172x33s4fyl9cx",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی",
+          "medium": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی"
+        }
+      },
+      "version": {
+        "pid": "w1msh7m4qjqcjm5"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_persian_radio",
+      "serviceId": "bbc_persian_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1585018332000,
+      "publishedTimeStart": 1585017240000,
+      "publishedTimeEnd": 1585020600000,
+      "publishedTimeDuration": "PT56M",
+      "transmissionTimeStart": 1585017240000,
+      "transmissionTimeEnd": 1585020570000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7k33q6n8qr.imi:ws.bbc.co.uk/FARSA1585017240",
+        "pid": "p086hnrk"
+      },
+      "brand": {
+        "pid": "p0340vyx",
+        "title": "چشم انداز بامدادی",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+        }
+      },
+      "episode": {
+        "pid": "w172x31qjmfw1hh",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+        }
+      },
+      "version": {
+        "pid": "w1msh7k33q6n8qr"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_persian_radio",
+      "serviceId": "bbc_persian_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584069964000,
+      "publishedTimeStart": 1585020600000,
+      "publishedTimeEnd": 1585020840000,
+      "publishedTimeDuration": "PT4M",
+      "transmissionTimeStart": 1585020660000,
+      "transmissionTimeEnd": 1585020840000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7m4qjqcnc9.imi:ws.bbc.co.uk/FARSA1585020600",
+        "pid": "p086hqc9"
+      },
+      "brand": {
+        "pid": "p0340vyw",
+        "title": "خبرهای ایران و جهان",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی",
+          "medium": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی"
+        }
+      },
+      "episode": {
+        "pid": "w172x33s4fylf41",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی",
+          "medium": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی"
+        }
+      },
+      "version": {
+        "pid": "w1msh7m4qjqcnc9"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_persian_radio",
+      "serviceId": "bbc_persian_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584069966000,
+      "publishedTimeStart": 1585020840000,
+      "publishedTimeEnd": 1585024170000,
+      "publishedTimeDuration": "PT55M30S",
+      "transmissionTimeStart": 1585020840000,
+      "transmissionTimeEnd": 1585024170000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7khv2j01pj.imi:ws.bbc.co.uk/FARSA1585020840",
+        "pid": "p086hqcn"
+      },
+      "brand": {
+        "pid": "p0340vyx",
+        "title": "چشم انداز بامدادی",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+        }
+      },
+      "episode": {
+        "pid": "w172x3247zr6tg8",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+        }
+      },
+      "version": {
+        "pid": "w1msh7khv2j01pj"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_persian_radio",
+      "serviceId": "bbc_persian_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584113326000,
+      "publishedTimeStart": 1585062000000,
+      "publishedTimeEnd": 1585065570000,
+      "publishedTimeDuration": "PT59M30S",
+      "transmissionTimeStart": 1585062030000,
+      "transmissionTimeEnd": 1585065570000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7lr05f2d65.imi:ws.bbc.co.uk/FARSA1585062000",
+        "pid": "p086kqh5"
+      },
+      "brand": {
+        "pid": "p04dd403",
+        "title": "جام جهان نما",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mt9.jpg",
+        "synopses": {
+          "short": "پخش زنده بولتن خبری تلویزیون فارسی بی بی سی و برنامه نوبت شما",
+          "medium": "پخش زنده بولتن خبری تلویزیون فارسی بی بی سی و برنامه نوبت شما"
+        }
+      },
+      "episode": {
+        "pid": "w172x33cf2n94yx",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mt9.jpg",
+        "synopses": {
+          "short": "پخش زنده بولتن خبری تلویزیون فارسی بی بی سی و برنامه نوبت شما",
+          "medium": "پخش زنده بولتن خبری تلویزیون فارسی بی بی سی و برنامه نوبت شما"
+        }
+      },
+      "version": {
+        "pid": "w1msh7lr05f2d65"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_persian_radio",
+      "serviceId": "bbc_persian_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584152779000,
+      "publishedTimeStart": 1585103460000,
+      "publishedTimeEnd": 1585103640000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1585103460000,
+      "transmissionTimeEnd": 1585103640000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7m4qjqgfj8.imi:ws.bbc.co.uk/FARSA1585103460",
+        "pid": "p086mj4s"
+      },
+      "brand": {
+        "pid": "p0340vyw",
+        "title": "خبرهای ایران و جهان",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی",
+          "medium": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی"
+        }
+      },
+      "episode": {
+        "pid": "w172x33s4fyp690",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی",
+          "medium": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی"
+        }
+      },
+      "version": {
+        "pid": "w1msh7m4qjqgfj8"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_persian_radio",
+      "serviceId": "bbc_persian_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584156351000,
+      "publishedTimeStart": 1585103640000,
+      "publishedTimeEnd": 1585107000000,
+      "publishedTimeDuration": "PT56M",
+      "transmissionTimeStart": 1585103640000,
+      "transmissionTimeEnd": 1585106970000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7k33q6r5mv.imi:ws.bbc.co.uk/FARSA1585103640",
+        "pid": "p086mj4w"
+      },
+      "brand": {
+        "pid": "p0340vyx",
+        "title": "چشم انداز بامدادی",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+        }
+      },
+      "episode": {
+        "pid": "w172x31qjmfyydl",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+        }
+      },
+      "version": {
+        "pid": "w1msh7k33q6r5mv"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_persian_radio",
+      "serviceId": "bbc_persian_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584156356000,
+      "publishedTimeStart": 1585107000000,
+      "publishedTimeEnd": 1585107240000,
+      "publishedTimeDuration": "PT4M",
+      "transmissionTimeStart": 1585107060000,
+      "transmissionTimeEnd": 1585107240000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7m4qjqgk8d.imi:ws.bbc.co.uk/FARSA1585107000",
+        "pid": "p086mkh4"
+      },
+      "brand": {
+        "pid": "p0340vyw",
+        "title": "خبرهای ایران و جهان",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی",
+          "medium": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی"
+        }
+      },
+      "episode": {
+        "pid": "w172x33s4fypb14",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی",
+          "medium": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی"
+        }
+      },
+      "version": {
+        "pid": "w1msh7m4qjqgk8d"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_persian_radio",
+      "serviceId": "bbc_persian_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584156353000,
+      "publishedTimeStart": 1585107240000,
+      "publishedTimeEnd": 1585110570000,
+      "publishedTimeDuration": "PT55M30S",
+      "transmissionTimeStart": 1585107240000,
+      "transmissionTimeEnd": 1585110570000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7khv2j2ylm.imi:ws.bbc.co.uk/FARSA1585107240",
+        "pid": "p086mkgk"
+      },
+      "brand": {
+        "pid": "p0340vyx",
+        "title": "چشم انداز بامدادی",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+        }
+      },
+      "episode": {
+        "pid": "w172x3247zr9qcc",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+        }
+      },
+      "version": {
+        "pid": "w1msh7khv2j2ylm"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_persian_radio",
+      "serviceId": "bbc_persian_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584199600000,
+      "publishedTimeStart": 1585148400000,
+      "publishedTimeEnd": 1585151970000,
+      "publishedTimeDuration": "PT59M30S",
+      "transmissionTimeStart": 1585148430000,
+      "transmissionTimeEnd": 1585151970000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7lr05f5938.imi:ws.bbc.co.uk/FARSA1585148400",
+        "pid": "p086nr8y"
+      },
+      "brand": {
+        "pid": "p04dd403",
+        "title": "جام جهان نما",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mt9.jpg",
+        "synopses": {
+          "short": "پخش زنده بولتن خبری تلویزیون فارسی بی بی سی و برنامه نوبت شما",
+          "medium": "پخش زنده بولتن خبری تلویزیون فارسی بی بی سی و برنامه نوبت شما"
+        }
+      },
+      "episode": {
+        "pid": "w172x33cf2nd1w0",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4mt9.jpg",
+        "synopses": {
+          "short": "پخش زنده بولتن خبری تلویزیون فارسی بی بی سی و برنامه نوبت شما",
+          "medium": "پخش زنده بولتن خبری تلویزیون فارسی بی بی سی و برنامه نوبت شما"
+        }
+      },
+      "version": {
+        "pid": "w1msh7lr05f5938"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_persian_radio",
+      "serviceId": "bbc_persian_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584239190000,
+      "publishedTimeStart": 1585189860000,
+      "publishedTimeEnd": 1585190040000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1585189860000,
+      "transmissionTimeEnd": 1585190040000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7m4qjqkbfc.imi:ws.bbc.co.uk/FARSA1585189860",
+        "pid": "p086pjr3"
+      },
+      "brand": {
+        "pid": "p0340vyw",
+        "title": "خبرهای ایران و جهان",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی",
+          "medium": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی"
+        }
+      },
+      "episode": {
+        "pid": "w172x33s4fys363",
+        "presentationTitle": "26/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی",
+          "medium": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی"
+        }
+      },
+      "version": {
+        "pid": "w1msh7m4qjqkbfc"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_persian_radio",
+      "serviceId": "bbc_persian_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584242757000,
+      "publishedTimeStart": 1585190040000,
+      "publishedTimeEnd": 1585193400000,
+      "publishedTimeDuration": "PT56M",
+      "transmissionTimeStart": 1585190040000,
+      "transmissionTimeEnd": 1585193370000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7k33q6v2jy.imi:ws.bbc.co.uk/FARSA1585190040",
+        "pid": "p086pjr4"
+      },
+      "brand": {
+        "pid": "p0340vyx",
+        "title": "چشم انداز بامدادی",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+        }
+      },
+      "episode": {
+        "pid": "w172x31qjmg1v9p",
+        "presentationTitle": "26/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+        }
+      },
+      "version": {
+        "pid": "w1msh7k33q6v2jy"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_persian_radio",
+      "serviceId": "bbc_persian_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584242760000,
+      "publishedTimeStart": 1585193400000,
+      "publishedTimeEnd": 1585193640000,
+      "publishedTimeDuration": "PT4M",
+      "transmissionTimeStart": 1585193460000,
+      "transmissionTimeEnd": 1585193640000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7m4qjqkg5h.imi:ws.bbc.co.uk/FARSA1585193400",
+        "pid": "p086pkhs"
+      },
+      "brand": {
+        "pid": "p0340vyw",
+        "title": "خبرهای ایران و جهان",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی",
+          "medium": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی"
+        }
+      },
+      "episode": {
+        "pid": "w172x33s4fys6y7",
+        "presentationTitle": "26/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی",
+          "medium": "تازه‌ترین خبرهای ایران و جهان در برنامه چشم‌انداز بامدادی رادیو بی‌بی‌سی"
+        }
+      },
+      "version": {
+        "pid": "w1msh7m4qjqkg5h"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_persian_radio",
+      "serviceId": "bbc_persian_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1893488400000,
+      "publishedTimeStart": 1893488400000,
+      "publishedTimeEnd": 1893491730000,
+      "publishedTimeDuration": "PT55M30S",
+      "transmissionTimeStart": 1893488400000,
+      "transmissionTimeEnd": 1893491730000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7khv2j5vhq.imi:ws.bbc.co.uk/FARSA1585193640",
+        "pid": "p086pkhp"
+      },
+      "brand": {
+        "pid": "p0340vyx",
+        "title": "چشم انداز بامدادی",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+        }
+      },
+      "episode": {
+        "pid": "w172x3247zrdm8g",
+        "presentationTitle": "01/01/2030 09:00 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "synopses": {
+          "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+        }
+      },
+      "version": {
+        "pid": "w1msh7khv2j5vhq"
+      }
+    }
+  ]
+}
