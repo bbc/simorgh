@@ -16,13 +16,12 @@ export default () => {
     });
 
     it('I can see the navigation', () => {
-      const navigationItemEls = document.querySelector(
-        'header nav ul > li > a',
-      );
+      const navigationItemA = document.querySelector('header nav ul > li > a');
 
-      expect(navigationItemEls).toBeInTheDocument();
-      expect(navigationItemEls.getAttribute('href')).toBeTruthy();
-      // expect(navigationItemEls.getAttribute('text')).toBeTruthy();
+      expect(navigationItemA).toBeInTheDocument();
+      expect(navigationItemA.getAttribute('href')).toBeTruthy();
+      expect(navigationItemA.textContent).toBeTruthy();
+      expect(navigationItemA.textContent).toMatchSnapshot();
     });
 
     it('I can see a skip to content link', () => {
