@@ -53,6 +53,8 @@ const HeadingContainer = ({
     isRelative: false,
   });
 
+  const TextWrapper = ariaHidden ? React.Fragment : 'span';
+
   return (
     <StyledHeadline
       script={script}
@@ -61,16 +63,13 @@ const HeadingContainer = ({
       {...(idAttr === 'content' ? { tabIndex: '-1' } : {})}
       {...(ariaHidden ? { as: 'strong', 'aria-hidden': 'true' } : {})}
     >
-      <span
-        // eslint-disable-next-line jsx-a11y/aria-role
-        role="text"
-      >
+      <TextWrapper {...(ariaHidden ? {} : { role: 'text' })}>
         <BrandTitle>{brandTitle}</BrandTitle>
         {!ariaHidden && <VisuallyHiddenText>, </VisuallyHiddenText>}
         <Datestamp script={script} service={service}>
           {formattedTimestamp}
         </Datestamp>
-      </span>
+      </TextWrapper>
     </StyledHeadline>
   );
 };
