@@ -66,7 +66,7 @@ const HeadingContainer = ({
         role="text"
       >
         <BrandTitle>{brandTitle}</BrandTitle>
-        <VisuallyHiddenText>, </VisuallyHiddenText>
+        {!ariaHidden && <VisuallyHiddenText>, </VisuallyHiddenText>}
         <Datestamp script={script} service={service}>
           {formattedTimestamp}
         </Datestamp>
