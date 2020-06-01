@@ -3,8 +3,9 @@ import pathOr from 'ramda/src/pathOr';
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import Amp from './Amp';
-import Canonical from './Canonical';
+import AmpAd from './Amp';
+import CanonicalAd from './Canonical';
+import CanonicalAdBootstrap from './Canonical/CanonicalAdBootstrapJs';
 
 const AdContainer = () => {
   const { isAmp } = useContext(RequestContext);
@@ -13,11 +14,19 @@ const AdContainer = () => {
   const { enabled: adsEnabled } = useToggle('ads');
 
   if (!hasAds || !adsEnabled) {
-    return null;
+    // return null;
   }
 
-  const Ad = isAmp ? Amp : Canonical;
-  return <Ad />;
+  if (isAmp) {
+    return <AmpAd />;
+  }
+
+  return (
+    <>
+      <CanonicalAdBootstrap />
+      <CanonicalAd />
+    </>
+  );
 };
 
 export default AdContainer;
