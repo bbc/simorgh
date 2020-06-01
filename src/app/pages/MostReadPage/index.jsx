@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { string, node } from 'prop-types';
+import { node } from 'prop-types';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -66,7 +66,7 @@ const MostReadHeader = styled.h1.attrs({
   }
 `;
 
-const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
+const MostReadPage = ({ pageData }) => {
   const {
     brandName,
     service,
@@ -111,7 +111,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
             group2: 6,
             group3: 6,
             group4: 6,
-            group5: 12,
+            group5: 11,
           }}
         >
           {children}
@@ -137,7 +137,6 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
       <LinkedData type="WebPage" seoTitle={header} />
       <StyledMain>
         <MostReadContainer
-          mostReadEndpointOverride={mostReadEndpointOverride}
           wrapper={MostReadWrapper}
           columnLayout="oneColumn"
           initialData={pageData}
@@ -149,9 +148,6 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
 };
 MostReadPage.propTypes = {
   pageData: mostReadShape.isRequired,
-  mostReadEndpointOverride: string,
 };
-MostReadPage.defaultProps = {
-  mostReadEndpointOverride: null,
-};
+
 export default MostReadPage;

@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment, useContext } from 'react';
-import { string, node } from 'prop-types';
+import { node } from 'prop-types';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
 import styled from 'styled-components';
@@ -22,12 +22,14 @@ import {
 import SectionLabel from '@bbc/psammead-section-label';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
+import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '#containers/FrontPageSection';
 import MetadataContainer from '#containers/Metadata';
 import MostReadContainer from '#containers/MostRead';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import AdContainer from '#containers/Ad';
+import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
@@ -73,7 +75,7 @@ const MostReadSection = styled.section.attrs(() => ({
   }
 `;
 
-const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
+const FrontPage = ({ pageData }) => {
   const {
     product,
     serviceLocalizedName,
@@ -125,15 +127,14 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   };
 
   const renderMostRead = () => (
-    <MostReadContainer
-      mostReadEndpointOverride={mostReadEndpointOverride}
-      columnLayout="twoColumn"
-      wrapper={MostReadWrapper}
-    />
+    <MostReadContainer columnLayout="twoColumn" wrapper={MostReadWrapper} />
   );
+
+  const { isAmp } = useContext(RequestContext);
 
   return (
     <>
+      {!isAmp && <CanonicalAdBootstrapJs />}
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
@@ -168,11 +169,6 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
 
 FrontPage.propTypes = {
   pageData: frontPageDataPropTypes.isRequired,
-  mostReadEndpointOverride: string,
-};
-
-FrontPage.defaultProps = {
-  mostReadEndpointOverride: null,
 };
 
 export default FrontPage;
