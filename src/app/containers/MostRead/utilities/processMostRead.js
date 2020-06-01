@@ -56,7 +56,7 @@ const getCpsItemData = record => {
   };
 };
 
-const mostReadItems = ({ data, numberOfItems }) => {
+const mostReadItems = ({ data, numberOfItems, service }) => {
   if (!data) {
     return null;
   }
@@ -81,7 +81,9 @@ const mostReadItems = ({ data, numberOfItems }) => {
         items.push(mostReadItemData);
       } else {
         logger.warn(MOST_READ_DATA_INCOMPLETE, {
-          message: `Most read data promo has href: ${href} and title: ${title}`,
+          service,
+          title,
+          url: href,
         });
       }
 
@@ -92,7 +94,9 @@ const mostReadItems = ({ data, numberOfItems }) => {
     return items;
   }
   logger.warn(MOST_READ_STALE_DATA, {
-    message: `Most read lastUpdatedTimestamp - ${data.lastRecordTimeStamp} value is greater than 35min`,
+    message: 'lastRecordTimeStamp is greater than 35min for this service',
+    lastRecordTimeStamp: data.lastRecordTimeStamp,
+    service,
   });
   return null;
 };
