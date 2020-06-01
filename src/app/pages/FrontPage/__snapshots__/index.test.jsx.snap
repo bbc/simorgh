@@ -116,7 +116,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                   </div>
                 </div>
                 <div
-                  class="StyledPageDiv-sc-3z2pom-0 fJxVIH"
+                  class="PageContainer-k034xp-0 HKpHx"
                 >
                   <section
                     aria-labelledby="Top-stories"
@@ -875,7 +875,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </span>
                 </h1>
                 <div
-                  class="StyledPageDiv-sc-3z2pom-0 fJxVIH"
+                  class="PageContainer-k034xp-0 HKpHx"
                 >
                   <section
                     aria-labelledby="Top-stories"
