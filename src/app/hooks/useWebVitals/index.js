@@ -38,7 +38,7 @@ const sendBeacon = async event => {
     await fetch(process.env.SIMORGH_WEB_VITALS_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/reports+json' },
-      body: beacon,
+      body: JSON.stringify(beacon),
     });
   } catch (error) {
     logger.info(WEB_VITALS_SEND_ERROR, {
