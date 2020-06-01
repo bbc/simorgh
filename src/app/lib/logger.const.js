@@ -51,6 +51,7 @@ const logCodes = {
   // Include
   INCLUDE_FETCH_ERROR: 'include_fetch_error',
   INCLUDE_UNSUPPORTED: 'include_unsupported',
+  INCLUDE_REQUEST_RECEIVED: 'include_request_received',
 };
 
 module.exports = logCodes;
