@@ -201,6 +201,11 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
       name="twitter:title"
     />
     <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"RadioChannel","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News پښتو","publishingPrinciples":"https://www.bbc.com/pashto/institutional-49283007","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"ماښامنۍ خپرونه"}}
+    </script>
+    <script
       async="true"
       custom-element="amp-iframe"
       src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
@@ -1327,6 +1332,11 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
       content="ماښامنۍ خپرونه - BBC News پښتو"
       name="twitter:title"
     />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"RadioChannel","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News پښتو","publishingPrinciples":"https://www.bbc.com/pashto/institutional-49283007","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"ماښامنۍ خپرونه"}}
+    </script>
     <script
       type="application/ld+json"
     >
