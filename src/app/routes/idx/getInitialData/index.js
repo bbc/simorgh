@@ -33,7 +33,6 @@ export default async ({ path, service, variant }) => {
         radioService: 'dari',
       })
     : await pageDataPromise;
-    console.log(rest);
 
   return {
     ...rest,
