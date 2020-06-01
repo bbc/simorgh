@@ -4,22 +4,17 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 
 const IdxPage = ({ pageData }) => {
-  const { idxPage } = useContext(ServiceContext);
+  const { radioSchedule } = useContext(ServiceContext);
 
   const radioScheduleData = pathOr(['radioScheduleData'], pageData);
-  const radioScheduleOnIdxPage = pathOr(['hasRadioSchedule'], idxPage);
-  const radioScheduleIdxPosition = pathOr(['idxPagePosition'], idxPage);
-  const idxRadioScheduleOverride =
-    './data/persian/bbc_dari_radio/schedule.json';
+  const radioScheduleOnIdxPage = pathOr(['onIdxPage'], radioSchedule);
+  // const radioScheduleIdxPosition = pathOr(['idxPagePosition'], idxPage);
 
   return (
     <main role="main">
       <h1 id="content">IDX Page</h1>
       {radioScheduleOnIdxPage && (
-        <RadioScheduleContainer
-          initialData={radioScheduleData}
-          radioScheduleEndpointOverride={idxRadioScheduleOverride}
-        />
+        <RadioScheduleContainer initialData={radioScheduleData} />
       )}
     </main>
   );
