@@ -16,10 +16,6 @@ export const service = {
       hasAds: false,
       advertisementLabel: 'آگهی',
     },
-    idxPage: {
-      hasRadioSchedule: true,
-      idxPagePosition: 'Features',
-    },
     lang: 'fa',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -211,6 +207,8 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
+      onIdxPage: true,
+      idxPagePosition: 'Features',
       frontPagePosition: '',
       header: 'برنامه‌های رادیو',
       durationLabel: 'مدت %duration%',
