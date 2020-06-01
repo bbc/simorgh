@@ -32,7 +32,7 @@ export const isExpired = jsonData => {
   );
 
   // Episode is expired if availableUntil is empty
-  return !episodeAvailableUntil;
+  return !episodeAvailableUntil || episodeAvailableUntil < Date.now();
 };
 
 export const dataEndpointOverride = () => {
