@@ -40,10 +40,7 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
   it('should be aria-hidden when ariaHidden is true', () => {
     const { container } = render(<Component ariaHidden />);
 
-    const wrapper = container.getElementsByTagName('strong')[0];
-
-    expect(wrapper.getAttribute('aria-hidden')).toBeDefined();
-    expect(wrapper.getAttribute('aria-hidden')).toEqual('true');
+    expect(container.querySelector('strong[aria-hidden=true]')).toBeDefined();
   });
 
   it('should have visually hidden comma so screenreaders pause when reading', () => {

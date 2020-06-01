@@ -96,10 +96,9 @@ describe('OnDemand TV Brand Page ', () => {
       service: 'pashto',
     });
 
-    const hiddenHeadline = container.getElementsByTagName('strong')[1];
+    const hiddenHeadline = container.querySelector('strong[aria-hidden=true]');
 
-    expect(hiddenHeadline.getAttribute('aria-hidden')).toBeDefined();
-    expect(hiddenHeadline.getAttribute('aria-hidden')).toEqual('true');
+    expect(hiddenHeadline).toBeDefined();
     expect(hiddenHeadline).toContainHTML('نړۍ دا وخت');
   });
 });
