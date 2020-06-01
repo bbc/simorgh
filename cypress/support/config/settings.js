@@ -319,15 +319,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/afrique/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/afrique/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/afrique/popular/read'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
@@ -1330,7 +1330,7 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: ['/gahuza/51946134'],
+            paths: ['/gahuza/amakuru-52821373'],
             enabled: true,
           },
           test: {
@@ -2859,15 +2859,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/mundo/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/mundo/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/mundo/popular/read'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
@@ -3481,7 +3481,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/persian/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/persian/popular/read'],
@@ -4009,15 +4009,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/russian/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/russian/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/russian/popular/read'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
@@ -4187,15 +4187,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/serbian/cyr/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/serbian/cyr/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/serbian/cyr/popular/read'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
@@ -4316,15 +4316,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/serbian/lat/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/serbian/lat/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/serbian/lat/popular/read'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
@@ -5696,7 +5696,7 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: ['/ukchina/simp/vert-aut-38314451'],
+            paths: ['/ukchina/simp/52836902'],
             enabled: true,
           },
           test: {
@@ -5831,7 +5831,7 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: ['/ukchina/trad/vert-aut-38314451'],
+            paths: ['/ukchina/trad/52836902'],
             enabled: true,
           },
           test: {
