@@ -5,9 +5,19 @@ import { useLocation } from 'react-router-dom';
 const AdSlot = ({ uniqueId }) => {
   const location = useLocation();
   useEffect(() => {
-    window.dotcom.cmd.push(() => {
-      window.dotcom.ads.registerSlot(uniqueId);
-    });
+    if (window.dotcom) {
+      window.dotcom.cmd.push(() => {
+        window.dotcom.ads.registerSlot(uniqueId);
+      });
+    }
+
+    return () => {
+      if (window.dotcom) {
+        window.dotcom.cmd.push(() => {
+          window.dotcom.ads.destroySlot(uniqueId);
+        });
+      }
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
 
