@@ -9,7 +9,6 @@ import serbianLatData from '#data/serbian/frontpage/lat';
 import { service as arabicConfig } from '#lib/config/services/arabic';
 import { service as igboConfig } from '#lib/config/services/igbo';
 import { service as serbianConfig } from '#lib/config/services/serbian';
-import { getLocalMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 import { FrontPage } from '..';
 
 const serviceDataSets = {
@@ -43,10 +42,6 @@ Object.keys(serviceDataSets).forEach(service => {
           service={service}
           variant={variant}
           pageData={serviceDataSets[service][variant]}
-          mostReadEndpointOverride={getLocalMostReadEndpoint({
-            service,
-            variant,
-          })}
         />
       </BrowserRouter>
     ));
