@@ -1761,7 +1761,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/hindi/bbc_hindi_radio/liveradio'],
+            paths: [],
             enabled: true,
           },
         },
