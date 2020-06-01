@@ -1,11 +1,11 @@
 import pipe from 'ramda/src/pipe';
 import pathOr from 'ramda/src/pathOr';
 import fetchPageData from '../../utils/fetchPageData';
-import filterUnknownContentTypes from '#app/routes/utils/filterUnknownContentTypes';
-import filterEmptyGroupItems from '#app/routes/utils/filterEmptyGroupItems';
-import squashTopStories from '#app/routes/utils/squashTopStories';
-import addIdsToItems from '#app/routes/utils/addIdsToItems';
-import filterGroupsWithoutStraplines from '#app/routes/utils/filterGroupsWithoutStraplines';
+import filterUnknownContentTypes from '#app/routes/utils/sharedDataTransformers/filterUnknownContentTypes';
+import filterEmptyGroupItems from '#app/routes/utils/sharedDataTransformers/filterEmptyGroupItems';
+import squashTopStories from '#app/routes/utils/sharedDataTransformers/squashTopStories';
+import addIdsToItems from '#app/routes/utils/sharedDataTransformers/addIdsToItems';
+import filterGroupsWithoutStraplines from '#app/routes/utils/sharedDataTransformers/filterGroupsWithoutStraplines';
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
 import getConfig from '#app/routes/utils/getConfig';
 
