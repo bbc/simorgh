@@ -166,13 +166,12 @@ describe('Story Page', () => {
       pageData,
     );
 
-    // Render using enzyme to capture noscript contents
     const { asFragment } = render(
       createAssetPage({ pageData: pageDataWithHiddenTimestamp }, 'pidgin'),
     );
 
     expect(document.querySelector('main time')).toBeNull();
-    expect(asFragment).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('should render correctly when the secondary column data is not available', async () => {
