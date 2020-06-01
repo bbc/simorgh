@@ -14,7 +14,7 @@ const AdContainer = () => {
   const { enabled: adsEnabled } = useToggle('ads');
 
   if (!hasAds || !adsEnabled) {
-    // return null;
+    return null;
   }
 
   if (isAmp) {
