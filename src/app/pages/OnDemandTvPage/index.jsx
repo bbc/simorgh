@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { shape, string, number } from 'prop-types';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
+import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import MetadataContainer from '../../containers/Metadata';
@@ -91,6 +92,7 @@ const OnDemandTvPage = ({ pageData }) => {
 
   return (
     <>
+      <ChartbeatAnalytics data={pageData} />
       <ATIAnalytics data={pageData} />
       <MetadataContainer
         title={headline}
