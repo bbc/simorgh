@@ -1,4 +1,4 @@
-import getRadioScheduleEndpoint from '.';
+import { getRadioScheduleEndpoint, getLocalRadioScheduleEndpoint } from '.';
 
 describe('getRadioScheduleEndpoint', () => {
   it('should return endpoint when passed service', () => {
@@ -54,5 +54,21 @@ describe('getRadioScheduleEndpoint', () => {
         }),
       ).toBe('/persian/bbc_dari_radio/schedule.json?renderer_env=live');
     });
+  });
+});
+
+describe('getLocalRadioScheduleEndpoint', () => {
+  it('should return endpoint when passed service', () => {
+    expect(getLocalRadioScheduleEndpoint({ service: 'hausa' })).toBe(
+      './data/hausa/bbc_hausa_radio/schedule.json',
+    );
+  });
+  it('should return endpoint when passed service & radioService', () => {
+    expect(
+      getLocalRadioScheduleEndpoint({
+        service: 'persian',
+        radioService: 'dari',
+      }),
+    ).toBe('./data/persian/bbc_dari_radio/schedule.json');
   });
 });
