@@ -9,6 +9,7 @@ import useEvent from '#hooks/useEvent';
 
 // contexts
 import { UserContext } from '#contexts/UserContext';
+import { RequestContext } from '#contexts/RequestContext';
 
 // web-vitals
 import { getCLS, getFID, getLCP, getTTFB } from 'web-vitals';
@@ -18,7 +19,7 @@ const logger = nodeLogger(__filename);
 const webVitalsBase = {
   age: 0,
   type: 'web-vitals',
-  url: window.location.href,
+  url: 'https://www.example.com/some/path', // TODO: Get the current page url
 };
 
 const vitals = { cls: null, fid: null, lcp: null, ttfb: null };
@@ -34,13 +35,11 @@ const sendBeacon = async event => {
   const beacon = [{ ...webVitalsBase, body: { ...vitals } }];
 
   try {
-    // const response = await fetch(process.env.SIMORGH_WEB_VITALS_ENDPOINT, {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: beacon,
-    // });
-
-    console.log(`web-vitals: ${JSON.stringify(beacon)}`);
+    await fetch(process.env.SIMORGH_WEB_VITALS_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/reports+json' },
+      body: beacon,
+    });
   } catch (error) {
     logger.info(WEB_VITALS_SEND_ERROR, {
       ...error,
@@ -52,6 +51,7 @@ const useWebVitals = () => {
   const { enabled } = useToggle('webVitals');
   const { personalisationEnabled } = useContext(UserContext);
 
+  // Setup event listener for `beforeunload` event and call sendBeacon when this event fires.
   useEvent('beforeunload', sendBeacon);
 
   if (enabled && personalisationEnabled) {
