@@ -162,6 +162,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   afrique: {
@@ -332,6 +333,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   amharic: {
@@ -497,6 +499,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   arabic: {
@@ -664,6 +667,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   azeri: {
@@ -802,6 +806,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   bengali: {
@@ -972,6 +977,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   burmese: {
@@ -1142,6 +1148,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   cymrufyw: {
@@ -1191,6 +1198,7 @@ module.exports = () => ({
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   gahuza: {
@@ -1361,6 +1369,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   gujarati: {
@@ -1494,6 +1503,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   hausa: {
@@ -1663,6 +1673,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   hindi: {
@@ -1830,6 +1841,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   igbo: {
@@ -1963,6 +1975,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   indonesia: {
@@ -2133,6 +2146,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   japanese: {
@@ -2266,6 +2280,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   korean: {
@@ -2431,6 +2446,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   kyrgyz: {
@@ -2601,6 +2617,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   marathi: {
@@ -2734,6 +2751,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   mundo: {
@@ -2872,6 +2890,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   naidheachdan: {
@@ -2921,6 +2940,7 @@ module.exports = () => ({
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   nepali: {
@@ -3091,6 +3111,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   news: {
@@ -3140,6 +3161,7 @@ module.exports = () => ({
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   pashto: {
@@ -3310,6 +3332,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   persian: {
@@ -3494,6 +3517,23 @@ module.exports = () => ({
         },
         smoke: true,
       },
+      idxPage: {
+        environments: {
+          live: {
+            paths: ['/persian/afghanistan'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/persian/afghanistan'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/persian/afghanistan'],
+            enabled: true,
+          },
+        },
+        smoke: true,
+      },
     },
   },
   pidgin: {
@@ -3623,6 +3663,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   portuguese: {
@@ -3761,6 +3802,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   punjabi: {
@@ -3893,6 +3935,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   russian: {
@@ -4022,6 +4065,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   scotland: {
@@ -4071,6 +4115,7 @@ module.exports = () => ({
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   serbianCyr: {
@@ -4200,6 +4245,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   serbianLat: {
@@ -4329,6 +4375,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   sinhala: {
@@ -4498,6 +4545,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   somali: {
@@ -4667,6 +4715,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   sport: {
@@ -4683,6 +4732,7 @@ module.exports = () => ({
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   swahili: {
@@ -4853,6 +4903,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   tamil: {
@@ -5023,6 +5074,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   telugu: {
@@ -5156,6 +5208,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   thai: {
@@ -5289,6 +5342,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   tigrinya: {
@@ -5454,6 +5508,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   turkce: {
@@ -5592,6 +5647,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   ukchinaSimp: {
@@ -5727,6 +5783,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   ukchinaTrad: {
@@ -5862,6 +5919,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   ukrainian: {
@@ -6002,6 +6060,23 @@ module.exports = () => ({
           },
         },
         smoke: false,
+      },
+      idxPage: {
+        environments: {
+          live: {
+            paths: ['/ukrainian/ukraine_in_russian'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/ukrainian/ukraine_in_russian'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/ukrainian/ukraine_in_russian'],
+            enabled: true,
+          },
+        },
+        smoke: true,
       },
     },
   },
@@ -6173,6 +6248,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   uzbek: {
@@ -6347,6 +6423,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   vietnamese: {
@@ -6485,6 +6562,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   yoruba: {
@@ -6618,6 +6696,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   zhongwenSimp: {
@@ -6753,6 +6832,7 @@ module.exports = () => ({
         },
         smoke: true,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   zhongwenTrad: {
@@ -6888,6 +6968,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
 });

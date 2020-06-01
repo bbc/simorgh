@@ -2,7 +2,7 @@ import isEmpty from 'ramda/src/isEmpty';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import getAssetType from './getAssetType';
 import fetchPageData from '../../utils/fetchPageData';
-import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
+import getMostReadEndpoint from '#lib/utilities/getMostReadUrl';
 import getSecondaryColumnUrl from '#lib/utilities/getSecondaryColumnUrl';
 
 const pageTypeUrls = (assetType, service, variant) => {
