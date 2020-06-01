@@ -4,6 +4,7 @@ import { shape, string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
+import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import MediaMessage from '../MediaAssetPage/MediaMessage';
@@ -51,6 +52,7 @@ const OnDemandTvPage = ({ pageData }) => {
 
   return (
     <>
+      <ChartbeatAnalytics data={pageData} />
       <ATIAnalytics data={pageData} />
       <MetadataContainer
         title={headline}
