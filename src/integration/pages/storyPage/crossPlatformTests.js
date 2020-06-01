@@ -3,29 +3,6 @@ import { runCommonCrossPlatformTests } from '../../common';
 export default () => {
   runCommonCrossPlatformTests();
 
-  const noscripts = document.querySelectorAll('noscript');
-  const firstImageLazyloaded = noscripts.length > 1;
-
-  if (firstImageLazyloaded) {
-    it('Lazy loaded image contained in noscript tag', () => {
-      const firstImage = noscripts[1];
-      expect(firstImage.innerHTML).toMatchSnapshot();
-    });
-  } else {
-    it('I can see an image with a caption', () => {
-      const imageEl = document.querySelector(
-        'main figure img, main figure amp-img',
-      );
-
-      expect(imageEl).toBeInTheDocument();
-
-      const imageCaptionEl = document.querySelector('main figure figcaption');
-      expect(imageCaptionEl).toBeInTheDocument();
-      expect(imageCaptionEl.textContent).toBeTruthy();
-      expect(imageCaptionEl.textContent).toMatchSnapshot();
-    });
-  }
-
   describe('Social Embeds', () => {
     it('I can see the skip link', () => {
       const skipLinkEl = document.querySelector(

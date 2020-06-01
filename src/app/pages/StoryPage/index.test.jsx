@@ -4,7 +4,6 @@ import { StaticRouter } from 'react-router-dom';
 
 // test helpers
 import { render } from '@testing-library/react';
-import { render as enzymeRender } from 'enzyme';
 import assocPath from 'ramda/src/assocPath';
 import '@testing-library/jest-dom/extend-expect';
 import fetchMock from 'fetch-mock';
@@ -104,11 +103,6 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   return ContextsContainer;
 });
 
-jest.mock('#containers/ATIAnalytics', () => {
-  const ATIAnalytics = () => <div id="ATIAnalytics" />;
-  return ATIAnalytics;
-});
-
 describe('Story Page', () => {
   afterEach(() => {
     fetchMock.restore();
@@ -173,12 +167,12 @@ describe('Story Page', () => {
     );
 
     // Render using enzyme to capture noscript contents
-    const container = enzymeRender(
+    const { asFragment } = render(
       createAssetPage({ pageData: pageDataWithHiddenTimestamp }, 'pidgin'),
     );
 
     expect(document.querySelector('main time')).toBeNull();
-    expect(container).toMatchSnapshot();
+    expect(asFragment).toMatchSnapshot();
   });
 
   it('should render correctly when the secondary column data is not available', async () => {
