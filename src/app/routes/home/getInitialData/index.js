@@ -2,12 +2,12 @@ import pipe from 'ramda/src/pipe';
 import pathOr from 'ramda/src/pathOr';
 import fetchPageData from '../../utils/fetchPageData';
 import filterUnknownContentTypes from '#app/routes/utils/filterUnknownContentTypes';
-import filterEmptyGroupItems from '../../utils/filterEmptyGroupItems';
-import squashTopStories from '../../utils/squashTopStories';
-import addIdsToItems from '../../utils/addIdsToItems';
-import filterGroupsWithoutStraplines from '../../utils/filterGroupsWithoutStraplines';
-import withRadioSchedule from '../../utils/withRadioSchedule';
-import getConfig from '../../utils/getConfig';
+import filterEmptyGroupItems from '#app/routes/utils/filterEmptyGroupItems';
+import squashTopStories from '#app/routes/utils/squashTopStories';
+import addIdsToItems from '#app/routes/utils/addIdsToItems';
+import filterGroupsWithoutStraplines from '#app/routes/utils/filterGroupsWithoutStraplines';
+import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
+import getConfig from '#app/routes/utils/getConfig';
 
 const transformJson = pipe(
   filterUnknownContentTypes,

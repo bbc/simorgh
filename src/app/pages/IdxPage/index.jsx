@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import path from 'ramda/src/path';
 import StyledPageDiv from '#lib/pageStyles/styledPageDiv';
 import FrontPageSection from '#containers/FrontPageSection';
-import idxPageDataPropTypes from './idxPageDataPropTypes';
+import idxPageDataPropTypes from '#models/propTypes/idxPage';
 
 const IdxPage = ({ pageData }) => {
   const groups = path(['content', 'groups'], pageData);
