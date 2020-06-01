@@ -58,7 +58,7 @@ const HeadingContainer = ({
       script={script}
       service={service}
       id={idAttr}
-      tabIndex="-1"
+      {...(idAttr === 'content' ? { tabIndex: '-1' } : {})}
       {...(ariaHidden ? { as: 'strong', 'aria-hidden': 'true' } : {})}
     >
       <span

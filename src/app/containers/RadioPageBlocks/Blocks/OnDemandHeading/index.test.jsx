@@ -5,13 +5,13 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import OnDemandHeading from '.';
 
 // eslint-disable-next-line react/prop-types
-const Component = ({ ariaHidden }) => (
+const Component = ({ ariaHidden, idAttr }) => (
   <ServiceContextProvider service="news">
     <OnDemandHeading
       brandTitle="Dunia Pagi Ini"
       releaseDateTimeStamp={1587945600000}
       uuid="uuid"
-      idAttr="content"
+      idAttr={idAttr}
       ariaHidden={ariaHidden}
     />
   </ServiceContextProvider>
@@ -41,6 +41,18 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
     const { container } = render(<Component ariaHidden />);
 
     expect(container.querySelector('strong[aria-hidden=true]')).toBeDefined();
+  });
+
+  it('should have a tab index of -1 when id is "content"', () => {
+    const { container } = render(<Component idAttr="content" />);
+
+    expect(container.querySelector('[tabIndex=-1]')).toBeInTheDocument();
+  });
+
+  it('should not have a tab index when id is not "content"', () => {
+    const { container } = render(<Component idAttr="foo" />);
+
+    expect(container.querySelector('[tabIndex]')).toBeNull();
   });
 
   it('should have visually hidden comma so screenreaders pause when reading', () => {
