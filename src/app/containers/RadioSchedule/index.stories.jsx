@@ -9,6 +9,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
+import { getLocalRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
 
 // Currently, only these services have radio schedule data
 const radioServices = {
@@ -40,7 +41,12 @@ const renderRadioScheduleContainer = service => (
         pathname={`/${service}`}
       >
         <ServiceContextProvider service={service}>
-          <RadioScheduleContainer />
+          <RadioScheduleContainer
+            radioScheduleEndpointOverride={getLocalRadioScheduleEndpoint({
+              service,
+              radioService: radioServices[service],
+            })}
+          />
         </ServiceContextProvider>
       </RequestContextProvider>
     </ToggleContextProvider>
