@@ -26,7 +26,10 @@ storiesOf('Pages|Article Page', module)
           service="pidgin"
         >
           <UserContextProvider>
-            <ArticlePage pageData={articleData} />
+            <ArticlePage
+              pageData={articleData}
+              mostReadEndpointOverride="./data/news/mostRead/index.json"
+            />
           </UserContextProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
