@@ -19,7 +19,7 @@ import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstra
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import StyledPageDiv from '#lib/pageStyles/styledPageDiv';
+import PageContainer from '#lib/pageStyles/pageContainer';
 
 const MostReadSection = styled.section.attrs(() => ({
   role: 'region',
@@ -108,7 +108,7 @@ const FrontPage = ({ pageData }) => {
           {offScreenText}
         </VisuallyHiddenText>
         <AdContainer />
-        <StyledPageDiv>
+        <PageContainer>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
               {group.type === 'useful-links' && renderMostRead()}
@@ -120,7 +120,7 @@ const FrontPage = ({ pageData }) => {
             </Fragment>
           ))}
           {!hasUsefulLinks && renderMostRead()}
-        </StyledPageDiv>
+        </PageContainer>
       </main>
     </>
   );

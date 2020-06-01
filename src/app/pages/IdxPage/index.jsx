@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import path from 'ramda/src/path';
-import StyledPageDiv from '#lib/pageStyles/styledPageDiv';
+import PageContainer from '#lib/pageStyles/pageContainer';
 import FrontPageSection from '#containers/FrontPageSection';
 import idxPageDataPropTypes from '#models/propTypes/idxPage';
 
@@ -10,13 +10,13 @@ const IdxPage = ({ pageData }) => {
   return (
     <main role="main">
       <h1 id="content">IDX Page</h1>
-      <StyledPageDiv>
+      <PageContainer>
         {groups.map((group, index) => (
           <Fragment key={group.title}>
             <FrontPageSection group={group} sectionNumber={index} />
           </Fragment>
         ))}
-      </StyledPageDiv>
+      </PageContainer>
     </main>
   );
 };

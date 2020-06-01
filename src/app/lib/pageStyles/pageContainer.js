@@ -15,7 +15,7 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import styled from 'styled-components';
 
-const StyledPageDiv = styled.div`
+const PageContainer = styled.div`
   /* To add GEL Margins */
   margin: 0 ${GEL_MARGIN_BELOW_400PX};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -43,4 +43,4 @@ const StyledPageDiv = styled.div`
   }
 `;
 
-export default StyledPageDiv;
+export default PageContainer;
