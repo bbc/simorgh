@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
-import pathOr from 'ramda/src/path';
+import path from 'ramda/src/path';
 import { ServiceContext } from '#contexts/ServiceContext';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 
 const IdxPage = ({ pageData }) => {
   const { radioSchedule } = useContext(ServiceContext);
 
-  const radioScheduleData = pathOr(['radioScheduleData'], pageData);
-  const radioScheduleOnIdxPage = pathOr(['onIdxPage'], radioSchedule);
-  // const radioScheduleIdxPosition = pathOr(['idxPagePosition'], idxPage);
+  const radioScheduleData = path(['radioScheduleData'], pageData);
+  const radioScheduleOnIdxPage = path(['onIdxPage'], radioSchedule);
+  // const radioScheduleIdxPosition = pathOr(['idxPagePosition'], radioSchedule);
 
   return (
     <main role="main">
