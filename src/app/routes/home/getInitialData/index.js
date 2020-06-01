@@ -1,6 +1,6 @@
 import pipe from 'ramda/src/pipe';
 import pathOr from 'ramda/src/pathOr';
-import fetchPageData from '../../utils/fetchPageData';
+import fetchPageData from '#app/routes/utils/fetchPageData';
 import filterUnknownContentTypes from '#app/routes/utils/sharedDataTransformers/filterUnknownContentTypes';
 import filterEmptyGroupItems from '#app/routes/utils/sharedDataTransformers/filterEmptyGroupItems';
 import squashTopStories from '#app/routes/utils/sharedDataTransformers/squashTopStories';
