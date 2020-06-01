@@ -111,7 +111,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
             group2: 6,
             group3: 6,
             group4: 6,
-            group5: 12,
+            group5: 11,
           }}
         >
           {children}
