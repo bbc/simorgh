@@ -8,9 +8,12 @@ export default () => {
   runCanonicalAnalyticsTests();
 
   describe('Lead image', () => {
-    it('I can see an image with a caption in a noscript tag', () => {
-      const imageEl = document.querySelector('main figure');
-      console.log(`here: ${JSON.stringify(imageEl, null, 2)}`);
+    it('I can see an image with a caption', () => {
+      // This selects either a img tag or a noscript tag in the case of a
+      // lazy loaded image
+      const imageEl = document.querySelector(
+        'main figure img, main figure noscript',
+      );
       expect(imageEl).toBeInTheDocument();
 
       const imageCaptionEl = document.querySelector('main figure figcaption');
