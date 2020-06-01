@@ -70,3 +70,43 @@ describe('OnDemand TV Brand Page ', () => {
     expect(getByText('نړۍ دا وخت')).toBeInTheDocument();
   });
 });
+
+it('should show the datestamp correctly for Pashto OnDemand TV Pages', async () => {
+  fetch.mockResponse(JSON.stringify(pashtoPageData));
+
+  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { getByText } = await renderPage({
+    pageData,
+    service: 'pashto',
+  });
+
+  expect(getByText('۲۷ می ۲۰۲۰')).toBeInTheDocument();
+});
+
+it('should show the summary for OnDemand TV Pages', async () => {
+  fetch.mockResponse(JSON.stringify(pashtoPageData));
+
+  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { getByText } = await renderPage({
+    pageData,
+    service: 'pashto',
+  });
+
+  expect(
+    getByText(
+      'د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.',
+    ),
+  ).toBeInTheDocument();
+});
+
+it('should show the content unavailable message for OnDemand TV Pages', async () => {
+  fetch.mockResponse(JSON.stringify(pashtoPageData));
+
+  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { getByText } = await renderPage({
+    pageData,
+    service: 'pashto',
+  });
+
+  expect(getByText('دغه فایل نور د لاسرسي وړ نه دی.')).toBeInTheDocument();
+});

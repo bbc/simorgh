@@ -167,7 +167,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 
 @media (min-width:80rem) {
   .c5 {
-    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
+    width: calc(11/20*(100% - 20 * 1rem) + 10 * 1rem );
     margin: 0 0.5rem;
     margin-left: 10%;
     display: inline-block;
