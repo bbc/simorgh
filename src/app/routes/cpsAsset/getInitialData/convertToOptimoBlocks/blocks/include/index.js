@@ -2,6 +2,7 @@ import 'isomorphic-fetch';
 import {
   INCLUDE_FETCH_ERROR,
   INCLUDE_REQUEST_RECEIVED,
+  INCLUDE_UNSUPPORTED,
 } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
 
@@ -72,6 +73,10 @@ const convertInclude = async ({ href, type, ...rest }) => {
   // This determines if the type is supported and returns the include type name
   const includeType = supportedTypes[typeExtraction];
   if (!includeType) {
+    logger.info(INCLUDE_UNSUPPORTED, {
+      type,
+      url: href,
+    });
     return null;
   }
 
