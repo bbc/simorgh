@@ -18,8 +18,7 @@ const AdSlot = ({ uniqueId }) => {
         });
       }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location]);
+  }, [uniqueId, location]);
 
   return <div id={`dotcom-${uniqueId}`} className="dotcom-ad" />;
 };
