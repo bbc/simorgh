@@ -492,7 +492,7 @@ describe('Chartbeat utilities', () => {
         platform: 'amp',
         pageType: 'STY',
         data: {
-          name: 'STY Page Title',
+          pageTitle: 'STY Page Title',
         },
         brandName: 'BBC News Mundo',
         chartbeatDomain: 'mundo.bbc.co.uk',
@@ -523,7 +523,7 @@ describe('Chartbeat utilities', () => {
         platform: 'canonical',
         pageType: 'STY',
         data: {
-          name: 'STY Page Title',
+          pageTitle: 'STY Page Title',
         },
         brandName: 'BBC News Mundo',
         chartbeatDomain: 'mundo.bbc.co.uk',
