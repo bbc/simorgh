@@ -9,17 +9,20 @@ const validIdt2Props = {
     altText: 'some alt text',
     dimensions: {
       small: {
-        href: 'small.jpeg/150',
+        href:
+          'https://www.example.com/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/150',
         height: 400,
         width: 500,
       },
       medium: {
-        href: 'medium.jpeg/350',
+        href:
+          'https://www.example.com/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/350',
         height: 600,
         width: 700,
       },
       large: {
-        href: 'large.jpeg/550',
+        href:
+          'https://www.example.com/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/550',
         height: 800,
         width: 900,
       },
@@ -35,6 +38,8 @@ const invalidIdt2Props = {
 
 describe('AmpIncludeContainer', () => {
   let container;
+  const includesBaseUrl = 'https://foobar.com/includes';
+  process.env.SIMORGH_INCLUDES_BASE_URL = includesBaseUrl;
 
   beforeEach(() => {
     jest.resetModules();

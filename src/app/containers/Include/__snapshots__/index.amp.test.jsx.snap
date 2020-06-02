@@ -16,8 +16,8 @@ exports[`AmpIncludeContainer should render for a valid IDT2 include 1`] = `
       height="400"
       layout="responsive"
       sizes="(max-width: 500px) 150px, (max-width: 700px) 350px, 550px"
-      src="undefined/"
-      srcset="undefined/ 150w,undefined/ 350w,undefined/ 550w"
+      src="https://foobar.com/includes/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/150"
+      srcset="https://foobar.com/includes/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/150 150w,https://foobar.com/includes/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/350 350w,https://foobar.com/includes/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/550 550w"
       width="500"
     />
   </div>
