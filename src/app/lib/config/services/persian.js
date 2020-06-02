@@ -16,9 +16,6 @@ export const service = {
       hasAds: false,
       advertisementLabel: 'آگهی',
     },
-    idxPage: {
-      hasMostRead: true,
-    },
     lang: 'fa',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -206,6 +203,7 @@ export const service = {
       lastUpdated: 'به روز شده در',
       numberOfItems: 10,
       hasMostRead: true,
+      onIdxPage: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,
