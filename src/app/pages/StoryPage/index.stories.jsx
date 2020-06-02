@@ -63,6 +63,7 @@ const withSecondaryColumnsKnob = pageData => storyFn => {
             status={200}
             pageData={data}
             service={service}
+            mostReadEndpointOverride="./data/mundo/mostRead/index.json"
           />
         </BrowserRouter>
       );

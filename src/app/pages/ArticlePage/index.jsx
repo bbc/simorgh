@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import styled from 'styled-components';
-import { node } from 'prop-types';
+import { string, node } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
@@ -81,7 +81,7 @@ const MostReadSection = styled.section.attrs(() => ({
   }
 `;
 
-const ArticlePage = ({ pageData }) => {
+const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const {
     articleAuthor,
     service,
@@ -146,12 +146,20 @@ const ArticlePage = ({ pageData }) => {
           />
         </GridWrapper>
       </StyledMain>
-      <MostReadContainer wrapper={MostReadWrapper} />
+      <MostReadContainer
+        mostReadEndpointOverride={mostReadEndpointOverride}
+        wrapper={MostReadWrapper}
+      />
     </>
   );
 };
 ArticlePage.propTypes = {
   pageData: articleDataPropTypes.isRequired,
+  mostReadEndpointOverride: string,
+};
+
+ArticlePage.defaultProps = {
+  mostReadEndpointOverride: null,
 };
 
 export default ArticlePage;

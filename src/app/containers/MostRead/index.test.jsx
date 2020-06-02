@@ -8,7 +8,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import serbianLatMostReadData from '#data/serbian/mostRead/lat';
-import getMostReadEndpoint from '#lib/utilities/getMostReadUrl';
+import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 import MostReadContainer from '.';
 
 /* eslint-disable react/prop-types */
