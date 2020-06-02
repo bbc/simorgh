@@ -1,6 +1,6 @@
 import getInitialData from '.';
 import * as fetchPageData from '../../utils/fetchPageData';
-import onDemandTvJson from '#data/pashto/bbc_pashto_tv/w13xttn4';
+import onDemandTvJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4';
 
 fetch.mockResponse(JSON.stringify(onDemandTvJson));
 const { env } = process;
