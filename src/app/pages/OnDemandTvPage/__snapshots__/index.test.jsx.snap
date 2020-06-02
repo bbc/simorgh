@@ -2,6 +2,9 @@
 
 exports[`should show the expired content message if episode is expired 1`] = `
 <div>
+  <div>
+    chartbeat
+  </div>
   <noscript />
   <main
     class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1brqmij-1 ipoXsG"

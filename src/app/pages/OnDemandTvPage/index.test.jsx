@@ -170,7 +170,11 @@ it('should show the video player on amp with live override', async () => {
 });
 
 it('should show the expired content message if episode is expired', async () => {
-  const pageDataWithoutVersions = assocPath(['content', 'blocks', 0, 'versions'], [], pashtoPageData);
+  const pageDataWithoutVersions = assocPath(
+    ['content', 'blocks', 0, 'versions'],
+    [],
+    pashtoPageData,
+  );
   fetch.mockResponse(JSON.stringify(pageDataWithoutVersions));
   const { pageData } = await getInitialData('some-ondemand-tv-path');
   const { container, getByText } = await renderPage({
