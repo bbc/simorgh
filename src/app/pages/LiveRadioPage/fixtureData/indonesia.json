@@ -24,6 +24,7 @@
       }
     ]
   },
+  "masterBrand": "bbc_indonesian_radio",
   "language": "id",
   "id": "urn:bbc:ares::ws_live:bbc_indonesian_radio",
   "name": "BBC Indonesia Radio",
