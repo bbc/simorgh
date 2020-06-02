@@ -1,7 +1,10 @@
 import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+} from '@bbc/gel-foundations/spacings';
 import { string, bool } from 'prop-types';
 
 import {
@@ -15,8 +18,15 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import getPlaceholderImageUrl from '../../../routes/utils/getPlaceholderImageUrl';
 
-const StyledWrapper = styled.div`
-  padding-top: ${GEL_SPACING_TRPL};
+const VideoPlayerWrapper = styled.div`
+  margin-top: ${GEL_SPACING_TRPL};
+  width: calc(100% + ${GEL_SPACING_DBL});
+`;
+
+const landscapeRatio = '56.25%';
+const MediaMessageWrapper = styled.div`
+  padding-top: ${landscapeRatio};
+  position: relative;
 `;
 
 const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
@@ -42,9 +52,9 @@ const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
     );
 
     return (
-      <StyledWrapper>
+      <MediaMessageWrapper>
         <MediaMessage service={service} message={expiredContentMessage} />
-      </StyledWrapper>
+      </MediaMessageWrapper>
     );
   }
   const placeholderSrc = getPlaceholderImageUrl(imageUrl);
@@ -67,7 +77,7 @@ const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
   );
 
   return (
-    <StyledWrapper>
+    <VideoPlayerWrapper>
       {isAmp ? (
         <AmpMediaPlayer
           placeholderSrc={placeholderSrc}
@@ -87,7 +97,7 @@ const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
           noJsClassName="no-js"
         />
       )}
-    </StyledWrapper>
+    </VideoPlayerWrapper>
   );
 };
 
