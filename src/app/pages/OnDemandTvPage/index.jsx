@@ -21,8 +21,6 @@ const StyledGelWrapperGrid = styled.div`
   padding-top: ${GEL_SPACING_TRPL};
 `;
 
-const getISOStringDate = date => new Date(date).toISOString();
-
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,
   group1: one,
@@ -96,11 +94,12 @@ const OnDemandTvPage = ({ pageData }) => {
     episodeAvailableFrom,
     episodeAvailableUntil,
     releaseDateTimeStamp,
-    firstPublished,
-    lastPublished,
     masterBrand,
     episodeId,
     imageUrl,
+    promoBrandTitle,
+    durationISO8601,
+    thumbnailImageUrl,
   } = pageData;
 
   const { dir } = useContext(ServiceContext);
@@ -115,15 +114,7 @@ const OnDemandTvPage = ({ pageData }) => {
         description={shortSynopsis}
         openGraphType="website"
       />
-      <LinkedData
-        // Do we need showAuthor here?
-        // Check OD radio type value once PRd
-        type="TVEpisode"
-        datePublished={getISOStringDate(firstPublished)}
-        dateModified={getISOStringDate(lastPublished)}
-        seoTitle={headline}
-        headline={headline}
-      />
+      <LinkedData type="WebPage" seoTitle={headline} />
       <StyledGelPageGrid
         forwardedAs="main"
         role="main"
@@ -148,6 +139,11 @@ const OnDemandTvPage = ({ pageData }) => {
               episodeAvailableFrom,
               episodeAvailableUntil,
               imageUrl,
+              promoBrandTitle,
+              shortSynopsis,
+              durationISO8601,
+              thumbnailImageUrl,
+              releaseDateTimeStamp,
             })}
           </StyledGelWrapperGrid>
           <OnDemandHeadingBlock
@@ -173,6 +169,10 @@ OnDemandTvPage.propTypes = {
     episodeId: string,
     imageUrl: string,
     promoBrandTitle: string,
+    episodeAvailableFrom: number,
+    episodeAvailableUntil: number,
+    durationISO8601: string,
+    thumbnailImageUrl: string,
   }).isRequired,
 };
 
