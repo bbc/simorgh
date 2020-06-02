@@ -23,25 +23,6 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
         cy.get('main p').should('contain', description);
       });
     });
-
-    it('should render a byline for the page', () => {
-      cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-        const { name, title, persons } = body.promo.byline;
-        const [person] = persons;
-
-        if (name) {
-          cy.get('main ul li').should('contain', name);
-        } else {
-          cy.get('main ul li').should('contain', person.name);
-        }
-
-        if (title) {
-          cy.get('main ul li').should('contain', title);
-        } else {
-          cy.get('main ul li').should('contain', person.function);
-        }
-      });
-    });
   });
 };
 
