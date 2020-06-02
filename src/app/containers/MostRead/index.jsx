@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
-import { oneOf, elementType, bool } from 'prop-types';
+import { oneOf, string, elementType, bool } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import Canonical from './Canonical';
 import mostReadShape from './utilities/mostReadShape';
-import getMostReadEndpoint from '#lib/utilities/getMostReadUrl';
+import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 
 const MostReadContainer = ({
+  mostReadEndpointOverride,
   initialData,
   columnLayout,
   size,
@@ -35,7 +36,8 @@ const MostReadContainer = ({
     return null;
   }
 
-  const endpoint = getMostReadEndpoint({ service, variant });
+  const endpoint =
+    mostReadEndpointOverride || getMostReadEndpoint({ service, variant });
 
   return (
     <Canonical
@@ -49,6 +51,7 @@ const MostReadContainer = ({
 };
 
 MostReadContainer.propTypes = {
+  mostReadEndpointOverride: string,
   columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
   size: oneOf(['default', 'small']),
   initialData: mostReadShape,
@@ -57,6 +60,7 @@ MostReadContainer.propTypes = {
 };
 
 MostReadContainer.defaultProps = {
+  mostReadEndpointOverride: undefined,
   columnLayout: 'multiColumn',
   size: 'default',
   initialData: undefined,
