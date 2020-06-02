@@ -29,7 +29,6 @@ export default async ({ path: pathname }) => {
         heading: getHeading(json),
         bodySummary: getBodySummary(json),
         language: getLanguage(json),
-        masterBrand: getMasterBrand(json),
         id: getMetaDataId(json),
         name: getPromoName(json),
         summary: getPromoSummary(json),
