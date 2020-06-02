@@ -434,7 +434,8 @@ describe('cspHeader', () => {
             `script-src ${scriptSrcExpectation.join(' ')}; ` +
             `style-src ${styleSrcExpectation.join(' ')}; ` +
             `worker-src ${workerSrcExpectation.join(' ')}; ` +
-            `report-to default`;
+            `report-to default; ` +
+            `upgrade-insecure-requests`;
 
           expect(headers['Content-Security-Policy']).toEqual(
             expectedCSPHeaderString,
