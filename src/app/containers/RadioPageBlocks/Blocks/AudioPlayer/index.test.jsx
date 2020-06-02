@@ -17,11 +17,6 @@ const defaultAudioPlayerProps = {
   idAttr: 'idAttr',
   externalId: 'externalId',
   id: 'id',
-  promoBrandTitle: 'ماښامنۍ خپرونه',
-  shortSynopsis: 'د بي بي سي ورلډ سروس څخه پروګرام کول',
-  durationISO8601: 'PT29M30S',
-  thumbnailImageUrl: 'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
-  releaseDateTimeStamp: 1587655800000,
 };
 
 const defaultRequestContextValue = { platform: 'foobar', origin };

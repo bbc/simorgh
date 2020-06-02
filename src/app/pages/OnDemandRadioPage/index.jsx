@@ -51,11 +51,6 @@ const renderEpisode = ({
   episodeId,
   episodeAvailableFrom,
   episodeAvailableUntil,
-  promoBrandTitle,
-  shortSynopsis,
-  thumbnailImageUrl,
-  durationISO8601,
-  releaseDateTimeStamp,
 }) => {
   const episodeAvailability = getEpisodeAvailability(
     episodeAvailableFrom,
@@ -63,17 +58,7 @@ const renderEpisode = ({
   );
   switch (episodeAvailability) {
     case EPISODE_IS_AVAILABLE:
-      return (
-        <AudioPlayerBlock
-          externalId={masterBrand}
-          id={episodeId}
-          promoBrandTitle={promoBrandTitle}
-          shortSynopsis={shortSynopsis}
-          thumbnailImageUrl={thumbnailImageUrl}
-          durationISO8601={durationISO8601}
-          releaseDateTimeStamp={releaseDateTimeStamp}
-        />
-      );
+      return <AudioPlayerBlock externalId={masterBrand} id={episodeId} />;
     case EPISODE_IS_EXPIRED:
       return <AudioPlayerBlock isExpired />;
     case EPISODE_IS_NOT_YET_AVAILABLE:
@@ -115,7 +100,15 @@ const OnDemandRadioPage = ({ pageData }) => {
         description={shortSynopsis}
         openGraphType="website"
       />
-      <LinkedData type="RadioChannel" seoTitle={headline} />
+      <LinkedData
+        type="AudioObject"
+        seoTitle={promoBrandTitle}
+        name={promoBrandTitle}
+        description={shortSynopsis}
+        duration={durationISO8601}
+        thumbnailUrl={thumbnailImageUrl}
+        uploadDate={new Date(releaseDateTimeStamp).toISOString()}
+      />
       <StyledGelPageGrid
         forwardedAs="main"
         role="main"
@@ -152,11 +145,6 @@ const OnDemandRadioPage = ({ pageData }) => {
             episodeId,
             episodeAvailableFrom,
             episodeAvailableUntil,
-            promoBrandTitle,
-            shortSynopsis,
-            thumbnailImageUrl,
-            durationISO8601,
-            releaseDateTimeStamp,
           })}
         </Grid>
       </StyledGelPageGrid>
