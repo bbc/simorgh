@@ -8,6 +8,7 @@ const getPromoName = path(['promo', 'name']);
 const getPromoSummary = path(['promo', 'summary']);
 const getPageTitle = path(['metadata', 'analyticsLabels', 'pageTitle']);
 const getContentType = path(['metadata', 'analyticsLabels', 'contentType']);
+const getMasterBrand = path(['content', 'blocks', 2, 'externalId']);
 const getPageIdentifier = path([
   'metadata',
   'analyticsLabels',
@@ -37,6 +38,7 @@ export default async ({ path: pathname }) => {
         pageTitle: getPageTitle(json),
         contentType: getContentType(json),
         pageIdentifier: getPageIdentifier(json),
+        masterBrand: getMasterBrand(json),
         ...pageType,
       },
     }),
