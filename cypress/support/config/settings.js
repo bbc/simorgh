@@ -73,7 +73,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -162,6 +162,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   afrique: {
@@ -238,7 +239,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -332,6 +333,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   amharic: {
@@ -408,7 +410,7 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -497,6 +499,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   arabic: {
@@ -573,7 +576,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -664,6 +667,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   azeri: {
@@ -724,7 +728,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -802,6 +806,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   bengali: {
@@ -878,7 +883,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -972,6 +977,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   burmese: {
@@ -1048,7 +1054,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -1142,6 +1148,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   cymrufyw: {
@@ -1186,11 +1193,12 @@ module.exports = () => ({
       },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   gahuza: {
@@ -1267,7 +1275,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -1361,6 +1369,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   gujarati: {
@@ -1421,7 +1430,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1494,6 +1503,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   hausa: {
@@ -1570,7 +1580,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -1663,6 +1673,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   hindi: {
@@ -1739,7 +1750,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -1750,7 +1761,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/hindi/bbc_hindi_radio/liveradio'],
+            paths: [],
             enabled: true,
           },
         },
@@ -1830,6 +1841,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   igbo: {
@@ -1890,7 +1902,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1963,6 +1975,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   indonesia: {
@@ -2039,14 +2052,14 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/indonesia/bbc_indonesian_radio/programmes/w13xtt0s'],
             enabled: false,
           },
           local: {
@@ -2133,6 +2146,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   japanese: {
@@ -2193,7 +2207,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2266,6 +2280,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   korean: {
@@ -2342,7 +2357,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -2431,6 +2446,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   kyrgyz: {
@@ -2507,7 +2523,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -2601,6 +2617,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   marathi: {
@@ -2661,7 +2678,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2734,6 +2751,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   mundo: {
@@ -2794,7 +2812,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2872,6 +2890,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   naidheachdan: {
@@ -2916,11 +2935,12 @@ module.exports = () => ({
       },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   nepali: {
@@ -2997,7 +3017,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -3091,6 +3111,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   news: {
@@ -3135,11 +3156,12 @@ module.exports = () => ({
       },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   pashto: {
@@ -3216,14 +3238,14 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/pashto/bbc_pashto_radio/programmes/p0340yr4'],
             enabled: false,
           },
           local: {
@@ -3310,6 +3332,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   persian: {
@@ -3395,7 +3418,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -3494,6 +3517,23 @@ module.exports = () => ({
         },
         smoke: true,
       },
+      idxPage: {
+        environments: {
+          live: {
+            paths: ['/persian/afghanistan'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/persian/afghanistan'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/persian/afghanistan'],
+            enabled: true,
+          },
+        },
+        smoke: true,
+      },
     },
   },
   pidgin: {
@@ -3554,7 +3594,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3623,6 +3663,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   portuguese: {
@@ -3683,7 +3724,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3761,6 +3802,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   punjabi: {
@@ -3820,7 +3862,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3893,6 +3935,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   russian: {
@@ -3953,7 +3996,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4022,6 +4065,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   scotland: {
@@ -4066,11 +4110,12 @@ module.exports = () => ({
       },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   serbianCyr: {
@@ -4131,7 +4176,7 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4200,6 +4245,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   serbianLat: {
@@ -4260,7 +4306,7 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4329,6 +4375,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   sinhala: {
@@ -4405,7 +4452,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -4498,6 +4545,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   somali: {
@@ -4573,7 +4621,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -4667,6 +4715,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   sport: {
@@ -4678,11 +4727,12 @@ module.exports = () => ({
       errorPage404: { environments: undefined, smoke: false },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   swahili: {
@@ -4759,7 +4809,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -4853,6 +4903,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   tamil: {
@@ -4929,7 +4980,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -5023,6 +5074,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   telugu: {
@@ -5083,7 +5135,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5156,6 +5208,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   thai: {
@@ -5216,7 +5269,7 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5289,6 +5342,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   tigrinya: {
@@ -5365,7 +5419,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -5454,6 +5508,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   turkce: {
@@ -5514,7 +5569,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5592,6 +5647,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   ukchinaSimp: {
@@ -5652,7 +5708,7 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5727,6 +5783,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   ukchinaTrad: {
@@ -5787,7 +5844,7 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5862,6 +5919,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   ukrainian: {
@@ -5922,7 +5980,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6003,6 +6061,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: {
+        environments: {
+          live: {
+            paths: ['/ukrainian/ukraine_in_russian'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/ukrainian/ukraine_in_russian'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/ukrainian/ukraine_in_russian'],
+            enabled: true,
+          },
+        },
+        smoke: true,
+      },
     },
   },
   urdu: {
@@ -6079,7 +6154,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -6173,6 +6248,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   uzbek: {
@@ -6249,7 +6325,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -6347,6 +6423,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   vietnamese: {
@@ -6407,7 +6484,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6485,6 +6562,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   yoruba: {
@@ -6545,7 +6623,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6618,6 +6696,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   zhongwenSimp: {
@@ -6678,7 +6757,7 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6753,6 +6832,7 @@ module.exports = () => ({
         },
         smoke: true,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   zhongwenTrad: {
@@ -6813,7 +6893,7 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6888,6 +6968,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
 });

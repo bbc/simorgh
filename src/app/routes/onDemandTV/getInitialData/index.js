@@ -8,6 +8,7 @@ const getLanguage = path(['metadata', 'language']);
 const getHeadline = path(['promo', 'headlines', 'headline']);
 const getId = path(['metadata', 'id']);
 const getShortSynopsis = path(['promo', 'media', 'synopses', 'short']);
+const getMasterBrand = path(['metadata', 'createdBy']);
 const getContentType = path(['metadata', 'analyticsLabels', 'contentType']);
 const getPageTitle = path(['metadata', 'analyticsLabels', 'pageTitle']);
 const getPageIdentifier = path([
@@ -15,7 +16,6 @@ const getPageIdentifier = path([
   'analyticsLabels',
   'pageIdentifier',
 ]);
-const getMasterBrand = path(['metadata', 'createdBy']);
 const getEpisodeId = path(['content', 'blocks', 0, 'id']);
 const getReleaseDateTimeStamp = path(['metadata', 'releaseDateTimeStamp']);
 const getDurationISO8601 = path([
