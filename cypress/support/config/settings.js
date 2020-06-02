@@ -2060,7 +2060,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/indonesia/bbc_indonesian_radio/programmes/w13xtt0s'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/indonesia/bbc_indonesian_radio/w172xh267fpn19l'],
@@ -3246,7 +3246,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/pashto/bbc_pashto_radio/programmes/p0340yr4'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/pashto/bbc_pashto_radio/w3ct0lz1'],
