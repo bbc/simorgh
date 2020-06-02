@@ -5,7 +5,7 @@ import {
   INCLUDE_FETCH_ERROR,
   // INCLUDE_MISSING_URL,
   INCLUDE_REQUEST_RECEIVED,
-  // INCLUDE_UNSUPPORTED,
+  INCLUDE_UNSUPPORTED,
 } from '#lib/logger.const';
 
 const vjMarkup = `<div>Visual Journalism Markup</div><script type="text/javascript" src="localhost/vj.js"></script>`;
@@ -282,10 +282,10 @@ describe('convertInclude', () => {
     expect(fetch).not.toHaveBeenCalled();
     expect(loggerMock.error).not.toHaveBeenCalled();
     expect(loggerMock.info).toHaveBeenCalledTimes(1);
-    // expect(loggerMock.info).toBeCalledWith(INCLUDE_UNSUPPORTED, {
-    //   type: 'include',
-    //   url: 'https://foobar.com/includes/idt3/111-222-333-444-555/html',
-    // });
+    expect(loggerMock.info).toBeCalledWith(INCLUDE_UNSUPPORTED, {
+      type: 'include',
+      url: '/idt3/111-222-333-444-555',
+    });
   });
 
   it('should return null for an unsupported include type with no leading / in href', async () => {
@@ -301,10 +301,10 @@ describe('convertInclude', () => {
     expect(fetch).not.toHaveBeenCalled();
     expect(loggerMock.error).not.toHaveBeenCalled();
     expect(loggerMock.info).toHaveBeenCalledTimes(1);
-    // expect(loggerMock.info).toBeCalledWith(INCLUDE_UNSUPPORTED, {
-    //   type: 'include',
-    //   url: 'https://foobar.com/idt3/111-222-333-444-555',
-    // });
+    expect(loggerMock.info).toBeCalledWith(INCLUDE_UNSUPPORTED, {
+      type: 'include',
+      url: 'idt3/111-222-333-444-555',
+    });
   });
 
   it('should return null for null/undefined href', async () => {
