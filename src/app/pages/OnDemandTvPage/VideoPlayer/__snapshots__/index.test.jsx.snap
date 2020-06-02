@@ -1,7 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`VideoPlayer should render correctly for amp 1`] = `
-.c1 {
+<html>
+  <head>
+    <script
+      async="true"
+      custom-element="amp-iframe"
+      src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"","description":"","duration":"","thumbnailUrl":"","datePublished":"1970-01-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_brand_tv/id/ps/amp?morph_env=live"}
+    </script>
+  </head>
+  <body>
+    .c1 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
@@ -19,16 +33,7 @@ exports[`VideoPlayer should render correctly for amp 1`] = `
   }
 }
 
-<html>
-  <head>
-    <script
-      async="true"
-      custom-element="amp-iframe"
-      src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
-    />
-  </head>
-  <body>
-    <div>
+<div>
       <div
         class="c0"
       >
@@ -91,21 +96,34 @@ exports[`VideoPlayer should render correctly for canonical 1`] = `
   }
 }
 
-<div
-  class="c0"
->
-  <div
-    class="c1"
-  >
-    <iframe
-      allow="autoplay; fullscreen"
-      allowfullscreen=""
-      class="c2"
-      scrolling="no"
-      src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_brand_tv/id/ps?morph_env=live"
-      title="ویډیو پلیئر"
-    />
-    <noscript />
-  </div>
-</div>
+<html>
+  <head>
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"","description":"","duration":"","thumbnailUrl":"","datePublished":"1970-01-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_brand_tv/id/ps?morph_env=live"}
+    </script>
+  </head>
+  <body>
+    <div>
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        >
+          <iframe
+            allow="autoplay; fullscreen"
+            allowfullscreen=""
+            class="c2"
+            scrolling="no"
+            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_brand_tv/id/ps?morph_env=live"
+            title="ویډیو پلیئر"
+          />
+          <noscript />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
 `;

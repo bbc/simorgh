@@ -53,6 +53,11 @@ const renderEpisode = ({
   episodeAvailableFrom,
   episodeAvailableUntil,
   imageUrl,
+  promoBrandTitle,
+  shortSynopsis,
+  durationISO8601,
+  thumbnailImageUrl,
+  releaseDateTimeStamp,
 }) => {
   const episodeAvailability = getEpisodeAvailability(
     episodeAvailableFrom,
@@ -65,6 +70,11 @@ const renderEpisode = ({
           masterBrand={masterBrand}
           assetId={episodeId}
           imageUrl={imageUrl}
+          shortSynopsis={shortSynopsis}
+          durationISO8601={durationISO8601}
+          thumbnailImageUrl={thumbnailImageUrl}
+          releaseDateTimeStamp={releaseDateTimeStamp}
+          promoBrandTitle={promoBrandTitle}
         />
       );
     case EPISODE_IS_EXPIRED:
@@ -162,6 +172,7 @@ OnDemandTvPage.propTypes = {
     masterBrand: string,
     episodeId: string,
     imageUrl: string,
+    promoBrandTitle: string,
   }).isRequired,
 };
 

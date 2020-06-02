@@ -7,7 +7,7 @@ import {
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import { string, bool } from 'prop-types';
+import { string, bool, number } from 'prop-types';
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
@@ -18,6 +18,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import getPlaceholderImageUrl from '../../../routes/utils/getPlaceholderImageUrl';
+import VideoLinkedData from './VideoLinkedData';
 
 const VideoPlayerWrapper = styled.div`
   width: calc(100% + ${GEL_SPACING_DBL});
@@ -34,7 +35,17 @@ const MediaMessageWrapper = styled.div`
   position: relative;
 `;
 
-const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
+const VideoPlayer = ({
+  assetId,
+  masterBrand,
+  imageUrl,
+  isExpired,
+  shortSynopsis,
+  durationISO8601,
+  thumbnailImageUrl,
+  releaseDateTimeStamp,
+  promoBrandTitle,
+}) => {
   const { lang, translations, service } = useContext(ServiceContext);
   const { isAmp, platform } = useContext(RequestContext);
   const location = useLocation();
@@ -102,6 +113,14 @@ const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
           noJsClassName="no-js"
         />
       )}
+      <VideoLinkedData
+        promoBrandTitle={promoBrandTitle}
+        shortSynopsis={shortSynopsis}
+        durationISO8601={durationISO8601}
+        embedUrl={embedUrl}
+        thumbnailImageUrl={thumbnailImageUrl}
+        releaseDateTimeStamp={releaseDateTimeStamp}
+      />
     </VideoPlayerWrapper>
   );
 };
@@ -111,6 +130,11 @@ VideoPlayer.propTypes = {
   assetId: string,
   imageUrl: string,
   isExpired: bool,
+  shortSynopsis: string,
+  durationISO8601: string,
+  thumbnailImageUrl: string,
+  releaseDateTimeStamp: number,
+  promoBrandTitle: string,
 };
 
 VideoPlayer.defaultProps = {
@@ -118,6 +142,11 @@ VideoPlayer.defaultProps = {
   assetId: '',
   imageUrl: '',
   isExpired: false,
+  shortSynopsis: '',
+  durationISO8601: '',
+  thumbnailImageUrl: '',
+  releaseDateTimeStamp: null,
+  promoBrandTitle: '',
 };
 
 export default VideoPlayer;

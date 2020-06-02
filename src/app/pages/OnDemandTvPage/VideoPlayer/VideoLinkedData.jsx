@@ -18,7 +18,7 @@ const VideoLinkedData = ({
     description: shortSynopsis,
     duration: durationISO8601,
     thumbnailUrl: thumbnailImageUrl,
-    uploadDate: new Date(releaseDateTimeStamp).toISOString(),
+    datePublished: new Date(releaseDateTimeStamp).toISOString(),
     embedURL: embedUrl,
   };
 
