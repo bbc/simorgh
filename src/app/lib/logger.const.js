@@ -49,6 +49,7 @@ const logCodes = {
   MOST_READ_STALE_DATA: 'most_read_stale_data',
 
   // Include
+  INCLUDE_ERROR: 'include_error',
   INCLUDE_FETCH_ERROR: 'include_fetch_error',
   INCLUDE_MISSING_URL: 'include_missing_url',
   INCLUDE_REQUEST_RECEIVED: 'include_request_received',

@@ -2,8 +2,9 @@ import loggerMock from '#testHelpers/loggerMock'; // Must be imported before con
 
 import convertInclude from '.';
 import {
+  INCLUDE_ERROR,
   INCLUDE_FETCH_ERROR,
-  // INCLUDE_MISSING_URL,
+  INCLUDE_MISSING_URL,
   INCLUDE_REQUEST_RECEIVED,
   INCLUDE_UNSUPPORTED,
 } from '#lib/logger.const';
@@ -262,7 +263,7 @@ describe('convertInclude', () => {
       },
     );
     expect(loggerMock.info).not.toHaveBeenCalled();
-    // expect(loggerMock.error).toHaveBeenCalledTimes(1);
+    expect(loggerMock.error).toHaveBeenCalledTimes(1);
     expect(loggerMock.error).toBeCalledWith(INCLUDE_FETCH_ERROR, {
       status: 304,
       url: 'https://foobar.com/includes/idt2/html',
@@ -316,12 +317,39 @@ describe('convertInclude', () => {
       platform: 'highweb',
       type: 'include',
     };
-    expect(await convertInclude(input)).toEqual(null);
+    const output = await convertInclude(input);
     expect(fetch).not.toHaveBeenCalled();
-    // expect(loggerMock.info).not.toHaveBeenCalled();
-    // expect(loggerMock.error).toHaveBeenCalledTimes(1);
-    // expect(loggerMock.error).toHaveBeenCalledWith(INCLUDE_MISSING_URL, {
-    //   type: 'include',
-    // });
+    expect(output).toEqual(null);
+    expect(loggerMock.info).not.toHaveBeenCalled();
+    expect(loggerMock.error).toHaveBeenCalledTimes(1);
+    expect(loggerMock.error).toHaveBeenCalledWith(INCLUDE_MISSING_URL, {
+      required: false,
+      tile: 'An include with no href',
+      href: null,
+      platform: 'highweb',
+      type: 'include',
+    });
+  });
+
+  it('should return null & log error when a fetch error', async () => {
+    fetch.mockResponse(() => {
+      throw new Error('this is an error message');
+    });
+    const input = {
+      required: false,
+      tile: 'A quiz!',
+      href: '/indepthtoolkit/quizzes/123-456',
+      platform: 'highweb',
+      type: 'include',
+    };
+    const output = await convertInclude(input);
+    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(output.model.html).toEqual(null);
+    expect(loggerMock.info).not.toHaveBeenCalled();
+    expect(loggerMock.error).toHaveBeenCalledTimes(1);
+    expect(loggerMock.error).toHaveBeenCalledWith(INCLUDE_ERROR, {
+      error: 'Error: this is an error message',
+      url: 'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
+    });
   });
 });

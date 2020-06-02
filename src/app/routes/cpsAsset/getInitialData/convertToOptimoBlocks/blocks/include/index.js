@@ -1,6 +1,8 @@
 import 'isomorphic-fetch';
 import {
+  INCLUDE_ERROR,
   INCLUDE_FETCH_ERROR,
+  INCLUDE_MISSING_URL,
   INCLUDE_REQUEST_RECEIVED,
   INCLUDE_UNSUPPORTED,
 } from '#lib/logger.const';
@@ -31,24 +33,23 @@ const fetchMarkup = async url => {
         status: res.status,
         url,
       });
-      throw new Error();
-    } else {
-      const html = await res.text();
-      logger.info(INCLUDE_REQUEST_RECEIVED, {
-        url,
-      });
-      return html;
+      return null;
     }
-  } catch (e) {
-    logger.error(INCLUDE_FETCH_ERROR, {
-      status: e.status,
+    const html = await res.text();
+    logger.info(INCLUDE_REQUEST_RECEIVED, {
+      url,
+    });
+    return html;
+  } catch (error) {
+    logger.error(INCLUDE_ERROR, {
+      error: error.toString(),
       url,
     });
     return null;
   }
 };
 
-const convertInclude = async ({ href, type, ...rest }) => {
+const convertInclude = async includeBlock => {
   const supportedTypes = {
     indepthtoolkit: 'idt1',
     idt2: 'idt2',
@@ -58,12 +59,19 @@ const convertInclude = async ({ href, type, ...rest }) => {
     'smallprox/include': 'vj',
   };
 
+  const { href, type, ...rest } = includeBlock;
+
+  if (!href) {
+    logger.error(INCLUDE_MISSING_URL, includeBlock);
+    return null;
+  }
+
   // This determines if the href has a leading '/'
   const hrefTypePostion = () => (href.indexOf('/') === 0 ? 1 : 0);
 
   // This checks if the supportedType is in the correct position of the href
   const hrefIsSupported = () => supportedType =>
-    href && href.startsWith(supportedType, hrefTypePostion());
+    href.startsWith(supportedType, hrefTypePostion());
 
   // This extracts the type from the href
   const typeExtraction = Object.keys(supportedTypes).find(
