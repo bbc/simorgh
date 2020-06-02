@@ -2586,16 +2586,16 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/kyrgyz/kyrgyzstan-52891593'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/kyrgyz/23292889'],
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: ['/kyrgyz/23292889'],
+            enabled: true,
           },
         },
         smoke: false,
