@@ -31,10 +31,9 @@ import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import LinkedData from '#containers/LinkedData';
-import MostReadContainer, {
-  MostReadSection,
-  MostReadSectionLabel,
-} from '#containers/MostRead';
+import MostReadContainer from '#containers/MostRead';
+import MostReadSection from '#containers/MostRead/section';
+import MostReadSectionLabel from '#containers/MostRead/label';
 import {
   getArticleId,
   getHeadline,

@@ -3,6 +3,7 @@
 exports[`IdxPage Snapshots should render a persian idx page correctly with most read 1`] = `
 <div>
   <main
+    dir="rtl"
     role="main"
   >
     <h1
@@ -12,7 +13,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
     </h1>
     <section
       aria-labelledby="Most-Read"
-      class="MostReadSection-sc-12ef2qh-0 IdxMostReadSection-sc-1rygalq-0 jNNusG"
+      class="MostReadSection-sc-1r6ctrd-0 IdxMostReadSection-sc-1rygalq-0 jNNusG"
       data-e2e="most-read"
       role="region"
     >

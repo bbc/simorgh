@@ -25,10 +25,9 @@ import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '#containers/FrontPageSection';
 import MetadataContainer from '#containers/Metadata';
-import MostReadContainer, {
-  MostReadSection,
-  MostReadSectionLabel,
-} from '#containers/MostRead';
+import MostReadContainer from '#containers/MostRead';
+import MostReadSection from '#containers/MostRead/section';
+import MostReadSectionLabel from '#containers/MostRead/label';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';

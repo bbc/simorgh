@@ -1,38 +1,11 @@
 import React, { useContext } from 'react';
 import { oneOf, string, elementType, bool } from 'prop-types';
-import styled from 'styled-components';
-import SectionLabel from '@bbc/psammead-section-label';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import Canonical from './Canonical';
 import mostReadShape from './utilities/mostReadShape';
 import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
-
-export const MostReadSection = styled.section.attrs({
-  role: 'region',
-  'aria-labelledby': 'Most-Read',
-  'data-e2e': 'most-read',
-})``;
-
-export const MostReadSectionLabel = () => {
-  const {
-    service,
-    script,
-    dir,
-    mostRead: { header },
-  } = useContext(ServiceContext);
-  return (
-    <SectionLabel
-      script={script}
-      labelId="Most-Read"
-      service={service}
-      dir={dir}
-    >
-      {header}
-    </SectionLabel>
-  );
-};
 
 const MostReadContainer = ({
   mostReadEndpointOverride,
