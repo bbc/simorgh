@@ -8,9 +8,15 @@ ci:
       - http://localhost:7080/mundo/23263889 # CPS STY
       - http://localhost:7080/pidgin/sport-23252855 # CPS PGL
   assert:
-    preset: lighthouse:no-pwa
+    preset: lighthouse:recommended
     assertions:
-      - categories:performance: off
+      # Disable PWA stuff
+      - installable-manifest: off
+      - offline-start-url: off
+      - service-worker: off
+      - splash-screen: off
+      - themed-omnibox: off
+      - works-offline: off
     skipAudits:
       - is-on-https
   upload:
