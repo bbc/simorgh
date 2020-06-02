@@ -9,5 +9,8 @@ ci:
       - http://localhost:7080/pidgin/sport-23252855 # CPS PGL
   assert:
     preset: lighthouse:recommended
+    assertions:
+      - categories:performance: off
+      - categories:pwa: off
   upload:
     target: temporary-public-storage
