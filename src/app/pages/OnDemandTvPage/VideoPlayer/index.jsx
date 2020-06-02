@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
@@ -20,6 +21,7 @@ import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import getPlaceholderImageUrl from '../../../routes/utils/getPlaceholderImageUrl';
 
 const VideoPlayerWrapper = styled.div`
+  padding-top: ${GEL_SPACING_TRPL};
   width: calc(100% + ${GEL_SPACING_DBL});
   margin: 0 -${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -28,10 +30,8 @@ const VideoPlayerWrapper = styled.div`
   }
 `;
 
-const landscapeRatio = '56.25%';
 const MediaMessageWrapper = styled.div`
-  padding-top: ${landscapeRatio};
-  position: relative;
+  padding-top: ${GEL_SPACING_TRPL};
 `;
 
 const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
