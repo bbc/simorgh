@@ -44,7 +44,13 @@ describe('convertInclude', () => {
       },
     };
     expect(await convertInclude(input)).toEqual(expected);
-    expect(fetch).toHaveBeenCalled();
+    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledWith(
+      'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
+      {
+        timeout: 3000,
+      },
+    );
     expect(loggerMock.error).not.toHaveBeenCalled();
     expect(loggerMock.info).toHaveBeenCalledTimes(1);
     expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
@@ -73,7 +79,13 @@ describe('convertInclude', () => {
       },
     };
     expect(await convertInclude(input)).toEqual(expected);
-    expect(fetch).toHaveBeenCalled();
+    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledWith(
+      'https://foobar.com/includes/idt2/111-222-333-444-555/html',
+      {
+        timeout: 3000,
+      },
+    );
     expect(loggerMock.error).not.toHaveBeenCalled();
     expect(loggerMock.info).toHaveBeenCalledTimes(1);
     expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
@@ -137,6 +149,7 @@ describe('convertInclude', () => {
       },
     };
     expect(await convertInclude(input)).toEqual(expected);
+    expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
       {
@@ -171,7 +184,7 @@ describe('convertInclude', () => {
       },
     };
     expect(await convertInclude(input)).toEqual(expected);
-    expect(fetch).toHaveBeenCalled();
+    expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/idt2/111-222-333-444-555/html',
       {
@@ -206,7 +219,7 @@ describe('convertInclude', () => {
       },
     };
     expect(await convertInclude(input)).toEqual(expected);
-    expect(fetch).toHaveBeenCalled();
+    expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/news/special/111-222-333-444-555',
       {
@@ -241,7 +254,7 @@ describe('convertInclude', () => {
       },
     };
     expect(await convertInclude(input)).toEqual(expected);
-    expect(fetch).toHaveBeenCalled();
+    expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/idt2/html',
       {
