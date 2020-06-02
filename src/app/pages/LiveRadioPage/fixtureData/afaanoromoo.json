@@ -24,6 +24,8 @@
       }
     ]
   },
+
+  "masterBrand": "bbc_oromo_radio",
   "language": "om",
   "id": "urn:bbc:ares::ws_live:bbc_oromo_radio",
   "name": "Dhaggeeffadhaa",

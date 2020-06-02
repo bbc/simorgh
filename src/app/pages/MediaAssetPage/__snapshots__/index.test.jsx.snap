@@ -203,7 +203,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                   class="Wrapper-e2169q-0 kopXQT"
                 >
                   <ul
-                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                    class="BulletedList-sc-13z0d8v-0 vJhtt"
                     dir="ltr"
                     role="list"
                   >
@@ -243,7 +243,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                   class="Wrapper-e2169q-0 kopXQT"
                 >
                   <ul
-                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                    class="BulletedList-sc-13z0d8v-0 vJhtt"
                     dir="ltr"
                     role="list"
                   >
@@ -510,7 +510,7 @@ exports[`Media Asset Page should render component 1`] = `
                   class="Wrapper-e2169q-0 kopXQT"
                 >
                   <ul
-                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                    class="BulletedList-sc-13z0d8v-0 vJhtt"
                     dir="ltr"
                     role="list"
                   >
@@ -599,7 +599,7 @@ exports[`Media Asset Page should render component 1`] = `
                   class="Wrapper-e2169q-0 kopXQT"
                 >
                   <ul
-                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                    class="BulletedList-sc-13z0d8v-0 vJhtt"
                     dir="ltr"
                     role="list"
                   >
@@ -907,7 +907,7 @@ exports[`Media Asset Page should render component 1`] = `
                   class="Wrapper-e2169q-0 kopXQT"
                 >
                   <ul
-                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                    class="BulletedList-sc-13z0d8v-0 vJhtt"
                     dir="ltr"
                     role="list"
                   >
