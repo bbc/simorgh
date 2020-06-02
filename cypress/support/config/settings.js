@@ -6665,16 +6665,16 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/yoruba/afrika-51998079'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/yoruba/afrika-23252769'],
+            enabled: true,
           },
           local: {
             paths: ['/yoruba/afrika-23252769'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
