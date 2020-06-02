@@ -16,7 +16,11 @@ exports[`Canonical On Demand T V Page I can see the episode summary 1`] = `"د �
 
 exports[`Canonical On Demand T V Page I can see the episode title 1`] = `"۲۷ می ۲۰۲۰"`;
 
-exports[`Canonical On Demand T V Page SEO Canonical link 1`] = `"http://localhost:7080/pashto/bbc_pashto_tv/w13xttn4"`;
+exports[`Canonical On Demand T V Page Media player embed A11y I can read the media player title 1`] = `"ویډیو پلیئر"`;
+
+exports[`Canonical On Demand T V Page Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live"`;
+
+exports[`Canonical On Demand T V Page SEO Canonical link 1`] = `"http://localhost:7080/pashto/bbc_pashto_tv/tv_programmes/w13xttn4"`;
 
 exports[`Canonical On Demand T V Page SEO Dir attribute 1`] = `"rtl"`;
 
@@ -42,7 +46,7 @@ exports[`Canonical On Demand T V Page SEO OG title 1`] = `"نړۍ دا وخت - 
 
 exports[`Canonical On Demand T V Page SEO OG type 1`] = `"website"`;
 
-exports[`Canonical On Demand T V Page SEO OG url 1`] = `"http://localhost:7080/pashto/bbc_pashto_tv/w13xttn4"`;
+exports[`Canonical On Demand T V Page SEO OG url 1`] = `"http://localhost:7080/pashto/bbc_pashto_tv/tv_programmes/w13xttn4"`;
 
 exports[`Canonical On Demand T V Page SEO Page title 1`] = `"نړۍ دا وخت - BBC News پښتو"`;
 

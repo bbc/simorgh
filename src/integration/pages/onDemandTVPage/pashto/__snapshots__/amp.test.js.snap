@@ -110,7 +110,11 @@ exports[`AMP On Demand T V Page I can see the episode summary 1`] = `"د بي ب
 
 exports[`AMP On Demand T V Page I can see the episode title 1`] = `"۲۷ می ۲۰۲۰"`;
 
-exports[`AMP On Demand T V Page SEO Canonical link 1`] = `"http://localhost:7080/pashto/bbc_pashto_tv/w13xttn4"`;
+exports[`AMP On Demand T V Page Media player embed A11y I can read the media player title 1`] = `"ویډیو پلیئر"`;
+
+exports[`AMP On Demand T V Page Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live"`;
+
+exports[`AMP On Demand T V Page SEO Canonical link 1`] = `"http://localhost:7080/pashto/bbc_pashto_tv/tv_programmes/w13xttn4"`;
 
 exports[`AMP On Demand T V Page SEO Dir attribute 1`] = `"rtl"`;
 
@@ -136,7 +140,7 @@ exports[`AMP On Demand T V Page SEO OG title 1`] = `"نړۍ دا وخت - BBC Ne
 
 exports[`AMP On Demand T V Page SEO OG type 1`] = `"website"`;
 
-exports[`AMP On Demand T V Page SEO OG url 1`] = `"http://localhost:7080/pashto/bbc_pashto_tv/w13xttn4"`;
+exports[`AMP On Demand T V Page SEO OG url 1`] = `"http://localhost:7080/pashto/bbc_pashto_tv/tv_programmes/w13xttn4"`;
 
 exports[`AMP On Demand T V Page SEO Page title 1`] = `"نړۍ دا وخت - BBC News پښتو"`;
 
