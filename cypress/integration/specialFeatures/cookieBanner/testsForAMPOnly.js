@@ -68,7 +68,7 @@ Object.keys(config)
 
               const { variant } = config[service];
 
-              it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
+              it.skip('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
                 getPrivacyBanner(service, variant).should('be.visible');
                 getCookieBanner(service, variant).should('not.be.visible');
 
@@ -83,7 +83,7 @@ Object.keys(config)
                 getPrivacyBanner(service, variant).should('not.be.visible');
               });
 
-              it('should show privacy banner if cookie banner isnt accepted, on reload', () => {
+              it.skip('should show privacy banner if cookie banner isnt accepted, on reload', () => {
                 getPrivacyBannerAccept(service, variant).click();
 
                 visitPage(pageType, path);
@@ -92,7 +92,7 @@ Object.keys(config)
                 getCookieBanner(service, variant).should('not.be.visible');
               });
 
-              it('should not show privacy & cookie banners once both accepted, on reload', () => {
+              it.skip('should not show privacy & cookie banners once both accepted, on reload', () => {
                 getPrivacyBannerAccept(service, variant).click();
                 getCookieBannerAccept(service, variant).click();
 
@@ -102,7 +102,7 @@ Object.keys(config)
                 getCookieBanner(service, variant).should('not.be.visible');
               });
 
-              it('should not show privacy & cookie banners once cookie banner declined, on reload', () => {
+              it.skip('should not show privacy & cookie banners once cookie banner declined, on reload', () => {
                 getPrivacyBanner(service, variant).should('be.visible');
                 getCookieBanner(service, variant).should('not.be.visible');
 
