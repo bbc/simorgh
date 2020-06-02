@@ -1,7 +1,10 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { shape, string, number } from 'prop-types';
-import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
+} from '@bbc/gel-foundations/spacings';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
@@ -39,6 +42,7 @@ const getEpisodeAvailability = (availableFrom, availableUntil) => {
 };
 
 const StyledGelPageGrid = styled(GelPageGrid)`
+  padding-bottom: ${GEL_SPACING_QUAD};
   width: 100%;
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
 `;
