@@ -107,7 +107,9 @@ describe('Ad Container', () => {
           pathname="/news"
         >
           <ToggleContext.Provider value={toggleContextMock}>
-            <AdContainer />
+            <BrowserRouter>
+              <AdContainer />
+            </BrowserRouter>
           </ToggleContext.Provider>
         </RequestContextProvider>
       </ServiceContextProvider>,
