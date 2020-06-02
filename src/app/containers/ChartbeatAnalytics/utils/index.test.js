@@ -72,6 +72,11 @@ describe('Chartbeat utilities', () => {
         expectedShortType: 'Most Read',
       },
       {
+        type: 'STY',
+        expectedDefaultType: 'STY',
+        expectedShortType: 'STY',
+      },
+      {
         type: null,
         expectedDefaultType: null,
         expectedShortType: null,
