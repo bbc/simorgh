@@ -17,7 +17,6 @@ import getPlaceholderImageUrl from '../../../routes/utils/getPlaceholderImageUrl
 
 const StyledWrapper = styled.div`
   padding-top: ${GEL_SPACING_TRPL};
-  width: 728px;
 `;
 
 const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
