@@ -361,6 +361,7 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'style-src': generateStyleSrc({ isAmp, isLive }),
     'worker-src': generateWorkerSrc({ isAmp }),
     'report-to': 'default',
+    'upgrade-insecure-requests': true,
   },
 });
 
