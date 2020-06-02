@@ -4,7 +4,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import IdxPage from '#pages/IdxPage';
 
-const IDXPageWithContext = props => (
+const IdxPageWithContext = props => (
   <ToggleContextProvider service="pidgin" origin="https://www.test.bbc.com">
     <RequestContextProvider
       pageType="IDX"
@@ -20,4 +20,4 @@ const IDXPageWithContext = props => (
   </ToggleContextProvider>
 );
 
-export default IDXPageWithContext;
+export default IdxPageWithContext;

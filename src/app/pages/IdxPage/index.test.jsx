@@ -1,7 +1,7 @@
 import React from 'react';
 import { act, render } from '@testing-library/react';
 import persianMostReadData from '#data/persian/mostRead';
-import IDXPageWithContext from './testHelpers';
+import IdxPageWithContext from './testHelpers';
 
 describe('IdxPage', () => {
   beforeEach(async () => {
@@ -12,7 +12,7 @@ describe('IdxPage', () => {
     it('should render a persian idx page correctly with most read', async () => {
       let container = null;
       await act(async () => {
-        container = render(<IDXPageWithContext />).container;
+        container = render(<IdxPageWithContext />).container;
       });
 
       expect(container).toMatchSnapshot();
