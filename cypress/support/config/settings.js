@@ -1944,12 +1944,12 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/igbo/afirika-52816709'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/igbo/afirika-23252735'],
+            enabled: true,
           },
           local: {
             paths: ['/igbo/afirika-23252735'],
