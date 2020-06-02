@@ -3301,16 +3301,16 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/pashto/world-52873295'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/pashto/23289748'],
+            enabled: true,
           },
           local: {
             paths: ['/pashto/23289748'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
