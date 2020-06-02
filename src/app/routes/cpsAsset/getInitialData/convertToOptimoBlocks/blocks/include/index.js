@@ -1,5 +1,6 @@
 import 'isomorphic-fetch';
 import nodeLogger from '#lib/logger.node';
+import overrideRendererOnTest from '../../../../../utils/overrideRendererOnTest';
 
 const logger = nodeLogger(__filename);
 
@@ -11,8 +12,11 @@ const buildIncludeUrl = (href, type) => {
   };
 
   const withTrailingHref = href.startsWith('/') ? href : `/${href}`;
+  const includeUrl = overrideRendererOnTest(
+    `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${resolvers[type]}`,
+  );
 
-  return `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${resolvers[type]}`;
+  return includeUrl;
 };
 
 const fetchMarkup = async url => {
