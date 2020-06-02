@@ -1,13 +1,7 @@
 import services from '../../../src/server/utilities/serviceConfigs';
 
-Object.keys(services).forEach((service) => {
-  const notWSServices = [
-    'news',
-    'cymrufyw',
-    'naidheachdan',
-    'default',
-    'scotland',
-  ]; // Not WS
+Object.keys(services).forEach(service => {
+  const notWSServices = ['news', 'default', 'scotland']; // Not WS
 
   if (notWSServices.includes(service)) {
     return;
@@ -26,12 +20,12 @@ Object.keys(services).forEach((service) => {
         `https://www.bbc.co.uk/${service}/articles/a0000000000o.amp`,
       ];
 
-      urlsTotest.forEach((urlToTest) => {
+      urlsTotest.forEach(urlToTest => {
         const slashLoc = urlToTest.indexOf('/', 8);
         cy.request({
           url: urlToTest,
           followRedirect: false,
-        }).then((resp) => {
+        }).then(resp => {
           expect(resp.status).to.eq(301);
           // expect first slice to equal https://www.bbc.com/
           expect(resp.redirectedToUrl.substring(0, 20)).to.eq(

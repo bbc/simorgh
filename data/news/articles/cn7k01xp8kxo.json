@@ -406,31 +406,6 @@
                     }
                   ]
                 }
-              },
-              {
-                "model": {
-                  "blocks": [
-                    {
-                      "model": {
-                        "blocks": [
-                          {
-                            "model": {
-                              "attributes": [],
-                              "text": "This is a link to the Welsh version of this test article"
-                            },
-                            "type": "fragment"
-                          }
-                        ],
-                        "isExternal": false,
-                        "locator": "https://www.bbc.co.uk/cymrufyw/articles/c06p32z9x2mo",
-                        "text": "This is a link to the Welsh version of this test article"
-                      },
-                      "type": "urlLink"
-                    }
-                  ],
-                  "text": "This is a link to the Welsh version of this test article"
-                },
-                "type": "paragraph"
               }
             ]
           }

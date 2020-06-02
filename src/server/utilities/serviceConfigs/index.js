@@ -13,7 +13,6 @@ import { service as archive } from '../../../app/lib/config/services/archive';
 import { service as azeri } from '../../../app/lib/config/services/azeri';
 import { service as bengali } from '../../../app/lib/config/services/bengali';
 import { service as burmese } from '../../../app/lib/config/services/burmese';
-import { service as cymrufyw } from '../../../app/lib/config/services/cymrufyw';
 import { service as gahuza } from '../../../app/lib/config/services/gahuza';
 import { service as gujarati } from '../../../app/lib/config/services/gujarati';
 import { service as hausa } from '../../../app/lib/config/services/hausa';
@@ -25,7 +24,6 @@ import { service as korean } from '../../../app/lib/config/services/korean';
 import { service as kyrgyz } from '../../../app/lib/config/services/kyrgyz';
 import { service as marathi } from '../../../app/lib/config/services/marathi';
 import { service as mundo } from '../../../app/lib/config/services/mundo';
-import { service as naidheachdan } from '../../../app/lib/config/services/naidheachdan';
 import { service as nepali } from '../../../app/lib/config/services/nepali';
 import { service as news } from '../../../app/lib/config/services/news';
 import { service as pashto } from '../../../app/lib/config/services/pashto';
@@ -61,7 +59,6 @@ export default {
   azeri,
   bengali,
   burmese,
-  cymrufyw,
   gahuza,
   gujarati,
   hausa,
@@ -73,7 +70,6 @@ export default {
   kyrgyz,
   marathi,
   mundo,
-  naidheachdan,
   nepali,
   news,
   pashto,

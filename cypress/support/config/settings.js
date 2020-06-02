@@ -1151,56 +1151,6 @@ module.exports = () => ({
       idxPage: { environments: undefined, smoke: false },
     },
   },
-  cymrufyw: {
-    name: 'cymrufyw',
-    font: 'Reith',
-    isWorldService: false,
-    variant: 'default',
-    pageTypes: {
-      articles: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: ['/cymrufyw/erthyglau/c06p32z9x2mo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      errorPage404: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: ['/cymrufyw/erthyglau/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      frontPage: { environments: undefined, smoke: false },
-      liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
-      mediaAssetPage: { environments: undefined, smoke: false },
-      photoGalleryPage: { environments: undefined, smoke: false },
-      storyPage: { environments: undefined, smoke: false },
-      mostReadPage: { environments: undefined, smoke: false },
-      idxPage: { environments: undefined, smoke: false },
-    },
-  },
   gahuza: {
     name: 'gahuza',
     font: undefined,
@@ -2890,56 +2840,6 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      idxPage: { environments: undefined, smoke: false },
-    },
-  },
-  naidheachdan: {
-    name: 'naidheachdan',
-    font: 'Reith',
-    isWorldService: false,
-    variant: 'default',
-    pageTypes: {
-      articles: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: ['/naidheachdan/sgeulachdan/c18q7nedn2ko'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      errorPage404: {
-        environments: {
-          live: {
-            paths: [],
-            enabled: false,
-          },
-          test: {
-            paths: [],
-            enabled: false,
-          },
-          local: {
-            paths: ['/naidheachdan/sgeulachdan/c123456abcdo'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      frontPage: { environments: undefined, smoke: false },
-      liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
-      mediaAssetPage: { environments: undefined, smoke: false },
-      photoGalleryPage: { environments: undefined, smoke: false },
-      storyPage: { environments: undefined, smoke: false },
-      mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
     },
   },

@@ -8,11 +8,6 @@ const getStatsDestination = ({ isUK = true, env = 'test', service }) => {
       // checks if "news" service is in the UK or not and set apprioprate destination
       destination = isUK !== false ? 'NEWS_PS' : 'NEWS_GNL';
       break;
-    case 'cymrufyw':
-    case 'naidheachdan':
-      // checks if "cymrufyw" or "naidheachdan" service is in the UK or not and set apprioprate destination
-      destination = isUK !== false ? 'NEWS_LANGUAGES_PS' : 'NEWS_LANGUAGES_GNL';
-      break;
     case 'japanese':
       destination = 'NEWS_LANGUAGES_GNL';
       break;

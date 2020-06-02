@@ -62,10 +62,6 @@ const simorghLaunchDates = {
     storyPage: '',
     mostReadPage: '28th May 2020',
   },
-  cymrufyw: {
-    articles: 'Sept 2019',
-    frontPage: '',
-  },
   gahuza: {
     articles: 'Sept 2019',
     frontPage: '19th Feb 2020',
@@ -159,9 +155,6 @@ const simorghLaunchDates = {
     photoGalleryPage: '24th March 2020',
     storyPage: '',
     mostReadPage: '28th May 2020',
-  },
-  naidheachdan: {
-    articles: 'Sept 2019',
   },
   nepali: {
     articles: 'Sept 2019',
