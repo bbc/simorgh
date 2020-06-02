@@ -80,7 +80,7 @@ exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
       id="amp-access"
       type="application/json"
     >
-      {"authorization":"https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=pidgin&geoiplookup=true","noPingback":true,"authorizationFallbackResponse":{"error":true}}
+      {"authorization":"https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=pidgin","noPingback":true,"authorizationFallbackResponse":{"error":true}}
     </script>
   </head>
   <body>
@@ -92,7 +92,7 @@ exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
           class="c1"
         >
           <div
-            amp-access="toggles.ads.enabled AND geoIp.advertiseCombined"
+            amp-access="toggles.ads.enabled"
             amp-access-hide="true"
           >
             <div
