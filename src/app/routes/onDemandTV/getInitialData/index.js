@@ -28,8 +28,6 @@ const getDurationISO8601 = path([
 const getThumbnailImageUrl = json =>
   getPlaceholderImageUrl(path(['promo', 'media', 'imageUrl'], json));
 const getPromoBrandTitle = path(['promo', 'brand', 'title']);
-const getFirstPublished = path(['metadata', 'firstPublished']);
-const getLastPublished = path(['metadata', 'lastPublished']);
 const getImageUrl = path(['content', 'blocks', 0, 'imageUrl']);
 const getEpisodeAvailableFrom = path([
   'content',
@@ -73,8 +71,6 @@ export default async ({ path: pathname }) => {
         episodeAvailableUntil: getEpisodeAvailableUntil(json),
         masterBrand: getMasterBrand(json),
         episodeId: getEpisodeId(json),
-        firstPublished: getFirstPublished(json),
-        lastPublished: getLastPublished(json),
         imageUrl: getImageUrl(json),
         ...pageType,
       },
