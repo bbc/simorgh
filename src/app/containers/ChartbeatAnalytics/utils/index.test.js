@@ -192,7 +192,7 @@ describe('Chartbeat utilities', () => {
         categoryName: 'mundo',
         pageType: 'STY',
         description: 'should add section and category to STYs',
-        expected: 'Mundo, Mundo - STY',
+        expected: 'Mundo, Mundo - STY, Visual Journalism',
       },
     ];
 
