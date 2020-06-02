@@ -8,9 +8,10 @@ ci:
       - http://localhost:7080/mundo/23263889 # CPS STY
       - http://localhost:7080/pidgin/sport-23252855 # CPS PGL
   assert:
-    preset: lighthouse:recommended
+    preset: lighthouse:no-pwa
     assertions:
       - categories:performance: off
-      - categories:pwa: off
+    skipAudits:
+      - is-on-https
   upload:
     target: temporary-public-storage
