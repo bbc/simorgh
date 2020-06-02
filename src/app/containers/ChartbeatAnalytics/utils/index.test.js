@@ -186,6 +186,14 @@ describe('Chartbeat utilities', () => {
         masterBrand: 'bbc_pashto_tv',
         expected: 'Pashto, Pashto - TV',
       },
+      {
+        service: 'mundo',
+        sectionName: 'STY',
+        categoryName: 'mundo',
+        pageType: 'STY',
+        description: 'should add section and category to STYs',
+        expected: 'Mundo, Mundo - STY',
+      },
     ];
 
     sectionFixtures.forEach(
