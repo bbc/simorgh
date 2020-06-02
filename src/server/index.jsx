@@ -194,13 +194,14 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
     .get(onDemandTvDataPath, async ({ params }, res, next) => {
-      const { service, serviceId, mediaId } = params;
+      const { service, serviceId, brandEpisode, mediaId } = params;
 
       const dataFilePath = path.join(
         process.cwd(),
         'data',
         service,
         serviceId,
+        brandEpisode,
         mediaId,
       );
 
