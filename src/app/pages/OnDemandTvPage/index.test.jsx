@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import clone from 'ramda/src/clone';
+import assocPath from 'ramda/src/assocPath';
 import { render, act } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { StaticRouter } from 'react-router-dom';
