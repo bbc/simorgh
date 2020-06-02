@@ -17,8 +17,6 @@ const getPageIdentifier = path([
 
 const getHeading = path(['content', 'blocks', 0, 'text']);
 const getBodySummary = path(['content', 'blocks', 1, 'text']);
-const getMasterBrand = path(['content', 'blocks', 2, 'externalId']);
-
 export default async ({ path: pathname }) => {
   const liveRadioDataPath = overrideRendererOnTest(pathname);
   const { json, ...rest } = await fetchPageData(liveRadioDataPath);
