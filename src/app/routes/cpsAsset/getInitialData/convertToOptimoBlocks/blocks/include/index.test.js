@@ -1,7 +1,11 @@
 import loggerMock from '#testHelpers/loggerMock'; // Must be imported before convertInclude
 
 import convertInclude from '.';
-import { INCLUDE_FETCH_ERROR } from '#lib/logger.const';
+// import {
+//   INCLUDE_FETCH_ERROR,
+//   INCLUDE_MISSING_URL,
+//   INCLUDE_UNSUPPORTED,
+// } from '#lib/logger.const';
 
 const vjMarkup = `<div>Visual Journalism Markup</div><script type="text/javascript" src="localhost/vj.js"></script>`;
 
@@ -38,6 +42,8 @@ describe('convertInclude', () => {
     };
     expect(await convertInclude(input)).toEqual(expected);
     expect(fetch).toHaveBeenCalled();
+    expect(loggerMock.error).not.toHaveBeenCalled();
+    expect(loggerMock.info).toHaveBeenCalledTimes(1);
   });
 
   it('should fetch and convert an include block to an idt2 block', async () => {
@@ -62,6 +68,8 @@ describe('convertInclude', () => {
     };
     expect(await convertInclude(input)).toEqual(expected);
     expect(fetch).toHaveBeenCalled();
+    expect(loggerMock.error).not.toHaveBeenCalled();
+    // expect(loggerMock.info).toHaveBeenCalledTimes(1);
   });
 
   it('should fetch and convert an include block to a vj block', async () => {
@@ -92,6 +100,8 @@ describe('convertInclude', () => {
         timeout: 3000,
       },
     );
+    expect(loggerMock.error).not.toHaveBeenCalled();
+    // expect(loggerMock.info).toHaveBeenCalledTimes(1);
   });
 
   it('should convert an include block to an idt1 block with no leading / in href', async () => {
@@ -121,6 +131,8 @@ describe('convertInclude', () => {
         timeout: 3000,
       },
     );
+    expect(loggerMock.error).not.toHaveBeenCalled();
+    // expect(loggerMock.info).toHaveBeenCalledTimes(1);
   });
 
   it('should convert an include block to an idt2 block with no / in href', async () => {
@@ -151,6 +163,8 @@ describe('convertInclude', () => {
         timeout: 3000,
       },
     );
+    expect(loggerMock.error).not.toHaveBeenCalled();
+    // expect(loggerMock.info).toHaveBeenCalledTimes(1);
   });
 
   it('should fetch and convert an include block to a vj block with no / in href', async () => {
@@ -181,6 +195,8 @@ describe('convertInclude', () => {
         timeout: 3000,
       },
     );
+    expect(loggerMock.error).not.toHaveBeenCalled();
+    // expect(loggerMock.info).toHaveBeenCalledTimes(1);
   });
 
   it('should convert an include block to an idt2 block with html set to null when fetch returns with status other than 200', async () => {
@@ -211,10 +227,12 @@ describe('convertInclude', () => {
         timeout: 3000,
       },
     );
-    expect(loggerMock.error).toBeCalledWith(INCLUDE_FETCH_ERROR, {
-      status: 304,
-      url: 'https://foobar.com/includes/idt2/html',
-    });
+    // expect(loggerMock.info).not.toHaveBeenCalled();
+    // expect(loggerMock.error).toHaveBeenCalledTimes(1);
+    // expect(loggerMock.error).toBeCalledWith(INCLUDE_FETCH_ERROR, {
+    //   status: 304,
+    //   url: 'https://foobar.com/includes/idt2/html',
+    // });
   });
 
   it('should return null for an unsupported include type', async () => {
@@ -228,6 +246,12 @@ describe('convertInclude', () => {
     };
     expect(await convertInclude(input)).toEqual(null);
     expect(fetch).not.toHaveBeenCalled();
+    // expect(loggerMock.error).not.toHaveBeenCalled();
+    // expect(loggerMock.info).toHaveBeenCalledTimes(1);
+    // expect(loggerMock.info).toBeCalledWith(INCLUDE_UNSUPPORTED, {
+    //   type: 'foo',
+    //   url: 'https://foobar.com/includes/include/111-222-333-444-555',
+    // });
   });
 
   it('should return null for an unsupported include type with no leading / in href', async () => {
@@ -241,6 +265,12 @@ describe('convertInclude', () => {
     };
     expect(await convertInclude(input)).toEqual(null);
     expect(fetch).not.toHaveBeenCalled();
+    // expect(loggerMock.info).not.toHaveBeenCalled();
+    // expect(loggerMock.error).toHaveBeenCalledTimes(1);
+    // expect(loggerMock.info).toBeCalledWith(INCLUDE_UNSUPPORTED, {
+    //   type: 'include',
+    //   url: 'idt3/111-222-333-444-555',
+    // });
   });
 
   it('should return null for null/undefined href', async () => {
@@ -254,5 +284,10 @@ describe('convertInclude', () => {
     };
     expect(await convertInclude(input)).toEqual(null);
     expect(fetch).not.toHaveBeenCalled();
+    // expect(loggerMock.info).not.toHaveBeenCalled();
+    // expect(loggerMock.error).toHaveBeenCalledTimes(1);
+    // expect(loggerMock.error).toHaveBeenCalledWith(INCLUDE_MISSING_URL, {
+    //   url: null,
+    // });
   });
 });
