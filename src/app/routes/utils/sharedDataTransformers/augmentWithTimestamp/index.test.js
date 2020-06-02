@@ -139,6 +139,34 @@ describe('Timestamp rules', () => {
     expect(applyTimestampRules(fixtureData)).toEqual(expectedTransform);
   });
 
+  it('should put Timestamp block after headline and before image on STY page, if headline exists with image immediately after it', () => {
+    const fixtureData = {
+      metadata: {
+        firstPublished: 1514808060000,
+        lastPublished: 1514811600000,
+        type: 'STY',
+      },
+      content: {
+        model: {
+          blocks: [paragraphBlock, headlineBlock, imageBlock],
+        },
+      },
+    };
+    const expectedTransform = Object.assign(deepClone(fixtureData), {
+      content: {
+        model: {
+          blocks: [
+            paragraphBlock,
+            headlineBlock,
+            generatedTimestampBlock,
+            imageBlock,
+          ],
+        },
+      },
+    });
+    expect(applyTimestampRules(fixtureData)).toEqual(expectedTransform);
+  });
+
   it('should put Timestamp block after headline and type aresMedia, if headline exists with type aresMedia immediately after it', () => {
     const fixtureData = {
       metadata: {
