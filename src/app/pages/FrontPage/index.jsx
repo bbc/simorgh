@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment, useContext } from 'react';
-import { node } from 'prop-types';
+import { string, node } from 'prop-types';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
 import styled from 'styled-components';
@@ -73,7 +73,7 @@ const MostReadSection = styled.section.attrs(() => ({
   }
 `;
 
-const FrontPage = ({ pageData }) => {
+const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
     product,
     serviceLocalizedName,
@@ -125,7 +125,11 @@ const FrontPage = ({ pageData }) => {
   };
 
   const renderMostRead = () => (
-    <MostReadContainer columnLayout="twoColumn" wrapper={MostReadWrapper} />
+    <MostReadContainer
+      mostReadEndpointOverride={mostReadEndpointOverride}
+      columnLayout="twoColumn"
+      wrapper={MostReadWrapper}
+    />
   );
 
   return (
@@ -164,6 +168,11 @@ const FrontPage = ({ pageData }) => {
 
 FrontPage.propTypes = {
   pageData: frontPageDataPropTypes.isRequired,
+  mostReadEndpointOverride: string,
+};
+
+FrontPage.defaultProps = {
+  mostReadEndpointOverride: null,
 };
 
 export default FrontPage;
