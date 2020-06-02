@@ -485,6 +485,70 @@ describe('Chartbeat utilities', () => {
 
       expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
     });
+
+    it('should return config for amp pages when page type is STY and env is live', () => {
+      const fixtureData = {
+        isAmp: true,
+        platform: 'amp',
+        pageType: 'STY',
+        data: {
+          name: 'STY Page Title',
+        },
+        brandName: 'BBC News Mundo',
+        chartbeatDomain: 'mundo.bbc.co.uk',
+        env: 'live',
+        service: 'mundo',
+        origin: 'bbc.com',
+        previousPath: '/previous-path',
+      };
+
+      const expectedConfig = {
+        contentType: 'STY',
+        domain: 'mundo.bbc.co.uk',
+        idSync: {
+          bbc_hid: 'foobar',
+        },
+        sections: 'Mundo, Mundo - STY',
+        title: 'STY Page Title',
+        uid: 50924,
+        virtualReferrer: `\${documentReferrer}`,
+      };
+
+      expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+    });
+
+    it('should return config for canonical pages when page type is STY and env is not live', () => {
+      const fixtureData = {
+        isAmp: false,
+        platform: 'canonical',
+        pageType: 'STY',
+        data: {
+          name: 'STY Page Title',
+        },
+        brandName: 'BBC News Mundo',
+        chartbeatDomain: 'mundo.bbc.co.uk',
+        env: 'test',
+        service: 'mundo',
+        origin: 'test.bbc.com',
+        previousPath: '/previous-path',
+      };
+
+      const expectedConfig = {
+        domain: 'test.bbc.co.uk',
+        idSync: {
+          bbc_hid: 'foobar',
+        },
+        path: '/',
+        sections: 'Mundo, Mundo - STY',
+        type: 'STY',
+        title: 'STY Page Title',
+        uid: 50924,
+        useCanonical: true,
+        virtualReferrer: 'test.bbc.com/previous-path',
+      };
+
+      expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+    });
   });
 
   it('should return config for amp pages when page type is media (onDemand radio) and env is live', () => {
