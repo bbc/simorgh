@@ -1953,7 +1953,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/igbo/afirika-23252735'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
