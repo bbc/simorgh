@@ -328,6 +328,17 @@ describe('Chartbeat utilities', () => {
         'TOP 뉴스 - BBC News 코리아',
       );
     });
+
+    it('should return correct title when pageType is STY', () => {
+      const pageType = 'STY';
+      const pageData = {};
+      const brandName = 'BBC News Mundo';
+      const title = 'Más leídas';
+
+      expect(getTitle({ pageType, pageData, brandName, title })).toBe(
+        'Más leídas',
+      );
+    });
   });
 
   describe('Chartbeat Config', () => {

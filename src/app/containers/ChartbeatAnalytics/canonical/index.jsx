@@ -6,7 +6,7 @@ const chartbeatSource = '//static.chartbeat.com/js/chartbeat.js';
 
 const CanonicalChartbeatBeacon = ({ chartbeatConfig }) => {
   const [firstLoadConfig] = useState(chartbeatConfig);
-
+  console.log(chartbeatConfig);
   const hasMounted = useRef(false);
 
   useEffect(() => {
