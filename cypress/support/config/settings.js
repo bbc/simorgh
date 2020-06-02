@@ -4514,16 +4514,16 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/sinhala/sri-lanka-52851837'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/sinhala/23225618'],
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: ['/sinhala/23225618'],
+            enabled: true,
           },
         },
         smoke: false,
