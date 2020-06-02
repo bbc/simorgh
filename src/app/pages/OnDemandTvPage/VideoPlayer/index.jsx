@@ -1,14 +1,9 @@
 import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
-} from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import { string, bool } from 'prop-types';
+
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
@@ -20,18 +15,9 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import getPlaceholderImageUrl from '../../../routes/utils/getPlaceholderImageUrl';
 
-const VideoPlayerWrapper = styled.div`
+const StyledWrapper = styled.div`
   padding-top: ${GEL_SPACING_TRPL};
-  width: calc(100% + ${GEL_SPACING_DBL});
-  margin: 0 -${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    width: calc(100% + ${GEL_SPACING_QUAD});
-    margin: 0 -${GEL_SPACING_DBL};
-  }
-`;
-
-const MediaMessageWrapper = styled.div`
-  padding-top: ${GEL_SPACING_TRPL};
+  width: 728px;
 `;
 
 const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
@@ -57,9 +43,9 @@ const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
     );
 
     return (
-      <MediaMessageWrapper>
+      <StyledWrapper>
         <MediaMessage service={service} message={expiredContentMessage} />
-      </MediaMessageWrapper>
+      </StyledWrapper>
     );
   }
   const placeholderSrc = getPlaceholderImageUrl(imageUrl);
@@ -82,7 +68,7 @@ const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
   );
 
   return (
-    <VideoPlayerWrapper>
+    <StyledWrapper>
       {isAmp ? (
         <AmpMediaPlayer
           placeholderSrc={placeholderSrc}
@@ -102,7 +88,7 @@ const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
           noJsClassName="no-js"
         />
       )}
-    </VideoPlayerWrapper>
+    </StyledWrapper>
   );
 };
 
