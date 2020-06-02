@@ -25,7 +25,6 @@ const MostReadWrapper = ({ children }) => (
 
 const renderMostRead = mostReadEndpointOverride => (
   <MostReadContainer
-    isOnIdxPage
     mostReadEndpointOverride={mostReadEndpointOverride}
     columnLayout="twoColumn"
     wrapper={MostReadWrapper}
