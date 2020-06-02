@@ -4224,6 +4224,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                     <section
                       aria-labelledby="related-content-heading"
                       class="c33"
+                      data-e2e="related-content"
                       role="region"
                     >
                       <div
