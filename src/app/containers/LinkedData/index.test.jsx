@@ -68,6 +68,25 @@ describe('LinkedData', () => {
     ],
   };
 
+  const propsForOndemandRadio = {
+    type: 'AudioObject',
+    seoTitle: 'ماښامنۍ خپرونه',
+    name: 'ماښامنۍ خپرونه',
+    description: 'د بي بي سي ورلډ سروس څخه پروګرام کول',
+    duration: 'PT29M30S',
+    thumbnailUrl: 'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
+    uploadDate: '2020-04-23T15:30:00.000Z',
+    embedURL:
+      'https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/externalId/id/ko?morph_env=live',
+  };
+
+  shouldMatchSnapshot(
+    'should correctly render linked data for Ondemand Radio page',
+    <Context>
+      <LinkedData {...propsForOndemandRadio} />
+    </Context>,
+  );
+
   shouldMatchSnapshot(
     'should correctly render linked data for Photo Gallery page',
     <Context>

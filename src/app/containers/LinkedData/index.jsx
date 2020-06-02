@@ -7,6 +7,11 @@ import getAboutTagsContent from './getAboutTagsContent';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 
 const LinkedData = ({
+  name,
+  duration,
+  thumbnailUrl,
+  uploadDate,
+  embedURL,
   showAuthor,
   type,
   seoTitle,
@@ -63,12 +68,16 @@ const LinkedData = ({
     url: canonicalNonUkLink,
     publisher,
     image,
-    thumbnailUrl: defaultImage,
+    thumbnailUrl: thumbnailUrl || defaultImage,
     mainEntityOfPage,
     headline,
     description,
     datePublished,
     dateModified,
+    name,
+    duration,
+    uploadDate,
+    embedURL,
     ...(aboutTags && { about: getAboutTagsContent(aboutTags) }),
     ...(showAuthor && {
       author: {
@@ -105,6 +114,11 @@ LinkedData.propTypes = {
   description: string,
   datePublished: string,
   dateModified: string,
+  name: string,
+  duration: string,
+  thumbnailUrl: string,
+  uploadDate: string,
+  embedURL: string,
   aboutTags: arrayOf(
     shape({
       '@type': string,
@@ -121,6 +135,11 @@ LinkedData.defaultProps = {
   datePublished: undefined,
   dateModified: undefined,
   aboutTags: undefined,
+  name: undefined,
+  duration: undefined,
+  thumbnailUrl: undefined,
+  uploadDate: undefined,
+  embedURL: undefined,
 };
 
 export default LinkedData;
