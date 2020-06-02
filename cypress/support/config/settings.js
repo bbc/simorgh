@@ -1953,7 +1953,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/igbo/afirika-23252735'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -2595,7 +2595,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/kyrgyz/23292889'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -3310,7 +3310,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/pashto/23289748'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -4523,7 +4523,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/sinhala/23225618'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -6674,7 +6674,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/yoruba/afrika-23252769'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
