@@ -1,6 +1,6 @@
 ci:
   collect:
-    numberOfRuns: 1
+    numberOfRuns: 3
     startServerCommand: npm start
     url:
       - http://localhost:7080/mundo # Frontpage
@@ -8,15 +8,21 @@ ci:
       - http://localhost:7080/mundo/23263889 # CPS STY
       - http://localhost:7080/pidgin/sport-23252855 # CPS PGL
   assert:
-    preset: lighthouse:recommended
     assertions:
-      # Disable PWA stuff
-      installable-manifest: off
-      offline-start-url: off
-      service-worker: off
-      splash-screen: off
-      themed-omnibox: off
-      works-offline: off
+      categories:performance: off
+      categories:pwa: off
+      categories:accessibility:
+        - error
+        - aggregationMethod: optimisitc
+          minScore: 0.9
+      categories:bestpractices:
+        - error
+        - aggregationMethod: optimistic
+          minScore: 0.9
+      categories:seo:
+        - error
+        - aggregationMethod: optimistic
+          minScore: 0.9
     skipAudits:
       - is-on-https
   upload:
