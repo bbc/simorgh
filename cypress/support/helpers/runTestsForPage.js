@@ -81,7 +81,7 @@ const runTestsForPage = ({
         });
 
         // Switch to AMP page URL (NB all our pages have AMP variants)
-        describe.skip(`${pageType} - ${currentPath} - AMP`, () => {
+        describe(`${pageType} - ${currentPath} - AMP`, () => {
           before(() => {
             Cypress.env('currentPath', currentPath);
             visitPage(`${currentPath}.amp`, pageType);
