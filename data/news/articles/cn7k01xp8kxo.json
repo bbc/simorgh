@@ -406,6 +406,31 @@
                     }
                   ]
                 }
+              },
+              {
+                "model": {
+                  "blocks": [
+                    {
+                      "model": {
+                        "blocks": [
+                          {
+                            "model": {
+                              "attributes": [],
+                              "text": "This is a link to another test article"
+                            },
+                            "type": "fragment"
+                          }
+                        ],
+                        "isExternal": false,
+                        "locator": "https://www.bbc.co.uk/news/articles/c0g992jmmkko",
+                        "text": "This is a link to another test article"
+                      },
+                      "type": "urlLink"
+                    }
+                  ],
+                  "text": "This is a link to another test article"
+                },
+                "type": "paragraph"
               }
             ]
           }
