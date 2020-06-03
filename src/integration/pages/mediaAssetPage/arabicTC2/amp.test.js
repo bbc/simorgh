@@ -1,6 +1,6 @@
 /**
  * @service arabic
- * @pathname /arabic/multimedia/2014/05/140515_kenia_children_sex_trade
+ * @pathname /arabic/worldnews/2015/11/151120_t_arabic_av
  */
 
 import runCrossPlatformTests from '../crossPlatformTests';
