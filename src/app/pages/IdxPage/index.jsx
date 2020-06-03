@@ -12,17 +12,18 @@ const IdxPage = ({ pageData }) => {
   const { radioSchedule } = useContext(ServiceContext);
   const radioScheduleData = path(['radioScheduleData'], pageData);
   const radioScheduleOnIdxPage = path(['onIdxPage'], radioSchedule);
-  // const radioScheduleIdxPosition = pathOr(['idxPagePosition'], radioSchedule);
+  const radioScheduleIdxPosition = path(['idxPagePosition'], radioSchedule);
 
   return (
     <main role="main">
       <h1 id="content">IDX Page</h1>
-      {radioScheduleOnIdxPage && (
-        <RadioScheduleContainer initialData={radioScheduleData} />
-      )}
       <PageContainer>
         {groups.map((group, index) => (
           <Fragment key={group.title}>
+            {radioScheduleOnIdxPage &&
+              radioScheduleIdxPosition === group.semanticGroupName && (
+                <RadioScheduleContainer initialData={radioScheduleData} />
+              )}
             <FrontPageSection group={group} sectionNumber={index} />
           </Fragment>
         ))}
