@@ -6,11 +6,67 @@ exports[`Canonical Media Asset Page Analytics ATI 1`] = `"<img height=\\"1px\\" 
 
 exports[`Canonical Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
+exports[`Canonical Media Asset Page Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link: BBC News, عربي 1`] = `"/arabic"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link: اتصل بـ بي بي سي 1`] = `"https://www.bbc.com/arabic/institutional-37731355"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link: سياسة الخصوصية 1`] = `"https://www.bbc.com/arabic/institutional-37731353"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link: سياستنا بخصوص الروابط الخارجية. 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link: شروط الاستخدام 1`] = `"https://www.bbc.com/arabic/institutional-37731351"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link: عن بي بي سي 1`] = `"https://www.bbc.com/arabic/institutional-37731352"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link: لماذا يمكنك الاعتماد على أخبار بي بي سي 1`] = `"https://www.bbc.com/arabic/institutional-49283069"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link: ملفات الارتباط Cookies 1`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+
 exports[`Canonical Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
-exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, عربي"`;
+exports[`Canonical Media Asset Page Header I can see a navigation link: برامجنا 1`] = `"/arabic/tv-and-radio-37728883"`;
 
-exports[`Canonical Media Asset Page Header I can see the navigation 1`] = `"رئيسية"`;
+exports[`Canonical Media Asset Page Header I can see a navigation link: برامجنا 2`] = `"/arabic/tv-and-radio-37728883"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: تحقيقات 1`] = `"/arabic/tv-and-radio-42414864"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: تحقيقات 2`] = `"/arabic/tv-and-radio-42414864"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: ترند 1`] = `"/arabic/trending"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: ترند 2`] = `"/arabic/trending"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: رئيسية 1`] = `"/arabic"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: رئيسية 2`] = `"/arabic"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: شرق أوسط 1`] = `"/arabic/middleeast"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: شرق أوسط 2`] = `"/arabic/middleeast"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: صحافة 1`] = `"/arabic/inthepress"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: صحافة 2`] = `"/arabic/inthepress"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: صحة 1`] = `"/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: صحة 2`] = `"/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: عالم 1`] = `"/arabic/world"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: عالم 2`] = `"/arabic/world"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: علوم وتكنولوجيا 1`] = `"/arabic/scienceandtech"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: علوم وتكنولوجيا 2`] = `"/arabic/scienceandtech"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: فيديو 1`] = `"/arabic/media"`;
+
+exports[`Canonical Media Asset Page Header I can see a navigation link: فيديو 2`] = `"/arabic/media"`;
+
+exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
 exports[`Canonical Media Asset Page I can see the headline 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 
@@ -32,7 +88,7 @@ exports[`Canonical Media Asset Page SEO Heading level 1 1`] = `"شركة شار�
 
 exports[`Canonical Media Asset Page SEO Lang attribute 1`] = `"ar"`;
 
-exports[`Canonical Media Asset Page SEO Linked data 1`] = `
+exports[`Canonical Media Asset Page SEO Linked data Article 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "Article",
@@ -74,6 +130,17 @@ Object {
   },
   "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
   "url": "http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av",
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Linked data VideoObject 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "duration": null,
+  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar",
+  "thumbnailUrl": "https://",
+  "uploadDate": "1970-01-01T00:00:00.000Z",
 }
 `;
 

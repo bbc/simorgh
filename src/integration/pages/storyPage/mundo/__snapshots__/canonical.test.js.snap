@@ -42,9 +42,41 @@ exports[`Canonical Story Page Header I can see a navigation link: Cultura 1`] = 
 
 exports[`Canonical Story Page Header I can see a navigation link: Cultura 2`] = `"/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864"`;
 
-exports[`Canonical Story Page Lead image I can see an image with a caption 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
+exports[`Canonical Story Page Header I can see a navigation link: Deportes 1`] = `"/mundo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
 
-exports[`Canonical Story Page Header I can see the navigation 1`] = `"Noticias"`;
+exports[`Canonical Story Page Header I can see a navigation link: Deportes 2`] = `"/mundo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
+
+exports[`Canonical Story Page Header I can see a navigation link: Economía 1`] = `"/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342"`;
+
+exports[`Canonical Story Page Header I can see a navigation link: Economía 2`] = `"/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342"`;
+
+exports[`Canonical Story Page Header I can see a navigation link: Hay Festival 1`] = `"/mundo/noticias-36795069"`;
+
+exports[`Canonical Story Page Header I can see a navigation link: Hay Festival 2`] = `"/mundo/noticias-36795069"`;
+
+exports[`Canonical Story Page Header I can see a navigation link: Internacional 1`] = `"/mundo/internacional"`;
+
+exports[`Canonical Story Page Header I can see a navigation link: Internacional 2`] = `"/mundo/internacional"`;
+
+exports[`Canonical Story Page Header I can see a navigation link: Noticias 1`] = `"/mundo"`;
+
+exports[`Canonical Story Page Header I can see a navigation link: Noticias 2`] = `"/mundo"`;
+
+exports[`Canonical Story Page Header I can see a navigation link: Salud 1`] = `"/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+
+exports[`Canonical Story Page Header I can see a navigation link: Salud 2`] = `"/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+
+exports[`Canonical Story Page Header I can see a navigation link: Tecnología 1`] = `"/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a"`;
+
+exports[`Canonical Story Page Header I can see a navigation link: Tecnología 2`] = `"/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a"`;
+
+exports[`Canonical Story Page Header I can see a navigation link: Video 1`] = `"/mundo/media/video"`;
+
+exports[`Canonical Story Page Header I can see a navigation link: Video 2`] = `"/mundo/media/video"`;
+
+exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
+
+exports[`Canonical Story Page Lead image I can see an image with a caption 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
 
 exports[`Canonical Story Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
 
