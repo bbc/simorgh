@@ -124,6 +124,8 @@ exports[`AMP Live Radio Footer I can see the footer copyright and external linki
 
 exports[`AMP Live Radio Header I can see the branding 1`] = `"BBC News, 코리아"`;
 
+exports[`AMP Live Radio Header I can see the navigation 1`] = `"뉴스"`;
+
 exports[`AMP Live Radio I can see the headline 1`] = `"BBC 코리아 라디오"`;
 
 exports[`AMP Live Radio I can see the summary 1`] = `"세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다"`;

@@ -124,6 +124,8 @@ exports[`AMP On Demand Radio Episode Footer I can see the footer copyright and e
 
 exports[`AMP On Demand Radio Episode Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
+exports[`AMP On Demand Radio Episode Header I can see the navigation 1`] = `"کور پاڼه"`;
+
 exports[`AMP On Demand Radio Episode I can see the brand title 1`] = `"ماښامنۍ خپرونه"`;
 
 exports[`AMP On Demand Radio Episode I can see the episode summary 1`] = `"د بي بي سي ورلډ سروس څخه پروګرام کول"`;

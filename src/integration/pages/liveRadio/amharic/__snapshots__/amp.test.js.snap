@@ -124,6 +124,8 @@ exports[`AMP Live Radio Footer I can see the footer copyright and external linki
 
 exports[`AMP Live Radio Header I can see the branding 1`] = `"BBC News, አማርኛ"`;
 
+exports[`AMP Live Radio Header I can see the navigation 1`] = `"ዜና"`;
+
 exports[`AMP Live Radio I can see the headline 1`] = `"ያድምጡ"`;
 
 exports[`AMP Live Radio I can see the summary 1`] = `"ዝግጅቶቻችንን’"`;

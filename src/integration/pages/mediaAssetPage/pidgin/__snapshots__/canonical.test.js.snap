@@ -10,7 +10,9 @@ exports[`Canonical Media Asset Page Footer I can see the footer copyright and ex
 
 exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
-exports[`Canonical Media Asset Page I can see a bulleted list item 1`] = `"<Media Asset Page>"`;
+exports[`Canonical Media Asset Page Header I can see the navigation 1`] = `"Home"`;
+
+exports[`Canonical Media Asset Page I can see the bulleted list item 1`] = `"<Media Asset Page><Media Asset Page><Media Asset Page>this is the link textthis is the link textthis is the link text"`;
 
 exports[`Canonical Media Asset Page I can see a bulleted list item with link: <Media Asset Page> 1`] = `"http://www.bbc.com/afrique/23248423"`;
 
