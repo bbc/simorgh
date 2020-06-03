@@ -13,7 +13,6 @@ import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHea
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
 import VideoPlayer from './VideoPlayer';
 
-const SKIP_LINK_ANCHOR_ID = 'content';
 const EPISODE_IS_AVAILABLE = 'available';
 const EPISODE_IS_EXPIRED = 'expired';
 const EPISODE_IS_NOT_YET_AVAILABLE = 'not-yet-available';

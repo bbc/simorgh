@@ -60,8 +60,8 @@ const HeadingContainer = ({
       script={script}
       service={service}
       id={idAttr}
-      {...(idAttr === 'content' ? { tabIndex: '-1' } : {})}
-      {...(ariaHidden ? { as: 'strong', 'aria-hidden': 'true' } : {})}
+      {...(idAttr === 'content' && { tabIndex: '-1' })}
+      {...(ariaHidden && { as: 'strong', 'aria-hidden': 'true' })}
     >
       <TextWrapper {...(ariaHidden ? {} : { role: 'text' })}>
         <BrandTitle>{brandTitle}</BrandTitle>
