@@ -1,19 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderboard ad with dotcom-bootstrap script 1`] = `
-<html>
-  <head>
-    <script
-      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
-    />
-  </head>
-  <body>
-    <div>
-      <div
-        class="dotcom-ad"
-        id="dotcom-leaderboard"
-      />
-    </div>
-  </body>
-</html>
+<div
+  class="dotcom-ad"
+  id="dotcom-leaderboard"
+/>
 `;
