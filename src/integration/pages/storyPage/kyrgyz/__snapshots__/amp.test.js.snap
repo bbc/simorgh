@@ -111,9 +111,9 @@ exports[`AMP Story Page Footer I can see the footer copyright and external linki
 
 exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
-exports[`AMP Story Page Header I can see the navigation 1`] = `"Башталгыч бет"`;
+exports[`AMP Story Page Lead image I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
-exports[`AMP Story Page I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
+exports[`AMP Story Page Header I can see the navigation 1`] = `"Башталгыч бет"`;
 
 exports[`AMP Story Page SEO Canonical link 1`] = `"http://localhost:7080/kyrgyz/23292889"`;
 
