@@ -211,16 +211,15 @@ export const service = {
       },
       links: [
         {
-          href:
-            'https://www.bbc.com/swahili/taasisi/2011/10/000001_terms_of_use',
+          href: 'https://www.bbc.com/swahili/taasisi-37098622',
           text: 'Sheria ya matumizi',
         },
         {
-          href: 'https://www.bbc.com/swahili/taasisi/2011/10/000001_aboutus',
+          href: 'https://www.bbc.com/swahili/taasisi-37100009',
           text: 'Kuhusu BBC',
         },
         {
-          href: 'https://www.bbc.com/swahili/taasisi/2011/10/000001_privacy',
+          href: 'https://www.bbc.com/swahili/taasisi-37100010',
           text: 'Sera ya faragha',
         },
         {
@@ -228,7 +227,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/swahili/taasisi/2011/10/000001_contactus',
+          href: 'https://www.bbc.com/swahili/taasisi-37100011',
           text: 'Wasiliana na BBC',
         },
         {
