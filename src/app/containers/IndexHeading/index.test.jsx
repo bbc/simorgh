@@ -1,15 +1,15 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
-import IndexHeading from '.';
+import IndexHeadingContainer from '.';
 
 describe('Index Heading', () => {
   describe('snapshot', () => {
     shouldMatchSnapshot(
       'should render correctly',
-      <IndexHeading script={cyrillicAndLatin} service="ukrainian">
+      <IndexHeadingContainer script={cyrillicAndLatin} service="ukrainian">
         Index Heading
-      </IndexHeading>,
+      </IndexHeadingContainer>,
     );
   });
 });
