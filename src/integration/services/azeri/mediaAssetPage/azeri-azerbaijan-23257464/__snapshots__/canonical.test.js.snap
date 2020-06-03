@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical azeri mediaAssetPage A11y I can see the skip to content link 1`] = `"Mətnə keçid"`;
+
+exports[`Canonical azeri mediaAssetPage Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=6&amp;p=azerbaijan::azeri.azerbaijan.media_asset.23257464.page&amp;x1=[urn:bbc:cps:d39ebe18-605c-5543-86eb-639422147697]&amp;x2=[responsive]&amp;x3=[news-azeri]&amp;x4=[az]&amp;x7=[article-media-asset]&amp;x8=[simorgh-nojs]&amp;x9=[Clip+short+synopsis+-+e2e+test+-+BBC+News+Azərbaycanca]&amp;x11=[2019-12-03T10:45:00.000Z]&amp;x12=[2019-12-03T10:45:00.000Z]\\"/>"`;
+
+exports[`Canonical azeri mediaAssetPage Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/azeri"`;
+
+exports[`Canonical azeri mediaAssetPage Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC kənar saytların məzmununa məsul deyil. Bizim kənar keçidlərə dair yanaşmamız barədə oxuyun."`;
+
+exports[`Canonical azeri mediaAssetPage Header I can see the branding 1`] = `"BBC News, Azərbaycanca"`;
+
+exports[`Canonical azeri mediaAssetPage I can see the headline 1`] = `"Clip short synopsis - e2e test"`;
+
+exports[`Canonical azeri mediaAssetPage I can see the timestamp 1`] = `"3 Dekabr 2019"`;
+
+exports[`Canonical azeri mediaAssetPage Media player embed A11y I can read the media player title 1`] = `"Media player"`;
+
+exports[`Canonical azeri mediaAssetPage Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/azeri/azerbaijan-23257464/p01d23fm/az"`;
+
+exports[`Canonical azeri mediaAssetPage SEO Canonical link 1`] = `"http://localhost:7080/azeri/azerbaijan-23257464"`;
+
+exports[`Canonical azeri mediaAssetPage SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical azeri mediaAssetPage SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical azeri mediaAssetPage SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical azeri mediaAssetPage SEO Heading level 1 1`] = `"Clip short synopsis - e2e test"`;
+
+exports[`Canonical azeri mediaAssetPage SEO Lang attribute 1`] = `"az"`;
+
+exports[`Canonical azeri mediaAssetPage SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/azeri.png",
+      "width": 1024,
+    },
+    "name": "BBC News Azərbaycanca",
+    "noBylinesPolicy": "https://www.bbc.com/azeri/institutional-49283479#authorexpertise",
+  },
+  "dateModified": "2019-12-03T10:45:00.000Z",
+  "datePublished": "2019-12-03T10:45:00.000Z",
+  "headline": "Clip short synopsis - e2e test",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/azeri.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/azeri/azerbaijan-23257464",
+    "@type": "WebPage",
+    "name": "Clip short synopsis - e2e test",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/azeri.png",
+      "width": 1024,
+    },
+    "name": "BBC News Azərbaycanca",
+    "publishingPrinciples": "https://www.bbc.com/azeri/institutional-49283479",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/azeri.png",
+  "url": "http://localhost:7080/azeri/azerbaijan-23257464",
+}
+`;
+
+exports[`Canonical azeri mediaAssetPage SEO OG description 1`] = `"Clip medium synopsis - e2e test"`;
+
+exports[`Canonical azeri mediaAssetPage SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_azeri/831A/test/_63726533_p01fcplf.jpg"`;
+
+exports[`Canonical azeri mediaAssetPage SEO OG image alt 1`] = `"Buqqaafamtoota keessaa"`;
+
+exports[`Canonical azeri mediaAssetPage SEO OG locale 1`] = `"az-AZ"`;
+
+exports[`Canonical azeri mediaAssetPage SEO OG site name 1`] = `"BBC News Azərbaycanca"`;
+
+exports[`Canonical azeri mediaAssetPage SEO OG title 1`] = `"Clip short synopsis - e2e test - BBC News Azərbaycanca"`;
+
+exports[`Canonical azeri mediaAssetPage SEO OG type 1`] = `"article"`;
+
+exports[`Canonical azeri mediaAssetPage SEO OG url 1`] = `"http://localhost:7080/azeri/azerbaijan-23257464"`;
+
+exports[`Canonical azeri mediaAssetPage SEO Page title 1`] = `"Clip short synopsis - e2e test - BBC News Azərbaycanca"`;
+
+exports[`Canonical azeri mediaAssetPage SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical azeri mediaAssetPage SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical azeri mediaAssetPage SEO Twitter creator 1`] = `"@bbcazeri"`;
+
+exports[`Canonical azeri mediaAssetPage SEO Twitter description 1`] = `"Clip medium synopsis - e2e test"`;
+
+exports[`Canonical azeri mediaAssetPage SEO Twitter image alt 1`] = `"Buqqaafamtoota keessaa"`;
+
+exports[`Canonical azeri mediaAssetPage SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_azeri/831A/test/_63726533_p01fcplf.jpg"`;
+
+exports[`Canonical azeri mediaAssetPage SEO Twitter site 1`] = `"@bbcazeri"`;
+
+exports[`Canonical azeri mediaAssetPage SEO Twitter title 1`] = `"Clip short synopsis - e2e test - BBC News Azərbaycanca"`;

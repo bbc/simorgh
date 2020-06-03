@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical bengali frontPage A11y I can see the skip to content link 1`] = `"সরাসরি কনটেন্টে যান"`;
+
+exports[`Canonical bengali frontPage Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=31&amp;p=bengali.page&amp;x1=[urn:bbc:cps:3a1d10ad-4f72-4ff6-e050-380a4e807657]&amp;x2=[responsive]&amp;x3=[news-bengali]&amp;x4=[bn]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[খবর,+সর্বশেষ+খবর,+ব্রেকিং+নিউজ+|+News,+latest+news,+breaking+news+-+BBC+News+বাংলা]&amp;x11=[1970-01-18T00:42:23.120Z]&amp;x12=[1970-01-19T02:08:46.351Z]\\"/>"`;
+
+exports[`Canonical bengali frontPage Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/bengali"`;
+
+exports[`Canonical bengali frontPage Footer I can see the footer copyright and external linking text 1`] = `"© 2020 বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়। বাইরের লিংক সম্পর্কে বিবিসির দৃষ্টিভঙ্গি সম্বন্ধে পড়ুন।"`;
+
+exports[`Canonical bengali frontPage Header I can see the branding 1`] = `"BBC News, বাংলা"`;
+
+exports[`Canonical bengali frontPage I can see Index Alsos 1`] = `"এই খবর নিয়ে আরো তথ্য"`;
+
+exports[`Canonical bengali frontPage I can see Index Alsos 2`] = `"বিশ্বকাপের ফরম্যাট বদলানো উচিত, বলছেন কোহলি"`;
+
+exports[`Canonical bengali frontPage SEO Canonical link 1`] = `"http://localhost:7080/bengali"`;
+
+exports[`Canonical bengali frontPage SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical bengali frontPage SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical bengali frontPage SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical bengali frontPage SEO Heading level 1 1`] = `"BBC News, বাংলা - মূলপাতা"`;
+
+exports[`Canonical bengali frontPage SEO Lang attribute 1`] = `"bn"`;
+
+exports[`Canonical bengali frontPage SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/bengali",
+    "@type": "WebPage",
+    "name": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png",
+      "width": 1024,
+    },
+    "name": "BBC News বাংলা",
+    "publishingPrinciples": "https://www.bbc.com/bengali/institutional-50409861",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png",
+  "url": "http://localhost:7080/bengali",
+}
+`;
+
+exports[`Canonical bengali frontPage SEO OG description 1`] = `"বাংলাদেশ এবং বিশ্বের সর্বশেষ খবর, প্রতিবেদন, বিশ্লেষণ, সাক্ষাৎকার, ভিডিও, অডিও এবং ফিচারের জন্য বিবিসি বাংলার ওয়েবসাইটে আসুন। খেলাধুলা, বিনোদন, ব্যবসা-বাণিজ্য, বিজ্ঞান, প্রযুক্তি এবং স্বাস্থ্য সহ নানা বিষয়ে ফিচার ও বিশ্লেষণও থাকে আমাদের পাতায়।"`;
+
+exports[`Canonical bengali frontPage SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png"`;
+
+exports[`Canonical bengali frontPage SEO OG image alt 1`] = `"BBC News বাংলা"`;
+
+exports[`Canonical bengali frontPage SEO OG locale 1`] = `"bn-BD"`;
+
+exports[`Canonical bengali frontPage SEO OG site name 1`] = `"BBC News বাংলা"`;
+
+exports[`Canonical bengali frontPage SEO OG title 1`] = `"খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news - BBC News বাংলা"`;
+
+exports[`Canonical bengali frontPage SEO OG type 1`] = `"website"`;
+
+exports[`Canonical bengali frontPage SEO OG url 1`] = `"http://localhost:7080/bengali"`;
+
+exports[`Canonical bengali frontPage SEO Page title 1`] = `"খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news - BBC News বাংলা"`;
+
+exports[`Canonical bengali frontPage SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical bengali frontPage SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical bengali frontPage SEO Twitter creator 1`] = `"@bbcbangla"`;
+
+exports[`Canonical bengali frontPage SEO Twitter description 1`] = `"বাংলাদেশ এবং বিশ্বের সর্বশেষ খবর, প্রতিবেদন, বিশ্লেষণ, সাক্ষাৎকার, ভিডিও, অডিও এবং ফিচারের জন্য বিবিসি বাংলার ওয়েবসাইটে আসুন। খেলাধুলা, বিনোদন, ব্যবসা-বাণিজ্য, বিজ্ঞান, প্রযুক্তি এবং স্বাস্থ্য সহ নানা বিষয়ে ফিচার ও বিশ্লেষণও থাকে আমাদের পাতায়।"`;
+
+exports[`Canonical bengali frontPage SEO Twitter image alt 1`] = `"BBC News বাংলা"`;
+
+exports[`Canonical bengali frontPage SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png"`;
+
+exports[`Canonical bengali frontPage SEO Twitter site 1`] = `"@bbcbangla"`;
+
+exports[`Canonical bengali frontPage SEO Twitter title 1`] = `"খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news - BBC News বাংলা"`;
