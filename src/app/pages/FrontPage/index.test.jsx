@@ -137,7 +137,7 @@ describe('Front Page', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should render a pidgin amp frontpage with ads', async () => {
+    it('should render a pidgin amp frontpage', async () => {
       const { container } = render(
         <FrontPageWithContext pageData={pageData} isAmp />,
       );
