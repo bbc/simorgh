@@ -51,11 +51,6 @@ const renderEpisode = ({
   episodeAvailableFrom,
   episodeAvailableUntil,
   imageUrl,
-  promoBrandTitle,
-  shortSynopsis,
-  durationISO8601,
-  thumbnailImageUrl,
-  releaseDateTimeStamp,
 }) => {
   const episodeAvailability = getEpisodeAvailability(
     episodeAvailableFrom,
@@ -68,11 +63,6 @@ const renderEpisode = ({
           masterBrand={masterBrand}
           assetId={episodeId}
           imageUrl={imageUrl}
-          shortSynopsis={shortSynopsis}
-          durationISO8601={durationISO8601}
-          thumbnailImageUrl={thumbnailImageUrl}
-          releaseDateTimeStamp={releaseDateTimeStamp}
-          promoBrandTitle={promoBrandTitle}
         />
       );
     case EPISODE_IS_EXPIRED:
@@ -97,9 +87,6 @@ const OnDemandTvPage = ({ pageData }) => {
     masterBrand,
     episodeId,
     imageUrl,
-    promoBrandTitle,
-    durationISO8601,
-    thumbnailImageUrl,
   } = pageData;
 
   const { dir } = useContext(ServiceContext);
@@ -139,11 +126,6 @@ const OnDemandTvPage = ({ pageData }) => {
               episodeAvailableFrom,
               episodeAvailableUntil,
               imageUrl,
-              promoBrandTitle,
-              shortSynopsis,
-              durationISO8601,
-              thumbnailImageUrl,
-              releaseDateTimeStamp,
             })}
           </StyledGelWrapperGrid>
           <OnDemandHeadingBlock
@@ -168,11 +150,8 @@ OnDemandTvPage.propTypes = {
     masterBrand: string,
     episodeId: string,
     imageUrl: string,
-    promoBrandTitle: string,
     episodeAvailableFrom: number,
     episodeAvailableUntil: number,
-    durationISO8601: string,
-    thumbnailImageUrl: string,
   }).isRequired,
 };
 
