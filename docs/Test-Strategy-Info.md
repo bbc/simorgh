@@ -8,7 +8,7 @@ This document gives a brief overview on what basis integration and e2e tests are
 - Test runtime
 - How flaky the test would be (how often the test will fail due to external conditions such as timing out)
 - Realistic environment(does it mock the browser behaviour)
-- Client side rendered or server side rendered(As with JSDom in integration testing it doesn’t entirely emulates a web browser so client side rendered components have to tested using cypress)
+- Client/Server side rendered (as with JSDom in integration testing, it doesn’t entirely emulate a web browser so client side rendered components have to tested using cypress)
 
 ## Integration tests:
 
