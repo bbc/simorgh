@@ -111,7 +111,7 @@ exports[`AMP Amharic Live Radio Page Footer I can see the footer copyright and e
 
 exports[`AMP Amharic Live Radio Page Header I can see the branding 1`] = `"BBC News, አማርኛ"`;
 
-exports[`AMP Amharic Live Radio Page Headline should match text 1`] = `"ያድምጡ"`;
+exports[`AMP Amharic Live Radio Page Main heading should match text 1`] = `"ያድምጡ"`;
 
 exports[`AMP Amharic Live Radio Page Media player embed A11y I can read the media player title 1`] = `"Audio player"`;
 

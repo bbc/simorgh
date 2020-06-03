@@ -10,7 +10,7 @@ exports[`Canonical Korean Live Radio Page Footer I can see the footer copyright 
 
 exports[`Canonical Korean Live Radio Page Header I can see the branding 1`] = `"BBC News, 코리아"`;
 
-exports[`Canonical Korean Live Radio Page Headline should match text 1`] = `"BBC 코리아 라디오"`;
+exports[`Canonical Korean Live Radio Page Main heading should match text 1`] = `"BBC 코리아 라디오"`;
 
 exports[`Canonical Korean Live Radio Page Media player embed A11y I can read the media player title 1`] = `"오디오 플레이어"`;
 
