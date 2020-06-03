@@ -104,11 +104,15 @@ const CpsOnwardJourney = ({
   const { script, service, dir } = useContext(ServiceContext);
   const CpsOnwardJourneyWrapper = ({ children }) =>
     parentColumns ? (
-      <Wrapper parentColumns={parentColumns} {...a11yAttributes}>
+      <Wrapper
+        data-e2e="related-content"
+        parentColumns={parentColumns}
+        {...a11yAttributes}
+      >
         {children}
       </Wrapper>
     ) : (
-      <LegacyGridWrapper {...a11yAttributes}>
+      <LegacyGridWrapper data-e2e="related-content" {...a11yAttributes}>
         <LegacyGridItemConstrainedLarge>
           {children}
         </LegacyGridItemConstrainedLarge>
