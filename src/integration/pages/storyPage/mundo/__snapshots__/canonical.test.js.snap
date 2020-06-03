@@ -12,6 +12,8 @@ exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Mu
 
 exports[`Canonical Story Page Lead image I can see an image with a caption 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
 
+exports[`Canonical Story Page Header I can see the navigation 1`] = `"Noticias"`;
+
 exports[`Canonical Story Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
 
 exports[`Canonical Story Page SEO Dir attribute 1`] = `"ltr"`;

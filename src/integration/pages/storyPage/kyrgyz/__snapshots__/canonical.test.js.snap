@@ -12,6 +12,8 @@ exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, К
 
 exports[`Canonical Story Page Lead image I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
+exports[`Canonical Story Page Header I can see the navigation 1`] = `"Башталгыч бет"`;
+
 exports[`Canonical Story Page SEO Canonical link 1`] = `"http://localhost:7080/kyrgyz/23292889"`;
 
 exports[`Canonical Story Page SEO Dir attribute 1`] = `"ltr"`;
