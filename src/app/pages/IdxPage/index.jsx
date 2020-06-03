@@ -1,12 +1,13 @@
 import React, { useContext, Fragment } from 'react';
 import path from 'ramda/src/path';
+import { string } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import PageContainer from '#lib/pageStyles/PageContainer';
 import FrontPageSection from '#containers/FrontPageSection';
 import idxPageDataPropTypes from '#models/propTypes/idxPage';
 
-const IdxPage = ({ pageData }) => {
+const IdxPage = ({ pageData, radioScheduleEndpointOverride }) => {
   const groups = path(['content', 'groups'], pageData);
 
   const { radioSchedule } = useContext(ServiceContext);
@@ -22,7 +23,10 @@ const IdxPage = ({ pageData }) => {
           <Fragment key={group.title}>
             {radioScheduleOnIdxPage &&
               radioScheduleIdxPosition === group.semanticGroupName && (
-                <RadioScheduleContainer initialData={radioScheduleData} />
+                <RadioScheduleContainer
+                  initialData={radioScheduleData}
+                  radioScheduleEndpointOverride={radioScheduleEndpointOverride}
+                />
               )}
             <FrontPageSection group={group} sectionNumber={index} />
           </Fragment>
@@ -34,6 +38,11 @@ const IdxPage = ({ pageData }) => {
 
 IdxPage.propTypes = {
   pageData: idxPageDataPropTypes.isRequired,
+  radioScheduleEndpointOverride: string,
+};
+
+IdxPage.defaultProps = {
+  radioScheduleEndpointOverride: null,
 };
 
 export default IdxPage;
