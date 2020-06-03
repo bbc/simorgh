@@ -2,7 +2,7 @@ export default () => {
   describe('Media Player', () => {
     const mediaPlayerIframe = document.querySelector('iframe, amp-iframe');
 
-    beforeEach(() => {
+    it('should be in the document', () => {
       expect(mediaPlayerIframe).toBeInTheDocument();
     });
 
