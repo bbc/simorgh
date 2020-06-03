@@ -1,7 +1,21 @@
 import pathOr from 'ramda/src/path';
+import pipe from 'ramda/src/pipe';
 import fetchPageData from '#app/routes/utils/fetchPageData';
+import filterUnknownContentTypes from '#app/routes/utils/sharedDataTransformers/filterUnknownContentTypes';
+import filterEmptyGroupItems from '#app/routes/utils/sharedDataTransformers/filterEmptyGroupItems';
+import squashTopStories from '#app/routes/utils/sharedDataTransformers/squashTopStories';
+import addIdsToItems from '#app/routes/utils/sharedDataTransformers/addIdsToItems';
+import filterGroupsWithoutStraplines from '#app/routes/utils/sharedDataTransformers/filterGroupsWithoutStraplines';
 import getConfig from '../../utils/getConfig';
 import withRadioSchedule from '../../utils/withRadioSchedule';
+
+const transformJson = pipe(
+  filterUnknownContentTypes,
+  filterEmptyGroupItems,
+  addIdsToItems,
+  squashTopStories,
+  filterGroupsWithoutStraplines,
+);
 
 export const hasRadioSchedule = async (service, variant) => {
   const config = await getConfig(service, variant);
@@ -37,7 +51,7 @@ export default async ({ path, service, variant }) => {
   return {
     ...rest,
     ...(json && {
-      pageData: json,
+      pageData: transformJson(json),
     }),
   };
 };
