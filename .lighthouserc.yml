@@ -13,7 +13,7 @@ ci:
       categories:pwa: off
       categories:accessibility:
         - error
-        - aggregationMethod: optimisitc
+        - aggregationMethod: optimistic
           minScore: 0.9
       categories:bestpractices:
         - error
