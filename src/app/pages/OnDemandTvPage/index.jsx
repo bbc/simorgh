@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { shape, string, number, bool } from 'prop-types';
+import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import ATIAnalytics from '../../containers/ATIAnalytics';
@@ -10,8 +12,6 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
 import VideoPlayer from './VideoPlayer';
-
-const SKIP_LINK_ANCHOR_ID = 'content';
 
 const StyledGelWrapperGrid = styled.div`
   padding-top: ${GEL_SPACING_TRPL};
@@ -32,7 +32,6 @@ const StyledGelPageGrid = styled(GelPageGrid)`
 `;
 
 const OnDemandTvPage = ({ pageData }) => {
-  const idAttr = SKIP_LINK_ANCHOR_ID;
   const {
     language,
     headline,
@@ -45,7 +44,15 @@ const OnDemandTvPage = ({ pageData }) => {
     episodeIsAvailable,
   } = pageData;
 
-  const { dir } = useContext(ServiceContext);
+  const { timezone, locale, dir } = useContext(ServiceContext);
+
+  const formattedTimestamp = formatUnixTimestamp({
+    timestamp: releaseDateTimeStamp,
+    format: 'LL',
+    timezone,
+    locale,
+    isRelative: false,
+  });
 
   return (
     <>
@@ -72,6 +79,9 @@ const OnDemandTvPage = ({ pageData }) => {
           columns={getGroups(6, 6, 6, 6, 6, 12)}
           margins={getGroups(true, true, true, true, false, false)}
         >
+          <VisuallyHiddenText as="h1" tabIndex="-1" id="content">
+            {brandTitle}, {formattedTimestamp}
+          </VisuallyHiddenText>
           <StyledGelWrapperGrid
             columns={getGroups(6, 6, 6, 6, 6, 6)}
             enableGelGutters
@@ -84,9 +94,9 @@ const OnDemandTvPage = ({ pageData }) => {
             />
           </StyledGelWrapperGrid>
           <OnDemandHeadingBlock
-            idAttr={idAttr}
             brandTitle={brandTitle}
             releaseDateTimeStamp={releaseDateTimeStamp}
+            ariaHidden
           />
           <ParagraphBlock text={shortSynopsis} />
         </Grid>
