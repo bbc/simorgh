@@ -1,24 +1,36 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, act } from '@testing-library/react';
+import dariRadioScheduleData from '#data/persian/bbc_dari_radio/schedule.json';
 import persianAfghanistanIdxData from '#data/persian/afghanistan';
 import IdxPageWithContext from './testHelpers';
 
 describe('IdxPage', () => {
+  beforeEach(async () => {
+    fetch.mockResponse(JSON.stringify(dariRadioScheduleData));
+  });
+
   describe('Snapshots', () => {
-    it('should render an IDX page correctly', () => {
-      const container = render(
-        <IdxPageWithContext pageData={persianAfghanistanIdxData} />,
-      );
+    it('should render a persian IDX page correctly with radio schedule', async () => {
+      let container = null;
+      await act(async () => {
+        container = render(
+          <IdxPageWithContext pageData={persianAfghanistanIdxData} />,
+        ).container;
+      });
+
       expect(container).toMatchSnapshot();
     });
 
     it('should render idx page sections', async () => {
-      const { container } = render(
-        <IdxPageWithContext pageData={persianAfghanistanIdxData} />,
-      );
+      let container = null;
+      await act(async () => {
+        container = render(
+          <IdxPageWithContext pageData={persianAfghanistanIdxData} />,
+        ).container;
+      });
 
       const sections = container.querySelectorAll('section');
-      expect(sections).toHaveLength(2);
+      expect(sections).toHaveLength(3);
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });
