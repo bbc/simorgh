@@ -39,7 +39,14 @@ const insertTimestampBlock = (originalJson, timestampBlock) => {
   );
 
   if (headlineBlocks.length > 0) {
-    if (imageOrAresMediaFirst(mainBlocks)) {
+    if (imageOrAresMediaFirst(mainBlocks) && json.metadata.type === 'STY') {
+      json.content.model.blocks = [
+        ...headlineBlocks,
+        timestampBlock,
+        mainBlocks[0],
+        ...mainBlocks.slice(1),
+      ];
+    } else if (imageOrAresMediaFirst(mainBlocks)) {
       json.content.model.blocks = [
         ...headlineBlocks,
         mainBlocks[0],
