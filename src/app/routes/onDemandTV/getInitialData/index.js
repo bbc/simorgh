@@ -79,7 +79,7 @@ export default async ({ path: pathname }) => {
         masterBrand: getMasterBrand(json),
         episodeId: getEpisodeId(json),
         imageUrl: getImageUrl(json),
-        episodeAvailable: getEpisodeAvailability({
+        episodeIsAvailable: getEpisodeAvailability({
           availableFrom,
           availableUntil,
         }),

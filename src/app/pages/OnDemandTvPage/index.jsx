@@ -42,7 +42,7 @@ const OnDemandTvPage = ({ pageData }) => {
     masterBrand,
     episodeId,
     imageUrl,
-    episodeAvailable,
+    episodeIsAvailable,
   } = pageData;
 
   const { dir } = useContext(ServiceContext);
@@ -80,7 +80,7 @@ const OnDemandTvPage = ({ pageData }) => {
               masterBrand={masterBrand}
               assetId={episodeId}
               imageUrl={imageUrl}
-              episodeAvailable={episodeAvailable}
+              episodeIsAvailable={episodeIsAvailable}
             />
           </StyledGelWrapperGrid>
           <OnDemandHeadingBlock
@@ -105,7 +105,7 @@ OnDemandTvPage.propTypes = {
     masterBrand: string,
     episodeId: string,
     imageUrl: string,
-    episodeAvailable: bool,
+    episodeIsAvailable: bool,
   }).isRequired,
 };
 
