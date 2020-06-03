@@ -263,14 +263,14 @@ module.exports = () => ({
               '/afrique/media-52121324', // CPS MAP
               '/afrique/institutionelles/2015/07/150714_hissene_habre_explainer', // TC2 MAP
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
               '/afrique/region-23278969', // CPS MAP
               '/afrique/nos_emissions/2016/06/160622_tc2_testmap1', // TC2 MAP
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -604,7 +604,7 @@ module.exports = () => ({
               '/arabic/world-23278971', // CPS audio
               '/arabic/worldnews/2015/11/151120_t_arabic_av', // TC2 video
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -1299,7 +1299,7 @@ module.exports = () => ({
               '/gahuza/amakuru-51710168', // CPS MAP with audio clip
               '/gahuza/video/2015/12/151201_100womenburundi', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
@@ -1604,7 +1604,7 @@ module.exports = () => ({
               '/hausa/labarai-51622389', // CPS MAP with video clip
               '/hausa/multimedia/2012/07/120712_click', // TC2 MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -1778,7 +1778,7 @@ module.exports = () => ({
               '/hindi/23201477', // CPS video
               '/hindi/sport/2016/08/160822_tc2_testmap1', // TC2 video
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -2214,7 +2214,7 @@ module.exports = () => ({
             paths: [
               '/japanese/video-52178074', // CPS MAP
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
@@ -2554,7 +2554,7 @@ module.exports = () => ({
               '/kyrgyz/media-23257484', // CPS MAP with video clip
               '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP with audio clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -2820,14 +2820,14 @@ module.exports = () => ({
               '/mundo/media-52123665', // CPS MAP
               '/mundo/noticias/2011/05/110518_video_deforestacion_amazonia_brasil_lav', // TC2 MAP
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
               '/mundo/media-23283126', // CPS MAP
               '/mundo/noticias/2016/04/160427_tc2_testmap1', // TC2 MAP
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -3262,7 +3262,7 @@ module.exports = () => ({
               '/pashto/arts-and-literature-46787030', // CPS MAP with audio clip
               '/pashto/multimedia/2016/08/160827_gn_southafrica_female_farmer', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
@@ -3451,7 +3451,7 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              // '/persian/iran-23231114', // CPS MAP with audio clip
+              '/persian/iran-23231114', // CPS MAP with audio clip
               '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP with video clip
             ],
             enabled: true,
@@ -3732,7 +3732,7 @@ module.exports = () => ({
               '/portuguese/internacional-51918335', // CPS MAP
               '/portuguese/noticias/2012/07/120711_video_estomago_camera_cc', // TC2 MAP
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
@@ -4833,7 +4833,7 @@ module.exports = () => ({
               '/swahili/gnb-51703829', // CPS MAP with video clip
               '/swahili/medianuai/2016/05/160517_apatae_fatacky', // TC2 MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -5448,7 +5448,7 @@ module.exports = () => ({
             paths: [
               '/tigrinya/news-23263262', // CPS MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/tigrinya/news-23263262'], // CPS MAP with video clip
@@ -5989,7 +5989,7 @@ module.exports = () => ({
               '/ukrainian/news-russian-38395917', // Russian CPS MAP
               '/ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag', // Ukrainian TC2
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
@@ -5997,7 +5997,7 @@ module.exports = () => ({
               '/ukrainian/other-news-23279018', // Ukrainian CPS
               '/ukrainian/entertainment/2016/10/161025_tc2_testmap1', // TC2 Ukrainian (no Russian TC2 MAP)
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -6351,7 +6351,7 @@ module.exports = () => ({
               '/uzbek/lotin/2016/02/160212_latin_gravity_video', // Latin TC2 MAP
               '/uzbek/institutional/2016/03/160313_audio_zokirjon_mashrabov', // Cyrillic TC2 MAP Audio clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [

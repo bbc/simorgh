@@ -23,23 +23,39 @@ export default () => {
     expect(timestampEl.textContent).toMatchSnapshot();
   });
 
-  const bulletedListEl = document.querySelector('main ul[role="list"]');
+  const bulletedListItem = document.querySelector('main ul[role="list"] > li');
 
-  if (bulletedListEl) {
-    it('I can see the bulleted list item', () => {
-      expect(bulletedListEl).toBeInTheDocument();
-      expect(bulletedListEl.textContent).toBeTruthy();
-      expect(bulletedListEl.textContent).toMatchSnapshot();
+  if (bulletedListItem) {
+    it('I can see a bulleted list item', () => {
+      expect(bulletedListItem).toBeInTheDocument();
+      expect(bulletedListItem.textContent).toBeTruthy();
+      expect(bulletedListItem.textContent).toMatchSnapshot();
     });
   }
 
-  const releatedContentEl = document.querySelector('section [role="list"]');
+  const bulletedListItemWithLink = document.querySelector(
+    'main ul[role="list"] > li > a',
+  );
 
-  if (releatedContentEl) {
-    it('I can see the related content', () => {
-      expect(releatedContentEl).toBeInTheDocument();
-      expect(releatedContentEl.textContent).toBeTruthy();
-      expect(releatedContentEl.textContent).toMatchSnapshot();
+  if (bulletedListItemWithLink) {
+    it('I can see a bulleted list item with link', () => {
+      expect(bulletedListItemWithLink.getAttribute('href')).toMatchSnapshot(
+        bulletedListItemWithLink.textContent,
+      );
+    });
+  }
+
+  const relatedContentLinks = document.querySelectorAll(
+    '[data-e2e="related-content"] a',
+  );
+
+  if (relatedContentLinks) {
+    relatedContentLinks.forEach(relatedContentLink => {
+      it(`I can see related content: ${relatedContentLink.textContent}`, () => {
+        expect(relatedContentLink).toBeInTheDocument();
+        expect(relatedContentLink.textContent).toBeTruthy();
+        expect(relatedContentLink.getAttribute('href')).toMatchSnapshot();
+      });
     });
   }
 };
