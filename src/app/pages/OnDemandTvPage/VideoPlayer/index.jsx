@@ -34,7 +34,12 @@ const MediaMessageWrapper = styled.div`
   position: relative;
 `;
 
-const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
+const VideoPlayer = ({
+  assetId,
+  masterBrand,
+  imageUrl,
+  isEpisodeAvailable,
+}) => {
   const { lang, translations, service } = useContext(ServiceContext);
   const { isAmp, platform } = useContext(RequestContext);
   const location = useLocation();
@@ -49,7 +54,7 @@ const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
     translations,
   );
 
-  if (isExpired) {
+  if (!isEpisodeAvailable) {
     const expiredContentMessage = pathOr(
       'This content is no longer available',
       ['media', 'contentExpired'],
@@ -110,14 +115,14 @@ VideoPlayer.propTypes = {
   masterBrand: string,
   assetId: string,
   imageUrl: string,
-  isExpired: bool,
+  isEpisodeAvailable: bool,
 };
 
 VideoPlayer.defaultProps = {
   masterBrand: '',
   assetId: '',
   imageUrl: '',
-  isExpired: false,
+  isEpisodeAvailable: true,
 };
 
 export default VideoPlayer;

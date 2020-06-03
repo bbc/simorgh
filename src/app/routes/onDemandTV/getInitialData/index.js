@@ -46,6 +46,14 @@ const getEpisodeAvailableUntil = path([
   'availableUntil',
 ]);
 
+const getEpisodeAvailability = pageData => {
+  const availableFrom = getEpisodeAvailableFrom(pageData);
+  const availableUntil = getEpisodeAvailableUntil(pageData);
+  const timeNow = Date.now();
+  if (!availableUntil || timeNow < availableFrom) return false;
+  return true;
+};
+
 export default async ({ path: pathname }) => {
   const onDemandTvDataPath = overrideRendererOnTest(pathname);
   const { json, ...rest } = await fetchPageData(onDemandTvDataPath);
@@ -72,6 +80,7 @@ export default async ({ path: pathname }) => {
         masterBrand: getMasterBrand(json),
         episodeId: getEpisodeId(json),
         imageUrl: getImageUrl(json),
+        isEpisodeAvailable: getEpisodeAvailability(json),
         ...pageType,
       },
     }),
