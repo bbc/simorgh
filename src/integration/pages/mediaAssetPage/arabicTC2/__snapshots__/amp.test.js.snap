@@ -124,6 +124,8 @@ exports[`AMP Media Asset Page Footer I can see the footer copyright and external
 
 exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
+exports[`AMP Media Asset Page Header I can see the navigation 1`] = `"رئيسية"`;
+
 exports[`AMP Media Asset Page I can see the headline 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 
 exports[`AMP Media Asset Page I can see the timestamp 1`] = `"20 نوفمبر/ تشرين الثاني 2015"`;
