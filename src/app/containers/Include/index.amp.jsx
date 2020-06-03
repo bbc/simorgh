@@ -14,9 +14,6 @@ const getSize = href => href.split('/').pop();
 const getSrcSet = sizes =>
   sizes.map(({ href }) => `${getSrc(href)} ${getSize(href)}w`).join(',');
 
-const getSizes = ({ width, href }) =>
-  `(max-width: ${width}px) ${getSize(href)}px`;
-
 const IncludeGrid = styled(GridItemConstrainedMedium)`
   display: grid;
 `;
@@ -29,13 +26,10 @@ const AmpIncludeContainer = ({ type, ...rest }) => {
 
   const { altText, dimensions } = ampData;
 
-  const { small, medium, large } = dimensions;
-  const sizes = [small, medium, large];
-  const { href, height, width } = small;
+  const { small, medium } = dimensions;
 
-  const imageSizes = `${getSizes(small)}, ${getSizes(medium)}, ${getSize(
-    large.href,
-  )}px`;
+  const sizes = [small, medium];
+  const { href, height, width } = medium;
 
   const src = getSrc(href);
   const srcset = getSrcSet(sizes);
@@ -48,7 +42,6 @@ const AmpIncludeContainer = ({ type, ...rest }) => {
         src={src}
         srcset={srcset}
         layout="responsive"
-        sizes={imageSizes}
         height={height}
         width={width}
       />
