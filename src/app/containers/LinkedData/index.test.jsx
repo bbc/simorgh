@@ -68,6 +68,28 @@ describe('LinkedData', () => {
     ],
   };
 
+  const propsForOndemandRadio = {
+    seoTitle: 'Ondemand Radio Headline',
+    name: 'Ondemand Radio Headline',
+    type: 'WebPage',
+    audio: {
+      name: 'Audio name',
+      description: 'Audio description',
+      duration: 'PT29M30S',
+      thumbnailUrl: 'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
+      embedURL:
+        'https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/externalId/id/ko?morph_env=live',
+      uploadDate: '2020-04-23T15:30:00.000Z',
+    },
+  };
+
+  shouldMatchSnapshot(
+    'should correctly render linked data for Ondemand Radio page',
+    <Context>
+      <LinkedData {...propsForOndemandRadio} />
+    </Context>,
+  );
+
   shouldMatchSnapshot(
     'should correctly render linked data for Photo Gallery page',
     <Context>
