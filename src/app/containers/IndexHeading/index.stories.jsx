@@ -8,8 +8,8 @@ storiesOf('Containers|Index Heading', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())
-  .add('default', ({ script, service }) => (
-    <IndexHeadingContainer script={script} service={service}>
+  .add('default', ({ script, service, dir }) => (
+    <IndexHeadingContainer script={script} service={service} dir={dir}>
       Index Heading
     </IndexHeadingContainer>
   ));
