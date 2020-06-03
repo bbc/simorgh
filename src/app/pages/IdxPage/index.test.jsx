@@ -1,13 +1,29 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
 import IdxPage from '.';
 import persianAfghanistanIdxData from '#data/persian/afghanistan';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 
-const IdxPageWithContext = () => (
-  <ServiceContextProvider service="persian">
-    <IdxPage pageData={persianAfghanistanIdxData} />
-  </ServiceContextProvider>
+// eslint-disable-next-line react/prop-types
+const IdxPageWithContext = ({ service = 'persian' }) => (
+  <BrowserRouter>
+    <ToggleContextProvider service={service} origin="https://www.test.bbc.com">
+      <RequestContextProvider
+        pageType="IDX"
+        service={service}
+        pathname="/pathname"
+        data={{ status: 200 }}
+        isAmp={false}
+      >
+        <ServiceContextProvider service={service}>
+          <IdxPage pageData={persianAfghanistanIdxData} />
+        </ServiceContextProvider>
+      </RequestContextProvider>
+    </ToggleContextProvider>
+  </BrowserRouter>
 );
 
 describe('IdxPage', () => {
