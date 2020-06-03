@@ -1,6 +1,6 @@
 ci:
   collect:
-    numberOfRuns: 3
+    numberOfRuns: 1
     startServerCommand: npm start
     url:
       - http://localhost:7080/mundo # Frontpage
@@ -15,7 +15,7 @@ ci:
         - error
         - aggregationMethod: optimistic
           minScore: 0.9
-      categories:bestpractices:
+      categories:best-practices:
         - error
         - aggregationMethod: optimistic
           minScore: 0.9
