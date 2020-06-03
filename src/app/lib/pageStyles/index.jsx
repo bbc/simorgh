@@ -20,7 +20,7 @@ export const PageMarginStyles = css`
   }
 `;
 
-export const MainContainer = styled.main.attrs({ role: 'main' })`
+export const IndexMain = styled.main.attrs({ role: 'main' })`
   flex-grow: 1;
   ${PageMarginStyles}
 `;

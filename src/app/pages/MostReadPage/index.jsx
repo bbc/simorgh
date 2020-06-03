@@ -25,7 +25,7 @@ import LinkedData from '#containers/LinkedData';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import MetadataContainer from '#containers/Metadata';
 import Grid, { GelPageGrid } from '#app/components/Grid';
-import { MainContainer } from '#lib/pageStyles/index';
+import { IndexMain } from '#lib/pageStyles/index';
 
 const ConstrainedWrapper = styled.div`
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
@@ -127,7 +127,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={header} />
-      <MainContainer data-e2e="most-read">
+      <IndexMain data-e2e="most-read">
         <MostReadContainer
           mostReadEndpointOverride={mostReadEndpointOverride}
           wrapper={MostReadWrapper}
@@ -135,7 +135,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
           initialData={pageData}
           serverRenderOnAmp
         />
-      </MainContainer>
+      </IndexMain>
     </>
   );
 };
