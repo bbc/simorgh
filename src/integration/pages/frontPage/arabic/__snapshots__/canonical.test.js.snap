@@ -68,6 +68,8 @@ exports[`Canonical Front Page Header I can see a navigation link: فيديو 2`]
 
 exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
+exports[`Canonical Front Page Header I can see the navigation 1`] = `"الصفحة الحالية, رئيسية"`;
+
 exports[`Canonical Front Page I can see Index Alsos 1`] = `"المزيد حول هذه القصة"`;
 
 exports[`Canonical Front Page I can see Useful Links 1`] = `"وظائف شاغرة في بي بي سي عربي"`;

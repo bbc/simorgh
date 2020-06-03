@@ -76,6 +76,8 @@ exports[`Canonical Articles Header I can see a navigation link: Video 2`] = `"/m
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
+exports[`Canonical Articles Header I can see the navigation 1`] = `"Noticias"`;
+
 exports[`Canonical Articles I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/ee58/test/4a2f4c00-e695-11e9-88d6-81aa2ccc6d4c.jpg"`;
 
 exports[`Canonical Articles I can see an image with a caption 2`] = `"Pie de foto, Esta imagen de prueba, copyright BBC, muestra un mapa de Francia. La imagen está en los primeros tres bloques y tiene este título."`;

@@ -88,6 +88,8 @@ exports[`Canonical Media Asset Page Header I can see a navigation link: کرون
 
 exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, فارسی"`;
 
+exports[`Canonical Media Asset Page Header I can see the navigation 1`] = `"صفحه اول"`;
+
 exports[`Canonical Media Asset Page I can see the headline 1`] = `"Trump long headline"`;
 
 exports[`Canonical Media Asset Page I can see the timestamp 1`] = `"۲۶ بهمن ۱۳۹۷ - ۱۵ فوریه ۲۰۱۹"`;

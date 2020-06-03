@@ -8,14 +8,14 @@ export default () => {
       expect(logo.parentNode.textContent).toMatchSnapshot();
     });
 
-    it('I can see the navigation', () => {
-      const navigationItemEls = document.querySelector(
-        'header nav ul > li > a',
+    it("I can see the offscreen text with product's language code set to English", () => {
+      const langCode = document.querySelector(
+        'header div span span[lang="en-GB"]',
       );
-      expect(navigationItemEls).toBeInTheDocument();
+      expect(langCode).toBeInTheDocument();
     });
 
-    const navigationLinks = document.querySelectorAll('header nav a');
+    const navigationLinks = document.querySelectorAll('header nav ul > li > a');
     navigationLinks.forEach(navigationLink => {
       it(`I can see a navigation link: ${navigationLink.textContent}`, () => {
         expect(navigationLink).toBeInTheDocument();

@@ -161,6 +161,8 @@ exports[`AMP Front Page Header I can see a navigation link: World 2`] = `"/pidgi
 
 exports[`AMP Front Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
+exports[`AMP Front Page Header I can see the navigation 1`] = `"Page where you dey, Home"`;
+
 exports[`AMP Front Page I can see Index Alsos 1`] = `"Another thing we de for inside dis tori"`;
 
 exports[`AMP Front Page I can see sections 1`] = `"Top tori"`;

@@ -64,6 +64,8 @@ exports[`Canonical On Demand Radio Episode Header I can see a navigation link: �
 
 exports[`Canonical On Demand Radio Episode Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
+exports[`Canonical On Demand Radio Episode Header I can see the navigation 1`] = `"کور پاڼه"`;
+
 exports[`Canonical On Demand Radio Episode I can see the brand title 1`] = `"وروستي خبرونه"`;
 
 exports[`Canonical On Demand Radio Episode I can see the episode summary 1`] = `"د نړۍ وروستي خبرونه"`;
