@@ -10,6 +10,8 @@ exports[`Canonical Articles Footer I can see the footer copyright and external l
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
+exports[`Canonical Articles Header I can see the navigation 1`] = `"Home"`;
+
 exports[`Canonical Articles I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg"`;
 
 exports[`Canonical Articles I can see an image with a caption 2`] = `"Wetin we call dis foto, APC Chairman Adams Oshiomhole don be Govnor of Edo State before"`;
