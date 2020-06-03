@@ -13,7 +13,7 @@ import {
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
 
-export const PageMarginStyles = css`
+export const indexMarginStyles = css`
   margin: 0 ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     margin: 0 ${GEL_SPACING_DBL};
@@ -22,11 +22,11 @@ export const PageMarginStyles = css`
 
 export const IndexMain = styled.main.attrs({ role: 'main' })`
   flex-grow: 1;
-  ${PageMarginStyles}
+  ${indexMarginStyles}
 `;
 
-export const PageContainer = styled.div`
-  ${PageMarginStyles}
+export const IndexPageContainer = styled.div`
+  ${indexMarginStyles}
 
   /* To add extra spacing */
   padding-top: ${GEL_SPACING};
