@@ -5,6 +5,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   <section
     aria-labelledby="top-stories-heading"
     class="GridWrapper-sc-12lwanc-0 hgpaqH"
+    data-e2e="related-content"
     role="region"
   >
     <div
@@ -121,6 +122,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   <section
     aria-labelledby="top-stories-heading"
     class="GridWrapper-sc-12lwanc-0 hgpaqH"
+    data-e2e="related-content"
     role="region"
   >
     <div
