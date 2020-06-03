@@ -16,7 +16,9 @@ describe('IdxPage', () => {
       const container = render(<IdxPageWithContext />);
       expect(container).toMatchSnapshot();
     });
+  });
 
+  describe('Assertions', () => {
     it('should render idx page sections', async () => {
       const { container } = render(<IdxPageWithContext />);
 

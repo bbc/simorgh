@@ -1,22 +1,24 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { cyrillicAndLatin, arabic } from '@bbc/gel-foundations/scripts';
 import IndexHeadingContainer from '.';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+
+const IndexHeadingWithContext = service => (
+  <ServiceContextProvider service={service}>
+    <IndexHeadingContainer>Index Heading</IndexHeadingContainer>
+  </ServiceContextProvider>
+);
 
 describe('Index Heading', () => {
   describe('snapshot', () => {
     shouldMatchSnapshot(
       'should render correctly',
-      <IndexHeadingContainer script={cyrillicAndLatin} service="ukrainian">
-        Index Heading
-      </IndexHeadingContainer>,
+      IndexHeadingWithContext('ukrainian'),
     );
 
     shouldMatchSnapshot(
       'should render rtl correctly',
-      <IndexHeadingContainer script={arabic} service="persian" dir="rtl">
-        Index Heading
-      </IndexHeadingContainer>,
+      IndexHeadingWithContext('arabic'),
     );
   });
 });
