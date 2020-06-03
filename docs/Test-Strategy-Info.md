@@ -14,7 +14,7 @@ This document gives a brief overview on what basis integration and e2e tests are
 
 - Integration tests should cover all the test scenarios(happy and unhappy scenarios) at component level(but in our case its more likely to be pagetypes).
 - Evaluate whether a tests can be covered by integration test before thinking of adding cypress test considering the time taken by cypress.
-- Mock endpoints if it’s a third party component.Try not to mock our own components.
+- Mock endpoints if it’s a third party component. Ideally, we should try not to mock our own components.
 
 ## E2E Tests:
 
