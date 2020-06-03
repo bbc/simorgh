@@ -213,7 +213,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   };
   return (
     <>
-      <ChartbeatAnalytics data={pageData} />
       <CpsMetadata
         title={title}
         language={metadata.language}
@@ -235,6 +234,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         aboutTags={aboutTags}
       />
       <ATIAnalytics data={pageData} />
+      <ChartbeatAnalytics data={pageData} />
 
       <StoryPageGrid
         dir={dir}

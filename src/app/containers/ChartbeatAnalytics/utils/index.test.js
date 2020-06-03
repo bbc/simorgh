@@ -192,7 +192,8 @@ describe('Chartbeat utilities', () => {
         categoryName: 'mundo',
         pageType: 'STY',
         description: 'should add section and category to STYs',
-        expected: 'Mundo, Mundo - STY',
+        expected:
+          'Mundo, Mundo - STY, Mundo - STY, Mundo - STY - STY, Mundo - mundo-category',
       },
     ];
 
@@ -331,13 +332,15 @@ describe('Chartbeat utilities', () => {
 
     it('should return correct title when pageType is STY', () => {
       const pageType = 'STY';
-      const pageData = {};
-      const brandName = 'BBC News Mundo';
-      const title = 'Más leídas';
+      const pageData = {
+        promo: {
+          headlines: {
+            headline: 'STY Page Title',
+          },
+        },
+      };
 
-      expect(getTitle({ pageType, pageData, brandName, title })).toBe(
-        'Más leídas',
-      );
+      expect(getTitle({ pageType, pageData })).toBe('STY Page Title');
     });
   });
 
@@ -493,6 +496,7 @@ describe('Chartbeat utilities', () => {
         pageType: 'STY',
         data: {
           pageTitle: 'STY Page Title',
+          contentType: 'STY',
         },
         brandName: 'BBC News Mundo',
         chartbeatDomain: 'mundo.bbc.co.uk',
@@ -508,7 +512,8 @@ describe('Chartbeat utilities', () => {
         idSync: {
           bbc_hid: 'foobar',
         },
-        sections: 'Mundo, Mundo - STY',
+        sections:
+          'Mundo, Mundo - STY, Mundo - STY, Mundo - STY - STY, Mundo - mundo-category',
         title: 'STY Page Title',
         uid: 50924,
         virtualReferrer: `\${documentReferrer}`,
@@ -522,9 +527,7 @@ describe('Chartbeat utilities', () => {
         isAmp: false,
         platform: 'canonical',
         pageType: 'STY',
-        data: {
-          pageTitle: 'STY Page Title',
-        },
+        data: {},
         brandName: 'BBC News Mundo',
         chartbeatDomain: 'mundo.bbc.co.uk',
         env: 'test',
@@ -539,7 +542,8 @@ describe('Chartbeat utilities', () => {
           bbc_hid: 'foobar',
         },
         path: '/',
-        sections: 'Mundo, Mundo - STY',
+        sections:
+          'Mundo, Mundo - STY, Mundo - STY, Mundo - STY - STY, Mundo - mundo-category',
         type: 'STY',
         title: 'STY Page Title',
         uid: 50924,
