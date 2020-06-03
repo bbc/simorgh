@@ -1398,7 +1398,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               <span
                                 class="c17"
                               >
-                                Wia dis foto come from, 
+                                Wia dis foto come from,
                               </span>
                               <span
                                 lang="en-GB"
@@ -1417,7 +1417,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             <span
                               class="c17"
                             >
-                              Wetin we call dis foto, 
+                              Wetin we call dis foto,
                             </span>
                             <p>
                               Some people went to the NTA awards recently.
@@ -1434,7 +1434,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       class="c20"
                     >
                       <b>
-                         This is introduction text, it should be bold by default, but also support 
+                         This is introduction text, it should be bold by default, but also support
                       </b>
                       <a
                         class="c21"
@@ -1457,7 +1457,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         class="c22"
                       >
                         <b>
-                          This is a subheadline! that has 
+                          This is a subheadline! that has
                         </b>
                       </i>
                       <a
@@ -1489,7 +1489,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           class="c25"
                           role="listitem"
                         >
-                          It can have 
+                          It can have
                           <b>
                             bold text
                           </b>
@@ -1525,14 +1525,14 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     <p
                       class="c20"
                     >
-                      Feta the big cheese macaroni cheese. 
+                      Feta the big cheese macaroni cheese.
                       <a
                         class="c21"
                         href="https://bbc.com/pidgin/23248703"
                       >
                         Caerphilly danish fontina
                       </a>
-                       queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. 
+                       queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese.
                       <b>
                         Cow cheeseburger
                       </b>
@@ -1565,7 +1565,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               <span
                                 class="c17"
                               >
-                                Wia dis foto come from, 
+                                Wia dis foto come from,
                               </span>
                               <span
                                 lang="en-GB"
@@ -1618,7 +1618,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     <p
                       class="c20"
                     >
-                      Rubber cheese macaroni 
+                      Rubber cheese macaroni
                       <i
                         class="c22"
                       >
@@ -1648,7 +1648,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           class="c25"
                           role="listitem"
                         >
-                          It can have 
+                          It can have
                           <b>
                             bold text
                           </b>
@@ -1786,7 +1786,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                 </main>
                 <section
                   aria-labelledby="related-content-heading"
-                  class="c30"
+                  class="c31"
+                  data-e2e="related-content"
                   role="region"
                 >
                   <div
@@ -1829,7 +1830,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                 >
                   <section
                     aria-labelledby="top-stories-heading"
-                    class="c30"
+                    class="c31"
+                    data-e2e="related-content"
                     role="region"
                   >
                     <div
@@ -1922,7 +1924,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                     class="c50"
                                     dir="ltr"
                                   >
-                                    AS E DE HAPPEN 
+                                    AS E DE HAPPEN
                                   </span>
                                   Test m̀ịṅị̀ịọ́ụ̄ please ignore
                                 </span>
@@ -1985,7 +1987,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                   <span
                                     class="c17"
                                   >
-                                    Audio, 
+                                    Audio,
                                   </span>
                                   <span>
                                     Akụkọ BBC Igbo na Nkeji
@@ -2015,7 +2017,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                 >
                   <section
                     aria-labelledby="features-analysis-heading"
-                    class="c30"
+                    class="c31"
+                    data-e2e="related-content"
                     role="region"
                   >
                     <div
@@ -2447,7 +2450,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                   <span
                                     class="c17"
                                   >
-                                    Audio, 
+                                    Audio,
                                   </span>
                                   <span>
                                     A gbabguola Don Wani
@@ -3817,7 +3820,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                                   <span
                                     class="c19"
                                   >
-                                    Wia dis foto come from, 
+                                    Wia dis foto come from,
                                   </span>
                                   <span
                                     lang="en-GB"
@@ -3836,7 +3839,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                                 <span
                                   class="c19"
                                 >
-                                  Wetin we call dis foto, 
+                                  Wetin we call dis foto,
                                 </span>
                                 <p>
                                   Some people went to the NTA awards recently.
@@ -3853,7 +3856,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                           class="c22"
                         >
                           <b>
-                             This is introduction text, it should be bold by default, but also support 
+                             This is introduction text, it should be bold by default, but also support
                           </b>
                           <a
                             class="c23"
@@ -3876,7 +3879,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                             class="c24"
                           >
                             <b>
-                              This is a subheadline! that has 
+                              This is a subheadline! that has
                             </b>
                           </i>
                           <a
@@ -3908,7 +3911,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                               class="c27"
                               role="listitem"
                             >
-                              It can have 
+                              It can have
                               <b>
                                 bold text
                               </b>
@@ -3944,14 +3947,14 @@ exports[`Story Page should render correctly when the secondary column data is no
                         <p
                           class="c22"
                         >
-                          Feta the big cheese macaroni cheese. 
+                          Feta the big cheese macaroni cheese.
                           <a
                             class="c23"
                             href="https://bbc.com/pidgin/23248703"
                           >
                             Caerphilly danish fontina
                           </a>
-                           queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. 
+                           queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese.
                           <b>
                             Cow cheeseburger
                           </b>
@@ -3984,7 +3987,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                                   <span
                                     class="c19"
                                   >
-                                    Wia dis foto come from, 
+                                    Wia dis foto come from,
                                   </span>
                                   <span
                                     lang="en-GB"
@@ -4037,7 +4040,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                         <p
                           class="c22"
                         >
-                          Rubber cheese macaroni 
+                          Rubber cheese macaroni
                           <i
                             class="c24"
                           >
@@ -4067,7 +4070,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                               class="c27"
                               role="listitem"
                             >
-                              It can have 
+                              It can have
                               <b>
                                 bold text
                               </b>
@@ -4194,7 +4197,8 @@ exports[`Story Page should render correctly when the secondary column data is no
                     </main>
                     <section
                       aria-labelledby="related-content-heading"
-                      class="c32"
+                      class="c33"
+                      data-e2e="related-content"
                       role="region"
                     >
                       <div
@@ -5902,7 +5906,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   <span
                                     class="c19"
                                   >
-                                    Wia dis foto come from, 
+                                    Wia dis foto come from,
                                   </span>
                                   <span
                                     lang="en-GB"
@@ -5921,7 +5925,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 <span
                                   class="c19"
                                 >
-                                  Wetin we call dis foto, 
+                                  Wetin we call dis foto,
                                 </span>
                                 <p>
                                   Some people went to the NTA awards recently.
@@ -5938,7 +5942,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           class="c22"
                         >
                           <b>
-                             This is introduction text, it should be bold by default, but also support 
+                             This is introduction text, it should be bold by default, but also support
                           </b>
                           <a
                             class="c23"
@@ -5961,7 +5965,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             class="c24"
                           >
                             <b>
-                              This is a subheadline! that has 
+                              This is a subheadline! that has
                             </b>
                           </i>
                           <a
@@ -5993,7 +5997,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="c27"
                               role="listitem"
                             >
-                              It can have 
+                              It can have
                               <b>
                                 bold text
                               </b>
@@ -6029,14 +6033,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         <p
                           class="c22"
                         >
-                          Feta the big cheese macaroni cheese. 
+                          Feta the big cheese macaroni cheese.
                           <a
                             class="c23"
                             href="https://bbc.com/pidgin/23248703"
                           >
                             Caerphilly danish fontina
                           </a>
-                           queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. 
+                           queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese.
                           <b>
                             Cow cheeseburger
                           </b>
@@ -6069,7 +6073,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   <span
                                     class="c19"
                                   >
-                                    Wia dis foto come from, 
+                                    Wia dis foto come from,
                                   </span>
                                   <span
                                     lang="en-GB"
@@ -6122,7 +6126,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         <p
                           class="c22"
                         >
-                          Rubber cheese macaroni 
+                          Rubber cheese macaroni
                           <i
                             class="c24"
                           >
@@ -6152,7 +6156,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="c27"
                               role="listitem"
                             >
-                              It can have 
+                              It can have
                               <b>
                                 bold text
                               </b>
@@ -6279,7 +6283,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     </main>
                     <section
                       aria-labelledby="related-content-heading"
-                      class="c32"
+                      class="c33"
+                      data-e2e="related-content"
                       role="region"
                     >
                       <div
@@ -6322,7 +6327,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     >
                       <section
                         aria-labelledby="top-stories-heading"
-                        class="c32"
+                        class="c33"
+                        data-e2e="related-content"
                         role="region"
                       >
                         <div
@@ -6468,7 +6474,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     >
                       <section
                         aria-labelledby="features-analysis-heading"
-                        class="c32"
+                        class="c33"
+                        data-e2e="related-content"
                         role="region"
                       >
                         <div
@@ -6628,7 +6635,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                         class="c19"
                                       >
                                         Video
-                                        , 
+                                        ,
                                       </span>
                                       <span>
                                         Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson
@@ -6725,7 +6732,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                         class="c19"
                                       >
                                         Audio
-                                        , 
+                                        ,
                                       </span>
                                       <span>
                                         Kojey Radical: Why gigs feel like football matches
@@ -7089,7 +7096,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                         class="c19"
                                       >
                                         Image gallery
-                                        , 
+                                        ,
                                       </span>
                                       <span>
                                         Kenya Decides 2017 in Pictures
