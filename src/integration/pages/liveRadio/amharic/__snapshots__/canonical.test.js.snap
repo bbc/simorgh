@@ -10,6 +10,8 @@ exports[`Canonical Live Radio Footer I can see the footer copyright and external
 
 exports[`Canonical Live Radio Header I can see the branding 1`] = `"BBC News, አማርኛ"`;
 
+exports[`Canonical Live Radio Header I can see the navigation 1`] = `"ዜና"`;
+
 exports[`Canonical Live Radio I can see the headline 1`] = `"ያድምጡ"`;
 
 exports[`Canonical Live Radio I can see the summary 1`] = `"ዝግጅቶቻችንን’"`;
