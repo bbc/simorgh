@@ -34,33 +34,9 @@ exports[`Canonical Story Page Header I can see a navigation link: Блог 1`] =
 
 exports[`Canonical Story Page Header I can see a navigation link: Блог 2`] = `"/kyrgyz/blog"`;
 
-exports[`Canonical Story Page Header I can see a navigation link: Видео 1`] = `"/kyrgyz/media/video"`;
+exports[`Canonical Story Page Lead image I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
-exports[`Canonical Story Page Header I can see a navigation link: Видео 2`] = `"/kyrgyz/media/video"`;
-
-exports[`Canonical Story Page Header I can see a navigation link: Дүйнө 1`] = `"/kyrgyz/world"`;
-
-exports[`Canonical Story Page Header I can see a navigation link: Дүйнө 2`] = `"/kyrgyz/world"`;
-
-exports[`Canonical Story Page Header I can see a navigation link: Журнал 1`] = `"/kyrgyz/magazine"`;
-
-exports[`Canonical Story Page Header I can see a navigation link: Журнал 2`] = `"/kyrgyz/magazine"`;
-
-exports[`Canonical Story Page Header I can see a navigation link: Кыргызстан 1`] = `"/kyrgyz/kyrgyzstan"`;
-
-exports[`Canonical Story Page Header I can see a navigation link: Кыргызстан 2`] = `"/kyrgyz/kyrgyzstan"`;
-
-exports[`Canonical Story Page Header I can see a navigation link: Маданият/Илим 1`] = `"/kyrgyz/entertainment"`;
-
-exports[`Canonical Story Page Header I can see a navigation link: Маданият/Илим 2`] = `"/kyrgyz/entertainment"`;
-
-exports[`Canonical Story Page Header I can see a navigation link: Сапар TV 1`] = `"/kyrgyz/sapartv"`;
-
-exports[`Canonical Story Page Header I can see a navigation link: Сапар TV 2`] = `"/kyrgyz/sapartv"`;
-
-exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
-
-exports[`Canonical Story Page I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
+exports[`Canonical Story Page Header I can see the navigation 1`] = `"Башталгыч бет"`;
 
 exports[`Canonical Story Page SEO Canonical link 1`] = `"http://localhost:7080/kyrgyz/23292889"`;
 

@@ -105,6 +105,19 @@ Object {
 }
 `;
 
+exports[`AMP Most Read Page Analytics chartbeat 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "Most Read",
+    "domain": "test.bbc.co.uk",
+    "sections": "Mundo, Mundo - Most Read",
+    "title": "Más leídas - BBC News Mundo",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
 exports[`AMP Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
 exports[`AMP Most Read Page Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;

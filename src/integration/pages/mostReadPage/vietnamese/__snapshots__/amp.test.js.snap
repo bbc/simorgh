@@ -105,6 +105,19 @@ Object {
 }
 `;
 
+exports[`AMP Most Read Page Analytics chartbeat 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "Most Read",
+    "domain": "test.bbc.co.uk",
+    "sections": "Vietnamese, Vietnamese - Most Read",
+    "title": "Đọc nhiều nhất - BBC News Tiếng Việt",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
 exports[`AMP Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/vietnamese"`;
 
 exports[`AMP Most Read Page Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
