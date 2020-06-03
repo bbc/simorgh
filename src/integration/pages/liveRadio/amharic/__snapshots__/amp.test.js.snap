@@ -107,11 +107,43 @@ Object {
 
 exports[`AMP Amharic Live Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/amharic"`;
 
+exports[`AMP Amharic Live Radio Page Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`AMP Amharic Live Radio Page Footer I can see a link: BBC News, አማርኛ 1`] = `"/amharic"`;
+
+exports[`AMP Amharic Live Radio Page Footer I can see a link: ስለ ቢቢሲ 1`] = `"https://www.bbc.com/aboutthebbc"`;
+
+exports[`AMP Amharic Live Radio Page Footer I can see a link: ስለ ውጪ ሊንኮች ያለን አቀራረብ 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
+exports[`AMP Amharic Live Radio Page Footer I can see a link: ቢቢሲን ለምን ማመን እንደሚገባዎ 1`] = `"https://www.bbc.com/amharic/institutional-49283133"`;
+
+exports[`AMP Amharic Live Radio Page Footer I can see a link: ቢቢሲን ያግኙ 1`] = `"https://www.bbc.com/amharic/institutional-42228117"`;
+
+exports[`AMP Amharic Live Radio Page Footer I can see a link: ኩኪዎች 1`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+
+exports[`AMP Amharic Live Radio Page Footer I can see a link: የአጠቃቀም ደንብ 1`] = `"https://www.bbc.com/usingthebbc/terms/"`;
+
+exports[`AMP Amharic Live Radio Page Footer I can see a link: የፕራይቬሲ ፖሊሲ 1`] = `"https://www.bbc.com/usingthebbc/privacy/"`;
+
 exports[`AMP Amharic Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም. ስለ ውጪ ሊንኮች ያለን አቀራረብ"`;
 
-exports[`AMP Amharic Live Radio Page Header I can see the branding 1`] = `"BBC News, አማርኛ"`;
+exports[`AMP Amharic Live Radio Page Header I can see a navigation link: በጣም የተወደዱ 1`] = `"/amharic/popular/read"`;
 
-exports[`AMP Amharic Live Radio Page Header I can see the navigation 1`] = `"ዜና"`;
+exports[`AMP Amharic Live Radio Page Header I can see a navigation link: በጣም የተወደዱ 2`] = `"/amharic/popular/read"`;
+
+exports[`AMP Amharic Live Radio Page Header I can see a navigation link: ቪዲዮ 1`] = `"/amharic/media/video"`;
+
+exports[`AMP Amharic Live Radio Page Header I can see a navigation link: ቪዲዮ 2`] = `"/amharic/media/video"`;
+
+exports[`AMP Amharic Live Radio Page Header I can see a navigation link: ኢትዮጵያ 1`] = `"/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"`;
+
+exports[`AMP Amharic Live Radio Page Header I can see a navigation link: ኢትዮጵያ 2`] = `"/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"`;
+
+exports[`AMP Amharic Live Radio Page Header I can see a navigation link: ዜና 1`] = `"/amharic"`;
+
+exports[`AMP Amharic Live Radio Page Header I can see a navigation link: ዜና 2`] = `"/amharic"`;
+
+exports[`AMP Amharic Live Radio Page Header I can see the branding 1`] = `"BBC News, አማርኛ"`;
 
 exports[`AMP Amharic Live Radio Page Main heading should match text 1`] = `"ያድምጡ"`;
 
@@ -131,7 +163,7 @@ exports[`AMP Amharic Live Radio Page SEO Heading level 1 1`] = `"ያድምጡ"`;
 
 exports[`AMP Amharic Live Radio Page SEO Lang attribute 1`] = `"am"`;
 
-exports[`AMP Amharic Live Radio Page SEO Linked data 1`] = `
+exports[`AMP Amharic Live Radio Page SEO Linked data RadioChannel 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "RadioChannel",

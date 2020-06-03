@@ -107,11 +107,43 @@ Object {
 
 exports[`AMP Korean Live Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/korean"`;
 
+exports[`AMP Korean Live Radio Page Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`AMP Korean Live Radio Page Footer I can see a link: BBC News, 코리아 1`] = `"/korean"`;
+
+exports[`AMP Korean Live Radio Page Footer I can see a link: BBC News를 신뢰할 수 있는 이유 1`] = `"https://www.bbc.com/korean/institutional-49283197"`;
+
+exports[`AMP Korean Live Radio Page Footer I can see a link: BBC 소개 1`] = `"https://www.bbc.co.uk/aboutthebbc"`;
+
+exports[`AMP Korean Live Radio Page Footer I can see a link: 개인정보취급방침 1`] = `"https://www.bbc.co.uk/usingthebbc/privacy/"`;
+
+exports[`AMP Korean Live Radio Page Footer I can see a link: 고객센터 1`] = `"https://www.bbc.com/korean/institutional-42224941"`;
+
+exports[`AMP Korean Live Radio Page Footer I can see a link: 외부 링크에 대한 본사 정책 보기 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
+exports[`AMP Korean Live Radio Page Footer I can see a link: 이용 약관 1`] = `"https://www.bbc.co.uk/usingthebbc/terms/"`;
+
+exports[`AMP Korean Live Radio Page Footer I can see a link: 쿠키정책 1`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
 exports[`AMP Korean Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다 외부 링크에 대한 본사 정책 보기"`;
 
-exports[`AMP Korean Live Radio Page Header I can see the branding 1`] = `"BBC News, 코리아"`;
+exports[`AMP Korean Live Radio Page Header I can see a navigation link: TOP 뉴스 1`] = `"/korean/popular/read"`;
 
-exports[`AMP Korean Live Radio Page Header I can see the navigation 1`] = `"뉴스"`;
+exports[`AMP Korean Live Radio Page Header I can see a navigation link: TOP 뉴스 2`] = `"/korean/popular/read"`;
+
+exports[`AMP Korean Live Radio Page Header I can see a navigation link: 뉴스 1`] = `"/korean"`;
+
+exports[`AMP Korean Live Radio Page Header I can see a navigation link: 뉴스 2`] = `"/korean"`;
+
+exports[`AMP Korean Live Radio Page Header I can see a navigation link: 다운로드 1`] = `"/korean/downloads"`;
+
+exports[`AMP Korean Live Radio Page Header I can see a navigation link: 다운로드 2`] = `"/korean/downloads"`;
+
+exports[`AMP Korean Live Radio Page Header I can see a navigation link: 비디오 1`] = `"/korean/media/video"`;
+
+exports[`AMP Korean Live Radio Page Header I can see a navigation link: 비디오 2`] = `"/korean/media/video"`;
+
+exports[`AMP Korean Live Radio Page Header I can see the branding 1`] = `"BBC News, 코리아"`;
 
 exports[`AMP Korean Live Radio Page Main heading should match text 1`] = `"BBC 코리아 라디오"`;
 
@@ -131,7 +163,7 @@ exports[`AMP Korean Live Radio Page SEO Heading level 1 1`] = `"BBC 코리아 �
 
 exports[`AMP Korean Live Radio Page SEO Lang attribute 1`] = `"ko"`;
 
-exports[`AMP Korean Live Radio Page SEO Linked data 1`] = `
+exports[`AMP Korean Live Radio Page SEO Linked data RadioChannel 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "RadioChannel",

@@ -60,8 +60,6 @@ exports[`Canonical Front Page Header I can see a navigation link: World 2`] = `"
 
 exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
-exports[`Canonical Front Page Header I can see the navigation 1`] = `"Page where you dey, Home"`;
-
 exports[`Canonical Front Page I can see Index Alsos 1`] = `"Another thing we de for inside dis tori"`;
 
 exports[`Canonical Front Page I can see sections 1`] = `"Top tori"`;

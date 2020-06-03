@@ -153,8 +153,6 @@ exports[`AMP On Demand Radio Episode Header I can see a navigation link: Viral 2
 
 exports[`AMP On Demand Radio Episode Header I can see the branding 1`] = `"BBC News, Indonesia"`;
 
-exports[`AMP On Demand Radio Episode Header I can see the navigation 1`] = `"Berita"`;
-
 exports[`AMP On Demand Radio Episode I can see the brand title 1`] = `"Dunia Pagi Ini"`;
 
 exports[`AMP On Demand Radio Episode I can see the episode summary 1`] = `"Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."`;

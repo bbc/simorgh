@@ -60,8 +60,6 @@ exports[`Canonical Media Asset Page Header I can see a navigation link: World 2`
 
 exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
-exports[`Canonical Media Asset Page Header I can see the navigation 1`] = `"Home"`;
-
 exports[`Canonical Media Asset Page I can see the bulleted list item 1`] = `"<Media Asset Page><Media Asset Page><Media Asset Page>this is the link textthis is the link textthis is the link text"`;
 
 exports[`Canonical Media Asset Page I can see the headline 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
