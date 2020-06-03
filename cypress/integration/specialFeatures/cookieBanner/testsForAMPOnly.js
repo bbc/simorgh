@@ -81,6 +81,13 @@ Object.keys(config)
 
                 getCookieBanner(service, variant).should('not.be.visible');
                 getPrivacyBanner(service, variant).should('not.be.visible');
+
+                cy.on('uncaught:exception', err => {
+                  expect(err.message).to.include(
+                    'Inline or remote config should not overwrite vendor transport settings',
+                  );
+                  return false;
+                });
               });
 
               it('should show privacy banner if cookie banner isnt accepted, on reload', () => {
@@ -90,6 +97,13 @@ Object.keys(config)
 
                 getPrivacyBanner(service, variant).should('be.visible');
                 getCookieBanner(service, variant).should('not.be.visible');
+
+                cy.on('uncaught:exception', err => {
+                  expect(err.message).to.include(
+                    'Inline or remote config should not overwrite vendor transport settings',
+                  );
+                  return false;
+                });
               });
 
               it('should not show privacy & cookie banners once both accepted, on reload', () => {
@@ -100,6 +114,13 @@ Object.keys(config)
 
                 getPrivacyBanner(service, variant).should('not.be.visible');
                 getCookieBanner(service, variant).should('not.be.visible');
+
+                cy.on('uncaught:exception', err => {
+                  expect(err.message).to.include(
+                    'Inline or remote config should not overwrite vendor transport settings',
+                  );
+                  return false;
+                });
               });
 
               it('should not show privacy & cookie banners once cookie banner declined, on reload', () => {
@@ -113,6 +134,13 @@ Object.keys(config)
 
                 getPrivacyBanner(service, variant).should('not.be.visible');
                 getCookieBanner(service, variant).should('not.be.visible');
+
+                cy.on('uncaught:exception', err => {
+                  expect(err.message).to.include(
+                    'Inline or remote config should not overwrite vendor transport settings',
+                  );
+                  return false;
+                });
               });
             },
           );
