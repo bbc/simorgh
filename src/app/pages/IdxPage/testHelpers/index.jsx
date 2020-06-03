@@ -4,16 +4,17 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import IdxPage from '#pages/IdxPage';
 
-const IdxPageWithContext = props => (
-  <ToggleContextProvider service="pidgin" origin="https://www.test.bbc.com">
+// eslint-disable-next-line react/prop-types
+const IdxPageWithContext = ({ props, service = 'persian' }) => (
+  <ToggleContextProvider service={service} origin="https://www.test.bbc.com">
     <RequestContextProvider
       pageType="IDX"
-      service="persian"
+      service={service}
       pathname="/pathname"
       data={{ status: 200 }}
       isAmp={false}
     >
-      <ServiceContextProvider service="persian">
+      <ServiceContextProvider service={service}>
         <IdxPage {...props} />
       </ServiceContextProvider>
     </RequestContextProvider>

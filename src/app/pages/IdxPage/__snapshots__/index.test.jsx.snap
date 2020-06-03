@@ -3,7 +3,6 @@
 exports[`IdxPage Snapshots should render a persian idx page correctly with most read 1`] = `
 <div>
   <main
-    dir="rtl"
     role="main"
   >
     <h1

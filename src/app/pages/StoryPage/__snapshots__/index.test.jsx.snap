@@ -782,68 +782,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-@media (min-width:37.5rem) {
-  .c37 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c38 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c38 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c38 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c38 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c34 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c34 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c32 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c32 {
-    margin-bottom: 1.5rem;
-  }
-}
-
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     padding: 0 1rem;
@@ -980,6 +918,68 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @supports (display:grid) {
   .c40 {
     display: block;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c37 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c38 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c38 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c38 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c38 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c34 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c34 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c32 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c32 {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -3422,68 +3422,6 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 }
 
-@media (min-width:37.5rem) {
-  .c39 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c40 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c40 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c40 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c40 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c36 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c36 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c34 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c34 {
-    margin-bottom: 1.5rem;
-  }
-}
-
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     padding: 0 1rem;
@@ -3620,6 +3558,68 @@ exports[`Story Page should render correctly when the secondary column data is no
 @supports (display:grid) {
   .c42 {
     display: block;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c39 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c40 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c40 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c40 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c40 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c36 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c36 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c34 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c34 {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -5083,68 +5083,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
-  .c39 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c40 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c40 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c40 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c40 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c36 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c36 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c34 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c34 {
-    margin-bottom: 1.5rem;
-  }
-}
-
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     padding: 0 1rem;
@@ -5281,6 +5219,68 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @supports (display:grid) {
   .c42 {
     display: block;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c39 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c40 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c40 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c40 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c40 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c36 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c36 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c34 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c34 {
+    margin-bottom: 1.5rem;
   }
 }
 

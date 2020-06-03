@@ -37,12 +37,11 @@ MostReadWrapper.propTypes = {
 
 const IdxPage = ({ mostReadEndpointOverride }) => {
   const {
-    dir,
     mostRead: { onIdxPage },
   } = useContext(ServiceContext);
 
   return (
-    <main role="main" dir={dir}>
+    <main role="main">
       <h1 id="content">IDX Page</h1>
 
       {onIdxPage && renderMostRead(mostReadEndpointOverride)}
