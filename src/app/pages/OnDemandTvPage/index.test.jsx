@@ -1,12 +1,13 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import assocPath from 'ramda/src/assocPath';
 import { render, act } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { StaticRouter } from 'react-router-dom';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import OnDemandTvPage from '.';
-import pashtoPageData from '#data/pashto/bbc_pashto_tv/w13xttn4';
+import pashtoPageData from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandTV/getInitialData';
@@ -69,4 +70,121 @@ describe('OnDemand TV Brand Page ', () => {
 
     expect(getByText('نړۍ دا وخت')).toBeInTheDocument();
   });
+});
+
+it('should show the datestamp correctly for Pashto OnDemand TV Pages', async () => {
+  fetch.mockResponse(JSON.stringify(pashtoPageData));
+
+  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { getByText } = await renderPage({
+    pageData,
+    service: 'pashto',
+  });
+
+  expect(getByText('۲۷ می ۲۰۲۰')).toBeInTheDocument();
+});
+
+it('should show the summary for OnDemand TV Pages', async () => {
+  fetch.mockResponse(JSON.stringify(pashtoPageData));
+
+  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { getByText } = await renderPage({
+    pageData,
+    service: 'pashto',
+  });
+
+  expect(
+    getByText(
+      'د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.',
+    ),
+  ).toBeInTheDocument();
+});
+
+it('should show the video player on canonical with no live override', async () => {
+  process.env.SIMORGH_APP_ENV = 'live';
+  fetch.mockResponse(JSON.stringify(pashtoPageData));
+  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { container } = await renderPage({
+    pageData,
+    service: 'pashto',
+  });
+  const videoPlayerIframeSrc = container
+    .querySelector('iframe')
+    .getAttribute('src');
+
+  expect(videoPlayerIframeSrc).toEqual(
+    'https://polling.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps',
+  );
+});
+
+it('should show the video player on amp with no live override', async () => {
+  process.env.SIMORGH_APP_ENV = 'live';
+  fetch.mockResponse(JSON.stringify(pashtoPageData));
+  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { container } = await renderPage({
+    pageData,
+    service: 'pashto',
+    isAmp: true,
+  });
+  const videoPlayerIframeSrc = container
+    .querySelector('amp-iframe')
+    .getAttribute('src');
+
+  expect(videoPlayerIframeSrc).toEqual(
+    'https://polling.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp',
+  );
+});
+
+it('should show the video player on canonical with live override', async () => {
+  process.env.SIMORGH_APP_ENV = 'test';
+  fetch.mockResponse(JSON.stringify(pashtoPageData));
+  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { container } = await renderPage({
+    pageData,
+    service: 'pashto',
+  });
+  const videoPlayerIframeSrc = container
+    .querySelector('iframe')
+    .getAttribute('src');
+
+  expect(videoPlayerIframeSrc).toEqual(
+    'https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live',
+  );
+});
+
+it('should show the video player on amp with live override', async () => {
+  fetch.mockResponse(JSON.stringify(pashtoPageData));
+  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { container } = await renderPage({
+    pageData,
+    service: 'pashto',
+    isAmp: true,
+  });
+  const videoPlayerIframeSrc = container
+    .querySelector('amp-iframe')
+    .getAttribute('src');
+
+  expect(videoPlayerIframeSrc).toEqual(
+    'https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live',
+  );
+});
+
+it('should show the expired content message if episode is expired', async () => {
+  const pageDataWithoutVersions = assocPath(
+    ['content', 'blocks', 0, 'versions'],
+    [],
+    pashtoPageData,
+  );
+  fetch.mockResponse(JSON.stringify(pageDataWithoutVersions));
+  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { container, getByText } = await renderPage({
+    pageData,
+    service: 'pashto',
+  });
+  const audioPlayerIframeEl = container.querySelector('iframe');
+  const expiredMessageEl = getByText('دغه فایل نور د لاسرسي وړ نه دی.');
+
+  expect(audioPlayerIframeEl).not.toBeInTheDocument();
+  expect(expiredMessageEl).toBeInTheDocument();
+  expect(container).toMatchSnapshot();
 });

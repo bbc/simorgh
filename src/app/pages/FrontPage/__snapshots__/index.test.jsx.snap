@@ -55,7 +55,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                     class="StyledWrapper-lj1cbr-1 dKYaue"
                   >
                     <div
-                      amp-access="toggles.ads.enabled AND geoIp.advertiseCombined"
+                      amp-access="toggles.ads.enabled"
                       amp-access-hide="true"
                     >
                       <div
@@ -116,7 +116,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                   </div>
                 </div>
                 <div
-                  class="StyledFrontPageDiv-sc-58u5qv-0 ikyYap"
+                  class="PageContainer-t6irzr-0 dDUXgT"
                 >
                   <section
                     aria-labelledby="Top-stories"
@@ -875,7 +875,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </span>
                 </h1>
                 <div
-                  class="StyledFrontPageDiv-sc-58u5qv-0 ikyYap"
+                  class="PageContainer-t6irzr-0 dDUXgT"
                 >
                   <section
                     aria-labelledby="Top-stories"
@@ -1538,7 +1538,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </section>
                   <section
                     aria-labelledby="Most-Read"
-                    class="MostReadSection-sc-58u5qv-1 ilJrAv"
+                    class="MostReadSection-sc-58u5qv-0 kxdZkX"
                     data-e2e="most-read"
                     role="region"
                   >
