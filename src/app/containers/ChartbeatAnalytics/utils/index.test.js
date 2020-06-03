@@ -495,8 +495,23 @@ describe('Chartbeat utilities', () => {
         platform: 'amp',
         pageType: 'STY',
         data: {
-          pageTitle: 'STY Page Title',
-          contentType: 'STY',
+          promo: {
+            headlines: {
+              headline: 'STY Page Title',
+            },
+          },
+          relatedContent: {
+            section: {
+              name: 'STY',
+            },
+          },
+          metadata: {
+            passport: {
+              category: {
+                categoryName: 'mundo',
+              },
+            },
+          },
         },
         brandName: 'BBC News Mundo',
         chartbeatDomain: 'mundo.bbc.co.uk',
@@ -527,7 +542,25 @@ describe('Chartbeat utilities', () => {
         isAmp: false,
         platform: 'canonical',
         pageType: 'STY',
-        data: {},
+        data: {
+          promo: {
+            headlines: {
+              headline: 'STY Page Title',
+            },
+          },
+          relatedContent: {
+            section: {
+              name: 'STY',
+            },
+          },
+          metadata: {
+            passport: {
+              category: {
+                categoryName: 'mundo',
+              },
+            },
+          },
+        },
         brandName: 'BBC News Mundo',
         chartbeatDomain: 'mundo.bbc.co.uk',
         env: 'test',
