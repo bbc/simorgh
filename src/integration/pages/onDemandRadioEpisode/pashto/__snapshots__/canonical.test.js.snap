@@ -10,6 +10,8 @@ exports[`Canonical On Demand Radio Episode Footer I can see the footer copyright
 
 exports[`Canonical On Demand Radio Episode Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
+exports[`Canonical On Demand Radio Episode Header I can see the navigation 1`] = `"کور پاڼه"`;
+
 exports[`Canonical On Demand Radio Episode I can see the brand title 1`] = `"ماښامنۍ خپرونه"`;
 
 exports[`Canonical On Demand Radio Episode I can see the episode summary 1`] = `"د بي بي سي ورلډ سروس څخه پروګرام کول"`;
@@ -18,9 +20,9 @@ exports[`Canonical On Demand Radio Episode I can see the episode title 1`] = `"�
 
 exports[`Canonical On Demand Radio Episode I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png"`;
 
-exports[`Canonical On Demand Radio Episode Media player embed A11y I can read the media player title 1`] = `"اډیو پلیئر"`;
+exports[`Canonical On Demand Radio Episode Media Player a11y assistive technology can read the media player title 1`] = `"اډیو پلیئر"`;
 
-exports[`Canonical On Demand Radio Episode Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"`;
+exports[`Canonical On Demand Radio Episode Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"`;
 
 exports[`Canonical On Demand Radio Episode SEO Canonical link 1`] = `"http://localhost:7080/pashto/bbc_pashto_radio/w3ct0lz1"`;
 
