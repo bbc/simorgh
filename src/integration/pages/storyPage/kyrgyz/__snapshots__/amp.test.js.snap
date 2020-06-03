@@ -90,8 +90,8 @@ Object {
   "vars": Object {
     "contentType": "STY",
     "domain": "test.bbc.co.uk",
-    "sections": "Kyrgyz, Kyrgyz - STY",
-    "title": "Эң көп окулгандар",
+    "sections": "Kyrgyz, Kyrgyz - Башталгыч бет, Kyrgyz - STY, Kyrgyz - Башталгыч бет - STY, Kyrgyz - undefined-category",
+    "title": "Test STY for social embeds",
     "uid": 50924,
     "virtualReferrer": "\${documentReferrer}",
   },

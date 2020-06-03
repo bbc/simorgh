@@ -90,8 +90,8 @@ Object {
   "vars": Object {
     "contentType": "STY",
     "domain": "test.bbc.co.uk",
-    "sections": "Mundo, Mundo - STY",
-    "title": "Más leídas",
+    "sections": "Mundo, Mundo - Internacional, Mundo - STY, Mundo - Internacional - STY, Mundo - Explainer-category",
+    "title": "Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea",
     "uid": 50924,
     "virtualReferrer": "\${documentReferrer}",
   },

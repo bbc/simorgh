@@ -78,6 +78,14 @@ export const buildSections = ({
         ...(addProducer ? buildSectionArr(serviceCap, producer, type) : []),
         ...(chapter ? buildSectionArr(serviceCap, chapter, type) : []),
       ].join(', ');
+    case 'STY':
+      return [
+        serviceCap,
+        buildSectionItem(serviceCap, sectionName),
+        buildSectionItem(serviceCap, pageType),
+        buildSectionItem(buildSectionItem(serviceCap, sectionName), pageType),
+        buildSectionItem(serviceCap, appendCategory(categoryName)),
+      ].join(', ');
     default:
       return [
         serviceCap,
@@ -102,7 +110,7 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
     case 'mostRead':
       return `${title} - ${brandName}`;
     case 'STY':
-      return `${title}`;
+      return path(['promo', 'headlines', 'headline'], pageData);
     default:
       return null;
   }
