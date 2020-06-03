@@ -10,6 +10,8 @@ exports[`Canonical Most Read Page Footer I can see the footer copyright and exte
 
 exports[`Canonical Most Read Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
+exports[`Canonical Most Read Page Header I can see the navigation 1`] = `"Noticias"`;
+
 exports[`Canonical Most Read Page I can see the headline 1`] = `"Más leídas"`;
 
 exports[`Canonical Most Read Page I can see the list items 1`] = `"1Cómo es posible que Uber sobreviva con pérdidas de US$1.200 millones y sin nunca haber obtenido beneficiosÚltima actualización: 6 noviembre 2019"`;
