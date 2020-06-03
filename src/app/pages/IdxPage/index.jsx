@@ -7,11 +7,12 @@ import idxPageDataPropTypes from '#models/propTypes/idxPage';
 
 const IdxPage = ({ pageData }) => {
   const groups = path(['content', 'groups'], pageData);
+  const heading = path(['metadata', 'title'], pageData);
 
   return (
     <main role="main">
       <PageContainer>
-        <IndexHeading id="content">IDX Page</IndexHeading>
+        <IndexHeading id="content">{heading}</IndexHeading>
         {groups.map((group, index) => (
           <Fragment key={group.title}>
             <FrontPageSection group={group} sectionNumber={index} />
