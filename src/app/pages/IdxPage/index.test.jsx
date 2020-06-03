@@ -1,5 +1,6 @@
 import React from 'react';
-import { act, render } from '@testing-library/react';
+import { render, act } from '@testing-library/react';
+
 import persianMostReadData from '#data/persian/mostRead';
 import IdxPageWithContext from './testHelpers';
 
@@ -16,6 +17,16 @@ describe('IdxPage', () => {
       });
 
       expect(container).toMatchSnapshot();
+    });
+
+    it('should render idx page sections', async () => {
+      const { container } = render(<IdxPageWithContext />);
+
+      const sections = container.querySelectorAll('section');
+      expect(sections).toHaveLength(2);
+      sections.forEach(section => {
+        expect(section.getAttribute('role')).toEqual('region');
+      });
     });
   });
 });
