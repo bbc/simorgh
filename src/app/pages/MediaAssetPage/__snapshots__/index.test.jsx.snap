@@ -960,6 +960,7 @@ exports[`Media Asset Page should render component 1`] = `
             <section
               aria-labelledby="related-content-heading"
               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+              data-e2e="related-content"
               role="region"
             >
               <div
