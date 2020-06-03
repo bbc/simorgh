@@ -11,12 +11,12 @@ ci:
     preset: lighthouse:recommended
     assertions:
       # Disable PWA stuff
-      - installable-manifest: off
-      - offline-start-url: off
-      - service-worker: off
-      - splash-screen: off
-      - themed-omnibox: off
-      - works-offline: off
+      installable-manifest: off
+      offline-start-url: off
+      service-worker: off
+      splash-screen: off
+      themed-omnibox: off
+      works-offline: off
     skipAudits:
       - is-on-https
   upload:
