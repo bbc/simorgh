@@ -25,7 +25,7 @@ import LinkedData from '#containers/LinkedData';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import MetadataContainer from '#containers/Metadata';
 import Grid, { GelPageGrid } from '#app/components/Grid';
-import { MainContainer } from '#lib/pageStyles';
+import { MainContainer } from '#lib/pageStyles/index';
 
 const ConstrainedWrapper = styled.div`
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
