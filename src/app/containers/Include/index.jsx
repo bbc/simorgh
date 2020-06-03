@@ -4,8 +4,12 @@ import { string } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
+import nodeLogger from '#lib/logger.node';
+import { INCLUDE_RENDERED } from '#lib/logger.const';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
+
+const logger = nodeLogger(__filename);
 
 /**
  * Prevent Includes from being wider than their parent, whilst
@@ -41,6 +45,11 @@ const IncludeContainer = ({ html, type }) => {
   const IncludeGrid = styled(GridItemConstrainedMedium)`
     display: grid;
   `;
+
+  logger.info(INCLUDE_RENDERED, {
+    type,
+    html,
+  });
 
   return (
     <IncludeGrid>
