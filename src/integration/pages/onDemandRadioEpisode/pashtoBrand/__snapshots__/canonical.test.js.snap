@@ -6,7 +6,61 @@ exports[`Canonical On Demand Radio Episode Analytics ATI 1`] = `"<img height=\\"
 
 exports[`Canonical On Demand Radio Episode Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
 
+exports[`Canonical On Demand Radio Episode Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Canonical On Demand Radio Episode Footer I can see a link: BBC News, پښتو 1`] = `"/pashto"`;
+
+exports[`Canonical On Demand Radio Episode Footer I can see a link: Cookies 1`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+
+exports[`Canonical On Demand Radio Episode Footer I can see a link: د بي بي سي‌ په اړه 1`] = `"https://www.bbc.com/pashto/institutional-37622761"`;
+
+exports[`Canonical On Demand Radio Episode Footer I can see a link: د محرميت تگلاره 1`] = `"https://www.bbc.com/pashto/institutional-37622762"`;
+
+exports[`Canonical On Demand Radio Episode Footer I can see a link: د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره. 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
+exports[`Canonical On Demand Radio Episode Footer I can see a link: د کارولو شرايط 1`] = `"https://www.bbc.com/pashto/institutional-37620701"`;
+
+exports[`Canonical On Demand Radio Episode Footer I can see a link: زموږ سره اړیکي 1`] = `"https://www.bbc.co.uk/pashto/institutional-37622768"`;
+
+exports[`Canonical On Demand Radio Episode Footer I can see a link: ولې تاسې پر بي بي سي خبرونو باور کولی شئ 1`] = `"https://www.bbc.com/pashto/institutional-49283007"`;
+
 exports[`Canonical On Demand Radio Episode Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: افغانستان 1`] = `"/pashto/afghanistan"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: افغانستان 2`] = `"/pashto/afghanistan"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: لوبې 1`] = `"/pashto/sport"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: لوبې 2`] = `"/pashto/sport"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: نړۍ 1`] = `"/pashto/world"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: نړۍ 2`] = `"/pashto/world"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: ويډيوګانې 1`] = `"/pashto/media/video"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: ويډيوګانې 2`] = `"/pashto/media/video"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: پښتونخوا 1`] = `"/pashto/pakhtunkhwa"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: پښتونخوا 2`] = `"/pashto/pakhtunkhwa"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: ځانګړې پاڼې 1`] = `"/pashto/in_depth"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: ځانګړې پاڼې 2`] = `"/pashto/in_depth"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: ښځې 1`] = `"/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: ښځې 2`] = `"/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: کالم 1`] = `"/pashto/columns"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: کالم 2`] = `"/pashto/columns"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: کور پاڼه 1`] = `"/pashto"`;
+
+exports[`Canonical On Demand Radio Episode Header I can see a navigation link: کور پاڼه 2`] = `"/pashto"`;
 
 exports[`Canonical On Demand Radio Episode Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
@@ -34,7 +88,7 @@ exports[`Canonical On Demand Radio Episode SEO Heading level 1 1`] = `"وروس�
 
 exports[`Canonical On Demand Radio Episode SEO Lang attribute 1`] = `"ps"`;
 
-exports[`Canonical On Demand Radio Episode SEO Linked data 1`] = `
+exports[`Canonical On Demand Radio Episode SEO Linked data AudioObject 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "AudioObject",

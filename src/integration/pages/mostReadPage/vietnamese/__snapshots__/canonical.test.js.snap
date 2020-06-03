@@ -12,7 +12,7 @@ exports[`Canonical Most Read Page Footer I can see a link: BBC News, Tiếng Vi�
 
 exports[`Canonical Most Read Page Footer I can see a link: Chính sách riêng tư 1`] = `"https://www.bbc.com/vietnamese/institutional-37623841"`;
 
-exports[`Canonical Most Read Page Footer I can see a link: Cookies 1`] = `"https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html"`;
+exports[`Canonical Most Read Page Footer I can see a link: Cookie 1`] = `"https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html"`;
 
 exports[`Canonical Most Read Page Footer I can see a link: Liên hệ BBC 1`] = `"https://www.bbc.com/vietnamese/institutional-37623842"`;
 
