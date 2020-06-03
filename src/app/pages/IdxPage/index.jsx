@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import path from 'ramda/src/path';
 import IndexHeading from '#containers/IndexHeading';
-import { IndexPageContainer } from '#lib/pageStyles/index';
+import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
 import FrontPageSection from '#containers/FrontPageSection';
 import idxPageDataPropTypes from '#models/propTypes/idxPage';
 

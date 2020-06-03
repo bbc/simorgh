@@ -8,16 +8,16 @@ Object {
       <main
         role="main"
       >
-        <h1
-          class="HeadingIndex-sc-1155hfb-0 StyledIndexHeading-jnasqg-0 efczLY"
-          dir="rtl"
-          tabindex="-1"
-        >
-          IDX Page
-        </h1>
         <div
-          class="PageContainer-t6irzr-0 dDUXgT"
+          class="IndexPageContainer-sc-1yb6vt4-0 lkUiYo"
         >
+          <h1
+            class="HeadingIndex-sc-1155hfb-0 StyledIndexHeading-jnasqg-0 efczLY"
+            dir="rtl"
+            tabindex="-1"
+          >
+            صفحه افغانستان
+          </h1>
           <section
             aria-labelledby="WatchListen"
             class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
@@ -882,16 +882,16 @@ Object {
     <main
       role="main"
     >
-      <h1
-        class="HeadingIndex-sc-1155hfb-0 StyledIndexHeading-jnasqg-0 efczLY"
-        dir="rtl"
-        tabindex="-1"
-      >
-        IDX Page
-      </h1>
       <div
-        class="PageContainer-t6irzr-0 dDUXgT"
+        class="IndexPageContainer-sc-1yb6vt4-0 lkUiYo"
       >
+        <h1
+          class="HeadingIndex-sc-1155hfb-0 StyledIndexHeading-jnasqg-0 efczLY"
+          dir="rtl"
+          tabindex="-1"
+        >
+          صفحه افغانستان
+        </h1>
         <section
           aria-labelledby="WatchListen"
           class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"

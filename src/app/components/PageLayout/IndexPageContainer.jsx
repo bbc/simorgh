@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
@@ -12,21 +12,10 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
+import IndexMarginStyles from './IndexMarginStyles';
 
-export const indexMarginStyles = css`
-  margin: 0 ${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin: 0 ${GEL_SPACING_DBL};
-  }
-`;
-
-export const IndexMain = styled.main.attrs({ role: 'main' })`
-  flex-grow: 1;
-  ${indexMarginStyles}
-`;
-
-export const IndexPageContainer = styled.div`
-  ${indexMarginStyles}
+const IndexPageContainer = styled.div`
+  ${IndexMarginStyles}
 
   /* To add extra spacing */
   padding-top: ${GEL_SPACING};
@@ -48,3 +37,5 @@ export const IndexPageContainer = styled.div`
     padding-bottom: ${GEL_SPACING_QUIN};
   }
 `;
+
+export default IndexPageContainer;
