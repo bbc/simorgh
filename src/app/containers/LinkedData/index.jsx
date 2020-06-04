@@ -15,7 +15,6 @@ const LinkedData = ({
   datePublished,
   dateModified,
   aboutTags,
-  audio,
 }) => {
   const {
     brandName,
@@ -84,10 +83,6 @@ const LinkedData = ({
         ...(isTrustProjectParticipant && { noBylinesPolicy }),
       },
     }),
-    audio: audio && {
-      '@type': 'AudioObject',
-      ...audio,
-    },
   };
 
   return (
@@ -117,14 +112,6 @@ LinkedData.propTypes = {
       sameAs: arrayOf(string),
     }),
   ),
-  audio: shape({
-    name: string.isRequired,
-    description: string,
-    duration: string.isRequired,
-    thumbnailUrl: string,
-    uploadDate: string,
-    embedURL: string,
-  }),
 };
 
 LinkedData.defaultProps = {
@@ -134,7 +121,6 @@ LinkedData.defaultProps = {
   datePublished: undefined,
   dateModified: undefined,
   aboutTags: undefined,
-  audio: undefined,
 };
 
 export default LinkedData;
