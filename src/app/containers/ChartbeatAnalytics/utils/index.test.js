@@ -240,6 +240,21 @@ describe('Chartbeat utilities', () => {
       expect(mockGetPageTitle).toHaveBeenCalledTimes(1);
     });
 
+    it('should call getPageTitle when pageType is IDX', () => {
+      const pageType = 'IDX';
+      const pageData = {};
+      const brandName = 'BBC Persian';
+
+      const mockGetPageTitle = jest
+        .fn()
+        .mockImplementation(() => 'This is an IDX page title');
+      frontPageUtils.getPageTitle = mockGetPageTitle;
+      expect(getTitle({ pageType, pageData, brandName })).toBe(
+        'This is an IDX page title',
+      );
+      expect(mockGetPageTitle).toHaveBeenCalledTimes(1);
+    });
+
     it('should call getPageTitle when pageType is index', () => {
       const pageType = 'index';
       const pageData = {};
@@ -590,6 +605,37 @@ describe('Chartbeat utilities', () => {
       sections: 'Korean, Korean - Most Read',
       type: 'Most Read',
       title: 'TOP 뉴스 - BBC News 코리아',
+      uid: 50924,
+      useCanonical: true,
+      virtualReferrer: 'test.bbc.com/previous-path',
+    };
+
+    expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+  });
+
+  it('should return config for canonical pages when page type is IDX and env is not live', () => {
+    const fixtureData = {
+      isAmp: false,
+      platform: 'canonical',
+      pageType: 'IDX',
+      data: {},
+      brandName: 'BBC-Persian',
+      chartbeatDomain: 'bbc.co.uk',
+      env: 'test',
+      service: 'persian',
+      origin: 'test.bbc.com',
+      previousPath: '/previous-path',
+    };
+
+    const expectedConfig = {
+      domain: 'test.bbc.co.uk',
+      idSync: {
+        bbc_hid: 'foobar',
+      },
+      path: '/',
+      sections: 'Persian, Persian - IDX',
+      title: 'This is an index page title',
+      type: 'Index',
       uid: 50924,
       useCanonical: true,
       virtualReferrer: 'test.bbc.com/previous-path',
