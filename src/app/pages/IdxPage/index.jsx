@@ -62,7 +62,7 @@ const IdxPage = ({
   const radioScheduleIdxPosition = path(['idxPagePosition'], radioSchedule);
 
   return (
-        <>
+    <>
       <MetadataContainer
         title={title}
         lang={lang}
@@ -70,25 +70,27 @@ const IdxPage = ({
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
-    <main role="main">
-      <h1 id="content">IDX Page</h1>
-      <PageContainer>
-        {groups.map((group, index) => (
-          <Fragment key={group.title}>
-            {radioScheduleOnIdxPage &&
-              radioScheduleIdxPosition === group.semanticGroupName && (
-                <RadioScheduleContainer
-                  initialData={radioScheduleData}
-                  radioScheduleEndpointOverride={radioScheduleEndpointOverride}
-                />
-              )}
-            <FrontPageSection group={group} sectionNumber={index} />
-          </Fragment>
-        ))}
-        {onIdxPage && renderMostRead(mostReadEndpointOverride)}
-      </PageContainer>
-    </main>
-      </>
+      <main role="main">
+        <h1 id="content">IDX Page</h1>
+        <PageContainer>
+          {groups.map((group, index) => (
+            <Fragment key={group.title}>
+              {radioScheduleOnIdxPage &&
+                radioScheduleIdxPosition === group.semanticGroupName && (
+                  <RadioScheduleContainer
+                    initialData={radioScheduleData}
+                    radioScheduleEndpointOverride={
+                      radioScheduleEndpointOverride
+                    }
+                  />
+                )}
+              <FrontPageSection group={group} sectionNumber={index} />
+            </Fragment>
+          ))}
+          {onIdxPage && renderMostRead(mostReadEndpointOverride)}
+        </PageContainer>
+      </main>
+    </>
   );
 };
 
