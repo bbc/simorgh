@@ -56,7 +56,7 @@ const getCpsItemData = record => {
   };
 };
 
-const mostReadItems = ({ data, numberOfItems, service }) => {
+const mostReadItems = ({ data, isAmp, numberOfItems, service }) => {
   if (!data) {
     return null;
   }
@@ -93,10 +93,12 @@ const mostReadItems = ({ data, numberOfItems, service }) => {
     }
     return items;
   }
+
   logger.warn(MOST_READ_STALE_DATA, {
-    message: 'lastRecordTimeStamp is greater than 35min for this service',
+    message: 'lastRecordTimeStamp is greater than 35min',
     lastRecordTimeStamp: data.lastRecordTimeStamp,
     service,
+    isAmp,
   });
   return null;
 };
