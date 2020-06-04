@@ -18,7 +18,6 @@ const idt1Markup = `<div>IDT 1 Markup</div><script type="text/javascript" src="l
 describe('convertInclude', () => {
   const includesBaseUrl = 'https://foobar.com/includes';
   process.env.SIMORGH_INCLUDES_BASE_URL = includesBaseUrl;
-  process.env.SIMORGH_APP_ENV = 'live';
   afterEach(() => {
     fetch.resetMocks();
     loggerMock.error.mockClear();
