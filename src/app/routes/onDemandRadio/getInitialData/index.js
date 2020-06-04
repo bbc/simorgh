@@ -5,7 +5,6 @@ import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
 
 const getEpisodeAvailability = ({ availableFrom, availableUntil }) => {
   const timeNow = Date.now();
-  console.log(`now = ${timeNow}`);
   if (!availableUntil || timeNow < availableFrom || timeNow > availableUntil)
     return false;
   return true;
