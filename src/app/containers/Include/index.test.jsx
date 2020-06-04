@@ -40,11 +40,12 @@ const MockContext = ({ toggleState, isAmp, children }) => (
 const IncludeContainerWithMockContext = ({
   toggleState,
   html,
+  href,
   type,
   isAmp,
 }) => (
   <MockContext toggleState={toggleState} isAmp={isAmp}>
-    <IncludeContainer html={html} type={type} />
+    <IncludeContainer html={html} type={type} href={href} />
   </MockContext>
 );
 /* eslint-enable react/prop-types */
@@ -65,12 +66,14 @@ describe('IncludeContainer', () => {
         toggleState={defaultToggleState}
         html={fakeMarkup}
         type="idt2"
+        href="/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6"
       />,
     );
     expect(container).toMatchSnapshot();
     expect(loggerMock.info).toHaveBeenCalledTimes(1);
     expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
       type: 'idt2',
+      includeUrl: '/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6',
     });
   });
 
@@ -80,6 +83,7 @@ describe('IncludeContainer', () => {
         toggleState={defaultToggleState}
         type="idt2"
         html={null}
+        href="/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6"
       />,
     );
     expect(container).toMatchSnapshot();
@@ -92,6 +96,7 @@ describe('IncludeContainer', () => {
         toggleState={defaultToggleState}
         html={fakeMarkup}
         type="idt20"
+        href="/idt20/cb1a5166-cfbb-4520-bdac-6159299acff6"
       />,
     );
     expect(container).toMatchSnapshot();
@@ -104,6 +109,7 @@ describe('IncludeContainer', () => {
         toggleState={toggleStateFalse}
         html={fakeMarkup}
         type="idt2"
+        href="/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6"
       />,
     );
     expect(container).toMatchSnapshot();
@@ -117,19 +123,21 @@ describe('IncludeContainer', () => {
         html={fakeMarkup}
         type="idt2"
         isAmp
+        href="/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6"
       />,
     );
     expect(container).toMatchSnapshot();
     expect(loggerMock.info).not.toHaveBeenCalled();
   });
 
-  const runningIncludeTest = includeType => {
+  const runningIncludeTest = (includeType, href) => {
     it(`should add require to the page for ${includeType}`, async () => {
       render(
         <IncludeContainerWithMockContext
           toggleState={defaultToggleState}
           html={fakeMarkup}
           type={includeType}
+          href={href}
         />,
       );
 
@@ -154,12 +162,16 @@ describe('IncludeContainer', () => {
         expect(loggerMock.info).toHaveBeenCalledTimes(1);
         expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
           type: `${includeType}`,
+          includeUrl: `${href}`,
         });
       });
     });
   };
-  runningIncludeTest('vj');
-  runningIncludeTest('idt1');
+  runningIncludeTest(
+    'vj',
+    '/include/vjamericas/176-eclipse-lookup/mundo/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png',
+  );
+  runningIncludeTest('idt1', 'indepthtoolkit/data-pics/Env_Test_2');
 
   it(`should add require once for page with multiple vj and idt1 includes`, async () => {
     render(
@@ -198,6 +210,7 @@ describe('IncludeContainer', () => {
         toggleState={defaultToggleState}
         html={fakeMarkup}
         type="idt2"
+        href="/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6"
       />,
     );
 
@@ -209,6 +222,7 @@ describe('IncludeContainer', () => {
       expect(loggerMock.info).toHaveBeenCalledTimes(1);
       expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
         type: 'idt2',
+        includeUrl: '/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6',
       });
     });
   });

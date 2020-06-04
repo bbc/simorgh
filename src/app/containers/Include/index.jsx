@@ -20,7 +20,7 @@ const Include = styled.div`
   overflow: scroll hidden;
 `;
 
-const IncludeContainer = ({ html, type }) => {
+const IncludeContainer = ({ href, html, type }) => {
   const { isAmp } = useContext(RequestContext);
   const { enabled } = useToggle('include');
 
@@ -47,6 +47,7 @@ const IncludeContainer = ({ html, type }) => {
   `;
 
   logger.info(INCLUDE_RENDERED, {
+    includeUrl: href,
     type,
   });
 
@@ -72,6 +73,7 @@ const IncludeContainer = ({ html, type }) => {
 IncludeContainer.propTypes = {
   html: string,
   type: string.isRequired,
+  href: string.isRequired,
 };
 
 IncludeContainer.defaultProps = {
