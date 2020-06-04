@@ -51,7 +51,6 @@ const IdxPage = ({ pageData, mostReadEndpointOverride }) => {
   const lang = path(['metadata', 'language'], pageData);
   const summary = path(['metadata', 'summary'], pageData);
   const seoTitle = path(['promo', 'name'], pageData);
-  const heading = path(['metadata', 'title'], pageData);
 
   return (
     <>
@@ -64,7 +63,7 @@ const IdxPage = ({ pageData, mostReadEndpointOverride }) => {
       <LinkedData type="WebPage" seoTitle={seoTitle} />
       <main role="main">
         <IndexPageContainer>
-          <IndexHeading id="content">{heading}</IndexHeading>
+          <IndexHeading id="content">{title}</IndexHeading>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
               <FrontPageSection group={group} sectionNumber={index} />
