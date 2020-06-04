@@ -105,15 +105,28 @@ Object {
 }
 `;
 
+exports[`AMP Story Page Analytics chartbeat 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "STY",
+    "domain": "test.bbc.co.uk",
+    "sections": "Mundo, Mundo - Internacional, Mundo - STY, Mundo - Internacional - STY, Mundo - Explainer-category",
+    "title": "Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
 exports[`AMP Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
 exports[`AMP Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
-exports[`AMP Story Page Lead image I can see an image with a caption 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
-
 exports[`AMP Story Page Header I can see the navigation 1`] = `"Noticias"`;
+
+exports[`AMP Story Page Lead image I can see an image with a caption 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
 
 exports[`AMP Story Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
 
