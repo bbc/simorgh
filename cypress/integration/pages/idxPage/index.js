@@ -16,7 +16,7 @@ import {
 } from './testsForCanonicalOnly';
 
 const testsForPage = {
-  pageType: 'IDX',
+  pageType: 'idxPage',
   testsThatAlwaysRun,
   testsThatAlwaysRunForCanonicalOnly,
   testsThatAlwaysRunForAMPOnly,
