@@ -6,8 +6,8 @@ import filterEmptyGroupItems from '#app/routes/utils/sharedDataTransformers/filt
 import squashTopStories from '#app/routes/utils/sharedDataTransformers/squashTopStories';
 import addIdsToItems from '#app/routes/utils/sharedDataTransformers/addIdsToItems';
 import filterGroupsWithoutStraplines from '#app/routes/utils/sharedDataTransformers/filterGroupsWithoutStraplines';
-import getConfig from '../../utils/getConfig';
-import withRadioSchedule from '../../utils/withRadioSchedule';
+import getConfig from '#app/routes/utils/getConfig';
+import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
 
 const transformJson = pipe(
   filterUnknownContentTypes,

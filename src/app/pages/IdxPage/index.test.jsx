@@ -13,7 +13,7 @@ describe('IdxPage', () => {
 
   describe('Snapshots', () => {
     it('should render a persian idx page correctly with most read and radio schedule', async () => {
-      let container = null;
+      let container;
       await act(async () => {
         container = render(
           <IdxPageWithContext pageData={persianAfghanistanIdxData} />,
@@ -22,9 +22,11 @@ describe('IdxPage', () => {
 
       expect(container).toMatchSnapshot();
     });
+  });
 
+  describe('Assertions', () => {
     it('should render idx page sections', async () => {
-      let container = null;
+      let container;
       await act(async () => {
         container = render(
           <IdxPageWithContext pageData={persianAfghanistanIdxData} />,

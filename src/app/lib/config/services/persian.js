@@ -208,9 +208,9 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
+      frontPagePosition: '',
       onIdxPage: true,
       idxPagePosition: 'Features',
-      frontPagePosition: '',
       header: 'برنامه‌های رادیو',
       durationLabel: 'مدت %duration%',
     },

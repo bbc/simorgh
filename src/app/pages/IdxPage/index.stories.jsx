@@ -17,7 +17,7 @@ const stories = storiesOf('Pages|Idx Page', module);
     pageData: ukraineInRussianIdxData,
     service: 'ukrainian',
   },
-].forEach(({ idxPage, pageData, service = 'persian' }) => {
+].forEach(({ idxPage, pageData, service }) => {
   stories.add(`${idxPage}`, () => {
     return <IdxPageWithContext service={service} pageData={pageData} />;
   });
