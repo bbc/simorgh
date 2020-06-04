@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'ਇਸ਼ਤਿਹਾਰ',
     },
     lang: `pa`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -167,7 +168,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'ਤਾਜ਼ਾ ਘਟਨਾਕ੍ਰਮ',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'ਦ੍ਰਿਸ਼ਟੀਕੋਣ',
     },
     brandSVG,
     mostRead: {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -22,10 +23,15 @@ const toggleContextMock = {
 describe('Ad Container', () => {
   beforeAll(() => {
     process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+    window.dotcom = {
+      bootstrap: jest.fn(),
+      cmd: { push: jest.fn() },
+    };
   });
 
   afterAll(() => {
     delete process.env.SIMORGH_TOGGLES_URL;
+    window.dotcom = undefined;
   });
 
   describe('Snapshots', () => {
@@ -80,7 +86,9 @@ describe('Ad Container', () => {
           pathname="/pidgin"
         >
           <ToggleContext.Provider value={toggleContextMock}>
-            <AdContainer />
+            <BrowserRouter>
+              <AdContainer />
+            </BrowserRouter>
           </ToggleContext.Provider>
         </RequestContextProvider>
       </ServiceContextProvider>,
@@ -99,7 +107,9 @@ describe('Ad Container', () => {
           pathname="/news"
         >
           <ToggleContext.Provider value={toggleContextMock}>
-            <AdContainer />
+            <BrowserRouter>
+              <AdContainer />
+            </BrowserRouter>
           </ToggleContext.Provider>
         </RequestContextProvider>
       </ServiceContextProvider>,

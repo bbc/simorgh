@@ -1,7 +1,7 @@
 const toggles = {
   local: {
     ads: {
-      enabled: true,
+      enabled: false,
     },
     chartbeatAnalytics: {
       enabled: true,
@@ -14,9 +14,6 @@ const toggles = {
     },
     mostRead: {
       enabled: true,
-    },
-    mpulse: {
-      enabled: false,
     },
     navOnArticles: {
       enabled: true,
@@ -44,7 +41,7 @@ const toggles = {
   },
   test: {
     ads: {
-      enabled: true,
+      enabled: false,
     },
     chartbeatAnalytics: {
       enabled: true,
@@ -53,9 +50,6 @@ const toggles = {
       enabled: true,
     },
     mediaPlayer: {
-      enabled: true,
-    },
-    mpulse: {
       enabled: true,
     },
     mostRead: {
@@ -99,9 +93,6 @@ const toggles = {
       enabled: true,
     },
     mostRead: {
-      enabled: true,
-    },
-    mpulse: {
       enabled: true,
     },
     navOnArticles: {

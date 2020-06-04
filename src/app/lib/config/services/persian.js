@@ -14,6 +14,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'آگهی',
     },
     lang: 'fa',
     product: 'BBC News',
@@ -202,6 +203,7 @@ export const service = {
       lastUpdated: 'به روز شده در',
       numberOfItems: 10,
       hasMostRead: true,
+      onIdxPage: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,

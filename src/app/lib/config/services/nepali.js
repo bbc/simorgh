@@ -9,10 +9,11 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'विज्ञापन',
     },
     lang: `ne`,
     articleAuthor: `http://www.facebook.com/bbcnews`,
-    articleTimestampPrefix: 'अद्यावधिक गरिएको समय',
+    articleTimestampPrefix: 'मा अद्यावधिक',
     atiAnalyticsAppName: 'news-nepali',
     atiAnalyticsProducerId: '63',
     chartbeatDomain: 'nepali.bbc.co.uk',
@@ -64,15 +65,15 @@ export const service = {
           statusCode: '४०४',
           title: 'सामग्री फेला परेन।',
           message:
-            'माफ गर्नुहोस्। तपाईँले खोज्नुभएको सामग्री हामीले देखाउन सकेनौँ। निम्न उपायहरू गर्नुहोस्:',
+            'माफ गर्नुहोस्। तपाईँले खोज्नुभएको सामग्री हामीले भेट्टाउन सकेनौँ। यी उपायहरू गर्नुहोस्:',
           solutions: [
             'URL सही छ कि छैन जाँच्नुहोस्',
-            'Refresh थिच्नुहोस्',
+            'ब्राउजरमा रिफ्रेश थिच्नुहोस्',
             'बीबीसी सर्चमा खोज्नुहोस्',
           ],
           callToActionFirst: 'अथवा ',
           callToActionLinkText: 'BBC News नेपाली',
-          callToActionLast: 'को होमपेजमा जानुहोस्।',
+          callToActionLast: 'को होमपेजमा जानुहोस्',
           callToActionLinkUrl: 'https://www.bbc.com/nepali',
         },
         500: {
@@ -142,7 +143,7 @@ export const service = {
       },
       media: {
         noJs: 'तपाईंको उपकरणमा मिडिया प्लेब्याक सपोर्ट छैन',
-        contentExpired: 'यो सामग्री उपलब्ध छैन',
+        contentExpired: 'यो सामग्री अब उपलब्ध छैन',
         audio: 'अडिओ',
         photogallery: 'तस्बिर सङ्ग्रह',
         video: 'भिडिओ',
@@ -155,25 +156,24 @@ export const service = {
         watch: 'हेर्नुहोस्',
         liveLabel: 'प्रत्यक्ष प्रसारण',
         nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        previousRadioShow: 'पछिल्लो रेडिओ कार्यक्रम',
+        nextRadioShow: 'अघिल्लो रेडिओ कार्यक्रम',
+        duration: 'समयावधि',
       },
       socialEmbed: {
         caption: {
           textPrefixVisuallyHidden: 'भिडिओ क्याप्शन सुरु हुँदैछ, ',
-          text: 'चेतावनी: तीसरे पक्ष की सामग्री में विज्ञापन हो सकते हैं.',
+          text: 'चेतावनी: तेस्रो पक्षको सामग्रीमा विज्ञापन हुनसक्छ',
         },
         fallback: {
-          text: 'सामग्री उपलब्ध नहीं है',
-          linkText: '%provider_name% पर और देखिए',
+          text: 'सामग्री उपलब्ध छैन',
+          linkText: 'थप %provider_name% मा हेर्नुहोस्',
           linkTextSuffixVisuallyHidden: ', बाह्य सामग्री',
-          warningText:
-            'बीबीसी। अन्य वेबसाइटका सामग्रीहरूका लागि बीबीसी जिम्मेवार छैन।',
+          warningText: 'अन्य वेबसाइटका सामग्रीहरूका लागि बीबीसी जिम्मेवार छैन।',
         },
         skipLink: {
-          text: 'छोड़िए %provider_name% पोस्ट',
-          endTextVisuallyHidden: 'पोस्ट %provider_name% समाप्त',
+          text: 'यो %provider_name% पोस्ट छोड्नुहोस्',
+          endTextVisuallyHidden: '%provider_name% पोस्ट समाप्त',
         },
       },
       topStoriesTitle: 'मुख्य समाचार',
@@ -182,7 +182,7 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'धेरै पढिएको',
-      lastUpdated: 'अन्तिम चोटि अद्यावधिक गरिएको मिति:',
+      lastUpdated: 'मा अन्तिम चोटि अद्यावधिक',
       numberOfItems: 5,
       hasMostRead: true,
     },
@@ -230,7 +230,7 @@ export const service = {
         },
       ],
       copyrightText:
-        '२०१९ बीबीसी। अन्य वेबसाइटका सामग्रीहरूका लागि बीबीसी जिम्मेवार छैन।',
+        'बीबीसी। अन्य वेबसाइटका सामग्रीहरूका लागि बीबीसी जिम्मेवार छैन।',
     },
     fonts: [],
     timezone: 'Asia/Kathmandu',

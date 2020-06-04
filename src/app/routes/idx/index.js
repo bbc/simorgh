@@ -1,10 +1,11 @@
 import { IdxPage } from '#pages';
+import getInitialData from './getInitialData';
 import { IdxPagePath } from '../utils/regex';
 
 export default {
   path: IdxPagePath,
   exact: true,
   component: IdxPage,
-  getInitialData: () => Promise.resolve({ status: 200, pageData: {} }),
+  getInitialData,
   pageType: 'IDX',
 };

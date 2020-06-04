@@ -9,15 +9,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/afaanoromoo/articles/ce3nlgrelv1o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/afaanoromoo/articles/c4g19kgl85ko'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/afaanoromoo/articles/c4g19kgl85ko'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -73,7 +73,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -162,6 +162,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   afrique: {
@@ -174,7 +175,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/afrique/articles/cx80n852v6mo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/afrique/articles/cz216x22106o'],
@@ -225,11 +226,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/afrique/bbc_afrique_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/afrique/bbc_afrique_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/afrique/bbc_afrique_radio/liveradio'],
@@ -238,7 +239,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -262,14 +263,14 @@ module.exports = () => ({
               '/afrique/media-52121324', // CPS MAP
               '/afrique/institutionelles/2015/07/150714_hissene_habre_explainer', // TC2 MAP
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
               '/afrique/region-23278969', // CPS MAP
               '/afrique/nos_emissions/2016/06/160622_tc2_testmap1', // TC2 MAP
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -319,19 +320,20 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/afrique/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/afrique/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/afrique/popular/read'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   amharic: {
@@ -344,15 +346,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/amharic/articles/c0lgxqknqkdo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/amharic/articles/czqverekrldo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/amharic/articles/czqverekrldo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -395,11 +397,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/amharic/bbc_amharic_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/amharic/bbc_amharic_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/amharic/bbc_amharic_radio/liveradio'],
@@ -408,7 +410,7 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -497,6 +499,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   arabic: {
@@ -509,15 +512,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/arabic/articles/c8j91j2ljppo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/arabic/articles/c1er5mjnznzo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/arabic/articles/c1er5mjnznzo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -560,11 +563,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/arabic/bbc_arabic_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/arabic/bbc_arabic_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/arabic/bbc_arabic_radio/liveradio'],
@@ -573,7 +576,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -601,7 +604,7 @@ module.exports = () => ({
               '/arabic/world-23278971', // CPS audio
               '/arabic/worldnews/2015/11/151120_t_arabic_av', // TC2 video
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -664,6 +667,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   azeri: {
@@ -680,11 +684,11 @@ module.exports = () => ({
           },
           test: {
             paths: ['/azeri/articles/c5k08pqnzexo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/azeri/articles/c5k08pqnzexo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -724,7 +728,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -802,6 +806,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   bengali: {
@@ -814,15 +819,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/bengali/articles/cv90149zq1eo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/bengali/articles/c6p3yp5zzmeo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/bengali/articles/c6p3yp5zzmeo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -865,11 +870,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/bengali/bbc_bangla_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/bengali/bbc_bangla_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/bengali/bbc_bangla_radio/liveradio'],
@@ -878,7 +883,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -972,6 +977,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   burmese: {
@@ -984,15 +990,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/burmese/articles/c41px3vd4nxo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/burmese/articles/cn0exdy1jzvo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/burmese/articles/cn0exdy1jzvo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -1035,11 +1041,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/burmese/bbc_burmese_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/burmese/bbc_burmese_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/burmese/bbc_burmese_radio/liveradio'],
@@ -1048,7 +1054,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -1142,6 +1148,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   cymrufyw: {
@@ -1162,7 +1169,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/cymrufyw/erthyglau/c06p32z9x2mo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -1186,11 +1193,12 @@ module.exports = () => ({
       },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   gahuza: {
@@ -1203,15 +1211,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/gahuza/articles/cryd02nzn81o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/gahuza/articles/cey23zx8wx8o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/gahuza/articles/cey23zx8wx8o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -1254,11 +1262,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/gahuza/bbc_gahuza_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/gahuza/bbc_gahuza_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/gahuza/bbc_gahuza_radio/liveradio'],
@@ -1267,7 +1275,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -1291,7 +1299,7 @@ module.exports = () => ({
               '/gahuza/amakuru-51710168', // CPS MAP with audio clip
               '/gahuza/video/2015/12/151201_100womenburundi', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
@@ -1330,16 +1338,16 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/gahuza/amakuru-52821373'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/gahuza/23307435'],
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: ['/gahuza/23307435'],
+            enabled: true,
           },
         },
         smoke: false,
@@ -1361,6 +1369,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   gujarati: {
@@ -1373,15 +1382,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/gujarati/articles/c2rnxj48elwo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/gujarati/articles/cr5el5kw591o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/gujarati/articles/cr5el5kw591o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -1421,7 +1430,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1494,6 +1503,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   hausa: {
@@ -1506,15 +1516,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/hausa/articles/c41rj1z261zo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/hausa/articles/c2nr6xqmnewo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/hausa/articles/c2nr6xqmnewo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -1557,11 +1567,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/hausa/bbc_hausa_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/hausa/bbc_hausa_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/hausa/bbc_hausa_radio/liveradio'],
@@ -1570,7 +1580,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -1594,7 +1604,7 @@ module.exports = () => ({
               '/hausa/labarai-51622389', // CPS MAP with video clip
               '/hausa/multimedia/2012/07/120712_click', // TC2 MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -1663,6 +1673,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   hindi: {
@@ -1675,15 +1686,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/hindi/articles/cd80y3ezl8go'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/hindi/articles/c0469479x9xo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/hindi/articles/c0469479x9xo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -1726,11 +1737,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/hindi/bbc_hindi_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/hindi/bbc_hindi_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/hindi/bbc_hindi_radio/liveradio'],
@@ -1739,7 +1750,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1751,7 +1778,7 @@ module.exports = () => ({
               '/hindi/23201477', // CPS video
               '/hindi/sport/2016/08/160822_tc2_testmap1', // TC2 video
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -1814,6 +1841,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   igbo: {
@@ -1826,15 +1854,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/igbo/articles/ckjn8jnrn75o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/igbo/articles/cr1lw620ygjo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/igbo/articles/cr1lw620ygjo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -1874,7 +1902,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1947,6 +1975,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   indonesia: {
@@ -1959,15 +1988,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/indonesia/articles/cvd36dly8zdo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/indonesia/articles/c0q2zq8pzvzo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/indonesia/articles/c0q2zq8pzvzo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -2010,11 +2039,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/indonesia/bbc_indonesian_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/indonesia/bbc_indonesian_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/indonesia/bbc_indonesian_radio/liveradio'],
@@ -2023,14 +2052,18 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/indonesia/bbc_indonesian_radio/$latestEpisodeId'],
+            paths: [
+              '/indonesia/bbc_indonesian_radio/programmes/w13xtt0s', // Brand
+              '/indonesia/bbc_indonesian_radio/w172xh281s8mkhr', // Expired Episode
+              '/indonesia/bbc_indonesian_radio/$latestEpisodeId', // Latest Episode
+            ],
             enabled: true,
           },
           local: {
@@ -2117,6 +2150,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   japanese: {
@@ -2177,14 +2211,14 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
             paths: [
               '/japanese/video-52178074', // CPS MAP
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
@@ -2250,6 +2284,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   korean: {
@@ -2262,15 +2297,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/korean/articles/crym1243d97o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/korean/articles/c3mn1lvz65xo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/korean/articles/c3mn1lvz65xo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -2326,7 +2361,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -2415,6 +2450,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   kyrgyz: {
@@ -2431,11 +2467,11 @@ module.exports = () => ({
           },
           test: {
             paths: ['/kyrgyz/articles/c3xd4xg3rm9o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/kyrgyz/articles/c3xd4xg3rm9o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -2478,11 +2514,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/kyrgyz/bbc_kyrgyz_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/kyrgyz/bbc_kyrgyz_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/kyrgyz/bbc_kyrgyz_radio/liveradio'],
@@ -2491,7 +2527,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -2522,7 +2558,7 @@ module.exports = () => ({
               '/kyrgyz/media-23257484', // CPS MAP with video clip
               '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP with audio clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -2585,6 +2621,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   marathi: {
@@ -2597,15 +2634,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/marathi/articles/cvjxwvn04yjo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/marathi/articles/cp47g4myxz7o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/marathi/articles/cp47g4myxz7o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -2645,7 +2682,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2718,6 +2755,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   mundo: {
@@ -2730,15 +2768,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/mundo/articles/cdwrpl7qwqqo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/mundo/articles/ce42wzqr2mko'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/mundo/articles/ce42wzqr2mko'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -2778,7 +2816,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2786,14 +2824,14 @@ module.exports = () => ({
               '/mundo/media-52123665', // CPS MAP
               '/mundo/noticias/2011/05/110518_video_deforestacion_amazonia_brasil_lav', // TC2 MAP
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
               '/mundo/media-23283126', // CPS MAP
               '/mundo/noticias/2016/04/160427_tc2_testmap1', // TC2 MAP
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -2809,11 +2847,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/mundo/deportes-36935058'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/mundo/noticias-23147451'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/mundo/deportes-36935058'],
@@ -2843,19 +2881,20 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/mundo/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/mundo/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/mundo/popular/read'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   naidheachdan: {
@@ -2876,7 +2915,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/naidheachdan/sgeulachdan/c18q7nedn2ko'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -2900,11 +2939,12 @@ module.exports = () => ({
       },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   nepali: {
@@ -2968,11 +3008,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/nepali/bbc_nepali_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/nepali/bbc_nepali_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/nepali/bbc_nepali_radio/liveradio'],
@@ -2981,7 +3021,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -3075,6 +3115,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   news: {
@@ -3119,11 +3160,12 @@ module.exports = () => ({
       },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   pashto: {
@@ -3136,15 +3178,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/pashto/articles/c70970g2251o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/pashto/articles/cyjmdl92z3ro'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/pashto/articles/cyjmdl92z3ro'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -3187,11 +3229,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/pashto/bbc_pashto_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/pashto/bbc_pashto_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/pashto/bbc_pashto_radio/liveradio'],
@@ -3200,14 +3242,18 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/pashto/bbc_pashto_radio/$latestEpisodeId'],
+            paths: [
+              '/pashto/bbc_pashto_radio/programmes/p0340yr4', // Brand
+              '/pashto/bbc_pashto_radio/w172xjck9cw6lvc', // Expired Episode
+              '/pashto/bbc_pashto_radio/$latestEpisodeId', // Latest Episode
+            ],
             enabled: true,
           },
           local: {
@@ -3224,7 +3270,7 @@ module.exports = () => ({
               '/pashto/arts-and-literature-46787030', // CPS MAP with audio clip
               '/pashto/multimedia/2016/08/160827_gn_southafrica_female_farmer', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
@@ -3294,6 +3340,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   persian: {
@@ -3379,7 +3426,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -3412,7 +3459,7 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              // '/persian/iran-23231114', // CPS MAP with audio clip
+              '/persian/iran-23231114', // CPS MAP with audio clip
               '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP with video clip
             ],
             enabled: true,
@@ -3431,11 +3478,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/persian/magazine-49281981'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/persian/23104784'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/persian/magazine-49281981'],
@@ -3465,7 +3512,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/persian/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/persian/popular/read'],
@@ -3473,6 +3520,23 @@ module.exports = () => ({
           },
           local: {
             paths: ['/persian/popular/read'],
+            enabled: true,
+          },
+        },
+        smoke: true,
+      },
+      idxPage: {
+        environments: {
+          live: {
+            paths: ['/persian/afghanistan'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/persian/afghanistan'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/persian/afghanistan'],
             enabled: true,
           },
         },
@@ -3538,7 +3602,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3560,11 +3624,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/pidgin/50913502'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/pidgin/sport-23252855'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/pidgin/sport-23252855'],
@@ -3607,6 +3671,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   portuguese: {
@@ -3619,15 +3684,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/portuguese/articles/cpg5prg95lmo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/portuguese/articles/cd61pm8gzmpo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/portuguese/articles/cd61pm8gzmpo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -3667,7 +3732,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3675,7 +3740,7 @@ module.exports = () => ({
               '/portuguese/internacional-51918335', // CPS MAP
               '/portuguese/noticias/2012/07/120711_video_estomago_camera_cc', // TC2 MAP
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
@@ -3745,6 +3810,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   punjabi: {
@@ -3756,15 +3822,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/punjabi/articles/c39p51156lyo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/punjabi/articles/c0l79lr39qyo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/punjabi/articles/c0l79lr39qyo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -3804,7 +3870,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3877,6 +3943,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   russian: {
@@ -3889,15 +3956,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/russian/articles/c6ygxgl53w9o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/russian/articles/ck7pz7re3zgo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/russian/articles/ck7pz7re3zgo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -3937,7 +4004,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3993,19 +4060,20 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/russian/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/russian/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/russian/popular/read'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   scotland: {
@@ -4050,11 +4118,12 @@ module.exports = () => ({
       },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   serbianCyr: {
@@ -4115,7 +4184,7 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4171,19 +4240,20 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/serbian/cyr/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/serbian/cyr/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/serbian/cyr/popular/read'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   serbianLat: {
@@ -4244,7 +4314,7 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4300,19 +4370,20 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/serbian/lat/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/serbian/lat/popular/read'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/serbian/lat/popular/read'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   sinhala: {
@@ -4325,15 +4396,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/sinhala/articles/cldr38jnwd2o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/sinhala/articles/c45w255zlexo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/sinhala/articles/c45w255zlexo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -4376,11 +4447,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/sinhala/bbc_sinhala_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/sinhala/bbc_sinhala_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/sinhala/bbc_sinhala_radio/liveradio'],
@@ -4389,7 +4460,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -4482,6 +4553,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   somali: {
@@ -4493,15 +4565,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/somali/articles/c8z79d4mzrlo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/somali/articles/cgn6emk3jm8o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/somali/articles/cgn6emk3jm8o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -4544,11 +4616,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/somali/bbc_somali_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/somali/bbc_somali_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/somali/bbc_somali_radio/liveradio'],
@@ -4557,7 +4629,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -4651,6 +4723,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   sport: {
@@ -4662,11 +4735,12 @@ module.exports = () => ({
       errorPage404: { environments: undefined, smoke: false },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   swahili: {
@@ -4679,15 +4753,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/swahili/articles/cw794z3gpd5o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/swahili/articles/czjqge2jwn2o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/swahili/articles/czjqge2jwn2o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -4730,11 +4804,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/swahili/bbc_swahili_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/swahili/bbc_swahili_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/swahili/bbc_swahili_radio/liveradio'],
@@ -4743,7 +4817,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -4767,7 +4841,7 @@ module.exports = () => ({
               '/swahili/gnb-51703829', // CPS MAP with video clip
               '/swahili/medianuai/2016/05/160517_apatae_fatacky', // TC2 MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -4837,6 +4911,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   tamil: {
@@ -4849,15 +4924,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/tamil/articles/cvr4752gr13o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/tamil/articles/cwl08ll3me8o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/tamil/articles/cwl08ll3me8o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -4900,11 +4975,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/tamil/bbc_tamil_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/tamil/bbc_tamil_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/tamil/bbc_tamil_radio/liveradio'],
@@ -4913,7 +4988,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -5007,6 +5082,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   telugu: {
@@ -5019,15 +5095,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/telugu/articles/c1x76pey3x3o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/telugu/articles/cq0y4008d4vo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/telugu/articles/cq0y4008d4vo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -5067,7 +5143,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5140,6 +5216,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   thai: {
@@ -5152,15 +5229,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/thai/articles/czx7w3zyme1o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/thai/articles/c442rl3md0eo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/thai/articles/c442rl3md0eo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -5200,7 +5277,7 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5273,6 +5350,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   tigrinya: {
@@ -5285,15 +5363,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/tigrinya/articles/c3vq38ve33xo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/tigrinya/articles/ck62z3rjwdeo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/tigrinya/articles/ck62z3rjwdeo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -5336,11 +5414,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/tigrinya/bbc_tigrinya_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/tigrinya/bbc_tigrinya_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/tigrinya/bbc_tigrinya_radio/liveradio'],
@@ -5349,7 +5427,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -5378,7 +5456,7 @@ module.exports = () => ({
             paths: [
               '/tigrinya/news-23263262', // CPS MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/tigrinya/news-23263262'], // CPS MAP with video clip
@@ -5438,6 +5516,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   turkce: {
@@ -5450,15 +5529,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/turkce/articles/cpgzpzjl3pdo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/turkce/articles/c8q1ze59n25o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/turkce/articles/c8q1ze59n25o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -5498,7 +5577,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5576,6 +5655,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   ukchinaSimp: {
@@ -5636,7 +5716,7 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5680,16 +5760,16 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/ukchina/simp/52836902'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/ukchina/simp/23307454'],
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: ['/ukchina/simp/23307454'],
+            enabled: true,
           },
         },
         smoke: false,
@@ -5711,6 +5791,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   ukchinaTrad: {
@@ -5771,7 +5852,7 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5815,19 +5896,19 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/ukchina/trad/52836902'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/ukchina/trad/23307454'],
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: ['/ukchina/trad/23307454'],
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostReadPage: {
         environments: {
@@ -5846,6 +5927,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   ukrainian: {
@@ -5906,7 +5988,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5915,7 +5997,7 @@ module.exports = () => ({
               '/ukrainian/news-russian-38395917', // Russian CPS MAP
               '/ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag', // Ukrainian TC2
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
@@ -5923,7 +6005,7 @@ module.exports = () => ({
               '/ukrainian/other-news-23279018', // Ukrainian CPS
               '/ukrainian/entertainment/2016/10/161025_tc2_testmap1', // TC2 Ukrainian (no Russian TC2 MAP)
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -5987,6 +6069,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: {
+        environments: {
+          live: {
+            paths: ['/ukrainian/ukraine_in_russian'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/ukrainian/ukraine_in_russian'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/ukrainian/ukraine_in_russian'],
+            enabled: true,
+          },
+        },
+        smoke: true,
+      },
     },
   },
   urdu: {
@@ -5999,15 +6098,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/urdu/articles/c4qg7qq63y6o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/urdu/articles/cwgq7rzv172o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/urdu/articles/cwgq7rzv172o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -6050,11 +6149,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/urdu/bbc_urdu_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/urdu/bbc_urdu_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/urdu/bbc_urdu_radio/liveradio'],
@@ -6063,7 +6162,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -6157,6 +6256,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   uzbek: {
@@ -6177,7 +6277,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/uzbek/articles/cxj3rjxm6r0o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -6220,11 +6320,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/uzbek/bbc_uzbek_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/uzbek/bbc_uzbek_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/uzbek/bbc_uzbek_radio/liveradio'],
@@ -6233,7 +6333,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadioEpisode: {
+      onDemandRadio: {
         environments: {
           live: {
             paths: [],
@@ -6259,7 +6359,7 @@ module.exports = () => ({
               '/uzbek/lotin/2016/02/160212_latin_gravity_video', // Latin TC2 MAP
               '/uzbek/institutional/2016/03/160313_audio_zokirjon_mashrabov', // Cyrillic TC2 MAP Audio clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
@@ -6331,6 +6431,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   vietnamese: {
@@ -6343,15 +6444,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/vietnamese/articles/cpgqngyexq7o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/vietnamese/articles/c3y59g5zm19o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/vietnamese/articles/c3y59g5zm19o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -6391,7 +6492,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6469,6 +6570,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   yoruba: {
@@ -6481,15 +6583,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/yoruba/articles/cg7qz71en35o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/yoruba/articles/clw06m0nj8qo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/yoruba/articles/clw06m0nj8qo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -6529,7 +6631,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6602,6 +6704,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   zhongwenSimp: {
@@ -6662,7 +6765,7 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6737,6 +6840,7 @@ module.exports = () => ({
         },
         smoke: true,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
   zhongwenTrad: {
@@ -6797,7 +6901,7 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadioEpisode: { environments: undefined, smoke: false },
+      onDemandRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6872,6 +6976,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      idxPage: { environments: undefined, smoke: false },
     },
   },
 });

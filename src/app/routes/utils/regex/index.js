@@ -9,6 +9,7 @@ import {
   getCpsAssetRegex,
   getLiveRadioRegex,
   getOnDemandRadioRegex,
+  getOnDemandTvRegex,
   getErrorPageRegex,
   getLegacyAssetRegex,
   getMostReadPageRegex,
@@ -40,6 +41,9 @@ export const liveRadioDataPath = `${liveRadioPath}.json`;
 export const onDemandRadioPath = getOnDemandRadioRegex(allServices);
 export const onDemandRadioDataPath = `${onDemandRadioPath}.json`;
 
+export const onDemandTvPath = getOnDemandTvRegex(allServices);
+export const onDemandTvDataPath = `${onDemandTvPath}.json`;
+
 export const errorPagePath = getErrorPageRegex(allServices);
 
 export const legacyAssetPagePath = getLegacyAssetRegex(allServices);
@@ -53,3 +57,4 @@ export const secondaryColumnDataRegexPath = getSecondaryColumnDataRegex(
 );
 
 export const IdxPagePath = getIdxPageRegex();
+export const IdxDataPath = `${IdxPagePath}.json`;

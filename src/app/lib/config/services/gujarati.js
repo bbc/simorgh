@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'જાહેરાત',
     },
     lang: `gu`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -176,7 +177,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'નવાજૂની',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'બીબીસી વિશેષ',
     },
     brandSVG,
     mostRead: {

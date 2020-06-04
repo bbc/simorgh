@@ -10,6 +10,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'వ్యాపార ప్రకటన',
     },
     lang: `te`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -177,7 +178,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'ముఖ్యమైన కథనాలు',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'ఫీచర్లు',
     },
     brandSVG,
     mostRead: {

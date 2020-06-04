@@ -43,7 +43,17 @@ const logCodes = {
   UNSUPPORTED_BLOCK_TYPE: 'unsupported_block_type',
 
   // Most Read
+  MOST_READ_FETCH_ERROR: 'most_read_fetch_error',
+  MOST_READ_CLIENT_REQUEST: 'most_read_client_request',
   MOST_READ_DATA_INCOMPLETE: 'most_read_data_incomplete',
+  MOST_READ_STALE_DATA: 'most_read_stale_data',
+
+  // Include
+  INCLUDE_ERROR: 'include_error',
+  INCLUDE_FETCH_ERROR: 'include_fetch_error',
+  INCLUDE_MISSING_URL: 'include_missing_url',
+  INCLUDE_REQUEST_RECEIVED: 'include_request_received',
+  INCLUDE_UNSUPPORTED: 'include_unsupported',
 };
 
 module.exports = logCodes;

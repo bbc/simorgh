@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'Реклама',
     },
     lang: `uk`,
     articleAuthor: `http://www.facebook.com/bbcnews`,
@@ -187,6 +188,7 @@ export const service = {
       lastUpdated: 'Останнє оновлення:',
       numberOfItems: 10,
       hasMostRead: true,
+      onIdxPage: false,
     },
     radioSchedule: {
       hasRadioSchedule: false,
