@@ -29,11 +29,11 @@ const StyledIndexHeading = styled(IndexHeading)`
   }
 `;
 
-const IndexHeadingContainer = ({ children }) => {
+const IndexHeadingContainer = ({ children, ...props }) => {
   const { script, service, dir } = useContext(ServiceContext);
 
   return (
-    <StyledIndexHeading script={script} service={service} dir={dir}>
+    <StyledIndexHeading script={script} service={service} dir={dir} {...props}>
       {children}
     </StyledIndexHeading>
   );

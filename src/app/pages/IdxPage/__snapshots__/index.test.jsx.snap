@@ -11,6 +11,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
       <h1
         class="HeadingIndex-sc-1155hfb-0 StyledIndexHeading-jnasqg-0 kYCmnu"
         dir="rtl"
+        id="content"
         tabindex="-1"
       >
         صفحه افغانستان
