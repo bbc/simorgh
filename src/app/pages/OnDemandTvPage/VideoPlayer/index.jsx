@@ -20,7 +20,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import getPlaceholderImageUrl from '../../../routes/utils/getPlaceholderImageUrl';
 
-const VideoPlayerWrapper = styled.div`
+const StyledWrapper = styled.div`
   margin-top: ${GEL_SPACING_TRPL};
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     width: calc(100% + ${GEL_SPACING_QUAD});
@@ -28,7 +28,12 @@ const VideoPlayerWrapper = styled.div`
   }
 `;
 
-const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
+const VideoPlayer = ({
+  assetId,
+  masterBrand,
+  imageUrl,
+  episodeIsAvailable,
+}) => {
   const { lang, translations, service } = useContext(ServiceContext);
   const { isAmp, platform } = useContext(RequestContext);
   const location = useLocation();
@@ -43,7 +48,7 @@ const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
     translations,
   );
 
-  if (isExpired) {
+  if (!episodeIsAvailable) {
     const expiredContentMessage = pathOr(
       'This content is no longer available',
       ['media', 'contentExpired'],
@@ -51,9 +56,9 @@ const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
     );
 
     return (
-      <VideoPlayerWrapper>
+      <StyledWrapper>
         <MediaMessage service={service} message={expiredContentMessage} />
-      </VideoPlayerWrapper>
+      </StyledWrapper>
     );
   }
   const placeholderSrc = getPlaceholderImageUrl(imageUrl);
@@ -76,7 +81,7 @@ const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
   );
 
   return (
-    <VideoPlayerWrapper>
+    <StyledWrapper>
       {isAmp ? (
         <AmpMediaPlayer
           placeholderSrc={placeholderSrc}
@@ -96,7 +101,7 @@ const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
           noJsClassName="no-js"
         />
       )}
-    </VideoPlayerWrapper>
+    </StyledWrapper>
   );
 };
 
@@ -104,14 +109,14 @@ VideoPlayer.propTypes = {
   masterBrand: string,
   assetId: string,
   imageUrl: string,
-  isExpired: bool,
+  episodeIsAvailable: bool,
 };
 
 VideoPlayer.defaultProps = {
   masterBrand: '',
   assetId: '',
   imageUrl: '',
-  isExpired: false,
+  episodeIsAvailable: true,
 };
 
 export default VideoPlayer;
