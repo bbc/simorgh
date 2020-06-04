@@ -36,6 +36,8 @@ export const getType = (pageType, shorthand = false) => {
       return 'Radio';
     case 'mostRead':
       return 'Most Read';
+    case 'STY':
+      return 'STY';
     default:
       return null;
   }
@@ -48,6 +50,7 @@ export const buildSections = ({
   chapter,
   sectionName,
   categoryName,
+  masterBrand,
 }) => {
   const addProducer = producer && service !== producer;
   const serviceCap = capitalize(service);
@@ -66,9 +69,22 @@ export const buildSections = ({
     case 'media':
       return [
         serviceCap,
-        ...(pageType ? buildSectionItem(serviceCap, type) : []),
+        ...(pageType
+          ? buildSectionItem(
+              serviceCap,
+              masterBrand.includes('_tv') ? 'TV' : 'Radio',
+            )
+          : []),
         ...(addProducer ? buildSectionArr(serviceCap, producer, type) : []),
         ...(chapter ? buildSectionArr(serviceCap, chapter, type) : []),
+      ].join(', ');
+    case 'STY':
+      return [
+        serviceCap,
+        buildSectionItem(serviceCap, sectionName),
+        buildSectionItem(serviceCap, pageType),
+        buildSectionItem(buildSectionItem(serviceCap, sectionName), pageType),
+        buildSectionItem(serviceCap, appendCategory(categoryName)),
       ].join(', ');
     default:
       return [
@@ -93,12 +109,14 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
       return path(['pageTitle'], pageData);
     case 'mostRead':
       return `${title} - ${brandName}`;
+    case 'STY':
+      return path(['promo', 'headlines', 'headline'], pageData);
     default:
       return null;
   }
 };
 
-const getRadioContentType = pageData => path(['contentType'], pageData);
+const getTvRadioContentType = path(['contentType']);
 
 export const getConfig = ({
   isAmp,
@@ -126,16 +144,19 @@ export const getConfig = ({
     ['metadata', 'passport', 'category', 'categoryName'],
     data,
   );
+
+  const masterBrand = path(['masterBrand'], data);
+
   const sections = buildSections({
     service,
     pageType,
     sectionName,
     categoryName,
+    masterBrand,
   });
   const cookie = getSylphidCookie();
   const type = getType(pageType);
-  const contentType = type === 'Radio' ? getRadioContentType(data) : type;
-
+  const contentType = pageType === 'media' ? getTvRadioContentType(data) : type;
   const currentPath = onClient() && window.location.pathname;
   return {
     domain,

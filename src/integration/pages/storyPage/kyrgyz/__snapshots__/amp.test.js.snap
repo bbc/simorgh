@@ -105,13 +105,28 @@ Object {
 }
 `;
 
+exports[`AMP Story Page Analytics chartbeat 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "STY",
+    "domain": "test.bbc.co.uk",
+    "sections": "Kyrgyz, Kyrgyz - Башталгыч бет, Kyrgyz - STY, Kyrgyz - Башталгыч бет - STY, Kyrgyz - undefined-category",
+    "title": "Test STY for social embeds",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
 exports[`AMP Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
 
 exports[`AMP Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
 
 exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
-exports[`AMP Story Page I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
+exports[`AMP Story Page Header I can see the navigation 1`] = `"Башталгыч бет"`;
+
+exports[`AMP Story Page Lead image I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
 exports[`AMP Story Page SEO Canonical link 1`] = `"http://localhost:7080/kyrgyz/23292889"`;
 
