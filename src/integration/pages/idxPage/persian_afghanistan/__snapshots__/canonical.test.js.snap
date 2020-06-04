@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical Idx Page A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
+
+exports[`Canonical Idx Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
+
+exports[`Canonical Idx Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+
+exports[`Canonical Idx Page Header I can see the branding 1`] = `"BBC News, فارسی"`;
+
+exports[`Canonical Idx Page Header I can see the navigation 1`] = `"صفحه اول"`;
+
+exports[`Canonical Idx Page I can see sections 1`] = `"ویدیو و صدا"`;
+
+exports[`Canonical Idx Page I can see sections 2`] = `"تحلیل و گزارش"`;
+
+exports[`Canonical Idx Page I can see the headline 1`] = `"IDX Page"`;
+
+exports[`Canonical Idx Page SEO Canonical link 1`] = `"http://localhost:7080/persian/afghanistan"`;
+
+exports[`Canonical Idx Page SEO Dir attribute 1`] = `"rtl"`;
+
+exports[`Canonical Idx Page SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical Idx Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical Idx Page SEO Heading level 1 1`] = `"IDX Page"`;
+
+exports[`Canonical Idx Page SEO Lang attribute 1`] = `"fa"`;
+
+exports[`Canonical Idx Page SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/persian/afghanistan",
+    "@type": "WebPage",
+    "name": "صفحه افغانستان",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+      "width": 1024,
+    },
+    "name": "BBC News فارسی",
+    "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+  "url": "http://localhost:7080/persian/afghanistan",
+}
+`;
+
+exports[`Canonical Idx Page SEO OG description 1`] = `"سایت فارسی بی‌بی‌سی تازه‌ترین اخبار و گزارش ها درباره ایران و افغانستان و جهان در حوزه سیاست، اقتصاد، جامعه و فرهنگ و همچنین ویدیو، گزارش‌های تصویری و برنامه‌های تلویزیون فارسی را به شما ارائه می‌دهد."`;
+
+exports[`Canonical Idx Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"`;
+
+exports[`Canonical Idx Page SEO OG image alt 1`] = `"BBC News فارسی"`;
+
+exports[`Canonical Idx Page SEO OG locale 1`] = `"fa"`;
+
+exports[`Canonical Idx Page SEO OG site name 1`] = `"BBC News فارسی"`;
+
+exports[`Canonical Idx Page SEO OG title 1`] = `"صفحه افغانستان - BBC News فارسی"`;
+
+exports[`Canonical Idx Page SEO OG type 1`] = `"website"`;
+
+exports[`Canonical Idx Page SEO OG url 1`] = `"http://localhost:7080/persian/afghanistan"`;
+
+exports[`Canonical Idx Page SEO Page title 1`] = `"صفحه افغانستان - BBC News فارسی"`;
+
+exports[`Canonical Idx Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical Idx Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical Idx Page SEO Twitter creator 1`] = `"@bbcpersian"`;
+
+exports[`Canonical Idx Page SEO Twitter description 1`] = `"سایت فارسی بی‌بی‌سی تازه‌ترین اخبار و گزارش ها درباره ایران و افغانستان و جهان در حوزه سیاست، اقتصاد، جامعه و فرهنگ و همچنین ویدیو، گزارش‌های تصویری و برنامه‌های تلویزیون فارسی را به شما ارائه می‌دهد."`;
+
+exports[`Canonical Idx Page SEO Twitter image alt 1`] = `"BBC News فارسی"`;
+
+exports[`Canonical Idx Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"`;
+
+exports[`Canonical Idx Page SEO Twitter site 1`] = `"@bbcpersian"`;
+
+exports[`Canonical Idx Page SEO Twitter title 1`] = `"صفحه افغانستان - BBC News فارسی"`;
+
+exports[`Canonical Idx Page Story Promo I can see a headline 1`] = `"ویدیو, ابراز نگرانی سازمان ملل از افزایش کشتار غیر نظامیان در افغانستان, 2,32"`;
+
+exports[`Canonical Idx Page Story Promo I can see an image 1`] = `
+<img
+  alt="ابراز نگرانی سازمان ملل از افزایش کشتار غیر نظامیان در افغانستان"
+  class="StyledImg-sc-7vx2mr-0 hIxkbt"
+  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/69E2/production/_112360172_p08dlh0q.jpg 660w"
+  width="976"
+/>
+`;
