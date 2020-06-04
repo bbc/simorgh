@@ -103,6 +103,19 @@ Object {
 }
 `;
 
+exports[`AMP On Demand Radio Episode Analytics chartbeat 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "player-episode",
+    "domain": "test.bbc.co.uk",
+    "sections": "Indonesia, Indonesia - Radio",
+    "title": "Dunia Pagi Ini - BBC News Indonesia",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
 exports[`AMP On Demand Radio Episode Expired Episode I can see the 'Content is not available' placeholder 1`] = `"Konten ini sudah tidak tersedia lagi."`;
 
 exports[`AMP On Demand Radio Episode Expired Episode I can see the brand title 1`] = `"Dunia Pagi Ini"`;

@@ -20,9 +20,9 @@ exports[`Canonical On Demand Radio Episode I can see the episode title 1`] = `"2
 
 exports[`Canonical On Demand Radio Episode I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b4828.png"`;
 
-exports[`Canonical On Demand Radio Episode Media player embed A11y I can read the media player title 1`] = `"Pemutar Audio"`;
+exports[`Canonical On Demand Radio Episode Media Player a11y assistive technology can read the media player title 1`] = `"Pemutar Audio"`;
 
-exports[`Canonical On Demand Radio Episode Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/indonesia/bbc_indonesian_radio/w172xh267fpn19l/id?morph_env=live"`;
+exports[`Canonical On Demand Radio Episode Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/indonesia/bbc_indonesian_radio/w172xh267fpn19l/id?morph_env=live"`;
 
 exports[`Canonical On Demand Radio Episode SEO Canonical link 1`] = `"http://localhost:7080/indonesia/bbc_indonesian_radio/w172xh267fpn19l"`;
 

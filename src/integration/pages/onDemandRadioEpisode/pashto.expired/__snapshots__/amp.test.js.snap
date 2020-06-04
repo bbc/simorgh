@@ -103,6 +103,19 @@ Object {
 }
 `;
 
+exports[`AMP On Demand Radio Episode Analytics chartbeat 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "player-episode",
+    "domain": "test.bbc.co.uk",
+    "sections": "Pashto, Pashto - Radio",
+    "title": "وروستي خبرونه - BBC News پښتو",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
 exports[`AMP On Demand Radio Episode Expired Episode I can see the 'Content is not available' placeholder 1`] = `"دغه فایل نور د لاسرسي وړ نه دی."`;
 
 exports[`AMP On Demand Radio Episode Expired Episode I can see the brand title 1`] = `"وروستي خبرونه"`;
