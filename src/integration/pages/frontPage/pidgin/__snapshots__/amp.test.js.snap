@@ -105,11 +105,26 @@ Object {
 }
 `;
 
+exports[`AMP Front Page Analytics chartbeat 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "Index",
+    "domain": "test.bbc.co.uk",
+    "sections": "Pidgin, Pidgin - IDX",
+    "title": "Domot - BBC News Pidgin",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
 exports[`AMP Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
 exports[`AMP Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`AMP Front Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
+
+exports[`AMP Front Page Header I can see the navigation 1`] = `"Page where you dey, Home"`;
 
 exports[`AMP Front Page I can see Index Alsos 1`] = `"Another thing we de for inside dis tori"`;
 

@@ -1,13 +1,1331 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`IdxPage Snapshots should correctly render a blank page with HOC components 1`] = `
-<main
-  role="main"
->
-  <h1
-    id="content"
+exports[`IdxPage Snapshots should render a persian idx page correctly with most read 1`] = `
+<div>
+  <main
+    role="main"
   >
-    IDX Page
-  </h1>
-</main>
+    <div
+      class="IndexPageContainer-sc-1yb6vt4-0 lkUiYo"
+    >
+      <h1
+        class="HeadingIndex-sc-1155hfb-0 StyledIndexHeading-jnasqg-0 kYCmnu"
+        dir="rtl"
+        id="content"
+        tabindex="-1"
+      >
+        صفحه افغانستان
+      </h1>
+      <section
+        aria-labelledby="WatchListen"
+        class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+        role="region"
+      >
+        <div
+          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
+        >
+          <div
+            class="Bar-sc-1x4gwjz-0 kXOyLn"
+          />
+          <h2
+            class="Heading-sc-1x4gwjz-2 eZofTG"
+          >
+            <span
+              class="FlexColumn-wx5kdp-0 dgpsiS"
+            >
+              <span
+                class="FlexRow-wx5kdp-2 dVBNyZ"
+              >
+                <span
+                  class="Title-wx5kdp-4 htLcbq"
+                  dir="rtl"
+                  id="WatchListen"
+                >
+                  ویدیو و صدا
+                </span>
+              </span>
+            </span>
+          </h2>
+        </div>
+        <ul
+          class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+          dir="rtl"
+          role="list"
+        >
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 kFXEso"
+            dir="rtl"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
+                dir="rtl"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
+                      dir="rtl"
+                    >
+                      <div
+                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                          focusable="false"
+                          height="12px"
+                          viewBox="0 0 32 32"
+                          width="12px"
+                        >
+                          <polygon
+                            points="3,32 29,16 3,0"
+                          />
+                        </svg>
+                        <time
+                          class="StyledTime-jpt91x-0 bYtFje"
+                          datetime="PT2M32S"
+                        >
+                          2:32
+                        </time>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
+                dir="rtl"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 jDsPwR"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/persian/afghanistan-52726383"
+                  >
+                    <span
+                      role="text"
+                    >
+                      <span
+                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                      >
+                        ویدیو
+                        , 
+                      </span>
+                      <span>
+                        ابراز نگرانی سازمان ملل از افزایش کشتار غیر نظامیان در افغانستان
+                      </span>
+                      <span
+                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                      >
+                        , 2,32
+                      </span>
+                    </span>
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eLVbDm"
+                >
+                  در حالیکه شمار رسمی مبتلایان به ویروس کرونا از چهار و نیم میلیون نفر عبور کرده، این روزها کشورهای آمریکای لاتین به کانون های اصلی شیوع تبدیل شده‌اند..
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  datetime="2020-05-19"
+                >
+                  ۳۰ اردیبهشت ۱۳۹۹ - ۱۹ مه ۲۰۲۰
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="rtl"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="rtl"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
+                      dir="rtl"
+                    >
+                      <div
+                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                          focusable="false"
+                          height="12px"
+                          viewBox="0 0 32 32"
+                          width="12px"
+                        >
+                          <polygon
+                            points="3,32 29,16 3,0"
+                          />
+                        </svg>
+                        <time
+                          class="StyledTime-jpt91x-0 bYtFje"
+                          datetime="PT2M12S"
+                        >
+                          2:12
+                        </time>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="rtl"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 ecBkfP"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/persian/afghanistan-52710877"
+                  >
+                    <span
+                      role="text"
+                    >
+                      <span
+                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                      >
+                        ویدیو
+                        , 
+                      </span>
+                      <span>
+                        حمله انتحاری طالبان به دفتر امنیت ملی درغزنی
+                      </span>
+                      <span
+                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                      >
+                        , 2,12
+                      </span>
+                    </span>
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eYboNJ"
+                >
+                  مقام‌های محلی غزنی گفته‌اند در حمله صبح امروز طالبان در شهر غزنی در جنوب افغانستان هفت نفر کشته و چهل نفر زخمی شده‌اند.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  datetime="2020-05-18"
+                >
+                  ۲۹ اردیبهشت ۱۳۹۹ - ۱۸ مه ۲۰۲۰
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="rtl"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="rtl"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
+                      dir="rtl"
+                    >
+                      <div
+                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                          focusable="false"
+                          height="12px"
+                          viewBox="0 0 32 32"
+                          width="12px"
+                        >
+                          <polygon
+                            points="3,32 29,16 3,0"
+                          />
+                        </svg>
+                        <time
+                          class="StyledTime-jpt91x-0 bYtFje"
+                          datetime="PT6M14S"
+                        >
+                          6:14
+                        </time>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="rtl"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 ecBkfP"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/persian/afghanistan-52699256"
+                  >
+                    <span
+                      role="text"
+                    >
+                      <span
+                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                      >
+                        ویدیو
+                        , 
+                      </span>
+                      <span>
+                        توافقنامه‌ای پایان بخش اختلافات چند ماهه غنی و عبدالله
+                      </span>
+                      <span
+                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                      >
+                        , 6,14
+                      </span>
+                    </span>
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eYboNJ"
+                >
+                  در افغانستان عبدالله عبدالله با امضای یک توافق از ادعای خود به عنوان رییس جمهوری گذشت و اشرف غنی را به عنوان رییس دولت پذیرفت.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  datetime="2020-05-17"
+                >
+                  ۲۸ اردیبهشت ۱۳۹۹ - ۱۷ مه ۲۰۲۰
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="rtl"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="rtl"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
+                      dir="rtl"
+                    >
+                      <div
+                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                          focusable="false"
+                          height="12px"
+                          viewBox="0 0 32 32"
+                          width="12px"
+                        >
+                          <polygon
+                            points="3,32 29,16 3,0"
+                          />
+                        </svg>
+                        <time
+                          class="StyledTime-jpt91x-0 bYtFje"
+                          datetime="PT3M21S"
+                        >
+                          3:21
+                        </time>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="rtl"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 ecBkfP"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/persian/afghanistan-52651714"
+                  >
+                    <span
+                      role="text"
+                    >
+                      <span
+                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                      >
+                        ویدیو
+                        , 
+                      </span>
+                      <span>
+                        واکنش‌ها به حملات اخیر افغانستان؛ دعوت به همکاری طالبان با دولت
+                      </span>
+                      <span
+                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                      >
+                        , 3,21
+                      </span>
+                    </span>
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eYboNJ"
+                >
+                  وزارت صحت افغانستان اعلام کرده که شمار قربانیان حمله به بیمارستان کابل به ۲۴ نفر رسیده‌است.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  datetime="2020-05-13"
+                >
+                  ۲۴ اردیبهشت ۱۳۹۹ - ۱۳ مه ۲۰۲۰
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="rtl"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="rtl"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
+                      dir="rtl"
+                    >
+                      <div
+                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                          focusable="false"
+                          height="12px"
+                          viewBox="0 0 32 32"
+                          width="12px"
+                        >
+                          <polygon
+                            points="3,32 29,16 3,0"
+                          />
+                        </svg>
+                        <time
+                          class="StyledTime-jpt91x-0 bYtFje"
+                          datetime="PT4M48S"
+                        >
+                          4:48
+                        </time>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="rtl"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 ecBkfP"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/persian/afghanistan-52640314"
+                  >
+                    <span
+                      role="text"
+                    >
+                      <span
+                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                      >
+                        ویدیو
+                        , 
+                      </span>
+                      <span>
+                        روایت بازماندگان از حادثه مرزی ایران و افغانستان
+                      </span>
+                      <span
+                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                      >
+                        , 4,48
+                      </span>
+                    </span>
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eYboNJ"
+                >
+                  سخنگوی وزارت خارجه ایران، دست داشتن نیروی انتظامی در مرگ شهروندان افغانستان در مرز دو کشور را تکذیب کرده‌است.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  datetime="2020-05-12"
+                >
+                  ۲۳ اردیبهشت ۱۳۹۹ - ۱۲ مه ۲۰۲۰
+                </time>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section
+        aria-labelledby="Features"
+        class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+        role="region"
+      >
+        <div
+          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
+        >
+          <div
+            class="Bar-sc-1x4gwjz-0 kXOyLn"
+          />
+          <h2
+            class="Heading-sc-1x4gwjz-2 eZofTG"
+          >
+            <span
+              class="FlexColumn-wx5kdp-0 dgpsiS"
+            >
+              <span
+                class="FlexRow-wx5kdp-2 dVBNyZ"
+              >
+                <span
+                  class="Title-wx5kdp-4 htLcbq"
+                  dir="rtl"
+                  id="Features"
+                >
+                  تحلیل و گزارش
+                </span>
+              </span>
+            </span>
+          </h2>
+        </div>
+        <ul
+          class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+          dir="rtl"
+          role="list"
+        >
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 kFXEso"
+            dir="rtl"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
+                dir="rtl"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
+                dir="rtl"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 jDsPwR"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/persian/afghanistan-52722865"
+                  >
+                    پشت پرده توافق غنی و عبدالله؛ مارشال شدن دوستم و ماجراهای دیگر
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eLVbDm"
+                >
+                  چانه‌زنی برای دست‌یابی به یک توافق سیاسی بین اشرف غنی، رئیس جمهوری و عبدالله عبدالله که همزمان با او اعلام ریاست جمهوری کرده بود، از اوایل اسفند/حوت سال گذشته خورشیدی آغاز شد و حدود سه ماه زمان گرفت. مذاکراتی که پشت درهای بسته برگزار می‌شد به قول منابعی که با آنها صحبت کرده‌ام بارها به بن‌بست رسید و جلسات بارها با عصبانیت یکی از دو طرف مذاکره بی‌نتیجه پایان یافت.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  datetime="2020-05-20"
+                >
+                  ۳۱ اردیبهشت ۱۳۹۹ - ۲۰ مه ۲۰۲۰
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="rtl"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="rtl"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="rtl"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 ecBkfP"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/persian/afghanistan-52697976"
+                  >
+                    کرونا گردشگران را در افغانستان زمین‌گیر کرد
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eYboNJ"
+                >
+                  شیوع ویروس کرونا در افغانستان گردشگری را در این کشور با رکود مواجه کرده و اماکن توریستی از شرق تا غرب و از شمال تا جنوب بر روی گردشگران بسته شده است. از صنعت توریزم که هم دولت نفع می‌برد و هم مردم، حالا با رکود بی‌سابقه مواجه شده است.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  datetime="2020-05-19"
+                >
+                  ۳۰ اردیبهشت ۱۳۹۹ - ۱۹ مه ۲۰۲۰
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="rtl"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="rtl"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="rtl"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 ecBkfP"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/persian/blog-viewpoints-52616632"
+                  >
+                    ناظران می‌گویند؛ توافقنامه غنی و عبدالله؛ آخرین میخ بر تابوت دموکراسی افغانستان؟
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eYboNJ"
+                >
+                  سانگه صدیقی، فعال سیاسی و مدنی در مطلبی برای صفحه ناظران بی‌بی‌سی فارسی به توافق‌نامه بین محمد اشرف غنی و عبدالله پرداخته است و آن را "زوال دموکراسی" خوانده است.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  datetime="2020-05-18"
+                >
+                  ۲۹ اردیبهشت ۱۳۹۹ - ۱۸ مه ۲۰۲۰
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="rtl"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="rtl"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="rtl"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 ecBkfP"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/persian/afghanistan-52700014"
+                  >
+                    توافق‌نامه غنی و عبدالله؛ اختلاف چه بود و چگونه حل شد؟
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eYboNJ"
+                >
+                  محمد اشرف غنی، رئیس جمهور افغانستان موافقت‌نامه‌ای با عبدالله عبدالله، رئیس اجرایی پیشین امضا کرده است. با امضای این موافقت‌نامه میان دو رقیب سیاسی، جنجال پس از اعلام نتیجه انتخابات اخیر افغانستان پس از نزدیک به پنج ماه پایان یافت. اختلاف بین این دو رهبر چه بود و چگونه حل شد؟
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  datetime="2020-05-17"
+                >
+                  ۲۸ اردیبهشت ۱۳۹۹ - ۱۷ مه ۲۰۲۰
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="rtl"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="rtl"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="rtl"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 ecBkfP"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/persian/blog-viewpoints-52692067"
+                  >
+                    'آرمان ایران، داشتن نفوذ شبیه عراق در افغانستان نیست'
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eYboNJ"
+                >
+                  نویسنده در این یادداشت که برای صفحه ناظران فرستاده، می‌گوید که "آرمان ایران، داشتنِ نفوذ شبیه به عراق در افغانستان نیست" اما دارای منافع در افغانستان است از جمله صادرات و روابط تجاری و گاهی دشمن مشترک مانند داعش.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  datetime="2020-05-16"
+                >
+                  ۲۷ اردیبهشت ۱۳۹۹ - ۱۶ مه ۲۰۲۰
+                </time>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section
+        aria-labelledby="Most-Read"
+        class="MostReadSection-sc-1r6ctrd-0 IdxMostReadSection-sc-1rygalq-0 jNNusG"
+        data-e2e="most-read"
+        role="region"
+      >
+        <div
+          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
+        >
+          <div
+            class="Bar-sc-1x4gwjz-0 kXOyLn"
+          />
+          <h2
+            class="Heading-sc-1x4gwjz-2 eZofTG"
+          >
+            <span
+              class="FlexColumn-wx5kdp-0 dgpsiS"
+            >
+              <span
+                class="FlexRow-wx5kdp-2 dVBNyZ"
+              >
+                <span
+                  class="Title-wx5kdp-4 htLcbq"
+                  dir="rtl"
+                  id="Most-Read"
+                >
+                  پربیننده‌ترین‌ها
+                </span>
+              </span>
+            </span>
+          </h2>
+        </div>
+        <div
+          class="MarginWrapper-sc-6bm912-0 bmzrWW"
+        >
+          <ol
+            class="GridComponent-nf79gm-0 gjgzxV OneColumnGrid-sc-1ofyujo-0 TwoColumnGrid-sc-1ofyujo-1 boiGsE"
+            dir="rtl"
+            role="list"
+          >
+            <li
+              class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="ItemWrapper-u0d8kd-3 juBlKT"
+              >
+                <div
+                  class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cUcvKH"
+                  dir="rtl"
+                >
+                  <span
+                    class="StyledSpan-fs4y6m-3 bvXRlE"
+                  >
+                    ۱
+                  </span>
+                </div>
+                <div
+                  class="StyledItem-u0d8kd-1 fkeZwt"
+                  dir="rtl"
+                >
+                  <a
+                    class="StyledLink-u0d8kd-0 OTgcR"
+                    href="/persian/world-50317704"
+                  >
+                    توافق با جدایی‌طلبان یمن؛ ایران اعتراض کرد، سازمان ملل استقبال
+                  </a>
+                  <div
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
+                  >
+                    <time
+                      class="StyledTimestamp-um718p-0 fMHMrb"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="ItemWrapper-u0d8kd-3 juBlKT"
+              >
+                <div
+                  class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hFxcvr"
+                  dir="rtl"
+                >
+                  <span
+                    class="StyledSpan-fs4y6m-3 bvXRlE"
+                  >
+                    ۲
+                  </span>
+                </div>
+                <div
+                  class="StyledItem-u0d8kd-1 fkeZwt"
+                  dir="rtl"
+                >
+                  <a
+                    class="StyledLink-u0d8kd-0 OTgcR"
+                    href="/persian/iran-50319870"
+                  >
+                    فراخوان آذری جهرمی برای مناظره اینستاگرامی - زرآبادی: در مجلس مناظره کنیم
+                  </a>
+                  <div
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
+                  >
+                    <time
+                      class="StyledTimestamp-um718p-0 fMHMrb"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="ItemWrapper-u0d8kd-3 juBlKT"
+              >
+                <div
+                  class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cUcvKH"
+                  dir="rtl"
+                >
+                  <span
+                    class="StyledSpan-fs4y6m-3 bvXRlE"
+                  >
+                    ۳
+                  </span>
+                </div>
+                <div
+                  class="StyledItem-u0d8kd-1 fkeZwt"
+                  dir="rtl"
+                >
+                  <a
+                    class="StyledLink-u0d8kd-0 OTgcR"
+                    href="/persian/world-50320610"
+                  >
+                    ترکیه: همسر ابوبکر بغدادی را 'دستگیر کردیم'
+                  </a>
+                  <div
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
+                  >
+                    <time
+                      class="StyledTimestamp-um718p-0 fMHMrb"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="ItemWrapper-u0d8kd-3 juBlKT"
+              >
+                <div
+                  class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hFxcvr"
+                  dir="rtl"
+                >
+                  <span
+                    class="StyledSpan-fs4y6m-3 bvXRlE"
+                  >
+                    ۴
+                  </span>
+                </div>
+                <div
+                  class="StyledItem-u0d8kd-1 fkeZwt"
+                  dir="rtl"
+                >
+                  <a
+                    class="StyledLink-u0d8kd-0 OTgcR"
+                    href="/persian/world-50316456"
+                  >
+                    غنی سازی مجدد در فردو: مکرون اقدام ایران را 'عمیقا مایه نگرانی' خواند
+                  </a>
+                  <div
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
+                  >
+                    <time
+                      class="StyledTimestamp-um718p-0 fMHMrb"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="ItemWrapper-u0d8kd-3 juBlKT"
+              >
+                <div
+                  class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cUcvKH"
+                  dir="rtl"
+                >
+                  <span
+                    class="StyledSpan-fs4y6m-3 bvXRlE"
+                  >
+                    ۵
+                  </span>
+                </div>
+                <div
+                  class="StyledItem-u0d8kd-1 fkeZwt"
+                  dir="rtl"
+                >
+                  <a
+                    class="StyledLink-u0d8kd-0 OTgcR"
+                    href="/persian/magazine-50249226"
+                  >
+                    دوازده دلیل حکمرانی حشرات: سوسک می‌تواند دو هفته بدون سر زنده بماند
+                  </a>
+                  <div
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
+                  >
+                    <time
+                      class="StyledTimestamp-um718p-0 fMHMrb"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="ItemWrapper-u0d8kd-3 juBlKT"
+              >
+                <div
+                  class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hhqpIX"
+                  dir="rtl"
+                >
+                  <span
+                    class="StyledSpan-fs4y6m-3 bvXRlE"
+                  >
+                    ۶
+                  </span>
+                </div>
+                <div
+                  class="StyledItem-u0d8kd-1 fkeZwt"
+                  dir="rtl"
+                >
+                  <a
+                    class="StyledLink-u0d8kd-0 OTgcR"
+                    href="/persian/world-50317700"
+                  >
+                    انتخابات ایالتی آمریکا؛ دموکرات‌ها از جمهوری‌خواهان پیش افتادند
+                  </a>
+                  <div
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
+                  >
+                    <time
+                      class="StyledTimestamp-um718p-0 fMHMrb"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="ItemWrapper-u0d8kd-3 juBlKT"
+              >
+                <div
+                  class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 lhNSnn"
+                  dir="rtl"
+                >
+                  <span
+                    class="StyledSpan-fs4y6m-3 bvXRlE"
+                  >
+                    ۷
+                  </span>
+                </div>
+                <div
+                  class="StyledItem-u0d8kd-1 fkeZwt"
+                  dir="rtl"
+                >
+                  <a
+                    class="StyledLink-u0d8kd-0 OTgcR"
+                    href="/persian/sport-50322486"
+                  >
+                    عراق اردن را به عنوان میزبان بازی با ایران معرفی کرد
+                  </a>
+                  <div
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
+                  >
+                    <time
+                      class="StyledTimestamp-um718p-0 fMHMrb"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="ItemWrapper-u0d8kd-3 juBlKT"
+              >
+                <div
+                  class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hhqpIX"
+                  dir="rtl"
+                >
+                  <span
+                    class="StyledSpan-fs4y6m-3 bvXRlE"
+                  >
+                    ۸
+                  </span>
+                </div>
+                <div
+                  class="StyledItem-u0d8kd-1 fkeZwt"
+                  dir="rtl"
+                >
+                  <a
+                    class="StyledLink-u0d8kd-0 OTgcR"
+                    href="/persian/iran-features-50310665"
+                  >
+                    آیا تهران بازی هسته ای را به هم می‌زند؟
+                  </a>
+                  <div
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
+                  >
+                    <time
+                      class="StyledTimestamp-um718p-0 fMHMrb"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="ItemWrapper-u0d8kd-3 juBlKT"
+              >
+                <div
+                  class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 lhNSnn"
+                  dir="rtl"
+                >
+                  <span
+                    class="StyledSpan-fs4y6m-3 bvXRlE"
+                  >
+                    ۹
+                  </span>
+                </div>
+                <div
+                  class="StyledItem-u0d8kd-1 fkeZwt"
+                  dir="rtl"
+                >
+                  <a
+                    class="StyledLink-u0d8kd-0 OTgcR"
+                    href="/persian/world-50316450"
+                  >
+                    آمریکا: دو ایرانی اتهام جمع‌آوری اطلاعات علیه سازمان مجاهدین در خاک آمریکا را پذیرفتند
+                  </a>
+                  <div
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
+                  >
+                    <time
+                      class="StyledTimestamp-um718p-0 fMHMrb"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="ItemWrapper-u0d8kd-3 juBlKT"
+              >
+                <div
+                  class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hhqpIX"
+                  dir="rtl"
+                >
+                  <span
+                    class="StyledSpan-fs4y6m-3 bvXRlE"
+                  >
+                    ۱۰
+                  </span>
+                </div>
+                <div
+                  class="StyledItem-u0d8kd-1 fkeZwt"
+                  dir="rtl"
+                >
+                  <a
+                    class="StyledLink-u0d8kd-0 OTgcR"
+                    href="/persian/sport-50318030"
+                  >
+                    فوتبال ایران و عراق؛ ایران: امن است بازی می‌کنیم، فیفا: ناامن است بازی نکنید
+                  </a>
+                  <div
+                    class="TimestampWrapper-u0d8kd-2 hlECaE"
+                  >
+                    <time
+                      class="StyledTimestamp-um718p-0 fMHMrb"
+                      datetime="2019-11-06"
+                    >
+                      به روز شده در ۶ نوامبر ۲۰۱۹
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
 `;
