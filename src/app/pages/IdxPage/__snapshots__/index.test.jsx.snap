@@ -2,6 +2,10 @@
 
 exports[`IdxPage Snapshots should render a persian idx page correctly with most read 1`] = `
 <div>
+  <noscript />
+  <div>
+    chartbeat
+  </div>
   <main
     role="main"
   >
