@@ -57,7 +57,6 @@ const logCodes = {
   INCLUDE_UNSUPPORTED: 'include_unsupported',
 
   // Social Embed
-
   SOCIAL_EMBED_RENDERED: 'social_embed_rendered',
 };
 
