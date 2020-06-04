@@ -1944,11 +1944,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/igbo/afirika-52816709'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/igbo/afirika-23252735'],
             enabled: false,
           },
           local: {
@@ -2586,11 +2586,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/kyrgyz/world-52917194'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/kyrgyz/world-23090100'],
             enabled: false,
           },
           local: {
@@ -3301,11 +3301,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/pashto/world-52917002'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/pashto/23289748'],
             enabled: false,
           },
           local: {
@@ -4514,11 +4514,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/sinhala/world-52909487'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/sinhala/sri-lanka-23037210'],
             enabled: false,
           },
           local: {
@@ -6665,11 +6665,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/yoruba/afrika-51569479'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/yoruba/23183200'],
             enabled: false,
           },
           local: {
