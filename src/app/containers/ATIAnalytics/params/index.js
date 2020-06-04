@@ -18,6 +18,10 @@ import {
   buildMostReadATIParams,
   buildMostReadATIUrl,
 } from './mostReadPage/buildParams';
+import {
+  buildIdxPageATIParams,
+  buildIdxPageATIUrl,
+} from './idxPage/buildParams';
 
 const ARTICLE_MEDIA_ASSET = 'article-media-asset';
 const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
@@ -27,6 +31,7 @@ const pageTypeUrlBuilders = {
   frontPage: buildFrontPageATIUrl,
   media: buildTvRadioATIUrl,
   mostRead: buildMostReadATIUrl,
+  idxPage: buildIdxPageATIUrl,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIUrl(
       data,
@@ -48,6 +53,7 @@ const pageTypeParamBuilders = {
   frontPage: buildFrontPageATIParams,
   media: buildTvRadioATIParams,
   mostRead: buildMostReadATIParams,
+  idxPage: buildIdxPageATIParams,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIParams(
       data,

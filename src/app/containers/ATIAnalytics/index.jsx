@@ -8,6 +8,7 @@ import { buildFrontPageATIUrl } from './params/frontpage/buildParams';
 import { buildTvRadioATIUrl } from './params/tvRadioPage/buildParams';
 import { buildCpsAssetPageATIUrl } from './params/cpsAssetPage/buildParams';
 import { buildMostReadATIUrl } from './params/mostReadPage/buildParams';
+import { buildIdxPageATIUrl } from './params/idxPage/buildParams';
 import { pageDataPropType } from '#models/propTypes/data';
 
 const ATIAnalytics = ({ data }) => {
@@ -36,6 +37,7 @@ const ATIAnalytics = ({ data }) => {
       ),
     STY: () =>
       buildCpsAssetPageATIUrl(data, requestContext, serviceContext, 'article'),
+    idxPage: buildIdxPageATIUrl,
   };
 
   const isValidPageType = Object.keys(pageTypeHandlers).includes(pageType);
