@@ -1,5 +1,3 @@
-// import { runCoreAmpTests, runAmpAnalyticsTests } from '../../common';
-
 export default () => {
   describe('Includes', () => {
     it('renders for an IDT2 include as an amp img', () => {
