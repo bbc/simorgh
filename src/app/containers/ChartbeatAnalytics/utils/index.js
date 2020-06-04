@@ -135,7 +135,7 @@ export const getConfig = ({
     data,
   );
 
-  const masterBrand = path([], ['masterBrand'], data);
+  const masterBrand = path(['masterBrand'], data);
 
   const sections = buildSections({
     service,
