@@ -203,6 +203,7 @@ export const service = {
       lastUpdated: 'به روز شده در',
       numberOfItems: 10,
       hasMostRead: true,
+      onIdxPage: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,
