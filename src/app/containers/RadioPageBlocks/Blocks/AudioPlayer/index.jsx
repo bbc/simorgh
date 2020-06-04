@@ -80,7 +80,7 @@ const AudioPlayer = ({
     translations,
   );
 
-  if (episodeIsAvailable) {
+  if (!episodeIsAvailable) {
     const expiredContentMessage = pathOr(
       'This content is no longer available',
       ['media', 'contentExpired'],
@@ -166,7 +166,7 @@ AudioPlayer.defaultProps = {
   externalId: '',
   id: '',
   idAttr: null,
-  episodeIsAvailable: false,
+  episodeIsAvailable: true,
   promoBrandTitle: '',
   shortSynopsis: '',
   durationISO8601: '',
