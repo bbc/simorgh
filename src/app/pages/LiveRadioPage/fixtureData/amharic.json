@@ -24,6 +24,7 @@
       }
     ]
   },
+  "masterBrand": "bbc_amharic_radio",
   "language": "am",
   "id": "urn:bbc:ares::ws_live:bbc_amharic_radio",
   "name": "ያድምጡ",

@@ -105,11 +105,26 @@ Object {
 }
 `;
 
+exports[`AMP On Demand Radio Episode Analytics chartbeat 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "player-episode",
+    "domain": "test.bbc.co.uk",
+    "sections": "Indonesia, Indonesia - Radio",
+    "title": "Dunia Pagi Ini - BBC News Indonesia",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
 exports[`AMP On Demand Radio Episode Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/indonesia"`;
 
 exports[`AMP On Demand Radio Episode Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
 
 exports[`AMP On Demand Radio Episode Header I can see the branding 1`] = `"BBC News, Indonesia"`;
+
+exports[`AMP On Demand Radio Episode Header I can see the navigation 1`] = `"Berita"`;
 
 exports[`AMP On Demand Radio Episode I can see the brand title 1`] = `"Dunia Pagi Ini"`;
 
@@ -117,9 +132,11 @@ exports[`AMP On Demand Radio Episode I can see the episode summary 1`] = `"Berit
 
 exports[`AMP On Demand Radio Episode I can see the episode title 1`] = `"27 April 2020"`;
 
-exports[`AMP On Demand Radio Episode Media player embed A11y I can read the media player title 1`] = `"Pemutar Audio"`;
+exports[`AMP On Demand Radio Episode I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/128x128/p08b4828.png"`;
 
-exports[`AMP On Demand Radio Episode Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/indonesia/bbc_indonesian_radio/w172xh267fpn19l/id/amp?morph_env=live"`;
+exports[`AMP On Demand Radio Episode Media Player a11y assistive technology can read the media player title 1`] = `"Pemutar Audio"`;
+
+exports[`AMP On Demand Radio Episode Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/indonesia/bbc_indonesian_radio/w172xh267fpn19l/id/amp?morph_env=live"`;
 
 exports[`AMP On Demand Radio Episode SEO Canonical link 1`] = `"http://localhost:7080/indonesia/bbc_indonesian_radio/w172xh267fpn19l"`;
 

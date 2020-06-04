@@ -32,6 +32,11 @@ const FrontPageWithContext = ({ isAmp = false, ...props }) => (
 let pageData;
 
 beforeEach(async () => {
+  window.dotcom = {
+    bootstrap: jest.fn(),
+    cmd: { push: jest.fn() },
+  };
+
   fetch.mockResponse(JSON.stringify(frontPageDataPidgin));
 
   const response = await getInitialData({
@@ -42,6 +47,10 @@ beforeEach(async () => {
   pageData = response.pageData;
 
   fetch.mockResponse(JSON.stringify(pidginMostReadData));
+});
+
+afterEach(() => {
+  window.dotcom = undefined;
 });
 
 jest.mock('uuid', () => {
@@ -128,7 +137,7 @@ describe('Front Page', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should render a pidgin amp frontpage with ads', async () => {
+    it('should render a pidgin amp frontpage', async () => {
       const { container } = render(
         <FrontPageWithContext pageData={pageData} isAmp />,
       );

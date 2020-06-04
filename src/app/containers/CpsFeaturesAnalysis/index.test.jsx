@@ -1,6 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-
+import { render, screen } from '@testing-library/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 
@@ -42,6 +41,26 @@ const renderFeaturesAnalysisNull = ({
         statusCode={200}
       >
         <FeaturesAnalysis content={[]} enableGridWrapper />
+      </RequestContextProvider>
+    </ServiceContextProvider>,
+  );
+};
+
+const renderFeaturesAnalysisNoTitle = ({
+  content = features,
+  bbcOrigin = 'https://www.test.bbc.co.uk',
+} = {}) => {
+  return render(
+    <ServiceContextProvider service="news">
+      <RequestContextProvider
+        bbcOrigin={bbcOrigin}
+        isAmp={false}
+        pageType="STY"
+        pathname="/pidgin/tori-49450859"
+        service="pidgin"
+        statusCode={200}
+      >
+        <FeaturesAnalysis content={content} enableGridWrapper />
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
@@ -91,10 +110,14 @@ describe('CpsRelatedContent', () => {
     expect(document.querySelector(`#features-analysis-heading`)).toBeTruthy();
   });
 
-  it('should not render Top Stories components if no data is passed', () => {
+  it('should not render Features and Analysis components if no data is passed', () => {
     renderFeaturesAnalysisNull();
     expect(document.querySelectorAll(`li[class^='StoryPromoLi']`).length).toBe(
       0,
     );
+  });
+  it('should render a default title if translations are not available', () => {
+    renderFeaturesAnalysisNoTitle();
+    expect(screen.getByText(`Features & Analysis`)).toBeTruthy();
   });
 });

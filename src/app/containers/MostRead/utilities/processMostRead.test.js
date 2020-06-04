@@ -1,7 +1,12 @@
+import nodeLogger from '#testHelpers/loggerMock';
 import processMostRead from './processMostRead';
 import pidginData from '#data/pidgin/mostRead';
 import kyrgyzData from '#data/kyrgyz/mostRead';
 import { setStaleLastRecordTimeStamp } from './testHelpers';
+import {
+  MOST_READ_DATA_INCOMPLETE,
+  MOST_READ_STALE_DATA,
+} from '#lib/logger.const';
 
 const expectedPidginData = [
   {
@@ -101,12 +106,14 @@ const expectedKyrgyzData = [
   },
 ];
 
-const missingTitleData = {
+const missingTitleOptimoPromo = {
+  id: '047da657-5014-de4b-8aec-5192ae52520b',
   promo: {
+    type: 'optimo',
     locators: {
       canonicalUrl: 'https://www.bbc.com/news/articles/cn060pe01e5o',
     },
-    timestamp: 1586266369329,
+    timestamp: 1558434642016,
     headlines: {
       promoHeadline: {
         blocks: [
@@ -129,12 +136,14 @@ const missingTitleData = {
   },
 };
 
-const missingHrefData = {
+const missingHrefOptimoPromo = {
+  id: '047da657-5014-de4b-8aec-5192ae52520a',
   promo: {
+    type: 'optimo',
     locators: {
       canonicalUrl: null,
     },
-    timestamp: 1586266369329,
+    timestamp: 1558434642016,
     headlines: {
       promoHeadline: {
         blocks: [
@@ -157,57 +166,134 @@ const missingHrefData = {
   },
 };
 
-describe('filterMostRead', () => {
+// Returns kyrgyz fixture data with a invalid promo as the first record
+const kyrgyzDataWithInvalidPromo = invalidPromo => {
+  const kyrgyzRecords = kyrgyzData.records;
+  kyrgyzRecords.unshift(invalidPromo);
+
+  return {
+    lastRecordTimeStamp: '2030-01-01T17:00:00Z',
+    records: kyrgyzRecords,
+  };
+};
+
+describe('processMostRead', () => {
   [
     {
       description: 'should return expected filtered CPS data',
       data: pidginData,
       numberOfItems: 10,
       expectedReturn: expectedPidginData,
+      service: 'pidgin',
     },
     {
       description: 'should return expected filtered Optimo data',
       data: kyrgyzData,
       numberOfItems: 5,
       expectedReturn: expectedKyrgyzData,
+      service: 'kyrgyz',
     },
     {
       description:
         'should return null when last record CPS time stamp is stale',
       data: setStaleLastRecordTimeStamp(pidginData),
       expectedReturn: null,
+      service: 'pidgin',
     },
     {
       description:
         'should return null when last record Optimo time stamp is stale',
       data: setStaleLastRecordTimeStamp(kyrgyzData),
       expectedReturn: null,
+      service: 'kyrgyz',
     },
     {
       description: 'should return null when no data is passed',
       data: undefined,
       expectedReturn: null,
+      service: 'kyrgyz',
     },
     {
       description: 'should return empty array when records does not exist',
       data: { lastRecordTimeStamp: '2100-11-06T16:37:00Z' },
       expectedReturn: [],
+      service: 'kyrgyz',
     },
     {
-      description: 'should return null when most read item title is missing',
-      data: missingTitleData,
-      numberOfItems: 1,
-      expectedReturn: null,
+      description: 'should skip array item if it contains invalid title value',
+      data: kyrgyzDataWithInvalidPromo(missingTitleOptimoPromo),
+      numberOfItems: 5,
+      expectedReturn: expectedKyrgyzData,
+      service: 'kyrgyz',
     },
     {
-      description: 'should return null when most read item href is missing',
-      data: missingHrefData,
-      numberOfItems: 1,
-      expectedReturn: null,
+      description: 'should skip array item if it contains invalid title value',
+      data: kyrgyzDataWithInvalidPromo(missingHrefOptimoPromo),
+      numberOfItems: 5,
+      expectedReturn: expectedKyrgyzData,
+      service: 'kyrgyz',
     },
-  ].forEach(({ description, data, numberOfItems, expectedReturn }) => {
+  ].forEach(({ description, data, numberOfItems, expectedReturn, service }) => {
     it(description, () => {
-      expect(processMostRead({ data, numberOfItems })).toEqual(expectedReturn);
+      expect(processMostRead({ data, numberOfItems, service })).toEqual(
+        expectedReturn,
+      );
+    });
+  });
+
+  describe('Logging', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+
+    [
+      {
+        description:
+          'should log MOST_READ_DATA_INCOMPLETE when most read item title is missing',
+        data: kyrgyzDataWithInvalidPromo(missingTitleOptimoPromo),
+        numberOfItems: 5,
+        service: 'kyrgyz',
+        warningContext: {
+          service: 'kyrgyz',
+          title: null,
+          url: 'https://www.bbc.com/news/articles/cn060pe01e5o',
+        },
+      },
+      {
+        description:
+          'should log MOST_READ_DATA_INCOMPLETE when most read item href is missing',
+        data: kyrgyzDataWithInvalidPromo(missingHrefOptimoPromo),
+        numberOfItems: 5,
+        service: 'kyrgyz',
+        warningContext: {
+          service: 'kyrgyz',
+          title: 'Most read item title',
+          url: null,
+        },
+      },
+    ].forEach(
+      ({ description, data, numberOfItems, service, warningContext }) => {
+        it(description, () => {
+          processMostRead({ data, numberOfItems, service });
+          expect(nodeLogger.warn).toHaveBeenCalledWith(
+            MOST_READ_DATA_INCOMPLETE,
+            warningContext,
+          );
+        });
+      },
+    );
+
+    it('should log MOST_READ_STALE_DATA when lastRecordTimestamp is greater than 35min', () => {
+      processMostRead({
+        data: setStaleLastRecordTimeStamp(pidginData),
+        numberOfItems: 10,
+        service: 'pidgin',
+      });
+      expect(nodeLogger.warn).toHaveBeenCalledWith(MOST_READ_STALE_DATA, {
+        lastRecordTimeStamp: '2019-11-06T16:28:00Z',
+        message: 'lastRecordTimeStamp is greater than 35min for this service',
+        service: 'pidgin',
+      });
     });
   });
 });
