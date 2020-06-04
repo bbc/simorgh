@@ -31,7 +31,7 @@ const pageTypeUrlBuilders = {
   frontPage: buildFrontPageATIUrl,
   media: buildTvRadioATIUrl,
   mostRead: buildMostReadATIUrl,
-  idxPage: buildIdxPageATIUrl,
+  IDX: buildIdxPageATIUrl,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIUrl(
       data,
@@ -53,7 +53,7 @@ const pageTypeParamBuilders = {
   frontPage: buildFrontPageATIParams,
   media: buildTvRadioATIParams,
   mostRead: buildMostReadATIParams,
-  idxPage: buildIdxPageATIParams,
+  IDX: buildIdxPageATIParams,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIParams(
       data,

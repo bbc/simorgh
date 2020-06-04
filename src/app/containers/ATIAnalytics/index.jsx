@@ -21,6 +21,7 @@ const ATIAnalytics = ({ data }) => {
     frontPage: buildFrontPageATIUrl,
     media: buildTvRadioATIUrl,
     mostRead: buildMostReadATIUrl,
+    IDX: buildIdxPageATIUrl,
     MAP: () =>
       buildCpsAssetPageATIUrl(
         data,
@@ -37,7 +38,6 @@ const ATIAnalytics = ({ data }) => {
       ),
     STY: () =>
       buildCpsAssetPageATIUrl(data, requestContext, serviceContext, 'article'),
-    idxPage: buildIdxPageATIUrl,
   };
 
   const isValidPageType = Object.keys(pageTypeHandlers).includes(pageType);
