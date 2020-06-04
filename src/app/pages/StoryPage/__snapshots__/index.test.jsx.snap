@@ -1325,6 +1325,9 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
             id="DataContainer"
           >
             <noscript />
+            <div>
+              chartbeat
+            </div>
             <div
               class="c0 c1"
               dir="ltr"
@@ -3737,6 +3740,9 @@ exports[`Story Page should render correctly when the secondary column data is no
                 id="DataContainer"
               >
                 <noscript />
+                <div>
+                  chartbeat
+                </div>
                 <div
                   class="c0 c1"
                   dir="ltr"
@@ -5823,6 +5829,9 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                 id="DataContainer"
               >
                 <noscript />
+                <div>
+                  chartbeat
+                </div>
                 <div
                   class="c0 c1"
                   dir="ltr"
