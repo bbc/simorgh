@@ -48,7 +48,6 @@ const IncludeContainer = ({ html, type }) => {
 
   logger.info(INCLUDE_RENDERED, {
     type,
-    html,
   });
 
   return (
