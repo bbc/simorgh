@@ -2059,8 +2059,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/indonesia/bbc_indonesian_radio/programmes/w13xtt0s'],
-            enabled: false,
+            paths: [
+              '/indonesia/bbc_indonesian_radio/programmes/w13xtt0s', // Brand
+              '/indonesia/bbc_indonesian_radio/w172xh281s8mkhr', // Episode
+            ],
+            enabled: true,
           },
           local: {
             paths: ['/indonesia/bbc_indonesian_radio/w172xh267fpn19l'],
@@ -3245,8 +3248,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/pashto/bbc_pashto_radio/programmes/p0340yr4'],
-            enabled: false,
+            paths: [
+              '/pashto/bbc_pashto_radio/programmes/p0340yr4', // Brand
+              '/pashto/bbc_pashto_radio/w172xjck9cw6lvc', // Episode
+            ],
+            enabled: true,
           },
           local: {
             paths: ['/pashto/bbc_pashto_radio/w3ct0lz1'],
