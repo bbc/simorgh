@@ -3,6 +3,8 @@ import { node, string } from 'prop-types';
 import styled from 'styled-components';
 import path from 'ramda/src/path';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import MetadataContainer from '#containers/Metadata';
+import LinkedData from '#containers/LinkedData';
 import IndexHeading from '#containers/IndexHeading';
 import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
 import MostReadContainer from '#containers/MostRead';
@@ -45,20 +47,33 @@ const IdxPage = ({ pageData, mostReadEndpointOverride }) => {
     mostRead: { onIdxPage },
   } = useContext(ServiceContext);
   const groups = path(['content', 'groups'], pageData);
+  const title = path(['metadata', 'title'], pageData);
+  const lang = path(['metadata', 'language'], pageData);
+  const summary = path(['metadata', 'summary'], pageData);
+  const seoTitle = path(['promo', 'name'], pageData);
   const heading = path(['metadata', 'title'], pageData);
 
   return (
-    <main role="main">
-      <IndexPageContainer>
-        <IndexHeading id="content">{heading}</IndexHeading>
-        {groups.map((group, index) => (
-          <Fragment key={group.title}>
-            <FrontPageSection group={group} sectionNumber={index} />
-          </Fragment>
-        ))}
-        {onIdxPage && renderMostRead(mostReadEndpointOverride)}
-      </IndexPageContainer>
-    </main>
+    <>
+      <MetadataContainer
+        title={title}
+        lang={lang}
+        description={summary}
+        openGraphType="website"
+      />
+      <LinkedData type="WebPage" seoTitle={seoTitle} />
+      <main role="main">
+        <IndexPageContainer>
+          <IndexHeading id="content">{heading}</IndexHeading>
+          {groups.map((group, index) => (
+            <Fragment key={group.title}>
+              <FrontPageSection group={group} sectionNumber={index} />
+            </Fragment>
+          ))}
+          {onIdxPage && renderMostRead(mostReadEndpointOverride)}
+        </IndexPageContainer>
+      </main>
+    </>
   );
 };
 
