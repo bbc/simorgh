@@ -4,7 +4,9 @@ import styled from 'styled-components';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
+import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import { string, bool } from 'prop-types';
 
 import {
@@ -20,13 +22,10 @@ import getPlaceholderImageUrl from '../../../routes/utils/getPlaceholderImageUrl
 
 const VideoPlayerWrapper = styled.div`
   margin-top: ${GEL_SPACING_TRPL};
-  width: calc(100% + ${GEL_SPACING_DBL});
-`;
-
-const landscapeRatio = '56.25%';
-const MediaMessageWrapper = styled.div`
-  padding-top: ${landscapeRatio};
-  position: relative;
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    width: calc(100% + ${GEL_SPACING_QUAD});
+    margin: 0 -${GEL_SPACING_DBL};
+  }
 `;
 
 const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
@@ -52,9 +51,9 @@ const VideoPlayer = ({ assetId, masterBrand, imageUrl, isExpired }) => {
     );
 
     return (
-      <MediaMessageWrapper>
+      <VideoPlayerWrapper>
         <MediaMessage service={service} message={expiredContentMessage} />
-      </MediaMessageWrapper>
+      </VideoPlayerWrapper>
     );
   }
   const placeholderSrc = getPlaceholderImageUrl(imageUrl);
