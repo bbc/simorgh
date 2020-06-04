@@ -3,6 +3,8 @@ import { render, waitFor } from '@testing-library/react';
 import IncludeContainer from '.';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import loggerMock from '#testHelpers/loggerMock';
+import { INCLUDE_RENDERED } from '#lib/logger.const';
 
 const defaultToggleState = {
   include: {
@@ -54,6 +56,7 @@ describe('IncludeContainer', () => {
 
   afterEach(() => {
     window.require = null;
+    loggerMock.info.mockClear();
   });
 
   it('should render HTML when include toggle is enabled', async () => {
@@ -65,6 +68,10 @@ describe('IncludeContainer', () => {
       />,
     );
     expect(container).toMatchSnapshot();
+    expect(loggerMock.info).toHaveBeenCalledTimes(1);
+    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
+      type: 'idt2',
+    });
   });
 
   it('should not render any HTML when html prop is null', async () => {
@@ -76,6 +83,10 @@ describe('IncludeContainer', () => {
       />,
     );
     expect(container).toMatchSnapshot();
+    expect(loggerMock.info).toHaveBeenCalledTimes(1);
+    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
+      type: 'idt2',
+    });
   });
 
   it('should not render any HTML for an unsupported include type', async () => {
@@ -87,6 +98,7 @@ describe('IncludeContainer', () => {
       />,
     );
     expect(container).toMatchSnapshot();
+    expect(loggerMock.info).not.toHaveBeenCalled();
   });
 
   it('should not render any HTML when include toggle is disabled', async () => {
@@ -98,6 +110,7 @@ describe('IncludeContainer', () => {
       />,
     );
     expect(container).toMatchSnapshot();
+    expect(loggerMock.info).not.toHaveBeenCalled();
   });
 
   it('should not render any HTML when its an amp page', async () => {
@@ -110,6 +123,10 @@ describe('IncludeContainer', () => {
       />,
     );
     expect(container).toMatchSnapshot();
+    expect(loggerMock.info).toHaveBeenCalledTimes(1);
+    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
+      type: 'idt2',
+    });
   });
 
   const runningIncludeTest = includeType => {
@@ -139,6 +156,11 @@ describe('IncludeContainer', () => {
         expect(scripts).toHaveLength(2);
 
         expect(window.require.config).toHaveBeenCalledTimes(1);
+
+        expect(loggerMock.info).toHaveBeenCalledTimes(1);
+        expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
+          type: `${includeType}`,
+        });
       });
     });
   };
@@ -172,6 +194,7 @@ describe('IncludeContainer', () => {
       expect(scripts).toHaveLength(2);
 
       expect(window.require.config).toHaveBeenCalledTimes(1);
+      expect(loggerMock.info).toHaveBeenCalledTimes(4);
     });
   });
 
@@ -189,6 +212,10 @@ describe('IncludeContainer', () => {
         0,
       );
       expect(window.require.config).toHaveBeenCalledTimes(0);
+      expect(loggerMock.info).toHaveBeenCalledTimes(1);
+      expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
+        type: 'idt2',
+      });
     });
   });
 });
