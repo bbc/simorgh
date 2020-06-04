@@ -200,6 +200,16 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
       content="ماښامنۍ خپرونه - BBC News پښتو"
       name="twitter:title"
     />
+    <script
+      async="true"
+      custom-element="amp-iframe"
+      src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","duration":"PT29M30S","thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png","uploadDate":"2020-05-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps/amp?morph_env=live"}
+    </script>
   </head>
   <body>
     .c8 {
@@ -253,42 +263,15 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 .c14 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.c15 {
-  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 0.0625rem solid transparent;
-  color: #FFFFFF;
-  background-color: rgba(34,34,34,0.75);
-}
-
-.c16 {
-  display: block;
-  font-weight: normal;
-  bottom: 0;
-  position: absolute;
-  padding: 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
+  height: 165px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c13 {
-  position: relative;
-  min-height: 165px;
-  margin-bottom: 2rem;
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
 }
 
 .c12 {
@@ -569,27 +552,16 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
-  .c15 {
-    font-size: 0.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c15 {
-    background-color: transparent;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c16 {
-    background-color: window;
+@media (min-width:63rem) {
+  .c14 {
+    margin-bottom: 2rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c16 {
-    padding: 1rem;
+  .c13 {
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
   }
 }
 
@@ -718,15 +690,26 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
             <div
               class="c14"
             >
-              <div
-                class="c15"
+              <amp-iframe
+                allowfullscreen="allowfullscreen"
+                frameborder="0"
+                layout="fill"
+                sandbox="allow-scripts allow-same-origin"
+                scrolling="no"
+                src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps/amp?morph_env=live"
+                title="اډیو پلیئر"
               >
-                <strong
-                  class="c16"
-                >
-                  دغه فایل نور د لاسرسي وړ نه دی.
-                </strong>
-              </div>
+                <amp-img
+                  alt=""
+                  attribution=""
+                  height="16"
+                  layout="fill"
+                  placeholder="true"
+                  src="http://localhost:7080/images/amp_audio_placeholder.png"
+                  width="9"
+                />
+                <noscript />
+              </amp-iframe>
             </div>
           </div>
         </div>
@@ -794,42 +777,15 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 .c15 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.c16 {
-  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 0.0625rem solid transparent;
-  color: #FFFFFF;
-  background-color: rgba(34,34,34,0.75);
-}
-
-.c17 {
-  display: block;
-  font-weight: normal;
-  bottom: 0;
-  position: absolute;
-  padding: 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
+  height: 165px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c14 {
-  position: relative;
-  min-height: 165px;
-  margin-bottom: 2rem;
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
 }
 
 .c12 {
@@ -843,6 +799,16 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c16 {
+  border: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @supports (display:grid) {
@@ -1110,27 +1076,16 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
-  .c16 {
-    font-size: 0.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c16 {
-    background-color: transparent;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c17 {
-    background-color: window;
+@media (min-width:63rem) {
+  .c15 {
+    margin-bottom: 2rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c17 {
-    padding: 1rem;
+  .c14 {
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
   }
 }
 
@@ -1376,6 +1331,11 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
       content="ماښامنۍ خپرونه - BBC News پښتو"
       name="twitter:title"
     />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","duration":"PT29M30S","thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png","uploadDate":"2020-05-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"}
+    </script>
   </head>
   <body>
     <div>
@@ -1455,15 +1415,15 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
             <div
               class="c15"
             >
-              <div
+              <iframe
+                allow="autoplay; fullscreen"
+                allowfullscreen=""
                 class="c16"
-              >
-                <strong
-                  class="c17"
-                >
-                  دغه فایل نور د لاسرسي وړ نه دی.
-                </strong>
-              </div>
+                scrolling="no"
+                src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"
+                title="اډیو پلیئر"
+              />
+              <noscript />
             </div>
           </div>
         </div>
