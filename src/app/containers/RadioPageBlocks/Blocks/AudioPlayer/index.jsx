@@ -17,7 +17,7 @@ import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
-import AudioObject from './AudioObject';
+import AudioObject from '#containers/LinkedData/AudioObject';
 
 const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
 
@@ -138,12 +138,12 @@ const AudioPlayer = ({
       )}
       {!isLiveRadio(assetId) && (
         <AudioObject
-          promoBrandTitle={promoBrandTitle}
-          shortSynopsis={shortSynopsis}
-          durationISO8601={durationISO8601}
-          embedUrl={embedUrl}
-          thumbnailImageUrl={thumbnailImageUrl}
-          releaseDateTimeStamp={releaseDateTimeStamp}
+          name={promoBrandTitle}
+          description={shortSynopsis}
+          duration={durationISO8601}
+          embedURL={embedUrl}
+          thumbnailUrl={thumbnailImageUrl}
+          uploadDate={new Date(releaseDateTimeStamp).toISOString()}
         />
       )}
     </AudioPlayerWrapper>
@@ -171,7 +171,7 @@ AudioPlayer.defaultProps = {
   shortSynopsis: '',
   durationISO8601: '',
   thumbnailImageUrl: '',
-  releaseDateTimeStamp: null,
+  releaseDateTimeStamp: undefined,
 };
 
 export default AudioPlayer;

@@ -11,6 +11,7 @@ import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHea
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
 import AudioPlayerBlock from '#containers/RadioPageBlocks/Blocks/AudioPlayer';
 import EpisodeImage from '#containers/RadioPageBlocks/Blocks/OnDemandImage';
+import LinkedData from '#containers/LinkedData';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 const EPISODE_IS_AVAILABLE = 'available';
@@ -114,7 +115,7 @@ const OnDemandRadioPage = ({ pageData }) => {
         description={shortSynopsis}
         openGraphType="website"
       />
-
+      <LinkedData type="WebPage" seoTitle={headline} />
       <StyledGelPageGrid
         forwardedAs="main"
         role="main"
