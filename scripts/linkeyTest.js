@@ -37,9 +37,10 @@ const fetchResponse = async link => {
 describe(`${getServiceName(service)} navigation links`, () => {
   const navigation = getLinks(service, 'navigation');
 
-  navigation.map(nav => {
+  navigation.forEach(nav => {
     const url = getAbsoluteUrl(nav.url);
-    return it(`should return 200 for ${url}`, async () => {
+
+    it(`should return 200 for ${url}`, async () => {
       expect(await fetchResponse(url)).toEqual(200);
     });
   });
@@ -60,9 +61,10 @@ describe(`${getServiceName(service)} footer links`, () => {
     }
   });
 
-  hrefsArray.map(footerHref => {
+  hrefsArray.forEach(footerHref => {
     const url = getAbsoluteUrl(footerHref);
-    return it(`should return 200 for ${url}`, async () => {
+
+    it(`should return 200 for ${url}`, async () => {
       expect(await fetchResponse(url)).toEqual(200);
     });
   });
