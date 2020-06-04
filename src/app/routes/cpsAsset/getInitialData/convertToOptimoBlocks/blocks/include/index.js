@@ -1,6 +1,6 @@
 import 'isomorphic-fetch';
 import nodeLogger from '#lib/logger.node';
-import overrideRendererOnTest from '../../../../../utils/overrideRendererOnTest';
+import { addOverrideQuery } from '../../../../../utils/overrideRendererOnTest';
 
 const logger = nodeLogger(__filename);
 
@@ -12,11 +12,31 @@ const buildIncludeUrl = (href, type) => {
   };
 
   const withTrailingHref = href.startsWith('/') ? href : `/${href}`;
-  const includeUrl = overrideRendererOnTest(
-    `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${resolvers[type]}`,
-  );
 
-  return includeUrl;
+  const includeUrl = `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${resolvers[type]}`;
+
+  const currentRendererEnv = () => {
+    // This path will be replaced with a mechanism to get the current path
+    const path = 'www.test.bbc.com/ws/includes/1234?renderer_env=live';
+    if (!path.includes('?renderer_env=')) {
+      return null;
+    }
+    return path.split('=')[1];
+  };
+
+  let includeUrlWithParam = '';
+
+  switch (currentRendererEnv()) {
+    case 'test':
+      includeUrlWithParam = addOverrideQuery(includeUrl, 'test');
+      break;
+    case 'live':
+      includeUrlWithParam = addOverrideQuery(includeUrl, 'live');
+      break;
+    default:
+      return includeUrl;
+  }
+  return includeUrlWithParam;
 };
 
 const fetchMarkup = async url => {
