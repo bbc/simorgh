@@ -2,10 +2,18 @@ import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
+import { logExpiredEpisode } from './logInitialData';
 
-const getEpisodeAvailability = ({ availableFrom, availableUntil }) => {
+const getEpisodeAvailability = ({
+  availableFrom,
+  availableUntil,
+  pageData,
+}) => {
   const timeNow = Date.now();
-  if (!availableUntil || timeNow < availableFrom) return false;
+  if (!availableUntil || timeNow < availableFrom) {
+    logExpiredEpisode(pageData);
+    return false;
+  }
   return true;
 };
 
@@ -86,6 +94,7 @@ export default async ({ path: pathname }) => {
         episodeIsAvailable: getEpisodeAvailability({
           availableFrom,
           availableUntil,
+          json,
         }),
         ...pageType,
       },

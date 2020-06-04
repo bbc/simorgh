@@ -20,6 +20,7 @@ const logCodes = {
   MEDIA_MISSING: 'media_missing',
   MEDIA_MISSING_FIELD: 'media_missing_field',
   MEDIA_PLAYER_STATUS: 'media_player_status',
+  OD_RADIO_EPISODE_EXPIRED: 'od_radio_episode_expired',
 
   // Translations
   NO_TRANSLATION_FOUND: 'no_translation_found',
