@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`IdxPage Snapshots should render a persian IDX page correctly with radio schedule 1`] = `
+exports[`IdxPage Snapshots should render a persian idx page correctly with most read and radio schedule 1`] = `
 <div>
   <main
     role="main"

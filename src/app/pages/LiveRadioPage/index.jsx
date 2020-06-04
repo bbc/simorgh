@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
-import { string, shape, object, arrayOf } from 'prop-types';
+import { string, shape, object } from 'prop-types';
 import styled from 'styled-components';
-import path from 'ramda/src/path';
+import { Headline } from '@bbc/psammead-headings';
+import Paragraph from '@bbc/psammead-paragraph';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import MetadataContainer from '../../containers/Metadata';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import LinkedData from '../../containers/LinkedData';
-import RadioPageBlocks from '../../containers/RadioPageBlocks';
+import AudioPlayer from '#containers/RadioPageBlocks/Blocks/AudioPlayer';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const StyledGelPageGrid = styled(GelPageGrid)`
@@ -16,9 +17,15 @@ const StyledGelPageGrid = styled(GelPageGrid)`
 `;
 
 const LiveRadioPage = ({ pageData }) => {
-  const { language, name, summary, content } = pageData;
-  const blocks = path(['blocks'], content);
-  const { dir } = useContext(ServiceContext);
+  const {
+    language,
+    name,
+    summary,
+    heading,
+    bodySummary,
+    masterBrand,
+  } = pageData;
+  const { script, service, dir } = useContext(ServiceContext);
 
   return (
     <>
@@ -67,7 +74,18 @@ const LiveRadioPage = ({ pageData }) => {
           }}
           margins={{ group0: true, group1: true, group2: true, group3: true }}
         >
-          <RadioPageBlocks blocks={blocks} />
+          <Headline
+            script={script}
+            service={service}
+            id="content"
+            tabIndex="-1"
+          >
+            {heading}
+          </Headline>
+          <Paragraph script={script} service={service}>
+            {bodySummary}
+          </Paragraph>
+          <AudioPlayer externalId={masterBrand} id="liveradio" />
         </Grid>
       </StyledGelPageGrid>
     </>
@@ -83,17 +101,9 @@ LiveRadioPage.propTypes = {
     language: string,
     name: string,
     summary: string,
-    content: shape({
-      blocks: arrayOf(
-        shape({
-          uuid: string,
-          id: string,
-          externalId: string,
-          text: string,
-          type: string,
-        }),
-      ),
-    }),
+    heading: string,
+    bodySummary: string,
+    masterBrand: string,
   }).isRequired,
 };
 
