@@ -12,7 +12,6 @@ import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import RadioScheduleContainer from '#containers/RadioSchedule';
-import PageContainer from '#lib/pageStyles/PageContainer';
 import FrontPageSection from '#containers/FrontPageSection';
 import idxPageDataPropTypes from '#models/propTypes/idxPage';
 
