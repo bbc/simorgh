@@ -292,10 +292,6 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   flex-grow: 1;
 }
 
-.c4 {
-  padding-top: 1.5rem;
-}
-
 @supports (display:grid) {
   .c0 {
     display: grid;
@@ -608,6 +604,12 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   }
 }
 
+@media (min-width:63rem) {
+  .c4 {
+    padding-top: 1.5rem;
+  }
+}
+
 <div>
       <amp-analytics>
         <script
@@ -802,10 +804,6 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-}
-
-.c4 {
-  padding-top: 1.5rem;
 }
 
 .c16 {
@@ -1127,6 +1125,12 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   .c4 {
     margin: 0 auto;
     max-width: 80rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    padding-top: 1.5rem;
   }
 }
 
@@ -1509,10 +1513,6 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
   flex-grow: 1;
 }
 
-.c4 {
-  padding-top: 1.5rem;
-}
-
 @supports (display:grid) {
   .c0 {
     display: grid;
@@ -1812,6 +1812,12 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
   }
 }
 
+@media (min-width:63rem) {
+  .c4 {
+    padding-top: 1.5rem;
+  }
+}
+
 <div>
   <noscript />
   <div>
@@ -1995,10 +2001,6 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-}
-
-.c4 {
-  padding-top: 1.5rem;
 }
 
 @supports (display:grid) {
@@ -2321,6 +2323,12 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   .c4 {
     margin: 0 auto;
     max-width: 80rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    padding-top: 1.5rem;
   }
 }
 
