@@ -28,7 +28,7 @@ describe('SocialEmbedContainer', () => {
       expect(loggerMock.info).toHaveBeenCalledTimes(1);
       expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
         provider: 'twitter',
-        href: '',
+        href: 'https://twitter.com/MileyCyrus/status/1237210910835392512',
       });
       unmount();
       expect(

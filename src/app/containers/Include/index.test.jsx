@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
+import loggerMock from '#testHelpers/loggerMock';
 import IncludeContainer from '.';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import loggerMock from '#testHelpers/loggerMock';
 import { INCLUDE_RENDERED } from '#lib/logger.const';
 
 const defaultToggleState = {
@@ -14,7 +14,7 @@ const defaultToggleState = {
 
 const toggleStateFalse = {
   include: {
-    enabled: true,
+    enabled: false,
   },
 };
 
@@ -83,10 +83,7 @@ describe('IncludeContainer', () => {
       />,
     );
     expect(container).toMatchSnapshot();
-    expect(loggerMock.info).toHaveBeenCalledTimes(1);
-    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
-      type: 'idt2',
-    });
+    expect(loggerMock.info).not.toHaveBeenCalled();
   });
 
   it('should not render any HTML for an unsupported include type', async () => {
@@ -123,17 +120,14 @@ describe('IncludeContainer', () => {
       />,
     );
     expect(container).toMatchSnapshot();
-    expect(loggerMock.info).toHaveBeenCalledTimes(1);
-    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
-      type: 'idt2',
-    });
+    expect(loggerMock.info).not.toHaveBeenCalled();
   });
 
   const runningIncludeTest = includeType => {
     it(`should add require to the page for ${includeType}`, async () => {
       render(
         <IncludeContainerWithMockContext
-          toggleState={toggleStateFalse}
+          toggleState={defaultToggleState}
           html={fakeMarkup}
           type={includeType}
         />,
@@ -201,7 +195,7 @@ describe('IncludeContainer', () => {
   it(`should not add require to the page for idt2`, async () => {
     render(
       <IncludeContainerWithMockContext
-        toggleState={toggleStateFalse}
+        toggleState={defaultToggleState}
         html={fakeMarkup}
         type="idt2"
       />,
