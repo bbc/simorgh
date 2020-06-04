@@ -1,3 +1,4 @@
+import assocPath from 'ramda/src/assocPath';
 import getInitialData from '.';
 import * as fetchPageData from '../../utils/fetchPageData';
 import onDemandTvJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4';
@@ -41,5 +42,21 @@ describe('Get initial data for on demand tv', () => {
     process.env.SIMORGH_APP_ENV = 'live';
     await getInitialData({ path: 'mock-live-tv-path' });
     expect(spy).toHaveBeenCalledWith('mock-live-tv-path');
+  });
+
+  it('should return episodeIsAvailable as true if episode is available to watch', async () => {
+    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    expect(pageData.episodeIsAvailable).toEqual(true);
+  });
+
+  it('should return episodeIsAvailable as false if episode is not available to watch', async () => {
+    const pageDataWithoutVersions = assocPath(
+      ['content', 'blocks', 0, 'versions'],
+      [],
+      onDemandTvJson,
+    );
+    fetch.mockResponse(JSON.stringify(pageDataWithoutVersions));
+    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    expect(pageData.episodeIsAvailable).toEqual(false);
   });
 });

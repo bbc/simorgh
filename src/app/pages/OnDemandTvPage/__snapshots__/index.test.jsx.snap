@@ -7,7 +7,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
   </div>
   <noscript />
   <main
-    class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1brqmij-1 ipoXsG"
+    class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1brqmij-1 cyJdzv"
     dir="rtl"
     role="main"
   >
@@ -15,11 +15,20 @@ exports[`should show the expired content message if episode is expired 1`] = `
       class="GridComponent-nf79gm-0 cAoCCU"
       dir="rtl"
     >
+      <h1
+        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+        id="content"
+        tabindex="-1"
+      >
+        نړۍ دا وخت
+        , 
+        ۲۷ می ۲۰۲۰
+      </h1>
       <div
         class="StyledGelWrapperGrid-sc-1brqmij-0 eydjDr"
       >
         <div
-          class="MediaMessageWrapper-tc95in-1 fotJxe"
+          class="StyledWrapper-tc95in-0 eMvgIJ"
         >
           <div
             class="StyledWrapper-sc-1pnftlt-0 jywlaE"
@@ -36,31 +45,21 @@ exports[`should show the expired content message if episode is expired 1`] = `
           </div>
         </div>
       </div>
-      <h1
+      <strong
+        aria-hidden="true"
         class="Headline-sc-1kh1qhu-0 StyledHeadline-gehp0k-0 gEGsBa"
-        id="content"
-        tabindex="-1"
       >
         <span
-          role="text"
+          class="BrandTitle-gehp0k-1 fjmQIa"
         >
-          <span
-            class="BrandTitle-gehp0k-1 fjmQIa"
-          >
-            نړۍ دا وخت
-          </span>
-          <span
-            class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-          >
-            , 
-          </span>
-          <span
-            class="Datestamp-gehp0k-2 LXJIp"
-          >
-            ۲۷ می ۲۰۲۰
-          </span>
+          نړۍ دا وخت
         </span>
-      </h1>
+        <span
+          class="Datestamp-gehp0k-2 LXJIp"
+        >
+          ۲۷ می ۲۰۲۰
+        </span>
+      </strong>
       <p
         class="Paragraph-k859h4-0 fxxgUd"
       >
