@@ -9,6 +9,8 @@ import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import PageContainer from '#lib/pageStyles/PageContainer';
+import MetadataContainer from '#containers/Metadata';
+import LinkedData from '#containers/LinkedData';
 import FrontPageSection from '#containers/FrontPageSection';
 import idxPageDataPropTypes from '#models/propTypes/idxPage';
 
@@ -49,6 +51,10 @@ const IdxPage = ({
     mostRead: { onIdxPage },
   } = useContext(ServiceContext);
   const groups = path(['content', 'groups'], pageData);
+  const summary = path(['metadata', 'summary'], pageData);
+  const title = path(['metadata', 'title'], pageData);
+  const lang = path(['metadata', 'language'], pageData);
+  const seoTitle = path(['promo', 'name'], pageData);
 
   const { radioSchedule } = useContext(ServiceContext);
   const radioScheduleData = path(['radioScheduleData'], pageData);
@@ -56,6 +62,14 @@ const IdxPage = ({
   const radioScheduleIdxPosition = path(['idxPagePosition'], radioSchedule);
 
   return (
+        <>
+      <MetadataContainer
+        title={title}
+        lang={lang}
+        description={summary}
+        openGraphType="website"
+      />
+      <LinkedData type="WebPage" seoTitle={seoTitle} />
     <main role="main">
       <h1 id="content">IDX Page</h1>
       <PageContainer>
@@ -74,6 +88,7 @@ const IdxPage = ({
         {onIdxPage && renderMostRead(mostReadEndpointOverride)}
       </PageContainer>
     </main>
+      </>
   );
 };
 
