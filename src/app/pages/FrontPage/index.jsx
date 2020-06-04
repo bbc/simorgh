@@ -5,13 +5,14 @@ import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
 import styled from 'styled-components';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import SectionLabel from '@bbc/psammead-section-label';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '#containers/FrontPageSection';
 import MetadataContainer from '#containers/Metadata';
 import MostReadContainer from '#containers/MostRead';
+import MostReadSection from '#containers/MostRead/section';
+import MostReadSectionLabel from '#containers/MostRead/label';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import AdContainer from '#containers/Ad';
 import LinkedData from '#containers/LinkedData';
@@ -19,11 +20,7 @@ import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import PageContainer from '#lib/pageStyles/PageContainer';
 
-const MostReadSection = styled.section.attrs(() => ({
-  role: 'region',
-  'aria-labelledby': 'Most-Read',
-  'data-e2e': 'most-read',
-}))`
+const FrontPageMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
   margin: 0 auto;
   width: 100%; /* Needed for IE11 */
@@ -39,10 +36,6 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     translations,
     frontPageTitle,
     radioSchedule,
-    service,
-    script,
-    dir,
-    mostRead: { header },
   } = useContext(ServiceContext);
 
   const home = path(['home'], translations);
@@ -66,17 +59,10 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     findIndex(group => group.type === 'useful-links')(groups) > -1;
 
   const MostReadWrapper = ({ children }) => (
-    <MostReadSection>
-      <SectionLabel
-        script={script}
-        labelId="Most-Read"
-        service={service}
-        dir={dir}
-      >
-        {header}
-      </SectionLabel>
+    <FrontPageMostReadSection>
+      <MostReadSectionLabel />
       {children}
-    </MostReadSection>
+    </FrontPageMostReadSection>
   );
 
   MostReadWrapper.propTypes = {

@@ -188,6 +188,7 @@ export const service = {
       lastUpdated: 'Останнє оновлення:',
       numberOfItems: 10,
       hasMostRead: true,
+      onIdxPage: false,
     },
     radioSchedule: {
       hasRadioSchedule: false,
