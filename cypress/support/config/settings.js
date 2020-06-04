@@ -2594,7 +2594,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/kyrgyz/23292889'],
             enabled: false,
           },
         },
@@ -4522,7 +4522,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/sinhala/23164225'],
             enabled: false,
           },
         },
