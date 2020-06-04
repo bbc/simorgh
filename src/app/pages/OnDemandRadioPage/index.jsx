@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { shape, string, number } from 'prop-types';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import MetadataContainer from '../../containers/Metadata';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
@@ -41,7 +42,9 @@ const StyledGelPageGrid = styled(GelPageGrid)`
 `;
 
 const StyledGelWrapperGrid = styled(GelPageGrid)`
-  padding-top: ${GEL_SPACING_TRPL};
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding-top: ${GEL_SPACING_TRPL};
+  }
 `;
 
 /* eslint-disable react/prop-types */
