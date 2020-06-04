@@ -5,8 +5,7 @@ import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
 
 const getEpisodeAvailability = ({ availableFrom, availableUntil }) => {
   const timeNow = Date.now();
-  if (!availableUntil || timeNow < availableFrom || timeNow > availableUntil)
-    return false;
+  if (!availableUntil || timeNow < availableFrom) return false;
   return true;
 };
 
@@ -62,9 +61,6 @@ export default async ({ path: pathname }) => {
 
   const availableFrom = getEpisodeAvailableFrom(json);
   const availableUntil = getEpisodeAvailableUntil(json);
-
-  console.log(`availfrom: ${availableFrom}`);
-  console.log(`availuntil: ${availableUntil}`);
 
   return {
     ...rest,
