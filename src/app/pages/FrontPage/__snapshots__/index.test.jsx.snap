@@ -1471,7 +1471,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </section>
                   <section
                     aria-labelledby="Most-Read"
-                    class="MostReadSection-sc-58u5qv-0 kxdZkX"
+                    class="MostReadSection-sc-1r6ctrd-0 FrontPageMostReadSection-sc-58u5qv-0 hCGyVl"
                     data-e2e="most-read"
                     role="region"
                   >
@@ -1510,7 +1510,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         role="list"
                       >
                         <li
-                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1528,7 +1528,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledItem-u0d8kd-1 ihPUFl"
+                              class="StyledItem-u0d8kd-1 kYQuFW"
                               dir="ltr"
                             >
                               <a
@@ -1551,7 +1551,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1569,7 +1569,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledItem-u0d8kd-1 ihPUFl"
+                              class="StyledItem-u0d8kd-1 kYQuFW"
                               dir="ltr"
                             >
                               <a
@@ -1592,7 +1592,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1610,7 +1610,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledItem-u0d8kd-1 ihPUFl"
+                              class="StyledItem-u0d8kd-1 kYQuFW"
                               dir="ltr"
                             >
                               <a
@@ -1633,7 +1633,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1651,7 +1651,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledItem-u0d8kd-1 ihPUFl"
+                              class="StyledItem-u0d8kd-1 kYQuFW"
                               dir="ltr"
                             >
                               <a
@@ -1674,7 +1674,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1692,7 +1692,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledItem-u0d8kd-1 ihPUFl"
+                              class="StyledItem-u0d8kd-1 kYQuFW"
                               dir="ltr"
                             >
                               <a
@@ -1715,7 +1715,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1733,7 +1733,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledItem-u0d8kd-1 ihPUFl"
+                              class="StyledItem-u0d8kd-1 kYQuFW"
                               dir="ltr"
                             >
                               <a
@@ -1756,7 +1756,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1774,7 +1774,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledItem-u0d8kd-1 ihPUFl"
+                              class="StyledItem-u0d8kd-1 kYQuFW"
                               dir="ltr"
                             >
                               <a
@@ -1797,7 +1797,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1815,7 +1815,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledItem-u0d8kd-1 ihPUFl"
+                              class="StyledItem-u0d8kd-1 kYQuFW"
                               dir="ltr"
                             >
                               <a
@@ -1838,7 +1838,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1856,7 +1856,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledItem-u0d8kd-1 ihPUFl"
+                              class="StyledItem-u0d8kd-1 kYQuFW"
                               dir="ltr"
                             >
                               <a
@@ -1879,7 +1879,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1897,7 +1897,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledItem-u0d8kd-1 ihPUFl"
+                              class="StyledItem-u0d8kd-1 kYQuFW"
                               dir="ltr"
                             >
                               <a
