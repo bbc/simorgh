@@ -1,24 +1,30 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import IdxPage from '.';
+import { render, act } from '@testing-library/react';
+import persianMostReadData from '#data/persian/mostRead';
+import IdxPageWithContext from './testHelpers';
 import persianAfghanistanIdxData from '#data/persian/afghanistan';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
-
-const IdxPageWithContext = () => (
-  <ServiceContextProvider service="persian">
-    <IdxPage pageData={persianAfghanistanIdxData} />
-  </ServiceContextProvider>
-);
 
 describe('IdxPage', () => {
+  beforeEach(async () => {
+    fetch.mockResponse(JSON.stringify(persianMostReadData));
+  });
+
   describe('Snapshots', () => {
-    it('should render an IDX page correctly', () => {
-      const container = render(<IdxPageWithContext />);
+    it('should render a persian idx page correctly with most read', async () => {
+      let container = null;
+      await act(async () => {
+        container = render(
+          <IdxPageWithContext pageData={persianAfghanistanIdxData} />,
+        ).container;
+      });
+
       expect(container).toMatchSnapshot();
     });
 
     it('should render idx page sections', async () => {
-      const { container } = render(<IdxPageWithContext />);
+      const { container } = render(
+        <IdxPageWithContext pageData={persianAfghanistanIdxData} />,
+      );
 
       const sections = container.querySelectorAll('section');
       expect(sections).toHaveLength(2);
