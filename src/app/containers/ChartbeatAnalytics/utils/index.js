@@ -26,6 +26,7 @@ export const getSylphidCookie = () =>
 export const getType = (pageType, shorthand = false) => {
   switch (pageType) {
     case 'frontPage':
+    case 'IDX':
     case 'index':
       return shorthand ? 'IDX' : 'Index';
     case 'article':
@@ -89,6 +90,7 @@ export const buildSections = ({
 export const getTitle = ({ pageType, pageData, brandName, title }) => {
   switch (pageType) {
     case 'frontPage':
+    case 'IDX':
     case 'index':
       return getPageTitle(pageData, brandName);
     case 'article':
@@ -133,7 +135,7 @@ export const getConfig = ({
     data,
   );
 
-  const masterBrand = path(['masterBrand'], data);
+  const masterBrand = path([], ['masterBrand'], data);
 
   const sections = buildSections({
     service,
