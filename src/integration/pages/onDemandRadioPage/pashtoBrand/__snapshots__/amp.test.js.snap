@@ -120,11 +120,99 @@ Object {
 
 exports[`AMP On Demand Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
 
+exports[`AMP On Demand Radio Page Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`AMP On Demand Radio Page Footer I can see a link: BBC News, پښتو 1`] = `"/pashto"`;
+
+exports[`AMP On Demand Radio Page Footer I can see a link: Cookies 1`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+
+exports[`AMP On Demand Radio Page Footer I can see a link: د بي بي سي‌ په اړه 1`] = `"https://www.bbc.com/pashto/institutional-37622761"`;
+
+exports[`AMP On Demand Radio Page Footer I can see a link: د محرميت تگلاره 1`] = `"https://www.bbc.com/pashto/institutional-37622762"`;
+
+exports[`AMP On Demand Radio Page Footer I can see a link: د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره. 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
+exports[`AMP On Demand Radio Page Footer I can see a link: د کارولو شرايط 1`] = `"https://www.bbc.com/pashto/institutional-37620701"`;
+
+exports[`AMP On Demand Radio Page Footer I can see a link: زموږ سره اړیکي 1`] = `"https://www.bbc.co.uk/pashto/institutional-37622768"`;
+
+exports[`AMP On Demand Radio Page Footer I can see a link: ولې تاسې پر بي بي سي خبرونو باور کولی شئ 1`] = `"https://www.bbc.com/pashto/institutional-49283007"`;
+
 exports[`AMP On Demand Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
 
 exports[`AMP On Demand Radio Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
-exports[`AMP On Demand Radio Page Header I can see the navigation 1`] = `"کور پاڼه"`;
+exports[`AMP On Demand Radio Page Header Navigation link should match text 1`] = `"کور پاڼه"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 2`] = `"افغانستان"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 3`] = `"پښتونخوا"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 4`] = `"نړۍ"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 5`] = `"ښځې"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 6`] = `"لوبې"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 7`] = `"ويډيوګانې"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 8`] = `"ځانګړې پاڼې"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 9`] = `"کالم"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 10`] = `"کور پاڼه"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 11`] = `"افغانستان"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 12`] = `"پښتونخوا"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 13`] = `"نړۍ"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 14`] = `"ښځې"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 15`] = `"لوبې"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 16`] = `"ويډيوګانې"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 17`] = `"ځانګړې پاڼې"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 18`] = `"کالم"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 1`] = `"/pashto"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 2`] = `"/pashto/afghanistan"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 3`] = `"/pashto/pakhtunkhwa"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 4`] = `"/pashto/world"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 5`] = `"/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 6`] = `"/pashto/sport"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 7`] = `"/pashto/media/video"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 8`] = `"/pashto/in_depth"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 9`] = `"/pashto/columns"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 10`] = `"/pashto"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 11`] = `"/pashto/afghanistan"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 12`] = `"/pashto/pakhtunkhwa"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 13`] = `"/pashto/world"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 14`] = `"/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 15`] = `"/pashto/sport"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 16`] = `"/pashto/media/video"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 17`] = `"/pashto/in_depth"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 18`] = `"/pashto/columns"`;
 
 exports[`AMP On Demand Radio Page I can see the brand title 1`] = `"وروستي خبرونه"`;
 
@@ -150,7 +238,7 @@ exports[`AMP On Demand Radio Page SEO Heading level 1 1`] = `"وروستي خب�
 
 exports[`AMP On Demand Radio Page SEO Lang attribute 1`] = `"ps"`;
 
-exports[`AMP On Demand Radio Page SEO Linked data 1`] = `
+exports[`AMP On Demand Radio Page SEO Linked data AudioObject 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "AudioObject",

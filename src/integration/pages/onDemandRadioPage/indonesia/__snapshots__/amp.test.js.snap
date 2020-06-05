@@ -120,11 +120,75 @@ Object {
 
 exports[`AMP On Demand Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/indonesia"`;
 
+exports[`AMP On Demand Radio Page Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`AMP On Demand Radio Page Footer I can see a link: Alasan Anda dapat mempercayai BBC News 1`] = `"https://www.bbc.com/indonesia/institutional-49283175"`;
+
+exports[`AMP On Demand Radio Page Footer I can see a link: BBC News, Indonesia 1`] = `"/indonesia"`;
+
+exports[`AMP On Demand Radio Page Footer I can see a link: Baca tentang peraturan baru terkait link eksternal. 1`] = `"https://www.bbc.com/indonesia/institutional/2011/02/000001_links"`;
+
+exports[`AMP On Demand Radio Page Footer I can see a link: Cookies 1`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`AMP On Demand Radio Page Footer I can see a link: Hubungi BBC 1`] = `"https://www.bbc.com/indonesia/institutional-37818427"`;
+
+exports[`AMP On Demand Radio Page Footer I can see a link: Kebijakan tentang Privasi 1`] = `"https://www.bbc.com/indonesia/institutional-37818425"`;
+
+exports[`AMP On Demand Radio Page Footer I can see a link: Mengenai BBC 1`] = `"https://www.bbc.com/indonesia/institutional-37818424"`;
+
+exports[`AMP On Demand Radio Page Footer I can see a link: Peraturan Penggunaan 1`] = `"https://www.bbc.com/indonesia/institutional-37818421"`;
+
 exports[`AMP On Demand Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
 
 exports[`AMP On Demand Radio Page Header I can see the branding 1`] = `"BBC News, Indonesia"`;
 
-exports[`AMP On Demand Radio Page Header I can see the navigation 1`] = `"Berita"`;
+exports[`AMP On Demand Radio Page Header Navigation link should match text 1`] = `"Berita"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 2`] = `"Indonesia"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 3`] = `"Dunia"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 4`] = `"Viral"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 5`] = `"Liputan Mendalam"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 6`] = `"Majalah"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 7`] = `"Berita"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 8`] = `"Indonesia"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 9`] = `"Dunia"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 10`] = `"Viral"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 11`] = `"Liputan Mendalam"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text 12`] = `"Majalah"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 1`] = `"/indonesia"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 2`] = `"/indonesia/topics/cjgn7k8yx4gt"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 3`] = `"/indonesia/dunia"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 4`] = `"/indonesia/topics/cn5w7g2nq6dt"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 5`] = `"/indonesia/laporan-khusus-51267199"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 6`] = `"/indonesia/majalah-51456120"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 7`] = `"/indonesia"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 8`] = `"/indonesia/topics/cjgn7k8yx4gt"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 9`] = `"/indonesia/dunia"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 10`] = `"/indonesia/topics/cn5w7g2nq6dt"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 11`] = `"/indonesia/laporan-khusus-51267199"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match url 12`] = `"/indonesia/majalah-51456120"`;
 
 exports[`AMP On Demand Radio Page I can see the brand title 1`] = `"Dunia Pagi Ini"`;
 
@@ -150,7 +214,7 @@ exports[`AMP On Demand Radio Page SEO Heading level 1 1`] = `"Dunia Pagi Ini, 27
 
 exports[`AMP On Demand Radio Page SEO Lang attribute 1`] = `"id"`;
 
-exports[`AMP On Demand Radio Page SEO Linked data 1`] = `
+exports[`AMP On Demand Radio Page SEO Linked data AudioObject 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "AudioObject",

@@ -26,67 +26,127 @@ exports[`Canonical Media Asset Page Footer I can see a link: کوکی ها 1`] =
 
 exports[`Canonical Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
-exports[`Canonical Media Asset Page Header I can see a navigation link: افغانستان 1`] = `"/persian/afghanistan"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: افغانستان 2`] = `"/persian/afghanistan"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: اقتصاد 1`] = `"/persian/business"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: اقتصاد 2`] = `"/persian/business"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: ايران 1`] = `"/persian/iran"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: ايران 2`] = `"/persian/iran"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: تلویزیون 1`] = `"/persian/tv-and-radio-37434377"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: تلویزیون 2`] = `"/persian/tv-and-radio-37434377"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: جهان 1`] = `"/persian/world"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: جهان 2`] = `"/persian/world"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: دانش 1`] = `"/persian/science"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: دانش 2`] = `"/persian/science"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: رادیو 1`] = `"/persian/tv-and-radio-37434376"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: رادیو 2`] = `"/persian/tv-and-radio-37434376"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: صفحه اول 1`] = `"/persian"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: صفحه اول 2`] = `"/persian"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: ناظران می‌گویند 1`] = `"/persian/blogs/viewpoints"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: ناظران می‌گویند 2`] = `"/persian/blogs/viewpoints"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: هنر 1`] = `"/persian/arts"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: هنر 2`] = `"/persian/arts"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: وبلاگ‌ها 1`] = `"/persian/services/2012/01/000000_blogs_list"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: وبلاگ‌ها 2`] = `"/persian/services/2012/01/000000_blogs_list"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: ورزش 1`] = `"/persian/sport"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: ورزش 2`] = `"/persian/sport"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: ویدیو 1`] = `"/persian/media/video"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: ویدیو 2`] = `"/persian/media/video"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: پخش زنده 1`] = `"/persian/media-49522521"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: پخش زنده 2`] = `"/persian/media-49522521"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: کرونا 1`] = `"/persian/science-52004647"`;
-
-exports[`Canonical Media Asset Page Header I can see a navigation link: کرونا 2`] = `"/persian/science-52004647"`;
-
 exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, فارسی"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 1`] = `"صفحه اول"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 2`] = `"کرونا"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 3`] = `"پخش زنده"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 4`] = `"ویدیو"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 5`] = `"تلویزیون"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 6`] = `"رادیو"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 7`] = `"ايران"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 8`] = `"افغانستان"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 9`] = `"جهان"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 10`] = `"هنر"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 11`] = `"ورزش"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 12`] = `"اقتصاد"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 13`] = `"دانش"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 14`] = `"ناظران می‌گویند"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 15`] = `"وبلاگ‌ها"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 16`] = `"صفحه اول"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 17`] = `"کرونا"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 18`] = `"پخش زنده"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 19`] = `"ویدیو"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 20`] = `"تلویزیون"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 21`] = `"رادیو"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 22`] = `"ايران"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 23`] = `"افغانستان"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 24`] = `"جهان"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 25`] = `"هنر"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 26`] = `"ورزش"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 27`] = `"اقتصاد"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 28`] = `"دانش"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 29`] = `"ناظران می‌گویند"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text 30`] = `"وبلاگ‌ها"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 1`] = `"/persian"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 2`] = `"/persian/science-52004647"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 3`] = `"/persian/media-49522521"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 4`] = `"/persian/media/video"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 5`] = `"/persian/tv-and-radio-37434377"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 6`] = `"/persian/tv-and-radio-37434376"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 7`] = `"/persian/iran"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 8`] = `"/persian/afghanistan"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 9`] = `"/persian/world"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 10`] = `"/persian/arts"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 11`] = `"/persian/sport"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 12`] = `"/persian/business"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 13`] = `"/persian/science"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 14`] = `"/persian/blogs/viewpoints"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 15`] = `"/persian/services/2012/01/000000_blogs_list"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 16`] = `"/persian"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 17`] = `"/persian/science-52004647"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 18`] = `"/persian/media-49522521"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 19`] = `"/persian/media/video"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 20`] = `"/persian/tv-and-radio-37434377"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 21`] = `"/persian/tv-and-radio-37434376"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 22`] = `"/persian/iran"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 23`] = `"/persian/afghanistan"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 24`] = `"/persian/world"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 25`] = `"/persian/arts"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 26`] = `"/persian/sport"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 27`] = `"/persian/business"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 28`] = `"/persian/science"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 29`] = `"/persian/blogs/viewpoints"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match url 30`] = `"/persian/services/2012/01/000000_blogs_list"`;
 
 exports[`Canonical Media Asset Page I can see the headline 1`] = `"Trump long headline"`;
 

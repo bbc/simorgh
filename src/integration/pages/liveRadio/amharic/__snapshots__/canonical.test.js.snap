@@ -26,23 +26,39 @@ exports[`Canonical Amharic Live Radio Page Footer I can see a link: የፕራይ
 
 exports[`Canonical Amharic Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም. ስለ ውጪ ሊንኮች ያለን አቀራረብ"`;
 
-exports[`Canonical Amharic Live Radio Page Header I can see a navigation link: በጣም የተወደዱ 1`] = `"/amharic/popular/read"`;
-
-exports[`Canonical Amharic Live Radio Page Header I can see a navigation link: በጣም የተወደዱ 2`] = `"/amharic/popular/read"`;
-
-exports[`Canonical Amharic Live Radio Page Header I can see a navigation link: ቪዲዮ 1`] = `"/amharic/media/video"`;
-
-exports[`Canonical Amharic Live Radio Page Header I can see a navigation link: ቪዲዮ 2`] = `"/amharic/media/video"`;
-
-exports[`Canonical Amharic Live Radio Page Header I can see a navigation link: ኢትዮጵያ 1`] = `"/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"`;
-
-exports[`Canonical Amharic Live Radio Page Header I can see a navigation link: ኢትዮጵያ 2`] = `"/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"`;
-
-exports[`Canonical Amharic Live Radio Page Header I can see a navigation link: ዜና 1`] = `"/amharic"`;
-
-exports[`Canonical Amharic Live Radio Page Header I can see a navigation link: ዜና 2`] = `"/amharic"`;
-
 exports[`Canonical Amharic Live Radio Page Header I can see the branding 1`] = `"BBC News, አማርኛ"`;
+
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match text 1`] = `"ዜና"`;
+
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match text 2`] = `"ኢትዮጵያ"`;
+
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match text 3`] = `"ቪዲዮ"`;
+
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match text 4`] = `"በጣም የተወደዱ"`;
+
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match text 5`] = `"ዜና"`;
+
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match text 6`] = `"ኢትዮጵያ"`;
+
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match text 7`] = `"ቪዲዮ"`;
+
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match text 8`] = `"በጣም የተወደዱ"`;
+
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match url 1`] = `"/amharic"`;
+
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match url 2`] = `"/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"`;
+
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match url 3`] = `"/amharic/media/video"`;
+
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match url 4`] = `"/amharic/popular/read"`;
+
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match url 5`] = `"/amharic"`;
+
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match url 6`] = `"/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"`;
+
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match url 7`] = `"/amharic/media/video"`;
+
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match url 8`] = `"/amharic/popular/read"`;
 
 exports[`Canonical Amharic Live Radio Page Main heading should match text 1`] = `"ያድምጡ"`;
 

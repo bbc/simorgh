@@ -15,12 +15,30 @@ export default () => {
       expect(langCode).toBeInTheDocument();
     });
 
-    const navigationLinks = document.querySelectorAll('header nav ul > li > a');
-    navigationLinks.forEach(navigationLink => {
-      it(`I can see a navigation link: ${navigationLink.textContent}`, () => {
-        expect(navigationLink).toBeInTheDocument();
-        expect(navigationLink.textContent).toBeTruthy();
-        expect(navigationLink.getAttribute('href')).toMatchSnapshot();
+    describe('Navigation link', () => {
+      const navigationLinks = document.querySelectorAll(
+        'header nav ul > li > a',
+      );
+
+      navigationLinks.forEach(navigationLink => {
+        const linkText = navigationLink.textContent;
+        const linkUrl = navigationLink.getAttribute('href');
+
+        it('should be in the document', () => {
+          expect(navigationLink).toBeInTheDocument();
+        });
+
+        it('should contain text', () => {
+          expect(linkText).toBeTruthy();
+        });
+
+        it('should match text', () => {
+          expect(linkText).toMatchSnapshot();
+        });
+
+        it('should match url', () => {
+          expect(linkUrl).toMatchSnapshot();
+        });
       });
     });
 
