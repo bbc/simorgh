@@ -2,7 +2,6 @@
 import fetch from 'isomorphic-fetch';
 import path from 'ramda/src/path';
 import envConfig from '../../../support/config/envs';
-import getAppEnv from '../../../support/helpers/getAppEnv';
 
 // the externalId `bbc_oromo_radio` is overriden to `bbc_afaanoromoo` in production code
 const getBrandId = externalId => {
@@ -55,12 +54,19 @@ export const getEpisodeId = async pathToPage => {
   return episodeId;
 };
 
-export const getOnDemandRadioDataEndpoint = () => {
-  if (getAppEnv() === 'local') {
-    return `${Cypress.env('currentPath')}.json`;
-  }
+export const isExpired = jsonData => {
+  const episodeAvailableUntil = path(
+    ['content', 'blocks', '0', 'versions', '0', 'availableUntil'],
+    jsonData,
+  );
 
-  return `https://test.bbc.com${Cypress.env(
-    'currentPath',
-  )}.json?renderer_env=live`;
+  // Episode is expired if availableUntil is empty
+  return !episodeAvailableUntil || episodeAvailableUntil < Date.now();
+};
+
+export const dataEndpointOverride = () => {
+  if (Cypress.env('APP_ENV') === 'test') {
+    return '?renderer_env=live';
+  }
+  return '';
 };
