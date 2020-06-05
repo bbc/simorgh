@@ -6,7 +6,7 @@ import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import {
   GEL_SPACING_QUAD,
   GEL_SPACING,
-  GEL_SPACING_TRPL,
+  GEL_SPACING_DBL,
   GEL_SPACING_SEPT,
 } from '@bbc/gel-foundations/spacings';
 import { MEDIA_QUERY_TYPOGRAPHY } from '@bbc/gel-foundations/breakpoints';
@@ -17,7 +17,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 
 const StyledHeadline = styled(Headline)`
   @media screen {
-    padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING_TRPL};
+    padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING_DBL};
   }
 `;
 
