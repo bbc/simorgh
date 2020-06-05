@@ -1,0 +1,481 @@
+{
+  "metadata": {
+      "id": "urn:bbc:ares::asset:pashto/world-52924930",
+      "locators": {
+          "assetUri": "/pashto/world-52924930",
+          "cpsUrn": "urn:bbc:content:assetUri:pashto/world-52924930",
+          "curie": "http://www.bbc.co.uk/asset/839f8bcf-8298-3441-bbc6-19f9ceda4d58",
+          "assetId": "52924930"
+      },
+      "type": "STY",
+      "createdBy": "pashto-v6",
+      "language": "ps",
+      "lastUpdated": 1591280612284,
+      "firstPublished": 1591278970000,
+      "lastPublished": 1591278970000,
+      "timestamp": 1591278970000,
+      "options": {
+          "isIgorSeoTagsEnabled": false,
+          "includeComments": false,
+          "allowRightHandSide": true,
+          "isFactCheck": false,
+          "allowDateStamp": true,
+          "suitableForSyndication": true,
+          "hasNewsTracker": false,
+          "allowRelatedStoriesBox": true,
+          "isKeyContent": false,
+          "allowHeadline": true,
+          "allowAdvertising": true,
+          "hasContentWarning": false,
+          "isBreakingNews": false,
+          "allowPrintingSharingLinks": true
+      },
+      "analyticsLabels": {
+          "cps_asset_type": "sty",
+          "counterName": "pashto.world.story.52924930.page",
+          "cps_asset_id": "52924930"
+      },
+      "passport": {
+          "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+          },
+          "campaigns": [
+              {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+              }
+          ],
+          "taggings": []
+      },
+      "tags": {
+          "about": [
+              {
+                  "thingLabel": "د امريکا متحده ايالات",
+                  "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                  "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+                  "thingType": [
+                      "tagging:TagConcept",
+                      "core:Place",
+                      "core:Thing"
+                  ],
+                  "thingSameAs": [
+                      "http://sws.geonames.org/6252001/"
+                  ],
+                  "topicName": "د امريکا متحده ايالات",
+                  "topicId": "cwr9jrd55pzt",
+                  "curationList": [
+                      {
+                          "curationId": "dcd09401-6456-4ff6-a641-909849bca8c7",
+                          "curationType": "vivo-stream"
+                      }
+                  ]
+              },
+              {
+                  "thingLabel": "ډونلډ ټرمپ",
+                  "thingUri": "http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id",
+                  "thingId": "78080d81-2849-497e-bc3a-bf364626456b",
+                  "thingType": [
+                      "core:Thing",
+                      "tagging:TagConcept",
+                      "core:Person"
+                  ],
+                  "thingSameAs": [
+                      "http://dbpedia.org/resource/Donald_Trump"
+                  ],
+                  "topicName": "ډونلډ ټرمپ",
+                  "topicId": "c8y94yrp2kzt",
+                  "curationList": [
+                      {
+                          "curationId": "8570254b-cc0a-41dd-b44f-de087e9842de",
+                          "curationType": "vivo-stream"
+                      }
+                  ]
+              },
+              {
+                  "thingLabel": "دین",
+                  "thingUri": "http://www.bbc.co.uk/things/fbcd47f3-d67a-4b69-b15c-d4b6c270adbf#id",
+                  "thingId": "fbcd47f3-d67a-4b69-b15c-d4b6c270adbf",
+                  "thingType": [
+                      "tagging:TagConcept",
+                      "core:Theme",
+                      "core:Thing"
+                  ],
+                  "thingSameAs": [
+                      "http://dbpedia.org/resource/Religion",
+                      "http://www.wikidata.org/entity/Q9174"
+                  ],
+                  "topicName": "دین",
+                  "topicId": "cjgn7g4d3d6t",
+                  "curationList": [
+                      {
+                          "curationId": "462d936b-25f5-41fa-8dd9-18448c12a1e7",
+                          "curationType": "vivo-stream"
+                      }
+                  ]
+              }
+          ]
+      },
+      "version": "v1.3.1",
+      "blockTypes": [
+          "image",
+          "paragraph",
+          "list",
+          "crosshead"
+      ],
+      "includeComments": false,
+      "atiAnalytics": {
+          "producerName": "PASHTO",
+          "producerId": "68"
+      }
+  },
+  "content": {
+      "blocks": [
+          {
+              "id": "112613718",
+              "subType": "body",
+              "href": "http://c.files.bbci.co.uk/13F43/production/_112613718_tv061741048.jpg",
+              "path": "/cpsprodpb/13F43/production/_112613718_tv061741048.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Donald Trump holding a Bible in front of a church",
+              "caption": "د ولسمشر ټرمپ له تصویر سره ناندرۍ راپورته شوې",
+              "copyrightHolder": "Reuters",
+              "positionHint": "full-width",
+              "type": "image"
+          },
+          {
+              "text": "د امریکا متحدو ایالتونو ولسمشر ډونلډ ټرمپ په پلازمېنه واشنګټن کې د سنټ جان کلیسا تر څنګ داسې حال کې تصویر واخیست چې د عیسویانو سپېڅلی کتاب بایبل یې په لاس کې نیولی و، خو له ۲۴ ساعته هم لږ موده کې د سیمې کلیسا مشران په همدغه ځای کې یو ځای شول او د ولسمشر له دې کړنې سره یې مخالفت څرګند کړ. ",
+              "role": "introduction",
+              "markupType": "plain_text",
+              "type": "paragraph"
+          },
+          {
+              "text": "جارج سي ګیلبرت هم له همدې مذهبي مشرانو یو دی، چې وايي، ولسمشر ټرمپ <span xml:lang=\"en\" lang=\"en\" class=\"lang-en\"> '</span>د خپلې اجنډا پر مخ بیولو لپاره له مذهبي تکیې کار اخیستی.<span xml:lang=\"en\" lang=\"en\" class=\"lang-en\"> '</span> نوموړی د واشنګټن یوې کلیسا کې له تېرو ۳۵ کلونو مشري کوي. هغه د ولسشمر دغه کړنه <span xml:lang=\"en\" lang=\"en\" class=\"lang-en\"> '</span>داسې رویه بولي چې هیڅ توجیه نه لري.<span xml:lang=\"en\" lang=\"en\" class=\"lang-en\"> '</span>",
+              "markupType": "candy_xml",
+              "type": "paragraph"
+          },
+          {
+              "text": "نوموړی زیاتوي: ",
+              "markupType": "plain_text",
+              "type": "paragraph"
+          },
+          {
+              "text": "<span xml:lang=\"en\" lang=\"en\" class=\"lang-en\"> ''</span>په داسې حال کې چې ولسمشر (له معمول سره سم) کلیسا ته نه ځي، خو په اوسنیو سختو شرایطو کې د کلیسا څنګ ته په داسې حال کې تصویرونه اخیستل چې بایبل یې په لاس کې نیولی وي، یو غولوونکی او دروغجن عمل دی.<span xml:lang=\"en\" lang=\"en\" class=\"lang-en\"> ''</span>",
+              "markupType": "candy_xml",
+              "type": "paragraph"
+          },
+          {
+              "numbered": false,
+              "items": [
+                  {
+                      "text": "<itemMeta>pashto/world-52910882</itemMeta>",
+                      "meta": [
+                          {
+                              "headlines": {
+                                  "shortHeadline": "ایا ولسمشر ټرمپ امریکا کې د احتجاجونو پر ضد پوځ کارولی شي؟",
+                                  "headline": "ایا ولسمشر ټرمپ امریکا کې د احتجاجونو پر ضد پوځ کارولی شي؟",
+                                  "overtyped": "ایا ولسمشر ټرمپ امریکا کې د احتجاجونو پر ضد پوځ کارولی شي؟"
+                              },
+                              "locators": {
+                                  "href": "http://www.bbc.com/pashto/world-52910882"
+                              },
+                              "summary": "په داسې حال کې چې د امریکا متحدو ایالتونو په لر او بر کې مظاهرې روانې دي، ولسمشر ټرمپ وايي، پوځ به ځای پر ځای کړي. ښاغلی ټرمپ وايي، دا چاره به له هغه وروسته ترسره کوي، چې په وینا یې که ایالتي حکومتونه او ښاري ادارې د نظم په ټینګښت کې پاتې راشي. خو د ځینې ایالتونو ګورنران یا والیان بیا وايي، د ځايي چارواکو له اجازې پرته فدرالي پوځیان ایالتونو کې نه شي ځای پر ځای کېدی.",
+                              "timestamp": 1591192827000,
+                              "language": "ps",
+                              "passport": {
+                                  "category": {
+                                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                                      "categoryName": "News"
+                                  },
+                                  "taggings": []
+                              },
+                              "id": "urn:bbc:ares::asset:pashto/world-52910882",
+                              "type": "cps"
+                          }
+                      ],
+                      "markupType": "candy_xml",
+                      "type": "listItem"
+                  },
+                  {
+                      "text": "<itemMeta>pashto/world-52914251</itemMeta>",
+                      "meta": [
+                          {
+                              "headlines": {
+                                  "shortHeadline": "امریکا کې احتجاجونه: دفاع وزیر مارک اسپر د ولسمشر ټرمپ پرېکړې سره مخالفت وکړ",
+                                  "headline": "امریکا کې احتجاجونه: دفاع وزیر مارک اسپر د ولسمشر ټرمپ پرېکړې سره مخالفت وکړ",
+                                  "overtyped": "امریکا کې احتجاجونه: دفاع وزیر مارک اسپر د ولسمشر ټرمپ پرېکړې سره مخالفت وکړ"
+                              },
+                              "locators": {
+                                  "href": "http://www.bbc.com/pashto/world-52914251"
+                              },
+                              "summary": "د امریکا دفاع وزیر مارک اسپر وايي، د جارج فلویډ د وژل کېدو پایله کې د پیل شویو احتجاجونو پای ته رسولو لپاره د پوځیانو ځای پر ځای کولو ملاتړ نه کوي. د ښاغلي اسپر دا څرګندونې د ولسمشر ډونلډ ټرمپ له هغه ګواښه دوې ورځې وروسته مخې ته راغلې، چې د احتجاجونو ختمولو لپاره یې د پوځ کارولو په تړاو کړی و.",
+                              "timestamp": 1591205056000,
+                              "language": "ps",
+                              "passport": {
+                                  "category": {
+                                      "categoryId": "",
+                                      "categoryName": ""
+                                  },
+                                  "taggings": []
+                              },
+                              "id": "urn:bbc:ares::asset:pashto/world-52914251",
+                              "type": "cps"
+                          }
+                      ],
+                      "markupType": "candy_xml",
+                      "type": "listItem"
+                  }
+              ],
+              "type": "list"
+          },
+          {
+              "text": "بل لور ته د دوشنبې پر ورځ ولسمشر ټرمپ وویل، د (تاوتریخجنو) مظاهرو ختمولو لپاره به پوځ وکاروي، چې د ده په وینا د پولیسو له لاسه د وژل شوي ۴۶ کلن جورج فلویډ د مړینې خلاف سوله ییزې مظاهرې ګډوډوي. ",
+              "markupType": "plain_text",
+              "type": "paragraph"
+          },
+          {
+              "id": "112702436",
+              "subType": "body",
+              "href": "http://c.files.bbci.co.uk/F7BC/production/_112702436_e74b817c-b009-4613-b920-4033d3887adf.jpg",
+              "path": "/cpsprodpb/F7BC/production/_112702436_e74b817c-b009-4613-b920-4033d3887adf.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "A group of around 25 church leaders outside St John's Episcopal Church in Washington protesting against Donald Trump's actions",
+              "caption": "کلیسا مشران وايي، ولسمشر ټرمپ بایبل د سیاسي موخو لپاره کارولی",
+              "copyrightHolder": "Heidi Thompson",
+              "positionHint": "full-width",
+              "type": "image"
+          },
+          {
+              "text": "له دې وینا لږ وروسته ولسمشر ټرمپ سپینې ماڼۍ ته نژدې سنټ جونز کلیسا ته لاړ چې د ولسمشرانو کلیسا یې هم بولي او د خبریالانو کمرو په مخکې یې بایبل په لاس کې نیولی و. د یکشنبې پر ورځ د مظاهرو بهیر کې دغې کلیسا ته اور ورته کړل شوی و. ",
+              "markupType": "plain_text",
+              "type": "paragraph"
+          },
+          {
+              "text": "خو راهب ګلیلبرټ او ملګري راهبان یې چې په مظاهره کې ورسره یو ځای دي وايي، په څه ډول چې ولسمشر کلیسا ته تللی او کتاب یې په لاس کې نیولی، (د منلو نه دي.)",
+              "markupType": "plain_text",
+              "type": "paragraph"
+          },
+          {
+              "text": "نوموړی وايي، ولسمشر هلته داسې معلومېده لکه یوازې چې د تصویر اخیستو لپاره ولاړ و او اوس دا داسې چارو وخت نه دی.",
+              "markupType": "plain_text",
+              "type": "paragraph"
+          },
+          {
+              "text": "له کلیسا سره سوله ییز احتجاج",
+              "markupType": "plain_text",
+              "type": "crosshead"
+          },
+          {
+              "id": "112669142",
+              "subType": "body",
+              "href": "http://c.files.bbci.co.uk/5E84/production/_112669142_washngton1.jpg",
+              "path": "/cpsprodpb/5E84/production/_112669142_washngton1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Law enforcement officers in Washington",
+              "caption": "امنیتي ځواکونو له لافاییټي میدانه احتجاج کوونکي وشړل",
+              "copyrightHolder": "BRENDAN SMIALOWSKI",
+              "positionHint": "full-width",
+              "type": "image"
+          },
+          {
+              "text": "د کلیسا په څنګ کې د مظاهرې لپاره د راهبانو تر څنګ ځینې رضاکار هم راټول شوي وو. راهب ګیلبرټ وايي، دا خپل مسوولیت بولي چې د ولسمشز کړنو خلاف د اعتراض لپاره د نورو مذهبي مشرانو تر څنګ ودرېږي. ",
+              "markupType": "plain_text",
+              "type": "paragraph"
+          },
+          {
+              "text": "وېشلی ملت",
+              "markupType": "plain_text",
+              "type": "crosshead"
+          },
+          {
+              "text": "بل لور ته د دې مسالې پر سر ټول عیسوي مذهبي مشران یوه خوله نه دي. پاستور مارک برنز چې په امریکا کې د ښاغلي ټرمپ مشهوري پلوي تور پوستی مذهبي مشر دی، په دې اړه پوښتنه کوي:",
+              "markupType": "plain_text",
+              "type": "paragraph"
+          },
+          {
+              "text": "<span xml:lang=\"en\" lang=\"en\" class=\"lang-en\"> ''</span>ولې د امریکا ولسمشر، د ازادې نړۍ یو مشر د خدای په خبره تکیه و نه کړي، چې دا وېشلی ملت یو موټی شي؟<span xml:lang=\"en\" lang=\"en\" class=\"lang-en\"> ''</span>",
+              "markupType": "candy_xml",
+              "type": "paragraph"
+          },
+          {
+              "text": "نوموړی زیاتوي: ",
+              "markupType": "plain_text",
+              "type": "paragraph"
+          },
+          {
+              "text": "<span xml:lang=\"en\" lang=\"en\" class=\"lang-en\"> ''</span>هغه غوښتل وښيي چې دا وخت تر هر څه ډېره اړتیا دعا ته لرو.<span xml:lang=\"en\" lang=\"en\" class=\"lang-en\"> ''</span>",
+              "markupType": "candy_xml",
+              "type": "paragraph"
+          },
+          {
+              "id": "112669144",
+              "subType": "body",
+              "href": "http://c.files.bbci.co.uk/ACA4/production/_112669144_washington3.jpg",
+              "path": "/cpsprodpb/ACA4/production/_112669144_washington3.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Protest over killing of George Floyd",
+              "caption": "د جورج فلویډ له وژل کېدو وروسته امریکا کې پراخې مظاهرې شوې",
+              "copyrightHolder": "MANDEL NGAN",
+              "positionHint": "full-width",
+              "type": "image"
+          },
+          {
+              "text": "ځینې نور مذهبي مشران بیا پر ولسمشر ټرمپ تور پورې کوي، چې کلیسا او د عیسویانو مذهبي کتاب یې د سیاسي موخو لپاره کاروولي دي.",
+              "markupType": "plain_text",
+              "type": "paragraph"
+          },
+          {
+              "text": "<bold>ولسمشر ټرمپ او</bold><bold> </bold><bold>کلیسا </bold>",
+              "markupType": "candy_xml",
+              "type": "paragraph"
+          },
+          {
+              "text": "ولسمشر ټرمپ د عیسویانو په کوم ځانګړي مسلک پورې اړوند نه دی او یوازې کله نا کله کلیسا ته ځي. خو اکثر د عیسویانو د رایو خپلولو لپاره مذهبي سمبولیزم او ژبه استعمالوي. ",
+              "markupType": "plain_text",
+              "type": "paragraph"
+          },
+          {
+              "text": "د پیو څېړنیز مرکز په وینا د ۲۰۱۶ کال په ټاکنو کې د درې سلنه تور پوستو پروټسټنو پرتله ۷۵ سلنه سپین پوستو انجيليه عیسویانو ټرمپ ته رایې ورکړې. ځینې کسان د دوشنبې پر ورځ کلیسا ته د ولسمشر ټرمپ ورتګ د نومبر ټاکنیز پړاو لپاره د همدې مسلک سپین پوستو منونکو توجه جلبول بولي. ",
+              "markupType": "plain_text",
+              "type": "paragraph"
+          },
+          {
+              "id": "112695558",
+              "subType": "body",
+              "href": "http://c.files.bbci.co.uk/14E37/production/_112695558_washingotn2.jpg",
+              "path": "/cpsprodpb/14E37/production/_112695558_washingotn2.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Protest over killing of George Floyd",
+              "copyrightHolder": "MANDEL NGAN",
+              "positionHint": "full-width",
+              "type": "image"
+          },
+          {
+              "text": "خو د پاسترو برنز په څېر د ولسمشر پلویان هم وايي، په اوسنیو شرایطو کې له کلیسا سره د تصویر اخیستل د ولسمشر سیاسي حیثیت پیاوړتیا لپاره غوره لاره نه ده: ",
+              "markupType": "plain_text",
+              "type": "paragraph"
+          },
+          {
+              "text": "<span xml:lang=\"en\" lang=\"en\" class=\"lang-en\"> ''</span>که ولسمشر راوتلای وای، سوله ییزو احتجاج کوونکو ته یې ویلي وايي، زه ستاسې تر څنګ لاریون کوم، زه پوهېږم تاسې ولې غوسه یاست، ښايي دې شرایطو کې له دې زیات مناسب انداز بلل شوی وای.<span xml:lang=\"en\" lang=\"en\" class=\"lang-en\"> ''</span>",
+              "markupType": "candy_xml",
+              "type": "paragraph"
+          },
+          {
+              "text": "  خو ولسمشر بیا له خپلې کړنې دفاع کوي. نوموړي پر ټویټر لیکلي: ",
+              "markupType": "plain_text",
+              "type": "paragraph"
+          },
+          {
+              "text": "<span xml:lang=\"en\" lang=\"en\" class=\"lang-en\"> ''</span>تاسې ناسم پوه شوي یاست، که احتجاجیان سوله ییز وو، ولې یې یوه شپه مخکې کلیسا ته اور ورته کړ؟ خلکو زما هلته تګ خوښ کړ.<span xml:lang=\"en\" lang=\"en\" class=\"lang-en\"> ''</span>",
+              "markupType": "candy_xml",
+              "type": "paragraph"
+          }
+      ]
+  },
+  "promo": {
+      "headlines": {
+          "shortHeadline": "انجیل سره عکس؛ ولې ځینې مذهبي مشران ولسمشر ټرمپ ته غوسه دي؟",
+          "headline": "انجیل سره عکس؛ ولې ځینې مذهبي مشران ولسمشر ټرمپ ته غوسه دي؟"
+      },
+      "locators": {
+          "assetUri": "/pashto/world-52924930",
+          "cpsUrn": "urn:bbc:content:assetUri:pashto/world-52924930",
+          "curie": "http://www.bbc.co.uk/asset/839f8bcf-8298-3441-bbc6-19f9ceda4d58",
+          "assetId": "52924930"
+      },
+      "summary": "د امریکا متحدو ایالتونو ولسمشر ډونلډ ټرمپ په پلازمېنه واشنګټن کې د سنټ جان کلیسا تر څنګ داسې حال کې تصویر واخیست چې د عیسویانو سپېڅلی کتاب بایبل یې په لاس کې نیولی و، خو له ۲۴ ساعته هم لږ موده کې د سیمې کلیسا مشران په همدغه ځای کې یو ځای شول او د ولسمشر له دې کړنې سره یې مخالفت څرګند کړ.",
+      "timestamp": 1591278970000,
+      "language": "ps",
+      "byline": {
+          "name": "لیبو ډسیکو",
+          "title": "بي بي سي",
+          "persons": [
+              {
+                  "name": "Lebo Diseko",
+                  "function": "BBC News",
+                  "thumbnail": "http://c.files.bbci.co.uk/DDC6/production/_110547765_biopic3.jpg"
+              }
+          ]
+      },
+      "passport": {
+          "category": {
+              "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+              "categoryName": "News"
+          },
+          "campaigns": [
+              {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+              }
+          ],
+          "taggings": []
+      },
+      "indexImage": {
+          "id": "112613718",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/13F43/production/_112613718_tv061741048.jpg",
+          "path": "/cpsprodpb/13F43/production/_112613718_tv061741048.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Donald Trump holding a Bible in front of a church",
+          "caption": "د ولسمشر ټرمپ له تصویر سره ناندرۍ راپورته شوې",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+      },
+      "id": "urn:bbc:ares::asset:pashto/world-52924930",
+      "type": "cps"
+  },
+  "relatedContent": {
+      "section": {
+          "subType": "index",
+          "name": "نړۍ",
+          "uri": "/pashto/world",
+          "type": "simple"
+      },
+      "site": {
+          "subType": "site",
+          "name": "BBC Pashto",
+          "uri": "/pashto",
+          "type": "simple"
+      },
+      "groups": [
+          {
+              "type": "see-alsos",
+              "promos": [
+                  {
+                      "headlines": {
+                          "shortHeadline": "امریکا کې احتجاجونه: دفاع وزیر مارک اسپر د ولسمشر ټرمپ پرېکړې سره مخالفت وکړ",
+                          "headline": "امریکا کې احتجاجونه: دفاع وزیر مارک اسپر د ولسمشر ټرمپ پرېکړې سره مخالفت وکړ"
+                      },
+                      "locators": {
+                          "assetUri": "/pashto/world-52914251",
+                          "cpsUrn": "urn:bbc:content:assetUri:/pashto/world-52914251"
+                      },
+                      "summary": "د امریکا دفاع وزیر مارک اسپر وايي، د جارج فلویډ د وژل کېدو پایله کې د پیل شویو احتجاجونو پای ته رسولو لپاره د پوځیانو ځای پر ځای کولو ملاتړ نه کوي. د ښاغلي اسپر دا څرګندونې د ولسمشر ډونلډ ټرمپ له هغه ګواښه دوې ورځې وروسته مخې ته راغلې، چې د احتجاجونو ختمولو لپاره یې د پوځ کارولو په تړاو کړی و.",
+                      "timestamp": 1591205056000,
+                      "language": "ps",
+                      "cpsType": "STY",
+                      "indexImage": {
+                          "id": "112696555",
+                          "subType": "index",
+                          "href": "http://c.files.bbci.co.uk/D911/production/_112696555_70839536-dc0e-4d4e-97f6-26e488afd338.jpg",
+                          "path": "/cpsprodpb/D911/production/_112696555_70839536-dc0e-4d4e-97f6-26e488afd338.jpg",
+                          "height": 351,
+                          "width": 624,
+                          "altText": "مارک اسپر",
+                          "copyrightHolder": "Getty Images",
+                          "type": "image"
+                      },
+                      "id": "urn:bbc:ares::asset:pashto/world-52914251",
+                      "type": "cps"
+                  }
+              ]
+          }
+      ]
+  }
+}
