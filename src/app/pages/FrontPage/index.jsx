@@ -20,7 +20,7 @@ import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
-import PageContainer from '#lib/pageStyles/PageContainer';
+import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
 
 const FrontPageMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
@@ -99,7 +99,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
           {offScreenText}
         </VisuallyHiddenText>
         <AdContainer />
-        <PageContainer>
+        <IndexPageContainer>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
               {group.type === 'useful-links' && renderMostRead()}
@@ -111,7 +111,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
             </Fragment>
           ))}
           {!hasUsefulLinks && renderMostRead()}
-        </PageContainer>
+        </IndexPageContainer>
       </main>
     </>
   );
