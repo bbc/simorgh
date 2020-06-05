@@ -2,10 +2,10 @@ import {
   buildArticleATIParams,
   buildArticleATIUrl,
 } from './article/buildParams';
-import {
-  buildFrontPageATIParams,
-  buildFrontPageATIUrl,
-} from './frontpage/buildParams';
+// import {
+//   buildFrontPageATIParams,
+//   buildFrontPageATIUrl,
+// } from './frontpage/buildParams';
 import {
   buildTvRadioATIParams,
   buildTvRadioATIUrl,
@@ -19,19 +19,19 @@ import {
   buildMostReadATIUrl,
 } from './mostReadPage/buildParams';
 import {
-  buildIdxPageATIParams,
-  buildIdxPageATIUrl,
-} from './idxPage/buildParams';
+  buildIndexPageATIParams,
+  buildIndexPageATIUrl,
+} from './indexPage/buildParams';
 
 const ARTICLE_MEDIA_ASSET = 'article-media-asset';
 const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
 
 const pageTypeUrlBuilders = {
   article: buildArticleATIUrl,
-  frontPage: buildFrontPageATIUrl,
+  frontPage: buildIndexPageATIUrl,
   media: buildTvRadioATIUrl,
   mostRead: buildMostReadATIUrl,
-  IDX: buildIdxPageATIUrl,
+  IDX: buildIndexPageATIUrl,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIUrl(
       data,
@@ -50,10 +50,10 @@ const pageTypeUrlBuilders = {
 
 const pageTypeParamBuilders = {
   article: buildArticleATIParams,
-  frontPage: buildFrontPageATIParams,
+  frontPage: buildIndexPageATIParams,
   media: buildTvRadioATIParams,
   mostRead: buildMostReadATIParams,
-  IDX: buildIdxPageATIParams,
+  IDX: buildIndexPageATIParams,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIParams(
       data,
