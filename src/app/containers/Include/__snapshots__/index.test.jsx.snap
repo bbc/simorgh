@@ -10,7 +10,7 @@ exports[`IncludeContainer should not render any HTML when include toggle is disa
     class="GridItemConstrainedMedium-sc-12lwanc-2 IncludeGrid-zso27i-1 hwuOKJ"
   >
     <div
-      class="Include-zso27i-0 dXHWeh"
+      class="Include-zso27i-0 hPXbDJ"
     >
       <div>
         Visual Journalism Markup
@@ -32,7 +32,7 @@ exports[`IncludeContainer should render HTML when include toggle is enabled 1`] 
     class="GridItemConstrainedMedium-sc-12lwanc-2 IncludeGrid-zso27i-1 hwuOKJ"
   >
     <div
-      class="Include-zso27i-0 dXHWeh"
+      class="Include-zso27i-0 hPXbDJ"
     >
       <div>
         Visual Journalism Markup
