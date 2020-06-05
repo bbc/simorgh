@@ -8,11 +8,10 @@ exports[`VideoPlayer should render correctly for amp 1`] = `
 }
 
 .c0 {
-  width: calc(100% + 1rem);
-  margin: 0 -0.5rem;
+  margin-top: 1.5rem;
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c0 {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
@@ -70,8 +69,7 @@ exports[`VideoPlayer should render correctly for canonical 1`] = `
 }
 
 .c0 {
-  width: calc(100% + 1rem);
-  margin: 0 -0.5rem;
+  margin-top: 1.5rem;
 }
 
 .c2 {
@@ -84,7 +82,7 @@ exports[`VideoPlayer should render correctly for canonical 1`] = `
   height: 100%;
 }
 
-@media (min-width:25rem) {
+@media (max-width:37.4375rem) {
   .c0 {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
