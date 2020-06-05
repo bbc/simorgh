@@ -73,11 +73,12 @@ const IncludeContainer = ({ href, html, type }) => {
 IncludeContainer.propTypes = {
   html: string,
   type: string.isRequired,
-  href: string.isRequired,
+  href: string,
 };
 
 IncludeContainer.defaultProps = {
   html: null,
+  href: null,
 };
 
 export default IncludeContainer;
