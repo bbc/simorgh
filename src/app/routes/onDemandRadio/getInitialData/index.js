@@ -4,14 +4,9 @@ import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
 import { logExpiredEpisode } from './logInitialData';
 
-const getEpisodeAvailability = ({
-  availableFrom,
-  availableUntil,
-  pageData,
-}) => {
+const getEpisodeAvailability = ({ availableFrom, availableUntil }) => {
   const timeNow = Date.now();
   if (!availableUntil || timeNow < availableFrom) {
-    logExpiredEpisode(pageData);
     return false;
   }
   return true;
@@ -69,6 +64,14 @@ export default async ({ path: pathname }) => {
 
   const availableFrom = getEpisodeAvailableFrom(json);
   const availableUntil = getEpisodeAvailableUntil(json);
+  const episodeIsAvailable = getEpisodeAvailability({
+    availableFrom,
+    availableUntil,
+  });
+
+  if (!episodeIsAvailable) {
+    logExpiredEpisode(json);
+  }
 
   return {
     ...rest,
@@ -91,11 +94,7 @@ export default async ({ path: pathname }) => {
         promoBrandTitle: getPromoBrandTitle(json),
         durationISO8601: getDurationISO8601(json),
         thumbnailImageUrl: getThumbnailImageUrl(json),
-        episodeIsAvailable: getEpisodeAvailability({
-          availableFrom,
-          availableUntil,
-          json,
-        }),
+        episodeIsAvailable,
         ...pageType,
       },
     }),
