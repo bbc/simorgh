@@ -5,7 +5,6 @@ import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import AmpAd from './Amp';
 import CanonicalAd from './Canonical';
-import CanonicalAdBootstrap from './Canonical/CanonicalAdBootstrapJs';
 
 const AdContainer = () => {
   const { isAmp } = useContext(RequestContext);
@@ -20,13 +19,7 @@ const AdContainer = () => {
   if (isAmp) {
     return <AmpAd />;
   }
-
-  return (
-    <>
-      <CanonicalAdBootstrap />
-      <CanonicalAd />
-    </>
-  );
+  return <CanonicalAd />;
 };
 
 export default AdContainer;

@@ -8,6 +8,7 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import FrontPageSection from '#containers/FrontPageSection';
 import MetadataContainer from '#containers/Metadata';
 import MostReadContainer from '#containers/MostRead';
@@ -18,6 +19,7 @@ import AdContainer from '#containers/Ad';
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import PageContainer from '#lib/pageStyles/PageContainer';
 
 const FrontPageMostReadSection = styled(MostReadSection)`
@@ -31,6 +33,7 @@ const FrontPageMostReadSection = styled(MostReadSection)`
 
 const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
+    ads,
     product,
     serviceLocalizedName,
     translations,
@@ -38,6 +41,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     radioSchedule,
   } = useContext(ServiceContext);
 
+  const hasAds = path(['hasAds'], ads);
   const home = path(['home'], translations);
   const groups = path(['content', 'groups'], pageData);
   const lang = path(['metadata', 'language'], pageData);
@@ -46,6 +50,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const radioScheduleData = path(['radioScheduleData'], pageData);
   const radioScheduleOnPage = path(['onFrontPage'], radioSchedule);
   const radioSchedulePosition = path(['frontPagePosition'], radioSchedule);
+  const { isAmp } = useContext(RequestContext);
 
   // eslint-disable-next-line jsx-a11y/aria-role
   const offScreenText = (
@@ -79,6 +84,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
 
   return (
     <>
+      {hasAds && !isAmp && <CanonicalAdBootstrapJs />}
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
