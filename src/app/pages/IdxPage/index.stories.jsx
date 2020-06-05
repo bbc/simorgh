@@ -1,11 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs';
 import persianAfghanistanIdxData from '#data/persian/afghanistan';
 import ukraineInRussianIdxData from '#data/ukrainian/ukraine_in_russian';
 import IdxPageWithContext from './testHelpers';
 
-const stories = storiesOf('Pages|Idx Page', module).addDecorator(withKnobs);
+const stories = storiesOf('Pages|Idx Page', module);
 
 [
   {
@@ -19,7 +18,7 @@ const stories = storiesOf('Pages|Idx Page', module).addDecorator(withKnobs);
     service: 'ukrainian',
   },
 ].forEach(({ idxPage, pageData, service }) => {
-  stories.add(`${idxPage}`, () => (
-    <IdxPageWithContext service={service} pageData={pageData} />
-  ));
+  stories.add(`${idxPage}`, () => {
+    return <IdxPageWithContext service={service} pageData={pageData} />;
+  });
 });
