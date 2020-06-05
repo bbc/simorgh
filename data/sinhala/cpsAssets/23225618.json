@@ -1,0 +1,232 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:sinhala/23225618",
+    "locators": {
+      "assetUri": "/sinhala/23225618",
+      "cpsUrn": "urn:bbc:content:assetUri:sinhala/23225618",
+      "curie": "http://www.bbc.co.uk/asset/f711a6cd-ed52-ff40-8665-1682160084ff",
+      "assetId": "23225618"
+    },
+    "type": "STY",
+    "createdBy": "sinhala-v6",
+    "language": "si",
+    "lastUpdated": 1589552821343,
+    "firstPublished": 1546604635000,
+    "lastPublished": 1546604635000,
+    "timestamp": 1546604635000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "sinhala.story.23225618.page",
+      "cps_asset_id": "23225618"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "ඇමෙරිකා එක්සත් ජනපදය",
+          "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+          "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+          "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+          "thingSameAs": ["http://sws.geonames.org/6252001/"]
+        }
+      ]
+    },
+    "version": "v1.3.0",
+    "blockTypes": ["image", "paragraph", "media"],
+    "includeComments": false,
+    "atiAnalytics": { "producerName": "SINHALA", "producerId": "82" }
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "63696726",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/F531/test/_63696726_000103778-1.jpg",
+        "path": "/cpsdevpb/F531/test/_63696726_000103778-1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "සංචාරයක: නිරතවීමට ආසන්නයේ සියව",
+        "caption": "සංචාරයක: නිරතවීමට ආසන්නයේ සියව",
+        "copyrightHolder": "Reuters",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "ඔබ ගුවන් ගමනක යෙදීමට පෙර ඔබේ ගමන් බලපත්‍රයේ වලංගු කාලය කීවරක් පරීක්‍ෂා කළාද?",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "මේ මොහොතේත් ලොව පුරා මිලියන ගණනක පිරිසක් එය පරීක්‍ෂා කරමින් සිටිනවා විය හැකිය.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "p01l2tfv",
+        "subType": "clip",
+        "format": "audio",
+        "title": "Trump driving a bus",
+        "synopses": {
+          "short": "Trump: crashes a bus",
+          "medium": "TruTrump: crashes a busmp: crashes a busTrump: crashes a busTrump: crashes a bus"
+        },
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01l2th2.jpg",
+        "embedding": true,
+        "advertising": false,
+        "caption": "Trump: crashes a bus",
+        "versions": [
+          {
+            "versionId": "p01l2tfx",
+            "types": ["Original"],
+            "duration": 59,
+            "durationISO8601": "PT59S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1546605309000
+          }
+        ],
+        "imageCopyright": "AFP",
+        "type": "media"
+      },
+      {
+        "text": "සංචාරය කිරීමට සහ දේශ ගවේෂණයේ යෙදීමට දොරටු විවර කරන හෝ ලෝකය පුරා නිදහසේ ගමන් සඳහා බාධා පමුණුවන ගමන් බලපත්‍රය වටිනා ලියවිල්ලකි.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "සංචාරය කිරීම සඳහා සුවිශේෂ ලියැවිල්ලක් අවශ්‍ය වීම දක්වා වූ සිත් ඇදගන්නා සුළු ඉතිහාස කතාවක් මෙන්ම, ගමන් බලපත්‍ර පිළිබඳ විශේෂ කරුණු කීපයක් ද මේ ලිපියෙන් විස්තර කෙරේ.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "1. ස්කැන්ඩිනේවියානු ගමන් බලපත්‍රයේ උත්තරාලෝක දකින්නට හැකිය.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ස්කැන්ඩිනේවියානු ගමන් බලපත්‍රයක පිටු අධෝරක්ත කිරණ ආලෝකයට නිරාවරණය කළ විට දේදුණු පැහැයෙන් යුත් උත්තරාලෝක දකින්නට හැකියාව ලැබේ.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "පර්සියාවේ රජ කළ පළමු ආටර්සේක්ස්සිස් (King Artaxerxes I) තම නිලධාරියෙකුට එවකට ජුඩියා ලෙස හැඳින්වූ වර්තමාන පලස්තීනය හරහා බාධාවකින් තොරව ගමන් කිරීම සඳහා ලිපියක් නිකුත් කර ඇති අතර එය 16 වන සියවසේ හීබෲ බයිබලයේ අතිරේකයක් වූ නියමායා (Nehemiah) ග්‍රන්ථයට ඇතුළත් කර තිබේ.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "3. ගමන් බලපත්‍රයකට ඡායාරුප අවශ්‍ය වූයේ පළමු ලෝක යුද්ධයෙන් අනතුරුවය",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "සංචාරයක නිරතවීමට ආසන්නයේ ගමන් බලපත්‍රයේ කල් ඉකුත් වීමේ දිනය පිළිබඳ අවදානමක් නොගන්න.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "යුරෝපියානු රටවල් ද ඇතුළු තවත් සමහර රටවල් ගමන් බලපත්‍රයක වලංගු කාලය තම රටට ඇතුළුවන දිනයේ සිට දින 90 ක් ඉක්මවා තිබිය යුතු බවට නියම කර තිබේ.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "නමුත්, සංචාරය කළ රටේ සිරවීමට වඩා, වඩාත් ප්‍රවේසම් විය යුත්තේ කල් පිරීමට මාස හයක කාලයකට පෙර සංචාරය කිරීම සම්බන්ධයෙනි. චීනය, ඉන්දුනීසියාව, රුසියාව, සෞදි අරාබිය වැනි රටවල් මෙම මාස හයේ කාල සීමාව ඉල්ලා සිටි.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "7. ක්වින්ස්ලන්තය හරහා ඔස්ට්‍රේලියාවට ඇතුල්වීමට ගමන් බලපත්‍රයක් අවශ්‍ය නැහැ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "සංචාරයක නිරතවීමට ආසන්නයේ",
+      "headline": "සංචාරයක: නිරතවීමට ආසන්නයේ සියවසේ හීබෲ"
+    },
+    "locators": {
+      "assetUri": "/sinhala/23225618",
+      "cpsUrn": "urn:bbc:content:assetUri:sinhala/23225618",
+      "curie": "http://www.bbc.co.uk/asset/f711a6cd-ed52-ff40-8665-1682160084ff",
+      "assetId": "23225618"
+    },
+    "summary": "යුරෝපියානු රටවල් ද ඇතුළු ලංගු කාලය තම රටට ඇතුළුවන දිනයේ සිට දින 90 ක් ඉක්මවා තිබිය යුතු බවට නියම කර තිබේ.",
+    "timestamp": 1546604635000,
+    "language": "si",
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "63696726",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/F531/test/_63696726_000103778-1.jpg",
+      "path": "/cpsdevpb/F531/test/_63696726_000103778-1.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "සංචාරයක: නිරතවීමට ආසන්නයේ සියව",
+      "caption": "සංචාරයක: නිරතවීමට ආසන්නයේ සියව",
+      "copyrightHolder": "Reuters",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:sinhala/23225618",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "මුල් පිටුව",
+      "uri": "/sinhala/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "පුවත් - බීබීසී සිංහල",
+      "uri": "/sinhala",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "name": "Passport to prostitution",
+            "uri": "http://news.bbc.co.uk/1/hi/england/london/4397818.stm",
+            "type": "link"
+          }
+        ]
+      }
+    ]
+  }
+}
