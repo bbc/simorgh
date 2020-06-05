@@ -12,7 +12,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
       class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 gvjiCP"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 eYXTbz"
       >
         <div
           class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -129,7 +129,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
       class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 gvjiCP"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 eYXTbz"
       >
         <div
           class="Bar-sc-1x4gwjz-0 jsgdXU"
