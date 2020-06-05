@@ -120,25 +120,43 @@ Object {
 
 exports[`AMP Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`AMP Most Read Page Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
-
-exports[`AMP Most Read Page Footer I can see a link: BBC News, Mundo 1`] = `"/mundo"`;
-
-exports[`AMP Most Read Page Footer I can see a link: Contacta a la BBC 1`] = `"https://www.bbc.com/mundo/institucional-36400011"`;
-
-exports[`AMP Most Read Page Footer I can see a link: Cookies 1`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
-
-exports[`AMP Most Read Page Footer I can see a link: Lee sobre nuestra postura acerca de enlaces externos. 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
-
-exports[`AMP Most Read Page Footer I can see a link: Política de privacidad 1`] = `"https://www.bbc.com/mundo/institucional-36400009"`;
-
-exports[`AMP Most Read Page Footer I can see a link: Por qué puedes confiar en la BBC 1`] = `"https://www.bbc.com/mundo/institucional-51359666"`;
-
-exports[`AMP Most Read Page Footer I can see a link: Sobre la BBC 1`] = `"https://www.bbc.com/mundo/institucional-36400007"`;
-
-exports[`AMP Most Read Page Footer I can see a link: Términos de uso 1`] = `"https://www.bbc.com/mundo/institucional-36400005"`;
-
 exports[`AMP Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+
+exports[`AMP Most Read Page Footer Link should match text 1`] = `"BBC News, Mundo"`;
+
+exports[`AMP Most Read Page Footer Link should match text 2`] = `"Por qué puedes confiar en la BBC"`;
+
+exports[`AMP Most Read Page Footer Link should match text 3`] = `"Términos de uso"`;
+
+exports[`AMP Most Read Page Footer Link should match text 4`] = `"Sobre la BBC"`;
+
+exports[`AMP Most Read Page Footer Link should match text 5`] = `"Política de privacidad"`;
+
+exports[`AMP Most Read Page Footer Link should match text 6`] = `"Cookies"`;
+
+exports[`AMP Most Read Page Footer Link should match text 7`] = `"Contacta a la BBC"`;
+
+exports[`AMP Most Read Page Footer Link should match text 8`] = `"AdChoices / Do Not Sell My Info"`;
+
+exports[`AMP Most Read Page Footer Link should match text 9`] = `"Lee sobre nuestra postura acerca de enlaces externos."`;
+
+exports[`AMP Most Read Page Footer Link should match url 1`] = `"/mundo"`;
+
+exports[`AMP Most Read Page Footer Link should match url 2`] = `"https://www.bbc.com/mundo/institucional-51359666"`;
+
+exports[`AMP Most Read Page Footer Link should match url 3`] = `"https://www.bbc.com/mundo/institucional-36400005"`;
+
+exports[`AMP Most Read Page Footer Link should match url 4`] = `"https://www.bbc.com/mundo/institucional-36400007"`;
+
+exports[`AMP Most Read Page Footer Link should match url 5`] = `"https://www.bbc.com/mundo/institucional-36400009"`;
+
+exports[`AMP Most Read Page Footer Link should match url 6`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+
+exports[`AMP Most Read Page Footer Link should match url 7`] = `"https://www.bbc.com/mundo/institucional-36400011"`;
+
+exports[`AMP Most Read Page Footer Link should match url 8`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`AMP Most Read Page Footer Link should match url 9`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
 exports[`AMP Most Read Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 

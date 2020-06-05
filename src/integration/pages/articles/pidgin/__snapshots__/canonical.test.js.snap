@@ -6,25 +6,43 @@ exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
-exports[`Canonical Articles Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
-
-exports[`Canonical Articles Footer I can see a link: As e concern BBC 1`] = `"https://www.bbc.co.uk/aboutthebbc"`;
-
-exports[`Canonical Articles Footer I can see a link: BBC News, Pidgin 1`] = `"/pidgin"`;
-
-exports[`Canonical Articles Footer I can see a link: Call BBC 1`] = `"https://www.bbc.com/pidgin/institutional-42188215"`;
-
-exports[`Canonical Articles Footer I can see a link: Cookies 1`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
-
-exports[`Canonical Articles Footer I can see a link: De way wey we de take go external link. 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
-
-exports[`Canonical Articles Footer I can see a link: How dem dey take use am 1`] = `"https://www.bbc.co.uk/usingthebbc/terms/"`;
-
-exports[`Canonical Articles Footer I can see a link: Privacy Policy 1`] = `"https://www.bbc.co.uk/usingthebbc/privacy/"`;
-
-exports[`Canonical Articles Footer I can see a link: Why you fit trust BBC News 1`] = `"https://www.bbc.com/pidgin/institutional-48528766"`;
-
 exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+
+exports[`Canonical Articles Footer Link should match text 1`] = `"BBC News, Pidgin"`;
+
+exports[`Canonical Articles Footer Link should match text 2`] = `"Why you fit trust BBC News"`;
+
+exports[`Canonical Articles Footer Link should match text 3`] = `"How dem dey take use am"`;
+
+exports[`Canonical Articles Footer Link should match text 4`] = `"As e concern BBC"`;
+
+exports[`Canonical Articles Footer Link should match text 5`] = `"Privacy Policy"`;
+
+exports[`Canonical Articles Footer Link should match text 6`] = `"Cookies"`;
+
+exports[`Canonical Articles Footer Link should match text 7`] = `"Call BBC"`;
+
+exports[`Canonical Articles Footer Link should match text 8`] = `"AdChoices / Do Not Sell My Info"`;
+
+exports[`Canonical Articles Footer Link should match text 9`] = `"De way wey we de take go external link."`;
+
+exports[`Canonical Articles Footer Link should match url 1`] = `"/pidgin"`;
+
+exports[`Canonical Articles Footer Link should match url 2`] = `"https://www.bbc.com/pidgin/institutional-48528766"`;
+
+exports[`Canonical Articles Footer Link should match url 3`] = `"https://www.bbc.co.uk/usingthebbc/terms/"`;
+
+exports[`Canonical Articles Footer Link should match url 4`] = `"https://www.bbc.co.uk/aboutthebbc"`;
+
+exports[`Canonical Articles Footer Link should match url 5`] = `"https://www.bbc.co.uk/usingthebbc/privacy/"`;
+
+exports[`Canonical Articles Footer Link should match url 6`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`Canonical Articles Footer Link should match url 7`] = `"https://www.bbc.com/pidgin/institutional-42188215"`;
+
+exports[`Canonical Articles Footer Link should match url 8`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Canonical Articles Footer Link should match url 9`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
