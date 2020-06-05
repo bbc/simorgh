@@ -20,7 +20,9 @@ describe('IdxPage', () => {
 
       expect(container).toMatchSnapshot();
     });
+  });
 
+  describe('Assertions', () => {
     it('should render idx page sections', async () => {
       const { container } = render(
         <IdxPageWithContext pageData={persianAfghanistanIdxData} />,
