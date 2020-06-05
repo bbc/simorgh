@@ -192,6 +192,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: false,
+      onIdxPage: false,
     },
     recommendations: {
       hasStoryRecommendations: false,

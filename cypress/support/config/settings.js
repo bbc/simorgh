@@ -9,15 +9,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/afaanoromoo/articles/ce3nlgrelv1o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/afaanoromoo/articles/c4g19kgl85ko'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/afaanoromoo/articles/c4g19kgl85ko'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -175,7 +175,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/afrique/articles/cx80n852v6mo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/afrique/articles/cz216x22106o'],
@@ -346,15 +346,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/amharic/articles/c0lgxqknqkdo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/amharic/articles/czqverekrldo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/amharic/articles/czqverekrldo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -512,15 +512,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/arabic/articles/c8j91j2ljppo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/arabic/articles/c1er5mjnznzo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/arabic/articles/c1er5mjnznzo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -684,11 +684,11 @@ module.exports = () => ({
           },
           test: {
             paths: ['/azeri/articles/c5k08pqnzexo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/azeri/articles/c5k08pqnzexo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -819,15 +819,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/bengali/articles/cv90149zq1eo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/bengali/articles/c6p3yp5zzmeo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/bengali/articles/c6p3yp5zzmeo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -990,15 +990,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/burmese/articles/c41px3vd4nxo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/burmese/articles/cn0exdy1jzvo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/burmese/articles/cn0exdy1jzvo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -1169,7 +1169,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/cymrufyw/erthyglau/c06p32z9x2mo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -1211,15 +1211,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/gahuza/articles/cryd02nzn81o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/gahuza/articles/cey23zx8wx8o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/gahuza/articles/cey23zx8wx8o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -1382,15 +1382,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/gujarati/articles/c2rnxj48elwo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/gujarati/articles/cr5el5kw591o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/gujarati/articles/cr5el5kw591o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -1516,15 +1516,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/hausa/articles/c41rj1z261zo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/hausa/articles/c2nr6xqmnewo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/hausa/articles/c2nr6xqmnewo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -1686,15 +1686,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/hindi/articles/cd80y3ezl8go'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/hindi/articles/c0469479x9xo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/hindi/articles/c0469479x9xo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -1854,15 +1854,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/igbo/articles/ckjn8jnrn75o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/igbo/articles/cr1lw620ygjo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/igbo/articles/cr1lw620ygjo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -1944,12 +1944,12 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/igbo/afirika-52816709'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/igbo/afirika-23252735'],
+            enabled: true,
           },
           local: {
             paths: ['/igbo/afirika-23252735'],
@@ -1988,15 +1988,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/indonesia/articles/cvd36dly8zdo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/indonesia/articles/c0q2zq8pzvzo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/indonesia/articles/c0q2zq8pzvzo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -2059,8 +2059,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/indonesia/bbc_indonesian_radio/programmes/w13xtt0s'],
-            enabled: false,
+            paths: [
+              '/indonesia/bbc_indonesian_radio/programmes/w13xtt0s', // Brand
+              '/indonesia/bbc_indonesian_radio/w172xh281s8mkhr', // Episode
+            ],
+            enabled: true,
           },
           local: {
             paths: ['/indonesia/bbc_indonesian_radio/w172xh267fpn19l'],
@@ -2293,15 +2296,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/korean/articles/crym1243d97o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/korean/articles/c3mn1lvz65xo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/korean/articles/c3mn1lvz65xo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -2463,11 +2466,11 @@ module.exports = () => ({
           },
           test: {
             paths: ['/kyrgyz/articles/c3xd4xg3rm9o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/kyrgyz/articles/c3xd4xg3rm9o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -2586,15 +2589,15 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/kyrgyz/kyrgyzstan-52891593'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/kyrgyz/23292889'],
+            enabled: true,
           },
           local: {
-            paths: [],
+            paths: ['/kyrgyz/23292889'],
             enabled: false,
           },
         },
@@ -2630,15 +2633,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/marathi/articles/cvjxwvn04yjo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/marathi/articles/cp47g4myxz7o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/marathi/articles/cp47g4myxz7o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -2764,15 +2767,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/mundo/articles/cdwrpl7qwqqo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/mundo/articles/ce42wzqr2mko'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/mundo/articles/ce42wzqr2mko'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -2911,7 +2914,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/naidheachdan/sgeulachdan/c18q7nedn2ko'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -3174,15 +3177,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/pashto/articles/c70970g2251o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/pashto/articles/cyjmdl92z3ro'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/pashto/articles/cyjmdl92z3ro'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -3245,8 +3248,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/pashto/bbc_pashto_radio/programmes/p0340yr4'],
-            enabled: false,
+            paths: [
+              '/pashto/bbc_pashto_radio/programmes/p0340yr4', // Brand
+              '/pashto/bbc_pashto_radio/w172xjck9cw6lvc', // Episode
+            ],
+            enabled: true,
           },
           local: {
             paths: ['/pashto/bbc_pashto_radio/w3ct0lz1'],
@@ -3301,12 +3307,12 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/pashto/world-52873295'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/pashto/23289748'],
+            enabled: true,
           },
           local: {
             paths: ['/pashto/23289748'],
@@ -3676,15 +3682,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/portuguese/articles/cpg5prg95lmo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/portuguese/articles/cd61pm8gzmpo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/portuguese/articles/cd61pm8gzmpo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -3814,15 +3820,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/punjabi/articles/c39p51156lyo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/punjabi/articles/c0l79lr39qyo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/punjabi/articles/c0l79lr39qyo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -3948,15 +3954,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/russian/articles/c6ygxgl53w9o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/russian/articles/ck7pz7re3zgo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/russian/articles/ck7pz7re3zgo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -4388,15 +4394,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/sinhala/articles/cldr38jnwd2o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/sinhala/articles/c45w255zlexo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/sinhala/articles/c45w255zlexo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -4514,15 +4520,15 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/sinhala/sri-lanka-52851837'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/sinhala/23225618'],
+            enabled: true,
           },
           local: {
-            paths: [],
+            paths: ['/sinhala/23225618'],
             enabled: false,
           },
         },
@@ -4557,15 +4563,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/somali/articles/c8z79d4mzrlo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/somali/articles/cgn6emk3jm8o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/somali/articles/cgn6emk3jm8o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -4745,15 +4751,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/swahili/articles/cw794z3gpd5o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/swahili/articles/czjqge2jwn2o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/swahili/articles/czjqge2jwn2o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -4916,15 +4922,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/tamil/articles/cvr4752gr13o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/tamil/articles/cwl08ll3me8o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/tamil/articles/cwl08ll3me8o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -5087,15 +5093,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/telugu/articles/c1x76pey3x3o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/telugu/articles/cq0y4008d4vo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/telugu/articles/cq0y4008d4vo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -5221,15 +5227,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/thai/articles/czx7w3zyme1o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/thai/articles/c442rl3md0eo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/thai/articles/c442rl3md0eo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -5355,15 +5361,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/tigrinya/articles/c3vq38ve33xo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/tigrinya/articles/ck62z3rjwdeo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/tigrinya/articles/ck62z3rjwdeo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -5521,15 +5527,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/turkce/articles/cpgzpzjl3pdo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/turkce/articles/c8q1ze59n25o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/turkce/articles/c8q1ze59n25o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -6090,15 +6096,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/urdu/articles/c4qg7qq63y6o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/urdu/articles/cwgq7rzv172o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/urdu/articles/cwgq7rzv172o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -6269,7 +6275,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/uzbek/articles/cxj3rjxm6r0o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -6436,15 +6442,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/vietnamese/articles/cpgqngyexq7o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/vietnamese/articles/c3y59g5zm19o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/vietnamese/articles/c3y59g5zm19o'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -6575,15 +6581,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/yoruba/articles/cg7qz71en35o'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/yoruba/articles/clw06m0nj8qo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/yoruba/articles/clw06m0nj8qo'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -6665,12 +6671,12 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/yoruba/afrika-51998079'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/yoruba/afrika-23252769'],
+            enabled: true,
           },
           local: {
             paths: ['/yoruba/afrika-23252769'],

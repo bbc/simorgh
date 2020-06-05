@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { string, node } from 'prop-types';
 import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -26,14 +25,7 @@ import LinkedData from '#containers/LinkedData';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import MetadataContainer from '#containers/Metadata';
 import Grid, { GelPageGrid } from '#app/components/Grid';
-
-const StyledMain = styled.main.attrs({ role: 'main', 'data-e2e': 'most-read' })`
-  flex-grow: 1;
-  margin: 0 ${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin: 0 ${GEL_SPACING_DBL};
-  }
-`;
+import IndexMain from '#app/components/PageLayout/IndexMain';
 
 const ConstrainedWrapper = styled.div`
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
@@ -135,7 +127,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={header} />
-      <StyledMain>
+      <IndexMain data-e2e="most-read">
         <MostReadContainer
           mostReadEndpointOverride={mostReadEndpointOverride}
           wrapper={MostReadWrapper}
@@ -143,7 +135,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
           initialData={pageData}
           serverRenderOnAmp
         />
-      </StyledMain>
+      </IndexMain>
     </>
   );
 };
