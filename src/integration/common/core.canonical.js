@@ -1,4 +1,6 @@
 export default () => {
+  if (process.env.DEV_MODE) return;
+
   it('Bundle scripts', () => {
     const bundleScriptMatcher = new RegExp(
       `(\\/static\\/js\\/(main|vendor|${global.service})-\\w+\\.\\w+\\.js)`,
