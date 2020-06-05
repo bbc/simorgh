@@ -5,6 +5,7 @@ import Image, { AmpImg } from '@bbc/psammead-image';
 import {
   GEL_SPACING_QUAD,
   GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_1_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import { RequestContext } from '#contexts/RequestContext';
@@ -13,7 +14,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 const paddingDir = ({ dir }) => `padding-${dir === 'rtl' ? 'left' : 'right'}`;
 
 const ImageContainer = styled.div`
-  padding: ${GEL_SPACING_QUAD} 0;
+  padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING_TRPL};
   ${paddingDir}: ${GEL_SPACING_DBL};
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     display: none;
