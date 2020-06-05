@@ -105,6 +105,19 @@ Object {
 }
 `;
 
+exports[`AMP Story Page Analytics chartbeat 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "STY",
+    "domain": "test.bbc.co.uk",
+    "sections": "Mundo, Mundo - Internacional, Mundo - STY, Mundo - Internacional - STY, Mundo - Explainer-category",
+    "title": "Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
 exports[`AMP Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
 exports[`AMP Story Page Footer I can see a link: AdChoices / Do Not Sell My Info 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
