@@ -6,11 +6,41 @@ These tests use the [Jest](#what-is-jest) test runner and operate in a [JSDOM](#
 
 To run the tests locally:
 
-```js
+```
 npm run test:integration
 ```
 
-This will build and run the application that the tests will run against.
+To run tests for a single page type with the watch task:
+
+```
+npm run test:integration -- --pageTypes=articles --watch
+```
+
+To run tests for multiple page types:
+
+```
+npm run test:integration -- --pageTypes=articles,frontPage
+```
+
+To run tests for a single page type with the watch task and webpack hot reloading of application code:
+
+```
+npm run test:integration -- --pageTypes=liveRadio --watch --dev
+```
+
+To run tests in CI so they fail if a snapshot was not captured:
+
+```
+npm run test:integration:ci
+```
+
+To stop running tests immediately when there is a failure - NB this is useful when you want to reduce noise if there are a lot of failing tests and you want to inspect one failing test at a time:
+
+```
+npm run test:integration -- --bail
+```
+
+Any other Jest CLI args and flags can be passed along in the `test:integration` script.
 
 ## How to write tests
 
