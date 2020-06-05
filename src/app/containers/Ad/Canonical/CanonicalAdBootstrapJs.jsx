@@ -19,9 +19,6 @@ const CanonicalAdBootstrapJs = () => (
         },
       ]}
     />
-    <Helmet>
-      <script src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js" />
-    </Helmet>
   </>
 );
 
