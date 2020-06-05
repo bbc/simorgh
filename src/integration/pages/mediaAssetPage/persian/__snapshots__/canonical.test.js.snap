@@ -186,7 +186,7 @@ exports[`Canonical Media Asset Page SEO Heading level 1 1`] = `"Trump long headl
 
 exports[`Canonical Media Asset Page SEO Lang attribute 1`] = `"fa"`;
 
-exports[`Canonical Media Asset Page SEO Linked data Article 1`] = `
+exports[`Canonical Media Asset Page SEO Linked data Article should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "Article",
@@ -231,7 +231,7 @@ Object {
 }
 `;
 
-exports[`Canonical Media Asset Page SEO Linked data AudioObject 1`] = `
+exports[`Canonical Media Asset Page SEO Linked data AudioObject should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "AudioObject",

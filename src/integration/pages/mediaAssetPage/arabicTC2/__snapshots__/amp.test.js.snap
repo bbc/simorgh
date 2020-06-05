@@ -260,7 +260,7 @@ exports[`AMP Media Asset Page SEO Heading level 1 1`] = `"شركة شارب لل
 
 exports[`AMP Media Asset Page SEO Lang attribute 1`] = `"ar"`;
 
-exports[`AMP Media Asset Page SEO Linked data Article 1`] = `
+exports[`AMP Media Asset Page SEO Linked data Article should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "Article",
@@ -305,7 +305,7 @@ Object {
 }
 `;
 
-exports[`AMP Media Asset Page SEO Linked data VideoObject 1`] = `
+exports[`AMP Media Asset Page SEO Linked data VideoObject should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "VideoObject",

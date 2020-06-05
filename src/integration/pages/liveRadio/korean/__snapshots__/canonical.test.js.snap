@@ -96,7 +96,7 @@ exports[`Canonical Korean Live Radio Page SEO Heading level 1 1`] = `"BBC 코리
 
 exports[`Canonical Korean Live Radio Page SEO Lang attribute 1`] = `"ko"`;
 
-exports[`Canonical Korean Live Radio Page SEO Linked data RadioChannel 1`] = `
+exports[`Canonical Korean Live Radio Page SEO Linked data RadioChannel should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "RadioChannel",

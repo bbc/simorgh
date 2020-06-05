@@ -192,7 +192,7 @@ exports[`Canonical Front Page SEO Heading level 1 1`] = `"BBC News, عربي - �
 
 exports[`Canonical Front Page SEO Lang attribute 1`] = `"ar"`;
 
-exports[`Canonical Front Page SEO Linked data WebPage 1`] = `
+exports[`Canonical Front Page SEO Linked data WebPage should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "WebPage",

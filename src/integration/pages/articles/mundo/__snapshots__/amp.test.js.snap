@@ -239,7 +239,7 @@ exports[`AMP Articles SEO Heading level 1 1`] = `"Este es el titular de este art
 
 exports[`AMP Articles SEO Lang attribute 1`] = `"es"`;
 
-exports[`AMP Articles SEO Linked data Article 1`] = `
+exports[`AMP Articles SEO Linked data Article should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "Article",
@@ -284,7 +284,7 @@ Object {
 }
 `;
 
-exports[`AMP Articles SEO Linked data VideoObject 1`] = `
+exports[`AMP Articles SEO Linked data VideoObject should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "VideoObject",

@@ -255,7 +255,7 @@ exports[`AMP Photo Gallery Page SEO Heading level 1 1`] = `"Río 2016, el antes 
 
 exports[`AMP Photo Gallery Page SEO Lang attribute 1`] = `"es"`;
 
-exports[`AMP Photo Gallery Page SEO Linked data Article 1`] = `
+exports[`AMP Photo Gallery Page SEO Linked data Article should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "Article",

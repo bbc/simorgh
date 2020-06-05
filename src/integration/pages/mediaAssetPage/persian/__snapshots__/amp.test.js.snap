@@ -300,7 +300,7 @@ exports[`AMP Media Asset Page SEO Heading level 1 1`] = `"Trump long headline"`;
 
 exports[`AMP Media Asset Page SEO Lang attribute 1`] = `"fa"`;
 
-exports[`AMP Media Asset Page SEO Linked data Article 1`] = `
+exports[`AMP Media Asset Page SEO Linked data Article should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "Article",
@@ -345,7 +345,7 @@ Object {
 }
 `;
 
-exports[`AMP Media Asset Page SEO Linked data AudioObject 1`] = `
+exports[`AMP Media Asset Page SEO Linked data AudioObject should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "AudioObject",

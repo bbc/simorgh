@@ -176,7 +176,7 @@ exports[`Canonical Most Read Page SEO Heading level 1 1`] = `"Más leídas"`;
 
 exports[`Canonical Most Read Page SEO Lang attribute 1`] = `"es"`;
 
-exports[`Canonical Most Read Page SEO Linked data WebPage 1`] = `
+exports[`Canonical Most Read Page SEO Linked data WebPage should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "WebPage",

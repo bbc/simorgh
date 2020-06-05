@@ -180,9 +180,15 @@ export default () => {
         const scriptContent = JSON.parse(script.textContent);
         const type = scriptContent['@type'];
 
-        it(`${type}`, () => {
+        it('should be in the document', () => {
           expect(script).toBeInTheDocument();
+        });
+
+        it('should contain text', () => {
           expect(scriptContent).toBeTruthy();
+        });
+
+        it(`${type} should match text`, () => {
           expect(scriptContent).toMatchSnapshot();
         });
       });
