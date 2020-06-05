@@ -11,71 +11,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   height: 0.75rem;
 }
 
-.c35 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c37 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c33 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c31 {
-  position: relative;
-  z-index: 0;
-  margin-top: 2rem;
-}
-
-.c34 {
-  margin: 0;
-  padding: 0;
-}
-
 .c29 {
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -234,7 +169,72 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   overflow: hidden;
 }
 
-.c44 {
+.c35 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c36 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c37 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c33 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c31 {
+  position: relative;
+  z-index: 0;
+  margin-top: 2rem;
+}
+
+.c34 {
+  margin: 0;
+  padding: 0;
+}
+
+.c43 {
   padding: 0.5rem 0 1rem;
 }
 
@@ -534,68 +534,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-@media (min-width:37.5rem) {
-  .c36 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c37 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c37 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c37 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c37 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c33 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c33 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c31 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c31 {
-    margin-bottom: 1.5rem;
-  }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -978,6 +916,68 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
+@media (min-width:37.5rem) {
+  .c36 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c37 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c37 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c37 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c37 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c33 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c33 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c31 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c31 {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (max-width:62.9375rem) {
   .c44 {
     border-bottom: 0.0625rem solid #F2F2F2;
@@ -1336,6 +1336,9 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
             id="DataContainer"
           >
             <noscript />
+            <div>
+              chartbeat
+            </div>
             <div
               class="c0 c1"
               dir="ltr"
@@ -1409,7 +1412,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               <span
                                 class="c17"
                               >
-                                Wia dis foto come from, 
+                                Wia dis foto come from,
                               </span>
                               <span
                                 lang="en-GB"
@@ -1428,7 +1431,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             <span
                               class="c17"
                             >
-                              Wetin we call dis foto, 
+                              Wetin we call dis foto,
                             </span>
                             <p>
                               Some people went to the NTA awards recently.
@@ -1445,7 +1448,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       class="c20"
                     >
                       <b>
-                         This is introduction text, it should be bold by default, but also support 
+                         This is introduction text, it should be bold by default, but also support
                       </b>
                       <a
                         class="c21"
@@ -1468,7 +1471,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         class="c22"
                       >
                         <b>
-                          This is a subheadline! that has 
+                          This is a subheadline! that has
                         </b>
                       </i>
                       <a
@@ -1500,7 +1503,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           class="c25"
                           role="listitem"
                         >
-                          It can have 
+                          It can have
                           <b>
                             bold text
                           </b>
@@ -1536,14 +1539,14 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     <p
                       class="c20"
                     >
-                      Feta the big cheese macaroni cheese. 
+                      Feta the big cheese macaroni cheese.
                       <a
                         class="c21"
                         href="https://bbc.com/pidgin/23248703"
                       >
                         Caerphilly danish fontina
                       </a>
-                       queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. 
+                       queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese.
                       <b>
                         Cow cheeseburger
                       </b>
@@ -1576,7 +1579,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               <span
                                 class="c17"
                               >
-                                Wia dis foto come from, 
+                                Wia dis foto come from,
                               </span>
                               <span
                                 lang="en-GB"
@@ -1629,7 +1632,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     <p
                       class="c20"
                     >
-                      Rubber cheese macaroni 
+                      Rubber cheese macaroni
                       <i
                         class="c22"
                       >
@@ -1659,7 +1662,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           class="c25"
                           role="listitem"
                         >
-                          It can have 
+                          It can have
                           <b>
                             bold text
                           </b>
@@ -1935,7 +1938,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                     class="c51"
                                     dir="ltr"
                                   >
-                                    AS E DE HAPPEN 
+                                    AS E DE HAPPEN
                                   </span>
                                   Test m̀ịṅị̀ịọ́ụ̄ please ignore
                                 </span>
@@ -1998,7 +2001,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                   <span
                                     class="c17"
                                   >
-                                    Audio, 
+                                    Audio,
                                   </span>
                                   <span>
                                     Akụkọ BBC Igbo na Nkeji
@@ -2461,7 +2464,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                   <span
                                     class="c17"
                                   >
-                                    Audio, 
+                                    Audio,
                                   </span>
                                   <span>
                                     A gbabguola Don Wani
@@ -2839,72 +2842,7 @@ exports[`Story Page should render correctly when the secondary column data is no
     </script>
   </head>
   <body>
-    .c37 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c38 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c39 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c35 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c33 {
-  position: relative;
-  z-index: 0;
-  margin-top: 2rem;
-}
-
-.c36 {
-  margin: 0;
-  padding: 0;
-}
-
-.c31 {
+    .c31 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3067,6 +3005,71 @@ exports[`Story Page should render correctly when the secondary column data is no
   overflow: hidden;
 }
 
+.c37 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c38 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c39 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c35 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c33 {
+  position: relative;
+  z-index: 0;
+  margin-top: 2rem;
+}
+
+.c36 {
+  margin: 0;
+  padding: 0;
+}
+
 .c26 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -3170,68 +3173,6 @@ exports[`Story Page should render correctly when the secondary column data is no
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-@media (min-width:37.5rem) {
-  .c38 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c39 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c39 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c39 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c39 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c35 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c35 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c33 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c33 {
-    margin-bottom: 1.5rem;
-  }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -3614,6 +3555,68 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 }
 
+@media (min-width:37.5rem) {
+  .c38 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c39 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c39 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c39 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c39 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c35 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c35 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c33 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c33 {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c26 {
     font-size: 1rem;
@@ -3748,6 +3751,9 @@ exports[`Story Page should render correctly when the secondary column data is no
                 id="DataContainer"
               >
                 <noscript />
+                <div>
+                  chartbeat
+                </div>
                 <div
                   class="c0 c1"
                   dir="ltr"
@@ -3831,7 +3837,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                                   <span
                                     class="c19"
                                   >
-                                    Wia dis foto come from, 
+                                    Wia dis foto come from,
                                   </span>
                                   <span
                                     lang="en-GB"
@@ -3850,7 +3856,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                                 <span
                                   class="c19"
                                 >
-                                  Wetin we call dis foto, 
+                                  Wetin we call dis foto,
                                 </span>
                                 <p>
                                   Some people went to the NTA awards recently.
@@ -3867,7 +3873,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                           class="c22"
                         >
                           <b>
-                             This is introduction text, it should be bold by default, but also support 
+                             This is introduction text, it should be bold by default, but also support
                           </b>
                           <a
                             class="c23"
@@ -3890,7 +3896,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                             class="c24"
                           >
                             <b>
-                              This is a subheadline! that has 
+                              This is a subheadline! that has
                             </b>
                           </i>
                           <a
@@ -3922,7 +3928,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                               class="c27"
                               role="listitem"
                             >
-                              It can have 
+                              It can have
                               <b>
                                 bold text
                               </b>
@@ -3958,14 +3964,14 @@ exports[`Story Page should render correctly when the secondary column data is no
                         <p
                           class="c22"
                         >
-                          Feta the big cheese macaroni cheese. 
+                          Feta the big cheese macaroni cheese.
                           <a
                             class="c23"
                             href="https://bbc.com/pidgin/23248703"
                           >
                             Caerphilly danish fontina
                           </a>
-                           queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. 
+                           queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese.
                           <b>
                             Cow cheeseburger
                           </b>
@@ -3998,7 +4004,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                                   <span
                                     class="c19"
                                   >
-                                    Wia dis foto come from, 
+                                    Wia dis foto come from,
                                   </span>
                                   <span
                                     lang="en-GB"
@@ -4051,7 +4057,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                         <p
                           class="c22"
                         >
-                          Rubber cheese macaroni 
+                          Rubber cheese macaroni
                           <i
                             class="c24"
                           >
@@ -4081,7 +4087,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                               class="c27"
                               role="listitem"
                             >
-                              It can have 
+                              It can have
                               <b>
                                 bold text
                               </b>
@@ -4290,71 +4296,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 0.8125rem;
 }
 
-.c37 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c38 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c39 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c35 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c33 {
-  position: relative;
-  z-index: 0;
-  margin-top: 2rem;
-}
-
-.c36 {
-  margin: 0;
-  padding: 0;
-}
-
 .c31 {
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -4528,7 +4469,72 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   overflow: hidden;
 }
 
-.c46 {
+.c37 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c38 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c39 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c35 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c33 {
+  position: relative;
+  z-index: 0;
+  margin-top: 2rem;
+}
+
+.c36 {
+  margin: 0;
+  padding: 0;
+}
+
+.c45 {
   padding: 0.5rem 0 1rem;
 }
 
@@ -4812,68 +4818,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 100%;
 }
 
-@media (min-width:37.5rem) {
-  .c38 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c39 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c39 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c39 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c39 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c35 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c35 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c33 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c33 {
-    margin-bottom: 1.5rem;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c31 {
     font-size: 1.5rem;
@@ -5265,6 +5209,68 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @supports (display:grid) {
   .c41 {
     display: block;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c38 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c39 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c39 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c39 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c39 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c35 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c35 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c33 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c33 {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -5845,6 +5851,9 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                 id="DataContainer"
               >
                 <noscript />
+                <div>
+                  chartbeat
+                </div>
                 <div
                   class="c0 c1"
                   dir="ltr"
@@ -5928,7 +5937,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   <span
                                     class="c19"
                                   >
-                                    Wia dis foto come from, 
+                                    Wia dis foto come from,
                                   </span>
                                   <span
                                     lang="en-GB"
@@ -5947,7 +5956,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 <span
                                   class="c19"
                                 >
-                                  Wetin we call dis foto, 
+                                  Wetin we call dis foto,
                                 </span>
                                 <p>
                                   Some people went to the NTA awards recently.
@@ -5964,7 +5973,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           class="c22"
                         >
                           <b>
-                             This is introduction text, it should be bold by default, but also support 
+                             This is introduction text, it should be bold by default, but also support
                           </b>
                           <a
                             class="c23"
@@ -5987,7 +5996,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             class="c24"
                           >
                             <b>
-                              This is a subheadline! that has 
+                              This is a subheadline! that has
                             </b>
                           </i>
                           <a
@@ -6019,7 +6028,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="c27"
                               role="listitem"
                             >
-                              It can have 
+                              It can have
                               <b>
                                 bold text
                               </b>
@@ -6055,14 +6064,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         <p
                           class="c22"
                         >
-                          Feta the big cheese macaroni cheese. 
+                          Feta the big cheese macaroni cheese.
                           <a
                             class="c23"
                             href="https://bbc.com/pidgin/23248703"
                           >
                             Caerphilly danish fontina
                           </a>
-                           queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. 
+                           queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese.
                           <b>
                             Cow cheeseburger
                           </b>
@@ -6095,7 +6104,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   <span
                                     class="c19"
                                   >
-                                    Wia dis foto come from, 
+                                    Wia dis foto come from,
                                   </span>
                                   <span
                                     lang="en-GB"
@@ -6148,7 +6157,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         <p
                           class="c22"
                         >
-                          Rubber cheese macaroni 
+                          Rubber cheese macaroni
                           <i
                             class="c24"
                           >
@@ -6178,7 +6187,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="c27"
                               role="listitem"
                             >
-                              It can have 
+                              It can have
                               <b>
                                 bold text
                               </b>
@@ -6657,7 +6666,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                         class="c19"
                                       >
                                         Video
-                                        , 
+                                        ,
                                       </span>
                                       <span>
                                         Bayelsa election: Thugs enta my house destroy my property - Seriake Dickson
@@ -6754,7 +6763,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                         class="c19"
                                       >
                                         Audio
-                                        , 
+                                        ,
                                       </span>
                                       <span>
                                         Kojey Radical: Why gigs feel like football matches
@@ -7118,7 +7127,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                         class="c19"
                                       >
                                         Image gallery
-                                        , 
+                                        ,
                                       </span>
                                       <span>
                                         Kenya Decides 2017 in Pictures
