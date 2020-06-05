@@ -72,4 +72,29 @@ export default () => {
       });
     }
   });
+
+  describe('Story Promo', () => {
+    const section = document.querySelector('section');
+
+    it('I can see an image', () => {
+      if (section) {
+        expect(section).toBeInTheDocument();
+
+        const imageEl = section.querySelectorAll('img, amp-img')[0];
+        expect(imageEl).toBeInTheDocument();
+        expect(imageEl).toMatchSnapshot();
+      }
+    });
+
+    it('I can see a headline', () => {
+      if (section) {
+        expect(section).toBeInTheDocument();
+
+        const h3El = section.querySelector('h3');
+        expect(h3El).toBeInTheDocument();
+        expect(h3El.textContent).toBeTruthy();
+        expect(h3El.textContent).toMatchSnapshot();
+      }
+    });
+  });
 };
