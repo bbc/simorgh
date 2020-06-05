@@ -26,6 +26,12 @@ exports[`MediaPageBlocks Paragraph should render correctly 1`] = `
   }
 }
 
+@media (max-width:62.9375rem) {
+  .c0 {
+    padding-bottom: 0.5rem;
+  }
+}
+
 <p
   class="c0"
   id="idAttr"
