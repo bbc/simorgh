@@ -2,10 +2,6 @@ import {
   buildArticleATIParams,
   buildArticleATIUrl,
 } from './article/buildParams';
-// import {
-//   buildFrontPageATIParams,
-//   buildFrontPageATIUrl,
-// } from './frontpage/buildParams';
 import {
   buildTvRadioATIParams,
   buildTvRadioATIUrl,

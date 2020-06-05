@@ -1,8 +1,9 @@
-import React, { Fragment, useContext } from 'react';
-import { node, string } from 'prop-types';
-import styled from 'styled-components';
+import React, { useContext, Fragment } from 'react';
 import path from 'ramda/src/path';
+import styled from 'styled-components';
+import { node, string } from 'prop-types';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import { ServiceContext } from '#contexts/ServiceContext';
 import MetadataContainer from '#containers/Metadata';
 import LinkedData from '#containers/LinkedData';
 import IndexHeading from '#containers/IndexHeading';
@@ -10,11 +11,11 @@ import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
 import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
+import RadioScheduleContainer from '#containers/RadioSchedule';
 import FrontPageSection from '#containers/FrontPageSection';
 import idxPageDataPropTypes from '#models/propTypes/idxPage';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import { ServiceContext } from '#contexts/ServiceContext';
 
 const IdxMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
@@ -44,7 +45,11 @@ MostReadWrapper.propTypes = {
   children: node.isRequired,
 };
 
-const IdxPage = ({ pageData, mostReadEndpointOverride }) => {
+const IdxPage = ({
+  pageData,
+  mostReadEndpointOverride,
+  radioScheduleEndpointOverride,
+}) => {
   const {
     mostRead: { onIdxPage },
   } = useContext(ServiceContext);
@@ -53,6 +58,11 @@ const IdxPage = ({ pageData, mostReadEndpointOverride }) => {
   const lang = path(['metadata', 'language'], pageData);
   const summary = path(['metadata', 'summary'], pageData);
   const seoTitle = path(['promo', 'name'], pageData);
+
+  const { radioSchedule } = useContext(ServiceContext);
+  const radioScheduleData = path(['radioScheduleData'], pageData);
+  const radioScheduleOnIdxPage = path(['onIdxPage'], radioSchedule);
+  const radioScheduleIdxPosition = path(['idxPagePosition'], radioSchedule);
 
   return (
     <>
@@ -70,6 +80,15 @@ const IdxPage = ({ pageData, mostReadEndpointOverride }) => {
           <IndexHeading id="content">{title}</IndexHeading>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
+              {radioScheduleOnIdxPage &&
+                radioScheduleIdxPosition === group.semanticGroupName && (
+                  <RadioScheduleContainer
+                    initialData={radioScheduleData}
+                    radioScheduleEndpointOverride={
+                      radioScheduleEndpointOverride
+                    }
+                  />
+                )}
               <FrontPageSection group={group} sectionNumber={index} />
             </Fragment>
           ))}
@@ -83,10 +102,12 @@ const IdxPage = ({ pageData, mostReadEndpointOverride }) => {
 IdxPage.propTypes = {
   pageData: idxPageDataPropTypes.isRequired,
   mostReadEndpointOverride: string,
+  radioScheduleEndpointOverride: string,
 };
 
 IdxPage.defaultProps = {
   mostReadEndpointOverride: null,
+  radioScheduleEndpointOverride: null,
 };
 
 export default IdxPage;
