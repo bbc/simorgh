@@ -3,8 +3,11 @@ import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import routes from '#app/routes';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 
-/* Guidelines to follow when updating the CSP Header can be found here:
-https://github.com/bbc/simorgh-infrastructure/blob/latest/documentation/updating-csp.md */
+/*
+ * On localhost these CSP headers currently only apply on the production build.
+ * `npm run build && npm run start` & visit a localhost URL.
+ * View the developer console for errors.
+ */
 
 const directives = {
   connectSrc: {
