@@ -76,10 +76,14 @@ const LegacyGridItemConstrainedLarge = styled(GridItemConstrainedLarge)`
 
 const StyledSectionLabel = styled(SectionLabel)`
   margin-top: 0;
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-bottom: ${props =>
-      props.labelId === 'top-stories-heading' ? `${GEL_SPACING_DBL}` : ''};
-  }
+  ${props =>
+    props.labelId === 'top-stories-heading' &&
+    `
+    margin-bottom: 0;
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      margin-bottom: ${GEL_SPACING_DBL};
+    }
+  `}
 `;
 
 // Apply the correct top & bottom padding around the single story promo
