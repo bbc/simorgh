@@ -65,7 +65,7 @@ const mostReadItems = ({ data, isAmp, numberOfItems, service }) => {
   // The ARES test endpoint for most read renders fixture data, so the data is stale
   const isTest = process.env.SIMORGH_APP_ENV === 'test';
 
-  // Do not show most read if lastRecordUpdated is greater than 35min as this means PopAPI has failed twice
+  // Do not show most read if lastRecordUpdated is greater than 60min as this means PopAPI has failed twice
   // in succession. This suggests ATI may be having issues, hence risk of stale data.
   if (isTest || mostReadRecordIsFresh(data.lastRecordTimeStamp)) {
     const items = [];
