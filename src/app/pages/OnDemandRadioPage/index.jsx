@@ -71,7 +71,7 @@ const renderEpisode = ({
     episodeAvailableFrom,
     episodeAvailableUntil,
   );
-  const otherStructuredData = {
+  const otherLinkedData = {
     audio: {
       '@type': 'AudioObject',
       name: promoBrandTitle,
@@ -94,7 +94,7 @@ const renderEpisode = ({
           <LinkedData
             type="WebPage"
             seoTitle={headline}
-            otherStructuredData={otherStructuredData}
+            otherLinkedData={otherLinkedData}
           />
         </>
       );

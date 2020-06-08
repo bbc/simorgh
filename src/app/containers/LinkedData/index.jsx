@@ -15,7 +15,7 @@ const LinkedData = ({
   datePublished,
   dateModified,
   aboutTags,
-  otherStructuredData,
+  otherLinkedData,
 }) => {
   const {
     brandName,
@@ -84,7 +84,7 @@ const LinkedData = ({
         ...(isTrustProjectParticipant && { noBylinesPolicy }),
       },
     }),
-    ...otherStructuredData,
+    ...otherLinkedData,
   };
 
   return (
@@ -115,7 +115,7 @@ LinkedData.propTypes = {
     }),
   ),
   // eslint-disable-next-line react/forbid-prop-types
-  otherStructuredData: object,
+  otherLinkedData: object,
 };
 
 LinkedData.defaultProps = {
@@ -125,7 +125,7 @@ LinkedData.defaultProps = {
   datePublished: undefined,
   dateModified: undefined,
   aboutTags: undefined,
-  otherStructuredData: {},
+  otherLinkedData: {},
 };
 
 export default LinkedData;
