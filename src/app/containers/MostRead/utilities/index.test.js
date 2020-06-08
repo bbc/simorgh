@@ -15,7 +15,7 @@ describe('mostReadRecordIsFresh', () => {
     expect(mostReadRecordIsFresh(calcTimestampMinutesAgo(59))).toEqual(true);
   });
 
-  it('should return false if more than 35 minutes ago', () => {
+  it('should return false if more than 60 minutes ago', () => {
     expect(mostReadRecordIsFresh(calcTimestampMinutesAgo(61))).toEqual(false);
     expect(mostReadRecordIsFresh(calcTimestampDaysAgo(1))).toEqual(false);
   });
