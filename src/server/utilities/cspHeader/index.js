@@ -234,6 +234,9 @@ const directives = {
       'https://cdn.syndication.twimg.com', // Social Embeds
       'https://static.bbc.co.uk', // STY include
       'https://www.bbc.co.uk', // STY include
+      'https://passport-control.int.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - int
+      'https://passport-control.test.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - test
+      'https://passport-control.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - live
       "'self'",
       "'unsafe-inline'",
     ],
@@ -262,6 +265,9 @@ const directives = {
       'https://static.bbc.co.uk', // STY include
       'http://static.bbc.co.uk', // for localhost STY include
       'https://www.bbc.co.uk', // STY include
+      'https://passport-control.int.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - int
+      'https://passport-control.test.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - test
+      'https://passport-control.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - live
       "'self'",
       "'unsafe-inline'",
     ],
