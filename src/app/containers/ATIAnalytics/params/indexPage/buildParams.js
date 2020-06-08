@@ -2,10 +2,11 @@ import { buildATIPageTrackPath } from '../../atiUrl';
 import { LIBRARY_VERSION, getPublishedDatetime } from '#lib/analyticsUtils';
 import {
   getContentId,
+  getContentType,
   getLanguage,
   getPageIdentifier,
   getPageTitle,
-} from '#lib/analyticsUtils/frontpage';
+} from '#lib/analyticsUtils/indexPage';
 
 export const buildIndexPageATIParams = (
   indexPageData,
@@ -23,7 +24,7 @@ export const buildIndexPageATIParams = (
   return {
     appName: atiAnalyticsAppName,
     contentId: getContentId(indexPageData),
-    contentType: pageType === 'IDX' ? 'index-section' : 'index-home',
+    contentType: getContentType(pageType),
     language: getLanguage(indexPageData),
     pageIdentifier: getPageIdentifier(indexPageData, service),
     pageTitle: getPageTitle(indexPageData, brandName),

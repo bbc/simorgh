@@ -8,9 +8,9 @@ import {
   getTitle,
   getConfig,
 } from '.';
-import onClient from '../../../lib/utilities/onClient';
-import * as articleUtils from '../../../lib/analyticsUtils/article';
-import * as frontPageUtils from '../../../lib/analyticsUtils/frontpage';
+import onClient from '#lib/utilities/onClient';
+import * as articleUtils from '#lib/analyticsUtils/article';
+import * as frontPageUtils from '#lib/analyticsUtils/indexPage';
 
 let isOnClient = false;
 

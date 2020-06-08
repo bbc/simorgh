@@ -70,7 +70,7 @@ describe('indexPage buildParams', () => {
   });
 
   describe('IDX Page', () => {
-    describe('buildIdxPageATIParams', () => {
+    describe('build IDX Page ATI params', () => {
       it('should return the right object', () => {
         const result = buildIndexPageATIParams(
           idxPage,
@@ -87,7 +87,7 @@ describe('indexPage buildParams', () => {
       });
     });
 
-    describe('buildIdxPageATIUrl', () => {
+    describe('build IDX Page ATI url', () => {
       it('should return the right url', () => {
         const result = buildIndexPageATIUrl(
           idxPage,
@@ -121,11 +121,11 @@ describe('indexPage buildParams', () => {
   });
 
   describe('Frontpage', () => {
-    describe('buildFrontPageATIParams', () => {
+    describe('build frontPage ATI params', () => {
       it('should return the right object', () => {
         const result = buildIndexPageATIParams(
           frontPage,
-          requestContext,
+          { ...requestContext, pageType: 'frontPage' },
           serviceContext,
         );
         const validFrontPageURLParams = {
@@ -138,11 +138,11 @@ describe('indexPage buildParams', () => {
       });
     });
 
-    describe('buildFrontPageATIUrl', () => {
+    describe('build frontPage ATI url', () => {
       it('should return the right url', () => {
         const result = buildIndexPageATIUrl(
           frontPage,
-          requestContext,
+          { ...requestContext, pageType: 'frontPage' },
           serviceContext,
         );
         expect(result).toEqual(

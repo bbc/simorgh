@@ -1,4 +1,10 @@
-import { getContentId, getLanguage, getPageIdentifier, getPageTitle } from '.';
+import {
+  getContentId,
+  getLanguage,
+  getPageIdentifier,
+  getPageTitle,
+  getContentType,
+} from '.';
 
 describe('getPageIdentifier', () => {
   const goodData = {
@@ -142,5 +148,25 @@ describe('getPageTitle', () => {
     const title = getPageTitle(badData, brandName);
 
     expect(title).toBeNull();
+  });
+});
+
+describe('getContentType', () => {
+  it('should return index-home when pageType is frontPage', () => {
+    const contentType = getContentType('frontPage');
+
+    expect(contentType).toEqual('index-home');
+  });
+
+  it('should return index-section when pageType is IDX', () => {
+    const contentType = getContentType('IDX');
+
+    expect(contentType).toEqual('index-section');
+  });
+
+  it('should return null when pageType is not frontPage or IDX', () => {
+    const contentType = getContentType('article');
+
+    expect(contentType).toBeNull();
   });
 });

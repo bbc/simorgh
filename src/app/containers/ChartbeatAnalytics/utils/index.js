@@ -1,9 +1,9 @@
 import Cookie from 'js-cookie';
 import path from 'ramda/src/path';
-import onClient from '../../../lib/utilities/onClient';
-import { getPromoHeadline } from '../../../lib/analyticsUtils/article';
-import { getPageTitle } from '../../../lib/analyticsUtils/frontpage';
-import { getReferrer } from '../../../lib/analyticsUtils';
+import onClient from '#lib/utilities/onClient';
+import { getPromoHeadline } from '#lib/analyticsUtils/article';
+import { getPageTitle } from '#lib/analyticsUtils/indexPage';
+import { getReferrer } from '#lib/analyticsUtils';
 
 const ID_COOKIE = 'ckns_sylphid';
 
