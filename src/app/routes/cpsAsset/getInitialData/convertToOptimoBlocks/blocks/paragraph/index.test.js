@@ -23,7 +23,7 @@ describe('convertParagraph', () => {
     expect(await convertParagraph(input)).toEqual(expected);
   });
 
-  it('should convert a candy_xml paragraph to Optimo format', async () => {
+  it('should convert a candy_xml paragraph with a bold tag to Optimo format', async () => {
     const input = {
       text: 'A paragraph with <bold>bold text</bold>',
       markupType: 'candy_xml',
@@ -42,6 +42,31 @@ describe('convertParagraph', () => {
           },
         ],
         text: 'A paragraph with bold text',
+      },
+    ]);
+
+    expect(await convertParagraph(input)).toEqual(expected);
+  });
+
+  it('should convert a candy_xml paragraph with a span tag to Optimo format', async () => {
+    const input = {
+      text: 'A paragraph with <span>a span</span>',
+      markupType: 'candy_xml',
+      type: 'paragraph',
+    };
+    const expected = optimoTextWithParagraph([
+      {
+        fragments: [
+          {
+            fragment: 'A paragraph with ',
+            attributes: [],
+          },
+          {
+            fragment: 'a span',
+            attributes: ['span'],
+          },
+        ],
+        text: 'A paragraph with a span',
       },
     ]);
 

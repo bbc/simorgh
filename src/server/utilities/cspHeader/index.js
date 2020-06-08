@@ -3,8 +3,11 @@ import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import routes from '#app/routes';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 
-/* Guidelines to follow when updating the CSP Header can be found here:
-https://github.com/bbc/simorgh-infrastructure/blob/latest/documentation/updating-csp.md */
+/*
+ * On localhost these CSP headers currently only apply on the production build.
+ * `npm run build && npm run start` & visit a localhost URL.
+ * View the developer console for errors.
+ */
 
 const directives = {
   connectSrc: {
@@ -94,6 +97,7 @@ const directives = {
       'https://syndication.twitter.com', // Social Embeds
       'https://news.files.bbci.co.uk', // STY include
       'https://www.bbc.co.uk', // STY include
+      'https://bbc-maps.carto.com', // STY include maps
       "'self'",
     ],
     ampNonLive: [
@@ -122,6 +126,7 @@ const directives = {
       'https://news.files.bbci.co.uk', // STY include
       'https://www.bbc.co.uk', // STY include
       'http://www.bbc.co.uk', // for localhost STY include
+      'https://bbc-maps.carto.com', // STY include maps
       "'self'",
     ],
   },
