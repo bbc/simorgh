@@ -120,6 +120,7 @@ describe('cspHeader', () => {
         'https://syndication.twitter.com',
         'https://news.files.bbci.co.uk',
         'https://www.bbc.co.uk',
+        'https://bbc-maps.carto.com',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -281,6 +282,7 @@ describe('cspHeader', () => {
         'https://news.files.bbci.co.uk',
         'https://www.bbc.co.uk',
         'http://www.bbc.co.uk',
+        'https://bbc-maps.carto.com',
         "'self'",
       ],
       imgSrcExpectation: [
