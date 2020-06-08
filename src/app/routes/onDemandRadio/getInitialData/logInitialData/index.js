@@ -6,27 +6,29 @@ const logger = nodeLogger(__filename);
 
 const parsePageIdentifier = pageIdentifier => {
   const pathParts = pageIdentifier.split('.');
-  pathParts.pop();
+  if (pathParts.slice(-1)[0] === 'page') {
+    pathParts.pop();
+  }
   const uri = pathParts.join('/');
   return uri;
 };
 
-const getUri = pageData => {
+const getUri = pageJson => {
   const pageIdentifier = path(
     ['metadata', 'analyticsLabels', 'pageIdentifier'],
-    pageData,
+    pageJson,
   );
   const pageUri = parsePageIdentifier(pageIdentifier);
   return pageUri;
 };
 
-const logExpiredEpisode = pageData => {
+const logExpiredEpisode = pageJson => {
   logger.info(RADIO_EPISODE_EXPIRED, {
-    url: getUri(pageData),
+    url: getUri(pageJson),
   });
 };
 
 // const pathWithValidation = pageData => {
 // }
 
-export default logExpiredEpisode;
+export { logExpiredEpisode, parsePageIdentifier };
