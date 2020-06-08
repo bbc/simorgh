@@ -71,7 +71,7 @@ describe('LinkedData', () => {
   const propsForOndemandRadio = {
     seoTitle: 'Ondemand Radio Headline',
     type: 'WebPage',
-    otherData: {
+    otherLinkedData: {
       audio: {
         '@type': 'AudioObject',
         name: 'ماښامنۍ خپرونه',
