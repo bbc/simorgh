@@ -1,0 +1,399 @@
+{
+    "content": {
+      "blocks": [
+        {
+          "markupType": "plain_text",
+          "role": "introduction",
+          "text": "په دې نقشه کې تاسې کولی شئ چې د افغانستان په ۳۴ ولایتونو کې د کورونا وېروس د مثبتو پېښو او مړینو وروستی شمېر مالوم کړئ. د مالوماتو لپاره نقشه کې پر اړوند ولایت کلېک وکړئ.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "role": "introduction",
+          "text": "د دې شمېرو سرچینه د افغانستان د عامې روغتیا وزارت دی. موږ هڅه کوو چې دا پاڼه هره ورځ د عامې روغتیا وزارت د مالوماتو پر بنسټ تازه کړو او وروستي ارقام درته وړاندې کړو.",
+          "type": "paragraph"
+        },
+        {
+          "href": "/include/newsspec/27218/pashto/app?responsive=true&newsapps=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/afghanistan_launcher_640-nc_47tui.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/afghanistan_launcher_640-nc_47tui.png",
+          "platform": "highweb",
+          "required": false,
+          "title": "د افغانستان ۳۴ ولایتونو کې د کورونا وېروس وروستی وضعیت",
+          "type": "include"
+        },
+        {
+          "altText": "نقشه",
+          "caption": "پر نقشه د پوهېدلو کیلي",
+          "copyrightHolder": "BBC",
+          "height": 75,
+          "href": "http://c.files.bbci.co.uk/0061/production/_112179000_96585158_239480684022244_3868523369024454656_n-1.png",
+          "id": "112179000",
+          "path": "/cpsprodpb/0061/production/_112179000_96585158_239480684022244_3868523369024454656_n-1.png",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 640
+        }
+      ]
+    },
+    "metadata": {
+      "analyticsLabels": {
+        "counterName": "pashto.afghanistan.story.52562598.page",
+        "cps_asset_id": "52562598",
+        "cps_asset_type": "sty"
+      },
+      "atiAnalytics": {
+        "producerId": "68",
+        "producerName": "PASHTO"
+      },
+      "blockTypes": [
+        "paragraph",
+        "include",
+        "image"
+      ],
+      "createdBy": "pashto-v6",
+      "firstPublished": 1588847834000,
+      "id": "urn:bbc:ares::asset:pashto/afghanistan-52562598",
+      "includeComments": false,
+      "language": "ps",
+      "lastPublished": 1588847834000,
+      "lastUpdated": 1589801419456,
+      "locators": {
+        "assetId": "52562598",
+        "assetUri": "/pashto/afghanistan-52562598",
+        "cpsUrn": "urn:bbc:content:assetUri:pashto/afghanistan-52562598",
+        "curie": "http://www.bbc.co.uk/asset/46850e43-f5aa-6d46-9368-fa24ab0833be"
+      },
+      "options": {
+        "allowAdvertising": true,
+        "allowDateStamp": true,
+        "allowHeadline": true,
+        "allowPrintingSharingLinks": true,
+        "allowRelatedStoriesBox": true,
+        "allowRightHandSide": true,
+        "hasContentWarning": false,
+        "hasNewsTracker": false,
+        "includeComments": false,
+        "isBreakingNews": false,
+        "isFactCheck": false,
+        "isIgorSeoTagsEnabled": false,
+        "isKeyContent": false,
+        "suitableForSyndication": true
+      },
+      "passport": {
+        "campaigns": [
+          {
+            "campaignId": "5a988e2939461b000e9dabf8",
+            "campaignName": "WS - Educate me"
+          },
+          {
+            "campaignId": "5a988e3739461b000e9dabfa",
+            "campaignName": "WS - Give me perspective"
+          },
+          {
+            "campaignId": "5a988e4739461b000e9dabfc",
+            "campaignName": "WS - Update me"
+          }
+        ],
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+          "categoryName": "Interactive"
+        },
+        "taggings": []
+      },
+      "tags": {
+        "about": [
+          {
+            "curationList": [
+              {
+                "curationId": "5458dd22-d52d-439f-bcc5-defa1d0b197f",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+            "thingLabel": "روغتیا",
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Health",
+              "http://www.wikidata.org/entity/Q12147"
+            ],
+            "thingType": [
+              "core:Thing",
+              "core:Theme",
+              "tagging:TagConcept"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+            "topicId": "c8y94yr7y9rt",
+            "topicName": "روغتیا"
+          },
+          {
+            "curationList": [
+              {
+                "curationId": "b5cf9918-5d68-4d53-bfe1-a487ae470baf",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingId": "1a5696c5-07d0-4a08-8b54-41ad5cd534b6",
+            "thingLabel": "افغانستان",
+            "thingSameAs": [
+              "http://sws.geonames.org/1149361/"
+            ],
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Place",
+              "core:Thing"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/1a5696c5-07d0-4a08-8b54-41ad5cd534b6#id",
+            "topicId": "cr50y57xj52t",
+            "topicName": "افغانستان"
+          },
+          {
+            "curationList": [
+              {
+                "curationId": "a7c1a852-61e8-4860-b6e6-926d46fd8f70",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingId": "bfb65ccf-35c3-4745-81b2-d5eb9d5878ef",
+            "thingLabel": "خوست",
+            "thingSameAs": [
+              "http://sws.geonames.org/1136469/"
+            ],
+            "thingType": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Place"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/bfb65ccf-35c3-4745-81b2-d5eb9d5878ef#id",
+            "topicId": "czpv7kz5kwpt",
+            "topicName": "خوست"
+          },
+          {
+            "curationList": [
+              {
+                "curationId": "91faf85a-3b1d-4ea9-b5e1-81535f59b0a5",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingId": "8c1bf8d8-1fd2-42f0-91d5-8b5718feaa53",
+            "thingLabel": "کندهار",
+            "thingSameAs": [
+              "http://sws.geonames.org/1138336/"
+            ],
+            "thingType": [
+              "core:Thing",
+              "core:Place",
+              "tagging:TagConcept"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/8c1bf8d8-1fd2-42f0-91d5-8b5718feaa53#id",
+            "topicId": "c7zp5zkxy88t",
+            "topicName": "کندهار"
+          },
+          {
+            "curationList": [
+              {
+                "curationId": "35bf3b08-97e2-43e3-aed3-ffac01fc63a1",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingId": "13a9a98e-33c4-471e-bf9f-98101a47c0f7",
+            "thingLabel": "هرات",
+            "thingSameAs": [
+              "http://sws.geonames.org/1140026/"
+            ],
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Thing",
+              "core:Place"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/13a9a98e-33c4-471e-bf9f-98101a47c0f7#id",
+            "topicId": "c082de1w5wwt",
+            "topicName": "هرات"
+          },
+          {
+            "curationList": [
+              {
+                "curationId": "62970952-2605-42f8-ad09-fbfe0119252e",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingId": "bdd9d7c5-ef05-4d49-80b5-183f880ae843",
+            "thingLabel": "ننګرهار",
+            "thingSameAs": [
+              "http://sws.geonames.org/1132366/"
+            ],
+            "thingType": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Place"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/bdd9d7c5-ef05-4d49-80b5-183f880ae843#id",
+            "topicId": "cqv3z2e98z7t",
+            "topicName": "ننګرهار"
+          },
+          {
+            "curationList": [
+              {
+                "curationId": "82f27789-5ccc-496d-a5f6-bdced352e3cf",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingId": "e4213737-4f65-4342-a98e-5fd3d5f26912",
+            "thingLabel": "کابل",
+            "thingSameAs": [
+              "http://sws.geonames.org/1138958/"
+            ],
+            "thingType": [
+              "core:Place",
+              "core:Thing",
+              "tagging:TagConcept"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/e4213737-4f65-4342-a98e-5fd3d5f26912#id",
+            "topicId": "cwr9jrdvgggt",
+            "topicName": "کابل"
+          },
+          {
+            "curationList": [
+              {
+                "curationId": "4368bc4a-b4c2-4d17-b3e8-0fd05734fa9d",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingId": "5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+            "thingLabel": "کورونا وېروس",
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q290805"
+            ],
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Thing",
+              "core:Event"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+            "topicId": "cv85lx6nvynt",
+            "topicName": "کورونا وېروس"
+          },
+          {
+            "curationList": [
+              {
+                "curationId": "eb662d53-773e-41a1-9649-05538a424ac6",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingId": "147e8283-4039-45fd-8ee3-a07d613abe19",
+            "thingLabel": "بلخ",
+            "thingSameAs": [
+              "http://sws.geonames.org/1147290/"
+            ],
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Thing",
+              "core:Place"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/147e8283-4039-45fd-8ee3-a07d613abe19#id",
+            "topicId": "cez14yx7333t",
+            "topicName": "بلخ"
+          }
+        ]
+      },
+      "timestamp": 1588847834000,
+      "type": "STY",
+      "version": "v1.3.0"
+    },
+    "promo": {
+      "headlines": {
+        "headline": "د افغانستان ۳۴ ولایتونو کې د کورونا وېروس وروستی وضعیت",
+        "shortHeadline": "د افغانستان ۳۴ ولایتونو کې د کورونا وېروس وروستی وضعیت"
+      },
+      "id": "urn:bbc:ares::asset:pashto/afghanistan-52562598",
+      "indexImage": {
+        "altText": "کورونا",
+        "caption": "د افغانستان په ۳۴ ولایتونو کې د کورونا وېروس وروستی حال",
+        "copyrightHolder": "BBC",
+        "height": 549,
+        "href": "http://c.files.bbci.co.uk/4E81/production/_112179002_96101423_292705195055332_5878777447503101952_n-1.png",
+        "id": "112179002",
+        "path": "/cpsprodpb/4E81/production/_112179002_96101423_292705195055332_5878777447503101952_n-1.png",
+        "subType": "index",
+        "type": "image",
+        "width": 976
+      },
+      "language": "ps",
+      "locators": {
+        "assetId": "52562598",
+        "assetUri": "/pashto/afghanistan-52562598",
+        "cpsUrn": "urn:bbc:content:assetUri:pashto/afghanistan-52562598",
+        "curie": "http://www.bbc.co.uk/asset/46850e43-f5aa-6d46-9368-fa24ab0833be"
+      },
+      "passport": {
+        "campaigns": [
+          {
+            "campaignId": "5a988e2939461b000e9dabf8",
+            "campaignName": "WS - Educate me"
+          },
+          {
+            "campaignId": "5a988e3739461b000e9dabfa",
+            "campaignName": "WS - Give me perspective"
+          },
+          {
+            "campaignId": "5a988e4739461b000e9dabfc",
+            "campaignName": "WS - Update me"
+          }
+        ],
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+          "categoryName": "Interactive"
+        },
+        "taggings": []
+      },
+      "summary": "په دې نقشه کې تاسې کولی شئ چې د افغانستان په ۳۴ ولایتونو کې د کورونا وېروس د مثبتو پېښو، مړینو او رغېدلیو کسانو وروستی شمېر مالوم کړئ. د دې شمېرو سرچینه د افغانستان د عامې روغتیا وزارت دی. موږ هڅه کوو چې دا پاڼه هره ورځ د عامې روغتیا وزارت د مالوماتو پر بنسټ تازه کړو او وروستي ارقام درته وړاندې کړو.",
+      "timestamp": 1588847834000,
+      "type": "cps"
+    },
+    "relatedContent": {
+      "groups": [
+        {
+          "promos": [
+            {
+              "cpsType": "STY",
+              "headlines": {
+                "headline": "کورونا وېروس د نړۍ پر نقشه",
+                "shortHeadline": "کورونا وېروس د نړۍ پر نقشه"
+              },
+              "id": "urn:bbc:ares::asset:pashto/world-52296215",
+              "indexImage": {
+                "altText": ".",
+                "copyrightHolder": "Getty Images",
+                "height": 1152,
+                "href": "http://c.files.bbci.co.uk/A033/production/_111911014_mediaitem111276648.jpg",
+                "id": "111911014",
+                "path": "/cpsprodpb/A033/production/_111911014_mediaitem111276648.jpg",
+                "subType": "index",
+                "type": "image",
+                "width": 2048
+              },
+              "language": "ps",
+              "locators": {
+                "assetUri": "/pashto/world-52296215",
+                "cpsUrn": "urn:bbc:content:assetUri:/pashto/world-52296215"
+              },
+              "summary": "کورونا وېروس نقشه",
+              "timestamp": 1587591059000,
+              "type": "cps"
+            }
+          ],
+          "type": "see-alsos"
+        }
+      ],
+      "section": {
+        "name": "افغانستان",
+        "subType": "index",
+        "type": "simple",
+        "uri": "/pashto/afghanistan"
+      },
+      "site": {
+        "name": "BBC Pashto",
+        "subType": "site",
+        "type": "simple",
+        "uri": "/pashto"
+      }
+    }
+  }
