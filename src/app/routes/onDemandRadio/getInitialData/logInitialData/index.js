@@ -25,7 +25,4 @@ const logExpiredEpisode = pageJson => {
   });
 };
 
-// const pathWithValidation = pageData => {
-// }
-
 export { logExpiredEpisode, parsePageIdentifier, getUri };
