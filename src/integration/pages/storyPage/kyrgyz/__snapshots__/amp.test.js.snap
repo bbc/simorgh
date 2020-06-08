@@ -10,6 +10,17 @@ Object {
       "promptUI": "consent-prompt",
     },
   },
+  "policy": Object {
+    "default": Object {
+      "timeout": Object {
+        "fallbackAction": "reject",
+        "seconds": 0,
+      },
+      "waitFor": Object {
+        "user-consent": Array [],
+      },
+    },
+  },
 }
 `;
 
@@ -78,7 +89,7 @@ exports[`AMP Story Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=58&p=story::kyrgyz.story.23292889.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:bb9390aa-4b35-e448-b295-cbd7369fe457]&x2=[amp]&x3=[news-kyrgyz]&x4=[ky]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[Test+STY+for+social+embeds+-+BBC+News+Кыргыз+Кызматы]&x11=[2020-04-24T14:51:17.000Z]&x12=[2020-04-24T14:51:17.000Z]",
+    "pageview": "\${base}s=598343&s2=58&p=story::kyrgyz.story.23292889.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:bb9390aa-4b35-e448-b295-cbd7369fe457]&x2=[amp]&x3=[news-kyrgyz]&x4=[ky]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[Test+STY+for+social+embeds+-+BBC+News+Кыргыз+Кызматы]&x11=[2020-04-24T14:51:17.000Z]&x12=[2020-04-24T14:51:17.000Z]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -94,13 +105,28 @@ Object {
 }
 `;
 
+exports[`AMP Story Page Analytics chartbeat 1`] = `
+Object {
+  "vars": Object {
+    "contentType": "STY",
+    "domain": "test.bbc.co.uk",
+    "sections": "Kyrgyz, Kyrgyz - Башталгыч бет, Kyrgyz - STY, Kyrgyz - Башталгыч бет - STY, Kyrgyz - undefined-category",
+    "title": "Test STY for social embeds",
+    "uid": 50924,
+    "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
 exports[`AMP Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
 
 exports[`AMP Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
 
 exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
-exports[`AMP Story Page I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
+exports[`AMP Story Page Header I can see the navigation 1`] = `"Башталгыч бет"`;
+
+exports[`AMP Story Page Lead image I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
 exports[`AMP Story Page SEO Canonical link 1`] = `"http://localhost:7080/kyrgyz/23292889"`;
 

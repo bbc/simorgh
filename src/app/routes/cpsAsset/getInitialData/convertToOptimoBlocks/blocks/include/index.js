@@ -1,4 +1,11 @@
 import 'isomorphic-fetch';
+import {
+  INCLUDE_ERROR,
+  INCLUDE_FETCH_ERROR,
+  INCLUDE_MISSING_URL,
+  INCLUDE_REQUEST_RECEIVED,
+  INCLUDE_UNSUPPORTED,
+} from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
 
 const logger = nodeLogger(__filename);
@@ -22,42 +29,49 @@ const fetchMarkup = async url => {
     */
     const res = await fetch(url, { timeout: 3000 });
     if (res.status !== 200) {
-      throw new Error(`Failed to fetch include at: ${url}`);
-    } else {
-      const html = await res.text();
-      return html;
+      logger.error(INCLUDE_FETCH_ERROR, {
+        status: res.status,
+        url,
+      });
+      return null;
     }
-  } catch (e) {
-    logger.error(
-      JSON.stringify(
-        {
-          event: 'include_fetch_error',
-          message: e,
-        },
-        null,
-        2,
-      ),
-    );
+    const html = await res.text();
+    logger.info(INCLUDE_REQUEST_RECEIVED, {
+      url,
+    });
+    return html;
+  } catch (error) {
+    logger.error(INCLUDE_ERROR, {
+      error: error.toString(),
+      url,
+    });
     return null;
   }
 };
 
-const convertInclude = async ({ href: hrefWithParams, type, ...rest }) => {
+const convertInclude = async includeBlock => {
   const supportedTypes = {
     indepthtoolkit: 'idt1',
     idt2: 'idt2',
     include: 'vj',
+    'news/special': 'vj',
+    'market-data': 'vj',
+    'smallprox/include': 'vj',
   };
 
-  // This strips the GET query params from the href
-  const href = hrefWithParams && hrefWithParams.split('?')[0];
+  const { href, type, ...rest } = includeBlock;
+
+  if (!href) {
+    logger.error(INCLUDE_MISSING_URL, includeBlock);
+    return null;
+  }
 
   // This determines if the href has a leading '/'
   const hrefTypePostion = () => (href.indexOf('/') === 0 ? 1 : 0);
 
   // This checks if the supportedType is in the correct position of the href
   const hrefIsSupported = () => supportedType =>
-    href && href.startsWith(supportedType, hrefTypePostion());
+    href.startsWith(supportedType, hrefTypePostion());
 
   // This extracts the type from the href
   const typeExtraction = Object.keys(supportedTypes).find(
@@ -67,6 +81,10 @@ const convertInclude = async ({ href: hrefWithParams, type, ...rest }) => {
   // This determines if the type is supported and returns the include type name
   const includeType = supportedTypes[typeExtraction];
   if (!includeType) {
+    logger.info(INCLUDE_UNSUPPORTED, {
+      type,
+      url: href,
+    });
     return null;
   }
 

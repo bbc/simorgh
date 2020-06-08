@@ -10,6 +10,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'ကြော်ငြာ',
     },
     lang: `my`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -197,6 +198,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
+      durationLabel: 'Duration %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

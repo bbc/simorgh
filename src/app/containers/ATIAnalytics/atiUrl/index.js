@@ -42,6 +42,15 @@ export const buildATIPageTrackPath = ({
   categoryName,
   campaigns,
 }) => {
+  const href = getHref(platform);
+  const referrer = getReferrer(platform, origin, previousPath);
+
+  // We use amp variable substitutes to get the href and referrer and these cannot be manipulated
+  // For canonical, we have a requirement to encode the x5 and x6 value twice. Source issue: https://github.com/bbc/simorgh/pull/6593
+  const x5Value = platform === 'amp' ? href : href && encodeURIComponent(href);
+  const x6Value =
+    platform === 'amp' ? referrer : referrer && encodeURIComponent(referrer);
+
   const pageViewBeaconValues = [
     {
       key: 's',
@@ -108,13 +117,13 @@ export const buildATIPageTrackPath = ({
     {
       key: 'x5',
       description: 'url',
-      value: getHref(platform),
+      value: x5Value,
       wrap: true,
     },
     {
       key: 'x6',
       description: 'referrer url',
-      value: getReferrer(platform, origin, previousPath),
+      value: x6Value,
       wrap: true,
     },
     { key: 'x7', description: 'content type', value: contentType, wrap: true },
@@ -173,6 +182,12 @@ export const buildATIPageTrackPath = ({
       description: 'boolean - if locserve cookie value is defined',
       value: isLocServeCookieSet(),
       wrap: true,
+    },
+    {
+      key: 'ref',
+      description: 'referrer url',
+      value: getReferrer(platform, origin, previousPath),
+      wrap: false,
     },
   ];
 

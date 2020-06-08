@@ -10,6 +10,17 @@ Object {
       "promptUI": "consent-prompt",
     },
   },
+  "policy": Object {
+    "default": Object {
+      "timeout": Object {
+        "fallbackAction": "reject",
+        "seconds": 0,
+      },
+      "waitFor": Object {
+        "user-consent": Array [],
+      },
+    },
+  },
 }
 `;
 
@@ -79,6 +90,8 @@ exports[`AMP Articles Footer I can click on the BBC branding and it would take m
 exports[`AMP Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`AMP Articles Header I can see the branding 1`] = `"BBC News, Pidgin"`;
+
+exports[`AMP Articles Header I can see the navigation 1`] = `"Home"`;
 
 exports[`AMP Articles I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg"`;
 

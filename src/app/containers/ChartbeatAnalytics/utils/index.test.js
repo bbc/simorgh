@@ -72,6 +72,11 @@ describe('Chartbeat utilities', () => {
         expectedShortType: 'Most Read',
       },
       {
+        type: 'STY',
+        expectedDefaultType: 'STY',
+        expectedShortType: 'STY',
+      },
+      {
         type: null,
         expectedDefaultType: null,
         expectedShortType: null,
@@ -164,7 +169,31 @@ describe('Chartbeat utilities', () => {
         service: 'korean',
         pageType: 'media',
         description: 'should return expected section for live radio',
+        masterBrand: 'bbc_korean_radio',
         expected: 'Korean, Korean - Radio',
+      },
+      {
+        service: 'indonesia',
+        pageType: 'media',
+        description: 'should return expected section for onDemand radio',
+        masterBrand: 'bbc_indonesian_radio',
+        expected: 'Indonesia, Indonesia - Radio',
+      },
+      {
+        service: 'pashto',
+        pageType: 'media',
+        description: 'should return expected section for ondemand TV',
+        masterBrand: 'bbc_pashto_tv',
+        expected: 'Pashto, Pashto - TV',
+      },
+      {
+        service: 'mundo',
+        sectionName: 'STY',
+        categoryName: 'mundo',
+        pageType: 'STY',
+        description: 'should add section and category to STYs',
+        expected:
+          'Mundo, Mundo - STY, Mundo - STY, Mundo - STY - STY, Mundo - mundo-category',
       },
     ];
 
@@ -178,6 +207,7 @@ describe('Chartbeat utilities', () => {
         expected,
         sectionName,
         categoryName,
+        masterBrand,
       }) => {
         it(description, () => {
           expect(
@@ -188,6 +218,7 @@ describe('Chartbeat utilities', () => {
               chapter,
               sectionName,
               categoryName,
+              masterBrand,
             }),
           ).toBe(expected);
         });
@@ -279,6 +310,15 @@ describe('Chartbeat utilities', () => {
       );
     });
 
+    it('should return correct title when pageType is media (onDemand TV)', () => {
+      const pageType = 'media';
+      const pageData = {
+        pageTitle: 'OnDemand TV Page Title',
+      };
+
+      expect(getTitle({ pageType, pageData })).toBe('OnDemand TV Page Title');
+    });
+
     it('should return correct title when pageType is mostRead', () => {
       const pageType = 'mostRead';
       const pageData = {};
@@ -288,6 +328,19 @@ describe('Chartbeat utilities', () => {
       expect(getTitle({ pageType, pageData, brandName, title })).toBe(
         'TOP 뉴스 - BBC News 코리아',
       );
+    });
+
+    it('should return correct title when pageType is STY', () => {
+      const pageType = 'STY';
+      const pageData = {
+        promo: {
+          headlines: {
+            headline: 'STY Page Title',
+          },
+        },
+      };
+
+      expect(getTitle({ pageType, pageData })).toBe('STY Page Title');
     });
   });
 
@@ -411,6 +464,7 @@ describe('Chartbeat utilities', () => {
         data: {
           pageTitle: 'Live Radio Page Title',
           contentType: 'player-live',
+          masterBrand: 'bbc_korean_radio',
         },
         brandName: '',
         chartbeatDomain: 'korean.bbc.co.uk',
@@ -434,6 +488,104 @@ describe('Chartbeat utilities', () => {
 
       expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
     });
+
+    it('should return config for amp pages when page type is STY and env is live', () => {
+      const fixtureData = {
+        isAmp: true,
+        platform: 'amp',
+        pageType: 'STY',
+        data: {
+          promo: {
+            headlines: {
+              headline: 'STY Page Title',
+            },
+          },
+          relatedContent: {
+            section: {
+              name: 'STY',
+            },
+          },
+          metadata: {
+            passport: {
+              category: {
+                categoryName: 'mundo',
+              },
+            },
+          },
+        },
+        brandName: 'BBC News Mundo',
+        chartbeatDomain: 'mundo.bbc.co.uk',
+        env: 'live',
+        service: 'mundo',
+        origin: 'bbc.com',
+        previousPath: '/previous-path',
+      };
+
+      const expectedConfig = {
+        contentType: 'STY',
+        domain: 'mundo.bbc.co.uk',
+        idSync: {
+          bbc_hid: 'foobar',
+        },
+        sections:
+          'Mundo, Mundo - STY, Mundo - STY, Mundo - STY - STY, Mundo - mundo-category',
+        title: 'STY Page Title',
+        uid: 50924,
+        virtualReferrer: `\${documentReferrer}`,
+      };
+
+      expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+    });
+
+    it('should return config for canonical pages when page type is STY and env is not live', () => {
+      const fixtureData = {
+        isAmp: false,
+        platform: 'canonical',
+        pageType: 'STY',
+        data: {
+          promo: {
+            headlines: {
+              headline: 'STY Page Title',
+            },
+          },
+          relatedContent: {
+            section: {
+              name: 'STY',
+            },
+          },
+          metadata: {
+            passport: {
+              category: {
+                categoryName: 'mundo',
+              },
+            },
+          },
+        },
+        brandName: 'BBC News Mundo',
+        chartbeatDomain: 'mundo.bbc.co.uk',
+        env: 'test',
+        service: 'mundo',
+        origin: 'test.bbc.com',
+        previousPath: '/previous-path',
+      };
+
+      const expectedConfig = {
+        domain: 'test.bbc.co.uk',
+        idSync: {
+          bbc_hid: 'foobar',
+        },
+        path: '/',
+        sections:
+          'Mundo, Mundo - STY, Mundo - STY, Mundo - STY - STY, Mundo - mundo-category',
+        type: 'STY',
+        title: 'STY Page Title',
+        uid: 50924,
+        useCanonical: true,
+        virtualReferrer: 'test.bbc.com/previous-path',
+      };
+
+      expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+    });
   });
 
   it('should return config for amp pages when page type is media (onDemand radio) and env is live', () => {
@@ -444,6 +596,7 @@ describe('Chartbeat utilities', () => {
       data: {
         pageTitle: 'OnDemand Radio Page Title',
         contentType: 'player-episode',
+        masterBrand: 'bbc_korean_radio',
       },
       brandName: '',
       chartbeatDomain: 'korean.bbc.co.uk',
@@ -463,6 +616,74 @@ describe('Chartbeat utilities', () => {
       contentType: 'player-episode',
       uid: 50924,
       virtualReferrer: `\${documentReferrer}`,
+    };
+
+    expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+  });
+
+  it('should return config for amp pages when page type is media (onDemand TV) and env is live', () => {
+    const fixtureData = {
+      isAmp: true,
+      platform: 'amp',
+      pageType: 'media',
+      data: {
+        pageTitle: 'OnDemand TV Page Title',
+        contentType: 'player-episode',
+        masterBrand: 'bbc_pashto_tv',
+      },
+      brandName: '',
+      chartbeatDomain: 'pashto.bbc.co.uk',
+      env: 'live',
+      service: 'pashto',
+      origin: 'bbc.com',
+      previousPath: '/previous-path',
+    };
+
+    const expectedConfig = {
+      domain: 'pashto.bbc.co.uk',
+      idSync: {
+        bbc_hid: 'foobar',
+      },
+      sections: 'Pashto, Pashto - TV',
+      title: 'OnDemand TV Page Title',
+      contentType: 'player-episode',
+      uid: 50924,
+      virtualReferrer: `\${documentReferrer}`,
+    };
+
+    expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+  });
+
+  it('should return config for canonical pages when page type is media (onDemand TV) and env is live', () => {
+    const fixtureData = {
+      isAmp: false,
+      platform: 'canonical',
+      pageType: 'media',
+      data: {
+        pageTitle: 'OnDemand TV Page Title',
+        contentType: 'player-episode',
+        masterBrand: 'bbc_pashto_tv',
+      },
+      brandName: '',
+      chartbeatDomain: 'pashto.bbc.co.uk',
+      env: 'live',
+      service: 'pashto',
+      origin: 'bbc.com',
+      previousPath: '/previous-path',
+    };
+
+    const expectedConfig = {
+      domain: 'pashto.bbc.co.uk',
+      idSync: {
+        bbc_hid: 'foobar',
+      },
+      sections: 'Pashto, Pashto - TV',
+      title: 'OnDemand TV Page Title',
+      type: 'player-episode',
+      uid: 50924,
+      virtualReferrer: 'bbc.com/previous-path',
+      useCanonical: true,
+      path: '/',
     };
 
     expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);

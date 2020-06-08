@@ -14,6 +14,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'آگهی',
     },
     lang: 'fa',
     product: 'BBC News',
@@ -202,12 +203,16 @@ export const service = {
       lastUpdated: 'به روز شده در',
       numberOfItems: 10,
       hasMostRead: true,
+      onIdxPage: true,
     },
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
       frontPagePosition: '',
+      onIdxPage: true,
+      idxPagePosition: 'Features',
       header: 'برنامه‌های رادیو',
+      durationLabel: 'مدت %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,
@@ -309,14 +314,6 @@ export const service = {
       {
         title: 'ناظران می‌گویند',
         url: '/persian/blogs/viewpoints',
-      },
-      {
-        title: 'صفحات ویژه',
-        url: '/persian/world-37434378',
-      },
-      {
-        title: 'وبلاگ‌ها',
-        url: '/persian/services/2012/01/000000_blogs_list',
       },
     ],
   },

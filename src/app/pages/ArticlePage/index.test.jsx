@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitForDomChange, waitFor } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import ArticlePage from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -13,6 +13,7 @@ import {
 import newsMostReadData from '#data/news/mostRead';
 import persianMostReadData from '#data/persian/mostRead';
 import pidginMostReadData from '#data/pidgin/mostRead';
+import { textBlock } from '#models/blocks/index';
 
 // temporary: will be removed with https://github.com/bbc/simorgh/issues/836
 const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
@@ -48,7 +49,11 @@ beforeEach(() => {
 
 it('should use headline for meta description if summary does not exist', async () => {
   const articleDataNewsWithSummary = mergeDeepLeft(
-    { promo: { summary: '' } },
+    {
+      promo: {
+        summary: textBlock(''),
+      },
+    },
     articleDataNews,
   );
 
@@ -58,13 +63,13 @@ it('should use headline for meta description if summary does not exist', async (
     </Context>,
   );
 
-  await waitForDomChange({
-    container: document.querySelector('head'),
+  await waitFor(() => {
+    expect(
+      document
+        .querySelector('meta[name="description"]')
+        .getAttribute('content'),
+    ).toEqual('Article Headline for SEO');
   });
-
-  expect(
-    document.querySelector('meta[name="description"]').getAttribute('content'),
-  ).toEqual('Article Headline for SEO');
 });
 
 it('should render a news article correctly', async () => {

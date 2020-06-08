@@ -106,7 +106,7 @@ describe('buildParams', () => {
           'x2=[responsive]',
           'x3=[atiAnalyticsAppName]',
           'x4=[language]',
-          'x5=[http%3A%2F%2Flocalhost%2F]',
+          'x5=[http%253A%252F%252Flocalhost%252F]',
           'x6=[originpreviousPath]',
           'x7=[article]',
           'x8=[simorgh]',
@@ -115,6 +115,7 @@ describe('buildParams', () => {
           'x12=[1970-01-01T00:00:00.000Z]',
           'x13=[thing+label+1~thing+label+2]',
           'x14=[thing+id+1~thing+id+2]',
+          'ref=originpreviousPath',
         ].join('&'),
       );
     });

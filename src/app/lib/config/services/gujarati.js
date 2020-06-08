@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'જાહેરાત',
     },
     lang: `gu`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -176,7 +177,7 @@ export const service = {
         },
       },
       topStoriesTitle: 'નવાજૂની',
-      featuresAnalysisTitle: 'Features',
+      featuresAnalysisTitle: 'બીબીસી વિશેષ',
     },
     brandSVG,
     mostRead: {
@@ -252,10 +253,6 @@ export const service = {
       {
         title: 'આંતરરાષ્ટ્રીય',
         url: '/gujarati/international',
-      },
-      {
-        title: '#ISWOTY',
-        url: '/gujarati/resources/idt-0370808c-2dea-4f55-b69f-309a2881ef25',
       },
     ],
   },

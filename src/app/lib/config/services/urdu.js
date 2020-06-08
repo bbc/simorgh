@@ -13,6 +13,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'اشتہار',
     },
     lang: 'ur',
     product: 'BBC News',
@@ -185,6 +186,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
+      durationLabel: 'دورانیہ %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

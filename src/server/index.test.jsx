@@ -504,6 +504,176 @@ const testMediaPages = ({
   });
 };
 
+const testTvPages = ({
+  platform,
+  service,
+  serviceId,
+  brandEpisode,
+  mediaId,
+  queryString = '',
+}) => {
+  describe(`${platform} tv brand page`, () => {
+    const isAmp = platform === 'amp';
+    const successDataResponse = {
+      isAmp,
+      data: { some: 'data' },
+      service: 'someService',
+      status: 200,
+    };
+
+    const notFoundDataResponse = {
+      isAmp,
+      data: { some: 'data' },
+      service: 'someService',
+      status: 404,
+    };
+
+    const extension = isAmp ? '.amp' : '';
+    const mediaPageURL = `/${service}/${serviceId}/${brandEpisode}/${mediaId}${extension}${queryString}`;
+
+    describe('Successful render', () => {
+      describe('200 status code', () => {
+        beforeEach(() => {
+          mockRouteProps({
+            service,
+            isAmp,
+            dataResponse: successDataResponse,
+          });
+        });
+
+        const configs = {
+          url: mediaPageURL,
+          service,
+          isAmp,
+          successDataResponse,
+        };
+
+        it('should respond with rendered data', testRenderedData(configs));
+      });
+    });
+
+    describe('404 status code', () => {
+      beforeEach(() => {
+        mockRouteProps({
+          service,
+          isAmp,
+          dataResponse: notFoundDataResponse,
+        });
+      });
+
+      it('should respond with a rendered 404', async () => {
+        const { status, text } = await makeRequest(`/${service}`);
+        expect(status).toBe(404);
+        expect(text).toEqual(
+          '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+        );
+      });
+    });
+
+    describe('Unknown error within the data fetch, react router or its dependencies', () => {
+      beforeEach(() => {
+        mockRouteProps({
+          service,
+          isAmp,
+          dataResponse: Error('Error!'),
+          responseType: 'reject',
+        });
+      });
+
+      it('should respond with a 500', async () => {
+        const { status, text } = await makeRequest(mediaPageURL);
+        expect(status).toEqual(500);
+        expect(text).toEqual('Error!');
+      });
+    });
+  });
+};
+
+const testOnDemandTvEpisodePages = ({
+  platform,
+  service,
+  serviceId,
+  brandEpisode,
+  mediaId,
+  queryString = '',
+}) => {
+  describe(`${platform} tv episode page`, () => {
+    const isAmp = platform === 'amp';
+    const successDataResponse = {
+      isAmp,
+      data: { some: 'data' },
+      service: 'someService',
+      status: 200,
+    };
+
+    const notFoundDataResponse = {
+      isAmp,
+      data: { some: 'data' },
+      service: 'someService',
+      status: 404,
+    };
+
+    const extension = isAmp ? '.amp' : '';
+    const mediaPageURL = `/${service}/${serviceId}/${brandEpisode}/${mediaId}${extension}${queryString}`;
+
+    describe('Successful render', () => {
+      describe('200 status code', () => {
+        beforeEach(() => {
+          mockRouteProps({
+            service,
+            isAmp,
+            dataResponse: successDataResponse,
+          });
+        });
+
+        const configs = {
+          url: mediaPageURL,
+          service,
+          isAmp,
+          successDataResponse,
+        };
+
+        it('should respond with rendered data', testRenderedData(configs));
+      });
+    });
+
+    describe('404 status code', () => {
+      beforeEach(() => {
+        mockRouteProps({
+          service,
+          isAmp,
+          dataResponse: notFoundDataResponse,
+        });
+      });
+
+      it('should respond with a rendered 404', async () => {
+        const { status, text } = await makeRequest(`/${service}`);
+        expect(status).toBe(404);
+        expect(text).toEqual(
+          '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+        );
+      });
+    });
+
+    describe('Unknown error within the data fetch, react router or its dependencies', () => {
+      beforeEach(() => {
+        mockRouteProps({
+          service,
+          isAmp,
+          dataResponse: Error('Error!'),
+          responseType: 'reject',
+        });
+      });
+
+      it('should respond with a 500', async () => {
+        const { status, text } = await makeRequest(mediaPageURL);
+        expect(status).toEqual(500);
+        expect(text).toEqual('Error!');
+      });
+    });
+  });
+};
+
 describe('Server', () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -566,6 +736,50 @@ describe('Server', () => {
     });
     it('should respond with a 500 for non-existing services', async () => {
       const { statusCode } = await makeRequest('/some-service/mostread.json');
+      expect(statusCode).toEqual(500);
+    });
+  });
+
+  describe('STY secondary column json', () => {
+    it('should serve a file for valid service paths with variants', async () => {
+      const { body } = await makeRequest(
+        '/zhongwen/sty-secondary-column/trad.json',
+      );
+      expect(body).toEqual(
+        expect.objectContaining({
+          topStories: expect.any(Object),
+          features: expect.any(Object),
+        }),
+      );
+    });
+    it('should serve a file for valid service paths without variants', async () => {
+      const { body } = await makeRequest('/mundo/sty-secondary-column.json');
+      expect(body).toEqual(
+        expect.objectContaining({
+          topStories: expect.any(Object),
+          features: expect.any(Object),
+        }),
+      );
+    });
+    it('should respond with a 500 for non-existing services', async () => {
+      const { statusCode } = await makeRequest(
+        '/some-service/sty-secondary-column.json',
+      );
+      expect(statusCode).toEqual(500);
+    });
+  });
+
+  describe('IDX json', () => {
+    it('should serve a file for valid idx paths', async () => {
+      const { body } = await makeRequest('/persian/afghanistan.json');
+      expect(body).toEqual(
+        expect.objectContaining({ content: expect.any(Object) }),
+      );
+    });
+    it('should respond with a 500 for non-existing services', async () => {
+      const { statusCode } = await makeRequest(
+        '/some-service/ukraine_in_russian.json',
+      );
       expect(statusCode).toEqual(500);
     });
   });
@@ -671,6 +885,26 @@ describe('Server', () => {
           '/arabic/bbc_pidgin_radio/schedule.json',
         );
         expect(statusCode).toEqual(404);
+      });
+    });
+
+    describe('for tv brand page', () => {
+      it('should respond with JSON', async () => {
+        const { body } = await makeRequest(
+          '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json',
+        );
+        expect(body).toEqual(
+          expect.objectContaining({ content: expect.any(Object) }),
+        );
+      });
+
+      describe('with non-existent data', () => {
+        it('should respond with a 404', async () => {
+          const { statusCode } = await makeRequest(
+            '/pashto/bbc_pashto_radio/ERROR.json',
+          );
+          expect(statusCode).toEqual(404);
+        });
       });
     });
 
@@ -791,6 +1025,52 @@ describe('Server', () => {
     serviceId: 'bbc_korean_radio',
     mediaId: 'liveradio',
     queryString: QUERY_STRING,
+  });
+
+  testTvPages({
+    platform: 'amp',
+    service: 'pashto',
+    serviceId: 'bbc_pashto_tv',
+    brandEpisode: 'tv_programmes',
+    mediaId: 'p0340yr4',
+  });
+  testTvPages({
+    platform: 'amp',
+    service: 'pashto',
+    serviceId: 'bbc_pashto_tv',
+    brandEpisode: 'tv_programmes',
+    mediaId: 'p0340yr4',
+    queryString: QUERY_STRING,
+  });
+  testTvPages({
+    platform: 'canonical',
+    service: 'pashto',
+    serviceId: 'bbc_pashto_tv',
+    brandEpisode: 'tv_programmes',
+    mediaId: 'p0340yr4',
+  });
+  testTvPages({
+    platform: 'canonical',
+    service: 'pashto',
+    serviceId: 'bbc_pashto_tv',
+    brandEpisode: 'tv_programmes',
+    mediaId: 'p0340yr4',
+    queryString: QUERY_STRING,
+  });
+
+  testOnDemandTvEpisodePages({
+    platform: 'amp',
+    service: 'pashto',
+    serviceId: 'bbc_pashto_tv',
+    brandEpisode: 'tv',
+    mediaId: 'w172xcldhhrhmcf',
+  });
+
+  testOnDemandTvEpisodePages({
+    platform: 'canonical',
+    service: 'pashto',
+    serviceId: 'bbc_pashto_tv',
+    mediaId: 'w172xcldhhrhmcf',
   });
 
   testAssetPages({

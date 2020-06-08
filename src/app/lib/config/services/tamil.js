@@ -10,6 +10,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'விளம்பரம்',
     },
     lang: `ta`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -274,10 +275,6 @@ export const service = {
       {
         title: 'வீடியோ',
         url: '/tamil/media/video',
-      },
-      {
-        title: '#ISWOTY',
-        url: '/tamil/resources/idt-ce219e77-9003-42b8-b276-1214e232fdc0',
       },
     ],
   },

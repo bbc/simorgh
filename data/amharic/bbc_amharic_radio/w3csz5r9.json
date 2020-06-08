@@ -1,26 +1,27 @@
 {
   "metadata": {
     "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3csz5r9",
-    "locators": {},
+    "locators": { "pid": "w3csz5r9", "brandPid": "w13xttnt" },
     "type": "WSRADIO",
     "createdBy": "bbc_amharic_radio",
     "language": "am",
-    "lastUpdated": 1583601860035,
+    "lastUpdated": 1589529870679,
     "firstPublished": 1582565117000,
     "lastPublished": 1582565117000,
+    "timestamp": 1582565117000,
     "options": {},
     "analyticsLabels": {
       "pageTitle": "ቢቢሲ አማርኛ ዜና - BBC News አማርኛ",
       "pageIdentifier": "amharic.bbc_amharic_radio.w3csz5r9.page",
       "producerId": "4",
-      "contentType": "player-ondemand",
+      "contentType": "player-episode",
       "producer": "AMHARIC"
     },
-    "passport": null,
     "tags": {},
-    "version": "v1.1.3",
+    "version": "v1.3.0",
     "blockTypes": ["media"],
-    "title": "ቢቢሲ አማርኛ ዜና"
+    "title": "ቢቢሲ አማርኛ ዜና",
+    "releaseDateTimeStamp": 1583452800000
   },
   "content": {
     "blocks": [
@@ -33,36 +34,17 @@
           "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
           "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
         },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
         "embedding": false,
         "advertising": false,
-        "versions": [
-          {
-            "versionId": "w4hqtq1d",
-            "types": ["Original"],
-            "duration": 883,
-            "durationISO8601": "PT14M43S",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": false,
-              "nonUk": false,
-              "world": true
-            },
-            "availableUntil": 1586119470000,
-            "availableFrom": 1583516670000
-          }
-        ],
-        "imageCopyright": null
+        "versions": [],
+        "type": "media"
       }
     ]
   },
   "promo": {
-    "headlines": {
-      "headline": "ቢቢሲ አማርኛ ዜና"
-    },
-    "locators": {
-      "pid": "w3csz5r9"
-    },
+    "headlines": { "headline": "ቢቢሲ አማርኛ ዜና" },
+    "locators": { "pid": "w3csz5r9", "brandPid": "w13xttnt" },
     "media": {
       "id": "w3csz5r9",
       "subType": "episode",
@@ -72,75 +54,56 @@
         "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
         "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
       },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
       "embedding": false,
       "advertising": false,
-      "versions": [
-        {
-          "versionId": "w4hqtq1d",
-          "types": ["Original"],
-          "duration": 883,
-          "durationISO8601": "PT14M43S",
-          "warnings": {},
-          "availableTerritories": {
-            "uk": false,
-            "nonUk": false,
-            "world": true
-          },
-          "availableUntil": 1586119470000,
-          "availableFrom": 1583516670000
-        }
-      ],
-      "imageCopyright": null
+      "versions": [],
+      "type": "media"
     },
     "indexImage": {
       "id": "",
       "subType": "index",
-      "href": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
-      "path": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
       "height": 0,
       "width": 0,
       "altText": null,
-      "copyrightHolder": null
+      "copyrightHolder": null,
+      "type": "image"
     },
-    "brand": {
-      "pid": "w13xttnt",
-      "title": "ቢቢሲ አማርኛ ዜና"
-    },
-    "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3csz5r9"
+    "brand": { "pid": "w13xttnt", "title": "ቢቢሲ አማርኛ ዜና" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3csz5r9",
+    "type": "ws_radio"
   },
   "relatedContent": {
     "site": {
       "subType": "site",
       "name": "Amharic",
-      "uri": "/amharic"
+      "uri": "/amharic",
+      "type": "simple"
     },
     "groups": [
       {
         "type": "other-episode",
         "promos": [
           {
-            "headlines": {
-              "headline": "ቢቢሲ አማርኛ ዜና"
-            },
-            "locators": {
-              "pid": "w3csz5tk"
-            },
+            "headlines": { "headline": "ቢቢሲ አማርኛ ዜና" },
+            "locators": { "pid": "w3ct07cd", "brandPid": "w13xttnt" },
             "media": {
-              "id": "w3csz5tk",
+              "id": "w3ct07cd",
               "subType": "episode",
               "format": "Audio",
-              "title": "05/03/2020 GMT",
+              "title": "14/05/2020 GMT",
               "synopses": {
                 "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
                 "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqtq3n",
+                  "versionId": "w4hqvt59",
                   "types": ["Original"],
                   "duration": 883,
                   "durationISO8601": "PT14M43S",
@@ -150,50 +113,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1586033070000,
-                  "availableFrom": 1583430270000
+                  "availableUntil": 1592081070000,
+                  "availableFrom": 1589478270000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "w13xttnt",
-              "title": "ቢቢሲ አማርኛ ዜና"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3csz5tk"
+            "brand": { "pid": "w13xttnt", "title": "ቢቢሲ አማርኛ ዜና" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct07cd",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "ቢቢሲ አማርኛ ዜና"
-            },
-            "locators": {
-              "pid": "w3csz5wt"
-            },
+            "headlines": { "headline": "ቢቢሲ አማርኛ ዜና" },
+            "locators": { "pid": "w3ct07fn", "brandPid": "w13xttnt" },
             "media": {
-              "id": "w3csz5wt",
+              "id": "w3ct07fn",
               "subType": "episode",
               "format": "Audio",
-              "title": "04/03/2020 GMT",
+              "title": "13/05/2020 GMT",
               "synopses": {
                 "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
                 "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqtq5x",
+                  "versionId": "w4hqvt7k",
                   "types": ["Original"],
                   "duration": 883,
                   "durationISO8601": "PT14M43S",
@@ -203,50 +161,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585946670000,
-                  "availableFrom": 1583343870000
+                  "availableUntil": 1591994670000,
+                  "availableFrom": 1589391870000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "w13xttnt",
-              "title": "ቢቢሲ አማርኛ ዜና"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3csz5wt"
+            "brand": { "pid": "w13xttnt", "title": "ቢቢሲ አማርኛ ዜና" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct07fn",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "ቢቢሲ አማርኛ ዜና"
-            },
-            "locators": {
-              "pid": "w3csz5vp"
-            },
+            "headlines": { "headline": "ቢቢሲ አማርኛ ዜና" },
+            "locators": { "pid": "w3ct07dj", "brandPid": "w13xttnt" },
             "media": {
-              "id": "w3csz5vp",
+              "id": "w3ct07dj",
               "subType": "episode",
               "format": "Audio",
-              "title": "03/03/2020 GMT",
+              "title": "12/05/2020 GMT",
               "synopses": {
                 "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
                 "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqtq4s",
+                  "versionId": "w4hqvt6f",
                   "types": ["Original"],
                   "duration": 883,
                   "durationISO8601": "PT14M43S",
@@ -256,50 +209,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585860270000,
-                  "availableFrom": 1583257470000
+                  "availableUntil": 1591908270000,
+                  "availableFrom": 1589305470000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "w13xttnt",
-              "title": "ቢቢሲ አማርኛ ዜና"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3csz5vp"
+            "brand": { "pid": "w13xttnt", "title": "ቢቢሲ አማርኛ ዜና" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct07dj",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "ቢቢሲ አማርኛ ዜና"
-            },
-            "locators": {
-              "pid": "w3csz5sf"
-            },
+            "headlines": { "headline": "ቢቢሲ አማርኛ ዜና" },
+            "locators": { "pid": "w3ct07b8", "brandPid": "w13xttnt" },
             "media": {
-              "id": "w3csz5sf",
+              "id": "w3ct07b8",
               "subType": "episode",
               "format": "Audio",
-              "title": "02/03/2020 GMT",
+              "title": "11/05/2020 GMT",
               "synopses": {
                 "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
                 "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqtq2j",
+                  "versionId": "w4hqvt45",
                   "types": ["Original"],
                   "duration": 883,
                   "durationISO8601": "PT14M43S",
@@ -309,50 +257,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585773870000,
-                  "availableFrom": 1583171070000
+                  "availableUntil": 1591821870000,
+                  "availableFrom": 1589219070000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "w13xttnt",
-              "title": "ቢቢሲ አማርኛ ዜና"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3csz5sf"
+            "brand": { "pid": "w13xttnt", "title": "ቢቢሲ አማርኛ ዜና" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct07b8",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "ቢቢሲ አማርኛ ዜና"
-            },
-            "locators": {
-              "pid": "w3csz5r8"
-            },
+            "headlines": { "headline": "ቢቢሲ አማርኛ ዜና" },
+            "locators": { "pid": "w3ct0793", "brandPid": "w13xttnt" },
             "media": {
-              "id": "w3csz5r8",
+              "id": "w3ct0793",
               "subType": "episode",
               "format": "Audio",
-              "title": "28/02/2020 GMT",
+              "title": "08/05/2020 GMT",
               "synopses": {
                 "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
                 "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqtq1c",
+                  "versionId": "w4hqvt30",
                   "types": ["Original"],
                   "duration": 883,
                   "durationISO8601": "PT14M43S",
@@ -362,50 +305,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585514670000,
-                  "availableFrom": 1582911870000
+                  "availableUntil": 1591562670000,
+                  "availableFrom": 1588959870000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "w13xttnt",
-              "title": "ቢቢሲ አማርኛ ዜና"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3csz5r8"
+            "brand": { "pid": "w13xttnt", "title": "ቢቢሲ አማርኛ ዜና" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct0793",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "ቢቢሲ አማርኛ ዜና"
-            },
-            "locators": {
-              "pid": "w3csz5tj"
-            },
+            "headlines": { "headline": "ቢቢሲ አማርኛ ዜና" },
+            "locators": { "pid": "w3ct07cc", "brandPid": "w13xttnt" },
             "media": {
-              "id": "w3csz5tj",
+              "id": "w3ct07cc",
               "subType": "episode",
               "format": "Audio",
-              "title": "27/02/2020 GMT",
+              "title": "07/05/2020 GMT",
               "synopses": {
                 "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
                 "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqtq3m",
+                  "versionId": "w4hqvt58",
                   "types": ["Original"],
                   "duration": 883,
                   "durationISO8601": "PT14M43S",
@@ -415,50 +353,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585428270000,
-                  "availableFrom": 1582825470000
+                  "availableUntil": 1591476270000,
+                  "availableFrom": 1588873470000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "w13xttnt",
-              "title": "ቢቢሲ አማርኛ ዜና"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3csz5tj"
+            "brand": { "pid": "w13xttnt", "title": "ቢቢሲ አማርኛ ዜና" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct07cc",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "ቢቢሲ አማርኛ ዜና"
-            },
-            "locators": {
-              "pid": "w3csz5ws"
-            },
+            "headlines": { "headline": "ቢቢሲ አማርኛ ዜና" },
+            "locators": { "pid": "w3ct07fm", "brandPid": "w13xttnt" },
             "media": {
-              "id": "w3csz5ws",
+              "id": "w3ct07fm",
               "subType": "episode",
               "format": "Audio",
-              "title": "26/02/2020 GMT",
+              "title": "06/05/2020 GMT",
               "synopses": {
                 "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
                 "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqtq5w",
+                  "versionId": "w4hqvt7j",
                   "types": ["Original"],
                   "duration": 883,
                   "durationISO8601": "PT14M43S",
@@ -468,50 +401,45 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585341870000,
-                  "availableFrom": 1582739070000
+                  "availableUntil": 1591389870000,
+                  "availableFrom": 1588787070000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "w13xttnt",
-              "title": "ቢቢሲ አማርኛ ዜና"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3csz5ws"
+            "brand": { "pid": "w13xttnt", "title": "ቢቢሲ አማርኛ ዜና" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct07fm",
+            "type": "ws_radio"
           },
           {
-            "headlines": {
-              "headline": "ቢቢሲ አማርኛ ዜና"
-            },
-            "locators": {
-              "pid": "w3csz5vn"
-            },
+            "headlines": { "headline": "ቢቢሲ አማርኛ ዜና" },
+            "locators": { "pid": "w3ct07dh", "brandPid": "w13xttnt" },
             "media": {
-              "id": "w3csz5vn",
+              "id": "w3ct07dh",
               "subType": "episode",
               "format": "Audio",
-              "title": "25/02/2020 GMT",
+              "title": "05/05/2020 GMT",
               "synopses": {
                 "short": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም",
                 "medium": "የ15 ደቂቃ ዜናና ወቅታዊ ጉዳዮችን የሚዳስስ ፕሮግራም"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqtq4r",
+                  "versionId": "w4hqvt6d",
                   "types": ["Original"],
                   "duration": 883,
                   "durationISO8601": "PT14M43S",
@@ -521,27 +449,26 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1585255470000,
-                  "availableFrom": 1582652670000
+                  "availableUntil": 1591303470000,
+                  "availableFrom": 1588700670000
                 }
               ],
-              "imageCopyright": null
+              "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2wb.png",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8jvj.png",
               "height": 0,
               "width": 0,
               "altText": null,
-              "copyrightHolder": null
+              "copyrightHolder": null,
+              "type": "image"
             },
-            "brand": {
-              "pid": "w13xttnt",
-              "title": "ቢቢሲ አማርኛ ዜና"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3csz5vn"
+            "brand": { "pid": "w13xttnt", "title": "ቢቢሲ አማርኛ ዜና" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_amharic_radio/w3ct07dh",
+            "type": "ws_radio"
           }
         ]
       }

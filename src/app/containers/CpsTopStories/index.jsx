@@ -1,15 +1,17 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape } from 'prop-types';
+import { arrayOf, shape, number } from 'prop-types';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
+import { pathOr } from 'ramda';
 
-import topStories from '#pages/StoryPage/topStories.json';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 
-const TopStories = ({ content }) => {
-  const { dir } = useContext(ServiceContext);
+const TopStories = ({ content, parentColumns }) => {
+  const { dir, translations } = useContext(ServiceContext);
+
+  const title = pathOr('Top Stories', ['topStoriesTitle'], translations);
 
   const singleTransform = promo => (
     <StoryPromo item={promo} dir={dir} displayImage={false} />
@@ -28,9 +30,9 @@ const TopStories = ({ content }) => {
   return (
     <CpsOnwardJourney
       labelId="top-stories-heading"
-      title="Top Stories"
+      title={title}
       content={content}
-      enableGridWrapper={false}
+      parentColumns={parentColumns}
       singleTransform={singleTransform}
       listTransform={listTransform}
     />
@@ -39,10 +41,19 @@ const TopStories = ({ content }) => {
 
 TopStories.propTypes = {
   content: arrayOf(shape(storyItem)),
+  parentColumns: shape({
+    group0: number,
+    group1: number,
+    group2: number,
+    group3: number,
+    group4: number,
+    group5: number,
+  }),
 };
 
 TopStories.defaultProps = {
-  content: topStories, // TODO: rm this https://github.com/bbc/simorgh/issues/5765
+  content: [],
+  parentColumns: null,
 };
 
 export default TopStories;

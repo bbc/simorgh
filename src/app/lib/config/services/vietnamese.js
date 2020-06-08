@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'Quảng cáo',
     },
     lang: `vi`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -64,7 +65,7 @@ export const service = {
       error: {
         404: {
           statusCode: '404',
-          title: '404 - Không tìm thấy trang này',
+          title: 'Không tìm thấy trang',
           message:
             'Chúng tôi không thể đưa bạn tới trang bạn tìm. Xin hãy thử:',
           solutions: [
@@ -141,16 +142,16 @@ export const service = {
       media: {
         noJs: 'Máy của bạn không hỗ trợ nghe xem',
         contentExpired: 'Chương trình không còn nữa.',
-        audio: 'Âm thanh',
+        audio: 'Audio',
         photogallery: 'Gallery hình ảnh',
         video: 'Video',
-        listen: 'Listen',
+        listen: 'Nghe',
         watch: 'Xem',
         liveLabel: 'TRỰC TIẾP',
-        nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'TỚI',
+        previousRadioShow: 'Show radio trước',
+        nextRadioShow: 'Show radio sau',
+        duration: 'Thời lượng',
       },
       socialEmbed: {
         caption: {
@@ -209,7 +210,7 @@ export const service = {
         {
           href:
             'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
-          text: 'Cookies',
+          text: 'Cookie',
         },
         {
           href: 'https://www.bbc.com/vietnamese/institutional-37623842',

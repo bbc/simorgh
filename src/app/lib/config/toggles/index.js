@@ -1,7 +1,7 @@
 const toggles = {
   local: {
     ads: {
-      enabled: true,
+      enabled: false,
     },
     chartbeatAnalytics: {
       enabled: true,
@@ -14,9 +14,6 @@ const toggles = {
     },
     mostRead: {
       enabled: true,
-    },
-    mpulse: {
-      enabled: false,
     },
     navOnArticles: {
       enabled: true,
@@ -39,12 +36,12 @@ const toggles = {
       enabled: true,
     },
     logMediaPlayerStatus: {
-      enabled: true,
+      enabled: false,
     },
   },
   test: {
     ads: {
-      enabled: true,
+      enabled: false,
     },
     chartbeatAnalytics: {
       enabled: true,
@@ -53,9 +50,6 @@ const toggles = {
       enabled: true,
     },
     mediaPlayer: {
-      enabled: true,
-    },
-    mpulse: {
       enabled: true,
     },
     mostRead: {
@@ -82,7 +76,7 @@ const toggles = {
       enabled: true,
     },
     logMediaPlayerStatus: {
-      enabled: true,
+      enabled: false,
     },
   },
   live: {
@@ -93,15 +87,12 @@ const toggles = {
       enabled: true,
     },
     include: {
-      enabled: false,
+      enabled: true,
     },
     mediaPlayer: {
       enabled: true,
     },
     mostRead: {
-      enabled: true,
-    },
-    mpulse: {
       enabled: true,
     },
     navOnArticles: {
@@ -122,10 +113,10 @@ const toggles = {
         '(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)',
     },
     socialEmbed: {
-      enabled: false,
+      enabled: true,
     },
     logMediaPlayerStatus: {
-      enabled: true,
+      enabled: false,
     },
   },
 };

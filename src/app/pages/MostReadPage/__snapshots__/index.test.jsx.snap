@@ -54,7 +54,6 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 
 .c14 {
   padding-top: 0.375rem;
-  padding-bottom: 1.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -77,6 +76,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 
 .c10 {
   position: relative;
+  padding-bottom: 1.5rem;
 }
 
 .c17 {
@@ -167,7 +167,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 
 @media (min-width:80rem) {
   .c5 {
-    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
+    width: calc(11/20*(100% - 20 * 1rem) + 10 * 1rem );
     margin: 0 0.5rem;
     margin-left: 10%;
     display: inline-block;
@@ -553,14 +553,21 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
       content="De one we dem de read well well - BBC News Pidgin"
       name="twitter:title"
     />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"WebPage","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"De one we dem de read well well"}}
+    </script>
   </head>
   <body>
     <div>
+      <noscript />
       <div>
         chartbeat
       </div>
       <main
         class="c0"
+        data-e2e="most-read"
         role="main"
       >
         <div
