@@ -59,7 +59,7 @@ export const service = {
       home: 'کور پاڼه',
       currentPage: 'اوسنۍ پاڼه',
       skipLinkText: 'مطلب ته ورشئ',
-      relatedContent: 'اسی بارے میں',
+      relatedContent: 'ورته مطالب',
       navMenuText: 'برخې',
       mediaAssetPage: {
         mediaPlayer: 'میډیا پلیئر',

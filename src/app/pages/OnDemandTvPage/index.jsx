@@ -1,12 +1,16 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { shape, string, number, bool } from 'prop-types';
+import {
+  GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
+} from '@bbc/gel-foundations/spacings';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
-import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
+import LinkedData from '#containers/LinkedData';
 import MetadataContainer from '../../containers/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
@@ -27,6 +31,7 @@ const getGroups = (zero, one, two, three, four, five) => ({
 });
 
 const StyledGelPageGrid = styled(GelPageGrid)`
+  padding-bottom: ${GEL_SPACING_QUAD};
   width: 100%;
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
 `;
@@ -64,7 +69,7 @@ const OnDemandTvPage = ({ pageData }) => {
         description={shortSynopsis}
         openGraphType="website"
       />
-
+      <LinkedData type="WebPage" seoTitle={headline} />
       <StyledGelPageGrid
         forwardedAs="main"
         role="main"
