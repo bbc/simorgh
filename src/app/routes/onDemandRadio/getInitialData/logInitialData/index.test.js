@@ -73,8 +73,6 @@ describe('Logging get initial data', () => {
       JSON.stringify(responseWithEpisodeAvailableOneMinuteAgo),
     );
 
-    expect(loggerMock.info).not.toHaveBeenCalledWith(RADIO_EPISODE_EXPIRED, {
-      url: 'pashto/bbc_pashto_radio/w3ct0lz1',
-    });
+    expect(loggerMock.info).not.toHaveBeenCalled();
   });
 });
