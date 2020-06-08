@@ -2,7 +2,7 @@ import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
-import { logExpiredEpisode } from './logInitialData';
+import logExpiredEpisode from './logInitialData';
 
 const getEpisodeAvailability = ({ availableFrom, availableUntil }) => {
   const timeNow = Date.now();

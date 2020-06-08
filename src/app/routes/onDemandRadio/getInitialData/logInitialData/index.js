@@ -4,12 +4,20 @@ import { RADIO_EPISODE_EXPIRED } from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
-const getUri = pageData => {
-  const masterBrand = path(['metadata', 'createdBy'], pageData);
-  const pid = path(['metadata', 'locators', 'pid'], pageData);
+const parsePageIdentifier = pageIdentifier => {
+  const pathParts = pageIdentifier.split('.');
+  pathParts.pop();
+  const uri = pathParts.join('/');
+  return uri;
+};
 
-  // Path incorrect. Needs constructing for brand and epsiode
-  return path(['metadata', 'locators', 'assetUri'], pageData);
+const getUri = pageData => {
+  const pageIdentifier = path(
+    ['metadata', 'analyticsLabels', 'pageIdentifier'],
+    pageData,
+  );
+  const pageUri = parsePageIdentifier(pageIdentifier);
+  return pageUri;
 };
 
 const logExpiredEpisode = pageData => {
@@ -19,7 +27,6 @@ const logExpiredEpisode = pageData => {
 };
 
 // const pathWithValidation = pageData => {
-
 // }
 
-export { logExpiredEpisode };
+export default logExpiredEpisode;
