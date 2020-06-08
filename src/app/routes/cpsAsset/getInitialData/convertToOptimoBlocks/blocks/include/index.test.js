@@ -270,6 +270,47 @@ describe('convertInclude', () => {
     });
   });
 
+  it('should fetch and convert an include block with a propagated renderer_env value', async () => {
+    fetch.mockResponse(() => Promise.resolve(idt1Markup));
+    const input = {
+      required: false,
+      tile: 'A quiz!',
+      href: '/indepthtoolkit/quizzes/123-456',
+      platform: 'highweb',
+      type: 'include',
+    };
+    const json = null;
+    const assetType = null;
+    const pathname = '/service/foobar?renderer_env=live';
+    const expected = {
+      type: 'include',
+      model: {
+        href: '/indepthtoolkit/quizzes/123-456',
+        required: false,
+        tile: 'A quiz!',
+        platform: 'highweb',
+        type: 'idt1',
+        html: idt1Markup,
+      },
+    };
+    expect(await convertInclude(input, json, assetType, pathname)).toEqual(
+      expected,
+    );
+    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledWith(
+      'https://foobar.com/includes/indepthtoolkit/quizzes/123-456?renderer_env=live',
+      {
+        timeout: 3000,
+      },
+    );
+    expect(loggerMock.error).not.toHaveBeenCalled();
+    expect(loggerMock.info).toHaveBeenCalledTimes(1);
+    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
+      url:
+        'https://foobar.com/includes/indepthtoolkit/quizzes/123-456?renderer_env=live',
+    });
+  });
+
   it('should return null for an unsupported include type', async () => {
     fetch.mockResponse(() => Promise.resolve('No fetch call'));
     const input = {
