@@ -4,25 +4,7 @@ exports[`IncludeContainer should not render any HTML for an unsupported include 
 
 exports[`IncludeContainer should not render any HTML when html prop is null 1`] = `<div />`;
 
-exports[`IncludeContainer should not render any HTML when include toggle is disabled 1`] = `
-<div>
-  <div
-    class="GridItemConstrainedMedium-sc-12lwanc-2 IncludeGrid-zso27i-1 hwuOKJ"
-  >
-    <div
-      class="Include-zso27i-0 dXHWeh"
-    >
-      <div>
-        Visual Journalism Markup
-      </div>
-      <script
-        src="localhost/vj.js"
-        type="text/javascript"
-      />
-    </div>
-  </div>
-</div>
-`;
+exports[`IncludeContainer should not render any HTML when include toggle is disabled 1`] = `<div />`;
 
 exports[`IncludeContainer should not render any HTML when its an amp page 1`] = `<div />`;
 
