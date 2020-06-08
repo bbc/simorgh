@@ -1,6 +1,6 @@
 import loggerMock from '#testHelpers/loggerMock';
 import pathWithLogging, { LOG_LEVELS } from '.';
-import { RADIO_FIELD_MISSING } from '#lib/logger.const';
+import { RADIO_MISSING_FIELD } from '#lib/logger.const';
 
 jest.mock('../logInitialData', () => {
   return {
@@ -22,7 +22,7 @@ describe('pathWithLogging', () => {
   it('should create an "info" log entry if the value is undefined', () => {
     pathWithLogging(['metadata', 'does-not-exist'])(fixtureData);
 
-    expect(loggerMock.info).toHaveBeenCalledWith(RADIO_FIELD_MISSING, {
+    expect(loggerMock.info).toHaveBeenCalledWith(RADIO_MISSING_FIELD, {
       url: `example-url`,
       path: ['metadata', 'does-not-exist'],
     });
