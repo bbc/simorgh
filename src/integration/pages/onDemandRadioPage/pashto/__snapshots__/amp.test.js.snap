@@ -256,7 +256,7 @@ exports[`AMP On Demand Radio Page SEO Heading level 1 1`] = `"ماښامنۍ خ�
 
 exports[`AMP On Demand Radio Page SEO Lang attribute 1`] = `"ps"`;
 
-exports[`AMP On Demand Radio Page SEO Linked data AudioObject should match text 1`] = `
+exports[`AMP On Demand Radio Page SEO Linked data of type AudioObject should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "AudioObject",

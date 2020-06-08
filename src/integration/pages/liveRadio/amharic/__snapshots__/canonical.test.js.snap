@@ -96,7 +96,7 @@ exports[`Canonical Amharic Live Radio Page SEO Heading level 1 1`] = `"ያድም
 
 exports[`Canonical Amharic Live Radio Page SEO Lang attribute 1`] = `"am"`;
 
-exports[`Canonical Amharic Live Radio Page SEO Linked data RadioChannel should match text 1`] = `
+exports[`Canonical Amharic Live Radio Page SEO Linked data of type RadioChannel should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "RadioChannel",

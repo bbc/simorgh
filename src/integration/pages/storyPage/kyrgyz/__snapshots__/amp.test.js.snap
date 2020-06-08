@@ -238,7 +238,7 @@ exports[`AMP Story Page SEO Heading level 1 1`] = `"Test STY for social embeds"`
 
 exports[`AMP Story Page SEO Lang attribute 1`] = `"ky"`;
 
-exports[`AMP Story Page SEO Linked data NewsArticle should match text 1`] = `
+exports[`AMP Story Page SEO Linked data of type NewsArticle should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "NewsArticle",

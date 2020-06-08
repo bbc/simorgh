@@ -154,7 +154,7 @@ exports[`Canonical Photo Gallery Page SEO Heading level 1 1`] = `"Río 2016, el 
 
 exports[`Canonical Photo Gallery Page SEO Lang attribute 1`] = `"es"`;
 
-exports[`Canonical Photo Gallery Page SEO Linked data Article should match text 1`] = `
+exports[`Canonical Photo Gallery Page SEO Linked data of type Article should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "Article",

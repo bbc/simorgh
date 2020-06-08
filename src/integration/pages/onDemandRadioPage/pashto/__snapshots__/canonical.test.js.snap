@@ -142,7 +142,7 @@ exports[`Canonical On Demand Radio Page SEO Heading level 1 1`] = `"ماښامن
 
 exports[`Canonical On Demand Radio Page SEO Lang attribute 1`] = `"ps"`;
 
-exports[`Canonical On Demand Radio Page SEO Linked data AudioObject should match text 1`] = `
+exports[`Canonical On Demand Radio Page SEO Linked data of type AudioObject should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "AudioObject",

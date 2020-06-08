@@ -188,7 +188,7 @@ export default () => {
           expect(scriptContent).toBeTruthy();
         });
 
-        it(`${type} should match text`, () => {
+        it(`of type ${type} should match text`, () => {
           expect(scriptContent).toMatchSnapshot();
         });
       });

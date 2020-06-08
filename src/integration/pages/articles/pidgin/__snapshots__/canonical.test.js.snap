@@ -126,7 +126,7 @@ exports[`Canonical Articles SEO Heading level 1 1`] = `"Adams Oshiomhole say 'I 
 
 exports[`Canonical Articles SEO Lang attribute 1`] = `"pcm"`;
 
-exports[`Canonical Articles SEO Linked data ReportageNewsArticle should match text 1`] = `
+exports[`Canonical Articles SEO Linked data of type ReportageNewsArticle should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "ReportageNewsArticle",
