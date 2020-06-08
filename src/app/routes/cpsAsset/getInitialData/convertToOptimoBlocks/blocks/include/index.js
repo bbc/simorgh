@@ -11,7 +11,7 @@ import { addOverrideQuery } from '../../../../../utils/overrideRendererOnTest';
 
 const logger = nodeLogger(__filename);
 
-const buildIncludeUrl = (href, type) => {
+const buildIncludeUrl = (href, type, pathname) => {
   const resolvers = {
     idt1: '',
     idt2: '/html',
@@ -23,12 +23,10 @@ const buildIncludeUrl = (href, type) => {
   const includeUrl = `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${resolvers[type]}`;
 
   const currentRendererEnv = () => {
-    // This path will be replaced with a mechanism to get the current path
-    const path = 'www.test.bbc.com/ws/includes/1234?renderer_env=live';
-    if (!path.includes('?renderer_env=')) {
+    if (!pathname.includes('?renderer_env=')) {
       return null;
     }
-    return path.split('=')[1];
+    return pathname.split('=')[1];
   };
 
   let includeUrlWithParam = '';
@@ -73,7 +71,7 @@ const fetchMarkup = async url => {
   }
 };
 
-const convertInclude = async includeBlock => {
+const convertInclude = async (includeBlock, ...restParams) => {
   const supportedTypes = {
     indepthtoolkit: 'idt1',
     idt2: 'idt2',
@@ -116,7 +114,9 @@ const convertInclude = async includeBlock => {
     type,
     model: {
       href,
-      html: await fetchMarkup(buildIncludeUrl(href, includeType)),
+      html: await fetchMarkup(
+        buildIncludeUrl(href, includeType, restParams[2]),
+      ),
       type: includeType,
       ...rest,
     },

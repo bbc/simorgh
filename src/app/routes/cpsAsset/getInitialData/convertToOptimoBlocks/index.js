@@ -42,7 +42,7 @@ const typesToConvert = {
   social_embed: socialEmbed,
 };
 
-const parseBlockByType = (block, json, assetType) => {
+const parseBlockByType = (block, json, assetType, pathname) => {
   if (!path(['type'], block)) return false;
 
   const { type } = block;
@@ -51,6 +51,7 @@ const parseBlockByType = (block, json, assetType) => {
     block,
     json,
     assetType,
+    pathname,
   );
 
   if (!parsedBlock) {
@@ -60,14 +61,13 @@ const parseBlockByType = (block, json, assetType) => {
   return parsedBlock;
 };
 
-const convertToOptimoBlocks = async jsonRaw => {
+const convertToOptimoBlocks = async (jsonRaw, pathname) => {
   const json = clone(jsonRaw);
-
   const assetType = path(['metadata', 'type'], json);
   const blocks = pathOr([], ['content', 'blocks'], json);
 
   const parsedBlocks = await Promise.all(
-    blocks.map(block => parseBlockByType(block, json, assetType)),
+    blocks.map(block => parseBlockByType(block, json, assetType, pathname)),
   );
 
   return {
