@@ -26,23 +26,23 @@ exports[`Canonical Photo Gallery Page Footer Link should match text 8`] = `"AdCh
 
 exports[`Canonical Photo Gallery Page Footer Link should match text 9`] = `"Lee sobre nuestra postura acerca de enlaces externos."`;
 
-exports[`Canonical Photo Gallery Page Footer Link should match url 1`] = `"/mundo"`;
+exports[`Canonical Photo Gallery Page Footer Link with text 'AdChoices / Do Not Sell My Info' should match url 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
-exports[`Canonical Photo Gallery Page Footer Link should match url 2`] = `"https://www.bbc.com/mundo/institucional-51359666"`;
+exports[`Canonical Photo Gallery Page Footer Link with text 'BBC News, Mundo' should match url 1`] = `"/mundo"`;
 
-exports[`Canonical Photo Gallery Page Footer Link should match url 3`] = `"https://www.bbc.com/mundo/institucional-36400005"`;
+exports[`Canonical Photo Gallery Page Footer Link with text 'Contacta a la BBC' should match url 1`] = `"https://www.bbc.com/mundo/institucional-36400011"`;
 
-exports[`Canonical Photo Gallery Page Footer Link should match url 4`] = `"https://www.bbc.com/mundo/institucional-36400007"`;
+exports[`Canonical Photo Gallery Page Footer Link with text 'Cookies' should match url 1`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
 
-exports[`Canonical Photo Gallery Page Footer Link should match url 5`] = `"https://www.bbc.com/mundo/institucional-36400009"`;
+exports[`Canonical Photo Gallery Page Footer Link with text 'Lee sobre nuestra postura acerca de enlaces externos.' should match url 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
-exports[`Canonical Photo Gallery Page Footer Link should match url 6`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+exports[`Canonical Photo Gallery Page Footer Link with text 'Política de privacidad' should match url 1`] = `"https://www.bbc.com/mundo/institucional-36400009"`;
 
-exports[`Canonical Photo Gallery Page Footer Link should match url 7`] = `"https://www.bbc.com/mundo/institucional-36400011"`;
+exports[`Canonical Photo Gallery Page Footer Link with text 'Por qué puedes confiar en la BBC' should match url 1`] = `"https://www.bbc.com/mundo/institucional-51359666"`;
 
-exports[`Canonical Photo Gallery Page Footer Link should match url 8`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`Canonical Photo Gallery Page Footer Link with text 'Sobre la BBC' should match url 1`] = `"https://www.bbc.com/mundo/institucional-36400007"`;
 
-exports[`Canonical Photo Gallery Page Footer Link should match url 9`] = `"https://www.bbc.co.uk/help/web/links/"`;
+exports[`Canonical Photo Gallery Page Footer Link with text 'Términos de uso' should match url 1`] = `"https://www.bbc.com/mundo/institucional-36400005"`;
 
 exports[`Canonical Photo Gallery Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 

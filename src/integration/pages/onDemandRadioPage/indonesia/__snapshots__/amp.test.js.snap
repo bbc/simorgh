@@ -140,23 +140,23 @@ exports[`AMP On Demand Radio Page Footer Link should match text 8`] = `"AdChoice
 
 exports[`AMP On Demand Radio Page Footer Link should match text 9`] = `"Baca tentang peraturan baru terkait link eksternal."`;
 
-exports[`AMP On Demand Radio Page Footer Link should match url 1`] = `"/indonesia"`;
+exports[`AMP On Demand Radio Page Footer Link with text 'AdChoices / Do Not Sell My Info' should match url 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
-exports[`AMP On Demand Radio Page Footer Link should match url 2`] = `"https://www.bbc.com/indonesia/institutional-49283175"`;
+exports[`AMP On Demand Radio Page Footer Link with text 'Alasan Anda dapat mempercayai BBC News' should match url 1`] = `"https://www.bbc.com/indonesia/institutional-49283175"`;
 
-exports[`AMP On Demand Radio Page Footer Link should match url 3`] = `"https://www.bbc.com/indonesia/institutional-37818421"`;
+exports[`AMP On Demand Radio Page Footer Link with text 'BBC News, Indonesia' should match url 1`] = `"/indonesia"`;
 
-exports[`AMP On Demand Radio Page Footer Link should match url 4`] = `"https://www.bbc.com/indonesia/institutional-37818424"`;
+exports[`AMP On Demand Radio Page Footer Link with text 'Baca tentang peraturan baru terkait link eksternal.' should match url 1`] = `"https://www.bbc.com/indonesia/institutional/2011/02/000001_links"`;
 
-exports[`AMP On Demand Radio Page Footer Link should match url 5`] = `"https://www.bbc.com/indonesia/institutional-37818425"`;
+exports[`AMP On Demand Radio Page Footer Link with text 'Cookies' should match url 1`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
 
-exports[`AMP On Demand Radio Page Footer Link should match url 6`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+exports[`AMP On Demand Radio Page Footer Link with text 'Hubungi BBC' should match url 1`] = `"https://www.bbc.com/indonesia/institutional-37818427"`;
 
-exports[`AMP On Demand Radio Page Footer Link should match url 7`] = `"https://www.bbc.com/indonesia/institutional-37818427"`;
+exports[`AMP On Demand Radio Page Footer Link with text 'Kebijakan tentang Privasi' should match url 1`] = `"https://www.bbc.com/indonesia/institutional-37818425"`;
 
-exports[`AMP On Demand Radio Page Footer Link should match url 8`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`AMP On Demand Radio Page Footer Link with text 'Mengenai BBC' should match url 1`] = `"https://www.bbc.com/indonesia/institutional-37818424"`;
 
-exports[`AMP On Demand Radio Page Footer Link should match url 9`] = `"https://www.bbc.com/indonesia/institutional/2011/02/000001_links"`;
+exports[`AMP On Demand Radio Page Footer Link with text 'Peraturan Penggunaan' should match url 1`] = `"https://www.bbc.com/indonesia/institutional-37818421"`;
 
 exports[`AMP On Demand Radio Page Header I can see the branding 1`] = `"BBC News, Indonesia"`;
 

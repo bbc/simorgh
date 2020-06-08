@@ -140,23 +140,23 @@ exports[`AMP Story Page Footer Link should match text 8`] = `"AdChoices / Do Not
 
 exports[`AMP Story Page Footer Link should match text 9`] = `"Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
 
-exports[`AMP Story Page Footer Link should match url 1`] = `"/kyrgyz"`;
+exports[`AMP Story Page Footer Link with text 'AdChoices / Do Not Sell My Info' should match url 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
-exports[`AMP Story Page Footer Link should match url 2`] = `"https://www.bbc.com/kyrgyz/institutional-49677275"`;
+exports[`AMP Story Page Footer Link with text 'BBC News, Кыргыз КызMATы' should match url 1`] = `"/kyrgyz"`;
 
-exports[`AMP Story Page Footer Link should match url 3`] = `"https://www.bbc.com/kyrgyz/institutional-38157280"`;
+exports[`AMP Story Page Footer Link with text 'Cookies' should match url 1`] = `"https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html"`;
 
-exports[`AMP Story Page Footer Link should match url 4`] = `"https://www.bbc.com/kyrgyz/institutional-38157281"`;
+exports[`AMP Story Page Footer Link with text 'Башка интернет сайттардын мазмуну боюнча биздин позиция.' should match url 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
-exports[`AMP Story Page Footer Link should match url 5`] = `"https://www.bbc.com/kyrgyz/institutional-38157282"`;
+exports[`AMP Story Page Footer Link with text 'Би-Би-Си жөнүндө' should match url 1`] = `"https://www.bbc.com/kyrgyz/institutional-38157281"`;
 
-exports[`AMP Story Page Footer Link should match url 6`] = `"https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html"`;
+exports[`AMP Story Page Footer Link with text 'Би-Би-Си менен байланышыңыз' should match url 1`] = `"https://www.bbc.com/kyrgyz/institutional-38157284"`;
 
-exports[`AMP Story Page Footer Link should match url 7`] = `"https://www.bbc.com/kyrgyz/institutional-38157284"`;
+exports[`AMP Story Page Footer Link with text 'Колдонуу эрежелери' should match url 1`] = `"https://www.bbc.com/kyrgyz/institutional-38157280"`;
 
-exports[`AMP Story Page Footer Link should match url 8`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`AMP Story Page Footer Link with text 'Купуялык' should match url 1`] = `"https://www.bbc.com/kyrgyz/institutional-38157282"`;
 
-exports[`AMP Story Page Footer Link should match url 9`] = `"https://www.bbc.co.uk/help/web/links/"`;
+exports[`AMP Story Page Footer Link with text 'Эмнеге BBC News ишенсе болот?' should match url 1`] = `"https://www.bbc.com/kyrgyz/institutional-49677275"`;
 
 exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 

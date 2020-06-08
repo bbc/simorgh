@@ -26,23 +26,23 @@ exports[`Canonical On Demand Radio Page Footer Link should match text 8`] = `"Ad
 
 exports[`Canonical On Demand Radio Page Footer Link should match text 9`] = `"د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
 
-exports[`Canonical On Demand Radio Page Footer Link should match url 1`] = `"/pashto"`;
+exports[`Canonical On Demand Radio Page Footer Link with text 'AdChoices / Do Not Sell My Info' should match url 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
-exports[`Canonical On Demand Radio Page Footer Link should match url 2`] = `"https://www.bbc.com/pashto/institutional-49283007"`;
+exports[`Canonical On Demand Radio Page Footer Link with text 'BBC News, پښتو' should match url 1`] = `"/pashto"`;
 
-exports[`Canonical On Demand Radio Page Footer Link should match url 3`] = `"https://www.bbc.com/pashto/institutional-37620701"`;
+exports[`Canonical On Demand Radio Page Footer Link with text 'Cookies' should match url 1`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
 
-exports[`Canonical On Demand Radio Page Footer Link should match url 4`] = `"https://www.bbc.com/pashto/institutional-37622761"`;
+exports[`Canonical On Demand Radio Page Footer Link with text 'د بي بي سي‌ په اړه' should match url 1`] = `"https://www.bbc.com/pashto/institutional-37622761"`;
 
-exports[`Canonical On Demand Radio Page Footer Link should match url 5`] = `"https://www.bbc.com/pashto/institutional-37622762"`;
+exports[`Canonical On Demand Radio Page Footer Link with text 'د محرميت تگلاره' should match url 1`] = `"https://www.bbc.com/pashto/institutional-37622762"`;
 
-exports[`Canonical On Demand Radio Page Footer Link should match url 6`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+exports[`Canonical On Demand Radio Page Footer Link with text 'د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.' should match url 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
-exports[`Canonical On Demand Radio Page Footer Link should match url 7`] = `"https://www.bbc.co.uk/pashto/institutional-37622768"`;
+exports[`Canonical On Demand Radio Page Footer Link with text 'د کارولو شرايط' should match url 1`] = `"https://www.bbc.com/pashto/institutional-37620701"`;
 
-exports[`Canonical On Demand Radio Page Footer Link should match url 8`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`Canonical On Demand Radio Page Footer Link with text 'زموږ سره اړیکي' should match url 1`] = `"https://www.bbc.co.uk/pashto/institutional-37622768"`;
 
-exports[`Canonical On Demand Radio Page Footer Link should match url 9`] = `"https://www.bbc.co.uk/help/web/links/"`;
+exports[`Canonical On Demand Radio Page Footer Link with text 'ولې تاسې پر بي بي سي خبرونو باور کولی شئ' should match url 1`] = `"https://www.bbc.com/pashto/institutional-49283007"`;
 
 exports[`Canonical On Demand Radio Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
 

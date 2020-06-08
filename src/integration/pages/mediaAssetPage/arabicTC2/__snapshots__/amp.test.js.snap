@@ -140,23 +140,23 @@ exports[`AMP Media Asset Page Footer Link should match text 8`] = `"AdChoices / 
 
 exports[`AMP Media Asset Page Footer Link should match text 9`] = `"سياستنا بخصوص الروابط الخارجية."`;
 
-exports[`AMP Media Asset Page Footer Link should match url 1`] = `"/arabic"`;
+exports[`AMP Media Asset Page Footer Link with text 'AdChoices / Do Not Sell My Info' should match url 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
-exports[`AMP Media Asset Page Footer Link should match url 2`] = `"https://www.bbc.com/arabic/institutional-49283069"`;
+exports[`AMP Media Asset Page Footer Link with text 'BBC News, عربي' should match url 1`] = `"/arabic"`;
 
-exports[`AMP Media Asset Page Footer Link should match url 3`] = `"https://www.bbc.com/arabic/institutional-37731351"`;
+exports[`AMP Media Asset Page Footer Link with text 'اتصل بـ بي بي سي' should match url 1`] = `"https://www.bbc.com/arabic/institutional-37731355"`;
 
-exports[`AMP Media Asset Page Footer Link should match url 4`] = `"https://www.bbc.com/arabic/institutional-37731352"`;
+exports[`AMP Media Asset Page Footer Link with text 'سياسة الخصوصية' should match url 1`] = `"https://www.bbc.com/arabic/institutional-37731353"`;
 
-exports[`AMP Media Asset Page Footer Link should match url 5`] = `"https://www.bbc.com/arabic/institutional-37731353"`;
+exports[`AMP Media Asset Page Footer Link with text 'سياستنا بخصوص الروابط الخارجية.' should match url 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
-exports[`AMP Media Asset Page Footer Link should match url 6`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+exports[`AMP Media Asset Page Footer Link with text 'شروط الاستخدام' should match url 1`] = `"https://www.bbc.com/arabic/institutional-37731351"`;
 
-exports[`AMP Media Asset Page Footer Link should match url 7`] = `"https://www.bbc.com/arabic/institutional-37731355"`;
+exports[`AMP Media Asset Page Footer Link with text 'عن بي بي سي' should match url 1`] = `"https://www.bbc.com/arabic/institutional-37731352"`;
 
-exports[`AMP Media Asset Page Footer Link should match url 8`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`AMP Media Asset Page Footer Link with text 'لماذا يمكنك الاعتماد على أخبار بي بي سي' should match url 1`] = `"https://www.bbc.com/arabic/institutional-49283069"`;
 
-exports[`AMP Media Asset Page Footer Link should match url 9`] = `"https://www.bbc.co.uk/help/web/links/"`;
+exports[`AMP Media Asset Page Footer Link with text 'ملفات الارتباط Cookies' should match url 1`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
 
 exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 

@@ -26,23 +26,23 @@ exports[`Canonical Media Asset Page Footer Link should match text 8`] = `"AdChoi
 
 exports[`Canonical Media Asset Page Footer Link should match text 9`] = `"سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
-exports[`Canonical Media Asset Page Footer Link should match url 1`] = `"/persian"`;
+exports[`Canonical Media Asset Page Footer Link with text 'AdChoices / Do Not Sell My Info' should match url 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
-exports[`Canonical Media Asset Page Footer Link should match url 2`] = `"https://www.bbc.com/persian/institutional-49283091"`;
+exports[`Canonical Media Asset Page Footer Link with text 'BBC News, فارسی' should match url 1`] = `"/persian"`;
 
-exports[`Canonical Media Asset Page Footer Link should match url 3`] = `"https://www.bbc.com/persian/institutional-37474133"`;
+exports[`Canonical Media Asset Page Footer Link with text 'تماس با بی بی سی' should match url 1`] = `"https://www.bbc.com/persian/institutional-37542244"`;
 
-exports[`Canonical Media Asset Page Footer Link should match url 4`] = `"https://www.bbc.com/persian/institutional-37474136"`;
+exports[`Canonical Media Asset Page Footer Link with text 'درباره بی بی سی' should match url 1`] = `"https://www.bbc.com/persian/institutional-37474136"`;
 
-exports[`Canonical Media Asset Page Footer Link should match url 5`] = `"https://www.bbc.com/persian/institutional-37540067"`;
+exports[`Canonical Media Asset Page Footer Link with text 'سیاست حفظ حریم خصوصی' should match url 1`] = `"https://www.bbc.com/persian/institutional-37540067"`;
 
-exports[`Canonical Media Asset Page Footer Link should match url 6`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+exports[`Canonical Media Asset Page Footer Link with text 'سیاست ما درباره لینک دادن به سایت های دیگر.' should match url 1`] = `"https://www.bbc.com/persian/institutional/2011/04/000001_links"`;
 
-exports[`Canonical Media Asset Page Footer Link should match url 7`] = `"https://www.bbc.com/persian/institutional-37542244"`;
+exports[`Canonical Media Asset Page Footer Link with text 'شرایط استفاده' should match url 1`] = `"https://www.bbc.com/persian/institutional-37474133"`;
 
-exports[`Canonical Media Asset Page Footer Link should match url 8`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`Canonical Media Asset Page Footer Link with text 'چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟' should match url 1`] = `"https://www.bbc.com/persian/institutional-49283091"`;
 
-exports[`Canonical Media Asset Page Footer Link should match url 9`] = `"https://www.bbc.com/persian/institutional/2011/04/000001_links"`;
+exports[`Canonical Media Asset Page Footer Link with text 'کوکی ها' should match url 1`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
 
 exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, فارسی"`;
 
