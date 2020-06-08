@@ -6,10 +6,7 @@ const logger = nodeLogger(__filename);
 
 const parsePageIdentifier = pageIdentifier => {
   const pathParts = pageIdentifier.split('.');
-  if (pathParts.slice(-1)[0] === 'page') {
-    pathParts.pop();
-  }
-  const uri = pathParts.join('/');
+  const uri = pathParts.join('/').replace('/page', '');
   return uri;
 };
 
