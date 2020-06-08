@@ -94,7 +94,7 @@ const renderEpisode = ({
           <LinkedData
             type="WebPage"
             seoTitle={headline}
-            otherData={otherStructuredData}
+            otherStructuredData={otherStructuredData}
           />
         </>
       );
