@@ -196,41 +196,41 @@ exports[`AMP On Demand Radio Page Header Navigation link should match text 17`] 
 
 exports[`AMP On Demand Radio Page Header Navigation link should match text 18`] = `"کالم"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 1`] = `"/pashto"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'افغانستان' should match url 1`] = `"/pashto/afghanistan"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 2`] = `"/pashto/afghanistan"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'افغانستان' should match url 2`] = `"/pashto/afghanistan"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 3`] = `"/pashto/pakhtunkhwa"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'لوبې' should match url 1`] = `"/pashto/sport"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 4`] = `"/pashto/world"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'لوبې' should match url 2`] = `"/pashto/sport"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 5`] = `"/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'نړۍ' should match url 1`] = `"/pashto/world"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 6`] = `"/pashto/sport"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'نړۍ' should match url 2`] = `"/pashto/world"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 7`] = `"/pashto/media/video"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'ويډيوګانې' should match url 1`] = `"/pashto/media/video"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 8`] = `"/pashto/in_depth"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'ويډيوګانې' should match url 2`] = `"/pashto/media/video"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 9`] = `"/pashto/columns"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'پښتونخوا' should match url 1`] = `"/pashto/pakhtunkhwa"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 10`] = `"/pashto"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'پښتونخوا' should match url 2`] = `"/pashto/pakhtunkhwa"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 11`] = `"/pashto/afghanistan"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'ځانګړې پاڼې' should match url 1`] = `"/pashto/in_depth"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 12`] = `"/pashto/pakhtunkhwa"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'ځانګړې پاڼې' should match url 2`] = `"/pashto/in_depth"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 13`] = `"/pashto/world"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'ښځې' should match url 1`] = `"/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 14`] = `"/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'ښځې' should match url 2`] = `"/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 15`] = `"/pashto/sport"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'کالم' should match url 1`] = `"/pashto/columns"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 16`] = `"/pashto/media/video"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'کالم' should match url 2`] = `"/pashto/columns"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 17`] = `"/pashto/in_depth"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'کور پاڼه' should match url 1`] = `"/pashto"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 18`] = `"/pashto/columns"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'کور پاڼه' should match url 2`] = `"/pashto"`;
 
 exports[`AMP On Demand Radio Page I can see the brand title 1`] = `"ماښامنۍ خپرونه"`;
 

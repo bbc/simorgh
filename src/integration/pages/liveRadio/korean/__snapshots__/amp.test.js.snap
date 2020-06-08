@@ -176,21 +176,21 @@ exports[`AMP Korean Live Radio Page Header Navigation link should match text 7`]
 
 exports[`AMP Korean Live Radio Page Header Navigation link should match text 8`] = `"TOP 뉴스"`;
 
-exports[`AMP Korean Live Radio Page Header Navigation link should match url 1`] = `"/korean"`;
+exports[`AMP Korean Live Radio Page Header Navigation link with text 'TOP 뉴스' should match url 1`] = `"/korean/popular/read"`;
 
-exports[`AMP Korean Live Radio Page Header Navigation link should match url 2`] = `"/korean/media/video"`;
+exports[`AMP Korean Live Radio Page Header Navigation link with text 'TOP 뉴스' should match url 2`] = `"/korean/popular/read"`;
 
-exports[`AMP Korean Live Radio Page Header Navigation link should match url 3`] = `"/korean/downloads"`;
+exports[`AMP Korean Live Radio Page Header Navigation link with text '뉴스' should match url 1`] = `"/korean"`;
 
-exports[`AMP Korean Live Radio Page Header Navigation link should match url 4`] = `"/korean/popular/read"`;
+exports[`AMP Korean Live Radio Page Header Navigation link with text '뉴스' should match url 2`] = `"/korean"`;
 
-exports[`AMP Korean Live Radio Page Header Navigation link should match url 5`] = `"/korean"`;
+exports[`AMP Korean Live Radio Page Header Navigation link with text '다운로드' should match url 1`] = `"/korean/downloads"`;
 
-exports[`AMP Korean Live Radio Page Header Navigation link should match url 6`] = `"/korean/media/video"`;
+exports[`AMP Korean Live Radio Page Header Navigation link with text '다운로드' should match url 2`] = `"/korean/downloads"`;
 
-exports[`AMP Korean Live Radio Page Header Navigation link should match url 7`] = `"/korean/downloads"`;
+exports[`AMP Korean Live Radio Page Header Navigation link with text '비디오' should match url 1`] = `"/korean/media/video"`;
 
-exports[`AMP Korean Live Radio Page Header Navigation link should match url 8`] = `"/korean/popular/read"`;
+exports[`AMP Korean Live Radio Page Header Navigation link with text '비디오' should match url 2`] = `"/korean/media/video"`;
 
 exports[`AMP Korean Live Radio Page Main heading should match text 1`] = `"BBC 코리아 라디오"`;
 

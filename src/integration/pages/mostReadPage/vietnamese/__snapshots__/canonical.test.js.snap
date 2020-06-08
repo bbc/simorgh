@@ -82,41 +82,41 @@ exports[`Canonical Most Read Page Header Navigation link should match text 17`] 
 
 exports[`Canonical Most Read Page Header Navigation link should match text 18`] = `"Video"`;
 
-exports[`Canonical Most Read Page Header Navigation link should match url 1`] = `"/vietnamese"`;
+exports[`Canonical Most Read Page Header Navigation link with text 'Diễn đàn' should match url 1`] = `"/vietnamese/forum"`;
 
-exports[`Canonical Most Read Page Header Navigation link should match url 2`] = `"/vietnamese/vietnam"`;
+exports[`Canonical Most Read Page Header Navigation link with text 'Diễn đàn' should match url 2`] = `"/vietnamese/forum"`;
 
-exports[`Canonical Most Read Page Header Navigation link should match url 3`] = `"/vietnamese/world"`;
+exports[`Canonical Most Read Page Header Navigation link with text 'Học tiếng Anh' should match url 1`] = `"/vietnamese/english"`;
 
-exports[`Canonical Most Read Page Header Navigation link should match url 4`] = `"/vietnamese/forum"`;
+exports[`Canonical Most Read Page Header Navigation link with text 'Học tiếng Anh' should match url 2`] = `"/vietnamese/english"`;
 
-exports[`Canonical Most Read Page Header Navigation link should match url 5`] = `"/vietnamese/business"`;
+exports[`Canonical Most Read Page Header Navigation link with text 'Kinh tế' should match url 1`] = `"/vietnamese/business"`;
 
-exports[`Canonical Most Read Page Header Navigation link should match url 6`] = `"/vietnamese/magazine"`;
+exports[`Canonical Most Read Page Header Navigation link with text 'Kinh tế' should match url 2`] = `"/vietnamese/business"`;
 
-exports[`Canonical Most Read Page Header Navigation link should match url 7`] = `"/vietnamese/sport"`;
+exports[`Canonical Most Read Page Header Navigation link with text 'Nhịp sống mới' should match url 1`] = `"/vietnamese/magazine"`;
 
-exports[`Canonical Most Read Page Header Navigation link should match url 8`] = `"/vietnamese/english"`;
+exports[`Canonical Most Read Page Header Navigation link with text 'Nhịp sống mới' should match url 2`] = `"/vietnamese/magazine"`;
 
-exports[`Canonical Most Read Page Header Navigation link should match url 9`] = `"/vietnamese/media/video"`;
+exports[`Canonical Most Read Page Header Navigation link with text 'Thể thao' should match url 1`] = `"/vietnamese/sport"`;
 
-exports[`Canonical Most Read Page Header Navigation link should match url 10`] = `"/vietnamese"`;
+exports[`Canonical Most Read Page Header Navigation link with text 'Thể thao' should match url 2`] = `"/vietnamese/sport"`;
 
-exports[`Canonical Most Read Page Header Navigation link should match url 11`] = `"/vietnamese/vietnam"`;
+exports[`Canonical Most Read Page Header Navigation link with text 'Thế giới' should match url 1`] = `"/vietnamese/world"`;
 
-exports[`Canonical Most Read Page Header Navigation link should match url 12`] = `"/vietnamese/world"`;
+exports[`Canonical Most Read Page Header Navigation link with text 'Thế giới' should match url 2`] = `"/vietnamese/world"`;
 
-exports[`Canonical Most Read Page Header Navigation link should match url 13`] = `"/vietnamese/forum"`;
+exports[`Canonical Most Read Page Header Navigation link with text 'Tin chính' should match url 1`] = `"/vietnamese"`;
 
-exports[`Canonical Most Read Page Header Navigation link should match url 14`] = `"/vietnamese/business"`;
+exports[`Canonical Most Read Page Header Navigation link with text 'Tin chính' should match url 2`] = `"/vietnamese"`;
 
-exports[`Canonical Most Read Page Header Navigation link should match url 15`] = `"/vietnamese/magazine"`;
+exports[`Canonical Most Read Page Header Navigation link with text 'Video' should match url 1`] = `"/vietnamese/media/video"`;
 
-exports[`Canonical Most Read Page Header Navigation link should match url 16`] = `"/vietnamese/sport"`;
+exports[`Canonical Most Read Page Header Navigation link with text 'Video' should match url 2`] = `"/vietnamese/media/video"`;
 
-exports[`Canonical Most Read Page Header Navigation link should match url 17`] = `"/vietnamese/english"`;
+exports[`Canonical Most Read Page Header Navigation link with text 'Việt Nam' should match url 1`] = `"/vietnamese/vietnam"`;
 
-exports[`Canonical Most Read Page Header Navigation link should match url 18`] = `"/vietnamese/media/video"`;
+exports[`Canonical Most Read Page Header Navigation link with text 'Việt Nam' should match url 2`] = `"/vietnamese/vietnam"`;
 
 exports[`Canonical Most Read Page I can see the headline 1`] = `"Đọc nhiều nhất"`;
 

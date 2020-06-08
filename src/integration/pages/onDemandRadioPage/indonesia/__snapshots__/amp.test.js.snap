@@ -184,29 +184,29 @@ exports[`AMP On Demand Radio Page Header Navigation link should match text 11`] 
 
 exports[`AMP On Demand Radio Page Header Navigation link should match text 12`] = `"Majalah"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 1`] = `"/indonesia"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'Berita' should match url 1`] = `"/indonesia"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 2`] = `"/indonesia/topics/cjgn7k8yx4gt"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'Berita' should match url 2`] = `"/indonesia"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 3`] = `"/indonesia/dunia"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'Dunia' should match url 1`] = `"/indonesia/dunia"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 4`] = `"/indonesia/topics/cn5w7g2nq6dt"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'Dunia' should match url 2`] = `"/indonesia/dunia"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 5`] = `"/indonesia/laporan-khusus-51267199"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'Indonesia' should match url 1`] = `"/indonesia/topics/cjgn7k8yx4gt"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 6`] = `"/indonesia/majalah-51456120"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'Indonesia' should match url 2`] = `"/indonesia/topics/cjgn7k8yx4gt"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 7`] = `"/indonesia"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'Liputan Mendalam' should match url 1`] = `"/indonesia/laporan-khusus-51267199"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 8`] = `"/indonesia/topics/cjgn7k8yx4gt"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'Liputan Mendalam' should match url 2`] = `"/indonesia/laporan-khusus-51267199"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 9`] = `"/indonesia/dunia"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'Majalah' should match url 1`] = `"/indonesia/majalah-51456120"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 10`] = `"/indonesia/topics/cn5w7g2nq6dt"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'Majalah' should match url 2`] = `"/indonesia/majalah-51456120"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 11`] = `"/indonesia/laporan-khusus-51267199"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'Viral' should match url 1`] = `"/indonesia/topics/cn5w7g2nq6dt"`;
 
-exports[`AMP On Demand Radio Page Header Navigation link should match url 12`] = `"/indonesia/majalah-51456120"`;
+exports[`AMP On Demand Radio Page Header Navigation link with text 'Viral' should match url 2`] = `"/indonesia/topics/cn5w7g2nq6dt"`;
 
 exports[`AMP On Demand Radio Page I can see the brand title 1`] = `"Dunia Pagi Ini"`;
 

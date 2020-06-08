@@ -200,45 +200,45 @@ exports[`AMP Front Page Header Navigation link should match text 19`] = `"تحق
 
 exports[`AMP Front Page Header Navigation link should match text 20`] = `"برامجنا"`;
 
-exports[`AMP Front Page Header Navigation link should match url 1`] = `"/arabic"`;
+exports[`AMP Front Page Header Navigation link with text 'الصفحة الحالية, رئيسية' should match url 1`] = `"/arabic"`;
 
-exports[`AMP Front Page Header Navigation link should match url 2`] = `"/arabic/middleeast"`;
+exports[`AMP Front Page Header Navigation link with text 'الصفحة الحالية, رئيسية' should match url 2`] = `"/arabic"`;
 
-exports[`AMP Front Page Header Navigation link should match url 3`] = `"/arabic/world"`;
+exports[`AMP Front Page Header Navigation link with text 'برامجنا' should match url 1`] = `"/arabic/tv-and-radio-37728883"`;
 
-exports[`AMP Front Page Header Navigation link should match url 4`] = `"/arabic/scienceandtech"`;
+exports[`AMP Front Page Header Navigation link with text 'برامجنا' should match url 2`] = `"/arabic/tv-and-radio-37728883"`;
 
-exports[`AMP Front Page Header Navigation link should match url 5`] = `"/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+exports[`AMP Front Page Header Navigation link with text 'تحقيقات' should match url 1`] = `"/arabic/tv-and-radio-42414864"`;
 
-exports[`AMP Front Page Header Navigation link should match url 6`] = `"/arabic/media"`;
+exports[`AMP Front Page Header Navigation link with text 'تحقيقات' should match url 2`] = `"/arabic/tv-and-radio-42414864"`;
 
-exports[`AMP Front Page Header Navigation link should match url 7`] = `"/arabic/inthepress"`;
+exports[`AMP Front Page Header Navigation link with text 'ترند' should match url 1`] = `"/arabic/trending"`;
 
-exports[`AMP Front Page Header Navigation link should match url 8`] = `"/arabic/trending"`;
+exports[`AMP Front Page Header Navigation link with text 'ترند' should match url 2`] = `"/arabic/trending"`;
 
-exports[`AMP Front Page Header Navigation link should match url 9`] = `"/arabic/tv-and-radio-42414864"`;
+exports[`AMP Front Page Header Navigation link with text 'شرق أوسط' should match url 1`] = `"/arabic/middleeast"`;
 
-exports[`AMP Front Page Header Navigation link should match url 10`] = `"/arabic/tv-and-radio-37728883"`;
+exports[`AMP Front Page Header Navigation link with text 'شرق أوسط' should match url 2`] = `"/arabic/middleeast"`;
 
-exports[`AMP Front Page Header Navigation link should match url 11`] = `"/arabic"`;
+exports[`AMP Front Page Header Navigation link with text 'صحافة' should match url 1`] = `"/arabic/inthepress"`;
 
-exports[`AMP Front Page Header Navigation link should match url 12`] = `"/arabic/middleeast"`;
+exports[`AMP Front Page Header Navigation link with text 'صحافة' should match url 2`] = `"/arabic/inthepress"`;
 
-exports[`AMP Front Page Header Navigation link should match url 13`] = `"/arabic/world"`;
+exports[`AMP Front Page Header Navigation link with text 'صحة' should match url 1`] = `"/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
 
-exports[`AMP Front Page Header Navigation link should match url 14`] = `"/arabic/scienceandtech"`;
+exports[`AMP Front Page Header Navigation link with text 'صحة' should match url 2`] = `"/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
 
-exports[`AMP Front Page Header Navigation link should match url 15`] = `"/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+exports[`AMP Front Page Header Navigation link with text 'عالم' should match url 1`] = `"/arabic/world"`;
 
-exports[`AMP Front Page Header Navigation link should match url 16`] = `"/arabic/media"`;
+exports[`AMP Front Page Header Navigation link with text 'عالم' should match url 2`] = `"/arabic/world"`;
 
-exports[`AMP Front Page Header Navigation link should match url 17`] = `"/arabic/inthepress"`;
+exports[`AMP Front Page Header Navigation link with text 'علوم وتكنولوجيا' should match url 1`] = `"/arabic/scienceandtech"`;
 
-exports[`AMP Front Page Header Navigation link should match url 18`] = `"/arabic/trending"`;
+exports[`AMP Front Page Header Navigation link with text 'علوم وتكنولوجيا' should match url 2`] = `"/arabic/scienceandtech"`;
 
-exports[`AMP Front Page Header Navigation link should match url 19`] = `"/arabic/tv-and-radio-42414864"`;
+exports[`AMP Front Page Header Navigation link with text 'فيديو' should match url 1`] = `"/arabic/media"`;
 
-exports[`AMP Front Page Header Navigation link should match url 20`] = `"/arabic/tv-and-radio-37728883"`;
+exports[`AMP Front Page Header Navigation link with text 'فيديو' should match url 2`] = `"/arabic/media"`;
 
 exports[`AMP Front Page I can see Index Alsos 1`] = `"المزيد حول هذه القصة"`;
 
