@@ -1,6 +1,6 @@
 import isNil from 'ramda/src/isNil';
 import path from 'ramda/src/path';
-import { MEDIA_MISSING_FIELD } from '#lib/logger.const';
+import { RADIO_FIELD_MISSING } from '#lib/logger.const';
 import { getUri } from '../logInitialData';
 import nodeLogger from '#lib/logger.node';
 
@@ -22,9 +22,9 @@ const getLogger = level =>
 export default (fieldPath, { logLevel = LOG_LEVELS.INFO } = {}) => pageData => {
   const value = path(fieldPath, pageData);
   if (isNil(value)) {
-    getLogger(logLevel)(MEDIA_MISSING_FIELD, {
+    getLogger(logLevel)(RADIO_FIELD_MISSING, {
       url: getUri(pageData),
-      fieldPath,
+      path: fieldPath,
     });
   }
 

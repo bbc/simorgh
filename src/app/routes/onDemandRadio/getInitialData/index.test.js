@@ -1,4 +1,6 @@
 import assocPath from 'ramda/src/assocPath';
+import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
+import loggerMock from '#testHelpers/loggerMock';
 import getInitialData from '.';
 import * as fetchPageData from '../../utils/fetchPageData';
 import onDemandRadioJson from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
@@ -83,5 +85,51 @@ describe('Get initial data for on demand radio', () => {
     process.env.SIMORGH_APP_ENV = 'live';
     await getInitialData({ path: 'mock-live-radio-path' });
     expect(spy).toHaveBeenCalledWith('mock-live-radio-path');
+  });
+
+  it('invokes logging when expected data is missing in ARES response', async () => {
+    const pageDataWithMissingFields = mergeDeepLeft(
+      {
+        metadata: {
+          title: null, // info
+          language: null, // info
+          createdBy: null, // error
+          releaseDateTimeStamp: null, // warn
+          analyticsLabels: {
+            contentType: null, // info
+          },
+        },
+        promo: {
+          headlines: {
+            headline: null, // warn
+          },
+          media: {
+            imageUrl: null, // info
+          },
+        },
+        content: {
+          blocks: [
+            {
+              id: null, // error
+              imageUrl: null, // info
+              durationISO8601: null, // info
+              synopses: {
+                short: null, // info
+              },
+            },
+          ],
+        },
+      },
+      onDemandRadioJson,
+    );
+    fetch.mockResponse(JSON.stringify(pageDataWithMissingFields));
+
+    await getInitialData({
+      path: 'mock-on-demand-radio-path',
+    });
+
+    expect(loggerMock.info).toHaveBeenCalledTimes(7);
+    expect(loggerMock.warn).toHaveBeenCalledTimes(2);
+    expect(loggerMock.error).toHaveBeenCalledTimes(2);
   });
 });

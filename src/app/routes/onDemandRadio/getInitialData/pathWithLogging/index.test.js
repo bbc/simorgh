@@ -1,26 +1,22 @@
-import pathWithLogging, { LOG_LEVELS } from '.';
 import loggerMock from '#testHelpers/loggerMock';
+import pathWithLogging, { LOG_LEVELS } from '.';
 import { RADIO_FIELD_MISSING } from '#lib/logger.const';
 
 jest.mock('../logInitialData', () => {
   return {
-    getUri: jest.fn(() => 'example-url'),
+    getUri: () => 'example-url',
   };
 });
 
 const fixtureData = {
   metadata: {
-    id: 'hello',
+    id: 'fixture-id',
   },
 };
 
 describe('pathWithLogging', () => {
-  afterEach(() => {
-    jest.clearAllMocks();
-  });
-
   it('should return the correct value', () => {
-    expect(pathWithLogging(['metadata', 'id'])(fixtureData)).toBe('hello');
+    expect(pathWithLogging(['metadata', 'id'])(fixtureData)).toBe('fixture-id');
   });
 
   it('should create an "info" log entry if the value is undefined', () => {
