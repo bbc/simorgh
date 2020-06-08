@@ -275,7 +275,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 .c12 {
-  padding: 2rem 0;
+  padding: 2rem 0 1.5rem;
   padding-left: 1rem;
 }
 
@@ -513,7 +513,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 
 @media screen {
   .c6 {
-    padding: 2rem 0 1.5rem;
+    padding: 2rem 0 1rem;
   }
 }
 
@@ -549,6 +549,12 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   .c10 {
     font-size: 1.375rem;
     line-height: 2rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c10 {
+    padding-bottom: 0.5rem;
   }
 }
 
@@ -789,7 +795,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 .c12 {
-  padding: 2rem 0;
+  padding: 2rem 0 1.5rem;
   padding-left: 1rem;
 }
 
@@ -1037,7 +1043,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 
 @media screen {
   .c6 {
-    padding: 2rem 0 1.5rem;
+    padding: 2rem 0 1rem;
   }
 }
 
@@ -1073,6 +1079,12 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   .c10 {
     font-size: 1.375rem;
     line-height: 2rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c10 {
+    padding-bottom: 0.5rem;
   }
 }
 
@@ -1491,7 +1503,7 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
 }
 
 .c12 {
-  padding: 2rem 0;
+  padding: 2rem 0 1.5rem;
   padding-right: 1rem;
 }
 
@@ -1729,7 +1741,7 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
 
 @media screen {
   .c6 {
-    padding: 2rem 0 1.5rem;
+    padding: 2rem 0 1rem;
   }
 }
 
@@ -1765,6 +1777,12 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
   .c10 {
     font-size: 1rem;
     line-height: 1.75rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c10 {
+    padding-bottom: 0.5rem;
   }
 }
 
@@ -1981,7 +1999,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 .c12 {
-  padding: 2rem 0;
+  padding: 2rem 0 1.5rem;
   padding-right: 1rem;
 }
 
@@ -2219,7 +2237,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 
 @media screen {
   .c6 {
-    padding: 2rem 0 1.5rem;
+    padding: 2rem 0 1rem;
   }
 }
 
@@ -2255,6 +2273,12 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   .c10 {
     font-size: 1rem;
     line-height: 1.75rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c10 {
+    padding-bottom: 0.5rem;
   }
 }
 
