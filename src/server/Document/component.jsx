@@ -77,10 +77,10 @@ const Document = ({
         {/* eslint-disable-next-line react/no-danger */}
         <StyledDiv id="root" dangerouslySetInnerHTML={{ __html: app }} />
         {scriptsAllowed && (
-          <script
+          <script type="application/json" id="simorgh-data"
             /* eslint-disable-next-line react/no-danger */
             dangerouslySetInnerHTML={{
-              __html: `window.SIMORGH_DATA=${serialisedData}`,
+              __html: serialisedData,
             }}
           />
         )}

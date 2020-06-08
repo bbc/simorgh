@@ -9,21 +9,22 @@ import loggerNode from '#lib/logger.node';
 
 const logger = loggerNode();
 
-const data = window.SIMORGH_DATA || {};
+const dataBlock = document.getElementById('simorgh-data');
+const data = dataBlock ? JSON.parse(dataBlock.textContent) : {};
 const root = document.getElementById('root');
 
 // Only hydrate the client if we're on the expected path
 // When on an unknown route, the SSR would be discarded and the user would only
 // see a blank screen. Avoid this by only hydrating when the embedded page data
 // and window location agree what the path is. Otherwise, fallback to the SSR.
-if (window.SIMORGH_DATA.path === window.location.pathname) {
+if (data.path === window.location.pathname) {
   loadableReady(() => {
     hydrate(<ClientApp data={data} routes={routes} />, root);
   });
 } else {
   logger.warn(`
     Simorgh refused to hydrate.
-    It attempted to hydrate page with path ${window.SIMORGH_DATA.path},
+    It attempted to hydrate page with path ${data.path},
     but window.location says path is ${window.location.pathname}
   `);
 }
