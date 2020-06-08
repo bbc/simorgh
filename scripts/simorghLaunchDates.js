@@ -105,7 +105,7 @@ const simorghLaunchDates = {
     articles: 'Sept 2019',
     frontPage: '15th July 2019',
     mediaAssetPage: '16th Jan 2020',
-    storyPage: '',
+    storyPage: '4th June 2020',
     photoGalleryPage: '20th Feb 2020',
     mostReadPage: '28th May 2020',
   },
@@ -141,7 +141,7 @@ const simorghLaunchDates = {
     liveRadio: '10th Jan 2020',
     mediaAssetPage: '27th Feb 2020',
     photoGalleryPage: '12th March 2020',
-    storyPage: '',
+    storyPage: '4th June 2020',
     mostReadPage: '28th May 2020',
   },
   marathi: {
@@ -182,7 +182,7 @@ const simorghLaunchDates = {
     liveRadio: '14th Jan 2020',
     mediaAssetPage: '5th March 2020',
     photoGalleryPage: '12th March 2020',
-    storyPage: '',
+    storyPage: '4th June 2020',
     mostReadPage: '28th May 2020',
   },
   persian: {
@@ -252,7 +252,7 @@ const simorghLaunchDates = {
     liveRadio: '14th Jan 2020',
     mediaAssetPage: '27th Feb 2020',
     photoGalleryPage: '12th March 2020',
-    storyPage: '',
+    storyPage: '4th June 2020',
     mostReadPage: '28th May 2020',
   },
   somali: {
@@ -374,7 +374,7 @@ const simorghLaunchDates = {
     frontPage: 'July 15th 2019',
     mediaAssetPage: '16th Jan 2020',
     photoGalleryPage: '12th March 2020',
-    storyPage: '',
+    storyPage: '4th June 2020',
     mostReadPage: '28th May 2020',
   },
   zhongwenSimp: {
