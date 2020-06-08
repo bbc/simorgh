@@ -52,8 +52,12 @@ const logCodes = {
   INCLUDE_ERROR: 'include_error',
   INCLUDE_FETCH_ERROR: 'include_fetch_error',
   INCLUDE_MISSING_URL: 'include_missing_url',
+  INCLUDE_RENDERED: 'include_rendered',
   INCLUDE_REQUEST_RECEIVED: 'include_request_received',
   INCLUDE_UNSUPPORTED: 'include_unsupported',
+
+  // Social Embed
+  SOCIAL_EMBED_RENDERED: 'social_embed_rendered',
 };
 
 module.exports = logCodes;
