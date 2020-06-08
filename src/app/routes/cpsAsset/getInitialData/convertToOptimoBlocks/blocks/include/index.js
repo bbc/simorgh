@@ -1,4 +1,5 @@
 import 'isomorphic-fetch';
+import Url from 'url-parse';
 import {
   INCLUDE_ERROR,
   INCLUDE_FETCH_ERROR,
@@ -22,16 +23,11 @@ const buildIncludeUrl = (href, type, pathname) => {
 
   const includeUrl = `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${resolvers[type]}`;
 
-  const currentRendererEnv = () => {
-    if (!pathname || !pathname.includes('?renderer_env=')) {
-      return null;
-    }
-    return pathname.split('=')[1];
-  };
+  const currentRendererEnv = new Url(pathname, true).query.renderer_env;
 
   let includeUrlWithParam = '';
 
-  switch (currentRendererEnv()) {
+  switch (currentRendererEnv) {
     case 'test':
       includeUrlWithParam = addOverrideQuery(includeUrl, 'test');
       break;
