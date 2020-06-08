@@ -8,7 +8,7 @@ import {
   INCLUDE_UNSUPPORTED,
 } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
-import { addOverrideQuery } from '../../../../../utils/overrideRendererOnTest';
+import { addOverrideQuery } from '#app/routes/utils/overrideRendererOnTest';
 
 const logger = nodeLogger(__filename);
 
@@ -79,6 +79,8 @@ const convertInclude = async (includeBlock, ...restParams) => {
 
   const { href, type, ...rest } = includeBlock;
 
+  const pathname = restParams[2];
+
   if (!href) {
     logger.error(INCLUDE_MISSING_URL, includeBlock);
     return null;
@@ -110,9 +112,7 @@ const convertInclude = async (includeBlock, ...restParams) => {
     type,
     model: {
       href,
-      html: await fetchMarkup(
-        buildIncludeUrl(href, includeType, restParams[2]),
-      ),
+      html: await fetchMarkup(buildIncludeUrl(href, includeType, pathname)),
       type: includeType,
       ...rest,
     },
