@@ -15,20 +15,24 @@ fs.readdir(dir, (err, files) => {
   }
 
   return files.forEach(configFileName => {
-    const fileName = configFileName.split('.');
+    const serviceName = configFileName.split('.')[0];
+    const serviceTestFile = `${dir}/${serviceName}.test.js`;
 
-    const importConfig = `import { service } from './${fileName[0]}';\n`;
-    const testFile = fs.readFileSync('scripts/linkeyTest.js', (error, data) => {
-      return data;
-    });
-
-    if (excludes.indexOf(fileName[0]) >= 0) {
+    if (excludes.indexOf(serviceName) >= 0) {
       return null;
     }
 
+    const importConfig = `import { service } from './${serviceName}';\n`;
+    const testTemplate = fs.readFileSync(
+      'scripts/linkeyTest.js',
+      (error, data) => {
+        return data;
+      },
+    );
+
     return fs.writeFile(
-      `${dir}/${fileName[0]}.test.js`,
-      importConfig + testFile,
+      serviceTestFile,
+      importConfig + testTemplate,
       'utf8',
       error => {
         if (error) throw error;
