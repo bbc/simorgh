@@ -35,7 +35,7 @@ describe('overrideRendererOnTest', () => {
   it('should add override query to full url with a passed query string', () => {
     const url = 'https://domain.com/path-name?app_env=test';
     const expected =
-      'https://domain.com/path-name?app_env=live&renderer_env=test';
+      'https://domain.com/path-name?app_env=test&renderer_env=test';
 
     const actual = addOverrideQuery(url, 'test');
     expect(actual).toEqual(expected);
@@ -51,7 +51,7 @@ describe('overrideRendererOnTest', () => {
 
   it('should add override query to pathname url with a passed query string', () => {
     const url = 'path-name?app_env=test';
-    const expected = 'path-name?app_env=live&renderer_env=test';
+    const expected = 'path-name?app_env=test&renderer_env=test';
 
     const actual = addOverrideQuery(url, 'test');
     expect(actual).toEqual(expected);
