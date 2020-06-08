@@ -8,6 +8,10 @@ import onDemandRadioEpisodeJson from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
 import onDemandRadioBrandJson from '#data/indonesia/bbc_indonesian_radio/w13xtt0s';
 
 describe('Logging get initial data', () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('should return a valid uri for episode page', () => {
     const pageIdentifier = path(
       ['metadata', 'analyticsLabels', 'pageIdentifier'],
@@ -54,6 +58,22 @@ describe('Logging get initial data', () => {
     fetch.mockResponse(JSON.stringify(responseWithoutVersions));
     await getInitialData('mock-on-demand-radio-path');
     expect(loggerMock.info).toHaveBeenCalledWith(RADIO_EPISODE_EXPIRED, {
+      url: 'pashto/bbc_pashto_radio/w3ct0lz1',
+    });
+  });
+
+  it('does not log anything when a radio episode is available', async () => {
+    const oneMinuteAgo = Date.now() - 60 * 1000;
+    const responseWithEpisodeAvailableOneMinuteAgo = assocPath(
+      ['content', 'blocks', '0', 'versions', '0', 'availableFrom'],
+      oneMinuteAgo,
+      onDemandRadioEpisodeJson,
+    );
+    fetch.mockResponse(
+      JSON.stringify(responseWithEpisodeAvailableOneMinuteAgo),
+    );
+
+    expect(loggerMock.info).not.toHaveBeenCalledWith(RADIO_EPISODE_EXPIRED, {
       url: 'pashto/bbc_pashto_radio/w3ct0lz1',
     });
   });
