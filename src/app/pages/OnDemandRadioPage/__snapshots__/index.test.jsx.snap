@@ -1825,6 +1825,30 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
   }
 }
 
+@media (min-width:37.5rem) {
+  .c16 {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c16 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c17 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c17 {
+    padding: 1rem;
+  }
+}
+
 @media (max-width:24.9375rem) {
   .c12 {
     display: none;
