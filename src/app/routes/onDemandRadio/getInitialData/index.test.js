@@ -1,3 +1,4 @@
+import assocPath from 'ramda/src/assocPath';
 import getInitialData from '.';
 import * as fetchPageData from '../../utils/fetchPageData';
 import onDemandRadioJson from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
@@ -30,6 +31,46 @@ describe('Get initial data for on demand radio', () => {
     expect(pageData.thumbnailImageUrl).toEqual(
       'https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png',
     );
+  });
+
+  it('should return episodeIsAvailable as true if current time is after when episode is availableFrom', async () => {
+    const oneMinuteAgo = Date.now() - 60 * 1000;
+    const responseWithEpisodeAvailableOneMinuteAgo = assocPath(
+      ['content', 'blocks', '0', 'versions', '0', 'availableFrom'],
+      oneMinuteAgo,
+      onDemandRadioJson,
+    );
+    fetch.mockResponse(
+      JSON.stringify(responseWithEpisodeAvailableOneMinuteAgo),
+    );
+
+    const { pageData } = await getInitialData({
+      path: 'mock-on-demand-radio-path',
+    });
+    expect(pageData.episodeIsAvailable).toEqual(true);
+  });
+
+  it('should return episodeIsAvailable as false if current time is before when episode is availableFrom', async () => {
+    const oneMinuteFromNow = Date.now() + 60 * 1000;
+    const responseWithEpisodeAvailableInOneMinute = assocPath(
+      ['content', 'blocks', '0', 'versions', '0', 'availableFrom'],
+      oneMinuteFromNow,
+      onDemandRadioJson,
+    );
+    fetch.mockResponse(JSON.stringify(responseWithEpisodeAvailableInOneMinute));
+    const { pageData } = await getInitialData('mock-on-demand-radio-path');
+    expect(pageData.episodeIsAvailable).toEqual(false);
+  });
+
+  it('should return episodeIsAvailable as false if there is no availableUntil data', async () => {
+    const responseWithoutVersions = assocPath(
+      ['content', 'blocks', 0, 'versions'],
+      [],
+      onDemandRadioJson,
+    );
+    fetch.mockResponse(JSON.stringify(responseWithoutVersions));
+    const { pageData } = await getInitialData('mock-on-demand-radio-path');
+    expect(pageData.episodeIsAvailable).toEqual(false);
   });
 
   it('should override renderer on test', async () => {

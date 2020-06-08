@@ -1502,6 +1502,45 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
   visibility: visible;
 }
 
+.c15 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c16 {
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0.0625rem solid transparent;
+  color: #FFFFFF;
+  background-color: rgba(34,34,34,0.75);
+}
+
+.c17 {
+  display: block;
+  font-weight: normal;
+  bottom: 0;
+  position: absolute;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+.c14 {
+  position: relative;
+  min-height: 165px;
+  margin-bottom: 2rem;
+}
+
 .c12 {
   padding: 2rem 0 1.5rem;
   padding-right: 1rem;
@@ -1786,6 +1825,30 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
   }
 }
 
+@media (min-width:37.5rem) {
+  .c16 {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c16 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c17 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c17 {
+    padding: 1rem;
+  }
+}
+
 @media (max-width:24.9375rem) {
   .c12 {
     display: none;
@@ -1894,6 +1957,23 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
               src="https://ichef.bbci.co.uk/images/ic/128x128/p08b8lzc.png"
               srcset="https://ichef.bbci.co.uk/images/ic/128x128/p08b8lzc.png 128w,https://ichef.bbci.co.uk/images/ic/240x240/p08b8lzc.png 240w,https://ichef.bbci.co.uk/images/ic/480x480/p08b8lzc.png 480w"
             />
+          </div>
+        </div>
+      </div>
+      <div
+        class="c14"
+      >
+        <div
+          class="c15"
+        >
+          <div
+            class="c16"
+          >
+            <strong
+              class="c17"
+            >
+              더 이상 이용할 수 없는 콘텐츠입니다.
+            </strong>
           </div>
         </div>
       </div>
