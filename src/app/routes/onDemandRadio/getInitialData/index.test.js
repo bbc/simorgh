@@ -4,6 +4,7 @@ import loggerMock from '#testHelpers/loggerMock';
 import getInitialData from '.';
 import * as fetchPageData from '../../utils/fetchPageData';
 import onDemandRadioJson from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
+import { RADIO_FIELD_MISSING } from '#lib/logger.const';
 
 fetch.mockResponse(JSON.stringify(onDemandRadioJson));
 const { env } = process;
@@ -105,6 +106,11 @@ describe('Get initial data for on demand radio', () => {
           },
           media: {
             imageUrl: null, // info
+            versions: [
+              {
+                durationISO8601: null, // info
+              },
+            ],
           },
         },
         content: {
@@ -112,7 +118,6 @@ describe('Get initial data for on demand radio', () => {
             {
               id: null, // error
               imageUrl: null, // info
-              durationISO8601: null, // info
               synopses: {
                 short: null, // info
               },
@@ -128,8 +133,13 @@ describe('Get initial data for on demand radio', () => {
       path: 'mock-on-demand-radio-path',
     });
 
-    expect(loggerMock.info).toHaveBeenCalledTimes(7);
-    expect(loggerMock.warn).toHaveBeenCalledTimes(2);
-    expect(loggerMock.error).toHaveBeenCalledTimes(2);
+    const countMissingFieldCalls = mockedFunction =>
+      mockedFunction.mock.calls.filter(
+        ([logCategory]) => logCategory === RADIO_FIELD_MISSING,
+      ).length;
+
+    expect(countMissingFieldCalls(loggerMock.info)).toBe(7);
+    expect(countMissingFieldCalls(loggerMock.warn)).toBe(2);
+    expect(countMissingFieldCalls(loggerMock.error)).toBe(2);
   });
 });

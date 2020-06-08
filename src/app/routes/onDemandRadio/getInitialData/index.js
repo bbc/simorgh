@@ -76,7 +76,7 @@ const getDurationISO8601 = pathWithLogging([
 ]);
 const getThumbnailImageUrl = json =>
   getPlaceholderImageUrlUtil(
-    pathWithLogging(['promo', 'media', 'imageUrl'], json),
+    pathWithLogging(['promo', 'media', 'imageUrl'])(json),
   );
 
 export default async ({ path: pathname }) => {
