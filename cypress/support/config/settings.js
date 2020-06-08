@@ -1944,12 +1944,12 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/igbo/afirika-52816709'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/igbo/afirika-23252735'],
+            enabled: true,
           },
           local: {
             paths: ['/igbo/afirika-23252735'],
@@ -2589,15 +2589,15 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/kyrgyz/kyrgyzstan-52891593'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/kyrgyz/23292889'],
+            enabled: true,
           },
           local: {
-            paths: [],
+            paths: ['/kyrgyz/23292889'],
             enabled: false,
           },
         },
@@ -3307,12 +3307,12 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/pashto/world-52873295'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/pashto/23289748'],
+            enabled: true,
           },
           local: {
             paths: ['/pashto/23289748'],
@@ -4520,15 +4520,15 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/sinhala/sri-lanka-52851837'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/sinhala/23225618'],
+            enabled: true,
           },
           local: {
-            paths: [],
+            paths: ['/sinhala/23225618'],
             enabled: false,
           },
         },
@@ -6671,12 +6671,12 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/yoruba/afrika-51998079'],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/yoruba/afrika-23252769'],
+            enabled: true,
           },
           local: {
             paths: ['/yoruba/afrika-23252769'],

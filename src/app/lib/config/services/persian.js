@@ -209,6 +209,8 @@ export const service = {
       hasRadioSchedule: true,
       onFrontPage: false,
       frontPagePosition: '',
+      onIdxPage: true,
+      idxPagePosition: 'Features',
       header: 'برنامه‌های رادیو',
       durationLabel: 'مدت %duration%',
     },
@@ -312,10 +314,6 @@ export const service = {
       {
         title: 'ناظران می‌گویند',
         url: '/persian/blogs/viewpoints',
-      },
-      {
-        title: 'وبلاگ‌ها',
-        url: '/persian/services/2012/01/000000_blogs_list',
       },
     ],
   },
