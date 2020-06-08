@@ -23,7 +23,7 @@ const buildIncludeUrl = (href, type, pathname) => {
   const includeUrl = `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${resolvers[type]}`;
 
   const currentRendererEnv = () => {
-    if (!pathname.includes('?renderer_env=')) {
+    if (!pathname || !pathname.includes('?renderer_env=')) {
       return null;
     }
     return pathname.split('=')[1];
