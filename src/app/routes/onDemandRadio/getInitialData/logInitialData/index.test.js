@@ -45,7 +45,7 @@ describe('Logging get initial data', () => {
     expect(url).toEqual(`${service}/${masterBrand}/programmes/${pid}`);
   });
 
-  it('logs the correct message when the media asset is revoked', async () => {
+  it('logs the correct message when the on demand radio episode is expired', async () => {
     const responseWithoutVersions = assocPath(
       ['content', 'blocks', 0, 'versions'],
       [],
