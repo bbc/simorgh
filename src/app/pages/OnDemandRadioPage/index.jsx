@@ -71,13 +71,16 @@ const renderEpisode = ({
     episodeAvailableFrom,
     episodeAvailableUntil,
   );
-  const audio = {
-    name: promoBrandTitle,
-    description: shortSynopsis,
-    thumbnailUrl: thumbnailImageUrl,
-    duration: durationISO8601,
-    uploadDate: new Date(releaseDateTimeStamp).toISOString(),
-    embedURL: embedUrl,
+  const otherStructuredData = {
+    audio: {
+      '@type': 'AudioObject',
+      name: promoBrandTitle,
+      description: shortSynopsis,
+      thumbnailUrl: thumbnailImageUrl,
+      duration: durationISO8601,
+      uploadDate: new Date(releaseDateTimeStamp).toISOString(),
+      embedURL: embedUrl,
+    },
   };
   switch (episodeAvailability) {
     case EPISODE_IS_AVAILABLE:
@@ -88,7 +91,11 @@ const renderEpisode = ({
             id={episodeId}
             embedUrl={embedUrl}
           />
-          <LinkedData type="WebPage" seoTitle={headline} audio={audio} />
+          <LinkedData
+            type="WebPage"
+            seoTitle={headline}
+            otherData={otherStructuredData}
+          />
         </>
       );
     case EPISODE_IS_EXPIRED:

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
-import { string, shape, arrayOf, bool } from 'prop-types';
+import { string, shape, arrayOf, bool, object } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import getAboutTagsContent from './getAboutTagsContent';
@@ -15,7 +15,7 @@ const LinkedData = ({
   datePublished,
   dateModified,
   aboutTags,
-  audio,
+  otherData,
 }) => {
   const {
     brandName,
@@ -84,10 +84,7 @@ const LinkedData = ({
         ...(isTrustProjectParticipant && { noBylinesPolicy }),
       },
     }),
-    audio: audio && {
-      '@type': 'AudioObject',
-      ...audio,
-    },
+    ...otherData,
   };
 
   return (
@@ -117,14 +114,8 @@ LinkedData.propTypes = {
       sameAs: arrayOf(string),
     }),
   ),
-  audio: shape({
-    name: string.isRequired,
-    description: string.isRequired,
-    duration: string,
-    thumbnailUrl: string.isRequired,
-    uploadDate: string.isRequired,
-    embedURL: string.isRequired,
-  }),
+  // eslint-disable-next-line react/forbid-prop-types
+  otherData: object,
 };
 
 LinkedData.defaultProps = {
@@ -134,7 +125,7 @@ LinkedData.defaultProps = {
   datePublished: undefined,
   dateModified: undefined,
   aboutTags: undefined,
-  audio: undefined,
+  otherData: {},
 };
 
 export default LinkedData;
