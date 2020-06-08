@@ -16,13 +16,13 @@ export const getCookieDomain = domain => {
 const setCookie = (name, value, expires = COOKIE_EXPIRY) => {
   console.log('location object', document.location);
   console.log(document.location.protocol);
-  const isHttps = document.location.protocol === 'https:';
+  // const isHttps = document.location.protocol === 'https:';
 
   return Cookie.set(name, value, {
     expires,
     domain: getCookieDomain(document.domain),
     sameSite: 'None',
-    secure: isHttps,
+    secure: false,
   });
 };
 
