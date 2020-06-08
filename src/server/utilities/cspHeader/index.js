@@ -97,6 +97,7 @@ const directives = {
       'https://syndication.twitter.com', // Social Embeds
       'https://news.files.bbci.co.uk', // STY include
       'https://www.bbc.co.uk', // STY include
+      'https://bbc-maps.carto.com', // STY include maps
       "'self'",
     ],
     ampNonLive: [
@@ -125,6 +126,7 @@ const directives = {
       'https://news.files.bbci.co.uk', // STY include
       'https://www.bbc.co.uk', // STY include
       'http://www.bbc.co.uk', // for localhost STY include
+      'https://bbc-maps.carto.com', // STY include maps
       "'self'",
     ],
   },

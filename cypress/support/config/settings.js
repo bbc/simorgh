@@ -4520,7 +4520,7 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: ['/sinhala/sri-lanka-52851837'],
+            paths: ['/sinhala/world-51723376'],
             enabled: true,
           },
           test: {
