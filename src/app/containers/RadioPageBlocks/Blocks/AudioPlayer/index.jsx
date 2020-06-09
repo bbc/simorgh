@@ -59,12 +59,12 @@ const AudioPlayer = ({
   externalId: _masterBrand,
   id: assetId,
   idAttr,
-  isExpired,
   promoBrandTitle,
   shortSynopsis,
   durationISO8601,
   thumbnailImageUrl,
   releaseDateTimeStamp,
+  episodeIsAvailable,
 }) => {
   const { liveRadioOverrides, lang, translations, service } = useContext(
     ServiceContext,
@@ -80,7 +80,7 @@ const AudioPlayer = ({
     translations,
   );
 
-  if (isExpired) {
+  if (!episodeIsAvailable) {
     const expiredContentMessage = pathOr(
       'This content is no longer available',
       ['media', 'contentExpired'],
@@ -154,7 +154,7 @@ AudioPlayer.propTypes = {
   externalId: string,
   id: string,
   idAttr: string,
-  isExpired: bool,
+  episodeIsAvailable: bool,
   promoBrandTitle: string,
   shortSynopsis: string,
   durationISO8601: string,
@@ -166,7 +166,7 @@ AudioPlayer.defaultProps = {
   externalId: '',
   id: '',
   idAttr: null,
-  isExpired: false,
+  episodeIsAvailable: true,
   promoBrandTitle: '',
   shortSynopsis: '',
   durationISO8601: '',
