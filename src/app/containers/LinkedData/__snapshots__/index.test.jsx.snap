@@ -1,12 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`LinkedData should correctly render linked data for Ondemand Radio page 1`] = `
+<html>
+  <head>
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@graph":[{"@type":"WebPage","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Ondemand Radio Headline"}},{"@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","duration":"PT29M30S","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/externalId/id/ko?morph_env=live","thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg","uploadDate":"2020-04-23T15:30:00.000Z"}]}
+    </script>
+  </head>
+  <body>
+    <div />
+  </body>
+</html>
+`;
+
 exports[`LinkedData should correctly render linked data for Photo Gallery page 1`] = `
 <html>
   <head>
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"PGL Headline for SEO"},"headline":"PGL Headline for Magnificent Gallery","description":"Some photos in a gallery","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
+      {"@context":"http://schema.org","@graph":[{"@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"PGL Headline for SEO"},"headline":"PGL Headline for Magnificent Gallery","description":"Some photos in a gallery","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}]}
     </script>
   </head>
   <body>
@@ -21,7 +36,7 @@ exports[`LinkedData should correctly render linked data for article pages for se
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"Organization","name":"BBC","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Royal wedding 2018: Bouquet laid on tomb of unknown warrior"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"Organization","name":"BBC","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"}}}
+      {"@context":"http://schema.org","@graph":[{"@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"Organization","name":"BBC","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Royal wedding 2018: Bouquet laid on tomb of unknown warrior"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"Organization","name":"BBC","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"}}}]}
     </script>
   </head>
   <body>
@@ -36,7 +51,7 @@ exports[`LinkedData should correctly render linked data for articles 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Royal wedding 2018: Bouquet laid on tomb of unknown warrior"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
+      {"@context":"http://schema.org","@graph":[{"@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Royal wedding 2018: Bouquet laid on tomb of unknown warrior"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}]}
     </script>
   </head>
   <body>
@@ -51,7 +66,7 @@ exports[`LinkedData should correctly render linked data for front pages 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"WebPage","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Home - BBC News"}}
+      {"@context":"http://schema.org","@graph":[{"@type":"WebPage","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Home - BBC News"}}]}
     </script>
   </head>
   <body>
@@ -66,7 +81,7 @@ exports[`LinkedData should correctly render linked data for radio pages 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"RadioChannel","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"BBC News Radio"}}
+      {"@context":"http://schema.org","@graph":[{"@type":"RadioChannel","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"BBC News Radio"}}]}
     </script>
   </head>
   <body>
@@ -81,7 +96,7 @@ exports[`LinkedData showAuthor should exclude author from article when false 1`]
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Royal wedding 2018: Bouquet laid on tomb of unknown warrior"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z"}
+      {"@context":"http://schema.org","@graph":[{"@type":"Article","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"Royal wedding 2018: Bouquet laid on tomb of unknown warrior"},"headline":"Article Headline for SEO","datePublished":"2018-01-01T12:01:00.000Z","dateModified":"2018-01-01T13:00:00.000Z"}]}
     </script>
   </head>
   <body>
