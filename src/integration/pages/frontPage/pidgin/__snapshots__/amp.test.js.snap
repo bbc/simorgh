@@ -161,31 +161,35 @@ exports[`AMP Front Page SEO Lang attribute 1`] = `"pcm"`;
 exports[`AMP Front Page SEO Linked data 1`] = `
 Object {
   "@context": "http://schema.org",
-  "@type": "WebPage",
-  "image": Object {
-    "@type": "ImageObject",
-    "height": 576,
-    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
-    "width": 1024,
-  },
-  "mainEntityOfPage": Object {
-    "@id": "http://localhost:7080/pidgin",
-    "@type": "WebPage",
-    "name": "Domot",
-  },
-  "publisher": Object {
-    "@type": "NewsMediaOrganization",
-    "logo": Object {
-      "@type": "ImageObject",
-      "height": 576,
-      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
-      "width": 1024,
+  "@graph": Array [
+    Object {
+      "@type": "WebPage",
+      "image": Object {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+        "width": 1024,
+      },
+      "mainEntityOfPage": Object {
+        "@id": "http://localhost:7080/pidgin",
+        "@type": "WebPage",
+        "name": "Domot",
+      },
+      "publisher": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+          "width": 1024,
+        },
+        "name": "BBC News Pidgin",
+        "publishingPrinciples": "https://www.bbc.com/pidgin/institutional-48528766",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+      "url": "http://localhost:7080/pidgin",
     },
-    "name": "BBC News Pidgin",
-    "publishingPrinciples": "https://www.bbc.com/pidgin/institutional-48528766",
-  },
-  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
-  "url": "http://localhost:7080/pidgin",
+  ],
 }
 `;
 
