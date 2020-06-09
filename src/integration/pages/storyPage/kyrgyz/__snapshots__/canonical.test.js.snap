@@ -29,46 +29,50 @@ exports[`Canonical Story Page SEO Lang attribute 1`] = `"ky"`;
 exports[`Canonical Story Page SEO Linked data 1`] = `
 Object {
   "@context": "http://schema.org",
-  "@type": "NewsArticle",
-  "author": Object {
-    "@type": "NewsMediaOrganization",
-    "logo": Object {
-      "@type": "ImageObject",
-      "height": 576,
-      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
-      "width": 1024,
+  "@graph": Array [
+    Object {
+      "@type": "NewsArticle",
+      "author": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+          "width": 1024,
+        },
+        "name": "BBC News Кыргыз Кызматы",
+        "noBylinesPolicy": "https://www.bbc.com/kyrgyz/institutional-49677275#authorexpertise",
+      },
+      "dateModified": "2020-04-24T14:51:17.000Z",
+      "datePublished": "2020-04-24T14:51:17.000Z",
+      "description": "A test STY for social embeds",
+      "headline": "Test STY for social embeds",
+      "image": Object {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+        "width": 1024,
+      },
+      "mainEntityOfPage": Object {
+        "@id": "http://localhost:7080/kyrgyz/23292889",
+        "@type": "WebPage",
+        "name": "Test STY for social embeds",
+      },
+      "publisher": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+          "width": 1024,
+        },
+        "name": "BBC News Кыргыз Кызматы",
+        "publishingPrinciples": "https://www.bbc.com/kyrgyz/institutional-49677275",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+      "url": "http://localhost:7080/kyrgyz/23292889",
     },
-    "name": "BBC News Кыргыз Кызматы",
-    "noBylinesPolicy": "https://www.bbc.com/kyrgyz/institutional-49677275#authorexpertise",
-  },
-  "dateModified": "2020-04-24T14:51:17.000Z",
-  "datePublished": "2020-04-24T14:51:17.000Z",
-  "description": "A test STY for social embeds",
-  "headline": "Test STY for social embeds",
-  "image": Object {
-    "@type": "ImageObject",
-    "height": 576,
-    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
-    "width": 1024,
-  },
-  "mainEntityOfPage": Object {
-    "@id": "http://localhost:7080/kyrgyz/23292889",
-    "@type": "WebPage",
-    "name": "Test STY for social embeds",
-  },
-  "publisher": Object {
-    "@type": "NewsMediaOrganization",
-    "logo": Object {
-      "@type": "ImageObject",
-      "height": 576,
-      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
-      "width": 1024,
-    },
-    "name": "BBC News Кыргыз Кызматы",
-    "publishingPrinciples": "https://www.bbc.com/kyrgyz/institutional-49677275",
-  },
-  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
-  "url": "http://localhost:7080/kyrgyz/23292889",
+  ],
 }
 `;
 
