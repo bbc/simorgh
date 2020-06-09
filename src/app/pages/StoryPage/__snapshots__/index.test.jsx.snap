@@ -492,11 +492,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 .c9 {
-  color: #404040;
+  color: #3F3F42;
 }
 
 .c10 {
-  color: #5A5A5A;
+  color: #6E6E73;
 }
 
 .c6 {
@@ -3125,11 +3125,11 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 .c9 {
-  color: #404040;
+  color: #3F3F42;
 }
 
 .c10 {
-  color: #5A5A5A;
+  color: #6E6E73;
 }
 
 .c11 {
@@ -4759,11 +4759,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 .c9 {
-  color: #404040;
+  color: #3F3F42;
 }
 
 .c10 {
-  color: #5A5A5A;
+  color: #6E6E73;
 }
 
 .c11 {
