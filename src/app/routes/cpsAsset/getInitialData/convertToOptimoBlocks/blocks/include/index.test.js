@@ -270,175 +270,72 @@ describe('convertInclude', () => {
     });
   });
 
-  it('should fetch and convert an include block with a propagated renderer_env=live', async () => {
-    fetch.mockResponse(() => Promise.resolve(idt1Markup));
-    const input = {
-      required: false,
-      tile: 'A quiz!',
-      href: '/indepthtoolkit/quizzes/123-456',
-      platform: 'highweb',
-      type: 'include',
-    };
-    const json = null;
-    const assetType = null;
-    const pathname = '/service/foobar?renderer_env=live';
-
-    const expected = {
-      type: 'include',
-      model: {
-        href: '/indepthtoolkit/quizzes/123-456',
+  const propogateQueryTest = (summary, pathname, expectedUrlQuery) => {
+    it(`should fetch and convert an include block with ${summary}`, async () => {
+      fetch.mockResponse(() => Promise.resolve(idt1Markup));
+      const input = {
         required: false,
         tile: 'A quiz!',
-        platform: 'highweb',
-        type: 'idt1',
-        html: idt1Markup,
-      },
-    };
-
-    expect(await convertInclude(input, json, assetType, pathname)).toEqual(
-      expected,
-    );
-    expect(fetch).toHaveBeenCalledTimes(1);
-    expect(fetch).toHaveBeenCalledWith(
-      'https://foobar.com/includes/indepthtoolkit/quizzes/123-456?renderer_env=live',
-      {
-        timeout: 3000,
-      },
-    );
-    expect(loggerMock.error).not.toHaveBeenCalled();
-    expect(loggerMock.info).toHaveBeenCalledTimes(1);
-    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
-      url:
-        'https://foobar.com/includes/indepthtoolkit/quizzes/123-456?renderer_env=live',
-    });
-  });
-
-  it('should fetch and convert an include block with a propagated renderer_env=test', async () => {
-    fetch.mockResponse(() => Promise.resolve(idt1Markup));
-    const input = {
-      required: false,
-      tile: 'A quiz!',
-      href: '/indepthtoolkit/quizzes/123-456',
-      platform: 'highweb',
-      type: 'include',
-    };
-    const json = null;
-    const assetType = null;
-    const pathname = '/service/foobar?renderer_env=test';
-
-    const expected = {
-      type: 'include',
-      model: {
         href: '/indepthtoolkit/quizzes/123-456',
-        required: false,
-        tile: 'A quiz!',
         platform: 'highweb',
-        type: 'idt1',
-        html: idt1Markup,
-      },
-    };
+        type: 'include',
+      };
+      const json = null;
+      const assetType = null;
 
-    expect(await convertInclude(input, json, assetType, pathname)).toEqual(
-      expected,
-    );
-    expect(fetch).toHaveBeenCalledTimes(1);
-    expect(fetch).toHaveBeenCalledWith(
-      'https://foobar.com/includes/indepthtoolkit/quizzes/123-456?renderer_env=test',
-      {
-        timeout: 3000,
-      },
-    );
-    expect(loggerMock.error).not.toHaveBeenCalled();
-    expect(loggerMock.info).toHaveBeenCalledTimes(1);
-    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
-      url:
-        'https://foobar.com/includes/indepthtoolkit/quizzes/123-456?renderer_env=test',
+      const expected = {
+        type: 'include',
+        model: {
+          href: '/indepthtoolkit/quizzes/123-456',
+          required: false,
+          tile: 'A quiz!',
+          platform: 'highweb',
+          type: 'idt1',
+          html: idt1Markup,
+        },
+      };
+
+      expect(await convertInclude(input, json, assetType, pathname)).toEqual(
+        expected,
+      );
+      expect(fetch).toHaveBeenCalledTimes(1);
+      expect(fetch).toHaveBeenCalledWith(
+        `https://foobar.com/includes/indepthtoolkit/quizzes/123-456${expectedUrlQuery}`,
+        {
+          timeout: 3000,
+        },
+      );
+      expect(loggerMock.error).not.toHaveBeenCalled();
+      expect(loggerMock.info).toHaveBeenCalledTimes(1);
+      expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
+        url: `https://foobar.com/includes/indepthtoolkit/quizzes/123-456${expectedUrlQuery}`,
+      });
     });
-  });
+  };
 
-  it('should fetch and convert an include block without propagating an invalid renderer_env value', async () => {
-    fetch.mockResponse(() => Promise.resolve(idt1Markup));
-    const input = {
-      required: false,
-      tile: 'A quiz!',
-      href: '/indepthtoolkit/quizzes/123-456',
-      platform: 'highweb',
-      type: 'include',
-    };
-    const json = null;
-    const assetType = null;
-    const pathname = '/service/foobar?renderer_env=foo';
+  propogateQueryTest(
+    'with a propagated renderer_env=live',
+    '/service/foobar?renderer_env=live',
+    '?renderer_env=live',
+  );
 
-    const expected = {
-      type: 'include',
-      model: {
-        href: '/indepthtoolkit/quizzes/123-456',
-        required: false,
-        tile: 'A quiz!',
-        platform: 'highweb',
-        type: 'idt1',
-        html: idt1Markup,
-      },
-    };
+  propogateQueryTest(
+    'with a propagated renderer_env=test',
+    '/service/foobar?renderer_env=test',
+    '?renderer_env=test',
+  );
 
-    expect(await convertInclude(input, json, assetType, pathname)).toEqual(
-      expected,
-    );
-    expect(fetch).toHaveBeenCalledTimes(1);
-    expect(fetch).toHaveBeenCalledWith(
-      'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
-      {
-        timeout: 3000,
-      },
-    );
-    expect(loggerMock.error).not.toHaveBeenCalled();
-    expect(loggerMock.info).toHaveBeenCalledTimes(1);
-    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
-      url: 'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
-    });
-  });
+  propogateQueryTest(
+    'without propagating an invalid renderer_env value',
+    '/service/foobar?renderer_env=foo',
+    '',
+  );
 
-  it('should fetch and convert an include block without propagating an invalid query parameter', async () => {
-    fetch.mockResponse(() => Promise.resolve(idt1Markup));
-    const input = {
-      required: false,
-      tile: 'A quiz!',
-      href: '/indepthtoolkit/quizzes/123-456',
-      platform: 'highweb',
-      type: 'include',
-    };
-    const json = null;
-    const assetType = null;
-    const pathname = '/service/foobar?foo=bar';
-
-    const expected = {
-      type: 'include',
-      model: {
-        href: '/indepthtoolkit/quizzes/123-456',
-        required: false,
-        tile: 'A quiz!',
-        platform: 'highweb',
-        type: 'idt1',
-        html: idt1Markup,
-      },
-    };
-
-    expect(await convertInclude(input, json, assetType, pathname)).toEqual(
-      expected,
-    );
-    expect(fetch).toHaveBeenCalledTimes(1);
-    expect(fetch).toHaveBeenCalledWith(
-      'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
-      {
-        timeout: 3000,
-      },
-    );
-    expect(loggerMock.error).not.toHaveBeenCalled();
-    expect(loggerMock.info).toHaveBeenCalledTimes(1);
-    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
-      url: 'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
-    });
-  });
+  propogateQueryTest(
+    'without propagating an invalid query parameter',
+    '/service/foobar?foo=bar',
+    '',
+  );
 
   it('should return null for an unsupported include type', async () => {
     fetch.mockResponse(() => Promise.resolve('No fetch call'));
