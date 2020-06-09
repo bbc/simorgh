@@ -6,6 +6,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import StoryPromoContainer from '.';
 import fixture from '#data/pidgin/frontpage';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
+import { guideLinkItem } from './helpers/fixtureData';
 
 const mediaFixture = type =>
   pathOr(null, ['content', 'groups'], fixture)
@@ -92,6 +93,7 @@ storiesOf('Containers|Story Promo/Canonical', module)
   .add('Regular', () => getCanonicalStoryPromo(firstFixture))
   .add('Leading', () => getCanonicalStoryPromo(firstFixture, 'leading'))
   .add('Top', () => getCanonicalStoryPromo(firstFixture, 'top'))
+  .add('Guide promo', () => getCanonicalStoryPromo(guideLinkItem))
   .add('Recommendation', () =>
     getCanonicalStoryPromo(recommendationPromo, 'regular', true),
   );
@@ -110,6 +112,7 @@ storiesOf('Containers|Story Promo/AMP', module)
   .add('Regular', () => getAmpStoryPromo(firstFixture))
   .add('Leading', () => getAmpStoryPromo(firstFixture, 'leading'))
   .add('Top', () => getAmpStoryPromo(firstFixture, 'top'))
+  .add('Guide promo', () => getAmpStoryPromo(guideLinkItem))
   .add('Recommendation', () =>
     getAmpStoryPromo(recommendationPromo, 'regular', true),
   );
