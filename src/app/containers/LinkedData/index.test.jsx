@@ -71,8 +71,8 @@ describe('LinkedData', () => {
   const propsForOndemandRadio = {
     seoTitle: 'Ondemand Radio Headline',
     type: 'WebPage',
-    otherLinkedData: {
-      audio: {
+    entities: [
+      {
         '@type': 'AudioObject',
         name: 'ماښامنۍ خپرونه',
         description: 'د بي بي سي ورلډ سروس څخه پروګرام کول',
@@ -83,7 +83,7 @@ describe('LinkedData', () => {
           'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
         uploadDate: '2020-04-23T15:30:00.000Z',
       },
-    },
+    ],
   };
 
   shouldMatchSnapshot(
