@@ -4,7 +4,7 @@ language: node_js
 os: linux
 dist: xenial
 env:
-  BROWSER: 'chrome'
+  - BROWSER=chrome
 cache:
   directories:
     # Cache only the folder with Cypress binary, other caching takes longer and saves
