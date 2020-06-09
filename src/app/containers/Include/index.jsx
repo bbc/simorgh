@@ -1,10 +1,9 @@
 /* eslint-disable react/no-danger */
-import React, { useContext } from 'react';
+import React from 'react';
 import { string } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
-import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 
 /**
@@ -17,12 +16,11 @@ const Include = styled.div`
 `;
 
 const IncludeContainer = ({ html, type }) => {
-  const { isAmp } = useContext(RequestContext);
   const { enabled } = useToggle('include');
 
   const supportedTypes = ['idt1', 'idt2', 'vj'];
 
-  if (isAmp || !enabled || !html || !supportedTypes.includes(type)) return null;
+  if (!enabled || !html || !supportedTypes.includes(type)) return null;
 
   // This is a list of include types that depend on the javascript module loader requireJs.
   // These includes were built to work within the BBC's legacy publishing platform (the PAL)

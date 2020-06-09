@@ -42,10 +42,13 @@ const processOptimoBlocks = pipe(
   addRecommendationsBlock,
 );
 
-const transformJson = async json => {
+const transformJson = async (json, pathname) => {
   try {
     const formattedPageData = formatPageData(json);
-    const optimoBlocks = await convertToOptimoBlocks(formattedPageData);
+    const optimoBlocks = await convertToOptimoBlocks(
+      formattedPageData,
+      pathname,
+    );
     return processOptimoBlocks(optimoBlocks);
   } catch (e) {
     // We can arrive here if the CPS asset is a FIX page
@@ -66,7 +69,10 @@ export default async ({ path: pathname, service, variant }) => {
   return {
     ...rest,
     ...(json && {
-      pageData: { ...(await transformJson(json)), ...additionalPageData },
+      pageData: {
+        ...(await transformJson(json, pathname)),
+        ...additionalPageData,
+      },
     }),
   };
 };
