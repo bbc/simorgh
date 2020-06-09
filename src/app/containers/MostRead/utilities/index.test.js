@@ -10,13 +10,13 @@ const calcTimestampDaysAgo = days =>
   new Date(epochTimeNow - 24 * 60 * 60 * 1000 * days);
 
 describe('mostReadRecordIsFresh', () => {
-  it('should return true if 35 minutes ago or less', () => {
+  it('should return true if 60 minutes ago or less', () => {
     expect(mostReadRecordIsFresh(currentTime.toUTCString())).toEqual(true);
-    expect(mostReadRecordIsFresh(calcTimestampMinutesAgo(34))).toEqual(true);
+    expect(mostReadRecordIsFresh(calcTimestampMinutesAgo(59))).toEqual(true);
   });
 
-  it('should return false if more than 35 minutes ago', () => {
-    expect(mostReadRecordIsFresh(calcTimestampMinutesAgo(36))).toEqual(false);
+  it('should return false if more than 60 minutes ago', () => {
+    expect(mostReadRecordIsFresh(calcTimestampMinutesAgo(61))).toEqual(false);
     expect(mostReadRecordIsFresh(calcTimestampDaysAgo(1))).toEqual(false);
   });
 });

@@ -283,7 +283,7 @@ describe('processMostRead', () => {
       },
     );
 
-    it('should log MOST_READ_STALE_DATA when lastRecordTimestamp is greater than 35min', () => {
+    it('should log MOST_READ_STALE_DATA when lastRecordTimestamp is greater than 60min', () => {
       processMostRead({
         data: setStaleLastRecordTimeStamp(pidginData),
         numberOfItems: 10,
@@ -292,7 +292,7 @@ describe('processMostRead', () => {
       });
       expect(nodeLogger.warn).toHaveBeenCalledWith(MOST_READ_STALE_DATA, {
         lastRecordTimeStamp: '2019-11-06T16:28:00Z',
-        message: 'lastRecordTimeStamp is greater than 35min',
+        message: 'lastRecordTimeStamp is greater than 60min',
         service: 'pidgin',
         isAmp: true,
       });
