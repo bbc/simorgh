@@ -78,15 +78,17 @@ const OnDemandRadioPage = ({ pageData }) => {
     queryString: location.search,
   });
 
-  const audioLinkedData = {
-    '@type': 'AudioObject',
-    name: promoBrandTitle,
-    description: shortSynopsis,
-    thumbnailUrl: thumbnailImageUrl,
-    duration: durationISO8601,
-    uploadDate: new Date(releaseDateTimeStamp).toISOString(),
-    embedURL: embedUrl,
-  };
+  const audioLinkedData = episodeIsAvailable
+    ? {
+        '@type': 'AudioObject',
+        name: promoBrandTitle,
+        description: shortSynopsis,
+        thumbnailUrl: thumbnailImageUrl,
+        duration: durationISO8601,
+        uploadDate: new Date(releaseDateTimeStamp).toISOString(),
+        embedURL: embedUrl,
+      }
+    : {};
 
   return (
     <>
