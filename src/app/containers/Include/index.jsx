@@ -4,8 +4,12 @@ import { string } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
+import nodeLogger from '#lib/logger.node';
+import { INCLUDE_RENDERED } from '#lib/logger.const';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
+
+const logger = nodeLogger(__filename);
 
 /**
  * Prevent Includes from being wider than their parent, whilst
@@ -16,7 +20,7 @@ const Include = styled.div`
   overflow: scroll hidden;
 `;
 
-const IncludeContainer = ({ html, type }) => {
+const IncludeContainer = ({ href, html, type }) => {
   const { isAmp } = useContext(RequestContext);
   const { enabled } = useToggle('include');
 
@@ -42,6 +46,11 @@ const IncludeContainer = ({ html, type }) => {
     display: grid;
   `;
 
+  logger.info(INCLUDE_RENDERED, {
+    includeUrl: href,
+    type,
+  });
+
   return (
     <IncludeGrid>
       {requireIncludeTypes.includes(type) && (
@@ -64,10 +73,12 @@ const IncludeContainer = ({ html, type }) => {
 IncludeContainer.propTypes = {
   html: string,
   type: string.isRequired,
+  href: string,
 };
 
 IncludeContainer.defaultProps = {
   html: null,
+  href: null,
 };
 
 export default IncludeContainer;
