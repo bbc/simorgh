@@ -11,7 +11,7 @@ developmentTests:
 	npm run test;
 
 productionTests:
-	npm run build && npm run test:ci;
+	npm run build && npm run test:ci:jenkins;
 
 testChromatic:
 	npx chromatic test run  --build-script-name build:storybook --exit-once-uploaded --no-interactive || true
