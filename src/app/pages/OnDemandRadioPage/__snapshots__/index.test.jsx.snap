@@ -208,7 +208,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","duration":"PT29M30S","thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png","uploadDate":"2020-05-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps/amp?morph_env=live"}
+      {"@context":"http://schema.org","@graph":[{"@type":"WebPage","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News پښتو","publishingPrinciples":"https://www.bbc.com/pashto/institutional-49283007","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"ماښامنۍ خپرونه"}},{"@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png","duration":"PT29M30S","uploadDate":"2020-05-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps/amp?morph_env=live"}]}
     </script>
   </head>
   <body>
@@ -1346,7 +1346,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","duration":"PT29M30S","thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png","uploadDate":"2020-05-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"}
+      {"@context":"http://schema.org","@graph":[{"@type":"WebPage","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News پښتو","publishingPrinciples":"https://www.bbc.com/pashto/institutional-49283007","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"ماښامنۍ خپرونه"}},{"@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png","duration":"PT29M30S","uploadDate":"2020-05-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"}]}
     </script>
   </head>
   <body>
