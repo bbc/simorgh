@@ -2,6 +2,15 @@ import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
+import { logExpiredEpisode } from './logInitialData';
+
+const getEpisodeAvailability = ({ availableFrom, availableUntil }) => {
+  const timeNow = Date.now();
+  if (!availableUntil || timeNow < availableFrom) {
+    return false;
+  }
+  return true;
+};
 
 const getBrandTitle = path(['metadata', 'title']);
 const getLanguage = path(['metadata', 'language']);
@@ -53,6 +62,17 @@ export default async ({ path: pathname }) => {
   const { json, ...rest } = await fetchPageData(onDemandRadioDataPath);
   const pageType = { metadata: { type: 'On Demand Radio' } };
 
+  const availableFrom = getEpisodeAvailableFrom(json);
+  const availableUntil = getEpisodeAvailableUntil(json);
+  const episodeIsAvailable = getEpisodeAvailability({
+    availableFrom,
+    availableUntil,
+  });
+
+  if (!episodeIsAvailable) {
+    logExpiredEpisode(json);
+  }
+
   return {
     ...rest,
     ...(json && {
@@ -67,8 +87,6 @@ export default async ({ path: pathname }) => {
         contentType: getContentType(json),
         episodeId: getEpisodeId(json),
         masterBrand: getMasterBrand(json),
-        episodeAvailableFrom: getEpisodeAvailableFrom(json),
-        episodeAvailableUntil: getEpisodeAvailableUntil(json),
         releaseDateTimeStamp: getReleaseDateTimeStamp(json),
         pageTitle: getPageTitle(json),
         pageIdentifier: getPageIdentifier(json),
@@ -76,6 +94,7 @@ export default async ({ path: pathname }) => {
         promoBrandTitle: getPromoBrandTitle(json),
         durationISO8601: getDurationISO8601(json),
         thumbnailImageUrl: getThumbnailImageUrl(json),
+        episodeIsAvailable,
         ...pageType,
       },
     }),
