@@ -20,6 +20,8 @@ const logCodes = {
   MEDIA_MISSING: 'media_missing',
   MEDIA_MISSING_FIELD: 'media_missing_field',
   MEDIA_PLAYER_STATUS: 'media_player_status',
+  RADIO_EPISODE_EXPIRED: 'radio_episode_expired',
+  RADIO_MISSING_FIELD: 'radio_missing_field',
 
   // Translations
   NO_TRANSLATION_FOUND: 'no_translation_found',
@@ -52,8 +54,12 @@ const logCodes = {
   INCLUDE_ERROR: 'include_error',
   INCLUDE_FETCH_ERROR: 'include_fetch_error',
   INCLUDE_MISSING_URL: 'include_missing_url',
+  INCLUDE_RENDERED: 'include_rendered',
   INCLUDE_REQUEST_RECEIVED: 'include_request_received',
   INCLUDE_UNSUPPORTED: 'include_unsupported',
+
+  // Social Embed
+  SOCIAL_EMBED_RENDERED: 'social_embed_rendered',
 };
 
 module.exports = logCodes;
