@@ -27,6 +27,8 @@ jobs:
       script:
         - npm run build
         - npm prune --production
-        - CYPRESS_SKIP_EU=true npm run test:ci:travis
+        - CYPRESS_SKIP_EU=true npm run test:ci
 notifications:
   email: false
+env:
+  BROWSER: 'chrome'
