@@ -76,16 +76,6 @@ const OnDemandTvPage = ({ pageData }) => {
     queryString: location.search,
   });
 
-  const videoLinkedData = {
-    '@type': 'VideoObject',
-    name: promoBrandTitle,
-    description: shortSynopsis,
-    thumbnailUrl: thumbnailImageUrl,
-    duration: durationISO8601,
-    uploadDate: new Date(releaseDateTimeStamp).toISOString(),
-    embedURL: embedUrl,
-  };
-
   return (
     <>
       <ChartbeatAnalytics data={pageData} />
@@ -99,7 +89,21 @@ const OnDemandTvPage = ({ pageData }) => {
       <LinkedData
         type="WebPage"
         seoTitle={headline}
-        entities={episodeIsAvailable ? [videoLinkedData] : []}
+        entities={
+          episodeIsAvailable
+            ? [
+                {
+                  '@type': 'VideoObject',
+                  name: promoBrandTitle,
+                  description: shortSynopsis,
+                  thumbnailUrl: thumbnailImageUrl,
+                  duration: durationISO8601,
+                  uploadDate: new Date(releaseDateTimeStamp).toISOString(),
+                  embedURL: embedUrl,
+                },
+              ]
+            : []
+        }
       />
       <StyledGelPageGrid
         forwardedAs="main"
