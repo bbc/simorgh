@@ -25,4 +25,4 @@ const logExpiredEpisode = pageJson => {
   });
 };
 
-export { logExpiredEpisode, parsePageIdentifier };
+export { logExpiredEpisode, parsePageIdentifier, getUri };
