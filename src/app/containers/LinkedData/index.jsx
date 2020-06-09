@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
-import { string, shape, arrayOf, bool } from 'prop-types';
+import { string, shape, arrayOf, bool, object } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import getAboutTagsContent from './getAboutTagsContent';
@@ -15,6 +15,7 @@ const LinkedData = ({
   datePublished,
   dateModified,
   aboutTags,
+  entities,
 }) => {
   const {
     brandName,
@@ -58,7 +59,6 @@ const LinkedData = ({
   };
 
   const linkedData = {
-    '@context': 'http://schema.org',
     '@type': type,
     url: canonicalNonUkLink,
     publisher,
@@ -89,8 +89,8 @@ const LinkedData = ({
     <Helmet>
       <script type="application/ld+json">
         {serialiseForScript({
-          // spread to a new object to remove undefined properties
-          ...linkedData,
+          '@context': 'http://schema.org',
+          '@graph': [{ ...linkedData }, ...entities],
         })}
       </script>
     </Helmet>
@@ -112,6 +112,8 @@ LinkedData.propTypes = {
       sameAs: arrayOf(string),
     }),
   ),
+  // eslint-disable-next-line react/forbid-prop-types
+  entities: arrayOf(object),
 };
 
 LinkedData.defaultProps = {
@@ -121,6 +123,7 @@ LinkedData.defaultProps = {
   datePublished: undefined,
   dateModified: undefined,
   aboutTags: undefined,
+  entities: [],
 };
 
 export default LinkedData;

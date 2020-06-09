@@ -149,45 +149,49 @@ exports[`AMP Media Asset Page SEO Lang attribute 1`] = `"ar"`;
 exports[`AMP Media Asset Page SEO Linked data 1`] = `
 Object {
   "@context": "http://schema.org",
-  "@type": "Article",
-  "author": Object {
-    "@type": "NewsMediaOrganization",
-    "logo": Object {
-      "@type": "ImageObject",
-      "height": 576,
-      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
-      "width": 1024,
+  "@graph": Array [
+    Object {
+      "@type": "Article",
+      "author": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
+          "width": 1024,
+        },
+        "name": "BBC News عربي",
+        "noBylinesPolicy": "https://www.bbc.com/arabic/institutional-49283069#authorexpertise",
+      },
+      "dateModified": "2015-11-20T10:09:33.000Z",
+      "datePublished": "2015-11-20T10:09:33.000Z",
+      "headline": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+      "image": Object {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
+        "width": 1024,
+      },
+      "mainEntityOfPage": Object {
+        "@id": "http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av",
+        "@type": "WebPage",
+        "name": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+      },
+      "publisher": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
+          "width": 1024,
+        },
+        "name": "BBC News عربي",
+        "publishingPrinciples": "https://www.bbc.com/arabic/institutional-49283069",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
+      "url": "http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av",
     },
-    "name": "BBC News عربي",
-    "noBylinesPolicy": "https://www.bbc.com/arabic/institutional-49283069#authorexpertise",
-  },
-  "dateModified": "2015-11-20T10:09:33.000Z",
-  "datePublished": "2015-11-20T10:09:33.000Z",
-  "headline": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
-  "image": Object {
-    "@type": "ImageObject",
-    "height": 576,
-    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
-    "width": 1024,
-  },
-  "mainEntityOfPage": Object {
-    "@id": "http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av",
-    "@type": "WebPage",
-    "name": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
-  },
-  "publisher": Object {
-    "@type": "NewsMediaOrganization",
-    "logo": Object {
-      "@type": "ImageObject",
-      "height": 576,
-      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
-      "width": 1024,
-    },
-    "name": "BBC News عربي",
-    "publishingPrinciples": "https://www.bbc.com/arabic/institutional-49283069",
-  },
-  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
-  "url": "http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av",
+  ],
 }
 `;
 
