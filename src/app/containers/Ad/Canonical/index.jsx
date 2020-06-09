@@ -5,12 +5,15 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import AdSlot from './AdSlot';
 import CanonicalAdBootstrap from './CanonicalAdBootstrapJs';
 
+const LEADERBOARD_HEIGHT = '5.5rem';
+const LEADERBOARD_HEIGHT_GROUP_4_5 = '9rem';
+
 const StyledAdDiv = styled.div`
   background-color: ${C_LUNAR_LIGHT};
-  min-height: 5.5rem;
+  min-height: ${LEADERBOARD_HEIGHT};
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    min-height: 9rem;
+    min-height: ${LEADERBOARD_HEIGHT_GROUP_4_5};
   }
 `;
 
