@@ -161,45 +161,49 @@ exports[`AMP Media Asset Page SEO Lang attribute 1`] = `"pcm"`;
 exports[`AMP Media Asset Page SEO Linked data 1`] = `
 Object {
   "@context": "http://schema.org",
-  "@type": "Article",
-  "author": Object {
-    "@type": "NewsMediaOrganization",
-    "logo": Object {
-      "@type": "ImageObject",
-      "height": 576,
-      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
-      "width": 1024,
+  "@graph": Array [
+    Object {
+      "@type": "Article",
+      "author": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+          "width": 1024,
+        },
+        "name": "BBC News Pidgin",
+        "noBylinesPolicy": "https://www.bbc.com/pidgin/institutional-48528766#authorexpertise",
+      },
+      "dateModified": "2019-11-20T12:24:25.000Z",
+      "datePublished": "2019-09-13T15:31:44.000Z",
+      "headline": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+      "image": Object {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+        "width": 1024,
+      },
+      "mainEntityOfPage": Object {
+        "@id": "http://localhost:7080/pidgin/23248703",
+        "@type": "WebPage",
+        "name": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+      },
+      "publisher": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+          "width": 1024,
+        },
+        "name": "BBC News Pidgin",
+        "publishingPrinciples": "https://www.bbc.com/pidgin/institutional-48528766",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+      "url": "http://localhost:7080/pidgin/23248703",
     },
-    "name": "BBC News Pidgin",
-    "noBylinesPolicy": "https://www.bbc.com/pidgin/institutional-48528766#authorexpertise",
-  },
-  "dateModified": "2019-11-20T12:24:25.000Z",
-  "datePublished": "2019-09-13T15:31:44.000Z",
-  "headline": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
-  "image": Object {
-    "@type": "ImageObject",
-    "height": 576,
-    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
-    "width": 1024,
-  },
-  "mainEntityOfPage": Object {
-    "@id": "http://localhost:7080/pidgin/23248703",
-    "@type": "WebPage",
-    "name": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
-  },
-  "publisher": Object {
-    "@type": "NewsMediaOrganization",
-    "logo": Object {
-      "@type": "ImageObject",
-      "height": 576,
-      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
-      "width": 1024,
-    },
-    "name": "BBC News Pidgin",
-    "publishingPrinciples": "https://www.bbc.com/pidgin/institutional-48528766",
-  },
-  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
-  "url": "http://localhost:7080/pidgin/23248703",
+  ],
 }
 `;
 
