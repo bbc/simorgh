@@ -31,4 +31,4 @@ jobs:
 notifications:
   email: false
 env:
-  - BROWSER=chrome
+  - BROWSER=electron
