@@ -126,8 +126,8 @@ export default async ({ path: pathname }) => {
     // log this error
 
     return {
+      error,
       status: 500,
-      error: true,
     };
   }
 };
