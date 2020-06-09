@@ -15,7 +15,7 @@ import {
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
 import { C_METAL } from '@bbc/psammead-styles/colours';
-import { getParagon } from '@bbc/gel-foundations/typography';
+import { getDoublePica } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { ServiceContext } from '#contexts/ServiceContext';
 import MostReadContainer from '#containers/MostRead';
@@ -46,7 +46,7 @@ const MostReadHeader = styled.h1.attrs({
   tabIndex: '-1',
 })`
   color: ${C_METAL};
-  ${({ script }) => script && getParagon(script)};
+  ${({ script }) => script && getDoublePica(script)};
   ${({ service }) => getSansRegular(service)};
   margin: 0;
   padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_TRPL};
