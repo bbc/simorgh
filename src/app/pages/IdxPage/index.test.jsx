@@ -16,7 +16,6 @@ describe('IdxPage', () => {
     fetch.mockResponse(JSON.stringify(persianMostReadData));
     fetch.mockResponse(JSON.stringify(dariRadioScheduleData));
 
-    container = null;
     await act(async () => {
       container = render(
         <IdxPageWithContext pageData={persianAfghanistanIdxData} />,
