@@ -80,45 +80,54 @@ const getThumbnailImageUrl = json =>
   );
 
 export default async ({ path: pathname }) => {
-  const onDemandRadioDataPath = overrideRendererOnTest(pathname);
-  const { json, ...rest } = await fetchPageData(onDemandRadioDataPath);
-  const pageType = { metadata: { type: 'On Demand Radio' } };
+  try {
+    const onDemandRadioDataPath = overrideRendererOnTest(pathname);
+    const { json, ...rest } = await fetchPageData(onDemandRadioDataPath);
+    const pageType = { metadata: { type: 'On Demand Radio' } };
 
-  const availableFrom = getEpisodeAvailableFrom(json);
-  const availableUntil = getEpisodeAvailableUntil(json);
-  const episodeIsAvailable = getEpisodeAvailability({
-    availableFrom,
-    availableUntil,
-  });
+    const availableFrom = getEpisodeAvailableFrom(json);
+    const availableUntil = getEpisodeAvailableUntil(json);
+    const episodeIsAvailable = getEpisodeAvailability({
+      availableFrom,
+      availableUntil,
+    });
 
-  if (!episodeIsAvailable) {
-    logExpiredEpisode(json);
+    if (!episodeIsAvailable) {
+      logExpiredEpisode(json);
+    }
+
+    return {
+      ...rest,
+      ...(json && {
+        pageData: {
+          language: getLanguage(json),
+          brandTitle: getBrandTitle(json),
+          episodeTitle: getEpisodeTitle(json),
+          headline: getHeadline(json),
+          shortSynopsis: getShortSynopsis(json),
+          id: getId(json),
+          summary: getSummary(json),
+          contentType: getContentType(json),
+          episodeId: getEpisodeId(json),
+          masterBrand: getMasterBrand(json),
+          releaseDateTimeStamp: getReleaseDateTimeStamp(json),
+          pageTitle: getPageTitle(json),
+          pageIdentifier: getPageIdentifier(json),
+          imageUrl: getImageUrl(json),
+          promoBrandTitle: getPromoBrandTitle(json),
+          durationISO8601: getDurationISO8601(json),
+          thumbnailImageUrl: getThumbnailImageUrl(json),
+          episodeIsAvailable,
+          ...pageType,
+        },
+      }),
+    };
+  } catch (error) {
+    // log this error
+
+    return {
+      status: 500,
+      error: true,
+    };
   }
-
-  return {
-    ...rest,
-    ...(json && {
-      pageData: {
-        language: getLanguage(json),
-        brandTitle: getBrandTitle(json),
-        episodeTitle: getEpisodeTitle(json),
-        headline: getHeadline(json),
-        shortSynopsis: getShortSynopsis(json),
-        id: getId(json),
-        summary: getSummary(json),
-        contentType: getContentType(json),
-        episodeId: getEpisodeId(json),
-        masterBrand: getMasterBrand(json),
-        releaseDateTimeStamp: getReleaseDateTimeStamp(json),
-        pageTitle: getPageTitle(json),
-        pageIdentifier: getPageIdentifier(json),
-        imageUrl: getImageUrl(json),
-        promoBrandTitle: getPromoBrandTitle(json),
-        durationISO8601: getDurationISO8601(json),
-        thumbnailImageUrl: getThumbnailImageUrl(json),
-        episodeIsAvailable,
-        ...pageType,
-      },
-    }),
-  };
 };

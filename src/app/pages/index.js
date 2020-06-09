@@ -18,8 +18,8 @@ import withData from '#containers/PageHandlers/withData';
 import withVariant from '#containers/PageHandlers/withVariant';
 
 const applyBasicPageHandlers = pipe(
-  withData,
   withError,
+  withData,
   withLoading,
   withPageWrapper,
   withContexts,
