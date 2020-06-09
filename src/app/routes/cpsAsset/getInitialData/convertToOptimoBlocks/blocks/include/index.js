@@ -23,19 +23,24 @@ const buildIncludeUrl = (href, type) => {
   return `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${resolvers[type]}`;
 };
 
-const isAmpPath = pathname =>
-  pathname.substring(pathname.lastIndexOf('/') + 1) === 'amp';
-
 const ampSupport = url => {
   // An amp-image query parameter on the include path indicates an AMP version of the include is available
   const hasAmpImageQueryString = new Url(url, true).query['amp-image'];
-  return !!hasAmpImageQueryString === true;
+  return !!hasAmpImageQueryString;
 };
 
-const fetchMarkup = async (url, pathname) => {
-  if (isAmpPath(pathname)) {
+const isIncludeSupported = (url, pathname) => {
+  if (pathname.substring(pathname.lastIndexOf('/') + 1) === 'amp') {
     if (!ampSupport(url, pathname)) return null;
   }
+  return true;
+};
+
+// const isIncludeSupported = (url, pathname) => {
+//   return checkPath(url, pathname);
+// };
+
+const fetchMarkup = async url => {
   try {
     /* The timeout value here is arbitrary and subject to change. It's purpose is to ensure that pending promises do not delay page rendering on the server.
       Using isomorphic-fetch means we use window.fetch, which does not have a timeout option, on the client and node-fetch, which does, on the server.
@@ -65,6 +70,8 @@ const fetchMarkup = async (url, pathname) => {
 const convertInclude = async (includeBlock, ...restParams) => {
   // Here pathname is passed as a prop specifically for CPS includes
   // This will most likely change in issue #6784 so it is temporary for now
+  // console.log('...restParams', ...restParams)
+  // console.log('restParams', restParams)
   const pathname = restParams[2];
 
   const supportedTypes = {
@@ -109,7 +116,9 @@ const convertInclude = async (includeBlock, ...restParams) => {
     type,
     model: {
       href,
-      html: await fetchMarkup(buildIncludeUrl(href, includeType), pathname),
+      html: isIncludeSupported(href, pathname)
+        ? await fetchMarkup(buildIncludeUrl(href, includeType), pathname)
+        : null,
       type: includeType,
       ...rest,
     },
