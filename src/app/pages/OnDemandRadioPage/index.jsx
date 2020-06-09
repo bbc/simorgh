@@ -78,16 +78,14 @@ const OnDemandRadioPage = ({ pageData }) => {
     queryString: location.search,
   });
 
-  const otherLinkedData = {
-    audio: {
-      '@type': 'AudioObject',
-      name: promoBrandTitle,
-      description: shortSynopsis,
-      thumbnailUrl: thumbnailImageUrl,
-      duration: durationISO8601,
-      uploadDate: new Date(releaseDateTimeStamp).toISOString(),
-      embedURL: embedUrl,
-    },
+  const audioLinkedData = {
+    '@type': 'AudioObject',
+    name: promoBrandTitle,
+    description: shortSynopsis,
+    thumbnailUrl: thumbnailImageUrl,
+    duration: durationISO8601,
+    uploadDate: new Date(releaseDateTimeStamp).toISOString(),
+    embedURL: embedUrl,
   };
 
   return (
@@ -140,7 +138,7 @@ const OnDemandRadioPage = ({ pageData }) => {
           <LinkedData
             type="WebPage"
             seoTitle={headline}
-            otherLinkedData={otherLinkedData}
+            entities={[audioLinkedData]}
           />
         </Grid>
       </StyledGelPageGrid>

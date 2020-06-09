@@ -15,7 +15,7 @@ const LinkedData = ({
   datePublished,
   dateModified,
   aboutTags,
-  otherLinkedData,
+  entities,
 }) => {
   const {
     brandName,
@@ -59,7 +59,6 @@ const LinkedData = ({
   };
 
   const linkedData = {
-    '@context': 'http://schema.org',
     '@type': type,
     url: canonicalNonUkLink,
     publisher,
@@ -84,15 +83,14 @@ const LinkedData = ({
         ...(isTrustProjectParticipant && { noBylinesPolicy }),
       },
     }),
-    ...otherLinkedData,
   };
 
   return (
     <Helmet>
       <script type="application/ld+json">
         {serialiseForScript({
-          // spread to a new object to remove undefined properties
-          ...linkedData,
+          '@context': 'http://schema.org',
+          '@graph': [{ ...linkedData }, ...entities],
         })}
       </script>
     </Helmet>
@@ -115,7 +113,7 @@ LinkedData.propTypes = {
     }),
   ),
   // eslint-disable-next-line react/forbid-prop-types
-  otherLinkedData: object,
+  entities: arrayOf(object),
 };
 
 LinkedData.defaultProps = {
@@ -125,7 +123,7 @@ LinkedData.defaultProps = {
   datePublished: undefined,
   dateModified: undefined,
   aboutTags: undefined,
-  otherLinkedData: {},
+  entities: [],
 };
 
 export default LinkedData;
