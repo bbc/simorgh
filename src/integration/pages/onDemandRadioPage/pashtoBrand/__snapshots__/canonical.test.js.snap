@@ -39,13 +39,44 @@ exports[`Canonical On Demand Radio Page SEO Lang attribute 1`] = `"ps"`;
 exports[`Canonical On Demand Radio Page SEO Linked data 1`] = `
 Object {
   "@context": "http://schema.org",
-  "@type": "AudioObject",
-  "description": "د نړۍ وروستي خبرونه",
-  "duration": "PT3M",
-  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w172xjcjkv7gw1w/ps?morph_env=live",
-  "name": "وروستي خبرونه",
-  "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png",
-  "uploadDate": "2020-05-18T00:00:00.000Z",
+  "@graph": Array [
+    Object {
+      "@type": "WebPage",
+      "image": Object {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png",
+        "width": 1024,
+      },
+      "mainEntityOfPage": Object {
+        "@id": "http://localhost:7080/pashto/bbc_pashto_radio/p0340yr4",
+        "@type": "WebPage",
+        "name": "وروستي خبرونه",
+      },
+      "publisher": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png",
+          "width": 1024,
+        },
+        "name": "BBC News پښتو",
+        "publishingPrinciples": "https://www.bbc.com/pashto/institutional-49283007",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png",
+      "url": "http://localhost:7080/pashto/bbc_pashto_radio/p0340yr4",
+    },
+    Object {
+      "@type": "AudioObject",
+      "description": "د نړۍ وروستي خبرونه",
+      "duration": "PT3M",
+      "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w172xjcjkv7gw1w/ps?morph_env=live",
+      "name": "وروستي خبرونه",
+      "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png",
+      "uploadDate": "2020-05-18T00:00:00.000Z",
+    },
+  ],
 }
 `;
 
