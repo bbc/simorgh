@@ -22,15 +22,15 @@ export const GelPageGrid = styled(Grid)`
 /* The following components relate to Grid configuration and Grid styles used on the following page types:
  * STY,MAP,PGL,Front Page,IDX page
  */
-const StyledCPSPageGrid = styled(Grid)`
+const StyledCPSGrid = styled(Grid)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     margin: 0 auto;
     max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
   }
 `;
 
-export const CPSPageGrid = ({ children, ...props }) => (
-  <StyledCPSPageGrid
+export const CPSGrid = ({ children, ...props }) => (
+  <StyledCPSGrid
     columns={{
       group0: 6,
       group1: 6,
@@ -43,10 +43,10 @@ export const CPSPageGrid = ({ children, ...props }) => (
     {...props}
   >
     {children}
-  </StyledCPSPageGrid>
+  </StyledCPSGrid>
 );
 
-CPSPageGrid.propTypes = {
+CPSGrid.propTypes = {
   children: node.isRequired,
 };
 

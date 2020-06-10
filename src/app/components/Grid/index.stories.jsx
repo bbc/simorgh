@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Grid, { CPSPageGrid } from '.';
+import Grid, { CPSGrid } from '.';
 
 const outerGridProps = {
   columns: {
@@ -44,12 +44,12 @@ storiesOf('Components|Grid', module)
       </Grid>
     );
   })
-  .add('CPSPageGrid', () => {
+  .add('CPSGrid', () => {
     return (
-      <CPSPageGrid>
+      <CPSGrid>
         <Grid {...gridItemProps}>
           <p>CPS page grid</p>
         </Grid>
-      </CPSPageGrid>
+      </CPSGrid>
     );
   });
