@@ -14,6 +14,8 @@ import MostReadSectionLabel from '#containers/MostRead/label';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import FrontPageSection from '#containers/FrontPageSection';
 import idxPageDataPropTypes from '#models/propTypes/idxPage';
+import ATIAnalytics from '#containers/ATIAnalytics';
+import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 
 const IdxMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
@@ -64,6 +66,8 @@ const IdxPage = ({
 
   return (
     <>
+      <ATIAnalytics data={pageData} />
+      <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
         title={title}
         lang={lang}
