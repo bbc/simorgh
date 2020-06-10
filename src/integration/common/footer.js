@@ -25,6 +25,7 @@ export default () => {
 
     describe('Link', () => {
       const footerLinks = document.querySelectorAll('footer a');
+
       footerLinks.forEach(footerLink => {
         const linkText = footerLink.textContent;
         const linkUrl = footerLink.getAttribute('href');
