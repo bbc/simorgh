@@ -8,12 +8,18 @@ import {
   INCLUDE_REQUEST_RECEIVED,
   INCLUDE_UNSUPPORTED,
 } from '#lib/logger.const';
+import { ampSupported } from './ampSrcBuilder';
+import { convert } from '@storybook/theming';
 
 const vjMarkup = `<div>Visual Journalism Markup</div><script type="text/javascript" src="localhost/vj.js"></script>`;
 
 const idt2Markup = `<div>IDT 2 Markup</div><script type="text/javascript" src="localhost/idt2.js"></script>`;
 
 const idt1Markup = `<div>IDT 1 Markup</div><script type="text/javascript" src="localhost/idt1.js"></script>`;
+
+const canonicalPathname = 'https://www.bbc.com/service/foo';
+
+const ampPathname = 'https://www.bbc.com/service/foo.amp';
 
 describe('convertInclude', () => {
   const includesBaseUrl = 'https://foobar.com/includes';
@@ -44,7 +50,7 @@ describe('convertInclude', () => {
         html: idt1Markup,
       },
     };
-    expect(await convertInclude(input)).toEqual(expected);
+    expect(await convertInclude(input, null, null, canonicalPathname)).toEqual(expected);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
@@ -79,7 +85,7 @@ describe('convertInclude', () => {
         html: idt2Markup,
       },
     };
-    expect(await convertInclude(input)).toEqual(expected);
+    expect(await convertInclude(input, null, null, canonicalPathname)).toEqual(expected);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/idt2/111-222-333-444-555/html',
@@ -94,7 +100,8 @@ describe('convertInclude', () => {
     });
   });
 
-  it('should fetch and convert an include block to a vj block', async () => {
+  it('should fetch an convert an include block to a vj block', async () => {
+    const pathname = 'https://www.bbc.com/service/foo.amp';
     fetch.mockResponse(() => Promise.resolve(vjMarkup));
     const input = {
       required: false,
@@ -114,7 +121,7 @@ describe('convertInclude', () => {
         html: vjMarkup,
       },
     };
-    expect(await convertInclude(input)).toEqual(expected);
+    expect(await convertInclude(input, null, null, pathname)).toEqual(expected);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/include/111-222-333-444-555',
@@ -149,7 +156,7 @@ describe('convertInclude', () => {
         html: idt1Markup,
       },
     };
-    expect(await convertInclude(input)).toEqual(expected);
+    expect(await convertInclude(input, null, null, canonicalPathname)).toEqual(expected);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
@@ -184,7 +191,7 @@ describe('convertInclude', () => {
         html: idt2Markup,
       },
     };
-    expect(await convertInclude(input)).toEqual(expected);
+    expect(await convertInclude(input, null, null, canonicalPathname)).toEqual(expected);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/idt2/111-222-333-444-555/html',
@@ -219,7 +226,7 @@ describe('convertInclude', () => {
         html: vjMarkup,
       },
     };
-    expect(await convertInclude(input)).toEqual(expected);
+    expect(await convertInclude(input, null, null, canonicalPathname)).toEqual(expected);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/news/special/111-222-333-444-555',
@@ -254,7 +261,7 @@ describe('convertInclude', () => {
         html: null,
       },
     };
-    expect(await convertInclude(input)).toEqual(expected);
+    expect(await convertInclude(input, null, null, canonicalPathname)).toEqual(expected);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/idt2/html',
@@ -346,7 +353,7 @@ describe('convertInclude', () => {
       platform: 'highweb',
       type: 'include',
     };
-    expect(await convertInclude(input)).toEqual(null);
+    expect(await convertInclude(input, null, null, canonicalPathname)).toEqual(null);
     expect(fetch).not.toHaveBeenCalled();
     expect(loggerMock.error).not.toHaveBeenCalled();
     expect(loggerMock.info).toHaveBeenCalledTimes(1);
@@ -365,7 +372,7 @@ describe('convertInclude', () => {
       platform: 'highweb',
       type: 'include',
     };
-    expect(await convertInclude(input)).toEqual(null);
+    expect(await convertInclude(input, null, null, canonicalPathname)).toEqual(null);
     expect(fetch).not.toHaveBeenCalled();
     expect(loggerMock.error).not.toHaveBeenCalled();
     expect(loggerMock.info).toHaveBeenCalledTimes(1);
@@ -384,7 +391,7 @@ describe('convertInclude', () => {
       platform: 'highweb',
       type: 'include',
     };
-    const output = await convertInclude(input);
+    const output = await convertInclude(input, null, null, canonicalPathname);
     expect(fetch).not.toHaveBeenCalled();
     expect(output).toEqual(null);
     expect(loggerMock.info).not.toHaveBeenCalled();
@@ -409,7 +416,7 @@ describe('convertInclude', () => {
       platform: 'highweb',
       type: 'include',
     };
-    const output = await convertInclude(input);
+    const output = await convertInclude(input, null, null, canonicalPathname);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(output.model.html).toEqual(null);
     expect(loggerMock.info).not.toHaveBeenCalled();
@@ -418,5 +425,47 @@ describe('convertInclude', () => {
       error: 'Error: this is an error message',
       url: 'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
     });
+  });
+
+  it('should return ampSrc if AMP is supported and include is a VJ', async () => {
+    const includeSupportingAmp =
+      '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png';
+    const input = {
+      required: false,
+      tile: 'Include from VisJo',
+      href: includeSupportingAmp,
+      platform: 'highweb',
+      type: 'include',
+    };
+    const expected = {
+      type: 'include',
+      model: {
+        href: includeSupportingAmp,
+        required: false,
+        tile: 'Include from VisJo',
+        platform: 'highweb',
+        type: 'vj',
+        ampSrc:
+          'https://news.files.bbci.co.uk/include/newsspec/21841-green-diet/gahuza/app/amp?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+      },
+    };
+    const actual = await convertInclude(input, null, null, canonicalPathname);
+    expect(actual).toEqual(expected);
+  });
+  // it('should not return ampSrc if include is not VJ', () => {
+
+  // });
+  it('should return no include if AMP not supported for VJ include on AMP', async () => {
+    const notSupportedVjIncludeOnAmp =
+      '/news/special/2016/newsspec_14813/content/iframe/gahuza/us-gop.inc?responsive=true&app-clickable=true&app-image=http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/11/09/161109092836_us_election_2nddaymaps_winner_ws_62_v3.png';
+    const input = {
+      required: false,
+      tile: 'Include from VisJo',
+      href: notSupportedVjIncludeOnAmp,
+      platform: 'highweb',
+      type: 'include',
+    };
+    const actual = await convertInclude(input, null, null, canonicalPathname);
+    expect(actual).toEqual(null);
   });
 });

@@ -9,6 +9,7 @@ import {
 } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
 import { addOverrideQuery } from '#app/routes/utils/overrideRendererOnTest';
+import { ampSrcBuilder, ampSupported } from './ampSrcBuilder';
 
 const logger = nodeLogger(__filename);
 
@@ -102,7 +103,10 @@ const convertInclude = async (includeBlock, ...restParams) => {
 
   // This determines if the type is supported and returns the include type name
   const includeType = supportedTypes[typeExtraction];
-  if (!includeType) {
+
+  const isAmp = pathname.endsWith('.amp');
+
+  if (!includeType || (isAmp && !ampSupported(href) && includeType === 'vj')) {
     logger.info(INCLUDE_UNSUPPORTED, {
       type,
       url: href,
@@ -110,12 +114,22 @@ const convertInclude = async (includeBlock, ...restParams) => {
     return null;
   }
 
+  let ampSrc;
+  let html;
+
+  if (ampSupported(href) && includeType === 'vj') {
+    ampSrc = ampSrcBuilder(href);
+  } else {
+    html = await fetchMarkup(buildIncludeUrl(href, includeType, pathname));
+  }
+
   return {
     type,
     model: {
       href,
-      html: await fetchMarkup(buildIncludeUrl(href, includeType, pathname)),
+      html,
       type: includeType,
+      ampSrc,
       ...rest,
     },
   };
