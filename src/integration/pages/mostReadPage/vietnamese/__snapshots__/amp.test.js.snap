@@ -266,7 +266,7 @@ exports[`AMP Most Read Page SEO Heading level 1 1`] = `"Đọc nhiều nhất"`;
 
 exports[`AMP Most Read Page SEO Lang attribute 1`] = `"vi"`;
 
-exports[`AMP Most Read Page SEO Linked data of type WebPage should match text 1`] = `
+exports[`AMP Most Read Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [

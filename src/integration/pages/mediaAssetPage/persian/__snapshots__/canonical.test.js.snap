@@ -74,37 +74,33 @@ exports[`Canonical Media Asset Page Header Navigation link should match text 13`
 
 exports[`Canonical Media Asset Page Header Navigation link should match text 14`] = `"ناظران می‌گویند"`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text 15`] = `"وبلاگ‌ها"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text 15`] = `"صفحه اول"`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text 16`] = `"صفحه اول"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text 16`] = `"کرونا"`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text 17`] = `"کرونا"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text 17`] = `"پخش زنده"`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text 18`] = `"پخش زنده"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text 18`] = `"ویدیو"`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text 19`] = `"ویدیو"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text 19`] = `"تلویزیون"`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text 20`] = `"تلویزیون"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text 20`] = `"رادیو"`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text 21`] = `"رادیو"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text 21`] = `"ايران"`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text 22`] = `"ايران"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text 22`] = `"افغانستان"`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text 23`] = `"افغانستان"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text 23`] = `"جهان"`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text 24`] = `"جهان"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text 24`] = `"هنر"`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text 25`] = `"هنر"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text 25`] = `"ورزش"`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text 26`] = `"ورزش"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text 26`] = `"اقتصاد"`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text 27`] = `"اقتصاد"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text 27`] = `"دانش"`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text 28`] = `"دانش"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match text 29`] = `"ناظران می‌گویند"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match text 30`] = `"وبلاگ‌ها"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text 28`] = `"ناظران می‌گویند"`;
 
 exports[`Canonical Media Asset Page Header Navigation link with text 'افغانستان' should match url 1`] = `"/persian/afghanistan"`;
 
@@ -146,10 +142,6 @@ exports[`Canonical Media Asset Page Header Navigation link with text 'هنر' sh
 
 exports[`Canonical Media Asset Page Header Navigation link with text 'هنر' should match url 2`] = `"/persian/arts"`;
 
-exports[`Canonical Media Asset Page Header Navigation link with text 'وبلاگ‌ها' should match url 1`] = `"/persian/services/2012/01/000000_blogs_list"`;
-
-exports[`Canonical Media Asset Page Header Navigation link with text 'وبلاگ‌ها' should match url 2`] = `"/persian/services/2012/01/000000_blogs_list"`;
-
 exports[`Canonical Media Asset Page Header Navigation link with text 'ورزش' should match url 1`] = `"/persian/sport"`;
 
 exports[`Canonical Media Asset Page Header Navigation link with text 'ورزش' should match url 2`] = `"/persian/sport"`;
@@ -186,7 +178,7 @@ exports[`Canonical Media Asset Page SEO Heading level 1 1`] = `"Trump long headl
 
 exports[`Canonical Media Asset Page SEO Lang attribute 1`] = `"fa"`;
 
-exports[`Canonical Media Asset Page SEO Linked data of type Article should match text 1`] = `
+exports[`Canonical Media Asset Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [
@@ -235,7 +227,7 @@ Object {
 }
 `;
 
-exports[`Canonical Media Asset Page SEO Linked data of type AudioObject should match text 1`] = `
+exports[`Canonical Media Asset Page SEO Linked data should match text 2`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "AudioObject",

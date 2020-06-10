@@ -142,7 +142,7 @@ exports[`Canonical Front Page SEO Heading level 1 1`] = `"BBC News, Pidgin - Hom
 
 exports[`Canonical Front Page SEO Lang attribute 1`] = `"pcm"`;
 
-exports[`Canonical Front Page SEO Linked data of type WebPage should match text 1`] = `
+exports[`Canonical Front Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [

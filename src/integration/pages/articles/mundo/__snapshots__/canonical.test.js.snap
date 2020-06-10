@@ -158,7 +158,7 @@ exports[`Canonical Articles SEO Heading level 1 1`] = `"Este es el titular de es
 
 exports[`Canonical Articles SEO Lang attribute 1`] = `"es"`;
 
-exports[`Canonical Articles SEO Linked data of type Article should match text 1`] = `
+exports[`Canonical Articles SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [
@@ -207,7 +207,7 @@ Object {
 }
 `;
 
-exports[`Canonical Articles SEO Linked data of type VideoObject should match text 1`] = `
+exports[`Canonical Articles SEO Linked data should match text 2`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "VideoObject",

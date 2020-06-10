@@ -210,7 +210,7 @@ exports[`AMP Korean Live Radio Page SEO Heading level 1 1`] = `"BBC 코리아 �
 
 exports[`AMP Korean Live Radio Page SEO Lang attribute 1`] = `"ko"`;
 
-exports[`AMP Korean Live Radio Page SEO Linked data of type RadioChannel should match text 1`] = `
+exports[`AMP Korean Live Radio Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [

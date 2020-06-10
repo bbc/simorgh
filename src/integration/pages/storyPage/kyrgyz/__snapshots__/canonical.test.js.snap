@@ -124,7 +124,7 @@ exports[`Canonical Story Page SEO Heading level 1 1`] = `"Test STY for social em
 
 exports[`Canonical Story Page SEO Lang attribute 1`] = `"ky"`;
 
-exports[`Canonical Story Page SEO Linked data of type NewsArticle should match text 1`] = `
+exports[`Canonical Story Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [

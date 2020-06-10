@@ -178,8 +178,6 @@ export default () => {
 
       schemaScripts.forEach(script => {
         const scriptContent = JSON.parse(script.textContent);
-        const type = scriptContent['@type'];
-
         it('should be in the document', () => {
           expect(script).toBeInTheDocument();
         });
@@ -188,7 +186,7 @@ export default () => {
           expect(scriptContent).toBeTruthy();
         });
 
-        it(`of type ${type} should match text`, () => {
+        it(`should match text`, () => {
           expect(scriptContent).toMatchSnapshot();
         });
       });

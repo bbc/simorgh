@@ -304,7 +304,7 @@ exports[`AMP Front Page SEO Heading level 1 1`] = `"BBC News, عربي - الر�
 
 exports[`AMP Front Page SEO Lang attribute 1`] = `"ar"`;
 
-exports[`AMP Front Page SEO Linked data of type WebPage should match text 1`] = `
+exports[`AMP Front Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [
