@@ -97,6 +97,7 @@ const mostReadItems = ({ data, isAmp, numberOfItems, service }) => {
   logger.warn(MOST_READ_STALE_DATA, {
     message: 'lastRecordTimeStamp is greater than 60min',
     lastRecordTimeStamp: data.lastRecordTimeStamp,
+    generated: data.generated,
     service,
     isAmp,
   });
