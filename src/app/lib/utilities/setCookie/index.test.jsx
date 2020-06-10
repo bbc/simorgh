@@ -14,7 +14,7 @@ describe('setCookie Assertion Tests', () => {
       expect(cookieSpy).toHaveBeenCalledWith('test', '111', {
         domain: '.bbc.com',
         expires: 365,
-        sameSite: 'None',
+        sameSite: 'Lax',
         secure: false,
       });
     });
@@ -23,7 +23,7 @@ describe('setCookie Assertion Tests', () => {
       expect(cookieSpy).toHaveBeenCalledWith('test', '111', {
         domain: '.bbc.com',
         expires: 7,
-        sameSite: 'None',
+        sameSite: 'Lax',
         secure: false,
       });
     });
