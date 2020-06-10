@@ -1,6 +1,6 @@
 export default () => {
   it('I can see the brand title', () => {
-    const brandTitleEl = document.querySelector('h1 span span:first-child');
+    const brandTitleEl = document.querySelector('strong span:first-child');
 
     expect(brandTitleEl).toBeInTheDocument();
     expect(brandTitleEl.textContent).toBeTruthy();
@@ -8,7 +8,7 @@ export default () => {
   });
 
   it('I can see the episode title', () => {
-    const episodeTitleEl = document.querySelector('h1 span span:last-child');
+    const episodeTitleEl = document.querySelector('strong span:last-child');
 
     expect(episodeTitleEl).toBeInTheDocument();
     expect(episodeTitleEl.textContent).toBeTruthy();
