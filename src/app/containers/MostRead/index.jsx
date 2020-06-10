@@ -29,7 +29,6 @@ const MostReadContainer = ({
   if (!mostReadToggleEnabled) {
     return null;
   }
-
   // Do not render on AMP when it is not the most read page
   // We only want to render most read on AMP for the "/popular/read" pages
   if (isAmp && !serverRenderOnAmp) {

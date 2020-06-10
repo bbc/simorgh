@@ -1,10 +1,12 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import loggerMock from '#testHelpers/loggerMock';
 import IncludeContainer from '.';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import * as amp from './index.amp';
 import * as canonical from './index.canonical';
+import { INCLUDE_RENDERED } from '#lib/logger.const';
 
 const defaultToggleState = {
   include: {
@@ -46,6 +48,7 @@ const includeProps = {
     },
   },
   type: 'idt2',
+  href: '/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6',
 };
 
 // eslint-disable-next-line react/prop-types
@@ -75,6 +78,7 @@ const IncludeContainerWithMockContext = ({ toggleState, isAmp, ...props }) => (
 describe('IncludeContainer', () => {
   afterEach(() => {
     jest.clearAllMocks();
+    loggerMock.info.mockClear();
   });
 
   it('should not render include for a Canonical page with toggles disabled', async () => {
@@ -91,6 +95,7 @@ describe('IncludeContainer', () => {
     );
     expect(container).toMatchSnapshot();
     expect(mockCanonical).not.toHaveBeenCalled();
+    expect(loggerMock.info).not.toHaveBeenCalled();
   });
 
   it('should render include for a Canonical page with toggles enabled', async () => {
@@ -105,6 +110,12 @@ describe('IncludeContainer', () => {
         {...includeProps}
       />,
     );
+
+    expect(loggerMock.info).toHaveBeenCalledTimes(1);
+    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
+      type: 'idt2',
+      includeUrl: '/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6',
+    });
     expect(container).toMatchSnapshot();
     expect(mockCanonical).toHaveBeenCalledTimes(1);
   });
@@ -123,6 +134,11 @@ describe('IncludeContainer', () => {
     expect(container).toMatchSnapshot();
     expect(mockAmp).toHaveBeenCalledTimes(1);
     expect(mockAmp).toHaveBeenCalledWith(includeProps, {});
+    expect(loggerMock.info).toHaveBeenCalledTimes(1);
+    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
+      type: 'idt2',
+      includeUrl: '/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6',
+    });
   });
 
   it('should not render include for an Amp page with toggles disabled', async () => {
@@ -134,9 +150,11 @@ describe('IncludeContainer', () => {
         html={fakeMarkup}
         type="idt2"
         isAmp
+        href="/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6"
       />,
     );
     expect(container).toMatchSnapshot();
     expect(mockAmp).not.toHaveBeenCalled();
+    expect(loggerMock.info).not.toHaveBeenCalled();
   });
 });

@@ -274,7 +274,7 @@ describe('processMostRead', () => {
     ].forEach(
       ({ description, data, numberOfItems, service, warningContext }) => {
         it(description, () => {
-          processMostRead({ data, numberOfItems, service });
+          processMostRead({ data, numberOfItems, service, isAmp: false });
           expect(nodeLogger.warn).toHaveBeenCalledWith(
             MOST_READ_DATA_INCOMPLETE,
             warningContext,
@@ -283,16 +283,19 @@ describe('processMostRead', () => {
       },
     );
 
-    it('should log MOST_READ_STALE_DATA when lastRecordTimestamp is greater than 35min', () => {
+    it('should log MOST_READ_STALE_DATA when lastRecordTimestamp is greater than 60min', () => {
       processMostRead({
         data: setStaleLastRecordTimeStamp(pidginData),
         numberOfItems: 10,
         service: 'pidgin',
+        isAmp: true,
       });
       expect(nodeLogger.warn).toHaveBeenCalledWith(MOST_READ_STALE_DATA, {
         lastRecordTimeStamp: '2019-11-06T16:28:00Z',
-        message: 'lastRecordTimeStamp is greater than 35min for this service',
+        message: 'lastRecordTimeStamp is greater than 60min',
+        generated: '2019-11-06T17:05:17.981Z',
         service: 'pidgin',
+        isAmp: true,
       });
     });
   });

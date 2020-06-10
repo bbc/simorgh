@@ -1,21 +1,25 @@
 import React, { useContext } from 'react';
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import { shape, string, number } from 'prop-types';
+import { shape, string, number, bool } from 'prop-types';
+import {
+  GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
+} from '@bbc/gel-foundations/spacings';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
-import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
+import LinkedData from '#containers/LinkedData';
 import MetadataContainer from '../../containers/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
+import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import VideoPlayer from './VideoPlayer';
 
-const EPISODE_IS_AVAILABLE = 'available';
-const EPISODE_IS_EXPIRED = 'expired';
-const EPISODE_IS_NOT_YET_AVAILABLE = 'not-yet-available';
 const StyledGelWrapperGrid = styled.div`
   padding-top: ${GEL_SPACING_TRPL};
 `;
@@ -29,49 +33,11 @@ const getGroups = (zero, one, two, three, four, five) => ({
   group5: five,
 });
 
-const getEpisodeAvailability = (availableFrom, availableUntil) => {
-  const timeNow = Date.now();
-
-  if (!availableUntil) return EPISODE_IS_EXPIRED;
-  if (timeNow < availableFrom) return EPISODE_IS_NOT_YET_AVAILABLE;
-
-  return EPISODE_IS_AVAILABLE;
-};
-
 const StyledGelPageGrid = styled(GelPageGrid)`
+  padding-bottom: ${GEL_SPACING_QUAD};
   width: 100%;
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
 `;
-
-/* eslint-disable react/prop-types */
-const renderEpisode = ({
-  masterBrand,
-  episodeId,
-  episodeAvailableFrom,
-  episodeAvailableUntil,
-  imageUrl,
-}) => {
-  const episodeAvailability = getEpisodeAvailability(
-    episodeAvailableFrom,
-    episodeAvailableUntil,
-  );
-  switch (episodeAvailability) {
-    case EPISODE_IS_AVAILABLE:
-      return (
-        <VideoPlayer
-          masterBrand={masterBrand}
-          assetId={episodeId}
-          imageUrl={imageUrl}
-        />
-      );
-    case EPISODE_IS_EXPIRED:
-      return <VideoPlayer isExpired />;
-    case EPISODE_IS_NOT_YET_AVAILABLE:
-    default:
-      return null;
-  }
-};
-/* eslint-enable react/prop-types */
 
 const OnDemandTvPage = ({ pageData }) => {
   const {
@@ -79,15 +45,19 @@ const OnDemandTvPage = ({ pageData }) => {
     headline,
     shortSynopsis,
     brandTitle,
-    episodeAvailableFrom,
-    episodeAvailableUntil,
     releaseDateTimeStamp,
     masterBrand,
     episodeId,
     imageUrl,
+    episodeIsAvailable,
+    promoBrandTitle,
+    thumbnailImageUrl,
+    durationISO8601,
   } = pageData;
 
-  const { timezone, locale, dir } = useContext(ServiceContext);
+  const { lang, timezone, locale, dir, service } = useContext(ServiceContext);
+  const { isAmp } = useContext(RequestContext);
+  const location = useLocation();
 
   const formattedTimestamp = formatUnixTimestamp({
     timestamp: releaseDateTimeStamp,
@@ -95,6 +65,15 @@ const OnDemandTvPage = ({ pageData }) => {
     timezone,
     locale,
     isRelative: false,
+  });
+
+  const mediaId = `${service}/${masterBrand}/${episodeId}/${lang}`;
+
+  const embedUrl = getEmbedUrl({
+    mediaId,
+    type: 'media',
+    isAmp,
+    queryString: location.search,
   });
 
   return (
@@ -107,7 +86,25 @@ const OnDemandTvPage = ({ pageData }) => {
         description={shortSynopsis}
         openGraphType="website"
       />
-
+      <LinkedData
+        type="WebPage"
+        seoTitle={headline}
+        entities={
+          episodeIsAvailable
+            ? [
+                {
+                  '@type': 'VideoObject',
+                  name: promoBrandTitle,
+                  description: shortSynopsis,
+                  thumbnailUrl: thumbnailImageUrl,
+                  duration: durationISO8601,
+                  uploadDate: new Date(releaseDateTimeStamp).toISOString(),
+                  embedURL: embedUrl,
+                },
+              ]
+            : []
+        }
+      />
       <StyledGelPageGrid
         forwardedAs="main"
         role="main"
@@ -129,13 +126,12 @@ const OnDemandTvPage = ({ pageData }) => {
             columns={getGroups(6, 6, 6, 6, 6, 6)}
             enableGelGutters
           >
-            {renderEpisode({
-              masterBrand,
-              episodeId,
-              episodeAvailableFrom,
-              episodeAvailableUntil,
-              imageUrl,
-            })}
+            <VideoPlayer
+              masterBrand={masterBrand}
+              assetId={episodeId}
+              imageUrl={imageUrl}
+              episodeIsAvailable={episodeIsAvailable}
+            />
           </StyledGelWrapperGrid>
           <OnDemandHeadingBlock
             brandTitle={brandTitle}
@@ -159,6 +155,10 @@ OnDemandTvPage.propTypes = {
     masterBrand: string,
     episodeId: string,
     imageUrl: string,
+    episodeIsAvailable: bool,
+    promoBrandTitle: string,
+    thumbnailImageUrl: string,
+    durationISO8601: string,
   }).isRequired,
 };
 

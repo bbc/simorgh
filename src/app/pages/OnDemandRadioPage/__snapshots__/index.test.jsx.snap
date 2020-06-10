@@ -208,7 +208,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","duration":"PT29M30S","thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png","uploadDate":"2020-05-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps/amp?morph_env=live"}
+      {"@context":"http://schema.org","@graph":[{"@type":"WebPage","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News پښتو","publishingPrinciples":"https://www.bbc.com/pashto/institutional-49283007","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"ماښامنۍ خپرونه"}},{"@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png","duration":"PT29M30S","uploadDate":"2020-05-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps/amp?morph_env=live"}]}
     </script>
   </head>
   <body>
@@ -275,7 +275,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 .c12 {
-  padding: 2rem 0;
+  padding: 2rem 0 1.5rem;
   padding-left: 1rem;
 }
 
@@ -285,10 +285,6 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-}
-
-.c4 {
-  padding-top: 1.5rem;
 }
 
 @supports (display:grid) {
@@ -517,7 +513,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 
 @media screen {
   .c6 {
-    padding: 2rem 0 1.5rem;
+    padding: 2rem 0 1rem;
   }
 }
 
@@ -553,6 +549,12 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   .c10 {
     font-size: 1.375rem;
     line-height: 2rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c10 {
+    padding-bottom: 0.5rem;
   }
 }
 
@@ -600,6 +602,12 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   .c4 {
     margin: 0 auto;
     max-width: 80rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    padding-top: 1.5rem;
   }
 }
 
@@ -787,7 +795,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 .c12 {
-  padding: 2rem 0;
+  padding: 2rem 0 1.5rem;
   padding-left: 1rem;
 }
 
@@ -797,10 +805,6 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-}
-
-.c4 {
-  padding-top: 1.5rem;
 }
 
 .c16 {
@@ -1039,7 +1043,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 
 @media screen {
   .c6 {
-    padding: 2rem 0 1.5rem;
+    padding: 2rem 0 1rem;
   }
 }
 
@@ -1075,6 +1079,12 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   .c10 {
     font-size: 1.375rem;
     line-height: 2rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c10 {
+    padding-bottom: 0.5rem;
   }
 }
 
@@ -1122,6 +1132,12 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   .c4 {
     margin: 0 auto;
     max-width: 80rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    padding-top: 1.5rem;
   }
 }
 
@@ -1330,7 +1346,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","duration":"PT29M30S","thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png","uploadDate":"2020-05-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"}
+      {"@context":"http://schema.org","@graph":[{"@type":"WebPage","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News پښتو","publishingPrinciples":"https://www.bbc.com/pashto/institutional-49283007","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"ماښامنۍ خپرونه"}},{"@type":"AudioObject","name":"ماښامنۍ خپرونه","description":"د بي بي سي ورلډ سروس څخه پروګرام کول","thumbnailUrl":"https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png","duration":"PT29M30S","uploadDate":"2020-05-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"}]}
     </script>
   </head>
   <body>
@@ -1486,8 +1502,47 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
   visibility: visible;
 }
 
+.c15 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c16 {
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0.0625rem solid transparent;
+  color: #FFFFFF;
+  background-color: rgba(34,34,34,0.75);
+}
+
+.c17 {
+  display: block;
+  font-weight: normal;
+  bottom: 0;
+  position: absolute;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+.c14 {
+  position: relative;
+  min-height: 165px;
+  margin-bottom: 2rem;
+}
+
 .c12 {
-  padding: 2rem 0;
+  padding: 2rem 0 1.5rem;
   padding-right: 1rem;
 }
 
@@ -1497,10 +1552,6 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-}
-
-.c4 {
-  padding-top: 1.5rem;
 }
 
 @supports (display:grid) {
@@ -1729,7 +1780,7 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
 
 @media screen {
   .c6 {
-    padding: 2rem 0 1.5rem;
+    padding: 2rem 0 1rem;
   }
 }
 
@@ -1768,6 +1819,36 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
   }
 }
 
+@media (max-width:62.9375rem) {
+  .c10 {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c16 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c17 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c17 {
+    padding: 1rem;
+  }
+}
+
 @media (max-width:24.9375rem) {
   .c12 {
     display: none;
@@ -1799,6 +1880,12 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
   .c4 {
     margin: 0 auto;
     max-width: 80rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    padding-top: 1.5rem;
   }
 }
 
@@ -1870,6 +1957,23 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
               src="https://ichef.bbci.co.uk/images/ic/128x128/p08b8lzc.png"
               srcset="https://ichef.bbci.co.uk/images/ic/128x128/p08b8lzc.png 128w,https://ichef.bbci.co.uk/images/ic/240x240/p08b8lzc.png 240w,https://ichef.bbci.co.uk/images/ic/480x480/p08b8lzc.png 480w"
             />
+          </div>
+        </div>
+      </div>
+      <div
+        class="c14"
+      >
+        <div
+          class="c15"
+        >
+          <div
+            class="c16"
+          >
+            <strong
+              class="c17"
+            >
+              더 이상 이용할 수 없는 콘텐츠입니다.
+            </strong>
           </div>
         </div>
       </div>
@@ -1975,7 +2079,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 .c12 {
-  padding: 2rem 0;
+  padding: 2rem 0 1.5rem;
   padding-right: 1rem;
 }
 
@@ -1985,10 +2089,6 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-}
-
-.c4 {
-  padding-top: 1.5rem;
 }
 
 @supports (display:grid) {
@@ -2217,7 +2317,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 
 @media screen {
   .c6 {
-    padding: 2rem 0 1.5rem;
+    padding: 2rem 0 1rem;
   }
 }
 
@@ -2253,6 +2353,12 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   .c10 {
     font-size: 1rem;
     line-height: 1.75rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c10 {
+    padding-bottom: 0.5rem;
   }
 }
 
@@ -2311,6 +2417,12 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   .c4 {
     margin: 0 auto;
     max-width: 80rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    padding-top: 1.5rem;
   }
 }
 

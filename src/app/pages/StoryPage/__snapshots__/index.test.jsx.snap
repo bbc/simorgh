@@ -11,71 +11,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   height: 0.75rem;
 }
 
-.c35 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c36 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c37 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c33 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c31 {
-  position: relative;
-  z-index: 0;
-  margin-top: 2rem;
-}
-
-.c34 {
-  margin: 0;
-  padding: 0;
-}
-
 .c29 {
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -232,6 +167,71 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
+}
+
+.c35 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c36 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c37 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c33 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c31 {
+  position: relative;
+  z-index: 0;
+  margin-top: 2rem;
+}
+
+.c34 {
+  margin: 0;
+  padding: 0;
 }
 
 .c43 {
@@ -492,11 +492,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 .c9 {
-  color: #404040;
+  color: #3F3F42;
 }
 
 .c10 {
-  color: #5A5A5A;
+  color: #6E6E73;
 }
 
 .c6 {
@@ -529,68 +529,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-@media (min-width:37.5rem) {
-  .c36 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c37 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c37 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c37 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c37 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c33 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c33 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c31 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c31 {
-    margin-bottom: 1.5rem;
-  }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -973,6 +911,68 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
+@media (min-width:37.5rem) {
+  .c36 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c37 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c37 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c37 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c37 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c33 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c33 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c31 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c31 {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (max-width:62.9375rem) {
   .c43 {
     border-bottom: 0.0625rem solid #F2F2F2;
@@ -1325,6 +1325,9 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
             id="DataContainer"
           >
             <noscript />
+            <div>
+              chartbeat
+            </div>
             <div
               class="c0 c1"
               dir="ltr"
@@ -2819,7 +2822,7 @@ exports[`Story Page should render correctly when the secondary column data is no
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}
+      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
     </script>
     <script
       type="application/ld+json"
@@ -2828,72 +2831,7 @@ exports[`Story Page should render correctly when the secondary column data is no
     </script>
   </head>
   <body>
-    .c37 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c38 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c39 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c35 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c33 {
-  position: relative;
-  z-index: 0;
-  margin-top: 2rem;
-}
-
-.c36 {
-  margin: 0;
-  padding: 0;
-}
-
-.c31 {
+    .c31 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3056,6 +2994,71 @@ exports[`Story Page should render correctly when the secondary column data is no
   overflow: hidden;
 }
 
+.c37 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c38 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c39 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c35 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c33 {
+  position: relative;
+  z-index: 0;
+  margin-top: 2rem;
+}
+
+.c36 {
+  margin: 0;
+  padding: 0;
+}
+
 .c26 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -3122,11 +3125,11 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 .c9 {
-  color: #404040;
+  color: #3F3F42;
 }
 
 .c10 {
-  color: #5A5A5A;
+  color: #6E6E73;
 }
 
 .c11 {
@@ -3159,68 +3162,6 @@ exports[`Story Page should render correctly when the secondary column data is no
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-@media (min-width:37.5rem) {
-  .c38 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c39 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c39 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c39 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c39 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c35 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c35 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c33 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c33 {
-    margin-bottom: 1.5rem;
-  }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -3603,6 +3544,68 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 }
 
+@media (min-width:37.5rem) {
+  .c38 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c39 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c39 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c39 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c39 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c35 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c35 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c33 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c33 {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c26 {
     font-size: 1rem;
@@ -3737,6 +3740,9 @@ exports[`Story Page should render correctly when the secondary column data is no
                 id="DataContainer"
               >
                 <noscript />
+                <div>
+                  chartbeat
+                </div>
                 <div
                   class="c0 c1"
                   dir="ltr"
@@ -4279,71 +4285,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 0.8125rem;
 }
 
-.c37 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.c38 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-.c39 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #222222;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c35 {
-  border-top: 0.0625rem solid #AEAEB5;
-  z-index: -1;
-}
-
-.c33 {
-  position: relative;
-  z-index: 0;
-  margin-top: 2rem;
-}
-
-.c36 {
-  margin: 0;
-  padding: 0;
-}
-
 .c31 {
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -4515,6 +4456,71 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
+}
+
+.c37 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c38 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c39 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c35 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c33 {
+  position: relative;
+  z-index: 0;
+  margin-top: 2rem;
+}
+
+.c36 {
+  margin: 0;
+  padding: 0;
 }
 
 .c45 {
@@ -4753,11 +4759,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 .c9 {
-  color: #404040;
+  color: #3F3F42;
 }
 
 .c10 {
-  color: #5A5A5A;
+  color: #6E6E73;
 }
 
 .c11 {
@@ -4794,68 +4800,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-@media (min-width:37.5rem) {
-  .c38 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c39 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c39 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c39 {
-    margin: 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c39 {
-    padding-right: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c35 {
-    border-color: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c35 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c33 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c33 {
-    margin-bottom: 1.5rem;
-  }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -5249,6 +5193,68 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @supports (display:grid) {
   .c41 {
     display: block;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c38 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c39 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c39 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c39 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c39 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c35 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c35 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c33 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c33 {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -5797,7 +5803,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}
+      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
     </script>
     <script
       type="application/ld+json"
@@ -5823,6 +5829,9 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                 id="DataContainer"
               >
                 <noscript />
+                <div>
+                  chartbeat
+                </div>
                 <div
                   class="c0 c1"
                   dir="ltr"

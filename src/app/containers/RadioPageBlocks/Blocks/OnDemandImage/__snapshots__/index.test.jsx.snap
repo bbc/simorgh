@@ -8,7 +8,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
 }
 
 .c0 {
-  padding: 2rem 0;
+  padding: 2rem 0 1.5rem;
   padding-right: 1rem;
 }
 
