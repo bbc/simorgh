@@ -15,8 +15,6 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const PAGE_TYPES = oneOf(['idx', 'mostRead']);
-
 const IdxPaddingStyles = css`
   padding-bottom: ${GEL_SPACING_TRPL};
 
@@ -72,7 +70,7 @@ const IndexHeadingContainer = ({ children, pageType, ...props }) => {
 
 IndexHeadingContainer.propTypes = {
   children: node,
-  pageType: PAGE_TYPES,
+  pageType: oneOf(['idx', 'mostRead']),
 };
 
 IndexHeadingContainer.defaultProps = {
