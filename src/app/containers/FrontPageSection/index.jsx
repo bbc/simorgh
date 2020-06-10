@@ -29,15 +29,7 @@ import {
 import getRows from './utilities/storyRowsSplitter';
 import getRowDetails from './utilities/rowDetails';
 import { TopRow } from '../FrontPageStoryRows';
-
-const StyledFrontPageSection = styled.section`
-  /* To centre page layout for Group 4+ */
-  margin: 0 auto;
-  width: 100%; /* Needed for IE11 */
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
-  }
-`;
+import { CPSGrid } from '#app/components/Grid';
 
 // Apply the right margin-top to the first section of the page when there is one or multiple items.
 const FirstSectionTopMargin = styled.div`
@@ -200,7 +192,12 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
     // (<section> tags *should* imply `role="region"`)
     // While this may be true in a perfect world, we set it in order to get
     // the greatest possible support.
-    <StyledFrontPageSection role="region" aria-labelledby={sectionLabelId}>
+    <CPSGrid
+      forwardedAs="section"
+      role="region"
+      aria-labelledby={sectionLabelId}
+      item
+    >
       <SectionLabel
         script={script}
         labelId={sectionLabelId}
@@ -221,7 +218,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
         isFirstSection,
         dir,
       })}
-    </StyledFrontPageSection>
+    </CPSGrid>
   );
 };
 

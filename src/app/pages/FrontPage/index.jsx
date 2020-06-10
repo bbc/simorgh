@@ -3,31 +3,19 @@ import React, { Fragment, useContext } from 'react';
 import { string, node } from 'prop-types';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
-import styled from 'styled-components';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '#containers/FrontPageSection';
 import MetadataContainer from '#containers/Metadata';
 import MostReadContainer from '#containers/MostRead';
-import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import AdContainer from '#containers/Ad';
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
-
-const FrontPageMostReadSection = styled(MostReadSection)`
-  /* To centre page layout for Group 4+ */
-  margin: 0 auto;
-  width: 100%; /* Needed for IE11 */
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
-  }
-`;
+import { CPSGrid } from '#app/components/Grid';
 
 const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
@@ -59,10 +47,16 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     findIndex(group => group.type === 'useful-links')(groups) > -1;
 
   const MostReadWrapper = ({ children }) => (
-    <FrontPageMostReadSection>
+    <CPSGrid
+      item
+      forwardedAs="section"
+      role="region"
+      aria-labelledby="Most-Read"
+      data-e2e="most-read"
+    >
       <MostReadSectionLabel />
       {children}
-    </FrontPageMostReadSection>
+    </CPSGrid>
   );
 
   MostReadWrapper.propTypes = {
@@ -88,25 +82,23 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
-      <main role="main">
+      <CPSGrid forwardedAs="main" role="main" enableMargins>
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}
         </VisuallyHiddenText>
         <AdContainer />
-        <IndexPageContainer>
-          {groups.map((group, index) => (
-            <Fragment key={group.title}>
-              {group.type === 'useful-links' && renderMostRead()}
-              {radioScheduleOnPage &&
-                radioSchedulePosition === group.semanticGroupName && (
-                  <RadioScheduleContainer initialData={radioScheduleData} />
-                )}
-              <FrontPageSection group={group} sectionNumber={index} />
-            </Fragment>
-          ))}
-          {!hasUsefulLinks && renderMostRead()}
-        </IndexPageContainer>
-      </main>
+        {groups.map((group, index) => (
+          <Fragment key={group.title}>
+            {group.type === 'useful-links' && renderMostRead()}
+            {radioScheduleOnPage &&
+              radioSchedulePosition === group.semanticGroupName && (
+                <RadioScheduleContainer initialData={radioScheduleData} />
+              )}
+            <FrontPageSection group={group} sectionNumber={index} />
+          </Fragment>
+        ))}
+        {!hasUsefulLinks && renderMostRead()}
+      </CPSGrid>
     </>
   );
 };
