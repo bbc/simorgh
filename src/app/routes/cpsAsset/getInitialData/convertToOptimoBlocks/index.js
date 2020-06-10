@@ -42,7 +42,9 @@ const typesToConvert = {
   social_embed: socialEmbed,
 };
 
-const parseBlockByType = (block, json, assetType) => {
+// Here pathname is passed as a prop specifically for CPS includes
+// This will most likely change in issue #6784 so it is temporary for now
+const parseBlockByType = (block, json, assetType, pathname) => {
   if (!path(['type'], block)) return false;
 
   const { type } = block;
@@ -51,6 +53,7 @@ const parseBlockByType = (block, json, assetType) => {
     block,
     json,
     assetType,
+    pathname,
   );
 
   if (!parsedBlock) {
@@ -60,14 +63,13 @@ const parseBlockByType = (block, json, assetType) => {
   return parsedBlock;
 };
 
-const convertToOptimoBlocks = async jsonRaw => {
+const convertToOptimoBlocks = async (jsonRaw, pathname) => {
   const json = clone(jsonRaw);
-
   const assetType = path(['metadata', 'type'], json);
   const blocks = pathOr([], ['content', 'blocks'], json);
 
   const parsedBlocks = await Promise.all(
-    blocks.map(block => parseBlockByType(block, json, assetType)),
+    blocks.map(block => parseBlockByType(block, json, assetType, pathname)),
   );
 
   return {
