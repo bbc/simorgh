@@ -1,4 +1,5 @@
 import 'isomorphic-fetch';
+import Url from 'url-parse';
 import {
   INCLUDE_ERROR,
   INCLUDE_FETCH_ERROR,
@@ -7,10 +8,11 @@ import {
   INCLUDE_UNSUPPORTED,
 } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
+import { addOverrideQuery } from '#app/routes/utils/overrideRendererOnTest';
 
 const logger = nodeLogger(__filename);
 
-const buildIncludeUrl = (href, type) => {
+const buildIncludeUrl = (href, type, pathname) => {
   const resolvers = {
     idt1: '',
     idt2: '/html',
@@ -19,7 +21,23 @@ const buildIncludeUrl = (href, type) => {
 
   const withTrailingHref = href.startsWith('/') ? href : `/${href}`;
 
-  return `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${resolvers[type]}`;
+  const includeUrl = `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${resolvers[type]}`;
+
+  const currentRendererEnv = new Url(pathname, true).query.renderer_env;
+
+  let includeUrlWithParam = '';
+
+  switch (currentRendererEnv) {
+    case 'test':
+      includeUrlWithParam = addOverrideQuery(includeUrl, 'test');
+      break;
+    case 'live':
+      includeUrlWithParam = addOverrideQuery(includeUrl, 'live');
+      break;
+    default:
+      return includeUrl;
+  }
+  return includeUrlWithParam;
 };
 
 const fetchMarkup = async url => {
@@ -49,7 +67,7 @@ const fetchMarkup = async url => {
   }
 };
 
-const convertInclude = async includeBlock => {
+const convertInclude = async (includeBlock, ...restParams) => {
   const supportedTypes = {
     indepthtoolkit: 'idt1',
     idt2: 'idt2',
@@ -60,6 +78,10 @@ const convertInclude = async includeBlock => {
   };
 
   const { href, type, ...rest } = includeBlock;
+
+  // Here pathname is passed as a prop specifically for CPS includes
+  // This will most likely change in issue #6784 so it is temporary for now
+  const pathname = restParams[2];
 
   if (!href) {
     logger.error(INCLUDE_MISSING_URL, includeBlock);
@@ -92,7 +114,7 @@ const convertInclude = async includeBlock => {
     type,
     model: {
       href,
-      html: await fetchMarkup(buildIncludeUrl(href, includeType)),
+      html: await fetchMarkup(buildIncludeUrl(href, includeType, pathname)),
       type: includeType,
       ...rest,
     },
