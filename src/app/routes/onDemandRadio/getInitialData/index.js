@@ -1,9 +1,13 @@
 import path from 'ramda/src/path';
+import nodeLogger from '#lib/logger.node';
+import { DATA_PROCESSING_ERROR } from '#lib/logger.const';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
 import { logExpiredEpisode } from './logInitialData';
 import pathWithLogging, { LOG_LEVELS } from './pathWithLogging';
+
+const logger = nodeLogger(__filename);
 
 const getEpisodeAvailability = ({ availableFrom, availableUntil }) => {
   const timeNow = Date.now();
@@ -83,6 +87,11 @@ export default async ({ path: pathname }) => {
   try {
     const onDemandRadioDataPath = overrideRendererOnTest(pathname);
     const { json, ...rest } = await fetchPageData(onDemandRadioDataPath);
+
+    if (!json) {
+      return { error: true, ...rest };
+    }
+
     const pageType = { metadata: { type: 'On Demand Radio' } };
 
     const availableFrom = getEpisodeAvailableFrom(json);
@@ -123,7 +132,7 @@ export default async ({ path: pathname }) => {
       }),
     };
   } catch (error) {
-    // log this error
+    logger.error(DATA_PROCESSING_ERROR, { error: error.toString() });
 
     return {
       error,
