@@ -67,6 +67,45 @@ const fetchMarkup = async url => {
   }
 };
 
+const getImageBlock = (type, blockData, isAmp) => {
+  const supportedImageTypes = ['idt2'];
+
+  if (!supportedImageTypes.includes(type)) return null;
+
+  const imageData = blockData[type];
+
+  const getSrc = href => {
+    const path = href.split('/').slice(3).join('/');
+    return `${process.env.SIMORGH_INCLUDES_BASE_URL}/${path}`;
+  };
+
+  const getSize = href => href.split('/').pop();
+
+  const getSrcSet = sizes =>
+    sizes.map(({ href }) => `${getSrc(href)} ${getSize(href)}w`).join(',');
+
+  const getImageProps = ({ small, medium, large }) => {
+    const defaultImage = isAmp ? medium : large;
+
+    const { height, width, href } = defaultImage;
+
+    return {
+      src: getSrc(href),
+      srcset: isAmp ? getSrcSet([small, medium]) : getSrcSet([medium, large]),
+      height,
+      width,
+      layout: 'responsive',
+    };
+  };
+
+  const { altText, dimensions } = imageData;
+
+  return {
+    altText,
+    ...getImageProps(dimensions),
+  };
+};
+
 const convertInclude = async (includeBlock, ...restParams) => {
   const supportedTypes = {
     indepthtoolkit: 'idt1',
@@ -77,11 +116,14 @@ const convertInclude = async (includeBlock, ...restParams) => {
     'smallprox/include': 'vj',
   };
 
-  const { href, type, ...rest } = includeBlock;
+  const { href, type } = includeBlock;
 
   // Here pathname is passed as a prop specifically for CPS includes
   // This will most likely change in issue #6784 so it is temporary for now
   const pathname = restParams[2];
+
+  const ampRegex = /\.amp$/;
+  const isAmp = ampRegex.test(pathname);
 
   if (!href) {
     logger.error(INCLUDE_MISSING_URL, includeBlock);
@@ -110,13 +152,17 @@ const convertInclude = async (includeBlock, ...restParams) => {
     return null;
   }
 
+  const imageBlock = getImageBlock(includeType, includeBlock, isAmp);
+
   return {
     type,
     model: {
       href,
-      html: await fetchMarkup(buildIncludeUrl(href, includeType, pathname)),
+      ...(!isAmp && {
+        html: await fetchMarkup(buildIncludeUrl(href, includeType, pathname)),
+      }),
       type: includeType,
-      ...rest,
+      ...(imageBlock && { imageBlock }),
     },
   };
 };
