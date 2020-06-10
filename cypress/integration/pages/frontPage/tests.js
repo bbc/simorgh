@@ -1,5 +1,5 @@
 // Limiting to one service for now
-const serviceHasPublishedPromo = service => service === 'persian';
+const serviceHasPublishedPromo = service => service === 'arabic';
 
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
