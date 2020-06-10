@@ -32,4 +32,4 @@ jobs:
 notifications:
   email: false
 env:
-  - BROWSER=chromium
+  - BROWSER=chrome
