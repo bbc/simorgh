@@ -270,6 +270,73 @@ describe('convertInclude', () => {
     });
   });
 
+  const propogateQueryTest = (summary, pathname, expectedUrlQuery) => {
+    it(`should fetch and convert an include block with ${summary}`, async () => {
+      fetch.mockResponse(() => Promise.resolve(idt1Markup));
+      const input = {
+        required: false,
+        tile: 'A quiz!',
+        href: '/indepthtoolkit/quizzes/123-456',
+        platform: 'highweb',
+        type: 'include',
+      };
+      const json = null;
+      const assetType = null;
+
+      const expected = {
+        type: 'include',
+        model: {
+          href: '/indepthtoolkit/quizzes/123-456',
+          required: false,
+          tile: 'A quiz!',
+          platform: 'highweb',
+          type: 'idt1',
+          html: idt1Markup,
+        },
+      };
+
+      expect(await convertInclude(input, json, assetType, pathname)).toEqual(
+        expected,
+      );
+      expect(fetch).toHaveBeenCalledTimes(1);
+      expect(fetch).toHaveBeenCalledWith(
+        `https://foobar.com/includes/indepthtoolkit/quizzes/123-456${expectedUrlQuery}`,
+        {
+          timeout: 3000,
+        },
+      );
+      expect(loggerMock.error).not.toHaveBeenCalled();
+      expect(loggerMock.info).toHaveBeenCalledTimes(1);
+      expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
+        url: `https://foobar.com/includes/indepthtoolkit/quizzes/123-456${expectedUrlQuery}`,
+      });
+    });
+  };
+
+  propogateQueryTest(
+    'with a propagated renderer_env=live',
+    '/service/foobar?renderer_env=live',
+    '?renderer_env=live',
+  );
+
+  propogateQueryTest(
+    'with a propagated renderer_env=test',
+    '/service/foobar?renderer_env=test',
+    '?renderer_env=test',
+  );
+
+  propogateQueryTest(
+    'without propagating an invalid renderer_env value',
+    '/service/foobar?renderer_env=foo',
+    '',
+  );
+
+  propogateQueryTest(
+    'without propagating an invalid query parameter',
+    '/service/foobar?foo=bar',
+    '',
+  );
+
   it('should return null for an unsupported include type', async () => {
     fetch.mockResponse(() => Promise.resolve('No fetch call'));
     const input = {
