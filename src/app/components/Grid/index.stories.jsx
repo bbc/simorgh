@@ -44,11 +44,20 @@ storiesOf('Components|Grid', module)
       </Grid>
     );
   })
-  .add('CPSGrid', () => {
+  .add('CPSGrid without margins', () => {
     return (
       <CPSGrid>
         <Grid {...gridItemProps}>
-          <p>CPS page grid</p>
+          <p>CPS grid without margins</p>
+        </Grid>
+      </CPSGrid>
+    );
+  })
+  .add('CPSGrid with margins', () => {
+    return (
+      <CPSGrid enableMargins>
+        <Grid {...gridItemProps}>
+          <p>CPS grid with margins</p>
         </Grid>
       </CPSGrid>
     );

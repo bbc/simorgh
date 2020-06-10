@@ -91,13 +91,6 @@ exports[`Grid should render CPSGrid 1`] = `
 `;
 
 exports[`Grid should render CPSGrid with additional props 1`] = `
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    position: initial;
-  }
-}
-
 @media (max-width:14.9375rem) {
   .c2 {
     width: calc(2/6*(100% - 6 * 0.5rem) + 1 * 0.5rem );
@@ -155,6 +148,37 @@ exports[`Grid should render CPSGrid with additional props 1`] = `
 @supports (display:grid) {
   .c2 {
     display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
   }
 }
 

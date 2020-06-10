@@ -46,7 +46,7 @@ describe('Grid', () => {
 
   shouldMatchSnapshot(
     'should render CPSGrid with additional props',
-    <CPSGrid forwardedAs="main" role="main">
+    <CPSGrid forwardedAs="main" role="main" enableMargins>
       <Grid {...gridItemProps}>
         <p>CPS grid</p>
       </Grid>
