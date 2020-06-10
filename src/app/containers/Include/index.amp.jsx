@@ -14,9 +14,6 @@ const Idt2Container = ({ imageBlock }) => (
   </IncludeGrid>
 );
 
-Idt2Container.propTypes = {
-  imageBlock: obj.isRequired,
-};
 
 const componentsToRender = {
   idt2: props => <Idt2Container {...props} />,
