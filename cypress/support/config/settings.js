@@ -43,11 +43,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/afaanoromoo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/afaanoromoo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/afaanoromoo'],
@@ -209,11 +209,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/afrique'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/afrique'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/afrique'],
@@ -380,11 +380,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/amharic'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/amharic'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/amharic'],
@@ -546,11 +546,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/arabic'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/arabic'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/arabic'],
@@ -714,11 +714,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/azeri'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/azeri'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/azeri'],
@@ -853,11 +853,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/bengali'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/bengali'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/bengali'],
@@ -1024,11 +1024,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/burmese'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/burmese'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/burmese'],
@@ -1245,11 +1245,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/gahuza'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/gahuza'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/gahuza'],
@@ -1416,11 +1416,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/gujarati'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/gujarati'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/gujarati'],
@@ -1888,11 +1888,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/igbo'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/igbo'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/igbo'],
@@ -2022,11 +2022,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/indonesia'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/indonesia'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/indonesia'],
@@ -2059,7 +2059,7 @@ module.exports = () => ({
               '/indonesia/bbc_indonesian_radio/programmes/w13xtt0s', // Brand
               '/indonesia/bbc_indonesian_radio/w172xh281s8mkhr', // Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
@@ -2199,11 +2199,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/japanese'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/japanese'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/japanese'],
@@ -2499,11 +2499,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/kyrgyz'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/kyrgyz'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/kyrgyz'],
@@ -2670,11 +2670,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/marathi'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/marathi'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/marathi'],
@@ -2993,11 +2993,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/nepali'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/nepali'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/nepali'],
@@ -3251,7 +3251,7 @@ module.exports = () => ({
               '/pashto/bbc_pashto_radio/programmes/p0340yr4', // Brand
               '/pashto/bbc_pashto_radio/w172xjcknn5x31c', // Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
@@ -3592,11 +3592,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/pidgin'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/pidgin'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/pidgin'],
@@ -3860,11 +3860,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/punjabi'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/punjabi'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/punjabi'],
@@ -4174,11 +4174,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/serbian/cyr'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/serbian/cyr'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/serbian/cyr'],
@@ -4304,11 +4304,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/serbian/lat'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/serbian/lat'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/serbian/lat'],
@@ -4434,11 +4434,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/sinhala'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/sinhala'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/sinhala'],
@@ -4962,11 +4962,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/tamil'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/tamil'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/tamil'],
@@ -5133,11 +5133,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/telugu'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/telugu'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/telugu'],
@@ -5267,11 +5267,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/thai'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/thai'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/thai'],
@@ -5567,11 +5567,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/turkce'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/turkce'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/turkce'],
@@ -6136,11 +6136,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/urdu'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/urdu'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/urdu'],
@@ -6307,11 +6307,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/uzbek'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/uzbek'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/uzbek'],
@@ -6482,11 +6482,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/vietnamese'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/vietnamese'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/vietnamese'],
@@ -6621,11 +6621,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/yoruba'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/yoruba'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/yoruba'],
