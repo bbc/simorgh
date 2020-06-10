@@ -1,9 +1,9 @@
 import Cookie from 'js-cookie';
 import path from 'ramda/src/path';
-import onClient from '../../../lib/utilities/onClient';
-import { getPromoHeadline } from '../../../lib/analyticsUtils/article';
-import { getPageTitle } from '../../../lib/analyticsUtils/frontpage';
-import { getReferrer } from '../../../lib/analyticsUtils';
+import onClient from '#lib/utilities/onClient';
+import { getPromoHeadline } from '#lib/analyticsUtils/article';
+import { getPageTitle } from '#lib/analyticsUtils/indexPage';
+import { getReferrer } from '#lib/analyticsUtils';
 
 const ID_COOKIE = 'ckns_sylphid';
 
@@ -26,6 +26,7 @@ export const getSylphidCookie = () =>
 export const getType = (pageType, shorthand = false) => {
   switch (pageType) {
     case 'frontPage':
+    case 'IDX':
     case 'index':
       return shorthand ? 'IDX' : 'Index';
     case 'article':
@@ -99,6 +100,7 @@ export const buildSections = ({
 export const getTitle = ({ pageType, pageData, brandName, title }) => {
   switch (pageType) {
     case 'frontPage':
+    case 'IDX':
     case 'index':
       return getPageTitle(pageData, brandName);
     case 'article':
