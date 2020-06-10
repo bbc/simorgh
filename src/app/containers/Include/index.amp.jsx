@@ -1,5 +1,5 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { string, obj } from 'prop-types';
 import styled from 'styled-components';
 import { AmpImg } from '@bbc/psammead-image';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
@@ -8,16 +8,25 @@ const IncludeGrid = styled(GridItemConstrainedMedium)`
   display: grid;
 `;
 
-const AmpIncludeContainer = ({ type, imageBlock }) => {
-  const supportedTypes = ['idt2'];
+const Idt2Container = ({ imageBlock }) => (
+  <IncludeGrid>
+    <AmpImg fallback={false} {...imageBlock} />
+  </IncludeGrid>
+);
 
-  if (!imageBlock || !supportedTypes.includes(type)) return null;
+Idt2Container.propTypes = {
+  imageBlock: obj.isRequired,
+};
 
-  return (
-    <IncludeGrid>
-      <AmpImg fallback={false} {...imageBlock} />
-    </IncludeGrid>
-  );
+const componentsToRender = {
+  idt2: props => <Idt2Container {...props} />,
+};
+
+const AmpIncludeContainer = props => {
+  const { type, imageBlock } = props;
+  if (!imageBlock) return null;
+
+  return componentsToRender[type](props);
 };
 
 AmpIncludeContainer.propTypes = {
