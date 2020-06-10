@@ -16,11 +16,8 @@ export const getCookieDomain = domain => {
 const setCookie = (name, value, expires = COOKIE_EXPIRY) => {
   const isHttps = document.location.protocol === 'https:';
 
-  const sameSiteAttribute =
-    process.env.SIMORGH_APP_ENV === 'live' ||
-    process.env.SIMORGH_APP_ENV === 'test'
-      ? 'None'
-      : 'Lax';
+  // Only set sameSite=None when protocol https
+  const sameSiteAttribute = isHttps ? 'None' : 'Lax';
 
   return Cookie.set(name, value, {
     expires,
