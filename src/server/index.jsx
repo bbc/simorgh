@@ -181,15 +181,11 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
       sendDataFile(res, dataFilePath, next);
     })
     .get(onDemandRadioDataPath, async ({ params }, res, next) => {
-      const { service, serviceId, mediaId } = params;
+      const { service, serviceId, mediaId, variant = '' } = params;
 
-      const dataFilePath = path.join(
-        process.cwd(),
-        'data',
-        service,
-        serviceId,
-        mediaId,
-      );
+      const dataPath = `${variant}/${serviceId}/${mediaId}`;
+
+      const dataFilePath = path.join(process.cwd(), 'data', service, dataPath);
 
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
