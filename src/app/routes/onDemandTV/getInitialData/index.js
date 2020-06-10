@@ -1,5 +1,6 @@
 import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
+import handleDataProcessingError from '../../utils/handleDataProcessingError';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrl from '../../utils/getPlaceholderImageUrl';
 
@@ -53,16 +54,21 @@ const getEpisodeAvailability = ({ availableFrom, availableUntil }) => {
 };
 
 export default async ({ path: pathname }) => {
-  const onDemandTvDataPath = overrideRendererOnTest(pathname);
-  const { json, ...rest } = await fetchPageData(onDemandTvDataPath);
-  const pageType = { metadata: { type: 'On Demand TV' } };
+  try {
+    const onDemandTvDataPath = overrideRendererOnTest(pathname);
+    const { json, status, error } = await fetchPageData(onDemandTvDataPath);
 
-  const availableFrom = getEpisodeAvailableFrom(json);
-  const availableUntil = getEpisodeAvailableUntil(json);
+    if (error) {
+      return { error, status };
+    }
 
-  return {
-    ...rest,
-    ...(json && {
+    const pageType = { metadata: { type: 'On Demand TV' } };
+
+    const availableFrom = getEpisodeAvailableFrom(json);
+    const availableUntil = getEpisodeAvailableUntil(json);
+
+    return {
+      status,
       pageData: {
         language: getLanguage(json),
         brandTitle: getBrandTitle(json),
@@ -85,6 +91,8 @@ export default async ({ path: pathname }) => {
         }),
         ...pageType,
       },
-    }),
-  };
+    };
+  } catch (error) {
+    return handleDataProcessingError(error);
+  }
 };

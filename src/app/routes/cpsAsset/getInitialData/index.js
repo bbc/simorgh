@@ -1,6 +1,7 @@
 import pipe from 'ramda/src/pipe';
 import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
+import handleDataProcessingError from '../../utils/handleDataProcessingError';
 import {
   augmentWithTimestamp,
   addIdsToBlocks,
@@ -55,18 +56,24 @@ const transformJson = async json => {
 };
 
 export default async ({ path: pathname, service, variant }) => {
-  const { json, ...rest } = await fetchPageData(pathname);
+  try {
+    const { json, status, error } = await fetchPageData(pathname);
 
-  const additionalPageData = await getAdditionalPageData(
-    json,
-    service,
-    variant,
-  );
+    if (error) {
+      return { error, status };
+    }
 
-  return {
-    ...rest,
-    ...(json && {
+    const additionalPageData = await getAdditionalPageData(
+      json,
+      service,
+      variant,
+    );
+
+    return {
+      status,
       pageData: { ...(await transformJson(json)), ...additionalPageData },
-    }),
-  };
+    };
+  } catch (error) {
+    return handleDataProcessingError(error);
+  }
 };

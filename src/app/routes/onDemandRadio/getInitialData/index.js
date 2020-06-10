@@ -1,13 +1,10 @@
 import path from 'ramda/src/path';
-import nodeLogger from '#lib/logger.node';
-import { DATA_PROCESSING_ERROR } from '#lib/logger.const';
 import fetchPageData from '../../utils/fetchPageData';
+import handleDataProcessingError from '../../utils/handleDataProcessingError';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
 import { logExpiredEpisode } from './logInitialData';
 import pathWithLogging, { LOG_LEVELS } from './pathWithLogging';
-
-const logger = nodeLogger(__filename);
 
 const getEpisodeAvailability = ({ availableFrom, availableUntil }) => {
   const timeNow = Date.now();
@@ -86,10 +83,10 @@ const getThumbnailImageUrl = json =>
 export default async ({ path: pathname }) => {
   try {
     const onDemandRadioDataPath = overrideRendererOnTest(pathname);
-    const { json, ...rest } = await fetchPageData(onDemandRadioDataPath);
+    const { json, status, error } = await fetchPageData(onDemandRadioDataPath);
 
-    if (!json) {
-      return { error: true, ...rest };
+    if (error) {
+      return { error, status };
     }
 
     const pageType = { metadata: { type: 'On Demand Radio' } };
@@ -106,37 +103,30 @@ export default async ({ path: pathname }) => {
     }
 
     return {
-      ...rest,
-      ...(json && {
-        pageData: {
-          language: getLanguage(json),
-          brandTitle: getBrandTitle(json),
-          episodeTitle: getEpisodeTitle(json),
-          headline: getHeadline(json),
-          shortSynopsis: getShortSynopsis(json),
-          id: getId(json),
-          summary: getSummary(json),
-          contentType: getContentType(json),
-          episodeId: getEpisodeId(json),
-          masterBrand: getMasterBrand(json),
-          releaseDateTimeStamp: getReleaseDateTimeStamp(json),
-          pageTitle: getPageTitle(json),
-          pageIdentifier: getPageIdentifier(json),
-          imageUrl: getImageUrl(json),
-          promoBrandTitle: getPromoBrandTitle(json),
-          durationISO8601: getDurationISO8601(json),
-          thumbnailImageUrl: getThumbnailImageUrl(json),
-          episodeIsAvailable,
-          ...pageType,
-        },
-      }),
+      status,
+      pageData: {
+        language: getLanguage(json),
+        brandTitle: getBrandTitle(json),
+        episodeTitle: getEpisodeTitle(json),
+        headline: getHeadline(json),
+        shortSynopsis: getShortSynopsis(json),
+        id: getId(json),
+        summary: getSummary(json),
+        contentType: getContentType(json),
+        episodeId: getEpisodeId(json),
+        masterBrand: getMasterBrand(json),
+        releaseDateTimeStamp: getReleaseDateTimeStamp(json),
+        pageTitle: getPageTitle(json),
+        pageIdentifier: getPageIdentifier(json),
+        imageUrl: getImageUrl(json),
+        promoBrandTitle: getPromoBrandTitle(json),
+        durationISO8601: getDurationISO8601(json),
+        thumbnailImageUrl: getThumbnailImageUrl(json),
+        episodeIsAvailable,
+        ...pageType,
+      },
     };
   } catch (error) {
-    logger.error(DATA_PROCESSING_ERROR, { error: error.toString() });
-
-    return {
-      error,
-      status: 500,
-    };
+    return handleDataProcessingError(error);
   }
 };

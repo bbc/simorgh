@@ -1,8 +1,9 @@
 import 'isomorphic-fetch';
 import nodeLogger from '#lib/logger.node';
-import onClient from '#lib/utilities/onClient';
 import { getQueryString, getUrlPath } from '#lib/utilities/urlParser';
 import getBaseUrl from './utils/getBaseUrl';
+import onClient from '#lib/utilities/onClient';
+import getErrorCode from '../getErrorCode';
 import isLive from '#lib/utilities/isLive';
 import {
   DATA_REQUEST_RECEIVED,
@@ -12,8 +13,7 @@ import {
 
 const logger = nodeLogger(__filename);
 const STATUS_OK = 200;
-const STATUS_BAD_GATEWAY = 502;
-const STATUS_INTERNAL_SERVER_ERROR = 500;
+
 const STATUS_NOT_FOUND = 404;
 const upstreamStatusCodesToPropagate = [STATUS_OK, STATUS_NOT_FOUND];
 
@@ -32,22 +32,39 @@ export const getUrl = pathname => {
   return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
 };
 
+const validateData = data => {
+  if (data) {
+    return 'content' in data;
+  }
+
+  return false;
+};
+
 const handleResponse = url => async response => {
   const { status } = response;
 
   if (upstreamStatusCodesToPropagate.includes(status)) {
+    const json = await response.json();
+    const dataIsValid = validateData(json);
+
     if (status === STATUS_NOT_FOUND) {
       logger.error(DATA_NOT_FOUND, {
         url,
         status,
       });
+
+      return { status, error: DATA_NOT_FOUND };
+    }
+
+    if (!dataIsValid) {
+      throw new Error(
+        `Unexpected data format in response when requesting ${url}`,
+      );
     }
 
     return {
       status,
-      ...(status === STATUS_OK && {
-        json: await response.json(),
-      }),
+      json,
     };
   }
 
@@ -63,7 +80,7 @@ const handleError = e => {
 
   return {
     error,
-    status: onClient() ? STATUS_BAD_GATEWAY : STATUS_INTERNAL_SERVER_ERROR,
+    status: getErrorCode(),
   };
 };
 
