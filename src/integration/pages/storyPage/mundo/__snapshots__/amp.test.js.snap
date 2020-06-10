@@ -143,87 +143,91 @@ exports[`AMP Story Page SEO Lang attribute 1`] = `"es"`;
 exports[`AMP Story Page SEO Linked data 1`] = `
 Object {
   "@context": "http://schema.org",
-  "@type": "BackgroundNewsArticle",
-  "about": Array [
+  "@graph": Array [
     Object {
-      "@type": "Thing",
-      "name": "Europe",
-      "sameAs": Array [
-        "http://dbpedia.org/resource/Europe",
+      "@type": "BackgroundNewsArticle",
+      "about": Array [
+        Object {
+          "@type": "Thing",
+          "name": "Europe",
+          "sameAs": Array [
+            "http://dbpedia.org/resource/Europe",
+          ],
+        },
+        Object {
+          "@type": "Thing",
+          "name": "United Kingdom",
+        },
+        Object {
+          "@type": "Thing",
+          "name": "Culture",
+          "sameAs": Array [
+            "http://dbpedia.org/resource/Culture",
+          ],
+        },
+        Object {
+          "@type": "Thing",
+          "name": "European Union",
+          "sameAs": Array [
+            "http://dbpedia.org/resource/European_Union",
+          ],
+        },
+        Object {
+          "@type": "Thing",
+          "name": "Economics",
+          "sameAs": Array [
+            "http://dbpedia.org/resource/Economy",
+          ],
+        },
+        Object {
+          "@type": "Thing",
+          "name": "Brexit",
+          "sameAs": Array [
+            "http://dbpedia.org/resource/Brexit",
+          ],
+        },
       ],
-    },
-    Object {
-      "@type": "Thing",
-      "name": "United Kingdom",
-    },
-    Object {
-      "@type": "Thing",
-      "name": "Culture",
-      "sameAs": Array [
-        "http://dbpedia.org/resource/Culture",
-      ],
-    },
-    Object {
-      "@type": "Thing",
-      "name": "European Union",
-      "sameAs": Array [
-        "http://dbpedia.org/resource/European_Union",
-      ],
-    },
-    Object {
-      "@type": "Thing",
-      "name": "Economics",
-      "sameAs": Array [
-        "http://dbpedia.org/resource/Economy",
-      ],
-    },
-    Object {
-      "@type": "Thing",
-      "name": "Brexit",
-      "sameAs": Array [
-        "http://dbpedia.org/resource/Brexit",
-      ],
+      "author": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+          "width": 1024,
+        },
+        "name": "BBC News Mundo",
+        "noBylinesPolicy": "https://www.bbc.com/mundo/institucional-51359666#authorexpertise",
+      },
+      "dateModified": "2020-01-31T23:08:08.000Z",
+      "datePublished": "2020-01-30T06:35:49.000Z",
+      "description": "Tras casi cuatro años de desacuerdos y negociaciones, este viernes Reino Unido dejará formalmente la Unión Europea. ¿Qué cambios supone esto para quienes quieran hacer turismo, estudiar o trabajar en Reino Unido?",
+      "headline": "Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea",
+      "image": Object {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+        "width": 1024,
+      },
+      "mainEntityOfPage": Object {
+        "@id": "http://localhost:7080/mundo/noticias-internacional-51266689",
+        "@type": "WebPage",
+        "name": "Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea",
+      },
+      "publisher": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+          "width": 1024,
+        },
+        "name": "BBC News Mundo",
+        "publishingPrinciples": "https://www.bbc.com/mundo/institucional-51359666",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+      "url": "http://localhost:7080/mundo/noticias-internacional-51266689",
     },
   ],
-  "author": Object {
-    "@type": "NewsMediaOrganization",
-    "logo": Object {
-      "@type": "ImageObject",
-      "height": 576,
-      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
-      "width": 1024,
-    },
-    "name": "BBC News Mundo",
-    "noBylinesPolicy": "https://www.bbc.com/mundo/institucional-51359666#authorexpertise",
-  },
-  "dateModified": "2020-01-31T23:08:08.000Z",
-  "datePublished": "2020-01-30T06:35:49.000Z",
-  "description": "Tras casi cuatro años de desacuerdos y negociaciones, este viernes Reino Unido dejará formalmente la Unión Europea. ¿Qué cambios supone esto para quienes quieran hacer turismo, estudiar o trabajar en Reino Unido?",
-  "headline": "Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea",
-  "image": Object {
-    "@type": "ImageObject",
-    "height": 576,
-    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
-    "width": 1024,
-  },
-  "mainEntityOfPage": Object {
-    "@id": "http://localhost:7080/mundo/noticias-internacional-51266689",
-    "@type": "WebPage",
-    "name": "Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea",
-  },
-  "publisher": Object {
-    "@type": "NewsMediaOrganization",
-    "logo": Object {
-      "@type": "ImageObject",
-      "height": 576,
-      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
-      "width": 1024,
-    },
-    "name": "BBC News Mundo",
-    "publishingPrinciples": "https://www.bbc.com/mundo/institucional-51359666",
-  },
-  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
-  "url": "http://localhost:7080/mundo/noticias-internacional-51266689",
 }
 `;
 

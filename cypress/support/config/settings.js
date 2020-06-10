@@ -2055,7 +2055,10 @@ module.exports = () => ({
       onDemandRadio: {
         environments: {
           live: {
-            paths: [],
+            paths: [
+              '/indonesia/bbc_indonesian_radio/programmes/w13xtt0s', // Brand
+              '/indonesia/bbc_indonesian_radio/w172xh281s8mkhr', // Episode
+            ],
             enabled: false,
           },
           test: {
@@ -3244,7 +3247,10 @@ module.exports = () => ({
       onDemandRadio: {
         environments: {
           live: {
-            paths: [],
+            paths: [
+              '/pashto/bbc_pashto_radio/programmes/p0340yr4', // Brand
+              '/pashto/bbc_pashto_radio/w172xjcknn5x31c', // Episode
+            ],
             enabled: false,
           },
           test: {
@@ -4520,7 +4526,7 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: ['/sinhala/sri-lanka-52851837'],
+            paths: ['/sinhala/world-51723376'],
             enabled: true,
           },
           test: {
