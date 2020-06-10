@@ -28,6 +28,17 @@ const StyledWrapper = styled.div`
   }
 `;
 
+const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
+const StyledMessageContainer = styled.div`
+  padding-top: ${landscapeRatio};
+  position: relative;
+  overflow: hidden;
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    width: calc(100% + ${GEL_SPACING_QUAD});
+    margin: 0 -${GEL_SPACING_DBL};
+  }
+`;
+
 const VideoPlayer = ({
   assetId,
   masterBrand,
@@ -56,9 +67,9 @@ const VideoPlayer = ({
     );
 
     return (
-      <StyledWrapper>
+      <StyledMessageContainer>
         <MediaMessage service={service} message={expiredContentMessage} />
-      </StyledWrapper>
+      </StyledMessageContainer>
     );
   }
   const placeholderSrc = getPlaceholderImageUrl(imageUrl);
