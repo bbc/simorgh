@@ -22,7 +22,6 @@ jobs:
       name: 'Production CI tests'
       before_install:
         - sudo apt-get install -y libgconf-2-4
-        - chrome --headless --remote-debugging-port=9222 https://chromium.org
       addons:
         chrome: stable
       script:
@@ -31,5 +30,3 @@ jobs:
         - CYPRESS_SKIP_EU=true npm run test:ci
 notifications:
   email: false
-env:
-  - BROWSER=chrome
