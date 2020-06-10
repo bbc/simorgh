@@ -106,9 +106,18 @@ const convertInclude = async (includeBlock, ...restParams) => {
 
   const isAmp = pathname.endsWith('.amp');
 
-  if (!includeType || (isAmp && !ampSupported(href) && includeType === 'vj')) {
+  if (!includeType) {
     logger.info(INCLUDE_UNSUPPORTED, {
       type,
+      isAmp,
+      url: href,
+    });
+    return null;
+  }
+  if (includeType === 'vj' && isAmp && !ampSupported(href)) {
+    logger.info(INCLUDE_UNSUPPORTED, {
+      type,
+      isAmp,
       url: href,
     });
     return null;
@@ -117,7 +126,7 @@ const convertInclude = async (includeBlock, ...restParams) => {
   let ampSrc;
   let html;
 
-  if (ampSupported(href) && includeType === 'vj') {
+  if (isAmp && ampSupported(href) && includeType === 'vj') {
     ampSrc = ampSrcBuilder(href);
   } else {
     html = await fetchMarkup(buildIncludeUrl(href, includeType, pathname));
