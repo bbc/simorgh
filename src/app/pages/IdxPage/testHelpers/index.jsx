@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { UserContextProvider } from '#contexts/UserContext';
 import IdxPage from '#pages/IdxPage';
 
 const radioServiceOverride = 'dari';
@@ -19,10 +20,12 @@ const IdxPageWithContext = ({ service = 'persian', pageData }) => (
         isAmp={false}
       >
         <ServiceContextProvider service={service}>
-          <IdxPage
-            pageData={pageData}
-            radioScheduleEndpointOverride={`./data/${service}/bbc_${radioServiceOverride}_radio/schedule.json`}
-          />
+          <UserContextProvider>
+            <IdxPage
+              pageData={pageData}
+              radioScheduleEndpointOverride={`./data/${service}/bbc_${radioServiceOverride}_radio/schedule.json`}
+            />
+          </UserContextProvider>
         </ServiceContextProvider>
       </RequestContextProvider>
     </ToggleContextProvider>
