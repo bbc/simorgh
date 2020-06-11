@@ -8,9 +8,49 @@ exports[`Canonical Story Page Footer I can click on the BBC branding and it woul
 
 exports[`Canonical Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
+exports[`Canonical Story Page Footer Link should match text and url 1`] = `"BBC News, Mundo - /mundo"`;
+
+exports[`Canonical Story Page Footer Link should match text and url 2`] = `"Por qué puedes confiar en la BBC - https://www.bbc.com/mundo/institucional-51359666"`;
+
+exports[`Canonical Story Page Footer Link should match text and url 3`] = `"Términos de uso - https://www.bbc.com/mundo/institucional-36400005"`;
+
+exports[`Canonical Story Page Footer Link should match text and url 4`] = `"Sobre la BBC - https://www.bbc.com/mundo/institucional-36400007"`;
+
+exports[`Canonical Story Page Footer Link should match text and url 5`] = `"Política de privacidad - https://www.bbc.com/mundo/institucional-36400009"`;
+
+exports[`Canonical Story Page Footer Link should match text and url 6`] = `"Cookies - https://www.bbc.com/usingthebbc/cookies/"`;
+
+exports[`Canonical Story Page Footer Link should match text and url 7`] = `"Contacta a la BBC - https://www.bbc.com/mundo/institucional-36400011"`;
+
+exports[`Canonical Story Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Canonical Story Page Footer Link should match text and url 9`] = `"Lee sobre nuestra postura acerca de enlaces externos. - https://www.bbc.co.uk/help/web/links/"`;
+
 exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
-exports[`Canonical Story Page Header I can see the navigation 1`] = `"Noticias"`;
+exports[`Canonical Story Page Header Navigation link should match text and url 1`] = `"Noticias - /mundo"`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `"América Latina - /mundo/america_latina"`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 3`] = `"Internacional - /mundo/internacional"`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `"Economía - /mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342"`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `"Tecnología - /mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a"`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `"Ciencia - /mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `"Salud - /mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 8`] = `"Cultura - /mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864"`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 9`] = `"Deportes - /mundo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 10`] = `"Video - /mundo/media/video"`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 11`] = `"Hay Festival - /mundo/noticias-36795069"`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 12`] = `"Centroamérica Cuenta - /mundo/noticias-43826245"`;
 
 exports[`Canonical Story Page Lead image I can see an image with a caption 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
 
@@ -26,7 +66,7 @@ exports[`Canonical Story Page SEO Heading level 1 1`] = `"Brexit: qué cambiará
 
 exports[`Canonical Story Page SEO Lang attribute 1`] = `"es"`;
 
-exports[`Canonical Story Page SEO Linked data 1`] = `
+exports[`Canonical Story Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [
