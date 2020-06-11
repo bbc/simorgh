@@ -2,7 +2,7 @@ import React from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { storiesOf } from '@storybook/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import FrontPageSection from '.';
+import IndexPageSection from '.';
 
 import igboData from '#data/igbo/frontpage/index.json';
 import pidginData from '#data/pidgin/frontpage/index.json';
@@ -18,7 +18,7 @@ const getSection = platform => (service, data) => (
       pageType="frontPage"
       service={service}
     >
-      <FrontPageSection group={data} sectionNumber={1} />
+      <IndexPageSection group={data} sectionNumber={1} />
     </RequestContextProvider>
   </ServiceContextProvider>
 );

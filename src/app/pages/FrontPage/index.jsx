@@ -9,7 +9,6 @@ import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import FrontPageSection from '#containers/FrontPageSection';
 import MetadataContainer from '#containers/Metadata';
 import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
@@ -21,6 +20,7 @@ import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
+import IndexPageSection from '#containers/IndexPageSection';
 
 const FrontPageMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
@@ -30,6 +30,25 @@ const FrontPageMostReadSection = styled(MostReadSection)`
     max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
   }
 `;
+
+const MostReadWrapper = ({ children }) => (
+  <FrontPageMostReadSection>
+    <MostReadSectionLabel />
+    {children}
+  </FrontPageMostReadSection>
+);
+
+const renderMostRead = mostReadEndpointOverride => (
+  <MostReadContainer
+    mostReadEndpointOverride={mostReadEndpointOverride}
+    columnLayout="twoColumn"
+    wrapper={MostReadWrapper}
+  />
+);
+
+MostReadWrapper.propTypes = {
+  children: node.isRequired,
+};
 
 const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
@@ -63,25 +82,6 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const hasUsefulLinks =
     findIndex(group => group.type === 'useful-links')(groups) > -1;
 
-  const MostReadWrapper = ({ children }) => (
-    <FrontPageMostReadSection>
-      <MostReadSectionLabel />
-      {children}
-    </FrontPageMostReadSection>
-  );
-
-  MostReadWrapper.propTypes = {
-    children: node.isRequired,
-  };
-
-  const renderMostRead = () => (
-    <MostReadContainer
-      mostReadEndpointOverride={mostReadEndpointOverride}
-      columnLayout="twoColumn"
-      wrapper={MostReadWrapper}
-    />
-  );
-
   return (
     <>
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
@@ -108,10 +108,10 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
                 radioSchedulePosition === group.semanticGroupName && (
                   <RadioScheduleContainer initialData={radioScheduleData} />
                 )}
-              <FrontPageSection group={group} sectionNumber={index} />
+              <IndexPageSection group={group} sectionNumber={index} />
             </Fragment>
           ))}
-          {!hasUsefulLinks && renderMostRead()}
+          {!hasUsefulLinks && renderMostRead(mostReadEndpointOverride)}
         </IndexPageContainer>
       </main>
     </>
