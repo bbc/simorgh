@@ -182,8 +182,8 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
     })
     .get(onDemandRadioDataPath, async ({ params }, res, next) => {
       const { service, serviceId, mediaId, variant = '' } = params;
+
       const dataPath = `${serviceId}${variant}/${mediaId}`;
-      console.log(`dataPath: ${dataPath}`);
       const dataFilePath = path.join(process.cwd(), 'data', service, dataPath);
 
       // const { service, serviceId, mediaId } = params;
