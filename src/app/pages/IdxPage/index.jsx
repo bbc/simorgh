@@ -12,8 +12,10 @@ import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import RadioScheduleContainer from '#containers/RadioSchedule';
-import FrontPageSection from '#containers/FrontPageSection';
+import IndexPageSection from '#containers/IndexPageSection';
 import idxPageDataPropTypes from '#models/propTypes/idxPage';
+import ATIAnalytics from '#containers/ATIAnalytics';
+import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 
 const IdxMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
@@ -64,6 +66,8 @@ const IdxPage = ({
 
   return (
     <>
+      <ATIAnalytics data={pageData} />
+      <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
         title={title}
         lang={lang}
@@ -73,7 +77,9 @@ const IdxPage = ({
       <LinkedData type="WebPage" seoTitle={seoTitle} />
       <main role="main">
         <IndexPageContainer>
-          <IndexHeading id="content">{title}</IndexHeading>
+          <IndexHeading id="content" pageType="idx">
+            {title}
+          </IndexHeading>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
               {radioScheduleOnIdxPage &&
@@ -85,7 +91,7 @@ const IdxPage = ({
                     }
                   />
                 )}
-              <FrontPageSection group={group} sectionNumber={index} />
+              <IndexPageSection group={group} sectionNumber={index} />
             </Fragment>
           ))}
           {onIdxPage && renderMostRead(mostReadEndpointOverride)}

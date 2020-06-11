@@ -98,12 +98,12 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 .c2 {
-  color: #6E6E73;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #6E6E73;
   margin: 0;
   padding: 1rem 0 1.5rem;
 }
@@ -305,6 +305,40 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 1.5rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    padding: 1.5rem 0 0.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 @media (max-width:62.9375rem) {
   .c1 {
     margin-bottom: 1.5rem;
@@ -322,32 +356,6 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
     width: 100%;
     margin: 0 auto 2.5rem;
     max-width: 80rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
-    padding: 1.5rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c2 {
-    padding: 1.5rem 0 0.5rem;
   }
 }
 
@@ -575,6 +583,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
         >
           <h1
             class="c2"
+            dir="ltr"
             id="content"
             tabindex="-1"
           >
