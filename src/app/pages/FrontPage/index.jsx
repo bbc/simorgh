@@ -15,6 +15,7 @@ import AdContainer from '#containers/Ad';
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
 import { CPSGrid } from '#app/components/Grid';
 
 const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
@@ -82,23 +83,25 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
-      <CPSGrid forwardedAs="main" role="main" enableMargins>
+      <IndexPageContainer as="main" role="main">
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}
         </VisuallyHiddenText>
         <AdContainer />
-        {groups.map((group, index) => (
-          <Fragment key={group.title}>
-            {group.type === 'useful-links' && renderMostRead()}
-            {radioScheduleOnPage &&
-              radioSchedulePosition === group.semanticGroupName && (
-                <RadioScheduleContainer initialData={radioScheduleData} />
-              )}
-            <FrontPageSection group={group} sectionNumber={index} />
-          </Fragment>
-        ))}
-        {!hasUsefulLinks && renderMostRead()}
-      </CPSGrid>
+        <CPSGrid enableMargins>
+          {groups.map((group, index) => (
+            <Fragment key={group.title}>
+              {group.type === 'useful-links' && renderMostRead()}
+              {radioScheduleOnPage &&
+                radioSchedulePosition === group.semanticGroupName && (
+                  <RadioScheduleContainer initialData={radioScheduleData} />
+                )}
+              <FrontPageSection group={group} sectionNumber={index} />
+            </Fragment>
+          ))}
+          {!hasUsefulLinks && renderMostRead()}
+        </CPSGrid>
+      </IndexPageContainer>
     </>
   );
 };
