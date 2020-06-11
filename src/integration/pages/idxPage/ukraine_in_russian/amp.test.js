@@ -5,4 +5,4 @@
 
 import runAmpTests from '../ampTests';
 
-describe('AMP ukraine_in_russian IDX page', runAmpTests);
+describe('AMP ukrainian/ukraine_in_russian IDX page', runAmpTests);
