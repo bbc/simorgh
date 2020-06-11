@@ -14,8 +14,8 @@ export const getCookieDomain = domain => {
 };
 
 const setCookie = (name, value, expires = COOKIE_EXPIRY) => {
-  const isHttps = document.location.protocol === 'https:';
-  console.log('khoa https', isHttps);
+  const isHttps = window.location.protocol === 'https:';
+
   const sameSiteSecure = {
     sameSite: 'None',
     secure: true,
