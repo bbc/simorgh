@@ -181,20 +181,15 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
       sendDataFile(res, dataFilePath, next);
     })
     .get(onDemandRadioDataPath, async ({ params }, res, next) => {
-      const { service, serviceId, mediaId, variant = '' } = params;
+      const { service, serviceId, mediaId } = params;
 
-      const dataPath = `${serviceId}${variant}/${mediaId}`;
-      const dataFilePath = path.join(process.cwd(), 'data', service, dataPath);
-
-      // const { service, serviceId, mediaId } = params;
-
-      // const dataFilePath = path.join(
-      //   process.cwd(),
-      //   'data',
-      //   service,
-      //   serviceId,
-      //   mediaId,
-      // );
+      const dataFilePath = path.join(
+        process.cwd(),
+        'data',
+        service,
+        serviceId,
+        mediaId,
+      );
 
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
