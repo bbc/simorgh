@@ -121,7 +121,7 @@ describe('IncludeContainer', () => {
   });
 
   it('should render include for IDT2 on an Amp page with toggles enabled', async () => {
-    const mockIdt2Amp = jest.fn().mockReturnValue('IDT-Amp-component');
+    const mockIdt2Amp = jest.fn().mockReturnValue('IDT2-Amp-component');
     idt2Amp.default = mockIdt2Amp;
 
     const { container } = render(
@@ -142,7 +142,7 @@ describe('IncludeContainer', () => {
   });
 
   it('should not render include for an Amp page with toggles disabled', async () => {
-    const mockIdt2Amp = jest.fn().mockReturnValue('IDT-Amp-component');
+    const mockIdt2Amp = jest.fn().mockReturnValue('IDT2-Amp-component');
     idt2Amp.default = mockIdt2Amp;
     const { container } = render(
       <IncludeContainerWithMockContext

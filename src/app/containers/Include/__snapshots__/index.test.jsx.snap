@@ -6,7 +6,7 @@ exports[`IncludeContainer should not render include for an Amp page with toggles
 
 exports[`IncludeContainer should render include for IDT2 on an Amp page with toggles enabled 1`] = `
 <div>
-  IDT-Amp-component
+  IDT2-Amp-component
 </div>
 `;
 
