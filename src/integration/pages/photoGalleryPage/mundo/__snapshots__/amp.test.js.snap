@@ -127,23 +127,23 @@ exports[`AMP Photo Gallery Page Footer Link should match text 8`] = `"AdChoices 
 
 exports[`AMP Photo Gallery Page Footer Link should match text 9`] = `"Lee sobre nuestra postura acerca de enlaces externos."`;
 
-exports[`AMP Photo Gallery Page Footer Link with text 'AdChoices / Do Not Sell My Info' should match url 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`AMP Photo Gallery Page Footer Link should match url 1`] = `"/mundo"`;
 
-exports[`AMP Photo Gallery Page Footer Link with text 'BBC News, Mundo' should match url 1`] = `"/mundo"`;
+exports[`AMP Photo Gallery Page Footer Link should match url 2`] = `"https://www.bbc.com/mundo/institucional-51359666"`;
 
-exports[`AMP Photo Gallery Page Footer Link with text 'Contacta a la BBC' should match url 1`] = `"https://www.bbc.com/mundo/institucional-36400011"`;
+exports[`AMP Photo Gallery Page Footer Link should match url 3`] = `"https://www.bbc.com/mundo/institucional-36400005"`;
 
-exports[`AMP Photo Gallery Page Footer Link with text 'Cookies' should match url 1`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+exports[`AMP Photo Gallery Page Footer Link should match url 4`] = `"https://www.bbc.com/mundo/institucional-36400007"`;
 
-exports[`AMP Photo Gallery Page Footer Link with text 'Lee sobre nuestra postura acerca de enlaces externos.' should match url 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+exports[`AMP Photo Gallery Page Footer Link should match url 5`] = `"https://www.bbc.com/mundo/institucional-36400009"`;
 
-exports[`AMP Photo Gallery Page Footer Link with text 'Política de privacidad' should match url 1`] = `"https://www.bbc.com/mundo/institucional-36400009"`;
+exports[`AMP Photo Gallery Page Footer Link should match url 6`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
 
-exports[`AMP Photo Gallery Page Footer Link with text 'Por qué puedes confiar en la BBC' should match url 1`] = `"https://www.bbc.com/mundo/institucional-51359666"`;
+exports[`AMP Photo Gallery Page Footer Link should match url 7`] = `"https://www.bbc.com/mundo/institucional-36400011"`;
 
-exports[`AMP Photo Gallery Page Footer Link with text 'Sobre la BBC' should match url 1`] = `"https://www.bbc.com/mundo/institucional-36400007"`;
+exports[`AMP Photo Gallery Page Footer Link should match url 8`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
-exports[`AMP Photo Gallery Page Footer Link with text 'Términos de uso' should match url 1`] = `"https://www.bbc.com/mundo/institucional-36400005"`;
+exports[`AMP Photo Gallery Page Footer Link should match url 9`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
 exports[`AMP Photo Gallery Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
@@ -195,53 +195,53 @@ exports[`AMP Photo Gallery Page Header Navigation link should match text 23`] = 
 
 exports[`AMP Photo Gallery Page Header Navigation link should match text 24`] = `"Centroamérica Cuenta"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'América Latina' should match url 1`] = `"/mundo/america_latina"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 1`] = `"/mundo"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'América Latina' should match url 2`] = `"/mundo/america_latina"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 2`] = `"/mundo/america_latina"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Centroamérica Cuenta' should match url 1`] = `"/mundo/noticias-43826245"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 3`] = `"/mundo/internacional"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Centroamérica Cuenta' should match url 2`] = `"/mundo/noticias-43826245"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 4`] = `"/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Ciencia' should match url 1`] = `"/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 5`] = `"/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Ciencia' should match url 2`] = `"/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 6`] = `"/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Cultura' should match url 1`] = `"/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 7`] = `"/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Cultura' should match url 2`] = `"/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 8`] = `"/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Deportes' should match url 1`] = `"/mundo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 9`] = `"/mundo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Deportes' should match url 2`] = `"/mundo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 10`] = `"/mundo/media/video"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Economía' should match url 1`] = `"/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 11`] = `"/mundo/noticias-36795069"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Economía' should match url 2`] = `"/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 12`] = `"/mundo/noticias-43826245"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Hay Festival' should match url 1`] = `"/mundo/noticias-36795069"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 13`] = `"/mundo"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Hay Festival' should match url 2`] = `"/mundo/noticias-36795069"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 14`] = `"/mundo/america_latina"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Internacional' should match url 1`] = `"/mundo/internacional"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 15`] = `"/mundo/internacional"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Internacional' should match url 2`] = `"/mundo/internacional"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 16`] = `"/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Noticias' should match url 1`] = `"/mundo"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 17`] = `"/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Noticias' should match url 2`] = `"/mundo"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 18`] = `"/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Salud' should match url 1`] = `"/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 19`] = `"/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Salud' should match url 2`] = `"/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 20`] = `"/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Tecnología' should match url 1`] = `"/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 21`] = `"/mundo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Tecnología' should match url 2`] = `"/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 22`] = `"/mundo/media/video"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Video' should match url 1`] = `"/mundo/media/video"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 23`] = `"/mundo/noticias-36795069"`;
 
-exports[`AMP Photo Gallery Page Header Navigation link with text 'Video' should match url 2`] = `"/mundo/media/video"`;
+exports[`AMP Photo Gallery Page Header Navigation link should match url 24`] = `"/mundo/noticias-43826245"`;
 
 exports[`AMP Photo Gallery Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/deportes-36935058"`;
 

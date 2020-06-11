@@ -26,23 +26,23 @@ exports[`Canonical On Demand Radio Page Footer Link should match text 8`] = `"Ad
 
 exports[`Canonical On Demand Radio Page Footer Link should match text 9`] = `"Baca tentang peraturan baru terkait link eksternal."`;
 
-exports[`Canonical On Demand Radio Page Footer Link with text 'AdChoices / Do Not Sell My Info' should match url 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`Canonical On Demand Radio Page Footer Link should match url 1`] = `"/indonesia"`;
 
-exports[`Canonical On Demand Radio Page Footer Link with text 'Alasan Anda dapat mempercayai BBC News' should match url 1`] = `"https://www.bbc.com/indonesia/institutional-49283175"`;
+exports[`Canonical On Demand Radio Page Footer Link should match url 2`] = `"https://www.bbc.com/indonesia/institutional-49283175"`;
 
-exports[`Canonical On Demand Radio Page Footer Link with text 'BBC News, Indonesia' should match url 1`] = `"/indonesia"`;
+exports[`Canonical On Demand Radio Page Footer Link should match url 3`] = `"https://www.bbc.com/indonesia/institutional-37818421"`;
 
-exports[`Canonical On Demand Radio Page Footer Link with text 'Baca tentang peraturan baru terkait link eksternal.' should match url 1`] = `"https://www.bbc.com/indonesia/institutional/2011/02/000001_links"`;
+exports[`Canonical On Demand Radio Page Footer Link should match url 4`] = `"https://www.bbc.com/indonesia/institutional-37818424"`;
 
-exports[`Canonical On Demand Radio Page Footer Link with text 'Cookies' should match url 1`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+exports[`Canonical On Demand Radio Page Footer Link should match url 5`] = `"https://www.bbc.com/indonesia/institutional-37818425"`;
 
-exports[`Canonical On Demand Radio Page Footer Link with text 'Hubungi BBC' should match url 1`] = `"https://www.bbc.com/indonesia/institutional-37818427"`;
+exports[`Canonical On Demand Radio Page Footer Link should match url 6`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
 
-exports[`Canonical On Demand Radio Page Footer Link with text 'Kebijakan tentang Privasi' should match url 1`] = `"https://www.bbc.com/indonesia/institutional-37818425"`;
+exports[`Canonical On Demand Radio Page Footer Link should match url 7`] = `"https://www.bbc.com/indonesia/institutional-37818427"`;
 
-exports[`Canonical On Demand Radio Page Footer Link with text 'Mengenai BBC' should match url 1`] = `"https://www.bbc.com/indonesia/institutional-37818424"`;
+exports[`Canonical On Demand Radio Page Footer Link should match url 8`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
-exports[`Canonical On Demand Radio Page Footer Link with text 'Peraturan Penggunaan' should match url 1`] = `"https://www.bbc.com/indonesia/institutional-37818421"`;
+exports[`Canonical On Demand Radio Page Footer Link should match url 9`] = `"https://www.bbc.com/indonesia/institutional/2011/02/000001_links"`;
 
 exports[`Canonical On Demand Radio Page Header I can see the branding 1`] = `"BBC News, Indonesia"`;
 
@@ -70,29 +70,29 @@ exports[`Canonical On Demand Radio Page Header Navigation link should match text
 
 exports[`Canonical On Demand Radio Page Header Navigation link should match text 12`] = `"Majalah"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'Berita' should match url 1`] = `"/indonesia"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 1`] = `"/indonesia"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'Berita' should match url 2`] = `"/indonesia"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 2`] = `"/indonesia/topics/cjgn7k8yx4gt"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'Dunia' should match url 1`] = `"/indonesia/dunia"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 3`] = `"/indonesia/dunia"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'Dunia' should match url 2`] = `"/indonesia/dunia"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 4`] = `"/indonesia/topics/cn5w7g2nq6dt"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'Indonesia' should match url 1`] = `"/indonesia/topics/cjgn7k8yx4gt"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 5`] = `"/indonesia/laporan-khusus-51267199"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'Indonesia' should match url 2`] = `"/indonesia/topics/cjgn7k8yx4gt"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 6`] = `"/indonesia/majalah-51456120"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'Liputan Mendalam' should match url 1`] = `"/indonesia/laporan-khusus-51267199"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 7`] = `"/indonesia"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'Liputan Mendalam' should match url 2`] = `"/indonesia/laporan-khusus-51267199"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 8`] = `"/indonesia/topics/cjgn7k8yx4gt"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'Majalah' should match url 1`] = `"/indonesia/majalah-51456120"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 9`] = `"/indonesia/dunia"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'Majalah' should match url 2`] = `"/indonesia/majalah-51456120"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 10`] = `"/indonesia/topics/cn5w7g2nq6dt"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'Viral' should match url 1`] = `"/indonesia/topics/cn5w7g2nq6dt"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 11`] = `"/indonesia/laporan-khusus-51267199"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'Viral' should match url 2`] = `"/indonesia/topics/cn5w7g2nq6dt"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 12`] = `"/indonesia/majalah-51456120"`;
 
 exports[`Canonical On Demand Radio Page I can see the brand title 1`] = `"Dunia Pagi Ini"`;
 

@@ -26,23 +26,23 @@ exports[`Canonical On Demand Radio Page Footer Link should match text 8`] = `"Ad
 
 exports[`Canonical On Demand Radio Page Footer Link should match text 9`] = `"د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
 
-exports[`Canonical On Demand Radio Page Footer Link with text 'AdChoices / Do Not Sell My Info' should match url 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`Canonical On Demand Radio Page Footer Link should match url 1`] = `"/pashto"`;
 
-exports[`Canonical On Demand Radio Page Footer Link with text 'BBC News, پښتو' should match url 1`] = `"/pashto"`;
+exports[`Canonical On Demand Radio Page Footer Link should match url 2`] = `"https://www.bbc.com/pashto/institutional-49283007"`;
 
-exports[`Canonical On Demand Radio Page Footer Link with text 'Cookies' should match url 1`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+exports[`Canonical On Demand Radio Page Footer Link should match url 3`] = `"https://www.bbc.com/pashto/institutional-37620701"`;
 
-exports[`Canonical On Demand Radio Page Footer Link with text 'د بي بي سي‌ په اړه' should match url 1`] = `"https://www.bbc.com/pashto/institutional-37622761"`;
+exports[`Canonical On Demand Radio Page Footer Link should match url 4`] = `"https://www.bbc.com/pashto/institutional-37622761"`;
 
-exports[`Canonical On Demand Radio Page Footer Link with text 'د محرميت تگلاره' should match url 1`] = `"https://www.bbc.com/pashto/institutional-37622762"`;
+exports[`Canonical On Demand Radio Page Footer Link should match url 5`] = `"https://www.bbc.com/pashto/institutional-37622762"`;
 
-exports[`Canonical On Demand Radio Page Footer Link with text 'د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.' should match url 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+exports[`Canonical On Demand Radio Page Footer Link should match url 6`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
 
-exports[`Canonical On Demand Radio Page Footer Link with text 'د کارولو شرايط' should match url 1`] = `"https://www.bbc.com/pashto/institutional-37620701"`;
+exports[`Canonical On Demand Radio Page Footer Link should match url 7`] = `"https://www.bbc.co.uk/pashto/institutional-37622768"`;
 
-exports[`Canonical On Demand Radio Page Footer Link with text 'زموږ سره اړیکي' should match url 1`] = `"https://www.bbc.co.uk/pashto/institutional-37622768"`;
+exports[`Canonical On Demand Radio Page Footer Link should match url 8`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
-exports[`Canonical On Demand Radio Page Footer Link with text 'ولې تاسې پر بي بي سي خبرونو باور کولی شئ' should match url 1`] = `"https://www.bbc.com/pashto/institutional-49283007"`;
+exports[`Canonical On Demand Radio Page Footer Link should match url 9`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
 exports[`Canonical On Demand Radio Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
@@ -82,41 +82,41 @@ exports[`Canonical On Demand Radio Page Header Navigation link should match text
 
 exports[`Canonical On Demand Radio Page Header Navigation link should match text 18`] = `"کالم"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'افغانستان' should match url 1`] = `"/pashto/afghanistan"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 1`] = `"/pashto"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'افغانستان' should match url 2`] = `"/pashto/afghanistan"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 2`] = `"/pashto/afghanistan"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'لوبې' should match url 1`] = `"/pashto/sport"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 3`] = `"/pashto/pakhtunkhwa"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'لوبې' should match url 2`] = `"/pashto/sport"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 4`] = `"/pashto/world"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'نړۍ' should match url 1`] = `"/pashto/world"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 5`] = `"/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'نړۍ' should match url 2`] = `"/pashto/world"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 6`] = `"/pashto/sport"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'ويډيوګانې' should match url 1`] = `"/pashto/media/video"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 7`] = `"/pashto/media/video"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'ويډيوګانې' should match url 2`] = `"/pashto/media/video"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 8`] = `"/pashto/in_depth"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'پښتونخوا' should match url 1`] = `"/pashto/pakhtunkhwa"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 9`] = `"/pashto/columns"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'پښتونخوا' should match url 2`] = `"/pashto/pakhtunkhwa"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 10`] = `"/pashto"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'ځانګړې پاڼې' should match url 1`] = `"/pashto/in_depth"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 11`] = `"/pashto/afghanistan"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'ځانګړې پاڼې' should match url 2`] = `"/pashto/in_depth"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 12`] = `"/pashto/pakhtunkhwa"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'ښځې' should match url 1`] = `"/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 13`] = `"/pashto/world"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'ښځې' should match url 2`] = `"/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 14`] = `"/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'کالم' should match url 1`] = `"/pashto/columns"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 15`] = `"/pashto/sport"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'کالم' should match url 2`] = `"/pashto/columns"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 16`] = `"/pashto/media/video"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'کور پاڼه' should match url 1`] = `"/pashto"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 17`] = `"/pashto/in_depth"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link with text 'کور پاڼه' should match url 2`] = `"/pashto"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match url 18`] = `"/pashto/columns"`;
 
 exports[`Canonical On Demand Radio Page I can see the brand title 1`] = `"ماښامنۍ خپرونه"`;
 

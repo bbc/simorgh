@@ -42,7 +42,7 @@ export default () => {
           expect(linkText).toMatchSnapshot();
         });
 
-        it(`with text '${linkText}' should match url`, () => {
+        it(`should match url`, () => {
           expect(linkUrl).toMatchSnapshot();
         });
       });

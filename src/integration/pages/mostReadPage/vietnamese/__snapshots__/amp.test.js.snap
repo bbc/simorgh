@@ -140,23 +140,23 @@ exports[`AMP Most Read Page Footer Link should match text 8`] = `"AdChoices / Do
 
 exports[`AMP Most Read Page Footer Link should match text 9`] = `"Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài"`;
 
-exports[`AMP Most Read Page Footer Link with text 'AdChoices / Do Not Sell My Info' should match url 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`AMP Most Read Page Footer Link should match url 1`] = `"/vietnamese"`;
 
-exports[`AMP Most Read Page Footer Link with text 'BBC News, Tiếng Việt' should match url 1`] = `"/vietnamese"`;
+exports[`AMP Most Read Page Footer Link should match url 2`] = `"https://www.bbc.com/vietnamese/institutional-49283563"`;
 
-exports[`AMP Most Read Page Footer Link with text 'Chính sách riêng tư' should match url 1`] = `"https://www.bbc.com/vietnamese/institutional-37623841"`;
+exports[`AMP Most Read Page Footer Link should match url 3`] = `"https://www.bbc.com/vietnamese/institutional-37622991"`;
 
-exports[`AMP Most Read Page Footer Link with text 'Cookie' should match url 1`] = `"https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html"`;
+exports[`AMP Most Read Page Footer Link should match url 4`] = `"https://www.bbc.com/vietnamese/institutional-37623840"`;
 
-exports[`AMP Most Read Page Footer Link with text 'Liên hệ BBC' should match url 1`] = `"https://www.bbc.com/vietnamese/institutional-37623842"`;
+exports[`AMP Most Read Page Footer Link should match url 5`] = `"https://www.bbc.com/vietnamese/institutional-37623841"`;
 
-exports[`AMP Most Read Page Footer Link with text 'Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài' should match url 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+exports[`AMP Most Read Page Footer Link should match url 6`] = `"https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html"`;
 
-exports[`AMP Most Read Page Footer Link with text 'Tại sao bạn có thể tin tưởng BBC News' should match url 1`] = `"https://www.bbc.com/vietnamese/institutional-49283563"`;
+exports[`AMP Most Read Page Footer Link should match url 7`] = `"https://www.bbc.com/vietnamese/institutional-37623842"`;
 
-exports[`AMP Most Read Page Footer Link with text 'Về BBC' should match url 1`] = `"https://www.bbc.com/vietnamese/institutional-37623840"`;
+exports[`AMP Most Read Page Footer Link should match url 8`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
-exports[`AMP Most Read Page Footer Link with text 'Điều khoản sử dụng' should match url 1`] = `"https://www.bbc.com/vietnamese/institutional-37622991"`;
+exports[`AMP Most Read Page Footer Link should match url 9`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
 exports[`AMP Most Read Page Header I can see the branding 1`] = `"BBC News, Tiếng Việt"`;
 
@@ -196,41 +196,41 @@ exports[`AMP Most Read Page Header Navigation link should match text 17`] = `"H�
 
 exports[`AMP Most Read Page Header Navigation link should match text 18`] = `"Video"`;
 
-exports[`AMP Most Read Page Header Navigation link with text 'Diễn đàn' should match url 1`] = `"/vietnamese/forum"`;
+exports[`AMP Most Read Page Header Navigation link should match url 1`] = `"/vietnamese"`;
 
-exports[`AMP Most Read Page Header Navigation link with text 'Diễn đàn' should match url 2`] = `"/vietnamese/forum"`;
+exports[`AMP Most Read Page Header Navigation link should match url 2`] = `"/vietnamese/vietnam"`;
 
-exports[`AMP Most Read Page Header Navigation link with text 'Học tiếng Anh' should match url 1`] = `"/vietnamese/english"`;
+exports[`AMP Most Read Page Header Navigation link should match url 3`] = `"/vietnamese/world"`;
 
-exports[`AMP Most Read Page Header Navigation link with text 'Học tiếng Anh' should match url 2`] = `"/vietnamese/english"`;
+exports[`AMP Most Read Page Header Navigation link should match url 4`] = `"/vietnamese/forum"`;
 
-exports[`AMP Most Read Page Header Navigation link with text 'Kinh tế' should match url 1`] = `"/vietnamese/business"`;
+exports[`AMP Most Read Page Header Navigation link should match url 5`] = `"/vietnamese/business"`;
 
-exports[`AMP Most Read Page Header Navigation link with text 'Kinh tế' should match url 2`] = `"/vietnamese/business"`;
+exports[`AMP Most Read Page Header Navigation link should match url 6`] = `"/vietnamese/magazine"`;
 
-exports[`AMP Most Read Page Header Navigation link with text 'Nhịp sống mới' should match url 1`] = `"/vietnamese/magazine"`;
+exports[`AMP Most Read Page Header Navigation link should match url 7`] = `"/vietnamese/sport"`;
 
-exports[`AMP Most Read Page Header Navigation link with text 'Nhịp sống mới' should match url 2`] = `"/vietnamese/magazine"`;
+exports[`AMP Most Read Page Header Navigation link should match url 8`] = `"/vietnamese/english"`;
 
-exports[`AMP Most Read Page Header Navigation link with text 'Thể thao' should match url 1`] = `"/vietnamese/sport"`;
+exports[`AMP Most Read Page Header Navigation link should match url 9`] = `"/vietnamese/media/video"`;
 
-exports[`AMP Most Read Page Header Navigation link with text 'Thể thao' should match url 2`] = `"/vietnamese/sport"`;
+exports[`AMP Most Read Page Header Navigation link should match url 10`] = `"/vietnamese"`;
 
-exports[`AMP Most Read Page Header Navigation link with text 'Thế giới' should match url 1`] = `"/vietnamese/world"`;
+exports[`AMP Most Read Page Header Navigation link should match url 11`] = `"/vietnamese/vietnam"`;
 
-exports[`AMP Most Read Page Header Navigation link with text 'Thế giới' should match url 2`] = `"/vietnamese/world"`;
+exports[`AMP Most Read Page Header Navigation link should match url 12`] = `"/vietnamese/world"`;
 
-exports[`AMP Most Read Page Header Navigation link with text 'Tin chính' should match url 1`] = `"/vietnamese"`;
+exports[`AMP Most Read Page Header Navigation link should match url 13`] = `"/vietnamese/forum"`;
 
-exports[`AMP Most Read Page Header Navigation link with text 'Tin chính' should match url 2`] = `"/vietnamese"`;
+exports[`AMP Most Read Page Header Navigation link should match url 14`] = `"/vietnamese/business"`;
 
-exports[`AMP Most Read Page Header Navigation link with text 'Video' should match url 1`] = `"/vietnamese/media/video"`;
+exports[`AMP Most Read Page Header Navigation link should match url 15`] = `"/vietnamese/magazine"`;
 
-exports[`AMP Most Read Page Header Navigation link with text 'Video' should match url 2`] = `"/vietnamese/media/video"`;
+exports[`AMP Most Read Page Header Navigation link should match url 16`] = `"/vietnamese/sport"`;
 
-exports[`AMP Most Read Page Header Navigation link with text 'Việt Nam' should match url 1`] = `"/vietnamese/vietnam"`;
+exports[`AMP Most Read Page Header Navigation link should match url 17`] = `"/vietnamese/english"`;
 
-exports[`AMP Most Read Page Header Navigation link with text 'Việt Nam' should match url 2`] = `"/vietnamese/vietnam"`;
+exports[`AMP Most Read Page Header Navigation link should match url 18`] = `"/vietnamese/media/video"`;
 
 exports[`AMP Most Read Page I can see the headline 1`] = `"Đọc nhiều nhất"`;
 

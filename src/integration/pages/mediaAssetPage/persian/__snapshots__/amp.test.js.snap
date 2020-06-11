@@ -140,23 +140,23 @@ exports[`AMP Media Asset Page Footer Link should match text 8`] = `"AdChoices / 
 
 exports[`AMP Media Asset Page Footer Link should match text 9`] = `"سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
-exports[`AMP Media Asset Page Footer Link with text 'AdChoices / Do Not Sell My Info' should match url 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`AMP Media Asset Page Footer Link should match url 1`] = `"/persian"`;
 
-exports[`AMP Media Asset Page Footer Link with text 'BBC News, فارسی' should match url 1`] = `"/persian"`;
+exports[`AMP Media Asset Page Footer Link should match url 2`] = `"https://www.bbc.com/persian/institutional-49283091"`;
 
-exports[`AMP Media Asset Page Footer Link with text 'تماس با بی بی سی' should match url 1`] = `"https://www.bbc.com/persian/institutional-37542244"`;
+exports[`AMP Media Asset Page Footer Link should match url 3`] = `"https://www.bbc.com/persian/institutional-37474133"`;
 
-exports[`AMP Media Asset Page Footer Link with text 'درباره بی بی سی' should match url 1`] = `"https://www.bbc.com/persian/institutional-37474136"`;
+exports[`AMP Media Asset Page Footer Link should match url 4`] = `"https://www.bbc.com/persian/institutional-37474136"`;
 
-exports[`AMP Media Asset Page Footer Link with text 'سیاست حفظ حریم خصوصی' should match url 1`] = `"https://www.bbc.com/persian/institutional-37540067"`;
+exports[`AMP Media Asset Page Footer Link should match url 5`] = `"https://www.bbc.com/persian/institutional-37540067"`;
 
-exports[`AMP Media Asset Page Footer Link with text 'سیاست ما درباره لینک دادن به سایت های دیگر.' should match url 1`] = `"https://www.bbc.com/persian/institutional/2011/04/000001_links"`;
+exports[`AMP Media Asset Page Footer Link should match url 6`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
 
-exports[`AMP Media Asset Page Footer Link with text 'شرایط استفاده' should match url 1`] = `"https://www.bbc.com/persian/institutional-37474133"`;
+exports[`AMP Media Asset Page Footer Link should match url 7`] = `"https://www.bbc.com/persian/institutional-37542244"`;
 
-exports[`AMP Media Asset Page Footer Link with text 'چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟' should match url 1`] = `"https://www.bbc.com/persian/institutional-49283091"`;
+exports[`AMP Media Asset Page Footer Link should match url 8`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
-exports[`AMP Media Asset Page Footer Link with text 'کوکی ها' should match url 1`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+exports[`AMP Media Asset Page Footer Link should match url 9`] = `"https://www.bbc.com/persian/institutional/2011/04/000001_links"`;
 
 exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, فارسی"`;
 
@@ -216,61 +216,61 @@ exports[`AMP Media Asset Page Header Navigation link should match text 27`] = `"
 
 exports[`AMP Media Asset Page Header Navigation link should match text 28`] = `"ناظران می‌گویند"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'افغانستان' should match url 1`] = `"/persian/afghanistan"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 1`] = `"/persian"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'افغانستان' should match url 2`] = `"/persian/afghanistan"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 2`] = `"/persian/science-52004647"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'اقتصاد' should match url 1`] = `"/persian/business"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 3`] = `"/persian/media-49522521"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'اقتصاد' should match url 2`] = `"/persian/business"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 4`] = `"/persian/media/video"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'ايران' should match url 1`] = `"/persian/iran"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 5`] = `"/persian/tv-and-radio-37434377"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'ايران' should match url 2`] = `"/persian/iran"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 6`] = `"/persian/tv-and-radio-37434376"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'تلویزیون' should match url 1`] = `"/persian/tv-and-radio-37434377"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 7`] = `"/persian/iran"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'تلویزیون' should match url 2`] = `"/persian/tv-and-radio-37434377"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 8`] = `"/persian/afghanistan"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'جهان' should match url 1`] = `"/persian/world"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 9`] = `"/persian/world"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'جهان' should match url 2`] = `"/persian/world"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 10`] = `"/persian/arts"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'دانش' should match url 1`] = `"/persian/science"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 11`] = `"/persian/sport"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'دانش' should match url 2`] = `"/persian/science"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 12`] = `"/persian/business"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'رادیو' should match url 1`] = `"/persian/tv-and-radio-37434376"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 13`] = `"/persian/science"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'رادیو' should match url 2`] = `"/persian/tv-and-radio-37434376"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 14`] = `"/persian/blogs/viewpoints"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'صفحه اول' should match url 1`] = `"/persian"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 15`] = `"/persian"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'صفحه اول' should match url 2`] = `"/persian"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 16`] = `"/persian/science-52004647"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'ناظران می‌گویند' should match url 1`] = `"/persian/blogs/viewpoints"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 17`] = `"/persian/media-49522521"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'ناظران می‌گویند' should match url 2`] = `"/persian/blogs/viewpoints"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 18`] = `"/persian/media/video"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'هنر' should match url 1`] = `"/persian/arts"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 19`] = `"/persian/tv-and-radio-37434377"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'هنر' should match url 2`] = `"/persian/arts"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 20`] = `"/persian/tv-and-radio-37434376"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'ورزش' should match url 1`] = `"/persian/sport"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 21`] = `"/persian/iran"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'ورزش' should match url 2`] = `"/persian/sport"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 22`] = `"/persian/afghanistan"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'ویدیو' should match url 1`] = `"/persian/media/video"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 23`] = `"/persian/world"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'ویدیو' should match url 2`] = `"/persian/media/video"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 24`] = `"/persian/arts"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'پخش زنده' should match url 1`] = `"/persian/media-49522521"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 25`] = `"/persian/sport"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'پخش زنده' should match url 2`] = `"/persian/media-49522521"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 26`] = `"/persian/business"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'کرونا' should match url 1`] = `"/persian/science-52004647"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 27`] = `"/persian/science"`;
 
-exports[`AMP Media Asset Page Header Navigation link with text 'کرونا' should match url 2`] = `"/persian/science-52004647"`;
+exports[`AMP Media Asset Page Header Navigation link should match url 28`] = `"/persian/blogs/viewpoints"`;
 
 exports[`AMP Media Asset Page I can see the headline 1`] = `"Trump long headline"`;
 

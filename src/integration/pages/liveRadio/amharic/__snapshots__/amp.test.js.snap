@@ -140,23 +140,23 @@ exports[`AMP Amharic Live Radio Page Footer Link should match text 8`] = `"AdCho
 
 exports[`AMP Amharic Live Radio Page Footer Link should match text 9`] = `"ስለ ውጪ ሊንኮች ያለን አቀራረብ"`;
 
-exports[`AMP Amharic Live Radio Page Footer Link with text 'AdChoices / Do Not Sell My Info' should match url 1`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`AMP Amharic Live Radio Page Footer Link should match url 1`] = `"/amharic"`;
 
-exports[`AMP Amharic Live Radio Page Footer Link with text 'BBC News, አማርኛ' should match url 1`] = `"/amharic"`;
+exports[`AMP Amharic Live Radio Page Footer Link should match url 2`] = `"https://www.bbc.com/amharic/institutional-49283133"`;
 
-exports[`AMP Amharic Live Radio Page Footer Link with text 'ስለ ቢቢሲ' should match url 1`] = `"https://www.bbc.com/aboutthebbc"`;
+exports[`AMP Amharic Live Radio Page Footer Link should match url 3`] = `"https://www.bbc.com/usingthebbc/terms/"`;
 
-exports[`AMP Amharic Live Radio Page Footer Link with text 'ስለ ውጪ ሊንኮች ያለን አቀራረብ' should match url 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+exports[`AMP Amharic Live Radio Page Footer Link should match url 4`] = `"https://www.bbc.com/aboutthebbc"`;
 
-exports[`AMP Amharic Live Radio Page Footer Link with text 'ቢቢሲን ለምን ማመን እንደሚገባዎ' should match url 1`] = `"https://www.bbc.com/amharic/institutional-49283133"`;
+exports[`AMP Amharic Live Radio Page Footer Link should match url 5`] = `"https://www.bbc.com/usingthebbc/privacy/"`;
 
-exports[`AMP Amharic Live Radio Page Footer Link with text 'ቢቢሲን ያግኙ' should match url 1`] = `"https://www.bbc.com/amharic/institutional-42228117"`;
+exports[`AMP Amharic Live Radio Page Footer Link should match url 6`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
 
-exports[`AMP Amharic Live Radio Page Footer Link with text 'ኩኪዎች' should match url 1`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+exports[`AMP Amharic Live Radio Page Footer Link should match url 7`] = `"https://www.bbc.com/amharic/institutional-42228117"`;
 
-exports[`AMP Amharic Live Radio Page Footer Link with text 'የአጠቃቀም ደንብ' should match url 1`] = `"https://www.bbc.com/usingthebbc/terms/"`;
+exports[`AMP Amharic Live Radio Page Footer Link should match url 8`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
-exports[`AMP Amharic Live Radio Page Footer Link with text 'የፕራይቬሲ ፖሊሲ' should match url 1`] = `"https://www.bbc.com/usingthebbc/privacy/"`;
+exports[`AMP Amharic Live Radio Page Footer Link should match url 9`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
 exports[`AMP Amharic Live Radio Page Header I can see the branding 1`] = `"BBC News, አማርኛ"`;
 
@@ -176,21 +176,21 @@ exports[`AMP Amharic Live Radio Page Header Navigation link should match text 7`
 
 exports[`AMP Amharic Live Radio Page Header Navigation link should match text 8`] = `"በጣም የተወደዱ"`;
 
-exports[`AMP Amharic Live Radio Page Header Navigation link with text 'በጣም የተወደዱ' should match url 1`] = `"/amharic/popular/read"`;
+exports[`AMP Amharic Live Radio Page Header Navigation link should match url 1`] = `"/amharic"`;
 
-exports[`AMP Amharic Live Radio Page Header Navigation link with text 'በጣም የተወደዱ' should match url 2`] = `"/amharic/popular/read"`;
+exports[`AMP Amharic Live Radio Page Header Navigation link should match url 2`] = `"/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"`;
 
-exports[`AMP Amharic Live Radio Page Header Navigation link with text 'ቪዲዮ' should match url 1`] = `"/amharic/media/video"`;
+exports[`AMP Amharic Live Radio Page Header Navigation link should match url 3`] = `"/amharic/media/video"`;
 
-exports[`AMP Amharic Live Radio Page Header Navigation link with text 'ቪዲዮ' should match url 2`] = `"/amharic/media/video"`;
+exports[`AMP Amharic Live Radio Page Header Navigation link should match url 4`] = `"/amharic/popular/read"`;
 
-exports[`AMP Amharic Live Radio Page Header Navigation link with text 'ኢትዮጵያ' should match url 1`] = `"/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"`;
+exports[`AMP Amharic Live Radio Page Header Navigation link should match url 5`] = `"/amharic"`;
 
-exports[`AMP Amharic Live Radio Page Header Navigation link with text 'ኢትዮጵያ' should match url 2`] = `"/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"`;
+exports[`AMP Amharic Live Radio Page Header Navigation link should match url 6`] = `"/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"`;
 
-exports[`AMP Amharic Live Radio Page Header Navigation link with text 'ዜና' should match url 1`] = `"/amharic"`;
+exports[`AMP Amharic Live Radio Page Header Navigation link should match url 7`] = `"/amharic/media/video"`;
 
-exports[`AMP Amharic Live Radio Page Header Navigation link with text 'ዜና' should match url 2`] = `"/amharic"`;
+exports[`AMP Amharic Live Radio Page Header Navigation link should match url 8`] = `"/amharic/popular/read"`;
 
 exports[`AMP Amharic Live Radio Page Main heading should match text 1`] = `"ያድምጡ"`;
 
