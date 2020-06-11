@@ -28,45 +28,25 @@ exports[`Canonical Front Page Footer Link should match text and url 9`] = `"سي
 
 exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
-exports[`Canonical Front Page Header Navigation link should match text 1`] = `"الصفحة الحالية, رئيسية"`;
+exports[`Canonical Front Page Header Navigation link should match text and url 1`] = `"الصفحة الحالية, رئيسية - /arabic"`;
 
-exports[`Canonical Front Page Header Navigation link should match text 2`] = `"شرق أوسط"`;
+exports[`Canonical Front Page Header Navigation link should match text and url 2`] = `"شرق أوسط - /arabic/middleeast"`;
 
-exports[`Canonical Front Page Header Navigation link should match text 3`] = `"عالم"`;
+exports[`Canonical Front Page Header Navigation link should match text and url 3`] = `"عالم - /arabic/world"`;
 
-exports[`Canonical Front Page Header Navigation link should match text 4`] = `"علوم وتكنولوجيا"`;
+exports[`Canonical Front Page Header Navigation link should match text and url 4`] = `"علوم وتكنولوجيا - /arabic/scienceandtech"`;
 
-exports[`Canonical Front Page Header Navigation link should match text 5`] = `"صحة"`;
+exports[`Canonical Front Page Header Navigation link should match text and url 5`] = `"صحة - /arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
 
-exports[`Canonical Front Page Header Navigation link should match text 6`] = `"فيديو"`;
+exports[`Canonical Front Page Header Navigation link should match text and url 6`] = `"فيديو - /arabic/media"`;
 
-exports[`Canonical Front Page Header Navigation link should match text 7`] = `"صحافة"`;
+exports[`Canonical Front Page Header Navigation link should match text and url 7`] = `"صحافة - /arabic/inthepress"`;
 
-exports[`Canonical Front Page Header Navigation link should match text 8`] = `"ترند"`;
+exports[`Canonical Front Page Header Navigation link should match text and url 8`] = `"ترند - /arabic/trending"`;
 
-exports[`Canonical Front Page Header Navigation link should match text 9`] = `"تحقيقات"`;
+exports[`Canonical Front Page Header Navigation link should match text and url 9`] = `"تحقيقات - /arabic/tv-and-radio-42414864"`;
 
-exports[`Canonical Front Page Header Navigation link should match text 10`] = `"برامجنا"`;
-
-exports[`Canonical Front Page Header Navigation link should match url 1`] = `"/arabic"`;
-
-exports[`Canonical Front Page Header Navigation link should match url 2`] = `"/arabic/middleeast"`;
-
-exports[`Canonical Front Page Header Navigation link should match url 3`] = `"/arabic/world"`;
-
-exports[`Canonical Front Page Header Navigation link should match url 4`] = `"/arabic/scienceandtech"`;
-
-exports[`Canonical Front Page Header Navigation link should match url 5`] = `"/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
-
-exports[`Canonical Front Page Header Navigation link should match url 6`] = `"/arabic/media"`;
-
-exports[`Canonical Front Page Header Navigation link should match url 7`] = `"/arabic/inthepress"`;
-
-exports[`Canonical Front Page Header Navigation link should match url 8`] = `"/arabic/trending"`;
-
-exports[`Canonical Front Page Header Navigation link should match url 9`] = `"/arabic/tv-and-radio-42414864"`;
-
-exports[`Canonical Front Page Header Navigation link should match url 10`] = `"/arabic/tv-and-radio-37728883"`;
+exports[`Canonical Front Page Header Navigation link should match text and url 10`] = `"برامجنا - /arabic/tv-and-radio-37728883"`;
 
 exports[`Canonical Front Page I can see Index Alsos 1`] = `"المزيد حول هذه القصة"`;
 

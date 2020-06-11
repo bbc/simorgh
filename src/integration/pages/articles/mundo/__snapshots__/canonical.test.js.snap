@@ -28,53 +28,29 @@ exports[`Canonical Articles Footer Link should match text and url 9`] = `"Lee so
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
-exports[`Canonical Articles Header Navigation link should match text 1`] = `"Noticias"`;
+exports[`Canonical Articles Header Navigation link should match text and url 1`] = `"Noticias - /mundo"`;
 
-exports[`Canonical Articles Header Navigation link should match text 2`] = `"América Latina"`;
+exports[`Canonical Articles Header Navigation link should match text and url 2`] = `"América Latina - /mundo/america_latina"`;
 
-exports[`Canonical Articles Header Navigation link should match text 3`] = `"Internacional"`;
+exports[`Canonical Articles Header Navigation link should match text and url 3`] = `"Internacional - /mundo/internacional"`;
 
-exports[`Canonical Articles Header Navigation link should match text 4`] = `"Economía"`;
+exports[`Canonical Articles Header Navigation link should match text and url 4`] = `"Economía - /mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342"`;
 
-exports[`Canonical Articles Header Navigation link should match text 5`] = `"Tecnología"`;
+exports[`Canonical Articles Header Navigation link should match text and url 5`] = `"Tecnología - /mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a"`;
 
-exports[`Canonical Articles Header Navigation link should match text 6`] = `"Ciencia"`;
+exports[`Canonical Articles Header Navigation link should match text and url 6`] = `"Ciencia - /mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"`;
 
-exports[`Canonical Articles Header Navigation link should match text 7`] = `"Salud"`;
+exports[`Canonical Articles Header Navigation link should match text and url 7`] = `"Salud - /mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
 
-exports[`Canonical Articles Header Navigation link should match text 8`] = `"Cultura"`;
+exports[`Canonical Articles Header Navigation link should match text and url 8`] = `"Cultura - /mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864"`;
 
-exports[`Canonical Articles Header Navigation link should match text 9`] = `"Deportes"`;
+exports[`Canonical Articles Header Navigation link should match text and url 9`] = `"Deportes - /mundo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
 
-exports[`Canonical Articles Header Navigation link should match text 10`] = `"Video"`;
+exports[`Canonical Articles Header Navigation link should match text and url 10`] = `"Video - /mundo/media/video"`;
 
-exports[`Canonical Articles Header Navigation link should match text 11`] = `"Hay Festival"`;
+exports[`Canonical Articles Header Navigation link should match text and url 11`] = `"Hay Festival - /mundo/noticias-36795069"`;
 
-exports[`Canonical Articles Header Navigation link should match text 12`] = `"Centroamérica Cuenta"`;
-
-exports[`Canonical Articles Header Navigation link should match url 1`] = `"/mundo"`;
-
-exports[`Canonical Articles Header Navigation link should match url 2`] = `"/mundo/america_latina"`;
-
-exports[`Canonical Articles Header Navigation link should match url 3`] = `"/mundo/internacional"`;
-
-exports[`Canonical Articles Header Navigation link should match url 4`] = `"/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342"`;
-
-exports[`Canonical Articles Header Navigation link should match url 5`] = `"/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a"`;
-
-exports[`Canonical Articles Header Navigation link should match url 6`] = `"/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"`;
-
-exports[`Canonical Articles Header Navigation link should match url 7`] = `"/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
-
-exports[`Canonical Articles Header Navigation link should match url 8`] = `"/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864"`;
-
-exports[`Canonical Articles Header Navigation link should match url 9`] = `"/mundo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
-
-exports[`Canonical Articles Header Navigation link should match url 10`] = `"/mundo/media/video"`;
-
-exports[`Canonical Articles Header Navigation link should match url 11`] = `"/mundo/noticias-36795069"`;
-
-exports[`Canonical Articles Header Navigation link should match url 12`] = `"/mundo/noticias-43826245"`;
+exports[`Canonical Articles Header Navigation link should match text and url 12`] = `"Centroamérica Cuenta - /mundo/noticias-43826245"`;
 
 exports[`Canonical Articles I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/ee58/test/4a2f4c00-e695-11e9-88d6-81aa2ccc6d4c.jpg"`;
 

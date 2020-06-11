@@ -28,21 +28,13 @@ exports[`Canonical Amharic Live Radio Page Footer Link should match text and url
 
 exports[`Canonical Amharic Live Radio Page Header I can see the branding 1`] = `"BBC News, አማርኛ"`;
 
-exports[`Canonical Amharic Live Radio Page Header Navigation link should match text 1`] = `"ዜና"`;
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match text and url 1`] = `"ዜና - /amharic"`;
 
-exports[`Canonical Amharic Live Radio Page Header Navigation link should match text 2`] = `"ኢትዮጵያ"`;
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match text and url 2`] = `"ኢትዮጵያ - /amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"`;
 
-exports[`Canonical Amharic Live Radio Page Header Navigation link should match text 3`] = `"ቪዲዮ"`;
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match text and url 3`] = `"ቪዲዮ - /amharic/media/video"`;
 
-exports[`Canonical Amharic Live Radio Page Header Navigation link should match text 4`] = `"በጣም የተወደዱ"`;
-
-exports[`Canonical Amharic Live Radio Page Header Navigation link should match url 1`] = `"/amharic"`;
-
-exports[`Canonical Amharic Live Radio Page Header Navigation link should match url 2`] = `"/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"`;
-
-exports[`Canonical Amharic Live Radio Page Header Navigation link should match url 3`] = `"/amharic/media/video"`;
-
-exports[`Canonical Amharic Live Radio Page Header Navigation link should match url 4`] = `"/amharic/popular/read"`;
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match text and url 4`] = `"በጣም የተወደዱ - /amharic/popular/read"`;
 
 exports[`Canonical Amharic Live Radio Page Main heading should match text 1`] = `"ያድምጡ"`;
 

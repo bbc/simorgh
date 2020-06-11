@@ -142,37 +142,21 @@ exports[`AMP Story Page Footer Link should match text and url 9`] = `"Башка
 
 exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
-exports[`AMP Story Page Header Navigation link should match text 1`] = `"Башталгыч бет"`;
+exports[`AMP Story Page Header Navigation link should match text and url 1`] = `"Башталгыч бет - /kyrgyz"`;
 
-exports[`AMP Story Page Header Navigation link should match text 2`] = `"Кыргызстан"`;
+exports[`AMP Story Page Header Navigation link should match text and url 2`] = `"Кыргызстан - /kyrgyz/kyrgyzstan"`;
 
-exports[`AMP Story Page Header Navigation link should match text 3`] = `"Дүйнө"`;
+exports[`AMP Story Page Header Navigation link should match text and url 3`] = `"Дүйнө - /kyrgyz/world"`;
 
-exports[`AMP Story Page Header Navigation link should match text 4`] = `"Сапар TV"`;
+exports[`AMP Story Page Header Navigation link should match text and url 4`] = `"Сапар TV - /kyrgyz/sapartv"`;
 
-exports[`AMP Story Page Header Navigation link should match text 5`] = `"Видео"`;
+exports[`AMP Story Page Header Navigation link should match text and url 5`] = `"Видео - /kyrgyz/media/video"`;
 
-exports[`AMP Story Page Header Navigation link should match text 6`] = `"Маданият/Илим"`;
+exports[`AMP Story Page Header Navigation link should match text and url 6`] = `"Маданият/Илим - /kyrgyz/entertainment"`;
 
-exports[`AMP Story Page Header Navigation link should match text 7`] = `"Журнал"`;
+exports[`AMP Story Page Header Navigation link should match text and url 7`] = `"Журнал - /kyrgyz/magazine"`;
 
-exports[`AMP Story Page Header Navigation link should match text 8`] = `"Блог"`;
-
-exports[`AMP Story Page Header Navigation link should match url 1`] = `"/kyrgyz"`;
-
-exports[`AMP Story Page Header Navigation link should match url 2`] = `"/kyrgyz/kyrgyzstan"`;
-
-exports[`AMP Story Page Header Navigation link should match url 3`] = `"/kyrgyz/world"`;
-
-exports[`AMP Story Page Header Navigation link should match url 4`] = `"/kyrgyz/sapartv"`;
-
-exports[`AMP Story Page Header Navigation link should match url 5`] = `"/kyrgyz/media/video"`;
-
-exports[`AMP Story Page Header Navigation link should match url 6`] = `"/kyrgyz/entertainment"`;
-
-exports[`AMP Story Page Header Navigation link should match url 7`] = `"/kyrgyz/magazine"`;
-
-exports[`AMP Story Page Header Navigation link should match url 8`] = `"/kyrgyz/blog"`;
+exports[`AMP Story Page Header Navigation link should match text and url 8`] = `"Блог - /kyrgyz/blog"`;
 
 exports[`AMP Story Page Lead image I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
