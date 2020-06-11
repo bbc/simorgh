@@ -6,9 +6,7 @@
 import runExpiredEpisodeTests from '../expiredEpisodeTests';
 import runCanonicalTests from '../canonicalTests';
 
-describe('Canonical', () => {
-  describe(pageType, () => {
-    runExpiredEpisodeTests();
-    runCanonicalTests();
-  });
+describe('Canonical Pashto On Demand TV Page', () => {
+  runExpiredEpisodeTests();
+  runCanonicalTests();
 });

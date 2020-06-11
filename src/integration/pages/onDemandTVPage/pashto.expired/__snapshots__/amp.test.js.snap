@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AMP On Demand T V Page AMP Consent config 1`] = `
+exports[`AMP Pashto On Demand TV Page AMP Consent config 1`] = `
 Object {
   "consents": Object {
     "user-consent": Object {
@@ -22,7 +22,7 @@ Object {
 }
 `;
 
-exports[`AMP On Demand T V Page AMP Geo config 1`] = `
+exports[`AMP Pashto On Demand TV Page AMP Geo config 1`] = `
 Object {
   "ISOCountryGroups": Object {
     "eea": Array [
@@ -83,7 +83,7 @@ Object {
 }
 `;
 
-exports[`AMP On Demand T V Page Analytics ATI 1`] = `
+exports[`AMP Pashto On Demand TV Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
@@ -103,7 +103,7 @@ Object {
 }
 `;
 
-exports[`AMP On Demand T V Page Analytics chartbeat 1`] = `
+exports[`AMP Pashto On Demand TV Page Analytics chartbeat 1`] = `
 Object {
   "vars": Object {
     "contentType": "player-episode",
@@ -116,12 +116,12 @@ Object {
 }
 `;
 
-exports[`AMP On Demand T V Page Expired Episode I can see the 'Content is not available' placeholder 1`] = `"دغه فایل نور د لاسرسي وړ نه دی."`;
+exports[`AMP Pashto On Demand TV Page Expired Episode I can see the 'Content is not available' placeholder 1`] = `"دغه فایل نور د لاسرسي وړ نه دی."`;
 
-exports[`AMP On Demand T V Page Expired Episode I can see the brand title 1`] = `"نړۍ دا وخت"`;
+exports[`AMP Pashto On Demand TV Page Expired Episode I can see the brand title 1`] = `"نړۍ دا وخت"`;
 
-exports[`AMP On Demand T V Page Expired Episode I can see the episode summary 1`] = `"د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."`;
+exports[`AMP Pashto On Demand TV Page Expired Episode I can see the episode summary 1`] = `"د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."`;
 
-exports[`AMP On Demand T V Page Expired Episode I can see the episode title 1`] = `"۲۸ می ۲۰۲۰"`;
+exports[`AMP Pashto On Demand TV Page Expired Episode I can see the episode title 1`] = `"۲۸ می ۲۰۲۰"`;
 
-exports[`AMP On Demand T V Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"نړۍ دا وخت, ۲۸ می ۲۰۲۰"`;
+exports[`AMP Pashto On Demand TV Page Expired Episode a11y Assistive technology reads the brand and episode title as the headline 1`] = `"نړۍ دا وخت, ۲۸ می ۲۰۲۰"`;

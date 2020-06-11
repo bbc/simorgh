@@ -6,9 +6,7 @@
 import runExpiredEpisodeTests from '../expiredEpisodeTests';
 import runAmpTests from '../ampTests';
 
-describe('AMP', () => {
-  describe(pageType, () => {
-    runExpiredEpisodeTests();
-    runAmpTests();
-  });
+describe('AMP Pashto On Demand TV Page', () => {
+  runExpiredEpisodeTests();
+  runAmpTests();
 });
