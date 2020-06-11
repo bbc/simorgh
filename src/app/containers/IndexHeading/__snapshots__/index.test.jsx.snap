@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Index Heading snapshot should render correctly 1`] = `
+exports[`Index Heading snapshot should render correctly for IDX 1`] = `
 .c0 {
   font-size: 1.125rem;
   line-height: 1.375rem;
@@ -55,7 +55,62 @@ exports[`Index Heading snapshot should render correctly 1`] = `
 </h1>
 `;
 
-exports[`Index Heading snapshot should render rtl correctly 1`] = `
+exports[`Index Heading snapshot should render correctly for Most Read 1`] = `
+.c0 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #6E6E73;
+  margin: 0;
+  padding: 1rem 0 1.5rem;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 1.5rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding: 1.5rem 0 0.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+<h1
+  class="c0"
+  dir="ltr"
+  tabindex="-1"
+>
+  Index Heading
+</h1>
+`;
+
+exports[`Index Heading snapshot should render rtl correctly for IDX 1`] = `
 .c0 {
   font-size: 1.5rem;
   line-height: 2rem;
