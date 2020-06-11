@@ -15,15 +15,16 @@ export const getCookieDomain = domain => {
 
 const setCookie = (name, value, expires = COOKIE_EXPIRY) => {
   const isHttps = document.location.protocol === 'https:';
-
-  // Only set sameSite=None when protocol https
-  const sameSiteAttribute = isHttps ? 'None' : 'Lax';
+  console.log('khoa https', isHttps);
+  const sameSiteSecure = {
+    sameSite: 'None',
+    secure: true,
+  };
 
   return Cookie.set(name, value, {
     expires,
     domain: getCookieDomain(document.domain),
-    sameSite: sameSiteAttribute,
-    secure: isHttps,
+    ...(isHttps && sameSiteSecure),
   });
 };
 
