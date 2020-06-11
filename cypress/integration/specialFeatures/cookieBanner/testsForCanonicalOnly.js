@@ -16,9 +16,6 @@ const serviceFilter = service =>
 
 const assertCookieValue = (cookieName, value) => {
   cy.getCookie(cookieName).should('have.property', 'value', value);
-  cy.getCookie(cookieName).then(c => {
-    console.log(c);
-  });
 };
 
 const assertCookieExpiryDate = (cookieName, timestamp) => {
