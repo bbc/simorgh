@@ -122,41 +122,23 @@ exports[`AMP Media Asset Page Footer I can click on the BBC branding and it woul
 
 exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
-exports[`AMP Media Asset Page Footer Link should match text 1`] = `"BBC News, فارسی"`;
+exports[`AMP Media Asset Page Footer Link should match text and url 1`] = `"BBC News, فارسی - /persian"`;
 
-exports[`AMP Media Asset Page Footer Link should match text 2`] = `"چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟"`;
+exports[`AMP Media Asset Page Footer Link should match text and url 2`] = `"چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟ - https://www.bbc.com/persian/institutional-49283091"`;
 
-exports[`AMP Media Asset Page Footer Link should match text 3`] = `"شرایط استفاده"`;
+exports[`AMP Media Asset Page Footer Link should match text and url 3`] = `"شرایط استفاده - https://www.bbc.com/persian/institutional-37474133"`;
 
-exports[`AMP Media Asset Page Footer Link should match text 4`] = `"درباره بی بی سی"`;
+exports[`AMP Media Asset Page Footer Link should match text and url 4`] = `"درباره بی بی سی - https://www.bbc.com/persian/institutional-37474136"`;
 
-exports[`AMP Media Asset Page Footer Link should match text 5`] = `"سیاست حفظ حریم خصوصی"`;
+exports[`AMP Media Asset Page Footer Link should match text and url 5`] = `"سیاست حفظ حریم خصوصی - https://www.bbc.com/persian/institutional-37540067"`;
 
-exports[`AMP Media Asset Page Footer Link should match text 6`] = `"کوکی ها"`;
+exports[`AMP Media Asset Page Footer Link should match text and url 6`] = `"کوکی ها - https://www.bbc.co.uk/usingthebbc/cookies/"`;
 
-exports[`AMP Media Asset Page Footer Link should match text 7`] = `"تماس با بی بی سی"`;
+exports[`AMP Media Asset Page Footer Link should match text and url 7`] = `"تماس با بی بی سی - https://www.bbc.com/persian/institutional-37542244"`;
 
-exports[`AMP Media Asset Page Footer Link should match text 8`] = `"AdChoices / Do Not Sell My Info"`;
+exports[`AMP Media Asset Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
-exports[`AMP Media Asset Page Footer Link should match text 9`] = `"سیاست ما درباره لینک دادن به سایت های دیگر."`;
-
-exports[`AMP Media Asset Page Footer Link should match url 1`] = `"/persian"`;
-
-exports[`AMP Media Asset Page Footer Link should match url 2`] = `"https://www.bbc.com/persian/institutional-49283091"`;
-
-exports[`AMP Media Asset Page Footer Link should match url 3`] = `"https://www.bbc.com/persian/institutional-37474133"`;
-
-exports[`AMP Media Asset Page Footer Link should match url 4`] = `"https://www.bbc.com/persian/institutional-37474136"`;
-
-exports[`AMP Media Asset Page Footer Link should match url 5`] = `"https://www.bbc.com/persian/institutional-37540067"`;
-
-exports[`AMP Media Asset Page Footer Link should match url 6`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
-
-exports[`AMP Media Asset Page Footer Link should match url 7`] = `"https://www.bbc.com/persian/institutional-37542244"`;
-
-exports[`AMP Media Asset Page Footer Link should match url 8`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
-
-exports[`AMP Media Asset Page Footer Link should match url 9`] = `"https://www.bbc.com/persian/institutional/2011/04/000001_links"`;
+exports[`AMP Media Asset Page Footer Link should match text and url 9`] = `"سیاست ما درباره لینک دادن به سایت های دیگر. - https://www.bbc.com/persian/institutional/2011/04/000001_links"`;
 
 exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, فارسی"`;
 

@@ -8,41 +8,23 @@ exports[`Canonical Story Page Footer I can click on the BBC branding and it woul
 
 exports[`Canonical Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
 
-exports[`Canonical Story Page Footer Link should match text 1`] = `"BBC News, Кыргыз КызMATы"`;
+exports[`Canonical Story Page Footer Link should match text and url 1`] = `"BBC News, Кыргыз КызMATы - /kyrgyz"`;
 
-exports[`Canonical Story Page Footer Link should match text 2`] = `"Эмнеге BBC News ишенсе болот?"`;
+exports[`Canonical Story Page Footer Link should match text and url 2`] = `"Эмнеге BBC News ишенсе болот? - https://www.bbc.com/kyrgyz/institutional-49677275"`;
 
-exports[`Canonical Story Page Footer Link should match text 3`] = `"Колдонуу эрежелери"`;
+exports[`Canonical Story Page Footer Link should match text and url 3`] = `"Колдонуу эрежелери - https://www.bbc.com/kyrgyz/institutional-38157280"`;
 
-exports[`Canonical Story Page Footer Link should match text 4`] = `"Би-Би-Си жөнүндө"`;
+exports[`Canonical Story Page Footer Link should match text and url 4`] = `"Би-Би-Си жөнүндө - https://www.bbc.com/kyrgyz/institutional-38157281"`;
 
-exports[`Canonical Story Page Footer Link should match text 5`] = `"Купуялык"`;
+exports[`Canonical Story Page Footer Link should match text and url 5`] = `"Купуялык - https://www.bbc.com/kyrgyz/institutional-38157282"`;
 
-exports[`Canonical Story Page Footer Link should match text 6`] = `"Cookies"`;
+exports[`Canonical Story Page Footer Link should match text and url 6`] = `"Cookies - https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html"`;
 
-exports[`Canonical Story Page Footer Link should match text 7`] = `"Би-Би-Си менен байланышыңыз"`;
+exports[`Canonical Story Page Footer Link should match text and url 7`] = `"Би-Би-Си менен байланышыңыз - https://www.bbc.com/kyrgyz/institutional-38157284"`;
 
-exports[`Canonical Story Page Footer Link should match text 8`] = `"AdChoices / Do Not Sell My Info"`;
+exports[`Canonical Story Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
-exports[`Canonical Story Page Footer Link should match text 9`] = `"Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
-
-exports[`Canonical Story Page Footer Link should match url 1`] = `"/kyrgyz"`;
-
-exports[`Canonical Story Page Footer Link should match url 2`] = `"https://www.bbc.com/kyrgyz/institutional-49677275"`;
-
-exports[`Canonical Story Page Footer Link should match url 3`] = `"https://www.bbc.com/kyrgyz/institutional-38157280"`;
-
-exports[`Canonical Story Page Footer Link should match url 4`] = `"https://www.bbc.com/kyrgyz/institutional-38157281"`;
-
-exports[`Canonical Story Page Footer Link should match url 5`] = `"https://www.bbc.com/kyrgyz/institutional-38157282"`;
-
-exports[`Canonical Story Page Footer Link should match url 6`] = `"https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html"`;
-
-exports[`Canonical Story Page Footer Link should match url 7`] = `"https://www.bbc.com/kyrgyz/institutional-38157284"`;
-
-exports[`Canonical Story Page Footer Link should match url 8`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
-
-exports[`Canonical Story Page Footer Link should match url 9`] = `"https://www.bbc.co.uk/help/web/links/"`;
+exports[`Canonical Story Page Footer Link should match text and url 9`] = `"Башка интернет сайттардын мазмуну боюнча биздин позиция. - https://www.bbc.co.uk/help/web/links/"`;
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 

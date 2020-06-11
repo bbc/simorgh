@@ -8,41 +8,23 @@ exports[`Canonical On Demand Radio Page Footer I can click on the BBC branding a
 
 exports[`Canonical On Demand Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
 
-exports[`Canonical On Demand Radio Page Footer Link should match text 1`] = `"BBC News, Indonesia"`;
+exports[`Canonical On Demand Radio Page Footer Link should match text and url 1`] = `"BBC News, Indonesia - /indonesia"`;
 
-exports[`Canonical On Demand Radio Page Footer Link should match text 2`] = `"Alasan Anda dapat mempercayai BBC News"`;
+exports[`Canonical On Demand Radio Page Footer Link should match text and url 2`] = `"Alasan Anda dapat mempercayai BBC News - https://www.bbc.com/indonesia/institutional-49283175"`;
 
-exports[`Canonical On Demand Radio Page Footer Link should match text 3`] = `"Peraturan Penggunaan"`;
+exports[`Canonical On Demand Radio Page Footer Link should match text and url 3`] = `"Peraturan Penggunaan - https://www.bbc.com/indonesia/institutional-37818421"`;
 
-exports[`Canonical On Demand Radio Page Footer Link should match text 4`] = `"Mengenai BBC"`;
+exports[`Canonical On Demand Radio Page Footer Link should match text and url 4`] = `"Mengenai BBC - https://www.bbc.com/indonesia/institutional-37818424"`;
 
-exports[`Canonical On Demand Radio Page Footer Link should match text 5`] = `"Kebijakan tentang Privasi"`;
+exports[`Canonical On Demand Radio Page Footer Link should match text and url 5`] = `"Kebijakan tentang Privasi - https://www.bbc.com/indonesia/institutional-37818425"`;
 
-exports[`Canonical On Demand Radio Page Footer Link should match text 6`] = `"Cookies"`;
+exports[`Canonical On Demand Radio Page Footer Link should match text and url 6`] = `"Cookies - https://www.bbc.co.uk/usingthebbc/cookies/"`;
 
-exports[`Canonical On Demand Radio Page Footer Link should match text 7`] = `"Hubungi BBC"`;
+exports[`Canonical On Demand Radio Page Footer Link should match text and url 7`] = `"Hubungi BBC - https://www.bbc.com/indonesia/institutional-37818427"`;
 
-exports[`Canonical On Demand Radio Page Footer Link should match text 8`] = `"AdChoices / Do Not Sell My Info"`;
+exports[`Canonical On Demand Radio Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
-exports[`Canonical On Demand Radio Page Footer Link should match text 9`] = `"Baca tentang peraturan baru terkait link eksternal."`;
-
-exports[`Canonical On Demand Radio Page Footer Link should match url 1`] = `"/indonesia"`;
-
-exports[`Canonical On Demand Radio Page Footer Link should match url 2`] = `"https://www.bbc.com/indonesia/institutional-49283175"`;
-
-exports[`Canonical On Demand Radio Page Footer Link should match url 3`] = `"https://www.bbc.com/indonesia/institutional-37818421"`;
-
-exports[`Canonical On Demand Radio Page Footer Link should match url 4`] = `"https://www.bbc.com/indonesia/institutional-37818424"`;
-
-exports[`Canonical On Demand Radio Page Footer Link should match url 5`] = `"https://www.bbc.com/indonesia/institutional-37818425"`;
-
-exports[`Canonical On Demand Radio Page Footer Link should match url 6`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
-
-exports[`Canonical On Demand Radio Page Footer Link should match url 7`] = `"https://www.bbc.com/indonesia/institutional-37818427"`;
-
-exports[`Canonical On Demand Radio Page Footer Link should match url 8`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
-
-exports[`Canonical On Demand Radio Page Footer Link should match url 9`] = `"https://www.bbc.com/indonesia/institutional/2011/02/000001_links"`;
+exports[`Canonical On Demand Radio Page Footer Link should match text and url 9`] = `"Baca tentang peraturan baru terkait link eksternal. - https://www.bbc.com/indonesia/institutional/2011/02/000001_links"`;
 
 exports[`Canonical On Demand Radio Page Header I can see the branding 1`] = `"BBC News, Indonesia"`;
 

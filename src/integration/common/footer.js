@@ -38,12 +38,8 @@ export default () => {
           expect(linkText).toBeTruthy();
         });
 
-        it('should match text', () => {
-          expect(linkText).toMatchSnapshot();
-        });
-
-        it(`should match url`, () => {
-          expect(linkUrl).toMatchSnapshot();
+        it('should match text and url', () => {
+          expect(`${linkText} - ${linkUrl}`).toMatchSnapshot();
         });
       });
     });
