@@ -17,7 +17,6 @@ const IdxPageWithContext = ({
   <BrowserRouter>
     <ToggleContextProvider service={service}>
       <RequestContextProvider
-        bbcOrigin={`http://localhost:7080/${service}`}
         statusCode={200}
         pageType="IDX"
         service={service}

@@ -17,12 +17,9 @@ let container;
 describe('IdxPage', () => {
   beforeEach(async () => {
     fetchMock.restore();
+    fetchMock.mock('/persian/mostread.json', persianMostReadData);
     fetchMock.mock(
-      'http://localhost/persian/mostread.json',
-      persianMostReadData,
-    );
-    fetchMock.mock(
-      'http://localhost/persian/bbc_dari_radio/schedule.json',
+      '/data/persian/bbc_dari_radio/schedule.json',
       dariRadioScheduleData,
     );
 
