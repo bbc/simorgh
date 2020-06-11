@@ -116,7 +116,7 @@ const convertInclude = async (includeBlock, ...restParams) => {
     'smallprox/include': 'vj',
   };
 
-  const { href, type } = includeBlock;
+  const { href, type, ...rest } = includeBlock;
 
   // Here pathname is passed as a prop specifically for CPS includes
   // This will most likely change in issue #6784 so it is temporary for now
@@ -163,6 +163,7 @@ const convertInclude = async (includeBlock, ...restParams) => {
       }),
       type: includeType,
       ...(imageBlock && { imageBlock }),
+      ...rest,
     },
   };
 };

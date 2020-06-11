@@ -1,5 +1,5 @@
 import React from 'react';
-import { string, obj } from 'prop-types';
+import { string, shape, number } from 'prop-types';
 import styled from 'styled-components';
 import { AmpImg } from '@bbc/psammead-image';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
@@ -14,16 +14,25 @@ const Idt2Container = ({ imageBlock }) => (
   </IncludeGrid>
 );
 
+Idt2Container.propTypes = {
+  imageBlock: shape({
+    src: string,
+    srcset: string,
+    height: number,
+    width: number,
+    altText: string,
+    layout: string,
+  }).isRequired,
+};
 
 const componentsToRender = {
+  // add amp support for other include types here
   idt2: props => <Idt2Container {...props} />,
 };
 
 const AmpIncludeContainer = props => {
-  const { type, imageBlock } = props;
-  if (!imageBlock) return null;
-
-  return componentsToRender[type](props);
+  const { type } = props;
+  return componentsToRender[type] ? componentsToRender[type](props) : null;
 };
 
 AmpIncludeContainer.propTypes = {

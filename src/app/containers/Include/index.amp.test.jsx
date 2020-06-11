@@ -5,35 +5,16 @@ import AmpIncludeContainer from './index.amp';
 
 const validIdt2Props = {
   html: `<div>Hello</div>`,
-  idt2: {
-    altText: 'some alt text',
-    dimensions: {
-      small: {
-        href:
-          'https://www.example.com/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/150',
-        height: 400,
-        width: 500,
-      },
-      medium: {
-        href:
-          'https://www.example.com/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/350',
-        height: 600,
-        width: 700,
-      },
-      large: {
-        href:
-          'https://www.example.com/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/550',
-        height: 800,
-        width: 900,
-      },
-    },
+  type: 'idt2',
+  imageBlock: {
+    altText: 'image alt text',
+    height: 1864,
+    layout: 'responsive',
+    src: 'https://foobar.com/includes/image/816',
+    srcset:
+      'https://foobar.com/includes/image/470 470w,https://foobar.com/includes/image/816 816w',
+    width: 1632,
   },
-  type: 'idt2',
-};
-
-const invalidIdt2Props = {
-  html: `<div>Hello</div>`,
-  type: 'idt2',
 };
 
 describe('AmpIncludeContainer', () => {
@@ -47,18 +28,10 @@ describe('AmpIncludeContainer', () => {
     document.body.appendChild(container);
   });
 
-  it('should not render with invalid IDT2 props', async () => {
-    act(() => {
-      ReactDOM.render(<AmpIncludeContainer {...invalidIdt2Props} />, container);
-    });
-    expect(container.querySelectorAll('amp-img').length).toEqual(0);
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should not render for any include type other than an IDT2', async () => {
+  it('should not render for an unsuported include type', async () => {
     const props = {
       ...validIdt2Props,
-      type: 'vj',
+      type: 'vj2',
     };
     act(() => {
       ReactDOM.render(<AmpIncludeContainer {...props} />, container);
