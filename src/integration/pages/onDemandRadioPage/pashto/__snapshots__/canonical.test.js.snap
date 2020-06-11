@@ -8,9 +8,43 @@ exports[`Canonical On Demand Radio Page Footer I can click on the BBC branding a
 
 exports[`Canonical On Demand Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
 
+exports[`Canonical On Demand Radio Page Footer Link should match text and url 1`] = `"BBC News, پښتو - /pashto"`;
+
+exports[`Canonical On Demand Radio Page Footer Link should match text and url 2`] = `"ولې تاسې پر بي بي سي خبرونو باور کولی شئ - https://www.bbc.com/pashto/institutional-49283007"`;
+
+exports[`Canonical On Demand Radio Page Footer Link should match text and url 3`] = `"د کارولو شرايط - https://www.bbc.com/pashto/institutional-37620701"`;
+
+exports[`Canonical On Demand Radio Page Footer Link should match text and url 4`] = `"د بي بي سي‌ په اړه - https://www.bbc.com/pashto/institutional-37622761"`;
+
+exports[`Canonical On Demand Radio Page Footer Link should match text and url 5`] = `"د محرميت تگلاره - https://www.bbc.com/pashto/institutional-37622762"`;
+
+exports[`Canonical On Demand Radio Page Footer Link should match text and url 6`] = `"Cookies - https://www.bbc.com/usingthebbc/cookies/"`;
+
+exports[`Canonical On Demand Radio Page Footer Link should match text and url 7`] = `"زموږ سره اړیکي - https://www.bbc.co.uk/pashto/institutional-37622768"`;
+
+exports[`Canonical On Demand Radio Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Canonical On Demand Radio Page Footer Link should match text and url 9`] = `"د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره. - https://www.bbc.co.uk/help/web/links/"`;
+
 exports[`Canonical On Demand Radio Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
-exports[`Canonical On Demand Radio Page Header I can see the navigation 1`] = `"کور پاڼه"`;
+exports[`Canonical On Demand Radio Page Header Navigation link should match text and url 1`] = `"کور پاڼه - /pashto"`;
+
+exports[`Canonical On Demand Radio Page Header Navigation link should match text and url 2`] = `"افغانستان - /pashto/afghanistan"`;
+
+exports[`Canonical On Demand Radio Page Header Navigation link should match text and url 3`] = `"پښتونخوا - /pashto/pakhtunkhwa"`;
+
+exports[`Canonical On Demand Radio Page Header Navigation link should match text and url 4`] = `"نړۍ - /pashto/world"`;
+
+exports[`Canonical On Demand Radio Page Header Navigation link should match text and url 5`] = `"ښځې - /pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
+
+exports[`Canonical On Demand Radio Page Header Navigation link should match text and url 6`] = `"لوبې - /pashto/sport"`;
+
+exports[`Canonical On Demand Radio Page Header Navigation link should match text and url 7`] = `"ويډيوګانې - /pashto/media/video"`;
+
+exports[`Canonical On Demand Radio Page Header Navigation link should match text and url 8`] = `"ځانګړې پاڼې - /pashto/in_depth"`;
+
+exports[`Canonical On Demand Radio Page Header Navigation link should match text and url 9`] = `"کالم - /pashto/columns"`;
 
 exports[`Canonical On Demand Radio Page I can see the brand title 1`] = `"ماښامنۍ خپرونه"`;
 
@@ -36,7 +70,7 @@ exports[`Canonical On Demand Radio Page SEO Heading level 1 1`] = `"ماښامن
 
 exports[`Canonical On Demand Radio Page SEO Lang attribute 1`] = `"ps"`;
 
-exports[`Canonical On Demand Radio Page SEO Linked data 1`] = `
+exports[`Canonical On Demand Radio Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [

@@ -8,9 +8,33 @@ exports[`Canonical Korean Live Radio Page Footer I can click on the BBC branding
 
 exports[`Canonical Korean Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다 외부 링크에 대한 본사 정책 보기"`;
 
+exports[`Canonical Korean Live Radio Page Footer Link should match text and url 1`] = `"BBC News, 코리아 - /korean"`;
+
+exports[`Canonical Korean Live Radio Page Footer Link should match text and url 2`] = `"BBC News를 신뢰할 수 있는 이유 - https://www.bbc.com/korean/institutional-49283197"`;
+
+exports[`Canonical Korean Live Radio Page Footer Link should match text and url 3`] = `"이용 약관 - https://www.bbc.co.uk/usingthebbc/terms/"`;
+
+exports[`Canonical Korean Live Radio Page Footer Link should match text and url 4`] = `"BBC 소개 - https://www.bbc.co.uk/aboutthebbc"`;
+
+exports[`Canonical Korean Live Radio Page Footer Link should match text and url 5`] = `"개인정보취급방침 - https://www.bbc.co.uk/usingthebbc/privacy/"`;
+
+exports[`Canonical Korean Live Radio Page Footer Link should match text and url 6`] = `"쿠키정책 - https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`Canonical Korean Live Radio Page Footer Link should match text and url 7`] = `"고객센터 - https://www.bbc.com/korean/institutional-42224941"`;
+
+exports[`Canonical Korean Live Radio Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Canonical Korean Live Radio Page Footer Link should match text and url 9`] = `"외부 링크에 대한 본사 정책 보기 - https://www.bbc.co.uk/help/web/links/"`;
+
 exports[`Canonical Korean Live Radio Page Header I can see the branding 1`] = `"BBC News, 코리아"`;
 
-exports[`Canonical Korean Live Radio Page Header I can see the navigation 1`] = `"뉴스"`;
+exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 1`] = `"뉴스 - /korean"`;
+
+exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 2`] = `"비디오 - /korean/media/video"`;
+
+exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 3`] = `"다운로드 - /korean/downloads"`;
+
+exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 4`] = `"TOP 뉴스 - /korean/popular/read"`;
 
 exports[`Canonical Korean Live Radio Page Main heading should match text 1`] = `"BBC 코리아 라디오"`;
 
@@ -30,7 +54,7 @@ exports[`Canonical Korean Live Radio Page SEO Heading level 1 1`] = `"BBC 코리
 
 exports[`Canonical Korean Live Radio Page SEO Lang attribute 1`] = `"ko"`;
 
-exports[`Canonical Korean Live Radio Page SEO Linked data 1`] = `
+exports[`Canonical Korean Live Radio Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [

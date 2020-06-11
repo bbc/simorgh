@@ -8,9 +8,43 @@ exports[`Canonical Most Read Page Footer I can click on the BBC branding and it 
 
 exports[`Canonical Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC không chịu trách nhiệm nội dung các trang ngoài. Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài"`;
 
+exports[`Canonical Most Read Page Footer Link should match text and url 1`] = `"BBC News, Tiếng Việt - /vietnamese"`;
+
+exports[`Canonical Most Read Page Footer Link should match text and url 2`] = `"Tại sao bạn có thể tin tưởng BBC News - https://www.bbc.com/vietnamese/institutional-49283563"`;
+
+exports[`Canonical Most Read Page Footer Link should match text and url 3`] = `"Điều khoản sử dụng - https://www.bbc.com/vietnamese/institutional-37622991"`;
+
+exports[`Canonical Most Read Page Footer Link should match text and url 4`] = `"Về BBC - https://www.bbc.com/vietnamese/institutional-37623840"`;
+
+exports[`Canonical Most Read Page Footer Link should match text and url 5`] = `"Chính sách riêng tư - https://www.bbc.com/vietnamese/institutional-37623841"`;
+
+exports[`Canonical Most Read Page Footer Link should match text and url 6`] = `"Cookie - https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html"`;
+
+exports[`Canonical Most Read Page Footer Link should match text and url 7`] = `"Liên hệ BBC - https://www.bbc.com/vietnamese/institutional-37623842"`;
+
+exports[`Canonical Most Read Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Canonical Most Read Page Footer Link should match text and url 9`] = `"Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài - https://www.bbc.co.uk/help/web/links/"`;
+
 exports[`Canonical Most Read Page Header I can see the branding 1`] = `"BBC News, Tiếng Việt"`;
 
-exports[`Canonical Most Read Page Header I can see the navigation 1`] = `"Tin chính"`;
+exports[`Canonical Most Read Page Header Navigation link should match text and url 1`] = `"Tin chính - /vietnamese"`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 2`] = `"Việt Nam - /vietnamese/vietnam"`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 3`] = `"Thế giới - /vietnamese/world"`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 4`] = `"Diễn đàn - /vietnamese/forum"`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 5`] = `"Kinh tế - /vietnamese/business"`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 6`] = `"Nhịp sống mới - /vietnamese/magazine"`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 7`] = `"Thể thao - /vietnamese/sport"`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 8`] = `"Học tiếng Anh - /vietnamese/english"`;
+
+exports[`Canonical Most Read Page Header Navigation link should match text and url 9`] = `"Video - /vietnamese/media/video"`;
 
 exports[`Canonical Most Read Page I can see the headline 1`] = `"Đọc nhiều nhất"`;
 
@@ -46,7 +80,7 @@ exports[`Canonical Most Read Page SEO Heading level 1 1`] = `"Đọc nhiều nh�
 
 exports[`Canonical Most Read Page SEO Lang attribute 1`] = `"vi"`;
 
-exports[`Canonical Most Read Page SEO Linked data 1`] = `
+exports[`Canonical Most Read Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [
