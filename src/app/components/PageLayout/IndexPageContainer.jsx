@@ -12,11 +12,8 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
-import IndexMarginStyles from './IndexMarginStyles';
 
 const IndexPageContainer = styled.div`
-  ${IndexMarginStyles}
-
   /* To add extra spacing */
   padding-top: ${GEL_SPACING};
   padding-bottom: ${GEL_SPACING_QUAD};
