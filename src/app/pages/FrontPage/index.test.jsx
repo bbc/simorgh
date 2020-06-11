@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
@@ -16,12 +17,15 @@ const requestContextData = {
   data: { status: 200 },
 };
 
-// eslint-disable-next-line react/prop-types
-const FrontPageWithContext = ({ isAmp = false, ...props }) => (
+const FrontPageWithContext = ({
+  isAmp = false,
+  service = 'pidgin',
+  ...props
+}) => (
   <BrowserRouter>
-    <ToggleContextProvider service="pidgin" origin="https://www.test.bbc.com">
+    <ToggleContextProvider service={service} origin="https://www.test.bbc.com">
       <RequestContextProvider isAmp={isAmp} {...requestContextData}>
-        <ServiceContextProvider service="pidgin">
+        <ServiceContextProvider service={service}>
           <FrontPage {...props} />
         </ServiceContextProvider>
       </RequestContextProvider>
@@ -51,6 +55,7 @@ beforeEach(async () => {
 
 afterEach(() => {
   window.dotcom = undefined;
+  window.dotcomConfig = undefined;
 });
 
 jest.mock('uuid', () => {
@@ -181,6 +186,33 @@ describe('Front Page', () => {
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });
+    });
+
+    it('should create window.dotcomConfig when on Canonical and hasAds is true', async () => {
+      await act(async () => {
+        render(<FrontPageWithContext pageData={pageData} />);
+      });
+
+      expect(window.dotcomConfig).toEqual({
+        pageAds: true,
+        playerAds: false,
+      });
+    });
+
+    it('should create window.dotcomConfig when on Canonical and hasAds is false', async () => {
+      await act(async () => {
+        render(<FrontPageWithContext service="japanese" pageData={pageData} />);
+      });
+
+      expect(window.dotcomConfig).toBeFalsy();
+    });
+
+    it('should not create window.dotcomConfig when on Amp and hasAds is true', async () => {
+      await act(async () => {
+        render(<FrontPageWithContext pageData={pageData} isAmp />);
+      });
+
+      expect(window.dotcomConfig).toBeFalsy();
     });
   });
 });
