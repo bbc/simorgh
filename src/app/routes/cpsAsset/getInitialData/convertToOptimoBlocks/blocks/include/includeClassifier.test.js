@@ -12,7 +12,7 @@ const ampPathname = 'https://www.bbc.com/service/foo.amp';
 
 describe('Include Classifier', () => {
   it('should classifiy idt1 include as idt1 on canonical', () => {
-    const expected = 'idt1';
+    const expected = { includeType: 'idt1', classification: 'idt1-canonical' };
 
     const actual = includeClassifier({
       href: idt1Include,
@@ -23,7 +23,7 @@ describe('Include Classifier', () => {
   });
 
   it('should classifiy idt1 include as idt1 on amp', () => {
-    const expected = 'idt1';
+    const expected = { includeType: 'idt1', classification: 'idt1-amp' };
 
     const actual = includeClassifier({
       href: idt1Include,
@@ -34,7 +34,7 @@ describe('Include Classifier', () => {
   });
 
   it('should classifiy idt2 include as idt2 on canonical', () => {
-    const expected = 'idt2';
+    const expected = { includeType: 'idt2', classification: 'idt2-canonical' };
 
     const actual = includeClassifier({
       href: idt2Include,
@@ -45,7 +45,7 @@ describe('Include Classifier', () => {
   });
 
   it('should classifiy idt2 include as idt2 on amp', () => {
-    const expected = 'idt2';
+    const expected = { includeType: 'idt2', classification: 'idt2-amp' };
 
     const actual = includeClassifier({
       href: idt2Include,
@@ -56,7 +56,10 @@ describe('Include Classifier', () => {
   });
 
   it('should classify VJ include supporting AMP on Amp platform', () => {
-    const expected = 'vj-include-supports-amp';
+    const expected = {
+      includeType: 'vj',
+      classification: 'vj-include-supports-amp',
+    };
 
     const actual = includeClassifier({
       href: vjIncludeSupportingAmp,
@@ -67,7 +70,10 @@ describe('Include Classifier', () => {
   });
 
   it('should classify VJ include not supporting AMP on Amp platform', () => {
-    const expected = 'vj-include-not-supporting-amp';
+    const expected = {
+      includeType: 'vj',
+      classification: 'vj-include-not-supporting-amp',
+    };
 
     const actual = includeClassifier({
       href: vjIncludeNotSupportingAmp,
@@ -78,7 +84,10 @@ describe('Include Classifier', () => {
   });
 
   it('should classify VJ include supporting AMP on canonical platform', () => {
-    const expected = 'vj-include-canonical';
+    const expected = {
+      includeType: 'vj',
+      classification: 'vj-include-canonical',
+    };
 
     const actual = includeClassifier({
       href: vjIncludeSupportingAmp,
@@ -89,7 +98,10 @@ describe('Include Classifier', () => {
   });
 
   it('should classify VJ include not supporting AMP on canonical platform', () => {
-    const expected = 'vj-include-canonical';
+    const expected = {
+      includeType: 'vj',
+      classification: 'vj-include-canonical',
+    };
 
     const actual = includeClassifier({
       href: vjIncludeNotSupportingAmp,
@@ -100,7 +112,7 @@ describe('Include Classifier', () => {
   });
 
   it('should classify a non-supported include as not supported on canonical', () => {
-    const expected = 'not-supported';
+    const expected = { includeType: null, classification: 'not-supported' };
 
     const actual = includeClassifier({
       href: 'idt3/blah',
@@ -111,7 +123,7 @@ describe('Include Classifier', () => {
   });
 
   it('should classify a non-supported include as not supported on amp', () => {
-    const expected = 'not-supported';
+    const expected = { includeType: null, classification: 'not-supported' };
 
     const actual = includeClassifier({
       href: 'idt3/blah',

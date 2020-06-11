@@ -372,7 +372,7 @@ describe('convertInclude', () => {
     expect(loggerMock.info).toHaveBeenCalledTimes(1);
     expect(loggerMock.info).toBeCalledWith(INCLUDE_UNSUPPORTED, {
       type: 'include',
-      isAmp: false,
+      classification: 'not-supported',
       url: '/idt3/111-222-333-444-555',
     });
   });
@@ -394,7 +394,7 @@ describe('convertInclude', () => {
     expect(loggerMock.info).toHaveBeenCalledTimes(1);
     expect(loggerMock.info).toBeCalledWith(INCLUDE_UNSUPPORTED, {
       type: 'include',
-      isAmp: false,
+      classification: 'not-supported',
       url: 'idt3/111-222-333-444-555',
     });
   });
