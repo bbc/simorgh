@@ -3,6 +3,7 @@ import React from 'react';
 import { string } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
+import { GEL_SPACING_QUIN } from '@bbc/gel-foundations/spacings';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
 
 /**
@@ -12,6 +13,7 @@ import { GridItemConstrainedMedium } from '#lib/styledGrid';
 const Include = styled.div`
   max-width: 100%;
   overflow: scroll hidden;
+  margin-bottom: ${GEL_SPACING_QUIN};
 `;
 
 const CanonicalIncludeContainer = ({ html, type }) => {

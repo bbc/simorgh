@@ -557,7 +557,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       liveRadio: {
         environments: {
@@ -2059,7 +2059,7 @@ module.exports = () => ({
               '/indonesia/bbc_indonesian_radio/programmes/w13xtt0s', // Brand
               '/indonesia/bbc_indonesian_radio/w172xh281s8mkhr', // Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
@@ -3251,7 +3251,7 @@ module.exports = () => ({
               '/pashto/bbc_pashto_radio/programmes/p0340yr4', // Brand
               '/pashto/bbc_pashto_radio/w172xjcknn5x31c', // Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
