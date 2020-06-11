@@ -6,8 +6,6 @@ import persianAfghanistanIdxData from '#data/persian/afghanistan';
 import persianMostReadData from '#data/persian/mostRead';
 import IdxPageWithContext from './testHelpers';
 
-fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
-
 jest.mock('#containers/ChartbeatAnalytics', () => {
   return () => <div>chartbeat</div>;
 });
@@ -32,12 +30,6 @@ describe('IdxPage', () => {
 
   describe('Snapshots', () => {
     it('should render a persian idx page correctly with most read and radio schedule', async () => {
-      await act(async () => {
-        container = render(
-          <IdxPageWithContext pageData={persianAfghanistanIdxData} />,
-        ).container;
-      });
-
       expect(container).toMatchSnapshot();
     });
   });

@@ -15,9 +15,8 @@ const IdxPageWithContext = ({
   mostReadEndpointOverride = null,
 }) => (
   <BrowserRouter>
-    <ToggleContextProvider service={service}>
+    <ToggleContextProvider service={service} origin="https://www.test.bbc.com">
       <RequestContextProvider
-        statusCode={200}
         pageType="IDX"
         service={service}
         pathname="/pathname"
