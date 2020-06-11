@@ -122,9 +122,43 @@ exports[`AMP ukraine_in_russian IDX page Footer I can click on the BBC branding 
 
 exports[`AMP ukraine_in_russian IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. ВВС не несе відповідальності за контент інших сайтів. Ознайомтеся з нашими правилами зовнішніх посилань."`;
 
+exports[`AMP ukraine_in_russian IDX page Footer Link should match text and url 1`] = `"BBC News, Україна - /ukrainian"`;
+
+exports[`AMP ukraine_in_russian IDX page Footer Link should match text and url 2`] = `"Чому BBC заслуговує на довіру - https://www.bbc.com/ukrainian/institutional-50170368"`;
+
+exports[`AMP ukraine_in_russian IDX page Footer Link should match text and url 3`] = `"Правила користування - https://www.bbc.com/ukrainian/institutional-38144387"`;
+
+exports[`AMP ukraine_in_russian IDX page Footer Link should match text and url 4`] = `"Особисті дані - https://www.bbc.com/ukrainian/institutional-38144827"`;
+
+exports[`AMP ukraine_in_russian IDX page Footer Link should match text and url 5`] = `"Cookies - https://www.bbc.com/usingthebbc/cookies/"`;
+
+exports[`AMP ukraine_in_russian IDX page Footer Link should match text and url 6`] = `"Зв'язатися з BBC - https://www.bbc.com/ukrainian/institutional-38146278"`;
+
+exports[`AMP ukraine_in_russian IDX page Footer Link should match text and url 7`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`AMP ukraine_in_russian IDX page Footer Link should match text and url 8`] = `"Ознайомтеся з нашими правилами зовнішніх посилань. - https://www.bbc.co.uk/help/web/links/"`;
+
 exports[`AMP ukraine_in_russian IDX page Header I can see the branding 1`] = `"BBC News, Україна"`;
 
 exports[`AMP ukraine_in_russian IDX page Header I can see the navigation 1`] = `"Новини"`;
+
+exports[`AMP ukraine_in_russian IDX page Header Navigation link should match text and url 1`] = `"Новини - /ukrainian"`;
+
+exports[`AMP ukraine_in_russian IDX page Header Navigation link should match text and url 2`] = `"Коронавірус - /ukrainian/52118881"`;
+
+exports[`AMP ukraine_in_russian IDX page Header Navigation link should match text and url 3`] = `"Наука - /ukrainian/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"`;
+
+exports[`AMP ukraine_in_russian IDX page Header Navigation link should match text and url 4`] = `"Технології - /ukrainian/topics/31684f19-84d6-41f6-b033-7ae08098572a"`;
+
+exports[`AMP ukraine_in_russian IDX page Header Navigation link should match text and url 5`] = `"Здоров’я - /ukrainian/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+
+exports[`AMP ukraine_in_russian IDX page Header Navigation link should match text and url 6`] = `"Журнал - /ukrainian/magazine"`;
+
+exports[`AMP ukraine_in_russian IDX page Header Navigation link should match text and url 7`] = `"Книга року ВВС - /ukrainian/features-50320117"`;
+
+exports[`AMP ukraine_in_russian IDX page Header Navigation link should match text and url 8`] = `"Блоги - /ukrainian/blogs"`;
+
+exports[`AMP ukraine_in_russian IDX page Header Navigation link should match text and url 9`] = `"Поточна сторінка, РУС - /ukrainian/ukraine_in_russian"`;
 
 exports[`AMP ukraine_in_russian IDX page I can see sections 1`] = `"BBC ЖурналПодивитись все"`;
 
@@ -149,6 +183,41 @@ exports[`AMP ukraine_in_russian IDX page SEO Heading level 1 1`] = `"РУС"`;
 exports[`AMP ukraine_in_russian IDX page SEO Lang attribute 1`] = `"ru"`;
 
 exports[`AMP ukraine_in_russian IDX page SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@graph": Array [
+    Object {
+      "@type": "WebPage",
+      "image": Object {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
+        "width": 1024,
+      },
+      "mainEntityOfPage": Object {
+        "@id": "http://localhost:7080/ukrainian/ukraine_in_russian",
+        "@type": "WebPage",
+        "name": "РУС",
+      },
+      "publisher": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
+          "width": 1024,
+        },
+        "name": "BBC News Україна",
+        "publishingPrinciples": "https://www.bbc.com/ukrainian/institutional-50170368",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
+      "url": "http://localhost:7080/ukrainian/ukraine_in_russian",
+    },
+  ],
+}
+`;
+
+exports[`AMP ukraine_in_russian IDX page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [

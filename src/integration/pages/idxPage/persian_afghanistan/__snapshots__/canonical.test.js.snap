@@ -8,9 +8,55 @@ exports[`Canonical persian_afghanistan IDX page Footer I can click on the BBC br
 
 exports[`Canonical persian_afghanistan IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
+exports[`Canonical persian_afghanistan IDX page Footer Link should match text and url 1`] = `"BBC News, فارسی - /persian"`;
+
+exports[`Canonical persian_afghanistan IDX page Footer Link should match text and url 2`] = `"چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟ - https://www.bbc.com/persian/institutional-49283091"`;
+
+exports[`Canonical persian_afghanistan IDX page Footer Link should match text and url 3`] = `"شرایط استفاده - https://www.bbc.com/persian/institutional-37474133"`;
+
+exports[`Canonical persian_afghanistan IDX page Footer Link should match text and url 4`] = `"درباره بی بی سی - https://www.bbc.com/persian/institutional-37474136"`;
+
+exports[`Canonical persian_afghanistan IDX page Footer Link should match text and url 5`] = `"سیاست حفظ حریم خصوصی - https://www.bbc.com/persian/institutional-37540067"`;
+
+exports[`Canonical persian_afghanistan IDX page Footer Link should match text and url 6`] = `"کوکی ها - https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`Canonical persian_afghanistan IDX page Footer Link should match text and url 7`] = `"تماس با بی بی سی - https://www.bbc.com/persian/institutional-37542244"`;
+
+exports[`Canonical persian_afghanistan IDX page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Canonical persian_afghanistan IDX page Footer Link should match text and url 9`] = `"سیاست ما درباره لینک دادن به سایت های دیگر. - https://www.bbc.com/persian/institutional/2011/04/000001_links"`;
+
 exports[`Canonical persian_afghanistan IDX page Header I can see the branding 1`] = `"BBC News, فارسی"`;
 
 exports[`Canonical persian_afghanistan IDX page Header I can see the navigation 1`] = `"صفحه اول"`;
+
+exports[`Canonical persian_afghanistan IDX page Header Navigation link should match text and url 1`] = `"صفحه اول - /persian"`;
+
+exports[`Canonical persian_afghanistan IDX page Header Navigation link should match text and url 2`] = `"کرونا - /persian/science-52004647"`;
+
+exports[`Canonical persian_afghanistan IDX page Header Navigation link should match text and url 3`] = `"پخش زنده - /persian/media-49522521"`;
+
+exports[`Canonical persian_afghanistan IDX page Header Navigation link should match text and url 4`] = `"ویدیو - /persian/media/video"`;
+
+exports[`Canonical persian_afghanistan IDX page Header Navigation link should match text and url 5`] = `"تلویزیون - /persian/tv-and-radio-37434377"`;
+
+exports[`Canonical persian_afghanistan IDX page Header Navigation link should match text and url 6`] = `"رادیو - /persian/tv-and-radio-37434376"`;
+
+exports[`Canonical persian_afghanistan IDX page Header Navigation link should match text and url 7`] = `"ايران - /persian/iran"`;
+
+exports[`Canonical persian_afghanistan IDX page Header Navigation link should match text and url 8`] = `"صفحه فعلی, افغانستان - /persian/afghanistan"`;
+
+exports[`Canonical persian_afghanistan IDX page Header Navigation link should match text and url 9`] = `"جهان - /persian/world"`;
+
+exports[`Canonical persian_afghanistan IDX page Header Navigation link should match text and url 10`] = `"هنر - /persian/arts"`;
+
+exports[`Canonical persian_afghanistan IDX page Header Navigation link should match text and url 11`] = `"ورزش - /persian/sport"`;
+
+exports[`Canonical persian_afghanistan IDX page Header Navigation link should match text and url 12`] = `"اقتصاد - /persian/business"`;
+
+exports[`Canonical persian_afghanistan IDX page Header Navigation link should match text and url 13`] = `"دانش - /persian/science"`;
+
+exports[`Canonical persian_afghanistan IDX page Header Navigation link should match text and url 14`] = `"ناظران می‌گویند - /persian/blogs/viewpoints"`;
 
 exports[`Canonical persian_afghanistan IDX page I can see sections 1`] = `"ویدیو و صدا"`;
 
@@ -33,6 +79,41 @@ exports[`Canonical persian_afghanistan IDX page SEO Heading level 1 1`] = `"صف
 exports[`Canonical persian_afghanistan IDX page SEO Lang attribute 1`] = `"fa"`;
 
 exports[`Canonical persian_afghanistan IDX page SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@graph": Array [
+    Object {
+      "@type": "WebPage",
+      "image": Object {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+        "width": 1024,
+      },
+      "mainEntityOfPage": Object {
+        "@id": "http://localhost:7080/persian/afghanistan",
+        "@type": "WebPage",
+        "name": "صفحه افغانستان",
+      },
+      "publisher": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+          "width": 1024,
+        },
+        "name": "BBC News فارسی",
+        "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+      "url": "http://localhost:7080/persian/afghanistan",
+    },
+  ],
+}
+`;
+
+exports[`Canonical persian_afghanistan IDX page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [
