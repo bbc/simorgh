@@ -1,4 +1,4 @@
-import { ampSupported } from './ampSrcBuilder';
+import Url from 'url-parse';
 
 const supportedTypes = {
   indepthtoolkit: 'idt1',
@@ -7,6 +7,12 @@ const supportedTypes = {
   'news/special': 'vj',
   'market-data': 'vj',
   'smallprox/include': 'vj',
+};
+
+const ampSupported = href => {
+  // An amp-image query parameter on the include path indicates an AMP version of the include is available
+  const hasAmpImageQueryString = new Url(href, true).query['amp-image'];
+  return !!hasAmpImageQueryString;
 };
 
 const includeClassifier = ({ href, pathname }) => {

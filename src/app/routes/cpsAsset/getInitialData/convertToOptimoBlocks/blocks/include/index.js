@@ -9,7 +9,7 @@ import {
 } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
 import { addOverrideQuery } from '#app/routes/utils/overrideRendererOnTest';
-import { ampSrcBuilder } from './ampSrcBuilder';
+import ampSrcBuilder from './ampSrcBuilder';
 import includeClassifier from './includeClassifier';
 
 const logger = nodeLogger(__filename);
