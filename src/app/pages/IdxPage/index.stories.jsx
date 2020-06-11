@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { getLocalMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 import persianAfghanistanIdxData from '#data/persian/afghanistan';
 import ukraineInRussianIdxData from '#data/ukrainian/ukraine_in_russian';
 import IdxPageWithContext from './testHelpers';
@@ -19,6 +20,12 @@ const stories = storiesOf('Pages|Idx Page', module);
   },
 ].forEach(({ idxPage, pageData, service }) => {
   stories.add(`${idxPage}`, () => {
-    return <IdxPageWithContext service={service} pageData={pageData} />;
+    return (
+      <IdxPageWithContext
+        service={service}
+        pageData={pageData}
+        mostReadEndpointOverride={getLocalMostReadEndpoint({ service })}
+      />
+    );
   });
 });
