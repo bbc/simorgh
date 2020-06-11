@@ -3,6 +3,7 @@ import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getEmbedUrl, hasMedia } from './helpers';
 import appToggles from '../../../support/helpers/useAppToggles';
 import envConfig from '../../../support/config/envs';
+import visitPage from '../../../support/helpers/visitPage';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -33,6 +34,18 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
                 `No media on ${pageType} for ${Cypress.env('currentPath')}`,
               );
             }
+          },
+        );
+      });
+
+      it(`embed should load preroll plugin`, () => {
+        cy.request(`${Cypress.env('currentPath')}.json`).then(
+          ({ body: jsonData }) => {
+            const embedUrl = getEmbedUrl(jsonData, language);
+
+            visitPage(`${embedUrl}?ads-debug`, 'mediaAssetPage');
+
+            cy.get(`script[src*="dotcom-preroll.js"]`).should('exist');
           },
         );
       });
