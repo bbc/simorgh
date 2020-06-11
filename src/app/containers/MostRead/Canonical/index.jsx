@@ -108,6 +108,7 @@ const CanonicalMostRead = ({
     service,
     timezone,
     items,
+    isAmp,
   ]);
 
   if (!items) {

@@ -28,7 +28,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
         class="StyledGelWrapperGrid-sc-1brqmij-0 eydjDr"
       >
         <div
-          class="StyledWrapper-tc95in-0 eMvgIJ"
+          class="StyledMessageContainer-tc95in-1 glnohn"
         >
           <div
             class="StyledWrapper-sc-1pnftlt-0 jywlaE"
@@ -47,7 +47,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
       </div>
       <strong
         aria-hidden="true"
-        class="Headline-sc-1kh1qhu-0 StyledHeadline-gehp0k-0 gEGsBa"
+        class="Headline-sc-1kh1qhu-0 StyledHeadline-gehp0k-0 gBkukD"
       >
         <span
           class="BrandTitle-gehp0k-1 fjmQIa"
@@ -61,7 +61,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
         </span>
       </strong>
       <p
-        class="Paragraph-k859h4-0 fxxgUd"
+        class="Paragraph-k859h4-0 StyledParagraphComponent-v70vjd-0 cvyKtV"
       >
         د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
       </p>
