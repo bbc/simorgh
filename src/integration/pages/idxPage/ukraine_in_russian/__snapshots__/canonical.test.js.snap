@@ -137,6 +137,8 @@ exports[`Canonical ukrainian/ukraine_in_russian IDX page Sections should match h
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Story Promo Headline should match headline text 1`] = `"Как не спиться на карантине"`;
 
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Story Promo Headline should match text 1`] = `"Как не спиться на карантине"`;
+
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Story Promo Image should match image 1`] = `
 <img
   alt="Чоловік з келихом"
