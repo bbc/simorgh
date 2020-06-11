@@ -8,9 +8,41 @@ exports[`Canonical Media Asset Page Footer I can click on the BBC branding and i
 
 exports[`Canonical Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
+exports[`Canonical Media Asset Page Footer Link should match text and url 1`] = `"BBC News, Pidgin - /pidgin"`;
+
+exports[`Canonical Media Asset Page Footer Link should match text and url 2`] = `"Why you fit trust BBC News - https://www.bbc.com/pidgin/institutional-48528766"`;
+
+exports[`Canonical Media Asset Page Footer Link should match text and url 3`] = `"How dem dey take use am - https://www.bbc.co.uk/usingthebbc/terms/"`;
+
+exports[`Canonical Media Asset Page Footer Link should match text and url 4`] = `"As e concern BBC - https://www.bbc.co.uk/aboutthebbc"`;
+
+exports[`Canonical Media Asset Page Footer Link should match text and url 5`] = `"Privacy Policy - https://www.bbc.co.uk/usingthebbc/privacy/"`;
+
+exports[`Canonical Media Asset Page Footer Link should match text and url 6`] = `"Cookies - https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`Canonical Media Asset Page Footer Link should match text and url 7`] = `"Call BBC - https://www.bbc.com/pidgin/institutional-42188215"`;
+
+exports[`Canonical Media Asset Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Canonical Media Asset Page Footer Link should match text and url 9`] = `"De way wey we de take go external link. - https://www.bbc.co.uk/help/web/links/"`;
+
 exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
-exports[`Canonical Media Asset Page Header I can see the navigation 1`] = `"Home"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 1`] = `"Home - /pidgin"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 2`] = `"Nigeria - /pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 3`] = `"Africa - /pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 4`] = `"World - /pidgin/world"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 5`] = `"Video - /pidgin/media/video"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 6`] = `"Sport - /pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 7`] = `"Entertainment - /pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 8`] = `"Most popular - /pidgin/popular/read"`;
 
 exports[`Canonical Media Asset Page I can see a bulleted list item 1`] = `"<Media Asset Page>"`;
 
@@ -44,7 +76,7 @@ exports[`Canonical Media Asset Page SEO Heading level 1 1`] = `"Simorgh: Media P
 
 exports[`Canonical Media Asset Page SEO Lang attribute 1`] = `"pcm"`;
 
-exports[`Canonical Media Asset Page SEO Linked data 1`] = `
+exports[`Canonical Media Asset Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [
@@ -90,6 +122,19 @@ Object {
       "url": "http://localhost:7080/pidgin/23248703",
     },
   ],
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Linked data should match text 2`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "description": "short",
+  "duration": "PT5S",
+  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm",
+  "name": "alt-text world service clip",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg",
+  "uploadDate": "2018-12-20T11:06:51.000Z",
 }
 `;
 
