@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IncludeContainer should not render include for a Canonical page with toggles disabled 1`] = `<div />`;
+
+exports[`IncludeContainer should not render include for an Amp page with toggles disabled 1`] = `<div />`;
+
+exports[`IncludeContainer should render include for IDT2 on an Amp page with toggles enabled 1`] = `
+<div>
+  IDT-Amp-component
+</div>
+`;
+
+exports[`IncludeContainer should render include for a Canonical page with toggles enabled 1`] = `
+<div>
+  canonical-includes-component
+</div>
+`;

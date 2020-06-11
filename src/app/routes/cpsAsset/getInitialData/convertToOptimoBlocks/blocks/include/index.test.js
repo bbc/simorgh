@@ -100,7 +100,7 @@ describe('convertInclude', () => {
         type: 'idt2',
         html: idt2Markup,
         imageBlock: {
-          altText: 'image alt text',
+          alt: 'image alt text',
           height: 1864,
           layout: 'responsive',
           src: 'https://foobar.com/includes/image/816',
@@ -189,7 +189,7 @@ describe('convertInclude', () => {
         tile: 'IDT2 Include',
         platform: 'highweb',
         imageBlock: {
-          altText: 'image alt text',
+          alt: 'image alt text',
           height: 1864,
           layout: 'responsive',
           src: 'https://foobar.com/includes/image/470',
@@ -338,7 +338,7 @@ describe('convertInclude', () => {
         type: 'idt2',
         html: idt2Markup,
         imageBlock: {
-          altText: 'image alt text',
+          alt: 'image alt text',
           height: 1864,
           layout: 'responsive',
           src: 'https://foobar.com/includes/image/816',
@@ -461,7 +461,7 @@ describe('convertInclude', () => {
         type: 'idt2',
         html: null,
         imageBlock: {
-          altText: 'image alt text',
+          alt: 'image alt text',
           height: 1864,
           layout: 'responsive',
           src: 'https://foobar.com/includes/image/816',

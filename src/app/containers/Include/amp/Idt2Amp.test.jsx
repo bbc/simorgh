@@ -7,7 +7,7 @@ const validIdt2Props = {
   html: `<div>Hello</div>`,
   type: 'idt2',
   imageBlock: {
-    altText: 'image alt text',
+    alt: 'image alt text',
     height: 1864,
     layout: 'responsive',
     src: 'https://foobar.com/includes/image/816',

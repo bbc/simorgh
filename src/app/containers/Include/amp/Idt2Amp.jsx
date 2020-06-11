@@ -21,7 +21,7 @@ Idt2Amp.propTypes = {
     srcset: string,
     height: number,
     width: number,
-    altText: string,
+    alt: string,
     layout: string,
   }).isRequired,
 };

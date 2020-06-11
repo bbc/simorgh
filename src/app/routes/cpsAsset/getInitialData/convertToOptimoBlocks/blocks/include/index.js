@@ -101,7 +101,7 @@ const getImageBlock = (type, blockData, isAmp) => {
   const { altText, dimensions } = imageData;
 
   return {
-    altText,
+    alt: altText,
     ...getImageProps(dimensions),
   };
 };
