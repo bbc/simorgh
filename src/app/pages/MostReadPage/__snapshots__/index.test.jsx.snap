@@ -99,8 +99,8 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 
 .c2 {
   color: #6E6E73;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -327,15 +327,15 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c2 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c2 {
-    font-size: 1.75rem;
-    line-height: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -556,7 +556,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"WebPage","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"De one we dem de read well well"}}
+      {"@context":"http://schema.org","@graph":[{"@type":"WebPage","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"De one we dem de read well well"}}]}
     </script>
   </head>
   <body>
