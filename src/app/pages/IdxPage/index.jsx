@@ -77,7 +77,9 @@ const IdxPage = ({
       <LinkedData type="WebPage" seoTitle={seoTitle} />
       <main role="main">
         <IndexPageContainer>
-          <IndexHeading id="content">{title}</IndexHeading>
+          <IndexHeading id="content" pageType="idx">
+            {title}
+          </IndexHeading>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
               {radioScheduleOnIdxPage &&
