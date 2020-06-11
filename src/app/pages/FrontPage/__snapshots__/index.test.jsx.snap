@@ -1476,7 +1476,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                     role="region"
                   >
                     <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
+                      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu SectionLabelWithMargin-sc-1resov9-0 dxfHPg"
                     >
                       <div
                         class="Bar-sc-1x4gwjz-0 jsgdXU"

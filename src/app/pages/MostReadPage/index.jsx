@@ -48,9 +48,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
 
   const MostReadWrapper = ({ children }) => (
     <>
-      <IndexHeading id="content" pageType="idx">
-        {header}
-      </IndexHeading>
+      <IndexHeading id="content">{header}</IndexHeading>
       <MarginWrapper>
         <GelPageGrid
           dir={dir}
