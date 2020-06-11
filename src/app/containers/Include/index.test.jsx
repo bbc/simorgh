@@ -4,8 +4,8 @@ import loggerMock from '#testHelpers/loggerMock';
 import IncludeContainer from '.';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import * as amp from './index.amp';
-import * as canonical from './index.canonical';
+import * as idt2Amp from './amp/Idt2Amp';
+import * as canonical from './canonical';
 import { INCLUDE_RENDERED } from '#lib/logger.const';
 
 const defaultToggleState = {
@@ -84,7 +84,7 @@ describe('IncludeContainer', () => {
   it('should not render include for a Canonical page with toggles disabled', async () => {
     const mockCanonical = jest
       .fn()
-      .mockReturnValue('canonical-includes-container');
+      .mockReturnValue('canonical-includes-component');
     canonical.default = mockCanonical;
 
     const { container } = render(
@@ -101,7 +101,7 @@ describe('IncludeContainer', () => {
   it('should render include for a Canonical page with toggles enabled', async () => {
     const mockCanonical = jest
       .fn()
-      .mockReturnValue('canonical-includes-container');
+      .mockReturnValue('canonical-includes-component');
     canonical.default = mockCanonical;
 
     const { container } = render(
@@ -120,9 +120,9 @@ describe('IncludeContainer', () => {
     expect(mockCanonical).toHaveBeenCalledTimes(1);
   });
 
-  it('should render include for an Amp page with toggles enabled', async () => {
-    const mockAmp = jest.fn().mockReturnValue('amp-includes-container');
-    amp.default = mockAmp;
+  it('should render include for IDT2 on an Amp page with toggles enabled', async () => {
+    const mockIdt2Amp = jest.fn().mockReturnValue('IDT-Amp-component');
+    idt2Amp.default = mockIdt2Amp;
 
     const { container } = render(
       <IncludeContainerWithMockContext
@@ -132,8 +132,8 @@ describe('IncludeContainer', () => {
       />,
     );
     expect(container).toMatchSnapshot();
-    expect(mockAmp).toHaveBeenCalledTimes(1);
-    expect(mockAmp).toHaveBeenCalledWith(includeProps, {});
+    expect(mockIdt2Amp).toHaveBeenCalledTimes(1);
+    expect(mockIdt2Amp).toHaveBeenCalledWith(includeProps, {});
     expect(loggerMock.info).toHaveBeenCalledTimes(1);
     expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
       type: 'idt2',
@@ -142,8 +142,8 @@ describe('IncludeContainer', () => {
   });
 
   it('should not render include for an Amp page with toggles disabled', async () => {
-    const mockAmp = jest.fn().mockReturnValue('amp-includes-container');
-    amp.default = mockAmp;
+    const mockIdt2Amp = jest.fn().mockReturnValue('IDT-Amp-component');
+    idt2Amp.default = mockIdt2Amp;
     const { container } = render(
       <IncludeContainerWithMockContext
         toggleState={toggleStateFalse}
@@ -154,7 +154,7 @@ describe('IncludeContainer', () => {
       />,
     );
     expect(container).toMatchSnapshot();
-    expect(mockAmp).not.toHaveBeenCalled();
+    expect(mockIdt2Amp).not.toHaveBeenCalled();
     expect(loggerMock.info).not.toHaveBeenCalled();
   });
 });

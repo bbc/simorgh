@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import AmpIncludeContainer from './index.amp';
+import AmpIncludeContainer from './Idt2Amp';
 
 const validIdt2Props = {
   html: `<div>Hello</div>`,
@@ -26,18 +26,6 @@ describe('AmpIncludeContainer', () => {
     jest.resetModules();
     container = document.createElement('div');
     document.body.appendChild(container);
-  });
-
-  it('should not render for an unsuported include type', async () => {
-    const props = {
-      ...validIdt2Props,
-      type: 'vj2',
-    };
-    act(() => {
-      ReactDOM.render(<AmpIncludeContainer {...props} />, container);
-    });
-    expect(container.querySelectorAll('amp-img').length).toEqual(0);
-    expect(container).toMatchSnapshot();
   });
 
   it('should render for a valid IDT2 include', async () => {

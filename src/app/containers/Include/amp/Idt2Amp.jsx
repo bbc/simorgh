@@ -8,13 +8,14 @@ const IncludeGrid = styled(GridItemConstrainedMedium)`
   display: grid;
 `;
 
-const Idt2Container = ({ imageBlock }) => (
+const Idt2Amp = ({ imageBlock }) => (
   <IncludeGrid>
     <AmpImg fallback={false} {...imageBlock} />
   </IncludeGrid>
 );
 
-Idt2Container.propTypes = {
+Idt2Amp.propTypes = {
+  type: string.isRequired,
   imageBlock: shape({
     src: string,
     srcset: string,
@@ -25,18 +26,4 @@ Idt2Container.propTypes = {
   }).isRequired,
 };
 
-const componentsToRender = {
-  // add amp support for other include types here
-  idt2: props => <Idt2Container {...props} />,
-};
-
-const AmpIncludeContainer = props => {
-  const { type } = props;
-  return componentsToRender[type] ? componentsToRender[type](props) : null;
-};
-
-AmpIncludeContainer.propTypes = {
-  type: string.isRequired,
-};
-
-export default AmpIncludeContainer;
+export default Idt2Amp;

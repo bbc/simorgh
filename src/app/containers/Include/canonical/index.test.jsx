@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
-import CanonicalIncludeContainer from './index.canonical';
+import CanonicalIncludeContainer from '.';
 
 const fakeMarkup = `<div>Visual Journalism Markup</div><script type="text/javascript" src="localhost/vj.js"></script>`;
 
