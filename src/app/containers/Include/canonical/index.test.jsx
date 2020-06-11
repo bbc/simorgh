@@ -17,14 +17,18 @@ describe('CanonicalIncludeContainer', () => {
     const { container } = render(
       <CanonicalIncludeContainer type="idt2" html={null} />,
     );
-    expect(container).toMatchSnapshot();
+    await waitFor(() => {
+      expect(container).toBeEmptyDOMElement();
+    });
   });
 
   it('should not render any HTML for an unsupported include type', async () => {
     const { container } = render(
       <CanonicalIncludeContainer html={fakeMarkup} type="idt20" />,
     );
-    expect(container).toMatchSnapshot();
+    await waitFor(() => {
+      expect(container).toBeEmptyDOMElement();
+    });
   });
 
   const runningIncludeTest = includeType => {
