@@ -70,30 +70,6 @@ exports[`Canonical Most Read Page Header Navigation link should match text 11`] 
 
 exports[`Canonical Most Read Page Header Navigation link should match text 12`] = `"Centroamérica Cuenta"`;
 
-exports[`Canonical Most Read Page Header Navigation link should match text 13`] = `"Noticias"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text 14`] = `"América Latina"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text 15`] = `"Internacional"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text 16`] = `"Economía"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text 17`] = `"Tecnología"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text 18`] = `"Ciencia"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text 19`] = `"Salud"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text 20`] = `"Cultura"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text 21`] = `"Deportes"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text 22`] = `"Video"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text 23`] = `"Hay Festival"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text 24`] = `"Centroamérica Cuenta"`;
-
 exports[`Canonical Most Read Page Header Navigation link should match url 1`] = `"/mundo"`;
 
 exports[`Canonical Most Read Page Header Navigation link should match url 2`] = `"/mundo/america_latina"`;
@@ -117,30 +93,6 @@ exports[`Canonical Most Read Page Header Navigation link should match url 10`] =
 exports[`Canonical Most Read Page Header Navigation link should match url 11`] = `"/mundo/noticias-36795069"`;
 
 exports[`Canonical Most Read Page Header Navigation link should match url 12`] = `"/mundo/noticias-43826245"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match url 13`] = `"/mundo"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match url 14`] = `"/mundo/america_latina"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match url 15`] = `"/mundo/internacional"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match url 16`] = `"/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match url 17`] = `"/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match url 18`] = `"/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match url 19`] = `"/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match url 20`] = `"/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match url 21`] = `"/mundo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match url 22`] = `"/mundo/media/video"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match url 23`] = `"/mundo/noticias-36795069"`;
-
-exports[`Canonical Most Read Page Header Navigation link should match url 24`] = `"/mundo/noticias-43826245"`;
 
 exports[`Canonical Most Read Page I can see the headline 1`] = `"Más leídas"`;
 

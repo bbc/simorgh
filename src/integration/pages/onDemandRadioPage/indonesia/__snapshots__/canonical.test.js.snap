@@ -58,18 +58,6 @@ exports[`Canonical On Demand Radio Page Header Navigation link should match text
 
 exports[`Canonical On Demand Radio Page Header Navigation link should match text 6`] = `"Majalah"`;
 
-exports[`Canonical On Demand Radio Page Header Navigation link should match text 7`] = `"Berita"`;
-
-exports[`Canonical On Demand Radio Page Header Navigation link should match text 8`] = `"Indonesia"`;
-
-exports[`Canonical On Demand Radio Page Header Navigation link should match text 9`] = `"Dunia"`;
-
-exports[`Canonical On Demand Radio Page Header Navigation link should match text 10`] = `"Viral"`;
-
-exports[`Canonical On Demand Radio Page Header Navigation link should match text 11`] = `"Liputan Mendalam"`;
-
-exports[`Canonical On Demand Radio Page Header Navigation link should match text 12`] = `"Majalah"`;
-
 exports[`Canonical On Demand Radio Page Header Navigation link should match url 1`] = `"/indonesia"`;
 
 exports[`Canonical On Demand Radio Page Header Navigation link should match url 2`] = `"/indonesia/topics/cjgn7k8yx4gt"`;
@@ -81,18 +69,6 @@ exports[`Canonical On Demand Radio Page Header Navigation link should match url 
 exports[`Canonical On Demand Radio Page Header Navigation link should match url 5`] = `"/indonesia/laporan-khusus-51267199"`;
 
 exports[`Canonical On Demand Radio Page Header Navigation link should match url 6`] = `"/indonesia/majalah-51456120"`;
-
-exports[`Canonical On Demand Radio Page Header Navigation link should match url 7`] = `"/indonesia"`;
-
-exports[`Canonical On Demand Radio Page Header Navigation link should match url 8`] = `"/indonesia/topics/cjgn7k8yx4gt"`;
-
-exports[`Canonical On Demand Radio Page Header Navigation link should match url 9`] = `"/indonesia/dunia"`;
-
-exports[`Canonical On Demand Radio Page Header Navigation link should match url 10`] = `"/indonesia/topics/cn5w7g2nq6dt"`;
-
-exports[`Canonical On Demand Radio Page Header Navigation link should match url 11`] = `"/indonesia/laporan-khusus-51267199"`;
-
-exports[`Canonical On Demand Radio Page Header Navigation link should match url 12`] = `"/indonesia/majalah-51456120"`;
 
 exports[`Canonical On Demand Radio Page I can see the brand title 1`] = `"Dunia Pagi Ini"`;
 

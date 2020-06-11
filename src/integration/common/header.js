@@ -16,9 +16,9 @@ export default () => {
     });
 
     describe('Navigation link', () => {
-      const navigationLinks = document.querySelectorAll(
-        'header nav ul > li > a',
-      );
+      const navigationLinks = document
+        .querySelector('header nav [role="list"]')
+        .querySelectorAll('a');
 
       navigationLinks.forEach(navigationLink => {
         const linkText = navigationLink.textContent;

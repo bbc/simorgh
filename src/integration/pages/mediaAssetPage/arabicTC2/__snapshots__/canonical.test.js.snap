@@ -66,26 +66,6 @@ exports[`Canonical Media Asset Page Header Navigation link should match text 9`]
 
 exports[`Canonical Media Asset Page Header Navigation link should match text 10`] = `"برامجنا"`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text 11`] = `"رئيسية"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match text 12`] = `"شرق أوسط"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match text 13`] = `"عالم"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match text 14`] = `"علوم وتكنولوجيا"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match text 15`] = `"صحة"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match text 16`] = `"فيديو"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match text 17`] = `"صحافة"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match text 18`] = `"ترند"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match text 19`] = `"تحقيقات"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match text 20`] = `"برامجنا"`;
-
 exports[`Canonical Media Asset Page Header Navigation link should match url 1`] = `"/arabic"`;
 
 exports[`Canonical Media Asset Page Header Navigation link should match url 2`] = `"/arabic/middleeast"`;
@@ -105,26 +85,6 @@ exports[`Canonical Media Asset Page Header Navigation link should match url 8`] 
 exports[`Canonical Media Asset Page Header Navigation link should match url 9`] = `"/arabic/tv-and-radio-42414864"`;
 
 exports[`Canonical Media Asset Page Header Navigation link should match url 10`] = `"/arabic/tv-and-radio-37728883"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match url 11`] = `"/arabic"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match url 12`] = `"/arabic/middleeast"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match url 13`] = `"/arabic/world"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match url 14`] = `"/arabic/scienceandtech"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match url 15`] = `"/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match url 16`] = `"/arabic/media"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match url 17`] = `"/arabic/inthepress"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match url 18`] = `"/arabic/trending"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match url 19`] = `"/arabic/tv-and-radio-42414864"`;
-
-exports[`Canonical Media Asset Page Header Navigation link should match url 20`] = `"/arabic/tv-and-radio-37728883"`;
 
 exports[`Canonical Media Asset Page I can see the headline 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 

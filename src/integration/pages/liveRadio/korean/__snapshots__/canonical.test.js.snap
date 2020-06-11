@@ -54,14 +54,6 @@ exports[`Canonical Korean Live Radio Page Header Navigation link should match te
 
 exports[`Canonical Korean Live Radio Page Header Navigation link should match text 4`] = `"TOP 뉴스"`;
 
-exports[`Canonical Korean Live Radio Page Header Navigation link should match text 5`] = `"뉴스"`;
-
-exports[`Canonical Korean Live Radio Page Header Navigation link should match text 6`] = `"비디오"`;
-
-exports[`Canonical Korean Live Radio Page Header Navigation link should match text 7`] = `"다운로드"`;
-
-exports[`Canonical Korean Live Radio Page Header Navigation link should match text 8`] = `"TOP 뉴스"`;
-
 exports[`Canonical Korean Live Radio Page Header Navigation link should match url 1`] = `"/korean"`;
 
 exports[`Canonical Korean Live Radio Page Header Navigation link should match url 2`] = `"/korean/media/video"`;
@@ -69,14 +61,6 @@ exports[`Canonical Korean Live Radio Page Header Navigation link should match ur
 exports[`Canonical Korean Live Radio Page Header Navigation link should match url 3`] = `"/korean/downloads"`;
 
 exports[`Canonical Korean Live Radio Page Header Navigation link should match url 4`] = `"/korean/popular/read"`;
-
-exports[`Canonical Korean Live Radio Page Header Navigation link should match url 5`] = `"/korean"`;
-
-exports[`Canonical Korean Live Radio Page Header Navigation link should match url 6`] = `"/korean/media/video"`;
-
-exports[`Canonical Korean Live Radio Page Header Navigation link should match url 7`] = `"/korean/downloads"`;
-
-exports[`Canonical Korean Live Radio Page Header Navigation link should match url 8`] = `"/korean/popular/read"`;
 
 exports[`Canonical Korean Live Radio Page Main heading should match text 1`] = `"BBC 코리아 라디오"`;
 

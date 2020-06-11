@@ -178,24 +178,6 @@ exports[`AMP Most Read Page Header Navigation link should match text 8`] = `"H�
 
 exports[`AMP Most Read Page Header Navigation link should match text 9`] = `"Video"`;
 
-exports[`AMP Most Read Page Header Navigation link should match text 10`] = `"Tin chính"`;
-
-exports[`AMP Most Read Page Header Navigation link should match text 11`] = `"Việt Nam"`;
-
-exports[`AMP Most Read Page Header Navigation link should match text 12`] = `"Thế giới"`;
-
-exports[`AMP Most Read Page Header Navigation link should match text 13`] = `"Diễn đàn"`;
-
-exports[`AMP Most Read Page Header Navigation link should match text 14`] = `"Kinh tế"`;
-
-exports[`AMP Most Read Page Header Navigation link should match text 15`] = `"Nhịp sống mới"`;
-
-exports[`AMP Most Read Page Header Navigation link should match text 16`] = `"Thể thao"`;
-
-exports[`AMP Most Read Page Header Navigation link should match text 17`] = `"Học tiếng Anh"`;
-
-exports[`AMP Most Read Page Header Navigation link should match text 18`] = `"Video"`;
-
 exports[`AMP Most Read Page Header Navigation link should match url 1`] = `"/vietnamese"`;
 
 exports[`AMP Most Read Page Header Navigation link should match url 2`] = `"/vietnamese/vietnam"`;
@@ -213,24 +195,6 @@ exports[`AMP Most Read Page Header Navigation link should match url 7`] = `"/vie
 exports[`AMP Most Read Page Header Navigation link should match url 8`] = `"/vietnamese/english"`;
 
 exports[`AMP Most Read Page Header Navigation link should match url 9`] = `"/vietnamese/media/video"`;
-
-exports[`AMP Most Read Page Header Navigation link should match url 10`] = `"/vietnamese"`;
-
-exports[`AMP Most Read Page Header Navigation link should match url 11`] = `"/vietnamese/vietnam"`;
-
-exports[`AMP Most Read Page Header Navigation link should match url 12`] = `"/vietnamese/world"`;
-
-exports[`AMP Most Read Page Header Navigation link should match url 13`] = `"/vietnamese/forum"`;
-
-exports[`AMP Most Read Page Header Navigation link should match url 14`] = `"/vietnamese/business"`;
-
-exports[`AMP Most Read Page Header Navigation link should match url 15`] = `"/vietnamese/magazine"`;
-
-exports[`AMP Most Read Page Header Navigation link should match url 16`] = `"/vietnamese/sport"`;
-
-exports[`AMP Most Read Page Header Navigation link should match url 17`] = `"/vietnamese/english"`;
-
-exports[`AMP Most Read Page Header Navigation link should match url 18`] = `"/vietnamese/media/video"`;
 
 exports[`AMP Most Read Page I can see the headline 1`] = `"Đọc nhiều nhất"`;
 

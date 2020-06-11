@@ -62,22 +62,6 @@ exports[`Canonical Story Page Header Navigation link should match text 7`] = `"�
 
 exports[`Canonical Story Page Header Navigation link should match text 8`] = `"Блог"`;
 
-exports[`Canonical Story Page Header Navigation link should match text 9`] = `"Башталгыч бет"`;
-
-exports[`Canonical Story Page Header Navigation link should match text 10`] = `"Кыргызстан"`;
-
-exports[`Canonical Story Page Header Navigation link should match text 11`] = `"Дүйнө"`;
-
-exports[`Canonical Story Page Header Navigation link should match text 12`] = `"Сапар TV"`;
-
-exports[`Canonical Story Page Header Navigation link should match text 13`] = `"Видео"`;
-
-exports[`Canonical Story Page Header Navigation link should match text 14`] = `"Маданият/Илим"`;
-
-exports[`Canonical Story Page Header Navigation link should match text 15`] = `"Журнал"`;
-
-exports[`Canonical Story Page Header Navigation link should match text 16`] = `"Блог"`;
-
 exports[`Canonical Story Page Header Navigation link should match url 1`] = `"/kyrgyz"`;
 
 exports[`Canonical Story Page Header Navigation link should match url 2`] = `"/kyrgyz/kyrgyzstan"`;
@@ -93,22 +77,6 @@ exports[`Canonical Story Page Header Navigation link should match url 6`] = `"/k
 exports[`Canonical Story Page Header Navigation link should match url 7`] = `"/kyrgyz/magazine"`;
 
 exports[`Canonical Story Page Header Navigation link should match url 8`] = `"/kyrgyz/blog"`;
-
-exports[`Canonical Story Page Header Navigation link should match url 9`] = `"/kyrgyz"`;
-
-exports[`Canonical Story Page Header Navigation link should match url 10`] = `"/kyrgyz/kyrgyzstan"`;
-
-exports[`Canonical Story Page Header Navigation link should match url 11`] = `"/kyrgyz/world"`;
-
-exports[`Canonical Story Page Header Navigation link should match url 12`] = `"/kyrgyz/sapartv"`;
-
-exports[`Canonical Story Page Header Navigation link should match url 13`] = `"/kyrgyz/media/video"`;
-
-exports[`Canonical Story Page Header Navigation link should match url 14`] = `"/kyrgyz/entertainment"`;
-
-exports[`Canonical Story Page Header Navigation link should match url 15`] = `"/kyrgyz/magazine"`;
-
-exports[`Canonical Story Page Header Navigation link should match url 16`] = `"/kyrgyz/blog"`;
 
 exports[`Canonical Story Page Lead image I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
