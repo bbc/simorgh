@@ -53,7 +53,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                 >
                   <section
                     aria-labelledby="Top-stories"
-                    class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+                    class="StyledSection-sc-1x9qbiu-0 hNdEyC"
                     role="region"
                   >
                     <div
@@ -83,7 +83,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       </h2>
                     </div>
                     <div
-                      class="FirstSectionTopMargin-sc-1t555e8-1 gTFeDc"
+                      class="FirstSectionTopMargin-sc-1x9qbiu-1 jIhlPO"
                     >
                       <div
                         class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
@@ -192,7 +192,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                   </section>
                   <section
                     aria-labelledby="Frequency-info"
-                    class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+                    class="StyledSection-sc-1x9qbiu-0 hNdEyC"
                     role="region"
                   >
                     <div
@@ -812,7 +812,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                 >
                   <section
                     aria-labelledby="Top-stories"
-                    class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+                    class="StyledSection-sc-1x9qbiu-0 hNdEyC"
                     role="region"
                   >
                     <div
@@ -842,7 +842,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       </h2>
                     </div>
                     <div
-                      class="FirstSectionTopMargin-sc-1t555e8-1 gTFeDc"
+                      class="FirstSectionTopMargin-sc-1x9qbiu-1 jIhlPO"
                     >
                       <div
                         class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
@@ -951,7 +951,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </section>
                   <section
                     aria-labelledby="Frequency-info"
-                    class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+                    class="StyledSection-sc-1x9qbiu-0 hNdEyC"
                     role="region"
                   >
                     <div

@@ -30,7 +30,7 @@ import getRows from './utilities/storyRowsSplitter';
 import getRowDetails from './utilities/rowDetails';
 import { TopRow } from '../FrontPageStoryRows';
 
-const StyledFrontPageSection = styled.section`
+const StyledSection = styled.section`
   /* To centre page layout for Group 4+ */
   margin: 0 auto;
   width: 100%; /* Needed for IE11 */
@@ -159,7 +159,7 @@ const sectionBody = ({
   return renderPromos(items, isFirstSection, dir);
 };
 
-const FrontPageSection = ({ bar, group, sectionNumber }) => {
+const IndexPageSection = ({ bar, group, sectionNumber }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
   const sectionLabelId = idSanitiser(group.title);
 
@@ -200,7 +200,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
     // (<section> tags *should* imply `role="region"`)
     // While this may be true in a perfect world, we set it in order to get
     // the greatest possible support.
-    <StyledFrontPageSection role="region" aria-labelledby={sectionLabelId}>
+    <StyledSection role="region" aria-labelledby={sectionLabelId}>
       <SectionLabel
         script={script}
         labelId={sectionLabelId}
@@ -221,18 +221,18 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
         isFirstSection,
         dir,
       })}
-    </StyledFrontPageSection>
+    </StyledSection>
   );
 };
 
-FrontPageSection.defaultProps = {
+IndexPageSection.defaultProps = {
   bar: true,
 };
 
-FrontPageSection.propTypes = {
+IndexPageSection.propTypes = {
   bar: bool,
   group: shape(groupShape).isRequired,
   sectionNumber: number.isRequired,
 };
 
-export default FrontPageSection;
+export default IndexPageSection;
