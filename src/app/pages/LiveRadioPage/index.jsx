@@ -9,7 +9,7 @@ import MetadataContainer from '../../containers/Metadata';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import LinkedData from '../../containers/LinkedData';
-import AudioPlayer from '#containers/RadioPageBlocks/Blocks/AudioPlayer';
+import AudioPlayer from '#containers/AudioPlayer';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import getMediaId from '#lib/utilities/getMediaId';
