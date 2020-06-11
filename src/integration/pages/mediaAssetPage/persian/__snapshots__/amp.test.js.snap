@@ -122,9 +122,53 @@ exports[`AMP Media Asset Page Footer I can click on the BBC branding and it woul
 
 exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
+exports[`AMP Media Asset Page Footer Link should match text and url 1`] = `"BBC News, فارسی - /persian"`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 2`] = `"چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟ - https://www.bbc.com/persian/institutional-49283091"`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 3`] = `"شرایط استفاده - https://www.bbc.com/persian/institutional-37474133"`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 4`] = `"درباره بی بی سی - https://www.bbc.com/persian/institutional-37474136"`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 5`] = `"سیاست حفظ حریم خصوصی - https://www.bbc.com/persian/institutional-37540067"`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 6`] = `"کوکی ها - https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 7`] = `"تماس با بی بی سی - https://www.bbc.com/persian/institutional-37542244"`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 9`] = `"سیاست ما درباره لینک دادن به سایت های دیگر. - https://www.bbc.com/persian/institutional/2011/04/000001_links"`;
+
 exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, فارسی"`;
 
-exports[`AMP Media Asset Page Header I can see the navigation 1`] = `"صفحه اول"`;
+exports[`AMP Media Asset Page Header Navigation link should match text and url 1`] = `"صفحه اول - /persian"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 2`] = `"کرونا - /persian/science-52004647"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 3`] = `"پخش زنده - /persian/media-49522521"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 4`] = `"ویدیو - /persian/media/video"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 5`] = `"تلویزیون - /persian/tv-and-radio-37434377"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 6`] = `"رادیو - /persian/tv-and-radio-37434376"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 7`] = `"ايران - /persian/iran"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 8`] = `"افغانستان - /persian/afghanistan"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 9`] = `"جهان - /persian/world"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 10`] = `"هنر - /persian/arts"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 11`] = `"ورزش - /persian/sport"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 12`] = `"اقتصاد - /persian/business"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 13`] = `"دانش - /persian/science"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 14`] = `"ناظران می‌گویند - /persian/blogs/viewpoints"`;
 
 exports[`AMP Media Asset Page I can see the headline 1`] = `"Trump long headline"`;
 
@@ -146,7 +190,7 @@ exports[`AMP Media Asset Page SEO Heading level 1 1`] = `"Trump long headline"`;
 
 exports[`AMP Media Asset Page SEO Lang attribute 1`] = `"fa"`;
 
-exports[`AMP Media Asset Page SEO Linked data 1`] = `
+exports[`AMP Media Asset Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [
@@ -192,6 +236,19 @@ Object {
       "url": "http://localhost:7080/persian/iran-23231114",
     },
   ],
+}
+`;
+
+exports[`AMP Media Asset Page SEO Linked data should match text 2`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "AudioObject",
+  "description": "Trump long headline",
+  "duration": "PT26S",
+  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa/amp",
+  "name": "Trump short headline",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01lmkk5.jpg",
+  "uploadDate": "2019-02-15T12:37:28.000Z",
 }
 `;
 
