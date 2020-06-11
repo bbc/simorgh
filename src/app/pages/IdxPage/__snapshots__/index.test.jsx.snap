@@ -2,6 +2,10 @@
 
 exports[`IdxPage Snapshots should render a persian idx page correctly with most read and radio schedule 1`] = `
 <div>
+  <noscript />
+  <div>
+    chartbeat
+  </div>
   <main
     role="main"
   >
@@ -9,7 +13,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
       class="IndexPageContainer-sc-1yb6vt4-0 lkUiYo"
     >
       <h1
-        class="HeadingIndex-sc-1155hfb-0 StyledIndexHeading-jnasqg-0 kYCmnu"
+        class="HeadingIndex-sc-1155hfb-0 StyledIndexHeading-jnasqg-0 gaYamM"
         dir="rtl"
         id="content"
         tabindex="-1"
@@ -18,7 +22,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
       </h1>
       <section
         aria-labelledby="WatchListen"
-        class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+        class="StyledSection-sc-1x9qbiu-0 hNdEyC"
         role="region"
       >
         <div
@@ -1109,7 +1113,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
       </section>
       <section
         aria-labelledby="Features"
-        class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+        class="StyledSection-sc-1x9qbiu-0 hNdEyC"
         role="region"
       >
         <div

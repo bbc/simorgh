@@ -3,15 +3,21 @@ import styled from 'styled-components';
 import { shape, string, number, bool } from 'prop-types';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import { useLocation } from 'react-router-dom';
 import MetadataContainer from '../../containers/Metadata';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
-import AudioPlayerBlock from '#containers/RadioPageBlocks/Blocks/AudioPlayer';
+import AudioPlayer from '#containers/AudioPlayer';
 import EpisodeImage from '#containers/RadioPageBlocks/Blocks/OnDemandImage';
+import LinkedData from '#containers/LinkedData';
+import getMediaId from '#lib/utilities/getMediaId';
+import getMasterbrand from '#lib/utilities/getMasterbrand';
+import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
@@ -53,8 +59,24 @@ const OnDemandRadioPage = ({ pageData }) => {
     thumbnailImageUrl,
   } = pageData;
 
-  const { dir } = useContext(ServiceContext);
+  const { isAmp } = useContext(RequestContext);
+  const location = useLocation();
+  const { dir, liveRadioOverrides, lang, service } = useContext(ServiceContext);
   const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
+
+  const mediaId = getMediaId({
+    assetId: episodeId,
+    masterBrand: getMasterbrand(masterBrand, liveRadioOverrides),
+    lang,
+    service,
+  });
+
+  const embedUrl = getEmbedUrl({
+    mediaId,
+    type: 'media',
+    isAmp,
+    queryString: location.search,
+  });
 
   return (
     <>
@@ -66,7 +88,6 @@ const OnDemandRadioPage = ({ pageData }) => {
         description={shortSynopsis}
         openGraphType="website"
       />
-
       <StyledGelPageGrid
         forwardedAs="main"
         role="main"
@@ -98,16 +119,30 @@ const OnDemandRadioPage = ({ pageData }) => {
               <EpisodeImage imageUrl={imageUrl} dir={dir} />
             </Grid>
           </StyledGelWrapperGrid>
-
-          <AudioPlayerBlock
+          <AudioPlayer
             externalId={masterBrand}
             id={episodeId}
-            promoBrandTitle={promoBrandTitle}
-            shortSynopsis={shortSynopsis}
-            thumbnailImageUrl={thumbnailImageUrl}
-            durationISO8601={durationISO8601}
-            releaseDateTimeStamp={releaseDateTimeStamp}
+            embedUrl={embedUrl}
             episodeIsAvailable={episodeIsAvailable}
+          />
+          <LinkedData
+            type="WebPage"
+            seoTitle={headline}
+            entities={
+              episodeIsAvailable
+                ? [
+                    {
+                      '@type': 'AudioObject',
+                      name: promoBrandTitle,
+                      description: shortSynopsis,
+                      thumbnailUrl: thumbnailImageUrl,
+                      duration: durationISO8601,
+                      uploadDate: new Date(releaseDateTimeStamp).toISOString(),
+                      embedURL: embedUrl,
+                    },
+                  ]
+                : []
+            }
           />
         </Grid>
       </StyledGelPageGrid>

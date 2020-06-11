@@ -8,17 +8,17 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
-import FrontPageSection from '#containers/FrontPageSection';
+import LinkedData from '#containers/LinkedData';
+import ATIAnalytics from '#containers/ATIAnalytics';
+import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import AdContainer from '#containers/Ad';
+import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
+import IndexPageSection from '#containers/IndexPageSection';
+import RadioScheduleContainer from '#containers/RadioSchedule';
 import MetadataContainer from '#containers/Metadata';
 import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
-import RadioScheduleContainer from '#containers/RadioSchedule';
-import AdContainer from '#containers/Ad';
-import LinkedData from '#containers/LinkedData';
-import ATIAnalytics from '#containers/ATIAnalytics';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
 
 const FrontPageMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
@@ -28,6 +28,25 @@ const FrontPageMostReadSection = styled(MostReadSection)`
     max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
   }
 `;
+
+const MostReadWrapper = ({ children }) => (
+  <FrontPageMostReadSection>
+    <MostReadSectionLabel />
+    {children}
+  </FrontPageMostReadSection>
+);
+
+const renderMostRead = mostReadEndpointOverride => (
+  <MostReadContainer
+    mostReadEndpointOverride={mostReadEndpointOverride}
+    columnLayout="twoColumn"
+    wrapper={MostReadWrapper}
+  />
+);
+
+MostReadWrapper.propTypes = {
+  children: node.isRequired,
+};
 
 const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
@@ -58,25 +77,6 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const hasUsefulLinks =
     findIndex(group => group.type === 'useful-links')(groups) > -1;
 
-  const MostReadWrapper = ({ children }) => (
-    <FrontPageMostReadSection>
-      <MostReadSectionLabel />
-      {children}
-    </FrontPageMostReadSection>
-  );
-
-  MostReadWrapper.propTypes = {
-    children: node.isRequired,
-  };
-
-  const renderMostRead = () => (
-    <MostReadContainer
-      mostReadEndpointOverride={mostReadEndpointOverride}
-      columnLayout="twoColumn"
-      wrapper={MostReadWrapper}
-    />
-  );
-
   return (
     <>
       <ATIAnalytics data={pageData} />
@@ -101,10 +101,10 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
                 radioSchedulePosition === group.semanticGroupName && (
                   <RadioScheduleContainer initialData={radioScheduleData} />
                 )}
-              <FrontPageSection group={group} sectionNumber={index} />
+              <IndexPageSection group={group} sectionNumber={index} />
             </Fragment>
           ))}
-          {!hasUsefulLinks && renderMostRead()}
+          {!hasUsefulLinks && renderMostRead(mostReadEndpointOverride)}
         </IndexPageContainer>
       </main>
     </>
