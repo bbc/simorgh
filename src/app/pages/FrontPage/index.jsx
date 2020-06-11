@@ -84,6 +84,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
 
   return (
     <>
+      {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
       {hasAds && !isAmp && <CanonicalAdBootstrapJs />}
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
