@@ -12,7 +12,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
-import AudioPlayerBlock from '#containers/RadioPageBlocks/Blocks/AudioPlayer';
+import AudioPlayer from '#containers/AudioPlayer';
 import EpisodeImage from '#containers/RadioPageBlocks/Blocks/OnDemandImage';
 import LinkedData from '#containers/LinkedData';
 import getMediaId from '#lib/utilities/getMediaId';
@@ -119,7 +119,7 @@ const OnDemandRadioPage = ({ pageData }) => {
               <EpisodeImage imageUrl={imageUrl} dir={dir} />
             </Grid>
           </StyledGelWrapperGrid>
-          <AudioPlayerBlock
+          <AudioPlayer
             externalId={masterBrand}
             id={episodeId}
             embedUrl={embedUrl}
