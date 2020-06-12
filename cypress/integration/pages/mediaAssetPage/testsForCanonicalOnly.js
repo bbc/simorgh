@@ -3,7 +3,6 @@ import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getEmbedUrl, hasMedia } from './helpers';
 import appToggles from '../../../support/helpers/useAppToggles';
 import envConfig from '../../../support/config/envs';
-import visitPage from '../../../support/helpers/visitPage';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
