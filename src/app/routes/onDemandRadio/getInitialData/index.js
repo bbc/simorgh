@@ -1,6 +1,5 @@
 import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
-import handleDataProcessingError from '../../utils/handleDataProcessingError';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
 import { logExpiredEpisode } from './logInitialData';
@@ -81,52 +80,48 @@ const getThumbnailImageUrl = json =>
   );
 
 export default async ({ path: pathname }) => {
-  try {
-    const onDemandRadioDataPath = overrideRendererOnTest(pathname);
-    const { json, status, error } = await fetchPageData(onDemandRadioDataPath);
+  const onDemandRadioDataPath = overrideRendererOnTest(pathname);
+  const { json, status, error } = await fetchPageData(onDemandRadioDataPath);
 
-    if (error) {
-      return { error, status };
-    }
-
-    const pageType = { metadata: { type: 'On Demand Radio' } };
-
-    const availableFrom = getEpisodeAvailableFrom(json);
-    const availableUntil = getEpisodeAvailableUntil(json);
-    const episodeIsAvailable = getEpisodeAvailability({
-      availableFrom,
-      availableUntil,
-    });
-
-    if (!episodeIsAvailable) {
-      logExpiredEpisode(json);
-    }
-
-    return {
-      status,
-      pageData: {
-        language: getLanguage(json),
-        brandTitle: getBrandTitle(json),
-        episodeTitle: getEpisodeTitle(json),
-        headline: getHeadline(json),
-        shortSynopsis: getShortSynopsis(json),
-        id: getId(json),
-        summary: getSummary(json),
-        contentType: getContentType(json),
-        episodeId: getEpisodeId(json),
-        masterBrand: getMasterBrand(json),
-        releaseDateTimeStamp: getReleaseDateTimeStamp(json),
-        pageTitle: getPageTitle(json),
-        pageIdentifier: getPageIdentifier(json),
-        imageUrl: getImageUrl(json),
-        promoBrandTitle: getPromoBrandTitle(json),
-        durationISO8601: getDurationISO8601(json),
-        thumbnailImageUrl: getThumbnailImageUrl(json),
-        episodeIsAvailable,
-        ...pageType,
-      },
-    };
-  } catch (error) {
-    return handleDataProcessingError(error);
+  if (error) {
+    return { error, status };
   }
+
+  const pageType = { metadata: { type: 'On Demand Radio' } };
+
+  const availableFrom = getEpisodeAvailableFrom(json);
+  const availableUntil = getEpisodeAvailableUntil(json);
+  const episodeIsAvailable = getEpisodeAvailability({
+    availableFrom,
+    availableUntil,
+  });
+
+  if (!episodeIsAvailable) {
+    logExpiredEpisode(json);
+  }
+
+  return {
+    status,
+    pageData: {
+      language: getLanguage(json),
+      brandTitle: getBrandTitle(json),
+      episodeTitle: getEpisodeTitle(json),
+      headline: getHeadline(json),
+      shortSynopsis: getShortSynopsis(json),
+      id: getId(json),
+      summary: getSummary(json),
+      contentType: getContentType(json),
+      episodeId: getEpisodeId(json),
+      masterBrand: getMasterBrand(json),
+      releaseDateTimeStamp: getReleaseDateTimeStamp(json),
+      pageTitle: getPageTitle(json),
+      pageIdentifier: getPageIdentifier(json),
+      imageUrl: getImageUrl(json),
+      promoBrandTitle: getPromoBrandTitle(json),
+      durationISO8601: getDurationISO8601(json),
+      thumbnailImageUrl: getThumbnailImageUrl(json),
+      episodeIsAvailable,
+      ...pageType,
+    },
+  };
 };

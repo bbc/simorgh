@@ -1,7 +1,6 @@
 import pathOr from 'ramda/src/path';
 import pipe from 'ramda/src/pipe';
 import fetchPageData from '#app/routes/utils/fetchPageData';
-import handleDataProcessingError from '../../utils/handleDataProcessingError';
 import filterUnknownContentTypes from '#app/routes/utils/sharedDataTransformers/filterUnknownContentTypes';
 import filterEmptyGroupItems from '#app/routes/utils/sharedDataTransformers/filterEmptyGroupItems';
 import squashTopStories from '#app/routes/utils/sharedDataTransformers/squashTopStories';
@@ -37,28 +36,24 @@ export const hasRadioSchedule = async (service, variant) => {
 };
 
 export default async ({ path, service, variant }) => {
-  try {
-    const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
-    const pageDataPromise = fetchPageData(path);
+  const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
+  const pageDataPromise = fetchPageData(path);
 
-    const { json, status, error } = pageHasRadioSchedule
-      ? await withRadioSchedule({
-          pageDataPromise,
-          service,
-          path,
-          radioService: 'dari',
-        })
-      : await pageDataPromise;
+  const { json, status, error } = pageHasRadioSchedule
+    ? await withRadioSchedule({
+        pageDataPromise,
+        service,
+        path,
+        radioService: 'dari',
+      })
+    : await pageDataPromise;
 
-    if (error) {
-      return { error, status };
-    }
-
-    return {
-      status,
-      pageData: transformJson(json),
-    };
-  } catch (error) {
-    return handleDataProcessingError(error);
+  if (error) {
+    return { error, status };
   }
+
+  return {
+    status,
+    pageData: transformJson(json),
+  };
 };

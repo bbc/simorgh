@@ -1,6 +1,5 @@
 import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
-import handleDataProcessingError from '../../utils/handleDataProcessingError';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrl from '../../utils/getPlaceholderImageUrl';
 
@@ -54,45 +53,41 @@ const getEpisodeAvailability = ({ availableFrom, availableUntil }) => {
 };
 
 export default async ({ path: pathname }) => {
-  try {
-    const onDemandTvDataPath = overrideRendererOnTest(pathname);
-    const { json, status, error } = await fetchPageData(onDemandTvDataPath);
+  const onDemandTvDataPath = overrideRendererOnTest(pathname);
+  const { json, status, error } = await fetchPageData(onDemandTvDataPath);
 
-    if (error) {
-      return { error, status };
-    }
-
-    const pageType = { metadata: { type: 'On Demand TV' } };
-
-    const availableFrom = getEpisodeAvailableFrom(json);
-    const availableUntil = getEpisodeAvailableUntil(json);
-
-    return {
-      status,
-      pageData: {
-        language: getLanguage(json),
-        brandTitle: getBrandTitle(json),
-        id: getId(json),
-        headline: getHeadline(json),
-        shortSynopsis: getShortSynopsis(json),
-        contentType: getContentType(json),
-        pageTitle: getPageTitle(json),
-        pageIdentifier: getPageIdentifier(json),
-        releaseDateTimeStamp: getReleaseDateTimeStamp(json),
-        durationISO8601: getDurationISO8601(json),
-        thumbnailImageUrl: getThumbnailImageUrl(json),
-        promoBrandTitle: getPromoBrandTitle(json),
-        masterBrand: getMasterBrand(json),
-        episodeId: getEpisodeId(json),
-        imageUrl: getImageUrl(json),
-        episodeIsAvailable: getEpisodeAvailability({
-          availableFrom,
-          availableUntil,
-        }),
-        ...pageType,
-      },
-    };
-  } catch (error) {
-    return handleDataProcessingError(error);
+  if (error) {
+    return { error, status };
   }
+
+  const pageType = { metadata: { type: 'On Demand TV' } };
+
+  const availableFrom = getEpisodeAvailableFrom(json);
+  const availableUntil = getEpisodeAvailableUntil(json);
+
+  return {
+    status,
+    pageData: {
+      language: getLanguage(json),
+      brandTitle: getBrandTitle(json),
+      id: getId(json),
+      headline: getHeadline(json),
+      shortSynopsis: getShortSynopsis(json),
+      contentType: getContentType(json),
+      pageTitle: getPageTitle(json),
+      pageIdentifier: getPageIdentifier(json),
+      releaseDateTimeStamp: getReleaseDateTimeStamp(json),
+      durationISO8601: getDurationISO8601(json),
+      thumbnailImageUrl: getThumbnailImageUrl(json),
+      promoBrandTitle: getPromoBrandTitle(json),
+      masterBrand: getMasterBrand(json),
+      episodeId: getEpisodeId(json),
+      imageUrl: getImageUrl(json),
+      episodeIsAvailable: getEpisodeAvailability({
+        availableFrom,
+        availableUntil,
+      }),
+      ...pageType,
+    },
+  };
 };

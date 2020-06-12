@@ -3,7 +3,6 @@ import nodeLogger from '#lib/logger.node';
 import { getQueryString, getUrlPath } from '#lib/utilities/urlParser';
 import getBaseUrl from './utils/getBaseUrl';
 import onClient from '#lib/utilities/onClient';
-import getErrorCode from '../getErrorCode';
 import isLive from '#lib/utilities/isLive';
 import {
   DATA_REQUEST_RECEIVED,
@@ -13,7 +12,8 @@ import {
 
 const logger = nodeLogger(__filename);
 const STATUS_OK = 200;
-
+const BAD_GATEWAY = 502;
+const INTERNAL_SERVER_ERROR = 500;
 const STATUS_NOT_FOUND = 404;
 const upstreamStatusCodesToPropagate = [STATUS_OK, STATUS_NOT_FOUND];
 
@@ -80,7 +80,7 @@ const handleError = e => {
 
   return {
     error,
-    status: getErrorCode(),
+    status: onClient() ? BAD_GATEWAY : INTERNAL_SERVER_ERROR,
   };
 };
 
