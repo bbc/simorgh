@@ -3,9 +3,13 @@ import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { shape, string, number, bool } from 'prop-types';
 import {
+  GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
+import pathOr from 'ramda/src/pathOr';
+import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
+import { MediaMessage } from '@bbc/psammead-media-player';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
@@ -24,6 +28,18 @@ const StyledGelWrapperGrid = styled.div`
   padding-top: ${GEL_SPACING_TRPL};
 `;
 
+const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
+const StyledMessageContainer = styled.div`
+  margin-top: ${GEL_SPACING_TRPL};
+  padding-top: ${landscapeRatio};
+  position: relative;
+  overflow: hidden;
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    width: calc(100% + ${GEL_SPACING_QUAD});
+    margin: 0 -${GEL_SPACING_DBL};
+  }
+`;
+
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,
   group1: one,
@@ -37,6 +53,14 @@ const StyledGelPageGrid = styled(GelPageGrid)`
   padding-bottom: ${GEL_SPACING_QUAD};
   width: 100%;
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
+`;
+
+const StyledVideoPlayer = styled(VideoPlayer)`
+  margin-top: ${GEL_SPACING_TRPL};
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    width: calc(100% + ${GEL_SPACING_QUAD});
+    margin: 0 -${GEL_SPACING_DBL};
+  }
 `;
 
 const OnDemandTvPage = ({ pageData }) => {
@@ -55,7 +79,9 @@ const OnDemandTvPage = ({ pageData }) => {
     durationISO8601,
   } = pageData;
 
-  const { lang, timezone, locale, dir, service } = useContext(ServiceContext);
+  const { lang, timezone, locale, dir, service, translations } = useContext(
+    ServiceContext,
+  );
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
 
@@ -75,6 +101,20 @@ const OnDemandTvPage = ({ pageData }) => {
     isAmp,
     queryString: location.search,
   });
+
+  const expiredContentMessage = pathOr(
+    'This content is no longer available',
+    ['media', 'contentExpired'],
+    translations,
+  );
+  const iframeTitle = pathOr(
+    'Video player',
+    ['mediaAssetPage', 'videoPlayer'],
+    translations,
+  );
+
+  const type = 'video';
+  const title = 'On-demand TV';
 
   return (
     <>
@@ -126,12 +166,23 @@ const OnDemandTvPage = ({ pageData }) => {
             columns={getGroups(6, 6, 6, 6, 6, 6)}
             enableGelGutters
           >
-            <VideoPlayer
-              masterBrand={masterBrand}
-              assetId={episodeId}
-              imageUrl={imageUrl}
-              episodeIsAvailable={episodeIsAvailable}
-            />
+            {episodeIsAvailable ? (
+              <StyledVideoPlayer
+                embedUrl={embedUrl}
+                assetId={episodeId}
+                imageUrl={imageUrl}
+                type={type}
+                title={title}
+                iframeTitle={iframeTitle}
+              />
+            ) : (
+              <StyledMessageContainer>
+                <MediaMessage
+                  service={service}
+                  message={expiredContentMessage}
+                />
+              </StyledMessageContainer>
+            )}
           </StyledGelWrapperGrid>
           <OnDemandHeadingBlock
             brandTitle={brandTitle}
