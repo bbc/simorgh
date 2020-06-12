@@ -11,12 +11,12 @@ import { getStyleTag } from '../styles';
 import DocumentComponent from './component';
 
 const renderDocument = async ({
+  url,
   bbcOrigin,
   data,
   isAmp,
-  routes,
   service,
-  url,
+  variant,
 }) => {
   const sheet = new ServerStyleSheet();
 
@@ -33,12 +33,12 @@ const renderDocument = async ({
       sheet.collectStyles(
         <ServerApp
           location={url}
-          routes={routes}
           data={data}
           bbcOrigin={bbcOrigin}
           context={context}
-          service={service}
           isAmp={isAmp}
+          service={service}
+          variant={variant}
         />,
       ),
     ),

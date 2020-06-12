@@ -21,6 +21,8 @@ const Document = ({
   styleTags,
   helmet,
   isAmp,
+  service,
+  variant,
   scripts,
 }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
@@ -80,7 +82,11 @@ const Document = ({
           <script
             /* eslint-disable-next-line react/no-danger */
             dangerouslySetInnerHTML={{
-              __html: `window.SIMORGH_DATA=${serialisedData}`,
+              __html: `window.SIMORGH_DATA=${serialisedData};window.service=${serialiseForScript(
+                service,
+              )};window.variant=${serialiseForScript(
+                variant,
+              )};window.isAmp=${serialiseForScript(isAmp)}`,
             }}
           />
         )}

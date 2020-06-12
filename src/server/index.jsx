@@ -6,7 +6,6 @@ import pathOr from 'ramda/src/pathOr';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
-import routes from '#app/routes';
 import {
   articleDataPath,
   articleManifestPath,
@@ -24,7 +23,7 @@ import {
 } from '../app/routes/utils/regex';
 import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
-import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
+import getRouteData from '#lib/utilities/getRouteData';
 import logResponseTime from './utilities/logResponseTime';
 import injectCspHeader from './utilities/cspHeader';
 import {
@@ -289,15 +288,11 @@ server
       });
 
       try {
-        const { service, isAmp, route, variant } = getRouteProps(
-          routes,
-          urlPath,
-        );
-        const data = await route.getInitialData({
+        const { data, isAmp, service, variant } = await getRouteData({
           path: url,
-          service,
-          variant,
+          headers,
         });
+
         const { status } = data;
         const bbcOrigin = headers['bbc-origin'];
 
@@ -305,12 +300,11 @@ server
         data.timeOnServer = Date.now();
 
         const result = await renderDocument({
+          url,
           bbcOrigin,
           data,
           isAmp,
-          routes,
           service,
-          url,
           variant,
         });
 

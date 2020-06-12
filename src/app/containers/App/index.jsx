@@ -7,17 +7,24 @@ import React from 'react';
 import { StaticRouter, BrowserRouter } from 'react-router-dom';
 import App from './App';
 
-export const ClientApp = (props) => (
+export const ClientApp = props => (
   <BrowserRouter {...props}>
-    <App initialData={props.data} routes={props.routes} />
+    <App
+      initialData={props.data}
+      isAmp={props.isAmp}
+      service={props.service}
+      variant={props.variant}
+    />
   </BrowserRouter>
 );
 
-export const ServerApp = (props) => (
+export const ServerApp = props => (
   <StaticRouter {...props}>
     <App
       initialData={props.data}
-      routes={props.routes}
+      isAmp={props.isAmp}
+      service={props.service}
+      variant={props.variant}
       bbcOrigin={props.bbcOrigin}
     />
   </StaticRouter>

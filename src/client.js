@@ -10,6 +10,7 @@ import loggerNode from '#lib/logger.node';
 const logger = loggerNode();
 
 const data = window.SIMORGH_DATA || {};
+const { isAmp, service, variant } = window;
 const root = document.getElementById('root');
 
 // Only hydrate the client if we're on the expected path
@@ -18,7 +19,16 @@ const root = document.getElementById('root');
 // and window location agree what the path is. Otherwise, fallback to the SSR.
 if (window.SIMORGH_DATA.path === window.location.pathname) {
   loadableReady(() => {
-    hydrate(<ClientApp data={data} routes={routes} />, root);
+    hydrate(
+      <ClientApp
+        data={data}
+        routes={routes}
+        isAmp={isAmp}
+        service={service}
+        variant={variant}
+      />,
+      root,
+    );
   });
 } else {
   logger.warn(`

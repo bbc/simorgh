@@ -9,6 +9,9 @@ const logCodes = {
   DATA_REQUEST_RECEIVED: 'data_request_received',
   DATA_PROCESSING_ERROR: 'data_processing_error',
 
+  // Client side
+  CLIENT_SIDE_REQUEST_FAILED: 'client_request_failed',
+
   // Files
   LOCAL_SENDFILE_ERROR: 'local_sendfile_error',
   MANIFEST_SENDFILE_ERROR: 'server_sendfile_error_manifest',
