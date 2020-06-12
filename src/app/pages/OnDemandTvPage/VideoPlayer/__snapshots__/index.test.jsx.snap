@@ -18,28 +18,32 @@ exports[`VideoPlayer should render correctly for amp 1`] = `
   <body>
     <div>
       <div
-        class="c0"
+        class=""
       >
-        <amp-iframe
-          allowfullscreen="allowfullscreen"
-          frameborder="0"
-          layout="fill"
-          sandbox="allow-scripts allow-same-origin"
-          scrolling="no"
-          src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live"
-          title="video player"
+        <div
+          class="c0"
         >
-          <amp-img
-            alt=""
-            attribution=""
-            height="16"
+          <amp-iframe
+            allowfullscreen="allowfullscreen"
+            frameborder="0"
             layout="fill"
-            placeholder="true"
-            src="https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg"
-            width="9"
-          />
-          <noscript />
-        </amp-iframe>
+            sandbox="allow-scripts allow-same-origin"
+            scrolling="no"
+            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live"
+            title="video player"
+          >
+            <amp-img
+              alt=""
+              attribution=""
+              height="16"
+              layout="fill"
+              placeholder="true"
+              src="https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg"
+              width="9"
+            />
+            <noscript />
+          </amp-iframe>
+        </div>
       </div>
     </div>
   </body>
@@ -64,16 +68,20 @@ exports[`VideoPlayer should render correctly for canonical 1`] = `
 }
 
 <div
-  class="c0"
+  class=""
 >
-  <iframe
-    allow="autoplay; fullscreen"
-    allowfullscreen=""
-    class="c1"
-    scrolling="no"
-    src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live"
-    title="video player"
-  />
-  <noscript />
+  <div
+    class="c0"
+  >
+    <iframe
+      allow="autoplay; fullscreen"
+      allowfullscreen=""
+      class="c1"
+      scrolling="no"
+      src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live"
+      title="video player"
+    />
+    <noscript />
+  </div>
 </div>
 `;
