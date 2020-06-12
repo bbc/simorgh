@@ -224,6 +224,13 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   margin: 0;
 }
 
+.c14 {
+  height: 165px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
 .c6 {
   font-size: 2rem;
   line-height: 2.625rem;
@@ -262,18 +269,6 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   margin: 0;
 }
 
-.c14 {
-  height: 165px;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 1rem;
-}
-
-.c13 {
-  width: calc(100% + 1rem);
-  margin: 0 -0.5rem;
-}
-
 .c12 {
   padding: 2rem 0 1.5rem;
   padding-left: 1rem;
@@ -285,6 +280,17 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c13 {
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
+}
+
+@media (min-width:63rem) {
+  .c14 {
+    margin-bottom: 2rem;
+  }
 }
 
 @supports (display:grid) {
@@ -558,19 +564,6 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   }
 }
 
-@media (min-width:63rem) {
-  .c14 {
-    margin-bottom: 2rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c13 {
-    width: calc(100% + 2rem);
-    margin: 0 -1rem;
-  }
-}
-
 @media (max-width:24.9375rem) {
   .c12 {
     display: none;
@@ -608,6 +601,13 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 @media (min-width:63rem) {
   .c4 {
     padding-top: 1.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c13 {
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
   }
 }
 
@@ -726,6 +726,12 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 `;
 
 exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
+.c13 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
 .c8 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -736,6 +742,13 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   position: absolute;
   width: 1px;
   margin: 0;
+}
+
+.c15 {
+  height: 165px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c6 {
@@ -776,24 +789,6 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   margin: 0;
 }
 
-.c13 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-.c15 {
-  height: 165px;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 1rem;
-}
-
-.c14 {
-  width: calc(100% + 1rem);
-  margin: 0 -0.5rem;
-}
-
 .c12 {
   padding: 2rem 0 1.5rem;
   padding-left: 1rem;
@@ -807,6 +802,11 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   flex-grow: 1;
 }
 
+.c14 {
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
+}
+
 .c16 {
   border: 0;
   left: 0;
@@ -815,6 +815,12 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+@media (min-width:63rem) {
+  .c15 {
+    margin-bottom: 2rem;
+  }
 }
 
 @supports (display:grid) {
@@ -1088,19 +1094,6 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   }
 }
 
-@media (min-width:63rem) {
-  .c15 {
-    margin-bottom: 2rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c14 {
-    width: calc(100% + 2rem);
-    margin: 0 -1rem;
-  }
-}
-
 @media (max-width:24.9375rem) {
   .c12 {
     display: none;
@@ -1138,6 +1131,13 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 @media (min-width:63rem) {
   .c4 {
     padding-top: 1.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c14 {
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
   }
 }
 
@@ -1446,6 +1446,12 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 `;
 
 exports[`OnDemand Radio Page  should not show the audio player if it is not available yet 1`] = `
+.c13 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
 .c8 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -1456,6 +1462,39 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
   position: absolute;
   width: 1px;
   margin: 0;
+}
+
+.c15 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c16 {
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0.0625rem solid transparent;
+  color: #FFFFFF;
+  background-color: rgba(34,34,34,0.75);
+}
+
+.c17 {
+  display: block;
+  font-weight: normal;
+  bottom: 0;
+  position: absolute;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .c6 {
@@ -1496,51 +1535,6 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
   margin: 0;
 }
 
-.c13 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-.c15 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.c16 {
-  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 0.0625rem solid transparent;
-  color: #FFFFFF;
-  background-color: rgba(34,34,34,0.75);
-}
-
-.c17 {
-  display: block;
-  font-weight: normal;
-  bottom: 0;
-  position: absolute;
-  padding: 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
-}
-
-.c14 {
-  position: relative;
-  min-height: 165px;
-  margin-bottom: 2rem;
-}
-
 .c12 {
   padding: 2rem 0 1.5rem;
   padding-right: 1rem;
@@ -1552,6 +1546,36 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c14 {
+  position: relative;
+  min-height: 165px;
+  margin-bottom: 2rem;
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c16 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c17 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c17 {
+    padding: 1rem;
+  }
 }
 
 @supports (display:grid) {
@@ -1822,30 +1846,6 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
 @media (max-width:62.9375rem) {
   .c10 {
     padding-bottom: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c16 {
-    font-size: 0.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c16 {
-    background-color: transparent;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c17 {
-    background-color: window;
-  }
-}
-
-@media (min-width:25rem) {
-  .c17 {
-    padding: 1rem;
   }
 }
 
@@ -1983,6 +1983,12 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
 `;
 
 exports[`OnDemand Radio Page  should show the expired content message if episode is expired 1`] = `
+.c13 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
 .c8 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -1993,6 +1999,39 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   position: absolute;
   width: 1px;
   margin: 0;
+}
+
+.c15 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c16 {
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0.0625rem solid transparent;
+  color: #FFFFFF;
+  background-color: rgba(34,34,34,0.75);
+}
+
+.c17 {
+  display: block;
+  font-weight: normal;
+  bottom: 0;
+  position: absolute;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .c6 {
@@ -2033,51 +2072,6 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   margin: 0;
 }
 
-.c13 {
-  display: block;
-  width: 100%;
-  visibility: visible;
-}
-
-.c15 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.c16 {
-  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 0.0625rem solid transparent;
-  color: #FFFFFF;
-  background-color: rgba(34,34,34,0.75);
-}
-
-.c17 {
-  display: block;
-  font-weight: normal;
-  bottom: 0;
-  position: absolute;
-  padding: 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
-}
-
-.c14 {
-  position: relative;
-  min-height: 165px;
-  margin-bottom: 2rem;
-}
-
 .c12 {
   padding: 2rem 0 1.5rem;
   padding-right: 1rem;
@@ -2089,6 +2083,36 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c14 {
+  position: relative;
+  min-height: 165px;
+  margin-bottom: 2rem;
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c16 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c17 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c17 {
+    padding: 1rem;
+  }
 }
 
 @supports (display:grid) {
@@ -2359,30 +2383,6 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 @media (max-width:62.9375rem) {
   .c10 {
     padding-bottom: 0.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c16 {
-    font-size: 0.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c16 {
-    background-color: transparent;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c17 {
-    background-color: window;
-  }
-}
-
-@media (min-width:25rem) {
-  .c17 {
-    padding: 1rem;
   }
 }
 
