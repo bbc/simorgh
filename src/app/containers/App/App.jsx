@@ -39,7 +39,7 @@ export default withRouter(
 
     useEffect(() => {
       if (isMounted.current) {
-        updatePage({ setState, routes, pathname });
+        updatePage({ setState, pathname });
       } else {
         isMounted.current = true;
       }
