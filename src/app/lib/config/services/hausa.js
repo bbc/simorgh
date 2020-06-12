@@ -9,6 +9,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'Talla',
     },
     lang: `ha`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -190,7 +191,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: true,
-      frontPagePosition: 'Features',
+      frontPagePosition: 'Verticals',
       frequenciesPageUrl: '/hausa/institutional/2011/11/000001_mitocinmu',
       frequenciesPageLabel: 'Mitocinmu da sauko da sautin labarai',
       header: 'Shirye-shiryenmu',

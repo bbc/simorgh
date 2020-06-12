@@ -10,17 +10,17 @@ import getInitialData from '#app/routes/home/getInitialData';
 import { FrontPage } from '..';
 
 const requestContextData = {
-  isAmp: false,
   pageType: 'frontPage',
   service: 'pidgin',
   pathname: '/pathname',
   data: { status: 200 },
 };
 
-const FrontPageWithContext = props => (
+// eslint-disable-next-line react/prop-types
+const FrontPageWithContext = ({ isAmp = false, ...props }) => (
   <BrowserRouter>
     <ToggleContextProvider service="pidgin" origin="https://www.test.bbc.com">
-      <RequestContextProvider {...requestContextData}>
+      <RequestContextProvider isAmp={isAmp} {...requestContextData}>
         <ServiceContextProvider service="pidgin">
           <FrontPage {...props} />
         </ServiceContextProvider>
@@ -32,6 +32,11 @@ const FrontPageWithContext = props => (
 let pageData;
 
 beforeEach(async () => {
+  window.dotcom = {
+    bootstrap: jest.fn(),
+    cmd: { push: jest.fn() },
+  };
+
   fetch.mockResponse(JSON.stringify(frontPageDataPidgin));
 
   const response = await getInitialData({
@@ -44,6 +49,10 @@ beforeEach(async () => {
   fetch.mockResponse(JSON.stringify(pidginMostReadData));
 });
 
+afterEach(() => {
+  window.dotcom = undefined;
+});
+
 jest.mock('uuid', () => {
   let x = 1;
   return () => {
@@ -53,78 +62,67 @@ jest.mock('uuid', () => {
 });
 
 jest.mock('#containers/ChartbeatAnalytics', () => {
-  const ChartbeatAnalytics = () => <div>chartbeat</div>;
-  return ChartbeatAnalytics;
+  return () => <div>chartbeat</div>;
+});
+
+jest.mock('#containers/ATIAnalytics/amp', () => {
+  return () => <div>Amp ATI analytics</div>;
 });
 
 jest.mock('#containers/PageHandlers/withVariant', () => Component => {
-  const VariantContainer = props => (
+  return props => (
     <div id="VariantContainer">
       <Component {...props} />
     </div>
   );
-
-  return VariantContainer;
 });
 
 jest.mock('#containers/PageHandlers/withContexts', () => Component => {
-  const DataContainer = props => (
+  return props => (
     <div id="ContextsContainer">
       <Component {...props} />
     </div>
   );
-
-  return DataContainer;
 });
 
 jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
-  const PageWrapperContainer = props => (
+  return props => (
     <div id="PageWrapperContainer">
       <Component {...props} />
     </div>
   );
-
-  return PageWrapperContainer;
 });
 
 jest.mock('#containers/PageHandlers/withLoading', () => Component => {
-  const LoadingContainer = props => (
+  return props => (
     <div id="LoadingContainer">
       <Component {...props} />
     </div>
   );
-
-  return LoadingContainer;
 });
 
 jest.mock('#containers/PageHandlers/withError', () => Component => {
-  const ErrorContainer = props => (
+  return props => (
     <div id="ErrorContainer">
       <Component {...props} />
     </div>
   );
-
-  return ErrorContainer;
 });
 
 jest.mock('#containers/PageHandlers/withData', () => Component => {
-  const DataContainer = props => (
+  return props => (
     <div id="DataContainer">
       <Component {...props} />
     </div>
   );
-
-  return DataContainer;
 });
 
 jest.mock('#containers/PageHandlers/withContexts', () => Component => {
-  const ContextsContainer = props => (
+  return props => (
     <div id="ContextsContainer">
       <Component {...props} />
     </div>
   );
-
-  return ContextsContainer;
 });
 
 describe('Front Page', () => {
@@ -136,6 +134,13 @@ describe('Front Page', () => {
           .container;
       });
 
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should render a pidgin amp frontpage', async () => {
+      const { container } = render(
+        <FrontPageWithContext pageData={pageData} isAmp />,
+      );
       expect(container).toMatchSnapshot();
     });
   });

@@ -13,6 +13,7 @@ export const service = {
   default: {
     ads: {
       hasAds: false,
+      advertisementLabel: 'বিজ্ঞাপন',
     },
     lang: `bn`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -221,11 +222,11 @@ export const service = {
           text: 'প্রিভেসি নীতি',
         },
         {
-          href: 'https://www.bbc.com/bengali/institutional-37289967',
+          href: 'https://www.bbc.com/usingthebbc/cookies/',
           text: 'কুকিজ',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com//bengali/institutional-37289967',
           text: 'বিবিসির সঙ্গে যোগাযোগ করুন',
         },
         {

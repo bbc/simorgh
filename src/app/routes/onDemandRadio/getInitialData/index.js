@@ -1,18 +1,45 @@
 import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
-import getPlaceholderImageUrl from '../../utils/getPlaceholderImageUrl';
+import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
+import { logExpiredEpisode } from './logInitialData';
+import pathWithLogging, { LOG_LEVELS } from './pathWithLogging';
 
-const getBrandTitle = path(['metadata', 'title']);
-const getLanguage = path(['metadata', 'language']);
-const getEpisodeTitle = path(['content', 'blocks', '0', 'title']);
-const getHeadline = path(['promo', 'headlines', 'headline']);
+const getEpisodeAvailability = ({ availableFrom, availableUntil }) => {
+  const timeNow = Date.now();
+  if (!availableUntil || timeNow < availableFrom) {
+    return false;
+  }
+  return true;
+};
+
+const getBrandTitle = pathWithLogging(['metadata', 'title']);
+const getLanguage = pathWithLogging(['metadata', 'language']);
+const getEpisodeTitle = path(['content', 'blocks', 0, 'title']);
+const getHeadline = pathWithLogging(['promo', 'headlines', 'headline'], {
+  logLevel: LOG_LEVELS.WARN,
+});
 const getShortSynopsis = path(['promo', 'media', 'synopses', 'short']);
-const getSummary = path(['content', 'blocks', '0', 'synopses', 'short']);
-const getEpisodeId = path(['content', 'blocks', '0', 'id']);
+const getSummary = pathWithLogging([
+  'content',
+  'blocks',
+  0,
+  'synopses',
+  'short',
+]);
+const getEpisodeId = pathWithLogging(['content', 'blocks', 0, 'id'], {
+  logLevel: LOG_LEVELS.ERROR,
+});
+const getImageUrl = pathWithLogging(['content', 'blocks', 0, 'imageUrl']);
 const getId = path(['metadata', 'id']);
-const getMasterBrand = path(['metadata', 'createdBy']);
-const getContentType = path(['metadata', 'analyticsLabels', 'contentType']);
+const getMasterBrand = pathWithLogging(['metadata', 'createdBy'], {
+  logLevel: LOG_LEVELS.ERROR,
+});
+const getContentType = pathWithLogging([
+  'metadata',
+  'analyticsLabels',
+  'contentType',
+]);
 const getPageTitle = path(['metadata', 'analyticsLabels', 'pageTitle']);
 const getPageIdentifier = path([
   'metadata',
@@ -35,22 +62,38 @@ const getEpisodeAvailableUntil = path([
   '0',
   'availableUntil',
 ]);
-const getReleaseDateTimeStamp = path(['metadata', 'releaseDateTimeStamp']);
+const getReleaseDateTimeStamp = pathWithLogging(
+  ['metadata', 'releaseDateTimeStamp'],
+  { logLevel: LOG_LEVELS.WARN },
+);
 const getPromoBrandTitle = path(['promo', 'brand', 'title']);
-const getDurationISO8601 = path([
+const getDurationISO8601 = pathWithLogging([
   'promo',
   'media',
   'versions',
   0,
   'durationISO8601',
 ]);
-const getImageUrl = json =>
-  getPlaceholderImageUrl(path(['promo', 'media', 'imageUrl'], json));
+const getThumbnailImageUrl = json =>
+  getPlaceholderImageUrlUtil(
+    pathWithLogging(['promo', 'media', 'imageUrl'])(json),
+  );
 
 export default async ({ path: pathname }) => {
   const onDemandRadioDataPath = overrideRendererOnTest(pathname);
   const { json, ...rest } = await fetchPageData(onDemandRadioDataPath);
   const pageType = { metadata: { type: 'On Demand Radio' } };
+
+  const availableFrom = getEpisodeAvailableFrom(json);
+  const availableUntil = getEpisodeAvailableUntil(json);
+  const episodeIsAvailable = getEpisodeAvailability({
+    availableFrom,
+    availableUntil,
+  });
+
+  if (!episodeIsAvailable) {
+    logExpiredEpisode(json);
+  }
 
   return {
     ...rest,
@@ -66,14 +109,14 @@ export default async ({ path: pathname }) => {
         contentType: getContentType(json),
         episodeId: getEpisodeId(json),
         masterBrand: getMasterBrand(json),
-        episodeAvailableFrom: getEpisodeAvailableFrom(json),
-        episodeAvailableUntil: getEpisodeAvailableUntil(json),
         releaseDateTimeStamp: getReleaseDateTimeStamp(json),
         pageTitle: getPageTitle(json),
         pageIdentifier: getPageIdentifier(json),
+        imageUrl: getImageUrl(json),
         promoBrandTitle: getPromoBrandTitle(json),
         durationISO8601: getDurationISO8601(json),
-        imageUrl: getImageUrl(json),
+        thumbnailImageUrl: getThumbnailImageUrl(json),
+        episodeIsAvailable,
         ...pageType,
       },
     }),

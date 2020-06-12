@@ -26,17 +26,17 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
 }
 
 .c1 {
-  display: block;
+  display: inline-block;
+  width: 100%;
   padding-bottom: 0.5rem;
 }
 
 .c3 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
   margin: 0;
 }
 
@@ -62,34 +62,33 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
 
 @media screen {
   .c0 {
-    padding: 2rem 0 1.5rem;
+    padding: 2rem 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c1 {
     padding-bottom: 0;
+    line-height: 3.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c3 {
-    font-size: 1rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c3 {
-    font-size: 1rem;
-    line-height: 1.375rem;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
 <h1
   class="c0"
-  id="content"
-  tabindex="-1"
 >
   <span
     role="text"

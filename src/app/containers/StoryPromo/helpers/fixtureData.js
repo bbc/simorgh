@@ -171,6 +171,27 @@ export const podcastLinkItem = {
   type: 'link',
 };
 
+export const guideLinkItem = {
+  name: 'Story Promo of type Guide',
+  summary: 'Guide promo',
+  indexImage: {
+    id: 63692548,
+    subType: 'index',
+    href: 'http://b.files.bbci.co.uk/14A31/test/_63692548_000327537-1.jpg',
+    path: '/cpsdevpb/14A31/test/_63692548_000327537-1.jpg',
+    height: 549,
+    width: 976,
+    altText: 'A lone Koala perches in a eucalyptus tree',
+    caption: 'Koalas are from Australia',
+    copyrightHolder: 'BBC',
+  },
+  uri: 'http://www.bbc.com/azeri',
+  contentType: 'Guide',
+  assetTypeCode: 'PRO',
+  timestamp: 1565186015000,
+  type: 'link',
+};
+
 export const itemWithoutImage = {
   headlines: {
     headline: 'A headline',

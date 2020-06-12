@@ -15,10 +15,12 @@ import {
   frontPageManifestPath,
   frontPageSwPath,
   cpsAssetPageDataPath,
-  radioAndTvDataPath,
+  onDemandRadioDataPath,
+  onDemandTvDataPath,
   mostReadDataRegexPath,
   legacyAssetPageDataPath,
   secondaryColumnDataRegexPath,
+  IdxDataPath,
 } from '../app/routes/utils/regex';
 import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
@@ -178,7 +180,7 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
 
       sendDataFile(res, dataFilePath, next);
     })
-    .get(radioAndTvDataPath, async ({ params }, res, next) => {
+    .get(onDemandRadioDataPath, async ({ params }, res, next) => {
       const { service, serviceId, mediaId } = params;
 
       const dataFilePath = path.join(
@@ -186,6 +188,20 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
         'data',
         service,
         serviceId,
+        mediaId,
+      );
+
+      sendDataFile(res, `${dataFilePath}.json`, next);
+    })
+    .get(onDemandTvDataPath, async ({ params }, res, next) => {
+      const { service, serviceId, brandEpisode, mediaId } = params;
+
+      const dataFilePath = path.join(
+        process.cwd(),
+        'data',
+        service,
+        serviceId,
+        brandEpisode,
         mediaId,
       );
 
@@ -222,6 +238,11 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
         variant,
       });
 
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(IdxDataPath, async ({ params }, res, next) => {
+      const { idx } = params;
+      const dataFilePath = path.join(process.cwd(), 'data', idx, 'index.json');
       sendDataFile(res, dataFilePath, next);
     })
     .get('/ckns_policy/*', (req, res) => {

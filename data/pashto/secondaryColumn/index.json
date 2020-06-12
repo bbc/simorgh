@@ -1,0 +1,373 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "هغه کاروبارونه چې د کورونا وېروس بحران کې یې ګټه ډېره شوې"
+        },
+        "locators": {
+          "assetUri": "/pashto/world-52649939",
+          "cpsUrn": "urn:bbc:content:assetUri:pashto/world-52649939",
+          "assetId": "52649939"
+        },
+        "summary": "که یوه لور ته د کورونا وېروس مخنیوي اقداماتو له کبله نړیوال اقتصاد مخ پر ځور دی، نو بل لور ته همدا اقدامات د ځینو کاروبارونو لپاره د پرمختګ او ودې لامل هم شوي دي.",
+        "timestamp": 1589380309000,
+        "language": "ps",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+            "categoryName": "Explainer"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e1739461b000e9dabf6",
+              "campaignName": "WS - CS"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112239266",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/102F5/production/_112239266_aca917a7-cb72-4752-a427-f7867c898e23.jpg",
+          "path": "/cpsprodpb/102F5/production/_112239266_aca917a7-cb72-4752-a427-f7867c898e23.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Front of an Amazon warehouse",
+          "caption": "امازون وايي، د تقاضا پوره کولو لپاره میلیونونه ډالر لګوي",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:pashto/world-52649939",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ارګ: طالبان د اعلامیې په خپرولو له خپلو \"جنایتونو\" انکار نشي کولی"
+        },
+        "locators": {
+          "assetUri": "/pashto/afghanistan-52643309",
+          "cpsUrn": "urn:bbc:content:assetUri:pashto/afghanistan-52643309",
+          "assetId": "52643309"
+        },
+        "summary": "د افغان ولسمشر محمد اشرف غني ویاند صدیق صدیقي سې شنبه کابل کې یوې خبري غونډې ته وویل، طالبان نشي کولی چې د یوې اعلامیې په خبرولو سره د هغه تاوتریخوالي او \"جنایتونو\" مسولیت رد کړي چې له تېرو څو ورځو راهیس په افغانستان کې ترسره شوي دي.",
+        "timestamp": 1589339432000,
+        "language": "ps",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112256486",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/10B71/production/_112256486_315635e3-c5ed-46f8-93e0-6833f6155a4c.jpg",
+          "path": "/cpsprodpb/10B71/production/_112256486_315635e3-c5ed-46f8-93e0-6833f6155a4c.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "صدیقي",
+          "caption": "د افغان ولسمشر ویاند صدیق صدیقي وایي، افغانان د طالبانو اصله څېره پېژني",
+          "copyrightHolder": "GMIC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:pashto/afghanistan-52643309",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ننګرهار برید: د یوې کورنۍ ۴ غړي وژل شوي؛ وروسته د کور مېرمنې زړه هم درېدلی"
+        },
+        "locators": {
+          "assetUri": "/pashto/52650299",
+          "cpsUrn": "urn:bbc:content:assetUri:pashto/52650299",
+          "assetId": "52650299"
+        },
+        "summary": "د ننګرهار په ښېوې ولسوالۍ کې سې شنبه د جنازې په مراسمو کې د ځانمرګي بريد د د وژل شويو کسان شمېر لږ تر لږه ۳۲ ته رسېدلی دی. په وژل شویو کې د یوې کورنۍ ۴ غړي هم شامل دي، او وروسته د همدې کورنۍ یوې مېرمنې زړه هم درېډلی او مړه شوې ده",
+        "timestamp": 1589371635000,
+        "language": "ps",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112253739",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/16E27/production/_112253739_acc95899-2c45-468c-9791-27b207a0af71.jpg",
+          "path": "/cpsprodpb/16E27/production/_112253739_acc95899-2c45-468c-9791-27b207a0af71.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "An Afghan woman cries while looking for her relative at a hospital which came under attack yesterday in Kabul, Afghanistan May 13, 2020.",
+          "caption": "د کابل پر روغتون برید کې نوي زېږېدلي ماشومان او میندې وژل شوي",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "standard",
+        "id": "urn:bbc:ares::asset:pashto/52650299",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "د کابل او ننګرهار بریدونو ته غبرګونونه"
+        },
+        "locators": {
+          "assetUri": "/pashto/afghanistan-52643308",
+          "cpsUrn": "urn:bbc:content:assetUri:pashto/afghanistan-52643308",
+          "assetId": "52643308"
+        },
+        "summary": "پرون سې شنبه) د مۍ ۱۲) د کابل په لویدیځ کې په یوه روغتون وسله وال برید او همدا راز د ننګرهار ښېوه ولسوالۍ کې د جنازې پر مراسمو ځانمرګي برید ته سخت او توند غبرګونونه ښودل شوي دي.",
+        "timestamp": 1589336528000,
+        "language": "ps",
+        "byline": {
+          "name": "ابراهیم ساپی",
+          "title": "بي بي سي",
+          "persons": [
+            {
+              "name": "ابراهیم ساپی",
+              "function": "بي بي سي"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112250598",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/15DA1/production/_112250598_8630187d-f373-4006-885c-1152e592ce9c.jpg",
+          "path": "/cpsprodpb/15DA1/production/_112250598_8630187d-f373-4006-885c-1152e592ce9c.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ننګرهار",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:pashto/afghanistan-52643308",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "پر حوالو بندیز: \"د کورونا وېروس له کبله کور ته پيسې نشم لېږلی\""
+        },
+        "locators": {
+          "assetUri": "/pashto/world-52631790",
+          "cpsUrn": "urn:bbc:content:assetUri:pashto/world-52631790",
+          "assetId": "52631790"
+        },
+        "summary": "کورونا وېروس د۸۰۰ میلیونه وګړو هغه مالي مرسته ګواښي چې په نورو هېوادونو کې د خپلې کورنۍ له مېشتو غړو یې تر لاسه کوي.",
+        "timestamp": 1589280289000,
+        "language": "ps",
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+            "categoryName": "Explainer"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e1739461b000e9dabf6",
+              "campaignName": "WS - CS"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112173312",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/5359/production/_112173312_64461d16-1dc3-408a-92de-a2c9ddd4a079.jpg",
+          "path": "/cpsprodpb/5359/production/_112173312_64461d16-1dc3-408a-92de-a2c9ddd4a079.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Reina is pictured with her husband",
+          "caption": "Reina and her husband are both helped by their daughter in Spain: 'While we are breathing and there is life, we will fight'",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "imageThumbnail": {
+          "id": "112173313",
+          "subType": "index-thumbnail",
+          "href": "http://c.files.bbci.co.uk/7A69/production/_112173313_64461d16-1dc3-408a-92de-a2c9ddd4a079.jpg",
+          "path": "/cpsprodpb/7A69/production/_112173313_64461d16-1dc3-408a-92de-a2c9ddd4a079.jpg",
+          "height": 180,
+          "width": 320,
+          "altText": "Reina is pictured with her husband",
+          "caption": "Reina and her husband are both helped by their daughter in Spain: 'While we are breathing and there is life, we will fight'",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:pashto/world-52631790",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "کورونا وېروس؛ افغانستان کې د ګرځندوی مخ پر ځوړ حالت"
+        },
+        "locators": {
+          "assetUri": "/pashto/afghanistan-52629633",
+          "cpsUrn": "urn:bbc:content:assetUri:pashto/afghanistan-52629633",
+          "assetId": "52629633"
+        },
+        "summary": "په افغانستان کې د کورونا وېروس خپرېدو له شمال تر جنوب او له ختیځ نه تر لوېدیځه د هېواد ښایسته سیمو او تاریخي ځایونو ته د سیلانیانو او ګرځندویانو د تګ مخه ډب کړې او ور سره د حکومت او خلکو دواړو له لاسه د دغه صنعت ګټه وتلی دی.",
+        "timestamp": 1589267309000,
+        "language": "ps",
+        "byline": {
+          "name": "ابراهیم ساپی",
+          "title": "بي بي سي",
+          "persons": [
+            {
+              "name": "ابراهیم ساپی",
+              "function": "بي بي سي"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112237602",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/50C1/production/_112237602_52629633.jpg",
+          "path": "/cpsprodpb/50C1/production/_112237602_52629633.jpg",
+          "height": 334,
+          "width": 594,
+          "altText": "kandahar",
+          "caption": "kandahar",
+          "copyrightHolder": "AFP",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:pashto/afghanistan-52629633",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "ولې زموږ له نوم سره صاحب، جان یا خان کارول کېږي؟"
+        },
+        "locators": {
+          "assetUri": "/pashto/columns-52606913",
+          "cpsUrn": "urn:bbc:content:assetUri:pashto/columns-52606913",
+          "assetId": "52606913"
+        },
+        "summary": "کله مو پر دې فکر کړی چې ولې ځینې خلک ستاسې له نوم یا تخلص سره القاب اضافه کوي،‌ او یا د تعارفي وروستاړي او مختاړی په کارولو مو، صاحب، جان او ښاغلی بولي؟ دا کلتور د افغانستان په څېر ټولنو کې ډېر عام دی. خو لاملونه یې څه دي؟",
+        "timestamp": 1589121926000,
+        "language": "ps",
+        "byline": {
+          "name": "پاینده  څرګند ",
+          "title": "بي بي سي، لندن",
+          "persons": [
+            {
+              "name": "پاینده څرګند",
+              "function": "بي بي سي، لندن"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+            "categoryName": "Interactive"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112221995",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/EA08/production/_112221995_gettyimages-1161044542.jpg",
+          "path": "/cpsprodpb/EA08/production/_112221995_gettyimages-1161044542.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "ټولنه",
+          "caption": "له نوم سره د القابو کارونه په ختیځه او لویدیځه ټولنه کې توپیر لري",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:pashto/columns-52606913",
+        "type": "cps"
+      }
+    ]
+  }

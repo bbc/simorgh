@@ -34,6 +34,11 @@ const toggleState = {
   },
 };
 
+jest.mock('#containers/ChartbeatAnalytics', () => {
+  const ChartbeatAnalytics = () => <div>chartbeat</div>;
+  return ChartbeatAnalytics;
+});
+
 const createAssetPage = ({ pageData }, service) => (
   <StaticRouter>
     <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
@@ -172,5 +177,19 @@ describe('Story Page', () => {
 
     expect(document.querySelector('main time')).toBeNull();
     expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render correctly when the secondary column data is not available', async () => {
+    fetchMock.mock('http://localhost/some-cps-sty-path.json', pidginPageData);
+    fetchMock.mock('http://localhost/pidgin/mostread.json', pidginMostReadData);
+    fetchMock.mock('http://localhost/pidgin/sty-secondary-column.json', {});
+
+    const { pageData } = await getInitialData({
+      path: '/some-cps-sty-path',
+      service: 'pidgin',
+    });
+
+    const page = createAssetPage({ pageData }, 'pidgin');
+    await matchSnapshotAsync(page);
   });
 });

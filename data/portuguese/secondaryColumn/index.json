@@ -1,0 +1,652 @@
+{
+    "topStories": [
+      {
+        "headlines": {
+          "headline": "10 gráficos para entender a situação atual do Brasil na pandemia de covid-19"
+        },
+        "locators": {
+          "assetUri": "/portuguese/brasil-52595760",
+          "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-52595760",
+          "assetId": "52595760"
+        },
+        "summary": "BBC News Brasil reuniu principais indicadores para explicar situação do país na pandemia, apesar da subnotificação; hoje, quase não há mais leitos UTI em alguns Estados, os casos e as mortes estão aumentando, mas a uma velocidade que tem caído ou se mantido constante, há cada vez mais cidades pequenas atingidas e as pessoas têm respeitado menos o distanciamento social.",
+        "timestamp": 1589359398000,
+        "language": "pt-BR",
+        "byline": {
+          "name": "Matheus Magenta",
+          "title": "Da BBC News Brasil em Londres",
+          "persons": [
+            {
+              "name": "Matheus Magenta",
+              "function": "Da BBC News Brasil em São Paulo"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112184665",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/DD48/production/_112184665_98b53257-d4a9-46c7-accb-5f2c8e7d8798.jpg",
+          "path": "/cpsprodpb/DD48/production/_112184665_98b53257-d4a9-46c7-accb-5f2c8e7d8798.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Coveiro em cemitério em Manaus",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "maximum",
+        "overtypedSummary": "BBC News Brasil reuniu principais indicadores para explicar situação do país na pandemia; hoje, quase não há mais leitos UTI em alguns Estados, os casos e as mortes estão aumentando, mas a uma velocidade que tem caído ou se mantido constante, há cada vez mais cidades pequenas atingidas e as pessoas têm respeitado menos o distanciamento social.",
+        "id": "urn:bbc:ares::asset:portuguese/brasil-52595760",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Coronavírus: o que é a regra 10-4 proposta por pesquisadores para reabrir a economia durante a pandemia de covid-19"
+        },
+        "locators": {
+          "assetUri": "/portuguese/internacional-52650569",
+          "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-52650569",
+          "assetId": "52650569"
+        },
+        "summary": "Governos de todo mundo enfrentam dilema de como reabrir economia sem pôr em risco tudo o que já foi feito para controlar infecções por coronavírus; cientistas israelenses propuseram solução.",
+        "timestamp": 1589374246000,
+        "language": "pt-BR",
+        "byline": {
+          "name": "Mar Pichel",
+          "title": "BBC News Mundo",
+          "persons": [
+            {
+              "name": "Mar Pichel",
+              "function": "BBC News Mundo"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+            "categoryName": "Feature"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e2939461b000e9dabf8",
+              "campaignName": "WS - Educate me"
+            },
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            },
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112246510",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/061C/production/_112246510_gettyimages-1223056841.jpg",
+          "path": "/cpsprodpb/061C/production/_112246510_gettyimages-1223056841.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Alunos separados e com máscara em sala de aula",
+          "caption": "Modelo 10-4 propõe modelo cíclico para retornar à sala de aula",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "maximum",
+        "id": "urn:bbc:ares::asset:portuguese/internacional-52650569",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "'Ele soluçava e perguntava pelos amigos': o final feliz de festa de aniversário de menino com autismo em meio à pandemia"
+        },
+        "locators": {
+          "assetUri": "/portuguese/brasil-52642784",
+          "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-52642784",
+          "assetId": "52642784"
+        },
+        "summary": "Joaquim, de 5 anos, esperava ansiosamente por mensagens de amigos durante festa de aniversário; elas não vieram - mas aí, a mãe relatou o caso no Facebook...",
+        "timestamp": 1589375397000,
+        "language": "pt-BR",
+        "byline": {
+          "name": "Vinicius Lemos",
+          "title": "Da BBC Brasil em São Paulo",
+          "persons": [
+            {
+              "name": "Vinicius Lemos",
+              "function": "BBC Brasil"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112250325",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/CC51/production/_112250325_joaquim1.png",
+          "path": "/cpsprodpb/CC51/production/_112250325_joaquim1.png",
+          "height": 549,
+          "width": 976,
+          "altText": "Joaquim durante festa de aniversário",
+          "caption": "Joaquim abraçado ao irmão caçula, durante festa de cinco anos em casa, em Foz do Iguaçu, na última sexta-feira (8)",
+          "copyrightHolder": "Arquivo pessoal",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "prominence": "maximum",
+        "id": "urn:bbc:ares::asset:portuguese/brasil-52642784",
+        "type": "cps"
+      }
+    ],
+    "features": [
+      {
+        "headlines": {
+          "headline": "Bolsonaro terá 'centrão', mas impeachment pode avançar se houver apoio popular, dizem autores de pedido"
+        },
+        "locators": {
+          "assetUri": "/portuguese/brasil-52569194",
+          "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-52569194",
+          "assetId": "52569194"
+        },
+        "summary": "Ciro Gomes (PDT), Kim Kataguiri (DEM), Joice Hasselmann (PSL), Alessandro Molon (PSB) e outros autores de pedidos de impeachment de Bolsonaro avaliam as chances do impedimento prosseguir no Congresso.",
+        "timestamp": 1588838519000,
+        "language": "pt-BR",
+        "byline": {
+          "name": "André Shalders - @andreshalders",
+          "title": "Da BBC News Brasil em Brasília",
+          "persons": [
+            {
+              "name": "André Shalders - @andreshalders",
+              "function": "Da BBC News Brasil em Brasília"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3e39461b000e9dabfb",
+              "campaignName": "WS - Keep me on trend"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112174988",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/15B73/production/_112174988_49813011383_524484b65a_k.jpg",
+          "path": "/cpsprodpb/15B73/production/_112174988_49813011383_524484b65a_k.jpg",
+          "height": 1152,
+          "width": 2048,
+          "altText": "Jair Bolsonaro",
+          "caption": "Ciro Gomes, Kim Kataguiri, Joice Hasselmann, Molon e outros autores de pedidos de impeachment de Bolsonaro avaliam as chances do impedimento prosseguir no Congresso",
+          "copyrightHolder": "Marcos Corrêa/PR",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "overtypedSummary": "Ciro Gomes (PDT), Kim Kataguiri (DEM), Joice Hasselmann (PSL) e outros autores de pedidos de impeachment de Bolsonaro avaliam chances de impedimento prosseguir no Congresso.",
+        "id": "urn:bbc:ares::asset:portuguese/brasil-52569194",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "V, U ou W, os 3 cenários possíveis para a recuperação econômica após a pandemia de covid-19"
+        },
+        "locators": {
+          "assetUri": "/portuguese/internacional-52445365",
+          "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-52445365",
+          "assetId": "52445365"
+        },
+        "summary": "Já há consenso de que o coronavírus provocará uma grande recessão - agora, os economistas debatem qual forma ela pode ter.",
+        "timestamp": 1589132749000,
+        "language": "pt-BR",
+        "byline": {
+          "name": "Stefania Gozzer",
+          "title": "Da BBC News Mundo",
+          "persons": [
+            {
+              "name": "Stefania Gozzer",
+              "function": "BBC Mundo"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111760739",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/16E0A/production/_111760739_gettyimages-1219685901.jpg",
+          "path": "/cpsprodpb/16E0A/production/_111760739_gettyimages-1219685901.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "wall street",
+          "caption": "Los pronósticos sugieren que será la peor recesión en casi un siglo.",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:portuguese/internacional-52445365",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "A lei universal da física descoberta graças a uma gota de azeite de oliva"
+        },
+        "locators": {
+          "assetUri": "/portuguese/geral-52523759",
+          "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-52523759",
+          "assetId": "52523759"
+        },
+        "summary": "A lei, cuja explicação foi publicada na revista científica Physical Review Letters, trata de fótons interagindo com outros fótons do presente e do passado ao mesmo tempo.",
+        "timestamp": 1589054822000,
+        "language": "pt-BR",
+        "byline": {
+          "name": "Ana Pais (@_anapais)",
+          "title": "Da BBC News Mundo",
+          "persons": [
+            {
+              "name": "Ana Pais (@_anapais)",
+              "function": "BBC News Mundo"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "111926081",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/468E/production/_111926081_2048aceite.png",
+          "path": "/cpsprodpb/468E/production/_111926081_2048aceite.png",
+          "height": 1152,
+          "width": 2048,
+          "altText": "Gotas de aceite de oliva",
+          "copyrightHolder": "Getty Images",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:portuguese/geral-52523759",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Coronavírus: os pacientes de covid-19 que não conseguem se livrar da doença"
+        },
+        "locators": {
+          "assetUri": "/portuguese/geral-52563907",
+          "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-52563907",
+          "assetId": "52563907"
+        },
+        "summary": "A maioria dos pacientes se recupera rapidamente da covid-19 — os dados sugerem uma média de duas semanas; mas para alguns, os sintomas duram por muito mais tempo.",
+        "timestamp": 1588851877000,
+        "language": "pt-BR",
+        "byline": {
+          "name": "Dominic Hughes",
+          "title": "Repórter de saúde da BBC News",
+          "persons": [
+            {
+              "name": "Dominic Hughes",
+              "function": "BBC News, Brussels"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112156252",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/62B1/production/_112156252_felicity.jpg",
+          "path": "/cpsprodpb/62B1/production/_112156252_felicity.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Felicity",
+          "caption": "Felicity, like David Harris, has not been tested but was told by doctors she probably had the virus",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:portuguese/geral-52563907",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "O que era a 'Liga Anti-Máscara', que protestava contra restrições na gripe espanhola"
+        },
+        "locators": {
+          "assetUri": "/portuguese/internacional-52588711",
+          "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-52588711",
+          "assetId": "52588711"
+        },
+        "summary": "Protesto realizado há mais de cem anos lembra as manifestações recentes contra as regras de distanciamento social, o fechamento do comércio e outras medidas impostas para conter a atual pandemia de covid-19, a doença causada pelo novo coronavírus.",
+        "timestamp": 1589111246000,
+        "language": "pt-BR",
+        "byline": {
+          "name": "Alessandra Corrêa",
+          "title": "De Winston-Salem (EUA) para a BBC News Brasil",
+          "persons": [
+            {
+              "name": "Alessandra Corrêa",
+              "function": "De Winston-Salem (EUA) para a BBC News Brasil"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112203597",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/136AA/production/_112203597_foto2-californiahistoryroomcaliforniastatelibrarysacramento.jpg",
+          "path": "/cpsprodpb/136AA/production/_112203597_foto2-californiahistoryroomcaliforniastatelibrarysacramento.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "pessoas com máscaras",
+          "caption": "Em meio aos esforços nos meses finais da Primeira Guerra Mundial, o uso de máscaras era considerado símbolo de patriotismo.",
+          "copyrightHolder": "California History Room, California State Library,",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:portuguese/internacional-52588711",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "O que está em jogo no depoimento de ministros de Bolsonaro nesta terça"
+        },
+        "locators": {
+          "assetUri": "/portuguese/brasil-52627917",
+          "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-52627917",
+          "assetId": "52627917"
+        },
+        "summary": "Ministros do núcleo militar do governo falarão sobre reunião do dia 22 de abril; no encontro, Bolsonaro teria cobrado troca do comando da PF no Rio de Janeiro, segundo Sergio Moro; procuradoria quer saber se há razões para denúncia de presidente por crimes.",
+        "timestamp": 1589270249000,
+        "language": "pt-BR",
+        "byline": {
+          "name": "André Shalders - @andreshalders",
+          "title": "Da BBC News Brasil em Brasília",
+          "persons": [
+            {
+              "name": "André Shalders - @andreshalders",
+              "function": "Da BBC News Brasil em Brasília"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e4739461b000e9dabfc",
+              "campaignName": "WS - Update me"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112236672",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/6C0F/production/_112236672_ministros.jpg",
+          "path": "/cpsprodpb/6C0F/production/_112236672_ministros.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Colagem de fotos dos ministros Augusto Heleno, Braga Netto e Luiz Eduardo Ramos",
+          "caption": "Terão depoimentos colhidos os ministros Augusto Heleno (Gabinete de Segurança Institucional), Walter Souza Braga Netto (Casa Civil) e Luiz Eduardo Ramos (Secretaria de Governo)",
+          "copyrightHolder": "Reuters",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:portuguese/brasil-52627917",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "'Países vão ter que se endividar para salvar o emprego e a vida das pessoas', diz presidente do BID"
+        },
+        "locators": {
+          "assetUri": "/portuguese/brasil-52567527",
+          "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-52567527",
+          "assetId": "52567527"
+        },
+        "summary": "Para Luis Alberto Moreno, pandemia deixou ainda mais evidente a desigualdade da América Latina e mostrou necessidade de se investir na saúde pública regional.",
+        "timestamp": 1588877648000,
+        "language": "pt-BR",
+        "byline": {
+          "name": "Marcia Carmo",
+          "title": "De Buenos Aires para a BBC Brasil",
+          "persons": [
+            {
+              "name": "Marcia Carmo",
+              "function": "De Buenos Aires para a BBC Brasil"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112173614",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/A2A5/production/_112173614_rjcovid.jpg",
+          "path": "/cpsprodpb/A2A5/production/_112173614_rjcovid.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Moradores da Rocinha (RJ) de máscaras para proteção contra a covid",
+          "caption": "Mais pobres são os mais prejucados pela crise econômica, diz presidente da instituição",
+          "copyrightHolder": "Ricardo Moraes/Reuters",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:portuguese/brasil-52567527",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Entregadores de aplicativo trabalham mais e ganham menos na pandemia, diz pesquisa"
+        },
+        "locators": {
+          "assetUri": "/portuguese/brasil-52564246",
+          "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-52564246",
+          "assetId": "52564246"
+        },
+        "summary": "Estudo feito com trabalhadores de quatro Estados brasileiros apontou que 89,7% dos entrevistados tiveram ganhos iguais ou menores em relação ao período antes da pandemia.",
+        "timestamp": 1588868195000,
+        "language": "pt-BR",
+        "byline": {
+          "name": "Felipe Souza e Leandro Machado",
+          "title": "Da BBC News Brasil em São Paulo",
+          "persons": [
+            {
+              "name": "Felipe Souza - @felipe_dess",
+              "function": "Da BBC News Brasil em São Paulo"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "campaigns": [
+            {
+              "campaignId": "5a988e3739461b000e9dabfa",
+              "campaignName": "WS - Give me perspective"
+            }
+          ],
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112172877",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/13003/production/_112172877_delivery.jpg",
+          "path": "/cpsprodpb/13003/production/_112172877_delivery.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Entregador de aplicativo de bicicleta em Manaus",
+          "caption": "Estudo apontou que 89,7% dos entrevistados tiveram ganhos iguais ou menores em relação ao período antes da pandemia",
+          "copyrightHolder": "Bruno Kelly/Reuters",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:portuguese/brasil-52564246",
+        "type": "cps"
+      },
+      {
+        "headlines": {
+          "headline": "Coronavírus: os sete tipos de pessoas que inventam e disseminam fake news"
+        },
+        "locators": {
+          "assetUri": "/portuguese/geral-52584548",
+          "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-52584548",
+          "assetId": "52584548"
+        },
+        "summary": "Investigamos centenas de histórias enganosas durante a pandemia. Isso nos deu uma ideia sobre quem está por trás da desinformação - e o que os motiva. Aqui estão sete tipos de pessoas que iniciam e espalham falsidades.",
+        "timestamp": 1588888186000,
+        "language": "pt-BR",
+        "byline": {
+          "name": "Marianna Spring",
+          "title": "BBC",
+          "persons": [
+            {
+              "name": "BBC Trending",
+              "function": "What's popular and why"
+            }
+          ]
+        },
+        "passport": {
+          "category": {
+            "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+            "categoryName": "News"
+          },
+          "taggings": []
+        },
+        "cpsType": "STY",
+        "indexImage": {
+          "id": "112105090",
+          "subType": "index",
+          "href": "http://c.files.bbci.co.uk/235A/production/_112105090_fake1-1.jpg",
+          "path": "/cpsprodpb/235A/production/_112105090_fake1-1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Ilustração de pessoas que espalham fake news",
+          "copyrightHolder": "BBC",
+          "type": "image"
+        },
+        "options": {
+          "isBreakingNews": false,
+          "isFactCheck": false
+        },
+        "id": "urn:bbc:ares::asset:portuguese/geral-52584548",
+        "type": "cps"
+      }
+    ]
+  }

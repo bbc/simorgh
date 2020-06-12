@@ -1,6 +1,5 @@
 import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
-import addIdsToBlocks from './addIdsToBlocks';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 
 const getLanguage = path(['metadata', 'language']);
@@ -9,23 +8,26 @@ const getPromoName = path(['promo', 'name']);
 const getPromoSummary = path(['promo', 'summary']);
 const getPageTitle = path(['metadata', 'analyticsLabels', 'pageTitle']);
 const getContentType = path(['metadata', 'analyticsLabels', 'contentType']);
+const getMasterBrand = path(['content', 'blocks', 2, 'externalId']);
 const getPageIdentifier = path([
   'metadata',
   'analyticsLabels',
   'pageIdentifier',
 ]);
 
+const getHeading = path(['content', 'blocks', 0, 'text']);
+const getBodySummary = path(['content', 'blocks', 1, 'text']);
 export default async ({ path: pathname }) => {
   const liveRadioDataPath = overrideRendererOnTest(pathname);
   const { json, ...rest } = await fetchPageData(liveRadioDataPath);
-  const contentData = path(['content'], json);
   const pageType = { metadata: { type: 'Live Radio' } };
 
   return {
     ...rest,
     ...(json && {
       pageData: {
-        content: addIdsToBlocks(contentData),
+        heading: getHeading(json),
+        bodySummary: getBodySummary(json),
         language: getLanguage(json),
         id: getMetaDataId(json),
         name: getPromoName(json),
@@ -33,6 +35,7 @@ export default async ({ path: pathname }) => {
         pageTitle: getPageTitle(json),
         contentType: getContentType(json),
         pageIdentifier: getPageIdentifier(json),
+        masterBrand: getMasterBrand(json),
         ...pageType,
       },
     }),

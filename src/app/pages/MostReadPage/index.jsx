@@ -2,37 +2,25 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { string, node } from 'prop-types';
 import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
-import { C_METAL } from '@bbc/psammead-styles/colours';
-import { getParagon } from '@bbc/gel-foundations/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { ServiceContext } from '#contexts/ServiceContext';
 import MostReadContainer from '#containers/MostRead';
 import mostReadShape from '#containers/MostRead/utilities/mostReadShape';
 import ATIAnalytics from '#containers/ATIAnalytics';
+import LinkedData from '#containers/LinkedData';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import MetadataContainer from '#containers/Metadata';
 import Grid, { GelPageGrid } from '#app/components/Grid';
-
-const StyledMain = styled.main.attrs({ role: 'main' })`
-  flex-grow: 1;
-  margin: 0 ${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin: 0 ${GEL_SPACING_DBL};
-  }
-`;
+import IndexMain from '#app/components/PageLayout/IndexMain';
+import IndexHeading from '#containers/IndexHeading';
 
 const ConstrainedWrapper = styled.div`
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
@@ -48,28 +36,10 @@ const ConstrainedWrapper = styled.div`
   }
 `;
 
-const MostReadHeader = styled.h1.attrs({
-  id: 'content',
-  tabIndex: '-1',
-})`
-  color: ${C_METAL};
-  ${({ script }) => script && getParagon(script)};
-  ${({ service }) => getSansRegular(service)};
-  margin: 0;
-  padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_TRPL};
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    padding: ${GEL_SPACING_TRPL} 0 ${GEL_SPACING_DBL};
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding: ${GEL_SPACING_TRPL} 0 ${GEL_SPACING};
-  }
-`;
-
 const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
     brandName,
-    service,
-    script,
+
     dir,
     lang,
     mostRead: { header },
@@ -77,9 +47,9 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
 
   const MostReadWrapper = ({ children }) => (
     <ConstrainedWrapper>
-      <MostReadHeader script={script} service={service}>
+      <IndexHeading id="content" pageType="mostRead">
         {header}
-      </MostReadHeader>
+      </IndexHeading>
 
       <GelPageGrid
         dir={dir}
@@ -110,7 +80,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
             group2: 6,
             group3: 6,
             group4: 6,
-            group5: 12,
+            group5: 11,
           }}
         >
           {children}
@@ -133,15 +103,16 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
         description={`${header} - ${brandName}`}
         openGraphType="website"
       />
-
-      <StyledMain>
+      <LinkedData type="WebPage" seoTitle={header} />
+      <IndexMain data-e2e="most-read">
         <MostReadContainer
           mostReadEndpointOverride={mostReadEndpointOverride}
           wrapper={MostReadWrapper}
           columnLayout="oneColumn"
           initialData={pageData}
+          serverRenderOnAmp
         />
-      </StyledMain>
+      </IndexMain>
     </>
   );
 };

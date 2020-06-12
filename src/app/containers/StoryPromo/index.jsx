@@ -104,6 +104,9 @@ const StoryPromoContainer = ({
   const isStoryPromoPodcast =
     isAssetTypeCode === 'PRO' &&
     pathOr(null, ['contentType'], item) === 'Podcast';
+  const isContentTypeGuide =
+    isAssetTypeCode === 'PRO' &&
+    pathOr(null, ['contentType'], item) === 'Guide';
 
   const { headline, url, isLive } = getHeadlineUrlAndLive(
     item,
@@ -127,6 +130,13 @@ const StoryPromoContainer = ({
   // If mediaStatusCode is visible, there is an error in rendering the block
   const mediaStatuscode = pathOr(null, ['media', 'statusCode'], item);
 
+  const displayTimestamp =
+    timestamp &&
+    !isStoryPromoPodcast &&
+    !isContentTypeGuide &&
+    !isRecommendation &&
+    !isLive;
+
   if (cpsType === 'MAP' && mediaStatuscode) {
     logger.warn(MEDIA_MISSING, {
       url: pathOr(null, ['section', 'uri'], item),
@@ -143,7 +153,8 @@ const StoryPromoContainer = ({
 
   const useLargeImages = promoType === 'top' || promoType === 'leading';
 
-  const headingTagOverride = isRecommendation ? 'div' : null;
+  const headingTagOverride =
+    isRecommendation || isContentTypeGuide ? 'div' : null;
 
   const Info = (
     <>
@@ -182,7 +193,7 @@ const StoryPromoContainer = ({
           {promoSummary}
         </Summary>
       )}
-      {timestamp && !isStoryPromoPodcast && !isRecommendation && !isLive && (
+      {displayTimestamp && (
         <Timestamp
           altCalendar={altCalendar}
           locale={datetimeLocale}

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, bool } from 'prop-types';
+import { arrayOf, shape, number } from 'prop-types';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
+import { pathOr } from 'ramda';
 
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -8,8 +9,10 @@ import StoryPromo from '../StoryPromo';
 import Grid from '../../components/Grid';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 
-const CpsRelatedContent = ({ content, enableGridWrapper }) => {
+const CpsRelatedContent = ({ content, parentColumns }) => {
   const { dir, translations } = useContext(ServiceContext);
+
+  const title = pathOr('Related Content', ['relatedContent'], translations);
 
   const singleTransform = promo => <StoryPromo item={promo} dir={dir} />;
 
@@ -51,9 +54,9 @@ const CpsRelatedContent = ({ content, enableGridWrapper }) => {
   return (
     <CpsOnwardJourney
       labelId="related-content-heading"
-      title={translations.relatedContent}
+      title={title}
       content={content}
-      enableGridWrapper={enableGridWrapper}
+      parentColumns={parentColumns}
       singleTransform={singleTransform}
       listTransform={listTransform}
     />
@@ -65,12 +68,19 @@ CpsRelatedContent.propTypes = {
   // Both pages use CPS, so the data schema is the same
   // This can be found under CPS ARES payloads: relatedContent.groups[0].promos
   content: arrayOf(shape(storyItem)),
-  enableGridWrapper: bool,
+  parentColumns: shape({
+    group0: number,
+    group1: number,
+    group2: number,
+    group3: number,
+    group4: number,
+    group5: number,
+  }),
 };
 
 CpsRelatedContent.defaultProps = {
   content: [],
-  enableGridWrapper: false,
+  parentColumns: null,
 };
 
 export default CpsRelatedContent;

@@ -4,14 +4,15 @@ exports[`CpsRelatedContent should render Story Feature components when given app
 <DocumentFragment>
   <section
     aria-labelledby="features-analysis-heading"
-    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
+    class="GridWrapper-sc-12lwanc-0 hgpaqH"
+    data-e2e="related-content"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT"
       >
         <div
           class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -30,7 +31,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 dir="ltr"
                 id="features-analysis-heading"
               >
-                Features & Analysis
+                Informate me
               </span>
             </span>
           </span>
@@ -55,7 +56,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
               >
                 <div
-                  class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                  class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                 >
                   <div
                     class="lazyload-placeholder"
@@ -109,7 +110,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
               >
                 <div
-                  class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                  class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                 >
                   <div
                     class="lazyload-placeholder"
@@ -158,14 +159,15 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 <DocumentFragment>
   <section
     aria-labelledby="features-analysis-heading"
-    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
+    class="GridWrapper-sc-12lwanc-0 hgpaqH"
+    data-e2e="related-content"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT"
       >
         <div
           class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -184,14 +186,14 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
                 dir="ltr"
                 id="features-analysis-heading"
               >
-                Features & Analysis
+                Informate me
               </span>
             </span>
           </span>
         </h2>
       </div>
       <div
-        class="SingleContentWrapper-opyob2-2 cSBeTC"
+        class="SingleContentWrapper-opyob2-3 iddZTf"
       >
         <div
           class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
@@ -204,7 +206,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
               class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
             >
               <div
-                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
               >
                 <div
                   class="lazyload-placeholder"

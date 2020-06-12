@@ -13,6 +13,7 @@ import pathOr from 'ramda/src/pathOr';
 import Grid from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
+import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import LinkedData from '#containers/LinkedData';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
@@ -210,7 +211,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     group4: 4,
     group5: 4,
   };
-
   return (
     <>
       <CpsMetadata
@@ -234,6 +234,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         aboutTags={aboutTags}
       />
       <ATIAnalytics data={pageData} />
+      <ChartbeatAnalytics data={pageData} />
 
       <StoryPageGrid
         dir={dir}
@@ -245,7 +246,10 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
-          <CpsRelatedContent content={relatedContent} />
+          <CpsRelatedContent
+            content={relatedContent}
+            parentColumns={gridColsMain}
+          />
         </Grid>
         <GridSecondaryColumn
           item
@@ -253,12 +257,22 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           columns={gridColsSecondary}
           parentColumns={gridColumns}
         >
-          <ResponsiveComponentWrapper>
-            <TopStories content={topStoriesInitialData} />
-          </ResponsiveComponentWrapper>
-          <ResponsiveComponentWrapper>
-            <FeaturesAnalysis content={featuresInitialData} />
-          </ResponsiveComponentWrapper>
+          {topStoriesInitialData && (
+            <ResponsiveComponentWrapper>
+              <TopStories
+                content={topStoriesInitialData}
+                parentColumns={gridColsSecondary}
+              />
+            </ResponsiveComponentWrapper>
+          )}
+          {featuresInitialData && (
+            <ResponsiveComponentWrapper>
+              <FeaturesAnalysis
+                content={featuresInitialData}
+                parentColumns={gridColsSecondary}
+              />
+            </ResponsiveComponentWrapper>
+          )}
           <ComponentWrapper>
             <MostReadContainer
               mostReadEndpointOverride={mostReadEndpointOverride}

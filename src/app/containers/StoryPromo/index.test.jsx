@@ -13,6 +13,7 @@ import {
   audioItem,
   videoItem,
   liveItem,
+  guideLinkItem,
   audioItemNoDuration,
   standardLinkItem,
   featureLinkItem,
@@ -370,6 +371,24 @@ describe('StoryPromo Container', () => {
         const { container } = render(<WrappedStoryPromo item={liveItem} />);
         const time = container.querySelector('time');
         expect(time).toEqual(null);
+      });
+    });
+
+    describe('Story Promo of type Guide', () => {
+      it('should not render a timestamp', () => {
+        const { container } = render(
+          <WrappedStoryPromo item={guideLinkItem} />,
+        );
+
+        expect(container.getElementsByTagName('time').length).toEqual(0);
+      });
+
+      it('should not render a heading tag', () => {
+        const { container } = render(
+          <WrappedStoryPromo item={guideLinkItem} />,
+        );
+
+        expect(container.getElementsByTagName('h3').length).toEqual(0);
       });
     });
 
