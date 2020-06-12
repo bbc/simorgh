@@ -24,10 +24,12 @@ export default async ({ path, headers }) => {
       ...routeProps,
     };
   } catch (error) {
+    const status = onClient() ? 502 : 500;
+
     logger.error(
       onClient() ? CLIENT_SIDE_REQUEST_FAILED : SERVER_SIDE_REQUEST_FAILED,
       {
-        status: onClient() ? 502 : 500,
+        status,
         message: error.toString(),
         url: path,
         headers,
@@ -36,9 +38,7 @@ export default async ({ path, headers }) => {
 
     return {
       ...routeProps,
-      status: onClient()
-        ? CLIENT_SIDE_REQUEST_FAILED
-        : SERVER_SIDE_REQUEST_FAILED,
+      status,
       error,
     };
   }
