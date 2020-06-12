@@ -37,18 +37,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           },
         );
       });
-
-      it(`embed should load preroll plugin`, () => {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(
-          ({ body: jsonData }) => {
-            const embedUrl = getEmbedUrl(jsonData, language);
-
-            visitPage(`${embedUrl}?ads-debug`, 'mediaAssetPage');
-
-            cy.get(`script[src*="dotcom-preroll.js"]`).should('exist');
-          },
-        );
-      });
     });
 
     if (appToggles.chartbeatAnalytics.enabled && envConfig.chartbeatEnabled) {
