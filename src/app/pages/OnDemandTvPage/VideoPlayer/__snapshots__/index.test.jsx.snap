@@ -1,21 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`VideoPlayer should render correctly for amp 1`] = `
-.c1 {
+.c0 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
-}
-
-.c0 {
-  margin-top: 1.5rem;
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    width: calc(100% + 2rem);
-    margin: 0 -1rem;
-  }
 }
 
 <html>
@@ -29,10 +18,10 @@ exports[`VideoPlayer should render correctly for amp 1`] = `
   <body>
     <div>
       <div
-        class="c0"
+        class=""
       >
         <div
-          class="c1"
+          class="c0"
         >
           <amp-iframe
             allowfullscreen="allowfullscreen"
@@ -40,8 +29,8 @@ exports[`VideoPlayer should render correctly for amp 1`] = `
             layout="fill"
             sandbox="allow-scripts allow-same-origin"
             scrolling="no"
-            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_brand_tv/id/ps/amp?morph_env=live"
-            title="ویډیو پلیئر"
+            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live"
+            title="video player"
           >
             <amp-img
               alt=""
@@ -62,17 +51,13 @@ exports[`VideoPlayer should render correctly for amp 1`] = `
 `;
 
 exports[`VideoPlayer should render correctly for canonical 1`] = `
-.c1 {
+.c0 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c0 {
-  margin-top: 1.5rem;
-}
-
-.c2 {
+.c1 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -82,26 +67,19 @@ exports[`VideoPlayer should render correctly for canonical 1`] = `
   height: 100%;
 }
 
-@media (max-width:37.4375rem) {
-  .c0 {
-    width: calc(100% + 2rem);
-    margin: 0 -1rem;
-  }
-}
-
 <div
-  class="c0"
+  class=""
 >
   <div
-    class="c1"
+    class="c0"
   >
     <iframe
       allow="autoplay; fullscreen"
       allowfullscreen=""
-      class="c2"
+      class="c1"
       scrolling="no"
-      src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_brand_tv/id/ps?morph_env=live"
-      title="ویډیو پلیئر"
+      src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live"
+      title="video player"
     />
     <noscript />
   </div>
