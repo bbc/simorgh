@@ -21,7 +21,7 @@ const embedUrlConfig = {
   ],
 };
 
-describe(`Tests for PreRoll ads for Media Player Embed`, () => {
+describe(`Tests for Preroll Ads for Media Player Embed`, () => {
   // Get correct URLs based on application environment
   const embedUrls = embedUrlConfig[getAppEnv()];
 
