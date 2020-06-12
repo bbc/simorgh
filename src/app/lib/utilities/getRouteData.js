@@ -36,7 +36,9 @@ export default async ({ path, headers }) => {
 
     return {
       ...routeProps,
-      status: 500,
+      status: onClient()
+        ? CLIENT_SIDE_REQUEST_FAILED
+        : SERVER_SIDE_REQUEST_FAILED,
       error,
     };
   }
