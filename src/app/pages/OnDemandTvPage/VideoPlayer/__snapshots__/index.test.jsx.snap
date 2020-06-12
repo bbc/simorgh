@@ -1,21 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`VideoPlayer should render correctly for amp 1`] = `
-.c1 {
+.c0 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
-}
-
-.c0 {
-  margin-top: 1.5rem;
-}
-
-@media (max-width:37.4375rem) {
-  .c0 {
-    width: calc(100% + 2rem);
-    margin: 0 -1rem;
-  }
 }
 
 <html>
@@ -31,30 +20,26 @@ exports[`VideoPlayer should render correctly for amp 1`] = `
       <div
         class="c0"
       >
-        <div
-          class="c1"
+        <amp-iframe
+          allowfullscreen="allowfullscreen"
+          frameborder="0"
+          layout="fill"
+          sandbox="allow-scripts allow-same-origin"
+          scrolling="no"
+          src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live"
+          title="video player"
         >
-          <amp-iframe
-            allowfullscreen="allowfullscreen"
-            frameborder="0"
+          <amp-img
+            alt=""
+            attribution=""
+            height="16"
             layout="fill"
-            sandbox="allow-scripts allow-same-origin"
-            scrolling="no"
-            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_brand_tv/id/ps/amp?morph_env=live"
-            title="ویډیو پلیئر"
-          >
-            <amp-img
-              alt=""
-              attribution=""
-              height="16"
-              layout="fill"
-              placeholder="true"
-              src="https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg"
-              width="9"
-            />
-            <noscript />
-          </amp-iframe>
-        </div>
+            placeholder="true"
+            src="https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg"
+            width="9"
+          />
+          <noscript />
+        </amp-iframe>
       </div>
     </div>
   </body>
@@ -62,17 +47,13 @@ exports[`VideoPlayer should render correctly for amp 1`] = `
 `;
 
 exports[`VideoPlayer should render correctly for canonical 1`] = `
-.c1 {
+.c0 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.c0 {
-  margin-top: 1.5rem;
-}
-
-.c2 {
+.c1 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -82,28 +63,17 @@ exports[`VideoPlayer should render correctly for canonical 1`] = `
   height: 100%;
 }
 
-@media (max-width:37.4375rem) {
-  .c0 {
-    width: calc(100% + 2rem);
-    margin: 0 -1rem;
-  }
-}
-
 <div
   class="c0"
 >
-  <div
+  <iframe
+    allow="autoplay; fullscreen"
+    allowfullscreen=""
     class="c1"
-  >
-    <iframe
-      allow="autoplay; fullscreen"
-      allowfullscreen=""
-      class="c2"
-      scrolling="no"
-      src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_brand_tv/id/ps?morph_env=live"
-      title="ویډیو پلیئر"
-    />
-    <noscript />
-  </div>
+    scrolling="no"
+    src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live"
+    title="video player"
+  />
+  <noscript />
 </div>
 `;
