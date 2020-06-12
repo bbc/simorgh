@@ -55,7 +55,7 @@ const StyledGelPageGrid = styled(GelPageGrid)`
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
 `;
 
-const StyledWrapper = styled.div`
+const StyledVideoPlayer = styled(VideoPlayer)`
   margin-top: ${GEL_SPACING_TRPL};
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     width: calc(100% + ${GEL_SPACING_QUAD});
@@ -167,16 +167,14 @@ const OnDemandTvPage = ({ pageData }) => {
             enableGelGutters
           >
             {episodeIsAvailable ? (
-              <StyledWrapper>
-                <VideoPlayer
-                  embedUrl={embedUrl}
-                  assetId={episodeId}
-                  imageUrl={imageUrl}
-                  type={type}
-                  title={title}
-                  iframeTitle={iframeTitle}
-                />
-              </StyledWrapper>
+              <StyledVideoPlayer
+                embedUrl={embedUrl}
+                assetId={episodeId}
+                imageUrl={imageUrl}
+                type={type}
+                title={title}
+                iframeTitle={iframeTitle}
+              />
             ) : (
               <StyledMessageContainer>
                 <MediaMessage

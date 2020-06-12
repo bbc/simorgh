@@ -16,6 +16,7 @@ const VideoPlayer = ({
   embedUrl,
   iframeTitle,
   type,
+  className,
 }) => {
   const { translations, service } = useContext(ServiceContext);
   const { isAmp, platform } = useContext(RequestContext);
@@ -35,7 +36,7 @@ const VideoPlayer = ({
   if (!isValidPlatform || !assetId) return null;
 
   return (
-    <>
+    <div className={className}>
       {isAmp ? (
         <AmpMediaPlayer
           placeholderSrc={placeholderSrc}
@@ -55,7 +56,7 @@ const VideoPlayer = ({
           noJsClassName="no-js"
         />
       )}
-    </>
+    </div>
   );
 };
 
@@ -66,6 +67,7 @@ VideoPlayer.propTypes = {
   type: string,
   title: string,
   iframeTitle: string,
+  className: string,
 };
 
 VideoPlayer.defaultProps = {
@@ -75,6 +77,7 @@ VideoPlayer.defaultProps = {
   type: '',
   title: '',
   iframeTitle: '',
+  className: '',
 };
 
 export default VideoPlayer;
