@@ -51,13 +51,13 @@ const StyledGelWrapperGrid = styled(GelPageGrid)`
   }
 `;
 
-const MediaMessageWrapper = styled.div`
+const StyledMessageContainer = styled.div`
   position: relative;
   min-height: 165px;
   margin-bottom: ${GEL_SPACING_QUAD};
 `;
 
-const AudioPlayerWrapper = styled(AudioPlayer)`
+const StyledAudioPlayer = styled(AudioPlayer)`
   width: calc(100% + ${GEL_SPACING_DBL});
   margin: 0 -${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -153,15 +153,15 @@ const OnDemandRadioPage = ({ pageData }) => {
             </Grid>
           </StyledGelWrapperGrid>
           {episodeIsAvailable ? (
-            <AudioPlayerWrapper
+            <StyledAudioPlayer
               externalId={masterBrand}
               id={episodeId}
               embedUrl={embedUrl}
             />
           ) : (
-            <MediaMessageWrapper>
+            <StyledMessageContainer>
               <MediaMessage service={service} message={expiredContentMessage} />
-            </MediaMessageWrapper>
+            </StyledMessageContainer>
           )}
 
           <LinkedData

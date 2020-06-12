@@ -27,7 +27,7 @@ const StyledGelPageGrid = styled(GelPageGrid)`
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
 `;
 
-const AudioPlayerWrapper = styled(AudioPlayer)`
+const StyledAudioPlayer = styled(AudioPlayer)`
   width: calc(100% + ${GEL_SPACING_DBL});
   margin: 0 -${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -122,7 +122,7 @@ const LiveRadioPage = ({ pageData }) => {
           <Paragraph script={script} service={service}>
             {bodySummary}
           </Paragraph>
-          <AudioPlayerWrapper
+          <StyledAudioPlayer
             externalId={masterBrand}
             id={assetId}
             embedUrl={embedUrl}
