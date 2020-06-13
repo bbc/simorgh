@@ -30,41 +30,35 @@ export default () => {
   });
 
   describe('Index Alsos', () => {
-    const topStories = document.querySelector(
-      '[aria-labelledby="Top-stories"]',
-    );
+    const indexAlsos = document.querySelector('[data-e2e=index-alsos]');
 
-    if (topStories) {
-      const indexAlsos = topStories.querySelector('[data-e2e=index-alsos]');
+    if (indexAlsos) {
+      const h4El = indexAlsos.querySelector('h4');
+      it('should match visually hidden text', () => {
+        expect(h4El.textContent).toMatchSnapshot();
+      });
 
-      if (indexAlsos) {
-        const h4El = indexAlsos.querySelector('h4');
-        it('should match visually hidden text', () => {
-          expect(h4El.textContent).toMatchSnapshot();
-        });
+      if (window.SIMORGH_DATA) {
+        const topStoriesGroup =
+          window.SIMORGH_DATA.pageData.content.groups[0].items[0];
+        const { relatedItems } = topStoriesGroup;
 
-        if (window.SIMORGH_DATA) {
-          const topStoriesGroup =
-            window.SIMORGH_DATA.pageData.content.groups[0].items[0];
-          const { relatedItems } = topStoriesGroup;
+        if (relatedItems.length > 1) {
+          it('should have a list', () => {
+            expect(indexAlsos.querySelector('ul')).toBeInTheDocument();
+          });
 
-          if (relatedItems.length > 1) {
-            it('should have a list', () => {
-              expect(indexAlsos.querySelector('ul')).toBeInTheDocument();
-            });
-
-            it('should match the length of relatedItems', () => {
-              expect(indexAlsos.getElementsByTagName('li')).toHaveLength(
-                relatedItems.length,
-              );
-            });
-          } else {
-            it('should match content', () => {
-              expect(
-                indexAlsos.querySelector('div a span').innerHTML,
-              ).toMatchSnapshot();
-            });
-          }
+          it('should match the length of relatedItems', () => {
+            expect(indexAlsos.getElementsByTagName('li')).toHaveLength(
+              relatedItems.length,
+            );
+          });
+        } else {
+          it('should match content', () => {
+            expect(
+              indexAlsos.querySelector('div a span').innerHTML,
+            ).toMatchSnapshot();
+          });
         }
       }
     }

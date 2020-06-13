@@ -249,8 +249,6 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headlin
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 4`] = `"Подробно"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Story Promo Headline should match headline text 1`] = `"Как не спиться на карантине"`;
-
 exports[`AMP ukrainian/ukraine_in_russian IDX page Story Promo Headline should match text 1`] = `"Как не спиться на карантине"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Story Promo Image should match image 1`] = `
