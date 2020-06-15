@@ -4,18 +4,6 @@ exports[`Ad Container Snapshots should correctly render a Canonical ad 1`] = `
 <html>
   <head>
     <script
-      type="text/javascript"
-    >
-      
-            document.cookie = 'ads-debug=true';
-            window.dotcom = window.dotcom || { cmd: [] };
-            window.dotcomConfig = {
-              pageAds: true,
-              playerAds: false,
-            };
-          
-    </script>
-    <script
       src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
     />
   </head>
