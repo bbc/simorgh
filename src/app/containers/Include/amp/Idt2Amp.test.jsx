@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import AmpIncludeContainer from './Idt2Amp';
+import Idt2Amp from './Idt2Amp';
 
 const validIdt2Props = {
   imageBlock: {
@@ -20,7 +20,7 @@ describe('AmpIncludeContainer', () => {
   });
 
   it('should render for a valid IDT2 include', async () => {
-    const { container } = render(<AmpIncludeContainer {...validIdt2Props} />);
+    const { container } = render(<Idt2Amp {...validIdt2Props} />);
 
     expect(container.querySelectorAll('amp-img').length).toEqual(1);
     expect(container).toMatchSnapshot();
