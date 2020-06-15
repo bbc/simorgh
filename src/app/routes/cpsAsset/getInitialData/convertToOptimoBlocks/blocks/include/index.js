@@ -99,6 +99,9 @@ const convertInclude = async (includeBlock, ...restParams) => {
   let html;
   if (classification === 'vj-include-supports-amp') {
     ampSrc = ampSrcBuilder(href);
+    logger.info(INCLUDE_REQUEST_RECEIVED, {
+      url: ampSrc,
+    });
   } else {
     html = await fetchMarkup(buildIncludeUrl(href, includeType, pathname));
   }
