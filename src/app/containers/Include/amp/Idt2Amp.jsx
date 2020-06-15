@@ -15,7 +15,6 @@ const Idt2Amp = ({ imageBlock }) => (
 );
 
 Idt2Amp.propTypes = {
-  type: string.isRequired,
   imageBlock: shape({
     src: string,
     srcset: string,

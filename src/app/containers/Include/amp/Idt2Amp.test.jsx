@@ -1,11 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { act } from 'react-dom/test-utils';
+import { render } from '@testing-library/react';
 import AmpIncludeContainer from './Idt2Amp';
 
 const validIdt2Props = {
-  html: `<div>Hello</div>`,
-  type: 'idt2',
   imageBlock: {
     alt: 'image alt text',
     height: 1864,
@@ -18,20 +15,13 @@ const validIdt2Props = {
 };
 
 describe('AmpIncludeContainer', () => {
-  let container;
-  const includesBaseUrl = 'https://foobar.com/includes';
-  process.env.SIMORGH_INCLUDES_BASE_URL = includesBaseUrl;
-
   beforeEach(() => {
     jest.resetModules();
-    container = document.createElement('div');
-    document.body.appendChild(container);
   });
 
   it('should render for a valid IDT2 include', async () => {
-    act(() => {
-      ReactDOM.render(<AmpIncludeContainer {...validIdt2Props} />, container);
-    });
+    const { container } = render(<AmpIncludeContainer {...validIdt2Props} />);
+
     expect(container.querySelectorAll('amp-img').length).toEqual(1);
     expect(container).toMatchSnapshot();
   });
