@@ -1,9 +1,14 @@
 import React from 'react';
+import { render } from '@testing-library/react';
 import assocPath from 'ramda/src/assocPath';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import LinkedData from '.';
+
+const helpers = require('./helpers');
+
+const cleanLinkedData = jest.spyOn(helpers, 'cleanLinkedData');
 
 // eslint-disable-next-line react/prop-types
 const Context = ({ children, service }) => (
@@ -140,5 +145,14 @@ describe('LinkedData', () => {
         <LinkedData {...articleProps} />
       </Context>,
     );
+
+    it('should run cleanLinkedData', async () => {
+      await render(
+        <Context>
+          <LinkedData {...propsForRadio} />
+        </Context>,
+      );
+      expect(cleanLinkedData).toHaveBeenCalled();
+    });
   });
 });
