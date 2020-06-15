@@ -10,7 +10,7 @@ export const testsThatAlwaysRunForAllCanonicalPages = ({
   describe(`No testsToAlwaysRunForCanonicalPages to run for ${service} ${pageType}`, () => {});
 };
 
-// For testing feastures that may differ across services but share a common logic e.g. translated strings.
+// For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
   service,
   pageType,
