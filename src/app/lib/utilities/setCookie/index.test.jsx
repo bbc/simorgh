@@ -11,14 +11,14 @@ describe('setCookie Assertion Tests', () => {
 
   describe('Setting cookie with domain and duration', () => {
     it('should return cookie with domain and expiration of 1 year', () => {
-      setCookie('test', '111');
+      setCookie({ name: 'test', value: '111' });
       expect(cookieSpy).toHaveBeenCalledWith('test', '111', {
         domain: '.bbc.com',
         expires: 365,
       });
     });
     it('should return cookie with domain and expiration of 1 week', () => {
-      setCookie('test', '111', 7);
+      setCookie({ name: 'test', value: '111', expires: 7 });
       expect(cookieSpy).toHaveBeenCalledWith('test', '111', {
         domain: '.bbc.com',
         expires: 7,
@@ -55,7 +55,7 @@ describe('setCookie Assertion Tests', () => {
         protocol: 'https:',
       });
 
-      setCookie('test', '111');
+      setCookie({ name: 'test', value: '111', sameSite: 'None' });
 
       expect(cookieSpy).toHaveBeenCalledWith('test', '111', {
         domain: '.bbc.com',

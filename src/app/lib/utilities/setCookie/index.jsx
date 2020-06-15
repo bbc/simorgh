@@ -13,18 +13,26 @@ export const getCookieDomain = domain => {
   return domain;
 };
 
-const setCookie = (name, value, expires = COOKIE_EXPIRY) => {
+const setCookie = ({ name, value, expires = COOKIE_EXPIRY, sameSite }) => {
   const isHttps = window.location.protocol === 'https:';
 
+  // Modern browsers default sameSite value to Lax
+  // Setting sameSite='None' allows cookies will be sent in all contexts, i.e sending cross-origin is allowed.
+  // Setting sameSite='Strict' allows cookies to only set on first-party context
   const sameSiteSecure = {
-    sameSite: 'None',
-    secure: true,
+    Strict: {
+      sameSite: 'Strict',
+    },
+    None: isHttps && {
+      sameSite: 'None',
+      secure: true, // When setting sameSite='None', the attribute secure=true must also be passed into the cookie otherwise the cookie will not be set.
+    },
   };
 
   return Cookie.set(name, value, {
     expires,
     domain: getCookieDomain(document.domain),
-    ...(isHttps && sameSiteSecure),
+    ...sameSiteSecure[sameSite],
   });
 };
 
