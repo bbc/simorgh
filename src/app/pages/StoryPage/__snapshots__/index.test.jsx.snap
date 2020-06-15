@@ -234,34 +234,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding: 0;
 }
 
-.c43 {
-  padding: 0.5rem 0 1rem;
-}
-
-.c43:first-child {
-  padding-top: 0;
-}
-
-.c43:last-child {
-  padding-bottom: 0;
-  border: none;
-}
-
-.c42 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.c50 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #B80000;
-  display: inline-block;
-  margin-right: 0.5rem;
-}
-
 .c54 {
   display: inline-block;
   vertical-align: top;
@@ -384,6 +356,34 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 .c47:visited {
   color: #6E6E73;
+}
+
+.c50 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #B80000;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.c43 {
+  padding: 0.5rem 0 1rem;
+}
+
+.c43:first-child {
+  padding-top: 0;
+}
+
+.c43:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+.c42 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .c60 {
@@ -973,30 +973,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-@media (max-width:62.9375rem) {
-  .c43 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c43 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c43 {
-    padding: 0 0 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c43:first-child {
-    padding-top: 1rem;
-  }
-}
-
 @media (min-width:63rem) {
   .c54 {
     display: block;
@@ -1161,6 +1137,30 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   .c59 {
     display: none;
     visibility: hidden;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c43 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c43 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c43 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c43:first-child {
+    padding-top: 1rem;
   }
 }
 
@@ -4523,25 +4523,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding: 0;
 }
 
-.c45 {
-  padding: 0.5rem 0 1rem;
-}
-
-.c45:first-child {
-  padding-top: 0;
-}
-
-.c45:last-child {
-  padding-bottom: 0;
-  border: none;
-}
-
-.c44 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
 .c52 {
   display: inline-block;
   vertical-align: top;
@@ -4664,6 +4645,25 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 .c49:visited {
   color: #6E6E73;
+}
+
+.c45 {
+  padding: 0.5rem 0 1rem;
+}
+
+.c45:first-child {
+  padding-top: 0;
+}
+
+.c45:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+.c44 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .c58 {
@@ -5258,30 +5258,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@media (max-width:62.9375rem) {
-  .c45 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c45 {
-    padding: 1rem 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c45 {
-    padding: 0 0 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c45:first-child {
-    padding-top: 1rem;
-  }
-}
-
 @media (min-width:63rem) {
   .c52 {
     display: block;
@@ -5446,6 +5422,30 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   .c57 {
     display: none;
     visibility: hidden;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c45 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c45 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c45 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c45:first-child {
+    padding-top: 1rem;
   }
 }
 
