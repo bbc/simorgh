@@ -377,8 +377,8 @@ export const generateConnectSrc = ({ isAmp, isLive }) => {
 };
 
 export const generateDefaultSrc = ({ isAmp, isLive }) => {
-  if (!isLive && isAmp) return directives.imgSrc.canonicalNonLive;
-  return [];
+  if (!isLive && !isAmp) return directives.imgSrc.canonicalNonLive;
+  return ["'self'"];
 };
 
 export const generateFontSrc = ({ isAmp }) =>
