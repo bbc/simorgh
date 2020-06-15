@@ -1,9 +1,9 @@
 const getImageBlock = (type, blockData, isAmp) => {
   const supportedImageTypes = ['idt2'];
 
-  if (!supportedImageTypes.includes(type)) return null;
-
   const imageData = blockData[type];
+
+  if (!supportedImageTypes.includes(type) || !imageData) return null;
 
   const getSrc = href => {
     return `${process.env.SIMORGH_INCLUDES_BASE_URL}${href}`;
