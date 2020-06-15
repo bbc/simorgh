@@ -2,8 +2,11 @@ import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
-import { logExpiredEpisode } from './logInitialData';
-import pathWithLogging, { LOG_LEVELS } from './pathWithLogging';
+import { logExpiredEpisode, getUri } from './logInitialData';
+import pathWithLogging, {
+  LOG_LEVELS,
+} from '../../../lib/utilities/logging/pathWithLogging';
+import { RADIO_MISSING_FIELD } from '#lib/logger.const';
 
 const getEpisodeAvailability = ({ availableFrom, availableUntil }) => {
   const timeNow = Date.now();
@@ -13,39 +16,6 @@ const getEpisodeAvailability = ({ availableFrom, availableUntil }) => {
   return true;
 };
 
-const getBrandTitle = pathWithLogging(['metadata', 'title']);
-const getLanguage = pathWithLogging(['metadata', 'language']);
-const getEpisodeTitle = path(['content', 'blocks', 0, 'title']);
-const getHeadline = pathWithLogging(['promo', 'headlines', 'headline'], {
-  logLevel: LOG_LEVELS.WARN,
-});
-const getShortSynopsis = path(['promo', 'media', 'synopses', 'short']);
-const getSummary = pathWithLogging([
-  'content',
-  'blocks',
-  0,
-  'synopses',
-  'short',
-]);
-const getEpisodeId = pathWithLogging(['content', 'blocks', 0, 'id'], {
-  logLevel: LOG_LEVELS.ERROR,
-});
-const getImageUrl = pathWithLogging(['content', 'blocks', 0, 'imageUrl']);
-const getId = path(['metadata', 'id']);
-const getMasterBrand = pathWithLogging(['metadata', 'createdBy'], {
-  logLevel: LOG_LEVELS.ERROR,
-});
-const getContentType = pathWithLogging([
-  'metadata',
-  'analyticsLabels',
-  'contentType',
-]);
-const getPageTitle = path(['metadata', 'analyticsLabels', 'pageTitle']);
-const getPageIdentifier = path([
-  'metadata',
-  'analyticsLabels',
-  'pageIdentifier',
-]);
 const getEpisodeAvailableFrom = path([
   'content',
   'blocks',
@@ -62,26 +32,11 @@ const getEpisodeAvailableUntil = path([
   '0',
   'availableUntil',
 ]);
-const getReleaseDateTimeStamp = pathWithLogging(
-  ['metadata', 'releaseDateTimeStamp'],
-  { logLevel: LOG_LEVELS.WARN },
-);
-const getPromoBrandTitle = path(['promo', 'brand', 'title']);
-const getDurationISO8601 = pathWithLogging([
-  'promo',
-  'media',
-  'versions',
-  0,
-  'durationISO8601',
-]);
-const getThumbnailImageUrl = json =>
-  getPlaceholderImageUrlUtil(
-    pathWithLogging(['promo', 'media', 'imageUrl'])(json),
-  );
 
 export default async ({ path: pathname }) => {
   const onDemandRadioDataPath = overrideRendererOnTest(pathname);
   const { json, ...rest } = await fetchPageData(onDemandRadioDataPath);
+
   const pageType = { metadata: { type: 'On Demand Radio' } };
 
   const availableFrom = getEpisodeAvailableFrom(json);
@@ -95,27 +50,55 @@ export default async ({ path: pathname }) => {
     logExpiredEpisode(json);
   }
 
+  const get = fieldPath => path(fieldPath, json);
+  const getWithLogging = pathWithLogging(
+    getUri(json),
+    RADIO_MISSING_FIELD,
+    json,
+  );
+
   return {
     ...rest,
     ...(json && {
       pageData: {
-        language: getLanguage(json),
-        brandTitle: getBrandTitle(json),
-        episodeTitle: getEpisodeTitle(json),
-        headline: getHeadline(json),
-        shortSynopsis: getShortSynopsis(json),
-        id: getId(json),
-        summary: getSummary(json),
-        contentType: getContentType(json),
-        episodeId: getEpisodeId(json),
-        masterBrand: getMasterBrand(json),
-        releaseDateTimeStamp: getReleaseDateTimeStamp(json),
-        pageTitle: getPageTitle(json),
-        pageIdentifier: getPageIdentifier(json),
-        imageUrl: getImageUrl(json),
-        promoBrandTitle: getPromoBrandTitle(json),
-        durationISO8601: getDurationISO8601(json),
-        thumbnailImageUrl: getThumbnailImageUrl(json),
+        language: getWithLogging(['metadata', 'language']),
+        brandTitle: getWithLogging(['metadata', 'title']),
+        episodeTitle: get(['content', 'blocks', 0, 'title']),
+        headline: getWithLogging(['promo', 'headlines', 'headline'], {
+          logLevel: LOG_LEVELS.WARN,
+        }),
+        shortSynopsis: get(['promo', 'media', 'synopses', 'short']),
+        id: get(['metadata', 'id']),
+        summary: getWithLogging(['content', 'blocks', 0, 'synopses', 'short']),
+        contentType: getWithLogging([
+          'metadata',
+          'analyticsLabels',
+          'contentType',
+        ]),
+        episodeId: getWithLogging(['content', 'blocks', 0, 'id'], {
+          logLevel: LOG_LEVELS.ERROR,
+        }),
+        masterBrand: getWithLogging(['metadata', 'createdBy'], {
+          logLevel: LOG_LEVELS.ERROR,
+        }),
+        releaseDateTimeStamp: getWithLogging(
+          ['metadata', 'releaseDateTimeStamp'],
+          { logLevel: LOG_LEVELS.WARN },
+        ),
+        pageTitle: get(['metadata', 'analyticsLabels', 'pageTitle']),
+        pageIdentifier: get(['metadata', 'analyticsLabels', 'pageIdentifier']),
+        imageUrl: getWithLogging(['content', 'blocks', 0, 'imageUrl']),
+        promoBrandTitle: get(['promo', 'brand', 'title']),
+        durationISO8601: getWithLogging([
+          'promo',
+          'media',
+          'versions',
+          0,
+          'durationISO8601',
+        ]),
+        thumbnailImageUrl: getPlaceholderImageUrlUtil(
+          getWithLogging(['promo', 'media', 'imageUrl']),
+        ),
         episodeIsAvailable,
         ...pageType,
       },
