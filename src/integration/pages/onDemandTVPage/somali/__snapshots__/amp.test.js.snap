@@ -122,9 +122,41 @@ exports[`AMP On Demand T V Page Footer I can click on the BBC branding and it wo
 
 exports[`AMP On Demand T V Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda."`;
 
+exports[`AMP On Demand T V Page Footer Link should match text and url 1`] = `"BBC News, Somali - /somali"`;
+
+exports[`AMP On Demand T V Page Footer Link should match text and url 2`] = `"Sababta aad ku aamini kartid BBC News - https://www.bbc.com/somali/hayadeed-49283375"`;
+
+exports[`AMP On Demand T V Page Footer Link should match text and url 3`] = `"Shuruucda isticmaalka - https://www.bbc.com/somali/hayadeed-37098011"`;
+
+exports[`AMP On Demand T V Page Footer Link should match text and url 4`] = `"Ku saabsan BBC - https://www.bbc.com/somali/hayadeed-37098081"`;
+
+exports[`AMP On Demand T V Page Footer Link should match text and url 5`] = `"Shuruucda xogta gaarka ah - https://www.bbc.com/somali/hayadeed-37098082"`;
+
+exports[`AMP On Demand T V Page Footer Link should match text and url 6`] = `"Cookies - https://www.bbc.com/usingthebbc/cookies/"`;
+
+exports[`AMP On Demand T V Page Footer Link should match text and url 7`] = `"La xiriir BBC - https://www.bbc.com/somali/hayadeed-37098613"`;
+
+exports[`AMP On Demand T V Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`AMP On Demand T V Page Footer Link should match text and url 9`] = `"Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda. - https://www.bbc.co.uk/help/web/links/"`;
+
 exports[`AMP On Demand T V Page Header I can see the branding 1`] = `"BBC News, Somali"`;
 
 exports[`AMP On Demand T V Page Header I can see the navigation 1`] = `"War"`;
+
+exports[`AMP On Demand T V Page Header Navigation link should match text and url 1`] = `"War - /somali"`;
+
+exports[`AMP On Demand T V Page Header Navigation link should match text and url 2`] = `"Warar dheeraad ah - /somali/war"`;
+
+exports[`AMP On Demand T V Page Header Navigation link should match text and url 3`] = `"Ganacsi - /somali/topics/2f2db234-3c2d-40a4-b4ac-eea661faadd0"`;
+
+exports[`AMP On Demand T V Page Header Navigation link should match text and url 4`] = `"Cayaaraha - /somali/cayaaraha"`;
+
+exports[`AMP On Demand T V Page Header Navigation link should match text and url 5`] = `"Aqoon Guud - /somali/aqoon_guud"`;
+
+exports[`AMP On Demand T V Page Header Navigation link should match text and url 6`] = `"Muuqaal - /somali/media/video"`;
+
+exports[`AMP On Demand T V Page Header Navigation link should match text and url 7`] = `"Barnaamijyada Idaacadda - /somali/ka_qayb_gal/programmes"`;
 
 exports[`AMP On Demand T V Page I can see the brand title 1`] = `"Caawa Iyo Caalamka"`;
 
@@ -149,6 +181,50 @@ exports[`AMP On Demand T V Page SEO Heading level 1 1`] = `"Caawa Iyo Caalamka, 
 exports[`AMP On Demand T V Page SEO Lang attribute 1`] = `"so"`;
 
 exports[`AMP On Demand T V Page SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@graph": Array [
+    Object {
+      "@type": "WebPage",
+      "image": Object {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/somali.png",
+        "width": 1024,
+      },
+      "mainEntityOfPage": Object {
+        "@id": "http://localhost:7080/somali/bbc_somali_tv/tv_programmes/w13xttqt",
+        "@type": "WebPage",
+        "name": "Caawa Iyo Caalamka",
+      },
+      "publisher": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/somali.png",
+          "width": 1024,
+        },
+        "name": "BBC News Somali",
+        "publishingPrinciples": "https://www.bbc.com/somali/hayadeed-49283375",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/somali.png",
+      "url": "http://localhost:7080/somali/bbc_somali_tv/tv_programmes/w13xttqt",
+    },
+    Object {
+      "@type": "VideoObject",
+      "description": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka",
+      "duration": "PT26M30S",
+      "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/media/somali/bbc_somali_tv/w172xcmn0vzsn84/so/amp?morph_env=live",
+      "name": "Caawa Iyo Caalamka",
+      "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p06hm27g.png",
+      "uploadDate": "2020-06-09T00:00:00.000Z",
+    },
+  ],
+}
+`;
+
+exports[`AMP On Demand T V Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [
