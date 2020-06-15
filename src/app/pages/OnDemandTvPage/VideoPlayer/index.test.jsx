@@ -11,6 +11,11 @@ const defaultTvPlayerProps = {
   assetId: 'id',
   imageUrl: 'ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
   masterBrand: 'bbc_brand_tv',
+  title: 'On Demand TV',
+  embedUrl:
+    'https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live',
+  iframeTitle: 'video player',
+  type: 'video',
 };
 
 const defaultRequestContextValue = { platform: 'foobar', origin };
