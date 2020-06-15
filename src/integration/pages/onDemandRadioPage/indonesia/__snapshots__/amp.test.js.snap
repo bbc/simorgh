@@ -122,9 +122,37 @@ exports[`AMP On Demand Radio Page Footer I can click on the BBC branding and it 
 
 exports[`AMP On Demand Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
 
+exports[`AMP On Demand Radio Page Footer Link should match text and url 1`] = `"BBC News, Indonesia - /indonesia"`;
+
+exports[`AMP On Demand Radio Page Footer Link should match text and url 2`] = `"Alasan Anda dapat mempercayai BBC News - https://www.bbc.com/indonesia/institutional-49283175"`;
+
+exports[`AMP On Demand Radio Page Footer Link should match text and url 3`] = `"Peraturan Penggunaan - https://www.bbc.com/indonesia/institutional-37818421"`;
+
+exports[`AMP On Demand Radio Page Footer Link should match text and url 4`] = `"Mengenai BBC - https://www.bbc.com/indonesia/institutional-37818424"`;
+
+exports[`AMP On Demand Radio Page Footer Link should match text and url 5`] = `"Kebijakan tentang Privasi - https://www.bbc.com/indonesia/institutional-37818425"`;
+
+exports[`AMP On Demand Radio Page Footer Link should match text and url 6`] = `"Cookies - https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`AMP On Demand Radio Page Footer Link should match text and url 7`] = `"Hubungi BBC - https://www.bbc.com/indonesia/institutional-37818427"`;
+
+exports[`AMP On Demand Radio Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`AMP On Demand Radio Page Footer Link should match text and url 9`] = `"Baca tentang peraturan baru terkait link eksternal. - https://www.bbc.com/indonesia/institutional/2011/02/000001_links"`;
+
 exports[`AMP On Demand Radio Page Header I can see the branding 1`] = `"BBC News, Indonesia"`;
 
-exports[`AMP On Demand Radio Page Header I can see the navigation 1`] = `"Berita"`;
+exports[`AMP On Demand Radio Page Header Navigation link should match text and url 1`] = `"Berita - /indonesia"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text and url 2`] = `"Indonesia - /indonesia/topics/cjgn7k8yx4gt"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text and url 3`] = `"Dunia - /indonesia/dunia"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text and url 4`] = `"Viral - /indonesia/topics/cn5w7g2nq6dt"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text and url 5`] = `"Liputan Mendalam - /indonesia/laporan-khusus-51267199"`;
+
+exports[`AMP On Demand Radio Page Header Navigation link should match text and url 6`] = `"Majalah - /indonesia/majalah-51456120"`;
 
 exports[`AMP On Demand Radio Page I can see the brand title 1`] = `"Dunia Pagi Ini"`;
 
@@ -150,7 +178,7 @@ exports[`AMP On Demand Radio Page SEO Heading level 1 1`] = `"Dunia Pagi Ini, 27
 
 exports[`AMP On Demand Radio Page SEO Lang attribute 1`] = `"id"`;
 
-exports[`AMP On Demand Radio Page SEO Linked data 1`] = `
+exports[`AMP On Demand Radio Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [

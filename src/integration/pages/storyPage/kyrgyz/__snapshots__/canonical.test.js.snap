@@ -8,9 +8,41 @@ exports[`Canonical Story Page Footer I can click on the BBC branding and it woul
 
 exports[`Canonical Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
 
+exports[`Canonical Story Page Footer Link should match text and url 1`] = `"BBC News, Кыргыз КызMATы - /kyrgyz"`;
+
+exports[`Canonical Story Page Footer Link should match text and url 2`] = `"Эмнеге BBC News ишенсе болот? - https://www.bbc.com/kyrgyz/institutional-49677275"`;
+
+exports[`Canonical Story Page Footer Link should match text and url 3`] = `"Колдонуу эрежелери - https://www.bbc.com/kyrgyz/institutional-38157280"`;
+
+exports[`Canonical Story Page Footer Link should match text and url 4`] = `"Би-Би-Си жөнүндө - https://www.bbc.com/kyrgyz/institutional-38157281"`;
+
+exports[`Canonical Story Page Footer Link should match text and url 5`] = `"Купуялык - https://www.bbc.com/kyrgyz/institutional-38157282"`;
+
+exports[`Canonical Story Page Footer Link should match text and url 6`] = `"Cookies - https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html"`;
+
+exports[`Canonical Story Page Footer Link should match text and url 7`] = `"Би-Би-Си менен байланышыңыз - https://www.bbc.com/kyrgyz/institutional-38157284"`;
+
+exports[`Canonical Story Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Canonical Story Page Footer Link should match text and url 9`] = `"Башка интернет сайттардын мазмуну боюнча биздин позиция. - https://www.bbc.co.uk/help/web/links/"`;
+
 exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
-exports[`Canonical Story Page Header I can see the navigation 1`] = `"Башталгыч бет"`;
+exports[`Canonical Story Page Header Navigation link should match text and url 1`] = `"Башталгыч бет - /kyrgyz"`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `"Кыргызстан - /kyrgyz/kyrgyzstan"`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 3`] = `"Дүйнө - /kyrgyz/world"`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `"Сапар TV - /kyrgyz/sapartv"`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `"Видео - /kyrgyz/media/video"`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `"Маданият/Илим - /kyrgyz/entertainment"`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `"Журнал - /kyrgyz/magazine"`;
+
+exports[`Canonical Story Page Header Navigation link should match text and url 8`] = `"Блог - /kyrgyz/blog"`;
 
 exports[`Canonical Story Page Lead image I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
@@ -26,7 +58,7 @@ exports[`Canonical Story Page SEO Heading level 1 1`] = `"Test STY for social em
 
 exports[`Canonical Story Page SEO Lang attribute 1`] = `"ky"`;
 
-exports[`Canonical Story Page SEO Linked data 1`] = `
+exports[`Canonical Story Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [

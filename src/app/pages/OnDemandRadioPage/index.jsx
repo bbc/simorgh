@@ -12,7 +12,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
-import AudioPlayerBlock from '#containers/RadioPageBlocks/Blocks/AudioPlayer';
+import AudioPlayer from '#containers/AudioPlayer';
 import EpisodeImage from '#containers/RadioPageBlocks/Blocks/OnDemandImage';
 import LinkedData from '#containers/LinkedData';
 import getMediaId from '#lib/utilities/getMediaId';
@@ -78,16 +78,6 @@ const OnDemandRadioPage = ({ pageData }) => {
     queryString: location.search,
   });
 
-  const audioLinkedData = {
-    '@type': 'AudioObject',
-    name: promoBrandTitle,
-    description: shortSynopsis,
-    thumbnailUrl: thumbnailImageUrl,
-    duration: durationISO8601,
-    uploadDate: new Date(releaseDateTimeStamp).toISOString(),
-    embedURL: embedUrl,
-  };
-
   return (
     <>
       <ATIAnalytics data={pageData} />
@@ -129,7 +119,7 @@ const OnDemandRadioPage = ({ pageData }) => {
               <EpisodeImage imageUrl={imageUrl} dir={dir} />
             </Grid>
           </StyledGelWrapperGrid>
-          <AudioPlayerBlock
+          <AudioPlayer
             externalId={masterBrand}
             id={episodeId}
             embedUrl={embedUrl}
@@ -138,7 +128,21 @@ const OnDemandRadioPage = ({ pageData }) => {
           <LinkedData
             type="WebPage"
             seoTitle={headline}
-            entities={[audioLinkedData]}
+            entities={
+              episodeIsAvailable
+                ? [
+                    {
+                      '@type': 'AudioObject',
+                      name: promoBrandTitle,
+                      description: shortSynopsis,
+                      thumbnailUrl: thumbnailImageUrl,
+                      duration: durationISO8601,
+                      uploadDate: new Date(releaseDateTimeStamp).toISOString(),
+                      embedURL: embedUrl,
+                    },
+                  ]
+                : []
+            }
           />
         </Grid>
       </StyledGelPageGrid>

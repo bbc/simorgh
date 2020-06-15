@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import { string } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
+import { GEL_SPACING_QUIN } from '@bbc/gel-foundations/spacings';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import nodeLogger from '#lib/logger.node';
 import { INCLUDE_RENDERED } from '#lib/logger.const';
@@ -18,6 +19,7 @@ const logger = nodeLogger(__filename);
 const Include = styled.div`
   max-width: 100%;
   overflow: scroll hidden;
+  margin-bottom: ${GEL_SPACING_QUIN};
 `;
 
 const IncludeContainer = ({ href, html, type }) => {

@@ -8,9 +8,33 @@ exports[`Canonical Amharic Live Radio Page Footer I can click on the BBC brandin
 
 exports[`Canonical Amharic Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም. ስለ ውጪ ሊንኮች ያለን አቀራረብ"`;
 
+exports[`Canonical Amharic Live Radio Page Footer Link should match text and url 1`] = `"BBC News, አማርኛ - /amharic"`;
+
+exports[`Canonical Amharic Live Radio Page Footer Link should match text and url 2`] = `"ቢቢሲን ለምን ማመን እንደሚገባዎ - https://www.bbc.com/amharic/institutional-49283133"`;
+
+exports[`Canonical Amharic Live Radio Page Footer Link should match text and url 3`] = `"የአጠቃቀም ደንብ - https://www.bbc.com/usingthebbc/terms/"`;
+
+exports[`Canonical Amharic Live Radio Page Footer Link should match text and url 4`] = `"ስለ ቢቢሲ - https://www.bbc.com/aboutthebbc"`;
+
+exports[`Canonical Amharic Live Radio Page Footer Link should match text and url 5`] = `"የፕራይቬሲ ፖሊሲ - https://www.bbc.com/usingthebbc/privacy/"`;
+
+exports[`Canonical Amharic Live Radio Page Footer Link should match text and url 6`] = `"ኩኪዎች - https://www.bbc.com/usingthebbc/cookies/"`;
+
+exports[`Canonical Amharic Live Radio Page Footer Link should match text and url 7`] = `"ቢቢሲን ያግኙ - https://www.bbc.com/amharic/institutional-42228117"`;
+
+exports[`Canonical Amharic Live Radio Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Canonical Amharic Live Radio Page Footer Link should match text and url 9`] = `"ስለ ውጪ ሊንኮች ያለን አቀራረብ - https://www.bbc.co.uk/help/web/links/"`;
+
 exports[`Canonical Amharic Live Radio Page Header I can see the branding 1`] = `"BBC News, አማርኛ"`;
 
-exports[`Canonical Amharic Live Radio Page Header I can see the navigation 1`] = `"ዜና"`;
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match text and url 1`] = `"ዜና - /amharic"`;
+
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match text and url 2`] = `"ኢትዮጵያ - /amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"`;
+
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match text and url 3`] = `"ቪዲዮ - /amharic/media/video"`;
+
+exports[`Canonical Amharic Live Radio Page Header Navigation link should match text and url 4`] = `"በጣም የተወደዱ - /amharic/popular/read"`;
 
 exports[`Canonical Amharic Live Radio Page Main heading should match text 1`] = `"ያድምጡ"`;
 
@@ -30,7 +54,7 @@ exports[`Canonical Amharic Live Radio Page SEO Heading level 1 1`] = `"ያድም
 
 exports[`Canonical Amharic Live Radio Page SEO Lang attribute 1`] = `"am"`;
 
-exports[`Canonical Amharic Live Radio Page SEO Linked data 1`] = `
+exports[`Canonical Amharic Live Radio Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [
