@@ -37,9 +37,6 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: '/indepthtoolkit/quizzes/123-456',
-        required: false,
-        tile: 'A quiz!',
-        platform: 'highweb',
         type: 'idt1',
         html: idt1Markup,
       },
@@ -94,41 +91,16 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: '/idt2/111-222-333-444-555',
-        required: false,
-        tile: 'IDT2 Include',
-        platform: 'highweb',
         type: 'idt2',
         html: idt2Markup,
         imageBlock: {
           alt: 'image alt text',
           height: 1864,
           layout: 'responsive',
-          src: 'https://foobar.com/includes/image/816',
+          src: 'https://foobar.com/includes/idt2/111-222-333-444-555/image/816',
           srcset:
-            'https://foobar.com/includes/image/470 470w,https://foobar.com/includes/image/816 816w',
+            'https://foobar.com/includes/idt2/111-222-333-444-555/image/470 470w,https://foobar.com/includes/idt2/111-222-333-444-555/image/816 816w',
           width: 1632,
-        },
-        idt2: {
-          altText: 'image alt text',
-          dimensions: {
-            small: {
-              href: '/idt2/111-222-333-444-555/image/350',
-              width: 700,
-              height: 1864,
-            },
-            medium: {
-              href: '/idt2/111-222-333-444-555/image/470',
-              width: 940,
-              height: 1864,
-            },
-            large: {
-              href: '/idt2/111-222-333-444-555/image/816',
-              width: 1632,
-              height: 1864,
-            },
-          },
-          copyrightHolder: 'Source: BBC',
-          published: 1550229370779,
         },
       },
     };
@@ -185,39 +157,14 @@ describe('convertInclude', () => {
       model: {
         href: '/idt2/111-222-333-444-555',
         type: 'idt2',
-        required: false,
-        tile: 'IDT2 Include',
-        platform: 'highweb',
         imageBlock: {
           alt: 'image alt text',
           height: 1864,
           layout: 'responsive',
-          src: 'https://foobar.com/includes/image/470',
+          src: 'https://foobar.com/includes/idt2/111-222-333-444-555/image/470',
           srcset:
-            'https://foobar.com/includes/image/350 350w,https://foobar.com/includes/image/470 470w',
+            'https://foobar.com/includes/idt2/111-222-333-444-555/image/350 350w,https://foobar.com/includes/idt2/111-222-333-444-555/image/470 470w',
           width: 940,
-        },
-        idt2: {
-          altText: 'image alt text',
-          dimensions: {
-            small: {
-              href: '/idt2/111-222-333-444-555/image/350',
-              width: 700,
-              height: 1864,
-            },
-            medium: {
-              href: '/idt2/111-222-333-444-555/image/470',
-              width: 940,
-              height: 1864,
-            },
-            large: {
-              href: '/idt2/111-222-333-444-555/image/816',
-              width: 1632,
-              height: 1864,
-            },
-          },
-          copyrightHolder: 'Source: BBC',
-          published: 1550229370779,
         },
       },
     };
@@ -240,9 +187,6 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: '/include/111-222-333-444-555',
-        required: false,
-        tile: 'Include from VisJo',
-        platform: 'highweb',
         type: 'vj',
         html: vjMarkup,
       },
@@ -275,9 +219,6 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: 'indepthtoolkit/quizzes/123-456',
-        required: false,
-        tile: 'A quiz!',
-        platform: 'highweb',
         type: 'idt1',
         html: idt1Markup,
       },
@@ -332,41 +273,16 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: 'idt2/111-222-333-444-555',
-        required: false,
-        tile: 'IDT2 Include',
-        platform: 'highweb',
         type: 'idt2',
         html: idt2Markup,
         imageBlock: {
           alt: 'image alt text',
           height: 1864,
           layout: 'responsive',
-          src: 'https://foobar.com/includes/image/816',
+          src: 'https://foobar.com/includes/idt2/111-222-333-444-555/image/816',
           srcset:
-            'https://foobar.com/includes/image/470 470w,https://foobar.com/includes/image/816 816w',
+            'https://foobar.com/includes/idt2/111-222-333-444-555/image/470 470w,https://foobar.com/includes/idt2/111-222-333-444-555/image/816 816w',
           width: 1632,
-        },
-        idt2: {
-          altText: 'image alt text',
-          dimensions: {
-            small: {
-              href: '/idt2/111-222-333-444-555/image/350',
-              width: 700,
-              height: 1864,
-            },
-            medium: {
-              href: '/idt2/111-222-333-444-555/image/470',
-              width: 940,
-              height: 1864,
-            },
-            large: {
-              href: '/idt2/111-222-333-444-555/image/816',
-              width: 1632,
-              height: 1864,
-            },
-          },
-          copyrightHolder: 'Source: BBC',
-          published: 1550229370779,
         },
       },
     };
@@ -398,9 +314,6 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: 'news/special/111-222-333-444-555',
-        required: false,
-        tile: 'Include from VisJo',
-        platform: 'highweb',
         type: 'vj',
         html: vjMarkup,
       },
@@ -455,41 +368,16 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: 'idt2',
-        required: false,
-        tile: 'IDT2 Include',
-        platform: 'highweb',
         type: 'idt2',
         html: null,
         imageBlock: {
           alt: 'image alt text',
           height: 1864,
           layout: 'responsive',
-          src: 'https://foobar.com/includes/image/816',
+          src: 'https://foobar.com/includes/idt2/111-222-333-444-555/image/816',
           srcset:
-            'https://foobar.com/includes/image/470 470w,https://foobar.com/includes/image/816 816w',
+            'https://foobar.com/includes/idt2/111-222-333-444-555/image/470 470w,https://foobar.com/includes/idt2/111-222-333-444-555/image/816 816w',
           width: 1632,
-        },
-        idt2: {
-          altText: 'image alt text',
-          dimensions: {
-            small: {
-              href: '/idt2/111-222-333-444-555/image/350',
-              width: 700,
-              height: 1864,
-            },
-            medium: {
-              href: '/idt2/111-222-333-444-555/image/470',
-              width: 940,
-              height: 1864,
-            },
-            large: {
-              href: '/idt2/111-222-333-444-555/image/816',
-              width: 1632,
-              height: 1864,
-            },
-          },
-          copyrightHolder: 'Source: BBC',
-          published: 1550229370779,
         },
       },
     };
@@ -526,9 +414,6 @@ describe('convertInclude', () => {
         type: 'include',
         model: {
           href: '/indepthtoolkit/quizzes/123-456',
-          required: false,
-          tile: 'A quiz!',
-          platform: 'highweb',
           type: 'idt1',
           html: idt1Markup,
         },

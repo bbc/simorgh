@@ -9,6 +9,7 @@ import {
 } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
 import { addOverrideQuery } from '#app/routes/utils/overrideRendererOnTest';
+import getImageBlock from './getImageBlock';
 
 const logger = nodeLogger(__filename);
 
@@ -67,45 +68,6 @@ const fetchMarkup = async url => {
   }
 };
 
-const getImageBlock = (type, blockData, isAmp) => {
-  const supportedImageTypes = ['idt2'];
-
-  if (!supportedImageTypes.includes(type)) return null;
-
-  const imageData = blockData[type];
-
-  const getSrc = href => {
-    const path = href.split('/').slice(3).join('/');
-    return `${process.env.SIMORGH_INCLUDES_BASE_URL}/${path}`;
-  };
-
-  const getSize = href => href.split('/').pop();
-
-  const getSrcSet = sizes =>
-    sizes.map(({ href }) => `${getSrc(href)} ${getSize(href)}w`).join(',');
-
-  const getImageProps = ({ small, medium, large }) => {
-    const defaultImage = isAmp ? medium : large;
-
-    const { height, width, href } = defaultImage;
-
-    return {
-      src: getSrc(href),
-      srcset: isAmp ? getSrcSet([small, medium]) : getSrcSet([medium, large]),
-      height,
-      width,
-      layout: 'responsive',
-    };
-  };
-
-  const { altText, dimensions } = imageData;
-
-  return {
-    alt: altText,
-    ...getImageProps(dimensions),
-  };
-};
-
 const convertInclude = async (includeBlock, ...restParams) => {
   const supportedTypes = {
     indepthtoolkit: 'idt1',
@@ -116,7 +78,7 @@ const convertInclude = async (includeBlock, ...restParams) => {
     'smallprox/include': 'vj',
   };
 
-  const { href, type, ...rest } = includeBlock;
+  const { href, type } = includeBlock;
 
   // Here pathname is passed as a prop specifically for CPS includes
   // This will most likely change in issue #6784 so it is temporary for now
@@ -163,7 +125,6 @@ const convertInclude = async (includeBlock, ...restParams) => {
       }),
       type: includeType,
       ...(imageBlock && { imageBlock }),
-      ...rest,
     },
   };
 };
