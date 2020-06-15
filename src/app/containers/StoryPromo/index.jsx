@@ -153,7 +153,8 @@ const StoryPromoContainer = ({
 
   const useLargeImages = promoType === 'top' || promoType === 'leading';
 
-  const headingTagOverride = isRecommendation ? 'div' : null;
+  const headingTagOverride =
+    isRecommendation || isContentTypeGuide ? 'div' : null;
 
   const Info = (
     <>
