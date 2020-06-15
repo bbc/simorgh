@@ -243,6 +243,10 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                       description = body.promo.summary;
                       title = body.promo.headlines.headline;
                       break;
+                    case 'idxPage':
+                      description = body.metadata.summary;
+                      title = body.metadata.title;
+                      break;
                     default:
                       description = '';
                       title = '';
