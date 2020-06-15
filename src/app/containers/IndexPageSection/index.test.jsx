@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import * as SectionLabel from '@bbc/psammead-section-label';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { service as newsConfig } from '#lib/config/services/news';
-import FrontPageSection from '.';
+import IndexPageSection from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 const React = jest.requireActual('react');
@@ -374,7 +374,7 @@ jest.mock('react', () => {
 });
 const { useContext } = jest.requireMock('react');
 
-describe('FrontPageSection Container', () => {
+describe('IndexPageSection Container', () => {
   describe('snapshots', () => {
     beforeEach(() => {
       useContext.mockReturnValue(newsConfig.default);
@@ -386,22 +386,22 @@ describe('FrontPageSection Container', () => {
 
     shouldMatchSnapshot(
       'should render correctly for canonical',
-      <FrontPageSection group={group} sectionNumber={0} />,
+      <IndexPageSection group={group} sectionNumber={0} />,
     );
 
     shouldMatchSnapshot(
       'should render correctly with a linking strapline',
-      <FrontPageSection group={groupWithLink} sectionNumber={2} />,
+      <IndexPageSection group={groupWithLink} sectionNumber={2} />,
     );
 
     shouldMatchSnapshot(
       'should render without a bar',
-      <FrontPageSection group={group} bar={false} sectionNumber={1} />,
+      <IndexPageSection group={group} bar={false} sectionNumber={1} />,
     );
 
     shouldMatchSnapshot(
       'should render with only one item',
-      <FrontPageSection group={hasOneItem} sectionNumber={0} />,
+      <IndexPageSection group={hasOneItem} sectionNumber={0} />,
     );
   });
 
@@ -418,7 +418,7 @@ describe('FrontPageSection Container', () => {
     it('should be called with true when sectionNumber === 0', () => {
       render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={hasOneItem} sectionNumber={0} />
+          <IndexPageSection group={hasOneItem} sectionNumber={0} />
         </ServiceContextProvider>,
       );
 
@@ -430,7 +430,7 @@ describe('FrontPageSection Container', () => {
     it('should be called with false when sectionNumber !== 0', () => {
       render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={hasOneItem} sectionNumber={1} />
+          <IndexPageSection group={hasOneItem} sectionNumber={1} />
         </ServiceContextProvider>,
       );
 
@@ -452,7 +452,7 @@ describe('FrontPageSection Container', () => {
     it('should render 1 section, 1 h2, 1 ul, and an li and an h3 for EACH item', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={group} sectionNumber={0} />
+          <IndexPageSection group={group} sectionNumber={0} />
         </ServiceContextProvider>,
       );
 
@@ -467,7 +467,7 @@ describe('FrontPageSection Container', () => {
     it('should render with a link when is a linking group', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={groupWithLink} sectionNumber={0} />
+          <IndexPageSection group={groupWithLink} sectionNumber={0} />
         </ServiceContextProvider>,
       );
 
@@ -479,7 +479,7 @@ describe('FrontPageSection Container', () => {
     it('section should have aria-labelledby attribute referring to the id of the label element', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={group} sectionNumber={0} />
+          <IndexPageSection group={group} sectionNumber={0} />
         </ServiceContextProvider>,
       );
       const section = container.getElementsByTagName('section')[0];
@@ -493,7 +493,7 @@ describe('FrontPageSection Container', () => {
     it('should render null when there are no items', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={hasNoItems} sectionNumber={0} />
+          <IndexPageSection group={hasNoItems} sectionNumber={0} />
         </ServiceContextProvider>,
       );
 
@@ -505,7 +505,7 @@ describe('FrontPageSection Container', () => {
     it('should render null when there is no strapline', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={hasNoStrapline} sectionNumber={0} />
+          <IndexPageSection group={hasNoStrapline} sectionNumber={0} />
         </ServiceContextProvider>,
       );
 
@@ -517,7 +517,7 @@ describe('FrontPageSection Container', () => {
     it('should not render the story promo inside a list when only one item exists', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={hasOneItem} sectionNumber={0} />
+          <IndexPageSection group={hasOneItem} sectionNumber={0} />
         </ServiceContextProvider>,
       );
 
@@ -528,7 +528,7 @@ describe('FrontPageSection Container', () => {
     it('should not lazyload the story promo image if it is a top story', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={group} sectionNumber={0} />
+          <IndexPageSection group={group} sectionNumber={0} />
         </ServiceContextProvider>,
       );
 
@@ -547,7 +547,7 @@ describe('FrontPageSection Container', () => {
     it('should render useful links when the semantic group name is "Useful links"', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={usefulLinks} sectionNumber={1} />
+          <IndexPageSection group={usefulLinks} sectionNumber={1} />
         </ServiceContextProvider>,
       );
 
@@ -558,7 +558,7 @@ describe('FrontPageSection Container', () => {
     it('should render null when there are only radio bulletins', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection group={hasOnlyRadioBulletins} sectionNumber={0} />
+          <IndexPageSection group={hasOnlyRadioBulletins} sectionNumber={0} />
         </ServiceContextProvider>,
       );
 
@@ -568,7 +568,7 @@ describe('FrontPageSection Container', () => {
     it('should render everything after the first non-radio bulletin', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">
-          <FrontPageSection
+          <IndexPageSection
             group={startsWithRadioBulletins}
             sectionNumber={1}
           />

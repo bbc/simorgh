@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FrontPageSection Container snapshots should render correctly for canonical 1`] = `
+exports[`IndexPageSection Container snapshots should render correctly for canonical 1`] = `
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1010,7 +1010,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 </section>
 `;
 
-exports[`FrontPageSection Container snapshots should render correctly with a linking strapline 1`] = `
+exports[`IndexPageSection Container snapshots should render correctly with a linking strapline 1`] = `
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1799,7 +1799,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 </section>
 `;
 
-exports[`FrontPageSection Container snapshots should render with only one item 1`] = `
+exports[`IndexPageSection Container snapshots should render with only one item 1`] = `
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2261,7 +2261,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
 </section>
 `;
 
-exports[`FrontPageSection Container snapshots should render without a bar 1`] = `
+exports[`IndexPageSection Container snapshots should render without a bar 1`] = `
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
