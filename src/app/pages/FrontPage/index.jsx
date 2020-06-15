@@ -8,6 +8,7 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
@@ -19,6 +20,7 @@ import MetadataContainer from '#containers/Metadata';
 import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
+import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 
 const FrontPageMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
@@ -50,6 +52,7 @@ MostReadWrapper.propTypes = {
 
 const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
+    ads,
     product,
     serviceLocalizedName,
     translations,
@@ -57,6 +60,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     radioSchedule,
   } = useContext(ServiceContext);
 
+  const hasAds = path(['hasAds'], ads);
   const home = path(['home'], translations);
   const groups = path(['content', 'groups'], pageData);
   const lang = path(['metadata', 'language'], pageData);
@@ -65,6 +69,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const radioScheduleData = path(['radioScheduleData'], pageData);
   const radioScheduleOnPage = path(['onFrontPage'], radioSchedule);
   const radioSchedulePosition = path(['frontPagePosition'], radioSchedule);
+  const { isAmp } = useContext(RequestContext);
 
   // eslint-disable-next-line jsx-a11y/aria-role
   const offScreenText = (
@@ -79,6 +84,8 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
 
   return (
     <>
+      {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
+      {hasAds && !isAmp && <CanonicalAdBootstrapJs />}
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
