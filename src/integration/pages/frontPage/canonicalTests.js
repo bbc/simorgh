@@ -7,14 +7,18 @@ export default () => {
   runCoreCanonicalTests();
   runCanonicalAnalyticsTests();
 
-  it('I can see a radio schedule component with an id', () => {
+  describe('Radio Schedule', () => {
     const hasRadioSchedule = service === 'arabic';
     const id = document.getElementById('Radio-Schedule');
 
     if (hasRadioSchedule) {
-      expect(id).toBeInTheDocument();
+      it('should be in the document', () => {
+        expect(id).toBeInTheDocument();
+      });
     } else {
-      expect(id).not.toBeInTheDocument();
+      it('should not be in the document', () => {
+        expect(id).not.toBeInTheDocument();
+      });
     }
   });
 
