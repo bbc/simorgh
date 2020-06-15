@@ -89,7 +89,7 @@ exports[`AMP Media Asset Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=5&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:topcat:22d6ef3c-8f6e-11e5-b707-b2517c19ac20]&x2=[amp]&x3=[news-arabic]&x4=[ar]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-media-asset]&x8=[simorgh]&x9=[شركة+شارب+للإلكترونيات+تحث+موظفيها+على+شراء+منتجاتها+-+BBC+News+عربي]&x11=[2015-11-20T10:09:33.000Z]&x12=[2015-11-20T10:09:33.000Z]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=5&p=worldnews::arabic.worldnews.2015.11.151120_t_arabic_av.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:topcat:22d6ef3c-8f6e-11e5-b707-b2517c19ac20]&x2=[amp]&x3=[news-arabic]&x4=[ar]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-media-asset]&x8=[simorgh]&x9=[شركة+شارب+للإلكترونيات+تحث+موظفيها+على+شراء+منتجاتها+-+BBC+News+عربي]&x11=[2015-11-20T10:09:33.000Z]&x12=[2015-11-20T10:09:33.000Z]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -162,6 +162,14 @@ exports[`AMP Media Asset Page Header Navigation link should match text and url 9
 
 exports[`AMP Media Asset Page Header Navigation link should match text and url 10`] = `"برامجنا - /arabic/tv-and-radio-37728883"`;
 
+exports[`AMP Media Asset Page I can see the headline 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
+
+exports[`AMP Media Asset Page I can see the timestamp 1`] = `"20 نوفمبر/ تشرين الثاني 2015"`;
+
+exports[`AMP Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"مشغل وسائط"`;
+
+exports[`AMP Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar/amp"`;
+
 exports[`AMP Media Asset Page SEO Canonical link 1`] = `"http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av"`;
 
 exports[`AMP Media Asset Page SEO Dir attribute 1`] = `"rtl"`;
@@ -169,6 +177,8 @@ exports[`AMP Media Asset Page SEO Dir attribute 1`] = `"rtl"`;
 exports[`AMP Media Asset Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`AMP Media Asset Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP Media Asset Page SEO Heading level 1 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 
 exports[`AMP Media Asset Page SEO Lang attribute 1`] = `"ar"`;
 
@@ -218,6 +228,17 @@ Object {
       "url": "http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av",
     },
   ],
+}
+`;
+
+exports[`AMP Media Asset Page SEO Linked data should match text 2`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "duration": null,
+  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar/amp",
+  "thumbnailUrl": "https://",
+  "uploadDate": "1970-01-01T00:00:00.000Z",
 }
 `;
 
