@@ -358,6 +358,13 @@ const directives = {
       'https://static.bbci.co.uk', // STY includes
     ],
   },
+  defaultSrc: {
+    canonicalNonLive: [
+      'https://*.safeframe.googlesyndication.com',
+      'https://tpc.googlesyndication.com',
+      "'self'",
+    ],
+  },
 };
 
 export const generateChildSrc = ({ isAmp }) => (isAmp ? ['blob:'] : ["'self'"]);
@@ -369,11 +376,10 @@ export const generateConnectSrc = ({ isAmp, isLive }) => {
   return directives.connectSrc.canonicalLive;
 };
 
-export const generateDefaultSrc = () => [
-  'https://*.safeframe.googlesyndication.com',
-  'https://tpc.googlesyndication.com',
-  "'self'",
-];
+export const generateDefaultSrc = ({ isAmp, isLive }) => {
+  if (!isLive && isAmp) return directives.imgSrc.canonicalNonLive;
+  return [];
+};
 
 export const generateFontSrc = ({ isAmp }) =>
   isAmp ? directives.fontSrc.amp : directives.fontSrc.canonical;
@@ -411,7 +417,7 @@ export const generateWorkerSrc = ({ isAmp }) =>
 
 const helmetCsp = ({ isAmp, isLive }) => ({
   directives: {
-    'default-src': generateDefaultSrc(),
+    'default-src': generateDefaultSrc({ isAmp, isLive }),
     'child-src': generateChildSrc({ isAmp }),
     'connect-src': generateConnectSrc({ isAmp, isLive }),
     'font-src': generateFontSrc({ isAmp }),
