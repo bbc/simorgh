@@ -294,7 +294,7 @@ server
         headers,
       });
       const { service, isAmp, route, variant } = getRouteProps(routes, urlPath);
-      const pageType = route.pagetype;
+      const pageType = route.pageType;
       try {
         const data = await route.getInitialData({
           path: url,
@@ -303,6 +303,16 @@ server
         });
         const { status } = data;
         const bbcOrigin = headers['bbc-origin'];
+
+        if (status != 200) {
+          putAwsMetric({
+            cloudwatch,
+            namespace: 'Server',
+            metricName: 'non_200',
+            pageTypeValue: pageType,
+            statusCode: status.toString()
+          });
+        }
 
         data.path = urlPath;
         data.timeOnServer = Date.now();
@@ -349,6 +359,7 @@ server
           namespace: 'Server',
           metricName: '5xx',
           pageTypeValue: pageType,
+          statusCode: status.toString()
         });
 
         // Return an internal server error for any uncaught errors

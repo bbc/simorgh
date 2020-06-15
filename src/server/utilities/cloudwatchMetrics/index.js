@@ -2,7 +2,8 @@ const putAWSMetric = ({
   cloudwatch,
   namespace = 'Server',
   metricName,
-  pageTypeValue,
+  pageTypeValue = 'Unknown',
+  statusCode = 'Unknown'
 }) => {
   const params = {
     Namespace: `Si/${namespace}` /* required */,
@@ -16,17 +17,26 @@ const putAWSMetric = ({
             Name: 'PageType' /* required */,
             Value: pageTypeValue /* required */,
           },
+          {
+            Name: 'StatusCode' /* required */,
+            Value: statusCode /* required */,
+          },
         ],
-        StorageResolution: 'NUMBER_VALUE',
-        Timestamp: Date.now(),
+        Timestamp: new Date(),
         Unit: 'Count',
-        Value: 1,
         Values: [1],
       },
     ],
   };
 
-  cloudwatch.putMetricData(params).send();
+  cloudwatch.putMetricData(params, (error, data) => {
+    if (error) {
+      console.log(error)
+    }
+
+    console.log(data)
+    
+  });
 };
 
 export default putAWSMetric;
