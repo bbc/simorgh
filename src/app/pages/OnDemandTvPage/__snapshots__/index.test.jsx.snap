@@ -7,7 +7,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
   </div>
   <noscript />
   <main
-    class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1brqmij-1 cyJdzv"
+    class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1brqmij-2 dmHANZ"
     dir="rtl"
     role="main"
   >
@@ -28,7 +28,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
         class="StyledGelWrapperGrid-sc-1brqmij-0 eydjDr"
       >
         <div
-          class="StyledMessageContainer-tc95in-1 glnohn"
+          class="StyledMessageContainer-sc-1brqmij-1 lbxLAU"
         >
           <div
             class="StyledWrapper-sc-1pnftlt-0 jywlaE"
