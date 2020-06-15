@@ -35,6 +35,12 @@ import {
   LOCAL_SENDFILE_ERROR,
   ROUTING_INFORMATION,
 } from '#lib/logger.const';
+import putAwsMetric from './utilities/cloudwatchMetrics';
+
+const AWS = require('aws-sdk');
+
+AWS.config.update({ region: 'eu-west-1' });
+const cloudwatch = new AWS.CloudWatch();
 
 const fs = require('fs');
 
@@ -287,12 +293,9 @@ server
         url,
         headers,
       });
-
+      const { service, isAmp, route, variant } = getRouteProps(routes, urlPath);
+      const pageType = route.pagetype;
       try {
-        const { service, isAmp, route, variant } = getRouteProps(
-          routes,
-          urlPath,
-        );
         const data = await route.getInitialData({
           path: url,
           service,
@@ -314,10 +317,16 @@ server
           variant,
         });
 
+        const assetType = pathOr(
+          'Unknown',
+          ['pageData', 'metadata', 'type'],
+          data,
+        );
+
         logger.info(ROUTING_INFORMATION, {
           url,
           status,
-          pageType: pathOr('Unknown', ['pageData', 'metadata', 'type'], data),
+          pageType: assetType,
         });
 
         if (result.redirectUrl) {
@@ -333,6 +342,13 @@ server
           message,
           url,
           headers,
+        });
+
+        putAwsMetric({
+          cloudwatch,
+          namespace: 'Server',
+          metricName: '5xx',
+          pageTypeValue: pageType,
         });
 
         // Return an internal server error for any uncaught errors
