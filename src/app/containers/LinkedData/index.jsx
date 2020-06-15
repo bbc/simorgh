@@ -5,7 +5,6 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import getAboutTagsContent from './getAboutTagsContent';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
-import { cleanLinkedData } from './helpers';
 
 const LinkedData = ({
   showAuthor,
@@ -32,6 +31,7 @@ const LinkedData = ({
     : 'Organization';
   const WEB_PAGE_TYPE = 'WebPage';
   const AUTHOR_PUBLISHER_NAME = isTrustProjectParticipant ? brandName : 'BBC';
+  const isNotRadioChannel = type !== 'RadioChannel';
 
   const logo = {
     '@type': IMG_TYPE,
@@ -62,9 +62,8 @@ const LinkedData = ({
   const linkedData = {
     '@type': type,
     url: canonicalNonUkLink,
-    publisher,
+    ...(isNotRadioChannel && { publisher, thumbnailUrl: defaultImage }),
     image,
-    thumbnailUrl: defaultImage,
     mainEntityOfPage,
     headline,
     description,
@@ -91,7 +90,7 @@ const LinkedData = ({
       <script type="application/ld+json">
         {serialiseForScript({
           '@context': 'http://schema.org',
-          '@graph': [cleanLinkedData(linkedData), ...entities],
+          '@graph': [{ ...linkedData }, ...entities],
         })}
       </script>
     </Helmet>
