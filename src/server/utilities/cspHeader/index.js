@@ -377,7 +377,7 @@ export const generateConnectSrc = ({ isAmp, isLive }) => {
 };
 
 export const generateDefaultSrc = ({ isAmp, isLive }) => {
-  if (!isLive && !isAmp) return directives.imgSrc.canonicalNonLive;
+  if (!isLive && !isAmp) return directives.defaultSrc.canonicalNonLive;
   return ["'self'"];
 };
 
