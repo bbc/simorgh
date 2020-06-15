@@ -15,7 +15,7 @@ const PRIVACY_COOKIE_PREVIOUS_VALUES = ['0', '1'];
 const onClient = typeof window !== 'undefined';
 
 const setPolicyCookie = (value, logger) => {
-  setCookie(POLICY_COOKIE, value);
+  setCookie({ name: POLICY_COOKIE, value, sameSite: 'None' });
   setCookieOven(POLICY_COOKIE, value, logger);
 };
 
@@ -30,11 +30,19 @@ const showCookieBanner = () =>
 const policyCookieSet = () => !!Cookie.get(POLICY_COOKIE);
 
 const setSeenPrivacyBanner = () =>
-  setCookie(PRIVACY_COOKIE, PRIVACY_COOKIE_CURRENT);
+  setCookie({
+    name: PRIVACY_COOKIE,
+    value: PRIVACY_COOKIE_CURRENT,
+    sameSite: 'None',
+  });
 const setDefaultPolicy = logger => setPolicyCookie(POLICY_DENIED, logger);
 const setApprovedPolicy = logger => setPolicyCookie(POLICY_APPROVED, logger);
 const setDismissedCookieBanner = () =>
-  setCookie(EXPLICIT_COOKIE, COOKIE_BANNER_APPROVED);
+  setCookie({
+    name: EXPLICIT_COOKIE,
+    value: COOKIE_BANNER_APPROVED,
+    sameSite: 'None',
+  });
 
 const consentBannerUtilities = ({
   setShowPrivacyBanner,
