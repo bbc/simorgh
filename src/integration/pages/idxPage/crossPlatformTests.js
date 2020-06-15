@@ -9,10 +9,11 @@ export default () => {
 
     if (sections) {
       sections.forEach(section => {
-        const h2El = section.querySelector('h2');
         it('should be in the document', () => {
           expect(section).toBeInTheDocument();
         });
+
+        const h2El = section.querySelector('h2');
 
         it('should have a headline', () => {
           expect(h2El).toBeInTheDocument();
