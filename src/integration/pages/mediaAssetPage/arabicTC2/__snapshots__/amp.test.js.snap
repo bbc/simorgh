@@ -122,9 +122,45 @@ exports[`AMP Media Asset Page Footer I can click on the BBC branding and it woul
 
 exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
+exports[`AMP Media Asset Page Footer Link should match text and url 1`] = `"BBC News, عربي - /arabic"`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 2`] = `"لماذا يمكنك الاعتماد على أخبار بي بي سي - https://www.bbc.com/arabic/institutional-49283069"`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 3`] = `"شروط الاستخدام - https://www.bbc.com/arabic/institutional-37731351"`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 4`] = `"عن بي بي سي - https://www.bbc.com/arabic/institutional-37731352"`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 5`] = `"سياسة الخصوصية - https://www.bbc.com/arabic/institutional-37731353"`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 6`] = `"ملفات الارتباط Cookies - https://www.bbc.com/usingthebbc/cookies/"`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 7`] = `"اتصل بـ بي بي سي - https://www.bbc.com/arabic/institutional-37731355"`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`AMP Media Asset Page Footer Link should match text and url 9`] = `"سياستنا بخصوص الروابط الخارجية. - https://www.bbc.co.uk/help/web/links/"`;
+
 exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
-exports[`AMP Media Asset Page Header I can see the navigation 1`] = `"رئيسية"`;
+exports[`AMP Media Asset Page Header Navigation link should match text and url 1`] = `"رئيسية - /arabic"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 2`] = `"شرق أوسط - /arabic/middleeast"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 3`] = `"عالم - /arabic/world"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 4`] = `"علوم وتكنولوجيا - /arabic/scienceandtech"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 5`] = `"صحة - /arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 6`] = `"فيديو - /arabic/media"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 7`] = `"صحافة - /arabic/inthepress"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 8`] = `"ترند - /arabic/trending"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 9`] = `"تحقيقات - /arabic/tv-and-radio-42414864"`;
+
+exports[`AMP Media Asset Page Header Navigation link should match text and url 10`] = `"برامجنا - /arabic/tv-and-radio-37728883"`;
 
 exports[`AMP Media Asset Page I can see the headline 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 
@@ -146,7 +182,7 @@ exports[`AMP Media Asset Page SEO Heading level 1 1`] = `"شركة شارب لل
 
 exports[`AMP Media Asset Page SEO Lang attribute 1`] = `"ar"`;
 
-exports[`AMP Media Asset Page SEO Linked data 1`] = `
+exports[`AMP Media Asset Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [
@@ -192,6 +228,17 @@ Object {
       "url": "http://localhost:7080/arabic/worldnews/2015/11/151120_t_arabic_av",
     },
   ],
+}
+`;
+
+exports[`AMP Media Asset Page SEO Linked data should match text 2`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "duration": null,
+  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar/amp",
+  "thumbnailUrl": "https://",
+  "uploadDate": "1970-01-01T00:00:00.000Z",
 }
 `;
 
