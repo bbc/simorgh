@@ -28,7 +28,23 @@ exports[`Canonical On Demand T V Page Footer Link should match text and url 9`] 
 
 exports[`Canonical On Demand T V Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
-exports[`Canonical On Demand T V Page Header I can see the navigation 1`] = `"کور پاڼه"`;
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 1`] = `"کور پاڼه - /pashto"`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 2`] = `"افغانستان - /pashto/afghanistan"`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 3`] = `"پښتونخوا - /pashto/pakhtunkhwa"`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 4`] = `"نړۍ - /pashto/world"`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 5`] = `"ښځې - /pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 6`] = `"لوبې - /pashto/sport"`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 7`] = `"ويډيوګانې - /pashto/media/video"`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 8`] = `"ځانګړې پاڼې - /pashto/in_depth"`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 9`] = `"کالم - /pashto/columns"`;
 
 exports[`Canonical On Demand T V Page Header Navigation link should match text and url 1`] = `"کور پاڼه - /pashto"`;
 
@@ -70,7 +86,7 @@ exports[`Canonical On Demand T V Page SEO Heading level 1 1`] = `"نړۍ دا و
 
 exports[`Canonical On Demand T V Page SEO Lang attribute 1`] = `"ps"`;
 
-exports[`Canonical On Demand T V Page SEO Linked data 1`] = `
+exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [

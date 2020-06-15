@@ -31,6 +31,7 @@ const LinkedData = ({
     : 'Organization';
   const WEB_PAGE_TYPE = 'WebPage';
   const AUTHOR_PUBLISHER_NAME = isTrustProjectParticipant ? brandName : 'BBC';
+  const isNotRadioChannel = type !== 'RadioChannel';
 
   const logo = {
     '@type': IMG_TYPE,
@@ -61,9 +62,8 @@ const LinkedData = ({
   const linkedData = {
     '@type': type,
     url: canonicalNonUkLink,
-    publisher,
+    ...(isNotRadioChannel && { publisher, thumbnailUrl: defaultImage }),
     image,
-    thumbnailUrl: defaultImage,
     mainEntityOfPage,
     headline,
     description,
