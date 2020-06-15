@@ -52,6 +52,8 @@ exports[`Canonical Story Page Header Navigation link should match text and url 1
 
 exports[`Canonical Story Page Header Navigation link should match text and url 12`] = `"Centroamérica Cuenta - /mundo/noticias-43826245"`;
 
+exports[`Canonical Story Page Lead image I can see an image with a caption 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
+
 exports[`Canonical Story Page SEO Canonical link 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
 
 exports[`Canonical Story Page SEO Dir attribute 1`] = `"ltr"`;
@@ -59,6 +61,8 @@ exports[`Canonical Story Page SEO Dir attribute 1`] = `"ltr"`;
 exports[`Canonical Story Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`Canonical Story Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical Story Page SEO Heading level 1 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;
 
 exports[`Canonical Story Page SEO Lang attribute 1`] = `"es"`;
 
@@ -186,3 +190,7 @@ exports[`Canonical Story Page SEO Twitter image src 1`] = `"http://ichef.test.bb
 exports[`Canonical Story Page SEO Twitter site 1`] = `"@bbcmundo"`;
 
 exports[`Canonical Story Page SEO Twitter title 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
+
+exports[`Canonical Story Page Social Embeds I can see the skip link 1`] = `"Saltar contenido de YouTube, 1"`;
+
+exports[`Canonical Story Page Social Embeds I can see the skip link destination 1`] = `"Fin del contenido de YouTube, 1"`;
