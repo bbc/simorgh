@@ -37,7 +37,7 @@ const unsupportedInclude = {
   type: 'include',
 };
 
-describe('', () => {
+describe('getImageBlock', () => {
   const includesBaseUrl = 'https://foobar.com/includes';
   process.env.SIMORGH_INCLUDES_BASE_URL = includesBaseUrl;
 
@@ -45,7 +45,7 @@ describe('', () => {
     expect(getImageBlock('idt1', unsupportedInclude)).toEqual(null);
   });
 
-  it('should generate image block with  default image set to a medium sizes for an IDT2 include type on amp', () => {
+  it('should generate image block with default image set to a medium sizes for an IDT2 include type on amp', () => {
     const isAmp = true;
     const expected = {
       alt: 'image alt text',
@@ -59,7 +59,7 @@ describe('', () => {
     expect(getImageBlock('idt2', supportedInclude, isAmp)).toEqual(expected);
   });
 
-  it('should generate image block with  default image set to a large size for an IDT2 include type on canonical', () => {
+  it('should generate image block with default image set to a large size for an IDT2 include type on canonical', () => {
     const isAmp = false;
     const expected = {
       alt: 'image alt text',
