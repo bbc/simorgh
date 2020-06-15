@@ -166,13 +166,7 @@ exports[`AMP Media Asset Page I can see related content: Lagos 'Gay' men Appear 
 
 exports[`AMP Media Asset Page I can see related content: Police Arrest 3 ontop Anambra Church Attack 1`] = `"/pidgin/tori-23145776"`;
 
-exports[`AMP Media Asset Page I can see the headline 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
-
 exports[`AMP Media Asset Page I can see the timestamp 1`] = `"8th August 2017"`;
-
-exports[`AMP Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"Media player"`;
-
-exports[`AMP Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm/amp"`;
 
 exports[`AMP Media Asset Page SEO Canonical link 1`] = `"http://localhost:7080/pidgin/23248703"`;
 
@@ -181,8 +175,6 @@ exports[`AMP Media Asset Page SEO Dir attribute 1`] = `"ltr"`;
 exports[`AMP Media Asset Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`AMP Media Asset Page SEO FB app ID 1`] = `"1609039196070050"`;
-
-exports[`AMP Media Asset Page SEO Heading level 1 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
 
 exports[`AMP Media Asset Page SEO Lang attribute 1`] = `"pcm"`;
 

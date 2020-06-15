@@ -158,8 +158,6 @@ exports[`AMP Story Page Header Navigation link should match text and url 7`] = `
 
 exports[`AMP Story Page Header Navigation link should match text and url 8`] = `"Блог - /kyrgyz/blog"`;
 
-exports[`AMP Story Page Lead image I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
-
 exports[`AMP Story Page SEO Canonical link 1`] = `"http://localhost:7080/kyrgyz/23292889"`;
 
 exports[`AMP Story Page SEO Dir attribute 1`] = `"ltr"`;
@@ -167,8 +165,6 @@ exports[`AMP Story Page SEO Dir attribute 1`] = `"ltr"`;
 exports[`AMP Story Page SEO FB admins 1`] = `"100004154058350"`;
 
 exports[`AMP Story Page SEO FB app ID 1`] = `"1609039196070050"`;
-
-exports[`AMP Story Page SEO Heading level 1 1`] = `"Test STY for social embeds"`;
 
 exports[`AMP Story Page SEO Lang attribute 1`] = `"ky"`;
 
@@ -255,7 +251,3 @@ exports[`AMP Story Page SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.
 exports[`AMP Story Page SEO Twitter site 1`] = `"@bbckyrgyz"`;
 
 exports[`AMP Story Page SEO Twitter title 1`] = `"Test STY for social embeds - BBC News Кыргыз Кызматы"`;
-
-exports[`AMP Story Page Social Embeds I can see the skip link 1`] = `"YouTube баракчаны өткөрүп жиберүү, пост, 1"`;
-
-exports[`AMP Story Page Social Embeds I can see the skip link destination 1`] = `"YouTube посттун аягы, 1"`;
