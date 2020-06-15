@@ -82,14 +82,14 @@ describe('Starting the service', () => {
   });
 
   describe('the child processes', () => {
-    const { isMaster } = cluster;
+    const { isWorker } = cluster;
 
     beforeEach(() => {
-      cluster.isMaster = false;
+      cluster.isWorker = true;
     });
 
     afterEach(() => {
-      cluster.isMaster = isMaster;
+      cluster.isWorker = isWorker;
     });
 
     it('should call the server start method', () => {

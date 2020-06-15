@@ -64,7 +64,7 @@ const processExit = (worker, code, signal) => {
 };
 
 const startCluster = () => {
-  if (cluster.isMaster) {
+  if (!cluster.isWorker) {
     const availableCores = os.cpus();
     availableCores.map(() => cluster.fork());
     cluster.on('online', processOnline);
