@@ -3,6 +3,10 @@
  */
 
 const logCodes = {
+  // Application Start
+  CLUSTER_PROCESS_START: 'cluster_process_started',
+  CLUSTER_PROCESS_EXIT: 'cluster_process_exit',
+
   // Data fetch
   DATA_FETCH_ERROR: 'data_fetch_error',
   DATA_NOT_FOUND: 'data_response_404',

@@ -1,7 +1,11 @@
 import cluster from 'cluster';
 import os from 'os';
 
-import { SERVER_LISTEN_ERROR } from '#lib/logger.const';
+import {
+  CLUSTER_PROCESS_START,
+  CLUSTER_PROCESS_EXIT,
+  SERVER_LISTEN_ERROR,
+} from '#lib/logger.const';
 
 // dotenv should be called on entry to the application to ensure all `process.env.*` variables are correctly set from '.env'
 const dotenv = require('dotenv');
@@ -43,18 +47,23 @@ const startApplicationInstance = () => {
   }
 };
 
+const processOnline = worker =>
+  logger.info(CLUSTER_PROCESS_START, `Worker ${worker.id} started`);
+
+const processExit = (worker, code, signal) => {
+  const exitReason = code ? ` with code ${code}` : ` due to signal ${signal}`;
+
+  if (code !== 0 && !worker.exitedAfterDisconnect) {
+    cluster.fork();
+  }
+
+  return logger.error(
+    CLUSTER_PROCESS_EXIT,
+    `Worker ${worker.id} terminated ${exitReason}`,
+  );
+};
+
 const startCluster = () => {
-  const processOnline = worker => logger.info(`Worker ${worker.id} started`);
-  const processExit = (worker, code, signal) => {
-    const exitReason = code ? ` with code ${code}` : ` due to signal ${signal}`;
-
-    if (code !== 0 && !worker.suicide) {
-      cluster.fork();
-    }
-
-    return logger.error(`Worker ${worker.id} died ${exitReason}`);
-  };
-
   if (cluster.isMaster) {
     const availableCores = os.cpus();
     availableCores.map(() => cluster.fork());

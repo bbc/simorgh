@@ -73,9 +73,9 @@ describe('Starting the service', () => {
       expect(forkSpy).toHaveBeenCalledTimes(cpusArray.length + 1);
     });
 
-    it('should not fork when a child process exits with suicide and code 0', () => {
+    it('should not fork when a child process exits voluntarily', () => {
       startCluster();
-      mockWorker.suicide = true;
+      mockWorker.exitedAfterDisconnect = true; // voluntary
       cluster.emit('exit', mockWorker, 'SIGTERM');
       expect(forkSpy).toHaveBeenCalledTimes(cpusArray.length);
     });
