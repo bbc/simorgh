@@ -8,7 +8,7 @@ export const ServiceContext = React.createContext({});
 
 export const ServiceContextProvider = ({ children, service, variant }) => {
   const LoadableContextProvider = services[service];
-
+  console.log(variant);
   if (!LoadableContextProvider) {
     return null;
   }

@@ -5,9 +5,10 @@ export const servicesWithVariants = {
   serbian: ['lat', 'cyr'],
   ukchina: ['simp', 'trad'],
   zhongwen: ['simp', 'trad'],
+  ukrainian: ['default', 'ru'],
 };
 
-export const variants = ['simp', 'trad', 'lat', 'cyr', 'default'];
+export const variants = ['simp', 'trad', 'lat', 'cyr', 'default', 'ru'];
 
 const variantCookieConfig = {
   ukchina: 'chinese',

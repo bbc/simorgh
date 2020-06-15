@@ -299,7 +299,13 @@ server
           variant,
         });
         const { status } = data;
+
         const bbcOrigin = headers['bbc-origin'];
+        const pageLang = data.pageData.metadata.language;
+        let variantOverride;
+        if (service === 'ukrainian') {
+          variantOverride = pageLang;
+        }
 
         data.path = urlPath;
         data.timeOnServer = Date.now();
@@ -311,7 +317,7 @@ server
           routes,
           service,
           url,
-          variant,
+          variant: variantOverride || variant,
         });
 
         logger.info(ROUTING_INFORMATION, {

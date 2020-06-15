@@ -15,14 +15,19 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     errorCode,
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
-
   const { pageData, status, error, timeOnServer } = initialData;
+
+  const pageLang = pageData.metadata.language;
+  let variantOverride;
+  if (service === 'ukrainian') {
+    variantOverride = pageLang;
+  }
 
   const [state, setState] = useState({
     pageData,
     status,
     service,
-    variant,
+    variant: variantOverride || variant,
     id,
     assetUri,
     isAmp,
