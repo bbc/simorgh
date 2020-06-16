@@ -84,7 +84,7 @@ describe('AMP Ads', () => {
         const ampAccessFetch = jest.fn().mockImplementation(AMP_ACCESS_FETCH);
         const ampAccessData = ampAccessFetch('pidgin');
         const expectedReturn =
-          'https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=pidgin';
+          'https://mock-toggles-endpoint.bbc.co.uk?application=simorgh&service=pidgin';
 
         expect(ampAccessFetch).toHaveReturned();
         expect(ampAccessFetch).toHaveBeenCalledWith('pidgin');
