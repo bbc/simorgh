@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { oneOf } from 'prop-types';
+import { oneOf, string } from 'prop-types';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import {
@@ -80,23 +80,39 @@ const slotConfigurations = {
   },
 };
 
-const ampAdProps = ({ viewportType, service, slotType }) => {
+const AdSlot = ({ viewportType, service, slotType }) => {
   const {
     [viewportType]: { width, height, adMultiSize },
   } = slotConfigurations[slotType];
-  return {
-    'data-block-on-consent': 'default',
-    'data-npa-on-unknown-consent': 'true',
-    media: `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
-    type: 'doubleclick',
-    width,
-    height,
-    'data-multi-size': adMultiSize,
-    'data-slot': '/4817/bbccom.test.site.amp.news',
-    'data-amp-slot-index': '0',
-    'data-a4a-upgrade-type': 'amp-ad-network-doubleclick-impl',
-    json: JSON.stringify(constructAdJsonData({ service })),
-  };
+  return (
+    <amp-ad
+      data-block-on-consent="default"
+      data-npa-on-unknown-consent="true"
+      media={`(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`}
+      type="doubleclick"
+      width={width}
+      height={height}
+      data-multi-size={adMultiSize}
+      data-slot="/4817/bbccom.test.site.amp.new"
+      data-amp-slot-index="0"
+      data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
+      json={JSON.stringify(constructAdJsonData({ service }))}
+    >
+      <amp-img
+        placeholder
+        width={width}
+        height={height}
+        src="https://via.placeholder.com/320x50"
+        layout="responsive"
+      />
+    </amp-ad>
+  );
+};
+
+AdSlot.propTypes = {
+  viewportType: oneOf(['mobile', 'desktop']).isRequired,
+  service: string.isRequired,
+  slotType: oneOf(['leaderboard', 'mpu']).isRequired,
 };
 
 const AMP_ACCESS_DATA = endpoint => ({
@@ -142,28 +158,16 @@ const AmpAd = ({ slotType }) => {
             >
               {label}
             </StyledLink>
-            <amp-ad
-              {...ampAdProps({ viewportType: 'mobile', service, slotType })}
-            >
-              <amp-img
-                placeholder
-                width="320"
-                height="50"
-                src="https://via.placeholder.com/320x50"
-                layout="responsive"
-              />
-            </amp-ad>
-            <amp-ad
-              {...ampAdProps({ viewportType: 'desktop', service, slotType })}
-            >
-              <amp-img
-                placeholder
-                width="970"
-                height="250"
-                src="https://via.placeholder.com/970x250"
-                layout="responsive"
-              />
-            </amp-ad>
+            <AdSlot
+              viewportType="mobile"
+              service={service}
+              slotType={slotType}
+            />
+            <AdSlot
+              viewportType="desktop"
+              service={service}
+              slotType={slotType}
+            />
           </StyledAd>
         </StyledWrapper>
       </FullWidthWrapper>
