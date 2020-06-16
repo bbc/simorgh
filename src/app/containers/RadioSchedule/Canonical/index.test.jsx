@@ -1,6 +1,6 @@
 import React from 'react';
 import fetchMock from 'fetch-mock';
-import { render, waitFor } from '@testing-library/react';
+import { render, waitFor, act } from '@testing-library/react';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import '@testing-library/jest-dom/extend-expect';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
@@ -12,7 +12,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 const endpoint = 'https://localhost/arabic/bbc_arabic_radio/schedule.json';
 
 /* eslint-disable react/prop-types */
-const RadioScheduleWithContext = ({ initialData }) => (
+const RadioScheduleWithContext = ({ initialData, lang }) => (
   <RequestContextProvider
     isAmp={false}
     pageType="frontPage"
@@ -21,7 +21,11 @@ const RadioScheduleWithContext = ({ initialData }) => (
     timeOnServer={Date.now()}
   >
     <ServiceContextProvider service="arabic">
-      <CanonicalRadioSchedule initialData={initialData} endpoint={endpoint} />
+      <CanonicalRadioSchedule
+        initialData={initialData}
+        endpoint={endpoint}
+        lang={lang}
+      />
     </ServiceContextProvider>
   </RequestContextProvider>
 );
@@ -106,6 +110,20 @@ describe('Canonical RadioSchedule', () => {
       await waitFor(() => {
         expect(container.querySelectorAll('li').length).toEqual(4);
       });
+    });
+
+    it('render radio schedules container with lang code', async () => {
+      fetchMock.mock(endpoint, arabicRadioScheduleData);
+      let container;
+
+      await act(async () => {
+        container = await render(<RadioScheduleWithContext lang="khoa" />)
+          .container;
+      });
+      expect(container.querySelector('section')).toHaveAttribute(
+        'lang',
+        'khoa',
+      );
     });
 
     it('does not render when data contains less than 4 programs', async () => {
