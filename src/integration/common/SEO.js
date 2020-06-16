@@ -195,7 +195,7 @@ export default () => {
 
     describe('Apple Touch Icon', () => {
       const touchIconScript = document.querySelectorAll(
-        'head > script[rel="apple-touch-icon"]',
+        'head > link[rel="apple-touch-icon"]',
       );
 
       touchIconScript.forEach(script => {
@@ -208,12 +208,9 @@ export default () => {
 
         it(`should match attributes`, () => {
           expect({
-          url,
-          sizes
+            url,
+            sizes,
           }).toMatchSnapshot();
-        };
-          expect(`${url}`).toMatchSnapshot();
-          expect(`${sizes}`).toMatchSnapshot();
         });
       });
     });
