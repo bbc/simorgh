@@ -3,10 +3,10 @@
  * @pathname /gahuza/23299713
  */
 
-import runAmpIncludeTests from '../canonicalIncludeTests';
+import runCanonicalIncludeTests from '../canonicalIncludeTests';
 
-describe('Amp', () => {
+describe('Includes', () => {
   describe(pageType, () => {
-    runAmpIncludeTests();
+    runCanonicalIncludeTests();
   });
 });
