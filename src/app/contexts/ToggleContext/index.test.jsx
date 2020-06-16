@@ -23,7 +23,7 @@ const shouldNotRenderAd = container =>
   expect(queryByText(container, 'Dummy Ad Component')).not.toBeInTheDocument();
 
 const getMockTogglesUrl = service =>
-  `https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=${service}&__amp_source_origin=https://www.test.bbc.com`;
+  `https://mock-toggles-endpoint.bbc.co.uk/?application=simorgh&service=${service}&__amp_source_origin=https://www.test.bbc.com`;
 
 describe('ToggleContext with feature toggles', () => {
   beforeAll(() => {
