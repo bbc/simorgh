@@ -133,7 +133,6 @@ describe('cspHeader', () => {
         'https://securepubads.g.doubleclick.net',
         'https://tpc.googlesyndication.com',
         'https://www.google.com',
-        'https://via.placeholder.com',
         'https://syndication.twitter.com',
         'https://platform.twitter.com',
         'https://pbs.twimg.com',
