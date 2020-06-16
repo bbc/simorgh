@@ -74,8 +74,9 @@ describe('getImageBlock', () => {
   });
 
   it('should not generate image block when image data is not present on include block', () => {
-    delete supportedInclude.idt2;
+    const includeBlock = supportedInclude;
+    includeBlock.idt2 = null;
 
-    expect(getImageBlock('idt2', supportedInclude)).toEqual(null);
+    expect(getImageBlock('idt2', includeBlock)).toEqual(null);
   });
 });
