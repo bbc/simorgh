@@ -323,6 +323,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #222222;
   background-color: #F2F2F2;
   margin: 1rem 0;
   padding-left: 0.5rem;
@@ -339,7 +340,6 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 .c1 {
   position: relative;
   z-index: 0;
-  color: #3F3F42;
   margin-top: 2rem;
 }
 
@@ -1622,6 +1622,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #222222;
   background-color: #F2F2F2;
   margin: 1rem 0;
   padding-left: 0.5rem;
@@ -1638,7 +1639,6 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 .c1 {
   position: relative;
   z-index: 0;
-  color: #3F3F42;
   margin-top: 2rem;
 }
 

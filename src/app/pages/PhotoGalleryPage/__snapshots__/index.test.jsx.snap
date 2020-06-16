@@ -3066,6 +3066,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #222222;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -3087,7 +3088,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 .c17 {
   position: relative;
   z-index: 0;
-  color: #3F3F42;
   margin-top: 2rem;
 }
 
@@ -6276,6 +6276,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #222222;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -6297,7 +6298,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 .c36 {
   position: relative;
   z-index: 0;
-  color: #3F3F42;
   margin-top: 2rem;
 }
 

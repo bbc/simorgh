@@ -12,7 +12,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
       class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD StyledSectionLabel-opyob2-2 jpnPtT"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT"
       >
         <div
           class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -27,7 +27,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
               class="FlexRow-wx5kdp-2 dVBNyZ"
             >
               <span
-                class="Title-wx5kdp-4 cERxQI"
+                class="Title-wx5kdp-4 BeqZV"
                 dir="ltr"
                 id="related-content-heading"
               >
@@ -236,7 +236,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
       class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD StyledSectionLabel-opyob2-2 jpnPtT"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT"
       >
         <div
           class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -251,7 +251,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
               class="FlexRow-wx5kdp-2 dVBNyZ"
             >
               <span
-                class="Title-wx5kdp-4 cERxQI"
+                class="Title-wx5kdp-4 BeqZV"
                 dir="ltr"
                 id="related-content-heading"
               >

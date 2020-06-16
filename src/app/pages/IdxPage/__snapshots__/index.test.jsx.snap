@@ -26,7 +26,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
         role="region"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
+          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
         >
           <div
             class="Bar-sc-1x4gwjz-0 kXOyLn"
@@ -41,7 +41,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                 class="FlexRow-wx5kdp-2 dVBNyZ"
               >
                 <span
-                  class="Title-wx5kdp-4 jJpioi"
+                  class="Title-wx5kdp-4 htLcbq"
                   dir="rtl"
                   id="WatchListen"
                 >
@@ -569,7 +569,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
         role="region"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD RadioScheduleSectionLabel-f8vxqz-2 bKHBEG"
+          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu RadioScheduleSectionLabel-f8vxqz-2 bKHBEG"
         >
           <h2
             class="Heading-sc-1x4gwjz-2 eZofTG"
@@ -581,7 +581,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                 class="FlexRow-wx5kdp-2 dVBNyZ"
               >
                 <span
-                  class="Title-wx5kdp-4 bSIdgQ"
+                  class="Title-wx5kdp-4 bCBChy"
                   dir="rtl"
                   id="Radio-Schedule"
                 >
@@ -1117,7 +1117,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
         role="region"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
+          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
         >
           <div
             class="Bar-sc-1x4gwjz-0 kXOyLn"
@@ -1132,7 +1132,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                 class="FlexRow-wx5kdp-2 dVBNyZ"
               >
                 <span
-                  class="Title-wx5kdp-4 jJpioi"
+                  class="Title-wx5kdp-4 htLcbq"
                   dir="rtl"
                   id="Features"
                 >
