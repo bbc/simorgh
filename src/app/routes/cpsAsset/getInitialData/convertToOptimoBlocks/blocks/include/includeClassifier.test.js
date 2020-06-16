@@ -12,10 +12,10 @@ const ampPathname = 'https://www.bbc.com/service/foo.amp';
 
 describe('Include Classifier', () => {
   it.each`
-    includeType | classification            | href
-    ${`idt1`}   | ${`idt1-canonical`}       | ${idt1Include}
-    ${`idt2`}   | ${`idt2-canonical`}       | ${idt2Include}
-    ${`vj`}     | ${`vj-include-canonical`} | ${vjIncludeSupportingAmp}
+    includeType | classification      | href
+    ${`idt1`}   | ${`idt1-canonical`} | ${idt1Include}
+    ${`idt2`}   | ${`idt2-canonical`} | ${idt2Include}
+    ${`vj`}     | ${`vj-canonical`}   | ${vjIncludeSupportingAmp}
   `(
     'should classify $includeType as $classification on canonical',
     ({ includeType, classification, href }) => {
@@ -36,7 +36,7 @@ describe('Include Classifier', () => {
   it('should classify VJ include not supporting AMP on canonical platform', () => {
     const expected = {
       includeType: 'vj',
-      classification: 'vj-include-canonical',
+      classification: 'vj-canonical',
     };
 
     const actual = includeClassifier({
@@ -48,11 +48,10 @@ describe('Include Classifier', () => {
   });
 
   it.each`
-    includeType | classification                     | href
-    ${`idt1`}   | ${`idt1-amp`}                      | ${idt1Include}
-    ${`idt2`}   | ${`idt2-amp`}                      | ${idt2Include}
-    ${`vj`}     | ${`vj-include-supports-amp`}       | ${vjIncludeSupportingAmp}
-    ${`vj`}     | ${`vj-include-not-supporting-amp`} | ${vjIncludeNotSupportingAmp}
+    includeType | classification               | href
+    ${`idt1`}   | ${`idt1-amp`}                | ${idt1Include}
+    ${`idt2`}   | ${`idt2-amp`}                | ${idt2Include}
+    ${`vj`}     | ${`vj-include-supports-amp`} | ${vjIncludeSupportingAmp}
   `(
     'should classify $includeType as $classification on amp',
     ({ includeType, classification, href }) => {
@@ -70,8 +69,25 @@ describe('Include Classifier', () => {
     },
   );
 
+  it('should classify a vj include not supporting amp as not-supported on amp', () => {
+    const expected = {
+      includeType: 'vj',
+      classification: 'not-supported',
+    };
+
+    const actual = includeClassifier({
+      href: vjIncludeNotSupportingAmp,
+      pathname: ampPathname,
+    });
+
+    expect(actual).toEqual(expected);
+  });
+
   it('should classify a non-supported include as not supported on canonical', () => {
-    const expected = { includeType: null, classification: 'not-supported' };
+    const expected = {
+      includeType: undefined,
+      classification: 'not-supported',
+    };
 
     const actual = includeClassifier({
       href: 'idt3/blah',
@@ -82,7 +98,10 @@ describe('Include Classifier', () => {
   });
 
   it('should classify a non-supported include as not supported on amp', () => {
-    const expected = { includeType: null, classification: 'not-supported' };
+    const expected = {
+      includeType: undefined,
+      classification: 'not-supported',
+    };
 
     const actual = includeClassifier({
       href: 'idt3/blah',
@@ -93,10 +112,10 @@ describe('Include Classifier', () => {
   });
 
   it.each`
-    includeType | classification            | href
-    ${`idt1`}   | ${`idt1-canonical`}       | ${`indepthtoolkit/quizzes/123-456`}
-    ${`idt2`}   | ${`idt2-canonical`}       | ${`idt2/111-222-333-444-555`}
-    ${`vj`}     | ${`vj-include-canonical`} | ${`include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png`}
+    includeType | classification      | href
+    ${`idt1`}   | ${`idt1-canonical`} | ${`indepthtoolkit/quizzes/123-456`}
+    ${`idt2`}   | ${`idt2-canonical`} | ${`idt2/111-222-333-444-555`}
+    ${`vj`}     | ${`vj-canonical`}   | ${`include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png`}
   `(
     'should classify a supported $includeType without a leading / in href on canonical',
     ({ includeType, classification, href }) => {

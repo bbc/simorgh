@@ -33,24 +33,20 @@ const includeClassifier = ({ href, pathname }) => {
 
   const pathnameIsAmp = pathname.endsWith('.amp');
 
-  if (includeType === 'vj') {
-    if (!pathnameIsAmp) {
-      return { includeType, classification: 'vj-include-canonical' };
-    }
+  const platform = pathnameIsAmp ? 'amp' : 'canonical';
+  const classification = includeType
+    ? `${includeType}-${platform}`
+    : 'not-supported';
 
-    if (ampSupported(href)) {
-      return { includeType, classification: 'vj-include-supports-amp' };
-    }
-
-    return { includeType, classification: 'vj-include-not-supporting-amp' };
-  }
-  if (includeType) {
-    const platform = pathnameIsAmp ? 'amp' : 'canonical';
-    const classification = `${includeType}-${platform}`;
-
+  if (!pathnameIsAmp || (!ampSupported(href) && classification !== 'vj-amp')) {
     return { includeType, classification };
   }
-  return { includeType: null, classification: 'not-supported' };
+
+  if (ampSupported(href)) {
+    return { includeType, classification: 'vj-include-supports-amp' };
+  }
+
+  return { includeType: includeType || null, classification: 'not-supported' };
 };
 
 export default includeClassifier;
