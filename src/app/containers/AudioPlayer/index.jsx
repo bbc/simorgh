@@ -1,16 +1,8 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_QUAD,
-} from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import { string, bool } from 'prop-types';
+import { string } from 'prop-types';
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
-  MediaMessage,
 } from '@bbc/psammead-media-player';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
@@ -32,27 +24,12 @@ const getMediaInfo = assetId => ({
 const getMasterBrand = (masterBrand, liveRadioIdOverrides) =>
   pathOr(masterBrand, ['masterBrand', masterBrand], liveRadioIdOverrides);
 
-const AudioPlayerWrapper = styled.div`
-  width: calc(100% + ${GEL_SPACING_DBL});
-  margin: 0 -${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    width: calc(100% + ${GEL_SPACING_QUAD});
-    margin: 0 -${GEL_SPACING_DBL};
-  }
-`;
-
-const MediaMessageWrapper = styled.div`
-  position: relative;
-  min-height: 165px;
-  margin-bottom: ${GEL_SPACING_QUAD};
-`;
-
 const AudioPlayer = ({
   externalId: _masterBrand,
   id: assetId,
   idAttr,
   embedUrl,
-  episodeIsAvailable,
+  className,
 }) => {
   const { liveRadioOverrides, translations, service } = useContext(
     ServiceContext,
@@ -67,20 +44,6 @@ const AudioPlayer = ({
     translations,
   );
 
-  if (!episodeIsAvailable) {
-    const expiredContentMessage = pathOr(
-      'This content is no longer available',
-      ['media', 'contentExpired'],
-      translations,
-    );
-
-    return (
-      <MediaMessageWrapper>
-        <MediaMessage service={service} message={expiredContentMessage} />
-      </MediaMessageWrapper>
-    );
-  }
-
   if (!isValidPlatform || !masterBrand || !assetId) return null; // potential for logging here
 
   const iframeTitle = pathOr(
@@ -90,7 +53,7 @@ const AudioPlayer = ({
   );
 
   return (
-    <AudioPlayerWrapper>
+    <div className={className}>
       {isAmp ? (
         <AmpMediaPlayer
           placeholderSrc={audioPlaceholderImageSrc}
@@ -114,7 +77,7 @@ const AudioPlayer = ({
           noJsClassName="no-js"
         />
       )}
-    </AudioPlayerWrapper>
+    </div>
   );
 };
 
@@ -123,7 +86,7 @@ AudioPlayer.propTypes = {
   id: string,
   idAttr: string,
   embedUrl: string,
-  episodeIsAvailable: bool,
+  className: string,
 };
 
 AudioPlayer.defaultProps = {
@@ -131,7 +94,7 @@ AudioPlayer.defaultProps = {
   id: '',
   idAttr: null,
   embedUrl: '',
-  episodeIsAvailable: true,
+  className: '',
 };
 
 export default AudioPlayer;
