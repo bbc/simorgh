@@ -8,45 +8,140 @@ exports[`Canonical Media Asset Page Footer I can click on the BBC branding and i
 
 exports[`Canonical Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 1`] = `"BBC News, عربي - /arabic"`;
+exports[`Canonical Media Asset Page Footer Link should match text and url 1`] = `
+Object {
+  "text": "BBC News, عربي",
+  "url": "/arabic",
+}
+`;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 2`] = `"لماذا يمكنك الاعتماد على أخبار بي بي سي - https://www.bbc.com/arabic/institutional-49283069"`;
+exports[`Canonical Media Asset Page Footer Link should match text and url 2`] = `
+Object {
+  "text": "لماذا يمكنك الاعتماد على أخبار بي بي سي",
+  "url": "https://www.bbc.com/arabic/institutional-49283069",
+}
+`;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 3`] = `"شروط الاستخدام - https://www.bbc.com/arabic/institutional-37731351"`;
+exports[`Canonical Media Asset Page Footer Link should match text and url 3`] = `
+Object {
+  "text": "شروط الاستخدام",
+  "url": "https://www.bbc.com/arabic/institutional-37731351",
+}
+`;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 4`] = `"عن بي بي سي - https://www.bbc.com/arabic/institutional-37731352"`;
+exports[`Canonical Media Asset Page Footer Link should match text and url 4`] = `
+Object {
+  "text": "عن بي بي سي",
+  "url": "https://www.bbc.com/arabic/institutional-37731352",
+}
+`;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 5`] = `"سياسة الخصوصية - https://www.bbc.com/arabic/institutional-37731353"`;
+exports[`Canonical Media Asset Page Footer Link should match text and url 5`] = `
+Object {
+  "text": "سياسة الخصوصية",
+  "url": "https://www.bbc.com/arabic/institutional-37731353",
+}
+`;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 6`] = `"ملفات الارتباط Cookies - https://www.bbc.com/usingthebbc/cookies/"`;
+exports[`Canonical Media Asset Page Footer Link should match text and url 6`] = `
+Object {
+  "text": "ملفات الارتباط Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 7`] = `"اتصل بـ بي بي سي - https://www.bbc.com/arabic/institutional-37731355"`;
+exports[`Canonical Media Asset Page Footer Link should match text and url 7`] = `
+Object {
+  "text": "اتصل بـ بي بي سي",
+  "url": "https://www.bbc.com/arabic/institutional-37731355",
+}
+`;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`Canonical Media Asset Page Footer Link should match text and url 8`] = `
+Object {
+  "text": "AdChoices / Do Not Sell My Info",
+  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+}
+`;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 9`] = `"سياستنا بخصوص الروابط الخارجية. - https://www.bbc.co.uk/help/web/links/"`;
+exports[`Canonical Media Asset Page Footer Link should match text and url 9`] = `
+Object {
+  "text": "سياستنا بخصوص الروابط الخارجية.",
+  "url": "https://www.bbc.co.uk/help/web/links/",
+}
+`;
 
 exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 1`] = `"رئيسية - /arabic"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 1`] = `
+Object {
+  "text": "رئيسية",
+  "url": "/arabic",
+}
+`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 2`] = `"شرق أوسط - /arabic/middleeast"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 2`] = `
+Object {
+  "text": "شرق أوسط",
+  "url": "/arabic/middleeast",
+}
+`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 3`] = `"عالم - /arabic/world"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 3`] = `
+Object {
+  "text": "عالم",
+  "url": "/arabic/world",
+}
+`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 4`] = `"علوم وتكنولوجيا - /arabic/scienceandtech"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 4`] = `
+Object {
+  "text": "علوم وتكنولوجيا",
+  "url": "/arabic/scienceandtech",
+}
+`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 5`] = `"صحة - /arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 5`] = `
+Object {
+  "text": "صحة",
+  "url": "/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+}
+`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 6`] = `"فيديو - /arabic/media"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 6`] = `
+Object {
+  "text": "فيديو",
+  "url": "/arabic/media",
+}
+`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 7`] = `"صحافة - /arabic/inthepress"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 7`] = `
+Object {
+  "text": "صحافة",
+  "url": "/arabic/inthepress",
+}
+`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 8`] = `"ترند - /arabic/trending"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 8`] = `
+Object {
+  "text": "ترند",
+  "url": "/arabic/trending",
+}
+`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 9`] = `"تحقيقات - /arabic/tv-and-radio-42414864"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 9`] = `
+Object {
+  "text": "تحقيقات",
+  "url": "/arabic/tv-and-radio-42414864",
+}
+`;
 
-exports[`Canonical Media Asset Page Header Navigation link should match text and url 10`] = `"برامجنا - /arabic/tv-and-radio-37728883"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 10`] = `
+Object {
+  "text": "برامجنا",
+  "url": "/arabic/tv-and-radio-37728883",
+}
+`;
 
 exports[`Canonical Media Asset Page I can see the headline 1`] = `"شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"`;
 
