@@ -207,6 +207,11 @@ export default () => {
         });
 
         it(`should match attributes`, () => {
+          expect({
+          url,
+          sizes
+          }).toMatchSnapshot();
+        };
           expect(`${url}`).toMatchSnapshot();
           expect(`${sizes}`).toMatchSnapshot();
         });
