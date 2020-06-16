@@ -56,7 +56,7 @@ const getCpsItemData = record => {
   };
 };
 
-const mostReadItems = ({ data, numberOfItems }) => {
+const mostReadItems = ({ data, isAmp, numberOfItems, service }) => {
   if (!data) {
     return null;
   }
@@ -65,7 +65,7 @@ const mostReadItems = ({ data, numberOfItems }) => {
   // The ARES test endpoint for most read renders fixture data, so the data is stale
   const isTest = process.env.SIMORGH_APP_ENV === 'test';
 
-  // Do not show most read if lastRecordUpdated is greater than 35min as this means PopAPI has failed twice
+  // Do not show most read if lastRecordUpdated is greater than 60min as this means PopAPI has failed twice
   // in succession. This suggests ATI may be having issues, hence risk of stale data.
   if (isTest || mostReadRecordIsFresh(data.lastRecordTimeStamp)) {
     const items = [];
@@ -81,7 +81,9 @@ const mostReadItems = ({ data, numberOfItems }) => {
         items.push(mostReadItemData);
       } else {
         logger.warn(MOST_READ_DATA_INCOMPLETE, {
-          message: `Most read data promo has href: ${href} and title: ${title}`,
+          service,
+          title,
+          url: href,
         });
       }
 
@@ -91,8 +93,13 @@ const mostReadItems = ({ data, numberOfItems }) => {
     }
     return items;
   }
+
   logger.warn(MOST_READ_STALE_DATA, {
-    message: `Most read lastUpdatedTimestamp - ${data.lastRecordTimeStamp} value is greater than 35min`,
+    message: 'lastRecordTimeStamp is greater than 60min',
+    lastRecordTimeStamp: data.lastRecordTimeStamp,
+    generated: data.generated,
+    service,
+    isAmp,
   });
   return null;
 };

@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import useToggle from '#hooks/useToggle';
-import { RequestContext } from '../../contexts/RequestContext';
-import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import AmpAd from './Amp';
 import CanonicalAd from './Canonical';
 
@@ -16,10 +16,7 @@ const AdContainer = () => {
     return false;
   }
 
-  if (isAmp) {
-    return <AmpAd slotType="leaderboard" />;
-  }
-  return <CanonicalAd />;
+  return isAmp ? <AmpAd slotType="leaderboard" /> : <CanonicalAd />;
 };
 
 export default AdContainer;

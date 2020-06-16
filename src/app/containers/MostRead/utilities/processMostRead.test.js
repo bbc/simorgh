@@ -184,50 +184,60 @@ describe('processMostRead', () => {
       data: pidginData,
       numberOfItems: 10,
       expectedReturn: expectedPidginData,
+      service: 'pidgin',
     },
     {
       description: 'should return expected filtered Optimo data',
       data: kyrgyzData,
       numberOfItems: 5,
       expectedReturn: expectedKyrgyzData,
+      service: 'kyrgyz',
     },
     {
       description:
         'should return null when last record CPS time stamp is stale',
       data: setStaleLastRecordTimeStamp(pidginData),
       expectedReturn: null,
+      service: 'pidgin',
     },
     {
       description:
         'should return null when last record Optimo time stamp is stale',
       data: setStaleLastRecordTimeStamp(kyrgyzData),
       expectedReturn: null,
+      service: 'kyrgyz',
     },
     {
       description: 'should return null when no data is passed',
       data: undefined,
       expectedReturn: null,
+      service: 'kyrgyz',
     },
     {
       description: 'should return empty array when records does not exist',
       data: { lastRecordTimeStamp: '2100-11-06T16:37:00Z' },
       expectedReturn: [],
+      service: 'kyrgyz',
     },
     {
       description: 'should skip array item if it contains invalid title value',
       data: kyrgyzDataWithInvalidPromo(missingTitleOptimoPromo),
       numberOfItems: 5,
       expectedReturn: expectedKyrgyzData,
+      service: 'kyrgyz',
     },
     {
       description: 'should skip array item if it contains invalid title value',
       data: kyrgyzDataWithInvalidPromo(missingHrefOptimoPromo),
       numberOfItems: 5,
       expectedReturn: expectedKyrgyzData,
+      service: 'kyrgyz',
     },
-  ].forEach(({ description, data, numberOfItems, expectedReturn }) => {
+  ].forEach(({ description, data, numberOfItems, expectedReturn, service }) => {
     it(description, () => {
-      expect(processMostRead({ data, numberOfItems })).toEqual(expectedReturn);
+      expect(processMostRead({ data, numberOfItems, service })).toEqual(
+        expectedReturn,
+      );
     });
   });
 
@@ -241,37 +251,51 @@ describe('processMostRead', () => {
         description:
           'should log MOST_READ_DATA_INCOMPLETE when most read item title is missing',
         data: kyrgyzDataWithInvalidPromo(missingTitleOptimoPromo),
-        message:
-          'Most read data promo has href: null and title: Most read item title',
         numberOfItems: 5,
+        service: 'kyrgyz',
+        warningContext: {
+          service: 'kyrgyz',
+          title: null,
+          url: 'https://www.bbc.com/news/articles/cn060pe01e5o',
+        },
       },
       {
         description:
           'should log MOST_READ_DATA_INCOMPLETE when most read item href is missing',
         data: kyrgyzDataWithInvalidPromo(missingHrefOptimoPromo),
-        message:
-          'Most read data promo has href: https://www.bbc.com/news/articles/cn060pe01e5o and title: null',
         numberOfItems: 5,
+        service: 'kyrgyz',
+        warningContext: {
+          service: 'kyrgyz',
+          title: 'Most read item title',
+          url: null,
+        },
       },
-    ].forEach(({ description, data, message, numberOfItems }) => {
-      it(description, () => {
-        processMostRead({ data, numberOfItems });
-        expect(nodeLogger.warn).toHaveBeenCalledWith(
-          MOST_READ_DATA_INCOMPLETE,
-          {
-            message,
-          },
-        );
-      });
-    });
+    ].forEach(
+      ({ description, data, numberOfItems, service, warningContext }) => {
+        it(description, () => {
+          processMostRead({ data, numberOfItems, service, isAmp: false });
+          expect(nodeLogger.warn).toHaveBeenCalledWith(
+            MOST_READ_DATA_INCOMPLETE,
+            warningContext,
+          );
+        });
+      },
+    );
 
-    it('should log MOST_READ_STALE_DATA when lastRecordTimestamp is greater than 35min', () => {
+    it('should log MOST_READ_STALE_DATA when lastRecordTimestamp is greater than 60min', () => {
       processMostRead({
         data: setStaleLastRecordTimeStamp(pidginData),
         numberOfItems: 10,
+        service: 'pidgin',
+        isAmp: true,
       });
       expect(nodeLogger.warn).toHaveBeenCalledWith(MOST_READ_STALE_DATA, {
-        message: `Most read lastUpdatedTimestamp - 2019-11-06T16:28:00Z value is greater than 35min`,
+        lastRecordTimeStamp: '2019-11-06T16:28:00Z',
+        message: 'lastRecordTimeStamp is greater than 60min',
+        generated: '2019-11-06T17:05:17.981Z',
+        service: 'pidgin',
+        isAmp: true,
       });
     });
   });

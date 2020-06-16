@@ -16,6 +16,7 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
+import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
 import { shouldRenderLastUpdated } from '../utilities';
@@ -45,6 +46,7 @@ const CanonicalMostRead = ({
   initialData,
   wrapper: Wrapper,
 }) => {
+  const { isAmp } = useContext(RequestContext);
   const {
     service,
     script,
@@ -54,7 +56,12 @@ const CanonicalMostRead = ({
     mostRead: { lastUpdated, numberOfItems },
   } = useContext(ServiceContext);
 
-  const filteredData = processMostRead({ data: initialData, numberOfItems });
+  const filteredData = processMostRead({
+    data: initialData,
+    isAmp,
+    numberOfItems,
+    service,
+  });
 
   const [items, setItems] = useState(filteredData);
 
@@ -67,7 +74,14 @@ const CanonicalMostRead = ({
           );
         }
         const mostReadData = await response.json();
-        setItems(processMostRead({ data: mostReadData, numberOfItems }));
+        setItems(
+          processMostRead({
+            data: mostReadData,
+            isAmp,
+            numberOfItems,
+            service,
+          }),
+        );
       };
 
       const fetchMostReadData = pathname => {
@@ -94,6 +108,7 @@ const CanonicalMostRead = ({
     service,
     timezone,
     items,
+    isAmp,
   ]);
 
   if (!items) {

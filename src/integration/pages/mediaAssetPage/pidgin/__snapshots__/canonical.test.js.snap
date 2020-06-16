@@ -8,19 +8,61 @@ exports[`Canonical Media Asset Page Footer I can click on the BBC branding and i
 
 exports[`Canonical Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
+exports[`Canonical Media Asset Page Footer Link should match text and url 1`] = `"BBC News, Pidgin - /pidgin"`;
+
+exports[`Canonical Media Asset Page Footer Link should match text and url 2`] = `"Why you fit trust BBC News - https://www.bbc.com/pidgin/institutional-48528766"`;
+
+exports[`Canonical Media Asset Page Footer Link should match text and url 3`] = `"How dem dey take use am - https://www.bbc.co.uk/usingthebbc/terms/"`;
+
+exports[`Canonical Media Asset Page Footer Link should match text and url 4`] = `"As e concern BBC - https://www.bbc.co.uk/aboutthebbc"`;
+
+exports[`Canonical Media Asset Page Footer Link should match text and url 5`] = `"Privacy Policy - https://www.bbc.co.uk/usingthebbc/privacy/"`;
+
+exports[`Canonical Media Asset Page Footer Link should match text and url 6`] = `"Cookies - https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`Canonical Media Asset Page Footer Link should match text and url 7`] = `"Call BBC - https://www.bbc.com/pidgin/institutional-42188215"`;
+
+exports[`Canonical Media Asset Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Canonical Media Asset Page Footer Link should match text and url 9`] = `"De way wey we de take go external link. - https://www.bbc.co.uk/help/web/links/"`;
+
 exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
-exports[`Canonical Media Asset Page I can see the bulleted list item 1`] = `"<Media Asset Page><Media Asset Page><Media Asset Page>this is the link textthis is the link textthis is the link text"`;
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 1`] = `"Home - /pidgin"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 2`] = `"Nigeria - /pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 3`] = `"Africa - /pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 4`] = `"World - /pidgin/world"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 5`] = `"Video - /pidgin/media/video"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 6`] = `"Sport - /pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 7`] = `"Entertainment - /pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"`;
+
+exports[`Canonical Media Asset Page Header Navigation link should match text and url 8`] = `"Most popular - /pidgin/popular/read"`;
+
+exports[`Canonical Media Asset Page I can see a bulleted list item 1`] = `"<Media Asset Page>"`;
+
+exports[`Canonical Media Asset Page I can see a bulleted list item with link: <Media Asset Page> 1`] = `"http://www.bbc.com/afrique/23248423"`;
+
+exports[`Canonical Media Asset Page I can see related content: Audio, BBC News Pidgin One Minute News, 0,15 1`] = `"/pidgin/media-23147054"`;
+
+exports[`Canonical Media Asset Page I can see related content: Image gallery, Kenya Elections Pictures: 8 August 2017 1`] = `"/pidgin/23146654"`;
+
+exports[`Canonical Media Asset Page I can see related content: Lagos 'Gay' men Appear for Court, say Dem no dey Guilty 1`] = `"/pidgin/tori-23143754"`;
+
+exports[`Canonical Media Asset Page I can see related content: Police Arrest 3 ontop Anambra Church Attack 1`] = `"/pidgin/tori-23145776"`;
 
 exports[`Canonical Media Asset Page I can see the headline 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
 
-exports[`Canonical Media Asset Page I can see the related content 1`] = `"Police Arrest 3 ontop Anambra Church AttackGovernor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp8th August 2017Lagos 'Gay' men Appear for Court, say Dem no dey GuiltyThe men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.8th August 2017Image gallery, Kenya Elections Pictures: 8 August 2017This na some of the picture wey our eye see as Kenya people go vote for election today8th August 20170:15Audio, BBC News Pidgin One Minute News, 0,15All di local and world tori wey you suppose know in 60 seconds!17th August 2017"`;
-
 exports[`Canonical Media Asset Page I can see the timestamp 1`] = `"13 September 2019"`;
 
-exports[`Canonical Media Asset Page Media player embed A11y I can read the media player title 1`] = `"Media player"`;
+exports[`Canonical Media Asset Page Media Player a11y assistive technology can read the media player title 1`] = `"Media player"`;
 
-exports[`Canonical Media Asset Page Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"`;
+exports[`Canonical Media Asset Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"`;
 
 exports[`Canonical Media Asset Page SEO Canonical link 1`] = `"http://localhost:7080/pidgin/23248703"`;
 
@@ -34,48 +76,65 @@ exports[`Canonical Media Asset Page SEO Heading level 1 1`] = `"Simorgh: Media P
 
 exports[`Canonical Media Asset Page SEO Lang attribute 1`] = `"pcm"`;
 
-exports[`Canonical Media Asset Page SEO Linked data 1`] = `
+exports[`Canonical Media Asset Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
-  "@type": "Article",
-  "author": Object {
-    "@type": "NewsMediaOrganization",
-    "logo": Object {
-      "@type": "ImageObject",
-      "height": 576,
-      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
-      "width": 1024,
+  "@graph": Array [
+    Object {
+      "@type": "Article",
+      "author": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+          "width": 1024,
+        },
+        "name": "BBC News Pidgin",
+        "noBylinesPolicy": "https://www.bbc.com/pidgin/institutional-48528766#authorexpertise",
+      },
+      "dateModified": "2019-11-20T12:24:25.000Z",
+      "datePublished": "2019-09-13T15:31:44.000Z",
+      "headline": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+      "image": Object {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+        "width": 1024,
+      },
+      "mainEntityOfPage": Object {
+        "@id": "http://localhost:7080/pidgin/23248703",
+        "@type": "WebPage",
+        "name": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
+      },
+      "publisher": Object {
+        "@type": "NewsMediaOrganization",
+        "logo": Object {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+          "width": 1024,
+        },
+        "name": "BBC News Pidgin",
+        "publishingPrinciples": "https://www.bbc.com/pidgin/institutional-48528766",
+      },
+      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+      "url": "http://localhost:7080/pidgin/23248703",
     },
-    "name": "BBC News Pidgin",
-    "noBylinesPolicy": "https://www.bbc.com/pidgin/institutional-48528766#authorexpertise",
-  },
-  "dateModified": "2019-11-20T12:24:25.000Z",
-  "datePublished": "2019-09-13T15:31:44.000Z",
-  "headline": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
-  "image": Object {
-    "@type": "ImageObject",
-    "height": 576,
-    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
-    "width": 1024,
-  },
-  "mainEntityOfPage": Object {
-    "@id": "http://localhost:7080/pidgin/23248703",
-    "@type": "WebPage",
-    "name": "Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >",
-  },
-  "publisher": Object {
-    "@type": "NewsMediaOrganization",
-    "logo": Object {
-      "@type": "ImageObject",
-      "height": 576,
-      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
-      "width": 1024,
-    },
-    "name": "BBC News Pidgin",
-    "publishingPrinciples": "https://www.bbc.com/pidgin/institutional-48528766",
-  },
-  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
-  "url": "http://localhost:7080/pidgin/23248703",
+  ],
+}
+`;
+
+exports[`Canonical Media Asset Page SEO Linked data should match text 2`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "VideoObject",
+  "description": "short",
+  "duration": "PT5S",
+  "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm",
+  "name": "alt-text world service clip",
+  "thumbnailUrl": "https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg",
+  "uploadDate": "2018-12-20T11:06:51.000Z",
 }
 `;
 

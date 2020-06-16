@@ -3,10 +3,9 @@ import {
   buildArticleATIUrl,
 } from './article/buildParams';
 import {
-  buildFrontPageATIParams,
-  buildFrontPageATIUrl,
-} from './frontpage/buildParams';
-import { buildRadioATIParams, buildRadioATIUrl } from './radioPage/buildParams';
+  buildTvRadioATIParams,
+  buildTvRadioATIUrl,
+} from './tvRadioPage/buildParams';
 import {
   buildCpsAssetPageATIParams,
   buildCpsAssetPageATIUrl,
@@ -15,15 +14,20 @@ import {
   buildMostReadATIParams,
   buildMostReadATIUrl,
 } from './mostReadPage/buildParams';
+import {
+  buildIndexPageATIParams,
+  buildIndexPageATIUrl,
+} from './indexPage/buildParams';
 
 const ARTICLE_MEDIA_ASSET = 'article-media-asset';
 const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
 
 const pageTypeUrlBuilders = {
   article: buildArticleATIUrl,
-  frontPage: buildFrontPageATIUrl,
-  media: buildRadioATIUrl,
+  frontPage: buildIndexPageATIUrl,
+  media: buildTvRadioATIUrl,
   mostRead: buildMostReadATIUrl,
+  IDX: buildIndexPageATIUrl,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIUrl(
       data,
@@ -42,9 +46,10 @@ const pageTypeUrlBuilders = {
 
 const pageTypeParamBuilders = {
   article: buildArticleATIParams,
-  frontPage: buildFrontPageATIParams,
-  media: buildRadioATIParams,
+  frontPage: buildIndexPageATIParams,
+  media: buildTvRadioATIParams,
   mostRead: buildMostReadATIParams,
+  IDX: buildIndexPageATIParams,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIParams(
       data,

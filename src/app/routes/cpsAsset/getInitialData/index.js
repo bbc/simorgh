@@ -42,10 +42,15 @@ const processOptimoBlocks = pipe(
   addRecommendationsBlock,
 );
 
-const transformJson = async json => {
+// Here pathname is passed as a prop specifically for CPS includes
+// This will most likely change in issue #6784 so it is temporary for now
+const transformJson = async (json, pathname) => {
   try {
     const formattedPageData = formatPageData(json);
-    const optimoBlocks = await convertToOptimoBlocks(formattedPageData);
+    const optimoBlocks = await convertToOptimoBlocks(
+      formattedPageData,
+      pathname,
+    );
     return processOptimoBlocks(optimoBlocks);
   } catch (e) {
     // We can arrive here if the CPS asset is a FIX page
@@ -66,7 +71,10 @@ export default async ({ path: pathname, service, variant }) => {
   return {
     ...rest,
     ...(json && {
-      pageData: { ...(await transformJson(json)), ...additionalPageData },
+      pageData: {
+        ...(await transformJson(json, pathname)),
+        ...additionalPageData,
+      },
     }),
   };
 };

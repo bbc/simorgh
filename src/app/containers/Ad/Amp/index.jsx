@@ -126,7 +126,7 @@ const AMP_ACCESS_DATA = endpoint => ({
 const LABEL_LINK = 'https://www.bbc.com/usingthebbc/cookies/';
 
 export const AMP_ACCESS_FETCH = service => {
-  const togglesEndpoint = `${process.env.SIMORGH_TOGGLES_URL}/toggles?application=simorgh&service=${service}&geoiplookup=true`;
+  const togglesEndpoint = `${process.env.SIMORGH_TOGGLES_URL}/toggles?application=simorgh&service=${service}`;
 
   return (
     <script id="amp-access" type="application/json">
@@ -140,15 +140,14 @@ const AmpAd = ({ slotType }) => {
   const label = pathOr('Advertisement', ['advertisementLabel'], ads);
 
   return (
-    <div amp-access="toggles.ads.enabled" amp-access-hide="true">
-      <FullWidthWrapper>
-        <StyledWrapper>
-          <Helmet>
-            {AMP_ADS_JS}
-            {AMP_ACCESS_JS}
-            {AMP_ACCESS_FETCH(service)}
-          </Helmet>
-
+    <FullWidthWrapper>
+      <StyledWrapper>
+        <Helmet>
+          {AMP_ADS_JS}
+          {AMP_ACCESS_JS}
+          {AMP_ACCESS_FETCH(service)}
+        </Helmet>
+        <div amp-access="toggles.ads.enabled" amp-access-hide="true">
           <StyledAd>
             <StyledLink
               href={LABEL_LINK}
@@ -169,9 +168,9 @@ const AmpAd = ({ slotType }) => {
               slotType={slotType}
             />
           </StyledAd>
-        </StyledWrapper>
-      </FullWidthWrapper>
-    </div>
+        </div>
+      </StyledWrapper>
+    </FullWidthWrapper>
   );
 };
 

@@ -120,6 +120,7 @@ describe('cspHeader', () => {
         'https://syndication.twitter.com',
         'https://news.files.bbci.co.uk',
         'https://www.bbc.co.uk',
+        'https://bbc-maps.carto.com',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -154,6 +155,9 @@ describe('cspHeader', () => {
         'https://cdn.syndication.twimg.com',
         'https://static.bbc.co.uk',
         'https://www.bbc.co.uk',
+        'https://passport-control.int.tools.bbc.co.uk/bookmarkletScript.js',
+        'https://passport-control.test.tools.bbc.co.uk/bookmarkletScript.js',
+        'https://passport-control.tools.bbc.co.uk/bookmarkletScript.js',
         "'self'",
         "'unsafe-inline'",
       ],
@@ -281,6 +285,7 @@ describe('cspHeader', () => {
         'https://news.files.bbci.co.uk',
         'https://www.bbc.co.uk',
         'http://www.bbc.co.uk',
+        'https://bbc-maps.carto.com',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -325,6 +330,9 @@ describe('cspHeader', () => {
         'https://static.bbc.co.uk',
         'http://static.bbc.co.uk',
         'https://www.bbc.co.uk',
+        'https://passport-control.int.tools.bbc.co.uk/bookmarkletScript.js',
+        'https://passport-control.test.tools.bbc.co.uk/bookmarkletScript.js',
+        'https://passport-control.tools.bbc.co.uk/bookmarkletScript.js',
         "'self'",
         "'unsafe-inline'",
       ],
@@ -434,7 +442,8 @@ describe('cspHeader', () => {
             `script-src ${scriptSrcExpectation.join(' ')}; ` +
             `style-src ${styleSrcExpectation.join(' ')}; ` +
             `worker-src ${workerSrcExpectation.join(' ')}; ` +
-            `report-to default`;
+            `report-to default; ` +
+            `upgrade-insecure-requests`;
 
           expect(headers['Content-Security-Policy']).toEqual(
             expectedCSPHeaderString,

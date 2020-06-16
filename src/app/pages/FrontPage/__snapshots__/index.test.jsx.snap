@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] = `
+exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 <div>
   <div
     id="VariantContainer"
@@ -49,78 +49,11 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                   </span>
                 </h1>
                 <div
-                  class="FullWidthWrapper-lj1cbr-0 eDAzmQ"
-                >
-                  <div
-                    class="StyledWrapper-lj1cbr-1 dKYaue"
-                  >
-                    <div
-                      amp-access="toggles.ads.enabled AND geoIp.advertiseCombined"
-                      amp-access-hide="true"
-                    >
-                      <div
-                        class="StyledAd-lj1cbr-2 jVyjdQ"
-                      >
-                        <a
-                          class="StyledLink-lj1cbr-3 fnRXqD"
-                          dir="ltr"
-                          href="https://www.bbc.com/usingthebbc/cookies/"
-                          tabindex="-1"
-                        >
-                          Tori we dem pay for
-                        </a>
-                        <amp-ad
-                          data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
-                          data-amp-slot-index="0"
-                          data-block-on-consent="default"
-                          data-multi-size="320x50,300x50"
-                          data-npa-on-unknown-consent="true"
-                          data-slot="/4817/bbccom.test.site.amp.news"
-                          height="50"
-                          json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"pidgin\\"}}"
-                          media="(max-width: 62.9375rem)"
-                          type="doubleclick"
-                          width="320"
-                        >
-                          <amp-img
-                            height="50"
-                            layout="responsive"
-                            placeholder="true"
-                            src="https://via.placeholder.com/320x50"
-                            width="320"
-                          />
-                        </amp-ad>
-                        <amp-ad
-                          data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
-                          data-amp-slot-index="0"
-                          data-block-on-consent="default"
-                          data-multi-size="970x250,728x90"
-                          data-npa-on-unknown-consent="true"
-                          data-slot="/4817/bbccom.test.site.amp.news"
-                          height="250"
-                          json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"pidgin\\"}}"
-                          media="(min-width: 63rem)"
-                          type="doubleclick"
-                          width="970"
-                        >
-                          <amp-img
-                            height="250"
-                            layout="responsive"
-                            placeholder="true"
-                            src="https://via.placeholder.com/970x250"
-                            width="970"
-                          />
-                        </amp-ad>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="StyledFrontPageDiv-sc-58u5qv-0 fCyXlu"
+                  class="IndexPageContainer-sc-1yb6vt4-0 lkUiYo"
                 >
                   <section
                     aria-labelledby="Top-stories"
-                    class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+                    class="StyledSection-sc-1x9qbiu-0 hNdEyC"
                     role="region"
                   >
                     <div
@@ -150,7 +83,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                       </h2>
                     </div>
                     <div
-                      class="FirstSectionTopMargin-sc-1t555e8-1 gTFeDc"
+                      class="FirstSectionTopMargin-sc-1x9qbiu-1 jIhlPO"
                     >
                       <div
                         class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
@@ -259,7 +192,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage with ads 1`] 
                   </section>
                   <section
                     aria-labelledby="Frequency-info"
-                    class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+                    class="StyledSection-sc-1x9qbiu-0 hNdEyC"
                     role="region"
                   >
                     <div
@@ -875,11 +808,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </span>
                 </h1>
                 <div
-                  class="StyledFrontPageDiv-sc-58u5qv-0 fCyXlu"
+                  class="IndexPageContainer-sc-1yb6vt4-0 lkUiYo"
                 >
                   <section
                     aria-labelledby="Top-stories"
-                    class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+                    class="StyledSection-sc-1x9qbiu-0 hNdEyC"
                     role="region"
                   >
                     <div
@@ -909,7 +842,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       </h2>
                     </div>
                     <div
-                      class="FirstSectionTopMargin-sc-1t555e8-1 gTFeDc"
+                      class="FirstSectionTopMargin-sc-1x9qbiu-1 jIhlPO"
                     >
                       <div
                         class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
@@ -1018,7 +951,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </section>
                   <section
                     aria-labelledby="Frequency-info"
-                    class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+                    class="StyledSection-sc-1x9qbiu-0 hNdEyC"
                     role="region"
                   >
                     <div
@@ -1538,7 +1471,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </section>
                   <section
                     aria-labelledby="Most-Read"
-                    class="MostReadSection-sc-58u5qv-1 ilJrAv"
+                    class="MostReadSection-sc-1r6ctrd-0 FrontPageMostReadSection-sc-58u5qv-0 hCGyVl"
                     data-e2e="most-read"
                     role="region"
                   >
@@ -1577,7 +1510,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         role="list"
                       >
                         <li
-                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1595,7 +1528,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledItem-u0d8kd-1 ihPUFl"
+                              class="StyledItem-u0d8kd-1 kYQuFW"
                               dir="ltr"
                             >
                               <a
@@ -1618,7 +1551,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1636,7 +1569,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledItem-u0d8kd-1 ihPUFl"
+                              class="StyledItem-u0d8kd-1 kYQuFW"
                               dir="ltr"
                             >
                               <a
@@ -1659,7 +1592,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1677,7 +1610,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledItem-u0d8kd-1 ihPUFl"
+                              class="StyledItem-u0d8kd-1 kYQuFW"
                               dir="ltr"
                             >
                               <a
@@ -1700,7 +1633,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1718,7 +1651,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledItem-u0d8kd-1 ihPUFl"
+                              class="StyledItem-u0d8kd-1 kYQuFW"
                               dir="ltr"
                             >
                               <a
@@ -1741,7 +1674,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1759,7 +1692,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledItem-u0d8kd-1 ihPUFl"
+                              class="StyledItem-u0d8kd-1 kYQuFW"
                               dir="ltr"
                             >
                               <a
@@ -1782,7 +1715,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1800,7 +1733,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledItem-u0d8kd-1 ihPUFl"
+                              class="StyledItem-u0d8kd-1 kYQuFW"
                               dir="ltr"
                             >
                               <a
@@ -1823,7 +1756,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1841,7 +1774,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledItem-u0d8kd-1 ihPUFl"
+                              class="StyledItem-u0d8kd-1 kYQuFW"
                               dir="ltr"
                             >
                               <a
@@ -1864,7 +1797,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1882,7 +1815,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledItem-u0d8kd-1 ihPUFl"
+                              class="StyledItem-u0d8kd-1 kYQuFW"
                               dir="ltr"
                             >
                               <a
@@ -1905,7 +1838,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1923,7 +1856,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledItem-u0d8kd-1 ihPUFl"
+                              class="StyledItem-u0d8kd-1 kYQuFW"
                               dir="ltr"
                             >
                               <a
@@ -1946,7 +1879,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1964,7 +1897,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               </span>
                             </div>
                             <div
-                              class="StyledItem-u0d8kd-1 ihPUFl"
+                              class="StyledItem-u0d8kd-1 kYQuFW"
                               dir="ltr"
                             >
                               <a

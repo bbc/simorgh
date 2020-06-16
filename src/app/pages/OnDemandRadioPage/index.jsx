@@ -1,21 +1,35 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { shape, string, number } from 'prop-types';
-import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
+import { shape, string, number, bool } from 'prop-types';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
+} from '@bbc/gel-foundations/spacings';
+import { MediaMessage } from '@bbc/psammead-media-player';
+import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
+import { useLocation } from 'react-router-dom';
+import pathOr from 'ramda/src/pathOr';
 import MetadataContainer from '../../containers/Metadata';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
-import AudioPlayerBlock from '#containers/RadioPageBlocks/Blocks/AudioPlayer';
+import AudioPlayer from '#containers/AudioPlayer';
 import EpisodeImage from '#containers/RadioPageBlocks/Blocks/OnDemandImage';
+import LinkedData from '#containers/LinkedData';
+import getMediaId from '#lib/utilities/getMediaId';
+import getMasterbrand from '#lib/utilities/getMasterbrand';
+import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
-const EPISODE_IS_AVAILABLE = 'available';
-const EPISODE_IS_EXPIRED = 'expired';
-const EPISODE_IS_NOT_YET_AVAILABLE = 'not-yet-available';
 
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,
@@ -26,61 +40,31 @@ const getGroups = (zero, one, two, three, four, five) => ({
   group5: five,
 });
 
-const getEpisodeAvailability = (availableFrom, availableUntil) => {
-  const timeNow = Date.now();
-
-  if (!availableUntil) return EPISODE_IS_EXPIRED;
-  if (timeNow < availableFrom) return EPISODE_IS_NOT_YET_AVAILABLE;
-
-  return EPISODE_IS_AVAILABLE;
-};
-
 const StyledGelPageGrid = styled(GelPageGrid)`
   width: 100%;
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
 `;
 
 const StyledGelWrapperGrid = styled(GelPageGrid)`
-  padding-top: ${GEL_SPACING_TRPL};
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding-top: ${GEL_SPACING_TRPL};
+  }
 `;
 
-/* eslint-disable react/prop-types */
-const renderEpisode = ({
-  masterBrand,
-  episodeId,
-  episodeAvailableFrom,
-  episodeAvailableUntil,
-  promoBrandTitle,
-  shortSynopsis,
-  thumbnailImageUrl,
-  durationISO8601,
-  releaseDateTimeStamp,
-}) => {
-  const episodeAvailability = getEpisodeAvailability(
-    episodeAvailableFrom,
-    episodeAvailableUntil,
-  );
-  switch (episodeAvailability) {
-    case EPISODE_IS_AVAILABLE:
-      return (
-        <AudioPlayerBlock
-          externalId={masterBrand}
-          id={episodeId}
-          promoBrandTitle={promoBrandTitle}
-          shortSynopsis={shortSynopsis}
-          thumbnailImageUrl={thumbnailImageUrl}
-          durationISO8601={durationISO8601}
-          releaseDateTimeStamp={releaseDateTimeStamp}
-        />
-      );
-    case EPISODE_IS_EXPIRED:
-      return <AudioPlayerBlock isExpired />;
-    case EPISODE_IS_NOT_YET_AVAILABLE:
-    default:
-      return null;
+const StyledMessageContainer = styled.div`
+  position: relative;
+  min-height: 165px;
+  margin-bottom: ${GEL_SPACING_QUAD};
+`;
+
+const StyledAudioPlayer = styled(AudioPlayer)`
+  width: calc(100% + ${GEL_SPACING_DBL});
+  margin: 0 -${GEL_SPACING};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    width: calc(100% + ${GEL_SPACING_QUAD});
+    margin: 0 -${GEL_SPACING_DBL};
   }
-};
-/* eslint-enable react/prop-types */
+`;
 
 const OnDemandRadioPage = ({ pageData }) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
@@ -92,8 +76,7 @@ const OnDemandRadioPage = ({ pageData }) => {
     shortSynopsis,
     masterBrand,
     episodeId,
-    episodeAvailableFrom,
-    episodeAvailableUntil,
+    episodeIsAvailable,
     releaseDateTimeStamp,
     imageUrl,
     promoBrandTitle,
@@ -101,8 +84,32 @@ const OnDemandRadioPage = ({ pageData }) => {
     thumbnailImageUrl,
   } = pageData;
 
-  const { dir } = useContext(ServiceContext);
+  const { isAmp } = useContext(RequestContext);
+  const location = useLocation();
+  const { dir, liveRadioOverrides, lang, service, translations } = useContext(
+    ServiceContext,
+  );
   const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
+
+  const mediaId = getMediaId({
+    assetId: episodeId,
+    masterBrand: getMasterbrand(masterBrand, liveRadioOverrides),
+    lang,
+    service,
+  });
+
+  const embedUrl = getEmbedUrl({
+    mediaId,
+    type: 'media',
+    isAmp,
+    queryString: location.search,
+  });
+
+  const expiredContentMessage = pathOr(
+    'This content is no longer available',
+    ['media', 'contentExpired'],
+    translations,
+  );
 
   return (
     <>
@@ -114,7 +121,6 @@ const OnDemandRadioPage = ({ pageData }) => {
         description={shortSynopsis}
         openGraphType="website"
       />
-
       <StyledGelPageGrid
         forwardedAs="main"
         role="main"
@@ -146,17 +152,37 @@ const OnDemandRadioPage = ({ pageData }) => {
               <EpisodeImage imageUrl={imageUrl} dir={dir} />
             </Grid>
           </StyledGelWrapperGrid>
-          {renderEpisode({
-            masterBrand,
-            episodeId,
-            episodeAvailableFrom,
-            episodeAvailableUntil,
-            promoBrandTitle,
-            shortSynopsis,
-            thumbnailImageUrl,
-            durationISO8601,
-            releaseDateTimeStamp,
-          })}
+          {episodeIsAvailable ? (
+            <StyledAudioPlayer
+              externalId={masterBrand}
+              id={episodeId}
+              embedUrl={embedUrl}
+            />
+          ) : (
+            <StyledMessageContainer>
+              <MediaMessage service={service} message={expiredContentMessage} />
+            </StyledMessageContainer>
+          )}
+
+          <LinkedData
+            type="WebPage"
+            seoTitle={headline}
+            entities={
+              episodeIsAvailable
+                ? [
+                    {
+                      '@type': 'AudioObject',
+                      name: promoBrandTitle,
+                      description: shortSynopsis,
+                      thumbnailUrl: thumbnailImageUrl,
+                      duration: durationISO8601,
+                      uploadDate: new Date(releaseDateTimeStamp).toISOString(),
+                      embedURL: embedUrl,
+                    },
+                  ]
+                : []
+            }
+          />
         </Grid>
       </StyledGelPageGrid>
     </>
@@ -169,8 +195,7 @@ OnDemandRadioPage.propTypes = {
     headline: string,
     summary: string,
     language: string,
-    episodeAvailableFrom: number,
-    episodeAvailableUntil: number,
+    episodeIsAvailable: bool,
     releaseDateTimeStamp: number,
     imageUrl: string,
   }).isRequired,

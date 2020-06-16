@@ -4,67 +4,25 @@ import { string, node } from 'prop-types';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
 import styled from 'styled-components';
-import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MAX,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
-  GEL_SPACING_QUIN,
-  GEL_MARGIN_BELOW_400PX,
-  GEL_MARGIN_ABOVE_400PX,
-} from '@bbc/gel-foundations/spacings';
-import SectionLabel from '@bbc/psammead-section-label';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
-import FrontPageSection from '#containers/FrontPageSection';
-import MetadataContainer from '#containers/Metadata';
-import MostReadContainer from '#containers/MostRead';
-import RadioScheduleContainer from '#containers/RadioSchedule';
-import AdContainer from '#containers/Ad';
+import { RequestContext } from '#contexts/RequestContext';
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import AdContainer from '#containers/Ad';
+import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
+import IndexPageSection from '#containers/IndexPageSection';
+import RadioScheduleContainer from '#containers/RadioSchedule';
+import MetadataContainer from '#containers/Metadata';
+import MostReadContainer from '#containers/MostRead';
+import MostReadSection from '#containers/MostRead/section';
+import MostReadSectionLabel from '#containers/MostRead/label';
+import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 
-export const StyledFrontPageDiv = styled.div`
-  /* To add GEL Margins */
-  margin: 0 ${GEL_MARGIN_BELOW_400PX};
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin: 0 ${GEL_MARGIN_ABOVE_400PX};
-  }
-
-  /* To add extra spacing */
-  padding-top: ${GEL_SPACING};
-  padding-bottom: ${GEL_SPACING_QUAD};
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding-top: ${GEL_SPACING_DBL};
-  }
-
-  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    padding-bottom: ${GEL_SPACING_TRPL};
-  }
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    padding-top: 0;
-  }
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-bottom: ${GEL_SPACING_QUIN};
-  }
-`;
-
-const MostReadSection = styled.section.attrs(() => ({
-  role: 'region',
-  'aria-labelledby': 'Most-Read',
-  'data-e2e': 'most-read',
-}))`
+const FrontPageMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
   margin: 0 auto;
   width: 100%; /* Needed for IE11 */
@@ -73,19 +31,36 @@ const MostReadSection = styled.section.attrs(() => ({
   }
 `;
 
+const MostReadWrapper = ({ children }) => (
+  <FrontPageMostReadSection>
+    <MostReadSectionLabel />
+    {children}
+  </FrontPageMostReadSection>
+);
+
+const renderMostRead = mostReadEndpointOverride => (
+  <MostReadContainer
+    mostReadEndpointOverride={mostReadEndpointOverride}
+    columnLayout="twoColumn"
+    wrapper={MostReadWrapper}
+  />
+);
+
+MostReadWrapper.propTypes = {
+  children: node.isRequired,
+};
+
 const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
+    ads,
     product,
     serviceLocalizedName,
     translations,
     frontPageTitle,
     radioSchedule,
-    service,
-    script,
-    dir,
-    mostRead: { header },
   } = useContext(ServiceContext);
 
+  const hasAds = path(['hasAds'], ads);
   const home = path(['home'], translations);
   const groups = path(['content', 'groups'], pageData);
   const lang = path(['metadata', 'language'], pageData);
@@ -94,6 +69,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const radioScheduleData = path(['radioScheduleData'], pageData);
   const radioScheduleOnPage = path(['onFrontPage'], radioSchedule);
   const radioSchedulePosition = path(['frontPagePosition'], radioSchedule);
+  const { isAmp } = useContext(RequestContext);
 
   // eslint-disable-next-line jsx-a11y/aria-role
   const offScreenText = (
@@ -106,34 +82,10 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const hasUsefulLinks =
     findIndex(group => group.type === 'useful-links')(groups) > -1;
 
-  const MostReadWrapper = ({ children }) => (
-    <MostReadSection>
-      <SectionLabel
-        script={script}
-        labelId="Most-Read"
-        service={service}
-        dir={dir}
-      >
-        {header}
-      </SectionLabel>
-      {children}
-    </MostReadSection>
-  );
-
-  MostReadWrapper.propTypes = {
-    children: node.isRequired,
-  };
-
-  const renderMostRead = () => (
-    <MostReadContainer
-      mostReadEndpointOverride={mostReadEndpointOverride}
-      columnLayout="twoColumn"
-      wrapper={MostReadWrapper}
-    />
-  );
-
   return (
     <>
+      {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
+      {hasAds && !isAmp && <CanonicalAdBootstrapJs />}
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
@@ -148,7 +100,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
           {offScreenText}
         </VisuallyHiddenText>
         <AdContainer />
-        <StyledFrontPageDiv>
+        <IndexPageContainer>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
               {group.type === 'useful-links' && renderMostRead()}
@@ -156,11 +108,11 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
                 radioSchedulePosition === group.semanticGroupName && (
                   <RadioScheduleContainer initialData={radioScheduleData} />
                 )}
-              <FrontPageSection group={group} sectionNumber={index} />
+              <IndexPageSection group={group} sectionNumber={index} />
             </Fragment>
           ))}
-          {!hasUsefulLinks && renderMostRead()}
-        </StyledFrontPageDiv>
+          {!hasUsefulLinks && renderMostRead(mostReadEndpointOverride)}
+        </IndexPageContainer>
       </main>
     </>
   );
