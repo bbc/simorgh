@@ -72,4 +72,10 @@ describe('getImageBlock', () => {
     };
     expect(getImageBlock('idt2', supportedInclude, isAmp)).toEqual(expected);
   });
+
+  it('should not generate image block when image data is not present on include block', () => {
+    delete supportedInclude.idt2;
+
+    expect(getImageBlock('idt2', supportedInclude)).toEqual(null);
+  });
 });
