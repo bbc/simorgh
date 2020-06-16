@@ -6,6 +6,7 @@ import {
   INCLUDE_MISSING_URL,
   INCLUDE_REQUEST_RECEIVED,
   INCLUDE_UNSUPPORTED,
+  INCLUDE_IFRAME_REQUEST_RECEIVED,
 } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
 import { addOverrideQuery } from '#app/routes/utils/overrideRendererOnTest';
@@ -56,9 +57,6 @@ const fetchMarkup = async url => {
       return null;
     }
     const html = await res.text();
-    logger.info(INCLUDE_REQUEST_RECEIVED, {
-      url,
-    });
     return html;
   } catch (error) {
     logger.error(INCLUDE_ERROR, {
@@ -83,10 +81,11 @@ const convertInclude = async (includeBlock, ...restParams) => {
 
   const { includeType, classification } = includeClassifier({ href, pathname });
 
-  if (
-    classification === 'not-supported' ||
-    classification === 'vj-include-not-supporting-amp'
-  ) {
+  const unsupportedClassifications = [
+    'not-supported',
+    'vj-include-not-supporting-amp',
+  ];
+  if (unsupportedClassifications.includes(classification)) {
     logger.info(INCLUDE_UNSUPPORTED, {
       type,
       classification,
@@ -99,10 +98,14 @@ const convertInclude = async (includeBlock, ...restParams) => {
   let html;
   if (classification === 'vj-include-supports-amp') {
     ampSrc = ampSrcBuilder(href);
-    logger.info(INCLUDE_REQUEST_RECEIVED, {
+    logger.info(INCLUDE_IFRAME_REQUEST_RECEIVED, {
       url: ampSrc,
     });
   } else {
+    const url = buildIncludeUrl(href, includeType, pathname);
+    logger.info(INCLUDE_REQUEST_RECEIVED, {
+      url,
+    });
     html = await fetchMarkup(buildIncludeUrl(href, includeType, pathname));
   }
 

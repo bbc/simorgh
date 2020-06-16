@@ -11,91 +11,27 @@ const canonicalPathname = 'https://www.bbc.com/service/foo';
 const ampPathname = 'https://www.bbc.com/service/foo.amp';
 
 describe('Include Classifier', () => {
-  it('should classifiy idt1 include as idt1 on canonical', () => {
-    const expected = { includeType: 'idt1', classification: 'idt1-canonical' };
+  it.each`
+    includeType | classification            | href
+    ${`idt1`}   | ${`idt1-canonical`}       | ${idt1Include}
+    ${`idt2`}   | ${`idt2-canonical`}       | ${idt2Include}
+    ${`vj`}     | ${`vj-include-canonical`} | ${vjIncludeSupportingAmp}
+  `(
+    'should classify $includeType as $classification on canonical',
+    ({ includeType, classification, href }) => {
+      const expected = {
+        includeType,
+        classification,
+      };
 
-    const actual = includeClassifier({
-      href: idt1Include,
-      pathname: canonicalPathname,
-    });
+      const actual = includeClassifier({
+        href,
+        pathname: canonicalPathname,
+      });
 
-    expect(actual).toEqual(expected);
-  });
-
-  it('should classifiy idt1 include as idt1 on amp', () => {
-    const expected = { includeType: 'idt1', classification: 'idt1-amp' };
-
-    const actual = includeClassifier({
-      href: idt1Include,
-      pathname: ampPathname,
-    });
-
-    expect(actual).toEqual(expected);
-  });
-
-  it('should classifiy idt2 include as idt2 on canonical', () => {
-    const expected = { includeType: 'idt2', classification: 'idt2-canonical' };
-
-    const actual = includeClassifier({
-      href: idt2Include,
-      pathname: canonicalPathname,
-    });
-
-    expect(actual).toEqual(expected);
-  });
-
-  it('should classifiy idt2 include as idt2 on amp', () => {
-    const expected = { includeType: 'idt2', classification: 'idt2-amp' };
-
-    const actual = includeClassifier({
-      href: idt2Include,
-      pathname: ampPathname,
-    });
-
-    expect(actual).toEqual(expected);
-  });
-
-  it('should classify VJ include supporting AMP on Amp platform', () => {
-    const expected = {
-      includeType: 'vj',
-      classification: 'vj-include-supports-amp',
-    };
-
-    const actual = includeClassifier({
-      href: vjIncludeSupportingAmp,
-      pathname: ampPathname,
-    });
-
-    expect(actual).toEqual(expected);
-  });
-
-  it('should classify VJ include not supporting AMP on Amp platform', () => {
-    const expected = {
-      includeType: 'vj',
-      classification: 'vj-include-not-supporting-amp',
-    };
-
-    const actual = includeClassifier({
-      href: vjIncludeNotSupportingAmp,
-      pathname: ampPathname,
-    });
-
-    expect(actual).toEqual(expected);
-  });
-
-  it('should classify VJ include supporting AMP on canonical platform', () => {
-    const expected = {
-      includeType: 'vj',
-      classification: 'vj-include-canonical',
-    };
-
-    const actual = includeClassifier({
-      href: vjIncludeSupportingAmp,
-      pathname: canonicalPathname,
-    });
-
-    expect(actual).toEqual(expected);
-  });
+      expect(actual).toEqual(expected);
+    },
+  );
 
   it('should classify VJ include not supporting AMP on canonical platform', () => {
     const expected = {
@@ -110,6 +46,29 @@ describe('Include Classifier', () => {
 
     expect(actual).toEqual(expected);
   });
+
+  it.each`
+    includeType | classification                     | href
+    ${`idt1`}   | ${`idt1-amp`}                      | ${idt1Include}
+    ${`idt2`}   | ${`idt2-amp`}                      | ${idt2Include}
+    ${`vj`}     | ${`vj-include-supports-amp`}       | ${vjIncludeSupportingAmp}
+    ${`vj`}     | ${`vj-include-not-supporting-amp`} | ${vjIncludeNotSupportingAmp}
+  `(
+    'should classify $includeType as $classification on amp',
+    ({ includeType, classification, href }) => {
+      const expected = {
+        includeType,
+        classification,
+      };
+
+      const actual = includeClassifier({
+        href,
+        pathname: ampPathname,
+      });
+
+      expect(actual).toEqual(expected);
+    },
+  );
 
   it('should classify a non-supported include as not supported on canonical', () => {
     const expected = { includeType: null, classification: 'not-supported' };
@@ -139,7 +98,7 @@ describe('Include Classifier', () => {
     ${`idt2`}   | ${`idt2-canonical`}       | ${`idt2/111-222-333-444-555`}
     ${`vj`}     | ${`vj-include-canonical`} | ${`include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png`}
   `(
-    'should classify a supported $includeType without a leading / in href',
+    'should classify a supported $includeType without a leading / in href on canonical',
     ({ includeType, classification, href }) => {
       const expected = {
         includeType,
@@ -149,6 +108,28 @@ describe('Include Classifier', () => {
       const actual = includeClassifier({
         href,
         pathname: canonicalPathname,
+      });
+
+      expect(actual).toEqual(expected);
+    },
+  );
+
+  it.each`
+    includeType | classification               | href
+    ${`idt1`}   | ${`idt1-amp`}                | ${`indepthtoolkit/quizzes/123-456`}
+    ${`idt2`}   | ${`idt2-amp`}                | ${`idt2/111-222-333-444-555`}
+    ${`vj`}     | ${`vj-include-supports-amp`} | ${`include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png`}
+  `(
+    'should classify a supported $includeType without a leading / in href on amp',
+    ({ includeType, classification, href }) => {
+      const expected = {
+        includeType,
+        classification,
+      };
+
+      const actual = includeClassifier({
+        href,
+        pathname: ampPathname,
       });
 
       expect(actual).toEqual(expected);

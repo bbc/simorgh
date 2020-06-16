@@ -102,7 +102,7 @@ describe('convertInclude', () => {
     });
   });
 
-  it('should fetch an convert an include block to a vj block', async () => {
+  it('should fetch and convert an include block to a vj block', async () => {
     fetch.mockResponse(() => Promise.resolve(vjMarkup));
     const input = {
       required: false,
