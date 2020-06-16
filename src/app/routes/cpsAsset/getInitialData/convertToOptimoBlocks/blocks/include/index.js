@@ -81,11 +81,7 @@ const convertInclude = async (includeBlock, ...restParams) => {
 
   const { includeType, classification } = includeClassifier({ href, pathname });
 
-  const unsupportedClassifications = [
-    'not-supported',
-    'vj-include-not-supporting-amp',
-  ];
-  if (unsupportedClassifications.includes(classification)) {
+  if (classification === 'not-supported') {
     logger.info(INCLUDE_UNSUPPORTED, {
       type,
       classification,

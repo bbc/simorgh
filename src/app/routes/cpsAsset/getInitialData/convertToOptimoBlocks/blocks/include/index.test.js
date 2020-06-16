@@ -7,6 +7,7 @@ import {
   INCLUDE_MISSING_URL,
   INCLUDE_REQUEST_RECEIVED,
   INCLUDE_UNSUPPORTED,
+  INCLUDE_IFRAME_REQUEST_RECEIVED,
 } from '#lib/logger.const';
 
 const vjMarkup = `<div>Visual Journalism Markup</div><script type="text/javascript" src="localhost/vj.js"></script>`;
@@ -169,7 +170,7 @@ describe('convertInclude', () => {
         timeout: 3000,
       },
     );
-    expect(loggerMock.info).not.toHaveBeenCalled();
+    expect(loggerMock.info).toHaveBeenCalledTimes(1);
     expect(loggerMock.error).toHaveBeenCalledTimes(1);
     expect(loggerMock.error).toBeCalledWith(INCLUDE_FETCH_ERROR, {
       status: 304,
@@ -303,7 +304,7 @@ describe('convertInclude', () => {
     const output = await convertInclude(input, null, null, canonicalPathname);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(output.model.html).toEqual(null);
-    expect(loggerMock.info).not.toHaveBeenCalled();
+    expect(loggerMock.info).toHaveBeenCalledTimes(1);
     expect(loggerMock.error).toHaveBeenCalledTimes(1);
     expect(loggerMock.error).toHaveBeenCalledWith(INCLUDE_ERROR, {
       error: 'Error: this is an error message',
@@ -338,10 +339,13 @@ describe('convertInclude', () => {
     expect(fetch).not.toHaveBeenCalled();
     expect(loggerMock.error).not.toHaveBeenCalled();
     expect(loggerMock.info).toHaveBeenCalledTimes(1);
-    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
-      url:
-        'https://news.files.bbci.co.uk/include/newsspec/21841-green-diet/gahuza/app/amp?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
-    });
+    expect(loggerMock.info).toHaveBeenCalledWith(
+      INCLUDE_IFRAME_REQUEST_RECEIVED,
+      {
+        url:
+          'https://news.files.bbci.co.uk/include/newsspec/21841-green-diet/gahuza/app/amp?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+      },
+    );
     expect(actual).toEqual(expected);
   });
 
@@ -362,7 +366,7 @@ describe('convertInclude', () => {
     expect(loggerMock.info).toHaveBeenCalledTimes(1);
     expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_UNSUPPORTED, {
       type: 'news/special',
-      classification: 'vj-include-not-supporting-amp',
+      classification: 'not-supported',
       url:
         '/news/special/2016/newsspec_14813/content/iframe/gahuza/us-gop.inc?responsive=true&app-clickable=true&app-image=http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/11/09/161109092836_us_election_2nddaymaps_winner_ws_62_v3.png',
     });
