@@ -8,11 +8,12 @@ const IncludeGrid = styled(GridItemConstrainedMedium)`
   display: grid;
 `;
 
-const Idt2Amp = ({ imageBlock }) => (
-  <IncludeGrid>
-    <AmpImg fallback={false} {...imageBlock} />
-  </IncludeGrid>
-);
+const Idt2Amp = ({ imageBlock }) =>
+  imageBlock ? (
+    <IncludeGrid>
+      <AmpImg fallback={false} {...imageBlock} />
+    </IncludeGrid>
+  ) : null;
 
 Idt2Amp.propTypes = {
   imageBlock: shape({
