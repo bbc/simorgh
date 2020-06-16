@@ -36,6 +36,8 @@
     "test:unit:watch": "npm run test:unit -- --watch",
     "test:integration": "node src/integration/utils/runTests/index.js",
     "test:integration:ci": "JEST_SILENT_REPORTER_DOTS=true npm run test:integration -- --ci --reporters=jest-silent-reporter",
+    "test:linkey": "node scripts/linkeySetup.js && jest src/app/lib/config/services/*.test.js --verbose true; npm run test:linkey:cleanup",
+    "test:linkey:cleanup": "find src/app/lib/config/services -type f -name '*.test.js' -delete",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
     "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --env.config='server'"
   },
@@ -200,6 +202,7 @@
     "minimist": "^1.2.5",
     "mocha": "^7.2.0",
     "mocha-junit-reporter": "^2.0.0",
+    "node-fetch": "^2.6.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "prop-types": "^15.7.2",
