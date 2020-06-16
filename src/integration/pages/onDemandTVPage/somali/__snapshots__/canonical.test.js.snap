@@ -8,9 +8,39 @@ exports[`Canonical On Demand T V Page Footer I can click on the BBC branding and
 
 exports[`Canonical On Demand T V Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda."`;
 
+exports[`Canonical On Demand T V Page Footer Link should match text and url 1`] = `"BBC News, Somali - /somali"`;
+
+exports[`Canonical On Demand T V Page Footer Link should match text and url 2`] = `"Sababta aad ku aamini kartid BBC News - https://www.bbc.com/somali/hayadeed-49283375"`;
+
+exports[`Canonical On Demand T V Page Footer Link should match text and url 3`] = `"Shuruucda isticmaalka - https://www.bbc.com/somali/hayadeed-37098011"`;
+
+exports[`Canonical On Demand T V Page Footer Link should match text and url 4`] = `"Ku saabsan BBC - https://www.bbc.com/somali/hayadeed-37098081"`;
+
+exports[`Canonical On Demand T V Page Footer Link should match text and url 5`] = `"Shuruucda xogta gaarka ah - https://www.bbc.com/somali/hayadeed-37098082"`;
+
+exports[`Canonical On Demand T V Page Footer Link should match text and url 6`] = `"Cookies - https://www.bbc.com/usingthebbc/cookies/"`;
+
+exports[`Canonical On Demand T V Page Footer Link should match text and url 7`] = `"La xiriir BBC - https://www.bbc.com/somali/hayadeed-37098613"`;
+
+exports[`Canonical On Demand T V Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Canonical On Demand T V Page Footer Link should match text and url 9`] = `"Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda. - https://www.bbc.co.uk/help/web/links/"`;
+
 exports[`Canonical On Demand T V Page Header I can see the branding 1`] = `"BBC News, Somali"`;
 
-exports[`Canonical On Demand T V Page Header I can see the navigation 1`] = `"War"`;
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 1`] = `"War - /somali"`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 2`] = `"Warar dheeraad ah - /somali/war"`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 3`] = `"Ganacsi - /somali/topics/2f2db234-3c2d-40a4-b4ac-eea661faadd0"`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 4`] = `"Cayaaraha - /somali/cayaaraha"`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 5`] = `"Aqoon Guud - /somali/aqoon_guud"`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 6`] = `"Muuqaal - /somali/media/video"`;
+
+exports[`Canonical On Demand T V Page Header Navigation link should match text and url 7`] = `"Barnaamijyada Idaacadda - /somali/ka_qayb_gal/programmes"`;
 
 exports[`Canonical On Demand T V Page I can see the brand title 1`] = `"Caawa Iyo Caalamka"`;
 
@@ -34,7 +64,7 @@ exports[`Canonical On Demand T V Page SEO Heading level 1 1`] = `"Caawa Iyo Caal
 
 exports[`Canonical On Demand T V Page SEO Lang attribute 1`] = `"so"`;
 
-exports[`Canonical On Demand T V Page SEO Linked data 1`] = `
+exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
   "@graph": Array [
