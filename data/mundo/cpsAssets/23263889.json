@@ -398,7 +398,29 @@
         "tile": "IDT2 Include",
         "href": "/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6",
         "platform": "highweb",
-        "type": "include"
+        "type": "include",
+        "idt2": {
+          "altText": "عنوان الجدول. عنوان الجدول.  عنوان الجدول.",
+          "dimensions": {
+            "small": {
+              "href": "/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/350",
+              "width": 700,
+              "height": 1864
+            },
+            "medium": {
+              "href": "/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/470",
+              "width": 940,
+              "height": 1864
+            },
+            "large": {
+              "href": "/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/816",
+              "width": 1632,
+              "height": 1864
+            }
+          },
+          "copyrightHolder": "Source: BBC",
+          "published": 1550229370779
+        }
       },
       {
         "text": "Includes: IDT1: A quiz!",
