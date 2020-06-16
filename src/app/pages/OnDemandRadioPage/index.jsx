@@ -1,9 +1,19 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { shape, string, number, bool } from 'prop-types';
-import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
+} from '@bbc/gel-foundations/spacings';
+import { MediaMessage } from '@bbc/psammead-media-player';
+import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 import { useLocation } from 'react-router-dom';
+import pathOr from 'ramda/src/pathOr';
 import MetadataContainer from '../../containers/Metadata';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
@@ -12,7 +22,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
-import AudioPlayerBlock from '#containers/RadioPageBlocks/Blocks/AudioPlayer';
+import AudioPlayer from '#containers/AudioPlayer';
 import EpisodeImage from '#containers/RadioPageBlocks/Blocks/OnDemandImage';
 import LinkedData from '#containers/LinkedData';
 import getMediaId from '#lib/utilities/getMediaId';
@@ -41,6 +51,21 @@ const StyledGelWrapperGrid = styled(GelPageGrid)`
   }
 `;
 
+const StyledMessageContainer = styled.div`
+  position: relative;
+  min-height: 165px;
+  margin-bottom: ${GEL_SPACING_QUAD};
+`;
+
+const StyledAudioPlayer = styled(AudioPlayer)`
+  width: calc(100% + ${GEL_SPACING_DBL});
+  margin: 0 -${GEL_SPACING};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    width: calc(100% + ${GEL_SPACING_QUAD});
+    margin: 0 -${GEL_SPACING_DBL};
+  }
+`;
+
 const OnDemandRadioPage = ({ pageData }) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
   const {
@@ -61,7 +86,9 @@ const OnDemandRadioPage = ({ pageData }) => {
 
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
-  const { dir, liveRadioOverrides, lang, service } = useContext(ServiceContext);
+  const { dir, liveRadioOverrides, lang, service, translations } = useContext(
+    ServiceContext,
+  );
   const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
 
   const mediaId = getMediaId({
@@ -77,6 +104,12 @@ const OnDemandRadioPage = ({ pageData }) => {
     isAmp,
     queryString: location.search,
   });
+
+  const expiredContentMessage = pathOr(
+    'This content is no longer available',
+    ['media', 'contentExpired'],
+    translations,
+  );
 
   return (
     <>
@@ -119,12 +152,18 @@ const OnDemandRadioPage = ({ pageData }) => {
               <EpisodeImage imageUrl={imageUrl} dir={dir} />
             </Grid>
           </StyledGelWrapperGrid>
-          <AudioPlayerBlock
-            externalId={masterBrand}
-            id={episodeId}
-            embedUrl={embedUrl}
-            episodeIsAvailable={episodeIsAvailable}
-          />
+          {episodeIsAvailable ? (
+            <StyledAudioPlayer
+              externalId={masterBrand}
+              id={episodeId}
+              embedUrl={embedUrl}
+            />
+          ) : (
+            <StyledMessageContainer>
+              <MediaMessage service={service} message={expiredContentMessage} />
+            </StyledMessageContainer>
+          )}
+
           <LinkedData
             type="WebPage"
             seoTitle={headline}

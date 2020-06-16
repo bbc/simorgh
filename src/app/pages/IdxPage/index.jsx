@@ -12,7 +12,7 @@ import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import RadioScheduleContainer from '#containers/RadioSchedule';
-import FrontPageSection from '#containers/FrontPageSection';
+import IndexPageSection from '#containers/IndexPageSection';
 import idxPageDataPropTypes from '#models/propTypes/idxPage';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
@@ -91,7 +91,7 @@ const IdxPage = ({
                     }
                   />
                 )}
-              <FrontPageSection group={group} sectionNumber={index} />
+              <IndexPageSection group={group} sectionNumber={index} />
             </Fragment>
           ))}
           {onIdxPage && renderMostRead(mostReadEndpointOverride)}

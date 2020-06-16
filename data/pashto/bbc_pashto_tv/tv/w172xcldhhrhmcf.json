@@ -8,23 +8,24 @@
     "type": "WSTV",
     "createdBy": "bbc_pashto_tv",
     "language": "ps",
-    "lastUpdated": 1589807791441,
+    "lastUpdated": 1591787694237,
     "firstPublished": 1589725549000,
     "lastPublished": 1589725549000,
     "timestamp": 1589725549000,
     "options": {},
     "analyticsLabels": {
       "pageTitle": "نړۍ دا وخت - BBC News پښتو",
-      "pageIdentifier": "pashto.bbc_pashto_tv.w172xcldhhrhmcf.page",
+      "pageIdentifier": "pashto.bbc_pashto_tv.tv.w172xcldhhrhmcf.page",
       "producerId": "68",
       "contentType": "player-episode",
       "producer": "PASHTO"
     },
     "tags": {},
-    "version": "v1.3.0",
+    "version": "v1.3.2",
     "blockTypes": ["media"],
     "title": "نړۍ دا وخت",
-    "releaseDateTimeStamp": 1590624000000
+    "releaseDateTimeStamp": 1590624000000,
+    "atiAnalytics": {}
   },
   "content": {
     "blocks": [
@@ -40,22 +41,7 @@
         "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
         "embedding": false,
         "advertising": false,
-        "versions": [
-          {
-            "versionId": "w1mshjgn8mp0292",
-            "types": ["Original"],
-            "duration": 1440,
-            "durationISO8601": "PT24M",
-            "warnings": {},
-            "availableTerritories": {
-              "uk": false,
-              "nonUk": false,
-              "world": true
-            },
-            "availableUntil": 1591278840000,
-            "availableFrom": 1590674040000
-          }
-        ],
+        "versions": [],
         "type": "media"
       }
     ]
@@ -80,22 +66,7 @@
       "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
       "embedding": false,
       "advertising": false,
-      "versions": [
-        {
-          "versionId": "w1mshjgn8mp0292",
-          "types": ["Original"],
-          "duration": 1440,
-          "durationISO8601": "PT24M",
-          "warnings": {},
-          "availableTerritories": {
-            "uk": false,
-            "nonUk": false,
-            "world": true
-          },
-          "availableUntil": 1591278840000,
-          "availableFrom": 1590674040000
-        }
-      ],
+      "versions": [],
       "type": "media"
     },
     "indexImage": {
@@ -132,14 +103,14 @@
               "headline": "نړۍ دا وخت"
             },
             "locators": {
-              "pid": "w172xcldhhrlj8j",
+              "pid": "w172xclf71cw3rx",
               "brandPid": "w13xttn4"
             },
             "media": {
-              "id": "w172xcldhhrlj8j",
+              "id": "w172xclf71cw3rx",
               "subType": "episode",
               "format": "Video",
-              "title": "29/05/2020 GMT",
+              "title": "09/06/2020 GMT",
               "synopses": {
                 "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
                 "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
@@ -149,18 +120,18 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjgn8mp2z65",
+                  "versionId": "w1mshjgp059ckpk",
                   "types": ["Original"],
-                  "duration": 1440,
-                  "durationISO8601": "PT24M",
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
                   "warnings": {},
                   "availableTerritories": {
                     "uk": false,
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591364700000,
-                  "availableFrom": 1590759900000
+                  "availableUntil": 1592315760000,
+                  "availableFrom": 1591710960000
                 }
               ],
               "type": "media"
@@ -180,7 +151,7 @@
               "pid": "w13xttn4",
               "title": "نړۍ دا وخت"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcldhhrlj8j",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xclf71cw3rx",
             "type": "ws_tv"
           },
           {
@@ -188,14 +159,14 @@
               "headline": "نړۍ دا وخت"
             },
             "locators": {
-              "pid": "w172xcldhhrdqgb",
+              "pid": "w172xclf71cs6vt",
               "brandPid": "w13xttn4"
             },
             "media": {
-              "id": "w172xcldhhrdqgb",
+              "id": "w172xclf71cs6vt",
               "subType": "episode",
               "format": "Video",
-              "title": "27/05/2020 GMT",
+              "title": "08/06/2020 GMT",
               "synopses": {
                 "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
                 "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
@@ -205,18 +176,18 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjgn8mnx5cz",
+                  "versionId": "w1mshjgp0598nsg",
                   "types": ["Original"],
-                  "duration": 1440,
-                  "durationISO8601": "PT24M",
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
                   "warnings": {},
                   "availableTerritories": {
                     "uk": false,
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591191900000,
-                  "availableFrom": 1590587100000
+                  "availableUntil": 1592229360000,
+                  "availableFrom": 1591624560000
                 }
               ],
               "type": "media"
@@ -236,7 +207,7 @@
               "pid": "w13xttn4",
               "title": "نړۍ دا وخت"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcldhhrdqgb",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xclf71cs6vt",
             "type": "ws_tv"
           },
           {
@@ -244,14 +215,14 @@
               "headline": "نړۍ دا وخت"
             },
             "locators": {
-              "pid": "w172xcldhhr9tk7",
+              "pid": "w172xcldvs2kgpk",
               "brandPid": "w13xttn4"
             },
             "media": {
-              "id": "w172xcldhhr9tk7",
+              "id": "w172xcldvs2kgpk",
               "subType": "episode",
               "format": "Video",
-              "title": "26/05/2020 GMT",
+              "title": "07/06/2020 GMT",
               "synopses": {
                 "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
                 "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
@@ -261,18 +232,18 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjgn8mnt8gw",
+                  "versionId": "w1mshjgnmx01xm6",
                   "types": ["Original"],
-                  "duration": 1440,
-                  "durationISO8601": "PT24M",
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
                   "warnings": {},
                   "availableTerritories": {
                     "uk": false,
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591105500000,
-                  "availableFrom": 1590500700000
+                  "availableUntil": 1592142960000,
+                  "availableFrom": 1591538160000
                 }
               ],
               "type": "media"
@@ -292,7 +263,7 @@
               "pid": "w13xttn4",
               "title": "نړۍ دا وخت"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcldhhr9tk7",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcldvs2kgpk",
             "type": "ws_tv"
           },
           {
@@ -300,14 +271,14 @@
               "headline": "نړۍ دا وخت"
             },
             "locators": {
-              "pid": "w172xcldhhr6xn4",
+              "pid": "w172xcldvs2gksg",
               "brandPid": "w13xttn4"
             },
             "media": {
-              "id": "w172xcldhhr6xn4",
+              "id": "w172xcldvs2gksg",
               "subType": "episode",
               "format": "Video",
-              "title": "25/05/2020 GMT",
+              "title": "06/06/2020 GMT",
               "synopses": {
                 "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
                 "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
@@ -317,18 +288,18 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjgn8mnqcks",
+                  "versionId": "w1mshjgnmwzz0q3",
                   "types": ["Original"],
-                  "duration": 1440,
-                  "durationISO8601": "PT24M",
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
                   "warnings": {},
                   "availableTerritories": {
                     "uk": false,
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591019100000,
-                  "availableFrom": 1590414300000
+                  "availableUntil": 1592056560000,
+                  "availableFrom": 1591451760000
                 }
               ],
               "type": "media"
@@ -348,7 +319,175 @@
               "pid": "w13xttn4",
               "title": "نړۍ دا وخت"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcldhhr6xn4",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcldvs2gksg",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "نړۍ دا وخت"
+            },
+            "locators": {
+              "pid": "w172xcldvs2cnwc",
+              "brandPid": "w13xttn4"
+            },
+            "media": {
+              "id": "w172xcldvs2cnwc",
+              "subType": "episode",
+              "format": "Video",
+              "title": "05/06/2020 GMT",
+              "synopses": {
+                "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
+                "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjgnmwzw3t0",
+                  "types": ["Original"],
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1591970160000,
+                  "availableFrom": 1591365360000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "w13xttn4",
+              "title": "نړۍ دا وخت"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcldvs2cnwc",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "نړۍ دا وخت"
+            },
+            "locators": {
+              "pid": "w172xcldvs28rz8",
+              "brandPid": "w13xttn4"
+            },
+            "media": {
+              "id": "w172xcldvs28rz8",
+              "subType": "episode",
+              "format": "Video",
+              "title": "04/06/2020 GMT",
+              "synopses": {
+                "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
+                "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjgnmwzs6wx",
+                  "types": ["Original"],
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1591883760000,
+                  "availableFrom": 1591278960000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "w13xttn4",
+              "title": "نړۍ دا وخت"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcldvs28rz8",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "نړۍ دا وخت"
+            },
+            "locators": {
+              "pid": "w172xcldvs25w25",
+              "brandPid": "w13xttn4"
+            },
+            "media": {
+              "id": "w172xcldvs25w25",
+              "subType": "episode",
+              "format": "Video",
+              "title": "03/06/2020 GMT",
+              "synopses": {
+                "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
+                "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjgnmwzp9zt",
+                  "types": ["Original"],
+                  "duration": 1560,
+                  "durationISO8601": "PT26M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1591797360000,
+                  "availableFrom": 1591192560000
+                }
+              ],
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "brand": {
+              "pid": "w13xttn4",
+              "title": "نړۍ دا وخت"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172xcldvs25w25",
             "type": "ws_tv"
           },
           {
@@ -404,116 +543,6 @@
               "title": "نړۍ دا وخت"
             },
             "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172wc8vxz7xc13",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": {
-              "headline": "نړۍ دا وخت"
-            },
-            "locators": {
-              "pid": "w172vzpc72khqwd",
-              "brandPid": "w13xttn4"
-            },
-            "media": {
-              "id": "w172vzpc72khqwd",
-              "subType": "episode",
-              "format": "Video",
-              "title": "08/03/2018 GMT",
-              "synopses": {
-                "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
-                "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msg2jsjmh1w6v",
-                  "types": ["Original"],
-                  "duration": 1620,
-                  "durationISO8601": "PT27M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableFrom": 1508976000000
-                }
-              ],
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "brand": {
-              "pid": "w13xttn4",
-              "title": "نړۍ دا وخت"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172vzpc72khqwd",
-            "type": "ws_tv"
-          },
-          {
-            "headlines": {
-              "headline": "نړۍ دا وخت"
-            },
-            "locators": {
-              "pid": "w172vzpbhjxyfnq",
-              "brandPid": "w13xttn4"
-            },
-            "media": {
-              "id": "w172vzpbhjxyfnq",
-              "subType": "episode",
-              "format": "Video",
-              "title": "22/02/2018 GMT",
-              "synopses": {
-                "short": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.",
-                "medium": "د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "embedding": false,
-              "advertising": false,
-              "versions": [
-                {
-                  "versionId": "w1msg2jrt2vhl05",
-                  "types": ["Original"],
-                  "duration": 1620,
-                  "durationISO8601": "PT27M",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": false,
-                    "nonUk": false,
-                    "world": true
-                  },
-                  "availableFrom": 1508976000000
-                }
-              ],
-              "type": "media"
-            },
-            "indexImage": {
-              "id": "",
-              "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
-              "height": 0,
-              "width": 0,
-              "altText": null,
-              "copyrightHolder": null,
-              "type": "image"
-            },
-            "brand": {
-              "pid": "w13xttn4",
-              "title": "نړۍ دا وخت"
-            },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_tv/w172vzpbhjxyfnq",
             "type": "ws_tv"
           }
         ]
