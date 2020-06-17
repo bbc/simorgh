@@ -32,6 +32,6 @@ export const setPreferredVariantCookie = (service, variant) => {
     name: variantCookieName,
     value: variant,
     expires: COOKIE_EXPIRY,
-    sameSite: 'Strict',
+    sameSite: 'Lax',
   });
 };
