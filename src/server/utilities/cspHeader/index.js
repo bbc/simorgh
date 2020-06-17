@@ -374,6 +374,7 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'report-to': 'default',
     'upgrade-insecure-requests': true,
   },
+  browserSniff: false,
 });
 
 const injectCspHeader = (req, res, next) => {
