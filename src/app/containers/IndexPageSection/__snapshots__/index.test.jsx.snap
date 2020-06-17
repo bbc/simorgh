@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FrontPageSection Container snapshots should render correctly for canonical 1`] = `
+exports[`IndexPageSection Container snapshots should render correctly for canonical 1`] = `
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -36,7 +36,6 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #222222;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -58,6 +57,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 .c1 {
   position: relative;
   z-index: 0;
+  color: #3F3F42;
   margin-top: 2rem;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -1010,7 +1010,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
 </section>
 `;
 
-exports[`FrontPageSection Container snapshots should render correctly with a linking strapline 1`] = `
+exports[`IndexPageSection Container snapshots should render correctly with a linking strapline 1`] = `
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1046,7 +1046,6 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #222222;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -1068,6 +1067,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 .c1 {
   position: relative;
   z-index: 0;
+  color: #3F3F42;
   margin-top: 2rem;
 }
 
@@ -1799,7 +1799,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
 </section>
 `;
 
-exports[`FrontPageSection Container snapshots should render with only one item 1`] = `
+exports[`IndexPageSection Container snapshots should render with only one item 1`] = `
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1835,7 +1835,6 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #222222;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -1857,6 +1856,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
 .c1 {
   position: relative;
   z-index: 0;
+  color: #3F3F42;
   margin-top: 2rem;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -2261,7 +2261,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
 </section>
 `;
 
-exports[`FrontPageSection Container snapshots should render without a bar 1`] = `
+exports[`IndexPageSection Container snapshots should render without a bar 1`] = `
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2297,7 +2297,6 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #222222;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -2314,6 +2313,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
 .c1 {
   position: relative;
   z-index: 0;
+  color: #3F3F42;
   margin-top: 2rem;
 }
 

@@ -53,11 +53,11 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                 >
                   <section
                     aria-labelledby="Top-stories"
-                    class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+                    class="StyledSection-sc-1x9qbiu-0 hNdEyC"
                     role="region"
                   >
                     <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 chnGCx"
+                      class="SectionLabelWrapper-sc-1x4gwjz-1 doOlE"
                     >
                       <div
                         class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -72,7 +72,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                             class="FlexRow-wx5kdp-2 dVBNyZ"
                           >
                             <span
-                              class="Title-wx5kdp-4 BeqZV"
+                              class="Title-wx5kdp-4 cERxQI"
                               dir="ltr"
                               id="Top-stories"
                             >
@@ -83,7 +83,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       </h2>
                     </div>
                     <div
-                      class="FirstSectionTopMargin-sc-1t555e8-1 gTFeDc"
+                      class="FirstSectionTopMargin-sc-1x9qbiu-1 jIhlPO"
                     >
                       <div
                         class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
@@ -192,11 +192,11 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                   </section>
                   <section
                     aria-labelledby="Frequency-info"
-                    class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+                    class="StyledSection-sc-1x9qbiu-0 hNdEyC"
                     role="region"
                   >
                     <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
+                      class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
                     >
                       <div
                         class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -211,7 +211,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                             class="FlexRow-wx5kdp-2 dVBNyZ"
                           >
                             <span
-                              class="Title-wx5kdp-4 BeqZV"
+                              class="Title-wx5kdp-4 cERxQI"
                               dir="ltr"
                               id="Frequency-info"
                             >
@@ -812,11 +812,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                 >
                   <section
                     aria-labelledby="Top-stories"
-                    class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+                    class="StyledSection-sc-1x9qbiu-0 hNdEyC"
                     role="region"
                   >
                     <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 chnGCx"
+                      class="SectionLabelWrapper-sc-1x4gwjz-1 doOlE"
                     >
                       <div
                         class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -831,7 +831,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="FlexRow-wx5kdp-2 dVBNyZ"
                           >
                             <span
-                              class="Title-wx5kdp-4 BeqZV"
+                              class="Title-wx5kdp-4 cERxQI"
                               dir="ltr"
                               id="Top-stories"
                             >
@@ -842,7 +842,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       </h2>
                     </div>
                     <div
-                      class="FirstSectionTopMargin-sc-1t555e8-1 gTFeDc"
+                      class="FirstSectionTopMargin-sc-1x9qbiu-1 jIhlPO"
                     >
                       <div
                         class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
@@ -951,11 +951,11 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </section>
                   <section
                     aria-labelledby="Frequency-info"
-                    class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+                    class="StyledSection-sc-1x9qbiu-0 hNdEyC"
                     role="region"
                   >
                     <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
+                      class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
                     >
                       <div
                         class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -970,7 +970,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="FlexRow-wx5kdp-2 dVBNyZ"
                           >
                             <span
-                              class="Title-wx5kdp-4 BeqZV"
+                              class="Title-wx5kdp-4 cERxQI"
                               dir="ltr"
                               id="Frequency-info"
                             >
@@ -1476,7 +1476,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                     role="region"
                   >
                     <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
+                      class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
                     >
                       <div
                         class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -1491,7 +1491,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="FlexRow-wx5kdp-2 dVBNyZ"
                           >
                             <span
-                              class="Title-wx5kdp-4 BeqZV"
+                              class="Title-wx5kdp-4 cERxQI"
                               dir="ltr"
                               id="Most-Read"
                             >
