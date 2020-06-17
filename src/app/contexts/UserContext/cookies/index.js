@@ -26,8 +26,9 @@ export const setPreferredVariantCookie = (service, variant) => {
   const variantCookieName = `ckps_${getVariantCookieName(service)}`;
   const COOKIE_EXPIRY = 7;
 
-  // Setting variant cookie to have sameSite=Strict because the purpose of this
-  // cookie is to only be used in a first-party context
+  // Setting variant cookie to have sameSite=Lax because the purpose of this
+  // cookie is to only be used in a first-party context and update the page on
+  // the user's initial load when arrived from external source.
   setCookie({
     name: variantCookieName,
     value: variant,
