@@ -1482,23 +1482,30 @@ module.exports = () => ({
       },
       liveRadio: { environments: undefined, smoke: false },
       onDemandRadio: {
+        environments: undefined,
+        smoke: false,
+      },
+      onDemandTV: {
         environments: {
           live: {
-            paths: [],
+            paths: [
+              '/gujarati/bbc_gujarati_tv/tv_programmes/w13xttqr', // Brand
+            ],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: [
+              '/gujarati/bbc_gujarati_tv/tv_programmes/w13xttqr', // Brand
+            ],
             enabled: false,
           },
           local: {
             paths: [],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
