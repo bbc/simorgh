@@ -261,19 +261,19 @@ module.exports = () => ({
         environments: {
           live: {
             paths: [
-              '/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
+              '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
             ],
             enabled: false,
           },
           test: {
             paths: [
-              '/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
+              '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
             ],
             enabled: false,
           },
           local: {
             paths: [
-              '/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
+              '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
             ],
             enabled: false,
           },
