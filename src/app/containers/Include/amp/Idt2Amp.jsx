@@ -11,7 +11,7 @@ const IncludeGrid = styled(GridItemConstrainedMedium)`
 const Idt2Amp = ({ imageBlock }) =>
   imageBlock ? (
     <IncludeGrid>
-      <AmpImg fallback={false} {...imageBlock} />
+      <AmpImg {...imageBlock} />
     </IncludeGrid>
   ) : null;
 
