@@ -12,45 +12,27 @@ const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${pr
 
 const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 
-const LIVE_RADIO_ASSET_ID = 'liveradio';
-
-const isLiveRadio = assetId => assetId === LIVE_RADIO_ASSET_ID;
-
-const getMediaInfo = assetId => ({
-  title: isLiveRadio(assetId) ? 'Live radio' : 'On-demand radio',
-  type: 'audio',
-});
-
-const getMasterBrand = (masterBrand, liveRadioIdOverrides) =>
-  pathOr(masterBrand, ['masterBrand', masterBrand], liveRadioIdOverrides);
-
 const AudioPlayer = ({
-  externalId: _masterBrand,
-  id: assetId,
+  assetId,
   idAttr,
   embedUrl,
+  title,
+  type,
+  iframeTitle,
   className,
 }) => {
-  const { liveRadioOverrides, translations, service } = useContext(
-    ServiceContext,
-  );
-  const masterBrand = getMasterBrand(_masterBrand, liveRadioOverrides);
+  const { translations, service } = useContext(ServiceContext);
+
   const { isAmp, platform } = useContext(RequestContext);
   const isValidPlatform = ['amp', 'canonical'].includes(platform);
-  const mediaInfo = getMediaInfo(assetId);
+  const mediaInfo = { title, type };
   const noJsMessage = pathOr(
     `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`,
     ['media', 'noJs'],
     translations,
   );
 
-  if (!isValidPlatform || !masterBrand || !assetId) return null; // potential for logging here
-
-  const iframeTitle = pathOr(
-    'Media player',
-    ['mediaAssetPage', 'audioPlayer'],
-    translations,
-  );
+  if (!isValidPlatform || !assetId) return null;
 
   return (
     <div className={className}>
@@ -82,18 +64,22 @@ const AudioPlayer = ({
 };
 
 AudioPlayer.propTypes = {
-  externalId: string,
-  id: string,
+  assetId: string,
   idAttr: string,
   embedUrl: string,
+  type: string,
+  title: string,
   className: string,
+  iframeTitle: string,
 };
 
 AudioPlayer.defaultProps = {
-  externalId: '',
-  id: '',
+  assetId: '',
   idAttr: null,
+  type: '',
+  title: '',
   embedUrl: '',
+  iframeTitle: '',
   className: '',
 };
 

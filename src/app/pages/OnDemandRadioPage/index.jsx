@@ -66,6 +66,9 @@ const StyledAudioPlayer = styled(AudioPlayer)`
   }
 `;
 
+const type = 'audio';
+const title = 'On-demand radio';
+
 const OnDemandRadioPage = ({ pageData }) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
   const {
@@ -108,6 +111,12 @@ const OnDemandRadioPage = ({ pageData }) => {
   const expiredContentMessage = pathOr(
     'This content is no longer available',
     ['media', 'contentExpired'],
+    translations,
+  );
+
+  const iframeTitle = pathOr(
+    'Media player',
+    ['mediaAssetPage', 'audioPlayer'],
     translations,
   );
 
@@ -154,9 +163,11 @@ const OnDemandRadioPage = ({ pageData }) => {
           </StyledGelWrapperGrid>
           {episodeIsAvailable ? (
             <StyledAudioPlayer
-              externalId={masterBrand}
-              id={episodeId}
+              assetId={episodeId}
               embedUrl={embedUrl}
+              iframeTitle={iframeTitle}
+              title={title}
+              type={type}
             />
           ) : (
             <StyledMessageContainer>

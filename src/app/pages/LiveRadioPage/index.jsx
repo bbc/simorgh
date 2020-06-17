@@ -8,6 +8,7 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { Headline } from '@bbc/psammead-headings';
+import pathOr from 'ramda/src/pathOr';
 import Paragraph from '@bbc/psammead-paragraph';
 import { useLocation } from 'react-router-dom';
 import ATIAnalytics from '../../containers/ATIAnalytics';
@@ -36,6 +37,9 @@ const StyledAudioPlayer = styled(AudioPlayer)`
   }
 `;
 
+const type = 'audio';
+const title = 'Live radio';
+
 const LiveRadioPage = ({ pageData }) => {
   const {
     language,
@@ -48,7 +52,7 @@ const LiveRadioPage = ({ pageData }) => {
   const { script, service, dir, lang, liveRadioOverrides } = useContext(
     ServiceContext,
   );
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, translations } = useContext(RequestContext);
   const location = useLocation();
   const assetId = 'liveradio';
   const mediaId = getMediaId({
@@ -63,6 +67,12 @@ const LiveRadioPage = ({ pageData }) => {
     isAmp,
     queryString: location.search,
   });
+
+  const iframeTitle = pathOr(
+    'Media player',
+    ['mediaAssetPage', 'audioPlayer'],
+    translations,
+  );
 
   return (
     <>
@@ -123,9 +133,11 @@ const LiveRadioPage = ({ pageData }) => {
             {bodySummary}
           </Paragraph>
           <StyledAudioPlayer
-            externalId={masterBrand}
-            id={assetId}
+            assetId={assetId}
             embedUrl={embedUrl}
+            iframeTitle={iframeTitle}
+            title={title}
+            type={type}
           />
         </Grid>
       </StyledGelPageGrid>
