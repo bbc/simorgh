@@ -1431,7 +1431,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
         role="region"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu"
+          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
         >
           <div
             class="Bar-sc-1x4gwjz-0 kXOyLn"
@@ -1446,7 +1446,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                 class="FlexRow-wx5kdp-2 dVBNyZ"
               >
                 <span
-                  class="Title-wx5kdp-4 htLcbq"
+                  class="Title-wx5kdp-4 jJpioi"
                   dir="rtl"
                   id="Most-Read"
                 >
