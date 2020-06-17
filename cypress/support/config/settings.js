@@ -2830,11 +2830,15 @@ module.exports = () => ({
       onDemandTV: {
         environments: {
           live: {
-            paths: [],
+            paths: [
+              '/marathi/bbc_marathi_tv/tv_programmes/w13xttr2', // Brand
+            ],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: [
+              '/marathi/bbc_marathi_tv/tv_programmes/w13xttr2', // Brand
+            ],
             enabled: false,
           },
           local: {
