@@ -14,6 +14,7 @@ const pageTypes = [
   'mostReadPage',
   'onDemandRadio',
   'mediaAssetPage',
+  'storyPage',
 ];
 
 const getPageString = async url => {
