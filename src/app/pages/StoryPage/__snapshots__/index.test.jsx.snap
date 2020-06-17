@@ -204,7 +204,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #222222;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -226,6 +225,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 .c31 {
   position: relative;
   z-index: 0;
+  color: #3F3F42;
   margin-top: 2rem;
 }
 
@@ -3041,7 +3041,6 @@ exports[`Story Page should render correctly when the secondary column data is no
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #222222;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -3063,6 +3062,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 .c33 {
   position: relative;
   z-index: 0;
+  color: #3F3F42;
   margin-top: 2rem;
 }
 
@@ -4517,7 +4517,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #222222;
   background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -4539,6 +4538,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 .c33 {
   position: relative;
   z-index: 0;
+  color: #3F3F42;
   margin-top: 2rem;
 }
 
