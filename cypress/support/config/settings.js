@@ -2670,11 +2670,15 @@ module.exports = () => ({
       onDemandTV: {
         environments: {
           live: {
-            paths: [],
+            paths: [
+              '/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx', // Brand
+            ],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: [
+              '/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx', // Brand
+            ],
             enabled: false,
           },
           local: {
