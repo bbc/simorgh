@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
+import AmpGeo from '@bbc/psammead-amp-geo';
 import {
   AMP_ACCESS_JS,
   AMP_ADS_JS,
@@ -19,6 +20,12 @@ import { ServiceContext } from '#contexts/ServiceContext';
 
 const FullWidthWrapper = styled.div`
   background-color: ${C_LUNAR_LIGHT};
+
+  .amp-geo-pending &,
+  .amp-geo-group-gbOrUnknown & {
+    display: none;
+    visibility: hidden;
+  }
 `;
 
 const StyledWrapper = styled.div`
@@ -119,6 +126,7 @@ const AmpAd = () => {
 
   return (
     <FullWidthWrapper>
+      <AmpGeo />
       <StyledWrapper>
         <Helmet>
           {AMP_ADS_JS}
