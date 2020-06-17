@@ -12,6 +12,7 @@ import nodeLogger from '#lib/logger.node';
 import { addOverrideQuery } from '#app/routes/utils/overrideRendererOnTest';
 import ampSrcBuilder from './ampSrcBuilder';
 import includeClassifier from './includeClassifier';
+import getImageBlock from './getImageBlock';
 
 const logger = nodeLogger(__filename);
 
@@ -68,11 +69,14 @@ const fetchMarkup = async url => {
 };
 
 const convertInclude = async (includeBlock, ...restParams) => {
-  const { href, type, ...rest } = includeBlock;
+  const { href, type } = includeBlock;
 
   // Here pathname is passed as a prop specifically for CPS includes
   // This will most likely change in issue #6784 so it is temporary for now
   const pathname = restParams[2];
+
+  const ampRegex = /\.amp$/;
+  const isAmp = ampRegex.test(pathname);
 
   if (!href) {
     logger.error(INCLUDE_MISSING_URL, includeBlock);
@@ -97,22 +101,24 @@ const convertInclude = async (includeBlock, ...restParams) => {
     logger.info(INCLUDE_IFRAME_REQUEST_RECEIVED, {
       url: ampSrc,
     });
-  } else {
+  }
+  if (!isAmp) {
     const url = buildIncludeUrl(href, includeType, pathname);
     logger.info(INCLUDE_REQUEST_RECEIVED, {
       url,
     });
     html = await fetchMarkup(buildIncludeUrl(href, includeType, pathname));
   }
+  const imageBlock = getImageBlock(includeType, includeBlock, isAmp);
 
   return {
     type,
     model: {
       href,
-      html,
       type: includeType,
-      ampSrc,
-      ...rest,
+      ...(ampSrc && { ampSrc }),
+      ...(html && { html }),
+      ...(imageBlock && { imageBlock }),
     },
   };
 };

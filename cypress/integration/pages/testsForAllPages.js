@@ -353,33 +353,6 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
       }
     });
 
-    describe('Footer Tests', () => {
-      describe('footer tests', () => {
-        it('should have a visible footer', () => {
-          cy.get('footer')
-            .should('have.length', 1)
-            .should('have.attr', 'role', 'contentinfo')
-            .find('a')
-            .should('have.attr', 'href', `/${config[service].name}`)
-            .find('svg')
-            .should('be.visible');
-        });
-      });
-
-      it('should render the BBC branding', () => {
-        cy.get('footer a')
-          .eq(0)
-          .should(
-            'contain',
-            appConfig[config[service].name][variant].serviceLocalizedName !==
-              undefined
-              ? `${appConfig[config[service].name][variant].product}, ${
-                  appConfig[config[service].name][variant].serviceLocalizedName
-                }`
-              : appConfig[config[service].name][variant].product,
-          );
-      });
-    });
     if (
       ['mediaAssetPage', 'photoGalleryPage', 'storyPage'].includes(pageType)
     ) {

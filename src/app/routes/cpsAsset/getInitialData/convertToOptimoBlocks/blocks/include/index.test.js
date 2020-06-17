@@ -23,6 +23,7 @@ const ampPathname = 'https://www.bbc.com/service/foo.amp';
 describe('convertInclude', () => {
   const includesBaseUrl = 'https://foobar.com/includes';
   process.env.SIMORGH_INCLUDES_BASE_URL = includesBaseUrl;
+  process.env.SIMORGH_INCLUDES_BASE_AMP_URL = `${includesBaseUrl}/amp`;
   afterEach(() => {
     fetch.resetMocks();
     loggerMock.error.mockClear();
@@ -42,9 +43,6 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: '/indepthtoolkit/quizzes/123-456',
-        required: false,
-        tile: 'A quiz!',
-        platform: 'highweb',
         type: 'idt1',
         html: idt1Markup,
       },
@@ -66,7 +64,7 @@ describe('convertInclude', () => {
     });
   });
 
-  it('should fetch and convert an include block to an idt2 block', async () => {
+  it('should fetch and convert an include block to an idt2 block for a canonical request', async () => {
     fetch.mockResponse(() => Promise.resolve(idt2Markup));
     const input = {
       required: false,
@@ -74,16 +72,44 @@ describe('convertInclude', () => {
       href: '/idt2/111-222-333-444-555',
       platform: 'highweb',
       type: 'include',
+      idt2: {
+        altText: 'image alt text',
+        dimensions: {
+          small: {
+            href: '/idt2/111-222-333-444-555/image/350',
+            width: 700,
+            height: 1864,
+          },
+          medium: {
+            href: '/idt2/111-222-333-444-555/image/470',
+            width: 940,
+            height: 1864,
+          },
+          large: {
+            href: '/idt2/111-222-333-444-555/image/816',
+            width: 1632,
+            height: 1864,
+          },
+        },
+        copyrightHolder: 'Source: BBC',
+        published: 1550229370779,
+      },
     };
     const expected = {
       type: 'include',
       model: {
         href: '/idt2/111-222-333-444-555',
-        required: false,
-        tile: 'IDT2 Include',
-        platform: 'highweb',
         type: 'idt2',
         html: idt2Markup,
+        imageBlock: {
+          alt: 'image alt text',
+          height: 1864,
+          layout: 'responsive',
+          src: 'https://foobar.com/includes/idt2/111-222-333-444-555/image/816',
+          srcset:
+            'https://foobar.com/includes/idt2/111-222-333-444-555/image/470 470w,https://foobar.com/includes/idt2/111-222-333-444-555/image/816 816w',
+          width: 1632,
+        },
       },
     };
     expect(await convertInclude(input, null, null, canonicalPathname)).toEqual(
@@ -103,6 +129,59 @@ describe('convertInclude', () => {
     });
   });
 
+  it('convert an include block to an idt2 block with an image block for an amp request', async () => {
+    fetch.mockResponse(() => Promise.resolve(idt2Markup));
+    const input = {
+      required: false,
+      tile: 'IDT2 Include',
+      href: '/idt2/111-222-333-444-555',
+      platform: 'highweb',
+      type: 'include',
+      idt2: {
+        altText: 'image alt text',
+        dimensions: {
+          small: {
+            href: '/idt2/111-222-333-444-555/image/350',
+            width: 700,
+            height: 1864,
+          },
+          medium: {
+            href: '/idt2/111-222-333-444-555/image/470',
+            width: 940,
+            height: 1864,
+          },
+          large: {
+            href: '/idt2/111-222-333-444-555/image/816',
+            width: 1632,
+            height: 1864,
+          },
+        },
+        copyrightHolder: 'Source: BBC',
+        published: 1550229370779,
+      },
+    };
+    const expected = {
+      type: 'include',
+      model: {
+        href: '/idt2/111-222-333-444-555',
+        type: 'idt2',
+        imageBlock: {
+          alt: 'image alt text',
+          height: 1864,
+          layout: 'responsive',
+          src: 'https://foobar.com/includes/idt2/111-222-333-444-555/image/470',
+          srcset:
+            'https://foobar.com/includes/idt2/111-222-333-444-555/image/350 350w,https://foobar.com/includes/idt2/111-222-333-444-555/image/470 470w',
+          width: 940,
+        },
+      },
+    };
+    expect(
+      await convertInclude(input, null, null, '/news/1234568.amp'),
+    ).toEqual(expected);
+    expect(fetch).not.toHaveBeenCalled();
+  });
+
   it('should fetch and convert an include block to a vj block', async () => {
     fetch.mockResponse(() => Promise.resolve(vjMarkup));
     const input = {
@@ -116,9 +195,6 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: '/include/111-222-333-444-555',
-        required: false,
-        tile: 'Include from VisJo',
-        platform: 'highweb',
         type: 'vj',
         html: vjMarkup,
       },
@@ -148,16 +224,43 @@ describe('convertInclude', () => {
       href: 'idt2',
       platform: 'highweb',
       type: 'include',
+      idt2: {
+        altText: 'image alt text',
+        dimensions: {
+          small: {
+            href: '/idt2/111-222-333-444-555/image/350',
+            width: 700,
+            height: 1864,
+          },
+          medium: {
+            href: '/idt2/111-222-333-444-555/image/470',
+            width: 940,
+            height: 1864,
+          },
+          large: {
+            href: '/idt2/111-222-333-444-555/image/816',
+            width: 1632,
+            height: 1864,
+          },
+        },
+        copyrightHolder: 'Source: BBC',
+        published: 1550229370779,
+      },
     };
     const expected = {
       type: 'include',
       model: {
         href: 'idt2',
-        required: false,
-        tile: 'IDT2 Include',
-        platform: 'highweb',
         type: 'idt2',
-        html: null,
+        imageBlock: {
+          alt: 'image alt text',
+          height: 1864,
+          layout: 'responsive',
+          src: 'https://foobar.com/includes/idt2/111-222-333-444-555/image/816',
+          srcset:
+            'https://foobar.com/includes/idt2/111-222-333-444-555/image/470 470w,https://foobar.com/includes/idt2/111-222-333-444-555/image/816 816w',
+          width: 1632,
+        },
       },
     };
     expect(await convertInclude(input, null, null, canonicalPathname)).toEqual(
@@ -195,9 +298,6 @@ describe('convertInclude', () => {
         type: 'include',
         model: {
           href: '/indepthtoolkit/quizzes/123-456',
-          required: false,
-          tile: 'A quiz!',
-          platform: 'highweb',
           type: 'idt1',
           html: idt1Markup,
         },
@@ -303,7 +403,7 @@ describe('convertInclude', () => {
     };
     const output = await convertInclude(input, null, null, canonicalPathname);
     expect(fetch).toHaveBeenCalledTimes(1);
-    expect(output.model.html).toEqual(null);
+    expect(output.model.html).toEqual(undefined);
     expect(loggerMock.info).toHaveBeenCalledTimes(1);
     expect(loggerMock.error).toHaveBeenCalledTimes(1);
     expect(loggerMock.error).toHaveBeenCalledWith(INCLUDE_ERROR, {
@@ -327,12 +427,9 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: includeSupportingAmp,
-        required: false,
-        tile: 'Include from VisJo',
-        platform: 'highweb',
         type: 'vj',
         ampSrc:
-          'https://news.files.bbci.co.uk/include/newsspec/21841-green-diet/gahuza/app/amp?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+          'https://foobar.com/includes/amp/include/newsspec/21841-green-diet/gahuza/app/amp?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
       },
     };
     const actual = await convertInclude(input, null, null, ampPathname);
@@ -343,7 +440,7 @@ describe('convertInclude', () => {
       INCLUDE_IFRAME_REQUEST_RECEIVED,
       {
         url:
-          'https://news.files.bbci.co.uk/include/newsspec/21841-green-diet/gahuza/app/amp?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+          'https://foobar.com/includes/amp/include/newsspec/21841-green-diet/gahuza/app/amp?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
       },
     );
     expect(actual).toEqual(expected);
