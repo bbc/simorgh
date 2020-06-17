@@ -258,9 +258,22 @@ describe('cspHeader', () => {
         'https://www.bbc.co.uk',
         'https://news.files.bbci.co.uk',
         'https://news.test.files.bbci.co.uk',
+        'https://securepubads.g.doubleclick.net',
+        'https://pagead2.googlesyndication.com',
+        'https://survey.effectivemeasure.net',
+        'https://www.bbc.co.uk',
+        'https://static.test.files.bbci.co.uk',
+        'https://experience.tinypass.com',
+        'https://detect-survey.effectivemeasure.net',
+        'https://collector.effectivemeasure.net/',
+        'https://csi.gstatic.com',
         "'self'",
       ],
-      defaultSrcExpectation: ["'self'"],
+      defaultSrcExpectation: [
+        'https://*.safeframe.googlesyndication.com',
+        'https://tpc.googlesyndication.com',
+        "'self'",
+      ],
       fontSrcExpectation: [
         'https://gel.files.bbci.co.uk',
         'https://ws-downloads.files.bbci.co.uk',
@@ -283,6 +296,10 @@ describe('cspHeader', () => {
         'https://www.bbc.co.uk',
         'http://www.bbc.co.uk',
         'https://bbc-maps.carto.com',
+        'https://tpc.googlesyndication.com',
+        'https://bcp.crwdcntrl.net',
+        'https://edigitalsurvey.com',
+        'https://*.safeframe.googlesyndication.com/',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -308,6 +325,14 @@ describe('cspHeader', () => {
         'https://news.bbcimg.co.uk',
         'https://static.bbc.co.uk',
         'http://static.bbc.co.uk',
+        'data:',
+        'https://pagead2.googlesyndication.com',
+        'https://tpc.googlesyndication.com',
+        'https://securepubads.g.doubleclick.net',
+        'https://www.google.com',
+        'https://secure-us.imrworldwide.com',
+        'https://collector.effectivemeasure.net',
+        'https://sb.scorecardresearch.com',
         "data: 'self'",
       ],
       scriptSrcExpectation: [
@@ -329,8 +354,24 @@ describe('cspHeader', () => {
         'https://passport-control.int.tools.bbc.co.uk/bookmarkletScript.js',
         'https://passport-control.test.tools.bbc.co.uk/bookmarkletScript.js',
         'https://passport-control.tools.bbc.co.uk/bookmarkletScript.js',
+        'https://tpc.googlesyndication.com',
+        'https://privacy.crwdcntrl.net',
+        'https://gn-web-assets.api.bbc.com',
+        'https://securepubads.g.doubleclick.net',
+        'https://bcp.crwdcntrl.net',
+        'https://ad.crwdcntrl.net',
+        'https://sb.scorecardresearch.com',
+        'https://me-ssl.effectivemeasure.net',
+        'https://bbc.gscontxt.net',
+        'https://adservice.google.co.uk',
+        'https://adservice.google.com',
+        'https://t.effectivemeasure.net',
+        'https://tags.crwdcntrl.net',
+        'https://collector.effectivemeasure.net',
+        'https://cdn.ampproject.org',
         "'self'",
         "'unsafe-inline'",
+        "'unsafe-eval'",
       ],
       styleSrcExpectation: [
         'https://news.files.bbci.co.uk',
@@ -374,7 +415,9 @@ describe('cspHeader', () => {
         });
 
         it(`Then it has this defaultSrc`, () => {
-          expect(generateDefaultSrc()).toEqual(defaultSrcExpectation);
+          expect(generateDefaultSrc({ isAmp, isLive })).toEqual(
+            defaultSrcExpectation,
+          );
         });
 
         it(`Then it has this fontSrc`, () => {
