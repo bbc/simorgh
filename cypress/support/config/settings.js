@@ -6690,11 +6690,15 @@ module.exports = () => ({
       onDemandTV: {
         environments: {
           live: {
-            paths: [],
+            paths: [
+              '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv', // Brand
+            ],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: [
+              '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv', // Brand
+            ],
             enabled: false,
           },
           local: {
