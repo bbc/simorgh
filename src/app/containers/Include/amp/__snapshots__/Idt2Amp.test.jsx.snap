@@ -52,7 +52,6 @@ exports[`AmpIncludeContainer should render for a valid IDT2 include 1`] = `
     <amp-img
       alt="image alt text"
       attribution=""
-      fallback="false"
       height="1864"
       layout="responsive"
       src="https://foobar.com/includes/image/816"
