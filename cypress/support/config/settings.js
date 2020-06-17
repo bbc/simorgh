@@ -260,15 +260,21 @@ module.exports = () => ({
       onDemandTV: {
         environments: {
           live: {
-            paths: [],
+            paths: [
+              '/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
+            ],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: [
+              '/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
+            ],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: [
+              '/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
+            ],
             enabled: false,
           },
         },
