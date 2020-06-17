@@ -1675,11 +1675,15 @@ module.exports = () => ({
       onDemandTV: {
         environments: {
           live: {
-            paths: [],
+            paths: [
+              '/hausa/bbc_hausa_tv/tv_programmes/w13xttn0', // Brand
+            ],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: [
+              '/hausa/bbc_hausa_tv/tv_programmes/w13xttn0', // Brand
+            ],
             enabled: false,
           },
           local: {
