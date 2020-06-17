@@ -5256,11 +5256,15 @@ module.exports = () => ({
       onDemandTV: {
         environments: {
           live: {
-            paths: [],
+            paths: [
+              '/tamil/bbc_tamil_tv/tv_programmes/w13xttmy', // Brand
+            ],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: [
+              '/tamil/bbc_tamil_tv/tv_programmes/w13xttmy', // Brand
+            ],
             enabled: false,
           },
           local: {
