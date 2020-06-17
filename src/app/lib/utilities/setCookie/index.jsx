@@ -25,10 +25,16 @@ const setCookie = ({
   // Modern browsers default sameSite value to Lax
   // Setting sameSite='None' allows cookies will be sent in all contexts, i.e sending cross-origin is allowed.
   // Setting sameSite='Strict' allows cookies to only set on first-party context
+  const sameSiteValues = {
+    Lax: 'Lax',
+    Strict: 'Strict',
+    None: isHttps && 'None', // SameSite=None can only be added to cookie when the page is https
+  };
+
   return Cookie.set(name, value, {
     expires,
     domain: getCookieDomain(document.domain),
-    sameSite,
+    sameSite: sameSiteValues[sameSite],
     ...(isHttps && { secure: true }),
   });
 };
