@@ -3437,16 +3437,22 @@ module.exports = () => ({
       onDemandTV: {
         environments: {
           live: {
-            paths: [],
+            paths: [
+              '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // Brand
+            ],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: [
+              '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // Brand
+            ],
             enabled: false,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // Brand
+            ],
+            enabled: true,
           },
         },
         smoke: false,
