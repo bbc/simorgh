@@ -98,17 +98,17 @@
           "altText": "Chart title (0.15.6). Chart sub title.  This is a footnote text.",
           "dimensions": {
             "small": {
-              "href": "https://smallprox.vj.test.tools.bbc.co.uk/idt2/ae805ced-e912-4f89-a9f5-105510946fad/image/350",
+              "href": "/idt2/ae805ced-e912-4f89-a9f5-105510946fad/image/350",
               "width": 700,
               "height": 868
             },
             "medium": {
-              "href": "https://smallprox.vj.test.tools.bbc.co.uk/idt2/ae805ced-e912-4f89-a9f5-105510946fad/image/470",
+              "href": "/idt2/ae805ced-e912-4f89-a9f5-105510946fad/image/470",
               "width": 940,
               "height": 964
             },
             "large": {
-              "href": "https://smallprox.vj.test.tools.bbc.co.uk/idt2/ae805ced-e912-4f89-a9f5-105510946fad/image/816",
+              "href": "/idt2/ae805ced-e912-4f89-a9f5-105510946fad/image/816",
               "width": 1632,
               "height": 1354
             }
