@@ -135,16 +135,8 @@ const AmpAd = () => {
             >
               {label}
             </StyledLink>
-            <amp-ad
-              width="320"
-              height="50"
-              {...ampAdPropsMobile({ service })}
-            />
-            <amp-ad
-              width="970"
-              height="250"
-              {...ampAdPropsDesktop({ service })}
-            />
+            <amp-ad {...ampAdPropsMobile({ service })} />
+            <amp-ad {...ampAdPropsDesktop({ service })} />
           </StyledAd>
         </div>
       </StyledWrapper>
