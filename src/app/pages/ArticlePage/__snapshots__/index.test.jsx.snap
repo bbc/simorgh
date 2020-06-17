@@ -42,7 +42,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
     role="region"
   >
     <div
-      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu SectionLabelWithMargin-sc-1resov9-0 dxfHPg"
+      class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD SectionLabelWithMargin-sc-1resov9-0 dxfHPg"
     >
       <div
         class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -57,7 +57,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
             class="FlexRow-wx5kdp-2 dVBNyZ"
           >
             <span
-              class="Title-wx5kdp-4 BeqZV"
+              class="Title-wx5kdp-4 cERxQI"
               dir="ltr"
               id="Most-Read"
             >
@@ -567,7 +567,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
     role="region"
   >
     <div
-      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu SectionLabelWithMargin-sc-1resov9-0 dxfHPg"
+      class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD SectionLabelWithMargin-sc-1resov9-0 dxfHPg"
     >
       <div
         class="Bar-sc-1x4gwjz-0 kXOyLn"
@@ -582,7 +582,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
             class="FlexRow-wx5kdp-2 dVBNyZ"
           >
             <span
-              class="Title-wx5kdp-4 htLcbq"
+              class="Title-wx5kdp-4 jJpioi"
               dir="rtl"
               id="Most-Read"
             >
