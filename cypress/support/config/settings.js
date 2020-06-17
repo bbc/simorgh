@@ -6287,11 +6287,15 @@ module.exports = () => ({
       onDemandTV: {
         environments: {
           live: {
-            paths: [],
+            paths: [
+              '/ukrainian/bbc_ukrainian_tv/tv_programmes/w13xttp9', // Brand
+            ],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: [
+              '/ukrainian/bbc_ukrainian_tv/tv_programmes/w13xttp9', // Brand
+            ],
             enabled: false,
           },
           local: {
