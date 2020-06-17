@@ -28,7 +28,7 @@ const setCookie = ({
   const sameSiteValues = {
     Lax: 'Lax',
     Strict: 'Strict',
-    None: isHttps && 'None', // SameSite=None can only be added to cookie when the page is https
+    None: isHttps ? 'None' : undefined, // SameSite=None can only be added to cookie when the page is https
   };
 
   return Cookie.set(name, value, {
