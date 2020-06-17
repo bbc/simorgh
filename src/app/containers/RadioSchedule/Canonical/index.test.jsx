@@ -117,12 +117,12 @@ describe('Canonical RadioSchedule', () => {
       let container;
 
       await act(async () => {
-        container = await render(<RadioScheduleWithContext lang="khoa" />)
+        container = await render(<RadioScheduleWithContext lang="fa-AF" />)
           .container;
       });
       expect(container.querySelector('section')).toHaveAttribute(
         'lang',
-        'khoa',
+        'fa-AF',
       );
     });
 
