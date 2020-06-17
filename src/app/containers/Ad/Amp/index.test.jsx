@@ -30,11 +30,11 @@ const adWithContext = (service = 'pidgin') => (
 
 describe('AMP Ads', () => {
   beforeAll(() => {
-    process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+    process.env.SIMORGH_CONFIG_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
   });
 
   afterAll(() => {
-    delete process.env.SIMORGH_TOGGLES_URL;
+    delete process.env.SIMORGH_CONFIG_URL;
   });
 
   describe('Snapshots', () => {

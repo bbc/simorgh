@@ -24,7 +24,7 @@ const togglesUrl =
 
 beforeEach(() => {
   process.env.SIMORGH_APP_ENV = 'test';
-  process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+  process.env.SIMORGH_CONFIG_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
 
   fetchMock.restore();
 });

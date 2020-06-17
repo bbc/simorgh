@@ -28,7 +28,7 @@ const getMockTogglesUrl = service =>
 describe('ToggleContext with feature toggles', () => {
   beforeAll(() => {
     process.env.SIMORGH_APP_ENV = 'local';
-    process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+    process.env.SIMORGH_CONFIG_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
   });
 
   [
