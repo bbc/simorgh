@@ -6,7 +6,7 @@ import persianAfghanistanIdxData from '#data/persian/afghanistan';
 import persianMostReadData from '#data/persian/mostRead';
 import IdxPageWithContext from './testHelpers';
 
-const mostReadEndpoint = '/persian/mostRead.json';
+const mostReadEndpoint = '/data/persian/mostRead/index.json';
 
 jest.mock('#containers/ChartbeatAnalytics', () => {
   return () => <div>chartbeat</div>;
@@ -25,10 +25,7 @@ describe('IdxPage', () => {
 
     await act(async () => {
       container = render(
-        <IdxPageWithContext
-          pageData={persianAfghanistanIdxData}
-          mostReadEndpointOverride={mostReadEndpoint}
-        />,
+        <IdxPageWithContext pageData={persianAfghanistanIdxData} />,
       ).container;
     });
   });

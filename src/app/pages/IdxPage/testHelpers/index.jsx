@@ -10,11 +10,7 @@ import IdxPage from '#pages/IdxPage';
 const radioServiceOverride = 'dari';
 
 /* eslint-disable react/prop-types */
-const IdxPageWithContext = ({
-  service = 'persian',
-  pageData,
-  mostReadEndpointOverride,
-}) => (
+const IdxPageWithContext = ({ service = 'persian', pageData }) => (
   <BrowserRouter>
     <ToggleContextProvider service={service} origin="https://www.test.bbc.com">
       <RequestContextProvider
@@ -28,10 +24,7 @@ const IdxPageWithContext = ({
           <UserContextProvider>
             <IdxPage
               pageData={pageData}
-              mostReadEndpointOverride={
-                mostReadEndpointOverride ||
-                getLocalMostReadEndpoint({ service })
-              }
+              mostReadEndpointOverride={getLocalMostReadEndpoint({ service })}
               radioScheduleEndpointOverride={`./data/${service}/bbc_${radioServiceOverride}_radio/schedule.json`}
             />
           </UserContextProvider>
