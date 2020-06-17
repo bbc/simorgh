@@ -39,6 +39,7 @@ describe('Starting the service', () => {
   };
 
   beforeEach(() => {
+    process.env.NODE_ENV = 'production';
     forkSpy = jest.spyOn(cluster, 'fork').mockImplementation();
     cpusSpy = jest.spyOn(os, 'cpus').mockImplementation(() => cpusArray);
     serverStartStub = jest
@@ -47,6 +48,7 @@ describe('Starting the service', () => {
   });
 
   afterEach(done => {
+    process.env.NODE_ENV = 'development';
     forkSpy.mockRestore();
     cpusSpy.mockRestore();
     serverStartStub.mockRestore();

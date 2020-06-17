@@ -64,15 +64,18 @@ const processExit = (worker, code, signal) => {
 };
 
 const startCluster = () => {
-  const isParentProcess = !cluster.isWorker;
-
-  if (isParentProcess) {
-    const availableCores = os.cpus();
-    availableCores.map(() => cluster.fork());
-    cluster.on('online', processOnline);
-    cluster.on('exit', processExit);
-  } else {
+  if (process.env.NODE_ENV !== 'production') {
     startApplicationInstance();
+  } else {
+    const isParentProcess = !cluster.isWorker;
+    if (isParentProcess) {
+      const availableCores = os.cpus();
+      availableCores.map(() => cluster.fork());
+      cluster.on('online', processOnline);
+      cluster.on('exit', processExit);
+    } else {
+      startApplicationInstance();
+    }
   }
 };
 
