@@ -85,7 +85,7 @@ describe('Include Classifier', () => {
 
   it('should classify a non-supported include as not supported on canonical', () => {
     const expected = {
-      includeType: undefined,
+      includeType: null,
       classification: 'not-supported',
     };
 
@@ -99,7 +99,7 @@ describe('Include Classifier', () => {
 
   it('should classify a non-supported include as not supported on amp', () => {
     const expected = {
-      includeType: undefined,
+      includeType: null,
       classification: 'not-supported',
     };
 
