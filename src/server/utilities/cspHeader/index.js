@@ -70,17 +70,6 @@ const directives = {
       'https://www.bbc.co.uk', // STY include indepthtoolkit
       'https://news.files.bbci.co.uk', // STY include
       'https://news.test.files.bbci.co.uk', // STY include
-      // dotcom required urls
-      'https://securepubads.g.doubleclick.net',
-      'https://pagead2.googlesyndication.com',
-      'https://survey.effectivemeasure.net',
-      'https://www.bbc.co.uk',
-      'https://static.test.files.bbci.co.uk',
-      'https://experience.tinypass.com',
-      'https://detect-survey.effectivemeasure.net',
-      'https://collector.effectivemeasure.net/',
-      'https://csi.gstatic.com',
-      // end dotcom required urls
       "'self'",
     ],
   },
@@ -138,12 +127,6 @@ const directives = {
       'https://www.bbc.co.uk', // STY include
       'http://www.bbc.co.uk', // for localhost STY include
       'https://bbc-maps.carto.com', // STY include maps
-      // dotcom required urls
-      'https://tpc.googlesyndication.com',
-      'https://bcp.crwdcntrl.net',
-      'https://edigitalsurvey.com',
-      'https://*.safeframe.googlesyndication.com/',
-      // end dotcom required urls
       "'self'",
     ],
   },
@@ -229,16 +212,6 @@ const directives = {
       'https://news.bbcimg.co.uk', // STY include
       'https://static.bbc.co.uk', // STY include
       'http://static.bbc.co.uk', // localhost STY include
-      // dotcom required urls
-      'data:',
-      'https://pagead2.googlesyndication.com',
-      'https://tpc.googlesyndication.com',
-      'https://securepubads.g.doubleclick.net',
-      'https://www.google.com',
-      'https://secure-us.imrworldwide.com',
-      'https://collector.effectivemeasure.net',
-      'https://sb.scorecardresearch.com',
-      // end dotcom required urls
       "data: 'self'", // needed at the end to maintain proper order
     ],
   },
@@ -297,26 +270,8 @@ const directives = {
       'https://passport-control.int.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - int
       'https://passport-control.test.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - test
       'https://passport-control.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - live
-      // dotcom required urls
-      'https://tpc.googlesyndication.com',
-      'https://privacy.crwdcntrl.net',
-      'https://gn-web-assets.api.bbc.com',
-      'https://securepubads.g.doubleclick.net',
-      'https://bcp.crwdcntrl.net',
-      'https://ad.crwdcntrl.net',
-      'https://sb.scorecardresearch.com',
-      'https://me-ssl.effectivemeasure.net',
-      'https://bbc.gscontxt.net',
-      'https://adservice.google.co.uk',
-      'https://adservice.google.com',
-      'https://t.effectivemeasure.net',
-      'https://tags.crwdcntrl.net',
-      'https://collector.effectivemeasure.net',
-      'https://cdn.ampproject.org',
-      // end dotcom required urls
       "'self'",
       "'unsafe-inline'",
-      "'unsafe-eval'",
     ],
   },
   styleSrc: {
@@ -358,13 +313,6 @@ const directives = {
       'https://static.bbci.co.uk', // STY includes
     ],
   },
-  defaultSrc: {
-    canonicalNonLive: [
-      'https://*.safeframe.googlesyndication.com',
-      'https://tpc.googlesyndication.com',
-      "'self'",
-    ],
-  },
 };
 
 export const generateChildSrc = ({ isAmp }) => (isAmp ? ['blob:'] : ["'self'"]);
@@ -376,10 +324,7 @@ export const generateConnectSrc = ({ isAmp, isLive }) => {
   return directives.connectSrc.canonicalLive;
 };
 
-export const generateDefaultSrc = ({ isAmp, isLive }) => {
-  if (!isLive && !isAmp) return directives.defaultSrc.canonicalNonLive;
-  return ["'self'"];
-};
+export const generateDefaultSrc = () => ["'self'"];
 
 export const generateFontSrc = ({ isAmp }) =>
   isAmp ? directives.fontSrc.amp : directives.fontSrc.canonical;
@@ -417,7 +362,7 @@ export const generateWorkerSrc = ({ isAmp }) =>
 
 const helmetCsp = ({ isAmp, isLive }) => ({
   directives: {
-    'default-src': generateDefaultSrc({ isAmp, isLive }),
+    'default-src': generateDefaultSrc(),
     'child-src': generateChildSrc({ isAmp }),
     'connect-src': generateConnectSrc({ isAmp, isLive }),
     'font-src': generateFontSrc({ isAmp }),
