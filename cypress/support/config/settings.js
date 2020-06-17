@@ -4852,16 +4852,22 @@ module.exports = () => ({
       onDemandTV: {
         environments: {
           live: {
-            paths: [],
+            paths: [
+              '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
+            ],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: [
+              '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
+            ],
             enabled: false,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
+            ],
+            enabled: true,
           },
         },
         smoke: false,
