@@ -69,7 +69,7 @@ const LiveRadioPage = ({ pageData }) => {
   });
 
   const iframeTitle = pathOr(
-    'Media player',
+    'Audio player',
     ['mediaAssetPage', 'audioPlayer'],
     translations,
   );

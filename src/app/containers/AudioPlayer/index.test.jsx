@@ -13,10 +13,12 @@ import AudioPlayer from '.';
 const origin = 'http://localhost:7080';
 
 const defaultAudioPlayerProps = {
-  uuid: 'uuid',
   idAttr: 'idAttr',
-  externalId: 'externalId',
-  id: 'id',
+  title: 'radio',
+  type: 'audio',
+  assetId: 'id',
+  iframeTitle: 'Audio player',
+  className: 'className',
   embedUrl:
     'https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om/amp?morph_env=live',
 };
@@ -75,8 +77,6 @@ describe('MediaPageBlocks AudioPlayer', () => {
   });
 
   describe('when externalId isnt provided', () => {
-    suppressPropWarnings(['externalId', 'undefined']);
-
     isNull(
       'should render null',
       renderComponent({
