@@ -23,7 +23,7 @@ const adWithContext = (service = 'pidgin') => (
     pathname="/"
   >
     <ServiceContextProvider service={service}>
-      <AmpAd />
+      <AmpAd slotType="leaderboard" />
     </ServiceContextProvider>
   </RequestContextProvider>
 );
