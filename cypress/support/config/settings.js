@@ -257,7 +257,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandTV: { environments: undefined, smoke: false },
+      onDemandTV: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1077,7 +1093,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandTV: { environments: undefined, smoke: false },
+      onDemandTV: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1439,7 +1471,23 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandRadio: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -1607,7 +1655,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandTV: { environments: undefined, smoke: false },
+      onDemandTV: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -1778,7 +1842,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandTV: { environments: undefined, smoke: false },
+      onDemandTV: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2562,7 +2642,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandTV: { environments: undefined, smoke: false },
+      onDemandTV: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -2702,7 +2798,23 @@ module.exports = () => ({
       },
       liveRadio: { environments: undefined, smoke: false },
       onDemandRadio: { environments: undefined, smoke: false },
-      onDemandTV: { environments: undefined, smoke: false },
+      onDemandTV: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3289,7 +3401,23 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      onDemandTV: { environments: undefined, smoke: false },
+      onDemandTV: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4682,7 +4810,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandTV: { environments: undefined, smoke: false },
+      onDemandTV: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -4872,7 +5016,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandTV: { environments: undefined, smoke: false },
+      onDemandTV: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5044,7 +5204,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandTV: { environments: undefined, smoke: false },
+      onDemandTV: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5184,7 +5360,23 @@ module.exports = () => ({
       },
       liveRadio: { environments: undefined, smoke: false },
       onDemandRadio: { environments: undefined, smoke: false },
-      onDemandTV: { environments: undefined, smoke: false },
+      onDemandTV: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6035,7 +6227,23 @@ module.exports = () => ({
       },
       liveRadio: { environments: undefined, smoke: false },
       onDemandRadio: { environments: undefined, smoke: false },
-      onDemandTV: { environments: undefined, smoke: false },
+      onDemandTV: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6226,7 +6434,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandTV: { environments: undefined, smoke: false },
+      onDemandTV: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -6398,7 +6622,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandTV: { environments: undefined, smoke: false },
+      onDemandTV: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
