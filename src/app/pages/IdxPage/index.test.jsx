@@ -7,6 +7,7 @@ import persianMostReadData from '#data/persian/mostRead';
 import IdxPageWithContext from './testHelpers';
 
 const mostReadEndpoint = '/data/persian/mostRead/index.json';
+const radioScheduleEndpoint = '/data/persian/bbc_dari_radio/schedule.json';
 
 jest.mock('#containers/ChartbeatAnalytics', () => {
   return () => <div>chartbeat</div>;
@@ -18,10 +19,7 @@ describe('IdxPage', () => {
   beforeEach(async () => {
     fetchMock.restore();
     fetchMock.mock(mostReadEndpoint, persianMostReadData);
-    fetchMock.mock(
-      '/data/persian/bbc_dari_radio/schedule.json',
-      dariRadioScheduleData,
-    );
+    fetchMock.mock(radioScheduleEndpoint, dariRadioScheduleData);
 
     await act(async () => {
       container = render(
