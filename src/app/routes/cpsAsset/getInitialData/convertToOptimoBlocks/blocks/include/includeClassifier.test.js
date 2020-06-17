@@ -48,10 +48,10 @@ describe('Include Classifier', () => {
   });
 
   it.each`
-    includeType | classification               | href
-    ${`idt1`}   | ${`idt1-amp`}                | ${idt1Include}
-    ${`idt2`}   | ${`idt2-amp`}                | ${idt2Include}
-    ${`vj`}     | ${`vj-include-supports-amp`} | ${vjIncludeSupportingAmp}
+    includeType | classification       | href
+    ${`idt1`}   | ${`idt1-amp`}        | ${idt1Include}
+    ${`idt2`}   | ${`idt2-amp`}        | ${idt2Include}
+    ${`vj`}     | ${`vj-supports-amp`} | ${vjIncludeSupportingAmp}
   `(
     'should classify $includeType as $classification on amp',
     ({ includeType, classification, href }) => {
@@ -134,10 +134,10 @@ describe('Include Classifier', () => {
   );
 
   it.each`
-    includeType | classification               | href
-    ${`idt1`}   | ${`idt1-amp`}                | ${`indepthtoolkit/quizzes/123-456`}
-    ${`idt2`}   | ${`idt2-amp`}                | ${`idt2/111-222-333-444-555`}
-    ${`vj`}     | ${`vj-include-supports-amp`} | ${`include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png`}
+    includeType | classification       | href
+    ${`idt1`}   | ${`idt1-amp`}        | ${`indepthtoolkit/quizzes/123-456`}
+    ${`idt2`}   | ${`idt2-amp`}        | ${`idt2/111-222-333-444-555`}
+    ${`vj`}     | ${`vj-supports-amp`} | ${`include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png`}
   `(
     'should classify a supported $includeType without a leading / in href on amp',
     ({ includeType, classification, href }) => {
