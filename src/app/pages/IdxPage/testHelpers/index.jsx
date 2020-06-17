@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { getLocalMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -12,7 +13,7 @@ const radioServiceOverride = 'dari';
 const IdxPageWithContext = ({
   service = 'persian',
   pageData,
-  mostReadEndpointOverride = null,
+  mostReadEndpointOverride,
 }) => (
   <BrowserRouter>
     <ToggleContextProvider service={service} origin="https://www.test.bbc.com">
@@ -27,7 +28,10 @@ const IdxPageWithContext = ({
           <UserContextProvider>
             <IdxPage
               pageData={pageData}
-              mostReadEndpointOverride={mostReadEndpointOverride}
+              mostReadEndpointOverride={
+                mostReadEndpointOverride ||
+                getLocalMostReadEndpoint({ service })
+              }
               radioScheduleEndpointOverride={`./data/${service}/bbc_${radioServiceOverride}_radio/schedule.json`}
             />
           </UserContextProvider>
