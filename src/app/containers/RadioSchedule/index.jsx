@@ -12,6 +12,7 @@ import { getRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
 const RadioScheduleContainer = ({
   initialData,
   radioScheduleEndpointOverride,
+  lang,
 }) => {
   const { enabled } = useToggle('radioSchedule');
   const { isAmp, env } = useContext(RequestContext);
@@ -32,17 +33,21 @@ const RadioScheduleContainer = ({
       queryString: location.search,
     });
 
-  return <Canonical endpoint={endpoint} initialData={initialData} />;
+  return (
+    <Canonical endpoint={endpoint} initialData={initialData} lang={lang} />
+  );
 };
 
 RadioScheduleContainer.propTypes = {
   radioScheduleEndpointOverride: string,
   initialData: radioSchedulesShape,
+  lang: string,
 };
 
 RadioScheduleContainer.defaultProps = {
   radioScheduleEndpointOverride: null,
   initialData: undefined,
+  lang: null,
 };
 
 export default RadioScheduleContainer;
