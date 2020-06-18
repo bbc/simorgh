@@ -18,7 +18,6 @@ const defaultAudioPlayerProps = {
   type: 'audio',
   assetId: 'id',
   iframeTitle: 'Audio player',
-  className: 'className',
   embedUrl:
     'https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om/amp?morph_env=live',
 };
