@@ -36,8 +36,8 @@ exports[`MediaPageBlocks AudioPlayer should render correctly for amp 1`] = `
             layout="fill"
             sandbox="allow-scripts allow-same-origin"
             scrolling="no"
-            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om/amp?morph_env=live"
-            title="Audio player"
+            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp?morph_env=live"
+            title="오디오 플레이어"
           >
             <amp-img
               alt=""
@@ -92,8 +92,8 @@ exports[`MediaPageBlocks AudioPlayer should render correctly for canonical 1`] =
       allowfullscreen=""
       class="c1"
       scrolling="no"
-      src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om/amp?morph_env=live"
-      title="Audio player"
+      src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp?morph_env=live"
+      title="오디오 플레이어"
     />
     <noscript />
   </div>
@@ -136,8 +136,8 @@ exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is ov
             layout="fill"
             sandbox="allow-scripts allow-same-origin"
             scrolling="no"
-            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om/amp?morph_env=live"
-            title="Audio player"
+            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp?morph_env=live"
+            title="오디오 플레이어"
           >
             <amp-img
               alt=""
@@ -192,8 +192,8 @@ exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is ov
       allowfullscreen=""
       class="c1"
       scrolling="no"
-      src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om/amp?morph_env=live"
-      title="Audio player"
+      src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp?morph_env=live"
+      title="오디오 플레이어"
     />
     <noscript />
   </div>
