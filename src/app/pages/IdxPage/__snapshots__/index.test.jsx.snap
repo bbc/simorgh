@@ -74,9 +74,13 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                   <div
                     class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                   >
-                    <div
-                      class="lazyload-placeholder"
-                    />
+                    <span
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </span>
                   </div>
                   <div
                     class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
@@ -175,9 +179,13 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                   <div
                     class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                   >
-                    <div
-                      class="lazyload-placeholder"
-                    />
+                    <span
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </span>
                   </div>
                   <div
                     class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
@@ -276,9 +284,13 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                   <div
                     class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                   >
-                    <div
-                      class="lazyload-placeholder"
-                    />
+                    <span
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </span>
                   </div>
                   <div
                     class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
@@ -377,9 +389,13 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                   <div
                     class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                   >
-                    <div
-                      class="lazyload-placeholder"
-                    />
+                    <span
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </span>
                   </div>
                   <div
                     class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
@@ -478,9 +494,13 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                   <div
                     class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                   >
-                    <div
-                      class="lazyload-placeholder"
-                    />
+                    <span
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </span>
                   </div>
                   <div
                     class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
@@ -1166,9 +1186,13 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                   <div
                     class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                   >
-                    <div
-                      class="lazyload-placeholder"
-                    />
+                    <span
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </span>
                   </div>
                   <div
                     class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
@@ -1221,9 +1245,13 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                   <div
                     class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                   >
-                    <div
-                      class="lazyload-placeholder"
-                    />
+                    <span
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </span>
                   </div>
                   <div
                     class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
@@ -1276,9 +1304,13 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                   <div
                     class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                   >
-                    <div
-                      class="lazyload-placeholder"
-                    />
+                    <span
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </span>
                   </div>
                   <div
                     class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
@@ -1331,9 +1363,13 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                   <div
                     class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                   >
-                    <div
-                      class="lazyload-placeholder"
-                    />
+                    <span
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </span>
                   </div>
                   <div
                     class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
@@ -1386,9 +1422,13 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                   <div
                     class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                   >
-                    <div
-                      class="lazyload-placeholder"
-                    />
+                    <span
+                      class="lazyload-wrapper"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </span>
                   </div>
                   <div
                     class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"

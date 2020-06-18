@@ -58,9 +58,13 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 <div
                   class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                 >
-                  <div
-                    class="lazyload-placeholder"
-                  />
+                  <span
+                    class="lazyload-wrapper"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </span>
                 </div>
                 <div
                   class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
@@ -112,9 +116,13 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 <div
                   class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                 >
-                  <div
-                    class="lazyload-placeholder"
-                  />
+                  <span
+                    class="lazyload-wrapper"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </span>
                 </div>
                 <div
                   class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
@@ -208,9 +216,13 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
               <div
                 class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
               >
-                <div
-                  class="lazyload-placeholder"
-                />
+                <span
+                  class="lazyload-wrapper"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </span>
               </div>
               <div
                 class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"

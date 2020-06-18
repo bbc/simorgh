@@ -549,9 +549,13 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
         <div
           class="c4"
         >
-          <div
-            class="lazyload-placeholder"
-          />
+          <span
+            class="lazyload-wrapper"
+          >
+            <div
+              class="lazyload-placeholder"
+            />
+          </span>
         </div>
       </div>
       <div
@@ -634,9 +638,13 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
           <div
             class="c17"
           >
-            <div
-              class="lazyload-placeholder"
-            />
+            <span
+              class="lazyload-wrapper"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </span>
           </div>
           <div
             class="c18"
@@ -1163,9 +1171,13 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
           <div
             class="c9"
           >
-            <div
-              class="lazyload-placeholder"
-            />
+            <span
+              class="lazyload-wrapper"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </span>
           </div>
           <div
             class="c10"
@@ -1192,9 +1204,13 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
           <div
             class="c9"
           >
-            <div
-              class="lazyload-placeholder"
-            />
+            <span
+              class="lazyload-wrapper"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </span>
           </div>
           <div
             class="c14"
@@ -1801,9 +1817,13 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
         <div
           class="c4"
         >
-          <div
-            class="lazyload-placeholder"
-          />
+          <span
+            class="lazyload-wrapper"
+          >
+            <div
+              class="lazyload-placeholder"
+            />
+          </span>
         </div>
       </div>
       <div
@@ -1886,9 +1906,13 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           <div
             class="c16"
           >
-            <div
-              class="lazyload-placeholder"
-            />
+            <span
+              class="lazyload-wrapper"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </span>
           </div>
           <div
             class="c17"
@@ -1964,9 +1988,13 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           <div
             class="c16"
           >
-            <div
-              class="lazyload-placeholder"
-            />
+            <span
+              class="lazyload-wrapper"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </span>
           </div>
           <div
             class="c17"
@@ -2019,9 +2047,13 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           <div
             class="c16"
           >
-            <div
-              class="lazyload-placeholder"
-            />
+            <span
+              class="lazyload-wrapper"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </span>
           </div>
           <div
             class="c17"
@@ -2385,9 +2417,13 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           <div
             class="c5"
           >
-            <div
-              class="lazyload-placeholder"
-            />
+            <span
+              class="lazyload-wrapper"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </span>
           </div>
           <div
             class="c6"
@@ -2435,9 +2471,13 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           <div
             class="c5"
           >
-            <div
-              class="lazyload-placeholder"
-            />
+            <span
+              class="lazyload-wrapper"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </span>
           </div>
           <div
             class="c6"
@@ -2516,9 +2556,13 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           <div
             class="c5"
           >
-            <div
-              class="lazyload-placeholder"
-            />
+            <span
+              class="lazyload-wrapper"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </span>
           </div>
           <div
             class="c6"
@@ -2566,9 +2610,13 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           <div
             class="c5"
           >
-            <div
-              class="lazyload-placeholder"
-            />
+            <span
+              class="lazyload-wrapper"
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </span>
           </div>
           <div
             class="c6"
@@ -3109,9 +3157,13 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
         <div
           class="c4"
         >
-          <div
-            class="lazyload-placeholder"
-          />
+          <span
+            class="lazyload-wrapper"
+          >
+            <div
+              class="lazyload-placeholder"
+            />
+          </span>
         </div>
       </div>
       <div
@@ -4028,9 +4080,13 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
       <div
         class="c4"
       >
-        <div
-          class="lazyload-placeholder"
-        />
+        <span
+          class="lazyload-wrapper"
+        >
+          <div
+            class="lazyload-placeholder"
+          />
+        </span>
       </div>
     </div>
     <div
@@ -4332,9 +4388,13 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
         <div
           class="c5"
         >
-          <div
-            class="lazyload-placeholder"
-          />
+          <span
+            class="lazyload-wrapper"
+          >
+            <div
+              class="lazyload-placeholder"
+            />
+          </span>
         </div>
         <div
           class="c6"

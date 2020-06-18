@@ -1397,9 +1397,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           <div
                             class="c15"
                           >
-                            <div
-                              class="lazyload-placeholder"
-                            />
+                            <span
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </span>
                             <noscript />
                             <p
                               class="c16"
@@ -1564,9 +1568,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           <div
                             class="c15"
                           >
-                            <div
-                              class="lazyload-placeholder"
-                            />
+                            <span
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </span>
                             <noscript />
                             <p
                               class="c16"
@@ -2083,9 +2091,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               <div
                                 class="c15"
                               >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
+                                <span
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </span>
                               </div>
                               <div
                                 class="c57"
@@ -2137,9 +2149,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               <div
                                 class="c15"
                               >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
+                                <span
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </span>
                               </div>
                               <div
                                 class="c57"
@@ -2191,9 +2207,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               <div
                                 class="c15"
                               >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
+                                <span
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </span>
                               </div>
                               <div
                                 class="c57"
@@ -2245,9 +2265,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               <div
                                 class="c15"
                               >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
+                                <span
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </span>
                               </div>
                               <div
                                 class="c57"
@@ -2299,9 +2323,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               <div
                                 class="c15"
                               >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
+                                <span
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </span>
                               </div>
                               <div
                                 class="c57"
@@ -2353,9 +2381,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               <div
                                 class="c15"
                               >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
+                                <span
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </span>
                               </div>
                               <div
                                 class="c57"
@@ -2407,9 +2439,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               <div
                                 class="c15"
                               >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
+                                <span
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </span>
                               </div>
                               <div
                                 class="c57"
@@ -2509,9 +2545,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               <div
                                 class="c15"
                               >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
+                                <span
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </span>
                               </div>
                               <div
                                 class="c57"
@@ -2563,9 +2603,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               <div
                                 class="c15"
                               >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
+                                <span
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </span>
                               </div>
                               <div
                                 class="c57"
@@ -3834,9 +3878,13 @@ exports[`Story Page should render correctly when the secondary column data is no
                               <div
                                 class="c17"
                               >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
+                                <span
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </span>
                                 <noscript />
                                 <p
                                   class="c18"
@@ -4001,9 +4049,13 @@ exports[`Story Page should render correctly when the secondary column data is no
                               <div
                                 class="c17"
                               >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
+                                <span
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </span>
                                 <noscript />
                                 <p
                                   class="c18"
@@ -5935,9 +5987,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               <div
                                 class="c17"
                               >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
+                                <span
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </span>
                                 <noscript />
                                 <p
                                   class="c18"
@@ -6102,9 +6158,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               <div
                                 class="c17"
                               >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
+                                <span
+                                  class="lazyload-wrapper"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </span>
                                 <noscript />
                                 <p
                                   class="c18"
@@ -6570,9 +6630,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   <div
                                     class="c17"
                                   >
-                                    <div
-                                      class="lazyload-placeholder"
-                                    />
+                                    <span
+                                      class="lazyload-wrapper"
+                                    >
+                                      <div
+                                        class="lazyload-placeholder"
+                                      />
+                                    </span>
                                   </div>
                                   <div
                                     class="c55"
@@ -6624,9 +6688,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   <div
                                     class="c17"
                                   >
-                                    <div
-                                      class="lazyload-placeholder"
-                                    />
+                                    <span
+                                      class="lazyload-wrapper"
+                                    >
+                                      <div
+                                        class="lazyload-placeholder"
+                                      />
+                                    </span>
                                   </div>
                                   <div
                                     class="c55"
@@ -6724,9 +6792,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   <div
                                     class="c17"
                                   >
-                                    <div
-                                      class="lazyload-placeholder"
-                                    />
+                                    <span
+                                      class="lazyload-wrapper"
+                                    >
+                                      <div
+                                        class="lazyload-placeholder"
+                                      />
+                                    </span>
                                   </div>
                                   <div
                                     class="c55"
@@ -6816,9 +6888,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   <div
                                     class="c17"
                                   >
-                                    <div
-                                      class="lazyload-placeholder"
-                                    />
+                                    <span
+                                      class="lazyload-wrapper"
+                                    >
+                                      <div
+                                        class="lazyload-placeholder"
+                                      />
+                                    </span>
                                   </div>
                                   <div
                                     class="c55"
@@ -6870,9 +6946,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   <div
                                     class="c17"
                                   >
-                                    <div
-                                      class="lazyload-placeholder"
-                                    />
+                                    <span
+                                      class="lazyload-wrapper"
+                                    >
+                                      <div
+                                        class="lazyload-placeholder"
+                                      />
+                                    </span>
                                   </div>
                                   <div
                                     class="c55"
@@ -6924,9 +7004,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   <div
                                     class="c17"
                                   >
-                                    <div
-                                      class="lazyload-placeholder"
-                                    />
+                                    <span
+                                      class="lazyload-wrapper"
+                                    >
+                                      <div
+                                        class="lazyload-placeholder"
+                                      />
+                                    </span>
                                   </div>
                                   <div
                                     class="c55"
@@ -6978,9 +7062,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   <div
                                     class="c17"
                                   >
-                                    <div
-                                      class="lazyload-placeholder"
-                                    />
+                                    <span
+                                      class="lazyload-wrapper"
+                                    >
+                                      <div
+                                        class="lazyload-placeholder"
+                                      />
+                                    </span>
                                   </div>
                                   <div
                                     class="c55"
@@ -7032,9 +7120,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   <div
                                     class="c17"
                                   >
-                                    <div
-                                      class="lazyload-placeholder"
-                                    />
+                                    <span
+                                      class="lazyload-wrapper"
+                                    >
+                                      <div
+                                        class="lazyload-placeholder"
+                                      />
+                                    </span>
                                   </div>
                                   <div
                                     class="c55"
@@ -7086,9 +7178,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   <div
                                     class="c17"
                                   >
-                                    <div
-                                      class="lazyload-placeholder"
-                                    />
+                                    <span
+                                      class="lazyload-wrapper"
+                                    >
+                                      <div
+                                        class="lazyload-placeholder"
+                                      />
+                                    </span>
                                   </div>
                                   <div
                                     class="c55"

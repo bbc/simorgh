@@ -87,14 +87,18 @@ describe('Bulletin Container', () => {
       const { container } = render(BulletinWithContext(liveTvBulletinItem));
       const span = container.getElementsByTagName('span')[1];
 
-      expect(span.textContent).toEqual('NA EME UGBU A ');
+      expect(span.textContent).toEqual(
+        'NA EME UGBU A Lee Live, Test TV Bulletin promo',
+      );
     });
 
     it('should render the Live Radio offscreen text', () => {
       const { container } = render(BulletinWithContext(liveRadioBulletinItem));
       const span = container.getElementsByTagName('span')[1];
 
-      expect(span.textContent).toEqual('NA EME UGBU A ');
+      expect(span.textContent).toEqual(
+        'NA EME UGBU A Gee ntị Live, Test Radio Bulletin promo',
+      );
     });
 
     it('should render the LIVE label', () => {

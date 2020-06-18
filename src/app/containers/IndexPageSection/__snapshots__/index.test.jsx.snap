@@ -803,9 +803,13 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               <div
                 class="c15"
               >
-                <div
-                  class="lazyload-placeholder"
-                />
+                <span
+                  class="lazyload-wrapper"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </span>
               </div>
               <div
                 class="c26"
@@ -858,9 +862,13 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               <div
                 class="c15"
               >
-                <div
-                  class="lazyload-placeholder"
-                />
+                <span
+                  class="lazyload-wrapper"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </span>
               </div>
               <div
                 class="c26"
@@ -913,9 +921,13 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               <div
                 class="c15"
               >
-                <div
-                  class="lazyload-placeholder"
-                />
+                <span
+                  class="lazyload-wrapper"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </span>
               </div>
               <div
                 class="c26"
@@ -968,9 +980,13 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               <div
                 class="c15"
               >
-                <div
-                  class="lazyload-placeholder"
-                />
+                <span
+                  class="lazyload-wrapper"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </span>
               </div>
               <div
                 class="c26"
@@ -1729,9 +1745,13 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
             <div
               class="c19"
             >
-              <div
-                class="lazyload-placeholder"
-              />
+              <span
+                class="lazyload-wrapper"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </span>
             </div>
             <div
               class="c20"
@@ -1758,9 +1778,13 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
             <div
               class="c19"
             >
-              <div
-                class="lazyload-placeholder"
-              />
+              <span
+                class="lazyload-wrapper"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </span>
             </div>
             <div
               class="c24"
@@ -2952,9 +2976,13 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             <div
               class="c13"
             >
-              <div
-                class="lazyload-placeholder"
-              />
+              <span
+                class="lazyload-wrapper"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </span>
             </div>
             <div
               class="c14"
@@ -3007,9 +3035,13 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             <div
               class="c13"
             >
-              <div
-                class="lazyload-placeholder"
-              />
+              <span
+                class="lazyload-wrapper"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </span>
             </div>
             <div
               class="c23"
@@ -3062,9 +3094,13 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             <div
               class="c13"
             >
-              <div
-                class="lazyload-placeholder"
-              />
+              <span
+                class="lazyload-wrapper"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </span>
             </div>
             <div
               class="c23"
@@ -3117,9 +3153,13 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             <div
               class="c13"
             >
-              <div
-                class="lazyload-placeholder"
-              />
+              <span
+                class="lazyload-wrapper"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </span>
             </div>
             <div
               class="c23"
@@ -3172,9 +3212,13 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             <div
               class="c13"
             >
-              <div
-                class="lazyload-placeholder"
-              />
+              <span
+                class="lazyload-wrapper"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </span>
             </div>
             <div
               class="c23"

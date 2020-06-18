@@ -309,9 +309,13 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                       <div
                         class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                       >
-                        <div
-                          class="lazyload-placeholder"
-                        />
+                        <span
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </span>
                         <noscript />
                         <p
                           class="Copyright-sc-11lgtw-0 hDvIfz"
@@ -805,9 +809,13 @@ exports[`Media Asset Page should render component 1`] = `
                       <div
                         class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                       >
-                        <div
-                          class="lazyload-placeholder"
-                        />
+                        <span
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </span>
                         <noscript />
                         <p
                           class="Copyright-sc-11lgtw-0 hDvIfz"
@@ -860,9 +868,13 @@ exports[`Media Asset Page should render component 1`] = `
                       <div
                         class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                       >
-                        <div
-                          class="lazyload-placeholder"
-                        />
+                        <span
+                          class="lazyload-wrapper"
+                        >
+                          <div
+                            class="lazyload-placeholder"
+                          />
+                        </span>
                         <noscript />
                         <p
                           class="Copyright-sc-11lgtw-0 hDvIfz"
@@ -1015,9 +1027,13 @@ exports[`Media Asset Page should render component 1`] = `
                           <div
                             class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                           >
-                            <div
-                              class="lazyload-placeholder"
-                            />
+                            <span
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </span>
                           </div>
                           <div
                             class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
@@ -1070,9 +1086,13 @@ exports[`Media Asset Page should render component 1`] = `
                           <div
                             class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                           >
-                            <div
-                              class="lazyload-placeholder"
-                            />
+                            <span
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </span>
                           </div>
                           <div
                             class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
@@ -1215,9 +1235,13 @@ exports[`Media Asset Page should render component 1`] = `
                           <div
                             class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
                           >
-                            <div
-                              class="lazyload-placeholder"
-                            />
+                            <span
+                              class="lazyload-wrapper"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </span>
                           </div>
                           <div
                             class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"

@@ -678,9 +678,13 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
       <div
         class="c3"
       >
-        <div
-          class="lazyload-placeholder"
-        />
+        <span
+          class="lazyload-wrapper"
+        >
+          <div
+            class="lazyload-placeholder"
+          />
+        </span>
       </div>
       <div
         class="c4"
@@ -2188,9 +2192,13 @@ exports[`StoryPromo Container should render audio with no duration correctly for
       <div
         class="c3"
       >
-        <div
-          class="lazyload-placeholder"
-        />
+        <span
+          class="lazyload-wrapper"
+        >
+          <div
+            class="lazyload-placeholder"
+          />
+        </span>
       </div>
       <div
         class="c4"
@@ -3503,9 +3511,13 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
       <div
         class="c3"
       >
-        <div
-          class="lazyload-placeholder"
-        />
+        <span
+          class="lazyload-wrapper"
+        >
+          <div
+            class="lazyload-placeholder"
+          />
+        </span>
       </div>
       <div
         class="c4"
@@ -5616,9 +5628,13 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
       <div
         class="c3"
       >
-        <div
-          class="lazyload-placeholder"
-        />
+        <span
+          class="lazyload-wrapper"
+        >
+          <div
+            class="lazyload-placeholder"
+          />
+        </span>
       </div>
       <div
         class="c4"
@@ -6518,9 +6534,13 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
       <div
         class="c3"
       >
-        <div
-          class="lazyload-placeholder"
-        />
+        <span
+          class="lazyload-wrapper"
+        >
+          <div
+            class="lazyload-placeholder"
+          />
+        </span>
       </div>
       <div
         class="c4"
@@ -8072,9 +8092,13 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
       <div
         class="c3"
       >
-        <div
-          class="lazyload-placeholder"
-        />
+        <span
+          class="lazyload-wrapper"
+        >
+          <div
+            class="lazyload-placeholder"
+          />
+        </span>
       </div>
       <div
         class="c4"
@@ -9157,9 +9181,13 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
       <div
         class="c3"
       >
-        <div
-          class="lazyload-placeholder"
-        />
+        <span
+          class="lazyload-wrapper"
+        >
+          <div
+            class="lazyload-placeholder"
+          />
+        </span>
       </div>
       <div
         class="c4"
@@ -10242,9 +10270,13 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
       <div
         class="c3"
       >
-        <div
-          class="lazyload-placeholder"
-        />
+        <span
+          class="lazyload-wrapper"
+        >
+          <div
+            class="lazyload-placeholder"
+          />
+        </span>
       </div>
       <div
         class="c4"
@@ -11497,9 +11529,13 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
       <div
         class="c3"
       >
-        <div
-          class="lazyload-placeholder"
-        />
+        <span
+          class="lazyload-wrapper"
+        >
+          <div
+            class="lazyload-placeholder"
+          />
+        </span>
       </div>
       <div
         class="c4"
