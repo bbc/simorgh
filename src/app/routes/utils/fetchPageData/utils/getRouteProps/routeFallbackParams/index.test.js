@@ -23,6 +23,18 @@ describe('routeFallBackParams', () => {
         expectedIsAmp: false,
       },
       {
+        description:
+          'should return true when path ends with .amp and has renderer_env override specified',
+        path: '/news/foobar.amp?renderer_env=live',
+        expectedIsAmp: true,
+      },
+      {
+        description:
+          'should return true when path ends with .amp and has any get params specified',
+        path: '/news/foobar.amp?blah=1',
+        expectedIsAmp: true,
+      },
+      {
         description: 'should return false if path ends in just "amp"',
         path: '/news/foobar/amp',
         expectedIsAmp: false,
