@@ -512,10 +512,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   margin: 0 auto;
 }
 
-.c3 {
-  width: 100%;
-}
-
 .c63 {
   margin-bottom: 1.5rem;
   padding: 1rem;
@@ -797,37 +793,55 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (max-width:14.9375rem) {
   .c2 {
+    width: calc(100% - 0%);
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
+    width: calc(100% - 0%);
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
+    width: calc(100% - 0%);
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
+    width: calc(100% - 0%);
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
+    width: calc(66.66666666666667%);
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    width: calc(66.66666666666667%);
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -1274,6 +1288,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @media (min-width:63rem) {
   .c1 {
     max-width: 63rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c3 {
+    width: 100%;
   }
 }
 
@@ -3129,10 +3149,6 @@ exports[`Story Page should render correctly when the secondary column data is no
   margin: 0 auto;
 }
 
-.c3 {
-  width: 100%;
-}
-
 .c44 {
   margin-bottom: 1.5rem;
   padding: 1rem;
@@ -3410,37 +3426,55 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (max-width:14.9375rem) {
   .c2 {
+    width: calc(100% - 0%);
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
+    width: calc(100% - 0%);
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
+    width: calc(100% - 0%);
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
+    width: calc(100% - 0%);
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
+    width: calc(66.66666666666667%);
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    width: calc(66.66666666666667%);
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -3674,6 +3708,12 @@ exports[`Story Page should render correctly when the secondary column data is no
 @media (min-width:63rem) {
   .c1 {
     max-width: 63rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c3 {
+    width: 100%;
   }
 }
 
@@ -4743,10 +4783,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   margin: 0 auto;
 }
 
-.c3 {
-  width: 100%;
-}
-
 .c65 {
   margin-bottom: 1.5rem;
   padding: 1rem;
@@ -5042,37 +5078,55 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (max-width:14.9375rem) {
   .c2 {
+    width: calc(100% - 0%);
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c2 {
+    width: calc(100% - 0%);
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c2 {
+    width: calc(100% - 0%);
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c2 {
+    width: calc(100% - 0%);
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c2 {
+    width: calc(66.66666666666667%);
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
 @media (min-width:80rem) {
   .c2 {
+    width: calc(66.66666666666667%);
     margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
   }
 }
 
@@ -5511,6 +5565,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @media (min-width:63rem) {
   .c1 {
     max-width: 63rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c3 {
+    width: 100%;
   }
 }
 
