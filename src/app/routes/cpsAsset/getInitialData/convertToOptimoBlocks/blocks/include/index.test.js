@@ -414,6 +414,9 @@ describe('convertInclude', () => {
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(output.model.html).toEqual(undefined);
     expect(loggerMock.info).toHaveBeenCalledTimes(1);
+    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
+      url: `https://foobar.com/includes/indepthtoolkit/quizzes/123-456`,
+    });
     expect(loggerMock.error).toHaveBeenCalledTimes(1);
     expect(loggerMock.error).toHaveBeenCalledWith(INCLUDE_ERROR, {
       error: 'Error: this is an error message',
