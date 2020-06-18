@@ -1,90 +1,94 @@
-import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrl from '../../utils/getPlaceholderImageUrl';
+import pathWithLogging, {
+  LOG_LEVELS,
+} from '#lib/utilities/logging/pathWithLogging';
+import { TV_MISSING_FIELD, TV_EPISODE_EXPIRED } from '#lib/logger.const';
 
-const getBrandTitle = path(['metadata', 'title']);
-const getLanguage = path(['metadata', 'language']);
-const getHeadline = path(['promo', 'headlines', 'headline']);
-const getId = path(['metadata', 'id']);
-const getShortSynopsis = path(['promo', 'media', 'synopses', 'short']);
-const getMasterBrand = path(['metadata', 'createdBy']);
-const getContentType = path(['metadata', 'analyticsLabels', 'contentType']);
-const getPageTitle = path(['metadata', 'analyticsLabels', 'pageTitle']);
-const getPageIdentifier = path([
-  'metadata',
-  'analyticsLabels',
-  'pageIdentifier',
-]);
-const getEpisodeId = path(['content', 'blocks', 0, 'id']);
-const getReleaseDateTimeStamp = path(['metadata', 'releaseDateTimeStamp']);
-const getDurationISO8601 = path([
-  'promo',
-  'media',
-  'versions',
-  0,
-  'durationISO8601',
-]);
-const getThumbnailImageUrl = json =>
-  getPlaceholderImageUrl(path(['promo', 'media', 'imageUrl'], json));
-const getPromoBrandTitle = path(['promo', 'brand', 'title']);
-const getImageUrl = path(['content', 'blocks', 0, 'imageUrl']);
-const getEpisodeAvailableFrom = path([
-  'content',
-  'blocks',
-  '0',
-  'versions',
-  '0',
-  'availableFrom',
-]);
-const getEpisodeAvailableUntil = path([
-  'content',
-  'blocks',
-  '0',
-  'versions',
-  '0',
-  'availableUntil',
-]);
+import nodeLogger from '#lib/logger.node';
 
-const getEpisodeAvailability = ({ availableFrom, availableUntil }) => {
+const logger = nodeLogger(__filename);
+
+const getEpisodeAvailability = ({ availableFrom, availableUntil, url }) => {
   const timeNow = Date.now();
-  if (!availableUntil || timeNow < availableFrom) return false;
+  if (!availableUntil || timeNow < availableFrom) {
+    logger.info(TV_EPISODE_EXPIRED, {
+      url,
+    });
+    return false;
+  }
   return true;
 };
+
+const getUrl = pageData =>
+  pathOr('Unknown', ['metadata', 'analyticsLabels', 'pageIdentifier'], pageData)
+    .replace('.page', '')
+    .replace(/\./g, '/');
 
 export default async ({ path: pathname }) => {
   const onDemandTvDataPath = overrideRendererOnTest(pathname);
   const { json, ...rest } = await fetchPageData(onDemandTvDataPath);
-  const pageType = { metadata: { type: 'On Demand TV' } };
+  if (!json) return rest;
 
-  const availableFrom = getEpisodeAvailableFrom(json);
-  const availableUntil = getEpisodeAvailableUntil(json);
+  const url = getUrl(json);
+
+  const get = pathWithLogging(url, TV_MISSING_FIELD, json);
+
+  const availableFrom = get([
+    'content',
+    'blocks',
+    '0',
+    'versions',
+    '0',
+    'availableFrom',
+  ]);
+
+  const availableUntil = get([
+    'content',
+    'blocks',
+    '0',
+    'versions',
+    '0',
+    'availableUntil',
+  ]);
 
   return {
     ...rest,
-    ...(json && {
-      pageData: {
-        language: getLanguage(json),
-        brandTitle: getBrandTitle(json),
-        id: getId(json),
-        headline: getHeadline(json),
-        shortSynopsis: getShortSynopsis(json),
-        contentType: getContentType(json),
-        pageTitle: getPageTitle(json),
-        pageIdentifier: getPageIdentifier(json),
-        releaseDateTimeStamp: getReleaseDateTimeStamp(json),
-        durationISO8601: getDurationISO8601(json),
-        thumbnailImageUrl: getThumbnailImageUrl(json),
-        promoBrandTitle: getPromoBrandTitle(json),
-        masterBrand: getMasterBrand(json),
-        episodeId: getEpisodeId(json),
-        imageUrl: getImageUrl(json),
-        episodeIsAvailable: getEpisodeAvailability({
-          availableFrom,
-          availableUntil,
-        }),
-        ...pageType,
-      },
-    }),
+    pageData: {
+      metadata: { type: 'On Demand TV' },
+      language: get(['metadata', 'language']),
+      brandTitle: get(['metadata', 'title']),
+      id: get(['metadata', 'id'], LOG_LEVELS.ERROR),
+      headline: get(['promo', 'headlines', 'headline'], LOG_LEVELS.WARN),
+      shortSynopsis: get(['promo', 'media', 'synopses', 'short']),
+      contentType: get(['metadata', 'analyticsLabels', 'contentType']),
+      pageTitle: get(['metadata', 'analyticsLabels', 'pageTitle']),
+      pageIdentifier: get(['metadata', 'analyticsLabels', 'pageIdentifier']),
+      releaseDateTimeStamp: get(
+        ['metadata', 'releaseDateTimeStamp'],
+        LOG_LEVELS.WARN,
+      ),
+      durationISO8601: get([
+        'promo',
+        'media',
+        'versions',
+        0,
+        'durationISO8601',
+      ]),
+      thumbnailImageUrl: getPlaceholderImageUrl(
+        get(['promo', 'media', 'imageUrl']),
+      ),
+      promoBrandTitle: get(['promo', 'brand', 'title']),
+      masterBrand: get(['metadata', 'createdBy'], LOG_LEVELS.ERROR),
+      episodeId: get(['content', 'blocks', 0, 'id'], LOG_LEVELS.ERROR),
+      imageUrl: get(['content', 'blocks', 0, 'imageUrl']),
+      episodeIsAvailable: getEpisodeAvailability({
+        availableFrom,
+        availableUntil,
+        url,
+      }),
+    },
   };
 };

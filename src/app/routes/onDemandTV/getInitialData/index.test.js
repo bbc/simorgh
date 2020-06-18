@@ -1,7 +1,12 @@
 import assocPath from 'ramda/src/assocPath';
+import pipe from 'ramda/src/pipe';
+import dissocPath from 'ramda/src/dissocPath';
+import map from 'ramda/src/map';
+import loggerMock from '#testHelpers/loggerMock';
 import getInitialData from '.';
 import * as fetchPageData from '../../utils/fetchPageData';
 import onDemandTvJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4';
+import { TV_MISSING_FIELD, TV_EPISODE_EXPIRED } from '#lib/logger.const';
 
 fetch.mockResponse(JSON.stringify(onDemandTvJson));
 const { env } = process;
@@ -49,7 +54,7 @@ describe('Get initial data for on demand tv', () => {
     expect(pageData.episodeIsAvailable).toEqual(true);
   });
 
-  it('should return episodeIsAvailable as false if episode is not available to watch', async () => {
+  it('should return episodeIsAvailable as false and create a log if episode is not available to watch', async () => {
     const pageDataWithoutVersions = assocPath(
       ['content', 'blocks', 0, 'versions'],
       [],
@@ -58,5 +63,56 @@ describe('Get initial data for on demand tv', () => {
     fetch.mockResponse(JSON.stringify(pageDataWithoutVersions));
     const { pageData } = await getInitialData('some-ondemand-tv-path');
     expect(pageData.episodeIsAvailable).toEqual(false);
+    expect(loggerMock.info).toHaveBeenCalledWith(TV_EPISODE_EXPIRED, {
+      url: 'pashto/bbc_pashto_tv/w172xcldhhrdqgb',
+    });
+  });
+
+  it('invokes logging when expected data is missing in fetchData response', async () => {
+    const errorFields = [
+      ['metadata', 'id'],
+      ['metadata', 'createdBy'],
+      ['content', 'blocks', 0, 'id'],
+    ];
+
+    const warnFields = [
+      ['promo', 'headlines', 'headline'],
+      ['metadata', 'releaseDateTimeStamp'],
+    ];
+
+    const infoFields = [
+      ['content', 'blocks', '0', 'versions', '0', 'availableFrom'],
+      ['content', 'blocks', '0', 'versions', '0', 'availableUntil'],
+      ['metadata', 'language'],
+      ['metadata', 'title'],
+      ['promo', 'media', 'synopses', 'short'],
+      ['metadata', 'analyticsLabels', 'contentType'],
+      ['metadata', 'analyticsLabels', 'pageTitle'],
+      ['metadata', 'analyticsLabels', 'pageIdentifier'],
+      ['promo', 'media', 'versions', 0, 'durationISO8601'],
+      ['promo', 'media', 'imageUrl'],
+      ['promo', 'brand', 'title'],
+      ['content', 'blocks', 0, 'imageUrl'],
+    ];
+
+    const pageDataWithMissingFields = pipe(
+      ...map(dissocPath, [...errorFields, ...warnFields, ...infoFields]),
+      JSON.stringify,
+    )(onDemandTvJson);
+
+    fetch.mockResponse(pageDataWithMissingFields);
+
+    await getInitialData({
+      path: 'mock-on-demand-tv-path',
+    });
+
+    const countMissingFieldCalls = mockedFunction =>
+      mockedFunction.mock.calls.filter(
+        ([logCategory]) => logCategory === TV_MISSING_FIELD,
+      ).length;
+
+    expect(countMissingFieldCalls(loggerMock.error)).toBe(errorFields.length);
+    expect(countMissingFieldCalls(loggerMock.warn)).toBe(warnFields.length);
+    expect(countMissingFieldCalls(loggerMock.info)).toBe(infoFields.length);
   });
 });
