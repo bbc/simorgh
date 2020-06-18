@@ -215,15 +215,6 @@ Object {
       "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png",
       "url": "http://localhost:7080/pashto/bbc_pashto_radio/w3ct0lz1",
     },
-    Object {
-      "@type": "AudioObject",
-      "description": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-      "duration": "PT29M30S",
-      "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps/amp?morph_env=live",
-      "name": "ماښامنۍ خپرونه",
-      "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png",
-      "uploadDate": "2020-05-01T00:00:00.000Z",
-    },
   ],
 }
 `;
