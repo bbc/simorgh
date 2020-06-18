@@ -2833,13 +2833,13 @@ module.exports = () => ({
             paths: [
               '/marathi/bbc_marathi_tv/tv_programmes/w13xttr2', // Brand
             ],
-            enabled: false,
+            enabled: false, // Marathi TV currently not broadcasting - do not enable
           },
           test: {
             paths: [
               '/marathi/bbc_marathi_tv/tv_programmes/w13xttr2', // Brand
             ],
-            enabled: false,
+            enabled: false, // Marathi TV currently not broadcasting - do not enable
           },
           local: {
             paths: [],
