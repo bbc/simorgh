@@ -17,7 +17,7 @@ const defaultAudioPlayerProps = {
   title: 'radio',
   type: 'audio',
   assetId: 'id',
-  iframeTitle: '오디오 플레이어',
+  iframeTitle: 'Audio Player',
   embedUrl:
     'https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om/amp?morph_env=live',
 };
