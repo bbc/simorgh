@@ -199,6 +199,7 @@ describe('onDemandRadioPath', () => {
     '/arabic/bbc_arabic_radio/radioschedule', // default radio schedule route
     '/indonesia/bbc_indonesian_radio/programmes/w34rfd4k', // onDemand radio brand any media id
     '/indonesia/bbc_indonesian_radio/programmes/w34rfd4k.amp', // onDemand radio brand amp any media id
+    '/zhongwen/simp/bbc_cantonese_radio/w5192pdkg', // onDemand radio with valid variant
   ];
   shouldMatchValidRoutes(validRoutes, onDemandRadioPath);
 
@@ -209,6 +210,7 @@ describe('onDemandRadioPath', () => {
     '/persian/foobar/abcd1234',
     '/persian/foobar/abcd1234.amp',
     '/indonesia/bbc_indonesian_radio/programmes/',
+    '/zhongwen/troll/bbc_cantonese_radio/w5192pdkg', // onDemand radio with invalid variant
   ];
   shouldNotMatchInvalidRoutes(invalidRoutes, onDemandRadioPath);
 });
