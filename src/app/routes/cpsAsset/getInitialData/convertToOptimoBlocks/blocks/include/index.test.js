@@ -37,9 +37,6 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: '/indepthtoolkit/quizzes/123-456',
-        required: false,
-        tile: 'A quiz!',
-        platform: 'highweb',
         type: 'idt1',
         html: idt1Markup,
       },
@@ -59,7 +56,7 @@ describe('convertInclude', () => {
     });
   });
 
-  it('should fetch and convert an include block to an idt2 block', async () => {
+  it('should fetch and convert an include block to an idt2 block for a canonical request', async () => {
     fetch.mockResponse(() => Promise.resolve(idt2Markup));
     const input = {
       required: false,
@@ -67,19 +64,49 @@ describe('convertInclude', () => {
       href: '/idt2/111-222-333-444-555',
       platform: 'highweb',
       type: 'include',
+      idt2: {
+        altText: 'image alt text',
+        dimensions: {
+          small: {
+            href: '/idt2/111-222-333-444-555/image/350',
+            width: 700,
+            height: 1864,
+          },
+          medium: {
+            href: '/idt2/111-222-333-444-555/image/470',
+            width: 940,
+            height: 1864,
+          },
+          large: {
+            href: '/idt2/111-222-333-444-555/image/816',
+            width: 1632,
+            height: 1864,
+          },
+        },
+        copyrightHolder: 'Source: BBC',
+        published: 1550229370779,
+      },
     };
     const expected = {
       type: 'include',
       model: {
         href: '/idt2/111-222-333-444-555',
-        required: false,
-        tile: 'IDT2 Include',
-        platform: 'highweb',
         type: 'idt2',
         html: idt2Markup,
+        imageBlock: {
+          alt: 'image alt text',
+          height: 1864,
+          layout: 'responsive',
+          src: 'https://foobar.com/includes/idt2/111-222-333-444-555/image/816',
+          srcset:
+            'https://foobar.com/includes/idt2/111-222-333-444-555/image/470 470w,https://foobar.com/includes/idt2/111-222-333-444-555/image/816 816w',
+          width: 1632,
+        },
       },
     };
-    expect(await convertInclude(input)).toEqual(expected);
+    expect(await convertInclude(input, null, null, '/news/1234568')).toEqual(
+      expected,
+    );
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/idt2/111-222-333-444-555/html',
@@ -92,6 +119,59 @@ describe('convertInclude', () => {
     expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
       url: 'https://foobar.com/includes/idt2/111-222-333-444-555/html',
     });
+  });
+
+  it('convert an include block to an idt2 block with an image block for an amp request', async () => {
+    fetch.mockResponse(() => Promise.resolve(idt2Markup));
+    const input = {
+      required: false,
+      tile: 'IDT2 Include',
+      href: '/idt2/111-222-333-444-555',
+      platform: 'highweb',
+      type: 'include',
+      idt2: {
+        altText: 'image alt text',
+        dimensions: {
+          small: {
+            href: '/idt2/111-222-333-444-555/image/350',
+            width: 700,
+            height: 1864,
+          },
+          medium: {
+            href: '/idt2/111-222-333-444-555/image/470',
+            width: 940,
+            height: 1864,
+          },
+          large: {
+            href: '/idt2/111-222-333-444-555/image/816',
+            width: 1632,
+            height: 1864,
+          },
+        },
+        copyrightHolder: 'Source: BBC',
+        published: 1550229370779,
+      },
+    };
+    const expected = {
+      type: 'include',
+      model: {
+        href: '/idt2/111-222-333-444-555',
+        type: 'idt2',
+        imageBlock: {
+          alt: 'image alt text',
+          height: 1864,
+          layout: 'responsive',
+          src: 'https://foobar.com/includes/idt2/111-222-333-444-555/image/470',
+          srcset:
+            'https://foobar.com/includes/idt2/111-222-333-444-555/image/350 350w,https://foobar.com/includes/idt2/111-222-333-444-555/image/470 470w',
+          width: 940,
+        },
+      },
+    };
+    expect(
+      await convertInclude(input, null, null, '/news/1234568.amp'),
+    ).toEqual(expected);
+    expect(fetch).not.toHaveBeenCalled();
   });
 
   it('should fetch and convert an include block to a vj block', async () => {
@@ -107,9 +187,6 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: '/include/111-222-333-444-555',
-        required: false,
-        tile: 'Include from VisJo',
-        platform: 'highweb',
         type: 'vj',
         html: vjMarkup,
       },
@@ -142,9 +219,6 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: 'indepthtoolkit/quizzes/123-456',
-        required: false,
-        tile: 'A quiz!',
-        platform: 'highweb',
         type: 'idt1',
         html: idt1Markup,
       },
@@ -172,16 +246,44 @@ describe('convertInclude', () => {
       href: 'idt2/111-222-333-444-555',
       platform: 'highweb',
       type: 'include',
+      idt2: {
+        altText: 'image alt text',
+        dimensions: {
+          small: {
+            href: '/idt2/111-222-333-444-555/image/350',
+            width: 700,
+            height: 1864,
+          },
+          medium: {
+            href: '/idt2/111-222-333-444-555/image/470',
+            width: 940,
+            height: 1864,
+          },
+          large: {
+            href: '/idt2/111-222-333-444-555/image/816',
+            width: 1632,
+            height: 1864,
+          },
+        },
+        copyrightHolder: 'Source: BBC',
+        published: 1550229370779,
+      },
     };
     const expected = {
       type: 'include',
       model: {
         href: 'idt2/111-222-333-444-555',
-        required: false,
-        tile: 'IDT2 Include',
-        platform: 'highweb',
         type: 'idt2',
         html: idt2Markup,
+        imageBlock: {
+          alt: 'image alt text',
+          height: 1864,
+          layout: 'responsive',
+          src: 'https://foobar.com/includes/idt2/111-222-333-444-555/image/816',
+          srcset:
+            'https://foobar.com/includes/idt2/111-222-333-444-555/image/470 470w,https://foobar.com/includes/idt2/111-222-333-444-555/image/816 816w',
+          width: 1632,
+        },
       },
     };
     expect(await convertInclude(input)).toEqual(expected);
@@ -212,9 +314,6 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: 'news/special/111-222-333-444-555',
-        required: false,
-        tile: 'Include from VisJo',
-        platform: 'highweb',
         type: 'vj',
         html: vjMarkup,
       },
@@ -242,16 +341,44 @@ describe('convertInclude', () => {
       href: 'idt2',
       platform: 'highweb',
       type: 'include',
+      idt2: {
+        altText: 'image alt text',
+        dimensions: {
+          small: {
+            href: '/idt2/111-222-333-444-555/image/350',
+            width: 700,
+            height: 1864,
+          },
+          medium: {
+            href: '/idt2/111-222-333-444-555/image/470',
+            width: 940,
+            height: 1864,
+          },
+          large: {
+            href: '/idt2/111-222-333-444-555/image/816',
+            width: 1632,
+            height: 1864,
+          },
+        },
+        copyrightHolder: 'Source: BBC',
+        published: 1550229370779,
+      },
     };
     const expected = {
       type: 'include',
       model: {
         href: 'idt2',
-        required: false,
-        tile: 'IDT2 Include',
-        platform: 'highweb',
         type: 'idt2',
         html: null,
+        imageBlock: {
+          alt: 'image alt text',
+          height: 1864,
+          layout: 'responsive',
+          src: 'https://foobar.com/includes/idt2/111-222-333-444-555/image/816',
+          srcset:
+            'https://foobar.com/includes/idt2/111-222-333-444-555/image/470 470w,https://foobar.com/includes/idt2/111-222-333-444-555/image/816 816w',
+          width: 1632,
+        },
       },
     };
     expect(await convertInclude(input)).toEqual(expected);
@@ -269,6 +396,70 @@ describe('convertInclude', () => {
       url: 'https://foobar.com/includes/idt2/html',
     });
   });
+
+  const propogateQueryTest = (summary, pathname, expectedUrlQuery) => {
+    it(`should fetch and convert an include block with ${summary}`, async () => {
+      fetch.mockResponse(() => Promise.resolve(idt1Markup));
+      const input = {
+        required: false,
+        tile: 'A quiz!',
+        href: '/indepthtoolkit/quizzes/123-456',
+        platform: 'highweb',
+        type: 'include',
+      };
+      const json = null;
+      const assetType = null;
+
+      const expected = {
+        type: 'include',
+        model: {
+          href: '/indepthtoolkit/quizzes/123-456',
+          type: 'idt1',
+          html: idt1Markup,
+        },
+      };
+
+      expect(await convertInclude(input, json, assetType, pathname)).toEqual(
+        expected,
+      );
+      expect(fetch).toHaveBeenCalledTimes(1);
+      expect(fetch).toHaveBeenCalledWith(
+        `https://foobar.com/includes/indepthtoolkit/quizzes/123-456${expectedUrlQuery}`,
+        {
+          timeout: 3000,
+        },
+      );
+      expect(loggerMock.error).not.toHaveBeenCalled();
+      expect(loggerMock.info).toHaveBeenCalledTimes(1);
+      expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
+        url: `https://foobar.com/includes/indepthtoolkit/quizzes/123-456${expectedUrlQuery}`,
+      });
+    });
+  };
+
+  propogateQueryTest(
+    'with a propagated renderer_env=live',
+    '/service/foobar?renderer_env=live',
+    '?renderer_env=live',
+  );
+
+  propogateQueryTest(
+    'with a propagated renderer_env=test',
+    '/service/foobar?renderer_env=test',
+    '?renderer_env=test',
+  );
+
+  propogateQueryTest(
+    'without propagating an invalid renderer_env value',
+    '/service/foobar?renderer_env=foo',
+    '',
+  );
+
+  propogateQueryTest(
+    'without propagating an invalid query parameter',
+    '/service/foobar?foo=bar',
+    '',
+  );
 
   it('should return null for an unsupported include type', async () => {
     fetch.mockResponse(() => Promise.resolve('No fetch call'));

@@ -14,7 +14,22 @@ const CpsRelatedContent = ({ content, parentColumns }) => {
 
   const title = pathOr('Related Content', ['relatedContent'], translations);
 
-  const singleTransform = promo => <StoryPromo item={promo} dir={dir} />;
+  const singleTransform = promo => (
+    <Grid
+      columns={{
+        group0: 1,
+        group1: 1,
+        group2: 1,
+        group3: 1,
+        group4: 2,
+        group5: 2,
+      }}
+      enableGelGutters
+      dir={dir}
+    >
+      <StoryPromo item={promo} dir={dir} />
+    </Grid>
+  );
 
   const listTransform = items => (
     <Grid

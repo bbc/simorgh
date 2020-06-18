@@ -1,8 +1,12 @@
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
+import { render } from '@testing-library/react';
+import loggerMock from '#testHelpers/loggerMock';
 import IncludeContainer from '.';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import * as idt2Amp from './amp/Idt2Amp';
+import * as canonical from './canonical';
+import { INCLUDE_RENDERED } from '#lib/logger.const';
 
 const defaultToggleState = {
   include: {
@@ -12,11 +16,40 @@ const defaultToggleState = {
 
 const toggleStateFalse = {
   include: {
-    enabled: true,
+    enabled: false,
   },
 };
 
 const fakeMarkup = `<div>Visual Journalism Markup</div><script type="text/javascript" src="localhost/vj.js"></script>`;
+
+const includeProps = {
+  html: fakeMarkup,
+  idt2: {
+    altText: 'some alt text',
+    dimensions: {
+      small: {
+        href:
+          'https://www.example.com/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/150',
+        height: 400,
+        width: 500,
+      },
+      medium: {
+        href:
+          'https://www.example.com/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/350',
+        height: 600,
+        width: 700,
+      },
+      large: {
+        href:
+          'https://www.example.com/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/550',
+        height: 800,
+        width: 900,
+      },
+    },
+  },
+  type: 'idt2',
+  href: '/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6',
+};
 
 // eslint-disable-next-line react/prop-types
 const MockContext = ({ toggleState, isAmp, children }) => (
@@ -35,160 +68,93 @@ const MockContext = ({ toggleState, isAmp, children }) => (
 );
 
 /* eslint-disable react/prop-types */
-const IncludeContainerWithMockContext = ({
-  toggleState,
-  html,
-  type,
-  isAmp,
-}) => (
+const IncludeContainerWithMockContext = ({ toggleState, isAmp, ...props }) => (
   <MockContext toggleState={toggleState} isAmp={isAmp}>
-    <IncludeContainer html={html} type={type} />
+    <IncludeContainer {...props} />
   </MockContext>
 );
 /* eslint-enable react/prop-types */
 
 describe('IncludeContainer', () => {
-  beforeEach(() => {
-    window.require = { config: jest.fn() };
-  });
-
   afterEach(() => {
-    window.require = null;
+    jest.clearAllMocks();
+    loggerMock.info.mockClear();
   });
 
-  it('should render HTML when include toggle is enabled', async () => {
-    const { container } = render(
-      <IncludeContainerWithMockContext
-        toggleState={defaultToggleState}
-        html={fakeMarkup}
-        type="idt2"
-      />,
-    );
-    expect(container).toMatchSnapshot();
-  });
+  it('should not render include for a Canonical page with toggles disabled', async () => {
+    const mockCanonical = jest
+      .fn()
+      .mockReturnValue('canonical-includes-component');
+    canonical.default = mockCanonical;
 
-  it('should not render any HTML when html prop is null', async () => {
-    const { container } = render(
-      <IncludeContainerWithMockContext
-        toggleState={defaultToggleState}
-        type="idt2"
-        html={null}
-      />,
-    );
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should not render any HTML for an unsupported include type', async () => {
-    const { container } = render(
-      <IncludeContainerWithMockContext
-        toggleState={defaultToggleState}
-        html={fakeMarkup}
-        type="idt20"
-      />,
-    );
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should not render any HTML when include toggle is disabled', async () => {
     const { container } = render(
       <IncludeContainerWithMockContext
         toggleState={toggleStateFalse}
-        html={fakeMarkup}
-        type="idt2"
+        {...includeProps}
       />,
     );
     expect(container).toMatchSnapshot();
+    expect(mockCanonical).not.toHaveBeenCalled();
+    expect(loggerMock.info).not.toHaveBeenCalled();
   });
 
-  it('should not render any HTML when its an amp page', async () => {
+  it('should render include for a Canonical page with toggles enabled', async () => {
+    const mockCanonical = jest
+      .fn()
+      .mockReturnValue('canonical-includes-component');
+    canonical.default = mockCanonical;
+
+    const { container } = render(
+      <IncludeContainerWithMockContext
+        toggleState={defaultToggleState}
+        {...includeProps}
+      />,
+    );
+
+    expect(loggerMock.info).toHaveBeenCalledTimes(1);
+    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
+      type: 'idt2',
+      includeUrl: '/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6',
+    });
+    expect(container).toMatchSnapshot();
+    expect(mockCanonical).toHaveBeenCalledTimes(1);
+  });
+
+  it('should render include for IDT2 on an Amp page with toggles enabled', async () => {
+    const mockIdt2Amp = jest.fn().mockReturnValue('IDT2-Amp-component');
+    idt2Amp.default = mockIdt2Amp;
+
+    const { container } = render(
+      <IncludeContainerWithMockContext
+        toggleState={defaultToggleState}
+        isAmp
+        {...includeProps}
+      />,
+    );
+    expect(container).toMatchSnapshot();
+    expect(mockIdt2Amp).toHaveBeenCalledTimes(1);
+    expect(mockIdt2Amp).toHaveBeenCalledWith(includeProps, {});
+    expect(loggerMock.info).toHaveBeenCalledTimes(1);
+    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
+      type: 'idt2',
+      includeUrl: '/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6',
+    });
+  });
+
+  it('should not render include for an Amp page with toggles disabled', async () => {
+    const mockIdt2Amp = jest.fn().mockReturnValue('IDT2-Amp-component');
+    idt2Amp.default = mockIdt2Amp;
     const { container } = render(
       <IncludeContainerWithMockContext
         toggleState={toggleStateFalse}
         html={fakeMarkup}
         type="idt2"
         isAmp
+        href="/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6"
       />,
     );
     expect(container).toMatchSnapshot();
-  });
-
-  const runningIncludeTest = includeType => {
-    it(`should add require to the page for ${includeType}`, async () => {
-      render(
-        <IncludeContainerWithMockContext
-          toggleState={toggleStateFalse}
-          html={fakeMarkup}
-          type={includeType}
-        />,
-      );
-
-      await waitFor(() => {
-        const scripts = Array.from(document.querySelectorAll('head script'));
-
-        expect(scripts).toEqual(
-          expect.arrayContaining([
-            expect.objectContaining({
-              src: `https://news.files.bbci.co.uk/include/vjassets/js/vendor/require-2.1.20b.min.js`,
-            }),
-            expect.objectContaining({
-              text: expect.stringContaining('require.config'),
-            }),
-          ]),
-        );
-
-        expect(scripts).toHaveLength(2);
-
-        expect(window.require.config).toHaveBeenCalledTimes(1);
-      });
-    });
-  };
-  runningIncludeTest('vj');
-  runningIncludeTest('idt1');
-
-  it(`should add require once for page with multiple vj and idt1 includes`, async () => {
-    render(
-      <MockContext toggleState={defaultToggleState}>
-        <IncludeContainer html={fakeMarkup} type="idt1" />
-        <IncludeContainer html={fakeMarkup} type="vj" />
-        <IncludeContainer html={fakeMarkup} type="idt1" />
-        <IncludeContainer html={fakeMarkup} type="vj" />
-      </MockContext>,
-    );
-
-    await waitFor(() => {
-      const scripts = Array.from(document.querySelectorAll('head script'));
-
-      expect(scripts).toEqual(
-        expect.arrayContaining([
-          expect.objectContaining({
-            src: `https://news.files.bbci.co.uk/include/vjassets/js/vendor/require-2.1.20b.min.js`,
-          }),
-          expect.objectContaining({
-            text: expect.stringContaining('require.config'),
-          }),
-        ]),
-      );
-
-      expect(scripts).toHaveLength(2);
-
-      expect(window.require.config).toHaveBeenCalledTimes(1);
-    });
-  });
-
-  it(`should not add require to the page for idt2`, async () => {
-    render(
-      <IncludeContainerWithMockContext
-        toggleState={toggleStateFalse}
-        html={fakeMarkup}
-        type="idt2"
-      />,
-    );
-
-    await waitFor(() => {
-      expect(Array.from(document.querySelectorAll('head script'))).toHaveLength(
-        0,
-      );
-      expect(window.require.config).toHaveBeenCalledTimes(0);
-    });
+    expect(mockIdt2Amp).not.toHaveBeenCalled();
+    expect(loggerMock.info).not.toHaveBeenCalled();
   });
 });

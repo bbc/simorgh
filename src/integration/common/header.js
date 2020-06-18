@@ -15,15 +15,27 @@ export default () => {
       expect(langCode).toBeInTheDocument();
     });
 
-    it('I can see the navigation', () => {
-      const navigationItemATag = document.querySelector(
-        'header nav ul > li > a',
-      );
+    describe('Navigation link', () => {
+      const navigationLinks = document
+        .querySelector('header nav [role="list"]')
+        .querySelectorAll('a');
 
-      expect(navigationItemATag).toBeInTheDocument();
-      expect(navigationItemATag.getAttribute('href')).toBeTruthy();
-      expect(navigationItemATag.textContent).toBeTruthy();
-      expect(navigationItemATag.textContent).toMatchSnapshot();
+      navigationLinks.forEach(navigationLink => {
+        const linkText = navigationLink.textContent;
+        const linkUrl = navigationLink.getAttribute('href');
+
+        it('should be in the document', () => {
+          expect(navigationLink).toBeInTheDocument();
+        });
+
+        it('should contain text', () => {
+          expect(linkText).toBeTruthy();
+        });
+
+        it('should match text and url', () => {
+          expect(`${linkText} - ${linkUrl}`).toMatchSnapshot();
+        });
+      });
     });
 
     it('I can see a skip to content link', () => {

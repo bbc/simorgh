@@ -203,7 +203,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"RadioChannel","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News አማርኛ","publishingPrinciples":"https://www.bbc.com/amharic/institutional-49283133","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"ያድምጡ"}}
+      {"@context":"http://schema.org","@graph":[{"@type":"RadioChannel","url":"https://www.test.bbc.com/pathname","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"ያድምጡ"}}]}
     </script>
     <script
       async="true"
@@ -242,17 +242,17 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   margin-bottom: 1rem;
 }
 
-.c5 {
-  width: calc(100% + 1rem);
-  margin: 0 -0.5rem;
-}
-
 .c1 {
   width: 100%;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c5 {
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -372,13 +372,6 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   }
 }
 
-@media (min-width:25rem) {
-  .c5 {
-    width: calc(100% + 2rem);
-    margin: 0 -1rem;
-  }
-}
-
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     margin: 0 auto;
@@ -390,6 +383,13 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   .c1 {
     margin: 0 auto;
     max-width: 80rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c5 {
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
   }
 }
 
@@ -491,17 +491,17 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   margin-bottom: 1rem;
 }
 
-.c5 {
-  width: calc(100% + 1rem);
-  margin: 0 -0.5rem;
-}
-
 .c1 {
   width: 100%;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c5 {
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
 }
 
 .c7 {
@@ -631,13 +631,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   }
 }
 
-@media (min-width:25rem) {
-  .c5 {
-    width: calc(100% + 2rem);
-    margin: 0 -1rem;
-  }
-}
-
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     margin: 0 auto;
@@ -649,6 +642,13 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   .c1 {
     margin: 0 auto;
     max-width: 80rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c5 {
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
   }
 }
 
@@ -857,7 +857,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"RadioChannel","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News አማርኛ","publishingPrinciples":"https://www.bbc.com/amharic/institutional-49283133","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"ያድምጡ"}}
+      {"@context":"http://schema.org","@graph":[{"@type":"RadioChannel","url":"https://www.test.bbc.com/pathname","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"ያድምጡ"}}]}
     </script>
   </head>
   <body>

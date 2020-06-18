@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import Grid from '.';
+import Grid, { CPSPageGrid } from '.';
 
 const outerGridProps = {
   columns: {
@@ -33,5 +33,23 @@ describe('Grid', () => {
         <p>item spanning 2 out of 6 columns</p>
       </Grid>
     </Grid>,
+  );
+
+  shouldMatchSnapshot(
+    'should render CPSPageGrid',
+    <CPSPageGrid>
+      <Grid {...gridItemProps}>
+        <p>CPS page grid</p>
+      </Grid>
+    </CPSPageGrid>,
+  );
+
+  shouldMatchSnapshot(
+    'should render CPSPageGrid with additional props',
+    <CPSPageGrid as="main" role="main">
+      <Grid {...gridItemProps}>
+        <p>CPS page grid</p>
+      </Grid>
+    </CPSPageGrid>,
   );
 });
