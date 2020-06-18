@@ -566,6 +566,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
       <section
         aria-labelledby="Radio-Schedule"
         class="RadioScheduleSection-f8vxqz-0 cDuWSa"
+        lang="fa-AF"
         role="region"
       >
         <div
