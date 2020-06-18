@@ -19,7 +19,7 @@ const defaultAudioPlayerProps = {
   assetId: 'id',
   iframeTitle: '오디오 플레이어',
   embedUrl:
-    'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp?morph_env=live',
+    'https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om/amp?morph_env=live',
 };
 
 const defaultRequestContextValue = { platform: 'foobar', origin };
