@@ -5,9 +5,8 @@ import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
 import { logExpiredEpisode } from './logInitialData';
 import pathWithLogging, { LOG_LEVELS } from './pathWithLogging';
 
-const getEpisodeAvailability = ({ availableFrom, availableUntil }) => {
-  const timeNow = Date.now();
-  if (!availableUntil || timeNow < availableFrom) {
+const getEpisodeAvailability = ({ availableUntil }) => {
+  if (!availableUntil) {
     return false;
   }
   return true;
@@ -46,14 +45,6 @@ const getPageIdentifier = path([
   'analyticsLabels',
   'pageIdentifier',
 ]);
-const getEpisodeAvailableFrom = path([
-  'content',
-  'blocks',
-  '0',
-  'versions',
-  '0',
-  'availableFrom',
-]);
 const getEpisodeAvailableUntil = path([
   'content',
   'blocks',
@@ -84,10 +75,8 @@ export default async ({ path: pathname }) => {
   const { json, ...rest } = await fetchPageData(onDemandRadioDataPath);
   const pageType = { metadata: { type: 'On Demand Radio' } };
 
-  const availableFrom = getEpisodeAvailableFrom(json);
   const availableUntil = getEpisodeAvailableUntil(json);
   const episodeIsAvailable = getEpisodeAvailability({
-    availableFrom,
     availableUntil,
   });
 

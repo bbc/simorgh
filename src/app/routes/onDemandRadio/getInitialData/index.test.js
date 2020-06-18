@@ -53,16 +53,17 @@ describe('Get initial data for on demand radio', () => {
     expect(pageData.episodeIsAvailable).toEqual(true);
   });
 
-  it('should return episodeIsAvailable as false if current time is before when episode is availableFrom', async () => {
+  it('should return episodeIsAvailable as true if current time is before when episode is availableFrom', async () => {
     const oneMinuteFromNow = Date.now() + 60 * 1000;
+    const twoMinutesFromNow = Date.now() + 120 * 1000;
     const responseWithEpisodeAvailableInOneMinute = assocPath(
       ['content', 'blocks', '0', 'versions', '0', 'availableFrom'],
-      oneMinuteFromNow,
+      { availableFrom: oneMinuteFromNow, availableUntil: twoMinutesFromNow },
       onDemandRadioJson,
     );
     fetch.mockResponse(JSON.stringify(responseWithEpisodeAvailableInOneMinute));
     const { pageData } = await getInitialData('mock-on-demand-radio-path');
-    expect(pageData.episodeIsAvailable).toEqual(false);
+    expect(pageData.episodeIsAvailable).toEqual(true);
   });
 
   it('should return episodeIsAvailable as false if there is no availableUntil data', async () => {
