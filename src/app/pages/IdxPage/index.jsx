@@ -85,6 +85,7 @@ const IdxPage = ({
               {radioScheduleOnIdxPage &&
                 radioScheduleIdxPosition === group.semanticGroupName && (
                   <RadioScheduleContainer
+                    lang="fa-AF"
                     initialData={radioScheduleData}
                     radioScheduleEndpointOverride={
                       radioScheduleEndpointOverride
