@@ -5,11 +5,12 @@ const includeSupportingAmp =
 
 describe('Amp Src Builder', () => {
   beforeEach(() => {
-    process.env.SIMORGH_INCLUDES_BASE_AMP_URL = 'https://news.files.bbci.co.uk';
+    process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN =
+      'https://news.files.bbci.co.uk';
   });
 
   afterEach(() => {
-    delete process.env.SIMORGH_INCLUDES_BASE_AMP_URL;
+    delete process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN;
   });
   it('should return a url with amp inserted between the url path and query parameters', () => {
     const actual = ampSrcBuilder(includeSupportingAmp);
