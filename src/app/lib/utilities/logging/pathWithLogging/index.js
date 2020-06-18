@@ -1,7 +1,6 @@
 import isNil from 'ramda/src/isNil';
 import path from 'ramda/src/path';
-import { RADIO_MISSING_FIELD } from '#lib/logger.const';
-import { getUri } from '../logInitialData';
+import curry from 'ramda/src/curry';
 import nodeLogger from '#lib/logger.node';
 
 const logger = nodeLogger(__filename);
@@ -19,15 +18,20 @@ const getLoggingFunction = level =>
     [LOG_LEVELS.ERROR]: logger.error,
   }[level] || logger.info);
 
-export default (fieldPath, { logLevel = LOG_LEVELS.INFO } = {}) => pageData => {
+const pathWithLogging = (url, logCategory, pageData) => (
+  fieldPath,
+  { logLevel = LOG_LEVELS.INFO } = {},
+) => {
   const field = path(fieldPath, pageData);
   if (isNil(field)) {
     const loggingFunction = getLoggingFunction(logLevel);
-    loggingFunction(RADIO_MISSING_FIELD, {
-      url: getUri(pageData),
+    loggingFunction(logCategory, {
+      url,
       path: fieldPath,
     });
   }
 
   return field;
 };
+
+export default curry(pathWithLogging);
