@@ -58,7 +58,7 @@ export default async ({ path: pathname }) => {
 
   const withLogging = pathWithLogging(getUri(json), RADIO_MISSING_FIELD, json);
   const get = (fieldPath, logLevel) =>
-    logLevel ? path(fieldPath, json) : withLogging(fieldPath, { logLevel });
+    logLevel ? withLogging(fieldPath, { logLevel }) : path(fieldPath, json);
 
   return {
     ...rest,

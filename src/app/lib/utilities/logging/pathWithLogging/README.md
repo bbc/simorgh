@@ -1,9 +1,9 @@
 # pathWithLogging
-This is a utility module that combine safe retrieval of nested fields (similar to ramda's `path`) with the additional behavior that, if the field is undefined, a log entry is created
+This is a utility module that combines safe retrieval of nested fields (similar to ramda's `path`) with the additional behavior that, if the field is undefined, a log entry is created
 
 The module is designed primarily for use with the `getInitialData` functions which we specify for each page.
 
-These functions have a large JSON object (normally called `pageData`) from which we pluck the fields we need to render the page.  Where these fields are missing from the API response, we want to be alerted.
+These functions have a large JSON object (normally called `pageData`) from which we pluck the fields we need to render the page.  Where certain fields are missing from the API response, we want to be alerted.
 
 This module is a generalised implementation for creating that behavior.
 
