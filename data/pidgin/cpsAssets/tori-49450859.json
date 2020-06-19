@@ -54,6 +54,7 @@
       "about": [
         {
           "thingLabel": "Technology",
+          "thingEnglishLabel": "Technology",
           "thingUri": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id",
           "thingId": "31684f19-84d6-41f6-b033-7ae08098572a",
           "thingType": ["Theme", "Thing"],
@@ -72,6 +73,7 @@
         },
         {
           "thingLabel": "Nigeria",
+          "thingEnglishLabel": "Nigeria",
           "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
           "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
           "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
