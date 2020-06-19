@@ -51,10 +51,15 @@ const LiveRadioPage = ({ pageData }) => {
     bodySummary,
     masterBrand,
   } = pageData;
-  const { script, service, dir, lang, liveRadioOverrides } = useContext(
-    ServiceContext,
-  );
-  const { isAmp, translations } = useContext(RequestContext);
+  const {
+    script,
+    service,
+    dir,
+    lang,
+    liveRadioOverrides,
+    translations,
+  } = useContext(ServiceContext);
+  const { isAmp } = useContext(RequestContext);
   const location = useLocation();
   const assetId = 'liveradio';
   const mediaId = getMediaId({
