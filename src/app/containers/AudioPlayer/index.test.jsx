@@ -6,6 +6,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import AudioPlayer from '.';
 
+/* eslint-disable react/prop-types */
 const GenerateFixtureData = ({
   platform,
   assetId = 'w3ct0l8r',
