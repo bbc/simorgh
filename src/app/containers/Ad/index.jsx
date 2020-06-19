@@ -16,7 +16,8 @@ const AdContainer = () => {
     return null;
   }
 
-  return isAmp ? <AmpAd slotType="leaderboard" /> : <CanonicalAd />;
+  const Ad = isAmp ? AmpAd : CanonicalAd;
+  return <Ad slotType="leaderboard" />;
 };
 
 export default AdContainer;

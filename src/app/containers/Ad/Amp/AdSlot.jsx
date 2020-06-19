@@ -34,11 +34,6 @@ const slotConfigurations = {
       height: '250',
       adMultiSize: '300x250',
     },
-    desktop: {
-      width: '300',
-      height: '250',
-      adMultiSize: '300x250',
-    },
   },
 };
 
