@@ -68,9 +68,6 @@ const StyledAudioPlayer = styled(AudioPlayer)`
   }
 `;
 
-const type = 'audio';
-const title = 'On-demand radio';
-
 const OnDemandRadioPage = ({ pageData }) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
   const {
@@ -168,8 +165,8 @@ const OnDemandRadioPage = ({ pageData }) => {
               assetId={episodeId}
               embedUrl={embedUrl}
               iframeTitle={iframeTitle}
-              title={title}
-              type={type}
+              title="On-demand radio"
+              type="audio"
             />
           ) : (
             <StyledMessageContainer>
