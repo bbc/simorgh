@@ -1,115 +1,97 @@
 import React from 'react';
-import {
-  shouldMatchSnapshot,
-  isNull,
-  suppressPropWarnings,
-} from '@bbc/psammead-test-helpers';
+import { render } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import omit from 'ramda/src/omit';
+import { string } from 'prop-types';
+import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { RequestContext } from '#contexts/RequestContext';
 import AudioPlayer from '.';
 
-const origin = 'http://localhost:7080';
-
-const defaultAudioPlayerProps = {
-  idAttr: 'idAttr',
-  title: 'radio',
-  type: 'audio',
-  assetId: 'id',
-  iframeTitle: 'Audio Player',
-  embedUrl:
-    'https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om/amp?morph_env=live',
-};
-
-const defaultRequestContextValue = { platform: 'foobar', origin };
-
-/* eslint-disable react/prop-types */
-const renderComponent = ({
-  audioPlayerProps = defaultAudioPlayerProps,
-  requestContextValue = defaultRequestContextValue,
-  service = 'korean',
+const GenerateFixtureData = ({
+  platform,
+  assetId,
+  title,
+  type,
+  embedUrl,
+  iframeTitle,
 }) => (
-  <RequestContext.Provider value={requestContextValue}>
-    <ServiceContextProvider service={service}>
+  <RequestContextProvider
+    isAmp={platform === 'amp'}
+    service="news"
+    statusCode={200}
+    platform={platform}
+    id="foo"
+    pageType="media"
+    pathname="/pathname"
+  >
+    <ServiceContextProvider service="news">
       <BrowserRouter>
-        <AudioPlayer {...audioPlayerProps} />
+        <AudioPlayer
+          assetId={assetId}
+          embedUrl={embedUrl}
+          iframeTitle={iframeTitle}
+          title={title}
+          type={type}
+        />
       </BrowserRouter>
     </ServiceContextProvider>
-  </RequestContext.Provider>
+  </RequestContextProvider>
 );
-/* eslint-enable react/prop-types */
 
-describe('MediaPageBlocks AudioPlayer', () => {
-  shouldMatchSnapshot(
-    'should render correctly for canonical',
-    renderComponent({
-      requestContextValue: { platform: 'canonical', isAmp: false, origin },
-    }),
-  );
+GenerateFixtureData.propTypes = {
+  platform: string.isRequired,
+  title: string.isRequired,
+  assetId: string.isRequired,
+  type: string.isRequired,
+  embedUrl: string.isRequired,
+  iframeTitle: string.isRequired,
+};
 
-  // TODO: remove the need for this suppressPropWarnings for placeholderSrc on AMP player
-  suppressPropWarnings(['placeholderSrc', 'undefined']);
+const VideoAMPWithPlaceholder = (
+  <GenerateFixtureData
+    platform="amp"
+    title="Audio Player"
+    iframeTitle="Audio Player"
+    type="audio"
+    assetId="w3ct0l8r"
+    embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om/amp"
+    showPlaceholder
+  />
+);
 
-  shouldMatchSnapshot(
-    'should render correctly for amp',
-    renderComponent({
-      requestContextValue: { platform: 'amp', isAmp: true, origin },
-    }),
-  );
+const VideoCanonicalNoPlaceholder = (
+  <GenerateFixtureData
+    platform="canonical"
+    title="Audio Player"
+    iframeTitle="Audio Player"
+    type="audio"
+    assetId="w3ct0l8r"
+    embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om"
+    showPlaceholder={false}
+  />
+);
 
-  describe('when platform is unknown', () => {
-    suppressPropWarnings(['text', 'undefined']);
+describe('AudioPlayer', () => {
+  it('should render the iframe on canonical', () => {
+    render(VideoCanonicalNoPlaceholder);
 
-    isNull('should render null', renderComponent({}));
+    expect(document.querySelector('iframe')).toBeInTheDocument();
   });
 
-  describe('when id isnt provided', () => {
-    suppressPropWarnings(['id', 'undefined']);
+  it('should render the iframe on AMP', () => {
+    render(VideoAMPWithPlaceholder);
 
-    isNull(
-      'should render null',
-      renderComponent({
-        audioPlayerProps: omit(['id'], defaultAudioPlayerProps),
-      }),
-    );
+    expect(document.querySelector('amp-iframe')).toBeInTheDocument();
   });
 
-  describe('when externalId isnt provided', () => {
-    isNull(
-      'should render null',
-      renderComponent({
-        audioPlayerProps: omit(['externalId'], defaultAudioPlayerProps),
-      }),
-    );
+  it('should contain the noscript tag for no-JS scenarios on canonical', () => {
+    render(VideoCanonicalNoPlaceholder);
+
+    expect(document.querySelector('noscript')).toBeInTheDocument();
   });
 
-  describe('when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo_radio', () => {
-    const service = 'afaanoromoo';
-    const audioPlayerProps = {
-      ...defaultAudioPlayerProps,
-      externalId: 'bbc_oromo_radio',
-    };
+  it('should contain the noscript tag for no-JS scenarios on AMP', () => {
+    render(VideoAMPWithPlaceholder);
 
-    shouldMatchSnapshot(
-      'should render correctly for canonical',
-      renderComponent({
-        service,
-        requestContextValue: { platform: 'canonical', isAmp: false, origin },
-        audioPlayerProps,
-      }),
-    );
-
-    // TODO: remove the need for this suppressPropWarnings for placeholderSrc on AMP player
-    suppressPropWarnings(['placeholderSrc', 'undefined']);
-
-    shouldMatchSnapshot(
-      'should render correctly for amp',
-      renderComponent({
-        service,
-        requestContextValue: { platform: 'amp', isAmp: true, origin },
-        audioPlayerProps,
-      }),
-    );
+    expect(document.querySelector('noscript')).toBeInTheDocument();
   });
 });
