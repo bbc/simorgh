@@ -8,13 +8,9 @@ import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
-
-const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
-
 const AudioPlayer = ({
   assetId,
-  idAttr,
+  imageUrl,
   embedUrl,
   title,
   type,
@@ -38,10 +34,9 @@ const AudioPlayer = ({
     <div className={className}>
       {isAmp ? (
         <AmpMediaPlayer
-          placeholderSrc={audioPlaceholderImageSrc}
+          placeholderSrc={imageUrl}
           src={embedUrl}
           title={iframeTitle}
-          id={idAttr}
           skin="audio"
           noJsMessage={noJsMessage}
           service={service}
@@ -51,7 +46,6 @@ const AudioPlayer = ({
           showPlaceholder={false}
           src={embedUrl}
           title={iframeTitle}
-          id={idAttr}
           skin="audio"
           service={service}
           mediaInfo={mediaInfo}
@@ -65,7 +59,7 @@ const AudioPlayer = ({
 
 AudioPlayer.propTypes = {
   assetId: string,
-  idAttr: string,
+  imageUrl: string,
   embedUrl: string,
   type: string,
   title: string,
@@ -75,7 +69,7 @@ AudioPlayer.propTypes = {
 
 AudioPlayer.defaultProps = {
   assetId: '',
-  idAttr: null,
+  imageUrl: '',
   type: '',
   title: '',
   embedUrl: '',

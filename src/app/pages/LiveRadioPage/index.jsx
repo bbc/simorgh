@@ -23,6 +23,10 @@ import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 
+const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
+
+const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
+
 const StyledGelPageGrid = styled(GelPageGrid)`
   width: 100%;
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
@@ -142,6 +146,7 @@ const LiveRadioPage = ({ pageData }) => {
             iframeTitle={iframeTitle}
             title="Live radio"
             type="audio"
+            imageUrl={audioPlaceholderImageSrc}
           />
         </Grid>
       </StyledGelPageGrid>
