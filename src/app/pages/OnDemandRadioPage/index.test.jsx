@@ -59,18 +59,20 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
 
 const { env } = process;
 
+const getAvailableEpisode = assocPath(
+  ['content', 'blocks', 0, 'versions'],
+  [{ availableFrom: 1583496180000, availableUntil: 9999999999999 }],
+);
+
 describe('OnDemand Radio Page ', () => {
   beforeEach(() => {
     process.env = { ...env };
   });
 
   it('should match snapshot for Canonical', async () => {
-    const clonedPashtoPageData = clone(pashtoPageData);
-    clonedPashtoPageData.content.blocks[0].versions[0] = {
-      availableFrom: 1583496180000,
-      availableUntil: 9999999999999,
-    };
-    const pashtoPageDataWithAvailableEpisode = clonedPashtoPageData;
+    const pashtoPageDataWithAvailableEpisode = getAvailableEpisode(
+      pashtoPageData,
+    );
     fetch.mockResponse(JSON.stringify(pashtoPageDataWithAvailableEpisode));
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
@@ -80,12 +82,9 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should match snapshot for AMP', async () => {
-    const clonedPashtoPageData = clone(pashtoPageData);
-    clonedPashtoPageData.content.blocks[0].versions[0] = {
-      availableFrom: 1583496180000,
-      availableUntil: 9999999999999,
-    };
-    const pashtoPageDataWithAvailableEpisode = clonedPashtoPageData;
+    const pashtoPageDataWithAvailableEpisode = getAvailableEpisode(
+      pashtoPageData,
+    );
     fetch.mockResponse(JSON.stringify(pashtoPageDataWithAvailableEpisode));
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
@@ -170,12 +169,9 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the audio player on canonical', async () => {
-    const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0] = {
-      availableFrom: 1583496180000,
-      availableUntil: 9999999999999,
-    };
-    const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
+    const koreanPageDataWithAvailableEpisode = getAvailableEpisode(
+      koreanPageData,
+    );
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
     const { container } = await renderPage({ pageData, service: 'korean' });
@@ -190,12 +186,9 @@ describe('OnDemand Radio Page ', () => {
 
   it('should show the audio player on canonical using no override on live', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
-    const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0] = {
-      availableFrom: 1583496180000,
-      availableUntil: 9999999999999,
-    };
-    const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
+    const koreanPageDataWithAvailableEpisode = getAvailableEpisode(
+      koreanPageData,
+    );
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
     const { container } = await renderPage({ pageData, service: 'korean' });
@@ -209,12 +202,9 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the audio player on AMP', async () => {
-    const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0] = {
-      availableFrom: 1583496180000,
-      availableUntil: 9999999999999,
-    };
-    const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
+    const koreanPageDataWithAvailableEpisode = getAvailableEpisode(
+      koreanPageData,
+    );
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
     const { container } = await renderPage({
@@ -233,12 +223,9 @@ describe('OnDemand Radio Page ', () => {
 
   it('should show the audio player on AMP using no override on live', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
-    const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0] = {
-      availableFrom: 1583496180000,
-      availableUntil: 9999999999999,
-    };
-    const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
+    const koreanPageDataWithAvailableEpisode = getAvailableEpisode(
+      koreanPageData,
+    );
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
     const { container } = await renderPage({
@@ -292,9 +279,7 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should return bbc_afaanoromoo_radio when the masterBrand is bbc_oromoo_radio on canonical', async () => {
-    const afaanPageDataWithAvailableEpisode = assocPath(
-      ['content', 'blocks', 0, 'versions'],
-      [{ availableFrom: 1583496180000, availableUntil: 9999999999999 }],
+    const afaanPageDataWithAvailableEpisode = getAvailableEpisode(
       afaanoromooPageData,
     );
     fetch.mockResponse(JSON.stringify(afaanPageDataWithAvailableEpisode));
@@ -313,9 +298,7 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should return bbc_afaanoromoo_radio when the masterBrand is bbc_oromoo_radio on AMP', async () => {
-    const afaanPageDataWithAvailableEpisode = assocPath(
-      ['content', 'blocks', 0, 'versions'],
-      [{ availableFrom: 1583496180000, availableUntil: 9999999999999 }],
+    const afaanPageDataWithAvailableEpisode = getAvailableEpisode(
       afaanoromooPageData,
     );
     fetch.mockResponse(JSON.stringify(afaanPageDataWithAvailableEpisode));
@@ -335,12 +318,9 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should contain the translated iframe title', async () => {
-    const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0] = {
-      availableFrom: 1583496180000,
-      availableUntil: 9999999999999,
-    };
-    const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
+    const koreanPageDataWithAvailableEpisode = getAvailableEpisode(
+      koreanPageData,
+    );
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
     const { container } = await renderPage({
