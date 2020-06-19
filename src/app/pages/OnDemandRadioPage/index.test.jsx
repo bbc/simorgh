@@ -271,7 +271,7 @@ describe('OnDemand Radio Page ', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should not show the audio player if it is not available yet', async () => {
+  it('should show the audio player when the episode is not yet available', async () => {
     const clonedKoreanPageData = clone(koreanPageData);
     clonedKoreanPageData.content.blocks[0].versions[0] = {
       availableFrom: 9999999999999,
@@ -285,7 +285,7 @@ describe('OnDemand Radio Page ', () => {
     const { container } = await renderPage({ pageData, service: 'korean' });
     const audioPlayerIframeEl = container.querySelector('iframe');
 
-    expect(audioPlayerIframeEl).not.toBeInTheDocument();
+    expect(audioPlayerIframeEl).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
 });
