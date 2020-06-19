@@ -38,15 +38,6 @@ const GenerateFixtureData = ({
   </RequestContextProvider>
 );
 
-GenerateFixtureData.propTypes = {
-  platform: string.isRequired,
-  title: string.isRequired,
-  assetId: string.isRequired,
-  type: string.isRequired,
-  embedUrl: string.isRequired,
-  iframeTitle: string.isRequired,
-};
-
 const VideoAMPWithPlaceholder = (
   <GenerateFixtureData
     platform="amp"
