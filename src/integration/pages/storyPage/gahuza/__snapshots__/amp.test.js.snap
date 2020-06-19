@@ -4,7 +4,6 @@ exports[`Amp Story Page Includes renders for an IDT2 include as an amp img 1`] =
 <amp-img
   alt="Chart title (0.15.6). Chart sub title.  This is a footnote text."
   attribution=""
-  fallback="false"
   height="964"
   layout="responsive"
   src="https://www.test.bbc.com/ws/includes/idt2/ae805ced-e912-4f89-a9f5-105510946fad/image/470"

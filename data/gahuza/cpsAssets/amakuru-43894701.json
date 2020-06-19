@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/gahuza/amakuru-43894701",
       "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-43894701",
-      "curie": "http://www.bbc.co.uk/asset/c9176a99-9a30-e34f-b637-cd39e3574db3"
+      "curie": "http://www.bbc.co.uk/asset/c9176a99-9a30-e34f-b637-cd39e3574db3",
+      "assetId": "43894701"
     },
     "type": "PGL",
     "createdBy": "gahuza-v6",
     "language": "rw",
-    "lastUpdated": 1563572299841,
-    "firstPublished": 1524652443,
-    "lastPublished": 1524653681,
+    "lastUpdated": 1588737377395,
+    "firstPublished": 1524652443000,
+    "lastPublished": 1524652443000,
+    "timestamp": 1524652443000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
@@ -37,15 +39,20 @@
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Infographic",
         "categoryName": "Infographic"
-      }
+      },
+      "taggings": []
     },
     "tags": {
       "about": [
         {
-          "thingLabel": "Refugees and asylum seekers",
+          "thingLabel": "Impunzi n'abasaba ubuhungiro",
           "thingUri": "http://www.bbc.co.uk/things/0cd55773-e753-44ad-ad07-1366bf1aa6bc#id",
           "thingId": "0cd55773-e753-44ad-ad07-1366bf1aa6bc",
-          "thingType": ["Theme", "Thing"],
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Thing",
+            "core:Theme"
+          ],
           "thingSameAs": [
             "http://dbpedia.org/resource/Refugee",
             "http://www.wikidata.org/entity/Q564811"
@@ -57,14 +64,21 @@
               "curationId": "8f7a165d-b322-4b72-a75c-53f10b74001e",
               "curationType": "vivo-stream"
             }
-          ]
+          ],
+          "thingEnglishLabel": "Refugees and asylum seekers"
         },
         {
           "thingLabel": "Rwanda",
           "thingUri": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
           "thingId": "8125f2a9-3259-4f35-ab75-d9a6577fdc88",
-          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
-          "thingSameAs": ["http://sws.geonames.org/49518/"],
+          "thingType": [
+            "core:Place",
+            "tagging:TagConcept",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/49518/"
+          ],
           "topicName": "Rwanda",
           "topicId": "c340q4v3942t",
           "curationList": [
@@ -72,16 +86,23 @@
               "curationId": "aafe0848-80a9-4325-8b5d-de9d56d4bd64",
               "curationType": "vivo-stream"
             }
-          ]
+          ],
+          "thingEnglishLabel": "Rwanda"
         }
       ],
       "mentions": [
         {
-          "thingLabel": "Democratic Republic of Congo",
+          "thingLabel": "Republika Iharanira Demokrasi ya Kongo",
           "thingUri": "http://www.bbc.co.uk/things/3548f44f-46f5-4e6e-8628-3f668f161691#id",
           "thingId": "3548f44f-46f5-4e6e-8628-3f668f161691",
-          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
-          "thingSameAs": ["http://sws.geonames.org/203312/"],
+          "thingType": [
+            "core:Place",
+            "core:Thing",
+            "tagging:TagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/203312/"
+          ],
           "topicName": "Republika Iharanira Demokrasi ya Kongo",
           "topicId": "c8y94y03z72t",
           "curationList": [
@@ -89,13 +110,20 @@
               "curationId": "be542793-fcb5-4ea2-8600-5b7d006fd03b",
               "curationType": "vivo-stream"
             }
-          ]
+          ],
+          "thingEnglishLabel": "Democratic Republic of Congo"
         }
       ]
     },
-    "version": "v1.0.10",
-    "blockTypes": ["image"],
-    "includeComments": false
+    "version": "v1.2.1",
+    "blockTypes": [
+      "image"
+    ],
+    "includeComments": false,
+    "atiAnalytics": {
+      "producerName": "GAHUZA",
+      "producerId": "40"
+    }
   },
   "content": {
     "blocks": [
@@ -193,15 +221,18 @@
     "locators": {
       "assetUri": "/gahuza/amakuru-43894701",
       "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-43894701",
-      "curie": "http://www.bbc.co.uk/asset/c9176a99-9a30-e34f-b637-cd39e3574db3"
+      "curie": "http://www.bbc.co.uk/asset/c9176a99-9a30-e34f-b637-cd39e3574db3",
+      "assetId": "43894701"
     },
     "summary": "Mu mafoto, uruhagarara ni rwinshi mu nkambi ya Kiziba icumbikiye impunzi z'Abanyekongo mu gihe igipolisi cy'u Rwanda cyongeye kuyinjiramo",
-    "timestamp": 1563572299841,
+    "timestamp": 1524652443000,
+    "language": "rw",
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Infographic",
         "categoryName": "Infographic"
-      }
+      },
+      "taggings": []
     },
     "indexImage": {
       "id": "101034734",
