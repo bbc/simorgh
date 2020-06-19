@@ -8,11 +8,11 @@ import AudioPlayer from '.';
 
 const GenerateFixtureData = ({
   platform,
-  assetId,
-  title,
-  type,
+  assetId = 'w3ct0l8r',
+  title = 'Audio Player',
+  type = 'audio',
   embedUrl,
-  iframeTitle,
+  iframeTitle = 'Audio Player',
 }) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
