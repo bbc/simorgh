@@ -5,13 +5,18 @@ import appToggles from '../../../support/helpers/useAppToggles';
 const pageType = 'mediaAssetPage';
 
 const embedUrlConfig = {
-  test: [
+  local: [
     'https://polling.test.bbc.co.uk/ws/av-embeds/cps/bengali/media-23269006/p01k6msp/bn', // CPS Video Clip
-    'https://polling.test.bbc.co.uk/ws/av-embeds/cps/arabic/world-23278971/p01m7d09/ar', // CPS Audio Clip
-    'https://polling.test.bbc.co.uk/ws/av-embeds/cps/swahili/media-23268999/bbc_one_northern_ireland_hd/sw', // CPS Live Stream
+    // 'https://polling.test.bbc.co.uk/ws/av-embeds/cps/arabic/world-23278971/p01m7d09/ar', // CPS Audio Clip
+    // 'https://polling.test.bbc.co.uk/ws/av-embeds/cps/swahili/media-23268999/bbc_one_northern_ireland_hd/sw', // CPS Live Stream
+  ],
+  test: [
+    // 'https://polling.test.bbc.co.uk/ws/av-embeds/cps/bengali/media-23269006/p01k6msp/bn', // CPS Video Clip
+    // 'https://polling.test.bbc.co.uk/ws/av-embeds/cps/arabic/world-23278971/p01m7d09/ar', // CPS Audio Clip
+    // 'https://polling.test.bbc.co.uk/ws/av-embeds/cps/swahili/media-23268999/bbc_one_northern_ireland_hd/sw', // CPS Live Stream
   ],
   live: [
-    'https://polling.bbc.co.uk/ws/av-embeds/cps/bengali/news-51660521/p085h0z3/bn', // CPS Video Clip
+    // 'https://polling.bbc.co.uk/ws/av-embeds/cps/bengali/news-51660521/p085h0z3/bn', // CPS Video Clip
     // CPS Audio Clip?
     // TC2 Video Clip?
     // TC2 Audio Clip?
