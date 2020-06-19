@@ -140,8 +140,8 @@ const LiveRadioPage = ({ pageData }) => {
             assetId={assetId}
             embedUrl={embedUrl}
             iframeTitle={iframeTitle}
-            title={title}
-            type={type}
+            title="Live radio"
+            type="audio"
           />
         </Grid>
       </StyledGelPageGrid>
