@@ -13,7 +13,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
       class="IndexPageContainer-sc-1yb6vt4-0 lkUiYo"
     >
       <h1
-        class="HeadingIndex-sc-1155hfb-0 StyledIndexHeading-jnasqg-0 gaYamM"
+        class="HeadingIndex-sc-1155hfb-0 StyledIndexHeading-jnasqg-0 kYCmnu"
         dir="rtl"
         id="content"
         tabindex="-1"
@@ -1424,6 +1424,455 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
             </div>
           </li>
         </ul>
+      </section>
+      <section
+        aria-labelledby="Most-Read"
+        class="MostReadSection-sc-1r6ctrd-0 IdxMostReadSection-sc-1rygalq-0 jNNusG"
+        data-e2e="most-read"
+        role="region"
+      >
+        <div
+          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD SectionLabelWithMargin-sc-1resov9-0 dxfHPg"
+        >
+          <div
+            class="Bar-sc-1x4gwjz-0 kXOyLn"
+          />
+          <h2
+            class="Heading-sc-1x4gwjz-2 eZofTG"
+          >
+            <span
+              class="FlexColumn-wx5kdp-0 dgpsiS"
+            >
+              <span
+                class="FlexRow-wx5kdp-2 dVBNyZ"
+              >
+                <span
+                  class="Title-wx5kdp-4 jJpioi"
+                  dir="rtl"
+                  id="Most-Read"
+                >
+                  پربیننده‌ترین‌ها
+                </span>
+              </span>
+            </span>
+          </h2>
+        </div>
+        <ol
+          class="GridComponent-nf79gm-0 gjgzxV OneColumnGrid-sc-1ofyujo-0 TwoColumnGrid-sc-1ofyujo-1 boiGsE"
+          dir="rtl"
+          role="list"
+        >
+          <li
+            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            dir="rtl"
+            role="listitem"
+          >
+            <div
+              class="ItemWrapper-u0d8kd-3 juBlKT"
+            >
+              <div
+                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cUcvKH"
+                dir="rtl"
+              >
+                <span
+                  class="StyledSpan-fs4y6m-3 bvXRlE"
+                >
+                  ۱
+                </span>
+              </div>
+              <div
+                class="StyledItem-u0d8kd-1 fkeZwt"
+                dir="rtl"
+              >
+                <a
+                  class="StyledLink-u0d8kd-0 OTgcR"
+                  href="/persian/world-50317704"
+                >
+                  توافق با جدایی‌طلبان یمن؛ ایران اعتراض کرد، سازمان ملل استقبال
+                </a>
+                <div
+                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                >
+                  <time
+                    class="StyledTimestamp-um718p-0 fMHMrb"
+                    datetime="2019-11-06"
+                  >
+                    به روز شده در ۶ نوامبر ۲۰۱۹
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            dir="rtl"
+            role="listitem"
+          >
+            <div
+              class="ItemWrapper-u0d8kd-3 juBlKT"
+            >
+              <div
+                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hFxcvr"
+                dir="rtl"
+              >
+                <span
+                  class="StyledSpan-fs4y6m-3 bvXRlE"
+                >
+                  ۲
+                </span>
+              </div>
+              <div
+                class="StyledItem-u0d8kd-1 fkeZwt"
+                dir="rtl"
+              >
+                <a
+                  class="StyledLink-u0d8kd-0 OTgcR"
+                  href="/persian/iran-50319870"
+                >
+                  فراخوان آذری جهرمی برای مناظره اینستاگرامی - زرآبادی: در مجلس مناظره کنیم
+                </a>
+                <div
+                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                >
+                  <time
+                    class="StyledTimestamp-um718p-0 fMHMrb"
+                    datetime="2019-11-06"
+                  >
+                    به روز شده در ۶ نوامبر ۲۰۱۹
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            dir="rtl"
+            role="listitem"
+          >
+            <div
+              class="ItemWrapper-u0d8kd-3 juBlKT"
+            >
+              <div
+                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cUcvKH"
+                dir="rtl"
+              >
+                <span
+                  class="StyledSpan-fs4y6m-3 bvXRlE"
+                >
+                  ۳
+                </span>
+              </div>
+              <div
+                class="StyledItem-u0d8kd-1 fkeZwt"
+                dir="rtl"
+              >
+                <a
+                  class="StyledLink-u0d8kd-0 OTgcR"
+                  href="/persian/world-50320610"
+                >
+                  ترکیه: همسر ابوبکر بغدادی را 'دستگیر کردیم'
+                </a>
+                <div
+                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                >
+                  <time
+                    class="StyledTimestamp-um718p-0 fMHMrb"
+                    datetime="2019-11-06"
+                  >
+                    به روز شده در ۶ نوامبر ۲۰۱۹
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            dir="rtl"
+            role="listitem"
+          >
+            <div
+              class="ItemWrapper-u0d8kd-3 juBlKT"
+            >
+              <div
+                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hFxcvr"
+                dir="rtl"
+              >
+                <span
+                  class="StyledSpan-fs4y6m-3 bvXRlE"
+                >
+                  ۴
+                </span>
+              </div>
+              <div
+                class="StyledItem-u0d8kd-1 fkeZwt"
+                dir="rtl"
+              >
+                <a
+                  class="StyledLink-u0d8kd-0 OTgcR"
+                  href="/persian/world-50316456"
+                >
+                  غنی سازی مجدد در فردو: مکرون اقدام ایران را 'عمیقا مایه نگرانی' خواند
+                </a>
+                <div
+                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                >
+                  <time
+                    class="StyledTimestamp-um718p-0 fMHMrb"
+                    datetime="2019-11-06"
+                  >
+                    به روز شده در ۶ نوامبر ۲۰۱۹
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            dir="rtl"
+            role="listitem"
+          >
+            <div
+              class="ItemWrapper-u0d8kd-3 juBlKT"
+            >
+              <div
+                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cUcvKH"
+                dir="rtl"
+              >
+                <span
+                  class="StyledSpan-fs4y6m-3 bvXRlE"
+                >
+                  ۵
+                </span>
+              </div>
+              <div
+                class="StyledItem-u0d8kd-1 fkeZwt"
+                dir="rtl"
+              >
+                <a
+                  class="StyledLink-u0d8kd-0 OTgcR"
+                  href="/persian/magazine-50249226"
+                >
+                  دوازده دلیل حکمرانی حشرات: سوسک می‌تواند دو هفته بدون سر زنده بماند
+                </a>
+                <div
+                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                >
+                  <time
+                    class="StyledTimestamp-um718p-0 fMHMrb"
+                    datetime="2019-11-06"
+                  >
+                    به روز شده در ۶ نوامبر ۲۰۱۹
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            dir="rtl"
+            role="listitem"
+          >
+            <div
+              class="ItemWrapper-u0d8kd-3 juBlKT"
+            >
+              <div
+                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hhqpIX"
+                dir="rtl"
+              >
+                <span
+                  class="StyledSpan-fs4y6m-3 bvXRlE"
+                >
+                  ۶
+                </span>
+              </div>
+              <div
+                class="StyledItem-u0d8kd-1 fkeZwt"
+                dir="rtl"
+              >
+                <a
+                  class="StyledLink-u0d8kd-0 OTgcR"
+                  href="/persian/world-50317700"
+                >
+                  انتخابات ایالتی آمریکا؛ دموکرات‌ها از جمهوری‌خواهان پیش افتادند
+                </a>
+                <div
+                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                >
+                  <time
+                    class="StyledTimestamp-um718p-0 fMHMrb"
+                    datetime="2019-11-06"
+                  >
+                    به روز شده در ۶ نوامبر ۲۰۱۹
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            dir="rtl"
+            role="listitem"
+          >
+            <div
+              class="ItemWrapper-u0d8kd-3 juBlKT"
+            >
+              <div
+                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 lhNSnn"
+                dir="rtl"
+              >
+                <span
+                  class="StyledSpan-fs4y6m-3 bvXRlE"
+                >
+                  ۷
+                </span>
+              </div>
+              <div
+                class="StyledItem-u0d8kd-1 fkeZwt"
+                dir="rtl"
+              >
+                <a
+                  class="StyledLink-u0d8kd-0 OTgcR"
+                  href="/persian/sport-50322486"
+                >
+                  عراق اردن را به عنوان میزبان بازی با ایران معرفی کرد
+                </a>
+                <div
+                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                >
+                  <time
+                    class="StyledTimestamp-um718p-0 fMHMrb"
+                    datetime="2019-11-06"
+                  >
+                    به روز شده در ۶ نوامبر ۲۰۱۹
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            dir="rtl"
+            role="listitem"
+          >
+            <div
+              class="ItemWrapper-u0d8kd-3 juBlKT"
+            >
+              <div
+                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hhqpIX"
+                dir="rtl"
+              >
+                <span
+                  class="StyledSpan-fs4y6m-3 bvXRlE"
+                >
+                  ۸
+                </span>
+              </div>
+              <div
+                class="StyledItem-u0d8kd-1 fkeZwt"
+                dir="rtl"
+              >
+                <a
+                  class="StyledLink-u0d8kd-0 OTgcR"
+                  href="/persian/iran-features-50310665"
+                >
+                  آیا تهران بازی هسته ای را به هم می‌زند؟
+                </a>
+                <div
+                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                >
+                  <time
+                    class="StyledTimestamp-um718p-0 fMHMrb"
+                    datetime="2019-11-06"
+                  >
+                    به روز شده در ۶ نوامبر ۲۰۱۹
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            dir="rtl"
+            role="listitem"
+          >
+            <div
+              class="ItemWrapper-u0d8kd-3 juBlKT"
+            >
+              <div
+                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 lhNSnn"
+                dir="rtl"
+              >
+                <span
+                  class="StyledSpan-fs4y6m-3 bvXRlE"
+                >
+                  ۹
+                </span>
+              </div>
+              <div
+                class="StyledItem-u0d8kd-1 fkeZwt"
+                dir="rtl"
+              >
+                <a
+                  class="StyledLink-u0d8kd-0 OTgcR"
+                  href="/persian/world-50316450"
+                >
+                  آمریکا: دو ایرانی اتهام جمع‌آوری اطلاعات علیه سازمان مجاهدین در خاک آمریکا را پذیرفتند
+                </a>
+                <div
+                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                >
+                  <time
+                    class="StyledTimestamp-um718p-0 fMHMrb"
+                    datetime="2019-11-06"
+                  >
+                    به روز شده در ۶ نوامبر ۲۰۱۹
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            dir="rtl"
+            role="listitem"
+          >
+            <div
+              class="ItemWrapper-u0d8kd-3 juBlKT"
+            >
+              <div
+                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hhqpIX"
+                dir="rtl"
+              >
+                <span
+                  class="StyledSpan-fs4y6m-3 bvXRlE"
+                >
+                  ۱۰
+                </span>
+              </div>
+              <div
+                class="StyledItem-u0d8kd-1 fkeZwt"
+                dir="rtl"
+              >
+                <a
+                  class="StyledLink-u0d8kd-0 OTgcR"
+                  href="/persian/sport-50318030"
+                >
+                  فوتبال ایران و عراق؛ ایران: امن است بازی می‌کنیم، فیفا: ناامن است بازی نکنید
+                </a>
+                <div
+                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                >
+                  <time
+                    class="StyledTimestamp-um718p-0 fMHMrb"
+                    datetime="2019-11-06"
+                  >
+                    به روز شده در ۶ نوامبر ۲۰۱۹
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
       </section>
     </div>
   </main>

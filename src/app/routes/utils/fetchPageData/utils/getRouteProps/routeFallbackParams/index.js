@@ -1,8 +1,10 @@
+import Url from 'url-parse';
 import services from '#lib/config/services/loadableConfig';
 
 export const fallbackAmpParam = url => {
+  const { pathname } = new Url(url, true);
   const ampRegex = /\.amp$/;
-  return ampRegex.test(url);
+  return ampRegex.test(pathname);
 };
 
 export const fallbackServiceParam = url => {
