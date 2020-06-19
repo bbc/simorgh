@@ -324,6 +324,8 @@ describe('cspHeader', () => {
         'https://csi.gstatic.com',
         'https://sb.scorecardresearch.com',
         'https://secure-us.imrworldwide.com',
+        'https://pixel.adsafeprotected.com',
+        'https://static.adsafeprotected.com',
         "data: 'self'",
       ],
       scriptSrcExpectation: [
@@ -360,8 +362,6 @@ describe('cspHeader', () => {
         'https://tags.crwdcntrl.net',
         'https://tpc.googlesyndication.com',
         'https://gn-web-assets.api.bbc.com',
-        'https://pixel.adsafeprotected.com',
-        'https://static.adsafeprotected.com',
         'https://www.googletagservices.com',
         "'self'",
         "'unsafe-inline'",
