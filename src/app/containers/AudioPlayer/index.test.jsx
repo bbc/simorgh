@@ -60,10 +60,6 @@ const VideoAMPWithPlaceholder = (
 const VideoCanonicalNoPlaceholder = (
   <GenerateFixtureData
     platform="canonical"
-    title="Audio Player"
-    iframeTitle="Audio Player"
-    type="audio"
-    assetId="w3ct0l8r"
     embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om"
   />
 );
