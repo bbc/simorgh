@@ -157,7 +157,7 @@ const OnDemandTvPage = ({ pageData }) => {
           dir={dir}
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
           columns={getGroups(6, 6, 6, 6, 6, 12)}
-          margins={getGroups(true, true, true, true, false, false)}
+          margins={getGroups(true, true, true, true, true, false)}
         >
           <VisuallyHiddenText as="h1" tabIndex="-1" id="content">
             {brandTitle}, {formattedTimestamp}
@@ -189,6 +189,14 @@ const OnDemandTvPage = ({ pageData }) => {
             releaseDateTimeStamp={releaseDateTimeStamp}
             ariaHidden
           />
+        </Grid>
+        <Grid
+          item
+          dir={dir}
+          columns={getGroups(6, 6, 6, 6, 5, 10)}
+          startOffset={getGroups(1, 1, 1, 1, 2, 5)}
+          margins={getGroups(true, true, true, true, false, false)}
+        >
           <ParagraphBlock text={shortSynopsis} />
         </Grid>
       </StyledGelPageGrid>
