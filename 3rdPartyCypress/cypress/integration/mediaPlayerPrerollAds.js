@@ -14,7 +14,7 @@ const embedUrlConfig = {
   ],
   live: [
     // 'https://polling.bbc.co.uk/ws/av-embeds/cps/bengali/news-51660521/p085h0z3/bn', // CPS Video Clip
-    // CPS Audio Clip?
+    // 'https://polling.bbc.co.uk/ws/av-embeds/cps/arabic/tv-and-radio-47546152/p0739rgm/ar' // CPS Audio Clip
     // TC2 Video Clip?
     // TC2 Audio Clip?
     // Live Stream?
