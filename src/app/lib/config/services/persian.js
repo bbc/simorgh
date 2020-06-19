@@ -20,6 +20,7 @@ export const service = {
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'به روز شده در',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-persian',
     atiAnalyticsProducerId: '69',
     chartbeatDomain: 'persian.bbc.co.uk',

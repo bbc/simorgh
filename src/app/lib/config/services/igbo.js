@@ -14,6 +14,7 @@ export const service = {
     lang: 'ig',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Mgbe ikpeazụ e tinyere ya ozi ọhụrụ',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-igbo',
     atiAnalyticsProducerId: '53',
     chartbeatDomain: 'igbo.bbc.co.uk',

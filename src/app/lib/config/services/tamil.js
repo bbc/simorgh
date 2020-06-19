@@ -15,6 +15,7 @@ export const service = {
     lang: `ta`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'புதுப்பிக்கப்பட்டது',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-tamil',
     atiAnalyticsProducerId: '87',
     chartbeatDomain: 'tamil.bbc.co.uk',

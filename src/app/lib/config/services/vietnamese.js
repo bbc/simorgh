@@ -14,6 +14,7 @@ export const service = {
     lang: `vi`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Cập nhật',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-vietnamese',
     atiAnalyticsProducerId: '97',
     chartbeatDomain: 'vietnamese.bbc.co.uk',

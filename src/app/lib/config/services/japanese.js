@@ -14,6 +14,7 @@ export const service = {
     lang: `ja`,
     articleAuthor: `https://www.facebook.com/bbcnews/`,
     articleTimestampPrefix: '更新',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-japanese',
     atiAnalyticsProducerId: '56',
     chartbeatDomain: 'japanese.bbc.co.uk',

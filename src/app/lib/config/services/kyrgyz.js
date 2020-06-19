@@ -14,6 +14,7 @@ export const service = {
     lang: `ky`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Жаңылоо',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-kyrgyz',
     atiAnalyticsProducerId: '58',
     chartbeatDomain: 'kyrgyz.bbc.co.uk',

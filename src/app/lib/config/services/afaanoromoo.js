@@ -14,6 +14,7 @@ export const service = {
     lang: `om`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Haaromsameera',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-afaanoromoo',
     atiAnalyticsProducerId: '2',
     chartbeatDomain: 'afaanoromoo.bbc.co.uk',

@@ -14,6 +14,7 @@ export const service = {
     lang: `ko`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: '에 업데이트됨',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-korean',
     atiAnalyticsProducerId: '57',
     chartbeatDomain: 'korean.bbc.co.uk',

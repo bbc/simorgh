@@ -18,6 +18,7 @@ export const service = {
     lang: `si`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'යාවත්කාලීනවී ඇත',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-sinhala',
     atiAnalyticsProducerId: '82',
     chartbeatDomain: 'sinhala.bbc.co.uk',

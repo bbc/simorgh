@@ -20,6 +20,7 @@ export const service = {
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'تازه',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-pashto',
     atiAnalyticsProducerId: '68',
     brandName: 'BBC News پښتو',

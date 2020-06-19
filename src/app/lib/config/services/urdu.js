@@ -19,6 +19,7 @@ export const service = {
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'اپ ڈیٹ کی گئی',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-urdu',
     atiAnalyticsProducerId: '95',
     chartbeatDomain: 'urdu.bbc.co.uk',

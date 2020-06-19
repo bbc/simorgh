@@ -18,6 +18,7 @@ export const service = {
     lang: `ti`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ዝተመሓየሸ',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-tigrinya',
     atiAnalyticsProducerId: '91',
     chartbeatDomain: 'tigrinya.bbc.co.uk',

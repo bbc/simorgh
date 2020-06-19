@@ -14,6 +14,7 @@ export const service = {
     lang: `sw`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Imeboreshwa',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-swahili',
     atiAnalyticsProducerId: '86',
     chartbeatDomain: 'swahili.bbc.co.uk',

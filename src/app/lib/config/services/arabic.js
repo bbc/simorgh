@@ -18,6 +18,7 @@ export const service = {
     lang: 'ar',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'جدّد في',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-arabic',
     atiAnalyticsProducerId: '5',
     chartbeatDomain: 'arabic.bbc.co.uk',

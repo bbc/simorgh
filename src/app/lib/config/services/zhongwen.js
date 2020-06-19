@@ -8,6 +8,7 @@ import withContext from '../../../contexts/utils/withContext';
 const baseServiceConfig = {
   articleAuthor: `https://www.facebook.com/bbcworldservice/`,
   articleTimestampPrefix: '最近更新：',
+  articleTimestampSuffix: '',
   atiAnalyticsAppName: 'news-zhongwen',
   atiAnalyticsProducerId: '38',
   chartbeatDomain: 'zhongwen.bbc.co.uk',

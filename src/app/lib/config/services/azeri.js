@@ -14,6 +14,7 @@ export const service = {
     lang: `az`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Yeniləndi',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-azeri',
     atiAnalyticsProducerId: '6',
     chartbeatDomain: 'azeri.bbc.co.uk',

@@ -18,6 +18,7 @@ export const service = {
     lang: `bn`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'আপডেট হয়েছে',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-bengali',
     atiAnalyticsProducerId: '31',
     chartbeatDomain: 'bengali.bbc.co.uk',

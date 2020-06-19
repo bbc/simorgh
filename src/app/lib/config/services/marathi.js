@@ -14,6 +14,7 @@ export const service = {
     lang: `mr`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'अपडेटेड',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-marathi',
     atiAnalyticsProducerId: '59',
     chartbeatDomain: 'marathi.bbc.co.uk',

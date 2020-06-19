@@ -14,6 +14,7 @@ export const service = {
     lang: 'pcm',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'New Informate',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-pidgin',
     atiAnalyticsProducerId: '70',
     chartbeatDomain: 'pidgin.bbc.co.uk',

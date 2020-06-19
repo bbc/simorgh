@@ -13,6 +13,7 @@ export const service = {
     },
     lang: `ne`,
     articleAuthor: `http://www.facebook.com/bbcnews`,
+    articleTimestampPrefix: '',
     articleTimestampSuffix: 'मा अद्यावधिक',
     atiAnalyticsAppName: 'news-nepali',
     atiAnalyticsProducerId: '63',

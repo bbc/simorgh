@@ -14,6 +14,7 @@ export const service = {
     lang: `gu`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'અપડેટેડ',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-gujarati',
     atiAnalyticsProducerId: '50',
     chartbeatDomain: 'gujarati.bbc.co.uk',
