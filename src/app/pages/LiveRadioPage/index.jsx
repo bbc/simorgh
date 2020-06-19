@@ -39,9 +39,6 @@ const StyledAudioPlayer = styled(AudioPlayer)`
   }
 `;
 
-const type = 'audio';
-const title = 'Live radio';
-
 const LiveRadioPage = ({ pageData }) => {
   const {
     language,
