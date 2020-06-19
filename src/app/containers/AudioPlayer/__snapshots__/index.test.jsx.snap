@@ -37,7 +37,7 @@ exports[`MediaPageBlocks AudioPlayer should render correctly for amp 1`] = `
             sandbox="allow-scripts allow-same-origin"
             scrolling="no"
             src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om/amp?morph_env=live"
-            title="오디오 플레이어"
+            title="Audio Player"
           >
             <amp-img
               alt=""
@@ -93,7 +93,7 @@ exports[`MediaPageBlocks AudioPlayer should render correctly for canonical 1`] =
       class="c1"
       scrolling="no"
       src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om/amp?morph_env=live"
-      title="오디오 플레이어"
+      title="Audio Player"
     />
     <noscript />
   </div>
@@ -137,7 +137,7 @@ exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is ov
             sandbox="allow-scripts allow-same-origin"
             scrolling="no"
             src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om/amp?morph_env=live"
-            title="오디오 플레이어"
+            title="Audio Player"
           >
             <amp-img
               alt=""
@@ -193,7 +193,7 @@ exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is ov
       class="c1"
       scrolling="no"
       src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om/amp?morph_env=live"
-      title="오디오 플레이어"
+      title="Audio Player"
     />
     <noscript />
   </div>
