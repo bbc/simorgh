@@ -260,7 +260,6 @@ describe('cspHeader', () => {
         'https://survey.effectivemeasure.net',
         'https://detect-survey.effectivemeasure.net',
         'https://collector.effectivemeasure.net/',
-        'https://www.bbc.co.uk',
         'https://adservice.google.com',
         'https://securepubads.g.doubleclick.net',
         'https://pagead2.googlesyndication.com',

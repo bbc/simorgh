@@ -66,14 +66,12 @@ const directives = {
       'https://www.bbc.co.uk', // STY include indepthtoolkit
       'https://news.files.bbci.co.uk', // STY include
       'https://news.test.files.bbci.co.uk', // STY include
-      // Ads
-      'https://csi.gstatic.com',
-      'https://experience.tinypass.com',
-      'https://static.test.files.bbci.co.uk',
-      'https://survey.effectivemeasure.net',
-      'https://detect-survey.effectivemeasure.net',
-      'https://collector.effectivemeasure.net/',
-      'https://www.bbc.co.uk',
+      'https://csi.gstatic.com', // ads
+      'https://experience.tinypass.com', // ads
+      'https://static.test.files.bbci.co.uk', // ads
+      'https://survey.effectivemeasure.net', // ads
+      'https://detect-survey.effectivemeasure.net', // ads
+      'https://collector.effectivemeasure.net/', // ads
       'https://adservice.google.com', // ads
       'https://securepubads.g.doubleclick.net', // ads
       'https://pagead2.googlesyndication.com', // ads
@@ -133,9 +131,8 @@ const directives = {
       'https://www.bbc.co.uk', // STY include
       'http://www.bbc.co.uk', // for localhost STY include
       'https://bbc-maps.carto.com', // STY include maps
-      // Ads
-      'https://bcp.crwdcntrl.net',
-      'https://edigitalsurvey.com',
+      'https://bcp.crwdcntrl.net', // ads
+      'https://edigitalsurvey.com', // ads
       'https://securepubads.g.doubleclick.net', // ads
       'https://tpc.googlesyndication.com', // ads
       "'self'",
@@ -219,11 +216,10 @@ const directives = {
       'https://news.bbcimg.co.uk', // STY include
       'https://static.bbc.co.uk', // STY include
       'http://static.bbc.co.uk', // localhost STY include
-      // Ads
-      'https://collector.effectivemeasure.net',
-      'https://csi.gstatic.com',
-      'https://sb.scorecardresearch.com',
-      'https://secure-us.imrworldwide.com',
+      'https://collector.effectivemeasure.net', // ads
+      'https://csi.gstatic.com', // ads
+      'https://sb.scorecardresearch.com', // ads
+      'https://secure-us.imrworldwide.com', // ads
       "data: 'self'", // needed at the end to maintain proper order
     ],
   },
@@ -282,22 +278,21 @@ const directives = {
       'https://passport-control.int.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - int
       'https://passport-control.test.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - test
       'https://passport-control.tools.bbc.co.uk/bookmarkletScript.js', // Passport bookmarklet - live
-      // Ads
-      'https://ad.crwdcntrl.net',
-      'https://adservice.google.co.uk',
-      'https://adservice.google.com',
-      'https://bbc.gscontxt.net',
-      'https://bcp.crwdcntrl.net',
-      'https://cdn.ampproject.org',
-      'https://collector.effectivemeasure.net',
-      'https://me-ssl.effectivemeasure.net',
-      'https://privacy.crwdcntrl.net',
-      'https://sb.scorecardresearch.com',
-      'https://securepubads.g.doubleclick.net',
-      'https://t.effectivemeasure.net',
-      'https://tags.crwdcntrl.net',
-      'https://tpc.googlesyndication.com',
-      'https://gn-web-assets.api.bbc.com',
+      'https://ad.crwdcntrl.net', // ads
+      'https://adservice.google.co.uk', // ads
+      'https://adservice.google.com', // ads
+      'https://bbc.gscontxt.net', // ads
+      'https://bcp.crwdcntrl.net', // ads
+      'https://cdn.ampproject.org', // ads
+      'https://collector.effectivemeasure.net', // ads
+      'https://me-ssl.effectivemeasure.net', // ads
+      'https://privacy.crwdcntrl.net', // ads
+      'https://sb.scorecardresearch.com', // ads
+      'https://securepubads.g.doubleclick.net', // ads
+      'https://t.effectivemeasure.net', // ads
+      'https://tags.crwdcntrl.net', // ads
+      'https://tpc.googlesyndication.com', // ads
+      'https://gn-web-assets.api.bbc.com', // ads
       "'self'",
       "'unsafe-inline'",
     ],
