@@ -278,7 +278,7 @@ describe('OnDemand Radio Page ', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should return bbc_afaanoromoo_radio when the masterBrand is bbc_oromoo_radio on canonical', async () => {
+  it('should return bbc_afaanoromoo_radio when the masterBrand is bbc_oromo_radio on canonical', async () => {
     const afaanPageDataWithAvailableEpisode = getAvailableEpisode(
       afaanoromooPageData,
     );
