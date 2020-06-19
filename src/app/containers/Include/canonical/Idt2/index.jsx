@@ -17,23 +17,17 @@ const Include = styled.div`
   margin-bottom: ${GEL_SPACING_QUIN};
 `;
 
-const SCRIPT_BLACKLIST = [
-  /js\/verticalChart\./,
-  /js\/horizontalChart\./,
-  /js\/lineChart\./,
-  /js\/pieChart\./,
-  /js\/simpleMap\./,
-  /js\/table\./,
-];
+const DISALLOWED_SCRIPTS = /js\/verticalChart|verticalChart|lineChart|pieChart|simpleMap|table\./;
 
 const Idt2Canonical = ({ html, imageBlock }) => {
   if (!html || !imageBlock) return null;
+
   const { src } = imageBlock;
-  const isBlacklisted = SCRIPT_BLACKLIST.some(script => script.test(html));
+  const isDisallowed = DISALLOWED_SCRIPTS.test(html);
 
   return (
     <IncludeGrid>
-      {isBlacklisted ? (
+      {isDisallowed ? (
         <Img src={src} />
       ) : (
         <Include
