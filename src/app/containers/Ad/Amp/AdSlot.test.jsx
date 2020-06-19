@@ -19,10 +19,5 @@ describe('Amp AdSlot', () => {
       'should correctly render a mobile mpu AdSlot',
       <AdSlot viewportType="mobile" service="pidgin" slotType="mpu" />,
     );
-
-    shouldMatchSnapshot(
-      'should correctly render a desktop mpu AdSlot',
-      <AdSlot viewportType="desktop" service="pidgin" slotType="mpu" />,
-    );
   });
 });

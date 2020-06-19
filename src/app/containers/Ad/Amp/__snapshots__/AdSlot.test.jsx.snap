@@ -16,21 +16,6 @@ exports[`Amp AdSlot Snapshots should correctly render a desktop leaderboard AdSl
 />
 `;
 
-exports[`Amp AdSlot Snapshots should correctly render a desktop mpu AdSlot 1`] = `
-<amp-ad
-  data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
-  data-amp-slot-index="0"
-  data-block-on-consent="default"
-  data-multi-size="300x250"
-  data-npa-on-unknown-consent="true"
-  data-slot="/4817/bbccom.test.site.amp.news"
-  height="250"
-  json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"pidgin\\"}}"
-  type="doubleclick"
-  width="300"
-/>
-`;
-
 exports[`Amp AdSlot Snapshots should correctly render a mobile leaderboard AdSlot 1`] = `
 <amp-ad
   data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
