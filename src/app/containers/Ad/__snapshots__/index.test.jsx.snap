@@ -149,15 +149,7 @@ exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
                 media="(max-width: 62.9375rem)"
                 type="doubleclick"
                 width="320"
-              >
-                <amp-img
-                  height="50"
-                  layout="responsive"
-                  placeholder="true"
-                  src="https://via.placeholder.com/320x50"
-                  width="320"
-                />
-              </amp-ad>
+              />
               <amp-ad
                 data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
                 data-amp-slot-index="0"
@@ -170,6 +162,7 @@ exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
                 media="(min-width: 63rem)"
                 type="doubleclick"
                 width="970"
+<<<<<<< HEAD
               >
                 <amp-img
                   height="250"
@@ -179,6 +172,9 @@ exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
                   width="970"
                 />
               </amp-ad>
+=======
+              />
+>>>>>>> bb67e6da4a47da452716ad0062fcf547e3081acc
             </div>
           </div>
         </div>
