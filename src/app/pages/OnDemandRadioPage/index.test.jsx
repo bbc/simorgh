@@ -297,7 +297,7 @@ describe('OnDemand Radio Page ', () => {
     );
   });
 
-  it('should return bbc_afaanoromoo_radio when the masterBrand is bbc_oromoo_radio on AMP', async () => {
+  it('should return bbc_afaanoromoo_radio when the masterBrand is bbc_oromo_radio on AMP', async () => {
     const afaanPageDataWithAvailableEpisode = getAvailableEpisode(
       afaanoromooPageData,
     );
