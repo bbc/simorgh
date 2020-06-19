@@ -220,8 +220,6 @@ const directives = {
       'https://csi.gstatic.com', // ads
       'https://sb.scorecardresearch.com', // ads
       'https://secure-us.imrworldwide.com', // ads
-      'https://pixel.adsafeprotected.com', // ads
-      'https://static.adsafeprotected.com', // ads
       "data: 'self'", // needed at the end to maintain proper order
     ],
   },

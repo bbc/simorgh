@@ -324,8 +324,6 @@ describe('cspHeader', () => {
         'https://csi.gstatic.com',
         'https://sb.scorecardresearch.com',
         'https://secure-us.imrworldwide.com',
-        'https://pixel.adsafeprotected.com',
-        'https://static.adsafeprotected.com',
         "data: 'self'",
       ],
       scriptSrcExpectation: [
