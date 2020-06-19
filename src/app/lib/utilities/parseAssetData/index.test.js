@@ -38,6 +38,7 @@ describe('ArticleMain utils', () => {
     const expected = [
       {
         curationType: ['vivo-stream'],
+        thingEnglishLabel: 'Royal Wedding 2018',
         thingId: '2351f2b2-ce36-4f44-996d-c3c4f7f90eaa',
         thingLabel: 'Royal Wedding 2018',
         thingSameAs: [
@@ -52,6 +53,7 @@ describe('ArticleMain utils', () => {
       },
       {
         curationType: ['vivo-stream'],
+        thingEnglishLabel: 'Duchess of Sussex',
         thingId: '803eaeb9-c0c3-4f1b-9a66-90efac3df2dc',
         thingLabel: 'Duchess of Sussex',
         thingSameAs: [],
@@ -77,6 +79,7 @@ describe('ArticleMain utils', () => {
     const actual = getMentions(articleDataNews);
     const expected = [
       {
+        thingEnglishLabel: 'Queen Victoria',
         thingId: '1efbf3e5-b330-49a1-b531-b507ab027c96',
         thingLabel: 'Queen Victoria',
         thingType: ['Person', 'Thing'],

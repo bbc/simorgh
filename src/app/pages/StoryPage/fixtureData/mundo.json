@@ -70,13 +70,15 @@
       "about": [
         {
           "thingLabel": "Life",
+          "thingEnglishLabel": "Life",
           "thingUri": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
           "thingId": "0239ab33-1cfc-4f5d-babb-a8159711af3e",
           "thingType": ["Theme", "Thing"],
           "thingSameAs": []
         },
         {
-          "thingLabel": "Fake news",
+          "thingLabel": "Noticias falsas",
+          "thingEnglishLabel": "Fake news",
           "thingUri": "http://www.bbc.co.uk/things/e7539dc8-5cfb-413a-b4fe-0ad77bc665aa#id",
           "thingId": "e7539dc8-5cfb-413a-b4fe-0ad77bc665aa",
           "thingType": ["Theme", "Thing"],

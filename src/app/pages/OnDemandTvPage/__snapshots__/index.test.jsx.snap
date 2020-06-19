@@ -12,7 +12,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
     role="main"
   >
     <div
-      class="GridComponent-nf79gm-0 cAoCCU"
+      class="GridComponent-nf79gm-0 bSKdgR"
       dir="rtl"
     >
       <h1
@@ -60,6 +60,11 @@ exports[`should show the expired content message if episode is expired 1`] = `
           ۲۷ می ۲۰۲۰
         </span>
       </strong>
+    </div>
+    <div
+      class="GridComponent-nf79gm-0 hKRvco"
+      dir="rtl"
+    >
       <p
         class="Paragraph-k859h4-0 StyledParagraphComponent-v70vjd-0 cvyKtV"
       >

@@ -1,7 +1,6 @@
 import config from '../../support/config/services';
 import envConfig from '../../support/config/envs';
 import appConfig from '../../../src/server/utilities/serviceConfigs';
-import describeForEuOnly from '../../support/helpers/describeForEuOnly';
 import getBrandedImage from '../../support/helpers/getBrandedImage';
 
 // For testing important features that differ between services, e.g. Timestamps.
@@ -292,35 +291,6 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           'have.attr',
           'dir',
           appConfig[config[service].name][variant].dir,
-        );
-      });
-    });
-
-    describeForEuOnly('Consent Banners', () => {
-      it('have correct translations', () => {
-        cy.contains(
-          appConfig[config[service].name][variant].translations.consentBanner
-            .privacy.title,
-        );
-        cy.contains(
-          appConfig[config[service].name][variant].translations.consentBanner
-            .privacy.reject,
-        );
-        cy.contains(
-          appConfig[config[service].name][variant].translations.consentBanner
-            .privacy.accept,
-        ).click();
-        cy.contains(
-          appConfig[config[service].name][variant].translations.consentBanner
-            .cookie.title,
-        );
-        cy.contains(
-          appConfig[config[service].name][variant].translations.consentBanner
-            .cookie.reject,
-        );
-        cy.contains(
-          appConfig[config[service].name][variant].translations.consentBanner
-            .cookie.accept,
         );
       });
     });
