@@ -259,7 +259,7 @@ describe('cspHeader', () => {
         'https://static.test.files.bbci.co.uk',
         'https://survey.effectivemeasure.net',
         'https://detect-survey.effectivemeasure.net',
-        'https://collector.effectivemeasure.net/',
+        'https://collector.effectivemeasure.net',
         'https://adservice.google.com',
         'https://securepubads.g.doubleclick.net',
         'https://pagead2.googlesyndication.com',

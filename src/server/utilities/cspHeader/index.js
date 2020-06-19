@@ -71,7 +71,7 @@ const directives = {
       'https://static.test.files.bbci.co.uk', // ads
       'https://survey.effectivemeasure.net', // ads
       'https://detect-survey.effectivemeasure.net', // ads
-      'https://collector.effectivemeasure.net/', // ads
+      'https://collector.effectivemeasure.net', // ads
       'https://adservice.google.com', // ads
       'https://securepubads.g.doubleclick.net', // ads
       'https://pagead2.googlesyndication.com', // ads
