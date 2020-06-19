@@ -65,7 +65,7 @@ const HeadingContainer = ({
     >
       <TextWrapper {...(ariaHidden ? {} : { role: 'text' })}>
         <BrandTitle>{brandTitle}</BrandTitle>
-        {!ariaHidden && <VisuallyHiddenText>, </VisuallyHiddenText>}
+        <VisuallyHiddenText>, </VisuallyHiddenText>
         <Datestamp script={script} service={service}>
           {formattedTimestamp}
         </Datestamp>
