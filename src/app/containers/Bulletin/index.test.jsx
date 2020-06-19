@@ -85,25 +85,21 @@ describe('Bulletin Container', () => {
   describe('assertion tests', () => {
     it('should render the Live TV offscreen text', () => {
       const { container } = render(BulletinWithContext(liveTvBulletinItem));
-      const span = container.getElementsByTagName('span')[1];
+      const span = container.getElementsByTagName('span')[2];
 
-      expect(span.textContent).toEqual(
-        'NA EME UGBU A Lee Live, Test TV Bulletin promo',
-      );
+      expect(span.textContent).toEqual('NA EME UGBU A ');
     });
 
     it('should render the Live Radio offscreen text', () => {
       const { container } = render(BulletinWithContext(liveRadioBulletinItem));
-      const span = container.getElementsByTagName('span')[1];
+      const span = container.getElementsByTagName('span')[2];
 
-      expect(span.textContent).toEqual(
-        'NA EME UGBU A Gee ntị Live, Test Radio Bulletin promo',
-      );
+      expect(span.textContent).toEqual('NA EME UGBU A ');
     });
 
     it('should render the LIVE label', () => {
       const { container } = render(BulletinWithContext(liveTvBulletinItem));
-      const span = container.getElementsByTagName('span')[1];
+      const span = container.getElementsByTagName('span')[2];
 
       expect(span.getAttribute('aria-hidden')).toBeDefined();
       expect(span.getAttribute('aria-hidden')).toEqual('true');
