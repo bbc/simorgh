@@ -13,7 +13,7 @@ const AdContainer = () => {
   const { enabled: adsEnabled } = useToggle('ads');
 
   if (!hasAds || !adsEnabled) {
-    return false;
+    return null;
   }
 
   return isAmp ? <AmpAd slotType="leaderboard" /> : <CanonicalAd />;
