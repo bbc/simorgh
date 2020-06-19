@@ -333,4 +333,25 @@ describe('OnDemand Radio Page ', () => {
       'https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om/amp?morph_env=live',
     );
   });
+
+  it('should contain the translated iframe title', async () => {
+    const clonedKoreanPageData = clone(koreanPageData);
+    clonedKoreanPageData.content.blocks[0].versions[0] = {
+      availableFrom: 1583496180000,
+      availableUntil: 9999999999999,
+    };
+    const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
+    fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
+    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    const { container } = await renderPage({
+      pageData,
+      service: 'korean',
+    });
+
+    const audioPlayerIframeTitle = container
+      .querySelector('iframe')
+      .getAttribute('title');
+
+    expect(audioPlayerIframeTitle).toEqual('오디오 플레이어');
+  });
 });
