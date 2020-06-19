@@ -59,15 +59,7 @@ const AdSlot = ({ viewportType, service, slotType }) => {
       data-amp-slot-index="0"
       data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
       json={JSON.stringify(constructAdJsonData({ service }))}
-    >
-      <amp-img
-        placeholder
-        width={width}
-        height={height}
-        src="https://via.placeholder.com/320x50"
-        layout="responsive"
-      />
-    </amp-ad>
+    />
   );
 };
 

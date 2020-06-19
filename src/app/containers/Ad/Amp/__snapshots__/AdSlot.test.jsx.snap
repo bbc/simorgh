@@ -13,15 +13,7 @@ exports[`Amp AdSlot Snapshots should correctly render a desktop leaderboard AdSl
   media="(min-width: 63rem)"
   type="doubleclick"
   width="970"
->
-  <amp-img
-    height="250"
-    layout="responsive"
-    placeholder="true"
-    src="https://via.placeholder.com/320x50"
-    width="970"
-  />
-</amp-ad>
+/>
 `;
 
 exports[`Amp AdSlot Snapshots should correctly render a desktop mpu AdSlot 1`] = `
@@ -36,15 +28,7 @@ exports[`Amp AdSlot Snapshots should correctly render a desktop mpu AdSlot 1`] =
   json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"pidgin\\"}}"
   type="doubleclick"
   width="300"
->
-  <amp-img
-    height="250"
-    layout="responsive"
-    placeholder="true"
-    src="https://via.placeholder.com/320x50"
-    width="300"
-  />
-</amp-ad>
+/>
 `;
 
 exports[`Amp AdSlot Snapshots should correctly render a mobile leaderboard AdSlot 1`] = `
@@ -60,15 +44,7 @@ exports[`Amp AdSlot Snapshots should correctly render a mobile leaderboard AdSlo
   media="(max-width: 62.9375rem)"
   type="doubleclick"
   width="320"
->
-  <amp-img
-    height="50"
-    layout="responsive"
-    placeholder="true"
-    src="https://via.placeholder.com/320x50"
-    width="320"
-  />
-</amp-ad>
+/>
 `;
 
 exports[`Amp AdSlot Snapshots should correctly render a mobile mpu AdSlot 1`] = `
@@ -83,13 +59,5 @@ exports[`Amp AdSlot Snapshots should correctly render a mobile mpu AdSlot 1`] = 
   json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"pidgin\\"}}"
   type="doubleclick"
   width="300"
->
-  <amp-img
-    height="250"
-    layout="responsive"
-    placeholder="true"
-    src="https://via.placeholder.com/320x50"
-    width="300"
-  />
-</amp-ad>
+/>
 `;
