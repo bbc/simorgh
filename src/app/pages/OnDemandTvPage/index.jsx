@@ -195,7 +195,7 @@ const OnDemandTvPage = ({ pageData }) => {
           dir={dir}
           columns={getGroups(6, 6, 6, 6, 5, 10)}
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
-          margins={getGroups(true, true, true, true, false, false)}
+          margins={getGroups(true, true, true, true, true, false)}
         >
           <ParagraphBlock text={shortSynopsis} />
         </Grid>
