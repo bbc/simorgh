@@ -1,27 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`IdxPage Snapshots should render a persian idx page correctly with most read and radio schedule 1`] = `
+exports[`IdxPage - Ukrainian Snapshots should render a persian idx page correctly with most read and radio schedule 1`] = `
 <div>
   <noscript />
   <div>
     chartbeat
   </div>
   <main
+    lang="ru-UA"
     role="main"
   >
     <div
       class="IndexPageContainer-sc-1yb6vt4-0 lkUiYo"
     >
       <h1
-        class="HeadingIndex-sc-1155hfb-0 StyledIndexHeading-jnasqg-0 kYCmnu"
-        dir="rtl"
+        class="HeadingIndex-sc-1155hfb-0 StyledIndexHeading-jnasqg-0 bGKUPz"
+        dir="ltr"
         id="content"
         tabindex="-1"
       >
-        صفحه افغانستان
+        РУС
       </h1>
       <section
-        aria-labelledby="WatchListen"
+        aria-labelledby="Verticals"
         class="StyledSection-sc-1x9qbiu-0 hNdEyC"
         role="region"
       >
@@ -29,44 +30,84 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
           class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
         >
           <div
-            class="Bar-sc-1x4gwjz-0 kXOyLn"
+            class="Bar-sc-1x4gwjz-0 jsgdXU"
           />
           <h2
             class="Heading-sc-1x4gwjz-2 eZofTG"
           >
-            <span
-              class="FlexColumn-wx5kdp-0 dgpsiS"
+            <a
+              aria-labelledby="Verticals"
+              class="SectionLabelLink-wx5kdp-1 hlUWNS"
+              href="http://www.bbc.com/ukrainian/magazine_russian"
             >
               <span
-                class="FlexRow-wx5kdp-2 dVBNyZ"
+                class="FlexColumn-wx5kdp-0 dgpsiS"
               >
                 <span
-                  class="Title-wx5kdp-4 jJpioi"
-                  dir="rtl"
-                  id="WatchListen"
+                  class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
+                  role="text"
                 >
-                  ویدیو و صدا
+                  <span
+                    class="Title-wx5kdp-4 cERxQI"
+                    dir="ltr"
+                    id="Verticals"
+                  >
+                    BBC Журнал
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="IndexLinkCta-wx5kdp-5 iaGWvX"
+                    dir="ltr"
+                  >
+                    Посмотреть все
+                  </span>
                 </span>
               </span>
-            </span>
+            </a>
           </h2>
         </div>
         <ul
           class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
-          dir="rtl"
+          dir="ltr"
           role="list"
         >
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 kFXEso"
-            dir="rtl"
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fTPTiI"
+            dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
+              class="StoryPromoWrapper-sc-1dvfmi3-0 cgYtyQ"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
-                dir="rtl"
+                class="TextGridItem-sc-1lkbq5i-0 bVRUir"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 fPWFhn"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-52261329"
+                  >
+                    Как не спиться на карантине
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Как справиться со скукой и стрессом во время карантина? Для кого-то лучшим "помощником" стал алкоголь.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-04-12"
+                >
+                  12 апреля 2020
+                </time>
+              </div>
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 cpmLDn"
+                dir="ltr"
               >
                 <div
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -80,86 +121,14 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                   </div>
                   <div
                     class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
-                  >
-                    <div
-                      aria-hidden="true"
-                      class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
-                      dir="rtl"
-                    >
-                      <div
-                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
-                          focusable="false"
-                          height="12px"
-                          viewBox="0 0 32 32"
-                          width="12px"
-                        >
-                          <polygon
-                            points="3,32 29,16 3,0"
-                          />
-                        </svg>
-                        <time
-                          class="StyledTime-jpt91x-0 bYtFje"
-                          datetime="PT2M32S"
-                        >
-                          2:32
-                        </time>
-                      </div>
-                    </div>
-                  </div>
+                  />
                 </div>
-              </div>
-              <div
-                class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
-                dir="rtl"
-              >
-                <h3
-                  class="Headline-sc-1dvfmi3-3 jDsPwR"
-                >
-                  <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
-                    href="/persian/afghanistan-52726383"
-                  >
-                    <span
-                      role="text"
-                    >
-                      <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                      >
-                        ویدیو
-                        , 
-                      </span>
-                      <span>
-                        ابراز نگرانی سازمان ملل از افزایش کشتار غیر نظامیان در افغانستان
-                      </span>
-                      <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                      >
-                        , 2,32
-                      </span>
-                    </span>
-                  </a>
-                </h3>
-                <p
-                  class="Summary-sc-1dvfmi3-4 eLVbDm"
-                >
-                  در حالیکه شمار رسمی مبتلایان به ویروس کرونا از چهار و نیم میلیون نفر عبور کرده، این روزها کشورهای آمریکای لاتین به کانون های اصلی شیوع تبدیل شده‌اند..
-                </p>
-                <time
-                  class="StyledTimestamp-um718p-0 fMHMrb"
-                  datetime="2020-05-19"
-                >
-                  ۳۰ اردیبهشت ۱۳۹۹ - ۱۹ مه ۲۰۲۰
-                </time>
               </div>
             </div>
           </li>
           <li
             class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-            dir="rtl"
+            dir="ltr"
             role="listitem"
           >
             <div
@@ -167,7 +136,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
             >
               <div
                 class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -181,382 +150,33 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                   </div>
                   <div
                     class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                  >
-                    <div
-                      aria-hidden="true"
-                      class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
-                      dir="rtl"
-                    >
-                      <div
-                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
-                          focusable="false"
-                          height="12px"
-                          viewBox="0 0 32 32"
-                          width="12px"
-                        >
-                          <polygon
-                            points="3,32 29,16 3,0"
-                          />
-                        </svg>
-                        <time
-                          class="StyledTime-jpt91x-0 bYtFje"
-                          datetime="PT2M12S"
-                        >
-                          2:12
-                        </time>
-                      </div>
-                    </div>
-                  </div>
+                  />
                 </div>
               </div>
               <div
                 class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 ecBkfP"
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 jeUMCT"
-                    href="/persian/afghanistan-52710877"
+                    href="/ukrainian/features-russian-52357130"
                   >
-                    <span
-                      role="text"
-                    >
-                      <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                      >
-                        ویدیو
-                        , 
-                      </span>
-                      <span>
-                        حمله انتحاری طالبان به دفتر امنیت ملی درغزنی
-                      </span>
-                      <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                      >
-                        , 2,12
-                      </span>
-                    </span>
+                    Как наш характер меняется с возрастом. Спойлер - мы становимся добрее. Но почему?
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eYboNJ"
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
                 >
-                  مقام‌های محلی غزنی گفته‌اند در حمله صبح امروز طالبان در شهر غزنی در جنوب افغانستان هفت نفر کشته و چهل نفر زخمی شده‌اند.
+                  Личность человека не остается одинаковой на протяжении всей жизни, как считали ранее. Недавно исследователи выяснили - наш характер с возрастом улучшается.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 fMHMrb"
-                  datetime="2020-05-18"
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-04-20"
                 >
-                  ۲۹ اردیبهشت ۱۳۹۹ - ۱۸ مه ۲۰۲۰
-                </time>
-              </div>
-            </div>
-          </li>
-          <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-            dir="rtl"
-            role="listitem"
-          >
-            <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-            >
-              <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="rtl"
-              >
-                <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                >
-                  <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                  >
-                    <div
-                      class="lazyload-placeholder"
-                    />
-                  </div>
-                  <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                  >
-                    <div
-                      aria-hidden="true"
-                      class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
-                      dir="rtl"
-                    >
-                      <div
-                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
-                          focusable="false"
-                          height="12px"
-                          viewBox="0 0 32 32"
-                          width="12px"
-                        >
-                          <polygon
-                            points="3,32 29,16 3,0"
-                          />
-                        </svg>
-                        <time
-                          class="StyledTime-jpt91x-0 bYtFje"
-                          datetime="PT6M14S"
-                        >
-                          6:14
-                        </time>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="rtl"
-              >
-                <h3
-                  class="Headline-sc-1dvfmi3-3 ecBkfP"
-                >
-                  <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
-                    href="/persian/afghanistan-52699256"
-                  >
-                    <span
-                      role="text"
-                    >
-                      <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                      >
-                        ویدیو
-                        , 
-                      </span>
-                      <span>
-                        توافقنامه‌ای پایان بخش اختلافات چند ماهه غنی و عبدالله
-                      </span>
-                      <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                      >
-                        , 6,14
-                      </span>
-                    </span>
-                  </a>
-                </h3>
-                <p
-                  class="Summary-sc-1dvfmi3-4 eYboNJ"
-                >
-                  در افغانستان عبدالله عبدالله با امضای یک توافق از ادعای خود به عنوان رییس جمهوری گذشت و اشرف غنی را به عنوان رییس دولت پذیرفت.
-                </p>
-                <time
-                  class="StyledTimestamp-um718p-0 fMHMrb"
-                  datetime="2020-05-17"
-                >
-                  ۲۸ اردیبهشت ۱۳۹۹ - ۱۷ مه ۲۰۲۰
-                </time>
-              </div>
-            </div>
-          </li>
-          <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-            dir="rtl"
-            role="listitem"
-          >
-            <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-            >
-              <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="rtl"
-              >
-                <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                >
-                  <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                  >
-                    <div
-                      class="lazyload-placeholder"
-                    />
-                  </div>
-                  <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                  >
-                    <div
-                      aria-hidden="true"
-                      class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
-                      dir="rtl"
-                    >
-                      <div
-                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
-                          focusable="false"
-                          height="12px"
-                          viewBox="0 0 32 32"
-                          width="12px"
-                        >
-                          <polygon
-                            points="3,32 29,16 3,0"
-                          />
-                        </svg>
-                        <time
-                          class="StyledTime-jpt91x-0 bYtFje"
-                          datetime="PT3M21S"
-                        >
-                          3:21
-                        </time>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="rtl"
-              >
-                <h3
-                  class="Headline-sc-1dvfmi3-3 ecBkfP"
-                >
-                  <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
-                    href="/persian/afghanistan-52651714"
-                  >
-                    <span
-                      role="text"
-                    >
-                      <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                      >
-                        ویدیو
-                        , 
-                      </span>
-                      <span>
-                        واکنش‌ها به حملات اخیر افغانستان؛ دعوت به همکاری طالبان با دولت
-                      </span>
-                      <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                      >
-                        , 3,21
-                      </span>
-                    </span>
-                  </a>
-                </h3>
-                <p
-                  class="Summary-sc-1dvfmi3-4 eYboNJ"
-                >
-                  وزارت صحت افغانستان اعلام کرده که شمار قربانیان حمله به بیمارستان کابل به ۲۴ نفر رسیده‌است.
-                </p>
-                <time
-                  class="StyledTimestamp-um718p-0 fMHMrb"
-                  datetime="2020-05-13"
-                >
-                  ۲۴ اردیبهشت ۱۳۹۹ - ۱۳ مه ۲۰۲۰
-                </time>
-              </div>
-            </div>
-          </li>
-          <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-            dir="rtl"
-            role="listitem"
-          >
-            <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-            >
-              <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="rtl"
-              >
-                <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                >
-                  <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                  >
-                    <div
-                      class="lazyload-placeholder"
-                    />
-                  </div>
-                  <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                  >
-                    <div
-                      aria-hidden="true"
-                      class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
-                      dir="rtl"
-                    >
-                      <div
-                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
-                          focusable="false"
-                          height="12px"
-                          viewBox="0 0 32 32"
-                          width="12px"
-                        >
-                          <polygon
-                            points="3,32 29,16 3,0"
-                          />
-                        </svg>
-                        <time
-                          class="StyledTime-jpt91x-0 bYtFje"
-                          datetime="PT4M48S"
-                        >
-                          4:48
-                        </time>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="rtl"
-              >
-                <h3
-                  class="Headline-sc-1dvfmi3-3 ecBkfP"
-                >
-                  <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
-                    href="/persian/afghanistan-52640314"
-                  >
-                    <span
-                      role="text"
-                    >
-                      <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                      >
-                        ویدیو
-                        , 
-                      </span>
-                      <span>
-                        روایت بازماندگان از حادثه مرزی ایران و افغانستان
-                      </span>
-                      <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                      >
-                        , 4,48
-                      </span>
-                    </span>
-                  </a>
-                </h3>
-                <p
-                  class="Summary-sc-1dvfmi3-4 eYboNJ"
-                >
-                  سخنگوی وزارت خارجه ایران، دست داشتن نیروی انتظامی در مرگ شهروندان افغانستان در مرز دو کشور را تکذیب کرده‌است.
-                </p>
-                <time
-                  class="StyledTimestamp-um718p-0 fMHMrb"
-                  datetime="2020-05-12"
-                >
-                  ۲۳ اردیبهشت ۱۳۹۹ - ۱۲ مه ۲۰۲۰
+                  20 апреля 2020
                 </time>
               </div>
             </div>
@@ -564,14 +184,16 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
         </ul>
       </section>
       <section
-        aria-labelledby="Radio-Schedule"
-        class="RadioScheduleSection-f8vxqz-0 cDuWSa"
-        lang="fa-AF"
+        aria-labelledby="Also-in-the-news"
+        class="StyledSection-sc-1x9qbiu-0 hNdEyC"
         role="region"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD RadioScheduleSectionLabel-f8vxqz-2 bKHBEG"
+          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
         >
+          <div
+            class="Bar-sc-1x4gwjz-0 jsgdXU"
+          />
           <h2
             class="Heading-sc-1x4gwjz-2 eZofTG"
           >
@@ -582,535 +204,899 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                 class="FlexRow-wx5kdp-2 dVBNyZ"
               >
                 <span
-                  class="Title-wx5kdp-4 bSIdgQ"
-                  dir="rtl"
-                  id="Radio-Schedule"
+                  class="Title-wx5kdp-4 cERxQI"
+                  dir="ltr"
+                  id="Also-in-the-news"
                 >
-                  برنامه‌های رادیو
+                  Статьи
                 </span>
               </span>
             </span>
           </h2>
         </div>
-        <div
-          class="RadioScheduleWrapper-f8vxqz-1 hFZkwU"
+        <ul
+          class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+          dir="ltr"
+          role="list"
         >
-          <ul
-            class="GridComponent-nf79gm-0 kCcGpG StyledGrid-sc-1q74lji-1 dHsDNK"
-            dir="rtl"
-            role="list"
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fTPTiI"
+            dir="ltr"
+            role="listitem"
           >
-            <li
-              class="GridComponent-nf79gm-0 cxONfP StyledFlexGrid-sc-1q74lji-2 itXDho"
-              data-e2e="onDemand"
-              dir="rtl"
-              role="listitem"
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 cgYtyQ"
             >
               <div
-                class="StartTimeWrapper-sc-1q74lji-0 kamCRN"
+                class="TextGridItem-sc-1lkbq5i-0 bVRUir"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 fPWFhn"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/news-russian-52663545"
+                  >
+                    IKEA запустила продажи в Украине: как покупать и где получать
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  На украинском сайте компании уже доступен перечень товаров и цены. С сегодняшнего дня можно делать заказы.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-05-14"
+                >
+                  14 мая 2020
+                </time>
+              </div>
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 cpmLDn"
+                dir="ltr"
               >
                 <div
-                  class="Wrapper-ojp38q-0 iLZIDn"
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
+                  />
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/vert-fut-russian-52663551"
+                  >
+                    38 дней в океане: как семья выжила после кораблекрушения
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Семья Робертсонов 38 дней дрейфовала в открытом океане, после того как их маленькую яхту перевернула и потопила косатка.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-05-14"
+                >
+                  14 мая 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-52633464"
+                  >
+                    Как Минск стал спасительным хабом для застрявших за рубежом украинцев
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Многие украинцы из-за пандемии оказались заблокированными далеко за границей: из-за закрытия украинского неба добраться домой им очень сложно.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-05-12"
+                >
+                  12 мая 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/news-russian-52647120"
+                  >
+                    Кличко просит правительство открыть метро с 25 мая
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Мэр Киева Виталий Кличко заявил, что наземный транспорт в столице начнет восстанавливать нормальную работу с 22 мая, а об открытии метро с 25 мая он будет просить правительство. Все из-за транспортного коллапса.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-05-13"
+                >
+                  13 мая 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/news-russian-52493624"
+                  >
+                    Можно обнимать внуков: ученые говорят, что маленькие дети не передают коронавирус
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Власти Швейцарии заявили, что бабушки и дедушки могут обнимать своих внуков в возрасте до 10 лет.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-04-30"
+                >
+                  30 апреля 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-52395098"
+                  >
+                    Мог ли коронавирус "убежать" из лаборатории?
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Могла ли эпидемия Covid-19 произойти из-за утечки вируса?
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-04-23"
+                >
+                  23 апреля 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/news-russian-52443350"
+                  >
+                    Правительство хочет открыть сотни рынков - несмотря на карантин
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Кабинет министров отрабатывает возможность открыть рынки в стране на этой неделе.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-04-27"
+                >
+                  27 апреля 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-52339462"
+                  >
+                    Фейки о коронавирусе в соцсетях: 7 правил информационной гигиены
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Что можете сделать именно вы, чтобы остановить распространение неправдивой информации?
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-04-18"
+                >
+                  18 апреля 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-52336989"
+                  >
+                    Пожары, пылевая буря, смог: почему это происходит
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Почему один за другим в Украине происходят эти явления, с чем они связаны и когда закончатся?
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-04-18"
+                >
+                  18 апреля 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-52344279"
+                  >
+                    Какие симптомы коронавируса
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Коронавирус распространился уже почти во всем мире. Так какие симптомы имеет эта болезнь и как от нее защититься?
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-04-19"
+                >
+                  19 апреля 2020
+                </time>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section
+        aria-labelledby="Picture-galleries"
+        class="StyledSection-sc-1x9qbiu-0 hNdEyC"
+        role="region"
+      >
+        <div
+          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
+        >
+          <div
+            class="Bar-sc-1x4gwjz-0 jsgdXU"
+          />
+          <h2
+            class="Heading-sc-1x4gwjz-2 eZofTG"
+          >
+            <a
+              aria-labelledby="Picture-galleries"
+              class="SectionLabelLink-wx5kdp-1 hlUWNS"
+              href="http://www.bbc.com/ukrainian/russian/media/photogalleries"
+            >
+              <span
+                class="FlexColumn-wx5kdp-0 dgpsiS"
+              >
+                <span
+                  class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
+                  role="text"
                 >
                   <span
-                    class="StyledClock-ojp38q-1 gushnz"
-                    dir="rtl"
+                    class="Title-wx5kdp-4 cERxQI"
+                    dir="ltr"
+                    id="Picture-galleries"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="CoreIcon-sc-1eqhzay-0 ClockIcon-sc-1eqhzay-1 geFUte"
-                      focusable="false"
-                      height="13"
-                      viewBox="0 0 13 13"
-                      width="13"
-                    >
-                      <path
-                        d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
-                      />
-                      <path
-                        d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
-                      />
-                    </svg>
+                    Фото дня
                   </span>
                   <span
                     aria-hidden="true"
-                    class="StyledTimestamp-ojp38q-2 gnYSeR"
-                    dir="rtl"
+                    class="IndexLinkCta-wx5kdp-5 iaGWvX"
+                    dir="ltr"
                   >
-                    <time
-                      class="StyledTimestamp-um718p-0 fMHMrb"
-                      datetime="2020-03-26"
-                    >
-                      ۰۵:۳۰
-                    </time>
+                    Посмотреть все
                   </span>
-                </div>
-              </div>
-              <div
-                class="CardWrapper-sc-6oo8lp-2 jgjrOO"
-              >
-                <div
-                  class="TextWrapper-sc-6oo8lp-3 bcFowo"
-                >
-                  <h3
-                    class="StyledH3-sc-6oo8lp-4 jdapZU"
-                  >
-                    <a
-                      class="Link-sc-1dvfmi3-5 StyledLink-sc-6oo8lp-1 dCvEUl"
-                      href="/persian/bbc_dari_radio/w172x1rwggbcdq8"
-                    >
-                      <span
-                        class="HeadingContentWrapper-sc-6oo8lp-11 jHsaER"
-                        role="text"
-                      >
-                        نبض خبر
-                        <span
-                          class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                        >
-                          , 
-                          ۰۵:۳۰
-                          , 
-                        </span>
-                        <span
-                          class="TitleWrapper-sc-6oo8lp-0 psNPy"
-                        >
-                          ۲۶ مارس ۲۰۲۰
-                        </span>
-                      </span>
-                    </a>
-                  </h3>
-                  <p
-                    class="SummaryWrapper-sc-6oo8lp-6 fTeFGf"
-                  >
-                    تازه ترین خبرهای جهان
-                  </p>
-                </div>
-                <div
-                  class="ButtonWrapper-sc-6oo8lp-7 chenCM"
-                >
-                  <span
-                    class="IconWrapper-sc-6oo8lp-8 dKFQcC"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
-                      focusable="false"
-                      height="12px"
-                      viewBox="0 0 13 12"
-                      width="13px"
-                    >
-                      <path
-                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                      />
-                      <path
-                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                      />
-                    </svg>
-                  </span>
-                  <time
-                    class="DurationWrapper-sc-6oo8lp-9 hWRNdd"
-                    datetime="PT3M"
-                    dir="rtl"
-                  >
-                    <span
-                      class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                    >
-                       مدت ۰۳،۰۰ 
-                    </span>
-                    <span
-                      aria-hidden="true"
-                      class="DurationTextWrapper-sc-6oo8lp-10 dfaGSJ"
-                    >
-                      ۰۳:۰۰
-                    </span>
-                  </time>
-                </div>
-              </div>
-            </li>
-            <li
-              class="GridComponent-nf79gm-0 cxONfP StyledFlexGrid-sc-1q74lji-2 itXDho"
-              data-e2e="onDemand"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="StartTimeWrapper-sc-1q74lji-0 kamCRN"
-              >
-                <div
-                  class="Wrapper-ojp38q-0 iLZIDn"
-                >
-                  <span
-                    class="StyledClock-ojp38q-1 gushnz"
-                    dir="rtl"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="CoreIcon-sc-1eqhzay-0 ClockIcon-sc-1eqhzay-1 geFUte"
-                      focusable="false"
-                      height="13"
-                      viewBox="0 0 13 13"
-                      width="13"
-                    >
-                      <path
-                        d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
-                      />
-                      <path
-                        d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="StyledTimestamp-ojp38q-2 gnYSeR"
-                    dir="rtl"
-                  >
-                    <time
-                      class="StyledTimestamp-um718p-0 fMHMrb"
-                      datetime="2020-03-26"
-                    >
-                      ۰۲:۳۰
-                    </time>
-                  </span>
-                </div>
-              </div>
-              <div
-                class="CardWrapper-sc-6oo8lp-2 jgjrOO"
-              >
-                <div
-                  class="TextWrapper-sc-6oo8lp-3 bcFowo"
-                >
-                  <h3
-                    class="StyledH3-sc-6oo8lp-4 jdapZU"
-                  >
-                    <a
-                      class="Link-sc-1dvfmi3-5 StyledLink-sc-6oo8lp-1 dCvEUl"
-                      href="/persian/bbc_dari_radio/w3csz8fk"
-                    >
-                      <span
-                        class="HeadingContentWrapper-sc-6oo8lp-11 jHsaER"
-                        role="text"
-                      >
-                        چشم انداز بامدادی 2
-                        <span
-                          class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                        >
-                          , 
-                          ۰۲:۳۰
-                          , 
-                        </span>
-                        <span
-                          class="TitleWrapper-sc-6oo8lp-0 psNPy"
-                        >
-                          ۲۶ مارس ۲۰۲۰
-                        </span>
-                      </span>
-                    </a>
-                  </h3>
-                  <p
-                    class="SummaryWrapper-sc-6oo8lp-6 fTeFGf"
-                  >
-                    تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
-                  </p>
-                </div>
-                <div
-                  class="ButtonWrapper-sc-6oo8lp-7 chenCM"
-                >
-                  <span
-                    class="IconWrapper-sc-6oo8lp-8 dKFQcC"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
-                      focusable="false"
-                      height="12px"
-                      viewBox="0 0 13 12"
-                      width="13px"
-                    >
-                      <path
-                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                      />
-                      <path
-                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                      />
-                    </svg>
-                  </span>
-                  <time
-                    class="DurationWrapper-sc-6oo8lp-9 hWRNdd"
-                    datetime="PT29M30S"
-                    dir="rtl"
-                  >
-                    <span
-                      class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                    >
-                       مدت ۲۹،۳۰ 
-                    </span>
-                    <span
-                      aria-hidden="true"
-                      class="DurationTextWrapper-sc-6oo8lp-10 dfaGSJ"
-                    >
-                      ۲۹:۳۰
-                    </span>
-                  </time>
-                </div>
-              </div>
-            </li>
-            <li
-              class="GridComponent-nf79gm-0 cxONfP StyledFlexGrid-sc-1q74lji-2 itXDho"
-              data-e2e="onDemand"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="StartTimeWrapper-sc-1q74lji-0 kamCRN"
-              >
-                <div
-                  class="Wrapper-ojp38q-0 iLZIDn"
-                >
-                  <span
-                    class="StyledClock-ojp38q-1 gushnz"
-                    dir="rtl"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="CoreIcon-sc-1eqhzay-0 ClockIcon-sc-1eqhzay-1 geFUte"
-                      focusable="false"
-                      height="13"
-                      viewBox="0 0 13 13"
-                      width="13"
-                    >
-                      <path
-                        d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
-                      />
-                      <path
-                        d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="StyledTimestamp-ojp38q-2 gnYSeR"
-                    dir="rtl"
-                  >
-                    <time
-                      class="StyledTimestamp-um718p-0 fMHMrb"
-                      datetime="2020-03-26"
-                    >
-                      ۰۱:۳۰
-                    </time>
-                  </span>
-                </div>
-              </div>
-              <div
-                class="CardWrapper-sc-6oo8lp-2 jgjrOO"
-              >
-                <div
-                  class="TextWrapper-sc-6oo8lp-3 bcFowo"
-                >
-                  <h3
-                    class="StyledH3-sc-6oo8lp-4 jdapZU"
-                  >
-                    <a
-                      class="Link-sc-1dvfmi3-5 StyledLink-sc-6oo8lp-1 dCvEUl"
-                      href="/persian/bbc_dari_radio/w3csz7tn"
-                    >
-                      <span
-                        class="HeadingContentWrapper-sc-6oo8lp-11 jHsaER"
-                        role="text"
-                      >
-                        چشم انداز بامدادی 1
-                        <span
-                          class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                        >
-                          , 
-                          ۰۱:۳۰
-                          , 
-                        </span>
-                        <span
-                          class="TitleWrapper-sc-6oo8lp-0 psNPy"
-                        >
-                          ۲۶ مارس ۲۰۲۰
-                        </span>
-                      </span>
-                    </a>
-                  </h3>
-                  <p
-                    class="SummaryWrapper-sc-6oo8lp-6 fTeFGf"
-                  >
-                    تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
-                  </p>
-                </div>
-                <div
-                  class="ButtonWrapper-sc-6oo8lp-7 chenCM"
-                >
-                  <span
-                    class="IconWrapper-sc-6oo8lp-8 dKFQcC"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
-                      focusable="false"
-                      height="12px"
-                      viewBox="0 0 13 12"
-                      width="13px"
-                    >
-                      <path
-                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                      />
-                      <path
-                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                      />
-                    </svg>
-                  </span>
-                  <time
-                    class="DurationWrapper-sc-6oo8lp-9 hWRNdd"
-                    datetime="PT29M30S"
-                    dir="rtl"
-                  >
-                    <span
-                      class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                    >
-                       مدت ۲۹،۳۰ 
-                    </span>
-                    <span
-                      aria-hidden="true"
-                      class="DurationTextWrapper-sc-6oo8lp-10 dfaGSJ"
-                    >
-                      ۲۹:۳۰
-                    </span>
-                  </time>
-                </div>
-              </div>
-            </li>
-            <li
-              class="GridComponent-nf79gm-0 cxONfP StyledFlexGrid-sc-1q74lji-2 itXDho"
-              data-e2e="next"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="StartTimeWrapper-sc-1q74lji-0 kamCRN"
-              >
-                <div
-                  class="Wrapper-ojp38q-0 iLZIDn"
-                >
-                  <span
-                    class="StyledClock-ojp38q-1 gushnz"
-                    dir="rtl"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="CoreIcon-sc-1eqhzay-0 ClockIcon-sc-1eqhzay-1 geFUte"
-                      focusable="false"
-                      height="13"
-                      viewBox="0 0 13 13"
-                      width="13"
-                    >
-                      <path
-                        d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
-                      />
-                      <path
-                        d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="StyledTimestamp-ojp38q-2 gnYSeR"
-                    dir="rtl"
-                  >
-                    <time
-                      class="StyledTimestamp-um718p-0 fMHMrb"
-                      datetime="2030-01-01"
-                    >
-                      ۰۹:۰۰
-                    </time>
-                  </span>
-                </div>
-              </div>
-              <div
-                class="CardWrapper-sc-6oo8lp-2 jgjrOO"
-              >
-                <div
-                  class="TextWrapper-sc-6oo8lp-3 bcFowo"
-                >
-                  <h3
-                    class="StyledH3-sc-6oo8lp-4 dOhQDK"
-                  >
-                    <span
-                      class="HeadingContentWrapper-sc-6oo8lp-11 jHsaER"
-                      role="text"
-                    >
-                      <span
-                        class="NextLabel-sc-6oo8lp-5 eTDWik"
-                        dir="rtl"
-                      >
-                        بعدی 
-                      </span>
-                      چشم انداز بامدادی 1
-                      <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                      >
-                        , 
-                        ۰۹:۰۰
-                        , 
-                      </span>
-                      <span
-                        class="TitleWrapper-sc-6oo8lp-0 bXLYaO"
-                      >
-                        ۱ ژانویه ۲۰۳۰
-                      </span>
-                    </span>
-                  </h3>
-                  <p
-                    class="SummaryWrapper-sc-6oo8lp-6 fTeFGf"
-                  >
-                    تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
-                  </p>
-                </div>
-                <div
-                  class="ButtonWrapper-sc-6oo8lp-7 brPWmx"
-                >
-                  <span
-                    class="IconWrapper-sc-6oo8lp-8 gqyxry"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
-                      focusable="false"
-                      height="12px"
-                      viewBox="0 0 13 12"
-                      width="13px"
-                    >
-                      <path
-                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                      />
-                      <path
-                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                      />
-                    </svg>
-                  </span>
-                  <time
-                    class="DurationWrapper-sc-6oo8lp-9 hWRNdd"
-                    datetime="PT26M30S"
-                    dir="rtl"
-                  >
-                    <span
-                      class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                    >
-                       مدت ۲۶،۳۰ 
-                    </span>
-                    <span
-                      aria-hidden="true"
-                      class="DurationTextWrapper-sc-6oo8lp-10 dfaGSJ"
-                    >
-                      ۲۶:۳۰
-                    </span>
-                  </time>
-                </div>
-              </div>
-            </li>
-          </ul>
+                </span>
+              </span>
+            </a>
+          </h2>
         </div>
+        <ul
+          class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+          dir="ltr"
+          role="list"
+        >
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 kFXEso"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 fccgro"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-50186307"
+                  >
+                    Фотограф потратил год, чтобы сделать идеальное фото белок
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 zsDkO"
+                >
+                  Завоевать доверие животного - дело непростое, но результат того стоит, считает фотограф.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-10-25"
+                >
+                  25 октября 2019
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 cZNKRK"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-49780932"
+                  >
+                    Украинка, фотографирующая сестер Кардашьян: в "голых" съемках главное - доверие
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  .
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-09-21"
+                >
+                  21 сентября 2019
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-49621722"
+                  >
+                    Вернувшиеся домой. Фото
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  .
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-09-07"
+                >
+                  7 сентября 2019
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/news-russian-49613573"
+                  >
+                    Фото дня: принцесса Шарлотта впервые пошла в школу
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  В школу четырехлетнюю принцессу повели ее родители - принц Уильям и герцогиня Кейт, а также старший брат Джордж.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-09-06"
+                >
+                  6 сентября 2019
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-49382281"
+                  >
+                    Человек, который сделал 90 тысяч фото котов
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Задолго до того, как коты завоевали интернет, Уолтер Чандоха пленил мир своими фото. Он фотографировал пушистых моделей в течение 70 лет.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-08-17"
+                >
+                  17 августа 2019
+                </time>
+              </div>
+            </div>
+          </li>
+        </ul>
       </section>
       <section
         aria-labelledby="Features"
@@ -1121,7 +1107,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
           class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
         >
           <div
-            class="Bar-sc-1x4gwjz-0 kXOyLn"
+            class="Bar-sc-1x4gwjz-0 jsgdXU"
           />
           <h2
             class="Heading-sc-1x4gwjz-2 eZofTG"
@@ -1133,11 +1119,11 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                 class="FlexRow-wx5kdp-2 dVBNyZ"
               >
                 <span
-                  class="Title-wx5kdp-4 jJpioi"
-                  dir="rtl"
+                  class="Title-wx5kdp-4 cERxQI"
+                  dir="ltr"
                   id="Features"
                 >
-                  تحلیل و گزارش
+                  Подробно
                 </span>
               </span>
             </span>
@@ -1145,20 +1131,46 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
         </div>
         <ul
           class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
-          dir="rtl"
+          dir="ltr"
           role="list"
         >
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 kFXEso"
-            dir="rtl"
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fTPTiI"
+            dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
+              class="StoryPromoWrapper-sc-1dvfmi3-0 cgYtyQ"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
-                dir="rtl"
+                class="TextGridItem-sc-1lkbq5i-0 bVRUir"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 fPWFhn"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-52653319"
+                  >
+                    "Не надо шляться по брифингам!" Министр Степанов - своим оппонентам
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Максим Степанов - третий министр, возглавляющий Минздрав во время пандемии коронавируса. В интервью ВВС News Украина он прокомментировал конфликт вокруг закупок лекарств, а также рассказал, когда откроют детсады и когда медиками привезут костюмы из Китая.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-05-17"
+                >
+                  17 мая 2020
+                </time>
+              </div>
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 cpmLDn"
+                dir="ltr"
               >
                 <div
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -1175,37 +1187,11 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                   />
                 </div>
               </div>
-              <div
-                class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
-                dir="rtl"
-              >
-                <h3
-                  class="Headline-sc-1dvfmi3-3 jDsPwR"
-                >
-                  <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
-                    href="/persian/afghanistan-52722865"
-                  >
-                    پشت پرده توافق غنی و عبدالله؛ مارشال شدن دوستم و ماجراهای دیگر
-                  </a>
-                </h3>
-                <p
-                  class="Summary-sc-1dvfmi3-4 eLVbDm"
-                >
-                  چانه‌زنی برای دست‌یابی به یک توافق سیاسی بین اشرف غنی، رئیس جمهوری و عبدالله عبدالله که همزمان با او اعلام ریاست جمهوری کرده بود، از اوایل اسفند/حوت سال گذشته خورشیدی آغاز شد و حدود سه ماه زمان گرفت. مذاکراتی که پشت درهای بسته برگزار می‌شد به قول منابعی که با آنها صحبت کرده‌ام بارها به بن‌بست رسید و جلسات بارها با عصبانیت یکی از دو طرف مذاکره بی‌نتیجه پایان یافت.
-                </p>
-                <time
-                  class="StyledTimestamp-um718p-0 fMHMrb"
-                  datetime="2020-05-20"
-                >
-                  ۳۱ اردیبهشت ۱۳۹۹ - ۲۰ مه ۲۰۲۰
-                </time>
-              </div>
             </div>
           </li>
           <li
             class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-            dir="rtl"
+            dir="ltr"
             role="listitem"
           >
             <div
@@ -1213,7 +1199,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
             >
               <div
                 class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -1232,35 +1218,35 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
               </div>
               <div
                 class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 ecBkfP"
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 jeUMCT"
-                    href="/persian/afghanistan-52697976"
+                    href="/ukrainian/news-russian-52675911"
                   >
-                    کرونا گردشگران را در افغانستان زمین‌گیر کرد
+                    Действительно ли Германия заблокировала "Северный поток-2"? Объясняет Лана Зеркаль
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eYboNJ"
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
                 >
-                  شیوع ویروس کرونا در افغانستان گردشگری را در این کشور با رکود مواجه کرده و اماکن توریستی از شرق تا غرب و از شمال تا جنوب بر روی گردشگران بسته شده است. از صنعت توریزم که هم دولت نفع می‌برد و هم مردم، حالا با رکود بی‌سابقه مواجه شده است.
+                  В соцсетях и некоторых СМИ решение немецкого регулятора называют победой, но действительно ли это победа?
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 fMHMrb"
-                  datetime="2020-05-19"
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-05-15"
                 >
-                  ۳۰ اردیبهشت ۱۳۹۹ - ۱۹ مه ۲۰۲۰
+                  15 мая 2020
                 </time>
               </div>
             </div>
           </li>
           <li
             class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-            dir="rtl"
+            dir="ltr"
             role="listitem"
           >
             <div
@@ -1268,7 +1254,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
             >
               <div
                 class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="rtl"
+                dir="ltr"
               >
                 <div
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
@@ -1287,592 +1273,198 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
               </div>
               <div
                 class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="rtl"
+                dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 ecBkfP"
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 jeUMCT"
-                    href="/persian/blog-viewpoints-52616632"
+                    href="/ukrainian/news-russian-52688931"
                   >
-                    ناظران می‌گویند؛ توافقنامه غنی و عبدالله؛ آخرین میخ بر تابوت دموکراسی افغانستان؟
+                    Клинические испытания ремдесивира для лечения Covid-19 свернули. Почему?
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eYboNJ"
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
                 >
-                  سانگه صدیقی، فعال سیاسی و مدنی در مطلبی برای صفحه ناظران بی‌بی‌سی فارسی به توافق‌نامه بین محمد اشرف غنی و عبدالله پرداخته است و آن را "زوال دموکراسی" خوانده است.
+                  Интересно, что тестирование прекратили не из-за их провала - а возможно, как раз наоборот.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 fMHMrb"
-                  datetime="2020-05-18"
-                >
-                  ۲۹ اردیبهشت ۱۳۹۹ - ۱۸ مه ۲۰۲۰
-                </time>
-              </div>
-            </div>
-          </li>
-          <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-            dir="rtl"
-            role="listitem"
-          >
-            <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-            >
-              <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="rtl"
-              >
-                <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                >
-                  <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                  >
-                    <div
-                      class="lazyload-placeholder"
-                    />
-                  </div>
-                  <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                  />
-                </div>
-              </div>
-              <div
-                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="rtl"
-              >
-                <h3
-                  class="Headline-sc-1dvfmi3-3 ecBkfP"
-                >
-                  <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
-                    href="/persian/afghanistan-52700014"
-                  >
-                    توافق‌نامه غنی و عبدالله؛ اختلاف چه بود و چگونه حل شد؟
-                  </a>
-                </h3>
-                <p
-                  class="Summary-sc-1dvfmi3-4 eYboNJ"
-                >
-                  محمد اشرف غنی، رئیس جمهور افغانستان موافقت‌نامه‌ای با عبدالله عبدالله، رئیس اجرایی پیشین امضا کرده است. با امضای این موافقت‌نامه میان دو رقیب سیاسی، جنجال پس از اعلام نتیجه انتخابات اخیر افغانستان پس از نزدیک به پنج ماه پایان یافت. اختلاف بین این دو رهبر چه بود و چگونه حل شد؟
-                </p>
-                <time
-                  class="StyledTimestamp-um718p-0 fMHMrb"
-                  datetime="2020-05-17"
-                >
-                  ۲۸ اردیبهشت ۱۳۹۹ - ۱۷ مه ۲۰۲۰
-                </time>
-              </div>
-            </div>
-          </li>
-          <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-            dir="rtl"
-            role="listitem"
-          >
-            <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-            >
-              <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="rtl"
-              >
-                <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                >
-                  <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                  >
-                    <div
-                      class="lazyload-placeholder"
-                    />
-                  </div>
-                  <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                  />
-                </div>
-              </div>
-              <div
-                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                dir="rtl"
-              >
-                <h3
-                  class="Headline-sc-1dvfmi3-3 ecBkfP"
-                >
-                  <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
-                    href="/persian/blog-viewpoints-52692067"
-                  >
-                    'آرمان ایران، داشتن نفوذ شبیه عراق در افغانستان نیست'
-                  </a>
-                </h3>
-                <p
-                  class="Summary-sc-1dvfmi3-4 eYboNJ"
-                >
-                  نویسنده در این یادداشت که برای صفحه ناظران فرستاده، می‌گوید که "آرمان ایران، داشتنِ نفوذ شبیه به عراق در افغانستان نیست" اما دارای منافع در افغانستان است از جمله صادرات و روابط تجاری و گاهی دشمن مشترک مانند داعش.
-                </p>
-                <time
-                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  class="StyledTimestamp-um718p-0 kVWTyt"
                   datetime="2020-05-16"
                 >
-                  ۲۷ اردیبهشت ۱۳۹۹ - ۱۶ مه ۲۰۲۰
+                  16 мая 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-52620256"
+                  >
+                    Лечение коронавируса при помощи антител: нас спасут ламы?
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Ученые пытаются найти метод лечения Covid-19 или разработать вакцину, которая позволила бы смягчить карантинные меры, включая социальное дистанцирование. Вероятным кандидатом в спасители человечества называют ламу.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-05-11"
+                >
+                  11 мая 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/news-russian-52597888"
+                  >
+                    11 мая в Украине ослабляют карантин. Что разрешат, а что - нет
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Несмотря на то, что карантин, согласно решению правительства, будет действовать в Украине как минимум до 22 мая, ряд ограничений снимут уже с понедельника.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-05-09"
+                >
+                  9 мая 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-52573535"
+                  >
+                    Коронавирус мутирует: ученые думают о последствиях
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Одно из исследований выявило мутацию, которая, по словам ученых, может сделать коронавирус более заразным.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-05-07"
+                >
+                  7 мая 2020
                 </time>
               </div>
             </div>
           </li>
         </ul>
-      </section>
-      <section
-        aria-labelledby="Most-Read"
-        class="MostReadSection-sc-1r6ctrd-0 IdxMostReadSection-sc-1rygalq-0 jNNusG"
-        data-e2e="most-read"
-        role="region"
-      >
-        <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD SectionLabelWithMargin-sc-1resov9-0 dxfHPg"
-        >
-          <div
-            class="Bar-sc-1x4gwjz-0 kXOyLn"
-          />
-          <h2
-            class="Heading-sc-1x4gwjz-2 eZofTG"
-          >
-            <span
-              class="FlexColumn-wx5kdp-0 dgpsiS"
-            >
-              <span
-                class="FlexRow-wx5kdp-2 dVBNyZ"
-              >
-                <span
-                  class="Title-wx5kdp-4 jJpioi"
-                  dir="rtl"
-                  id="Most-Read"
-                >
-                  پربیننده‌ترین‌ها
-                </span>
-              </span>
-            </span>
-          </h2>
-        </div>
-        <ol
-          class="GridComponent-nf79gm-0 gjgzxV OneColumnGrid-sc-1ofyujo-0 TwoColumnGrid-sc-1ofyujo-1 boiGsE"
-          dir="rtl"
-          role="list"
-        >
-          <li
-            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
-            dir="rtl"
-            role="listitem"
-          >
-            <div
-              class="ItemWrapper-u0d8kd-3 juBlKT"
-            >
-              <div
-                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cUcvKH"
-                dir="rtl"
-              >
-                <span
-                  class="StyledSpan-fs4y6m-3 bvXRlE"
-                >
-                  ۱
-                </span>
-              </div>
-              <div
-                class="StyledItem-u0d8kd-1 fkeZwt"
-                dir="rtl"
-              >
-                <a
-                  class="StyledLink-u0d8kd-0 OTgcR"
-                  href="/persian/world-50317704"
-                >
-                  توافق با جدایی‌طلبان یمن؛ ایران اعتراض کرد، سازمان ملل استقبال
-                </a>
-                <div
-                  class="TimestampWrapper-u0d8kd-2 hlECaE"
-                >
-                  <time
-                    class="StyledTimestamp-um718p-0 fMHMrb"
-                    datetime="2019-11-06"
-                  >
-                    به روز شده در ۶ نوامبر ۲۰۱۹
-                  </time>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li
-            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
-            dir="rtl"
-            role="listitem"
-          >
-            <div
-              class="ItemWrapper-u0d8kd-3 juBlKT"
-            >
-              <div
-                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hFxcvr"
-                dir="rtl"
-              >
-                <span
-                  class="StyledSpan-fs4y6m-3 bvXRlE"
-                >
-                  ۲
-                </span>
-              </div>
-              <div
-                class="StyledItem-u0d8kd-1 fkeZwt"
-                dir="rtl"
-              >
-                <a
-                  class="StyledLink-u0d8kd-0 OTgcR"
-                  href="/persian/iran-50319870"
-                >
-                  فراخوان آذری جهرمی برای مناظره اینستاگرامی - زرآبادی: در مجلس مناظره کنیم
-                </a>
-                <div
-                  class="TimestampWrapper-u0d8kd-2 hlECaE"
-                >
-                  <time
-                    class="StyledTimestamp-um718p-0 fMHMrb"
-                    datetime="2019-11-06"
-                  >
-                    به روز شده در ۶ نوامبر ۲۰۱۹
-                  </time>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li
-            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
-            dir="rtl"
-            role="listitem"
-          >
-            <div
-              class="ItemWrapper-u0d8kd-3 juBlKT"
-            >
-              <div
-                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cUcvKH"
-                dir="rtl"
-              >
-                <span
-                  class="StyledSpan-fs4y6m-3 bvXRlE"
-                >
-                  ۳
-                </span>
-              </div>
-              <div
-                class="StyledItem-u0d8kd-1 fkeZwt"
-                dir="rtl"
-              >
-                <a
-                  class="StyledLink-u0d8kd-0 OTgcR"
-                  href="/persian/world-50320610"
-                >
-                  ترکیه: همسر ابوبکر بغدادی را 'دستگیر کردیم'
-                </a>
-                <div
-                  class="TimestampWrapper-u0d8kd-2 hlECaE"
-                >
-                  <time
-                    class="StyledTimestamp-um718p-0 fMHMrb"
-                    datetime="2019-11-06"
-                  >
-                    به روز شده در ۶ نوامبر ۲۰۱۹
-                  </time>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li
-            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
-            dir="rtl"
-            role="listitem"
-          >
-            <div
-              class="ItemWrapper-u0d8kd-3 juBlKT"
-            >
-              <div
-                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hFxcvr"
-                dir="rtl"
-              >
-                <span
-                  class="StyledSpan-fs4y6m-3 bvXRlE"
-                >
-                  ۴
-                </span>
-              </div>
-              <div
-                class="StyledItem-u0d8kd-1 fkeZwt"
-                dir="rtl"
-              >
-                <a
-                  class="StyledLink-u0d8kd-0 OTgcR"
-                  href="/persian/world-50316456"
-                >
-                  غنی سازی مجدد در فردو: مکرون اقدام ایران را 'عمیقا مایه نگرانی' خواند
-                </a>
-                <div
-                  class="TimestampWrapper-u0d8kd-2 hlECaE"
-                >
-                  <time
-                    class="StyledTimestamp-um718p-0 fMHMrb"
-                    datetime="2019-11-06"
-                  >
-                    به روز شده در ۶ نوامبر ۲۰۱۹
-                  </time>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li
-            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
-            dir="rtl"
-            role="listitem"
-          >
-            <div
-              class="ItemWrapper-u0d8kd-3 juBlKT"
-            >
-              <div
-                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cUcvKH"
-                dir="rtl"
-              >
-                <span
-                  class="StyledSpan-fs4y6m-3 bvXRlE"
-                >
-                  ۵
-                </span>
-              </div>
-              <div
-                class="StyledItem-u0d8kd-1 fkeZwt"
-                dir="rtl"
-              >
-                <a
-                  class="StyledLink-u0d8kd-0 OTgcR"
-                  href="/persian/magazine-50249226"
-                >
-                  دوازده دلیل حکمرانی حشرات: سوسک می‌تواند دو هفته بدون سر زنده بماند
-                </a>
-                <div
-                  class="TimestampWrapper-u0d8kd-2 hlECaE"
-                >
-                  <time
-                    class="StyledTimestamp-um718p-0 fMHMrb"
-                    datetime="2019-11-06"
-                  >
-                    به روز شده در ۶ نوامبر ۲۰۱۹
-                  </time>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li
-            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
-            dir="rtl"
-            role="listitem"
-          >
-            <div
-              class="ItemWrapper-u0d8kd-3 juBlKT"
-            >
-              <div
-                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hhqpIX"
-                dir="rtl"
-              >
-                <span
-                  class="StyledSpan-fs4y6m-3 bvXRlE"
-                >
-                  ۶
-                </span>
-              </div>
-              <div
-                class="StyledItem-u0d8kd-1 fkeZwt"
-                dir="rtl"
-              >
-                <a
-                  class="StyledLink-u0d8kd-0 OTgcR"
-                  href="/persian/world-50317700"
-                >
-                  انتخابات ایالتی آمریکا؛ دموکرات‌ها از جمهوری‌خواهان پیش افتادند
-                </a>
-                <div
-                  class="TimestampWrapper-u0d8kd-2 hlECaE"
-                >
-                  <time
-                    class="StyledTimestamp-um718p-0 fMHMrb"
-                    datetime="2019-11-06"
-                  >
-                    به روز شده در ۶ نوامبر ۲۰۱۹
-                  </time>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li
-            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
-            dir="rtl"
-            role="listitem"
-          >
-            <div
-              class="ItemWrapper-u0d8kd-3 juBlKT"
-            >
-              <div
-                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 lhNSnn"
-                dir="rtl"
-              >
-                <span
-                  class="StyledSpan-fs4y6m-3 bvXRlE"
-                >
-                  ۷
-                </span>
-              </div>
-              <div
-                class="StyledItem-u0d8kd-1 fkeZwt"
-                dir="rtl"
-              >
-                <a
-                  class="StyledLink-u0d8kd-0 OTgcR"
-                  href="/persian/sport-50322486"
-                >
-                  عراق اردن را به عنوان میزبان بازی با ایران معرفی کرد
-                </a>
-                <div
-                  class="TimestampWrapper-u0d8kd-2 hlECaE"
-                >
-                  <time
-                    class="StyledTimestamp-um718p-0 fMHMrb"
-                    datetime="2019-11-06"
-                  >
-                    به روز شده در ۶ نوامبر ۲۰۱۹
-                  </time>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li
-            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
-            dir="rtl"
-            role="listitem"
-          >
-            <div
-              class="ItemWrapper-u0d8kd-3 juBlKT"
-            >
-              <div
-                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hhqpIX"
-                dir="rtl"
-              >
-                <span
-                  class="StyledSpan-fs4y6m-3 bvXRlE"
-                >
-                  ۸
-                </span>
-              </div>
-              <div
-                class="StyledItem-u0d8kd-1 fkeZwt"
-                dir="rtl"
-              >
-                <a
-                  class="StyledLink-u0d8kd-0 OTgcR"
-                  href="/persian/iran-features-50310665"
-                >
-                  آیا تهران بازی هسته ای را به هم می‌زند؟
-                </a>
-                <div
-                  class="TimestampWrapper-u0d8kd-2 hlECaE"
-                >
-                  <time
-                    class="StyledTimestamp-um718p-0 fMHMrb"
-                    datetime="2019-11-06"
-                  >
-                    به روز شده در ۶ نوامبر ۲۰۱۹
-                  </time>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li
-            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
-            dir="rtl"
-            role="listitem"
-          >
-            <div
-              class="ItemWrapper-u0d8kd-3 juBlKT"
-            >
-              <div
-                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 lhNSnn"
-                dir="rtl"
-              >
-                <span
-                  class="StyledSpan-fs4y6m-3 bvXRlE"
-                >
-                  ۹
-                </span>
-              </div>
-              <div
-                class="StyledItem-u0d8kd-1 fkeZwt"
-                dir="rtl"
-              >
-                <a
-                  class="StyledLink-u0d8kd-0 OTgcR"
-                  href="/persian/world-50316450"
-                >
-                  آمریکا: دو ایرانی اتهام جمع‌آوری اطلاعات علیه سازمان مجاهدین در خاک آمریکا را پذیرفتند
-                </a>
-                <div
-                  class="TimestampWrapper-u0d8kd-2 hlECaE"
-                >
-                  <time
-                    class="StyledTimestamp-um718p-0 fMHMrb"
-                    datetime="2019-11-06"
-                  >
-                    به روز شده در ۶ نوامبر ۲۰۱۹
-                  </time>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li
-            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
-            dir="rtl"
-            role="listitem"
-          >
-            <div
-              class="ItemWrapper-u0d8kd-3 juBlKT"
-            >
-              <div
-                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hhqpIX"
-                dir="rtl"
-              >
-                <span
-                  class="StyledSpan-fs4y6m-3 bvXRlE"
-                >
-                  ۱۰
-                </span>
-              </div>
-              <div
-                class="StyledItem-u0d8kd-1 fkeZwt"
-                dir="rtl"
-              >
-                <a
-                  class="StyledLink-u0d8kd-0 OTgcR"
-                  href="/persian/sport-50318030"
-                >
-                  فوتبال ایران و عراق؛ ایران: امن است بازی می‌کنیم، فیفا: ناامن است بازی نکنید
-                </a>
-                <div
-                  class="TimestampWrapper-u0d8kd-2 hlECaE"
-                >
-                  <time
-                    class="StyledTimestamp-um718p-0 fMHMrb"
-                    datetime="2019-11-06"
-                  >
-                    به روز شده در ۶ نوامبر ۲۰۱۹
-                  </time>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ol>
       </section>
     </div>
   </main>

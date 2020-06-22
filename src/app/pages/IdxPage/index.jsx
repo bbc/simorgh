@@ -53,14 +53,14 @@ const IdxPage = ({
   const {
     mostRead: { onIdxPage },
     lang,
+    radioSchedule,
+    service,
   } = useContext(ServiceContext);
 
   const groups = path(['content', 'groups'], pageData);
   const title = path(['metadata', 'title'], pageData);
   const summary = path(['metadata', 'summary'], pageData);
   const seoTitle = path(['promo', 'name'], pageData);
-
-  const { radioSchedule } = useContext(ServiceContext);
   const radioScheduleData = path(['radioScheduleData'], pageData);
   const radioScheduleOnIdxPage = path(['onIdxPage'], radioSchedule);
   const radioScheduleIdxPosition = path(['idxPagePosition'], radioSchedule);
@@ -76,7 +76,7 @@ const IdxPage = ({
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
-      <main role="main">
+      <main role="main" {...(service === 'ukrainian' && { lang })}>
         <IndexPageContainer>
           <IndexHeading id="content" pageType="idx">
             {title}
