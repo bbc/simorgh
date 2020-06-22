@@ -54,9 +54,6 @@ const IdxPage = ({
     mostRead: { onIdxPage },
   } = useContext(ServiceContext);
 
-  const serviceContext = useContext(ServiceContext);
-  console.log(serviceContext);
-
   const groups = path(['content', 'groups'], pageData);
   const title = path(['metadata', 'title'], pageData);
   const lang = path(['metadata', 'language'], pageData);
