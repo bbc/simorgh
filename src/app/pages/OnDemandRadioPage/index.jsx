@@ -28,10 +28,7 @@ import LinkedData from '#containers/LinkedData';
 import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
-import {
-  EPISODE_IS_EXPIRED,
-  EPISODE_IS_AVAILABLE,
-} from '#lib/utilities/episodeStatusConst';
+import { EPISODE_STATUS } from '#lib/utilities/episodeAvailability';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
@@ -110,14 +107,18 @@ const OnDemandRadioPage = ({ pageData }) => {
   });
 
   const getEpisodeNotAvailableMessage = () => {
-    if (episodeIsAvailable === EPISODE_IS_EXPIRED) {
+    if (episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_EXPIRED) {
       return pathOr(
         'This content is no longer available',
         ['media', 'contentExpired'],
         translations,
       );
     }
-    return 'not yet available';
+    return pathOr(
+      'This content is not yet available',
+      ['media', 'contentNotYetAvailable'],
+      translations,
+    );
     // not yet available message
   };
 
@@ -162,7 +163,7 @@ const OnDemandRadioPage = ({ pageData }) => {
               <EpisodeImage imageUrl={imageUrl} dir={dir} />
             </Grid>
           </StyledGelWrapperGrid>
-          {episodeIsAvailable === EPISODE_IS_AVAILABLE ? (
+          {episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_AVAILABLE ? (
             <StyledAudioPlayer
               externalId={masterBrand}
               id={episodeId}
@@ -181,7 +182,7 @@ const OnDemandRadioPage = ({ pageData }) => {
             type="WebPage"
             seoTitle={headline}
             entities={
-              episodeIsAvailable === EPISODE_IS_AVAILABLE
+              episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_AVAILABLE
                 ? [
                     {
                       '@type': 'AudioObject',

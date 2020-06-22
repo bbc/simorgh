@@ -7,20 +7,9 @@ import pathWithLogging, {
   LOG_LEVELS,
 } from '../../../lib/utilities/logging/pathWithLogging';
 import { RADIO_MISSING_FIELD } from '#lib/logger.const';
-import {
-  EPISODE_IS_EXPIRED,
-  EPISODE_IS_NOT_YET_AVAILABLE,
-  EPISODE_IS_AVAILABLE,
-} from '#lib/utilities/episodeStatusConst';
-
-const getEpisodeAvailability = ({ availableFrom, availableUntil }) => {
-  const timeNow = Date.now();
-
-  if (!availableUntil) return EPISODE_IS_EXPIRED;
-  if (timeNow < availableFrom) return EPISODE_IS_NOT_YET_AVAILABLE;
-
-  return EPISODE_IS_AVAILABLE;
-};
+import getEpisodeAvailability, {
+  EPISODE_STATUS,
+} from '#lib/utilities/episodeAvailability';
 
 const getEpisodeAvailableFrom = path([
   'content',
@@ -56,8 +45,8 @@ export default async ({ path: pathname }) => {
     availableUntil,
   });
 
-  // LOGGING STRATEGY NEEDS REVISING
-  if (episodeIsAvailable === EPISODE_IS_EXPIRED) {
+  // LOGGING STRATEGY NEEDS MIGRATING TO EPISODEAVAILABILITY
+  if (episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_EXPIRED) {
     logExpiredEpisode(json);
   }
 

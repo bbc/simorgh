@@ -287,7 +287,9 @@ describe('OnDemand Radio Page ', () => {
       service: 'korean',
     });
     const audioPlayerIframeEl = container.querySelector('iframe');
-    const notYetAvailableMessageEl = getByText('not yet available');
+    const notYetAvailableMessageEl = getByText(
+      'This content is not yet available',
+    );
 
     expect(audioPlayerIframeEl).not.toBeInTheDocument();
     expect(notYetAvailableMessageEl).toBeInTheDocument();
