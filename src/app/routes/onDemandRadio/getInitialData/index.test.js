@@ -56,7 +56,7 @@ describe('Get initial data for on demand radio', () => {
     const oneMinuteFromNow = Date.now() + 60 * 1000;
     const twoMinutesFromNow = oneMinuteFromNow + 60 * 1000;
     const responseWithEpisodeAvailableInOneMinute = assocPath(
-      ['content', 'blocks', '0', 'versions', '0', 'availableFrom'],
+      ['content', 'blocks', '0', 'versions', '0'],
       { availableFrom: oneMinuteFromNow, availableUntil: twoMinutesFromNow },
       onDemandRadioJson,
     );
