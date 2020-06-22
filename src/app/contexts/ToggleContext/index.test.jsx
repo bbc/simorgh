@@ -23,12 +23,12 @@ const shouldNotRenderAd = container =>
   expect(queryByText(container, 'Dummy Ad Component')).not.toBeInTheDocument();
 
 const getMockTogglesUrl = service =>
-  `https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=${service}&__amp_source_origin=https://www.test.bbc.com`;
+  `https://mock-toggles-endpoint.bbc.co.uk/?application=simorgh&service=${service}&__amp_source_origin=https://www.test.bbc.com`;
 
 describe('ToggleContext with feature toggles', () => {
   beforeAll(() => {
     process.env.SIMORGH_APP_ENV = 'local';
-    process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+    process.env.SIMORGH_CONFIG_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
   });
 
   [
