@@ -12,7 +12,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
     role="main"
   >
     <div
-      class="GridComponent-nf79gm-0 cAoCCU"
+      class="GridComponent-nf79gm-0 bSKdgR"
       dir="rtl"
     >
       <h1
@@ -55,11 +55,21 @@ exports[`should show the expired content message if episode is expired 1`] = `
           نړۍ دا وخت
         </span>
         <span
+          class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+        >
+          , 
+        </span>
+        <span
           class="Datestamp-gehp0k-2 LXJIp"
         >
           ۲۷ می ۲۰۲۰
         </span>
       </strong>
+    </div>
+    <div
+      class="GridComponent-nf79gm-0 hKRvco"
+      dir="rtl"
+    >
       <p
         class="Paragraph-k859h4-0 StyledParagraphComponent-v70vjd-0 cvyKtV"
       >
