@@ -55,6 +55,11 @@ exports[`should show the expired content message if episode is expired 1`] = `
           نړۍ دا وخت
         </span>
         <span
+          class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+        >
+          , 
+        </span>
+        <span
           class="Datestamp-gehp0k-2 LXJIp"
         >
           ۲۷ می ۲۰۲۰
