@@ -114,9 +114,6 @@ const OnDemandTvPage = ({ pageData }) => {
     translations,
   );
 
-  const type = 'video';
-  const title = 'On-demand TV';
-
   const placeholderSrc = getPlaceholderImageUrl(imageUrl);
 
   return (
@@ -174,8 +171,8 @@ const OnDemandTvPage = ({ pageData }) => {
                 embedUrl={embedUrl}
                 assetId={episodeId}
                 placeholderSrc={placeholderSrc}
-                type={type}
-                title={title}
+                type="video"
+                title="On-demand TV"
                 iframeTitle={iframeTitle}
               />
             ) : (
