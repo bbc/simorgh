@@ -50,12 +50,7 @@ const IdxPage = ({
   mostReadEndpointOverride,
   radioScheduleEndpointOverride,
 }) => {
-  const {
-    mostRead: { onIdxPage },
-    lang,
-    radioSchedule,
-    service,
-  } = useContext(ServiceContext);
+  const { mostRead, lang, radioSchedule, service } = useContext(ServiceContext);
 
   const groups = path(['content', 'groups'], pageData);
   const title = path(['metadata', 'title'], pageData);
@@ -63,6 +58,8 @@ const IdxPage = ({
   const seoTitle = path(['promo', 'name'], pageData);
   const radioScheduleData = path(['radioScheduleData'], pageData);
   const radioScheduleOnIdxPage = path(['onIdxPage'], radioSchedule);
+  const mostReadOnIdxPage = path(['onIdxPage'], mostRead);
+
   const radioScheduleIdxPosition = path(['idxPagePosition'], radioSchedule);
 
   return (
@@ -96,7 +93,7 @@ const IdxPage = ({
               <IndexPageSection group={group} sectionNumber={index} />
             </Fragment>
           ))}
-          {onIdxPage && renderMostRead(mostReadEndpointOverride)}
+          {mostReadOnIdxPage && renderMostRead(mostReadEndpointOverride)}
         </IndexPageContainer>
       </main>
     </>
