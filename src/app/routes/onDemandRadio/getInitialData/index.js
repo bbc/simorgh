@@ -8,12 +8,7 @@ import pathWithLogging, {
 } from '../../../lib/utilities/logging/pathWithLogging';
 import { RADIO_MISSING_FIELD } from '#lib/logger.const';
 
-const getEpisodeAvailability = ({ availableUntil }) => {
-  if (!availableUntil) {
-    return false;
-  }
-  return true;
-};
+const getEpisodeAvailability = ({ availableUntil }) => Boolean(availableUntil);
 
 const getEpisodeAvailableUntil = path([
   'content',
