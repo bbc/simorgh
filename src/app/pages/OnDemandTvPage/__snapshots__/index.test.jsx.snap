@@ -12,7 +12,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
     role="main"
   >
     <div
-      class="GridComponent-nf79gm-0 bSKdgR"
+      class="GridComponent-nf79gm-0 cAoCCU"
       dir="rtl"
     >
       <h1
@@ -67,7 +67,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
       </strong>
     </div>
     <div
-      class="GridComponent-nf79gm-0 jnAHWk"
+      class="GridComponent-nf79gm-0 hKRvco"
       dir="rtl"
     >
       <p
