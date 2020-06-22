@@ -22,7 +22,7 @@ const toggleContextMock = {
 
 describe('Ad Container', () => {
   beforeAll(() => {
-    process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+    process.env.SIMORGH_CONFIG_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
     window.dotcom = {
       bootstrap: jest.fn(),
       cmd: { push: jest.fn() },
@@ -30,7 +30,7 @@ describe('Ad Container', () => {
   });
 
   afterAll(() => {
-    delete process.env.SIMORGH_TOGGLES_URL;
+    delete process.env.SIMORGH_CONFIG_URL;
     window.dotcom = undefined;
   });
 
