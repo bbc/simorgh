@@ -13,6 +13,7 @@ import { MediaMessage } from '@bbc/psammead-media-player';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import LinkedData from '#containers/LinkedData';
@@ -120,6 +121,7 @@ const OnDemandTvPage = ({ pageData }) => {
     <>
       <ChartbeatAnalytics data={pageData} />
       <ATIAnalytics data={pageData} />
+      <ComscoreAnalytics />
       <MetadataContainer
         title={headline}
         lang={language}

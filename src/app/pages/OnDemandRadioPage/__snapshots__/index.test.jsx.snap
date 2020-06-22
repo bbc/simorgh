@@ -622,6 +622,15 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
       <div>
         chartbeat
       </div>
+      <amp-analytics
+        type="comscore"
+      >
+        <script
+          type="application/json"
+        >
+          {"vars":{"c2":"17986528"},"extraUrlParams":{"comscorekw":"amp"}}
+        </script>
+      </amp-analytics>
       <main
         class="c0 c1"
         dir="rtl"

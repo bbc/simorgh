@@ -16,6 +16,7 @@ import IndexPageSection from '#containers/IndexPageSection';
 import idxPageDataPropTypes from '#models/propTypes/idxPage';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 
 const IdxMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
@@ -68,6 +69,7 @@ const IdxPage = ({
     <>
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
+      <ComscoreAnalytics />
       <MetadataContainer
         title={title}
         lang={lang}
