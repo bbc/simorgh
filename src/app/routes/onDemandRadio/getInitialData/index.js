@@ -57,9 +57,9 @@ export default async ({ path: pathname }) => {
   });
 
   // LOGGING STRATEGY NEEDS REVISING
-  // if (!episodeAvailability) {
-  //   logExpiredEpisode(json);
-  // }
+  if (episodeIsAvailable === EPISODE_IS_EXPIRED) {
+    logExpiredEpisode(json);
+  }
 
   const withLogging = pathWithLogging(getUri(json), RADIO_MISSING_FIELD, json);
   const get = (fieldPath, logLevel) =>

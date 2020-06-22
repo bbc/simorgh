@@ -36,7 +36,7 @@ describe('Get initial data for on demand radio', () => {
     );
   });
 
-  it('episodeIsAvailable should be true if availableFrom is before current time', async () => {
+  it("episodeIsAvailable should be 'available' if availableFrom is before current time", async () => {
     const oneMinuteAgo = Date.now() - 60 * 1000;
     const responseWithEpisodeAvailableOneMinuteAgo = assocPath(
       ['content', 'blocks', '0', 'versions', '0', 'availableFrom'],
@@ -49,10 +49,10 @@ describe('Get initial data for on demand radio', () => {
     const { pageData } = await getInitialData({
       path: 'mock-on-demand-radio-path',
     });
-    expect(pageData.episodeIsAvailable).toEqual(true);
+    expect(pageData.episodeIsAvailable).toEqual('available');
   });
 
-  it('episodeIsAvailable should be true if availableFrom is after current time', async () => {
+  it("episodeIsAvailable should be 'not-yet-available' if availableFrom is after current time", async () => {
     const oneMinuteFromNow = Date.now() + 60 * 1000;
     const twoMinutesFromNow = oneMinuteFromNow + 60 * 1000;
     const responseWithEpisodeAvailableInOneMinute = assocPath(
@@ -62,10 +62,10 @@ describe('Get initial data for on demand radio', () => {
     );
     fetch.mockResponse(JSON.stringify(responseWithEpisodeAvailableInOneMinute));
     const { pageData } = await getInitialData('mock-on-demand-radio-path');
-    expect(pageData.episodeIsAvailable).toEqual(true);
+    expect(pageData.episodeIsAvailable).toEqual('not-yet-available');
   });
 
-  it('should return episodeIsAvailable as false if there is no availableUntil data', async () => {
+  it("episodeIsAvailable should be 'expired' if there is no availableUntil data", async () => {
     const responseWithoutVersions = assocPath(
       ['content', 'blocks', 0, 'versions'],
       [],
@@ -73,7 +73,7 @@ describe('Get initial data for on demand radio', () => {
     );
     fetch.mockResponse(JSON.stringify(responseWithoutVersions));
     const { pageData } = await getInitialData('mock-on-demand-radio-path');
-    expect(pageData.episodeIsAvailable).toEqual(false);
+    expect(pageData.episodeIsAvailable).toEqual('expired');
   });
 
   it('should override renderer on test', async () => {

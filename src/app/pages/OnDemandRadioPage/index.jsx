@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { shape, string, number, bool } from 'prop-types';
+import { shape, string, number } from 'prop-types';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -30,7 +30,6 @@ import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import {
   EPISODE_IS_EXPIRED,
-  EPISODE_IS_NOT_YET_AVAILABLE,
   EPISODE_IS_AVAILABLE,
 } from '#lib/utilities/episodeStatusConst';
 
