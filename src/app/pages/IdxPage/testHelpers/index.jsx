@@ -13,7 +13,7 @@ const radioServiceOverride = 'dari';
 
 const serviceContext = {
   ukrainian: ukrainianConfig['ru-UA'],
-  persian: persianConfig,
+  persian: persianConfig.default,
 };
 
 /* eslint-disable react/prop-types */
