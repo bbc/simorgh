@@ -59,9 +59,13 @@ const AdSlot = ({ viewportType, service, slotType }) => {
 };
 
 AdSlot.propTypes = {
-  viewportType: oneOf(['mobile', 'desktop']).isRequired,
+  viewportType: oneOf(['desktop', 'mobile']),
   service: string.isRequired,
   slotType: oneOf(['leaderboard', 'mpu']).isRequired,
+};
+
+AdSlot.defaultProps = {
+  viewportType: 'mobile',
 };
 
 export default AdSlot;
