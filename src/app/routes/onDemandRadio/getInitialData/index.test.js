@@ -36,7 +36,7 @@ describe('Get initial data for on demand radio', () => {
     );
   });
 
-  it('should return episodeIsAvailable as true if current time is after when episode is availableFrom', async () => {
+  it('episodeIsAvailable should be true if availableFrom is before current time', async () => {
     const oneMinuteAgo = Date.now() - 60 * 1000;
     const responseWithEpisodeAvailableOneMinuteAgo = assocPath(
       ['content', 'blocks', '0', 'versions', '0', 'availableFrom'],
@@ -52,7 +52,7 @@ describe('Get initial data for on demand radio', () => {
     expect(pageData.episodeIsAvailable).toEqual(true);
   });
 
-  it('should return episodeIsAvailable as true if current time is before when episode is availableFrom', async () => {
+  it('episodeIsAvailable should be true if availableFrom is after current time', async () => {
     const oneMinuteFromNow = Date.now() + 60 * 1000;
     const twoMinutesFromNow = oneMinuteFromNow + 60 * 1000;
     const responseWithEpisodeAvailableInOneMinute = assocPath(
