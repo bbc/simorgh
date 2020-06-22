@@ -114,8 +114,6 @@ const OnDemandTvPage = ({ pageData }) => {
     translations,
   );
 
-  const placeholderSrc = getPlaceholderImageUrl(imageUrl);
-
   return (
     <>
       <ChartbeatAnalytics data={pageData} />
@@ -170,7 +168,7 @@ const OnDemandTvPage = ({ pageData }) => {
               <StyledVideoPlayer
                 embedUrl={embedUrl}
                 assetId={episodeId}
-                placeholderSrc={placeholderSrc}
+                placeholderSrc={getPlaceholderImageUrl(imageUrl)}
                 type="video"
                 title="On-demand TV"
                 iframeTitle={iframeTitle}
