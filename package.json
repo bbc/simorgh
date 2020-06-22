@@ -153,7 +153,7 @@
     "@storybook/react": "^5.3.19",
     "@storybook/theming": "^5.3.19",
     "@testing-library/dom": "^7.11.0",
-    "@testing-library/jest-dom": "^5.9.0",
+    "@testing-library/jest-dom": "^5.10.1",
     "@testing-library/react": "^10.2.1",
     "@testing-library/react-hooks": "^3.3.0",
     "amphtml-validator": "^1.0.31",
