@@ -265,63 +265,68 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
         class="SingleContentWrapper-opyob2-3 iddZTf"
       >
         <div
-          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+          class="GridComponent-nf79gm-0 kpBIsj"
+          dir="ltr"
         >
           <div
-            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-            dir="ltr"
+            class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
           >
             <div
-              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+              class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+              dir="ltr"
             >
               <div
-                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
               >
                 <div
-                  class="lazyload-placeholder"
+                  class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
                 />
               </div>
-              <div
-                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-              />
             </div>
-          </div>
-          <div
-            class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-            dir="ltr"
-          >
-            <h3
-              class="Headline-sc-1dvfmi3-3 hSJrur"
+            <div
+              class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+              dir="ltr"
             >
-              <a
-                class="Link-sc-1dvfmi3-5 jeUMCT"
-                href="/pidgin/44508901"
+              <h3
+                class="Headline-sc-1dvfmi3-3 hSJrur"
               >
-                <span
-                  role="text"
+                <a
+                  class="Link-sc-1dvfmi3-5 jeUMCT"
+                  href="/pidgin/44508901"
                 >
                   <span
-                    class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                    role="text"
                   >
-                    , 
+                    <span
+                      class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                    >
+                      , 
+                    </span>
+                    <span>
+                      Meet boys who dey convert cassava to electricity
+                    </span>
                   </span>
-                  <span>
-                    Meet boys who dey convert cassava to electricity
-                  </span>
-                </span>
-              </a>
-            </h3>
-            <p
-              class="Summary-sc-1dvfmi3-4 eaCWBB"
-            >
-              James den Kwesi Ansah want convert most of Ghana's cassava waste into cheap electricity supply for schools, hospitals den villages.
-            </p>
-            <time
-              class="StyledTimestamp-um718p-0 kVWTyt"
-              datetime="1970-01-18"
-            >
-              18th January 1970
-            </time>
+                </a>
+              </h3>
+              <p
+                class="Summary-sc-1dvfmi3-4 eaCWBB"
+              >
+                James den Kwesi Ansah want convert most of Ghana's cassava waste into cheap electricity supply for schools, hospitals den villages.
+              </p>
+              <time
+                class="StyledTimestamp-um718p-0 kVWTyt"
+                datetime="1970-01-18"
+              >
+                18th January 1970
+              </time>
+            </div>
           </div>
         </div>
       </div>
