@@ -2,7 +2,8 @@ import React from 'react';
 import { node, string } from 'prop-types';
 import services from '#lib/config/services/loadableConfig';
 import variantPropType from '../../models/propTypes/variants';
-import { getVariant, getVariantOverride } from '#lib/utilities/variantHandler';
+import { getVariant } from '#lib/utilities/variantHandler';
+import getLangOverride from '#lib/utilities/langHandler';
 
 export const ServiceContext = React.createContext({});
 
@@ -18,12 +19,13 @@ export const ServiceContextProvider = ({
     return null;
   }
 
-  const variantOverride = getVariantOverride({ pathname });
+  // This override is for ukrainian service with a different lang/locale config
+  const serviceLang = getLangOverride({ pathname });
 
   return (
     <LoadableContextProvider
       Context={ServiceContext}
-      dataKey={variantOverride || getVariant({ service, variant })}
+      dataKey={serviceLang || getVariant({ service, variant })}
     >
       {children}
     </LoadableContextProvider>

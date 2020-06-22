@@ -4,7 +4,7 @@ import { ukrainian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
-import { russianTranslations } from './russian';
+import { mainTranslations as russianMainTranslations } from './russian';
 
 const baseServiceConfig = {
   ads: {
@@ -30,7 +30,6 @@ const baseServiceConfig = {
   defaultCaptionOffscreenText: 'Підпис, ',
   imageCopyrightOffscreenText: 'Автор фото, ',
   locale: `uk-UA`,
-  datetimeLocale: `uk`,
   service: 'ukrainian',
   serviceName: 'Ukrainian',
   themeColor: `${C_POSTBOX}`,
@@ -273,8 +272,15 @@ const baseServiceConfig = {
 };
 
 export const service = {
-  default: { ...baseServiceConfig },
-  'ru-UA': { ...baseServiceConfig, ...russianTranslations },
+  default: { ...baseServiceConfig, datetimeLocale: `uk` },
+  'ru-UA': {
+    ...baseServiceConfig,
+    translations: {
+      ...baseServiceConfig.translations,
+      ...russianMainTranslations,
+    },
+    datetimeLocale: `ru`,
+  },
 };
 
 export default withContext(service);

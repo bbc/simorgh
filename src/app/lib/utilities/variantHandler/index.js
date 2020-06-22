@@ -31,11 +31,3 @@ export const getVariant = ({ service, variant }) => {
 
   return 'default';
 };
-
-export const getVariantOverride = ({ pathname }) => {
-  // Override application variant for ukraine_in_russian idx page
-  if (pathname === '/ukrainian/ukraine_in_russian') {
-    return 'ru-UA';
-  }
-  return null;
-};
