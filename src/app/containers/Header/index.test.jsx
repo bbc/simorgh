@@ -9,6 +9,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 import { service as serbianServiceConfig } from '#lib/config/services/serbian';
+import { service as ukrainianServiceConfig } from '#lib/config/services/ukrainian';
 
 const defaultToggleState = {
   navOnArticles: {
@@ -125,5 +126,21 @@ describe(`Header`, () => {
     );
 
     expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
+  });
+
+  it('should render header with lang when headerFooterLang is defined', () => {
+    const { container } = render(
+      HeaderContainerWithContext({
+        pageType: 'IDX',
+        service: 'ukrainian',
+        serviceContext: ukrainianServiceConfig,
+        variant: 'ru-UA',
+      }),
+      {
+        wrapper: MemoryRouter,
+      },
+    );
+
+    expect(container.querySelector('header')).toHaveAttribute('lang', 'uk');
   });
 });

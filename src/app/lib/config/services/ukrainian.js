@@ -11,7 +11,6 @@ const baseServiceConfig = {
     hasAds: false,
     advertisementLabel: 'Реклама',
   },
-  lang: `uk`,
   articleAuthor: `http://www.facebook.com/bbcnews`,
   articleTimestampPrefix: 'Оновлення даних: ',
   atiAnalyticsAppName: 'news-ukrainian',
@@ -29,7 +28,6 @@ const baseServiceConfig = {
   audioCaptionOffscreenText: 'Підпис до аудіо',
   defaultCaptionOffscreenText: 'Підпис, ',
   imageCopyrightOffscreenText: 'Автор фото, ',
-  locale: `uk-UA`,
   service: 'ukrainian',
   serviceName: 'Ukrainian',
   themeColor: `${C_POSTBOX}`,
@@ -272,7 +270,12 @@ const baseServiceConfig = {
 };
 
 export const service = {
-  default: { ...baseServiceConfig, datetimeLocale: `uk` },
+  default: {
+    ...baseServiceConfig,
+    datetimeLocale: `uk`,
+    locale: `uk-UA`,
+    lang: `uk`,
+  },
   'ru-UA': {
     ...baseServiceConfig,
     translations: {
@@ -280,6 +283,9 @@ export const service = {
       ...russianMainTranslations,
     },
     datetimeLocale: `ru`,
+    locale: `ru-UA`,
+    lang: `ru-UA`,
+    headerFooterLang: 'uk',
   },
 };
 

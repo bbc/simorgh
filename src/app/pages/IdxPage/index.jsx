@@ -52,11 +52,11 @@ const IdxPage = ({
 }) => {
   const {
     mostRead: { onIdxPage },
+    lang,
   } = useContext(ServiceContext);
 
   const groups = path(['content', 'groups'], pageData);
   const title = path(['metadata', 'title'], pageData);
-  const lang = path(['metadata', 'language'], pageData);
   const summary = path(['metadata', 'summary'], pageData);
   const seoTitle = path(['promo', 'name'], pageData);
 

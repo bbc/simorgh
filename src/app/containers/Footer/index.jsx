@@ -12,7 +12,7 @@ const getCopyrightText = text => (
 );
 
 const FooterContainer = () => {
-  const { footer, service } = useContext(ServiceContext);
+  const { footer, service, headerFooterLang } = useContext(ServiceContext);
 
   if (!footer) {
     return null;
@@ -21,7 +21,10 @@ const FooterContainer = () => {
   const { externalLink, links, copyrightText, trustProjectLink } = footer;
 
   return (
-    <footer role="contentinfo">
+    <footer
+      role="contentinfo"
+      {...(headerFooterLang && { lang: headerFooterLang })}
+    >
       <BrandContainer borderTop />
       <SitewideLinks
         links={links}

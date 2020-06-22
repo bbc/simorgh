@@ -11,9 +11,14 @@ import onClient from '#lib/utilities/onClient';
 
 const HeaderContainer = () => {
   const { pageType } = useContext(RequestContext);
-  const { service, script, translations, dir, scriptLink } = useContext(
-    ServiceContext,
-  );
+  const {
+    service,
+    script,
+    translations,
+    dir,
+    scriptLink,
+    headerFooterLang,
+  } = useContext(ServiceContext);
   const { skipLinkText } = translations;
   const borderBottom = pageType !== 'frontPage';
 
@@ -32,7 +37,7 @@ const HeaderContainer = () => {
   );
 
   return (
-    <header role="banner">
+    <header role="banner" {...(headerFooterLang && { lang: headerFooterLang })}>
       <ConsentBanner />
       <BrandContainer
         borderBottom={borderBottom}
