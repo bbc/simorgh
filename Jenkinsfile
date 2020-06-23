@@ -20,19 +20,24 @@ def setupCodeCoverage() {
   sh './cc-test-reporter before-build'
 }
 
-def runDevelopmentTests(){
+def installDependencies(){
   sh 'make install'
+}
+
+def buildApplication(){
+  sh 'npm run build'
+}
+
+def runDevelopmentTests(){
   sh 'make developmentTests'
 }
 
 def runProductionTests(){
-  sh 'make install'
   sh 'make productionTests'
   sh 'npm prune --production'
 }
 
 def runChromaticTests(){
-  sh 'make install'
   sh 'make testChromatic'
 }
 
@@ -125,7 +130,29 @@ pipeline {
         cancelPreviousBuilds()
       }
     }
-    stage ('Build and Test') {
+    stage ('Install dependencies') {
+      agent {
+        docker {
+          image "${nodeImage}"
+          reuseNode true
+        }
+      }
+      steps {
+        installDependencies()
+      }
+    }
+    stage ('Build') {
+      agent {
+        docker {
+          image "${nodeImage}"
+          reuseNode true
+        }
+      }
+      steps {
+        buildApplication()
+      }
+    }
+    stage ('Test') {
       when {
         expression { env.BRANCH_NAME != 'latest' }
       }
@@ -180,7 +207,7 @@ pipeline {
         }
       }
     }
-    stage ('Build, Test & Package') {
+    stage ('Test & Package') {
       when {
         expression { env.BRANCH_NAME == 'latest' }
       }
@@ -238,7 +265,6 @@ pipeline {
           }
           steps {
             sh "rm -f storybook.zip"
-            sh 'make install'
             sh 'make buildStorybook'
             zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
             stash name: 'simorgh_storybook', includes: storybookDist
@@ -252,8 +278,6 @@ pipeline {
             }
           }
           steps {
-            sh 'make install'
-
             buildStaticAssets("test", "TEST")
             buildStaticAssets("live", "LIVE")
           }
