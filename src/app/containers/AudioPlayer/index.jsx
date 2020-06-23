@@ -19,8 +19,7 @@ const AudioPlayer = ({
 }) => {
   const { translations, service } = useContext(ServiceContext);
 
-  const { isAmp, platform } = useContext(RequestContext);
-  const isValidPlatform = ['amp', 'canonical'].includes(platform);
+  const { isAmp } = useContext(RequestContext);
   const mediaInfo = { title, type };
   const noJsMessage = pathOr(
     `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`,
@@ -28,7 +27,7 @@ const AudioPlayer = ({
     translations,
   );
 
-  if (!isValidPlatform || !assetId) return null;
+  if (!assetId) return null;
 
   return (
     <div className={className}>
