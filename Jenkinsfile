@@ -275,7 +275,6 @@ pipeline {
         // Do not perform the SCM step
         skipDefaultCheckout true
       }
-      agent any
       steps {
         // This stage triggers the B/G deployment when merging Simorgh
         // build(
