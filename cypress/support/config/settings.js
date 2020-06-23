@@ -6248,7 +6248,7 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      articlePage: { environments: undefined, smoke: false },
+      articles: { environments: undefined, smoke: false },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       onDemandRadio: { environments: undefined, smoke: false },
