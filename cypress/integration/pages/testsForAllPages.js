@@ -58,6 +58,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             'noodp,noydir',
           );
         });
+
         if (pageType !== 'mostReadPage') {
           it('should have lang attribute matching payload data', () => {
             cy.request(`${Cypress.env('currentPath')}.json`).then(
@@ -67,7 +68,11 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                     ? body.metadata.passport.language
                     : body.metadata.language;
 
-                cy.get('html').should('have.attr', 'lang', lang);
+                if (pageType === 'idxPage' && service === 'ukrainianRu') {
+                  cy.get('html').should('have.attr', 'lang', 'ru-UA');
+                } else {
+                  cy.get('html').should('have.attr', 'lang', lang);
+                }
               },
             );
           });
