@@ -7,7 +7,10 @@ import {
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import SectionLabel from '@bbc/psammead-section-label';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+} from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import Grid from '#app/components/Grid';
@@ -169,6 +172,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     }
   `;
 
+  // Firefox specific styling to prevent content from overflowing on smaller resolutions
+  const GridPrimaryColumn = styled(Grid)`
+    @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+      width: 100%;
+    }
+  `;
+
   const GridSecondaryColumn = styled(Grid)`
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
       margin-top: ${GEL_SPACING_QUAD};
@@ -247,7 +257,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         enableGelGutters
         margins={gridMargins}
       >
-        <Grid item dir={dir} columns={gridColsMain} startOffset={gridOffset}>
+        <GridPrimaryColumn
+          item
+          dir={dir}
+          columns={gridColsMain}
+          startOffset={gridOffset}
+          parentColumns={gridColumns}
+        >
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
@@ -255,7 +271,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
             content={relatedContent}
             parentColumns={gridColsMain}
           />
-        </Grid>
+        </GridPrimaryColumn>
         <GridSecondaryColumn
           item
           dir={dir}
