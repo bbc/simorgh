@@ -3724,7 +3724,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/persian/afghanistan'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/persian/afghanistan'],
