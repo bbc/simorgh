@@ -78,7 +78,7 @@ describe('Canonical RadioSchedule', () => {
           <RadioScheduleWithContext initialData={initialData} />,
         ).container;
       });
-      expect(container).toBeEmpty();
+      expect(container).toBeEmptyDOMElement();
     });
 
     it('does not render when data contains no programs', async () => {
@@ -94,7 +94,7 @@ describe('Canonical RadioSchedule', () => {
           <RadioScheduleWithContext initialData={initialData} />,
         ).container;
       });
-      expect(container).toBeEmpty();
+      expect(container).toBeEmptyDOMElement();
     });
   });
 
@@ -139,7 +139,7 @@ describe('Canonical RadioSchedule', () => {
       await act(async () => {
         container = await render(<RadioScheduleWithContext />).container;
       });
-      expect(container).toBeEmpty();
+      expect(container).toBeEmptyDOMElement();
     });
 
     it('does not render when data contains no programs', async () => {
@@ -151,7 +151,7 @@ describe('Canonical RadioSchedule', () => {
       await act(async () => {
         container = await render(<RadioScheduleWithContext />).container;
       });
-      expect(container).toBeEmpty();
+      expect(container).toBeEmptyDOMElement();
     });
 
     it('does not render when data fetched returns non-ok status code', async () => {
@@ -161,7 +161,7 @@ describe('Canonical RadioSchedule', () => {
       await act(async () => {
         container = await render(<RadioScheduleWithContext />).container;
       });
-      expect(container).toBeEmpty();
+      expect(container).toBeEmptyDOMElement();
     });
 
     it('does not render when data fetch is rejected', async () => {
@@ -173,7 +173,7 @@ describe('Canonical RadioSchedule', () => {
       await act(async () => {
         container = await render(<RadioScheduleWithContext />).container;
       });
-      expect(container).toBeEmpty();
+      expect(container).toBeEmptyDOMElement();
     });
   });
 });
