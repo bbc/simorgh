@@ -24,7 +24,7 @@ const faultTolerantDomFetch = (url, runScripts = true) =>
       try {
         const dom = await JSDOM.fromURL(
           url,
-          runScripts && { runScripts: 'dangerously' },
+          runScripts ? { runScripts: 'dangerously' } : {},
         );
 
         resolve(dom);
