@@ -31,6 +31,7 @@ import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import Byline from '#containers/Byline';
 import SocialEmbed from '#containers/SocialEmbed';
+import CpsRecommendations from '#containers/CpsRecommendations';
 import {
   getFirstPublished,
   getLastPublished,
@@ -77,6 +78,51 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   );
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
 
+  const gridColumns = {
+    group0: 8,
+    group1: 8,
+    group2: 8,
+    group3: 8,
+    group4: 12,
+    group5: 12,
+  };
+
+  const gridMargins = {
+    group0: false,
+    group1: false,
+    group2: false,
+    group3: false,
+    group4: true,
+    group5: true,
+  };
+
+  const gridOffset = {
+    group0: 1,
+    group1: 1,
+    group2: 1,
+    group3: 1,
+    group4: 1,
+    group5: 1,
+  };
+
+  const gridColsMain = {
+    group0: 8,
+    group1: 8,
+    group2: 8,
+    group3: 8,
+    group4: 8,
+    group5: 8,
+  };
+
+  const gridColsSecondary = {
+    group0: 8,
+    group1: 8,
+    group2: 8,
+    group3: 8,
+    group4: 4,
+    group5: 4,
+  };
+
   const componentsToRender = {
     fauxHeadline,
     visuallyHiddenHeadline,
@@ -93,6 +139,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     byline: props => <StyledByline {...props} />,
     include: props => <Include {...props} />,
     social_embed: props => <SocialEmbed {...props} />,
+    wsoj: props => (
+      <CpsRecommendations {...props} parentColumns={gridColsMain} />
+    ),
   };
 
   const StyledTimestamp = styled(Timestamp)`
@@ -167,50 +216,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     children: node.isRequired,
   };
 
-  const gridColumns = {
-    group0: 8,
-    group1: 8,
-    group2: 8,
-    group3: 8,
-    group4: 12,
-    group5: 12,
-  };
-
-  const gridMargins = {
-    group0: false,
-    group1: false,
-    group2: false,
-    group3: false,
-    group4: true,
-    group5: true,
-  };
-
-  const gridOffset = {
-    group0: 1,
-    group1: 1,
-    group2: 1,
-    group3: 1,
-    group4: 1,
-    group5: 1,
-  };
-
-  const gridColsMain = {
-    group0: 8,
-    group1: 8,
-    group2: 8,
-    group3: 8,
-    group4: 8,
-    group5: 8,
-  };
-
-  const gridColsSecondary = {
-    group0: 8,
-    group1: 8,
-    group2: 8,
-    group3: 8,
-    group4: 4,
-    group5: 4,
-  };
   return (
     <>
       <CpsMetadata
