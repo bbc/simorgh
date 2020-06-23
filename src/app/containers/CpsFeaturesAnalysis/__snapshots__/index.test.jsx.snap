@@ -72,7 +72,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
               </div>
             </div>
             <div
-              class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+              class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
               dir="ltr"
             >
               <h3
@@ -130,7 +130,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
               </div>
             </div>
             <div
-              class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+              class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
               dir="ltr"
             >
               <h3
@@ -230,7 +230,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
             </div>
           </div>
           <div
-            class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
             dir="ltr"
           >
             <h3
