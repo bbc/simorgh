@@ -133,10 +133,11 @@ describe('Get initial data for on demand radio', () => {
       path: 'mock-on-demand-radio-path',
     });
 
-    const countMissingFieldCalls = mockedFunction =>
-      mockedFunction.mock.calls.filter(
-        ([logCategory]) => logCategory === RADIO_MISSING_FIELD,
-      ).length;
+    const countMissingFieldCalls = mockedFunction => {
+      return mockedFunction.mock.calls.filter(([logCategory]) => {
+        return logCategory === RADIO_MISSING_FIELD;
+      }).length;
+    };
 
     expect(countMissingFieldCalls(loggerMock.info)).toBe(7);
     expect(countMissingFieldCalls(loggerMock.warn)).toBe(2);
