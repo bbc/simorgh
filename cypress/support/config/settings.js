@@ -432,7 +432,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       onDemandRadio: {
         environments: {
@@ -1370,7 +1370,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       photoGalleryPage: {
         environments: {
@@ -3047,7 +3047,7 @@ module.exports = () => ({
             enabled: false,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       mostReadPage: {
         environments: {
@@ -3330,7 +3330,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
@@ -3461,7 +3461,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       mediaAssetPage: {
         environments: {
@@ -3487,7 +3487,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       photoGalleryPage: {
         environments: {
@@ -3581,7 +3581,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       frontPage: {
         environments: {
@@ -3598,7 +3598,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       liveRadio: {
         environments: {
@@ -4353,7 +4353,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       errorPage404: {
         environments: {
@@ -4370,7 +4370,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       frontPage: {
         environments: {
@@ -4486,7 +4486,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       errorPage404: {
         environments: {
@@ -4503,7 +4503,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       frontPage: {
         environments: {
@@ -4880,7 +4880,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       mediaAssetPage: {
         environments: {
@@ -5574,7 +5574,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
       onDemandRadio: { environments: undefined, smoke: false },
@@ -5982,7 +5982,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       errorPage404: {
         environments: {
@@ -5999,7 +5999,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       frontPage: {
         environments: {
@@ -6016,7 +6016,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
       onDemandRadio: { environments: undefined, smoke: false },
@@ -6122,7 +6122,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       errorPage404: {
         environments: {
@@ -6139,7 +6139,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       frontPage: {
         environments: {
@@ -6156,7 +6156,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
       onDemandRadio: { environments: undefined, smoke: false },
@@ -7104,7 +7104,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       errorPage404: {
         environments: {
@@ -7121,7 +7121,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       frontPage: {
         environments: {
@@ -7138,7 +7138,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
       onDemandRadio: { environments: undefined, smoke: false },
@@ -7244,7 +7244,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       errorPage404: {
         environments: {
@@ -7261,7 +7261,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       frontPage: {
         environments: {
@@ -7278,7 +7278,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
       onDemandRadio: { environments: undefined, smoke: false },
@@ -7324,7 +7324,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       storyPage: {
         environments: {
