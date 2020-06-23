@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { shape, string, number } from 'prop-types';
+import { shape, string, number, oneOf } from 'prop-types';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -208,7 +208,11 @@ OnDemandRadioPage.propTypes = {
     headline: string,
     summary: string,
     language: string,
-    episodeIsAvailable: string,
+    episodeIsAvailable: oneOf([
+      EPISODE_STATUS.EPISODE_IS_AVAILABLE,
+      EPISODE_STATUS.EPISODE_IS_EXPIRED,
+      EPISODE_STATUS.EPISODE_IS_NOT_YET_AVAILABLE,
+    ]),
     releaseDateTimeStamp: number,
     imageUrl: string,
   }).isRequired,
