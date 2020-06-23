@@ -42,6 +42,32 @@ describe('Logging episodeAvailability', () => {
     expect(url).toEqual(`${service}/${masterBrand}/programmes/${pid}`);
   });
 
+  it('should return a valid url for tv episode page', () => {
+    const url = getUrl(onDemandTvEpisodeJson);
+
+    const service = path(
+      ['relatedContent', 'site', 'name'],
+      onDemandTvEpisodeJson,
+    ).toLowerCase();
+    const masterBrand = path(['metadata', 'createdBy'], onDemandTvEpisodeJson);
+    const pid = path(['promo', 'locators', 'pid'], onDemandTvEpisodeJson);
+
+    expect(url).toEqual(`${service}/${masterBrand}/${pid}`);
+  });
+
+  it('should return a valid url for tv brand page', () => {
+    const url = getUrl(onDemandTvBrandJson);
+
+    const service = path(
+      ['relatedContent', 'site', 'name'],
+      onDemandTvBrandJson,
+    ).toLowerCase();
+    const masterBrand = path(['metadata', 'createdBy'], onDemandTvBrandJson);
+    const pid = path(['promo', 'locators', 'brandPid'], onDemandTvBrandJson);
+
+    expect(url).toEqual(`${service}/${masterBrand}/tv_programmes/${pid}`);
+  });
+
   //   add tests for tv URLs
 
   it('logs the correct message when the on demand radio episode is expired', async () => {
