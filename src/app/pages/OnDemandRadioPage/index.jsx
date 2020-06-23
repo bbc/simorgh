@@ -119,7 +119,6 @@ const OnDemandRadioPage = ({ pageData }) => {
       ['media', 'contentNotYetAvailable'],
       translations,
     );
-    // not yet available message
   };
 
   return (
