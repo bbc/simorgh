@@ -41,7 +41,7 @@ exports[`Amp AdSlot Snapshots should correctly render a mobile mpu AdSlot 1`] = 
   data-npa-on-unknown-consent="true"
   data-slot="/4817/bbccom.test.site.amp.news"
   height="250"
-  json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"pidgin\\"}}"
+  json="{\\"targeting\\":{\\"slot\\":\\"mpu\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"pidgin\\"}}"
   type="doubleclick"
   width="300"
 />

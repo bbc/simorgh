@@ -5,9 +5,9 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
 
-const constructAdJsonData = ({ service }) => ({
+const constructAdJsonData = ({ service, slotType }) => ({
   targeting: {
-    slot: 'leaderboard',
+    slot: slotType,
     asset_type: 'index',
     channel: service,
   },
@@ -53,7 +53,7 @@ const AdSlot = ({ viewportType, service, slotType }) => {
       data-slot="/4817/bbccom.test.site.amp.news"
       data-amp-slot-index="0"
       data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
-      json={JSON.stringify(constructAdJsonData({ service }))}
+      json={JSON.stringify(constructAdJsonData({ service, slotType }))}
     />
   );
 };
