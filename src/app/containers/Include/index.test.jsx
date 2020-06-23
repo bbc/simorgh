@@ -5,6 +5,7 @@ import IncludeContainer from '.';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import * as idt2Amp from './amp/Idt2Amp';
+import * as vjAmp from './amp/VjAmp';
 import * as canonical from './canonical';
 import { INCLUDE_RENDERED } from '#lib/logger.const';
 
@@ -157,4 +158,24 @@ describe('IncludeContainer', () => {
     expect(mockIdt2Amp).not.toHaveBeenCalled();
     expect(loggerMock.info).not.toHaveBeenCalled();
   });
+
+  it('should render include for VJ on an Amp page with toggles enabled', () => {
+    // arrange
+
+    const mockVjAmp = jest.fn().mockReturnValue('VJ-Amp-component');
+    vjAmp.default = mockVjAmp; // does setting default apply to vj - ask Rowland?
+
+    const { container } = render(
+      <IncludeContainerWithMockContext
+        toggleState={defaultToggleState}
+        isAmp
+        {...includeProps} // update for Vj props
+      />,
+    );
+
+    // act
+    const actual = componentsToRender['amp']['vj']()
+    // assert
+    expect(container).toMatchSnapshot();
+  })
 });
