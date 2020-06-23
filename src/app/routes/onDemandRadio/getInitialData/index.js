@@ -43,6 +43,7 @@ export default async ({ path: pathname }) => {
   const episodeIsAvailable = getEpisodeAvailability({
     availableFrom,
     availableUntil,
+    json,
   });
 
   // LOGGING STRATEGY NEEDS MIGRATING TO EPISODEAVAILABILITY
