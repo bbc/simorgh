@@ -290,6 +290,7 @@ describe('OnDemand Radio Page ', () => {
     const notYetAvailableMessageEl = getByText(
       'This content is not yet available',
     );
+    // When Ryan's PR #6993 is merged this test will need updating to the translated Korean error message
 
     expect(audioPlayerIframeEl).not.toBeInTheDocument();
     expect(notYetAvailableMessageEl).toBeInTheDocument();
