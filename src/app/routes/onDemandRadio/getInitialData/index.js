@@ -2,13 +2,12 @@ import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
-import { logExpiredEpisode, getUri } from './logInitialData';
 import pathWithLogging, {
   LOG_LEVELS,
 } from '../../../lib/utilities/logging/pathWithLogging';
 import { RADIO_MISSING_FIELD } from '#lib/logger.const';
 import getEpisodeAvailability, {
-  EPISODE_STATUS,
+  getUrl,
 } from '#lib/utilities/episodeAvailability';
 
 export default async ({ path: pathname }) => {
@@ -23,12 +22,7 @@ export default async ({ path: pathname }) => {
 
   const episodeIsAvailable = getEpisodeAvailability(json);
 
-  // LOGGING STRATEGY NEEDS MIGRATING TO EPISODEAVAILABILITY
-  if (episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_EXPIRED) {
-    logExpiredEpisode(json);
-  }
-
-  const withLogging = pathWithLogging(getUri(json), RADIO_MISSING_FIELD, json);
+  const withLogging = pathWithLogging(getUrl(json), RADIO_MISSING_FIELD, json);
   const get = (fieldPath, logLevel) =>
     logLevel ? withLogging(fieldPath, logLevel) : path(fieldPath, json);
 
