@@ -102,6 +102,7 @@ const testRenderedData = ({
   const { text, status } = await makeRequest(url);
 
   const assetOrigins = [
+    'https://cookie-oven.api.bbc.co.uk',
     'https://ichef.bbci.co.uk',
     localBaseUrl,
     'https://logws1363.ati-host.net?',
