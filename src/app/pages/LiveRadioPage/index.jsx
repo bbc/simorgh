@@ -75,7 +75,6 @@ const LiveRadioPage = ({ pageData }) => {
     isAmp,
     queryString: location.search,
   });
-
   const iframeTitle = pathOr(
     'Audio player',
     ['mediaAssetPage', 'audioPlayer'],
