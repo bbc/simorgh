@@ -3,10 +3,10 @@
  * @pathname /gahuza/23313911
  */
 
-import runCrossPlatformIncludeTests from '../crossPlatformIncludeTests';
+import runAmpIncludeTests from '../ampIncludeTests';
 
 describe('Amp', () => {
   describe(pageType, () => {
-    runCrossPlatformIncludeTests();
+    runAmpIncludeTests();
   });
 });
