@@ -135,6 +135,7 @@ pipeline {
           agent {
             docker {
               image "${nodeImage}"
+              reuseNode true
             }
           }
           steps {
@@ -150,6 +151,7 @@ pipeline {
           agent {
             docker {
               image "${nodeImage}"
+              reuseNode true
             }
           }
           steps {
@@ -160,6 +162,7 @@ pipeline {
           agent {
             docker {
               image "${nodeImage}"
+              reuseNode true
             }
           }
           steps {
@@ -186,6 +189,7 @@ pipeline {
           agent {
             docker {
               image "${nodeImage}"
+              reuseNode true
             }
           }
           steps {
@@ -200,6 +204,7 @@ pipeline {
           agent {
             docker {
               image "${nodeImage}"
+              reuseNode true
             }
           }
           steps {
@@ -228,6 +233,7 @@ pipeline {
           agent {
             docker {
               image "${nodeImage}"
+              reuseNode true
             }
           }
           steps {
@@ -242,6 +248,7 @@ pipeline {
           agent {
             docker {
               image "${nodeImage}"
+              reuseNode true
             }
           }
           steps {
