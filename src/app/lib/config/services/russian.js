@@ -158,9 +158,15 @@ export const mainTranslations = {
   featuresAnalysisTitle: 'Журнал',
 };
 
+export const metadataConfig = {
+  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/russian.png',
+  defaultImageAltText: 'BBC News Русская служба',
+};
+
 export const service = {
   default: {
     translations: { ...mainTranslations, ...headerFooterTranslations },
+    ...metadataConfig,
     ads: {
       hasAds: true,
       advertisementLabel: 'Реклама',
@@ -174,8 +180,6 @@ export const service = {
     brandName: 'BBC News Русская служба',
     product: 'BBC News',
     serviceLocalizedName: 'Русская служба',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/russian.png',
-    defaultImageAltText: 'BBC News Русская служба',
     dir: `ltr`,
     externalLinkText: ', внешняя ссылка',
     imageCaptionOffscreenText: 'Подпись к фото, ',

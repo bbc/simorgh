@@ -4,7 +4,10 @@ import { ukrainian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
-import { mainTranslations as russianMainTranslations } from './russian';
+import {
+  mainTranslations as russianMainTranslations,
+  metadataConfig as russianMetadataConfig,
+} from './russian';
 
 const baseServiceConfig = {
   ads: {
@@ -19,8 +22,7 @@ const baseServiceConfig = {
   brandName: 'BBC News Україна',
   product: 'BBC News',
   serviceLocalizedName: 'Україна',
-  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png',
-  defaultImageAltText: 'BBC News Україна',
+
   dir: `ltr`,
   externalLinkText: ', зовнішнє посилання',
   imageCaptionOffscreenText: 'Підпис до фото, ',
@@ -275,6 +277,8 @@ export const service = {
     datetimeLocale: `uk`,
     locale: `uk-UA`,
     lang: `uk`,
+    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png',
+    defaultImageAltText: 'BBC News Україна',
   },
   'ru-UA': {
     ...baseServiceConfig,
@@ -286,6 +290,7 @@ export const service = {
     locale: `ru-UA`,
     lang: `ru-UA`,
     headerFooterLang: 'uk',
+    ...russianMetadataConfig,
   },
 };
 
