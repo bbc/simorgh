@@ -630,7 +630,7 @@ module.exports = () => ({
               '/arabic/world-23278971', // CPS audio
               '/arabic/worldnews/2015/11/151120_t_arabic_av', // TC2 video
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -1895,7 +1895,7 @@ module.exports = () => ({
               '/hindi/23201477', // CPS video
               '/hindi/sport/2016/08/160822_tc2_testmap1', // TC2 video
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
