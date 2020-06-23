@@ -1,12 +1,12 @@
 /**
  * @service gahuza
- * @pathname /gahuza/23299713
+ * @pathname /gahuza/23313911
  */
 
-import runAmpIncludeTests from '../ampIncludeTests';
+import runCrossPlatformIncludeTests from '../crossPlatformIncludeTests';
 
 describe('Amp', () => {
   describe(pageType, () => {
-    runAmpIncludeTests();
+    runCrossPlatformIncludeTests();
   });
 });
