@@ -6251,6 +6251,7 @@ module.exports = () => ({
       articles: { environments: undefined, smoke: false },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
+      errorPage404: { environments: undefined, smoke: false },
       onDemandRadio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
