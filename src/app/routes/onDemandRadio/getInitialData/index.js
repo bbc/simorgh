@@ -11,23 +11,6 @@ import getEpisodeAvailability, {
   EPISODE_STATUS,
 } from '#lib/utilities/episodeAvailability';
 
-const getEpisodeAvailableFrom = path([
-  'content',
-  'blocks',
-  '0',
-  'versions',
-  '0',
-  'availableFrom',
-]);
-const getEpisodeAvailableUntil = path([
-  'content',
-  'blocks',
-  '0',
-  'versions',
-  '0',
-  'availableUntil',
-]);
-
 export default async ({ path: pathname }) => {
   const onDemandRadioDataPath = overrideRendererOnTest(pathname);
   const { json, ...rest } = await fetchPageData(onDemandRadioDataPath);
@@ -38,13 +21,7 @@ export default async ({ path: pathname }) => {
   // paremeters - the withError HOC will inspect these params and act accordingly
   if (!json) return rest;
 
-  const availableFrom = getEpisodeAvailableFrom(json);
-  const availableUntil = getEpisodeAvailableUntil(json);
-  const episodeIsAvailable = getEpisodeAvailability({
-    availableFrom,
-    availableUntil,
-    json,
-  });
+  const episodeIsAvailable = getEpisodeAvailability(json);
 
   // LOGGING STRATEGY NEEDS MIGRATING TO EPISODEAVAILABILITY
   if (episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_EXPIRED) {

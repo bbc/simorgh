@@ -20,11 +20,9 @@ const logCodes = {
   MEDIA_MISSING: 'media_missing',
   MEDIA_MISSING_FIELD: 'media_missing_field',
   MEDIA_PLAYER_STATUS: 'media_player_status',
-  RADIO_EPISODE_EXPIRED: 'radio_episode_expired',
-  RADIO_EPISODE_NOT_YET_AVAILABLE: 'radio_episode_not_yet_available',
   RADIO_MISSING_FIELD: 'radio_missing_field',
-  TV_EPISODE_EXPIRED: 'tv_episode_expired',
-  TV_EPISODE_NOT_YET_AVAILABLE: 'tv_episode_not_yet_available',
+  EPISODE_EXPIRED: 'episode_expired',
+  EPISODE_NOT_YET_AVAILABLE: 'episode_not_yet_available',
 
   // Translations
   NO_TRANSLATION_FOUND: 'no_translation_found',
