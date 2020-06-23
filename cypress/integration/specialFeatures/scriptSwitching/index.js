@@ -14,7 +14,9 @@ Object.keys(config)
   .forEach(serviceId => {
     const { variant } = config[serviceId];
     const serviceName = config[serviceId].name;
-    const otherVariant = appConfig[serviceName][variant].scriptLink.variant;
+    const otherVariant = appConfig[serviceName][variant];
+    const scriptLinkVariant =
+      otherVariant.scriptLink && otherVariant.scriptLink.variant;
     Object.keys(config[serviceId].pageTypes)
       .filter(
         pageType =>
@@ -30,7 +32,7 @@ Object.keys(config)
             pageType,
             path,
             variant,
-            otherVariant,
+            scriptLinkVariant,
           });
         });
         paths
