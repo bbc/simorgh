@@ -68,6 +68,7 @@ const MetadataContainer = ({
     twitterCreator,
     twitterSite,
   } = useContext(ServiceContext);
+
   const appleTouchIcon = getAppleTouchUrl(service);
   const isEnglishService = ENGLISH_SERVICES.includes(service);
   const alternateLinksEnglishSites = [
@@ -102,6 +103,8 @@ const MetadataContainer = ({
   const metaImage = image || defaultImage;
   const metaImageAltText = imageAltText || defaultImageAltText;
 
+  const pageLocale = lang === 'ru-UA' ? 'ru_UA' : locale;
+
   return (
     <Helmet htmlAttributes={htmlAttributes}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -134,7 +137,7 @@ const MetadataContainer = ({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={metaImage} />
       <meta property="og:image:alt" content={metaImageAltText} />
-      <meta property="og:locale" content={locale} />
+      <meta property="og:locale" content={pageLocale} />
       <meta property="og:site_name" content={brandName} />
       <meta property="og:title" content={pageTitle} />
       <meta property="og:type" content={openGraphType} />
@@ -173,8 +176,8 @@ const tagPropTypes = shape({
 
 MetadataContainer.propTypes = {
   title: string.isRequired,
-  lang: string.isRequired,
   description: string.isRequired,
+  lang: string.isRequired,
   openGraphType: string.isRequired,
   aboutTags: arrayOf(tagPropTypes),
   mentionsTags: arrayOf(tagPropTypes),

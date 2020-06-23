@@ -68,8 +68,8 @@ const IdxPage = ({
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
         title={title}
-        lang={lang}
         description={summary}
+        lang={lang}
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
