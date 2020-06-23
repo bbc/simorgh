@@ -146,6 +146,7 @@ export const service = {
         noJs:
           'โปรดเปิดการใช้งาน JavaScript หรือบราวเซอร์ต่างออกไป เพื่ดูเนื้อหานี้',
         contentExpired: 'เนื้อหานี้ไม่เป็นที่ปรากฏแล้ว',
+        contentNotYetAvailable: 'เนื้อหานี้ยังไม่พร้อมแสดง',
         audio: 'เสียง',
         photogallery: 'แกลเลอรีภาพ',
         video: 'วิดีโอ',
