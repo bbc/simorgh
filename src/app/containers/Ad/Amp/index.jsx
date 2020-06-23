@@ -103,7 +103,7 @@ const AMP_ACCESS_DATA = endpoint => ({
 const LABEL_LINK = 'https://www.bbc.com/usingthebbc/cookies/';
 
 export const AMP_ACCESS_FETCH = service => {
-  const togglesEndpoint = `${process.env.SIMORGH_TOGGLES_URL}/toggles?application=simorgh&service=${service}`;
+  const togglesEndpoint = `${process.env.SIMORGH_CONFIG_URL}?application=simorgh&service=${service}`;
 
   return (
     <script id="amp-access" type="application/json">
@@ -135,24 +135,8 @@ const AmpAd = () => {
             >
               {label}
             </StyledLink>
-            <amp-ad {...ampAdPropsMobile({ service })}>
-              <amp-img
-                placeholder
-                width="320"
-                height="50"
-                src="https://via.placeholder.com/320x50"
-                layout="responsive"
-              />
-            </amp-ad>
-            <amp-ad {...ampAdPropsDesktop({ service })}>
-              <amp-img
-                placeholder
-                width="970"
-                height="250"
-                src="https://via.placeholder.com/970x250"
-                layout="responsive"
-              />
-            </amp-ad>
+            <amp-ad {...ampAdPropsMobile({ service })} />
+            <amp-ad {...ampAdPropsDesktop({ service })} />
           </StyledAd>
         </div>
       </StyledWrapper>

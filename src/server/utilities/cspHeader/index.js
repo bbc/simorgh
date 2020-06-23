@@ -18,7 +18,7 @@ const directives = {
       'https://pagead2.googlesyndication.com', // ads
       'https://tpc.googlesyndication.com', // ads
       'https://a1.api.bbc.co.uk/hit.xiti', // ATI
-      'https://toggles.api.bbci.co.uk', // Toggles service
+      'https://config.api.bbci.co.uk', // Toggles service
       'https://cdn.ampproject.org', // AMP
       'https://*.ampproject.net', // Social Embeds
       'https://amp-error-reporting.appspot.com', // AMP
@@ -33,7 +33,7 @@ const directives = {
       'https://pagead2.googlesyndication.com', // ads
       'https://tpc.googlesyndication.com', // ads
       'https://a1.api.bbc.co.uk/hit.xiti', // ATI
-      'https://toggles.api.bbci.co.uk', // Toggles service
+      'https://config.api.bbci.co.uk', // Toggles service
       'https://cookie-oven.api.bbc.com', // Cookie banner
       'https://cookie-oven.api.bbc.co.uk', // Cookie banner
       'https://www.bbc.co.uk', // STY include indepthtoolkit
@@ -50,7 +50,7 @@ const directives = {
       'https://*.ampproject.net', // Social Embeds
       'https://amp-error-reporting.appspot.com',
       'https://logws1363.ati-host.net',
-      'https://toggles.test.api.bbci.co.uk',
+      'https://config.test.api.bbci.co.uk',
       'https://www.bbc.co.uk', // STY include indepthtoolkit
       'https://platform.twitter.com', // Social Embeds, <amp-twitter />
       "'self'",
@@ -62,7 +62,7 @@ const directives = {
       'https://pagead2.googlesyndication.com', // ads
       'https://tpc.googlesyndication.com', // ads
       'https://logws1363.ati-host.net', // ATI
-      'https://toggles.test.api.bbci.co.uk', // Toggles service
+      'https://config.test.api.bbci.co.uk', // Toggles service
       'https://cookie-oven.api.bbc.com', // Cookie banner
       'https://cookie-oven.api.bbc.co.uk', // Cookie banner
       'https://cookie-oven.test.api.bbc.com', // Cookie banner
@@ -141,7 +141,6 @@ const directives = {
       'https://securepubads.g.doubleclick.net', // ads
       'https://tpc.googlesyndication.com', // ads
       'https://www.google.com', // ads
-      'https://via.placeholder.com', // ads
       'https://i.ytimg.com', // Social Embeds, <amp-youtube />
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.cdninstagram.com', // Social Embeds, <amp-instagram />
@@ -157,7 +156,6 @@ const directives = {
       'https://securepubads.g.doubleclick.net', // ads
       'https://tpc.googlesyndication.com', // ads
       'https://www.google.com', // ads
-      'https://via.placeholder.com', // ads
       'https://syndication.twitter.com', // Social Embeds
       'https://platform.twitter.com', // Social Embeds
       'https://pbs.twimg.com', // Social Embeds
@@ -180,7 +178,6 @@ const directives = {
       'https://securepubads.g.doubleclick.net', // ads
       'https://tpc.googlesyndication.com', // ads
       'https://www.google.com', // ads
-      'https://via.placeholder.com', // ads
       'http://b.files.bbci.co.uk', // localhost http connection for image
       'http://ping.chartbeat.net', // localhost prod build
       'https://i.ytimg.com', // Social Embeds, <amp-youtube />
@@ -201,7 +198,6 @@ const directives = {
       'https://securepubads.g.doubleclick.net', // ads
       'https://tpc.googlesyndication.com', // ads
       'https://www.google.com', // ads
-      'https://via.placeholder.com', // ads
       'http://b.files.bbci.co.uk', // localhost http connection for image
       'http://ping.chartbeat.net', // localhost prod build
       'https://syndication.twitter.com', // Social Embeds
