@@ -108,13 +108,15 @@ describe('IncludeContainer', () => {
       <IncludeContainerWithMockContext
         toggleState={defaultToggleState}
         {...includeProps}
+        type="vj"
+        href="/include/vjamericas/176-eclipse-lookup/mundo/app"
       />,
     );
 
     expect(loggerMock.info).toHaveBeenCalledTimes(1);
     expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
-      type: 'idt2',
-      includeUrl: '/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6',
+      type: 'vj',
+      includeUrl: '/include/vjamericas/176-eclipse-lookup/mundo/app',
     });
     expect(container).toMatchSnapshot();
     expect(mockCanonical).toHaveBeenCalledTimes(1);
