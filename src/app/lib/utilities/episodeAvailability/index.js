@@ -1,4 +1,5 @@
 import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import nodeLogger from '#lib/logger.node';
 import {
   RADIO_EPISODE_EXPIRED,
@@ -15,12 +16,12 @@ export const EPISODE_STATUS = {
   EPISODE_IS_EXPIRED: 'expired',
 };
 
-const getUrl = pageData =>
+export const getUrl = pageData =>
   pathOr('Unknown', ['metadata', 'analyticsLabels', 'pageIdentifier'], pageData)
     .replace('.page', '')
     .replace(/\./g, '/');
 
-const pageType = pageData => pathOr('Unknown', ['metadata', 'type'], pageData);
+export const getPageType = pageData => path(['metadata', 'type'], pageData);
 // Do we need a catch here?
 
 const getEpisodeAvailability = ({
@@ -28,11 +29,14 @@ const getEpisodeAvailability = ({
   availableUntil,
   pageData,
 }) => {
+  // Should we actually just pass in the pageData here and get availableFrom/availableUntil within this func?
   const timeNow = Date.now();
 
   if (!availableUntil) {
     logger.info(
-      pageType === 'WSRADIO' ? RADIO_EPISODE_EXPIRED : TV_EPISODE_EXPIRED,
+      getPageType(pageData) === 'WSRADIO'
+        ? RADIO_EPISODE_EXPIRED
+        : TV_EPISODE_EXPIRED,
       // Do we need a third generic episode here if the metadata is missing?
       {
         url: getUrl(pageData),
@@ -42,7 +46,7 @@ const getEpisodeAvailability = ({
   }
   if (timeNow < availableFrom) {
     logger.info(
-      pageType === 'WSRADIO'
+      getPageType(pageData) === 'WSRADIO'
         ? RADIO_EPISODE_NOT_YET_AVAILABLE
         : TV_EPISODE_NOT_YET_AVAILABLE,
       {
