@@ -98,16 +98,7 @@ const AmpAd = ({ slotType }) => {
             >
               {label}
             </StyledLink>
-            <AdSlot
-              viewportType="mobile"
-              service={service}
-              slotType={slotType}
-            />
-            <AdSlot
-              viewportType="desktop"
-              service={service}
-              slotType={slotType}
-            />
+            <AdSlot service={service} slotType={slotType} />
           </StyledAd>
         </StyledWrapper>
       </FullWidthWrapper>

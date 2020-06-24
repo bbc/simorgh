@@ -3,7 +3,7 @@
 const { JSDOM } = require('jsdom');
 const retry = require('retry');
 
-const faultTolerantDomFetch = url =>
+const faultTolerantDomFetch = (url, runScripts) =>
   new Promise((resolve, reject) => {
     const oneSecond = 1000;
     const operation = retry.operation({
@@ -22,7 +22,10 @@ const faultTolerantDomFetch = url =>
       }
 
       try {
-        const dom = await JSDOM.fromURL(url, { runScripts: 'dangerously' });
+        const dom = await JSDOM.fromURL(
+          url,
+          runScripts ? { runScripts: 'dangerously' } : {},
+        );
 
         resolve(dom);
       } catch (error) {

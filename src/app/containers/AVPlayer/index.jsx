@@ -7,11 +7,10 @@ import {
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import getPlaceholderImageUrl from '../../../routes/utils/getPlaceholderImageUrl';
 
 const VideoPlayer = ({
   assetId,
-  imageUrl,
+  placeholderSrc,
   title,
   embedUrl,
   iframeTitle,
@@ -31,7 +30,6 @@ const VideoPlayer = ({
     ['media', 'noJs'],
     translations,
   );
-  const placeholderSrc = getPlaceholderImageUrl(imageUrl);
 
   if (!isValidPlatform || !assetId) return null;
 
@@ -63,7 +61,7 @@ const VideoPlayer = ({
 VideoPlayer.propTypes = {
   embedUrl: string,
   assetId: string,
-  imageUrl: string,
+  placeholderSrc: string,
   type: string,
   title: string,
   iframeTitle: string,
@@ -73,7 +71,7 @@ VideoPlayer.propTypes = {
 VideoPlayer.defaultProps = {
   embedUrl: '',
   assetId: '',
-  imageUrl: '',
+  placeholderSrc: '',
   type: '',
   title: '',
   iframeTitle: '',
