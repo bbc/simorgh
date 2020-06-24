@@ -156,6 +156,8 @@ export const service = {
         noJs:
           'A reprodução deste formato de vídeo não é compatível com seu dispositivo',
         contentExpired: 'Este conteúdo não está mais disponível.',
+        contentNotYetAvailable:
+          'Este conteúdo ainda não está disponível para ser tocado.',
         audio: 'Áudio',
         photogallery: 'Galeria de fotos',
         video: 'Vídeo',

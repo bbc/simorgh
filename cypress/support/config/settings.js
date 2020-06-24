@@ -622,15 +622,18 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/arabic/media-53135426', // CPS video
+              '/arabic/multimedia/2016/06/160601_qatar_sewika_smoking', // TC2 video
+            ],
+            enabled: true,
           },
           test: {
             paths: [
               '/arabic/world-23278971', // CPS audio
               '/arabic/worldnews/2015/11/151120_t_arabic_av', // TC2 video
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -1887,15 +1890,18 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/hindi/media-53139567', // CPS video
+              '/hindi/multimedia/2015/09/150921_what_is_innovation_ms', // TC2 video
+            ],
+            enabled: true,
           },
           test: {
             paths: [
               '/hindi/23201477', // CPS video
               '/hindi/sport/2016/08/160822_tc2_testmap1', // TC2 video
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -3724,7 +3730,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/persian/afghanistan'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/persian/afghanistan'],
@@ -4389,8 +4395,10 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/serbian/cyr/srbija-52895074', // CPS video
+            ],
+            enabled: true,
           },
           test: {
             paths: ['/serbian/cyr/23279016'], // CPS video
@@ -4520,8 +4528,10 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/serbian/lat/srbija-52895074', // CPS video
+            ],
+            enabled: true,
           },
           test: {
             paths: ['/serbian/lat/23279016'], // CPS video
@@ -6014,8 +6024,11 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/ukchina/simp/52970385', // CPS video
+              '/ukchina/simp/elt/2015/08/150908_are_326_barrel_of_laughs_audio', // TC2 audio
+            ],
+            enabled: true,
           },
           test: {
             paths: [
@@ -6151,8 +6164,11 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/ukchina/trad/52970385', // CPS video
+              '/ukchina/trad/elt/2015/08/150908_are_326_barrel_of_laughs_audio', // TC2 audio
+            ],
+            enabled: true,
           },
           test: {
             paths: [
@@ -7130,8 +7146,11 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/zhongwen/simp/world-53107744', // CPS video
+              '/zhongwen/simp/multimedia/2016/06/160608_vid_gaokao_voxpop', // TC2 video
+            ],
+            enabled: true,
           },
           test: {
             paths: [
@@ -7267,8 +7286,11 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/zhongwen/trad/world-53107744', // CPS video
+              '/zhongwen/trad/multimedia/2016/06/160608_vid_gaokao_voxpop', // TC2 video
+            ],
+            enabled: true,
           },
           test: {
             paths: [
