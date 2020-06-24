@@ -145,6 +145,7 @@ export const service = {
       media: {
         noJs: 'اپ کی ڈیوائس پر پلے بیک سپورٹ دستیاب نہیں',
         contentExpired: 'یہ مواد اب دستیاب نہیں',
+        contentNotYetAvailable: 'یہ پروگرام فی الحال دستیاب نہیں۔',
         audio: 'آڈیو',
         photogallery: 'تصاویر',
         video: 'ویڈیو',
