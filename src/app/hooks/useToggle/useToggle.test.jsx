@@ -20,11 +20,11 @@ jest.mock('../../lib/config/toggles/index.js', () => ({
 }));
 
 const togglesUrl =
-  'https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=mundo&__amp_source_origin=https://www.test.bbc.com';
+  'https://mock-toggles-endpoint.bbc.co.uk/?application=simorgh&service=mundo&__amp_source_origin=https://www.test.bbc.com';
 
 beforeEach(() => {
   process.env.SIMORGH_APP_ENV = 'test';
-  process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+  process.env.SIMORGH_CONFIG_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
 
   fetchMock.restore();
 });

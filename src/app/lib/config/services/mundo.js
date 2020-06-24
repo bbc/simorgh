@@ -23,6 +23,7 @@ export const service = {
     lang: `es`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Actualizado',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-mundo',
     atiAnalyticsProducerId: '62',
     chartbeatDomain: 'mundo.bbc.co.uk',
@@ -153,6 +154,7 @@ export const service = {
         noJs:
           'Para ver este contenido, favor activar JavaScript, o intentar con otro navegador',
         contentExpired: 'Este contenido ya no está disponible.',
+        contentNotYetAvailable: 'Este programa todavía no está disponible.',
         audio: 'Audio',
         photogallery: 'Galería de fotos',
         video: 'Video',

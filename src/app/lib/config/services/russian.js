@@ -23,6 +23,7 @@ export const service = {
     lang: `ru`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Обновлено',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-russian',
     atiAnalyticsProducerId: '75',
     chartbeatDomain: 'russian.bbc.co.uk',
@@ -154,6 +155,8 @@ export const service = {
         noJs:
           'Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер',
         contentExpired: 'Контент больше не доступен.',
+        contentNotYetAvailable:
+          'Эта передача еще не доступна для воспроизведения.',
         audio: 'Аудио',
         photogallery: 'Фотогалерея',
         video: 'Видео',
