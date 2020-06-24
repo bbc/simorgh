@@ -119,6 +119,11 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                   ? 'article'
                   : 'website';
 
+                // For Ukrainian pages with Russian content we want to use the `ru_UA` locale
+                const contentLang =
+                  appConfig[config[service].name][variant].metaLocale ||
+                  appConfig[config[service].name][variant].locale;
+
                 cy.get('head').within(() => {
                   cy.get('meta[property="fb:admins"]').should(
                     'have.attr',
@@ -143,7 +148,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                   cy.get('meta[property="og:locale"]').should(
                     'have.attr',
                     'content',
-                    appConfig[config[service].name][variant].locale,
+                    contentLang,
                   );
                   cy.get('meta[property="og:type"]').should(
                     'have.attr',
