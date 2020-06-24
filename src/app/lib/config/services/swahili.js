@@ -14,6 +14,7 @@ export const service = {
     lang: `sw`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Imeboreshwa',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-swahili',
     atiAnalyticsProducerId: '86',
     chartbeatDomain: 'swahili.bbc.co.uk',
@@ -143,6 +144,7 @@ export const service = {
       media: {
         noJs: 'Huwezi kusikiliza tena',
         contentExpired: 'Taarifa hii haipatikani tena.',
+        contentNotYetAvailable: 'Kipindi hiki hakipatikani kwa sasa.',
         audio: 'Sauti',
         photogallery: 'Mkusanyiko wa picha',
         video: 'Video',

@@ -14,6 +14,7 @@ export const service = {
     lang: `fr`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Mise à jour',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-afrique',
     atiAnalyticsProducerId: '3',
     chartbeatDomain: 'afrique.bbc.co.uk',
@@ -149,6 +150,7 @@ export const service = {
         noJs:
           'Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.',
         contentExpired: "Ce contenu n'est pas disponible",
+        contentNotYetAvailable: 'Ce programme ne peut être joué maintenant.',
         audio: 'Audio',
         photogallery: 'Galerie de photos',
         video: 'Vidéo',

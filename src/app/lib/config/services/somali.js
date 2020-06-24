@@ -14,6 +14,7 @@ export const service = {
     lang: `so`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Waa la cusbooneysiiyay',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-somali',
     atiAnalyticsProducerId: '83',
     chartbeatDomain: 'somali.bbc.co.uk',
@@ -146,6 +147,8 @@ export const service = {
       media: {
         noJs: 'Qalabkan kuma ciyaari kartid maqalka iyo muuqaalka',
         contentExpired: 'Adeeggan hadda ma heli kartid',
+        contentNotYetAvailable:
+          'Adeeggani hadda diyaar ma aha oo ma ciyaari kartid',
         audio: 'Cod',
         photogallery: 'Albumka sawirrada',
         video: 'Muuqaal',
