@@ -238,7 +238,6 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
 .c6 {
   height: 165px;
   position: relative;
-  overflow: hidden;
   margin-bottom: 1rem;
 }
 
@@ -487,7 +486,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 .c6 {
   height: 165px;
   position: relative;
-  overflow: hidden;
   margin-bottom: 1rem;
 }
 
