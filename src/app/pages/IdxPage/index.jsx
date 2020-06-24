@@ -59,8 +59,12 @@ const IdxPage = ({
   const radioScheduleData = path(['radioScheduleData'], pageData);
   const radioScheduleOnIdxPage = path(['onIdxPage'], radioSchedule);
   const mostReadOnIdxPage = path(['onIdxPage'], mostRead);
-
   const radioScheduleIdxPosition = path(['idxPagePosition'], radioSchedule);
+
+  // The /ukraine_in_russina page, has a mix of ukrainian and russian text
+  // so we need to add the lang attributes to the elements that use the respective language.
+  // In the case of the main element, it should be `ru-UA` for this page.
+  const mainLangAttribute = service === 'ukrainian' && { lang };
 
   return (
     <>
@@ -73,7 +77,7 @@ const IdxPage = ({
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
-      <main role="main" {...(service === 'ukrainian' && { lang })}>
+      <main role="main" {...mainLangAttribute}>
         <IndexPageContainer>
           <IndexHeading id="content" pageType="idx">
             {title}
