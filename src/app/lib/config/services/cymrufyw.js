@@ -22,6 +22,7 @@ export const service = {
     lang: `cy`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Wedi ei ddiweddaru',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-cymrufyw',
     atiAnalyticsProducerId: '100',
     chartbeatDomain: 'cymrufyw.bbc.co.uk',
