@@ -32,6 +32,10 @@ import { EPISODE_STATUS } from '#lib/utilities/episodeAvailability';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
+const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
+
+const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
+
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,
   group1: one,
@@ -59,11 +63,13 @@ const StyledMessageContainer = styled.div`
 `;
 
 const StyledAudioPlayer = styled(AudioPlayer)`
-  width: calc(100% + ${GEL_SPACING_DBL});
-  margin: 0 -${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    width: calc(100% + ${GEL_SPACING_QUAD});
-    margin: 0 -${GEL_SPACING_DBL};
+  iframe {
+    width: calc(100% + ${GEL_SPACING_DBL});
+    margin: 0 -${GEL_SPACING};
+    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+      width: calc(100% + ${GEL_SPACING_QUAD});
+      margin: 0 -${GEL_SPACING_DBL};
+    }
   }
 `;
 
@@ -121,6 +127,12 @@ const OnDemandRadioPage = ({ pageData }) => {
     );
   };
 
+  const iframeTitle = pathOr(
+    'Audio player',
+    ['mediaAssetPage', 'audioPlayer'],
+    translations,
+  );
+
   return (
     <>
       <ATIAnalytics data={pageData} />
@@ -164,9 +176,12 @@ const OnDemandRadioPage = ({ pageData }) => {
           </StyledGelWrapperGrid>
           {episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_AVAILABLE ? (
             <StyledAudioPlayer
-              externalId={masterBrand}
-              id={episodeId}
+              assetId={episodeId}
               embedUrl={embedUrl}
+              iframeTitle={iframeTitle}
+              title="On-demand radio"
+              type="audio"
+              imageUrl={audioPlaceholderImageSrc}
             />
           ) : (
             <StyledMessageContainer>
