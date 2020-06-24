@@ -288,7 +288,7 @@ describe('OnDemand Radio Page ', () => {
     });
     const audioPlayerIframeEl = container.querySelector('iframe');
     const notYetAvailableMessageEl = getByText(
-      'This content is not yet available',
+      '아직 재생할 수 없는 프로그램입니다.',
     );
     // When Ryan's PR #6993 is merged this test will need updating to the translated Korean error message
 

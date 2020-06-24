@@ -1972,7 +1972,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
             <strong
               class="c17"
             >
-              This content is not yet available
+              아직 재생할 수 없는 프로그램입니다.
             </strong>
           </div>
         </div>
