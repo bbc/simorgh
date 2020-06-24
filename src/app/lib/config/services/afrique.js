@@ -14,6 +14,7 @@ export const service = {
     lang: `fr`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Mise à jour',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-afrique',
     atiAnalyticsProducerId: '3',
     chartbeatDomain: 'afrique.bbc.co.uk',

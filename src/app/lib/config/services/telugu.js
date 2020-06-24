@@ -15,6 +15,7 @@ export const service = {
     lang: `te`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'అప్‌డేట్ అయ్యింది',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-telugu',
     atiAnalyticsProducerId: '89',
     chartbeatDomain: 'telugu.bbc.co.uk',
