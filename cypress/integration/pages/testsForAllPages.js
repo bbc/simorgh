@@ -151,7 +151,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                   cy.get('meta[property="og:locale"]').should(
                     'have.attr',
                     'content',
-                    contentLang,
+                    contentLocale,
                   );
                   cy.get('meta[property="og:type"]').should(
                     'have.attr',
