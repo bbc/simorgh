@@ -24,7 +24,7 @@ const setCookie = ({
 
   // Modern browsers default sameSite value to Lax
   // Setting sameSite='None' allows cookies will be sent in all contexts, i.e sending cross-origin is allowed.
-  // Setting sameSite='Strict' allows cookies to only set on first-party context
+  // Setting sameSite='Strict' allows cookies to only set in first-party context
   const sameSiteValues = {
     Lax: 'Lax',
     Strict: 'Strict',
