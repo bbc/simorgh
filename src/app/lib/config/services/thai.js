@@ -16,6 +16,7 @@ export const service = {
     isoLang: `th`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ปรับปรุงแล้ว',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-thai',
     atiAnalyticsProducerId: '90',
     chartbeatDomain: 'thai.bbc.co.uk',
