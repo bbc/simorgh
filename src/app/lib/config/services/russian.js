@@ -18,7 +18,6 @@ import withContext from '../../../contexts/utils/withContext';
 const headerFooterTranslations = {
   home: 'Главная',
   currentPage: 'Текущая страница',
-  skipLinkText: 'Перейти к содержанию',
   relatedContent: 'Новости по теме',
   navMenuText: 'Разделы',
   consentBanner: {
@@ -76,6 +75,7 @@ const headerFooterTranslations = {
 // Translations used in the main element of the page
 export const mainTranslations = {
   seeAll: 'Посмотреть все',
+  skipLinkText: 'Перейти к содержанию',
   mediaAssetPage: {
     mediaPlayer: 'Медиа плеер',
     audioPlayer: 'Аудио плеер',
