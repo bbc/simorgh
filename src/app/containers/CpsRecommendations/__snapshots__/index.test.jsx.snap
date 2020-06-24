@@ -19,6 +19,7 @@ exports[`CpsRecommendations should render for a single recommendation item 1`] =
         class="SectionLabelWrapper-sc-1p91yk0-2 keYZPs"
       >
         <strong
+          aria-labelledby="recommendations-heading"
           class="CustomSectionLabel-sc-1p91yk0-1 dbbYpP"
           dir="ltr"
         >
@@ -87,6 +88,7 @@ exports[`CpsRecommendations should render for multiple recommendation items 1`] 
         class="SectionLabelWrapper-sc-1p91yk0-2 keYZPs"
       >
         <strong
+          aria-labelledby="recommendations-heading"
           class="CustomSectionLabel-sc-1p91yk0-1 dbbYpP"
           dir="ltr"
         >
