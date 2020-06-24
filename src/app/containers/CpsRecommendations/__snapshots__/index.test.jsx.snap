@@ -101,7 +101,7 @@ exports[`CpsRecommendations should render for multiple recommendation items 1`] 
         role="list"
       >
         <li
-          class="StoryPromoLi-sc-171lqjd-0 StyledStoryPromoLi-sc-1p91yk0-4 cFGyOa GridComponent-nf79gm-0 dbJPTO"
+          class="StoryPromoLi-sc-171lqjd-0 StyledStoryPromoLi-sc-1p91yk0-4 qcOBK GridComponent-nf79gm-0 dbJPTO"
           dir="ltr"
           role="listitem"
         >
@@ -145,7 +145,7 @@ exports[`CpsRecommendations should render for multiple recommendation items 1`] 
           </div>
         </li>
         <li
-          class="StoryPromoLi-sc-171lqjd-0 StyledStoryPromoLi-sc-1p91yk0-4 cFGyOa GridComponent-nf79gm-0 dbJPTO"
+          class="StoryPromoLi-sc-171lqjd-0 StyledStoryPromoLi-sc-1p91yk0-4 qcOBK GridComponent-nf79gm-0 dbJPTO"
           dir="ltr"
           role="listitem"
         >
