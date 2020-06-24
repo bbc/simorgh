@@ -144,6 +144,8 @@ export const service = {
       media: {
         noJs: 'Sizin qurğunuzda yenidən səsləndirmə mümkün deyil',
         contentExpired: 'Bu proqramı izləmək/dinləmək artıq mümkün deyil.',
+        contentNotYetAvailable:
+          'Bu proqramı izləmək/dinləmək hələlik mümkün deyil.',
         audio: 'Audio',
         photogallery: 'Foto-qalereya',
         video: 'Video',

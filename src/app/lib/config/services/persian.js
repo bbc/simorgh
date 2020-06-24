@@ -153,6 +153,7 @@ export const service = {
         noJs:
           'برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.',
         contentExpired: 'این محتوا دیگر قابل دسترس نیست.',
+        contentNotYetAvailable: 'این برنامه هم اکنون برای پخش آماده نیست.',
         audio: 'صدا',
         photogallery: 'عکس',
         video: 'ویدیو',

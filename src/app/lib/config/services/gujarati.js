@@ -145,6 +145,7 @@ export const service = {
       media: {
         noJs: 'તમારું ડિવાઇસ મીડિયા પ્લેબૅક સપોર્ટ નથી કરતું',
         contentExpired: 'આ સામગ્રી હવેથી ઉપલબ્ધ નથી.',
+        contentNotYetAvailable: 'આ સામગ્રી ચલાવવા માટે હજી ઉપલબ્ધ નથી.',
         audio: 'ઓડિયો',
         photogallery: 'ફોટો ગૅલરી',
         video: 'વીડિયો',

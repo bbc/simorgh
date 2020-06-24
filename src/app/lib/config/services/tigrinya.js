@@ -142,6 +142,7 @@ export const service = {
       media: {
         noJs: 'ትጥቀምሉ ዘለኹም መሳርሒ ኣይተቐበሎን።',
         contentExpired: 'እዚ እትደልይዎ ዘለኹም ትሕዝቶ የለን',
+        contentNotYetAvailable: 'እዚ ትሕዝቶ ንምጽዋት የለን፡፡',
         audio: 'ድምጺ',
         photogallery: 'ስእልታት',
         video: 'ቪድዮ',

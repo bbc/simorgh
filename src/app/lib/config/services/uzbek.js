@@ -145,6 +145,8 @@ export const service = {
       media: {
         noJs: 'Мултимедиа ўйнаш бу қурилмада дастакланмайди',
         contentExpired: 'Бу контентни ортиқ тинглаб/томоша қилиб бўлмайди.',
+        contentNotYetAvailable:
+          'Бу контент ҳали тинглаш/томоша қилишга тайёр эмас.',
         audio: 'Аудио',
         photogallery: 'Фото галерея',
         video: 'Видео',

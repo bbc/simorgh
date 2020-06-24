@@ -154,6 +154,7 @@ export const service = {
         noJs:
           'Para ver este contenido, favor activar JavaScript, o intentar con otro navegador',
         contentExpired: 'Este contenido ya no está disponible.',
+        contentNotYetAvailable: 'Este programa todavía no está disponible.',
         audio: 'Audio',
         photogallery: 'Galería de fotos',
         video: 'Video',

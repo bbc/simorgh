@@ -148,6 +148,8 @@ export const service = {
       media: {
         noJs: 'Dem no support media player for your device',
         contentExpired: 'Dis thing no dey again',
+        contentNotYetAvailable:
+          'De thing wey de here never ready for you to play.',
         audio: 'Audio',
         photogallery: 'Image gallery',
         video: 'Video',

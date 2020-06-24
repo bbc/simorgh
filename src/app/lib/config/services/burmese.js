@@ -147,6 +147,7 @@ export const service = {
       media: {
         noJs: 'သငျ့စကျတှငျ ဒီမီဒီယာဖိုငျကို ဖှငျ့၍ မရပါ။',
         contentExpired: 'ဒီအစီအစဉျမရှိတော့ပါဘူး။',
+        contentNotYetAvailable: 'ဒီအစီအစဉ်ကြည့်ရန် အဆင်သင့် မဖြစ်သေးပါ၊',
         audio: 'အသံ',
         photogallery: 'ဓာတ်ပုံများ',
         video: 'ဗီဒီယို',

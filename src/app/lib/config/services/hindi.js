@@ -146,6 +146,7 @@ export const service = {
       media: {
         noJs: 'प्लेबैक आपके उपकरण पर नहीं हो पा रहा',
         contentExpired: 'यह सामग्री अब उपलब्ध नहीं है.',
+        contentNotYetAvailable: 'यह कार्यक्रम अभी चलने के लिए तैयार नहीं है.',
         audio: 'ऑडियो',
         photogallery: 'फ़ोटो गैलरी',
         video: 'वीडियो',

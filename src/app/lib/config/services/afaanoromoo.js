@@ -146,6 +146,8 @@ export const service = {
       media: {
         noJs: "Meeshaan kee Miidiyaa taphachiisuu hin danda'u",
         contentExpired: 'This content is no longer available',
+        contentNotYetAvailable:
+          'Qabiyyeen kun taphachuu kan hin jire dha ammayyuu.',
         audio: 'Sagalee',
         photogallery: 'Kuusaa suuraa',
         video: 'Viidiyoo',

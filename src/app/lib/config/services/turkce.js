@@ -153,6 +153,7 @@ export const service = {
       media: {
         noJs: 'Cihazınızda ses/video gösterim programı bulunamadı',
         contentExpired: 'Bu içerik artık oynatılabilir durumda değil.',
+        contentNotYetAvailable: 'Bu program henüz oynatılmaya hazır değil.',
         audio: 'Ses dosyası',
         photogallery: 'Fotoğraf galerisi',
         video: 'Video',

@@ -147,6 +147,8 @@ export const service = {
       media: {
         noJs: 'ஒலிபரப்பு மென்பொருள் உங்கள் கணினியில் இல்லை',
         contentExpired: 'இந்த நிகழ்ச்சி இனி கிடைக்காது.',
+        contentNotYetAvailable:
+          'இந்த நிகழ்ச்சி இன்னும் கேட்க தயாராக்கப்படவில்லை.',
         audio: 'ஒலி',
         photogallery: 'படத் தொகுப்பு',
         video: 'காணொளி',
