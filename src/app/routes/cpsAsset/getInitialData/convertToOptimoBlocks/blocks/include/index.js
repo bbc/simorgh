@@ -101,10 +101,10 @@ const convertInclude = async (includeBlock, ...restParams) => {
   let html;
   if (classification === 'vj-supports-amp') {
     ampSrc = ampSrcBuilder(href);
-    // TODO - avoid repeating new URLSea.....?
-    ampImageWidth = new URLSearchParams(href).get('amp-image-width');
-    ampImageHeight = new URLSearchParams(href).get('amp-image-height');
-    ampImage = new URLSearchParams(href).get('amp-image');
+    const queryParams = new URLSearchParams(href);
+    ampImageWidth = queryParams.get('amp-image-width');
+    ampImageHeight = queryParams.get('amp-image-height');
+    ampImage = queryParams.get('amp-image');
     logger.info(INCLUDE_IFRAME_REQUEST_RECEIVED, {
       url: ampSrc,
     });

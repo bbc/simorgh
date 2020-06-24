@@ -440,9 +440,10 @@ describe('convertInclude', () => {
       model: {
         href: includeSupportingAmp,
         type: 'vj',
-        ampImage: 'https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
-    +   ampImageHeight: '360',
-    +   ampImageWidth: '640',
+        ampImage:
+          'https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+        ampImageHeight: '360',
+        ampImageWidth: '640',
         ampSrc:
           'https://news.files.bbci.co.uk/include/newsspec/21841-green-diet/gahuza/app/amp?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
       },

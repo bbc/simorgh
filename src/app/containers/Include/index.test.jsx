@@ -159,17 +159,19 @@ describe('IncludeContainer', () => {
     expect(loggerMock.info).not.toHaveBeenCalled();
   });
 
-  it('should render include for VJ on an Amp page with toggles enabled', () => {
+  it('should render a VJ include on an Amp page with toggles enabled', () => {
     const vjProps = {
       ampSrc: 'https://news.files.bbci.co.uk/vj.amp',
       ampImage:
         'https://news.files.bbci.co.uk/vj/?amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-img.png',
       ampImageHeight: '360',
       ampImageWidth: '640',
+      href: '/include/vj/cb1a5166-cfbb-4520-bdac-6159299acff6',
+      type: 'vj',
     };
 
     const mockVjAmp = jest.fn().mockReturnValue('VJ-Amp-component');
-    vjAmp.default = mockVjAmp; // TODO does setting default apply to vj?
+    vjAmp.default = mockVjAmp;
 
     const { container } = render(
       <IncludeContainerWithMockContext
@@ -185,7 +187,7 @@ describe('IncludeContainer', () => {
     expect(loggerMock.info).toHaveBeenCalledTimes(1);
     expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
       type: 'vj',
-      includeUrl: '/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6', // TODO...
+      includeUrl: '/include/vj/cb1a5166-cfbb-4520-bdac-6159299acff6',
     });
   });
 });
