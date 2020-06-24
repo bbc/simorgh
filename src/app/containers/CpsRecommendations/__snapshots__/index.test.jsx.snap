@@ -19,9 +19,9 @@ exports[`CpsRecommendations should render for a single recommendation item 1`] =
         class="SectionLabelWrapper-sc-1p91yk0-2 keYZPs"
       >
         <strong
-          aria-labelledby="recommendations-heading"
           class="CustomSectionLabel-sc-1p91yk0-1 dbbYpP"
           dir="ltr"
+          id="recommendations-heading"
         >
           Recommendations
         </strong>
@@ -44,7 +44,7 @@ exports[`CpsRecommendations should render for a single recommendation item 1`] =
                 class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
               >
                 <img
-                  alt=""
+                  alt="Image Alt text"
                   class="StyledImg-sc-7vx2mr-0 hIxkbt"
                   src="http://c.files.bbci.co.uk/256/727445.jpg"
                 />
@@ -54,7 +54,7 @@ exports[`CpsRecommendations should render for a single recommendation item 1`] =
               class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
               dir="ltr"
             >
-              <h3
+              <span
                 class="Headline-sc-1dvfmi3-3 dnWhDh"
               >
                 <a
@@ -63,7 +63,7 @@ exports[`CpsRecommendations should render for a single recommendation item 1`] =
                 >
                   This is a headline
                 </a>
-              </h3>
+              </span>
             </div>
           </div>
         </div>
@@ -88,9 +88,9 @@ exports[`CpsRecommendations should render for multiple recommendation items 1`] 
         class="SectionLabelWrapper-sc-1p91yk0-2 keYZPs"
       >
         <strong
-          aria-labelledby="recommendations-heading"
           class="CustomSectionLabel-sc-1p91yk0-1 dbbYpP"
           dir="ltr"
+          id="recommendations-heading"
         >
           Recommendations
         </strong>
@@ -120,7 +120,7 @@ exports[`CpsRecommendations should render for multiple recommendation items 1`] 
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                 >
                   <img
-                    alt=""
+                    alt="Image Alt text"
                     class="StyledImg-sc-7vx2mr-0 hIxkbt"
                     src="http://c.files.bbci.co.uk/256/727445.jpg"
                   />
@@ -130,7 +130,7 @@ exports[`CpsRecommendations should render for multiple recommendation items 1`] 
                 class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
                 dir="ltr"
               >
-                <h3
+                <span
                   class="Headline-sc-1dvfmi3-3 dnWhDh"
                 >
                   <a
@@ -139,7 +139,7 @@ exports[`CpsRecommendations should render for multiple recommendation items 1`] 
                   >
                     This is a headline
                   </a>
-                </h3>
+                </span>
               </div>
             </div>
           </div>
@@ -164,7 +164,7 @@ exports[`CpsRecommendations should render for multiple recommendation items 1`] 
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                 >
                   <img
-                    alt=""
+                    alt="Image Alt text"
                     class="StyledImg-sc-7vx2mr-0 hIxkbt"
                     src="http://c.files.bbci.co.uk/123/af07635.jpg"
                   />
@@ -174,7 +174,7 @@ exports[`CpsRecommendations should render for multiple recommendation items 1`] 
                 class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
                 dir="ltr"
               >
-                <h3
+                <span
                   class="Headline-sc-1dvfmi3-3 dnWhDh"
                 >
                   <a
@@ -183,7 +183,7 @@ exports[`CpsRecommendations should render for multiple recommendation items 1`] 
                   >
                     This is another headline
                   </a>
-                </h3>
+                </span>
               </div>
             </div>
           </div>

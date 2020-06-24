@@ -55,6 +55,7 @@ const getPromoItemProps = item => ({
   src: path(['indexImage', 'path'], item),
   href: path(['locators', 'assetUri'], item),
   headline: path(['headlines', 'headline'], item),
+  alt: path(['indexImage', 'altText'], item),
 });
 
 const toStoryPromoItem = ({ assetUri, shortHeadline, imageHref }) => ({
@@ -66,6 +67,7 @@ const toStoryPromoItem = ({ assetUri, shortHeadline, imageHref }) => ({
   },
   indexImage: {
     path: imageHref,
+    altText: 'Image Alt text', // This value would be changed as it's on our list of improvements.
   },
   uri: assetUri,
 });
@@ -81,12 +83,12 @@ const CpsRecommendations = ({ parentColumns, items }) => {
   if (!hasStoryRecommendations || !enabled) return null;
 
   const singleTransform = item => {
-    const { src, href, headline } = getPromoItemProps(item);
+    const { src, href, headline, alt } = getPromoItemProps(item);
 
-    const Img = <Image alt="" src={src} />;
+    const Img = <Image alt={alt} src={src} />;
 
     const Info = (
-      <Headline script={script} service={service} promoHasImage>
+      <Headline script={script} service={service} promoHasImage as="span">
         <Link href={href}>{headline}</Link>
       </Headline>
     );
@@ -150,7 +152,7 @@ const CpsRecommendations = ({ parentColumns, items }) => {
         script={script}
         service={service}
         dir={dir}
-        labelId="recommendations-heading"
+        id="recommendations-heading"
         bar={false}
         as="strong"
       >
