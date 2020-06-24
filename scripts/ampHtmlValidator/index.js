@@ -13,6 +13,7 @@ const pageTypes = [
   'photoGalleryPage',
   'mostReadPage',
   'onDemandRadio',
+  'onDemandTV',
   'mediaAssetPage',
   'storyPage',
 ];
