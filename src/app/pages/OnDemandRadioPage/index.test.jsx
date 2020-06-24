@@ -271,7 +271,7 @@ describe('OnDemand Radio Page ', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should not show the audio player if it is not available yet', async () => {
+  it("should show the 'content not yet available' message if episode is not yet available", async () => {
     const clonedKoreanPageData = clone(koreanPageData);
     clonedKoreanPageData.content.blocks[0].versions[0] = {
       availableFrom: 9999999999999,
@@ -282,10 +282,17 @@ describe('OnDemand Radio Page ', () => {
       JSON.stringify(koreanPageDataWithNotYetAvailableEpisode),
     );
     const { pageData } = await getInitialData('some-ondemand-radio-path');
-    const { container } = await renderPage({ pageData, service: 'korean' });
+    const { container, getByText } = await renderPage({
+      pageData,
+      service: 'korean',
+    });
     const audioPlayerIframeEl = container.querySelector('iframe');
+    const notYetAvailableMessageEl = getByText(
+      '아직 재생할 수 없는 프로그램입니다.',
+    );
 
     expect(audioPlayerIframeEl).not.toBeInTheDocument();
+    expect(notYetAvailableMessageEl).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
 });

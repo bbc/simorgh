@@ -241,6 +241,8 @@ export const service = {
         noJs:
           'Reprodukovanje multimedijskog sadržaja na vašem uređaju nije podržano',
         contentExpired: 'Ovaj sadržaj više nije dostupan.',
+        contentNotYetAvailable:
+          'Ovaj sadržaj još uvek nije dostupan za reprodukciju.',
         audio: 'Audio',
         photogallery: 'Foto galerija',
         video: 'Video',
@@ -472,6 +474,8 @@ export const service = {
         noJs:
           'Репродуковање мултимедијског садржаја на вашем уређају није подржано',
         contentExpired: 'Овај садржај више није доступан.',
+        contentNotYetAvailable:
+          'Овај садржај још увек није доступан за репродукцију.',
         audio: 'Аудио',
         photogallery: 'Фото галерија',
         video: 'Видео',
