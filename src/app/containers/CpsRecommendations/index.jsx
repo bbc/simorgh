@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, number } from 'prop-types';
+import { arrayOf, shape, number, string } from 'prop-types';
 import styled from 'styled-components';
 import path from 'ramda/src/path';
 import SectionLabel from '@bbc/psammead-section-label';
@@ -19,7 +19,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import Grid from '../../components/Grid';
-import data from './recommendations.json';
+import data from './recommendations.ltr.json';
 
 const StoryPromoWrapper = styled(StoryPromo)`
   display: grid;
@@ -176,7 +176,13 @@ const CpsRecommendations = ({ parentColumns, items }) => {
 export default CpsRecommendations;
 
 CpsRecommendations.propTypes = {
-  items: arrayOf(shape({})),
+  items: arrayOf(
+    shape({
+      assetUri: string.isRequired,
+      shortHeadline: string.isRequired,
+      imageHref: string.isRequired,
+    }),
+  ),
   parentColumns: shape({
     group0: number,
     group1: number,

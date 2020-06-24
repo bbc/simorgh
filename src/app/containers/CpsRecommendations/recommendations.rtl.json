@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "assetUri": "/arabic/middleeast-53067339",
+      "ampUri": "/arabic/amp/middleeast-53067339",
+      "shortHeadline": "حزب العمال الكردستاني وتركيا: عشرات آلاف الضحايا وآلاف القرى المدمرة",
+      "imageHref": "http://c.files.bbci.co.uk/4F3C/production/_112948202_150228122411_turkey_pkk_ocalan_640x360_afp_nocredit.jpg"
+    },
+    {
+      "assetUri": "/arabic/middleeast-52959311",
+      "ampUri": "/arabic/amp/middleeast-52959311",
+      "shortHeadline": "هل يخوض أردوغان مغامرة في ليبيا وقودها السوريون؟",
+      "imageHref": "http://c.files.bbci.co.uk/23F1/production/_112810290_gettyimages-1217498155.jpg"
+    },
+    {
+      "assetUri": "/arabic/inthepress-52320329",
+      "ampUri": "/arabic/amp/inthepress-52320329",
+      "shortHeadline": "صحف بريطانية تناقش \"الاختبار\" الروسي في الشرق الأوسط و\"العلاجات الدجلية\" لفيروس كورونا",
+      "imageHref": "http://c.files.bbci.co.uk/99D6/production/_111828393__111263583_8cf82d3f-bad7-47ca-8086-18cdd1d6da5c.jpg"
+    },
+    {
+      "assetUri": "/arabic/world-52266703",
+      "ampUri": "/arabic/amp/world-52266703",
+      "shortHeadline": "أحداث دولية مهمة طغت عليها تطورات تفشي وباء كورونا",
+      "imageHref": "http://c.files.bbci.co.uk/8543/production/_111751143_whatsubject.jpg"
+    }
+  ]
+}
