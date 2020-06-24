@@ -61,7 +61,7 @@ const IdxPage = ({
   const mostReadOnIdxPage = path(['onIdxPage'], mostRead);
   const radioScheduleIdxPosition = path(['idxPagePosition'], radioSchedule);
 
-  // The /ukraine_in_russina page, has a mix of ukrainian and russian text
+  // The /ukraine_in_russian page, has a mix of ukrainian and russian text
   // so we need to add the lang attributes to the elements that use the respective language.
   // In the case of the main element, it should be `ru-UA` for this page.
   const mainLangAttribute = service === 'ukrainian' && { lang };
