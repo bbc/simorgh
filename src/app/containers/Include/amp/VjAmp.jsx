@@ -1,26 +1,43 @@
 import React from 'react';
+import styled from 'styled-components';
+import { string } from 'prop-types';
+import { GridItemConstrainedMedium } from '#lib/styledGrid';
+
+const IncludeGrid = styled(GridItemConstrainedMedium)`
+  display: grid;
+`;
+
 // currently ampSrc: 'http://localhost:7080 need to replace start of this with // https://news.test.files.bbci.co.uk
-// is this just a problem for localhost?
 
 const VjAmp = ({ ampSrc, ampImage, ampImageHeight, ampImageWidth }) => {
   return (
-    <amp-iframe
-      src={ampSrc}
-      width={ampImageWidth}
-      layout="responsive"
-      height={ampImageHeight}
-      sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-forms"
-      frameborder="0"
-    >
-      <amp-img
-        src={ampImage}
+    <IncludeGrid>
+      <amp-iframe
         width={ampImageWidth}
         height={ampImageHeight}
         layout="responsive"
-        placeholder
-      />
-    </amp-iframe>
+        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-forms"
+        resizable
+        src={ampSrc}
+      >
+        <div overflow="visible" />
+        <amp-img
+          width={ampImageWidth}
+          height={ampImageHeight}
+          layout="fill"
+          placeholder
+          src={ampImage}
+        />
+      </amp-iframe>
+    </IncludeGrid>
   );
+};
+
+VjAmp.propTypes = {
+  ampSrc: string.isRequired,
+  ampImage: string.isRequired,
+  ampImageHeight: string.isRequired,
+  ampImageWidth: string.isRequired,
 };
 
 export default VjAmp;

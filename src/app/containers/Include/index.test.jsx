@@ -160,22 +160,32 @@ describe('IncludeContainer', () => {
   });
 
   it('should render include for VJ on an Amp page with toggles enabled', () => {
-    // arrange
+    const vjProps = {
+      ampSrc: 'https://news.files.bbci.co.uk/vj.amp',
+      ampImage:
+        'https://news.files.bbci.co.uk/vj/?amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-img.png',
+      ampImageHeight: '360',
+      ampImageWidth: '640',
+    };
 
     const mockVjAmp = jest.fn().mockReturnValue('VJ-Amp-component');
-    vjAmp.default = mockVjAmp; // does setting default apply to vj - ask Rowland?
+    vjAmp.default = mockVjAmp; // TODO does setting default apply to vj?
 
     const { container } = render(
       <IncludeContainerWithMockContext
         toggleState={defaultToggleState}
         isAmp
-        {...includeProps} // update for Vj props
+        {...vjProps}
       />,
     );
 
-    // act
-    const actual = componentsToRender['amp']['vj']()
-    // assert
     expect(container).toMatchSnapshot();
-  })
+    expect(mockVjAmp).toHaveBeenCalledTimes(1);
+    expect(mockVjAmp).toHaveBeenCalledWith(vjProps, {});
+    expect(loggerMock.info).toHaveBeenCalledTimes(1);
+    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
+      type: 'vj',
+      includeUrl: '/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6', // TODO...
+    });
+  });
 });
