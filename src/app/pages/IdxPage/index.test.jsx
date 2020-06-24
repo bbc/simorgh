@@ -61,7 +61,7 @@ describe('IdxPage - Ukrainian', () => {
   });
 
   describe('Snapshots', () => {
-    it('should render a ukrainian idx page correctly with most read and radio schedule', async () => {
+    it('should render a ukrainian idx page correctly', async () => {
       expect(container).toMatchSnapshot();
     });
   });
