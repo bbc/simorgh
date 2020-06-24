@@ -63,6 +63,7 @@ const MetadataContainer = ({
     defaultImageAltText,
     dir,
     locale,
+    metaLocale,
     isoLang,
     themeColor,
     twitterCreator,
@@ -102,6 +103,9 @@ const MetadataContainer = ({
   const metaImage = image || defaultImage;
   const metaImageAltText = imageAltText || defaultImageAltText;
 
+  // For Ukrainian pages with Russian content we want to use the `ru_UA` locale
+  const contentLang = metaLocale || locale;
+
   return (
     <Helmet htmlAttributes={htmlAttributes}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -134,7 +138,7 @@ const MetadataContainer = ({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={metaImage} />
       <meta property="og:image:alt" content={metaImageAltText} />
-      <meta property="og:locale" content={locale} />
+      <meta property="og:locale" content={contentLang} />
       <meta property="og:site_name" content={brandName} />
       <meta property="og:title" content={pageTitle} />
       <meta property="og:type" content={openGraphType} />

@@ -273,9 +273,9 @@ const baseServiceConfig = {
 export const service = {
   default: {
     ...baseServiceConfig,
-    datetimeLocale: `uk`,
-    locale: `uk-UA`,
-    lang: `uk`,
+    datetimeLocale: 'uk',
+    locale: 'uk-UA',
+    lang: 'uk',
   },
   'ru-UA': {
     ...baseServiceConfig,
@@ -283,9 +283,10 @@ export const service = {
       ...baseServiceConfig.translations,
       ...russianMainTranslations,
     },
-    datetimeLocale: `ru`,
-    locale: `ru-UA`,
-    lang: `ru-UA`,
+    datetimeLocale: 'ru',
+    metaLocale: 'ru_UA',
+    locale: 'ru-UA',
+    lang: 'ru-UA',
     headerFooterLang: 'uk',
   },
 };
