@@ -143,6 +143,7 @@ export const service = {
       media: {
         noJs: 'मीडिया प्लेबॅक आपल्या डिव्हाइसवर असमर्थित आहे',
         contentExpired: 'ही सामग्री यापुढे उपलब्ध नाही',
+        contentNotYetAvailable: 'ही सामग्री अद्याप प्ले करण्यासाठी उपलब्ध नाही',
         audio: 'ऑडिओ',
         photogallery: 'फोटो गॅलरी',
         video: 'व्हीडिओ',

@@ -145,6 +145,7 @@ export const service = {
         noJs:
           'Untuk memutar video ini, aktifkan JavaScript atau coba di mesin pencari lain',
         contentExpired: 'Konten ini sudah tidak tersedia lagi.',
+        contentNotYetAvailable: 'Program ini belum tersedia.',
         audio: 'Audio',
         photogallery: 'Galeri Foto',
         video: 'Video',
