@@ -13,59 +13,60 @@ const constructAdJsonData = ({ service, slotType }) => ({
   },
 });
 
+const defaultAmpAdProps = {
+  'data-block-on-consent': 'default',
+  'data-npa-on-unknown-consent': 'true',
+  type: 'doubleclick',
+  'data-slot': '/4817/bbccom.test.site.amp.news',
+  'data-amp-slot-index': '0',
+  'data-a4a-upgrade-type': 'amp-ad-network-doubleclick-impl',
+};
+
 const slotConfigurations = {
   leaderboard: {
     mobile: {
       width: '320',
       height: '50',
       media: `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
-      adMultiSize: '320x50,300x50',
+      'data-multi-size': '320x50,300x50',
     },
     desktop: {
       width: '970',
       height: '250',
       media: `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN})`,
-      adMultiSize: '970x250,728x90',
+      'data-multi-size': '970x250,728x90',
     },
   },
   mpu: {
     mobile: {
       width: '300',
       height: '250',
-      adMultiSize: '300x250',
+      'data-multi-size': '300x250',
     },
   },
 };
 
-const AdSlot = ({ viewportType, service, slotType }) => {
-  const {
-    [viewportType]: { width, height, media, adMultiSize },
-  } = slotConfigurations[slotType];
+const AdSlot = ({ service, slotType }) => {
+  const { mobile, desktop } = slotConfigurations[slotType];
+  const targetingJson = JSON.stringify(
+    constructAdJsonData({ service, slotType }),
+  );
+
   return (
-    <amp-ad
-      data-block-on-consent="default"
-      data-npa-on-unknown-consent="true"
-      media={media}
-      type="doubleclick"
-      width={width}
-      height={height}
-      data-multi-size={adMultiSize}
-      data-slot="/4817/bbccom.test.site.amp.news"
-      data-amp-slot-index="0"
-      data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
-      json={JSON.stringify(constructAdJsonData({ service, slotType }))}
-    />
+    <>
+      {mobile && (
+        <amp-ad {...defaultAmpAdProps} {...mobile} json={targetingJson} />
+      )}
+      {desktop && (
+        <amp-ad {...defaultAmpAdProps} {...desktop} json={targetingJson} />
+      )}
+    </>
   );
 };
 
 AdSlot.propTypes = {
-  viewportType: oneOf(['desktop', 'mobile']),
   service: string.isRequired,
   slotType: oneOf(['leaderboard', 'mpu']).isRequired,
-};
-
-AdSlot.defaultProps = {
-  viewportType: 'mobile',
 };
 
 export default AdSlot;
