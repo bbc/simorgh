@@ -14,6 +14,7 @@ export const service = {
     lang: `pa`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ਅਪਡੇਟ',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-punjabi',
     atiAnalyticsProducerId: '73',
     chartbeatDomain: 'punjabi.bbc.co.uk',
