@@ -22,6 +22,7 @@ export const service = {
     lang: `gd`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Ùraichte',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-naidheachdan',
     atiAnalyticsProducerId: '79',
     chartbeatDomain: 'bbc.co.uk',
