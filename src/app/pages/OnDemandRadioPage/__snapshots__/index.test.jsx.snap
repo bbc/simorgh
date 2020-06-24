@@ -1445,7 +1445,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 </html>
 `;
 
-exports[`OnDemand Radio Page  should not show the audio player if it is not available yet 1`] = `
+exports[`OnDemand Radio Page  should show the 'content not yet available' message if episode is not yet available 1`] = `
 .c13 {
   display: block;
   width: 100%;
@@ -1972,7 +1972,7 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
             <strong
               class="c17"
             >
-              더 이상 이용할 수 없는 콘텐츠입니다.
+              아직 재생할 수 없는 프로그램입니다.
             </strong>
           </div>
         </div>
