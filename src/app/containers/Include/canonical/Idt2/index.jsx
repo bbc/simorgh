@@ -17,7 +17,7 @@ const Include = styled.div`
   margin-bottom: ${GEL_SPACING_QUIN};
 `;
 
-const DISALLOWED_SCRIPTS = /js\/verticalChart|verticalChart|lineChart|pieChart|simpleMap|table\./;
+const DISALLOWED_SCRIPTS = /js\/verticalChart|horizontalChart|lineChart|pieChart|simpleMap|table\./;
 
 const Idt2Canonical = ({ html, imageBlock }) => {
   if (!html || !imageBlock) return null;
