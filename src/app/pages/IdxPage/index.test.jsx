@@ -69,7 +69,7 @@ describe('IdxPage - Ukrainian', () => {
   describe('Assertions', () => {
     it('should render idx page sections', async () => {
       const sections = container.querySelectorAll('section');
-      expect(sections).toBeGreaterThan(1);
+      expect(sections.length).toBeGreaterThan(1);
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });
