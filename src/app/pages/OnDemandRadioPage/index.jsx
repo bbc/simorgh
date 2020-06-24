@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { shape, string, number, bool } from 'prop-types';
+import { shape, string, number, oneOf } from 'prop-types';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -28,6 +28,7 @@ import LinkedData from '#containers/LinkedData';
 import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
+import { EPISODE_STATUS } from '#lib/utilities/episodeAvailability';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
@@ -105,11 +106,20 @@ const OnDemandRadioPage = ({ pageData }) => {
     queryString: location.search,
   });
 
-  const expiredContentMessage = pathOr(
-    'This content is no longer available',
-    ['media', 'contentExpired'],
-    translations,
-  );
+  const getEpisodeNotAvailableMessage = () => {
+    if (episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_EXPIRED) {
+      return pathOr(
+        'This content is no longer available',
+        ['media', 'contentExpired'],
+        translations,
+      );
+    }
+    return pathOr(
+      'This content is not yet available',
+      ['media', 'contentNotYetAvailable'],
+      translations,
+    );
+  };
 
   return (
     <>
@@ -152,7 +162,7 @@ const OnDemandRadioPage = ({ pageData }) => {
               <EpisodeImage imageUrl={imageUrl} dir={dir} />
             </Grid>
           </StyledGelWrapperGrid>
-          {episodeIsAvailable ? (
+          {episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_AVAILABLE ? (
             <StyledAudioPlayer
               externalId={masterBrand}
               id={episodeId}
@@ -160,7 +170,10 @@ const OnDemandRadioPage = ({ pageData }) => {
             />
           ) : (
             <StyledMessageContainer>
-              <MediaMessage service={service} message={expiredContentMessage} />
+              <MediaMessage
+                service={service}
+                message={getEpisodeNotAvailableMessage()}
+              />
             </StyledMessageContainer>
           )}
 
@@ -168,7 +181,7 @@ const OnDemandRadioPage = ({ pageData }) => {
             type="WebPage"
             seoTitle={headline}
             entities={
-              episodeIsAvailable
+              episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_AVAILABLE
                 ? [
                     {
                       '@type': 'AudioObject',
@@ -195,7 +208,11 @@ OnDemandRadioPage.propTypes = {
     headline: string,
     summary: string,
     language: string,
-    episodeIsAvailable: bool,
+    episodeIsAvailable: oneOf([
+      EPISODE_STATUS.EPISODE_IS_AVAILABLE,
+      EPISODE_STATUS.EPISODE_IS_EXPIRED,
+      EPISODE_STATUS.EPISODE_IS_NOT_YET_AVAILABLE,
+    ]),
     releaseDateTimeStamp: number,
     imageUrl: string,
   }).isRequired,

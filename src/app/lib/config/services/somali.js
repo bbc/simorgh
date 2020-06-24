@@ -14,6 +14,7 @@ export const service = {
     lang: `so`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Waa la cusbooneysiiyay',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-somali',
     atiAnalyticsProducerId: '83',
     chartbeatDomain: 'somali.bbc.co.uk',
