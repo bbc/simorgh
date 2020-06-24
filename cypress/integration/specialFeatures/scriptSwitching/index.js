@@ -14,9 +14,9 @@ Object.keys(config)
   .forEach(serviceId => {
     const { variant } = config[serviceId];
     const serviceName = config[serviceId].name;
-    const otherVariant = appConfig[serviceName][variant];
-    const scriptLinkVariant =
-      otherVariant.scriptLink && otherVariant.scriptLink.variant;
+    const { scriptLink } = appConfig[serviceName][variant];
+    const scriptLinkVariant = scriptLink && scriptLink.variant;
+
     Object.keys(config[serviceId].pageTypes)
       .filter(
         pageType =>
