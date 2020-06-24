@@ -4211,8 +4211,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/russian/av/media-52355574',
+              '/russian/news/2016/05/160510_tc2_testmap3', // TC2 video
+            ],
+            enabled: true,
           },
           local: {
             paths: [],
