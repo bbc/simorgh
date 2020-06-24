@@ -150,6 +150,7 @@ export const service = {
       media: {
         noJs: 'Ngwaọrụ gị akwadoghi ọkpụkpọ mgbasa ozi',
         contentExpired: 'Ọdịnaya a adịghịzị',
+        contentNotYetAvailable: 'Ọdịnaya a adịbeghị maka ọkpụkpọ.',
         audio: 'Ọdịyo',
         photogallery: 'Image gallery',
         video: 'Vidio',

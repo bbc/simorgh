@@ -142,6 +142,7 @@ export const service = {
       media: {
         noJs: 'Máy của bạn không hỗ trợ nghe xem',
         contentExpired: 'Chương trình không còn nữa.',
+        contentNotYetAvailable: 'Chương trình này chưa sẵn sàng.',
         audio: 'Audio',
         photogallery: 'Gallery hình ảnh',
         video: 'Video',

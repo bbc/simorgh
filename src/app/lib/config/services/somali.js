@@ -146,6 +146,8 @@ export const service = {
       media: {
         noJs: 'Qalabkan kuma ciyaari kartid maqalka iyo muuqaalka',
         contentExpired: 'Adeeggan hadda ma heli kartid',
+        contentNotYetAvailable:
+          'Adeeggani hadda diyaar ma aha oo ma ciyaari kartid',
         audio: 'Cod',
         photogallery: 'Albumka sawirrada',
         video: 'Muuqaal',
