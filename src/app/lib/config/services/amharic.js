@@ -18,6 +18,7 @@ export const service = {
     lang: `am`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ተሻሽሏል',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-amharic',
     atiAnalyticsProducerId: '4',
     chartbeatDomain: 'amharic.bbc.co.uk',

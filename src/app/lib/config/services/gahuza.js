@@ -14,6 +14,7 @@ export const service = {
     lang: `rw`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Vyavuguruwe ',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-gahuza',
     atiAnalyticsProducerId: '40',
     chartbeatDomain: 'gahuza.bbc.co.uk',
