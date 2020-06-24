@@ -123,7 +123,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                   : 'website';
 
                 // For Ukrainian pages with Russian content we want to use the `ru_UA` locale
-                const contentLang =
+                const contentLocale =
                   appConfig[config[service].name][variant].metaLocale ||
                   appConfig[config[service].name][variant].locale;
 
