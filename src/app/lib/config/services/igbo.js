@@ -14,6 +14,7 @@ export const service = {
     lang: 'ig',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Mgbe ikpeazụ e tinyere ya ozi ọhụrụ',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-igbo',
     atiAnalyticsProducerId: '53',
     chartbeatDomain: 'igbo.bbc.co.uk',
@@ -150,6 +151,7 @@ export const service = {
       media: {
         noJs: 'Ngwaọrụ gị akwadoghi ọkpụkpọ mgbasa ozi',
         contentExpired: 'Ọdịnaya a adịghịzị',
+        contentNotYetAvailable: 'Ọdịnaya a adịbeghị maka ọkpụkpọ.',
         audio: 'Ọdịyo',
         photogallery: 'Image gallery',
         video: 'Vidio',

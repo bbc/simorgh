@@ -14,6 +14,7 @@ export const service = {
     lang: `rw`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Vyavuguruwe ',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-gahuza',
     atiAnalyticsProducerId: '40',
     chartbeatDomain: 'gahuza.bbc.co.uk',
@@ -143,6 +144,7 @@ export const service = {
       media: {
         noJs: 'Ntibishobora gukina mu cuma cawe',
         contentExpired: 'Ibi ntibikiboneka.',
+        contentNotYetAvailable: 'Ibi ntibiraboneka ngo bikinwe.',
         audio: 'Amajwi',
         photogallery: 'Amasanamu',
         video: 'Video',

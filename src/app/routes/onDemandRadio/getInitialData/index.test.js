@@ -36,7 +36,7 @@ describe('Get initial data for on demand radio', () => {
     );
   });
 
-  it('should return episodeIsAvailable as true if current time is after when episode is availableFrom', async () => {
+  it("episodeIsAvailable should be 'available' if availableFrom is before current time", async () => {
     const oneMinuteAgo = Date.now() - 60 * 1000;
     const responseWithEpisodeAvailableOneMinuteAgo = assocPath(
       ['content', 'blocks', '0', 'versions', '0', 'availableFrom'],
@@ -46,26 +46,26 @@ describe('Get initial data for on demand radio', () => {
     fetch.mockResponse(
       JSON.stringify(responseWithEpisodeAvailableOneMinuteAgo),
     );
-
     const { pageData } = await getInitialData({
       path: 'mock-on-demand-radio-path',
     });
-    expect(pageData.episodeIsAvailable).toEqual(true);
+    expect(pageData.episodeIsAvailable).toEqual('available');
   });
 
-  it('should return episodeIsAvailable as false if current time is before when episode is availableFrom', async () => {
+  it("episodeIsAvailable should be 'not-yet-available' if availableFrom is after current time", async () => {
     const oneMinuteFromNow = Date.now() + 60 * 1000;
+    const twoMinutesFromNow = oneMinuteFromNow + 60 * 1000;
     const responseWithEpisodeAvailableInOneMinute = assocPath(
-      ['content', 'blocks', '0', 'versions', '0', 'availableFrom'],
-      oneMinuteFromNow,
+      ['content', 'blocks', '0', 'versions', '0'],
+      { availableFrom: oneMinuteFromNow, availableUntil: twoMinutesFromNow },
       onDemandRadioJson,
     );
     fetch.mockResponse(JSON.stringify(responseWithEpisodeAvailableInOneMinute));
     const { pageData } = await getInitialData('mock-on-demand-radio-path');
-    expect(pageData.episodeIsAvailable).toEqual(false);
+    expect(pageData.episodeIsAvailable).toEqual('not-yet-available');
   });
 
-  it('should return episodeIsAvailable as false if there is no availableUntil data', async () => {
+  it("episodeIsAvailable should be 'expired' if there is no availableUntil data", async () => {
     const responseWithoutVersions = assocPath(
       ['content', 'blocks', 0, 'versions'],
       [],
@@ -73,7 +73,7 @@ describe('Get initial data for on demand radio', () => {
     );
     fetch.mockResponse(JSON.stringify(responseWithoutVersions));
     const { pageData } = await getInitialData('mock-on-demand-radio-path');
-    expect(pageData.episodeIsAvailable).toEqual(false);
+    expect(pageData.episodeIsAvailable).toEqual('expired');
   });
 
   it('should override renderer on test', async () => {
@@ -133,10 +133,11 @@ describe('Get initial data for on demand radio', () => {
       path: 'mock-on-demand-radio-path',
     });
 
-    const countMissingFieldCalls = mockedFunction =>
-      mockedFunction.mock.calls.filter(
-        ([logCategory]) => logCategory === RADIO_MISSING_FIELD,
-      ).length;
+    const countMissingFieldCalls = mockedFunction => {
+      return mockedFunction.mock.calls.filter(([logCategory]) => {
+        return logCategory === RADIO_MISSING_FIELD;
+      }).length;
+    };
 
     expect(countMissingFieldCalls(loggerMock.info)).toBe(7);
     expect(countMissingFieldCalls(loggerMock.warn)).toBe(2);

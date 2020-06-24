@@ -23,18 +23,18 @@ const adWithContext = (service = 'pidgin') => (
     pathname="/"
   >
     <ServiceContextProvider service={service}>
-      <AmpAd />
+      <AmpAd slotType="leaderboard" />
     </ServiceContextProvider>
   </RequestContextProvider>
 );
 
 describe('AMP Ads', () => {
   beforeAll(() => {
-    process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+    process.env.SIMORGH_CONFIG_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
   });
 
   afterAll(() => {
-    delete process.env.SIMORGH_TOGGLES_URL;
+    delete process.env.SIMORGH_CONFIG_URL;
   });
 
   describe('Snapshots', () => {
@@ -84,7 +84,7 @@ describe('AMP Ads', () => {
         const ampAccessFetch = jest.fn().mockImplementation(AMP_ACCESS_FETCH);
         const ampAccessData = ampAccessFetch('pidgin');
         const expectedReturn =
-          'https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=pidgin';
+          'https://mock-toggles-endpoint.bbc.co.uk?application=simorgh&service=pidgin';
 
         expect(ampAccessFetch).toHaveReturned();
         expect(ampAccessFetch).toHaveBeenCalledWith('pidgin');
