@@ -19,6 +19,10 @@ describe('Amp AdSlot', () => {
 describe('getDataSlot', () => {
   const service = 'pidgin';
 
+  afterEach(() => {
+    delete process.env.SIMORGH_APP_ENV;
+  });
+
   it('should generate the right data-slot on local', () => {
     process.env.SIMORGH_APP_ENV = 'local';
 
