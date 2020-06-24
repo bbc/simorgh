@@ -149,6 +149,7 @@ export const service = {
         noJs: 'මෙහි කිසිවක් අඩංගු නැත.',
         contentExpired:
           'ඔබේ දුරකථනයේ හෝ පරිගණකයේ මෙය වාදනය කිරීමට අදාළ මෘදුකාංග නැත',
+        contentNotYetAvailable: 'මෙහි ඇති දෑ සවන්දීම සඳහා තවම සූදානම් නැත.',
         audio: 'හඬ',
         photogallery: 'ඡායාරූප ගැලරිය ',
         video: 'වීඩියෝ',
