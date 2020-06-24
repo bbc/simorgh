@@ -27,8 +27,8 @@ export const setPreferredVariantCookie = (service, variant) => {
   const COOKIE_EXPIRY = 7;
 
   // Setting variant cookie to have sameSite=Lax because the purpose of this
-  // cookie is to only be used in a first-party context and update the page on
-  // the user's initial load when arrived from external source.
+  // cookie is to only be used in a first-party context and make sure the page
+  // is rendered correctly on initial load when arrived from external source.
   setCookie({
     name: variantCookieName,
     value: variant,
