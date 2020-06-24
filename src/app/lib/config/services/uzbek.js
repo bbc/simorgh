@@ -14,6 +14,7 @@ export const service = {
     lang: `uz-Cyrl`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Янгиланди',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-uzbek',
     atiAnalyticsProducerId: '96',
     chartbeatDomain: 'uzbek.bbc.co.uk',
