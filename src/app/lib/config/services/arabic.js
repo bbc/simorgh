@@ -12,7 +12,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     ads: {
-      hasAds: false,
+      hasAds: true,
       advertisementLabel: 'إعلان',
     },
     lang: 'ar',
@@ -149,6 +149,7 @@ export const service = {
       media: {
         noJs: 'جهازك لا يدعم تشغيل الفيديو',
         contentExpired: 'هذا المحتوى لم يعد متوفراً',
+        contentNotYetAvailable: 'هذا البرنامج غير متوفر للتشغيل الآن',
         audio: 'تسجيل صوتي',
         photogallery: 'ملف صور',
         video: 'فيديو',
