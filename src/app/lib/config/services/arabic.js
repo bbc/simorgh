@@ -149,6 +149,7 @@ export const service = {
       media: {
         noJs: 'جهازك لا يدعم تشغيل الفيديو',
         contentExpired: 'هذا المحتوى لم يعد متوفراً',
+        contentNotYetAvailable: 'هذا البرنامج غير متوفر للتشغيل الآن',
         audio: 'تسجيل صوتي',
         photogallery: 'ملف صور',
         video: 'فيديو',
