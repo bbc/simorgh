@@ -142,6 +142,7 @@ const baseServiceConfig = {
     media: {
       noJs: 'Ваш пристрій не підтримує відтворення мультимедійних файлів',
       contentExpired: 'Контент більше не доступний',
+      contentNotYetAvailable: 'Ця програма ще не доступна.',
       audio: 'Аудіо',
       photogallery: 'Фотогалерея',
       video: 'Відео',

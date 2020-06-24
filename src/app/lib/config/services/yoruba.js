@@ -146,6 +146,7 @@ export const service = {
       media: {
         noJs: 'Àwọn àmúyẹ fun gbígbọ́ orin ko le ṣiṣẹ lori ẹ̀rọ rẹ',
         contentExpired: 'Nnkan yìí kò sí mọ́.',
+        contentNotYetAvailable: 'Kò tíì sí nnkan náà nílẹ̀ láti gbọ́',
         audio: 'Orin',
         photogallery: 'Àtẹ Àwòrán',
         video: 'Fídíò',

@@ -116,6 +116,7 @@ export const mainTranslations = {
     noJs:
       'Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер',
     contentExpired: 'Контент больше не доступен.',
+    contentNotYetAvailable: 'Эта передача еще не доступна для воспроизведения.',
     audio: 'Аудио',
     photogallery: 'Фотогалерея',
     video: 'Видео',
