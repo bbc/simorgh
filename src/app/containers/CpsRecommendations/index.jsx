@@ -21,6 +21,8 @@ import CpsOnwardJourney from '../CpsOnwardJourney';
 import Grid from '../../components/Grid';
 import data from './recommendations.ltr.json';
 
+const GEL_SPACING_DBL_MINUS_HLF = '0.75rem';
+
 const StoryPromoWrapper = styled(StoryPromo)`
   display: grid;
   margin: ${GEL_SPACING_HLF} ${GEL_SPACING_DBL};
@@ -48,7 +50,7 @@ const WsojWrapper = styled.div`
 
 const StyledStoryPromoLi = styled(StoryPromoLi)`
   /* Override various paddings set by StoryPromoLi */
-  padding: 0 !important;
+  margin: -${GEL_SPACING_DBL_MINUS_HLF} 0;
 `;
 
 const getPromoItemProps = item => ({
