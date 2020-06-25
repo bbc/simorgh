@@ -1,52 +1,78 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { render } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
+import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { RequestContext } from '#contexts/RequestContext';
-import VideoPlayer from '.';
-
-const origin = 'http://localhost:7080';
-
-const defaultTvPlayerProps = {
-  assetId: 'id',
-  placeholderSrc: 'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
-  title: 'On Demand TV',
-  embedUrl:
-    'https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live',
-  iframeTitle: 'video player',
-  type: 'video',
-};
-
-const defaultRequestContextValue = { platform: 'foobar', origin };
+import AVPlayer from '.';
 
 /* eslint-disable react/prop-types */
-const renderComponent = ({
-  videoPlayerProps = defaultTvPlayerProps,
-  requestContextValue = defaultRequestContextValue,
-  service = 'pashto',
+const GenerateFixtureData = ({
+  platform,
+  assetId = 'w3ct0l8r',
+  title = 'Video Player',
+  type = 'video',
+  embedUrl,
+  iframeTitle = 'On Demand TV',
 }) => (
-  <RequestContext.Provider value={requestContextValue}>
-    <ServiceContextProvider service={service}>
+  <RequestContextProvider
+    isAmp={platform === 'amp'}
+    service="news"
+    statusCode={200}
+    platform={platform}
+    id="foo"
+    pageType="media"
+    pathname="/pathname"
+  >
+    <ServiceContextProvider service="news">
       <BrowserRouter>
-        <VideoPlayer {...videoPlayerProps} />
+        <AVPlayer
+          assetId={assetId}
+          embedUrl={embedUrl}
+          iframeTitle={iframeTitle}
+          title={title}
+          type={type}
+        />
       </BrowserRouter>
     </ServiceContextProvider>
-  </RequestContext.Provider>
+  </RequestContextProvider>
 );
-/* eslint-enable react/prop-types */
+
+const VideoCanonicalNoPlaceholder = (
+  <GenerateFixtureData
+    platform="canonical"
+    embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live"
+  />
+);
+
+const VideoAMPWithPlaceholder = (
+  <GenerateFixtureData
+    platform="amp"
+    embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live"
+  />
+);
 
 describe('VideoPlayer', () => {
-  shouldMatchSnapshot(
-    'should render correctly for canonical',
-    renderComponent({
-      requestContextValue: { platform: 'canonical', isAmp: false, origin },
-    }),
-  );
+  it('should render the iframe on canonical', () => {
+    render(VideoCanonicalNoPlaceholder);
 
-  shouldMatchSnapshot(
-    'should render correctly for amp',
-    renderComponent({
-      requestContextValue: { platform: 'amp', isAmp: true, origin },
-    }),
-  );
+    expect(document.querySelector('iframe')).toBeInTheDocument();
+  });
+
+  it('should render the iframe on AMP', () => {
+    render(VideoAMPWithPlaceholder);
+
+    expect(document.querySelector('amp-iframe')).toBeInTheDocument();
+  });
+
+  it('should contain the noscript tag for no-JS scenarios on canonical', () => {
+    render(VideoCanonicalNoPlaceholder);
+
+    expect(document.querySelector('noscript')).toBeInTheDocument();
+  });
+
+  it('should contain the noscript tag for no-JS scenarios on AMP', () => {
+    render(VideoAMPWithPlaceholder);
+
+    expect(document.querySelector('noscript')).toBeInTheDocument();
+  });
 });
