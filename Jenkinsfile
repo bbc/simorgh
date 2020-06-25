@@ -154,7 +154,7 @@ pipeline {
     }
     stage ('Test') {
       when {
-        expression { env.BRANCH_NAME != 'latest' }
+        expression { "yes" == "no" }
       }
       failFast true
       parallel {
@@ -209,7 +209,7 @@ pipeline {
     }
     stage ('Test & Package') {
       when {
-        expression { env.BRANCH_NAME == 'latest' }
+        expression { "yes" == "yes" }
       }
       parallel {
         stage ('Test Development') {
