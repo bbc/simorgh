@@ -40,54 +40,76 @@ const GenerateFixtureData = ({
   </RequestContextProvider>
 );
 
-const AVPlayerCanonical = (
+const VideoPlayerCanonical = (
   <GenerateFixtureData
     platform="canonical"
     embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live"
   />
 );
 
-const AVPlayerAMP = (
+const VideoPlayerAMP = (
   <GenerateFixtureData
     platform="amp"
     embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live"
   />
 );
 
-describe('VideoPlayer', () => {
+const AudioPlayerCanonical = (
+  <GenerateFixtureData
+    platform="canonical"
+    embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om"
+    title="Audio Player"
+    type="audio"
+    iframeTitle="Audio player"
+    skin="audio"
+  />
+);
+
+const AudioPlayerAMP = (
+  <GenerateFixtureData
+    platform="amp"
+    embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om/amp"
+    title="Audio Player"
+    type="audio"
+    iframeTitle="Audio player"
+    skin="audio"
+  />
+);
+
+describe('AVPlayer for TV', () => {
   shouldMatchSnapshot(
     'should match snapshot for canonical AVPlayer',
-    AVPlayerCanonical,
+    VideoPlayerCanonical,
   );
 
-  shouldMatchSnapshot('should match snapshot for AMP AVPlayer', AVPlayerAMP);
+  shouldMatchSnapshot('should match snapshot for AMP AVPlayer', VideoPlayerAMP);
 
   it('should render the iframe on canonical', () => {
-    render(AVPlayerCanonical);
+    render(VideoPlayerCanonical);
 
     expect(document.querySelector('iframe')).toBeInTheDocument();
   });
 
   it('should render the iframe on AMP', () => {
-    render(AVPlayerAMP);
+    render(VideoPlayerAMP);
 
     expect(document.querySelector('amp-iframe')).toBeInTheDocument();
   });
 
   it('should contain the noscript tag for no-JS scenarios on canonical', () => {
-    render(AVPlayerCanonical);
+    render(VideoPlayerCanonical);
 
     expect(document.querySelector('noscript')).toBeInTheDocument();
   });
 
   it('should contain the noscript tag for no-JS scenarios on AMP', () => {
-    render(AVPlayerAMP);
+    render(VideoPlayerAMP);
 
     expect(document.querySelector('noscript')).toBeInTheDocument();
   });
 
-  it('should contain the translated iframe title on canonical', () => {
-    const { container } = render(AVPlayerCanonical);
+  it('should contain the iframe title on canonical', () => {
+    const { container } = render(VideoPlayerCanonical);
 
     const AVPlayerIframeTitle = container
       .querySelector('iframe')
@@ -96,13 +118,71 @@ describe('VideoPlayer', () => {
     expect(AVPlayerIframeTitle).toEqual('ویډیو پلیئر');
   });
 
-  it('should contain the translated iframe title on AMP', () => {
-    const { container } = render(AVPlayerAMP);
+  it('should contain the iframe title on AMP', () => {
+    const { container } = render(VideoPlayerAMP);
 
     const AVPlayerIframeTitle = container
       .querySelector('amp-iframe')
       .getAttribute('title');
 
     expect(AVPlayerIframeTitle).toEqual('ویډیو پلیئر');
+  });
+});
+
+describe('AVPlayer for Radio', () => {
+  shouldMatchSnapshot(
+    'should match snapshot for canonical AVPlayer',
+    AudioPlayerCanonical,
+  );
+
+  shouldMatchSnapshot('should match snapshot for AMP AVPlayer', AudioPlayerAMP);
+
+  it('should render the iframe on canonical', () => {
+    render(AudioPlayerCanonical);
+
+    expect(document.querySelector('iframe')).toBeInTheDocument();
+  });
+  it('should render the iframe on canonical', () => {
+    render(AudioPlayerCanonical);
+
+    expect(document.querySelector('iframe')).toBeInTheDocument();
+  });
+
+  it('should render the iframe on AMP', () => {
+    render(AudioPlayerAMP);
+
+    expect(document.querySelector('amp-iframe')).toBeInTheDocument();
+  });
+
+  it('should contain the noscript tag for no-JS scenarios on canonical', () => {
+    render(AudioPlayerCanonical);
+
+    expect(document.querySelector('noscript')).toBeInTheDocument();
+  });
+
+  it('should contain the noscript tag for no-JS scenarios on AMP', () => {
+    render(AudioPlayerAMP);
+
+    expect(document.querySelector('noscript')).toBeInTheDocument();
+  });
+
+  it('should contain the iframe title on canonical', () => {
+    const { container } = render(AudioPlayerCanonical);
+
+    const AVPlayerIframeTitle = container
+      .querySelector('iframe')
+      .getAttribute('title');
+
+    expect(AVPlayerIframeTitle).toEqual('Audio player');
+  });
+
+  it('should contain the iframe title on AMP', () => {
+    const { container } = render(AudioPlayerAMP);
+
+    const AVPlayerIframeTitle = container
+      .querySelector('amp-iframe')
+      .getAttribute('title');
+
+    expect(AVPlayerIframeTitle).toEqual('Audio player');
   });
 });
