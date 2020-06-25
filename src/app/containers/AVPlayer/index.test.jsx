@@ -3,7 +3,7 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { BrowserRouter } from 'react-router-dom';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import VideoPlayer from '.';
+import AVPlayer from '.';
 
 const origin = 'http://localhost:7080';
 
@@ -28,7 +28,7 @@ const renderComponent = ({
   <RequestContext.Provider value={requestContextValue}>
     <ServiceContextProvider service={service}>
       <BrowserRouter>
-        <VideoPlayer {...videoPlayerProps} />
+        <AVPlayer {...videoPlayerProps} />
       </BrowserRouter>
     </ServiceContextProvider>
   </RequestContext.Provider>
