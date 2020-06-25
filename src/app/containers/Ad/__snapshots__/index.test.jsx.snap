@@ -22,6 +22,7 @@ exports[`Ad Container Snapshots should correctly render a Canonical ad 1`] = `
 <div>
       <div
         class="c0"
+        tabindex="-1"
       >
         <div
           class="dotcom-ad"
