@@ -1,13 +1,13 @@
 export default () => {
   describe('Footer lang code', () => {
-    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
 
-    if (header) {
+    if (footer) {
       it('should be in document', () => {
-        expect(header).toBeInTheDocument();
+        expect(footer).toBeInTheDocument();
       });
 
-      const langAttribute = header.getAttribute('lang');
+      const langAttribute = footer.getAttribute('lang');
 
       it('should contain text', () => {
         expect(langAttribute).toBeTruthy();
