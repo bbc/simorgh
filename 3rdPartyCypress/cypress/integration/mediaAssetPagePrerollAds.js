@@ -4,7 +4,7 @@ import { getEmbedUrl } from '../../../cypress/integration/pages/mediaAssetPage/h
 
 const environment = getAppEnv();
 
-describe('Preroll Ads for MAPs', () => {
+describe('Media Asset Pages - Preroll Ads', () => {
   describe('should not load the preroll ad plugin', () => {
     const mapsWithoutPrerollConfig = {
       local: [],
