@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import assocPath from 'ramda/src/assocPath';
 import clone from 'ramda/src/clone';
 import { render, act } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
@@ -11,6 +12,7 @@ import OnDemandRadioPage from '.';
 import pashtoPageData from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
 import koreanPageData from '#data/korean/bbc_korean_radio/w3ct0kn5';
 import indonesiaPageData from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l';
+import afaanoromooPageData from '#data/afaanoromoo/bbc_afaanoromoo_radio/w13xttnw';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandRadio/getInitialData';
@@ -57,18 +59,20 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
 
 const { env } = process;
 
+const getAvailableEpisode = assocPath(
+  ['content', 'blocks', 0, 'versions'],
+  [{ availableFrom: 1583496180000, availableUntil: 9999999999999 }],
+);
+
 describe('OnDemand Radio Page ', () => {
   beforeEach(() => {
     process.env = { ...env };
   });
 
   it('should match snapshot for Canonical', async () => {
-    const clonedPashtoPageData = clone(pashtoPageData);
-    clonedPashtoPageData.content.blocks[0].versions[0] = {
-      availableFrom: 1583496180000,
-      availableUntil: 9999999999999,
-    };
-    const pashtoPageDataWithAvailableEpisode = clonedPashtoPageData;
+    const pashtoPageDataWithAvailableEpisode = getAvailableEpisode(
+      pashtoPageData,
+    );
     fetch.mockResponse(JSON.stringify(pashtoPageDataWithAvailableEpisode));
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
@@ -78,12 +82,9 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should match snapshot for AMP', async () => {
-    const clonedPashtoPageData = clone(pashtoPageData);
-    clonedPashtoPageData.content.blocks[0].versions[0] = {
-      availableFrom: 1583496180000,
-      availableUntil: 9999999999999,
-    };
-    const pashtoPageDataWithAvailableEpisode = clonedPashtoPageData;
+    const pashtoPageDataWithAvailableEpisode = getAvailableEpisode(
+      pashtoPageData,
+    );
     fetch.mockResponse(JSON.stringify(pashtoPageDataWithAvailableEpisode));
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
@@ -168,12 +169,9 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the audio player on canonical', async () => {
-    const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0] = {
-      availableFrom: 1583496180000,
-      availableUntil: 9999999999999,
-    };
-    const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
+    const koreanPageDataWithAvailableEpisode = getAvailableEpisode(
+      koreanPageData,
+    );
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
     const { container } = await renderPage({ pageData, service: 'korean' });
@@ -188,12 +186,9 @@ describe('OnDemand Radio Page ', () => {
 
   it('should show the audio player on canonical using no override on live', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
-    const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0] = {
-      availableFrom: 1583496180000,
-      availableUntil: 9999999999999,
-    };
-    const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
+    const koreanPageDataWithAvailableEpisode = getAvailableEpisode(
+      koreanPageData,
+    );
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
     const { container } = await renderPage({ pageData, service: 'korean' });
@@ -207,12 +202,9 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the audio player on AMP', async () => {
-    const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0] = {
-      availableFrom: 1583496180000,
-      availableUntil: 9999999999999,
-    };
-    const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
+    const koreanPageDataWithAvailableEpisode = getAvailableEpisode(
+      koreanPageData,
+    );
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
     const { container } = await renderPage({
@@ -231,12 +223,9 @@ describe('OnDemand Radio Page ', () => {
 
   it('should show the audio player on AMP using no override on live', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
-    const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0] = {
-      availableFrom: 1583496180000,
-      availableUntil: 9999999999999,
-    };
-    const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
+    const koreanPageDataWithAvailableEpisode = getAvailableEpisode(
+      koreanPageData,
+    );
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
     const { container } = await renderPage({
@@ -294,5 +283,62 @@ describe('OnDemand Radio Page ', () => {
     expect(audioPlayerIframeEl).not.toBeInTheDocument();
     expect(notYetAvailableMessageEl).toBeInTheDocument();
     expect(container).toMatchSnapshot();
+  });
+
+  it('should return bbc_afaanoromoo_radio when the masterBrand is bbc_oromo_radio on canonical', async () => {
+    const afaanPageDataWithAvailableEpisode = getAvailableEpisode(
+      afaanoromooPageData,
+    );
+    fetch.mockResponse(JSON.stringify(afaanPageDataWithAvailableEpisode));
+    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    const { container } = await renderPage({
+      pageData,
+      service: 'afaanoromoo',
+    });
+    const audioPlayerIframeSrc = container
+      .querySelector('iframe')
+      .getAttribute('src');
+
+    expect(audioPlayerIframeSrc).toEqual(
+      'https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om?morph_env=live',
+    );
+  });
+
+  it('should return bbc_afaanoromoo_radio when the masterBrand is bbc_oromo_radio on AMP', async () => {
+    const afaanPageDataWithAvailableEpisode = getAvailableEpisode(
+      afaanoromooPageData,
+    );
+    fetch.mockResponse(JSON.stringify(afaanPageDataWithAvailableEpisode));
+    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    const { container } = await renderPage({
+      pageData,
+      service: 'afaanoromoo',
+      isAmp: true,
+    });
+    const audioPlayerIframeSrc = container
+      .querySelector('amp-iframe')
+      .getAttribute('src');
+
+    expect(audioPlayerIframeSrc).toEqual(
+      'https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om/amp?morph_env=live',
+    );
+  });
+
+  it('should contain the translated iframe title', async () => {
+    const koreanPageDataWithAvailableEpisode = getAvailableEpisode(
+      koreanPageData,
+    );
+    fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
+    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    const { container } = await renderPage({
+      pageData,
+      service: 'korean',
+    });
+
+    const audioPlayerIframeTitle = container
+      .querySelector('iframe')
+      .getAttribute('title');
+
+    expect(audioPlayerIframeTitle).toEqual('오디오 플레이어');
   });
 });
