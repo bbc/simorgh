@@ -135,8 +135,8 @@ const CpsRecommendations = ({ parentColumns, items }) => {
             group1: 6,
             group2: 6,
             group3: 6,
-            group4: 12,
-            group5: 12,
+            group4: 6,
+            group5: 6,
           }}
           as={StyledStoryPromoLi}
           key={item.uri}
