@@ -8,7 +8,7 @@ import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const VideoPlayer = ({
+const AVPlayer = ({
   assetId,
   placeholderSrc,
   title,
@@ -58,7 +58,7 @@ const VideoPlayer = ({
   );
 };
 
-VideoPlayer.propTypes = {
+AVPlayer.propTypes = {
   embedUrl: string,
   assetId: string,
   placeholderSrc: string,
@@ -68,7 +68,7 @@ VideoPlayer.propTypes = {
   className: string,
 };
 
-VideoPlayer.defaultProps = {
+AVPlayer.defaultProps = {
   embedUrl: '',
   assetId: '',
   placeholderSrc: '',
@@ -78,4 +78,4 @@ VideoPlayer.defaultProps = {
   className: '',
 };
 
-export default VideoPlayer;
+export default AVPlayer;
