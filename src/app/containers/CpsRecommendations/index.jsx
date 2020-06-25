@@ -34,21 +34,23 @@ const CustomSectionLabel = styled(SectionLabel)`
   ${({ service }) => getSansRegular(service)};
   color: ${C_EBON};
   margin-top: 0;
-  background-color: ${C_LUNAR};
 `;
 
 const SectionLabelWrapper = styled.div`
   padding: ${GEL_SPACING_DBL};
+  margin-bottom: ${GEL_SPACING};
 `;
 
-const WsojWrapper = styled.div`
+const RecommendationsWrapper = styled.div`
   background-color: ${C_LUNAR};
   padding-bottom: ${GEL_SPACING};
 `;
 
-const StyledStoryPromoLi = styled(StoryPromoLi)`
-  /* Override various paddings set by StoryPromoLi */
-  margin: -${GEL_SPACING_DBL_MINUS_HLF} 0;
+const SingleContentGrid = styled(Grid)`
+  ${({ hasSingleContent }) =>
+    hasSingleContent
+      ? `margin-top: -${GEL_SPACING}`
+      : `margin: -${GEL_SPACING} 0 -${GEL_SPACING_DBL_MINUS_HLF}`}
 `;
 
 const getPromoItemProps = item => ({
@@ -82,6 +84,8 @@ const CpsRecommendations = ({ parentColumns, items }) => {
 
   if (!hasStoryRecommendations || !enabled) return null;
 
+  const hasSingleContent = items.length === 1;
+
   const singleTransform = item => {
     const { src, href, headline, alt } = getPromoItemProps(item);
 
@@ -94,7 +98,7 @@ const CpsRecommendations = ({ parentColumns, items }) => {
     );
 
     return (
-      <Grid
+      <SingleContentGrid
         columns={{
           group0: 1,
           group1: 1,
@@ -105,9 +109,10 @@ const CpsRecommendations = ({ parentColumns, items }) => {
         }}
         enableGelGutters
         dir={dir}
+        hasSingleContent={hasSingleContent}
       >
         <StoryPromoWrapper image={Img} info={Info} />
-      </Grid>
+      </SingleContentGrid>
     );
   };
 
@@ -136,7 +141,7 @@ const CpsRecommendations = ({ parentColumns, items }) => {
             group4: 6,
             group5: 6,
           }}
-          as={StyledStoryPromoLi}
+          as={StoryPromoLi}
           key={item.uri}
           dir={dir}
         >
@@ -162,7 +167,7 @@ const CpsRecommendations = ({ parentColumns, items }) => {
   );
 
   return (
-    <WsojWrapper>
+    <RecommendationsWrapper>
       <CpsOnwardJourney
         labelId="recommendations-heading"
         title="Recommendations"
@@ -172,7 +177,7 @@ const CpsRecommendations = ({ parentColumns, items }) => {
         listTransform={listTransform}
         renderCustomLabel={renderSectionLabel}
       />
-    </WsojWrapper>
+    </RecommendationsWrapper>
   );
 };
 

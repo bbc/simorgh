@@ -41,11 +41,22 @@ const renderRecommendations = (items, service) => {
   );
 };
 
-storiesOf('Containers|CPS Recommendations', module)
+storiesOf('Containers|CPS Recommendations/LTR(mundo)', module)
   .addParameters({ chromatic: { disable: true } })
-  .add('mundo (ltr)', () =>
+  .add('multiple items', () =>
     renderRecommendations(mundoRecommendationsData.items, 'mundo'),
   )
-  .add('arabic (ltr)', () =>
+  .add('single item', () => {
+    const item = [arabicRecommendationsData.items[0]];
+    return renderRecommendations(item, 'mundo');
+  });
+
+storiesOf('Containers|CPS Recommendations/RTL(arabic)', module)
+  .addParameters({ chromatic: { disable: true } })
+  .add('multiple items', () =>
     renderRecommendations(arabicRecommendationsData.items, 'arabic'),
-  );
+  )
+  .add('single item', () => {
+    const item = [arabicRecommendationsData.items[0]];
+    return renderRecommendations(item, 'arabic');
+  });
