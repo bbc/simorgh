@@ -147,7 +147,7 @@ const LiveRadioPage = ({ pageData }) => {
             iframeTitle={iframeTitle}
             title="Live radio"
             type="audio"
-            imageUrl={audioPlaceholderImageSrc}
+            placeholderSrc={audioPlaceholderImageSrc}
           />
         </Grid>
       </StyledGelPageGrid>
