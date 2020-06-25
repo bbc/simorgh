@@ -47,6 +47,7 @@ export const service = {
       advertisementLabel: 'Advertisement',
     },
     articleTimestampPrefix: 'Ažurirano',
+    articleTimestampSuffix: '',
     brandName: 'BBC News na srpskom',
     datetimeLocale: `sr`,
     externalLinkText: ', spoljna stranica',
@@ -241,6 +242,8 @@ export const service = {
         noJs:
           'Reprodukovanje multimedijskog sadržaja na vašem uređaju nije podržano',
         contentExpired: 'Ovaj sadržaj više nije dostupan.',
+        contentNotYetAvailable:
+          'Ovaj sadržaj još uvek nije dostupan za reprodukciju.',
         audio: 'Audio',
         photogallery: 'Foto galerija',
         video: 'Video',
@@ -278,6 +281,7 @@ export const service = {
       hasAds: false,
     },
     articleTimestampPrefix: 'Ажурирано',
+    articleTimestampSuffix: '',
     brandName: 'BBC News на српском',
     datetimeLocale: `sr-cyrl`,
     externalLinkText: ', спољна страница',
@@ -472,6 +476,8 @@ export const service = {
         noJs:
           'Репродуковање мултимедијског садржаја на вашем уређају није подржано',
         contentExpired: 'Овај садржај више није доступан.',
+        contentNotYetAvailable:
+          'Овај садржај још увек није доступан за репродукцију.',
         audio: 'Аудио',
         photogallery: 'Фото галерија',
         video: 'Видео',

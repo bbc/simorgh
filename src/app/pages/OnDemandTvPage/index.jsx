@@ -21,8 +21,9 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
+import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
-import VideoPlayer from './VideoPlayer';
+import AVPlayer from '#containers/AVPlayer';
 
 const StyledGelWrapperGrid = styled.div`
   padding-top: ${GEL_SPACING_TRPL};
@@ -55,7 +56,7 @@ const StyledGelPageGrid = styled(GelPageGrid)`
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
 `;
 
-const StyledVideoPlayer = styled(VideoPlayer)`
+const StyledVideoPlayer = styled(AVPlayer)`
   margin-top: ${GEL_SPACING_TRPL};
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     width: calc(100% + ${GEL_SPACING_QUAD});
@@ -113,9 +114,6 @@ const OnDemandTvPage = ({ pageData }) => {
     translations,
   );
 
-  const type = 'video';
-  const title = 'On-demand TV';
-
   return (
     <>
       <ChartbeatAnalytics data={pageData} />
@@ -170,9 +168,9 @@ const OnDemandTvPage = ({ pageData }) => {
               <StyledVideoPlayer
                 embedUrl={embedUrl}
                 assetId={episodeId}
-                imageUrl={imageUrl}
-                type={type}
-                title={title}
+                placeholderSrc={getPlaceholderImageUrl(imageUrl)}
+                type="video"
+                title="On-demand TV"
                 iframeTitle={iframeTitle}
               />
             ) : (

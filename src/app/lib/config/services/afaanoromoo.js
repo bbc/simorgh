@@ -14,6 +14,7 @@ export const service = {
     lang: `om`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Haaromsameera',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-afaanoromoo',
     atiAnalyticsProducerId: '2',
     chartbeatDomain: 'afaanoromoo.bbc.co.uk',
@@ -145,6 +146,8 @@ export const service = {
       media: {
         noJs: "Meeshaan kee Miidiyaa taphachiisuu hin danda'u",
         contentExpired: 'This content is no longer available',
+        contentNotYetAvailable:
+          'Qabiyyeen kun taphachuu kan hin jire dha ammayyuu.',
         audio: 'Sagalee',
         photogallery: 'Kuusaa suuraa',
         video: 'Viidiyoo',

@@ -14,6 +14,7 @@ export const service = {
     lang: `uk`,
     articleAuthor: `http://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Оновлення даних: ',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-ukrainian',
     atiAnalyticsProducerId: '94',
     chartbeatDomain: 'ukrainian.bbc.co.uk',
@@ -147,6 +148,7 @@ export const service = {
       media: {
         noJs: 'Ваш пристрій не підтримує відтворення мультимедійних файлів',
         contentExpired: 'Контент більше не доступний',
+        contentNotYetAvailable: 'Ця програма ще не доступна.',
         audio: 'Аудіо',
         photogallery: 'Фотогалерея',
         video: 'Відео',

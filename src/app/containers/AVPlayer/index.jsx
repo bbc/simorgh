@@ -7,15 +7,15 @@ import {
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import getPlaceholderImageUrl from '../../../routes/utils/getPlaceholderImageUrl';
 
-const VideoPlayer = ({
+const AVPlayer = ({
   assetId,
-  imageUrl,
+  placeholderSrc,
   title,
   embedUrl,
   iframeTitle,
   type,
+  skin,
   className,
 }) => {
   const { translations, service } = useContext(ServiceContext);
@@ -31,7 +31,6 @@ const VideoPlayer = ({
     ['media', 'noJs'],
     translations,
   );
-  const placeholderSrc = getPlaceholderImageUrl(imageUrl);
 
   if (!isValidPlatform || !assetId) return null;
 
@@ -42,6 +41,7 @@ const VideoPlayer = ({
           placeholderSrc={placeholderSrc}
           src={embedUrl}
           title={iframeTitle}
+          skin={skin}
           noJsMessage={noJsMessage}
           service={service}
         />
@@ -50,6 +50,7 @@ const VideoPlayer = ({
           showPlaceholder={false}
           src={embedUrl}
           title={iframeTitle}
+          skin={skin}
           service={service}
           mediaInfo={mediaInfo}
           noJsMessage={noJsMessage}
@@ -60,24 +61,26 @@ const VideoPlayer = ({
   );
 };
 
-VideoPlayer.propTypes = {
+AVPlayer.propTypes = {
   embedUrl: string,
   assetId: string,
-  imageUrl: string,
+  placeholderSrc: string,
   type: string,
   title: string,
   iframeTitle: string,
   className: string,
+  skin: string,
 };
 
-VideoPlayer.defaultProps = {
+AVPlayer.defaultProps = {
   embedUrl: '',
   assetId: '',
-  imageUrl: '',
+  placeholderSrc: '',
   type: '',
   title: '',
   iframeTitle: '',
   className: '',
+  skin: 'classic',
 };
 
-export default VideoPlayer;
+export default AVPlayer;

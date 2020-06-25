@@ -18,6 +18,7 @@ export const service = {
     lang: `si`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'යාවත්කාලීනවී ඇත',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-sinhala',
     atiAnalyticsProducerId: '82',
     chartbeatDomain: 'sinhala.bbc.co.uk',
@@ -149,6 +150,7 @@ export const service = {
         noJs: 'මෙහි කිසිවක් අඩංගු නැත.',
         contentExpired:
           'ඔබේ දුරකථනයේ හෝ පරිගණකයේ මෙය වාදනය කිරීමට අදාළ මෘදුකාංග නැත',
+        contentNotYetAvailable: 'මෙහි ඇති දෑ සවන්දීම සඳහා තවම සූදානම් නැත.',
         audio: 'හඬ',
         photogallery: 'ඡායාරූප ගැලරිය ',
         video: 'වීඩියෝ',
