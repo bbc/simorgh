@@ -10,7 +10,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 
 const AudioPlayer = ({
   assetId,
-  imageUrl,
+  placeholderSrc,
   embedUrl,
   title,
   type,
@@ -33,7 +33,7 @@ const AudioPlayer = ({
     <div className={className}>
       {isAmp ? (
         <AmpMediaPlayer
-          placeholderSrc={imageUrl}
+          placeholderSrc={placeholderSrc}
           src={embedUrl}
           title={iframeTitle}
           skin="audio"
@@ -58,7 +58,7 @@ const AudioPlayer = ({
 
 AudioPlayer.propTypes = {
   assetId: string,
-  imageUrl: string,
+  placeholderSrc: string,
   embedUrl: string,
   type: string,
   title: string,
@@ -68,7 +68,7 @@ AudioPlayer.propTypes = {
 
 AudioPlayer.defaultProps = {
   assetId: '',
-  imageUrl: '',
+  placeholderSrc: '',
   type: '',
   title: '',
   embedUrl: '',
