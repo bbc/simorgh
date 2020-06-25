@@ -17,7 +17,7 @@ const Include = styled.div`
 `;
 
 const CanonicalIncludeContainer = ({ html, type }) => {
-  const supportedTypes = ['idt1', 'idt2', 'vj'];
+  const supportedTypes = ['idt1', 'vj'];
 
   if (!html || !supportedTypes.includes(type)) return null;
 

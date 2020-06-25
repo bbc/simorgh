@@ -12,12 +12,13 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     ads: {
-      hasAds: false,
+      hasAds: true,
       advertisementLabel: 'إعلان',
     },
     lang: 'ar',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'جدّد في',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-arabic',
     atiAnalyticsProducerId: '5',
     chartbeatDomain: 'arabic.bbc.co.uk',
@@ -149,6 +150,7 @@ export const service = {
       media: {
         noJs: 'جهازك لا يدعم تشغيل الفيديو',
         contentExpired: 'هذا المحتوى لم يعد متوفراً',
+        contentNotYetAvailable: 'هذا البرنامج غير متوفر للتشغيل الآن',
         audio: 'تسجيل صوتي',
         photogallery: 'ملف صور',
         video: 'فيديو',

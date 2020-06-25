@@ -15,6 +15,7 @@ export const service = {
     lang: `ta`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'புதுப்பிக்கப்பட்டது',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-tamil',
     atiAnalyticsProducerId: '87',
     chartbeatDomain: 'tamil.bbc.co.uk',
@@ -146,6 +147,8 @@ export const service = {
       media: {
         noJs: 'ஒலிபரப்பு மென்பொருள் உங்கள் கணினியில் இல்லை',
         contentExpired: 'இந்த நிகழ்ச்சி இனி கிடைக்காது.',
+        contentNotYetAvailable:
+          'இந்த நிகழ்ச்சி இன்னும் கேட்க தயாராக்கப்படவில்லை.',
         audio: 'ஒலி',
         photogallery: 'படத் தொகுப்பு',
         video: 'காணொளி',
