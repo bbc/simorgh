@@ -1,4 +1,5 @@
 import getAppEnv from '../../../cypress/support/helpers/getAppEnv';
+import appToggles from '../../../cypress/support/helpers/useAppToggles';
 import { getEmbedUrl } from '../../../cypress/integration/pages/mediaAssetPage/helpers';
 
 const environment = getAppEnv();
@@ -10,20 +11,23 @@ describe('Preroll Ads for MAPs', () => {
       test: [],
       live: [
         {
-          reason: 'pidgin does not have preroll ads enabled',
-          path: 'https://www.bbc.com/pidgin/media-44221514', // CPS Video
+          reason: 'service does not have preroll ads enabled',
+          paths: [
+            'https://www.bbc.com/pidgin/media-44221514', // CPS Video
+            'https://www.bbc.com/russian/media-52728860', // CPS Video
+          ],
         },
         {
           reason: 'Castaway advertising flag is false',
-          path: 'https://www.bbc.com/mundo/media-48938201', // CPS Video
+          paths: [
+            'https://www.bbc.com/mundo/media-48938201', // CPS Video
+          ],
         },
         {
           reason: 'duration is less than 30 seconds',
-          path: 'https://www.bbc.com/mundo/media-52481764', // CPS Video
-        },
-        {
-          reason: 'russian does not have preroll ads enabled',
-          path: 'https://www.bbc.com/russian/media-52728860', // CPS Video
+          paths: [
+            'https://www.bbc.com/mundo/media-52481764', // CPS Video
+          ],
         },
       ],
     };
@@ -32,18 +36,20 @@ describe('Preroll Ads for MAPs', () => {
 
     if (mapsWithoutPreroll && mapsWithoutPreroll.length > 0) {
       mapsWithoutPreroll.forEach(mapConfig => {
-        const { path, reason } = mapConfig;
+        const { paths, reason } = mapConfig;
 
         describe(`because ${reason}`, () => {
-          it(`${path}`, () => {
-            cy.request(`${path}.json`).then(({ body: jsonData }) => {
-              const embedUrl = getEmbedUrl(
-                jsonData,
-                jsonData.metadata.language,
-              );
-              cy.visit(embedUrl);
+          paths.forEach(path => {
+            it(`${path}`, () => {
+              cy.request(`${path}.json`).then(({ body: jsonData }) => {
+                const embedUrl = getEmbedUrl(
+                  jsonData,
+                  jsonData.metadata.language,
+                );
+                cy.visit(embedUrl);
+              });
+              cy.get(`script[src*="dotcom-bootstrap.js"]`).should('not.exist');
             });
-            cy.get(`script[src*="dotcom-bootstrap.js"]`).should('not.exist');
           });
         });
       });
@@ -64,7 +70,7 @@ describe('Preroll Ads for MAPs', () => {
 
     const paths = mapsWithPrerollConfig[environment];
 
-    if (paths.length > 0) {
+    if (appToggles.prerollAds.enabled && paths.length > 0) {
       paths.forEach(path => {
         it(`${path}`, () => {
           cy.request(`${path}.json`).then(({ body: jsonData }) => {
