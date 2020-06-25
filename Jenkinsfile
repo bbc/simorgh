@@ -211,6 +211,7 @@ pipeline {
       when {
         expression { "yes" == "yes" }
       }
+      failFast true
       parallel {
         stage ('Test Development') {
           agent {
