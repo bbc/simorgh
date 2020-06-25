@@ -15,6 +15,7 @@ const AVPlayer = ({
   embedUrl,
   iframeTitle,
   type,
+  skin,
   className,
 }) => {
   const { translations, service } = useContext(ServiceContext);
@@ -40,6 +41,7 @@ const AVPlayer = ({
           placeholderSrc={placeholderSrc}
           src={embedUrl}
           title={iframeTitle}
+          skin={skin}
           noJsMessage={noJsMessage}
           service={service}
         />
@@ -48,6 +50,7 @@ const AVPlayer = ({
           showPlaceholder={false}
           src={embedUrl}
           title={iframeTitle}
+          skin={skin}
           service={service}
           mediaInfo={mediaInfo}
           noJsMessage={noJsMessage}
@@ -66,6 +69,7 @@ AVPlayer.propTypes = {
   title: string,
   iframeTitle: string,
   className: string,
+  skin: string,
 };
 
 AVPlayer.defaultProps = {
@@ -76,6 +80,7 @@ AVPlayer.defaultProps = {
   title: '',
   iframeTitle: '',
   className: '',
+  skin: 'classic',
 };
 
 export default AVPlayer;
