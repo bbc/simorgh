@@ -29,9 +29,7 @@ const StoryPromoWrapper = styled(StoryPromo)`
   background-color: ${C_GHOST};
 `;
 
-const CustomSectionLabel = styled(SectionLabel).attrs(props => ({
-  'aria-labelledby': props.labelId,
-}))`
+const CustomSectionLabel = styled(SectionLabel)`
   ${({ script }) => script && getDoublePica(script)};
   ${({ service }) => getSansRegular(service)};
   color: ${C_EBON};
