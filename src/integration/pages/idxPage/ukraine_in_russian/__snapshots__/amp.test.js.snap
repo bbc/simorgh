@@ -261,3 +261,7 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page Story Promo Image should matc
   width="976"
 />
 `;
+
+exports[`Footer lang code should match text 1`] = `"uk"`;
+
+exports[`Header lang code should match text 1`] = `"uk"`;
