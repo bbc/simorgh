@@ -16,12 +16,6 @@ exports[`IncludeContainer should render include for IDT2 on an Amp page with tog
 </div>
 `;
 
-exports[`IncludeContainer should render include for VJ on an Amp page with toggles enabled 1`] = `
-<div>
-  VJ-Amp-component
-</div>
-`;
-
 exports[`IncludeContainer should render include for a Canonical page with toggles enabled 1`] = `
 <div>
   canonical-includes-component

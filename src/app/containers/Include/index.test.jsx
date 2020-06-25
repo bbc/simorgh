@@ -161,12 +161,14 @@ describe('IncludeContainer', () => {
 
   it('should render a VJ include on an Amp page with toggles enabled', () => {
     const vjProps = {
-      ampSrc: 'https://news.files.bbci.co.uk/vj.amp',
+      ampSrc:
+        'https://news.files.bbci.co.uk/include/newsspec/21841-green-diet/gahuza/app/amp?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
       ampImage:
-        'https://news.files.bbci.co.uk/vj/?amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-img.png',
+        'https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_cv_table_ws_640_3x-nc_v0mmu.png',
       ampImageHeight: '360',
       ampImageWidth: '640',
-      href: '/include/vj/cb1a5166-cfbb-4520-bdac-6159299acff6',
+      href:
+        '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
       type: 'vj',
     };
 
@@ -187,7 +189,8 @@ describe('IncludeContainer', () => {
     expect(loggerMock.info).toHaveBeenCalledTimes(1);
     expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
       type: 'vj',
-      includeUrl: '/include/vj/cb1a5166-cfbb-4520-bdac-6159299acff6',
+      includeUrl:
+        '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
     });
   });
 });

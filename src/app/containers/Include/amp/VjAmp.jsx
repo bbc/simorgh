@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import { string } from 'prop-types';
+import { shape, string } from 'prop-types';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
 
 const IncludeGrid = styled(GridItemConstrainedMedium)`
   display: grid;
 `;
 
-// currently ampSrc: 'http://localhost:7080 need to replace start of this with // https://news.test.files.bbci.co.uk
-
-const VjAmp = ({ ampSrc, ampImage, ampImageHeight, ampImageWidth }) => {
+const VjAmp = ({
+  ampMetadata: { ampImageWidth, ampImageHeight, ampImage, ampSrc },
+}) => {
   return (
     <IncludeGrid>
       <amp-iframe
@@ -34,10 +34,12 @@ const VjAmp = ({ ampSrc, ampImage, ampImageHeight, ampImageWidth }) => {
 };
 
 VjAmp.propTypes = {
-  ampSrc: string.isRequired,
-  ampImage: string.isRequired,
-  ampImageHeight: string.isRequired,
-  ampImageWidth: string.isRequired,
+  ampMetadata: shape({
+    ampImageWidth: string,
+    ampImageHeight: string,
+    ampImage: string,
+    ampSrc: string,
+  }).isRequired,
 };
 
 export default VjAmp;

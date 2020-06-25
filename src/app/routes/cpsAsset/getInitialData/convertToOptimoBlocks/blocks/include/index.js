@@ -10,7 +10,7 @@ import {
 } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
 import { addOverrideQuery } from '#app/routes/utils/overrideRendererOnTest';
-import ampSrcBuilder from './ampSrcBuilder';
+import ampMetadataExtractor from './ampMetadataExtractor';
 import includeClassifier from './includeClassifier';
 import getImageBlock from './getImageBlock';
 
@@ -94,19 +94,12 @@ const convertInclude = async (includeBlock, ...restParams) => {
     return null;
   }
 
-  let ampSrc;
-  let ampImage;
-  let ampImageWidth;
-  let ampImageHeight;
+  let ampMetadata;
   let html;
   if (classification === 'vj-supports-amp') {
-    ampSrc = ampSrcBuilder(href);
-    const queryParams = new URLSearchParams(href);
-    ampImageWidth = queryParams.get('amp-image-width');
-    ampImageHeight = queryParams.get('amp-image-height');
-    ampImage = queryParams.get('amp-image');
+    ampMetadata = ampMetadataExtractor(href);
     logger.info(INCLUDE_IFRAME_REQUEST_RECEIVED, {
-      url: ampSrc,
+      url: ampMetadata.ampSrc,
     });
   }
   if (!isAmp) {
@@ -117,16 +110,12 @@ const convertInclude = async (includeBlock, ...restParams) => {
     html = await fetchMarkup(buildIncludeUrl(href, includeType, pathname));
   }
   const imageBlock = getImageBlock(includeType, includeBlock, isAmp);
-
   return {
     type,
     model: {
       href,
       type: includeType,
-      ...(ampSrc && { ampSrc }),
-      ...(ampImage && { ampImage }),
-      ...(ampImageWidth && { ampImageWidth }),
-      ...(ampImageHeight && { ampImageHeight }),
+      ...(ampMetadata && { ampMetadata }),
       ...(html && { html }),
       ...(imageBlock && { imageBlock }),
     },
