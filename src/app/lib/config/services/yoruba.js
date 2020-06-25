@@ -14,6 +14,7 @@ export const service = {
     lang: 'yo',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Ìgbà tí a ṣe àfíkun gbẹ̀yìn',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-yoruba',
     atiAnalyticsProducerId: '107',
     chartbeatDomain: 'yoruba.bbc.co.uk',

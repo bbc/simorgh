@@ -47,7 +47,10 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           cy.get('head link[rel="canonical"]').should(
             'have.attr',
             'href',
-            `${envConfig.baseUrl}${Cypress.env('currentPath')}`,
+            `${envConfig.baseUrl}${Cypress.env('currentPath')}`.replace(
+              'russian/av/',
+              'russian/',
+            ),
           );
         });
 
@@ -148,7 +151,10 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                   cy.get('meta[property="og:url"]').should(
                     'have.attr',
                     'content',
-                    `${envConfig.baseUrl}${Cypress.env('currentPath')}`,
+                    `${envConfig.baseUrl}${Cypress.env('currentPath')}`.replace(
+                      'russian/av/',
+                      'russian/',
+                    ),
                   );
                   cy.get('meta[property="og:site_name"]').should(
                     'have.attr',
