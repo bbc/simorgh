@@ -304,6 +304,7 @@ server
         const { status } = data;
         const bbcOrigin = headers['bbc-origin'];
 
+        // Send CW metic when we fail to fetch data
         if (status != 200) {
           putAwsMetric({
             cloudwatch,
@@ -354,6 +355,7 @@ server
           headers,
         });
 
+        // Send CW metric when the SSR fails
         putAwsMetric({
           cloudwatch,
           namespace: 'Server',

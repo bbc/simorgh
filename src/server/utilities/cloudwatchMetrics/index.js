@@ -29,14 +29,13 @@ const putAWSMetric = ({
     ],
   };
 
-  cloudwatch.putMetricData(params, (error, data) => {
-    if (error) {
-      console.log(error)
-    }
-
-    console.log(data)
-    
-  });
+  // Send CW if on test environment, otherwise log to console
+  if (process.env.SIMORGH_APP_ENV === 'test') {
+    console.info('send CW metric')
+    cloudwatch.putMetricData(params).send();
+  } else {
+    console.info(`Custom CW Metric: ${JSON.stringify(params)}`)
+  }
 };
 
 export default putAWSMetric;
