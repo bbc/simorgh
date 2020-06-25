@@ -125,7 +125,7 @@ const toggles = {
       enabled: false,
     },
     prerollAds: {
-      enabled: false,
+      enabled: true,
     },
   },
 };
