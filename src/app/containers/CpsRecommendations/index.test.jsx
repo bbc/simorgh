@@ -4,10 +4,11 @@ import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
+import recommendationData from './recommendations.ltr.json';
 
 import CpsRecommendations from '.';
 
-const singleRecoommendationData = [
+const singleRecommendationData = [
   {
     assetUri: '/mundo/5331',
     shortHeadline: 'This is a headline',
@@ -15,18 +16,7 @@ const singleRecoommendationData = [
   },
 ];
 
-const multipleRecommendationData = [
-  {
-    assetUri: '/mundo/5331',
-    shortHeadline: 'This is a headline',
-    imageHref: 'http://c.files.bbci.co.uk/256/727445.jpg',
-  },
-  {
-    assetUri: '/mundo/12789',
-    shortHeadline: 'This is another headline',
-    imageHref: 'http://c.files.bbci.co.uk/123/af07635.jpg',
-  },
-];
+const multipleRecommendationData = recommendationData.items;
 
 const parentGridCols = {
   group0: 8,
@@ -108,7 +98,7 @@ describe('CpsRecommendations', () => {
     const toggleEnabled = true;
     const hasStoryRecommendations = true;
     const { container } = renderContainer(
-      singleRecoommendationData,
+      singleRecommendationData,
       hasStoryRecommendations,
       toggleEnabled,
     );
