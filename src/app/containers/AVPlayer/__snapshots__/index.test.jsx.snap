@@ -38,7 +38,7 @@ exports[`VideoPlayer should match snapshot for AMP AVPlayer 1`] = `
               height="16"
               layout="fill"
               placeholder="true"
-              src=""
+              src="https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg"
               width="9"
             />
             <noscript />

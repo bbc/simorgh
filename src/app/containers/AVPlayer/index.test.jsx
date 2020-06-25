@@ -10,6 +10,7 @@ import AVPlayer from '.';
 const GenerateFixtureData = ({
   platform,
   assetId = 'w3ct0l8r',
+  placeholderSrc = 'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
   title = 'Video Player',
   type = 'video',
   embedUrl,
@@ -28,6 +29,7 @@ const GenerateFixtureData = ({
       <BrowserRouter>
         <AVPlayer
           assetId={assetId}
+          placeholderSrc={placeholderSrc}
           embedUrl={embedUrl}
           iframeTitle={iframeTitle}
           title={title}
