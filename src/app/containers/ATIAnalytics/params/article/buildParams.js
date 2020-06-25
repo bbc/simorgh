@@ -28,7 +28,7 @@ export const buildArticleATIParams = (
     contentType: 'article',
     language: getLanguage(articleData),
     ldpThingIds: getThingAttributes('thingId', articleData),
-    ldpThingLabels: getThingAttributes('thingLabel', articleData),
+    ldpThingLabels: getThingAttributes('thingEnglishLabel', articleData),
     pageIdentifier: getPageIdentifier(service, articleData),
     pageTitle: getPromoHeadline(articleData),
     producerId: atiAnalyticsProducerId,
