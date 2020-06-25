@@ -25,7 +25,7 @@ const componentsToRender = {
 
 const IncludeContainer = props => {
   const { isAmp } = useContext(RequestContext);
-  const { enabled } = useToggle('cpsRecommendations');
+  const { enabled } = useToggle('include');
 
   if (!enabled) return null;
   const { href, type } = props;

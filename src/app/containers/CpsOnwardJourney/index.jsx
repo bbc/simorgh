@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, number, node, string, func, bool } from 'prop-types';
+import { arrayOf, shape, number, node, string, func } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled, { css } from 'styled-components';
 import {
@@ -96,7 +96,6 @@ const CpsOnwardJourney = ({
   listTransform,
   singleTransform,
   renderCustomLabel,
-  hasCustomLabel,
 }) => {
   const a11yAttributes = {
     as: 'section',
@@ -139,18 +138,19 @@ const CpsOnwardJourney = ({
     children: node.isRequired,
   };
 
-  const Label = hasCustomLabel ? (
-    renderCustomLabel()
-  ) : (
-    <StyledSectionLabel
-      script={script}
-      service={service}
-      dir={dir}
-      labelId={labelId}
-    >
-      {title}
-    </StyledSectionLabel>
-  );
+  const Label =
+    typeof renderCustomLabel === 'function' ? (
+      renderCustomLabel()
+    ) : (
+      <StyledSectionLabel
+        script={script}
+        service={service}
+        dir={dir}
+        labelId={labelId}
+      >
+        {title}
+      </StyledSectionLabel>
+    );
 
   return (
     <CpsOnwardJourneyWrapper>
@@ -180,15 +180,13 @@ CpsOnwardJourney.propTypes = {
   }),
   listTransform: func.isRequired,
   singleTransform: func.isRequired,
-  hasCustomLabel: bool,
   renderCustomLabel: func,
 };
 
 CpsOnwardJourney.defaultProps = {
   content: [],
   parentColumns: null,
-  hasCustomLabel: false,
-  renderCustomLabel: () => {},
+  renderCustomLabel: null,
 };
 
 export default CpsOnwardJourney;

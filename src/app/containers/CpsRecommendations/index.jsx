@@ -173,7 +173,6 @@ const CpsRecommendations = ({ parentColumns, items }) => {
         singleTransform={singleTransform}
         listTransform={listTransform}
         renderCustomLabel={renderSectionLabel}
-        hasCustomLabel
       />
     </WsojWrapper>
   );
