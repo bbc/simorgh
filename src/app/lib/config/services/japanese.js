@@ -14,6 +14,7 @@ export const service = {
     lang: `ja`,
     articleAuthor: `https://www.facebook.com/bbcnews/`,
     articleTimestampPrefix: '更新',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-japanese',
     atiAnalyticsProducerId: '56',
     chartbeatDomain: 'japanese.bbc.co.uk',
@@ -141,6 +142,7 @@ export const service = {
       media: {
         noJs: 'お使いの端末ではメディアプレイバックはご利用になれません',
         contentExpired: 'このコンテンツはもうご利用いただけません。',
+        contentNotYetAvailable: 'このコンテンツはまだ再生できません。',
         audio: '音声',
         photogallery: '写真ギャラリー',
         video: 'ビデオ',

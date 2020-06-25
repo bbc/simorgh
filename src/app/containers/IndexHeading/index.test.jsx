@@ -12,18 +12,13 @@ const IndexHeadingWithContext = (service, pageType) => (
 describe('Index Heading', () => {
   describe('snapshot', () => {
     shouldMatchSnapshot(
-      'should render correctly for Most Read',
-      IndexHeadingWithContext('ukrainian', 'mostRead'),
-    );
-
-    shouldMatchSnapshot(
       'should render correctly for IDX',
-      IndexHeadingWithContext('ukrainian', 'idx'),
+      IndexHeadingWithContext('ukrainian'),
     );
 
     shouldMatchSnapshot(
       'should render rtl correctly for IDX',
-      IndexHeadingWithContext('arabic', 'idx'),
+      IndexHeadingWithContext('arabic'),
     );
   });
 });

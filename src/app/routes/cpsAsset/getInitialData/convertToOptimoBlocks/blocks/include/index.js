@@ -6,9 +6,13 @@ import {
   INCLUDE_MISSING_URL,
   INCLUDE_REQUEST_RECEIVED,
   INCLUDE_UNSUPPORTED,
+  INCLUDE_IFRAME_REQUEST_RECEIVED,
 } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
 import { addOverrideQuery } from '#app/routes/utils/overrideRendererOnTest';
+import ampSrcBuilder from './ampSrcBuilder';
+import includeClassifier from './includeClassifier';
+import getImageBlock from './getImageBlock';
 
 const logger = nodeLogger(__filename);
 
@@ -54,9 +58,6 @@ const fetchMarkup = async url => {
       return null;
     }
     const html = await res.text();
-    logger.info(INCLUDE_REQUEST_RECEIVED, {
-      url,
-    });
     return html;
   } catch (error) {
     logger.error(INCLUDE_ERROR, {
@@ -68,55 +69,56 @@ const fetchMarkup = async url => {
 };
 
 const convertInclude = async (includeBlock, ...restParams) => {
-  const supportedTypes = {
-    indepthtoolkit: 'idt1',
-    idt2: 'idt2',
-    include: 'vj',
-    'news/special': 'vj',
-    'market-data': 'vj',
-    'smallprox/include': 'vj',
-  };
-
-  const { href, type, ...rest } = includeBlock;
+  const { href, type } = includeBlock;
 
   // Here pathname is passed as a prop specifically for CPS includes
   // This will most likely change in issue #6784 so it is temporary for now
   const pathname = restParams[2];
+
+  const ampRegex = /\.amp$/;
+  const isAmp = ampRegex.test(pathname);
 
   if (!href) {
     logger.error(INCLUDE_MISSING_URL, includeBlock);
     return null;
   }
 
-  // This determines if the href has a leading '/'
-  const hrefTypePostion = () => (href.indexOf('/') === 0 ? 1 : 0);
+  const { includeType, classification } = includeClassifier({ href, pathname });
 
-  // This checks if the supportedType is in the correct position of the href
-  const hrefIsSupported = () => supportedType =>
-    href.startsWith(supportedType, hrefTypePostion());
-
-  // This extracts the type from the href
-  const typeExtraction = Object.keys(supportedTypes).find(
-    hrefIsSupported(href),
-  );
-
-  // This determines if the type is supported and returns the include type name
-  const includeType = supportedTypes[typeExtraction];
-  if (!includeType) {
+  if (classification === 'not-supported') {
     logger.info(INCLUDE_UNSUPPORTED, {
       type,
+      classification,
       url: href,
     });
     return null;
   }
 
+  let ampSrc;
+  let html;
+  if (classification === 'vj-supports-amp') {
+    ampSrc = ampSrcBuilder(href);
+    logger.info(INCLUDE_IFRAME_REQUEST_RECEIVED, {
+      url: ampSrc,
+    });
+  }
+  if (!isAmp) {
+    const url = buildIncludeUrl(href, includeType, pathname);
+    logger.info(INCLUDE_REQUEST_RECEIVED, {
+      url,
+    });
+    html = await fetchMarkup(buildIncludeUrl(href, includeType, pathname));
+  }
+  const imageBlock = getImageBlock(includeType, includeBlock, isAmp);
+
   return {
     type,
     model: {
       href,
-      html: await fetchMarkup(buildIncludeUrl(href, includeType, pathname)),
       type: includeType,
-      ...rest,
+      ...(ampSrc && { ampSrc }),
+      ...(html && { html }),
+      ...(imageBlock && { imageBlock }),
     },
   };
 };

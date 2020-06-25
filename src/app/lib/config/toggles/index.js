@@ -38,6 +38,9 @@ const toggles = {
     logMediaPlayerStatus: {
       enabled: false,
     },
+    prerollAds: {
+      enabled: false,
+    },
   },
   test: {
     ads: {
@@ -78,6 +81,9 @@ const toggles = {
     logMediaPlayerStatus: {
       enabled: false,
     },
+    prerollAds: {
+      enabled: true,
+    },
   },
   live: {
     ads: {
@@ -116,6 +122,9 @@ const toggles = {
       enabled: true,
     },
     logMediaPlayerStatus: {
+      enabled: false,
+    },
+    prerollAds: {
       enabled: false,
     },
   },

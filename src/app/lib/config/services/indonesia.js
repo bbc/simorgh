@@ -14,6 +14,7 @@ export const service = {
     lang: `id`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Diperbarui',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-indonesia',
     atiAnalyticsProducerId: '54',
     chartbeatDomain: 'indonesian.bbc.co.uk', // this is meant to be different to the service name
@@ -145,6 +146,7 @@ export const service = {
         noJs:
           'Untuk memutar video ini, aktifkan JavaScript atau coba di mesin pencari lain',
         contentExpired: 'Konten ini sudah tidak tersedia lagi.',
+        contentNotYetAvailable: 'Program ini belum tersedia.',
         audio: 'Audio',
         photogallery: 'Galeri Foto',
         video: 'Video',

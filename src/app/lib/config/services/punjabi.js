@@ -14,6 +14,7 @@ export const service = {
     lang: `pa`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ਅਪਡੇਟ',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-punjabi',
     atiAnalyticsProducerId: '73',
     chartbeatDomain: 'punjabi.bbc.co.uk',
@@ -140,6 +141,7 @@ export const service = {
       media: {
         noJs: "ਮੀਡੀਆ ਪਲੇਬੈਕ ਤੁਹਾਡੀ ਡਿਵਾਈਸ 'ਤੇ ਸਪੋਰਟ ਨਹੀਂ ਕਰਦਾ",
         contentExpired: 'ਇਹ ਸਮੱਗਰੀ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।',
+        contentNotYetAvailable: 'ਇਹ ਸਮੱਗਰੀ ਹਾਲੇ ਚਲਾਏ ਜਾਣ ਲਈ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।',
         audio: 'ਔਡੀਓ',
         photogallery: 'ਫੋਟੋ ਗੈਲਰੀ',
         video: 'ਵੀਡੀਓ',

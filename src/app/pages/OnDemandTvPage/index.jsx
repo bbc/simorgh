@@ -21,8 +21,9 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
+import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
-import VideoPlayer from './VideoPlayer';
+import VideoPlayer from '#containers/AVPlayer';
 
 const StyledGelWrapperGrid = styled.div`
   padding-top: ${GEL_SPACING_TRPL};
@@ -113,9 +114,6 @@ const OnDemandTvPage = ({ pageData }) => {
     translations,
   );
 
-  const type = 'video';
-  const title = 'On-demand TV';
-
   return (
     <>
       <ChartbeatAnalytics data={pageData} />
@@ -170,9 +168,9 @@ const OnDemandTvPage = ({ pageData }) => {
               <StyledVideoPlayer
                 embedUrl={embedUrl}
                 assetId={episodeId}
-                imageUrl={imageUrl}
-                type={type}
-                title={title}
+                placeholderSrc={getPlaceholderImageUrl(imageUrl)}
+                type="video"
+                title="On-demand TV"
                 iframeTitle={iframeTitle}
               />
             ) : (
@@ -189,6 +187,14 @@ const OnDemandTvPage = ({ pageData }) => {
             releaseDateTimeStamp={releaseDateTimeStamp}
             ariaHidden
           />
+        </Grid>
+        <Grid
+          item
+          dir={dir}
+          columns={getGroups(6, 6, 6, 6, 5, 10)}
+          startOffset={getGroups(1, 1, 1, 1, 2, 5)}
+          margins={getGroups(true, true, true, true, false, false)}
+        >
           <ParagraphBlock text={shortSynopsis} />
         </Grid>
       </StyledGelPageGrid>
