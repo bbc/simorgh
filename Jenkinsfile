@@ -271,18 +271,6 @@ pipeline {
             stash name: 'simorgh_storybook', includes: storybookDist
           }
         }
-        stage ('Build Static Assets') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              reuseNode true
-            }
-          }
-          steps {
-            buildStaticAssets("test", "TEST")
-            buildStaticAssets("live", "LIVE")
-          }
-        }
       }
       post {
         always {
@@ -290,6 +278,21 @@ pipeline {
             stageName = env.STAGE_NAME
           }
         }
+      }
+    }
+    stage ('Build Static Assets') {
+      when {
+        expression { "yes" == "yes" }
+      }
+      agent {
+        docker {
+          image "${nodeImage}"
+          reuseNode true
+        }
+      }
+      steps {
+        buildStaticAssets("test", "TEST")
+        buildStaticAssets("live", "LIVE")
       }
     }
     stage ('Run Pipeline') {
