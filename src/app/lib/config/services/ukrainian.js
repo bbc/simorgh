@@ -273,7 +273,7 @@ export const service = {
   default: {
     ...baseServiceConfig,
     datetimeLocale: `uk`,
-    locale: `uk-UA`,
+    locale: `uk_UA`,
     lang: `uk`,
   },
   'ru-UA': {
