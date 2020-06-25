@@ -23,6 +23,7 @@ export const service = {
     lang: `pt-BR`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Atualizado',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-portuguese',
     atiAnalyticsProducerId: '33',
     chartbeatDomain: 'brasil.bbc.co.uk', // this is meant to be different to the service name
@@ -156,6 +157,8 @@ export const service = {
         noJs:
           'A reprodução deste formato de vídeo não é compatível com seu dispositivo',
         contentExpired: 'Este conteúdo não está mais disponível.',
+        contentNotYetAvailable:
+          'Este conteúdo ainda não está disponível para ser tocado.',
         audio: 'Áudio',
         photogallery: 'Galeria de fotos',
         video: 'Vídeo',

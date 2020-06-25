@@ -1,6 +1,4 @@
 import config from '../../support/config/services';
-import appConfig from '../../../src/server/utilities/serviceConfigs';
-import describeForEuOnly from '../../support/helpers/describeForEuOnly';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -12,38 +10,8 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
 export const testsThatFollowSmokeTestConfigforAllPages = ({
   service,
   pageType,
-  variant,
 }) => {
   describe(`Running testsForAllPages for ${service} ${pageType}`, () => {
-    describeForEuOnly('Consent Banners', () => {
-      it('have correct translations', () => {
-        cy.contains(
-          appConfig[config[service].name][variant].translations.consentBanner
-            .privacy.title,
-        );
-        cy.contains(
-          appConfig[config[service].name][variant].translations.consentBanner
-            .privacy.reject,
-        );
-        cy.contains(
-          appConfig[config[service].name][variant].translations.consentBanner
-            .privacy.accept,
-        ).click();
-        cy.contains(
-          appConfig[config[service].name][variant].translations.consentBanner
-            .cookie.title,
-        );
-        cy.contains(
-          appConfig[config[service].name][variant].translations.consentBanner
-            .cookie.reject,
-        );
-        cy.contains(
-          appConfig[config[service].name][variant].translations.consentBanner
-            .cookie.accept,
-        );
-      });
-    });
-
     describe('Header Tests', () => {
       const serviceName = config[service].name;
       // limit number of tests to 2 services for navigation toggling
