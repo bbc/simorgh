@@ -34,11 +34,14 @@ def runDevelopmentTests(){
 
 def runProductionTests(){
   sh 'make productionTests'
-  sh 'npm prune --production'
 }
 
 def runChromaticTests(){
   sh 'make testChromatic'
+}
+
+def pruneDevDependencies(){
+  sh 'npm prune --production'
 }
 
 def getCommitInfo = {
@@ -293,6 +296,7 @@ pipeline {
       steps {
         buildStaticAssets("test", "TEST")
         buildStaticAssets("live", "LIVE")
+        pruneDevDependencies()
       }
     }
     stage ('Run Pipeline') {
