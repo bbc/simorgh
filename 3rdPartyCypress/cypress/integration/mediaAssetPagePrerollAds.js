@@ -4,7 +4,7 @@ import { getEmbedUrl } from '../../../cypress/integration/pages/mediaAssetPage/h
 const environment = getAppEnv();
 
 describe('Preroll Ads for MAPs', () => {
-  describe('should not be loaded', () => {
+  describe('should not load the preroll ad plugin', () => {
     const mapsWithoutPrerollConfig = {
       local: [],
       test: [],
@@ -21,6 +21,10 @@ describe('Preroll Ads for MAPs', () => {
           reason: 'duration is less than 30 seconds',
           path: 'https://www.bbc.com/mundo/media-52481764', // CPS Video
         },
+        {
+          reason: 'russian does not have preroll ads enabled',
+          path: 'https://www.bbc.com/russian/media-52728860', // CPS Video
+        },
       ],
     };
 
@@ -31,7 +35,7 @@ describe('Preroll Ads for MAPs', () => {
         const { path, reason } = mapConfig;
 
         describe(`because ${reason}`, () => {
-          before(() => {
+          it(`${path}`, () => {
             cy.request(`${path}.json`).then(({ body: jsonData }) => {
               const embedUrl = getEmbedUrl(
                 jsonData,
@@ -39,9 +43,6 @@ describe('Preroll Ads for MAPs', () => {
               );
               cy.visit(embedUrl);
             });
-          });
-
-          it(`${path}`, () => {
             cy.get(`script[src*="dotcom-bootstrap.js"]`).should('not.exist');
           });
         });
@@ -51,28 +52,26 @@ describe('Preroll Ads for MAPs', () => {
     }
   });
 
-  describe('should be loaded', () => {
-    const mapsWithoutPrerollConfig = {
+  describe('should load the preroll ad plugin', () => {
+    const mapsWithPrerollConfig = {
       local: [],
       test: [],
       live: [
-        'https://www.bbc.com/afrique/media-53045965', // CPS Video, advertising enabled, preroll enabled for afrique
+        'https://www.bbc.com/afrique/media-53045965', // CPS Video, advertising enabled, preroll enabled for afrique service
+        'https://www.bbc.com/zhongwen/simp/science-53136501', // CPS Video. advertising enabled, preroll enabled for zhongwen service
       ],
     };
 
-    const paths = mapsWithoutPrerollConfig[environment];
+    const paths = mapsWithPrerollConfig[environment];
 
     if (paths.length > 0) {
       paths.forEach(path => {
-        before(() => {
+        it(`${path}`, () => {
           cy.request(`${path}.json`).then(({ body: jsonData }) => {
             const embedUrl = getEmbedUrl(jsonData, jsonData.metadata.language);
             cy.visit(embedUrl);
+            cy.get(`script[src*="dotcom-bootstrap.js"]`).should('exist');
           });
-        });
-
-        it(`${path}`, () => {
-          cy.get(`script[src*="dotcom-bootstrap.js"]`).should('exist');
         });
       });
     } else {
