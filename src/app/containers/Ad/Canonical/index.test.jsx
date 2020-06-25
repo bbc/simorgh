@@ -20,7 +20,7 @@ describe('CanonicalAds Ads', () => {
     shouldMatchSnapshot(
       'should correctly render an Canonical leaderboard ad with dotcom-bootstrap script',
       <BrowserRouter>
-        <CanonicalAd service="pidgin" />
+        <CanonicalAd slotType="leaderboard" />
       </BrowserRouter>,
     );
   });

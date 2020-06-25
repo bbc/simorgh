@@ -20,6 +20,7 @@ export const service = {
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'تازه',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-pashto',
     atiAnalyticsProducerId: '68',
     brandName: 'BBC News پښتو',
@@ -146,6 +147,7 @@ export const service = {
       media: {
         noJs: 'په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.',
         contentExpired: 'دغه فایل نور د لاسرسي وړ نه دی.',
+        contentNotYetAvailable: 'دغه پروګرام د خپرولو لپاره چمتو نه دی.',
         audio: 'غږ',
         photogallery: 'دعکسونو ګالري',
         video: 'ویډیو',
