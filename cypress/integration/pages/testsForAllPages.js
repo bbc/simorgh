@@ -47,7 +47,10 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           cy.get('head link[rel="canonical"]').should(
             'have.attr',
             'href',
-            `${envConfig.baseUrl}${Cypress.env('currentPath')}`,
+            `${envConfig.baseUrl}${Cypress.env('currentPath')}`.replace(
+              'russian/av/',
+              'russian/',
+            ),
           );
         });
 
@@ -119,6 +122,11 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                   ? 'article'
                   : 'website';
 
+                // For Ukrainian pages with Russian content we want to use the `ru_UA` locale
+                const contentLocale =
+                  appConfig[config[service].name][variant].metaLocale ||
+                  appConfig[config[service].name][variant].locale;
+
                 cy.get('head').within(() => {
                   cy.get('meta[property="fb:admins"]').should(
                     'have.attr',
@@ -143,7 +151,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                   cy.get('meta[property="og:locale"]').should(
                     'have.attr',
                     'content',
-                    appConfig[config[service].name][variant].locale,
+                    contentLocale,
                   );
                   cy.get('meta[property="og:type"]').should(
                     'have.attr',
@@ -153,7 +161,10 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                   cy.get('meta[property="og:url"]').should(
                     'have.attr',
                     'content',
-                    `${envConfig.baseUrl}${Cypress.env('currentPath')}`,
+                    `${envConfig.baseUrl}${Cypress.env('currentPath')}`.replace(
+                      'russian/av/',
+                      'russian/',
+                    ),
                   );
                   cy.get('meta[property="og:site_name"]').should(
                     'have.attr',

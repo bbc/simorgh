@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page A11y I can see the skip to content link 1`] = `"Перейти до змісту"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page A11y I can see the skip to content link 1`] = `"Перейти к содержанию"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page AMP Consent config 1`] = `
 Object {
@@ -170,7 +170,7 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page SEO FB app ID 1`] = `"1609039
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Heading level 1 1`] = `"РУС"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Lang attribute 1`] = `"ru"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Lang attribute 1`] = `"ru-UA"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Linked data should match text 1`] = `
 Object {
@@ -213,7 +213,7 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page SEO OG image 1`] = `"https://
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO OG image alt 1`] = `"BBC News Україна"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page SEO OG locale 1`] = `"uk-UA"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page SEO OG locale 1`] = `"ru_UA"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO OG site name 1`] = `"BBC News Україна"`;
 
@@ -241,11 +241,11 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Twitter site 1`] = `"@BBC
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page SEO Twitter title 1`] = `"РУС - BBC News Україна"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 1`] = `"BBC ЖурналПодивитись все"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 1`] = `"BBC ЖурналПосмотреть все"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 2`] = `"Статьи"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 3`] = `"Фото дняПодивитись все"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 3`] = `"Фото дняПосмотреть все"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Sections should match headline text 4`] = `"Подробно"`;
 

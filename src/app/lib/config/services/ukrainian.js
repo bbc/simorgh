@@ -142,6 +142,7 @@ const baseServiceConfig = {
     media: {
       noJs: 'Ваш пристрій не підтримує відтворення мультимедійних файлів',
       contentExpired: 'Контент більше не доступний',
+      contentNotYetAvailable: 'Ця програма ще не доступна.',
       audio: 'Аудіо',
       photogallery: 'Фотогалерея',
       video: 'Відео',
@@ -272,9 +273,9 @@ const baseServiceConfig = {
 export const service = {
   default: {
     ...baseServiceConfig,
-    datetimeLocale: `uk`,
-    locale: `uk_UA`,
-    lang: `uk`,
+    datetimeLocale: 'uk',
+    locale: 'uk_UA',
+    lang: 'uk',
   },
   'ru-UA': {
     ...baseServiceConfig,
@@ -282,9 +283,9 @@ export const service = {
       ...baseServiceConfig.translations,
       ...russianMainTranslations,
     },
-    datetimeLocale: `ru`,
-    locale: `ru-UA`,
-    lang: `ru-UA`,
+    datetimeLocale: 'ru',
+    locale: 'ru_UA',
+    lang: 'ru-UA',
     headerFooterLang: 'uk',
   },
 };

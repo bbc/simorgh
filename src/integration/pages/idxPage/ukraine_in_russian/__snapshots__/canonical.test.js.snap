@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page A11y I can see the skip to content link 1`] = `"Перейти до змісту"`;
+exports[`Canonical ukrainian/ukraine_in_russian IDX page A11y I can see the skip to content link 1`] = `"Перейти к содержанию"`;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=94&amp;p=ukrainian.ukraine_in_russian.page&amp;x1=[urn:bbc:cps:40c7c53a-ba2e-8679-e050-380a4e807947]&amp;x2=[responsive]&amp;x3=[news-ukrainian]&amp;x4=[ru]&amp;x7=[index-section]&amp;x8=[simorgh-nojs]&amp;x9=[РУС+-+BBC+News+Україна]&amp;x11=[2016-11-22T07:16:56.000Z]&amp;x12=[2020-05-19T14:28:22.000Z]\\"/>"`;
 
@@ -56,7 +56,7 @@ exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO FB app ID 1`] = `"1
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO Heading level 1 1`] = `"РУС"`;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO Lang attribute 1`] = `"ru"`;
+exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO Lang attribute 1`] = `"ru-UA"`;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO Linked data should match text 1`] = `
 Object {
@@ -99,7 +99,7 @@ exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO OG image 1`] = `"ht
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO OG image alt 1`] = `"BBC News Україна"`;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO OG locale 1`] = `"uk-UA"`;
+exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO OG locale 1`] = `"ru_UA"`;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO OG site name 1`] = `"BBC News Україна"`;
 
@@ -127,11 +127,11 @@ exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO Twitter site 1`] = 
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO Twitter title 1`] = `"РУС - BBC News Україна"`;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Sections should match headline text 1`] = `"BBC ЖурналПодивитись все"`;
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Sections should match headline text 1`] = `"BBC ЖурналПосмотреть все"`;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Sections should match headline text 2`] = `"Статьи"`;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Sections should match headline text 3`] = `"Фото дняПодивитись все"`;
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Sections should match headline text 3`] = `"Фото дняПосмотреть все"`;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Sections should match headline text 4`] = `"Подробно"`;
 

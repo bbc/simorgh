@@ -18,7 +18,6 @@ import withContext from '../../../contexts/utils/withContext';
 const headerFooterTranslations = {
   home: 'Главная',
   currentPage: 'Текущая страница',
-  skipLinkText: 'Перейти к содержанию',
   relatedContent: 'Новости по теме',
   navMenuText: 'Разделы',
   consentBanner: {
@@ -76,6 +75,7 @@ const headerFooterTranslations = {
 // Translations used in the main element of the page
 export const mainTranslations = {
   seeAll: 'Посмотреть все',
+  skipLinkText: 'Перейти к содержанию',
   mediaAssetPage: {
     mediaPlayer: 'Медиа плеер',
     audioPlayer: 'Аудио плеер',
@@ -116,6 +116,7 @@ export const mainTranslations = {
     noJs:
       'Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер',
     contentExpired: 'Контент больше не доступен.',
+    contentNotYetAvailable: 'Эта передача еще не доступна для воспроизведения.',
     audio: 'Аудио',
     photogallery: 'Фотогалерея',
     video: 'Видео',
@@ -168,6 +169,7 @@ export const service = {
     lang: `ru`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Обновлено',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-russian',
     atiAnalyticsProducerId: '75',
     chartbeatDomain: 'russian.bbc.co.uk',

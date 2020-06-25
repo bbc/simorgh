@@ -622,8 +622,11 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/arabic/media-53135426', // CPS video
+              '/arabic/multimedia/2016/06/160601_qatar_sewika_smoking', // TC2 video
+            ],
+            enabled: true,
           },
           test: {
             paths: [
@@ -1887,8 +1890,11 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/hindi/media-53139567', // CPS video
+              '/hindi/multimedia/2015/09/150921_what_is_innovation_ms', // TC2 video
+            ],
+            enabled: true,
           },
           test: {
             paths: [
@@ -3724,7 +3730,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/persian/afghanistan'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/persian/afghanistan'],
@@ -4211,8 +4217,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/russian/av/media-52355574',
+              '/russian/news/2016/05/160510_tc2_testmap3', // TC2 video
+            ],
+            enabled: true,
           },
           local: {
             paths: [],
@@ -4389,8 +4398,10 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/serbian/cyr/srbija-52895074', // CPS video
+            ],
+            enabled: true,
           },
           test: {
             paths: ['/serbian/cyr/23279016'], // CPS video
@@ -4520,8 +4531,10 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/serbian/lat/srbija-52895074', // CPS video
+            ],
+            enabled: true,
           },
           test: {
             paths: ['/serbian/lat/23279016'], // CPS video
@@ -6014,8 +6027,11 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/ukchina/simp/52970385', // CPS video
+              '/ukchina/simp/elt/2015/08/150908_are_326_barrel_of_laughs_audio', // TC2 audio
+            ],
+            enabled: true,
           },
           test: {
             paths: [
@@ -6151,8 +6167,11 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/ukchina/trad/52970385', // CPS video
+              '/ukchina/trad/elt/2015/08/150908_are_326_barrel_of_laughs_audio', // TC2 audio
+            ],
+            enabled: true,
           },
           test: {
             paths: [
@@ -6248,9 +6267,10 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      articlePage: { environments: undefined, smoke: false },
+      articles: { environments: undefined, smoke: false },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
+      errorPage404: { environments: undefined, smoke: false },
       onDemandRadio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
@@ -7151,8 +7171,11 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/zhongwen/simp/world-53107744', // CPS video
+              '/zhongwen/simp/multimedia/2016/06/160608_vid_gaokao_voxpop', // TC2 video
+            ],
+            enabled: true,
           },
           test: {
             paths: [
@@ -7288,8 +7311,11 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/zhongwen/trad/world-53107744', // CPS video
+              '/zhongwen/trad/multimedia/2016/06/160608_vid_gaokao_voxpop', // TC2 video
+            ],
+            enabled: true,
           },
           test: {
             paths: [

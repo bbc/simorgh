@@ -14,6 +14,7 @@ export const service = {
     lang: `az`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Yeniləndi',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-azeri',
     atiAnalyticsProducerId: '6',
     chartbeatDomain: 'azeri.bbc.co.uk',
@@ -143,6 +144,8 @@ export const service = {
       media: {
         noJs: 'Sizin qurğunuzda yenidən səsləndirmə mümkün deyil',
         contentExpired: 'Bu proqramı izləmək/dinləmək artıq mümkün deyil.',
+        contentNotYetAvailable:
+          'Bu proqramı izləmək/dinləmək hələlik mümkün deyil.',
         audio: 'Audio',
         photogallery: 'Foto-qalereya',
         video: 'Video',

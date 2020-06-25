@@ -13,7 +13,8 @@ export const service = {
     },
     lang: `ne`,
     articleAuthor: `http://www.facebook.com/bbcnews`,
-    articleTimestampPrefix: 'मा अद्यावधिक',
+    articleTimestampPrefix: '',
+    articleTimestampSuffix: 'मा अद्यावधिक',
     atiAnalyticsAppName: 'news-nepali',
     atiAnalyticsProducerId: '63',
     chartbeatDomain: 'nepali.bbc.co.uk',
@@ -144,6 +145,7 @@ export const service = {
       media: {
         noJs: 'तपाईंको उपकरणमा मिडिया प्लेब्याक सपोर्ट छैन',
         contentExpired: 'यो सामग्री अब उपलब्ध छैन',
+        contentNotYetAvailable: 'यो सामाग्री प्ले गर्नलाई उपलब्ध भइसकेको छैन।',
         audio: 'अडिओ',
         photogallery: 'तस्बिर सङ्ग्रह',
         video: 'भिडिओ',

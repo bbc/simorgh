@@ -227,7 +227,6 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 .c14 {
   height: 165px;
   position: relative;
-  overflow: hidden;
   margin-bottom: 1rem;
 }
 
@@ -282,7 +281,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   flex-grow: 1;
 }
 
-.c13 {
+.c13 iframe {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
 }
@@ -605,7 +604,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c13 {
+  .c13 iframe {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
   }
@@ -747,7 +746,6 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 .c15 {
   height: 165px;
   position: relative;
-  overflow: hidden;
   margin-bottom: 1rem;
 }
 
@@ -802,7 +800,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   flex-grow: 1;
 }
 
-.c14 {
+.c14 iframe {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
 }
@@ -1135,7 +1133,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c14 {
+  .c14 iframe {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
   }
@@ -1445,7 +1443,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 </html>
 `;
 
-exports[`OnDemand Radio Page  should not show the audio player if it is not available yet 1`] = `
+exports[`OnDemand Radio Page  should show the 'content not yet available' message if episode is not yet available 1`] = `
 .c13 {
   display: block;
   width: 100%;
@@ -1972,7 +1970,7 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
             <strong
               class="c17"
             >
-              더 이상 이용할 수 없는 콘텐츠입니다.
+              아직 재생할 수 없는 프로그램입니다.
             </strong>
           </div>
         </div>

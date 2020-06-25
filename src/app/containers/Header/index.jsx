@@ -36,8 +36,12 @@ const HeaderContainer = () => {
     </SkipLink>
   );
 
+  // 'headerFooterLang' value is only available in the ukrainian config as our ukraine_in_russian pages will have
+  // a ukrainian text for header and footer but a russian text main element
+  const headerLangAttribute = headerFooterLang && { lang: headerFooterLang };
+
   return (
-    <header role="banner" {...(headerFooterLang && { lang: headerFooterLang })}>
+    <header role="banner" {...headerLangAttribute}>
       <ConsentBanner />
       <BrandContainer
         borderBottom={borderBottom}
