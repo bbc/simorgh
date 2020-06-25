@@ -86,12 +86,6 @@ describe('VideoPlayer', () => {
     expect(document.querySelector('noscript')).toBeInTheDocument();
   });
 
-  it('should contain the noscript tag for no-JS scenarios on AMP', () => {
-    render(AVPlayerAMP);
-
-    expect(document.querySelector('noscript')).toBeInTheDocument();
-  });
-
   it('should contain the translated iframe title on canonical', () => {
     const { container } = render(AVPlayerCanonical);
 
