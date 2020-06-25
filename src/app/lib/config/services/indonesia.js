@@ -14,6 +14,7 @@ export const service = {
     lang: `id`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Diperbarui',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-indonesia',
     atiAnalyticsProducerId: '54',
     chartbeatDomain: 'indonesian.bbc.co.uk', // this is meant to be different to the service name
