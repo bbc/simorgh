@@ -3,7 +3,7 @@ const putAWSMetric = ({
   namespace = 'Server',
   metricName,
   pageTypeValue = 'Unknown',
-  statusCode = 'Unknown'
+  statusCode = 'Unknown',
 }) => {
   const params = {
     Namespace: `Si/${namespace}` /* required */,
@@ -19,7 +19,7 @@ const putAWSMetric = ({
           },
           {
             Name: 'StatusCode' /* required */,
-            Value: statusCode /* required */,
+            Value: statusCode.toString() /* required */,
           },
         ],
         Timestamp: new Date(),
@@ -31,10 +31,10 @@ const putAWSMetric = ({
 
   // Send CW if on test environment, otherwise log to console
   if (process.env.SIMORGH_APP_ENV === 'test') {
-    console.info('send CW metric')
+    console.info('send CW metric');
     cloudwatch.putMetricData(params).send();
   } else {
-    console.info(`Custom CW Metric: ${JSON.stringify(params)}`)
+    console.info(`Custom CW Metric: ${JSON.stringify(params)}`);
   }
 };
 

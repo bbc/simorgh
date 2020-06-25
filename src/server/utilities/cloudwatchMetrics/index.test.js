@@ -6,19 +6,17 @@ describe('putAWSMetric', () => {
       send: jest.fn(),
     })),
   };
-  const mockTimestamp = '2020-06-15T14:14:25.057Z';
-  const originalDateNow = Date.now;
 
-  beforeEach(() => {
-    Date.now = jest.fn(() => mockTimestamp);
-  });
+  const mockDate = new Date('2020-06-20T00:07:19.309Z');
+
+  jest.spyOn(global, 'Date').mockImplementation(() => mockDate);
 
   afterEach(() => {
     jest.clearAllMocks();
-    Date.now = originalDateNow;
   });
 
   it('should call function with params', () => {
+    process.env.SIMORGH_APP_ENV = 'test';
     putAWSMetric({
       cloudwatch: mockCloudwatch,
       namespace: 'Server',
@@ -36,20 +34,18 @@ describe('putAWSMetric', () => {
               Name: 'PageType',
               Value: 'On Demand Radio',
             },
+            {
+              Name: 'StatusCode',
+              Value: 'Unknown',
+            },
           ],
-          StorageResolution: 'NUMBER_VALUE',
-          Timestamp: mockTimestamp,
+          Timestamp: new Date(),
           Unit: 'Count',
-          Value: 1,
           Values: [1],
         },
       ],
     };
     expect(mockCloudwatch.putMetricData).toHaveBeenCalledTimes(1);
     expect(mockCloudwatch.putMetricData).toHaveBeenCalledWith(testParams);
-  });
-
-  it('should', () => {
-    console.log(Date.now());
   });
 });
