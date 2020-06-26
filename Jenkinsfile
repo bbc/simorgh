@@ -133,7 +133,7 @@ pipeline {
         cancelPreviousBuilds()
       }
     }
-    stage ('Install dependencies') {
+    stage ('Install Dependencies') {
       agent {
         docker {
           image "${nodeImage}"
@@ -144,7 +144,7 @@ pipeline {
         installDependencies()
       }
     }
-    stage ('Build') {
+    stage ('Build for Test') {
       agent {
         docker {
           image "${nodeImage}"
@@ -156,9 +156,6 @@ pipeline {
       }
     }
     stage ('Test') {
-      when {
-        expression { "yes" == "no" }
-      }
       failFast true
       parallel {
         stage ('Test Development') {
@@ -210,13 +207,16 @@ pipeline {
         }
       }
     }
-    stage ('Test & Package') {
+    stage ('Build for Release') {
       when {
         expression { "yes" == "yes" }
       }
       failFast true
       parallel {
-        stage ('Test Development') {
+        stage ('Build Static Assets') {
+          when {
+            expression { "yes" == "yes" }
+          }
           agent {
             docker {
               image "${nodeImage}"
@@ -224,25 +224,11 @@ pipeline {
             }
           }
           steps {
-            setupCodeCoverage()
-            withCredentials([string(credentialsId: 'simorgh-cc-test-reporter-id', variable: 'CC_TEST_REPORTER_ID')]) {
-              runDevelopmentTests()
-              sh './cc-test-reporter after-build -t lcov --debug --exit-code 0'
-            }
+            buildStaticAssets("test", "TEST")
+            buildStaticAssets("live", "LIVE")
           }
         }
-        stage ('Test Production') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              reuseNode true
-            }
-          }
-          steps {
-            runProductionTests()
-          }
-        }
-        stage ('Build storybook dist') {
+        stage ('Build Storybook Dist') {
           agent {
             docker {
               image "${nodeImage}"
@@ -265,7 +251,7 @@ pipeline {
         }
       }
     }
-    stage ('Build Static Assets') {
+    stage ('Prepare for Deployment') {
       when {
         expression { "yes" == "yes" }
       }
@@ -276,27 +262,12 @@ pipeline {
         }
       }
       steps {
-        buildStaticAssets("test", "TEST")
-        buildStaticAssets("live", "LIVE")
-      }
-    }
-    stage ('Zip Production') {
-      when {
-        expression { "yes" == "yes" }
-      }
-      agent {
-        docker {
-          image "${nodeImage}"
-          reuseNode true
-        }
-      }
-      steps {
-        pruneDevDependencies()
-
         script {
           getCommitInfo()
           Simorgh.setBuildMetadataLegacy('simorgh', env.BUILD_NUMBER, appGitCommit) // Set Simorgh build metadata
         }
+
+        sh 'npm prune --production'
 
         // Moving files necessary for production to `pack` directory.
         sh "./scripts/jenkinsProductionFiles.sh"
