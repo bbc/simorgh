@@ -33,12 +33,15 @@ export const getType = (pageType, shorthand = false) => {
       return shorthand ? 'ART' : 'New Article';
     case 'MAP':
       return 'article-media-asset';
-    case 'media':
+    case 'liveRadio':
+    case 'onDemandRadio':
       return 'Radio';
     case 'mostRead':
       return 'Most Read';
     case 'STY':
       return 'STY';
+    case 'onDemandTV':
+      return 'TV';
     default:
       return null;
   }
@@ -60,6 +63,7 @@ export const buildSections = ({
 
   switch (pageType) {
     case 'MAP':
+    case 'STY':
       return [
         serviceCap,
         buildSectionItem(serviceCap, sectionName),
@@ -67,7 +71,9 @@ export const buildSections = ({
         buildSectionItem(buildSectionItem(serviceCap, sectionName), pageType),
         buildSectionItem(serviceCap, appendCategory(categoryName)),
       ].join(', ');
-    case 'media':
+    case 'liveRadio':
+    case 'onDemandRadio':
+    case 'onDemandTV':
       return [
         serviceCap,
         ...(pageType
@@ -78,14 +84,6 @@ export const buildSections = ({
           : []),
         ...(addProducer ? buildSectionArr(serviceCap, producer, type) : []),
         ...(chapter ? buildSectionArr(serviceCap, chapter, type) : []),
-      ].join(', ');
-    case 'STY':
-      return [
-        serviceCap,
-        buildSectionItem(serviceCap, sectionName),
-        buildSectionItem(serviceCap, pageType),
-        buildSectionItem(buildSectionItem(serviceCap, sectionName), pageType),
-        buildSectionItem(serviceCap, appendCategory(categoryName)),
       ].join(', ');
     default:
       return [
@@ -106,13 +104,14 @@ export const getTitle = ({ pageType, pageData, brandName, title }) => {
     case 'article':
       return getPromoHeadline(pageData);
     case 'MAP':
+    case 'STY':
       return path(['promo', 'headlines', 'headline'], pageData);
-    case 'media':
+    case 'liveRadio':
+    case 'onDemandRadio':
+    case 'onDemandTV':
       return path(['pageTitle'], pageData);
     case 'mostRead':
       return `${title} - ${brandName}`;
-    case 'STY':
-      return path(['promo', 'headlines', 'headline'], pageData);
     default:
       return null;
   }
@@ -158,7 +157,12 @@ export const getConfig = ({
   });
   const cookie = getSylphidCookie();
   const type = getType(pageType);
-  const contentType = pageType === 'media' ? getTvRadioContentType(data) : type;
+
+  const isRadioOrTV = () =>
+    ['liveRadio', 'onDemandRadio', 'onDemandTV'].includes(pageType);
+  const contentType = isRadioOrTV(pageType)
+    ? getTvRadioContentType(data)
+    : type;
   const currentPath = onClient() && window.location.pathname;
   return {
     domain,

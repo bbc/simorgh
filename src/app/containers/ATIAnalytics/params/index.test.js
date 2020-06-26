@@ -69,12 +69,19 @@ const frontPage = {
     title: 'title',
   },
 };
-const media = {
+const liveRadio = {
   id: 'id',
   language: 'language',
   pageIdentifier: 'pageIdentifier',
   pageTitle: 'pageTitle',
   contentType: 'player-live',
+};
+const onDemandRadioTV = {
+  id: 'id',
+  language: 'language',
+  pageIdentifier: 'pageIdentifier',
+  pageTitle: 'pageTitle',
+  contentType: 'player-episode',
 };
 const MAP = {
   promo: {
@@ -181,14 +188,36 @@ describe('ATIAnalytics params', () => {
       );
     });
 
-    it('should return the right media url', () => {
+    it('should return the right live radio url', () => {
       const url = buildATIUrl(
-        media,
-        { ...requestContext, pageType: 'media' },
+        liveRadio,
+        { ...requestContext, pageType: 'liveRadio' },
         serviceContext,
       );
       expect(url).toEqual(
         's=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[id]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[player-live]&x8=[simorgh]&x9=[pageTitle]',
+      );
+    });
+
+    it('should return the right on demand radio url', () => {
+      const url = buildATIUrl(
+        onDemandRadioTV,
+        { ...requestContext, pageType: 'onDemandRadio' },
+        serviceContext,
+      );
+      expect(url).toEqual(
+        's=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn:bbc:pips:id]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[player-episode]&x8=[simorgh]&x9=[pageTitle]',
+      );
+    });
+
+    it('should return the right on demand TV url', () => {
+      const url = buildATIUrl(
+        onDemandRadioTV,
+        { ...requestContext, pageType: 'onDemandTV' },
+        serviceContext,
+      );
+      expect(url).toEqual(
+        's=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn:bbc:pips:id]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x7=[player-episode]&x8=[simorgh]&x9=[pageTitle]',
       );
     });
 
@@ -325,16 +354,58 @@ describe('ATIAnalytics params', () => {
       });
     });
 
-    it('should return the right media params', () => {
+    it('should return the right live radio params', () => {
       const params = buildATIClickParams(
-        media,
-        { ...requestContext, pageType: 'media' },
+        liveRadio,
+        { ...requestContext, pageType: 'liveRadio' },
         serviceContext,
       );
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
         contentId: 'id',
         contentType: 'player-live',
+        language: 'language',
+        pageIdentifier: 'pageIdentifier',
+        pageTitle: 'pageTitle',
+        libraryVersion: 'simorgh',
+        platform: 'platform',
+        producerId: 'atiAnalyticsProducerId',
+        service: 'service',
+        statsDestination: 'statsDestination',
+      });
+    });
+
+    it('should return the right on demand radio params', () => {
+      const params = buildATIClickParams(
+        onDemandRadioTV,
+        { ...requestContext, pageType: 'onDemandRadio' },
+        serviceContext,
+      );
+      expect(params).toEqual({
+        appName: 'atiAnalyticsAppName',
+        contentId: 'urn:bbc:pips:id',
+        contentType: 'player-episode',
+        language: 'language',
+        pageIdentifier: 'pageIdentifier',
+        pageTitle: 'pageTitle',
+        libraryVersion: 'simorgh',
+        platform: 'platform',
+        producerId: 'atiAnalyticsProducerId',
+        service: 'service',
+        statsDestination: 'statsDestination',
+      });
+    });
+
+    it('should return the right on demand TV params', () => {
+      const params = buildATIClickParams(
+        onDemandRadioTV,
+        { ...requestContext, pageType: 'onDemandTV' },
+        serviceContext,
+      );
+      expect(params).toEqual({
+        appName: 'atiAnalyticsAppName',
+        contentId: 'urn:bbc:pips:id',
+        contentType: 'player-episode',
         language: 'language',
         pageIdentifier: 'pageIdentifier',
         pageTitle: 'pageTitle',

@@ -62,7 +62,7 @@ describe('Chartbeat utilities', () => {
         expectedShortType: 'article-media-asset',
       },
       {
-        type: 'media',
+        type: 'liveRadio',
         expectedDefaultType: 'Radio',
         expectedShortType: 'Radio',
       },
@@ -75,6 +75,16 @@ describe('Chartbeat utilities', () => {
         type: 'STY',
         expectedDefaultType: 'STY',
         expectedShortType: 'STY',
+      },
+      {
+        type: 'onDemandRadio',
+        expectedDefaultType: 'Radio',
+        expectedShortType: 'Radio',
+      },
+      {
+        type: 'onDemandTV',
+        expectedDefaultType: 'TV',
+        expectedShortType: 'TV',
       },
       {
         type: null,
@@ -167,21 +177,21 @@ describe('Chartbeat utilities', () => {
       },
       {
         service: 'korean',
-        pageType: 'media',
+        pageType: 'liveRadio',
         description: 'should return expected section for live radio',
         masterBrand: 'bbc_korean_radio',
         expected: 'Korean, Korean - Radio',
       },
       {
         service: 'indonesia',
-        pageType: 'media',
+        pageType: 'onDemandRadio',
         description: 'should return expected section for onDemand radio',
         masterBrand: 'bbc_indonesian_radio',
         expected: 'Indonesia, Indonesia - Radio',
       },
       {
         service: 'pashto',
-        pageType: 'media',
+        pageType: 'onDemandTV',
         description: 'should return expected section for ondemand TV',
         masterBrand: 'bbc_pashto_tv',
         expected: 'Pashto, Pashto - TV',
@@ -306,7 +316,7 @@ describe('Chartbeat utilities', () => {
     });
 
     it('should return correct title when pageType is media (Live radio)', () => {
-      const pageType = 'media';
+      const pageType = 'liveRadio';
       const pageData = {
         pageTitle: 'Live Radio Page Title',
       };
@@ -315,7 +325,7 @@ describe('Chartbeat utilities', () => {
     });
 
     it('should return correct title when pageType is media (onDemand radio)', () => {
-      const pageType = 'media';
+      const pageType = 'onDemandRadio';
       const pageData = {
         pageTitle: 'OnDemand Radio Page Title',
       };
@@ -326,7 +336,7 @@ describe('Chartbeat utilities', () => {
     });
 
     it('should return correct title when pageType is media (onDemand TV)', () => {
-      const pageType = 'media';
+      const pageType = 'onDemandTV';
       const pageData = {
         pageTitle: 'OnDemand TV Page Title',
       };
@@ -475,7 +485,7 @@ describe('Chartbeat utilities', () => {
       const fixtureData = {
         isAmp: true,
         platform: 'amp',
-        pageType: 'media',
+        pageType: 'liveRadio',
         data: {
           pageTitle: 'Live Radio Page Title',
           contentType: 'player-live',
@@ -607,7 +617,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: true,
       platform: 'amp',
-      pageType: 'media',
+      pageType: 'onDemandRadio',
       data: {
         pageTitle: 'OnDemand Radio Page Title',
         contentType: 'player-episode',
@@ -640,7 +650,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: true,
       platform: 'amp',
-      pageType: 'media',
+      pageType: 'onDemandTV',
       data: {
         pageTitle: 'OnDemand TV Page Title',
         contentType: 'player-episode',
@@ -673,7 +683,7 @@ describe('Chartbeat utilities', () => {
     const fixtureData = {
       isAmp: false,
       platform: 'canonical',
-      pageType: 'media',
+      pageType: 'onDemandTV',
       data: {
         pageTitle: 'OnDemand TV Page Title',
         contentType: 'player-episode',

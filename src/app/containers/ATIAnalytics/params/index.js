@@ -25,7 +25,9 @@ const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
 const pageTypeUrlBuilders = {
   article: buildArticleATIUrl,
   frontPage: buildIndexPageATIUrl,
-  media: buildTvRadioATIUrl,
+  liveRadio: buildTvRadioATIUrl,
+  onDemandRadio: buildTvRadioATIUrl,
+  onDemandTV: buildTvRadioATIUrl,
   mostRead: buildMostReadATIUrl,
   IDX: buildIndexPageATIUrl,
   MAP: (data, requestContext, serviceContext) =>
@@ -47,7 +49,9 @@ const pageTypeUrlBuilders = {
 const pageTypeParamBuilders = {
   article: buildArticleATIParams,
   frontPage: buildIndexPageATIParams,
-  media: buildTvRadioATIParams,
+  liveRadio: buildTvRadioATIParams,
+  onDemandRadio: buildTvRadioATIParams,
+  onDemandTV: buildTvRadioATIParams,
   mostRead: buildMostReadATIParams,
   IDX: buildIndexPageATIParams,
   MAP: (data, requestContext, serviceContext) =>

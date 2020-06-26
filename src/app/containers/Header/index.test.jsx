@@ -71,9 +71,23 @@ describe(`Header`, () => {
   );
 
   shouldMatchSnapshot(
-    'should render correctly for WS radio page',
+    'should render correctly for live radio page',
     HeaderContainerWithContext({
-      pageType: 'media',
+      pageType: 'liveRadio',
+    }),
+  );
+
+  shouldMatchSnapshot(
+    'should render correctly for on demand radio page',
+    HeaderContainerWithContext({
+      pageType: 'onDemandRadio',
+    }),
+  );
+
+  shouldMatchSnapshot(
+    'should render correctly for on demand TV page',
+    HeaderContainerWithContext({
+      pageType: 'onDemandTV',
     }),
   );
 
