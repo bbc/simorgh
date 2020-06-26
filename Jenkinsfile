@@ -231,7 +231,7 @@ pipeline {
             }
           }
         }
-        stage ('Test Production and Zip Production') {
+        stage ('Test Production') {
           agent {
             docker {
               image "${nodeImage}"
@@ -239,25 +239,7 @@ pipeline {
             }
           }
           steps {
-            // Testing
             runProductionTests()
-
-            script {
-              getCommitInfo()
-              Simorgh.setBuildMetadataLegacy('simorgh', env.BUILD_NUMBER, appGitCommit) // Set Simorgh build metadata
-            }
-
-            // Moving files necessary for production to `pack` directory.
-            sh "./scripts/jenkinsProductionFiles.sh"
-
-            script {
-              sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
-            }
-
-            sh "rm -f ${packageName}"
-            zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
-            stash name: 'simorgh', includes: packageName
-            sh "rm -rf pack"
           }
         }
         stage ('Build storybook dist') {
@@ -296,7 +278,37 @@ pipeline {
       steps {
         buildStaticAssets("test", "TEST")
         buildStaticAssets("live", "LIVE")
+      }
+    }
+    stage ('Zip Production') {
+      when {
+        expression { "yes" == "yes" }
+      }
+      agent {
+        docker {
+          image "${nodeImage}"
+          reuseNode true
+        }
+      }
+      steps {
         pruneDevDependencies()
+
+        script {
+          getCommitInfo()
+          Simorgh.setBuildMetadataLegacy('simorgh', env.BUILD_NUMBER, appGitCommit) // Set Simorgh build metadata
+        }
+
+        // Moving files necessary for production to `pack` directory.
+        sh "./scripts/jenkinsProductionFiles.sh"
+
+        script {
+          sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
+        }
+
+        sh "rm -f ${packageName}"
+        zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
+        stash name: 'simorgh', includes: packageName
+        sh "rm -rf pack"
       }
     }
     stage ('Run Pipeline') {
