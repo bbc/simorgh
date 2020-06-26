@@ -66,7 +66,7 @@ RequestContextProvider.propTypes = {
   pageType: oneOf([
     'article',
     'frontPage',
-    'media',
+    'liveRadio',
     'mostRead',
     'error',
     'MAP',
@@ -74,6 +74,8 @@ RequestContextProvider.propTypes = {
     'STY',
     'PGL',
     'IDX',
+    'onDemandRadio',
+    'onDemandTV',
   ]).isRequired,
   service: string.isRequired,
   statusCode: number,
