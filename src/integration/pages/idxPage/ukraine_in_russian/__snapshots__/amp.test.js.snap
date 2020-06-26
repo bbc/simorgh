@@ -138,6 +138,8 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 8`] = `"Ознайомтеся з нашими правилами зовнішніх посилань. - https://www.bbc.co.uk/help/web/links/"`;
 
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer lang code should match text 1`] = `"uk"`;
+
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header I can see the branding 1`] = `"BBC News, Україна"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 1`] = `"Новини - /ukrainian"`;
@@ -157,6 +159,8 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 8`] = `"Блоги - /ukrainian/blogs"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 9`] = `"Поточна сторінка, РУС - /ukrainian/ukraine_in_russian"`;
+
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header lang code should match text 1`] = `"uk"`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Main heading should match text 1`] = `"РУС"`;
 
@@ -261,7 +265,3 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page Story Promo Image should matc
   width="976"
 />
 `;
-
-exports[`Footer lang code should match text 1`] = `"uk"`;
-
-exports[`Header lang code should match text 1`] = `"uk"`;
