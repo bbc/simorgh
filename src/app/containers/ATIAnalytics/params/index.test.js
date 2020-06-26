@@ -77,10 +77,7 @@ const liveRadio = {
   contentType: 'player-live',
 };
 const onDemandRadioTV = {
-  id: 'id',
-  language: 'language',
-  pageIdentifier: 'pageIdentifier',
-  pageTitle: 'pageTitle',
+  ...liveRadio,
   contentType: 'player-episode',
 };
 const MAP = {
