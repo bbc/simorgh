@@ -300,19 +300,6 @@ server
         });
         const { status } = data;
 
-        const pageType = pathOr(
-          'Unknown',
-          ['pageData', 'metadata', 'type'],
-          data,
-        );
-
-        logger.info(ROUTING_INFORMATION, {
-          url,
-          status,
-          pageType,
-          route: route.pageType,
-        });
-
         const bbcOrigin = headers['bbc-origin'];
 
         data.path = urlPath;
@@ -326,6 +313,19 @@ server
           service,
           url,
           variant,
+        });
+
+        const pageType = pathOr(
+          'Unknown',
+          ['pageData', 'metadata', 'type'],
+          data,
+        );
+
+        logger.info(ROUTING_INFORMATION, {
+          url,
+          status,
+          pageType,
+          route: route.pageType,
         });
 
         if (result.redirectUrl) {
