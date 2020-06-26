@@ -4,6 +4,14 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
+import isLive from '#lib/utilities/isLive';
+
+export const getDataSlot = service => {
+  const dataSlot = isLive()
+    ? `/4817/bbcworldservice.live.site.${service}`
+    : `/4817/bbcworldservice.test.site.${service}`;
+  return dataSlot;
+};
 
 const constructAdJsonData = ({ service, slotType }) => ({
   targeting: {
@@ -13,14 +21,14 @@ const constructAdJsonData = ({ service, slotType }) => ({
   },
 });
 
-const defaultAmpAdProps = {
+const defaultAmpAdProps = service => ({
   'data-block-on-consent': 'default',
   'data-npa-on-unknown-consent': 'true',
   type: 'doubleclick',
-  'data-slot': '/4817/bbccom.test.site.amp.news',
+  'data-slot': getDataSlot(service),
   'data-amp-slot-index': '0',
   'data-a4a-upgrade-type': 'amp-ad-network-doubleclick-impl',
-};
+});
 
 const slotConfigurations = {
   leaderboard: {
@@ -55,10 +63,18 @@ const AdSlot = ({ service, slotType }) => {
   return (
     <>
       {mobile && (
-        <amp-ad {...defaultAmpAdProps} {...mobile} json={targetingJson} />
+        <amp-ad
+          {...defaultAmpAdProps(service)}
+          {...mobile}
+          json={targetingJson}
+        />
       )}
       {desktop && (
-        <amp-ad {...defaultAmpAdProps} {...desktop} json={targetingJson} />
+        <amp-ad
+          {...defaultAmpAdProps(service)}
+          {...desktop}
+          json={targetingJson}
+        />
       )}
     </>
   );
