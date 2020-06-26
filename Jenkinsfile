@@ -133,7 +133,7 @@ pipeline {
         cancelPreviousBuilds()
       }
     }
-    stage ('Install dependencies') {
+    stage ('Install Dependencies') {
       agent {
         docker {
           image "${nodeImage}"
@@ -144,7 +144,7 @@ pipeline {
         installDependencies()
       }
     }
-    stage ('Build') {
+    stage ('Build for Test') {
       agent {
         docker {
           image "${nodeImage}"
@@ -207,28 +207,13 @@ pipeline {
         }
       }
     }
-    stage ('Test & Package') {
+    stage ('Build for Release') {
       when {
         expression { env.BRANCH_NAME == 'latest' }
       }
       failFast true
       parallel {
-        stage ('Test Development') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              reuseNode true
-            }
-          }
-          steps {
-            setupCodeCoverage()
-            withCredentials([string(credentialsId: 'simorgh-cc-test-reporter-id', variable: 'CC_TEST_REPORTER_ID')]) {
-              runDevelopmentTests()
-              sh './cc-test-reporter after-build -t lcov --debug --exit-code 0'
-            }
-          }
-        }
-        stage ('Test Production and Zip Production') {
+        stage ('Build Static Assets') {
           agent {
             docker {
               image "${nodeImage}"
@@ -240,7 +225,7 @@ pipeline {
             buildStaticAssets("live", "LIVE")
           }
         }
-        stage ('Build storybook dist') {
+        stage ('Build Storybook Dist') {
           agent {
             docker {
               image "${nodeImage}"
