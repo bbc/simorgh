@@ -181,7 +181,7 @@ const OnDemandRadioPage = ({ pageData }) => {
               iframeTitle={iframeTitle}
               title="On-demand radio"
               type="audio"
-              imageUrl={audioPlaceholderImageSrc}
+              placeholderSrc={audioPlaceholderImageSrc}
             />
           ) : (
             <StyledMessageContainer>

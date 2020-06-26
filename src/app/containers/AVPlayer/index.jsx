@@ -8,13 +8,14 @@ import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const VideoPlayer = ({
+const AVPlayer = ({
   assetId,
   placeholderSrc,
   title,
   embedUrl,
   iframeTitle,
   type,
+  skin,
   className,
 }) => {
   const { translations, service } = useContext(ServiceContext);
@@ -40,6 +41,7 @@ const VideoPlayer = ({
           placeholderSrc={placeholderSrc}
           src={embedUrl}
           title={iframeTitle}
+          skin={skin}
           noJsMessage={noJsMessage}
           service={service}
         />
@@ -48,6 +50,7 @@ const VideoPlayer = ({
           showPlaceholder={false}
           src={embedUrl}
           title={iframeTitle}
+          skin={skin}
           service={service}
           mediaInfo={mediaInfo}
           noJsMessage={noJsMessage}
@@ -58,7 +61,7 @@ const VideoPlayer = ({
   );
 };
 
-VideoPlayer.propTypes = {
+AVPlayer.propTypes = {
   embedUrl: string,
   assetId: string,
   placeholderSrc: string,
@@ -66,9 +69,10 @@ VideoPlayer.propTypes = {
   title: string,
   iframeTitle: string,
   className: string,
+  skin: string,
 };
 
-VideoPlayer.defaultProps = {
+AVPlayer.defaultProps = {
   embedUrl: '',
   assetId: '',
   placeholderSrc: '',
@@ -76,6 +80,7 @@ VideoPlayer.defaultProps = {
   title: '',
   iframeTitle: '',
   className: '',
+  skin: 'classic',
 };
 
-export default VideoPlayer;
+export default AVPlayer;
