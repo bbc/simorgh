@@ -299,7 +299,6 @@ server
           variant,
         });
         const { status } = data;
-
         const bbcOrigin = headers['bbc-origin'];
 
         data.path = urlPath;
