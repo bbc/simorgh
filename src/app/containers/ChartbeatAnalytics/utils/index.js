@@ -158,9 +158,10 @@ export const getConfig = ({
   const cookie = getSylphidCookie();
   const type = getType(pageType);
 
-  const isRadioOrTV = () =>
+  const isTvOrRadio = () =>
     ['liveRadio', 'onDemandRadio', 'onDemandTV'].includes(pageType);
-  const contentType = isRadioOrTV(pageType)
+
+  const contentType = isTvOrRadio(pageType)
     ? getTvRadioContentType(data)
     : type;
   const currentPath = onClient() && window.location.pathname;
