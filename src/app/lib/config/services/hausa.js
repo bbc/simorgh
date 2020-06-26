@@ -14,6 +14,7 @@ export const service = {
     lang: `ha`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Wanda aka sabunta',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-hausa',
     atiAnalyticsProducerId: '51',
     chartbeatDomain: 'hausa.bbc.co.uk',

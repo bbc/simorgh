@@ -15,6 +15,7 @@ export const service = {
     lang: `my`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'အသစ်တင်ချိန်',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-burmese',
     atiAnalyticsProducerId: '35',
     chartbeatDomain: 'burmese.bbc.co.uk',
