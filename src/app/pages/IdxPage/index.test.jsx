@@ -74,9 +74,5 @@ describe('IdxPage - Ukrainian', () => {
         expect(section.getAttribute('role')).toEqual('region');
       });
     });
-
-    it('should render idx page main with lang', async () => {
-      expect(container.querySelector('main')).toHaveAttribute('lang', 'ru-UA');
-    });
   });
 });
