@@ -11,7 +11,7 @@ const component = ({ url, isAmp, service }) => (
     <RequestContextProvider
       isAmp={isAmp}
       service={service}
-      pageType="media"
+      pageType="onDemandRadio"
       pathname="/path"
     >
       <OnDemandImage imageUrl={url} />

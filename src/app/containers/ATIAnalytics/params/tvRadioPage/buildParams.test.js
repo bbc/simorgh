@@ -15,19 +15,8 @@ const liveRadio = {
   contentType: 'player-live',
 };
 
-const onDemandRadio = {
-  id: 'id',
-  language: 'language',
-  pageIdentifier: 'pageIdentifier',
-  pageTitle: 'pageTitle',
-  contentType: 'player-episode',
-};
-
-const onDemandTv = {
-  id: 'id',
-  language: 'language',
-  pageIdentifier: 'pageIdentifier',
-  pageTitle: 'pageTitle',
+const onDemandRadioTV = {
+  ...liveRadio,
   contentType: 'player-episode',
 };
 
@@ -99,7 +88,7 @@ describe('buildTvRadioATIParams', () => {
 
   it('should return the correct object for onDemand radio', () => {
     const result = buildTvRadioATIParams(
-      onDemandRadio,
+      onDemandRadioTV,
       requestContext,
       serviceContext,
     );
@@ -108,7 +97,7 @@ describe('buildTvRadioATIParams', () => {
 
   it('should return the correct object for onDemand TV', () => {
     const result = buildTvRadioATIParams(
-      onDemandTv,
+      onDemandRadioTV,
       requestContext,
       serviceContext,
     );
@@ -146,7 +135,7 @@ describe('buildTvRadioATIUrl', () => {
 
   it('should return the correct url for onDemand radio', () => {
     const result = buildTvRadioATIUrl(
-      onDemandRadio,
+      onDemandRadioTV,
       requestContext,
       serviceContext,
     );
@@ -173,7 +162,7 @@ describe('buildTvRadioATIUrl', () => {
 
   it('should return the correct url for onDemand TV', () => {
     const result = buildTvRadioATIUrl(
-      onDemandTv,
+      onDemandRadioTV,
       requestContext,
       serviceContext,
     );

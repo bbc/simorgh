@@ -12,6 +12,8 @@ import services from '#server/utilities/serviceConfigs';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import frontPageData from '#data/igbo/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
+import onDemandRadioPageData from '#data/indonesia/bbc_indonesian_radio/w13xtt0s.json';
+import onDemandTVPageData from '#data/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf.json';
 import { getSummary } from '#lib/utilities/parseAssetData/index';
 
 const dotComOrigin = 'https://www.bbc.com';
@@ -630,17 +632,49 @@ shouldMatchSnapshot(
 );
 
 shouldMatchSnapshot(
-  'should match for WS Media liveradio',
+  'should match for live radio',
   <MetadataWithContext
     service="korean"
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id={null}
-    pageType="media"
+    pageType="liveRadio"
     pathname="/korean/bbc_korean_radio/liveradio"
     title={liveRadioPageData.promo.name}
     lang={liveRadioPageData.metadata.language}
     description={liveRadioPageData.promo.summary}
+    openGraphType="website"
+  />,
+);
+
+shouldMatchSnapshot(
+  'should match for on demand radio',
+  <MetadataWithContext
+    service="indonesia"
+    bbcOrigin={dotComOrigin}
+    platform="canonical"
+    id={null}
+    pageType="onDemandRadio"
+    pathname="/indonesia/bbc_indonesian_radio/w13xtt0s"
+    title={onDemandRadioPageData.promo.headlines.headline}
+    lang={onDemandRadioPageData.metadata.language}
+    description={onDemandRadioPageData.promo.media.synopses.short}
+    openGraphType="website"
+  />,
+);
+
+shouldMatchSnapshot(
+  'should match for on demand tv',
+  <MetadataWithContext
+    service="pashto"
+    bbcOrigin={dotComOrigin}
+    platform="canonical"
+    id={null}
+    pageType="onDemandTV"
+    pathname="/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf"
+    title={onDemandTVPageData.promo.headlines.headline}
+    lang={onDemandTVPageData.metadata.language}
+    description={onDemandTVPageData.promo.media.synopses.short}
     openGraphType="website"
   />,
 );

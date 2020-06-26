@@ -27,7 +27,7 @@ const Page = ({ pageData, service, isAmp = false }) => (
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
           isAmp={isAmp}
-          pageType="media"
+          pageType="onDemandRadio"
           pathname="/pathname"
           service={service}
           statusCode={200}

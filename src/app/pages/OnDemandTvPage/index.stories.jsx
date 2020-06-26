@@ -43,7 +43,7 @@ storiesOf('Pages|OnDemand TV Page', module)
         isAmp={false}
         loading={false}
         error=""
-        pageType="media"
+        pageType="onDemandTV"
       />
     </BrowserRouter>
   ));

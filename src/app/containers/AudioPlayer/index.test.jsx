@@ -20,7 +20,7 @@ const GenerateFixtureData = ({
     statusCode={200}
     platform={platform}
     id="foo"
-    pageType="media"
+    pageType="liveRadio"
     pathname="/pathname"
   >
     <ServiceContextProvider service="news">

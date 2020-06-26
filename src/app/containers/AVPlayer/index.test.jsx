@@ -22,7 +22,7 @@ const GenerateFixtureData = ({
     statusCode={200}
     platform={platform}
     id="foo"
-    pageType="media"
+    pageType="onDemandTV"
     pathname="/pathname"
   >
     <ServiceContextProvider service="news">

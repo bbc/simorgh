@@ -53,7 +53,7 @@ storiesOf('Pages|Radio Page', module)
         isAmp={false}
         loading={false}
         error=""
-        pageType="media"
+        pageType="liveRadio"
       />
     </BrowserRouter>
   ));

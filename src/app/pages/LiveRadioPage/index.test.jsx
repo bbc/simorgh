@@ -31,7 +31,7 @@ describe('Radio Page Main', () => {
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.com"
             isAmp={false}
-            pageType="media"
+            pageType="liveRadio"
             pathname="/pathname"
             service="amharic"
             statusCode={200}
@@ -57,7 +57,7 @@ describe('Radio Page Main', () => {
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.com"
             isAmp
-            pageType="media"
+            pageType="liveRadio"
             pathname="/pathname"
             service="amharic"
             statusCode={200}
