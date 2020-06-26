@@ -146,5 +146,19 @@ describe(`Header`, () => {
 
       expect(container.querySelector('header')).toHaveAttribute('lang', 'uk');
     });
+
+    it('should render a skip to content link with lang', async () => {
+      render(
+        HeaderContainerWithContext({
+          pageType: 'IDX',
+          service: 'ukrainian',
+          serviceContext: ukrainianServiceConfig,
+          variant: 'ru-UA',
+        }),
+      );
+
+      const skipLink = document.querySelector("a[href$='#content']");
+      expect(skipLink).toHaveAttribute('lang', 'ru-UA');
+    });
   });
 });
