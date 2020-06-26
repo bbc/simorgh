@@ -66,7 +66,6 @@ RequestContextProvider.propTypes = {
   pageType: oneOf([
     'article',
     'frontPage',
-    'media',
     'mostRead',
     'error',
     'MAP',
