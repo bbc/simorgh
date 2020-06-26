@@ -156,9 +156,6 @@ pipeline {
       }
     }
     stage ('Test') {
-      when {
-        expression { env.BRANCH_NAME != 'latest' }
-      }
       failFast true
       parallel {
         stage ('Test Development') {
