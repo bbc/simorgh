@@ -34,11 +34,14 @@ def runDevelopmentTests(){
 
 def runProductionTests(){
   sh 'make productionTests'
-  sh 'npm prune --production'
 }
 
 def runChromaticTests(){
   sh 'make testChromatic'
+}
+
+def pruneDevDependencies(){
+  sh 'npm prune --production'
 }
 
 def getCommitInfo = {
@@ -235,25 +238,8 @@ pipeline {
             }
           }
           steps {
-            // Testing
-            runProductionTests()
-
-            script {
-              getCommitInfo()
-              Simorgh.setBuildMetadataLegacy('simorgh', env.BUILD_NUMBER, appGitCommit) // Set Simorgh build metadata
-            }
-
-            // Moving files necessary for production to `pack` directory.
-            sh "./scripts/jenkinsProductionFiles.sh"
-
-            script {
-              sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
-            }
-
-            sh "rm -f ${packageName}"
-            zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
-            stash name: 'simorgh', includes: packageName
-            sh "rm -rf pack"
+            buildStaticAssets("test", "TEST")
+            buildStaticAssets("live", "LIVE")
           }
         }
         stage ('Build storybook dist') {
@@ -270,18 +256,6 @@ pipeline {
             stash name: 'simorgh_storybook', includes: storybookDist
           }
         }
-        stage ('Build Static Assets') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              reuseNode true
-            }
-          }
-          steps {
-            buildStaticAssets("test", "TEST")
-            buildStaticAssets("live", "LIVE")
-          }
-        }
       }
       post {
         always {
@@ -289,6 +263,37 @@ pipeline {
             stageName = env.STAGE_NAME
           }
         }
+      }
+    }
+    stage ('Prepare for Deployment') {
+      when {
+        expression { env.BRANCH_NAME == 'latest' }
+      }
+      agent {
+        docker {
+          image "${nodeImage}"
+          reuseNode true
+        }
+      }
+      steps {
+        script {
+          getCommitInfo()
+          Simorgh.setBuildMetadataLegacy('simorgh', env.BUILD_NUMBER, appGitCommit) // Set Simorgh build metadata
+        }
+
+        sh 'npm prune --production'
+
+        // Moving files necessary for production to `pack` directory.
+        sh "./scripts/jenkinsProductionFiles.sh"
+
+        script {
+          sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
+        }
+
+        sh "rm -f ${packageName}"
+        zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
+        stash name: 'simorgh', includes: packageName
+        sh "rm -rf pack"
       }
     }
     stage ('Run Pipeline') {
