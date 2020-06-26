@@ -18,7 +18,9 @@ const ATIAnalytics = ({ data }) => {
   const pageTypeHandlers = {
     article: buildArticleATIUrl,
     frontPage: buildIndexPageATIUrl,
-    media: buildTvRadioATIUrl,
+    liveRadio: buildTvRadioATIUrl,
+    onDemandRadio: buildTvRadioATIUrl,
+    onDemandTV: buildTvRadioATIUrl,
     mostRead: buildMostReadATIUrl,
     IDX: buildIndexPageATIUrl,
     MAP: () =>
