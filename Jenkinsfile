@@ -264,7 +264,7 @@ pipeline {
           Simorgh.setBuildMetadataLegacy('simorgh', env.BUILD_NUMBER, appGitCommit) // Set Simorgh build metadata
         }
 
-        sh 'npm prune --production'
+        pruneDevDependencies()
 
         // Moving files necessary for production to `pack` directory.
         sh "./scripts/jenkinsProductionFiles.sh"
