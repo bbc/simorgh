@@ -7,5 +7,5 @@ export default {
   exact: true,
   component: OnDemandTvPage,
   getInitialData,
-  pageType: 'media',
+  pageType: 'onDemandTV',
 };

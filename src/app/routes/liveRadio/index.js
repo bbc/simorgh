@@ -9,5 +9,5 @@ export default {
   exact: true,
   component: memo(LiveRadioPage, pageIsSame),
   getInitialData,
-  pageType: 'media',
+  pageType: 'liveRadio',
 };

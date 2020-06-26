@@ -7,5 +7,5 @@ export default {
   exact: true,
   component: OnDemandRadioPage,
   getInitialData,
-  pageType: 'media',
+  pageType: 'onDemandRadio',
 };
