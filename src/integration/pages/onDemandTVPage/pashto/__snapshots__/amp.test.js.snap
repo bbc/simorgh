@@ -122,43 +122,133 @@ exports[`AMP On Demand T V Page Footer I can click on the BBC branding and it wo
 
 exports[`AMP On Demand T V Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 1`] = `"BBC News, پښتو - /pashto"`;
+exports[`AMP On Demand T V Page Footer Link should match text and url 1`] = `
+Object {
+  "text": "BBC News, پښتو",
+  "url": "/pashto",
+}
+`;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 2`] = `"ولې تاسې پر بي بي سي خبرونو باور کولی شئ - https://www.bbc.com/pashto/institutional-49283007"`;
+exports[`AMP On Demand T V Page Footer Link should match text and url 2`] = `
+Object {
+  "text": "ولې تاسې پر بي بي سي خبرونو باور کولی شئ",
+  "url": "https://www.bbc.com/pashto/institutional-49283007",
+}
+`;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 3`] = `"د کارولو شرايط - https://www.bbc.com/pashto/institutional-37620701"`;
+exports[`AMP On Demand T V Page Footer Link should match text and url 3`] = `
+Object {
+  "text": "د کارولو شرايط",
+  "url": "https://www.bbc.com/pashto/institutional-37620701",
+}
+`;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 4`] = `"د بي بي سي‌ په اړه - https://www.bbc.com/pashto/institutional-37622761"`;
+exports[`AMP On Demand T V Page Footer Link should match text and url 4`] = `
+Object {
+  "text": "د بي بي سي‌ په اړه",
+  "url": "https://www.bbc.com/pashto/institutional-37622761",
+}
+`;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 5`] = `"د محرميت تگلاره - https://www.bbc.com/pashto/institutional-37622762"`;
+exports[`AMP On Demand T V Page Footer Link should match text and url 5`] = `
+Object {
+  "text": "د محرميت تگلاره",
+  "url": "https://www.bbc.com/pashto/institutional-37622762",
+}
+`;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 6`] = `"Cookies - https://www.bbc.com/usingthebbc/cookies/"`;
+exports[`AMP On Demand T V Page Footer Link should match text and url 6`] = `
+Object {
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 7`] = `"زموږ سره اړیکي - https://www.bbc.co.uk/pashto/institutional-37622768"`;
+exports[`AMP On Demand T V Page Footer Link should match text and url 7`] = `
+Object {
+  "text": "زموږ سره اړیکي",
+  "url": "https://www.bbc.co.uk/pashto/institutional-37622768",
+}
+`;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`AMP On Demand T V Page Footer Link should match text and url 8`] = `
+Object {
+  "text": "AdChoices / Do Not Sell My Info",
+  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+}
+`;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 9`] = `"د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره. - https://www.bbc.co.uk/help/web/links/"`;
+exports[`AMP On Demand T V Page Footer Link should match text and url 9`] = `
+Object {
+  "text": "د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.",
+  "url": "https://www.bbc.co.uk/help/web/links/",
+}
+`;
 
 exports[`AMP On Demand T V Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
-exports[`AMP On Demand T V Page Header Navigation link should match text and url 1`] = `"کور پاڼه - /pashto"`;
+exports[`AMP On Demand T V Page Header Navigation link should match text and url 1`] = `
+Object {
+  "text": "کور پاڼه",
+  "url": "/pashto",
+}
+`;
 
-exports[`AMP On Demand T V Page Header Navigation link should match text and url 2`] = `"افغانستان - /pashto/afghanistan"`;
+exports[`AMP On Demand T V Page Header Navigation link should match text and url 2`] = `
+Object {
+  "text": "افغانستان",
+  "url": "/pashto/afghanistan",
+}
+`;
 
-exports[`AMP On Demand T V Page Header Navigation link should match text and url 3`] = `"پښتونخوا - /pashto/pakhtunkhwa"`;
+exports[`AMP On Demand T V Page Header Navigation link should match text and url 3`] = `
+Object {
+  "text": "پښتونخوا",
+  "url": "/pashto/pakhtunkhwa",
+}
+`;
 
-exports[`AMP On Demand T V Page Header Navigation link should match text and url 4`] = `"نړۍ - /pashto/world"`;
+exports[`AMP On Demand T V Page Header Navigation link should match text and url 4`] = `
+Object {
+  "text": "نړۍ",
+  "url": "/pashto/world",
+}
+`;
 
-exports[`AMP On Demand T V Page Header Navigation link should match text and url 5`] = `"ښځې - /pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
+exports[`AMP On Demand T V Page Header Navigation link should match text and url 5`] = `
+Object {
+  "text": "ښځې",
+  "url": "/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+}
+`;
 
-exports[`AMP On Demand T V Page Header Navigation link should match text and url 6`] = `"لوبې - /pashto/sport"`;
+exports[`AMP On Demand T V Page Header Navigation link should match text and url 6`] = `
+Object {
+  "text": "لوبې",
+  "url": "/pashto/sport",
+}
+`;
 
-exports[`AMP On Demand T V Page Header Navigation link should match text and url 7`] = `"ويډيوګانې - /pashto/media/video"`;
+exports[`AMP On Demand T V Page Header Navigation link should match text and url 7`] = `
+Object {
+  "text": "ويډيوګانې",
+  "url": "/pashto/media/video",
+}
+`;
 
-exports[`AMP On Demand T V Page Header Navigation link should match text and url 8`] = `"ځانګړې پاڼې - /pashto/in_depth"`;
+exports[`AMP On Demand T V Page Header Navigation link should match text and url 8`] = `
+Object {
+  "text": "ځانګړې پاڼې",
+  "url": "/pashto/in_depth",
+}
+`;
 
-exports[`AMP On Demand T V Page Header Navigation link should match text and url 9`] = `"کالم - /pashto/columns"`;
+exports[`AMP On Demand T V Page Header Navigation link should match text and url 9`] = `
+Object {
+  "text": "کالم",
+  "url": "/pashto/columns",
+}
+`;
 
 exports[`AMP On Demand T V Page I can see the brand title 1`] = `"نړۍ دا وخت"`;
 
