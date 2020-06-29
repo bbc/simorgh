@@ -1,4 +1,5 @@
 import Cookie from 'js-cookie';
+import { setWindowValue, resetWindowValue } from '@bbc/psammead-test-helpers';
 import setCookie, { getCookieDomain } from '.';
 
 const cookieSpy = jest.spyOn(Cookie, 'set');
@@ -10,17 +11,19 @@ describe('setCookie Assertion Tests', () => {
 
   describe('Setting cookie with domain and duration', () => {
     it('should return cookie with domain and expiration of 1 year', () => {
-      setCookie('test', '111');
+      setCookie({ name: 'test', value: '111' });
       expect(cookieSpy).toHaveBeenCalledWith('test', '111', {
         domain: '.bbc.com',
         expires: 365,
+        sameSite: 'Lax',
       });
     });
     it('should return cookie with domain and expiration of 1 week', () => {
-      setCookie('test', '111', 7);
+      setCookie({ name: 'test', value: '111', expires: 7 });
       expect(cookieSpy).toHaveBeenCalledWith('test', '111', {
         domain: '.bbc.com',
         expires: 7,
+        sameSite: 'Lax',
       });
     });
   });
@@ -39,6 +42,29 @@ describe('setCookie Assertion Tests', () => {
     });
     it('should return exactly the same domain given if the domain is anything else', () => {
       expect(getCookieDomain('localhost')).toBe('localhost');
+    });
+  });
+
+  describe('Setting cookie with sameSite and secure attribute when https', () => {
+    const windowLocation = window.location;
+
+    afterEach(() => {
+      resetWindowValue('location', windowLocation);
+    });
+
+    it('should return cookie with domain, expiration of 1 year, sameSite=None and secure=true', () => {
+      setWindowValue('location', {
+        protocol: 'https:',
+      });
+
+      setCookie({ name: 'test', value: '111', sameSite: 'None' });
+
+      expect(cookieSpy).toHaveBeenCalledWith('test', '111', {
+        domain: '.bbc.com',
+        expires: 365,
+        sameSite: 'None',
+        secure: true,
+      });
     });
   });
 });
