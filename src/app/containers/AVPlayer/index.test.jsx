@@ -40,54 +40,44 @@ const GenerateFixtureData = ({
   </RequestContextProvider>
 );
 
-const AVPlayerCanonical = (
+const AVPlayerCanonicalTV = (
   <GenerateFixtureData
     platform="canonical"
     embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live"
   />
 );
 
-const AVPlayerAMP = (
+const AVPlayerAMPRadio = (
   <GenerateFixtureData
     platform="amp"
-    embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live"
+    embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om/amp"
+    title="Audio Player"
+    type="audio"
+    iframeTitle="Audio player"
+    skin="audio"
   />
 );
 
-describe('VideoPlayer', () => {
+describe('AVPlayer for TV', () => {
   shouldMatchSnapshot(
     'should match snapshot for canonical AVPlayer',
-    AVPlayerCanonical,
+    AVPlayerCanonicalTV,
   );
 
-  shouldMatchSnapshot('should match snapshot for AMP AVPlayer', AVPlayerAMP);
-
   it('should render the iframe on canonical', () => {
-    render(AVPlayerCanonical);
+    render(AVPlayerCanonicalTV);
 
     expect(document.querySelector('iframe')).toBeInTheDocument();
   });
 
-  it('should render the iframe on AMP', () => {
-    render(AVPlayerAMP);
-
-    expect(document.querySelector('amp-iframe')).toBeInTheDocument();
-  });
-
   it('should contain the noscript tag for no-JS scenarios on canonical', () => {
-    render(AVPlayerCanonical);
+    render(AVPlayerCanonicalTV);
 
     expect(document.querySelector('noscript')).toBeInTheDocument();
   });
 
-  it('should contain the noscript tag for no-JS scenarios on AMP', () => {
-    render(AVPlayerAMP);
-
-    expect(document.querySelector('noscript')).toBeInTheDocument();
-  });
-
-  it('should contain the translated iframe title on canonical', () => {
-    const { container } = render(AVPlayerCanonical);
+  it('should contain the iframe title on canonical', () => {
+    const { container } = render(AVPlayerCanonicalTV);
 
     const AVPlayerIframeTitle = container
       .querySelector('iframe')
@@ -95,14 +85,33 @@ describe('VideoPlayer', () => {
 
     expect(AVPlayerIframeTitle).toEqual('ویډیو پلیئر');
   });
+});
 
-  it('should contain the translated iframe title on AMP', () => {
-    const { container } = render(AVPlayerAMP);
+describe('AVPlayer for Radio', () => {
+  shouldMatchSnapshot(
+    'should match snapshot for AMP AVPlayer',
+    AVPlayerAMPRadio,
+  );
+
+  it('should render the iframe on AMP', () => {
+    render(AVPlayerAMPRadio);
+
+    expect(document.querySelector('amp-iframe')).toBeInTheDocument();
+  });
+
+  it('should contain the noscript tag for no-JS scenarios on AMP', () => {
+    render(AVPlayerAMPRadio);
+
+    expect(document.querySelector('noscript')).toBeInTheDocument();
+  });
+
+  it('should contain the iframe title on AMP', () => {
+    const { container } = render(AVPlayerAMPRadio);
 
     const AVPlayerIframeTitle = container
       .querySelector('amp-iframe')
       .getAttribute('title');
 
-    expect(AVPlayerIframeTitle).toEqual('ویډیو پلیئر');
+    expect(AVPlayerIframeTitle).toEqual('Audio player');
   });
 });
