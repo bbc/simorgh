@@ -7144,7 +7144,29 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandRadio: {
+        environments: {
+          live: {
+            paths: [
+              '/zhongwen/simp/bbc_cantonese_radio/w172xf3rxfx25cj', // Brand
+            ],
+            enabled: false,
+          },
+          test: {
+            paths: [
+              '/zhongwen/simp/bbc_cantonese_radio/w172xf3rxfx25cj', // Brand
+            ],
+            enabled: false,
+          },
+          local: {
+            paths: [
+              '/zhongwen/simp/bbc_cantonese_radio/w172xf3r5x8hw4v', // Brand
+            ],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -7284,7 +7306,29 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandRadio: {
+        environments: {
+          live: {
+            paths: [
+              '/zhongwen/trad/bbc_cantonese_radio/w172xf3rxfx25cj', // Brand
+            ],
+            enabled: false,
+          },
+          test: {
+            paths: [
+              '/zhongwen/trad/bbc_cantonese_radio/w172xf3rxfx25cj', // Brand
+            ],
+            enabled: false,
+          },
+          local: {
+            paths: [
+              '/zhongwen/trad/bbc_cantonese_radio/w172xf3r5x8hw4v', // Brand
+            ],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
