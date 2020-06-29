@@ -22,10 +22,11 @@ const ampPathname = 'https://www.bbc.com/service/foo.amp';
 
 describe('convertInclude', () => {
   const includesBaseUrl = 'https://foobar.com/includes';
+  const includesAmpBaseUrl = 'https://news.files.bbci.co.uk';
 
   beforeEach(() => {
     process.env.SIMORGH_INCLUDES_BASE_URL = includesBaseUrl;
-    process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = `https://news.files.bbci.co.uk`;
+    process.env.SIMORGH_INCLUDES_BASE_AMP_URL = includesAmpBaseUrl;
   });
 
   afterEach(() => {
@@ -33,7 +34,7 @@ describe('convertInclude', () => {
     loggerMock.error.mockClear();
     loggerMock.info.mockClear();
     delete process.env.SIMORGH_INCLUDES_BASE_URL;
-    delete process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN;
+    delete process.env.SIMORGH_INCLUDES_BASE_AMP_URL;
   });
 
   it('should fetch and convert an include block to an idt1 block', async () => {
