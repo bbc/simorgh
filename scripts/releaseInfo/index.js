@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 const fs = require('fs');
 const path = require('path');
-const allServices = require('../cypress/support/config/settings');
-const simorghLaunchDates = require('./simorghLaunchDates');
+const allServices = require('../../cypress/support/config/settings');
+const launchDates = require('./launchDates');
 
 const getUrl = (pageType, env) => {
   let url;
@@ -72,7 +72,7 @@ const generateLinks = (service, env, domain) => {
 
 const generateLaunchDates = service => {
   const output = [];
-  const serviceLaunch = simorghLaunchDates[service];
+  const serviceLaunch = launchDates[service];
 
   if (serviceLaunch.frontPage && serviceLaunch.frontPage !== '') {
     output.push(`__Home__: ${serviceLaunch.frontPage}`);
@@ -106,14 +106,14 @@ const generateLaunchDates = service => {
 };
 
 const scriptDir = path.resolve(__dirname);
-const SimorghPages = `${scriptDir}/../docs/Simorgh-Release-Info.md`;
-const stream = fs.createWriteStream(SimorghPages);
+const SimorghReleaseInfo = `${scriptDir}/../../docs/Simorgh-Release-Info.md`;
+const stream = fs.createWriteStream(SimorghReleaseInfo);
 
 stream.once('open', () => {
   stream.write(
-    '<!--Please update the service launch date in scripts/simorghLaunchDates.js\n' +
-      'This table can then be generated using the following command: `node scripts/simorghPages.js`\n' +
-      'Remember to commit and push the changes to both simorghLaunchDates.js and Simorgh-Release-Info.md -->\n',
+    '<!--Please update the service launch date in scripts/releaseInfo/launchDates.js\n' +
+      'This table can then be generated using the following command: `node scripts/releaseInfo`\n' +
+      'Remember to commit and push the changes to both launchDates.js and Simorgh-Release-Info.md -->\n',
   );
 
   stream.write(
@@ -136,5 +136,5 @@ stream.once('open', () => {
 
     stream.write(`| ${items.join(' | ')} |\n`);
   });
-  console.log(`Completed writing file ${SimorghPages}`);
+  console.log(`Completed writing file ${SimorghReleaseInfo}`);
 });
