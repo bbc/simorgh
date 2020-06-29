@@ -94,7 +94,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
   };
 
   return (
-    <IndexPageContainer>
+    <>
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
@@ -105,15 +105,17 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <LinkedData type="WebPage" seoTitle={header} />
       <IndexMain data-e2e="most-read">
-        <MostReadContainer
-          mostReadEndpointOverride={mostReadEndpointOverride}
-          wrapper={MostReadWrapper}
-          columnLayout="oneColumn"
-          initialData={pageData}
-          serverRenderOnAmp
-        />
+        <IndexPageContainer>
+          <MostReadContainer
+            mostReadEndpointOverride={mostReadEndpointOverride}
+            wrapper={MostReadWrapper}
+            columnLayout="oneColumn"
+            initialData={pageData}
+            serverRenderOnAmp
+          />
+        </IndexPageContainer>
       </IndexMain>
-    </IndexPageContainer>
+    </>
   );
 };
 MostReadPage.propTypes = {
