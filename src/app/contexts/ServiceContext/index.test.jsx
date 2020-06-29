@@ -98,7 +98,7 @@ describe('ServiceContextProvider', () => {
         service: 'ukrainian',
         variant: undefined,
         pathname: '/ukrainian/news-53134657',
-        expectedTranslation: 'Top Stories',
+        expectedTranslation: 'Головне',
         assertionValue: 'topStoriesTitle',
       },
     ].forEach(
