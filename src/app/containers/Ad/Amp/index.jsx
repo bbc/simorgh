@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
-import AmpGeo from '@bbc/psammead-amp-geo';
 import {
   AMP_ACCESS_JS,
   AMP_ADS_JS,
@@ -126,7 +125,6 @@ const AmpAd = () => {
 
   return (
     <FullWidthWrapper>
-      <AmpGeo />
       <StyledWrapper>
         <Helmet>
           {AMP_ADS_JS}

@@ -52,17 +52,6 @@ describe('AMP Ads', () => {
       expect(ampAd.length).toBe(2);
     });
 
-    it('should render an amp-geo component', () => {
-      const { container } = render(adWithContext());
-      const ampGeo = container.querySelectorAll('amp-geo');
-      const ampGeoScript = container.querySelectorAll(
-        'script[type="application/json"]',
-      );
-
-      expect(ampGeo.length).toBe(1);
-      expect(ampGeoScript.length).toBe(1);
-    });
-
     it('should display ad with values for all of the needed attributes', () => {
       const { container } = render(adWithContext());
 
