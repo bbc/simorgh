@@ -35,7 +35,7 @@ const HeaderContainer = () => {
   // a Ukrainian text for the header and footer but a Russian text for the main element.
   // However, the skip to content link will also be in Russian, so we need to pass the `ru-UA` lang code to it.
   const headerLangAttribute = headerFooterLang && { lang: headerFooterLang };
-  const skipLinkLangAttribute = service === 'ukrainian' && { lang };
+  const skipLinkLangAttribute = headerLangAttribute && { lang };
 
   const skipLink = !isOperaMini && (
     <SkipLink
