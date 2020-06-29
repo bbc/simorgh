@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AVPlayer should match snapshot for AMP AVPlayer 1`] = `
+exports[`AVPlayer for Radio should match snapshot for AMP AVPlayer 1`] = `
 .c0 {
   padding-top: 56.25%;
   position: relative;
@@ -50,7 +50,7 @@ exports[`AVPlayer should match snapshot for AMP AVPlayer 1`] = `
 </html>
 `;
 
-exports[`AVPlayer should match snapshot for canonical AVPlayer 1`] = `
+exports[`AVPlayer for TV should match snapshot for canonical AVPlayer 1`] = `
 .c0 {
   padding-top: 56.25%;
   position: relative;
