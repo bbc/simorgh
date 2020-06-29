@@ -227,7 +227,6 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 .c14 {
   height: 165px;
   position: relative;
-  overflow: hidden;
   margin-bottom: 1rem;
 }
 
@@ -747,7 +746,6 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 .c15 {
   height: 165px;
   position: relative;
-  overflow: hidden;
   margin-bottom: 1rem;
 }
 
