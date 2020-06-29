@@ -99,7 +99,7 @@ const convertInclude = async (includeBlock, ...restParams) => {
   if (classification === 'vj-supports-amp') {
     ampMetadata = ampMetadataExtractor(href);
     logger.info(INCLUDE_IFRAME_REQUEST_RECEIVED, {
-      url: ampMetadata.ampSrc,
+      url: ampMetadata.src,
     });
   }
   if (!isAmp) {

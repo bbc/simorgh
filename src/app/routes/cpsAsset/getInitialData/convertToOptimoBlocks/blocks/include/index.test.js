@@ -425,7 +425,7 @@ describe('convertInclude', () => {
     });
   });
 
-  it('should return ampSrc if AMP is supported and include is a VJ on AMP', async () => {
+  it('should return src if AMP is supported and include is a VJ on AMP', async () => {
     fetch.mockResponse(() => Promise.resolve('No fetch call'));
     const includeSupportingAmp =
       '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png';
@@ -442,11 +442,11 @@ describe('convertInclude', () => {
         href: includeSupportingAmp,
         type: 'vj',
         ampMetadata: {
-          ampImage:
+          image:
             'https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
-          ampImageHeight: '360',
-          ampImageWidth: '640',
-          ampSrc:
+          imageHeight: '360',
+          imageWidth: '640',
+          src:
             'https://news.files.bbci.co.uk/include/newsspec/21841-green-diet/gahuza/app/amp?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
         },
       },

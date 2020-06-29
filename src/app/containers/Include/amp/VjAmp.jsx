@@ -7,27 +7,17 @@ const IncludeGrid = styled(GridItemConstrainedMedium)`
   display: grid;
 `;
 
-const VjAmp = ({
-  ampMetadata: { ampImageWidth, ampImageHeight, ampImage, ampSrc },
-}) => {
+const VjAmp = ({ ampMetadata: { imageWidth, imageHeight, image, src } }) => {
   return (
     <IncludeGrid>
       <amp-iframe
-        width={ampImageWidth}
-        height={ampImageHeight}
+        width={imageWidth}
+        height={imageHeight}
         layout="responsive"
         sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-forms"
-        resizable
-        src={ampSrc}
+        src={src}
       >
-        <div overflow="visible" />
-        <amp-img
-          width={ampImageWidth}
-          height={ampImageHeight}
-          layout="fill"
-          placeholder
-          src={ampImage}
-        />
+        <amp-img layout="fill" src={image} placeholder />
       </amp-iframe>
     </IncludeGrid>
   );
@@ -35,10 +25,10 @@ const VjAmp = ({
 
 VjAmp.propTypes = {
   ampMetadata: shape({
-    ampImageWidth: string,
-    ampImageHeight: string,
-    ampImage: string,
-    ampSrc: string,
+    imageWidth: string,
+    imageHeight: string,
+    image: string,
+    src: string,
   }).isRequired,
 };
 

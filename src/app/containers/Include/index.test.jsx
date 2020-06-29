@@ -163,12 +163,12 @@ describe('IncludeContainer', () => {
 
   it('should render a VJ include on an Amp page with toggles enabled', () => {
     const vjProps = {
-      ampSrc:
+      src:
         'https://news.files.bbci.co.uk/include/newsspec/21841-green-diet/gahuza/app/amp?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
-      ampImage:
+      image:
         'https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_cv_table_ws_640_3x-nc_v0mmu.png',
-      ampImageHeight: '360',
-      ampImageWidth: '640',
+      imageHeight: '360',
+      imageWidth: '640',
       href:
         '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
       type: 'vj',
