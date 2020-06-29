@@ -27,7 +27,7 @@ describe('getDataSlot', () => {
     process.env.SIMORGH_APP_ENV = 'local';
 
     const actual = getDataSlot(service);
-    const expected = '/4817/bbcworldservice.test.site.pidgin';
+    const expected = '/4817/bbccom.test.site.amp.news';
     expect(actual).toEqual(expected);
   });
 
@@ -35,7 +35,7 @@ describe('getDataSlot', () => {
     process.env.SIMORGH_APP_ENV = 'test';
 
     const actual = getDataSlot(service);
-    const expected = '/4817/bbcworldservice.test.site.pidgin';
+    const expected = '/4817/bbccom.test.site.amp.news';
     expect(actual).toEqual(expected);
   });
 
