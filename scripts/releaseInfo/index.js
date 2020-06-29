@@ -30,6 +30,7 @@ const generateLinks = (service, env, domain) => {
     photoGalleryPage,
     storyPage,
     mostReadPage,
+    onDemandRadio,
   } = allServices()[service].pageTypes;
 
   const frontPageURL = getUrl(frontPage, env);
@@ -67,6 +68,11 @@ const generateLinks = (service, env, domain) => {
     output.push(`[mostRead](${domain}${mostReadURL})`);
   }
 
+  const onDemandRadioURL = getUrl(onDemandRadio, env);
+  if (onDemandRadioURL) {
+    output.push(`[onDemandRadio](${domain}${onDemandRadioURL})`);
+  }
+
   return output.join('<br/>');
 };
 
@@ -100,6 +106,10 @@ const generateLaunchDates = service => {
 
   if (serviceLaunch.mostReadPage && serviceLaunch.mostReadPage !== '') {
     output.push(`__Most Read__: ${serviceLaunch.mostReadPage}`);
+  }
+
+  if (serviceLaunch.onDemandRadio && serviceLaunch.onDemandRadio !== '') {
+    output.push(`__On Demand Radio__: ${serviceLaunch.onDemandRadio}`);
   }
 
   return output.join('<br/>');
