@@ -5,12 +5,11 @@ const includeSupportingAmp =
 
 describe('Amp Metadata Extractor', () => {
   beforeEach(() => {
-    process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN =
-      'https://news.files.bbci.co.uk';
+    process.env.SIMORGH_INCLUDES_BASE_AMP_URL = 'https://news.files.bbci.co.uk';
   });
 
   afterEach(() => {
-    delete process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN;
+    delete process.env.SIMORGH_INCLUDES_BASE_AMP_URL;
   });
   it('should return a url with amp inserted between the url path and query parameters', () => {
     const actual = ampMetadataExtractor(includeSupportingAmp).ampSrc;
