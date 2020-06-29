@@ -40,32 +40,14 @@ const GenerateFixtureData = ({
   </RequestContextProvider>
 );
 
-const VideoPlayerCanonical = (
+const AVPlayerCanonical = (
   <GenerateFixtureData
     platform="canonical"
     embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live"
   />
 );
 
-const VideoPlayerAMP = (
-  <GenerateFixtureData
-    platform="amp"
-    embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live"
-  />
-);
-
-const AudioPlayerCanonical = (
-  <GenerateFixtureData
-    platform="canonical"
-    embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om"
-    title="Audio Player"
-    type="audio"
-    iframeTitle="Audio player"
-    skin="audio"
-  />
-);
-
-const AudioPlayerAMP = (
+const AVPlayerAMP = (
   <GenerateFixtureData
     platform="amp"
     embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om/amp"
@@ -76,108 +58,52 @@ const AudioPlayerAMP = (
   />
 );
 
-describe('AVPlayer for TV', () => {
+describe('AVPlayer', () => {
   shouldMatchSnapshot(
     'should match snapshot for canonical AVPlayer',
-    VideoPlayerCanonical,
+    AVPlayerCanonical,
   );
 
-  shouldMatchSnapshot('should match snapshot for AMP AVPlayer', VideoPlayerAMP);
-
   it('should render the iframe on canonical', () => {
-    render(VideoPlayerCanonical);
+    render(AVPlayerCanonical);
 
     expect(document.querySelector('iframe')).toBeInTheDocument();
   });
 
-  it('should render the iframe on AMP', () => {
-    render(VideoPlayerAMP);
-
-    expect(document.querySelector('amp-iframe')).toBeInTheDocument();
-  });
-
   it('should contain the noscript tag for no-JS scenarios on canonical', () => {
-    render(VideoPlayerCanonical);
-
-    expect(document.querySelector('noscript')).toBeInTheDocument();
-  });
-
-  it('should contain the noscript tag for no-JS scenarios on AMP', () => {
-    render(VideoPlayerAMP);
+    render(AVPlayerCanonical);
 
     expect(document.querySelector('noscript')).toBeInTheDocument();
   });
 
   it('should contain the iframe title on canonical', () => {
-    const { container } = render(VideoPlayerCanonical);
+    const { container } = render(AVPlayerCanonical);
 
     const AVPlayerIframeTitle = container
       .querySelector('iframe')
-      .getAttribute('title');
-
-    expect(AVPlayerIframeTitle).toEqual('ویډیو پلیئر');
-  });
-
-  it('should contain the iframe title on AMP', () => {
-    const { container } = render(VideoPlayerAMP);
-
-    const AVPlayerIframeTitle = container
-      .querySelector('amp-iframe')
       .getAttribute('title');
 
     expect(AVPlayerIframeTitle).toEqual('ویډیو پلیئر');
   });
 });
 
-describe('AVPlayer for Radio', () => {
-  shouldMatchSnapshot(
-    'should match snapshot for canonical AVPlayer',
-    AudioPlayerCanonical,
-  );
-
-  shouldMatchSnapshot('should match snapshot for AMP AVPlayer', AudioPlayerAMP);
-
-  it('should render the iframe on canonical', () => {
-    render(AudioPlayerCanonical);
-
-    expect(document.querySelector('iframe')).toBeInTheDocument();
-  });
-  it('should render the iframe on canonical', () => {
-    render(AudioPlayerCanonical);
-
-    expect(document.querySelector('iframe')).toBeInTheDocument();
-  });
+describe('AVPlayer', () => {
+  shouldMatchSnapshot('should match snapshot for AMP AVPlayer', AVPlayerAMP);
 
   it('should render the iframe on AMP', () => {
-    render(AudioPlayerAMP);
+    render(AVPlayerAMP);
 
     expect(document.querySelector('amp-iframe')).toBeInTheDocument();
   });
 
-  it('should contain the noscript tag for no-JS scenarios on canonical', () => {
-    render(AudioPlayerCanonical);
-
-    expect(document.querySelector('noscript')).toBeInTheDocument();
-  });
-
   it('should contain the noscript tag for no-JS scenarios on AMP', () => {
-    render(AudioPlayerAMP);
+    render(AVPlayerAMP);
 
     expect(document.querySelector('noscript')).toBeInTheDocument();
-  });
-
-  it('should contain the iframe title on canonical', () => {
-    const { container } = render(AudioPlayerCanonical);
-
-    const AVPlayerIframeTitle = container
-      .querySelector('iframe')
-      .getAttribute('title');
-
-    expect(AVPlayerIframeTitle).toEqual('Audio player');
   });
 
   it('should contain the iframe title on AMP', () => {
-    const { container } = render(AudioPlayerAMP);
+    const { container } = render(AVPlayerAMP);
 
     const AVPlayerIframeTitle = container
       .querySelector('amp-iframe')
