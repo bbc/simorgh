@@ -1665,8 +1665,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/hausa/bbc_hausa_radio/programmes/p030s4mh', // Brand
+              '/hausa/bbc_hausa_radio/w3ct0hlt', // Episode
+            ],
+            enabled: true,
           },
           local: {
             paths: ['/hausa/bbc_hausa_radio/w3cszrwm'],
