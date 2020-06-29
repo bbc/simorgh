@@ -122,41 +122,126 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page Footer I can click on the BBC
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. ВВС не несе відповідальності за контент інших сайтів. Ознайомтеся з нашими правилами зовнішніх посилань."`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 1`] = `"BBC News, Україна - /ukrainian"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 1`] = `
+Object {
+  "text": "BBC News, Україна",
+  "url": "/ukrainian",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 2`] = `"Чому BBC заслуговує на довіру - https://www.bbc.com/ukrainian/institutional-50170368"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 2`] = `
+Object {
+  "text": "Чому BBC заслуговує на довіру",
+  "url": "https://www.bbc.com/ukrainian/institutional-50170368",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 3`] = `"Правила користування - https://www.bbc.com/ukrainian/institutional-38144387"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 3`] = `
+Object {
+  "text": "Правила користування",
+  "url": "https://www.bbc.com/ukrainian/institutional-38144387",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 4`] = `"Особисті дані - https://www.bbc.com/ukrainian/institutional-38144827"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 4`] = `
+Object {
+  "text": "Особисті дані",
+  "url": "https://www.bbc.com/ukrainian/institutional-38144827",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 5`] = `"Cookies - https://www.bbc.com/usingthebbc/cookies/"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 5`] = `
+Object {
+  "text": "Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 6`] = `"Зв'язатися з BBC - https://www.bbc.com/ukrainian/institutional-38146278"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 6`] = `
+Object {
+  "text": "Зв'язатися з BBC",
+  "url": "https://www.bbc.com/ukrainian/institutional-38146278",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 7`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 7`] = `
+Object {
+  "text": "AdChoices / Do Not Sell My Info",
+  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 8`] = `"Ознайомтеся з нашими правилами зовнішніх посилань. - https://www.bbc.co.uk/help/web/links/"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 8`] = `
+Object {
+  "text": "Ознайомтеся з нашими правилами зовнішніх посилань.",
+  "url": "https://www.bbc.co.uk/help/web/links/",
+}
+`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header I can see the branding 1`] = `"BBC News, Україна"`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 1`] = `"Новини - /ukrainian"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 1`] = `
+Object {
+  "text": "Новини",
+  "url": "/ukrainian",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 2`] = `"Коронавірус - /ukrainian/52118881"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 2`] = `
+Object {
+  "text": "Коронавірус",
+  "url": "/ukrainian/52118881",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 3`] = `"Наука - /ukrainian/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 3`] = `
+Object {
+  "text": "Наука",
+  "url": "/ukrainian/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 4`] = `"Технології - /ukrainian/topics/31684f19-84d6-41f6-b033-7ae08098572a"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 4`] = `
+Object {
+  "text": "Технології",
+  "url": "/ukrainian/topics/31684f19-84d6-41f6-b033-7ae08098572a",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 5`] = `"Здоров’я - /ukrainian/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 5`] = `
+Object {
+  "text": "Здоров’я",
+  "url": "/ukrainian/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 6`] = `"Журнал - /ukrainian/magazine"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 6`] = `
+Object {
+  "text": "Журнал",
+  "url": "/ukrainian/magazine",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 7`] = `"Книга року ВВС - /ukrainian/features-50320117"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 7`] = `
+Object {
+  "text": "Книга року ВВС",
+  "url": "/ukrainian/features-50320117",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 8`] = `"Блоги - /ukrainian/blogs"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 8`] = `
+Object {
+  "text": "Блоги",
+  "url": "/ukrainian/blogs",
+}
+`;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 9`] = `"Поточна сторінка, РУС - /ukrainian/ukraine_in_russian"`;
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 9`] = `
+Object {
+  "text": "Поточна сторінка, РУС",
+  "url": "/ukrainian/ukraine_in_russian",
+}
+`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Main heading should match text 1`] = `"РУС"`;
 
