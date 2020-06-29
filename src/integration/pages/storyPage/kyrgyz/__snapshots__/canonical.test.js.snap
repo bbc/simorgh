@@ -8,41 +8,126 @@ exports[`Canonical Story Page Footer I can click on the BBC branding and it woul
 
 exports[`Canonical Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
 
-exports[`Canonical Story Page Footer Link should match text and url 1`] = `"BBC News, Кыргыз КызMATы - /kyrgyz"`;
+exports[`Canonical Story Page Footer Link should match text and url 1`] = `
+Object {
+  "text": "BBC News, Кыргыз КызMATы",
+  "url": "/kyrgyz",
+}
+`;
 
-exports[`Canonical Story Page Footer Link should match text and url 2`] = `"Эмнеге BBC News ишенсе болот? - https://www.bbc.com/kyrgyz/institutional-49677275"`;
+exports[`Canonical Story Page Footer Link should match text and url 2`] = `
+Object {
+  "text": "Эмнеге BBC News ишенсе болот?",
+  "url": "https://www.bbc.com/kyrgyz/institutional-49677275",
+}
+`;
 
-exports[`Canonical Story Page Footer Link should match text and url 3`] = `"Колдонуу эрежелери - https://www.bbc.com/kyrgyz/institutional-38157280"`;
+exports[`Canonical Story Page Footer Link should match text and url 3`] = `
+Object {
+  "text": "Колдонуу эрежелери",
+  "url": "https://www.bbc.com/kyrgyz/institutional-38157280",
+}
+`;
 
-exports[`Canonical Story Page Footer Link should match text and url 4`] = `"Би-Би-Си жөнүндө - https://www.bbc.com/kyrgyz/institutional-38157281"`;
+exports[`Canonical Story Page Footer Link should match text and url 4`] = `
+Object {
+  "text": "Би-Би-Си жөнүндө",
+  "url": "https://www.bbc.com/kyrgyz/institutional-38157281",
+}
+`;
 
-exports[`Canonical Story Page Footer Link should match text and url 5`] = `"Купуялык - https://www.bbc.com/kyrgyz/institutional-38157282"`;
+exports[`Canonical Story Page Footer Link should match text and url 5`] = `
+Object {
+  "text": "Купуялык",
+  "url": "https://www.bbc.com/kyrgyz/institutional-38157282",
+}
+`;
 
-exports[`Canonical Story Page Footer Link should match text and url 6`] = `"Cookies - https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html"`;
+exports[`Canonical Story Page Footer Link should match text and url 6`] = `
+Object {
+  "text": "Cookies",
+  "url": "https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html",
+}
+`;
 
-exports[`Canonical Story Page Footer Link should match text and url 7`] = `"Би-Би-Си менен байланышыңыз - https://www.bbc.com/kyrgyz/institutional-38157284"`;
+exports[`Canonical Story Page Footer Link should match text and url 7`] = `
+Object {
+  "text": "Би-Би-Си менен байланышыңыз",
+  "url": "https://www.bbc.com/kyrgyz/institutional-38157284",
+}
+`;
 
-exports[`Canonical Story Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`Canonical Story Page Footer Link should match text and url 8`] = `
+Object {
+  "text": "AdChoices / Do Not Sell My Info",
+  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+}
+`;
 
-exports[`Canonical Story Page Footer Link should match text and url 9`] = `"Башка интернет сайттардын мазмуну боюнча биздин позиция. - https://www.bbc.co.uk/help/web/links/"`;
+exports[`Canonical Story Page Footer Link should match text and url 9`] = `
+Object {
+  "text": "Башка интернет сайттардын мазмуну боюнча биздин позиция.",
+  "url": "https://www.bbc.co.uk/help/web/links/",
+}
+`;
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 1`] = `"Башталгыч бет - /kyrgyz"`;
+exports[`Canonical Story Page Header Navigation link should match text and url 1`] = `
+Object {
+  "text": "Башталгыч бет",
+  "url": "/kyrgyz",
+}
+`;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `"Кыргызстан - /kyrgyz/kyrgyzstan"`;
+exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `
+Object {
+  "text": "Кыргызстан",
+  "url": "/kyrgyz/kyrgyzstan",
+}
+`;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 3`] = `"Дүйнө - /kyrgyz/world"`;
+exports[`Canonical Story Page Header Navigation link should match text and url 3`] = `
+Object {
+  "text": "Дүйнө",
+  "url": "/kyrgyz/world",
+}
+`;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `"Сапар TV - /kyrgyz/sapartv"`;
+exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
+Object {
+  "text": "Сапар TV",
+  "url": "/kyrgyz/sapartv",
+}
+`;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `"Видео - /kyrgyz/media/video"`;
+exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
+Object {
+  "text": "Видео",
+  "url": "/kyrgyz/media/video",
+}
+`;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `"Маданият/Илим - /kyrgyz/entertainment"`;
+exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
+Object {
+  "text": "Маданият/Илим",
+  "url": "/kyrgyz/entertainment",
+}
+`;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `"Журнал - /kyrgyz/magazine"`;
+exports[`Canonical Story Page Header Navigation link should match text and url 7`] = `
+Object {
+  "text": "Журнал",
+  "url": "/kyrgyz/magazine",
+}
+`;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 8`] = `"Блог - /kyrgyz/blog"`;
+exports[`Canonical Story Page Header Navigation link should match text and url 8`] = `
+Object {
+  "text": "Блог",
+  "url": "/kyrgyz/blog",
+}
+`;
 
 exports[`Canonical Story Page Lead image I can see an image with a caption 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 

@@ -128,85 +128,275 @@ exports[`AMP Front Page Footer I can see the footer copyright and external linki
 
 exports[`AMP Front Page Footer I can see the footer copyright and external linking text 2`] = `"© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
-exports[`AMP Front Page Footer Link should match text and url 1`] = `"BBC News, عربي - /arabic"`;
+exports[`AMP Front Page Footer Link should match text and url 1`] = `
+Object {
+  "text": "BBC News, عربي",
+  "url": "/arabic",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 2`] = `"لماذا يمكنك الاعتماد على أخبار بي بي سي - https://www.bbc.com/arabic/institutional-49283069"`;
+exports[`AMP Front Page Footer Link should match text and url 2`] = `
+Object {
+  "text": "لماذا يمكنك الاعتماد على أخبار بي بي سي",
+  "url": "https://www.bbc.com/arabic/institutional-49283069",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 3`] = `"شروط الاستخدام - https://www.bbc.com/arabic/institutional-37731351"`;
+exports[`AMP Front Page Footer Link should match text and url 3`] = `
+Object {
+  "text": "شروط الاستخدام",
+  "url": "https://www.bbc.com/arabic/institutional-37731351",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 4`] = `"عن بي بي سي - https://www.bbc.com/arabic/institutional-37731352"`;
+exports[`AMP Front Page Footer Link should match text and url 4`] = `
+Object {
+  "text": "عن بي بي سي",
+  "url": "https://www.bbc.com/arabic/institutional-37731352",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 5`] = `"سياسة الخصوصية - https://www.bbc.com/arabic/institutional-37731353"`;
+exports[`AMP Front Page Footer Link should match text and url 5`] = `
+Object {
+  "text": "سياسة الخصوصية",
+  "url": "https://www.bbc.com/arabic/institutional-37731353",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 6`] = `"ملفات الارتباط Cookies - https://www.bbc.com/usingthebbc/cookies/"`;
+exports[`AMP Front Page Footer Link should match text and url 6`] = `
+Object {
+  "text": "ملفات الارتباط Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 7`] = `"اتصل بـ بي بي سي - https://www.bbc.com/arabic/institutional-37731355"`;
+exports[`AMP Front Page Footer Link should match text and url 7`] = `
+Object {
+  "text": "اتصل بـ بي بي سي",
+  "url": "https://www.bbc.com/arabic/institutional-37731355",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 8`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`AMP Front Page Footer Link should match text and url 8`] = `
+Object {
+  "text": "AdChoices / Do Not Sell My Info",
+  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 9`] = `"سياستنا بخصوص الروابط الخارجية. - https://www.bbc.co.uk/help/web/links/"`;
+exports[`AMP Front Page Footer Link should match text and url 9`] = `
+Object {
+  "text": "سياستنا بخصوص الروابط الخارجية.",
+  "url": "https://www.bbc.co.uk/help/web/links/",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 10`] = `"BBC News, عربي - /arabic"`;
+exports[`AMP Front Page Footer Link should match text and url 10`] = `
+Object {
+  "text": "BBC News, عربي",
+  "url": "/arabic",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 11`] = `"لماذا يمكنك الاعتماد على أخبار بي بي سي - https://www.bbc.com/arabic/institutional-49283069"`;
+exports[`AMP Front Page Footer Link should match text and url 11`] = `
+Object {
+  "text": "لماذا يمكنك الاعتماد على أخبار بي بي سي",
+  "url": "https://www.bbc.com/arabic/institutional-49283069",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 12`] = `"شروط الاستخدام - https://www.bbc.com/arabic/institutional-37731351"`;
+exports[`AMP Front Page Footer Link should match text and url 12`] = `
+Object {
+  "text": "شروط الاستخدام",
+  "url": "https://www.bbc.com/arabic/institutional-37731351",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 13`] = `"عن بي بي سي - https://www.bbc.com/arabic/institutional-37731352"`;
+exports[`AMP Front Page Footer Link should match text and url 13`] = `
+Object {
+  "text": "عن بي بي سي",
+  "url": "https://www.bbc.com/arabic/institutional-37731352",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 14`] = `"سياسة الخصوصية - https://www.bbc.com/arabic/institutional-37731353"`;
+exports[`AMP Front Page Footer Link should match text and url 14`] = `
+Object {
+  "text": "سياسة الخصوصية",
+  "url": "https://www.bbc.com/arabic/institutional-37731353",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 15`] = `"ملفات الارتباط Cookies - https://www.bbc.com/usingthebbc/cookies/"`;
+exports[`AMP Front Page Footer Link should match text and url 15`] = `
+Object {
+  "text": "ملفات الارتباط Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 16`] = `"اتصل بـ بي بي سي - https://www.bbc.com/arabic/institutional-37731355"`;
+exports[`AMP Front Page Footer Link should match text and url 16`] = `
+Object {
+  "text": "اتصل بـ بي بي سي",
+  "url": "https://www.bbc.com/arabic/institutional-37731355",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 17`] = `"AdChoices / Do Not Sell My Info - https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`AMP Front Page Footer Link should match text and url 17`] = `
+Object {
+  "text": "AdChoices / Do Not Sell My Info",
+  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+}
+`;
 
-exports[`AMP Front Page Footer Link should match text and url 18`] = `"سياستنا بخصوص الروابط الخارجية. - https://www.bbc.co.uk/help/web/links/"`;
+exports[`AMP Front Page Footer Link should match text and url 18`] = `
+Object {
+  "text": "سياستنا بخصوص الروابط الخارجية.",
+  "url": "https://www.bbc.co.uk/help/web/links/",
+}
+`;
 
 exports[`AMP Front Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
 exports[`AMP Front Page Header I can see the branding 2`] = `"BBC News, عربي"`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 1`] = `"الصفحة الحالية, رئيسية - /arabic"`;
+exports[`AMP Front Page Header Navigation link should match text and url 1`] = `
+Object {
+  "text": "الصفحة الحالية, رئيسية",
+  "url": "/arabic",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 2`] = `"شرق أوسط - /arabic/middleeast"`;
+exports[`AMP Front Page Header Navigation link should match text and url 2`] = `
+Object {
+  "text": "شرق أوسط",
+  "url": "/arabic/middleeast",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 3`] = `"عالم - /arabic/world"`;
+exports[`AMP Front Page Header Navigation link should match text and url 3`] = `
+Object {
+  "text": "عالم",
+  "url": "/arabic/world",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 4`] = `"علوم وتكنولوجيا - /arabic/scienceandtech"`;
+exports[`AMP Front Page Header Navigation link should match text and url 4`] = `
+Object {
+  "text": "علوم وتكنولوجيا",
+  "url": "/arabic/scienceandtech",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 5`] = `"صحة - /arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+exports[`AMP Front Page Header Navigation link should match text and url 5`] = `
+Object {
+  "text": "صحة",
+  "url": "/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 6`] = `"فيديو - /arabic/media"`;
+exports[`AMP Front Page Header Navigation link should match text and url 6`] = `
+Object {
+  "text": "فيديو",
+  "url": "/arabic/media",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 7`] = `"صحافة - /arabic/inthepress"`;
+exports[`AMP Front Page Header Navigation link should match text and url 7`] = `
+Object {
+  "text": "صحافة",
+  "url": "/arabic/inthepress",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 8`] = `"ترند - /arabic/trending"`;
+exports[`AMP Front Page Header Navigation link should match text and url 8`] = `
+Object {
+  "text": "ترند",
+  "url": "/arabic/trending",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 9`] = `"تحقيقات - /arabic/tv-and-radio-42414864"`;
+exports[`AMP Front Page Header Navigation link should match text and url 9`] = `
+Object {
+  "text": "تحقيقات",
+  "url": "/arabic/tv-and-radio-42414864",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 10`] = `"برامجنا - /arabic/tv-and-radio-37728883"`;
+exports[`AMP Front Page Header Navigation link should match text and url 10`] = `
+Object {
+  "text": "برامجنا",
+  "url": "/arabic/tv-and-radio-37728883",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 11`] = `"الصفحة الحالية, رئيسية - /arabic"`;
+exports[`AMP Front Page Header Navigation link should match text and url 11`] = `
+Object {
+  "text": "الصفحة الحالية, رئيسية",
+  "url": "/arabic",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 12`] = `"شرق أوسط - /arabic/middleeast"`;
+exports[`AMP Front Page Header Navigation link should match text and url 12`] = `
+Object {
+  "text": "شرق أوسط",
+  "url": "/arabic/middleeast",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 13`] = `"عالم - /arabic/world"`;
+exports[`AMP Front Page Header Navigation link should match text and url 13`] = `
+Object {
+  "text": "عالم",
+  "url": "/arabic/world",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 14`] = `"علوم وتكنولوجيا - /arabic/scienceandtech"`;
+exports[`AMP Front Page Header Navigation link should match text and url 14`] = `
+Object {
+  "text": "علوم وتكنولوجيا",
+  "url": "/arabic/scienceandtech",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 15`] = `"صحة - /arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+exports[`AMP Front Page Header Navigation link should match text and url 15`] = `
+Object {
+  "text": "صحة",
+  "url": "/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 16`] = `"فيديو - /arabic/media"`;
+exports[`AMP Front Page Header Navigation link should match text and url 16`] = `
+Object {
+  "text": "فيديو",
+  "url": "/arabic/media",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 17`] = `"صحافة - /arabic/inthepress"`;
+exports[`AMP Front Page Header Navigation link should match text and url 17`] = `
+Object {
+  "text": "صحافة",
+  "url": "/arabic/inthepress",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 18`] = `"ترند - /arabic/trending"`;
+exports[`AMP Front Page Header Navigation link should match text and url 18`] = `
+Object {
+  "text": "ترند",
+  "url": "/arabic/trending",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 19`] = `"تحقيقات - /arabic/tv-and-radio-42414864"`;
+exports[`AMP Front Page Header Navigation link should match text and url 19`] = `
+Object {
+  "text": "تحقيقات",
+  "url": "/arabic/tv-and-radio-42414864",
+}
+`;
 
-exports[`AMP Front Page Header Navigation link should match text and url 20`] = `"برامجنا - /arabic/tv-and-radio-37728883"`;
+exports[`AMP Front Page Header Navigation link should match text and url 20`] = `
+Object {
+  "text": "برامجنا",
+  "url": "/arabic/tv-and-radio-37728883",
+}
+`;
 
 exports[`AMP Front Page Index Alsos should match visually hidden text 1`] = `"المزيد حول هذه القصة"`;
 
