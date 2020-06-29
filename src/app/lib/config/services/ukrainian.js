@@ -181,7 +181,7 @@ export const service = {
           endTextVisuallyHidden: 'Кінець %provider_name% допису',
         },
       },
-      topStoriesTitle: 'Top Stories',
+      topStoriesTitle: 'Головне',
       featuresAnalysisTitle: 'Докладно',
     },
     brandSVG,
