@@ -86,7 +86,6 @@ describe('UserContext cookies', () => {
       expect(Cookie.set).toHaveBeenCalledWith('ckps_foo', 'bar', {
         domain: '.bbc.com',
         expires: 7,
-        sameSite: 'Lax',
       });
     });
 
@@ -110,7 +109,6 @@ describe('UserContext cookies', () => {
       expect(Cookie.set).toHaveBeenCalledWith('ckps_serbian', 'lat', {
         domain: '.bbc.com',
         expires: 7,
-        sameSite: 'Lax',
       });
     });
 
@@ -120,7 +118,6 @@ describe('UserContext cookies', () => {
       expect(Cookie.set).toHaveBeenCalledWith('ckps_chinese', 'simp', {
         domain: '.bbc.com',
         expires: 7,
-        sameSite: 'Lax',
       });
     });
 
@@ -130,7 +127,6 @@ describe('UserContext cookies', () => {
       expect(Cookie.set).toHaveBeenCalledWith('ckps_chinese', 'simp', {
         domain: '.bbc.com',
         expires: 7,
-        sameSite: 'Lax',
       });
     });
   });

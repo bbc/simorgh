@@ -423,6 +423,14 @@
       "five hours ago": "5 годин(и) тому",
       "exact date": "10 жовтня 2018",
       "exact date and time with timezone": "12 липня 2019, 12:55 GMT"
+    },
+    "ru-UA": {
+      "one minute ago": "минуту назад",
+      "five minutes ago": "5 минут назад",
+      "one hour ago": "час назад",
+      "five hours ago": "5 часов назад",
+      "exact date": "10 октября 2018",
+      "exact date and time with timezone": "12 июля 2019, 12:55 GMT"
     }
   },
   "urdu": {
