@@ -23,6 +23,7 @@ const WithContexts = Component => {
       previousPath,
       variant,
       timeOnServer,
+      canAdvertise,
     } = props;
 
     return (
@@ -39,6 +40,7 @@ const WithContexts = Component => {
             previousPath={previousPath}
             variant={variant}
             timeOnServer={timeOnServer}
+            canAdvertise={canAdvertise}
           >
             <EventContextProvider>
               <UserContextProvider>
@@ -63,6 +65,7 @@ const WithContexts = Component => {
     service: string.isRequired,
     variant: variantPropType,
     timeOnServer: number,
+    canAdvertise: bool.isRequired,
   };
 
   WithContextsContainer.defaultProps = {
