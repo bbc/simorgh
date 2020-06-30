@@ -33,8 +33,8 @@ describe('convertInclude', () => {
     fetch.resetMocks();
     loggerMock.error.mockClear();
     loggerMock.info.mockClear();
-    delete process.env.SIMORGH_INCLUDES_BASE_URL;
-    delete process.env.SIMORGH_INCLUDES_BASE_AMP_URL;
+    process.env.SIMORGH_INCLUDES_BASE_URL = includesBaseUrl;
+    process.env.SIMORGH_INCLUDES_BASE_AMP_URL = includesAmpBaseUrl;
   });
 
   it('should fetch and convert an include block to an idt1 block', async () => {

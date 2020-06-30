@@ -10,14 +10,13 @@ const ampMetadataExtractor = href => {
   const baseUrl = process.env.SIMORGH_INCLUDES_BASE_AMP_URL;
   const { pathname } = new Url(href);
   const queryString = new Url(href).query;
-  // TODO: use url-parse
-  const queryParams = new URLSearchParams(href);
+  const queryParams = new Url(href, {}, true).query;
 
   return {
     src: `${baseUrl + pathname}/amp${queryString}`,
-    imageWidth: queryParams.get('amp-image-width'),
-    imageHeight: queryParams.get('amp-image-height'),
-    image: queryParams.get('amp-image'),
+    imageWidth: queryParams['amp-image-width'],
+    imageHeight: queryParams['amp-image-height'],
+    image: queryParams['amp-image'],
   };
 };
 
