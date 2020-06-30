@@ -83,7 +83,7 @@ describe('Episode Availability', () => {
 
     describe('episode is expired', () => {
       describe('because versions is empty', () => {
-        const dataWithoutVersions = assocPath(
+        const episodeWithoutVersions = assocPath(
           ['content', 'blocks', 0, 'versions'],
           [],
           episodeData,
@@ -91,20 +91,47 @@ describe('Episode Availability', () => {
 
         it(`should return 'expired'`, () => {
           const episodeAvailability = getEpisodeAvailability(
-            dataWithoutVersions,
+            episodeWithoutVersions,
           );
           expect(episodeAvailability).toEqual('expired');
         });
 
         it(`should log expired message`, () => {
-          getEpisodeAvailability(dataWithoutVersions);
+          getEpisodeAvailability(episodeWithoutVersions);
           expect(loggerMock.info).toHaveBeenCalledWith(EPISODE_EXPIRED, {
             url: 'pashto/bbc_pashto_radio/w3ct0lz1',
           });
         });
       });
 
-      describe('because availableFrom and availableUntil are in the past', () => {});
+      describe('because availableFrom and availableUntil are in the past', () => {
+        const episodeAvailableFromSixtyMinutesAgo = assocPath(
+          ['content', 'blocks', '0', 'versions', '0', 'availableFrom'],
+          sixtyMinutesAgo,
+          episodeData,
+        );
+        const episodeAvailableFromSixtyMinutesAgoUntilOneMinuteAgo = assocPath(
+          ['content', 'blocks', '0', 'versions', '0', 'availableUntil'],
+          oneMinuteAgo,
+          episodeAvailableFromSixtyMinutesAgo,
+        );
+
+        it(`should return 'expired'`, () => {
+          const episodeAvailability = getEpisodeAvailability(
+            episodeAvailableFromSixtyMinutesAgoUntilOneMinuteAgo,
+          );
+          expect(episodeAvailability).toEqual('expired');
+        });
+
+        it(`should log expired message`, () => {
+          getEpisodeAvailability(
+            episodeAvailableFromSixtyMinutesAgoUntilOneMinuteAgo,
+          );
+          expect(loggerMock.info).toHaveBeenCalledWith(EPISODE_EXPIRED, {
+            url: 'pashto/bbc_pashto_radio/w3ct0lz1',
+          });
+        });
+      });
     });
 
     describe('episode is available', () => {
@@ -205,7 +232,7 @@ describe('Episode Availability', () => {
           expect(episodeAvailability).toEqual('not-yet-available');
         });
 
-        it('should log not available yet message', () => {
+        it('should log not yet available message', () => {
           getEpisodeAvailability(
             episodeWithAvailableFromAndAvailableUntilInFuture,
           );
