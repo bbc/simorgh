@@ -3,6 +3,7 @@ import { render, act } from '@testing-library/react';
 import fetchMock from 'fetch-mock';
 import dariRadioScheduleData from '#data/persian/bbc_dari_radio/schedule.json';
 import persianAfghanistanIdxData from '#data/persian/afghanistan';
+import ukraineInRussianIdxData from '#data/ukrainian/ukraine_in_russian';
 import persianMostReadData from '#data/persian/mostRead';
 import IdxPageWithContext from './testHelpers';
 
@@ -15,7 +16,7 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
 
 let container;
 
-describe('IdxPage', () => {
+describe('IdxPage - Persian', () => {
   beforeEach(async () => {
     fetchMock.restore();
     fetchMock.mock(mostReadEndpoint, persianMostReadData);
@@ -37,7 +38,38 @@ describe('IdxPage', () => {
   describe('Assertions', () => {
     it('should render idx page sections', async () => {
       const sections = container.querySelectorAll('section');
-      expect(sections).toHaveLength(4);
+      expect(sections.length).toBeGreaterThan(1);
+      sections.forEach(section => {
+        expect(section.getAttribute('role')).toEqual('region');
+      });
+    });
+  });
+});
+
+describe('IdxPage - Ukrainian', () => {
+  beforeEach(async () => {
+    fetchMock.restore();
+
+    await act(async () => {
+      container = render(
+        <IdxPageWithContext
+          service="ukrainian"
+          pageData={ukraineInRussianIdxData}
+        />,
+      ).container;
+    });
+  });
+
+  describe('Snapshots', () => {
+    it('should render a ukrainian idx page correctly', async () => {
+      expect(container).toMatchSnapshot();
+    });
+  });
+
+  describe('Assertions', () => {
+    it('should render idx page sections', async () => {
+      const sections = container.querySelectorAll('section');
+      expect(sections.length).toBeGreaterThan(1);
       sections.forEach(section => {
         expect(section.getAttribute('role')).toEqual('region');
       });
