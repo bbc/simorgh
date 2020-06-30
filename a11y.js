@@ -19,20 +19,14 @@ const baseUrl = 'http://localhost:7080';
 const pageTypes = {
   frontPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   articles: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
-  liveRadio: [
-    "//div[@id='root']/main/div/div/div/iframe",
-    "//div[@id='root']/header/nav/div/div[1]/div/ul",
-  ],
+  liveRadio: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   photoGalleryPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   mostReadPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   storyPage: [
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
     "//div[@id='root']/div/div[1]/main/div[37]/div/div/div", // issue with IDT2 includes
   ],
-  onDemandRadio: [
-    "//div[@id='root']/main/div/div/div/iframe",
-    "//div[@id='root']/header/nav/div/div[1]/div/ul",
-  ],
+  onDemandRadio: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   idxPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
 };
 
