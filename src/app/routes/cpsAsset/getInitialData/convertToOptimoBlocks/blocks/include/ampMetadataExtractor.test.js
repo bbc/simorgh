@@ -14,7 +14,10 @@ describe('Amp Metadata Extractor', () => {
   });
 
   it('should return image src, width, height and iframe src metadata', () => {
-    const actual = ampMetadataExtractor(includeSupportingAmp);
+    const actual = ampMetadataExtractor(
+      includeSupportingAmp,
+      process.env.SIMORGH_INCLUDES_BASE_AMP_URL,
+    );
     const expected = {
       imageWidth: '640',
       imageHeight: '360',

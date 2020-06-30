@@ -21,20 +21,20 @@ const canonicalPathname = 'https://www.bbc.com/service/foo';
 const ampPathname = 'https://www.bbc.com/service/foo.amp';
 
 describe('convertInclude', () => {
-  const includesBaseUrl = 'https://foobar.com/includes';
-  const includesAmpBaseUrl = 'https://news.files.bbci.co.uk';
+  const initialIncludesBaseUrl = process.env.SIMORGH_INCLUDES_BASE_URL;
+  const initialIncludesAmpBaseUrl = process.env.SIMORGH_INCLUDES_BASE_AMP_URL;
 
   beforeEach(() => {
-    process.env.SIMORGH_INCLUDES_BASE_URL = includesBaseUrl;
-    process.env.SIMORGH_INCLUDES_BASE_AMP_URL = includesAmpBaseUrl;
+    process.env.SIMORGH_INCLUDES_BASE_URL = 'https://foobar.com/includes';
+    process.env.SIMORGH_INCLUDES_BASE_AMP_URL = 'https://news.files.bbci.co.uk';
   });
 
   afterEach(() => {
     fetch.resetMocks();
     loggerMock.error.mockClear();
     loggerMock.info.mockClear();
-    process.env.SIMORGH_INCLUDES_BASE_URL = includesBaseUrl;
-    process.env.SIMORGH_INCLUDES_BASE_AMP_URL = includesAmpBaseUrl;
+    process.env.SIMORGH_INCLUDES_BASE_URL = initialIncludesBaseUrl;
+    process.env.SIMORGH_INCLUDES_BASE_AMP_URL = initialIncludesAmpBaseUrl;
   });
 
   it('should fetch and convert an include block to an idt1 block', async () => {
