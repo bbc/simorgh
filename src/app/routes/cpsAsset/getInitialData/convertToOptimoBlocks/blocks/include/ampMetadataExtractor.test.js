@@ -5,11 +5,11 @@ const includeSupportingAmp =
 
 describe('Amp Metadata Extractor', () => {
   const initialBaseAmpUrlEnv = process.env.SIMORGH_INCLUDES_BASE_AMP_URL;
-  beforeEach(() => {
+  beforeAll(() => {
     process.env.SIMORGH_INCLUDES_BASE_AMP_URL = 'https://news.files.bbci.co.uk';
   });
 
-  afterEach(() => {
+  afterAll(() => {
     process.env.SIMORGH_INCLUDES_BASE_AMP_URL = initialBaseAmpUrlEnv;
   });
 
