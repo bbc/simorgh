@@ -293,6 +293,8 @@ server
           routes,
           urlPath,
         );
+        const { pageType } = route;
+
         const data = await route.getInitialData({
           path: url,
           service,
@@ -314,17 +316,13 @@ server
           variant,
         });
 
-        const pageType = pathOr(
-          'Unknown',
-          ['pageData', 'metadata', 'type'],
-          data,
-        );
+        const type = pathOr('Unknown', ['pageData', 'metadata', 'type'], data);
 
         logger.info(ROUTING_INFORMATION, {
           url,
           status,
           pageType,
-          route: route.pageType,
+          type,
         });
 
         if (result.redirectUrl) {
