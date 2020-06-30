@@ -4,7 +4,7 @@ exports[`CpsRecommendations should not render when cpsRecommendations toggle is 
 
 exports[`CpsRecommendations should not render when the hasStoryRecommendations flag is disabled for the service 1`] = `<div />`;
 
-exports[`CpsRecommendations should render when cpsRecommendations toggle & hasStoryRecommendations flag are both true 1`] = `
+exports[`CpsRecommendations should render when cpsRecommendations toggle and hasStoryRecommendations flag are both true 1`] = `
 <div>
   <div>
     Recommendations Container
