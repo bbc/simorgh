@@ -1,189 +1,23 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, number, string } from 'prop-types';
-import styled from 'styled-components';
-import path from 'ramda/src/path';
-import SectionLabel from '@bbc/psammead-section-label';
-import StoryPromo, { Headline, Link } from '@bbc/psammead-story-promo';
-import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import { C_LUNAR, C_EBON, C_GHOST } from '@bbc/psammead-styles/colours';
-import Image from '@bbc/psammead-image';
-import { getDoublePica } from '@bbc/gel-foundations/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import {
-  GEL_SPACING,
-  GEL_SPACING_HLF,
-  GEL_SPACING_DBL,
-} from '@bbc/gel-foundations/spacings';
-
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
-import CpsOnwardJourney from '../CpsOnwardJourney';
-import Grid from '../../components/Grid';
 import data from './recommendations.ltr.json';
 
-const GEL_SPACING_DBL_MINUS_HLF = '0.75rem';
-
-const StoryPromoWrapper = styled(StoryPromo)`
-  display: grid;
-  margin: ${GEL_SPACING_HLF} ${GEL_SPACING_DBL};
-  background-color: ${C_GHOST};
-`;
-
-const CustomSectionLabel = styled(SectionLabel)`
-  ${({ script }) => script && getDoublePica(script)};
-  ${({ service }) => getSansRegular(service)};
-  color: ${C_EBON};
-  margin-top: 0;
-`;
-
-const SectionLabelWrapper = styled.div`
-  padding: ${GEL_SPACING_DBL};
-  margin-bottom: ${GEL_SPACING};
-`;
-
-const RecommendationsWrapper = styled.div`
-  background-color: ${C_LUNAR};
-  padding-bottom: ${GEL_SPACING};
-`;
-
-const SingleContentGrid = styled(Grid)`
-  ${({ hasSingleContent }) =>
-    hasSingleContent
-      ? `margin-top: -${GEL_SPACING}`
-      : `margin: -${GEL_SPACING} 0 -${GEL_SPACING_DBL_MINUS_HLF}`}
-`;
-
-const getPromoItemProps = item => ({
-  src: path(['indexImage', 'path'], item),
-  href: path(['locators', 'assetUri'], item),
-  headline: path(['headlines', 'headline'], item),
-  alt: path(['indexImage', 'altText'], item),
-});
-
-const toStoryPromoItem = ({ assetUri, shortHeadline, imageHref }) => ({
-  headlines: {
-    headline: shortHeadline,
-  },
-  locators: {
-    assetUri,
-  },
-  indexImage: {
-    path: imageHref,
-    altText: 'Image Alt text', // This value would be changed as it's on our list of improvements.
-  },
-  uri: assetUri,
-});
-
-const transformItems = items => items.map(toStoryPromoItem);
-
-const CpsRecommendations = ({ parentColumns, items }) => {
-  const { script, service, dir, recommendations } = useContext(ServiceContext);
+const CpsRecommendations = () => {
+  const { recommendations } = useContext(ServiceContext);
   const { enabled } = useToggle('cpsRecommendations');
 
   const { hasStoryRecommendations } = recommendations;
 
   if (!hasStoryRecommendations || !enabled) return null;
 
-  const hasSingleContent = items.length === 1;
-
-  const singleTransform = item => {
-    const { src, href, headline, alt } = getPromoItemProps(item);
-
-    const Img = <Image alt={alt} src={src} />;
-
-    const Info = (
-      <Headline script={script} service={service} promoHasImage as="span">
-        <Link href={href}>{headline}</Link>
-      </Headline>
-    );
-
-    return (
-      <SingleContentGrid
-        columns={{
-          group0: 1,
-          group1: 1,
-          group2: 1,
-          group3: 1,
-          group4: 1,
-          group5: 1,
-        }}
-        enableGelGutters
-        dir={dir}
-        hasSingleContent={hasSingleContent}
-      >
-        <StoryPromoWrapper image={Img} info={Info} />
-      </SingleContentGrid>
-    );
-  };
-
-  const listTransform = promoItems => (
-    <Grid
-      columns={{
-        group0: 6,
-        group1: 6,
-        group2: 6,
-        group3: 6,
-        group4: 6,
-        group5: 6,
-      }}
-      as={StoryPromoUl}
-      enableGelGutters
-      dir={dir}
-    >
-      {promoItems.map(item => (
-        <Grid
-          item
-          columns={{
-            group0: 6,
-            group1: 6,
-            group2: 6,
-            group3: 6,
-            group4: 6,
-            group5: 6,
-          }}
-          as={StoryPromoLi}
-          key={item.uri}
-          dir={dir}
-        >
-          {singleTransform(item)}
-        </Grid>
-      ))}
-    </Grid>
-  );
-
-  const renderSectionLabel = () => (
-    <SectionLabelWrapper>
-      <CustomSectionLabel
-        script={script}
-        service={service}
-        dir={dir}
-        id="recommendations-heading"
-        bar={false}
-        as="strong"
-      >
-        Recommendations
-      </CustomSectionLabel>
-    </SectionLabelWrapper>
-  );
-
-  return (
-    <RecommendationsWrapper>
-      <CpsOnwardJourney
-        labelId="recommendations-heading"
-        title="Recommendations"
-        content={transformItems(items)}
-        parentColumns={parentColumns}
-        singleTransform={singleTransform}
-        listTransform={listTransform}
-        renderCustomLabel={renderSectionLabel}
-      />
-    </RecommendationsWrapper>
-  );
+  return <div>Recommendations Container</div>;
 };
 
 export default CpsRecommendations;
 
 CpsRecommendations.propTypes = {
+  /*
   items: arrayOf(
     shape({
       assetUri: string.isRequired,
@@ -199,6 +33,7 @@ CpsRecommendations.propTypes = {
     group4: number,
     group5: number,
   }).isRequired,
+  */
 };
 
 CpsRecommendations.defaultProps = {

@@ -95,7 +95,6 @@ const CpsOnwardJourney = ({
   parentColumns,
   listTransform,
   singleTransform,
-  renderCustomLabel,
 }) => {
   const a11yAttributes = {
     as: 'section',
@@ -138,10 +137,8 @@ const CpsOnwardJourney = ({
     children: node.isRequired,
   };
 
-  const Label =
-    typeof renderCustomLabel === 'function' ? (
-      renderCustomLabel()
-    ) : (
+  return (
+    <CpsOnwardJourneyWrapper>
       <StyledSectionLabel
         script={script}
         service={service}
@@ -150,11 +147,6 @@ const CpsOnwardJourney = ({
       >
         {title}
       </StyledSectionLabel>
-    );
-
-  return (
-    <CpsOnwardJourneyWrapper>
-      {Label}
       {hasSingleContent ? (
         <SingleContentWrapper>
           {singleTransform(singleContent)}
@@ -180,13 +172,11 @@ CpsOnwardJourney.propTypes = {
   }),
   listTransform: func.isRequired,
   singleTransform: func.isRequired,
-  renderCustomLabel: func,
 };
 
 CpsOnwardJourney.defaultProps = {
   content: [],
   parentColumns: null,
-  renderCustomLabel: null,
 };
 
 export default CpsOnwardJourney;

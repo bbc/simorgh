@@ -4,30 +4,10 @@ import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import recommendationData from './recommendations.ltr.json';
 
 import CpsRecommendations from '.';
 
-const singleRecommendationData = [
-  {
-    assetUri: '/mundo/5331',
-    shortHeadline: 'This is a headline',
-    imageHref: 'http://c.files.bbci.co.uk/256/727445.jpg',
-  },
-];
-
-const multipleRecommendationData = recommendationData.items;
-
-const parentGridCols = {
-  group0: 8,
-  group1: 8,
-  group2: 8,
-  group3: 8,
-  group4: 8,
-  group5: 8,
-};
-
-const renderContainer = (items, hasStoryRecommendations, toggleEnabled) => {
+const renderContainer = (hasStoryRecommendations, toggleEnabled) => {
   const toggleState = {
     cpsRecommendations: {
       enabled: toggleEnabled,
@@ -55,7 +35,7 @@ const renderContainer = (items, hasStoryRecommendations, toggleEnabled) => {
         <ToggleContext.Provider
           value={{ toggleState, toggleDispatch: jest.fn() }}
         >
-          <CpsRecommendations items={items} parentColumns={parentGridCols} />
+          <CpsRecommendations />
         </ToggleContext.Provider>
       </RequestContextProvider>
     </ServiceContext.Provider>,
@@ -67,7 +47,6 @@ describe('CpsRecommendations', () => {
     const toggleEnabled = false;
     const hasStoryRecommendations = true;
     const { container } = renderContainer(
-      multipleRecommendationData,
       hasStoryRecommendations,
       toggleEnabled,
     );
@@ -77,28 +56,15 @@ describe('CpsRecommendations', () => {
     const hasStoryRecommendations = false;
     const toggleEnabled = true;
     const { container } = renderContainer(
-      multipleRecommendationData,
       hasStoryRecommendations,
       toggleEnabled,
     );
     expect(container).toMatchSnapshot();
   });
-  it('should render for multiple recommendation items', () => {
+  it('should render when cpsRecommendations toggle and hasStoryRecommendations flag are both true', () => {
     const toggleEnabled = true;
     const hasStoryRecommendations = true;
     const { container } = renderContainer(
-      multipleRecommendationData,
-      hasStoryRecommendations,
-      toggleEnabled,
-    );
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should render for a single recommendation item', () => {
-    const toggleEnabled = true;
-    const hasStoryRecommendations = true;
-    const { container } = renderContainer(
-      singleRecommendationData,
       hasStoryRecommendations,
       toggleEnabled,
     );
