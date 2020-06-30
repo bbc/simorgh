@@ -9,7 +9,7 @@ import isLive from '#lib/utilities/isLive';
 export const getDataSlot = service => {
   const dataSlot = isLive()
     ? `/4817/bbcworldservice.live.site.${service}`
-    : `/4817/bbcworldservice.test.site.${service}`;
+    : `/4817/bbccom.test.site.amp.news`;
   return dataSlot;
 };
 
