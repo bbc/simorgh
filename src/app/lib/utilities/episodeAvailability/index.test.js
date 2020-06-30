@@ -106,35 +106,6 @@ describe('Episode Availability', () => {
           });
         });
       });
-
-      describe('because availableFrom and availableUntil are in the past', () => {
-        const episodeAvailableFromSixtyMinutesAgo = assocPath(
-          ['content', 'blocks', '0', 'versions', '0', 'availableFrom'],
-          sixtyMinutesAgo,
-          episodeData,
-        );
-        const episodeAvailableFromSixtyMinutesAgoUntilOneMinuteAgo = assocPath(
-          ['content', 'blocks', '0', 'versions', '0', 'availableUntil'],
-          oneMinuteAgo,
-          episodeAvailableFromSixtyMinutesAgo,
-        );
-
-        it(`should return 'expired'`, () => {
-          const episodeAvailability = getEpisodeAvailability(
-            episodeAvailableFromSixtyMinutesAgoUntilOneMinuteAgo,
-          );
-          expect(episodeAvailability).toEqual('expired');
-        });
-
-        it(`should log expired message`, () => {
-          getEpisodeAvailability(
-            episodeAvailableFromSixtyMinutesAgoUntilOneMinuteAgo,
-          );
-          expect(loggerMock.info).toHaveBeenCalledWith(EPISODE_EXPIRED, {
-            url: 'pashto/bbc_pashto_radio/w3ct0lz1',
-          });
-        });
-      });
     });
 
     describe('episode is available', () => {
