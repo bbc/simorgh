@@ -3,12 +3,16 @@ import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { shape, string, number, bool } from 'prop-types';
 import {
+  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import pathOr from 'ramda/src/pathOr';
-import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
+} from '@bbc/gel-foundations/breakpoints';
 import { MediaMessage } from '@bbc/psammead-media-player';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
@@ -37,8 +41,10 @@ const StyledMessageContainer = styled.div`
   position: relative;
   overflow: hidden;
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    width: calc(100% + ${GEL_SPACING_QUAD});
     margin: 0 -${GEL_SPACING_DBL};
+  }
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    margin: 0 -${GEL_SPACING};
   }
 `;
 
@@ -60,8 +66,10 @@ const StyledGelPageGrid = styled(GelPageGrid)`
 const StyledVideoPlayer = styled(AVPlayer)`
   margin-top: ${GEL_SPACING_TRPL};
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    width: calc(100% + ${GEL_SPACING_QUAD});
     margin: 0 -${GEL_SPACING_DBL};
+  }
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    margin: 0 -${GEL_SPACING};
   }
 `;
 
