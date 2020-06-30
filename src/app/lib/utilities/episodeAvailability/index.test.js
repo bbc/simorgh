@@ -68,18 +68,21 @@ describe('Episode Availability', () => {
     });
   });
 
-  const oneMinuteFromNow = Date.now() + 60 * 1000;
-  const sixtyMinutesFromNow = Date.now() + 60 * 60 * 1000;
-
-  const oneMinuteAgo = Date.now() - 60 * 1000;
-  const sixtyMinutesAgo = Date.now() - 60 * 60 * 1000;
-
-  const episodeData = onDemandRadioEpisodeJson;
-
   describe('getEpisodeAvailability', () => {
     afterEach(() => {
       jest.clearAllMocks();
     });
+
+    const now = Date.now();
+    const oneMinute = 60 * 1000;
+    const sixtyMinutes = 60 * oneMinute;
+
+    const oneMinuteFromNow = now + oneMinute;
+    const sixtyMinutesFromNow = now + sixtyMinutes;
+    const oneMinuteAgo = now - oneMinute;
+    const sixtyMinutesAgo = now - sixtyMinutes;
+
+    const episodeData = onDemandRadioEpisodeJson;
 
     describe('episode is expired', () => {
       describe('because versions is empty', () => {
