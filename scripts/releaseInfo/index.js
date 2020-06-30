@@ -80,39 +80,44 @@ const generateLaunchDates = service => {
   const output = [];
   const serviceLaunch = launchDates[service];
 
-  if (serviceLaunch.frontPage && serviceLaunch.frontPage !== '') {
-    output.push(`__Home__: ${serviceLaunch.frontPage}`);
-  }
+  if (serviceLaunch) {
+    if (serviceLaunch.frontPage && serviceLaunch.frontPage !== '') {
+      output.push(`__Home__: ${serviceLaunch.frontPage}`);
+    }
 
-  if (serviceLaunch.articles && serviceLaunch.articles !== '') {
-    output.push(`__Articles__: ${serviceLaunch.articles}`);
-  }
+    if (serviceLaunch.articles && serviceLaunch.articles !== '') {
+      output.push(`__Articles__: ${serviceLaunch.articles}`);
+    }
 
-  if (serviceLaunch.liveRadio && serviceLaunch.liveRadio !== '') {
-    output.push(`__Live Radio__: ${serviceLaunch.liveRadio}`);
-  }
+    if (serviceLaunch.liveRadio && serviceLaunch.liveRadio !== '') {
+      output.push(`__Live Radio__: ${serviceLaunch.liveRadio}`);
+    }
 
-  if (serviceLaunch.mediaAssetPage && serviceLaunch.mediaAssetPage !== '') {
-    output.push(`__MAP__: ${serviceLaunch.mediaAssetPage}`);
-  }
+    if (serviceLaunch.mediaAssetPage && serviceLaunch.mediaAssetPage !== '') {
+      output.push(`__MAP__: ${serviceLaunch.mediaAssetPage}`);
+    }
 
-  if (serviceLaunch.photoGalleryPage && serviceLaunch.photoGalleryPage !== '') {
-    output.push(`__PGL__: ${serviceLaunch.photoGalleryPage}`);
-  }
+    if (
+      serviceLaunch.photoGalleryPage &&
+      serviceLaunch.photoGalleryPage !== ''
+    ) {
+      output.push(`__PGL__: ${serviceLaunch.photoGalleryPage}`);
+    }
 
-  if (serviceLaunch.storyPage && serviceLaunch.storyPage !== '') {
-    output.push(`__STY__: ${serviceLaunch.storyPage}`);
-  }
+    if (serviceLaunch.storyPage && serviceLaunch.storyPage !== '') {
+      output.push(`__STY__: ${serviceLaunch.storyPage}`);
+    }
 
-  if (serviceLaunch.mostReadPage && serviceLaunch.mostReadPage !== '') {
-    output.push(`__Most Read__: ${serviceLaunch.mostReadPage}`);
-  }
+    if (serviceLaunch.mostReadPage && serviceLaunch.mostReadPage !== '') {
+      output.push(`__Most Read__: ${serviceLaunch.mostReadPage}`);
+    }
 
-  if (serviceLaunch.onDemandRadio && serviceLaunch.onDemandRadio !== '') {
-    output.push(`__On Demand Radio__: ${serviceLaunch.onDemandRadio}`);
-  }
+    if (serviceLaunch.onDemandRadio && serviceLaunch.onDemandRadio !== '') {
+      output.push(`__On Demand Radio__: ${serviceLaunch.onDemandRadio}`);
+    }
 
-  return output.join('<br/>');
+    return output.join('<br/>');
+  }
 };
 
 const scriptDir = path.resolve(__dirname);
