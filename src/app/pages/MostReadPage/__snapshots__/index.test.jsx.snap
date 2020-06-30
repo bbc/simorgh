@@ -89,14 +89,14 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   font-style: normal;
 }
 
-.c1 {
+.c0 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
-.c0 {
+.c1 {
   margin: 0 0.5rem;
   padding-top: 0.5rem;
   padding-bottom: 2rem;
@@ -293,31 +293,31 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c0 {
+  .c1 {
     margin: 0 1rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c0 {
+  .c1 {
     padding-top: 1rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c0 {
+  .c1 {
     padding-bottom: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c0 {
+  .c1 {
     padding-top: 0;
   }
 }
 
 @media (min-width:63rem) {
-  .c0 {
+  .c1 {
     padding-bottom: 2.5rem;
   }
 }
@@ -584,17 +584,17 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   </head>
   <body>
     <div>
-      <div
+      <noscript />
+      <div>
+        chartbeat
+      </div>
+      <main
         class="c0"
+        data-e2e="most-read"
+        role="main"
       >
-        <noscript />
-        <div>
-          chartbeat
-        </div>
-        <main
+        <div
           class="c1"
-          data-e2e="most-read"
-          role="main"
         >
           <h1
             class="c2"
@@ -1034,8 +1034,8 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
               </div>
             </div>
           </div>
-        </main>
-      </div>
+        </div>
+      </main>
     </div>
   </body>
 </html>

@@ -1886,7 +1886,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
     chartbeat
   </div>
   <main
-    lang="ru-UA"
     role="main"
   >
     <div
