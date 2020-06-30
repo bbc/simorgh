@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`VideoPlayer should render correctly for amp 1`] = `
+exports[`AVPlayer for Radio should match snapshot for AMP AVPlayer 1`] = `
 .c0 {
   padding-top: 56.25%;
   position: relative;
@@ -29,8 +29,8 @@ exports[`VideoPlayer should render correctly for amp 1`] = `
             layout="fill"
             sandbox="allow-scripts allow-same-origin"
             scrolling="no"
-            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live"
-            title="video player"
+            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om/amp"
+            title="Audio player"
           >
             <amp-img
               alt=""
@@ -50,7 +50,7 @@ exports[`VideoPlayer should render correctly for amp 1`] = `
 </html>
 `;
 
-exports[`VideoPlayer should render correctly for canonical 1`] = `
+exports[`AVPlayer for TV should match snapshot for canonical AVPlayer 1`] = `
 .c0 {
   padding-top: 56.25%;
   position: relative;
@@ -78,8 +78,8 @@ exports[`VideoPlayer should render correctly for canonical 1`] = `
       allowfullscreen=""
       class="c1"
       scrolling="no"
-      src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live"
-      title="video player"
+      src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live"
+      title="ویډیو پلیئر"
     />
     <noscript />
   </div>
