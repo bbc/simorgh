@@ -27,11 +27,9 @@ const pageTypes = {
   mostReadPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   storyPage: [
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
-    '/iframe', // known issue above with iframes should be revisited once https://github.com/bbc/bbc-a11y/issues/298 is resolved
     "//div[@id='root']/div/div[1]/main/div[37]/div/div/div", // issue with IDT2 includes
   ],
   onDemandRadio: [
-    '/iframe', // Can be removed once https://github.com/bbc/bbc-a11y/issues/298 is resolved
     "//div[@id='root']/main/div/div/div/iframe",
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
   ],
