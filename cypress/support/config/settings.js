@@ -1661,8 +1661,11 @@ module.exports = () => ({
       onDemandRadio: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/hausa/bbc_hausa_radio/programmes/p030s4mh', // Brand
+              '/hausa/bbc_hausa_radio/w3ct0hlt', // Episode
+            ],
+            enabled: true,
           },
           test: {
             paths: [
@@ -2186,7 +2189,7 @@ module.exports = () => ({
               '/indonesia/bbc_indonesian_radio/programmes/w13xtt0s', // Brand
               '/indonesia/bbc_indonesian_radio/w172xh281s8mkhr', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -3425,14 +3428,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/pashto/bbc_pashto_radio/programmes/p0340yr4', // Brand
-              '/pashto/bbc_pashto_radio/w172xjcknn5x31c', // Episode
+              '/pashto/bbc_pashto_radio/w172xjclrg44rpx', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/pashto/bbc_pashto_radio/programmes/p0340yr4', // Brand
-              '/pashto/bbc_pashto_radio/w172xjck9cw6lvc', // Episode
+              '/pashto/bbc_pashto_radio/w172xjclrg44rpx', // Episode
             ],
             enabled: true,
           },
