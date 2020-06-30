@@ -39,17 +39,17 @@ const getEpisodeAvailability = pageData => {
   const availableFrom = getEpisodeAvailableFrom(pageData);
   const availableUntil = getEpisodeAvailableUntil(pageData);
 
-  if (!availableUntil) {
-    logger.info(EPISODE_EXPIRED, {
-      url: getUrl(pageData),
-    });
-    return EPISODE_STATUS.EPISODE_IS_EXPIRED;
-  }
   if (timeNow < availableFrom) {
     logger.info(EPISODE_NOT_YET_AVAILABLE, {
       url: getUrl(pageData),
     });
     return EPISODE_STATUS.EPISODE_IS_NOT_YET_AVAILABLE;
+  }
+  if (!availableFrom || availableUntil < timeNow) {
+    logger.info(EPISODE_EXPIRED, {
+      url: getUrl(pageData),
+    });
+    return EPISODE_STATUS.EPISODE_IS_EXPIRED;
   }
 
   return EPISODE_STATUS.EPISODE_IS_AVAILABLE;
