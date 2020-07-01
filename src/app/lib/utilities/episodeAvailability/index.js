@@ -28,9 +28,10 @@ const getEpisodeAvailability = pageData => {
     'availableFrom',
   ]);
 
+  const versions = path(['content', 'blocks', '0', 'versions'], pageData) || [];
   const availableFrom = getEpisodeAvailableFrom(pageData);
 
-  if (!availableFrom) {
+  if (versions.length === 0) {
     logger.info(EPISODE_EXPIRED, {
       url: getUrl(pageData),
     });
