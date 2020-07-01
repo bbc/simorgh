@@ -2,6 +2,8 @@
 /* eslint-disable import/order */
 import sendCustomMetric from '.';
 
+// jest.mock('./sendCustomMetric', () => jest.fn())
+
 jest.mock('aws-embedded-metrics', () => {
   const { Unit } = jest.requireActual('aws-embedded-metrics');
 
@@ -27,6 +29,7 @@ import { mockLogger } from 'aws-embedded-metrics';
 
 describe('Cloudwatch Custom Metrics', () => {
   it('sendCustomMetric should set dimensions and metrics correctly', async () => {
+    process.env.SIMORGH_APP_ENV = 'test';
     await sendCustomMetric('Metric Name', 500, 'Page Type', '/request/url');
 
     // assert
@@ -37,4 +40,11 @@ describe('Cloudwatch Custom Metrics', () => {
     });
     expect(mockLogger.setProperty).toBeCalledWith('URL', '/request/url');
   });
+
+  xit('should not call sendCustomMetric() on live', async () => {
+    process.env.SIMORGH_APP_ENV = 'LIVE';
+
+    // assert
+    expect(sendCustomMetric).not.toBeCalled()
+  })
 });
