@@ -9,12 +9,14 @@ import useToggle from '#hooks/useToggle';
 import Canonical from './canonical';
 import Idt2Canonical from './canonical/Idt2';
 import Idt2Amp from './amp/Idt2Amp';
+import VjAmp from './amp/VjAmp';
 
 const logger = nodeLogger(__filename);
 
 const componentsToRender = {
   amp: {
     idt2: props => <Idt2Amp {...props} />,
+    vj: props => <VjAmp {...props} />,
   },
   canonical: {
     idt1: props => <Canonical {...props} />,
