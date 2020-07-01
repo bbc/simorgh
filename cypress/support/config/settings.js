@@ -2536,7 +2536,7 @@ module.exports = () => ({
               '/korean/bbc_korean_radio/programmes/w13xttlm', // Brand
               '/korean/bbc_korean_radio/w3ct0kfm', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/korean/bbc_korean_radio/w3ct0kn5'],
