@@ -5,25 +5,30 @@ import getBaseUrl from './utils/getBaseUrl';
 import onClient from '#lib/utilities/onClient';
 import isLive from '#lib/utilities/isLive';
 import { DATA_REQUEST_RECEIVED, DATA_NOT_FOUND } from '#lib/logger.const';
+import {
+  OK,
+  BAD_GATEWAY,
+  INTERNAL_SERVER_ERROR,
+  NOT_FOUND,
+} from './utils/statusCodes';
 
 const logger = nodeLogger(__filename);
-const OK = 200;
-const BAD_GATEWAY = 502;
-const INTERNAL_SERVER_ERROR = 500;
-const NOT_FOUND = 404;
-const ampRegex = /.amp$/;
-const baseUrl = onClient()
-  ? getBaseUrl(window.location.origin)
-  : process.env.SIMORGH_BASE_URL;
 
 export const getUrl = pathname => {
   if (!pathname) return '';
 
+  const ampRegex = /.amp$/;
+  const baseUrl = onClient()
+    ? getBaseUrl(window.location.origin)
+    : process.env.SIMORGH_BASE_URL;
   const params = isLive() ? '' : getQueryString(pathname);
   const basePath = getUrlPath(pathname);
 
   return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
 };
+
+const getErrorStatusCode = () =>
+  onClient() ? BAD_GATEWAY : INTERNAL_SERVER_ERROR;
 
 export default async pathname => {
   const url = getUrl(pathname);
@@ -47,17 +52,14 @@ export default async pathname => {
     if (status === NOT_FOUND) {
       error.message = DATA_NOT_FOUND;
       error.status = NOT_FOUND;
-
-      throw error;
+    } else {
+      error.message = `Unexpected upstream response (HTTP status code ${status}) when requesting ${url}`;
     }
-
-    error.message = `Unexpected upstream response (HTTP status code ${status}) when requesting ${url}`;
 
     throw error;
   } catch ({ message, status }) {
     const error = new Error(message);
-    error.status = status || (onClient() ? BAD_GATEWAY : INTERNAL_SERVER_ERROR);
-
+    error.status = status || getErrorStatusCode();
     logger.error(message, {
       url,
       status,
