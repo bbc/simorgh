@@ -1,7 +1,7 @@
 // custom CW metrics
 const { metricScope, Unit } = require('aws-embedded-metrics');
 
-const sendCustomMetric = metricScope(metrics => {
+const sendCustomMetric = metricScope(metrics => 
   async (metricName, statusCode, pageType, requestUrl) => {
     // Specifies the metric dimensions, each dimension will counted and billed as a custom unique metric
     metrics.putDimensions({ PageType: pageType, StatusCode: statusCode });
@@ -11,7 +11,7 @@ const sendCustomMetric = metricScope(metrics => {
 
     // Custom properties are included in the custom metric data but are not charged
     metrics.setProperty('URL', requestUrl);
-  };
-});
+  }
+);
 
 export default sendCustomMetric;

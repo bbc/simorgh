@@ -342,12 +342,12 @@ server
           throw new Error('unknown result');
         }
       } catch ({ message, status = 500 }) {
-        // await sendCustomMetric(
-        //   'Non_200_Response',
-        //   status,
-        //   derivedPageType,
-        //   url,
-        // );
+        await sendCustomMetric(
+          'Non_200_Response',
+          status,
+          derivedPageType,
+          url,
+        );
 
         logger.error(SERVER_SIDE_REQUEST_FAILED, {
           status: status,
