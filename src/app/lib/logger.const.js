@@ -3,6 +3,10 @@
  */
 
 const logCodes = {
+  // Application Start
+  CLUSTER_PROCESS_START: 'cluster_process_started',
+  CLUSTER_PROCESS_EXIT: 'cluster_process_exit',
+
   // Data fetch
   DATA_FETCH_ERROR: 'data_fetch_error',
   DATA_NOT_FOUND: 'data_response_404',
@@ -20,6 +24,9 @@ const logCodes = {
   MEDIA_MISSING: 'media_missing',
   MEDIA_MISSING_FIELD: 'media_missing_field',
   MEDIA_PLAYER_STATUS: 'media_player_status',
+  RADIO_MISSING_FIELD: 'radio_missing_field',
+  EPISODE_EXPIRED: 'episode_expired',
+  EPISODE_NOT_YET_AVAILABLE: 'episode_not_yet_available',
 
   // Translations
   NO_TRANSLATION_FOUND: 'no_translation_found',
@@ -55,6 +62,7 @@ const logCodes = {
   INCLUDE_RENDERED: 'include_rendered',
   INCLUDE_REQUEST_RECEIVED: 'include_request_received',
   INCLUDE_UNSUPPORTED: 'include_unsupported',
+  INCLUDE_IFRAME_REQUEST_RECEIVED: 'include_iframe_request_received',
 
   // Social Embed
   SOCIAL_EMBED_RENDERED: 'social_embed_rendered',

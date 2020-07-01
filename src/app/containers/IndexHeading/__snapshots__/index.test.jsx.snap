@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Index Heading snapshot should render correctly 1`] = `
+exports[`Index Heading snapshot should render correctly for IDX 1`] = `
 .c0 {
   font-size: 1.125rem;
   line-height: 1.375rem;
@@ -55,7 +55,7 @@ exports[`Index Heading snapshot should render correctly 1`] = `
 </h1>
 `;
 
-exports[`Index Heading snapshot should render rtl correctly 1`] = `
+exports[`Index Heading snapshot should render rtl correctly for IDX 1`] = `
 .c0 {
   font-size: 1.5rem;
   line-height: 2rem;

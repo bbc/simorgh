@@ -43,6 +43,7 @@
       "about": [
         {
           "thingLabel": "History",
+          "thingEnglishLabel": "History",
           "thingUri": "http://www.bbc.co.uk/things/03eb3674-6190-4cd7-8104-1a00991d67a3#id",
           "thingId": "03eb3674-6190-4cd7-8104-1a00991d67a3",
           "thingType": ["Theme", "Thing"],
@@ -61,6 +62,7 @@
         },
         {
           "thingLabel": "Azerbaijan",
+          "thingEnglishLabel": "Azerbaijan",
           "thingUri": "http://www.bbc.co.uk/things/0f8e45e2-6499-44b1-be1f-1a3dd81e8af7#id",
           "thingId": "0f8e45e2-6499-44b1-be1f-1a3dd81e8af7",
           "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
@@ -76,6 +78,7 @@
         },
         {
           "thingLabel": "Society",
+          "thingEnglishLabel": "Society",
           "thingUri": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
           "thingId": "5307a8d9-f620-40f5-92d4-f99c919a6ffa",
           "thingType": ["Theme", "Thing"],
@@ -86,6 +89,7 @@
         },
         {
           "thingLabel": "Culture",
+          "thingEnglishLabel": "Culture",
           "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
           "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
           "thingType": ["Theme", "Thing"],
@@ -96,6 +100,7 @@
         },
         {
           "thingLabel": "Politics",
+          "thingEnglishLabel": "Politics",
           "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
           "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
           "thingType": ["Theme", "Thing"],
@@ -111,6 +116,7 @@
         },
         {
           "thingLabel": "Human rights",
+          "thingEnglishLabel": "Human rights",
           "thingUri": "http://www.bbc.co.uk/things/8b04c2e8-5409-4e7d-9877-3ccaf04727af#id",
           "thingId": "8b04c2e8-5409-4e7d-9877-3ccaf04727af",
           "thingType": ["Theme", "Thing"],
@@ -129,6 +135,7 @@
         },
         {
           "thingLabel": "Azerbaijan Democratic Republic 100th anniversary",
+          "thingEnglishLabel": "Azerbaijan Democratic Republic 100th anniversary",
           "thingUri": "http://www.bbc.co.uk/things/9e6f8e15-894a-45cb-9db9-d8881e8e6ae2#id",
           "thingId": "9e6f8e15-894a-45cb-9db9-d8881e8e6ae2",
           "thingType": ["Event", "Thing"],
@@ -144,6 +151,7 @@
         },
         {
           "thingLabel": "Caucasus",
+          "thingEnglishLabel": "Caucasus",
           "thingUri": "http://www.bbc.co.uk/things/a86bc15e-ccd0-4ea9-9903-df3d4575a176#id",
           "thingId": "a86bc15e-ccd0-4ea9-9903-df3d4575a176",
           "thingType": ["Place", "Thing"],
@@ -154,6 +162,7 @@
         },
         {
           "thingLabel": "Law and order",
+          "thingEnglishLabel": "Law and order",
           "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
           "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
           "thingType": ["Theme", "Thing"],

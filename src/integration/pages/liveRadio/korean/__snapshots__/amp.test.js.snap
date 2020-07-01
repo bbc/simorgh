@@ -122,15 +122,167 @@ exports[`AMP Korean Live Radio Page Footer I can click on the BBC branding and i
 
 exports[`AMP Korean Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다 외부 링크에 대한 본사 정책 보기"`;
 
+exports[`AMP Korean Live Radio Page Footer Link should match text and url 1`] = `
+Object {
+  "text": "BBC News, 코리아",
+  "url": "/korean",
+}
+`;
+
+exports[`AMP Korean Live Radio Page Footer Link should match text and url 2`] = `
+Object {
+  "text": "BBC News를 신뢰할 수 있는 이유",
+  "url": "https://www.bbc.com/korean/institutional-49283197",
+}
+`;
+
+exports[`AMP Korean Live Radio Page Footer Link should match text and url 3`] = `
+Object {
+  "text": "이용 약관",
+  "url": "https://www.bbc.co.uk/usingthebbc/terms/",
+}
+`;
+
+exports[`AMP Korean Live Radio Page Footer Link should match text and url 4`] = `
+Object {
+  "text": "BBC 소개",
+  "url": "https://www.bbc.co.uk/aboutthebbc",
+}
+`;
+
+exports[`AMP Korean Live Radio Page Footer Link should match text and url 5`] = `
+Object {
+  "text": "개인정보취급방침",
+  "url": "https://www.bbc.co.uk/usingthebbc/privacy/",
+}
+`;
+
+exports[`AMP Korean Live Radio Page Footer Link should match text and url 6`] = `
+Object {
+  "text": "쿠키정책",
+  "url": "https://www.bbc.co.uk/usingthebbc/cookies/",
+}
+`;
+
+exports[`AMP Korean Live Radio Page Footer Link should match text and url 7`] = `
+Object {
+  "text": "고객센터",
+  "url": "https://www.bbc.com/korean/institutional-42224941",
+}
+`;
+
+exports[`AMP Korean Live Radio Page Footer Link should match text and url 8`] = `
+Object {
+  "text": "AdChoices / Do Not Sell My Info",
+  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+}
+`;
+
+exports[`AMP Korean Live Radio Page Footer Link should match text and url 9`] = `
+Object {
+  "text": "외부 링크에 대한 본사 정책 보기",
+  "url": "https://www.bbc.co.uk/help/web/links/",
+}
+`;
+
 exports[`AMP Korean Live Radio Page Header I can see the branding 1`] = `"BBC News, 코리아"`;
 
-exports[`AMP Korean Live Radio Page Header I can see the navigation 1`] = `"뉴스"`;
+exports[`AMP Korean Live Radio Page Header Navigation link should match text and url 1`] = `
+Object {
+  "text": "뉴스",
+  "url": "/korean",
+}
+`;
+
+exports[`AMP Korean Live Radio Page Header Navigation link should match text and url 2`] = `
+Object {
+  "text": "비디오",
+  "url": "/korean/media/video",
+}
+`;
+
+exports[`AMP Korean Live Radio Page Header Navigation link should match text and url 3`] = `
+Object {
+  "text": "다운로드",
+  "url": "/korean/downloads",
+}
+`;
+
+exports[`AMP Korean Live Radio Page Header Navigation link should match text and url 4`] = `
+Object {
+  "text": "TOP 뉴스",
+  "url": "/korean/popular/read",
+}
+`;
 
 exports[`AMP Korean Live Radio Page Main heading should match text 1`] = `"BBC 코리아 라디오"`;
 
 exports[`AMP Korean Live Radio Page Media Player a11y assistive technology can read the media player title 1`] = `"오디오 플레이어"`;
 
 exports[`AMP Korean Live Radio Page Media Player iframe with valid URL should be rendered 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp?morph_env=live"`;
+
+exports[`AMP Korean Live Radio Page SEO Apple Touch Icon should match attributes 1`] = `
+Object {
+  "sizes": null,
+  "url": "http://localhost:7080/korean/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Korean Live Radio Page SEO Apple Touch Icon should match attributes 2`] = `
+Object {
+  "sizes": "72x72",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-72x72.png",
+}
+`;
+
+exports[`AMP Korean Live Radio Page SEO Apple Touch Icon should match attributes 3`] = `
+Object {
+  "sizes": "96x96",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-96x96.png",
+}
+`;
+
+exports[`AMP Korean Live Radio Page SEO Apple Touch Icon should match attributes 4`] = `
+Object {
+  "sizes": "128x128",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-128x128.png",
+}
+`;
+
+exports[`AMP Korean Live Radio Page SEO Apple Touch Icon should match attributes 5`] = `
+Object {
+  "sizes": "144x144",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-144x144.png",
+}
+`;
+
+exports[`AMP Korean Live Radio Page SEO Apple Touch Icon should match attributes 6`] = `
+Object {
+  "sizes": "152x152",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`AMP Korean Live Radio Page SEO Apple Touch Icon should match attributes 7`] = `
+Object {
+  "sizes": "192x192",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`AMP Korean Live Radio Page SEO Apple Touch Icon should match attributes 8`] = `
+Object {
+  "sizes": "384x384",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`AMP Korean Live Radio Page SEO Apple Touch Icon should match attributes 9`] = `
+Object {
+  "sizes": "512x512",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-512x512.png",
+}
+`;
 
 exports[`AMP Korean Live Radio Page SEO Canonical link 1`] = `"http://localhost:7080/korean/bbc_korean_radio/liveradio"`;
 
@@ -144,34 +296,26 @@ exports[`AMP Korean Live Radio Page SEO Heading level 1 1`] = `"BBC 코리아 �
 
 exports[`AMP Korean Live Radio Page SEO Lang attribute 1`] = `"ko"`;
 
-exports[`AMP Korean Live Radio Page SEO Linked data 1`] = `
+exports[`AMP Korean Live Radio Page SEO Linked data should match text 1`] = `
 Object {
   "@context": "http://schema.org",
-  "@type": "RadioChannel",
-  "image": Object {
-    "@type": "ImageObject",
-    "height": 576,
-    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/korean.png",
-    "width": 1024,
-  },
-  "mainEntityOfPage": Object {
-    "@id": "http://localhost:7080/korean/bbc_korean_radio/liveradio",
-    "@type": "WebPage",
-    "name": "BBC 코리아 라디오",
-  },
-  "publisher": Object {
-    "@type": "NewsMediaOrganization",
-    "logo": Object {
-      "@type": "ImageObject",
-      "height": 576,
-      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/korean.png",
-      "width": 1024,
+  "@graph": Array [
+    Object {
+      "@type": "RadioChannel",
+      "image": Object {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/korean.png",
+        "width": 1024,
+      },
+      "mainEntityOfPage": Object {
+        "@id": "http://localhost:7080/korean/bbc_korean_radio/liveradio",
+        "@type": "WebPage",
+        "name": "BBC 코리아 라디오",
+      },
+      "url": "http://localhost:7080/korean/bbc_korean_radio/liveradio",
     },
-    "name": "BBC News 코리아",
-    "publishingPrinciples": "https://www.bbc.com/korean/institutional-49283197",
-  },
-  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/korean.png",
-  "url": "http://localhost:7080/korean/bbc_korean_radio/liveradio",
+  ],
 }
 `;
 

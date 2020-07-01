@@ -1,16 +1,22 @@
 import 'isomorphic-fetch';
+import Url from 'url-parse';
 import {
   INCLUDE_ERROR,
   INCLUDE_FETCH_ERROR,
   INCLUDE_MISSING_URL,
   INCLUDE_REQUEST_RECEIVED,
   INCLUDE_UNSUPPORTED,
+  INCLUDE_IFRAME_REQUEST_RECEIVED,
 } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
+import { addOverrideQuery } from '#app/routes/utils/overrideRendererOnTest';
+import ampMetadataExtractor from './ampMetadataExtractor';
+import includeClassifier from './includeClassifier';
+import getImageBlock from './getImageBlock';
 
 const logger = nodeLogger(__filename);
 
-const buildIncludeUrl = (href, type) => {
+const buildIncludeUrl = (href, type, pathname) => {
   const resolvers = {
     idt1: '',
     idt2: '/html',
@@ -19,7 +25,23 @@ const buildIncludeUrl = (href, type) => {
 
   const withTrailingHref = href.startsWith('/') ? href : `/${href}`;
 
-  return `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${resolvers[type]}`;
+  const includeUrl = `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${resolvers[type]}`;
+
+  const currentRendererEnv = new Url(pathname, true).query.renderer_env;
+
+  let includeUrlWithParam = '';
+
+  switch (currentRendererEnv) {
+    case 'test':
+      includeUrlWithParam = addOverrideQuery(includeUrl, 'test');
+      break;
+    case 'live':
+      includeUrlWithParam = addOverrideQuery(includeUrl, 'live');
+      break;
+    default:
+      return includeUrl;
+  }
+  return includeUrlWithParam;
 };
 
 const fetchMarkup = async url => {
@@ -36,9 +58,6 @@ const fetchMarkup = async url => {
       return null;
     }
     const html = await res.text();
-    logger.info(INCLUDE_REQUEST_RECEIVED, {
-      url,
-    });
     return html;
   } catch (error) {
     logger.error(INCLUDE_ERROR, {
@@ -49,52 +68,59 @@ const fetchMarkup = async url => {
   }
 };
 
-const convertInclude = async includeBlock => {
-  const supportedTypes = {
-    indepthtoolkit: 'idt1',
-    idt2: 'idt2',
-    include: 'vj',
-    'news/special': 'vj',
-    'market-data': 'vj',
-    'smallprox/include': 'vj',
-  };
+const convertInclude = async (includeBlock, ...restParams) => {
+  const { href, type } = includeBlock;
 
-  const { href, type, ...rest } = includeBlock;
+  // Here pathname is passed as a prop specifically for CPS includes
+  // This will most likely change in issue #6784 so it is temporary for now
+  const pathname = restParams[2];
+
+  const ampRegex = /\.amp$/;
+  const isAmp = ampRegex.test(pathname);
 
   if (!href) {
     logger.error(INCLUDE_MISSING_URL, includeBlock);
     return null;
   }
 
-  // This determines if the href has a leading '/'
-  const hrefTypePostion = () => (href.indexOf('/') === 0 ? 1 : 0);
+  const { includeType, classification } = includeClassifier({ href, pathname });
 
-  // This checks if the supportedType is in the correct position of the href
-  const hrefIsSupported = () => supportedType =>
-    href.startsWith(supportedType, hrefTypePostion());
-
-  // This extracts the type from the href
-  const typeExtraction = Object.keys(supportedTypes).find(
-    hrefIsSupported(href),
-  );
-
-  // This determines if the type is supported and returns the include type name
-  const includeType = supportedTypes[typeExtraction];
-  if (!includeType) {
+  if (classification === 'not-supported') {
     logger.info(INCLUDE_UNSUPPORTED, {
       type,
+      classification,
       url: href,
     });
     return null;
   }
 
+  let ampMetadata;
+  let html;
+  if (classification === 'vj-supports-amp') {
+    ampMetadata = ampMetadataExtractor(
+      href,
+      process.env.SIMORGH_INCLUDES_BASE_AMP_URL,
+    );
+    logger.info(INCLUDE_IFRAME_REQUEST_RECEIVED, {
+      url: ampMetadata.src,
+    });
+  }
+  if (!isAmp) {
+    const url = buildIncludeUrl(href, includeType, pathname);
+    logger.info(INCLUDE_REQUEST_RECEIVED, {
+      url,
+    });
+    html = await fetchMarkup(buildIncludeUrl(href, includeType, pathname));
+  }
+  const imageBlock = getImageBlock(includeType, includeBlock, isAmp);
   return {
     type,
     model: {
       href,
-      html: await fetchMarkup(buildIncludeUrl(href, includeType)),
       type: includeType,
-      ...rest,
+      ...(ampMetadata && { ampMetadata }),
+      ...(html && { html }),
+      ...(imageBlock && { imageBlock }),
     },
   };
 };

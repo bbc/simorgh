@@ -9,14 +9,9 @@ import {
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-  GEL_SPACING_QUIN,
+  GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
-import { C_METAL } from '@bbc/psammead-styles/colours';
-import { getParagon } from '@bbc/gel-foundations/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { ServiceContext } from '#contexts/ServiceContext';
 import MostReadContainer from '#containers/MostRead';
 import mostReadShape from '#containers/MostRead/utilities/mostReadShape';
@@ -26,90 +21,72 @@ import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import MetadataContainer from '#containers/Metadata';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import IndexMain from '#app/components/PageLayout/IndexMain';
+import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
+import IndexHeading from '#containers/IndexHeading';
 
-const ConstrainedWrapper = styled.div`
-  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    margin-bottom: ${GEL_SPACING_TRPL};
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    margin-bottom: ${GEL_SPACING_QUIN};
-  }
-  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    width: 100%; /* Needed for IE11 */
-    margin: 0 auto ${GEL_SPACING_QUIN};
-    max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
-  }
-`;
-
-const MostReadHeader = styled.h1.attrs({
-  id: 'content',
-  tabIndex: '-1',
-})`
-  color: ${C_METAL};
-  ${({ script }) => script && getParagon(script)};
-  ${({ service }) => getSansRegular(service)};
-  margin: 0;
-  padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_TRPL};
+const MarginWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    padding: ${GEL_SPACING_TRPL} 0 ${GEL_SPACING_DBL};
+    margin-top: ${GEL_SPACING_TRPL};
   }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding: ${GEL_SPACING_TRPL} 0 ${GEL_SPACING};
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
+    margin-top: ${GEL_SPACING_QUAD};
+  }
+
+  @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_QUAD};
   }
 `;
 
 const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
     brandName,
-    service,
-    script,
     dir,
     lang,
     mostRead: { header },
   } = useContext(ServiceContext);
 
   const MostReadWrapper = ({ children }) => (
-    <ConstrainedWrapper>
-      <MostReadHeader script={script} service={service}>
-        {header}
-      </MostReadHeader>
-
-      <GelPageGrid
-        dir={dir}
-        columns={{
-          group0: 6,
-          group1: 6,
-          group2: 6,
-          group3: 6,
-          group4: 8,
-          group5: 20,
-        }}
-        enableGelGutters
-      >
-        <Grid
-          item
+    <>
+      <IndexHeading id="content">{header}</IndexHeading>
+      <MarginWrapper>
+        <GelPageGrid
           dir={dir}
-          startOffset={{
-            group0: 1,
-            group1: 1,
-            group2: 1,
-            group3: 1,
-            group4: 1,
-            group5: 3,
-          }}
           columns={{
             group0: 6,
             group1: 6,
             group2: 6,
             group3: 6,
-            group4: 6,
-            group5: 11,
+            group4: 8,
+            group5: 20,
           }}
+          enableGelGutters
         >
-          {children}
-        </Grid>
-      </GelPageGrid>
-    </ConstrainedWrapper>
+          <Grid
+            item
+            dir={dir}
+            startOffset={{
+              group0: 1,
+              group1: 1,
+              group2: 1,
+              group3: 1,
+              group4: 1,
+              group5: 3,
+            }}
+            columns={{
+              group0: 6,
+              group1: 6,
+              group2: 6,
+              group3: 6,
+              group4: 6,
+              group5: 11,
+            }}
+          >
+            {children}
+          </Grid>
+        </GelPageGrid>
+      </MarginWrapper>
+    </>
   );
 
   MostReadWrapper.propTypes = {
@@ -128,13 +105,15 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <LinkedData type="WebPage" seoTitle={header} />
       <IndexMain data-e2e="most-read">
-        <MostReadContainer
-          mostReadEndpointOverride={mostReadEndpointOverride}
-          wrapper={MostReadWrapper}
-          columnLayout="oneColumn"
-          initialData={pageData}
-          serverRenderOnAmp
-        />
+        <IndexPageContainer>
+          <MostReadContainer
+            mostReadEndpointOverride={mostReadEndpointOverride}
+            wrapper={MostReadWrapper}
+            columnLayout="oneColumn"
+            initialData={pageData}
+            serverRenderOnAmp
+          />
+        </IndexPageContainer>
       </IndexMain>
     </>
   );

@@ -8,17 +8,19 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
-import FrontPageSection from '#containers/FrontPageSection';
+import { RequestContext } from '#contexts/RequestContext';
+import LinkedData from '#containers/LinkedData';
+import ATIAnalytics from '#containers/ATIAnalytics';
+import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import AdContainer from '#containers/Ad';
+import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
+import IndexPageSection from '#containers/IndexPageSection';
+import RadioScheduleContainer from '#containers/RadioSchedule';
 import MetadataContainer from '#containers/Metadata';
 import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
-import RadioScheduleContainer from '#containers/RadioSchedule';
-import AdContainer from '#containers/Ad';
-import LinkedData from '#containers/LinkedData';
-import ATIAnalytics from '#containers/ATIAnalytics';
-import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
+import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 
 const FrontPageMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
@@ -29,8 +31,28 @@ const FrontPageMostReadSection = styled(MostReadSection)`
   }
 `;
 
+const MostReadWrapper = ({ children }) => (
+  <FrontPageMostReadSection>
+    <MostReadSectionLabel />
+    {children}
+  </FrontPageMostReadSection>
+);
+
+const renderMostRead = mostReadEndpointOverride => (
+  <MostReadContainer
+    mostReadEndpointOverride={mostReadEndpointOverride}
+    columnLayout="twoColumn"
+    wrapper={MostReadWrapper}
+  />
+);
+
+MostReadWrapper.propTypes = {
+  children: node.isRequired,
+};
+
 const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
+    ads,
     product,
     serviceLocalizedName,
     translations,
@@ -38,6 +60,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     radioSchedule,
   } = useContext(ServiceContext);
 
+  const hasAds = path(['hasAds'], ads);
   const home = path(['home'], translations);
   const groups = path(['content', 'groups'], pageData);
   const lang = path(['metadata', 'language'], pageData);
@@ -46,6 +69,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const radioScheduleData = path(['radioScheduleData'], pageData);
   const radioScheduleOnPage = path(['onFrontPage'], radioSchedule);
   const radioSchedulePosition = path(['frontPagePosition'], radioSchedule);
+  const { isAmp } = useContext(RequestContext);
 
   // eslint-disable-next-line jsx-a11y/aria-role
   const offScreenText = (
@@ -58,27 +82,10 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const hasUsefulLinks =
     findIndex(group => group.type === 'useful-links')(groups) > -1;
 
-  const MostReadWrapper = ({ children }) => (
-    <FrontPageMostReadSection>
-      <MostReadSectionLabel />
-      {children}
-    </FrontPageMostReadSection>
-  );
-
-  MostReadWrapper.propTypes = {
-    children: node.isRequired,
-  };
-
-  const renderMostRead = () => (
-    <MostReadContainer
-      mostReadEndpointOverride={mostReadEndpointOverride}
-      columnLayout="twoColumn"
-      wrapper={MostReadWrapper}
-    />
-  );
-
   return (
     <>
+      {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
+      {hasAds && !isAmp && <CanonicalAdBootstrapJs />}
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
@@ -101,10 +108,10 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
                 radioSchedulePosition === group.semanticGroupName && (
                   <RadioScheduleContainer initialData={radioScheduleData} />
                 )}
-              <FrontPageSection group={group} sectionNumber={index} />
+              <IndexPageSection group={group} sectionNumber={index} />
             </Fragment>
           ))}
-          {!hasUsefulLinks && renderMostRead()}
+          {!hasUsefulLinks && renderMostRead(mostReadEndpointOverride)}
         </IndexPageContainer>
       </main>
     </>

@@ -25,8 +25,10 @@ const BrandTitle = styled.span`
   display: inline-block;
   width: 100%;
   padding-bottom: ${GEL_SPACING};
+  word-break: break-word;
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
     padding-bottom: 0;
+    word-break: break-word;
     line-height: ${GEL_SPACING_SEPT};
   }
 `;
@@ -65,7 +67,7 @@ const HeadingContainer = ({
     >
       <TextWrapper {...(ariaHidden ? {} : { role: 'text' })}>
         <BrandTitle>{brandTitle}</BrandTitle>
-        {!ariaHidden && <VisuallyHiddenText>, </VisuallyHiddenText>}
+        <VisuallyHiddenText>, </VisuallyHiddenText>
         <Datestamp script={script} service={service}>
           {formattedTimestamp}
         </Datestamp>
