@@ -102,6 +102,7 @@ const testRenderedData = ({
   const { text, status } = await makeRequest(url);
 
   const assetOrigins = [
+    'https://cookie-oven.api.bbc.co.uk',
     'https://ichef.bbci.co.uk',
     localBaseUrl,
     'https://logws1363.ati-host.net?',
@@ -1165,6 +1166,7 @@ describe('Server', () => {
           <Document
             app="<h1>Mock app</h1>"
             assetOrigins={[
+              'https://cookie-oven.api.bbc.co.uk',
               'https://ichef.bbci.co.uk',
               localBaseUrl,
               'https://logws1363.ati-host.net?',
