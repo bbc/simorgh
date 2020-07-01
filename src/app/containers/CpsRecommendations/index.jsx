@@ -7,7 +7,7 @@ import useToggle from '#hooks/useToggle';
 import Grid from '../../components/Grid';
 
 const CpsRecommendations = ({ items, parentColumns }) => {
-  const { recommendations, script } = useContext(ServiceContext);
+  const { recommendations, script, service } = useContext(ServiceContext);
   const { enabled } = useToggle('cpsRecommendations');
 
   const { hasStoryRecommendations } = recommendations;
@@ -28,7 +28,7 @@ const CpsRecommendations = ({ items, parentColumns }) => {
       enableGelGutters
     >
       {items.map(({ shortHeadline, assetUri }) => (
-        <Headline script={script}>
+        <Headline script={script} service={service} key={assetUri}>
           <Link href={assetUri}>{shortHeadline}</Link>
         </Headline>
       ))}
