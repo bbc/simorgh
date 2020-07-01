@@ -1,4 +1,3 @@
-import path from 'ramda/src/path';
 import assocPath from 'ramda/src/assocPath';
 import dissocPath from 'ramda/src/dissocPath';
 import loggerMock from '#testHelpers/loggerMock';
@@ -44,7 +43,6 @@ describe('Episode Availability', () => {
     const oneMinuteFromNow = now + oneMinute;
     const sixtyMinutesFromNow = now + sixtyMinutes;
     const oneMinuteAgo = now - oneMinute;
-    const sixtyMinutesAgo = now - sixtyMinutes;
 
     const episodeData = onDemandRadioEpisodeJson;
 
