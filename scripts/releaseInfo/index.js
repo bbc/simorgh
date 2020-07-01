@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 const fs = require('fs');
 const path = require('path');
-const allServices = require('../cypress/support/config/settings');
-const simorghLaunchDates = require('./simorghLaunchDates');
+const allServices = require('../../cypress/support/config/settings');
+const launchDates = require('./launchDates');
 
 const getUrl = (pageType, env) => {
   let url;
@@ -30,6 +30,7 @@ const generateLinks = (service, env, domain) => {
     photoGalleryPage,
     storyPage,
     mostReadPage,
+    onDemandRadio,
   } = allServices()[service].pageTypes;
 
   const frontPageURL = getUrl(frontPage, env);
@@ -67,53 +68,67 @@ const generateLinks = (service, env, domain) => {
     output.push(`[mostRead](${domain}${mostReadURL})`);
   }
 
+  const onDemandRadioURL = getUrl(onDemandRadio, env);
+  if (onDemandRadioURL) {
+    output.push(`[onDemandRadio](${domain}${onDemandRadioURL})`);
+  }
+
   return output.join('<br/>');
 };
 
 const generateLaunchDates = service => {
   const output = [];
-  const serviceLaunch = simorghLaunchDates[service];
+  const serviceLaunch = launchDates[service];
 
-  if (serviceLaunch.frontPage && serviceLaunch.frontPage !== '') {
-    output.push(`__Home__: ${serviceLaunch.frontPage}`);
+  if (serviceLaunch) {
+    if (serviceLaunch.frontPage && serviceLaunch.frontPage !== '') {
+      output.push(`__Home__: ${serviceLaunch.frontPage}`);
+    }
+
+    if (serviceLaunch.articles && serviceLaunch.articles !== '') {
+      output.push(`__Articles__: ${serviceLaunch.articles}`);
+    }
+
+    if (serviceLaunch.liveRadio && serviceLaunch.liveRadio !== '') {
+      output.push(`__Live Radio__: ${serviceLaunch.liveRadio}`);
+    }
+
+    if (serviceLaunch.mediaAssetPage && serviceLaunch.mediaAssetPage !== '') {
+      output.push(`__MAP__: ${serviceLaunch.mediaAssetPage}`);
+    }
+
+    if (
+      serviceLaunch.photoGalleryPage &&
+      serviceLaunch.photoGalleryPage !== ''
+    ) {
+      output.push(`__PGL__: ${serviceLaunch.photoGalleryPage}`);
+    }
+
+    if (serviceLaunch.storyPage && serviceLaunch.storyPage !== '') {
+      output.push(`__STY__: ${serviceLaunch.storyPage}`);
+    }
+
+    if (serviceLaunch.mostReadPage && serviceLaunch.mostReadPage !== '') {
+      output.push(`__Most Read__: ${serviceLaunch.mostReadPage}`);
+    }
+
+    if (serviceLaunch.onDemandRadio && serviceLaunch.onDemandRadio !== '') {
+      output.push(`__On Demand Radio__: ${serviceLaunch.onDemandRadio}`);
+    }
+
+    return output.join('<br/>');
   }
-
-  if (serviceLaunch.articles && serviceLaunch.articles !== '') {
-    output.push(`__Articles__: ${serviceLaunch.articles}`);
-  }
-
-  if (serviceLaunch.liveRadio && serviceLaunch.liveRadio !== '') {
-    output.push(`__Live Radio__: ${serviceLaunch.liveRadio}`);
-  }
-
-  if (serviceLaunch.mediaAssetPage && serviceLaunch.mediaAssetPage !== '') {
-    output.push(`__MAP__: ${serviceLaunch.mediaAssetPage}`);
-  }
-
-  if (serviceLaunch.photoGalleryPage && serviceLaunch.photoGalleryPage !== '') {
-    output.push(`__PGL__: ${serviceLaunch.photoGalleryPage}`);
-  }
-
-  if (serviceLaunch.storyPage && serviceLaunch.storyPage !== '') {
-    output.push(`__STY__: ${serviceLaunch.storyPage}`);
-  }
-
-  if (serviceLaunch.mostReadPage && serviceLaunch.mostReadPage !== '') {
-    output.push(`__Most Read__: ${serviceLaunch.mostReadPage}`);
-  }
-
-  return output.join('<br/>');
 };
 
 const scriptDir = path.resolve(__dirname);
-const SimorghPages = `${scriptDir}/../docs/Simorgh-Release-Info.md`;
-const stream = fs.createWriteStream(SimorghPages);
+const SimorghReleaseInfo = `${scriptDir}/../../docs/Simorgh-Release-Info.md`;
+const stream = fs.createWriteStream(SimorghReleaseInfo);
 
 stream.once('open', () => {
   stream.write(
-    '<!--Please update the service launch date in scripts/simorghLaunchDates.js\n' +
-      'This table can then be generated using the following command: `node scripts/simorghPages.js`\n' +
-      'Remember to commit and push the changes to both simorghLaunchDates.js and Simorgh-Release-Info.md -->\n',
+    '<!--Please update the service launch date in scripts/releaseInfo/launchDates.js\n' +
+      'This table can then be generated using the following command: `node scripts/releaseInfo`\n' +
+      'Remember to commit and push the changes to both launchDates.js and Simorgh-Release-Info.md -->\n',
   );
 
   stream.write(
@@ -136,5 +151,5 @@ stream.once('open', () => {
 
     stream.write(`| ${items.join(' | ')} |\n`);
   });
-  console.log(`Completed writing file ${SimorghPages}`);
+  console.log(`Completed writing file ${SimorghReleaseInfo}`);
 });
