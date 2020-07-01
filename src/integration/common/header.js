@@ -1,4 +1,4 @@
-export default () => {
+export default service => {
   describe('Header', () => {
     it('I can see the branding', () => {
       const logo = document.querySelector('header svg');
@@ -8,12 +8,14 @@ export default () => {
       expect(logo.parentNode.textContent).toMatchSnapshot();
     });
 
-    it("I can see the offscreen text with product's language code set to English", () => {
-      const langCode = document.querySelector(
-        'header div span span[lang="en-GB"]',
-      );
-      expect(langCode).toBeInTheDocument();
-    });
+    if (service !== 'news' && service !== 'scotland') {
+      it("I can see the offscreen text with product's language code set to English", () => {
+        const langCode = document.querySelector(
+          'header div span span[lang="en-GB"]',
+        );
+        expect(langCode).toBeInTheDocument();
+      });
+    }
 
     describe('Navigation link', () => {
       const navigationLinks = document

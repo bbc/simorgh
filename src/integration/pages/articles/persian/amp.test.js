@@ -1,6 +1,6 @@
 /**
- * @service mundo
- * @pathname /mundo/articles/ce42wzqr2mko
+ * @service persian
+ * @pathname /persian/articles/c4vlle3q337o
  */
 
 import runCrossPlatformTests from '../crossPlatformTests';
