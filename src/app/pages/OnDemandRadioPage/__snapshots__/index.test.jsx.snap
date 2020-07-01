@@ -246,6 +246,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   display: inline-block;
   width: 100%;
   padding-bottom: 0.5rem;
+  word-break: break-word;
 }
 
 .c9 {
@@ -525,6 +526,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 @media (min-width:37.5rem) {
   .c7 {
     padding-bottom: 0;
+    word-break: break-word;
     line-height: 3.5rem;
   }
 }
@@ -765,6 +767,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   display: inline-block;
   width: 100%;
   padding-bottom: 0.5rem;
+  word-break: break-word;
 }
 
 .c9 {
@@ -1054,6 +1057,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 @media (min-width:37.5rem) {
   .c7 {
     padding-bottom: 0;
+    word-break: break-word;
     line-height: 3.5rem;
   }
 }
@@ -1511,6 +1515,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   display: inline-block;
   width: 100%;
   padding-bottom: 0.5rem;
+  word-break: break-word;
 }
 
 .c9 {
@@ -1809,6 +1814,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 @media (min-width:37.5rem) {
   .c7 {
     padding-bottom: 0;
+    word-break: break-word;
     line-height: 3.5rem;
   }
 }
@@ -2048,6 +2054,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   display: inline-block;
   width: 100%;
   padding-bottom: 0.5rem;
+  word-break: break-word;
 }
 
 .c9 {
@@ -2346,6 +2353,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 @media (min-width:37.5rem) {
   .c7 {
     padding-bottom: 0;
+    word-break: break-word;
     line-height: 3.5rem;
   }
 }
