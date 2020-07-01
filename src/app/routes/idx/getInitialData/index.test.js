@@ -1,7 +1,9 @@
-import getInitialData from '.';
+import getInitialData, { hasRadioSchedule } from '.';
 import idxPageJson from '#data/persian/afghanistan/index.json';
+import getConfig from '../../utils/getConfig';
 
 fetch.mockResponse(JSON.stringify(idxPageJson));
+jest.mock('../../utils/getConfig', () => jest.fn());
 
 describe('Get intial data from IDX page', () => {
   afterEach(() => {
@@ -15,5 +17,51 @@ describe('Get intial data from IDX page', () => {
 
     expect(pageData.metadata.type).toEqual('IDX');
     expect(pageData.content.groups.length).toBeGreaterThan(1);
+  });
+});
+
+describe('hasRadioSchedule', () => {
+  it('returns true if service and idx page has radio schedule', async () => {
+    getConfig.mockImplementationOnce(() => ({
+      radioSchedule: {
+        hasRadioSchedule: true,
+        onIdxPage: true,
+      },
+    }));
+
+    expect(await hasRadioSchedule('mock-service')).toBe(true);
+  });
+
+  it('returns false if service has radio schedule but front page does not', async () => {
+    getConfig.mockImplementationOnce(() => ({
+      radioSchedule: {
+        hasRadioSchedule: true,
+        onIdxPage: false,
+      },
+    }));
+
+    expect(await hasRadioSchedule('mock-service')).toBe(false);
+  });
+
+  it('returns false if neither service or idx page has radio schedule', async () => {
+    getConfig.mockImplementationOnce(() => ({
+      radioSchedule: {
+        hasRadioSchedule: false,
+        onIdxPage: false,
+      },
+    }));
+
+    expect(await hasRadioSchedule('mock-service')).toBe(false);
+  });
+
+  it('returns false if neither service is misconfigured to not have radio schedule, but service has', async () => {
+    getConfig.mockImplementationOnce(() => ({
+      radioSchedule: {
+        hasRadioSchedule: false,
+        onIdxPage: true,
+      },
+    }));
+
+    expect(await hasRadioSchedule('mock-service')).toBe(false);
   });
 });
