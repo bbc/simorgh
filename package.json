@@ -39,7 +39,9 @@
     "test:linkey": "node scripts/linkeySetup.js && jest src/app/lib/config/services/*.test.js --verbose true; npm run test:linkey:cleanup",
     "test:linkey:cleanup": "find src/app/lib/config/services -type f -name '*.test.js' -delete",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
-    "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --env.config='server'"
+    "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --env.config='server'",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -133,7 +135,8 @@
     "styled-normalize": "^8.0.7",
     "url-parse": "^1.4.7",
     "uuid": "^3.4.0",
-    "winston": "^3.2.1"
+    "winston": "^3.2.1",
+    "snyk": "^1.358.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
@@ -248,5 +251,6 @@
     "commitHash": "383522b",
     "deployEnvironment": "green",
     "version": "1.0.0"
-  }
+  },
+  "snyk": true
 }
