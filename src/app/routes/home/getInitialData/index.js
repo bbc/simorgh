@@ -48,7 +48,7 @@ export default async ({ path, service, variant }) => {
       status,
       pageData: transformJson(json),
     };
-  } catch ({ error = true, status = 500 }) {
-    return { error, status };
+  } catch ({ message, status }) {
+    return { error: message, status };
   }
 };

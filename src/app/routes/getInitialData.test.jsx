@@ -23,21 +23,8 @@ routes
       const actual = await getInitialData(MOCK_PATH);
 
       expect(actual.status).toEqual(502);
-      expect(actual.error).toMatch('Error: Unexpected upstream response');
-    });
-
-    it(`${pageType} - should handle Ares returning unexpected data`, async () => {
-      global.fetch.mockResponseOnce(
-        JSON.stringify({
-          dataIsNotAsExpected: 'dataIsNotAsExpected',
-        }),
-      );
-
-      const actual = await getInitialData(MOCK_PATH);
-
-      expect(actual.status).toEqual(502);
-      expect(actual.error.toString()).toMatch(
-        'Error: Unexpected data format in response when requesting',
+      expect(actual.error).toMatch(
+        'Unexpected upstream response (HTTP status code 500) when requesting',
       );
     });
   });

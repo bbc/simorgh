@@ -76,7 +76,7 @@ export default async ({ path: pathname, service, variant }) => {
         ...additionalPageData,
       },
     };
-  } catch ({ error = true, status = 500 }) {
-    return { error, status };
+  } catch ({ message, status }) {
+    return { error: message, status };
   }
 };

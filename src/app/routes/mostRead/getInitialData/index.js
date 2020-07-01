@@ -11,7 +11,7 @@ export default async ({ service, variant }) => {
       status,
       pageData: { ...json, ...pageTypeMeta },
     };
-  } catch ({ error = true, status = 500 }) {
-    return { error, status };
+  } catch ({ message, status }) {
+    return { error: message, status };
   }
 };

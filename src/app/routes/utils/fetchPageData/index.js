@@ -4,18 +4,13 @@ import { getQueryString, getUrlPath } from '#lib/utilities/urlParser';
 import getBaseUrl from './utils/getBaseUrl';
 import onClient from '#lib/utilities/onClient';
 import isLive from '#lib/utilities/isLive';
-import {
-  DATA_REQUEST_RECEIVED,
-  DATA_NOT_FOUND,
-  DATA_FETCH_ERROR,
-} from '#lib/logger.const';
+import { DATA_REQUEST_RECEIVED, DATA_NOT_FOUND } from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
-const STATUS_OK = 200;
+const OK = 200;
 const BAD_GATEWAY = 502;
 const INTERNAL_SERVER_ERROR = 500;
-const STATUS_NOT_FOUND = 404;
-const upstreamStatusCodesToPropagate = [STATUS_OK, STATUS_NOT_FOUND];
+const NOT_FOUND = 404;
 
 const ampRegex = /.amp$/;
 
@@ -32,53 +27,39 @@ export const getUrl = pathname => {
   return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
 };
 
-const validateData = data => {
-  if (data) {
-    return 'content' in data;
-  }
-
-  return false;
-};
-
 const handleResponse = url => async response => {
   const { status } = response;
+  const json = await response.json();
 
-  if (upstreamStatusCodesToPropagate.includes(status)) {
-    const json = await response.json();
-    const dataIsValid = validateData(json);
-
-    if (status === STATUS_NOT_FOUND) {
-      logger.error(DATA_NOT_FOUND, {
-        url,
-        status,
-      });
-
-      return { status, error: DATA_NOT_FOUND };
-    }
-
-    if (!dataIsValid) {
-      throw new Error(
-        `Unexpected data format in response when requesting ${url}`,
-      );
-    }
-
+  if (status === OK) {
     return {
       status,
       json,
     };
   }
 
-  throw new Error(
-    `Unexpected upstream response (HTTP status code ${status}) when requesting ${url}`,
-  );
+  const error = new Error();
+
+  if (status === NOT_FOUND) {
+    error.message = DATA_NOT_FOUND;
+    error.status = NOT_FOUND;
+
+    throw error;
+  }
+
+  error.message = `Unexpected upstream response (HTTP status code ${status}) when requesting ${url}`;
+
+  throw error;
 };
 
-const handleError = e => {
-  const errorMessage = e.toString();
-  const error = new Error(errorMessage);
-  error.status = onClient() ? BAD_GATEWAY : INTERNAL_SERVER_ERROR;
+const handleError = url => ({ message, status }) => {
+  const error = new Error(message);
+  error.status = status || (onClient() ? BAD_GATEWAY : INTERNAL_SERVER_ERROR);
 
-  logger.error(DATA_FETCH_ERROR, { error: errorMessage });
+  logger.error(message, {
+    url,
+    status,
+  });
 
   throw error;
 };
@@ -88,7 +69,7 @@ const fetchData = pathname => {
 
   logger.info(DATA_REQUEST_RECEIVED, { url });
 
-  return fetch(url).then(handleResponse(url)).catch(handleError);
+  return fetch(url).then(handleResponse(url)).catch(handleError(url));
 };
 
 export default fetchData;
