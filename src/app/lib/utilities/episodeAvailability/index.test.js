@@ -79,7 +79,7 @@ describe('Episode Availability', () => {
         episodeData,
       );
 
-      describe('because availableFrom is in the past, and availableUntil does not exist', () => {
+      describe('because availableFrom is in the past and availableUntil does not exist', () => {
         const episodeWithAvailableFromInPastNoAvailableUntil = dissocPath(
           ['content', 'blocks', '0', 'versions', '0', 'availableUntil'],
           episodeAvailableFromOneMinuteAgo,
@@ -100,7 +100,7 @@ describe('Episode Availability', () => {
         });
       });
 
-      describe('because availableFrom is in the past, and availableUntil is in the future', () => {
+      describe('because availableFrom is in the past and availableUntil is in the future', () => {
         const episodeWithAvailableFromInPastAvailableUntilInFuture = assocPath(
           ['content', 'blocks', '0', 'versions', '0', 'availableUntil'],
           sixtyMinutesFromNow,
@@ -130,7 +130,7 @@ describe('Episode Availability', () => {
         episodeData,
       );
 
-      describe('because availableFrom is in the future, and availableUntil does not exist', () => {
+      describe('because availableFrom is in the future and availableUntil does not exist', () => {
         const episodeWithAvailableFromInFutureNoAvailableUntil = dissocPath(
           ['content', 'blocks', '0', 'versions', '0', 'availableUntil'],
           episodeAvailableFromOneMinuteInFuture,
