@@ -22,7 +22,7 @@ NB there is further documentation colocated with relevant code. The above list i
 <!-- prettier-ignore -->
 | Column Name               | Issues/Pull Requests that belong in this column | When to move card to the next column | Additional context |
 | ------------------------- | ------------------------------------------------| ------------------------------------ |------------------- |
-| Coming soon | Contains issues that we are going to work on within the next couple of weeks. | Once the issue has been refined by a World Service team, then it can be manually moved to "Backlog (Ready for Dev)". | n/a |
+| Coming Soon | Contains issues that we are going to work on within the next couple of weeks. | Once the issue has been refined by a World Service team, then it can be manually moved to "Backlog (Ready for Dev)". | n/a |
 | Ready for Dev | Contains issues that have been refined. | Once you have selected an issue to work on, you must assign yourself to it and manually move the issue to the "Issues in progress".| n/a |
 | Blocked | Contains issues/PRs that are blocked by either internal or external factors. | Manually move the issue/PR when it is no longer blocked. | n/a |
 | Issues in progress | Contains issues that are in working progress. | If the PR that uses a [keyword to link the issue](https://help.github.com/en/articles/closing-issues-using-keywords) has been merged, then the cards in this column will move automatically to "Done". | PRs should not use keywords unless they definitely complete the entire issue. |
