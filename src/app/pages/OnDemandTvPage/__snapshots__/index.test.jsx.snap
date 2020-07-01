@@ -7,7 +7,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
   </div>
   <noscript />
   <main
-    class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1brqmij-2 dmHANZ"
+    class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1brqmij-1 cyJdzv"
     dir="rtl"
     role="main"
   >
@@ -25,23 +25,19 @@ exports[`should show the expired content message if episode is expired 1`] = `
         ۲۷ می ۲۰۲۰
       </h1>
       <div
-        class="StyledGelWrapperGrid-sc-1brqmij-0 eydjDr"
+        class="StyledMessageContainer-sc-1brqmij-0 cKKoVQ"
       >
         <div
-          class="StyledMessageContainer-sc-1brqmij-1 iWuvJM"
+          class="StyledWrapper-sc-1pnftlt-0 jywlaE"
         >
           <div
-            class="StyledWrapper-sc-1pnftlt-0 jywlaE"
+            class="MessageWrapper-sc-1pnftlt-1 dORUdB"
           >
-            <div
-              class="MessageWrapper-sc-1pnftlt-1 dORUdB"
+            <strong
+              class="StyledMessage-sc-1pnftlt-2 iRlUPR"
             >
-              <strong
-                class="StyledMessage-sc-1pnftlt-2 iRlUPR"
-              >
-                دغه فایل نور د لاسرسي وړ نه دی.
-              </strong>
-            </div>
+              دغه فایل نور د لاسرسي وړ نه دی.
+            </strong>
           </div>
         </div>
       </div>
