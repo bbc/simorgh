@@ -60,23 +60,23 @@ const transformJson = async (json, pathname) => {
 };
 
 export default async ({ path: pathname, service, variant }) => {
-  const { json, status, error } = await fetchPageData(pathname);
+  try {
+    const { json, status } = await fetchPageData(pathname);
 
-  if (error) {
+    const additionalPageData = await getAdditionalPageData(
+      json,
+      service,
+      variant,
+    );
+
+    return {
+      status,
+      pageData: {
+        ...(await transformJson(json, pathname)),
+        ...additionalPageData,
+      },
+    };
+  } catch ({ error = true, status = 500 }) {
     return { error, status };
   }
-
-  const additionalPageData = await getAdditionalPageData(
-    json,
-    service,
-    variant,
-  );
-
-  return {
-    status,
-    pageData: {
-      ...(await transformJson(json, pathname)),
-      ...additionalPageData,
-    },
-  };
 };

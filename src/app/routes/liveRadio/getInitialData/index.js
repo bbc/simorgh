@@ -19,29 +19,28 @@ const getHeading = path(['content', 'blocks', 0, 'text']);
 const getBodySummary = path(['content', 'blocks', 1, 'text']);
 
 export default async ({ path: pathname }) => {
-  const liveRadioDataPath = overrideRendererOnTest(pathname);
-  const { json, status, error } = await fetchPageData(liveRadioDataPath);
+  try {
+    const liveRadioDataPath = overrideRendererOnTest(pathname);
+    const { json, status } = await fetchPageData(liveRadioDataPath);
+    const pageType = { metadata: { type: 'Live Radio' } };
 
-  if (error) {
+    return {
+      status,
+      pageData: {
+        heading: getHeading(json),
+        bodySummary: getBodySummary(json),
+        language: getLanguage(json),
+        id: getMetaDataId(json),
+        name: getPromoName(json),
+        summary: getPromoSummary(json),
+        pageTitle: getPageTitle(json),
+        contentType: getContentType(json),
+        pageIdentifier: getPageIdentifier(json),
+        masterBrand: getMasterBrand(json),
+        ...pageType,
+      },
+    };
+  } catch ({ error = true, status = 500 }) {
     return { error, status };
   }
-
-  const pageType = { metadata: { type: 'Live Radio' } };
-
-  return {
-    status,
-    pageData: {
-      heading: getHeading(json),
-      bodySummary: getBodySummary(json),
-      language: getLanguage(json),
-      id: getMetaDataId(json),
-      name: getPromoName(json),
-      summary: getPromoSummary(json),
-      pageTitle: getPageTitle(json),
-      contentType: getContentType(json),
-      pageIdentifier: getPageIdentifier(json),
-      masterBrand: getMasterBrand(json),
-      ...pageType,
-    },
-  };
 };

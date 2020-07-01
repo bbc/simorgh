@@ -53,41 +53,39 @@ const getEpisodeAvailability = ({ availableFrom, availableUntil }) => {
 };
 
 export default async ({ path: pathname }) => {
-  const onDemandTvDataPath = overrideRendererOnTest(pathname);
-  const { json, status, error } = await fetchPageData(onDemandTvDataPath);
+  try {
+    const onDemandTvDataPath = overrideRendererOnTest(pathname);
+    const { json, status } = await fetchPageData(onDemandTvDataPath);
+    const pageType = { metadata: { type: 'On Demand TV' } };
+    const availableFrom = getEpisodeAvailableFrom(json);
+    const availableUntil = getEpisodeAvailableUntil(json);
 
-  if (error) {
+    return {
+      status,
+      pageData: {
+        language: getLanguage(json),
+        brandTitle: getBrandTitle(json),
+        id: getId(json),
+        headline: getHeadline(json),
+        shortSynopsis: getShortSynopsis(json),
+        contentType: getContentType(json),
+        pageTitle: getPageTitle(json),
+        pageIdentifier: getPageIdentifier(json),
+        releaseDateTimeStamp: getReleaseDateTimeStamp(json),
+        durationISO8601: getDurationISO8601(json),
+        thumbnailImageUrl: getThumbnailImageUrl(json),
+        promoBrandTitle: getPromoBrandTitle(json),
+        masterBrand: getMasterBrand(json),
+        episodeId: getEpisodeId(json),
+        imageUrl: getImageUrl(json),
+        episodeIsAvailable: getEpisodeAvailability({
+          availableFrom,
+          availableUntil,
+        }),
+        ...pageType,
+      },
+    };
+  } catch ({ error = true, status = 500 }) {
     return { error, status };
   }
-
-  const pageType = { metadata: { type: 'On Demand TV' } };
-
-  const availableFrom = getEpisodeAvailableFrom(json);
-  const availableUntil = getEpisodeAvailableUntil(json);
-
-  return {
-    status,
-    pageData: {
-      language: getLanguage(json),
-      brandTitle: getBrandTitle(json),
-      id: getId(json),
-      headline: getHeadline(json),
-      shortSynopsis: getShortSynopsis(json),
-      contentType: getContentType(json),
-      pageTitle: getPageTitle(json),
-      pageIdentifier: getPageIdentifier(json),
-      releaseDateTimeStamp: getReleaseDateTimeStamp(json),
-      durationISO8601: getDurationISO8601(json),
-      thumbnailImageUrl: getThumbnailImageUrl(json),
-      promoBrandTitle: getPromoBrandTitle(json),
-      masterBrand: getMasterBrand(json),
-      episodeId: getEpisodeId(json),
-      imageUrl: getImageUrl(json),
-      episodeIsAvailable: getEpisodeAvailability({
-        availableFrom,
-        availableUntil,
-      }),
-      ...pageType,
-    },
-  };
 };

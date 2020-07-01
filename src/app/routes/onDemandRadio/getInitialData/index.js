@@ -11,55 +11,59 @@ import getEpisodeAvailability, {
 } from '#lib/utilities/episodeAvailability';
 
 export default async ({ path: pathname }) => {
-  const onDemandRadioDataPath = overrideRendererOnTest(pathname);
-  const { json, status, error } = await fetchPageData(onDemandRadioDataPath);
+  try {
+    const onDemandRadioDataPath = overrideRendererOnTest(pathname);
+    const { json, status } = await fetchPageData(onDemandRadioDataPath);
 
-  if (error) {
+    const episodeIsAvailable = getEpisodeAvailability(json);
+
+    const withLogging = pathWithLogging(
+      getUrl(json),
+      RADIO_MISSING_FIELD,
+      json,
+    );
+    const get = (fieldPath, logLevel) =>
+      logLevel ? withLogging(fieldPath, { logLevel }) : path(fieldPath, json);
+
+    return {
+      status,
+      pageData: {
+        metadata: { type: 'On Demand Radio' },
+        language: get(['metadata', 'language'], LOG_LEVELS.INFO),
+        brandTitle: get(['metadata', 'title'], LOG_LEVELS.INFO),
+        episodeTitle: get(['content', 'blocks', 0, 'title']),
+        headline: get(['promo', 'headlines', 'headline'], LOG_LEVELS.WARN),
+        shortSynopsis: get(['promo', 'media', 'synopses', 'short']),
+        id: get(['metadata', 'id']),
+        summary: get(
+          ['content', 'blocks', 0, 'synopses', 'short'],
+          LOG_LEVELS.INFO,
+        ),
+        contentType: get(
+          ['metadata', 'analyticsLabels', 'contentType'],
+          LOG_LEVELS.INFO,
+        ),
+        episodeId: get(['content', 'blocks', 0, 'id'], LOG_LEVELS.ERROR),
+        masterBrand: get(['metadata', 'createdBy'], LOG_LEVELS.ERROR),
+        releaseDateTimeStamp: get(
+          ['metadata', 'releaseDateTimeStamp'],
+          LOG_LEVELS.WARN,
+        ),
+        pageTitle: get(['metadata', 'analyticsLabels', 'pageTitle']),
+        pageIdentifier: get(['metadata', 'analyticsLabels', 'pageIdentifier']),
+        imageUrl: get(['content', 'blocks', 0, 'imageUrl'], LOG_LEVELS.INFO),
+        promoBrandTitle: get(['promo', 'brand', 'title']),
+        durationISO8601: get(
+          ['promo', 'media', 'versions', 0, 'durationISO8601'],
+          LOG_LEVELS.INFO,
+        ),
+        thumbnailImageUrl: getPlaceholderImageUrlUtil(
+          get(['promo', 'media', 'imageUrl'], LOG_LEVELS.INFO),
+        ),
+        episodeIsAvailable,
+      },
+    };
+  } catch ({ error = true, status = 500 }) {
     return { error, status };
   }
-
-  const episodeIsAvailable = getEpisodeAvailability(json);
-
-  const withLogging = pathWithLogging(getUrl(json), RADIO_MISSING_FIELD, json);
-  const get = (fieldPath, logLevel) =>
-    logLevel ? withLogging(fieldPath, { logLevel }) : path(fieldPath, json);
-
-  return {
-    status,
-    pageData: {
-      metadata: { type: 'On Demand Radio' },
-      language: get(['metadata', 'language'], LOG_LEVELS.INFO),
-      brandTitle: get(['metadata', 'title'], LOG_LEVELS.INFO),
-      episodeTitle: get(['content', 'blocks', 0, 'title']),
-      headline: get(['promo', 'headlines', 'headline'], LOG_LEVELS.WARN),
-      shortSynopsis: get(['promo', 'media', 'synopses', 'short']),
-      id: get(['metadata', 'id']),
-      summary: get(
-        ['content', 'blocks', 0, 'synopses', 'short'],
-        LOG_LEVELS.INFO,
-      ),
-      contentType: get(
-        ['metadata', 'analyticsLabels', 'contentType'],
-        LOG_LEVELS.INFO,
-      ),
-      episodeId: get(['content', 'blocks', 0, 'id'], LOG_LEVELS.ERROR),
-      masterBrand: get(['metadata', 'createdBy'], LOG_LEVELS.ERROR),
-      releaseDateTimeStamp: get(
-        ['metadata', 'releaseDateTimeStamp'],
-        LOG_LEVELS.WARN,
-      ),
-      pageTitle: get(['metadata', 'analyticsLabels', 'pageTitle']),
-      pageIdentifier: get(['metadata', 'analyticsLabels', 'pageIdentifier']),
-      imageUrl: get(['content', 'blocks', 0, 'imageUrl'], LOG_LEVELS.INFO),
-      promoBrandTitle: get(['promo', 'brand', 'title']),
-      durationISO8601: get(
-        ['promo', 'media', 'versions', 0, 'durationISO8601'],
-        LOG_LEVELS.INFO,
-      ),
-      thumbnailImageUrl: getPlaceholderImageUrlUtil(
-        get(['promo', 'media', 'imageUrl'], LOG_LEVELS.INFO),
-      ),
-      episodeIsAvailable,
-    },
-  };
 };

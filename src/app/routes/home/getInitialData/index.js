@@ -36,19 +36,19 @@ export const hasRadioSchedule = async (service, variant) => {
 };
 
 export default async ({ path, service, variant }) => {
-  const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
-  const pageDataPromise = fetchPageData(path);
+  try {
+    const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
+    const pageDataPromise = fetchPageData(path);
 
-  const { json, status, error } = pageHasRadioSchedule
-    ? await withRadioSchedule({ pageDataPromise, service, path })
-    : await pageDataPromise;
+    const { json, status } = pageHasRadioSchedule
+      ? await withRadioSchedule({ pageDataPromise, service, path })
+      : await pageDataPromise;
 
-  if (error) {
+    return {
+      status,
+      pageData: transformJson(json),
+    };
+  } catch ({ error = true, status = 500 }) {
     return { error, status };
   }
-
-  return {
-    status,
-    pageData: transformJson(json),
-  };
 };

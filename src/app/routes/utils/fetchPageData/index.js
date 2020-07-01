@@ -74,14 +74,13 @@ const handleResponse = url => async response => {
 };
 
 const handleError = e => {
-  const error = e.toString();
+  const errorMessage = e.toString();
+  const error = new Error(errorMessage);
+  error.status = onClient() ? BAD_GATEWAY : INTERNAL_SERVER_ERROR;
 
-  logger.error(DATA_FETCH_ERROR, { error });
+  logger.error(DATA_FETCH_ERROR, { error: errorMessage });
 
-  return {
-    error,
-    status: onClient() ? BAD_GATEWAY : INTERNAL_SERVER_ERROR,
-  };
+  throw error;
 };
 
 const fetchData = pathname => {

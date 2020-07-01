@@ -13,14 +13,14 @@ const transformJson = pipe(
 );
 
 export default async ({ path }) => {
-  const { json, status, error } = await fetchPageData(path);
+  try {
+    const { json, status } = await fetchPageData(path);
 
-  if (error) {
+    return {
+      status,
+      pageData: transformJson(json),
+    };
+  } catch ({ error = true, status = 500 }) {
     return { error, status };
   }
-
-  return {
-    status,
-    pageData: transformJson(json),
-  };
 };
