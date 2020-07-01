@@ -10,7 +10,7 @@ import {
 } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
 import { addOverrideQuery } from '#app/routes/utils/overrideRendererOnTest';
-import ampSrcBuilder from './ampSrcBuilder';
+import ampMetadataExtractor from './ampMetadataExtractor';
 import includeClassifier from './includeClassifier';
 import getImageBlock from './getImageBlock';
 
@@ -94,12 +94,15 @@ const convertInclude = async (includeBlock, ...restParams) => {
     return null;
   }
 
-  let ampSrc;
+  let ampMetadata;
   let html;
   if (classification === 'vj-supports-amp') {
-    ampSrc = ampSrcBuilder(href);
+    ampMetadata = ampMetadataExtractor(
+      href,
+      process.env.SIMORGH_INCLUDES_BASE_AMP_URL,
+    );
     logger.info(INCLUDE_IFRAME_REQUEST_RECEIVED, {
-      url: ampSrc,
+      url: ampMetadata.src,
     });
   }
   if (!isAmp) {
@@ -110,13 +113,12 @@ const convertInclude = async (includeBlock, ...restParams) => {
     html = await fetchMarkup(buildIncludeUrl(href, includeType, pathname));
   }
   const imageBlock = getImageBlock(includeType, includeBlock, isAmp);
-
   return {
     type,
     model: {
       href,
       type: includeType,
-      ...(ampSrc && { ampSrc }),
+      ...(ampMetadata && { ampMetadata }),
       ...(html && { html }),
       ...(imageBlock && { imageBlock }),
     },
