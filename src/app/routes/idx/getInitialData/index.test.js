@@ -32,7 +32,7 @@ describe('hasRadioSchedule', () => {
     expect(await hasRadioSchedule('mock-service')).toBe(true);
   });
 
-  it('returns false if service has radio schedule but front page does not', async () => {
+  it('returns false if service has radio schedule but idx page does not', async () => {
     getConfig.mockImplementationOnce(() => ({
       radioSchedule: {
         hasRadioSchedule: true,
