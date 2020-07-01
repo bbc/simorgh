@@ -44,6 +44,8 @@ import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
 import { ServiceContext } from '#contexts/ServiceContext';
 
+import recommendationsData from './fixtureData/recommendations.ltr.json';
+
 const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
     dir,
@@ -143,7 +145,11 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     include: props => <Include {...props} />,
     social_embed: props => <SocialEmbed {...props} />,
     wsoj: props => (
-      <CpsRecommendations {...props} parentColumns={gridColsMain} />
+      <CpsRecommendations
+        {...props}
+        parentColumns={gridColsMain}
+        items={recommendationsData.items}
+      />
     ),
   };
 
