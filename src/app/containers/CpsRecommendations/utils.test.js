@@ -1,5 +1,5 @@
 import transformToStoryPromoItems from './utils';
-import data from './recommendations.ltr.json';
+import data from '#pages/StoryPage/fixtureData/recommendations.ltr.json';
 
 describe('transformToStoryPromoItems', () => {
   it('should transform a list of recommendation items to a story promo format', () => {
