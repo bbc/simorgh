@@ -21,19 +21,20 @@ const canonicalPathname = 'https://www.bbc.com/service/foo';
 const ampPathname = 'https://www.bbc.com/service/foo.amp';
 
 describe('convertInclude', () => {
-  const includesBaseUrl = 'https://foobar.com/includes';
+  const initialIncludesBaseUrl = process.env.SIMORGH_INCLUDES_BASE_URL;
+  const initialIncludesAmpBaseUrl = process.env.SIMORGH_INCLUDES_BASE_AMP_URL;
 
   beforeEach(() => {
-    process.env.SIMORGH_INCLUDES_BASE_URL = includesBaseUrl;
-    process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = `https://news.files.bbci.co.uk`;
+    process.env.SIMORGH_INCLUDES_BASE_URL = 'https://foobar.com/includes';
+    process.env.SIMORGH_INCLUDES_BASE_AMP_URL = 'https://news.files.bbci.co.uk';
   });
 
   afterEach(() => {
     fetch.resetMocks();
     loggerMock.error.mockClear();
     loggerMock.info.mockClear();
-    delete process.env.SIMORGH_INCLUDES_BASE_URL;
-    delete process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN;
+    process.env.SIMORGH_INCLUDES_BASE_URL = initialIncludesBaseUrl;
+    process.env.SIMORGH_INCLUDES_BASE_AMP_URL = initialIncludesAmpBaseUrl;
   });
 
   it('should fetch and convert an include block to an idt1 block', async () => {
@@ -424,7 +425,7 @@ describe('convertInclude', () => {
     });
   });
 
-  it('should return ampSrc if AMP is supported and include is a VJ on AMP', async () => {
+  it('should return src if AMP is supported and include is a VJ on AMP', async () => {
     fetch.mockResponse(() => Promise.resolve('No fetch call'));
     const includeSupportingAmp =
       '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png';
@@ -440,8 +441,14 @@ describe('convertInclude', () => {
       model: {
         href: includeSupportingAmp,
         type: 'vj',
-        ampSrc:
-          'https://news.files.bbci.co.uk/include/newsspec/21841-green-diet/gahuza/app/amp?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+        ampMetadata: {
+          image:
+            'https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+          imageHeight: '360',
+          imageWidth: '640',
+          src:
+            'https://news.files.bbci.co.uk/include/newsspec/21841-green-diet/gahuza/app/amp?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+        },
       },
     };
     const actual = await convertInclude(input, null, null, ampPathname);
