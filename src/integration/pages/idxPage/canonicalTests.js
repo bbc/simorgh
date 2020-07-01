@@ -8,4 +8,19 @@ export default () => {
   runCrossPlatformTests();
   runCoreCanonicalTests();
   runCanonicalAnalyticsTests();
+
+  describe('Radio Schedule', () => {
+    const hasRadioSchedule = service === 'persian';
+    const id = document.getElementById('Radio-Schedule');
+
+    if (hasRadioSchedule) {
+      it('should be in the document', () => {
+        expect(id).toBeInTheDocument();
+      });
+    } else {
+      it('should not be in the document', () => {
+        expect(id).not.toBeInTheDocument();
+      });
+    }
+  });
 };
