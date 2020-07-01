@@ -1,11 +1,11 @@
 import hasRadioSchedule from './hasRadioSchedule';
 
 describe('hasRadioSchedule', () => {
-  it('should expect false', () => {
+  it('should retrun false for ukrainian', () => {
     expect(hasRadioSchedule('ukrainian', 'default')).resolves.toBeFalsy();
   });
 
-  it('should expect true', () => {
+  it('should return true for persian', () => {
     expect(hasRadioSchedule('persian', 'default')).resolves.toBeTruthy();
   });
 });
