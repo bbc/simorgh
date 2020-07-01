@@ -6,65 +6,29 @@ import { EPISODE_EXPIRED, EPISODE_NOT_YET_AVAILABLE } from '#lib/logger.const';
 import getEpisodeAvailability, { getUrl } from '.';
 import onDemandRadioEpisodeJson from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
 import onDemandRadioBrandJson from '#data/indonesia/bbc_indonesian_radio/w13xtt0s';
-import onDemandTvEpisodeJson from '#data/afrique/bbc_afrique_tv/w13xttmz.json';
-import onDemandTvBrandJson from '#data/somali/bbc_somali_tv/tv_programmes/w13xttqt.json';
+import onDemandTvEpisodeJson from '#data/afrique/bbc_afrique_tv/tv/w3ct05mp';
+import onDemandTvBrandJson from '#data/somali/bbc_somali_tv/tv_programmes/w13xttqt';
 
 describe('Episode Availability', () => {
   describe('getUrl', () => {
     it('should return a valid url for radio episode page', () => {
       const url = getUrl(onDemandRadioEpisodeJson);
-      const service = path(
-        ['relatedContent', 'site', 'name'],
-        onDemandRadioEpisodeJson,
-      ).toLowerCase();
-      const masterBrand = path(
-        ['metadata', 'createdBy'],
-        onDemandRadioEpisodeJson,
-      );
-      const pid = path(['promo', 'locators', 'pid'], onDemandRadioEpisodeJson);
-      expect(url).toEqual(`${service}/${masterBrand}/${pid}`);
+      expect(url).toEqual('pashto/bbc_pashto_radio/w3ct0lz1');
     });
 
     it('should return a valid url for radio brand page', () => {
       const url = getUrl(onDemandRadioBrandJson);
-      const service = path(
-        ['relatedContent', 'site', 'name'],
-        onDemandRadioBrandJson,
-      ).toLowerCase();
-      const masterBrand = path(
-        ['metadata', 'createdBy'],
-        onDemandRadioBrandJson,
-      );
-      const pid = path(
-        ['promo', 'locators', 'brandPid'],
-        onDemandRadioBrandJson,
-      );
-      expect(url).toEqual(`${service}/${masterBrand}/programmes/${pid}`);
+      expect(url).toEqual('indonesia/bbc_indonesian_radio/programmes/w13xtt0s');
     });
 
     it('should return a valid url for tv episode page', () => {
       const url = getUrl(onDemandTvEpisodeJson);
-      const service = path(
-        ['relatedContent', 'site', 'name'],
-        onDemandTvEpisodeJson,
-      ).toLowerCase();
-      const masterBrand = path(
-        ['metadata', 'createdBy'],
-        onDemandTvEpisodeJson,
-      );
-      const pid = path(['promo', 'locators', 'pid'], onDemandTvEpisodeJson);
-      expect(url).toEqual(`${service}/${masterBrand}/${pid}`);
+      expect(url).toEqual('afrique/bbc_afrique_tv/tv/w3ct05mp');
     });
 
     it('should return a valid url for tv brand page', () => {
       const url = getUrl(onDemandTvBrandJson);
-      const service = path(
-        ['relatedContent', 'site', 'name'],
-        onDemandTvBrandJson,
-      ).toLowerCase();
-      const masterBrand = path(['metadata', 'createdBy'], onDemandTvBrandJson);
-      const pid = path(['promo', 'locators', 'brandPid'], onDemandTvBrandJson);
-      expect(url).toEqual(`${service}/${masterBrand}/tv_programmes/${pid}`);
+      expect(url).toEqual('somali/bbc_somali_tv/tv_programmes/w13xttqt');
     });
   });
 
