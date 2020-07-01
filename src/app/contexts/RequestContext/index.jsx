@@ -83,6 +83,7 @@ RequestContextProvider.propTypes = {
   previousPath: string,
   variant: variantPropType,
   timeOnServer: number,
+  canAdvertise: bool,
 };
 
 RequestContextProvider.defaultProps = {
@@ -92,4 +93,5 @@ RequestContextProvider.defaultProps = {
   previousPath: null,
   variant: null,
   timeOnServer: null,
+  canAdvertise: false,
 };

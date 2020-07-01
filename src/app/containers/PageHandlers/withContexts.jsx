@@ -65,7 +65,7 @@ const WithContexts = Component => {
     service: string.isRequired,
     variant: variantPropType,
     timeOnServer: number,
-    canAdvertise: bool.isRequired,
+    canAdvertise: bool,
   };
 
   WithContextsContainer.defaultProps = {
@@ -76,6 +76,7 @@ const WithContexts = Component => {
     previousPath: null,
     variant: null,
     timeOnServer: null,
+    canAdvertise: false,
   };
 
   return WithContextsContainer;
