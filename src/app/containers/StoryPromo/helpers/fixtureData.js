@@ -173,7 +173,7 @@ export const podcastLinkItem = {
 
 export const guideLinkItem = {
   name: 'Story Promo of type Guide',
-  summary: 'With no timestamp',
+  summary: 'Guide promo',
   indexImage: {
     id: 63692548,
     subType: 'index',

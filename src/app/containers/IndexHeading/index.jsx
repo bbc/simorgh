@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { node } from 'prop-types';
 import styled from 'styled-components';
+import { node } from 'prop-types';
 import IndexHeading from '@bbc/psammead-heading-index';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,

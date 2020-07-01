@@ -14,6 +14,7 @@ export const service = {
     lang: `vi`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Cập nhật',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-vietnamese',
     atiAnalyticsProducerId: '97',
     chartbeatDomain: 'vietnamese.bbc.co.uk',
@@ -142,6 +143,7 @@ export const service = {
       media: {
         noJs: 'Máy của bạn không hỗ trợ nghe xem',
         contentExpired: 'Chương trình không còn nữa.',
+        contentNotYetAvailable: 'Chương trình này chưa sẵn sàng.',
         audio: 'Audio',
         photogallery: 'Gallery hình ảnh',
         video: 'Video',

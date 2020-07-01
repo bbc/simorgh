@@ -18,6 +18,7 @@ export const service = {
     lang: `am`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ተሻሽሏል',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-amharic',
     atiAnalyticsProducerId: '4',
     chartbeatDomain: 'amharic.bbc.co.uk',
@@ -141,6 +142,7 @@ export const service = {
       media: {
         noJs: 'የእርሶ መሳሪያ ሚዲያ ፕሌይ ባክን ማጫወት ኣልተቻለም።',
         contentExpired: 'ይህንን ካሁን በኋላ ማግኘት አይችሉም፡፡',
+        contentNotYetAvailable: 'ይህ ክፍል አርስዎ ገና አልተገኘም',
         audio: 'ድምጽ',
         photogallery: 'የፎቶ መድብሎች',
         video: 'ቪዲዮ',

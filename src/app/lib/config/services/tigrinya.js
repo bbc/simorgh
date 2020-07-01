@@ -18,6 +18,7 @@ export const service = {
     lang: `ti`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ዝተመሓየሸ',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-tigrinya',
     atiAnalyticsProducerId: '91',
     chartbeatDomain: 'tigrinya.bbc.co.uk',
@@ -141,6 +142,7 @@ export const service = {
       media: {
         noJs: 'ትጥቀምሉ ዘለኹም መሳርሒ ኣይተቐበሎን።',
         contentExpired: 'እዚ እትደልይዎ ዘለኹም ትሕዝቶ የለን',
+        contentNotYetAvailable: 'እዚ ትሕዝቶ ንምጽዋት የለን፡፡',
         audio: 'ድምጺ',
         photogallery: 'ስእልታት',
         video: 'ቪድዮ',

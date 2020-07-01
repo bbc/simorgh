@@ -382,6 +382,14 @@ describe('StoryPromo Container', () => {
 
         expect(container.getElementsByTagName('time').length).toEqual(0);
       });
+
+      it('should not render a heading tag', () => {
+        const { container } = render(
+          <WrappedStoryPromo item={guideLinkItem} />,
+        );
+
+        expect(container.getElementsByTagName('h3').length).toEqual(0);
+      });
     });
 
     describe('Recommendation Promo', () => {

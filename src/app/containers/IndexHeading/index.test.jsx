@@ -1,23 +1,23 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import IndexHeadingContainer from '.';
+import IndexHeading from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
-const IndexHeadingWithContext = service => (
+const IndexHeadingWithContext = (service, pageType) => (
   <ServiceContextProvider service={service}>
-    <IndexHeadingContainer>Index Heading</IndexHeadingContainer>
+    <IndexHeading pageType={pageType}>Index Heading</IndexHeading>
   </ServiceContextProvider>
 );
 
 describe('Index Heading', () => {
   describe('snapshot', () => {
     shouldMatchSnapshot(
-      'should render correctly',
+      'should render correctly for IDX',
       IndexHeadingWithContext('ukrainian'),
     );
 
     shouldMatchSnapshot(
-      'should render rtl correctly',
+      'should render rtl correctly for IDX',
       IndexHeadingWithContext('arabic'),
     );
   });

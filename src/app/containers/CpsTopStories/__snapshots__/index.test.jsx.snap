@@ -12,7 +12,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
       class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD StyledSectionLabel-opyob2-2 jpnPtT"
       >
         <div
           class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -27,7 +27,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
               class="FlexRow-wx5kdp-2 dVBNyZ"
             >
               <span
-                class="Title-wx5kdp-4 BeqZV"
+                class="Title-wx5kdp-4 cERxQI"
                 dir="ltr"
                 id="top-stories-heading"
               >
@@ -49,7 +49,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
             class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
           >
             <div
-              class="TextGridItem-sc-1lkbq5i-0 gCyGvI"
+              class="TextGridItem-sc-1lkbq5i-0 iWRqFl"
               dir="ltr"
             >
               <h3
@@ -84,7 +84,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
             class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
           >
             <div
-              class="TextGridItem-sc-1lkbq5i-0 gCyGvI"
+              class="TextGridItem-sc-1lkbq5i-0 iWRqFl"
               dir="ltr"
             >
               <h3
@@ -129,7 +129,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
       class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD StyledSectionLabel-opyob2-2 jpnPtT"
       >
         <div
           class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -144,7 +144,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
               class="FlexRow-wx5kdp-2 dVBNyZ"
             >
               <span
-                class="Title-wx5kdp-4 BeqZV"
+                class="Title-wx5kdp-4 cERxQI"
                 dir="ltr"
                 id="top-stories-heading"
               >
@@ -161,7 +161,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
           class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
         >
           <div
-            class="TextGridItem-sc-1lkbq5i-0 gCyGvI"
+            class="TextGridItem-sc-1lkbq5i-0 iWRqFl"
             dir="ltr"
           >
             <h3
