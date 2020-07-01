@@ -11,9 +11,15 @@ import onClient from '#lib/utilities/onClient';
 
 const HeaderContainer = () => {
   const { pageType } = useContext(RequestContext);
-  const { service, script, translations, dir, scriptLink } = useContext(
-    ServiceContext,
-  );
+  const {
+    service,
+    script,
+    translations,
+    dir,
+    scriptLink,
+    lang,
+    headerFooterLang,
+  } = useContext(ServiceContext);
   const { skipLinkText } = translations;
   const borderBottom = pageType !== 'frontPage';
 
@@ -25,14 +31,26 @@ const HeaderContainer = () => {
 
   const isOperaMini = onClient() && window.operamini;
 
+  // 'headerFooterLang' value is only available in the Ukrainian config as our ukraine_in_russian pages will have
+  // a Ukrainian text for the header and footer but a Russian text for the main element.
+  // However, the skip to content link will also be in Russian, so we need to pass the `ru-UA` lang code to it.
+  const headerLangAttribute = headerFooterLang && { lang: headerFooterLang };
+  const skipLinkLangAttribute = headerLangAttribute && { lang };
+
   const skipLink = !isOperaMini && (
-    <SkipLink service={service} script={script} dir={dir} href="#content">
+    <SkipLink
+      service={service}
+      script={script}
+      dir={dir}
+      href="#content"
+      {...skipLinkLangAttribute}
+    >
       {skipLinkText}
     </SkipLink>
   );
 
   return (
-    <header role="banner">
+    <header role="banner" {...headerLangAttribute}>
       <ConsentBanner />
       <BrandContainer
         borderBottom={borderBottom}
