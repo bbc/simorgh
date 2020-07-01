@@ -7,11 +7,14 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
+  GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
 import pathOr from 'ramda/src/pathOr';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import { MediaMessage } from '@bbc/psammead-media-player';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
@@ -30,21 +33,21 @@ import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import AVPlayer from '#containers/AVPlayer';
 
-const StyledGelWrapperGrid = styled.div`
-  padding-top: ${GEL_SPACING_TRPL};
-`;
-
 const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
 const StyledMessageContainer = styled.div`
-  margin-top: ${GEL_SPACING_TRPL};
+  margin: ${GEL_SPACING_QUIN} 0 ${GEL_SPACING_TRPL};
   padding-top: ${landscapeRatio};
   position: relative;
   overflow: hidden;
+
+  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    margin-top: ${GEL_SPACING_DBL};
+  }
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    margin: 0 -${GEL_SPACING_DBL};
+    margin: ${GEL_SPACING_DBL} -${GEL_SPACING_DBL} 0;
   }
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    margin: 0 -${GEL_SPACING};
+    margin: ${GEL_SPACING} -${GEL_SPACING} 0;
   }
 `;
 
@@ -64,12 +67,17 @@ const StyledGelPageGrid = styled(GelPageGrid)`
 `;
 
 const StyledVideoPlayer = styled(AVPlayer)`
-  margin-top: ${GEL_SPACING_TRPL};
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    margin: ${GEL_SPACING_QUIN} 0 ${GEL_SPACING_TRPL};
+  }
+  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    margin-top: ${GEL_SPACING_DBL};
+  }
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    margin: 0 -${GEL_SPACING_DBL};
+    margin: ${GEL_SPACING_DBL} -${GEL_SPACING_DBL} 0;
   }
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    margin: 0 -${GEL_SPACING};
+    margin: ${GEL_SPACING} -${GEL_SPACING} 0;
   }
 `;
 
@@ -170,28 +178,21 @@ const OnDemandTvPage = ({ pageData }) => {
           <VisuallyHiddenText as="h1" tabIndex="-1" id="content">
             {brandTitle}, {formattedTimestamp}
           </VisuallyHiddenText>
-          <StyledGelWrapperGrid
-            columns={getGroups(6, 6, 6, 6, 6, 6)}
-            enableGelGutters
-          >
-            {episodeIsAvailable ? (
-              <StyledVideoPlayer
-                embedUrl={embedUrl}
-                assetId={episodeId}
-                placeholderSrc={getPlaceholderImageUrl(imageUrl)}
-                type="video"
-                title="On-demand TV"
-                iframeTitle={iframeTitle}
-              />
-            ) : (
-              <StyledMessageContainer>
-                <MediaMessage
-                  service={service}
-                  message={expiredContentMessage}
-                />
-              </StyledMessageContainer>
-            )}
-          </StyledGelWrapperGrid>
+          {episodeIsAvailable ? (
+            <StyledVideoPlayer
+              embedUrl={embedUrl}
+              assetId={episodeId}
+              placeholderSrc={getPlaceholderImageUrl(imageUrl)}
+              type="video"
+              title="On-demand TV"
+              iframeTitle={iframeTitle}
+            />
+          ) : (
+            <StyledMessageContainer>
+              <MediaMessage service={service} message={expiredContentMessage} />
+            </StyledMessageContainer>
+          )}
+
           <OnDemandHeadingBlock
             brandTitle={brandTitle}
             releaseDateTimeStamp={releaseDateTimeStamp}
