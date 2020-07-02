@@ -2526,15 +2526,15 @@ module.exports = () => ({
         environments: {
           live: {
             paths: [
-              '/korean/bbc_korean_radio/programmes/w13xttlm', // Brand
-              '/korean/bbc_korean_radio/w3ct0kfm', // Episode
+              '/korean/bbc_korean_radio/programmes/w13xttll', // Brand
+              '/korean/bbc_korean_radio/w3ct0kqp', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
-              '/korean/bbc_korean_radio/programmes/w13xttlm', // Brand
-              '/korean/bbc_korean_radio/w3ct0kfm', // Episode
+              '/korean/bbc_korean_radio/programmes/w13xttll', // Brand
+              '/korean/bbc_korean_radio/w3ct0kqp', // Episode
             ],
             enabled: true,
           },
