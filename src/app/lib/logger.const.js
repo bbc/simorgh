@@ -11,7 +11,6 @@ const logCodes = {
   DATA_FETCH_ERROR: 'data_fetch_error',
   DATA_NOT_FOUND: 'data_response_404',
   DATA_REQUEST_RECEIVED: 'data_request_received',
-  DATA_PROCESSING_ERROR: 'data_processing_error',
 
   // Files
   LOCAL_SENDFILE_ERROR: 'local_sendfile_error',
