@@ -1,13 +1,13 @@
 /* eslint-disable import/first */
 /* eslint-disable import/order */
-import sendCustomMetric from './index.js';
+import sendCustomMetric from '.';
 
 // mocking of aws-emf-metrics logic borrowed from https://github.com/awslabs/aws-embedded-metrics-node/blob/master/examples/testing/tests/module.jest.test.js
 jest.mock('aws-embedded-metrics', () => {
   const { Unit } = jest.requireActual('aws-embedded-metrics');
 
   // here we're mocking the actual logger that our methods under test use
-  const mockLogger = {
+  const metricsLogger = {
     putMetric: jest.fn(),
     putDimensions: jest.fn(),
     setProperty: jest.fn(),
@@ -15,13 +15,13 @@ jest.mock('aws-embedded-metrics', () => {
 
   // return the mocked module
   return {
-    mockLogger,
-    metricScope: fn => fn(mockLogger),
+    metricsLogger,
+    metricScope: fn => fn(metricsLogger),
     Unit,
   };
 });
 
-import { mockLogger } from 'aws-embedded-metrics';
+import { metricsLogger } from 'aws-embedded-metrics';
 
 const metricParams = {
   metricName: 'Metric Name',
@@ -35,26 +35,50 @@ describe('Cloudwatch Custom Metrics', () => {
     delete process.env.SIMORGH_APP_ENV;
   });
 
-  it('does not send custom metrics on live', async () => {
+  it('should not send custom metrics on live', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
     await sendCustomMetric(metricParams);
 
     // assert
-    expect(mockLogger.putMetric).not.toBeCalled();
-    expect(mockLogger.putDimensions).not.toBeCalled();
-    expect(mockLogger.setProperty).not.toBeCalled();
+    expect(metricsLogger.putMetric).not.toBeCalled();
+    expect(metricsLogger.putDimensions).not.toBeCalled();
+    expect(metricsLogger.setProperty).not.toBeCalled();
   });
 
-  it('sendCustomMetric should set dimensions and metrics correctly', async () => {
+  it('should send custom metrics on test', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
     await sendCustomMetric(metricParams);
 
     // assert
-    expect(mockLogger.putMetric).toBeCalledWith('Metric Name', 1, 'Count');
-    expect(mockLogger.putDimensions).toBeCalledWith({
-      PageType: 'Page Type',
-      StatusCode: 500,
+    expect(metricsLogger.putMetric).toBeCalled();
+    expect(metricsLogger.putDimensions).toBeCalled();
+    expect(metricsLogger.setProperty).toBeCalled();
+  });
+
+  describe('sendCustomMetric', () => {
+    beforeEach(() => {
+      process.env.SIMORGH_APP_ENV = 'test';
     });
-    expect(mockLogger.setProperty).toBeCalledWith('URL', '/request/url');
+
+    it('should set metric with name and count', async () => {
+      await sendCustomMetric(metricParams);
+
+      expect(metricsLogger.putMetric).toBeCalledWith('Metric Name', 1, 'Count');
+    });
+
+    it('should set dimensions', async () => {
+      await sendCustomMetric(metricParams);
+
+      expect(metricsLogger.putDimensions).toBeCalledWith({
+        PageType: 'Page Type',
+        StatusCode: 500,
+      });
+    });
+
+    it('should set URL property', async () => {
+      await sendCustomMetric(metricParams);
+
+      expect(metricsLogger.setProperty).toBeCalledWith('URL', '/request/url');
+    });
   });
 });
