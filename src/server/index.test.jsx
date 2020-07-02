@@ -9,6 +9,7 @@ import routes from '../app/routes';
 import { localBaseUrl } from '../testHelpers/config';
 import services from './utilities/serviceConfigs';
 import * as renderDocument from './Document';
+import sendCustomMetrics from './utilities/customMetrics';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -85,6 +86,8 @@ styledComponents.ServerStyleSheet = jest.fn().mockImplementation(() => ({
 jest.mock('./styles', () => ({
   getStyleTag: jest.fn().mockImplementation(() => <style />),
 }));
+
+jest.mock('./utilities/customMetrics');
 
 const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
 
@@ -229,6 +232,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
           dataResponse: Error('Error!'),
           responseType: 'reject',
           variant,
+          pageType: 'frontPage',
         });
       });
 
@@ -236,6 +240,16 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
         const { status, text } = await makeRequest(serviceURL);
         expect(status).toEqual(500);
         expect(text).toEqual('Error!');
+      });
+
+      it('should send custom metrics', async () => {
+        await makeRequest(serviceURL);
+        expect(sendCustomMetrics).toBeCalledWith({
+          metricName: 'non_200_response',
+          pageType: 'frontPage',
+          requestUrl: serviceURL,
+          statusCode: 500,
+        });
       });
     });
   });
@@ -1252,7 +1266,7 @@ describe('Server HTTP Headers', () => {
         'GNU Terry Pratchett',
       );
     });
-
-    // It should turn the message around at the end of the line and send it back again (Currently untested)
   });
+
+  describe('custom metrics', () => {});
 });
