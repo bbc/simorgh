@@ -1,4 +1,4 @@
-import pathOr from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import pipe from 'ramda/src/pipe';
 import fetchPageData from '#app/routes/utils/fetchPageData';
 import filterUnknownContentTypes from '#app/routes/utils/sharedDataTransformers/filterUnknownContentTypes';
