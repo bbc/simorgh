@@ -10,6 +10,7 @@ import { localBaseUrl } from '../testHelpers/config';
 import services from './utilities/serviceConfigs';
 import * as renderDocument from './Document';
 import sendCustomMetrics from './utilities/customMetrics';
+import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -160,6 +161,22 @@ const testRenderedData = ({
   );
 };
 
+const assertNon200ResponseCustomMetrics = ({
+  requestUrl,
+  pageType,
+  statusCode = 500,
+}) => {
+  it('should send custom metrics', async () => {
+    await makeRequest(requestUrl);
+    expect(sendCustomMetrics).toBeCalledWith({
+      metricName: NON_200_RESPONSE,
+      pageType,
+      requestUrl,
+      statusCode,
+    });
+  });
+};
+
 const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
   const isAmp = platform === 'amp';
   const extension = isAmp ? '.amp' : '';
@@ -167,7 +184,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
     variant ? `/${variant}` : ''
   }${extension}${queryString}`;
 
-  describe(`${serviceURL}`, () => {
+  describe(`Front Page: ${serviceURL}`, () => {
     const successDataResponse = {
       isAmp,
       data: { some: 'data' },
@@ -227,6 +244,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
     });
 
     describe('Unknown error within the data fetch, react router or its dependencies', () => {
+      const pageType = 'frontPage';
       beforeEach(() => {
         mockRouteProps({
           service,
@@ -234,7 +252,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
           dataResponse: Error('Error!'),
           responseType: 'reject',
           variant,
-          pageType: 'frontPage',
+          pageType,
         });
       });
 
@@ -244,14 +262,9 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
         expect(text).toEqual('Error!');
       });
 
-      it('should send custom metrics', async () => {
-        await makeRequest(serviceURL);
-        expect(sendCustomMetrics).toBeCalledWith({
-          metricName: 'non_200_response',
-          pageType: 'frontPage',
-          requestUrl: serviceURL,
-          statusCode: 500,
-        });
+      assertNon200ResponseCustomMetrics({
+        requestUrl: serviceURL,
+        pageType,
       });
     });
   });
@@ -261,7 +274,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
   const isAmp = platform === 'amp';
   const extension = isAmp ? '.amp' : '';
 
-  describe(`/${service}/articles/optimoID/${extension}${queryString}`, () => {
+  describe(`Optimo Article: /${service}/articles/optimoID/${extension}${queryString}`, () => {
     const successDataResponse = {
       isAmp,
       data: { some: 'data' },
@@ -324,6 +337,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
     });
 
     describe('Unknown error within the data fetch, react router or its dependencies', () => {
+      const pageType = 'articles';
       beforeEach(() => {
         mockRouteProps({
           id,
@@ -332,6 +346,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
           dataResponse: Error('Error!'),
           responseType: 'reject',
           variant,
+          pageType,
         });
       });
 
@@ -339,6 +354,11 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
         const { status, text } = await makeRequest(articleURL);
         expect(status).toEqual(500);
         expect(text).toEqual('Error!');
+      });
+
+      assertNon200ResponseCustomMetrics({
+        requestUrl: articleURL,
+        pageType,
       });
     });
   });
@@ -354,7 +374,7 @@ const testAssetPages = ({
   const isAmp = platform === 'amp';
   const extension = isAmp ? '.amp' : '';
 
-  describe(`/${service}/${assetUri}${extension}${queryString}`, () => {
+  describe(`CPS Asset: /${service}/${assetUri}${extension}${queryString}`, () => {
     const successDataResponse = {
       isAmp,
       data: { some: 'data' },
@@ -416,6 +436,8 @@ const testAssetPages = ({
     });
 
     describe('Unknown error within the data fetch, react router or its dependencies', () => {
+      const pageType = 'cpsAsset';
+
       beforeEach(() => {
         mockRouteProps({
           assetUri,
@@ -424,6 +446,7 @@ const testAssetPages = ({
           dataResponse: Error('Error!'),
           responseType: 'reject',
           variant,
+          pageType,
         });
       });
 
@@ -431,6 +454,11 @@ const testAssetPages = ({
         const { status, text } = await makeRequest(articleURL);
         expect(status).toEqual(500);
         expect(text).toEqual('Error!');
+      });
+
+      assertNon200ResponseCustomMetrics({
+        requestUrl: articleURL,
+        pageType,
       });
     });
   });
@@ -502,12 +530,15 @@ const testMediaPages = ({
     });
 
     describe('Unknown error within the data fetch, react router or its dependencies', () => {
+      const pageType = 'liveRadio';
+
       beforeEach(() => {
         mockRouteProps({
           service,
           isAmp,
           dataResponse: Error('Error!'),
           responseType: 'reject',
+          pageType,
         });
       });
 
@@ -515,6 +546,11 @@ const testMediaPages = ({
         const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toEqual(500);
         expect(text).toEqual('Error!');
+      });
+
+      assertNon200ResponseCustomMetrics({
+        requestUrl: mediaPageURL,
+        pageType,
       });
     });
   });
@@ -587,12 +623,15 @@ const testTvPages = ({
     });
 
     describe('Unknown error within the data fetch, react router or its dependencies', () => {
+      const pageType = 'onDemandTVBrand';
+
       beforeEach(() => {
         mockRouteProps({
           service,
           isAmp,
           dataResponse: Error('Error!'),
           responseType: 'reject',
+          pageType,
         });
       });
 
@@ -600,6 +639,11 @@ const testTvPages = ({
         const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toEqual(500);
         expect(text).toEqual('Error!');
+      });
+
+      assertNon200ResponseCustomMetrics({
+        requestUrl: mediaPageURL,
+        pageType,
       });
     });
   });
@@ -672,12 +716,15 @@ const testOnDemandTvEpisodePages = ({
     });
 
     describe('Unknown error within the data fetch, react router or its dependencies', () => {
+      const pageType = 'onDemandTVEpisode';
+
       beforeEach(() => {
         mockRouteProps({
           service,
           isAmp,
           dataResponse: Error('Error!'),
           responseType: 'reject',
+          pageType,
         });
       });
 
@@ -685,6 +732,11 @@ const testOnDemandTvEpisodePages = ({
         const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toEqual(500);
         expect(text).toEqual('Error!');
+      });
+
+      assertNon200ResponseCustomMetrics({
+        requestUrl: mediaPageURL,
+        pageType,
       });
     });
   });

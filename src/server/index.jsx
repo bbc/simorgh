@@ -290,7 +290,7 @@ server
         headers,
       });
 
-      let derivedPageType;
+      let derivedPageType = 'Unknown';
 
       try {
         const {
@@ -300,8 +300,8 @@ server
           variant,
         } = getRouteProps(routes, urlPath);
 
-        // Set pageType based on matched route
-        derivedPageType = pageType || 'Unknown';
+        // Set derivedPageType based on matched route
+        derivedPageType = pageType || derivedPageType;
 
         const data = await getInitialData({
           path: url,
@@ -312,7 +312,7 @@ server
         const { status } = data;
         const bbcOrigin = headers['bbc-origin'];
 
-        // Set pageType based on returned page data
+        // Set derivedPageType based on returned page data
         if (status === 200) {
           derivedPageType = ramdaPath([('pageData', 'metadata', 'type')], data);
         }
