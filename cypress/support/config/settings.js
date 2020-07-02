@@ -6342,7 +6342,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/ukrainian/ukraine_in_russian'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/ukrainian/ukraine_in_russian'],
