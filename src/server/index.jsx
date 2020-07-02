@@ -36,6 +36,7 @@ import {
   ROUTING_INFORMATION,
 } from '#lib/logger.const';
 import sendCustomMetric from './utilities/customMetrics';
+import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 
 const fs = require('fs');
 
@@ -312,8 +313,9 @@ server
         const bbcOrigin = headers['bbc-origin'];
 
         // Set pageType based on returned page data
-        if (status == 200)
+        if (status === 200) {
           derivedPageType = ramdaPath([('pageData', 'metadata', 'type')], data);
+        }
 
         data.path = urlPath;
         data.timeOnServer = Date.now();
@@ -331,7 +333,8 @@ server
         logger.info(ROUTING_INFORMATION, {
           url,
           status,
-          derivedPageType,
+          pageType: derivedPageType,
+          route: pageType,
         });
 
         if (result.redirectUrl) {
@@ -343,14 +346,14 @@ server
         }
       } catch ({ message, status = 500 }) {
         await sendCustomMetric({
-          metricName: 'Non_200_Response',
+          metricName: NON_200_RESPONSE,
           statusCode: status,
           pageType: derivedPageType,
           requestUrl: url,
         });
 
         logger.error(SERVER_SIDE_REQUEST_FAILED, {
-          status: status,
+          status,
           message,
           url,
           headers,
