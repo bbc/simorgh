@@ -128,6 +128,7 @@ const generateLaunchDates = service => {
 
     return output.join('<br/>');
   }
+  return null;
 };
 
 const scriptDir = path.resolve(__dirname);
