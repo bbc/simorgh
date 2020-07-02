@@ -303,6 +303,9 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    recommendations: {
+      hasStoryRecommendations: false,
+    },
     navigation: [
       {
         title: '主頁',
