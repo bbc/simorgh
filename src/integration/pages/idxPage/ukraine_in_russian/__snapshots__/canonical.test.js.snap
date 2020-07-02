@@ -64,6 +64,8 @@ Object {
 }
 `;
 
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer lang code should match text 1`] = `"uk"`;
+
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Header I can see the branding 1`] = `"BBC News, Україна"`;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 1`] = `
@@ -128,6 +130,8 @@ Object {
   "url": "/ukrainian/ukraine_in_russian",
 }
 `;
+
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Header lang code should match text 1`] = `"uk"`;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Main heading should match text 1`] = `"РУС"`;
 

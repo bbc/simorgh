@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CpsRecommendations should not render when cpsRecommendations toggle is disabled 1`] = `<div />`;
+
+exports[`CpsRecommendations should not render when the hasStoryRecommendations flag is disabled for the service 1`] = `<div />`;
+
+exports[`CpsRecommendations should render when cpsRecommendations toggle and hasStoryRecommendations flag are both true 1`] = `
+<div>
+  <div
+    class="GridComponent-nf79gm-0 gcdGSo"
+    dir="ltr"
+  >
+    <h3
+      class="Headline-sc-1dvfmi3-3 dnWhDh"
+    >
+      <a
+        class="Link-sc-1dvfmi3-5 jeUMCT"
+        href="/mundo/noticias-america-latina-51975331"
+      >
+        Argentina ordena cuarentena total obligatoria por el coronavirus
+      </a>
+    </h3>
+    <h3
+      class="Headline-sc-1dvfmi3-3 dnWhDh"
+    >
+      <a
+        class="Link-sc-1dvfmi3-5 jeUMCT"
+        href="/mundo/noticias-america-latina-52250630"
+      >
+        Por qué México se convirtió en el gran obstáculo del plan de la OPEP para aumentar el precio del petróleo
+      </a>
+    </h3>
+    <h3
+      class="Headline-sc-1dvfmi3-3 dnWhDh"
+    >
+      <a
+        class="Link-sc-1dvfmi3-5 jeUMCT"
+        href="/mundo/noticias-52275464"
+      >
+        El inédito y cuestionado plan de emergencia económica de Ecuador contra la crisis del coronavirus
+      </a>
+    </h3>
+    <h3
+      class="Headline-sc-1dvfmi3-3 dnWhDh"
+    >
+      <a
+        class="Link-sc-1dvfmi3-5 jeUMCT"
+        href="/mundo/noticias-51796524"
+      >
+        La guerra de precios entre Arabia Saudita y Rusia que hundió el valor del petróleo y las bolsas en medio de la crisis por el coronavirus
+      </a>
+    </h3>
+  </div>
+</div>
+`;
