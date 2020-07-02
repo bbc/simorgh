@@ -301,7 +301,7 @@ server
         } = getRouteProps(routes, urlPath);
 
         // Set pageType based on matched route
-        derivedPageType = pageType;
+        if (pageType) derivedPageType = pageType;
 
         const data = await getInitialData({
           path: url,
