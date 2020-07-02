@@ -35,14 +35,16 @@ describe('Cloudwatch Custom Metrics', () => {
     delete process.env.SIMORGH_APP_ENV;
   });
 
-  it('should not send custom metrics on live', async () => {
-    process.env.SIMORGH_APP_ENV = 'live';
-    await sendCustomMetric(metricParams);
+  ['local', 'live'].forEach(environment => {
+    it(`should not send custom metrics on ${environment}`, async () => {
+      process.env.SIMORGH_APP_ENV = environment;
+      await sendCustomMetric(metricParams);
 
-    // assert
-    expect(metricsLogger.putMetric).not.toBeCalled();
-    expect(metricsLogger.putDimensions).not.toBeCalled();
-    expect(metricsLogger.setProperty).not.toBeCalled();
+      // assert
+      expect(metricsLogger.putMetric).not.toBeCalled();
+      expect(metricsLogger.putDimensions).not.toBeCalled();
+      expect(metricsLogger.setProperty).not.toBeCalled();
+    });
   });
 
   it('should send custom metrics on test', async () => {
