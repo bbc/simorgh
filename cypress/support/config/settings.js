@@ -132,15 +132,15 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/afaanoromoo/oduu-53260895'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/afaanoromoo/oduu-23141504'],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/afaanoromoo/oduu-53268428'],
             enabled: false,
           },
         },
@@ -505,15 +505,15 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/amharic/news-53260522'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/amharic/23229137'],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/amharic/news-53260525'],
             enabled: false,
           },
         },
@@ -817,15 +817,15 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/azeri/other-news-53245528'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/azeri/international-23069958'],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/azeri/international-53242449'],
             enabled: false,
           },
         },
