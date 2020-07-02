@@ -351,6 +351,9 @@ const launchDates = {
     storyPage: '28th May 2020',
     mostReadPage: '28th May 2020',
   },
+  ukrainianRu: {
+    idxPage: '2nd July 2020',
+  },
   ukrainian: {
     articles: 'Sept 2019',
     frontPage: '17th March 2020',
@@ -358,7 +361,6 @@ const launchDates = {
     photoGalleryPage: '24th March 2020',
     storyPage: '',
     mostReadPage: '28th May 2020',
-    idxPage: '2nd July 2020',
   },
   urdu: {
     articles: 'Sept 2019',
