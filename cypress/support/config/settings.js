@@ -247,7 +247,7 @@ module.exports = () => ({
               '/afrique/bbc_afrique_radio/programmes/p030s6dq', // Brand
               '/afrique/bbc_afrique_radio/w172xg2srnppw28', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -447,7 +447,7 @@ module.exports = () => ({
               '/amharic/bbc_amharic_radio/programmes/w13xttnt', // Brand
               '/amharic/bbc_amharic_radio/w3ct07cl', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -932,7 +932,7 @@ module.exports = () => ({
               '/bengali/bbc_bangla_radio/programmes/p030vjwg', // Brand
               '/bengali/bbc_bangla_radio/w172xdwl3fhpwp5', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -1355,8 +1355,11 @@ module.exports = () => ({
       onDemandRadio: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/gahuza/bbc_gahuza_radio/programmes/p0340x2m', // Brand
+              '/gahuza/bbc_gahuza_radio/w3ct0k5q', // Episode
+            ],
+            enabled: true,
           },
           test: {
             paths: [
@@ -2702,7 +2705,7 @@ module.exports = () => ({
               '/kyrgyz/bbc_kyrgyz_radio/programmes/p0340xth', // Brand
               '/kyrgyz/bbc_kyrgyz_radio/w3ct0kxb', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -3246,7 +3249,7 @@ module.exports = () => ({
               '/nepali/bbc_nepali_radio/programmes/p0340xzt', // Brand
               '/nepali/bbc_nepali_radio/w172xhtpmmq4yg4', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -3686,7 +3689,7 @@ module.exports = () => ({
               '/persian/bbc_dari_radio/w3ct0bst', // Episode Dari
               '/persian/bbc_persian_radio/w3ct0s49', // Episode Persian
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -4743,7 +4746,7 @@ module.exports = () => ({
               '/sinhala/bbc_sinhala_radio/programmes/w13xtv4q', // Brand
               '/sinhala/bbc_sinhala_radio/w3ct0w3s', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -5131,7 +5134,7 @@ module.exports = () => ({
               '/swahili/bbc_swahili_radio/programmes/p03411mj', // Brand
               '/swahili/bbc_swahili_radio/w172xjtmtqffpy9', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -5329,7 +5332,7 @@ module.exports = () => ({
               '/tamil/bbc_tamil_radio/programmes/p03412jh', // Brand
               '/tamil/bbc_tamil_radio/w172xjw92fy6vhm', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -5815,14 +5818,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/tigrinya/bbc_tigrinya_radio/programmes/w13xttny', // Brand
-              'tigrinya/bbc_tigrinya_radio/w3ct0p30', // Episode
+              '/tigrinya/bbc_tigrinya_radio/w3ct0p30', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/tigrinya/bbc_tigrinya_radio/programmes/w13xttny', // Brand
-              'tigrinya/bbc_tigrinya_radio/w3ct0p30', // Episode
+              '/tigrinya/bbc_tigrinya_radio/w3ct0p30', // Episode
             ],
             enabled: true,
           },
@@ -6611,7 +6614,7 @@ module.exports = () => ({
               '/urdu/bbc_urdu_radio/programmes/p03413l5', // Brand
               '/urdu/bbc_urdu_radio/w172xjzzxzyf8my', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -6809,7 +6812,7 @@ module.exports = () => ({
               '/uzbek/bbc_uzbek_radio/programmes/p03414fb', // Brand
               '/uzbek/bbc_uzbek_radio/w172xk0dnc7rzpp', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
