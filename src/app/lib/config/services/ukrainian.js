@@ -66,10 +66,10 @@ const baseServiceConfig = {
         solutions: [
           'Перевірте ще раз адресу посилання',
           'Натисніть на кнопку "оновити" в браузері',
-          'Шукати сторінку в пошуковому вікні ВВС',
+          'Шукати сторінку в пошуковому вікні BBC',
         ],
         callToActionFirst: 'Спробуйте зайти на головну сторінку ',
-        callToActionLinkText: 'ВВС News Україна',
+        callToActionLinkText: 'BBC News Україна',
         callToActionLast: '',
         callToActionLinkUrl: 'https://www.bbc.com/ukrainian',
       },
@@ -149,7 +149,7 @@ const baseServiceConfig = {
       bbc_ukrainian_tv: {
         title: 'Випуск новин',
         subtitle:
-          'ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua',
+          'BBC News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua',
       },
       listen: 'Прослухати',
       watch: 'Дивитися',
@@ -168,7 +168,7 @@ const baseServiceConfig = {
         text: 'Контент недоступний',
         linkText: 'Дивіться більше у %provider_name%',
         linkTextSuffixVisuallyHidden: ', зовнішнє посилання',
-        warningText: 'ВВС не несе відповідальності за контент інших сайтів.',
+        warningText: 'BBC не несе відповідальності за контент інших сайтів.',
       },
       skipLink: {
         text: 'Пропустити %provider_name% допис',
@@ -226,7 +226,7 @@ const baseServiceConfig = {
         lang: 'en-GB',
       },
     ],
-    copyrightText: 'BBC. ВВС не несе відповідальності за контент інших сайтів.',
+    copyrightText: 'BBC. BBC не несе відповідальності за контент інших сайтів.',
   },
   fonts: [],
   timezone: 'GMT',
@@ -256,7 +256,7 @@ const baseServiceConfig = {
       url: '/ukrainian/magazine',
     },
     {
-      title: 'Книга року ВВС',
+      title: 'Книга року BBC',
       url: '/ukrainian/features-50320117',
     },
     {
