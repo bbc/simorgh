@@ -84,6 +84,7 @@ describe('Ad Container', () => {
           service="pidgin"
           statusCode={200}
           pathname="/pidgin"
+          canAdvertise
         >
           <ToggleContext.Provider value={toggleContextMock}>
             <BrowserRouter>
@@ -105,6 +106,7 @@ describe('Ad Container', () => {
           service="news"
           statusCode={200}
           pathname="/news"
+          canAdvertise
         >
           <ToggleContext.Provider value={toggleContextMock}>
             <BrowserRouter>
