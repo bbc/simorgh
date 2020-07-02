@@ -1,8 +1,10 @@
+import onEnvironment from '../onEnvironment';
+
 // custom CW metrics
 const { metricScope, Unit } = require('aws-embedded-metrics');
 
 const sendMetric = metricScope(
-  metrics => async (metricName, statusCode, pageType, requestUrl) => {
+  metrics => async ({ metricName, statusCode, pageType, requestUrl }) => {
     // Specifies the metric dimensions, each dimension will counted and billed as a custom unique metric
     metrics.putDimensions({ PageType: pageType, StatusCode: statusCode });
 
@@ -14,15 +16,6 @@ const sendMetric = metricScope(
   },
 );
 
-const onEnvironment = (env, wrappedFunction) => params => {
-  console.log(process.env.SIMORGH_APP_ENV)
-  const shouldCallFunction = process.env.SIMORGH_APP_ENV === env
-
-  if(!shouldCallFunction) return
-
-  wrappedFunction(...params)
-}
-
-const sendCustomMetric = (params) => onEnvironment('test', sendMetric);
+const sendCustomMetric = params => onEnvironment('test', params)(sendMetric);
 
 export default sendCustomMetric;

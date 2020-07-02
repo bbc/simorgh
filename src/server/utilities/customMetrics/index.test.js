@@ -1,9 +1,8 @@
 /* eslint-disable import/first */
 /* eslint-disable import/order */
-import sendCustomMetric from '.';
+import sendCustomMetric from './index.js';
 
-// jest.mock('./sendCustomMetric', () => jest.fn())
-
+// mocking of aws-emf-metrics logic borrowed from https://github.com/awslabs/aws-embedded-metrics-node/blob/master/examples/testing/tests/module.jest.test.js
 jest.mock('aws-embedded-metrics', () => {
   const { Unit } = jest.requireActual('aws-embedded-metrics');
 
@@ -16,9 +15,6 @@ jest.mock('aws-embedded-metrics', () => {
 
   // return the mocked module
   return {
-    // by returning the actual mock logger instance,
-    // our tests can make assertions about which metrics
-    // were logged if desired
     mockLogger,
     metricScope: fn => fn(mockLogger),
     Unit,
@@ -27,10 +23,31 @@ jest.mock('aws-embedded-metrics', () => {
 
 import { mockLogger } from 'aws-embedded-metrics';
 
+const metricParams = {
+  metricName: 'Metric Name',
+  statusCode: 500,
+  pageType: 'Page Type',
+  requestUrl: '/request/url',
+};
+
 describe('Cloudwatch Custom Metrics', () => {
+  afterEach(() => {
+    delete process.env.SIMORGH_APP_ENV;
+  });
+
+  it('does not send custom metrics on live', async () => {
+    process.env.SIMORGH_APP_ENV = 'live';
+    await sendCustomMetric(metricParams);
+
+    // assert
+    expect(mockLogger.putMetric).not.toBeCalled();
+    expect(mockLogger.putDimensions).not.toBeCalled();
+    expect(mockLogger.setProperty).not.toBeCalled();
+  });
+
   it('sendCustomMetric should set dimensions and metrics correctly', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
-    await sendCustomMetric('Metric Name', 500, 'Page Type', '/request/url');
+    await sendCustomMetric(metricParams);
 
     // assert
     expect(mockLogger.putMetric).toBeCalledWith('Metric Name', 1, 'Count');
@@ -40,11 +57,4 @@ describe('Cloudwatch Custom Metrics', () => {
     });
     expect(mockLogger.setProperty).toBeCalledWith('URL', '/request/url');
   });
-
-  xit('should not call sendCustomMetric() on live', async () => {
-    process.env.SIMORGH_APP_ENV = 'LIVE';
-
-    // assert
-    expect(sendCustomMetric).not.toBeCalled()
-  })
 });
