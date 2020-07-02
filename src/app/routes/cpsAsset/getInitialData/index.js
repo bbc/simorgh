@@ -36,10 +36,10 @@ const processOptimoBlocks = pipe(
   addSummaryBlock,
   augmentWithTimestamp,
   addBylineBlock,
+  addRecommendationsBlock,
   addIdsToBlocks,
   applyBlockPositioning,
   cpsOnlyOnwardJourneys,
-  addRecommendationsBlock,
 );
 
 // Here pathname is passed as a prop specifically for CPS includes
