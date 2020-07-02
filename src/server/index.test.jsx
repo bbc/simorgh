@@ -166,7 +166,7 @@ const assertNon200ResponseCustomMetrics = ({
   pageType,
   statusCode = 500,
 }) => {
-  it('should send custom metrics', async () => {
+  it('should send non-200-response custom metrics', async () => {
     await makeRequest(requestUrl);
     expect(sendCustomMetrics).toBeCalledWith({
       metricName: NON_200_RESPONSE,
