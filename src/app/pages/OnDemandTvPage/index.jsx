@@ -5,7 +5,6 @@ import { shape, string, number, bool } from 'prop-types';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
@@ -34,7 +33,7 @@ import AVPlayer from '#containers/AVPlayer';
 
 const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
 const StyledMessageContainer = styled.div`
-  margin: ${GEL_SPACING_QUIN} 0 ${GEL_SPACING_TRPL};
+  margin: ${GEL_SPACING_QUIN} 0 ${GEL_SPACING};
   padding-top: ${landscapeRatio};
   position: relative;
   overflow: hidden;
@@ -67,7 +66,7 @@ const StyledGelPageGrid = styled(GelPageGrid)`
 
 const StyledVideoPlayer = styled(AVPlayer)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin: ${GEL_SPACING_QUIN} 0 ${GEL_SPACING_TRPL};
+    margin: ${GEL_SPACING_QUIN} 0 ${GEL_SPACING};
   }
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     margin-top: ${GEL_SPACING_DBL};
