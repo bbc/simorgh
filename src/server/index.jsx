@@ -290,7 +290,7 @@ server
         headers,
       });
 
-      let derivedPageType = 'Unknown';
+      let derivedPageType;
 
       try {
         const {
@@ -301,7 +301,7 @@ server
         } = getRouteProps(routes, urlPath);
 
         // Set pageType based on matched route
-        if (pageType) derivedPageType = pageType;
+        derivedPageType = pageType || 'Unknown';
 
         const data = await getInitialData({
           path: url,
@@ -334,7 +334,6 @@ server
           url,
           status,
           pageType: derivedPageType,
-          route: pageType,
         });
 
         if (result.redirectUrl) {

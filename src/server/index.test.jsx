@@ -58,6 +58,7 @@ const mockRouteProps = ({
   dataResponse,
   responseType,
   variant,
+  pageType,
 }) => {
   const getInitialData =
     responseType === 'reject'
@@ -71,7 +72,7 @@ const mockRouteProps = ({
     isAmp,
     service,
     variant,
-    route: { getInitialData },
+    route: { getInitialData, pageType },
     match: {
       params: { id, service, variant: mockVariantParam },
     },
