@@ -1,0 +1,9 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - echo Entered build phase
+      - id
+      - pwd
+      - echo Build completed on `date`
+      - exit 1
