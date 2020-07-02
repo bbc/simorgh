@@ -5217,15 +5217,15 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/swahili/habari-53255795'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/swahili/habari-23257760'],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/swahili/habari-53264596'],
             enabled: false,
           },
         },
