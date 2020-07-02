@@ -9,6 +9,7 @@ import { RADIO_MISSING_FIELD } from '#lib/logger.const';
 import getEpisodeAvailability, {
   getUrl,
 } from '#lib/utilities/episodeAvailability';
+import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
 export default async ({ path: pathname }) => {
   try {
@@ -63,7 +64,7 @@ export default async ({ path: pathname }) => {
         episodeIsAvailable,
       },
     };
-  } catch ({ message, status }) {
+  } catch ({ message, status = getErrorStatusCode() }) {
     return { error: message, status };
   }
 };

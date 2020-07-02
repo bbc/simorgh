@@ -18,6 +18,7 @@ import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import getAdditionalPageData from '../utils/getAdditionalPageData';
+import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
 const formatPageData = pipe(
   addAnalyticsCounterName,
@@ -76,7 +77,7 @@ export default async ({ path: pathname, service, variant }) => {
         ...additionalPageData,
       },
     };
-  } catch ({ message, status }) {
+  } catch ({ message, status = getErrorStatusCode() }) {
     return { error: message, status };
   }
 };

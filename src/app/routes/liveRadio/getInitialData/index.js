@@ -1,6 +1,7 @@
 import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
+import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
 const getLanguage = path(['metadata', 'language']);
 const getMetaDataId = path(['metadata', 'id']);
@@ -40,7 +41,7 @@ export default async ({ path: pathname }) => {
         ...pageType,
       },
     };
-  } catch ({ message, status }) {
+  } catch ({ message, status = getErrorStatusCode() }) {
     return { error: message, status };
   }
 };

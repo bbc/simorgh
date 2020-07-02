@@ -2,6 +2,7 @@ import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrl from '../../utils/getPlaceholderImageUrl';
+import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
 const getBrandTitle = path(['metadata', 'title']);
 const getLanguage = path(['metadata', 'language']);
@@ -85,7 +86,7 @@ export default async ({ path: pathname }) => {
         ...pageType,
       },
     };
-  } catch ({ message, status }) {
+  } catch ({ message, status = getErrorStatusCode() }) {
     return { error: message, status };
   }
 };

@@ -11,11 +11,10 @@ import {
 } from '#lib/logger.const';
 import {
   OK,
-  BAD_GATEWAY,
-  INTERNAL_SERVER_ERROR,
   NOT_FOUND,
   UPSTREAM_CODES_TO_PROPAGATE_IN_SIMORGH,
 } from './utils/statusCodes';
+import getErrorStatusCode from './utils/getErrorStatusCode';
 
 const logger = nodeLogger(__filename);
 
@@ -68,7 +67,7 @@ export default async pathname => {
     if (UPSTREAM_CODES_TO_PROPAGATE_IN_SIMORGH.includes(status)) {
       simorghError.status = status;
     } else {
-      simorghError.status = onClient() ? BAD_GATEWAY : INTERNAL_SERVER_ERROR;
+      simorghError.status = getErrorStatusCode();
     }
 
     logger.error(DATA_FETCH_ERROR, {

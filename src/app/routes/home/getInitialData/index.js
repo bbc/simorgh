@@ -8,6 +8,7 @@ import filterEmptyGroupItems from '#app/routes/utils/sharedDataTransformers/filt
 import squashTopStories from '#app/routes/utils/sharedDataTransformers/squashTopStories';
 import addIdsToItems from '#app/routes/utils/sharedDataTransformers/addIdsToItems';
 import filterGroupsWithoutStraplines from '#app/routes/utils/sharedDataTransformers/filterGroupsWithoutStraplines';
+import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
 const transformJson = pipe(
   filterUnknownContentTypes,
@@ -48,7 +49,7 @@ export default async ({ path, service, variant }) => {
       status,
       pageData: transformJson(json),
     };
-  } catch ({ message, status }) {
+  } catch ({ message, status = getErrorStatusCode() }) {
     return { error: message, status };
   }
 };
