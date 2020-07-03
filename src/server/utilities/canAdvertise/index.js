@@ -1,8 +1,16 @@
 const canAdvertise = headers => {
   const isAdvertiseCombine = headers['x-ip_is_advertise_combined'];
-  const isUK = headers['x-bbc-edge-isuk'];
 
-  return isAdvertiseCombine === 'yes' || isUK === 'no';
+  if (isAdvertiseCombine && isAdvertiseCombine === 'yes') {
+    return true;
+  }
+
+  const isUK = headers['x-bbc-edge-isuk'];
+  if (isUK && isUK === 'no') {
+    return true;
+  }
+
+  return false;
 };
 
 export default canAdvertise;
