@@ -23,21 +23,23 @@ export default ({ service, pageType, variant }) => {
         });
       });
 
-      it('should render an image placeholder', () => {
-        cy.request(
-          `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
-        ).then(({ body: jsonData }) => {
-          const isExpiredEpisode = isExpired(jsonData);
+      if (pageType === 'onDemandRadio') {
+        it('should render an image placeholder', () => {
+          cy.request(
+            `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
+          ).then(({ body: jsonData }) => {
+            const isExpiredEpisode = isExpired(jsonData);
 
-          if (!isExpiredEpisode) {
-            cy.get(
-              `amp-img[src="${envConfig.assetUrl}/images/amp_audio_placeholder.png"]`,
-            ).should('exist');
-          } else {
-            cy.log(`Episode is expired: ${Cypress.env('currentPath')}`);
-          }
+            if (!isExpiredEpisode) {
+              cy.get(
+                `amp-img[src="${envConfig.assetUrl}/images/amp_audio_placeholder.png"]`,
+              ).should('exist');
+            } else {
+              cy.log(`Episode is expired: ${Cypress.env('currentPath')}`);
+            }
+          });
         });
-      });
+      }
     });
   });
 };
