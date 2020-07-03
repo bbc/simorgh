@@ -9,7 +9,7 @@ import AdSlot from './AdSlot';
 const LEADERBOARD_HEIGHT = '5.5rem';
 const LEADERBOARD_HEIGHT_GROUP_4_5 = '9rem';
 
-const StyledAdDiv = styled.div.attrs({ ariaHidden: 'true', tabIndex: '-1' })`
+const StyledAdDiv = styled.div.attrs({ ariaHidden: 'true' })`
   background-color: ${C_LUNAR_LIGHT};
   min-height: ${LEADERBOARD_HEIGHT};
 

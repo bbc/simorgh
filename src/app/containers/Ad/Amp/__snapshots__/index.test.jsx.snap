@@ -86,6 +86,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
       <div
         amp-access="toggles.ads.enabled"
         amp-access-hide="true"
+        aria-hidden="true"
       >
         <div
           class="c0"
