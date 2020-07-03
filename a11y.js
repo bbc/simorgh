@@ -36,6 +36,9 @@ const pageTypes = {
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
   ],
   idxPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
+  onDemandTV: [
+    '/iframe', // Can be removed once https://github.com/bbc/bbc-a11y/issues/298 is resolved
+  ],
 };
 
 Object.keys(pageTypes).forEach(pageType => {
