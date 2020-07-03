@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "assetUri": "/mundo/noticias-america-latina-51975331",
+      "ampUri": "/mundo/amp/noticias-america-latina-51975331",
+      "shortHeadline": "Argentina ordena cuarentena total obligatoria por el coronavirus",
+      "imageHref": "http://c.files.bbci.co.uk/5A4D/production/_111371132_hi060727445.jpg"
+    },
+    {
+      "assetUri": "/mundo/noticias-america-latina-52250630",
+      "ampUri": "/mundo/amp/noticias-america-latina-52250630",
+      "shortHeadline": "Por qué México se convirtió en el gran obstáculo del plan de la OPEP para aumentar el precio del petróleo",
+      "imageHref": "http://c.files.bbci.co.uk/49F7/production/_111753981_03009521-c6ba-41e6-8328-65d0caf07635.jpg"
+    },
+    {
+      "assetUri": "/mundo/noticias-52275464",
+      "ampUri": "/mundo/amp/noticias-52275464",
+      "shortHeadline": "El inédito y cuestionado plan de emergencia económica de Ecuador contra la crisis del coronavirus",
+      "imageHref": "http://c.files.bbci.co.uk/34F5/production/_111775531_tv061050412.jpg"
+    },
+    {
+      "assetUri": "/mundo/noticias-51796524",
+      "ampUri": "/mundo/amp/noticias-51796524",
+      "shortHeadline": "La guerra de precios entre Arabia Saudita y Rusia que hundió el valor del petróleo y las bolsas en medio de la crisis por el coronavirus",
+      "imageHref": "http://c.files.bbci.co.uk/4627/production/_111195971_mediaitem111195968.jpg"
+    }
+  ]
+}
