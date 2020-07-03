@@ -25,7 +25,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
         ۲۷ می ۲۰۲۰
       </h1>
       <div
-        class="StyledMessageContainer-sc-1brqmij-0 cKKoVQ"
+        class="StyledMessageContainer-sc-1brqmij-0 eQVkWQ"
       >
         <div
           class="StyledWrapper-sc-1pnftlt-0 jywlaE"
@@ -46,7 +46,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
         class="Headline-sc-1kh1qhu-0 StyledHeadline-gehp0k-0 gBkukD"
       >
         <span
-          class="BrandTitle-gehp0k-1 fjmQIa"
+          class="BrandTitle-gehp0k-1 iseUMj"
         >
           نړۍ دا وخت
         </span>
