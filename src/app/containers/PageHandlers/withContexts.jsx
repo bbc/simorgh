@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, element, string, number } from 'prop-types';
+import { bool, element, string, number, shape, object } from 'prop-types';
 import variantPropType from '#models/propTypes/variants';
 import { pageDataPropType } from '#models/propTypes/data';
 
@@ -13,6 +13,7 @@ import { EventContextProvider } from '#contexts/EventContext';
 const WithContexts = Component => {
   const WithContextsContainer = props => {
     const {
+      simorghConfig,
       bbcOrigin,
       status,
       id,
@@ -26,7 +27,10 @@ const WithContexts = Component => {
     } = props;
 
     return (
-      <ToggleContextProvider service={service} origin={bbcOrigin}>
+      <ToggleContextProvider
+        service={service}
+        remoteToggles={simorghConfig.toggles}
+      >
         <ServiceContextProvider
           service={service}
           variant={variant}
@@ -67,6 +71,9 @@ const WithContexts = Component => {
     service: string.isRequired,
     variant: variantPropType,
     timeOnServer: number,
+    simorghConfig: shape({
+      toggles: object,
+    }).isRequired,
   };
 
   WithContextsContainer.defaultProps = {

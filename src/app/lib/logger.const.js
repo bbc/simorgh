@@ -46,6 +46,9 @@ const logCodes = {
   SERVER_SIDE_REQUEST_FAILED: 'ssr_request_failed',
   SERVICE_WORKER_SENDFILE_ERROR: 'server_sendfile_error_sw',
 
+  // Config
+  CONFIG_FETCH_ERROR: 'config_fetch_error',
+
   // Block Types
   UNSUPPORTED_BLOCK_TYPE: 'unsupported_block_type',
 

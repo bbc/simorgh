@@ -8,6 +8,11 @@ import filterEmptyGroupItems from '#app/routes/utils/sharedDataTransformers/filt
 import squashTopStories from '#app/routes/utils/sharedDataTransformers/squashTopStories';
 import addIdsToItems from '#app/routes/utils/sharedDataTransformers/addIdsToItems';
 import filterGroupsWithoutStraplines from '#app/routes/utils/sharedDataTransformers/filterGroupsWithoutStraplines';
+import nodeLogger from '#lib/logger.node';
+import { CONFIG_FETCH_ERROR } from '#lib/logger.const';
+import constructTogglesEndpoint from '../utils/constructTogglesEndpoint';
+
+const logger = nodeLogger(__filename);
 
 const transformJson = pipe(
   filterUnknownContentTypes,
@@ -16,6 +21,29 @@ const transformJson = pipe(
   squashTopStories,
   filterGroupsWithoutStraplines,
 );
+
+const getSimorghConfig = async (service, origin) => {
+  try {
+    const url = constructTogglesEndpoint(service, origin);
+    const response = await fetch(url, {
+      headers: {
+        origin,
+      },
+    });
+    if (!response.ok) {
+      throw new Error(
+        `Unexpected response (HTTP status code ${response.status}) when requesting ${url}`,
+      );
+    }
+
+    return response.json();
+  } catch (error) {
+    logger.error(CONFIG_FETCH_ERROR, {
+      error: error.toString(),
+    });
+    return null;
+  }
+};
 
 export const hasRadioSchedule = async (service, variant) => {
   const config = await getConfig(service, variant);
@@ -38,6 +66,11 @@ export const hasRadioSchedule = async (service, variant) => {
 export default async ({ path, service, variant }) => {
   const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
   const pageDataPromise = fetchPageData(path);
+  const simorghConfig = await getSimorghConfig(
+    service,
+    // TODO: get the bbcOrigin
+    'https://www.test.bbc.com',
+  );
 
   const { json, ...rest } = pageHasRadioSchedule
     ? await withRadioSchedule({ pageDataPromise, service, path })
@@ -47,6 +80,7 @@ export default async ({ path, service, variant }) => {
     ...rest,
     ...(json && {
       pageData: transformJson(json),
+      simorghConfig,
     }),
   };
 };
