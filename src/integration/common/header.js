@@ -17,31 +17,33 @@ export default service => {
       });
     }
 
-    describe('Navigation link', () => {
-      const navigationLinks = document
-        .querySelector('header nav [role="list"]')
-        .querySelectorAll('a');
+    if (service !== 'scotland') {
+      describe('Navigation link', () => {
+        const navigationLinks = document
+          .querySelector('header nav [role="list"]')
+          .querySelectorAll('a');
 
-      navigationLinks.forEach(navigationLink => {
-        const linkText = navigationLink.textContent;
-        const linkUrl = navigationLink.getAttribute('href');
+        navigationLinks.forEach(navigationLink => {
+          const linkText = navigationLink.textContent;
+          const linkUrl = navigationLink.getAttribute('href');
 
-        it('should be in the document', () => {
-          expect(navigationLink).toBeInTheDocument();
-        });
+          it('should be in the document', () => {
+            expect(navigationLink).toBeInTheDocument();
+          });
 
-        it('should contain text', () => {
-          expect(linkText).toBeTruthy();
-        });
+          it('should contain text', () => {
+            expect(linkText).toBeTruthy();
+          });
 
-        it('should match text and url', () => {
-          expect({
-            text: linkText,
-            url: linkUrl,
-          }).toMatchSnapshot();
+          it('should match text and url', () => {
+            expect({
+              text: linkText,
+              url: linkUrl,
+            }).toMatchSnapshot();
+          });
         });
       });
-    });
+    }
 
     it('I can see a skip to content link', () => {
       const skipToContentEl = document.querySelector(
