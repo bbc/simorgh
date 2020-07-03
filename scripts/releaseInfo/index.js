@@ -31,6 +31,7 @@ const generateLinks = (service, env, domain) => {
     storyPage,
     mostReadPage,
     onDemandRadio,
+    idxPage,
   } = allServices()[service].pageTypes;
 
   const frontPageURL = getUrl(frontPage, env);
@@ -71,6 +72,11 @@ const generateLinks = (service, env, domain) => {
   const onDemandRadioURL = getUrl(onDemandRadio, env);
   if (onDemandRadioURL) {
     output.push(`[onDemandRadio](${domain}${onDemandRadioURL})`);
+  }
+
+  const idxURL = getUrl(idxPage, env);
+  if (idxURL) {
+    output.push(`[IDX](${domain}${idxURL})`);
   }
 
   return output.join('<br/>');
@@ -117,8 +123,13 @@ const generateLaunchDates = service => {
       output.push(`__On Demand Radio__: ${serviceLaunch.onDemandRadio}`);
     }
 
+    if (serviceLaunch.idxPage && serviceLaunch.idxPage !== '') {
+      output.push(`__IDX__: ${serviceLaunch.idxPage}`);
+    }
+
     return output.join('<br/>');
   }
+  return null;
 };
 
 const scriptDir = path.resolve(__dirname);
