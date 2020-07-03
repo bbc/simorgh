@@ -173,7 +173,8 @@ const OnDemandTvPage = ({ pageData }) => {
           margins={getGroups(true, true, true, true, false, false)}
         >
           <VisuallyHiddenText as="h1" tabIndex="-1" id="content">
-            {brandTitle}, {formattedTimestamp}
+            {/* these must be concatenated for screen reader UX - #7062 */}
+            {`${brandTitle}, ${formattedTimestamp}`}
           </VisuallyHiddenText>
           {episodeIsAvailable ? (
             <StyledVideoPlayer
