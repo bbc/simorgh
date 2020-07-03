@@ -8,16 +8,16 @@ install:
 
 developmentTests:
 	npx apache2-license-checker;
-	SIMORGH_APP_SILENT=true npm run test;
+	LOG_LEVEL=0 npm run test;
 
 productionTests:
-	SIMORGH_APP_SILENT=true npm run build && npm run test:ci;
+	LOG_LEVEL=0 npm run build && npm run test:ci;
 
 testChromatic:
 	npx chromatic test run  --build-script-name build:storybook --exit-once-uploaded --no-interactive || true
 
 testE2Es:
-	CYPRESS_SMOKE=false CYPRESS_APP_ENV=test npm run cypress
+	LOG_LEVEL=0 CYPRESS_SMOKE=false CYPRESS_APP_ENV=test npm run cypress
 
 test3rdPartyE2Es:
 	npm run cypress:3rdParty
