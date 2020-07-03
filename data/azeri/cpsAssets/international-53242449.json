@@ -1,0 +1,984 @@
+{
+    "content": {
+      "blocks": [
+        {
+          "altText": "4 Iyun 2019. Çinin şimal-qərb Sincan vilayətindən olan uşaqlı bir uyğur qadın",
+          "caption": "4 Iyun 2019. Çinin şimal-qərb Sincan vilayətindən olan uşaqlı bir uyğur qadın",
+          "copyrightHolder": "AFP",
+          "height": 549,
+          "href": "http://c.files.bbci.co.uk/12EAD/production/_113158477_mediaitem113158476.jpg",
+          "id": "113158477",
+          "path": "/cpsprodpb/12EAD/production/_113158477_mediaitem113158476.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "role": "introduction",
+          "text": "Çin uyğur əhalisinin artımını dayandırmaq üçün doğuma məcburi nəzarəti tətbiq edir, hesabatda deyilir. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Yeni tədqiqata görə, Çin müsəlman uyğurların sayının artmasının qarşısını almaq üçün Sincanda qadınları sterilizasiya olunmağa və ya onları kontraseptiv vasitələrdən istifadə etməyə məcbur edir.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Çin alimi Adrian Zenz-in hesabatı bu məsələni araşdırmaq üçün BMT-yə beynəlxalq çağırışlara səbəb olub. ",
+          "type": "paragraph"
+        },
+        {
+          "items": [
+            {
+              "markupType": "candy_xml",
+              "meta": [
+                {
+                  "headlines": {
+                    "headline": "Çin müsəlman qazaxları \"içəri salır\". Şahidlər nə danışıb?",
+                    "overtyped": "Çin müsəlman qazaxları \"içəri salır\". Şahidlər nə danışıb?",
+                    "shortHeadline": "Çin müsəlman qazaxları \"içəri salır\". Şahidlər nə danışıb?"
+                  },
+                  "id": "urn:bbc:ares::asset:azeri/international-51114145",
+                  "language": "az",
+                  "locators": {
+                    "href": "http://www.bbc.com/azeri/international-51114145"
+                  },
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Review",
+                      "categoryName": "Review"
+                    },
+                    "taggings": []
+                  },
+                  "summary": "2017-ci ildən bəri Çində yaradılan \"təlim mərkəzlərində\" minlərlə müsəlman qazax saxlanılıb. Buradan sağ çıxıb Qazaxıstana qayıdanlar aylar boyu işgəncələrə məruz qaldığını deyirlər. Bəziləri deyir ki, onlara tərkibində nə olduğu bilinməyən iynələr vurulub.",
+                  "timestamp": 1579025975000,
+                  "type": "cps"
+                }
+              ],
+              "text": "<itemMeta>azeri/international-51114145</itemMeta>",
+              "type": "listItem"
+            },
+            {
+              "markupType": "candy_xml",
+              "meta": [
+                {
+                  "headlines": {
+                    "headline": "Çin: buz bağlamış dağların heyrətamiz mənzərəsi",
+                    "overtyped": "Çin: buz bağlamış dağların heyrətamiz mənzərəsi",
+                    "shortHeadline": "Çin: buz bağlamış dağların heyrətamiz mənzərəsi"
+                  },
+                  "id": "urn:bbc:ares::asset:azeri/international-43031930",
+                  "language": "az",
+                  "locators": {
+                    "href": "http://www.bbc.com/azeri/international-43031930"
+                  },
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                      "categoryName": "News"
+                    },
+                    "taggings": []
+                  },
+                  "summary": "Çinin Huanqşan rayonu UNESCO-nun Dünya İrsi siyahısına daxil olunmuş obyektlərdəndir. Bu bölgə Çinin ən populyar turist məkanlarından biri sayılır. Qış mövsümündə Huanqşan Milli parkında heyrətamiz mənzərənin - buz bağlamış dağ və qayaların şahidi olmaq mümkündür.",
+                  "timestamp": 1518523883000,
+                  "type": "cps"
+                }
+              ],
+              "text": "<itemMeta>azeri/international-43031930</itemMeta>",
+              "type": "listItem"
+            }
+          ],
+          "numbered": false,
+          "type": "list"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Çin hesabatda yer alan iddiaları inkar edir və onları &quot;əsassız&quot; adlandırır.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Rəsmi Pekin uyğurların düşərgələrdə saxlanmasına görə artıq geniş tənqidlə üzləşir.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Güman olunduğuna görə, Çində bir milyona yaxın uyğur və digər, əsasən, müsəlman azlıqlar dövlət tərəfindən &quot;maarifləndirmə düşərgələri&quot; kimi qələmə verilən yerlərdə nəzarət altında saxlanılırlar.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Çin əvvəllər belə düşərgələrin mövcudluğunu inkar edib.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Lakin Sincan regionunda separatçı zorakılıqdan sonra onları terrorizmə qarşı lazımi tədbir kimi müdafiə edib. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "ABŞ dövlət katibi Mike Pompeo Çini &quot;bu dəhşətli təcrübəyə dərhal son qoymağa&quot; çağırıb.",
+          "type": "paragraph"
+        },
+        {
+          "items": [
+            {
+              "markupType": "candy_xml",
+              "meta": [
+                {
+                  "headlines": {
+                    "headline": "Çinin uyğur türklərini saxladığı düşərgələrdə “beyin yuma” təlimatında nələr var?",
+                    "overtyped": "Çinin uyğur türklərini saxladığı düşərgələrdə “beyin yuma” təlimatında nələr var?",
+                    "shortHeadline": "Çinin uyğur türklərini saxladığı düşərgələrdə “beyin yuma” təlimatında nələr var?"
+                  },
+                  "id": "urn:bbc:ares::asset:azeri/international-50542545",
+                  "language": "az",
+                  "locators": {
+                    "href": "http://www.bbc.com/azeri/international-50542545"
+                  },
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                      "categoryName": "News"
+                    },
+                    "taggings": []
+                  },
+                  "summary": "Əsas hissəsinin müsəlman uyğur icmasından olduğu bir milyona yaxın insanın hər hansı məhkəmə keçirilmədən bu düşərgələrdə saxlanıldığı deyilir.",
+                  "timestamp": 1574661130000,
+                  "type": "cps"
+                }
+              ],
+              "text": "<itemMeta>azeri/international-50542545</itemMeta>",
+              "type": "listItem"
+            },
+            {
+              "markupType": "candy_xml",
+              "meta": [
+                {
+                  "headlines": {
+                    "headline": "Çin iqtisadiyyatı zəifləyib. Bu, bütün dünya üçün pis xəbərdir. Niyə?",
+                    "overtyped": "Çin iqtisadiyyatı zəifləyib. Bu, bütün dünya üçün pis xəbərdir. Niyə? ",
+                    "shortHeadline": "Çin iqtisadiyyatı zəifləyib. Bu, bütün dünya üçün pis xəbərdir. Niyə?"
+                  },
+                  "id": "urn:bbc:ares::asset:azeri/international-46973072",
+                  "language": "az",
+                  "locators": {
+                    "href": "http://www.bbc.com/azeri/international-46973072"
+                  },
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                      "categoryName": "Analysis"
+                    },
+                    "taggings": []
+                  },
+                  "summary": "Çin iqtisadiyyatı zəifləyib və bütün dünya narahatlıq gözləntisiylə donub qalıb. Əgər yarım milyard çinli kəmərini sıxarsa ölkə dünya iqtisadiyyatı mühərrikindən onun boynundakı ağırlığa çevriləcəkdir.",
+                  "timestamp": 1548254898000,
+                  "type": "cps"
+                }
+              ],
+              "text": "<itemMeta>azeri/international-46973072</itemMeta>",
+              "type": "listItem"
+            }
+          ],
+          "numbered": false,
+          "type": "list"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "O, bəyanatında &quot;bütün ölkələri bu qeyri-insani hərəkətlərə son qoyulmasını tələb etməkdə ABŞ-a qoşulmağa&quot; çağırıb.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Son illər Çin uyğurlarla rəftarına görə getdikcə artan qlobal diqqətlə üzləşib. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "2019-cu ildə BBC tərəfindən aparılan araşdırma göstərib ki, Sincanda uşaqları mənsub olduqları müsəlman icmalarından təcrid etmək üçün onları ailələrindən mütəmadi ayırıblar.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "candy_xml",
+          "text": "<bold>Hesabatda nə var?</bold>",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Cənab Zenz-in hesabatı rəsmi regional məlumatlara, proqram sənədlərinə və Sincandakı etnik azlıqlardan olan qadınlarla müsahibələrin materiallarına əsaslanır.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Hesabatda iddia olunur ki, uyğur qadınlar və digər etnik azlıqlar doğum kvotasından artıq hamiləliyi dayandırmaq üçün abortdan imtina etdikləri halda düşərgələrə salınacaqları ilə hədələnirlər.",
+          "type": "paragraph"
+        },
+        {
+          "items": [
+            {
+              "markupType": "candy_xml",
+              "meta": [
+                {
+                  "headlines": {
+                    "headline": "Çinin müsəlmanları: uşaqları valideynlərindən ayıran Sincan məktəbləri",
+                    "overtyped": "Çinin müsəlmanları: uşaqları valideynlərindən ayıran Sincan məktəbləri ",
+                    "shortHeadline": "Çinin müsəlmanları: uşaqları valideynlərindən ayıran Sincan məktəbləri"
+                  },
+                  "id": "urn:bbc:ares::asset:azeri/international-48904983",
+                  "language": "az",
+                  "locators": {
+                    "href": "http://www.bbc.com/azeri/international-48904983"
+                  },
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                      "categoryName": "Feature"
+                    },
+                    "taggings": []
+                  },
+                  "summary": "Yeni araşdırmaya görə, Çin özünün uzaq qərb əyaləti olan Sincanda bilərəkdən müsəlman uşaqları ailələrindən, dini inanclarından və dillərindən qoparır.",
+                  "timestamp": 1562566313000,
+                  "type": "cps"
+                }
+              ],
+              "text": "<itemMeta>azeri/international-48904983</itemMeta>",
+              "type": "listItem"
+            },
+            {
+              "markupType": "candy_xml",
+              "meta": [
+                {
+                  "headlines": {
+                    "headline": "Çin xaricdə oxuyan uyğur türklərini sorğu-sual etmək üçün geri çağırır",
+                    "overtyped": "Çin xaricdə oxuyan uyğur türklərini geri çağırır",
+                    "shortHeadline": "Çin xaricdə oxuyan uyğur türklərini geri çağırır"
+                  },
+                  "id": "urn:bbc:ares::asset:azeri/international-40799231",
+                  "language": "az",
+                  "locators": {
+                    "href": "http://www.bbc.com/azeri/international-40799231"
+                  },
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                      "categoryName": "News"
+                    },
+                    "taggings": []
+                  },
+                  "summary": "Çin hökuməti may ayından bu yana xaricdə təhsil alan uyğur türklərinə bildiriş göndərərək ölkəyə geri çağırır. Çin hökuməti uyğur türklərinin təhsil almaq üçün getdikləri başqa ölkələrdə radikallaşmalarından narahatdır.",
+                  "timestamp": 1501656652000,
+                  "type": "cps"
+                }
+              ],
+              "text": "<itemMeta>azeri/international-40799231</itemMeta>",
+              "type": "listItem"
+            }
+          ],
+          "numbered": false,
+          "type": "list"
+        },
+        {
+          "altText": "Uyğur qadınları \"amansız\" doğuma nəzarət sistemylə üzləşiblər, hesabatın müəllifi bildirib.",
+          "caption": "Uyğur qadınları \"amansız\" doğuma nəzarət sistemylə üzləşiblər, hesabatın müəllifi bildirib.",
+          "copyrightHolder": "AFP",
+          "height": 549,
+          "href": "http://c.files.bbci.co.uk/1367D/production/_113158497_mediaitem113158496.jpg",
+          "id": "113158497",
+          "path": "/cpsprodpb/1367D/production/_113158497_mediaitem113158496.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Sənəddə həmçinin bildirilir ki, qanunla icazə verilən ikidən az uşağı olan qadınlara hamiləliyin qarşısını alan kontraseptiv vasitə məcburi olaraq yeridilir, digər qadınlar isə sterilizasiyadan keçməyə məcbur edilirlər.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Cənab Zenz-in təhlilinə əsasən, Sincandakı əhalinin təbii artımı son illərdə kəskin şəkildə azalıb, 2015-ci ildən 2018-ci ilə qədər ən iri iki uyğur prefekturasında artım tempi 84 faiz azalıb və 2019-cu ildə də azalma davam edib. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;Bu cür azalma görünməmiş haldır, bu, amansızlıqdır,&quot; - cənab Zenz Associated Press agentliyinə bildirib.",
+          "type": "paragraph"
+        },
+        {
+          "items": [
+            {
+              "markupType": "candy_xml",
+              "meta": [
+                {
+                  "headlines": {
+                    "headline": "Çin: Qədim bir məzarda \"ölməzlik cövhəri\" tapılıb",
+                    "overtyped": "Çin: Qədim bir məzarda \"ölməzlik cövhəri\" tapılıb",
+                    "shortHeadline": "Çin: Qədim bir məzarda \"ölməzlik cövhəri\" tapılıb"
+                  },
+                  "id": "urn:bbc:ares::asset:azeri/azerbaijan-47435722",
+                  "language": "az",
+                  "locators": {
+                    "href": "http://www.bbc.com/azeri/azerbaijan-47435722"
+                  },
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                      "categoryName": "News"
+                    },
+                    "taggings": []
+                  },
+                  "summary": "Çinin Henan əyalətində arxeoloqların tapdığı qədim məzarda əfsanəvi \"ölməzlik cövhəri\" olan dolça aşkar edilib.",
+                  "timestamp": 1551880317000,
+                  "type": "cps"
+                }
+              ],
+              "text": "<itemMeta>azeri/azerbaijan-47435722</itemMeta>",
+              "type": "listItem"
+            },
+            {
+              "markupType": "candy_xml",
+              "meta": [
+                {
+                  "headlines": {
+                    "headline": "ABŞ-ın Çinə qarşı soyuq müharibəsi \"virusdan daha böyük qlobal təhlükədir\"",
+                    "overtyped": "ABŞ-ın Çinə qarşı soyuq müharibəsi \"virusdan daha böyük qlobal təhlükədir\"",
+                    "shortHeadline": "ABŞ-ın Çinə qarşı soyuq müharibəsi \"virusdan daha böyük qlobal təhlükədir\""
+                  },
+                  "id": "urn:bbc:ares::asset:azeri/international-53130539",
+                  "language": "az",
+                  "locators": {
+                    "href": "http://www.bbc.com/azeri/international-53130539"
+                  },
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Review",
+                      "categoryName": "Review"
+                    },
+                    "taggings": []
+                  },
+                  "summary": "ABŞ və Çin arasında dərinləşən soyuq müharibə, dünya üçün koronavirusdan daha böyük bir təhlükə ola bilər, nüfuzlu iqtisadçı Jeffrey Sachs bildirib.",
+                  "timestamp": 1592752416000,
+                  "type": "cps"
+                }
+              ],
+              "text": "<itemMeta>azeri/international-53130539</itemMeta>",
+              "type": "listItem"
+            }
+          ],
+          "numbered": false,
+          "type": "list"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Sincan düşərgələrində olan keçmiş məhbuslar onlara menstruasiyanı kəsən və ya kontraseptiv preparatların təsirinə bənzər qeyri-adi qanaxmalara səbəb olan inyeksiyalar edildiyini söyləyiblər.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;Ümumilikdə, çox güman ki, Sincan rəsmiləri üç və daha çox uşağı olan qadınların kütləvi şəkildə sterilizasiyası ilə məşğul olur,&quot; - deyə məruzədə bildirilir. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "candy_xml",
+          "text": "<bold>Siyasətçilər BMT-ni araşdırmağa çağırırlar</bold>",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Bazar ertəsi günü Britaniyanın Mühafizəkarlar Partiyasından olan deputat Iain Duncan Smith, baronessa Helena Kennedy QC və ABŞ senatoru Marco Rubio da daxil olmaqla, siyasətçilərin beynəlxalq partiyalararası qrupu olan Çin Parlamentlərarası Alyansının (IPAC) bəyanatında BMT &quot;Sincan regionunda vəziyyətin beynəlxalq, qərəzsiz, müstəqil araşdırılmasına&quot; çağırılıb.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;Hazırda kütləvi şəkildə azadlıqdan məhrum edilmə halları, ideoloji təzyiq, məhkəmədənkənar saxlanmalar, izlənmə, məcburi əmək və uyğurların mədəni obyektlərinin, o cümlədən qəbiristanlıqlarının məhv edilməsini, həmçinin qəddar davranışın digər növlərini də təsdiq edən və getdikcə artmaqda olan sübutlar çoxdur,&quot; - bəyanatda bildirilir.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "candy_xml",
+          "text": "<bold>Çinin gizli düşərgələri</bold>",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;Associated Press&quot;-in bazar ertəsi dərc etdiyi məlumata görə, Sincandakı qadınlar uşaq doğumuna qoyulmuş məhdudiyyətlərin pozulmasına görə hədsiz cərimələrlə və həbs təhdidləri ilə üzləşiblər.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;Çində doğulmuş etnik qazax olan Gülnar Omirzah üçüncü uşağının doğulmasından sonra kontraseptiv vasitənin yeridilməsinə məcbur edilib,&quot; - AP bildirib. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "İki il sonra, 2018-ci ilin yanvar ayında hərbi geyimli dörd məmur onun qapısını döyərək ailədən üç gün ərzində böyük məbləğdə cərimə ödəməsini tələb ediblər.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Qadına xəbərdarlıq edilib ki, cərimə ödənməzsə, onu düşərgəyə salacaqlar.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Çinin Xarici İşlər Nazirliyi (XİN) bazar ertəsi bu hesabata cavab verərək göstərilmiş ittihamların &quot;əsassız&quot; olduğunu və &quot;gizli məqsədlərlə&quot; edilyini bəyan edib.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Çin XİN-in rəsmi nümayəndəsi Zhao Lijian medianı &quot;Sincanla bağlı məsələlərə dair uydurma xəbərlər hazırlamaqda&quot; günahlandırıb.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Cənab Zenz-in hesabatı Sincanda doğum sayına məcburi nəzarət kampaniyasını uyğurlara qarşı &quot;soyqırım demoqrafik kampaniyasının&quot; tərkib hissəsi kimi səciyyələndirir.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;Bu nəticələr Pekinin Sincandakı siyasətinin Soyqırım Cinayətinin Qarşısının alınması və Cəzalandırılması haqqında BMT Konvensiyasında qeyd olunmuş soyqırım meyarlarından birinə uyğun gəlməsini göstərən ən inandırıcı sübutdur,&quot; - o qeyd edir.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    "metadata": {
+      "analyticsLabels": {
+        "counterName": "azeri.international.story.53242449.page",
+        "cps_asset_id": "53242449",
+        "cps_asset_type": "sty"
+      },
+      "atiAnalytics": {
+        "producerId": "6",
+        "producerName": "AZERI"
+      },
+      "blockTypes": [
+        "image",
+        "paragraph",
+        "list"
+      ],
+      "createdBy": "azeri-v6",
+      "firstPublished": 1593598328000,
+      "id": "urn:bbc:ares::asset:azeri/international-53242449",
+      "includeComments": false,
+      "language": "az",
+      "lastPublished": 1593598328000,
+      "lastUpdated": 1593602705704,
+      "locators": {
+        "assetId": "53242449",
+        "assetUri": "/azeri/international-53242449",
+        "cpsUrn": "urn:bbc:content:assetUri:azeri/international-53242449",
+        "curie": "http://www.bbc.co.uk/asset/c9393a99-5d09-4621-a099-21c421e88407"
+      },
+      "options": {
+        "allowAdvertising": true,
+        "allowDateStamp": true,
+        "allowHeadline": true,
+        "allowPrintingSharingLinks": true,
+        "allowRelatedStoriesBox": true,
+        "allowRightHandSide": true,
+        "hasContentWarning": false,
+        "hasNewsTracker": false,
+        "includeComments": false,
+        "isBreakingNews": false,
+        "isFactCheck": false,
+        "isIgorSeoTagsEnabled": false,
+        "isKeyContent": false,
+        "suitableForSyndication": true
+      },
+      "passport": {
+        "campaigns": [
+          {
+            "campaignId": "5a988e3739461b000e9dabfa",
+            "campaignName": "WS - Give me perspective"
+          },
+          {
+            "campaignId": "5a988e4739461b000e9dabfc",
+            "campaignName": "WS - Update me"
+          }
+        ],
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Review",
+          "categoryName": "Review"
+        },
+        "taggings": []
+      },
+      "tags": {
+        "about": [
+          {
+            "curationList": [
+              {
+                "curationId": "33da6905-13ea-4dac-a4e4-86286cc041bb",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Women's rights",
+            "thingId": "8abd564a-2b8e-401c-9916-34982cb67b55",
+            "thingLabel": "Qadın haqları",
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Women%27s_rights",
+              "http://www.wikidata.org/entity/Q223569"
+            ],
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Thing",
+              "core:Theme"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+            "topicId": "ckdxnj2pgw1t",
+            "topicName": "Qadın haqları"
+          },
+          {
+            "curationList": [
+              {
+                "curationId": "8410c817-6ccf-4eb9-be72-977fd5187978",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Culture",
+            "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
+            "thingLabel": "Mədəniyyət",
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Culture",
+              "http://www.wikidata.org/entity/Q11042"
+            ],
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Thing",
+              "core:Theme"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+            "topicId": "cwr9j78n4qrt",
+            "topicName": "Mədəniyyət"
+          },
+          {
+            "curationList": [
+              {
+                "curationId": "cab3c6cf-98bd-41f4-8265-0548e331fabc",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Life",
+            "thingId": "0239ab33-1cfc-4f5d-babb-a8159711af3e",
+            "thingLabel": "Həyat (həyat tərzi mənasında)",
+            "thingSameAs": [],
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Theme",
+              "core:Thing"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+            "topicId": "c6vzyk6xz8dt",
+            "topicName": "Həyat (həyat tərzi mənasında)"
+          },
+          {
+            "curationList": [
+              {
+                "curationId": "cf6ad166-447f-420b-bb57-f47ff861472b",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Human rights",
+            "thingId": "8b04c2e8-5409-4e7d-9877-3ccaf04727af",
+            "thingLabel": "İnsan haqları",
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q8458",
+              "http://dbpedia.org/resource/Human_rights"
+            ],
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Thing",
+              "core:Theme"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/8b04c2e8-5409-4e7d-9877-3ccaf04727af#id",
+            "topicId": "c340qj46dz0t",
+            "topicName": "İnsan haqları"
+          },
+          {
+            "curationList": [
+              {
+                "curationId": "d6183d9a-7229-4239-be8b-4a8addfbe758",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Torture",
+            "thingId": "dc145058-c7af-45e5-9d91-720991c12fc6",
+            "thingLabel": "İşgəncə",
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Torture"
+            ],
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Theme",
+              "core:Thing"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/dc145058-c7af-45e5-9d91-720991c12fc6#id",
+            "topicId": "cjgn723qj4wt",
+            "topicName": "İşgəncə"
+          },
+          {
+            "curationList": [
+              {
+                "curationId": "5a16467c-d749-4b6e-bc9e-73750f10680e",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Minority rights",
+            "thingId": "6d0e57fa-76d9-4d3e-973c-3a903b9edcf1",
+            "thingLabel": "Azlıqların haqları",
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Minority_rights",
+              "http://www.wikidata.org/entity/Q1369260"
+            ],
+            "thingType": [
+              "core:Thing",
+              "core:Theme",
+              "tagging:TagConcept"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/6d0e57fa-76d9-4d3e-973c-3a903b9edcf1#id",
+            "topicId": "cjgn723jg9vt",
+            "topicName": "Azlıqların haqları"
+          },
+          {
+            "curationList": [
+              {
+                "curationId": "e896103e-8eb5-4371-a71f-43b60f722dd6",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Society",
+            "thingId": "5307a8d9-f620-40f5-92d4-f99c919a6ffa",
+            "thingLabel": "Cəmiyyət",
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Society",
+              "http://www.wikidata.org/entity/Q8425"
+            ],
+            "thingType": [
+              "core:Theme",
+              "tagging:TagConcept",
+              "core:Thing"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
+            "topicId": "cqywj91g14gt",
+            "topicName": "Cəmiyyət"
+          },
+          {
+            "curationList": [
+              {
+                "curationId": "5b21e74f-1325-453f-b479-33a86b6f941b",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "China",
+            "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+            "thingLabel": "Çin",
+            "thingSameAs": [
+              "http://sws.geonames.org/1814991/",
+              "http://dbpedia.org/resource/China",
+              "http://www.wikidata.org/entity/Q148"
+            ],
+            "thingType": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Place"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+            "topicId": "cvjp21jx7qvt",
+            "topicName": "Çin"
+          }
+        ]
+      },
+      "timestamp": 1593598328000,
+      "type": "STY",
+      "version": "v1.3.2"
+    },
+    "promo": {
+      "headlines": {
+        "headline": "Çin uyğurların artımına mane olur - hesabat",
+        "shortHeadline": "Çin uyğurların artımına mane olur - hesabat"
+      },
+      "id": "urn:bbc:ares::asset:azeri/international-53242449",
+      "indexImage": {
+        "altText": "4 Iyun 2019. Çinin şimal-qərb Sincan vilayətindən olan uşaqlı bir uyğur qadın",
+        "caption": "4 Iyun 2019. Çinin şimal-qərb Sincan vilayətindən olan uşaqlı bir uyğur qadın",
+        "copyrightHolder": "AFP",
+        "height": 549,
+        "href": "http://c.files.bbci.co.uk/12EAD/production/_113158477_mediaitem113158476.jpg",
+        "id": "113158477",
+        "path": "/cpsprodpb/12EAD/production/_113158477_mediaitem113158476.jpg",
+        "subType": "index",
+        "type": "image",
+        "width": 976
+      },
+      "language": "az",
+      "locators": {
+        "assetId": "53242449",
+        "assetUri": "/azeri/international-53242449",
+        "cpsUrn": "urn:bbc:content:assetUri:azeri/international-53242449",
+        "curie": "http://www.bbc.co.uk/asset/c9393a99-5d09-4621-a099-21c421e88407"
+      },
+      "passport": {
+        "campaigns": [
+          {
+            "campaignId": "5a988e3739461b000e9dabfa",
+            "campaignName": "WS - Give me perspective"
+          },
+          {
+            "campaignId": "5a988e4739461b000e9dabfc",
+            "campaignName": "WS - Update me"
+          }
+        ],
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Review",
+          "categoryName": "Review"
+        },
+        "taggings": []
+      },
+      "summary": "Çin müsəlman uyğurların sayının artmasına imkan verməmək üçün Sincanda qadınları sterilizasiya olunmağa və ya onları kontraseptiv vasitələrdən istifadə etməyə məcbur edir.",
+      "timestamp": 1593598328000,
+      "type": "cps"
+    },
+    "relatedContent": {
+      "groups": [
+        {
+          "promos": [
+            {
+              "cpsType": "STY",
+              "headlines": {
+                "headline": "Çin müsəlman qazaxları \"içəri salır\". Şahidlər nə danışıb?",
+                "shortHeadline": "Çin müsəlman qazaxları \"içəri salır\". Şahidlər nə danışıb?"
+              },
+              "id": "urn:bbc:ares::asset:azeri/international-51114145",
+              "indexImage": {
+                "altText": "Qazax",
+                "copyrightHolder": "BBC",
+                "height": 549,
+                "href": "http://c.files.bbci.co.uk/13E03/production/_110511418_capture.png",
+                "id": "110511418",
+                "path": "/cpsprodpb/13E03/production/_110511418_capture.png",
+                "subType": "index",
+                "type": "image",
+                "width": 976
+              },
+              "language": "az",
+              "locators": {
+                "assetUri": "/azeri/international-51114145",
+                "cpsUrn": "urn:bbc:content:assetUri:/azeri/international-51114145"
+              },
+              "summary": "2017-ci ildən bəri Çində yaradılan \"təlim mərkəzlərində\" minlərlə müsəlman qazax saxlanılıb. Buradan sağ çıxıb Qazaxıstana qayıdanlar aylar boyu işgəncələrə məruz qaldığını deyirlər. Bəziləri deyir ki, onlara tərkibində nə olduğu bilinməyən iynələr vurulub.",
+              "timestamp": 1579025975000,
+              "type": "cps"
+            },
+            {
+              "cpsType": "STY",
+              "headlines": {
+                "headline": "Çin: buz bağlamış dağların heyrətamiz mənzərəsi",
+                "shortHeadline": "Çin: buz bağlamış dağların heyrətamiz mənzərəsi"
+              },
+              "id": "urn:bbc:ares::asset:azeri/international-43031930",
+              "indexImage": {
+                "altText": "Хуаншань зимой",
+                "copyrightHolder": "DAVE STAMBOULIS",
+                "height": 900,
+                "href": "http://c.files.bbci.co.uk/16DDC/production/_99906639_chinamain.jpg",
+                "id": "99906639",
+                "path": "/cpsprodpb/16DDC/production/_99906639_chinamain.jpg",
+                "subType": "index",
+                "type": "image",
+                "width": 1600
+              },
+              "language": "az",
+              "locators": {
+                "assetUri": "/azeri/international-43031930",
+                "cpsUrn": "urn:bbc:content:assetUri:/azeri/international-43031930"
+              },
+              "summary": "Çinin Huanqşan rayonu UNESCO-nun Dünya İrsi siyahısına daxil olunmuş obyektlərdəndir. Bu bölgə Çinin ən populyar turist məkanlarından biri sayılır. Qış mövsümündə Huanqşan Milli parkında heyrətamiz mənzərənin - buz bağlamış dağ və qayaların şahidi olmaq mümkündür.",
+              "timestamp": 1518523883000,
+              "type": "cps"
+            },
+            {
+              "cpsType": "STY",
+              "headlines": {
+                "headline": "Çinin uyğur türklərini saxladığı düşərgələrdə “beyin yuma” təlimatında nələr var?",
+                "shortHeadline": "Çinin uyğur türklərini saxladığı düşərgələrdə “beyin yuma” təlimatında nələr var?"
+              },
+              "id": "urn:bbc:ares::asset:azeri/international-50542545",
+              "indexImage": {
+                "altText": "Çoxunun müsəlman uyğur icmasından olduğu bir milyona yaxın insanın hər hansı məhkəmə keçirilmədən bu düşərgələrdə saxlanıldığı deyilir.",
+                "copyrightHolder": "Reuters",
+                "height": 549,
+                "href": "http://c.files.bbci.co.uk/E3A6/production/_109787285_08628207-a868-474b-863b-e97f60f7b885.jpg",
+                "id": "109787285",
+                "path": "/cpsprodpb/E3A6/production/_109787285_08628207-a868-474b-863b-e97f60f7b885.jpg",
+                "subType": "index",
+                "type": "image",
+                "width": 976
+              },
+              "language": "az",
+              "locators": {
+                "assetUri": "/azeri/international-50542545",
+                "cpsUrn": "urn:bbc:content:assetUri:/azeri/international-50542545"
+              },
+              "summary": "Əsas hissəsinin müsəlman uyğur icmasından olduğu bir milyona yaxın insanın hər hansı məhkəmə keçirilmədən bu düşərgələrdə saxlanıldığı deyilir.",
+              "timestamp": 1574661130000,
+              "type": "cps"
+            },
+            {
+              "cpsType": "STY",
+              "headlines": {
+                "headline": "Çin iqtisadiyyatı zəifləyib. Bu, bütün dünya üçün pis xəbərdir. Niyə?",
+                "shortHeadline": "Çin iqtisadiyyatı zəifləyib. Bu, bütün dünya üçün pis xəbərdir. Niyə?"
+              },
+              "id": "urn:bbc:ares::asset:azeri/international-46973072",
+              "indexImage": {
+                "altText": "Когда китайский ледяной замок начинает подтаивать, мир готовится к потопу",
+                "caption": "Когда китайский ледяной замок начинает подтаивать, мир готовится к потопу",
+                "copyrightHolder": "AFP",
+                "height": 549,
+                "href": "http://c.files.bbci.co.uk/252F/production/_105291590_gettyimages-1078224144.jpg",
+                "id": "105291590",
+                "path": "/cpsprodpb/252F/production/_105291590_gettyimages-1078224144.jpg",
+                "subType": "index",
+                "type": "image",
+                "width": 976
+              },
+              "language": "az",
+              "locators": {
+                "assetUri": "/azeri/international-46973072",
+                "cpsUrn": "urn:bbc:content:assetUri:/azeri/international-46973072"
+              },
+              "summary": "Çin iqtisadiyyatı zəifləyib və bütün dünya narahatlıq gözləntisiylə donub qalıb. Əgər yarım milyard çinli kəmərini sıxarsa ölkə dünya iqtisadiyyatı mühərrikindən onun boynundakı ağırlığa çevriləcəkdir.",
+              "timestamp": 1548254898000,
+              "type": "cps"
+            },
+            {
+              "cpsType": "STY",
+              "headlines": {
+                "headline": "Çinin müsəlmanları: uşaqları valideynlərindən ayıran Sincan məktəbləri",
+                "shortHeadline": "Çinin müsəlmanları: uşaqları valideynlərindən ayıran Sincan məktəbləri"
+              },
+              "id": "urn:bbc:ares::asset:azeri/international-48904983",
+              "indexImage": {
+                "altText": "Çində itkin düşənlər: İtmiş uşaqları barədə məlumat axtaran bəzi uyğur valideynlərin Türkiyədə bizə təqdim etdiyi fotolar",
+                "caption": "Çində itkin düşənlər: İtmiş uşaqları barədə məlumat axtaran bəzi uyğur valideynlərin Türkiyədə bizə təqdim etdiyi fotolar",
+                "copyrightHolder": "BBC",
+                "height": 549,
+                "href": "http://c.files.bbci.co.uk/776C/production/_107727503_comp_morekids.jpg",
+                "id": "107727503",
+                "path": "/cpsprodpb/776C/production/_107727503_comp_morekids.jpg",
+                "subType": "index",
+                "type": "image",
+                "width": 976
+              },
+              "language": "az",
+              "locators": {
+                "assetUri": "/azeri/international-48904983",
+                "cpsUrn": "urn:bbc:content:assetUri:/azeri/international-48904983"
+              },
+              "summary": "Yeni araşdırmaya görə, Çin özünün uzaq qərb əyaləti olan Sincanda bilərəkdən müsəlman uşaqları ailələrindən, dini inanclarından və dillərindən qoparır.",
+              "timestamp": 1562566313000,
+              "type": "cps"
+            },
+            {
+              "cpsType": "STY",
+              "headlines": {
+                "headline": "Çin xaricdə oxuyan uyğur türklərini sorğu-sual etmək üçün geri çağırır",
+                "shortHeadline": "Çin xaricdə oxuyan uyğur türklərini geri çağırır"
+              },
+              "id": "urn:bbc:ares::asset:azeri/international-40799231",
+              "indexImage": {
+                "altText": "UYGUR TURKU",
+                "copyrightHolder": "Getty Images",
+                "height": 549,
+                "href": "http://c.files.bbci.co.uk/DAC6/production/_97160065_uygur_turk_getty.jpg",
+                "id": "97160065",
+                "path": "/cpsprodpb/DAC6/production/_97160065_uygur_turk_getty.jpg",
+                "subType": "index",
+                "type": "image",
+                "width": 976
+              },
+              "language": "az",
+              "locators": {
+                "assetUri": "/azeri/international-40799231",
+                "cpsUrn": "urn:bbc:content:assetUri:/azeri/international-40799231"
+              },
+              "summary": "Çin hökuməti may ayından bu yana xaricdə təhsil alan uyğur türklərinə bildiriş göndərərək ölkəyə geri çağırır. Çin hökuməti uyğur türklərinin təhsil almaq üçün getdikləri başqa ölkələrdə radikallaşmalarından narahatdır.",
+              "timestamp": 1501656652000,
+              "type": "cps"
+            },
+            {
+              "cpsType": "STY",
+              "headlines": {
+                "headline": "Çin: Qədim bir məzarda \"ölməzlik cövhəri\" tapılıb",
+                "shortHeadline": "Çin: Qədim bir məzarda \"ölməzlik cövhəri\" tapılıb"
+              },
+              "id": "urn:bbc:ares::asset:azeri/azerbaijan-47435722",
+              "indexImage": {
+                "altText": "Qədim dolça",
+                "copyrightHolder": "Xinhua/Li An",
+                "height": 549,
+                "href": "http://c.files.bbci.co.uk/12B56/production/_105903667_857f9e01-7b60-46ba-b95c-8040f7140deb.jpg",
+                "id": "105903667",
+                "path": "/cpsprodpb/12B56/production/_105903667_857f9e01-7b60-46ba-b95c-8040f7140deb.jpg",
+                "subType": "index",
+                "type": "image",
+                "width": 976
+              },
+              "language": "az",
+              "locators": {
+                "assetUri": "/azeri/azerbaijan-47435722",
+                "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-47435722"
+              },
+              "summary": "Çinin Henan əyalətində arxeoloqların tapdığı qədim məzarda əfsanəvi \"ölməzlik cövhəri\" olan dolça aşkar edilib.",
+              "timestamp": 1551880317000,
+              "type": "cps"
+            },
+            {
+              "cpsType": "STY",
+              "headlines": {
+                "headline": "ABŞ-ın Çinə qarşı soyuq müharibəsi \"virusdan daha böyük qlobal təhlükədir\"",
+                "shortHeadline": "ABŞ-ın Çinə qarşı soyuq müharibəsi \"virusdan daha böyük qlobal təhlükədir\""
+              },
+              "id": "urn:bbc:ares::asset:azeri/international-53130539",
+              "indexImage": {
+                "altText": "Jeffrey Sachs",
+                "copyrightHolder": "Michael Kovac",
+                "height": 549,
+                "href": "http://c.files.bbci.co.uk/9643/production/_112976483_jeffreysachs.jpg",
+                "id": "112976483",
+                "path": "/cpsprodpb/9643/production/_112976483_jeffreysachs.jpg",
+                "subType": "index",
+                "type": "image",
+                "width": 976
+              },
+              "language": "az",
+              "locators": {
+                "assetUri": "/azeri/international-53130539",
+                "cpsUrn": "urn:bbc:content:assetUri:/azeri/international-53130539"
+              },
+              "summary": "ABŞ və Çin arasında dərinləşən soyuq müharibə, dünya üçün koronavirusdan daha böyük bir təhlükə ola bilər, nüfuzlu iqtisadçı Jeffrey Sachs bildirib.",
+              "timestamp": 1592752416000,
+              "type": "cps"
+            }
+          ],
+          "type": "see-alsos"
+        }
+      ],
+      "section": {
+        "name": "Beynəlxalq",
+        "subType": "index",
+        "type": "simple",
+        "uri": "/azeri/international"
+      },
+      "site": {
+        "name": "BBC Azərbaycanca",
+        "subType": "site",
+        "type": "simple",
+        "uri": "/azeri"
+      }
+    }
+  }
