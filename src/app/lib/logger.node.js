@@ -35,6 +35,7 @@ const consoleTransport = new (transports.Console)({
   humanReadableUnhandledException: true,
   level: LOG_LEVEL,
   timestamp: true,
+  silent: process.env.SIMORGH_APP_SILENT === 'true' ? true : false
 });
 
 const customFormatting = printf(
