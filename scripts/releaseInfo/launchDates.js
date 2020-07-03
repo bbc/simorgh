@@ -205,6 +205,7 @@ const launchDates = {
     storyPage: '',
     mostReadPage: '28th May 2020',
     onDemandRadio: '',
+    idxPage: '23rd June 2020',
   },
   pidgin: {
     articles: 'Sept 2019',
@@ -349,6 +350,9 @@ const launchDates = {
     photoGalleryPage: '24th March 2020',
     storyPage: '28th May 2020',
     mostReadPage: '28th May 2020',
+  },
+  ukrainianRu: {
+    idxPage: '2nd July 2020',
   },
   ukrainian: {
     articles: 'Sept 2019',
