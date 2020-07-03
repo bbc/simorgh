@@ -20,9 +20,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
         id="content"
         tabindex="-1"
       >
-        نړۍ دا وخت
-        , 
-        ۲۷ می ۲۰۲۰
+        نړۍ دا وخت, ۲۷ می ۲۰۲۰
       </h1>
       <div
         class="StyledMessageContainer-sc-1brqmij-0 eQVkWQ"
