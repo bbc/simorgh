@@ -11,6 +11,7 @@ jest.mock('aws-embedded-metrics', () => {
     putMetric: jest.fn(),
     putDimensions: jest.fn(),
     setProperty: jest.fn(),
+    setNamespace: jest.fn(),
   };
 
   // return the mocked module
@@ -51,7 +52,7 @@ describe('Cloudwatch Custom Metrics', () => {
     process.env.SIMORGH_APP_ENV = 'test';
     await sendCustomMetric(metricParams);
 
-    // assert
+    expect(metricsLogger.setNamespace).toBeCalled();
     expect(metricsLogger.putMetric).toBeCalled();
     expect(metricsLogger.putDimensions).toBeCalled();
     expect(metricsLogger.setProperty).toBeCalled();
@@ -60,6 +61,12 @@ describe('Cloudwatch Custom Metrics', () => {
   describe('sendCustomMetric', () => {
     beforeEach(() => {
       process.env.SIMORGH_APP_ENV = 'test';
+    });
+
+    it('should set metric namespace', async () => {
+      await sendCustomMetric(metricParams);
+
+      expect(metricsLogger.setNamespace).toBeCalledWith('Simorgh/Server');
     });
 
     it('should set metric with name and count', async () => {
@@ -73,7 +80,7 @@ describe('Cloudwatch Custom Metrics', () => {
 
       expect(metricsLogger.putDimensions).toBeCalledWith({
         PageType: 'Page Type',
-        StatusCode: 500,
+        StatusCode: '500',
       });
     });
 
