@@ -48,7 +48,7 @@ ContextWrap.defaultProps = {
   toggleState: defaultToggleState,
 };
 
-describe('Charbeats Analytics Container', () => {
+describe('Comscore Analytics Container', () => {
   it('should return null when toggle is disabled', () => {
     const toggleState = {
       comscoreAnalytics: {

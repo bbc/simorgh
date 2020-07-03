@@ -1,18 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Charbeats Analytics Container should render comscore script 1`] = `
-<amp-analytics
-  type="comscore"
->
-  <script
-    type="application/json"
-  >
-    {"vars":{"c2":"17986528"},"extraUrlParams":{"comscorekw":"amp"}}
-  </script>
-</amp-analytics>
-`;
-
-exports[`Charbeats Analytics Container should render comscore script when on amp and toggle is enabled 1`] = `
+exports[`Comscore Analytics Container should render comscore script when on amp and toggle is enabled 1`] = `
 <amp-analytics
   type="comscore"
 >
