@@ -4,7 +4,7 @@ import { getEmbedUrl, isExpired, dataEndpointOverride } from './helpers';
 
 export default ({ service, pageType, variant }) => {
   describe(`testsForCanonicalOnly for ${service} ${pageType}`, () => {
-    describe('AV Player', () => {
+    describe('Media Player', () => {
       const { lang } = appConfig[service][variant];
       let embedUrl;
       let isExpiredEpisode;

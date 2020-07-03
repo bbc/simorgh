@@ -4,7 +4,7 @@ import { getEmbedUrl, isExpired, dataEndpointOverride } from './helpers';
 
 export default ({ service, pageType, variant }) => {
   describe(`testsForAMPOnly for ${service} ${pageType}`, () => {
-    describe('Audio Player', () => {
+    describe('Media Player', () => {
       const { lang } = appConfig[service][variant];
 
       it('should render an iframe with a valid URL', () => {
