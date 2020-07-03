@@ -41,7 +41,7 @@ describe('Cloudwatch Custom Metrics', () => {
       process.env.SIMORGH_APP_ENV = environment;
       await sendCustomMetric(metricParams);
 
-      // assert
+      expect(metricsLogger.setNamespace).not.toBeCalled();
       expect(metricsLogger.putMetric).not.toBeCalled();
       expect(metricsLogger.putDimensions).not.toBeCalled();
       expect(metricsLogger.setProperty).not.toBeCalled();
