@@ -1,24 +1,27 @@
 import services from '../../../src/server/utilities/serviceConfigs';
 
-Object.keys(services).forEach((service) => {
-  const notWSServices = [
-    'news',
-    'cymrufyw',
-    'naidheachdan',
-    'default',
-    'scotland',
-  ]; // Not WS
+describe('WS Redirects', () => {
+  Object.keys(services).forEach(service => {
+    const notWSServices = [
+      'news',
+      'cymrufyw',
+      'naidheachdan',
+      'default',
+      'scotland',
+      'archive',
+    ]; // Not WS
 
-  if (notWSServices.includes(service)) {
-    return;
-  }
+    const servicesWtithVariantRedirect = ['serbian', 'ukchina', 'zhongwen'];
 
-  // Do not run the redirect tests on the local environment
-  if (Cypress.env('APP_ENV') === 'local') {
-    return;
-  }
+    if ([...notWSServices, ...servicesWtithVariantRedirect].includes(service)) {
+      return;
+    }
 
-  describe('WS Redirects', () => {
+    // Do not run the redirect tests on the local environment
+    if (Cypress.env('APP_ENV') === 'local') {
+      return;
+    }
+
     it(`should redirect *bbc.com/${service}`, () => {
       const urlsTotest = [
         `https://www.bbc.co.uk/${service}`,
@@ -26,12 +29,12 @@ Object.keys(services).forEach((service) => {
         `https://www.bbc.co.uk/${service}/articles/a0000000000o.amp`,
       ];
 
-      urlsTotest.forEach((urlToTest) => {
+      urlsTotest.forEach(urlToTest => {
         const slashLoc = urlToTest.indexOf('/', 8);
         cy.request({
           url: urlToTest,
           followRedirect: false,
-        }).then((resp) => {
+        }).then(resp => {
           expect(resp.status).to.eq(301);
           // expect first slice to equal https://www.bbc.com/
           expect(resp.redirectedToUrl.substring(0, 20)).to.eq(
