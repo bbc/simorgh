@@ -7,7 +7,7 @@ import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
 import runCanonicalTests from './testsForCanonicalOnly';
 import runAmpTests from './testsForAMPOnly';
 
-const filterByPageType = (service, pageType) =>
+const serviceFilter = (service, pageType) =>
   Cypress.env('SMOKE')
     ? ['news', 'pashto'].includes(service)
     : ramdaPath([service, 'pageTypes', pageType, 'smoke'], config);
@@ -17,7 +17,7 @@ Object.keys(config).forEach(service => {
 
   Object.keys(config[service].pageTypes)
     .filter(pageType => serviceHasPageType(service, pageType))
-    .filter(pageType => filterByPageType(service, pageType))
+    .filter(pageType => serviceFilter(service, pageType))
     .forEach(pageType => {
       const paths = getPaths(service, pageType);
       paths.forEach(path => {
