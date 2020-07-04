@@ -9,11 +9,11 @@ describe('WS Redirects', () => {
       'default',
       'scotland',
       'archive',
-    ]; // Not WS
+    ];
 
-    const servicesWtithVariantRedirect = ['serbian', 'ukchina', 'zhongwen'];
+    const servicesWithVariantRedirect = ['serbian', 'ukchina', 'zhongwen'];
 
-    if ([...notWSServices, ...servicesWtithVariantRedirect].includes(service)) {
+    if ([...notWSServices, ...servicesWithVariantRedirect].includes(service)) {
       return;
     }
 
@@ -22,7 +22,7 @@ describe('WS Redirects', () => {
       return;
     }
 
-    it(`should redirect *bbc.com/${service}`, () => {
+    it(`should redirect to www.bbc.com/${service}`, () => {
       const urlsTotest = [
         `https://www.bbc.co.uk/${service}`,
         `https://www.bbc.co.uk/${service}/articles/a0000000000o`,
