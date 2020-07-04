@@ -15,7 +15,7 @@ describe('Media Asset Pages - Preroll Ads', () => {
 
         describe(`because ${reason}`, () => {
           paths.forEach(path => {
-            it(`${path}`, () => {
+            it(path, () => {
               cy.request(`${path}.json`).then(({ body: jsonData }) => {
                 const embedUrl = getEmbedUrl(
                   jsonData,
@@ -38,7 +38,7 @@ describe('Media Asset Pages - Preroll Ads', () => {
 
     if (appToggles.prerollAds.enabled && paths.length > 0) {
       paths.forEach(path => {
-        it(`${path}`, () => {
+        it(path, () => {
           cy.request(`${path}.json`).then(({ body: jsonData }) => {
             const embedUrl = getEmbedUrl(jsonData, jsonData.metadata.language);
             cy.visit(embedUrl);
