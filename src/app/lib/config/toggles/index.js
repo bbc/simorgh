@@ -39,7 +39,7 @@ const toggles = {
       enabled: false,
     },
     prerollAds: {
-      enabled: false,
+      enabled: true,
     },
     cpsRecommendations: {
       enabled: true,
@@ -131,7 +131,7 @@ const toggles = {
       enabled: false,
     },
     prerollAds: {
-      enabled: false,
+      enabled: true,
     },
     cpsRecommendations: {
       enabled: false,
