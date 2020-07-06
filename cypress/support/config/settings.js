@@ -165,6 +165,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   afrique: {
     name: 'afrique',
@@ -365,6 +381,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   amharic: {
     name: 'amharic',
@@ -538,6 +570,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   arabic: {
     name: 'arabic',
@@ -710,6 +758,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   azeri: {
     name: 'azeri',
@@ -849,6 +913,22 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   bengali: {
@@ -1027,6 +1107,22 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   burmese: {
@@ -1226,6 +1322,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   cymrufyw: {
     name: 'cymrufyw',
@@ -1276,6 +1388,22 @@ module.exports = () => ({
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   gahuza: {
@@ -1455,6 +1583,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   gujarati: {
     name: 'gujarati',
@@ -1612,6 +1756,22 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   hausa: {
@@ -1810,6 +1970,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   hindi: {
     name: 'hindi',
@@ -2002,6 +2178,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   igbo: {
     name: 'igbo',
@@ -2136,6 +2328,22 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   indonesia: {
@@ -2315,6 +2523,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   japanese: {
     name: 'japanese',
@@ -2449,6 +2673,22 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   korean: {
@@ -2622,6 +2862,22 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   kyrgyz: {
@@ -2821,6 +3077,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   marathi: {
     name: 'marathi',
@@ -2976,6 +3248,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   mundo: {
     name: 'mundo',
@@ -3116,6 +3404,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   naidheachdan: {
     name: 'naidheachdan',
@@ -3166,6 +3470,22 @@ module.exports = () => ({
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   nepali: {
@@ -3345,6 +3665,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   news: {
     name: 'news',
@@ -3395,6 +3731,22 @@ module.exports = () => ({
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   pashto: {
@@ -3595,6 +3947,22 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   persian: {
@@ -3808,6 +4176,22 @@ module.exports = () => ({
         smoke: true,
       },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   pidgin: {
     name: 'pidgin',
@@ -3938,6 +4322,22 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   portuguese: {
@@ -4079,6 +4479,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   punjabi: {
     name: 'punjabi',
@@ -4212,6 +4628,22 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   russian: {
@@ -4347,6 +4779,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   scotland: {
     name: 'scotland',
@@ -4397,6 +4845,22 @@ module.exports = () => ({
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   serbianCyr: {
@@ -4531,6 +4995,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   serbianLat: {
     name: 'serbian',
@@ -4663,6 +5143,22 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   sinhala: {
@@ -4840,6 +5336,22 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   somali: {
@@ -5034,6 +5546,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   sport: {
     name: 'sport',
@@ -5051,6 +5579,22 @@ module.exports = () => ({
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   swahili: {
@@ -5250,6 +5794,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   tamil: {
     name: 'tamil',
@@ -5448,6 +6008,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   telugu: {
     name: 'telugu',
@@ -5603,6 +6179,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   thai: {
     name: 'thai',
@@ -5737,6 +6329,22 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   tigrinya: {
@@ -5911,6 +6519,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   turkce: {
     name: 'turkce',
@@ -6050,6 +6674,22 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   ukchinaSimp: {
@@ -6191,6 +6831,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   ukchinaTrad: {
     name: 'ukchina',
@@ -6331,6 +6987,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   ukrainianRu: {
     name: 'ukrainian',
@@ -6365,6 +7037,22 @@ module.exports = () => ({
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   ukrainian: {
@@ -6529,6 +7217,22 @@ module.exports = () => ({
       },
       idxPage: {
         environments: undefined,
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
         smoke: false,
       },
     },
@@ -6729,6 +7433,22 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   uzbek: {
@@ -6932,6 +7652,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   vietnamese: {
     name: 'vietnamese',
@@ -7072,6 +7808,22 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
   yoruba: {
     name: 'yoruba',
@@ -7206,6 +7958,22 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   zhongwenSimp: {
@@ -7368,6 +8136,22 @@ module.exports = () => ({
         smoke: true,
       },
       idxPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: false,
+          },
+          test: {
+            enabled: false,
+          },
+          local: {
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   zhongwenTrad: {
