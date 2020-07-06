@@ -36,6 +36,7 @@ const pageTypes = {
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
   ],
   idxPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
+  onDemandTV: [],
 };
 
 Object.keys(pageTypes).forEach(pageType => {

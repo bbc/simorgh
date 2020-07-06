@@ -26,13 +26,10 @@ export const getEmbedUrl = (body, language) => {
 };
 
 export const isExpired = jsonData => {
-  const episodeAvailableUntil = path(
-    ['content', 'blocks', '0', 'versions', '0', 'availableUntil'],
-    jsonData,
-  );
+  const versions = path(['content', 'blocks', '0', 'versions'], jsonData);
 
-  // Episode is expired if availableUntil is empty
-  return !episodeAvailableUntil || episodeAvailableUntil < Date.now();
+  // Episode is expired if versions is empty
+  return versions.length === 0;
 };
 
 export const dataEndpointOverride = () => {
