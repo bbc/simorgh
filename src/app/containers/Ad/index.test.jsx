@@ -36,58 +36,39 @@ describe('Ad Container', () => {
 
   describe('Snapshots', () => {
     shouldMatchSnapshot(
-      'should correctly render an AMP ad',
-      <ServiceContextProvider service="pidgin">
+      'should correctly render an AMP leaderbaord ad',
+      <ServiceContextProvider service="mundo">
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
           id="c0000000000o"
           isAmp
           pageType="frontPage"
-          service="pidgin"
+          service="mundo"
           statusCode={200}
-          pathname="/pidgin"
+          pathname="/mundo"
         >
           <ToggleContext.Provider value={toggleContextMock}>
-            <AdContainer />
+            <AdContainer slotType="leaderboard" />
           </ToggleContext.Provider>
         </RequestContextProvider>
       </ServiceContextProvider>,
     );
 
     shouldMatchSnapshot(
-      'should not render an AMP ad for News',
-      <ServiceContextProvider service="news">
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          id="c0000000000o"
-          isAmp
-          pageType="frontPage"
-          service="news"
-          statusCode={200}
-          pathname="/news"
-        >
-          <ToggleContext.Provider value={toggleContextMock}>
-            <AdContainer />
-          </ToggleContext.Provider>
-        </RequestContextProvider>
-      </ServiceContextProvider>,
-    );
-
-    shouldMatchSnapshot(
-      'should correctly render a Canonical ad',
-      <ServiceContextProvider service="pidgin">
+      'should correctly render a Canonical leaderbaord ad',
+      <ServiceContextProvider service="mundo">
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
           id="c0000000000o"
           isAmp={false}
           pageType="frontPage"
-          service="pidgin"
+          service="mundo"
           statusCode={200}
-          pathname="/pidgin"
+          pathname="/mundo"
         >
           <ToggleContext.Provider value={toggleContextMock}>
             <BrowserRouter>
-              <AdContainer />
+              <AdContainer slotType="leaderboard" />
             </BrowserRouter>
           </ToggleContext.Provider>
         </RequestContextProvider>
@@ -95,20 +76,39 @@ describe('Ad Container', () => {
     );
 
     shouldMatchSnapshot(
-      'should not render a Canonical ad for News',
-      <ServiceContextProvider service="news">
+      'should correctly render an AMP mpu ad',
+      <ServiceContextProvider service="mundo">
+        <RequestContextProvider
+          bbcOrigin="https://www.test.bbc.co.uk"
+          id="c0000000000o"
+          isAmp
+          pageType="frontPage"
+          service="mundo"
+          statusCode={200}
+          pathname="/mundo"
+        >
+          <ToggleContext.Provider value={toggleContextMock}>
+            <AdContainer slotType="mpu" />
+          </ToggleContext.Provider>
+        </RequestContextProvider>
+      </ServiceContextProvider>,
+    );
+
+    shouldMatchSnapshot(
+      'should correctly render a Canonical mpu ad',
+      <ServiceContextProvider service="mundo">
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
           id="c0000000000o"
           isAmp={false}
           pageType="frontPage"
-          service="news"
+          service="mundo"
           statusCode={200}
-          pathname="/news"
+          pathname="/mundo"
         >
           <ToggleContext.Provider value={toggleContextMock}>
             <BrowserRouter>
-              <AdContainer />
+              <AdContainer slotType="mpu" />
             </BrowserRouter>
           </ToggleContext.Provider>
         </RequestContextProvider>
