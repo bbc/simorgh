@@ -1,0 +1,493 @@
+{
+    "content": {
+      "blocks": [
+        {
+          "altText": "Madaxweyne Farmaajo ayaa khudbad ka jeediyay xafladda 1-da Luulyo",
+          "caption": "Madaxweyne Farmaajo ayaa khudbad ka jeediyay xafladda 1-da Luulyo",
+          "copyrightHolder": "SONNA",
+          "height": 549,
+          "href": "http://c.files.bbci.co.uk/8048/production/_113204823_cca48283-c3ab-46cb-adc5-7420f2eaf45a.jpg",
+          "id": "113204823",
+          "path": "/cpsprodpb/8048/production/_113204823_cca48283-c3ab-46cb-adc5-7420f2eaf45a.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "role": "introduction",
+          "text": "Madaxweynaha Soomaaliya Maxamed Cabdullaahi Farmaajo ayaa khudbaddii uu ka jeediyay munaasabadda 60 guurada xorriyaddii Soomaaliya kusoo hadal qaadi waayay arrimo xasaasi ah oo si weyn looga dhowrayay inuu ka hadlo.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Xafladda 1-da Luulyo oo lagu qabtay tiyaatarka qaranka ayuu madaxweyne Farmaajo khudbaddiisa diiradda ugu saaray arrimo ay ka mid yihiin dadaalkii lagu keenay xorriyadda, wax qabadkii dowladdiisa intii ay jirtay iyo inuu shacabka ku boorriyay ilaalinta nabadda iyo bixinta canshuuraha. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Dayactirka garoonka ciyaaraha, xarunta murtida iyo madadaalada iyo mashaariic kale ayuu ka dhawaajiyay, inkastoo uu sheegay in howlo badan oo ay damacsaneeyeen ay hakiyeen geeridii guddoomiyihii hore ee gobolka Banaadir iyo cudurka safmarka ah ee coronavirus.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Qodobbada sida aadka ah looga filayay inuu khudbaddiisa si faahfaahsan uga hadlo waxaa ka mid ahaa go'aankii ay guddiga diyaarinta sharciga doorashada kasoo saareen matalaadda Muqdisho, kaasoo xiisad weyn ka dhex abuuray siyaasadda Soomaaliya. ",
+          "type": "paragraph"
+        },
+        {
+          "items": [
+            {
+              "markupType": "candy_xml",
+              "meta": [
+                {
+                  "headlines": {
+                    "headline": "Arrimaha uu farmaajo uga hadlay khudbaddii munaasabadda 1-da Luulyo",
+                    "overtyped": "Arrimaha uu farmaajo uga hadlay khudbaddii munaasabadda 1-da Luulyo",
+                    "shortHeadline": "Arrimaha uu farmaajo uga hadlay khudbaddii munaasabadda 1-da Luulyo"
+                  },
+                  "id": "urn:bbc:ares::asset:somali/war-53254241",
+                  "language": "so",
+                  "locators": {
+                    "href": "http://www.bbc.com/somali/war-53254241"
+                  },
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                      "categoryName": "News"
+                    },
+                    "taggings": []
+                  },
+                  "summary": "Munaasabadda 60 guurada kasoo wareegtay xorriyadda Soomaaliya ayaa maanta lagu qabtay tiyaatarka qaranka, waxaana khudbad dhinacyo badan taabaneysa ka jeediyay madaxweyne Farmaajo.",
+                  "timestamp": 1593619959000,
+                  "type": "cps"
+                }
+              ],
+              "text": "<itemMeta>somali/war-53254241</itemMeta>",
+              "type": "listItem"
+            },
+            {
+              "markupType": "candy_xml",
+              "meta": [
+                {
+                  "headlines": {
+                    "headline": "Shirka Jabuuti: Doorka Abiy iyo Geelle ee \"mideynta ama kala tagga\" Soomaaliya iyo Somaliland muxuu yahay?",
+                    "overtyped": "Doorka Abiy iyo Geelle ee \"mideynta ama kala tagga\" Soomaaliya iyo Soomaaliland muxuu yahay?",
+                    "shortHeadline": "Doorka Abiy iyo Geelle ee \"mideynta ama kala tagga\" Soomaaliya iyo Soomaaliland muxuu yahay?"
+                  },
+                  "id": "urn:bbc:ares::asset:somali/war-53054273",
+                  "language": "so",
+                  "locators": {
+                    "href": "http://www.bbc.com/somali/war-53054273"
+                  },
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                      "categoryName": "News"
+                    },
+                    "taggings": []
+                  },
+                  "summary": "Wadahadalka u dhexeeya Dowladda Federaalka Soomaaliya iyo Somaliland waxaa qeyb ka ah Itoobiya iyo Jabuuti oo martigelisay.",
+                  "timestamp": 1592303059000,
+                  "type": "cps"
+                }
+              ],
+              "text": "<itemMeta>somali/war-53054273</itemMeta>",
+              "type": "listItem"
+            }
+          ],
+          "numbered": false,
+          "type": "list"
+        },
+        {
+          "altText": ".",
+          "copyrightHolder": "Telefishinka Qaranka Soomaaliyeed",
+          "height": 549,
+          "href": "http://c.files.bbci.co.uk/CE68/production/_113204825_9dbace24-7e2c-4484-91c6-94e601e49be8.jpg",
+          "id": "113204825",
+          "path": "/cpsprodpb/CE68/production/_113204825_9dbace24-7e2c-4484-91c6-94e601e49be8.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Si kooban ayuu usoo hadal qaaday arrintaas, isagoo ku gaabsaday inuu mahad celin uga jeedinayo baarlamaanka.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Hase ahaatee, dhowr arrimood oo kale ayuusan kusoo qaadanin khudbaddiisa. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Arrimahaas ayaa ah kuwo hadda taagan oo laga yaabo in dad badan ay daneynayeen inay wax ka ogaadaan mowqifka uu ka qabo madaxweynaha dowladda federaalka. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Doorashada guud ee Soomaaliya, shirka maalmaha soo socda u furmi doona madaxda federaalka iyo maamul goboleedyada iyo kulankii indhaha lagu wada hayay ee Soomaaliya iyo Somaliland ayaa ka maqnaa khudbadda.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Doorashada",
+          "type": "crosshead"
+        },
+        {
+          "altText": "Sanduuq codeyn",
+          "copyrightHolder": "Getty Images/Anadolu Agency",
+          "height": 549,
+          "href": "http://c.files.bbci.co.uk/FB64/production/_113165346_gettyimages-631482896.jpg",
+          "id": "113165346",
+          "path": "/cpsprodpb/FB64/production/_113165346_gettyimages-631482896.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Guddiga doorashada ee Soomaaliya ayaa dhawaan shaaca ka qaaday in uu dib u dhac ku imaan doono doorashada la filayay inay dhacdo dabayaaqada sannadkan iyo horraanta sannadka soo socda ee 2021-ka. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Gudoomiyaha Guddiga doorashada Soomaaliya Xaliimo Ismaaciil Ibraahim ayaa Axaddii lasoo dhaafay Baarlamaanka federaalka u soo bandhigtay qodobbo la xiriira hannaanka doorashada Soomaaliya, oo sababi kara inay dib ugu dhacdo ilaa bisha August ee sanadka soo socda.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;Middka koobaad waa in dadka la diiwaan geliyo oo sawirro laga qaado. Qofkii laba jeer ama seddax jeer is diiwaangeliyayna la raadiyo; markii nadiif laga dhigo ka dibna dadka kaararka loo qeybiyo ka dibna codeynta la qabto. Kaas waqtigiisu wuu dheeryahay, illaa August 2021-ka ayaan qaban karnaa&quot;, ayey tiri, iyadoo BBC News Somali la hadleysay.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Hannaankaas wuxuu u baahan yahay qarash gaaraya illaa $69 milyan, sida ay sheegtay Xaliimo Yareey.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Iyadoo sharraxeysa habka labaad ayey tiri: &quot;Midka kale waxaa waaye; in maalinta codeynta uu qofka imaado isagoo aan horey loo diiwaan gelin - ka dibna magaca ayaa laga qorayaa warqaddii codeyntaa la siinayaa, qadna farta baa loo gelinayaa, sidaas ayuuna ku codeynayaa. Kaasna waxaa ku baxaya qarash gaaraya $45 milyan&quot;.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;Labadaba waxaan u baahannahay in sharcigooda aan haysano illaa bisha July (ee sannadkan),&quot; ayey hadalka ku dartay.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Waxaa xusid mudan iyo dowladda federaalka ee hadda jirta laga sugayay inay hirgaliso doorasho qof iyo cod ah.",
+          "type": "paragraph"
+        },
+        {
+          "altText": "Xaliimo Yareey, Gudoomiyaha Guddiga Doorashada Soomaaliya",
+          "caption": "Xaliimo Yareey, Gudoomiyaha Guddiga Doorashada Soomaaliya",
+          "copyrightHolder": "Guddiga Doorashada",
+          "height": 549,
+          "href": "http://c.files.bbci.co.uk/14984/production/_113165348_23add59c-07e2-4ef0-b938-c626703df892.jpg",
+          "id": "113165348",
+          "path": "/cpsprodpb/14984/production/_113165348_23add59c-07e2-4ef0-b938-c626703df892.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "text": "War bixin sannadle ah oo uu 1-dii bishan Luulyo soo saaray Machadka Heritage ayuu deyro uga muujiyay howsha guddiga madaxa bannaan ee doorashada Soomaaliya.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Bayaanka uu Machadku soo bandhigay wuxuu ku dhaliilay qodobbada ay guddoomiyaha guddigaas hor geysay golaha shacabka.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;Ayaan darro, labada nooc-doorasho ee uu GMDQ u soo bandhigay golaha shacabka ay yihiin kuwo irdaha u furaya waqti kororsi loo sameeyo DFS (Madaxweynaha iyo Baarlamaanka). Si kastaba ha ahaatee, mid ka mid ah labada nooc-doorasho (ee ku saleysan cod bixinta teknoolajiyadda casriga ah ee biometric) ayaa waafaqsan sharciga doorashada. GMDQ wuxuu sheegtey inay ku hirgalin karaan doorashadan 13 bilood iyada oo ay ku kacayso ku dhawaad 70 milyan oo doolarka Mareykanka ah. Xulashada labaad (Isdiiwaangelinta warqadda ku saleysan, ee isdiiwaangelinta iyo coddayntuba ay hal maalin dhacayaan) ayaa ah mid baalmarsan sharciga doorashada ee hadda jira. Sharciga doorshada ee hadda jira wuxuu si cad u qeexayaa inuu yahay mid ku saleysan hannaanka teknoolajiyada biometric-ga. Wax ka bedelistiisuna waa macquul, laakiin waxa uu sii dheereynayaa waqtiga&quot;, ayaa lagu yiri bayaanka Heritage.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Sidoo kale waxa ay sheegeen in ballan qaadkii guddiga uusan wali suurtoobin. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;Muddo sanado ah, GMDQ waxa uu si isdaba joog ah ugu xaqiijineyey shacabka Soomaaliyeed ee daalley iyo saamileyda siyaasadda ee fara-baxsiga ah in doorasho qof iyo cod ah ay ku dhici doonto waqtigii loo qorsheeyay, inkasta oo ay muuqatay caddeymo badan oo taas liddi ku ahaa. Dabayaaqadii bishii Maajo 2020, guddoomiyaha GMDQ waxa ay si cad ugu adkeystay in GMDQ ay diyaar u yihiin in ay ku qabtaan waqtigeeda doorasho xor iyo xaalaah ah. Oggaalley badan uu ka mid yahay Machadka Heritage ayaa ka digey kuna calceliyey marar badan cawaaqib xumada ka iman karta mudo kororsi, qaylo dhaantoodana ku sheegay xiisadaha siyaasadeed ee ka dhalan kara muddo kororsi sharci daro ah oo aan dastuurka waafaqsaney, laakiin dhag jalaq looma siin.&quot;",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Doorashada madaxweynaha ayey ahayd inay dhacdo bisha February ee 2021-ka, iyadoo garabyada mucaaradkana ay aad uga walaacsanaayeen inuu dhaco muddo kororsi.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Hase ahaatee, madaxweyne Farmaajo ayaa arrintaas aan shalay kusoo darin khudbaddiisii uu qaranka u jeedinayay.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Shirka maamul goboleedyada",
+          "type": "crosshead"
+        },
+        {
+          "altText": "Madaxweynaha Puntland (Midig) ayaa sheegay inuusan ka qeyb gali doonin shirka ay dhawaan yeelanayaan madaxda federaalka iyo maamul goboleedyada",
+          "caption": "Madaxweynaha Puntland (Midig) ayaa sheegay inuusan ka qeyb gali doonin shirka ay dhawaan yeelanayaan madaxda federaalka iyo maamul goboleedyada",
+          "copyrightHolder": "JTV",
+          "height": 549,
+          "href": "http://c.files.bbci.co.uk/15D0D/production/_113175398_c0b50b22-6416-4e87-a34a-3cbdb531ec20.jpg",
+          "id": "113175398",
+          "path": "/cpsprodpb/15D0D/production/_113175398_c0b50b22-6416-4e87-a34a-3cbdb531ec20.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Maalinta Aaxadda ah ee soo socota ayaa lagu wadaa inuu dhaco shir u dhaxeeya madaxda dowladda Federaalka Soomaaliya iyo maamul goboleedyada hoos taga. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "inta u dhaxeysa 5-ta ilaa 7-da bishan ayaa la filayaa inuu socdo kulankaas oo dhinacyada laga dhowrayo inay ay isku soo qaadi doonaan arrimo badan oo khuseeya masiirka iyo wadashaqeynta.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Shirkaas ayaa mar kasta oo uu qabsoomayo waxaa ku gadaaman arrimo xasaasi ah, maadaama uu jiro khilaaf aan wali laga gudbin oo u dhaxeeya dowladda dhexe iyo qaar ka mid ah dowlad goboleedyada, inkastoo hadda ay maamullada badankood gacan saar la leeyihiin Villa Soomaaliya.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Madaxweynaha Jubbaland Axmed Maxamed Islaam ayey dowladda federaalka muddo kaddib aqoonsatay dhawaan. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Laakiin madaxweynaha Puntland Siciid Cabdullaahi Deni ayaa durbaba shaaciyay inuusan ka qeyb gali doonin shirkaas muhiimka ah. Taasi waxay muujineysaa ismaandhaafka aan qarsoodiga ahayn ee hadda ka dhex jira labada dhinac. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Balse madaxweyne Farmaajo ayaa u muuqday in qodobkaas uusan u arkin mid u qalma in khudbaddiisa lagu soo daro.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Kulanka Soomaaliya iyo Somaliland",
+          "type": "crosshead"
+        },
+        {
+          "altText": "Biixi iyo Farmaajo",
+          "copyrightHolder": "XAFIISKA AFHAYEENKA M JSL/VILLA SOMALIA",
+          "height": 549,
+          "href": "http://c.files.bbci.co.uk/139AE/production/_112920308_mediaitem112920306.jpg",
+          "id": "112920308",
+          "path": "/cpsprodpb/139AE/production/_112920308_mediaitem112920306.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Wadahadallada dowladda Soomaaliya iyo Jamhuuriyadda iskeed madaxbannaanida ugu dhawaaqday ee Somaliland ayaa markii ugu horreysay tan iyo markii uu Farmaajo xilka qabatay ka dhacay madaalada Jabuuti. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Shirka waxaa gogishiisa dhigay madaxweynaha Jabuuti Ismaaciil Cumar Geelle, waxaana ka qeybgalay Ra'iisul Wasaaraha Itoobiya Abiy Axmed. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Dowladda Federaalka Soomaaliya iyo Somaliland ayaa horey u wadahadlay, waxayna kullamadan soo socdeen tan iyo 2012-kii, in kastoo arrimo wax ku ool ah aysan ka soo bixin. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Kulankan ugu dambeeyay ayaa kusoo aaday xilli uu aad usoo dhawaa toddobaadka xorriyadda Soomaaliya, oo ah markii ay gobollada waqooyi ka xoroobeen gumeysigii Ingiriiska, gobollada koonfureed gobanimadooda ka qaateen Talyaaniga, islamarkaana ay midoobeen labada dhinac. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Khudbaddii uu madaxweyne Farmaajo shalay ka jeediyay munaasabadda 60 guuradii xorriyadda ayey dad badan ka filanayeen inuu kusoo qaato arrintaas, maadaama ay si toos ah ugu lug leedahay mowduucaas. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Balse Farmaajo ayaa kaliya si guud dusha uga sheegay in 1-dii Luulyo oo markaas uu hadlayay la joogay ay ku beegan tahay maalintii ay xoroobeen gobollada koonfureed lana midoobeen &quot;walaalahooda waqooyi&quot;. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Ma jirin wax intaas dhaafsiisan oo uu ka sheegay inmaalmo ka hor uu dhacay shir xasaasi ahaa oo labada dhinac ku dhex maray Jabuuti iyo waxa laga filan karo oo horumar ah.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    "metadata": {
+      "analyticsLabels": {
+        "counterName": "somali.news.story.53266542.page",
+        "cps_asset_id": "53266542",
+        "cps_asset_type": "sty"
+      },
+      "atiAnalytics": {
+        "producerId": "83",
+        "producerName": "SOMALI"
+      },
+      "blockTypes": [
+        "image",
+        "paragraph",
+        "list",
+        "crosshead"
+      ],
+      "createdBy": "somali-v6",
+      "firstPublished": 1593696455000,
+      "id": "urn:bbc:ares::asset:somali/53266542",
+      "includeComments": false,
+      "language": "so",
+      "lastPublished": 1593696455000,
+      "lastUpdated": 1593697414034,
+      "locators": {
+        "assetId": "53266542",
+        "assetUri": "/somali/53266542",
+        "cpsUrn": "urn:bbc:content:assetUri:somali/53266542",
+        "curie": "http://www.bbc.co.uk/asset/279d4706-5d04-480a-bd4d-c88d24a68072"
+      },
+      "options": {
+        "allowAdvertising": true,
+        "allowDateStamp": true,
+        "allowHeadline": true,
+        "allowPrintingSharingLinks": true,
+        "allowRelatedStoriesBox": true,
+        "allowRightHandSide": true,
+        "hasContentWarning": false,
+        "hasNewsTracker": false,
+        "includeComments": false,
+        "isBreakingNews": false,
+        "isFactCheck": false,
+        "isIgorSeoTagsEnabled": false,
+        "isKeyContent": false,
+        "suitableForSyndication": true
+      },
+      "passport": {
+        "campaigns": [
+          {
+            "campaignId": "5a988e3739461b000e9dabfa",
+            "campaignName": "WS - Give me perspective"
+          }
+        ],
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+          "categoryName": "News"
+        },
+        "taggings": []
+      },
+      "tags": {
+        "about": [
+          {
+            "curationList": [
+              {
+                "curationId": "337d1fdb-a205-4efb-96c4-d2fe636fd735",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Somalia",
+            "thingId": "c4baf2ae-4576-40ad-a041-be4498e4c6fa",
+            "thingLabel": "Soomaaliya",
+            "thingSameAs": [
+              "http://sws.geonames.org/51537/"
+            ],
+            "thingType": [
+              "core:Place",
+              "tagging:TagConcept",
+              "core:Thing"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/c4baf2ae-4576-40ad-a041-be4498e4c6fa#id",
+            "topicId": "cpzd4zk7qrjt",
+            "topicName": "Soomaaliya"
+          }
+        ]
+      },
+      "timestamp": 1593696455000,
+      "type": "STY",
+      "version": "v1.3.2"
+    },
+    "promo": {
+      "byline": {
+        "name": "Abdishakur Asowe",
+        "persons": [
+          {
+            "function": "Nairobi",
+            "name": "Cabdishakuur Casoowe",
+            "thumbnail": "http://c.files.bbci.co.uk/3CA8/production/_109582551_shakur.jpg",
+            "twitterName": "Shakur Asowe"
+          }
+        ],
+        "title": "Nairobi"
+      },
+      "headlines": {
+        "headline": "Saddex arrimood oo Farmaajo laga filaayay inuu ka hadlo balse uusan ka hadlin",
+        "shortHeadline": "Saddex arrimood oo Farmaajo laga filaayay inuu ka hadlo balse uusan ka hadlin"
+      },
+      "id": "urn:bbc:ares::asset:somali/53266542",
+      "indexImage": {
+        "altText": "Madaxweyne Farmaajo ayaa khudbad ka jeediyay xafladda 1-da Luulyo",
+        "caption": "Madaxweyne Farmaajo ayaa khudbad ka jeediyay xafladda 1-da Luulyo",
+        "copyrightHolder": "SONNA",
+        "height": 549,
+        "href": "http://c.files.bbci.co.uk/8048/production/_113204823_cca48283-c3ab-46cb-adc5-7420f2eaf45a.jpg",
+        "id": "113204823",
+        "path": "/cpsprodpb/8048/production/_113204823_cca48283-c3ab-46cb-adc5-7420f2eaf45a.jpg",
+        "subType": "index",
+        "type": "image",
+        "width": 976
+      },
+      "language": "so",
+      "locators": {
+        "assetId": "53266542",
+        "assetUri": "/somali/53266542",
+        "cpsUrn": "urn:bbc:content:assetUri:somali/53266542",
+        "curie": "http://www.bbc.co.uk/asset/279d4706-5d04-480a-bd4d-c88d24a68072"
+      },
+      "passport": {
+        "campaigns": [
+          {
+            "campaignId": "5a988e3739461b000e9dabfa",
+            "campaignName": "WS - Give me perspective"
+          }
+        ],
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+          "categoryName": "News"
+        },
+        "taggings": []
+      },
+      "summary": "Madaxweynaha Soomaaliya Maxamed Cabdullaahi Farmaajo ayaa khudbaddii uu ka jeediyay munaasabadda 60 guurada xorriyaddii Soomaaliya kusoo hadal qaadi waayay arrimo xasaasi ah oo laga dhowrayay inuu ka hadlo.",
+      "timestamp": 1593696455000,
+      "type": "cps"
+    },
+    "relatedContent": {
+      "groups": [],
+      "section": {
+        "name": "War",
+        "subType": "index",
+        "type": "simple",
+        "uri": "/somali/war"
+      },
+      "site": {
+        "name": "Somali",
+        "subType": "site",
+        "type": "simple",
+        "uri": "/somali"
+      }
+    }
+  }
