@@ -1,6 +1,16 @@
 import canAdvertise from '.';
 
 describe('canAdvertise', () => {
+  it('should return true if override value is true', () => {
+    const headers = {};
+    expect(canAdvertise(headers, true)).toBeTruthy();
+  });
+
+  it('should return false if override value is false', () => {
+    const headers = {};
+    expect(canAdvertise(headers, false)).toBeFalsy();
+  });
+
   it('should return true if isAdvertiseCombine is defined and equals `yes`', () => {
     const headers = {
       'x-ip_is_advertise_combined': 'yes',
