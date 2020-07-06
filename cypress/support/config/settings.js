@@ -8040,13 +8040,13 @@ module.exports = () => ({
             paths: [
               '/zhongwen/simp/bbc_cantonese_radio/w172xf3rxfx25cj', // Brand
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/zhongwen/simp/bbc_cantonese_radio/w172xf3rxfx25cj', // Brand
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -8141,13 +8141,13 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
-            enabled: false,
+            enabled: true,
           },
           test: {
-            enabled: false,
+            enabled: true,
           },
           local: {
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
