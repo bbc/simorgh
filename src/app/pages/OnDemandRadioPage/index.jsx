@@ -62,13 +62,14 @@ const StyledMessageContainer = styled.div`
   margin-bottom: ${GEL_SPACING_QUAD};
 `;
 
+// iframe margin set to zero for amp only to keep it in position
 const StyledAudioPlayer = styled(AVPlayer)`
   iframe {
     width: calc(100% + ${GEL_SPACING_DBL});
-    margin: 0 -${GEL_SPACING};
+    margin: 0 ${({ isAmp }) => (isAmp ? '' : `-${GEL_SPACING}`)};
     @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
       width: calc(100% + ${GEL_SPACING_QUAD});
-      margin: 0 -${GEL_SPACING_DBL};
+      margin: 0 ${({ isAmp }) => (isAmp ? '' : `-${GEL_SPACING_DBL}`)};
     }
   }
 `;
@@ -176,6 +177,7 @@ const OnDemandRadioPage = ({ pageData }) => {
           </StyledGelWrapperGrid>
           {episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_AVAILABLE ? (
             <StyledAudioPlayer
+              isAmp={isAmp}
               assetId={episodeId}
               embedUrl={embedUrl}
               iframeTitle={iframeTitle}
