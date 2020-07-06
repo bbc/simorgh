@@ -3736,10 +3736,10 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
-            enabled: false,
+            enabled: true,
           },
           test: {
-            enabled: false,
+            enabled: true,
           },
           local: {
             enabled: true,
@@ -3952,10 +3952,10 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
-            enabled: false,
+            enabled: true,
           },
           test: {
-            enabled: false,
+            enabled: true,
           },
           local: {
             enabled: true,
@@ -4180,10 +4180,10 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
-            enabled: false,
+            enabled: true,
           },
           test: {
-            enabled: false,
+            enabled: true,
           },
           local: {
             enabled: true,
