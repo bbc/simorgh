@@ -1,16 +1,11 @@
 const canAdvertise = headers => {
-  const isAdvertiseCombine = headers['x-ip_is_advertise_combined'];
-
-  if (isAdvertiseCombine && isAdvertiseCombine === 'yes') {
-    return true;
-  }
-
+  // if 'x-ip_is_advertise_combined' exists, we should not check 'x-bbc-edge-isuk' at all, we should respect the value of 'x-ip_is_advertise_combined'
+  const isAdvertiseCombined = headers['x-ip_is_advertise_combined'];
   const isUK = headers['x-bbc-edge-isuk'];
-  if (isUK && isUK === 'no') {
-    return true;
-  }
 
-  return false;
+  return typeof isAdvertiseCombined !== 'undefined'
+    ? isAdvertiseCombined === 'yes'
+    : isUK === 'no';
 };
 
 export default canAdvertise;
