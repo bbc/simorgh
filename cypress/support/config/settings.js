@@ -3742,7 +3742,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
@@ -3958,7 +3958,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
@@ -4186,7 +4186,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
