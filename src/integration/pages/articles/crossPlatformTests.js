@@ -1,7 +1,7 @@
 import { runCommonCrossPlatformTests } from '../../common';
 
-export default () => {
-  runCommonCrossPlatformTests();
+export default service => {
+  runCommonCrossPlatformTests(service);
 
   it('I can see an image with a caption', () => {
     const imageEl = document.querySelector(
