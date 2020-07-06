@@ -4,5 +4,11 @@
  */
 
 import runCanonicalTests from '../canonicalTests';
+import runHeaderTests from './header';
+import runFooterTests from './footer';
 
-describe('Canonical ukrainian/ukraine_in_russian IDX page', runCanonicalTests);
+describe('Canonical ukrainian/ukraine_in_russian IDX page', () => {
+  runCanonicalTests();
+  runHeaderTests();
+  runFooterTests();
+});

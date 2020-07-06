@@ -1,0 +1,777 @@
+{
+    "content": {
+      "blocks": [
+        {
+          "advertising": true,
+          "caption": "카라 보스",
+          "embedding": true,
+          "format": "video",
+          "id": "p08hr0v2",
+          "imageCopyright": "BBC",
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08hr0vk.jpg",
+          "subType": "clip",
+          "synopses": {
+            "short": "카라 보스"
+          },
+          "title": "카라 보스",
+          "type": "media",
+          "versions": [
+            {
+              "availableFrom": 1592880748000,
+              "availableTerritories": {
+                "nonUk": true,
+                "uk": true
+              },
+              "duration": 312,
+              "durationISO8601": "PT5M12S",
+              "types": [
+                "Original"
+              ],
+              "versionId": "p08hr0v4",
+              "warnings": {}
+            }
+          ]
+        },
+        {
+          "markupType": "plain_text",
+          "role": "introduction",
+          "text": "&quot;내 생일이 언제인지, 내 어머니가 누구인지… 전 단지 그걸 알고 싶을 뿐이에요.&quot;",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "우여곡절 끝에 유전자정보(DNA)로 특정한 아버지를 상대로 낸 친자 인지청구 소송에서 최근 승소한 카라 보스(38)는 가녀린 목소리로 말했다.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;성인이 된 입양아들에게 자기의 출신, 과거에 대해 아는 것이 얼마나 중요한지 대부분의 사람들이 이해를 못 하는 것 같아요. 제가 사는 유럽에서는 심지어 난자·정자 기증자 역시 자신의 정보를 제공해야 해요.&quot;",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "보스와 BBC 코리아의 인터뷰는 그가 승소한 후 어렵게 생물학적 아버지를 만난 이튿날인 지난 16일 이뤄졌다. 만남을 거부하던 아버지는 보스가 앞으로 언론 인터뷰를 재고할 수 있다는 제안에 자리에 나왔다고 한다.  ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "하지만 경호원을 대동한 아버지는 시종일관 &quot;무슨 말인지 모르겠다&quot;는 말만 반복했고, 10분 만에 자리를 떠났다. 그렇게 어머니를 찾을 수 있는 유일한 단서도 사라졌다.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;자신의 출신을 아는 것은 인간의 가장 기본적인 권리입니다. 그런데 한국 사회에서는 부모의 사생활 보호 권리가 우리의 출생에 대해 알 권리를 대체했습니다.&quot;",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "보건복지부에 따르면 한국은 1958년 이후 약 16만7000여 명을 해외에 입양 보냈다. 이는 서류가 존재하는 공식 통계일 뿐 실제로는 더 많을 것으로 추정된다. 이렇다 보니 해외 입양 건수가 특히 많았던 1970~80년대 한국은 '아기수출 대국'이라는 오명을 얻기도 했다. 2000년대 이후 국내 입양이 늘기는 했지만, 해외 입양은 여전히 전체 입양의 3분의 2를 차지한다.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "두 아이와 남편이 있는 네덜란드로 떠나기 직전 만난 보스는 한 아이가 입양되며 겪는 정신적 트라우마와 이를 극복하기 위해 출신에 대한 정보 접근성이 반드시 보장돼야 한다고 재차 강조했다. ",
+          "type": "paragraph"
+        },
+        {
+          "altText": "여기까지 오기 위해 '수많은 벽을 깨야 했다'고 카라 보스는 말했다",
+          "caption": "여기까지 오기 위해 '수많은 벽을 깨야 했다'고 카라 보스는 말했다",
+          "copyrightHolder": "카라 보스",
+          "height": 822,
+          "href": "http://c.files.bbci.co.uk/7DEA/production/_113043223_-1.jpg",
+          "id": "113043223",
+          "path": "/cpsprodpb/7DEA/production/_113043223_-1.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "text": "출산, 그리고 치유를 위한 '뿌리 찾기'",
+          "type": "crosshead"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "보스는 &quot;행복한 입양아&quot;였다고 했다. 친부모를 찾고 싶은 생각은 서른이 넘도록 전혀 들지 않았다. 하지만 2014년 딸을 낳고 엄마가 되며, 어린 딸 나이의 자신과 대면할 수밖에 없었다고 했다. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;버려졌던 두 살배기 소녀를 평생 외면해왔지만, 그 아이가 겪은 고통과 상처를 마주해야 했어요.&quot; ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "보스는 두 돌 때쯤 1984년 충북 괴산에 버려졌다. 발견 당시 이름은 강미숙이었다. 그는 어렸을 때니 아무것도 몰랐을 거라고 막연히 생각했지만, 출산 후 딸의 성장을 가까이서 지켜보며 그게 아니라는 것을 느꼈다고 한다.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;입양아는 버려지는 순간 엄마를 잃고, 아빠를 잃고… 언니, 오빠 등 가족 모두를 잃어요. 나라도 잃고 문화도 잃어요. 심지어 머나먼 이국 땅에 보내지는 경우도 있어요. 하지만 주변에서는 '넌 참 행운아'라며 '감사해라, 뒤돌아보지 말고 미래를 보라'고 말해요. 잃은 것들을 애도할 기회도 주어지지 않는 거죠.&quot;",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "그는 이 내면의 상처를 정면으로 마주하지 않는 한 자신이 좋은 엄마가 되지 못할 것이라고 생각했다. 또 딸을 버려야만 했을 엄마가 평생 지고 있을 상처 또한 치유해주고자 친어머니를 찾기로 했다.",
+          "type": "paragraph"
+        },
+        {
+          "altText": "보스는 지난 12일 해외 입양인이 제기한 첫 친자 인지청구 소송에서 승소했다",
+          "caption": "보스는 지난 12일 해외 입양인이 제기한 첫 친자 인지청구 소송에서 승소했다",
+          "copyrightHolder": "Hosu Lee",
+          "height": 610,
+          "href": "http://c.files.bbci.co.uk/F31A/production/_113043226_-2a.jpg",
+          "id": "113043226",
+          "path": "/cpsprodpb/F31A/production/_113043226_-2a.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "text": "첫 난관 '입양서류'",
+          "type": "crosshead"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "입양인들은 입양특례법에 따라 자신의 입양과 관련된 정보를 입양기관에 청구할 권리가 있다. 유엔 아동권리협약 7조에도 친부모에 대한 개인의 알 권리가 명시돼 있다. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "보스는 2016년 자신의 입양을 진행한 홀트에 정보를 청구했고, 홀트는 그가 있었던 고아원을 통해 추가 정보를 제공했다. 그러나 그토록 찾던 친부모와 관련한 정보는 없었다. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "그는 이듬해 직접 괴산에 가서 자신이 버려졌던 시장 등에서 가족들과 전단지를 돌리기도 했다. 자신을 아는 사람을 애타게 찾았으나 성과는 없었다.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "2018년 고아원과 통화를 하던 중 우연히 입양되기 전 자신을 몇 달간 돌본 양부모가 있다는 사실을 알게 됐다. 양아버지는 돌아가셨지만 양어머니는 살아 계셨다. 어렵사리 만난 양어머니는 사실은 자신들이 보스를 입양하고자 했다고 말했다. 그러나 양어머니는 당시 입양 관계자로부터 보스를 해외로 입양시킬 것을 권유받았다고 한다.",
+          "type": "paragraph"
+        },
+        {
+          "altText": "그가 뿌리 찾기를 시작한 것은 딸을 낳으면서다",
+          "caption": "그가 뿌리 찾기를 시작한 것은 딸을 낳으면서다",
+          "copyrightHolder": "카라 보스",
+          "height": 976,
+          "href": "http://c.files.bbci.co.uk/1684A/production/_113043229_-3.jpg",
+          "id": "113043229",
+          "path": "/cpsprodpb/1684A/production/_113043229_-3.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "text": "하지만 얼마 후 양어머니가 돌아가시면서 보스는 자신이 왜 국내에 입양되지 않고 해외로 입양됐는지 더 이상 알기 힘들게 됐다. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;입양인들이 주로 겪는 문제예요. 미완성 입양서류 혹은 허위 정보나 조작된 내용이 포함된 입양 서류요. (친부모를 찾기 위해선) 언제 추가 단서와 서류를 확보하느냐가 관건인데 어떤 이들은 한발 늦는 거죠.&quot;",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "애초 2016년 받은 입양서류에 양부모 기록이 있었다면, 그들이 사망하기 전에 더 많은 정보를 얻을 수 있지 않았을까 하는 아쉬움이 남을 수밖에 없는 이유다.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "보스는 이때부터 입양인들이 겪는 '부당함'을 뼈저리게 느끼기 시작했다. 결국 입양인들은 자신들이 직접 탐정이 돼 발로 뛰며 뿌리를 찾아야 하는데, 실질적으로 이를 위해 모든 일상을 멈추고 한국을 자주 방문할 수 있는 입양인은 많지 않다.",
+          "type": "paragraph"
+        },
+        {
+          "altText": "보스는 수차례 고아원에 전화를 하고 한국을 방문하며 입양 기관으로부터 처음 받은 서류에서 누락된 사실들을 확인하기 시작했다",
+          "caption": "보스는 수차례 고아원에 전화를 하고 한국을 방문하며 입양 기관으로부터 처음 받은 서류에서 누락된 사실들을 확인하기 시작했다",
+          "copyrightHolder": "카라 보스",
+          "height": 549,
+          "href": "http://c.files.bbci.co.uk/B36E/production/_113043954_-4.jpg",
+          "id": "113043954",
+          "path": "/cpsprodpb/B36E/production/_113043954_-4.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "text": "난생처음 찾은 생물학적 연결고리",
+          "type": "crosshead"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "뿌리 찾기를 처음 시작했던 2016년, 보스는 혹시나 하는 마음에 자신의 DNA를 온라인 족보찾기 플랫폼 '마이헤리티지(MyHeritage)'에 등록했다. 미완성 입양서류, 개인정보보호법 등으로 길이 막힌 해외 입양인들은 이렇게 자신의 뿌리를 찾기 위해 DNA 데이터베이스에 의존하기도 한다.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "다인종으로 이뤄진 서구권에선 이처럼 DNA를 통해 자신의 뿌리를 찾는 서비스가 큰 주목을 받고 있다. 하지만 인종 다양성이 비교적 떨어지는 한국인들은 상대적으로 이용률이 낮아 입양인이 이러한 서비스를 통해 친부모를 찾는 사례는 극히 드물다.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "2019년 1월, DNA 데이터베이스를 통해 상봉한 자매의 사연을 듣고 보스는 잊고 있었던 마이헤리티지에 접속했다. 그리고 영국의 한 한국인 유학생이 자신과 유전자정보가 일치해 사촌 혹은 조카 관계일 가능성이 크다는 결과를 확인했다. 보스는 이 유학생의 도움을 받아 유학생의 할아버지가 보스의 아버지일 가능성이 크다는 사실을 알게 됐다. ",
+          "type": "paragraph"
+        },
+        {
+          "altText": "딸을 낳기 전까지 그는 출생과 친부모를 둘러싼 진실에 대해 알려고 하지 않았다",
+          "caption": "딸을 낳기 전까지 그는 출생과 친부모를 둘러싼 진실에 대해 알려고 하지 않았다",
+          "copyrightHolder": "카라 보스",
+          "height": 549,
+          "href": "http://c.files.bbci.co.uk/138AC/production/_113044008_-5.jpg",
+          "id": "113044008",
+          "path": "/cpsprodpb/138AC/production/_113044008_-5.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;제 뿌리 찾기 과정에서 첫 진전이었어요. DNA는 거짓말을 하지 않아요. 난생 처음으로 누군가와의 생물학적 연결 고리를 찾게 됐죠.&quot;",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "이후 보스의 사연을 들은 유학생의 또다른 사촌이 DNA 검사를 했고, 그 역시 보스와 사촌 혹은 조카 관계가 높은 것으로 나타났다. 이들은 부모님에게도 DNA 검사를 권유했지만, 거절당했다. 결국 이들의 할아버지, 즉 보스의 아버지로 추정되는 A씨는 사생활 침해라며 그를 차단하기 시작했다고 보스는 말했다.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "보스는 미완성 입양서류라는 난관을 운 좋게 DNA라는 '기적'으로 극복했다. 그러나 눈 앞에 친어머니를 찾을 수 있는 단서를 두고 개인정보보호법이라는 두번째 벽에 부딪혔다.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "한국의 입양기관은 친부모의 동의가 있어야 친부모의 이름, 생년월일, 주소, 연락처 등을 입양인과 공유할 수 있다. 상황이 이렇다 보니 해외 입양인이 친부모를 찾기 위한 여정은 고단할 수밖에 없다. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "candy_xml",
+          "text": "아동권리보장원에 따르면 <link><caption>지난해 입양정보공개청구 2175건 중 정보공개 결정은 20%에 수준인 443건에 그쳤다</caption><url href=\"https://www.hankookilbo.com/News/Read/202006121793041655\" platform=\"highweb\"/></link>. 10명 중 8명이 정보공개 청구를 했지만 부모를 찾지 못한 셈이다. 이 중 123건은 친부모 등이 공개를 거부했다. 나머지는 친부모가 이미 사망하거나 응답하지 않은 경우였다.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;이들과 저의 관계를 증명하는 유전자 검사 결과가 2건이나 있었지만, 개인정보보호법으로 인해 아무것도 할 수 없었죠. 이 법 앞에 저는 아무 권리가 없었어요. 너무 부당하다고 느꼈죠. 결국 친구 소개로 변호사를 만났고 소송을 진행하게 됐어요.&quot;",
+          "type": "paragraph"
+        },
+        {
+          "altText": "자신이 생일로 축하해 온 날이 사실은 자신이 버려져 발견된 날이라는 것을 서류로 확인한 뒤부터 보스는 생일을 축하하지 않는다",
+          "caption": "자신이 생일로 축하해 온 날이 사실은 자신이 버려져 발견된 날이라는 것을 서류로 확인한 뒤부터 보스는 생일을 축하하지 않는다",
+          "copyrightHolder": "카라 보스",
+          "height": 976,
+          "href": "http://c.files.bbci.co.uk/2B24/production/_113044011_-6.jpg",
+          "id": "113044011",
+          "path": "/cpsprodpb/2B24/production/_113044011_-6.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "text": "\"아버지와 대화 원했을 뿐… 소송까지 해야 할 줄은 몰랐다\"",
+          "type": "crosshead"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "지난해 11월 18일 보스는 법원에 소송을 냈다. 해외 입양인이 낸 첫 번째 친자 인지청구 소송이었다. 인지란 혼인외 출생자를 자신의 아이라고 인정하는 절차다.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "사실 11일 18일은 36년 전 보스가 버려진 채로 발견된 날이다. 그는 2016년 홀트에 요청해 고아원에서 추가 서류를 받아 이를 확인하기 전까지, 즉 삼십 대 중반까지 이날을 생일로 알고 생일파티를 열어왔다.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;많은 입양인들이 사실 그래요. 하지만 서류로 이를 직접 확인하고 난 후 생일을 축하하는 것을 멈췄죠. 버려짐을 축하하는 기분이 들어서…&quot;",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "법원은 보스와 그의 아버지로 추정되는 A씨에게 DNA 검사를 명령했고, 그들이 부녀일 확률은 99.9981%로 나왔다. 결국 지난 12일 서울가정법원 가사1단독 염우영 부장판사는 원고 보스가 피고의 친생자임을 확인한다고 선고했다.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "보스 역시 뿌리 찾기를 위한 여정이 이렇게까지 힘들 줄은 몰랐다. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;단지 아버지와의 대화를 위해 이렇게까지 해야 할 줄은 몰랐어요. 소송까지 해야 할 줄은 정말 몰랐죠. 하지만 미완성 입양서류로 장벽이 시작됐고, 여기까지 오기 위해 수많은 벽을 깨야 했어요.&quot;",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "아버지와의 만남은 선고 며칠 후 이뤄졌다. 법적으로 강제된 만남은 아니었지만, 보스가 언론사와의 인터뷰를 멈추기 원했던 아버지는 만남 이후 인터뷰 여부를 재고할 수 있다는 보스의 제안에 자리에 나왔다. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "보스는 단지 친어머니에 대한 정보를 원할 뿐이라고 얘기하고 싶었다. 그러나 아버지가 &quot;무슨 말인지 모르겠다&quot;며 어떤 대화도 거부해 엄마 얘기는 꺼낼 기회도 없었다고 한다. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "그리고 아버지는 10분도 채 안 돼 자리를 박차고 나갔다. 보스는 아버지에게 드릴 편지와 성장 영상, 또 자녀들의 인사 영상을 준비해 왔지만, 이를 보여 드리지 못했다.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "BBC 코리아는 아버지 측에 입장 확인을 시도했지만, 아버지 측은 언론의 질의에 응하지 않고 있다.",
+          "type": "paragraph"
+        },
+        {
+          "altText": "보스는 아버지와의 만남 후 '너무 고통스럽고 좌절스럽다. 집에 가고 싶은 마음뿐'이라며 울먹이며 말했다",
+          "caption": "보스는 아버지와의 만남 후 '너무 고통스럽고 좌절스럽다. 집에 가고 싶은 마음뿐'이라며 울먹이며 말했다",
+          "copyrightHolder": "카라 보스",
+          "height": 801,
+          "href": "http://c.files.bbci.co.uk/A054/production/_113044014_-7.jpg",
+          "id": "113044014",
+          "path": "/cpsprodpb/A054/production/_113044014_-7.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "text": "보스의 승소가 미칠 영향은?",
+          "type": "crosshead"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "자녀가 친부모를 찾을 권리는 유엔 아동권리협약에도 명시돼 있지만, 국내에서는 개인정보보호법의 벽에 꽉 막혀 있다. 전문가들은 친부모가 원치 않더라도 정보를 제공받을 수 있는 개인정보보호법 예외 조항이 필요하다고 꾸준히 지적해왔다. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;입양은 애초 좋은 의도라고 믿고 있어요. 하지만 한국 정부와 입양기관들이 간과했던 것은 성인이 된 입양아들이 돌아와 자신의 과거에 대한 답을 원할 것이라는 사실이에요. 자신의 출신을 아는 것은 인간의 가장 근본적인 권리인데, 한국 사회에서는 부모의 사생활 보호 권리가 우리의 출생에 대해 알 권리를 대체했습니다.&quot;",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "일각에서는 보스의 승소로 아이를 입양시킨 가족이 정보를 더 숨기거나, DNA 검사에 더 소극적이 될 것을 우려하기도 한다. 하지만 보스는 이런 행동을 취하지 않으면 변화는 쉽게 오지 않으리라 본다.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;(변화 과정에서) 누군가는 상처를 입을 수 있죠. 하지만 현 구조에서 가장 상처받는 건 버려진 아이들이에요. 모든 입양인과 관련한 근본적인 문제는 출생에 대한 접근이 막혀 있다는 것입니다.&quot;",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "그는 이어 한국 사회가 바뀌면 한국이 '최대 아동 수출국'이었다는 오명을 충분히 씻을 수 있다고 봤다. 과거 수만 명의 아이들을 입양 보냈지만, 이제 이들의 알 권리를 보장하면서 선례를 남길 수 있다는 것. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;정책적 변화가 생기면 제일 좋겠지만, 최소한 해외 입양을 진행하는 사람들과 그 사회의 인식 변화라도 생겼으면 좋겠습니다.&quot;",
+          "type": "paragraph"
+        }
+      ]
+    },
+    "metadata": {
+      "analyticsLabels": {
+        "counterName": "korean.features.story.53146758.page",
+        "cps_asset_id": "53146758",
+        "cps_asset_type": "sty"
+      },
+      "atiAnalytics": {
+        "producerId": "57",
+        "producerName": "KOREAN"
+      },
+      "blockTypes": [
+        "media",
+        "paragraph",
+        "image",
+        "crosshead"
+      ],
+      "createdBy": "korean-v6",
+      "firstPublished": 1592895221000,
+      "id": "urn:bbc:ares::asset:korean/features-53146758",
+      "includeComments": false,
+      "language": "ko",
+      "lastPublished": 1592895221000,
+      "lastUpdated": 1592902655918,
+      "locators": {
+        "assetId": "53146758",
+        "assetUri": "/korean/features-53146758",
+        "cpsUrn": "urn:bbc:content:assetUri:korean/features-53146758",
+        "curie": "http://www.bbc.co.uk/asset/b1e6740f-95d3-4feb-a251-88ace750b4fd"
+      },
+      "options": {
+        "allowAdvertising": true,
+        "allowDateStamp": true,
+        "allowHeadline": true,
+        "allowPrintingSharingLinks": true,
+        "allowRelatedStoriesBox": true,
+        "allowRightHandSide": true,
+        "hasContentWarning": false,
+        "hasNewsTracker": false,
+        "includeComments": false,
+        "isBreakingNews": false,
+        "isFactCheck": false,
+        "isIgorSeoTagsEnabled": false,
+        "isKeyContent": false,
+        "suitableForSyndication": true
+      },
+      "passport": {
+        "campaigns": [
+          {
+            "campaignId": "5a988e2139461b000e9dabf7",
+            "campaignName": "WS - Inspire me"
+          }
+        ],
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+          "categoryName": "Feature"
+        },
+        "taggings": []
+      },
+      "tags": {
+        "about": [
+          {
+            "curationList": [
+              {
+                "curationId": "8afbdb0f-d43d-47a2-9e88-950c75c2f1e8",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Children",
+            "thingId": "992e096e-28e6-412d-b6a1-652f78be63c7",
+            "thingLabel": "어린이",
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q7569",
+              "http://dbpedia.org/resource/Child"
+            ],
+            "thingType": [
+              "core:Theme",
+              "tagging:TagConcept",
+              "core:Thing",
+              "tagging:AmbiguousTerm",
+              "tagging:Genre"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id",
+            "topicId": "cqywjk0r0qrt",
+            "topicName": "어린이"
+          },
+          {
+            "curationList": [
+              {
+                "curationId": "38a7a940-dabb-4f21-8104-f3915d695fed",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Family",
+            "thingId": "184cb2f7-e305-4c46-ab4f-2e18f60b0293",
+            "thingLabel": "가족",
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q8436",
+              "http://dbpedia.org/resource/Family"
+            ],
+            "thingType": [
+              "core:Theme",
+              "tagging:TagConcept",
+              "core:Thing"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/184cb2f7-e305-4c46-ab4f-2e18f60b0293#id",
+            "topicId": "cr50ykq26z0t",
+            "topicName": "가족"
+          }
+        ]
+      },
+      "timestamp": 1592895221000,
+      "type": "STY",
+      "version": "v1.3.2"
+    },
+    "promo": {
+      "byline": {
+        "name": "김형은, 윤인경",
+        "persons": [
+          {
+            "function": "BBC 코리아",
+            "name": "서명진"
+          }
+        ],
+        "title": "BBC 코리아"
+      },
+      "headlines": {
+        "headline": "해외입양: '아기 수출국이었던 한국, 개인의 알 권리 왜 간과하나요'",
+        "shortHeadline": "'아기 수출국이었던 한국, 개인의 알 권리 왜 간과하나요'"
+      },
+      "id": "urn:bbc:ares::asset:korean/features-53146758",
+      "indexImage": {
+        "altText": "보스는 지난 12일 해외 입양인이 제기한 첫 친자확인 소송에서 승소했다",
+        "caption": "보스는 지난 12일 해외 입양인이 제기한 첫 친자확인 소송에서 승소했다",
+        "copyrightHolder": "Hosu Lee",
+        "height": 549,
+        "href": "http://c.files.bbci.co.uk/4488/production/_113044571_-2b.jpg",
+        "id": "113044571",
+        "path": "/cpsprodpb/4488/production/_113044571_-2b.jpg",
+        "subType": "index",
+        "type": "image",
+        "width": 976
+      },
+      "language": "ko",
+      "locators": {
+        "assetId": "53146758",
+        "assetUri": "/korean/features-53146758",
+        "cpsUrn": "urn:bbc:content:assetUri:korean/features-53146758",
+        "curie": "http://www.bbc.co.uk/asset/b1e6740f-95d3-4feb-a251-88ace750b4fd"
+      },
+      "passport": {
+        "campaigns": [
+          {
+            "campaignId": "5a988e2139461b000e9dabf7",
+            "campaignName": "WS - Inspire me"
+          }
+        ],
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+          "categoryName": "Feature"
+        },
+        "taggings": []
+      },
+      "summary": "해외 입양인의 첫 친자 인지청구 소송에서 승소한 카라 보스의 뿌리를 찾기 위한 고군분투기다.",
+      "timestamp": 1592895221000,
+      "type": "cps"
+    },
+    "relatedContent": {
+      "groups": [
+        {
+          "promos": [
+            {
+              "cpsType": "STY",
+              "headlines": {
+                "headline": "유튜버: 인기 유튜버 부부가 자폐 아들 파양 고백 후 비난을 받고 있다",
+                "shortHeadline": "인기 유튜버 부부, '자폐 아들 파양' 고백 후 여론 뭇매"
+              },
+              "id": "urn:bbc:ares::asset:korean/international-52847511",
+              "indexImage": {
+                "altText": "미국 오하이오에 사는 마이카 스토퍼와 그의 남편 제임스는 아들 헉슬리를 입양하는 과정과 아들의 고난에 대한 영상들을 만들었다.",
+                "caption": "미국 오하이오에 사는 마이카 스토퍼와 그의 남편 제임스는 아들 헉슬리를 입양하는 과정과 아들의 고난에 대한 영상들을 만들었다.",
+                "copyrightHolder": "StaufferLife",
+                "height": 549,
+                "href": "http://c.files.bbci.co.uk/1697E/production/_112524529_stauffers.png",
+                "id": "112524529",
+                "path": "/cpsprodpb/1697E/production/_112524529_stauffers.png",
+                "subType": "index",
+                "type": "image",
+                "width": 976
+              },
+              "language": "ko",
+              "locators": {
+                "assetUri": "/korean/international-52847511",
+                "cpsUrn": "urn:bbc:content:assetUri:/korean/international-52847511"
+              },
+              "summary": "이 미국인 부부는 중국에서 입양한 자폐아와 함께 하는 삶을 유튜브에 올려 많은 인기를 얻었다.",
+              "timestamp": 1590744060000,
+              "type": "cps"
+            },
+            {
+              "cpsType": "STY",
+              "headlines": {
+                "headline": "거리의 한 상자 속에 버려졌던 남성은 마침내 친부모를 찾았다",
+                "shortHeadline": "거리의 한 상자 속에 버려졌던 남성은 마침내 친부모를 찾았다"
+              },
+              "id": "urn:bbc:ares::asset:korean/news-42482136",
+              "indexImage": {
+                "altText": "로빈은 13세가 되던 해에 입양됐다",
+                "caption": "로빈은 13세가 되던 해에 입양됐다",
+                "copyrightHolder": "BBC",
+                "height": 549,
+                "href": "http://c.files.bbci.co.uk/185F2/production/_99362899__99193878_promo.jpg",
+                "id": "99362899",
+                "path": "/cpsprodpb/185F2/production/_99362899__99193878_promo.jpg",
+                "subType": "index",
+                "type": "image",
+                "width": 976
+              },
+              "language": "ko",
+              "locators": {
+                "assetUri": "/korean/news-42482136",
+                "cpsUrn": "urn:bbc:content:assetUri:/korean/news-42482136"
+              },
+              "summary": "자신이 입양됐다는 사실을 깨달은 로빈 킹은 집을 뛰쳐나갔다. 가방 안에서 그만 입양 서류를 발견해 버린 것이다.",
+              "timestamp": 1514260176000,
+              "type": "cps"
+            },
+            {
+              "cpsType": "MAP",
+              "headlines": {
+                "headline": "한부모가족의 날: 싱글맘, 싱글대디로 살아가기",
+                "shortHeadline": "'우리는 싱글맘, 싱글대디입니다'"
+              },
+              "id": "urn:bbc:ares::asset:korean/news-52591715",
+              "indexImage": {
+                "altText": "'우리는 싱글맘, 싱글대디입니다'",
+                "caption": "'우리는 싱글맘, 싱글대디입니다'",
+                "copyrightHolder": "BBC",
+                "height": 549,
+                "href": "http://c.files.bbci.co.uk/2170/production/_112206580_p08cp46r.jpg",
+                "id": "112206580",
+                "path": "/cpsprodpb/2170/production/_112206580_p08cp46r.jpg",
+                "subType": "index",
+                "type": "image",
+                "width": 976
+              },
+              "language": "ko",
+              "locators": {
+                "assetUri": "/korean/news-52591715",
+                "cpsUrn": "urn:bbc:content:assetUri:/korean/news-52591715"
+              },
+              "media": {
+                "caption": "하늬씨는 지난해부터 유튜브 채널 ‘하늬TV’를 시작하며 새로운 도전을 하고 있다",
+                "entityType": "Clip",
+                "externalId": "p072y195",
+                "format": "video",
+                "id": "47494197",
+                "subType": "body",
+                "type": "external_vpid"
+              },
+              "mediaType": "Video",
+              "summary": "5월 11일 ‘입양의 날’ 하루 전인 5월 10일은 2018년 제정된 ‘한부모가족의 날’이다.",
+              "timestamp": 1588989015000,
+              "type": "cps"
+            },
+            {
+              "cpsType": "MAP",
+              "headlines": {
+                "headline": "입양: 방글라데시 '입양아'로 한국에서 자란다는 것은?",
+                "shortHeadline": "'다들 오해하시는데...저 동남아시아 며느리 아니에요'"
+              },
+              "id": "urn:bbc:ares::asset:korean/news-48863603",
+              "indexImage": {
+                "altText": ".",
+                "copyrightHolder": "BBC",
+                "height": 549,
+                "href": "http://c.files.bbci.co.uk/F733/production/_107738236_p07fyj55.jpg",
+                "id": "107738236",
+                "path": "/cpsprodpb/F733/production/_107738236_p07fyj55.jpg",
+                "subType": "index",
+                "type": "image",
+                "width": 976
+              },
+              "language": "ko",
+              "locators": {
+                "assetUri": "/korean/news-48863603",
+                "cpsUrn": "urn:bbc:content:assetUri:/korean/news-48863603"
+              },
+              "media": {
+                "caption": "방글라데시 출신 '입양아'로 한국에서 자란다는 것은?",
+                "entityType": "Clip",
+                "externalId": "p07fyh5r",
+                "format": "video",
+                "id": "48863604",
+                "subType": "primary",
+                "type": "external_vpid"
+              },
+              "mediaType": "Video",
+              "summary": "사람들은 조안나를 종종 동남아시아 결혼 이민자로 생각한다.",
+              "timestamp": 1562221254000,
+              "type": "cps"
+            },
+            {
+              "cpsType": "MAP",
+              "headlines": {
+                "headline": "37년만에 재회한 위탁아동과 위탁부모",
+                "shortHeadline": "37년만에 재회한 위탁아동과 위탁부모"
+              },
+              "id": "urn:bbc:ares::asset:korean/news-43179813",
+              "indexImage": {
+                "altText": "37년만에 재회한 위탁아동과 위탁부모",
+                "caption": "37년만에 재회한 위탁아동과 위탁부모",
+                "copyrightHolder": "BBC",
+                "height": 549,
+                "href": "http://c.files.bbci.co.uk/120BC/production/_100161937_p05z6g54.jpg",
+                "id": "100161937",
+                "path": "/cpsprodpb/120BC/production/_100161937_p05z6g54.jpg",
+                "subType": "index",
+                "type": "image",
+                "width": 976
+              },
+              "language": "ko",
+              "locators": {
+                "assetUri": "/korean/news-43179813",
+                "cpsUrn": "urn:bbc:content:assetUri:/korean/news-43179813"
+              },
+              "media": {
+                "caption": "37년만에 재회한 위탁아동과 위탁부모",
+                "entityType": "Clip",
+                "externalId": "p05z6g4p",
+                "format": "video",
+                "id": "43179814",
+                "subType": "primary",
+                "type": "external_vpid"
+              },
+              "mediaType": "Video",
+              "summary": "로레인은 37년만에 위탁부모와 재회했다",
+              "timestamp": 1519452424000,
+              "type": "cps"
+            },
+            {
+              "cpsType": "MAP",
+              "headlines": {
+                "headline": "싱글맘: '인생의 주인공은 아이들이 아닌 엄마예요'...두 아이 엄마, 하늬의 유튜버 도전기",
+                "shortHeadline": "92년생 싱글맘, 유튜버 도전기"
+              },
+              "id": "urn:bbc:ares::asset:korean/news-47494196",
+              "indexImage": {
+                "altText": "유튜브 하늬TV를 운영하는 싱글맘 하늬씨",
+                "copyrightHolder": "BBC",
+                "height": 572,
+                "href": "http://c.files.bbci.co.uk/F7AC/production/_105940436_p072y297.jpg",
+                "id": "105940436",
+                "path": "/cpsprodpb/F7AC/production/_105940436_p072y297.jpg",
+                "subType": "index",
+                "type": "image",
+                "width": 1024
+              },
+              "language": "ko",
+              "locators": {
+                "assetUri": "/korean/news-47494196",
+                "cpsUrn": "urn:bbc:content:assetUri:/korean/news-47494196"
+              },
+              "media": {
+                "caption": "아이 키우는 아빠들의 고백",
+                "entityType": "Clip",
+                "externalId": "p06ln2r8",
+                "format": "video",
+                "id": "45597933",
+                "subType": "body",
+                "type": "external_vpid"
+              },
+              "mediaType": "Video",
+              "summary": "20대 초반 출산과 육아, 이혼을 모두 겪은 그녀는 홀로 두 아이를 양육하고 있는 싱글맘이자 워킹맘이다.",
+              "timestamp": 1552030976000,
+              "type": "cps"
+            }
+          ],
+          "type": "see-alsos"
+        }
+      ],
+      "section": {
+        "name": "매거진",
+        "subType": "index",
+        "type": "simple",
+        "uri": "/korean/features"
+      },
+      "site": {
+        "name": "BBC 코리아",
+        "subType": "site",
+        "type": "simple",
+        "uri": "/korean"
+      }
+    }
+  }

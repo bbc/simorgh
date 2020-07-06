@@ -18,7 +18,10 @@ const fontOrigins = [
   'https://ws-downloads.files.bbci.co.uk',
 ];
 
-const defaultOrigins = ['https://ichef.bbci.co.uk'];
+const defaultOrigins = [
+  'https://cookie-oven.api.bbc.co.uk',
+  'https://ichef.bbci.co.uk',
+];
 
 describe('getAssetOrigins', () => {
   beforeEach(() => {
