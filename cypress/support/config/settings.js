@@ -2543,7 +2543,7 @@ module.exports = () => ({
           test: {
             paths: [
               '/korean/bbc_korean_radio/programmes/w13xttll', // Brand
-              '/korean/bbc_korean_radio/w3ct0kqp', // Episode
+              '/korean/bbc_korean_radio/w3ct0kfm', // Episode
             ],
             enabled: true,
           },
@@ -2552,7 +2552,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -3498,7 +3498,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       onDemandTV: {
         environments: {
