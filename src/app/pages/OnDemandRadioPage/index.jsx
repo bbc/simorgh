@@ -6,6 +6,7 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
+  GEL_SPACING_HLF,
 } from '@bbc/gel-foundations/spacings';
 import { MediaMessage } from '@bbc/psammead-media-player';
 import {
@@ -62,14 +63,16 @@ const StyledMessageContainer = styled.div`
   margin-bottom: ${GEL_SPACING_QUAD};
 `;
 
-// iframe margin set to zero for amp only to keep it in position
+// iframe padding set to keep scrub bar and duration in view
 const StyledAudioPlayer = styled(AVPlayer)`
   iframe {
     width: calc(100% + ${GEL_SPACING_DBL});
-    margin: 0 ${({ isAmp }) => (isAmp ? '' : `-${GEL_SPACING}`)};
+    margin: 0 -${GEL_SPACING};
+    ${({ isAmp }) => (isAmp ? `padding-left: ${GEL_SPACING_HLF}` : '')};
     @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
       width: calc(100% + ${GEL_SPACING_QUAD});
-      margin: 0 ${({ isAmp }) => (isAmp ? '' : `-${GEL_SPACING_DBL}`)};
+      margin: 0 -${GEL_SPACING_DBL};
+      ${({ isAmp }) => (isAmp ? `padding-left: ${GEL_SPACING_HLF}` : '')};
     }
   }
 `;
@@ -183,7 +186,6 @@ const OnDemandRadioPage = ({ pageData }) => {
               iframeTitle={iframeTitle}
               title="On-demand radio"
               type="audio"
-              skin="audio"
               placeholderSrc={audioPlaceholderImageSrc}
             />
           ) : (
