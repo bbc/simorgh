@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from 'react';
-import { node, object } from 'prop-types';
+import { node, shape, bool } from 'prop-types';
 import { toggleReducer } from './reducer';
 import defaultToggles from '#lib/config/toggles';
 
@@ -27,8 +27,15 @@ const ToggleContextConsumer = ToggleContext.Consumer;
 
 ToggleContextProvider.propTypes = {
   children: node.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  remoteToggles: object.isRequired,
+  remoteToggles: shape({
+    ads: shape({
+      enabled: bool.isRequired,
+    }),
+  }),
+};
+
+ToggleContextProvider.defaultProps = {
+  remoteToggles: {},
 };
 
 export { ToggleContext, ToggleContextProvider, ToggleContextConsumer };

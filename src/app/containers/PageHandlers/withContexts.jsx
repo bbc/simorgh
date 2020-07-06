@@ -1,5 +1,6 @@
 import React from 'react';
-import { bool, element, string, number, shape, object } from 'prop-types';
+import { bool, element, string, number, shape } from 'prop-types';
+import pathOr from 'ramda/src/pathOr';
 import variantPropType from '#models/propTypes/variants';
 import { pageDataPropType } from '#models/propTypes/data';
 
@@ -25,12 +26,9 @@ const WithContexts = Component => {
       variant,
       timeOnServer,
     } = props;
-
+    const remoteToggles = pathOr({}, ['toggles'], simorghConfig);
     return (
-      <ToggleContextProvider
-        service={service}
-        remoteToggles={simorghConfig.toggles}
-      >
+      <ToggleContextProvider service={service} remoteToggles={remoteToggles}>
         <ServiceContextProvider
           service={service}
           variant={variant}
@@ -72,8 +70,12 @@ const WithContexts = Component => {
     variant: variantPropType,
     timeOnServer: number,
     simorghConfig: shape({
-      toggles: object,
-    }).isRequired,
+      toggles: shape({
+        ads: shape({
+          enabled: bool.isRequired,
+        }),
+      }),
+    }),
   };
 
   WithContextsContainer.defaultProps = {
@@ -84,6 +86,7 @@ const WithContexts = Component => {
     previousPath: null,
     variant: null,
     timeOnServer: null,
+    simorghConfig: {},
   };
 
   return WithContextsContainer;
