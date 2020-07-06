@@ -20,20 +20,28 @@ def setupCodeCoverage() {
   sh './cc-test-reporter before-build'
 }
 
-def runDevelopmentTests(){
+def installDependencies(){
   sh 'make install'
+}
+
+def buildApplication(){
+  sh 'npm run build'
+}
+
+def runDevelopmentTests(){
   sh 'make developmentTests'
 }
 
 def runProductionTests(){
-  sh 'make install'
   sh 'make productionTests'
-  sh 'npm prune --production'
 }
 
 def runChromaticTests(){
-  sh 'make install'
   sh 'make testChromatic'
+}
+
+def pruneDevDependencies(){
+  sh 'npm prune --production'
 }
 
 def getCommitInfo = {
@@ -125,16 +133,36 @@ pipeline {
         cancelPreviousBuilds()
       }
     }
-    stage ('Build and Test') {
-      when {
-        expression { env.BRANCH_NAME != 'latest' }
+    stage ('Install Dependencies') {
+      agent {
+        docker {
+          image "${nodeImage}"
+          reuseNode true
+        }
       }
+      steps {
+        installDependencies()
+      }
+    }
+    stage ('Build for Test') {
+      agent {
+        docker {
+          image "${nodeImage}"
+          reuseNode true
+        }
+      }
+      steps {
+        buildApplication()
+      }
+    }
+    stage ('Test') {
       failFast true
       parallel {
         stage ('Test Development') {
           agent {
             docker {
               image "${nodeImage}"
+              reuseNode true
             }
           }
           steps {
@@ -150,6 +178,7 @@ pipeline {
           agent {
             docker {
               image "${nodeImage}"
+              reuseNode true
             }
           }
           steps {
@@ -160,6 +189,7 @@ pipeline {
           agent {
             docker {
               image "${nodeImage}"
+              reuseNode true
             }
           }
           steps {
@@ -177,78 +207,36 @@ pipeline {
         }
       }
     }
-    stage ('Build, Test & Package') {
+    stage ('Build for Release') {
       when {
         expression { env.BRANCH_NAME == 'latest' }
       }
+      failFast true
       parallel {
-        stage ('Test Development') {
-          agent {
-            docker {
-              image "${nodeImage}"
-            }
-          }
-          steps {
-            setupCodeCoverage()
-            withCredentials([string(credentialsId: 'simorgh-cc-test-reporter-id', variable: 'CC_TEST_REPORTER_ID')]) {
-              runDevelopmentTests()
-              sh './cc-test-reporter after-build -t lcov --debug --exit-code 0'
-            }
-          }
-        }
-        stage ('Test Production and Zip Production') {
-          agent {
-            docker {
-              image "${nodeImage}"
-            }
-          }
-          steps {
-            // Testing
-            runProductionTests()
-
-            script {
-              getCommitInfo()
-              Simorgh.setBuildMetadataLegacy('simorgh', env.BUILD_NUMBER, appGitCommit) // Set Simorgh build metadata
-            }
-
-            // Moving files necessary for production to `pack` directory.
-            sh "./scripts/jenkinsProductionFiles.sh"
-
-            script {
-              sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
-            }
-
-            sh "rm -f ${packageName}"
-            zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
-            stash name: 'simorgh', includes: packageName
-            sh "rm -rf pack"
-          }
-        }
-        stage ('Build storybook dist') {
-          agent {
-            docker {
-              image "${nodeImage}"
-            }
-          }
-          steps {
-            sh "rm -f storybook.zip"
-            sh 'make install'
-            sh 'make buildStorybook'
-            zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
-            stash name: 'simorgh_storybook', includes: storybookDist
-          }
-        }
         stage ('Build Static Assets') {
           agent {
             docker {
               image "${nodeImage}"
+              reuseNode true
             }
           }
           steps {
-            sh 'make install'
-
             buildStaticAssets("test", "TEST")
             buildStaticAssets("live", "LIVE")
+          }
+        }
+        stage ('Build Storybook Dist') {
+          agent {
+            docker {
+              image "${nodeImage}"
+              reuseNode true
+            }
+          }
+          steps {
+            sh "rm -f storybook.zip"
+            sh 'make buildStorybook'
+            zip archive: true, dir: 'storybook_dist', glob: '', zipFile: storybookDist
+            stash name: 'simorgh_storybook', includes: storybookDist
           }
         }
       }
@@ -260,6 +248,37 @@ pipeline {
         }
       }
     }
+    stage ('Prepare for Deployment') {
+      when {
+        expression { env.BRANCH_NAME == 'latest' }
+      }
+      agent {
+        docker {
+          image "${nodeImage}"
+          reuseNode true
+        }
+      }
+      steps {
+        script {
+          getCommitInfo()
+          Simorgh.setBuildMetadataLegacy('simorgh', env.BUILD_NUMBER, appGitCommit) // Set Simorgh build metadata
+        }
+
+        pruneDevDependencies()
+
+        // Moving files necessary for production to `pack` directory.
+        sh "./scripts/jenkinsProductionFiles.sh"
+
+        script {
+          sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
+        }
+
+        sh "rm -f ${packageName}"
+        zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
+        stash name: 'simorgh', includes: packageName
+        sh "rm -rf pack"
+      }
+    }
     stage ('Run Pipeline') {
       when {
         expression { env.BRANCH_NAME == 'latest' }
@@ -268,7 +287,6 @@ pipeline {
         // Do not perform the SCM step
         skipDefaultCheckout true
       }
-      agent any
       steps {
         // This stage triggers the B/G deployment when merging Simorgh
         // build(
