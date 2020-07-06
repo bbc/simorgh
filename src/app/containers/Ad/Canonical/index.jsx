@@ -22,10 +22,8 @@ const StyledAdDiv = styled.div`
 
 export const getBootsrapSrc = queryString => {
   const useLiveSrc = isLive() || queryString.includes('ads-js-env=live');
-
-  return `https://gn-web-assets.api.bbc.com/ngas/${
-    useLiveSrc ? '' : 'test/'
-  }dotcom-bootstrap.js`;
+  const params = useLiveSrc ? '' : 'test/';
+  return `https://gn-web-assets.api.bbc.com/ngas/${params}dotcom-bootstrap.js`;
 };
 
 const CanonicalAd = ({ slotType }) => {
