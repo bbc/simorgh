@@ -8315,5 +8315,21 @@ module.exports = () => ({
       },
       idxPage: { environments: undefined, smoke: false },
     },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            enabled: true,
+          },
+          test: {
+            enabled: true,
+          },
+          local: {
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
   },
 });
