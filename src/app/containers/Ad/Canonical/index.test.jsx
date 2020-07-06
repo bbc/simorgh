@@ -42,7 +42,7 @@ describe('getBootsrapSrc', () => {
         'https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap.js',
     },
     {
-      queryString: '?khoaphan',
+      queryString: '?test_query_string',
       isLiveValue: true,
       bootstrapSrc:
         'https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap.js',
