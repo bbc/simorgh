@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
-import { string, shape } from 'prop-types';
+import { string, shape, number } from 'prop-types';
 import styled from 'styled-components';
 
 import { Img } from '@bbc/psammead-image';
@@ -19,7 +19,7 @@ const Include = styled.div`
 
 const DISALLOWED_SCRIPTS = /js\/verticalChart|horizontalChart|lineChart|pieChart|simpleMap|table\./;
 
-const Idt2Canonical = ({ html, imageBlock }) => {
+const Idt2Canonical = ({ html, imageBlock, indexOfInclude }) => {
   if (!html || !imageBlock) return null;
   const { src, alt, srcset } = imageBlock;
   const isDisallowed = DISALLOWED_SCRIPTS.test(html);
@@ -27,11 +27,17 @@ const Idt2Canonical = ({ html, imageBlock }) => {
   return (
     <IncludeGrid>
       {isDisallowed ? (
-        <Img src={src} alt={alt} srcset={srcset} />
+        <Img
+          src={src}
+          alt={alt}
+          srcset={srcset}
+          id={`include-${indexOfInclude + 1}`}
+        />
       ) : (
         <Include
           suppressHydrationWarning
           dangerouslySetInnerHTML={{ __html: html }}
+          id={`include-${indexOfInclude + 1}`}
         />
       )}
     </IncludeGrid>
@@ -45,6 +51,7 @@ Idt2Canonical.propTypes = {
     alt: string.isRequired,
     srcset: string,
   }),
+  indexOfInclude: number.isRequired,
 };
 
 Idt2Canonical.defaultProps = {
