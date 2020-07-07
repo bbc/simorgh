@@ -10,7 +10,7 @@ const LEADERBOARD_HEIGHT = '5.5rem';
 const LEADERBOARD_HEIGHT_GROUP_4_5 = '9rem';
 const MPU_HEIGHT = '15.625rem';
 
-const leaderboardStlyes = css`
+const leaderboardStyles = css`
   min-height: ${LEADERBOARD_HEIGHT};
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
