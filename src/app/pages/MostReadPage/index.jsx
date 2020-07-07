@@ -18,6 +18,7 @@ import mostReadShape from '#containers/MostRead/utilities/mostReadShape';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import LinkedData from '#containers/LinkedData';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import MetadataContainer from '#containers/Metadata';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import IndexMain from '#app/components/PageLayout/IndexMain';
@@ -94,9 +95,10 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
   };
 
   return (
-    <IndexPageContainer>
+    <>
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
+      <ComscoreAnalytics />
       <MetadataContainer
         title={header}
         lang={lang}
@@ -105,15 +107,17 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <LinkedData type="WebPage" seoTitle={header} />
       <IndexMain data-e2e="most-read">
-        <MostReadContainer
-          mostReadEndpointOverride={mostReadEndpointOverride}
-          wrapper={MostReadWrapper}
-          columnLayout="oneColumn"
-          initialData={pageData}
-          serverRenderOnAmp
-        />
+        <IndexPageContainer>
+          <MostReadContainer
+            mostReadEndpointOverride={mostReadEndpointOverride}
+            wrapper={MostReadWrapper}
+            columnLayout="oneColumn"
+            initialData={pageData}
+            serverRenderOnAmp
+          />
+        </IndexPageContainer>
       </IndexMain>
-    </IndexPageContainer>
+    </>
   );
 };
 MostReadPage.propTypes = {
