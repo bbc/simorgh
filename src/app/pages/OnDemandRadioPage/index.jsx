@@ -6,7 +6,6 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
-  GEL_SPACING_HLF,
 } from '@bbc/gel-foundations/spacings';
 import { MediaMessage } from '@bbc/psammead-media-player';
 import {
@@ -65,14 +64,15 @@ const StyledMessageContainer = styled.div`
 
 // iframe padding set to keep scrub bar and duration in view
 const StyledAudioPlayer = styled(AVPlayer)`
+  amp-iframe {
+    overflow: visible !important;
+  }
   iframe {
     width: calc(100% + ${GEL_SPACING_DBL});
     margin: 0 -${GEL_SPACING};
-    ${({ isAmp }) => (isAmp ? `padding-left: ${GEL_SPACING_HLF}` : '')};
     @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
       width: calc(100% + ${GEL_SPACING_QUAD});
       margin: 0 -${GEL_SPACING_DBL};
-      ${({ isAmp }) => (isAmp ? `padding-left: ${GEL_SPACING_HLF}` : '')};
     }
   }
 `;
