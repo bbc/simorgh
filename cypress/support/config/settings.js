@@ -4030,19 +4030,58 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
-            paths: [],
+            paths: [
+              '/pashto/articles/c70970g2251o', // Article
+              '/pashto/articles/c123456abcdo', // Error Page
+              '/pashto', // Front Page
+              '/pashto/bbc_pashto_radio/liveradio', // Live Radio
+              '/pashto/arts-and-literature-46787030', // CPS MAP
+              '/pashto/multimedia/2016/08/160827_gn_southafrica_female_farmer', // TC2 MAP
+              '/pashto/world-52873295', // CPS STY
+              '/pashto/arts-and-literature-50230813', // PGL
+              '/pashto/bbc_pashto_radio/programmes/p0340yr4', // On Demand Radio Brand
+              '/pashto/bbc_pashto_radio/w172xjclrg44rpx', // On Demand Radio Episode
+              // '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // On Demand TV Brand
+              '/pashto/popular/read', // Most Read
+            ],
             enabled: true,
           },
           test: {
-            paths: [],
+            paths: [
+              '/pashto/articles/cyjmdl92z3ro', // Article
+              '/pashto', // Front Page
+              '/pashto/bbc_pashto_radio/liveradio', // Live Radio
+              '/pashto/media-23257523', // CPS MAP
+              '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
+              '/pashto/23289748', // CPS STY
+              '/pashto/23092924', // CPS PGL
+              '/pashto/bbc_pashto_radio/programmes/p0340yr4', // On Demand Radio Brand
+              '/pashto/bbc_pashto_radio/w172xjclrg44rpx', // On Demand Radio Episode
+              '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // On Demand TV Brand
+              // '', // On Demand TV Episode
+              '/pashto/popular/read', // Most Read
+            ],
             enabled: true,
           },
           local: {
-            paths: [],
+            paths: [
+              '/pashto/articles/c70970g2251o', // Article
+              '/pashto', // Front Page
+              '/pashto/bbc_pashto_radio/liveradio', // Live Radio
+              '/pashto/media-23257523', // CPS MAP
+              '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
+              '/pashto/23289748', // CPS STY
+              '/pashto/arts-and-literature-50230813', // CPS PGL
+              // '', // On Demand Radio Brand
+              '/pashto/bbc_pashto_radio/w3ct0lz1', // On Demand Radio Episode
+              '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // On Demand TV Brand
+              // '', // On Demand TV Episode
+              '/pashto/popular/read', // Most Read
+            ],
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
     },
   },
@@ -6460,19 +6499,38 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
-            paths: [],
+            paths: [
+              '/thai/articles/czx7w3zyme1o', // Article
+              '/thai', // Front Page
+              '/thai/popular/read', // Most Read
+              '/thai/international-51285795', // CPS MAP with video clip
+              '/thai/thailand-49950038', // CPS PGL
+            ],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: [
+              '/thai/articles/c442rl3md0eo', // Article
+              '/thai', // Front Page
+              '/thai/popular/read', // Most Read
+              '/thai/23122810', // CPS MAP
+              '/thai/international-23252840', // CPS PGL
+              // '', // CPS STY
+            ],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: [
+              '/thai/articles/c442rl3md0eo', // Article
+              '/thai', // Front Page
+              '/thai/popular/read', // Most Read
+              '/thai/23122810', // CPS MAP
+              '/thai/thailand-49950038', // CPS PGL
+            ],
             enabled: false,
           },
         },
-        smoke: false,
+        smoke: true,
       },
     },
   },
