@@ -34,6 +34,9 @@ const StyledGelPageGrid = styled(GelPageGrid)`
 `;
 
 const StyledAudioPlayer = styled(AVPlayer)`
+  amp-iframe {
+    overflow: visible !important;
+  }
   iframe {
     width: calc(100% + ${GEL_SPACING_DBL});
     margin: 0 -${GEL_SPACING};

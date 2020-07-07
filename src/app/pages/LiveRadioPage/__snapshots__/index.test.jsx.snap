@@ -249,6 +249,10 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   flex-grow: 1;
 }
 
+.c5 amp-iframe {
+  overflow: visible !important;
+}
+
 .c5 iframe {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
@@ -504,6 +508,10 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+.c5 amp-iframe {
+  overflow: visible !important;
 }
 
 .c5 iframe {
