@@ -172,12 +172,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -388,12 +391,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -577,12 +583,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -768,12 +777,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -924,12 +936,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -1118,12 +1133,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -1332,12 +1350,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -1399,12 +1420,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -1593,12 +1617,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -1767,12 +1794,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -1980,12 +2010,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -2188,12 +2221,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -2339,12 +2375,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -2533,12 +2572,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -2684,12 +2726,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -2873,12 +2918,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -3087,12 +3135,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -3258,12 +3309,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -3414,12 +3468,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -3481,12 +3538,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -3675,12 +3735,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -3742,12 +3805,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: true,
           },
           test: {
+            paths: [],
             enabled: true,
           },
           local: {
+            paths: [],
             enabled: true,
           },
         },
@@ -3958,12 +4024,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: true,
           },
           test: {
+            paths: [],
             enabled: true,
           },
           local: {
+            paths: [],
             enabled: true,
           },
         },
@@ -4186,12 +4255,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: true,
           },
           test: {
+            paths: [],
             enabled: true,
           },
           local: {
+            paths: [],
             enabled: true,
           },
         },
@@ -4333,12 +4405,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -4489,12 +4564,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -4639,12 +4717,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -4789,12 +4870,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -4856,12 +4940,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -5005,12 +5092,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -5154,12 +5244,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -5347,12 +5440,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -5559,12 +5655,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -5593,12 +5692,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -5807,12 +5909,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -6021,12 +6126,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -6192,12 +6300,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -6343,12 +6454,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -6532,12 +6646,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -6688,12 +6805,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -6844,12 +6964,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -7000,12 +7123,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -7051,12 +7177,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -7233,12 +7362,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -7447,12 +7579,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -7665,12 +7800,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -7821,12 +7959,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
@@ -7972,12 +8113,15 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
+            paths: [],
             enabled: false,
           },
           test: {
+            paths: [],
             enabled: false,
           },
           local: {
+            paths: [],
             enabled: false,
           },
         },
