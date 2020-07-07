@@ -76,7 +76,6 @@ const StyledAudioPlayer = styled(AudioPlayer)`
 const OnDemandRadioPage = ({ pageData }) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
   const {
-    language,
     brandTitle,
     headline,
     summary,
@@ -139,7 +138,7 @@ const OnDemandRadioPage = ({ pageData }) => {
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
         title={headline}
-        lang={language}
+        lang={lang}
         description={shortSynopsis}
         openGraphType="website"
       />
@@ -222,7 +221,6 @@ OnDemandRadioPage.propTypes = {
     brandTitle: string,
     headline: string,
     summary: string,
-    language: string,
     episodeIsAvailable: oneOf([
       EPISODE_STATUS.EPISODE_IS_AVAILABLE,
       EPISODE_STATUS.EPISODE_IS_EXPIRED,

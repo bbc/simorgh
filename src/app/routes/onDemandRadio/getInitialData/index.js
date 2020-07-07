@@ -30,7 +30,6 @@ export default async ({ path: pathname }) => {
     ...rest,
     pageData: {
       metadata: { type: 'On Demand Radio' },
-      language: get(['metadata', 'language'], LOG_LEVELS.INFO),
       brandTitle: get(['metadata', 'title'], LOG_LEVELS.INFO),
       episodeTitle: get(['content', 'blocks', 0, 'title']),
       headline: get(['promo', 'headlines', 'headline'], LOG_LEVELS.WARN),
