@@ -9,8 +9,17 @@ jest.mock('../../utils/getConfig', () => jest.fn());
 describe('Get initial data from front page', () => {
   beforeEach(() => {
     process.env.SIMORGH_BASE_URL = 'http://localhost';
+    process.env.SIMORGH_CONFIG_URL = 'http://config.localhost';
     fetchMock.restore();
   });
+
+  const mockToggles = {
+    toggles: {
+      ads: {
+        enabled: false,
+      },
+    },
+  };
 
   it('should return data for a page without radio schedules to render', async () => {
     getConfig.mockImplementationOnce(() => ({
@@ -21,6 +30,11 @@ describe('Get initial data from front page', () => {
     }));
 
     fetchMock.mock('http://localhost/mock-frontpage-path.json', frontPageJson);
+    fetchMock.mock(
+      'http://config.localhost/?application=simorgh&service=hausa&__amp_source_origin=http://localhost',
+      mockToggles,
+    );
+
     const { pageData } = await getInitialData({
       path: 'mock-frontpage-path',
       service: 'hausa',
@@ -43,6 +57,10 @@ describe('Get initial data from front page', () => {
     }));
 
     fetchMock.mock('http://localhost/mock-frontpage-path.json', frontPageJson);
+    fetchMock.mock(
+      'http://config.localhost/?application=simorgh&service=hausa&__amp_source_origin=http://localhost',
+      mockToggles,
+    );
     fetchMock.mock(
       'http://localhost/hausa/bbc_hausa_radio/schedule.json',
       radioScheduleJson,
@@ -72,6 +90,10 @@ describe('Get initial data from front page', () => {
 
     fetchMock.mock('http://localhost/mock-frontpage-path.json', frontPageJson);
     fetchMock.mock(
+      'http://config.localhost/?application=simorgh&service=hausa&__amp_source_origin=http://localhost',
+      mockToggles,
+    );
+    fetchMock.mock(
       'http://localhost/hausa/bbc_hausa_radio/schedule.json',
       radioScheduleJson,
     );
@@ -99,6 +121,10 @@ describe('Get initial data from front page', () => {
     }));
 
     fetchMock.mock('http://localhost/mock-frontpage-path.json', frontPageJson);
+    fetchMock.mock(
+      'http://config.localhost/?application=simorgh&service=hausa&__amp_source_origin=http://localhost',
+      mockToggles,
+    );
     fetchMock.mock(
       'http://localhost/hausa/bbc_hausa_radio/schedule.json',
       radioScheduleJson,
@@ -161,6 +187,64 @@ describe('Get initial data from front page', () => {
       }));
 
       expect(await hasRadioSchedule('mock-service')).toBe(false);
+    });
+  });
+
+  describe('Pagedata with simorgh config', () => {
+    it('should return simorgh config when config endpoint successful', async () => {
+      getConfig.mockImplementationOnce(() => ({
+        radioSchedule: {
+          hasRadioSchedule: true,
+          onFrontPage: false,
+        },
+      }));
+      fetchMock.mock(
+        'http://localhost/mock-frontpage-path.json',
+        frontPageJson,
+      );
+      fetchMock.mock(
+        'http://config.localhost/?application=simorgh&service=hausa&__amp_source_origin=http://localhost',
+        mockToggles,
+      );
+      fetchMock.mock(
+        'http://localhost/hausa/bbc_hausa_radio/schedule.json',
+        radioScheduleJson,
+      );
+
+      const { simorghConfig } = await getInitialData({
+        path: 'mock-frontpage-path',
+        service: 'hausa',
+      });
+
+      expect(simorghConfig).toEqual(mockToggles);
+    });
+
+    it('should not return simorgh config when config endpoint fails', async () => {
+      getConfig.mockImplementationOnce(() => ({
+        radioSchedule: {
+          hasRadioSchedule: true,
+          onFrontPage: false,
+        },
+      }));
+      fetchMock.mock(
+        'http://localhost/mock-frontpage-path.json',
+        frontPageJson,
+      );
+      fetchMock.mock(
+        'http://config.localhost/?application=simorgh&service=hausa&__amp_source_origin=http://localhost',
+        500,
+      );
+      fetchMock.mock(
+        'http://localhost/hausa/bbc_hausa_radio/schedule.json',
+        radioScheduleJson,
+      );
+
+      const { simorghConfig } = await getInitialData({
+        path: 'mock-frontpage-path',
+        service: 'hausa',
+      });
+
+      expect(simorghConfig).toEqual(null);
     });
   });
 });

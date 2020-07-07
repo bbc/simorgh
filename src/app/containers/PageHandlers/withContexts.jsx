@@ -28,7 +28,7 @@ const WithContexts = Component => {
     } = props;
     const remoteToggles = pathOr({}, ['toggles'], simorghConfig);
     return (
-      <ToggleContextProvider service={service} remoteToggles={remoteToggles}>
+      <ToggleContextProvider remoteToggles={remoteToggles}>
         <ServiceContextProvider
           service={service}
           variant={variant}

@@ -10,6 +10,7 @@ import addIdsToItems from '#app/routes/utils/sharedDataTransformers/addIdsToItem
 import filterGroupsWithoutStraplines from '#app/routes/utils/sharedDataTransformers/filterGroupsWithoutStraplines';
 import nodeLogger from '#lib/logger.node';
 import { CONFIG_FETCH_ERROR } from '#lib/logger.const';
+import getOriginContext from '#contexts/RequestContext/getOriginContext';
 import constructTogglesEndpoint from '../utils/constructTogglesEndpoint';
 
 const logger = nodeLogger(__filename);
@@ -66,11 +67,8 @@ export const hasRadioSchedule = async (service, variant) => {
 export default async ({ path, service, variant }) => {
   const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
   const pageDataPromise = fetchPageData(path);
-  const simorghConfig = await getSimorghConfig(
-    service,
-    // TODO: get the bbcOrigin
-    'https://www.test.bbc.com',
-  );
+  const { origin } = getOriginContext();
+  const simorghConfig = await getSimorghConfig(service, origin);
 
   const { json, ...rest } = pageHasRadioSchedule
     ? await withRadioSchedule({ pageDataPromise, service, path })
