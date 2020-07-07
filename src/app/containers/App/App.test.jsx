@@ -16,6 +16,9 @@ describe('App', () => {
   const initialData = {
     pageData: 'Some initial data',
     timeOnServer,
+    simorghConfig: {
+      mockToggle: { enabled: true },
+    },
   };
   const error = 'Error!';
   const match = {
@@ -60,6 +63,7 @@ describe('App', () => {
       loading: false,
       pageType: 'article',
       service: 'ukchina',
+      simorghConfig: initialData.simorghConfig,
       pathname: 'pathnameOne',
       previousPath: null,
       variant: 'simp',
@@ -131,6 +135,7 @@ describe('App', () => {
               loading: true,
               pageType: 'article',
               service: 'ukchina',
+              simorghConfig: null,
               pathname: 'pathnameTwo',
               previousPath: 'pathnameOne',
               variant: 'simp',
@@ -153,6 +158,7 @@ describe('App', () => {
               loading: false,
               pageType: 'article',
               service: 'ukchina',
+              simorghConfig: initialData.simorghConfig,
               pathname: 'pathnameTwo',
               previousPath: 'pathnameOne',
               variant: 'simp',
@@ -195,6 +201,7 @@ describe('App', () => {
             2,
             [],
             {
+              assetUri: undefined,
               bbcOrigin: 'https://www.bbc.co.uk',
               pageData: null,
               status: null,
@@ -205,6 +212,7 @@ describe('App', () => {
               loading: true,
               pageType: 'article',
               service: 'ukchina',
+              simorghConfig: null,
               pathname: 'pathnameThree',
               previousPath: 'pathnameTwo',
               variant: 'simp',
@@ -227,6 +235,7 @@ describe('App', () => {
               loading: false,
               pageType: 'article',
               service: 'ukchina',
+              simorghConfig: initialData.simorghConfig,
               pathname: 'pathnameThree',
               previousPath: 'pathnameTwo',
               variant: 'simp',
