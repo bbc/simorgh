@@ -4032,7 +4032,6 @@ module.exports = () => ({
           live: {
             paths: [
               '/pashto/articles/c70970g2251o', // Article
-              '/pashto/articles/c123456abcdo', // Error Page
               '/pashto', // Front Page
               '/pashto/bbc_pashto_radio/liveradio', // Live Radio
               '/pashto/arts-and-literature-46787030', // CPS MAP
@@ -8359,13 +8358,16 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
-            enabled: true,
+            paths: [],
+            enabled: false,
           },
           test: {
-            enabled: true,
+            paths: [],
+            enabled: false,
           },
           local: {
-            enabled: true,
+            paths: [],
+            enabled: false,
           },
         },
         smoke: false,
@@ -8538,13 +8540,16 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
-            enabled: true,
+            paths: [],
+            enabled: false,
           },
           test: {
-            enabled: true,
+            paths: [],
+            enabled: false,
           },
           local: {
-            enabled: true,
+            paths: [],
+            enabled: false,
           },
         },
         smoke: false,
