@@ -73,7 +73,7 @@ describe('OnDemand TV Brand Page ', () => {
     );
 
     expect(visuallyHiddenHeadline).toBeInTheDocument();
-    expect(visuallyHiddenHeadline).toContainHTML('نړۍ دا وخت');
+    expect(visuallyHiddenHeadline.innerHTML).toEqual('نړۍ دا وخت, ۲۷ می ۲۰۲۰');
   });
 
   it('should show the brand title for OnDemand TV Pages', async () => {

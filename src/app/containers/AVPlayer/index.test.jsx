@@ -40,54 +40,55 @@ const GenerateFixtureData = ({
   </RequestContextProvider>
 );
 
-const AVPlayerCanonical = (
+const AVPlayerCanonicalODTV = (
   <GenerateFixtureData
     platform="canonical"
     embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live"
   />
 );
 
-const AVPlayerAMP = (
+const AVPlayerAMPODRadio = (
   <GenerateFixtureData
     platform="amp"
-    embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps/amp?morph_env=live"
+    embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om/amp"
+    title="Audio Player"
+    type="audio"
+    iframeTitle="Audio player"
+    skin="audio"
   />
 );
 
-describe('VideoPlayer', () => {
+const AVPlayerLiveRadio = (
+  <GenerateFixtureData
+    platform="canonical"
+    embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
+    title="Live radio"
+    type="audio"
+    iframeTitle="오디오 플레이어"
+    skin="audio"
+  />
+);
+
+describe('AVPlayer for On Demand TV', () => {
   shouldMatchSnapshot(
     'should match snapshot for canonical AVPlayer',
-    AVPlayerCanonical,
+    AVPlayerCanonicalODTV,
   );
 
-  shouldMatchSnapshot('should match snapshot for AMP AVPlayer', AVPlayerAMP);
-
   it('should render the iframe on canonical', () => {
-    render(AVPlayerCanonical);
+    render(AVPlayerCanonicalODTV);
 
     expect(document.querySelector('iframe')).toBeInTheDocument();
   });
 
-  it('should render the iframe on AMP', () => {
-    render(AVPlayerAMP);
-
-    expect(document.querySelector('amp-iframe')).toBeInTheDocument();
-  });
-
   it('should contain the noscript tag for no-JS scenarios on canonical', () => {
-    render(AVPlayerCanonical);
+    render(AVPlayerCanonicalODTV);
 
     expect(document.querySelector('noscript')).toBeInTheDocument();
   });
 
-  it('should contain the noscript tag for no-JS scenarios on AMP', () => {
-    render(AVPlayerAMP);
-
-    expect(document.querySelector('noscript')).toBeInTheDocument();
-  });
-
-  it('should contain the translated iframe title on canonical', () => {
-    const { container } = render(AVPlayerCanonical);
+  it('should contain the iframe title on canonical', () => {
+    const { container } = render(AVPlayerCanonicalODTV);
 
     const AVPlayerIframeTitle = container
       .querySelector('iframe')
@@ -95,14 +96,62 @@ describe('VideoPlayer', () => {
 
     expect(AVPlayerIframeTitle).toEqual('ویډیو پلیئر');
   });
+});
 
-  it('should contain the translated iframe title on AMP', () => {
-    const { container } = render(AVPlayerAMP);
+describe('AVPlayer for On Demand Radio', () => {
+  shouldMatchSnapshot(
+    'should match snapshot for AMP AVPlayer',
+    AVPlayerAMPODRadio,
+  );
+
+  it('should render the iframe on AMP', () => {
+    render(AVPlayerAMPODRadio);
+
+    expect(document.querySelector('amp-iframe')).toBeInTheDocument();
+  });
+
+  it('should contain the noscript tag for no-JS scenarios on AMP', () => {
+    render(AVPlayerAMPODRadio);
+
+    expect(document.querySelector('noscript')).toBeInTheDocument();
+  });
+
+  it('should contain the iframe title on AMP', () => {
+    const { container } = render(AVPlayerAMPODRadio);
 
     const AVPlayerIframeTitle = container
       .querySelector('amp-iframe')
       .getAttribute('title');
 
-    expect(AVPlayerIframeTitle).toEqual('ویډیو پلیئر');
+    expect(AVPlayerIframeTitle).toEqual('Audio player');
+  });
+});
+
+describe('AVPlayer for Live Radio', () => {
+  shouldMatchSnapshot(
+    'should match snapshot for canonical AVPlayer',
+    AVPlayerLiveRadio,
+  );
+
+  it('should render the iframe on canonical', () => {
+    render(AVPlayerLiveRadio);
+
+    expect(document.querySelector('iframe')).toBeInTheDocument();
+  });
+
+  it('should contain the noscript tag for no-JS scenarios on canonical', () => {
+    render(AVPlayerLiveRadio);
+
+    expect(document.querySelector('noscript')).toBeInTheDocument();
+  });
+
+  it('should contain the iframe title on canonical', () => {
+    const { container } = render(AVPlayerLiveRadio);
+
+    const AVPlayerIframeTitle = container
+      .querySelector('iframe')
+      .getAttribute('title');
+
+    expect(AVPlayerIframeTitle).toEqual('오디오 플레이어');
   });
 });

@@ -126,7 +126,7 @@ When adding a new page type there are several parts required.
 #### 3) Create a new container for the page type
 
 - Similar to [this](https://github.com/bbc/simorgh/blob/latest/src/app/pages/FrontPage/index.jsx) we require a top level container that will act as the entry point for the page routing. Each page type should have its own container.
-  - The container should render a `main` element with a [`flex-grow: 1;` css declaration](https://github.com/bbc/simorgh/blob/8e19f820ec0de4abd18a4d13e62dd5d843a064c0/src/app/containers/ArticleMain/index.jsx#L39), this is to ensure it grows to fill the space betwen the visual header and footer, the [root div](https://github.com/bbc/simorgh/blob/8e19f820ec0de4abd18a4d13e62dd5d843a064c0/src/server/Document/component.jsx#L31) using a [flexbox 'sticky footer' implementation](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers#Alternate_method).
+  - The container should render a `main` element with a [`flex-grow: 1;` css declaration](https://github.com/bbc/simorgh/blob/8e19f820ec0de4abd18a4d13e62dd5d843a064c0/src/app/containers/ArticleMain/index.jsx#L39), this is to ensure it grows to fill the space between the visual header and footer, the [root div](https://github.com/bbc/simorgh/blob/8e19f820ec0de4abd18a4d13e62dd5d843a064c0/src/server/Document/component.jsx#L31) using a [flexbox 'sticky footer' implementation](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers#Alternate_method).
 
 #### 4) Add new pre-processing rules if required.
 
@@ -135,7 +135,7 @@ When adding a new page type there are several parts required.
 
 #### 5) Add a new route to the react router config
 
-- This should be done for AMP and Canoical pages together
+- This should be done for AMP and Canonical pages together
 - [Route example](https://github.com/bbc/simorgh/blob/2db3185cd8c5c076bc004b03bb6e8dad62b0c109/src/app/routes/index.js#L22-L28)
 
 #### 6) Add Cypress E2E tests for the new page type
@@ -309,7 +309,7 @@ This loads a user interface which easily allows for individual tests to be run a
 
 There are several environment variables you can use with our test suite, which are:
 
-| Envionment variable  | Effect                                                                                                        | Possible values                                   |
+| Environment variable  | Effect                                                                                                        | Possible values                                   |
 | -------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
 | CYPRESS_ONLY_SERVICE | Restricts to running only the specified service                                                               | A single service i.e. `CYPRESS_ONLY_SERVICE=urdu` |
 | CYPRESS_APP_ENV      | Runs the tests in a specific environment                                                                      | `test`, `local`, `live`                           |
