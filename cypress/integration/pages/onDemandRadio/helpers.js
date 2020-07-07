@@ -9,7 +9,8 @@ const getServiceName = producerName =>
   producerName
     .toLowerCase()
     .replace('indonesian', 'indonesia')
-    .replace('chinese', 'zhongwen');
+    .replace('chinese', 'zhongwen')
+    .replace('afaan_oromoo', 'afaanoromoo');
 
 export const getEmbedUrl = (body, language) => {
   const externalId = body.metadata.createdBy;
