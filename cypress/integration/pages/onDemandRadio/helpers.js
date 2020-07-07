@@ -6,7 +6,11 @@ const getBrandId = externalId =>
   externalId.replace('bbc_oromo_radio', 'bbc_afaanoromoo_radio');
 
 const getServiceName = producerName =>
-  producerName.toLowerCase().replace('indonesian', 'indonesia');
+  producerName
+    .toLowerCase()
+    .replace('indonesian', 'indonesia')
+    .replace('chinese', 'zhongwen')
+    .replace('afaan_oromoo', 'afaanoromoo');
 
 export const getEmbedUrl = (body, language) => {
   const externalId = body.metadata.createdBy;
