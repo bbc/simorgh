@@ -3805,15 +3805,24 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
-            paths: [],
+            paths: [
+              '/news/articles/cj7xrxz0e8zo', // Article
+              '/news/articles/cabcdefghijo', // Error Page
+            ],
             enabled: true,
           },
           test: {
-            paths: [],
+            paths: [
+              '/news/articles/cn7k01xp8kxo', // Article
+              '/news/articles/cabcdefghijo', // Error Page
+            ],
             enabled: true,
           },
           local: {
-            paths: [],
+            paths: [
+              '/news/articles/cn7k01xp8kxo', // Article
+              '/news/articles/cabcdefghijo', // Error Page
+            ],
             enabled: true,
           },
         },
