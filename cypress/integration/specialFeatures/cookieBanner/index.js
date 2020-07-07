@@ -3,76 +3,55 @@ import config from '../../../support/config/services';
 import describeForEuOnly from '../../../support/helpers/describeForEuOnly';
 import visitPage from '../../../support/helpers/visitPage';
 import environment from '../../../support/helpers/getAppEnv';
-import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
 import runCanonicalTests from './testsForCanonicalOnly';
 import runAmpTests from './testsForAMPOnly';
 
 const serviceFilter = service => {
   // If smoke testing, check the special features config where smoke: true
-  const smokeServices = ramdaPath(
+  const shouldSmokeTest = ramdaPath(
     [service, 'specialFeatures', 'cookieBanner', 'smoke'],
     config,
   );
 
-  // If not smoke testing, check the special features config for where the tests are enabled for the current environment
-  const nonSmokeServicesForEnvironment = ramdaPath(
+  return Cypress.env('SMOKE') ? shouldSmokeTest : false;
+};
+
+const getPaths = service =>
+  ramdaPath(
     [
       service,
       'specialFeatures',
       'cookieBanner',
       'environments',
       environment(),
-      'enabled',
+      'paths',
     ],
     config,
   );
 
-  return Cypress.env('SMOKE') ? smokeServices : nonSmokeServicesForEnvironment;
-};
+const pageType = 'all';
 
-const getPaths = service => {
-  const environmentConfig = ramdaPath(
-    [service, 'specialFeatures', 'cookieBanner', 'environments', environment()],
-    config,
-  );
+Object.keys(config)
+  .filter(service => serviceFilter(service))
+  .forEach(service => {
+    const { variant } = config[service];
 
-  return environmentConfig.enabled ? environmentConfig.paths : [];
-};
-
-Object.keys(config).forEach(service => {
-  const { variant } = config[service];
-
-  Object.keys(config[service].pageTypes)
-    .filter(pageType => serviceHasPageType(service, pageType))
-    .filter(() => serviceFilter(service))
-    .forEach(pageType => {
-      const paths = getPaths(service);
-      paths.forEach(path => {
-        describeForEuOnly(
-          `${service} ${pageType} ${path} - Canonical Cookie Banner`,
-          () => {
-            beforeEach(() => {
-              visitPage(path, pageType);
-            });
-
-            runCanonicalTests({ service, variant, pageType, path });
-          },
-        );
+    const paths = getPaths(service);
+    paths.forEach(path => {
+      describeForEuOnly(`${service} ${path} - Canonical Cookie Banner`, () => {
+        runCanonicalTests({ service, variant, pageType, path });
       });
-
-      paths
-        .map(path => `${path}.amp`)
-        .forEach(path => {
-          describeForEuOnly(
-            `${service} ${pageType} ${path} - AMP Cookie Banner`,
-            () => {
-              beforeEach(() => {
-                visitPage(path, pageType);
-              });
-
-              runAmpTests({ service, variant, pageType, path });
-            },
-          );
-        });
     });
-});
+
+    paths
+      .map(path => `${path}.amp`)
+      .forEach(path => {
+        describeForEuOnly(`${service} ${path} - AMP Cookie Banner`, () => {
+          beforeEach(() => {
+            visitPage(path, pageType);
+          });
+
+          runAmpTests({ service, variant, pageType, path });
+        });
+      });
+  });
