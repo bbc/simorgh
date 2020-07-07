@@ -2,7 +2,7 @@ import express from 'express';
 import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';
 import path from 'path';
-import pathOr from 'ramda/src/pathOr';
+import ramdaPath from 'ramda/src/pathOr';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
@@ -288,20 +288,31 @@ server
         headers,
       });
 
-      try {
-        const { service, isAmp, route, variant } = getRouteProps(
-          routes,
-          urlPath,
-        );
-        const { pageType } = route;
+      let derivedPageType = 'Unknown';
 
-        const data = await route.getInitialData({
+      try {
+        const {
+          service,
+          isAmp,
+          route: { getInitialData, pageType },
+          variant,
+        } = getRouteProps(routes, urlPath);
+
+        // Set derivedPageType based on matched route
+        derivedPageType = pageType || derivedPageType;
+
+        const data = await getInitialData({
           path: url,
           service,
           variant,
         });
         const { status } = data;
         const bbcOrigin = headers['bbc-origin'];
+
+        // Set derivedPageType based on returned page data
+        if (status === 200) {
+          derivedPageType = ramdaPath([('pageData', 'metadata', 'type')], data);
+        }
 
         data.path = urlPath;
         data.timeOnServer = Date.now();
@@ -316,13 +327,10 @@ server
           variant,
         });
 
-        const type = pathOr('Unknown', ['pageData', 'metadata', 'type'], data);
-
         logger.info(ROUTING_INFORMATION, {
           url,
           status,
-          pageType,
-          type,
+          pageType: derivedPageType,
         });
 
         if (result.redirectUrl) {

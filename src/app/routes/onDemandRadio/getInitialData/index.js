@@ -29,7 +29,7 @@ export default async ({ path: pathname }) => {
   return {
     ...rest,
     pageData: {
-      metadata: { type: 'On Demand Radio' },
+      metadata: { type: 'onDemandRadio' },
       language: get(['metadata', 'language'], LOG_LEVELS.INFO),
       brandTitle: get(['metadata', 'title'], LOG_LEVELS.INFO),
       episodeTitle: get(['content', 'blocks', 0, 'title']),
