@@ -1,9 +1,8 @@
 import ramdaPath from 'ramda/src/path';
 import config from '../../../support/config/services';
-import getPaths from '../../../support/helpers/getPaths';
 import describeForEuOnly from '../../../support/helpers/describeForEuOnly';
 import visitPage from '../../../support/helpers/visitPage';
-import getAppEnv from '../../../support/helpers/getAppEnv';
+import environment from '../../../support/helpers/getAppEnv';
 import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
 import runCanonicalTests from './testsForCanonicalOnly';
 import runAmpTests from './testsForAMPOnly';
@@ -16,20 +15,28 @@ const serviceFilter = service => {
   );
 
   // If not smoke testing, check the special features config for where the tests are enabled for the current environment
-  const environment = getAppEnv();
   const nonSmokeServicesForEnvironment = ramdaPath(
     [
       service,
       'specialFeatures',
       'cookieBanner',
       'environments',
-      environment,
+      environment(),
       'enabled',
     ],
     config,
   );
 
   return Cypress.env('SMOKE') ? smokeServices : nonSmokeServicesForEnvironment;
+};
+
+const getPaths = service => {
+  const environmentConfig = ramdaPath(
+    [service, 'specialFeatures', 'cookieBanner', 'environments', environment()],
+    config,
+  );
+
+  return environmentConfig.enabled ? environmentConfig.paths : [];
 };
 
 Object.keys(config).forEach(service => {
@@ -39,7 +46,7 @@ Object.keys(config).forEach(service => {
     .filter(pageType => serviceHasPageType(service, pageType))
     .filter(() => serviceFilter(service))
     .forEach(pageType => {
-      const paths = getPaths(service, pageType);
+      const paths = getPaths(service);
       paths.forEach(path => {
         describeForEuOnly(
           `${service} ${pageType} ${path} - Canonical Cookie Banner`,
