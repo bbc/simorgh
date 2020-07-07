@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { shape, string, number, bool } from 'prop-types';
+import { shape, string, number, oneOf } from 'prop-types';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -17,19 +17,25 @@ import pathOr from 'ramda/src/pathOr';
 import MetadataContainer from '../../containers/Metadata';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
-import AudioPlayer from '#containers/AudioPlayer';
+import AVPlayer from '#containers/AVPlayer';
 import EpisodeImage from '#containers/RadioPageBlocks/Blocks/OnDemandImage';
 import LinkedData from '#containers/LinkedData';
 import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
+import { EPISODE_STATUS } from '#lib/utilities/episodeAvailability';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
+
+const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
+
+const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,
@@ -57,12 +63,22 @@ const StyledMessageContainer = styled.div`
   margin-bottom: ${GEL_SPACING_QUAD};
 `;
 
-const StyledAudioPlayer = styled(AudioPlayer)`
-  width: calc(100% + ${GEL_SPACING_DBL});
-  margin: 0 -${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    width: calc(100% + ${GEL_SPACING_QUAD});
-    margin: 0 -${GEL_SPACING_DBL};
+// iframe padding set to keep scrub bar and duration in view
+const StyledAudioPlayer = styled(AVPlayer)`
+  amp-iframe {
+    overflow: visible !important;
+    width: calc(100% + ${GEL_SPACING_DBL});
+    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+      width: calc(100% + ${GEL_SPACING_QUAD});
+    }
+  }
+  iframe {
+    width: calc(100% + ${GEL_SPACING_DBL});
+    margin: 0 -${GEL_SPACING};
+    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+      width: calc(100% + ${GEL_SPACING_QUAD});
+      margin: 0 -${GEL_SPACING_DBL};
+    }
   }
 `;
 
@@ -105,9 +121,24 @@ const OnDemandRadioPage = ({ pageData }) => {
     queryString: location.search,
   });
 
-  const expiredContentMessage = pathOr(
-    'This content is no longer available',
-    ['media', 'contentExpired'],
+  const getEpisodeNotAvailableMessage = () => {
+    if (episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_EXPIRED) {
+      return pathOr(
+        'This content is no longer available',
+        ['media', 'contentExpired'],
+        translations,
+      );
+    }
+    return pathOr(
+      'This content is not yet available',
+      ['media', 'contentNotYetAvailable'],
+      translations,
+    );
+  };
+
+  const iframeTitle = pathOr(
+    'Audio player',
+    ['mediaAssetPage', 'audioPlayer'],
     translations,
   );
 
@@ -115,6 +146,7 @@ const OnDemandRadioPage = ({ pageData }) => {
     <>
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
+      <ComscoreAnalytics />
       <MetadataContainer
         title={headline}
         lang={language}
@@ -152,15 +184,22 @@ const OnDemandRadioPage = ({ pageData }) => {
               <EpisodeImage imageUrl={imageUrl} dir={dir} />
             </Grid>
           </StyledGelWrapperGrid>
-          {episodeIsAvailable ? (
+          {episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_AVAILABLE ? (
             <StyledAudioPlayer
-              externalId={masterBrand}
-              id={episodeId}
+              assetId={episodeId}
               embedUrl={embedUrl}
+              iframeTitle={iframeTitle}
+              title="On-demand radio"
+              type="audio"
+              skin="audio"
+              placeholderSrc={audioPlaceholderImageSrc}
             />
           ) : (
             <StyledMessageContainer>
-              <MediaMessage service={service} message={expiredContentMessage} />
+              <MediaMessage
+                service={service}
+                message={getEpisodeNotAvailableMessage()}
+              />
             </StyledMessageContainer>
           )}
 
@@ -168,7 +207,7 @@ const OnDemandRadioPage = ({ pageData }) => {
             type="WebPage"
             seoTitle={headline}
             entities={
-              episodeIsAvailable
+              episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_AVAILABLE
                 ? [
                     {
                       '@type': 'AudioObject',
@@ -195,7 +234,11 @@ OnDemandRadioPage.propTypes = {
     headline: string,
     summary: string,
     language: string,
-    episodeIsAvailable: bool,
+    episodeIsAvailable: oneOf([
+      EPISODE_STATUS.EPISODE_IS_AVAILABLE,
+      EPISODE_STATUS.EPISODE_IS_EXPIRED,
+      EPISODE_STATUS.EPISODE_IS_NOT_YET_AVAILABLE,
+    ]),
     releaseDateTimeStamp: number,
     imageUrl: string,
   }).isRequired,

@@ -14,6 +14,7 @@ export const service = {
     lang: `uz-Cyrl`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Янгиланди',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-uzbek',
     atiAnalyticsProducerId: '96',
     chartbeatDomain: 'uzbek.bbc.co.uk',
@@ -144,6 +145,8 @@ export const service = {
       media: {
         noJs: 'Мултимедиа ўйнаш бу қурилмада дастакланмайди',
         contentExpired: 'Бу контентни ортиқ тинглаб/томоша қилиб бўлмайди.',
+        contentNotYetAvailable:
+          'Бу контент ҳали тинглаш/томоша қилишга тайёр эмас.',
         audio: 'Аудио',
         photogallery: 'Фото галерея',
         video: 'Видео',

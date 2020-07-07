@@ -36,7 +36,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                   class="Figure-sc-6a3dhy-0 gJUCFc"
                 >
                   <div
-                    class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK"
+                    class="StyledVideoContainer-sc-13p1a4d-0 dKHIix"
                   >
                     <iframe
                       allow="autoplay; fullscreen"
@@ -399,7 +399,7 @@ exports[`Media Asset Page should render component 1`] = `
                   class="Figure-sc-6a3dhy-0 gJUCFc"
                 >
                   <div
-                    class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK"
+                    class="StyledVideoContainer-sc-13p1a4d-0 dKHIix"
                   >
                     <iframe
                       allow="autoplay; fullscreen"
@@ -1025,7 +1025,7 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                        class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
                         dir="ltr"
                       >
                         <h3
@@ -1080,7 +1080,7 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                        class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
                         dir="ltr"
                       >
                         <h3
@@ -1159,7 +1159,7 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                        class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
                         dir="ltr"
                       >
                         <h3
@@ -1257,7 +1257,7 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                        class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
                         dir="ltr"
                       >
                         <h3

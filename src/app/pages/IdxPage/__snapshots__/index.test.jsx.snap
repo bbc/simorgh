@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`IdxPage Snapshots should render a persian idx page correctly with most read and radio schedule 1`] = `
+exports[`IdxPage - Persian Snapshots should render a persian idx page correctly with most read and radio schedule 1`] = `
 <div>
   <noscript />
   <div>
@@ -214,7 +214,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
                 dir="rtl"
               >
                 <h3
@@ -315,7 +315,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
                 dir="rtl"
               >
                 <h3
@@ -416,7 +416,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
                 dir="rtl"
               >
                 <h3
@@ -517,7 +517,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
                 dir="rtl"
               >
                 <h3
@@ -1231,7 +1231,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
                 dir="rtl"
               >
                 <h3
@@ -1286,7 +1286,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
                 dir="rtl"
               >
                 <h3
@@ -1341,7 +1341,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
                 dir="rtl"
               >
                 <h3
@@ -1396,7 +1396,7 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
                 dir="rtl"
               >
                 <h3
@@ -1873,6 +1873,1476 @@ exports[`IdxPage Snapshots should render a persian idx page correctly with most 
             </div>
           </li>
         </ol>
+      </section>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correctly 1`] = `
+<div>
+  <noscript />
+  <div>
+    chartbeat
+  </div>
+  <main
+    role="main"
+  >
+    <div
+      class="IndexPageContainer-sc-1yb6vt4-0 lkUiYo"
+    >
+      <h1
+        class="HeadingIndex-sc-1155hfb-0 StyledIndexHeading-jnasqg-0 bGKUPz"
+        dir="ltr"
+        id="content"
+        tabindex="-1"
+      >
+        РУС
+      </h1>
+      <section
+        aria-labelledby="Verticals"
+        class="StyledSection-sc-1x9qbiu-0 hNdEyC"
+        role="region"
+      >
+        <div
+          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
+        >
+          <div
+            class="Bar-sc-1x4gwjz-0 jsgdXU"
+          />
+          <h2
+            class="Heading-sc-1x4gwjz-2 eZofTG"
+          >
+            <a
+              aria-labelledby="Verticals"
+              class="SectionLabelLink-wx5kdp-1 hlUWNS"
+              href="http://www.bbc.com/ukrainian/magazine_russian"
+            >
+              <span
+                class="FlexColumn-wx5kdp-0 dgpsiS"
+              >
+                <span
+                  class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
+                  role="text"
+                >
+                  <span
+                    class="Title-wx5kdp-4 cERxQI"
+                    dir="ltr"
+                    id="Verticals"
+                  >
+                    BBC Журнал
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="IndexLinkCta-wx5kdp-5 iaGWvX"
+                    dir="ltr"
+                  >
+                    Посмотреть все
+                  </span>
+                </span>
+              </span>
+            </a>
+          </h2>
+        </div>
+        <ul
+          class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+          dir="ltr"
+          role="list"
+        >
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fTPTiI"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 cgYtyQ"
+            >
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 bVRUir"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 fPWFhn"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-52261329"
+                  >
+                    Как не спиться на карантине
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Как справиться со скукой и стрессом во время карантина? Для кого-то лучшим "помощником" стал алкоголь.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-04-12"
+                >
+                  12 апреля 2020
+                </time>
+              </div>
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 cpmLDn"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
+                  />
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-52357130"
+                  >
+                    Как наш характер меняется с возрастом. Спойлер - мы становимся добрее. Но почему?
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Личность человека не остается одинаковой на протяжении всей жизни, как считали ранее. Недавно исследователи выяснили - наш характер с возрастом улучшается.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-04-20"
+                >
+                  20 апреля 2020
+                </time>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section
+        aria-labelledby="Also-in-the-news"
+        class="StyledSection-sc-1x9qbiu-0 hNdEyC"
+        role="region"
+      >
+        <div
+          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
+        >
+          <div
+            class="Bar-sc-1x4gwjz-0 jsgdXU"
+          />
+          <h2
+            class="Heading-sc-1x4gwjz-2 eZofTG"
+          >
+            <span
+              class="FlexColumn-wx5kdp-0 dgpsiS"
+            >
+              <span
+                class="FlexRow-wx5kdp-2 dVBNyZ"
+              >
+                <span
+                  class="Title-wx5kdp-4 cERxQI"
+                  dir="ltr"
+                  id="Also-in-the-news"
+                >
+                  Статьи
+                </span>
+              </span>
+            </span>
+          </h2>
+        </div>
+        <ul
+          class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+          dir="ltr"
+          role="list"
+        >
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fTPTiI"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 cgYtyQ"
+            >
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 bVRUir"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 fPWFhn"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/news-russian-52663545"
+                  >
+                    IKEA запустила продажи в Украине: как покупать и где получать
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  На украинском сайте компании уже доступен перечень товаров и цены. С сегодняшнего дня можно делать заказы.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-05-14"
+                >
+                  14 мая 2020
+                </time>
+              </div>
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 cpmLDn"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
+                  />
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/vert-fut-russian-52663551"
+                  >
+                    38 дней в океане: как семья выжила после кораблекрушения
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Семья Робертсонов 38 дней дрейфовала в открытом океане, после того как их маленькую яхту перевернула и потопила косатка.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-05-14"
+                >
+                  14 мая 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-52633464"
+                  >
+                    Как Минск стал спасительным хабом для застрявших за рубежом украинцев
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Многие украинцы из-за пандемии оказались заблокированными далеко за границей: из-за закрытия украинского неба добраться домой им очень сложно.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-05-12"
+                >
+                  12 мая 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/news-russian-52647120"
+                  >
+                    Кличко просит правительство открыть метро с 25 мая
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Мэр Киева Виталий Кличко заявил, что наземный транспорт в столице начнет восстанавливать нормальную работу с 22 мая, а об открытии метро с 25 мая он будет просить правительство. Все из-за транспортного коллапса.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-05-13"
+                >
+                  13 мая 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/news-russian-52493624"
+                  >
+                    Можно обнимать внуков: ученые говорят, что маленькие дети не передают коронавирус
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Власти Швейцарии заявили, что бабушки и дедушки могут обнимать своих внуков в возрасте до 10 лет.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-04-30"
+                >
+                  30 апреля 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-52395098"
+                  >
+                    Мог ли коронавирус "убежать" из лаборатории?
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Могла ли эпидемия Covid-19 произойти из-за утечки вируса?
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-04-23"
+                >
+                  23 апреля 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/news-russian-52443350"
+                  >
+                    Правительство хочет открыть сотни рынков - несмотря на карантин
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Кабинет министров отрабатывает возможность открыть рынки в стране на этой неделе.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-04-27"
+                >
+                  27 апреля 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-52339462"
+                  >
+                    Фейки о коронавирусе в соцсетях: 7 правил информационной гигиены
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Что можете сделать именно вы, чтобы остановить распространение неправдивой информации?
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-04-18"
+                >
+                  18 апреля 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-52336989"
+                  >
+                    Пожары, пылевая буря, смог: почему это происходит
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Почему один за другим в Украине происходят эти явления, с чем они связаны и когда закончатся?
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-04-18"
+                >
+                  18 апреля 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-52344279"
+                  >
+                    Какие симптомы коронавируса
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Коронавирус распространился уже почти во всем мире. Так какие симптомы имеет эта болезнь и как от нее защититься?
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-04-19"
+                >
+                  19 апреля 2020
+                </time>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section
+        aria-labelledby="Picture-galleries"
+        class="StyledSection-sc-1x9qbiu-0 hNdEyC"
+        role="region"
+      >
+        <div
+          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
+        >
+          <div
+            class="Bar-sc-1x4gwjz-0 jsgdXU"
+          />
+          <h2
+            class="Heading-sc-1x4gwjz-2 eZofTG"
+          >
+            <a
+              aria-labelledby="Picture-galleries"
+              class="SectionLabelLink-wx5kdp-1 hlUWNS"
+              href="http://www.bbc.com/ukrainian/russian/media/photogalleries"
+            >
+              <span
+                class="FlexColumn-wx5kdp-0 dgpsiS"
+              >
+                <span
+                  class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
+                  role="text"
+                >
+                  <span
+                    class="Title-wx5kdp-4 cERxQI"
+                    dir="ltr"
+                    id="Picture-galleries"
+                  >
+                    Фото дня
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="IndexLinkCta-wx5kdp-5 iaGWvX"
+                    dir="ltr"
+                  >
+                    Посмотреть все
+                  </span>
+                </span>
+              </span>
+            </a>
+          </h2>
+        </div>
+        <ul
+          class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+          dir="ltr"
+          role="list"
+        >
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 kFXEso"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 fccgro"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-50186307"
+                  >
+                    Фотограф потратил год, чтобы сделать идеальное фото белок
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 zsDkO"
+                >
+                  Завоевать доверие животного - дело непростое, но результат того стоит, считает фотограф.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-10-25"
+                >
+                  25 октября 2019
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 cZNKRK"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-49780932"
+                  >
+                    Украинка, фотографирующая сестер Кардашьян: в "голых" съемках главное - доверие
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  .
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-09-21"
+                >
+                  21 сентября 2019
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-49621722"
+                  >
+                    Вернувшиеся домой. Фото
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  .
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-09-07"
+                >
+                  7 сентября 2019
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/news-russian-49613573"
+                  >
+                    Фото дня: принцесса Шарлотта впервые пошла в школу
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  В школу четырехлетнюю принцессу повели ее родители - принц Уильям и герцогиня Кейт, а также старший брат Джордж.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-09-06"
+                >
+                  6 сентября 2019
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-49382281"
+                  >
+                    Человек, который сделал 90 тысяч фото котов
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Задолго до того, как коты завоевали интернет, Уолтер Чандоха пленил мир своими фото. Он фотографировал пушистых моделей в течение 70 лет.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-08-17"
+                >
+                  17 августа 2019
+                </time>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section
+        aria-labelledby="Features"
+        class="StyledSection-sc-1x9qbiu-0 hNdEyC"
+        role="region"
+      >
+        <div
+          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
+        >
+          <div
+            class="Bar-sc-1x4gwjz-0 jsgdXU"
+          />
+          <h2
+            class="Heading-sc-1x4gwjz-2 eZofTG"
+          >
+            <span
+              class="FlexColumn-wx5kdp-0 dgpsiS"
+            >
+              <span
+                class="FlexRow-wx5kdp-2 dVBNyZ"
+              >
+                <span
+                  class="Title-wx5kdp-4 cERxQI"
+                  dir="ltr"
+                  id="Features"
+                >
+                  Подробно
+                </span>
+              </span>
+            </span>
+          </h2>
+        </div>
+        <ul
+          class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+          dir="ltr"
+          role="list"
+        >
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fTPTiI"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 cgYtyQ"
+            >
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 bVRUir"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 fPWFhn"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-52653319"
+                  >
+                    "Не надо шляться по брифингам!" Министр Степанов - своим оппонентам
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Максим Степанов - третий министр, возглавляющий Минздрав во время пандемии коронавируса. В интервью ВВС News Украина он прокомментировал конфликт вокруг закупок лекарств, а также рассказал, когда откроют детсады и когда медиками привезут костюмы из Китая.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-05-17"
+                >
+                  17 мая 2020
+                </time>
+              </div>
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 cpmLDn"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
+                  />
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/news-russian-52675911"
+                  >
+                    Действительно ли Германия заблокировала "Северный поток-2"? Объясняет Лана Зеркаль
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  В соцсетях и некоторых СМИ решение немецкого регулятора называют победой, но действительно ли это победа?
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-05-15"
+                >
+                  15 мая 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/news-russian-52688931"
+                  >
+                    Клинические испытания ремдесивира для лечения Covid-19 свернули. Почему?
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Интересно, что тестирование прекратили не из-за их провала - а возможно, как раз наоборот.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-05-16"
+                >
+                  16 мая 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-52620256"
+                  >
+                    Лечение коронавируса при помощи антител: нас спасут ламы?
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Ученые пытаются найти метод лечения Covid-19 или разработать вакцину, которая позволила бы смягчить карантинные меры, включая социальное дистанцирование. Вероятным кандидатом в спасители человечества называют ламу.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-05-11"
+                >
+                  11 мая 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/news-russian-52597888"
+                  >
+                    11 мая в Украине ослабляют карантин. Что разрешат, а что - нет
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Несмотря на то, что карантин, согласно решению правительства, будет действовать в Украине как минимум до 22 мая, ряд ограничений снимут уже с понедельника.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-05-09"
+                >
+                  9 мая 2020
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/ukrainian/features-russian-52573535"
+                  >
+                    Коронавирус мутирует: ученые думают о последствиях
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Одно из исследований выявило мутацию, которая, по словам ученых, может сделать коронавирус более заразным.
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2020-05-07"
+                >
+                  7 мая 2020
+                </time>
+              </div>
+            </div>
+          </li>
+        </ul>
       </section>
     </div>
   </main>

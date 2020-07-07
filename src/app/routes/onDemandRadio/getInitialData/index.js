@@ -2,36 +2,13 @@ import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
-import { logExpiredEpisode, getUri } from './logInitialData';
 import pathWithLogging, {
   LOG_LEVELS,
 } from '../../../lib/utilities/logging/pathWithLogging';
 import { RADIO_MISSING_FIELD } from '#lib/logger.const';
-
-const getEpisodeAvailability = ({ availableFrom, availableUntil }) => {
-  const timeNow = Date.now();
-  if (!availableUntil || timeNow < availableFrom) {
-    return false;
-  }
-  return true;
-};
-
-const getEpisodeAvailableFrom = path([
-  'content',
-  'blocks',
-  '0',
-  'versions',
-  '0',
-  'availableFrom',
-]);
-const getEpisodeAvailableUntil = path([
-  'content',
-  'blocks',
-  '0',
-  'versions',
-  '0',
-  'availableUntil',
-]);
+import getEpisodeAvailability, {
+  getUrl,
+} from '#lib/utilities/episodeAvailability';
 
 export default async ({ path: pathname }) => {
   const onDemandRadioDataPath = overrideRendererOnTest(pathname);
@@ -43,18 +20,9 @@ export default async ({ path: pathname }) => {
   // paremeters - the withError HOC will inspect these params and act accordingly
   if (!json) return rest;
 
-  const availableFrom = getEpisodeAvailableFrom(json);
-  const availableUntil = getEpisodeAvailableUntil(json);
-  const episodeIsAvailable = getEpisodeAvailability({
-    availableFrom,
-    availableUntil,
-  });
+  const episodeIsAvailable = getEpisodeAvailability(json);
 
-  if (!episodeIsAvailable) {
-    logExpiredEpisode(json);
-  }
-
-  const withLogging = pathWithLogging(getUri(json), RADIO_MISSING_FIELD, json);
+  const withLogging = pathWithLogging(getUrl(json), RADIO_MISSING_FIELD, json);
   const get = (fieldPath, logLevel) =>
     logLevel ? withLogging(fieldPath, logLevel) : path(fieldPath, json);
 

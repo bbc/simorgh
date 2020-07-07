@@ -390,7 +390,7 @@ exports[`SocialEmbedContainer Canonical should render correctly without an embed
   line-height: 1.25rem;
   border: 0.0625rem solid #AEAEB5;
   border-radius: 0.5rem;
-  color: #222222;
+  color: #3F3F42;
   padding: 1rem;
 }
 
@@ -408,7 +408,7 @@ exports[`SocialEmbedContainer Canonical should render correctly without an embed
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: inherit;
+  color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
