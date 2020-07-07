@@ -14,9 +14,10 @@ import { useLocation } from 'react-router-dom';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import MetadataContainer from '../../containers/Metadata';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import LinkedData from '../../containers/LinkedData';
-import AudioPlayer from '#containers/AudioPlayer';
+import AVPlayer from '#containers/AVPlayer';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import getMediaId from '#lib/utilities/getMediaId';
@@ -32,7 +33,7 @@ const StyledGelPageGrid = styled(GelPageGrid)`
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
 `;
 
-const StyledAudioPlayer = styled(AudioPlayer)`
+const StyledAudioPlayer = styled(AVPlayer)`
   iframe {
     width: calc(100% + ${GEL_SPACING_DBL});
     margin: 0 -${GEL_SPACING};
@@ -85,6 +86,7 @@ const LiveRadioPage = ({ pageData }) => {
     <>
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
+      <ComscoreAnalytics />
       <MetadataContainer
         title={name}
         lang={language}
@@ -145,6 +147,7 @@ const LiveRadioPage = ({ pageData }) => {
             iframeTitle={iframeTitle}
             title="Live radio"
             type="audio"
+            skin="audio"
             placeholderSrc={audioPlaceholderImageSrc}
           />
         </Grid>

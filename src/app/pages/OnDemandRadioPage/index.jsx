@@ -17,12 +17,13 @@ import pathOr from 'ramda/src/pathOr';
 import MetadataContainer from '../../containers/Metadata';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
-import AudioPlayer from '#containers/AudioPlayer';
+import AVPlayer from '#containers/AVPlayer';
 import EpisodeImage from '#containers/RadioPageBlocks/Blocks/OnDemandImage';
 import LinkedData from '#containers/LinkedData';
 import getMediaId from '#lib/utilities/getMediaId';
@@ -62,7 +63,7 @@ const StyledMessageContainer = styled.div`
   margin-bottom: ${GEL_SPACING_QUAD};
 `;
 
-const StyledAudioPlayer = styled(AudioPlayer)`
+const StyledAudioPlayer = styled(AVPlayer)`
   iframe {
     width: calc(100% + ${GEL_SPACING_DBL});
     margin: 0 -${GEL_SPACING};
@@ -137,6 +138,7 @@ const OnDemandRadioPage = ({ pageData }) => {
     <>
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
+      <ComscoreAnalytics />
       <MetadataContainer
         title={headline}
         lang={language}
@@ -181,6 +183,7 @@ const OnDemandRadioPage = ({ pageData }) => {
               iframeTitle={iframeTitle}
               title="On-demand radio"
               type="audio"
+              skin="audio"
               placeholderSrc={audioPlaceholderImageSrc}
             />
           ) : (
