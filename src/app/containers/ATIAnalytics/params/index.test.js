@@ -152,7 +152,7 @@ const idxPage = {
 
 describe('ATIAnalytics params', () => {
   describe('buildATIUrl', () => {
-    it('should return the right article url', () => {
+    it('should return the correct article url', () => {
       const url = buildATIUrl(
         article,
         { ...requestContext, pageType: 'article' },
@@ -163,7 +163,7 @@ describe('ATIAnalytics params', () => {
       );
     });
 
-    it('should return the right frontPage url', () => {
+    it('should return the correct frontPage url', () => {
       const url = buildATIUrl(
         frontPage,
         { ...requestContext, pageType: 'frontPage' },
@@ -174,7 +174,7 @@ describe('ATIAnalytics params', () => {
       );
     });
 
-    it('should return the right IDX page url', () => {
+    it('should return the correct IDX page url', () => {
       const url = buildATIUrl(
         idxPage,
         { ...requestContext, pageType: 'IDX' },
@@ -185,7 +185,7 @@ describe('ATIAnalytics params', () => {
       );
     });
 
-    it('should return the right live radio url', () => {
+    it('should return the correct live radio url', () => {
       const url = buildATIUrl(
         liveRadio,
         { ...requestContext, pageType: 'liveRadio' },
@@ -196,7 +196,7 @@ describe('ATIAnalytics params', () => {
       );
     });
 
-    it('should return the right on demand radio url', () => {
+    it('should return the correct on demand radio url', () => {
       const url = buildATIUrl(
         onDemandRadioTV,
         { ...requestContext, pageType: 'onDemandRadio' },
@@ -207,7 +207,7 @@ describe('ATIAnalytics params', () => {
       );
     });
 
-    it('should return the right on demand TV url', () => {
+    it('should return the correct on demand TV url', () => {
       const url = buildATIUrl(
         onDemandRadioTV,
         { ...requestContext, pageType: 'onDemandTV' },
@@ -218,7 +218,7 @@ describe('ATIAnalytics params', () => {
       );
     });
 
-    it('should return the right MAP url', () => {
+    it('should return the correct MAP url', () => {
       const url = buildATIUrl(
         MAP,
         { ...requestContext, pageType: 'MAP' },
@@ -229,7 +229,7 @@ describe('ATIAnalytics params', () => {
       );
     });
 
-    it('should return the right PGL url', () => {
+    it('should return the correct PGL url', () => {
       const url = buildATIUrl(
         PGL,
         { ...requestContext, pageType: 'PGL' },
@@ -277,7 +277,7 @@ describe('ATIAnalytics params', () => {
   });
 
   describe('buildATIClickParams', () => {
-    it('should return the right article params', () => {
+    it('should return the correct article params', () => {
       const params = buildATIClickParams(
         article,
         { ...requestContext, pageType: 'article' },
@@ -305,7 +305,7 @@ describe('ATIAnalytics params', () => {
       });
     });
 
-    it('should return the right frontPage params', () => {
+    it('should return the correct frontPage params', () => {
       const params = buildATIClickParams(
         frontPage,
         { ...requestContext, pageType: 'frontPage' },
@@ -328,7 +328,7 @@ describe('ATIAnalytics params', () => {
       });
     });
 
-    it('should return the right IDX page params', () => {
+    it('should return the correct IDX page params', () => {
       const params = buildATIClickParams(
         idxPage,
         { ...requestContext, pageType: 'IDX' },
@@ -351,7 +351,7 @@ describe('ATIAnalytics params', () => {
       });
     });
 
-    it('should return the right live radio params', () => {
+    it('should return the correct live radio params', () => {
       const params = buildATIClickParams(
         liveRadio,
         { ...requestContext, pageType: 'liveRadio' },
@@ -372,7 +372,7 @@ describe('ATIAnalytics params', () => {
       });
     });
 
-    it('should return the right on demand radio params', () => {
+    it('should return the correct on demand radio params', () => {
       const params = buildATIClickParams(
         onDemandRadioTV,
         { ...requestContext, pageType: 'onDemandRadio' },
@@ -393,7 +393,7 @@ describe('ATIAnalytics params', () => {
       });
     });
 
-    it('should return the right on demand TV params', () => {
+    it('should return the correct on demand TV params', () => {
       const params = buildATIClickParams(
         onDemandRadioTV,
         { ...requestContext, pageType: 'onDemandTV' },
@@ -414,7 +414,7 @@ describe('ATIAnalytics params', () => {
       });
     });
 
-    it('should return the right MAP params', () => {
+    it('should return the correct MAP params', () => {
       const params = buildATIClickParams(
         MAP,
         { ...requestContext, pageType: 'MAP' },
@@ -444,7 +444,7 @@ describe('ATIAnalytics params', () => {
       });
     });
 
-    it('should return the right PGL params', () => {
+    it('should return the correct PGL params', () => {
       const params = buildATIClickParams(
         PGL,
         { ...requestContext, pageType: 'PGL' },
