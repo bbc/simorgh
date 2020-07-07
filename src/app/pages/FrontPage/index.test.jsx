@@ -17,6 +17,12 @@ const requestContextData = {
   data: { status: 200 },
 };
 
+const mockRemoteToggles = {
+  ads: {
+    enabled: true,
+  },
+};
+
 // eslint-disable-next-line react/prop-types
 const FrontPageWithContext = ({
   isAmp = false,
@@ -24,7 +30,7 @@ const FrontPageWithContext = ({
   ...props
 }) => (
   <BrowserRouter>
-    <ToggleContextProvider service={service} origin="https://www.test.bbc.com">
+    <ToggleContextProvider remoteToggles={mockRemoteToggles}>
       <RequestContextProvider isAmp={isAmp} {...requestContextData}>
         <ServiceContextProvider service={service}>
           <FrontPage {...props} />
