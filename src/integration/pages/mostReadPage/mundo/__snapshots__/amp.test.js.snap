@@ -118,6 +118,17 @@ Object {
 }
 `;
 
+exports[`AMP Most Read Page Analytics comscore 1`] = `
+Object {
+  "extraUrlParams": Object {
+    "comscorekw": "amp",
+  },
+  "vars": Object {
+    "c2": "17986528",
+  },
+}
+`;
+
 exports[`AMP Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
 exports[`AMP Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
