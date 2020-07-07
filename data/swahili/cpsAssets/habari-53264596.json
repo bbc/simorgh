@@ -1,0 +1,312 @@
+{
+    "content": {
+      "blocks": [
+        {
+          "altText": "Two elephants lie beside a watering hole",
+          "copyrightHolder": "Supplied",
+          "height": 549,
+          "href": "http://c.files.bbci.co.uk/14D0A/production/_113185258_38464edf-e1cd-46ef-b72b-89cb993b0759.jpg",
+          "id": "113185258",
+          "path": "/cpsprodpb/14D0A/production/_113185258_38464edf-e1cd-46ef-b72b-89cb993b0759.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "role": "introduction",
+          "text": "Mamia ya tembo wamebainika kufa nchi Botswana katika mazingira ya kutatanisha katika kipindi cha miezi miwili iliyopita.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Dkt. Niall McCann amesema wenzake nchini humo walikuta zaidi ya tembo 350 wamekufa katika mkondo wa maji wa Okavango kuanzia mwanzoni mwa mwezi Mei.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Hakuna anayefahamu sababu ya wanyama hao kufa. ",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Na matokeo ya sampuli zao kutoka maabara yanatarajiwa kutoka wiki moja ijayo, kwa mujibu wa serikali.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Botswana ni nchi ya tatu barani Afrika ambayo idadi ya tembo inapungua kwa kasi.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "candy_xml",
+          "text": "<bold>Tahadhari: Kuna picha ambazo zinaweza kuwa za kuogofya kwa baadhi ya watu</bold>",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Dkt McCann, kutoka taasisi ya kutoa misaada ya uokoaji katika hifadhi za wanyama iliyoko Uingereza, aliiambia BBC kuwa waliitahadharisha serikali mapema mwezi Mei baada ya kupita kwa ndege katika maeneo ya mkondo wa maji.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;Waligundua tembo 169 wamekufa ndani ya saa tatu alisema. &quot;Ili kuweza kuona na kuhesabu idadi yao ilikuwa si kazi rahisi''.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;Mwezi mmoja baadae uchunguzi zaidi ulifanyika na kubaini tembo wengine wengi zaidi wamekufa na kufanya idadi ya jumla kuwa zaidi ya 350.&quot;",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;Idadi kubwa ya vifo vya tembo kwa wakati mmoja na havina uhusiano na ukame ni jambo lisilo la kawaida,&quot; aliongeza.",
+          "type": "paragraph"
+        },
+        {
+          "altText": "An elephant lies dead in the bush",
+          "copyrightHolder": "Supplied",
+          "height": 549,
+          "href": "http://c.files.bbci.co.uk/11D12/production/_113187927_dfadc325-8c55-41e7-8508-56bb242f81c9.jpg",
+          "id": "113187927",
+          "path": "/cpsprodpb/11D12/production/_113187927_dfadc325-8c55-41e7-8508-56bb242f81c9.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Mnamo mwezi Mei, serikali ya Botswana ilisema kuwa ujangili si sababu ikieleza kuwa meno ya tembo yamekuwa hayatolewi kwa mujibu wa taasisi ya Phys.org.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Kuna mambo mengine ambayo yameainishwa zaidi ya ujangili.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "&quot;Ni kama vile tembo ndio wanaokufa peke yao na sio wanyama wengine,&quot; Dkt McCann alisema. &quot;Sasa kama ni mbinu ambayo ilitumiwa na majangili, tungetarajia kuona vifo vya wanyama wengine.&quot;",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Dkt McCann pia alibainisha sumu ya asili ambayo iliua zaidi ya tembo 100 mwaka jana nchini  Bostwana.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Lakini hawajakubali wala kupinga uwezekano wa tembo hao kutiliwa sumu au kufa kutokana na ugonjwa.",
+          "type": "paragraph"
+        },
+        {
+          "altText": "An elephant dead on his side",
+          "copyrightHolder": "Supplied",
+          "height": 549,
+          "href": "http://c.files.bbci.co.uk/16B32/production/_113187929_e2867462-78e5-4fef-9f4a-48a990cb67ff.jpg",
+          "id": "113187929",
+          "path": "/cpsprodpb/16B32/production/_113187929_e2867462-78e5-4fef-9f4a-48a990cb67ff.jpg",
+          "positionHint": "full-width",
+          "subType": "body",
+          "type": "image",
+          "width": 976
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Baadhi ya wanyama hao walipatika wamekufa- baada ya kuanguka chini - na wengine walionekana wakizungu kana kwamba kuna kitu kimeshambulia mfumo wao wa neva, Dkt McCann alisema.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Hata hivyo, bila kujua chanzo cha mkasa huu, ni vigumu kubaini ikiwa walishambuliwa na ugonjwa uliotokana na wanyama kutangamana na binadamu - hasa katika maeneo ambayo ni vyanzo vya maji ama mchanga. Dkt McCann pia amegusia  janga la maradhi ya Covid-19, ambayo inaaminiwa kuanzia kwa wanyama.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Tatizo kuu - ",
+          "type": "crosshead"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Botswana huenda ndio nchi pekee duniani ambapo tembo au ndovu ndio suala kuu katika kila uchaguzi.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Kukiwa na idadi ndogo ya watu na kundi kubwa la wanyama hao barani Afrika, mizozo kati ya binaadamu na tembo ni wasiwasi wa kila siku.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Chini ya uongozi wa rais aliyekuwepo Ian Khama, Botswana ilikuwa kielelezo cha uhifadhi wa wanyama hao.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Serikali yake ilisifiwa kwa kuidhinisha hatua zilizofanya kazi za kukabiliana na uwindaji haramu, kwa kupiga marufuku uwindaji na kwa kuigeuza nchi hiyo kuwa hifadhi kubwa ya tembo barani Afrika.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Baadhi ya tembo huenda wamehamia nchini humo kutokana na hali nzuri lakini hilo limekuwa na gharama yake.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Ikiwa na kundi la takriban tembo 140,000, kitaifa wanyama hao wamekuwa wengi kushinda mazingira.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Watu wanakanyagwa hadi kufariki, vyakula vinaharibiwa mashamabani kila siku huku serikali ikiendelea kupuuza inapoambiwa la kufanya na mataifa ya nje yalio na nia njema.",
+          "type": "paragraph"
+        }
+      ]
+    },
+    "metadata": {
+      "analyticsLabels": {
+        "counterName": "swahili.news.story.53264596.page",
+        "cps_asset_id": "53264596",
+        "cps_asset_type": "sty"
+      },
+      "atiAnalytics": {
+        "producerId": "86",
+        "producerName": "SWAHILI"
+      },
+      "blockTypes": [
+        "image",
+        "paragraph",
+        "crosshead"
+      ],
+      "createdBy": "swahili-v6",
+      "firstPublished": 1593693576000,
+      "id": "urn:bbc:ares::asset:swahili/habari-53264596",
+      "includeComments": false,
+      "language": "sw",
+      "lastPublished": 1593693576000,
+      "lastUpdated": 1593696814385,
+      "locators": {
+        "assetId": "53264596",
+        "assetUri": "/swahili/habari-53264596",
+        "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-53264596",
+        "curie": "http://www.bbc.co.uk/asset/46362cd0-d0f2-45c1-abe7-3c389f9c0731"
+      },
+      "options": {
+        "allowAdvertising": true,
+        "allowDateStamp": true,
+        "allowHeadline": true,
+        "allowPrintingSharingLinks": true,
+        "allowRelatedStoriesBox": true,
+        "allowRightHandSide": true,
+        "hasContentWarning": false,
+        "hasNewsTracker": false,
+        "includeComments": false,
+        "isBreakingNews": false,
+        "isFactCheck": false,
+        "isIgorSeoTagsEnabled": false,
+        "isKeyContent": false,
+        "suitableForSyndication": true
+      },
+      "passport": {
+        "campaigns": [
+          {
+            "campaignId": "5a988e4739461b000e9dabfc",
+            "campaignName": "WS - Update me"
+          }
+        ],
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+          "categoryName": "News"
+        },
+        "taggings": []
+      },
+      "tags": {
+        "about": [
+          {
+            "curationList": [
+              {
+                "curationId": "59278e6e-4268-41a6-9a87-0781d930b071",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Animals",
+            "thingId": "14745d1f-885d-4b9f-b28a-24540e7beb15",
+            "thingLabel": "Wanyama",
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q729",
+              "http://dbpedia.org/resource/Animal"
+            ],
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Theme",
+              "core:Thing"
+            ],
+            "thingUri": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
+            "topicId": "cvjp2jj5xn8t",
+            "topicName": "Wanyama"
+          }
+        ]
+      },
+      "timestamp": 1593693576000,
+      "type": "STY",
+      "version": "v1.3.2"
+    },
+    "promo": {
+      "headlines": {
+        "headline": "Mamia ya tembo wapatikana wamekufa Botswana",
+        "shortHeadline": "Tembo wengi wapatikana wamekufa Botswana"
+      },
+      "id": "urn:bbc:ares::asset:swahili/habari-53264596",
+      "indexImage": {
+        "altText": "An elephant",
+        "copyrightHolder": "BBC",
+        "height": 549,
+        "href": "http://c.files.bbci.co.uk/369A/production/_113187931_mediaitem113187930.jpg",
+        "id": "113187931",
+        "path": "/cpsprodpb/369A/production/_113187931_mediaitem113187930.jpg",
+        "subType": "index",
+        "type": "image",
+        "width": 976
+      },
+      "language": "sw",
+      "locators": {
+        "assetId": "53264596",
+        "assetUri": "/swahili/habari-53264596",
+        "cpsUrn": "urn:bbc:content:assetUri:swahili/habari-53264596",
+        "curie": "http://www.bbc.co.uk/asset/46362cd0-d0f2-45c1-abe7-3c389f9c0731"
+      },
+      "passport": {
+        "campaigns": [
+          {
+            "campaignId": "5a988e4739461b000e9dabfc",
+            "campaignName": "WS - Update me"
+          }
+        ],
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+          "categoryName": "News"
+        },
+        "taggings": []
+      },
+      "summary": "Mizoga 350 ya tembo imepatikana Botswana katika delta ya Okavango tangu Mei.",
+      "timestamp": 1593693576000,
+      "type": "cps"
+    },
+    "relatedContent": {
+      "groups": [],
+      "section": {
+        "name": "Habari",
+        "subType": "index",
+        "type": "simple",
+        "uri": "/swahili/habari"
+      },
+      "site": {
+        "name": "BBC Swahili",
+        "subType": "site",
+        "type": "simple",
+        "uri": "/swahili"
+      }
+    }
+  }

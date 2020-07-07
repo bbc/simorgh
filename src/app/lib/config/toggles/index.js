@@ -39,7 +39,10 @@ const toggles = {
       enabled: false,
     },
     prerollAds: {
-      enabled: false,
+      enabled: true,
+    },
+    cpsRecommendations: {
+      enabled: true,
     },
   },
   test: {
@@ -84,6 +87,9 @@ const toggles = {
     prerollAds: {
       enabled: true,
     },
+    cpsRecommendations: {
+      enabled: false,
+    },
   },
   live: {
     ads: {
@@ -125,6 +131,9 @@ const toggles = {
       enabled: false,
     },
     prerollAds: {
+      enabled: true,
+    },
+    cpsRecommendations: {
       enabled: false,
     },
   },

@@ -1,3 +1,5 @@
+import { htmlUnescape } from 'escape-goat';
+
 const getImageBlock = (type, blockData, isAmp) => {
   const supportedImageTypes = ['idt2'];
 
@@ -31,7 +33,7 @@ const getImageBlock = (type, blockData, isAmp) => {
   const { altText, dimensions } = imageData;
 
   return {
-    alt: altText,
+    alt: htmlUnescape(altText),
     ...getImageProps(dimensions),
   };
 };
