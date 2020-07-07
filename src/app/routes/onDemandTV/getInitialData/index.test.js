@@ -30,6 +30,7 @@ describe('Get initial data for on demand tv', () => {
     expect(pageData.thumbnailImageUrl).toEqual(
       'https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png',
     );
+    expect(pageData.metadata.type).toEqual('onDemandTV');
   });
 
   it('should override renderer on test', async () => {

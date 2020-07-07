@@ -55,7 +55,7 @@ const getEpisodeAvailability = ({ availableFrom, availableUntil }) => {
 export default async ({ path: pathname }) => {
   const onDemandTvDataPath = overrideRendererOnTest(pathname);
   const { json, ...rest } = await fetchPageData(onDemandTvDataPath);
-  const pageType = { metadata: { type: 'On Demand TV' } };
+  const pageType = { metadata: { type: 'onDemandTV' } };
 
   const availableFrom = getEpisodeAvailableFrom(json);
   const availableUntil = getEpisodeAvailableUntil(json);
