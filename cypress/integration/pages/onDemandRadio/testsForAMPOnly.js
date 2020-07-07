@@ -1,11 +1,12 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
 import { getEmbedUrl, isExpired, dataEndpointOverride } from './helpers';
+import config from '../../../support/config/services';
 
 export default ({ service, pageType, variant }) => {
   describe(`testsForAMPOnly for ${service} ${pageType}`, () => {
     describe('Audio Player', () => {
-      const { lang } = appConfig[service][variant];
+      const { lang } = appConfig[config[service].name][variant];
 
       it('should render an iframe with a valid URL', () => {
         cy.request(
