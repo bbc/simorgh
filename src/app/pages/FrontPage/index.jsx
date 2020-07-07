@@ -12,6 +12,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import AdContainer from '#containers/Ad';
 import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
@@ -88,6 +89,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
       {hasAds && !isAmp && <CanonicalAdBootstrapJs />}
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
+      <ComscoreAnalytics />
       <MetadataContainer
         title={frontPageTitle}
         lang={lang}
