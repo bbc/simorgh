@@ -79,7 +79,7 @@ describe('AMP Ads', () => {
       });
     });
 
-    it('should render two mpu ads', () => {
+    it('should render one mpu ad', () => {
       const { container } = render(adWithContext('mpu'));
       const ampAd = container.querySelectorAll('amp-ad');
 
