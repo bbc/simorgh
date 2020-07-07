@@ -1,14 +1,16 @@
 import canAdvertise from '.';
 
 describe('canAdvertise', () => {
-  it('should return true if override value is true', () => {
+  it('should return true if query of force-ads is false', () => {
+    const query = { 'force-ads': 'true' };
     const headers = {};
-    expect(canAdvertise(headers, true)).toBeTruthy();
+    expect(canAdvertise(headers, query)).toBeTruthy();
   });
 
-  it('should return false if override value is false', () => {
+  it('should return false if query of force-ads is undefined', () => {
+    const query = { 'testing-query': 'true' };
     const headers = {};
-    expect(canAdvertise(headers, false)).toBeFalsy();
+    expect(canAdvertise(headers, query)).toBeFalsy();
   });
 
   it('should return true if isAdvertiseCombine is defined and equals `yes`', () => {

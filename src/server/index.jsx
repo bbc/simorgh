@@ -283,7 +283,7 @@ server
   .get(
     '/*',
     injectCspHeaderProdBuild,
-    async ({ url, headers, path: urlPath }, res) => {
+    async ({ url, headers, path: urlPath, query }, res) => {
       logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
         url,
         headers,
@@ -304,7 +304,7 @@ server
 
         data.path = urlPath;
         data.timeOnServer = Date.now();
-        data.canAdvertise = canAdvertise(headers);
+        data.canAdvertise = canAdvertise(headers, query);
 
         const result = await renderDocument({
           bbcOrigin,
