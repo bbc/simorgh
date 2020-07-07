@@ -84,6 +84,7 @@ const AmpAd = ({ slotType }) => {
       amp-access="toggles.ads.enabled"
       amp-access-hide="true"
       aria-hidden="true"
+      aria-label="advertisement"
     >
       <FullWidthWrapper>
         <StyledWrapper>

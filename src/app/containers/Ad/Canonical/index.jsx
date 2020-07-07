@@ -12,6 +12,7 @@ const LEADERBOARD_HEIGHT_GROUP_4_5 = '9rem';
 const StyledAdSection = styled.section.attrs({
   ariaHidden: 'true',
   role: 'region',
+  ariaLabel: 'advertisement',
 })`
   background-color: ${C_LUNAR_LIGHT};
   min-height: ${LEADERBOARD_HEIGHT};
