@@ -1,7 +1,7 @@
 import canAdvertise from '.';
 
 describe('canAdvertise', () => {
-  it('should return true if query of force-ads is false', () => {
+  it("should return true if query of force-ads is 'true'", () => {
     const query = { 'force-ads': 'true' };
     const headers = {};
     expect(canAdvertise(headers, query)).toBeTruthy();
