@@ -9,7 +9,10 @@ import AdSlot from './AdSlot';
 const LEADERBOARD_HEIGHT = '5.5rem';
 const LEADERBOARD_HEIGHT_GROUP_4_5 = '9rem';
 
-const StyledAdDiv = styled.div.attrs({ ariaHidden: 'true' })`
+const StyledAdSection = styled.section.attrs({
+  ariaHidden: 'true',
+  role: 'region',
+})`
   background-color: ${C_LUNAR_LIGHT};
   min-height: ${LEADERBOARD_HEIGHT};
 
@@ -22,12 +25,12 @@ const CanonicalAd = ({ slotType }) => (
   <>
     {/* Loading dotcom-bootstrap.js here instead of CanonicalAdBootstrapJs to avoid it loading on live */}
     {/* This can be moved once we allow the script to load on live */}
-    <StyledAdDiv>
+    <StyledAdSection>
       <Helmet>
         <script src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js" />
       </Helmet>
       <AdSlot uniqueId={slotType} />
-    </StyledAdDiv>
+    </StyledAdSection>
   </>
 );
 

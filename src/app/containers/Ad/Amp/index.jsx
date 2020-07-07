@@ -80,7 +80,7 @@ const AmpAd = ({ slotType }) => {
   const label = pathOr('Advertisement', ['advertisementLabel'], ads);
 
   return (
-    <div
+    <section
       amp-access="toggles.ads.enabled"
       amp-access-hide="true"
       aria-hidden="true"
@@ -106,7 +106,7 @@ const AmpAd = ({ slotType }) => {
           </StyledAd>
         </StyledWrapper>
       </FullWidthWrapper>
-    </div>
+    </section>
   );
 };
 
