@@ -20,7 +20,7 @@ const getBodySummary = path(['content', 'blocks', 1, 'text']);
 export default async ({ path: pathname }) => {
   const liveRadioDataPath = overrideRendererOnTest(pathname);
   const { json, ...rest } = await fetchPageData(liveRadioDataPath);
-  const pageType = { metadata: { type: 'Live Radio' } };
+  const pageType = { metadata: { type: 'liveRadio' } };
 
   return {
     ...rest,
