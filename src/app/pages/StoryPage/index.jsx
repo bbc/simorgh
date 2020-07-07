@@ -29,6 +29,7 @@ import TopStories from '#containers/CpsTopStories';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import MostReadContainer from '#containers/MostRead';
 import ATIAnalytics from '#containers/ATIAnalytics';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
@@ -256,7 +257,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
-
+      <ComscoreAnalytics />
       <StoryPageGrid
         dir={dir}
         columns={gridColumns}
