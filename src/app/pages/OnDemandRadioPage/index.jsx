@@ -182,12 +182,12 @@ const OnDemandRadioPage = ({ pageData }) => {
           </StyledGelWrapperGrid>
           {episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_AVAILABLE ? (
             <StyledAudioPlayer
-              isAmp={isAmp}
               assetId={episodeId}
               embedUrl={embedUrl}
               iframeTitle={iframeTitle}
               title="On-demand radio"
               type="audio"
+              skin="audio"
               placeholderSrc={audioPlaceholderImageSrc}
             />
           ) : (
