@@ -718,6 +718,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
+@media (min-width:37.5rem) {
+  .c5 {
+    word-break: break-word;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c21 {
     font-size: 1rem;
@@ -3363,6 +3369,12 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 }
 
+@media (min-width:37.5rem) {
+  .c5 {
+    word-break: break-word;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c23 {
     font-size: 1rem;
@@ -5010,6 +5022,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @media (min-width:37.5rem) {
   .c5 {
     padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    word-break: break-word;
   }
 }
 
