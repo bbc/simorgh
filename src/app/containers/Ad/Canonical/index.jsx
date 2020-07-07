@@ -24,7 +24,7 @@ const mpuStyles = css`
 
 const AdContainer = styled.div`
   background-color: ${C_LUNAR_LIGHT};
-  ${({ slotType }) => (slotType === 'mpu' ? mpuStyles : leaderboardStlyes)}
+  ${({ slotType }) => (slotType === 'mpu' ? mpuStyles : leaderboardStyles)}
 `;
 
 const CanonicalAd = ({ slotType }) => {
