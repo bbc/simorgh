@@ -20,7 +20,11 @@ const imageBlock = {
 describe('Include: IDT2 Canonical', () => {
   it('should render', () => {
     const { container } = render(
-      <Idt2Canonical html={HTML.ALLOWED} imageBlock={imageBlock} />,
+      <Idt2Canonical
+        html={HTML.ALLOWED}
+        imageBlock={imageBlock}
+        indexOfInclude={0}
+      />,
     );
 
     expect(/js\/dataPic\./.test(container.innerHTML)).toBe(true);
@@ -29,16 +33,22 @@ describe('Include: IDT2 Canonical', () => {
 
   it('should not render when `html` or `imageBlock` props are not present', () => {
     expect(
-      render(<Idt2Canonical html={HTML.ALLOWED} />).container,
+      render(<Idt2Canonical html={HTML.ALLOWED} indexOfInclude={0} />)
+        .container,
     ).toBeEmptyDOMElement();
     expect(
-      render(<Idt2Canonical imageBlock={imageBlock} />).container,
+      render(<Idt2Canonical imageBlock={imageBlock} indexOfInclude={0} />)
+        .container,
     ).toBeEmptyDOMElement();
   });
 
   it('should render fallback when disallowed scripts are present', () => {
     const { container } = render(
-      <Idt2Canonical html={HTML.DISALLOWED} imageBlock={imageBlock} />,
+      <Idt2Canonical
+        html={HTML.DISALLOWED}
+        imageBlock={imageBlock}
+        indexOfInclude={0}
+      />,
     );
 
     expect(/js\/lineChart\./.test(container.innerHTML)).toBe(false);
