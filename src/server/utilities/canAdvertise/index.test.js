@@ -7,7 +7,7 @@ describe('canAdvertise', () => {
     expect(canAdvertise(headers, query)).toBeTruthy();
   });
 
-  it('should return false if query of force-ads is undefined', () => {
+  it('should return false if query of force-ads is undefined and neither isAdvertiseCombined nor isUk header is defined', () => {
     const query = { 'testing-query': 'true' };
     const headers = {};
     expect(canAdvertise(headers, query)).toBeFalsy();
