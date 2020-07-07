@@ -1,5 +1,9 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import { getEmbedUrl, isExpired, dataEndpointOverride } from './helpers';
+import {
+  getEmbedUrl,
+  isExpired,
+  dataEndpointOverride,
+} from '../../../support/helpers/onDemandRadioTv';
 
 export default ({ service, pageType, variant }) => {
   describe(`testsForAMPOnly for ${service} ${pageType}`, () => {
