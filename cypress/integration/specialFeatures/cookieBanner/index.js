@@ -29,7 +29,7 @@ const getPaths = service =>
     config,
   );
 
-const pageType = 'all';
+const pageType = 'any';
 
 Object.keys(config)
   .filter(service => serviceFilter(service))
