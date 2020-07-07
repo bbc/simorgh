@@ -6,6 +6,9 @@ const toggles = {
     chartbeatAnalytics: {
       enabled: true,
     },
+    comscoreAnalytics: {
+      enabled: true,
+    },
     include: {
       enabled: true,
     },
@@ -39,7 +42,7 @@ const toggles = {
       enabled: false,
     },
     prerollAds: {
-      enabled: false,
+      enabled: true,
     },
     cpsRecommendations: {
       enabled: true,
@@ -50,6 +53,9 @@ const toggles = {
       enabled: false,
     },
     chartbeatAnalytics: {
+      enabled: true,
+    },
+    comscoreAnalytics: {
       enabled: true,
     },
     include: {
@@ -98,6 +104,9 @@ const toggles = {
     chartbeatAnalytics: {
       enabled: true,
     },
+    comscoreAnalytics: {
+      enabled: false,
+    },
     include: {
       enabled: true,
     },
@@ -131,7 +140,7 @@ const toggles = {
       enabled: false,
     },
     prerollAds: {
-      enabled: false,
+      enabled: true,
     },
     cpsRecommendations: {
       enabled: false,
