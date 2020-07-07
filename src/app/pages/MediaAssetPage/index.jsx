@@ -20,6 +20,7 @@ import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/CpsText';
 import image from '#containers/Image';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import CpsAssetMediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
@@ -105,6 +106,7 @@ const MediaAssetPage = ({ pageData }) => {
   return (
     <>
       <ChartbeatAnalytics data={pageData} />
+      <ComscoreAnalytics />
       <CpsMetadata
         title={title}
         language={metadata.language}
