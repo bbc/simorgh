@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Ad Container Snapshots should correctly render a Canonical leaderbaord ad 1`] = `
+exports[`Ad Container Snapshots should correctly render a Canonical leaderboard ad 1`] = `
 <html>
   <head>
     <script
@@ -43,7 +43,7 @@ exports[`Ad Container Snapshots should correctly render a Canonical mpu ad 1`] =
   <body>
     .c0 {
   background-color: #F6F6F6;
-  min-height: 9rem;
+  min-height: 15.625rem;
 }
 
 <div>
@@ -60,7 +60,7 @@ exports[`Ad Container Snapshots should correctly render a Canonical mpu ad 1`] =
 </html>
 `;
 
-exports[`Ad Container Snapshots should correctly render an AMP leaderbaord ad 1`] = `
+exports[`Ad Container Snapshots should correctly render an AMP leaderboard ad 1`] = `
 .c0 {
   background-color: #F6F6F6;
 }

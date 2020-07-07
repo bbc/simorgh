@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet';
 
 const LEADERBOARD_HEIGHT = '5.5rem';
 const LEADERBOARD_HEIGHT_GROUP_4_5 = '9rem';
-const MPU_HEIGHT = '9rem';
+const MPU_HEIGHT = '15.625rem';
 
 const leaderboardStlyes = css`
   min-height: ${LEADERBOARD_HEIGHT};

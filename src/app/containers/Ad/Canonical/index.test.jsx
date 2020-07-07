@@ -25,9 +25,9 @@ describe('CanonicalAds Ads', () => {
     );
 
     shouldMatchSnapshot(
-      'should correctly render an Canonical mpu ad with dotcom-bootstrap script',
+      'should correctly render a Canonical mpu ad with dotcom-bootstrap script',
       <BrowserRouter>
-        <CanonicalAd slotType="leaderboard" />
+        <CanonicalAd slotType="mpu" />
       </BrowserRouter>,
     );
   });

@@ -36,7 +36,7 @@ describe('Ad Container', () => {
 
   describe('Snapshots', () => {
     shouldMatchSnapshot(
-      'should correctly render an AMP leaderbaord ad',
+      'should correctly render an AMP leaderboard ad',
       <ServiceContextProvider service="mundo">
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
@@ -55,7 +55,7 @@ describe('Ad Container', () => {
     );
 
     shouldMatchSnapshot(
-      'should correctly render a Canonical leaderbaord ad',
+      'should correctly render a Canonical leaderboard ad',
       <ServiceContextProvider service="mundo">
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
