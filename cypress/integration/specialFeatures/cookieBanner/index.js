@@ -13,7 +13,7 @@ const serviceFilter = service => {
     config,
   );
 
-  return Cypress.env('SMOKE') ? shouldSmokeTest : false;
+  return Cypress.env('SMOKE') === shouldSmokeTest;
 };
 
 const getPaths = service =>
