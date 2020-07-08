@@ -47,7 +47,7 @@ const includeClassifier = ({ href, pathname }) => {
   }
 
   if (includeType === 'vj' && !ampSupported(href)) {
-    return { includeType, classification: 'vj-amp-not-supported' };
+    return { includeType, classification: 'not-supported' };
   }
 
   return { includeType: includeType || null, classification };

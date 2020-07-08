@@ -9,7 +9,7 @@ const IncludeGrid = styled(GridItemConstrainedMedium)`
 `;
 
 const VjAmp = ({ ampMetadata, classification }) => {
-  if (classification === 'vj-amp-not-supported') {
+  if (classification === 'not-supported') {
     return (
       <EmbedError
         message="Sorry, we can’t display this part of the story on this lightweight mobile page."
