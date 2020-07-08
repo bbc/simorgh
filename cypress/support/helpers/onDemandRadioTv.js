@@ -1,5 +1,5 @@
 import path from 'ramda/src/path';
-import envConfig from '../../../support/config/envs';
+import envConfig from '../config/envs';
 
 // the externalId `bbc_oromo_radio` is overriden to `bbc_afaanoromoo` in production code
 const getBrandId = externalId =>
