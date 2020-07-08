@@ -167,6 +167,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c36 {
@@ -773,6 +774,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   .c51 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c28 {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -3008,6 +3015,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c38 {
@@ -3422,6 +3430,12 @@ exports[`Story Page should render correctly when the secondary column data is no
   .c13 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c30 {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -4488,6 +4502,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c38 {
@@ -5090,6 +5105,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   .c53 {
     font-size: 0.8125rem;
     line-height: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c30 {
+    margin-bottom: 1.5rem;
   }
 }
 
