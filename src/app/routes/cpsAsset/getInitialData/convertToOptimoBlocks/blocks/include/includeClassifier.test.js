@@ -48,10 +48,11 @@ describe('Include Classifier', () => {
   });
 
   it.each`
-    includeType | classification       | href
-    ${`idt1`}   | ${`idt1-amp`}        | ${idt1Include}
-    ${`idt2`}   | ${`idt2-amp`}        | ${idt2Include}
-    ${`vj`}     | ${`vj-supports-amp`} | ${vjIncludeSupportingAmp}
+    includeType | classification            | href
+    ${`idt1`}   | ${`idt1-amp`}             | ${idt1Include}
+    ${`idt2`}   | ${`idt2-amp`}             | ${idt2Include}
+    ${`vj`}     | ${`vj-supports-amp`}      | ${vjIncludeSupportingAmp}
+    ${`vj`}     | ${`vj-amp-not-supported`} | ${vjIncludeNotSupportingAmp}
   `(
     'should classify $includeType as $classification on amp',
     ({ includeType, classification, href }) => {
@@ -72,7 +73,7 @@ describe('Include Classifier', () => {
   it('should classify a vj include not supporting amp as not-supported on amp', () => {
     const expected = {
       includeType: 'vj',
-      classification: 'not-supported',
+      classification: 'vj-amp-not-supported',
     };
 
     const actual = includeClassifier({

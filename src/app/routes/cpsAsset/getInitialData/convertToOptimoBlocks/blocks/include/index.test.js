@@ -20,6 +20,9 @@ const canonicalPathname = 'https://www.bbc.com/service/foo';
 
 const ampPathname = 'https://www.bbc.com/service/foo.amp';
 
+const vjIncludeNotSupportingAmp =
+  '/news/special/2016/newsspec_14813/content/iframe/gahuza/us-gop.inc?responsive=true&app-clickable=true&app-image=http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/11/09/161109092836_us_election_2nddaymaps_winner_ws_62_v3.png';
+
 describe('convertInclude', () => {
   const initialIncludesBaseUrl = process.env.SIMORGH_INCLUDES_BASE_URL;
   const initialIncludesAmpBaseUrl = process.env.SIMORGH_INCLUDES_BASE_AMP_URL;
@@ -50,6 +53,7 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: '/indepthtoolkit/quizzes/123-456',
+        classification: 'idt1-canonical',
         type: 'idt1',
         html: idt1Markup,
       },
@@ -106,6 +110,7 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: '/idt2/111-222-333-444-555',
+        classification: 'idt2-canonical',
         type: 'idt2',
         html: idt2Markup,
         imageBlock: {
@@ -171,6 +176,7 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: '/idt2/111-222-333-444-555',
+        classification: 'idt2-amp',
         type: 'idt2',
         imageBlock: {
           alt: 'image alt text',
@@ -202,6 +208,7 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: '/include/111-222-333-444-555',
+        classification: 'vj-canonical',
         type: 'vj',
         html: vjMarkup,
       },
@@ -258,6 +265,7 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: 'idt2',
+        classification: 'idt2-canonical',
         type: 'idt2',
         imageBlock: {
           alt: 'image alt text',
@@ -308,6 +316,7 @@ describe('convertInclude', () => {
         type: 'include',
         model: {
           href: '/indepthtoolkit/quizzes/123-456',
+          classification: 'idt1-canonical',
           type: 'idt1',
           html: idt1Markup,
         },
@@ -440,6 +449,7 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: includeSupportingAmp,
+        classification: 'vj-supports-amp',
         type: 'vj',
         ampMetadata: {
           image:
@@ -477,15 +487,23 @@ describe('convertInclude', () => {
       type: 'news/special',
     };
     const actual = await convertInclude(input, null, null, ampPathname);
-    expect(fetch).not.toHaveBeenCalled();
-    expect(loggerMock.error).not.toHaveBeenCalled();
-    expect(loggerMock.info).toHaveBeenCalledTimes(1);
-    expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_UNSUPPORTED, {
-      type: 'news/special',
-      classification: 'not-supported',
-      url:
-        '/news/special/2016/newsspec_14813/content/iframe/gahuza/us-gop.inc?responsive=true&app-clickable=true&app-image=http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/11/09/161109092836_us_election_2nddaymaps_winner_ws_62_v3.png',
-    });
-    expect(actual).toEqual(null);
+    const expected = {
+      type: 'include',
+      model: {
+        href: vjIncludeNotSupportingAmp,
+        classification: 'vj-amp-not-supported',
+        type: 'vj',
+      },
+    };
+    // expect(fetch).not.toHaveBeenCalled();
+    // expect(loggerMock.error).not.toHaveBeenCalled();
+    // expect(loggerMock.info).toHaveBeenCalledTimes(1);
+    // expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_UNSUPPORTED, {
+    //   type: 'news/special',
+    //   classification: 'not-supported',
+    //   url:
+    //     '/news/special/2016/newsspec_14813/content/iframe/gahuza/us-gop.inc?responsive=true&app-clickable=true&app-image=http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/11/09/161109092836_us_election_2nddaymaps_winner_ws_62_v3.png',
+    // });
+    expect(actual).toEqual(expected);
   });
 });

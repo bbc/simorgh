@@ -10,6 +10,12 @@ exports[`IncludeContainer should render a VJ include on an Amp page with toggles
 </div>
 `;
 
+exports[`IncludeContainer should render a fallback for VJs on an Amp page when classified as not supported 1`] = `
+<div>
+  VJ-Amp-fallback
+</div>
+`;
+
 exports[`IncludeContainer should render include for IDT2 on an Amp page with toggles enabled 1`] = `
 <div>
   IDT2-Amp-component

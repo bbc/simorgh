@@ -10,8 +10,14 @@ import Canonical from './canonical';
 import Idt2Canonical from './canonical/Idt2';
 import Idt2Amp from './amp/Idt2Amp';
 import VjAmp from './amp/VjAmp';
+import AmpFallback from './amp/AmpFallback';
 
 const logger = nodeLogger(__filename);
+
+const SUPPORTED_FALLBACKS_CLASSIFICATIONS = [
+  'vj-amp-not-supported',
+  'idt1-amp',
+];
 
 const componentsToRender = {
   amp: {
@@ -30,7 +36,11 @@ const IncludeContainer = props => {
   const { enabled } = useToggle('include');
 
   if (!enabled) return null;
-  const { href, type } = props;
+  const { classification, href, type } = props;
+
+  if (SUPPORTED_FALLBACKS_CLASSIFICATIONS.includes(classification)) {
+    return <AmpFallback />;
+  }
 
   logger.info(INCLUDE_RENDERED, {
     includeUrl: href,
