@@ -28,10 +28,11 @@ const createLogDirectory = (dirName = 'log') => {
 
 const logLocation = path.join(LOG_DIR, LOG_FILE);
 
-const logFormat = printf(
-  data =>
-    `${data.timestamp} ${data.level} [${data.label}]: ${data.message}, ${data.metadata}`,
-);
+const logFormat = printf(({ timestamp, level, label, message, metadata }) => {
+  const stringifiedMetadata = JSON.stringify(metadata);
+
+  return `${timestamp} ${level} [${label}]: ${message}, metadata: ${stringifiedMetadata}`;
+});
 
 const loggerOptions = {
   file: {
@@ -49,7 +50,6 @@ const loggerOptions = {
     humanReadableUnhandledException: true,
     level: LOG_LEVEL,
     timestamp: true,
-    json: true,
     format: combine(prettyPrint(), colorize(), logFormat),
   },
 };
@@ -61,6 +61,7 @@ const folderAndFilename = name => {
 };
 
 const logToFile = callingFile => {
+  console.log(callingFile);
   createLogDirectory(LOG_DIR);
 
   return createLogger({
@@ -70,7 +71,7 @@ const logToFile = callingFile => {
       timestamp({ format: 'YYYY-MM-DD HH:mm:ss.SSS' }),
 
       // creates a metadata object, that uses our custom formatting
-      metadata({ fillExcept: ['timestamp', 'level', 'label', 'message'] }),
+      metadata({ fillExcept: ['message', 'level', 'timestamp', 'label'] }),
     ),
     transports: [
       new transports.File(loggerOptions.file),
