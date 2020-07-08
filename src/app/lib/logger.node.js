@@ -38,12 +38,7 @@ const consoleTransport = new (transports.Console)({
 });
 
 const customFormatting = printf(
-  data => `{
-    "date": ${data.timestamp},
-    "loglevel": ${data.level},
-    "filename": ${data.label},
-    "logmessage": ${data.message}
-  }`,
+  data => `${data.timestamp} ${data.level} [${data.label}] ${data.message}`,
 );
 
 // e.g. outputs 'Article/index.jsx'
