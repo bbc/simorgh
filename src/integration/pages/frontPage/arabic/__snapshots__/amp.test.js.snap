@@ -120,6 +120,17 @@ Object {
 }
 `;
 
+exports[`AMP Front Page Analytics comscore 1`] = `
+Object {
+  "extraUrlParams": Object {
+    "comscorekw": "amp",
+  },
+  "vars": Object {
+    "c2": "17986528",
+  },
+}
+`;
+
 exports[`AMP Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
 exports[`AMP Front Page Footer I can click on the BBC branding and it would take me to the homepage 2`] = `"/arabic"`;
