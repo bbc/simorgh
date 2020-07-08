@@ -3511,12 +3511,14 @@ module.exports = () => ({
           test: {
             paths: [
               '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // Brand
+              '/pashto/bbc_pashto_tv/tv/w172xclg9vb9ghj', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
               '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // Brand
+              '/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf', // Episode
             ],
             enabled: true,
           },
@@ -4952,8 +4954,9 @@ module.exports = () => ({
           test: {
             paths: [
               '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
+              '/somali/bbc_somali_tv/tv/w172xcmp3ny6zzr', // Brand
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
