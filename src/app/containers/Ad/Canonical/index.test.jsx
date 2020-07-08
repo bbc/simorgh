@@ -8,7 +8,7 @@ import CanonicalAd, { getBootsrapSrc } from '.';
 
 const requestContextData = {
   pageType: 'frontPage',
-  service: 'pidgin',
+  service: 'mundo',
   isAmp: false,
   pathname: '/pathname',
   data: { status: 200 },
