@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Comscore Analytics Container should render comscore script when on amp and toggle is enabled 1`] = `
+exports[`Comscore Analytics Container Assertions should render comscore script when on amp and toggle is enabled 1`] = `
 <amp-analytics
   type="comscore"
 >
@@ -10,4 +10,33 @@ exports[`Comscore Analytics Container should render comscore script when on amp 
     {"vars":{"c2":"17986528"},"extraUrlParams":{"comscorekw":"amp"}}
   </script>
 </amp-analytics>
+`;
+
+exports[`Comscore Analytics Container Snapshots should render comscore script when on canonical and toggle is enabled 1`] = `
+<html>
+  <head>
+    <noscript>
+      &lt;img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cs_ucfr=0&cv=2.0&cj=1" /&gt;
+    </noscript>
+    <script
+      src="https://sb.scorecardresearch.com/beacon.js"
+    />
+    <script
+      async="true"
+      type="text/javascript"
+    >
+      
+        var _comscore = [{ c1: "2", c2: "17986528", cs_ucfr: "0" }];
+        (function() {
+            var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+            s.src = "https://sb.scorecardresearch.com/beacon.js";
+            el.parentNode.insertBefore(s, el);
+        })();
+      
+    </script>
+  </head>
+  <body>
+    <div />
+  </body>
+</html>
 `;
