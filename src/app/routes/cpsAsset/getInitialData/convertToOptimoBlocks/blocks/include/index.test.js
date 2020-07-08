@@ -53,7 +53,7 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: '/indepthtoolkit/quizzes/123-456',
-        indexOfInclude: 0,
+        index: 0,
         type: 'idt1',
         html: idt1Markup,
       },
@@ -82,7 +82,7 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: '/idt2/111-222-333-444-555',
-        indexOfInclude: 1,
+        index: 1,
         type: 'idt2',
         html: idt2Markup,
         imageBlock: {
@@ -120,7 +120,7 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: '/idt2/111-222-333-444-555',
-        indexOfInclude: 1,
+        index: 1,
         type: 'idt2',
         imageBlock: {
           alt: 'image alt text',
@@ -146,7 +146,7 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: '/include/111-222-333-444-555',
-        indexOfInclude: 2,
+        index: 2,
         type: 'vj',
         html: vjMarkup,
       },
@@ -175,7 +175,7 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: '/idt2/111-222-333-444-555',
-        indexOfInclude: 1,
+        index: 1,
         type: 'idt2',
         imageBlock: {
           alt: 'image alt text',
@@ -219,7 +219,7 @@ describe('convertInclude', () => {
         type: 'include',
         model: {
           href: '/indepthtoolkit/quizzes/123-456',
-          indexOfInclude: 0,
+          index: 0,
           type: 'idt1',
           html: idt1Markup,
         },
@@ -339,7 +339,7 @@ describe('convertInclude', () => {
       type: 'include',
       model: {
         href: includeSupportingAmp,
-        indexOfInclude: -1,
+        index: -1,
         type: 'vj',
         ampMetadata: {
           image:

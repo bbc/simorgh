@@ -98,7 +98,7 @@ const convertInclude = async (includeBlock, pageData, ...restParams) => {
 
   const includeMap = blocks.filter(block => block.type === 'include');
 
-  const indexOfInclude = includeMap.indexOf(includeBlock);
+  const index = includeMap.indexOf(includeBlock);
 
   let ampMetadata;
   let html;
@@ -123,7 +123,7 @@ const convertInclude = async (includeBlock, pageData, ...restParams) => {
     type,
     model: {
       href,
-      indexOfInclude,
+      index,
       type: includeType,
       ...(ampMetadata && { ampMetadata }),
       ...(html && { html }),
