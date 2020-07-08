@@ -25,10 +25,7 @@ const mpuStyles = css`
   min-height: ${MPU_HEIGHT};
 `;
 
-const AdContainer = styled.section.attrs({
-  ariaHidden: 'true',
-  role: 'region',
-})`
+const AdContainer = styled.section`
   background-color: ${C_LUNAR_LIGHT};
   ${({ slotType }) => (slotType === 'mpu' ? mpuStyles : leaderboardStyles)}
 `;
@@ -73,7 +70,12 @@ const CanonicalAd = ({ slotType }) => {
       <Helmet>
         <script src={getBootsrapSrc(queryString)} />
       </Helmet>
-      <AdContainer slotType={slotType} aria-label={ariaLabel}>
+      <AdContainer
+        slotType={slotType}
+        aria-label={ariaLabel}
+        aria-hidden="true"
+        role="region"
+      >
         <div id={`dotcom-${slotType}`} className="dotcom-ad" />
       </AdContainer>
     </>

@@ -21,6 +21,7 @@ exports[`Ad Container Snapshots should correctly render a Canonical leaderboard 
 
 <div>
       <section
+        aria-hidden="true"
         aria-label="Publicidad"
         class="c0"
         role="region"
@@ -50,6 +51,7 @@ exports[`Ad Container Snapshots should correctly render a Canonical mpu ad 1`] =
 
 <div>
       <section
+        aria-hidden="true"
         aria-label="Publicidad 2"
         class="c0"
         role="region"
