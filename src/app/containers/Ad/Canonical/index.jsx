@@ -7,6 +7,7 @@ import { C_LUNAR_LIGHT } from '@bbc/psammead-styles/colours';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 
 const LEADERBOARD_HEIGHT = '5.5rem';
@@ -37,6 +38,7 @@ export const getBootsrapSrc = queryString => {
 };
 
 const CanonicalAd = ({ slotType }) => {
+  const { canAdvertise } = useContext(RequestContext);
   const location = useLocation();
   const queryString = location.search;
   const { ads, dir } = useContext(ServiceContext);
@@ -62,6 +64,10 @@ const CanonicalAd = ({ slotType }) => {
       }
     };
   }, [slotType, location]);
+
+  if (!canAdvertise) {
+    return null;
+  }
 
   return (
     <>

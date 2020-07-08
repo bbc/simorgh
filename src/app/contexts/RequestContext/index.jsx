@@ -21,6 +21,7 @@ export const RequestContextProvider = ({
   pathname,
   variant,
   timeOnServer,
+  canAdvertise,
 }) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
   const env = getEnv(origin);
@@ -50,6 +51,7 @@ export const RequestContextProvider = ({
     previousPath,
     variant,
     timeOnServer,
+    canAdvertise,
     ...getMetaUrls(origin, pathname),
   };
 
@@ -81,6 +83,7 @@ RequestContextProvider.propTypes = {
   previousPath: string,
   variant: variantPropType,
   timeOnServer: number,
+  canAdvertise: bool,
 };
 
 RequestContextProvider.defaultProps = {
@@ -90,4 +93,5 @@ RequestContextProvider.defaultProps = {
   previousPath: null,
   variant: null,
   timeOnServer: null,
+  canAdvertise: false,
 };
