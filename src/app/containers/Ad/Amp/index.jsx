@@ -80,11 +80,13 @@ const AmpAd = ({ slotType }) => {
   const label = pathOr('Advertisement', ['advertisementLabel'], ads);
 
   return (
+    // eslint-disable-next-line jsx-a11y/no-redundant-roles
     <section
       amp-access="toggles.ads.enabled"
       amp-access-hide="true"
       aria-hidden="true"
       aria-label="advertisement"
+      role="region"
     >
       <FullWidthWrapper>
         <StyledWrapper>

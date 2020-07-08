@@ -122,6 +122,7 @@ exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
         amp-access-hide="true"
         aria-hidden="true"
         aria-label="advertisement"
+        role="region"
       >
         <div
           class="c0"
