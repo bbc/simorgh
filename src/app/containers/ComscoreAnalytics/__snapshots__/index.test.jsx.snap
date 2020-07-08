@@ -12,6 +12,18 @@ exports[`Comscore Analytics Container Assertions should render comscore script w
 </amp-analytics>
 `;
 
+exports[`Comscore Analytics Container Snapshots should render comscore script when on amp and toggle is enabled 1`] = `
+<amp-analytics
+  type="comscore"
+>
+  <script
+    type="application/json"
+  >
+    {"vars":{"c2":"17986528"},"extraUrlParams":{"comscorekw":"amp"}}
+  </script>
+</amp-analytics>
+`;
+
 exports[`Comscore Analytics Container Snapshots should render comscore script when on canonical and toggle is enabled 1`] = `
 <html>
   <head>

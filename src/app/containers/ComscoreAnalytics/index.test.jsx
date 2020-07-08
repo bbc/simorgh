@@ -70,7 +70,9 @@ describe('Comscore Analytics Container', () => {
 
       expect(container.firstChild).toBeNull();
     });
+  });
 
+  describe('Snapshots', () => {
     it('should render comscore script when on amp and toggle is enabled', () => {
       const toggleState = {
         comscoreAnalytics: {
@@ -91,9 +93,7 @@ describe('Comscore Analytics Container', () => {
       expect(container.firstChild).not.toBeNull();
       expect(container.firstChild).toMatchSnapshot();
     });
-  });
 
-  describe('Snapshots', () => {
     const toggleState = {
       comscoreAnalytics: {
         enabled: true,
