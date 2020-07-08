@@ -15,7 +15,7 @@ describe('CanonicalIncludeContainer', () => {
 
   it('should not render any HTML when html prop is null', async () => {
     const { container } = render(
-      <CanonicalIncludeContainer type="idt2" html={null} indexOfInclude={0} />,
+      <CanonicalIncludeContainer type="idt2" html={null} index={0} />,
     );
     await waitFor(() => {
       expect(container).toBeEmptyDOMElement();
@@ -24,11 +24,7 @@ describe('CanonicalIncludeContainer', () => {
 
   it('should not render any HTML for an unsupported include type', async () => {
     const { container } = render(
-      <CanonicalIncludeContainer
-        html={fakeMarkup}
-        type="idt20"
-        indexOfInclude={0}
-      />,
+      <CanonicalIncludeContainer html={fakeMarkup} type="idt20" index={0} />,
     );
     await waitFor(() => {
       expect(container).toBeEmptyDOMElement();
@@ -41,7 +37,7 @@ describe('CanonicalIncludeContainer', () => {
         <CanonicalIncludeContainer
           html={fakeMarkup}
           type={includeType}
-          indexOfInclude={0}
+          index={0}
         />,
       );
 
@@ -71,26 +67,10 @@ describe('CanonicalIncludeContainer', () => {
   it(`should add require once for page with multiple vj and idt1 includes`, async () => {
     render(
       <>
-        <CanonicalIncludeContainer
-          html={fakeMarkup}
-          type="idt1"
-          indexOfInclude={0}
-        />
-        <CanonicalIncludeContainer
-          html={fakeMarkup}
-          type="vj"
-          indexOfInclude={1}
-        />
-        <CanonicalIncludeContainer
-          html={fakeMarkup}
-          type="idt1"
-          indexOfInclude={2}
-        />
-        <CanonicalIncludeContainer
-          html={fakeMarkup}
-          type="vj"
-          indexOfInclude={3}
-        />
+        <CanonicalIncludeContainer html={fakeMarkup} type="idt1" index={0} />
+        <CanonicalIncludeContainer html={fakeMarkup} type="vj" index={1} />
+        <CanonicalIncludeContainer html={fakeMarkup} type="idt1" index={2} />
+        <CanonicalIncludeContainer html={fakeMarkup} type="vj" index={3} />
       </>,
     );
 
@@ -116,11 +96,7 @@ describe('CanonicalIncludeContainer', () => {
 
   it(`should not add require to the page for idt2`, async () => {
     render(
-      <CanonicalIncludeContainer
-        html={fakeMarkup}
-        type="idt2"
-        indexOfInclude={0}
-      />,
+      <CanonicalIncludeContainer html={fakeMarkup} type="idt2" index={0} />,
     );
 
     await waitFor(() => {

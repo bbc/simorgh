@@ -19,7 +19,7 @@ const Include = styled.div`
 
 const DISALLOWED_SCRIPTS = /js\/verticalChart|horizontalChart|lineChart|pieChart|simpleMap|table\./;
 
-const Idt2Canonical = ({ html, imageBlock, indexOfInclude }) => {
+const Idt2Canonical = ({ html, imageBlock, index }) => {
   if (!html || !imageBlock) return null;
   const { src, alt, srcset } = imageBlock;
   const isDisallowed = DISALLOWED_SCRIPTS.test(html);
@@ -27,17 +27,12 @@ const Idt2Canonical = ({ html, imageBlock, indexOfInclude }) => {
   return (
     <IncludeGrid>
       {isDisallowed ? (
-        <Img
-          src={src}
-          alt={alt}
-          srcset={srcset}
-          id={`include-${indexOfInclude + 1}`}
-        />
+        <Img src={src} alt={alt} srcset={srcset} id={`include-${index + 1}`} />
       ) : (
         <Include
           suppressHydrationWarning
           dangerouslySetInnerHTML={{ __html: html }}
-          id={`include-${indexOfInclude + 1}`}
+          id={`include-${index + 1}`}
         />
       )}
     </IncludeGrid>
@@ -51,7 +46,7 @@ Idt2Canonical.propTypes = {
     alt: string.isRequired,
     srcset: string,
   }),
-  indexOfInclude: number.isRequired,
+  index: number.isRequired,
 };
 
 Idt2Canonical.defaultProps = {

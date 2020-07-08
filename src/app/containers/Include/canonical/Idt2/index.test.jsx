@@ -20,11 +20,7 @@ const imageBlock = {
 describe('Include: IDT2 Canonical', () => {
   it('should render', () => {
     const { container } = render(
-      <Idt2Canonical
-        html={HTML.ALLOWED}
-        imageBlock={imageBlock}
-        indexOfInclude={0}
-      />,
+      <Idt2Canonical html={HTML.ALLOWED} imageBlock={imageBlock} index={0} />,
     );
 
     expect(/js\/dataPic\./.test(container.innerHTML)).toBe(true);
@@ -33,12 +29,10 @@ describe('Include: IDT2 Canonical', () => {
 
   it('should not render when `html` or `imageBlock` props are not present', () => {
     expect(
-      render(<Idt2Canonical html={HTML.ALLOWED} indexOfInclude={0} />)
-        .container,
+      render(<Idt2Canonical html={HTML.ALLOWED} index={0} />).container,
     ).toBeEmptyDOMElement();
     expect(
-      render(<Idt2Canonical imageBlock={imageBlock} indexOfInclude={0} />)
-        .container,
+      render(<Idt2Canonical imageBlock={imageBlock} index={0} />).container,
     ).toBeEmptyDOMElement();
   });
 
@@ -47,7 +41,7 @@ describe('Include: IDT2 Canonical', () => {
       <Idt2Canonical
         html={HTML.DISALLOWED}
         imageBlock={imageBlock}
-        indexOfInclude={0}
+        index={0}
       />,
     );
 

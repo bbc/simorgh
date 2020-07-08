@@ -16,7 +16,7 @@ const Include = styled.div`
   margin-bottom: ${GEL_SPACING_QUIN};
 `;
 
-const CanonicalIncludeContainer = ({ html, type, indexOfInclude }) => {
+const CanonicalIncludeContainer = ({ html, type, index }) => {
   const supportedTypes = ['idt1', 'vj'];
 
   if (!html || !supportedTypes.includes(type)) return null;
@@ -53,7 +53,7 @@ const CanonicalIncludeContainer = ({ html, type, indexOfInclude }) => {
       <Include
         suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: html }}
-        id={`include-${indexOfInclude + 1}`}
+        id={`include-${index + 1}`}
       />
     </IncludeGrid>
   );
@@ -62,7 +62,7 @@ const CanonicalIncludeContainer = ({ html, type, indexOfInclude }) => {
 CanonicalIncludeContainer.propTypes = {
   html: string,
   type: string.isRequired,
-  indexOfInclude: number.isRequired,
+  index: number.isRequired,
 };
 
 CanonicalIncludeContainer.defaultProps = {
