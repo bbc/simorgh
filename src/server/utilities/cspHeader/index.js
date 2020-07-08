@@ -114,6 +114,7 @@ const directives = {
       'https://www.youtube.com', // Social Embeds, <amp-youtube />
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.ampproject.net', // Social Embeds
+      'news.test.files.bbci.co.uk',
       "'self'",
     ],
     canonicalNonLive: [
@@ -135,6 +136,7 @@ const directives = {
       'https://edigitalsurvey.com', // ads
       'https://securepubads.g.doubleclick.net', // ads
       'https://tpc.googlesyndication.com', // ads
+      'news.test.files.bbci.co.uk',
       "'self'",
     ],
   },

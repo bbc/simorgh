@@ -51,6 +51,7 @@ describe('cspHeader', () => {
         'https://www.youtube.com',
         'https://www.instagram.com',
         'https://*.ampproject.net',
+        'news.test.files.bbci.co.uk',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -120,6 +121,7 @@ describe('cspHeader', () => {
         'https://news.files.bbci.co.uk',
         'https://www.bbc.co.uk',
         'https://bbc-maps.carto.com',
+        'news.test.files.bbci.co.uk',
         "'self'",
       ],
       imgSrcExpectation: [
