@@ -2,7 +2,6 @@
 const fs = require('fs');
 const path = require('path');
 const { createLogger, format, transports } = require('winston');
-const winston = require('winston/lib/winston/config');
 
 const {
   combine,
@@ -28,11 +27,12 @@ const createLogDirectory = (dirName = 'log') => {
 
 const logLocation = path.join(LOG_DIR, LOG_FILE);
 
-const logFormat = printf(({ timestamp, level, label, message, metadata }) => {
-  const stringifiedMetadata = JSON.stringify(metadata);
-
-  return `${timestamp} ${level} [${label}]: ${message}, metadata: ${stringifiedMetadata}`;
-});
+const logFormat = printf(
+  ({ timestamp, level, label: filename, message: event, metadata }) =>
+    `${timestamp} ${level} [${filename}]: ${event}, metadata: ${JSON.stringify(
+      metadata,
+    )}`,
+);
 
 const loggerOptions = {
   file: {
@@ -61,7 +61,6 @@ const folderAndFilename = name => {
 };
 
 const logToFile = callingFile => {
-  console.log(callingFile);
   createLogDirectory(LOG_DIR);
 
   return createLogger({
