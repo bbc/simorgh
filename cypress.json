@@ -14,10 +14,13 @@
     "**/pages/testsForAllPages.js",
     "**/pages/testsForAllAMPPages.js",
     "**/pages/testsForAllCanonicalPages.js",
+    "**/pages/**/helper.js",
+    "**/pages/**/helpers.js",
+    "**/pages/**/getErrorPath.js",
     "**/123PlaygroundForTests/**",
     "**/specialFeatures/utilities/**",
-    "**/specialFeatures/scriptSwitching/testsForAMPOnly.js",
-    "**/specialFeatures/scriptSwitching/testsForCanonicalOnly.js"
+    "**/specialFeatures/**/testsForAMPOnly.js",
+    "**/specialFeatures/**/testsForCanonicalOnly.js"
   ],
   "defaultCommandTimeout": 10000,
   "pageLoadTimeout": 100000,
