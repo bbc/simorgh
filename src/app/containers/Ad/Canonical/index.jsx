@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import { oneOf } from 'prop-types';
 import styled, { css } from 'styled-components';
 import { C_LUNAR_LIGHT } from '@bbc/psammead-styles/colours';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import { Helmet } from 'react-helmet';
+import isLive from '#lib/utilities/isLive';
 
 const LEADERBOARD_HEIGHT = '5.5rem';
 const LEADERBOARD_HEIGHT_GROUP_4_5 = '9rem';
@@ -27,8 +28,16 @@ const AdContainer = styled.div`
   ${({ slotType }) => (slotType === 'mpu' ? mpuStyles : leaderboardStlyes)}
 `;
 
+export const getBootsrapSrc = queryString => {
+  const useLiveSrc = isLive() || queryString.includes('ads-js-env=live');
+  const params = useLiveSrc ? '' : 'test/';
+  return `https://gn-web-assets.api.bbc.com/ngas/${params}dotcom-bootstrap.js`;
+};
+
 const CanonicalAd = ({ slotType }) => {
   const location = useLocation();
+  const queryString = location.search;
+
   useEffect(() => {
     if (window.dotcom) {
       window.dotcom.cmd.push(() => {
@@ -50,7 +59,7 @@ const CanonicalAd = ({ slotType }) => {
       {/* Loading dotcom-bootstrap.js here instead of CanonicalAdBootstrapJs to avoid it loading on live */}
       {/* This can be moved once we allow the script to load on live */}
       <Helmet>
-        <script src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js" />
+        <script src={getBootsrapSrc(queryString)} />
       </Helmet>
       <AdContainer slotType={slotType}>
         <div id={`dotcom-${slotType}`} className="dotcom-ad" />
