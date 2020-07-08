@@ -20,7 +20,7 @@ const getLoggingFunction = level =>
 
 const pathWithLogging = (url, logCategory, pageData) => (
   fieldPath,
-  { logLevel = LOG_LEVELS.INFO } = {},
+  logLevel = LOG_LEVELS.INFO,
 ) => {
   const field = path(fieldPath, pageData);
   if (isNil(field)) {
