@@ -9,9 +9,9 @@ import isLive from '#lib/utilities/isLive';
 
 const LEADERBOARD_HEIGHT = '5.5rem';
 const LEADERBOARD_HEIGHT_GROUP_4_5 = '9rem';
-const MPU_HEIGHT = '9rem';
+const MPU_HEIGHT = '15.625rem';
 
-const leaderboardStlyes = css`
+const leaderboardStyles = css`
   min-height: ${LEADERBOARD_HEIGHT};
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
@@ -25,7 +25,7 @@ const mpuStyles = css`
 
 const AdContainer = styled.div`
   background-color: ${C_LUNAR_LIGHT};
-  ${({ slotType }) => (slotType === 'mpu' ? mpuStyles : leaderboardStlyes)}
+  ${({ slotType }) => (slotType === 'mpu' ? mpuStyles : leaderboardStyles)}
 `;
 
 export const getBootsrapSrc = queryString => {
