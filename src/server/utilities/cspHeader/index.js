@@ -193,7 +193,6 @@ const directives = {
       'https://i.ytimg.com', // Social Embeds, <amp-youtube />
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.cdninstagram.com', // Social Embeds, <amp-instagram />
-      'https://news.test.files.bbci.co.uk',
       "data: 'self'",
     ],
     canonicalNonLive: [
@@ -223,7 +222,6 @@ const directives = {
       'https://csi.gstatic.com', // ads
       'https://sb.scorecardresearch.com', // ads
       'https://secure-us.imrworldwide.com', // ads
-      'https://news.test.files.bbci.co.uk',
       "data: 'self'", // needed at the end to maintain proper order
     ],
   },
