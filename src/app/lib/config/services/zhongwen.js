@@ -47,7 +47,7 @@ export const service = {
   simp: {
     ...baseServiceConfig,
     ads: {
-      hasAds: true,
+      hasAds: false,
       advertisementLabel: '广告',
     },
     externalLinkText: ', 外部链接',
