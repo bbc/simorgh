@@ -21,6 +21,7 @@ exports[`Ad Container Snapshots should correctly render a Canonical leaderboard 
 
 <div>
       <section
+        aria-label="Publicidad"
         class="c0"
         role="region"
       >
@@ -49,6 +50,7 @@ exports[`Ad Container Snapshots should correctly render a Canonical mpu ad 1`] =
 
 <div>
       <section
+        aria-label="Publicidad 2"
         class="c0"
         role="region"
       >
@@ -149,7 +151,7 @@ exports[`Ad Container Snapshots should correctly render an AMP leaderboard ad 1`
         amp-access="toggles.ads.enabled"
         amp-access-hide="true"
         aria-hidden="true"
-        aria-label="advertisement"
+        aria-label="Publicidad"
         role="region"
       >
         <div
@@ -291,7 +293,7 @@ exports[`Ad Container Snapshots should correctly render an AMP mpu ad 1`] = `
         amp-access="toggles.ads.enabled"
         amp-access-hide="true"
         aria-hidden="true"
-        aria-label="advertisement"
+        aria-label="Publicidad 2"
         role="region"
       >
         <div

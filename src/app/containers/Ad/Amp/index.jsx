@@ -78,6 +78,9 @@ export const AMP_ACCESS_FETCH = service => {
 const AmpAd = ({ slotType }) => {
   const { ads, dir, script, service } = useContext(ServiceContext);
   const label = pathOr('Advertisement', ['advertisementLabel'], ads);
+  const mpuLabel =
+    dir === 'ltr' || label === 'Advertisement' ? `${label} 2` : `2 ${label}`;
+  const ariaLabel = slotType === 'leaderboard' ? label : mpuLabel;
 
   return (
     // eslint-disable-next-line jsx-a11y/no-redundant-roles
@@ -85,7 +88,7 @@ const AmpAd = ({ slotType }) => {
       amp-access="toggles.ads.enabled"
       amp-access-hide="true"
       aria-hidden="true"
-      aria-label="advertisement"
+      aria-label={ariaLabel}
       role="region"
     >
       <FullWidthWrapper>

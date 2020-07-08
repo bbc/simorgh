@@ -87,7 +87,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
         amp-access="toggles.ads.enabled"
         amp-access-hide="true"
         aria-hidden="true"
-        aria-label="advertisement"
+        aria-label="Publicités"
         role="region"
       >
         <div
@@ -229,7 +229,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
         amp-access="toggles.ads.enabled"
         amp-access-hide="true"
         aria-hidden="true"
-        aria-label="advertisement"
+        aria-label="Publicités 2"
         role="region"
       >
         <div
