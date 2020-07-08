@@ -26,6 +26,15 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
               <div>
                 chartbeat
               </div>
+              <amp-analytics
+                type="comscore"
+              >
+                <script
+                  type="application/json"
+                >
+                  {"vars":{"c2":"17986528"},"extraUrlParams":{"comscorekw":"amp"}}
+                </script>
+              </amp-analytics>
               <main
                 role="main"
               >

@@ -1,11 +1,16 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
-import { getEmbedUrl, isExpired, dataEndpointOverride } from './helpers';
+import {
+  getEmbedUrl,
+  isExpired,
+  dataEndpointOverride,
+} from '../../../support/helpers/onDemandRadioTv';
+import config from '../../../support/config/services';
 
 export default ({ service, pageType, variant }) => {
   describe(`testsForCanonicalOnly for ${service} ${pageType}`, () => {
     describe('Audio Player', () => {
-      const { lang } = appConfig[service][variant];
+      const { lang } = appConfig[config[service].name][variant];
       let embedUrl;
       let isExpiredEpisode;
 

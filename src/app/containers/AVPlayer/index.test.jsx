@@ -40,14 +40,14 @@ const GenerateFixtureData = ({
   </RequestContextProvider>
 );
 
-const AVPlayerCanonicalTV = (
+const AVPlayerCanonicalODTV = (
   <GenerateFixtureData
     platform="canonical"
     embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live"
   />
 );
 
-const AVPlayerAMPRadio = (
+const AVPlayerAMPODRadio = (
   <GenerateFixtureData
     platform="amp"
     embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om/amp"
@@ -58,26 +58,37 @@ const AVPlayerAMPRadio = (
   />
 );
 
-describe('AVPlayer for TV', () => {
+const AVPlayerLiveRadio = (
+  <GenerateFixtureData
+    platform="canonical"
+    embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
+    title="Live radio"
+    type="audio"
+    iframeTitle="오디오 플레이어"
+    skin="audio"
+  />
+);
+
+describe('AVPlayer for On Demand TV', () => {
   shouldMatchSnapshot(
     'should match snapshot for canonical AVPlayer',
-    AVPlayerCanonicalTV,
+    AVPlayerCanonicalODTV,
   );
 
   it('should render the iframe on canonical', () => {
-    render(AVPlayerCanonicalTV);
+    render(AVPlayerCanonicalODTV);
 
     expect(document.querySelector('iframe')).toBeInTheDocument();
   });
 
   it('should contain the noscript tag for no-JS scenarios on canonical', () => {
-    render(AVPlayerCanonicalTV);
+    render(AVPlayerCanonicalODTV);
 
     expect(document.querySelector('noscript')).toBeInTheDocument();
   });
 
   it('should contain the iframe title on canonical', () => {
-    const { container } = render(AVPlayerCanonicalTV);
+    const { container } = render(AVPlayerCanonicalODTV);
 
     const AVPlayerIframeTitle = container
       .querySelector('iframe')
@@ -87,31 +98,60 @@ describe('AVPlayer for TV', () => {
   });
 });
 
-describe('AVPlayer for Radio', () => {
+describe('AVPlayer for On Demand Radio', () => {
   shouldMatchSnapshot(
     'should match snapshot for AMP AVPlayer',
-    AVPlayerAMPRadio,
+    AVPlayerAMPODRadio,
   );
 
   it('should render the iframe on AMP', () => {
-    render(AVPlayerAMPRadio);
+    render(AVPlayerAMPODRadio);
 
     expect(document.querySelector('amp-iframe')).toBeInTheDocument();
   });
 
   it('should contain the noscript tag for no-JS scenarios on AMP', () => {
-    render(AVPlayerAMPRadio);
+    render(AVPlayerAMPODRadio);
 
     expect(document.querySelector('noscript')).toBeInTheDocument();
   });
 
   it('should contain the iframe title on AMP', () => {
-    const { container } = render(AVPlayerAMPRadio);
+    const { container } = render(AVPlayerAMPODRadio);
 
     const AVPlayerIframeTitle = container
       .querySelector('amp-iframe')
       .getAttribute('title');
 
     expect(AVPlayerIframeTitle).toEqual('Audio player');
+  });
+});
+
+describe('AVPlayer for Live Radio', () => {
+  shouldMatchSnapshot(
+    'should match snapshot for canonical AVPlayer',
+    AVPlayerLiveRadio,
+  );
+
+  it('should render the iframe on canonical', () => {
+    render(AVPlayerLiveRadio);
+
+    expect(document.querySelector('iframe')).toBeInTheDocument();
+  });
+
+  it('should contain the noscript tag for no-JS scenarios on canonical', () => {
+    render(AVPlayerLiveRadio);
+
+    expect(document.querySelector('noscript')).toBeInTheDocument();
+  });
+
+  it('should contain the iframe title on canonical', () => {
+    const { container } = render(AVPlayerLiveRadio);
+
+    const AVPlayerIframeTitle = container
+      .querySelector('iframe')
+      .getAttribute('title');
+
+    expect(AVPlayerIframeTitle).toEqual('오디오 플레이어');
   });
 });
