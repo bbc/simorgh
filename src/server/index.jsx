@@ -27,6 +27,7 @@ import renderDocument from './Document';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
 import injectCspHeader from './utilities/cspHeader';
+import canAdvertise from './utilities/canAdvertise';
 import {
   SERVICE_WORKER_SENDFILE_ERROR,
   MANIFEST_SENDFILE_ERROR,
@@ -282,7 +283,7 @@ server
   .get(
     '/*',
     injectCspHeaderProdBuild,
-    async ({ url, headers, path: urlPath }, res) => {
+    async ({ url, headers, path: urlPath, query }, res) => {
       logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
         url,
         headers,
@@ -303,6 +304,7 @@ server
 
         data.path = urlPath;
         data.timeOnServer = Date.now();
+        data.canAdvertise = canAdvertise(headers, query);
 
         const result = await renderDocument({
           bbcOrigin,
