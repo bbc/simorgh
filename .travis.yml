@@ -16,7 +16,7 @@ jobs:
       if: type = push OR (pull_request AND fork = true)
       name: 'Unit Tests and storybook e2e'
       script:
-        - npm run test
+        - LOG_LEVEL=error npm run test
     - stage: test
       if: type = push OR (pull_request AND fork = true)
       name: 'Production CI tests'
