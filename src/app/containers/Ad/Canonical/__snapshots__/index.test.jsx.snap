@@ -14,14 +14,15 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
 }
 
 <div>
-      <div
+      <section
         class="c0"
+        role="region"
       >
         <div
           class="dotcom-ad"
           id="dotcom-mpu"
         />
-      </div>
+      </section>
     </div>
   </body>
 </html>

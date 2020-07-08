@@ -225,9 +225,12 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
 }
 
 <div>
-      <div
+      <section
         amp-access="toggles.ads.enabled"
         amp-access-hide="true"
+        aria-hidden="true"
+        aria-label="advertisement"
+        role="region"
       >
         <div
           class="c0"
@@ -261,7 +264,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </body>
 </html>
