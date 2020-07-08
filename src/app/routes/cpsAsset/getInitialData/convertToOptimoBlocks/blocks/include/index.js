@@ -118,6 +118,7 @@ const convertInclude = async (includeBlock, ...restParams) => {
     model: {
       href,
       type: includeType,
+      classification,
       ...(ampMetadata && { ampMetadata }),
       ...(html && { html }),
       ...(imageBlock && { imageBlock }),
