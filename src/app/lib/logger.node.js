@@ -2,8 +2,19 @@
 const fs = require('fs');
 const path = require('path');
 const { createLogger, format, transports } = require('winston');
+const winston = require('winston/lib/winston/config');
 
-const { combine, label, printf, simple, timestamp } = format;
+const {
+  combine,
+  label,
+  printf,
+  simple,
+  timestamp,
+  metadata,
+  json,
+  colorize,
+  prettyPrint,
+} = format;
 
 const LOG_LEVEL = process.env.LOG_LEVEL || 'info';
 const LOG_FILE = 'app.log';
@@ -17,29 +28,31 @@ const createLogDirectory = (dirName = 'log') => {
 
 const logLocation = path.join(LOG_DIR, LOG_FILE);
 
-// prettier-ignore
-const fileTransport = new (transports.File)({
-  filename: logLocation,
-  handleExceptions: true,
-  humanReadableUnhandledException: true,
-  json: true,
-  level: LOG_LEVEL,
-  maxFiles: 5,
-  maxsize: 104857600, // 100MB
-  tailable: true
-});
-
-// prettier-ignore
-const consoleTransport = new (transports.Console)({
-  handleExceptions: true,
-  humanReadableUnhandledException: true,
-  level: LOG_LEVEL,
-  timestamp: true,
-});
-
-const customFormatting = printf(
-  data => `${data.timestamp} ${data.level} [${data.label}] ${data.message}`,
+const logFormat = printf(
+  data =>
+    `${data.timestamp} ${data.level} [${data.label}]: ${data.message}, ${data.metadata}`,
 );
+
+const loggerOptions = {
+  file: {
+    filename: logLocation,
+    handleExceptions: true,
+    humanReadableUnhandledException: true,
+    level: LOG_LEVEL,
+    maxFiles: 5,
+    maxsize: 104857600, // 100MB
+    tailable: true,
+    format: combine(json()),
+  },
+  console: {
+    handleExceptions: true,
+    humanReadableUnhandledException: true,
+    level: LOG_LEVEL,
+    timestamp: true,
+    json: true,
+    format: combine(prettyPrint(), colorize(), logFormat),
+  },
+};
 
 // e.g. outputs 'Article/index.jsx'
 const folderAndFilename = name => {
@@ -51,23 +64,19 @@ const logToFile = callingFile => {
   createLogDirectory(LOG_DIR);
 
   return createLogger({
-    format: combine(
+    format: format.combine(
       label({ label: folderAndFilename(callingFile) }),
       simple(),
       timestamp({ format: 'YYYY-MM-DD HH:mm:ss.SSS' }),
-      customFormatting,
+
+      // creates a metadata object, that uses our custom formatting
+      metadata({ fillExcept: ['timestamp', 'level', 'label', 'message'] }),
     ),
-    transports: [fileTransport, consoleTransport],
+    transports: [
+      new transports.File(loggerOptions.file),
+      new transports.Console(loggerOptions.console),
+    ],
   });
-};
-
-const logEventMessage = (event, message) => {
-  const logObject = {
-    event,
-    message,
-  };
-
-  return JSON.stringify(logObject, null, 2);
 };
 
 class Logger {
@@ -75,23 +84,23 @@ class Logger {
     const fileLogger = logToFile(callingFile);
 
     this.error = (event, message) => {
-      fileLogger.error(logEventMessage(event, message));
+      fileLogger.error(event, message);
     };
 
     this.warn = (event, message) => {
-      fileLogger.warn(logEventMessage(event, message));
+      fileLogger.warn(event, message);
     };
 
     this.info = (event, message) => {
-      fileLogger.info(logEventMessage(event, message));
+      fileLogger.info(event, message);
     };
 
     this.debug = (event, message) => {
-      fileLogger.debug(logEventMessage(event, message));
+      fileLogger.debug(event, message);
     };
 
     this.verbose = (event, message) => {
-      fileLogger.log(logEventMessage(event, message));
+      fileLogger.log(event, message);
     };
   }
 }
