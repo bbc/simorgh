@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`CanonicalAds Ads Snapshots should correctly render an AdSlot with leaderboard id 1`] = `
-<div
-  class="dotcom-ad"
-  id="dotcom-leaderboard"
-/>
-`;
