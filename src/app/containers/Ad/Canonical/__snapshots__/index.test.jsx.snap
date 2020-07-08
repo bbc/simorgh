@@ -1,5 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad with dotcom-bootstrap script 1`] = `
+<html>
+  <head>
+    <script
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+    />
+  </head>
+  <body>
+    .c0 {
+  background-color: #F6F6F6;
+  min-height: 15.625rem;
+}
+
+<div>
+      <div
+        class="c0"
+      >
+        <div
+          class="dotcom-ad"
+          id="dotcom-mpu"
+        />
+      </div>
+    </div>
+  </body>
+</html>
+`;
+
 exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderboard ad with dotcom-bootstrap script 1`] = `
 .c0 {
   background-color: #F6F6F6;

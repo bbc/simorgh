@@ -97,7 +97,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
-      <AdContainer />
+      <AdContainer slotType="leaderboard" />
       <main role="main">
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}
@@ -111,6 +111,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
                   <RadioScheduleContainer initialData={radioScheduleData} />
                 )}
               <IndexPageSection group={group} sectionNumber={index} />
+              {group.type === 'top-stories' && <AdContainer slotType="mpu" />}
             </Fragment>
           ))}
           {!hasUsefulLinks && renderMostRead(mostReadEndpointOverride)}
