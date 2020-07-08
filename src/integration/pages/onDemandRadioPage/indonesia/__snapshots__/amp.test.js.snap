@@ -118,6 +118,17 @@ Object {
 }
 `;
 
+exports[`AMP On Demand Radio Page Analytics comscore 1`] = `
+Object {
+  "extraUrlParams": Object {
+    "comscorekw": "amp",
+  },
+  "vars": Object {
+    "c2": "17986528",
+  },
+}
+`;
+
 exports[`AMP On Demand Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/indonesia"`;
 
 exports[`AMP On Demand Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
