@@ -21,10 +21,17 @@ const canonicalPathname = 'https://www.bbc.com/service/foo';
 
 const ampPathname = 'https://www.bbc.com/service/foo.amp';
 
+const [
+  idt1Block,
+  idt2Block,
+  vjBlock,
+  unsupportedIncludeBlock,
+  noHrefIncludeBlock,
+] = pageData.content.blocks;
+
 describe('convertInclude', () => {
   const initialIncludesBaseUrl = process.env.SIMORGH_INCLUDES_BASE_URL;
   const initialIncludesAmpBaseUrl = process.env.SIMORGH_INCLUDES_BASE_AMP_URL;
-  const { blocks } = pageData.content;
 
   beforeEach(() => {
     process.env.SIMORGH_INCLUDES_BASE_URL = 'https://foobar.com/includes';
@@ -41,7 +48,7 @@ describe('convertInclude', () => {
 
   it('should fetch and convert an include block to an idt1 block', async () => {
     fetch.mockResponse(() => Promise.resolve(idt1Markup));
-    const input = blocks[0];
+    const input = idt1Block;
     const expected = {
       type: 'include',
       model: {
@@ -70,7 +77,7 @@ describe('convertInclude', () => {
 
   it('should fetch and convert an include block to an idt2 block for a canonical request', async () => {
     fetch.mockResponse(() => Promise.resolve(idt2Markup));
-    const input = blocks[1];
+    const input = idt2Block;
     const expected = {
       type: 'include',
       model: {
@@ -108,7 +115,7 @@ describe('convertInclude', () => {
 
   it('convert an include block to an idt2 block with an image block for an amp request', async () => {
     fetch.mockResponse(() => Promise.resolve(idt2Markup));
-    const input = blocks[1];
+    const input = idt2Block;
     const expected = {
       type: 'include',
       model: {
@@ -134,7 +141,7 @@ describe('convertInclude', () => {
 
   it('should fetch and convert an include block to a vj block', async () => {
     fetch.mockResponse(() => Promise.resolve(vjMarkup));
-    const input = blocks[2];
+    const input = vjBlock;
     const expected = {
       type: 'include',
       model: {
@@ -163,7 +170,7 @@ describe('convertInclude', () => {
 
   it('should convert an include block to an idt2 block with html set to null when fetch returns with status other than 200', async () => {
     fetch.mockResponse(() => Promise.resolve({ status: 304 }));
-    const input = blocks[1];
+    const input = idt2Block;
     const expected = {
       type: 'include',
       model: {
@@ -205,7 +212,7 @@ describe('convertInclude', () => {
   const propogateQueryTest = (summary, pathname, expectedUrlQuery) => {
     it(`should fetch and convert an include block with ${summary}`, async () => {
       fetch.mockResponse(() => Promise.resolve(idt1Markup));
-      const input = blocks[0];
+      const input = idt1Block;
       const assetType = null;
 
       const expected = {
@@ -262,7 +269,7 @@ describe('convertInclude', () => {
 
   it('should return null for an unsupported include type', async () => {
     fetch.mockResponse(() => Promise.resolve('No fetch call'));
-    const input = blocks[3];
+    const input = unsupportedIncludeBlock;
     expect(await convertInclude(input, null, null, canonicalPathname)).toEqual(
       null,
     );
@@ -278,7 +285,7 @@ describe('convertInclude', () => {
 
   it('should return null for null/undefined href', async () => {
     fetch.mockResponse(() => Promise.resolve('No fetch call'));
-    const input = blocks[4];
+    const input = noHrefIncludeBlock;
     const output = await convertInclude(input, null, null, canonicalPathname);
     expect(fetch).not.toHaveBeenCalled();
     expect(output).toEqual(null);
@@ -297,7 +304,7 @@ describe('convertInclude', () => {
     fetch.mockResponse(() => {
       throw new Error('this is an error message');
     });
-    const input = blocks[5];
+    const input = idt1Block;
     const output = await convertInclude(
       input,
       pageData,

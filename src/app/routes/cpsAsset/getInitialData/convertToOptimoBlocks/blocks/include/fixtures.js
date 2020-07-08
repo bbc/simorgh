@@ -58,13 +58,6 @@ export default {
         platform: 'highweb',
         type: 'include',
       },
-      {
-        required: false,
-        tile: 'A quiz!',
-        href: '/indepthtoolkit/quizzes/123-456',
-        platform: 'highweb',
-        type: 'include',
-      },
     ],
   },
 };
