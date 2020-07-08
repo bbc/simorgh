@@ -14,7 +14,7 @@ const baseUrl = 'http://localhost:7080';
  * To be fixed in https://github.com/bbc/simorgh/issues/5222
  */
 
-const mediaEmbedTestsToSuppress = [
+const mediaEmbedErrorsToSuppress = [
   // * Design: Content resizing: Text must be styled with units that are resizable in all browsers
   "Text styled with px unit: //button[@id='p_audioui_backInterval']/div/div[1]",
   "Text styled with px unit: //button[@id='p_audioui_backInterval']/div/div[2]",
@@ -43,17 +43,19 @@ const pageTypes = {
   frontPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   articles: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   liveRadio: [
-    ...mediaEmbedTestsToSuppress,
+    ...mediaEmbedErrorsToSuppress,
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
   ],
   photoGalleryPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   mostReadPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
   storyPage: [
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
+    '/iframe', // same issues as in mediaEmbedErrorsToSuppress but the DOM path is different
     "//div[@id='root']/div/div[1]/main/div[37]/div/div/div", // issue with IDT2 includes
+    "//div[@id='ns_datapic_royal-engagements']",
   ],
   onDemandRadio: [
-    ...mediaEmbedTestsToSuppress,
+    ...mediaEmbedErrorsToSuppress,
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
   ],
   idxPage: ["//div[@id='root']/header/nav/div/div[1]/div/ul"],
