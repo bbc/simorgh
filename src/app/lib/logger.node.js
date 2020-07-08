@@ -27,6 +27,7 @@ const createLogDirectory = (dirName = 'log') => {
 
 const logLocation = path.join(LOG_DIR, LOG_FILE);
 
+// This sets the custom format for how logs are presented in the console
 const logFormat = printf(
   ({ timestamp, level, label: filename, message: event, metadata }) =>
     `${timestamp} ${level} [${filename}]: ${event}, metadata: ${JSON.stringify(
@@ -64,7 +65,7 @@ const logToFile = callingFile => {
   createLogDirectory(LOG_DIR);
 
   return createLogger({
-    format: format.combine(
+    format: combine(
       label({ label: folderAndFilename(callingFile) }),
       simple(),
       timestamp({ format: 'YYYY-MM-DD HH:mm:ss.SSS' }),
