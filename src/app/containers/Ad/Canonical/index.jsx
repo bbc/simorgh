@@ -10,7 +10,6 @@ import isLive from '#lib/utilities/isLive';
 const LEADERBOARD_HEIGHT = '5.5rem';
 const LEADERBOARD_HEIGHT_GROUP_4_5 = '9rem';
 const MPU_HEIGHT = '15.625rem';
-  
 const leaderboardStyles = css`
   min-height: ${LEADERBOARD_HEIGHT};
 
@@ -23,7 +22,7 @@ const mpuStyles = css`
   min-height: ${MPU_HEIGHT};
 `;
 
-const AdSection = styled.section.attrs({
+const AdContainer = styled.section.attrs({
   ariaHidden: 'true',
   role: 'region',
   ariaLabel: 'advertisement',
@@ -65,9 +64,9 @@ const CanonicalAd = ({ slotType }) => {
       <Helmet>
         <script src={getBootsrapSrc(queryString)} />
       </Helmet>
-      <AdSection slotType={slotType}>
+      <AdContainer slotType={slotType}>
         <div id={`dotcom-${slotType}`} className="dotcom-ad" />
-      </AdSection>
+      </AdContainer>
     </>
   );
 };
