@@ -1,4 +1,4 @@
-import { escape } from 'escape-html';
+import escape from 'escape-html';
 
 const getImageBlock = (type, blockData, isAmp) => {
   const supportedImageTypes = ['idt2'];
