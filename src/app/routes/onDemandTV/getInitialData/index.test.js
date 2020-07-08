@@ -6,7 +6,7 @@ import loggerMock from '#testHelpers/loggerMock';
 import getInitialData from '.';
 import * as fetchPageData from '../../utils/fetchPageData';
 import onDemandTvJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4';
-import { TV_MISSING_FIELD, TV_EPISODE_EXPIRED } from '#lib/logger.const';
+import { TV_MISSING_FIELD, EPISODE_EXPIRED } from '#lib/logger.const';
 
 fetch.mockResponse(JSON.stringify(onDemandTvJson));
 const { env } = process;
@@ -63,7 +63,7 @@ describe('Get initial data for on demand tv', () => {
     fetch.mockResponse(JSON.stringify(pageDataWithoutVersions));
     const { pageData } = await getInitialData('some-ondemand-tv-path');
     expect(pageData.episodeIsAvailable).toEqual(false);
-    expect(loggerMock.info).toHaveBeenCalledWith(TV_EPISODE_EXPIRED, {
+    expect(loggerMock.info).toHaveBeenCalledWith(EPISODE_EXPIRED, {
       url: 'pashto/bbc_pashto_tv/w172xcldhhrdqgb',
     });
   });
@@ -81,8 +81,6 @@ describe('Get initial data for on demand tv', () => {
     ];
 
     const infoFields = [
-      ['content', 'blocks', '0', 'versions', '0', 'availableFrom'],
-      ['content', 'blocks', '0', 'versions', '0', 'availableUntil'],
       ['metadata', 'language'],
       ['metadata', 'title'],
       ['promo', 'media', 'synopses', 'short'],
