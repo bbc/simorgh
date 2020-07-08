@@ -18,7 +18,7 @@ import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandRadio/getInitialData';
 
-const Page = ({ pageData, service, isAmp = false, variant }) => (
+const Page = ({ pageData, service, isAmp = false, variant = 'default' }) => (
   <StaticRouter>
     <ToggleContextProvider
       service={service}
