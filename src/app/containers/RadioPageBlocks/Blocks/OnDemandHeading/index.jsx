@@ -45,13 +45,15 @@ const HeadingContainer = ({
   releaseDateTimeStamp,
   ariaHidden,
 }) => {
-  const { script, service, timezone, locale } = useContext(ServiceContext);
+  const { script, service, timezone, datetimeLocale } = useContext(
+    ServiceContext,
+  );
 
   const formattedTimestamp = formatUnixTimestamp({
     timestamp: releaseDateTimeStamp,
     format: 'LL',
     timezone,
-    locale,
+    locale: datetimeLocale,
     isRelative: false,
   });
 
