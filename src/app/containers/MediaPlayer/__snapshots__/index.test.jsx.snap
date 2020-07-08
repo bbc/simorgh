@@ -133,6 +133,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 @media (min-width:37.5rem) {
@@ -162,6 +163,12 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
 @media (min-width:25rem) {
   .c5 {
     padding: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c1 {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -264,6 +271,7 @@ exports[`MediaPlayer Does not Call the canonical placeholder when platform is ca
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c2 {
@@ -274,6 +282,12 @@ exports[`MediaPlayer Does not Call the canonical placeholder when platform is ca
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+@media (min-width:63rem) {
+  .c1 {
+    margin-bottom: 1.5rem;
+  }
 }
 
 <div>
@@ -324,6 +338,13 @@ exports[`MediaPlayer Renders the AMP player when platform is AMP 1`] = `
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+@media (min-width:63rem) {
+  .c1 {
+    margin-bottom: 1.5rem;
+  }
 }
 
 <div>
