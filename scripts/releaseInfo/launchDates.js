@@ -202,7 +202,7 @@ const launchDates = {
     storyPage: '4th June 2020',
     mostReadPage: '28th May 2020',
     onDemandRadio: '30th June 2020',
-    onDemandTV: '',
+    onDemandTV: '9th July 2020',
   },
   persian: {
     articles: 'Sept 2019',
@@ -285,7 +285,7 @@ const launchDates = {
     storyPage: '25th June 2020',
     mostReadPage: '28th May 2020',
     onDemandRadio: '7th July 2020',
-    onDemandTV: '',
+    onDemandTV: '9th July 2020',
   },
   sport: {
     articles: 'Sept 2019',
