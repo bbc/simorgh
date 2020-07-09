@@ -27,6 +27,7 @@ const [
   vjBlock,
   unsupportedIncludeBlock,
   noHrefIncludeBlock,
+  vjAmpSupportedBlock,
 ] = pageData.content.blocks;
 
 describe('convertInclude', () => {
@@ -328,18 +329,12 @@ describe('convertInclude', () => {
     fetch.mockResponse(() => Promise.resolve('No fetch call'));
     const includeSupportingAmp =
       '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png';
-    const input = {
-      required: false,
-      tile: 'Include from VisJo',
-      href: includeSupportingAmp,
-      platform: 'highweb',
-      type: 'include',
-    };
+    const input = vjAmpSupportedBlock;
     const expected = {
       type: 'include',
       model: {
         href: includeSupportingAmp,
-        index: -1,
+        index: 5,
         type: 'vj',
         ampMetadata: {
           image:
