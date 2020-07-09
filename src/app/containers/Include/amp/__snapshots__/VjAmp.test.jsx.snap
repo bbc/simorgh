@@ -6,7 +6,7 @@ exports[`VJ include container on Amp should render an amp-iframe with an image p
     class="GridItemConstrainedMedium-sc-12lwanc-2 IncludeGrid-sc-10v41ix-0 dworjG"
   >
     <amp-iframe
-      class="StyledAmpIframe-sc-10v41ix-1 gkCWOG"
+      class="StyledAmpIframe-sc-10v41ix-1 jQkQmw"
       height="360"
       layout="responsive"
       resizable="true"
@@ -21,7 +21,7 @@ exports[`VJ include container on Amp should render an amp-iframe with an image p
           aria-label="Show More"
           type="button"
         >
-          Show More
+          Show more
         </button>
       </div>
       <amp-img

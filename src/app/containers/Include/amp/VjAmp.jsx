@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { shape, string, node } from 'prop-types';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '@bbc/gel-foundations/dist/spacings';
+import { C_EBON } from '@bbc/psammead-styles/colours';
+import { getSansBold } from '@bbc/psammead-styles/font-styles';
+import { GEL_PICA } from '@bbc/gel-foundations/typography';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const KEYLINE_WIDTH = '0.125rem';
 
@@ -40,7 +44,7 @@ const StyledAmpIframe = styled(AmpIframe)`
 
     &::after {
       background-color: #fff;
-      border-top: ${KEYLINE_WIDTH} solid #1380a1;
+      border-top: ${KEYLINE_WIDTH} solid ${C_EBON};
       content: '';
       display: block;
       height: 50%;
@@ -52,23 +56,34 @@ const StyledAmpIframe = styled(AmpIframe)`
     }
 
     button {
-      background-color: #1380a1;
+      ${({ service }) => getSansBold(service)}
+      ${GEL_PICA}
+      background-color: ${C_EBON};
       border: none;
       color: #fff;
       cursor: pointer;
       display: block;
       padding: ${GEL_SPACING} ${GEL_SPACING_DBL};
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 `;
 
 const VjAmp = ({ ampMetadata: { imageWidth, imageHeight, image, src } }) => {
+  const { service } = useContext(ServiceContext);
   return (
     <IncludeGrid>
-      <StyledAmpIframe width={imageWidth} height={imageHeight} src={src}>
+      <StyledAmpIframe
+        width={imageWidth}
+        height={imageHeight}
+        src={src}
+        service={service}
+      >
         <div overflow="true">
           <button type="button" aria-label="Show More">
-            Show More
+            Show more
           </button>
         </div>
         <amp-img layout="fill" src={image} placeholder />
