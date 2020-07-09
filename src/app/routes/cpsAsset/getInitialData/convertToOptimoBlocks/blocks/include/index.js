@@ -1,5 +1,6 @@
 import 'isomorphic-fetch';
 import Url from 'url-parse';
+import path from 'ramda/src/path';
 import {
   INCLUDE_ERROR,
   INCLUDE_FETCH_ERROR,
@@ -68,12 +69,13 @@ const fetchMarkup = async url => {
   }
 };
 
-const convertInclude = async (includeBlock, ...restParams) => {
+const convertInclude = async (includeBlock, pageData, ...restParams) => {
   const { href, type } = includeBlock;
 
   // Here pathname is passed as a prop specifically for CPS includes
   // This will most likely change in issue #6784 so it is temporary for now
-  const pathname = restParams[2];
+  const pathname = restParams[1];
+  const blocks = path(['content', 'blocks'], pageData);
 
   const ampRegex = /\.amp$/;
   const isAmp = ampRegex.test(pathname);
@@ -93,6 +95,10 @@ const convertInclude = async (includeBlock, ...restParams) => {
     });
     return null;
   }
+
+  const includeMap = blocks.filter(block => block.type === 'include');
+
+  const index = includeMap.indexOf(includeBlock);
 
   let ampMetadata;
   let html;
@@ -117,6 +123,7 @@ const convertInclude = async (includeBlock, ...restParams) => {
     type,
     model: {
       href,
+      index,
       type: includeType,
       ...(ampMetadata && { ampMetadata }),
       ...(html && { html }),
