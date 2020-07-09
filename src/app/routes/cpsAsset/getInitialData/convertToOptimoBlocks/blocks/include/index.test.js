@@ -484,16 +484,17 @@ describe('convertInclude', () => {
       type: 'news/special',
     };
     const actual = await convertInclude(input, null, null, ampPathname);
+    const expected = {
+      type: 'news/special',
+      model: {
+        href: notSupportedVjIncludeOnAmp,
+        classification: 'vj-amp-not-supported',
+        type: 'vj',
+      },
+    };
     expect(fetch).not.toHaveBeenCalled();
     expect(loggerMock.error).not.toHaveBeenCalled();
     expect(loggerMock.info).toHaveBeenCalledTimes(0);
-    expect(loggerMock.info).toHaveBeenCalledWith(
-      INCLUDE_IFRAME_REQUEST_RECEIVED,
-      {
-        url:
-          'https://news.files.bbci.co.uk/include/newsspec/21841-green-diet/gahuza/app/amp?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
-      },
-    );
-    expect(actual).toEqual(null);
+    expect(actual).toEqual(expected);
   });
 });
