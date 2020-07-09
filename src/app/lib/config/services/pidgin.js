@@ -8,7 +8,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     ads: {
-      hasAds: true,
+      hasAds: false,
       advertisementLabel: 'Tori we dem pay for',
     },
     lang: 'pcm',

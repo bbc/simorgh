@@ -76,8 +76,11 @@ module.exports = () => ({
       onDemandRadio: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/afaanoromoo/bbc_afaanoromoo_radio/programmes/w13xttnw', // Brand
+              '/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l9z', // Episode
+            ],
+            enabled: true,
           },
           test: {
             paths: [
@@ -676,8 +679,11 @@ module.exports = () => ({
       onDemandRadio: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/arabic/bbc_arabic_radio/programmes/p030vh2y', // Brand
+              '/arabic/bbc_arabic_radio/w172xdh4ttj5s2s', // Episode
+            ],
+            enabled: true,
           },
           test: {
             paths: [
@@ -3929,13 +3935,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // Brand
+              '/pashto/bbc_pashto_tv/tv/w172xclg9vbp23x', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // Brand
-              '/pashto/bbc_pashto_tv/tv/w172xclg9vb9ghj', // Episode
+              '/pashto/bbc_pashto_tv/tv/w172xclg9vbp23x', // Episode
             ],
             enabled: true,
           },
@@ -5621,8 +5628,11 @@ module.exports = () => ({
       onDemandRadio: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/somali/bbc_somali_radio/programmes/p034117j', // Brand
+              '/somali/bbc_somali_radio/w172xjr5vsxs50p', // Episode
+            ],
+            enabled: true,
           },
           test: {
             paths: [
@@ -5643,13 +5653,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
+              '/somali/bbc_somali_tv/tv/w172xcmp3ny6zzr', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
-              '/somali/bbc_somali_tv/tv/w172xcmp3ny6zzr', // Brand
+              '/somali/bbc_somali_tv/tv/w172xcmp3ny6zzr', // Episode
             ],
             enabled: true,
           },
@@ -8300,7 +8311,8 @@ module.exports = () => ({
         environments: {
           live: {
             paths: [
-              '/zhongwen/simp/bbc_cantonese_radio/w172xf3rxfx25cj', // Brand
+              '/zhongwen/simp/bbc_cantonese_radio/programmes/p0340tsy', // Brand
+              '/zhongwen/simp/bbc_cantonese_radio/w172xf3rxfx25cj', // Episode
             ],
             enabled: true,
           },
@@ -8482,9 +8494,10 @@ module.exports = () => ({
         environments: {
           live: {
             paths: [
-              '/zhongwen/trad/bbc_cantonese_radio/w172xf3rxfx25cj', // Brand
+              '/zhongwen/trad/bbc_cantonese_radio/programmes/p0340tsy', // Brand
+              '/zhongwen/trad/bbc_cantonese_radio/w172xf3rxfx25cj', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [

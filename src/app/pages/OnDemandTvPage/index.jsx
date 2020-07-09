@@ -96,9 +96,14 @@ const OnDemandTvPage = ({ pageData }) => {
     durationISO8601,
   } = pageData;
 
-  const { lang, timezone, locale, dir, service, translations } = useContext(
-    ServiceContext,
-  );
+  const {
+    lang,
+    timezone,
+    datetimeLocale,
+    dir,
+    service,
+    translations,
+  } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
 
@@ -106,7 +111,7 @@ const OnDemandTvPage = ({ pageData }) => {
     timestamp: releaseDateTimeStamp,
     format: 'LL',
     timezone,
-    locale,
+    locale: datetimeLocale,
     isRelative: false,
   });
 
