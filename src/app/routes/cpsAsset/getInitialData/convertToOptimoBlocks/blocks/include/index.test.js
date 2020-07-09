@@ -1,6 +1,7 @@
 import loggerMock from '#testHelpers/loggerMock'; // Must be imported before convertInclude
 
 import convertInclude from '.';
+import pageData from './fixtures';
 import {
   INCLUDE_ERROR,
   INCLUDE_FETCH_ERROR,
@@ -19,6 +20,15 @@ const idt1Markup = `<div>IDT 1 Markup</div><script type="text/javascript" src="l
 const canonicalPathname = 'https://www.bbc.com/service/foo';
 
 const ampPathname = 'https://www.bbc.com/service/foo.amp';
+
+const [
+  idt1Block,
+  idt2Block,
+  vjBlock,
+  unsupportedIncludeBlock,
+  noHrefIncludeBlock,
+  vjAmpSupportedBlock,
+] = pageData.content.blocks;
 
 describe('convertInclude', () => {
   const initialIncludesBaseUrl = process.env.SIMORGH_INCLUDES_BASE_URL;
@@ -39,25 +49,20 @@ describe('convertInclude', () => {
 
   it('should fetch and convert an include block to an idt1 block', async () => {
     fetch.mockResponse(() => Promise.resolve(idt1Markup));
-    const input = {
-      required: false,
-      tile: 'A quiz!',
-      href: '/indepthtoolkit/quizzes/123-456',
-      platform: 'highweb',
-      type: 'include',
-    };
+    const input = idt1Block;
     const expected = {
       type: 'include',
       model: {
         href: '/indepthtoolkit/quizzes/123-456',
+        index: 0,
         classification: 'idt1-canonical',
         type: 'idt1',
         html: idt1Markup,
       },
     };
-    expect(await convertInclude(input, null, null, canonicalPathname)).toEqual(
-      expected,
-    );
+    expect(
+      await convertInclude(input, pageData, null, canonicalPathname),
+    ).toEqual(expected);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/indepthtoolkit/quizzes/123-456',
@@ -74,39 +79,12 @@ describe('convertInclude', () => {
 
   it('should fetch and convert an include block to an idt2 block for a canonical request', async () => {
     fetch.mockResponse(() => Promise.resolve(idt2Markup));
-    const input = {
-      required: false,
-      tile: 'IDT2 Include',
-      href: '/idt2/111-222-333-444-555',
-      platform: 'highweb',
-      type: 'include',
-      idt2: {
-        altText: 'image alt text',
-        dimensions: {
-          small: {
-            href: '/idt2/111-222-333-444-555/image/350',
-            width: 700,
-            height: 1864,
-          },
-          medium: {
-            href: '/idt2/111-222-333-444-555/image/470',
-            width: 940,
-            height: 1864,
-          },
-          large: {
-            href: '/idt2/111-222-333-444-555/image/816',
-            width: 1632,
-            height: 1864,
-          },
-        },
-        copyrightHolder: 'Source: BBC',
-        published: 1550229370779,
-      },
-    };
+    const input = idt2Block;
     const expected = {
       type: 'include',
       model: {
         href: '/idt2/111-222-333-444-555',
+        index: 1,
         classification: 'idt2-canonical',
         type: 'idt2',
         html: idt2Markup,
@@ -121,9 +99,9 @@ describe('convertInclude', () => {
         },
       },
     };
-    expect(await convertInclude(input, null, null, canonicalPathname)).toEqual(
-      expected,
-    );
+    expect(
+      await convertInclude(input, pageData, null, canonicalPathname),
+    ).toEqual(expected);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/idt2/111-222-333-444-555/html',
@@ -140,39 +118,12 @@ describe('convertInclude', () => {
 
   it('convert an include block to an idt2 block with an image block for an amp request', async () => {
     fetch.mockResponse(() => Promise.resolve(idt2Markup));
-    const input = {
-      required: false,
-      tile: 'IDT2 Include',
-      href: '/idt2/111-222-333-444-555',
-      platform: 'highweb',
-      type: 'include',
-      idt2: {
-        altText: 'image alt text',
-        dimensions: {
-          small: {
-            href: '/idt2/111-222-333-444-555/image/350',
-            width: 700,
-            height: 1864,
-          },
-          medium: {
-            href: '/idt2/111-222-333-444-555/image/470',
-            width: 940,
-            height: 1864,
-          },
-          large: {
-            href: '/idt2/111-222-333-444-555/image/816',
-            width: 1632,
-            height: 1864,
-          },
-        },
-        copyrightHolder: 'Source: BBC',
-        published: 1550229370779,
-      },
-    };
+    const input = idt2Block;
     const expected = {
       type: 'include',
       model: {
         href: '/idt2/111-222-333-444-555',
+        index: 1,
         classification: 'idt2-amp',
         type: 'idt2',
         imageBlock: {
@@ -187,32 +138,27 @@ describe('convertInclude', () => {
       },
     };
     expect(
-      await convertInclude(input, null, null, '/news/1234568.amp'),
+      await convertInclude(input, pageData, null, '/news/1234568.amp'),
     ).toEqual(expected);
     expect(fetch).not.toHaveBeenCalled();
   });
 
   it('should fetch and convert an include block to a vj block', async () => {
     fetch.mockResponse(() => Promise.resolve(vjMarkup));
-    const input = {
-      required: false,
-      tile: 'Include from VisJo',
-      href: '/include/111-222-333-444-555',
-      platform: 'highweb',
-      type: 'include',
-    };
+    const input = vjBlock;
     const expected = {
       type: 'include',
       model: {
         href: '/include/111-222-333-444-555',
+        index: 2,
         classification: 'vj-canonical',
         type: 'vj',
         html: vjMarkup,
       },
     };
-    expect(await convertInclude(input, null, null, canonicalPathname)).toEqual(
-      expected,
-    );
+    expect(
+      await convertInclude(input, pageData, null, canonicalPathname),
+    ).toEqual(expected);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
       'https://foobar.com/includes/include/111-222-333-444-555',
@@ -229,39 +175,12 @@ describe('convertInclude', () => {
 
   it('should convert an include block to an idt2 block with html set to null when fetch returns with status other than 200', async () => {
     fetch.mockResponse(() => Promise.resolve({ status: 304 }));
-    const input = {
-      required: false,
-      tile: 'IDT2 Include',
-      href: 'idt2',
-      platform: 'highweb',
-      type: 'include',
-      idt2: {
-        altText: 'image alt text',
-        dimensions: {
-          small: {
-            href: '/idt2/111-222-333-444-555/image/350',
-            width: 700,
-            height: 1864,
-          },
-          medium: {
-            href: '/idt2/111-222-333-444-555/image/470',
-            width: 940,
-            height: 1864,
-          },
-          large: {
-            href: '/idt2/111-222-333-444-555/image/816',
-            width: 1632,
-            height: 1864,
-          },
-        },
-        copyrightHolder: 'Source: BBC',
-        published: 1550229370779,
-      },
-    };
+    const input = idt2Block;
     const expected = {
       type: 'include',
       model: {
-        href: 'idt2',
+        href: '/idt2/111-222-333-444-555',
+        index: 1,
         classification: 'idt2-canonical',
         type: 'idt2',
         imageBlock: {
@@ -275,53 +194,47 @@ describe('convertInclude', () => {
         },
       },
     };
-    expect(await convertInclude(input, null, null, canonicalPathname)).toEqual(
-      expected,
-    );
+    expect(
+      await convertInclude(input, pageData, null, canonicalPathname),
+    ).toEqual(expected);
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(
-      'https://foobar.com/includes/idt2/html',
+      'https://foobar.com/includes/idt2/111-222-333-444-555/html',
       {
         timeout: 3000,
       },
     );
     expect(loggerMock.info).toHaveBeenCalledTimes(1);
     expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_REQUEST_RECEIVED, {
-      url: `https://foobar.com/includes/idt2/html`,
+      url: `https://foobar.com/includes/idt2/111-222-333-444-555/html`,
     });
     expect(loggerMock.error).toHaveBeenCalledTimes(1);
     expect(loggerMock.error).toBeCalledWith(INCLUDE_FETCH_ERROR, {
       status: 304,
-      url: 'https://foobar.com/includes/idt2/html',
+      url: 'https://foobar.com/includes/idt2/111-222-333-444-555/html',
     });
   });
 
   const propogateQueryTest = (summary, pathname, expectedUrlQuery) => {
     it(`should fetch and convert an include block with ${summary}`, async () => {
       fetch.mockResponse(() => Promise.resolve(idt1Markup));
-      const input = {
-        required: false,
-        tile: 'A quiz!',
-        href: '/indepthtoolkit/quizzes/123-456',
-        platform: 'highweb',
-        type: 'include',
-      };
-      const json = null;
+      const input = idt1Block;
       const assetType = null;
 
       const expected = {
         type: 'include',
         model: {
           href: '/indepthtoolkit/quizzes/123-456',
+          index: 0,
           classification: 'idt1-canonical',
           type: 'idt1',
           html: idt1Markup,
         },
       };
 
-      expect(await convertInclude(input, json, assetType, pathname)).toEqual(
-        expected,
-      );
+      expect(
+        await convertInclude(input, pageData, assetType, pathname),
+      ).toEqual(expected);
       expect(fetch).toHaveBeenCalledTimes(1);
       expect(fetch).toHaveBeenCalledWith(
         `https://foobar.com/includes/indepthtoolkit/quizzes/123-456${expectedUrlQuery}`,
@@ -363,13 +276,7 @@ describe('convertInclude', () => {
 
   it('should return null for an unsupported include type', async () => {
     fetch.mockResponse(() => Promise.resolve('No fetch call'));
-    const input = {
-      required: false,
-      tile: 'A random include',
-      href: '/idt3/111-222-333-444-555',
-      platform: 'highweb',
-      type: 'include',
-    };
+    const input = unsupportedIncludeBlock;
     expect(await convertInclude(input, null, null, canonicalPathname)).toEqual(
       null,
     );
@@ -385,13 +292,7 @@ describe('convertInclude', () => {
 
   it('should return null for null/undefined href', async () => {
     fetch.mockResponse(() => Promise.resolve('No fetch call'));
-    const input = {
-      required: false,
-      tile: 'An include with no href',
-      href: null,
-      platform: 'highweb',
-      type: 'include',
-    };
+    const input = noHrefIncludeBlock;
     const output = await convertInclude(input, null, null, canonicalPathname);
     expect(fetch).not.toHaveBeenCalled();
     expect(output).toEqual(null);
@@ -410,14 +311,13 @@ describe('convertInclude', () => {
     fetch.mockResponse(() => {
       throw new Error('this is an error message');
     });
-    const input = {
-      required: false,
-      tile: 'A quiz!',
-      href: '/indepthtoolkit/quizzes/123-456',
-      platform: 'highweb',
-      type: 'include',
-    };
-    const output = await convertInclude(input, null, null, canonicalPathname);
+    const input = idt1Block;
+    const output = await convertInclude(
+      input,
+      pageData,
+      null,
+      canonicalPathname,
+    );
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(output.model.html).toEqual(undefined);
     expect(loggerMock.info).toHaveBeenCalledTimes(1);
@@ -435,17 +335,12 @@ describe('convertInclude', () => {
     fetch.mockResponse(() => Promise.resolve('No fetch call'));
     const includeSupportingAmp =
       '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png';
-    const input = {
-      required: false,
-      tile: 'Include from VisJo',
-      href: includeSupportingAmp,
-      platform: 'highweb',
-      type: 'include',
-    };
+    const input = vjAmpSupportedBlock;
     const expected = {
       type: 'include',
       model: {
         href: includeSupportingAmp,
+        index: 5,
         classification: 'vj-supports-amp',
         type: 'vj',
         ampMetadata: {
@@ -458,7 +353,7 @@ describe('convertInclude', () => {
         },
       },
     };
-    const actual = await convertInclude(input, null, null, ampPathname);
+    const actual = await convertInclude(input, pageData, null, ampPathname);
     expect(fetch).not.toHaveBeenCalled();
     expect(loggerMock.error).not.toHaveBeenCalled();
     expect(loggerMock.info).toHaveBeenCalledTimes(1);
