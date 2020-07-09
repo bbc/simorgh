@@ -1322,6 +1322,4 @@ describe('Server HTTP Headers', () => {
       );
     });
   });
-
-  describe('custom metrics', () => {});
 });
