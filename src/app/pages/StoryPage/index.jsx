@@ -29,6 +29,7 @@ import TopStories from '#containers/CpsTopStories';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import MostReadContainer from '#containers/MostRead';
 import ATIAnalytics from '#containers/ATIAnalytics';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
@@ -54,6 +55,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     service,
   } = useContext(ServiceContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
+  const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
   const category = path(
     ['promo', 'passport', 'category', 'categoryName'],
     pageData,
@@ -183,6 +185,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
       width: 100%;
     }
+    padding-bottom: ${GEL_SPACING_QUAD};
   `;
 
   const GridSecondaryColumn = styled(Grid)`
@@ -236,6 +239,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     <>
       <CpsMetadata
         title={title}
+        shortHeadline={shortHeadline}
         language={metadata.language}
         description={summary}
         firstPublished={firstPublished}
@@ -256,7 +260,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
-
+      <ComscoreAnalytics />
       <StoryPageGrid
         dir={dir}
         columns={gridColumns}
