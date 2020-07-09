@@ -8,10 +8,21 @@ import {
 import { C_EBON } from '@bbc/psammead-styles/colours';
 import { getSansBold } from '@bbc/psammead-styles/font-styles';
 import { GEL_PICA } from '@bbc/gel-foundations/typography';
+import { Helmet } from 'react-helmet';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const KEYLINE_WIDTH = '0.125rem';
+
+const AmpHead = () => (
+  <Helmet>
+    <script
+      async
+      custom-element="amp-iframe"
+      src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    />
+  </Helmet>
+);
 
 const IncludeGrid = styled(GridItemConstrainedMedium)`
   display: grid;
@@ -74,21 +85,24 @@ const StyledAmpIframe = styled(AmpIframe)`
 const VjAmp = ({ ampMetadata: { imageWidth, imageHeight, image, src } }) => {
   const { service } = useContext(ServiceContext);
   return (
-    <IncludeGrid>
-      <StyledAmpIframe
-        width={imageWidth}
-        height={imageHeight}
-        src={src}
-        service={service}
-      >
-        <div overflow="true">
-          <button type="button" aria-label="Show More">
-            Show more
-          </button>
-        </div>
-        <amp-img layout="fill" src={image} placeholder />
-      </StyledAmpIframe>
-    </IncludeGrid>
+    <>
+      <AmpHead />
+      <IncludeGrid>
+        <StyledAmpIframe
+          width={imageWidth}
+          height={imageHeight}
+          src={src}
+          service={service}
+        >
+          <div overflow="true">
+            <button type="button" aria-label="Show More">
+              Show more
+            </button>
+          </div>
+          <amp-img layout="fill" src={image} placeholder />
+        </StyledAmpIframe>
+      </IncludeGrid>
+    </>
   );
 };
 
