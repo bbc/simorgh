@@ -6,6 +6,7 @@ import getBrandedImage from './utils/getBrandedImage';
 
 const CpsMetadata = ({
   title,
+  shortHeadline,
   language,
   description,
   firstPublished,
@@ -21,6 +22,7 @@ const CpsMetadata = ({
   return (
     <Metadata
       title={title}
+      socialHeadline={shortHeadline}
       lang={language}
       description={description}
       openGraphType="article"
@@ -47,6 +49,7 @@ const tagPropTypes = shape({
 
 CpsMetadata.propTypes = {
   title: string.isRequired,
+  shortHeadline: string.isRequired,
   language: string.isRequired,
   description: string.isRequired,
   firstPublished: string.isRequired,
