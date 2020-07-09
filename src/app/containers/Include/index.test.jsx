@@ -7,7 +7,6 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import * as idt2Amp from './amp/Idt2Amp';
 import * as vjAmp from './amp/VjAmp';
 import * as canonical from './canonical';
-import * as ampFallback from './amp/AmpFallback';
 import { INCLUDE_RENDERED } from '#lib/logger.const';
 
 const defaultToggleState = {
@@ -206,7 +205,7 @@ describe('IncludeContainer', () => {
     };
 
     const mockAmpFallback = jest.fn().mockReturnValue('VJ-Amp-fallback');
-    ampFallback.default = mockAmpFallback;
+    vjAmp.default = mockAmpFallback;
 
     const { container } = render(
       <IncludeContainerWithMockContext
@@ -217,12 +216,5 @@ describe('IncludeContainer', () => {
     );
 
     expect(container).toMatchSnapshot();
-    expect(mockAmpFallback).toHaveBeenCalledTimes(1);
-    // expect(loggerMock.info).toHaveBeenCalledTimes(1);
-    // expect(loggerMock.info).toHaveBeenCalledWith(INCLUDE_RENDERED, {
-    //   type: 'vj',
-    //   includeUrl:
-    //     '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
-    // });
   });
 });

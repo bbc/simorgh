@@ -12,7 +12,22 @@ exports[`IncludeContainer should render a VJ include on an Amp page with toggles
 
 exports[`IncludeContainer should render a fallback for VJs on an Amp page when classified as not supported 1`] = `
 <div>
-  VJ-Amp-fallback
+  <div
+    class="StyledEmbedError-sc-1oc1egd-0 kRErCH"
+  >
+    <div
+      class="StyledErrorMessage-sc-1oc1egd-1 eCvEfh"
+    >
+      <strong>
+        Sorry, we can’t display this part of the story on this lightweight mobile page.
+      </strong>
+      <a
+        href="https://www.bbc.co.uk/"
+      >
+        View the full version of the page to see all the content.
+      </a>
+    </div>
+  </div>
 </div>
 `;
 
