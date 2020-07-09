@@ -14,10 +14,7 @@ import AmpFallback from './amp/AmpFallback';
 
 const logger = nodeLogger(__filename);
 
-const SUPPORTED_FALLBACKS_CLASSIFICATIONS = [
-  'vj-amp-not-supported',
-  'idt1-amp',
-];
+const FALLBACK_CLASSIFICATIONS = ['vj-amp-not-supported', 'idt1-amp'];
 
 const componentsToRender = {
   amp: {
@@ -38,7 +35,7 @@ const IncludeContainer = props => {
   if (!enabled) return null;
   const { classification, href, type } = props;
 
-  if (SUPPORTED_FALLBACKS_CLASSIFICATIONS.includes(classification)) {
+  if (FALLBACK_CLASSIFICATIONS.includes(classification)) {
     return <AmpFallback />;
   }
 
