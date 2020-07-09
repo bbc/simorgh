@@ -7,7 +7,7 @@ const launchDates = {
     storyPage: '25th June 2020',
     photoGalleryPage: '20th Feb 2020',
     mostReadPage: '28th May 2020',
-    onDemandRadio: '',
+    onDemandRadio: '7th July 2020',
   },
   afrique: {
     articles: 'Sept 2019',
@@ -37,7 +37,7 @@ const launchDates = {
     photoGalleryPage: '12th March 2020',
     storyPage: '',
     mostReadPage: '28th May 2020',
-    onDemandRadio: '',
+    onDemandRadio: '7th July 2020',
   },
   archive: {},
   azeri: {
@@ -66,7 +66,7 @@ const launchDates = {
     photoGalleryPage: '12th March 2020',
     storyPage: '25th June 2020',
     mostReadPage: '28th May 2020',
-    onDemandRadio: '',
+    onDemandRadio: '7th July 2020',
   },
   cymrufyw: {
     articles: 'Sept 2019',
@@ -276,7 +276,7 @@ const launchDates = {
     photoGalleryPage: '12th March 2020',
     storyPage: '25th June 2020',
     mostReadPage: '28th May 2020',
-    onDemandRadio: '',
+    onDemandRadio: '7th July 2020',
   },
   sport: {
     articles: 'Sept 2019',
@@ -404,7 +404,7 @@ const launchDates = {
     photoGalleryPage: '24th March 2020',
     storyPage: '',
     mostReadPage: '28th May 2020',
-    onDemandRadio: '',
+    onDemandRadio: '7th July 2020',
   },
   zhongwenTrad: {
     articles: 'Sept 2019',
@@ -412,7 +412,7 @@ const launchDates = {
     photoGalleryPage: '24th March 2020',
     storyPage: '',
     mostReadPage: '28th May 2020',
-    onDemandRadio: '',
+    onDemandRadio: '7th July 2020',
   },
 };
 
