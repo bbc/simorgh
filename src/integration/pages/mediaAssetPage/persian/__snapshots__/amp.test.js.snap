@@ -451,7 +451,7 @@ exports[`AMP Media Asset Page SEO OG locale 1`] = `"fa"`;
 
 exports[`AMP Media Asset Page SEO OG site name 1`] = `"BBC News فارسی"`;
 
-exports[`AMP Media Asset Page SEO OG title 1`] = `"Trump long headline - BBC News فارسی"`;
+exports[`AMP Media Asset Page SEO OG title 1`] = `"Trump short headline - BBC News فارسی"`;
 
 exports[`AMP Media Asset Page SEO OG type 1`] = `"article"`;
 
@@ -473,4 +473,4 @@ exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"http://ichef.test.bb
 
 exports[`AMP Media Asset Page SEO Twitter site 1`] = `"@bbcpersian"`;
 
-exports[`AMP Media Asset Page SEO Twitter title 1`] = `"Trump long headline - BBC News فارسی"`;
+exports[`AMP Media Asset Page SEO Twitter title 1`] = `"Trump short headline - BBC News فارسی"`;
