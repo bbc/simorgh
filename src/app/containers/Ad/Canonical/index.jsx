@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { oneOf } from 'prop-types';
 import styled, { css } from 'styled-components';
 import { C_LUNAR_LIGHT } from '@bbc/psammead-styles/colours';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 
 const LEADERBOARD_HEIGHT = '5.5rem';
@@ -35,6 +36,7 @@ export const getBootsrapSrc = queryString => {
 };
 
 const CanonicalAd = ({ slotType }) => {
+  const { canAdvertise } = useContext(RequestContext);
   const location = useLocation();
   const queryString = location.search;
 
@@ -53,6 +55,10 @@ const CanonicalAd = ({ slotType }) => {
       }
     };
   }, [slotType, location]);
+
+  if (!canAdvertise) {
+    return null;
+  }
 
   return (
     <>
