@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
 
+import EmbedError from '@bbc/psammead-embed-error';
 import nodeLogger from '#lib/logger.node';
 import { INCLUDE_RENDERED } from '#lib/logger.const';
 import { RequestContext } from '#contexts/RequestContext';
@@ -10,7 +11,6 @@ import Canonical from './canonical';
 import Idt2Canonical from './canonical/Idt2';
 import Idt2Amp from './amp/Idt2Amp';
 import VjAmp from './amp/VjAmp';
-import AmpFallback from './amp/AmpFallback';
 
 const logger = nodeLogger(__filename);
 
@@ -36,7 +36,16 @@ const IncludeContainer = props => {
   const { classification, href, type } = props;
 
   if (FALLBACK_CLASSIFICATIONS.includes(classification)) {
-    return <AmpFallback />;
+    return (
+      <EmbedError
+        message="Sorry, we can’t display this part of the story on this lightweight mobile page."
+        link={{
+          text: 'View the full version of the page to see all the content.',
+          href: 'https://www.bbc.co.uk/',
+        }}
+        fillViewport
+      />
+    );
   }
 
   logger.info(INCLUDE_RENDERED, {
