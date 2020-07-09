@@ -46,7 +46,6 @@ describe('Ad Container', () => {
           service="mundo"
           statusCode={200}
           pathname="/mundo"
-          canAdvertise
         >
           <ToggleContext.Provider value={toggleContextMock}>
             <AdContainer slotType="leaderboard" />
@@ -66,7 +65,6 @@ describe('Ad Container', () => {
           service="mundo"
           statusCode={200}
           pathname="/mundo"
-          canAdvertise
         >
           <ToggleContext.Provider value={toggleContextMock}>
             <BrowserRouter>
@@ -88,7 +86,6 @@ describe('Ad Container', () => {
           service="mundo"
           statusCode={200}
           pathname="/mundo"
-          canAdvertise
         >
           <ToggleContext.Provider value={toggleContextMock}>
             <AdContainer slotType="mpu" />
@@ -108,7 +105,6 @@ describe('Ad Container', () => {
           service="mundo"
           statusCode={200}
           pathname="/mundo"
-          canAdvertise
         >
           <ToggleContext.Provider value={toggleContextMock}>
             <BrowserRouter>
