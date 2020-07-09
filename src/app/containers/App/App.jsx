@@ -16,7 +16,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
 
-  const { pageData, status, error, timeOnServer } = initialData;
+  const { pageData, status, error, timeOnServer, canAdvertise } = initialData;
 
   const [state, setState] = useState({
     pageData,
@@ -116,6 +116,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   return renderRoutes(routes, {
     ...state,
     bbcOrigin,
+    canAdvertise,
     pathname: location.pathname,
     previousPath,
   });

@@ -2,8 +2,27 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import '@testing-library/jest-dom/extend-expect';
+import { RequestContextProvider } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 import CanonicalAd, { getBootsrapSrc } from '.';
+
+const requestContextData = {
+  pageType: 'frontPage',
+  service: 'pidgin',
+  isAmp: false,
+  pathname: '/pathname',
+  data: { status: 200 },
+  canAdvertise: true,
+};
+
+// eslint-disable-next-line react/prop-types
+const CanonicalAdWithContext = ({ slotType }) => (
+  <BrowserRouter>
+    <RequestContextProvider {...requestContextData}>
+      <CanonicalAd slotType={slotType} />
+    </RequestContextProvider>
+  </BrowserRouter>
+);
 
 describe('CanonicalAds Ads', () => {
   beforeEach(() => {
@@ -20,15 +39,13 @@ describe('CanonicalAds Ads', () => {
   describe('Snapshots', () => {
     shouldMatchSnapshot(
       'should correctly render an Canonical leaderboard ad with dotcom-bootstrap script',
-      <BrowserRouter>
-        <CanonicalAd slotType="leaderboard" />
-      </BrowserRouter>,
+      <CanonicalAdWithContext slotType="leaderboard" />,
     );
 
     shouldMatchSnapshot(
       'should correctly render a Canonical mpu ad with dotcom-bootstrap script',
       <BrowserRouter>
-        <CanonicalAd slotType="mpu" />
+        <CanonicalAdWithContext slotType="mpu" />
       </BrowserRouter>,
     );
   });
