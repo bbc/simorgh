@@ -325,7 +325,7 @@ describe('convertToOptimoBlocks', () => {
     });
   });
 
-  it('should render include blocks with correct index positions', async () => {
+  it('should render include blocks with correct index positions and omit non-supported/invalid includes', async () => {
     process.env.SIMORGH_INCLUDES_BASE_URL = 'https://foobar.com/includes';
     const pathname = 'https://www.bbc.com/service/foo';
     const input = includeBlockData;
