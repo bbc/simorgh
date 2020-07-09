@@ -315,6 +315,14 @@ server
         // Set derivedPageType based on returned page data
         if (status === 200) {
           derivedPageType = ramdaPath([('pageData', 'metadata', 'type')], data);
+        } else {
+          // Send CW metric when we get a non 200 response for the data fetch. In the future this should move to the getInitialData function
+          await sendCustomMetric({
+            metricName: NON_200_RESPONSE,
+            statusCode: status,
+            pageType: derivedPageType,
+            requestUrl: url,
+          });
         }
 
         data.path = urlPath;

@@ -82,7 +82,6 @@ const generateLinks = (service, env, domain) => {
   return output.join('<br/>');
 };
 
-// eslint-disable-next-line consistent-return
 const generateLaunchDates = service => {
   const output = [];
   const serviceLaunch = launchDates[service];
