@@ -10,9 +10,7 @@ export const mapsWithoutPreroll = {
     },
     {
       reason: 'Castaway advertising flag is false',
-      paths: [
-        'https://www.bbc.com/mundo/media-48938201', // CPS Video
-      ],
+      paths: [],
     },
     {
       reason: 'duration is less than 30 seconds',
