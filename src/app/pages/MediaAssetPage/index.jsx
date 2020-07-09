@@ -41,6 +41,7 @@ const isLegacyMediaAssetPage = url => url.split('/').length > 7;
 const MediaAssetPage = ({ pageData }) => {
   const requestContext = useContext(RequestContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
+  const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
   const allowDateStamp = path(['options', 'allowDateStamp'], metadata);
@@ -109,6 +110,7 @@ const MediaAssetPage = ({ pageData }) => {
       <ComscoreAnalytics />
       <CpsMetadata
         title={title}
+        shortHeadline={shortHeadline}
         language={metadata.language}
         description={summary}
         firstPublished={firstPublished}
