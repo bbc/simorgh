@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
+import { C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
 
-// TODO: #121212 is a new colour not in psammead - add it?
 export default createGlobalStyle`
 #root {
-  background-color: #121212;
+  background-color: ${C_MIDNIGHT_BLACK};
 }
 `;
