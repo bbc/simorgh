@@ -1,4 +1,5 @@
 var plugins = [
+  '@babel/plugin-proposal-optional-chaining',
   '@babel/plugin-proposal-object-rest-spread', // allows ...spread notation
   '@babel/plugin-syntax-dynamic-import', // allows `await import()` syntax
   '@babel/plugin-transform-runtime',

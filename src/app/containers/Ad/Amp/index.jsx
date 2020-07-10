@@ -10,7 +10,6 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 
 import { GEL_SPACING_DBL, GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import { C_LUNAR_LIGHT, C_RHINO } from '@bbc/psammead-styles/colours';
-import pathOr from 'ramda/src/pathOr';
 import { getMinion } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -77,7 +76,7 @@ export const AMP_ACCESS_FETCH = service => {
 
 const AmpAd = ({ slotType }) => {
   const { ads, dir, script, service } = useContext(ServiceContext);
-  const label = pathOr('Advertisement', ['advertisementLabel'], ads);
+  const label = ads?.advertisementLabel || 'Advertisement';
 
   return (
     <div amp-access="toggles.ads.enabled" amp-access-hide="true">

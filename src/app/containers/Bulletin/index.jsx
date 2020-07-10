@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import pathOr from 'ramda/src/pathOr';
 import { shape, bool, oneOfType } from 'prop-types';
 import Bulletin from '@bbc/psammead-bulletin';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
@@ -58,30 +57,30 @@ BulletinImage.defaultProps = {
 const BulletinContainer = ({ item, lazyLoadImage }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
 
-  const headline = pathOr(null, ['name'], item);
-  const ctaLink = pathOr(null, ['uri'], item);
+  const headline = item?.name || null;
+  const ctaLink = item?.uri || null;
 
   if (!headline || !ctaLink) {
     return null;
   }
 
-  const summary = pathOr(null, ['summary'], item);
+  const summary = item?.summary || null;
 
-  const imageValues = pathOr(null, ['indexImage'], item);
+  const imageValues = item?.indexImage || null;
   const Image = imageValues && (
     <BulletinImage lazyLoad={lazyLoadImage} imageValues={imageValues} />
   );
 
-  const contentType = pathOr(null, ['contentType'], item);
+  const contentType = item?.contentType || null;
   const mediaType = contentType === 'TVBulletin' ? 'video' : 'audio';
 
-  const watchText = pathOr('Watch', ['media', 'watch'], translations);
-  const listenText = pathOr('Listen', ['media', 'listen'], translations);
-  const liveText = pathOr('LIVE', ['media', 'liveLabel'], translations);
+  const watchText = translations?.media?.watch || 'Watch';
+  const listenText = translations?.media?.listen || 'Listen';
+  const liveText = translations?.media?.liveLabel || 'LIVE';
   const ctaText = contentType === 'TVBulletin' ? watchText : listenText;
   const ctaTextIsEnglish = ctaText === 'Watch' || ctaText === 'Listen';
 
-  const isLive = pathOr(null, ['isLive'], item);
+  const isLive = item?.isLive || null;
 
   // This offscreen text should come from a fully translated string.
   // https://github.com/bbc/simorgh/issues/5626

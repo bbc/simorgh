@@ -4,7 +4,6 @@ import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
 } from '@bbc/psammead-media-player';
-import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 
@@ -26,11 +25,10 @@ const AVPlayer = ({
     title,
     type,
   };
-  const noJsMessage = pathOr(
-    `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`,
-    ['media', 'noJs'],
-    translations,
-  );
+
+  const noJsMessage =
+    translations?.media?.noJs ||
+    `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
 
   if (!isValidPlatform || !assetId) return null;
 

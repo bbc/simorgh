@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { any, arrayOf, shape, string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Caption from '@bbc/psammead-caption';
-import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '../Blocks';
 import Fragment from '../Fragment';
@@ -34,9 +33,10 @@ const chooseOffscreenText = (
   }
 };
 const renderParagraph = block => {
-  const paragraphBlock = pathOr(null, ['model', 'blocks'], block);
+  const paragraphBlock = block?.model?.blocks || null;
+  const key = paragraphBlock?.[0]?.id || null;
   return (
-    <p key={pathOr(null, ['0', 'id'], paragraphBlock)}>
+    <p key={key}>
       <Blocks blocks={paragraphBlock} componentsToRender={componentsToRender} />
     </p>
   );
@@ -65,12 +65,7 @@ const CaptionContainer = ({ block, type }) => {
     defaultCaptionOffscreenText,
   );
 
-  const paragraphBlocks = pathOr(
-    null,
-    ['model', 'blocks', 0, 'model', 'blocks'],
-    block,
-  );
-
+  const paragraphBlocks = block?.model?.blocks?.[0]?.model?.blocks || null;
   return renderCaption(paragraphBlocks, offscreenText, script, service);
 };
 
