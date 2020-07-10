@@ -11,6 +11,8 @@ import services from './utilities/serviceConfigs';
 import * as renderDocument from './Document';
 import sendCustomMetrics from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
+import loggerMock from '#testHelpers/loggerMock';
+import { ROUTING_INFORMATION } from '#lib/logger.const';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -1320,6 +1322,55 @@ describe('Server HTTP Headers', () => {
       expect(global.console.log).not.toHaveBeenCalledWith(
         'GNU Terry Pratchett',
       );
+    });
+  });
+
+  describe('Routing Information Logging', () => {
+    const service = 'igbo';
+    const isAmp = false;
+    const url = `/${service}`;
+    const dataResponse = {
+      isAmp,
+      pageData: {
+        metadata: {
+          type: 'Page Type from Data',
+        },
+      },
+      service,
+      status: 200,
+    };
+
+    it(`on non-200 response should log matched page type from route`, async () => {
+      const pageType = 'Matching Page Type from Route';
+      const status = 404;
+      mockRouteProps({
+        service,
+        isAmp,
+        dataResponse: { ...dataResponse, status },
+        pageType,
+      });
+      await makeRequest(url);
+
+      expect(loggerMock.info).toHaveBeenCalledWith(ROUTING_INFORMATION, {
+        url,
+        status,
+        pageType,
+      });
+    });
+
+    it(`on 200 response should log page type derived from response`, async () => {
+      mockRouteProps({
+        service,
+        isAmp,
+        dataResponse,
+      });
+      await makeRequest(url);
+
+      expect(loggerMock.info).toHaveBeenCalledWith(ROUTING_INFORMATION, {
+        url,
+        status: 200,
+        pageType: 'Page Type from Data',
+      });
     });
   });
 });
