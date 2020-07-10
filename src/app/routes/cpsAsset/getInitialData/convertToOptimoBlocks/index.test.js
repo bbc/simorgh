@@ -336,6 +336,7 @@ describe('convertToOptimoBlocks', () => {
           blocks: [
             {
               model: {
+                classification: 'idt1-canonical',
                 href: '/indepthtoolkit/quizzes/123-456',
                 index: 0,
                 type: 'idt1',
@@ -344,6 +345,7 @@ describe('convertToOptimoBlocks', () => {
             },
             {
               model: {
+                classification: 'idt2-canonical',
                 href: '/idt2/111-222-333-444-555',
                 imageBlock: {
                   alt: 'image alt text',
@@ -362,6 +364,7 @@ describe('convertToOptimoBlocks', () => {
             },
             {
               model: {
+                classification: 'vj-canonical',
                 href: '/include/111-222-333-444-555',
                 index: 2,
                 type: 'vj',
@@ -370,9 +373,20 @@ describe('convertToOptimoBlocks', () => {
             },
             {
               model: {
+                classification: 'vj-canonical',
                 href:
                   '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
                 index: 5,
+                type: 'vj',
+              },
+              type: 'include',
+            },
+            {
+              model: {
+                classification: 'vj-canonical',
+                href:
+                  '/news/special/2016/newsspec_14813/content/iframe/gahuza/us-gop.inc?responsive=true&app-clickable=true&app-image=http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/11/09/161109092836_us_election_2nddaymaps_winner_ws_62_v3.png',
+                index: 6,
                 type: 'vj',
               },
               type: 'include',

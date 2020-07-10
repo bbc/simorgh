@@ -28,6 +28,7 @@ const [
   unsupportedIncludeBlock,
   noHrefIncludeBlock,
   vjAmpSupportedBlock,
+  vjAmpNoSupportBlock,
 ] = pageData.content.blocks;
 
 describe('convertInclude', () => {
@@ -371,18 +372,13 @@ describe('convertInclude', () => {
     fetch.mockResponse(() => Promise.resolve('No fetch call'));
     const notSupportedVjIncludeOnAmp =
       '/news/special/2016/newsspec_14813/content/iframe/gahuza/us-gop.inc?responsive=true&app-clickable=true&app-image=http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/11/09/161109092836_us_election_2nddaymaps_winner_ws_62_v3.png';
-    const input = {
-      required: false,
-      tile: 'Include from VisJo',
-      href: notSupportedVjIncludeOnAmp,
-      platform: 'highweb',
-      type: 'news/special',
-    };
-    const actual = await convertInclude(input, null, null, ampPathname);
+    const input = vjAmpNoSupportBlock;
+    const actual = await convertInclude(input, pageData, null, ampPathname);
     const expected = {
-      type: 'news/special',
+      type: 'include',
       model: {
         href: notSupportedVjIncludeOnAmp,
+        index: 6,
         classification: 'vj-amp-not-supported',
         type: 'vj',
       },
