@@ -1358,7 +1358,7 @@ describe('Server HTTP Headers', () => {
       });
     });
 
-    it(`on 200 response should log page type derived from response`, async () => {
+    it(`on 200 response should log page type derived from response data`, async () => {
       mockRouteProps({
         service,
         isAmp,
