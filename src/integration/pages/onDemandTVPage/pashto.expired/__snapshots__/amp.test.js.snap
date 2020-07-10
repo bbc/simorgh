@@ -124,6 +124,17 @@ Object {
 }
 `;
 
+exports[`AMP Pashto On Demand TV Page Analytics comscore 1`] = `
+Object {
+  "extraUrlParams": Object {
+    "comscorekw": "amp",
+  },
+  "vars": Object {
+    "c2": "17986528",
+  },
+}
+`;
+
 exports[`AMP Pashto On Demand TV Page Expired Episode I can see the 'Content is not available' placeholder 1`] = `"دغه فایل نور د لاسرسي وړ نه دی."`;
 
 exports[`AMP Pashto On Demand TV Page Expired Episode I can see the brand title 1`] = `"نړۍ دا وخت"`;

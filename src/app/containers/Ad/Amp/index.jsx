@@ -1,14 +1,12 @@
 import React, { useContext } from 'react';
+import { oneOf } from 'prop-types';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import {
   AMP_ACCESS_JS,
   AMP_ADS_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
-import {
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-} from '@bbc/gel-foundations/breakpoints';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 
 import { GEL_SPACING_DBL, GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import { C_LUNAR_LIGHT, C_RHINO } from '@bbc/psammead-styles/colours';
@@ -16,6 +14,7 @@ import pathOr from 'ramda/src/pathOr';
 import { getMinion } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { ServiceContext } from '#contexts/ServiceContext';
+import AdSlot from './AdSlot';
 
 const FullWidthWrapper = styled.div`
   background-color: ${C_LUNAR_LIGHT};
@@ -62,42 +61,6 @@ const StyledLink = styled.a.attrs({ tabIndex: '-1' })`
   }
 `;
 
-const constructAdJsonData = ({ service }) => ({
-  targeting: {
-    slot: 'leaderboard',
-    asset_type: 'index',
-    channel: service,
-  },
-});
-
-const ampAdPropsMobile = ({ service }) => ({
-  'data-block-on-consent': 'default',
-  'data-npa-on-unknown-consent': 'true',
-  media: `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
-  type: 'doubleclick',
-  width: '320',
-  height: '50',
-  'data-multi-size': '320x50,300x50',
-  'data-slot': '/4817/bbccom.test.site.amp.news',
-  'data-amp-slot-index': '0',
-  'data-a4a-upgrade-type': 'amp-ad-network-doubleclick-impl',
-  json: JSON.stringify(constructAdJsonData({ service })),
-});
-
-const ampAdPropsDesktop = ({ service }) => ({
-  'data-block-on-consent': 'default',
-  'data-npa-on-unknown-consent': 'true',
-  media: `(min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN})`,
-  type: 'doubleclick',
-  width: '970',
-  height: '250',
-  'data-multi-size': '970x250,728x90',
-  'data-slot': '/4817/bbccom.test.site.amp.news',
-  'data-amp-slot-index': '0',
-  'data-a4a-upgrade-type': 'amp-ad-network-doubleclick-impl',
-  json: JSON.stringify(constructAdJsonData({ service })),
-});
-
 const AMP_ACCESS_DATA = endpoint => ({
   authorization: endpoint,
   noPingback: true,
@@ -118,20 +81,20 @@ export const AMP_ACCESS_FETCH = service => {
   );
 };
 
-// eslint-disable-next-line react/prop-types
-const AmpAd = () => {
+const AmpAd = ({ slotType }) => {
   const { ads, dir, script, service } = useContext(ServiceContext);
   const label = pathOr('Advertisement', ['advertisementLabel'], ads);
 
   return (
-    <FullWidthWrapper>
-      <StyledWrapper>
-        <Helmet>
-          {AMP_ADS_JS}
-          {AMP_ACCESS_JS}
-          {AMP_ACCESS_FETCH(service)}
-        </Helmet>
-        <div amp-access="toggles.ads.enabled" amp-access-hide="true">
+    <div amp-access="toggles.ads.enabled" amp-access-hide="true">
+      <FullWidthWrapper>
+        <StyledWrapper>
+          <Helmet>
+            {AMP_ADS_JS}
+            {AMP_ACCESS_JS}
+            {AMP_ACCESS_FETCH(service)}
+          </Helmet>
+
           <StyledAd>
             <StyledLink
               href={LABEL_LINK}
@@ -141,13 +104,16 @@ const AmpAd = () => {
             >
               {label}
             </StyledLink>
-            <amp-ad {...ampAdPropsMobile({ service })} />
-            <amp-ad {...ampAdPropsDesktop({ service })} />
+            <AdSlot service={service} slotType={slotType} />
           </StyledAd>
-        </div>
-      </StyledWrapper>
-    </FullWidthWrapper>
+        </StyledWrapper>
+      </FullWidthWrapper>
+    </div>
   );
+};
+
+AmpAd.propTypes = {
+  slotType: oneOf(['leaderboard', 'mpu']).isRequired,
 };
 
 export default AmpAd;

@@ -3,16 +3,23 @@ import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { shape, string, number, bool } from 'prop-types';
 import {
+  GEL_SPACING,
   GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
+  GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
 import pathOr from 'ramda/src/pathOr';
-import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 import { MediaMessage } from '@bbc/psammead-media-player';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import LinkedData from '#containers/LinkedData';
@@ -21,22 +28,25 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
+import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
-import VideoPlayer from './VideoPlayer';
-
-const StyledGelWrapperGrid = styled.div`
-  padding-top: ${GEL_SPACING_TRPL};
-`;
+import AVPlayer from '#containers/AVPlayer';
 
 const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
 const StyledMessageContainer = styled.div`
-  margin-top: ${GEL_SPACING_TRPL};
+  margin: ${GEL_SPACING_QUIN} 0 ${GEL_SPACING};
   padding-top: ${landscapeRatio};
   position: relative;
   overflow: hidden;
+
+  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    margin-top: ${GEL_SPACING_DBL};
+  }
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    width: calc(100% + ${GEL_SPACING_QUAD});
-    margin: 0 -${GEL_SPACING_DBL};
+    margin: ${GEL_SPACING_DBL} -${GEL_SPACING_DBL} 0;
+  }
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    margin: ${GEL_SPACING} -${GEL_SPACING} 0;
   }
 `;
 
@@ -55,11 +65,18 @@ const StyledGelPageGrid = styled(GelPageGrid)`
   flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
 `;
 
-const StyledVideoPlayer = styled(VideoPlayer)`
-  margin-top: ${GEL_SPACING_TRPL};
+const StyledVideoPlayer = styled(AVPlayer)`
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    margin: ${GEL_SPACING_QUIN} 0 ${GEL_SPACING};
+  }
+  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    margin-top: ${GEL_SPACING_DBL};
+  }
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    width: calc(100% + ${GEL_SPACING_QUAD});
-    margin: 0 -${GEL_SPACING_DBL};
+    margin: ${GEL_SPACING_DBL} -${GEL_SPACING_DBL} 0;
+  }
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    margin: ${GEL_SPACING} -${GEL_SPACING} 0;
   }
 `;
 
@@ -79,9 +96,14 @@ const OnDemandTvPage = ({ pageData }) => {
     durationISO8601,
   } = pageData;
 
-  const { lang, timezone, locale, dir, service, translations } = useContext(
-    ServiceContext,
-  );
+  const {
+    lang,
+    timezone,
+    datetimeLocale,
+    dir,
+    service,
+    translations,
+  } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
 
@@ -89,7 +111,7 @@ const OnDemandTvPage = ({ pageData }) => {
     timestamp: releaseDateTimeStamp,
     format: 'LL',
     timezone,
-    locale,
+    locale: datetimeLocale,
     isRelative: false,
   });
 
@@ -113,13 +135,11 @@ const OnDemandTvPage = ({ pageData }) => {
     translations,
   );
 
-  const type = 'video';
-  const title = 'On-demand TV';
-
   return (
     <>
       <ChartbeatAnalytics data={pageData} />
       <ATIAnalytics data={pageData} />
+      <ComscoreAnalytics />
       <MetadataContainer
         title={headline}
         lang={language}
@@ -160,30 +180,24 @@ const OnDemandTvPage = ({ pageData }) => {
           margins={getGroups(true, true, true, true, false, false)}
         >
           <VisuallyHiddenText as="h1" tabIndex="-1" id="content">
-            {brandTitle}, {formattedTimestamp}
+            {/* these must be concatenated for screen reader UX - #7062 */}
+            {`${brandTitle}, ${formattedTimestamp}`}
           </VisuallyHiddenText>
-          <StyledGelWrapperGrid
-            columns={getGroups(6, 6, 6, 6, 6, 6)}
-            enableGelGutters
-          >
-            {episodeIsAvailable ? (
-              <StyledVideoPlayer
-                embedUrl={embedUrl}
-                assetId={episodeId}
-                imageUrl={imageUrl}
-                type={type}
-                title={title}
-                iframeTitle={iframeTitle}
-              />
-            ) : (
-              <StyledMessageContainer>
-                <MediaMessage
-                  service={service}
-                  message={expiredContentMessage}
-                />
-              </StyledMessageContainer>
-            )}
-          </StyledGelWrapperGrid>
+          {episodeIsAvailable ? (
+            <StyledVideoPlayer
+              embedUrl={embedUrl}
+              assetId={episodeId}
+              placeholderSrc={getPlaceholderImageUrl(imageUrl)}
+              type="video"
+              title="On-demand TV"
+              iframeTitle={iframeTitle}
+            />
+          ) : (
+            <StyledMessageContainer>
+              <MediaMessage service={service} message={expiredContentMessage} />
+            </StyledMessageContainer>
+          )}
+
           <OnDemandHeadingBlock
             brandTitle={brandTitle}
             releaseDateTimeStamp={releaseDateTimeStamp}

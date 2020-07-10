@@ -20,6 +20,7 @@ import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import ATIAnalytics from '#containers/ATIAnalytics';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
@@ -31,6 +32,7 @@ import {
 
 const PhotoGalleryPage = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
+  const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
   const allowDateStamp = path(['options', 'allowDateStamp'], metadata);
@@ -86,6 +88,7 @@ const PhotoGalleryPage = ({ pageData }) => {
     <>
       <CpsMetadata
         title={title}
+        shortHeadline={shortHeadline}
         language={metadata.language}
         description={summary}
         firstPublished={firstPublished}
@@ -105,6 +108,7 @@ const PhotoGalleryPage = ({ pageData }) => {
         aboutTags={aboutTags}
       />
       <ATIAnalytics data={pageData} />
+      <ComscoreAnalytics />
       <StyledGrid as="main" role="main">
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledGrid>

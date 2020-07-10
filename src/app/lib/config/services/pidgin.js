@@ -8,12 +8,13 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     ads: {
-      hasAds: true,
+      hasAds: false,
       advertisementLabel: 'Tori we dem pay for',
     },
     lang: 'pcm',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'New Informate',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-pidgin',
     atiAnalyticsProducerId: '70',
     chartbeatDomain: 'pidgin.bbc.co.uk',
@@ -147,6 +148,8 @@ export const service = {
       media: {
         noJs: 'Dem no support media player for your device',
         contentExpired: 'Dis thing no dey again',
+        contentNotYetAvailable:
+          'De thing wey de here never ready for you to play.',
         audio: 'Audio',
         photogallery: 'Image gallery',
         video: 'Video',

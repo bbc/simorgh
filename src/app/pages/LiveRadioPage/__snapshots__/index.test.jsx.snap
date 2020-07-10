@@ -238,7 +238,6 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
 .c6 {
   height: 165px;
   position: relative;
-  overflow: hidden;
   margin-bottom: 1rem;
 }
 
@@ -250,7 +249,12 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   flex-grow: 1;
 }
 
-.c5 {
+.c5 amp-iframe {
+  overflow: visible !important;
+  width: calc(100% + 1rem);
+}
+
+.c5 iframe {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
 }
@@ -387,7 +391,13 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c5 {
+  .c5 amp-iframe {
+    width: calc(100% + 2rem);
+  }
+}
+
+@media (min-width:25rem) {
+  .c5 iframe {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
   }
@@ -404,6 +414,15 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
       <div>
         chartbeat
       </div>
+      <amp-analytics
+        type="comscore"
+      >
+        <script
+          type="application/json"
+        >
+          {"vars":{"c2":"17986528"},"extraUrlParams":{"comscorekw":"amp"}}
+        </script>
+      </amp-analytics>
       <main
         class="c0 c1"
         dir="ltr"
@@ -487,7 +506,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 .c6 {
   height: 165px;
   position: relative;
-  overflow: hidden;
   margin-bottom: 1rem;
 }
 
@@ -499,7 +517,12 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   flex-grow: 1;
 }
 
-.c5 {
+.c5 amp-iframe {
+  overflow: visible !important;
+  width: calc(100% + 1rem);
+}
+
+.c5 iframe {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
 }
@@ -646,7 +669,13 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c5 {
+  .c5 amp-iframe {
+    width: calc(100% + 2rem);
+  }
+}
+
+@media (min-width:25rem) {
+  .c5 iframe {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
   }

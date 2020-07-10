@@ -1,5 +1,6 @@
 import 'isomorphic-fetch';
 import Url from 'url-parse';
+import path from 'ramda/src/path';
 import {
   INCLUDE_ERROR,
   INCLUDE_FETCH_ERROR,
@@ -10,7 +11,7 @@ import {
 } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
 import { addOverrideQuery } from '#app/routes/utils/overrideRendererOnTest';
-import ampSrcBuilder from './ampSrcBuilder';
+import ampMetadataExtractor from './ampMetadataExtractor';
 import includeClassifier from './includeClassifier';
 import getImageBlock from './getImageBlock';
 
@@ -68,12 +69,13 @@ const fetchMarkup = async url => {
   }
 };
 
-const convertInclude = async (includeBlock, ...restParams) => {
+const convertInclude = async (includeBlock, pageData, ...restParams) => {
   const { href, type } = includeBlock;
 
   // Here pathname is passed as a prop specifically for CPS includes
   // This will most likely change in issue #6784 so it is temporary for now
-  const pathname = restParams[2];
+  const pathname = restParams[1];
+  const blocks = path(['content', 'blocks'], pageData);
 
   const ampRegex = /\.amp$/;
   const isAmp = ampRegex.test(pathname);
@@ -94,12 +96,19 @@ const convertInclude = async (includeBlock, ...restParams) => {
     return null;
   }
 
-  let ampSrc;
+  const includeMap = blocks.filter(block => block.type === 'include');
+
+  const index = includeMap.indexOf(includeBlock);
+
+  let ampMetadata;
   let html;
   if (classification === 'vj-supports-amp') {
-    ampSrc = ampSrcBuilder(href);
+    ampMetadata = ampMetadataExtractor(
+      href,
+      process.env.SIMORGH_INCLUDES_BASE_AMP_URL,
+    );
     logger.info(INCLUDE_IFRAME_REQUEST_RECEIVED, {
-      url: ampSrc,
+      url: ampMetadata.src,
     });
   }
   if (!isAmp) {
@@ -110,13 +119,13 @@ const convertInclude = async (includeBlock, ...restParams) => {
     html = await fetchMarkup(buildIncludeUrl(href, includeType, pathname));
   }
   const imageBlock = getImageBlock(includeType, includeBlock, isAmp);
-
   return {
     type,
     model: {
       href,
+      index,
       type: includeType,
-      ...(ampSrc && { ampSrc }),
+      ...(ampMetadata && { ampMetadata }),
       ...(html && { html }),
       ...(imageBlock && { imageBlock }),
     },

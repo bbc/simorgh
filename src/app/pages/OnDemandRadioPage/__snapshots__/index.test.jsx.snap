@@ -227,7 +227,6 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 .c14 {
   height: 165px;
   position: relative;
-  overflow: hidden;
   margin-bottom: 1rem;
 }
 
@@ -247,6 +246,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   display: inline-block;
   width: 100%;
   padding-bottom: 0.5rem;
+  word-break: break-word;
 }
 
 .c9 {
@@ -282,7 +282,12 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   flex-grow: 1;
 }
 
-.c13 {
+.c13 amp-iframe {
+  overflow: visible !important;
+  width: calc(100% + 1rem);
+}
+
+.c13 iframe {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
 }
@@ -526,6 +531,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 @media (min-width:37.5rem) {
   .c7 {
     padding-bottom: 0;
+    word-break: break-word;
     line-height: 3.5rem;
   }
 }
@@ -605,7 +611,13 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c13 {
+  .c13 amp-iframe {
+    width: calc(100% + 2rem);
+  }
+}
+
+@media (min-width:25rem) {
+  .c13 iframe {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
   }
@@ -622,6 +634,15 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
       <div>
         chartbeat
       </div>
+      <amp-analytics
+        type="comscore"
+      >
+        <script
+          type="application/json"
+        >
+          {"vars":{"c2":"17986528"},"extraUrlParams":{"comscorekw":"amp"}}
+        </script>
+      </amp-analytics>
       <main
         class="c0 c1"
         dir="rtl"
@@ -747,7 +768,6 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 .c15 {
   height: 165px;
   position: relative;
-  overflow: hidden;
   margin-bottom: 1rem;
 }
 
@@ -767,6 +787,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   display: inline-block;
   width: 100%;
   padding-bottom: 0.5rem;
+  word-break: break-word;
 }
 
 .c9 {
@@ -802,7 +823,12 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   flex-grow: 1;
 }
 
-.c14 {
+.c14 amp-iframe {
+  overflow: visible !important;
+  width: calc(100% + 1rem);
+}
+
+.c14 iframe {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
 }
@@ -1056,6 +1082,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 @media (min-width:37.5rem) {
   .c7 {
     padding-bottom: 0;
+    word-break: break-word;
     line-height: 3.5rem;
   }
 }
@@ -1135,7 +1162,13 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c14 {
+  .c14 amp-iframe {
+    width: calc(100% + 2rem);
+  }
+}
+
+@media (min-width:25rem) {
+  .c14 iframe {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
   }
@@ -1445,7 +1478,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 </html>
 `;
 
-exports[`OnDemand Radio Page  should not show the audio player if it is not available yet 1`] = `
+exports[`OnDemand Radio Page  should show the 'content not yet available' message if episode is not yet available 1`] = `
 .c13 {
   display: block;
   width: 100%;
@@ -1513,6 +1546,7 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
   display: inline-block;
   width: 100%;
   padding-bottom: 0.5rem;
+  word-break: break-word;
 }
 
 .c9 {
@@ -1811,6 +1845,7 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
 @media (min-width:37.5rem) {
   .c7 {
     padding-bottom: 0;
+    word-break: break-word;
     line-height: 3.5rem;
   }
 }
@@ -1972,7 +2007,7 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
             <strong
               class="c17"
             >
-              더 이상 이용할 수 없는 콘텐츠입니다.
+              아직 재생할 수 없는 프로그램입니다.
             </strong>
           </div>
         </div>
@@ -2050,6 +2085,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   display: inline-block;
   width: 100%;
   padding-bottom: 0.5rem;
+  word-break: break-word;
 }
 
 .c9 {
@@ -2348,6 +2384,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 @media (min-width:37.5rem) {
   .c7 {
     padding-bottom: 0;
+    word-break: break-word;
     line-height: 3.5rem;
   }
 }

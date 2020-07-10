@@ -10,9 +10,9 @@ import runMediaPlayerEmbedTests from './mediaPlayerEmbed';
 import runPerformanceTests from './performance';
 import runSEOTests from './SEO';
 
-const runCommonCrossPlatformTests = () => {
+const runCommonCrossPlatformTests = service => {
   runA11yTests();
-  runHeaderTests();
+  runHeaderTests(service);
   runFooterTests();
   runPerformanceTests();
   runSEOTests();

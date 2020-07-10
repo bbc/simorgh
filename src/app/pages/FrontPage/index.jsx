@@ -12,6 +12,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import AdContainer from '#containers/Ad';
 import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
 import IndexPageSection from '#containers/IndexPageSection';
@@ -88,6 +89,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
       {hasAds && !isAmp && <CanonicalAdBootstrapJs />}
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
+      <ComscoreAnalytics />
       <MetadataContainer
         title={frontPageTitle}
         lang={lang}
@@ -99,7 +101,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}
         </VisuallyHiddenText>
-        <AdContainer />
+        <AdContainer slotType="leaderboard" />
         <IndexPageContainer>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
@@ -109,6 +111,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
                   <RadioScheduleContainer initialData={radioScheduleData} />
                 )}
               <IndexPageSection group={group} sectionNumber={index} />
+              {group.type === 'top-stories' && <AdContainer slotType="mpu" />}
             </Fragment>
           ))}
           {!hasUsefulLinks && renderMostRead(mostReadEndpointOverride)}

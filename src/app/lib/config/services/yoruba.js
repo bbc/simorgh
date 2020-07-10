@@ -14,6 +14,7 @@ export const service = {
     lang: 'yo',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Ìgbà tí a ṣe àfíkun gbẹ̀yìn',
+    articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-yoruba',
     atiAnalyticsProducerId: '107',
     chartbeatDomain: 'yoruba.bbc.co.uk',
@@ -146,6 +147,7 @@ export const service = {
       media: {
         noJs: 'Àwọn àmúyẹ fun gbígbọ́ orin ko le ṣiṣẹ lori ẹ̀rọ rẹ',
         contentExpired: 'Nnkan yìí kò sí mọ́.',
+        contentNotYetAvailable: 'Kò tíì sí nnkan náà nílẹ̀ láti gbọ́',
         audio: 'Orin',
         photogallery: 'Àtẹ Àwòrán',
         video: 'Fídíò',
