@@ -25,8 +25,10 @@ const BrandTitle = styled.span`
   display: inline-block;
   width: 100%;
   padding-bottom: ${GEL_SPACING};
+  word-break: break-word;
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
     padding-bottom: 0;
+    word-break: break-word;
     line-height: ${GEL_SPACING_SEPT};
   }
 `;
@@ -42,14 +44,17 @@ const HeadingContainer = ({
   brandTitle,
   releaseDateTimeStamp,
   ariaHidden,
+  darkMode,
 }) => {
-  const { script, service, timezone, locale } = useContext(ServiceContext);
+  const { script, service, timezone, datetimeLocale } = useContext(
+    ServiceContext,
+  );
 
   const formattedTimestamp = formatUnixTimestamp({
     timestamp: releaseDateTimeStamp,
     format: 'LL',
     timezone,
-    locale,
+    locale: datetimeLocale,
     isRelative: false,
   });
 
@@ -60,6 +65,7 @@ const HeadingContainer = ({
       script={script}
       service={service}
       id={idAttr}
+      darkMode={darkMode}
       {...(idAttr === 'content' && { tabIndex: '-1' })}
       {...(ariaHidden && { as: 'strong', 'aria-hidden': 'true' })}
     >
@@ -79,11 +85,13 @@ HeadingContainer.propTypes = {
   brandTitle: string.isRequired,
   releaseDateTimeStamp: number.isRequired,
   ariaHidden: bool,
+  darkMode: bool,
 };
 
 HeadingContainer.defaultProps = {
   idAttr: null,
   ariaHidden: false,
+  darkMode: false,
 };
 
 export default HeadingContainer;

@@ -5,7 +5,6 @@ import { shape, string, number, bool } from 'prop-types';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
@@ -20,6 +19,7 @@ import { MediaMessage } from '@bbc/psammead-media-player';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import LinkedData from '#containers/LinkedData';
@@ -30,11 +30,13 @@ import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHea
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
+import DarkModeGlobalStyles from '#lib/utilities/darkMode';
 import AVPlayer from '#containers/AVPlayer';
+import useToggle from '#hooks/useToggle';
 
 const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
 const StyledMessageContainer = styled.div`
-  margin: ${GEL_SPACING_QUIN} 0 ${GEL_SPACING_TRPL};
+  margin: ${GEL_SPACING_QUIN} 0 ${GEL_SPACING};
   padding-top: ${landscapeRatio};
   position: relative;
   overflow: hidden;
@@ -67,7 +69,7 @@ const StyledGelPageGrid = styled(GelPageGrid)`
 
 const StyledVideoPlayer = styled(AVPlayer)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin: ${GEL_SPACING_QUIN} 0 ${GEL_SPACING_TRPL};
+    margin: ${GEL_SPACING_QUIN} 0 ${GEL_SPACING};
   }
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     margin-top: ${GEL_SPACING_DBL};
@@ -96,17 +98,23 @@ const OnDemandTvPage = ({ pageData }) => {
     durationISO8601,
   } = pageData;
 
-  const { lang, timezone, locale, dir, service, translations } = useContext(
-    ServiceContext,
-  );
+  const {
+    lang,
+    timezone,
+    datetimeLocale,
+    dir,
+    service,
+    translations,
+  } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
+  const darkMode = useToggle('cinemaModeTV').enabled;
 
   const formattedTimestamp = formatUnixTimestamp({
     timestamp: releaseDateTimeStamp,
     format: 'LL',
     timezone,
-    locale,
+    locale: datetimeLocale,
     isRelative: false,
   });
 
@@ -132,8 +140,10 @@ const OnDemandTvPage = ({ pageData }) => {
 
   return (
     <>
+      {darkMode && <DarkModeGlobalStyles />}
       <ChartbeatAnalytics data={pageData} />
       <ATIAnalytics data={pageData} />
+      <ComscoreAnalytics />
       <MetadataContainer
         title={headline}
         lang={language}
@@ -174,7 +184,8 @@ const OnDemandTvPage = ({ pageData }) => {
           margins={getGroups(true, true, true, true, false, false)}
         >
           <VisuallyHiddenText as="h1" tabIndex="-1" id="content">
-            {brandTitle}, {formattedTimestamp}
+            {/* these must be concatenated for screen reader UX - #7062 */}
+            {`${brandTitle}, ${formattedTimestamp}`}
           </VisuallyHiddenText>
           {episodeIsAvailable ? (
             <StyledVideoPlayer
@@ -194,6 +205,7 @@ const OnDemandTvPage = ({ pageData }) => {
           <OnDemandHeadingBlock
             brandTitle={brandTitle}
             releaseDateTimeStamp={releaseDateTimeStamp}
+            darkMode={darkMode}
             ariaHidden
           />
         </Grid>
@@ -204,7 +216,7 @@ const OnDemandTvPage = ({ pageData }) => {
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
           margins={getGroups(true, true, true, true, false, false)}
         >
-          <ParagraphBlock text={shortSynopsis} />
+          <ParagraphBlock text={shortSynopsis} darkMode={darkMode} />
         </Grid>
       </StyledGelPageGrid>
     </>

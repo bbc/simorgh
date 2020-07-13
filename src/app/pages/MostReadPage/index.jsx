@@ -18,6 +18,7 @@ import mostReadShape from '#containers/MostRead/utilities/mostReadShape';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import LinkedData from '#containers/LinkedData';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import MetadataContainer from '#containers/Metadata';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import IndexMain from '#app/components/PageLayout/IndexMain';
@@ -97,6 +98,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
     <>
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
+      <ComscoreAnalytics />
       <MetadataContainer
         title={header}
         lang={lang}

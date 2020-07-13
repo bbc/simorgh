@@ -24,7 +24,7 @@ export default async ({ path: pathname }) => {
       json,
     );
     const get = (fieldPath, logLevel) =>
-      logLevel ? withLogging(fieldPath, { logLevel }) : path(fieldPath, json);
+      logLevel ? withLogging(fieldPath, logLevel) : path(fieldPath, json);
 
     return {
       status,

@@ -18,7 +18,6 @@ import withContext from '../../../contexts/utils/withContext';
 const headerFooterTranslations = {
   home: 'Главная',
   currentPage: 'Текущая страница',
-  relatedContent: 'Новости по теме',
   navMenuText: 'Разделы',
   consentBanner: {
     privacy: {
@@ -76,6 +75,7 @@ const headerFooterTranslations = {
 export const mainTranslations = {
   seeAll: 'Посмотреть все',
   skipLinkText: 'Перейти к содержанию',
+  relatedContent: 'Новости по теме',
   mediaAssetPage: {
     mediaPlayer: 'Медиа плеер',
     audioPlayer: 'Аудио плеер',
@@ -255,7 +255,7 @@ export const service = {
         },
       ],
       copyrightText:
-        'BBC. Би-би-си на несет ответственности за содержание других сайтов.',
+        'BBC. Би-би-си не несет ответственности за содержание других сайтов.',
     },
     fonts: [
       F_REITH_SANS_BOLD,

@@ -116,6 +116,17 @@ Object {
 }
 `;
 
+exports[`AMP On Demand Radio Page Analytics comscore 1`] = `
+Object {
+  "extraUrlParams": Object {
+    "comscorekw": "amp",
+  },
+  "vars": Object {
+    "c2": "17986528",
+  },
+}
+`;
+
 exports[`AMP On Demand Radio Page Expired Episode I can see the 'Content is not available' placeholder 1`] = `"Konten ini sudah tidak tersedia lagi."`;
 
 exports[`AMP On Demand Radio Page Expired Episode I can see the brand title 1`] = `"Dunia Pagi Ini"`;
