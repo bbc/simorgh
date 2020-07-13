@@ -56,7 +56,7 @@ describe('convertInclude', () => {
       model: {
         href: '/indepthtoolkit/quizzes/123-456',
         index: 0,
-        classification: 'idt1-canonical',
+        showEmbedError: false,
         type: 'idt1',
         html: idt1Markup,
       },
@@ -86,7 +86,7 @@ describe('convertInclude', () => {
       model: {
         href: '/idt2/111-222-333-444-555',
         index: 1,
-        classification: 'idt2-canonical',
+        showEmbedError: false,
         type: 'idt2',
         html: idt2Markup,
         imageBlock: {
@@ -125,7 +125,7 @@ describe('convertInclude', () => {
       model: {
         href: '/idt2/111-222-333-444-555',
         index: 1,
-        classification: 'idt2-amp',
+        showEmbedError: false,
         type: 'idt2',
         imageBlock: {
           alt: 'image alt text',
@@ -152,7 +152,7 @@ describe('convertInclude', () => {
       model: {
         href: '/include/111-222-333-444-555',
         index: 2,
-        classification: 'vj-canonical',
+        showEmbedError: false,
         type: 'vj',
         html: vjMarkup,
       },
@@ -182,7 +182,7 @@ describe('convertInclude', () => {
       model: {
         href: '/idt2/111-222-333-444-555',
         index: 1,
-        classification: 'idt2-canonical',
+        showEmbedError: false,
         type: 'idt2',
         imageBlock: {
           alt: 'image alt text',
@@ -227,7 +227,7 @@ describe('convertInclude', () => {
         model: {
           href: '/indepthtoolkit/quizzes/123-456',
           index: 0,
-          classification: 'idt1-canonical',
+          showEmbedError: false,
           type: 'idt1',
           html: idt1Markup,
         },
@@ -342,7 +342,7 @@ describe('convertInclude', () => {
       model: {
         href: includeSupportingAmp,
         index: 5,
-        classification: 'vj-supports-amp',
+        showEmbedError: false,
         type: 'vj',
         ampMetadata: {
           image:
@@ -379,7 +379,7 @@ describe('convertInclude', () => {
       model: {
         href: notSupportedVjIncludeOnAmp,
         index: 6,
-        classification: 'vj-amp-not-supported',
+        showEmbedError: true,
         type: 'vj',
       },
     };

@@ -196,11 +196,11 @@ describe('IncludeContainer', () => {
     });
   });
 
-  it('should render a fallback for VJs on an Amp page when classified as not supported', () => {
+  it('should render a fallback for VJs on an Amp page when showEmbed is present', () => {
     const vjProps = {
       href:
         '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
-      classification: 'vj-amp-not-supported',
+      showEmbedError: true,
       type: 'vj',
     };
 
