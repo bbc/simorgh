@@ -19,7 +19,6 @@ import AdSlot from './AdSlot';
 const FullWidthWrapper = styled.div`
   background-color: ${C_LUNAR_LIGHT};
 
-  .amp-geo-pending &,
   .amp-geo-group-gbOrUnknown & {
     display: none;
     visibility: hidden;
@@ -39,6 +38,11 @@ const StyledWrapper = styled.div`
 
 const StyledAd = styled.div`
   display: inline-block;
+
+  .amp-geo-pending & {
+    display: none;
+    visibility: hidden;
+  }
 `;
 
 const StyledLink = styled.a.attrs({ tabIndex: '-1' })`
@@ -49,13 +53,13 @@ const StyledLink = styled.a.attrs({ tabIndex: '-1' })`
   text-transform: uppercase;
   display: block;
   padding: ${GEL_SPACING} 0;
-  
+
   text-align: ${({ dir }) => (dir === 'ltr' ? `right` : `left`)};
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     padding-top: ${GEL_SPACING_DBL};
   }
-  
+
   &:hover {
     text-decoration: underline;
   }
@@ -86,15 +90,14 @@ const AmpAd = ({ slotType }) => {
   const label = pathOr('Advertisement', ['advertisementLabel'], ads);
 
   return (
-    <div amp-access="toggles.ads.enabled" amp-access-hide="true">
-      <FullWidthWrapper>
-        <StyledWrapper>
-          <Helmet>
-            {AMP_ADS_JS}
-            {AMP_ACCESS_JS}
-            {AMP_ACCESS_FETCH(service)}
-          </Helmet>
-
+    <FullWidthWrapper>
+      <StyledWrapper>
+        <Helmet>
+          {AMP_ADS_JS}
+          {AMP_ACCESS_JS}
+          {AMP_ACCESS_FETCH(service)}
+        </Helmet>
+        <div amp-access="toggles.ads.enabled" amp-access-hide="true">
           <StyledAd>
             <StyledLink
               href={LABEL_LINK}
@@ -106,9 +109,9 @@ const AmpAd = ({ slotType }) => {
             </StyledLink>
             <AdSlot service={service} slotType={slotType} />
           </StyledAd>
-        </StyledWrapper>
-      </FullWidthWrapper>
-    </div>
+        </div>
+      </StyledWrapper>
+    </FullWidthWrapper>
   );
 };
 
