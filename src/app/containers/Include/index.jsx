@@ -31,9 +31,9 @@ const IncludeContainer = props => {
   const { enabled } = useToggle('include');
 
   if (!enabled) return null;
-  const { showEmbedError, href, type } = props;
+  const { isAmpSupported, href, type } = props;
 
-  if (showEmbedError) {
+  if (!isAmpSupported && isAmp) {
     return (
       <EmbedError
         message="Sorry, we can’t display this part of the story on this lightweight mobile page."
