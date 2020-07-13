@@ -95,7 +95,7 @@ const VjAmp = ({ ampMetadata: { imageWidth, imageHeight, image, src } }) => {
           service={service}
         >
           <div overflow="true">
-            <button type="button" aria-label="Show More">
+            <button type="button" aria-label="Show more">
               Show more
             </button>
           </div>
