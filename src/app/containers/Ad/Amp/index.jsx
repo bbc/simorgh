@@ -14,6 +14,7 @@ import pathOr from 'ramda/src/pathOr';
 import { getMinion } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { ServiceContext } from '#contexts/ServiceContext';
+import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
 
 const FullWidthWrapper = styled.div`
@@ -78,9 +79,7 @@ export const AMP_ACCESS_FETCH = service => {
 const AmpAd = ({ slotType }) => {
   const { ads, dir, script, service } = useContext(ServiceContext);
   const label = pathOr('Advertisement', ['advertisementLabel'], ads);
-  const mpuLabel =
-    dir === 'ltr' || label === 'Advertisement' ? `${label} 2` : `2 ${label}`;
-  const ariaLabel = slotType === 'leaderboard' ? label : mpuLabel;
+  const ariaLabel = getAdsAriaLabel({ label, dir, slotType });
 
   return (
     // eslint-disable-next-line jsx-a11y/no-redundant-roles

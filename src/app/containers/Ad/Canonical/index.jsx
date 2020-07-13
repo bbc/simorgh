@@ -8,6 +8,7 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
 import isLive from '#lib/utilities/isLive';
+import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 
 const LEADERBOARD_HEIGHT = '5.5rem';
 const LEADERBOARD_HEIGHT_GROUP_4_5 = '9rem';
@@ -41,11 +42,7 @@ const CanonicalAd = ({ slotType }) => {
   const queryString = location.search;
   const { ads, dir } = useContext(ServiceContext);
   const adsLabel = pathOr('Advertisement', ['advertisementLabel'], ads);
-  const mpuLabel =
-    dir === 'ltr' || adsLabel === 'Advertisement'
-      ? `${adsLabel} 2`
-      : `2 ${adsLabel}`;
-  const ariaLabel = slotType === 'leaderboard' ? adsLabel : mpuLabel;
+  const ariaLabel = getAdsAriaLabel({ adsLabel, dir, slotType });
 
   useEffect(() => {
     if (window.dotcom) {
