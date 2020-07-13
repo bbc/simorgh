@@ -18,7 +18,7 @@ exports[`VJ include container on Amp should render an amp-iframe with an image p
         overflow="true"
       >
         <button
-          aria-label="Show More"
+          aria-label="Show more"
           type="button"
         >
           Show more
