@@ -1,24 +1,23 @@
-import hasNoAmpSupport from './hasNoAmpSupport';
+import isAmpSupported from './isAmpSupported';
 
-const truthyTestCases = ['vj-amp-not-supported', 'idt1-amp'];
-
-const falsyTestCases = [
-  'idt1-canonical',
+const truthyTestCases = [
   'idt2-canonical',
   'idt2-amp',
   'vj-canonical',
   'vj-supports-amp',
 ];
 
-describe('hasNoAmpSupport', () => {
+const falsyTestCases = ['vj-amp-not-supported', 'idt1-amp', 'idt1-canonical'];
+
+describe('isAmpSupported', () => {
   truthyTestCases.forEach(classification => {
     it(`should return true if classification is ${classification}`, () => {
-      expect(hasNoAmpSupport(classification)).toEqual(true);
+      expect(isAmpSupported(classification)).toEqual(true);
     });
   });
   falsyTestCases.forEach(classification => {
     it(`should return false if classification is ${classification}`, () => {
-      expect(hasNoAmpSupport(classification)).toEqual(false);
+      expect(isAmpSupported(classification)).toEqual(false);
     });
   });
 });
