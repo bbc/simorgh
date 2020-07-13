@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import AmpGeo from '@bbc/psammead-amp-geo';
 import Banner from './Banner/index.amp';
 
 const parentId = 'consent';
@@ -47,6 +48,7 @@ const AmpConsentWrapper = styled.div`
 
 const Amp = () => (
   <AmpConsentWrapper>
+    <AmpGeo />
     <amp-consent id={parentId} layout="nodisplay">
       {jsonInlinedScript(ampConsentData)}
       <div id={promptId}>
