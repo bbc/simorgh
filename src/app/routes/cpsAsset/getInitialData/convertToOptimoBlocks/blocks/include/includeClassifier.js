@@ -9,7 +9,7 @@ const supportedTypes = {
   'smallprox/include': 'vj',
 };
 
-const ampSupported = href => {
+const hasAmpVersion = href => {
   // An amp-image query parameter on the include path indicates an AMP version of the include is available
   const hasAmpImageQueryString = new Url(href, true).query['amp-image'];
   return !!hasAmpImageQueryString;
@@ -42,11 +42,11 @@ const includeClassifier = ({ href, pathname }) => {
     return { includeType, classification: 'vj-canonical' };
   }
 
-  if (includeType === 'vj' && ampSupported(href)) {
+  if (includeType === 'vj' && hasAmpVersion(href)) {
     return { includeType, classification: 'vj-supports-amp' };
   }
 
-  if (includeType === 'vj' && !ampSupported(href)) {
+  if (includeType === 'vj' && !hasAmpVersion(href)) {
     // Since fallbacks for VJs are supported we must change the name of the classification to prevent returning nothing
     return { includeType, classification: 'vj-amp-not-supported' };
   }
