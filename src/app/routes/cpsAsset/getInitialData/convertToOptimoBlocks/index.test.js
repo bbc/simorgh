@@ -338,7 +338,7 @@ describe('convertToOptimoBlocks', () => {
               model: {
                 href: '/indepthtoolkit/quizzes/123-456',
                 index: 0,
-                showEmbedError: false,
+                isAmpSupported: false,
                 type: 'idt1',
               },
               type: 'include',
@@ -357,7 +357,7 @@ describe('convertToOptimoBlocks', () => {
                   width: 1632,
                 },
                 index: 1,
-                showEmbedError: false,
+                isAmpSupported: true,
                 type: 'idt2',
               },
               type: 'include',
@@ -366,7 +366,7 @@ describe('convertToOptimoBlocks', () => {
               model: {
                 href: '/include/111-222-333-444-555',
                 index: 2,
-                showEmbedError: false,
+                isAmpSupported: true,
                 type: 'vj',
               },
               type: 'include',
@@ -376,7 +376,7 @@ describe('convertToOptimoBlocks', () => {
                 href:
                   '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
                 index: 5,
-                showEmbedError: false,
+                isAmpSupported: true,
                 type: 'vj',
               },
               type: 'include',
@@ -386,7 +386,7 @@ describe('convertToOptimoBlocks', () => {
                 href:
                   '/news/special/2016/newsspec_14813/content/iframe/gahuza/us-gop.inc?responsive=true&app-clickable=true&app-image=http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/11/09/161109092836_us_election_2nddaymaps_winner_ws_62_v3.png',
                 index: 6,
-                showEmbedError: false,
+                isAmpSupported: true,
                 type: 'vj',
               },
               type: 'include',

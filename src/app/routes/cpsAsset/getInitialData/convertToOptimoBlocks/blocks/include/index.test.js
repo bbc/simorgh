@@ -56,7 +56,7 @@ describe('convertInclude', () => {
       model: {
         href: '/indepthtoolkit/quizzes/123-456',
         index: 0,
-        showEmbedError: false,
+        isAmpSupported: false,
         type: 'idt1',
         html: idt1Markup,
       },
@@ -86,7 +86,7 @@ describe('convertInclude', () => {
       model: {
         href: '/idt2/111-222-333-444-555',
         index: 1,
-        showEmbedError: false,
+        isAmpSupported: true,
         type: 'idt2',
         html: idt2Markup,
         imageBlock: {
@@ -125,7 +125,7 @@ describe('convertInclude', () => {
       model: {
         href: '/idt2/111-222-333-444-555',
         index: 1,
-        showEmbedError: false,
+        isAmpSupported: true,
         type: 'idt2',
         imageBlock: {
           alt: 'image alt text',
@@ -152,7 +152,7 @@ describe('convertInclude', () => {
       model: {
         href: '/include/111-222-333-444-555',
         index: 2,
-        showEmbedError: false,
+        isAmpSupported: true,
         type: 'vj',
         html: vjMarkup,
       },
@@ -182,7 +182,7 @@ describe('convertInclude', () => {
       model: {
         href: '/idt2/111-222-333-444-555',
         index: 1,
-        showEmbedError: false,
+        isAmpSupported: true,
         type: 'idt2',
         imageBlock: {
           alt: 'image alt text',
@@ -227,7 +227,7 @@ describe('convertInclude', () => {
         model: {
           href: '/indepthtoolkit/quizzes/123-456',
           index: 0,
-          showEmbedError: false,
+          isAmpSupported: false,
           type: 'idt1',
           html: idt1Markup,
         },
@@ -342,7 +342,7 @@ describe('convertInclude', () => {
       model: {
         href: includeSupportingAmp,
         index: 5,
-        showEmbedError: false,
+        isAmpSupported: true,
         type: 'vj',
         ampMetadata: {
           image:
@@ -379,7 +379,7 @@ describe('convertInclude', () => {
       model: {
         href: notSupportedVjIncludeOnAmp,
         index: 6,
-        showEmbedError: true,
+        isAmpSupported: false,
         type: 'vj',
       },
     };

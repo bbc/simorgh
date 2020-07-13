@@ -14,7 +14,7 @@ import { addOverrideQuery } from '#app/routes/utils/overrideRendererOnTest';
 import ampMetadataExtractor from './ampMetadataExtractor';
 import includeClassifier from './includeClassifier';
 import getImageBlock from './getImageBlock';
-import hasNoAmpSupport from './hasNoAmpSupport';
+import isAmpSupported from './isAmpSupported';
 
 const logger = nodeLogger(__filename);
 
@@ -101,8 +101,6 @@ const convertInclude = async (includeBlock, pageData, ...restParams) => {
 
   const index = includeMap.indexOf(includeBlock);
 
-  const showEmbedError = hasNoAmpSupport(classification);
-
   let ampMetadata;
   let html;
   if (classification === 'vj-supports-amp') {
@@ -128,7 +126,7 @@ const convertInclude = async (includeBlock, pageData, ...restParams) => {
       href,
       index,
       type: includeType,
-      showEmbedError,
+      isAmpSupported: isAmpSupported(classification),
       ...(ampMetadata && { ampMetadata }),
       ...(html && { html }),
       ...(imageBlock && { imageBlock }),
