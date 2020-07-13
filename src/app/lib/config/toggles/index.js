@@ -152,7 +152,7 @@ const toggles = {
       enabled: false,
     },
     cinemaModeTV: {
-      enabled: false,
+      enabled: true,
     },
   },
 };

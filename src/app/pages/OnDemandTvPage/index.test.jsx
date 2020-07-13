@@ -41,11 +41,21 @@ const Page = ({
   </StaticRouter>
 );
 
-const renderPage = async ({ pageData, service, isAmp = false }) => {
+const renderPage = async ({
+  pageData,
+  service,
+  isAmp = false,
+  darkModeEnabled = false,
+}) => {
   let result;
   await act(async () => {
     result = await render(
-      <Page pageData={pageData} service={service} isAmp={isAmp} />,
+      <Page
+        pageData={pageData}
+        service={service}
+        isAmp={isAmp}
+        darkModeEnabled={darkModeEnabled}
+      />,
     );
   });
 
