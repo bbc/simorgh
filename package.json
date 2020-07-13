@@ -134,7 +134,7 @@
     "styled-normalize": "^8.0.7",
     "url-parse": "^1.4.7",
     "uuid": "^3.4.0",
-    "winston": "^3.2.1"
+    "winston": "^3.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
