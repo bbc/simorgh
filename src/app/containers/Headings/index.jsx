@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { string } from 'prop-types';
 import styled from 'styled-components';
 import { Headline, SubHeading } from '@bbc/psammead-headings';
-import { MEDIA_QUERY_TYPOGRAPHY } from '@bbc/gel-foundations/breakpoints';
 import { textDefaultPropTypes } from '#models/propTypes';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { headlineModelPropTypes } from '#models/propTypes/headline';
@@ -18,9 +17,7 @@ const StyledHeadline = styled(Headline)`
   :focus {
     outline: none;
   }
-  ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
-    word-break: break-word;
-  }
+  overflow-wrap: anywhere;
 `;
 
 const Headings = {
