@@ -42,7 +42,7 @@ const CanonicalAd = ({ slotType }) => {
   const queryString = location.search;
   const { ads, dir } = useContext(ServiceContext);
   const adsLabel = pathOr('Advertisement', ['advertisementLabel'], ads);
-  const ariaLabel = getAdsAriaLabel({ adsLabel, dir, slotType });
+  const ariaLabel = getAdsAriaLabel(adsLabel, dir, slotType);
 
   useEffect(() => {
     if (window.dotcom) {
