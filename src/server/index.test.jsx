@@ -1324,53 +1324,53 @@ describe('Server HTTP Headers', () => {
       );
     });
   });
+});
 
-  describe('Routing Information Logging', () => {
-    const service = 'igbo';
-    const isAmp = false;
-    const url = `/${service}`;
-    const dataResponse = {
-      isAmp,
-      pageData: {
-        metadata: {
-          type: 'Page Type from Data',
-        },
+describe('Routing Information Logging', () => {
+  const service = 'igbo';
+  const isAmp = false;
+  const url = `/${service}`;
+  const dataResponse = {
+    isAmp,
+    pageData: {
+      metadata: {
+        type: 'Page Type from Data',
       },
+    },
+    service,
+    status: 200,
+  };
+
+  it(`on non-200 response should log matched page type from route`, async () => {
+    const pageType = 'Matching Page Type from Route';
+    const status = 404;
+    mockRouteProps({
       service,
-      status: 200,
-    };
-
-    it(`on non-200 response should log matched page type from route`, async () => {
-      const pageType = 'Matching Page Type from Route';
-      const status = 404;
-      mockRouteProps({
-        service,
-        isAmp,
-        dataResponse: { ...dataResponse, status },
-        pageType,
-      });
-      await makeRequest(url);
-
-      expect(loggerMock.info).toHaveBeenCalledWith(ROUTING_INFORMATION, {
-        url,
-        status,
-        pageType,
-      });
+      isAmp,
+      dataResponse: { ...dataResponse, status },
+      pageType,
     });
+    await makeRequest(url);
 
-    it(`on 200 response should log page type derived from response data`, async () => {
-      mockRouteProps({
-        service,
-        isAmp,
-        dataResponse,
-      });
-      await makeRequest(url);
+    expect(loggerMock.info).toHaveBeenCalledWith(ROUTING_INFORMATION, {
+      url,
+      status,
+      pageType,
+    });
+  });
 
-      expect(loggerMock.info).toHaveBeenCalledWith(ROUTING_INFORMATION, {
-        url,
-        status: 200,
-        pageType: 'Page Type from Data',
-      });
+  it(`on 200 response should log page type derived from response data`, async () => {
+    mockRouteProps({
+      service,
+      isAmp,
+      dataResponse,
+    });
+    await makeRequest(url);
+
+    expect(loggerMock.info).toHaveBeenCalledWith(ROUTING_INFORMATION, {
+      url,
+      status: 200,
+      pageType: 'Page Type from Data',
     });
   });
 });
