@@ -187,6 +187,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
       onFrontPage: false,
       durationLabel: 'دورانیہ %duration%',
     },

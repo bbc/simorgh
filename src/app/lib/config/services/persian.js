@@ -209,6 +209,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: false,
       onFrontPage: false,
       frontPagePosition: '',
       onIdxPage: true,
