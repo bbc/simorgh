@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { string } from 'prop-types';
+import { string, bool } from 'prop-types';
 import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import ParagraphComponent from '@bbc/psammead-paragraph';
@@ -12,13 +12,18 @@ const StyledParagraphComponent = styled(ParagraphComponent)`
   }
 `;
 
-const ParagraphContainer = ({ idAttr, text }) => {
+const ParagraphContainer = ({ idAttr, text, darkMode }) => {
   const { script, service } = useContext(ServiceContext);
 
   if (!text) return null;
 
   return (
-    <StyledParagraphComponent script={script} service={service} id={idAttr}>
+    <StyledParagraphComponent
+      script={script}
+      service={service}
+      id={idAttr}
+      darkMode={darkMode}
+    >
       {text}
     </StyledParagraphComponent>
   );
@@ -27,10 +32,12 @@ const ParagraphContainer = ({ idAttr, text }) => {
 ParagraphContainer.propTypes = {
   idAttr: string,
   text: string.isRequired,
+  darkMode: bool,
 };
 
 ParagraphContainer.defaultProps = {
   idAttr: null,
+  darkMode: false,
 };
 
 export default ParagraphContainer;
