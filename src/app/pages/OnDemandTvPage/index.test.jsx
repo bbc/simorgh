@@ -9,14 +9,21 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import OnDemandTvPage from '.';
 import pashtoPageData from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4';
 import * as analyticsUtils from '#lib/analyticsUtils';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { ToggleContext } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandTV/getInitialData';
 
-const Page = ({ pageData, service, isAmp = false }) => (
+const Page = ({
+  pageData,
+  service,
+  isAmp = false,
+  darkModeEnabled = false,
+}) => (
   <StaticRouter>
-    <ToggleContextProvider
-      service={service}
-      origin="https://www.test.bbc.co.uk"
+    <ToggleContext.Provider
+      value={{
+        toggleState: { cinemaModeTV: { enabled: darkModeEnabled } },
+        toggleDispatch: jest.fn(),
+      }}
     >
       <ServiceContextProvider service={service}>
         <RequestContextProvider
@@ -30,7 +37,7 @@ const Page = ({ pageData, service, isAmp = false }) => (
           <OnDemandTvPage service={service} pageData={pageData} />
         </RequestContextProvider>
       </ServiceContextProvider>
-    </ToggleContextProvider>
+    </ToggleContext.Provider>
   </StaticRouter>
 );
 
@@ -113,6 +120,19 @@ describe('OnDemand TV Brand Page ', () => {
     });
 
     expect(container.querySelector('h1#content')).toBeDefined();
+  });
+
+  it('Dark Mode Design - should match snapshot', async () => {
+    fetch.mockResponse(JSON.stringify(pashtoPageData));
+
+    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    const { container } = await renderPage({
+      pageData,
+      service: 'pashto',
+      darkModeEnabled: true,
+    });
+
+    expect(container).toMatchSnapshot();
   });
 });
 
