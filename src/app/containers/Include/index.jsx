@@ -14,8 +14,6 @@ import VjAmp from './amp/VjAmp';
 
 const logger = nodeLogger(__filename);
 
-const FALLBACK_CLASSIFICATIONS = ['vj-amp-not-supported', 'idt1-amp'];
-
 const componentsToRender = {
   amp: {
     idt2: props => <Idt2Amp {...props} />,
@@ -33,9 +31,9 @@ const IncludeContainer = props => {
   const { enabled } = useToggle('include');
 
   if (!enabled) return null;
-  const { classification, href, type } = props;
+  const { showEmbedError, href, type } = props;
 
-  if (FALLBACK_CLASSIFICATIONS.includes(classification)) {
+  if (showEmbedError) {
     return (
       <EmbedError
         message="Sorry, we can’t display this part of the story on this lightweight mobile page."
