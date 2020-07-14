@@ -289,14 +289,18 @@ server
       });
 
       try {
-        const { service, isAmp, route, variant } = getRouteProps(
-          routes,
-          urlPath,
-        );
-        const data = await route.getInitialData({
+        const {
+          service,
+          isAmp,
+          route: { pageType, getInitialData },
+          variant,
+        } = getRouteProps(routes, urlPath);
+
+        const data = await getInitialData({
           path: url,
           service,
           variant,
+          pageType,
         });
         const { status } = data;
         const bbcOrigin = headers['bbc-origin'];
