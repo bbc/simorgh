@@ -65,7 +65,6 @@ exports[`Ad Container Snapshots should correctly render an AMP leaderboard ad 1`
   background-color: #F6F6F6;
 }
 
-.amp-geo-pending .c0,
 .amp-geo-group-gbOrUnknown .c0 {
   display: none;
   visibility: hidden;
@@ -79,6 +78,11 @@ exports[`Ad Container Snapshots should correctly render an AMP leaderboard ad 1`
 
 .c2 {
   display: inline-block;
+}
+
+.amp-geo-pending .c2 {
+  display: none;
+  visibility: hidden;
 }
 
 .c3 {
@@ -150,23 +154,14 @@ exports[`Ad Container Snapshots should correctly render an AMP leaderboard ad 1`
   <body>
     <div>
       <div
-        amp-access="toggles.ads.enabled"
-        amp-access-hide="true"
+        class="c0"
       >
-        <amp-geo
-          layout="nodisplay"
-        >
-          <script
-            type="application/json"
-          >
-            {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"],"gbOrUnknown":["gb","gg","im","je","uk","unknown"]}}
-          </script>
-        </amp-geo>
         <div
-          class="c0"
+          class="c1"
         >
           <div
-            class="c1"
+            amp-access="toggles.ads.enabled"
+            amp-access-hide="true"
           >
             <div
               class="c2"
@@ -239,6 +234,11 @@ exports[`Ad Container Snapshots should correctly render an AMP mpu ad 1`] = `
   background-color: #F6F6F6;
 }
 
+.amp-geo-group-gbOrUnknown .c0 {
+  display: none;
+  visibility: hidden;
+}
+
 .c1 {
   margin: 0 auto;
   text-align: center;
@@ -247,6 +247,11 @@ exports[`Ad Container Snapshots should correctly render an AMP mpu ad 1`] = `
 
 .c2 {
   display: inline-block;
+}
+
+.amp-geo-pending .c2 {
+  display: none;
+  visibility: hidden;
 }
 
 .c3 {
@@ -298,14 +303,14 @@ exports[`Ad Container Snapshots should correctly render an AMP mpu ad 1`] = `
 
 <div>
       <div
-        amp-access="toggles.ads.enabled"
-        amp-access-hide="true"
+        class="c0"
       >
         <div
-          class="c0"
+          class="c1"
         >
           <div
-            class="c1"
+            amp-access="toggles.ads.enabled"
+            amp-access-hide="true"
           >
             <div
               class="c2"
