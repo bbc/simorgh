@@ -47,7 +47,6 @@ const includeClassifier = ({ href, pathname }) => {
   }
 
   if (includeType === 'vj' && !hasAmpVersion(href)) {
-    // Since fallbacks for VJs are supported we must change the name of the classification to prevent returning nothing
     return { includeType, classification: 'vj-amp-not-supported' };
   }
 

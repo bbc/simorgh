@@ -54,6 +54,7 @@ const CanonicalIncludeContainer = ({ html, type, index }) => {
         suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: html }}
         id={`include-${index + 1}`}
+        tabIndex="-1"
       />
     </IncludeGrid>
   );
