@@ -1,7 +1,7 @@
 const toggles = {
   local: {
     ads: {
-      enabled: true,
+      enabled: false,
     },
     chartbeatAnalytics: {
       enabled: true,
