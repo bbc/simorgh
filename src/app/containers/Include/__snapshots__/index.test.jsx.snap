@@ -13,7 +13,7 @@ exports[`IncludeContainer should render a VJ include on an Amp page with toggles
 exports[`IncludeContainer should render a fallback for VJs on an Amp page when showEmbed is present 1`] = `
 <div>
   <div
-    class="StyledEmbedError-sc-1oc1egd-0 kRErCH"
+    class="StyledEmbedError-sc-1oc1egd-0 hfyAyn"
   >
     <div
       class="StyledErrorMessage-sc-1oc1egd-1 eCvEfh"
@@ -22,7 +22,7 @@ exports[`IncludeContainer should render a fallback for VJs on an Amp page when s
         Sorry, we can’t display this part of the story on this lightweight mobile page.
       </strong>
       <a
-        href="https://www.bbc.co.uk/"
+        href="https://www.test.bbc.com/pathname#include-1"
       >
         View the full version of the page to see all the content.
       </a>

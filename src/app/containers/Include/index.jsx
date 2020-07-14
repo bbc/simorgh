@@ -27,11 +27,11 @@ const componentsToRender = {
 };
 
 const IncludeContainer = props => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, canonicalLink } = useContext(RequestContext);
   const { enabled } = useToggle('include');
 
   if (!enabled) return null;
-  const { isAmpSupported, href, type } = props;
+  const { isAmpSupported, href, type, index } = props;
 
   if (!isAmpSupported && isAmp) {
     return (
@@ -39,9 +39,8 @@ const IncludeContainer = props => {
         message="Sorry, we can’t display this part of the story on this lightweight mobile page."
         link={{
           text: 'View the full version of the page to see all the content.',
-          href: 'https://www.bbc.co.uk/',
+          href: `${canonicalLink}#include-${index + 1}`,
         }}
-        fillViewport
       />
     );
   }
