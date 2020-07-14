@@ -12,11 +12,14 @@ describe('withError HOC', () => {
   describe('with error', () => {
     shouldMatchSnapshot(
       `should return the errorMain component`,
-      <ErrorHOC error={new Error('This is an error.')} />,
+      <ErrorHOC error={new Error('This is an error.')} status={500} />,
     );
   });
 
   describe('with no error', () => {
-    shouldMatchSnapshot('should return the passed in component', <ErrorHOC />);
+    shouldMatchSnapshot(
+      'should return the passed in component',
+      <ErrorHOC status={200} />,
+    );
   });
 });
