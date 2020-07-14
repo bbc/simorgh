@@ -1,7 +1,7 @@
 import { setWindowValue, resetWindowValue } from '@bbc/psammead-test-helpers';
 import loggerMock from '#testHelpers/loggerMock'; // Must be imported before fetchPageData
 import fetchPageData, { getUrl } from '.';
-import { DATA_FETCH_ERROR } from '#lib/logger.const';
+import { DATA_FETCH_ERROR, DATA_REQUEST_RECEIVED } from '#lib/logger.const';
 
 const expectedBaseUrl = 'http://localhost';
 const requestedPathname = '/path/to/asset';
@@ -13,6 +13,35 @@ afterEach(() => {
 });
 
 describe('fetchPageData', () => {
+  describe('data request received logging', () => {
+    beforeEach(() => {
+      fetch.mockResponse(
+        JSON.stringify({
+          metadata: {},
+          content: {},
+          promo: {},
+        }),
+      );
+    });
+
+    it('should always log pathname as url', async () => {
+      await fetchPageData(requestedPathname);
+      expect(loggerMock.info).toBeCalledWith(DATA_REQUEST_RECEIVED, {
+        url: expectedUrl,
+      });
+    });
+
+    it('should log pageType if passed in as a parameter', async () => {
+      const pageType = 'Page Type';
+      await fetchPageData(requestedPathname, pageType);
+
+      expect(loggerMock.info).toBeCalledWith(DATA_REQUEST_RECEIVED, {
+        url: expectedUrl,
+        pageType,
+      });
+    });
+  });
+
   describe('Successful fetch', () => {
     beforeEach(() => {
       fetch.mockResponse(
@@ -153,20 +182,24 @@ describe('fetchPageData', () => {
       });
 
       it('should log, and propogate the status code as 500', async () => {
+        const pageType = 'Page Type';
         fetch.mockResponse('Error', { status: 500 });
 
-        return fetchPageData(requestedPathname).catch(({ message, status }) => {
-          expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
-            error: `Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
-            status: 500,
-            url: 'http://localhost/path/to/asset.json',
-          });
+        return fetchPageData(requestedPathname, pageType).catch(
+          ({ message, status }) => {
+            expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
+              error: `Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
+              status: 500,
+              url: 'http://localhost/path/to/asset.json',
+              pageType,
+            });
 
-          expect({ message, status }).toEqual({
-            status: 500,
-            message: `Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
-          });
-        });
+            expect({ message, status }).toEqual({
+              status: 500,
+              message: `Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
+            });
+          },
+        );
       });
     });
   });
