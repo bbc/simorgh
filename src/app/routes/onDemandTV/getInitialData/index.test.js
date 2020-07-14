@@ -21,6 +21,7 @@ describe('Get initial data for on demand tv', () => {
   it('should return essential data for a page to render', async () => {
     const { pageData } = await getInitialData({
       path: 'mock-on-demand-tv-path',
+      pageType: 'media',
     });
 
     expect(pageData.language).toEqual('ps');
@@ -40,17 +41,21 @@ describe('Get initial data for on demand tv', () => {
   it('should override renderer on test', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
     await getInitialData({ path: 'mock-live-tv-path' });
-    expect(spy).toHaveBeenCalledWith('mock-live-tv-path?renderer_env=live');
+    expect(spy).toHaveBeenCalledWith({
+      path: 'mock-live-tv-path?renderer_env=live',
+    });
   });
 
   it('should not override renderer on live', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
     await getInitialData({ path: 'mock-live-tv-path' });
-    expect(spy).toHaveBeenCalledWith('mock-live-tv-path');
+    expect(spy).toHaveBeenCalledWith({ path: 'mock-live-tv-path' });
   });
 
   it('should return episodeIsAvailable as true if episode is available to watch', async () => {
-    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-tv-path',
+    });
     expect(pageData.episodeIsAvailable).toEqual(true);
   });
 
@@ -61,7 +66,9 @@ describe('Get initial data for on demand tv', () => {
       onDemandTvJson,
     );
     fetch.mockResponse(JSON.stringify(pageDataWithoutVersions));
-    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-tv-path',
+    });
     expect(pageData.episodeIsAvailable).toEqual(false);
     expect(loggerMock.info).toHaveBeenCalledWith(EPISODE_EXPIRED, {
       url: 'pashto/bbc_pashto_tv/w172xcldhhrdqgb',
