@@ -19,6 +19,7 @@ describe('Get initial data for on demand radio', () => {
   it('should return essential data for a page to render', async () => {
     const { pageData } = await getInitialData({
       path: 'mock-on-demand-radio-path',
+      pageType: 'media',
     });
 
     expect(pageData.headline).toEqual('ماښامنۍ خپرونه');
@@ -61,7 +62,9 @@ describe('Get initial data for on demand radio', () => {
       onDemandRadioJson,
     );
     fetch.mockResponse(JSON.stringify(responseWithEpisodeAvailableInOneMinute));
-    const { pageData } = await getInitialData('mock-on-demand-radio-path');
+    const { pageData } = await getInitialData({
+      path: 'mock-on-demand-radio-path',
+    });
     expect(pageData.episodeIsAvailable).toEqual('not-yet-available');
   });
 
@@ -72,20 +75,24 @@ describe('Get initial data for on demand radio', () => {
       onDemandRadioJson,
     );
     fetch.mockResponse(JSON.stringify(responseWithoutVersions));
-    const { pageData } = await getInitialData('mock-on-demand-radio-path');
+    const { pageData } = await getInitialData({
+      path: 'mock-on-demand-radio-path',
+    });
     expect(pageData.episodeIsAvailable).toEqual('expired');
   });
 
   it('should override renderer on test', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
     await getInitialData({ path: 'mock-live-radio-path' });
-    expect(spy).toHaveBeenCalledWith('mock-live-radio-path?renderer_env=live');
+    expect(spy).toHaveBeenCalledWith({
+      path: 'mock-live-radio-path?renderer_env=live',
+    });
   });
 
   it('should not override renderer on live', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
     await getInitialData({ path: 'mock-live-radio-path' });
-    expect(spy).toHaveBeenCalledWith('mock-live-radio-path');
+    expect(spy).toHaveBeenCalledWith({ path: 'mock-live-radio-path' });
   });
 
   it('invokes logging when expected data is missing in ARES response', async () => {
