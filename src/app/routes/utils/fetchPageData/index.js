@@ -32,8 +32,8 @@ export const getUrl = pathname => {
   return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
 };
 
-export default async (pathname, pageType) => {
-  const url = getUrl(pathname);
+export default async ({ path, pageType }) => {
+  const url = getUrl(path);
 
   logger.info(DATA_REQUEST_RECEIVED, { url, pageType });
 
