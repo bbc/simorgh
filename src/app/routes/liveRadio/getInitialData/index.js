@@ -19,11 +19,14 @@ const getPageIdentifier = path([
 const getHeading = path(['content', 'blocks', 0, 'text']);
 const getBodySummary = path(['content', 'blocks', 1, 'text']);
 
-export default async ({ path: pathname }) => {
+export default async ({ path: pathname, pageType }) => {
   try {
     const liveRadioDataPath = overrideRendererOnTest(pathname);
-    const { json, status } = await fetchPageData(liveRadioDataPath);
-    const pageType = { metadata: { type: 'Live Radio' } };
+    const { json, status } = await fetchPageData({
+      path: liveRadioDataPath,
+      pageType,
+    });
+    const liveRadioPageType = { metadata: { type: 'Live Radio' } };
 
     return {
       status,
@@ -38,7 +41,7 @@ export default async ({ path: pathname }) => {
         contentType: getContentType(json),
         pageIdentifier: getPageIdentifier(json),
         masterBrand: getMasterBrand(json),
-        ...pageType,
+        ...liveRadioPageType,
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
