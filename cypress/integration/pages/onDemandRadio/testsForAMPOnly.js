@@ -1,6 +1,10 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
-import { getEmbedUrl, isExpired, dataEndpointOverride } from './helpers';
+import {
+  getEmbedUrl,
+  isExpired,
+  dataEndpointOverride,
+} from '../../../support/helpers/onDemandRadioTv';
 import config from '../../../support/config/services';
 
 export default ({ service, pageType, variant }) => {

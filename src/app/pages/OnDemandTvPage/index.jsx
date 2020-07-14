@@ -30,7 +30,9 @@ import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHea
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
+import DarkModeGlobalStyles from '#lib/utilities/darkMode';
 import AVPlayer from '#containers/AVPlayer';
+import useToggle from '#hooks/useToggle';
 
 const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
 const StyledMessageContainer = styled.div`
@@ -96,17 +98,23 @@ const OnDemandTvPage = ({ pageData }) => {
     durationISO8601,
   } = pageData;
 
-  const { lang, timezone, locale, dir, service, translations } = useContext(
-    ServiceContext,
-  );
+  const {
+    lang,
+    timezone,
+    datetimeLocale,
+    dir,
+    service,
+    translations,
+  } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
+  const darkMode = useToggle('cinemaModeTV').enabled;
 
   const formattedTimestamp = formatUnixTimestamp({
     timestamp: releaseDateTimeStamp,
     format: 'LL',
     timezone,
-    locale,
+    locale: datetimeLocale,
     isRelative: false,
   });
 
@@ -132,6 +140,7 @@ const OnDemandTvPage = ({ pageData }) => {
 
   return (
     <>
+      {darkMode && <DarkModeGlobalStyles />}
       <ChartbeatAnalytics data={pageData} />
       <ATIAnalytics data={pageData} />
       <ComscoreAnalytics />
@@ -196,6 +205,7 @@ const OnDemandTvPage = ({ pageData }) => {
           <OnDemandHeadingBlock
             brandTitle={brandTitle}
             releaseDateTimeStamp={releaseDateTimeStamp}
+            darkMode={darkMode}
             ariaHidden
           />
         </Grid>
@@ -206,7 +216,7 @@ const OnDemandTvPage = ({ pageData }) => {
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
           margins={getGroups(true, true, true, true, false, false)}
         >
-          <ParagraphBlock text={shortSynopsis} />
+          <ParagraphBlock text={shortSynopsis} darkMode={darkMode} />
         </Grid>
       </StyledGelPageGrid>
     </>

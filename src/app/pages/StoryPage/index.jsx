@@ -55,6 +55,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     service,
   } = useContext(ServiceContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
+  const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
   const category = path(
     ['promo', 'passport', 'category', 'categoryName'],
     pageData,
@@ -184,6 +185,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
       width: 100%;
     }
+    padding-bottom: ${GEL_SPACING_QUAD};
   `;
 
   const GridSecondaryColumn = styled(Grid)`
@@ -237,6 +239,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     <>
       <CpsMetadata
         title={title}
+        shortHeadline={shortHeadline}
         language={metadata.language}
         description={summary}
         firstPublished={firstPublished}

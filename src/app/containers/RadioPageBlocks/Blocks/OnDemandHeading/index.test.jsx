@@ -5,7 +5,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import OnDemandHeading from '.';
 
 // eslint-disable-next-line react/prop-types
-const Component = ({ ariaHidden, idAttr }) => (
+const Component = ({ ariaHidden, idAttr, darkMode }) => (
   <ServiceContextProvider service="news">
     <OnDemandHeading
       brandTitle="Dunia Pagi Ini"
@@ -13,12 +13,18 @@ const Component = ({ ariaHidden, idAttr }) => (
       uuid="uuid"
       idAttr={idAttr}
       ariaHidden={ariaHidden}
+      darkMode={darkMode}
     />
   </ServiceContextProvider>
 );
 
 describe('AudioPlayer blocks OnDemandHeading', () => {
   shouldMatchSnapshot('should render correctly', <Component />);
+
+  shouldMatchSnapshot(
+    'should render correctly - dark mode',
+    <Component darkMode />,
+  );
 
   it('should have semantic h1 with child span with role attribute = text so that screen readers read the BrandTitle and Datestamp in one go', () => {
     render(<Component />);
