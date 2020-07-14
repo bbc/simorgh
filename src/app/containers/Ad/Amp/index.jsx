@@ -76,8 +76,12 @@ export const AMP_ACCESS_FETCH = service => {
 };
 
 const AmpAd = ({ slotType }) => {
-  const { ads, dir, script, service } = useContext(ServiceContext);
-  const label = pathOr('Advertisement', ['advertisementLabel'], ads);
+  const { translations, dir, script, service } = useContext(ServiceContext);
+  const label = pathOr(
+    'Advertisement',
+    ['ads', 'advertisementLabel'],
+    translations,
+  );
 
   return (
     <div amp-access="toggles.ads.enabled" amp-access-hide="true">

@@ -189,7 +189,7 @@ describe('Front Page', () => {
       });
     });
 
-    it('should create window.dotcomConfig when on Canonical and hasAds is true', async () => {
+    it('should create window.dotcomConfig when on Canonical and adsEnabled is true', async () => {
       await act(async () => {
         render(<FrontPageWithContext service="mundo" pageData={pageData} />);
       });
@@ -200,7 +200,7 @@ describe('Front Page', () => {
       });
     });
 
-    it('should create window.dotcomConfig when on Canonical and hasAds is false', async () => {
+    it('should create window.dotcomConfig when on Canonical and adsEnabled is false', async () => {
       await act(async () => {
         render(<FrontPageWithContext service="japanese" pageData={pageData} />);
       });
@@ -208,7 +208,7 @@ describe('Front Page', () => {
       expect(window.dotcomConfig).toBeFalsy();
     });
 
-    it('should not create window.dotcomConfig when on Amp and hasAds is true', async () => {
+    it('should not create window.dotcomConfig when on Amp and adsEnabled is true', async () => {
       await act(async () => {
         render(
           <FrontPageWithContext service="mundo" pageData={pageData} isAmp />,
