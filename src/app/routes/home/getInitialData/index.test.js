@@ -24,6 +24,7 @@ describe('Get initial data from front page', () => {
     const { pageData } = await getInitialData({
       path: 'mock-frontpage-path',
       service: 'hausa',
+      pageType: 'frontPage',
     });
 
     expect(pageData.metadata.language).toEqual('ha');
