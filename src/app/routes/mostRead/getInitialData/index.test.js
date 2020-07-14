@@ -7,6 +7,7 @@ it('should return essential data for a page to render', async () => {
   const { pageData } = await getInitialData({
     path: 'mock-frontpage-path',
     service: 'pidgin',
+    pageType: 'mostRead',
   });
 
   expect(pageData.lastRecordTimeStamp).toEqual('2030-01-01T17:00:00Z');
