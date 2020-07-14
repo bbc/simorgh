@@ -66,7 +66,7 @@ describe('fetchPageData', () => {
     });
 
     it('should return expected response', async () => {
-      const response = await fetchPageData(requestedPathname);
+      const response = await fetchPageData({ path: requestedPathname });
 
       expect(response).toEqual({
         json: {
