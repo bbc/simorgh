@@ -60,9 +60,9 @@ const transformJson = async (json, pathname) => {
   }
 };
 
-export default async ({ path: pathname, service, variant }) => {
+export default async ({ path: pathname, service, variant, pageType }) => {
   try {
-    const { json, status } = await fetchPageData(pathname);
+    const { json, status } = await fetchPageData({ path: pathname, pageType });
 
     const additionalPageData = await getAdditionalPageData(
       json,
