@@ -21,6 +21,7 @@ describe('getInitialData', () => {
     const { pageData } = await getInitialData({
       path: 'mock-map-path',
       service: 'pidgin',
+      pageType: 'cpsAsset',
     });
 
     expect(pageData.metadata.id).toEqual(
