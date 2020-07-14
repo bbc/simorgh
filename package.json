@@ -66,7 +66,7 @@
   "dependencies": {
     "@bbc/gel-foundations": "4.0.1",
     "@bbc/moment-timezone-include": "^1.1.4",
-    "@bbc/psammead-amp-geo": "^1.1.2",
+    "@bbc/psammead-amp-geo": "^1.2.0",
     "@bbc/psammead-assets": "^2.14.0",
     "@bbc/psammead-brand": "^5.1.22",
     "@bbc/psammead-bulleted-list": "1.0.10",
@@ -134,11 +134,11 @@
     "styled-normalize": "^8.0.7",
     "url-parse": "^1.4.7",
     "uuid": "^3.4.0",
-    "winston": "^3.2.1"
+    "winston": "^3.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.10.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.4",
     "@babel/plugin-proposal-throw-expressions": "^7.10.1",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/plugin-transform-runtime": "^7.10.4",
@@ -159,7 +159,7 @@
     "@testing-library/react-hooks": "^3.3.0",
     "amphtml-validator": "^1.0.31",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.0.1",
+    "babel-jest": "^26.1.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-dynamic-import-node": "^2.3.3",
     "babel-plugin-styled-components": "^1.10.7",
