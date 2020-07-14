@@ -44,6 +44,7 @@ const HeadingContainer = ({
   brandTitle,
   releaseDateTimeStamp,
   ariaHidden,
+  darkMode,
 }) => {
   const { script, service, timezone, datetimeLocale } = useContext(
     ServiceContext,
@@ -64,6 +65,7 @@ const HeadingContainer = ({
       script={script}
       service={service}
       id={idAttr}
+      darkMode={darkMode}
       {...(idAttr === 'content' && { tabIndex: '-1' })}
       {...(ariaHidden && { as: 'strong', 'aria-hidden': 'true' })}
     >
@@ -83,11 +85,13 @@ HeadingContainer.propTypes = {
   brandTitle: string.isRequired,
   releaseDateTimeStamp: number.isRequired,
   ariaHidden: bool,
+  darkMode: bool,
 };
 
 HeadingContainer.defaultProps = {
   idAttr: null,
   ariaHidden: false,
+  darkMode: false,
 };
 
 export default HeadingContainer;
