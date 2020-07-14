@@ -5,6 +5,7 @@ import {
   addIdsToBlocks,
   applyBlockPositioning,
 } from '../../utils/sharedDataTransformers';
+import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
 const transformJson = pipe(
   augmentWithTimestamp,
@@ -13,12 +14,14 @@ const transformJson = pipe(
 );
 
 export default async ({ path }) => {
-  const { json, ...rest } = await fetchPageData(path);
+  try {
+    const { json, status } = await fetchPageData(path);
 
-  return {
-    ...rest,
-    ...(json && {
+    return {
+      status,
       pageData: transformJson(json),
-    }),
-  };
+    };
+  } catch ({ message, status = getErrorStatusCode() }) {
+    return { error: message, status };
+  }
 };
