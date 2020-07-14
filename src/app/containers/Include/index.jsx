@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 import { string } from 'prop-types';
+import styled from 'styled-components';
 
 import EmbedError from '@bbc/psammead-embed-error';
 import nodeLogger from '#lib/logger.node';
 import { INCLUDE_RENDERED } from '#lib/logger.const';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
+import { GridItemConstrainedMedium } from '#lib/styledGrid';
 
 import Canonical from './canonical';
 import Idt2Canonical from './canonical/Idt2';
@@ -26,6 +28,10 @@ const componentsToRender = {
   },
 };
 
+const FallbackGrid = styled(GridItemConstrainedMedium)`
+  display: grid;
+`;
+
 const IncludeContainer = props => {
   const { isAmp, canonicalLink } = useContext(RequestContext);
   const { enabled } = useToggle('include');
@@ -35,13 +41,15 @@ const IncludeContainer = props => {
 
   if (!isAmpSupported && isAmp) {
     return (
-      <EmbedError
-        message="Sorry, we can’t display this part of the story on this lightweight mobile page."
-        link={{
-          text: 'View the full version of the page to see all the content.',
-          href: `${canonicalLink}#include-${index + 1}`,
-        }}
-      />
+      <FallbackGrid>
+        <EmbedError
+          message="Sorry, we can’t display this part of the story on this lightweight mobile page."
+          link={{
+            text: 'View the full version of the page to see all the content.',
+            href: `${canonicalLink}#include-${index + 1}`,
+          }}
+        />
+      </FallbackGrid>
     );
   }
 
