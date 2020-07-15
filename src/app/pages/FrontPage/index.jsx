@@ -22,6 +22,7 @@ import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
+import useToggle from '#hooks/useToggle';
 
 const FrontPageMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
@@ -68,7 +69,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const description = path(['metadata', 'summary'], pageData);
   const seoTitle = path(['promo', 'name'], pageData);
   const radioScheduleData = path(['radioScheduleData'], pageData);
-  const radioScheduleOnPage = path(['onFrontPage'], radioSchedule);
+  const radioScheduleOnPage = useToggle('Frontpage Schedule').enabled;
   const radioSchedulePosition = path(['frontPagePosition'], radioSchedule);
   const { isAmp } = useContext(RequestContext);
 
