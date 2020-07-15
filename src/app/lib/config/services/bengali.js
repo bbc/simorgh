@@ -195,7 +195,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onLiveRadioPage: true,
+      onLiveRadioPage: false,
       onFrontPage: false,
       durationLabel: 'Duration %duration%',
     },
