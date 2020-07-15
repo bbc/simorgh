@@ -125,10 +125,22 @@ const summaryTable = new Table({
   ],
 });
 
-serviceBundleData.forEach(bundle => serviceBundlesTable.push(bundle));
+const sortByTotalAscending = bundlesData =>
+  bundlesData.sort((a, b) => {
+    const total1 = a[a.length - 1];
+    const total2 = b[b.length - 1];
+
+    return total1 - total2;
+  });
+
+sortByTotalAscending(serviceBundleData).forEach(bundle =>
+  serviceBundlesTable.push(bundle),
+);
 mainBundleData.forEach(bundle => mainBundlesTable.push(bundle));
 vendorBundleData.forEach(bundle => vendorBundlesTable.push(bundle));
-pageBundleData.forEach(bundle => pageBundlesTable.push(bundle));
+sortByTotalAscending(pageBundleData).forEach(bundle =>
+  pageBundlesTable.push(bundle),
+);
 summaryTable.push([averageBundleSize, smallestBundleSize, largestBundleSize]);
 
 console.log('\n\nResults');
@@ -140,12 +152,13 @@ console.log(summaryTable.toString());
 
 const errors = serviceBundlesTotals
   .map((size, index) => {
+    const serviceName = serviceBundleData[index][0];
     if (size < MIN_SIZE) {
-      return createConsoleError(serviceBundleData[index][0], size, 'small');
+      return createConsoleError(serviceName, size, 'small');
     }
 
     if (size > MAX_SIZE) {
-      return createConsoleError(serviceBundleData[index][0], size, 'large');
+      return createConsoleError(serviceName, size, 'large');
     }
     return undefined;
   })
