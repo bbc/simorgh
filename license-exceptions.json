@@ -59,6 +59,9 @@
     },
     "xmldom@*": {
       "reason": "Dual license under MIT or LGPL; https://github.com/jindw/xmldom/blob/master/LICENSE"
+    },
+    "sanitize-filename@*": {
+      "reason": "Licensed under WTFPL OR ISC; https://github.com/parshap/node-sanitize-filename"
     }
   }
 }
