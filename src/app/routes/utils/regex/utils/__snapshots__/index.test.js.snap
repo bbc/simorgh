@@ -28,6 +28,8 @@ exports[`regex utils snapshots should create expected regex from getOnDemandRadi
 
 exports[`regex utils snapshots should create expected regex from getOnDemandTvRegex 1`] = `"/:service(news|persian|igbo)/:serviceId(bbc_[a-z]+_tv)/:brandEpisode(tv|tv_programmes)/:mediaId([a-z0-9]+):amp(.amp)?"`;
 
+exports[`regex utils snapshots should create expected regex from getRecommendationsDataRegex 1`] = `"/:service(news|persian|igbo)/:assetUri([a-z-_]{0,}[0-9]{8,})/recommendations:variant(/simp|/trad|/cyr|/lat)?.json"`;
+
 exports[`regex utils snapshots should create expected regex from getSecondaryColumnDataRegex 1`] = `"/:service(news|persian|igbo)/sty-secondary-column:variant(/simp|/trad|/cyr|/lat)?.json"`;
 
 exports[`regex utils snapshots should create expected regex from getSwRegex 1`] = `"/:service(news|persian|igbo)/sw.js"`;
