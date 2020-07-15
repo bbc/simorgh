@@ -35,7 +35,7 @@ const AmpIframe = ({ children, className, width, height, src }) => (
     height={height}
     layout="responsive"
     sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-forms"
-    resizable
+    resizable=""
     src={src}
   >
     {children}
@@ -94,7 +94,7 @@ const VjAmp = ({ ampMetadata: { imageWidth, imageHeight, image, src } }) => {
           src={src}
           service={service}
         >
-          <div overflow="true">
+          <div overflow="">
             <button type="button">Show more</button>
           </div>
           <amp-img layout="fill" src={image} placeholder />
