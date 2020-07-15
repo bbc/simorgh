@@ -29,17 +29,17 @@ const getBundleData = _fileName => {
   const groupedBundlesNames = [...new Set(bundleNames)];
 
   return groupedBundlesNames.map(bundleName => {
-    const sizesInBytes = jsFiles
+    const bundleSizes = jsFiles
       .filter(fileName => fileName.includes(bundleName))
       .map(fileName => getFileSize(`build/public/static/js/${fileName}`))
       .map(sizeInBytes => Math.round(sizeInBytes / 1000));
 
-    const totalBundleSizes = sizesInBytes.reduce(
+    const totalBundleSizes = bundleSizes.reduce(
       (totalKB, fileSizeInKB) => totalKB + fileSizeInKB,
       0,
     );
 
-    return [bundleName, sizesInBytes.join(', '), totalBundleSizes];
+    return [bundleName, bundleSizes.join(', '), totalBundleSizes];
   });
 };
 
@@ -92,15 +92,19 @@ spinner.start();
 const serviceBundlesTable = new Table({
   head: [
     'Service name',
-    'Service bundle sizes',
-    'Total service bundle sizes',
-    'Main bundle size',
-    'Vendor bundle size',
-    'Total bundles size for service',
+    'Service bundle sizes (kB)',
+    'Total service bundle sizes (kB)',
+    'Main bundle size (kB)',
+    'Vendor bundle size (kB)',
+    'Total bundles size for service (kB)',
   ],
 });
 
-const tableHead = ['Bundle name', 'Bundle sizes', 'Total bundles size'];
+const tableHead = [
+  'Bundle name',
+  'Bundle sizes (kB)',
+  'Total bundles size (kB)',
+];
 
 const mainBundlesTable = new Table({
   head: tableHead,
@@ -116,9 +120,9 @@ const pageBundlesTable = new Table({
 
 const overviewTable = new Table({
   head: [
-    'Average total bundle size',
-    'Smallest total bundle size',
-    'Largest total bundle size',
+    'Average total bundle size (kB)',
+    'Smallest total bundle size (kB)',
+    'Largest total bundle size (kB)',
   ],
 });
 
