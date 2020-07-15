@@ -8,6 +8,7 @@ import addIdsToItems from '#app/routes/utils/sharedDataTransformers/addIdsToItem
 import filterGroupsWithoutStraplines from '#app/routes/utils/sharedDataTransformers/filterGroupsWithoutStraplines';
 import getConfig from '#app/routes/utils/getConfig';
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
+import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
 const transformJson = pipe(
   filterUnknownContentTypes,
@@ -36,22 +37,24 @@ export const hasRadioSchedule = async (service, variant) => {
 };
 
 export default async ({ path, service, variant }) => {
-  const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
-  const pageDataPromise = fetchPageData(path);
+  try {
+    const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
+    const pageDataPromise = fetchPageData(path);
 
-  const { json, ...rest } = pageHasRadioSchedule
-    ? await withRadioSchedule({
-        pageDataPromise,
-        service,
-        path,
-        radioService: 'dari',
-      })
-    : await pageDataPromise;
+    const { json, status } = pageHasRadioSchedule
+      ? await withRadioSchedule({
+          pageDataPromise,
+          service,
+          path,
+          radioService: 'dari',
+        })
+      : await pageDataPromise;
 
-  return {
-    ...rest,
-    ...(json && {
+    return {
+      status,
       pageData: transformJson(json),
-    }),
-  };
+    };
+  } catch ({ message, status = getErrorStatusCode() }) {
+    return { error: message, status };
+  }
 };

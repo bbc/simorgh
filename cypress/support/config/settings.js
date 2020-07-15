@@ -293,14 +293,16 @@ module.exports = () => ({
           live: {
             paths: [
               '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
+              '/afrique/bbc_afrique_tv/tv/w172xc9q57s96s5', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
+              '/afrique/bbc_afrique_tv/tv/w172xc9q57s96s5', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -1257,14 +1259,16 @@ module.exports = () => ({
           live: {
             paths: [
               '/burmese/bbc_burmese_tv/tv_programmes/w13xttn3', // Brand
+              '/burmese/bbc_burmese_tv/tv/w172xbm6xt8wxpb', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/burmese/bbc_burmese_tv/tv_programmes/w13xttn3', // Brand
+              '/burmese/bbc_burmese_tv/tv/w172xbm6xt8wxpb', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [],
@@ -1706,14 +1710,16 @@ module.exports = () => ({
           live: {
             paths: [
               '/gujarati/bbc_gujarati_tv/tv_programmes/w13xttqr', // Brand
+              '/gujarati/bbc_gujarati_tv/tv/w172xcdrnt9n4my', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/gujarati/bbc_gujarati_tv/tv_programmes/w13xttqr', // Brand
+              '/gujarati/bbc_gujarati_tv/tv/w172xcdrnt9n4my', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [],
@@ -1918,14 +1924,16 @@ module.exports = () => ({
           live: {
             paths: [
               '/hausa/bbc_hausa_tv/tv_programmes/w13xttn0', // Brand
+              '/hausa/bbc_hausa_tv/tv/w172xcfs92xcm7l', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/hausa/bbc_hausa_tv/tv_programmes/w13xttn0', // Brand
+              '/hausa/bbc_hausa_tv/tv/w172xcfs92xcm7l', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [],
@@ -2128,14 +2136,16 @@ module.exports = () => ({
           live: {
             paths: [
               '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw', // Brand
+              '/hindi/bbc_hindi_tv/tv/w172xf1447qq26y', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw', // Brand
+              '/hindi/bbc_hindi_tv/tv/w172xf1447qq26y', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [],
@@ -3042,14 +3052,16 @@ module.exports = () => ({
           live: {
             paths: [
               '/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx', // Brand
+              '/kyrgyz/bbc_kyrgyz_tv/tv/w172xcgd606t5yg', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx', // Brand
+              '/kyrgyz/bbc_kyrgyz_tv/tv/w172xcgd606t5yg', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [],
@@ -5911,14 +5923,16 @@ module.exports = () => ({
           live: {
             paths: [
               '/swahili/bbc_swahili_tv/tv_programmes/w13xttt3', // Brand
+              '/swahili/bbc_swahili_tv/tv/w172xcqfjk40z2w', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/swahili/bbc_swahili_tv/tv_programmes/w13xttt3', // Brand
+              '/swahili/bbc_swahili_tv/tv/w172xcqfjk40z2w', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [],
@@ -6128,14 +6142,16 @@ module.exports = () => ({
           live: {
             paths: [
               '/tamil/bbc_tamil_tv/tv_programmes/w13xttmy', // Brand
+              '/tamil/bbc_tamil_tv/tv/w172xcr1fgfh2nb', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/tamil/bbc_tamil_tv/tv_programmes/w13xttmy', // Brand
+              '/tamil/bbc_tamil_tv/tv/w172xcr1fgfh2nb', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [],
@@ -6307,14 +6323,16 @@ module.exports = () => ({
           live: {
             paths: [
               '/telugu/bbc_telugu_tv/tv_programmes/w13xttld', // Brand
+              '/telugu/bbc_telugu_tv/tv/w172xcs87919nc7', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/telugu/bbc_telugu_tv/tv_programmes/w13xttld', // Brand
+              '/telugu/bbc_telugu_tv/tv/w172xcs87919nc7', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [],
@@ -7377,14 +7395,16 @@ module.exports = () => ({
           live: {
             paths: [
               '/ukrainian/bbc_ukrainian_tv/tv_programmes/w13xttp9', // Brand
+              '/ukrainian/bbc_ukrainian_tv/tv/w172xcsw46bvqpv', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/ukrainian/bbc_ukrainian_tv/tv_programmes/w13xttp9', // Brand
+              '/ukrainian/bbc_ukrainian_tv/tv/w172xcsw46bvqpv', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [],
@@ -7600,14 +7620,16 @@ module.exports = () => ({
           live: {
             paths: [
               '/urdu/bbc_urdu_tv/tv_programmes/w13xttn1', // Brand
+              '/urdu/bbc_urdu_tv/tv/w172xcth13n6dhs', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/urdu/bbc_urdu_tv/tv_programmes/w13xttn1', // Brand
+              '/urdu/bbc_urdu_tv/tv/w172xcth13n6dhs', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [],
@@ -7817,14 +7839,16 @@ module.exports = () => ({
           live: {
             paths: [
               '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv', // Brand
+              '/uzbek/bbc_uzbek_tv/tv/w172xcv2y0yndb3', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv', // Brand
+              '/uzbek/bbc_uzbek_tv/tv/w172xcv2y0yndb3', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [],
