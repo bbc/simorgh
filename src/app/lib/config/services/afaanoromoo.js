@@ -187,7 +187,6 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: true,
       durationLabel: 'Duration %duration%',
     },
     recommendations: {

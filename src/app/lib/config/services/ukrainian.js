@@ -187,7 +187,6 @@ const baseServiceConfig = {
     onIdxPage: false,
   },
   radioSchedule: {
-    hasRadioSchedule: false,
     onIdxPage: false,
   },
   recommendations: {

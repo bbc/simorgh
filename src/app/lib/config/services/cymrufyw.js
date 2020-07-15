@@ -172,9 +172,7 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: false,
     },
-    radioSchedule: {
-      hasRadioSchedule: false,
-    },
+    radioSchedule: {},
     recommendations: {
       hasStoryRecommendations: false,
     },
