@@ -26,6 +26,8 @@ const renderDocument = async ({
 
   const extractor = new ChunkExtractor({ statsFile });
 
+  const linkTags = extractor.getLinkTags();
+
   const context = {};
 
   const app = renderToString(
@@ -67,6 +69,7 @@ const renderDocument = async ({
       app={app}
       data={data}
       styleTags={getStyleTag(sheet, isAmp)}
+      linkTags={linkTags}
       helmet={headHelmet}
       service={service}
       isAmp={isAmp}
