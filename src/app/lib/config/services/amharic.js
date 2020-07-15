@@ -182,7 +182,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: false,
       durationLabel: 'Duration %duration%',
     },
     recommendations: {

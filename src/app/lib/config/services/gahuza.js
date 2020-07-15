@@ -189,7 +189,6 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: false,
       durationLabel: 'Umwanya, %duration%',
     },
     recommendations: {
