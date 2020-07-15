@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, number, node, string, func } from 'prop-types';
+import { arrayOf, shape, number, node, string, func, any } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled, { css } from 'styled-components';
 import {
@@ -76,6 +76,17 @@ const LegacyGridItemConstrainedLarge = styled(GridItemConstrainedLarge)`
 
 const StyledSectionLabel = styled(SectionLabel)`
   margin-top: 0;
+  ${({ isRecommendation }) =>
+    isRecommendation &&
+    `
+    margin: 0;
+    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+      padding: ${GEL_SPACING_DBL} 0;
+    }
+    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+      padding: ${GEL_SPACING_DBL};
+    }
+  `}
 `;
 
 // Apply the correct top & bottom padding around the single story promo
@@ -95,6 +106,7 @@ const CpsOnwardJourney = ({
   parentColumns,
   listTransform,
   singleTransform,
+  optionalLabelProps,
 }) => {
   const a11yAttributes = {
     as: 'section',
@@ -144,6 +156,7 @@ const CpsOnwardJourney = ({
         service={service}
         dir={dir}
         labelId={labelId}
+        {...optionalLabelProps}
       >
         {title}
       </StyledSectionLabel>
@@ -172,11 +185,13 @@ CpsOnwardJourney.propTypes = {
   }),
   listTransform: func.isRequired,
   singleTransform: func.isRequired,
+  optionalLabelProps: shape(any),
 };
 
 CpsOnwardJourney.defaultProps = {
   content: [],
   parentColumns: null,
+  optionalLabelProps: null,
 };
 
 export default CpsOnwardJourney;
