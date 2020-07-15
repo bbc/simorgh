@@ -4,52 +4,304 @@ exports[`CpsRecommendations should not render when cpsRecommendations toggle is 
 
 exports[`CpsRecommendations should not render when the hasStoryRecommendations flag is disabled for the service 1`] = `<div />`;
 
-exports[`CpsRecommendations should render when cpsRecommendations toggle and hasStoryRecommendations flag are both true 1`] = `
+exports[`CpsRecommendations should render when cpsRecommendations toggle and hasStoryRecommendations flag are both true for a single item 1`] = `
 <div>
   <div
-    class="GridComponent-nf79gm-0 gcdGSo"
-    dir="ltr"
+    class="RecommendationsWrapper-sc-1p91yk0-1 isuewT"
   >
-    <h3
-      class="Headline-sc-1dvfmi3-3 dnWhDh"
+    <section
+      aria-labelledby="recommendations-heading"
+      class="Wrapper-opyob2-0 dlivvF"
+      data-e2e="related-content"
+      role="region"
     >
-      <a
-        class="Link-sc-1dvfmi3-5 jeUMCT"
-        href="/mundo/noticias-america-latina-51975331"
+      <div
+        class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD StyledSectionLabel-opyob2-2 dfvtmF"
       >
-        Argentina ordena cuarentena total obligatoria por el coronavirus
-      </a>
-    </h3>
-    <h3
-      class="Headline-sc-1dvfmi3-3 dnWhDh"
+        <strong
+          class="Heading-sc-1x4gwjz-2 eZofTG"
+        >
+          <span
+            class="FlexColumn-wx5kdp-0 dgpsiS"
+          >
+            <span
+              class="FlexRow-wx5kdp-2 dVBNyZ"
+            >
+              <span
+                class="Title-wx5kdp-4 lmzCD"
+                dir="ltr"
+                id="recommendations-heading"
+              >
+                Recommendations
+              </span>
+            </span>
+          </span>
+        </strong>
+      </div>
+      <div
+        class="SingleContentWrapper-opyob2-3 dFLSlx"
+      >
+        <div
+          class="GridComponent-nf79gm-0 elxESl"
+          dir="ltr"
+        >
+          <div
+            class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys StoryPromoWrapper-sc-1p91yk0-0 lgUEsJ"
+          >
+            <div
+              class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+              dir="ltr"
+            >
+              <div
+                class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+              >
+                <img
+                  alt="Image Alt text"
+                  class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                  src="http://c.files.bbci.co.uk/5A4D/production/_111371132_hi060727445.jpg"
+                />
+              </div>
+            </div>
+            <div
+              class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+              dir="ltr"
+            >
+              <span
+                class="Headline-sc-1dvfmi3-3 dnWhDh"
+              >
+                <a
+                  class="Link-sc-1dvfmi3-5 jeUMCT"
+                  href="/mundo/noticias-america-latina-51975331"
+                >
+                  Argentina ordena cuarentena total obligatoria por el coronavirus
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`CpsRecommendations should render when cpsRecommendations toggle and hasStoryRecommendations flag are both true for multiple items 1`] = `
+<div>
+  <div
+    class="RecommendationsWrapper-sc-1p91yk0-1 isuewT"
+  >
+    <section
+      aria-labelledby="recommendations-heading"
+      class="Wrapper-opyob2-0 dlivvF"
+      data-e2e="related-content"
+      role="region"
     >
-      <a
-        class="Link-sc-1dvfmi3-5 jeUMCT"
-        href="/mundo/noticias-america-latina-52250630"
+      <div
+        class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD StyledSectionLabel-opyob2-2 dfvtmF"
       >
-        Por qué México se convirtió en el gran obstáculo del plan de la OPEP para aumentar el precio del petróleo
-      </a>
-    </h3>
-    <h3
-      class="Headline-sc-1dvfmi3-3 dnWhDh"
-    >
-      <a
-        class="Link-sc-1dvfmi3-5 jeUMCT"
-        href="/mundo/noticias-52275464"
+        <strong
+          class="Heading-sc-1x4gwjz-2 eZofTG"
+        >
+          <span
+            class="FlexColumn-wx5kdp-0 dgpsiS"
+          >
+            <span
+              class="FlexRow-wx5kdp-2 dVBNyZ"
+            >
+              <span
+                class="Title-wx5kdp-4 lmzCD"
+                dir="ltr"
+                id="recommendations-heading"
+              >
+                Recommendations
+              </span>
+            </span>
+          </span>
+        </strong>
+      </div>
+      <ul
+        class="StoryPromoUl-sc-171lqjd-2 brjIMO GridComponent-nf79gm-0 buIDdq"
+        dir="ltr"
+        role="list"
       >
-        El inédito y cuestionado plan de emergencia económica de Ecuador contra la crisis del coronavirus
-      </a>
-    </h3>
-    <h3
-      class="Headline-sc-1dvfmi3-3 dnWhDh"
-    >
-      <a
-        class="Link-sc-1dvfmi3-5 jeUMCT"
-        href="/mundo/noticias-51796524"
-      >
-        La guerra de precios entre Arabia Saudita y Rusia que hundió el valor del petróleo y las bolsas en medio de la crisis por el coronavirus
-      </a>
-    </h3>
+        <li
+          class="StoryPromoLiBase-sc-171lqjd-0 kPpUUd GridComponent-nf79gm-0 cjfxRv"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="GridComponent-nf79gm-0 eRYAGr"
+            dir="ltr"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys StoryPromoWrapper-sc-1p91yk0-0 lgUEsJ"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <img
+                    alt="Image Alt text"
+                    class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                    src="http://c.files.bbci.co.uk/5A4D/production/_111371132_hi060727445.jpg"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <span
+                  class="Headline-sc-1dvfmi3-3 dnWhDh"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/mundo/noticias-america-latina-51975331"
+                  >
+                    Argentina ordena cuarentena total obligatoria por el coronavirus
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="StoryPromoLiBase-sc-171lqjd-0 kPpUUd GridComponent-nf79gm-0 cjfxRv"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="GridComponent-nf79gm-0 eRYAGr"
+            dir="ltr"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys StoryPromoWrapper-sc-1p91yk0-0 lgUEsJ"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <img
+                    alt="Image Alt text"
+                    class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                    src="http://c.files.bbci.co.uk/49F7/production/_111753981_03009521-c6ba-41e6-8328-65d0caf07635.jpg"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <span
+                  class="Headline-sc-1dvfmi3-3 dnWhDh"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/mundo/noticias-america-latina-52250630"
+                  >
+                    Por qué México se convirtió en el gran obstáculo del plan de la OPEP para aumentar el precio del petróleo
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="StoryPromoLiBase-sc-171lqjd-0 kPpUUd GridComponent-nf79gm-0 cjfxRv"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="GridComponent-nf79gm-0 eRYAGr"
+            dir="ltr"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys StoryPromoWrapper-sc-1p91yk0-0 lgUEsJ"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <img
+                    alt="Image Alt text"
+                    class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                    src="http://c.files.bbci.co.uk/34F5/production/_111775531_tv061050412.jpg"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <span
+                  class="Headline-sc-1dvfmi3-3 dnWhDh"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/mundo/noticias-52275464"
+                  >
+                    El inédito y cuestionado plan de emergencia económica de Ecuador contra la crisis del coronavirus
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="StoryPromoLiBase-sc-171lqjd-0 kPpUUd GridComponent-nf79gm-0 cjfxRv"
+          dir="ltr"
+          role="listitem"
+        >
+          <div
+            class="GridComponent-nf79gm-0 eRYAGr"
+            dir="ltr"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys StoryPromoWrapper-sc-1p91yk0-0 lgUEsJ"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <img
+                    alt="Image Alt text"
+                    class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                    src="http://c.files.bbci.co.uk/4627/production/_111195971_mediaitem111195968.jpg"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <span
+                  class="Headline-sc-1dvfmi3-3 dnWhDh"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/mundo/noticias-51796524"
+                  >
+                    La guerra de precios entre Arabia Saudita y Rusia que hundió el valor del petróleo y las bolsas en medio de la crisis por el coronavirus
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
   </div>
 </div>
 `;

@@ -76,15 +76,27 @@ describe('CpsRecommendations', () => {
     );
     expect(container).toMatchSnapshot();
   });
-  it('should render when cpsRecommendations toggle and hasStoryRecommendations flag are both true', () => {
+
+  describe('should render when cpsRecommendations toggle and hasStoryRecommendations flag are both true', () => {
     const toggleEnabled = true;
     const hasStoryRecommendations = true;
     const { items } = recommendationsData;
-    const { container } = renderContainer(
-      items,
-      hasStoryRecommendations,
-      toggleEnabled,
-    );
-    expect(container).toMatchSnapshot();
+
+    it('for multiple items', () => {
+      const { container } = renderContainer(
+        items,
+        hasStoryRecommendations,
+        toggleEnabled,
+      );
+      expect(container).toMatchSnapshot();
+    });
+    it('for a single item', () => {
+      const { container } = renderContainer(
+        [items[0]],
+        hasStoryRecommendations,
+        toggleEnabled,
+      );
+      expect(container).toMatchSnapshot();
+    });
   });
 });

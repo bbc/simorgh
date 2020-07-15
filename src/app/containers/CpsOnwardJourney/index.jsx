@@ -1,14 +1,5 @@
 import React, { useContext } from 'react';
-import {
-  arrayOf,
-  shape,
-  number,
-  node,
-  string,
-  func,
-  any,
-  bool,
-} from 'prop-types';
+import { arrayOf, shape, number, node, string, func, bool } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled, { css } from 'styled-components';
 import {
@@ -149,6 +140,8 @@ const CpsOnwardJourney = ({
     children: node.isRequired,
   };
 
+  console.log('optionalLabelProps', optionalLabelProps);
+
   if (!content.length) return null;
   const hasSingleContent = content.length === 1;
   const [singleContent] = content;
@@ -200,7 +193,11 @@ CpsOnwardJourney.propTypes = {
   }),
   listTransform: func.isRequired,
   singleTransform: func.isRequired,
-  optionalLabelProps: shape(any),
+  optionalLabelProps: shape({
+    overrideHeadingAs: string,
+    bar: bool,
+    backgroundColor: string,
+  }),
   isRecommendation: bool,
 };
 
