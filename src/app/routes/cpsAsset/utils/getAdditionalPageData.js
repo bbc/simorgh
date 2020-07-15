@@ -1,7 +1,7 @@
 import isEmpty from 'ramda/src/isEmpty';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import getAssetType from './getAssetType';
-import getAssetId from './getAssetId';
+import getAssetUri from './getAssetId';
 import fetchPageData from '../../utils/fetchPageData';
 import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 import getSecondaryColumnUrl from '#lib/utilities/getSecondaryColumnUrl';
@@ -9,7 +9,7 @@ import getRecommendationsUrl from '#lib/utilities/getRecommendationsUrl';
 
 const noop = () => {};
 
-const pageTypeUrls = (assetType, service, variant, assetId) => {
+const pageTypeUrls = (assetType, service, variant, assetUri) => {
   switch (assetType) {
     case STORY_PAGE:
       return [
@@ -23,7 +23,7 @@ const pageTypeUrls = (assetType, service, variant, assetId) => {
         },
         {
           name: 'recommendations',
-          path: getRecommendationsUrl({ service, variant, assetId }),
+          path: getRecommendationsUrl({ assetUri, variant }),
         },
       ];
     default:
@@ -46,9 +46,9 @@ const fetchUrl = ({ name, path }) =>
 
 const getAdditionalPageData = async (pageData, service, variant) => {
   const assetType = getAssetType(pageData);
-  const assetId = getAssetId(pageData);
+  const assetUri = getAssetUri(pageData);
 
-  const urlsToFetch = pageTypeUrls(assetType, service, variant, assetId);
+  const urlsToFetch = pageTypeUrls(assetType, service, variant, assetUri);
 
   if (urlsToFetch) {
     return Promise.all(urlsToFetch.map(fetchUrl)).then(results =>

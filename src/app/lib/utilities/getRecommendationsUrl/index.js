@@ -1,4 +1,4 @@
-export default ({ service, variant, assetId }) =>
+export default ({ assetUri, variant }) =>
   variant
-    ? `/${service}/${assetId}/recommendations/${variant}`
-    : `/${service}/${assetId}/recommendations`;
+    ? `${assetUri}/recommendations/${variant}`
+    : `${assetUri}/recommendations`;

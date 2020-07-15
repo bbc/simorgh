@@ -48,6 +48,7 @@ describe('getAdditionalPageData', () => {
   it('should return an empty object when a data fetch fails', async () => {
     fetchMock.mock('http://localhost/mundo/mostread.json', 404);
     fetchMock.mock('http://localhost/mundo/sty-secondary-column.json', 404);
+    fetchMock.mock('http://localhost/mundo/23263889/recommendations.json', 404);
     const additionalPageData = await getAdditionalPageData(styJson, 'mundo');
 
     expect(additionalPageData).toEqual({});
