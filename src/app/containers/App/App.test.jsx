@@ -16,7 +16,7 @@ describe('App', () => {
   const initialData = {
     pageData: 'Some initial data',
     timeOnServer,
-    simorghConfig: {
+    remoteConfig: {
       mockToggle: { enabled: true },
     },
   };
@@ -63,7 +63,7 @@ describe('App', () => {
       loading: false,
       pageType: 'article',
       service: 'ukchina',
-      simorghConfig: initialData.simorghConfig,
+      remoteConfig: initialData.remoteConfig,
       pathname: 'pathnameOne',
       previousPath: null,
       variant: 'simp',
@@ -135,7 +135,7 @@ describe('App', () => {
               loading: true,
               pageType: 'article',
               service: 'ukchina',
-              simorghConfig: null,
+              remoteConfig: null,
               pathname: 'pathnameTwo',
               previousPath: 'pathnameOne',
               variant: 'simp',
@@ -158,7 +158,7 @@ describe('App', () => {
               loading: false,
               pageType: 'article',
               service: 'ukchina',
-              simorghConfig: initialData.simorghConfig,
+              remoteConfig: initialData.remoteConfig,
               pathname: 'pathnameTwo',
               previousPath: 'pathnameOne',
               variant: 'simp',
@@ -212,7 +212,7 @@ describe('App', () => {
               loading: true,
               pageType: 'article',
               service: 'ukchina',
-              simorghConfig: null,
+              remoteConfig: null,
               pathname: 'pathnameThree',
               previousPath: 'pathnameTwo',
               variant: 'simp',
@@ -235,7 +235,7 @@ describe('App', () => {
               loading: false,
               pageType: 'article',
               service: 'ukchina',
-              simorghConfig: initialData.simorghConfig,
+              remoteConfig: initialData.remoteConfig,
               pathname: 'pathnameThree',
               previousPath: 'pathnameTwo',
               variant: 'simp',

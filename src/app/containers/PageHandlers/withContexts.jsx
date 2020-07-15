@@ -14,7 +14,7 @@ import { EventContextProvider } from '#contexts/EventContext';
 const WithContexts = Component => {
   const WithContextsContainer = props => {
     const {
-      simorghConfig,
+      remoteConfig,
       bbcOrigin,
       status,
       id,
@@ -26,7 +26,7 @@ const WithContexts = Component => {
       variant,
       timeOnServer,
     } = props;
-    const remoteToggles = pathOr({}, ['toggles'], simorghConfig);
+    const remoteToggles = pathOr({}, ['toggles'], remoteConfig);
     return (
       <ToggleContextProvider remoteToggles={remoteToggles}>
         <ServiceContextProvider
@@ -69,7 +69,7 @@ const WithContexts = Component => {
     service: string.isRequired,
     variant: variantPropType,
     timeOnServer: number,
-    simorghConfig: shape({
+    remoteConfig: shape({
       toggles: shape({
         ads: shape({
           enabled: bool.isRequired,
@@ -86,7 +86,7 @@ const WithContexts = Component => {
     previousPath: null,
     variant: null,
     timeOnServer: null,
-    simorghConfig: {},
+    remoteConfig: {},
   };
 
   return WithContextsContainer;

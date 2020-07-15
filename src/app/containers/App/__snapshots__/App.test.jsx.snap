@@ -11,7 +11,7 @@ exports[`App should return rendered routes 1`] = `
   initialData={
     Object {
       "pageData": "Some initial data",
-      "simorghConfig": Object {
+      "remoteConfig": Object {
         "mockToggle": Object {
           "enabled": true,
         },

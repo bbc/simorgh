@@ -211,12 +211,12 @@ describe('Get initial data from front page', () => {
         radioScheduleJson,
       );
 
-      const { simorghConfig } = await getInitialData({
+      const { remoteConfig } = await getInitialData({
         path: 'mock-frontpage-path',
         service: 'hausa',
       });
 
-      expect(simorghConfig).toEqual(mockToggles);
+      expect(remoteConfig).toEqual(mockToggles);
     });
 
     it('should not return simorgh config when config endpoint fails', async () => {
@@ -239,12 +239,12 @@ describe('Get initial data from front page', () => {
         radioScheduleJson,
       );
 
-      const { simorghConfig } = await getInitialData({
+      const { remoteConfig } = await getInitialData({
         path: 'mock-frontpage-path',
         service: 'hausa',
       });
 
-      expect(simorghConfig).toEqual(null);
+      expect(remoteConfig).toEqual(null);
     });
   });
 });
