@@ -1,19 +1,33 @@
 import legacyURLs from './config';
 import getAppEnv from '../../../../cypress/support/helpers/getAppEnv';
-import { getEmbedUrl } from '../../../../cypress/integration/pages/mediaAssetPage/helpers';
 
 const environment = getAppEnv();
 
-describe('Legacy MAP media playback', () => {
+describe('Legacy MAP Media Playback', () => {
   const paths = legacyURLs[environment];
 
   if (paths.length > 0) {
     paths.forEach(path => {
       it(path, () => {
         cy.request(`${path}.json`).then(({ body: jsonData }) => {
-          const embedUrl = getEmbedUrl(jsonData, jsonData.metadata.language);
-          cy.visit(embedUrl);
-          // cy.get(`script[src*="dotcom-bootstrap.js"]`).should('exist');
+          cy.visit(path);
+
+          const dataUrls = jsonData.content.blocks[0].playlist.map(
+            item => item.url,
+          );
+
+          cy.get('iframe').then($iframe => {
+            cy.wrap($iframe.prop('contentWindow'), {
+              timeout: 30000,
+            })
+              .its('embeddedMedia.playerInstances.mediaPlayer.playlist.items')
+              .its(0)
+              .its('originalConnections')
+              .then(connections =>
+                connections.map(connection => connection.href),
+              )
+              .should('eql', dataUrls);
+          });
         });
       });
     });
