@@ -4,10 +4,10 @@ import { readdirSync, statSync } from 'fs';
 
 jest.mock('ora');
 jest.mock('chalk', () => ({
-  red: (a) => a,
-  green: (a) => a,
-  blue: (a) => a,
-  yellow: (a) => a,
+  red: a => a,
+  green: a => a,
+  blue: a => a,
+  yellow: a => a,
 }));
 jest.mock('../cypress/support/config/services', () => ({
   service1: {},
@@ -38,8 +38,8 @@ const setUpFSMocks = (service1FileSize, service2FileSize) => {
       main: 20000,
       vendor: 100000,
     };
-    statSync.mockImplementation((filePath) => {
-      const filePattern = Object.keys(filePatternToSizeMap).find((key) =>
+    statSync.mockImplementation(filePath => {
+      const filePattern = Object.keys(filePatternToSizeMap).find(key =>
         filePath.includes(key),
       );
       return { size: filePatternToSizeMap[filePattern] };
@@ -65,7 +65,7 @@ describe('bundleSize', () => {
       succeed,
       fail,
     });
-    chalk.red.bold = (a) => a;
+    chalk.red.bold = a => a;
 
     global.console.log = jest.fn();
     global.console.error = jest.fn();
@@ -120,12 +120,44 @@ describe('bundleSize', () => {
 
       expect(global.console.log.mock.calls).toEqual(
         expect.arrayContaining([
-          ['\nBundle size summary:\n'],
-          ['    20 kB   Main bundle '],
-          ['   400 kB   Vendor bundle '],
-          ['   565 kB   Smallest bundle - Service1'],
-          ['   570 kB   Largest bundle - Service2'],
-          ['   568 kB   Average bundle '],
+          [
+            [
+              '┌──────────────┬───────────────────────────┬─────────────────────────────────┬───────────────────────┬─────────────────────────┬─────────────────────────────────────┐',
+              '│ Service name │ Service bundle sizes (kB) │ Total service bundle sizes (kB) │ Main bundle size (kB) │ Vendor bundle size (kB) │ Total bundles size for service (kB) │',
+              '├──────────────┼───────────────────────────┼─────────────────────────────────┼───────────────────────┼─────────────────────────┼─────────────────────────────────────┤',
+              '│ service1     │ 145                       │ 145                             │ 20                    │ 400                     │ 565                                 │',
+              '├──────────────┼───────────────────────────┼─────────────────────────────────┼───────────────────────┼─────────────────────────┼─────────────────────────────────────┤',
+              '│ service2     │ 150                       │ 150                             │ 20                    │ 400                     │ 570                                 │',
+              '└──────────────┴───────────────────────────┴─────────────────────────────────┴───────────────────────┴─────────────────────────┴─────────────────────────────────────┘',
+            ].join('\n'),
+          ],
+          [
+            [
+              '┌─────────────┬───────────────────┬─────────────────────────┐',
+              '│ Bundle name │ Bundle sizes (kB) │ Total bundles size (kB) │',
+              '├─────────────┼───────────────────┼─────────────────────────┤',
+              '│ main        │ 20                │ 20                      │',
+              '└─────────────┴───────────────────┴─────────────────────────┘',
+            ].join('\n'),
+          ],
+          [
+            [
+              '┌─────────────┬────────────────────┬─────────────────────────┐',
+              '│ Bundle name │ Bundle sizes (kB)  │ Total bundles size (kB) │',
+              '├─────────────┼────────────────────┼─────────────────────────┤',
+              '│ vendor      │ 100, 100, 100, 100 │ 400                     │',
+              '└─────────────┴────────────────────┴─────────────────────────┘',
+            ].join('\n'),
+          ],
+          [
+            [
+              '┌────────────────────────────────┬─────────────────────────────────┬────────────────────────────────┐',
+              '│ Average total bundle size (kB) │ Smallest total bundle size (kB) │ Largest total bundle size (kB) │',
+              '├────────────────────────────────┼─────────────────────────────────┼────────────────────────────────┤',
+              '│ 568                            │ 565                             │ 570                            │',
+              '└────────────────────────────────┴─────────────────────────────────┴────────────────────────────────┘',
+            ].join('\n'),
+          ],
         ]),
       );
     });
@@ -172,7 +204,7 @@ describe('bundleSize', () => {
       });
 
       expect(global.console.error).toHaveBeenCalledWith(
-        "Bundle size for Service1 is too small at 422 kB. Please update thresholds in './scripts/bundleSizeConfig.js'",
+        "Bundle size for service1 is too small at 422 kB. Please update thresholds in './scripts/bundleSizeConfig.js'",
       );
     });
   });
@@ -218,7 +250,7 @@ describe('bundleSize', () => {
       });
 
       expect(global.console.error).toHaveBeenCalledWith(
-        "Bundle size for Service2 is too large at 585 kB. Please update thresholds in './scripts/bundleSizeConfig.js'",
+        "Bundle size for service2 is too large at 585 kB. Please update thresholds in './scripts/bundleSizeConfig.js'",
       );
     });
   });
