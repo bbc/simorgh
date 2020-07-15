@@ -11,6 +11,7 @@ exports[`Headings with headline data should render correctly 1`] = `
   display: block;
   margin: 0;
   padding: 2rem 0;
+  overflow-wrap: anywhere;
 }
 
 .c1:focus {
@@ -91,6 +92,7 @@ exports[`Headings with plain text headline should render h1 containing correct t
   display: block;
   margin: 0;
   padding: 2rem 0;
+  overflow-wrap: anywhere;
 }
 
 .c1:focus {
@@ -259,6 +261,7 @@ exports[`Headings with rich text headline with bold text should render h1 with <
   display: block;
   margin: 0;
   padding: 2rem 0;
+  overflow-wrap: anywhere;
 }
 
 .c1:focus {
@@ -349,6 +352,7 @@ exports[`Headings with rich text headline with italic text should render h1 with
   display: block;
   margin: 0;
   padding: 2rem 0;
+  overflow-wrap: anywhere;
 }
 
 .c1:focus {
@@ -441,6 +445,7 @@ exports[`Headings with rich text should render headline with bold & italic text 
   display: block;
   margin: 0;
   padding: 2rem 0;
+  overflow-wrap: anywhere;
 }
 
 .c1:focus {
@@ -535,6 +540,7 @@ exports[`Headings with rich text should render headline with italic & bold text 
   display: block;
   margin: 0;
   padding: 2rem 0;
+  overflow-wrap: anywhere;
 }
 
 .c1:focus {
@@ -629,6 +635,7 @@ exports[`Headings with rich text with different attributes should render headlin
   display: block;
   margin: 0;
   padding: 2rem 0;
+  overflow-wrap: anywhere;
 }
 
 .c1:focus {
