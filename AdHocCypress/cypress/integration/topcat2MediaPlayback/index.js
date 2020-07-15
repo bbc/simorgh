@@ -20,13 +20,19 @@ describe('Legacy MAP Media Playback', () => {
             cy.wrap($iframe.prop('contentWindow'), {
               timeout: 30000,
             })
-              .its('embeddedMedia.playerInstances.mediaPlayer.playlist.items')
-              .its(0)
-              .its('originalConnections')
-              .then(connections =>
-                connections.map(connection => connection.href),
-              )
-              .should('eql', dataUrls);
+              .its('embeddedMedia.playerInstances.mediaPlayer.playlist')
+              .then(playlist => {
+                cy.wrap(playlist).its('url').should('be.undefined');
+
+                cy.wrap(playlist)
+                  .its('items')
+                  .its(0)
+                  .its('originalConnections')
+                  .then(connections =>
+                    connections.map(connection => connection.href),
+                  )
+                  .should('eql', dataUrls);
+              });
           });
         });
       });
