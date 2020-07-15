@@ -1,7 +1,10 @@
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
+import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
+import getConfig from '#app/routes/utils/getConfig';
 
 const getLanguage = path(['metadata', 'language']);
 const getMetaDataId = path(['metadata', 'id']);
@@ -19,10 +22,39 @@ const getPageIdentifier = path([
 const getHeading = path(['content', 'blocks', 0, 'text']);
 const getBodySummary = path(['content', 'blocks', 1, 'text']);
 
-export default async ({ path: pathname }) => {
+export const hasRadioSchedule = async service => {
+  const config = await getConfig(service);
+
+  const serviceHasRadioSchedule = pathOr(
+    false,
+    ['radioSchedule', 'hasRadioSchedule'],
+    config,
+  );
+
+  const radioScheduleOnLiveRadioPage = pathOr(
+    false,
+    ['radioSchedule', 'onLiveRadioPage'],
+    config,
+  );
+
+  return serviceHasRadioSchedule && radioScheduleOnLiveRadioPage;
+};
+
+export default async ({ path: pathname, service }) => {
   try {
     const liveRadioDataPath = overrideRendererOnTest(pathname);
-    const { json, status } = await fetchPageData(liveRadioDataPath);
+    const pageHasRadioSchedule = await hasRadioSchedule(service);
+    const pageDataPromise = fetchPageData(liveRadioDataPath);
+
+    const { json, status } = pageHasRadioSchedule
+      ? await withRadioSchedule({
+          pageDataPromise,
+          service,
+          pathname,
+        })
+      : await pageDataPromise;
+
+    const getRadioScheduleData = path(['radioScheduleData']);
     const pageType = { metadata: { type: 'Live Radio' } };
 
     return {
@@ -38,6 +70,7 @@ export default async ({ path: pathname }) => {
         contentType: getContentType(json),
         pageIdentifier: getPageIdentifier(json),
         masterBrand: getMasterBrand(json),
+        radioScheduleData: getRadioScheduleData(json),
         ...pageType,
       },
     };
