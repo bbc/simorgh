@@ -1,5 +1,14 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, number, node, string, func, any } from 'prop-types';
+import {
+  arrayOf,
+  shape,
+  number,
+  node,
+  string,
+  func,
+  any,
+  bool,
+} from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled, { css } from 'styled-components';
 import {
@@ -84,19 +93,23 @@ const StyledSectionLabel = styled(SectionLabel)`
       padding: ${GEL_SPACING_DBL} 0;
     }
     @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-      padding: ${GEL_SPACING_DBL};
+      padding-left: ${GEL_SPACING_DBL};
     }
   `}
 `;
 
 // Apply the correct top & bottom padding around the single story promo
 const SingleContentWrapper = styled.div`
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    padding-top: ${GEL_SPACING_DBL};
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-bottom: ${GEL_SPACING_TRPL};
-  }
+  ${({ isRecommendation }) =>
+    !isRecommendation &&
+    `
+    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+      padding-top: ${GEL_SPACING_DBL};
+    }
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      padding-bottom: ${GEL_SPACING_TRPL};
+    }
+  `}
 `;
 
 const CpsOnwardJourney = ({
@@ -107,6 +120,7 @@ const CpsOnwardJourney = ({
   listTransform,
   singleTransform,
   optionalLabelProps,
+  isRecommendation,
 }) => {
   const a11yAttributes = {
     as: 'section',
@@ -156,12 +170,13 @@ const CpsOnwardJourney = ({
         service={service}
         dir={dir}
         labelId={labelId}
+        isRecommendation={isRecommendation}
         {...optionalLabelProps}
       >
         {title}
       </StyledSectionLabel>
       {hasSingleContent ? (
-        <SingleContentWrapper>
+        <SingleContentWrapper isRecommendation={isRecommendation}>
           {singleTransform(singleContent)}
         </SingleContentWrapper>
       ) : (
@@ -186,12 +201,14 @@ CpsOnwardJourney.propTypes = {
   listTransform: func.isRequired,
   singleTransform: func.isRequired,
   optionalLabelProps: shape(any),
+  isRecommendation: bool,
 };
 
 CpsOnwardJourney.defaultProps = {
   content: [],
   parentColumns: null,
   optionalLabelProps: null,
+  isRecommendation: false,
 };
 
 export default CpsOnwardJourney;

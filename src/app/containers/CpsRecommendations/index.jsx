@@ -118,7 +118,6 @@ const CpsRecommendations = ({ items, parentColumns }) => {
     overrideHeadingAs: 'strong',
     bar: false,
     backgroundColor: C_LUNAR,
-    isRecommendation: true,
   };
 
   return (
@@ -131,6 +130,7 @@ const CpsRecommendations = ({ items, parentColumns }) => {
         singleTransform={singleTransform}
         listTransform={listTransform}
         optionalLabelProps={optionalLabelProps}
+        isRecommendation
       />
     </RecommendationsWrapper>
   );
