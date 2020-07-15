@@ -70,12 +70,12 @@ const StyledAmpIframe = styled(AmpIframe)`
       ${({ service }) => getSansBold(service)}
       ${GEL_PICA}
       background-color: ${C_EBON};
-      border: none;
+      border: 0.0625rem solid transparent;
       color: #fff;
       cursor: pointer;
       display: block;
       padding: ${GEL_SPACING} ${GEL_SPACING_DBL};
-      &:hover {
+      &:hover, &:focus {
         text-decoration: underline;
       }
     }
@@ -95,9 +95,7 @@ const VjAmp = ({ ampMetadata: { imageWidth, imageHeight, image, src } }) => {
           service={service}
         >
           <div overflow="true">
-            <button type="button" aria-label="Show more">
-              Show more
-            </button>
+            <button type="button">Show more</button>
           </div>
           <amp-img layout="fill" src={image} placeholder />
         </StyledAmpIframe>
