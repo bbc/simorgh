@@ -20,7 +20,7 @@ const applyErrorPageHandlers = pipe(withLoading, withPageWrapper, withContexts);
 export const ArticlePage = pipe(
   applyBasicPageHandlers,
   withVariant,
-)(loadable(() => import('./ArticlePage')));
+)(loadable(() => import(/* webpackPrefetch: true */ './ArticlePage')));
 
 export const ErrorPage = applyErrorPageHandlers(
   loadable(() => import('./ErrorPage')),
@@ -29,14 +29,14 @@ export const ErrorPage = applyErrorPageHandlers(
 export const FrontPage = pipe(
   applyBasicPageHandlers,
   withVariant,
-)(loadable(() => import('./FrontPage')));
+)(loadable(() => import(/* webpackPrefetch: true */ './FrontPage')));
 
 export const MediaAssetPage = applyBasicPageHandlers(
-  loadable(() => import('./MediaAssetPage')),
+  loadable(() => import(/* webpackPrefetch: true */ './MediaAssetPage')),
 );
 
 export const MostReadPage = applyBasicPageHandlers(
-  loadable(() => import('./MostReadPage')),
+  loadable(() => import(/* webpackPrefetch: true */ './MostReadPage')),
 );
 
 export const PhotoGalleryPage = applyBasicPageHandlers(
@@ -56,9 +56,9 @@ export const OnDemandTvPage = applyBasicPageHandlers(
 );
 
 export const StoryPage = applyBasicPageHandlers(
-  loadable(() => import('./StoryPage')),
+  loadable(() => import(/* webpackPrefetch: true */ './StoryPage')),
 );
 
 export const IdxPage = applyBasicPageHandlers(
-  loadable(() => import('./IdxPage')),
+  loadable(() => import(/* webpackPrefetch: true */ './IdxPage')),
 );
