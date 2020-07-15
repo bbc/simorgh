@@ -684,25 +684,6 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   }
 }
 
-@media (max-width:24.9375rem) {
-  .c0 {
-    margin: 2rem -0.5rem 0;
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c0 {
-    margin: 2rem -1rem 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    margin: 1.5rem -1rem 0;
-  }
-}
-
 @media (min-width:37.5rem) {
   .c7 {
     margin-top: 1.5rem;
@@ -1980,25 +1961,6 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 @media (min-width:63rem) {
   .c1 {
     margin-bottom: 1.5rem;
-  }
-}
-
-@media (max-width:24.9375rem) {
-  .c0 {
-    margin: 2rem -0.5rem 0;
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c0 {
-    margin: 2rem -1rem 0;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    margin: 1.5rem -1rem 0;
   }
 }
 

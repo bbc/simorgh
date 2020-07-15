@@ -13,6 +13,7 @@ const RadioScheduleContainer = ({
   initialData,
   radioScheduleEndpointOverride,
   lang,
+  className,
 }) => {
   const { enabled } = useToggle('radioSchedule');
   const { isAmp, env } = useContext(RequestContext);
@@ -34,7 +35,9 @@ const RadioScheduleContainer = ({
     });
 
   return (
-    <Canonical endpoint={endpoint} initialData={initialData} lang={lang} />
+    <div className={className}>
+      <Canonical endpoint={endpoint} initialData={initialData} lang={lang} />
+    </div>
   );
 };
 
@@ -42,12 +45,14 @@ RadioScheduleContainer.propTypes = {
   radioScheduleEndpointOverride: string,
   initialData: radioSchedulesShape,
   lang: string,
+  className: string,
 };
 
 RadioScheduleContainer.defaultProps = {
   radioScheduleEndpointOverride: null,
   initialData: undefined,
   lang: null,
+  className: '',
 };
 
 export default RadioScheduleContainer;

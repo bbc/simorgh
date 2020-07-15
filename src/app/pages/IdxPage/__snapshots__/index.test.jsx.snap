@@ -563,555 +563,559 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
           </li>
         </ul>
       </section>
-      <section
-        aria-labelledby="Radio-Schedule"
-        class="RadioScheduleSection-f8vxqz-0 cDuWSa"
-        lang="fa-AF"
-        role="region"
+      <div
+        class="StyledRadioScheduleContainer-sc-1rygalq-1 icYZeu"
       >
-        <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD RadioScheduleSectionLabel-f8vxqz-2 bKHBEG"
+        <section
+          aria-labelledby="Radio-Schedule"
+          class="RadioScheduleSection-f8vxqz-0 jTLNRU"
+          lang="fa-AF"
+          role="region"
         >
-          <h2
-            class="Heading-sc-1x4gwjz-2 eZofTG"
+          <div
+            class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD RadioScheduleSectionLabel-f8vxqz-2 bKHBEG"
           >
-            <span
-              class="FlexColumn-wx5kdp-0 dgpsiS"
+            <h2
+              class="Heading-sc-1x4gwjz-2 eZofTG"
             >
               <span
-                class="FlexRow-wx5kdp-2 dVBNyZ"
+                class="FlexColumn-wx5kdp-0 dgpsiS"
               >
                 <span
-                  class="Title-wx5kdp-4 bSIdgQ"
-                  dir="rtl"
-                  id="Radio-Schedule"
+                  class="FlexRow-wx5kdp-2 dVBNyZ"
                 >
-                  برنامه‌های رادیو
+                  <span
+                    class="Title-wx5kdp-4 bSIdgQ"
+                    dir="rtl"
+                    id="Radio-Schedule"
+                  >
+                    برنامه‌های رادیو
+                  </span>
                 </span>
               </span>
-            </span>
-          </h2>
-        </div>
-        <div
-          class="RadioScheduleWrapper-f8vxqz-1 hFZkwU"
-        >
-          <ul
-            class="GridComponent-nf79gm-0 kCcGpG StyledGrid-sc-1q74lji-1 dHsDNK"
-            dir="rtl"
-            role="list"
+            </h2>
+          </div>
+          <div
+            class="RadioScheduleWrapper-f8vxqz-1 hFZkwU"
           >
-            <li
-              class="GridComponent-nf79gm-0 cxONfP StyledFlexGrid-sc-1q74lji-2 itXDho"
-              data-e2e="onDemand"
+            <ul
+              class="GridComponent-nf79gm-0 kCcGpG StyledGrid-sc-1q74lji-1 dHsDNK"
               dir="rtl"
-              role="listitem"
+              role="list"
             >
-              <div
-                class="StartTimeWrapper-sc-1q74lji-0 kamCRN"
+              <li
+                class="GridComponent-nf79gm-0 cxONfP StyledFlexGrid-sc-1q74lji-2 itXDho"
+                data-e2e="onDemand"
+                dir="rtl"
+                role="listitem"
               >
                 <div
-                  class="Wrapper-ojp38q-0 iLZIDn"
+                  class="StartTimeWrapper-sc-1q74lji-0 kamCRN"
                 >
-                  <span
-                    class="StyledClock-ojp38q-1 gushnz"
-                    dir="rtl"
+                  <div
+                    class="Wrapper-ojp38q-0 iLZIDn"
                   >
-                    <svg
+                    <span
+                      class="StyledClock-ojp38q-1 gushnz"
+                      dir="rtl"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="CoreIcon-sc-1eqhzay-0 ClockIcon-sc-1eqhzay-1 geFUte"
+                        focusable="false"
+                        height="13"
+                        viewBox="0 0 13 13"
+                        width="13"
+                      >
+                        <path
+                          d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
+                        />
+                        <path
+                          d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
+                        />
+                      </svg>
+                    </span>
+                    <span
                       aria-hidden="true"
-                      class="CoreIcon-sc-1eqhzay-0 ClockIcon-sc-1eqhzay-1 geFUte"
-                      focusable="false"
-                      height="13"
-                      viewBox="0 0 13 13"
-                      width="13"
+                      class="StyledTimestamp-ojp38q-2 gnYSeR"
+                      dir="rtl"
                     >
-                      <path
-                        d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
-                      />
-                      <path
-                        d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="StyledTimestamp-ojp38q-2 gnYSeR"
-                    dir="rtl"
-                  >
-                    <time
-                      class="StyledTimestamp-um718p-0 fMHMrb"
-                      datetime="2020-03-26"
-                    >
-                      ۰۵:۳۰
-                    </time>
-                  </span>
+                      <time
+                        class="StyledTimestamp-um718p-0 fMHMrb"
+                        datetime="2020-03-26"
+                      >
+                        ۰۵:۳۰
+                      </time>
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <div
-                class="CardWrapper-sc-6oo8lp-2 jgjrOO"
-              >
                 <div
-                  class="TextWrapper-sc-6oo8lp-3 bcFowo"
+                  class="CardWrapper-sc-6oo8lp-2 jgjrOO"
                 >
-                  <h3
-                    class="StyledH3-sc-6oo8lp-4 jdapZU"
+                  <div
+                    class="TextWrapper-sc-6oo8lp-3 bcFowo"
                   >
-                    <a
-                      class="Link-sc-1dvfmi3-5 StyledLink-sc-6oo8lp-1 dCvEUl"
-                      href="/persian/bbc_dari_radio/w172x1rwggbcdq8"
+                    <h3
+                      class="StyledH3-sc-6oo8lp-4 jdapZU"
+                    >
+                      <a
+                        class="Link-sc-1dvfmi3-5 StyledLink-sc-6oo8lp-1 dCvEUl"
+                        href="/persian/bbc_dari_radio/w172x1rwggbcdq8"
+                      >
+                        <span
+                          class="HeadingContentWrapper-sc-6oo8lp-11 jHsaER"
+                          role="text"
+                        >
+                          نبض خبر
+                          <span
+                            class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                          >
+                            , 
+                            ۰۵:۳۰
+                            , 
+                          </span>
+                          <span
+                            class="TitleWrapper-sc-6oo8lp-0 psNPy"
+                          >
+                            ۲۶ مارس ۲۰۲۰
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p
+                      class="SummaryWrapper-sc-6oo8lp-6 fTeFGf"
+                    >
+                      تازه ترین خبرهای جهان
+                    </p>
+                  </div>
+                  <div
+                    class="ButtonWrapper-sc-6oo8lp-7 chenCM"
+                  >
+                    <span
+                      class="IconWrapper-sc-6oo8lp-8 dKFQcC"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
+                        focusable="false"
+                        height="12px"
+                        viewBox="0 0 13 12"
+                        width="13px"
+                      >
+                        <path
+                          d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                        />
+                        <path
+                          d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                        />
+                      </svg>
+                    </span>
+                    <time
+                      class="DurationWrapper-sc-6oo8lp-9 hWRNdd"
+                      datetime="PT3M"
+                      dir="rtl"
                     >
                       <span
-                        class="HeadingContentWrapper-sc-6oo8lp-11 jHsaER"
-                        role="text"
+                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                       >
-                        نبض خبر
-                        <span
-                          class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                        >
-                          , 
-                          ۰۵:۳۰
-                          , 
-                        </span>
-                        <span
-                          class="TitleWrapper-sc-6oo8lp-0 psNPy"
-                        >
-                          ۲۶ مارس ۲۰۲۰
-                        </span>
+                         مدت ۰۳،۰۰ 
                       </span>
-                    </a>
-                  </h3>
-                  <p
-                    class="SummaryWrapper-sc-6oo8lp-6 fTeFGf"
-                  >
-                    تازه ترین خبرهای جهان
-                  </p>
-                </div>
-                <div
-                  class="ButtonWrapper-sc-6oo8lp-7 chenCM"
-                >
-                  <span
-                    class="IconWrapper-sc-6oo8lp-8 dKFQcC"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
-                      focusable="false"
-                      height="12px"
-                      viewBox="0 0 13 12"
-                      width="13px"
-                    >
-                      <path
-                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                      />
-                      <path
-                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                      />
-                    </svg>
-                  </span>
-                  <time
-                    class="DurationWrapper-sc-6oo8lp-9 hWRNdd"
-                    datetime="PT3M"
-                    dir="rtl"
-                  >
-                    <span
-                      class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                    >
-                       مدت ۰۳،۰۰ 
-                    </span>
-                    <span
-                      aria-hidden="true"
-                      class="DurationTextWrapper-sc-6oo8lp-10 dfaGSJ"
-                    >
-                      ۰۳:۰۰
-                    </span>
-                  </time>
-                </div>
-              </div>
-            </li>
-            <li
-              class="GridComponent-nf79gm-0 cxONfP StyledFlexGrid-sc-1q74lji-2 itXDho"
-              data-e2e="onDemand"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="StartTimeWrapper-sc-1q74lji-0 kamCRN"
-              >
-                <div
-                  class="Wrapper-ojp38q-0 iLZIDn"
-                >
-                  <span
-                    class="StyledClock-ojp38q-1 gushnz"
-                    dir="rtl"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="CoreIcon-sc-1eqhzay-0 ClockIcon-sc-1eqhzay-1 geFUte"
-                      focusable="false"
-                      height="13"
-                      viewBox="0 0 13 13"
-                      width="13"
-                    >
-                      <path
-                        d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
-                      />
-                      <path
-                        d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="StyledTimestamp-ojp38q-2 gnYSeR"
-                    dir="rtl"
-                  >
-                    <time
-                      class="StyledTimestamp-um718p-0 fMHMrb"
-                      datetime="2020-03-26"
-                    >
-                      ۰۲:۳۰
-                    </time>
-                  </span>
-                </div>
-              </div>
-              <div
-                class="CardWrapper-sc-6oo8lp-2 jgjrOO"
-              >
-                <div
-                  class="TextWrapper-sc-6oo8lp-3 bcFowo"
-                >
-                  <h3
-                    class="StyledH3-sc-6oo8lp-4 jdapZU"
-                  >
-                    <a
-                      class="Link-sc-1dvfmi3-5 StyledLink-sc-6oo8lp-1 dCvEUl"
-                      href="/persian/bbc_dari_radio/w3csz8fk"
-                    >
                       <span
-                        class="HeadingContentWrapper-sc-6oo8lp-11 jHsaER"
-                        role="text"
+                        aria-hidden="true"
+                        class="DurationTextWrapper-sc-6oo8lp-10 dfaGSJ"
                       >
-                        چشم انداز بامدادی 2
-                        <span
-                          class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                        >
-                          , 
-                          ۰۲:۳۰
-                          , 
-                        </span>
-                        <span
-                          class="TitleWrapper-sc-6oo8lp-0 psNPy"
-                        >
-                          ۲۶ مارس ۲۰۲۰
-                        </span>
+                        ۰۳:۰۰
                       </span>
-                    </a>
-                  </h3>
-                  <p
-                    class="SummaryWrapper-sc-6oo8lp-6 fTeFGf"
-                  >
-                    تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
-                  </p>
-                </div>
-                <div
-                  class="ButtonWrapper-sc-6oo8lp-7 chenCM"
-                >
-                  <span
-                    class="IconWrapper-sc-6oo8lp-8 dKFQcC"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
-                      focusable="false"
-                      height="12px"
-                      viewBox="0 0 13 12"
-                      width="13px"
-                    >
-                      <path
-                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                      />
-                      <path
-                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                      />
-                    </svg>
-                  </span>
-                  <time
-                    class="DurationWrapper-sc-6oo8lp-9 hWRNdd"
-                    datetime="PT29M30S"
-                    dir="rtl"
-                  >
-                    <span
-                      class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                    >
-                       مدت ۲۹،۳۰ 
-                    </span>
-                    <span
-                      aria-hidden="true"
-                      class="DurationTextWrapper-sc-6oo8lp-10 dfaGSJ"
-                    >
-                      ۲۹:۳۰
-                    </span>
-                  </time>
-                </div>
-              </div>
-            </li>
-            <li
-              class="GridComponent-nf79gm-0 cxONfP StyledFlexGrid-sc-1q74lji-2 itXDho"
-              data-e2e="onDemand"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="StartTimeWrapper-sc-1q74lji-0 kamCRN"
-              >
-                <div
-                  class="Wrapper-ojp38q-0 iLZIDn"
-                >
-                  <span
-                    class="StyledClock-ojp38q-1 gushnz"
-                    dir="rtl"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="CoreIcon-sc-1eqhzay-0 ClockIcon-sc-1eqhzay-1 geFUte"
-                      focusable="false"
-                      height="13"
-                      viewBox="0 0 13 13"
-                      width="13"
-                    >
-                      <path
-                        d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
-                      />
-                      <path
-                        d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="StyledTimestamp-ojp38q-2 gnYSeR"
-                    dir="rtl"
-                  >
-                    <time
-                      class="StyledTimestamp-um718p-0 fMHMrb"
-                      datetime="2020-03-26"
-                    >
-                      ۰۱:۳۰
                     </time>
-                  </span>
+                  </div>
                 </div>
-              </div>
-              <div
-                class="CardWrapper-sc-6oo8lp-2 jgjrOO"
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 cxONfP StyledFlexGrid-sc-1q74lji-2 itXDho"
+                data-e2e="onDemand"
+                dir="rtl"
+                role="listitem"
               >
                 <div
-                  class="TextWrapper-sc-6oo8lp-3 bcFowo"
+                  class="StartTimeWrapper-sc-1q74lji-0 kamCRN"
                 >
-                  <h3
-                    class="StyledH3-sc-6oo8lp-4 jdapZU"
+                  <div
+                    class="Wrapper-ojp38q-0 iLZIDn"
                   >
-                    <a
-                      class="Link-sc-1dvfmi3-5 StyledLink-sc-6oo8lp-1 dCvEUl"
-                      href="/persian/bbc_dari_radio/w3csz7tn"
+                    <span
+                      class="StyledClock-ojp38q-1 gushnz"
+                      dir="rtl"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="CoreIcon-sc-1eqhzay-0 ClockIcon-sc-1eqhzay-1 geFUte"
+                        focusable="false"
+                        height="13"
+                        viewBox="0 0 13 13"
+                        width="13"
+                      >
+                        <path
+                          d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
+                        />
+                        <path
+                          d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="StyledTimestamp-ojp38q-2 gnYSeR"
+                      dir="rtl"
+                    >
+                      <time
+                        class="StyledTimestamp-um718p-0 fMHMrb"
+                        datetime="2020-03-26"
+                      >
+                        ۰۲:۳۰
+                      </time>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="CardWrapper-sc-6oo8lp-2 jgjrOO"
+                >
+                  <div
+                    class="TextWrapper-sc-6oo8lp-3 bcFowo"
+                  >
+                    <h3
+                      class="StyledH3-sc-6oo8lp-4 jdapZU"
+                    >
+                      <a
+                        class="Link-sc-1dvfmi3-5 StyledLink-sc-6oo8lp-1 dCvEUl"
+                        href="/persian/bbc_dari_radio/w3csz8fk"
+                      >
+                        <span
+                          class="HeadingContentWrapper-sc-6oo8lp-11 jHsaER"
+                          role="text"
+                        >
+                          چشم انداز بامدادی 2
+                          <span
+                            class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                          >
+                            , 
+                            ۰۲:۳۰
+                            , 
+                          </span>
+                          <span
+                            class="TitleWrapper-sc-6oo8lp-0 psNPy"
+                          >
+                            ۲۶ مارس ۲۰۲۰
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p
+                      class="SummaryWrapper-sc-6oo8lp-6 fTeFGf"
+                    >
+                      تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
+                    </p>
+                  </div>
+                  <div
+                    class="ButtonWrapper-sc-6oo8lp-7 chenCM"
+                  >
+                    <span
+                      class="IconWrapper-sc-6oo8lp-8 dKFQcC"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
+                        focusable="false"
+                        height="12px"
+                        viewBox="0 0 13 12"
+                        width="13px"
+                      >
+                        <path
+                          d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                        />
+                        <path
+                          d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                        />
+                      </svg>
+                    </span>
+                    <time
+                      class="DurationWrapper-sc-6oo8lp-9 hWRNdd"
+                      datetime="PT29M30S"
+                      dir="rtl"
+                    >
+                      <span
+                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                      >
+                         مدت ۲۹،۳۰ 
+                      </span>
+                      <span
+                        aria-hidden="true"
+                        class="DurationTextWrapper-sc-6oo8lp-10 dfaGSJ"
+                      >
+                        ۲۹:۳۰
+                      </span>
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 cxONfP StyledFlexGrid-sc-1q74lji-2 itXDho"
+                data-e2e="onDemand"
+                dir="rtl"
+                role="listitem"
+              >
+                <div
+                  class="StartTimeWrapper-sc-1q74lji-0 kamCRN"
+                >
+                  <div
+                    class="Wrapper-ojp38q-0 iLZIDn"
+                  >
+                    <span
+                      class="StyledClock-ojp38q-1 gushnz"
+                      dir="rtl"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="CoreIcon-sc-1eqhzay-0 ClockIcon-sc-1eqhzay-1 geFUte"
+                        focusable="false"
+                        height="13"
+                        viewBox="0 0 13 13"
+                        width="13"
+                      >
+                        <path
+                          d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
+                        />
+                        <path
+                          d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="StyledTimestamp-ojp38q-2 gnYSeR"
+                      dir="rtl"
+                    >
+                      <time
+                        class="StyledTimestamp-um718p-0 fMHMrb"
+                        datetime="2020-03-26"
+                      >
+                        ۰۱:۳۰
+                      </time>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="CardWrapper-sc-6oo8lp-2 jgjrOO"
+                >
+                  <div
+                    class="TextWrapper-sc-6oo8lp-3 bcFowo"
+                  >
+                    <h3
+                      class="StyledH3-sc-6oo8lp-4 jdapZU"
+                    >
+                      <a
+                        class="Link-sc-1dvfmi3-5 StyledLink-sc-6oo8lp-1 dCvEUl"
+                        href="/persian/bbc_dari_radio/w3csz7tn"
+                      >
+                        <span
+                          class="HeadingContentWrapper-sc-6oo8lp-11 jHsaER"
+                          role="text"
+                        >
+                          چشم انداز بامدادی 1
+                          <span
+                            class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                          >
+                            , 
+                            ۰۱:۳۰
+                            , 
+                          </span>
+                          <span
+                            class="TitleWrapper-sc-6oo8lp-0 psNPy"
+                          >
+                            ۲۶ مارس ۲۰۲۰
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p
+                      class="SummaryWrapper-sc-6oo8lp-6 fTeFGf"
+                    >
+                      تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
+                    </p>
+                  </div>
+                  <div
+                    class="ButtonWrapper-sc-6oo8lp-7 chenCM"
+                  >
+                    <span
+                      class="IconWrapper-sc-6oo8lp-8 dKFQcC"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
+                        focusable="false"
+                        height="12px"
+                        viewBox="0 0 13 12"
+                        width="13px"
+                      >
+                        <path
+                          d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                        />
+                        <path
+                          d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                        />
+                      </svg>
+                    </span>
+                    <time
+                      class="DurationWrapper-sc-6oo8lp-9 hWRNdd"
+                      datetime="PT29M30S"
+                      dir="rtl"
+                    >
+                      <span
+                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                      >
+                         مدت ۲۹،۳۰ 
+                      </span>
+                      <span
+                        aria-hidden="true"
+                        class="DurationTextWrapper-sc-6oo8lp-10 dfaGSJ"
+                      >
+                        ۲۹:۳۰
+                      </span>
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="GridComponent-nf79gm-0 cxONfP StyledFlexGrid-sc-1q74lji-2 itXDho"
+                data-e2e="next"
+                dir="rtl"
+                role="listitem"
+              >
+                <div
+                  class="StartTimeWrapper-sc-1q74lji-0 kamCRN"
+                >
+                  <div
+                    class="Wrapper-ojp38q-0 iLZIDn"
+                  >
+                    <span
+                      class="StyledClock-ojp38q-1 gushnz"
+                      dir="rtl"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="CoreIcon-sc-1eqhzay-0 ClockIcon-sc-1eqhzay-1 geFUte"
+                        focusable="false"
+                        height="13"
+                        viewBox="0 0 13 13"
+                        width="13"
+                      >
+                        <path
+                          d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
+                        />
+                        <path
+                          d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="StyledTimestamp-ojp38q-2 gnYSeR"
+                      dir="rtl"
+                    >
+                      <time
+                        class="StyledTimestamp-um718p-0 fMHMrb"
+                        datetime="2030-01-01"
+                      >
+                        ۰۹:۰۰
+                      </time>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="CardWrapper-sc-6oo8lp-2 jgjrOO"
+                >
+                  <div
+                    class="TextWrapper-sc-6oo8lp-3 bcFowo"
+                  >
+                    <h3
+                      class="StyledH3-sc-6oo8lp-4 dOhQDK"
                     >
                       <span
                         class="HeadingContentWrapper-sc-6oo8lp-11 jHsaER"
                         role="text"
                       >
+                        <span
+                          class="NextLabel-sc-6oo8lp-5 eTDWik"
+                          dir="rtl"
+                        >
+                          بعدی 
+                        </span>
                         چشم انداز بامدادی 1
                         <span
                           class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                         >
                           , 
-                          ۰۱:۳۰
+                          ۰۹:۰۰
                           , 
                         </span>
                         <span
-                          class="TitleWrapper-sc-6oo8lp-0 psNPy"
+                          class="TitleWrapper-sc-6oo8lp-0 bXLYaO"
                         >
-                          ۲۶ مارس ۲۰۲۰
+                          ۱ ژانویه ۲۰۳۰
                         </span>
                       </span>
-                    </a>
-                  </h3>
-                  <p
-                    class="SummaryWrapper-sc-6oo8lp-6 fTeFGf"
-                  >
-                    تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
-                  </p>
-                </div>
-                <div
-                  class="ButtonWrapper-sc-6oo8lp-7 chenCM"
-                >
-                  <span
-                    class="IconWrapper-sc-6oo8lp-8 dKFQcC"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
-                      focusable="false"
-                      height="12px"
-                      viewBox="0 0 13 12"
-                      width="13px"
+                    </h3>
+                    <p
+                      class="SummaryWrapper-sc-6oo8lp-6 fTeFGf"
                     >
-                      <path
-                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                      />
-                      <path
-                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                      />
-                    </svg>
-                  </span>
-                  <time
-                    class="DurationWrapper-sc-6oo8lp-9 hWRNdd"
-                    datetime="PT29M30S"
-                    dir="rtl"
+                      تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
+                    </p>
+                  </div>
+                  <div
+                    class="ButtonWrapper-sc-6oo8lp-7 brPWmx"
                   >
                     <span
-                      class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                      class="IconWrapper-sc-6oo8lp-8 gqyxry"
                     >
-                       مدت ۲۹،۳۰ 
-                    </span>
-                    <span
-                      aria-hidden="true"
-                      class="DurationTextWrapper-sc-6oo8lp-10 dfaGSJ"
-                    >
-                      ۲۹:۳۰
-                    </span>
-                  </time>
-                </div>
-              </div>
-            </li>
-            <li
-              class="GridComponent-nf79gm-0 cxONfP StyledFlexGrid-sc-1q74lji-2 itXDho"
-              data-e2e="next"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="StartTimeWrapper-sc-1q74lji-0 kamCRN"
-              >
-                <div
-                  class="Wrapper-ojp38q-0 iLZIDn"
-                >
-                  <span
-                    class="StyledClock-ojp38q-1 gushnz"
-                    dir="rtl"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="CoreIcon-sc-1eqhzay-0 ClockIcon-sc-1eqhzay-1 geFUte"
-                      focusable="false"
-                      height="13"
-                      viewBox="0 0 13 13"
-                      width="13"
-                    >
-                      <path
-                        d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
-                      />
-                      <path
-                        d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="StyledTimestamp-ojp38q-2 gnYSeR"
-                    dir="rtl"
-                  >
-                    <time
-                      class="StyledTimestamp-um718p-0 fMHMrb"
-                      datetime="2030-01-01"
-                    >
-                      ۰۹:۰۰
-                    </time>
-                  </span>
-                </div>
-              </div>
-              <div
-                class="CardWrapper-sc-6oo8lp-2 jgjrOO"
-              >
-                <div
-                  class="TextWrapper-sc-6oo8lp-3 bcFowo"
-                >
-                  <h3
-                    class="StyledH3-sc-6oo8lp-4 dOhQDK"
-                  >
-                    <span
-                      class="HeadingContentWrapper-sc-6oo8lp-11 jHsaER"
-                      role="text"
-                    >
-                      <span
-                        class="NextLabel-sc-6oo8lp-5 eTDWik"
-                        dir="rtl"
+                      <svg
+                        aria-hidden="true"
+                        class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
+                        focusable="false"
+                        height="12px"
+                        viewBox="0 0 13 12"
+                        width="13px"
                       >
-                        بعدی 
-                      </span>
-                      چشم انداز بامدادی 1
+                        <path
+                          d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                        />
+                        <path
+                          d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                        />
+                      </svg>
+                    </span>
+                    <time
+                      class="DurationWrapper-sc-6oo8lp-9 hWRNdd"
+                      datetime="PT26M30S"
+                      dir="rtl"
+                    >
                       <span
                         class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                       >
-                        , 
-                        ۰۹:۰۰
-                        , 
+                         مدت ۲۶،۳۰ 
                       </span>
                       <span
-                        class="TitleWrapper-sc-6oo8lp-0 bXLYaO"
+                        aria-hidden="true"
+                        class="DurationTextWrapper-sc-6oo8lp-10 dfaGSJ"
                       >
-                        ۱ ژانویه ۲۰۳۰
+                        ۲۶:۳۰
                       </span>
-                    </span>
-                  </h3>
-                  <p
-                    class="SummaryWrapper-sc-6oo8lp-6 fTeFGf"
-                  >
-                    تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
-                  </p>
+                    </time>
+                  </div>
                 </div>
-                <div
-                  class="ButtonWrapper-sc-6oo8lp-7 brPWmx"
-                >
-                  <span
-                    class="IconWrapper-sc-6oo8lp-8 gqyxry"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
-                      focusable="false"
-                      height="12px"
-                      viewBox="0 0 13 12"
-                      width="13px"
-                    >
-                      <path
-                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                      />
-                      <path
-                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                      />
-                    </svg>
-                  </span>
-                  <time
-                    class="DurationWrapper-sc-6oo8lp-9 hWRNdd"
-                    datetime="PT26M30S"
-                    dir="rtl"
-                  >
-                    <span
-                      class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                    >
-                       مدت ۲۶،۳۰ 
-                    </span>
-                    <span
-                      aria-hidden="true"
-                      class="DurationTextWrapper-sc-6oo8lp-10 dfaGSJ"
-                    >
-                      ۲۶:۳۰
-                    </span>
-                  </time>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
       <section
         aria-labelledby="Features"
         class="StyledSection-sc-1x9qbiu-0 hNdEyC"
