@@ -38,11 +38,11 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
         </h2>
       </div>
       <ul
-        class="StoryPromoUl-sc-171lqjd-1 isCYWc"
+        class="StoryPromoUl-sc-171lqjd-2 brjIMO"
         role="list"
       >
         <li
-          class="StoryPromoLi-sc-171lqjd-0 jTGbev"
+          class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM"
           role="listitem"
         >
           <div
@@ -77,7 +77,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
           </div>
         </li>
         <li
-          class="StoryPromoLi-sc-171lqjd-0 jTGbev"
+          class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM"
           role="listitem"
         >
           <div

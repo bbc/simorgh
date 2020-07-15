@@ -26,6 +26,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   display: block;
   margin: 0;
   padding: 2rem 0;
+  overflow-wrap: anywhere;
 }
 
 .c2:focus {
@@ -1441,6 +1442,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   display: block;
   margin: 0;
   padding: 2rem 0;
+  overflow-wrap: anywhere;
 }
 
 .c2:focus {
@@ -2921,6 +2923,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   display: block;
   margin: 0;
   padding: 2rem 0;
+  overflow-wrap: anywhere;
 }
 
 .c2:focus {
@@ -3100,13 +3103,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   padding: 0.5rem 0 1rem;
 }
 
+.c26:last-child {
+  border: none;
+}
+
 .c26:first-child {
   padding-top: 0;
 }
 
 .c26:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c24 {
@@ -4592,6 +4598,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   display: block;
   margin: 0;
   padding: 2rem 0;
+  overflow-wrap: anywhere;
 }
 
 .c2:focus {
@@ -5935,6 +5942,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   display: block;
   margin: 0;
   padding: 2rem 0;
+  overflow-wrap: anywhere;
 }
 
 .c2:focus {
@@ -6310,13 +6318,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   padding: 0.5rem 0 1rem;
 }
 
+.c45:last-child {
+  border: none;
+}
+
 .c45:first-child {
   padding-top: 0;
 }
 
 .c45:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c43 {
