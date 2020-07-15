@@ -1,13 +1,16 @@
-import LRU from 'lru-cache';
+import Cache from 'lru-cache';
 import constructTogglesEndpoint from './constructTogglesEndpoint';
 import nodeLogger from '#lib/logger.node';
-import { CONFIG_FETCH_ERROR } from '#lib/logger.const';
+import { CONFIG_REQUEST_RECEIVED, CONFIG_FETCH_ERROR } from '#lib/logger.const';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 
-const cacheOptions = { max: 500, maxAge: 100000 };
-const cache = new LRU(cacheOptions);
-
 const logger = nodeLogger(__filename);
+
+const cacheMaxItems = 500;
+const cacheMaxAge = 60; // seconds - could make this different in dev vs production
+
+const cacheOptions = { max: cacheMaxItems, maxAge: cacheMaxAge * 1000 };
+const cache = new Cache(cacheOptions);
 
 const getRemoteConfig = async service => {
   const { origin } = getOriginContext();
@@ -15,18 +18,14 @@ const getRemoteConfig = async service => {
 
   const cachedResponse = cache.get(url);
 
-  console.log({ cachedResponse });
-
   if (cachedResponse) {
     return cachedResponse;
   }
 
   try {
-    const response = await fetch(url, {
-      headers: {
-        origin,
-      },
-    });
+    logger.info(CONFIG_REQUEST_RECEIVED, { url });
+    const response = await fetch(url, { headers: { origin } });
+
     if (!response.ok) {
       throw new Error(
         `Unexpected response (HTTP status code ${response.status}) when requesting ${url}`,
@@ -35,12 +34,9 @@ const getRemoteConfig = async service => {
 
     const json = await response.json();
     cache.set(url, json);
-
     return json;
   } catch (error) {
-    logger.error(CONFIG_FETCH_ERROR, {
-      error: error.toString(),
-    });
+    logger.error(CONFIG_FETCH_ERROR, { error: error.toString() });
     return null;
   }
 };

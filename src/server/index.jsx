@@ -313,7 +313,7 @@ server
 
         data.path = urlPath;
         data.timeOnServer = Date.now();
-        data.remoteConfig = remoteConfig;
+        data.remoteConfig = remoteConfig; // could pass this in separately from data.
 
         const result = await renderDocument({
           bbcOrigin,
