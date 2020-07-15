@@ -35,9 +35,12 @@ const RadioScheduleContainer = ({
     });
 
   return (
-    <div className={className}>
-      <Canonical endpoint={endpoint} initialData={initialData} lang={lang} />
-    </div>
+    <Canonical
+      className={className}
+      endpoint={endpoint}
+      initialData={initialData}
+      lang={lang}
+    />
   );
 };
 

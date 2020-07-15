@@ -79,7 +79,7 @@ const RadioFrequencyLink = styled.a`
   }
 `;
 
-const CanonicalRadioSchedule = ({ initialData, endpoint, lang }) => {
+const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
   const {
     service,
     script,
@@ -148,7 +148,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang }) => {
   }
 
   return (
-    <RadioScheduleSection {...(lang && { lang })}>
+    <RadioScheduleSection className={className} {...(lang && { lang })}>
       <RadioScheduleSectionLabel
         script={script}
         labelId="Radio-Schedule"
@@ -189,11 +189,13 @@ CanonicalRadioSchedule.propTypes = {
   endpoint: string.isRequired,
   initialData: radioSchedulesShape,
   lang: string,
+  className: string,
 };
 
 CanonicalRadioSchedule.defaultProps = {
   initialData: undefined,
   lang: null,
+  className: '',
 };
 
 export default CanonicalRadioSchedule;
