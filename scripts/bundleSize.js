@@ -43,6 +43,15 @@ const getBundleData = _fileName => {
   });
 };
 
+const createConsoleError = (service, size, adjective) =>
+  [
+    chalk.red('Bundle size for'),
+    chalk.red.bold(service),
+    chalk.red(`is too ${adjective} at`),
+    chalk.red.bold(`${size} kB.`),
+    chalk.red("Please update thresholds in './scripts/bundleSizeConfig.js'"),
+  ].join(' ');
+
 const mainBundleData = getBundleData(/^main/);
 const vendorBundleData = getBundleData(/^vendor/);
 const pageBundleData = getBundleData(/.+Page/);
@@ -57,7 +66,6 @@ const serviceBundleData = services
     vendorBundleData[0][2],
     totalServiceBundleSize + mainBundleData[0][2] + vendorBundleData[0][2],
   ]);
-
 const serviceBundlesTotals = serviceBundleData.map(service => service[5]);
 const averageBundleSize = serviceBundlesTotals.reduce(
   (acc, currentValue, currentIndex, array) => {
@@ -72,15 +80,6 @@ const averageBundleSize = serviceBundlesTotals.reduce(
 );
 const smallestBundleSize = Math.min(...serviceBundlesTotals);
 const largestBundleSize = Math.max(...serviceBundlesTotals);
-
-const createConsoleError = (service, size, adjective) =>
-  [
-    chalk.red('Bundle size for'),
-    chalk.red.bold(service),
-    chalk.red(`is too ${adjective} at`),
-    chalk.red.bold(`${size} kB.`),
-    chalk.red("Please update thresholds in './scripts/bundleSizeConfig.js'"),
-  ].join(' ');
 
 console.log('');
 const spinner = ora({
@@ -118,7 +117,7 @@ const pageBundlesTable = new Table({
   head: tableHead,
 });
 
-const overviewTable = new Table({
+const summaryTable = new Table({
   head: [
     'Average total bundle size (kB)',
     'Smallest total bundle size (kB)',
@@ -130,7 +129,14 @@ serviceBundleData.forEach(bundle => serviceBundlesTable.push(bundle));
 mainBundleData.forEach(bundle => mainBundlesTable.push(bundle));
 vendorBundleData.forEach(bundle => vendorBundlesTable.push(bundle));
 pageBundleData.forEach(bundle => pageBundlesTable.push(bundle));
-overviewTable.push([averageBundleSize, smallestBundleSize, largestBundleSize]);
+summaryTable.push([averageBundleSize, smallestBundleSize, largestBundleSize]);
+
+console.log('\n\nResults');
+console.log(serviceBundlesTable.toString());
+console.log(mainBundlesTable.toString());
+console.log(vendorBundlesTable.toString());
+console.log(pageBundlesTable.toString());
+console.log(summaryTable.toString());
 
 const errors = serviceBundlesTotals
   .map((size, index) => {
@@ -144,13 +150,6 @@ const errors = serviceBundlesTotals
     return undefined;
   })
   .filter(Boolean);
-
-console.log('\n\nResults');
-console.log(serviceBundlesTable.toString());
-console.log(mainBundlesTable.toString());
-console.log(vendorBundlesTable.toString());
-console.log(pageBundlesTable.toString());
-console.log(overviewTable.toString());
 
 if (errors.length) {
   spinner.fail('Issues with service bundles: ');
