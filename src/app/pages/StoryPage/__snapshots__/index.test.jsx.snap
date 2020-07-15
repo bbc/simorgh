@@ -49,6 +49,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   display: block;
   margin: 0;
   padding: 2rem 0;
+  overflow-wrap: anywhere;
 }
 
 .c5:focus {
@@ -2892,6 +2893,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   display: block;
   margin: 0;
   padding: 2rem 0;
+  overflow-wrap: anywhere;
 }
 
 .c5:focus {
@@ -4369,6 +4371,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   display: block;
   margin: 0;
   padding: 2rem 0;
+  overflow-wrap: anywhere;
 }
 
 .c5:focus {
