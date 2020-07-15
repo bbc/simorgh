@@ -58,7 +58,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
                 <img
                   alt="Image Alt text"
                   class="StyledImg-sc-7vx2mr-0 hIxkbt"
-                  src="http://c.files.bbci.co.uk/5A4D/production/_111371132_hi060727445.jpg"
+                  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/5A4D/production/_111371132_hi060727445.jpg"
                 />
               </div>
             </div>
@@ -146,7 +146,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
                   <img
                     alt="Image Alt text"
                     class="StyledImg-sc-7vx2mr-0 hIxkbt"
-                    src="http://c.files.bbci.co.uk/5A4D/production/_111371132_hi060727445.jpg"
+                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/5A4D/production/_111371132_hi060727445.jpg"
                   />
                 </div>
               </div>
@@ -190,7 +190,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
                   <img
                     alt="Image Alt text"
                     class="StyledImg-sc-7vx2mr-0 hIxkbt"
-                    src="http://c.files.bbci.co.uk/49F7/production/_111753981_03009521-c6ba-41e6-8328-65d0caf07635.jpg"
+                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/49F7/production/_111753981_03009521-c6ba-41e6-8328-65d0caf07635.jpg"
                   />
                 </div>
               </div>
@@ -234,7 +234,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
                   <img
                     alt="Image Alt text"
                     class="StyledImg-sc-7vx2mr-0 hIxkbt"
-                    src="http://c.files.bbci.co.uk/34F5/production/_111775531_tv061050412.jpg"
+                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/34F5/production/_111775531_tv061050412.jpg"
                   />
                 </div>
               </div>
@@ -278,7 +278,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
                   <img
                     alt="Image Alt text"
                     class="StyledImg-sc-7vx2mr-0 hIxkbt"
-                    src="http://c.files.bbci.co.uk/4627/production/_111195971_mediaitem111195968.jpg"
+                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/4627/production/_111195971_mediaitem111195968.jpg"
                   />
                 </div>
               </div>

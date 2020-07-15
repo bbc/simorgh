@@ -140,8 +140,6 @@ const CpsOnwardJourney = ({
     children: node.isRequired,
   };
 
-  console.log('optionalLabelProps', optionalLabelProps);
-
   if (!content.length) return null;
   const hasSingleContent = content.length === 1;
   const [singleContent] = content;
