@@ -184,6 +184,7 @@ export const service = {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
       onFrontPage: false,
+      header: 'ያድምጡ',
       durationLabel: 'Duration %duration%',
     },
     recommendations: {
