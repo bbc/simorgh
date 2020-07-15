@@ -9,6 +9,7 @@ import mapJson from '#data/pidgin/cpsAssets/media-23256549.json';
 import styJson from '#data/mundo/cpsAssets/23263889.json';
 import mostReadJson from '#data/mundo/mostRead/index.json';
 import secondaryColumnJson from '#data/mundo/secondaryColumn/index.json';
+import recommendationsJson from '#data/mundo/recommendations/index.json';
 
 fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
 
@@ -29,11 +30,16 @@ describe('getAdditionalPageData', () => {
       'http://localhost/mundo/sty-secondary-column.json',
       secondaryColumnJson,
     );
+    fetchMock.mock(
+      'http://localhost/mundo/23263889/recommendations.json',
+      recommendationsJson,
+    );
     const additionalPageData = await getAdditionalPageData(styJson, 'mundo');
 
     const expectedOutput = {
       mostRead: mostReadJson,
       secondaryColumn: secondaryColumnJson,
+      recommendations: recommendationsJson,
     };
 
     expect(additionalPageData).toEqual(expectedOutput);
