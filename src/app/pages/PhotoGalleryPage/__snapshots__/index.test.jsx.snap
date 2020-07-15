@@ -3100,13 +3100,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   padding: 0.5rem 0 1rem;
 }
 
+.c26:last-child {
+  border: none;
+}
+
 .c26:first-child {
   padding-top: 0;
 }
 
 .c26:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c24 {
@@ -6310,13 +6313,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   padding: 0.5rem 0 1rem;
 }
 
+.c45:last-child {
+  border: none;
+}
+
 .c45:first-child {
   padding-top: 0;
 }
 
 .c45:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c43 {

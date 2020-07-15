@@ -78,13 +78,16 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   padding: 0.5rem 0 1rem;
 }
 
+.c10:last-child {
+  border: none;
+}
+
 .c10:first-child {
   padding-top: 0;
 }
 
 .c10:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c8 {
@@ -1080,13 +1083,16 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
   padding: 0.5rem 0 1rem;
 }
 
+.c9:last-child {
+  border: none;
+}
+
 .c9:first-child {
   padding-top: 0;
 }
 
 .c9:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c7 {
@@ -2326,13 +2332,16 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
   padding: 0.5rem 0 1rem;
 }
 
+.c8:last-child {
+  border: none;
+}
+
 .c8:first-child {
   padding-top: 0;
 }
 
 .c8:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c6 {
