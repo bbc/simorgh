@@ -2,6 +2,7 @@ import isEmpty from 'ramda/src/isEmpty';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import getAssetType from './getAssetType';
 import getAssetUri from './getAssetId';
+import hasRecommendations from './hasRecommendations';
 import fetchPageData from '../../utils/fetchPageData';
 import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 import getSecondaryColumnUrl from '#lib/utilities/getSecondaryColumnUrl';
@@ -21,11 +22,13 @@ const pageTypeUrls = (assetType, service, variant, assetUri) => {
           name: 'secondaryColumn',
           path: getSecondaryColumnUrl({ service, variant }),
         },
-        {
-          name: 'recommendations',
-          path: getRecommendationsUrl({ assetUri, variant }),
-        },
-      ];
+        hasRecommendations(service, variant)
+          ? {
+              name: 'recommendations',
+              path: getRecommendationsUrl({ assetUri, variant }),
+            }
+          : null,
+      ].filter(i => i);
     default:
       return null;
   }
