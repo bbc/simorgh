@@ -5,13 +5,16 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
   padding: 0.5rem 0 1rem;
 }
 
+.c0:last-child {
+  border: none;
+}
+
 .c0:first-child {
   padding-top: 0;
 }
 
 .c0:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c21 {
@@ -702,13 +705,16 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
   padding: 0.5rem 0 1rem;
 }
 
+.c0:last-child {
+  border: none;
+}
+
 .c0:first-child {
   padding-top: 0;
 }
 
 .c0:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c17 {
@@ -1263,13 +1269,16 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
   padding: 0.5rem 0 1rem;
 }
 
+.c0:last-child {
+  border: none;
+}
+
 .c0:first-child {
   padding-top: 0;
 }
 
 .c0:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c20 {
@@ -2064,13 +2073,16 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
   padding: 0.5rem 0 1rem;
 }
 
+.c0:last-child {
+  border: none;
+}
+
 .c0:first-child {
   padding-top: 0;
 }
 
 .c0:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c13 {
@@ -2606,17 +2618,24 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   padding: 0.5rem 0 1rem;
 }
 
+.c0:last-child {
+  border: none;
+}
+
 .c0:first-child {
   padding-top: 0;
 }
 
 .c0:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c20 {
   padding: 0.5rem 0 1rem;
+}
+
+.c20:last-child {
+  border: none;
 }
 
 .c20:first-child {
@@ -2625,7 +2644,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 .c20:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c17 {
@@ -2887,18 +2905,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0:first-child {
     padding-top: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c20 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c20 {
-    border-bottom: none;
   }
 }
 
@@ -3299,17 +3305,24 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   padding: 0.5rem 0 1rem;
 }
 
+.c0:last-child {
+  border: none;
+}
+
 .c0:first-child {
   padding-top: 0;
 }
 
 .c0:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c10 {
   padding: 0.5rem 0 1rem;
+}
+
+.c10:last-child {
+  border: none;
 }
 
 .c10:first-child {
@@ -3318,7 +3331,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 
 .c10:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c9 {
@@ -3459,18 +3471,6 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0:first-child {
     padding-top: 1rem;
-  }
-}
-
-@media (max-width:62.9375rem) {
-  .c10 {
-    border-bottom: 0.0625rem solid #F2F2F2;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c10 {
-    border-bottom: none;
   }
 }
 
@@ -3724,13 +3724,16 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
   padding: 0.5rem 0 1rem;
 }
 
+.c0:last-child {
+  border: none;
+}
+
 .c0:first-child {
   padding-top: 0;
 }
 
 .c0:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c12 {
@@ -4102,13 +4105,16 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
   padding: 0.5rem 0 1rem;
 }
 
+.c0:last-child {
+  border: none;
+}
+
 .c0:first-child {
   padding-top: 0;
 }
 
 .c0:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c3 {
