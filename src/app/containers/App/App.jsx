@@ -104,7 +104,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
             pageType: route.pageType,
             loading: false,
             pageData: path(['pageData'], data),
-            remoteConfig: nextRemoteConfig, // is this correct now if we fetch data on the server, should we just let toggle context handle this?
+            remoteConfig: nextRemoteConfig,
             status: path(['status'], data),
             error: path(['error'], data),
             errorCode: null,

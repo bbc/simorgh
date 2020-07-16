@@ -304,8 +304,8 @@ server
         const remoteConfigPromise = getRemoteConfig(service);
 
         const [data, remoteConfig] = await Promise.all([
-          dataPromise, // we should probably also have a timeout for this :D
-          remoteConfigPromise, // should we have a timeout for this? we don't want to be hanging around.
+          dataPromise,
+          remoteConfigPromise, // should we introduce timeouts for both calls?
         ]);
 
         const { status } = data;
