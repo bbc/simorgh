@@ -18,11 +18,13 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
+const pageType = 'media';
+
 describe('Radio Page Main', () => {
   it('should match snapshot for Canonical', async () => {
     const { pageData } = await getInitialData({
       path: 'some-live-radio-path',
-      pageType: 'media',
+      pageType,
     });
 
     await matchSnapshotAsync(
@@ -51,7 +53,7 @@ describe('Radio Page Main', () => {
   it('should match snapshot for AMP', async () => {
     const { pageData } = await getInitialData({
       path: 'some-live-radio-path',
-      pageType: 'media',
+      pageType,
     });
 
     await matchSnapshotAsync(
