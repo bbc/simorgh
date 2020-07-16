@@ -26,7 +26,6 @@ export default async ({ path: pathname, pageType }) => {
       path: liveRadioDataPath,
       pageType,
     });
-    const liveRadioPageType = { metadata: { type: 'Live Radio' } };
 
     return {
       status,
@@ -41,7 +40,7 @@ export default async ({ path: pathname, pageType }) => {
         contentType: getContentType(json),
         pageIdentifier: getPageIdentifier(json),
         masterBrand: getMasterBrand(json),
-        ...liveRadioPageType,
+        metadata: { type: 'Live Radio' },
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
