@@ -136,6 +136,7 @@ export const getConfig = ({
   const referrer = previousPath
     ? getReferrer(platform, origin, previousPath)
     : null;
+
   const title = getTitle({
     pageType,
     pageData: data,
