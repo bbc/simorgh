@@ -35,6 +35,7 @@ import {
   LOCAL_SENDFILE_ERROR,
   ROUTING_INFORMATION,
 } from '#lib/logger.const';
+import getRemoteConfig from './utilities/getRemoteConfig';
 
 const fs = require('fs');
 
@@ -293,16 +294,26 @@ server
           routes,
           urlPath,
         );
-        const data = await route.getInitialData({
+
+        const dataPromise = route.getInitialData({
           path: url,
           service,
           variant,
         });
+
+        const remoteConfigPromise = getRemoteConfig(service);
+
+        const [data, remoteConfig] = await Promise.all([
+          dataPromise, // we should probably also have a timeout for this :D
+          remoteConfigPromise, // should we have a timeout for this? we don't want to be hanging around.
+        ]);
+
         const { status } = data;
         const bbcOrigin = headers['bbc-origin'];
 
         data.path = urlPath;
         data.timeOnServer = Date.now();
+        data.remoteConfig = remoteConfig; // could pass this in separately from data.
 
         const result = await renderDocument({
           bbcOrigin,

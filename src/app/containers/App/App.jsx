@@ -16,10 +16,11 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
 
-  const { pageData, status, error, timeOnServer } = initialData;
+  const { pageData, remoteConfig, status, error, timeOnServer } = initialData;
 
   const [state, setState] = useState({
     pageData,
+    remoteConfig,
     status,
     service,
     variant,
@@ -68,6 +69,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       loaderPromise.then(() => {
         setState({
           pageData: null,
+          remoteConfig: null,
           status: null,
           service: nextService,
           variant: nextVariant,
@@ -100,6 +102,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
             pageType: route.pageType,
             loading: false,
             pageData: path(['pageData'], data),
+            remoteConfig, // is this correct now if we fetch data on the server, should we just let toggle context handle this?
             status: path(['status'], data),
             error: path(['error'], data),
             errorCode: null,
@@ -107,7 +110,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
           });
         });
     }
-  }, [routes, location.pathname]);
+  }, [routes, location.pathname, remoteConfig]);
 
   const previousLocationPath = usePrevious(location.pathname);
 

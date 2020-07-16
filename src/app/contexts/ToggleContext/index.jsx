@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useReducer } from 'react';
-import { node, string } from 'prop-types';
+import { node, string, shape, bool } from 'prop-types';
 import webLogger from '#lib/logger.web';
 import { toggleReducer, updateToggles } from './reducer';
 import defaultToggles from '#lib/config/toggles';
@@ -8,9 +8,17 @@ import constructTogglesEndpoint from './utils/constructTogglesEndpoint';
 const logger = webLogger();
 const ToggleContext = createContext({});
 
-const ToggleContextProvider = ({ children, service, origin }) => {
+const ToggleContextProvider = ({
+  children,
+  // remoteToggles,
+  service,
+  origin,
+}) => {
   const environment = process.env.SIMORGH_APP_ENV || 'local';
-  const simorghToggles = defaultToggles[environment];
+  const simorghToggles = {
+    ...defaultToggles[environment],
+    // ...remoteToggles,
+  };
   const [toggleState, toggleDispatch] = useReducer(
     toggleReducer,
     simorghToggles,
@@ -18,6 +26,11 @@ const ToggleContextProvider = ({ children, service, origin }) => {
 
   // temp method to only enable remote feature toggling for test and for a list of services
   const { enableFetchingToggles } = simorghToggles;
+
+  console.log('rerendering', simorghToggles);
+
+  // at this point we're always doing a client fetch. we should stop doing this we've passed in remote toggles
+  // from the server.
 
   useEffect(() => {
     const shouldFetchAndUpdateToggles =
@@ -74,6 +87,16 @@ ToggleContextProvider.propTypes = {
   children: node.isRequired,
   origin: string.isRequired,
   service: string.isRequired,
+  remoteToggles: shape({
+    service: string.isRequired,
+    ads: shape({
+      enabled: bool.isRequired,
+    }),
+  }),
+};
+
+ToggleContextProvider.defaultProps = {
+  remoteToggles: {},
 };
 
 export { ToggleContext, ToggleContextProvider, ToggleContextConsumer };
