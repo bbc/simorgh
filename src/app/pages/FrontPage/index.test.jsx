@@ -219,7 +219,7 @@ describe('Front Page', () => {
       fetchMock.restore();
     });
 
-    it('should create window.dotcomConfig when on the Canonical mundo frontpage and adsEnabled is true', async () => {
+    it('should create window.dotcomConfig when on Canonical ads are enabled', async () => {
       fetchMock.mock(
         'http://localhost/some-front-page-path.json',
         JSON.stringify(mundoFrontPageData),
@@ -253,7 +253,7 @@ describe('Front Page', () => {
       );
     });
 
-    it.only('should not create window.dotcomConfig when on Canonical and adsEnabled is false', async () => {
+    it('should not create window.dotcomConfig when on Canonical and ads are disable', async () => {
       fetchMock.mock(
         'http://localhost/some-front-page-path.json',
         JSON.stringify(mundoFrontPageData),
@@ -262,9 +262,7 @@ describe('Front Page', () => {
         path: 'some-front-page-path',
         service: 'mundo',
       });
-
       fetchMock.mock('/mundo/mostread.json', JSON.stringify(mundoMostReadData));
-
       fetchMock.mock(togglesUrl, {
         toggles: {
           ads: {
@@ -281,14 +279,16 @@ describe('Front Page', () => {
       await waitFor(() => expect(window.dotcomConfig).toBeUndefined());
     });
 
-    it('should not create window.dotcomConfig when on Amp and adsEnabled is true', async () => {
-      fetch.mockResponse(JSON.stringify(mundoFrontPageData));
+    it('should not create window.dotcomConfig when on Amp and ads are enabled', async () => {
+      fetchMock.mock(
+        'http://localhost/some-front-page-path.json',
+        JSON.stringify(mundoFrontPageData),
+      );
       const { pageData } = await getInitialData({
         path: 'some-front-page-path',
         service: 'mundo',
       });
-      fetch.mockResponse(JSON.stringify(mundoMostReadData));
-
+      fetchMock.mock('/mundo/mostread.json', JSON.stringify(mundoMostReadData));
       fetchMock.mock(togglesUrl, {
         toggles: {
           ads: {
@@ -304,7 +304,7 @@ describe('Front Page', () => {
         );
       });
 
-      expect(window.dotcomConfig).toBeFalsy();
+      await waitFor(() => expect(window.dotcomConfig).toBeUndefined());
     });
   });
 });
