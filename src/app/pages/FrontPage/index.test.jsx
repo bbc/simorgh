@@ -2,7 +2,7 @@
 import React from 'react';
 import fetchMock from 'fetch-mock';
 import { BrowserRouter } from 'react-router-dom';
-import { render, act } from '@testing-library/react';
+import { render, act, waitFor } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -209,7 +209,6 @@ describe('Front Page', () => {
       process.env.SIMORGH_APP_ENV = 'test';
       process.env.SIMORGH_CONFIG_URL =
         'https://mock-toggles-endpoint.bbc.co.uk';
-      togglesConfig.test.ads.enabled = true;
       togglesConfig.test.enableFetchingToggles.enabled = true;
     });
 
@@ -221,12 +220,18 @@ describe('Front Page', () => {
     });
 
     it('should create window.dotcomConfig when on the Canonical mundo frontpage and adsEnabled is true', async () => {
-      fetch.mockResponse(JSON.stringify(mundoFrontPageData));
+      fetchMock.mock(
+        'http://localhost/some-front-page-path.json',
+        JSON.stringify(mundoFrontPageData),
+      );
       const { pageData } = await getInitialData({
         path: 'some-front-page-path',
         service: 'mundo',
       });
-      fetch.mockResponse(JSON.stringify(mundoMostReadData));
+      fetchMock.mock(
+        ' /mundo/mostread.json',
+        JSON.stringify(mundoMostReadData),
+      );
       fetchMock.mock(togglesUrl, {
         toggles: {
           ads: {
@@ -240,19 +245,25 @@ describe('Front Page', () => {
         render(<FrontPageWithContext service="mundo" pageData={pageData} />);
       });
 
-      expect(window.dotcomConfig).toEqual({
-        pageAds: true,
-        playerAds: false,
-      });
+      await waitFor(() =>
+        expect(window.dotcomConfig).toEqual({
+          pageAds: true,
+          playerAds: false,
+        }),
+      );
     });
 
-    it('should not create window.dotcomConfig when on Canonical and adsEnabled is false', async () => {
-      fetch.mockResponse(JSON.stringify(mundoFrontPageData));
+    it.only('should not create window.dotcomConfig when on Canonical and adsEnabled is false', async () => {
+      fetchMock.mock(
+        'http://localhost/some-front-page-path.json',
+        JSON.stringify(mundoFrontPageData),
+      );
       const { pageData } = await getInitialData({
         path: 'some-front-page-path',
         service: 'mundo',
       });
-      fetch.mockResponse(JSON.stringify(mundoMostReadData));
+
+      fetchMock.mock('/mundo/mostread.json', JSON.stringify(mundoMostReadData));
 
       fetchMock.mock(togglesUrl, {
         toggles: {
@@ -267,7 +278,7 @@ describe('Front Page', () => {
         render(<FrontPageWithContext service="mundo" pageData={pageData} />);
       });
 
-      expect(window.dotcomConfig).toBeFalsy();
+      await waitFor(() => expect(window.dotcomConfig).toBeUndefined());
     });
 
     it('should not create window.dotcomConfig when on Amp and adsEnabled is true', async () => {
