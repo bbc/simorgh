@@ -3,6 +3,7 @@ import getPaths from '../../../support/helpers/getPaths';
 import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
 import testsForCanonicalOnly from './testsForCanonicalOnly';
 import testsForAMPOnly from './testsForAMPOnly';
+import crossPlatformTests from './tests';
 import visitPage from '../../../support/helpers/visitPage';
 
 const pageType = 'onDemandTV';
@@ -16,6 +17,10 @@ Object.keys(config)
         before(() => {
           Cypress.env('currentPath', currentPath);
           visitPage(currentPath, pageType);
+        });
+        crossPlatformTests({
+          service,
+          pageType,
         });
         testsForCanonicalOnly({
           service,
@@ -31,6 +36,10 @@ Object.keys(config)
           before(() => {
             Cypress.env('currentPath', currentPath);
             visitPage(currentPath, pageType);
+          });
+          crossPlatformTests({
+            service,
+            pageType,
           });
           testsForAMPOnly({
             service,
