@@ -18,7 +18,7 @@ const ToggleContextProvider = ({
 
   const simorghToggles = {
     ...defaultToggles[environment],
-    ...remoteToggles,
+    ...(remoteToggles || {}),
   };
 
   const [toggleState, toggleDispatch] = useReducer(
@@ -94,7 +94,7 @@ ToggleContextProvider.propTypes = {
 };
 
 ToggleContextProvider.defaultProps = {
-  remoteToggles: {},
+  remoteToggles: null,
 };
 
 export { ToggleContext, ToggleContextProvider, ToggleContextConsumer };

@@ -1,6 +1,6 @@
 import React from 'react';
 import { bool, element, string, number, shape } from 'prop-types';
-import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import variantPropType from '#models/propTypes/variants';
 import { pageDataPropType } from '#models/propTypes/data';
 
@@ -27,7 +27,9 @@ const WithContexts = Component => {
       timeOnServer,
     } = props;
 
-    const remoteToggles = pathOr({}, ['toggles'], remoteConfig);
+    console.log('rerendering');
+    const remoteToggles = path(['toggles'], remoteConfig);
+    console.log({ remoteToggles });
 
     return (
       <ToggleContextProvider
@@ -92,7 +94,7 @@ const WithContexts = Component => {
     previousPath: null,
     variant: null,
     timeOnServer: null,
-    remoteConfig: {},
+    remoteConfig: null,
   };
 
   return WithContextsContainer;
