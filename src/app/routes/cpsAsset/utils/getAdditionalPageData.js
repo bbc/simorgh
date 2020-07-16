@@ -1,7 +1,7 @@
 import isEmpty from 'ramda/src/isEmpty';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import getAssetType from './getAssetType';
-import getAssetUri from './getAssetId';
+import getAssetUri from './getAssetUri';
 import hasRecommendations from './hasRecommendations';
 import fetchPageData from '../../utils/fetchPageData';
 import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';

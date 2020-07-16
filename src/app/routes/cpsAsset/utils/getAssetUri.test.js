@@ -1,5 +1,5 @@
 // components to test
-import getAssetUri from './getAssetId';
+import getAssetUri from './getAssetUri';
 
 // mock data
 import styJson from '#data/mundo/cpsAssets/23263889.json';
