@@ -10,14 +10,7 @@ import getAssetOrigins from '../utilities/getAssetOrigins';
 import { getStyleTag } from '../styles';
 import DocumentComponent from './component';
 
-const renderDocument = async ({
-  bbcOrigin,
-  data,
-  isAmp,
-  routes,
-  service,
-  url,
-}) => {
+const renderDocument = async ({ bbcOrigin, data, isAmp, service, url }) => {
   const sheet = new ServerStyleSheet();
 
   const statsFile = path.resolve(
@@ -33,7 +26,6 @@ const renderDocument = async ({
       sheet.collectStyles(
         <ServerApp
           location={url}
-          routes={routes}
           data={data}
           bbcOrigin={bbcOrigin}
           context={context}

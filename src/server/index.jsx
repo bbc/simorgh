@@ -6,7 +6,6 @@ import pathOr from 'ramda/src/pathOr';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
-import routes from '#app/routes';
 import {
   articleDataPath,
   articleManifestPath,
@@ -289,10 +288,7 @@ server
       });
 
       try {
-        const { service, isAmp, route, variant } = getRouteProps(
-          routes,
-          urlPath,
-        );
+        const { service, isAmp, route, variant } = getRouteProps(urlPath);
         const data = await route.getInitialData({
           path: url,
           service,
@@ -308,7 +304,6 @@ server
           bbcOrigin,
           data,
           isAmp,
-          routes,
           service,
           url,
           variant,

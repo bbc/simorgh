@@ -3,8 +3,9 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { variantSanitiser } from '#lib/utilities/variantHandler';
 import { fallbackAmpParam, fallbackServiceParam } from './routeFallbackParams';
+import routes from '#app/routes';
 
-const getRouteProps = (routes, url) => {
+const getRouteProps = url => {
   const matchedRoutes = matchRoutes(routes, url);
 
   const route = path([0, 'route'], matchedRoutes);

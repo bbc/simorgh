@@ -23,7 +23,7 @@ describe('getRouteProps', () => {
         },
       ]);
 
-      const methodCall = await getRouteProps([], 'url');
+      const methodCall = getRouteProps('url');
 
       expect(routeFallbackParams.fallbackAmpParam).not.toHaveBeenCalled();
       expect(routeFallbackParams.fallbackServiceParam).not.toHaveBeenCalled();
@@ -53,7 +53,7 @@ describe('getRouteProps', () => {
         },
       ]);
 
-      const methodCall = await getRouteProps([], 'url');
+      const methodCall = getRouteProps('url');
 
       expect(routeFallbackParams.fallbackAmpParam).not.toHaveBeenCalled();
       expect(routeFallbackParams.fallbackServiceParam).not.toHaveBeenCalled();
@@ -85,7 +85,7 @@ describe('getRouteProps', () => {
         },
       ]);
 
-      const methodCall = await getRouteProps([], 'url');
+      const methodCall = getRouteProps('url');
 
       expect(routeFallbackParams.fallbackAmpParam).not.toHaveBeenCalled();
       expect(routeFallbackParams.fallbackServiceParam).not.toHaveBeenCalled();
@@ -114,7 +114,7 @@ describe('getRouteProps', () => {
     it('should return fallback service and isAmp. With catch-all route and match', async () => {
       reactRouterConfig.matchRoutes.mockReturnValue([{ route, match }]);
 
-      const methodCall = await getRouteProps([], 'unknownURL');
+      const methodCall = getRouteProps('unknownURL');
 
       expect(routeFallbackParams.fallbackAmpParam).toHaveBeenCalledWith(
         'unknownURL',
@@ -141,7 +141,7 @@ describe('getRouteProps', () => {
     it('should return fallback service and amp with no route, match or Id', async () => {
       reactRouterConfig.matchRoutes.mockReturnValue([]);
 
-      const methodCall = await getRouteProps([], 'fakepath');
+      const methodCall = getRouteProps('fakepath');
 
       expect(methodCall).toEqual({
         id: undefined,

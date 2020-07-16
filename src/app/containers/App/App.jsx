@@ -4,8 +4,9 @@ import { withRouter } from 'react-router';
 import path from 'ramda/src/path';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import usePrevious from '#lib/utilities/usePrevious';
+import routes from '#app/routes';
 
-export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
+export const App = ({ location, initialData, bbcOrigin, history }) => {
   const {
     service,
     isAmp,
@@ -14,7 +15,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     assetUri,
     errorCode,
     route: { pageType },
-  } = getRouteProps(routes, location.pathname);
+  } = getRouteProps(location.pathname);
 
   const { pageData, status, error, timeOnServer } = initialData;
 
@@ -58,7 +59,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         assetUri: nextAssetUri,
         isAmp: nextIsAmp,
         route,
-      } = getRouteProps(routes, location.pathname);
+      } = getRouteProps(location.pathname);
 
       let loaderTimeout;
       const loaderPromise = new Promise(resolve => {
@@ -107,7 +108,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
           });
         });
     }
-  }, [routes, location.pathname]);
+  }, [location.pathname]);
 
   const previousLocationPath = usePrevious(location.pathname);
 
