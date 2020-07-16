@@ -6,6 +6,8 @@ import getConfig from '../../utils/getConfig';
 
 jest.mock('../../utils/getConfig', () => jest.fn());
 
+const pageType = 'frontPage';
+
 describe('Get initial data from front page', () => {
   beforeEach(() => {
     process.env.SIMORGH_BASE_URL = 'http://localhost';
@@ -24,7 +26,7 @@ describe('Get initial data from front page', () => {
     const { pageData } = await getInitialData({
       path: 'mock-frontpage-path',
       service: 'hausa',
-      pageType: 'frontPage',
+      pageType,
     });
 
     expect(pageData.metadata.language).toEqual('ha');
@@ -51,6 +53,7 @@ describe('Get initial data from front page', () => {
     const { pageData } = await getInitialData({
       path: 'mock-frontpage-path',
       service: 'hausa',
+      pageType,
     });
 
     expect(pageData.metadata.language).toEqual('ha');
@@ -79,6 +82,7 @@ describe('Get initial data from front page', () => {
     const { pageData } = await getInitialData({
       path: 'mock-frontpage-path',
       service: 'hausa',
+      pageType,
     });
 
     expect(pageData.metadata.language).toEqual('ha');
@@ -107,6 +111,7 @@ describe('Get initial data from front page', () => {
     const { pageData } = await getInitialData({
       path: 'mock-frontpage-path',
       service: 'hausa',
+      pageType,
     });
 
     expect(pageData.metadata.language).toEqual('ha');
