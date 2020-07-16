@@ -35,7 +35,7 @@ import {
   LOCAL_SENDFILE_ERROR,
   ROUTING_INFORMATION,
 } from '#lib/logger.const';
-import getRemoteConfig from './utilities/getRemoteConfig';
+import getRemoteConfig from '#lib/utilities/getRemoteConfig';
 
 const fs = require('fs');
 

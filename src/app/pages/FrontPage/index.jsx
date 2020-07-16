@@ -22,6 +22,7 @@ import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
+import { Link } from 'react-router-dom';
 
 const FrontPageMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
@@ -102,6 +103,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
           {offScreenText}
         </VisuallyHiddenText>
         <AdContainer slotType="leaderboard" />
+        <Link to="/hausa">Hausa</Link>
         <IndexPageContainer>
           {groups.map((group, index) => (
             <Fragment key={group.title}>

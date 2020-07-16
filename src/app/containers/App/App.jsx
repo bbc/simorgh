@@ -4,6 +4,7 @@ import { withRouter } from 'react-router';
 import path from 'ramda/src/path';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import usePrevious from '#lib/utilities/usePrevious';
+import getRemoteConfig from '#lib/utilities/getRemoteConfig';
 
 export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   const {
@@ -69,7 +70,6 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       loaderPromise.then(() => {
         setState({
           pageData: null,
-          remoteConfig: null,
           status: null,
           service: nextService,
           variant: nextVariant,
@@ -84,13 +84,15 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         });
       });
 
-      route
-        .getInitialData({
-          path: location.pathname,
-          service: nextService,
-          variant: nextVariant,
-        })
-        .then(data => {
+      const nextConfigPromise = getRemoteConfig(nextService);
+      const nextDataPromise = route.getInitialData({
+        path: location.pathname,
+        service: nextService,
+        variant: nextVariant,
+      });
+
+      Promise.all([nextConfigPromise, nextDataPromise]).then(
+        ([nextRemoteConfig, data]) => {
           clearTimeout(loaderTimeout);
           shouldSetFocus.current = true;
           setState({
@@ -102,13 +104,14 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
             pageType: route.pageType,
             loading: false,
             pageData: path(['pageData'], data),
-            remoteConfig, // is this correct now if we fetch data on the server, should we just let toggle context handle this?
+            remoteConfig: nextRemoteConfig, // is this correct now if we fetch data on the server, should we just let toggle context handle this?
             status: path(['status'], data),
             error: path(['error'], data),
             errorCode: null,
             timeOnServer: path(['timeOnServer'], data),
           });
-        });
+        },
+      );
     }
   }, [routes, location.pathname, remoteConfig]);
 

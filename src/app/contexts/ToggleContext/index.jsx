@@ -10,15 +10,17 @@ const ToggleContext = createContext({});
 
 const ToggleContextProvider = ({
   children,
-  // remoteToggles,
+  remoteToggles,
   service,
   origin,
 }) => {
   const environment = process.env.SIMORGH_APP_ENV || 'local';
+
   const simorghToggles = {
     ...defaultToggles[environment],
-    // ...remoteToggles,
+    ...remoteToggles,
   };
+
   const [toggleState, toggleDispatch] = useReducer(
     toggleReducer,
     simorghToggles,
@@ -27,13 +29,9 @@ const ToggleContextProvider = ({
   // temp method to only enable remote feature toggling for test and for a list of services
   const { enableFetchingToggles } = simorghToggles;
 
-  console.log('rerendering', simorghToggles);
-
-  // at this point we're always doing a client fetch. we should stop doing this we've passed in remote toggles
-  // from the server.
-
   useEffect(() => {
     const shouldFetchAndUpdateToggles =
+      !remoteToggles &&
       enableFetchingToggles.enabled &&
       RegExp(enableFetchingToggles.value).test(service);
 
@@ -71,7 +69,7 @@ const ToggleContextProvider = ({
     origin,
     enableFetchingToggles.enabled,
     enableFetchingToggles.value,
-    simorghToggles,
+    remoteToggles,
   ]);
 
   return (
