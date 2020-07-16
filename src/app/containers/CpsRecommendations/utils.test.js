@@ -14,7 +14,7 @@ describe('transformToStoryPromoItems', () => {
         },
         indexImage: {
           path:
-            'http://c.files.bbci.co.uk/5A4D/production/_111371132_hi060727445.jpg',
+            'https://ichef.bbci.co.uk/news/660/cpsprodpb/5A4D/production/_111371132_hi060727445.jpg',
           altText: 'Image Alt text',
         },
         uri: '/mundo/noticias-america-latina-51975331',
@@ -29,7 +29,7 @@ describe('transformToStoryPromoItems', () => {
         },
         indexImage: {
           path:
-            'http://c.files.bbci.co.uk/49F7/production/_111753981_03009521-c6ba-41e6-8328-65d0caf07635.jpg',
+            'https://ichef.bbci.co.uk/news/660/cpsprodpb/49F7/production/_111753981_03009521-c6ba-41e6-8328-65d0caf07635.jpg',
           altText: 'Image Alt text',
         },
         uri: '/mundo/noticias-america-latina-52250630',
@@ -44,7 +44,7 @@ describe('transformToStoryPromoItems', () => {
         },
         indexImage: {
           path:
-            'http://c.files.bbci.co.uk/34F5/production/_111775531_tv061050412.jpg',
+            'https://ichef.bbci.co.uk/news/660/cpsprodpb/34F5/production/_111775531_tv061050412.jpg',
           altText: 'Image Alt text',
         },
         uri: '/mundo/noticias-52275464',
@@ -59,7 +59,7 @@ describe('transformToStoryPromoItems', () => {
         },
         indexImage: {
           path:
-            'http://c.files.bbci.co.uk/4627/production/_111195971_mediaitem111195968.jpg',
+            'https://ichef.bbci.co.uk/news/660/cpsprodpb/4627/production/_111195971_mediaitem111195968.jpg',
           altText: 'Image Alt text',
         },
         uri: '/mundo/noticias-51796524',
