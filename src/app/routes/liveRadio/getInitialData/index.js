@@ -40,6 +40,17 @@ export const hasRadioSchedule = async service => {
   return serviceHasRadioSchedule && radioScheduleOnLiveRadioPage;
 };
 
+const radioServices = {
+  indonesia: 'indonesian',
+  persian: 'dari',
+  afaanoromoo: 'oromo',
+  bengali: 'bangla',
+};
+
+const getRadioService = service => {
+  return radioServices[service];
+};
+
 export default async ({ path: pathname, service }) => {
   try {
     const liveRadioDataPath = overrideRendererOnTest(pathname);
@@ -51,6 +62,7 @@ export default async ({ path: pathname, service }) => {
           pageDataPromise,
           service,
           pathname,
+          radioService: getRadioService(service),
         })
       : await pageDataPromise;
 
