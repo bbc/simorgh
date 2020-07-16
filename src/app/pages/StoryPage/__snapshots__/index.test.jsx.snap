@@ -49,6 +49,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   display: block;
   margin: 0;
   padding: 2rem 0;
+  overflow-wrap: anywhere;
 }
 
 .c5:focus {
@@ -239,13 +240,16 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding: 0.5rem 0 1rem;
 }
 
+.c45:last-child {
+  border: none;
+}
+
 .c45:first-child {
   padding-top: 0;
 }
 
 .c45:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c44 {
@@ -2892,6 +2896,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   display: block;
   margin: 0;
   padding: 2rem 0;
+  overflow-wrap: anywhere;
 }
 
 .c5:focus {
@@ -4369,6 +4374,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   display: block;
   margin: 0;
   padding: 2rem 0;
+  overflow-wrap: anywhere;
 }
 
 .c5:focus {
@@ -4574,13 +4580,16 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding: 0.5rem 0 1rem;
 }
 
+.c47:last-child {
+  border: none;
+}
+
 .c47:first-child {
   padding-top: 0;
 }
 
 .c47:last-child {
   padding-bottom: 0;
-  border: none;
 }
 
 .c46 {
