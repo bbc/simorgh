@@ -112,25 +112,6 @@
   "content": {
     "blocks": [
       {
-        "id": "63730607",
-        "subType": "body",
-        "href": "http://b.files.bbci.co.uk/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
-        "path": "/cpsdevpb/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
-        "height": 549,
-        "width": 976,
-        "altText": "Index image large",
-        "caption": "Index Image Large",
-        "copyrightHolder": "Kaylee Garrick",
-        "positionHint": "full-width",
-        "type": "image"
-      },
-      {
-        "text": "The first paragraph is manually marked up as an &quot;introduction&quot;, which renders it in bold.",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
         "text": "Includes: Two IDT1 News examples follow this:",
         "markupType": "plain_text",
         "type": "paragraph"
