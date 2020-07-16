@@ -133,9 +133,8 @@ export const getConfig = ({
   chartbeatDomain,
   mostReadTitle,
 }) => {
-  const referrer = previousPath
-    ? getReferrer(platform, origin, previousPath)
-    : null;
+  const referrer =
+    previousPath || isAmp ? getReferrer(platform, origin, previousPath) : null;
 
   const title = getTitle({
     pageType,
