@@ -45,8 +45,6 @@ import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-import recommendationsData from './fixtureData/recommendations.ltr.json';
-
 const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
     dir,
@@ -84,6 +82,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     pageData,
   );
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
+  const recommendationsIntialData = path(['recommendations'], pageData);
+
+  console.log(recommendationsIntialData);
 
   const gridColumns = {
     group0: 8,
@@ -150,7 +151,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <CpsRecommendations
         {...props}
         parentColumns={gridColsMain}
-        items={recommendationsData.items}
+        items={recommendationsIntialData}
       />
     ),
   };
