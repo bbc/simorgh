@@ -22,6 +22,11 @@ export default ({ service, pageType, variant }) => {
           isExpiredEpisode = isExpired(jsonData);
 
           if (!isExpiredEpisode) {
+            // Ensure that the iFrame src matches the expected embed URL
+            cy.get('iframe').then(iframe => {
+              cy.wrap(iframe.prop('src')).should('contain', embedUrl);
+            });
+
             cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
             cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
           } else {
