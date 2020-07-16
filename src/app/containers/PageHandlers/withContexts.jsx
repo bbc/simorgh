@@ -27,9 +27,7 @@ const WithContexts = Component => {
       timeOnServer,
     } = props;
 
-    console.log('rerendering');
     const remoteToggles = path(['toggles'], remoteConfig);
-    console.log({ remoteToggles });
 
     return (
       <ToggleContextProvider
