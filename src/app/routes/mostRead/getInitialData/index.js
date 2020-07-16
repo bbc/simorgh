@@ -9,11 +9,10 @@ export default async ({ service, variant, pageType }) => {
       path: mostReadUrl,
       pageType,
     });
-    const pageTypeMeta = { metadata: { type: 'mostRead' } };
 
     return {
       status,
-      pageData: { ...json, ...pageTypeMeta },
+      pageData: { ...json, metadata: { type: 'mostRead' } },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
     return { error: message, status };
