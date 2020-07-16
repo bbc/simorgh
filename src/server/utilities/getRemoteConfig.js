@@ -1,4 +1,4 @@
-import Cache from 'lru-cache';
+import Cache from 'lru-cache'; // make a note of why we would choose this and give alternatives.
 import constructTogglesEndpoint from './constructTogglesEndpoint';
 import nodeLogger from '#lib/logger.node';
 import { CONFIG_REQUEST_RECEIVED, CONFIG_FETCH_ERROR } from '#lib/logger.const';
@@ -6,24 +6,23 @@ import getOriginContext from '#contexts/RequestContext/getOriginContext';
 
 const logger = nodeLogger(__filename);
 
-const cacheMaxItems = 500;
+const cacheMaxItems = 500; // can this library / is there an alternative that lets us limit the size of the cache too?
 const cacheMaxAge = 60; // seconds - could make this different in dev vs production
-
-const cacheOptions = { max: cacheMaxItems, maxAge: cacheMaxAge * 1000 };
-const cache = new Cache(cacheOptions);
+const cache = new Cache({ max: cacheMaxItems, maxAge: cacheMaxAge * 1000 });
 
 const getRemoteConfig = async service => {
   const { origin } = getOriginContext();
   const url = constructTogglesEndpoint(service, origin);
 
-  const cachedResponse = cache.get(url);
+  const cachedResponse = cache.get(url); // returns undefined if no cache entry or if entry is stale
 
   if (cachedResponse) {
+    // we could log that we are using a cached response, but it could be too noisy.
     return cachedResponse;
   }
 
   try {
-    logger.info(CONFIG_REQUEST_RECEIVED, { url });
+    logger.info(CONFIG_REQUEST_RECEIVED, { url, service });
     const response = await fetch(url, { headers: { origin } });
 
     if (!response.ok) {
