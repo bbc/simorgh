@@ -53,6 +53,7 @@ const pageTypes = {
     '/iframe', // same issues as in mediaEmbedErrorsToSuppress but the DOM path is different
     "//div[@id='root']/div/div[1]/main/div[37]/div/div/div", // issue with IDT2 includes
     "//div[@id='ns_datapic_royal-engagements']",
+    "//div[@id='responsive-embed-newsspec-21841-green-diet-app-core-content']",
   ],
   onDemandRadio: [
     ...mediaEmbedErrorsToSuppress,
