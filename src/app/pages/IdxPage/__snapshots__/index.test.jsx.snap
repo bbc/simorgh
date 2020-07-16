@@ -52,12 +52,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
           </h2>
         </div>
         <ul
-          class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+          class="StoryPromoUl-sc-171lqjd-2 brjIMO GridComponent-nf79gm-0 gjgzxV"
           dir="rtl"
           role="list"
         >
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 kFXEso"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 kFXEso"
             dir="rtl"
             role="listitem"
           >
@@ -158,7 +158,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="rtl"
             role="listitem"
           >
@@ -259,7 +259,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="rtl"
             role="listitem"
           >
@@ -360,7 +360,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="rtl"
             role="listitem"
           >
@@ -461,7 +461,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="rtl"
             role="listitem"
           >
@@ -1144,12 +1144,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
           </h2>
         </div>
         <ul
-          class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+          class="StoryPromoUl-sc-171lqjd-2 brjIMO GridComponent-nf79gm-0 gjgzxV"
           dir="rtl"
           role="list"
         >
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 kFXEso"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 kFXEso"
             dir="rtl"
             role="listitem"
           >
@@ -1204,7 +1204,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="rtl"
             role="listitem"
           >
@@ -1259,7 +1259,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="rtl"
             role="listitem"
           >
@@ -1314,7 +1314,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="rtl"
             role="listitem"
           >
@@ -1369,7 +1369,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="rtl"
             role="listitem"
           >
@@ -1945,12 +1945,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           </h2>
         </div>
         <ul
-          class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+          class="StoryPromoUl-sc-171lqjd-2 brjIMO GridComponent-nf79gm-0 gjgzxV"
           dir="ltr"
           role="list"
         >
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fTPTiI"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fTPTiI"
             dir="ltr"
             role="listitem"
           >
@@ -2005,7 +2005,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="ltr"
             role="listitem"
           >
@@ -2093,12 +2093,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           </h2>
         </div>
         <ul
-          class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+          class="StoryPromoUl-sc-171lqjd-2 brjIMO GridComponent-nf79gm-0 gjgzxV"
           dir="ltr"
           role="list"
         >
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fTPTiI"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fTPTiI"
             dir="ltr"
             role="listitem"
           >
@@ -2153,7 +2153,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="ltr"
             role="listitem"
           >
@@ -2208,7 +2208,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="ltr"
             role="listitem"
           >
@@ -2263,7 +2263,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="ltr"
             role="listitem"
           >
@@ -2318,7 +2318,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="ltr"
             role="listitem"
           >
@@ -2373,7 +2373,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="ltr"
             role="listitem"
           >
@@ -2428,7 +2428,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="ltr"
             role="listitem"
           >
@@ -2483,7 +2483,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="ltr"
             role="listitem"
           >
@@ -2538,7 +2538,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="ltr"
             role="listitem"
           >
@@ -2593,7 +2593,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="ltr"
             role="listitem"
           >
@@ -2695,12 +2695,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           </h2>
         </div>
         <ul
-          class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+          class="StoryPromoUl-sc-171lqjd-2 brjIMO GridComponent-nf79gm-0 gjgzxV"
           dir="ltr"
           role="list"
         >
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 kFXEso"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 kFXEso"
             dir="ltr"
             role="listitem"
           >
@@ -2755,7 +2755,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="ltr"
             role="listitem"
           >
@@ -2810,7 +2810,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="ltr"
             role="listitem"
           >
@@ -2865,7 +2865,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="ltr"
             role="listitem"
           >
@@ -2920,7 +2920,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="ltr"
             role="listitem"
           >
@@ -3008,12 +3008,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           </h2>
         </div>
         <ul
-          class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+          class="StoryPromoUl-sc-171lqjd-2 brjIMO GridComponent-nf79gm-0 gjgzxV"
           dir="ltr"
           role="list"
         >
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fTPTiI"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fTPTiI"
             dir="ltr"
             role="listitem"
           >
@@ -3068,7 +3068,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="ltr"
             role="listitem"
           >
@@ -3123,7 +3123,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="ltr"
             role="listitem"
           >
@@ -3178,7 +3178,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="ltr"
             role="listitem"
           >
@@ -3233,7 +3233,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="ltr"
             role="listitem"
           >
@@ -3288,7 +3288,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
             dir="ltr"
             role="listitem"
           >
