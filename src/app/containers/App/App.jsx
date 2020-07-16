@@ -57,7 +57,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         id: nextId,
         assetUri: nextAssetUri,
         isAmp: nextIsAmp,
-        route,
+        route: { getInitialData, pageType: nextPageType },
       } = getRouteProps(routes, location.pathname);
 
       let loaderTimeout;
@@ -74,7 +74,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
           id: nextId,
           assetUri: nextAssetUri,
           isAmp: nextIsAmp,
-          pageType: route.pageType,
+          pageType: nextPageType,
           loading: true,
           error: null,
           errorCode: null,
@@ -82,30 +82,29 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         });
       });
 
-      route
-        .getInitialData({
-          path: location.pathname,
+      getInitialData({
+        path: location.pathname,
+        service: nextService,
+        variant: nextVariant,
+        pageType: nextPageType,
+      }).then(data => {
+        clearTimeout(loaderTimeout);
+        shouldSetFocus.current = true;
+        setState({
           service: nextService,
           variant: nextVariant,
-        })
-        .then(data => {
-          clearTimeout(loaderTimeout);
-          shouldSetFocus.current = true;
-          setState({
-            service: nextService,
-            variant: nextVariant,
-            id: nextId,
-            assetUri: nextAssetUri,
-            isAmp: nextIsAmp,
-            pageType: route.pageType,
-            loading: false,
-            pageData: path(['pageData'], data),
-            status: path(['status'], data),
-            error: path(['error'], data),
-            errorCode: null,
-            timeOnServer: path(['timeOnServer'], data),
-          });
+          id: nextId,
+          assetUri: nextAssetUri,
+          isAmp: nextIsAmp,
+          pageType: nextPageType,
+          loading: false,
+          pageData: path(['pageData'], data),
+          status: path(['status'], data),
+          error: path(['error'], data),
+          errorCode: null,
+          timeOnServer: path(['timeOnServer'], data),
         });
+      });
     }
   }, [routes, location.pathname]);
 
