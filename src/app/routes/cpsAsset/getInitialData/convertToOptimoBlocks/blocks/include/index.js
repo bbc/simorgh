@@ -77,7 +77,7 @@ const convertInclude = async (includeBlock, pageData, ...restParams) => {
   const pathname = restParams[1];
   const blocks = path(['content', 'blocks'], pageData);
 
-  const ampRegex = /\.amp$/;
+  const ampRegex = /\.amp$|\.amp\?renderer_env=test$/;
   const isAmp = ampRegex.test(pathname);
 
   if (!href) {

@@ -31,7 +31,8 @@ const includeClassifier = ({ href, pathname }) => {
   // This determines if the type is supported and returns the include type name
   const includeType = supportedTypes[typeExtraction];
 
-  const pathnameIsAmp = pathname.endsWith('.amp');
+  const ampRegex = /\.amp$|\.amp\?renderer_env=test$/;
+  const pathnameIsAmp = ampRegex.test(pathname);
 
   const platform = pathnameIsAmp ? 'amp' : 'canonical';
   const classification = includeType
