@@ -1,5 +1,9 @@
 version: 0.2
 
+env:
+  secrets-manager:
+    CHROMATIC_PROJECT_TOKEN: simorgh-build:chromatic-project-token
+
 phases:
   install:
     runtime-versions:
@@ -14,7 +18,7 @@ phases:
   build:
     commands:
       - npx apache2-license-checker
-      - # npx chromatic test run ... (not yet implemented)
+      - npx chromatic test run --build-script-name build:storybook --exit-once-uploaded --no-interactive
       - npm run test:local
       - # ./cc-test-reporter ... (not yet implemented)
       - npm run test:ci
