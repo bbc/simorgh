@@ -152,7 +152,7 @@ export const service = {
         listen: 'Dengar',
         watch: 'Tonton',
         liveLabel: 'LANGSUNG',
-        nextLabel: 'NEXT',
+        nextLabel: 'BERIKUTNYA',
         previousRadioShow: 'Siaran radio sebelumnya',
         nextRadioShow: 'Siaran radio berikutnya',
         duration: 'Durasi',
@@ -187,7 +187,8 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
-      durationLabel: 'Duration %duration%',
+      header: 'Siaran radio',
+      durationLabel: 'Durasi %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

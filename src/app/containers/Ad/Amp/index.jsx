@@ -14,6 +14,7 @@ import pathOr from 'ramda/src/pathOr';
 import { getMinion } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { ServiceContext } from '#contexts/ServiceContext';
+import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
 
 const FullWidthWrapper = styled.div`
@@ -82,9 +83,17 @@ const AmpAd = ({ slotType }) => {
     ['ads', 'advertisementLabel'],
     translations,
   );
+  const ariaLabel = getAdsAriaLabel(label, dir, slotType);
 
   return (
-    <div amp-access="toggles.ads.enabled" amp-access-hide="true">
+    // eslint-disable-next-line jsx-a11y/no-redundant-roles
+    <section
+      amp-access="toggles.ads.enabled"
+      amp-access-hide="true"
+      aria-hidden="true"
+      aria-label={ariaLabel}
+      role="region"
+    >
       <FullWidthWrapper>
         <StyledWrapper>
           <Helmet>
@@ -106,7 +115,7 @@ const AmpAd = ({ slotType }) => {
           </StyledAd>
         </StyledWrapper>
       </FullWidthWrapper>
-    </div>
+    </section>
   );
 };
 
