@@ -15,7 +15,6 @@ jobs:
       - name: npm install & build
         run: |
           npm ci
-          npm build
       - name: Unit Tests
         run: |
           npm run test:unit
