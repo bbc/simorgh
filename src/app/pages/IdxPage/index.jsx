@@ -2,7 +2,18 @@ import React, { useContext, Fragment } from 'react';
 import path from 'ramda/src/path';
 import styled from 'styled-components';
 import { node, string } from 'prop-types';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
+  GEL_MARGIN_BELOW_400PX,
+  GEL_MARGIN_ABOVE_400PX,
+} from '@bbc/gel-foundations/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
 import MetadataContainer from '#containers/Metadata';
 import LinkedData from '#containers/LinkedData';
@@ -24,6 +35,20 @@ const IdxMostReadSection = styled(MostReadSection)`
   width: 100%; /* Needed for IE11 */
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
+  }
+`;
+
+const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    /* To remove GEL Margins */
+    margin: ${GEL_SPACING_QUAD} -${GEL_MARGIN_BELOW_400PX} 0;
+    padding: 0 ${GEL_MARGIN_BELOW_400PX};
+  }
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin: ${GEL_SPACING_QUAD} -${GEL_MARGIN_ABOVE_400PX} 0;
+  }
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin: ${GEL_SPACING_TRPL} -${GEL_MARGIN_ABOVE_400PX} 0;
   }
 `;
 
@@ -83,7 +108,7 @@ const IdxPage = ({
             <Fragment key={group.title}>
               {radioScheduleOnIdxPage &&
                 radioScheduleIdxPosition === group.semanticGroupName && (
-                  <RadioScheduleContainer
+                  <StyledRadioScheduleContainer
                     lang="fa-AF"
                     initialData={radioScheduleData}
                     radioScheduleEndpointOverride={
