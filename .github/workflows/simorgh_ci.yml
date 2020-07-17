@@ -12,15 +12,17 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm install
+      - name: npm install & build
         run: |
           npm ci
+          npm build
       - name: Unit Tests
         run: |
           npm run test:unit
       - name: Integration Tests
         run: |
-          npm run test:integration:ci
+          npm start-server-and-test start http://localhost:7080/status test:integration:ci
 
         env:
           CI: true
+          LOG_LEVEL: 'error'
