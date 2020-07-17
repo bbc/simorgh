@@ -1,4 +1,4 @@
-name: With server
+name: Cypress CI
 on: [push]
 jobs:
   cypress-run:
