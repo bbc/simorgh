@@ -298,6 +298,7 @@ describe('cspHeader', () => {
         'https://edigitalsurvey.com',
         'https://securepubads.g.doubleclick.net',
         'https://tpc.googlesyndication.com',
+        'https://news.test.files.bbci.co.uk',
         "'self'",
       ],
       imgSrcExpectation: [
