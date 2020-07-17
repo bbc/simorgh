@@ -14,7 +14,7 @@ describe('Get initial data for live radio', () => {
     jest.clearAllMocks();
   });
 
-  it('should return essential data for a page to render, including the radio schedule', async () => {
+  it('should return essential data for a page to render', async () => {
     const { pageData } = await getInitialData({
       path: 'mock-live-radio-path',
       service: 'korean',
