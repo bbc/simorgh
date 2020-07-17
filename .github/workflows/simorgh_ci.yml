@@ -21,7 +21,7 @@ jobs:
           npm run test:unit
       - name: Integration Tests
         run: |
-          npm start-server-and-test start http://localhost:7080/status test:integration:ci
+          start-server-and-test start http://localhost:7080/status test:integration:ci
 
         env:
           CI: true
