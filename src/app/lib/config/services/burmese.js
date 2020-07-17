@@ -164,7 +164,7 @@ export const service = {
         listen: 'နားဆငျရနျ',
         watch: 'ကြည့်ရှုရန်',
         liveLabel: 'တိုက်ရိုက်ထုတ်လွှင့်မှု',
-        nextLabel: 'NEXT',
+        nextLabel: 'နောက်တစ်ခုသို့',
         previousRadioShow: 'ယခင် ရေဒီယိုအစီအစဉ်',
         nextRadioShow: 'နောက် ရေဒီယိုအစီအစဉ်',
         duration: 'ကြာမြင့်ချိန်',
@@ -200,7 +200,8 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
-      durationLabel: 'Duration %duration%',
+      header: 'နောက်ဆုံးလွှင့် အစီအစဉ်များ',
+      durationLabel: 'ကြာမြင့်ချိန် %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,
