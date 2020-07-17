@@ -149,10 +149,10 @@ export const service = {
         listen: 'ያድምጡ',
         watch: 'ተመልከት',
         liveLabel: 'ቀጥታ',
-        nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'ቀጣይ',
+        previousRadioShow: 'ያለፈ የሬዲዮ ስርጭት',
+        nextRadioShow: 'ቀጣይ የሬዲዮ ስርጭት',
+        duration: 'ርዝመት',
       },
       socialEmbed: {
         caption: {
@@ -185,7 +185,7 @@ export const service = {
       onLiveRadioPage: true,
       onFrontPage: false,
       header: 'ያድምጡ',
-      durationLabel: 'Duration %duration%',
+      durationLabel: 'ርዝመት %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

@@ -161,10 +161,10 @@ export const service = {
         listen: 'শুনুন',
         watch: 'দেখুন',
         liveLabel: 'লাইভ',
-        nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'পরবর্তী',
+        previousRadioShow: 'পূর্ববর্তী রেডিও অনুষ্ঠান',
+        nextRadioShow: 'পরবর্তী রেডিও অনুষ্ঠান',
+        duration: 'স্থিতিকাল',
       },
       socialEmbed: {
         caption: {
@@ -197,7 +197,8 @@ export const service = {
       hasRadioSchedule: true,
       onLiveRadioPage: true,
       onFrontPage: false,
-      durationLabel: 'Duration %duration%',
+      header: 'রেডিও অনুষ্ঠান',
+      durationLabel: 'স্থিতিকাল %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,
