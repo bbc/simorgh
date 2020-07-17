@@ -36,10 +36,6 @@ def runProductionTests(){
   sh 'make productionTests'
 }
 
-def runChromaticTests(){
-  sh 'make testChromatic'
-}
-
 def pruneDevDependencies(){
   sh 'npm prune --production'
 }
@@ -183,19 +179,6 @@ pipeline {
           }
           steps {
             runProductionTests()
-          }
-        }
-        stage ('Test Chromatic') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              reuseNode true
-            }
-          }
-          steps {
-            withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
-              runChromaticTests()
-            }
           }
         }
       }
