@@ -44,17 +44,17 @@ const renderRecommendations = (items, service) => {
 storiesOf('Containers|CPS Recommendations/LTR (mundo)', module)
   .addParameters({ chromatic: { disable: true } })
   .add('multiple items', () =>
-    renderRecommendations(mundoRecommendationsData.items, 'mundo'),
+    renderRecommendations(mundoRecommendationsData, 'mundo'),
   )
   .add('single item', () =>
-    renderRecommendations([mundoRecommendationsData.items[0]], 'mundo'),
+    renderRecommendations([mundoRecommendationsData[0]], 'mundo'),
   );
 
 storiesOf('Containers|CPS Recommendations/RTL (arabic)', module)
   .addParameters({ chromatic: { disable: true } })
   .add('multiple items', () =>
-    renderRecommendations(arabicRecommendationsData.items, 'arabic'),
+    renderRecommendations(arabicRecommendationsData, 'arabic'),
   )
   .add('single item', () =>
-    renderRecommendations([arabicRecommendationsData.items[0]], 'arabic'),
+    renderRecommendations([arabicRecommendationsData[0]], 'arabic'),
   );

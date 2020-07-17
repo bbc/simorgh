@@ -57,9 +57,9 @@ describe('CpsRecommendations', () => {
   it('should not render when cpsRecommendations toggle is disabled', () => {
     const toggleEnabled = false;
     const hasStoryRecommendations = true;
-    const { items } = recommendationsData;
+
     const { container } = renderContainer(
-      items,
+      recommendationsData,
       hasStoryRecommendations,
       toggleEnabled,
     );
@@ -68,9 +68,21 @@ describe('CpsRecommendations', () => {
   it('should not render when the hasStoryRecommendations flag is disabled for the service', () => {
     const hasStoryRecommendations = false;
     const toggleEnabled = true;
-    const { items } = recommendationsData;
+
     const { container } = renderContainer(
-      items,
+      recommendationsData,
+      hasStoryRecommendations,
+      toggleEnabled,
+    );
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should not render when there is no recommendations data', () => {
+    const hasStoryRecommendations = false;
+    const toggleEnabled = true;
+
+    const { container } = renderContainer(
+      [],
       hasStoryRecommendations,
       toggleEnabled,
     );
@@ -80,11 +92,10 @@ describe('CpsRecommendations', () => {
   describe('should render when cpsRecommendations toggle and hasStoryRecommendations flag are both true', () => {
     const toggleEnabled = true;
     const hasStoryRecommendations = true;
-    const { items } = recommendationsData;
 
     it('for multiple items', () => {
       const { container } = renderContainer(
-        items,
+        recommendationsData,
         hasStoryRecommendations,
         toggleEnabled,
       );
@@ -92,7 +103,7 @@ describe('CpsRecommendations', () => {
     });
     it('for a single item', () => {
       const { container } = renderContainer(
-        [items[0]],
+        [recommendationsData[0]],
         hasStoryRecommendations,
         toggleEnabled,
       );

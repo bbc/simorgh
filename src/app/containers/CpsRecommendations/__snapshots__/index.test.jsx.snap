@@ -4,6 +4,8 @@ exports[`CpsRecommendations should not render when cpsRecommendations toggle is 
 
 exports[`CpsRecommendations should not render when the hasStoryRecommendations flag is disabled for the service 1`] = `<div />`;
 
+exports[`CpsRecommendations should not render when there is no recommendations data 1`] = `<div />`;
+
 exports[`CpsRecommendations should render when cpsRecommendations toggle and hasStoryRecommendations flag are both true for a single item 1`] = `
 <div>
   <div
@@ -56,9 +58,9 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
                 class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
               >
                 <img
-                  alt="Image Alt text"
+                  alt="Angie Dodge"
                   class="StyledImg-sc-7vx2mr-0 hIxkbt"
-                  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/5A4D/production/_111371132_hi060727445.jpg"
+                  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/BD47/production/_111155484_mediaitem111155481.jpg"
                 />
               </div>
             </div>
@@ -71,9 +73,9 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
               >
                 <a
                   class="Link-sc-1dvfmi3-5 jeUMCT"
-                  href="/mundo/noticias-america-latina-51975331"
+                  href="/mundo/noticias-53377054"
                 >
-                  Argentina ordena cuarentena total obligatoria por el coronavirus
+                  La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino
                 </a>
               </span>
             </div>
@@ -144,9 +146,9 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                 >
                   <img
-                    alt="Image Alt text"
+                    alt="Angie Dodge"
                     class="StyledImg-sc-7vx2mr-0 hIxkbt"
-                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/5A4D/production/_111371132_hi060727445.jpg"
+                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/BD47/production/_111155484_mediaitem111155481.jpg"
                   />
                 </div>
               </div>
@@ -159,9 +161,9 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 jeUMCT"
-                    href="/mundo/noticias-america-latina-51975331"
+                    href="/mundo/noticias-53377054"
                   >
-                    Argentina ordena cuarentena total obligatoria por el coronavirus
+                    La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino
                   </a>
                 </span>
               </div>
@@ -188,9 +190,9 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                 >
                   <img
-                    alt="Image Alt text"
+                    alt="Edy Fonseca"
                     class="StyledImg-sc-7vx2mr-0 hIxkbt"
-                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/49F7/production/_111753981_03009521-c6ba-41e6-8328-65d0caf07635.jpg"
+                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/11DDC/production/_112608137_dsc04722.jpg"
                   />
                 </div>
               </div>
@@ -203,9 +205,9 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 jeUMCT"
-                    href="/mundo/noticias-america-latina-52250630"
+                    href="/mundo/noticias-america-latina-52884902"
                   >
-                    Por qué México se convirtió en el gran obstáculo del plan de la OPEP para aumentar el precio del petróleo
+                    Coronavirus en Colombia | El caso de la vigilante Edy Fonseca: "Me retuvieron en un edificio de clase alta durante la pandemia, lo acepté y me siento culpable"
                   </a>
                 </span>
               </div>
@@ -232,9 +234,9 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                 >
                   <img
-                    alt="Image Alt text"
+                    alt="Martha Mukamushinzimana dice que sólo estaba siguiendo órdenes."
                     class="StyledImg-sc-7vx2mr-0 hIxkbt"
-                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/34F5/production/_111775531_tv061050412.jpg"
+                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0B66/production/_112981920_53113381.jpg"
                   />
                 </div>
               </div>
@@ -247,9 +249,9 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 jeUMCT"
-                    href="/mundo/noticias-52275464"
+                    href="/mundo/noticias-internacional-53113381"
                   >
-                    El inédito y cuestionado plan de emergencia económica de Ecuador contra la crisis del coronavirus
+                    Soy una mujer genocida y aún me persiguen los recuerdos de lo que hice
                   </a>
                 </span>
               </div>
@@ -276,9 +278,9 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
                   class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                 >
                   <img
-                    alt="Image Alt text"
+                    alt="Julia Garner en The Assitant"
                     class="StyledImg-sc-7vx2mr-0 hIxkbt"
-                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/4627/production/_111195971_mediaitem111195968.jpg"
+                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/98E7/production/_113334193_10f06dbb-371a-4aa0-9577-7152063e5f97.jpg"
                   />
                 </div>
               </div>
@@ -291,9 +293,9 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
                 >
                   <a
                     class="Link-sc-1dvfmi3-5 jeUMCT"
-                    href="/mundo/noticias-51796524"
+                    href="/mundo/vert-cul-53370542"
                   >
-                    La guerra de precios entre Arabia Saudita y Rusia que hundió el valor del petróleo y las bolsas en medio de la crisis por el coronavirus
+                    Estrenos 2020: las 10 mejores películas de lo que va del año según la BBC (y que seguramente no pudiste ver en el cine)
                   </a>
                 </span>
               </div>

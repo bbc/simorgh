@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, number, string } from 'prop-types';
+import { arrayOf, shape, number } from 'prop-types';
 import styled from 'styled-components';
 import path from 'ramda/src/path';
 import StoryPromo, { Headline, Link } from '@bbc/psammead-story-promo';
@@ -13,12 +13,11 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 
+import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import Grid from '../../components/Grid';
-
-import transformToStoryPromoItems from './utils';
 
 const StoryPromoWrapper = styled(StoryPromo)`
   display: grid;
@@ -35,7 +34,7 @@ const RecommendationsWrapper = styled.div`
 `;
 
 const getPromoItemProps = item => ({
-  src: path(['indexImage', 'path'], item),
+  imgSrc: path(['indexImage', 'path'], item),
   href: path(['locators', 'assetUri'], item),
   headline: path(['headlines', 'headline'], item),
   alt: path(['indexImage', 'altText'], item),
@@ -47,12 +46,16 @@ const CpsRecommendations = ({ items, parentColumns }) => {
 
   const { hasStoryRecommendations } = recommendations;
 
-  if (!hasStoryRecommendations || !enabled) return null;
+  if (!hasStoryRecommendations || !enabled || !items.length) return null;
 
   const singleTransform = item => {
-    const { src, href, headline, alt } = getPromoItemProps(item);
+    const { imgSrc, href, headline, alt } = getPromoItemProps(item);
 
-    const Img = <Image alt={alt} src={src} />;
+    const DEFAULT_IMAGE_RES = 660;
+    const ichefPath = imgSrc.replace('http://c.files.bbci.co.uk', '/cpsprodpb');
+    const ichefSrc = `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}${ichefPath}`;
+
+    const Img = <Image alt={alt} src={ichefSrc} />;
 
     const Info = (
       <Headline script={script} service={service} promoHasImage as="span">
@@ -105,7 +108,7 @@ const CpsRecommendations = ({ items, parentColumns }) => {
           }}
           as={StoryPromoLiBase}
           border={false}
-          key={item.uri}
+          key={item.id || item.uri}
           dir={dir}
         >
           {singleTransform(item)}
@@ -125,7 +128,7 @@ const CpsRecommendations = ({ items, parentColumns }) => {
       <CpsOnwardJourney
         labelId="recommendations-heading"
         title="Recommendations"
-        content={transformToStoryPromoItems(items)}
+        content={items}
         parentColumns={parentColumns}
         singleTransform={singleTransform}
         listTransform={listTransform}
@@ -139,13 +142,7 @@ const CpsRecommendations = ({ items, parentColumns }) => {
 export default CpsRecommendations;
 
 CpsRecommendations.propTypes = {
-  items: arrayOf(
-    shape({
-      assetUri: string.isRequired,
-      shortHeadline: string.isRequired,
-      imageHref: string.isRequired,
-    }),
-  ).isRequired,
+  items: arrayOf(shape(storyItem)),
   parentColumns: shape({
     group0: number,
     group1: number,
@@ -153,5 +150,10 @@ CpsRecommendations.propTypes = {
     group3: number,
     group4: number,
     group5: number,
-  }).isRequired,
+  }),
+};
+
+CpsRecommendations.defaultProps = {
+  items: [],
+  parentColumns: null,
 };
