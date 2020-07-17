@@ -22,8 +22,12 @@ const getPageIdentifier = path([
 const getHeading = path(['content', 'blocks', 0, 'text']);
 const getBodySummary = path(['content', 'blocks', 1, 'text']);
 
-export const hasRadioSchedule = async service => {
+export const hasRadioSchedule = async (service, pathname) => {
   const config = await getConfig(service);
+
+  if (service === 'persian' && pathname.includes('bbc_persian_radio')) {
+    return false;
+  }
 
   const serviceHasRadioSchedule = pathOr(
     false,
@@ -54,7 +58,7 @@ const getRadioService = service => {
 export default async ({ path: pathname, service }) => {
   try {
     const liveRadioDataPath = overrideRendererOnTest(pathname);
-    const pageHasRadioSchedule = await hasRadioSchedule(service);
+    const pageHasRadioSchedule = await hasRadioSchedule(service, pathname);
     const pageDataPromise = fetchPageData(liveRadioDataPath);
 
     const { json, status } = pageHasRadioSchedule

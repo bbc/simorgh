@@ -96,7 +96,8 @@ const LiveRadioPage = ({ pageData }) => {
   );
 
   const { enabled } = useToggle('liveRadioSchedule');
-  const showSchedule = enabled && radioScheduleOnPage;
+  const showSchedule =
+    enabled && radioScheduleOnPage && masterBrand !== 'bbc_persian_radio';
 
   return (
     <>
