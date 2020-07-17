@@ -87,6 +87,7 @@ const directives = {
       'https://www.youtube.com', // Social Embeds, <amp-youtube />
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.ampproject.net', // Social Embeds
+      'https://news.files.bbci.co.uk', // STY include
       "'self'",
     ],
     canonicalLive: [
@@ -114,7 +115,8 @@ const directives = {
       'https://www.youtube.com', // Social Embeds, <amp-youtube />
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
       'https://*.ampproject.net', // Social Embeds
-      'https://news.test.files.bbci.co.uk',
+      'https://news.files.bbci.co.uk', // STY include
+      'https://news.test.files.bbci.co.uk', // STY include
       "'self'",
     ],
     canonicalNonLive: [

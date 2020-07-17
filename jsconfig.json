@@ -3,13 +3,16 @@
     "jsx": "react",
     "baseUrl": ".",
     "paths": {
-      "#testHelpers/*": ["./src/testHelpers/*"],
-      "#lib/*": ["./src/app/lib/*"],
-      "#data/*": ["./data/*"],
-      "#models/*": ["./src/app/models/*"],
+      "#app/*": ["./src/app/*"],
       "#contexts/*": ["./src/app/contexts/*"],
+      "#containers/*": ["./src/app/containers/*"],
+      "#data/*": ["./data/*"],
+      "#hooks/*": [".src/app/hooks/*"],
+      "#lib/*": ["./src/app/lib/*"],
+      "#models/*": ["./src/app/models/*"],
       "#pages/*": ["./src/app/pages/*"],
-      "#app/*": ["./src/app/*"]
+      "#testHelpers/*": ["./src/testHelpers/*"],
+      "#server/*": ["./src/server/*"],
     }
   },
   "exclude": ["node_modules", "dist"]

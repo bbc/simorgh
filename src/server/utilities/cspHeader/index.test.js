@@ -51,6 +51,7 @@ describe('cspHeader', () => {
         'https://www.youtube.com',
         'https://www.instagram.com',
         'https://*.ampproject.net',
+        'https://news.files.bbci.co.uk',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -203,6 +204,7 @@ describe('cspHeader', () => {
         'https://www.youtube.com',
         'https://www.instagram.com',
         'https://*.ampproject.net',
+        'https://news.files.bbci.co.uk',
         'https://news.test.files.bbci.co.uk',
         "'self'",
       ],
