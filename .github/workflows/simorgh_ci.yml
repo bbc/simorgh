@@ -21,7 +21,7 @@ jobs:
           npm run test:unit
       - name: Integration Tests
         run: |
-          wait-on -t 20000 http://localhost:7080/status && test:integration:ci
+          npm run test:integration:ci
 
         env:
           CI: true
