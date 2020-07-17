@@ -1,25 +1,26 @@
-name: Simorgh CI - Unit Tests
-
+name: Simorgh CI - Unit/Integration Tests
 on: [push]
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [12.x]
-
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm install, build, and test
+      - name: npm install
         run: |
           npm ci
-          npx apache2-license-checker
-          npm test
+      - name: Unit Tests
+        run: |
+          npm run test:unit
+      - name: Integration Tests
+        run: |
+          npm run test:integration:ci
+
         env:
           CI: true
