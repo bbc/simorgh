@@ -154,10 +154,10 @@ export const service = {
         listen: 'Dhaggeeffadhaa',
         watch: 'Daawwadhu',
         liveLabel: 'KALLATTIIN',
-        nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'KAN ITTAANU',
+        previousRadioShow: 'Sagantaa raadiyoo dabre',
+        nextRadioShow: 'Sagantaa raadiyoo itti aanu',
+        duration: 'Turtii',
       },
       socialEmbed: {
         caption: {
@@ -189,7 +189,8 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
-      durationLabel: 'Duration %duration%',
+      header: 'Dhaggeeffadhaa',
+      durationLabel: 'Turtii %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,
