@@ -97,11 +97,11 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
+      <AdContainer slotType="leaderboard" />
       <main role="main">
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}
         </VisuallyHiddenText>
-        <AdContainer slotType="leaderboard" />
         <IndexPageContainer>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
