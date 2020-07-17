@@ -133,7 +133,7 @@ const CpsRecommendations = ({ items, parentColumns }) => {
         singleTransform={singleTransform}
         listTransform={listTransform}
         optionalLabelProps={optionalLabelProps}
-        isRecommendation
+        mainColumn
       />
     </RecommendationsWrapper>
   );

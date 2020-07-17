@@ -76,8 +76,8 @@ const LegacyGridItemConstrainedLarge = styled(GridItemConstrainedLarge)`
 
 const StyledSectionLabel = styled(SectionLabel)`
   margin-top: 0;
-  ${({ isRecommendation }) =>
-    isRecommendation &&
+  ${({ mainColumn }) =>
+    mainColumn &&
     `
     margin: 0;
     @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
@@ -91,8 +91,8 @@ const StyledSectionLabel = styled(SectionLabel)`
 
 // Apply the correct top & bottom padding around the single story promo
 const SingleContentWrapper = styled.div`
-  ${({ isRecommendation }) =>
-    !isRecommendation &&
+  ${({ mainColumn }) =>
+    !mainColumn &&
     `
     @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
       padding-top: ${GEL_SPACING_DBL};
@@ -111,7 +111,7 @@ const CpsOnwardJourney = ({
   listTransform,
   singleTransform,
   optionalLabelProps,
-  isRecommendation,
+  mainColumn,
 }) => {
   const a11yAttributes = {
     as: 'section',
@@ -161,13 +161,13 @@ const CpsOnwardJourney = ({
         service={service}
         dir={dir}
         labelId={labelId}
-        isRecommendation={isRecommendation}
+        mainColumn={mainColumn}
         {...optionalLabelProps}
       >
         {title}
       </StyledSectionLabel>
       {hasSingleContent ? (
-        <SingleContentWrapper isRecommendation={isRecommendation}>
+        <SingleContentWrapper mainColumn={mainColumn}>
           {singleTransform(singleContent)}
         </SingleContentWrapper>
       ) : (
@@ -196,14 +196,14 @@ CpsOnwardJourney.propTypes = {
     bar: bool,
     backgroundColor: string,
   }),
-  isRecommendation: bool,
+  mainColumn: bool,
 };
 
 CpsOnwardJourney.defaultProps = {
   content: [],
   parentColumns: null,
   optionalLabelProps: null,
-  isRecommendation: false,
+  mainColumn: false,
 };
 
 export default CpsOnwardJourney;
