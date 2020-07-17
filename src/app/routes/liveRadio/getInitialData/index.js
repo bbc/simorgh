@@ -25,6 +25,8 @@ const getBodySummary = path(['content', 'blocks', 1, 'text']);
 export const hasRadioSchedule = async (service, pathname) => {
   const config = await getConfig(service);
 
+  // onLiveRadioPage is enabled on Persian to render the schedule for bbc_dari_radio
+  // however bbc_persian_radio should not show the schedule
   if (service === 'persian' && pathname.includes('bbc_persian_radio')) {
     return false;
   }
