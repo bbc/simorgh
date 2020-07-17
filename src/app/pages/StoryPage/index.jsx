@@ -84,6 +84,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
   const recommendationsIntialData = path(['recommendations'], pageData);
 
+  // Remove me before merge
   console.log(recommendationsIntialData);
 
   const gridColumns = {
