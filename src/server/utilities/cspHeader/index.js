@@ -138,6 +138,7 @@ const directives = {
       'https://edigitalsurvey.com', // ads
       'https://securepubads.g.doubleclick.net', // ads
       'https://tpc.googlesyndication.com', // ads
+      'https://news.test.files.bbci.co.uk',
       "'self'",
     ],
   },
