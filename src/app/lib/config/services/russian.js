@@ -165,7 +165,6 @@ export const mainTranslations = {
 export const service = {
   default: {
     translations: { ...mainTranslations, ...headerFooterTranslations },
-
     lang: `ru`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Обновлено',

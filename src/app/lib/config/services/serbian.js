@@ -277,7 +277,6 @@ export const service = {
   },
   cyr: {
     ...baseServiceConfig,
-
     articleTimestampPrefix: 'Ажурирано',
     articleTimestampSuffix: '',
     brandName: 'BBC News на српском',
@@ -379,6 +378,9 @@ export const service = {
       variant: 'lat',
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Advertisement',
+      },
       seeAll: 'Погледајте све',
       home: 'Главна страница',
       currentPage: 'Отворена страница',

@@ -148,7 +148,7 @@ export const service = {
         listen: 'ስምዑ',
         watch: 'ተዓዘቡ',
         liveLabel: 'ቀጥታ',
-        nextLabel: 'NEXT',
+        nextLabel: 'ዝቕጽል',
         previousRadioShow: 'ኣቐዲሙ ዝነበረ ፈነወ ራድዮ',
         nextRadioShow: 'ዝቕጽል ፈነወ ራድዮ',
         duration: 'ዕምሪ ፈነወ',
@@ -183,7 +183,8 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: false,
-      durationLabel: 'Duration %duration%',
+      header: 'ስምዑ',
+      durationLabel: 'ዕምሪ ፈነወ %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,
