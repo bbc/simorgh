@@ -114,14 +114,24 @@ const togglesUrl =
   'https://mock-toggles-endpoint.bbc.co.uk/?application=simorgh&service=mundo&__amp_source_origin=https://www.test.bbc.com';
 
 describe('Front Page', () => {
+  afterEach(() => {
+    fetchMock.restore();
+  });
+
   describe('snapshots', () => {
     it('should render a pidgin frontpage correctly', async () => {
-      fetch.mockResponse(JSON.stringify(pidginFrontPageData));
+      fetchMock.mock(
+        'http://localhost/some-front-page-path.json',
+        JSON.stringify(pidginFrontPageData),
+      );
       const { pageData } = await getInitialData({
         path: 'some-front-page-path',
         service: 'pidgin',
       });
-      fetch.mockResponse(JSON.stringify(pidginMostReadData));
+      fetchMock.mock(
+        ' /pidgin/mostread.json',
+        JSON.stringify(pidginMostReadData),
+      );
 
       let container;
       await act(async () => {
@@ -132,12 +142,18 @@ describe('Front Page', () => {
     });
 
     it('should render a pidgin amp frontpage', async () => {
-      fetch.mockResponse(JSON.stringify(pidginFrontPageData));
+      fetchMock.mock(
+        'http://localhost/some-front-page-path.json',
+        JSON.stringify(pidginFrontPageData),
+      );
       const { pageData } = await getInitialData({
         path: 'some-front-page-path',
         service: 'pidgin',
       });
-      fetch.mockResponse(JSON.stringify(pidginMostReadData));
+      fetchMock.mock(
+        ' /pidgin/mostread.json',
+        JSON.stringify(pidginMostReadData),
+      );
 
       const { container } = render(
         <FrontPageWithContext pageData={pageData} isAmp />,
@@ -148,12 +164,18 @@ describe('Front Page', () => {
 
   describe('Assertions', () => {
     it('should render visually hidden text as h1', async () => {
-      fetch.mockResponse(JSON.stringify(pidginFrontPageData));
+      fetchMock.mock(
+        'http://localhost/some-front-page-path.json',
+        JSON.stringify(pidginFrontPageData),
+      );
       const { pageData } = await getInitialData({
         path: 'some-front-page-path',
         service: 'pidgin',
       });
-      fetch.mockResponse(JSON.stringify(pidginMostReadData));
+      fetchMock.mock(
+        ' /pidgin/mostread.json',
+        JSON.stringify(pidginMostReadData),
+      );
 
       let container;
       await act(async () => {
@@ -178,12 +200,18 @@ describe('Front Page', () => {
     });
 
     it('should render front page sections', async () => {
-      fetch.mockResponse(JSON.stringify(pidginFrontPageData));
+      fetchMock.mock(
+        'http://localhost/some-front-page-path.json',
+        JSON.stringify(pidginFrontPageData),
+      );
       const { pageData } = await getInitialData({
         path: 'some-front-page-path',
         service: 'pidgin',
       });
-      fetch.mockResponse(JSON.stringify(pidginMostReadData));
+      fetchMock.mock(
+        '/pidgin/mostread.json',
+        JSON.stringify(pidginMostReadData),
+      );
 
       let container;
       await act(async () => {
@@ -215,11 +243,9 @@ describe('Front Page', () => {
     afterEach(() => {
       window.dotcom = undefined;
       window.dotcomConfig = undefined;
-
-      fetchMock.restore();
     });
 
-    it('should create window.dotcomConfig when on Canonical ads are enabled', async () => {
+    it('should create window.dotcomConfig when on Canonical and ads are enabled', async () => {
       fetchMock.mock(
         'http://localhost/some-front-page-path.json',
         JSON.stringify(mundoFrontPageData),
@@ -253,7 +279,7 @@ describe('Front Page', () => {
       );
     });
 
-    it('should not create window.dotcomConfig when on Canonical and ads are disable', async () => {
+    it('should not create window.dotcomConfig when on Canonical and ads are disabled', async () => {
       fetchMock.mock(
         'http://localhost/some-front-page-path.json',
         JSON.stringify(mundoFrontPageData),
