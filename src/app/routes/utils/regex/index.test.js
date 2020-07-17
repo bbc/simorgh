@@ -265,7 +265,7 @@ describe('secondaryColumnDataRegexPath', () => {
   shouldNotMatchInvalidRoutes(invalidRoutes, secondaryColumnDataRegexPath);
 });
 
-describe('recommendationsDataRegexh', () => {
+describe('recommendationsDataRegex', () => {
   const validRoutes = [
     '/mundo/23263889/recommendations.json',
     '/zhongwen/uk-23283128/recommendations/simp.json',

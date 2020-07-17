@@ -5,7 +5,7 @@ import getConfig from '../../utils/getConfig';
 jest.mock('../../utils/getConfig', () => jest.fn());
 
 describe('hasRecommendations', () => {
-  it('returns false if service has recommendations enabled', async () => {
+  it('returns true if service has recommendations enabled', async () => {
     getConfig.mockImplementationOnce(() => ({
       recommendations: {
         hasStoryRecommendations: true,
