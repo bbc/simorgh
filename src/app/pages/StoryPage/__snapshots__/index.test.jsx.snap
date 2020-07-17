@@ -2632,233 +2632,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 `;
 
 exports[`Story Page should render correctly when the secondary column data is not available 1`] = `
-<html
-  dir="ltr"
-  lang="pcm"
->
-  <head>
-    <title>
-      STY - Blood pressure drugs dey work better - BBC News Pidgin
-    </title>
-    <link
-      href="https://www.test.bbc.com/pidgin/world-23252817"
-      rel="canonical"
-    />
-    <link
-      href="https://www.test.bbc.co.uk/pidgin/world-23252817.amp"
-      rel="amphtml"
-    />
-    <link
-      href="http://localhost:7080/pidgin/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
-      rel="apple-touch-icon"
-      sizes="72x72"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
-      rel="apple-touch-icon"
-      sizes="96x96"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-128x128.png"
-      rel="apple-touch-icon"
-      sizes="128x128"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
-      rel="apple-touch-icon"
-      sizes="144x144"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-152x152.png"
-      rel="apple-touch-icon"
-      sizes="152x152"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-      sizes="192x192"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-384x384.png"
-      rel="apple-touch-icon"
-      sizes="384x384"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
-      rel="apple-touch-icon"
-      sizes="512x512"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
-      rel="icon"
-      sizes="72x72"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
-      rel="icon"
-      sizes="96x96"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
-      rel="icon"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <meta
-      content="IE=edge"
-      http-equiv="X-UA-Compatible"
-    />
-    <meta
-      charset="utf-8"
-    />
-    <meta
-      content="noodp,noydir"
-      name="robots"
-    />
-    <meta
-      content="#B80000"
-      name="theme-color"
-    />
-    <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      name="viewport"
-    />
-    <meta
-      content="BBC News Pidgin"
-      name="apple-mobile-web-app-title"
-    />
-    <meta
-      content="BBC News Pidgin"
-      name="application-name"
-    />
-    <meta
-      content="This is a test asset used in Simorgh, please do not edit it without asking."
-      name="description"
-    />
-    <meta
-      content="100004154058350"
-      property="fb:admins"
-    />
-    <meta
-      content="1609039196070050"
-      property="fb:app_id"
-    />
-    <meta
-      content="285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"
-      property="fb:pages"
-    />
-    <meta
-      content="yes"
-      name="mobile-web-app-capable"
-    />
-    <meta
-      content="#B80000"
-      name="msapplication-TileColor"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
-      name="msapplication-TileImage"
-    />
-    <meta
-      content="This is a test asset used in Simorgh, please do not edit it without asking."
-      property="og:description"
-    />
-    <meta
-      content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
-      property="og:image"
-    />
-    <meta
-      content="Some people at the NTA awards"
-      property="og:image:alt"
-    />
-    <meta
-      content="pcm"
-      property="og:locale"
-    />
-    <meta
-      content="BBC News Pidgin"
-      property="og:site_name"
-    />
-    <meta
-      content="STY - Blood pressure drugs dey work better - BBC News Pidgin"
-      property="og:title"
-    />
-    <meta
-      content="article"
-      property="og:type"
-    />
-    <meta
-      content="https://www.test.bbc.com/pidgin/world-23252817"
-      property="og:url"
-    />
-    <meta
-      content="summary_large_image"
-      name="twitter:card"
-    />
-    <meta
-      content="@BBCNews"
-      name="twitter:creator"
-    />
-    <meta
-      content="This is a test asset used in Simorgh, please do not edit it without asking."
-      name="twitter:description"
-    />
-    <meta
-      content="Some people at the NTA awards"
-      name="twitter:image:alt"
-    />
-    <meta
-      content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
-      name="twitter:image:src"
-    />
-    <meta
-      content="@BBCNews"
-      name="twitter:site"
-    />
-    <meta
-      content="STY - Blood pressure drugs dey work better - BBC News Pidgin"
-      name="twitter:title"
-    />
-    <meta
-      content="https://www.facebook.com/bbcnews"
-      name="article:author"
-    />
-    <meta
-      content="2019-10-23T12:39:30.000Z"
-      name="article:published_time"
-    />
-    <meta
-      content="2019-10-23T12:39:32.000Z"
-      name="article:modified_time"
-    />
-    <script
-      type="application/ld+json"
-    >
-      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
-    </script>
-    <script
-      type="application/ld+json"
-    >
-      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"}
-    </script>
-  </head>
-  <body>
-    .c32 {
+.c32 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3769,7 +3543,233 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 }
 
-<div>
+<html
+  dir="ltr"
+  lang="pcm"
+>
+  <head>
+    <title>
+      STY - Blood pressure drugs dey work better - BBC News Pidgin
+    </title>
+    <link
+      href="https://www.test.bbc.com/pidgin/world-23252817"
+      rel="canonical"
+    />
+    <link
+      href="https://www.test.bbc.co.uk/pidgin/world-23252817.amp"
+      rel="amphtml"
+    />
+    <link
+      href="http://localhost:7080/pidgin/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
+      rel="apple-touch-icon"
+      sizes="96x96"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-128x128.png"
+      rel="apple-touch-icon"
+      sizes="128x128"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+      sizes="192x192"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-384x384.png"
+      rel="apple-touch-icon"
+      sizes="384x384"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
+      rel="apple-touch-icon"
+      sizes="512x512"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
+      rel="icon"
+      sizes="72x72"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noodp,noydir"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="BBC News Pidgin"
+      name="apple-mobile-web-app-title"
+    />
+    <meta
+      content="BBC News Pidgin"
+      name="application-name"
+    />
+    <meta
+      content="This is a test asset used in Simorgh, please do not edit it without asking."
+      name="description"
+    />
+    <meta
+      content="100004154058350"
+      property="fb:admins"
+    />
+    <meta
+      content="1609039196070050"
+      property="fb:app_id"
+    />
+    <meta
+      content="285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"
+      property="fb:pages"
+    />
+    <meta
+      content="yes"
+      name="mobile-web-app-capable"
+    />
+    <meta
+      content="#B80000"
+      name="msapplication-TileColor"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
+      name="msapplication-TileImage"
+    />
+    <meta
+      content="This is a test asset used in Simorgh, please do not edit it without asking."
+      property="og:description"
+    />
+    <meta
+      content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
+      property="og:image"
+    />
+    <meta
+      content="Some people at the NTA awards"
+      property="og:image:alt"
+    />
+    <meta
+      content="pcm"
+      property="og:locale"
+    />
+    <meta
+      content="BBC News Pidgin"
+      property="og:site_name"
+    />
+    <meta
+      content="STY - Blood pressure drugs dey work better - BBC News Pidgin"
+      property="og:title"
+    />
+    <meta
+      content="article"
+      property="og:type"
+    />
+    <meta
+      content="https://www.test.bbc.com/pidgin/world-23252817"
+      property="og:url"
+    />
+    <meta
+      content="summary_large_image"
+      name="twitter:card"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:creator"
+    />
+    <meta
+      content="This is a test asset used in Simorgh, please do not edit it without asking."
+      name="twitter:description"
+    />
+    <meta
+      content="Some people at the NTA awards"
+      name="twitter:image:alt"
+    />
+    <meta
+      content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6ACE/test/_63724372_gettyimages-1098075358.jpg"
+      name="twitter:image:src"
+    />
+    <meta
+      content="@BBCNews"
+      name="twitter:site"
+    />
+    <meta
+      content="STY - Blood pressure drugs dey work better - BBC News Pidgin"
+      name="twitter:title"
+    />
+    <meta
+      content="https://www.facebook.com/bbcnews"
+      name="article:author"
+    />
+    <meta
+      content="2019-10-23T12:39:30.000Z"
+      name="article:published_time"
+    />
+    <meta
+      content="2019-10-23T12:39:32.000Z"
+      name="article:modified_time"
+    />
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@graph":[{"@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}]}
+    </script>
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"}
+    </script>
+  </head>
+  <body>
+    <div>
       <div
         id="ContextsContainer"
       >
