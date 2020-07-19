@@ -769,7 +769,24 @@ describe('Chartbeat utilities', () => {
     expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
   });
 
-  it('should return null for virtualReferrer when isOnClient is false and there is no previousPath', () => {
+  it('should return null for virtualReferrer when there is no previousPath', () => {
+    const fixtureData = {
+      isAmp: false,
+      platform: 'canonical',
+      pageType: 'frontPage',
+      data: {},
+      brandName: 'BBC-News',
+      chartbeatDomain: 'bbc.co.uk',
+      env: 'test',
+      service: 'news',
+      origin: 'test.bbc.com',
+    };
+
+    const chartbeatConfig = getConfig(fixtureData);
+    expect(chartbeatConfig.virtualReferrer).toBeNull();
+  });
+
+  it('should return null for virtualReferrer when isOnClient is false', () => {
     isOnClient = false;
 
     const fixtureData = {
