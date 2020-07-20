@@ -209,7 +209,7 @@ CpsOnwardJourney.defaultProps = {
   parentColumns: null,
   mainColumn: false,
   sectionLabelOverrideAs: null,
-  sectionLabelBar: null,
+  sectionLabelBar: true,
   sectionLabelBackground: null,
 };
 
