@@ -5,5 +5,7 @@
   "env": {
     "APP_ENV": "local"
   },
-  "ignoreTestFiles": ["**/**/config.js"]
+  "ignoreTestFiles": [
+    "**/**/config.js"
+  ]
 }
