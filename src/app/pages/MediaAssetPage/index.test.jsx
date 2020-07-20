@@ -110,13 +110,18 @@ const getBlockTextAtIndex = (index, originalPageData) => {
   return path(['content', 'blocks', index, 'text'], originalPageData);
 };
 
+const pageType = 'cpsAsset';
+
 describe('Media Asset Page', () => {
   let pageData;
   let asFragment;
   let getByText;
   beforeEach(async () => {
     fetch.mockResponse(JSON.stringify(mapPageData));
-    const response = await getInitialData('some-map-path');
+    const response = await getInitialData({
+      path: 'some-map-path',
+      pageType,
+    });
     pageData = response.pageData;
 
     ({ asFragment, getByText } = render(
@@ -210,7 +215,10 @@ describe('Media Asset Page', () => {
 
     it('should render version (live audio stream)', async () => {
       fetch.mockResponse(JSON.stringify(uzbekPageData));
-      const response = await getInitialData('some-map-path');
+      const response = await getInitialData({
+        path: 'some-map-path',
+        pageType,
+      });
       pageData = response.pageData;
       const liveStreamBlock = getLiveStreamBlock(pageData);
       liveStreamSource = getLiveStreamSource(liveStreamBlock);
@@ -289,7 +297,10 @@ describe('Media Asset Page', () => {
 
 it('should not show the timestamp when allowDateStamp is false', async () => {
   fetch.mockResponse(JSON.stringify(mapPageData));
-  const { pageData } = await getInitialData('some-map-path');
+  const { pageData } = await getInitialData({
+    path: 'some-map-path',
+    pageType,
+  });
   const pageDataWithHiddenTimestamp = assocPath(
     ['metadata', 'options', 'allowDateStamp'],
     false,
@@ -303,7 +314,10 @@ it('should not show the timestamp when allowDateStamp is false', async () => {
 
 it('should not show the iframe when available is false', async () => {
   fetch.mockResponse(JSON.stringify(uzbekPageData));
-  const { pageData } = await getInitialData('some-map-path');
+  const { pageData } = await getInitialData({
+    path: 'some-map-path',
+    pageType,
+  });
   const uzbekDataExpiredLivestream = assocPath(
     ['content', 'blocks', 0, 'available'],
     false,
@@ -311,9 +325,10 @@ it('should not show the iframe when available is false', async () => {
   );
 
   fetch.mockResponse(JSON.stringify(uzbekDataExpiredLivestream));
-  const { pageData: pageDataWithExpiredLiveStream } = await getInitialData(
-    'some-map-path',
-  );
+  const { pageData: pageDataWithExpiredLiveStream } = await getInitialData({
+    path: 'some-map-path',
+    pageType,
+  });
 
   render(createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'));
 
@@ -328,9 +343,10 @@ it('should show the media message when available is false', async () => {
   );
 
   fetch.mockResponse(JSON.stringify(uzbekDataExpiredLivestream));
-  const { pageData: pageDataWithExpiredLiveStream } = await getInitialData(
-    'some-map-path',
-  );
+  const { pageData: pageDataWithExpiredLiveStream } = await getInitialData({
+    path: 'some-map-path',
+    pageType,
+  });
   const { getByText } = render(
     createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'),
   );
@@ -355,9 +371,10 @@ it('should show the media message when there is no media block', async () => {
   );
 
   fetch.mockResponse(JSON.stringify(uzbekDataWithNoMediaType));
-  const { pageData: pageDataWithExpiredLiveStream } = await getInitialData(
-    'some-map-path',
-  );
+  const { pageData: pageDataWithExpiredLiveStream } = await getInitialData({
+    path: 'some-map-path',
+    pageType,
+  });
   const { getByText } = render(
     createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'),
   );
@@ -369,7 +386,10 @@ it('should show the media message when there is no media block', async () => {
 
 it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
   fetch.mockResponse(JSON.stringify(igboPageData));
-  const { pageData } = await getInitialData('some-map-path');
+  const { pageData } = await getInitialData({
+    path: 'some-map-path',
+    pageType,
+  });
 
   const { getByText } = render(createAssetPage({ pageData }, 'igbo'));
 
