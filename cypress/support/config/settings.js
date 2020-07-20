@@ -4225,7 +4225,7 @@ module.exports = () => ({
               '/persian/bbc_persian_tv/tv_programmes/w13xttnr', // Brand
               '/persian/bbc_persian_tv/tv/w172xbvktkvplq0', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
