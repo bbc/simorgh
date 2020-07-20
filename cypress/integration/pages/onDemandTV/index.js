@@ -9,9 +9,9 @@ import visitPage from '../../../support/helpers/visitPage';
 const pageType = 'onDemandTV';
 Object.keys(config)
   .filter(service => serviceHasPageType(service, pageType))
-  .forEach(service => {
-    const { variant } = config[service];
-    const paths = getPaths(service, pageType);
+  .forEach(serviceId => {
+    const { variant, name: service } = config[serviceId];
+    const paths = getPaths(serviceId, pageType);
     paths.forEach(currentPath => {
       describe(`${pageType} - ${currentPath}`, () => {
         before(() => {
