@@ -54,7 +54,7 @@ describe('CpsRecommendations', () => {
     );
     expect(container).toMatchSnapshot();
   });
-  it('should not render when the hasStoryRecommendations is disabled for the service', () => {
+  it('should not render when the hasStoryRecommendations flag is disabled for the service', () => {
     const toggleEnabled = true;
 
     const { container } = renderContainer(

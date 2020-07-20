@@ -2,7 +2,7 @@
 
 exports[`CpsRecommendations should not render when cpsRecommendations toggle is disabled 1`] = `<div />`;
 
-exports[`CpsRecommendations should not render when the hasStoryRecommendations is disabled for the service 1`] = `<div />`;
+exports[`CpsRecommendations should not render when the hasStoryRecommendations flag is disabled for the service 1`] = `<div />`;
 
 exports[`CpsRecommendations should not render when there is no recommendations data 1`] = `<div />`;
 
