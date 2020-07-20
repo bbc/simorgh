@@ -155,8 +155,8 @@ export const service = {
         },
         listen: 'Umviriza',
         watch: 'Raba',
-        liveLabel: 'LIVE',
-        nextLabel: 'NEXT',
+        liveLabel: 'IKIBIRIRAHO',
+        nextLabel: 'IBIKURIKIRA',
         previousRadioShow: 'Ikiganiro ca radiyo giheruka',
         nextRadioShow: 'Ikiganiro ca radiyo gikurikira',
         duration: 'Umwanya bimara',
@@ -189,7 +189,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      durationLabel: 'Umwanya, %duration%',
+      onFrontPage: false,
+      header: 'Ibiganiro bishya',
+      durationLabel: 'Umwanya bimara %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

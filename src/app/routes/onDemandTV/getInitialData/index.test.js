@@ -12,6 +12,8 @@ fetch.mockResponse(JSON.stringify(onDemandTvJson));
 const { env } = process;
 const spy = jest.spyOn(fetchPageData, 'default');
 
+const pageType = 'media';
+
 describe('Get initial data for on demand tv', () => {
   afterEach(() => {
     process.env = { ...env };
@@ -21,6 +23,7 @@ describe('Get initial data for on demand tv', () => {
   it('should return essential data for a page to render', async () => {
     const { pageData } = await getInitialData({
       path: 'mock-on-demand-tv-path',
+      pageType,
     });
 
     expect(pageData.language).toEqual('ps');
@@ -39,18 +42,24 @@ describe('Get initial data for on demand tv', () => {
 
   it('should override renderer on test', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
-    await getInitialData({ path: 'mock-live-tv-path' });
-    expect(spy).toHaveBeenCalledWith('mock-live-tv-path?renderer_env=live');
+    await getInitialData({ path: 'mock-live-tv-path', pageType });
+    expect(spy).toHaveBeenCalledWith({
+      path: 'mock-live-tv-path?renderer_env=live',
+      pageType,
+    });
   });
 
   it('should not override renderer on live', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
-    await getInitialData({ path: 'mock-live-tv-path' });
-    expect(spy).toHaveBeenCalledWith('mock-live-tv-path');
+    await getInitialData({ path: 'mock-live-tv-path', pageType });
+    expect(spy).toHaveBeenCalledWith({ path: 'mock-live-tv-path', pageType });
   });
 
   it('should return episodeIsAvailable as true if episode is available to watch', async () => {
-    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-tv-path',
+      pageType,
+    });
     expect(pageData.episodeIsAvailable).toEqual(true);
   });
 
@@ -61,7 +70,10 @@ describe('Get initial data for on demand tv', () => {
       onDemandTvJson,
     );
     fetch.mockResponse(JSON.stringify(pageDataWithoutVersions));
-    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-tv-path',
+      pageType,
+    });
     expect(pageData.episodeIsAvailable).toEqual(false);
     expect(loggerMock.info).toHaveBeenCalledWith(EPISODE_EXPIRED, {
       url: 'pashto/bbc_pashto_tv/w172xcldhhrdqgb',
@@ -102,6 +114,7 @@ describe('Get initial data for on demand tv', () => {
 
     await getInitialData({
       path: 'mock-on-demand-tv-path',
+      pageType,
     });
 
     const countMissingFieldCalls = mockedFunction =>

@@ -54,6 +54,7 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      recommendationTitle: 'مواضيع قد تهمك',
       seeAll: 'المزيد',
       home: 'الرئيسية',
       currentPage: 'الصفحة الحالية',

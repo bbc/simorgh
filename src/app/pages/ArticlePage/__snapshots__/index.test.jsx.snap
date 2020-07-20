@@ -17,7 +17,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
         class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae"
       >
         <h1
-          class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
+          class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 ieJNzc"
           id="content"
           tabindex="-1"
         >
@@ -504,7 +504,7 @@ exports[`should render a news article correctly 1`] = `
         class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae"
       >
         <h1
-          class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 aNHLE"
+          class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 fBaxgN"
           id="content"
           tabindex="-1"
         >
@@ -542,7 +542,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
         class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae"
       >
         <h1
-          class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 bYbRDq"
+          class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 hORJOz"
           id="content"
           tabindex="-1"
         >

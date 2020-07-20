@@ -153,7 +153,7 @@ export const service = {
         listen: 'سنیں',
         watch: 'دیکھیں',
         liveLabel: 'لائیو',
-        nextLabel: 'NEXT',
+        nextLabel: 'آگے جائیں',
         previousRadioShow: 'گذشتہ ریڈیو پروگرام',
         nextRadioShow: 'اگلا ریڈیو پروگرام',
         duration: 'دورانیہ',
@@ -187,7 +187,9 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      durationLabel: 'دورانیہ %duration%',
+      onFrontPage: false,
+      header: 'ایف ایم بلیٹن',
+      durationLabel: '%duration% دورانیہ',
     },
     recommendations: {
       hasStoryRecommendations: false,
