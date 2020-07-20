@@ -12,14 +12,14 @@ const getServiceName = producerName =>
     .replace('chinese', 'zhongwen')
     .replace('afaan_oromoo', 'afaanoromoo');
 
-export const getEmbedUrl = (body, language) => {
+export const getEmbedUrl = ({ body, language, isAmp = false }) => {
   const externalId = body.metadata.createdBy;
   const brandId = getBrandId(externalId);
   const producerName = body.metadata.analyticsLabels.producer;
   const serviceName = getServiceName(producerName);
   const { pid } = body.metadata.locators;
 
-  return [
+  const embedUrl = [
     envConfig.avEmbedBaseUrl,
     'ws/av-embeds/media',
     serviceName,
@@ -27,6 +27,8 @@ export const getEmbedUrl = (body, language) => {
     pid,
     language,
   ].join('/');
+
+  return isAmp ? `${embedUrl}/amp` : embedUrl;
 };
 
 export const isExpired = jsonData => {
@@ -41,7 +43,6 @@ export const isBrand = jsonData => {
     ['metadata', 'analyticsLabels', 'pageIdentifier'],
     jsonData,
   );
-  cy.log(pageID.includes('programmes'));
   return pageID.includes('programmes');
 };
 

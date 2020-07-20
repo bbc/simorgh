@@ -1,9 +1,13 @@
+/* eslint-disable consistent-return */
 import {
   isExpired,
   dataEndpointOverride,
+  getEmbedUrl,
+  isBrand,
 } from '../../../support/helpers/onDemandRadioTv';
+import appConfig from '../../../../src/server/utilities/serviceConfigs';
 
-export default ({ service, pageType }) => {
+export default ({ service, pageType, variant, isAmp = false }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
     describe('Brand image visible above 400px, not visible below 400px', () => {
       it(`Should display image on default viewport (1000x660))`, () => {
@@ -24,15 +28,22 @@ export default ({ service, pageType }) => {
         cy.request(
           `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
         ).then(({ body: jsonData }) => {
+          const language = appConfig[service][variant].lang;
+          const embedUrl = getEmbedUrl({ body: jsonData, language, isAmp });
+          const isBrandPage = isBrand(jsonData);
           const isExpiredEpisode = isExpired(jsonData);
 
-          if (!isExpiredEpisode) {
-            cy.get('iframe').then(iframe => {
-              cy.testResponseCodeAndType(iframe.prop('src'), 200, 'text/html');
-            });
-          } else {
-            cy.log(`Episode is expired: ${Cypress.env('currentPath')}`);
+          if (isExpiredEpisode) {
+            return cy.log(`Episode is expired: ${Cypress.env('currentPath')}`);
           }
+
+          cy.get('iframe').then(iframe => {
+            // If a brand, get the src of the iframe, otherwise, use the embed URL from the data
+            const iframeURL = isBrandPage ? iframe.prop('src') : embedUrl;
+
+            cy.get(`iframe[src*="${iframeURL}"]`).should('be.visible');
+            cy.testResponseCodeAndType(iframeURL, 200, 'text/html');
+          });
         });
       });
     });

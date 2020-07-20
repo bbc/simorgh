@@ -21,6 +21,7 @@ Object.keys(config)
         crossPlatformTests({
           service,
           pageType,
+          variant,
         });
         testsForCanonicalOnly({
           service,
@@ -40,6 +41,8 @@ Object.keys(config)
           crossPlatformTests({
             service,
             pageType,
+            variant,
+            isAmp: true,
           });
           testsForAMPOnly({
             service,
