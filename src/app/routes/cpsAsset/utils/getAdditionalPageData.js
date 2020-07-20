@@ -5,6 +5,8 @@ import fetchPageData from '../../utils/fetchPageData';
 import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 import getSecondaryColumnUrl from '#lib/utilities/getSecondaryColumnUrl';
 
+const noop = () => {};
+
 const pageTypeUrls = (assetType, service, variant) => {
   switch (assetType) {
     case STORY_PAGE:
@@ -32,7 +34,9 @@ const validateResponse = ({ status, json }, name) => {
 };
 
 const fetchUrl = ({ name, path }) =>
-  fetchPageData(path).then(response => validateResponse(response, name));
+  fetchPageData({ path })
+    .then(response => validateResponse(response, name))
+    .catch(noop);
 
 const getAdditionalPageData = async (pageData, service, variant) => {
   const assetType = getAssetType(pageData);

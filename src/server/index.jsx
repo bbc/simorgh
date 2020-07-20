@@ -2,7 +2,7 @@ import express from 'express';
 import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';
 import path from 'path';
-import pathOr from 'ramda/src/pathOr';
+import ramdaPath from 'ramda/src/path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
@@ -36,6 +36,8 @@ import {
   LOCAL_SENDFILE_ERROR,
   ROUTING_INFORMATION,
 } from '#lib/logger.const';
+import sendCustomMetric from './utilities/customMetrics';
+import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 
 const fs = require('fs');
 
@@ -289,18 +291,33 @@ server
         headers,
       });
 
+      let derivedPageType = 'Unknown';
+
       try {
-        const { service, isAmp, route, variant } = getRouteProps(
-          routes,
-          urlPath,
-        );
-        const data = await route.getInitialData({
+        const {
+          service,
+          isAmp,
+          route: { getInitialData, pageType },
+          variant,
+        } = getRouteProps(routes, urlPath);
+
+        // Set derivedPageType based on matched route
+        derivedPageType = pageType || derivedPageType;
+
+        const data = await getInitialData({
           path: url,
           service,
           variant,
+          pageType,
         });
+
         const { status } = data;
         const bbcOrigin = headers['bbc-origin'];
+
+        // Set derivedPageType based on returned page data
+        if (status === 200) {
+          derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
+        }
 
         data.path = urlPath;
         data.timeOnServer = Date.now();
@@ -319,7 +336,7 @@ server
         logger.info(ROUTING_INFORMATION, {
           url,
           status,
-          pageType: pathOr('Unknown', ['pageData', 'metadata', 'type'], data),
+          pageType: derivedPageType,
         });
 
         if (result.redirectUrl) {
@@ -329,9 +346,16 @@ server
         } else {
           throw new Error('unknown result');
         }
-      } catch ({ message, status }) {
+      } catch ({ message, status = 500 }) {
+        await sendCustomMetric({
+          metricName: NON_200_RESPONSE,
+          statusCode: status,
+          pageType: derivedPageType,
+          requestUrl: url,
+        });
+
         logger.error(SERVER_SIDE_REQUEST_FAILED, {
-          status: status || 500,
+          status,
           message,
           url,
           headers,

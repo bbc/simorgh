@@ -17,6 +17,7 @@ const StyledHeadline = styled(Headline)`
   :focus {
     outline: none;
   }
+  overflow-wrap: anywhere;
 `;
 
 const Headings = {

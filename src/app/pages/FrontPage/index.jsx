@@ -4,7 +4,18 @@ import { string, node } from 'prop-types';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
 import styled from 'styled-components';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
+  GEL_MARGIN_BELOW_400PX,
+  GEL_MARGIN_ABOVE_400PX,
+} from '@bbc/gel-foundations/spacings';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -29,6 +40,20 @@ const FrontPageMostReadSection = styled(MostReadSection)`
   width: 100%; /* Needed for IE11 */
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
+  }
+`;
+
+const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    /* To remove GEL Margins */
+    margin: ${GEL_SPACING_QUAD} -${GEL_MARGIN_BELOW_400PX} 0;
+    padding: 0 ${GEL_MARGIN_BELOW_400PX};
+  }
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin: ${GEL_SPACING_QUAD} -${GEL_MARGIN_ABOVE_400PX} 0;
+  }
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin: ${GEL_SPACING_TRPL} -${GEL_MARGIN_ABOVE_400PX} 0;
   }
 `;
 
@@ -97,18 +122,20 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
+      <AdContainer slotType="leaderboard" />
       <main role="main">
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}
         </VisuallyHiddenText>
-        <AdContainer slotType="leaderboard" />
         <IndexPageContainer>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
               {group.type === 'useful-links' && renderMostRead()}
               {radioScheduleOnPage &&
                 radioSchedulePosition === group.semanticGroupName && (
-                  <RadioScheduleContainer initialData={radioScheduleData} />
+                  <StyledRadioScheduleContainer
+                    initialData={radioScheduleData}
+                  />
                 )}
               <IndexPageSection group={group} sectionNumber={index} />
               {group.type === 'top-stories' && <AdContainer slotType="mpu" />}

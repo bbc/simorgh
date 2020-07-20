@@ -18,6 +18,7 @@ import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import getAdditionalPageData from '../utils/getAdditionalPageData';
+import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
 const formatPageData = pipe(
   addAnalyticsCounterName,
@@ -59,22 +60,24 @@ const transformJson = async (json, pathname) => {
   }
 };
 
-export default async ({ path: pathname, service, variant }) => {
-  const { json, ...rest } = await fetchPageData(pathname);
+export default async ({ path: pathname, service, variant, pageType }) => {
+  try {
+    const { json, status } = await fetchPageData({ path: pathname, pageType });
 
-  const additionalPageData = await getAdditionalPageData(
-    json,
-    service,
-    variant,
-  );
+    const additionalPageData = await getAdditionalPageData(
+      json,
+      service,
+      variant,
+    );
 
-  return {
-    ...rest,
-    ...(json && {
+    return {
+      status,
       pageData: {
         ...(await transformJson(json, pathname)),
         ...additionalPageData,
       },
-    }),
-  };
+    };
+  } catch ({ message, status = getErrorStatusCode() }) {
+    return { error: message, status };
+  }
 };

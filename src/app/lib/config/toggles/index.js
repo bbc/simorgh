@@ -47,6 +47,9 @@ const toggles = {
     cpsRecommendations: {
       enabled: true,
     },
+    cinemaModeTV: {
+      enabled: true,
+    },
   },
   test: {
     ads: {
@@ -96,6 +99,9 @@ const toggles = {
     cpsRecommendations: {
       enabled: false,
     },
+    cinemaModeTV: {
+      enabled: true,
+    },
   },
   live: {
     ads: {
@@ -143,6 +149,9 @@ const toggles = {
       enabled: true,
     },
     cpsRecommendations: {
+      enabled: false,
+    },
+    cinemaModeTV: {
       enabled: false,
     },
   },

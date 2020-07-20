@@ -14,14 +14,17 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
 }
 
 <div>
-      <div
+      <section
+        aria-hidden="true"
+        aria-label="Advertisement 2"
         class="c0"
+        role="region"
       >
         <div
           class="dotcom-ad"
           id="dotcom-mpu"
         />
-      </div>
+      </section>
     </div>
   </body>
 </html>
@@ -47,14 +50,17 @@ exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderb
   </head>
   <body>
     <div>
-      <div
+      <section
+        aria-hidden="true"
+        aria-label="Advertisement"
         class="c0"
+        role="region"
       >
         <div
           class="dotcom-ad"
           id="dotcom-leaderboard"
         />
-      </div>
+      </section>
     </div>
   </body>
 </html>

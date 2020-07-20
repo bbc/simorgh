@@ -32,6 +32,7 @@ import {
 
 const PhotoGalleryPage = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
+  const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
   const metadata = path(['metadata'], pageData);
   const allowDateStamp = path(['options', 'allowDateStamp'], metadata);
@@ -87,6 +88,7 @@ const PhotoGalleryPage = ({ pageData }) => {
     <>
       <CpsMetadata
         title={title}
+        shortHeadline={shortHeadline}
         language={metadata.language}
         description={summary}
         firstPublished={firstPublished}

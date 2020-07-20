@@ -37,6 +37,7 @@ const renderTags = tags =>
 
 const MetadataContainer = ({
   title,
+  socialHeadline,
   lang,
   description,
   openGraphType,
@@ -98,6 +99,7 @@ const MetadataContainer = ({
   };
 
   const pageTitle = `${title} - ${brandName}`;
+  const socialTitle = `${socialHeadline || title} - ${brandName}`;
 
   const metaImage = image || defaultImage;
   const metaImageAltText = imageAltText || defaultImageAltText;
@@ -136,7 +138,7 @@ const MetadataContainer = ({
       <meta property="og:image:alt" content={metaImageAltText} />
       <meta property="og:locale" content={locale} />
       <meta property="og:site_name" content={brandName} />
-      <meta property="og:title" content={pageTitle} />
+      <meta property="og:title" content={socialTitle} />
       <meta property="og:type" content={openGraphType} />
       <meta property="og:url" content={canonicalNonUkLink} />
       <meta name="twitter:card" content="summary_large_image" />
@@ -145,7 +147,7 @@ const MetadataContainer = ({
       <meta name="twitter:image:alt" content={metaImageAltText} />
       <meta name="twitter:image:src" content={metaImage} />
       <meta name="twitter:site" content={twitterSite} />
-      <meta name="twitter:title" content={pageTitle} />
+      <meta name="twitter:title" content={socialTitle} />
       {Boolean(aboutTags && aboutTags.length) && renderTags(aboutTags)}
       {Boolean(mentionsTags && mentionsTags.length) && renderTags(mentionsTags)}
       <link rel="apple-touch-icon" href={appleTouchIcon} />
@@ -173,6 +175,7 @@ const tagPropTypes = shape({
 
 MetadataContainer.propTypes = {
   title: string.isRequired,
+  socialHeadline: string,
   lang: string.isRequired,
   description: string.isRequired,
   openGraphType: string.isRequired,
@@ -184,6 +187,7 @@ MetadataContainer.propTypes = {
 };
 
 MetadataContainer.defaultProps = {
+  socialHeadline: null,
   aboutTags: [],
   mentionsTags: [],
   image: null,

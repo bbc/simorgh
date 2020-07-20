@@ -296,7 +296,7 @@ exports[`Canonical Media Asset Page SEO OG locale 1`] = `"pcm"`;
 
 exports[`Canonical Media Asset Page SEO OG site name 1`] = `"BBC News Pidgin"`;
 
-exports[`Canonical Media Asset Page SEO OG title 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
+exports[`Canonical Media Asset Page SEO OG title 1`] = `"First CPS Media Asset Pages Appear on Heloo - BBC News Pidgin"`;
 
 exports[`Canonical Media Asset Page SEO OG type 1`] = `"article"`;
 
@@ -318,4 +318,4 @@ exports[`Canonical Media Asset Page SEO Twitter image src 1`] = `"http://ichef.t
 
 exports[`Canonical Media Asset Page SEO Twitter site 1`] = `"@BBCNews"`;
 
-exports[`Canonical Media Asset Page SEO Twitter title 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
+exports[`Canonical Media Asset Page SEO Twitter title 1`] = `"First CPS Media Asset Pages Appear on Heloo - BBC News Pidgin"`;

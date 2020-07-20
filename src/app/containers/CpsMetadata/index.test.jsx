@@ -27,6 +27,7 @@ const Context = ({ service, children }) => (
 
 const mapProps = {
   title: articleDataNews.promo.headlines.seoHeadline,
+  shortHeadline: articleDataNews.promo.headlines.seoHeadline,
   language: articleDataNews.metadata.passport.language,
   description: articleDataNews.promo.headlines.seoHeadline,
   firstPublished: getISOStringDate(articleDataNews.metadata.firstPublished),

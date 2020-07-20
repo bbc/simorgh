@@ -15,7 +15,14 @@ describe('MediaPageBlocks Paragraph', () => {
     </ServiceContextProvider>,
   );
 
-  describe('when text isnt provided', () => {
+  shouldMatchSnapshot(
+    'should render correctly - dark mode',
+    <ServiceContextProvider service="news">
+      <Paragraph uuid="uuid" idAttr="idAttr" text="Example text" darkMode />
+    </ServiceContextProvider>,
+  );
+
+  describe("when text isn't provided", () => {
     suppressPropWarnings(['text', 'undefined']);
 
     isNull(

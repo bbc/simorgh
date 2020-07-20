@@ -48,6 +48,7 @@ beforeEach(async () => {
   const response = await getInitialData({
     path: 'some-front-page-path',
     service: 'pidgin',
+    pageType: 'frontPage',
   });
 
   pageData = response.pageData;
@@ -192,7 +193,7 @@ describe('Front Page', () => {
 
     it('should create window.dotcomConfig when on Canonical and hasAds is true', async () => {
       await act(async () => {
-        render(<FrontPageWithContext pageData={pageData} />);
+        render(<FrontPageWithContext service="mundo" pageData={pageData} />);
       });
 
       expect(window.dotcomConfig).toEqual({
@@ -211,7 +212,9 @@ describe('Front Page', () => {
 
     it('should not create window.dotcomConfig when on Amp and hasAds is true', async () => {
       await act(async () => {
-        render(<FrontPageWithContext pageData={pageData} isAmp />);
+        render(
+          <FrontPageWithContext service="mundo" pageData={pageData} isAmp />,
+        );
       });
 
       expect(window.dotcomConfig).toBeFalsy();

@@ -8,6 +8,7 @@ import filterEmptyGroupItems from '#app/routes/utils/sharedDataTransformers/filt
 import squashTopStories from '#app/routes/utils/sharedDataTransformers/squashTopStories';
 import addIdsToItems from '#app/routes/utils/sharedDataTransformers/addIdsToItems';
 import filterGroupsWithoutStraplines from '#app/routes/utils/sharedDataTransformers/filterGroupsWithoutStraplines';
+import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
 const transformJson = pipe(
   filterUnknownContentTypes,
@@ -35,18 +36,20 @@ export const hasRadioSchedule = async (service, variant) => {
   return serviceHasRadioSchedule && radioScheduleOnFrontPage;
 };
 
-export default async ({ path, service, variant }) => {
-  const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
-  const pageDataPromise = fetchPageData(path);
+export default async ({ path, service, variant, pageType }) => {
+  try {
+    const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
+    const pageDataPromise = fetchPageData({ path, pageType });
 
-  const { json, ...rest } = pageHasRadioSchedule
-    ? await withRadioSchedule({ pageDataPromise, service, path })
-    : await pageDataPromise;
+    const { json, status } = pageHasRadioSchedule
+      ? await withRadioSchedule({ pageDataPromise, service, path })
+      : await pageDataPromise;
 
-  return {
-    ...rest,
-    ...(json && {
+    return {
+      status,
       pageData: transformJson(json),
-    }),
-  };
+    };
+  } catch ({ message, status = getErrorStatusCode() }) {
+    return { error: message, status };
+  }
 };
