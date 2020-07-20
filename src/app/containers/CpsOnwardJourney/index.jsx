@@ -110,7 +110,9 @@ const CpsOnwardJourney = ({
   parentColumns,
   listTransform,
   singleTransform,
-  optionalLabelProps,
+  sectionLabelOverrideAs,
+  sectionLabelBar,
+  sectionLabelBackground,
   mainColumn,
 }) => {
   const a11yAttributes = {
@@ -162,7 +164,9 @@ const CpsOnwardJourney = ({
         dir={dir}
         labelId={labelId}
         mainColumn={mainColumn}
-        {...optionalLabelProps}
+        overrideHeadingAs={sectionLabelOverrideAs}
+        bar={sectionLabelBar}
+        backgroundColor={sectionLabelBackground}
       >
         {title}
       </StyledSectionLabel>
@@ -191,19 +195,19 @@ CpsOnwardJourney.propTypes = {
   }),
   listTransform: func.isRequired,
   singleTransform: func.isRequired,
-  optionalLabelProps: shape({
-    overrideHeadingAs: string,
-    bar: bool,
-    backgroundColor: string,
-  }),
+  sectionLabelOverrideAs: string,
+  sectionLabelBar: bool,
+  sectionLabelBackground: string,
   mainColumn: bool,
 };
 
 CpsOnwardJourney.defaultProps = {
   content: [],
   parentColumns: null,
-  optionalLabelProps: null,
   mainColumn: false,
+  sectionLabelOverrideAs: null,
+  sectionLabelBar: null,
+  sectionLabelBackground: null,
 };
 
 export default CpsOnwardJourney;

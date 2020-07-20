@@ -103,12 +103,6 @@ const CpsRecommendations = ({ items, parentColumns }) => {
     </Grid>
   );
 
-  const optionalLabelProps = {
-    overrideHeadingAs: 'strong',
-    bar: false,
-    backgroundColor: C_LUNAR,
-  };
-
   return (
     <RecommendationsWrapper>
       <CpsOnwardJourney
@@ -118,7 +112,9 @@ const CpsRecommendations = ({ items, parentColumns }) => {
         parentColumns={parentColumns}
         singleTransform={singleTransform}
         listTransform={listTransform}
-        optionalLabelProps={optionalLabelProps}
+        sectionLabelOverrideAs="strong"
+        sectionLabelBar={false}
+        sectionLabelBackground={C_LUNAR}
         mainColumn
       />
     </RecommendationsWrapper>
