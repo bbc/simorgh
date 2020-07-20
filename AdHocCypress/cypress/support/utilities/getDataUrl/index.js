@@ -9,5 +9,5 @@ export default path => {
   const urlFromPath = new Url(path);
   urlFromPath.set('pathname', `${urlFromPath.pathname}.json`);
 
-  return urlFromPath.toString();
+  return urlFromPath.href;
 };
