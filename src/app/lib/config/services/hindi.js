@@ -51,6 +51,7 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      recommendationTitle: 'और ये भी पढ़ें',
       seeAll: 'सब देखें',
       home: 'होम पेज',
       currentPage: 'मौजूदा पन्ना',
