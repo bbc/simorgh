@@ -13,12 +13,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   >
     <section
       aria-labelledby="recommendations-heading"
-      class="Wrapper-opyob2-0 dlivvF"
+      class="Wrapper-opyob2-0 gpdVtc"
       data-e2e="related-content"
       role="region"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD StyledSectionLabel-opyob2-2 dfvtmF"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD StyledSectionLabel-opyob2-2 dshOgq"
       >
         <strong
           class="Heading-sc-1x4gwjz-2 eZofTG"
@@ -48,7 +48,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
           dir="ltr"
         >
           <div
-            class="StyledStoryPromoWrapper-sc-1p91yk0-0 jwxjDO"
+            class="StyledStoryPromoWrapper-sc-1p91yk0-0 epoiuU"
           >
             <div
               class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
@@ -103,12 +103,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   >
     <section
       aria-labelledby="recommendations-heading"
-      class="Wrapper-opyob2-0 dlivvF"
+      class="Wrapper-opyob2-0 gpdVtc"
       data-e2e="related-content"
       role="region"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD StyledSectionLabel-opyob2-2 dfvtmF"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD StyledSectionLabel-opyob2-2 dshOgq"
       >
         <strong
           class="Heading-sc-1x4gwjz-2 eZofTG"
@@ -145,7 +145,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             dir="ltr"
           >
             <div
-              class="StyledStoryPromoWrapper-sc-1p91yk0-0 jwxjDO"
+              class="StyledStoryPromoWrapper-sc-1p91yk0-0 epoiuU"
             >
               <div
                 class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
@@ -198,7 +198,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             dir="ltr"
           >
             <div
-              class="StyledStoryPromoWrapper-sc-1p91yk0-0 jwxjDO"
+              class="StyledStoryPromoWrapper-sc-1p91yk0-0 epoiuU"
             >
               <div
                 class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
@@ -251,7 +251,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             dir="ltr"
           >
             <div
-              class="StyledStoryPromoWrapper-sc-1p91yk0-0 jwxjDO"
+              class="StyledStoryPromoWrapper-sc-1p91yk0-0 epoiuU"
             >
               <div
                 class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
@@ -304,7 +304,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             dir="ltr"
           >
             <div
-              class="StyledStoryPromoWrapper-sc-1p91yk0-0 jwxjDO"
+              class="StyledStoryPromoWrapper-sc-1p91yk0-0 epoiuU"
             >
               <div
                 class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
