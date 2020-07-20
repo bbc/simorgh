@@ -7,6 +7,7 @@ import useToggle from '#hooks/useToggle';
 import Canonical from './Canonical';
 import radioSchedulesShape from './utilities/radioScheduleShape';
 import { getRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
+import { RADIO_SCHEDULE } from '#lib/toggle.const';
 
 const RadioScheduleContainer = ({
   initialData,
@@ -14,11 +15,19 @@ const RadioScheduleContainer = ({
   lang,
   className,
 }) => {
-  const { enabled } = useToggle('radioSchedule');
+  const { enabled } = useToggle(RADIO_SCHEDULE);
   const { isAmp, env } = useContext(RequestContext);
-  const { service } = useContext(ServiceContext);
+  const { service, radioSchedule } = useContext(ServiceContext);
   const location = useLocation();
-  const radioScheduleEnabled = !isAmp && enabled;
+
+  /** Is this necessary? Does this override all radio schedule values for page types e.g. if on Front Page = true, 
+  but radioSchedule not enabled, then no schedule will display?
+  Is this documented in the run book?
+
+  Should we just remove all checks below?
+  */
+  const { hasRadioSchedule } = radioSchedule;
+  const radioScheduleEnabled = !isAmp && hasRadioSchedule && enabled;
 
   if (!radioScheduleEnabled) {
     // TODO: Add logging here stating that radio schedule is not enabled for this service
