@@ -3,14 +3,14 @@ import expressStaticGzip from 'express-static-gzip';
 
 import {
   articleDataPath,
-  frontPageDataPath,
   cpsAssetPageDataPath,
+  frontPageDataPath,
+  IdxDataPath,
+  legacyAssetPageDataPath,
+  mostReadDataRegexPath,
   onDemandRadioDataPath,
   onDemandTvDataPath,
-  mostReadDataRegexPath,
-  legacyAssetPageDataPath,
   secondaryColumnDataRegexPath,
-  IdxDataPath,
 } from '#app/routes/utils/regex';
 import { LOCAL_SENDFILE_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
