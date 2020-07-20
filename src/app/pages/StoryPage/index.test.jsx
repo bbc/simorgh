@@ -108,6 +108,8 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   return ContextsContainer;
 });
 
+const pageType = 'cpsAsset';
+
 describe('Story Page', () => {
   afterEach(() => {
     fetchMock.restore();
@@ -128,6 +130,7 @@ describe('Story Page', () => {
       const { pageData } = await getInitialData({
         path: '/some-cps-sty-path',
         service: 'pidgin',
+        pageType,
       });
 
       const page = createAssetPage({ pageData }, 'pidgin');
@@ -146,6 +149,7 @@ describe('Story Page', () => {
     const { pageData } = await getInitialData({
       path: '/some-cps-sty-path',
       service: 'igbo',
+      pageType,
     });
 
     const { getByText } = render(createAssetPage({ pageData }, 'igbo'));
@@ -163,6 +167,7 @@ describe('Story Page', () => {
     const { pageData } = await getInitialData({
       path: '/some-cps-sty-path',
       service: 'igbo',
+      pageType,
     });
 
     const pageDataWithHiddenTimestamp = assocPath(
@@ -187,6 +192,7 @@ describe('Story Page', () => {
     const { pageData } = await getInitialData({
       path: '/some-cps-sty-path',
       service: 'pidgin',
+      pageType,
     });
 
     const page = createAssetPage({ pageData }, 'pidgin');
