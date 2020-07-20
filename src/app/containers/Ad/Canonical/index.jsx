@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { oneOf } from 'prop-types';
 import styled, { css } from 'styled-components';
 import { C_LUNAR_LIGHT } from '@bbc/psammead-styles/colours';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import pathOr from 'ramda/src/pathOr';
+import { ServiceContext } from '#contexts/ServiceContext';
 import isLive from '#lib/utilities/isLive';
+import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 
 const LEADERBOARD_HEIGHT = '5.5rem';
 const LEADERBOARD_HEIGHT_GROUP_4_5 = '9rem';
@@ -23,7 +26,7 @@ const mpuStyles = css`
   min-height: ${MPU_HEIGHT};
 `;
 
-const AdContainer = styled.div`
+const AdContainer = styled.section`
   background-color: ${C_LUNAR_LIGHT};
   ${({ slotType }) => (slotType === 'mpu' ? mpuStyles : leaderboardStyles)}
 `;
@@ -37,6 +40,9 @@ export const getBootsrapSrc = queryString => {
 const CanonicalAd = ({ slotType }) => {
   const location = useLocation();
   const queryString = location.search;
+  const { ads, dir } = useContext(ServiceContext);
+  const adsLabel = pathOr('Advertisement', ['advertisementLabel'], ads);
+  const ariaLabel = getAdsAriaLabel(adsLabel, dir, slotType);
 
   useEffect(() => {
     if (window.dotcom) {
@@ -61,7 +67,12 @@ const CanonicalAd = ({ slotType }) => {
       <Helmet>
         <script src={getBootsrapSrc(queryString)} />
       </Helmet>
-      <AdContainer slotType={slotType}>
+      <AdContainer
+        slotType={slotType}
+        aria-label={ariaLabel}
+        aria-hidden="true"
+        role="region"
+      >
         <div id={`dotcom-${slotType}`} className="dotcom-ad" />
       </AdContainer>
     </>
