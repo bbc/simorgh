@@ -36,6 +36,15 @@ export const isExpired = jsonData => {
   return versions.length === 0;
 };
 
+export const isBrand = jsonData => {
+  const pageID = path(
+    ['metadata', 'analyticsLabels', 'pageIdentifier'],
+    jsonData,
+  );
+  cy.log(pageID.includes('programmes'));
+  return pageID.includes('programmes');
+};
+
 export const dataEndpointOverride = () => {
   if (Cypress.env('APP_ENV') === 'test') {
     return '?renderer_env=live';
