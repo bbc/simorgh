@@ -103,7 +103,11 @@ describe('CpsRelatedContent', () => {
       }),
     );
 
-    const { pageData } = await getInitialData('some-cps-path');
+    const { pageData } = await getInitialData({
+      path: 'some-cps-path',
+      service: 'service',
+      variant: 'variant',
+    });
 
     const transformedPromos = path(
       ['relatedContent', 'groups', 0, 'promos'],

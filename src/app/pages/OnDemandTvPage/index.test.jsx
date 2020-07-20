@@ -69,7 +69,11 @@ describe('OnDemand TV Brand Page ', () => {
   it('a11y - should render a visually hidden headline', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
-    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-tv-path',
+      service: 'service',
+      variant: 'variant',
+    });
     await renderPage({
       pageData,
       service: 'pashto',
@@ -86,7 +90,11 @@ describe('OnDemand TV Brand Page ', () => {
   it('should show the brand title for OnDemand TV Pages', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
-    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-tv-path',
+      service: 'service',
+      variant: 'variant',
+    });
     const { getByText } = await renderPage({
       pageData,
       service: 'pashto',
@@ -98,7 +106,11 @@ describe('OnDemand TV Brand Page ', () => {
   it('a11y - should aria-hide the title', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
-    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-tv-path',
+      service: 'service',
+      variant: 'variant',
+    });
     const { container } = await renderPage({
       pageData,
       service: 'pashto',
@@ -113,7 +125,11 @@ describe('OnDemand TV Brand Page ', () => {
   it('a11y - should have a "content" id on the h1', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
-    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-tv-path',
+      service: 'service',
+      variant: 'variant',
+    });
     const { container } = await renderPage({
       pageData,
       service: 'pashto',
@@ -125,7 +141,11 @@ describe('OnDemand TV Brand Page ', () => {
   it('Dark Mode Design - should match snapshot', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
-    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-tv-path',
+      service: 'service',
+      variant: 'variant',
+    });
     const { container } = await renderPage({
       pageData,
       service: 'pashto',
@@ -139,7 +159,11 @@ describe('OnDemand TV Brand Page ', () => {
 it('should show the datestamp correctly for Pashto OnDemand TV Pages', async () => {
   fetch.mockResponse(JSON.stringify(pashtoPageData));
 
-  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { pageData } = await getInitialData({
+    path: 'some-ondemand-tv-path',
+    service: 'service',
+    variant: 'variant',
+  });
   const { getByText } = await renderPage({
     pageData,
     service: 'pashto',
@@ -151,7 +175,11 @@ it('should show the datestamp correctly for Pashto OnDemand TV Pages', async () 
 it('should show the summary for OnDemand TV Pages', async () => {
   fetch.mockResponse(JSON.stringify(pashtoPageData));
 
-  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { pageData } = await getInitialData({
+    path: 'some-ondemand-tv-path',
+    service: 'service',
+    variant: 'variant',
+  });
   const { getByText } = await renderPage({
     pageData,
     service: 'pashto',
@@ -167,7 +195,11 @@ it('should show the summary for OnDemand TV Pages', async () => {
 it('should show the video player on canonical with no live override', async () => {
   process.env.SIMORGH_APP_ENV = 'live';
   fetch.mockResponse(JSON.stringify(pashtoPageData));
-  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { pageData } = await getInitialData({
+    path: 'some-ondemand-tv-path',
+    service: 'service',
+    variant: 'variant',
+  });
   const { container } = await renderPage({
     pageData,
     service: 'pashto',
@@ -184,7 +216,11 @@ it('should show the video player on canonical with no live override', async () =
 it('should show the video player on amp with no live override', async () => {
   process.env.SIMORGH_APP_ENV = 'live';
   fetch.mockResponse(JSON.stringify(pashtoPageData));
-  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { pageData } = await getInitialData({
+    path: 'some-ondemand-tv-path',
+    service: 'service',
+    variant: 'variant',
+  });
   const { container } = await renderPage({
     pageData,
     service: 'pashto',
@@ -202,7 +238,11 @@ it('should show the video player on amp with no live override', async () => {
 it('should show the video player on canonical with live override', async () => {
   process.env.SIMORGH_APP_ENV = 'test';
   fetch.mockResponse(JSON.stringify(pashtoPageData));
-  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { pageData } = await getInitialData({
+    path: 'some-ondemand-tv-path',
+    service: 'service',
+    variant: 'variant',
+  });
   const { container } = await renderPage({
     pageData,
     service: 'pashto',
@@ -218,7 +258,11 @@ it('should show the video player on canonical with live override', async () => {
 
 it('should show the video player on amp with live override', async () => {
   fetch.mockResponse(JSON.stringify(pashtoPageData));
-  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { pageData } = await getInitialData({
+    path: 'some-ondemand-tv-path',
+    service: 'service',
+    variant: 'variant',
+  });
   const { container } = await renderPage({
     pageData,
     service: 'pashto',
@@ -240,7 +284,11 @@ it('should show the expired content message if episode is expired', async () => 
     pashtoPageData,
   );
   fetch.mockResponse(JSON.stringify(pageDataWithoutVersions));
-  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { pageData } = await getInitialData({
+    path: 'some-ondemand-tv-path',
+    service: 'service',
+    variant: 'variant',
+  });
   const { container, getByText } = await renderPage({
     pageData,
     service: 'pashto',

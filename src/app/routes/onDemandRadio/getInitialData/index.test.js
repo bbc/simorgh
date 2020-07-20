@@ -61,7 +61,11 @@ describe('Get initial data for on demand radio', () => {
       onDemandRadioJson,
     );
     fetch.mockResponse(JSON.stringify(responseWithEpisodeAvailableInOneMinute));
-    const { pageData } = await getInitialData('mock-on-demand-radio-path');
+    const { pageData } = await getInitialData({
+      path: 'mock-on-demand-radio-path',
+      service: 'service',
+      variant: 'variant',
+    });
     expect(pageData.episodeIsAvailable).toEqual('not-yet-available');
   });
 
@@ -72,7 +76,11 @@ describe('Get initial data for on demand radio', () => {
       onDemandRadioJson,
     );
     fetch.mockResponse(JSON.stringify(responseWithoutVersions));
-    const { pageData } = await getInitialData('mock-on-demand-radio-path');
+    const { pageData } = await getInitialData({
+      path: 'mock-on-demand-radio-path',
+      service: 'service',
+      variant: 'variant',
+    });
     expect(pageData.episodeIsAvailable).toEqual('expired');
   });
 

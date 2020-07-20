@@ -50,7 +50,11 @@ describe('Get initial data for on demand tv', () => {
   });
 
   it('should return episodeIsAvailable as true if episode is available to watch', async () => {
-    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-tv-path',
+      service: 'service',
+      variant: 'variant',
+    });
     expect(pageData.episodeIsAvailable).toEqual(true);
   });
 
@@ -61,7 +65,11 @@ describe('Get initial data for on demand tv', () => {
       onDemandTvJson,
     );
     fetch.mockResponse(JSON.stringify(pageDataWithoutVersions));
-    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-tv-path',
+      service: 'service',
+      variant: 'variant',
+    });
     expect(pageData.episodeIsAvailable).toEqual(false);
     expect(loggerMock.info).toHaveBeenCalledWith(EPISODE_EXPIRED, {
       url: 'pashto/bbc_pashto_tv/w172xcldhhrdqgb',

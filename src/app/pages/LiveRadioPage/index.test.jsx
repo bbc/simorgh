@@ -20,7 +20,11 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
 
 describe('Radio Page Main', () => {
   it('should match snapshot for Canonical', async () => {
-    const { pageData } = await getInitialData('some-live-radio-path');
+    const { pageData } = await getInitialData({
+      path: 'some-live-radio-path',
+      service: 'service',
+      variant: 'variant',
+    });
 
     await matchSnapshotAsync(
       <ToggleContextProvider
@@ -46,7 +50,11 @@ describe('Radio Page Main', () => {
   });
 
   it('should match snapshot for AMP', async () => {
-    const { pageData } = await getInitialData('some-live-radio-path');
+    const { pageData } = await getInitialData({
+      path: 'some-live-radio-path',
+      service: 'service',
+      variant: 'variant',
+    });
 
     await matchSnapshotAsync(
       <ToggleContextProvider
