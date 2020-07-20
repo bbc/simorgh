@@ -4218,7 +4218,29 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandTV: { environments: undefined, smoke: false },
+      onDemandTV: {
+        environments: {
+          live: {
+            paths: [
+              '/persian/bbc_persian_tv/tv_programmes/w13xttnr', // Brand
+              '/persian/bbc_persian_tv/tv/w172xbvktkvplq0', // Episode
+            ],
+            enabled: false,
+          },
+          test: {
+            paths: [
+              '/persian/bbc_persian_tv/tv_programmes/w13xttnr', // Brand
+              '/persian/bbc_persian_tv/tv/w172xbvktkvplq0', // Episode
+            ],
+            enabled: true,
+          },
+          local: {
+            paths: [],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
