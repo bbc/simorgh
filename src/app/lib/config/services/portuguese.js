@@ -61,6 +61,7 @@ export const service = {
       ads: {
         advertisementLabel: 'Publicidade',
       },
+      recommendationTitle: 'Talvez também te interesse',
       seeAll: 'Ver todos',
       home: 'Início',
       currentPage: 'Página atual',

@@ -53,6 +53,7 @@ export const service = {
       ads: {
         advertisementLabel: 'إعلان',
       },
+      recommendationTitle: 'مواضيع قد تهمك',
       seeAll: 'المزيد',
       home: 'الرئيسية',
       currentPage: 'الصفحة الحالية',

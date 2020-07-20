@@ -50,6 +50,7 @@ export const service = {
       ads: {
         advertisementLabel: 'विज्ञापन',
       },
+      recommendationTitle: 'और ये भी पढ़ें',
       seeAll: 'सब देखें',
       home: 'होम पेज',
       currentPage: 'मौजूदा पन्ना',
