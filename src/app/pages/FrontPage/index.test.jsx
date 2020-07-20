@@ -47,6 +47,7 @@ beforeEach(async () => {
   const response = await getInitialData({
     path: 'some-front-page-path',
     service: 'pidgin',
+    pageType: 'frontPage',
   });
 
   pageData = response.pageData;

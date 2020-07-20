@@ -6,6 +6,8 @@ fetch.mockResponse(JSON.stringify(liveRadioJson));
 const { env } = process;
 const spy = jest.spyOn(fetchPageData, 'default');
 
+const pageType = 'media';
+
 describe('Get initial data for live radio', () => {
   afterEach(() => {
     process.env = { ...env };
@@ -13,7 +15,10 @@ describe('Get initial data for live radio', () => {
   });
 
   it('should return essential data for a page to render', async () => {
-    const { pageData } = await getInitialData({ path: 'mock-live-radio-path' });
+    const { pageData } = await getInitialData({
+      path: 'mock-live-radio-path',
+      pageType,
+    });
     expect(pageData.name).toEqual('BBC 코리아 라디오');
     expect(pageData.language).toEqual('ko');
     expect(pageData.metadata.type).toEqual('Live Radio');
@@ -29,13 +34,19 @@ describe('Get initial data for live radio', () => {
 
   it('should override renderer on test', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
-    await getInitialData({ path: 'mock-live-radio-path' });
-    expect(spy).toHaveBeenCalledWith('mock-live-radio-path?renderer_env=live');
+    await getInitialData({ path: 'mock-live-radio-path', pageType });
+    expect(spy).toHaveBeenCalledWith({
+      path: 'mock-live-radio-path?renderer_env=live',
+      pageType,
+    });
   });
 
   it('should not override renderer on live', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
-    await getInitialData({ path: 'mock-live-radio-path' });
-    expect(spy).toHaveBeenCalledWith('mock-live-radio-path');
+    await getInitialData({ path: 'mock-live-radio-path', pageType });
+    expect(spy).toHaveBeenCalledWith({
+      path: 'mock-live-radio-path',
+      pageType,
+    });
   });
 });

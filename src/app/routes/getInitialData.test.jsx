@@ -8,7 +8,7 @@ routes
     it(`${pageType} - should handle Ares 404`, async () => {
       global.fetch.mockResponseOnce(JSON.stringify({}), { status: 404 });
 
-      const actual = await getInitialData(MOCK_PATH);
+      const actual = await getInitialData({ path: MOCK_PATH, pageType });
       const expected = {
         error: 'data_response_404',
         status: 404,
@@ -20,7 +20,7 @@ routes
     it(`${pageType} - should handle Ares 202`, async () => {
       global.fetch.mockResponseOnce(JSON.stringify({}), { status: 202 });
 
-      const actual = await getInitialData(MOCK_PATH);
+      const actual = await getInitialData({ path: MOCK_PATH, pageType });
 
       expect(actual.status).toEqual(502);
       expect(actual.error).toMatch(
@@ -31,7 +31,7 @@ routes
     it(`${pageType} - should handle Ares 500`, async () => {
       global.fetch.mockResponseOnce(JSON.stringify({}), { status: 500 });
 
-      const actual = await getInitialData(MOCK_PATH);
+      const actual = await getInitialData({ path: MOCK_PATH, pageType });
 
       expect(actual.status).toEqual(502);
       expect(actual.error).toMatch(
@@ -42,7 +42,7 @@ routes
     it(`${pageType} - should handle Ares returning unexpected data`, async () => {
       global.fetch.mockResponseOnce('dataIsNotAsExpected');
 
-      const actual = await getInitialData(MOCK_PATH);
+      const actual = await getInitialData({ path: MOCK_PATH, pageType });
 
       expect(actual.status).toEqual(502);
       expect(actual.error).toEqual(
