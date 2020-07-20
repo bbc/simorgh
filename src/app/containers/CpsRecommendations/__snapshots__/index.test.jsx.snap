@@ -34,7 +34,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                 dir="ltr"
                 id="recommendations-heading"
               >
-                Recommendations
+                You may also be interested in
               </span>
             </span>
           </span>
@@ -124,7 +124,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                 dir="ltr"
                 id="recommendations-heading"
               >
-                Recommendations
+                You may also be interested in
               </span>
             </span>
           </span>

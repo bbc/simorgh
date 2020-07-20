@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, number } from 'prop-types';
 import styled from 'styled-components';
+import pathOr from 'ramda/src/pathOr';
 import { StoryPromoLiBase, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { C_LUNAR, C_GHOST } from '@bbc/psammead-styles/colours';
 import {
@@ -34,12 +35,18 @@ const RecommendationsWrapper = styled.div`
 `;
 
 const CpsRecommendations = ({ items, parentColumns }) => {
-  const { recommendations, dir } = useContext(ServiceContext);
+  const { recommendations, dir, translations } = useContext(ServiceContext);
   const { enabled } = useToggle('cpsRecommendations');
 
   const { hasStoryRecommendations } = recommendations;
 
   if (!hasStoryRecommendations || !enabled || !items.length) return null;
+
+  const title = pathOr(
+    'You may also be interested in',
+    ['recommendationTitle'],
+    translations,
+  );
 
   const singleTransform = item => {
     return (
@@ -107,7 +114,7 @@ const CpsRecommendations = ({ items, parentColumns }) => {
     <RecommendationsWrapper>
       <CpsOnwardJourney
         labelId="recommendations-heading"
-        title="Recommendations"
+        title={title}
         content={items}
         parentColumns={parentColumns}
         singleTransform={singleTransform}
