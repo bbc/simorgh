@@ -4236,7 +4236,7 @@ module.exports = () => ({
           },
           local: {
             paths: [],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
