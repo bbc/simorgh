@@ -52,7 +52,7 @@ describe('Legacy MAP Media Playback', () => {
         });
 
         it(`Player has expected image`, () => {
-          cy.request(`${path}.json`).then(({ body: jsonData }) => {
+          cy.request(getDataUrl(path)).then(({ body: jsonData }) => {
             cy.visit(path);
             cy.get(
               'div[class^="StyledVideoContainer"] iframe[class^="StyledIframe"]',
