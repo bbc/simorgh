@@ -2,11 +2,11 @@
 
 exports[`CpsRecommendations should not render when cpsRecommendations toggle is disabled 1`] = `<div />`;
 
-exports[`CpsRecommendations should not render when the hasStoryRecommendations flag is disabled for the service 1`] = `<div />`;
+exports[`CpsRecommendations should not render when the hasStoryRecommendations is disabled for the service 1`] = `<div />`;
 
 exports[`CpsRecommendations should not render when there is no recommendations data 1`] = `<div />`;
 
-exports[`CpsRecommendations should render when cpsRecommendations toggle and hasStoryRecommendations flag are both true for a single item 1`] = `
+exports[`CpsRecommendations should render when cpsRecommendations toggle is enabled and hasStoryRecommendations flag is enabled for the service for a single item 1`] = `
 <div>
   <div
     class="RecommendationsWrapper-sc-1p91yk0-1 isuewT"
@@ -48,36 +48,45 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
           dir="ltr"
         >
           <div
-            class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys StoryPromoWrapper-sc-1p91yk0-0 lgUEsJ"
+            class="StyledStoryPromoWrapper-sc-1p91yk0-0 jwxjDO"
           >
             <div
-              class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-              dir="ltr"
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
             >
               <div
-                class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
               >
-                <img
-                  alt="Angie Dodge"
-                  class="StyledImg-sc-7vx2mr-0 hIxkbt"
-                  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/BD47/production/_111155484_mediaitem111155481.jpg"
-                />
-              </div>
-            </div>
-            <div
-              class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-              dir="ltr"
-            >
-              <span
-                class="Headline-sc-1dvfmi3-3 dnWhDh"
-              >
-                <a
-                  class="Link-sc-1dvfmi3-5 jeUMCT"
-                  href="/mundo/noticias-53377054"
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                 >
-                  La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino
-                </a>
-              </span>
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <div
+                  class="Headline-sc-1dvfmi3-3 dnWhDh"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="/mundo/noticias-53377054"
+                  >
+                    La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -87,7 +96,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
 </div>
 `;
 
-exports[`CpsRecommendations should render when cpsRecommendations toggle and hasStoryRecommendations flag are both true for multiple items 1`] = `
+exports[`CpsRecommendations should render when cpsRecommendations toggle is enabled and hasStoryRecommendations flag is enabled for the service for multiple items 1`] = `
 <div>
   <div
     class="RecommendationsWrapper-sc-1p91yk0-1 isuewT"
@@ -136,36 +145,45 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
             dir="ltr"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys StoryPromoWrapper-sc-1p91yk0-0 lgUEsJ"
+              class="StyledStoryPromoWrapper-sc-1p91yk0-0 jwxjDO"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="ltr"
+                class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  dir="ltr"
                 >
-                  <img
-                    alt="Angie Dodge"
-                    class="StyledImg-sc-7vx2mr-0 hIxkbt"
-                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/BD47/production/_111155484_mediaitem111155481.jpg"
-                  />
-                </div>
-              </div>
-              <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-                dir="ltr"
-              >
-                <span
-                  class="Headline-sc-1dvfmi3-3 dnWhDh"
-                >
-                  <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
-                    href="/mundo/noticias-53377054"
+                  <div
+                    class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                   >
-                    La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino
-                  </a>
-                </span>
+                    <div
+                      class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
+                    <div
+                      class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                  dir="ltr"
+                >
+                  <div
+                    class="Headline-sc-1dvfmi3-3 dnWhDh"
+                  >
+                    <a
+                      class="Link-sc-1dvfmi3-5 jeUMCT"
+                      href="/mundo/noticias-53377054"
+                    >
+                      La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -180,36 +198,45 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
             dir="ltr"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys StoryPromoWrapper-sc-1p91yk0-0 lgUEsJ"
+              class="StyledStoryPromoWrapper-sc-1p91yk0-0 jwxjDO"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="ltr"
+                class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  dir="ltr"
                 >
-                  <img
-                    alt="Edy Fonseca"
-                    class="StyledImg-sc-7vx2mr-0 hIxkbt"
-                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/11DDC/production/_112608137_dsc04722.jpg"
-                  />
-                </div>
-              </div>
-              <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-                dir="ltr"
-              >
-                <span
-                  class="Headline-sc-1dvfmi3-3 dnWhDh"
-                >
-                  <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
-                    href="/mundo/noticias-america-latina-52884902"
+                  <div
+                    class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                   >
-                    Coronavirus en Colombia | El caso de la vigilante Edy Fonseca: "Me retuvieron en un edificio de clase alta durante la pandemia, lo acepté y me siento culpable"
-                  </a>
-                </span>
+                    <div
+                      class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
+                    <div
+                      class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                  dir="ltr"
+                >
+                  <div
+                    class="Headline-sc-1dvfmi3-3 dnWhDh"
+                  >
+                    <a
+                      class="Link-sc-1dvfmi3-5 jeUMCT"
+                      href="/mundo/noticias-america-latina-52884902"
+                    >
+                      Coronavirus en Colombia | El caso de la vigilante Edy Fonseca: "Me retuvieron en un edificio de clase alta durante la pandemia, lo acepté y me siento culpable"
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -224,36 +251,45 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
             dir="ltr"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys StoryPromoWrapper-sc-1p91yk0-0 lgUEsJ"
+              class="StyledStoryPromoWrapper-sc-1p91yk0-0 jwxjDO"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="ltr"
+                class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  dir="ltr"
                 >
-                  <img
-                    alt="Martha Mukamushinzimana dice que sólo estaba siguiendo órdenes."
-                    class="StyledImg-sc-7vx2mr-0 hIxkbt"
-                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0B66/production/_112981920_53113381.jpg"
-                  />
-                </div>
-              </div>
-              <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-                dir="ltr"
-              >
-                <span
-                  class="Headline-sc-1dvfmi3-3 dnWhDh"
-                >
-                  <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
-                    href="/mundo/noticias-internacional-53113381"
+                  <div
+                    class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                   >
-                    Soy una mujer genocida y aún me persiguen los recuerdos de lo que hice
-                  </a>
-                </span>
+                    <div
+                      class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
+                    <div
+                      class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                  dir="ltr"
+                >
+                  <div
+                    class="Headline-sc-1dvfmi3-3 dnWhDh"
+                  >
+                    <a
+                      class="Link-sc-1dvfmi3-5 jeUMCT"
+                      href="/mundo/noticias-internacional-53113381"
+                    >
+                      Soy una mujer genocida y aún me persiguen los recuerdos de lo que hice
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -268,36 +304,45 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle and has
             dir="ltr"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys StoryPromoWrapper-sc-1p91yk0-0 lgUEsJ"
+              class="StyledStoryPromoWrapper-sc-1p91yk0-0 jwxjDO"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                dir="ltr"
+                class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  dir="ltr"
                 >
-                  <img
-                    alt="Julia Garner en The Assitant"
-                    class="StyledImg-sc-7vx2mr-0 hIxkbt"
-                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/98E7/production/_113334193_10f06dbb-371a-4aa0-9577-7152063e5f97.jpg"
-                  />
-                </div>
-              </div>
-              <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-                dir="ltr"
-              >
-                <span
-                  class="Headline-sc-1dvfmi3-3 dnWhDh"
-                >
-                  <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
-                    href="/mundo/vert-cul-53370542"
+                  <div
+                    class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
                   >
-                    Estrenos 2020: las 10 mejores películas de lo que va del año según la BBC (y que seguramente no pudiste ver en el cine)
-                  </a>
-                </span>
+                    <div
+                      class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
+                    <div
+                      class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                  dir="ltr"
+                >
+                  <div
+                    class="Headline-sc-1dvfmi3-3 dnWhDh"
+                  >
+                    <a
+                      class="Link-sc-1dvfmi3-5 jeUMCT"
+                      href="/mundo/vert-cul-53370542"
+                    >
+                      Estrenos 2020: las 10 mejores películas de lo que va del año según la BBC (y que seguramente no pudiste ver en el cine)
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
