@@ -2,11 +2,11 @@
 
 exports[`CpsRecommendations should not render when cpsRecommendations toggle is disabled 1`] = `<div />`;
 
-exports[`CpsRecommendations should not render when the hasStoryRecommendations flag is disabled for the service 1`] = `<div />`;
+exports[`CpsRecommendations should not render when the service does not support recommendations 1`] = `<div />`;
 
 exports[`CpsRecommendations should not render when there is no recommendations data 1`] = `<div />`;
 
-exports[`CpsRecommendations should render when cpsRecommendations toggle is enabled and hasStoryRecommendations flag is enabled for the service for a single item 1`] = `
+exports[`CpsRecommendations should render when cpsRecommendations toggle is enabled and the service supports recommendations for a single item 1`] = `
 <div>
   <div
     class="RecommendationsWrapper-sc-1p91yk0-1 isuewT"
@@ -34,7 +34,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                 dir="ltr"
                 id="recommendations-heading"
               >
-                You may also be interested in
+                Quizás también te interese
               </span>
             </span>
           </span>
@@ -96,7 +96,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 </div>
 `;
 
-exports[`CpsRecommendations should render when cpsRecommendations toggle is enabled and hasStoryRecommendations flag is enabled for the service for multiple items 1`] = `
+exports[`CpsRecommendations should render when cpsRecommendations toggle is enabled and the service supports recommendations for multiple items 1`] = `
 <div>
   <div
     class="RecommendationsWrapper-sc-1p91yk0-1 isuewT"
@@ -124,7 +124,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                 dir="ltr"
                 id="recommendations-heading"
               >
-                You may also be interested in
+                Quizás también te interese
               </span>
             </span>
           </span>
