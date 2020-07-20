@@ -12,6 +12,8 @@ import {
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
 import Grid from '@bbc/psammead-grid';
+import { C_GHOST } from '@bbc/psammead-styles/colours';
+
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import {
@@ -210,7 +212,7 @@ CpsOnwardJourney.defaultProps = {
   mainColumn: false,
   sectionLabelOverrideAs: null,
   sectionLabelBar: true,
-  sectionLabelBackground: null,
+  sectionLabelBackground: C_GHOST,
 };
 
 export default CpsOnwardJourney;

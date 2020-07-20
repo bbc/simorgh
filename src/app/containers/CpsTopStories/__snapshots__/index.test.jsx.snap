@@ -27,7 +27,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
               class="FlexRow-wx5kdp-2 dVBNyZ"
             >
               <span
-                class="Title-wx5kdp-4 jAIoqm"
+                class="Title-wx5kdp-4 cERxQI"
                 dir="ltr"
                 id="top-stories-heading"
               >
@@ -144,7 +144,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
               class="FlexRow-wx5kdp-2 dVBNyZ"
             >
               <span
-                class="Title-wx5kdp-4 jAIoqm"
+                class="Title-wx5kdp-4 cERxQI"
                 dir="ltr"
                 id="top-stories-heading"
               >

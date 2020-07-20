@@ -27,7 +27,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
               class="FlexRow-wx5kdp-2 dVBNyZ"
             >
               <span
-                class="Title-wx5kdp-4 jAIoqm"
+                class="Title-wx5kdp-4 cERxQI"
                 dir="ltr"
                 id="features-analysis-heading"
               >
@@ -182,7 +182,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
               class="FlexRow-wx5kdp-2 dVBNyZ"
             >
               <span
-                class="Title-wx5kdp-4 jAIoqm"
+                class="Title-wx5kdp-4 cERxQI"
                 dir="ltr"
                 id="features-analysis-heading"
               >
