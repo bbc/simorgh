@@ -11,10 +11,13 @@ import getEpisodeAvailability, {
   EPISODE_STATUS,
 } from '#lib/utilities/episodeAvailability';
 
-export default async ({ path: pathname }) => {
+export default async ({ path: pathname, pageType }) => {
   try {
     const onDemandTvDataPath = overrideRendererOnTest(pathname);
-    const { json, status } = await fetchPageData(onDemandTvDataPath);
+    const { json, status } = await fetchPageData({
+      path: onDemandTvDataPath,
+      pageType,
+    });
 
     const get = pathWithLogging(getUrl(json), TV_MISSING_FIELD, json);
 
