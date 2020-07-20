@@ -24,7 +24,9 @@ const baseServiceConfig = {
   isTrustProjectParticipant: true,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
-  radioSchedule: {},
+  radioSchedule: {
+    hasRadioSchedule: false,
+  },
   recommendations: {
     hasStoryRecommendations: false,
   },

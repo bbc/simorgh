@@ -200,6 +200,7 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
+      hasRadioSchedule: true,
       frontPagePosition: 'Features',
       frequenciesPageUrl:
         '/afrique/institutionelles/2010/12/000000_schedules_frequencies_afrique',

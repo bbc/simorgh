@@ -28,7 +28,9 @@ const baseServiceConfig = {
   script: noAscendersOrDescenders,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
-  radioSchedule: {},
+  radioSchedule: {
+    hasRadioSchedule: false,
+  },
   recommendations: {
     hasStoryRecommendations: false,
   },

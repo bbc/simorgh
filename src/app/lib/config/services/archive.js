@@ -166,7 +166,9 @@ export const service = {
       lastUpdated: 'Last updated:',
       hasMostRead: false,
     },
-    radioSchedule: {},
+    radioSchedule: {
+      hasRadioSchedule: false,
+    },
     footer: {
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
