@@ -125,6 +125,36 @@ pipeline {
     booleanParam(name: 'SKIP_OOH_CHECK', defaultValue: false, description: 'Allow Simorgh deployment to LIVE outside the set Out of Hours (O.O.H) time span.')
   }
   stages {
+    // If the branch is latest trigger the test CD pipeline
+    stage ('Start CD deployment') {
+      when {
+        expression { env.BRANCH_NAME == 'latest' }
+      }
+      steps {
+        script {
+          getCommitInfo()
+          
+          // TODO replicate in test cd pipeline and delete
+          // Simorgh.setBuildMetadataLegacy('simorgh', env.BUILD_NUMBER, appGitCommit) // Set Simorgh build metadata
+
+          def run = build(
+            job: 'simorgh-infrastructure-test/latest',
+            parameters: [
+              [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: appGitCommit],
+              booleanParam(name: 'SKIP_OOH_CHECK', value: params.SKIP_OOH_CHECK)
+            ],
+            propagate: true,
+            wait: true
+          )
+          echo "Child variables: ${run.buildVariables}"
+          if (run.buildVariables.COSMOS_VERSION) {
+            currentBuild.description = "Cosmos release ${run.buildVariables.COSMOS_VERSION}"
+          }
+        }
+      }
+    }
+
+    // PR CI checks, only run if branch != latest
     stage ('Check and stop previous running builds') {
       when {
         expression { env.BRANCH_NAME != 'latest' }
@@ -133,7 +163,12 @@ pipeline {
         cancelPreviousBuilds()
       }
     }
+
+    // PR CI checks, only run if branch != latest
     stage ('Install Dependencies') {
+      when {
+        expression { env.BRANCH_NAME != 'latest' }
+      }
       agent {
         docker {
           image "${nodeImage}"
@@ -144,7 +179,12 @@ pipeline {
         installDependencies()
       }
     }
+
+    // PR CI checks, only run if branch != latest
     stage ('Build for Test') {
+      when {
+        expression { env.BRANCH_NAME != 'latest' }
+      }
       agent {
         docker {
           image "${nodeImage}"
@@ -155,7 +195,12 @@ pipeline {
         buildApplication()
       }
     }
-    stage ('Test') {
+
+    // PR CI checks, only run if branch != latest
+    stage ('App Tests') {
+      when {
+        expression { env.BRANCH_NAME != 'latest' }
+      }
       failFast true
       parallel {
         stage ('Test Development') {
@@ -207,6 +252,8 @@ pipeline {
         }
       }
     }
+
+    // TODO replicate on test CD pipeline
     stage ('Build for Release') {
       when {
         expression { env.BRANCH_NAME == 'latest' }
@@ -248,71 +295,40 @@ pipeline {
         }
       }
     }
-    stage ('Prepare for Deployment') {
-      when {
-        expression { env.BRANCH_NAME == 'latest' }
-      }
-      agent {
-        docker {
-          image "${nodeImage}"
-          reuseNode true
-        }
-      }
-      steps {
-        script {
-          getCommitInfo()
-          Simorgh.setBuildMetadataLegacy('simorgh', env.BUILD_NUMBER, appGitCommit) // Set Simorgh build metadata
-        }
 
-        pruneDevDependencies()
+    // TODO remove and replicate on test cd pipeline
+  //   stage ('Prepare for Deployment') {
+  //     when {
+  //       expression { env.BRANCH_NAME == 'latest' }
+  //     }
+  //     agent {
+  //       docker {
+  //         image "${nodeImage}"
+  //         reuseNode true
+  //       }
+  //     }
+  //     steps {
+  //       script {
+  //         getCommitInfo()
+  //         Simorgh.setBuildMetadataLegacy('simorgh', env.BUILD_NUMBER, appGitCommit) // Set Simorgh build metadata
+  //       }
 
-        // Moving files necessary for production to `pack` directory.
-        sh "./scripts/jenkinsProductionFiles.sh"
+  //       pruneDevDependencies()
 
-        script {
-          sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
-        }
+  //       // Moving files necessary for production to `pack` directory.
+  //       sh "./scripts/jenkinsProductionFiles.sh"
 
-        sh "rm -f ${packageName}"
-        zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
-        stash name: 'simorgh', includes: packageName
-        sh "rm -rf pack"
-      }
-    }
-    stage ('Run Pipeline') {
-      when {
-        expression { env.BRANCH_NAME == 'latest' }
-      }
-      options {
-        // Do not perform the SCM step
-        skipDefaultCheckout true
-      }
-      steps {
-        // This stage triggers the B/G deployment when merging Simorgh
-        // build(
-        //   job: 'simorgh-blue-green/add-alb-updater-lambda',
-        //   propagate: false,
-        //   wait: false
-        // )
-        unstash 'simorgh'
-        script {
-          def run = build(
-            job: 'simorgh-infrastructure-test/latest',
-            parameters: [
-              [$class: 'StringParameterValue', name: 'APPLICATION_BRANCH', value: env.BRANCH_NAME],
-              booleanParam(name: 'SKIP_OOH_CHECK', value: params.SKIP_OOH_CHECK)
-            ],
-            propagate: true,
-            wait: true
-          )
-          echo "Child variables: ${run.buildVariables}"
-          if (run.buildVariables.COSMOS_VERSION) {
-            currentBuild.description = "Cosmos release ${run.buildVariables.COSMOS_VERSION}"
-          }
-        }
-      }
-    }
-  }
+  //       script {
+  //         sh "node ./scripts/signBuild.js ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL} ${appGitCommit}"
+  //       }
+
+  //       sh "rm -f ${packageName}"
+  //       zip archive: true, dir: 'pack/', glob: '', zipFile: packageName
+  //       stash name: 'simorgh', includes: packageName
+  //       sh "rm -rf pack"
+  //     }
+  //   }
+  // }
   post {
     always {
       script {
