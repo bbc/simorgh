@@ -68,6 +68,11 @@ const gridMarginSmall = css`
 const Wrapper = styled(ConstrainedLargeGrid)`
   ${gelGridMargin}
   ${gridMarginSmall}
+  ${({ mainColumn }) =>
+    mainColumn &&
+    `
+    padding: 0 ${GEL_SPACING_DBL};
+  `}
 `;
 
 const LegacyGridItemConstrainedLarge = styled(GridItemConstrainedLarge)`
@@ -82,9 +87,6 @@ const StyledSectionLabel = styled(SectionLabel)`
     margin: 0;
     @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
       padding: ${GEL_SPACING_DBL} 0;
-    }
-    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-      padding-left: ${GEL_SPACING_DBL};
     }
   `}
 `;
@@ -126,6 +128,7 @@ const CpsOnwardJourney = ({
       <Wrapper
         data-e2e="related-content"
         parentColumns={parentColumns}
+        mainColumn={mainColumn}
         {...a11yAttributes}
       >
         {children}

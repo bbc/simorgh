@@ -9,7 +9,7 @@ import { ToggleContext } from '#contexts/ToggleContext';
 import mundoRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.ltr.json';
 import arabicRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.rtl.json';
 
-const renderRecommendations = (items, service) => {
+const renderRecommendations = (items, service, dir) => {
   const toggleState = {
     cpsRecommendations: {
       enabled: true,
@@ -24,37 +24,39 @@ const renderRecommendations = (items, service) => {
     group5: 8,
   };
   return (
-    <ServiceContextProvider service={service}>
-      <RequestContextProvider
-        isAmp={false}
-        pageType="STY"
-        service={service}
-        pathname="/pathname"
-      >
-        <ToggleContext.Provider
-          value={{ toggleState, toggleDispatch: () => {} }}
+    <div dir={dir}>
+      <ServiceContextProvider service={service}>
+        <RequestContextProvider
+          isAmp={false}
+          pageType="STY"
+          service={service}
+          pathname="/pathname"
         >
-          <CpsRecommendations items={items} parentColumns={parentGridCols} />
-        </ToggleContext.Provider>
-      </RequestContextProvider>
-    </ServiceContextProvider>
+          <ToggleContext.Provider
+            value={{ toggleState, toggleDispatch: () => {} }}
+          >
+            <CpsRecommendations items={items} parentColumns={parentGridCols} />
+          </ToggleContext.Provider>
+        </RequestContextProvider>
+      </ServiceContextProvider>
+    </div>
   );
 };
 
 storiesOf('Containers|CPS Recommendations/LTR (mundo)', module)
   .addParameters({ chromatic: { disable: true } })
   .add('multiple items', () =>
-    renderRecommendations(mundoRecommendationsData, 'mundo'),
+    renderRecommendations(mundoRecommendationsData, 'mundo', 'ltr'),
   )
   .add('single item', () =>
-    renderRecommendations([mundoRecommendationsData[0]], 'mundo'),
+    renderRecommendations([mundoRecommendationsData[0]], 'mundo', 'ltr'),
   );
 
 storiesOf('Containers|CPS Recommendations/RTL (arabic)', module)
   .addParameters({ chromatic: { disable: true } })
   .add('multiple items', () =>
-    renderRecommendations(arabicRecommendationsData, 'arabic'),
+    renderRecommendations(arabicRecommendationsData, 'arabic', 'rtl'),
   )
   .add('single item', () =>
-    renderRecommendations([arabicRecommendationsData[0]], 'arabic'),
+    renderRecommendations([arabicRecommendationsData[0]], 'arabic', `rtl`),
   );

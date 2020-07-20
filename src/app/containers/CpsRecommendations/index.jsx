@@ -4,11 +4,7 @@ import styled from 'styled-components';
 import pathOr from 'ramda/src/pathOr';
 import { StoryPromoLiBase, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { C_LUNAR, C_GHOST } from '@bbc/psammead-styles/colours';
-import {
-  GEL_SPACING,
-  GEL_SPACING_HLF,
-  GEL_SPACING_DBL,
-} from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING, GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 
 import StoryPromo from '../StoryPromo';
@@ -21,7 +17,7 @@ import Grid from '../../components/Grid';
 const StyledStoryPromoWrapper = styled.div`
   > div {
     display: grid;
-    margin: ${GEL_SPACING_HLF} ${GEL_SPACING_DBL};
+    margin: ${GEL_SPACING_HLF} 0;
     background-color: ${C_GHOST};
     @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
       margin: ${GEL_SPACING_HLF} 0;
