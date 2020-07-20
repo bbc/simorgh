@@ -36,10 +36,10 @@ export const hasRadioSchedule = async (service, variant) => {
   return serviceHasRadioSchedule && radioScheduleOnIdx;
 };
 
-export default async ({ path, service, variant }) => {
+export default async ({ path, service, variant, pageType }) => {
   try {
     const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
-    const pageDataPromise = fetchPageData(path);
+    const pageDataPromise = fetchPageData({ path, pageType });
 
     const { json, status } = pageHasRadioSchedule
       ? await withRadioSchedule({

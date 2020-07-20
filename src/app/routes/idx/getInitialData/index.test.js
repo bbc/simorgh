@@ -13,6 +13,7 @@ describe('Get intial data from IDX page', () => {
   it('should return essential data for an IDX page to render', async () => {
     const { pageData } = await getInitialData({
       path: 'mock-idx-page',
+      pageType: 'IDX',
     });
 
     expect(pageData.metadata.type).toEqual('IDX');
