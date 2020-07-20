@@ -32,10 +32,10 @@ export const getUrl = pathname => {
   return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
 };
 
-export default async pathname => {
-  const url = getUrl(pathname);
+export default async ({ path, pageType }) => {
+  const url = getUrl(path);
 
-  logger.info(DATA_REQUEST_RECEIVED, { url });
+  logger.info(DATA_REQUEST_RECEIVED, { url, pageType });
 
   try {
     const response = await fetch(url);
@@ -74,6 +74,7 @@ export default async pathname => {
       url,
       status: simorghError.status,
       error: message,
+      pageType,
     });
 
     throw simorghError;
