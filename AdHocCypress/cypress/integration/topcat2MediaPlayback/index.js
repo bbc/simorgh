@@ -1,5 +1,6 @@
 import legacyURLs from './config';
 import getAppEnv from '../../../../cypress/support/helpers/getAppEnv';
+import getDataUrl from '../../support/utilities/getDataUrl';
 
 const environment = getAppEnv();
 
@@ -10,7 +11,7 @@ describe('Legacy MAP Media Playback', () => {
     paths.forEach(path => {
       describe(path, () => {
         it(`SMP playlist has expected hrefs, bitrates and undefined url`, () => {
-          cy.request(`${path}.json`).then(({ body: jsonData }) => {
+          cy.request(getDataUrl(path)).then(({ body: jsonData }) => {
             const mediaUrlsFromData = jsonData.content.blocks[0].playlist.map(
               item => item.url,
             );
