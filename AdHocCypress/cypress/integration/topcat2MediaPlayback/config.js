@@ -100,6 +100,34 @@ export default {
     'https://www.test.bbc.com/zhongwen/trad/multimedia/2016/05/160511_vid_cultural_revolution_explainer?renderer_env=live',
   ],
   live: [
-    'https://www.bbc.com/arabic/multimedia/2013/10/131020_belfast_land_art_girl_face_',
+    'https://www.bbc.com/afrique/nos_emissions/2015/02/150226_kibera_kenya', // Video
+    'https://www.bbc.com/arabic/multimedia/2013/10/131020_belfast_land_art_girl_face_', // Video
+    'https://www.bbc.com/azeri/multimedia/2014/11/141117_tallest_smallest_guinnes_bwr', // Video
+    'https://www.bbc.com/bengali/multimedia/2016/08/160801_science_feature_august2', // Audio
+    'https://www.bbc.com/burmese/sport/2016/07/160711_weeklysports', // Audio
+    'https://www.bbc.com/gahuza/video/2015/09/150916_ubwenge', // Video
+    'https://www.bbc.com/hausa/multimedia/2012/07/120712_click', // Video
+    'https://www.bbc.com/hindi/multimedia/2015/04/150403_bbcem_vm', // Audio
+    'https://www.bbc.com/indonesia/multimedia/2016/04/160425_aceh_rohingya', // Video
+    'https://www.bbc.com/kyrgyz/kyrgyzstan/2016/02/160218_kokhon_khanate', // Audio
+    'https://www.bbc.com/nepali/multimedia/2016/02/160202_gold_mine_nepal', // Audio
+    'https://www.bbc.com/mundo/video_fotos/2016/01/160111_video_cultura_david_bowie_cambios_ms', // Video
+    'https://www.bbc.com/pashto/multimedia/2016/04/160412_iy_khushal_khatak_audio_book_part_1', // Audio
+    'https://www.bbc.com/persian/iran/2013/06/130623_l42_vid_ir_dollar', // Video
+    'https://www.bbc.com/portuguese/videos_e_fotos/2015/07/150731_robo_salto_agua_lgb', // Video
+    // 'https://www.bbc.com/russian/multimedia/2013/12/131217_v_etna_eruption', // Video
+    'https://www.bbc.com/sinhala/sri_lanka/2015/03/150311_president_coup_attempt', // Video
+    'https://www.bbc.com/somali/maqal_iyo_muuqaal/2016/07/160708_geedka_yicibka', // Audio
+    'https://www.bbc.com/swahili/medianuai/2012/09/120925_kisa_mkasa_220912', // Audio
+    'https://www.bbc.com/tamil/india/2015/03/150304_induja', // Audio
+    'https://www.bbc.com/turkce/multimedya/2013/03/130313_biz_art_eco', // Video
+    'https://www.bbc.com/ukchina/simp/elt/2015/09/150902_sotw_notting_hill_carnival', // Video
+    'https://www.bbc.com/ukchina/trad/elt/2015/03/150319_qanda_336_related_audio', // Audio
+    'https://www.bbc.com/ukrainian/multimedia/2016/05/160509_mariana_trench_video_ag', // Video
+    'https://www.bbc.com/urdu/multimedia/2014/11/141114_zaidi', // Video
+    'https://www.bbc.com/uzbek/lotin/2015/10/151022_latin_mole_skin_cancer_science_medicine', // Video
+    'https://www.bbc.com/vietnamese/multimedia/2015/02/150223_nguyenvanchau_ngodinhthihiep_1', // Audio
+    'https://www.bbc.com/zhongwen/simp/multimedia/2016/06/160608_vid_gaokao_voxpop', // Video
+    'https://www.bbc.com/zhongwen/trad/multimedia/2016/10/161005_vid_yg_rapper_chinese_fight', // Video
   ],
 };
