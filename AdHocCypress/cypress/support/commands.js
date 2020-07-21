@@ -23,7 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
-Cypress.Commands.add('testResponseCodeAndType', (path, responseCode) => {
+Cypress.Commands.add('testResponseCode', (path, responseCode) => {
   cy.request({ url: path, failOnStatusCode: false }).then(({ status }) => {
     expect(status, `Status code for ${path}`).to.equal(responseCode);
   });
