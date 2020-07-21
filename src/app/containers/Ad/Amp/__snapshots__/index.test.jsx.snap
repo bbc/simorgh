@@ -93,8 +93,17 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
   </head>
   <body>
     <div>
+<<<<<<< HEAD
       <div
         class="c0"
+=======
+      <section
+        amp-access="toggles.ads.enabled"
+        amp-access-hide="true"
+        aria-hidden="true"
+        aria-label="Publicités"
+        role="region"
+>>>>>>> latest
       >
         <div
           class="c1"
@@ -143,7 +152,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </body>
 </html>
@@ -242,8 +251,17 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
 }
 
 <div>
+<<<<<<< HEAD
       <div
         class="c0"
+=======
+      <section
+        amp-access="toggles.ads.enabled"
+        amp-access-hide="true"
+        aria-hidden="true"
+        aria-label="Publicités 2"
+        role="region"
+>>>>>>> latest
       >
         <div
           class="c1"
@@ -278,7 +296,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </body>
 </html>
