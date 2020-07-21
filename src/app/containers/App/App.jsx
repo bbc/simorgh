@@ -84,16 +84,17 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         });
       });
 
-      const nextConfigPromise = getRemoteConfig(nextService);
-      const nextDataPromise = getInitialData({
-        path: location.pathname,
-        service: nextService,
-        variant: nextVariant,
-        pageType: nextPageType,
-      });
-
-      Promise.all([nextConfigPromise, nextDataPromise]).then(
-        ([nextRemoteConfig, data]) => {
+      getRemoteConfig(nextService)
+        .then(nextRemoteConfig =>
+          getInitialData({
+            path: location.pathname,
+            service: nextService,
+            variant: nextVariant,
+            pageType: nextPageType,
+            remoteConfig: nextRemoteConfig,
+          }),
+        )
+        .then(data => {
           clearTimeout(loaderTimeout);
           shouldSetFocus.current = true;
           setState({
@@ -105,14 +106,13 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
             pageType: nextPageType,
             loading: false,
             pageData: path(['pageData'], data),
-            remoteConfig: nextRemoteConfig,
+            remoteConfig: path(['remoteConfig'], data),
             status: path(['status'], data),
             error: path(['error'], data),
             errorCode: null,
             timeOnServer: path(['timeOnServer'], data),
           });
-        },
-      );
+        });
     }
   }, [routes, location.pathname, remoteConfig]);
 
