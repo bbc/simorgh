@@ -91,7 +91,7 @@ jest.mock('./styles', () => ({
   getStyleTag: jest.fn().mockImplementation(() => <style />),
 }));
 
-jest.mock('./utilities/customMetrics');
+jest.mock('#lib/utilities/customMetrics');
 
 const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
 
