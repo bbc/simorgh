@@ -17,11 +17,16 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
 
+// styled-components removes non-standard attributes (such as AMP attributes) on
+// server rendering. spreading props like this allows us to add AMP attributes
+// to the element.
+const Section = props => <section {...props} />;
+
 // amp-geo adds geo group classes to the body of the document depending on
 // the user's location. It removes the `amp-geo-pending` class when geolocation
 // data is available.
-// setting display: none ensures XHR requests within this component are not made.
-const AdSection = styled.section`
+// setting display: none ensures ad requests within this component are not made.
+const AdSection = styled(Section)`
   background-color: ${C_LUNAR_LIGHT};
 
   .amp-geo-pending &,
