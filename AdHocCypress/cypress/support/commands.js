@@ -25,6 +25,6 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 Cypress.Commands.add('testResponseCode', (path, responseCode) => {
   cy.request({ url: path, failOnStatusCode: false }).then(({ status }) => {
-    expect(status, `Status code for ${path}`).to.equal(responseCode);
+    expect(status, `Response codes should match`).to.equal(responseCode);
   });
 });
