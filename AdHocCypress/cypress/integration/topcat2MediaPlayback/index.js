@@ -84,18 +84,11 @@ describe('Legacy MAP Media Playback', () => {
             }
 
             cy.visit(path);
-            cy.get('iframe').then($iframe => {
-              cy.testResponseCode($iframe.prop('src'), 200);
-              cy.wrap($iframe.prop('contentWindow'), {
-                timeout: 8000,
-              })
-                .its('embeddedMedia.playerInstances.mediaPlayer.ready')
-                .should('eq', true);
-            });
-
             const playButton = 'button.p_cta';
 
             cy.get('iframe').then(iframe => {
+              cy.testResponseCode(iframe.prop('src'), 200);
+
               cy.wrap(iframe.contents().find('iframe'))
                 .should(
                   inner => expect(inner.contents().find(playButton)).to.exist,
