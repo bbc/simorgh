@@ -1,9 +1,11 @@
-const getLangOverride = ({ pathname }) => {
-  // Override application variant for ukraine_in_russian idx page
-  if (pathname && pathname.includes('/ukrainian/ukraine_in_russian')) {
-    return 'ru-UA';
-  }
-  return null;
+const serviceLangMap = {
+  ru: 'ru-UA',
 };
+
+/**
+ * Returns the name of a service lang override for a given page lang.
+ * @param {string} pageLang A page lang - as provided by pageData.
+ */
+const getLangOverride = pageLang => serviceLangMap[pageLang];
 
 export default getLangOverride;
