@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 import { mainTranslations as russianMainTranslations } from './russian';
 
 const baseServiceConfig = {
-  ads: {
-    hasAds: false,
-    advertisementLabel: 'Реклама',
-  },
   articleAuthor: `http://www.facebook.com/bbcnews`,
   articleTimestampPrefix: 'Оновлення даних: ',
   atiAnalyticsAppName: 'news-ukrainian',
@@ -46,6 +42,9 @@ const baseServiceConfig = {
     brandLogoColour: `${C_WHITE}`,
   },
   translations: {
+    ads: {
+      advertisementLabel: 'Реклама',
+    },
     seeAll: 'Подивитись все',
     home: 'Головна',
     currentPage: 'Поточна сторінка',

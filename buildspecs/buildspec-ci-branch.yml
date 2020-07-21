@@ -1,5 +1,10 @@
 version: 0.2
 
+env:
+  secrets-manager:
+    CHROMATIC_PROJECT_TOKEN: simorgh-ci-branch:chromatic-project-token
+    CC_TEST_REPORTER_ID: simorgh-ci-branch:cc-test-reporter-id
+
 phases:
   install:
     runtime-versions:
@@ -14,7 +19,13 @@ phases:
   build:
     commands:
       - npx apache2-license-checker
-      - # npx chromatic test run ... (not yet implemented)
+      # Trigger Chromatic PR checks
+      - npx chromatic test run --build-script-name build:storybook --exit-once-uploaded --no-interactive
+      # Set up Code Climate PR checks
+      - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+      - chmod +x ./cc-test-reporter
+      - ./cc-test-reporter before-build
       - npm run test:local
-      - # ./cc-test-reporter ... (not yet implemented)
+      # Submit Code Climate results
+      - ./cc-test-reporter after-build -t lcov --debug --exit-code 0
       - npm run test:ci
