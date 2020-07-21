@@ -43,7 +43,7 @@ const validateResponse = ({ status, json }, name) => {
 };
 
 const fetchUrl = ({ name, path }) =>
-  fetchPageData(path)
+  fetchPageData({ path })
     .then(response => validateResponse(response, name))
     .catch(noop);
 
