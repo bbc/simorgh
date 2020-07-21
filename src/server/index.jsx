@@ -321,6 +321,7 @@ server
           path: url,
           service,
           variant,
+          pageType,
         });
 
         const { status } = data;

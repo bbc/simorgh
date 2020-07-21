@@ -119,6 +119,10 @@ export const getHref = platform => {
 
 export const getReferrer = (platform, origin, previousPath) => {
   if (platform === 'amp') {
+    /* On AMP, `\${documentReferrer}` is an amp analytics variable that resolves
+       to a `document.referrer` equivalent as the window document is undefined on amp pages.
+       https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md#document-referrer
+    */
     return `\${documentReferrer}`;
   }
 
