@@ -17,7 +17,9 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
 
-// amp-geo adds `pending` and `group` classes to the body of the document.
+// amp-geo adds geo group classes to the body of the document depending on
+// the user's location. It removes the `amp-geo-pending` class when geolocation
+// data is available.
 // setting display: none ensures XHR requests within this component are not made.
 const AdSection = styled.section`
   background-color: ${C_LUNAR_LIGHT};
