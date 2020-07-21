@@ -2,8 +2,8 @@ version: 0.2
 
 env:
   secrets-manager:
-    CHROMATIC_PROJECT_TOKEN: simorgh-build:chromatic-project-token
-    CC_TEST_REPORTER_ID: simorgh-build:cc-test-reporter-id
+    CHROMATIC_PROJECT_TOKEN: simorgh-ci-branch:chromatic-project-token
+    CC_TEST_REPORTER_ID: simorgh-ci-branch:cc-test-reporter-id
 
 phases:
   install:
