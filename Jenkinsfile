@@ -88,6 +88,7 @@ def buildStaticAssets(env, tag) {
 
   sh "npm run build:$env"
   sh 'rm -rf staticAssets && mkdir staticAssets'
+  sh "find build -type f -name '*.png' -delete" // Temo remove all .png assets to speed up upload of static assets (These assets are already avaiable on the CDN)
   sh "cp -R build/. staticAssets"
   sh "cd staticAssets && xargs -a ../excludeFromPublicBuild.txt rm -f {}"
   zip archive: true, dir: 'staticAssets', glob: '', zipFile: "static${tag}.zip"
@@ -155,7 +156,12 @@ pipeline {
         buildApplication()
       }
     }
+
+    // Dont run on latest
     stage ('Test') {
+      when {
+        expression { env.BRANCH_NAME != 'latest' }
+      }
       failFast true
       parallel {
         stage ('Test Development') {
