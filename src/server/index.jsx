@@ -304,19 +304,15 @@ server
         // Set derivedPageType based on matched route
         derivedPageType = pageType || derivedPageType;
 
-        const dataPromise = getInitialData({
+        const remoteConfig = await getRemoteConfig(service);
+
+        const data = await getInitialData({
           path: url,
           service,
           variant,
           pageType,
+          remoteConfig,
         });
-
-        const remoteConfigPromise = getRemoteConfig(service);
-
-        const [data, remoteConfig] = await Promise.all([
-          dataPromise,
-          remoteConfigPromise, // should we introduce timeouts for both calls?
-        ]);
 
         const { status } = data;
         const bbcOrigin = headers['bbc-origin'];
@@ -328,7 +324,6 @@ server
 
         data.path = urlPath;
         data.timeOnServer = Date.now();
-        data.remoteConfig = remoteConfig; // could pass this in separately from data.
 
         const result = await renderDocument({
           bbcOrigin,
