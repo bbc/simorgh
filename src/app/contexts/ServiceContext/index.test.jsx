@@ -80,7 +80,7 @@ describe('ServiceContextProvider', () => {
           'should load russian translations for main body translations',
         service: 'ukrainian',
         variant: undefined,
-        pageLang: 'ru',
+        pathname: '/ukrainian/ukraine_in_russian',
         expectedTranslation: 'Главное',
         assertionValue: 'topStoriesTitle',
       },
@@ -89,7 +89,7 @@ describe('ServiceContextProvider', () => {
           'should load ukrainian translations for header/footer translations',
         service: 'ukrainian',
         variant: undefined,
-        pageLang: 'ru',
+        pathname: '/ukrainian/ukraine_in_russian',
         expectedTranslation: 'Розділи',
         assertionValue: 'navMenuText',
       },
@@ -97,7 +97,7 @@ describe('ServiceContextProvider', () => {
         description: 'should load default ukrainian translations',
         service: 'ukrainian',
         variant: undefined,
-        pageLang: 'uk',
+        pathname: '/ukrainian/news-53134657',
         expectedTranslation: 'Головне',
         assertionValue: 'topStoriesTitle',
       },
@@ -105,7 +105,7 @@ describe('ServiceContextProvider', () => {
       ({
         description,
         service,
-        pageLang,
+        pathname,
         expectedTranslation,
         assertionValue,
       }) => {
@@ -122,7 +122,7 @@ describe('ServiceContextProvider', () => {
           let container;
           await act(async () => {
             container = await render(
-              <ServiceContextProvider service={service} pageLang={pageLang}>
+              <ServiceContextProvider service={service} pathname={pathname}>
                 <Component />
               </ServiceContextProvider>,
             ).container;
