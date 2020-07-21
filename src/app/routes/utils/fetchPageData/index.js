@@ -1,9 +1,5 @@
 import 'isomorphic-fetch';
 import nodeLogger from '#lib/logger.node';
-import { getQueryString, getUrlPath } from '#lib/utilities/urlParser';
-import getBaseUrl from './utils/getBaseUrl';
-import onClient from '#lib/utilities/onClient';
-import isLive from '#lib/utilities/isLive';
 import {
   DATA_REQUEST_RECEIVED,
   DATA_NOT_FOUND,
@@ -14,28 +10,17 @@ import {
   NOT_FOUND,
   UPSTREAM_CODES_TO_PROPAGATE_IN_SIMORGH,
 } from './utils/statusCodes';
+import sendCustomMetric from '#lib/utilities/customMetrics';
+import { NON_200_RESPONSE } from '#lib/utilities/customMetrics/metrics.const';
 import getErrorStatusCode from './utils/getErrorStatusCode';
+import getUrl from './utils/getUrl';
 
 const logger = nodeLogger(__filename);
-
-const baseUrl = onClient()
-  ? getBaseUrl(window.location.origin)
-  : process.env.SIMORGH_BASE_URL;
-
-export const getUrl = pathname => {
-  if (!pathname) return '';
-
-  const ampRegex = /.amp$/;
-  const params = isLive() ? '' : getQueryString(pathname);
-  const basePath = getUrlPath(pathname);
-
-  return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
-};
 
 export default async ({ path, pageType }) => {
   const url = getUrl(path);
 
-  logger.info(DATA_REQUEST_RECEIVED, { url, pageType });
+  logger.info(DATA_REQUEST_RECEIVED, { path, pageType, url });
 
   try {
     const response = await fetch(url);
@@ -71,10 +56,18 @@ export default async ({ path, pageType }) => {
     }
 
     logger.error(DATA_FETCH_ERROR, {
+      path,
       url,
       status: simorghError.status,
       error: message,
       pageType,
+    });
+
+    await sendCustomMetric({
+      metricName: NON_200_RESPONSE,
+      statusCode: simorghError.status,
+      pageType,
+      requestUrl: path,
     });
 
     throw simorghError;
