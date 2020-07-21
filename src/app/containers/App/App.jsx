@@ -59,7 +59,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         id: nextId,
         assetUri: nextAssetUri,
         isAmp: nextIsAmp,
-        route,
+        route: { getInitialData, pageType: nextPageType },
       } = getRouteProps(routes, location.pathname);
 
       let loaderTimeout;
@@ -76,7 +76,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
           id: nextId,
           assetUri: nextAssetUri,
           isAmp: nextIsAmp,
-          pageType: route.pageType,
+          pageType: nextPageType,
           loading: true,
           error: null,
           errorCode: null,
@@ -85,10 +85,11 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       });
 
       const nextConfigPromise = getRemoteConfig(nextService);
-      const nextDataPromise = route.getInitialData({
+      const nextDataPromise = getInitialData({
         path: location.pathname,
         service: nextService,
         variant: nextVariant,
+        pageType: nextPageType,
       });
 
       Promise.all([nextConfigPromise, nextDataPromise]).then(
@@ -101,7 +102,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
             id: nextId,
             assetUri: nextAssetUri,
             isAmp: nextIsAmp,
-            pageType: route.pageType,
+            pageType: nextPageType,
             loading: false,
             pageData: path(['pageData'], data),
             remoteConfig: nextRemoteConfig,

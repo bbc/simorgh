@@ -2551,11 +2551,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/indonesia/dunia-53413801'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/indonesia/indonesia-23130787'],
             enabled: false,
           },
           local: {
@@ -2705,15 +2705,15 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/japanese/53413346'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/japanese/23003063'],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/japanese/world-23252833'],
             enabled: false,
           },
         },
@@ -3290,11 +3290,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/marathi/india-53414454'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/marathi/india-23126095'],
             enabled: false,
           },
           local: {
@@ -3716,11 +3716,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/nepali/news-53409873'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/nepali/23210795'],
             enabled: false,
           },
           local: {
@@ -4218,7 +4218,29 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandTV: { environments: undefined, smoke: false },
+      onDemandTV: {
+        environments: {
+          live: {
+            paths: [
+              '/persian/bbc_persian_tv/tv_programmes/w13xttnr', // Brand
+              '/persian/bbc_persian_tv/tv/w172xbvktkvplq0', // Episode
+            ],
+            enabled: false,
+          },
+          test: {
+            paths: [
+              '/persian/bbc_persian_tv/tv_programmes/w13xttnr', // Brand
+              '/persian/bbc_persian_tv/tv/w172xbvktkvplq0', // Episode
+            ],
+            enabled: true,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {
@@ -5163,7 +5185,7 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/serbian/cyr/svet-53387433'],
             enabled: false,
           },
           test: {
@@ -5315,7 +5337,7 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/serbian/lat/srbija-53410255'],
             enabled: false,
           },
           test: {
@@ -6206,11 +6228,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/tamil/india-53414170'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/tamil/23140134'],
             enabled: false,
           },
           local: {
@@ -6382,11 +6404,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/telugu/india-53415434'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/telugu/23144024'],
             enabled: false,
           },
           local: {
@@ -6536,15 +6558,15 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/thai/international-53381389'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/thai/23124008'],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/thai/international-23252825'],
             enabled: false,
           },
         },
@@ -8066,11 +8088,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/vietnamese/world-53413742'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/vietnamese/forum-23080276'],
             enabled: false,
           },
           local: {
