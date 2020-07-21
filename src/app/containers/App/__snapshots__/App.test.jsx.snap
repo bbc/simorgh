@@ -11,6 +11,11 @@ exports[`App should return rendered routes 1`] = `
   initialData={
     Object {
       "pageData": "Some initial data",
+      "remoteConfig": Object {
+        "mockToggle": Object {
+          "enabled": true,
+        },
+      },
       "timeOnServer": 1582534951721,
     }
   }

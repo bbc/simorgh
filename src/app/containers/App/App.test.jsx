@@ -16,6 +16,9 @@ describe('App', () => {
   const initialData = {
     pageData: 'Some initial data',
     timeOnServer,
+    remoteConfig: {
+      mockToggle: { enabled: true },
+    },
   };
   const error = 'Error!';
   const match = {
@@ -51,8 +54,10 @@ describe('App', () => {
     expect(route.getInitialData).not.toHaveBeenCalled();
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledTimes(1);
     expect(reactRouterConfig.renderRoutes).toHaveBeenCalledWith([], {
+      assetUri: undefined,
       bbcOrigin: 'https://www.bbc.co.uk',
       pageData: initialData.pageData,
+      remoteConfig: initialData.remoteConfig,
       error: undefined,
       errorCode: undefined,
       id: undefined,
@@ -60,6 +65,7 @@ describe('App', () => {
       loading: false,
       pageType: 'article',
       service: 'ukchina',
+      status: undefined,
       pathname: 'pathnameOne',
       previousPath: null,
       variant: 'simp',
@@ -189,6 +195,7 @@ describe('App', () => {
             service: 'ukchina',
             variant: 'simp',
             pageType: 'article',
+            remoteConfig: null,
           });
 
           // start data fetch and set loading to true
