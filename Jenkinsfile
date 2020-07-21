@@ -157,10 +157,11 @@ pipeline {
       }
     }
 
-    // Only run chromatic tests on latest
     stage ('Test') {
       failFast true
       parallel {
+
+        // Do not run on latest, as these tests ran in the PR checks
         stage ('Test Development') {
           when {
             expression { env.BRANCH_NAME != 'latest' }
@@ -181,6 +182,7 @@ pipeline {
           }
         }
 
+        // Do not run on latest, as these tests ran in the PR checks
         stage ('Test Production') {
           when {
             expression { env.BRANCH_NAME != 'latest' }
