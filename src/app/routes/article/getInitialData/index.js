@@ -13,9 +13,12 @@ const transformJson = pipe(
   applyBlockPositioning,
 );
 
-export default async ({ path }) => {
+export default async ({ path, pageType }) => {
   try {
-    const { json, status } = await fetchPageData(path);
+    const { json, status } = await fetchPageData({
+      path,
+      pageType,
+    });
 
     return {
       status,
