@@ -7,5 +7,6 @@ describe('getLangOverride', () => {
 
   it('should return undefined if the given page lang does not have a service lang override', () => {
     expect(getLangOverride('uk')).toEqual(undefined);
+    expect(getLangOverride(undefined)).toEqual(undefined);
   });
 });
