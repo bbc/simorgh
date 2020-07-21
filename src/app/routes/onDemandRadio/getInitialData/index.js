@@ -11,10 +11,13 @@ import getEpisodeAvailability, {
 } from '#lib/utilities/episodeAvailability';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
-export default async ({ path: pathname }) => {
+export default async ({ path: pathname, pageType }) => {
   try {
     const onDemandRadioDataPath = overrideRendererOnTest(pathname);
-    const { json, status } = await fetchPageData(onDemandRadioDataPath);
+    const { json, status } = await fetchPageData({
+      path: onDemandRadioDataPath,
+      pageType,
+    });
 
     const episodeIsAvailable = getEpisodeAvailability(json);
 

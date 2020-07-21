@@ -1,21 +1,18 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import fetchMock from 'fetch-mock';
 import { BrowserRouter } from 'react-router-dom';
-import { render, act } from '@testing-library/react';
+import { render, act, waitFor } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import frontPageDataPidgin from '#data/pidgin/frontpage/index-light';
+import pidginFrontPageData from '#data/pidgin/frontpage/index-light';
+import mundoFrontPageData from '#data/mundo/frontpage/index.json';
 import pidginMostReadData from '#data/pidgin/mostRead';
+import mundoMostReadData from '#data/mundo/mostRead';
 import getInitialData from '#app/routes/home/getInitialData';
 import { FrontPage } from '..';
-
-const requestContextData = {
-  pageType: 'frontPage',
-  service: 'pidgin',
-  pathname: '/pathname',
-  data: { status: 200 },
-};
+import togglesConfig from '#lib/config/toggles';
 
 // eslint-disable-next-line react/prop-types
 const FrontPageWithContext = ({
@@ -25,7 +22,14 @@ const FrontPageWithContext = ({
 }) => (
   <BrowserRouter>
     <ToggleContextProvider service={service} origin="https://www.test.bbc.com">
-      <RequestContextProvider isAmp={isAmp} {...requestContextData}>
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        isAmp={isAmp}
+        pageType="frontPage"
+        pathname="/pathname"
+        service={service}
+        statusCode={200}
+      >
         <ServiceContextProvider service={service}>
           <FrontPage {...props} />
         </ServiceContextProvider>
@@ -33,31 +37,6 @@ const FrontPageWithContext = ({
     </ToggleContextProvider>
   </BrowserRouter>
 );
-
-let pageData;
-
-beforeEach(async () => {
-  window.dotcom = {
-    bootstrap: jest.fn(),
-    cmd: { push: jest.fn() },
-  };
-
-  fetch.mockResponse(JSON.stringify(frontPageDataPidgin));
-
-  const response = await getInitialData({
-    path: 'some-front-page-path',
-    service: 'pidgin',
-  });
-
-  pageData = response.pageData;
-
-  fetch.mockResponse(JSON.stringify(pidginMostReadData));
-});
-
-afterEach(() => {
-  window.dotcom = undefined;
-  window.dotcomConfig = undefined;
-});
 
 jest.mock('uuid', () => {
   let x = 1;
@@ -131,19 +110,51 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   );
 });
 
+const togglesUrl =
+  'https://mock-toggles-endpoint.bbc.co.uk/?application=simorgh&service=mundo&__amp_source_origin=https://www.test.bbc.com';
+
 describe('Front Page', () => {
+  afterEach(() => {
+    fetchMock.restore();
+  });
+
   describe('snapshots', () => {
     it('should render a pidgin frontpage correctly', async () => {
+      fetchMock.mock(
+        'http://localhost/some-front-page-path.json',
+        JSON.stringify(pidginFrontPageData),
+      );
+      const { pageData } = await getInitialData({
+        path: 'some-front-page-path',
+        service: 'pidgin',
+      });
+      fetchMock.mock(
+        ' /pidgin/mostread.json',
+        JSON.stringify(pidginMostReadData),
+      );
+
       let container;
       await act(async () => {
         container = render(<FrontPageWithContext pageData={pageData} />)
           .container;
       });
-
       expect(container).toMatchSnapshot();
     });
 
     it('should render a pidgin amp frontpage', async () => {
+      fetchMock.mock(
+        'http://localhost/some-front-page-path.json',
+        JSON.stringify(pidginFrontPageData),
+      );
+      const { pageData } = await getInitialData({
+        path: 'some-front-page-path',
+        service: 'pidgin',
+      });
+      fetchMock.mock(
+        ' /pidgin/mostread.json',
+        JSON.stringify(pidginMostReadData),
+      );
+
       const { container } = render(
         <FrontPageWithContext pageData={pageData} isAmp />,
       );
@@ -153,6 +164,19 @@ describe('Front Page', () => {
 
   describe('Assertions', () => {
     it('should render visually hidden text as h1', async () => {
+      fetchMock.mock(
+        'http://localhost/some-front-page-path.json',
+        JSON.stringify(pidginFrontPageData),
+      );
+      const { pageData } = await getInitialData({
+        path: 'some-front-page-path',
+        service: 'pidgin',
+      });
+      fetchMock.mock(
+        ' /pidgin/mostread.json',
+        JSON.stringify(pidginMostReadData),
+      );
+
       let container;
       await act(async () => {
         container = render(<FrontPageWithContext pageData={pageData} />)
@@ -176,6 +200,19 @@ describe('Front Page', () => {
     });
 
     it('should render front page sections', async () => {
+      fetchMock.mock(
+        'http://localhost/some-front-page-path.json',
+        JSON.stringify(pidginFrontPageData),
+      );
+      const { pageData } = await getInitialData({
+        path: 'some-front-page-path',
+        service: 'pidgin',
+      });
+      fetchMock.mock(
+        '/pidgin/mostread.json',
+        JSON.stringify(pidginMostReadData),
+      );
+
       let container;
       await act(async () => {
         container = render(<FrontPageWithContext pageData={pageData} />)
@@ -188,34 +225,112 @@ describe('Front Page', () => {
         expect(section.getAttribute('role')).toEqual('region');
       });
     });
+  });
 
-    it('should create window.dotcomConfig when on Canonical and hasAds is true', async () => {
+  describe('Ads', () => {
+    beforeEach(async () => {
+      window.dotcom = {
+        bootstrap: jest.fn(),
+        cmd: { push: jest.fn() },
+      };
+
+      process.env.SIMORGH_APP_ENV = 'test';
+      process.env.SIMORGH_CONFIG_URL =
+        'https://mock-toggles-endpoint.bbc.co.uk';
+      togglesConfig.test.enableFetchingToggles.enabled = true;
+    });
+
+    afterEach(() => {
+      window.dotcom = undefined;
+      window.dotcomConfig = undefined;
+    });
+
+    it('should create window.dotcomConfig when on Canonical and ads are enabled', async () => {
+      fetchMock.mock(
+        'http://localhost/some-front-page-path.json',
+        JSON.stringify(mundoFrontPageData),
+      );
+      const { pageData } = await getInitialData({
+        path: 'some-front-page-path',
+        service: 'mundo',
+      });
+      fetchMock.mock(
+        ' /mundo/mostread.json',
+        JSON.stringify(mundoMostReadData),
+      );
+      fetchMock.mock(togglesUrl, {
+        toggles: {
+          ads: {
+            enabled: true,
+            value: '',
+          },
+        },
+      });
+
       await act(async () => {
         render(<FrontPageWithContext service="mundo" pageData={pageData} />);
       });
 
-      expect(window.dotcomConfig).toEqual({
-        pageAds: true,
-        playerAds: false,
-      });
+      await waitFor(() =>
+        expect(window.dotcomConfig).toEqual({
+          pageAds: true,
+          playerAds: false,
+        }),
+      );
     });
 
-    it('should create window.dotcomConfig when on Canonical and hasAds is false', async () => {
+    it('should not create window.dotcomConfig when on Canonical and ads are disabled', async () => {
+      fetchMock.mock(
+        'http://localhost/some-front-page-path.json',
+        JSON.stringify(mundoFrontPageData),
+      );
+      const { pageData } = await getInitialData({
+        path: 'some-front-page-path',
+        service: 'mundo',
+      });
+      fetchMock.mock('/mundo/mostread.json', JSON.stringify(mundoMostReadData));
+      fetchMock.mock(togglesUrl, {
+        toggles: {
+          ads: {
+            enabled: false,
+            value: '',
+          },
+        },
+      });
+
       await act(async () => {
-        render(<FrontPageWithContext service="japanese" pageData={pageData} />);
+        render(<FrontPageWithContext service="mundo" pageData={pageData} />);
       });
 
-      expect(window.dotcomConfig).toBeFalsy();
+      await waitFor(() => expect(window.dotcomConfig).toBeUndefined());
     });
 
-    it('should not create window.dotcomConfig when on Amp and hasAds is true', async () => {
+    it('should not create window.dotcomConfig when on Amp and ads are enabled', async () => {
+      fetchMock.mock(
+        'http://localhost/some-front-page-path.json',
+        JSON.stringify(mundoFrontPageData),
+      );
+      const { pageData } = await getInitialData({
+        path: 'some-front-page-path',
+        service: 'mundo',
+      });
+      fetchMock.mock('/mundo/mostread.json', JSON.stringify(mundoMostReadData));
+      fetchMock.mock(togglesUrl, {
+        toggles: {
+          ads: {
+            enabled: true,
+            value: '',
+          },
+        },
+      });
+
       await act(async () => {
         render(
           <FrontPageWithContext service="mundo" pageData={pageData} isAmp />,
         );
       });
 
-      expect(window.dotcomConfig).toBeFalsy();
+      await waitFor(() => expect(window.dotcomConfig).toBeUndefined());
     });
   });
 });

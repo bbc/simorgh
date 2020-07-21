@@ -78,6 +78,7 @@ def buildStaticAssets(env, tag) {
 
   sh "npm run build:$env"
   sh 'rm -rf staticAssets && mkdir staticAssets'
+  sh "find build -type f -name '*.png' -delete" // Temp remove all .png assets to speed up upload of static assets (These assets are already avaiable on the CDN)
   sh "cp -R build/. staticAssets"
   sh "cd staticAssets && xargs -a ../excludeFromPublicBuild.txt rm -f {}"
   zip archive: true, dir: 'staticAssets', glob: '', zipFile: "static${tag}.zip"
@@ -134,7 +135,12 @@ pipeline {
         installDependencies()
       }
     }
+
+    // Do not run on latest
     stage ('Build for Test') {
+      when {
+        expression { env.BRANCH_NAME != 'latest' }
+      }
       agent {
         docker {
           image "${nodeImage}"
@@ -145,10 +151,16 @@ pipeline {
         buildApplication()
       }
     }
+
     stage ('Test') {
       failFast true
       parallel {
+
+        // Do not run on latest, as these tests ran in the PR checks
         stage ('Test Development') {
+          when {
+            expression { env.BRANCH_NAME != 'latest' }
+          }
           agent {
             docker {
               image "${nodeImage}"
@@ -159,7 +171,12 @@ pipeline {
             runDevelopmentTests()
           }
         }
+
+        // Do not run on latest, as these tests ran in the PR checks
         stage ('Test Production') {
+          when {
+            expression { env.BRANCH_NAME != 'latest' }
+          }
           agent {
             docker {
               image "${nodeImage}"
