@@ -74,6 +74,36 @@ describe('Legacy MAP Media Playback', () => {
             });
           });
         });
+
+        it(`Media plays`, () => {
+          cy.visit(path);
+          cy.get('iframe').then($iframe => {
+            cy.testResponseCode($iframe.prop('src'), 200);
+            cy.wrap($iframe.prop('contentWindow'), {
+              timeout: 8000,
+            })
+              .its('embeddedMedia.playerInstances.mediaPlayer.ready')
+              .should('eq', true);
+          });
+
+          const playButton = 'button.p_cta';
+
+          cy.get('iframe').then(iframe => {
+            cy.wrap(iframe.contents().find('iframe'))
+              .should(
+                inner => expect(inner.contents().find(playButton)).to.exist,
+              )
+              .then(inner => cy.wrap(inner.contents().find(playButton)).click())
+              .then(() => {
+                cy.wrap(iframe.prop('contentWindow'), {
+                  timeout: 45000,
+                })
+                  .its('embeddedMedia.playerInstances.mediaPlayer')
+                  .invoke('currentTime')
+                  .should('be.gt', 0);
+              });
+          });
+        });
       });
     });
   } else {
