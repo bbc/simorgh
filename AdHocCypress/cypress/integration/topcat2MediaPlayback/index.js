@@ -19,9 +19,10 @@ describe('Legacy MAP Media Playback', () => {
               item => (item.bitrate / 1000).toString(),
             );
             cy.visit(path);
-            cy.get(
-              'div[class^="StyledVideoContainer"] iframe[class^="StyledIframe"]',
-            ).then($iframe => {
+
+            cy.get('iframe').then($iframe => {
+              cy.testResponseCode($iframe.prop('src'), 200);
+
               cy.wrap($iframe.prop('contentWindow'), {
                 timeout: 8000,
               })
@@ -54,9 +55,9 @@ describe('Legacy MAP Media Playback', () => {
         it(`Player has expected image`, () => {
           cy.request(getDataUrl(path)).then(({ body: jsonData }) => {
             cy.visit(path);
-            cy.get(
-              'div[class^="StyledVideoContainer"] iframe[class^="StyledIframe"]',
-            ).then($iframe => {
+            cy.get('iframe').then($iframe => {
+              cy.testResponseCode($iframe.prop('src'), 200);
+
               cy.wrap($iframe.prop('contentWindow'), {
                 timeout: 8000,
               })
