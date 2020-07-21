@@ -20,6 +20,7 @@ import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
+import useToggle from '#hooks/useToggle';
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
@@ -78,7 +79,6 @@ MostReadWrapper.propTypes = {
 
 const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
-    ads,
     product,
     serviceLocalizedName,
     translations,
@@ -86,7 +86,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     radioSchedule,
   } = useContext(ServiceContext);
 
-  const hasAds = path(['hasAds'], ads);
+  const { enabled: adsEnabled } = useToggle('ads');
   const home = path(['home'], translations);
   const groups = path(['content', 'groups'], pageData);
   const lang = path(['metadata', 'language'], pageData);
@@ -111,7 +111,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   return (
     <>
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
-      {hasAds && !isAmp && <CanonicalAdBootstrapJs />}
+      {adsEnabled && !isAmp && <CanonicalAdBootstrapJs />}
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />

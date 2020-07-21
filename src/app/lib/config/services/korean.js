@@ -7,10 +7,6 @@ import 'moment/locale/ko';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: '광고',
-    },
     lang: `ko`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: '에 업데이트됨',
@@ -50,6 +46,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: '광고',
+      },
       seeAll: '모든 기사 보기',
       home: '홈',
       currentPage: '현재 페이지',
