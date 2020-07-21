@@ -67,7 +67,6 @@ export default {
     'https://www.test.bbc.com/burmese/multimedia/2016/01/160108_korean_cook?renderer_env=live',
     'https://www.test.bbc.com/burmese/multimedia/2016/07/160706_cooltech_zawgyi_facebook_unicode?renderer_env=live',
     'https://www.test.bbc.com/gahuza/video/2015/12/151201_100womenburundi?renderer_env=live',
-    'https://www.test.bbc.com/gahuza/video/2016/01/160108_australia_fire_video?renderer_env=live',
     'https://www.test.bbc.com/gahuza/ibindi_wifashisha/2010/10/101006_kidum_on_east_africa?renderer_env=live',
     'https://www.test.bbc.com/hausa/multimedia/2012/07/120712_click?renderer_env=live',
     'https://www.test.bbc.com/hausa/multimedia/2014/09/140922_ebola_sierraleone_lockdown?renderer_env=live',
