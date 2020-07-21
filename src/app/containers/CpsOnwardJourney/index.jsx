@@ -216,7 +216,7 @@ CpsOnwardJourney.propTypes = {
       the property below help ensure that it layss out properrly in both
       usages.
   */
-  columnType: oneOf(['main, secondary']).isRequired,
+  columnType: oneOf(['main', 'secondary']).isRequired,
 };
 
 CpsOnwardJourney.defaultProps = {
