@@ -35,8 +35,8 @@ import {
   LOCAL_SENDFILE_ERROR,
   ROUTING_INFORMATION,
 } from '#lib/logger.const';
-import sendCustomMetric from './utilities/customMetrics';
-import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
+import sendCustomMetric from '#lib/utilities/customMetrics';
+import { NON_200_RESPONSE } from '#lib/utilities/customMetrics/metrics.const';
 
 const fs = require('fs');
 
