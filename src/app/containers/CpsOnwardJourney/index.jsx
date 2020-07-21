@@ -1,5 +1,14 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, number, node, string, func, bool } from 'prop-types';
+import {
+  arrayOf,
+  shape,
+  number,
+  node,
+  string,
+  func,
+  bool,
+  oneOf,
+} from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled, { css } from 'styled-components';
 import {
@@ -70,8 +79,8 @@ const gridMarginSmall = css`
 const Wrapper = styled(ConstrainedLargeGrid)`
   ${gelGridMargin}
   ${gridMarginSmall}
-  ${({ mainColumn }) =>
-    mainColumn &&
+  ${({ columnType }) =>
+    columnType === 'main' &&
     `
     padding: 0 ${GEL_SPACING_DBL};
   `}
@@ -83,8 +92,8 @@ const LegacyGridItemConstrainedLarge = styled(GridItemConstrainedLarge)`
 
 const StyledSectionLabel = styled(SectionLabel)`
   margin-top: 0;
-  ${({ mainColumn }) =>
-    mainColumn &&
+  ${({ columnType }) =>
+    columnType === 'main' &&
     `
     margin: 0;
     @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
@@ -95,8 +104,8 @@ const StyledSectionLabel = styled(SectionLabel)`
 
 // Apply the correct top & bottom padding around the single story promo
 const SingleContentWrapper = styled.div`
-  ${({ mainColumn }) =>
-    !mainColumn &&
+  ${({ columnType }) =>
+    columnType === 'secondary' &&
     `
     @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
       padding-top: ${GEL_SPACING_DBL};
@@ -117,7 +126,7 @@ const CpsOnwardJourney = ({
   sectionLabelOverrideAs,
   sectionLabelBar,
   sectionLabelBackground,
-  mainColumn,
+  columnType,
 }) => {
   const a11yAttributes = {
     as: 'section',
@@ -130,7 +139,7 @@ const CpsOnwardJourney = ({
       <Wrapper
         data-e2e="related-content"
         parentColumns={parentColumns}
-        mainColumn={mainColumn}
+        columnType={columnType}
         {...a11yAttributes}
       >
         {children}
@@ -168,7 +177,7 @@ const CpsOnwardJourney = ({
         service={service}
         dir={dir}
         labelId={labelId}
-        mainColumn={mainColumn}
+        columnType={columnType}
         overrideHeadingAs={sectionLabelOverrideAs}
         bar={sectionLabelBar}
         backgroundColor={sectionLabelBackground}
@@ -176,7 +185,7 @@ const CpsOnwardJourney = ({
         {title}
       </StyledSectionLabel>
       {hasSingleContent ? (
-        <SingleContentWrapper mainColumn={mainColumn}>
+        <SingleContentWrapper columnType={columnType}>
           {singleTransform(singleContent)}
         </SingleContentWrapper>
       ) : (
@@ -203,13 +212,16 @@ CpsOnwardJourney.propTypes = {
   sectionLabelOverrideAs: string,
   sectionLabelBar: bool,
   sectionLabelBackground: string,
-  mainColumn: bool,
+  /* since this component is reused in both the main and secondary columns,
+      the property below help ensure that it layss out properrly in both
+      usages.
+  */
+  columnType: oneOf(['main, secondary']).isRequired,
 };
 
 CpsOnwardJourney.defaultProps = {
   content: [],
   parentColumns: null,
-  mainColumn: false,
   sectionLabelOverrideAs: null,
   sectionLabelBar: true,
   sectionLabelBackground: C_GHOST,

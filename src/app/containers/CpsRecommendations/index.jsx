@@ -118,7 +118,7 @@ const CpsRecommendations = ({ items, parentColumns }) => {
         sectionLabelOverrideAs="strong"
         sectionLabelBar={false}
         sectionLabelBackground={C_LUNAR}
-        mainColumn
+        columnType="main"
       />
     </RecommendationsWrapper>
   );
