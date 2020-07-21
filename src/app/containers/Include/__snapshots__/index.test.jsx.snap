@@ -22,7 +22,7 @@ exports[`IncludeContainer should render a fallback for VJs on an Amp page when i
         class="StyledErrorMessage-sc-1oc1egd-1 eCvEfh"
       >
         <strong>
-          Sorry, we can’t display this part of the story on this lightweight mobile page.
+          Sorry, we can’t display this part of the story on this lightweight mobile page. 
         </strong>
         <a
           href="https://www.test.bbc.com/pathname#include-1"
