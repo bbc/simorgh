@@ -7,10 +7,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'विज्ञापन',
-    },
     lang: `ne`,
     articleAuthor: `http://www.facebook.com/bbcnews`,
     articleTimestampPrefix: '',
@@ -50,6 +46,9 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      ads: {
+        advertisementLabel: 'विज्ञापन',
+      },
       seeAll: 'सबै हेर्नुहोस्',
       home: 'होमपेज',
       currentPage: 'अहिलेको पृष्ठ',
