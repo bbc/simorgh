@@ -15,6 +15,11 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
       rel="canonical"
     />
     <link
+      href="https://www.test.bbc.co.uk/pathname"
+      hreflang="ps"
+      rel="alternate"
+    />
+    <link
       href="http://localhost:7080/pashto/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
@@ -1185,6 +1190,11 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
     <link
       href="https://www.test.bbc.com/pathname"
       rel="canonical"
+    />
+    <link
+      href="https://www.test.bbc.co.uk/pathname"
+      hreflang="ps"
+      rel="alternate"
     />
     <link
       href="https://www.test.bbc.co.uk/pathname.amp"
