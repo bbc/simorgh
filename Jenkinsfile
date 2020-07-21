@@ -145,7 +145,12 @@ pipeline {
         installDependencies()
       }
     }
+
+    // Do not run on latest
     stage ('Build for Test') {
+      when {
+        expression { env.BRANCH_NAME != 'latest' }
+      }
       agent {
         docker {
           image "${nodeImage}"
