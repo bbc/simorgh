@@ -57,7 +57,7 @@ export default async ({ path, pageType }) => {
 
     logger.error(DATA_FETCH_ERROR, {
       path,
-      url,
+      data: url,
       status: simorghError.status,
       error: message,
       pageType,
