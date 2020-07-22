@@ -22,7 +22,7 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
 const mockRemoteToggles = {
   service: 'mundo',
   ads: {
-    enabled: true,
+    enabled: false,
   },
 };
 
