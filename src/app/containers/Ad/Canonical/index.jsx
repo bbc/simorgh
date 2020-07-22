@@ -40,13 +40,9 @@ export const getBootsrapSrc = queryString => {
 const CanonicalAd = ({ slotType }) => {
   const location = useLocation();
   const queryString = location.search;
-  const { translations, dir } = useContext(ServiceContext);
-  const label = pathOr(
-    'Advertisement',
-    ['ads', 'advertisementLabel'],
-    translations,
-  );
-  const ariaLabel = getAdsAriaLabel(label, dir, slotType);
+  const { ads, dir } = useContext(ServiceContext);
+  const adsLabel = pathOr('Advertisement', ['advertisementLabel'], ads);
+  const ariaLabel = getAdsAriaLabel(adsLabel, dir, slotType);
 
   useEffect(() => {
     if (window.dotcom) {
