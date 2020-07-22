@@ -16,19 +16,6 @@ afterEach(() => {
 
 jest.mock('#lib/utilities/customMetrics');
 
-const assertNon200ResponseCustomMetrics = ({
-  requestUrl,
-  pageType,
-  statusCode = 500,
-}) => {
-  expect(sendCustomMetric).toBeCalledWith({
-    metricName: NON_200_RESPONSE,
-    pageType,
-    requestUrl,
-    statusCode,
-  });
-};
-
 const pageType = 'Fetch Page Data';
 
 describe('fetchPageData', () => {
@@ -113,9 +100,11 @@ describe('fetchPageData', () => {
             message: 'Failed to fetch',
             status: expectedStatusCode,
           });
-          assertNon200ResponseCustomMetrics({
-            requestUrl: requestedPathname,
+
+          expect(sendCustomMetric).toBeCalledWith({
+            metricName: NON_200_RESPONSE,
             pageType,
+            requestUrl: requestedPathname,
             statusCode: expectedStatusCode,
           });
         },
@@ -151,9 +140,10 @@ describe('fetchPageData', () => {
               status: expectedStatusCode,
             });
 
-            assertNon200ResponseCustomMetrics({
-              requestUrl: requestedPathname,
+            expect(sendCustomMetric).toBeCalledWith({
+              metricName: NON_200_RESPONSE,
               pageType,
+              requestUrl: requestedPathname,
               statusCode: expectedStatusCode,
             });
           },
@@ -176,14 +166,17 @@ describe('fetchPageData', () => {
               path: requestedPathname,
               pageType,
             });
+
             expect({ message, status }).toEqual({
               message:
                 'invalid json response body at  reason: Unexpected end of JSON input',
               status: expectedStatusCode,
             });
-            assertNon200ResponseCustomMetrics({
-              requestUrl: requestedPathname,
+
+            expect(sendCustomMetric).toBeCalledWith({
+              metricName: NON_200_RESPONSE,
               pageType,
+              requestUrl: requestedPathname,
               statusCode: expectedStatusCode,
             });
           },
@@ -203,9 +196,11 @@ describe('fetchPageData', () => {
             message: 'data_response_404',
             status: expectedStatusCode,
           });
-          assertNon200ResponseCustomMetrics({
-            requestUrl: requestedPathname,
+
+          expect(sendCustomMetric).toBeCalledWith({
+            metricName: NON_200_RESPONSE,
             pageType,
+            requestUrl: requestedPathname,
             statusCode: expectedStatusCode,
           });
         },
@@ -243,9 +238,10 @@ describe('fetchPageData', () => {
               message: `Unexpected upstream response (HTTP status code 418) when requesting ${expectedUrl}`,
             });
 
-            assertNon200ResponseCustomMetrics({
-              requestUrl: requestedPathname,
+            expect(sendCustomMetric).toBeCalledWith({
+              metricName: NON_200_RESPONSE,
               pageType,
+              requestUrl: requestedPathname,
               statusCode: expectedStatusCode,
             });
           },
@@ -271,9 +267,10 @@ describe('fetchPageData', () => {
               message: `Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
             });
 
-            assertNon200ResponseCustomMetrics({
-              requestUrl: requestedPathname,
+            expect(sendCustomMetric).toBeCalledWith({
+              metricName: NON_200_RESPONSE,
               pageType,
+              requestUrl: requestedPathname,
               statusCode: expectedStatusCode,
             });
           },
@@ -306,9 +303,10 @@ describe('fetchPageData', () => {
             message: `Unexpected upstream response (HTTP status code 418) when requesting ${expectedUrl}`,
           });
 
-          assertNon200ResponseCustomMetrics({
-            requestUrl: requestedPathname,
+          expect(sendCustomMetric).toBeCalledWith({
+            metricName: NON_200_RESPONSE,
             pageType,
+            requestUrl: requestedPathname,
             statusCode: expectedStatusCode,
           });
         },
@@ -334,9 +332,10 @@ describe('fetchPageData', () => {
             message: `Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
           });
 
-          assertNon200ResponseCustomMetrics({
-            requestUrl: requestedPathname,
+          expect(sendCustomMetric).toBeCalledWith({
+            metricName: NON_200_RESPONSE,
             pageType,
+            requestUrl: requestedPathname,
             statusCode: expectedStatusCode,
           });
         },
