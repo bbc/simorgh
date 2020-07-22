@@ -7,7 +7,7 @@ import {
 } from '../../../support/helpers/onDemandRadioTv';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 
-export default ({ service, pageType, variant, isAmp = false }) => {
+export default ({ service, pageType, variant, isAmp }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
     describe('Video Player', () => {
       it('should render an iframe with a valid URL', () => {

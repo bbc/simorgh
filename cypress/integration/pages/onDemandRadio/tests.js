@@ -7,7 +7,7 @@ import {
 } from '../../../support/helpers/onDemandRadioTv';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 
-export default ({ service, pageType, variant, isAmp = false }) => {
+export default ({ service, pageType, variant, isAmp }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
     describe('Brand image visible above 400px, not visible below 400px', () => {
       it(`Should display image on default viewport (1000x660))`, () => {

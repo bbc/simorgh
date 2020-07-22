@@ -12,7 +12,7 @@ const getServiceName = producerName =>
     .replace('chinese', 'zhongwen')
     .replace('afaan_oromoo', 'afaanoromoo');
 
-export const getEmbedUrl = ({ body, language, isAmp = false }) => {
+export const getEmbedUrl = ({ body, language, isAmp }) => {
   const externalId = body.metadata.createdBy;
   const brandId = getBrandId(externalId);
   const producerName = body.metadata.analyticsLabels.producer;
