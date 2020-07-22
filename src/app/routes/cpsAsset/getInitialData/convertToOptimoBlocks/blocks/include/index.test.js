@@ -380,6 +380,7 @@ describe('convertInclude', () => {
       model: {
         href: includeSupportingAmp,
         index: 5,
+        isAmpSupported: true,
         type: 'vj',
         ampMetadata: {
           image:
