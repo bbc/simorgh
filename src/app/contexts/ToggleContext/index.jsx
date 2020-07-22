@@ -38,7 +38,7 @@ ToggleContextProvider.propTypes = {
 };
 
 ToggleContextProvider.defaultProps = {
-  remoteToggles: {},
+  remoteToggles: null,
 };
 
 export { ToggleContext, ToggleContextProvider, ToggleContextConsumer };

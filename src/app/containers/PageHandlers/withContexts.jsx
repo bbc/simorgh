@@ -92,7 +92,7 @@ const WithContexts = Component => {
     previousPath: null,
     variant: null,
     timeOnServer: null,
-    remoteConfig: {},
+    remoteConfig: null,
   };
 
   return WithContextsContainer;
