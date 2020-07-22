@@ -37,20 +37,21 @@ const EndText = styled.p`
   ${visuallyHiddenTextStyle}
 `;
 
-const formatSkipText = title => `Skip ${title} and continue reading`;
-
-const formatSkipEndText = title => `End of ${title}`;
-
-const SkipLinkWrapper = ({ service, title, children }) => {
-  const endTextId = 'recommendation_skip_link_end_text';
+const SkipLinkWrapper = ({
+  service,
+  skipEndId,
+  children,
+  skipText,
+  skipEndText,
+}) => {
   return (
     <Wrapper>
-      <SkipLink service={service} href={`#${endTextId}`}>
-        {formatSkipText(title)}
+      <SkipLink service={service} href={`#${skipEndId}`}>
+        {skipText}
       </SkipLink>
       {children}
-      <EndText tabIndex="-1" id={endTextId}>
-        {formatSkipEndText(title)}
+      <EndText tabIndex="-1" id={skipEndId}>
+        {skipEndText}
       </EndText>
     </Wrapper>
   );
@@ -59,7 +60,9 @@ const SkipLinkWrapper = ({ service, title, children }) => {
 SkipLinkWrapper.propTypes = {
   service: string.isRequired,
   children: node.isRequired,
-  title: string.isRequired,
+  skipEndId: string.isRequired,
+  skipText: string.isRequired,
+  skipEndText: string.isRequired,
 };
 
 export default SkipLinkWrapper;

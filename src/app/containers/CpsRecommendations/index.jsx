@@ -13,7 +13,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import Grid from '../../components/Grid';
-import SkipLinkWrapper from './SkipLinkWrapper';
+import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 
 const StyledStoryPromoWrapper = styled.div`
   > div {
