@@ -10,7 +10,13 @@ import getRecommendationsUrl from '#lib/utilities/getRecommendationsUrl';
 
 const noop = () => {};
 
-const pageTypeUrls = (assetType, service, variant, assetUri) => {
+const pageTypeUrls = async (
+  assetType,
+  service,
+  variant,
+  assetUri,
+  pageData,
+) => {
   switch (assetType) {
     case STORY_PAGE:
       return [
@@ -22,7 +28,7 @@ const pageTypeUrls = (assetType, service, variant, assetUri) => {
           name: 'secondaryColumn',
           path: getSecondaryColumnUrl({ service, variant }),
         },
-        hasRecommendations(service, variant)
+        (await hasRecommendations(service, variant, pageData))
           ? {
               name: 'recommendations',
               path: getRecommendationsUrl({ assetUri, variant }),
@@ -51,7 +57,13 @@ const getAdditionalPageData = async (pageData, service, variant) => {
   const assetType = getAssetType(pageData);
   const assetUri = getAssetUri(pageData);
 
-  const urlsToFetch = pageTypeUrls(assetType, service, variant, assetUri);
+  const urlsToFetch = await pageTypeUrls(
+    assetType,
+    service,
+    variant,
+    assetUri,
+    pageData,
+  );
 
   if (urlsToFetch) {
     return Promise.all(urlsToFetch.map(fetchUrl)).then(results =>

@@ -1,15 +1,20 @@
-import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import getConfig from '#app/routes/utils/getConfig';
 
-const hasRecommendations = async (service, variant) => {
+const hasRecommendations = async (service, variant, pageData) => {
   const config = await getConfig(service, variant);
 
-  const serviceHasRecommendations = pathOr(
-    false,
+  const serviceHasRecommendations = path(
     ['recommendations', 'hasStoryRecommendations'],
     config,
   );
-  return serviceHasRecommendations;
+
+  const assetAllowsAdvertising = path(
+    ['metadata', 'options', 'allowAdvertising'],
+    pageData,
+  );
+
+  return serviceHasRecommendations && assetAllowsAdvertising;
 };
 
 export default hasRecommendations;
