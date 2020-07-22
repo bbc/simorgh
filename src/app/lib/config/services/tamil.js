@@ -8,6 +8,10 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+      advertisementLabel: 'விளம்பரம்',
+    },
     lang: `ta`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'புதுப்பிக்கப்பட்டது',
@@ -47,9 +51,6 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      ads: {
-        advertisementLabel: 'விளம்பரம்',
-      },
       seeAll: 'அனைத்தும் பார்க்க',
       home: 'முகப்பு',
       currentPage: 'தற்போதுள்ள பக்கம்',
