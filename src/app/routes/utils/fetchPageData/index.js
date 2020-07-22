@@ -20,7 +20,7 @@ const logger = nodeLogger(__filename);
 export default async ({ path, pageType }) => {
   const url = getUrl(path);
 
-  logger.info(DATA_REQUEST_RECEIVED, { path, pageType, url });
+  logger.info(DATA_REQUEST_RECEIVED, { path, pageType, data: url });
 
   try {
     const response = await fetch(url);

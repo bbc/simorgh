@@ -30,10 +30,10 @@ describe('fetchPageData', () => {
       );
     });
 
-    it('should always log url and path', async () => {
+    it('should always log data url and path', async () => {
       await fetchPageData({ path: requestedPathname });
       expect(loggerMock.info).toBeCalledWith(DATA_REQUEST_RECEIVED, {
-        url: expectedUrl,
+        data: expectedUrl,
         path: requestedPathname,
       });
     });
@@ -42,7 +42,7 @@ describe('fetchPageData', () => {
       await fetchPageData({ path: requestedPathname, pageType });
 
       expect(loggerMock.info).toBeCalledWith(DATA_REQUEST_RECEIVED, {
-        url: expectedUrl,
+        data: expectedUrl,
         path: requestedPathname,
         pageType,
       });
