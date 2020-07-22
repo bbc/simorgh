@@ -15,6 +15,7 @@ import ampMetadataExtractor from './ampMetadataExtractor';
 import includeClassifier from './includeClassifier';
 import getImageBlock from './getImageBlock';
 import isAmpPath from '#app/routes/utils/isAmpPath';
+import isAmpSupported from './isAmpSupported';
 
 const logger = nodeLogger(__filename);
 
@@ -125,6 +126,7 @@ const convertInclude = async (includeBlock, pageData, ...restParams) => {
       href,
       index,
       type: includeType,
+      isAmpSupported: isAmpSupported(classification),
       ...(ampMetadata && { ampMetadata }),
       ...(html && { html }),
       ...(imageBlock && { imageBlock }),
