@@ -23,6 +23,12 @@ const IdxPageWithContext = ({ service = 'persian', pageData }) => {
       <ToggleContextProvider
         service={service}
         origin="https://www.test.bbc.com"
+        remoteToggles={{
+          service,
+          ads: {
+            enabled: false,
+          },
+        }}
       >
         <RequestContextProvider
           pageType="IDX"

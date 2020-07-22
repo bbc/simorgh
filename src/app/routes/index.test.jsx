@@ -67,6 +67,7 @@ const renderRouter = ({
         service,
         isAmp: false,
         status: status || 200,
+        remoteConfig: null,
         ...(errorCode && { errorCode }),
       })}
     </MemoryRouter>,
@@ -129,6 +130,7 @@ it('should route to and render the onDemand Radio page', async () => {
     pageData,
     pageType,
     service: 'indonesia',
+    remoteConfig: null,
   });
 
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Dunia Pagi Ini';

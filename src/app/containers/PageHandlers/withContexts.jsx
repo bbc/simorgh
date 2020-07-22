@@ -27,7 +27,7 @@ const WithContexts = Component => {
       timeOnServer,
     } = props;
 
-    const remoteToggles = pathOr({}, ['toggles'], remoteConfig);
+    const remoteToggles = pathOr(null, ['toggles'], remoteConfig);
 
     return (
       <ToggleContextProvider

@@ -23,6 +23,12 @@ const Page = ({ pageData, service, isAmp = false, variant }) => (
     <ToggleContextProvider
       service={service}
       origin="https://www.test.bbc.co.uk"
+      remoteToggles={{
+        service,
+        ads: {
+          enabled: false,
+        },
+      }}
     >
       <ServiceContextProvider service={service} variant={variant}>
         <RequestContextProvider

@@ -31,6 +31,12 @@ describe('Radio Page Main', () => {
       <ToggleContextProvider
         service="amharic"
         origin="https://www.test.bbc.com"
+        remoteToggles={{
+          service: 'amharic',
+          ads: {
+            enabled: false,
+          },
+        }}
       >
         <ServiceContextProvider service="amharic">
           <RequestContextProvider
@@ -60,6 +66,12 @@ describe('Radio Page Main', () => {
       <ToggleContextProvider
         service="amharic"
         origin="https://www.test.bbc.com"
+        remoteToggles={{
+          service: 'amharic',
+          ads: {
+            enabled: false,
+          },
+        }}
       >
         <ServiceContextProvider service="amharic">
           <RequestContextProvider

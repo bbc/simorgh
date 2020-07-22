@@ -9,6 +9,7 @@ describe('useToggle custom hook', () => {
   describe('Given ads toggle that is fetched from the toggle service is enabled', () => {
     it('return enabled true', async () => {
       const mockToggles = {
+        service: 'mundo',
         ads: {
           enabled: true,
         },
@@ -32,6 +33,7 @@ describe('useToggle custom hook', () => {
   describe('Given ads toggle that is fetched from the toggle service is disabled', () => {
     it('return enabled false', async () => {
       const mockToggles = {
+        service: 'mundo',
         ads: {
           enabled: false,
         },
