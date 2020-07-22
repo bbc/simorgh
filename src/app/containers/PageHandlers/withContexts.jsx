@@ -30,11 +30,7 @@ const WithContexts = Component => {
     const remoteToggles = pathOr(null, ['toggles'], remoteConfig);
 
     return (
-      <ToggleContextProvider
-        remoteToggles={remoteToggles}
-        service={service}
-        origin={bbcOrigin}
-      >
+      <ToggleContextProvider remoteToggles={remoteToggles}>
         <ServiceContextProvider
           service={service}
           variant={variant}

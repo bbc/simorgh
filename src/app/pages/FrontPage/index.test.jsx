@@ -25,8 +25,6 @@ const FrontPageWithContext = ({
 }) => (
   <BrowserRouter>
     <ToggleContextProvider
-      service={service}
-      origin="https://www.test.bbc.com"
       remoteToggles={{
         service,
         ads: {

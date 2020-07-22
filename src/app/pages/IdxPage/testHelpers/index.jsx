@@ -21,8 +21,6 @@ const IdxPageWithContext = ({ service = 'persian', pageData }) => {
   return (
     <BrowserRouter>
       <ToggleContextProvider
-        service={service}
-        origin="https://www.test.bbc.com"
         remoteToggles={{
           service,
           ads: {

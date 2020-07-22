@@ -27,11 +27,7 @@ const mockRemoteToggles = {
 };
 
 const MostReadPageWithContext = () => (
-  <ToggleContextProvider
-    service="pidgin"
-    origin="https://www.test.bbc.com"
-    remoteToggles={mockRemoteToggles}
-  >
+  <ToggleContextProvider remoteToggles={mockRemoteToggles}>
     <ServiceContextProvider service="pidgin">
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.com"

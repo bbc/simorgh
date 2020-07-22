@@ -29,8 +29,6 @@ describe('Radio Page Main', () => {
 
     await matchSnapshotAsync(
       <ToggleContextProvider
-        service="amharic"
-        origin="https://www.test.bbc.com"
         remoteToggles={{
           service: 'amharic',
           ads: {
@@ -64,8 +62,6 @@ describe('Radio Page Main', () => {
 
     await matchSnapshotAsync(
       <ToggleContextProvider
-        service="amharic"
-        origin="https://www.test.bbc.com"
         remoteToggles={{
           service: 'amharic',
           ads: {

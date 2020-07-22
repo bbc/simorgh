@@ -21,8 +21,6 @@ import getInitialData from '#app/routes/onDemandRadio/getInitialData';
 const Page = ({ pageData, service, isAmp = false, variant }) => (
   <StaticRouter>
     <ToggleContextProvider
-      service={service}
-      origin="https://www.test.bbc.co.uk"
       remoteToggles={{
         service,
         ads: {
