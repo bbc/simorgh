@@ -150,7 +150,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <CpsRecommendations
         {...props}
         parentColumns={gridColsMain}
-        items={recommendationsData.items}
+        items={recommendationsData}
       />
     ),
   };
