@@ -15,6 +15,10 @@ import 'moment/locale/gd';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+      advertisementLabel: 'Advertisement',
+    },
     lang: `gd`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Ùraichte',
@@ -54,9 +58,6 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      ads: {
-        advertisementLabel: 'Advertisement',
-      },
       seeAll: 'Faic uile',
       home: 'Alba',
       currentPage: 'An duilleag seo',
