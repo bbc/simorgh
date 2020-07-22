@@ -1,4 +1,4 @@
-import onEnvironment from '../../../../server/utilities/onEnvironment';
+import onEnvironment from '../onEnvironment';
 
 // custom CW metrics
 const { metricScope, Unit } = require('aws-embedded-metrics');
