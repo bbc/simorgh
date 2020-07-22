@@ -42,7 +42,10 @@ const baseServiceConfig = {
 export const service = {
   lat: {
     ...baseServiceConfig,
-
+    ads: {
+      hasAds: false,
+      advertisementLabel: 'Advertisement',
+    },
     articleTimestampPrefix: 'Ažurirano',
     articleTimestampSuffix: '',
     brandName: 'BBC News na srpskom',
@@ -146,9 +149,6 @@ export const service = {
       variant: 'cyr',
     },
     translations: {
-      ads: {
-        advertisementLabel: 'Advertisement',
-      },
       seeAll: 'Pogledajte sve',
       home: 'Glavna stranica',
       currentPage: 'Otvorena stranica',
@@ -279,6 +279,9 @@ export const service = {
   },
   cyr: {
     ...baseServiceConfig,
+    ads: {
+      hasAds: false,
+    },
     articleTimestampPrefix: 'Ажурирано',
     articleTimestampSuffix: '',
     brandName: 'BBC News на српском',
@@ -382,9 +385,6 @@ export const service = {
       variant: 'lat',
     },
     translations: {
-      ads: {
-        advertisementLabel: 'Advertisement',
-      },
       seeAll: 'Погледајте све',
       home: 'Главна страница',
       currentPage: 'Отворена страница',

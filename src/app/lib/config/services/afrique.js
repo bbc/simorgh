@@ -7,6 +7,10 @@ import 'moment/locale/fr';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: true,
+      advertisementLabel: 'Publicités',
+    },
     lang: `fr`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Mise à jour',
@@ -49,9 +53,6 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      ads: {
-        advertisementLabel: 'Publicités',
-      },
       seeAll: 'Tout voir',
       home: 'Accueil',
       currentPage: 'Page en cours',
