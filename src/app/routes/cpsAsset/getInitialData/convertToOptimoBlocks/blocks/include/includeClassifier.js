@@ -1,5 +1,5 @@
 import Url from 'url-parse';
-import isAmpPath from './isAmpPath';
+import isAmpPath from '#app/routes/utils/isAmpPath';
 
 const supportedTypes = {
   indepthtoolkit: 'idt1',

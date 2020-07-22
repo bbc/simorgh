@@ -14,7 +14,7 @@ import { addOverrideQuery } from '#app/routes/utils/overrideRendererOnTest';
 import ampMetadataExtractor from './ampMetadataExtractor';
 import includeClassifier from './includeClassifier';
 import getImageBlock from './getImageBlock';
-import isAmpPath from './isAmpPath';
+import isAmpPath from '#app/routes/utils/isAmpPath';
 
 const logger = nodeLogger(__filename);
 
