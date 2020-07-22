@@ -192,12 +192,12 @@ export const service = {
         text: 'BBCニュースが信頼できる理由',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href: 'https://www.bbc.co.uk/japanese/help-33991539',
         text: '本サイトの外部リンク方針はこちら',
       },
       links: [
         {
-          href: 'https://www.bbc.com/japanese/help/terms',
+          href: 'https://www.bbc.com/japanese/help-33991540',
           text: '利用条件',
         },
         {
@@ -205,7 +205,7 @@ export const service = {
           text: 'BBCについて',
         },
         {
-          href: 'https://www.bbc.com/japanese/help/privacy',
+          href: 'https://www.bbc.com/japanese/help-33991542',
           text: '個人情報取り扱い方針',
         },
         {
