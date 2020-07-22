@@ -7,6 +7,10 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+      advertisementLabel: 'Advertisement',
+    },
     lang: 'yo',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Ìgbà tí a ṣe àfíkun gbẹ̀yìn',
@@ -48,9 +52,6 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle: 'Àbáwọlé',
     translations: {
-      ads: {
-        advertisementLabel: 'Advertisement',
-      },
       seeAll: 'Wo gbogbo ẹ̀',
       home: 'Ìròyìn',
       currentPage: 'Ojú ewé to wà yìí',

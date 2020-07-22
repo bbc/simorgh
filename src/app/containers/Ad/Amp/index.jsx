@@ -77,12 +77,8 @@ export const AMP_ACCESS_FETCH = service => {
 };
 
 const AmpAd = ({ slotType }) => {
-  const { translations, dir, script, service } = useContext(ServiceContext);
-  const label = pathOr(
-    'Advertisement',
-    ['ads', 'advertisementLabel'],
-    translations,
-  );
+  const { ads, dir, script, service } = useContext(ServiceContext);
+  const label = pathOr('Advertisement', ['advertisementLabel'], ads);
   const ariaLabel = getAdsAriaLabel(label, dir, slotType);
 
   return (
