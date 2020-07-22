@@ -84,35 +84,36 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         });
       });
 
-      getRemoteConfig(nextService)
-        .then(nextRemoteConfig =>
-          getInitialData({
-            path: location.pathname,
-            service: nextService,
-            variant: nextVariant,
-            pageType: nextPageType,
-            remoteConfig: nextRemoteConfig,
-          }),
-        )
-        .then(data => {
-          clearTimeout(loaderTimeout);
-          shouldSetFocus.current = true;
-          setState({
-            service: nextService,
-            variant: nextVariant,
-            id: nextId,
-            assetUri: nextAssetUri,
-            isAmp: nextIsAmp,
-            pageType: nextPageType,
-            loading: false,
-            pageData: path(['pageData'], data),
-            remoteConfig: path(['remoteConfig'], data),
-            status: path(['status'], data),
-            error: path(['error'], data),
-            errorCode: null,
-            timeOnServer: path(['timeOnServer'], data),
-          });
+      const updateRemoteConfig = async () => {
+        const nextRemoteConfig = await getRemoteConfig(nextService);
+        const data = await getInitialData({
+          path: location.pathname,
+          service: nextService,
+          variant: nextVariant,
+          pageType: nextPageType,
+          remoteConfig: nextRemoteConfig,
         });
+
+        clearTimeout(loaderTimeout);
+        shouldSetFocus.current = true;
+        setState({
+          service: nextService,
+          variant: nextVariant,
+          id: nextId,
+          assetUri: nextAssetUri,
+          isAmp: nextIsAmp,
+          pageType: nextPageType,
+          loading: false,
+          pageData: path(['pageData'], data),
+          remoteConfig: path(['remoteConfig'], data),
+          status: path(['status'], data),
+          error: path(['error'], data),
+          errorCode: null,
+          timeOnServer: path(['timeOnServer'], data),
+        });
+      };
+
+      updateRemoteConfig();
     }
   }, [routes, location.pathname, remoteConfig]);
 
