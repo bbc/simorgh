@@ -27,3 +27,17 @@ exports[`Inline persian inline span in english service article 1`] = `
   بعض محتوى النص
 </span>
 `;
+
+exports[`Inline persian inline span in english service article 2`] = `
+.c0 {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+<span
+  class="c0"
+  lang="fa"
+>
+  بعض محتوى النص
+</span>
+`;

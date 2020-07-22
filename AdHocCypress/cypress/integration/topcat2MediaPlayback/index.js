@@ -1,3 +1,4 @@
+/* eslint-disable cypress/no-unnecessary-waiting */
 import legacyURLs from './config';
 import getAppEnv from '../../../../cypress/support/helpers/getAppEnv';
 import getDataUrl from '../../support/utilities/getDataUrl';
@@ -57,35 +58,38 @@ describe('Legacy MAP Media Playback', () => {
             cy.visit(path);
             cy.get('iframe').then($iframe => {
               cy.testResponseCode($iframe.prop('src'), 200);
-
+              let expectedURL = '';
+              if (jsonData.content.blocks[0].image) {
+                expectedURL = jsonData.content.blocks[0].image.href.replace(
+                  'http',
+                  'https',
+                );
+              }
               cy.wrap($iframe.prop('contentWindow'), {
                 timeout: 8000,
               })
                 .its(
                   'embeddedMedia.playerInstances.mediaPlayer.playlist.holdingImageURL',
                 )
-                .should(
-                  'eq',
-                  jsonData.content.blocks[0].image.href.replace(
-                    'http',
-                    'https',
-                  ),
-                );
+                .should('eq', expectedURL);
             });
           });
         });
 
         ['iphone-6', [1024, 786]].forEach(displaySize => {
-          it(`Media plays correctly on ${displaySize} screen`, () => {
+          it.only(`Media plays correctly on ${displaySize} screen`, () => {
             if (Cypress._.isArray(displaySize)) {
               cy.viewport(displaySize[0], displaySize[1]);
             } else {
               cy.viewport(displaySize);
             }
+            cy.request(getDataUrl(path)).then(({ body: jsonData }) => {
+              cy.log(jsonData.content.blocks[0].format);
+            });
 
             cy.visit(path);
             const playButton = 'button.p_cta';
-
+            cy.wait(3000);
             cy.get('iframe').then(iframe => {
               cy.testResponseCode(iframe.prop('src'), 200);
 

@@ -27,8 +27,8 @@ export default {
     // 'http://localhost:7080/vietnamese/sport/2016/09/160922_tc2_testmap2', // TC2 MAP with video clip
   ],
   test: [
-    'https://www.test.bbc.com/afrique/nos_emissions/2016/06/160622_tc2_testmap1', // TC2 MAP video
-    'https://www.test.bbc.com/arabic/worldnews/2015/11/151120_t_arabic_av', // TC2 video
+    'https://www.test.bbc.com/afrique/nos_emissions/2016/06/160622_tc2_testmap1.amp', // TC2 MAP video
+    'https://www.test.bbc.com/arabic/worldnews/2015/11/151120_t_arabic_av.amp', // TC2 video
     'https://www.test.bbc.com/azeri/multimedia/2015/08/150804_azeri_test', // TC2 MAP with video clip
     'https://www.test.bbc.com/bengali/multimedia/2016/08/160803_tc2_testmap1', // TC2 MAP with video clip
     'https://www.test.bbc.com/burmese/sport/2016/08/160811_tc2_testmap1', // TC2 MAP with video clip
@@ -52,22 +52,22 @@ export default {
     'https://www.test.bbc.com/ukchina/simp/multimedia/2016/11/161104_tc2_testmap1', // TC2 video
     'https://www.test.bbc.com/ukchina/trad/multimedia/2016/11/161104_tc2_testmap1', // TC2 video
     'https://www.test.bbc.com/ukrainian/entertainment/2016/10/161025_tc2_testmap1', // TC2 Ukrainian video (no Russian TC2 MAP)
-    'https://www.test.bbc.com/urdu/sport/2016/09/160902_tc2_testmap2', // TC2 MAP with video clip
-    'https://www.test.bbc.com/uzbek/multimedia/2016/06/160610_tc2_testmap1', // TC2 MAP Cyrillic
-    'https://www.test.bbc.com/vietnamese/sport/2016/09/160922_tc2_testmap2', // TC2 MAP with video clip
-    'https://www.test.bbc.com/zhongwen/simp/multimedia/2016/11/161107_tc2_testmap1', // TC2 Video
-    'https://www.test.bbc.com/zhongwen/trad/multimedia/2016/11/161107_tc2_testmap1', // TC2 Video
+    'https://www.test.bbc.com/urdu/sport/2016/09/160902_tc2_testmap2.amp', // TC2 MAP with video clip
+    'https://www.test.bbc.com/uzbek/multimedia/2016/06/160610_tc2_testmap1.amp', // TC2 MAP Cyrillic
+    'https://www.test.bbc.com/vietnamese/sport/2016/09/160922_tc2_testmap2.amp', // TC2 MAP with video clip
+    'https://www.test.bbc.com/zhongwen/simp/multimedia/2016/11/161107_tc2_testmap1.amp', // TC2 Video
+    'https://www.test.bbc.com/zhongwen/trad/multimedia/2016/11/161107_tc2_testmap1.amp', // TC2 Video
 
     // Live URLs pointing to Test Simorgh + Live Morph
-    'https://www.test.bbc.com/afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda?renderer_env=live',
-    'https://www.test.bbc.com/arabic/multimedia/2013/10/131020_belfast_land_art_girl_face_?renderer_env=live',
-    'https://www.test.bbc.com/azeri/multimedia/2012/09/120919_georgia_prison_video?renderer_env=live',
-    'https://www.test.bbc.com/bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video?renderer_env=live',
+    'https://www.test.bbc.com/afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda.amp?renderer_env=live',
+    'https://www.test.bbc.com/arabic/multimedia/2013/10/131020_belfast_land_art_girl_face_.amp?renderer_env=live',
+    'https://www.test.bbc.com/azeri/multimedia/2012/09/120919_georgia_prison_video.amp?renderer_env=live',
+    'https://www.test.bbc.com/bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video.amp?renderer_env=live',
     'https://www.test.bbc.com/bengali/multimedia/2014/02/140206_fp_witness_mother_teresa?renderer_env=live',
     'https://www.test.bbc.com/burmese/multimedia/2016/01/160108_korean_cook?renderer_env=live',
     'https://www.test.bbc.com/burmese/multimedia/2016/07/160706_cooltech_zawgyi_facebook_unicode?renderer_env=live',
     'https://www.test.bbc.com/gahuza/video/2015/12/151201_100womenburundi?renderer_env=live',
-    'https://www.test.bbc.com/gahuza/ibindi_wifashisha/2010/10/101006_kidum_on_east_africa?renderer_env=live',
+    // 'https://www.test.bbc.com/gahuza/ibindi_wifashisha/2010/10/101006_kidum_on_east_africa?renderer_env=live',
     'https://www.test.bbc.com/hausa/multimedia/2012/07/120712_click?renderer_env=live',
     'https://www.test.bbc.com/hausa/multimedia/2014/09/140922_ebola_sierraleone_lockdown?renderer_env=live',
     'https://www.test.bbc.com/hindi/multimedia/2015/07/150703_jharkhand_maoist_fake_surrender_sr?renderer_env=live',
@@ -124,9 +124,9 @@ export default {
     'https://www.bbc.com/ukchina/trad/elt/2015/03/150319_qanda_336_related_audio', // Audio
     'https://www.bbc.com/ukrainian/multimedia/2016/05/160509_mariana_trench_video_ag', // Video
     'https://www.bbc.com/urdu/multimedia/2014/11/141114_zaidi', // Video
-    'https://www.bbc.com/uzbek/lotin/2015/10/151022_latin_mole_skin_cancer_science_medicine', // Video
-    'https://www.bbc.com/vietnamese/multimedia/2015/02/150223_nguyenvanchau_ngodinhthihiep_1', // Audio
-    'https://www.bbc.com/zhongwen/simp/multimedia/2016/06/160608_vid_gaokao_voxpop', // Video
-    'https://www.bbc.com/zhongwen/trad/multimedia/2016/10/161005_vid_yg_rapper_chinese_fight', // Video
+    'https://www.bbc.com/uzbek/lotin/2015/10/151022_latin_mole_skin_cancer_science_medicine.amp', // Video
+    'https://www.bbc.com/vietnamese/multimedia/2015/02/150223_nguyenvanchau_ngodinhthihiep_1.amp', // Audio
+    'https://www.bbc.com/zhongwen/simp/multimedia/2016/06/160608_vid_gaokao_voxpop.amp', // Video
+    'https://www.bbc.com/zhongwen/trad/multimedia/2016/10/161005_vid_yg_rapper_chinese_fight.amp', // Video
   ],
 };
