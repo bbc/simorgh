@@ -129,7 +129,7 @@ describe('fetchPageData', () => {
               error:
                 'invalid json response body at  reason: Unexpected end of JSON input',
               status: expectedStatusCode,
-              data: 'http://localhost/path/to/asset.json',
+              data: expectedUrl,
               path: requestedPathname,
               pageType,
             });
@@ -162,7 +162,7 @@ describe('fetchPageData', () => {
               error:
                 'invalid json response body at  reason: Unexpected end of JSON input',
               status: expectedStatusCode,
-              data: 'http://localhost/path/to/asset.json',
+              data: expectedUrl,
               path: requestedPathname,
               pageType,
             });
@@ -228,7 +228,7 @@ describe('fetchPageData', () => {
               error:
                 'Unexpected upstream response (HTTP status code 418) when requesting http://localhost/path/to/asset.json',
               status: expectedStatusCode,
-              data: 'http://localhost/path/to/asset.json',
+              data: expectedUrl,
               path: requestedPathname,
               pageType,
             });
@@ -257,7 +257,7 @@ describe('fetchPageData', () => {
             expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
               error: `Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
               status: expectedStatusCode,
-              data: 'http://localhost/path/to/asset.json',
+              data: expectedUrl,
               path: requestedPathname,
               pageType,
             });
@@ -293,7 +293,7 @@ describe('fetchPageData', () => {
           expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
             error: `Unexpected upstream response (HTTP status code 418) when requesting ${expectedUrl}`,
             status: expectedStatusCode,
-            data: 'http://localhost/path/to/asset.json',
+            data: expectedUrl,
             path: requestedPathname,
             pageType,
           });
@@ -322,7 +322,7 @@ describe('fetchPageData', () => {
           expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
             error: `Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
             status: expectedStatusCode,
-            data: 'http://localhost/path/to/asset.json',
+            data: expectedUrl,
             path: requestedPathname,
             pageType,
           });
