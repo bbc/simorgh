@@ -31,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Тагсўз, ',
     imageCopyrightOffscreenText: 'Сурат манбаси, ',
     locale: `uz-UZ`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'uz',
     datetimeLocale: `uz`,
     service: 'uzbek',
     serviceName: 'Uzbek',
