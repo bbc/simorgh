@@ -263,6 +263,11 @@ exports[`should match snapshot for Persian News & UK origin 1`] = `
       rel="canonical"
     />
     <link
+      href="https://www.test.bbc.co.uk/pathname"
+      hreflang="fa"
+      rel="alternate"
+    />
+    <link
       href="https://www.test.bbc.co.uk/pathname.amp"
       rel="amphtml"
     />
