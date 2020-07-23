@@ -32,7 +32,6 @@ const WithContexts = Component => {
         <ServiceContextProvider
           service={service}
           variant={variant}
-          pathname={pathname}
           pageLang={path(['metadata', 'language'], pageData)}
         >
           <RequestContextProvider
