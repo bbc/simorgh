@@ -5,6 +5,7 @@ import Banner from './Banner/index.amp';
 
 const parentId = 'consent';
 const promptId = 'consent-prompt';
+const postPromptId = 'post-consent-ui';
 const privacyId = 'privacy';
 const cookieId = 'cookie';
 
@@ -15,6 +16,7 @@ const ampConsentData = {
       promptUI: promptId,
     },
   },
+  postPromptUI: postPromptId,
   policy: {
     default: {
       waitFor: {
@@ -65,6 +67,16 @@ const Amp = () => (
           promptId={cookieId}
           hidden
         />
+      </div>
+      <div id="post-consent-ui">
+        <Banner
+          type="privacy"
+          acceptAction={`tap:consent-element.dismiss`}
+          rejectAction={`${console.log('aksjdhasdladj')}`}
+          promptId={postPromptId}
+        >
+          Aaslkdjalskdjalskjd
+        </Banner>
       </div>
     </amp-consent>
   </AmpConsentWrapper>
