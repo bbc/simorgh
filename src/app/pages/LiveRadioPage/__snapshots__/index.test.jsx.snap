@@ -15,6 +15,11 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
       rel="canonical"
     />
     <link
+      href="https://www.test.bbc.com/pathname"
+      hreflang="am"
+      rel="alternate"
+    />
+    <link
       href="http://localhost:7080/amharic/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
@@ -692,6 +697,11 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
     <link
       href="https://www.test.bbc.com/pathname"
       rel="canonical"
+    />
+    <link
+      href="https://www.test.bbc.com/pathname"
+      hreflang="am"
+      rel="alternate"
     />
     <link
       href="https://www.test.bbc.com/pathname.amp"
