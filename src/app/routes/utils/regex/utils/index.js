@@ -92,3 +92,8 @@ export const getSecondaryColumnDataRegex = services => {
 export const getIdxPageRegex = () => {
   return `/:idx(${idxRegex}):amp(${ampRegex})?`;
 };
+
+export const getRecommendationsDataRegex = services => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex})/:assetUri(${assetUriRegex})/recommendations:variant(${variantRegex})?.json`;
+};
