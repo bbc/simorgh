@@ -11,7 +11,7 @@ export const ServiceContextProvider = ({
   children,
   service,
   variant,
-  pathname,
+  pageLang,
 }) => {
   const LoadableContextProvider = services[service];
 
@@ -19,13 +19,13 @@ export const ServiceContextProvider = ({
     return null;
   }
 
-  // This override is for ukrainian service with a different lang/locale config
-  const serviceLang = getLangOverride({ pathname });
-
   return (
     <LoadableContextProvider
       Context={ServiceContext}
-      dataKey={serviceLang || getVariant({ service, variant })}
+      dataKey={
+        getLangOverride({ service, pageLang }) ||
+        getVariant({ service, variant })
+      }
     >
       {children}
     </LoadableContextProvider>
@@ -34,13 +34,13 @@ export const ServiceContextProvider = ({
 
 ServiceContextProvider.propTypes = {
   children: node.isRequired,
-  pathname: string,
+  pageLang: string,
   service: string,
   variant: variantPropType,
 };
 
 ServiceContextProvider.defaultProps = {
-  pathname: null,
+  pageLang: null,
   service: 'default',
   variant: 'default',
 };

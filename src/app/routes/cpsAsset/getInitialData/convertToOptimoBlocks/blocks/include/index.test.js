@@ -368,6 +368,49 @@ describe('convertInclude', () => {
     expect(actual).toEqual(expected);
   });
 
+  it('should return a supported VJ include on AMP with a propagated renderer_env parameter', async () => {
+    fetch.mockResponse(() => Promise.resolve('No fetch call'));
+    const includeSupportingAmp =
+      '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png';
+    const input = vjAmpSupportedBlock;
+    const ampPathnameWithRenderEnvParam =
+      'https://www.bbc.com/service/foo.amp?renderer_env=test';
+    const expected = {
+      type: 'include',
+      model: {
+        href: includeSupportingAmp,
+        index: 5,
+        isAmpSupported: true,
+        type: 'vj',
+        ampMetadata: {
+          image:
+            'https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+          imageHeight: '360',
+          imageWidth: '640',
+          src:
+            'https://news.files.bbci.co.uk/include/newsspec/21841-green-diet/gahuza/app/amp?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+        },
+      },
+    };
+    const actual = await convertInclude(
+      input,
+      pageData,
+      null,
+      ampPathnameWithRenderEnvParam,
+    );
+    expect(fetch).not.toHaveBeenCalled();
+    expect(loggerMock.error).not.toHaveBeenCalled();
+    expect(loggerMock.info).toHaveBeenCalledTimes(1);
+    expect(loggerMock.info).toHaveBeenCalledWith(
+      INCLUDE_IFRAME_REQUEST_RECEIVED,
+      {
+        url:
+          'https://news.files.bbci.co.uk/include/newsspec/21841-green-diet/gahuza/app/amp?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+      },
+    );
+    expect(actual).toEqual(expected);
+  });
+
   it('should return no include if AMP not supported for VJ include on AMP', async () => {
     fetch.mockResponse(() => Promise.resolve('No fetch call'));
     const notSupportedVjIncludeOnAmp =
