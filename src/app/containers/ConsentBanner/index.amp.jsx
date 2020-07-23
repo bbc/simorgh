@@ -69,14 +69,9 @@ const Amp = () => (
         />
       </div>
       <div id="post-consent-ui">
-        <Banner
-          type="privacy"
-          acceptAction={`tap:consent-element.dismiss`}
-          rejectAction={`${console.log('aksjdhasdladj')}`}
-          promptId={postPromptId}
-        >
-          Aaslkdjalskdjalskjd
-        </Banner>
+        <button on={`tap:${parentId}.prompt`} type="button">
+          Consent Preferences
+        </button>
       </div>
     </amp-consent>
   </AmpConsentWrapper>

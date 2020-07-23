@@ -12,9 +12,9 @@ const Accept = (message, onClick, dataAttribute) => (
 );
 
 const Reject = (message, href, onClick, dataAttribute) => (
-  <a href={href} on={onClick} {...dataAttribute}>
+  <div href={href} on={onClick} {...dataAttribute}>
     {message}
-  </a>
+  </div>
 );
 
 const AmpConsentBannerContainer = ({
