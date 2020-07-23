@@ -11,7 +11,7 @@ describe('SkipLinkWrapper', () => {
         service="news"
         terms={terms}
         skipEndId="end-of-content"
-        skipText="Skip %foo_bar% text"
+        skipText="Skip %foo_bar% content"
         skipEndText="End of %foo_bar%"
       >
         <span>Foo Bar</span>
@@ -23,6 +23,6 @@ describe('SkipLinkWrapper', () => {
 
     expect(links).toHaveLength(1);
     expect(skipLink.getAttribute('href')).toEqual('#end-of-content');
-    expect(skipLink.textContent).toEqual('Skip Foo Bar text');
+    expect(skipLink.textContent).toEqual('Skip Foo Bar content');
   });
 });
