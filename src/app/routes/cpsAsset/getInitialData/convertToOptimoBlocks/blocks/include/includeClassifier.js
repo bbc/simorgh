@@ -1,4 +1,5 @@
 import Url from 'url-parse';
+import isAmpPath from '#app/routes/utils/isAmpPath';
 
 const supportedTypes = {
   indepthtoolkit: 'idt1',
@@ -31,14 +32,14 @@ const includeClassifier = ({ href, pathname }) => {
   // This determines if the type is supported and returns the include type name
   const includeType = supportedTypes[typeExtraction];
 
-  const pathnameIsAmp = pathname.endsWith('.amp');
+  const isAmp = isAmpPath(pathname);
 
-  const platform = pathnameIsAmp ? 'amp' : 'canonical';
+  const platform = isAmp ? 'amp' : 'canonical';
   const classification = includeType
     ? `${includeType}-${platform}`
     : 'not-supported';
 
-  if (includeType === 'vj' && !pathnameIsAmp) {
+  if (includeType === 'vj' && !isAmp) {
     return { includeType, classification: 'vj-canonical' };
   }
 
