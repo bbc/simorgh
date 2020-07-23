@@ -63,7 +63,13 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
 
 @media screen {
   .c0 {
-    padding: 2rem 0 1rem;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding: 1rem 0;
   }
 }
 
@@ -177,7 +183,13 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
 
 @media screen {
   .c0 {
-    padding: 2rem 0 1rem;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding: 1rem 0;
   }
 }
 
