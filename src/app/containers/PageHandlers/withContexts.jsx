@@ -1,6 +1,7 @@
 import React from 'react';
 import { bool, element, string, number, shape } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import variantPropType from '#models/propTypes/variants';
 import { pageDataPropType } from '#models/propTypes/data';
 
@@ -25,6 +26,7 @@ const WithContexts = Component => {
       previousPath,
       variant,
       timeOnServer,
+      pageData,
     } = props;
 
     const remoteToggles = pathOr(null, ['toggles'], remoteConfig);
@@ -34,7 +36,7 @@ const WithContexts = Component => {
         <ServiceContextProvider
           service={service}
           variant={variant}
-          pathname={pathname}
+          pageLang={path(['metadata', 'language'], pageData)}
         >
           <RequestContextProvider
             bbcOrigin={bbcOrigin}
