@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { arrayOf, shape, number } from 'prop-types';
 import styled from 'styled-components';
 import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import { StoryPromoLiBase, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { C_LUNAR, C_GHOST } from '@bbc/psammead-styles/colours';
 import { GEL_SPACING, GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
@@ -46,6 +47,14 @@ const CpsRecommendations = ({ items, parentColumns }) => {
     ['recommendationTitle'],
     translations,
   );
+
+  const { text, endTextVisuallyHidden } = path(['skipLink'], recommendations);
+
+  const skipLinkTerms = {
+    '%title%': title,
+  };
+
+  const skipEndId = 'recommendation_end';
 
   const singleTransform = item => {
     return (
@@ -110,7 +119,13 @@ const CpsRecommendations = ({ items, parentColumns }) => {
   );
 
   return (
-    <SkipLinkWrapper service={service} title={title}>
+    <SkipLinkWrapper
+      service={service}
+      skipEndId={skipEndId}
+      skipText={text}
+      skipEndText={endTextVisuallyHidden}
+      terms={skipLinkTerms}
+    >
       <RecommendationsWrapper>
         <CpsOnwardJourney
           labelId="recommendations-heading"

@@ -1,10 +1,12 @@
 import React from 'react';
-import { node, string } from 'prop-types';
+import { node, string, shape } from 'prop-types';
 import styled from 'styled-components';
 import { visuallyHiddenTextStyle } from '@bbc/psammead-visually-hidden-text';
 import { C_EBON, C_WHITE } from '@bbc/psammead-styles/colours';
 import { getSansBold } from '@bbc/psammead-styles/font-styles';
 import { GEL_BREVIER } from '@bbc/gel-foundations/typography';
+
+import detokeniseSkipText from './utils/detokeniseSkipText';
 
 const SKIP_LINK_BORDER = '0.125rem';
 const GEL_SPACING_PLUS_HALF = `0.75rem`;
@@ -43,15 +45,16 @@ const SkipLinkWrapper = ({
   children,
   skipText,
   skipEndText,
+  terms,
 }) => {
   return (
     <Wrapper>
       <SkipLink service={service} href={`#${skipEndId}`}>
-        {skipText}
+        {detokeniseSkipText(skipText, terms)}
       </SkipLink>
       {children}
       <EndText tabIndex="-1" id={skipEndId}>
-        {skipEndText}
+        {detokeniseSkipText(skipEndText, terms)}
       </EndText>
     </Wrapper>
   );
@@ -63,6 +66,7 @@ SkipLinkWrapper.propTypes = {
   skipEndId: string.isRequired,
   skipText: string.isRequired,
   skipEndText: string.isRequired,
+  terms: shape({}).isRequired,
 };
 
 export default SkipLinkWrapper;

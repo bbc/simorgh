@@ -9,11 +9,11 @@ exports[`CpsRecommendations should not render when there is no recommendations d
 exports[`CpsRecommendations should render when cpsRecommendations toggle is enabled and the service supports recommendations for a single item 1`] = `
 <div>
   <div
-    class="Wrapper-i5vzco-0 hZCPxg"
+    class="Wrapper-sc-1raf5kj-0 hgWAOX"
   >
     <a
-      class="SkipLink-i5vzco-1 dnCbpc"
-      href="#recommendation_skip_link_end_text"
+      class="SkipLink-sc-1raf5kj-1 kSEOyf"
+      href="#recommendation_end"
     >
       Skip Quizás también te interese and continue reading
     </a>
@@ -103,8 +103,8 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
       </section>
     </div>
     <p
-      class="EndText-i5vzco-2 kLIKBe"
-      id="recommendation_skip_link_end_text"
+      class="EndText-sc-1raf5kj-2 kEyfjd"
+      id="recommendation_end"
       tabindex="-1"
     >
       End of Quizás también te interese
@@ -116,11 +116,11 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 exports[`CpsRecommendations should render when cpsRecommendations toggle is enabled and the service supports recommendations for multiple items 1`] = `
 <div>
   <div
-    class="Wrapper-i5vzco-0 hZCPxg"
+    class="Wrapper-sc-1raf5kj-0 hgWAOX"
   >
     <a
-      class="SkipLink-i5vzco-1 dnCbpc"
-      href="#recommendation_skip_link_end_text"
+      class="SkipLink-sc-1raf5kj-1 kSEOyf"
+      href="#recommendation_end"
     >
       Skip Quizás también te interese and continue reading
     </a>
@@ -377,8 +377,8 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
       </section>
     </div>
     <p
-      class="EndText-i5vzco-2 kLIKBe"
-      id="recommendation_skip_link_end_text"
+      class="EndText-sc-1raf5kj-2 kEyfjd"
+      id="recommendation_end"
       tabindex="-1"
     >
       End of Quizás también te interese
