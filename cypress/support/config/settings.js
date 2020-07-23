@@ -4964,7 +4964,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/russian/news-53473369'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/russian/23219699'],
