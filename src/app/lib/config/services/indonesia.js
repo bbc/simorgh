@@ -31,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Keterangan, ',
     imageCopyrightOffscreenText: 'Sumber gambar, ',
     locale: `id-ID`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'id',
     datetimeLocale: `id`,
     service: 'indonesia',
     serviceName: 'Indonesia',
