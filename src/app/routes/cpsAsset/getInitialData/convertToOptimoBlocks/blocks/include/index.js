@@ -14,6 +14,7 @@ import { addOverrideQuery } from '#app/routes/utils/overrideRendererOnTest';
 import ampMetadataExtractor from './ampMetadataExtractor';
 import includeClassifier from './includeClassifier';
 import getImageBlock from './getImageBlock';
+import isAmpPath from '#app/routes/utils/isAmpPath';
 import isAmpSupported from './isAmpSupported';
 
 const logger = nodeLogger(__filename);
@@ -78,8 +79,7 @@ const convertInclude = async (includeBlock, pageData, ...restParams) => {
   const pathname = restParams[1];
   const blocks = path(['content', 'blocks'], pageData);
 
-  const ampRegex = /\.amp$/;
-  const isAmp = ampRegex.test(pathname);
+  const isAmp = isAmpPath(pathname);
 
   if (!href) {
     logger.error(INCLUDE_MISSING_URL, includeBlock);
