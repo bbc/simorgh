@@ -31,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: '설명, ',
     imageCopyrightOffscreenText: '사진 출처, ',
     locale: `ko-KO`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ko',
     datetimeLocale: `ko`,
     service: 'korean',
     serviceName: 'Korean',

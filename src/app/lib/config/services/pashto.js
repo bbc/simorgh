@@ -36,6 +36,8 @@ export const service = {
     defaultCaptionOffscreenText: 'تشریح، ',
     imageCopyrightOffscreenText: 'د عکس سرچینه، ',
     locale: 'ps',
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ps',
     datetimeLocale: 'ps',
     service: 'pashto',
     serviceName: 'Pashto',

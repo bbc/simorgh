@@ -35,6 +35,8 @@ export const service = {
     defaultCaptionOffscreenText: 'መግለጫ, ',
     imageCopyrightOffscreenText: 'የፎቶው ባለመብት, ',
     locale: `am-ET`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'am',
     datetimeLocale: 'am',
     service: 'amharic',
     serviceName: 'Amharic',

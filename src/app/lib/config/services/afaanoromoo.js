@@ -32,6 +32,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Ibsa suuraa/viidiyoo, ',
     imageCopyrightOffscreenText: 'Madda suuraa, ',
     locale: `om-ET`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'om',
     datetimeLocale: `om`,
     service: 'afaanoromoo',
     serviceName: 'Afaan Oromoo',

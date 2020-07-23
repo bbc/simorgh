@@ -31,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Qoraal, ',
     imageCopyrightOffscreenText: 'Xigashada Sawirka, ',
     locale: `so-SO`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'so',
     datetimeLocale: `so`,
     service: 'somali',
     serviceName: 'Somali',
