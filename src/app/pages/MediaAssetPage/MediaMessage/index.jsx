@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 
@@ -30,6 +31,7 @@ const StyledMessageContainer = styled.div`
 
 const Wrapper = styled(GridItemConstrainedLarge)`
   margin-top: ${GEL_SPACING};
+  margin-bottom: ${GEL_SPACING_TRPL};
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_DBL};

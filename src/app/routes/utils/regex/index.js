@@ -16,6 +16,7 @@ import {
   getMostReadDataRegex,
   getIdxPageRegex,
   getSecondaryColumnDataRegex,
+  getRecommendationsDataRegex,
 } from './utils';
 
 const allServices = Object.keys(services);
@@ -53,6 +54,10 @@ export const mostReadPagePath = getMostReadPageRegex(allServices);
 export const mostReadDataRegexPath = getMostReadDataRegex(allServices);
 
 export const secondaryColumnDataRegexPath = getSecondaryColumnDataRegex(
+  allServices,
+);
+
+export const recommendationsDataRegex = getRecommendationsDataRegex(
   allServices,
 );
 
