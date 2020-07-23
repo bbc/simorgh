@@ -1,18 +1,27 @@
 import getLangOverride from '.';
 
 describe('getLangOverride', () => {
-  it('should return variant if pathname is correct', () => {
+  it('should return the name of a service lang override for the given service and page lang combination', () => {
     expect(
-      getLangOverride({ pathname: '/ukrainian/ukraine_in_russian' }),
-    ).toEqual('ru-UA');
-    expect(
-      getLangOverride({ pathname: '/ukrainian/ukraine_in_russian.amp' }),
+      getLangOverride({
+        service: 'ukrainian',
+        pageLang: 'ru',
+      }),
     ).toEqual('ru-UA');
   });
 
-  it('should return null if pathname is incorrect', () => {
-    expect(getLangOverride({ pathname: '/ukrainian/not_russian' })).toEqual(
-      null,
-    );
+  it('should return undefined for the given service and page lang combination', () => {
+    expect(
+      getLangOverride({
+        service: 'mundo',
+        pageLang: 'es',
+      }),
+    ).toEqual(undefined);
+    expect(
+      getLangOverride({
+        service: 'mundo',
+        pageLang: undefined,
+      }),
+    ).toEqual(undefined);
   });
 });
