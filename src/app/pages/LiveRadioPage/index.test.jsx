@@ -45,16 +45,24 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
+const pageType = 'media';
+
 describe('Radio Page Main', () => {
   it('should match snapshot for Canonical', async () => {
     fetch.mockResponse(JSON.stringify(amharicPageData));
-    const { pageData } = await getInitialData('some-live-radio-path');
+    const { pageData } = await getInitialData({
+      path: 'some-live-radio-path',
+      pageType,
+    });
 
     await matchSnapshotAsync(<Page pageData={pageData} />);
   });
 
   it('should match snapshot for AMP', async () => {
-    const { pageData } = await getInitialData('some-live-radio-path');
+    const { pageData } = await getInitialData({
+      path: 'some-live-radio-path',
+      pageType,
+    });
 
     await matchSnapshotAsync(<Page pageData={pageData} isAmp />);
   });

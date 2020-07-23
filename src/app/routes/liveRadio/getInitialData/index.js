@@ -57,11 +57,15 @@ const getRadioService = service => {
   return radioServices[service];
 };
 
-export default async ({ path: pathname, service }) => {
+export default async ({ path: pathname, pageType, service }) => {
   try {
     const liveRadioDataPath = overrideRendererOnTest(pathname);
+
     const pageHasRadioSchedule = await hasRadioSchedule(service, pathname);
-    const pageDataPromise = fetchPageData(liveRadioDataPath);
+    const pageDataPromise = fetchPageData({
+      path: liveRadioDataPath,
+      pageType,
+    });
 
     const { json, status } = pageHasRadioSchedule
       ? await withRadioSchedule({
@@ -73,7 +77,6 @@ export default async ({ path: pathname, service }) => {
       : await pageDataPromise;
 
     const getRadioScheduleData = path(['radioScheduleData']);
-    const pageType = { metadata: { type: 'Live Radio' } };
 
     return {
       status,
@@ -89,7 +92,7 @@ export default async ({ path: pathname, service }) => {
         pageIdentifier: getPageIdentifier(json),
         masterBrand: getMasterBrand(json),
         radioScheduleData: getRadioScheduleData(json),
-        ...pageType,
+        metadata: { type: 'Live Radio' },
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
