@@ -17,6 +17,7 @@ import {
   legacyAssetPagePath,
   legacyAssetPageDataPath,
   secondaryColumnDataRegexPath,
+  recommendationsDataRegex,
 } from './index';
 
 jest.mock('#server/utilities/serviceConfigs', () => ({
@@ -261,7 +262,25 @@ describe('secondaryColumnDataRegexPath', () => {
     '/foobar/sty-secondary-column.js',
     '/news/trad/sty-secondary-column.json',
   ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, mostReadDataRegexPath);
+  shouldNotMatchInvalidRoutes(invalidRoutes, secondaryColumnDataRegexPath);
+});
+
+describe('recommendationsDataRegex', () => {
+  const validRoutes = [
+    '/mundo/23263889/recommendations.json',
+    '/zhongwen/uk-23283128/recommendations/simp.json',
+  ];
+  shouldMatchValidRoutes(validRoutes, recommendationsDataRegex);
+
+  const invalidRoutes = [
+    '/foobar/23124/recommendations.json',
+    '/foobar/recommendations.json',
+    '/foobar/recommendations',
+    '/foobar/recommendations.js',
+    '/zhongwen/trad/recommendations.json',
+    '/zhongwen/12322/trad/recommendations.json',
+  ];
+  shouldNotMatchInvalidRoutes(invalidRoutes, recommendationsDataRegex);
 });
 
 describe('onDemandTvPath', () => {
