@@ -13,13 +13,13 @@ describe('getLangOverride', () => {
   it('should return undefined for the given service and page lang combination', () => {
     expect(
       getLangOverride({
-        service: 'russian',
-        pageLang: 'ru',
+        service: 'mundo',
+        pageLang: 'es',
       }),
     ).toEqual(undefined);
     expect(
       getLangOverride({
-        service: 'russian',
+        service: 'mundo',
         pageLang: undefined,
       }),
     ).toEqual(undefined);
