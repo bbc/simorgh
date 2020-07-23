@@ -73,12 +73,18 @@ module.exports = ({
         }),
       ],
       // specify min/max file sizes for each JS chunk for optimal performance
+      chunkIds: 'named',
       splitChunks: {
         chunks: 'initial',
         automaticNameDelimiter: '-',
         minSize: 184320, // 180kb
         maxSize: 245760, // 240kb
         cacheGroups: {
+          common: {
+            name: true,
+            minChunks: 2,
+            chunks: 'all',
+          },
           vendor: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendor',

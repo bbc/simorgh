@@ -26,7 +26,7 @@ const renderDocument = async ({
 
   const extractor = new ChunkExtractor({ statsFile });
 
-  const linkTags = extractor.getLinkTags();
+  const linkTags = extractor.getLinkElements();
 
   const context = {};
 

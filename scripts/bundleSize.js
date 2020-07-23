@@ -55,6 +55,7 @@ const createConsoleError = (service, size, adjective) =>
 const mainBundleData = getBundleData(/^main/);
 const vendorBundleData = getBundleData(/^vendor/);
 const pageBundleData = getBundleData(/.+Page/);
+const commonBundlesData = getBundleData(/^common/);
 const serviceBundleData = services
   .map(service => getBundleData(new RegExp(`^${service}`)))
   .filter(service => service.length)
@@ -117,6 +118,10 @@ const pageBundlesTable = new Table({
   head: tableHead,
 });
 
+const commonBundlesTable = new Table({
+  head: tableHead,
+});
+
 const summaryTable = new Table({
   head: [
     'Average total bundle size (kB)',
@@ -141,6 +146,8 @@ vendorBundleData.forEach(bundle => vendorBundlesTable.push(bundle));
 sortByTotalAscending(pageBundleData).forEach(bundle =>
   pageBundlesTable.push(bundle),
 );
+commonBundlesData.forEach(bundle => commonBundlesTable.push(bundle));
+
 summaryTable.push([averageBundleSize, smallestBundleSize, largestBundleSize]);
 
 console.log('\n\nResults');
@@ -148,6 +155,7 @@ console.log(serviceBundlesTable.toString());
 console.log(mainBundlesTable.toString());
 console.log(vendorBundlesTable.toString());
 console.log(pageBundlesTable.toString());
+console.log(commonBundlesTable.toString());
 console.log(summaryTable.toString());
 
 const errors = serviceBundlesTotals
