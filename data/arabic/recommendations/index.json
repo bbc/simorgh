@@ -1,4 +1,3 @@
-
 [
   {
     "headlines":{
@@ -6,9 +5,9 @@
       "headline":"الصراع في سوريا: الأمم المتحدة تقول إن جرائم حرب \"فظيعة\" ارتكبت في معركة ادلب"
     },
     "locators":{
-      "assetUri":"\/arabic\/middleeast-53329495",
-      "cpsUrn":"urn:bbc:content:assetUri:arabic\/middleeast-53329495",
-      "curie":"http:\/\/www.bbc.co.uk\/asset\/30b4d0f3-cd56-4bd6-a5d5-ceca756ed099",
+      "assetUri":"/arabic/middleeast-53329495",
+      "cpsUrn":"urn:bbc:content:assetUri:arabic/middleeast-53329495",
+      "curie":"http://www.bbc.co.uk/asset/30b4d0f3-cd56-4bd6-a5d5-ceca756ed099",
       "assetId":"53329495"
     },
     "summary":"الأمم المتحدة تقول إن المدنيين السوريين قاسوا \"معاناة غير معقولة\" على أيدي القوات السورية والمسلحين.",
@@ -16,7 +15,7 @@
     "language":"ar",
     "passport":{
       "category":{
-        "categoryId":"http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
         "categoryName":"News"
       },
       "campaigns":[
@@ -32,15 +31,15 @@
     "indexImage":{
       "id":"113279847",
       "subType":"index",
-      "href":"http:\/\/c.files.bbci.co.uk\/12491\/production\/_113279847_1.jpg",
-      "path":"\/cpsprodpb\/12491\/production\/_113279847_1.jpg",
+      "href":"http://c.files.bbci.co.uk/12491/production/_113279847_1.jpg",
+      "path":"/cpsprodpb/12491/production/_113279847_1.jpg",
       "height":371,
       "width":660,
-      "altText":"فتى سوري مصاب يجلس داخل سيارة بعد غارة جوية حكومية في معرة مصرين، شمال غرب سوريا، في 25 فبراير\/شباط 2020",
+      "altText":"فتى سوري مصاب يجلس داخل سيارة بعد غارة جوية حكومية في معرة مصرين، شمال غرب سوريا، في 25 فبراير/شباط 2020",
       "copyrightHolder":"AFP",
       "type":"image"
     },
-    "id":"urn:bbc:ares::asset:arabic\/middleeast-53329495",
+    "id":"urn:bbc:ares::asset:arabic/middleeast-53329495",
     "type":"cps"
   },
   {
@@ -49,9 +48,9 @@
       "headline":"الحرب في ليبيا: الرئيس الفرنسي ماكرون يقول إن تركيا تمارس \"لعبة خطرة\" في ليبيا"
     },
     "locators":{
-      "assetUri":"\/arabic\/middleeast-53146050",
-      "cpsUrn":"urn:bbc:content:assetUri:arabic\/middleeast-53146050",
-      "curie":"http:\/\/www.bbc.co.uk\/asset\/97c17f9f-d52f-4a7b-be2c-ecb2702ecc6f",
+      "assetUri":"/arabic/middleeast-53146050",
+      "cpsUrn":"urn:bbc:content:assetUri:arabic/middleeast-53146050",
+      "curie":"http://www.bbc.co.uk/asset/97c17f9f-d52f-4a7b-be2c-ecb2702ecc6f",
       "assetId":"53146050"
     },
     "summary":"الرئيس الفرنسي إيمانويل ماكرون يشن هجوما على تركيا بسبب دورها في ليبيا، والمتحدث باسم اردوغان يقول إن باريس تدعم \"أمير حرب غير شرعي\".",
@@ -59,7 +58,7 @@
     "language":"ar",
     "passport":{
       "category":{
-        "categoryId":"http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
         "categoryName":"News"
       },
       "campaigns":[
@@ -75,8 +74,8 @@
     "indexImage":{
       "id":"113027613",
       "subType":"index",
-      "href":"http:\/\/c.files.bbci.co.uk\/7BB8\/production\/_113027613_581d495f-463e-4822-9313-209eb5017cac.jpg",
-      "path":"\/cpsprodpb\/7BB8\/production\/_113027613_581d495f-463e-4822-9313-209eb5017cac.jpg",
+      "href":"http://c.files.bbci.co.uk/7BB8/production/_113027613_581d495f-463e-4822-9313-209eb5017cac.jpg",
+      "path":"/cpsprodpb/7BB8/production/_113027613_581d495f-463e-4822-9313-209eb5017cac.jpg",
       "height":549,
       "width":976,
       "altText":"ماكرون وأردوغان",
@@ -84,7 +83,7 @@
       "copyrightHolder":"Getty Images",
       "type":"image"
     },
-    "id":"urn:bbc:ares::asset:arabic\/middleeast-53146050",
+    "id":"urn:bbc:ares::asset:arabic/middleeast-53146050",
     "type":"cps"
   },
   {
@@ -93,9 +92,9 @@
       "headline":"ليبيا: هل يخوض أردوغان مغامرة وقودها السوريون؟"
     },
     "locators":{
-      "assetUri":"\/arabic\/middleeast-52959311",
-      "cpsUrn":"urn:bbc:content:assetUri:arabic\/middleeast-52959311",
-      "curie":"http:\/\/www.bbc.co.uk\/asset\/e994b8ab-81a1-4d4b-b095-0888efd811c7",
+      "assetUri":"/arabic/middleeast-52959311",
+      "cpsUrn":"urn:bbc:content:assetUri:arabic/middleeast-52959311",
+      "curie":"http://www.bbc.co.uk/asset/e994b8ab-81a1-4d4b-b095-0888efd811c7",
       "assetId":"52959311"
     },
     "summary":"خلال أقل من ستة أشهر انقلبت موازين القوى على الأرض في ليبيا وباتت تركيا صاحبة كلمة في الأزمة الليبية مقابل تراجع الدور العربي وتعاظم الدور الروسي والمرتزقة الأجانب.",
@@ -103,7 +102,7 @@
     "language":"ar",
     "passport":{
       "category":{
-        "categoryId":"http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/Analysis",
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
         "categoryName":"Analysis"
       },
       "campaigns":[
@@ -119,8 +118,8 @@
     "indexImage":{
       "id":"112810290",
       "subType":"index",
-      "href":"http:\/\/c.files.bbci.co.uk\/23F1\/production\/_112810290_gettyimages-1217498155.jpg",
-      "path":"\/cpsprodpb\/23F1\/production\/_112810290_gettyimages-1217498155.jpg",
+      "href":"http://c.files.bbci.co.uk/23F1/production/_112810290_gettyimages-1217498155.jpg",
+      "path":"/cpsprodpb/23F1/production/_112810290_gettyimages-1217498155.jpg",
       "height":549,
       "width":976,
       "altText":"اردوغان والسراج",
@@ -128,7 +127,7 @@
       "copyrightHolder":"Anadolu Agency",
       "type":"image"
     },
-    "id":"urn:bbc:ares::asset:arabic\/middleeast-52959311",
+    "id":"urn:bbc:ares::asset:arabic/middleeast-52959311",
     "type":"cps"
   },
   {
@@ -137,9 +136,9 @@
       "headline":"صحف بريطانية تناقش \"الاختبار\" الروسي في الشرق الأوسط و\"العلاجات الدجلية\" لفيروس كورونا"
     },
     "locators":{
-      "assetUri":"\/arabic\/inthepress-52320329",
-      "cpsUrn":"urn:bbc:content:assetUri:arabic\/inthepress-52320329",
-      "curie":"http:\/\/www.bbc.co.uk\/asset\/e37c681a-00f0-4489-88c4-7ff0825dcfb7",
+      "assetUri":"/arabic/inthepress-52320329",
+      "cpsUrn":"urn:bbc:content:assetUri:arabic/inthepress-52320329",
+      "curie":"http://www.bbc.co.uk/asset/e37c681a-00f0-4489-88c4-7ff0825dcfb7",
       "assetId":"52320329"
     },
     "summary":"ناقشت صحف بريطانية، في نسخها الورقية والإليكترونية، صباح الجمعة، \"أكبر اختبار\" تواجهه روسيا في سوريا والشرق الأوسط، وانتشار \"العلاجات الدجلية\" لفيروس كورونا في مختلف دول العالم.",
@@ -147,7 +146,7 @@
     "language":"ar",
     "passport":{
       "category":{
-        "categoryId":"http:\/\/www.bbc.co.uk\/ontologies\/applicationlogic-news\/News",
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
         "categoryName":"News"
       },
       "campaigns":[
@@ -163,8 +162,8 @@
     "indexImage":{
       "id":"111828393",
       "subType":"index",
-      "href":"http:\/\/c.files.bbci.co.uk\/99D6\/production\/_111828393__111263583_8cf82d3f-bad7-47ca-8086-18cdd1d6da5c.jpg",
-      "path":"\/cpsprodpb\/99D6\/production\/_111828393__111263583_8cf82d3f-bad7-47ca-8086-18cdd1d6da5c.jpg",
+      "href":"http://c.files.bbci.co.uk/99D6/production/_111828393__111263583_8cf82d3f-bad7-47ca-8086-18cdd1d6da5c.jpg",
+      "path":"/cpsprodpb/99D6/production/_111828393__111263583_8cf82d3f-bad7-47ca-8086-18cdd1d6da5c.jpg",
       "height":549,
       "width":976,
       "altText":".",
@@ -172,7 +171,7 @@
       "copyrightHolder":"Getty Images",
       "type":"image"
     },
-    "id":"urn:bbc:ares::asset:arabic\/inthepress-52320329",
+    "id":"urn:bbc:ares::asset:arabic/inthepress-52320329",
     "type":"cps"
   }
 ]
