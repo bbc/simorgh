@@ -31,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: 'क्याप्शन, ',
     imageCopyrightOffscreenText: 'तस्बिर स्रोत, ',
     locale: `ne-NP`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ne',
     datetimeLocale: `ne`,
     service: 'nepali',
     serviceName: 'Nepali',

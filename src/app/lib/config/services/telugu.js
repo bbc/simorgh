@@ -32,6 +32,8 @@ export const service = {
     defaultCaptionOffscreenText: 'క్యాప్షన్, ',
     imageCopyrightOffscreenText: 'ఫొటో సోర్స్, ',
     locale: `te-IN`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'te',
     datetimeLocale: `te-in`,
     service: 'telugu',
     serviceName: 'Telugu',
