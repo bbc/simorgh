@@ -1,12 +1,11 @@
 import React from 'react';
 import { node, string, shape } from 'prop-types';
 import styled from 'styled-components';
+import detokenise from '@bbc/psammead-detokeniser';
 import { visuallyHiddenTextStyle } from '@bbc/psammead-visually-hidden-text';
 import { C_EBON, C_WHITE } from '@bbc/psammead-styles/colours';
 import { getSansBold } from '@bbc/psammead-styles/font-styles';
 import { GEL_BREVIER } from '@bbc/gel-foundations/typography';
-
-import detokeniseSkipText from './utils/detokeniseSkipText';
 
 const SKIP_LINK_BORDER = '0.125rem';
 const GEL_SPACING_PLUS_HALF = `0.75rem`;
@@ -50,11 +49,11 @@ const SkipLinkWrapper = ({
   return (
     <Wrapper>
       <SkipLink service={service} href={`#${skipEndId}`}>
-        {detokeniseSkipText(skipText, terms)}
+        {detokenise(skipText, terms)}
       </SkipLink>
       {children}
       <EndText tabIndex="-1" id={skipEndId}>
-        {detokeniseSkipText(skipEndText, terms)}
+        {detokenise(skipEndText, terms)}
       </EndText>
     </Wrapper>
   );

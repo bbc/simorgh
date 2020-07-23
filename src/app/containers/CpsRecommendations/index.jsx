@@ -54,7 +54,7 @@ const CpsRecommendations = ({ items, parentColumns }) => {
     '%title%': title,
   };
 
-  const skipEndId = 'recommendation_end';
+  const skipEndId = 'recommendation-end';
 
   const singleTransform = item => {
     return (
