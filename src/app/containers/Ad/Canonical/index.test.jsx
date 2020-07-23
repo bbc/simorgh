@@ -78,7 +78,7 @@ describe('getBootsrapLegacySrc', () => {
       queryString: '?ads-js-env=live',
       isLiveValue: false,
       bootstrapLegacySrc:
-        'https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap-legancy.js',
+        'https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap-legacy.js',
     },
     {
       queryString: '?invalid-string',
