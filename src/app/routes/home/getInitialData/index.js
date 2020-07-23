@@ -36,7 +36,7 @@ export const hasRadioSchedule = async (service, variant) => {
   return serviceHasRadioSchedule && radioScheduleOnFrontPage;
 };
 
-export default async ({ path, service, variant, pageType, remoteConfig }) => {
+export default async ({ path, service, variant, pageType }) => {
   try {
     const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
     const pageDataPromise = fetchPageData({ path, pageType });
@@ -48,7 +48,6 @@ export default async ({ path, service, variant, pageType, remoteConfig }) => {
     return {
       status,
       pageData: transformJson(json),
-      remoteConfig,
     };
   } catch ({ message, status = getErrorStatusCode() }) {
     return { error: message, status };

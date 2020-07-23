@@ -325,7 +325,6 @@ server
           service,
           variant,
           pageType,
-          remoteConfig,
         });
 
         const { status } = data;
@@ -336,6 +335,7 @@ server
           derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
         }
 
+        data.remoteConfig = remoteConfig;
         data.path = urlPath;
         data.timeOnServer = Date.now();
 

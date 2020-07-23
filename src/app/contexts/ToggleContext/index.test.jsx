@@ -6,13 +6,14 @@ import { ToggleContext, ToggleContextProvider } from '.';
 
 // eslint-disable-next-line react/prop-types
 const TestComponent = ({ toggle, children }) => {
-  const toggleIsEnabled = useContext(ToggleContext).toggleState[toggle].enabled;
+  const { toggleState } = useContext(ToggleContext);
+  const toggleIsEnabled = toggleState[toggle] && toggleState[toggle].enabled;
   return toggleIsEnabled && <div>{children}</div>;
 };
 
 const mockRemoteToggles = {
   service: 'mundo',
-  ads: {
+  testToggle: {
     enabled: true,
   },
 };
@@ -23,7 +24,7 @@ it('should render ads when remoteToggles are passed in that enable them', async 
   await act(async () => {
     container = await render(
       <ToggleContextProvider remoteToggles={mockRemoteToggles}>
-        <TestComponent toggle="ads">Dummy Ad Component</TestComponent>
+        <TestComponent toggle="testToggle">Dummy Ad Component</TestComponent>
       </ToggleContextProvider>,
     ).container;
   });

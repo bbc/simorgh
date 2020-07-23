@@ -19,15 +19,8 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
-const mockRemoteToggles = {
-  service: 'mundo',
-  ads: {
-    enabled: false,
-  },
-};
-
 const MostReadPageWithContext = () => (
-  <ToggleContextProvider remoteToggles={mockRemoteToggles}>
+  <ToggleContextProvider>
     <ServiceContextProvider service="pidgin">
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.com"

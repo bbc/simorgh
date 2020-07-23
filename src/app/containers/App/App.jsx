@@ -91,7 +91,6 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
           service: nextService,
           variant: nextVariant,
           pageType: nextPageType,
-          remoteConfig: nextRemoteConfig,
         });
 
         clearTimeout(loaderTimeout);
@@ -105,7 +104,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
           pageType: nextPageType,
           loading: false,
           pageData: path(['pageData'], data),
-          remoteConfig: path(['remoteConfig'], data),
+          remoteConfig: nextRemoteConfig,
           status: path(['status'], data),
           error: path(['error'], data),
           errorCode: null,

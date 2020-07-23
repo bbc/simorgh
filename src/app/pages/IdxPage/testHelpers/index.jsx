@@ -20,14 +20,7 @@ const serviceContext = {
 const IdxPageWithContext = ({ service = 'persian', pageData }) => {
   return (
     <BrowserRouter>
-      <ToggleContextProvider
-        remoteToggles={{
-          service,
-          ads: {
-            enabled: false,
-          },
-        }}
-      >
+      <ToggleContextProvider>
         <RequestContextProvider
           pageType="IDX"
           service={service}

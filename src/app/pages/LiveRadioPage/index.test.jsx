@@ -28,14 +28,7 @@ describe('Radio Page Main', () => {
     });
 
     await matchSnapshotAsync(
-      <ToggleContextProvider
-        remoteToggles={{
-          service: 'amharic',
-          ads: {
-            enabled: false,
-          },
-        }}
-      >
+      <ToggleContextProvider>
         <ServiceContextProvider service="amharic">
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.com"
@@ -61,14 +54,7 @@ describe('Radio Page Main', () => {
     });
 
     await matchSnapshotAsync(
-      <ToggleContextProvider
-        remoteToggles={{
-          service: 'amharic',
-          ads: {
-            enabled: false,
-          },
-        }}
-      >
+      <ToggleContextProvider>
         <ServiceContextProvider service="amharic">
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.com"
