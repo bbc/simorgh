@@ -55,7 +55,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
               >
                 <strong
                   aria-hidden="true"
-                  class="Headline-sc-1kh1qhu-0 hzbExq StyledFauxHeadline-sc-15zvetq-0 jJBkMr"
+                  class="Headline-sc-1kh1qhu-0 hzbExq StyledFauxHeadline-sc-15zvetq-0 lnFheQ"
                 >
                   Ўзбек деҳқонининг косаси нега оқармайдиshort
                 </strong>
@@ -418,7 +418,7 @@ exports[`Media Asset Page should render component 1`] = `
               >
                 <strong
                   aria-hidden="true"
-                  class="Headline-sc-1kh1qhu-0 hzbExq StyledFauxHeadline-sc-15zvetq-0 jJBkMr"
+                  class="Headline-sc-1kh1qhu-0 hzbExq StyledFauxHeadline-sc-15zvetq-0 lnFheQ"
                 >
                   Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
                 </strong>
