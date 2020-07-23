@@ -77,7 +77,7 @@ describe('Legacy MAP Media Playback', () => {
         });
 
         ['iphone-6', [1024, 786]].forEach(displaySize => {
-          it.only(`Media plays correctly on ${displaySize} screen`, () => {
+          it(`Media plays correctly on ${displaySize} screen`, () => {
             if (Cypress._.isArray(displaySize)) {
               cy.viewport(displaySize[0], displaySize[1]);
             } else {
