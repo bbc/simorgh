@@ -32,6 +32,8 @@ export const service = {
     defaultCaptionOffscreenText: 'キャプション, ',
     imageCopyrightOffscreenText: '画像提供, ',
     locale: `ja-JP`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ja',
     datetimeLocale: `ja`,
     service: 'japanese',
     serviceName: 'Japan',

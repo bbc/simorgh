@@ -54,6 +54,8 @@ export const service = {
     frontPageTitle: 'Glavna stranica',
     lang: `sr-latn`,
     locale: `sr-latn`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'sr-Latn',
     noBylinesPolicy:
       'https://www.bbc.com/serbian/lat/institutional-50173730#authorexpertise',
     publishingPrinciples:
@@ -288,6 +290,8 @@ export const service = {
     frontPageTitle: 'Главна страница',
     lang: `sr-cyrl`,
     locale: `sr-cyrl`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'sr-Cyrl',
     noBylinesPolicy:
       'https://www.bbc.com/serbian/cyr/institutional-50173730#authorexpertise',
     publishingPrinciples:

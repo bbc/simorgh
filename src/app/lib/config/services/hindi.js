@@ -31,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: 'कैप्शन, ',
     imageCopyrightOffscreenText: 'इमेज स्रोत, ',
     locale: `hi-IN`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'hi',
     datetimeLocale: `hi`,
     service: 'hindi',
     serviceName: 'Hindi',
