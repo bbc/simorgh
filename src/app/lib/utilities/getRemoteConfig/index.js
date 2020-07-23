@@ -9,10 +9,8 @@ const getRemoteConfig = async (service, cache) => {
   const { origin } = getOriginContext();
   const url = constructTogglesEndpoint(service, origin);
 
-  const cachedResponse = cache && cache.get(url); // returns undefined if no cache entry or if entry is stale
-
+  const cachedResponse = cache && cache.get(url);
   if (cachedResponse) {
-    // we could log that we are using a cached response, but it could be too noisy.
     return cachedResponse;
   }
 
