@@ -4,7 +4,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 
-import recommendationsData from '#pages/StoryPage/fixtureData/recommendations.ltr.json';
+import recommendationsData from '#data/mundo/recommendations/index.json';
 
 import CpsRecommendations from '.';
 
