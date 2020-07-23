@@ -270,7 +270,7 @@ export const service = {
   trad: {
     ...baseServiceConfig,
     ads: {
-      hasAds: false,
+      hasAds: true,
       advertisementLabel: '廣告',
     },
     lang: `zh-hant`,

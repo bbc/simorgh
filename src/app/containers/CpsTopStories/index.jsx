@@ -35,6 +35,7 @@ const TopStories = ({ content, parentColumns }) => {
       parentColumns={parentColumns}
       singleTransform={singleTransform}
       listTransform={listTransform}
+      columnType="secondary"
     />
   );
 };
