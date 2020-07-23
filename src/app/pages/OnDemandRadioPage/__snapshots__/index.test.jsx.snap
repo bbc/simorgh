@@ -524,7 +524,13 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 
 @media screen {
   .c6 {
-    padding: 2rem 0 1rem;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c6 {
+    padding: 1rem 0;
   }
 }
 
@@ -1075,7 +1081,13 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 
 @media screen {
   .c6 {
-    padding: 2rem 0 1rem;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c6 {
+    padding: 1rem 0;
   }
 }
 
@@ -1838,7 +1850,13 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 
 @media screen {
   .c6 {
-    padding: 2rem 0 1rem;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c6 {
+    padding: 1rem 0;
   }
 }
 
@@ -2377,7 +2395,13 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 
 @media screen {
   .c6 {
-    padding: 2rem 0 1rem;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c6 {
+    padding: 1rem 0;
   }
 }
 
