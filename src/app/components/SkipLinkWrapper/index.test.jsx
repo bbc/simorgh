@@ -10,8 +10,8 @@ describe('SkipLinkWrapper', () => {
       <SkipLinkWrapper
         service="news"
         terms={terms}
-        skipEndId="end-of-content"
-        skipText="Skip %foo_bar% content"
+        textEndId="end-of-content"
+        text="Skip %foo_bar% content"
         endTextVisuallyHidden="End of %foo_bar%"
       >
         <span>Foo Bar</span>
