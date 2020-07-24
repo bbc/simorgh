@@ -13,7 +13,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   >
     <a
       class="SkipLink-sc-1raf5kj-1 kSEOyf"
-      href="#recommendation-end"
+      href="#end-of-recommendations"
     >
       Skip Quizás también te interese and continue reading
     </a>
@@ -104,7 +104,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
     </div>
     <p
       class="EndText-sc-1raf5kj-2 kEyfjd"
-      id="recommendation-end"
+      id="end-of-recommendations"
       tabindex="-1"
     >
       End of Quizás también te interese
@@ -120,7 +120,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   >
     <a
       class="SkipLink-sc-1raf5kj-1 kSEOyf"
-      href="#recommendation-end"
+      href="#end-of-recommendations"
     >
       Skip Quizás también te interese and continue reading
     </a>
@@ -378,7 +378,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
     </div>
     <p
       class="EndText-sc-1raf5kj-2 kEyfjd"
-      id="recommendation-end"
+      id="end-of-recommendations"
       tabindex="-1"
     >
       End of Quizás también te interese
