@@ -127,8 +127,10 @@ describe('App', () => {
             2,
             [],
             {
+              assertUri: undefined,
               bbcOrigin: 'https://www.bbc.co.uk',
               pageData: null,
+              remoteConfig: null,
               status: null,
               error: null,
               errorCode: null,
@@ -149,8 +151,10 @@ describe('App', () => {
             3,
             [],
             {
+              assertUri: undefined,
               bbcOrigin: 'https://www.bbc.co.uk',
               pageData: null,
+              remoteConfig: null,
               status: null,
               error,
               errorCode: null,
@@ -195,7 +199,6 @@ describe('App', () => {
             service: 'ukchina',
             variant: 'simp',
             pageType: 'article',
-            remoteConfig: null,
           });
 
           // start data fetch and set loading to true
@@ -205,6 +208,7 @@ describe('App', () => {
             {
               bbcOrigin: 'https://www.bbc.co.uk',
               pageData: null,
+              remoteConfig: null,
               status: null,
               error: null,
               errorCode: null,
@@ -225,8 +229,10 @@ describe('App', () => {
             3,
             [],
             {
+              assetUri: undefined,
               bbcOrigin: 'https://www.bbc.co.uk',
               pageData: data.pageData,
+              remoteConfig: null,
               status: data.status,
               error: undefined,
               errorCode: null,
@@ -238,6 +244,7 @@ describe('App', () => {
               pathname: 'pathnameThree',
               previousPath: 'pathnameTwo',
               variant: 'simp',
+              timeOnServer: undefined,
             },
           );
         });

@@ -70,6 +70,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       loaderPromise.then(() => {
         setState({
           pageData: null,
+          remoteConfig: null,
           status: null,
           service: nextService,
           variant: nextVariant,
