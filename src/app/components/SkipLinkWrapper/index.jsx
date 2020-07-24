@@ -7,7 +7,7 @@ import { C_EBON, C_WHITE } from '@bbc/psammead-styles/colours';
 import { getSansBold } from '@bbc/psammead-styles/font-styles';
 import { GEL_BREVIER } from '@bbc/gel-foundations/typography';
 
-const SKIP_LINK_BORDER = '0.125rem';
+const BORDER_WIDTH = '0.125rem';
 const GEL_SPACING_PLUS_HALF = `0.75rem`;
 
 const Wrapper = styled.div`
@@ -18,7 +18,7 @@ const SkipLink = styled.a`
   ${({ service }) => getSansBold(service)}
   ${GEL_BREVIER}
   background-color: ${C_WHITE};
-  border: ${SKIP_LINK_BORDER} solid ${C_EBON};
+  border: ${BORDER_WIDTH} solid ${C_EBON};
   color: ${C_EBON};
   display: block;
   left: 0;
@@ -43,7 +43,7 @@ const SkipLinkWrapper = ({
   skipEndId,
   children,
   skipText,
-  skipEndText,
+  endTextVisuallyHidden,
   terms,
 }) => {
   return (
@@ -53,7 +53,7 @@ const SkipLinkWrapper = ({
       </SkipLink>
       {children}
       <EndText tabIndex="-1" id={skipEndId}>
-        {detokenise(skipEndText, terms)}
+        {detokenise(endTextVisuallyHidden, terms)}
       </EndText>
     </Wrapper>
   );
@@ -64,7 +64,7 @@ SkipLinkWrapper.propTypes = {
   children: node.isRequired,
   skipEndId: string.isRequired,
   skipText: string.isRequired,
-  skipEndText: string.isRequired,
+  endTextVisuallyHidden: string.isRequired,
   terms: shape({}).isRequired,
 };
 

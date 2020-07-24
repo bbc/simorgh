@@ -12,7 +12,7 @@ describe('SkipLinkWrapper', () => {
         terms={terms}
         skipEndId="end-of-content"
         skipText="Skip %foo_bar% content"
-        skipEndText="End of %foo_bar%"
+        endTextVisuallyHidden="End of %foo_bar%"
       >
         <span>Foo Bar</span>
       </SkipLinkWrapper>,
