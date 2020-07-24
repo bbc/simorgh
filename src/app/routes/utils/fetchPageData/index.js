@@ -14,6 +14,7 @@ import sendCustomMetric from '#lib/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#lib/utilities/customMetrics/metrics.const';
 import getErrorStatusCode from './utils/getErrorStatusCode';
 import getUrl from './utils/getUrl';
+import onClient from '#app/lib/utilities/onClient';
 
 const logger = nodeLogger(__filename);
 
@@ -63,12 +64,14 @@ export default async ({ path, pageType }) => {
       pageType,
     });
 
-    await sendCustomMetric({
-      metricName: NON_200_RESPONSE,
-      statusCode: simorghError.status,
-      pageType,
-      requestUrl: path,
-    });
+    if (!onClient()) {
+      sendCustomMetric({
+        metricName: NON_200_RESPONSE,
+        statusCode: simorghError.status,
+        pageType,
+        requestUrl: path,
+      });
+    }
 
     throw simorghError;
   }

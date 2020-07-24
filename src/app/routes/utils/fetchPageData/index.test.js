@@ -87,41 +87,78 @@ describe('fetchPageData', () => {
   });
 
   describe('Rejected fetch', () => {
-    it('should handle a rejected Ares fetch and return an error the Simorgh app can handle', () => {
-      const expectedStatusCode = 502;
-
+    beforeEach(() => {
       fetch.mockRejectedValue(new Error('Failed to fetch'), {
         status: 500,
       });
+    });
 
-      return fetchPageData({ path: requestedPathname, pageType }).catch(
-        ({ message, status }) => {
-          expect({ message, status }).toEqual({
-            message: 'Failed to fetch',
-            status: expectedStatusCode,
-          });
+    afterAll(() => {
+      resetWindowValue('location', window.location);
+    });
 
-          expect(sendCustomMetric).toBeCalledWith({
-            metricName: NON_200_RESPONSE,
-            pageType,
-            requestUrl: requestedPathname,
-            statusCode: expectedStatusCode,
-          });
-        },
-      );
+    describe('on server', () => {
+      beforeEach(() => {
+        setWindowValue('location', false);
+      });
+
+      it('should handle a rejected Ares fetch and return a 500 error the Simorgh app can handle', () => {
+        const expectedStatusCode = 500;
+
+        return fetchPageData({ path: requestedPathname, pageType }).catch(
+          ({ message, status }) => {
+            expect({ message, status }).toEqual({
+              message: 'Failed to fetch',
+              status: expectedStatusCode,
+            });
+
+            expect(sendCustomMetric).toBeCalledWith({
+              metricName: NON_200_RESPONSE,
+              pageType,
+              requestUrl: requestedPathname,
+              statusCode: expectedStatusCode,
+            });
+          },
+        );
+      });
+    });
+
+    describe('on client', () => {
+      beforeEach(() => {
+        setWindowValue('location', true);
+      });
+
+      it('should handle a rejected Ares fetch and return a 502 error the Simorgh app can handle', () => {
+        const expectedStatusCode = 502;
+
+        return fetchPageData({ path: requestedPathname, pageType }).catch(
+          ({ message, status }) => {
+            expect({ message, status }).toEqual({
+              message: 'Failed to fetch',
+              status: expectedStatusCode,
+            });
+
+            expect(sendCustomMetric).not.toHaveBeenCalled();
+          },
+        );
+      });
     });
   });
 
   describe('Request returns 200 status code, but invalid JSON', () => {
+    fetch.mockResponse('Some Invalid JSON');
+
     afterAll(() => {
       resetWindowValue('location', window.location);
     });
-    fetch.mockResponse('Some Invalid JSON');
 
     describe('on server', () => {
+      beforeEach(() => {
+        setWindowValue('location', false);
+      });
+
       it('should return a 500 error code', () => {
         const expectedStatusCode = 500;
-        setWindowValue('location', false);
 
         return fetchPageData({ path: requestedPathname, pageType }).catch(
           ({ message, status }) => {
@@ -152,9 +189,12 @@ describe('fetchPageData', () => {
     });
 
     describe('on client', () => {
+      beforeEach(() => {
+        setWindowValue('location', true);
+      });
+
       it('should return a 502 error code', () => {
         const expectedStatusCode = 502;
-        setWindowValue('location', true);
 
         return fetchPageData({ path: requestedPathname, pageType }).catch(
           ({ message, status }) => {
@@ -173,6 +213,34 @@ describe('fetchPageData', () => {
               status: expectedStatusCode,
             });
 
+            expect(sendCustomMetric).not.toHaveBeenCalled();
+          },
+        );
+      });
+    });
+  });
+
+  describe('Request returns a 404 status code', () => {
+    beforeEach(() => {
+      fetch.mockResponse('Not found', { status: 404 });
+    });
+    afterAll(() => {
+      resetWindowValue('location', window.location);
+    });
+    const expectedStatusCode = 404;
+
+    describe('on server', () => {
+      beforeEach(() => {
+        setWindowValue('location', false);
+      });
+      it('should return the status code as 404', async () => {
+        return fetchPageData({ path: requestedPathname, pageType }).catch(
+          ({ message, status }) => {
+            expect({ message, status }).toEqual({
+              message: 'data_response_404',
+              status: expectedStatusCode,
+            });
+
             expect(sendCustomMetric).toBeCalledWith({
               metricName: NON_200_RESPONSE,
               pageType,
@@ -183,28 +251,24 @@ describe('fetchPageData', () => {
         );
       });
     });
-  });
 
-  describe('Request returns a 404 status code', () => {
-    it('should return the status code as 404', async () => {
-      const expectedStatusCode = 404;
-      fetch.mockResponse('Not found', { status: 404 });
+    describe('on client', () => {
+      beforeEach(() => {
+        setWindowValue('location', true);
+      });
 
-      return fetchPageData({ path: requestedPathname, pageType }).catch(
-        ({ message, status }) => {
-          expect({ message, status }).toEqual({
-            message: 'data_response_404',
-            status: expectedStatusCode,
-          });
+      it('should return the status code as 404', async () => {
+        return fetchPageData({ path: requestedPathname, pageType }).catch(
+          ({ message, status }) => {
+            expect({ message, status }).toEqual({
+              message: 'data_response_404',
+              status: expectedStatusCode,
+            });
 
-          expect(sendCustomMetric).toBeCalledWith({
-            metricName: NON_200_RESPONSE,
-            pageType,
-            requestUrl: requestedPathname,
-            statusCode: expectedStatusCode,
-          });
-        },
-      );
+            expect(sendCustomMetric).not.toHaveBeenCalled();
+          },
+        );
+      });
     });
   });
 
@@ -303,12 +367,7 @@ describe('fetchPageData', () => {
             message: `Unexpected upstream response (HTTP status code 418) when requesting ${expectedUrl}`,
           });
 
-          expect(sendCustomMetric).toBeCalledWith({
-            metricName: NON_200_RESPONSE,
-            pageType,
-            requestUrl: requestedPathname,
-            statusCode: expectedStatusCode,
-          });
+          expect(sendCustomMetric).not.toHaveBeenCalled();
         },
       );
     });
@@ -332,12 +391,7 @@ describe('fetchPageData', () => {
             message: `Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
           });
 
-          expect(sendCustomMetric).toBeCalledWith({
-            metricName: NON_200_RESPONSE,
-            pageType,
-            requestUrl: requestedPathname,
-            statusCode: expectedStatusCode,
-          });
+          expect(sendCustomMetric).not.toHaveBeenCalled();
         },
       );
     });
