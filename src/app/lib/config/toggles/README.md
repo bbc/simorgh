@@ -3,7 +3,7 @@
 
 | Toggle Name             | Description |
 | ----------------------- | ----------- |
-| `ads`                   | Display Advertisements on Front Page and Story (STY) Pages |
+| `ads`                   | Display Advertisements on Front Pages and Story (STY) Pages |
 | `chartbeatAnalytics`    | Capture Chartbeat Analytics |
 | `cinemaModeTV`          | Display Cinema Mode on On Demand TV Pages |
 | `comscoreAnalytics`     | Capture Comscore Analytics |
