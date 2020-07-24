@@ -1,6 +1,6 @@
-import local from './local';
-import test from './test';
-import live from './live';
+import local from './localConfig';
+import test from './testConfig';
+import live from './liveConfig';
 
 export default {
   local,
