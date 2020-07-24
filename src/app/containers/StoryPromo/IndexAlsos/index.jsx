@@ -75,7 +75,11 @@ const IndexAlsosContainer = ({ alsoItems, script, service, dir }) => {
     <IndexAlsos offScreenText={relatedContent} data-e2e="index-alsos">
       <IndexAlsosWrapper>
         {alsoItems.slice(0, MAX_NUM_INDEX_ALSOS).map(item => {
-          const { id, cpsType, mediaType } = item;
+          const { cpsType, mediaType } = item;
+
+          const aresId = pathOr(null, ['id'], item);
+          const promoId = pathOr(null, ['uri'], item);
+          const id = aresId || promoId;
 
           const headline = pathOr(null, ['headlines', 'headline'], item);
           const overtypedHeadline = pathOr(
@@ -123,16 +127,18 @@ const IndexAlsosContainer = ({ alsoItems, script, service, dir }) => {
 const alsoItemsPropTypes = shape({
   headlines: shape({
     headline: string.isRequired,
-  }).isRequired,
+  }),
   locators: shape({
     assetUri: string.isRequired,
     cpsUrn: string,
-  }).isRequired,
+  }),
   summary: string,
   timestamp: number,
-  cpsType: string.isRequired,
-  id: string.isRequired,
+  cpsType: string,
+  id: string,
   type: string,
+  name: string,
+  url: string,
 });
 
 IndexAlsosContainer.propTypes = {
