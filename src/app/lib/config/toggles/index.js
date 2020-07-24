@@ -24,6 +24,9 @@ const toggles = {
     radioSchedule: {
       enabled: true,
     },
+    liveRadioSchedule: {
+      enabled: true,
+    },
     scriptLink: {
       enabled: true,
     },
@@ -74,6 +77,9 @@ const toggles = {
       enabled: true,
     },
     radioSchedule: {
+      enabled: true,
+    },
+    liveRadioSchedule: {
       enabled: true,
     },
     scriptLink: {
@@ -127,6 +133,9 @@ const toggles = {
     },
     radioSchedule: {
       enabled: true,
+    },
+    liveRadioSchedule: {
+      enabled: false,
     },
     scriptLink: {
       enabled: true,
