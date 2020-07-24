@@ -1,12 +1,16 @@
 /* eslint-disable no-underscore-dangle */
 import toggles from '.';
 
-describe('toggles', () => {
+describe('Toggles Config', () => {
   ['local', 'test', 'live'].forEach(environment => {
     describe(`when application environment is ${environment}`, () => {
-      it('should retrieve correct toggle value', () => {
-        const environmentToggles = toggles[environment];
+      const environmentToggles = toggles[environment];
+      it('should retrieve correct toggle value for environment', () => {
         expect(environmentToggles._environment.value).toBe(environment);
+      });
+
+      it('should contain correct default values', () => {
+        expect(environmentToggles).toMatchSnapshot();
       });
     });
   });
