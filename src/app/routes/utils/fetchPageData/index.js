@@ -10,7 +10,6 @@ import {
   NOT_FOUND,
   UPSTREAM_CODES_TO_PROPAGATE_IN_SIMORGH,
 } from './utils/statusCodes';
-import sendCustomMetric from '#lib/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#lib/utilities/customMetrics/metrics.const';
 import getErrorStatusCode from './utils/getErrorStatusCode';
 import getUrl from './utils/getUrl';
@@ -64,7 +63,10 @@ export default async ({ path, pageType }) => {
       pageType,
     });
 
+    // Only import + send custom metric on server
     if (!onClient()) {
+      // eslint-disable-next-line global-require
+      const sendCustomMetric = require('#lib/utilities/customMetrics').default;
       sendCustomMetric({
         metricName: NON_200_RESPONSE,
         statusCode: simorghError.status,
