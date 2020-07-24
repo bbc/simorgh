@@ -1,6 +1,5 @@
 # Simorgh Application Toggles 
 
-
 | Toggle Name             | Description |
 | ----------------------- | ----------- |
 | `ads`                   | Display Advertisements on Front Pages and Story (STY) Pages |
