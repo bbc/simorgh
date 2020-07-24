@@ -1,7 +1,12 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import path from 'ramda/src/path';
-import { GEL_SPACING_QUAD } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_QUAD,
+  GEL_SPACING_QUIN,
+} from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { Headline } from '@bbc/psammead-headings';
 import { textDefaultPropTypes } from '#models/propTypes';
@@ -15,10 +20,10 @@ import { GridItemConstrainedLarge } from '#lib/styledGrid';
 const FauxHeadline = props => <Headline as="strong" {...props} />;
 
 const StyledFauxHeadline = styled(FauxHeadline)`
-  padding: ${GEL_SPACING_QUAD} 0;
+  padding: ${GEL_SPACING} 0 ${GEL_SPACING_QUAD};
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding: 2.5rem 0;
+    padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_QUIN};
   }
 `;
 
