@@ -18,5 +18,5 @@
 | `prerollAds`            | Display Preroll Advertisements on Media Asset Pages | 
 | `radioSchedule`         | Display Radio Schedule (if disabled, Radio Schedule will also not appear on Live Radio Pages (overrides the value of `liveRadioSchedule`) | 
 | `scriptLink`            | Display Script Switching link for services with variants | 
-| `socialEmbed`           | Display Social Embeds on Story (STY) Pages| 
+| `socialEmbed`           | Display Social Embeds on Story (STY) Pages | 
 | `variantCookie`         | Set variant cookie for services with variants |
