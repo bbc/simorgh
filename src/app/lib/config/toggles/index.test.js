@@ -1,7 +1,13 @@
-describe('toggles', () => {
-  it('should retrieve local toggles', async () => {
-    const localToggle = await import('.');
+/* eslint-disable no-underscore-dangle */
+import toggles from '.';
 
-    console.log(JSON.stringify(localToggle));
+describe('toggles', () => {
+  ['local', 'test', 'live'].forEach(environment => {
+    describe(`when application environment is ${environment}`, () => {
+      it('should retrieve correct toggle value', () => {
+        const environmentToggles = toggles[environment];
+        expect(environmentToggles._environment.value).toBe(environment);
+      });
+    });
   });
 });
