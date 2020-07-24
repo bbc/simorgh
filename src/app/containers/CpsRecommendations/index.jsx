@@ -54,7 +54,7 @@ const CpsRecommendations = ({ items, parentColumns }) => {
     '%title%': title,
   };
 
-  const textEndId = 'end-of-recommendations';
+  const endTextId = 'end-of-recommendations';
 
   const singleTransform = item => {
     return (
@@ -121,7 +121,7 @@ const CpsRecommendations = ({ items, parentColumns }) => {
   return (
     <SkipLinkWrapper
       service={service}
-      textEndId={textEndId}
+      endTextId={endTextId}
       text={text}
       endTextVisuallyHidden={endTextVisuallyHidden}
       terms={skipLinkTerms}
