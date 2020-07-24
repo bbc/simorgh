@@ -37,7 +37,7 @@ const getRemoteConfig = async (service, cache) => {
     }
     return json;
   } catch (error) {
-    logger.error(CONFIG_FETCH_ERROR, { error: error.toString() });
+    logger.error(CONFIG_FETCH_ERROR, { error: error.toString(), url, service });
     return null;
   }
 };
