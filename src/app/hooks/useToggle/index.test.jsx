@@ -6,11 +6,11 @@ import useToggle from '.';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 describe('useToggle custom hook', () => {
-  describe('Given ads toggle that is fetched from the toggle service is enabled', () => {
-    it('return enabled true', async () => {
+  describe('Given a remote toggle that is true', () => {
+    it('should return enabled true', async () => {
       const mockToggles = {
         service: 'mundo',
-        ads: {
+        testToggle: {
           enabled: true,
         },
       };
@@ -23,18 +23,18 @@ describe('useToggle custom hook', () => {
       );
 
       await act(async () => {
-        result = renderHook(() => useToggle('ads'), { wrapper }).result;
+        result = renderHook(() => useToggle('testToggle'), { wrapper }).result;
       });
 
       expect(result.current).toEqual({ enabled: true });
     });
   });
 
-  describe('Given ads toggle that is fetched from the toggle service is disabled', () => {
-    it('return enabled false', async () => {
+  describe('Given a remote toggle that is false', () => {
+    it('should return enabled false', async () => {
       const mockToggles = {
         service: 'mundo',
-        ads: {
+        testToggle: {
           enabled: false,
         },
       };
@@ -46,7 +46,7 @@ describe('useToggle custom hook', () => {
       );
 
       await act(async () => {
-        result = renderHook(() => useToggle('ads'), { wrapper }).result;
+        result = renderHook(() => useToggle('testToggle'), { wrapper }).result;
       });
 
       expect(result.current).toEqual({ enabled: false });

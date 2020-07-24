@@ -8,7 +8,10 @@ import { ToggleContext, ToggleContextProvider } from '.';
 const TestComponent = ({ toggle, children }) => {
   const { toggleState } = useContext(ToggleContext);
   const toggleIsEnabled = toggleState[toggle] && toggleState[toggle].enabled;
-  return toggleIsEnabled && <div>{children}</div>;
+  if (!toggleIsEnabled) {
+    return null;
+  }
+  return <div>{children}</div>;
 };
 
 const mockRemoteToggles = {
@@ -18,29 +21,29 @@ const mockRemoteToggles = {
   },
 };
 
-it('should render ads when remoteToggles are passed in that enable them', async () => {
+it('should render test component when remoteToggles are passed in that enable them', async () => {
   let container;
 
   await act(async () => {
     container = await render(
       <ToggleContextProvider remoteToggles={mockRemoteToggles}>
-        <TestComponent toggle="testToggle">Dummy Ad Component</TestComponent>
+        <TestComponent toggle="testToggle">Dummy Component</TestComponent>
       </ToggleContextProvider>,
     ).container;
   });
 
-  expect(queryByText(container, 'Dummy Ad Component')).toBeInTheDocument();
+  expect(queryByText(container, 'Dummy Component')).toBeInTheDocument();
 });
 
-it('should not render ads by default as no remoteToggles are passed in', async () => {
+it('should not render test component by default as no remoteToggles are passed in', async () => {
   let container;
   await act(async () => {
     container = await render(
       <ToggleContextProvider remoteToggles={null}>
-        <TestComponent toggle="ads">Dummy Ad Component</TestComponent>
+        <TestComponent toggle="testToggle">Dummy Component</TestComponent>
       </ToggleContextProvider>,
     ).container;
   });
 
-  expect(queryByText(container, 'Dummy Ad Component')).not.toBeInTheDocument();
+  expect(queryByText(container, 'Dummy Component')).not.toBeInTheDocument();
 });
