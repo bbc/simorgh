@@ -9,7 +9,7 @@
 | `comscoreAnalytics`     | Capture Comscore Analytics |
 | `cpsRecommendations`    | Display Recommendations |
 | `enableFetchingToggles` | Enable fetching toggle values from remote Toggles Config API for specified services |
-| `include`               | Display Includes on Story (STY) Pages |
+| `include`               | Display Include on Story (STY) Pages |
 | `liveRadioSchedule`     | Display Radio Schedule on Live Radio Pages |
 | `logMediaPlayerStatus`  | Log the HTTP status code returned by the Media Player iFrame URL |
 | `mediaPlayer`           | Display Media Player on Media Asset Pages (MAP) and Article Pages |
