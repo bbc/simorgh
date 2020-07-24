@@ -3,7 +3,6 @@
 exports[`Toggles Config when application environment is live should contain correct default values 1`] = `
 Object {
   "_environment": Object {
-    "enabled": false,
     "value": "live",
   },
   "ads": Object {
@@ -64,7 +63,6 @@ Object {
 exports[`Toggles Config when application environment is local should contain correct default values 1`] = `
 Object {
   "_environment": Object {
-    "enabled": false,
     "value": "local",
   },
   "ads": Object {
@@ -125,7 +123,6 @@ Object {
 exports[`Toggles Config when application environment is test should contain correct default values 1`] = `
 Object {
   "_environment": Object {
-    "enabled": false,
     "value": "test",
   },
   "ads": Object {
