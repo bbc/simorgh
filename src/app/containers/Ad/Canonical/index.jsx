@@ -37,12 +37,6 @@ export const getBootsrapSrc = queryString => {
   return `https://gn-web-assets.api.bbc.com/ngas/${params}dotcom-bootstrap.js`;
 };
 
-export const getBootsrapLegacySrc = queryString => {
-  const useLiveSrc = isLive() || queryString.includes('ads-js-env=live');
-  const params = useLiveSrc ? '' : 'test/';
-  return `https://gn-web-assets.api.bbc.com/ngas/${params}dotcom-bootstrap-legacy.js`;
-};
-
 const CanonicalAd = ({ slotType }) => {
   const location = useLocation();
   const queryString = location.search;
@@ -71,8 +65,7 @@ const CanonicalAd = ({ slotType }) => {
       {/* Loading dotcom-bootstrap.js here instead of CanonicalAdBootstrapJs to avoid it loading on live */}
       {/* This can be moved once we allow the script to load on live */}
       <Helmet>
-        <script type="module" src={getBootsrapSrc(queryString)} />
-        <script nomodule="nomodule" src={getBootsrapLegacySrc(queryString)} />
+        <script src={getBootsrapSrc(queryString)} />
       </Helmet>
       <AdContainer
         slotType={slotType}
