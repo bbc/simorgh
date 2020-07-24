@@ -1,4 +1,9 @@
 export default {
+  // For testing purposes
+  _environment: {
+    enabled: false,
+    value: 'live',
+  },
   ads: {
     enabled: false,
   },
