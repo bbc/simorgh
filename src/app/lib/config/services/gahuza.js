@@ -191,6 +191,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
       onFrontPage: false,
       header: 'Ibiganiro bishya',
       durationLabel: 'Umwanya bimara %duration%',
