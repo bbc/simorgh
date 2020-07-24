@@ -1,35 +1,50 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "text": "ስምዑ",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "መደባትና",
-        "type": "paragraph"
-      },
-      {
-        "id": "liveradio",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_tigrinya_radio",
-        "duration": "PT0S",
-        "caption": "",
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
-      }
-    ]
-  },
   "masterBrand": "bbc_tigrinya_radio",
+  "heading": "ስምዑ",
+  "bodySummary": "መደባትና",
   "language": "ti",
   "id": "urn:bbc:ares::ws_live:bbc_tigrinya_radio",
   "name": "ስምዑ",
   "summary": "መደባትና",
   "pageTitle": "ስምዑ - BBC News ትግርኛ",
   "contentType": "player-live",
-  "pageIdentifier": "tigrinya.bbc_tigrinya_radio.liveradio.page"
+  "pageIdentifier": "tigrinya.bbc_tigrinya_radio.liveradio.page",
+  "radioScheduleData": [
+    {
+      "id": "p07vy8st",
+      "state": "onDemand",
+      "startTime": 1575580170000,
+      "link": "/tigrinya/bbc_tigrinya_radio/w3ct000w",
+      "brandTitle": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+      "summary": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+      "duration": "PT15M"
+    },
+    {
+      "id": "p07vy6h9",
+      "state": "onDemand",
+      "startTime": 1575577470000,
+      "link": "/tigrinya/bbc_tigrinya_radio/w3cszzxh",
+      "brandTitle": "ቢቢሲ ትግርኛ፡ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ",
+      "summary": "",
+      "duration": "PT5M"
+    },
+    {
+      "id": "p07vy6h8",
+      "state": "onDemand",
+      "startTime": 1575576570000,
+      "link": "/tigrinya/bbc_tigrinya_radio/w3ct000w",
+      "brandTitle": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+      "summary": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+      "duration": "PT15M"
+    },
+    {
+      "id": "p07vy8sv",
+      "state": "next",
+      "startTime": 1893488400000,
+      "link": "/tigrinya/bbc_tigrinya_radio/w3cszzxh",
+      "brandTitle": "ቢቢሲ ትግርኛ፡ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ",
+      "summary": "",
+      "duration": "PT5M"
+    }
+  ]
 }

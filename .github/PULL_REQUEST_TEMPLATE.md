@@ -11,7 +11,7 @@ _A very high-level summary of easily-reproducible changes that can be understood
 ---
 
 - [ ] I have assigned myself to this PR and the corresponding issues
-- [ ] I have added labels to this PR for the relevant pod(s) affected by these changes
+- [ ] I have added the `cross-team` label to this PR if it requires visibility across World Service teams
 - [ ] I have assigned this PR to the Simorgh project
 
 **Testing:**

@@ -31,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Insiguro, ',
     imageCopyrightOffscreenText: 'Ahavuye isanamu, ',
     locale: `rw-RW`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'rw',
     datetimeLocale: `rw`,
     service: 'gahuza',
     serviceName: 'Gahuza',
@@ -189,6 +191,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
       onFrontPage: false,
       header: 'Ibiganiro bishya',
       durationLabel: 'Umwanya bimara %duration%',

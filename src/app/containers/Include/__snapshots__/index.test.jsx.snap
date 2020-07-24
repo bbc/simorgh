@@ -19,11 +19,13 @@ exports[`IncludeContainer should render a fallback for VJs on an Amp page when i
       class="StyledEmbedError-sc-1oc1egd-0 fyPX"
     >
       <div
-        class="StyledErrorMessage-sc-1oc1egd-1 eCvEfh"
+        class="StyledErrorMessage-sc-1oc1egd-1 jAchtl"
       >
-        <strong>
-          Sorry, we can’t display this part of the story on this lightweight mobile page.
-        </strong>
+        <div>
+          <strong>
+            Sorry, we can’t display this part of the story on this lightweight mobile page.
+          </strong>
+        </div>
         <a
           href="https://www.test.bbc.com/pathname#include-1"
         >
