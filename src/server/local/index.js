@@ -10,6 +10,7 @@ import {
   mostReadDataRegexPath,
   onDemandRadioDataPath,
   onDemandTvDataPath,
+  recommendationsDataRegex,
   secondaryColumnDataRegexPath,
 } from '#app/routes/utils/regex';
 import { LOCAL_SENDFILE_ERROR } from '#lib/logger.const';
@@ -133,6 +134,16 @@ export default server => {
       const { service, variant } = params;
       const dataFilePath = constructDataFilePath({
         pageType: 'secondaryColumn',
+        service,
+        variant,
+      });
+
+      sendDataFile(res, dataFilePath, next);
+    })
+    .get(recommendationsDataRegex, async ({ params }, res, next) => {
+      const { service, variant } = params;
+      const dataFilePath = constructDataFilePath({
+        pageType: 'recommendations',
         service,
         variant,
       });

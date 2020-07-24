@@ -7,6 +7,7 @@ export default ({ pageType, service, id, variant = '', assetUri }) => {
     case 'frontpage':
     case 'mostRead':
     case 'secondaryColumn':
+    case 'recommendations':
       dataPath = `${variant || 'index'}.json`;
       break;
     case 'cpsAssets':
