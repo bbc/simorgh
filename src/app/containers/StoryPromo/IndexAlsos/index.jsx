@@ -83,9 +83,14 @@ const IndexAlsosContainer = ({ alsoItems, script, service, dir }) => {
             ['headlines', 'overtyped'],
             item,
           );
-          const indexAlsoHeadline = overtypedHeadline || headline;
+          const promoHeadline = pathOr(null, ['name'], item);
+          const indexAlsoHeadline =
+            overtypedHeadline || headline || promoHeadline;
 
-          const url = pathOr(null, ['locators', 'assetUri'], item);
+          const assetUrl = pathOr(null, ['locators', 'assetUri'], item);
+          const promoUrl = pathOr(null, ['uri'], item);
+          const url = assetUrl || promoUrl;
+
           const indexAlsoMediaIndicator = buildIndexAlsosMediaIndicator({
             cpsType,
             mediaType,
