@@ -789,6 +789,10 @@ describe('Server', () => {
       expect(sendFileSpy.mock.calls.length).toEqual(0);
       expect(statusCode).toEqual(500);
     });
+    it('should serve a response cache control of 7 days', async () => {
+      const { header } = await makeRequest('/news/articles/manifest.json');
+      expect(header['cache-control']).toBe('public, max-age=604800');
+    });
   });
 
   describe('Most Read json', () => {
@@ -834,6 +838,40 @@ describe('Server', () => {
     it('should respond with a 500 for non-existing services', async () => {
       const { statusCode } = await makeRequest(
         '/some-service/sty-secondary-column.json',
+      );
+      expect(statusCode).toEqual(500);
+    });
+  });
+
+  describe('Recommendations json', () => {
+    // This is being skipped due to variants not needing recommendations
+    it.skip('should serve a file for valid service paths with variants', async () => {
+      const { body } = await makeRequest(
+        '/zhongwen/uk-23283128/recommendations/trad.json',
+      );
+      expect(body).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            headlines: expect.any(Object),
+          }),
+        ]),
+      );
+    });
+    it('should serve a file for valid service paths without variants', async () => {
+      const { body } = await makeRequest(
+        '/mundo/23263889/recommendations.json',
+      );
+      expect(body).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            headlines: expect.any(Object),
+          }),
+        ]),
+      );
+    });
+    it('should respond with a 500 for non-existing services', async () => {
+      const { statusCode } = await makeRequest(
+        '/some-service/recommendations.json',
       );
       expect(statusCode).toEqual(500);
     });

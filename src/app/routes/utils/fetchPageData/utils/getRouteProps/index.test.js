@@ -1,13 +1,17 @@
 import reactRouterConfig from 'react-router-config';
+import isAmpPath from '#app/routes/utils/isAmpPath';
 import getRouteProps from '.';
 import * as routeFallbackParams from './routeFallbackParams';
 
 jest.mock('react-router-config');
 
 jest.mock('./routeFallbackParams', () => ({
-  fallbackAmpParam: jest.fn().mockImplementation(() => true),
   fallbackServiceParam: jest.fn().mockImplementation(() => 'fallbackService'),
 }));
+
+jest.mock('#app/routes/utils/isAmpPath', () =>
+  jest.fn().mockImplementation(() => true),
+);
 
 describe('getRouteProps', () => {
   beforeEach(() => {
@@ -25,7 +29,7 @@ describe('getRouteProps', () => {
 
       const methodCall = await getRouteProps([], 'url');
 
-      expect(routeFallbackParams.fallbackAmpParam).not.toHaveBeenCalled();
+      expect(isAmpPath).not.toHaveBeenCalled();
       expect(routeFallbackParams.fallbackServiceParam).not.toHaveBeenCalled();
 
       expect(methodCall).toEqual({
@@ -55,7 +59,7 @@ describe('getRouteProps', () => {
 
       const methodCall = await getRouteProps([], 'url');
 
-      expect(routeFallbackParams.fallbackAmpParam).not.toHaveBeenCalled();
+      expect(isAmpPath).not.toHaveBeenCalled();
       expect(routeFallbackParams.fallbackServiceParam).not.toHaveBeenCalled();
 
       expect(methodCall).toEqual({
@@ -87,7 +91,7 @@ describe('getRouteProps', () => {
 
       const methodCall = await getRouteProps([], 'url');
 
-      expect(routeFallbackParams.fallbackAmpParam).not.toHaveBeenCalled();
+      expect(isAmpPath).not.toHaveBeenCalled();
       expect(routeFallbackParams.fallbackServiceParam).not.toHaveBeenCalled();
 
       expect(methodCall).toEqual({
@@ -116,9 +120,7 @@ describe('getRouteProps', () => {
 
       const methodCall = await getRouteProps([], 'unknownURL');
 
-      expect(routeFallbackParams.fallbackAmpParam).toHaveBeenCalledWith(
-        'unknownURL',
-      );
+      expect(isAmpPath).toHaveBeenCalledWith('unknownURL');
       expect(routeFallbackParams.fallbackServiceParam).toHaveBeenCalledWith(
         'unknownURL',
       );
@@ -151,7 +153,7 @@ describe('getRouteProps', () => {
         service: 'fallbackService',
       });
 
-      expect(routeFallbackParams.fallbackAmpParam).toHaveBeenCalled();
+      expect(isAmpPath).toHaveBeenCalled();
       expect(routeFallbackParams.fallbackServiceParam).toHaveBeenCalled();
     });
   });

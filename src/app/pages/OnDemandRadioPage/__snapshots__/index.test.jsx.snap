@@ -15,6 +15,11 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
       rel="canonical"
     />
     <link
+      href="https://www.test.bbc.co.uk/pathname"
+      hreflang="ps"
+      rel="alternate"
+    />
+    <link
       href="http://localhost:7080/pashto/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
@@ -524,7 +529,13 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 
 @media screen {
   .c6 {
-    padding: 2rem 0 1rem;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c6 {
+    padding: 1rem 0;
   }
 }
 
@@ -1075,7 +1086,13 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 
 @media screen {
   .c6 {
-    padding: 2rem 0 1rem;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c6 {
+    padding: 1rem 0;
   }
 }
 
@@ -1185,6 +1202,11 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
     <link
       href="https://www.test.bbc.com/pathname"
       rel="canonical"
+    />
+    <link
+      href="https://www.test.bbc.co.uk/pathname"
+      hreflang="ps"
+      rel="alternate"
     />
     <link
       href="https://www.test.bbc.co.uk/pathname.amp"
@@ -1838,7 +1860,13 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 
 @media screen {
   .c6 {
-    padding: 2rem 0 1rem;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c6 {
+    padding: 1rem 0;
   }
 }
 
@@ -2377,7 +2405,13 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 
 @media screen {
   .c6 {
-    padding: 2rem 0 1rem;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c6 {
+    padding: 1rem 0;
   }
 }
 
