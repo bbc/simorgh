@@ -41,7 +41,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
       </div>
       <strong
         aria-hidden="true"
-        class="Headline-sc-1kh1qhu-0 StyledHeadline-gehp0k-0 kQBQQH"
+        class="Headline-sc-1kh1qhu-0 StyledHeadline-gehp0k-0 cTZPuu"
       >
         <span
           class="BrandTitle-gehp0k-1 iseUMj"
@@ -65,7 +65,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
       dir="rtl"
     >
       <p
-        class="Paragraph-k859h4-0 StyledParagraphComponent-v70vjd-0 cvyKtV"
+        class="Paragraph-k859h4-0 StyledParagraphComponent-v70vjd-0 kjgjmV"
       >
         د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
       </p>
