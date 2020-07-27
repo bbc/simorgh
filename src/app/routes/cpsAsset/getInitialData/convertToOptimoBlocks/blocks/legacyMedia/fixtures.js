@@ -6,7 +6,24 @@ export const legacyMediaBlock = {
   live: false,
   href:
     'http://www.bbc.co.uk/russian/meta/dps/2016/05/emp/160505_v_diving_record.emp.xml',
+  image: {
+    href:
+      'http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/05/160505093650_freediving_640x360_bbc_nocredit.jpg',
+  },
   type: 'legacyMedia',
+};
+
+export const legacyMedia = {
+  content: {
+    blocks: [legacyMediaBlock],
+  },
+  promo: {
+    headlines: {
+      headline: 'Новый рекорд фридайвинга: 124 метра под водой без акваланга',
+      shortHeadline:
+        'Новый рекорд во фридайвинге: 124 метра под водой без акваланга',
+    },
+  },
 };
 
 export const legacyOptimoVideoBlock = {
@@ -25,6 +42,14 @@ export const legacyOptimoVideoBlock = {
                 available: true,
                 blockId: '43703851',
                 format: 'audio_video',
+                imageUrl:
+                  'https://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/05/160505093650_freediving_640x360_bbc_nocredit.jpg',
+                synopses: {
+                  short:
+                    'Новый рекорд во фридайвинге: 124 метра под водой без акваланга',
+                },
+                title:
+                  'Новый рекорд фридайвинга: 124 метра под водой без акваланга',
               },
             },
             {

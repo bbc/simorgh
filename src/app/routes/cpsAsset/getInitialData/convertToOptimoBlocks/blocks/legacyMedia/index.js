@@ -1,4 +1,16 @@
-const generateVideoBlock = block => {
+import path from 'ramda/src/path';
+
+const getImageUrl = block => {
+  let imageURL = path(['image', 'href'], block);
+
+  if (imageURL) {
+    imageURL = imageURL.replace('http://', 'https://');
+  }
+
+  return imageURL;
+};
+
+const generateVideoBlock = (block, json) => {
   const generatedBlock = {
     type: 'aresMediaMetadata',
     blockId: `urn:bbc:ares::${block.subType}:${block.id}`,
@@ -6,6 +18,11 @@ const generateVideoBlock = block => {
       available: true,
       blockId: block.id,
       format: 'audio_video',
+      imageUrl: getImageUrl(block),
+      title: path(['promo', 'headlines', 'headline'], json),
+      synopses: {
+        short: path(['promo', 'headlines', 'shortHeadline'], json),
+      },
     },
   };
 
@@ -30,7 +47,7 @@ const generateImageBlock = () => {
   };
 };
 
-const convertMedia = block => {
+const convertMedia = (block, json) => {
   const convertedBlock = {
     type: 'legacyMedia',
     model: {
@@ -39,7 +56,7 @@ const convertMedia = block => {
         {
           type: 'aresMedia',
           model: {
-            blocks: [generateVideoBlock(block), generateImageBlock()],
+            blocks: [generateVideoBlock(block, json), generateImageBlock()],
           },
         },
       ],
