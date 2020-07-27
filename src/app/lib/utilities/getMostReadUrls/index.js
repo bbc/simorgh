@@ -7,8 +7,8 @@ export const getMostReadEndpoint = ({
 }) => {
   const query = env !== 'live' && queryString ? queryString : '';
   return variant
-    ? `/${service}/mostread/${variant}.json${query}`
-    : `/${service}/mostread.json${query}`;
+    ? `${baseUrl}/${service}/mostread/${variant}.json${query}`
+    : `${baseUrl}/${service}/mostread.json${query}`;
 };
 
 export const getLocalMostReadEndpoint = ({ service, variant = 'default' }) =>
