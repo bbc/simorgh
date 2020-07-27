@@ -1,10 +1,19 @@
 import fetchPageData from '../../utils/fetchPageData';
 import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
+import { getQueryString } from '#lib/utilities/urlParser';
 
-export default async ({ service, variant, pageType }) => {
+export default async ({ service, variant, pageType, path }) => {
+  const { SIMORGH_APP_ENV, SIMORGH_BASE_URL } = process.env;
   try {
-    const mostReadUrl = getMostReadEndpoint({ service, variant }).split('.')[0];
+    const mostReadUrl = getMostReadEndpoint({
+      service,
+      variant,
+      env: SIMORGH_APP_ENV,
+      queryString: getQueryString(path),
+      baseUrl: SIMORGH_BASE_URL,
+    }).split('.')[0];
+    console.log('mostReadUrl: ', mostReadUrl);
     const { json, status } = await fetchPageData({
       path: mostReadUrl,
       pageType,

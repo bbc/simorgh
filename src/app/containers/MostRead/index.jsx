@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useLocation } from 'react-router-dom';
 import { oneOf, string, elementType, bool } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -15,11 +16,12 @@ const MostReadContainer = ({
   wrapper,
   serverRenderOnAmp,
 }) => {
-  const { variant, isAmp } = useContext(RequestContext);
+  const { variant, isAmp, env } = useContext(RequestContext);
   const {
     service,
     mostRead: { hasMostRead },
   } = useContext(ServiceContext);
+  const location = useLocation();
 
   const { enabled } = useToggle('mostRead');
 
@@ -36,7 +38,13 @@ const MostReadContainer = ({
   }
 
   const endpoint =
-    mostReadEndpointOverride || getMostReadEndpoint({ service, variant });
+    mostReadEndpointOverride ||
+    getMostReadEndpoint({
+      service,
+      variant,
+      env,
+      queryString: location.search,
+    });
 
   return (
     <Canonical
