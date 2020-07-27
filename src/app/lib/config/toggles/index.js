@@ -103,7 +103,7 @@ const toggles = {
       enabled: true,
     },
     cpsRecommendations: {
-      enabled: false,
+      enabled: true,
     },
     cinemaModeTV: {
       enabled: true,
