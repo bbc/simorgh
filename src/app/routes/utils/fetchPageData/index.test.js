@@ -24,10 +24,11 @@ describe('fetchPageData', () => {
       );
     });
 
-    it('should always log pathname as url', async () => {
+    it('should always log data url and path', async () => {
       await fetchPageData({ path: requestedPathname });
       expect(loggerMock.info).toBeCalledWith(DATA_REQUEST_RECEIVED, {
-        url: expectedUrl,
+        data: expectedUrl,
+        path: requestedPathname,
       });
     });
 
@@ -36,7 +37,8 @@ describe('fetchPageData', () => {
       await fetchPageData({ path: requestedPathname, pageType });
 
       expect(loggerMock.info).toBeCalledWith(DATA_REQUEST_RECEIVED, {
-        url: expectedUrl,
+        data: expectedUrl,
+        path: requestedPathname,
         pageType,
       });
     });
@@ -94,28 +96,35 @@ describe('fetchPageData', () => {
   });
 
   describe('Request returns 200 status code, but invalid JSON', () => {
+    fetch.mockResponse('Some Invalid JSON');
+
     afterAll(() => {
       resetWindowValue('location', window.location);
     });
-    fetch.mockResponse('Some Invalid JSON');
 
     describe('on server', () => {
-      it('should return a 500 error code', () => {
+      beforeEach(() => {
         setWindowValue('location', false);
+      });
+
+      it('should return a 500 error code', () => {
+        const expectedStatusCode = 500;
 
         return fetchPageData({ path: requestedPathname }).catch(
           ({ message, status }) => {
             expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
               error:
                 'invalid json response body at  reason: Unexpected end of JSON input',
-              status: 500,
-              url: 'http://localhost/path/to/asset.json',
+              status: expectedStatusCode,
+              data: expectedUrl,
+              path: requestedPathname,
+              pageType,
             });
 
             expect({ message, status }).toEqual({
               message:
                 'invalid json response body at  reason: Unexpected end of JSON input',
-              status: 500,
+              status: expectedStatusCode,
             });
           },
         );
@@ -123,21 +132,28 @@ describe('fetchPageData', () => {
     });
 
     describe('on client', () => {
-      it('should return a 502 error code', () => {
+      beforeEach(() => {
         setWindowValue('location', true);
+      });
+
+      it('should return a 502 error code', () => {
+        const expectedStatusCode = 502;
 
         return fetchPageData({ path: requestedPathname }).catch(
           ({ message, status }) => {
             expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
               error:
                 'invalid json response body at  reason: Unexpected end of JSON input',
-              status: 502,
-              url: 'http://localhost/path/to/asset.json',
+              status: expectedStatusCode,
+              data: expectedUrl,
+              path: requestedPathname,
+              pageType,
             });
+
             expect({ message, status }).toEqual({
               message:
                 'invalid json response body at  reason: Unexpected end of JSON input',
-              status: 502,
+              status: expectedStatusCode,
             });
           },
         );
@@ -146,14 +162,19 @@ describe('fetchPageData', () => {
   });
 
   describe('Request returns a 404 status code', () => {
+    const expectedStatusCode = 404;
     it('should return the status code as 404', async () => {
       fetch.mockResponse('Not found', { status: 404 });
+    });
+    afterAll(() => {
+      resetWindowValue('location', window.location);
+    });
 
       return fetchPageData({ path: requestedPathname }).catch(
         ({ message, status }) => {
           expect({ message, status }).toEqual({
             message: 'data_response_404',
-            status: 404,
+            status: expectedStatusCode,
           });
         },
       );
@@ -178,8 +199,10 @@ describe('fetchPageData', () => {
             expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
               error:
                 'Unexpected upstream response (HTTP status code 418) when requesting http://localhost/path/to/asset.json',
-              status: 500,
-              url: 'http://localhost/path/to/asset.json',
+              status: expectedStatusCode,
+              data: expectedUrl,
+              path: requestedPathname,
+              pageType,
             });
 
             expect({ message, status }).toEqual({
@@ -198,8 +221,9 @@ describe('fetchPageData', () => {
           ({ message, status }) => {
             expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
               error: `Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
-              status: 500,
-              url: 'http://localhost/path/to/asset.json',
+              status: expectedStatusCode,
+              data: expectedUrl,
+              path: requestedPathname,
               pageType,
             });
 
@@ -225,8 +249,10 @@ describe('fetchPageData', () => {
         ({ message, status }) => {
           expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
             error: `Unexpected upstream response (HTTP status code 418) when requesting ${expectedUrl}`,
-            status: 502,
-            url: 'http://localhost/path/to/asset.json',
+            status: expectedStatusCode,
+            data: expectedUrl,
+            path: requestedPathname,
+            pageType,
           });
 
           expect({ message, status }).toEqual({
@@ -244,8 +270,10 @@ describe('fetchPageData', () => {
         ({ message, status }) => {
           expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
             error: `Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
-            status: 502,
-            url: 'http://localhost/path/to/asset.json',
+            status: expectedStatusCode,
+            data: expectedUrl,
+            path: requestedPathname,
+            pageType,
           });
 
           expect({ message, status }).toEqual({
