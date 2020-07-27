@@ -35,6 +35,8 @@ export const service = {
     defaultCaptionOffscreenText: 'التعليق، ',
     imageCopyrightOffscreenText: 'صدر الصورة، ',
     locale: 'ar',
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ar',
     datetimeLocale: 'ar',
     service: 'arabic',
     serviceName: 'Arabic',
@@ -196,6 +198,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Features',
       frequenciesPageUrl:
@@ -206,6 +209,10 @@ export const service = {
     },
     recommendations: {
       hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

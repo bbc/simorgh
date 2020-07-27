@@ -1202,6 +1202,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
       rel="canonical"
     />
     <link
+      href="https://www.test.bbc.co.uk/afaanoromoo/oduu-41217768"
+      hreflang="om"
+      rel="alternate"
+    />
+    <link
       href="https://www.test.bbc.co.uk/afaanoromoo/oduu-41217768.amp"
       rel="amphtml"
     />
@@ -5667,6 +5672,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
     <link
       href="https://www.test.bbc.com/azeri/azerbaijan-44208474"
       rel="canonical"
+    />
+    <link
+      href="https://www.test.bbc.co.uk/azeri/azerbaijan-44208474"
+      hreflang="az"
+      rel="alternate"
     />
     <link
       href="https://www.test.bbc.co.uk/azeri/azerbaijan-44208474.amp"

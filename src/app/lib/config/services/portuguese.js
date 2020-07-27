@@ -41,6 +41,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Legenda, ',
     imageCopyrightOffscreenText: 'Crédito, ',
     locale: `pt-BR`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'pt',
     datetimeLocale: `pt-br`,
     service: 'portuguese',
     serviceName: 'News Brasil',
@@ -203,6 +205,10 @@ export const service = {
     },
     recommendations: {
       hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Pule %title% e continue lendo',
+        endTextVisuallyHidden: 'Fim do %title%',
+      },
     },
     footer: {
       trustProjectLink: {

@@ -4225,7 +4225,7 @@ module.exports = () => ({
               '/persian/bbc_persian_tv/tv_programmes/w13xttnr', // Brand
               '/persian/bbc_persian_tv/tv/w172xbvktkvplq0', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
@@ -4907,18 +4907,18 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/russian'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/russian'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/russian'],
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
       onDemandRadio: { environments: undefined, smoke: false },
@@ -4963,19 +4963,19 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/russian/news-53473369'],
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/russian/23219699'],
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: ['/russian/23219699'],
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostReadPage: {
         environments: {
