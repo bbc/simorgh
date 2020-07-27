@@ -1,5 +1,5 @@
 import React, { useContext, Fragment } from 'react';
-import { arrayOf, shape, oneOf, number, string } from 'prop-types';
+import { arrayOf, shape, oneOf, number, string, oneOfType } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import pathOr from 'ramda/src/pathOr';
 import MediaIndicator from '@bbc/psammead-media-indicator';
@@ -134,25 +134,31 @@ const IndexAlsosContainer = ({ alsoItems, script, service, dir }) => {
   );
 };
 
-const alsoItemsPropTypes = shape({
+const assetPromoAlsoItemsPropTypes = shape({
   headlines: shape({
     headline: string.isRequired,
-  }),
+  }).isRequired,
   locators: shape({
     assetUri: string.isRequired,
     cpsUrn: string,
-  }),
+  }).isRequired,
   summary: string,
   timestamp: number,
-  cpsType: string,
-  id: string,
+  cpsType: string.isRequired,
+  id: string.isRequired,
   type: string,
-  name: string,
-  url: string,
+});
+
+const linkPromoAlsoItemsPropTypes = shape({
+  name: string.isRequired,
+  url: string.isRequired,
+  id: string.isRequired,
 });
 
 IndexAlsosContainer.propTypes = {
-  alsoItems: arrayOf(alsoItemsPropTypes).isRequired,
+  alsoItems: arrayOf(
+    oneOfType(assetPromoAlsoItemsPropTypes, linkPromoAlsoItemsPropTypes),
+  ).isRequired,
   script: shape(scriptPropType).isRequired,
   service: string.isRequired,
   dir: oneOf(['ltr', 'rtl']),
