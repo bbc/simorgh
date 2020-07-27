@@ -9,8 +9,8 @@ import routes from '../app/routes';
 import { localBaseUrl } from '../testHelpers/config';
 import services from './utilities/serviceConfigs';
 import * as renderDocument from './Document';
-import sendCustomMetrics from './utilities/customMetrics';
-import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
+import sendCustomMetrics from '#lib/utilities/customMetrics';
+import { NON_200_RESPONSE } from '#lib/utilities/customMetrics/metrics.const';
 import loggerMock from '#testHelpers/loggerMock';
 import { ROUTING_INFORMATION } from '#lib/logger.const';
 
@@ -91,7 +91,7 @@ jest.mock('./styles', () => ({
   getStyleTag: jest.fn().mockImplementation(() => <style />),
 }));
 
-jest.mock('./utilities/customMetrics');
+jest.mock('#lib/utilities/customMetrics');
 
 const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
 
