@@ -71,7 +71,7 @@ export default async ({ path: pathname, pageType, service }) => {
       ? await withRadioSchedule({
           pageDataPromise,
           service,
-          pathname,
+          path: pathname,
           radioService: getRadioService(service),
         })
       : await pageDataPromise;
