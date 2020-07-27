@@ -9,7 +9,7 @@ export default {
     enabled: true,
   },
   cinemaModeTV: {
-    enabled: false,
+    enabled: true,
   },
   comscoreAnalytics: {
     enabled: false,
