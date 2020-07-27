@@ -15,7 +15,7 @@ export default {
     enabled: true,
   },
   cpsRecommendations: {
-    enabled: false,
+    enabled: true,
   },
   enableFetchingToggles: {
     enabled: true,
