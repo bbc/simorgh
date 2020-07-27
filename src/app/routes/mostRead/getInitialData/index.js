@@ -12,8 +12,8 @@ export default async ({ service, variant, pageType, path }) => {
       env: SIMORGH_APP_ENV,
       queryString: getQueryString(path),
       baseUrl: SIMORGH_BASE_URL,
-    }).split('.')[0];
-    console.log('mostReadUrl: ', mostReadUrl);
+    }).replace('.json', ''); // fetchPageData appends .json to the path
+
     const { json, status } = await fetchPageData({
       path: mostReadUrl,
       pageType,
