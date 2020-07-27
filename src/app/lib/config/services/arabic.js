@@ -209,6 +209,10 @@ export const service = {
     },
     recommendations: {
       hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
