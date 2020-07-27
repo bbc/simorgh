@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { arrayOf, shape, number } from 'prop-types';
 import styled from 'styled-components';
 import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import { StoryPromoLiBase, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { C_LUNAR, C_GHOST } from '@bbc/psammead-styles/colours';
 import { GEL_SPACING, GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
@@ -13,6 +14,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import Grid from '../../components/Grid';
+import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 
 const StyledStoryPromoWrapper = styled.div`
   > div {
@@ -31,7 +33,9 @@ const RecommendationsWrapper = styled.div`
 `;
 
 const CpsRecommendations = ({ items, parentColumns }) => {
-  const { recommendations, dir, translations } = useContext(ServiceContext);
+  const { recommendations, dir, translations, service } = useContext(
+    ServiceContext,
+  );
   const { enabled } = useToggle('cpsRecommendations');
 
   const { hasStoryRecommendations } = recommendations;
@@ -43,6 +47,14 @@ const CpsRecommendations = ({ items, parentColumns }) => {
     ['recommendationTitle'],
     translations,
   );
+
+  const { text, endTextVisuallyHidden } = path(['skipLink'], recommendations);
+
+  const skipLinkTerms = {
+    '%title%': title,
+  };
+
+  const endTextId = 'end-of-recommendations';
 
   const singleTransform = item => {
     return (
@@ -107,20 +119,28 @@ const CpsRecommendations = ({ items, parentColumns }) => {
   );
 
   return (
-    <RecommendationsWrapper>
-      <CpsOnwardJourney
-        labelId="recommendations-heading"
-        title={title}
-        content={items}
-        parentColumns={parentColumns}
-        singleTransform={singleTransform}
-        listTransform={listTransform}
-        sectionLabelOverrideAs="strong"
-        sectionLabelBar={false}
-        sectionLabelBackground={C_LUNAR}
-        columnType="main"
-      />
-    </RecommendationsWrapper>
+    <SkipLinkWrapper
+      service={service}
+      endTextId={endTextId}
+      text={text}
+      endTextVisuallyHidden={endTextVisuallyHidden}
+      terms={skipLinkTerms}
+    >
+      <RecommendationsWrapper>
+        <CpsOnwardJourney
+          labelId="recommendations-heading"
+          title={title}
+          content={items}
+          parentColumns={parentColumns}
+          singleTransform={singleTransform}
+          listTransform={listTransform}
+          sectionLabelOverrideAs="strong"
+          sectionLabelBar={false}
+          sectionLabelBackground={C_LUNAR}
+          columnType="main"
+        />
+      </RecommendationsWrapper>
+    </SkipLinkWrapper>
   );
 };
 
