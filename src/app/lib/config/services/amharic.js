@@ -35,6 +35,8 @@ export const service = {
     defaultCaptionOffscreenText: 'መግለጫ, ',
     imageCopyrightOffscreenText: 'የፎቶው ባለመብት, ',
     locale: `am-ET`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'am',
     datetimeLocale: 'am',
     service: 'amharic',
     serviceName: 'Amharic',
@@ -149,10 +151,10 @@ export const service = {
         listen: 'ያድምጡ',
         watch: 'ተመልከት',
         liveLabel: 'ቀጥታ',
-        nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'ቀጣይ',
+        previousRadioShow: 'ያለፈ የሬዲዮ ስርጭት',
+        nextRadioShow: 'ቀጣይ የሬዲዮ ስርጭት',
+        duration: 'ርዝመት',
       },
       socialEmbed: {
         caption: {
@@ -182,8 +184,10 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
       onFrontPage: false,
-      durationLabel: 'Duration %duration%',
+      header: 'ያድምጡ',
+      durationLabel: 'ርዝመት %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

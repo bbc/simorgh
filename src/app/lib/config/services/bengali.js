@@ -35,6 +35,8 @@ export const service = {
     defaultCaptionOffscreenText: 'ক্যাপশান, ',
     imageCopyrightOffscreenText: 'ছবির উৎস, ',
     locale: `bn-BD`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'bn',
     datetimeLocale: `bn`,
     service: 'bengali',
     serviceName: 'Bengali',
@@ -161,10 +163,10 @@ export const service = {
         listen: 'শুনুন',
         watch: 'দেখুন',
         liveLabel: 'লাইভ',
-        nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'পরবর্তী',
+        previousRadioShow: 'পূর্ববর্তী রেডিও অনুষ্ঠান',
+        nextRadioShow: 'পরবর্তী রেডিও অনুষ্ঠান',
+        duration: 'স্থিতিকাল',
       },
       socialEmbed: {
         caption: {
@@ -195,8 +197,10 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
       onFrontPage: false,
-      durationLabel: 'Duration %duration%',
+      header: 'রেডিও অনুষ্ঠান',
+      durationLabel: 'স্থিতিকাল %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

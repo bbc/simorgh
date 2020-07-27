@@ -10,6 +10,8 @@ fetch.mockResponse(JSON.stringify(onDemandRadioJson));
 const { env } = process;
 const spy = jest.spyOn(fetchPageData, 'default');
 
+const pageType = 'media';
+
 describe('Get initial data for on demand radio', () => {
   afterEach(() => {
     process.env = { ...env };
@@ -19,6 +21,7 @@ describe('Get initial data for on demand radio', () => {
   it('should return essential data for a page to render', async () => {
     const { pageData } = await getInitialData({
       path: 'mock-on-demand-radio-path',
+      pageType,
     });
 
     expect(pageData.headline).toEqual('ماښامنۍ خپرونه');
@@ -48,6 +51,7 @@ describe('Get initial data for on demand radio', () => {
     );
     const { pageData } = await getInitialData({
       path: 'mock-on-demand-radio-path',
+      pageType,
     });
     expect(pageData.episodeIsAvailable).toEqual('available');
   });
@@ -61,7 +65,10 @@ describe('Get initial data for on demand radio', () => {
       onDemandRadioJson,
     );
     fetch.mockResponse(JSON.stringify(responseWithEpisodeAvailableInOneMinute));
-    const { pageData } = await getInitialData('mock-on-demand-radio-path');
+    const { pageData } = await getInitialData({
+      path: 'mock-on-demand-radio-path',
+      pageType,
+    });
     expect(pageData.episodeIsAvailable).toEqual('not-yet-available');
   });
 
@@ -72,20 +79,29 @@ describe('Get initial data for on demand radio', () => {
       onDemandRadioJson,
     );
     fetch.mockResponse(JSON.stringify(responseWithoutVersions));
-    const { pageData } = await getInitialData('mock-on-demand-radio-path');
+    const { pageData } = await getInitialData({
+      path: 'mock-on-demand-radio-path',
+      pageType,
+    });
     expect(pageData.episodeIsAvailable).toEqual('expired');
   });
 
   it('should override renderer on test', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
-    await getInitialData({ path: 'mock-live-radio-path' });
-    expect(spy).toHaveBeenCalledWith('mock-live-radio-path?renderer_env=live');
+    await getInitialData({ path: 'mock-live-radio-path', pageType });
+    expect(spy).toHaveBeenCalledWith({
+      path: 'mock-live-radio-path?renderer_env=live',
+      pageType,
+    });
   });
 
   it('should not override renderer on live', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
-    await getInitialData({ path: 'mock-live-radio-path' });
-    expect(spy).toHaveBeenCalledWith('mock-live-radio-path');
+    await getInitialData({ path: 'mock-live-radio-path', pageType });
+    expect(spy).toHaveBeenCalledWith({
+      path: 'mock-live-radio-path',
+      pageType,
+    });
   });
 
   it('invokes logging when expected data is missing in ARES response', async () => {
@@ -131,6 +147,7 @@ describe('Get initial data for on demand radio', () => {
 
     await getInitialData({
       path: 'mock-on-demand-radio-path',
+      pageType,
     });
 
     const countMissingFieldCalls = mockedFunction => {

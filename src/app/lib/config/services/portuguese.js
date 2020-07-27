@@ -41,6 +41,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Legenda, ',
     imageCopyrightOffscreenText: 'Crédito, ',
     locale: `pt-BR`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'pt',
     datetimeLocale: `pt-br`,
     service: 'portuguese',
     serviceName: 'News Brasil',
@@ -62,6 +64,7 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      recommendationTitle: 'Talvez também te interesse',
       seeAll: 'Ver todos',
       home: 'Início',
       currentPage: 'Página atual',

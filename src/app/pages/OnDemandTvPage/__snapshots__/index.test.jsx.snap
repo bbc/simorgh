@@ -23,7 +23,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
         نړۍ دا وخت, ۲۷ می ۲۰۲۰
       </h1>
       <div
-        class="StyledVideoPlayer-sc-1brqmij-2 jdEbWl"
+        class="StyledVideoPlayer-sc-1brqmij-2 epZzyZ"
       >
         <div
           class="StyledVideoContainer-sc-13p1a4d-0 dKHIix"
@@ -97,7 +97,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
         نړۍ دا وخت, ۲۷ می ۲۰۲۰
       </h1>
       <div
-        class="StyledMessageContainer-sc-1brqmij-0 eQVkWQ"
+        class="StyledMessageContainer-sc-1brqmij-0 cKKoVQ"
       >
         <div
           class="StyledWrapper-sc-1pnftlt-0 jywlaE"
@@ -115,7 +115,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
       </div>
       <strong
         aria-hidden="true"
-        class="Headline-sc-1kh1qhu-0 StyledHeadline-gehp0k-0 gBkukD"
+        class="Headline-sc-1kh1qhu-0 StyledHeadline-gehp0k-0 kQBQQH"
       >
         <span
           class="BrandTitle-gehp0k-1 iseUMj"

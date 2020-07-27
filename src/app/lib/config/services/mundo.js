@@ -40,6 +40,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Título, ',
     imageCopyrightOffscreenText: 'Fuente de la imagen, ',
     locale: `es-005`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'es',
     datetimeLocale: `es`,
     service: 'mundo',
     serviceName: 'News Mundo',
@@ -59,6 +61,7 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
+      recommendationTitle: 'Quizás también te interese',
       seeAll: 'Ver todo',
       home: 'Página de inicio',
       currentPage: 'Página actual',

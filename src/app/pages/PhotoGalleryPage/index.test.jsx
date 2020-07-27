@@ -90,32 +90,46 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   return ContextsContainer;
 });
 
+const pageType = 'cpsAsset';
+
 describe('Photo Gallery Page', () => {
   describe('snapshots', () => {
     it('should match snapshot for PGL with no onward journeys', async () => {
       fetch.mockResponse(JSON.stringify(noOnwardJourneys));
-      const { pageData } = await getInitialData('some-cps-pgl-path');
+      const { pageData } = await getInitialData({
+        path: 'some-cps-pgl-path',
+        pageType,
+      });
       const page = createAssetPage({ pageData }, 'pidgin');
       await matchSnapshotAsync(page);
     });
 
     it('should match snapshot for PGL with about tags', async () => {
       fetch.mockResponse(JSON.stringify(pglAboutData));
-      const { pageData } = await getInitialData('some-cps-pgl-path');
+      const { pageData } = await getInitialData({
+        path: 'some-cps-pgl-path',
+        pageType,
+      });
       const page = createAssetPage({ pageData }, 'afaanoromoo');
       await matchSnapshotAsync(page);
     });
 
     it('should match snapshot for PGL with non-CPS onward journeys filtered', async () => {
       fetch.mockResponse(JSON.stringify(someCpsOnwardJourneys));
-      const { pageData } = await getInitialData('some-cps-pgl-path');
+      const { pageData } = await getInitialData({
+        path: 'some-cps-pgl-path',
+        pageType,
+      });
       const page = createAssetPage({ pageData }, 'azeri');
       await matchSnapshotAsync(page);
     });
 
     it('should match snapshot for PGL with all CPS onward journeys', async () => {
       fetch.mockResponse(JSON.stringify(allCpsOnwardJourneys));
-      const { pageData } = await getInitialData('some-cps-pgl-path');
+      const { pageData } = await getInitialData({
+        path: 'some-cps-pgl-path',
+        pageType,
+      });
       const page = createAssetPage({ pageData }, 'pidgin');
       await matchSnapshotAsync(page);
     });
@@ -123,14 +137,20 @@ describe('Photo Gallery Page', () => {
 
   it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
     fetch.mockResponse(JSON.stringify(pglAboutData));
-    const { pageData } = await getInitialData('some-cps-pgl-path');
+    const { pageData } = await getInitialData({
+      path: 'some-cps-pgl-path',
+      pageType,
+    });
     const { getByText } = render(createAssetPage({ pageData }, 'afaanoromoo'));
     expect(getByText('21 Fuulbaana 2017')).toBeInTheDocument();
   });
 
   it('should not show the pop-out timestamp when allowDateStamp is false', async () => {
     fetch.mockResponse(JSON.stringify(pglAboutData));
-    const { pageData } = await getInitialData('some-cps-pgl-path');
+    const { pageData } = await getInitialData({
+      path: 'some-cps-pgl-path',
+      pageType,
+    });
     const pageDataWithHiddenTimestamp = assocPath(
       ['metadata', 'options', 'allowDateStamp'],
       false,

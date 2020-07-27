@@ -1,23 +1,22 @@
 import 'isomorphic-fetch';
 import nodeLogger from '#lib/logger.node';
-import onClient from '#lib/utilities/onClient';
 import { getQueryString, getUrlPath } from '#lib/utilities/urlParser';
 import getBaseUrl from './utils/getBaseUrl';
+import onClient from '#lib/utilities/onClient';
 import isLive from '#lib/utilities/isLive';
 import {
   DATA_REQUEST_RECEIVED,
   DATA_NOT_FOUND,
   DATA_FETCH_ERROR,
 } from '#lib/logger.const';
+import {
+  OK,
+  NOT_FOUND,
+  UPSTREAM_CODES_TO_PROPAGATE_IN_SIMORGH,
+} from './utils/statusCodes';
+import getErrorStatusCode from './utils/getErrorStatusCode';
 
 const logger = nodeLogger(__filename);
-const STATUS_OK = 200;
-const STATUS_BAD_GATEWAY = 502;
-const STATUS_INTERNAL_SERVER_ERROR = 500;
-const STATUS_NOT_FOUND = 404;
-const upstreamStatusCodesToPropagate = [STATUS_OK, STATUS_NOT_FOUND];
-
-const ampRegex = /.amp$/;
 
 const baseUrl = onClient()
   ? getBaseUrl(window.location.origin)
@@ -26,53 +25,58 @@ const baseUrl = onClient()
 export const getUrl = pathname => {
   if (!pathname) return '';
 
+  const ampRegex = /.amp$/;
   const params = isLive() ? '' : getQueryString(pathname);
   const basePath = getUrlPath(pathname);
 
   return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
 };
 
-const handleResponse = url => async response => {
-  const { status } = response;
+export default async ({ path, pageType }) => {
+  const url = getUrl(path);
 
-  if (upstreamStatusCodesToPropagate.includes(status)) {
-    if (status === STATUS_NOT_FOUND) {
-      logger.error(DATA_NOT_FOUND, {
-        url,
+  logger.info(DATA_REQUEST_RECEIVED, { url, pageType });
+
+  try {
+    const response = await fetch(url);
+    const { status } = response;
+
+    if (status === OK) {
+      const json = await response.json();
+
+      return {
         status,
-      });
+        json,
+      };
     }
 
-    return {
-      status,
-      ...(status === STATUS_OK && {
-        json: await response.json(),
-      }),
-    };
+    const error = new Error();
+
+    if (status === NOT_FOUND) {
+      error.message = DATA_NOT_FOUND;
+      error.status = NOT_FOUND;
+    } else {
+      error.message = `Unexpected upstream response (HTTP status code ${status}) when requesting ${url}`;
+    }
+
+    throw error;
+  } catch (aresError) {
+    const { message, status } = aresError;
+    const simorghError = new Error(message);
+
+    if (UPSTREAM_CODES_TO_PROPAGATE_IN_SIMORGH.includes(status)) {
+      simorghError.status = status;
+    } else {
+      simorghError.status = getErrorStatusCode();
+    }
+
+    logger.error(DATA_FETCH_ERROR, {
+      url,
+      status: simorghError.status,
+      error: message,
+      pageType,
+    });
+
+    throw simorghError;
   }
-
-  throw new Error(
-    `Unexpected upstream response (HTTP status code ${status}) when requesting ${url}`,
-  );
 };
-
-const handleError = e => {
-  const error = e.toString();
-
-  logger.error(DATA_FETCH_ERROR, { error });
-
-  return {
-    error,
-    status: onClient() ? STATUS_BAD_GATEWAY : STATUS_INTERNAL_SERVER_ERROR,
-  };
-};
-
-const fetchData = pathname => {
-  const url = getUrl(pathname);
-
-  logger.info(DATA_REQUEST_RECEIVED, { url });
-
-  return fetch(url).then(handleResponse(url)).catch(handleError);
-};
-
-export default fetchData;

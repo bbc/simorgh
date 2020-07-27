@@ -1,4 +1,5 @@
 import Url from 'url-parse';
+import isAmpPath from '#app/routes/utils/isAmpPath';
 
 const supportedTypes = {
   indepthtoolkit: 'idt1',
@@ -9,7 +10,7 @@ const supportedTypes = {
   'smallprox/include': 'vj',
 };
 
-const ampSupported = href => {
+const hasAmpVersion = href => {
   // An amp-image query parameter on the include path indicates an AMP version of the include is available
   const hasAmpImageQueryString = new Url(href, true).query['amp-image'];
   return !!hasAmpImageQueryString;
@@ -31,23 +32,23 @@ const includeClassifier = ({ href, pathname }) => {
   // This determines if the type is supported and returns the include type name
   const includeType = supportedTypes[typeExtraction];
 
-  const pathnameIsAmp = pathname.endsWith('.amp');
+  const isAmp = isAmpPath(pathname);
 
-  const platform = pathnameIsAmp ? 'amp' : 'canonical';
+  const platform = isAmp ? 'amp' : 'canonical';
   const classification = includeType
     ? `${includeType}-${platform}`
     : 'not-supported';
 
-  if (includeType === 'vj' && !pathnameIsAmp) {
+  if (includeType === 'vj' && !isAmp) {
     return { includeType, classification: 'vj-canonical' };
   }
 
-  if (includeType === 'vj' && ampSupported(href)) {
+  if (includeType === 'vj' && hasAmpVersion(href)) {
     return { includeType, classification: 'vj-supports-amp' };
   }
 
-  if (includeType === 'vj' && !ampSupported(href)) {
-    return { includeType, classification: 'not-supported' };
+  if (includeType === 'vj' && !hasAmpVersion(href)) {
+    return { includeType, classification: 'vj-amp-not-supported' };
   }
 
   return { includeType: includeType || null, classification };
