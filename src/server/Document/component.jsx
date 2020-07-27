@@ -19,7 +19,6 @@ const Document = ({
   app,
   data,
   styleTags,
-  linkTags,
   helmet,
   isAmp,
   scripts,
@@ -54,7 +53,6 @@ const Document = ({
         <ResourceHints assetOrigins={assetOrigins} />
         {title}
         {helmetLinkTags}
-        {linkTags}
         {styleTags}
         {headScript}
         {isAmp && (
