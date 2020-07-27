@@ -17,6 +17,7 @@ import idxPageDataPropTypes from '#models/propTypes/idxPage';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
+import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
 const IdxMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
@@ -112,4 +113,6 @@ IdxPage.defaultProps = {
   radioScheduleEndpointOverride: null,
 };
 
-export default IdxPage;
+export default applyBasicPageHandlers({
+  withVariant: false,
+})(IdxPage);

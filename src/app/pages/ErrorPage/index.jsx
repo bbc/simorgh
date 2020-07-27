@@ -1,8 +1,12 @@
 import React, { useContext } from 'react';
+import pipe from 'ramda/src/pipe';
 import { number, oneOf, string, shape } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
 import ErrorMain from '#app/components/ErrorMain';
+import withContexts from '#containers/PageHandlers/withContexts';
+import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
+import withLoading from '#containers/PageHandlers/withLoading';
 
 /*
  * MVP Metadata for the error
@@ -71,4 +75,4 @@ ErrorMetadata.propTypes = {
   themeColor: string.isRequired,
 };
 
-export default ErrorPage;
+export default pipe(withLoading, withPageWrapper, withContexts)(ErrorPage);

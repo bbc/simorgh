@@ -33,6 +33,7 @@ import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import DarkModeGlobalStyles from '#lib/utilities/darkMode';
 import AVPlayer from '#containers/AVPlayer';
 import useToggle from '#hooks/useToggle';
+import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
 const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
 const StyledMessageContainer = styled.div`
@@ -240,4 +241,4 @@ OnDemandTvPage.propTypes = {
   }).isRequired,
 };
 
-export default OnDemandTvPage;
+export default applyBasicPageHandlers({ withVariant: false })(OnDemandTvPage);

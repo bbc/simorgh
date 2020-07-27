@@ -29,6 +29,7 @@ import {
   getFirstPublished,
   getLastPublished,
 } from '#lib/utilities/parseAssetData';
+import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
 const PhotoGalleryPage = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -119,4 +120,4 @@ const PhotoGalleryPage = ({ pageData }) => {
 
 PhotoGalleryPage.propTypes = cpsAssetPagePropTypes;
 
-export default PhotoGalleryPage;
+export default applyBasicPageHandlers({ withVariant: false })(PhotoGalleryPage);

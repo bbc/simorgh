@@ -22,6 +22,7 @@ import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
+import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
 const FrontPageMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
@@ -130,4 +131,6 @@ FrontPage.defaultProps = {
   mostReadEndpointOverride: null,
 };
 
-export default FrontPage;
+export default applyBasicPageHandlers({
+  withVariant: true,
+})(FrontPage);

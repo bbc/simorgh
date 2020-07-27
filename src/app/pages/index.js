@@ -1,64 +1,23 @@
 import loadable from '@loadable/component';
-import pipe from 'ramda/src/pipe';
-import withContexts from '#containers/PageHandlers/withContexts';
-import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
-import withError from '#containers/PageHandlers/withError';
-import withLoading from '#containers/PageHandlers/withLoading';
-import withData from '#containers/PageHandlers/withData';
-import withVariant from '#containers/PageHandlers/withVariant';
 
-const applyBasicPageHandlers = pipe(
-  withData,
-  withError,
-  withLoading,
-  withPageWrapper,
-  withContexts,
-);
+export const ArticlePage = loadable(() => import('./ArticlePage'));
 
-const applyErrorPageHandlers = pipe(withLoading, withPageWrapper, withContexts);
+export const ErrorPage = loadable(() => import('./ErrorPage'));
 
-export const ArticlePage = pipe(
-  applyBasicPageHandlers,
-  withVariant,
-)(loadable(() => import('./ArticlePage')));
+export const FrontPage = loadable(() => import('./FrontPage'));
 
-export const ErrorPage = applyErrorPageHandlers(
-  loadable(() => import('./ErrorPage')),
-);
+export const MediaAssetPage = loadable(() => import('./MediaAssetPage'));
 
-export const FrontPage = pipe(
-  applyBasicPageHandlers,
-  withVariant,
-)(loadable(() => import('./FrontPage')));
+export const MostReadPage = loadable(() => import('./MostReadPage'));
 
-export const MediaAssetPage = applyBasicPageHandlers(
-  loadable(() => import('./MediaAssetPage')),
-);
+export const PhotoGalleryPage = loadable(() => import('./PhotoGalleryPage'));
 
-export const MostReadPage = applyBasicPageHandlers(
-  loadable(() => import('./MostReadPage')),
-);
+export const LiveRadioPage = loadable(() => import('./LiveRadioPage'));
 
-export const PhotoGalleryPage = applyBasicPageHandlers(
-  loadable(() => import('./PhotoGalleryPage')),
-);
+export const OnDemandRadioPage = loadable(() => import('./OnDemandRadioPage'));
 
-export const LiveRadioPage = applyBasicPageHandlers(
-  loadable(() => import('./LiveRadioPage')),
-);
+export const OnDemandTvPage = loadable(() => import('./OnDemandTvPage'));
 
-export const OnDemandRadioPage = applyBasicPageHandlers(
-  loadable(() => import('./OnDemandRadioPage')),
-);
+export const StoryPage = loadable(() => import('./StoryPage'));
 
-export const OnDemandTvPage = applyBasicPageHandlers(
-  loadable(() => import('./OnDemandTvPage')),
-);
-
-export const StoryPage = applyBasicPageHandlers(
-  loadable(() => import('./StoryPage')),
-);
-
-export const IdxPage = applyBasicPageHandlers(
-  loadable(() => import('./IdxPage')),
-);
+export const IdxPage = loadable(() => import('./IdxPage'));

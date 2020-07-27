@@ -30,6 +30,7 @@ import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import { EPISODE_STATUS } from '#lib/utilities/episodeAvailability';
+import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
@@ -244,4 +245,6 @@ OnDemandRadioPage.propTypes = {
   }).isRequired,
 };
 
-export default OnDemandRadioPage;
+export default applyBasicPageHandlers({ withVariant: false })(
+  OnDemandRadioPage,
+);

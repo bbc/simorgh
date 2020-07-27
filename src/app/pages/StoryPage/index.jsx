@@ -44,8 +44,8 @@ import {
 import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
 import { ServiceContext } from '#contexts/ServiceContext';
-
 import recommendationsData from './fixtureData/recommendations.ltr.json';
+import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
 const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
@@ -321,4 +321,4 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
 
 StoryPage.propTypes = cpsAssetPagePropTypes;
 
-export default StoryPage;
+export default applyBasicPageHandlers({ withVariant: false })(StoryPage);

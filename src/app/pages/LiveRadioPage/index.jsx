@@ -23,6 +23,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
+import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
 const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
 
@@ -178,4 +179,4 @@ LiveRadioPage.propTypes = {
   }).isRequired,
 };
 
-export default LiveRadioPage;
+export default applyBasicPageHandlers({ withVariant: false })(LiveRadioPage);

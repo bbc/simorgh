@@ -33,8 +33,8 @@ import {
   getLastPublished,
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
-
 import { RequestContext } from '#contexts/RequestContext';
+import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
 const isLegacyMediaAssetPage = url => url.split('/').length > 7;
 
@@ -139,4 +139,6 @@ const MediaAssetPage = ({ pageData }) => {
 
 MediaAssetPage.propTypes = cpsAssetPagePropTypes;
 
-export default MediaAssetPage;
+export default applyBasicPageHandlers({
+  withVariant: false,
+})(MediaAssetPage);

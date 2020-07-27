@@ -24,6 +24,7 @@ import Grid, { GelPageGrid } from '#app/components/Grid';
 import IndexMain from '#app/components/PageLayout/IndexMain';
 import IndexPageContainer from '#app/components/PageLayout/IndexPageContainer';
 import IndexHeading from '#containers/IndexHeading';
+import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
 const MarginWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
@@ -127,4 +128,6 @@ MostReadPage.propTypes = {
 MostReadPage.defaultProps = {
   mostReadEndpointOverride: null,
 };
-export default MostReadPage;
+export default applyBasicPageHandlers({
+  withVariant: false,
+})(MostReadPage);
