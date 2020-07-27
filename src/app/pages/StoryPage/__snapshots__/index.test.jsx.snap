@@ -350,17 +350,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding-top: 0.5rem;
 }
 
-.c61 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
 .c49 {
   position: static;
   color: #222222;
@@ -391,7 +380,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   color: #6E6E73;
 }
 
-.c62 {
+.c61 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -427,7 +416,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   height: 100%;
 }
 
-.c63 {
+.c62 {
   padding: 0 0.25rem;
 }
 
@@ -521,7 +510,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding-bottom: 2rem;
 }
 
-.c64 {
+.c63 {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
@@ -1154,41 +1143,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c61 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c61 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c61 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:63rem) {
-  .c61 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c62 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c62 {
+  .c61 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
@@ -2121,11 +2082,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 Lee ihe Barcelona mere Real Betis
                               </a>
                             </h3>
-                            <p
-                              class="c61"
-                            >
-                              Barcelona emerigo Real Betis na asọmpị La Liga
-                            </p>
                             <time
                               class="c51"
                               datetime="2018-01-22"
@@ -2175,11 +2131,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 Aubameyang nwere ike ifu ndị Arsenal ọnụ ego karịrị nderi pounds iri ise
                               </a>
                             </h3>
-                            <p
-                              class="c61"
-                            >
-                              Agbu a ndị otu bọọlụ Arsenal na Dortmund ebidola mkparịta ụka maka azụma ahịa Aubameyang dịka ọ ga-abụ onye kacha oke ọnụ ahịa ndị Arsenal ga-azụ.
-                            </p>
                             <time
                               class="c51"
                               datetime="2018-01-21"
@@ -2229,11 +2180,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 "Alexis Sanchez ga-abanye Manchester united ma ọ buru na....." Wenger
                               </a>
                             </h3>
-                            <p
-                              class="c61"
-                            >
-                              Onye nchikwa Arsenal ,Arsene wenger ekwuola na Alexis Sanchez ga-abanye Manchester United ma ọ buru na Henrikh Mkhitaryan bata otu Arsenal
-                            </p>
                             <time
                               class="c51"
                               datetime="2018-01-21"
@@ -2283,11 +2229,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 Dịka osi ga n'ime asọmpi Premier League
                               </a>
                             </h3>
-                            <p
-                              class="c61"
-                            >
-                              Asọmpi Premier league ndị ụbọchị taa akwakọrọla ọnụ, a na wetara gi osi ga. ebe otu egwuregwu ndị ama ama nwetachara mmeri n'asọmpi ha.
-                            </p>
                             <time
                               class="c51"
                               datetime="2018-01-20"
@@ -2337,11 +2278,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 Djokovic enwela mmeri Agbanyeghị ihe mmerụ ahụ
                               </a>
                             </h3>
-                            <p
-                              class="c61"
-                            >
-                              Onye ama ama n'egwuregwu teenisi bụ Novak Djokovic agafela na agba nke anọ n'ihe egwuregwu teenisi nke Australian Open.
-                            </p>
                             <time
                               class="c51"
                               datetime="2018-01-20"
@@ -2391,11 +2327,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 CHAN: Naịjirịa na Guinea nọ na ịrụ Group C
                               </a>
                             </h3>
-                            <p
-                              class="c61"
-                            >
-                              Naịjirịa meriri Libya 1-0. Guinia meriri Equatorial Guinea 1-0 eji bụkọtara ndị isi na group C na CHAN
-                            </p>
                             <time
                               class="c51"
                               datetime="2018-01-20"
@@ -2431,7 +2362,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               >
                                 <div
                                   aria-hidden="true"
-                                  class="c62"
+                                  class="c61"
                                   dir="ltr"
                                 >
                                   <div
@@ -2453,7 +2384,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                       />
                                     </svg>
                                     <time
-                                      class="c63"
+                                      class="c62"
                                       datetime="PT49S"
                                     >
                                       0:49
@@ -2493,11 +2424,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 </span>
                               </a>
                             </h3>
-                            <p
-                              class="c61"
-                            >
-                              Azịza ọnụ onye DSP Omoni, Uweoji nke Rivers Steeti
-                            </p>
                             <time
                               class="c51"
                               datetime="2018-01-07"
@@ -2547,11 +2473,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 O nwere ihe o mere ma Dino Melaye nọrọ n'egwu m?
                               </a>
                             </h3>
-                            <p
-                              class="c61"
-                            >
-                              'Kach' Nwa minista Ibe Kachikwu tinyere Sinetọ Dino Melaye n'ime ihe onyonyo egwu ọ gụrụ mana ọnaghị atọ ndi Naijurịa ọchị
-                            </p>
                             <time
                               class="c51"
                               datetime="2017-12-20"
@@ -2601,11 +2522,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 Ọkụ Festac: Ajọ ọnwụnwa nke keresimesi
                               </a>
                             </h3>
-                            <p
-                              class="c61"
-                            >
-                              Ọkụ a tapiala nkwa ahịa karịrị nari nde Naira na Legọs
-                            </p>
                             <time
                               class="c51"
                               datetime="2017-12-21"
@@ -2619,7 +2535,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </section>
                 </div>
                 <div
-                  class="c64"
+                  class="c63"
                 />
               </div>
             </div>
@@ -4309,7 +4225,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 `;
 
 exports[`Story Page snapshots should match snapshot for STY 1`] = `
-.c62 {
+.c61 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -4318,7 +4234,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 0.75rem;
 }
 
-.c64 {
+.c63 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -4327,7 +4243,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 0.75rem;
 }
 
-.c65 {
+.c64 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -4681,17 +4597,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-top: 0.5rem;
 }
 
-.c59 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
 .c51 {
   position: static;
   color: #222222;
@@ -4722,7 +4627,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   color: #6E6E73;
 }
 
-.c60 {
+.c59 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -4733,7 +4638,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   display: block;
 }
 
-.c61 {
+.c60 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4745,7 +4650,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 100%;
 }
 
-.c63 {
+.c62 {
   padding: 0 0.25rem;
 }
 
@@ -4843,7 +4748,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-bottom: 2rem;
 }
 
-.c66 {
+.c65 {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
@@ -5490,41 +5395,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c59 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c59 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c59 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:63rem) {
-  .c59 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c60 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c60 {
+  .c59 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
@@ -6635,11 +6512,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     How Lagos Dey Fight Lassa Fever
                                   </a>
                                 </h3>
-                                <p
-                                  class="c59"
-                                >
-                                  100 workers for LUTH dey under observation after two people die from Lassa Fever.
-                                </p>
                                 <time
                                   class="c53"
                                   datetime="2017-08-09"
@@ -6675,15 +6547,15 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   >
                                     <div
                                       aria-hidden="true"
-                                      class="c60"
+                                      class="c59"
                                       dir="ltr"
                                     >
                                       <div
-                                        class="c61"
+                                        class="c60"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="c62"
+                                          class="c61"
                                           focusable="false"
                                           height="12px"
                                           viewBox="0 0 32 32"
@@ -6694,7 +6566,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                           />
                                         </svg>
                                         <time
-                                          class="c63"
+                                          class="c62"
                                           datetime="PT1M7S"
                                         >
                                           1:07
@@ -6735,11 +6607,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     </span>
                                   </a>
                                 </h3>
-                                <p
-                                  class="c59"
-                                >
-                                  Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.
-                                </p>
                                 <time
                                   class="c53"
                                   datetime="2020-02-17"
@@ -6775,15 +6642,15 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   >
                                     <div
                                       aria-hidden="true"
-                                      class="c60"
+                                      class="c59"
                                       dir="ltr"
                                     >
                                       <div
-                                        class="c61"
+                                        class="c60"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="c64"
+                                          class="c63"
                                           focusable="false"
                                           height="12px"
                                           viewBox="0 0 13 12"
@@ -6827,11 +6694,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     </span>
                                   </a>
                                 </h3>
-                                <p
-                                  class="c59"
-                                >
-                                  Kojey Radical and guests discuss how to write about something you’ve not experienced.
-                                </p>
                                 <time
                                   class="c53"
                                   datetime="2020-02-17"
@@ -6881,11 +6743,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     Libya: omo ile Ghana márùndínláàdóje pada sile
                                   </a>
                                 </h3>
-                                <p
-                                  class="c59"
-                                >
-                                  Omo Orileede Ghana to le ni márùndínláàdóje ti pada sile lati Libya ti won ti lo se atipo, leyin ti fonran fihan wipe won n ta won bi eru.
-                                </p>
                                 <time
                                   class="c53"
                                   datetime="2017-12-05"
@@ -6935,11 +6792,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     Like Scaramucci, Like Others
                                   </a>
                                 </h3>
-                                <p
-                                  class="c59"
-                                >
-                                  President Trump sack Anthony Scaramucci after ten days for office, but wetin happen to Scaramucci don happen to other people before.
-                                </p>
                                 <time
                                   class="c53"
                                   datetime="2017-08-08"
@@ -6989,11 +6841,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     Anambra Attack: 'My Friend Uchenna na Nice Girl'- Gabros
                                   </a>
                                 </h3>
-                                <p
-                                  class="c59"
-                                >
-                                  Chukwuka Gabros tell BBC about Im friend wey die for the church attack for Ozubulu, Anambra State.
-                                </p>
                                 <time
                                   class="c53"
                                   datetime="2017-08-09"
@@ -7043,11 +6890,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     Man City vs West Ham: Bad weather force Premier League to cancel Sunday match
                                   </a>
                                 </h3>
-                                <p
-                                  class="c59"
-                                >
-                                  Man City vs West Ham: Bad weather force Premier League to cancel Sunday match
-                                </p>
                                 <time
                                   class="c53"
                                   datetime="2020-02-17"
@@ -7097,11 +6939,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     Anambra Church: Police Arrest 3
                                   </a>
                                 </h3>
-                                <p
-                                  class="c59"
-                                >
-                                  Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp
-                                </p>
                                 <time
                                   class="c53"
                                   datetime="2017-08-08"
@@ -7137,15 +6974,15 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   >
                                     <div
                                       aria-hidden="true"
-                                      class="c60"
+                                      class="c59"
                                       dir="ltr"
                                     >
                                       <div
-                                        class="c61"
+                                        class="c60"
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          class="c65"
+                                          class="c64"
                                           focusable="false"
                                           height="13px"
                                           viewBox="0 0 32 26"
@@ -7191,11 +7028,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     </span>
                                   </a>
                                 </h3>
-                                <p
-                                  class="c59"
-                                >
-                                  This na some of the picture wey our eye see as Kenya people go vote for election today
-                                </p>
                                 <time
                                   class="c53"
                                   datetime="2017-08-08"
@@ -7209,7 +7041,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </section>
                     </div>
                     <div
-                      class="c66"
+                      class="c65"
                     />
                   </div>
                 </div>
