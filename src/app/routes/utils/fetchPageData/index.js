@@ -13,7 +13,7 @@ import {
   OK,
   NOT_FOUND,
   UPSTREAM_CODES_TO_PROPAGATE_IN_SIMORGH,
-} from './utils/statusCodes';
+} from '#lib/statusCodes.const';
 import getErrorStatusCode from './utils/getErrorStatusCode';
 
 const logger = nodeLogger(__filename);
