@@ -279,9 +279,11 @@ exports[`Canonical Media Asset Page SEO Linked data should match text 2`] = `
 Object {
   "@context": "http://schema.org",
   "@type": "VideoObject",
+  "description": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
   "duration": null,
   "embedURL": "https://polling.test.bbc.co.uk/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar",
-  "thumbnailUrl": "https://",
+  "name": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+  "thumbnailUrl": "https://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
   "uploadDate": "1970-01-01T00:00:00.000Z",
 }
 `;
