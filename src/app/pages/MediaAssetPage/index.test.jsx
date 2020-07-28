@@ -6,89 +6,34 @@ import { StaticRouter } from 'react-router-dom';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import assocPath from 'ramda/src/assocPath';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContext } from '#contexts/ToggleContext';
-import { MediaAssetPage } from '..';
+import MediaAssetPage from '.';
 import mapPageData from '#data/pidgin/cpsAssets/23248703';
 import uzbekPageData from '#data/uzbek/cpsAssets/sport-23248721';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 
-const toggleState = {
-  mediaPlayer: {
-    enabled: true,
+jest.mock('#lib/config/toggles', () => ({
+  local: {
+    enableFetchingToggles: { enabled: false },
+    mediaPlayer: {
+      enabled: true,
+    },
   },
-};
+}));
 
 const createAssetPage = ({ pageData }, service) => (
   <StaticRouter>
-    <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
-      <ServiceContextProvider service={service}>
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          isAmp={false}
-          pageType={pageData.metadata.type}
-          pathname={pageData.metadata.locators.assetUri}
-          service={service}
-          statusCode={200}
-        >
-          <MediaAssetPage service={service} pageData={pageData} />
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContext.Provider>
+    <MediaAssetPage
+      service={service}
+      pageData={pageData}
+      bbcOrigin="https://www.test.bbc.co.uk"
+      isAmp={false}
+      pageType={pageData.metadata.type}
+      pathname={pageData.metadata.locators.assetUri}
+      status={200}
+    />
   </StaticRouter>
 );
-
-jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
-  const PageWrapperContainer = props => (
-    <div id="PageWrapperContainer">
-      <Component {...props} />
-    </div>
-  );
-
-  return PageWrapperContainer;
-});
-
-jest.mock('#containers/PageHandlers/withLoading', () => Component => {
-  const LoadingContainer = props => (
-    <div id="LoadingContainer">
-      <Component {...props} />
-    </div>
-  );
-
-  return LoadingContainer;
-});
-
-jest.mock('#containers/PageHandlers/withError', () => Component => {
-  const ErrorContainer = props => (
-    <div id="ErrorContainer">
-      <Component {...props} />
-    </div>
-  );
-
-  return ErrorContainer;
-});
-
-jest.mock('#containers/PageHandlers/withData', () => Component => {
-  const DataContainer = props => (
-    <div id="DataContainer">
-      <Component {...props} />
-    </div>
-  );
-
-  return DataContainer;
-});
-
-jest.mock('#containers/PageHandlers/withContexts', () => Component => {
-  const ContextsContainer = props => (
-    <div id="ContextsContainer">
-      <Component {...props} />
-    </div>
-  );
-
-  return ContextsContainer;
-});
 
 const escapedText = text => {
   const textReplacements = {
