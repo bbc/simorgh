@@ -24,6 +24,9 @@ const toggles = {
     radioSchedule: {
       enabled: true,
     },
+    liveRadioSchedule: {
+      enabled: true,
+    },
     scriptLink: {
       enabled: true,
     },
@@ -76,6 +79,9 @@ const toggles = {
     radioSchedule: {
       enabled: true,
     },
+    liveRadioSchedule: {
+      enabled: true,
+    },
     scriptLink: {
       enabled: true,
     },
@@ -97,7 +103,7 @@ const toggles = {
       enabled: true,
     },
     cpsRecommendations: {
-      enabled: false,
+      enabled: true,
     },
     cinemaModeTV: {
       enabled: true,
@@ -128,6 +134,9 @@ const toggles = {
     radioSchedule: {
       enabled: true,
     },
+    liveRadioSchedule: {
+      enabled: false,
+    },
     scriptLink: {
       enabled: true,
     },
@@ -152,7 +161,7 @@ const toggles = {
       enabled: false,
     },
     cinemaModeTV: {
-      enabled: false,
+      enabled: true,
     },
   },
 };
