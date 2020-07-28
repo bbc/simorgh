@@ -1,6 +1,12 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
-import getEmbedUrl from './helper';
+import {
+  getEmbedUrl,
+  getRadioScheduleEndpoint,
+  isRadioScheduleComplete,
+  serviceHasRadioSchedule,
+} from './helper';
+import getDataUrl from '../../../support/helpers/getDataUrl';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -20,7 +26,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       let embedUrl;
 
       beforeEach(() => {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+        cy.request(getDataUrl(Cypress.env('currentPath'))).then(({ body }) => {
           embedUrl = getEmbedUrl(body, lang);
         });
       });
@@ -43,6 +49,37 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           cy.hasGlobalChartbeatConfig();
         });
       }
+    });
+
+    describe('Radio Schedule', () => {
+      it('should be displayed if there is enough schedule data', () => {
+        cy.request(getRadioScheduleEndpoint(Cypress.env('currentPath'))).then(
+          ({ body: scheduleJson }) => {
+            const { schedules } = scheduleJson;
+
+            const isRadioScheduleOnPage = serviceHasRadioSchedule({
+              service,
+              variant,
+            });
+            cy.log(
+              `Live Radio Page configured for Radio Schedule? ${isRadioScheduleOnPage}`,
+            );
+
+            const isRadioScheduleDataComplete = isRadioScheduleComplete(
+              schedules,
+            );
+            cy.log(
+              `Radio Schedule is displayed? ${isRadioScheduleDataComplete}`,
+            );
+
+            if (isRadioScheduleOnPage && isRadioScheduleDataComplete) {
+              cy.log(
+                'Add some checks here to ensure that radio schedule is rendered as expected on the page...',
+              );
+            }
+          },
+        );
+      });
     });
   });
 
