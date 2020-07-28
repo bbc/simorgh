@@ -1,12 +1,9 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { RequestContextProvider } from '#contexts/RequestContext';
 import LiveRadioPage from '.';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
 import * as analyticsUtils from '#lib/analyticsUtils';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/liveRadio/getInitialData';
 
 fetch.mockResponse(JSON.stringify(amharicPageData));
@@ -18,30 +15,22 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
-describe('Radio Page Main', () => {
+describe('Live radio page', () => {
   it('should match snapshot for Canonical', async () => {
     const { pageData } = await getInitialData('some-live-radio-path');
 
     await matchSnapshotAsync(
-      <ToggleContextProvider
-        service="amharic"
-        origin="https://www.test.bbc.com"
-      >
-        <ServiceContextProvider service="amharic">
-          <RequestContextProvider
-            bbcOrigin="https://www.test.bbc.com"
-            isAmp={false}
-            pageType="media"
-            pathname="/pathname"
-            service="amharic"
-            statusCode={200}
-          >
-            <BrowserRouter>
-              <LiveRadioPage service="amharic" pageData={pageData} />
-            </BrowserRouter>
-          </RequestContextProvider>
-        </ServiceContextProvider>
-      </ToggleContextProvider>,
+      <BrowserRouter>
+        <LiveRadioPage
+          bbcOrigin="https://www.test.bbc.com"
+          isAmp={false}
+          pageType="media"
+          pathname="/pathname"
+          service="amharic"
+          status={200}
+          pageData={pageData}
+        />
+      </BrowserRouter>,
     );
   });
 
@@ -49,25 +38,17 @@ describe('Radio Page Main', () => {
     const { pageData } = await getInitialData('some-live-radio-path');
 
     await matchSnapshotAsync(
-      <ToggleContextProvider
-        service="amharic"
-        origin="https://www.test.bbc.com"
-      >
-        <ServiceContextProvider service="amharic">
-          <RequestContextProvider
-            bbcOrigin="https://www.test.bbc.com"
-            isAmp
-            pageType="media"
-            pathname="/pathname"
-            service="amharic"
-            statusCode={200}
-          >
-            <BrowserRouter>
-              <LiveRadioPage service="amharic" pageData={pageData} />
-            </BrowserRouter>
-          </RequestContextProvider>
-        </ServiceContextProvider>
-      </ToggleContextProvider>,
+      <BrowserRouter>
+        <LiveRadioPage
+          isAmp
+          bbcOrigin="https://www.test.bbc.com"
+          pageType="media"
+          pathname="/pathname"
+          service="amharic"
+          status={200}
+          pageData={pageData}
+        />
+      </BrowserRouter>,
     );
   });
 });
