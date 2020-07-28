@@ -22,7 +22,7 @@ describe('onEnvironment check', () => {
     expect(wrappedFunction).not.toBeCalled();
   });
 
-  it('do not call wrapper function on live environment', () => {
+  it('should not call wrapper function on live environment', () => {
     process.env.SIMORGH_APP_ENV = 'live';
 
     onEnvironment(['test'], {})(wrappedFunction);
