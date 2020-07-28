@@ -16,6 +16,10 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
+jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
+  return props => <Component {...props} />;
+});
+
 const MostReadPageWithContext = () => (
   <BrowserRouter>
     <MostReadPage
