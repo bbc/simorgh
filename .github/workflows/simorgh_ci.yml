@@ -29,8 +29,8 @@ jobs:
         run: |
           npm run test:puppeteer
       - name: BBC A11y
-          run: |
-            npm run start && npm run bbcA11y
+        run: |
+          npm run start && npm run bbcA11y
 
         env:
           CI: true
