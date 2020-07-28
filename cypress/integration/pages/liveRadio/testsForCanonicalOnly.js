@@ -53,32 +53,35 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
     describe('Radio Schedule', () => {
       it('should be displayed if there is enough schedule data', () => {
-        cy.request(getRadioScheduleEndpoint(Cypress.env('currentPath'))).then(
-          ({ body: scheduleJson }) => {
-            const { schedules } = scheduleJson;
-
-            const isRadioScheduleOnPage = serviceHasRadioSchedule({
-              service,
-              variant,
-            });
-            cy.log(
-              `Live Radio Page configured for Radio Schedule? ${isRadioScheduleOnPage}`,
-            );
-
-            const isRadioScheduleDataComplete = isRadioScheduleComplete(
-              schedules,
-            );
-            cy.log(
-              `Radio Schedule is displayed? ${isRadioScheduleDataComplete}`,
-            );
-
-            if (isRadioScheduleOnPage && isRadioScheduleDataComplete) {
-              cy.log(
-                'Add some checks here to ensure that radio schedule is rendered as expected on the page...',
-              );
-            }
-          },
+        const isRadioScheduleOnPage = serviceHasRadioSchedule({
+          service,
+          variant,
+        });
+        cy.log(
+          `Live Radio Page configured for Radio Schedule? ${isRadioScheduleOnPage}`,
         );
+
+        if (isRadioScheduleOnPage) {
+          cy.request(getRadioScheduleEndpoint(Cypress.env('currentPath'))).then(
+            ({ body: scheduleJson }) => {
+              const { schedules } = scheduleJson;
+
+
+              const isRadioScheduleDataComplete = isRadioScheduleComplete(
+                schedules,
+              );
+              cy.log(
+                `Radio Schedule is displayed? ${isRadioScheduleDataComplete}`,
+              );
+
+              if (isRadioScheduleOnPage && isRadioScheduleDataComplete) {
+                cy.log(
+                  'Add some checks here to ensure that radio schedule is rendered as expected on the page...',
+                );
+              }
+            },
+          );
+        }
       });
     });
   });
