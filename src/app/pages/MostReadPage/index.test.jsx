@@ -3,12 +3,9 @@ import { render, act } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { BrowserRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { RequestContextProvider } from '#contexts/RequestContext';
 import MostReadPage from '.';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import * as analyticsUtils from '#lib/analyticsUtils';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 fetch.mockResponse(JSON.stringify(pidginMostReadData));
 
@@ -20,22 +17,17 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
 });
 
 const MostReadPageWithContext = () => (
-  <ToggleContextProvider service="pidgin" origin="https://www.test.bbc.com">
-    <ServiceContextProvider service="pidgin">
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.com"
-        isAmp={false}
-        pageType="mostRead"
-        pathname="/pathname"
-        service="pidgin"
-        statusCode={200}
-      >
-        <BrowserRouter>
-          <MostReadPage pageData={pidginMostReadData} />
-        </BrowserRouter>
-      </RequestContextProvider>
-    </ServiceContextProvider>
-  </ToggleContextProvider>
+  <BrowserRouter>
+    <MostReadPage
+      pageData={pidginMostReadData}
+      bbcOrigin="https://www.test.bbc.com"
+      isAmp={false}
+      pageType="mostRead"
+      pathname="/pathname"
+      service="pidgin"
+      status={200}
+    />
+  </BrowserRouter>
 );
 
 describe('Most Read Page Main', () => {
@@ -53,6 +45,6 @@ describe('Most Read Page Main', () => {
       'De one we dem de read well well',
     );
     expect(container.querySelector('ol')).toBeInTheDocument();
-    expect(container.querySelectorAll('li a').length).toEqual(10);
+    expect(container.querySelectorAll('ol li a').length).toEqual(10);
   });
 });
