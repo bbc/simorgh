@@ -76,6 +76,7 @@
     "@bbc/psammead-caption": "^2.2.30",
     "@bbc/psammead-consent-banner": "^2.3.32",
     "@bbc/psammead-copyright": "^1.2.28",
+    "@bbc/psammead-detokeniser": "^1.0.0",
     "@bbc/psammead-embed-error": "^1.1.0",
     "@bbc/psammead-figure": "^1.2.14",
     "@bbc/psammead-grid": "^1.1.17",
