@@ -2,7 +2,7 @@ import Url from 'url-parse';
 
 export default path => {
   /**
-   *  Appends .json to the pathname, before appending query string values
+   *  Appends .amp to the pathname, before appending query string values
    *
    * */
 
