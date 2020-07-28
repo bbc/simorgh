@@ -147,3 +147,77 @@ exports[`should show the expired content message if episode is expired 1`] = `
   </main>
 </div>
 `;
+
+exports[`should show the future content message if episode is not yet available 1`] = `
+<div>
+  <div>
+    chartbeat
+  </div>
+  <noscript />
+  <main
+    class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1brqmij-1 cyJdzv"
+    dir="rtl"
+    role="main"
+  >
+    <div
+      class="GridComponent-nf79gm-0 cAoCCU"
+      dir="rtl"
+    >
+      <h1
+        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+        id="content"
+        tabindex="-1"
+      >
+        نړۍ دا وخت, ۲۷ می ۲۰۲۰
+      </h1>
+      <div
+        class="StyledMessageContainer-sc-1brqmij-0 cKKoVQ"
+      >
+        <div
+          class="StyledWrapper-sc-1pnftlt-0 jywlaE"
+        >
+          <div
+            class="MessageWrapper-sc-1pnftlt-1 dORUdB"
+          >
+            <strong
+              class="StyledMessage-sc-1pnftlt-2 iRlUPR"
+            >
+              دغه پروګرام د خپرولو لپاره چمتو نه دی.
+            </strong>
+          </div>
+        </div>
+      </div>
+      <strong
+        aria-hidden="true"
+        class="Headline-sc-1kh1qhu-0 StyledHeadline-gehp0k-0 kQBQQH"
+      >
+        <span
+          class="BrandTitle-gehp0k-1 iseUMj"
+        >
+          نړۍ دا وخت
+        </span>
+        <span
+          class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+        >
+          , 
+        </span>
+        <span
+          class="Datestamp-gehp0k-2 LXJIp"
+        >
+          ۲۷ می ۲۰۲۰
+        </span>
+      </strong>
+    </div>
+    <div
+      class="GridComponent-nf79gm-0 hKRvco"
+      dir="rtl"
+    >
+      <p
+        class="Paragraph-k859h4-0 StyledParagraphComponent-v70vjd-0 cvyKtV"
+      >
+        د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
+      </p>
+    </div>
+  </main>
+</div>
+`;
