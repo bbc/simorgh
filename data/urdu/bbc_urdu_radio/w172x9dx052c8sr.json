@@ -26,6 +26,7 @@
   "content": {
     "blocks": [
       {
+        "availability": "notAvailable",
         "id": "w172x9dx052c8sr",
         "subType": "episode",
         "format": "Audio",
