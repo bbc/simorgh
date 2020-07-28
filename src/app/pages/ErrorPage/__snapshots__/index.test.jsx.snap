@@ -912,12 +912,12 @@ exports[`ErrorPage should correctly render for 500 1`] = `
 
 exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 <html
-  dir="ltr"
-  lang="en-GB"
+  dir="rtl"
+  lang="fa"
 >
   <head>
     <title>
-      Internal server error - BBC News
+      خطا در سرور داخلی - BBC News فارسی
     </title>
     <link
       href="/favicon.ico"
@@ -944,19 +944,19 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
       name="viewport"
     />
     <meta
-      content="Internal server error"
+      content="خطا در سرور داخلی"
       name="og:description"
     />
     <meta
-      content="Internal server error - BBC News"
+      content="خطا در سرور داخلی - BBC News فارسی"
       name="og:title"
     />
     <meta
-      content="Internal server error"
+      content="خطا در سرور داخلی"
       name="twitter:description"
     />
     <meta
-      content="Internal server error - BBC News"
+      content="خطا در سرور داخلی - BBC News فارسی"
       name="twitter:title"
     />
   </head>
@@ -980,8 +980,8 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 }
 
 .c3 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
   color: #B80000;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -990,10 +990,10 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 }
 
 .c4 {
-  font-size: 1.75rem;
-  line-height: 2rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.625rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
   font-style: normal;
   color: #3F3F42;
   margin-top: 0;
@@ -1008,9 +1008,9 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 }
 
 .c5 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #3F3F42;
@@ -1031,7 +1031,7 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    margin-left: 0%;
+    margin-right: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -1042,7 +1042,7 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    margin-left: 0%;
+    margin-right: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -1053,7 +1053,7 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
-    margin-left: 0%;
+    margin-right: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -1064,7 +1064,7 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
-    margin-left: 0%;
+    margin-right: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -1074,7 +1074,7 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
   .c2 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
-    margin-left: 12.5%;
+    margin-right: 12.5%;
     display: inline-block;
     vertical-align: top;
   }
@@ -1084,7 +1084,7 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
   .c2 {
     width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
-    margin-left: 20%;
+    margin-right: 20%;
     display: inline-block;
     vertical-align: top;
   }
@@ -1098,29 +1098,29 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c3 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
+    font-size: 1.75rem;
+    line-height: 2.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c3 {
-    font-size: 1.75rem;
-    line-height: 2rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c4 {
-    font-size: 2rem;
-    line-height: 2.25rem;
+    font-size: 2.375rem;
+    line-height: 2.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c4 {
     font-size: 2.75rem;
-    line-height: 3rem;
+    line-height: 3.375rem;
   }
 }
 
@@ -1140,68 +1140,68 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c5 {
-    font-size: 1rem;
-    line-height: 1.375rem;
+    font-size: 1.375rem;
+    line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c5 {
-    font-size: 1rem;
-    line-height: 1.375rem;
+    font-size: 1.375rem;
+    line-height: 2rem;
   }
 }
 
 <div>
       <main
         class="c0 c1"
-        dir="ltr"
+        dir="rtl"
         role="main"
       >
         <div
           class="c2"
-          dir="ltr"
+          dir="rtl"
         >
           <span
             class="c3"
           >
-            500
+            ۵۰۰
           </span>
           <h1
             class="c4"
             id="content"
             tabindex="-1"
           >
-            Internal server error
+            خطا در سرور داخلی
           </h1>
           <p
             class="c5"
           >
-            Sorry, we're currently unable to bring you the page you're looking for. Please try:
+            متاسفانه صفحه مورد نظر شما در دسترس نیست. لطفا گزینه‌های زیر را امتحان کنید:
           </p>
           <ul>
             <li
               class="c5"
             >
-              Hitting the refresh button in your browser
+              با مرورگر خود صفحه را ریفرش کنید
             </li>
             <li
               class="c5"
             >
-              Coming back again later
+              بعدا دوباره امتحان کنید
             </li>
           </ul>
           <p
             class="c5"
           >
-            Alternatively, please visit the 
+            برای یافتن اطلاعات مورد نظر به صفحه اصلی 
             <a
               class="c6"
-              href="https://www.bbc.com/news"
+              href="https://www.bbc.com/persian"
             >
-              BBC News homepage.
+              BBC News فارسی
             </a>
-            
+             بروید
           </p>
         </div>
       </main>

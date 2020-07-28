@@ -41,6 +41,6 @@ describe('ErrorPage', () => {
 
   shouldMatchSnapshot(
     'should correctly render for 500 for persian',
-    <ErrorPageWithContext service="news" errorCode={500} />,
+    <ErrorPageWithContext service="persian" errorCode={500} />,
   );
 });
