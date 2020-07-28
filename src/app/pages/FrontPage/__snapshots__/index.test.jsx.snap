@@ -2,1938 +2,3115 @@
 
 exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 <div>
-  <div
-    id="VariantContainer"
+  <header
+    role="banner"
   >
     <div
-      id="ContextsContainer"
+      class="AmpConsentWrapper-sc-18egs7-0 bfTTJR"
     >
-      <div
-        id="PageWrapperContainer"
+      <amp-geo
+        layout="nodisplay"
       >
+        <script
+          type="application/json"
+        >
+          {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+        </script>
+      </amp-geo>
+      <amp-consent
+        id="consent"
+        layout="nodisplay"
+      >
+        <script
+          type="application/json"
+        >
+          {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}},"policy":{"default":{"waitFor":{"user-consent":[]},"timeout":{"seconds":0,"fallbackAction":"reject"}}}}
+        </script>
         <div
-          id="LoadingContainer"
+          id="consent-prompt"
         >
           <div
-            id="ErrorContainer"
+            class="Wrapper-sc-7g3fro-0 fOqUqv"
+            dir="ltr"
+            id="privacy"
           >
             <div
-              id="DataContainer"
+              class="CenterWrapper-sc-7g3fro-1 ggwfud"
+              dir="ltr"
             >
-              <div>
-                Amp ATI analytics
-              </div>
-              <div>
-                chartbeat
-              </div>
-              <amp-analytics
-                type="comscore"
+              <h2
+                class="Title-sc-7g3fro-2 iqsZpo"
+                dir="ltr"
               >
-                <script
-                  type="application/json"
+                We don update our Privacy and Cookies Policy
+              </h2>
+              <p
+                class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                dir="ltr"
+              >
+                We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
+              </p>
+              <ul
+                class="Options-sc-7g3fro-3 jLugbT"
+                dir="ltr"
+              >
+                <li
+                  class="ListItem-sc-7g3fro-5 iOzCnw"
+                  dir="ltr"
                 >
-                  {"vars":{"c2":"17986528"},"extraUrlParams":{"comscorekw":"amp"}}
-                </script>
-              </amp-analytics>
-              <main
-                role="main"
+                  <button
+                    on="tap:cookie.show, privacy.hide"
+                    type="button"
+                  >
+                    OK
+                  </button>
+                </li>
+                <li
+                  class="ListItem-sc-7g3fro-5 iOzCnw"
+                  dir="ltr"
+                >
+                  <a
+                    href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                    on="tap:cookie.show, privacy.hide"
+                  >
+                    Find out wetin don change
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="Wrapper-sc-7g3fro-0 fOqUqv"
+            dir="ltr"
+            hidden=""
+            id="cookie"
+          >
+            <div
+              class="CenterWrapper-sc-7g3fro-1 ggwfud"
+              dir="ltr"
+            >
+              <h2
+                class="Title-sc-7g3fro-2 iqsZpo"
+                dir="ltr"
               >
-                <h1
-                  class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                  id="content"
-                  tabindex="-1"
+                Let us know say you agree to cookies
+              </h2>
+              <p
+                class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                dir="ltr"
+              >
+                We use 
+                <a
+                  href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+                >
+                  cookies
+                </a>
+                 to give you di best online experience. Abeg let us know if you gree to all od dif cookies dem.
+              </p>
+              <ul
+                class="Options-sc-7g3fro-3 jLugbT"
+                dir="ltr"
+              >
+                <li
+                  class="ListItem-sc-7g3fro-5 iOzCnw"
+                  dir="ltr"
+                >
+                  <button
+                    data-cookie-banner="accept"
+                    on="tap:consent.accept"
+                    type="button"
+                  >
+                    Yes, I agree
+                  </button>
+                </li>
+                <li
+                  class="ListItem-sc-7g3fro-5 iOzCnw"
+                  dir="ltr"
+                >
+                  <a
+                    data-cookie-banner="reject"
+                    href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                    on="tap:consent.reject"
+                  >
+                    No, cari me go settings
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </amp-consent>
+    </div>
+    <div
+      class="Banner-m3awbo-1 epdEkN"
+    >
+      <div
+        class="SvgWrapper-m3awbo-0 dPXtDJ"
+      >
+        <a
+          class="StyledLink-m3awbo-2 cRiIvG"
+          href="/pidgin"
+        >
+          <svg
+            aria-hidden="true"
+            class="BrandSvg-m3awbo-3 kxNqFm"
+            focusable="false"
+            height="24"
+            viewBox="0 0 238 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill-rule="evenodd"
+              stroke="#000"
+              stroke-width=".335"
+              style="stroke: #fff;"
+            >
+              <path
+                d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
+              />
+              <path
+                d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
+              />
+              <path
+                d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM185.18 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.42-.44 1.56 1.56 0 0 0 .5-1.25q0-1.62-2.01-1.62zM194 6.3h1.51v10.57H194zM198.78 16.85V6.3h3.56a7.51 7.51 0 0 1 3.41.65 4.88 4.88 0 0 1 2 1.9 5.29 5.29 0 0 1 .74 2.74 5.18 5.18 0 0 1-.41 2 5.23 5.23 0 0 1-3 2.85 5.33 5.33 0 0 1-1.1.31 14.65 14.65 0 0 1-1.91.08zm3.41-9.21h-1.89v7.86h1.94a7.75 7.75 0 0 0 1.76-.16 4.12 4.12 0 0 0 1-.39 3.59 3.59 0 0 0 .77-.59 3.92 3.92 0 0 0 1.12-2.87 3.63 3.63 0 0 0-1.15-2.78 3.68 3.68 0 0 0-1-.66 4.07 4.07 0 0 0-1-.34 10.57 10.57 0 0 0-1.56-.07zM216.8 11.66h3.55v4.48a9.68 9.68 0 0 1-3.87.85 5.75 5.75 0 0 1-4.2-1.53 5.07 5.07 0 0 1-1.57-3.78 5.26 5.26 0 0 1 1.63-3.94 5.63 5.63 0 0 1 4.08-1.57 7.22 7.22 0 0 1 1.7.19 13.82 13.82 0 0 1 2 .71V8.6a7.43 7.43 0 0 0-3.75-1.1 4 4 0 0 0-2.92 1.18 3.93 3.93 0 0 0-1.19 2.9 3.9 3.9 0 0 0 1.19 2.94 4.23 4.23 0 0 0 3.06 1.14 7.12 7.12 0 0 0 2.17-.42h.14V13h-2zM223.5 6.3h1.5v10.57h-1.5zM236.65 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z"
+              />
+              <path
+                d="M168.37 0v22.59"
+                stroke-width="2"
+              />
+            </g>
+          </svg>
+          <span
+            class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+            role="text"
+          >
+            <span
+              lang="en-GB"
+            >
+              BBC News
+            </span>
+            , 
+            Pidgin
+          </span>
+        </a>
+        <a
+          class="SkipLink-wmpyxz-0 foxPXR"
+          dir="ltr"
+          href="#content"
+        >
+          Waka go wetin de inside
+        </a>
+      </div>
+    </div>
+    <nav
+      class="StyledNav-sc-158x7z5-5 jTxPjl"
+      dir="ltr"
+      id="si-nav"
+      role="navigation"
+    >
+      <div
+        class="NavWrapper-sc-158x7z5-0 ermFdP"
+      >
+        <amp-state
+          id="menuState"
+        >
+          <script
+            type="application/json"
+          >
+            {"expanded":false}
+          </script>
+        </amp-state>
+        <button
+          aria-expanded="false"
+          class="MenuButton-ukxuly-6 dGlJrg"
+          data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
+          dir="ltr"
+          on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MenuIcon-sc-1nq0eki-0 gKIQph"
+            data-amp-bind-hidden="menuState.expanded"
+            focusable="false"
+            height="2.75rem"
+            viewBox="0 0 44 44"
+            width="2.75rem"
+          >
+            <path
+              d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+            />
+          </svg>
+          <svg
+            aria-hidden="true"
+            class="MenuIcon-sc-1nq0eki-0 gKIQph"
+            data-amp-bind-hidden="!menuState.expanded"
+            focusable="false"
+            height="2.75rem"
+            hidden=""
+            viewBox="0 0 44 44"
+            width="2.75rem"
+          >
+            <path
+              d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <span
+            class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+          >
+            Plenti seshon
+          </span>
+        </button>
+        <div
+          class="AmpDropdown-ukxuly-1 dMLYwY"
+          hidden=""
+          id="si-nav-dropdown-menu"
+        >
+          <ul
+            class="DropdownUl-ukxuly-2 louIo"
+            role="list"
+          >
+            <li
+              class="StyledDropdownLi-ukxuly-3 dIsymM"
+              role="listitem"
+            >
+              <a
+                class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                href="/pidgin"
+              >
+                Home
+              </a>
+            </li>
+            <li
+              class="StyledDropdownLi-ukxuly-3 dIsymM"
+              role="listitem"
+            >
+              <a
+                class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
+              >
+                Nigeria
+              </a>
+            </li>
+            <li
+              class="StyledDropdownLi-ukxuly-3 dIsymM"
+              role="listitem"
+            >
+              <a
+                class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
+              >
+                Africa
+              </a>
+            </li>
+            <li
+              class="StyledDropdownLi-ukxuly-3 dIsymM"
+              role="listitem"
+            >
+              <a
+                class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                href="/pidgin/world"
+              >
+                World
+              </a>
+            </li>
+            <li
+              class="StyledDropdownLi-ukxuly-3 dIsymM"
+              role="listitem"
+            >
+              <a
+                class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                href="/pidgin/media/video"
+              >
+                Video
+              </a>
+            </li>
+            <li
+              class="StyledDropdownLi-ukxuly-3 dIsymM"
+              role="listitem"
+            >
+              <a
+                class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+              >
+                Sport
+              </a>
+            </li>
+            <li
+              class="StyledDropdownLi-ukxuly-3 dIsymM"
+              role="listitem"
+            >
+              <a
+                class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
+              >
+                Entertainment
+              </a>
+            </li>
+            <li
+              class="StyledDropdownLi-ukxuly-3 dIsymM"
+              role="listitem"
+            >
+              <a
+                class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                href="/pidgin/popular/read"
+              >
+                Most popular
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+          dir="ltr"
+          id="si-nav-scrollable"
+        >
+          <ul
+            class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+            role="list"
+          >
+            <li
+              class="StyledListItem-sc-158x7z5-3 COeze"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="StyledLink-sc-158x7z5-2 gLWckh"
+                href="/pidgin"
+              >
+                Home
+              </a>
+            </li>
+            <li
+              class="StyledListItem-sc-158x7z5-3 COeze"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="StyledLink-sc-158x7z5-2 gLWckh"
+                href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
+              >
+                Nigeria
+              </a>
+            </li>
+            <li
+              class="StyledListItem-sc-158x7z5-3 COeze"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="StyledLink-sc-158x7z5-2 gLWckh"
+                href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
+              >
+                Africa
+              </a>
+            </li>
+            <li
+              class="StyledListItem-sc-158x7z5-3 COeze"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="StyledLink-sc-158x7z5-2 gLWckh"
+                href="/pidgin/world"
+              >
+                World
+              </a>
+            </li>
+            <li
+              class="StyledListItem-sc-158x7z5-3 COeze"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="StyledLink-sc-158x7z5-2 gLWckh"
+                href="/pidgin/media/video"
+              >
+                Video
+              </a>
+            </li>
+            <li
+              class="StyledListItem-sc-158x7z5-3 COeze"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="StyledLink-sc-158x7z5-2 gLWckh"
+                href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+              >
+                Sport
+              </a>
+            </li>
+            <li
+              class="StyledListItem-sc-158x7z5-3 COeze"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="StyledLink-sc-158x7z5-2 gLWckh"
+                href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
+              >
+                Entertainment
+              </a>
+            </li>
+            <li
+              class="StyledListItem-sc-158x7z5-3 COeze"
+              dir="ltr"
+              role="listitem"
+            >
+              <a
+                class="StyledLink-sc-158x7z5-2 gLWckh"
+                href="/pidgin/popular/read"
+              >
+                Most popular
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div>
+    Amp ATI analytics
+  </div>
+  <div>
+    chartbeat
+  </div>
+  <amp-analytics
+    type="comscore"
+  >
+    <script
+      type="application/json"
+    >
+      {"vars":{"c2":"17986528"},"extraUrlParams":{"comscorekw":"amp"}}
+    </script>
+  </amp-analytics>
+  <main
+    role="main"
+  >
+    <h1
+      class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+      id="content"
+      tabindex="-1"
+    >
+      <span
+        role="text"
+      >
+        <span
+          lang="en-GB"
+        >
+          BBC News
+        </span>
+        , 
+        Pidgin
+         - 
+        Home
+      </span>
+    </h1>
+    <div
+      class="IndexPageContainer-sc-1yb6vt4-0 lkUiYo"
+    >
+      <section
+        aria-labelledby="Top-stories"
+        class="StyledSection-sc-1x9qbiu-0 hNdEyC"
+        role="region"
+      >
+        <div
+          class="SectionLabelWrapper-sc-1x4gwjz-1 doOlE"
+        >
+          <div
+            class="Bar-sc-1x4gwjz-0 jsgdXU"
+          />
+          <h2
+            class="Heading-sc-1x4gwjz-2 eZofTG"
+          >
+            <span
+              class="FlexColumn-wx5kdp-0 dgpsiS"
+            >
+              <span
+                class="FlexRow-wx5kdp-2 dVBNyZ"
+              >
+                <span
+                  class="Title-wx5kdp-4 cERxQI"
+                  dir="ltr"
+                  id="Top-stories"
+                >
+                  Top tori
+                </span>
+              </span>
+            </span>
+          </h2>
+        </div>
+        <div
+          class="FirstSectionTopMargin-sc-1x9qbiu-1 jIhlPO"
+        >
+          <div
+            class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
+          >
+            <div
+              class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
+              dir="ltr"
+            >
+              <div
+                class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+              >
+                <div
+                  class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                >
+                  <amp-img
+                    alt="Senator Ahmad Lawan and Ali Ndume"
+                    attribution="Other"
+                    height="549"
+                    layout="responsive"
+                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
+                    width="976"
+                  />
+                </div>
+                <div
+                  class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
+                />
+              </div>
+            </div>
+            <div
+              class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
+              dir="ltr"
+            >
+              <h3
+                class="Headline-sc-1dvfmi3-3 fccgro"
+              >
+                <a
+                  class="Link-sc-1dvfmi3-5 jeUMCT"
+                  href="/pidgin/live/tori-48591362"
                 >
                   <span
                     role="text"
                   >
                     <span
-                      lang="en-GB"
-                    >
-                      BBC News
-                    </span>
-                    , 
-                    Pidgin
-                     - 
-                    Home
-                  </span>
-                </h1>
-                <div
-                  class="IndexPageContainer-sc-1yb6vt4-0 lkUiYo"
-                >
-                  <section
-                    aria-labelledby="Top-stories"
-                    class="StyledSection-sc-1x9qbiu-0 hNdEyC"
-                    role="region"
-                  >
-                    <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 doOlE"
-                    >
-                      <div
-                        class="Bar-sc-1x4gwjz-0 jsgdXU"
-                      />
-                      <h2
-                        class="Heading-sc-1x4gwjz-2 eZofTG"
-                      >
-                        <span
-                          class="FlexColumn-wx5kdp-0 dgpsiS"
-                        >
-                          <span
-                            class="FlexRow-wx5kdp-2 dVBNyZ"
-                          >
-                            <span
-                              class="Title-wx5kdp-4 cERxQI"
-                              dir="ltr"
-                              id="Top-stories"
-                            >
-                              Top tori
-                            </span>
-                          </span>
-                        </span>
-                      </h2>
-                    </div>
-                    <div
-                      class="FirstSectionTopMargin-sc-1x9qbiu-1 jIhlPO"
-                    >
-                      <div
-                        class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
-                      >
-                        <div
-                          class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
-                          dir="ltr"
-                        >
-                          <div
-                            class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                          >
-                            <div
-                              class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                            >
-                              <amp-img
-                                alt="Senator Ahmad Lawan and Ali Ndume"
-                                attribution="Other"
-                                height="549"
-                                layout="responsive"
-                                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
-                                width="976"
-                              />
-                            </div>
-                            <div
-                              class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
-                            />
-                          </div>
-                        </div>
-                        <div
-                          class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
-                          dir="ltr"
-                        >
-                          <h3
-                            class="Headline-sc-1dvfmi3-3 fccgro"
-                          >
-                            <a
-                              class="Link-sc-1dvfmi3-5 jeUMCT"
-                              href="/pidgin/live/tori-48591362"
-                            >
-                              <span
-                                role="text"
-                              >
-                                <span
-                                  class="StyledSpan-sc-5gbj69-0 jbxGSs"
-                                  dir="ltr"
-                                >
-                                  AS E DE HAPPEN 
-                                </span>
-                                Senators don begin vote for Senate President
-                              </span>
-                            </a>
-                          </h3>
-                          <p
-                            class="Summary-sc-1dvfmi3-4 zsDkO"
-                          >
-                            Nigeria dey do inauguration to welcome im tear rubber lawmakers into di Ninth National Assembly.
-                          </p>
-                          <div
-                            class="StyledIndexAlsos-xsqyvb-0 cMpdvs"
-                            data-e2e="index-alsos"
-                          >
-                            <h4
-                              class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                            >
-                              Another thing we de for inside dis tori
-                            </h4>
-                            <ul
-                              class="StyledIndexAlsosUl-xsqyvb-2 jXaBOE"
-                              role="list"
-                            >
-                              <li
-                                class="StyledIndexAlso-xsqyvb-1 kZPHaK"
-                                role="listitem"
-                              >
-                                <a
-                                  class="StyledIndexAlsosLink-xsqyvb-5 dwLQNJ"
-                                  href="/pidgin/tori-48591361"
-                                >
-                                  <span
-                                    class="IndexAlsosText-xsqyvb-4 gvRfTv"
-                                  >
-                                    Who go lead di Ninth National Assembly?
-                                  </span>
-                                </a>
-                              </li>
-                              <li
-                                class="StyledIndexAlso-xsqyvb-1 kZPHaK"
-                                role="listitem"
-                              >
-                                <a
-                                  class="StyledIndexAlsosLink-xsqyvb-5 dwLQNJ"
-                                  href="/pidgin/tori-47603701"
-                                >
-                                  <span
-                                    class="IndexAlsosText-xsqyvb-4 gvRfTv"
-                                  >
-                                    4 tins wey go determine who become di next Senate President, Speaker
-                                  </span>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                  <section
-                    aria-labelledby="Frequency-info"
-                    class="StyledSection-sc-1x9qbiu-0 hNdEyC"
-                    role="region"
-                  >
-                    <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
-                    >
-                      <div
-                        class="Bar-sc-1x4gwjz-0 jsgdXU"
-                      />
-                      <h2
-                        class="Heading-sc-1x4gwjz-2 eZofTG"
-                      >
-                        <span
-                          class="FlexColumn-wx5kdp-0 dgpsiS"
-                        >
-                          <span
-                            class="FlexRow-wx5kdp-2 dVBNyZ"
-                          >
-                            <span
-                              class="Title-wx5kdp-4 cERxQI"
-                              dir="ltr"
-                              id="Frequency-info"
-                            >
-                              2018 World Cup
-                            </span>
-                          </span>
-                        </span>
-                      </h2>
-                    </div>
-                    <ul
-                      class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                      class="StyledSpan-sc-5gbj69-0 jbxGSs"
                       dir="ltr"
-                      role="list"
                     >
-                      <li
-                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-                        dir="ltr"
-                        role="listitem"
+                      AS E DE HAPPEN 
+                    </span>
+                    Senators don begin vote for Senate President
+                  </span>
+                </a>
+              </h3>
+              <p
+                class="Summary-sc-1dvfmi3-4 zsDkO"
+              >
+                Nigeria dey do inauguration to welcome im tear rubber lawmakers into di Ninth National Assembly.
+              </p>
+              <div
+                class="StyledIndexAlsos-xsqyvb-0 cMpdvs"
+                data-e2e="index-alsos"
+              >
+                <h4
+                  class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                >
+                  Another thing we de for inside dis tori
+                </h4>
+                <ul
+                  class="StyledIndexAlsosUl-xsqyvb-2 jXaBOE"
+                  role="list"
+                >
+                  <li
+                    class="StyledIndexAlso-xsqyvb-1 kZPHaK"
+                    role="listitem"
+                  >
+                    <a
+                      class="StyledIndexAlsosLink-xsqyvb-5 dwLQNJ"
+                      href="/pidgin/tori-48591361"
+                    >
+                      <span
+                        class="IndexAlsosText-xsqyvb-4 gvRfTv"
                       >
-                        <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-                        >
-                          <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                            dir="ltr"
-                          >
-                            <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                            >
-                              <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                              >
-                                <amp-img
-                                  alt="Messi, Iwobi, Ronaldo"
-                                  attribution="Getty Images"
-                                  height="549"
-                                  layout="responsive"
-                                  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg"
-                                  width="976"
-                                />
-                              </div>
-                              <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
-                            >
-                              <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
-                                href="https://www.bbc.com/pidgin/sport-44416820"
-                              >
-                                Take dis predictor choose who go reach World Cup final
-                              </a>
-                            </h3>
-                            <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                              datetime="2018-06-14"
-                            >
-                              14th June 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-                        dir="ltr"
-                        role="listitem"
+                        Who go lead di Ninth National Assembly?
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="StyledIndexAlso-xsqyvb-1 kZPHaK"
+                    role="listitem"
+                  >
+                    <a
+                      class="StyledIndexAlsosLink-xsqyvb-5 dwLQNJ"
+                      href="/pidgin/tori-47603701"
+                    >
+                      <span
+                        class="IndexAlsosText-xsqyvb-4 gvRfTv"
                       >
-                        <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-                        >
-                          <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                            dir="ltr"
-                          >
-                            <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                            >
-                              <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                              >
-                                <amp-img
-                                  alt="A lone Koala perches in a eucalyptus tree"
-                                  attribution="BBC"
-                                  height="549"
-                                  layout="responsive"
-                                  src="https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg"
-                                  width="976"
-                                />
-                              </div>
-                              <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                              >
-                                <div
-                                  aria-hidden="true"
-                                  class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
-                                  dir="ltr"
-                                >
-                                  <div
-                                    class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
-                                  >
-                                    <svg
-                                      aria-hidden="true"
-                                      class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
-                                      focusable="false"
-                                      height="12px"
-                                      viewBox="0 0 13 12"
-                                      width="13px"
-                                    >
-                                      <path
-                                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                                      />
-                                      <path
-                                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                                      />
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
-                            >
-                              <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
-                                href="http://www.bbc.com/pidgin"
-                              >
-                                Audio promo
-                              </a>
-                            </h3>
-                            <p
-                              class="Summary-sc-1dvfmi3-4 eaCWBB"
-                            >
-                              Summary
-                            </p>
-                            <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                              datetime="2019-08-06"
-                            >
-                              6th August 2019
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-                        >
-                          <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                            dir="ltr"
-                          >
-                            <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                            >
-                              <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                              >
-                                <amp-img
-                                  alt="Rashidi"
-                                  attribution="David Cannon"
-                                  height="549"
-                                  layout="responsive"
-                                  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg"
-                                  width="976"
-                                />
-                              </div>
-                              <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
-                            >
-                              <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
-                                href="https://www.bbc.com/pidgin/sport-44439411"
-                              >
-                                World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
-                              </a>
-                            </h3>
-                            <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                              datetime="2018-06-14"
-                            >
-                              14th June 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-                        >
-                          <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                            dir="ltr"
-                          >
-                            <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                            >
-                              <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                              >
-                                <amp-img
-                                  alt="all-time African XI promo image"
-                                  attribution="BBC"
-                                  height="549"
-                                  layout="responsive"
-                                  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png"
-                                  width="976"
-                                />
-                              </div>
-                              <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
-                            >
-                              <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
-                                href="https://www.bbc.com/pidgin/sport-44425543"
-                              >
-                                Select your best ever African 11 players for World Cup
-                              </a>
-                            </h3>
-                            <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                              datetime="2018-06-14"
-                            >
-                              14th June 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-                        >
-                          <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                            dir="ltr"
-                          >
-                            <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                            >
-                              <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                              >
-                                <amp-img
-                                  alt="all-time African XI promo image"
-                                  attribution="BBC"
-                                  height="549"
-                                  layout="responsive"
-                                  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png"
-                                  width="976"
-                                />
-                              </div>
-                              <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
-                            >
-                              <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
-                                href="https://www.bbc.com/pidgin/sport-44425543"
-                              >
-                                Select your best ever African 11 players for World Cup as a feature
-                              </a>
-                            </h3>
-                            <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                              datetime="2018-06-14"
-                            >
-                              14th June 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-                        >
-                          <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                            dir="ltr"
-                          >
-                            <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                            >
-                              <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                              >
-                                <amp-img
-                                  alt="all-time African XI promo image"
-                                  attribution="BBC"
-                                  height="549"
-                                  layout="responsive"
-                                  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png"
-                                  width="976"
-                                />
-                              </div>
-                              <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                              >
-                                <div
-                                  aria-hidden="true"
-                                  class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
-                                  dir="ltr"
-                                >
-                                  <div
-                                    class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
-                                  >
-                                    <svg
-                                      aria-hidden="true"
-                                      class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
-                                      focusable="false"
-                                      height="12px"
-                                      viewBox="0 0 32 32"
-                                      width="12px"
-                                    >
-                                      <polygon
-                                        points="3,32 29,16 3,0"
-                                      />
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
-                            >
-                              <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
-                                href="https://www.bbc.com/pidgin/sport-44425543"
-                              >
-                                Select your best ever African 11 players for World Cup - Video
-                              </a>
-                            </h3>
-                            <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                              datetime="2018-06-14"
-                            >
-                              14th June 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-                        >
-                          <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                            dir="ltr"
-                          >
-                            <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                            >
-                              <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                              >
-                                <amp-img
-                                  alt="Sane"
-                                  attribution="Getty Images"
-                                  height="549"
-                                  layout="responsive"
-                                  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0775/production/_101890910_gettyimages-964924372.jpg"
-                                  width="976"
-                                />
-                              </div>
-                              <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
-                            >
-                              <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
-                                href="https://www.bbc.com/pidgin/sport-44214129"
-                              >
-                                World Cup 2018: Di top stars wey no dey go World Cup
-                              </a>
-                            </h3>
-                            <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                              datetime="2018-06-14"
-                            >
-                              14th June 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-                        >
-                          <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                            dir="ltr"
-                          >
-                            <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                            >
-                              <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                              >
-                                <amp-img
-                                  alt="A lone Koala perches in a eucalyptus tree"
-                                  attribution="BBC"
-                                  height="549"
-                                  layout="responsive"
-                                  src="https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg"
-                                  width="976"
-                                />
-                              </div>
-                              <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                              >
-                                <div
-                                  aria-hidden="true"
-                                  class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
-                                  dir="ltr"
-                                >
-                                  <div
-                                    class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
-                                  >
-                                    <svg
-                                      aria-hidden="true"
-                                      class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
-                                      focusable="false"
-                                      height="13px"
-                                      viewBox="0 0 32 26"
-                                      width="16px"
-                                    >
-                                      <path
-                                        d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
-                                      />
-                                      <circle
-                                        cx="20"
-                                        cy="14.02"
-                                        r="5.5"
-                                      />
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
-                            >
-                              <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
-                                href="http://www.bbc.com/azeri"
-                              >
-                                Gallery promo
-                              </a>
-                            </h3>
-                            <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                              datetime="2019-08-07"
-                            >
-                              7th August 2019
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </section>
-                </div>
-              </main>
+                        4 tins wey go determine who become di next Senate President, Speaker
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
+      </section>
+      <section
+        aria-labelledby="Frequency-info"
+        class="StyledSection-sc-1x9qbiu-0 hNdEyC"
+        role="region"
+      >
+        <div
+          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
+        >
+          <div
+            class="Bar-sc-1x4gwjz-0 jsgdXU"
+          />
+          <h2
+            class="Heading-sc-1x4gwjz-2 eZofTG"
+          >
+            <span
+              class="FlexColumn-wx5kdp-0 dgpsiS"
+            >
+              <span
+                class="FlexRow-wx5kdp-2 dVBNyZ"
+              >
+                <span
+                  class="Title-wx5kdp-4 cERxQI"
+                  dir="ltr"
+                  id="Frequency-info"
+                >
+                  2018 World Cup
+                </span>
+              </span>
+            </span>
+          </h2>
+        </div>
+        <ul
+          class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+          dir="ltr"
+          role="list"
+        >
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <amp-img
+                      alt="Messi, Iwobi, Ronaldo"
+                      attribution="Getty Images"
+                      height="549"
+                      layout="responsive"
+                      src="https://ichef.bbci.co.uk/news/660/cpsprodpb/F617/production/_101999926_messiiwobironaldo.jpg"
+                      width="976"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="https://www.bbc.com/pidgin/sport-44416820"
+                  >
+                    Take dis predictor choose who go reach World Cup final
+                  </a>
+                </h3>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2018-06-14"
+                >
+                  14th June 2018
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <amp-img
+                      alt="A lone Koala perches in a eucalyptus tree"
+                      attribution="BBC"
+                      height="549"
+                      layout="responsive"
+                      src="https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg"
+                      width="976"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                      dir="ltr"
+                    >
+                      <div
+                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
+                          focusable="false"
+                          height="12px"
+                          viewBox="0 0 13 12"
+                          width="13px"
+                        >
+                          <path
+                            d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                          />
+                          <path
+                            d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="http://www.bbc.com/pidgin"
+                  >
+                    Audio promo
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Summary
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-08-06"
+                >
+                  6th August 2019
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <amp-img
+                      alt="Rashidi"
+                      attribution="David Cannon"
+                      height="549"
+                      layout="responsive"
+                      src="https://ichef.bbci.co.uk/news/660/cpsprodpb/1820B/production/_101972889_gettyimages-227910.jpg"
+                      width="976"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="https://www.bbc.com/pidgin/sport-44439411"
+                  >
+                    World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
+                  </a>
+                </h3>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2018-06-14"
+                >
+                  14th June 2018
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <amp-img
+                      alt="all-time African XI promo image"
+                      attribution="BBC"
+                      height="549"
+                      layout="responsive"
+                      src="https://ichef.bbci.co.uk/news/660/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png"
+                      width="976"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="https://www.bbc.com/pidgin/sport-44425543"
+                  >
+                    Select your best ever African 11 players for World Cup
+                  </a>
+                </h3>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2018-06-14"
+                >
+                  14th June 2018
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <amp-img
+                      alt="all-time African XI promo image"
+                      attribution="BBC"
+                      height="549"
+                      layout="responsive"
+                      src="https://ichef.bbci.co.uk/news/660/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png"
+                      width="976"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="https://www.bbc.com/pidgin/sport-44425543"
+                  >
+                    Select your best ever African 11 players for World Cup as a feature
+                  </a>
+                </h3>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2018-06-14"
+                >
+                  14th June 2018
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <amp-img
+                      alt="all-time African XI promo image"
+                      attribution="BBC"
+                      height="549"
+                      layout="responsive"
+                      src="https://ichef.bbci.co.uk/news/660/cpsprodpb/CEBD/production/_101952925_wcbanner-2.png"
+                      width="976"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                      dir="ltr"
+                    >
+                      <div
+                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                          focusable="false"
+                          height="12px"
+                          viewBox="0 0 32 32"
+                          width="12px"
+                        >
+                          <polygon
+                            points="3,32 29,16 3,0"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="https://www.bbc.com/pidgin/sport-44425543"
+                  >
+                    Select your best ever African 11 players for World Cup - Video
+                  </a>
+                </h3>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2018-06-14"
+                >
+                  14th June 2018
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <amp-img
+                      alt="Sane"
+                      attribution="Getty Images"
+                      height="549"
+                      layout="responsive"
+                      src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0775/production/_101890910_gettyimages-964924372.jpg"
+                      width="976"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="https://www.bbc.com/pidgin/sport-44214129"
+                  >
+                    World Cup 2018: Di top stars wey no dey go World Cup
+                  </a>
+                </h3>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2018-06-14"
+                >
+                  14th June 2018
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <amp-img
+                      alt="A lone Koala perches in a eucalyptus tree"
+                      attribution="BBC"
+                      height="549"
+                      layout="responsive"
+                      src="https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg"
+                      width="976"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                      dir="ltr"
+                    >
+                      <div
+                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                          focusable="false"
+                          height="13px"
+                          viewBox="0 0 32 26"
+                          width="16px"
+                        >
+                          <path
+                            d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
+                          />
+                          <circle
+                            cx="20"
+                            cy="14.02"
+                            r="5.5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="http://www.bbc.com/azeri"
+                  >
+                    Gallery promo
+                  </a>
+                </h3>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-08-07"
+                >
+                  7th August 2019
+                </time>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer
+    role="contentinfo"
+  >
+    <div
+      class="Banner-m3awbo-1 gpxnCd"
+    >
+      <div
+        class="SvgWrapper-m3awbo-0 dPXtDJ"
+      >
+        <a
+          class="StyledLink-m3awbo-2 cRiIvG"
+          href="/pidgin"
+        >
+          <svg
+            aria-hidden="true"
+            class="BrandSvg-m3awbo-3 kxNqFm"
+            focusable="false"
+            height="24"
+            viewBox="0 0 238 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill-rule="evenodd"
+              stroke="#000"
+              stroke-width=".335"
+              style="stroke: #fff;"
+            >
+              <path
+                d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
+              />
+              <path
+                d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
+              />
+              <path
+                d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM185.18 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.42-.44 1.56 1.56 0 0 0 .5-1.25q0-1.62-2.01-1.62zM194 6.3h1.51v10.57H194zM198.78 16.85V6.3h3.56a7.51 7.51 0 0 1 3.41.65 4.88 4.88 0 0 1 2 1.9 5.29 5.29 0 0 1 .74 2.74 5.18 5.18 0 0 1-.41 2 5.23 5.23 0 0 1-3 2.85 5.33 5.33 0 0 1-1.1.31 14.65 14.65 0 0 1-1.91.08zm3.41-9.21h-1.89v7.86h1.94a7.75 7.75 0 0 0 1.76-.16 4.12 4.12 0 0 0 1-.39 3.59 3.59 0 0 0 .77-.59 3.92 3.92 0 0 0 1.12-2.87 3.63 3.63 0 0 0-1.15-2.78 3.68 3.68 0 0 0-1-.66 4.07 4.07 0 0 0-1-.34 10.57 10.57 0 0 0-1.56-.07zM216.8 11.66h3.55v4.48a9.68 9.68 0 0 1-3.87.85 5.75 5.75 0 0 1-4.2-1.53 5.07 5.07 0 0 1-1.57-3.78 5.26 5.26 0 0 1 1.63-3.94 5.63 5.63 0 0 1 4.08-1.57 7.22 7.22 0 0 1 1.7.19 13.82 13.82 0 0 1 2 .71V8.6a7.43 7.43 0 0 0-3.75-1.1 4 4 0 0 0-2.92 1.18 3.93 3.93 0 0 0-1.19 2.9 3.9 3.9 0 0 0 1.19 2.94 4.23 4.23 0 0 0 3.06 1.14 7.12 7.12 0 0 0 2.17-.42h.14V13h-2zM223.5 6.3h1.5v10.57h-1.5zM236.65 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z"
+              />
+              <path
+                d="M168.37 0v22.59"
+                stroke-width="2"
+              />
+            </g>
+          </svg>
+          <span
+            class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+            role="text"
+          >
+            <span
+              lang="en-GB"
+            >
+              BBC News
+            </span>
+            , 
+            Pidgin
+          </span>
+        </a>
       </div>
     </div>
-  </div>
+    <div
+      class="SitewideLinksWrapper-sc-1gggobt-0 gccobV"
+    >
+      <div
+        class="ConstrainedWrapper-sc-1gggobt-1 bpERjU"
+      >
+        <ul
+          class="StyledList-sc-2e1ekc-0 gRKcvt"
+          role="list"
+        >
+          <li
+            class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+            role="listitem"
+          >
+            <a
+              class="StyledLink-nhmg8j-0 dHbSzF"
+              href="https://www.bbc.com/pidgin/institutional-48528766"
+            >
+              <span
+                class="StyleLinkText-nhmg8j-1 fPnERB"
+              >
+                Why you fit trust BBC News
+              </span>
+            </a>
+          </li>
+          <li
+            class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+            role="listitem"
+          >
+            <a
+              class="StyledLink-nhmg8j-0 dHbSzF"
+              href="https://www.bbc.co.uk/usingthebbc/terms/"
+            >
+              <span
+                class="StyleLinkText-nhmg8j-1 fPnERB"
+              >
+                How dem dey take use am
+              </span>
+            </a>
+          </li>
+          <li
+            class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+            role="listitem"
+          >
+            <a
+              class="StyledLink-nhmg8j-0 dHbSzF"
+              href="https://www.bbc.co.uk/aboutthebbc"
+            >
+              <span
+                class="StyleLinkText-nhmg8j-1 fPnERB"
+              >
+                As e concern BBC
+              </span>
+            </a>
+          </li>
+          <li
+            class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+            role="listitem"
+          >
+            <a
+              class="StyledLink-nhmg8j-0 dHbSzF"
+              href="https://www.bbc.co.uk/usingthebbc/privacy/"
+            >
+              <span
+                class="StyleLinkText-nhmg8j-1 fPnERB"
+              >
+                Privacy Policy
+              </span>
+            </a>
+          </li>
+          <li
+            class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+            role="listitem"
+          >
+            <a
+              class="StyledLink-nhmg8j-0 dHbSzF"
+              href="https://www.bbc.co.uk/usingthebbc/cookies/"
+            >
+              <span
+                class="StyleLinkText-nhmg8j-1 fPnERB"
+              >
+                Cookies
+              </span>
+            </a>
+          </li>
+          <li
+            class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+            role="listitem"
+          >
+            <a
+              class="StyledLink-nhmg8j-0 dHbSzF"
+              href="https://www.bbc.com/pidgin/institutional-42188215"
+            >
+              <span
+                class="StyleLinkText-nhmg8j-1 fPnERB"
+              >
+                Call BBC
+              </span>
+            </a>
+          </li>
+          <li
+            class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+            role="listitem"
+          >
+            <a
+              class="StyledLink-nhmg8j-0 dHbSzF"
+              href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+              lang="en-GB"
+            >
+              <span
+                class="StyleLinkText-nhmg8j-1 fPnERB"
+              >
+                AdChoices / Do Not Sell My Info
+              </span>
+            </a>
+          </li>
+        </ul>
+        <p
+          class="StyledParagraph-sc-1gggobt-2 jQPFnr"
+        >
+          <span
+            lang="en-GB"
+          >
+            ©
+             
+          </span>
+          2020 BBC. De external site no concern BBC.
+           
+          <a
+            class="StyledLink-nhmg8j-0 jHQlUp"
+            href="https://www.bbc.co.uk/help/web/links/"
+          >
+            <span
+              class="StyleLinkText-nhmg8j-1 fPnERB"
+            >
+              De way wey we de take go external link.
+            </span>
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
 </div>
 `;
 
 exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
 <div>
-  <div
-    id="VariantContainer"
+  <header
+    role="banner"
   >
     <div
-      id="ContextsContainer"
+      class="Wrapper-sc-7g3fro-0 fOqUqv"
+      dir="ltr"
     >
       <div
-        id="PageWrapperContainer"
+        class="CenterWrapper-sc-7g3fro-1 ggwfud"
+        dir="ltr"
+      >
+        <h2
+          class="Title-sc-7g3fro-2 iqsZpo"
+          dir="ltr"
+        >
+          We don update our Privacy and Cookies Policy
+        </h2>
+        <p
+          class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+          dir="ltr"
+        >
+          We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
+        </p>
+        <ul
+          class="Options-sc-7g3fro-3 jLugbT"
+          dir="ltr"
+        >
+          <li
+            class="ListItem-sc-7g3fro-5 iOzCnw"
+            dir="ltr"
+          >
+            <button
+              type="button"
+            >
+              OK
+            </button>
+          </li>
+          <li
+            class="ListItem-sc-7g3fro-5 iOzCnw"
+            dir="ltr"
+          >
+            <a
+              href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+            >
+              Find out wetin don change
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="Banner-m3awbo-1 epdEkN"
+    >
+      <div
+        class="SvgWrapper-m3awbo-0 dPXtDJ"
+      >
+        <a
+          class="StyledLink-m3awbo-2 cRiIvG"
+          href="/pidgin"
+        >
+          <svg
+            aria-hidden="true"
+            class="BrandSvg-m3awbo-3 kxNqFm"
+            focusable="false"
+            height="24"
+            viewBox="0 0 238 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill-rule="evenodd"
+              stroke="#000"
+              stroke-width=".335"
+              style="stroke: #fff;"
+            >
+              <path
+                d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
+              />
+              <path
+                d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
+              />
+              <path
+                d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM185.18 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.42-.44 1.56 1.56 0 0 0 .5-1.25q0-1.62-2.01-1.62zM194 6.3h1.51v10.57H194zM198.78 16.85V6.3h3.56a7.51 7.51 0 0 1 3.41.65 4.88 4.88 0 0 1 2 1.9 5.29 5.29 0 0 1 .74 2.74 5.18 5.18 0 0 1-.41 2 5.23 5.23 0 0 1-3 2.85 5.33 5.33 0 0 1-1.1.31 14.65 14.65 0 0 1-1.91.08zm3.41-9.21h-1.89v7.86h1.94a7.75 7.75 0 0 0 1.76-.16 4.12 4.12 0 0 0 1-.39 3.59 3.59 0 0 0 .77-.59 3.92 3.92 0 0 0 1.12-2.87 3.63 3.63 0 0 0-1.15-2.78 3.68 3.68 0 0 0-1-.66 4.07 4.07 0 0 0-1-.34 10.57 10.57 0 0 0-1.56-.07zM216.8 11.66h3.55v4.48a9.68 9.68 0 0 1-3.87.85 5.75 5.75 0 0 1-4.2-1.53 5.07 5.07 0 0 1-1.57-3.78 5.26 5.26 0 0 1 1.63-3.94 5.63 5.63 0 0 1 4.08-1.57 7.22 7.22 0 0 1 1.7.19 13.82 13.82 0 0 1 2 .71V8.6a7.43 7.43 0 0 0-3.75-1.1 4 4 0 0 0-2.92 1.18 3.93 3.93 0 0 0-1.19 2.9 3.9 3.9 0 0 0 1.19 2.94 4.23 4.23 0 0 0 3.06 1.14 7.12 7.12 0 0 0 2.17-.42h.14V13h-2zM223.5 6.3h1.5v10.57h-1.5zM236.65 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z"
+              />
+              <path
+                d="M168.37 0v22.59"
+                stroke-width="2"
+              />
+            </g>
+          </svg>
+          <span
+            class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+            role="text"
+          >
+            <span
+              lang="en-GB"
+            >
+              BBC News
+            </span>
+            , 
+            Pidgin
+          </span>
+        </a>
+        <a
+          class="SkipLink-wmpyxz-0 foxPXR"
+          dir="ltr"
+          href="#content"
+        >
+          Waka go wetin de inside
+        </a>
+      </div>
+    </div>
+    <nav
+      class="StyledNav-sc-158x7z5-5 dWucaK"
+      dir="ltr"
+      role="navigation"
+    >
+      <div
+        class="NavWrapper-sc-158x7z5-0 ermFdP"
       >
         <div
-          id="LoadingContainer"
+          class="ScrollableWrapper-t4argr-0 UDeIc"
+        >
+          <button
+            aria-expanded="false"
+            class="MenuButton-ukxuly-6 dGlJrg"
+            dir="ltr"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              focusable="false"
+              height="2.75rem"
+              viewBox="0 0 44 44"
+              width="2.75rem"
+            >
+              <path
+                d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+              />
+            </svg>
+            <span
+              class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+            >
+              Plenti seshon
+            </span>
+          </button>
+          <div
+            class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+            dir="ltr"
+          >
+            <ul
+              class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              role="list"
+            >
+              <li
+                class="StyledListItem-sc-158x7z5-3 COeze"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="StyledLink-sc-158x7z5-2 gLWckh"
+                  href="/pidgin"
+                >
+                  Home
+                </a>
+              </li>
+              <li
+                class="StyledListItem-sc-158x7z5-3 COeze"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="StyledLink-sc-158x7z5-2 gLWckh"
+                  href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
+                >
+                  Nigeria
+                </a>
+              </li>
+              <li
+                class="StyledListItem-sc-158x7z5-3 COeze"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="StyledLink-sc-158x7z5-2 gLWckh"
+                  href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
+                >
+                  Africa
+                </a>
+              </li>
+              <li
+                class="StyledListItem-sc-158x7z5-3 COeze"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="StyledLink-sc-158x7z5-2 gLWckh"
+                  href="/pidgin/world"
+                >
+                  World
+                </a>
+              </li>
+              <li
+                class="StyledListItem-sc-158x7z5-3 COeze"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="StyledLink-sc-158x7z5-2 gLWckh"
+                  href="/pidgin/media/video"
+                >
+                  Video
+                </a>
+              </li>
+              <li
+                class="StyledListItem-sc-158x7z5-3 COeze"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="StyledLink-sc-158x7z5-2 gLWckh"
+                  href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+                >
+                  Sport
+                </a>
+              </li>
+              <li
+                class="StyledListItem-sc-158x7z5-3 COeze"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="StyledLink-sc-158x7z5-2 gLWckh"
+                  href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
+                >
+                  Entertainment
+                </a>
+              </li>
+              <li
+                class="StyledListItem-sc-158x7z5-3 COeze"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="StyledLink-sc-158x7z5-2 gLWckh"
+                  href="/pidgin/popular/read"
+                >
+                  Most popular
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="StyledDropdown-ukxuly-0 NlGZD"
+          height="0"
+        >
+          <ul
+            class="DropdownUl-ukxuly-2 louIo"
+            role="list"
+          >
+            <li
+              class="StyledDropdownLi-ukxuly-3 dIsymM"
+              role="listitem"
+            >
+              <a
+                class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                href="/pidgin"
+              >
+                Home
+              </a>
+            </li>
+            <li
+              class="StyledDropdownLi-ukxuly-3 dIsymM"
+              role="listitem"
+            >
+              <a
+                class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
+              >
+                Nigeria
+              </a>
+            </li>
+            <li
+              class="StyledDropdownLi-ukxuly-3 dIsymM"
+              role="listitem"
+            >
+              <a
+                class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
+              >
+                Africa
+              </a>
+            </li>
+            <li
+              class="StyledDropdownLi-ukxuly-3 dIsymM"
+              role="listitem"
+            >
+              <a
+                class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                href="/pidgin/world"
+              >
+                World
+              </a>
+            </li>
+            <li
+              class="StyledDropdownLi-ukxuly-3 dIsymM"
+              role="listitem"
+            >
+              <a
+                class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                href="/pidgin/media/video"
+              >
+                Video
+              </a>
+            </li>
+            <li
+              class="StyledDropdownLi-ukxuly-3 dIsymM"
+              role="listitem"
+            >
+              <a
+                class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+              >
+                Sport
+              </a>
+            </li>
+            <li
+              class="StyledDropdownLi-ukxuly-3 dIsymM"
+              role="listitem"
+            >
+              <a
+                class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
+              >
+                Entertainment
+              </a>
+            </li>
+            <li
+              class="StyledDropdownLi-ukxuly-3 dIsymM"
+              role="listitem"
+            >
+              <a
+                class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                href="/pidgin/popular/read"
+              >
+                Most popular
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <noscript />
+  <div>
+    chartbeat
+  </div>
+  <main
+    role="main"
+  >
+    <h1
+      class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+      id="content"
+      tabindex="-1"
+    >
+      <span
+        role="text"
+      >
+        <span
+          lang="en-GB"
+        >
+          BBC News
+        </span>
+        , 
+        Pidgin
+         - 
+        Home
+      </span>
+    </h1>
+    <div
+      class="IndexPageContainer-sc-1yb6vt4-0 lkUiYo"
+    >
+      <section
+        aria-labelledby="Top-stories"
+        class="StyledSection-sc-1x9qbiu-0 hNdEyC"
+        role="region"
+      >
+        <div
+          class="SectionLabelWrapper-sc-1x4gwjz-1 doOlE"
         >
           <div
-            id="ErrorContainer"
+            class="Bar-sc-1x4gwjz-0 jsgdXU"
+          />
+          <h2
+            class="Heading-sc-1x4gwjz-2 eZofTG"
+          >
+            <span
+              class="FlexColumn-wx5kdp-0 dgpsiS"
+            >
+              <span
+                class="FlexRow-wx5kdp-2 dVBNyZ"
+              >
+                <span
+                  class="Title-wx5kdp-4 cERxQI"
+                  dir="ltr"
+                  id="Top-stories"
+                >
+                  Top tori
+                </span>
+              </span>
+            </span>
+          </h2>
+        </div>
+        <div
+          class="FirstSectionTopMargin-sc-1x9qbiu-1 jIhlPO"
+        >
+          <div
+            class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
           >
             <div
-              id="DataContainer"
+              class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
+              dir="ltr"
             >
-              <noscript />
-              <div>
-                chartbeat
-              </div>
-              <main
-                role="main"
+              <div
+                class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
               >
-                <h1
-                  class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                  id="content"
-                  tabindex="-1"
+                <div
+                  class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                >
+                  <img
+                    alt="Senator Ahmad Lawan and Ali Ndume"
+                    class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                    sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
+                    srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 660w"
+                    width="976"
+                  />
+                </div>
+                <div
+                  class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
+                />
+              </div>
+            </div>
+            <div
+              class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
+              dir="ltr"
+            >
+              <h3
+                class="Headline-sc-1dvfmi3-3 fccgro"
+              >
+                <a
+                  class="Link-sc-1dvfmi3-5 jeUMCT"
+                  href="/pidgin/live/tori-48591362"
                 >
                   <span
                     role="text"
                   >
                     <span
-                      lang="en-GB"
+                      class="StyledSpan-sc-5gbj69-0 jbxGSs"
+                      dir="ltr"
                     >
-                      BBC News
+                      AS E DE HAPPEN 
                     </span>
-                    , 
-                    Pidgin
-                     - 
-                    Home
+                    Senators don begin vote for Senate President
                   </span>
-                </h1>
-                <div
-                  class="IndexPageContainer-sc-1yb6vt4-0 lkUiYo"
+                </a>
+              </h3>
+              <p
+                class="Summary-sc-1dvfmi3-4 zsDkO"
+              >
+                Nigeria dey do inauguration to welcome im tear rubber lawmakers into di Ninth National Assembly.
+              </p>
+              <div
+                class="StyledIndexAlsos-xsqyvb-0 cMpdvs"
+                data-e2e="index-alsos"
+              >
+                <h4
+                  class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
                 >
-                  <section
-                    aria-labelledby="Top-stories"
-                    class="StyledSection-sc-1x9qbiu-0 hNdEyC"
-                    role="region"
+                  Another thing we de for inside dis tori
+                </h4>
+                <ul
+                  class="StyledIndexAlsosUl-xsqyvb-2 jXaBOE"
+                  role="list"
+                >
+                  <li
+                    class="StyledIndexAlso-xsqyvb-1 kZPHaK"
+                    role="listitem"
                   >
-                    <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 doOlE"
+                    <a
+                      class="StyledIndexAlsosLink-xsqyvb-5 dwLQNJ"
+                      href="/pidgin/tori-48591361"
                     >
-                      <div
-                        class="Bar-sc-1x4gwjz-0 jsgdXU"
-                      />
-                      <h2
-                        class="Heading-sc-1x4gwjz-2 eZofTG"
+                      <span
+                        class="IndexAlsosText-xsqyvb-4 gvRfTv"
                       >
-                        <span
-                          class="FlexColumn-wx5kdp-0 dgpsiS"
-                        >
-                          <span
-                            class="FlexRow-wx5kdp-2 dVBNyZ"
-                          >
-                            <span
-                              class="Title-wx5kdp-4 cERxQI"
-                              dir="ltr"
-                              id="Top-stories"
-                            >
-                              Top tori
-                            </span>
-                          </span>
-                        </span>
-                      </h2>
-                    </div>
-                    <div
-                      class="FirstSectionTopMargin-sc-1x9qbiu-1 jIhlPO"
-                    >
-                      <div
-                        class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
-                      >
-                        <div
-                          class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
-                          dir="ltr"
-                        >
-                          <div
-                            class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                          >
-                            <div
-                              class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                            >
-                              <img
-                                alt="Senator Ahmad Lawan and Ali Ndume"
-                                class="StyledImg-sc-7vx2mr-0 hIxkbt"
-                                sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
-                                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
-                                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 660w"
-                                width="976"
-                              />
-                            </div>
-                            <div
-                              class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
-                            />
-                          </div>
-                        </div>
-                        <div
-                          class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
-                          dir="ltr"
-                        >
-                          <h3
-                            class="Headline-sc-1dvfmi3-3 fccgro"
-                          >
-                            <a
-                              class="Link-sc-1dvfmi3-5 jeUMCT"
-                              href="/pidgin/live/tori-48591362"
-                            >
-                              <span
-                                role="text"
-                              >
-                                <span
-                                  class="StyledSpan-sc-5gbj69-0 jbxGSs"
-                                  dir="ltr"
-                                >
-                                  AS E DE HAPPEN 
-                                </span>
-                                Senators don begin vote for Senate President
-                              </span>
-                            </a>
-                          </h3>
-                          <p
-                            class="Summary-sc-1dvfmi3-4 zsDkO"
-                          >
-                            Nigeria dey do inauguration to welcome im tear rubber lawmakers into di Ninth National Assembly.
-                          </p>
-                          <div
-                            class="StyledIndexAlsos-xsqyvb-0 cMpdvs"
-                            data-e2e="index-alsos"
-                          >
-                            <h4
-                              class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
-                            >
-                              Another thing we de for inside dis tori
-                            </h4>
-                            <ul
-                              class="StyledIndexAlsosUl-xsqyvb-2 jXaBOE"
-                              role="list"
-                            >
-                              <li
-                                class="StyledIndexAlso-xsqyvb-1 kZPHaK"
-                                role="listitem"
-                              >
-                                <a
-                                  class="StyledIndexAlsosLink-xsqyvb-5 dwLQNJ"
-                                  href="/pidgin/tori-48591361"
-                                >
-                                  <span
-                                    class="IndexAlsosText-xsqyvb-4 gvRfTv"
-                                  >
-                                    Who go lead di Ninth National Assembly?
-                                  </span>
-                                </a>
-                              </li>
-                              <li
-                                class="StyledIndexAlso-xsqyvb-1 kZPHaK"
-                                role="listitem"
-                              >
-                                <a
-                                  class="StyledIndexAlsosLink-xsqyvb-5 dwLQNJ"
-                                  href="/pidgin/tori-47603701"
-                                >
-                                  <span
-                                    class="IndexAlsosText-xsqyvb-4 gvRfTv"
-                                  >
-                                    4 tins wey go determine who become di next Senate President, Speaker
-                                  </span>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
-                  <section
-                    aria-labelledby="Frequency-info"
-                    class="StyledSection-sc-1x9qbiu-0 hNdEyC"
-                    role="region"
+                        Who go lead di Ninth National Assembly?
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="StyledIndexAlso-xsqyvb-1 kZPHaK"
+                    role="listitem"
                   >
-                    <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
+                    <a
+                      class="StyledIndexAlsosLink-xsqyvb-5 dwLQNJ"
+                      href="/pidgin/tori-47603701"
                     >
-                      <div
-                        class="Bar-sc-1x4gwjz-0 jsgdXU"
-                      />
-                      <h2
-                        class="Heading-sc-1x4gwjz-2 eZofTG"
+                      <span
+                        class="IndexAlsosText-xsqyvb-4 gvRfTv"
                       >
-                        <span
-                          class="FlexColumn-wx5kdp-0 dgpsiS"
-                        >
-                          <span
-                            class="FlexRow-wx5kdp-2 dVBNyZ"
-                          >
-                            <span
-                              class="Title-wx5kdp-4 cERxQI"
-                              dir="ltr"
-                              id="Frequency-info"
-                            >
-                              2018 World Cup
-                            </span>
-                          </span>
-                        </span>
-                      </h2>
-                    </div>
-                    <ul
-                      class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
-                      dir="ltr"
-                      role="list"
-                    >
-                      <li
-                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-                        >
-                          <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                            dir="ltr"
-                          >
-                            <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                            >
-                              <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
-                            >
-                              <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
-                                href="https://www.bbc.com/pidgin/sport-44416820"
-                              >
-                                Take dis predictor choose who go reach World Cup final
-                              </a>
-                            </h3>
-                            <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                              datetime="2018-06-14"
-                            >
-                              14th June 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-                        >
-                          <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                            dir="ltr"
-                          >
-                            <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                            >
-                              <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                              >
-                                <div
-                                  aria-hidden="true"
-                                  class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
-                                  dir="ltr"
-                                >
-                                  <div
-                                    class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
-                                  >
-                                    <svg
-                                      aria-hidden="true"
-                                      class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
-                                      focusable="false"
-                                      height="12px"
-                                      viewBox="0 0 13 12"
-                                      width="13px"
-                                    >
-                                      <path
-                                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                                      />
-                                      <path
-                                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                                      />
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
-                            >
-                              <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
-                                href="http://www.bbc.com/pidgin"
-                              >
-                                Audio promo
-                              </a>
-                            </h3>
-                            <p
-                              class="Summary-sc-1dvfmi3-4 eaCWBB"
-                            >
-                              Summary
-                            </p>
-                            <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                              datetime="2019-08-06"
-                            >
-                              6th August 2019
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-                        >
-                          <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                            dir="ltr"
-                          >
-                            <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                            >
-                              <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
-                            >
-                              <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
-                                href="https://www.bbc.com/pidgin/sport-44439411"
-                              >
-                                World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
-                              </a>
-                            </h3>
-                            <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                              datetime="2018-06-14"
-                            >
-                              14th June 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-                        >
-                          <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                            dir="ltr"
-                          >
-                            <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                            >
-                              <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
-                            >
-                              <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
-                                href="https://www.bbc.com/pidgin/sport-44425543"
-                              >
-                                Select your best ever African 11 players for World Cup
-                              </a>
-                            </h3>
-                            <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                              datetime="2018-06-14"
-                            >
-                              14th June 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-                        >
-                          <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                            dir="ltr"
-                          >
-                            <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                            >
-                              <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
-                            >
-                              <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
-                                href="https://www.bbc.com/pidgin/sport-44425543"
-                              >
-                                Select your best ever African 11 players for World Cup as a feature
-                              </a>
-                            </h3>
-                            <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                              datetime="2018-06-14"
-                            >
-                              14th June 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-                        >
-                          <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                            dir="ltr"
-                          >
-                            <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                            >
-                              <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                              >
-                                <div
-                                  aria-hidden="true"
-                                  class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
-                                  dir="ltr"
-                                >
-                                  <div
-                                    class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
-                                  >
-                                    <svg
-                                      aria-hidden="true"
-                                      class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
-                                      focusable="false"
-                                      height="12px"
-                                      viewBox="0 0 32 32"
-                                      width="12px"
-                                    >
-                                      <polygon
-                                        points="3,32 29,16 3,0"
-                                      />
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
-                            >
-                              <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
-                                href="https://www.bbc.com/pidgin/sport-44425543"
-                              >
-                                Select your best ever African 11 players for World Cup - Video
-                              </a>
-                            </h3>
-                            <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                              datetime="2018-06-14"
-                            >
-                              14th June 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-                        >
-                          <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                            dir="ltr"
-                          >
-                            <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                            >
-                              <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                              />
-                            </div>
-                          </div>
-                          <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
-                            >
-                              <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
-                                href="https://www.bbc.com/pidgin/sport-44214129"
-                              >
-                                World Cup 2018: Di top stars wey no dey go World Cup
-                              </a>
-                            </h3>
-                            <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                              datetime="2018-06-14"
-                            >
-                              14th June 2018
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
-                        >
-                          <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                            dir="ltr"
-                          >
-                            <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
-                            >
-                              <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                              <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
-                              >
-                                <div
-                                  aria-hidden="true"
-                                  class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
-                                  dir="ltr"
-                                >
-                                  <div
-                                    class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
-                                  >
-                                    <svg
-                                      aria-hidden="true"
-                                      class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
-                                      focusable="false"
-                                      height="13px"
-                                      viewBox="0 0 32 26"
-                                      width="16px"
-                                    >
-                                      <path
-                                        d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
-                                      />
-                                      <circle
-                                        cx="20"
-                                        cy="14.02"
-                                        r="5.5"
-                                      />
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
-                            dir="ltr"
-                          >
-                            <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
-                            >
-                              <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
-                                href="http://www.bbc.com/azeri"
-                              >
-                                Gallery promo
-                              </a>
-                            </h3>
-                            <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                              datetime="2019-08-07"
-                            >
-                              7th August 2019
-                            </time>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </section>
-                  <section
-                    aria-labelledby="Most-Read"
-                    class="MostReadSection-sc-1r6ctrd-0 FrontPageMostReadSection-sc-58u5qv-0 hCGyVl"
-                    data-e2e="most-read"
-                    role="region"
-                  >
-                    <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD SectionLabelWithMargin-sc-1resov9-0 dxfHPg"
-                    >
-                      <div
-                        class="Bar-sc-1x4gwjz-0 jsgdXU"
-                      />
-                      <h2
-                        class="Heading-sc-1x4gwjz-2 eZofTG"
-                      >
-                        <span
-                          class="FlexColumn-wx5kdp-0 dgpsiS"
-                        >
-                          <span
-                            class="FlexRow-wx5kdp-2 dVBNyZ"
-                          >
-                            <span
-                              class="Title-wx5kdp-4 cERxQI"
-                              dir="ltr"
-                              id="Most-Read"
-                            >
-                              De one we dem de read well well
-                            </span>
-                          </span>
-                        </span>
-                      </h2>
-                    </div>
-                    <ol
-                      class="GridComponent-nf79gm-0 gjgzxV OneColumnGrid-sc-1ofyujo-0 TwoColumnGrid-sc-1ofyujo-1 boiGsE"
-                      dir="ltr"
-                      role="list"
-                    >
-                      <li
-                        class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="ItemWrapper-u0d8kd-3 juBlKT"
-                        >
-                          <div
-                            class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cVIHWy"
-                            dir="ltr"
-                          >
-                            <span
-                              class="StyledSpan-fs4y6m-3 gymrUA"
-                            >
-                              1
-                            </span>
-                          </div>
-                          <div
-                            class="StyledItem-u0d8kd-1 kYQuFW"
-                            dir="ltr"
-                          >
-                            <a
-                              class="StyledLink-u0d8kd-0 kUvyYz"
-                              href="/pidgin/tori-46729879"
-                            >
-                              Public Holidays wey go happun for 2019
-                            </a>
-                            <div
-                              class="TimestampWrapper-u0d8kd-2 hlECaE"
-                            >
-                              <time
-                                class="StyledTimestamp-um718p-0 kVWTyt"
-                                datetime="2019-05-21"
-                              >
-                                De one we dem update for: 21st May 2019
-                              </time>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="ItemWrapper-u0d8kd-3 juBlKT"
-                        >
-                          <div
-                            class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 loYovV"
-                            dir="ltr"
-                          >
-                            <span
-                              class="StyledSpan-fs4y6m-3 gymrUA"
-                            >
-                              2
-                            </span>
-                          </div>
-                          <div
-                            class="StyledItem-u0d8kd-1 kYQuFW"
-                            dir="ltr"
-                          >
-                            <a
-                              class="StyledLink-u0d8kd-0 kUvyYz"
-                              href="/pidgin/tori-50304653"
-                            >
-                              Liberia banks don run out of money
-                            </a>
-                            <div
-                              class="TimestampWrapper-u0d8kd-2 hlECaE"
-                            >
-                              <time
-                                class="StyledTimestamp-um718p-0 kVWTyt"
-                                datetime="2019-11-05"
-                              >
-                                De one we dem update for: 5th November 2019
-                              </time>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="ItemWrapper-u0d8kd-3 juBlKT"
-                        >
-                          <div
-                            class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cVIHWy"
-                            dir="ltr"
-                          >
-                            <span
-                              class="StyledSpan-fs4y6m-3 gymrUA"
-                            >
-                              3
-                            </span>
-                          </div>
-                          <div
-                            class="StyledItem-u0d8kd-1 kYQuFW"
-                            dir="ltr"
-                          >
-                            <a
-                              class="StyledLink-u0d8kd-0 kUvyYz"
-                              href="/pidgin/tori-50298882"
-                            >
-                              Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
-                            </a>
-                            <div
-                              class="TimestampWrapper-u0d8kd-2 hlECaE"
-                            >
-                              <time
-                                class="StyledTimestamp-um718p-0 kVWTyt"
-                                datetime="2019-11-05"
-                              >
-                                De one we dem update for: 5th November 2019
-                              </time>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="ItemWrapper-u0d8kd-3 juBlKT"
-                        >
-                          <div
-                            class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 loYovV"
-                            dir="ltr"
-                          >
-                            <span
-                              class="StyledSpan-fs4y6m-3 gymrUA"
-                            >
-                              4
-                            </span>
-                          </div>
-                          <div
-                            class="StyledItem-u0d8kd-1 kYQuFW"
-                            dir="ltr"
-                          >
-                            <a
-                              class="StyledLink-u0d8kd-0 kUvyYz"
-                              href="/pidgin/tori-50315150"
-                            >
-                              Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
-                            </a>
-                            <div
-                              class="TimestampWrapper-u0d8kd-2 hlECaE"
-                            >
-                              <time
-                                class="StyledTimestamp-um718p-0 kVWTyt"
-                                datetime="2019-11-06"
-                              >
-                                De one we dem update for: 6th November 2019
-                              </time>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="ItemWrapper-u0d8kd-3 juBlKT"
-                        >
-                          <div
-                            class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cVIHWy"
-                            dir="ltr"
-                          >
-                            <span
-                              class="StyledSpan-fs4y6m-3 gymrUA"
-                            >
-                              5
-                            </span>
-                          </div>
-                          <div
-                            class="StyledItem-u0d8kd-1 kYQuFW"
-                            dir="ltr"
-                          >
-                            <a
-                              class="StyledLink-u0d8kd-0 kUvyYz"
-                              href="/pidgin/tori-50315157"
-                            >
-                              How Balogun market fire kill Policeman for Lagos
-                            </a>
-                            <div
-                              class="TimestampWrapper-u0d8kd-2 hlECaE"
-                            >
-                              <time
-                                class="StyledTimestamp-um718p-0 kVWTyt"
-                                datetime="2019-11-06"
-                              >
-                                De one we dem update for: 6th November 2019
-                              </time>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="ItemWrapper-u0d8kd-3 juBlKT"
-                        >
-                          <div
-                            class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cXzHhm"
-                            dir="ltr"
-                          >
-                            <span
-                              class="StyledSpan-fs4y6m-3 gymrUA"
-                            >
-                              6
-                            </span>
-                          </div>
-                          <div
-                            class="StyledItem-u0d8kd-1 kYQuFW"
-                            dir="ltr"
-                          >
-                            <a
-                              class="StyledLink-u0d8kd-0 kUvyYz"
-                              href="/pidgin/tori-50093818"
-                            >
-                              Labour, FG finally agree minimum wage salary adjustment
-                            </a>
-                            <div
-                              class="TimestampWrapper-u0d8kd-2 hlECaE"
-                            >
-                              <time
-                                class="StyledTimestamp-um718p-0 kVWTyt"
-                                datetime="2019-10-18"
-                              >
-                                De one we dem update for: 18th October 2019
-                              </time>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="ItemWrapper-u0d8kd-3 juBlKT"
-                        >
-                          <div
-                            class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 nHiMH"
-                            dir="ltr"
-                          >
-                            <span
-                              class="StyledSpan-fs4y6m-3 gymrUA"
-                            >
-                              7
-                            </span>
-                          </div>
-                          <div
-                            class="StyledItem-u0d8kd-1 kYQuFW"
-                            dir="ltr"
-                          >
-                            <a
-                              class="StyledLink-u0d8kd-0 kUvyYz"
-                              href="/pidgin/tori-50187218"
-                            >
-                              Naira Marley na 'Bad Influence'?
-                            </a>
-                            <div
-                              class="TimestampWrapper-u0d8kd-2 hlECaE"
-                            >
-                              <time
-                                class="StyledTimestamp-um718p-0 kVWTyt"
-                                datetime="2019-10-25"
-                              >
-                                De one we dem update for: 25th October 2019
-                              </time>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="ItemWrapper-u0d8kd-3 juBlKT"
-                        >
-                          <div
-                            class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cXzHhm"
-                            dir="ltr"
-                          >
-                            <span
-                              class="StyledSpan-fs4y6m-3 gymrUA"
-                            >
-                              8
-                            </span>
-                          </div>
-                          <div
-                            class="StyledItem-u0d8kd-1 kYQuFW"
-                            dir="ltr"
-                          >
-                            <a
-                              class="StyledLink-u0d8kd-0 kUvyYz"
-                              href="/pidgin/tori-48347911"
-                            >
-                              Tins you suppose know about Naira Marley
-                            </a>
-                            <div
-                              class="TimestampWrapper-u0d8kd-2 hlECaE"
-                            >
-                              <time
-                                class="StyledTimestamp-um718p-0 kVWTyt"
-                                datetime="2019-05-23"
-                              >
-                                De one we dem update for: 23rd May 2019
-                              </time>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="ItemWrapper-u0d8kd-3 juBlKT"
-                        >
-                          <div
-                            class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 nHiMH"
-                            dir="ltr"
-                          >
-                            <span
-                              class="StyledSpan-fs4y6m-3 gymrUA"
-                            >
-                              9
-                            </span>
-                          </div>
-                          <div
-                            class="StyledItem-u0d8kd-1 kYQuFW"
-                            dir="ltr"
-                          >
-                            <a
-                              class="StyledLink-u0d8kd-0 kUvyYz"
-                              href="/pidgin/sport-50312710"
-                            >
-                              Golden Eaglets crash out of Fifa U17 World Cup
-                            </a>
-                            <div
-                              class="TimestampWrapper-u0d8kd-2 hlECaE"
-                            >
-                              <time
-                                class="StyledTimestamp-um718p-0 kVWTyt"
-                                datetime="2019-11-06"
-                              >
-                                De one we dem update for: 6th November 2019
-                              </time>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li
-                        class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
-                        dir="ltr"
-                        role="listitem"
-                      >
-                        <div
-                          class="ItemWrapper-u0d8kd-3 juBlKT"
-                        >
-                          <div
-                            class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cXzHhm"
-                            dir="ltr"
-                          >
-                            <span
-                              class="StyledSpan-fs4y6m-3 gymrUA"
-                            >
-                              10
-                            </span>
-                          </div>
-                          <div
-                            class="StyledItem-u0d8kd-1 kYQuFW"
-                            dir="ltr"
-                          >
-                            <a
-                              class="StyledLink-u0d8kd-0 kUvyYz"
-                              href="/pidgin/tori-42945173"
-                            >
-                              Tiger nut drink fit wake up your sex drive - Nutritionist
-                            </a>
-                            <div
-                              class="TimestampWrapper-u0d8kd-2 hlECaE"
-                            >
-                              <time
-                                class="StyledTimestamp-um718p-0 kVWTyt"
-                                datetime="2019-05-21"
-                              >
-                                De one we dem update for: 21st May 2019
-                              </time>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ol>
-                  </section>
-                </div>
-              </main>
+                        4 tins wey go determine who become di next Senate President, Speaker
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
+      </section>
+      <section
+        aria-labelledby="Frequency-info"
+        class="StyledSection-sc-1x9qbiu-0 hNdEyC"
+        role="region"
+      >
+        <div
+          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
+        >
+          <div
+            class="Bar-sc-1x4gwjz-0 jsgdXU"
+          />
+          <h2
+            class="Heading-sc-1x4gwjz-2 eZofTG"
+          >
+            <span
+              class="FlexColumn-wx5kdp-0 dgpsiS"
+            >
+              <span
+                class="FlexRow-wx5kdp-2 dVBNyZ"
+              >
+                <span
+                  class="Title-wx5kdp-4 cERxQI"
+                  dir="ltr"
+                  id="Frequency-info"
+                >
+                  2018 World Cup
+                </span>
+              </span>
+            </span>
+          </h2>
+        </div>
+        <ul
+          class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+          dir="ltr"
+          role="list"
+        >
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="https://www.bbc.com/pidgin/sport-44416820"
+                  >
+                    Take dis predictor choose who go reach World Cup final
+                  </a>
+                </h3>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2018-06-14"
+                >
+                  14th June 2018
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                      dir="ltr"
+                    >
+                      <div
+                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
+                          focusable="false"
+                          height="12px"
+                          viewBox="0 0 13 12"
+                          width="13px"
+                        >
+                          <path
+                            d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                          />
+                          <path
+                            d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="http://www.bbc.com/pidgin"
+                  >
+                    Audio promo
+                  </a>
+                </h3>
+                <p
+                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                >
+                  Summary
+                </p>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-08-06"
+                >
+                  6th August 2019
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="https://www.bbc.com/pidgin/sport-44439411"
+                  >
+                    World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
+                  </a>
+                </h3>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2018-06-14"
+                >
+                  14th June 2018
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="https://www.bbc.com/pidgin/sport-44425543"
+                  >
+                    Select your best ever African 11 players for World Cup
+                  </a>
+                </h3>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2018-06-14"
+                >
+                  14th June 2018
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="https://www.bbc.com/pidgin/sport-44425543"
+                  >
+                    Select your best ever African 11 players for World Cup as a feature
+                  </a>
+                </h3>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2018-06-14"
+                >
+                  14th June 2018
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                      dir="ltr"
+                    >
+                      <div
+                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                          focusable="false"
+                          height="12px"
+                          viewBox="0 0 32 32"
+                          width="12px"
+                        >
+                          <polygon
+                            points="3,32 29,16 3,0"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="https://www.bbc.com/pidgin/sport-44425543"
+                  >
+                    Select your best ever African 11 players for World Cup - Video
+                  </a>
+                </h3>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2018-06-14"
+                >
+                  14th June 2018
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  />
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="https://www.bbc.com/pidgin/sport-44214129"
+                  >
+                    World Cup 2018: Di top stars wey no dey go World Cup
+                  </a>
+                </h3>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2018-06-14"
+                >
+                  14th June 2018
+                </time>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            >
+              <div
+                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                dir="ltr"
+              >
+                <div
+                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                >
+                  <div
+                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
+                  <div
+                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                      dir="ltr"
+                    >
+                      <div
+                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                          focusable="false"
+                          height="13px"
+                          viewBox="0 0 32 26"
+                          width="16px"
+                        >
+                          <path
+                            d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
+                          />
+                          <circle
+                            cx="20"
+                            cy="14.02"
+                            r="5.5"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                dir="ltr"
+              >
+                <h3
+                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                >
+                  <a
+                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    href="http://www.bbc.com/azeri"
+                  >
+                    Gallery promo
+                  </a>
+                </h3>
+                <time
+                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  datetime="2019-08-07"
+                >
+                  7th August 2019
+                </time>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section
+        aria-labelledby="Most-Read"
+        class="MostReadSection-sc-1r6ctrd-0 FrontPageMostReadSection-sc-58u5qv-0 hCGyVl"
+        data-e2e="most-read"
+        role="region"
+      >
+        <div
+          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD SectionLabelWithMargin-sc-1resov9-0 dxfHPg"
+        >
+          <div
+            class="Bar-sc-1x4gwjz-0 jsgdXU"
+          />
+          <h2
+            class="Heading-sc-1x4gwjz-2 eZofTG"
+          >
+            <span
+              class="FlexColumn-wx5kdp-0 dgpsiS"
+            >
+              <span
+                class="FlexRow-wx5kdp-2 dVBNyZ"
+              >
+                <span
+                  class="Title-wx5kdp-4 cERxQI"
+                  dir="ltr"
+                  id="Most-Read"
+                >
+                  De one we dem de read well well
+                </span>
+              </span>
+            </span>
+          </h2>
+        </div>
+        <ol
+          class="GridComponent-nf79gm-0 gjgzxV OneColumnGrid-sc-1ofyujo-0 TwoColumnGrid-sc-1ofyujo-1 boiGsE"
+          dir="ltr"
+          role="list"
+        >
+          <li
+            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="ItemWrapper-u0d8kd-3 juBlKT"
+            >
+              <div
+                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cVIHWy"
+                dir="ltr"
+              >
+                <span
+                  class="StyledSpan-fs4y6m-3 gymrUA"
+                >
+                  1
+                </span>
+              </div>
+              <div
+                class="StyledItem-u0d8kd-1 kYQuFW"
+                dir="ltr"
+              >
+                <a
+                  class="StyledLink-u0d8kd-0 kUvyYz"
+                  href="/pidgin/tori-46729879"
+                >
+                  Public Holidays wey go happun for 2019
+                </a>
+                <div
+                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                >
+                  <time
+                    class="StyledTimestamp-um718p-0 kVWTyt"
+                    datetime="2019-05-21"
+                  >
+                    De one we dem update for: 21st May 2019
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="ItemWrapper-u0d8kd-3 juBlKT"
+            >
+              <div
+                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 loYovV"
+                dir="ltr"
+              >
+                <span
+                  class="StyledSpan-fs4y6m-3 gymrUA"
+                >
+                  2
+                </span>
+              </div>
+              <div
+                class="StyledItem-u0d8kd-1 kYQuFW"
+                dir="ltr"
+              >
+                <a
+                  class="StyledLink-u0d8kd-0 kUvyYz"
+                  href="/pidgin/tori-50304653"
+                >
+                  Liberia banks don run out of money
+                </a>
+                <div
+                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                >
+                  <time
+                    class="StyledTimestamp-um718p-0 kVWTyt"
+                    datetime="2019-11-05"
+                  >
+                    De one we dem update for: 5th November 2019
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="ItemWrapper-u0d8kd-3 juBlKT"
+            >
+              <div
+                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cVIHWy"
+                dir="ltr"
+              >
+                <span
+                  class="StyledSpan-fs4y6m-3 gymrUA"
+                >
+                  3
+                </span>
+              </div>
+              <div
+                class="StyledItem-u0d8kd-1 kYQuFW"
+                dir="ltr"
+              >
+                <a
+                  class="StyledLink-u0d8kd-0 kUvyYz"
+                  href="/pidgin/tori-50298882"
+                >
+                  Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
+                </a>
+                <div
+                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                >
+                  <time
+                    class="StyledTimestamp-um718p-0 kVWTyt"
+                    datetime="2019-11-05"
+                  >
+                    De one we dem update for: 5th November 2019
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="ItemWrapper-u0d8kd-3 juBlKT"
+            >
+              <div
+                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 loYovV"
+                dir="ltr"
+              >
+                <span
+                  class="StyledSpan-fs4y6m-3 gymrUA"
+                >
+                  4
+                </span>
+              </div>
+              <div
+                class="StyledItem-u0d8kd-1 kYQuFW"
+                dir="ltr"
+              >
+                <a
+                  class="StyledLink-u0d8kd-0 kUvyYz"
+                  href="/pidgin/tori-50315150"
+                >
+                  Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
+                </a>
+                <div
+                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                >
+                  <time
+                    class="StyledTimestamp-um718p-0 kVWTyt"
+                    datetime="2019-11-06"
+                  >
+                    De one we dem update for: 6th November 2019
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="ItemWrapper-u0d8kd-3 juBlKT"
+            >
+              <div
+                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cVIHWy"
+                dir="ltr"
+              >
+                <span
+                  class="StyledSpan-fs4y6m-3 gymrUA"
+                >
+                  5
+                </span>
+              </div>
+              <div
+                class="StyledItem-u0d8kd-1 kYQuFW"
+                dir="ltr"
+              >
+                <a
+                  class="StyledLink-u0d8kd-0 kUvyYz"
+                  href="/pidgin/tori-50315157"
+                >
+                  How Balogun market fire kill Policeman for Lagos
+                </a>
+                <div
+                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                >
+                  <time
+                    class="StyledTimestamp-um718p-0 kVWTyt"
+                    datetime="2019-11-06"
+                  >
+                    De one we dem update for: 6th November 2019
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="ItemWrapper-u0d8kd-3 juBlKT"
+            >
+              <div
+                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cXzHhm"
+                dir="ltr"
+              >
+                <span
+                  class="StyledSpan-fs4y6m-3 gymrUA"
+                >
+                  6
+                </span>
+              </div>
+              <div
+                class="StyledItem-u0d8kd-1 kYQuFW"
+                dir="ltr"
+              >
+                <a
+                  class="StyledLink-u0d8kd-0 kUvyYz"
+                  href="/pidgin/tori-50093818"
+                >
+                  Labour, FG finally agree minimum wage salary adjustment
+                </a>
+                <div
+                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                >
+                  <time
+                    class="StyledTimestamp-um718p-0 kVWTyt"
+                    datetime="2019-10-18"
+                  >
+                    De one we dem update for: 18th October 2019
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="ItemWrapper-u0d8kd-3 juBlKT"
+            >
+              <div
+                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 nHiMH"
+                dir="ltr"
+              >
+                <span
+                  class="StyledSpan-fs4y6m-3 gymrUA"
+                >
+                  7
+                </span>
+              </div>
+              <div
+                class="StyledItem-u0d8kd-1 kYQuFW"
+                dir="ltr"
+              >
+                <a
+                  class="StyledLink-u0d8kd-0 kUvyYz"
+                  href="/pidgin/tori-50187218"
+                >
+                  Naira Marley na 'Bad Influence'?
+                </a>
+                <div
+                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                >
+                  <time
+                    class="StyledTimestamp-um718p-0 kVWTyt"
+                    datetime="2019-10-25"
+                  >
+                    De one we dem update for: 25th October 2019
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="ItemWrapper-u0d8kd-3 juBlKT"
+            >
+              <div
+                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cXzHhm"
+                dir="ltr"
+              >
+                <span
+                  class="StyledSpan-fs4y6m-3 gymrUA"
+                >
+                  8
+                </span>
+              </div>
+              <div
+                class="StyledItem-u0d8kd-1 kYQuFW"
+                dir="ltr"
+              >
+                <a
+                  class="StyledLink-u0d8kd-0 kUvyYz"
+                  href="/pidgin/tori-48347911"
+                >
+                  Tins you suppose know about Naira Marley
+                </a>
+                <div
+                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                >
+                  <time
+                    class="StyledTimestamp-um718p-0 kVWTyt"
+                    datetime="2019-05-23"
+                  >
+                    De one we dem update for: 23rd May 2019
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="ItemWrapper-u0d8kd-3 juBlKT"
+            >
+              <div
+                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 nHiMH"
+                dir="ltr"
+              >
+                <span
+                  class="StyledSpan-fs4y6m-3 gymrUA"
+                >
+                  9
+                </span>
+              </div>
+              <div
+                class="StyledItem-u0d8kd-1 kYQuFW"
+                dir="ltr"
+              >
+                <a
+                  class="StyledLink-u0d8kd-0 kUvyYz"
+                  href="/pidgin/sport-50312710"
+                >
+                  Golden Eaglets crash out of Fifa U17 World Cup
+                </a>
+                <div
+                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                >
+                  <time
+                    class="StyledTimestamp-um718p-0 kVWTyt"
+                    datetime="2019-11-06"
+                  >
+                    De one we dem update for: 6th November 2019
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="ItemWrapper-u0d8kd-3 juBlKT"
+            >
+              <div
+                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cXzHhm"
+                dir="ltr"
+              >
+                <span
+                  class="StyledSpan-fs4y6m-3 gymrUA"
+                >
+                  10
+                </span>
+              </div>
+              <div
+                class="StyledItem-u0d8kd-1 kYQuFW"
+                dir="ltr"
+              >
+                <a
+                  class="StyledLink-u0d8kd-0 kUvyYz"
+                  href="/pidgin/tori-42945173"
+                >
+                  Tiger nut drink fit wake up your sex drive - Nutritionist
+                </a>
+                <div
+                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                >
+                  <time
+                    class="StyledTimestamp-um718p-0 kVWTyt"
+                    datetime="2019-05-21"
+                  >
+                    De one we dem update for: 21st May 2019
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </div>
+  </main>
+  <footer
+    role="contentinfo"
+  >
+    <div
+      class="Banner-m3awbo-1 gpxnCd"
+    >
+      <div
+        class="SvgWrapper-m3awbo-0 dPXtDJ"
+      >
+        <a
+          class="StyledLink-m3awbo-2 cRiIvG"
+          href="/pidgin"
+        >
+          <svg
+            aria-hidden="true"
+            class="BrandSvg-m3awbo-3 kxNqFm"
+            focusable="false"
+            height="24"
+            viewBox="0 0 238 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill-rule="evenodd"
+              stroke="#000"
+              stroke-width=".335"
+              style="stroke: #fff;"
+            >
+              <path
+                d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
+              />
+              <path
+                d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
+              />
+              <path
+                d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM185.18 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.42-.44 1.56 1.56 0 0 0 .5-1.25q0-1.62-2.01-1.62zM194 6.3h1.51v10.57H194zM198.78 16.85V6.3h3.56a7.51 7.51 0 0 1 3.41.65 4.88 4.88 0 0 1 2 1.9 5.29 5.29 0 0 1 .74 2.74 5.18 5.18 0 0 1-.41 2 5.23 5.23 0 0 1-3 2.85 5.33 5.33 0 0 1-1.1.31 14.65 14.65 0 0 1-1.91.08zm3.41-9.21h-1.89v7.86h1.94a7.75 7.75 0 0 0 1.76-.16 4.12 4.12 0 0 0 1-.39 3.59 3.59 0 0 0 .77-.59 3.92 3.92 0 0 0 1.12-2.87 3.63 3.63 0 0 0-1.15-2.78 3.68 3.68 0 0 0-1-.66 4.07 4.07 0 0 0-1-.34 10.57 10.57 0 0 0-1.56-.07zM216.8 11.66h3.55v4.48a9.68 9.68 0 0 1-3.87.85 5.75 5.75 0 0 1-4.2-1.53 5.07 5.07 0 0 1-1.57-3.78 5.26 5.26 0 0 1 1.63-3.94 5.63 5.63 0 0 1 4.08-1.57 7.22 7.22 0 0 1 1.7.19 13.82 13.82 0 0 1 2 .71V8.6a7.43 7.43 0 0 0-3.75-1.1 4 4 0 0 0-2.92 1.18 3.93 3.93 0 0 0-1.19 2.9 3.9 3.9 0 0 0 1.19 2.94 4.23 4.23 0 0 0 3.06 1.14 7.12 7.12 0 0 0 2.17-.42h.14V13h-2zM223.5 6.3h1.5v10.57h-1.5zM236.65 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z"
+              />
+              <path
+                d="M168.37 0v22.59"
+                stroke-width="2"
+              />
+            </g>
+          </svg>
+          <span
+            class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+            role="text"
+          >
+            <span
+              lang="en-GB"
+            >
+              BBC News
+            </span>
+            , 
+            Pidgin
+          </span>
+        </a>
       </div>
     </div>
-  </div>
+    <div
+      class="SitewideLinksWrapper-sc-1gggobt-0 gccobV"
+    >
+      <div
+        class="ConstrainedWrapper-sc-1gggobt-1 bpERjU"
+      >
+        <ul
+          class="StyledList-sc-2e1ekc-0 gRKcvt"
+          role="list"
+        >
+          <li
+            class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+            role="listitem"
+          >
+            <a
+              class="StyledLink-nhmg8j-0 dHbSzF"
+              href="https://www.bbc.com/pidgin/institutional-48528766"
+            >
+              <span
+                class="StyleLinkText-nhmg8j-1 fPnERB"
+              >
+                Why you fit trust BBC News
+              </span>
+            </a>
+          </li>
+          <li
+            class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+            role="listitem"
+          >
+            <a
+              class="StyledLink-nhmg8j-0 dHbSzF"
+              href="https://www.bbc.co.uk/usingthebbc/terms/"
+            >
+              <span
+                class="StyleLinkText-nhmg8j-1 fPnERB"
+              >
+                How dem dey take use am
+              </span>
+            </a>
+          </li>
+          <li
+            class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+            role="listitem"
+          >
+            <a
+              class="StyledLink-nhmg8j-0 dHbSzF"
+              href="https://www.bbc.co.uk/aboutthebbc"
+            >
+              <span
+                class="StyleLinkText-nhmg8j-1 fPnERB"
+              >
+                As e concern BBC
+              </span>
+            </a>
+          </li>
+          <li
+            class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+            role="listitem"
+          >
+            <a
+              class="StyledLink-nhmg8j-0 dHbSzF"
+              href="https://www.bbc.co.uk/usingthebbc/privacy/"
+            >
+              <span
+                class="StyleLinkText-nhmg8j-1 fPnERB"
+              >
+                Privacy Policy
+              </span>
+            </a>
+          </li>
+          <li
+            class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+            role="listitem"
+          >
+            <a
+              class="StyledLink-nhmg8j-0 dHbSzF"
+              href="https://www.bbc.co.uk/usingthebbc/cookies/"
+            >
+              <span
+                class="StyleLinkText-nhmg8j-1 fPnERB"
+              >
+                Cookies
+              </span>
+            </a>
+          </li>
+          <li
+            class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+            role="listitem"
+          >
+            <a
+              class="StyledLink-nhmg8j-0 dHbSzF"
+              href="https://www.bbc.com/pidgin/institutional-42188215"
+            >
+              <span
+                class="StyleLinkText-nhmg8j-1 fPnERB"
+              >
+                Call BBC
+              </span>
+            </a>
+          </li>
+          <li
+            class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+            role="listitem"
+          >
+            <a
+              class="StyledLink-nhmg8j-0 dHbSzF"
+              href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+              lang="en-GB"
+            >
+              <span
+                class="StyleLinkText-nhmg8j-1 fPnERB"
+              >
+                AdChoices / Do Not Sell My Info
+              </span>
+            </a>
+          </li>
+        </ul>
+        <p
+          class="StyledParagraph-sc-1gggobt-2 jQPFnr"
+        >
+          <span
+            lang="en-GB"
+          >
+            ©
+             
+          </span>
+          2020 BBC. De external site no concern BBC.
+           
+          <a
+            class="StyledLink-nhmg8j-0 jHQlUp"
+            href="https://www.bbc.co.uk/help/web/links/"
+          >
+            <span
+              class="StyleLinkText-nhmg8j-1 fPnERB"
+            >
+              De way wey we de take go external link.
+            </span>
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
 </div>
 `;

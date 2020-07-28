@@ -2,20 +2,10 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 import frontPageDataPidgin from '#data/pidgin/frontpage/index-light';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import getInitialData from '#app/routes/home/getInitialData';
-import { FrontPage } from '..';
-
-const requestContextData = {
-  pageType: 'frontPage',
-  service: 'pidgin',
-  pathname: '/pathname',
-  data: { status: 200 },
-};
+import FrontPage from '.';
 
 // eslint-disable-next-line react/prop-types
 const FrontPageWithContext = ({
@@ -24,13 +14,15 @@ const FrontPageWithContext = ({
   ...props
 }) => (
   <BrowserRouter>
-    <ToggleContextProvider service={service} origin="https://www.test.bbc.com">
-      <RequestContextProvider isAmp={isAmp} {...requestContextData}>
-        <ServiceContextProvider service={service}>
-          <FrontPage {...props} />
-        </ServiceContextProvider>
-      </RequestContextProvider>
-    </ToggleContextProvider>
+    <FrontPage
+      status={200}
+      pageType="frontPage"
+      service={service}
+      isAmp={isAmp}
+      pathname="/pathname"
+      bbcOrigin="https://www.test.bbc.co.uk"
+      {...props}
+    />
   </BrowserRouter>
 );
 
@@ -74,63 +66,6 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
 jest.mock('#containers/ATIAnalytics/amp', () => {
   return () => <div>Amp ATI analytics</div>;
 });
-
-jest.mock('#containers/PageHandlers/withVariant', () => Component => {
-  return props => (
-    <div id="VariantContainer">
-      <Component {...props} />
-    </div>
-  );
-});
-
-jest.mock('#containers/PageHandlers/withContexts', () => Component => {
-  return props => (
-    <div id="ContextsContainer">
-      <Component {...props} />
-    </div>
-  );
-});
-
-jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
-  return props => (
-    <div id="PageWrapperContainer">
-      <Component {...props} />
-    </div>
-  );
-});
-
-jest.mock('#containers/PageHandlers/withLoading', () => Component => {
-  return props => (
-    <div id="LoadingContainer">
-      <Component {...props} />
-    </div>
-  );
-});
-
-jest.mock('#containers/PageHandlers/withError', () => Component => {
-  return props => (
-    <div id="ErrorContainer">
-      <Component {...props} />
-    </div>
-  );
-});
-
-jest.mock('#containers/PageHandlers/withData', () => Component => {
-  return props => (
-    <div id="DataContainer">
-      <Component {...props} />
-    </div>
-  );
-});
-
-jest.mock('#containers/PageHandlers/withContexts', () => Component => {
-  return props => (
-    <div id="ContextsContainer">
-      <Component {...props} />
-    </div>
-  );
-});
-
 describe('Front Page', () => {
   describe('snapshots', () => {
     it('should render a pidgin frontpage correctly', async () => {
