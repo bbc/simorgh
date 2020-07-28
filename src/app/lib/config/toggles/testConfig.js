@@ -1,7 +1,5 @@
 export default {
-  _environment: {
-    value: 'test',
-  },
+  _environment: 'test',
   ads: {
     enabled: false,
   },

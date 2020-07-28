@@ -1,7 +1,5 @@
 export default {
-  _environment: {
-    value: 'local',
-  },
+  _environment: 'local',
   ads: {
     enabled: false,
   },

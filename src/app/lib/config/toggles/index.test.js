@@ -7,7 +7,7 @@ describe('Toggles Config', () => {
       const environmentToggles = toggles[environment];
 
       it('should retrieve correct toggle value for environment', () => {
-        expect(environmentToggles._environment.value).toBe(environment);
+        expect(environmentToggles._environment).toBe(environment);
       });
 
       it('should contain correct default values', () => {

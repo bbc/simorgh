@@ -1,7 +1,5 @@
 export default {
-  _environment: {
-    value: 'live',
-  },
+  _environment: 'live',
   ads: {
     enabled: false,
   },
