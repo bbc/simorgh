@@ -17,20 +17,17 @@ jobs:
           npm ci
           npm run build
       - name: Unit Tests
-        run: |
-          npm run test:unit
+        run: npm run test:unit
       - name: Integration Tests
-        run: |
-          npm run test:integration:ci
+        run: npm run test:integration:ci
       - name: Linting
-        run: |
-          npm run test:lint
+        run: npm run test:lint
       - name: Puppeteer
         run: |
+          npm i puppeteer@latest
           npm run test:puppeteer
       - name: BBC A11y
-        run: |
-          npm run start && npm run bbcA11y
+        run: npm run start && npm run bbcA11y
 
         env:
           CI: true
