@@ -47,8 +47,8 @@ describe('pageTypeBundleExtractor', () => {
   it('should extract bundles used for an ArticlePage', () => {
     const result = extractBundlesForPageType('ArticlePage');
     expect(result).toEqual([
-      'common-ArticlePage-FrontPage-IdxPage-MediaAssetPage-MostReadPage-OnDemandRadioPage-OnDemandTvPage-Ph-667a1289',
-      'ArticlePage-31ecd969',
+      'common-ArticlePage-FrontPage-IdxPage-MediaAssetPage-MostReadPage-OnDemandRadioPage-OnDemandTvPage-Ph-667a1289.f4b0fece.js',
+      'ArticlePage-31ecd969.31473c35.js',
     ]);
   });
 

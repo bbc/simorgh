@@ -5,6 +5,7 @@ const ora = require('ora');
 const fs = require('fs');
 const chalk = require('chalk');
 const Table = require('cli-table');
+const { extractBundlesForPageType } = require('./pageTypeBundleExtractor');
 
 // need fake Cypress in global scope to require service configs:
 global.Cypress = { env: () => ({}) };
@@ -21,6 +22,7 @@ const getFileSize = filePath => fs.statSync(filePath).size;
 
 const getBundleData = _fileName => {
   const filenames = jsFiles.filter(fileName => fileName.match(_fileName));
+  console.log(`${_fileName} - ${filenames}`);
 
   const bundleNames = filenames.map(fileName =>
     fileName.replace(/(?<=\w)-.+$/, ''),
@@ -43,6 +45,21 @@ const getBundleData = _fileName => {
   });
 };
 
+const getBundleData2 = (pageName, regex) => {
+  const filenames = jsFiles.filter(fileName => fileName.match(regex));
+
+  const bundleSizes = filenames
+    .map(fileName => getFileSize(`build/public/static/js/${fileName}`))
+    .map(sizeInBytes => Math.round(sizeInBytes / 1000));
+
+  const totalBundleSizes = bundleSizes.reduce(
+    (totalKB, fileSizeInKB) => totalKB + fileSizeInKB,
+    0,
+  );
+
+  return [pageName, bundleSizes.join(', '), totalBundleSizes];
+};
+
 const createConsoleError = (service, size, adjective) =>
   [
     chalk.red('Bundle size for'),
@@ -52,9 +69,11 @@ const createConsoleError = (service, size, adjective) =>
     chalk.red("Please update thresholds in './scripts/bundleSizeConfig.js'"),
   ].join(' ');
 
+console.log(extractBundlesForPageType('ArticlePage'));
+
 const mainBundleData = getBundleData(/^main/);
 const vendorBundleData = getBundleData(/^vendor/);
-const pageBundleData = getBundleData(/.+Page/);
+
 const commonBundlesData = getBundleData(/^common/);
 const serviceBundleData = services
   .map(service => getBundleData(new RegExp(`^${service}`)))
@@ -81,6 +100,25 @@ const averageBundleSize = serviceBundlesTotals.reduce(
 );
 const smallestBundleSize = Math.min(...serviceBundlesTotals);
 const largestBundleSize = Math.max(...serviceBundlesTotals);
+
+const pages = [
+  'ArticlePage',
+  'MediaAssetPage',
+  'PhotoGalleryPage',
+  'StoryPage',
+  'FrontPage',
+  'MostReadPage',
+  'LiveRadioPage',
+  'OnDemandRadioPage',
+];
+const pageBundleData = pages.map(page => {
+  const pageBundleRegex = extractBundlesForPageType(page).reduce(
+    (acc, file) => {
+      return acc ? `${file}|${acc}` : file;
+    },
+  );
+  return getBundleData2(page, `^main|^vendor|${pageBundleRegex}`);
+});
 
 console.log('');
 const spinner = ora({
