@@ -15,3 +15,4 @@ jobs:
         env:
           CI: true
           LOG_LEVEL: 'error'
+          CYPRESS_SKIP_EU: true
