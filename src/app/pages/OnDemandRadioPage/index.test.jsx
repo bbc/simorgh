@@ -15,6 +15,10 @@ import afaanoromooPageData from '#data/afaanoromoo/bbc_afaanoromoo_radio/w13xttn
 import * as analyticsUtils from '#lib/analyticsUtils';
 import getInitialData from '#app/routes/onDemandRadio/getInitialData';
 
+jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
+  return props => <Component {...props} />;
+});
+
 const Page = ({ pageData, service, isAmp = false, variant }) => (
   <StaticRouter>
     <OnDemandRadioPage
