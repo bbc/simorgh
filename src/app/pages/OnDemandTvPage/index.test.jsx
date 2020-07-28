@@ -9,6 +9,10 @@ import pashtoPageData from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import getInitialData from '#app/routes/onDemandTV/getInitialData';
 
+jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
+  return props => <Component {...props} />;
+});
+
 beforeEach(() => {
   jest.mock('#lib/config/toggles', () => ({
     local: {
