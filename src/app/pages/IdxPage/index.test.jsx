@@ -14,6 +14,10 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
   return () => <div>chartbeat</div>;
 });
 
+jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
+  return props => <Component {...props} />;
+});
+
 let container;
 
 describe('IdxPage - Persian', () => {
