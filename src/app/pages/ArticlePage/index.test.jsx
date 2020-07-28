@@ -17,6 +17,10 @@ import { textBlock } from '#models/blocks/index';
 const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
 articleDataNewsNoHeadline.content.model.blocks.shift();
 
+jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
+  return props => <Component {...props} />;
+});
+
 jest.mock('#containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
