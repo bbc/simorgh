@@ -1,47 +1,47 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { getLocalMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { service as ukrainianConfig } from '#lib/config/services/ukrainian';
-import { service as persianConfig } from '#lib/config/services/persian';
-import { ServiceContext } from '#contexts/ServiceContext';
-import { UserContextProvider } from '#contexts/UserContext';
-import IdxPage from '#pages/IdxPage';
+import IdxPage from '..';
 
 const radioServiceOverride = 'dari';
 
-const serviceContext = {
-  ukrainian: ukrainianConfig['ru-UA'],
-  persian: persianConfig.default,
-};
+jest.mock('#lib/config/toggles', () => ({
+  local: {
+    enableFetchingToggles: { enabled: false },
+    chartbeatAnalytics: {
+      enabled: true,
+    },
+    radioSchedule: {
+      enabled: true,
+    },
+    mostRead: {
+      enabled: true,
+    },
+  },
+}));
 
 /* eslint-disable react/prop-types */
-const IdxPageWithContext = ({ service = 'persian', pageData }) => {
+const IdxPageWithContext = ({
+  service = 'persian',
+  variant = 'default',
+  pageData,
+}) => {
   return (
     <BrowserRouter>
-      <ToggleContextProvider
+      <IdxPage
+        pageData={pageData}
+        mostReadEndpointOverride={getLocalMostReadEndpoint({ service })}
+        radioScheduleEndpointOverride={`./data/${service}/bbc_${radioServiceOverride}_radio/schedule.json`}
+        pageType="IDX"
         service={service}
+        variant={variant}
+        pathname="/pathname"
+        data={{ status: 200 }}
+        isAmp={false}
         origin="https://www.test.bbc.com"
-      >
-        <RequestContextProvider
-          pageType="IDX"
-          service={service}
-          pathname="/pathname"
-          data={{ status: 200 }}
-          isAmp={false}
-        >
-          <ServiceContext.Provider value={serviceContext[service]}>
-            <UserContextProvider>
-              <IdxPage
-                pageData={pageData}
-                mostReadEndpointOverride={getLocalMostReadEndpoint({ service })}
-                radioScheduleEndpointOverride={`./data/${service}/bbc_${radioServiceOverride}_radio/schedule.json`}
-              />
-            </UserContextProvider>
-          </ServiceContext.Provider>
-        </RequestContextProvider>
-      </ToggleContextProvider>
+        bbcOrigin="https://www.test.bbc.com"
+        status={200}
+      />
     </BrowserRouter>
   );
 };

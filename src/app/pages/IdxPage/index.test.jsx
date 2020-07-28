@@ -54,6 +54,7 @@ describe('IdxPage - Ukrainian', () => {
       container = render(
         <IdxPageWithContext
           service="ukrainian"
+          variant="ru-UA"
           pageData={ukraineInRussianIdxData}
         />,
       ).container;
