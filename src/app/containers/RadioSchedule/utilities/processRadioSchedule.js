@@ -31,21 +31,35 @@ const logProgramError = ({ error, service }) => {
   });
 };
 
+const getLastProgramIndex = ({ schedules, currentTime }) => {
+  return findLastIndex(
+    propSatisfies(time => time < currentTime, 'publishedTimeStart'),
+  )(schedules);
+};
+
+export const isScheduleDataComplete = ({
+  schedules,
+  currentTime = Date.now(),
+}) => {
+  // finding latest program, that may or may not still be live. this is because there isn't
+  // always a live program, in which case we show the most recently played program on demand.
+  const latestProgramIndex = getLastProgramIndex({ schedules, currentTime });
+
+  return schedules[latestProgramIndex - 2] && schedules[latestProgramIndex + 1];
+};
+
 export default (data, service, currentTime) => {
   if (!data) {
     return null;
   }
 
   const { schedules = [] } = data;
+  const latestProgramIndex = getLastProgramIndex({ schedules, currentTime });
 
-  // finding latest program, that may or may not still be live. this is because there isn't
-  // always a live program, in which case we show the most recently played program on demand.
-  const latestProgramIndex = findLastIndex(
-    propSatisfies(time => time < currentTime, 'publishedTimeStart'),
-  )(schedules);
-
-  const scheduleDataIsComplete =
-    schedules[latestProgramIndex - 2] && schedules[latestProgramIndex + 1];
+  const scheduleDataIsComplete = isScheduleDataComplete({
+    schedules,
+    currentTime,
+  });
 
   if (!scheduleDataIsComplete) {
     logProgramError({ error: 'Incomplete program schedule', service });
