@@ -11,10 +11,6 @@ exports[`Live radio page should match snapshot for AMP 1`] = `
       ያድምጡ - BBC News አማርኛ
     </title>
     <link
-      href="/amharic/manifest.json"
-      rel="manifest"
-    />
-    <link
       href="https://www.test.bbc.com/pathname"
       rel="canonical"
     />
@@ -205,11 +201,6 @@ exports[`Live radio page should match snapshot for AMP 1`] = `
       name="twitter:title"
     />
     <script
-      async="true"
-      custom-element="amp-bind"
-      src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
-    />
-    <script
       type="application/ld+json"
     >
       {"@context":"http://schema.org","@graph":[{"@type":"RadioChannel","url":"https://www.test.bbc.com/pathname","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"ያድምጡ"}}]}
@@ -221,7 +212,7 @@ exports[`Live radio page should match snapshot for AMP 1`] = `
     />
   </head>
   <body>
-    .c31 {
+    .c3 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -233,7 +224,7 @@ exports[`Live radio page should match snapshot for AMP 1`] = `
   padding: 2rem 0;
 }
 
-.c32 {
+.c4 {
   font-size: 1rem;
   line-height: 1.375rem;
   font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -244,440 +235,13 @@ exports[`Live radio page should match snapshot for AMP 1`] = `
   margin: 0;
 }
 
-.c17 {
-  color: #fff;
-  fill: currentColor;
-}
-
-.c12 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c34 {
+.c6 {
   height: 165px;
   position: relative;
   margin-bottom: 1rem;
 }
 
-.c13 {
-  position: absolute;
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  padding: 0.75rem 0.5rem;
-  background-color: #FFFFFF;
-  border: 0.1875rem solid #000;
-  color: #333;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  line-height: 1.375rem;
-  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c13:focus {
-  -webkit-clip-path: none;
-  clip-path: none;
-  -webkit-clip: auto;
-  clip: auto;
-  height: auto;
-  width: auto;
-  top: 0;
-  left: 0;
-}
-
-.c8 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.c7 {
-  background-color: #B80000;
-  min-height: 2.5rem;
-  width: 100%;
-  padding: 0 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
-}
-
-.c35 {
-  background-color: #B80000;
-  min-height: 2.5rem;
-  width: 100%;
-  padding: 0 0.5rem;
-  border-top: 0.0625rem solid transparent;
-}
-
-.c10 {
-  display: inline-block;
-  width: 100%;
-  max-width: 13.955625000000001rem;
-  min-width: 9.30375rem;
-  -webkit-flex: 1 1 9.30375rem;
-  -ms-flex: 1 1 9.30375rem;
-  flex: 1 1 9.30375rem;
-  -ms-flex-preferred-size: 13.955625000000001rem;
-}
-
-.c11 {
-  box-sizing: content-box;
-  color: #FFFFFF;
-  fill: currentColor;
-  padding-top: 0.625rem;
-  padding-bottom: 0.375rem;
-  height: 1.5rem;
-  width: 100%;
-  max-width: 13.955625000000001rem;
-  min-width: 9.30375rem;
-  -webkit-flex: 1 1 9.30375rem;
-  -ms-flex: 1 1 9.30375rem;
-  flex: 1 1 9.30375rem;
-  -ms-flex-preferred-size: 13.955625000000001rem;
-}
-
-.c9:hover .c11,
-.c9:focus .c11 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: 0.25rem solid #FFFFFF;
-  margin-bottom: -0.25rem;
-}
-
-.c18 {
-  background-color: #222222;
-  clear: both;
-}
-
-.c19 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0 0.5rem;
-  border-bottom: 0.125rem solid #3F3F42;
-}
-
-.c20 {
-  padding: 0.75rem 0;
-  border-bottom: 0.0625rem solid #3F3F42;
-}
-
-.c20:last-child {
-  padding-bottom: 1rem;
-  border: 0;
-}
-
-.c21 {
-  font-size: 1rem;
-  line-height: 1.375rem;
-  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #FFFFFF;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c21:hover,
-.c21:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c16 {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  background-color: transparent;
-  border: 0;
-  float: left;
-  height: 2.875rem;
-  width: 2.875rem;
-}
-
-.c16:hover,
-.c16:focus {
-  cursor: pointer;
-  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
-}
-
-.c16:hover::after,
-.c16:focus::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  border: 0.25rem solid #FFFFFF;
-}
-
-.c16 svg {
-  vertical-align: middle;
-}
-
-.c15 {
-  position: relative;
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.c24 {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
-
-.c27 {
-  font-size: 1rem;
-  line-height: 1.375rem;
-  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #FDFDFD;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.75rem;
-}
-
-.c27:hover::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-}
-
-.c27:focus::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-  top: 0;
-  border: 0.25rem solid #FFFFFF;
-}
-
-.c26 {
-  display: inline-block;
-  position: relative;
-  z-index: 2;
-}
-
-.c45 .c25::after {
-  left: 0;
-}
-
-.c14 {
-  position: relative;
-  background-color: #B80000;
-  border-top: 0.0625rem solid #FFFFFF;
-}
-
-.c14 .c25::after {
-  left: 0;
-}
-
 .c1 {
-  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #323232;
-  padding: 1rem 0.5rem;
-}
-
-.c2 {
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.c2::after {
-  content: '\\0020';
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-.c3 {
-  font-size: 1rem;
-  line-height: 1.375rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  padding: 0;
-  margin: 0;
-}
-
-.c5 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #F6A21D;
-  font-weight: 600;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.c5 li + li {
-  padding-top: 0.5rem;
-}
-
-.c4 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #BEBEBE;
-}
-
-.c4 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c4 a:focus,
-.c4 a:hover {
-  color: #FFFFFF;
-}
-
-.c6 button {
-  font-size: 1rem;
-  line-height: 1.375rem;
-  color: #F6A21D;
-  font-weight: 700;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-.c6 button:focus,
-.c6 button:hover {
-  color: #FFFFFF;
-}
-
-.c6 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c6 a:focus,
-.c6 a:hover {
-  color: #FFFFFF;
-}
-
-.c0 amp-consent {
-  position: static;
-  display: block;
-}
-
-.c41 {
-  padding: 0.5rem 0 0.5rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: block;
-}
-
-.c44 {
-  padding: 0.5rem 0 0.5rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline;
-}
-
-.c40:hover .c42,
-.c40:focus .c42 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c38 {
-  border-bottom: 0.0625rem solid #3F3F42;
-  list-style-type: none;
-  margin: 0;
-  padding: 0 0 0.5rem;
-  -webkit-column-count: 4;
-  column-count: 4;
-}
-
-.c38 > li:first-child {
-  border-bottom: 0.0625rem solid #3F3F42;
-  padding: 0.5rem 0;
-  margin-bottom: 0.5rem;
-  grid-column: 1/-1;
-  width: 100%;
-  -webkit-column-span: all;
-  column-span: all;
-}
-
-.c39 {
-  min-width: 50%;
-  -webkit-column-gap: 1rem;
-  column-gap: 1rem;
-  -webkit-break-inside: avoid-column;
-  break-inside: avoid-column;
-}
-
-.c36 {
-  background-color: #222222;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c37 {
-  max-width: 80rem;
-  margin: 0 auto;
-  padding-top: 0.5rem);
-}
-
-.c43 {
-  color: #FFFFFF;
-  margin: 0;
-  padding: 1rem 0;
-}
-
-.c29 {
   width: 100%;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -685,59 +249,59 @@ exports[`Live radio page should match snapshot for AMP 1`] = `
   flex-grow: 1;
 }
 
-.c33 amp-iframe {
+.c5 amp-iframe {
   overflow: visible !important;
   width: calc(100% + 1rem);
 }
 
-.c33 iframe {
+.c5 iframe {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c31 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c3 {
     padding: 2.5rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c32 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c32 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.75rem;
   }
 }
 
 @supports (display:grid) {
-  .c28 {
+  .c0 {
     display: grid;
     position: initial;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c30 {
+  .c2 {
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -748,7 +312,7 @@ exports[`Live radio page should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c30 {
+  .c2 {
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -759,7 +323,7 @@ exports[`Live radio page should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c30 {
+  .c2 {
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -770,7 +334,7 @@ exports[`Live radio page should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c30 {
+  .c2 {
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
@@ -781,7 +345,7 @@ exports[`Live radio page should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c30 {
+  .c2 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     margin-left: 12.5%;
@@ -791,7 +355,7 @@ exports[`Live radio page should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c30 {
+  .c2 {
     width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
     margin-left: 20%;
@@ -801,787 +365,45 @@ exports[`Live radio page should match snapshot for AMP 1`] = `
 }
 
 @supports (display:grid) {
-  .c30 {
+  .c2 {
     display: block;
   }
 }
 
 @media (min-width:63rem) {
-  .c34 {
+  .c6 {
     margin-bottom: 2rem;
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c13 {
-    font-size: 1rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c13:focus {
-    top: 0.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c13 {
-    padding: 0.5rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c8 {
-    display: block;
-  }
-}
-
-@media (min-width:25rem) {
-  .c7 {
-    min-height: 3.25rem;
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c35 {
-    min-height: 3.25rem;
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c10 {
-    display: block;
-  }
-}
-
-@media (min-width:25rem) {
-  .c11 {
-    padding-top: 1rem;
-    padding-bottom: 0.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c11 {
-    padding-top: 1.25rem;
-    padding-bottom: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),print {
-  .c11 {
-    fill: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c18 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c21 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c21 {
-    font-size: 1rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c16 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:20rem) {
-  .c16 {
-    height: 3rem;
-    width: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c24 {
-    overflow: hidden;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c27 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c27 {
-    font-size: 1rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c27 {
-    padding: 0.75rem 0.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c26:last-child {
-    margin-right: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c26::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 80rem;
-    border-bottom: 0.0625rem solid #eab3b3;
-    z-index: -1;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c14.si-nav-open {
-    background-color: #222222;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c22 {
-    white-space: nowrap;
-    overflow-x: scroll;
-    -webkit-scroll-behavior: auto;
-    -moz-scroll-behavior: auto;
-    -ms-scroll-behavior: auto;
-    scroll-behavior: auto;
-    -webkit-overflow-scrolling: touch;
-    -webkit-scrollbar-width: none;
-    -moz-scrollbar-width: none;
-    -ms-scrollbar-width: none;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .c22::-webkit-scrollbar {
-    display: none;
-  }
-
-  .c22:after {
-    content: ' ';
-    height: 100%;
-    width: 3rem;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 3;
-    overflow: hidden;
-    pointer-events: none;
-    background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c23.si-nav-scrollable-hidden {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:25rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
-    padding: 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 1.125rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    float: left;
-    margin-right: 3.5%;
-    width: 22%;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 {
-    font-size: 0.9375rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    font-size: 0.9375rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 {
-    width: 18%;
-    float: right;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 0.9375rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 0.9375rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    margin: 0;
-    float: left;
-    width: 53%;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 button {
-    font-size: 1.125rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 button {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c38 {
-    display: grid;
-    grid-auto-flow: column;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c38 {
-    grid-auto-flow: row;
-    -webkit-column-count: 1;
-    column-count: 1;
-  }
-}
-
-@media (min-width:15rem) and (max-width:37.4375rem) {
-  .c38 {
-    grid-column-gap: 0.5rem;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat( 4,auto );
-    -webkit-column-count: 2;
-    column-count: 2;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c38 {
-    grid-column-gap: 1rem;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat( 3,auto );
-    -webkit-column-count: 3;
-    column-count: 3;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c38 {
-    grid-column-gap: 1rem;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat( 3,auto );
-    -webkit-column-count: 4;
-    column-count: 4;
-  }
-}
-
-@media (min-width:80rem) {
-  .c38 {
-    grid-column-gap: 1rem;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat( 3,auto );
-    -webkit-column-count: 5;
-    column-count: 5;
-  }
-}
-
-@media (max-width:25rem) {
-  .c36 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c36 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c36 {
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c36 {
-    font-size: 0.8125rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c29 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c29 {
+  .c1 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c33 amp-iframe {
+  .c5 amp-iframe {
     width: calc(100% + 2rem);
   }
 }
 
 @media (min-width:25rem) {
-  .c33 iframe {
+  .c5 iframe {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
   }
 }
 
 <div>
-      <header
-        role="banner"
-      >
-        <div
-          class="c0"
-        >
-          <amp-geo
-            layout="nodisplay"
-          >
-            <script
-              type="application/json"
-            >
-              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
-            </script>
-          </amp-geo>
-          <amp-consent
-            id="consent"
-            layout="nodisplay"
-          >
-            <script
-              type="application/json"
-            >
-              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}},"policy":{"default":{"waitFor":{"user-consent":[]},"timeout":{"seconds":0,"fallbackAction":"reject"}}}}
-            </script>
-            <div
-              id="consent-prompt"
-            >
-              <div
-                class="c1"
-                dir="ltr"
-                id="privacy"
-              >
-                <div
-                  class="c2"
-                  dir="ltr"
-                >
-                  <h2
-                    class="c3"
-                    dir="ltr"
-                  >
-                    በፕራይቬሲና ኩኪዎችን በመጠቀም ፖሊሲዎቻችን ላይ ማሻሻያ አድርገናል።
-                  </h2>
-                  <p
-                    class="c4"
-                    dir="ltr"
-                  >
-                    በፕራይቬሲና ኩኪዎችን በመጠቀም ፖሊሲዎቻችን ላይ ጠቃሚ ለውጦችን አድርገናል። ለርስዎም ሆን በመረጃዎች ላይ ለውጦቹ ምን ማለት እንደሆኑ እንዲያውቁ እንፈልጋለን።
-                  </p>
-                  <ul
-                    class="c5"
-                    dir="ltr"
-                  >
-                    <li
-                      class="c6"
-                      dir="ltr"
-                    >
-                      <button
-                        on="tap:cookie.show, privacy.hide"
-                        type="button"
-                      >
-                        እሺ
-                      </button>
-                    </li>
-                    <li
-                      class="c6"
-                      dir="ltr"
-                    >
-                      <a
-                        href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
-                        on="tap:cookie.show, privacy.hide"
-                      >
-                        ምን እንደተቀየረ ይመልከቱ
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div
-                class="c1"
-                dir="ltr"
-                hidden=""
-                id="cookie"
-              >
-                <div
-                  class="c2"
-                  dir="ltr"
-                >
-                  <h2
-                    class="c3"
-                    dir="ltr"
-                  >
-                    ኩኪዎችን መጠቀም ላይ መስማማትዎን ያሳውቁን
-                  </h2>
-                  <p
-                    class="c4"
-                    dir="ltr"
-                  >
-                    እኛም ሆን ቴክኖሎጂያችንን የሚጠቀሙ አጋሮቻችን ለምሳሌም 
-                    <a
-                      href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
-                    >
-                      ኩኪዎችን የምንጠቀመው
-                    </a>
-                    , ና መረጃዎችንም የምንሰብስበው የሚፈልጓቸውን መረጃዎችና ማስታወቂያዎች ቅድሚያ እንዲያገኙዋቸው በማሰብና አግልግሎታችንም የተሻለ እንዲሆን ነው።እባክዎ መስማማትዎን ያሳውቁን
-                  </p>
-                  <ul
-                    class="c5"
-                    dir="ltr"
-                  >
-                    <li
-                      class="c6"
-                      dir="ltr"
-                    >
-                      <button
-                        data-cookie-banner="accept"
-                        on="tap:consent.accept"
-                        type="button"
-                      >
-                        እሺ፣ እስማማለሁ
-                      </button>
-                    </li>
-                    <li
-                      class="c6"
-                      dir="ltr"
-                    >
-                      <a
-                        data-cookie-banner="reject"
-                        href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
-                        on="tap:consent.reject"
-                      >
-                        ወደ ማውጫ መመለስ እፈልጋለሁ
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </amp-consent>
-        </div>
-        <div
-          class="c7"
-        >
-          <div
-            class="c8"
-          >
-            <a
-              class="c9 c10"
-              href="/amharic"
-            >
-              <svg
-                aria-hidden="true"
-                class="c11"
-                focusable="false"
-                height="24"
-                viewBox="0 0 223.29 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g
-                  fill-rule="evenodd"
-                  stroke="#000"
-                  stroke-width=".335"
-                  style="stroke: #fff;"
-                >
-                  <path
-                    d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
-                  />
-                  <path
-                    d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
-                  />
-                  <path
-                    d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM190.23 17.89a8.48 8.48 0 0 0-.79-3.1 5 5 0 0 0-2-2.07l-.11-.06-2.12 5.23h-1.45L187 10h-.16a4.2 4.2 0 0 1-1.74-.36 1.92 1.92 0 0 1-.88-.94 4.27 4.27 0 0 1-.32-1.7V6h1.32v1a3.29 3.29 0 0 0 .18 1.21 1.25 1.25 0 0 0 .57.66 2.89 2.89 0 0 0 1.28.2h1.55l-1 2.56h.1a5.16 5.16 0 0 1 2.59 2.28 10.27 10.27 0 0 1 1.09 4zM199.94 17.89l2.53-6.13h-1.07a2.5 2.5 0 0 1-1.75-.57 2.14 2.14 0 0 1-.65-1.64v-.56l.17-2.08h-1.87v5a6.07 6.07 0 0 1-1.44.93 4.22 4.22 0 0 1-1.76.35 2.74 2.74 0 0 1-2.14-.82 3.5 3.5 0 0 1-.74-2.41 4.16 4.16 0 0 1 .49-2 3.4 3.4 0 0 1 1.41-1.37 4.47 4.47 0 0 1 2.12-.59h6.53c2 0 3 .74 3 2.27a4.58 4.58 0 0 1-.18 1.13 17.59 17.59 0 0 1-.71 2l-2.65 6.5zm-4.65-11a2.69 2.69 0 0 0-2.07.78 3.21 3.21 0 0 0-.72 2.33 2.74 2.74 0 0 0 .44 1.66 1.46 1.46 0 0 0 1.23.6 3.42 3.42 0 0 0 1-.12 2.28 2.28 0 0 0 .79-.42v-4.8zm5.07 1.88v.6a1.35 1.35 0 0 0 .44 1.14 2.53 2.53 0 0 0 1.51.33h.56v-.07c.25-.66.41-1.1.48-1.36a5.81 5.81 0 0 0 .16-.67 3.07 3.07 0 0 0 0-.47 1.3 1.3 0 0 0-.4-1 1.79 1.79 0 0 0-1.11-.35h-1.44zM212.92 19.25a1.13 1.13 0 0 1-.78-.35 2 2 0 0 1-.54-.92v-.08h-1.17a7 7 0 0 1-2.52-.34 2.15 2.15 0 0 1-1.16-1.1 5.52 5.52 0 0 1-.37-2.26V13a14 14 0 0 1 .49-4.13 4 4 0 0 1 1.51-2.18 4.83 4.83 0 0 1 2.75-.7h1.68l.31 2.25h-.19a1.09 1.09 0 0 1-.76-.34 2.14 2.14 0 0 1-.57-.9v-.08h-.45a2.8 2.8 0 0 0-2.61 1.47 9.94 9.94 0 0 0-.81 4.64v1.34a4.17 4.17 0 0 0 .24 1.58 1.52 1.52 0 0 0 .79.81 4.55 4.55 0 0 0 1.74.24h1.12v-.08a2 2 0 0 1 .54-.93 1.12 1.12 0 0 1 .77-.35h.19l-.25 1.77.26 1.84zM218.52 17.89v-3.78h-2.79V13a5 5 0 0 1 .71-2.81 3.4 3.4 0 0 1 2-1.41h.08v-2h-1.92v.08a1.67 1.67 0 0 1-.52.81 1.2 1.2 0 0 1-.79.3h-.19l.25-1.53-.25-1.57h.19a1.2 1.2 0 0 1 .79.3 1.7 1.7 0 0 1 .53.82v.08h5.16v-.08a1.68 1.68 0 0 1 .53-.83 1.22 1.22 0 0 1 .78-.29h.19L223 6.39l.29 1.61h-.19a1.21 1.21 0 0 1-.79-.29 1.68 1.68 0 0 1-.53-.82v-.08h-1.92v1.77h1.49l.31 2.25h-.19a1.09 1.09 0 0 1-.76-.34 2.14 2.14 0 0 1-.55-.94v-.08h-.42a2.36 2.36 0 0 0-1.95.87 3.91 3.91 0 0 0-.69 2.47v.38h2.79v4.69z"
-                  />
-                  <path
-                    d="M168.37 0v22.59"
-                    stroke-width="2"
-                  />
-                </g>
-              </svg>
-              <span
-                class="c12"
-                role="text"
-              >
-                <span
-                  lang="en-GB"
-                >
-                  BBC News
-                </span>
-                , 
-                አማርኛ
-              </span>
-            </a>
-            <a
-              class="c13"
-              dir="ltr"
-              href="#content"
-            >
-              ወደ ዋናው ይዘት ይለፉ
-            </a>
-          </div>
-        </div>
-        <nav
-          class="c14"
-          dir="ltr"
-          id="si-nav"
-          role="navigation"
-        >
-          <div
-            class="c15"
-          >
-            <amp-state
-              id="menuState"
-            >
-              <script
-                type="application/json"
-              >
-                {"expanded":false}
-              </script>
-            </amp-state>
-            <button
-              aria-expanded="false"
-              class="c16"
-              data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
-              dir="ltr"
-              on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
-        si-nav-dropdown-menu.toggleVisibility,
-        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
-        si-nav.toggleClass(class=si-nav-open)
-      "
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="c17"
-                data-amp-bind-hidden="menuState.expanded"
-                focusable="false"
-                height="2.75rem"
-                viewBox="0 0 44 44"
-                width="2.75rem"
-              >
-                <path
-                  d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
-                />
-              </svg>
-              <svg
-                aria-hidden="true"
-                class="c17"
-                data-amp-bind-hidden="!menuState.expanded"
-                focusable="false"
-                height="2.75rem"
-                hidden=""
-                viewBox="0 0 44 44"
-                width="2.75rem"
-              >
-                <path
-                  d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
-                  fill-rule="evenodd"
-                />
-              </svg>
-              <span
-                class="c12"
-              >
-                ክፍሎች
-              </span>
-            </button>
-            <div
-              class="c18"
-              hidden=""
-              id="si-nav-dropdown-menu"
-            >
-              <ul
-                class="c19"
-                role="list"
-              >
-                <li
-                  class="c20"
-                  role="listitem"
-                >
-                  <a
-                    class="c21"
-                    href="/amharic"
-                  >
-                    ዜና
-                  </a>
-                </li>
-                <li
-                  class="c20"
-                  role="listitem"
-                >
-                  <a
-                    class="c21"
-                    href="/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"
-                  >
-                    ኢትዮጵያ
-                  </a>
-                </li>
-                <li
-                  class="c20"
-                  role="listitem"
-                >
-                  <a
-                    class="c21"
-                    href="/amharic/media/video"
-                  >
-                    ቪዲዮ
-                  </a>
-                </li>
-                <li
-                  class="c20"
-                  role="listitem"
-                >
-                  <a
-                    class="c21"
-                    href="/amharic/popular/read"
-                  >
-                    በጣም የተወደዱ
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div
-              class="c22 c23"
-              dir="ltr"
-              id="si-nav-scrollable"
-            >
-              <ul
-                class="c24"
-                role="list"
-              >
-                <li
-                  class="c25 c26"
-                  dir="ltr"
-                  role="listitem"
-                >
-                  <a
-                    class="c27"
-                    href="/amharic"
-                  >
-                    ዜና
-                  </a>
-                </li>
-                <li
-                  class="c25 c26"
-                  dir="ltr"
-                  role="listitem"
-                >
-                  <a
-                    class="c27"
-                    href="/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"
-                  >
-                    ኢትዮጵያ
-                  </a>
-                </li>
-                <li
-                  class="c25 c26"
-                  dir="ltr"
-                  role="listitem"
-                >
-                  <a
-                    class="c27"
-                    href="/amharic/media/video"
-                  >
-                    ቪዲዮ
-                  </a>
-                </li>
-                <li
-                  class="c25 c26"
-                  dir="ltr"
-                  role="listitem"
-                >
-                  <a
-                    class="c27"
-                    href="/amharic/popular/read"
-                  >
-                    በጣም የተወደዱ
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
       <amp-analytics>
         <script
           type="application/json"
@@ -1602,31 +424,31 @@ exports[`Live radio page should match snapshot for AMP 1`] = `
         </script>
       </amp-analytics>
       <main
-        class="c28 c29"
+        class="c0 c1"
         dir="ltr"
         role="main"
       >
         <div
-          class="c30"
+          class="c2"
           dir="ltr"
         >
           <h1
-            class="c31"
+            class="c3"
             id="content"
             tabindex="-1"
           >
             ያድምጡ
           </h1>
           <p
-            class="c32"
+            class="c4"
           >
             ዝግጅቶቻችንን’
           </p>
           <div
-            class="c33"
+            class="c5"
           >
             <div
-              class="c34"
+              class="c6"
             >
               <amp-iframe
                 allowfullscreen="allowfullscreen"
@@ -1652,212 +474,13 @@ exports[`Live radio page should match snapshot for AMP 1`] = `
           </div>
         </div>
       </main>
-      <footer
-        role="contentinfo"
-      >
-        <div
-          class="c35"
-        >
-          <div
-            class="c8"
-          >
-            <a
-              class="c9 c10"
-              href="/amharic"
-            >
-              <svg
-                aria-hidden="true"
-                class="c11"
-                focusable="false"
-                height="24"
-                viewBox="0 0 223.29 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g
-                  fill-rule="evenodd"
-                  stroke="#000"
-                  stroke-width=".335"
-                  style="stroke: #fff;"
-                >
-                  <path
-                    d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
-                  />
-                  <path
-                    d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
-                  />
-                  <path
-                    d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM190.23 17.89a8.48 8.48 0 0 0-.79-3.1 5 5 0 0 0-2-2.07l-.11-.06-2.12 5.23h-1.45L187 10h-.16a4.2 4.2 0 0 1-1.74-.36 1.92 1.92 0 0 1-.88-.94 4.27 4.27 0 0 1-.32-1.7V6h1.32v1a3.29 3.29 0 0 0 .18 1.21 1.25 1.25 0 0 0 .57.66 2.89 2.89 0 0 0 1.28.2h1.55l-1 2.56h.1a5.16 5.16 0 0 1 2.59 2.28 10.27 10.27 0 0 1 1.09 4zM199.94 17.89l2.53-6.13h-1.07a2.5 2.5 0 0 1-1.75-.57 2.14 2.14 0 0 1-.65-1.64v-.56l.17-2.08h-1.87v5a6.07 6.07 0 0 1-1.44.93 4.22 4.22 0 0 1-1.76.35 2.74 2.74 0 0 1-2.14-.82 3.5 3.5 0 0 1-.74-2.41 4.16 4.16 0 0 1 .49-2 3.4 3.4 0 0 1 1.41-1.37 4.47 4.47 0 0 1 2.12-.59h6.53c2 0 3 .74 3 2.27a4.58 4.58 0 0 1-.18 1.13 17.59 17.59 0 0 1-.71 2l-2.65 6.5zm-4.65-11a2.69 2.69 0 0 0-2.07.78 3.21 3.21 0 0 0-.72 2.33 2.74 2.74 0 0 0 .44 1.66 1.46 1.46 0 0 0 1.23.6 3.42 3.42 0 0 0 1-.12 2.28 2.28 0 0 0 .79-.42v-4.8zm5.07 1.88v.6a1.35 1.35 0 0 0 .44 1.14 2.53 2.53 0 0 0 1.51.33h.56v-.07c.25-.66.41-1.1.48-1.36a5.81 5.81 0 0 0 .16-.67 3.07 3.07 0 0 0 0-.47 1.3 1.3 0 0 0-.4-1 1.79 1.79 0 0 0-1.11-.35h-1.44zM212.92 19.25a1.13 1.13 0 0 1-.78-.35 2 2 0 0 1-.54-.92v-.08h-1.17a7 7 0 0 1-2.52-.34 2.15 2.15 0 0 1-1.16-1.1 5.52 5.52 0 0 1-.37-2.26V13a14 14 0 0 1 .49-4.13 4 4 0 0 1 1.51-2.18 4.83 4.83 0 0 1 2.75-.7h1.68l.31 2.25h-.19a1.09 1.09 0 0 1-.76-.34 2.14 2.14 0 0 1-.57-.9v-.08h-.45a2.8 2.8 0 0 0-2.61 1.47 9.94 9.94 0 0 0-.81 4.64v1.34a4.17 4.17 0 0 0 .24 1.58 1.52 1.52 0 0 0 .79.81 4.55 4.55 0 0 0 1.74.24h1.12v-.08a2 2 0 0 1 .54-.93 1.12 1.12 0 0 1 .77-.35h.19l-.25 1.77.26 1.84zM218.52 17.89v-3.78h-2.79V13a5 5 0 0 1 .71-2.81 3.4 3.4 0 0 1 2-1.41h.08v-2h-1.92v.08a1.67 1.67 0 0 1-.52.81 1.2 1.2 0 0 1-.79.3h-.19l.25-1.53-.25-1.57h.19a1.2 1.2 0 0 1 .79.3 1.7 1.7 0 0 1 .53.82v.08h5.16v-.08a1.68 1.68 0 0 1 .53-.83 1.22 1.22 0 0 1 .78-.29h.19L223 6.39l.29 1.61h-.19a1.21 1.21 0 0 1-.79-.29 1.68 1.68 0 0 1-.53-.82v-.08h-1.92v1.77h1.49l.31 2.25h-.19a1.09 1.09 0 0 1-.76-.34 2.14 2.14 0 0 1-.55-.94v-.08h-.42a2.36 2.36 0 0 0-1.95.87 3.91 3.91 0 0 0-.69 2.47v.38h2.79v4.69z"
-                  />
-                  <path
-                    d="M168.37 0v22.59"
-                    stroke-width="2"
-                  />
-                </g>
-              </svg>
-              <span
-                class="c12"
-                role="text"
-              >
-                <span
-                  lang="en-GB"
-                >
-                  BBC News
-                </span>
-                , 
-                አማርኛ
-              </span>
-            </a>
-          </div>
-        </div>
-        <div
-          class="c36"
-        >
-          <div
-            class="c37"
-          >
-            <ul
-              class="c38"
-              role="list"
-            >
-              <li
-                class="c39"
-                role="listitem"
-              >
-                <a
-                  class="c40 c41"
-                  href="https://www.bbc.com/amharic/institutional-49283133"
-                >
-                  <span
-                    class="c42"
-                  >
-                    ቢቢሲን ለምን ማመን እንደሚገባዎ
-                  </span>
-                </a>
-              </li>
-              <li
-                class="c39"
-                role="listitem"
-              >
-                <a
-                  class="c40 c41"
-                  href="https://www.bbc.com/usingthebbc/terms/"
-                >
-                  <span
-                    class="c42"
-                  >
-                    የአጠቃቀም ደንብ
-                  </span>
-                </a>
-              </li>
-              <li
-                class="c39"
-                role="listitem"
-              >
-                <a
-                  class="c40 c41"
-                  href="https://www.bbc.com/aboutthebbc"
-                >
-                  <span
-                    class="c42"
-                  >
-                    ስለ ቢቢሲ
-                  </span>
-                </a>
-              </li>
-              <li
-                class="c39"
-                role="listitem"
-              >
-                <a
-                  class="c40 c41"
-                  href="https://www.bbc.com/usingthebbc/privacy/"
-                >
-                  <span
-                    class="c42"
-                  >
-                    የፕራይቬሲ ፖሊሲ
-                  </span>
-                </a>
-              </li>
-              <li
-                class="c39"
-                role="listitem"
-              >
-                <a
-                  class="c40 c41"
-                  href="https://www.bbc.com/usingthebbc/cookies/"
-                >
-                  <span
-                    class="c42"
-                  >
-                    ኩኪዎች
-                  </span>
-                </a>
-              </li>
-              <li
-                class="c39"
-                role="listitem"
-              >
-                <a
-                  class="c40 c41"
-                  href="https://www.bbc.com/amharic/institutional-42228117"
-                >
-                  <span
-                    class="c42"
-                  >
-                    ቢቢሲን ያግኙ
-                  </span>
-                </a>
-              </li>
-              <li
-                class="c39"
-                role="listitem"
-              >
-                <a
-                  class="c40 c41"
-                  href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
-                  lang="en-GB"
-                >
-                  <span
-                    class="c42"
-                  >
-                    AdChoices / Do Not Sell My Info
-                  </span>
-                </a>
-              </li>
-            </ul>
-            <p
-              class="c43"
-            >
-              <span
-                lang="en-GB"
-              >
-                ©
-                 
-              </span>
-              2020 BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም.
-               
-              <a
-                class="c40 c44"
-                href="https://www.bbc.co.uk/help/web/links/"
-              >
-                <span
-                  class="c42"
-                >
-                  ስለ ውጪ ሊንኮች ያለን አቀራረብ
-                </span>
-              </a>
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   </body>
 </html>
 `;
 
 exports[`Live radio page should match snapshot for Canonical 1`] = `
-.c30 {
+.c3 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1869,7 +492,7 @@ exports[`Live radio page should match snapshot for Canonical 1`] = `
   padding: 2rem 0;
 }
 
-.c31 {
+.c4 {
   font-size: 1rem;
   line-height: 1.375rem;
   font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1880,442 +503,13 @@ exports[`Live radio page should match snapshot for Canonical 1`] = `
   margin: 0;
 }
 
-.c17 {
-  color: #fff;
-  fill: currentColor;
-}
-
-.c11 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.c33 {
+.c6 {
   height: 165px;
   position: relative;
   margin-bottom: 1rem;
 }
 
-.c12 {
-  position: absolute;
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  padding: 0.75rem 0.5rem;
-  background-color: #FFFFFF;
-  border: 0.1875rem solid #000;
-  color: #333;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 1rem;
-  line-height: 1.375rem;
-  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c12:focus {
-  -webkit-clip-path: none;
-  clip-path: none;
-  -webkit-clip: auto;
-  clip: auto;
-  height: auto;
-  width: auto;
-  top: 0;
-  left: 0;
-}
-
-.c7 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.c6 {
-  background-color: #B80000;
-  min-height: 2.5rem;
-  width: 100%;
-  padding: 0 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
-}
-
-.c35 {
-  background-color: #B80000;
-  min-height: 2.5rem;
-  width: 100%;
-  padding: 0 0.5rem;
-  border-top: 0.0625rem solid transparent;
-}
-
-.c9 {
-  display: inline-block;
-  width: 100%;
-  max-width: 13.955625000000001rem;
-  min-width: 9.30375rem;
-  -webkit-flex: 1 1 9.30375rem;
-  -ms-flex: 1 1 9.30375rem;
-  flex: 1 1 9.30375rem;
-  -ms-flex-preferred-size: 13.955625000000001rem;
-}
-
-.c10 {
-  box-sizing: content-box;
-  color: #FFFFFF;
-  fill: currentColor;
-  padding-top: 0.625rem;
-  padding-bottom: 0.375rem;
-  height: 1.5rem;
-  width: 100%;
-  max-width: 13.955625000000001rem;
-  min-width: 9.30375rem;
-  -webkit-flex: 1 1 9.30375rem;
-  -ms-flex: 1 1 9.30375rem;
-  flex: 1 1 9.30375rem;
-  -ms-flex-preferred-size: 13.955625000000001rem;
-}
-
-.c8:hover .c10,
-.c8:focus .c10 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border-bottom: 0.25rem solid #FFFFFF;
-  margin-bottom: -0.25rem;
-}
-
-.c23 {
-  background-color: #222222;
-  clear: both;
-  overflow: hidden;
-  height: 0;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
-  transition-timing-function: cubic-bezier(0,0,0.58,1);
-  visibility: hidden;
-}
-
-.c24 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0 0.5rem;
-  border-bottom: 0.125rem solid #3F3F42;
-}
-
-.c25 {
-  padding: 0.75rem 0;
-  border-bottom: 0.0625rem solid #3F3F42;
-}
-
-.c25:last-child {
-  padding-bottom: 1rem;
-  border: 0;
-}
-
-.c26 {
-  font-size: 1rem;
-  line-height: 1.375rem;
-  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #FFFFFF;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c26:hover,
-.c26:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c16 {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  background-color: transparent;
-  border: 0;
-  float: left;
-  height: 2.875rem;
-  width: 2.875rem;
-}
-
-.c16:hover,
-.c16:focus {
-  cursor: pointer;
-  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
-}
-
-.c16:hover::after,
-.c16:focus::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  border: 0.25rem solid #FFFFFF;
-}
-
-.c16 svg {
-  vertical-align: middle;
-}
-
-.c14 {
-  position: relative;
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.c19 {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
-
-.c22 {
-  font-size: 1rem;
-  line-height: 1.375rem;
-  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #FDFDFD;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.75rem;
-}
-
-.c22:hover::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-}
-
-.c22:focus::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 0.25rem solid #FFFFFF;
-  top: 0;
-  border: 0.25rem solid #FFFFFF;
-}
-
-.c21 {
-  display: inline-block;
-  position: relative;
-  z-index: 2;
-}
-
-.c13 {
-  position: relative;
-  background-color: #B80000;
-  border-top: 0.0625rem solid #FFFFFF;
-}
-
-.c13 .c20::after {
-  left: 0;
-}
-
-.c15 {
-  position: relative;
-}
-
-.c0 {
-  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #323232;
-  padding: 1rem 0.5rem;
-}
-
 .c1 {
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.c1::after {
-  content: '\\0020';
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-.c2 {
-  font-size: 1rem;
-  line-height: 1.375rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  padding: 0;
-  margin: 0;
-}
-
-.c4 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #F6A21D;
-  font-weight: 600;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.c4 li + li {
-  padding-top: 0.5rem;
-}
-
-.c3 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #BEBEBE;
-}
-
-.c3 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c3 a:focus,
-.c3 a:hover {
-  color: #FFFFFF;
-}
-
-.c5 button {
-  font-size: 1rem;
-  line-height: 1.375rem;
-  color: #F6A21D;
-  font-weight: 700;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-.c5 button:focus,
-.c5 button:hover {
-  color: #FFFFFF;
-}
-
-.c5 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c5 a:focus,
-.c5 a:hover {
-  color: #FFFFFF;
-}
-
-.c41 {
-  padding: 0.5rem 0 0.5rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: block;
-}
-
-.c44 {
-  padding: 0.5rem 0 0.5rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: inline;
-}
-
-.c40:hover .c42,
-.c40:focus .c42 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.c38 {
-  border-bottom: 0.0625rem solid #3F3F42;
-  list-style-type: none;
-  margin: 0;
-  padding: 0 0 0.5rem;
-  -webkit-column-count: 4;
-  column-count: 4;
-}
-
-.c38 > li:first-child {
-  border-bottom: 0.0625rem solid #3F3F42;
-  padding: 0.5rem 0;
-  margin-bottom: 0.5rem;
-  grid-column: 1/-1;
-  width: 100%;
-  -webkit-column-span: all;
-  column-span: all;
-}
-
-.c39 {
-  min-width: 50%;
-  -webkit-column-gap: 1rem;
-  column-gap: 1rem;
-  -webkit-break-inside: avoid-column;
-  break-inside: avoid-column;
-}
-
-.c36 {
-  background-color: #222222;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c37 {
-  max-width: 80rem;
-  margin: 0 auto;
-  padding-top: 0.5rem);
-}
-
-.c43 {
-  color: #FFFFFF;
-  margin: 0;
-  padding: 1rem 0;
-}
-
-.c28 {
   width: 100%;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -2323,17 +517,17 @@ exports[`Live radio page should match snapshot for Canonical 1`] = `
   flex-grow: 1;
 }
 
-.c32 amp-iframe {
+.c5 amp-iframe {
   overflow: visible !important;
   width: calc(100% + 1rem);
 }
 
-.c32 iframe {
+.c5 iframe {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
 }
 
-.c34 {
+.c7 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -2344,48 +538,48 @@ exports[`Live radio page should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c30 {
+  .c3 {
     font-size: 2rem;
     line-height: 2.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c3 {
     font-size: 2.75rem;
     line-height: 3.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c30 {
+  .c3 {
     padding: 2.5rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c31 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c31 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.75rem;
   }
 }
 
 @supports (display:grid) {
-  .c27 {
+  .c0 {
     display: grid;
     position: initial;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c29 {
+  .c2 {
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -2396,7 +590,7 @@ exports[`Live radio page should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c29 {
+  .c2 {
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -2407,7 +601,7 @@ exports[`Live radio page should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c29 {
+  .c2 {
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -2418,7 +612,7 @@ exports[`Live radio page should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c29 {
+  .c2 {
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
@@ -2429,7 +623,7 @@ exports[`Live radio page should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c29 {
+  .c2 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     margin-left: 12.5%;
@@ -2439,7 +633,7 @@ exports[`Live radio page should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c29 {
+  .c2 {
     width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
     margin-left: 20%;
@@ -2449,394 +643,39 @@ exports[`Live radio page should match snapshot for Canonical 1`] = `
 }
 
 @supports (display:grid) {
-  .c29 {
+  .c2 {
     display: block;
   }
 }
 
 @media (min-width:63rem) {
-  .c33 {
+  .c6 {
     margin-bottom: 2rem;
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c12:focus {
-    top: 0.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c12 {
-    padding: 0.5rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c7 {
-    display: block;
-  }
-}
-
-@media (min-width:25rem) {
-  .c6 {
-    min-height: 3.25rem;
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c35 {
-    min-height: 3.25rem;
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c9 {
-    display: block;
-  }
-}
-
-@media (min-width:25rem) {
-  .c10 {
-    padding-top: 1rem;
-    padding-bottom: 0.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    padding-top: 1.25rem;
-    padding-bottom: 1rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),print {
-  .c10 {
-    fill: windowText;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c23 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (prefers-reduced-motion:reduce) {
-  .c23 {
-    -webkit-transition: none;
-    transition: none;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c26 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c26 {
-    font-size: 1rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c16 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:20rem) {
-  .c16 {
-    height: 3rem;
-    width: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c19 {
-    overflow: hidden;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c22 {
-    font-size: 1rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c22 {
-    padding: 0.75rem 0.5rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c21:last-child {
-    margin-right: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c21::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 80rem;
-    border-bottom: 0.0625rem solid #eab3b3;
-    z-index: -1;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c18 {
-    white-space: nowrap;
-    overflow-x: scroll;
-    -webkit-scroll-behavior: auto;
-    -moz-scroll-behavior: auto;
-    -ms-scroll-behavior: auto;
-    scroll-behavior: auto;
-    -webkit-overflow-scrolling: touch;
-    -webkit-scrollbar-width: none;
-    -moz-scrollbar-width: none;
-    -ms-scrollbar-width: none;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .c18::-webkit-scrollbar {
-    display: none;
-  }
-
-  .c18:after {
-    content: ' ';
-    height: 100%;
-    width: 3rem;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 3;
-    overflow: hidden;
-    pointer-events: none;
-    background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
-  }
-}
-
-@media (min-width:25rem) {
-  .c0 {
-    padding: 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c2 {
-    font-size: 1.125rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c2 {
-    float: left;
-    margin-right: 3.5%;
-    width: 22%;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
-    font-size: 0.9375rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 0.9375rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    width: 18%;
-    float: right;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c3 {
-    font-size: 0.9375rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    font-size: 0.9375rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c3 {
-    margin: 0;
-    float: left;
-    width: 53%;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c5 button {
-    font-size: 1.125rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c5 button {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .c38 {
-    display: grid;
-    grid-auto-flow: column;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c38 {
-    grid-auto-flow: row;
-    -webkit-column-count: 1;
-    column-count: 1;
-  }
-}
-
-@media (min-width:15rem) and (max-width:37.4375rem) {
-  .c38 {
-    grid-column-gap: 0.5rem;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat( 4,auto );
-    -webkit-column-count: 2;
-    column-count: 2;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c38 {
-    grid-column-gap: 1rem;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat( 3,auto );
-    -webkit-column-count: 3;
-    column-count: 3;
-  }
-}
-
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c38 {
-    grid-column-gap: 1rem;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat( 3,auto );
-    -webkit-column-count: 4;
-    column-count: 4;
-  }
-}
-
-@media (min-width:80rem) {
-  .c38 {
-    grid-column-gap: 1rem;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat( 3,auto );
-    -webkit-column-count: 5;
-    column-count: 5;
-  }
-}
-
-@media (max-width:25rem) {
-  .c36 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c36 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c36 {
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c36 {
-    font-size: 0.8125rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c28 {
+  .c1 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c28 {
+  .c1 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c32 amp-iframe {
+  .c5 amp-iframe {
     width: calc(100% + 2rem);
   }
 }
 
 @media (min-width:25rem) {
-  .c32 iframe {
+  .c5 iframe {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
   }
@@ -2850,10 +689,6 @@ exports[`Live radio page should match snapshot for Canonical 1`] = `
     <title>
       ያድምጡ - BBC News አማርኛ
     </title>
-    <link
-      href="/amharic/manifest.json"
-      rel="manifest"
-    />
     <link
       href="https://www.test.bbc.com/pathname"
       rel="canonical"
@@ -3056,303 +891,41 @@ exports[`Live radio page should match snapshot for Canonical 1`] = `
   </head>
   <body>
     <div>
-      <header
-        role="banner"
-      >
-        <div
-          class="c0"
-          dir="ltr"
-        >
-          <div
-            class="c1"
-            dir="ltr"
-          >
-            <h2
-              class="c2"
-              dir="ltr"
-            >
-              በፕራይቬሲና ኩኪዎችን በመጠቀም ፖሊሲዎቻችን ላይ ማሻሻያ አድርገናል።
-            </h2>
-            <p
-              class="c3"
-              dir="ltr"
-            >
-              በፕራይቬሲና ኩኪዎችን በመጠቀም ፖሊሲዎቻችን ላይ ጠቃሚ ለውጦችን አድርገናል። ለርስዎም ሆን በመረጃዎች ላይ ለውጦቹ ምን ማለት እንደሆኑ እንዲያውቁ እንፈልጋለን።
-            </p>
-            <ul
-              class="c4"
-              dir="ltr"
-            >
-              <li
-                class="c5"
-                dir="ltr"
-              >
-                <button
-                  type="button"
-                >
-                  እሺ
-                </button>
-              </li>
-              <li
-                class="c5"
-                dir="ltr"
-              >
-                <a
-                  href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
-                >
-                  ምን እንደተቀየረ ይመልከቱ
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div
-          class="c6"
-        >
-          <div
-            class="c7"
-          >
-            <a
-              class="c8 c9"
-              href="/amharic"
-            >
-              <svg
-                aria-hidden="true"
-                class="c10"
-                focusable="false"
-                height="24"
-                viewBox="0 0 223.29 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g
-                  fill-rule="evenodd"
-                  stroke="#000"
-                  stroke-width=".335"
-                  style="stroke: #fff;"
-                >
-                  <path
-                    d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
-                  />
-                  <path
-                    d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
-                  />
-                  <path
-                    d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM190.23 17.89a8.48 8.48 0 0 0-.79-3.1 5 5 0 0 0-2-2.07l-.11-.06-2.12 5.23h-1.45L187 10h-.16a4.2 4.2 0 0 1-1.74-.36 1.92 1.92 0 0 1-.88-.94 4.27 4.27 0 0 1-.32-1.7V6h1.32v1a3.29 3.29 0 0 0 .18 1.21 1.25 1.25 0 0 0 .57.66 2.89 2.89 0 0 0 1.28.2h1.55l-1 2.56h.1a5.16 5.16 0 0 1 2.59 2.28 10.27 10.27 0 0 1 1.09 4zM199.94 17.89l2.53-6.13h-1.07a2.5 2.5 0 0 1-1.75-.57 2.14 2.14 0 0 1-.65-1.64v-.56l.17-2.08h-1.87v5a6.07 6.07 0 0 1-1.44.93 4.22 4.22 0 0 1-1.76.35 2.74 2.74 0 0 1-2.14-.82 3.5 3.5 0 0 1-.74-2.41 4.16 4.16 0 0 1 .49-2 3.4 3.4 0 0 1 1.41-1.37 4.47 4.47 0 0 1 2.12-.59h6.53c2 0 3 .74 3 2.27a4.58 4.58 0 0 1-.18 1.13 17.59 17.59 0 0 1-.71 2l-2.65 6.5zm-4.65-11a2.69 2.69 0 0 0-2.07.78 3.21 3.21 0 0 0-.72 2.33 2.74 2.74 0 0 0 .44 1.66 1.46 1.46 0 0 0 1.23.6 3.42 3.42 0 0 0 1-.12 2.28 2.28 0 0 0 .79-.42v-4.8zm5.07 1.88v.6a1.35 1.35 0 0 0 .44 1.14 2.53 2.53 0 0 0 1.51.33h.56v-.07c.25-.66.41-1.1.48-1.36a5.81 5.81 0 0 0 .16-.67 3.07 3.07 0 0 0 0-.47 1.3 1.3 0 0 0-.4-1 1.79 1.79 0 0 0-1.11-.35h-1.44zM212.92 19.25a1.13 1.13 0 0 1-.78-.35 2 2 0 0 1-.54-.92v-.08h-1.17a7 7 0 0 1-2.52-.34 2.15 2.15 0 0 1-1.16-1.1 5.52 5.52 0 0 1-.37-2.26V13a14 14 0 0 1 .49-4.13 4 4 0 0 1 1.51-2.18 4.83 4.83 0 0 1 2.75-.7h1.68l.31 2.25h-.19a1.09 1.09 0 0 1-.76-.34 2.14 2.14 0 0 1-.57-.9v-.08h-.45a2.8 2.8 0 0 0-2.61 1.47 9.94 9.94 0 0 0-.81 4.64v1.34a4.17 4.17 0 0 0 .24 1.58 1.52 1.52 0 0 0 .79.81 4.55 4.55 0 0 0 1.74.24h1.12v-.08a2 2 0 0 1 .54-.93 1.12 1.12 0 0 1 .77-.35h.19l-.25 1.77.26 1.84zM218.52 17.89v-3.78h-2.79V13a5 5 0 0 1 .71-2.81 3.4 3.4 0 0 1 2-1.41h.08v-2h-1.92v.08a1.67 1.67 0 0 1-.52.81 1.2 1.2 0 0 1-.79.3h-.19l.25-1.53-.25-1.57h.19a1.2 1.2 0 0 1 .79.3 1.7 1.7 0 0 1 .53.82v.08h5.16v-.08a1.68 1.68 0 0 1 .53-.83 1.22 1.22 0 0 1 .78-.29h.19L223 6.39l.29 1.61h-.19a1.21 1.21 0 0 1-.79-.29 1.68 1.68 0 0 1-.53-.82v-.08h-1.92v1.77h1.49l.31 2.25h-.19a1.09 1.09 0 0 1-.76-.34 2.14 2.14 0 0 1-.55-.94v-.08h-.42a2.36 2.36 0 0 0-1.95.87 3.91 3.91 0 0 0-.69 2.47v.38h2.79v4.69z"
-                  />
-                  <path
-                    d="M168.37 0v22.59"
-                    stroke-width="2"
-                  />
-                </g>
-              </svg>
-              <span
-                class="c11"
-                role="text"
-              >
-                <span
-                  lang="en-GB"
-                >
-                  BBC News
-                </span>
-                , 
-                አማርኛ
-              </span>
-            </a>
-            <a
-              class="c12"
-              dir="ltr"
-              href="#content"
-            >
-              ወደ ዋናው ይዘት ይለፉ
-            </a>
-          </div>
-        </div>
-        <nav
-          class="c13"
-          dir="ltr"
-          role="navigation"
-        >
-          <div
-            class="c14"
-          >
-            <div
-              class="c15"
-            >
-              <button
-                aria-expanded="false"
-                class="c16"
-                dir="ltr"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="c17"
-                  focusable="false"
-                  height="2.75rem"
-                  viewBox="0 0 44 44"
-                  width="2.75rem"
-                >
-                  <path
-                    d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
-                  />
-                </svg>
-                <span
-                  class="c11"
-                >
-                  ክፍሎች
-                </span>
-              </button>
-              <div
-                class="c18"
-                dir="ltr"
-              >
-                <ul
-                  class="c19"
-                  role="list"
-                >
-                  <li
-                    class="c20 c21"
-                    dir="ltr"
-                    role="listitem"
-                  >
-                    <a
-                      class="c22"
-                      href="/amharic"
-                    >
-                      ዜና
-                    </a>
-                  </li>
-                  <li
-                    class="c20 c21"
-                    dir="ltr"
-                    role="listitem"
-                  >
-                    <a
-                      class="c22"
-                      href="/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"
-                    >
-                      ኢትዮጵያ
-                    </a>
-                  </li>
-                  <li
-                    class="c20 c21"
-                    dir="ltr"
-                    role="listitem"
-                  >
-                    <a
-                      class="c22"
-                      href="/amharic/media/video"
-                    >
-                      ቪዲዮ
-                    </a>
-                  </li>
-                  <li
-                    class="c20 c21"
-                    dir="ltr"
-                    role="listitem"
-                  >
-                    <a
-                      class="c22"
-                      href="/amharic/popular/read"
-                    >
-                      በጣም የተወደዱ
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div
-              class="c23"
-              height="0"
-            >
-              <ul
-                class="c24"
-                role="list"
-              >
-                <li
-                  class="c25"
-                  role="listitem"
-                >
-                  <a
-                    class="c26"
-                    href="/amharic"
-                  >
-                    ዜና
-                  </a>
-                </li>
-                <li
-                  class="c25"
-                  role="listitem"
-                >
-                  <a
-                    class="c26"
-                    href="/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"
-                  >
-                    ኢትዮጵያ
-                  </a>
-                </li>
-                <li
-                  class="c25"
-                  role="listitem"
-                >
-                  <a
-                    class="c26"
-                    href="/amharic/media/video"
-                  >
-                    ቪዲዮ
-                  </a>
-                </li>
-                <li
-                  class="c25"
-                  role="listitem"
-                >
-                  <a
-                    class="c26"
-                    href="/amharic/popular/read"
-                  >
-                    በጣም የተወደዱ
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
       <noscript />
       <div>
         chartbeat
       </div>
       <main
-        class="c27 c28"
+        class="c0 c1"
         dir="ltr"
         role="main"
       >
         <div
-          class="c29"
+          class="c2"
           dir="ltr"
         >
           <h1
-            class="c30"
+            class="c3"
             id="content"
             tabindex="-1"
           >
             ያድምጡ
           </h1>
           <p
-            class="c31"
+            class="c4"
           >
             ዝግጅቶቻችንን’
           </p>
           <div
-            class="c32"
+            class="c5"
           >
             <div
-              class="c33"
+              class="c6"
             >
               <iframe
                 allow="autoplay; fullscreen"
                 allowfullscreen=""
-                class="c34"
+                class="c7"
                 scrolling="no"
                 src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am?morph_env=live"
                 title="Audio player"
@@ -3362,205 +935,6 @@ exports[`Live radio page should match snapshot for Canonical 1`] = `
           </div>
         </div>
       </main>
-      <footer
-        role="contentinfo"
-      >
-        <div
-          class="c35"
-        >
-          <div
-            class="c7"
-          >
-            <a
-              class="c8 c9"
-              href="/amharic"
-            >
-              <svg
-                aria-hidden="true"
-                class="c10"
-                focusable="false"
-                height="24"
-                viewBox="0 0 223.29 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g
-                  fill-rule="evenodd"
-                  stroke="#000"
-                  stroke-width=".335"
-                  style="stroke: #fff;"
-                >
-                  <path
-                    d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
-                  />
-                  <path
-                    d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
-                  />
-                  <path
-                    d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM190.23 17.89a8.48 8.48 0 0 0-.79-3.1 5 5 0 0 0-2-2.07l-.11-.06-2.12 5.23h-1.45L187 10h-.16a4.2 4.2 0 0 1-1.74-.36 1.92 1.92 0 0 1-.88-.94 4.27 4.27 0 0 1-.32-1.7V6h1.32v1a3.29 3.29 0 0 0 .18 1.21 1.25 1.25 0 0 0 .57.66 2.89 2.89 0 0 0 1.28.2h1.55l-1 2.56h.1a5.16 5.16 0 0 1 2.59 2.28 10.27 10.27 0 0 1 1.09 4zM199.94 17.89l2.53-6.13h-1.07a2.5 2.5 0 0 1-1.75-.57 2.14 2.14 0 0 1-.65-1.64v-.56l.17-2.08h-1.87v5a6.07 6.07 0 0 1-1.44.93 4.22 4.22 0 0 1-1.76.35 2.74 2.74 0 0 1-2.14-.82 3.5 3.5 0 0 1-.74-2.41 4.16 4.16 0 0 1 .49-2 3.4 3.4 0 0 1 1.41-1.37 4.47 4.47 0 0 1 2.12-.59h6.53c2 0 3 .74 3 2.27a4.58 4.58 0 0 1-.18 1.13 17.59 17.59 0 0 1-.71 2l-2.65 6.5zm-4.65-11a2.69 2.69 0 0 0-2.07.78 3.21 3.21 0 0 0-.72 2.33 2.74 2.74 0 0 0 .44 1.66 1.46 1.46 0 0 0 1.23.6 3.42 3.42 0 0 0 1-.12 2.28 2.28 0 0 0 .79-.42v-4.8zm5.07 1.88v.6a1.35 1.35 0 0 0 .44 1.14 2.53 2.53 0 0 0 1.51.33h.56v-.07c.25-.66.41-1.1.48-1.36a5.81 5.81 0 0 0 .16-.67 3.07 3.07 0 0 0 0-.47 1.3 1.3 0 0 0-.4-1 1.79 1.79 0 0 0-1.11-.35h-1.44zM212.92 19.25a1.13 1.13 0 0 1-.78-.35 2 2 0 0 1-.54-.92v-.08h-1.17a7 7 0 0 1-2.52-.34 2.15 2.15 0 0 1-1.16-1.1 5.52 5.52 0 0 1-.37-2.26V13a14 14 0 0 1 .49-4.13 4 4 0 0 1 1.51-2.18 4.83 4.83 0 0 1 2.75-.7h1.68l.31 2.25h-.19a1.09 1.09 0 0 1-.76-.34 2.14 2.14 0 0 1-.57-.9v-.08h-.45a2.8 2.8 0 0 0-2.61 1.47 9.94 9.94 0 0 0-.81 4.64v1.34a4.17 4.17 0 0 0 .24 1.58 1.52 1.52 0 0 0 .79.81 4.55 4.55 0 0 0 1.74.24h1.12v-.08a2 2 0 0 1 .54-.93 1.12 1.12 0 0 1 .77-.35h.19l-.25 1.77.26 1.84zM218.52 17.89v-3.78h-2.79V13a5 5 0 0 1 .71-2.81 3.4 3.4 0 0 1 2-1.41h.08v-2h-1.92v.08a1.67 1.67 0 0 1-.52.81 1.2 1.2 0 0 1-.79.3h-.19l.25-1.53-.25-1.57h.19a1.2 1.2 0 0 1 .79.3 1.7 1.7 0 0 1 .53.82v.08h5.16v-.08a1.68 1.68 0 0 1 .53-.83 1.22 1.22 0 0 1 .78-.29h.19L223 6.39l.29 1.61h-.19a1.21 1.21 0 0 1-.79-.29 1.68 1.68 0 0 1-.53-.82v-.08h-1.92v1.77h1.49l.31 2.25h-.19a1.09 1.09 0 0 1-.76-.34 2.14 2.14 0 0 1-.55-.94v-.08h-.42a2.36 2.36 0 0 0-1.95.87 3.91 3.91 0 0 0-.69 2.47v.38h2.79v4.69z"
-                  />
-                  <path
-                    d="M168.37 0v22.59"
-                    stroke-width="2"
-                  />
-                </g>
-              </svg>
-              <span
-                class="c11"
-                role="text"
-              >
-                <span
-                  lang="en-GB"
-                >
-                  BBC News
-                </span>
-                , 
-                አማርኛ
-              </span>
-            </a>
-          </div>
-        </div>
-        <div
-          class="c36"
-        >
-          <div
-            class="c37"
-          >
-            <ul
-              class="c38"
-              role="list"
-            >
-              <li
-                class="c39"
-                role="listitem"
-              >
-                <a
-                  class="c40 c41"
-                  href="https://www.bbc.com/amharic/institutional-49283133"
-                >
-                  <span
-                    class="c42"
-                  >
-                    ቢቢሲን ለምን ማመን እንደሚገባዎ
-                  </span>
-                </a>
-              </li>
-              <li
-                class="c39"
-                role="listitem"
-              >
-                <a
-                  class="c40 c41"
-                  href="https://www.bbc.com/usingthebbc/terms/"
-                >
-                  <span
-                    class="c42"
-                  >
-                    የአጠቃቀም ደንብ
-                  </span>
-                </a>
-              </li>
-              <li
-                class="c39"
-                role="listitem"
-              >
-                <a
-                  class="c40 c41"
-                  href="https://www.bbc.com/aboutthebbc"
-                >
-                  <span
-                    class="c42"
-                  >
-                    ስለ ቢቢሲ
-                  </span>
-                </a>
-              </li>
-              <li
-                class="c39"
-                role="listitem"
-              >
-                <a
-                  class="c40 c41"
-                  href="https://www.bbc.com/usingthebbc/privacy/"
-                >
-                  <span
-                    class="c42"
-                  >
-                    የፕራይቬሲ ፖሊሲ
-                  </span>
-                </a>
-              </li>
-              <li
-                class="c39"
-                role="listitem"
-              >
-                <a
-                  class="c40 c41"
-                  href="https://www.bbc.com/usingthebbc/cookies/"
-                >
-                  <span
-                    class="c42"
-                  >
-                    ኩኪዎች
-                  </span>
-                </a>
-              </li>
-              <li
-                class="c39"
-                role="listitem"
-              >
-                <a
-                  class="c40 c41"
-                  href="https://www.bbc.com/amharic/institutional-42228117"
-                >
-                  <span
-                    class="c42"
-                  >
-                    ቢቢሲን ያግኙ
-                  </span>
-                </a>
-              </li>
-              <li
-                class="c39"
-                role="listitem"
-              >
-                <a
-                  class="c40 c41"
-                  href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
-                  lang="en-GB"
-                >
-                  <span
-                    class="c42"
-                  >
-                    AdChoices / Do Not Sell My Info
-                  </span>
-                </a>
-              </li>
-            </ul>
-            <p
-              class="c43"
-            >
-              <span
-                lang="en-GB"
-              >
-                ©
-                 
-              </span>
-              2020 BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም.
-               
-              <a
-                class="c40 c44"
-                href="https://www.bbc.co.uk/help/web/links/"
-              >
-                <span
-                  class="c42"
-                >
-                  ስለ ውጪ ሊንኮች ያለን አቀራረብ
-                </span>
-              </a>
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   </body>
 </html>

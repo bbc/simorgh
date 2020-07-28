@@ -10,6 +10,10 @@ fetch.mockResponse(JSON.stringify(amharicPageData));
 
 analyticsUtils.getAtUserId = jest.fn();
 
+jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
+  return props => <Component {...props} />;
+});
+
 jest.mock('../../containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
