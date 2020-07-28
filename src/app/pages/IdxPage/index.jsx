@@ -19,6 +19,10 @@ import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
+jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
+  return props => <Component {...props} />;
+});
+
 const IdxMostReadSection = styled(MostReadSection)`
   /* To centre page layout for Group 4+ */
   margin: 0 auto;
