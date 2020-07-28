@@ -23,6 +23,7 @@ import {
   SERVER_SIDE_REQUEST_FAILED,
   ROUTING_INFORMATION,
 } from '#lib/logger.const';
+import { OK } from '#lib/statusCodes.const';
 import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import local from './local';
@@ -143,14 +144,20 @@ server
 
         const { status } = data;
         const bbcOrigin = headers['bbc-origin'];
-
-        // Set derivedPageType based on returned page data
-        if (status === 200) {
-          derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
-        }
-
         data.path = urlPath;
         data.timeOnServer = Date.now();
+
+        // Set derivedPageType based on returned page data
+        if (status === OK) {
+          derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
+        } else {
+          sendCustomMetric({
+            metricName: NON_200_RESPONSE,
+            statusCode: status,
+            pageType: derivedPageType,
+            requestUrl: url,
+          });
+        }
 
         const result = await renderDocument({
           bbcOrigin,
@@ -176,7 +183,7 @@ server
           throw new Error('unknown result');
         }
       } catch ({ message, status = 500 }) {
-        await sendCustomMetric({
+        sendCustomMetric({
           metricName: NON_200_RESPONSE,
           statusCode: status,
           pageType: derivedPageType,
