@@ -1,7 +1,7 @@
 /* eslint-disable cypress/no-unnecessary-waiting */
 import legacyURLs from './config';
 import getAppEnv from '../../../../cypress/support/helpers/getAppEnv';
-import getDataUrl from '../../support/utilities/getDataUrl';
+import getDataUrl from '../../../../cypress/support/helpers/getDataUrl';
 
 const environment = getAppEnv();
 
