@@ -1,10 +1,8 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
+import { BrowserRouter } from 'react-router-dom';
 import ArticlePage from '.';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   articleDataNews,
   articleDataPersian,
@@ -26,21 +24,19 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
 
 // eslint-disable-next-line react/prop-types
 const Context = ({ service, children }) => (
-  <ToggleContextProvider service={service} origin="https://www.test.bbc.co.uk">
-    <ServiceContextProvider service={service}>
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        id="c0000000000o"
-        isAmp={false}
-        pageType="article"
-        pathname="/pathname"
-        service={service}
-        statusCode={200}
-      >
-        {children}
-      </RequestContextProvider>
-    </ServiceContextProvider>
-  </ToggleContextProvider>
+  <BrowserRouter>
+    {React.Children.map(children, child =>
+      React.cloneElement(child, {
+        service,
+        bbcOrigin: 'https://www.test.bbc.co.uk',
+        id: 'c0000000000o',
+        isAmp: false,
+        pageType: 'article',
+        pathname: '/pathname',
+        status: 200,
+      }),
+    )}
+  </BrowserRouter>
 );
 
 beforeEach(() => {
