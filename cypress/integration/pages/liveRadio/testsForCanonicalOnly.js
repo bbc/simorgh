@@ -66,7 +66,6 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             ({ body: scheduleJson }) => {
               const { schedules } = scheduleJson;
 
-
               const isRadioScheduleDataComplete = isRadioScheduleComplete(
                 schedules,
               );
