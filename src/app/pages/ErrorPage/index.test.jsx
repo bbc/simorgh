@@ -1,10 +1,14 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import ERROR_PAGE from '.';
+import ErrorPage from '.';
+
+jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
+  return props => <Component {...props} />;
+});
 
 // eslint-disable-next-line react/prop-types
-const ErrorPage = ({ errorCode, service }) => (
-  <ERROR_PAGE
+const ErrorPageWithContext = ({ errorCode, service }) => (
+  <ErrorPage
     errorCode={errorCode}
     service={service}
     bbcOrigin="https://www.bbc.co.uk"
@@ -17,26 +21,26 @@ const ErrorPage = ({ errorCode, service }) => (
 describe('ErrorPage', () => {
   shouldMatchSnapshot(
     'should correctly render for 404',
-    <ErrorPage service="news" errorCode={404} />,
+    <ErrorPageWithContext service="news" errorCode={404} />,
   );
 
   shouldMatchSnapshot(
     'should correctly render for 500',
-    <ErrorPage service="news" errorCode={500} />,
+    <ErrorPageWithContext service="news" errorCode={500} />,
   );
 
   shouldMatchSnapshot(
     'should correctly render for other status code',
-    <ErrorPage service="news" errorCode={123} />,
+    <ErrorPageWithContext service="news" errorCode={123} />,
   );
 
   shouldMatchSnapshot(
     'should correctly render for 404 for persian',
-    <ErrorPage service="persian" errorCode={404} />,
+    <ErrorPageWithContext service="persian" errorCode={404} />,
   );
 
   shouldMatchSnapshot(
     'should correctly render for 500 for persian',
-    <ErrorPage service="news" errorCode={500} />,
+    <ErrorPageWithContext service="news" errorCode={500} />,
   );
 });
