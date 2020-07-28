@@ -1,7 +1,7 @@
 /* eslint-disable consistent-return */
 import envConfig from '../../../support/config/envs';
 import {
-  isExpired,
+  isAvailable,
   dataEndpointOverride,
 } from '../../../support/helpers/onDemandRadioTv';
 
@@ -12,10 +12,8 @@ export default ({ service, pageType }) => {
         cy.request(
           `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
         ).then(({ body: jsonData }) => {
-          const isExpiredEpisode = isExpired(jsonData);
-
-          if (isExpiredEpisode) {
-            return cy.log(`Episode is expired: ${Cypress.env('currentPath')}`);
+          if (!isAvailable(jsonData)) {
+            return cy.log(`Episode unavailable: ${Cypress.env('currentPath')}`);
           }
 
           cy.get(

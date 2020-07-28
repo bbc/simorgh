@@ -1,6 +1,6 @@
 /* eslint-disable consistent-return */
 import {
-  isExpired,
+  isAvailable,
   dataEndpointOverride,
   getEmbedUrl,
   isBrand,
@@ -28,14 +28,13 @@ export default ({ service, pageType, variant, isAmp }) => {
         cy.request(
           `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
         ).then(({ body: jsonData }) => {
+          if (!isAvailable(jsonData)) {
+            return cy.log(`Episode unavailable: ${Cypress.env('currentPath')}`);
+          }
+
           const language = appConfig[service][variant].lang;
           const embedUrl = getEmbedUrl({ body: jsonData, language, isAmp });
           const isBrandPage = isBrand(jsonData);
-          const isExpiredEpisode = isExpired(jsonData);
-
-          if (isExpiredEpisode) {
-            return cy.log(`Episode is expired: ${Cypress.env('currentPath')}`);
-          }
 
           cy.get('iframe').then(iframe => {
             // If a brand, get the src of the iframe, otherwise, use the embed URL from the data
