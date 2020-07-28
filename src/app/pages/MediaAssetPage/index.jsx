@@ -80,11 +80,18 @@ const MediaAssetPage = ({ pageData }) => {
       : props => <CpsAssetMediaPlayer {...props} assetUri={assetUri} />,
 
     legacyMedia: props => (
-      <CpsAssetMediaPlayer {...props} assetUri={assetUri} isLegacyMedia />
+      <CpsAssetMediaPlayer
+        {...props}
+        assetUri={assetUri}
+        isLegacyMedia
+        showLoadingImage
+      />
     ),
 
     // "Versions" are live streams
-    version: props => <CpsAssetMediaPlayer {...props} assetUri={assetUri} />,
+    version: props => (
+      <CpsAssetMediaPlayer {...props} assetUri={assetUri} showLoadingImage />
+    ),
     unavailableMedia: MediaMessage,
   };
 
