@@ -4,40 +4,34 @@ import assocPath from 'ramda/src/assocPath';
 import { render, act } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { StaticRouter } from 'react-router-dom';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { RequestContextProvider } from '#contexts/RequestContext';
 import OnDemandTvPage from '.';
 import pashtoPageData from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4';
 import * as analyticsUtils from '#lib/analyticsUtils';
-import { ToggleContext } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandTV/getInitialData';
 
-const Page = ({
-  pageData,
-  service,
-  isAmp = false,
-  darkModeEnabled = false,
-}) => (
+beforeEach(() => {
+  jest.mock('#lib/config/toggles', () => ({
+    local: {
+      enableFetchingToggles: { enabled: false },
+      chartbeatAnalytics: {
+        enabled: true,
+      },
+      cinemaModeTV: { enabled: false },
+    },
+  }));
+});
+
+const Page = ({ pageData, service, isAmp = false }) => (
   <StaticRouter>
-    <ToggleContext.Provider
-      value={{
-        toggleState: { cinemaModeTV: { enabled: darkModeEnabled } },
-        toggleDispatch: jest.fn(),
-      }}
-    >
-      <ServiceContextProvider service={service}>
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          isAmp={isAmp}
-          pageType="media"
-          pathname="/pathname"
-          service={service}
-          statusCode={200}
-        >
-          <OnDemandTvPage service={service} pageData={pageData} />
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContext.Provider>
+    <OnDemandTvPage
+      service={service}
+      pageData={pageData}
+      bbcOrigin="https://www.test.bbc.co.uk"
+      isAmp={isAmp}
+      pageType="media"
+      pathname="/pathname"
+      status={200}
+    />
   </StaticRouter>
 );
 
@@ -124,12 +118,20 @@ describe('OnDemand TV Brand Page ', () => {
 
   it('Dark Mode Design - should match snapshot', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
+    jest.mock('#lib/config/toggles', () => ({
+      local: {
+        enableFetchingToggles: { enabled: false },
+        chartbeatAnalytics: {
+          enabled: true,
+        },
+        cinemaModeTV: { enabled: true },
+      },
+    }));
 
     const { pageData } = await getInitialData('some-ondemand-tv-path');
     const { container } = await renderPage({
       pageData,
       service: 'pashto',
-      darkModeEnabled: true,
     });
 
     expect(container).toMatchSnapshot();
