@@ -66,6 +66,11 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
 jest.mock('#containers/ATIAnalytics/amp', () => {
   return () => <div>Amp ATI analytics</div>;
 });
+
+jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
+  return props => <Component {...props} />;
+});
+
 describe('Front Page', () => {
   describe('snapshots', () => {
     it('should render a pidgin frontpage correctly', async () => {
