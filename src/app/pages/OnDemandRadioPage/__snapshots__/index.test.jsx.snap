@@ -11,6 +11,10 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
       ماښامنۍ خپرونه - BBC News پښتو
     </title>
     <link
+      href="/pashto/manifest.json"
+      rel="manifest"
+    />
+    <link
       href="https://www.test.bbc.com/pathname"
       rel="canonical"
     />
@@ -202,6 +206,11 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
     />
     <script
       async="true"
+      custom-element="amp-bind"
+      src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    />
+    <script
+      async="true"
       custom-element="amp-iframe"
       src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
     />
@@ -212,7 +221,12 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
     </script>
   </head>
   <body>
-    .c8 {
+    .c17 {
+  color: #fff;
+  fill: currentColor;
+}
+
+.c12 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -224,13 +238,13 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   margin: 0;
 }
 
-.c14 {
+.c41 {
   height: 165px;
   position: relative;
   margin-bottom: 1rem;
 }
 
-.c6 {
+.c34 {
   font-size: 2rem;
   line-height: 2.625rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -242,14 +256,14 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   padding: 2rem 0;
 }
 
-.c7 {
+.c35 {
   display: inline-block;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
 }
 
-.c9 {
+.c36 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -258,7 +272,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   margin: 0;
 }
 
-.c10 {
+.c37 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -269,12 +283,422 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   margin: 0;
 }
 
-.c12 {
+.c39 {
   padding: 2rem 0 1.5rem;
   padding-left: 1rem;
 }
 
+.c13 {
+  position: absolute;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0.75rem 0.5rem;
+  background-color: #FFFFFF;
+  border: 0.1875rem solid #000;
+  color: #333;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c13:focus {
+  -webkit-clip-path: none;
+  clip-path: none;
+  -webkit-clip: auto;
+  clip: auto;
+  height: auto;
+  width: auto;
+  top: 0;
+  right: 0;
+}
+
+.c8 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c7 {
+  background-color: #B80000;
+  min-height: 2.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+.c42 {
+  background-color: #B80000;
+  min-height: 2.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  border-top: 0.0625rem solid transparent;
+}
+
+.c10 {
+  display: inline-block;
+  width: 100%;
+  max-width: 13.875rem;
+  min-width: 9.25rem;
+  -webkit-flex: 1 1 9.25rem;
+  -ms-flex: 1 1 9.25rem;
+  flex: 1 1 9.25rem;
+  -ms-flex-preferred-size: 13.875rem;
+}
+
+.c11 {
+  box-sizing: content-box;
+  color: #FFFFFF;
+  fill: currentColor;
+  padding-top: 0.625rem;
+  padding-bottom: 0.375rem;
+  height: 1.5rem;
+  width: 100%;
+  max-width: 13.875rem;
+  min-width: 9.25rem;
+  -webkit-flex: 1 1 9.25rem;
+  -ms-flex: 1 1 9.25rem;
+  flex: 1 1 9.25rem;
+  -ms-flex-preferred-size: 13.875rem;
+}
+
+.c9:hover .c11,
+.c9:focus .c11 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+.c18 {
+  background-color: #222222;
+  clear: both;
+}
+
+.c19 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.125rem solid #3F3F42;
+}
+
+.c20 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
+}
+
+.c20:last-child {
+  padding-bottom: 1rem;
+  border: 0;
+}
+
+.c21 {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c21:hover,
+.c21:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c16 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: right;
+  height: 3.125rem;
+  width: 3.125rem;
+}
+
+.c16:hover,
+.c16:focus {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.c16:hover::after,
+.c16:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c16 svg {
+  vertical-align: middle;
+}
+
+.c15 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c24 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.c27 {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+.c27:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c27:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c26 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.c52 .c25::after {
+  right: 0;
+}
+
+.c14 {
+  position: relative;
+  background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
+}
+
+.c14 .c25::after {
+  right: 0;
+}
+
 .c1 {
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  padding: 1rem 0.5rem;
+}
+
+.c2 {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c2::after {
+  content: '\\0020';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.c3 {
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+.c5 {
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.c5 li + li {
+  padding-top: 0.5rem;
+}
+
+.c4 {
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+  color: #BEBEBE;
+}
+
+.c4 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4 a:focus,
+.c4 a:hover {
+  color: #FFFFFF;
+}
+
+.c6 button {
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  color: #F6A21D;
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.c6 button:focus,
+.c6 button:hover {
+  color: #FFFFFF;
+}
+
+.c6 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6 a:focus,
+.c6 a:hover {
+  color: #FFFFFF;
+}
+
+.c0 amp-consent {
+  position: static;
+  display: block;
+}
+
+.c48 {
+  padding: 0.5rem 0 0.5rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: block;
+}
+
+.c51 {
+  padding: 0.5rem 0 0.5rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline;
+}
+
+.c47:hover .c49,
+.c47:focus .c49 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c45 {
+  border-bottom: 0.0625rem solid #3F3F42;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0.5rem;
+  -webkit-column-count: 4;
+  column-count: 4;
+}
+
+.c45 > li:first-child {
+  border-bottom: 0.0625rem solid #3F3F42;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+  grid-column: 1/-1;
+  width: 100%;
+  -webkit-column-span: all;
+  column-span: all;
+}
+
+.c46 {
+  min-width: 50%;
+  -webkit-column-gap: 1rem;
+  column-gap: 1rem;
+  -webkit-break-inside: avoid-column;
+  break-inside: avoid-column;
+}
+
+.c43 {
+  background-color: #222222;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c44 {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-top: 0.5rem);
+}
+
+.c50 {
+  color: #FFFFFF;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.c29 {
   width: 100%;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -282,31 +706,31 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   flex-grow: 1;
 }
 
-.c13 amp-iframe {
+.c40 amp-iframe {
   overflow: visible !important;
   width: calc(100% + 1rem);
 }
 
-.c13 iframe {
+.c40 iframe {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
 }
 
 @media (min-width:63rem) {
-  .c14 {
+  .c41 {
     margin-bottom: 2rem;
   }
 }
 
 @supports (display:grid) {
-  .c0 {
+  .c28 {
     display: grid;
     position: initial;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c2 {
+  .c30 {
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -317,7 +741,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
+  .c30 {
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -328,7 +752,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c30 {
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -339,7 +763,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
+  .c30 {
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
@@ -350,7 +774,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
+  .c30 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     margin-right: 12.5%;
@@ -360,7 +784,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c2 {
+  .c30 {
     width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
     margin-right: 20%;
@@ -370,20 +794,20 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @supports (display:grid) {
-  .c2 {
+  .c30 {
     display: block;
   }
 }
 
 @supports (display:grid) {
-  .c3 {
+  .c31 {
     display: grid;
     position: initial;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c5 {
+  .c33 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -392,7 +816,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c5 {
+  .c33 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -401,7 +825,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c33 {
     width: calc(4/6*(100% - 6 * 0.5rem) + 3 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -410,7 +834,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
+  .c33 {
     width: calc(4/6*(100% - 6 * 1rem) + 3 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -419,7 +843,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c5 {
+  .c33 {
     width: calc(4/6*(100% - 6 * 1rem) + 3 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -428,7 +852,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c5 {
+  .c33 {
     width: calc(4/6*(100% - 6 * 1rem) + 3 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -437,13 +861,13 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @supports (display:grid) {
-  .c5 {
+  .c33 {
     display: block;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c11 {
+  .c38 {
     width: calc(0/6*(100% - 6 * 0.5rem) + -1 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -452,7 +876,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c11 {
+  .c38 {
     width: calc(0/6*(100% - 6 * 0.5rem) + -1 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -461,7 +885,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c38 {
     width: calc(2/6*(100% - 6 * 0.5rem) + 1 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -470,7 +894,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c11 {
+  .c38 {
     width: calc(2/6*(100% - 6 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -479,7 +903,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c11 {
+  .c38 {
     width: calc(2/6*(100% - 6 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -488,7 +912,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c11 {
+  .c38 {
     width: calc(2/6*(100% - 6 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -497,39 +921,39 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @supports (display:grid) {
-  .c11 {
+  .c38 {
     display: block;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
+  .c34 {
     font-size: 2.375rem;
     line-height: 2.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c34 {
     font-size: 2.75rem;
     line-height: 3.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c34 {
     padding: 2.5rem 0;
   }
 }
 
 @media screen {
-  .c6 {
+  .c34 {
     padding: 2rem 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
+  .c35 {
     padding-bottom: 0;
     word-break: break-word;
     line-height: 3.5rem;
@@ -537,93 +961,962 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
+  .c36 {
     font-size: 1.625rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c36 {
     font-size: 1.75rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c37 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c37 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c10 {
+  .c37 {
     padding-bottom: 0.5rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c12 {
+  .c39 {
     display: none;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c13 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c13:focus {
+    top: 0.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c13 {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c8 {
+    display: block;
+  }
+}
+
+@media (min-width:25rem) {
+  .c7 {
+    min-height: 3.25rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c42 {
+    min-height: 3.25rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c10 {
+    display: block;
+  }
+}
+
+@media (min-width:25rem) {
+  .c11 {
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),print {
+  .c11 {
+    fill: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c18 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c21 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c21 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) {
+  .c16 {
+    height: 3.125rem;
+    width: 3.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c24 {
+    overflow: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c27 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c27 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c27 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c26:last-child {
+    margin-left: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c26::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #eab3b3;
+    z-index: -1;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c14.si-nav-open {
+    background-color: #222222;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c22 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    -webkit-scroll-behavior: auto;
+    -moz-scroll-behavior: auto;
+    -ms-scroll-behavior: auto;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-scrollbar-width: none;
+    -moz-scrollbar-width: none;
+    -ms-scrollbar-width: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .c22::-webkit-scrollbar {
+    display: none;
+  }
+
+  .c22:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient( to left,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c23.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:25rem) {
   .c1 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 1.625rem;
+    line-height: 2.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    float: right;
+    margin-left: 3.5%;
+    width: 22%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    width: 18%;
+    float: left;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    margin: 0;
+    float: right;
+    width: 53%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c6 button {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 button {
+    font-size: 1.625rem;
+    line-height: 2.125rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c45 {
+    display: grid;
+    grid-auto-flow: column;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c45 {
+    grid-auto-flow: row;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+}
+
+@media (min-width:15rem) and (max-width:37.4375rem) {
+  .c45 {
+    grid-column-gap: 0.5rem;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat( 4,auto );
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c45 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat( 3,auto );
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c45 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat( 3,auto );
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+
+@media (min-width:80rem) {
+  .c45 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat( 3,auto );
+    -webkit-column-count: 5;
+    column-count: 5;
+  }
+}
+
+@media (max-width:25rem) {
+  .c43 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c43 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c43 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c43 {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c29 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c29 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c4 {
+  .c32 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c4 {
+  .c32 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c4 {
+  .c32 {
     padding-top: 1.5rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c13 amp-iframe {
+  .c40 amp-iframe {
     width: calc(100% + 2rem);
   }
 }
 
 @media (min-width:25rem) {
-  .c13 iframe {
+  .c40 iframe {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
   }
 }
 
 <div>
+      <header
+        role="banner"
+      >
+        <div
+          class="c0"
+        >
+          <amp-geo
+            layout="nodisplay"
+          >
+            <script
+              type="application/json"
+            >
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent
+            id="consent"
+            layout="nodisplay"
+          >
+            <script
+              type="application/json"
+            >
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}},"policy":{"default":{"waitFor":{"user-consent":[]},"timeout":{"seconds":0,"fallbackAction":"reject"}}}}
+            </script>
+            <div
+              id="consent-prompt"
+            >
+              <div
+                class="c1"
+                dir="rtl"
+                id="privacy"
+              >
+                <div
+                  class="c2"
+                  dir="rtl"
+                >
+                  <h2
+                    class="c3"
+                    dir="rtl"
+                  >
+                    موږ د محرمیت او ډېټا په اړه خپله تګلاره تازه کړې
+                  </h2>
+                  <p
+                    class="c4"
+                    dir="rtl"
+                  >
+                    موږ د محرمیت او ډېټا په اړه خپله تګلاره تازه کړې او غواړو تاسې پوه شئ چې دا ستاسې لپاره څه معنی لري
+                  </p>
+                  <ul
+                    class="c5"
+                    dir="rtl"
+                  >
+                    <li
+                      class="c6"
+                      dir="rtl"
+                    >
+                      <button
+                        on="tap:cookie.show, privacy.hide"
+                        type="button"
+                      >
+                        اوکې
+                      </button>
+                    </li>
+                    <li
+                      class="c6"
+                      dir="rtl"
+                    >
+                      <a
+                        href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                        on="tap:cookie.show, privacy.hide"
+                      >
+                        دلته وګورئ چې څه بدل شوي
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="c1"
+                dir="rtl"
+                hidden=""
+                id="cookie"
+              >
+                <div
+                  class="c2"
+                  dir="rtl"
+                >
+                  <h2
+                    class="c3"
+                    dir="rtl"
+                  >
+                    راته ووایاست چې ایا غواړئ ډېټا در ولېږل شي
+                  </h2>
+                  <p
+                    class="c4"
+                    dir="rtl"
+                  >
+                    موږ ستاسې د اسانۍ لپاره 
+                    <a
+                      href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
+                    >
+                      کوکیز
+                    </a>
+                     کاروو. راته ووایاست چې ایا ډېټا در لېږلی شو
+                  </p>
+                  <ul
+                    class="c5"
+                    dir="rtl"
+                  >
+                    <li
+                      class="c6"
+                      dir="rtl"
+                    >
+                      <button
+                        data-cookie-banner="accept"
+                        on="tap:consent.accept"
+                        type="button"
+                      >
+                        هو، موافق یم
+                      </button>
+                    </li>
+                    <li
+                      class="c6"
+                      dir="rtl"
+                    >
+                      <a
+                        data-cookie-banner="reject"
+                        href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                        on="tap:consent.reject"
+                      >
+                        نه، غواړم سېټنګز ته ولاړ شم
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div
+          class="c7"
+        >
+          <div
+            class="c8"
+          >
+            <a
+              class="c9 c10"
+              href="/pashto"
+            >
+              <svg
+                aria-hidden="true"
+                class="c11"
+                focusable="false"
+                height="24"
+                viewBox="0 0 222 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  fill-rule="evenodd"
+                  stroke="#000"
+                  stroke-width=".335"
+                  style="stroke: #fff;"
+                >
+                  <path
+                    d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
+                  />
+                  <path
+                    d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
+                  />
+                  <path
+                    d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z"
+                  />
+                  <path
+                    d="M168.37 0v22.59"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M182.28 18a18.41 18.41 0 0 0 2.89-1 12.66 12.66 0 0 0 2-1.16 6.52 6.52 0 0 0 1.29-1.19 3.46 3.46 0 0 0 .63-1.13 6.88 6.88 0 0 1-2-.31 4.65 4.65 0 0 1-1.42-.73 2.85 2.85 0 0 1-.84-1 2.73 2.73 0 0 1-.27-1.19 3.78 3.78 0 0 1 .23-1.27 4.41 4.41 0 0 1 .62-1.17 3.54 3.54 0 0 1 .88-.85 1.74 1.74 0 0 1 1-.32 2 2 0 0 1 1.11.35 3.67 3.67 0 0 1 1 1 6.33 6.33 0 0 1 .76 1.5 7.26 7.26 0 0 1 .39 1.89h1.4a.76.76 0 0 1 .55.27 1.09 1.09 0 0 1 .26.78 1.14 1.14 0 0 1-.26.8.74.74 0 0 1-.55.28h-1.56a7.76 7.76 0 0 1-1.39 2.97 8.17 8.17 0 0 1-2.87 2.4l-3.45-.43zm3.24-7.82a1.88 1.88 0 0 0 1 .85 4.1 4.1 0 0 0 1.71.34h1.13a4.13 4.13 0 0 0-.8-1.93 1.75 1.75 0 0 0-1.39-.77 1.51 1.51 0 0 0-1 .43 2 2 0 0 0-.66 1.03z"
+                  />
+                  <path
+                    d="M195.9 7.38a5.54 5.54 0 0 0 1.5 3 4 4 0 0 0 2.77.93.76.76 0 0 1 .55.27 1.09 1.09 0 0 1 .26.78 1.14 1.14 0 0 1-.26.8.74.74 0 0 1-.55.28 5.36 5.36 0 0 1-2.77-.63 4.31 4.31 0 0 1-1.69-2 5 5 0 0 1-1.52 1.93 3.68 3.68 0 0 1-2.25.69.64.64 0 0 1-.51-.27 1.28 1.28 0 0 1-.22-.81 1.29 1.29 0 0 1 .2-.78.63.63 0 0 1 .53-.27 4.34 4.34 0 0 0 1.86-.39 3.54 3.54 0 0 0 1.46-1.36l-.16-1.19zm1-2.13a4.34 4.34 0 0 1-.82-.49 5.22 5.22 0 0 1-.77-.67l-.92 1.35a5.79 5.79 0 0 1-1-.55 3.36 3.36 0 0 1-.85-.82l1.24-1.65a6.08 6.08 0 0 0 .67.73 4.24 4.24 0 0 0 .78.59l1.05-1.51a5.23 5.23 0 0 0 .89.8 6.82 6.82 0 0 0 .92.58z"
+                  />
+                  <path
+                    d="M213.14 8.83a2.89 2.89 0 0 0 .92 1.87 2.73 2.73 0 0 0 1.81.61.76.76 0 0 1 .55.27 1.09 1.09 0 0 1 .26.78 1.14 1.14 0 0 1-.26.8.74.74 0 0 1-.55.28 3.59 3.59 0 0 1-2.23-.66 3.06 3.06 0 0 1-1.15-1.78 3.82 3.82 0 0 1-1.07 1.73 2.09 2.09 0 0 1-1.34.51 1.63 1.63 0 0 1-1.28-.53 2.55 2.55 0 0 1-.58-1.44A5 5 0 0 1 207 13a2.16 2.16 0 0 1-1.39.49 2.1 2.1 0 0 1-1.51-.59 3.21 3.21 0 0 1-.86-1.65 4.2 4.2 0 0 1-1.42 1.74 3.12 3.12 0 0 1-1.69.5.65.65 0 0 1-.5-.28 1.24 1.24 0 0 1-.23-.8 1.27 1.27 0 0 1 .22-.74.62.62 0 0 1 .51-.31 3.6 3.6 0 0 0 2-.55 4.76 4.76 0 0 0 1.52-1.85l.78-.19-.27.81a2.77 2.77 0 0 0 .73 1.28 1.68 1.68 0 0 0 1.21.5 1.75 1.75 0 0 0 1.25-.54 6.16 6.16 0 0 0 1.15-2.16l.84-.38-.16.94a2.83 2.83 0 0 0 .39 1.36 1 1 0 0 0 .85.53q1.4 0 2-3l.92-.38zM208.68 18a4.75 4.75 0 0 1-1-.59 4.05 4.05 0 0 1-.85-.86l1.32-1.62a4.27 4.27 0 0 0 .86.84 9.22 9.22 0 0 0 .92.62zm.13-11.55a4.69 4.69 0 0 1-1-.59A4 4 0 0 1 207 5l1.32-1.62a4.26 4.26 0 0 0 .86.84 9.16 9.16 0 0 0 .92.62z"
+                  />
+                  <path
+                    d="M219.26 18.33a4.32 4.32 0 0 1-.82-.49 5.24 5.24 0 0 1-.77-.67l-.92 1.35a5.82 5.82 0 0 1-1-.55 3.37 3.37 0 0 1-.85-.82l1.24-1.65a6.13 6.13 0 0 0 .67.73 4.26 4.26 0 0 0 .78.59l1.05-1.51a5.23 5.23 0 0 0 .89.8 6.9 6.9 0 0 0 .92.58zm.32-14a6.82 6.82 0 0 1 .92 2 8 8 0 0 1 .32 2.23 5.64 5.64 0 0 1-.26 1.59 5.79 5.79 0 0 1-.82 1.67 3.19 3.19 0 0 1-1.59 1.18 6.33 6.33 0 0 1-2.29.4.68.68 0 0 1-.51-.23 1.21 1.21 0 0 1-.22-.82 1.44 1.44 0 0 1 .19-.78.6.6 0 0 1 .54-.3 8.87 8.87 0 0 0 2.08-.22 5.85 5.85 0 0 0 1.62-.65 10.22 10.22 0 0 0-.54-2.2 6.18 6.18 0 0 0-.84-1.61zm-1.08 16.86a4.39 4.39 0 0 1-1-.54 3.86 3.86 0 0 1-.78-.73l1.13-1.56a3.44 3.44 0 0 0 .82.73 4.86 4.86 0 0 0 1 .51z"
+                  />
+                </g>
+              </svg>
+              <span
+                class="c12"
+                role="text"
+              >
+                <span
+                  lang="en-GB"
+                >
+                  BBC News
+                </span>
+                , 
+                پښتو
+              </span>
+            </a>
+            <a
+              class="c13"
+              dir="rtl"
+              href="#content"
+            >
+              مطلب ته ورشئ
+            </a>
+          </div>
+        </div>
+        <nav
+          class="c14"
+          dir="rtl"
+          id="si-nav"
+          role="navigation"
+        >
+          <div
+            class="c15"
+          >
+            <amp-state
+              id="menuState"
+            >
+              <script
+                type="application/json"
+              >
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button
+              aria-expanded="false"
+              class="c16"
+              data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
+              dir="rtl"
+              on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="c17"
+                data-amp-bind-hidden="menuState.expanded"
+                focusable="false"
+                height="2.75rem"
+                viewBox="0 0 44 44"
+                width="2.75rem"
+              >
+                <path
+                  d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+                />
+              </svg>
+              <svg
+                aria-hidden="true"
+                class="c17"
+                data-amp-bind-hidden="!menuState.expanded"
+                focusable="false"
+                height="2.75rem"
+                hidden=""
+                viewBox="0 0 44 44"
+                width="2.75rem"
+              >
+                <path
+                  d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+              <span
+                class="c12"
+              >
+                برخې
+              </span>
+            </button>
+            <div
+              class="c18"
+              hidden=""
+              id="si-nav-dropdown-menu"
+            >
+              <ul
+                class="c19"
+                role="list"
+              >
+                <li
+                  class="c20"
+                  role="listitem"
+                >
+                  <a
+                    class="c21"
+                    href="/pashto"
+                  >
+                    کور پاڼه
+                  </a>
+                </li>
+                <li
+                  class="c20"
+                  role="listitem"
+                >
+                  <a
+                    class="c21"
+                    href="/pashto/afghanistan"
+                  >
+                    افغانستان
+                  </a>
+                </li>
+                <li
+                  class="c20"
+                  role="listitem"
+                >
+                  <a
+                    class="c21"
+                    href="/pashto/pakhtunkhwa"
+                  >
+                    پښتونخوا
+                  </a>
+                </li>
+                <li
+                  class="c20"
+                  role="listitem"
+                >
+                  <a
+                    class="c21"
+                    href="/pashto/world"
+                  >
+                    نړۍ
+                  </a>
+                </li>
+                <li
+                  class="c20"
+                  role="listitem"
+                >
+                  <a
+                    class="c21"
+                    href="/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"
+                  >
+                    ښځې
+                  </a>
+                </li>
+                <li
+                  class="c20"
+                  role="listitem"
+                >
+                  <a
+                    class="c21"
+                    href="/pashto/sport"
+                  >
+                    لوبې
+                  </a>
+                </li>
+                <li
+                  class="c20"
+                  role="listitem"
+                >
+                  <a
+                    class="c21"
+                    href="/pashto/media/video"
+                  >
+                    ويډيوګانې
+                  </a>
+                </li>
+                <li
+                  class="c20"
+                  role="listitem"
+                >
+                  <a
+                    class="c21"
+                    href="/pashto/in_depth"
+                  >
+                    ځانګړې پاڼې
+                  </a>
+                </li>
+                <li
+                  class="c20"
+                  role="listitem"
+                >
+                  <a
+                    class="c21"
+                    href="/pashto/columns"
+                  >
+                    کالم
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="c22 c23"
+              dir="rtl"
+              id="si-nav-scrollable"
+            >
+              <ul
+                class="c24"
+                role="list"
+              >
+                <li
+                  class="c25 c26"
+                  dir="rtl"
+                  role="listitem"
+                >
+                  <a
+                    class="c27"
+                    href="/pashto"
+                  >
+                    کور پاڼه
+                  </a>
+                </li>
+                <li
+                  class="c25 c26"
+                  dir="rtl"
+                  role="listitem"
+                >
+                  <a
+                    class="c27"
+                    href="/pashto/afghanistan"
+                  >
+                    افغانستان
+                  </a>
+                </li>
+                <li
+                  class="c25 c26"
+                  dir="rtl"
+                  role="listitem"
+                >
+                  <a
+                    class="c27"
+                    href="/pashto/pakhtunkhwa"
+                  >
+                    پښتونخوا
+                  </a>
+                </li>
+                <li
+                  class="c25 c26"
+                  dir="rtl"
+                  role="listitem"
+                >
+                  <a
+                    class="c27"
+                    href="/pashto/world"
+                  >
+                    نړۍ
+                  </a>
+                </li>
+                <li
+                  class="c25 c26"
+                  dir="rtl"
+                  role="listitem"
+                >
+                  <a
+                    class="c27"
+                    href="/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"
+                  >
+                    ښځې
+                  </a>
+                </li>
+                <li
+                  class="c25 c26"
+                  dir="rtl"
+                  role="listitem"
+                >
+                  <a
+                    class="c27"
+                    href="/pashto/sport"
+                  >
+                    لوبې
+                  </a>
+                </li>
+                <li
+                  class="c25 c26"
+                  dir="rtl"
+                  role="listitem"
+                >
+                  <a
+                    class="c27"
+                    href="/pashto/media/video"
+                  >
+                    ويډيوګانې
+                  </a>
+                </li>
+                <li
+                  class="c25 c26"
+                  dir="rtl"
+                  role="listitem"
+                >
+                  <a
+                    class="c27"
+                    href="/pashto/in_depth"
+                  >
+                    ځانګړې پاڼې
+                  </a>
+                </li>
+                <li
+                  class="c25 c26"
+                  dir="rtl"
+                  role="listitem"
+                >
+                  <a
+                    class="c27"
+                    href="/pashto/columns"
+                  >
+                    کالم
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
       <amp-analytics>
         <script
           type="application/json"
@@ -644,24 +1937,24 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
         </script>
       </amp-analytics>
       <main
-        class="c0 c1"
+        class="c28 c29"
         dir="rtl"
         role="main"
       >
         <div
-          class="c2"
+          class="c30"
           dir="rtl"
         >
           <div
-            class="c3 c4"
+            class="c31 c32"
             dir="ltr"
           >
             <div
-              class="c5"
+              class="c33"
               dir="rtl"
             >
               <h1
-                class="c6"
+                class="c34"
                 id="content"
                 tabindex="-1"
               >
@@ -669,34 +1962,34 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
                   role="text"
                 >
                   <span
-                    class="c7"
+                    class="c35"
                   >
                     ماښامنۍ خپرونه
                   </span>
                   <span
-                    class="c8"
+                    class="c12"
                   >
                     , 
                   </span>
                   <span
-                    class="c9"
+                    class="c36"
                   >
                     ۱ می ۲۰۲۰
                   </span>
                 </span>
               </h1>
               <p
-                class="c10"
+                class="c37"
               >
                 د بي بي سي ورلډ سروس څخه پروګرام کول
               </p>
             </div>
             <div
-              class="c11"
+              class="c38"
               dir="rtl"
             >
               <div
-                class="c12"
+                class="c39"
                 dir="rtl"
               >
                 <amp-img
@@ -712,10 +2005,10 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
             </div>
           </div>
           <div
-            class="c13"
+            class="c40"
           >
             <div
-              class="c14"
+              class="c41"
             >
               <amp-iframe
                 allowfullscreen="allowfullscreen"
@@ -741,19 +2034,235 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
           </div>
         </div>
       </main>
+      <footer
+        role="contentinfo"
+      >
+        <div
+          class="c42"
+        >
+          <div
+            class="c8"
+          >
+            <a
+              class="c9 c10"
+              href="/pashto"
+            >
+              <svg
+                aria-hidden="true"
+                class="c11"
+                focusable="false"
+                height="24"
+                viewBox="0 0 222 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  fill-rule="evenodd"
+                  stroke="#000"
+                  stroke-width=".335"
+                  style="stroke: #fff;"
+                >
+                  <path
+                    d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
+                  />
+                  <path
+                    d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
+                  />
+                  <path
+                    d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z"
+                  />
+                  <path
+                    d="M168.37 0v22.59"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M182.28 18a18.41 18.41 0 0 0 2.89-1 12.66 12.66 0 0 0 2-1.16 6.52 6.52 0 0 0 1.29-1.19 3.46 3.46 0 0 0 .63-1.13 6.88 6.88 0 0 1-2-.31 4.65 4.65 0 0 1-1.42-.73 2.85 2.85 0 0 1-.84-1 2.73 2.73 0 0 1-.27-1.19 3.78 3.78 0 0 1 .23-1.27 4.41 4.41 0 0 1 .62-1.17 3.54 3.54 0 0 1 .88-.85 1.74 1.74 0 0 1 1-.32 2 2 0 0 1 1.11.35 3.67 3.67 0 0 1 1 1 6.33 6.33 0 0 1 .76 1.5 7.26 7.26 0 0 1 .39 1.89h1.4a.76.76 0 0 1 .55.27 1.09 1.09 0 0 1 .26.78 1.14 1.14 0 0 1-.26.8.74.74 0 0 1-.55.28h-1.56a7.76 7.76 0 0 1-1.39 2.97 8.17 8.17 0 0 1-2.87 2.4l-3.45-.43zm3.24-7.82a1.88 1.88 0 0 0 1 .85 4.1 4.1 0 0 0 1.71.34h1.13a4.13 4.13 0 0 0-.8-1.93 1.75 1.75 0 0 0-1.39-.77 1.51 1.51 0 0 0-1 .43 2 2 0 0 0-.66 1.03z"
+                  />
+                  <path
+                    d="M195.9 7.38a5.54 5.54 0 0 0 1.5 3 4 4 0 0 0 2.77.93.76.76 0 0 1 .55.27 1.09 1.09 0 0 1 .26.78 1.14 1.14 0 0 1-.26.8.74.74 0 0 1-.55.28 5.36 5.36 0 0 1-2.77-.63 4.31 4.31 0 0 1-1.69-2 5 5 0 0 1-1.52 1.93 3.68 3.68 0 0 1-2.25.69.64.64 0 0 1-.51-.27 1.28 1.28 0 0 1-.22-.81 1.29 1.29 0 0 1 .2-.78.63.63 0 0 1 .53-.27 4.34 4.34 0 0 0 1.86-.39 3.54 3.54 0 0 0 1.46-1.36l-.16-1.19zm1-2.13a4.34 4.34 0 0 1-.82-.49 5.22 5.22 0 0 1-.77-.67l-.92 1.35a5.79 5.79 0 0 1-1-.55 3.36 3.36 0 0 1-.85-.82l1.24-1.65a6.08 6.08 0 0 0 .67.73 4.24 4.24 0 0 0 .78.59l1.05-1.51a5.23 5.23 0 0 0 .89.8 6.82 6.82 0 0 0 .92.58z"
+                  />
+                  <path
+                    d="M213.14 8.83a2.89 2.89 0 0 0 .92 1.87 2.73 2.73 0 0 0 1.81.61.76.76 0 0 1 .55.27 1.09 1.09 0 0 1 .26.78 1.14 1.14 0 0 1-.26.8.74.74 0 0 1-.55.28 3.59 3.59 0 0 1-2.23-.66 3.06 3.06 0 0 1-1.15-1.78 3.82 3.82 0 0 1-1.07 1.73 2.09 2.09 0 0 1-1.34.51 1.63 1.63 0 0 1-1.28-.53 2.55 2.55 0 0 1-.58-1.44A5 5 0 0 1 207 13a2.16 2.16 0 0 1-1.39.49 2.1 2.1 0 0 1-1.51-.59 3.21 3.21 0 0 1-.86-1.65 4.2 4.2 0 0 1-1.42 1.74 3.12 3.12 0 0 1-1.69.5.65.65 0 0 1-.5-.28 1.24 1.24 0 0 1-.23-.8 1.27 1.27 0 0 1 .22-.74.62.62 0 0 1 .51-.31 3.6 3.6 0 0 0 2-.55 4.76 4.76 0 0 0 1.52-1.85l.78-.19-.27.81a2.77 2.77 0 0 0 .73 1.28 1.68 1.68 0 0 0 1.21.5 1.75 1.75 0 0 0 1.25-.54 6.16 6.16 0 0 0 1.15-2.16l.84-.38-.16.94a2.83 2.83 0 0 0 .39 1.36 1 1 0 0 0 .85.53q1.4 0 2-3l.92-.38zM208.68 18a4.75 4.75 0 0 1-1-.59 4.05 4.05 0 0 1-.85-.86l1.32-1.62a4.27 4.27 0 0 0 .86.84 9.22 9.22 0 0 0 .92.62zm.13-11.55a4.69 4.69 0 0 1-1-.59A4 4 0 0 1 207 5l1.32-1.62a4.26 4.26 0 0 0 .86.84 9.16 9.16 0 0 0 .92.62z"
+                  />
+                  <path
+                    d="M219.26 18.33a4.32 4.32 0 0 1-.82-.49 5.24 5.24 0 0 1-.77-.67l-.92 1.35a5.82 5.82 0 0 1-1-.55 3.37 3.37 0 0 1-.85-.82l1.24-1.65a6.13 6.13 0 0 0 .67.73 4.26 4.26 0 0 0 .78.59l1.05-1.51a5.23 5.23 0 0 0 .89.8 6.9 6.9 0 0 0 .92.58zm.32-14a6.82 6.82 0 0 1 .92 2 8 8 0 0 1 .32 2.23 5.64 5.64 0 0 1-.26 1.59 5.79 5.79 0 0 1-.82 1.67 3.19 3.19 0 0 1-1.59 1.18 6.33 6.33 0 0 1-2.29.4.68.68 0 0 1-.51-.23 1.21 1.21 0 0 1-.22-.82 1.44 1.44 0 0 1 .19-.78.6.6 0 0 1 .54-.3 8.87 8.87 0 0 0 2.08-.22 5.85 5.85 0 0 0 1.62-.65 10.22 10.22 0 0 0-.54-2.2 6.18 6.18 0 0 0-.84-1.61zm-1.08 16.86a4.39 4.39 0 0 1-1-.54 3.86 3.86 0 0 1-.78-.73l1.13-1.56a3.44 3.44 0 0 0 .82.73 4.86 4.86 0 0 0 1 .51z"
+                  />
+                </g>
+              </svg>
+              <span
+                class="c12"
+                role="text"
+              >
+                <span
+                  lang="en-GB"
+                >
+                  BBC News
+                </span>
+                , 
+                پښتو
+              </span>
+            </a>
+          </div>
+        </div>
+        <div
+          class="c43"
+        >
+          <div
+            class="c44"
+          >
+            <ul
+              class="c45"
+              role="list"
+            >
+              <li
+                class="c46"
+                role="listitem"
+              >
+                <a
+                  class="c47 c48"
+                  href="https://www.bbc.com/pashto/institutional-49283007"
+                >
+                  <span
+                    class="c49"
+                  >
+                    ولې تاسې پر بي بي سي خبرونو باور کولی شئ
+                  </span>
+                </a>
+              </li>
+              <li
+                class="c46"
+                role="listitem"
+              >
+                <a
+                  class="c47 c48"
+                  href="https://www.bbc.com/pashto/institutional-37620701"
+                >
+                  <span
+                    class="c49"
+                  >
+                    د کارولو شرايط
+                  </span>
+                </a>
+              </li>
+              <li
+                class="c46"
+                role="listitem"
+              >
+                <a
+                  class="c47 c48"
+                  href="https://www.bbc.com/pashto/institutional-37622761"
+                >
+                  <span
+                    class="c49"
+                  >
+                    د بي بي سي‌ په اړه
+                  </span>
+                </a>
+              </li>
+              <li
+                class="c46"
+                role="listitem"
+              >
+                <a
+                  class="c47 c48"
+                  href="https://www.bbc.com/pashto/institutional-37622762"
+                >
+                  <span
+                    class="c49"
+                  >
+                    د محرميت تگلاره
+                  </span>
+                </a>
+              </li>
+              <li
+                class="c46"
+                role="listitem"
+              >
+                <a
+                  class="c47 c48"
+                  href="https://www.bbc.com/usingthebbc/cookies/"
+                >
+                  <span
+                    class="c49"
+                  >
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li
+                class="c46"
+                role="listitem"
+              >
+                <a
+                  class="c47 c48"
+                  href="https://www.bbc.co.uk/pashto/institutional-37622768"
+                >
+                  <span
+                    class="c49"
+                  >
+                    زموږ سره اړیکي
+                  </span>
+                </a>
+              </li>
+              <li
+                class="c46"
+                role="listitem"
+              >
+                <a
+                  class="c47 c48"
+                  href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                  lang="en-GB"
+                >
+                  <span
+                    class="c49"
+                  >
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p
+              class="c50"
+            >
+              <span
+                lang="en-GB"
+              >
+                ©
+                 
+              </span>
+              2020 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.
+               
+              <a
+                class="c47 c51"
+                href="https://www.bbc.co.uk/help/web/links/"
+              >
+                <span
+                  class="c49"
+                >
+                  د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
 `;
 
 exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
-.c13 {
+.c39 {
   display: block;
   width: 100%;
   visibility: visible;
 }
 
-.c8 {
+.c17 {
+  color: #fff;
+  fill: currentColor;
+}
+
+.c11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -765,13 +2274,13 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   margin: 0;
 }
 
-.c15 {
+.c41 {
   height: 165px;
   position: relative;
   margin-bottom: 1rem;
 }
 
-.c6 {
+.c33 {
   font-size: 2rem;
   line-height: 2.625rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -783,14 +2292,14 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   padding: 2rem 0;
 }
 
-.c7 {
+.c34 {
   display: inline-block;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
 }
 
-.c9 {
+.c35 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -799,7 +2308,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   margin: 0;
 }
 
-.c10 {
+.c36 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -810,12 +2319,424 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   margin: 0;
 }
 
-.c12 {
+.c38 {
   padding: 2rem 0 1.5rem;
   padding-left: 1rem;
 }
 
+.c12 {
+  position: absolute;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0.75rem 0.5rem;
+  background-color: #FFFFFF;
+  border: 0.1875rem solid #000;
+  color: #333;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c12:focus {
+  -webkit-clip-path: none;
+  clip-path: none;
+  -webkit-clip: auto;
+  clip: auto;
+  height: auto;
+  width: auto;
+  top: 0;
+  right: 0;
+}
+
+.c7 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c6 {
+  background-color: #B80000;
+  min-height: 2.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+.c43 {
+  background-color: #B80000;
+  min-height: 2.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  border-top: 0.0625rem solid transparent;
+}
+
+.c9 {
+  display: inline-block;
+  width: 100%;
+  max-width: 13.875rem;
+  min-width: 9.25rem;
+  -webkit-flex: 1 1 9.25rem;
+  -ms-flex: 1 1 9.25rem;
+  flex: 1 1 9.25rem;
+  -ms-flex-preferred-size: 13.875rem;
+}
+
+.c10 {
+  box-sizing: content-box;
+  color: #FFFFFF;
+  fill: currentColor;
+  padding-top: 0.625rem;
+  padding-bottom: 0.375rem;
+  height: 1.5rem;
+  width: 100%;
+  max-width: 13.875rem;
+  min-width: 9.25rem;
+  -webkit-flex: 1 1 9.25rem;
+  -ms-flex: 1 1 9.25rem;
+  flex: 1 1 9.25rem;
+  -ms-flex-preferred-size: 13.875rem;
+}
+
+.c8:hover .c10,
+.c8:focus .c10 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+.c23 {
+  background-color: #222222;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
+  visibility: hidden;
+}
+
+.c24 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.125rem solid #3F3F42;
+}
+
+.c25 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
+}
+
+.c25:last-child {
+  padding-bottom: 1rem;
+  border: 0;
+}
+
+.c26 {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c26:hover,
+.c26:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c16 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: right;
+  height: 3.125rem;
+  width: 3.125rem;
+}
+
+.c16:hover,
+.c16:focus {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.c16:hover::after,
+.c16:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c16 svg {
+  vertical-align: middle;
+}
+
+.c14 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c19 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.c22 {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+.c22:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c22:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c21 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.c13 {
+  position: relative;
+  background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
+}
+
+.c13 .c20::after {
+  right: 0;
+}
+
+.c15 {
+  position: relative;
+}
+
+.c0 {
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  padding: 1rem 0.5rem;
+}
+
 .c1 {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c1::after {
+  content: '\\0020';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.c2 {
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+.c4 {
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.c4 li + li {
+  padding-top: 0.5rem;
+}
+
+.c3 {
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+  color: #BEBEBE;
+}
+
+.c3 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3 a:focus,
+.c3 a:hover {
+  color: #FFFFFF;
+}
+
+.c5 button {
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  color: #F6A21D;
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.c5 button:focus,
+.c5 button:hover {
+  color: #FFFFFF;
+}
+
+.c5 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5 a:focus,
+.c5 a:hover {
+  color: #FFFFFF;
+}
+
+.c49 {
+  padding: 0.5rem 0 0.5rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: block;
+}
+
+.c52 {
+  padding: 0.5rem 0 0.5rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline;
+}
+
+.c48:hover .c50,
+.c48:focus .c50 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c46 {
+  border-bottom: 0.0625rem solid #3F3F42;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0.5rem;
+  -webkit-column-count: 4;
+  column-count: 4;
+}
+
+.c46 > li:first-child {
+  border-bottom: 0.0625rem solid #3F3F42;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+  grid-column: 1/-1;
+  width: 100%;
+  -webkit-column-span: all;
+  column-span: all;
+}
+
+.c47 {
+  min-width: 50%;
+  -webkit-column-gap: 1rem;
+  column-gap: 1rem;
+  -webkit-break-inside: avoid-column;
+  break-inside: avoid-column;
+}
+
+.c44 {
+  background-color: #222222;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c45 {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-top: 0.5rem);
+}
+
+.c51 {
+  color: #FFFFFF;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.c28 {
   width: 100%;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -823,17 +2744,17 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   flex-grow: 1;
 }
 
-.c14 amp-iframe {
+.c40 amp-iframe {
   overflow: visible !important;
   width: calc(100% + 1rem);
 }
 
-.c14 iframe {
+.c40 iframe {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
 }
 
-.c16 {
+.c42 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -844,20 +2765,20 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:63rem) {
-  .c15 {
+  .c41 {
     margin-bottom: 2rem;
   }
 }
 
 @supports (display:grid) {
-  .c0 {
+  .c27 {
     display: grid;
     position: initial;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c2 {
+  .c29 {
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -868,7 +2789,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
+  .c29 {
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -879,7 +2800,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c29 {
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -890,7 +2811,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
+  .c29 {
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
@@ -901,7 +2822,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
+  .c29 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     margin-right: 12.5%;
@@ -911,7 +2832,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c2 {
+  .c29 {
     width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
     margin-right: 20%;
@@ -921,20 +2842,20 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @supports (display:grid) {
-  .c2 {
+  .c29 {
     display: block;
   }
 }
 
 @supports (display:grid) {
-  .c3 {
+  .c30 {
     display: grid;
     position: initial;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c5 {
+  .c32 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -943,7 +2864,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c5 {
+  .c32 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -952,7 +2873,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c32 {
     width: calc(4/6*(100% - 6 * 0.5rem) + 3 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -961,7 +2882,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
+  .c32 {
     width: calc(4/6*(100% - 6 * 1rem) + 3 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -970,7 +2891,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c5 {
+  .c32 {
     width: calc(4/6*(100% - 6 * 1rem) + 3 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -979,7 +2900,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c5 {
+  .c32 {
     width: calc(4/6*(100% - 6 * 1rem) + 3 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -988,13 +2909,13 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @supports (display:grid) {
-  .c5 {
+  .c32 {
     display: block;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c11 {
+  .c37 {
     width: calc(0/6*(100% - 6 * 0.5rem) + -1 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1003,7 +2924,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c11 {
+  .c37 {
     width: calc(0/6*(100% - 6 * 0.5rem) + -1 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1012,7 +2933,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c37 {
     width: calc(2/6*(100% - 6 * 0.5rem) + 1 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1021,7 +2942,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c11 {
+  .c37 {
     width: calc(2/6*(100% - 6 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -1030,7 +2951,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c11 {
+  .c37 {
     width: calc(2/6*(100% - 6 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -1039,7 +2960,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c11 {
+  .c37 {
     width: calc(2/6*(100% - 6 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -1048,39 +2969,39 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @supports (display:grid) {
-  .c11 {
+  .c37 {
     display: block;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
+  .c33 {
     font-size: 2.375rem;
     line-height: 2.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c33 {
     font-size: 2.75rem;
     line-height: 3.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c33 {
     padding: 2.5rem 0;
   }
 }
 
 @media screen {
-  .c6 {
+  .c33 {
     padding: 2rem 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
+  .c34 {
     padding-bottom: 0;
     word-break: break-word;
     line-height: 3.5rem;
@@ -1088,87 +3009,442 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
+  .c35 {
     font-size: 1.625rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c35 {
     font-size: 1.75rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c36 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c36 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c10 {
+  .c36 {
     padding-bottom: 0.5rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c12 {
+  .c38 {
     display: none;
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c12:focus {
+    top: 0.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c12 {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c7 {
+    display: block;
+  }
+}
+
+@media (min-width:25rem) {
+  .c6 {
+    min-height: 3.25rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c43 {
+    min-height: 3.25rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c9 {
+    display: block;
+  }
+}
+
+@media (min-width:25rem) {
+  .c10 {
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),print {
+  .c10 {
+    fill: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c23 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c23 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c26 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c26 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) {
+  .c16 {
+    height: 3.125rem;
+    width: 3.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    overflow: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c22 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c22 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c22 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c21:last-child {
+    margin-left: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c21::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #eab3b3;
+    z-index: -1;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c18 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    -webkit-scroll-behavior: auto;
+    -moz-scroll-behavior: auto;
+    -ms-scroll-behavior: auto;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-scrollbar-width: none;
+    -moz-scrollbar-width: none;
+    -ms-scrollbar-width: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .c18::-webkit-scrollbar {
+    display: none;
+  }
+
+  .c18:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient( to left,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 1.625rem;
+    line-height: 2.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    float: right;
+    margin-left: 3.5%;
+    width: 22%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    width: 18%;
+    float: left;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    margin: 0;
+    float: right;
+    width: 53%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 button {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 button {
+    font-size: 1.625rem;
+    line-height: 2.125rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c46 {
+    display: grid;
+    grid-auto-flow: column;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c46 {
+    grid-auto-flow: row;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+}
+
+@media (min-width:15rem) and (max-width:37.4375rem) {
+  .c46 {
+    grid-column-gap: 0.5rem;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat( 4,auto );
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c46 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat( 3,auto );
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
+  .c46 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat( 3,auto );
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+
+@media (min-width:80rem) {
+  .c46 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat( 3,auto );
+    -webkit-column-count: 5;
+    column-count: 5;
+  }
+}
+
+@media (max-width:25rem) {
+  .c44 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c44 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c44 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c44 {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c28 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c28 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c4 {
+  .c31 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c4 {
+  .c31 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c4 {
+  .c31 {
     padding-top: 1.5rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c14 amp-iframe {
+  .c40 amp-iframe {
     width: calc(100% + 2rem);
   }
 }
 
 @media (min-width:25rem) {
-  .c14 iframe {
+  .c40 iframe {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
   }
@@ -1182,6 +3458,10 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
     <title>
       ماښامنۍ خپرونه - BBC News پښتو
     </title>
+    <link
+      href="/pashto/manifest.json"
+      rel="manifest"
+    />
     <link
       href="https://www.test.bbc.com/pathname"
       rel="canonical"
@@ -1384,29 +3664,418 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   </head>
   <body>
     <div>
+      <header
+        role="banner"
+      >
+        <div
+          class="c0"
+          dir="rtl"
+        >
+          <div
+            class="c1"
+            dir="rtl"
+          >
+            <h2
+              class="c2"
+              dir="rtl"
+            >
+              موږ د محرمیت او ډېټا په اړه خپله تګلاره تازه کړې
+            </h2>
+            <p
+              class="c3"
+              dir="rtl"
+            >
+              موږ د محرمیت او ډېټا په اړه خپله تګلاره تازه کړې او غواړو تاسې پوه شئ چې دا ستاسې لپاره څه معنی لري
+            </p>
+            <ul
+              class="c4"
+              dir="rtl"
+            >
+              <li
+                class="c5"
+                dir="rtl"
+              >
+                <button
+                  type="button"
+                >
+                  اوکې
+                </button>
+              </li>
+              <li
+                class="c5"
+                dir="rtl"
+              >
+                <a
+                  href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                >
+                  دلته وګورئ چې څه بدل شوي
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="c6"
+        >
+          <div
+            class="c7"
+          >
+            <a
+              class="c8 c9"
+              href="/pashto"
+            >
+              <svg
+                aria-hidden="true"
+                class="c10"
+                focusable="false"
+                height="24"
+                viewBox="0 0 222 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  fill-rule="evenodd"
+                  stroke="#000"
+                  stroke-width=".335"
+                  style="stroke: #fff;"
+                >
+                  <path
+                    d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
+                  />
+                  <path
+                    d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
+                  />
+                  <path
+                    d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z"
+                  />
+                  <path
+                    d="M168.37 0v22.59"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M182.28 18a18.41 18.41 0 0 0 2.89-1 12.66 12.66 0 0 0 2-1.16 6.52 6.52 0 0 0 1.29-1.19 3.46 3.46 0 0 0 .63-1.13 6.88 6.88 0 0 1-2-.31 4.65 4.65 0 0 1-1.42-.73 2.85 2.85 0 0 1-.84-1 2.73 2.73 0 0 1-.27-1.19 3.78 3.78 0 0 1 .23-1.27 4.41 4.41 0 0 1 .62-1.17 3.54 3.54 0 0 1 .88-.85 1.74 1.74 0 0 1 1-.32 2 2 0 0 1 1.11.35 3.67 3.67 0 0 1 1 1 6.33 6.33 0 0 1 .76 1.5 7.26 7.26 0 0 1 .39 1.89h1.4a.76.76 0 0 1 .55.27 1.09 1.09 0 0 1 .26.78 1.14 1.14 0 0 1-.26.8.74.74 0 0 1-.55.28h-1.56a7.76 7.76 0 0 1-1.39 2.97 8.17 8.17 0 0 1-2.87 2.4l-3.45-.43zm3.24-7.82a1.88 1.88 0 0 0 1 .85 4.1 4.1 0 0 0 1.71.34h1.13a4.13 4.13 0 0 0-.8-1.93 1.75 1.75 0 0 0-1.39-.77 1.51 1.51 0 0 0-1 .43 2 2 0 0 0-.66 1.03z"
+                  />
+                  <path
+                    d="M195.9 7.38a5.54 5.54 0 0 0 1.5 3 4 4 0 0 0 2.77.93.76.76 0 0 1 .55.27 1.09 1.09 0 0 1 .26.78 1.14 1.14 0 0 1-.26.8.74.74 0 0 1-.55.28 5.36 5.36 0 0 1-2.77-.63 4.31 4.31 0 0 1-1.69-2 5 5 0 0 1-1.52 1.93 3.68 3.68 0 0 1-2.25.69.64.64 0 0 1-.51-.27 1.28 1.28 0 0 1-.22-.81 1.29 1.29 0 0 1 .2-.78.63.63 0 0 1 .53-.27 4.34 4.34 0 0 0 1.86-.39 3.54 3.54 0 0 0 1.46-1.36l-.16-1.19zm1-2.13a4.34 4.34 0 0 1-.82-.49 5.22 5.22 0 0 1-.77-.67l-.92 1.35a5.79 5.79 0 0 1-1-.55 3.36 3.36 0 0 1-.85-.82l1.24-1.65a6.08 6.08 0 0 0 .67.73 4.24 4.24 0 0 0 .78.59l1.05-1.51a5.23 5.23 0 0 0 .89.8 6.82 6.82 0 0 0 .92.58z"
+                  />
+                  <path
+                    d="M213.14 8.83a2.89 2.89 0 0 0 .92 1.87 2.73 2.73 0 0 0 1.81.61.76.76 0 0 1 .55.27 1.09 1.09 0 0 1 .26.78 1.14 1.14 0 0 1-.26.8.74.74 0 0 1-.55.28 3.59 3.59 0 0 1-2.23-.66 3.06 3.06 0 0 1-1.15-1.78 3.82 3.82 0 0 1-1.07 1.73 2.09 2.09 0 0 1-1.34.51 1.63 1.63 0 0 1-1.28-.53 2.55 2.55 0 0 1-.58-1.44A5 5 0 0 1 207 13a2.16 2.16 0 0 1-1.39.49 2.1 2.1 0 0 1-1.51-.59 3.21 3.21 0 0 1-.86-1.65 4.2 4.2 0 0 1-1.42 1.74 3.12 3.12 0 0 1-1.69.5.65.65 0 0 1-.5-.28 1.24 1.24 0 0 1-.23-.8 1.27 1.27 0 0 1 .22-.74.62.62 0 0 1 .51-.31 3.6 3.6 0 0 0 2-.55 4.76 4.76 0 0 0 1.52-1.85l.78-.19-.27.81a2.77 2.77 0 0 0 .73 1.28 1.68 1.68 0 0 0 1.21.5 1.75 1.75 0 0 0 1.25-.54 6.16 6.16 0 0 0 1.15-2.16l.84-.38-.16.94a2.83 2.83 0 0 0 .39 1.36 1 1 0 0 0 .85.53q1.4 0 2-3l.92-.38zM208.68 18a4.75 4.75 0 0 1-1-.59 4.05 4.05 0 0 1-.85-.86l1.32-1.62a4.27 4.27 0 0 0 .86.84 9.22 9.22 0 0 0 .92.62zm.13-11.55a4.69 4.69 0 0 1-1-.59A4 4 0 0 1 207 5l1.32-1.62a4.26 4.26 0 0 0 .86.84 9.16 9.16 0 0 0 .92.62z"
+                  />
+                  <path
+                    d="M219.26 18.33a4.32 4.32 0 0 1-.82-.49 5.24 5.24 0 0 1-.77-.67l-.92 1.35a5.82 5.82 0 0 1-1-.55 3.37 3.37 0 0 1-.85-.82l1.24-1.65a6.13 6.13 0 0 0 .67.73 4.26 4.26 0 0 0 .78.59l1.05-1.51a5.23 5.23 0 0 0 .89.8 6.9 6.9 0 0 0 .92.58zm.32-14a6.82 6.82 0 0 1 .92 2 8 8 0 0 1 .32 2.23 5.64 5.64 0 0 1-.26 1.59 5.79 5.79 0 0 1-.82 1.67 3.19 3.19 0 0 1-1.59 1.18 6.33 6.33 0 0 1-2.29.4.68.68 0 0 1-.51-.23 1.21 1.21 0 0 1-.22-.82 1.44 1.44 0 0 1 .19-.78.6.6 0 0 1 .54-.3 8.87 8.87 0 0 0 2.08-.22 5.85 5.85 0 0 0 1.62-.65 10.22 10.22 0 0 0-.54-2.2 6.18 6.18 0 0 0-.84-1.61zm-1.08 16.86a4.39 4.39 0 0 1-1-.54 3.86 3.86 0 0 1-.78-.73l1.13-1.56a3.44 3.44 0 0 0 .82.73 4.86 4.86 0 0 0 1 .51z"
+                  />
+                </g>
+              </svg>
+              <span
+                class="c11"
+                role="text"
+              >
+                <span
+                  lang="en-GB"
+                >
+                  BBC News
+                </span>
+                , 
+                پښتو
+              </span>
+            </a>
+            <a
+              class="c12"
+              dir="rtl"
+              href="#content"
+            >
+              مطلب ته ورشئ
+            </a>
+          </div>
+        </div>
+        <nav
+          class="c13"
+          dir="rtl"
+          role="navigation"
+        >
+          <div
+            class="c14"
+          >
+            <div
+              class="c15"
+            >
+              <button
+                aria-expanded="false"
+                class="c16"
+                dir="rtl"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="c17"
+                  focusable="false"
+                  height="2.75rem"
+                  viewBox="0 0 44 44"
+                  width="2.75rem"
+                >
+                  <path
+                    d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+                  />
+                </svg>
+                <span
+                  class="c11"
+                >
+                  برخې
+                </span>
+              </button>
+              <div
+                class="c18"
+                dir="rtl"
+              >
+                <ul
+                  class="c19"
+                  role="list"
+                >
+                  <li
+                    class="c20 c21"
+                    dir="rtl"
+                    role="listitem"
+                  >
+                    <a
+                      class="c22"
+                      href="/pashto"
+                    >
+                      کور پاڼه
+                    </a>
+                  </li>
+                  <li
+                    class="c20 c21"
+                    dir="rtl"
+                    role="listitem"
+                  >
+                    <a
+                      class="c22"
+                      href="/pashto/afghanistan"
+                    >
+                      افغانستان
+                    </a>
+                  </li>
+                  <li
+                    class="c20 c21"
+                    dir="rtl"
+                    role="listitem"
+                  >
+                    <a
+                      class="c22"
+                      href="/pashto/pakhtunkhwa"
+                    >
+                      پښتونخوا
+                    </a>
+                  </li>
+                  <li
+                    class="c20 c21"
+                    dir="rtl"
+                    role="listitem"
+                  >
+                    <a
+                      class="c22"
+                      href="/pashto/world"
+                    >
+                      نړۍ
+                    </a>
+                  </li>
+                  <li
+                    class="c20 c21"
+                    dir="rtl"
+                    role="listitem"
+                  >
+                    <a
+                      class="c22"
+                      href="/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"
+                    >
+                      ښځې
+                    </a>
+                  </li>
+                  <li
+                    class="c20 c21"
+                    dir="rtl"
+                    role="listitem"
+                  >
+                    <a
+                      class="c22"
+                      href="/pashto/sport"
+                    >
+                      لوبې
+                    </a>
+                  </li>
+                  <li
+                    class="c20 c21"
+                    dir="rtl"
+                    role="listitem"
+                  >
+                    <a
+                      class="c22"
+                      href="/pashto/media/video"
+                    >
+                      ويډيوګانې
+                    </a>
+                  </li>
+                  <li
+                    class="c20 c21"
+                    dir="rtl"
+                    role="listitem"
+                  >
+                    <a
+                      class="c22"
+                      href="/pashto/in_depth"
+                    >
+                      ځانګړې پاڼې
+                    </a>
+                  </li>
+                  <li
+                    class="c20 c21"
+                    dir="rtl"
+                    role="listitem"
+                  >
+                    <a
+                      class="c22"
+                      href="/pashto/columns"
+                    >
+                      کالم
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="c23"
+              height="0"
+            >
+              <ul
+                class="c24"
+                role="list"
+              >
+                <li
+                  class="c25"
+                  role="listitem"
+                >
+                  <a
+                    class="c26"
+                    href="/pashto"
+                  >
+                    کور پاڼه
+                  </a>
+                </li>
+                <li
+                  class="c25"
+                  role="listitem"
+                >
+                  <a
+                    class="c26"
+                    href="/pashto/afghanistan"
+                  >
+                    افغانستان
+                  </a>
+                </li>
+                <li
+                  class="c25"
+                  role="listitem"
+                >
+                  <a
+                    class="c26"
+                    href="/pashto/pakhtunkhwa"
+                  >
+                    پښتونخوا
+                  </a>
+                </li>
+                <li
+                  class="c25"
+                  role="listitem"
+                >
+                  <a
+                    class="c26"
+                    href="/pashto/world"
+                  >
+                    نړۍ
+                  </a>
+                </li>
+                <li
+                  class="c25"
+                  role="listitem"
+                >
+                  <a
+                    class="c26"
+                    href="/pashto/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"
+                  >
+                    ښځې
+                  </a>
+                </li>
+                <li
+                  class="c25"
+                  role="listitem"
+                >
+                  <a
+                    class="c26"
+                    href="/pashto/sport"
+                  >
+                    لوبې
+                  </a>
+                </li>
+                <li
+                  class="c25"
+                  role="listitem"
+                >
+                  <a
+                    class="c26"
+                    href="/pashto/media/video"
+                  >
+                    ويډيوګانې
+                  </a>
+                </li>
+                <li
+                  class="c25"
+                  role="listitem"
+                >
+                  <a
+                    class="c26"
+                    href="/pashto/in_depth"
+                  >
+                    ځانګړې پاڼې
+                  </a>
+                </li>
+                <li
+                  class="c25"
+                  role="listitem"
+                >
+                  <a
+                    class="c26"
+                    href="/pashto/columns"
+                  >
+                    کالم
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
       <noscript />
       <div>
         chartbeat
       </div>
       <main
-        class="c0 c1"
+        class="c27 c28"
         dir="rtl"
         role="main"
       >
         <div
-          class="c2"
+          class="c29"
           dir="rtl"
         >
           <div
-            class="c3 c4"
+            class="c30 c31"
             dir="ltr"
           >
             <div
-              class="c5"
+              class="c32"
               dir="rtl"
             >
               <h1
-                class="c6"
+                class="c33"
                 id="content"
                 tabindex="-1"
               >
@@ -1414,39 +4083,39 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
                   role="text"
                 >
                   <span
-                    class="c7"
+                    class="c34"
                   >
                     ماښامنۍ خپرونه
                   </span>
                   <span
-                    class="c8"
+                    class="c11"
                   >
                     , 
                   </span>
                   <span
-                    class="c9"
+                    class="c35"
                   >
                     ۱ می ۲۰۲۰
                   </span>
                 </span>
               </h1>
               <p
-                class="c10"
+                class="c36"
               >
                 د بي بي سي ورلډ سروس څخه پروګرام کول
               </p>
             </div>
             <div
-              class="c11"
+              class="c37"
               dir="rtl"
             >
               <div
-                class="c12"
+                class="c38"
                 dir="rtl"
               >
                 <img
                   alt="BBC News پښتو"
-                  class="c13"
+                  class="c39"
                   sizes="(min-width: 1008px) 228px, 30vw"
                   src="https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png"
                   srcset="https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png 128w,https://ichef.bbci.co.uk/images/ic/240x240/p08b23c8.png 240w,https://ichef.bbci.co.uk/images/ic/480x480/p08b23c8.png 480w"
@@ -1455,15 +4124,15 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
             </div>
           </div>
           <div
-            class="c14"
+            class="c40"
           >
             <div
-              class="c15"
+              class="c41"
             >
               <iframe
                 allow="autoplay; fullscreen"
                 allowfullscreen=""
-                class="c16"
+                class="c42"
                 scrolling="no"
                 src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps?morph_env=live"
                 title="اډیو پلیئر"
@@ -1473,19 +4142,235 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
           </div>
         </div>
       </main>
+      <footer
+        role="contentinfo"
+      >
+        <div
+          class="c43"
+        >
+          <div
+            class="c7"
+          >
+            <a
+              class="c8 c9"
+              href="/pashto"
+            >
+              <svg
+                aria-hidden="true"
+                class="c10"
+                focusable="false"
+                height="24"
+                viewBox="0 0 222 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  fill-rule="evenodd"
+                  stroke="#000"
+                  stroke-width=".335"
+                  style="stroke: #fff;"
+                >
+                  <path
+                    d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
+                  />
+                  <path
+                    d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
+                  />
+                  <path
+                    d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z"
+                  />
+                  <path
+                    d="M168.37 0v22.59"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M182.28 18a18.41 18.41 0 0 0 2.89-1 12.66 12.66 0 0 0 2-1.16 6.52 6.52 0 0 0 1.29-1.19 3.46 3.46 0 0 0 .63-1.13 6.88 6.88 0 0 1-2-.31 4.65 4.65 0 0 1-1.42-.73 2.85 2.85 0 0 1-.84-1 2.73 2.73 0 0 1-.27-1.19 3.78 3.78 0 0 1 .23-1.27 4.41 4.41 0 0 1 .62-1.17 3.54 3.54 0 0 1 .88-.85 1.74 1.74 0 0 1 1-.32 2 2 0 0 1 1.11.35 3.67 3.67 0 0 1 1 1 6.33 6.33 0 0 1 .76 1.5 7.26 7.26 0 0 1 .39 1.89h1.4a.76.76 0 0 1 .55.27 1.09 1.09 0 0 1 .26.78 1.14 1.14 0 0 1-.26.8.74.74 0 0 1-.55.28h-1.56a7.76 7.76 0 0 1-1.39 2.97 8.17 8.17 0 0 1-2.87 2.4l-3.45-.43zm3.24-7.82a1.88 1.88 0 0 0 1 .85 4.1 4.1 0 0 0 1.71.34h1.13a4.13 4.13 0 0 0-.8-1.93 1.75 1.75 0 0 0-1.39-.77 1.51 1.51 0 0 0-1 .43 2 2 0 0 0-.66 1.03z"
+                  />
+                  <path
+                    d="M195.9 7.38a5.54 5.54 0 0 0 1.5 3 4 4 0 0 0 2.77.93.76.76 0 0 1 .55.27 1.09 1.09 0 0 1 .26.78 1.14 1.14 0 0 1-.26.8.74.74 0 0 1-.55.28 5.36 5.36 0 0 1-2.77-.63 4.31 4.31 0 0 1-1.69-2 5 5 0 0 1-1.52 1.93 3.68 3.68 0 0 1-2.25.69.64.64 0 0 1-.51-.27 1.28 1.28 0 0 1-.22-.81 1.29 1.29 0 0 1 .2-.78.63.63 0 0 1 .53-.27 4.34 4.34 0 0 0 1.86-.39 3.54 3.54 0 0 0 1.46-1.36l-.16-1.19zm1-2.13a4.34 4.34 0 0 1-.82-.49 5.22 5.22 0 0 1-.77-.67l-.92 1.35a5.79 5.79 0 0 1-1-.55 3.36 3.36 0 0 1-.85-.82l1.24-1.65a6.08 6.08 0 0 0 .67.73 4.24 4.24 0 0 0 .78.59l1.05-1.51a5.23 5.23 0 0 0 .89.8 6.82 6.82 0 0 0 .92.58z"
+                  />
+                  <path
+                    d="M213.14 8.83a2.89 2.89 0 0 0 .92 1.87 2.73 2.73 0 0 0 1.81.61.76.76 0 0 1 .55.27 1.09 1.09 0 0 1 .26.78 1.14 1.14 0 0 1-.26.8.74.74 0 0 1-.55.28 3.59 3.59 0 0 1-2.23-.66 3.06 3.06 0 0 1-1.15-1.78 3.82 3.82 0 0 1-1.07 1.73 2.09 2.09 0 0 1-1.34.51 1.63 1.63 0 0 1-1.28-.53 2.55 2.55 0 0 1-.58-1.44A5 5 0 0 1 207 13a2.16 2.16 0 0 1-1.39.49 2.1 2.1 0 0 1-1.51-.59 3.21 3.21 0 0 1-.86-1.65 4.2 4.2 0 0 1-1.42 1.74 3.12 3.12 0 0 1-1.69.5.65.65 0 0 1-.5-.28 1.24 1.24 0 0 1-.23-.8 1.27 1.27 0 0 1 .22-.74.62.62 0 0 1 .51-.31 3.6 3.6 0 0 0 2-.55 4.76 4.76 0 0 0 1.52-1.85l.78-.19-.27.81a2.77 2.77 0 0 0 .73 1.28 1.68 1.68 0 0 0 1.21.5 1.75 1.75 0 0 0 1.25-.54 6.16 6.16 0 0 0 1.15-2.16l.84-.38-.16.94a2.83 2.83 0 0 0 .39 1.36 1 1 0 0 0 .85.53q1.4 0 2-3l.92-.38zM208.68 18a4.75 4.75 0 0 1-1-.59 4.05 4.05 0 0 1-.85-.86l1.32-1.62a4.27 4.27 0 0 0 .86.84 9.22 9.22 0 0 0 .92.62zm.13-11.55a4.69 4.69 0 0 1-1-.59A4 4 0 0 1 207 5l1.32-1.62a4.26 4.26 0 0 0 .86.84 9.16 9.16 0 0 0 .92.62z"
+                  />
+                  <path
+                    d="M219.26 18.33a4.32 4.32 0 0 1-.82-.49 5.24 5.24 0 0 1-.77-.67l-.92 1.35a5.82 5.82 0 0 1-1-.55 3.37 3.37 0 0 1-.85-.82l1.24-1.65a6.13 6.13 0 0 0 .67.73 4.26 4.26 0 0 0 .78.59l1.05-1.51a5.23 5.23 0 0 0 .89.8 6.9 6.9 0 0 0 .92.58zm.32-14a6.82 6.82 0 0 1 .92 2 8 8 0 0 1 .32 2.23 5.64 5.64 0 0 1-.26 1.59 5.79 5.79 0 0 1-.82 1.67 3.19 3.19 0 0 1-1.59 1.18 6.33 6.33 0 0 1-2.29.4.68.68 0 0 1-.51-.23 1.21 1.21 0 0 1-.22-.82 1.44 1.44 0 0 1 .19-.78.6.6 0 0 1 .54-.3 8.87 8.87 0 0 0 2.08-.22 5.85 5.85 0 0 0 1.62-.65 10.22 10.22 0 0 0-.54-2.2 6.18 6.18 0 0 0-.84-1.61zm-1.08 16.86a4.39 4.39 0 0 1-1-.54 3.86 3.86 0 0 1-.78-.73l1.13-1.56a3.44 3.44 0 0 0 .82.73 4.86 4.86 0 0 0 1 .51z"
+                  />
+                </g>
+              </svg>
+              <span
+                class="c11"
+                role="text"
+              >
+                <span
+                  lang="en-GB"
+                >
+                  BBC News
+                </span>
+                , 
+                پښتو
+              </span>
+            </a>
+          </div>
+        </div>
+        <div
+          class="c44"
+        >
+          <div
+            class="c45"
+          >
+            <ul
+              class="c46"
+              role="list"
+            >
+              <li
+                class="c47"
+                role="listitem"
+              >
+                <a
+                  class="c48 c49"
+                  href="https://www.bbc.com/pashto/institutional-49283007"
+                >
+                  <span
+                    class="c50"
+                  >
+                    ولې تاسې پر بي بي سي خبرونو باور کولی شئ
+                  </span>
+                </a>
+              </li>
+              <li
+                class="c47"
+                role="listitem"
+              >
+                <a
+                  class="c48 c49"
+                  href="https://www.bbc.com/pashto/institutional-37620701"
+                >
+                  <span
+                    class="c50"
+                  >
+                    د کارولو شرايط
+                  </span>
+                </a>
+              </li>
+              <li
+                class="c47"
+                role="listitem"
+              >
+                <a
+                  class="c48 c49"
+                  href="https://www.bbc.com/pashto/institutional-37622761"
+                >
+                  <span
+                    class="c50"
+                  >
+                    د بي بي سي‌ په اړه
+                  </span>
+                </a>
+              </li>
+              <li
+                class="c47"
+                role="listitem"
+              >
+                <a
+                  class="c48 c49"
+                  href="https://www.bbc.com/pashto/institutional-37622762"
+                >
+                  <span
+                    class="c50"
+                  >
+                    د محرميت تگلاره
+                  </span>
+                </a>
+              </li>
+              <li
+                class="c47"
+                role="listitem"
+              >
+                <a
+                  class="c48 c49"
+                  href="https://www.bbc.com/usingthebbc/cookies/"
+                >
+                  <span
+                    class="c50"
+                  >
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li
+                class="c47"
+                role="listitem"
+              >
+                <a
+                  class="c48 c49"
+                  href="https://www.bbc.co.uk/pashto/institutional-37622768"
+                >
+                  <span
+                    class="c50"
+                  >
+                    زموږ سره اړیکي
+                  </span>
+                </a>
+              </li>
+              <li
+                class="c47"
+                role="listitem"
+              >
+                <a
+                  class="c48 c49"
+                  href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                  lang="en-GB"
+                >
+                  <span
+                    class="c50"
+                  >
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p
+              class="c51"
+            >
+              <span
+                lang="en-GB"
+              >
+                ©
+                 
+              </span>
+              2020 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.
+               
+              <a
+                class="c48 c52"
+                href="https://www.bbc.co.uk/help/web/links/"
+              >
+                <span
+                  class="c50"
+                >
+                  د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
 `;
 
 exports[`OnDemand Radio Page  should show the 'content not yet available' message if episode is not yet available 1`] = `
-.c13 {
+.c39 {
   display: block;
   width: 100%;
   visibility: visible;
 }
 
-.c8 {
+.c17 {
+  color: #fff;
+  fill: currentColor;
+}
+
+.c11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -1497,7 +4382,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   margin: 0;
 }
 
-.c15 {
+.c41 {
   position: absolute;
   top: 0;
   left: 0;
@@ -1505,7 +4390,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   height: 100%;
 }
 
-.c16 {
+.c42 {
   font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1521,7 +4406,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   background-color: rgba(34,34,34,0.75);
 }
 
-.c17 {
+.c43 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -1530,7 +4415,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   border-bottom: 0.0625rem solid transparent;
 }
 
-.c6 {
+.c33 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
@@ -1542,14 +4427,14 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   padding: 2rem 0;
 }
 
-.c7 {
+.c34 {
   display: inline-block;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
 }
 
-.c9 {
+.c35 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
@@ -1558,7 +4443,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   margin: 0;
 }
 
-.c10 {
+.c36 {
   font-size: 1rem;
   line-height: 1.375rem;
   font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
@@ -1569,12 +4454,460 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   margin: 0;
 }
 
-.c12 {
+.c38 {
   padding: 2rem 0 1.5rem;
   padding-right: 1rem;
 }
 
+.c12 {
+  position: absolute;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0.75rem 0.5rem;
+  background-color: #FFFFFF;
+  border: 0.1875rem solid #000;
+  color: #333;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c12:focus {
+  -webkit-clip-path: none;
+  clip-path: none;
+  -webkit-clip: auto;
+  clip: auto;
+  height: auto;
+  width: auto;
+  top: 0;
+  left: 0;
+}
+
+.c7 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c6 {
+  background-color: #B80000;
+  min-height: 2.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+.c44 {
+  background-color: #B80000;
+  min-height: 2.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  border-top: 0.0625rem solid transparent;
+}
+
+.c9 {
+  display: inline-block;
+  width: 100%;
+  max-width: 14.5632rem;
+  min-width: 9.7088rem;
+  -webkit-flex: 1 1 9.7088rem;
+  -ms-flex: 1 1 9.7088rem;
+  flex: 1 1 9.7088rem;
+  -ms-flex-preferred-size: 14.5632rem;
+}
+
+.c8:hover .c54,
+.c8:focus .c54 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+.c10 {
+  box-sizing: content-box;
+  color: #FFFFFF;
+  fill: currentColor;
+  padding-top: 0.625rem;
+  padding-bottom: 0.375rem;
+  height: 1.5rem;
+  width: 100%;
+  max-width: 14.5632rem;
+  min-width: 9.7088rem;
+  -webkit-flex: 1 1 9.7088rem;
+  -ms-flex: 1 1 9.7088rem;
+  flex: 1 1 9.7088rem;
+  -ms-flex-preferred-size: 14.5632rem;
+}
+
+.c8:hover .c10,
+.c8:focus .c10 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+.c8:hover .c55,
+.c8:focus .c55 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+.c8:hover .c56,
+.c8:focus .c56 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+.c23 {
+  background-color: #222222;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
+  visibility: hidden;
+}
+
+.c24 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.125rem solid #3F3F42;
+}
+
+.c25 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
+}
+
+.c25:last-child {
+  padding-bottom: 1rem;
+  border: 0;
+}
+
+.c26 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c26:hover,
+.c26:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c16 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  height: 2.875rem;
+  width: 2.875rem;
+}
+
+.c16:hover,
+.c16:focus {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.c16:hover::after,
+.c16:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c16 svg {
+  vertical-align: middle;
+}
+
+.c14 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c19 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.c22 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+.c22:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c22:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c21 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.c57 .c20::after {
+  right: 0;
+}
+
+.c58 .c20::after {
+  right: 0;
+}
+
+.c13 {
+  position: relative;
+  background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
+}
+
+.c13 .c20::after {
+  left: 0;
+}
+
+.c59 .c20::after {
+  left: 0;
+}
+
+.c15 {
+  position: relative;
+}
+
+.c0 {
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  padding: 1rem 0.5rem;
+}
+
 .c1 {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c1::after {
+  content: '\\0020';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.c2 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+.c4 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.c4 li + li {
+  padding-top: 0.5rem;
+}
+
+.c3 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #BEBEBE;
+}
+
+.c3 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3 a:focus,
+.c3 a:hover {
+  color: #FFFFFF;
+}
+
+.c5 button {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  color: #F6A21D;
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.c5 button:focus,
+.c5 button:hover {
+  color: #FFFFFF;
+}
+
+.c5 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5 a:focus,
+.c5 a:hover {
+  color: #FFFFFF;
+}
+
+.c50 {
+  padding: 0.5rem 0 0.5rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: block;
+}
+
+.c53 {
+  padding: 0.5rem 0 0.5rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline;
+}
+
+.c49:hover .c51,
+.c49:focus .c51 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c47 {
+  border-bottom: 0.0625rem solid #3F3F42;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0.5rem;
+  -webkit-column-count: 4;
+  column-count: 4;
+}
+
+.c47 > li:first-child {
+  border-bottom: 0.0625rem solid #3F3F42;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+  grid-column: 1/-1;
+  width: 100%;
+  -webkit-column-span: all;
+  column-span: all;
+}
+
+.c48 {
+  min-width: 50%;
+  -webkit-column-gap: 1rem;
+  column-gap: 1rem;
+  -webkit-break-inside: avoid-column;
+  break-inside: avoid-column;
+}
+
+.c45 {
+  background-color: #222222;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c46 {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-top: 0.5rem);
+}
+
+.c52 {
+  color: #FFFFFF;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.c28 {
   width: 100%;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -1582,52 +4915,52 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   flex-grow: 1;
 }
 
-.c14 {
+.c40 {
   position: relative;
   min-height: 165px;
   margin-bottom: 2rem;
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
+  .c42 {
     font-size: 0.875rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c16 {
+  .c42 {
     background-color: transparent;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c17 {
+  .c43 {
     background-color: window;
   }
 }
 
 @media (min-width:25rem) {
-  .c17 {
+  .c43 {
     padding: 1rem;
   }
 }
 
 @supports (display:grid) {
-  .c0 {
+  .c27 {
     display: grid;
     position: initial;
   }
 }
 
 @supports (display:grid) {
-  .c3 {
+  .c30 {
     display: grid;
     position: initial;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c5 {
+  .c32 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1636,7 +4969,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c5 {
+  .c32 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1645,7 +4978,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c32 {
     width: calc(4/6*(100% - 6 * 0.5rem) + 3 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1654,7 +4987,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
+  .c32 {
     width: calc(4/6*(100% - 6 * 1rem) + 3 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -1663,7 +4996,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c5 {
+  .c32 {
     width: calc(4/6*(100% - 6 * 1rem) + 3 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -1672,7 +5005,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @media (min-width:80rem) {
-  .c5 {
+  .c32 {
     width: calc(4/6*(100% - 6 * 1rem) + 3 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -1681,13 +5014,13 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @supports (display:grid) {
-  .c5 {
+  .c32 {
     display: block;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c11 {
+  .c37 {
     width: calc(0/6*(100% - 6 * 0.5rem) + -1 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1696,7 +5029,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c11 {
+  .c37 {
     width: calc(0/6*(100% - 6 * 0.5rem) + -1 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1705,7 +5038,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c37 {
     width: calc(2/6*(100% - 6 * 0.5rem) + 1 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1714,7 +5047,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c11 {
+  .c37 {
     width: calc(2/6*(100% - 6 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -1723,7 +5056,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c11 {
+  .c37 {
     width: calc(2/6*(100% - 6 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -1732,7 +5065,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @media (min-width:80rem) {
-  .c11 {
+  .c37 {
     width: calc(2/6*(100% - 6 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -1741,13 +5074,13 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @supports (display:grid) {
-  .c11 {
+  .c37 {
     display: block;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c2 {
+  .c29 {
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -1758,7 +5091,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
+  .c29 {
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -1769,7 +5102,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c29 {
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -1780,7 +5113,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
+  .c29 {
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
@@ -1791,7 +5124,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
+  .c29 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     margin-left: 12.5%;
@@ -1801,7 +5134,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @media (min-width:80rem) {
-  .c2 {
+  .c29 {
     width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
     margin-left: 20%;
@@ -1811,39 +5144,39 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @supports (display:grid) {
-  .c2 {
+  .c29 {
     display: block;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
+  .c33 {
     font-size: 2rem;
     line-height: 2.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c33 {
     font-size: 2.75rem;
     line-height: 3.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c33 {
     padding: 2.5rem 0;
   }
 }
 
 @media screen {
-  .c6 {
+  .c33 {
     padding: 2rem 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
+  .c34 {
     padding-bottom: 0;
     word-break: break-word;
     line-height: 3.5rem;
@@ -1851,103 +5184,723 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
+  .c35 {
     font-size: 1.375rem;
     line-height: 1.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c35 {
     font-size: 1.5rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c36 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c36 {
     font-size: 1rem;
     line-height: 1.75rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c10 {
+  .c36 {
     padding-bottom: 0.5rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c12 {
+  .c38 {
     display: none;
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c12:focus {
+    top: 0.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c12 {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c7 {
+    display: block;
+  }
+}
+
+@media (min-width:25rem) {
+  .c6 {
+    min-height: 3.25rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c44 {
+    min-height: 3.25rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c9 {
+    display: block;
+  }
+}
+
+@media (min-width:25rem) {
+  .c10 {
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),print {
+  .c10 {
+    fill: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c23 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c23 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c26 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c26 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) {
+  .c16 {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    overflow: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c22 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c22 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c22 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c21:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c21::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #eab3b3;
+    z-index: -1;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c18 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    -webkit-scroll-behavior: auto;
+    -moz-scroll-behavior: auto;
+    -ms-scroll-behavior: auto;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-scrollbar-width: none;
+    -moz-scrollbar-width: none;
+    -ms-scrollbar-width: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .c18::-webkit-scrollbar {
+    display: none;
+  }
+
+  .c18:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    float: left;
+    margin-right: 3.5%;
+    width: 22%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    width: 18%;
+    float: right;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    margin: 0;
+    float: left;
+    width: 53%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 button {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 button {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c47 {
+    display: grid;
+    grid-auto-flow: column;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c47 {
+    grid-auto-flow: row;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+}
+
+@media (min-width:15rem) and (max-width:37.4375rem) {
+  .c47 {
+    grid-column-gap: 0.5rem;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat( 4,auto );
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c47 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat( 3,auto );
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
+  .c47 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat( 3,auto );
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+
+@media (min-width:80rem) {
+  .c47 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat( 3,auto );
+    -webkit-column-count: 5;
+    column-count: 5;
+  }
+}
+
+@media (max-width:25rem) {
+  .c45 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c45 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c45 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c45 {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c28 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c28 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c4 {
+  .c31 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c4 {
+  .c31 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c4 {
+  .c31 {
     padding-top: 1.5rem;
   }
 }
 
 <div>
+  <header
+    role="banner"
+  >
+    <div
+      class="c0"
+      dir="ltr"
+    >
+      <div
+        class="c1"
+        dir="ltr"
+      >
+        <h2
+          class="c2"
+          dir="ltr"
+        >
+          개인 정보와 쿠키 처리 방침이 업데이트되었습니다
+        </h2>
+        <p
+          class="c3"
+          dir="ltr"
+        >
+          개인 정보와 쿠키 처리 방침에서 주요 변경 사항과 이 변경 사항이 이용자와 이용자의 정보에 가질 영향에 대해 알려드리고자 합니다.
+        </p>
+        <ul
+          class="c4"
+          dir="ltr"
+        >
+          <li
+            class="c5"
+            dir="ltr"
+          >
+            <button
+              type="button"
+            >
+              네
+            </button>
+          </li>
+          <li
+            class="c5"
+            dir="ltr"
+          >
+            <a
+              href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+            >
+              변경사항을 확인하세요
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="c6"
+    >
+      <div
+        class="c7"
+      >
+        <a
+          class="c8 c9"
+          href="/korean"
+        >
+          <svg
+            aria-hidden="true"
+            class="c10"
+            focusable="false"
+            height="24"
+            viewBox="0 0 233.01 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill-rule="evenodd"
+              stroke="#000"
+              stroke-width=".335"
+              style="stroke: #fff;"
+            >
+              <path
+                d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
+              />
+              <path
+                d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
+              />
+              <path
+                d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z"
+              />
+              <path
+                d="M168.37 0v22.59"
+                stroke-width="2"
+              />
+              <path
+                d="M197.21 16.31v1.23h-15.44v-1.23h6V12h1.56v4.28zm-3.43-7.44V6.12h-10.2V4.89h11.74v1.56a32.82 32.82 0 0 1-.72 7.67l-1.54-.18a33.2 33.2 0 0 0 .61-3.9l-10.32.53-.23-1.29zM202.24 14.56a51.94 51.94 0 0 0 8.3-.59l.15 1.23a51.3 51.3 0 0 1-8.61.61h-1.41V9.49H207V6.05h-6.34V4.82h7.92v5.9h-6.3zM213.7 3.27V19.8h-1.56V3.27zM225.89 10.32c0 3.51-1.77 5.75-4.28 5.75s-4.3-2.24-4.3-5.75 1.79-5.75 4.3-5.75 4.28 2.23 4.28 5.75zm-1.49 0c0-2.67-1.16-4.39-2.8-4.39s-2.82 1.73-2.82 4.39 1.16 4.41 2.82 4.41 2.8-1.73 2.8-4.41zm8.6.83h-2.82v8.64h-1.56V3.31h1.56v6.56H233z"
+              />
+            </g>
+          </svg>
+          <span
+            class="c11"
+            role="text"
+          >
+            <span
+              lang="en-GB"
+            >
+              BBC News
+            </span>
+            , 
+            코리아
+          </span>
+        </a>
+        <a
+          class="c12"
+          dir="ltr"
+          href="#content"
+        >
+          내용 보기
+        </a>
+      </div>
+    </div>
+    <nav
+      class="c13"
+      dir="ltr"
+      role="navigation"
+    >
+      <div
+        class="c14"
+      >
+        <div
+          class="c15"
+        >
+          <button
+            aria-expanded="false"
+            class="c16"
+            dir="ltr"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="c17"
+              focusable="false"
+              height="2.75rem"
+              viewBox="0 0 44 44"
+              width="2.75rem"
+            >
+              <path
+                d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+              />
+            </svg>
+            <span
+              class="c11"
+            >
+              섹션
+            </span>
+          </button>
+          <div
+            class="c18"
+            dir="ltr"
+          >
+            <ul
+              class="c19"
+              role="list"
+            >
+              <li
+                class="c20 c21"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c22"
+                  href="/korean"
+                >
+                  뉴스
+                </a>
+              </li>
+              <li
+                class="c20 c21"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c22"
+                  href="/korean/media/video"
+                >
+                  비디오
+                </a>
+              </li>
+              <li
+                class="c20 c21"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c22"
+                  href="/korean/downloads"
+                >
+                  다운로드
+                </a>
+              </li>
+              <li
+                class="c20 c21"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c22"
+                  href="/korean/popular/read"
+                >
+                  TOP 뉴스
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="c23"
+          height="0"
+        >
+          <ul
+            class="c24"
+            role="list"
+          >
+            <li
+              class="c25"
+              role="listitem"
+            >
+              <a
+                class="c26"
+                href="/korean"
+              >
+                뉴스
+              </a>
+            </li>
+            <li
+              class="c25"
+              role="listitem"
+            >
+              <a
+                class="c26"
+                href="/korean/media/video"
+              >
+                비디오
+              </a>
+            </li>
+            <li
+              class="c25"
+              role="listitem"
+            >
+              <a
+                class="c26"
+                href="/korean/downloads"
+              >
+                다운로드
+              </a>
+            </li>
+            <li
+              class="c25"
+              role="listitem"
+            >
+              <a
+                class="c26"
+                href="/korean/popular/read"
+              >
+                TOP 뉴스
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
   <noscript />
   <div>
     chartbeat
   </div>
   <main
-    class="c0 c1"
+    class="c27 c28"
     dir="ltr"
     role="main"
   >
     <div
-      class="c2"
+      class="c29"
       dir="ltr"
     >
       <div
-        class="c3 c4"
+        class="c30 c31"
         dir="rtl"
       >
         <div
-          class="c5"
+          class="c32"
           dir="ltr"
         >
           <h1
-            class="c6"
+            class="c33"
             id="content"
             tabindex="-1"
           >
@@ -1955,39 +5908,39 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
               role="text"
             >
               <span
-                class="c7"
+                class="c34"
               >
                 BBC 코리아 라디오
               </span>
               <span
-                class="c8"
+                class="c11"
               >
                 , 
               </span>
               <span
-                class="c9"
+                class="c35"
               >
                 2020년 5월 4일
               </span>
             </span>
           </h1>
           <p
-            class="c10"
+            class="c36"
           >
             한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.
           </p>
         </div>
         <div
-          class="c11"
+          class="c37"
           dir="ltr"
         >
           <div
-            class="c12"
+            class="c38"
             dir="ltr"
           >
             <img
               alt="BBC News 코리아"
-              class="c13"
+              class="c39"
               sizes="(min-width: 1008px) 228px, 30vw"
               src="https://ichef.bbci.co.uk/images/ic/128x128/p08b8lzc.png"
               srcset="https://ichef.bbci.co.uk/images/ic/128x128/p08b8lzc.png 128w,https://ichef.bbci.co.uk/images/ic/240x240/p08b8lzc.png 240w,https://ichef.bbci.co.uk/images/ic/480x480/p08b8lzc.png 480w"
@@ -1996,16 +5949,16 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
         </div>
       </div>
       <div
-        class="c14"
+        class="c40"
       >
         <div
-          class="c15"
+          class="c41"
         >
           <div
-            class="c16"
+            class="c42"
           >
             <strong
-              class="c17"
+              class="c43"
             >
               아직 재생할 수 없는 프로그램입니다.
             </strong>
@@ -2014,17 +5967,224 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
       </div>
     </div>
   </main>
+  <footer
+    role="contentinfo"
+  >
+    <div
+      class="c44"
+    >
+      <div
+        class="c7"
+      >
+        <a
+          class="c8 c9"
+          href="/korean"
+        >
+          <svg
+            aria-hidden="true"
+            class="c10"
+            focusable="false"
+            height="24"
+            viewBox="0 0 233.01 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill-rule="evenodd"
+              stroke="#000"
+              stroke-width=".335"
+              style="stroke: #fff;"
+            >
+              <path
+                d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
+              />
+              <path
+                d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
+              />
+              <path
+                d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z"
+              />
+              <path
+                d="M168.37 0v22.59"
+                stroke-width="2"
+              />
+              <path
+                d="M197.21 16.31v1.23h-15.44v-1.23h6V12h1.56v4.28zm-3.43-7.44V6.12h-10.2V4.89h11.74v1.56a32.82 32.82 0 0 1-.72 7.67l-1.54-.18a33.2 33.2 0 0 0 .61-3.9l-10.32.53-.23-1.29zM202.24 14.56a51.94 51.94 0 0 0 8.3-.59l.15 1.23a51.3 51.3 0 0 1-8.61.61h-1.41V9.49H207V6.05h-6.34V4.82h7.92v5.9h-6.3zM213.7 3.27V19.8h-1.56V3.27zM225.89 10.32c0 3.51-1.77 5.75-4.28 5.75s-4.3-2.24-4.3-5.75 1.79-5.75 4.3-5.75 4.28 2.23 4.28 5.75zm-1.49 0c0-2.67-1.16-4.39-2.8-4.39s-2.82 1.73-2.82 4.39 1.16 4.41 2.82 4.41 2.8-1.73 2.8-4.41zm8.6.83h-2.82v8.64h-1.56V3.31h1.56v6.56H233z"
+              />
+            </g>
+          </svg>
+          <span
+            class="c11"
+            role="text"
+          >
+            <span
+              lang="en-GB"
+            >
+              BBC News
+            </span>
+            , 
+            코리아
+          </span>
+        </a>
+      </div>
+    </div>
+    <div
+      class="c45"
+    >
+      <div
+        class="c46"
+      >
+        <ul
+          class="c47"
+          role="list"
+        >
+          <li
+            class="c48"
+            role="listitem"
+          >
+            <a
+              class="c49 c50"
+              href="https://www.bbc.com/korean/institutional-49283197"
+            >
+              <span
+                class="c51"
+              >
+                BBC News를 신뢰할 수 있는 이유
+              </span>
+            </a>
+          </li>
+          <li
+            class="c48"
+            role="listitem"
+          >
+            <a
+              class="c49 c50"
+              href="https://www.bbc.co.uk/usingthebbc/terms/"
+            >
+              <span
+                class="c51"
+              >
+                이용 약관
+              </span>
+            </a>
+          </li>
+          <li
+            class="c48"
+            role="listitem"
+          >
+            <a
+              class="c49 c50"
+              href="https://www.bbc.co.uk/aboutthebbc"
+            >
+              <span
+                class="c51"
+              >
+                BBC 소개
+              </span>
+            </a>
+          </li>
+          <li
+            class="c48"
+            role="listitem"
+          >
+            <a
+              class="c49 c50"
+              href="https://www.bbc.co.uk/usingthebbc/privacy/"
+            >
+              <span
+                class="c51"
+              >
+                개인정보취급방침
+              </span>
+            </a>
+          </li>
+          <li
+            class="c48"
+            role="listitem"
+          >
+            <a
+              class="c49 c50"
+              href="https://www.bbc.co.uk/usingthebbc/cookies/"
+            >
+              <span
+                class="c51"
+              >
+                쿠키정책
+              </span>
+            </a>
+          </li>
+          <li
+            class="c48"
+            role="listitem"
+          >
+            <a
+              class="c49 c50"
+              href="https://www.bbc.com/korean/institutional-42224941"
+            >
+              <span
+                class="c51"
+              >
+                고객센터
+              </span>
+            </a>
+          </li>
+          <li
+            class="c48"
+            role="listitem"
+          >
+            <a
+              class="c49 c50"
+              href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+              lang="en-GB"
+            >
+              <span
+                class="c51"
+              >
+                AdChoices / Do Not Sell My Info
+              </span>
+            </a>
+          </li>
+        </ul>
+        <p
+          class="c52"
+        >
+          <span
+            lang="en-GB"
+          >
+            ©
+             
+          </span>
+          2020 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다
+           
+          <a
+            class="c49 c53"
+            href="https://www.bbc.co.uk/help/web/links/"
+          >
+            <span
+              class="c51"
+            >
+              외부 링크에 대한 본사 정책 보기
+            </span>
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
 </div>
 `;
 
 exports[`OnDemand Radio Page  should show the expired content message if episode is expired 1`] = `
-.c13 {
+.c39 {
   display: block;
   width: 100%;
   visibility: visible;
 }
 
-.c8 {
+.c17 {
+  color: #fff;
+  fill: currentColor;
+}
+
+.c11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -2036,7 +6196,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   margin: 0;
 }
 
-.c15 {
+.c41 {
   position: absolute;
   top: 0;
   left: 0;
@@ -2044,7 +6204,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   height: 100%;
 }
 
-.c16 {
+.c42 {
   font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -2060,7 +6220,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   background-color: rgba(34,34,34,0.75);
 }
 
-.c17 {
+.c43 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -2069,7 +6229,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   border-bottom: 0.0625rem solid transparent;
 }
 
-.c6 {
+.c33 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
@@ -2081,14 +6241,14 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   padding: 2rem 0;
 }
 
-.c7 {
+.c34 {
   display: inline-block;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
 }
 
-.c9 {
+.c35 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
@@ -2097,7 +6257,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   margin: 0;
 }
 
-.c10 {
+.c36 {
   font-size: 1rem;
   line-height: 1.375rem;
   font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
@@ -2108,12 +6268,460 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   margin: 0;
 }
 
-.c12 {
+.c38 {
   padding: 2rem 0 1.5rem;
   padding-right: 1rem;
 }
 
+.c12 {
+  position: absolute;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  padding: 0.75rem 0.5rem;
+  background-color: #FFFFFF;
+  border: 0.1875rem solid #000;
+  color: #333;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c12:focus {
+  -webkit-clip-path: none;
+  clip-path: none;
+  -webkit-clip: auto;
+  clip: auto;
+  height: auto;
+  width: auto;
+  top: 0;
+  left: 0;
+}
+
+.c7 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c6 {
+  background-color: #B80000;
+  min-height: 2.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+.c44 {
+  background-color: #B80000;
+  min-height: 2.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  border-top: 0.0625rem solid transparent;
+}
+
+.c9 {
+  display: inline-block;
+  width: 100%;
+  max-width: 14.5632rem;
+  min-width: 9.7088rem;
+  -webkit-flex: 1 1 9.7088rem;
+  -ms-flex: 1 1 9.7088rem;
+  flex: 1 1 9.7088rem;
+  -ms-flex-preferred-size: 14.5632rem;
+}
+
+.c8:hover .c54,
+.c8:focus .c54 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+.c10 {
+  box-sizing: content-box;
+  color: #FFFFFF;
+  fill: currentColor;
+  padding-top: 0.625rem;
+  padding-bottom: 0.375rem;
+  height: 1.5rem;
+  width: 100%;
+  max-width: 14.5632rem;
+  min-width: 9.7088rem;
+  -webkit-flex: 1 1 9.7088rem;
+  -ms-flex: 1 1 9.7088rem;
+  flex: 1 1 9.7088rem;
+  -ms-flex-preferred-size: 14.5632rem;
+}
+
+.c8:hover .c10,
+.c8:focus .c10 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+.c8:hover .c55,
+.c8:focus .c55 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+.c8:hover .c56,
+.c8:focus .c56 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: 0.25rem solid #FFFFFF;
+  margin-bottom: -0.25rem;
+}
+
+.c23 {
+  background-color: #222222;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
+  transition-timing-function: cubic-bezier(0,0,0.58,1);
+  visibility: hidden;
+}
+
+.c24 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.125rem solid #3F3F42;
+}
+
+.c25 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #3F3F42;
+}
+
+.c25:last-child {
+  padding-bottom: 1rem;
+  border: 0;
+}
+
+.c26 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c26:hover,
+.c26:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c16 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  height: 2.875rem;
+  width: 2.875rem;
+}
+
+.c16:hover,
+.c16:focus {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.c16:hover::after,
+.c16:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c16 svg {
+  vertical-align: middle;
+}
+
+.c14 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c19 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.c22 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #FDFDFD;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem;
+}
+
+.c22:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+}
+
+.c22:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #FFFFFF;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c21 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.c57 .c20::after {
+  right: 0;
+}
+
+.c58 .c20::after {
+  right: 0;
+}
+
+.c13 {
+  position: relative;
+  background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
+}
+
+.c13 .c20::after {
+  left: 0;
+}
+
+.c59 .c20::after {
+  left: 0;
+}
+
+.c15 {
+  position: relative;
+}
+
+.c0 {
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  padding: 1rem 0.5rem;
+}
+
 .c1 {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c1::after {
+  content: '\\0020';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.c2 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+.c4 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.c4 li + li {
+  padding-top: 0.5rem;
+}
+
+.c3 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #BEBEBE;
+}
+
+.c3 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3 a:focus,
+.c3 a:hover {
+  color: #FFFFFF;
+}
+
+.c5 button {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  color: #F6A21D;
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.c5 button:focus,
+.c5 button:hover {
+  color: #FFFFFF;
+}
+
+.c5 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5 a:focus,
+.c5 a:hover {
+  color: #FFFFFF;
+}
+
+.c50 {
+  padding: 0.5rem 0 0.5rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: block;
+}
+
+.c53 {
+  padding: 0.5rem 0 0.5rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline;
+}
+
+.c49:hover .c51,
+.c49:focus .c51 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c47 {
+  border-bottom: 0.0625rem solid #3F3F42;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0.5rem;
+  -webkit-column-count: 4;
+  column-count: 4;
+}
+
+.c47 > li:first-child {
+  border-bottom: 0.0625rem solid #3F3F42;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+  grid-column: 1/-1;
+  width: 100%;
+  -webkit-column-span: all;
+  column-span: all;
+}
+
+.c48 {
+  min-width: 50%;
+  -webkit-column-gap: 1rem;
+  column-gap: 1rem;
+  -webkit-break-inside: avoid-column;
+  break-inside: avoid-column;
+}
+
+.c45 {
+  background-color: #222222;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c46 {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-top: 0.5rem);
+}
+
+.c52 {
+  color: #FFFFFF;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.c28 {
   width: 100%;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -2121,52 +6729,52 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   flex-grow: 1;
 }
 
-.c14 {
+.c40 {
   position: relative;
   min-height: 165px;
   margin-bottom: 2rem;
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
+  .c42 {
     font-size: 0.875rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c16 {
+  .c42 {
     background-color: transparent;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c17 {
+  .c43 {
     background-color: window;
   }
 }
 
 @media (min-width:25rem) {
-  .c17 {
+  .c43 {
     padding: 1rem;
   }
 }
 
 @supports (display:grid) {
-  .c0 {
+  .c27 {
     display: grid;
     position: initial;
   }
 }
 
 @supports (display:grid) {
-  .c3 {
+  .c30 {
     display: grid;
     position: initial;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c5 {
+  .c32 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -2175,7 +6783,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c5 {
+  .c32 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -2184,7 +6792,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c5 {
+  .c32 {
     width: calc(4/6*(100% - 6 * 0.5rem) + 3 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -2193,7 +6801,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
+  .c32 {
     width: calc(4/6*(100% - 6 * 1rem) + 3 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -2202,7 +6810,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c5 {
+  .c32 {
     width: calc(4/6*(100% - 6 * 1rem) + 3 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -2211,7 +6819,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @media (min-width:80rem) {
-  .c5 {
+  .c32 {
     width: calc(4/6*(100% - 6 * 1rem) + 3 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -2220,13 +6828,13 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @supports (display:grid) {
-  .c5 {
+  .c32 {
     display: block;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c11 {
+  .c37 {
     width: calc(0/6*(100% - 6 * 0.5rem) + -1 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -2235,7 +6843,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c11 {
+  .c37 {
     width: calc(0/6*(100% - 6 * 0.5rem) + -1 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -2244,7 +6852,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c37 {
     width: calc(2/6*(100% - 6 * 0.5rem) + 1 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -2253,7 +6861,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c11 {
+  .c37 {
     width: calc(2/6*(100% - 6 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -2262,7 +6870,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c11 {
+  .c37 {
     width: calc(2/6*(100% - 6 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -2271,7 +6879,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @media (min-width:80rem) {
-  .c11 {
+  .c37 {
     width: calc(2/6*(100% - 6 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -2280,13 +6888,13 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @supports (display:grid) {
-  .c11 {
+  .c37 {
     display: block;
   }
 }
 
 @media (max-width:14.9375rem) {
-  .c2 {
+  .c29 {
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -2297,7 +6905,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
+  .c29 {
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -2308,7 +6916,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
+  .c29 {
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -2319,7 +6927,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
+  .c29 {
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
@@ -2330,7 +6938,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c2 {
+  .c29 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     margin-left: 12.5%;
@@ -2340,7 +6948,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @media (min-width:80rem) {
-  .c2 {
+  .c29 {
     width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
     margin: 0 0.5rem;
     margin-left: 20%;
@@ -2350,39 +6958,39 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @supports (display:grid) {
-  .c2 {
+  .c29 {
     display: block;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
+  .c33 {
     font-size: 2rem;
     line-height: 2.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c33 {
     font-size: 2.75rem;
     line-height: 3.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c33 {
     padding: 2.5rem 0;
   }
 }
 
 @media screen {
-  .c6 {
+  .c33 {
     padding: 2rem 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
+  .c34 {
     padding-bottom: 0;
     word-break: break-word;
     line-height: 3.5rem;
@@ -2390,103 +6998,723 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
+  .c35 {
     font-size: 1.375rem;
     line-height: 1.875rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c35 {
     font-size: 1.5rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c36 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c36 {
     font-size: 1rem;
     line-height: 1.75rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c10 {
+  .c36 {
     padding-bottom: 0.5rem;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c12 {
+  .c38 {
     display: none;
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c12:focus {
+    top: 0.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c12 {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c7 {
+    display: block;
+  }
+}
+
+@media (min-width:25rem) {
+  .c6 {
+    min-height: 3.25rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c44 {
+    min-height: 3.25rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c9 {
+    display: block;
+  }
+}
+
+@media (min-width:25rem) {
+  .c10 {
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),print {
+  .c10 {
+    fill: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c23 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c23 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c26 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c26 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) {
+  .c16 {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    overflow: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c22 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c22 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c22 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c21:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c21::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #eab3b3;
+    z-index: -1;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c18 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    -webkit-scroll-behavior: auto;
+    -moz-scroll-behavior: auto;
+    -ms-scroll-behavior: auto;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-scrollbar-width: none;
+    -moz-scrollbar-width: none;
+    -ms-scrollbar-width: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .c18::-webkit-scrollbar {
+    display: none;
+  }
+
+  .c18:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    padding: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c2 {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    float: left;
+    margin-right: 3.5%;
+    width: 22%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    width: 18%;
+    float: right;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    margin: 0;
+    float: left;
+    width: 53%;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 button {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 button {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c47 {
+    display: grid;
+    grid-auto-flow: column;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c47 {
+    grid-auto-flow: row;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+}
+
+@media (min-width:15rem) and (max-width:37.4375rem) {
+  .c47 {
+    grid-column-gap: 0.5rem;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat( 4,auto );
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c47 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat( 3,auto );
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c1 {
+  .c47 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat( 3,auto );
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+
+@media (min-width:80rem) {
+  .c47 {
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat( 3,auto );
+    -webkit-column-count: 5;
+    column-count: 5;
+  }
+}
+
+@media (max-width:25rem) {
+  .c45 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c45 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c45 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c45 {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c28 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c1 {
+  .c28 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c4 {
+  .c31 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width:80rem) {
-  .c4 {
+  .c31 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c4 {
+  .c31 {
     padding-top: 1.5rem;
   }
 }
 
 <div>
+  <header
+    role="banner"
+  >
+    <div
+      class="c0"
+      dir="ltr"
+    >
+      <div
+        class="c1"
+        dir="ltr"
+      >
+        <h2
+          class="c2"
+          dir="ltr"
+        >
+          개인 정보와 쿠키 처리 방침이 업데이트되었습니다
+        </h2>
+        <p
+          class="c3"
+          dir="ltr"
+        >
+          개인 정보와 쿠키 처리 방침에서 주요 변경 사항과 이 변경 사항이 이용자와 이용자의 정보에 가질 영향에 대해 알려드리고자 합니다.
+        </p>
+        <ul
+          class="c4"
+          dir="ltr"
+        >
+          <li
+            class="c5"
+            dir="ltr"
+          >
+            <button
+              type="button"
+            >
+              네
+            </button>
+          </li>
+          <li
+            class="c5"
+            dir="ltr"
+          >
+            <a
+              href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+            >
+              변경사항을 확인하세요
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="c6"
+    >
+      <div
+        class="c7"
+      >
+        <a
+          class="c8 c9"
+          href="/korean"
+        >
+          <svg
+            aria-hidden="true"
+            class="c10"
+            focusable="false"
+            height="24"
+            viewBox="0 0 233.01 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill-rule="evenodd"
+              stroke="#000"
+              stroke-width=".335"
+              style="stroke: #fff;"
+            >
+              <path
+                d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
+              />
+              <path
+                d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
+              />
+              <path
+                d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z"
+              />
+              <path
+                d="M168.37 0v22.59"
+                stroke-width="2"
+              />
+              <path
+                d="M197.21 16.31v1.23h-15.44v-1.23h6V12h1.56v4.28zm-3.43-7.44V6.12h-10.2V4.89h11.74v1.56a32.82 32.82 0 0 1-.72 7.67l-1.54-.18a33.2 33.2 0 0 0 .61-3.9l-10.32.53-.23-1.29zM202.24 14.56a51.94 51.94 0 0 0 8.3-.59l.15 1.23a51.3 51.3 0 0 1-8.61.61h-1.41V9.49H207V6.05h-6.34V4.82h7.92v5.9h-6.3zM213.7 3.27V19.8h-1.56V3.27zM225.89 10.32c0 3.51-1.77 5.75-4.28 5.75s-4.3-2.24-4.3-5.75 1.79-5.75 4.3-5.75 4.28 2.23 4.28 5.75zm-1.49 0c0-2.67-1.16-4.39-2.8-4.39s-2.82 1.73-2.82 4.39 1.16 4.41 2.82 4.41 2.8-1.73 2.8-4.41zm8.6.83h-2.82v8.64h-1.56V3.31h1.56v6.56H233z"
+              />
+            </g>
+          </svg>
+          <span
+            class="c11"
+            role="text"
+          >
+            <span
+              lang="en-GB"
+            >
+              BBC News
+            </span>
+            , 
+            코리아
+          </span>
+        </a>
+        <a
+          class="c12"
+          dir="ltr"
+          href="#content"
+        >
+          내용 보기
+        </a>
+      </div>
+    </div>
+    <nav
+      class="c13"
+      dir="ltr"
+      role="navigation"
+    >
+      <div
+        class="c14"
+      >
+        <div
+          class="c15"
+        >
+          <button
+            aria-expanded="false"
+            class="c16"
+            dir="ltr"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="c17"
+              focusable="false"
+              height="2.75rem"
+              viewBox="0 0 44 44"
+              width="2.75rem"
+            >
+              <path
+                d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+              />
+            </svg>
+            <span
+              class="c11"
+            >
+              섹션
+            </span>
+          </button>
+          <div
+            class="c18"
+            dir="ltr"
+          >
+            <ul
+              class="c19"
+              role="list"
+            >
+              <li
+                class="c20 c21"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c22"
+                  href="/korean"
+                >
+                  뉴스
+                </a>
+              </li>
+              <li
+                class="c20 c21"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c22"
+                  href="/korean/media/video"
+                >
+                  비디오
+                </a>
+              </li>
+              <li
+                class="c20 c21"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c22"
+                  href="/korean/downloads"
+                >
+                  다운로드
+                </a>
+              </li>
+              <li
+                class="c20 c21"
+                dir="ltr"
+                role="listitem"
+              >
+                <a
+                  class="c22"
+                  href="/korean/popular/read"
+                >
+                  TOP 뉴스
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="c23"
+          height="0"
+        >
+          <ul
+            class="c24"
+            role="list"
+          >
+            <li
+              class="c25"
+              role="listitem"
+            >
+              <a
+                class="c26"
+                href="/korean"
+              >
+                뉴스
+              </a>
+            </li>
+            <li
+              class="c25"
+              role="listitem"
+            >
+              <a
+                class="c26"
+                href="/korean/media/video"
+              >
+                비디오
+              </a>
+            </li>
+            <li
+              class="c25"
+              role="listitem"
+            >
+              <a
+                class="c26"
+                href="/korean/downloads"
+              >
+                다운로드
+              </a>
+            </li>
+            <li
+              class="c25"
+              role="listitem"
+            >
+              <a
+                class="c26"
+                href="/korean/popular/read"
+              >
+                TOP 뉴스
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
   <noscript />
   <div>
     chartbeat
   </div>
   <main
-    class="c0 c1"
+    class="c27 c28"
     dir="ltr"
     role="main"
   >
     <div
-      class="c2"
+      class="c29"
       dir="ltr"
     >
       <div
-        class="c3 c4"
+        class="c30 c31"
         dir="rtl"
       >
         <div
-          class="c5"
+          class="c32"
           dir="ltr"
         >
           <h1
-            class="c6"
+            class="c33"
             id="content"
             tabindex="-1"
           >
@@ -2494,39 +7722,39 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
               role="text"
             >
               <span
-                class="c7"
+                class="c34"
               >
                 BBC 코리아 라디오
               </span>
               <span
-                class="c8"
+                class="c11"
               >
                 , 
               </span>
               <span
-                class="c9"
+                class="c35"
               >
                 2020년 5월 4일
               </span>
             </span>
           </h1>
           <p
-            class="c10"
+            class="c36"
           >
             한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.
           </p>
         </div>
         <div
-          class="c11"
+          class="c37"
           dir="ltr"
         >
           <div
-            class="c12"
+            class="c38"
             dir="ltr"
           >
             <img
               alt="BBC News 코리아"
-              class="c13"
+              class="c39"
               sizes="(min-width: 1008px) 228px, 30vw"
               src="https://ichef.bbci.co.uk/images/ic/128x128/p08b8lzc.png"
               srcset="https://ichef.bbci.co.uk/images/ic/128x128/p08b8lzc.png 128w,https://ichef.bbci.co.uk/images/ic/240x240/p08b8lzc.png 240w,https://ichef.bbci.co.uk/images/ic/480x480/p08b8lzc.png 480w"
@@ -2535,16 +7763,16 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
         </div>
       </div>
       <div
-        class="c14"
+        class="c40"
       >
         <div
-          class="c15"
+          class="c41"
         >
           <div
-            class="c16"
+            class="c42"
           >
             <strong
-              class="c17"
+              class="c43"
             >
               더 이상 이용할 수 없는 콘텐츠입니다.
             </strong>
@@ -2553,5 +7781,207 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
       </div>
     </div>
   </main>
+  <footer
+    role="contentinfo"
+  >
+    <div
+      class="c44"
+    >
+      <div
+        class="c7"
+      >
+        <a
+          class="c8 c9"
+          href="/korean"
+        >
+          <svg
+            aria-hidden="true"
+            class="c10"
+            focusable="false"
+            height="24"
+            viewBox="0 0 233.01 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill-rule="evenodd"
+              stroke="#000"
+              stroke-width=".335"
+              style="stroke: #fff;"
+            >
+              <path
+                d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z"
+              />
+              <path
+                d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z"
+              />
+              <path
+                d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z"
+              />
+              <path
+                d="M168.37 0v22.59"
+                stroke-width="2"
+              />
+              <path
+                d="M197.21 16.31v1.23h-15.44v-1.23h6V12h1.56v4.28zm-3.43-7.44V6.12h-10.2V4.89h11.74v1.56a32.82 32.82 0 0 1-.72 7.67l-1.54-.18a33.2 33.2 0 0 0 .61-3.9l-10.32.53-.23-1.29zM202.24 14.56a51.94 51.94 0 0 0 8.3-.59l.15 1.23a51.3 51.3 0 0 1-8.61.61h-1.41V9.49H207V6.05h-6.34V4.82h7.92v5.9h-6.3zM213.7 3.27V19.8h-1.56V3.27zM225.89 10.32c0 3.51-1.77 5.75-4.28 5.75s-4.3-2.24-4.3-5.75 1.79-5.75 4.3-5.75 4.28 2.23 4.28 5.75zm-1.49 0c0-2.67-1.16-4.39-2.8-4.39s-2.82 1.73-2.82 4.39 1.16 4.41 2.82 4.41 2.8-1.73 2.8-4.41zm8.6.83h-2.82v8.64h-1.56V3.31h1.56v6.56H233z"
+              />
+            </g>
+          </svg>
+          <span
+            class="c11"
+            role="text"
+          >
+            <span
+              lang="en-GB"
+            >
+              BBC News
+            </span>
+            , 
+            코리아
+          </span>
+        </a>
+      </div>
+    </div>
+    <div
+      class="c45"
+    >
+      <div
+        class="c46"
+      >
+        <ul
+          class="c47"
+          role="list"
+        >
+          <li
+            class="c48"
+            role="listitem"
+          >
+            <a
+              class="c49 c50"
+              href="https://www.bbc.com/korean/institutional-49283197"
+            >
+              <span
+                class="c51"
+              >
+                BBC News를 신뢰할 수 있는 이유
+              </span>
+            </a>
+          </li>
+          <li
+            class="c48"
+            role="listitem"
+          >
+            <a
+              class="c49 c50"
+              href="https://www.bbc.co.uk/usingthebbc/terms/"
+            >
+              <span
+                class="c51"
+              >
+                이용 약관
+              </span>
+            </a>
+          </li>
+          <li
+            class="c48"
+            role="listitem"
+          >
+            <a
+              class="c49 c50"
+              href="https://www.bbc.co.uk/aboutthebbc"
+            >
+              <span
+                class="c51"
+              >
+                BBC 소개
+              </span>
+            </a>
+          </li>
+          <li
+            class="c48"
+            role="listitem"
+          >
+            <a
+              class="c49 c50"
+              href="https://www.bbc.co.uk/usingthebbc/privacy/"
+            >
+              <span
+                class="c51"
+              >
+                개인정보취급방침
+              </span>
+            </a>
+          </li>
+          <li
+            class="c48"
+            role="listitem"
+          >
+            <a
+              class="c49 c50"
+              href="https://www.bbc.co.uk/usingthebbc/cookies/"
+            >
+              <span
+                class="c51"
+              >
+                쿠키정책
+              </span>
+            </a>
+          </li>
+          <li
+            class="c48"
+            role="listitem"
+          >
+            <a
+              class="c49 c50"
+              href="https://www.bbc.com/korean/institutional-42224941"
+            >
+              <span
+                class="c51"
+              >
+                고객센터
+              </span>
+            </a>
+          </li>
+          <li
+            class="c48"
+            role="listitem"
+          >
+            <a
+              class="c49 c50"
+              href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+              lang="en-GB"
+            >
+              <span
+                class="c51"
+              >
+                AdChoices / Do Not Sell My Info
+              </span>
+            </a>
+          </li>
+        </ul>
+        <p
+          class="c52"
+        >
+          <span
+            lang="en-GB"
+          >
+            ©
+             
+          </span>
+          2020 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다
+           
+          <a
+            class="c49 c53"
+            href="https://www.bbc.co.uk/help/web/links/"
+          >
+            <span
+              class="c51"
+            >
+              외부 링크에 대한 본사 정책 보기
+            </span>
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
 </div>
 `;

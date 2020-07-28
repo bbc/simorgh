@@ -6,8 +6,6 @@ import { render, act } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { StaticRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { RequestContextProvider } from '#contexts/RequestContext';
 import OnDemandRadioPage from '.';
 import pashtoPageData from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
 import koreanPageData from '#data/korean/bbc_korean_radio/w3ct0kn5';
@@ -15,28 +13,21 @@ import zhongwenPageData from '#data/zhongwen/bbc_cantonese_radio/w172xf3r5x8hw4v
 import indonesiaPageData from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l';
 import afaanoromooPageData from '#data/afaanoromoo/bbc_afaanoromoo_radio/w13xttnw';
 import * as analyticsUtils from '#lib/analyticsUtils';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandRadio/getInitialData';
 
 const Page = ({ pageData, service, isAmp = false, variant }) => (
   <StaticRouter>
-    <ToggleContextProvider
+    <OnDemandRadioPage
+      bbcOrigin="https://www.test.bbc.co.uk"
+      isAmp={isAmp}
+      pageType="media"
+      pathname="/pathname"
       service={service}
+      variant={variant}
       origin="https://www.test.bbc.co.uk"
-    >
-      <ServiceContextProvider service={service} variant={variant}>
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          isAmp={isAmp}
-          pageType="media"
-          pathname="/pathname"
-          service={service}
-          statusCode={200}
-        >
-          <OnDemandRadioPage service={service} pageData={pageData} />
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
+      status={200}
+      pageData={pageData}
+    />
   </StaticRouter>
 );
 
