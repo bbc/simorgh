@@ -15,12 +15,22 @@ jobs:
       - name: npm install & build
         run: |
           npm ci
+          npm run build
       - name: Unit Tests
         run: |
           npm run test:unit
       - name: Integration Tests
         run: |
           npm run test:integration:ci
+      - name: Linting
+        run: |
+          npm run test:lint
+      - name: Puppeteer
+        run: |
+          npm run test:puppeteer
+      - name: BBC A11y
+          run: |
+            npm run start && npm run bbcA11y
 
         env:
           CI: true
