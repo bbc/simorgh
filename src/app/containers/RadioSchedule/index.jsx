@@ -36,7 +36,6 @@ const RadioScheduleContainer = ({
 
   return (
     <Canonical
-      data-e2e="radio-schedule"
       className={className}
       endpoint={endpoint}
       initialData={initialData}
