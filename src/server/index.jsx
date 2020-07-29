@@ -24,6 +24,7 @@ import {
   ROUTING_INFORMATION,
 } from '#lib/logger.const';
 import getRemoteConfig from '#lib/utilities/getRemoteConfig/getRemoteConfigWithCache';
+import { OK } from '#lib/statusCodes.const';
 import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import local from './local';
@@ -146,10 +147,19 @@ server
 
         const { status } = data;
         const bbcOrigin = headers['bbc-origin'];
+        data.path = urlPath;
+        data.timeOnServer = Date.now();
 
         // Set derivedPageType based on returned page data
-        if (status === 200) {
+        if (status === OK) {
           derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
+        } else {
+          sendCustomMetric({
+            metricName: NON_200_RESPONSE,
+            statusCode: status,
+            pageType: derivedPageType,
+            requestUrl: url,
+          });
         }
 
         data.remoteConfig = remoteConfig;
@@ -180,7 +190,7 @@ server
           throw new Error('unknown result');
         }
       } catch ({ message, status = 500 }) {
-        await sendCustomMetric({
+        sendCustomMetric({
           metricName: NON_200_RESPONSE,
           statusCode: status,
           pageType: derivedPageType,
