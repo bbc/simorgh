@@ -45,14 +45,13 @@ import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-import recommendationsData from './fixtureData/recommendations.ltr.json';
-
 const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
     dir,
     mostRead: { header },
     script,
     service,
+    lang,
   } = useContext(ServiceContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
@@ -84,6 +83,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     pageData,
   );
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
+  const recommendationsInitialData = path(['recommendations'], pageData);
 
   const gridColumns = {
     group0: 8,
@@ -150,7 +150,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <CpsRecommendations
         {...props}
         parentColumns={gridColsMain}
-        items={recommendationsData.items}
+        items={recommendationsInitialData}
       />
     ),
   };
@@ -240,7 +240,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <CpsMetadata
         title={title}
         shortHeadline={shortHeadline}
-        language={metadata.language}
+        language={lang}
         description={summary}
         firstPublished={firstPublished}
         lastPublished={lastPublished}

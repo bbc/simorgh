@@ -197,6 +197,21 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
         </span>
       </a>
     </li>
+    <li
+      class="c3"
+      role="listitem"
+    >
+      <a
+        class="c4"
+        href="https://www.bbc.com/persian"
+      >
+        <span
+          class="c8"
+        >
+          Promo link in Index Alsos
+        </span>
+      </a>
+    </li>
   </ul>
 </div>
 `;

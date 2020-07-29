@@ -94,11 +94,6 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                   </span>
                 </a>
               </h3>
-              <p
-                class="Summary-sc-1dvfmi3-4 eaCWBB"
-              >
-                James den Kwesi Ansah want convert most of Ghana's cassava waste into cheap electricity supply for schools, hospitals den villages.
-              </p>
               <time
                 class="StyledTimestamp-um718p-0 kVWTyt"
                 datetime="1970-01-18"
@@ -149,11 +144,6 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                   How light companies dey use estimated billing show Nigerians pepper
                 </a>
               </h3>
-              <p
-                class="Summary-sc-1dvfmi3-4 eaCWBB"
-              >
-                Lawmakers for Nigeria wan make am crime for light companies to use guesswork give customer estimated bill.
-              </p>
               <time
                 class="StyledTimestamp-um718p-0 kVWTyt"
                 datetime="1970-01-18"
@@ -204,11 +194,6 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                   Nigeria: Wetin 5,222 megawatts electric fit do?
                 </a>
               </h3>
-              <p
-                class="Summary-sc-1dvfmi3-4 eaCWBB"
-              >
-                Di Transmission Company of Nigeria and di vice-president office carry tori come outside say electric power wey di country produce don increase pass before as e reach 5,222 megawatts dis December.
-              </p>
               <time
                 class="StyledTimestamp-um718p-0 kVWTyt"
                 datetime="1970-01-18"
@@ -262,7 +247,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
         </h2>
       </div>
       <div
-        class="SingleContentWrapper-opyob2-3 iddZTf"
+        class="SingleContentWrapper-opyob2-3 gppAKd"
       >
         <div
           class="GridComponent-nf79gm-0 kpBIsj"

@@ -29,6 +29,7 @@
   "content": {
     "blocks": [
       {
+        "availability": "available",
         "id": "w172xc9mmckr8m6",
         "subType": "episode",
         "format": "Video",

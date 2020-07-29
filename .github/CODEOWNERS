@@ -1,6 +1,6 @@
 # Order is important. The last matching pattern has the most precedence.
 # Protected files
-**/*webpack*    @benjaminhobbs @jamesdonoh @sareh @hindsc52 @jblaut @jroebu14 @ryanmccombe @craigkj 
-/envConfig/     @benjaminhobbs @jamesdonoh @sareh @hindsc52 @jblaut @jroebu14 @ryanmccombe @craigkj
-Jenkinsfile     @benjaminhobbs @jamesdonoh @sareh @hindsc52 @craigkj
+**/*webpack*    @jamesdonoh @sareh @hindsc52 @jblaut @jroebu14 @ryanmccombe @craigkj 
+/envConfig/     @jamesdonoh @sareh @hindsc52 @jblaut @jroebu14 @ryanmccombe @craigkj
+Jenkinsfile     @jamesdonoh @sareh @hindsc52 @craigkj
 **/*CODEOWNERS* @bbc/simorgh-admins

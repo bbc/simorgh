@@ -41,11 +41,21 @@ const Page = ({
   </StaticRouter>
 );
 
-const renderPage = async ({ pageData, service, isAmp = false }) => {
+const renderPage = async ({
+  pageData,
+  service,
+  isAmp = false,
+  darkModeEnabled = false,
+}) => {
   let result;
   await act(async () => {
     result = await render(
-      <Page pageData={pageData} service={service} isAmp={isAmp} />,
+      <Page
+        pageData={pageData}
+        service={service}
+        isAmp={isAmp}
+        darkModeEnabled={darkModeEnabled}
+      />,
     );
   });
 
@@ -61,6 +71,8 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
 
 const { env } = process;
 
+const pageType = 'media';
+
 describe('OnDemand TV Brand Page ', () => {
   beforeEach(() => {
     process.env = { ...env };
@@ -69,7 +81,10 @@ describe('OnDemand TV Brand Page ', () => {
   it('a11y - should render a visually hidden headline', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
-    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-tv-path',
+      pageType,
+    });
     await renderPage({
       pageData,
       service: 'pashto',
@@ -86,7 +101,10 @@ describe('OnDemand TV Brand Page ', () => {
   it('should show the brand title for OnDemand TV Pages', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
-    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-tv-path',
+      pageType,
+    });
     const { getByText } = await renderPage({
       pageData,
       service: 'pashto',
@@ -98,7 +116,10 @@ describe('OnDemand TV Brand Page ', () => {
   it('a11y - should aria-hide the title', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
-    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-tv-path',
+      pageType,
+    });
     const { container } = await renderPage({
       pageData,
       service: 'pashto',
@@ -113,7 +134,10 @@ describe('OnDemand TV Brand Page ', () => {
   it('a11y - should have a "content" id on the h1', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
-    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-tv-path',
+      pageType,
+    });
     const { container } = await renderPage({
       pageData,
       service: 'pashto',
@@ -125,7 +149,10 @@ describe('OnDemand TV Brand Page ', () => {
   it('Dark Mode Design - should match snapshot', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
-    const { pageData } = await getInitialData('some-ondemand-tv-path');
+    const { pageData } = await getInitialData({
+      path: 'some-ondemand-tv-path',
+      pageType,
+    });
     const { container } = await renderPage({
       pageData,
       service: 'pashto',
@@ -139,7 +166,10 @@ describe('OnDemand TV Brand Page ', () => {
 it('should show the datestamp correctly for Pashto OnDemand TV Pages', async () => {
   fetch.mockResponse(JSON.stringify(pashtoPageData));
 
-  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { pageData } = await getInitialData({
+    path: 'some-ondemand-tv-path',
+    pageType,
+  });
   const { getByText } = await renderPage({
     pageData,
     service: 'pashto',
@@ -151,7 +181,10 @@ it('should show the datestamp correctly for Pashto OnDemand TV Pages', async () 
 it('should show the summary for OnDemand TV Pages', async () => {
   fetch.mockResponse(JSON.stringify(pashtoPageData));
 
-  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { pageData } = await getInitialData({
+    path: 'some-ondemand-tv-path',
+    pageType,
+  });
   const { getByText } = await renderPage({
     pageData,
     service: 'pashto',
@@ -167,7 +200,10 @@ it('should show the summary for OnDemand TV Pages', async () => {
 it('should show the video player on canonical with no live override', async () => {
   process.env.SIMORGH_APP_ENV = 'live';
   fetch.mockResponse(JSON.stringify(pashtoPageData));
-  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { pageData } = await getInitialData({
+    path: 'some-ondemand-tv-path',
+    pageType,
+  });
   const { container } = await renderPage({
     pageData,
     service: 'pashto',
@@ -184,7 +220,10 @@ it('should show the video player on canonical with no live override', async () =
 it('should show the video player on amp with no live override', async () => {
   process.env.SIMORGH_APP_ENV = 'live';
   fetch.mockResponse(JSON.stringify(pashtoPageData));
-  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { pageData } = await getInitialData({
+    path: 'some-ondemand-tv-path',
+    pageType,
+  });
   const { container } = await renderPage({
     pageData,
     service: 'pashto',
@@ -202,7 +241,10 @@ it('should show the video player on amp with no live override', async () => {
 it('should show the video player on canonical with live override', async () => {
   process.env.SIMORGH_APP_ENV = 'test';
   fetch.mockResponse(JSON.stringify(pashtoPageData));
-  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { pageData } = await getInitialData({
+    path: 'some-ondemand-tv-path',
+    pageType,
+  });
   const { container } = await renderPage({
     pageData,
     service: 'pashto',
@@ -218,7 +260,10 @@ it('should show the video player on canonical with live override', async () => {
 
 it('should show the video player on amp with live override', async () => {
   fetch.mockResponse(JSON.stringify(pashtoPageData));
-  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  const { pageData } = await getInitialData({
+    path: 'some-ondemand-tv-path',
+    pageType,
+  });
   const { container } = await renderPage({
     pageData,
     service: 'pashto',
@@ -234,13 +279,16 @@ it('should show the video player on amp with live override', async () => {
 });
 
 it('should show the expired content message if episode is expired', async () => {
-  const pageDataWithoutVersions = assocPath(
-    ['content', 'blocks', 0, 'versions'],
-    [],
+  const pageDataWithExpiredEpisode = assocPath(
+    ['content', 'blocks', 0, 'availability'],
+    'notAvailable',
     pashtoPageData,
   );
-  fetch.mockResponse(JSON.stringify(pageDataWithoutVersions));
-  const { pageData } = await getInitialData('some-ondemand-tv-path');
+  fetch.mockResponse(JSON.stringify(pageDataWithExpiredEpisode));
+  const { pageData } = await getInitialData({
+    path: 'some-ondemand-tv-path',
+    pageType,
+  });
   const { container, getByText } = await renderPage({
     pageData,
     service: 'pashto',
@@ -250,5 +298,51 @@ it('should show the expired content message if episode is expired', async () => 
 
   expect(audioPlayerIframeEl).not.toBeInTheDocument();
   expect(expiredMessageEl).toBeInTheDocument();
+  expect(container).toMatchSnapshot();
+});
+
+it('should show the future content message if episode is not yet available', async () => {
+  const pageDataWithFutureEpisode = assocPath(
+    ['content', 'blocks', 0, 'availability'],
+    'future',
+    pashtoPageData,
+  );
+  fetch.mockResponse(JSON.stringify(pageDataWithFutureEpisode));
+  const { pageData } = await getInitialData({
+    path: 'some-ondemand-tv-path',
+    pageType,
+  });
+  const { container, getByText } = await renderPage({
+    pageData,
+    service: 'pashto',
+  });
+  const audioPlayerIframeEl = container.querySelector('iframe');
+  const notYetAvailableEl = getByText('دغه پروګرام د خپرولو لپاره چمتو نه دی.');
+
+  expect(audioPlayerIframeEl).not.toBeInTheDocument();
+  expect(notYetAvailableEl).toBeInTheDocument();
+  expect(container).toMatchSnapshot();
+});
+
+it('should show the future content message if episode is pending', async () => {
+  const pageDataWithFutureEpisode = assocPath(
+    ['content', 'blocks', 0, 'availability'],
+    'pending',
+    pashtoPageData,
+  );
+  fetch.mockResponse(JSON.stringify(pageDataWithFutureEpisode));
+  const { pageData } = await getInitialData({
+    path: 'some-ondemand-tv-path',
+    pageType,
+  });
+  const { container, getByText } = await renderPage({
+    pageData,
+    service: 'pashto',
+  });
+  const audioPlayerIframeEl = container.querySelector('iframe');
+  const notYetAvailableEl = getByText('دغه پروګرام د خپرولو لپاره چمتو نه دی.');
+
+  expect(audioPlayerIframeEl).not.toBeInTheDocument();
+  expect(notYetAvailableEl).toBeInTheDocument();
   expect(container).toMatchSnapshot();
 });
