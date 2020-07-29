@@ -27,17 +27,6 @@ import indexPageJson from '#data/ukrainian/ukraine_in_russian';
 
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
 
-// beforeAll(async () =>
-//   Promise.all(
-//     routes.map(({ component }) => {
-//       if (component.load) {
-//         return component.load();
-//       }
-//       return Promise.resolve();
-//     }),
-//   ),
-// );
-
 beforeEach(() => {
   // Mocks out CanonicalAdBootstrapJs script
   window.dotcom = {
@@ -417,7 +406,7 @@ it('should render a 404 error page if a data fetch responds with a 404', async (
 
   const { pageType, getInitialData } = getMatchingRoute(pathname);
   const { status } = await getInitialData({ path: pathname });
-  const { getByText, container } = renderRouter({
+  const { getByText } = renderRouter({
     pathname,
     pageType,
     status,
