@@ -25,6 +25,9 @@ import pidginSecondaryColumnData from '#data/pidgin/secondaryColumn/index.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import igboMostReadData from '#data/igbo/mostRead/index.json';
 import igboSecondaryColumnData from '#data/igbo/secondaryColumn/index.json';
+import ukrainianPageData from '#data/ukrainian/cpsAssets/news-russian-23333960.json';
+import ukrainianSecondaryColumnData from '#data/ukrainian/secondaryColumn/index.json';
+import ukrainianMostReadData from '#data/ukrainian/mostRead/index.json';
 
 fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
 
@@ -39,10 +42,10 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
-const createAssetPage = ({ pageData }, service) => (
+const createAssetPage = ({ pageData }, service, variant = 'default') => (
   <StaticRouter>
     <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
-      <ServiceContextProvider service={service}>
+      <ServiceContextProvider service={service} value={service[variant]}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
           isAmp={false}
@@ -50,6 +53,7 @@ const createAssetPage = ({ pageData }, service) => (
           pathname={pageData.metadata.locators.assetUri}
           service={service}
           statusCode={200}
+          variant={pageData.variant}
         >
           <StoryPage service={service} pageData={pageData} />
         </RequestContextProvider>
@@ -197,5 +201,35 @@ describe('Story Page', () => {
 
     const page = createAssetPage({ pageData }, 'pidgin');
     await matchSnapshotAsync(page);
+  });
+
+  it('should render secondary column div with lang attribute when officialLang is defined by a language override', async () => {
+    fetchMock.mock(
+      'http://localhost/some-cps-sty-path.json',
+      ukrainianPageData,
+    );
+    fetchMock.mock(
+      'http://localhost/ukrainian/sty-secondary-column.json',
+      ukrainianSecondaryColumnData,
+    );
+    fetchMock.mock(
+      'http://localhost/ukrainian/mostread.json',
+      ukrainianMostReadData,
+    );
+
+    const { pageData } = await getInitialData({
+      path: '/some-cps-sty-path',
+      service: 'ukrainian',
+      pageType,
+      variant: 'ru-UA',
+    });
+
+    const page = createAssetPage({ pageData }, 'ukrainian');
+    await matchSnapshotAsync(page);
+
+    // expect(page.querySelector('div[class*="SecondaryColumn"]')).toHaveAttribute(
+    //   'lang',
+    //   'uk',
+    // );
   });
 });
