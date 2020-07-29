@@ -1,5 +1,4 @@
 import Url from 'url-parse';
-import isAmpPath from '#app/routes/utils/isAmpPath';
 
 const supportedTypes = {
   indepthtoolkit: 'idt1',
@@ -16,7 +15,7 @@ const hasAmpVersion = href => {
   return !!hasAmpImageQueryString;
 };
 
-const includeClassifier = ({ href, pathname }) => {
+const includeClassifier = ({ href, isAmp }) => {
   // This determines if the href has a leading '/'
   const hrefTypePostion = () => (href.indexOf('/') === 0 ? 1 : 0);
 
@@ -31,8 +30,6 @@ const includeClassifier = ({ href, pathname }) => {
 
   // This determines if the type is supported and returns the include type name
   const includeType = supportedTypes[typeExtraction];
-
-  const isAmp = isAmpPath(pathname);
 
   const platform = isAmp ? 'amp' : 'canonical';
   const classification = includeType
