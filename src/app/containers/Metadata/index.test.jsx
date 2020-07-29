@@ -46,32 +46,30 @@ const MetadataWithContext = ({
   aboutTags,
   mentionsTags,
   /* eslint-enable react/prop-types */
-}) => {
-  return (
-    <ServiceContextProvider service={service} pageLang={lang}>
-      <RequestContextProvider
-        bbcOrigin={bbcOrigin}
-        id={id}
-        isAmp={platform === 'amp'}
-        pageType={pageType}
-        pathname={pathname}
-        service={service}
-        statusCode={200}
-      >
-        <MetadataContainer
-          title={title}
-          lang={lang}
-          description={description}
-          openGraphType={openGraphType}
-          aboutTags={aboutTags}
-          mentionsTags={mentionsTags}
-          image={image}
-          imageAltText={imageAltText}
-        />
-      </RequestContextProvider>
-    </ServiceContextProvider>
-  );
-};
+}) => (
+  <ServiceContextProvider service={service} pageLang={lang}>
+    <RequestContextProvider
+      bbcOrigin={bbcOrigin}
+      id={id}
+      isAmp={platform === 'amp'}
+      pageType={pageType}
+      pathname={pathname}
+      service={service}
+      statusCode={200}
+    >
+      <MetadataContainer
+        title={title}
+        lang={lang}
+        description={description}
+        openGraphType={openGraphType}
+        aboutTags={aboutTags}
+        mentionsTags={mentionsTags}
+        image={image}
+        imageAltText={imageAltText}
+      />
+    </RequestContextProvider>
+  </ServiceContextProvider>
+);
 
 const CanonicalNewsInternationalOrigin = () => (
   <MetadataWithContext
@@ -646,8 +644,8 @@ shouldMatchSnapshot(
 shouldMatchSnapshot(
   'should match for Ukrainian STY with Ukrainian lang on canonical',
   <MetadataWithContext
-    service="ukrainian"
     lang="uk"
+    service="ukrainian"
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id="news-53577781"
@@ -662,8 +660,8 @@ shouldMatchSnapshot(
 shouldMatchSnapshot(
   'should match for Ukrainian STY with Ukrainian lang on Amp',
   <MetadataWithContext
-    service="ukrainian"
     lang="uk"
+    service="ukrainian"
     bbcOrigin={dotComOrigin}
     platform="amp"
     id="news-53577781"
