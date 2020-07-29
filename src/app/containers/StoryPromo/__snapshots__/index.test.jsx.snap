@@ -6627,6 +6627,21 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
             </span>
           </a>
         </li>
+        <li
+          class="c13"
+          role="listitem"
+        >
+          <a
+            class="c14"
+            href="https://www.bbc.com/persian"
+          >
+            <span
+              class="c18"
+            >
+              Promo link in Index Alsos
+            </span>
+          </a>
+        </li>
       </ul>
     </div>
   </div>

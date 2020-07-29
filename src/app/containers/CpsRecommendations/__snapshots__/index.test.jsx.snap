@@ -2,54 +2,387 @@
 
 exports[`CpsRecommendations should not render when cpsRecommendations toggle is disabled 1`] = `<div />`;
 
-exports[`CpsRecommendations should not render when the hasStoryRecommendations flag is disabled for the service 1`] = `<div />`;
+exports[`CpsRecommendations should not render when the service does not support recommendations 1`] = `<div />`;
 
-exports[`CpsRecommendations should render when cpsRecommendations toggle and hasStoryRecommendations flag are both true 1`] = `
+exports[`CpsRecommendations should not render when there is no recommendations data 1`] = `<div />`;
+
+exports[`CpsRecommendations should render when cpsRecommendations toggle is enabled and the service supports recommendations for a single item 1`] = `
 <div>
   <div
-    class="GridComponent-nf79gm-0 gcdGSo"
-    dir="ltr"
+    class="Wrapper-sc-1raf5kj-0 hgWAOX"
   >
-    <h3
-      class="Headline-sc-1dvfmi3-3 dnWhDh"
+    <a
+      class="SkipLink-sc-1raf5kj-1 kSEOyf"
+      href="#end-of-recommendations"
     >
-      <a
-        class="Link-sc-1dvfmi3-5 jeUMCT"
-        href="/mundo/noticias-america-latina-51975331"
-      >
-        Argentina ordena cuarentena total obligatoria por el coronavirus
-      </a>
-    </h3>
-    <h3
-      class="Headline-sc-1dvfmi3-3 dnWhDh"
+      Skip Quizás también te interese and continue reading
+    </a>
+    <div
+      class="RecommendationsWrapper-sc-1p91yk0-1 isuewT"
     >
-      <a
-        class="Link-sc-1dvfmi3-5 jeUMCT"
-        href="/mundo/noticias-america-latina-52250630"
+      <section
+        aria-labelledby="recommendations-heading"
+        class="Wrapper-opyob2-0 gpdVtc"
+        data-e2e="related-content"
+        role="region"
       >
-        Por qué México se convirtió en el gran obstáculo del plan de la OPEP para aumentar el precio del petróleo
-      </a>
-    </h3>
-    <h3
-      class="Headline-sc-1dvfmi3-3 dnWhDh"
+        <div
+          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD StyledSectionLabel-opyob2-2 dshOgq"
+        >
+          <strong
+            class="Heading-sc-1x4gwjz-2 eZofTG"
+          >
+            <span
+              class="FlexColumn-wx5kdp-0 dgpsiS"
+            >
+              <span
+                class="FlexRow-wx5kdp-2 dVBNyZ"
+              >
+                <span
+                  class="Title-wx5kdp-4 lmzCD"
+                  dir="ltr"
+                  id="recommendations-heading"
+                >
+                  Quizás también te interese
+                </span>
+              </span>
+            </span>
+          </strong>
+        </div>
+        <div
+          class="SingleContentWrapper-opyob2-3 dFLSlx"
+        >
+          <div
+            class="GridComponent-nf79gm-0 elxESl"
+            dir="ltr"
+          >
+            <div
+              class="StyledStoryPromoWrapper-sc-1p91yk0-0 epoiuU"
+            >
+              <div
+                class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              >
+                <div
+                  class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  dir="ltr"
+                >
+                  <div
+                    class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  >
+                    <div
+                      class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    >
+                      <div
+                        class="lazyload-placeholder"
+                      />
+                    </div>
+                    <div
+                      class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                  dir="ltr"
+                >
+                  <div
+                    class="Headline-sc-1dvfmi3-3 dnWhDh"
+                  >
+                    <a
+                      class="Link-sc-1dvfmi3-5 jeUMCT"
+                      href="/mundo/noticias-53377054"
+                    >
+                      La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <p
+      class="EndText-sc-1raf5kj-2 kEyfjd"
+      id="end-of-recommendations"
+      tabindex="-1"
     >
-      <a
-        class="Link-sc-1dvfmi3-5 jeUMCT"
-        href="/mundo/noticias-52275464"
-      >
-        El inédito y cuestionado plan de emergencia económica de Ecuador contra la crisis del coronavirus
-      </a>
-    </h3>
-    <h3
-      class="Headline-sc-1dvfmi3-3 dnWhDh"
+      End of Quizás también te interese
+    </p>
+  </div>
+</div>
+`;
+
+exports[`CpsRecommendations should render when cpsRecommendations toggle is enabled and the service supports recommendations for multiple items 1`] = `
+<div>
+  <div
+    class="Wrapper-sc-1raf5kj-0 hgWAOX"
+  >
+    <a
+      class="SkipLink-sc-1raf5kj-1 kSEOyf"
+      href="#end-of-recommendations"
     >
-      <a
-        class="Link-sc-1dvfmi3-5 jeUMCT"
-        href="/mundo/noticias-51796524"
+      Skip Quizás también te interese and continue reading
+    </a>
+    <div
+      class="RecommendationsWrapper-sc-1p91yk0-1 isuewT"
+    >
+      <section
+        aria-labelledby="recommendations-heading"
+        class="Wrapper-opyob2-0 gpdVtc"
+        data-e2e="related-content"
+        role="region"
       >
-        La guerra de precios entre Arabia Saudita y Rusia que hundió el valor del petróleo y las bolsas en medio de la crisis por el coronavirus
-      </a>
-    </h3>
+        <div
+          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD StyledSectionLabel-opyob2-2 dshOgq"
+        >
+          <strong
+            class="Heading-sc-1x4gwjz-2 eZofTG"
+          >
+            <span
+              class="FlexColumn-wx5kdp-0 dgpsiS"
+            >
+              <span
+                class="FlexRow-wx5kdp-2 dVBNyZ"
+              >
+                <span
+                  class="Title-wx5kdp-4 lmzCD"
+                  dir="ltr"
+                  id="recommendations-heading"
+                >
+                  Quizás también te interese
+                </span>
+              </span>
+            </span>
+          </strong>
+        </div>
+        <ul
+          class="StoryPromoUl-sc-171lqjd-2 brjIMO GridComponent-nf79gm-0 buIDdq"
+          dir="ltr"
+          role="list"
+        >
+          <li
+            class="StoryPromoLiBase-sc-171lqjd-0 kPpUUd GridComponent-nf79gm-0 cjfxRv"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="GridComponent-nf79gm-0 eRYAGr"
+              dir="ltr"
+            >
+              <div
+                class="StyledStoryPromoWrapper-sc-1p91yk0-0 epoiuU"
+              >
+                <div
+                  class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                >
+                  <div
+                    class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                    dir="ltr"
+                  >
+                    <div
+                      class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                    >
+                      <div
+                        class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                      >
+                        <div
+                          class="lazyload-placeholder"
+                        />
+                      </div>
+                      <div
+                        class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                    dir="ltr"
+                  >
+                    <div
+                      class="Headline-sc-1dvfmi3-3 dnWhDh"
+                    >
+                      <a
+                        class="Link-sc-1dvfmi3-5 jeUMCT"
+                        href="/mundo/noticias-53377054"
+                      >
+                        La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLiBase-sc-171lqjd-0 kPpUUd GridComponent-nf79gm-0 cjfxRv"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="GridComponent-nf79gm-0 eRYAGr"
+              dir="ltr"
+            >
+              <div
+                class="StyledStoryPromoWrapper-sc-1p91yk0-0 epoiuU"
+              >
+                <div
+                  class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                >
+                  <div
+                    class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                    dir="ltr"
+                  >
+                    <div
+                      class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                    >
+                      <div
+                        class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                      >
+                        <div
+                          class="lazyload-placeholder"
+                        />
+                      </div>
+                      <div
+                        class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                    dir="ltr"
+                  >
+                    <div
+                      class="Headline-sc-1dvfmi3-3 dnWhDh"
+                    >
+                      <a
+                        class="Link-sc-1dvfmi3-5 jeUMCT"
+                        href="/mundo/noticias-america-latina-52884902"
+                      >
+                        Coronavirus en Colombia | El caso de la vigilante Edy Fonseca: "Me retuvieron en un edificio de clase alta durante la pandemia, lo acepté y me siento culpable"
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLiBase-sc-171lqjd-0 kPpUUd GridComponent-nf79gm-0 cjfxRv"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="GridComponent-nf79gm-0 eRYAGr"
+              dir="ltr"
+            >
+              <div
+                class="StyledStoryPromoWrapper-sc-1p91yk0-0 epoiuU"
+              >
+                <div
+                  class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                >
+                  <div
+                    class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                    dir="ltr"
+                  >
+                    <div
+                      class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                    >
+                      <div
+                        class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                      >
+                        <div
+                          class="lazyload-placeholder"
+                        />
+                      </div>
+                      <div
+                        class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                    dir="ltr"
+                  >
+                    <div
+                      class="Headline-sc-1dvfmi3-3 dnWhDh"
+                    >
+                      <a
+                        class="Link-sc-1dvfmi3-5 jeUMCT"
+                        href="/mundo/noticias-internacional-53113381"
+                      >
+                        Soy una mujer genocida y aún me persiguen los recuerdos de lo que hice
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="StoryPromoLiBase-sc-171lqjd-0 kPpUUd GridComponent-nf79gm-0 cjfxRv"
+            dir="ltr"
+            role="listitem"
+          >
+            <div
+              class="GridComponent-nf79gm-0 eRYAGr"
+              dir="ltr"
+            >
+              <div
+                class="StyledStoryPromoWrapper-sc-1p91yk0-0 epoiuU"
+              >
+                <div
+                  class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                >
+                  <div
+                    class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                    dir="ltr"
+                  >
+                    <div
+                      class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                    >
+                      <div
+                        class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                      >
+                        <div
+                          class="lazyload-placeholder"
+                        />
+                      </div>
+                      <div
+                        class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                    dir="ltr"
+                  >
+                    <div
+                      class="Headline-sc-1dvfmi3-3 dnWhDh"
+                    >
+                      <a
+                        class="Link-sc-1dvfmi3-5 jeUMCT"
+                        href="/mundo/vert-cul-53370542"
+                      >
+                        Estrenos 2020: las 10 mejores películas de lo que va del año según la BBC (y que seguramente no pudiste ver en el cine)
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <p
+      class="EndText-sc-1raf5kj-2 kEyfjd"
+      id="end-of-recommendations"
+      tabindex="-1"
+    >
+      End of Quizás también te interese
+    </p>
   </div>
 </div>
 `;
