@@ -18,7 +18,6 @@ export const ServiceContextProvider = ({
   if (!LoadableContextProvider) {
     return null;
   }
-  console.log(pageLang);
   return (
     <LoadableContextProvider
       Context={ServiceContext}
