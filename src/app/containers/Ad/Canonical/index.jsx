@@ -31,10 +31,16 @@ const AdContainer = styled.section`
   ${({ slotType }) => (slotType === 'mpu' ? mpuStyles : leaderboardStyles)}
 `;
 
-export const getBootsrapSrc = queryString => {
+export const getBootstrapSrc = queryString => {
   const useLiveSrc = isLive() || queryString.includes('ads-js-env=live');
   const params = useLiveSrc ? '' : 'test/';
   return `https://gn-web-assets.api.bbc.com/ngas/${params}dotcom-bootstrap.js`;
+};
+
+export const getBootstrapLegacySrc = queryString => {
+  const useLiveSrc = isLive() || queryString.includes('ads-js-env=live');
+  const params = useLiveSrc ? '' : 'test/';
+  return `https://gn-web-assets.api.bbc.com/ngas/${params}dotcom-bootstrap-legacy.js`;
 };
 
 const CanonicalAd = ({ slotType }) => {
@@ -65,7 +71,8 @@ const CanonicalAd = ({ slotType }) => {
       {/* Loading dotcom-bootstrap.js here instead of CanonicalAdBootstrapJs to avoid it loading on live */}
       {/* This can be moved once we allow the script to load on live */}
       <Helmet>
-        <script src={getBootsrapSrc(queryString)} />
+        <script type="module" src={getBootstrapSrc(queryString)} />
+        <script nomodule="nomodule" src={getBootstrapLegacySrc(queryString)} />
       </Helmet>
       <AdContainer
         slotType={slotType}
