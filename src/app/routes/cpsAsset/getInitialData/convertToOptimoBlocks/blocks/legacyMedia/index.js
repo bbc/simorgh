@@ -23,6 +23,7 @@ const generateVideoBlock = (block, json) => {
       synopses: {
         short: path(['promo', 'headlines', 'shortHeadline'], json),
       },
+      firstPublished: path(['metadata', 'firstPublished'], json),
     },
   };
 

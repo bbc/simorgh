@@ -24,6 +24,9 @@ export const legacyMedia = {
         'Новый рекорд во фридайвинге: 124 метра под водой без акваланга',
     },
   },
+  metadata: {
+    firstPublished: 1462441945000,
+  },
 };
 
 export const legacyOptimoVideoBlock = {
@@ -50,6 +53,7 @@ export const legacyOptimoVideoBlock = {
                 },
                 title:
                   'Новый рекорд фридайвинга: 124 метра под водой без акваланга',
+                firstPublished: 1462441945000,
               },
             },
             {
