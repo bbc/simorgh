@@ -5,10 +5,11 @@ const ora = require('ora');
 const fs = require('fs');
 const chalk = require('chalk');
 const Table = require('cli-table');
+const { getPageBundleData } = require('./getPageBundleData');
 
 // need fake Cypress in global scope to require service configs:
 global.Cypress = { env: () => ({}) };
-const cypressServiceConfigs = require('../cypress/support/config/services');
+const cypressServiceConfigs = require('../../cypress/support/config/services');
 
 const services = Object.keys(cypressServiceConfigs);
 const { MIN_SIZE, MAX_SIZE } = require('./bundleSizeConfig');
@@ -17,10 +18,13 @@ const jsFiles = fs
   .readdirSync('build/public/static/js')
   .filter(fileName => fileName.endsWith('.js'));
 
+console.log(jsFiles);
+
 const getFileSize = filePath => fs.statSync(filePath).size;
 
 const getBundleData = _fileName => {
   const filenames = jsFiles.filter(fileName => fileName.match(_fileName));
+  console.log(`${_fileName} - ${filenames}`);
 
   const bundleNames = filenames.map(fileName =>
     fileName.replace(/(?<=\w)-.+$/, ''),
@@ -54,7 +58,7 @@ const createConsoleError = (service, size, adjective) =>
 
 const mainBundleData = getBundleData(/^main/);
 const vendorBundleData = getBundleData(/^vendor/);
-const pageBundleData = getBundleData(/.+Page/);
+
 const commonBundlesData = getBundleData(/^common/);
 const serviceBundleData = services
   .map(service => getBundleData(new RegExp(`^${service}`)))
@@ -81,6 +85,7 @@ const averageBundleSize = serviceBundlesTotals.reduce(
 );
 const smallestBundleSize = Math.min(...serviceBundlesTotals);
 const largestBundleSize = Math.max(...serviceBundlesTotals);
+const pageBundleData = getPageBundleData({ jsFiles });
 
 console.log('');
 const spinner = ora({
