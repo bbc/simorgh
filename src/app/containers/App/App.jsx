@@ -85,7 +85,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         });
       });
 
-      const updateRemoteConfig = async () => {
+      const updateAppState = async () => {
         const nextRemoteConfig = await getRemoteConfig(nextService);
         const data = await getInitialData({
           path: location.pathname,
@@ -113,7 +113,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         });
       };
 
-      updateRemoteConfig();
+      updateAppState();
     }
   }, [routes, location.pathname, remoteConfig]);
 
