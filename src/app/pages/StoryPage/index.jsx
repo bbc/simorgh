@@ -51,6 +51,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     mostRead: { header },
     script,
     service,
+    officialLang,
   } = useContext(ServiceContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
@@ -83,6 +84,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   );
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
   const recommendationsInitialData = path(['recommendations'], pageData);
+  // 'officialLang' value is only available in the Ukrainian config as the ukraine_in_russian pages have
+  // a Ukrainian text for the secondary column but a Russian text for the main element.
+  const secondaryColumnLangAttribute = officialLang && { lang: officialLang };
 
   const gridColumns = {
     group0: 8,
@@ -286,6 +290,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           dir={dir}
           columns={gridColsSecondary}
           parentColumns={gridColumns}
+          {...secondaryColumnLangAttribute}
         >
           {topStoriesInitialData && (
             <ResponsiveComponentWrapper>
