@@ -6,12 +6,10 @@ import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
+  GEL_SPACING_QUAD,
   GEL_SPACING_SEPT,
 } from '@bbc/gel-foundations/spacings';
-import {
-  MEDIA_QUERY_TYPOGRAPHY,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+import { MEDIA_QUERY_TYPOGRAPHY } from '@bbc/gel-foundations/breakpoints';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
 import { getDoublePica } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
@@ -19,11 +17,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 
 const StyledHeadline = styled(Headline)`
   @media screen {
-    padding: ${GEL_SPACING} 0;
-  }
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding: ${GEL_SPACING_DBL} 0;
+    padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING_DBL};
   }
 `;
 

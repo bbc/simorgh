@@ -41,7 +41,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
       </div>
       <strong
         aria-hidden="true"
-        class="Headline-sc-1kh1qhu-0 StyledHeadline-gehp0k-0 cTZPuu"
+        class="Headline-sc-1kh1qhu-0 StyledHeadline-gehp0k-0 mNKVB"
       >
         <span
           class="BrandTitle-gehp0k-1 iseUMj"
@@ -115,7 +115,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
       </div>
       <strong
         aria-hidden="true"
-        class="Headline-sc-1kh1qhu-0 StyledHeadline-gehp0k-0 kQBQQH"
+        class="Headline-sc-1kh1qhu-0 StyledHeadline-gehp0k-0 gBkukD"
       >
         <span
           class="BrandTitle-gehp0k-1 iseUMj"
