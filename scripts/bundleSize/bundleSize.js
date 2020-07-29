@@ -9,7 +9,7 @@ const { extractBundlesForPageType } = require('./pageTypeBundleExtractor');
 
 // need fake Cypress in global scope to require service configs:
 global.Cypress = { env: () => ({}) };
-const cypressServiceConfigs = require('../cypress/support/config/services');
+const cypressServiceConfigs = require('../../cypress/support/config/services');
 
 const services = Object.keys(cypressServiceConfigs);
 const { MIN_SIZE, MAX_SIZE } = require('./bundleSizeConfig');
@@ -45,7 +45,7 @@ const getBundleData = _fileName => {
   });
 };
 
-const getBundleData2 = (pageName, regex) => {
+const getPageBundleData = (pageName, regex) => {
   const filenames = jsFiles.filter(fileName => fileName.match(regex));
 
   const bundleSizes = filenames
@@ -117,7 +117,7 @@ const pageBundleData = pages.map(page => {
       return acc ? `${file}|${acc}` : file;
     },
   );
-  return getBundleData2(page, `^main|^vendor|${pageBundleRegex}`);
+  return getPageBundleData(page, `^main|^vendor|${pageBundleRegex}`);
 });
 
 console.log('');
