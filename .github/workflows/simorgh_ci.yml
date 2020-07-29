@@ -25,9 +25,9 @@ jobs:
       - name: Puppeteer
         run: |
           npm i puppeteer@latest
-          run-p --race start test:puppeteer
+          npm run start & npm run test:puppeteer
       - name: BBC A11y
-        run: run-p --race start bbcA11y
+        run: npm run start & npm run bbcA11y
 
         env:
           CI: true
