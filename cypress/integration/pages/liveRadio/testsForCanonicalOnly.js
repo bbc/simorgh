@@ -77,6 +77,11 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
                 cy.log(
                   'Add some checks here to ensure that radio schedule is rendered as expected on the page...',
                 );
+
+                cy.get('[data-e2e=radio-schedule]').should('exist');
+                // cy.get('[data-e2e=ondemand]').should('exist');
+              } else {
+                cy.get('[data-e2e=radio-schedule]').should('not.exist');
               }
             },
           );
