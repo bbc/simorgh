@@ -4,7 +4,7 @@ import { renderRoutes } from 'react-router-config';
 import { matchPath } from 'react-router';
 
 // test helpers
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import fetchMock from 'fetch-mock';
 
@@ -26,6 +26,17 @@ import storyPageMostReadData from '#data/pidgin/mostRead/index.json';
 import indexPageJson from '#data/ukrainian/ukraine_in_russian';
 
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
+
+// beforeAll(async () =>
+//   Promise.all(
+//     routes.map(({ component }) => {
+//       if (component.load) {
+//         return component.load();
+//       }
+//       return Promise.resolve();
+//     }),
+//   ),
+// );
 
 beforeEach(() => {
   // Mocks out CanonicalAdBootstrapJs script
@@ -106,7 +117,9 @@ it('should route to and render live radio page', async () => {
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC 코리아 라디오';
 
-  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+  await waitFor(() =>
+    expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument(),
+  );
 });
 
 it('should route to and render the onDemand Radio page', async () => {
@@ -127,7 +140,9 @@ it('should route to and render the onDemand Radio page', async () => {
 
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Dunia Pagi Ini';
 
-  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+  await waitFor(() =>
+    expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument(),
+  );
 });
 
 it('should route to and render the skeleton onDemand TV Brand page', async () => {
@@ -148,7 +163,9 @@ it('should route to and render the skeleton onDemand TV Brand page', async () =>
 
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'نړۍ دا وخت';
 
-  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+  await waitFor(() =>
+    expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument(),
+  );
 });
 
 it('should route to and render an article page', async () => {
@@ -165,7 +182,9 @@ it('should route to and render an article page', async () => {
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'پهپادی که برایتان قهوه می‌آورد';
 
-  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+  await waitFor(() =>
+    expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument(),
+  );
 });
 
 it('should route to and render a front page', async () => {
@@ -185,7 +204,9 @@ it('should route to and render a front page', async () => {
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Yarn Me Tori';
 
-  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+  await waitFor(() =>
+    expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument(),
+  );
 });
 
 it('should route to and render a media asset page', async () => {
@@ -203,7 +224,9 @@ it('should route to and render a media asset page', async () => {
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
     'Ko ko koo, "lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa" introduction.';
 
-  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+  await waitFor(() =>
+    expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument(),
+  );
 });
 
 it('should route to and render a media asset page', async () => {
@@ -223,7 +246,9 @@ it('should route to and render a media asset page', async () => {
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
     'Ko ko koo, "lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa" introduction.';
 
-  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+  await waitFor(() =>
+    expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument(),
+  );
 });
 
 it('should route to and render a legacy media asset page', async () => {
@@ -243,7 +268,9 @@ it('should route to and render a legacy media asset page', async () => {
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
     'Gürcustanda məhbusların gözətçilər tərəfindən zorlandığını göstərən video görüntülər çərşənbə günü hökümətə qarşı nümayişlərlə nəticələnib.';
 
-  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+  await waitFor(() =>
+    expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument(),
+  );
 });
 
 it('should route to and render a photo gallery page', async () => {
@@ -261,7 +288,9 @@ it('should route to and render a photo gallery page', async () => {
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
     'Anies Baswedan, dari mantan menteri menjadi gubernur DKI Jakarta';
 
-  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+  await waitFor(() =>
+    expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument(),
+  );
 });
 
 it('should route to and render a story page', async () => {
@@ -283,7 +312,9 @@ it('should route to and render a story page', async () => {
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
     'Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea';
 
-  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+  await waitFor(() =>
+    expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument(),
+  );
 });
 
 it('should route to and render an index page', async () => {
@@ -304,7 +335,9 @@ it('should route to and render an index page', async () => {
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
     'Многие украинцы из-за пандемии оказались заблокированными далеко за границей: из-за закрытия украинского неба добраться домой им очень сложно.';
 
-  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+  await waitFor(() =>
+    expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument(),
+  );
 });
 
 // skipping this test until FIX pages are fully featured with correct metadata and Chartbeat
@@ -323,7 +356,9 @@ it.skip('should route to and render a feature index page', async () => {
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
     'CAN 2019 : le Sénégal qualifié pour les huitièmes de finale';
 
-  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+  await waitFor(() =>
+    expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument(),
+  );
 });
 
 it('should route to and render a 500 error page', async () => {
@@ -338,7 +373,9 @@ it('should route to and render a 500 error page', async () => {
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '500';
 
-  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+  await waitFor(() =>
+    expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument(),
+  );
 });
 
 it('should fallback to and render a 500 error page if there is a problem with page data', async () => {
@@ -352,7 +389,9 @@ it('should fallback to and render a 500 error page if there is a problem with pa
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '500';
 
-  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+  await waitFor(() =>
+    expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument(),
+  );
 });
 
 it('should route to and render a 404 error page', async () => {
@@ -367,7 +406,9 @@ it('should route to and render a 404 error page', async () => {
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
 
-  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+  await waitFor(() =>
+    expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument(),
+  );
 });
 
 it('should render a 404 error page if a data fetch responds with a 404', async () => {
@@ -376,7 +417,7 @@ it('should render a 404 error page if a data fetch responds with a 404', async (
 
   const { pageType, getInitialData } = getMatchingRoute(pathname);
   const { status } = await getInitialData({ path: pathname });
-  const { getByText } = renderRouter({
+  const { getByText, container } = renderRouter({
     pathname,
     pageType,
     status,
@@ -384,7 +425,9 @@ it('should render a 404 error page if a data fetch responds with a 404', async (
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
 
-  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+  await waitFor(() =>
+    expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument(),
+  );
 });
 
 it('should fallback to and render a 404 error page if no route match is found', async () => {
@@ -400,5 +443,7 @@ it('should fallback to and render a 404 error page if no route match is found', 
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
 
-  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+  await waitFor(() =>
+    expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument(),
+  );
 });
