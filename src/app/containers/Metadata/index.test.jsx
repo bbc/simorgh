@@ -47,10 +47,8 @@ const MetadataWithContext = ({
   mentionsTags,
   /* eslint-enable react/prop-types */
 }) => {
-  const serviceConfig = services[service].default;
-
   return (
-    <ServiceContextProvider {...serviceConfig}>
+    <ServiceContextProvider service={service} pageLang={lang}>
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
         id={id}
@@ -642,5 +640,69 @@ shouldMatchSnapshot(
     lang={liveRadioPageData.metadata.language}
     description={liveRadioPageData.promo.summary}
     openGraphType="website"
+  />,
+);
+
+shouldMatchSnapshot(
+  'should match for Ukrainian STY with Ukrainian lang on canonical',
+  <MetadataWithContext
+    service="ukrainian"
+    lang="uk"
+    bbcOrigin={dotComOrigin}
+    platform="canonical"
+    id="news-53577781"
+    pageType="article"
+    pathname="/ukrainian/news-53577781"
+    description="BBC Ukrainian"
+    openGraphType="website"
+    title="BBC Ukrainian"
+  />,
+);
+
+shouldMatchSnapshot(
+  'should match for Ukrainian STY with Ukrainian lang on Amp',
+  <MetadataWithContext
+    service="ukrainian"
+    lang="uk"
+    bbcOrigin={dotComOrigin}
+    platform="amp"
+    id="news-53577781"
+    pageType="article"
+    pathname="/ukrainian/news-53577781.amp"
+    description="BBC Ukrainian"
+    openGraphType="website"
+    title="BBC Ukrainian"
+  />,
+);
+
+shouldMatchSnapshot(
+  'should match for Ukrainian STY with Russian lang on canonical',
+  <MetadataWithContext
+    lang="ru"
+    service="ukrainian"
+    bbcOrigin={dotComOrigin}
+    platform="canonical"
+    id="news-53577781"
+    pageType="article"
+    pathname="/ukrainian/news-53577781"
+    description="BBC Ukrainian"
+    openGraphType="website"
+    title="BBC Ukrainian"
+  />,
+);
+
+shouldMatchSnapshot(
+  'should match for Ukrainian STY with Russian lang on Amp',
+  <MetadataWithContext
+    lang="ru"
+    service="ukrainian"
+    bbcOrigin={dotComOrigin}
+    platform="amp"
+    id="news-53577781"
+    pageType="article"
+    pathname="/ukrainian/news-53577781.amp"
+    description="BBC Ukrainian"
+    openGraphType="website"
+    title="BBC Ukrainian"
   />,
 );
