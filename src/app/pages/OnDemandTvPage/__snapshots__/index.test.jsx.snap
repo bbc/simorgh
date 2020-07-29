@@ -41,10 +41,10 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
       </div>
       <strong
         aria-hidden="true"
-        class="Headline-sc-1kh1qhu-0 StyledHeadline-gehp0k-0 mNKVB"
+        class="Headline-sc-1kh1qhu-0 gSrhJm StyledHeadingContainer-o2kv6n-0 jYKibs"
       >
         <span
-          class="BrandTitle-gehp0k-1 iseUMj"
+          class="BrandTitle-dm314w-0 hgzMvv"
         >
           نړۍ دا وخت
         </span>
@@ -54,7 +54,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
           , 
         </span>
         <span
-          class="Datestamp-gehp0k-2 LXJIp"
+          class="Datestamp-dm314w-1 jofcqa"
         >
           ۲۷ می ۲۰۲۰
         </span>
@@ -65,7 +65,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
       dir="rtl"
     >
       <p
-        class="Paragraph-k859h4-0 StyledParagraphComponent-v70vjd-0 kjgjmV"
+        class="Paragraph-k859h4-0 StyledParagraphComponent-sc-6jwp19-0 drcZxV"
       >
         د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
       </p>
@@ -115,10 +115,10 @@ exports[`should show the expired content message if episode is expired 1`] = `
       </div>
       <strong
         aria-hidden="true"
-        class="Headline-sc-1kh1qhu-0 StyledHeadline-gehp0k-0 gBkukD"
+        class="Headline-sc-1kh1qhu-0 kNxvIz StyledHeadingContainer-o2kv6n-0 jYKibs"
       >
         <span
-          class="BrandTitle-gehp0k-1 iseUMj"
+          class="BrandTitle-dm314w-0 hgzMvv"
         >
           نړۍ دا وخت
         </span>
@@ -128,7 +128,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
           , 
         </span>
         <span
-          class="Datestamp-gehp0k-2 LXJIp"
+          class="Datestamp-dm314w-1 jofcqa"
         >
           ۲۷ می ۲۰۲۰
         </span>
@@ -139,7 +139,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
       dir="rtl"
     >
       <p
-        class="Paragraph-k859h4-0 StyledParagraphComponent-v70vjd-0 cvyKtV"
+        class="Paragraph-k859h4-0 StyledParagraphComponent-sc-6jwp19-0 hOZTlM"
       >
         د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
       </p>
