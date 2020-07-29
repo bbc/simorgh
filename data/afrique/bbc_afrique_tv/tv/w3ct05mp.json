@@ -2,6 +2,7 @@
   "content": {
     "blocks": [
       {
+        "availability": "notAvailable",
         "advertising": false,
         "embedding": false,
         "format": "Video",
