@@ -2,6 +2,7 @@
   "content": {
     "blocks": [
       {
+        "availability": "available",
         "advertising": false,
         "embedding": false,
         "format": "Audio",
