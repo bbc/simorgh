@@ -1,4 +1,4 @@
-import { isAmpSupported } from '.';
+import { isAmpSupported /* getIncludeIndex */ } from '.';
 
 describe('isAmpSupported', () => {
   const truthyTestCases = [
@@ -20,4 +20,8 @@ describe('isAmpSupported', () => {
       expect(isAmpSupported(classification)).toEqual(false);
     });
   });
+});
+
+describe('getIncludeIndex', () => {
+  it('should work ?', () => {});
 });
