@@ -26,9 +26,9 @@ describe('getAmpUrl', () => {
       });
 
       it('should not append .amp to amp path with query string params', () => {
-        expect(
-          getAmpUrl(`${baseUrl}/pathname.amp?query_string=value`),
-        ).toEqual(`${baseUrl}/pathname.amp?query_string=value`);
+        expect(getAmpUrl(`${baseUrl}/pathname.amp?query_string=value`)).toEqual(
+          `${baseUrl}/pathname.amp?query_string=value`,
+        );
       });
     });
   });
