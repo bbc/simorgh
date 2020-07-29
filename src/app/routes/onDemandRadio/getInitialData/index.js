@@ -19,8 +19,6 @@ export default async ({ path: pathname, pageType }) => {
       pageType,
     });
 
-    const episodeIsAvailable = getEpisodeAvailability(json);
-
     const withLogging = pathWithLogging(
       getUrl(json),
       RADIO_MISSING_FIELD,
@@ -64,7 +62,7 @@ export default async ({ path: pathname, pageType }) => {
         thumbnailImageUrl: getPlaceholderImageUrlUtil(
           get(['promo', 'media', 'imageUrl'], LOG_LEVELS.INFO),
         ),
-        episodeIsAvailable,
+        episodeAvailability: getEpisodeAvailability(json),
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
