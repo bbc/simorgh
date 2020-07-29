@@ -27,7 +27,7 @@ import LinkedData from '#containers/LinkedData';
 import MetadataContainer from '../../containers/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import OnDemandHeadingBlock from '#app/containers/OnDemandHeading/StyledHeadingContainer';
+import StyledTvHeadingContainer from '#app/containers/OnDemandHeading/StyledTvHeadingContainer';
 import ParagraphBlock from '#app/containers/OnDemandParagraph';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
@@ -203,7 +203,7 @@ const OnDemandTvPage = ({ pageData }) => {
             </StyledMessageContainer>
           )}
 
-          <OnDemandHeadingBlock
+          <StyledTvHeadingContainer
             brandTitle={brandTitle}
             releaseDateTimeStamp={releaseDateTimeStamp}
             darkMode={darkMode}
