@@ -9,6 +9,7 @@ exports[`AVPlayer for Live Radio should match snapshot for canonical AVPlayer 1`
 }
 
 .c1 {
+  z-index: 1;
   border: 0;
   left: 0;
   overflow: hidden;
@@ -109,6 +110,7 @@ exports[`AVPlayer for On Demand TV should match snapshot for canonical AVPlayer 
 }
 
 .c1 {
+  z-index: 1;
   border: 0;
   left: 0;
   overflow: hidden;

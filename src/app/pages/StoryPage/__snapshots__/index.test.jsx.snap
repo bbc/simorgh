@@ -508,6 +508,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 .c29 {
+  z-index: 1;
   border: 0;
   left: 0;
   overflow: hidden;
@@ -3049,6 +3050,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 .c31 {
+  z-index: 1;
   border: 0;
   left: 0;
   overflow: hidden;
@@ -4691,6 +4693,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 .c31 {
+  z-index: 1;
   border: 0;
   left: 0;
   overflow: hidden;

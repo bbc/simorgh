@@ -275,6 +275,7 @@ exports[`MediaPlayer Does not Call the canonical placeholder when platform is ca
 }
 
 .c2 {
+  z-index: 1;
   border: 0;
   left: 0;
   overflow: hidden;
