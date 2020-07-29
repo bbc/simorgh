@@ -25,9 +25,9 @@ jobs:
       - name: Puppeteer
         run: |
           npm i puppeteer@latest
-          npm run start && npm run test:puppeteer
+          npm run start & wait-on -t 20000 http://localhost:7080/status && npm run test:puppeteer
       - name: BBC A11y
-        run: npm run start && npm run bbcA11y
+        run: npm run start & wait-on -t 20000 http://localhost:7080/status && npm run bbcA11y
 
         env:
           CI: true
