@@ -92,7 +92,7 @@ const OnDemandRadioPage = ({ pageData }) => {
     shortSynopsis,
     masterBrand,
     episodeId,
-    episodeIsAvailable,
+    episodeAvailability,
     releaseDateTimeStamp,
     imageUrl,
     promoBrandTitle,
@@ -121,8 +121,11 @@ const OnDemandRadioPage = ({ pageData }) => {
     queryString: location.search,
   });
 
+  const episodeIsAvailable =
+    episodeAvailability === EPISODE_STATUS.EPISODE_IS_AVAILABLE;
+
   const getEpisodeNotAvailableMessage = () => {
-    if (episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_EXPIRED) {
+    if (episodeAvailability === EPISODE_STATUS.EPISODE_IS_EXPIRED) {
       return pathOr(
         'This content is no longer available',
         ['media', 'contentExpired'],
@@ -184,7 +187,7 @@ const OnDemandRadioPage = ({ pageData }) => {
               <EpisodeImage imageUrl={imageUrl} dir={dir} />
             </Grid>
           </StyledGelWrapperGrid>
-          {episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_AVAILABLE ? (
+          {episodeIsAvailable ? (
             <StyledAudioPlayer
               assetId={episodeId}
               embedUrl={embedUrl}
@@ -207,7 +210,7 @@ const OnDemandRadioPage = ({ pageData }) => {
             type="WebPage"
             seoTitle={headline}
             entities={
-              episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_AVAILABLE
+              episodeIsAvailable
                 ? [
                     {
                       '@type': 'AudioObject',
@@ -234,11 +237,7 @@ OnDemandRadioPage.propTypes = {
     headline: string,
     summary: string,
     language: string,
-    episodeIsAvailable: oneOf([
-      EPISODE_STATUS.EPISODE_IS_AVAILABLE,
-      EPISODE_STATUS.EPISODE_IS_EXPIRED,
-      EPISODE_STATUS.EPISODE_IS_NOT_YET_AVAILABLE,
-    ]),
+    episodeAvailability: oneOf(Object.values(EPISODE_STATUS)),
     releaseDateTimeStamp: number,
     imageUrl: string,
   }).isRequired,

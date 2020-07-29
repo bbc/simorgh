@@ -1,4 +1,5 @@
 import path from 'ramda/src/path';
+import pathEq from 'ramda/src/pathEq';
 import envConfig from '../config/envs';
 
 // the externalId `bbc_oromo_radio` is overriden to `bbc_afaanoromoo` in production code
@@ -31,12 +32,10 @@ export const getEmbedUrl = ({ body, language, isAmp }) => {
   return isAmp ? `${embedUrl}/amp` : embedUrl;
 };
 
-export const isExpired = jsonData => {
-  const versions = path(['content', 'blocks', '0', 'versions'], jsonData);
-
-  // Episode is expired if versions is empty
-  return versions.length === 0;
-};
+export const isAvailable = pathEq(
+  ['content', 'blocks', '0', 'availability'],
+  'available',
+);
 
 export const isBrand = jsonData => {
   const pageID = path(
