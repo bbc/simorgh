@@ -331,13 +331,13 @@ describe('StoryPromo Container', () => {
     });
 
     describe('With Index Alsos', () => {
-      it('should render a list with two related items', () => {
+      it('should render a list with three related items', () => {
         const { container } = render(
           <WrappedStoryPromo item={indexAlsosItem} promoType="top" />,
         );
 
         expect(container.getElementsByTagName('ul')).toHaveLength(1);
-        expect(container.getElementsByTagName('li')).toHaveLength(2);
+        expect(container.getElementsByTagName('li')).toHaveLength(3);
       });
 
       it('should render a related item not contained within a list', () => {
