@@ -270,7 +270,7 @@ export const service = {
         },
         skipLink: {
           text: 'Preskočite sadržaj sa %provider_name%',
-          endTextVisuallyHidden: 'Kraj sadržaja sa [%provider_name%',
+          endTextVisuallyHidden: 'Kraj sadržaja sa %provider_name%',
         },
       },
       topStoriesTitle: 'Najvažnije',
