@@ -25,12 +25,7 @@ const FeaturesAnalysis = ({ content, parentColumns }) => {
     <StoryPromoUl>
       {items.map(item => (
         <StoryPromoLi key={item.id || item.uri}>
-          <StoryPromo
-            item={item}
-            dir={dir}
-            displayImage
-            displaySummary={false}
-          />
+          <StoryPromo item={item} dir={dir} displayImage />
         </StoryPromoLi>
       ))}
     </StoryPromoUl>

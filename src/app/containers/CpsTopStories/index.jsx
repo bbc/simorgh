@@ -14,12 +14,7 @@ const TopStories = ({ content, parentColumns }) => {
   const title = pathOr('Top Stories', ['topStoriesTitle'], translations);
 
   const singleTransform = promo => (
-    <StoryPromo
-      item={promo}
-      dir={dir}
-      displayImage={false}
-      displaySummary={false}
-    />
+    <StoryPromo item={promo} dir={dir} displayImage={false} />
   );
 
   const listTransform = items => (

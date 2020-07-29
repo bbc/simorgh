@@ -60,7 +60,7 @@ const CpsRelatedContent = ({ content, parentColumns }) => {
           key={item.id || item.uri}
           dir={dir}
         >
-          <StoryPromo item={item} dir={dir} displaySummary={false} />
+          <StoryPromo item={item} dir={dir} />
         </Grid>
       ))}
     </Grid>

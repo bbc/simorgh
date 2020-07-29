@@ -62,6 +62,11 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
                   China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
                 </a>
               </h3>
+              <p
+                class="Summary-sc-1dvfmi3-4 hTsuvP"
+              >
+                Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.
+              </p>
               <time
                 class="StyledTimestamp-um718p-0 kVWTyt"
                 datetime="2020-02-03"
@@ -92,6 +97,11 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
                   Nigeria don get five new cases of Coronavirus - See how e happun
                 </a>
               </h3>
+              <p
+                class="Summary-sc-1dvfmi3-4 hTsuvP"
+              >
+                Nigeria Health say di patients from UK and America travel come di kontri.
+              </p>
               <time
                 class="StyledTimestamp-um718p-0 kVWTyt"
                 datetime="2020-02-03"
@@ -164,6 +174,11 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
                 China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
               </a>
             </h3>
+            <p
+              class="Summary-sc-1dvfmi3-4 hTsuvP"
+            >
+              Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.
+            </p>
             <time
               class="StyledTimestamp-um718p-0 kVWTyt"
               datetime="2020-02-03"
