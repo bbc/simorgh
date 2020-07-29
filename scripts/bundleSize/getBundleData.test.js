@@ -1,4 +1,4 @@
-import { getPageBundleData } from './getPageBundleData';
+import { getPageBundleData } from './getBundleData';
 
 const pages = [
   'ArticlePage',
