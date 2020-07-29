@@ -145,11 +145,11 @@ server
           pageType,
         });
 
-        const { status } = data;
-        const bbcOrigin = headers['bbc-origin'];
+        data.remoteConfig = remoteConfig;
         data.path = urlPath;
         data.timeOnServer = Date.now();
 
+        const { status } = data;
         // Set derivedPageType based on returned page data
         if (status === OK) {
           derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
@@ -162,10 +162,7 @@ server
           });
         }
 
-        data.remoteConfig = remoteConfig;
-        data.path = urlPath;
-        data.timeOnServer = Date.now();
-
+        const bbcOrigin = headers['bbc-origin'];
         const result = await renderDocument({
           bbcOrigin,
           data,
