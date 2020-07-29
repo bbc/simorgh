@@ -16,16 +16,16 @@ jobs:
         run: |
           npm ci
           npm run build
+      - name: Linting
+        run: npm run test:lint
       - name: Unit Tests
         run: npm run test:unit
       - name: Integration Tests
         run: npm run test:integration:ci
-      - name: Linting
-        run: npm run test:lint
       - name: Puppeteer
         run: |
           npm i puppeteer@latest
-          npm run test:puppeteer
+          npm run start && npm run test:puppeteer
       - name: BBC A11y
         run: npm run start && npm run bbcA11y
 
