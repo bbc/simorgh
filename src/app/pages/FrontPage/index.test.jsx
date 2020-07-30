@@ -296,9 +296,22 @@ describe('Front Page', () => {
         path: 'some-front-page-path',
         service: 'mundo',
       });
+      const adsToggles = {
+        toggleState: {
+          ads: {
+            enabled: false,
+          },
+        },
+      };
 
       await act(async () => {
-        render(<FrontPageWithContext service="mundo" pageData={pageData} />);
+        render(
+          <FrontPageWithContext
+            service="mundo"
+            pageData={pageData}
+            toggles={adsToggles}
+          />,
+        );
       });
 
       expect(window.dotcomConfig).toBeUndefined();
