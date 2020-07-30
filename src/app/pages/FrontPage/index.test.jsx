@@ -9,7 +9,6 @@ import { ToggleContext } from '#contexts/ToggleContext';
 import pidginFrontPageData from '#data/pidgin/frontpage/index-light';
 import mundoFrontPageData from '#data/mundo/frontpage/index.json';
 import pidginMostReadData from '#data/pidgin/mostRead';
-import mundoMostReadData from '#data/mundo/mostRead';
 import getInitialData from '#app/routes/home/getInitialData';
 import { FrontPage } from '..';
 
@@ -289,7 +288,10 @@ describe('Front Page', () => {
     });
 
     it('should not create window.dotcomConfig when on Canonical and ads are disabled', async () => {
-      fetchMock.mock('/mundo/mostread.json', JSON.stringify(mundoMostReadData));
+      fetchMock.mock(
+        'http://localhost/some-front-page-path.json',
+        JSON.stringify(mundoFrontPageData),
+      );
       const { pageData } = await getInitialData({
         path: 'some-front-page-path',
         service: 'mundo',
