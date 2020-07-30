@@ -2,7 +2,7 @@
 import React from 'react';
 import fetchMock from 'fetch-mock';
 import { BrowserRouter } from 'react-router-dom';
-import { render, act } from '@testing-library/react';
+import { render, act, waitFor } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
@@ -271,20 +271,20 @@ describe('Front Page', () => {
         service: 'mundo',
       });
 
-      await act(async () => {
-        render(
-          <FrontPageWithContext
-            service="mundo"
-            pageData={pageData}
-            toggles={adsToggles}
-          />,
-        );
-      });
+      render(
+        <FrontPageWithContext
+          service="mundo"
+          pageData={pageData}
+          toggles={adsToggles}
+        />,
+      );
 
-      expect(window.dotcomConfig).toEqual({
-        pageAds: true,
-        playerAds: false,
-      });
+      await waitFor(() =>
+        expect(window.dotcomConfig).toEqual({
+          pageAds: true,
+          playerAds: false,
+        }),
+      );
     });
 
     it('should not create window.dotcomConfig when on Canonical and ads are disabled', async () => {
@@ -304,17 +304,15 @@ describe('Front Page', () => {
         },
       };
 
-      await act(async () => {
-        render(
-          <FrontPageWithContext
-            service="mundo"
-            pageData={pageData}
-            toggles={adsToggles}
-          />,
-        );
-      });
+      render(
+        <FrontPageWithContext
+          service="mundo"
+          pageData={pageData}
+          toggles={adsToggles}
+        />,
+      );
 
-      expect(window.dotcomConfig).toBeUndefined();
+      await waitFor(() => expect(window.dotcomConfig).toBeUndefined());
     });
 
     it('should not create window.dotcomConfig when on Amp and ads are enabled', async () => {
@@ -334,18 +332,16 @@ describe('Front Page', () => {
         },
       };
 
-      await act(async () => {
-        render(
-          <FrontPageWithContext
-            service="mundo"
-            pageData={pageData}
-            toggles={adsToggles}
-            isAmp
-          />,
-        );
-      });
+      render(
+        <FrontPageWithContext
+          service="mundo"
+          pageData={pageData}
+          toggles={adsToggles}
+          isAmp
+        />,
+      );
 
-      expect(window.dotcomConfig).toBeUndefined();
+      await waitFor(() => expect(window.dotcomConfig).toBeUndefined());
     });
   });
 });
