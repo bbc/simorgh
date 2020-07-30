@@ -27,8 +27,8 @@ import LinkedData from '#containers/LinkedData';
 import MetadataContainer from '../../containers/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import StyledTvHeadingContainer from '#app/containers/OnDemandHeading/StyledTvHeadingContainer';
-import ParagraphBlock from '#app/containers/OnDemandParagraph';
+import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadingContainer';
+import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import DarkModeGlobalStyles from '#lib/utilities/darkMode';
@@ -234,7 +234,10 @@ const OnDemandTvPage = ({ pageData }) => {
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
           margins={getGroups(true, true, true, true, false, false)}
         >
-          <ParagraphBlock text={shortSynopsis} darkMode={darkMode} />
+          <OnDemandParagraphContainer
+            text={shortSynopsis}
+            darkMode={darkMode}
+          />
         </Grid>
       </StyledGelPageGrid>
     </>

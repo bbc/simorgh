@@ -21,10 +21,10 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import StyledRadioHeadingContainer from '#app/containers/OnDemandHeading/StyledRadioHeadingContainer';
-import ParagraphBlock from '#app/containers/OnDemandParagraph';
+import StyledRadioHeadingContainer from '#containers/OnDemandHeading/StyledRadioHeadingContainer';
+import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import AVPlayer from '#containers/AVPlayer';
-import EpisodeImage from '#app/containers/OnDemandImage';
+import EpisodeImage from '#containers/OnDemandImage';
 import LinkedData from '#containers/LinkedData';
 import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
@@ -181,7 +181,7 @@ const OnDemandRadioPage = ({ pageData }) => {
                 brandTitle={brandTitle}
                 releaseDateTimeStamp={releaseDateTimeStamp}
               />
-              <ParagraphBlock text={summary} />
+              <OnDemandParagraphContainer text={summary} />
             </Grid>
             <Grid dir={dir} item columns={getGroups(0, 0, 2, 2, 2, 2)}>
               <EpisodeImage imageUrl={imageUrl} dir={dir} />
