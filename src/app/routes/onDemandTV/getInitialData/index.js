@@ -8,7 +8,6 @@ import pathWithLogging, {
 import { TV_MISSING_FIELD } from '#lib/logger.const';
 import getEpisodeAvailability, {
   getUrl,
-  EPISODE_STATUS,
 } from '#lib/utilities/episodeAvailability';
 
 export default async ({ path: pathname, pageType }) => {
@@ -51,8 +50,7 @@ export default async ({ path: pathname, pageType }) => {
         masterBrand: get(['metadata', 'createdBy'], LOG_LEVELS.ERROR),
         episodeId: get(['content', 'blocks', 0, 'id'], LOG_LEVELS.ERROR),
         imageUrl: get(['content', 'blocks', 0, 'imageUrl']),
-        episodeIsAvailable:
-          getEpisodeAvailability(json) === EPISODE_STATUS.EPISODE_IS_AVAILABLE,
+        episodeAvailability: getEpisodeAvailability(json),
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
