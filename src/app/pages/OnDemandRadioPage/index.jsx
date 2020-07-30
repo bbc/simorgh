@@ -1,13 +1,12 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { shape, string, number, oneOf } from 'prop-types';
+import { shape, string, number, bool, node } from 'prop-types';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
-import { MediaMessage } from '@bbc/psammead-media-player';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -29,7 +28,7 @@ import LinkedData from '#containers/LinkedData';
 import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
-import { EPISODE_STATUS } from '#lib/utilities/episodeAvailability';
+import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
@@ -57,12 +56,6 @@ const StyledGelWrapperGrid = styled(GelPageGrid)`
   }
 `;
 
-const StyledMessageContainer = styled.div`
-  position: relative;
-  min-height: 165px;
-  margin-bottom: ${GEL_SPACING_QUAD};
-`;
-
 // iframe padding set to keep scrub bar and duration in view
 const StyledAudioPlayer = styled(AVPlayer)`
   amp-iframe {
@@ -82,7 +75,7 @@ const StyledAudioPlayer = styled(AVPlayer)`
   }
 `;
 
-const OnDemandRadioPage = ({ pageData }) => {
+const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
   const {
     language,
@@ -92,7 +85,6 @@ const OnDemandRadioPage = ({ pageData }) => {
     shortSynopsis,
     masterBrand,
     episodeId,
-    episodeAvailability,
     releaseDateTimeStamp,
     imageUrl,
     promoBrandTitle,
@@ -121,29 +113,13 @@ const OnDemandRadioPage = ({ pageData }) => {
     queryString: location.search,
   });
 
-  const episodeIsAvailable =
-    episodeAvailability === EPISODE_STATUS.EPISODE_IS_AVAILABLE;
-
-  const getEpisodeNotAvailableMessage = () => {
-    if (episodeAvailability === EPISODE_STATUS.EPISODE_IS_EXPIRED) {
-      return pathOr(
-        'This content is no longer available',
-        ['media', 'contentExpired'],
-        translations,
-      );
-    }
-    return pathOr(
-      'This content is not yet available',
-      ['media', 'contentNotYetAvailable'],
-      translations,
-    );
-  };
-
   const iframeTitle = pathOr(
     'Audio player',
     ['mediaAssetPage', 'audioPlayer'],
     translations,
   );
+
+  console.log('mediaIsAvailable', mediaIsAvailable);
 
   return (
     <>
@@ -187,7 +163,7 @@ const OnDemandRadioPage = ({ pageData }) => {
               <EpisodeImage imageUrl={imageUrl} dir={dir} />
             </Grid>
           </StyledGelWrapperGrid>
-          {episodeIsAvailable ? (
+          {mediaIsAvailable ? (
             <StyledAudioPlayer
               assetId={episodeId}
               embedUrl={embedUrl}
@@ -198,19 +174,14 @@ const OnDemandRadioPage = ({ pageData }) => {
               placeholderSrc={audioPlaceholderImageSrc}
             />
           ) : (
-            <StyledMessageContainer>
-              <MediaMessage
-                service={service}
-                message={getEpisodeNotAvailableMessage()}
-              />
-            </StyledMessageContainer>
+            <MediaError skin="audio" />
           )}
 
           <LinkedData
             type="WebPage"
             seoTitle={headline}
             entities={
-              episodeIsAvailable
+              mediaIsAvailable
                 ? [
                     {
                       '@type': 'AudioObject',
@@ -232,15 +203,16 @@ const OnDemandRadioPage = ({ pageData }) => {
 };
 
 OnDemandRadioPage.propTypes = {
+  mediaIsAvailable: bool.isRequired,
+  MediaError: node.isRequired,
   pageData: shape({
     brandTitle: string,
     headline: string,
     summary: string,
     language: string,
-    episodeAvailability: oneOf(Object.values(EPISODE_STATUS)),
     releaseDateTimeStamp: number,
     imageUrl: string,
   }).isRequired,
 };
 
-export default OnDemandRadioPage;
+export default withMediaError(OnDemandRadioPage);
