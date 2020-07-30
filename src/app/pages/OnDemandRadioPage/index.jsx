@@ -119,8 +119,6 @@ const OnDemandRadioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     translations,
   );
 
-  console.log('mediaIsAvailable', mediaIsAvailable);
-
   return (
     <>
       <ATIAnalytics data={pageData} />

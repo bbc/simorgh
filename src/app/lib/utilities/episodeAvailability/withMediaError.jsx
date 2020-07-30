@@ -86,8 +86,6 @@ const withMediaError = PageComponent => props => {
     pageData: { episodeAvailability },
   } = props;
 
-  console.log('props', props);
-
   return (
     <PageComponent
       {...props}
