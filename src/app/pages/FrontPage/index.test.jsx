@@ -260,10 +260,6 @@ describe('Front Page', () => {
         'http://localhost/some-front-page-path.json',
         JSON.stringify(mundoFrontPageData),
       );
-      fetchMock.mock(
-        ' /mundo/mostread.json',
-        JSON.stringify(mundoMostReadData),
-      );
       const adsToggles = {
         toggleState: {
           ads: {
@@ -293,10 +289,6 @@ describe('Front Page', () => {
     });
 
     it('should not create window.dotcomConfig when on Canonical and ads are disabled', async () => {
-      fetchMock.mock(
-        'http://localhost/some-front-page-path.json',
-        JSON.stringify(mundoFrontPageData),
-      );
       fetchMock.mock('/mundo/mostread.json', JSON.stringify(mundoMostReadData));
       const { pageData } = await getInitialData({
         path: 'some-front-page-path',
@@ -315,7 +307,6 @@ describe('Front Page', () => {
         'http://localhost/some-front-page-path.json',
         JSON.stringify(mundoFrontPageData),
       );
-      fetchMock.mock('/mundo/mostread.json', JSON.stringify(mundoMostReadData));
       const { pageData } = await getInitialData({
         path: 'some-front-page-path',
         service: 'mundo',
