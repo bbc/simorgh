@@ -156,7 +156,6 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
 }
 
 .c3 {
-  z-index: 1;
   border: 0;
   left: 0;
   overflow: hidden;
@@ -389,7 +388,6 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
 }
 
 .c3 {
-  z-index: 1;
   border: 0;
   left: 0;
   overflow: hidden;

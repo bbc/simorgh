@@ -845,7 +845,6 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 .c16 {
-  z-index: 1;
   border: 0;
   left: 0;
   overflow: hidden;
