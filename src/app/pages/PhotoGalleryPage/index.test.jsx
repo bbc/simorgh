@@ -3,7 +3,6 @@ import React from 'react';
 import { StaticRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import assocPath from 'ramda/src/assocPath';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
