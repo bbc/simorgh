@@ -486,6 +486,11 @@ exports[`should match for Persian News & UK origin 1`] = `
       rel="canonical"
     />
     <link
+      href="https://www.bbc.co.uk/persian/articles/c4vlle3q337o"
+      hreflang="fa"
+      rel="alternate"
+    />
+    <link
       href="http://localhost:7080/persian/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
@@ -703,6 +708,11 @@ exports[`should match for Persian News & international origin 1`] = `
     <link
       href="https://www.bbc.com/persian/articles/c4vlle3q337o"
       rel="canonical"
+    />
+    <link
+      href="https://www.bbc.com/persian/articles/c4vlle3q337o"
+      hreflang="fa"
+      rel="alternate"
     />
     <link
       href="https://www.bbc.com/persian/articles/c4vlle3q337o.amp"
@@ -1142,6 +1152,11 @@ exports[`should match for WS Media liveradio 1`] = `
     <link
       href="https://www.bbc.com/korean/bbc_korean_radio/liveradio"
       rel="canonical"
+    />
+    <link
+      href="https://www.bbc.com/korean/bbc_korean_radio/liveradio"
+      hreflang="ko"
+      rel="alternate"
     />
     <link
       href="https://www.bbc.com/korean/bbc_korean_radio/liveradio.amp"

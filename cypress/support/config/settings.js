@@ -4931,10 +4931,10 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/russian/av/media-52355574',
+              '/russian/av/media-23320267', // CPS video with redirect
               '/russian/news/2016/05/160510_tc2_testmap3', // TC2 video
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [],
@@ -4964,7 +4964,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/russian/news-53473369'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/russian/23219699'],

@@ -492,7 +492,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   .c21::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     width: 80rem;
     border-bottom: 0.0625rem solid #eab3b3;
     z-index: -1;
@@ -1467,7 +1467,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   .c21::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     width: 80rem;
     border-bottom: 0.0625rem solid #eab3b3;
     z-index: -1;
@@ -2442,7 +2442,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   .c21::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     width: 80rem;
     border-bottom: 0.0625rem solid #eab3b3;
     z-index: -1;

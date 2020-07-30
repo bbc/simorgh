@@ -226,12 +226,14 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
       });
 
       describe('404 status code', () => {
+        const pageType = 'Front Page';
         beforeEach(() => {
           mockRouteProps({
             service,
             isAmp,
             dataResponse: notFoundDataResponse,
             variant,
+            pageType,
           });
         });
 
@@ -241,6 +243,12 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
           expect(text).toEqual(
             '<!doctype html><html><body><h1>Mock app</h1></body></html>',
           );
+        });
+
+        assertNon200ResponseCustomMetrics({
+          requestUrl: serviceURL,
+          pageType,
+          statusCode: 404,
         });
       });
     });
@@ -318,6 +326,8 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
       });
 
       describe('404 status code', () => {
+        const pageType = 'articles';
+
         beforeEach(() => {
           mockRouteProps({
             id,
@@ -325,6 +335,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
             isAmp,
             dataResponse: notFoundDataResponse,
             variant,
+            pageType,
           });
         });
 
@@ -334,6 +345,12 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
           expect(text).toEqual(
             '<!doctype html><html><body><h1>Mock app</h1></body></html>',
           );
+        });
+
+        assertNon200ResponseCustomMetrics({
+          requestUrl: articleURL,
+          pageType,
+          statusCode: 404,
         });
       });
     });
@@ -417,6 +434,8 @@ const testAssetPages = ({
       });
 
       describe('404 status code', () => {
+        const pageType = 'CPS Asset';
+
         beforeEach(() => {
           mockRouteProps({
             assetUri,
@@ -424,6 +443,7 @@ const testAssetPages = ({
             isAmp,
             dataResponse: notFoundDataResponse,
             variant,
+            pageType,
           });
         });
 
@@ -433,6 +453,12 @@ const testAssetPages = ({
           expect(text).toEqual(
             '<!doctype html><html><body><h1>Mock app</h1></body></html>',
           );
+        });
+
+        assertNon200ResponseCustomMetrics({
+          requestUrl: articleURL,
+          pageType,
+          statusCode: 404,
         });
       });
     });
@@ -514,20 +540,29 @@ const testMediaPages = ({
     });
 
     describe('404 status code', () => {
+      const pageType = 'media';
+
       beforeEach(() => {
         mockRouteProps({
           service,
           isAmp,
           dataResponse: notFoundDataResponse,
+          pageType,
         });
       });
 
       it('should respond with a rendered 404', async () => {
-        const { status, text } = await makeRequest(`/${service}`);
+        const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toBe(404);
         expect(text).toEqual(
           '<!doctype html><html><body><h1>Mock app</h1></body></html>',
         );
+      });
+
+      assertNon200ResponseCustomMetrics({
+        requestUrl: mediaPageURL,
+        pageType,
+        statusCode: 404,
       });
     });
 
@@ -607,20 +642,29 @@ const testTvPages = ({
     });
 
     describe('404 status code', () => {
+      const pageType = 'On Demand TV Brand';
+
       beforeEach(() => {
         mockRouteProps({
           service,
           isAmp,
           dataResponse: notFoundDataResponse,
+          pageType,
         });
       });
 
       it('should respond with a rendered 404', async () => {
-        const { status, text } = await makeRequest(`/${service}`);
+        const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toBe(404);
         expect(text).toEqual(
           '<!doctype html><html><body><h1>Mock app</h1></body></html>',
         );
+      });
+
+      assertNon200ResponseCustomMetrics({
+        requestUrl: mediaPageURL,
+        pageType,
+        statusCode: 404,
       });
     });
 
@@ -700,11 +744,14 @@ const testOnDemandTvEpisodePages = ({
     });
 
     describe('404 status code', () => {
+      const pageType = 'On Demand TV Episode';
+
       beforeEach(() => {
         mockRouteProps({
           service,
           isAmp,
           dataResponse: notFoundDataResponse,
+          pageType,
         });
       });
 
@@ -714,6 +761,12 @@ const testOnDemandTvEpisodePages = ({
         expect(text).toEqual(
           '<!doctype html><html><body><h1>Mock app</h1></body></html>',
         );
+      });
+
+      assertNon200ResponseCustomMetrics({
+        requestUrl: mediaPageURL,
+        pageType,
+        statusCode: 404,
       });
     });
 
@@ -788,6 +841,10 @@ describe('Server', () => {
       const { statusCode } = await makeRequest('/some-service/manifest.json');
       expect(sendFileSpy.mock.calls.length).toEqual(0);
       expect(statusCode).toEqual(500);
+    });
+    it('should serve a response cache control of 7 days', async () => {
+      const { header } = await makeRequest('/news/articles/manifest.json');
+      expect(header['cache-control']).toBe('public, max-age=604800');
     });
   });
 
