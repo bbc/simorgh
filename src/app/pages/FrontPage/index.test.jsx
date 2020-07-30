@@ -5,23 +5,37 @@ import { BrowserRouter } from 'react-router-dom';
 import { render, act, waitFor } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { ToggleContext } from '#contexts/ToggleContext';
 import pidginFrontPageData from '#data/pidgin/frontpage/index-light';
 import mundoFrontPageData from '#data/mundo/frontpage/index.json';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import mundoMostReadData from '#data/mundo/mostRead';
 import getInitialData from '#app/routes/home/getInitialData';
 import { FrontPage } from '..';
-import togglesConfig from '#lib/config/toggles';
+
+const mockToggleState = {
+  toggleState: {
+    ads: {
+      enabled: false,
+    },
+    mostRead: {
+      enabled: true,
+    },
+    comscoreAnalytics: {
+      enabled: true,
+    },
+  },
+};
 
 // eslint-disable-next-line react/prop-types
 const FrontPageWithContext = ({
   isAmp = false,
   service = 'pidgin',
+  toggles = mockToggleState,
   ...props
 }) => (
   <BrowserRouter>
-    <ToggleContextProvider service={service} origin="https://www.test.bbc.com">
+    <ToggleContext.Provider value={toggles}>
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.co.uk"
         isAmp={isAmp}
@@ -34,7 +48,7 @@ const FrontPageWithContext = ({
           <FrontPage {...props} />
         </ServiceContextProvider>
       </RequestContextProvider>
-    </ToggleContextProvider>
+    </ToggleContext.Provider>
   </BrowserRouter>
 );
 
@@ -110,9 +124,6 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   );
 });
 
-const togglesUrl =
-  'https://mock-toggles-endpoint.bbc.co.uk/?application=simorgh&service=mundo&__amp_source_origin=https://www.test.bbc.com';
-
 describe('Front Page', () => {
   afterEach(() => {
     fetchMock.restore();
@@ -124,14 +135,14 @@ describe('Front Page', () => {
         'http://localhost/some-front-page-path.json',
         JSON.stringify(pidginFrontPageData),
       );
-      const { pageData } = await getInitialData({
-        path: 'some-front-page-path',
-        service: 'pidgin',
-      });
       fetchMock.mock(
         ' /pidgin/mostread.json',
         JSON.stringify(pidginMostReadData),
       );
+      const { pageData } = await getInitialData({
+        path: 'some-front-page-path',
+        service: 'pidgin',
+      });
 
       let container;
       await act(async () => {
@@ -146,18 +157,20 @@ describe('Front Page', () => {
         'http://localhost/some-front-page-path.json',
         JSON.stringify(pidginFrontPageData),
       );
+      fetchMock.mock(
+        '/pidgin/mostread.json',
+        JSON.stringify(pidginMostReadData),
+      );
       const { pageData } = await getInitialData({
         path: 'some-front-page-path',
         service: 'pidgin',
       });
-      fetchMock.mock(
-        ' /pidgin/mostread.json',
-        JSON.stringify(pidginMostReadData),
-      );
 
-      const { container } = render(
-        <FrontPageWithContext pageData={pageData} isAmp />,
-      );
+      let container;
+      await act(async () => {
+        container = render(<FrontPageWithContext pageData={pageData} isAmp />)
+          .container;
+      });
       expect(container).toMatchSnapshot();
     });
   });
@@ -204,14 +217,14 @@ describe('Front Page', () => {
         'http://localhost/some-front-page-path.json',
         JSON.stringify(pidginFrontPageData),
       );
-      const { pageData } = await getInitialData({
-        path: 'some-front-page-path',
-        service: 'pidgin',
-      });
       fetchMock.mock(
         '/pidgin/mostread.json',
         JSON.stringify(pidginMostReadData),
       );
+      const { pageData } = await getInitialData({
+        path: 'some-front-page-path',
+        service: 'pidgin',
+      });
 
       let container;
       await act(async () => {
@@ -235,9 +248,6 @@ describe('Front Page', () => {
       };
 
       process.env.SIMORGH_APP_ENV = 'test';
-      process.env.SIMORGH_CONFIG_URL =
-        'https://mock-toggles-endpoint.bbc.co.uk';
-      togglesConfig.test.enableFetchingToggles.enabled = true;
     });
 
     afterEach(() => {
@@ -250,25 +260,30 @@ describe('Front Page', () => {
         'http://localhost/some-front-page-path.json',
         JSON.stringify(mundoFrontPageData),
       );
-      const { pageData } = await getInitialData({
-        path: 'some-front-page-path',
-        service: 'mundo',
-      });
       fetchMock.mock(
         ' /mundo/mostread.json',
         JSON.stringify(mundoMostReadData),
       );
-      fetchMock.mock(togglesUrl, {
-        toggles: {
+      const adsToggles = {
+        toggleState: {
           ads: {
             enabled: true,
-            value: '',
           },
         },
+      };
+      const { pageData } = await getInitialData({
+        path: 'some-front-page-path',
+        service: 'mundo',
       });
 
       await act(async () => {
-        render(<FrontPageWithContext service="mundo" pageData={pageData} />);
+        render(
+          <FrontPageWithContext
+            service="mundo"
+            pageData={pageData}
+            toggles={adsToggles}
+          />,
+        );
       });
 
       await waitFor(() =>
@@ -284,18 +299,10 @@ describe('Front Page', () => {
         'http://localhost/some-front-page-path.json',
         JSON.stringify(mundoFrontPageData),
       );
+      fetchMock.mock('/mundo/mostread.json', JSON.stringify(mundoMostReadData));
       const { pageData } = await getInitialData({
         path: 'some-front-page-path',
         service: 'mundo',
-      });
-      fetchMock.mock('/mundo/mostread.json', JSON.stringify(mundoMostReadData));
-      fetchMock.mock(togglesUrl, {
-        toggles: {
-          ads: {
-            enabled: false,
-            value: '',
-          },
-        },
       });
 
       await act(async () => {
@@ -310,23 +317,27 @@ describe('Front Page', () => {
         'http://localhost/some-front-page-path.json',
         JSON.stringify(mundoFrontPageData),
       );
+      fetchMock.mock('/mundo/mostread.json', JSON.stringify(mundoMostReadData));
       const { pageData } = await getInitialData({
         path: 'some-front-page-path',
         service: 'mundo',
       });
-      fetchMock.mock('/mundo/mostread.json', JSON.stringify(mundoMostReadData));
-      fetchMock.mock(togglesUrl, {
-        toggles: {
+      const adsToggles = {
+        toggleState: {
           ads: {
             enabled: true,
-            value: '',
           },
         },
-      });
+      };
 
       await act(async () => {
         render(
-          <FrontPageWithContext service="mundo" pageData={pageData} isAmp />,
+          <FrontPageWithContext
+            service="mundo"
+            pageData={pageData}
+            toggles={adsToggles}
+            isAmp
+          />,
         );
       });
 
