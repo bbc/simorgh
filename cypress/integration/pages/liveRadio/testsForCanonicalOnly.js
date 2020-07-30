@@ -62,7 +62,12 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         );
 
         if (isRadioScheduleOnPage) {
-          cy.request(getRadioScheduleEndpoint(Cypress.env('currentPath'))).then(
+          // Override is being added twice somewhere causing a false negative on the call to the schedule!
+          const liveRadioPath = Cypress.env('currentPath').replace(
+            '?renderer_env=live',
+            '',
+          );
+          cy.request(getRadioScheduleEndpoint(liveRadioPath)).then(
             ({ body: scheduleJson }) => {
               const { schedules } = scheduleJson;
 
@@ -72,16 +77,16 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               cy.log(
                 `Radio Schedule is displayed? ${isRadioScheduleDataComplete}`,
               );
-
               if (isRadioScheduleOnPage && isRadioScheduleDataComplete) {
-                cy.log(
-                  'Add some checks here to ensure that radio schedule is rendered as expected on the page...',
-                );
-
-                cy.get('[data-e2e=radio-schedule]').should('exist');
+                cy.log('Schedule has enough data');
+                cy.get('div[class*="RadioScheduleSection"]').should('exist');
+                // Use these ways to access parts of the schedule
+                // cy.get('[data-e2e=radio-schedule]').should('exist');
                 // cy.get('[data-e2e=ondemand]').should('exist');
               } else {
-                cy.get('[data-e2e=radio-schedule]').should('not.exist');
+                cy.get('div[class*="RadioScheduleSection"]').should(
+                  'not.exist',
+                );
               }
             },
           );
