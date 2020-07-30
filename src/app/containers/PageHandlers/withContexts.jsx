@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, element, string, number, shape } from 'prop-types';
+import { bool, element, string, number, object } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import variantPropType from '#models/propTypes/variants';
@@ -73,13 +73,8 @@ const WithContexts = Component => {
     service: string.isRequired,
     variant: variantPropType,
     timeOnServer: number,
-    remoteConfig: shape({
-      toggles: shape({
-        ads: shape({
-          enabled: bool.isRequired,
-        }),
-      }),
-    }),
+    // eslint-disable-next-line react/forbid-prop-types
+    remoteConfig: object,
   };
 
   WithContextsContainer.defaultProps = {

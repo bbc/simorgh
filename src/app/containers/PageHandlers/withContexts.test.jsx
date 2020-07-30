@@ -50,7 +50,7 @@ describe('withContexts HOC', () => {
     status: 200,
     remoteConfig: {
       toggles: {
-        ads: {
+        testToggle: {
           enabled: false,
         },
       },
@@ -93,7 +93,7 @@ describe('withContexts HOC', () => {
           status: 200,
           remoteConfig: {
             toggles: {
-              ads: {
+              testToggle: {
                 enabled: false,
               },
             },
@@ -128,7 +128,7 @@ describe('withContexts HOC', () => {
         status: 200,
         remoteConfig: {
           toggles: {
-            ads: {
+            testToggle: {
               enabled: false,
             },
           },
