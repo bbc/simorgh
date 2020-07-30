@@ -18,7 +18,7 @@ const launchDates = {
     storyPage: '',
     mostReadPage: '28th May 2020',
     onDemandRadio: '2nd July 2020',
-    onDemandTV: '',
+    onDemandTV: '14th July 2020',
   },
   amharic: {
     articles: 'Sept 2019',
@@ -68,7 +68,7 @@ const launchDates = {
     storyPage: '25th June 2020',
     mostReadPage: '28th May 2020',
     onDemandRadio: '7th July 2020',
-    onDemandTV: '',
+    onDemandTV: '14th July 2020',
   },
   cymrufyw: {
     articles: 'Sept 2019',
@@ -90,7 +90,7 @@ const launchDates = {
     photoGalleryPage: '18th Feb 2020',
     storyPage: '25th June 2020',
     mostReadPage: '28th May 2020',
-    onDemandTV: '',
+    onDemandTV: '14th July 2020',
   },
   hausa: {
     articles: 'Sept 2019',
@@ -101,7 +101,7 @@ const launchDates = {
     storyPage: '',
     mostReadPage: '28th May 2020',
     onDemandRadio: '30th June 2020',
-    onDemandTV: '',
+    onDemandTV: '14th July 2020',
   },
   hindi: {
     articles: 'Sept 2019',
@@ -111,7 +111,7 @@ const launchDates = {
     photoGalleryPage: '12th March 2020',
     storyPage: '',
     mostReadPage: '28th May 2020',
-    onDemandTV: '',
+    onDemandTV: '14th July 2020',
   },
   igbo: {
     articles: 'Sept 2019',
@@ -158,7 +158,7 @@ const launchDates = {
     storyPage: '4th June 2020',
     mostReadPage: '28th May 2020',
     onDemandRadio: '2nd July 2020',
-    onDemandTV: '',
+    onDemandTV: '14th July 2020',
   },
   marathi: {
     articles: 'Sept 2019',
@@ -167,7 +167,7 @@ const launchDates = {
     storyPage: '7th July 2020',
     photoGalleryPage: '20th Feb 2020',
     mostReadPage: '28th May 2020',
-    onDemandTV: '',
+    onDemandTV: '14th July 2020',
   },
   mundo: {
     articles: 'Sept 2019',
@@ -213,6 +213,7 @@ const launchDates = {
     storyPage: '',
     mostReadPage: '28th May 2020',
     onDemandRadio: '2nd July 2020',
+    onDemandTV: '23rd July 2020',
     idxPage: '23rd June 2020',
   },
   pidgin: {
@@ -299,7 +300,7 @@ const launchDates = {
     storyPage: '25th June 2020',
     mostReadPage: '28th May 2020',
     onDemandRadio: '2nd July 2020',
-    onDemandTV: '',
+    onDemandTV: '14th July 2020',
   },
   tamil: {
     articles: 'Sept 2019',
@@ -310,7 +311,7 @@ const launchDates = {
     storyPage: '14th July 2020',
     mostReadPage: '28th May 2020',
     onDemandRadio: '2nd July 2020',
-    onDemandTV: '',
+    onDemandTV: '14th July 2020',
   },
   telugu: {
     articles: 'Sept 2019',
@@ -319,7 +320,7 @@ const launchDates = {
     storyPage: '9th July 2020',
     photoGalleryPage: '20th Feb 2020',
     mostReadPage: '28th May 2020',
-    onDemandTV: '',
+    onDemandTV: '14th July 2020',
   },
   thai: {
     articles: 'Sept 2019',
@@ -373,7 +374,7 @@ const launchDates = {
     photoGalleryPage: '24th March 2020',
     storyPage: '',
     mostReadPage: '28th May 2020',
-    onDemandTV: '',
+    onDemandTV: '14th July 2020',
   },
   urdu: {
     articles: 'Sept 2019',
@@ -384,7 +385,7 @@ const launchDates = {
     storyPage: '',
     mostReadPage: '28th May 2020',
     onDemandRadio: '2nd July 2020',
-    onDemandTV: '',
+    onDemandTV: '14th July 2020',
   },
   uzbek: {
     articles: 'Sept 2019',
@@ -395,7 +396,7 @@ const launchDates = {
     storyPage: '25th June 2020',
     mostReadPage: '28th May 2020',
     onDemandRadio: '2nd July 2020',
-    onDemandTV: '',
+    onDemandTV: '14th July 2020',
   },
   vietnamese: {
     articles: 'Sept 2019',

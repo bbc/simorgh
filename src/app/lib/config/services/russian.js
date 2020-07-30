@@ -185,6 +185,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Подпись, ',
     imageCopyrightOffscreenText: 'Автор фото, ',
     locale: `ru-RU`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ru',
     datetimeLocale: `ru`,
     service: 'russian',
     serviceName: 'Russian',

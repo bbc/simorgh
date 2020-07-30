@@ -27,6 +27,8 @@ export const service = {
     defaultCaptionOffscreenText: 'કૅપ્શન, ',
     imageCopyrightOffscreenText: 'ઇમેજ સ્રોત, ',
     locale: `gu-IN`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'gu',
     datetimeLocale: `gu`,
     service: 'gujarati',
     serviceName: 'Gujarati',

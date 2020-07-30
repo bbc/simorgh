@@ -28,6 +28,8 @@ export const service = {
     defaultCaptionOffscreenText: 'ပုံစာ, ',
     imageCopyrightOffscreenText: 'ဓာတ်ပုံ ရင်းမြစ်, ',
     locale: `my-MM`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'my',
     datetimeLocale: `my`,
     service: 'burmese',
     serviceName: 'Burmese',
@@ -198,6 +200,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
       onFrontPage: false,
       header: 'နောက်ဆုံးလွှင့် အစီအစဉ်များ',
       durationLabel: 'ကြာမြင့်ချိန် %duration%',

@@ -27,6 +27,8 @@ export const service = {
     defaultCaptionOffscreenText: 'ਕੈਪਸ਼ਨ, ',
     imageCopyrightOffscreenText: 'ਤਸਵੀਰ ਸਰੋਤ, ',
     locale: `pa-IN`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'pa',
     datetimeLocale: `pa-in`,
     service: 'punjabi',
     serviceName: 'Punjabi',

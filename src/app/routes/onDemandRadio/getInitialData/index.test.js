@@ -1,4 +1,3 @@
-import assocPath from 'ramda/src/assocPath';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import loggerMock from '#testHelpers/loggerMock';
 import getInitialData from '.';
@@ -37,53 +36,6 @@ describe('Get initial data for on demand radio', () => {
     expect(pageData.thumbnailImageUrl).toEqual(
       'https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png',
     );
-  });
-
-  it("episodeIsAvailable should be 'available' if availableFrom is before current time", async () => {
-    const oneMinuteAgo = Date.now() - 60 * 1000;
-    const responseWithEpisodeAvailableOneMinuteAgo = assocPath(
-      ['content', 'blocks', '0', 'versions', '0', 'availableFrom'],
-      oneMinuteAgo,
-      onDemandRadioJson,
-    );
-    fetch.mockResponse(
-      JSON.stringify(responseWithEpisodeAvailableOneMinuteAgo),
-    );
-    const { pageData } = await getInitialData({
-      path: 'mock-on-demand-radio-path',
-      pageType,
-    });
-    expect(pageData.episodeIsAvailable).toEqual('available');
-  });
-
-  it("episodeIsAvailable should be 'not-yet-available' if availableFrom is after current time", async () => {
-    const oneMinuteFromNow = Date.now() + 60 * 1000;
-    const twoMinutesFromNow = oneMinuteFromNow + 60 * 1000;
-    const responseWithEpisodeAvailableInOneMinute = assocPath(
-      ['content', 'blocks', '0', 'versions', '0'],
-      { availableFrom: oneMinuteFromNow, availableUntil: twoMinutesFromNow },
-      onDemandRadioJson,
-    );
-    fetch.mockResponse(JSON.stringify(responseWithEpisodeAvailableInOneMinute));
-    const { pageData } = await getInitialData({
-      path: 'mock-on-demand-radio-path',
-      pageType,
-    });
-    expect(pageData.episodeIsAvailable).toEqual('not-yet-available');
-  });
-
-  it("episodeIsAvailable should be 'expired' if there is no availableUntil data", async () => {
-    const responseWithoutVersions = assocPath(
-      ['content', 'blocks', 0, 'versions'],
-      [],
-      onDemandRadioJson,
-    );
-    fetch.mockResponse(JSON.stringify(responseWithoutVersions));
-    const { pageData } = await getInitialData({
-      path: 'mock-on-demand-radio-path',
-      pageType,
-    });
-    expect(pageData.episodeIsAvailable).toEqual('expired');
   });
 
   it('should override renderer on test', async () => {

@@ -27,6 +27,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Altyazı, ',
     imageCopyrightOffscreenText: 'Şəklin mənbəyi, ',
     locale: `az-AZ`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'az',
     datetimeLocale: `az`,
     service: 'azeri',
     serviceName: 'Azərbaycanca',

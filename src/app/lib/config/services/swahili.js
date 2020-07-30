@@ -27,6 +27,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Maelezo, ',
     imageCopyrightOffscreenText: 'Chanzo cha picha, ',
     locale: `sw-KE`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'sw',
     datetimeLocale: `sw`,
     service: 'swahili',
     serviceName: 'Swahili',
@@ -193,6 +195,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Features',
       header: 'Vipindi vya Redio',

@@ -31,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: 'መግለጺ, ',
     imageCopyrightOffscreenText: 'ምንጪ ስእሊ, ',
     locale: `ti-ET`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ti',
     datetimeLocale: `ti`,
     service: 'tigrinya',
     serviceName: 'Tigrinya',
@@ -182,6 +184,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
       onFrontPage: false,
       header: 'ስምዑ',
       durationLabel: 'ዕምሪ ፈነወ %duration%',

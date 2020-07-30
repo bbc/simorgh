@@ -36,6 +36,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Título, ',
     imageCopyrightOffscreenText: 'Fuente de la imagen, ',
     locale: `es-005`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'es',
     datetimeLocale: `es`,
     service: 'mundo',
     serviceName: 'News Mundo',
@@ -199,6 +201,10 @@ export const service = {
     },
     recommendations: {
       hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

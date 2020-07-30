@@ -27,6 +27,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Légende, ',
     imageCopyrightOffscreenText: 'Crédit photo, ',
     locale: `fr`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'fr',
     datetimeLocale: `fr`,
     service: 'afrique',
     serviceName: 'Afrique',
@@ -200,6 +202,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Features',
       frequenciesPageUrl:

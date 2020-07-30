@@ -32,6 +32,8 @@ export const service = {
     defaultCaptionOffscreenText: 'توضیح، ',
     imageCopyrightOffscreenText: 'منبع تصویر، ',
     locale: 'fa',
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'fa',
     datetimeLocale: 'fa',
     service: 'persian',
     serviceName: 'Persian',
@@ -208,6 +210,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
       onFrontPage: false,
       frontPagePosition: '',
       onIdxPage: true,

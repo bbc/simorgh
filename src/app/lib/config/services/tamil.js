@@ -28,6 +28,8 @@ export const service = {
     defaultCaptionOffscreenText: 'குறிப்பு, ',
     imageCopyrightOffscreenText: 'பட மூலாதாரம், ',
     locale: `ta-IN`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ta',
     datetimeLocale: `ta`,
     service: 'tamil',
     serviceName: 'Tamil',
