@@ -26,7 +26,7 @@ const getBundleData = ({ regex, jsFiles }) => {
 
   const bundleSizes = filenames
     .map(fileName => getFileSize(`build/public/static/js/${fileName}`))
-    .map(sizeInBytes => Math.round(sizeInBytes / 1000));
+    .map(sizeInBytes => Math.round(sizeInBytes / 1024));
 
   return bundleSizes;
 };

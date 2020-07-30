@@ -28,6 +28,11 @@ const smallestPageBundleSize = Math.min(...pageBundlesTotals);
 const largestPageBundleSize = Math.max(...pageBundlesTotals);
 const averagePageBundleSize = getAverageBundleSize(pageBundlesTotals);
 
+const largestPagePlusServiceBundleSize =
+  largestServiceBundleSize + largestPageBundleSize;
+const smallestPagePlusServiceBundleSize =
+  smallestServiceBundleSize + smallestPageBundleSize;
+
 const serviceBundlesTable = new Table({
   head: [
     'Service name',
@@ -67,6 +72,16 @@ serviceSummaryTable.push(
   { 'Average total bundle size (kB)': averageServiceBundleSize },
 );
 
+const servicePageSummaryTable = new Table();
+servicePageSummaryTable.push(
+  {
+    'Smallest total bundle size (kB) (smallest service + smallest page)': smallestPagePlusServiceBundleSize,
+  },
+  {
+    'Largest total bundle size (kB) (largest service + largest page)': largestPagePlusServiceBundleSize,
+  },
+);
+
 console.log('');
 const spinner = ora({
   text: 'Analysing bundles...',
@@ -77,6 +92,9 @@ console.log(chalk.bold('\n\nResults'));
 
 console.log(chalk.bold('\nService bundles'));
 console.log(serviceBundlesTable.toString());
+
+console.log(chalk.bold('\n\nService bundles summary'));
+console.log(serviceSummaryTable.toString());
 
 console.log(chalk.bold('\n\nPage type bundles'));
 console.log(pageBundlesTable.toString());
@@ -89,8 +107,8 @@ console.log(
 );
 console.log(pageSummaryTable.toString());
 
-console.log(chalk.bold('\n\nService bundles summary'));
-console.log(serviceSummaryTable.toString());
+console.log(chalk.bold('\n\nService + Page bundles summary'));
+console.log(servicePageSummaryTable.toString());
 
 const errors = pageBundlesTotals
   .map((size, index) => {
