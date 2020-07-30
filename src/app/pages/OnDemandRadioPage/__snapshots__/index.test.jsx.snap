@@ -263,6 +263,10 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   margin: 0;
 }
 
+.c7 {
+  padding: 2rem 0 1rem;
+}
+
 .c11 {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -549,12 +553,6 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   }
 }
 
-@media screen {
-  .c7 {
-    padding: 2rem 0 1rem;
-  }
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c11 {
     font-size: 1.375rem;
@@ -802,6 +800,10 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   font-weight: 400;
   font-style: normal;
   margin: 0;
+}
+
+.c7 {
+  padding: 2rem 0 1rem;
 }
 
 .c11 {
@@ -1097,12 +1099,6 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   .c10 {
     font-size: 1.75rem;
     line-height: 2.25rem;
-  }
-}
-
-@media screen {
-  .c7 {
-    padding: 2rem 0 1rem;
   }
 }
 
@@ -1568,6 +1564,10 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   margin: 0;
 }
 
+.c7 {
+  padding: 2rem 0 1rem;
+}
+
 .c11 {
   font-size: 1rem;
   line-height: 1.375rem;
@@ -1865,12 +1865,6 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   .c10 {
     font-size: 1.5rem;
     line-height: 2.25rem;
-  }
-}
-
-@media screen {
-  .c7 {
-    padding: 2rem 0 1rem;
   }
 }
 
@@ -2107,6 +2101,10 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   margin: 0;
 }
 
+.c7 {
+  padding: 2rem 0 1rem;
+}
+
 .c11 {
   font-size: 1rem;
   line-height: 1.375rem;
@@ -2404,12 +2402,6 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   .c10 {
     font-size: 1.5rem;
     line-height: 2.25rem;
-  }
-}
-
-@media screen {
-  .c7 {
-    padding: 2rem 0 1rem;
   }
 }
 

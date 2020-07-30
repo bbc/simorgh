@@ -6,9 +6,7 @@ import {
 import OnDemandHeading from '.';
 
 const StyledRadioHeadingContainer = styled(OnDemandHeading)`
-  @media screen {
-    padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING_DBL};
-  }
+  padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING_DBL};
 `;
 
 export default StyledRadioHeadingContainer;
