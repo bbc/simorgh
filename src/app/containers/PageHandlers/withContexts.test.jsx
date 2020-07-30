@@ -50,7 +50,6 @@ describe('withContexts HOC', () => {
     status: 200,
     remoteConfig: {
       toggles: {
-        service: 'mundo',
         ads: {
           enabled: false,
         },
@@ -94,7 +93,6 @@ describe('withContexts HOC', () => {
           status: 200,
           remoteConfig: {
             toggles: {
-              service: 'mundo',
               ads: {
                 enabled: false,
               },
@@ -130,7 +128,6 @@ describe('withContexts HOC', () => {
         status: 200,
         remoteConfig: {
           toggles: {
-            service: 'mundo',
             ads: {
               enabled: false,
             },

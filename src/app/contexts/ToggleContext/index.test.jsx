@@ -15,7 +15,6 @@ const TestComponent = ({ toggle, children }) => {
 };
 
 const mockRemoteToggles = {
-  service: 'mundo',
   testToggle: {
     enabled: true,
   },

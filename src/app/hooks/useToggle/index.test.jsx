@@ -9,7 +9,6 @@ describe('useToggle custom hook', () => {
   describe('Given a remote toggle that is true', () => {
     it('should return enabled true', async () => {
       const mockToggles = {
-        service: 'mundo',
         testToggle: {
           enabled: true,
         },
@@ -33,7 +32,6 @@ describe('useToggle custom hook', () => {
   describe('Given a remote toggle that is false', () => {
     it('should return enabled false', async () => {
       const mockToggles = {
-        service: 'mundo',
         testToggle: {
           enabled: false,
         },
