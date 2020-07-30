@@ -18,6 +18,7 @@ export const ServiceContextProvider = ({
   if (!LoadableContextProvider) {
     return null;
   }
+
   return (
     <LoadableContextProvider
       Context={ServiceContext}
