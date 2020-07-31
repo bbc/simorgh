@@ -32,14 +32,14 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   padding: 2rem 0;
 }
 
-.c8 {
+.c9 {
   display: inline-block;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
 }
 
-.c9 {
+.c10 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -48,7 +48,11 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   margin: 0;
 }
 
-.c11 {
+.c8 {
+  padding: 0.5rem 0;
+}
+
+.c12 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -162,7 +166,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @media (max-width:14.9375rem) {
-  .c10 {
+  .c11 {
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -173,7 +177,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c10 {
+  .c11 {
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -184,7 +188,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c11 {
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -195,7 +199,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c10 {
+  .c11 {
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
@@ -206,7 +210,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c10 {
+  .c11 {
     width: calc(5/8*(100% - 8 * 1rem) + 4 * 1rem );
     margin: 0 0.5rem;
     margin-right: 12.5%;
@@ -216,7 +220,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @media (min-width:80rem) {
-  .c10 {
+  .c11 {
     width: calc(10/20*(100% - 20 * 1rem) + 9 * 1rem );
     margin: 0 0.5rem;
     margin-right: 20%;
@@ -226,7 +230,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @supports (display:grid) {
-  .c10 {
+  .c11 {
     display: block;
   }
 }
@@ -251,20 +255,8 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   }
 }
 
-@media screen {
-  .c7 {
-    padding: 0.5rem 0;
-  }
-}
-
-@media (min-width:63rem) {
-  .c7 {
-    padding: 1rem 0;
-  }
-}
-
 @media (min-width:37.5rem) {
-  .c8 {
+  .c9 {
     padding-bottom: 0;
     word-break: break-word;
     line-height: 3.5rem;
@@ -272,35 +264,41 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
+  .c10 {
     font-size: 1.625rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c10 {
     font-size: 1.75rem;
     line-height: 2.25rem;
   }
 }
 
+@media (min-width:63rem) {
+  .c8 {
+    padding: 1rem 0;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c12 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c11 {
+  .c12 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c11 {
+  .c12 {
     padding-bottom: 0.5rem;
   }
 }
@@ -383,31 +381,31 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
       </div>
       <strong
         aria-hidden="true"
-        class="c7"
+        class="c7 c8"
       >
         <span
-          class="c8"
+          class="c9"
         >
           نړۍ دا وخت
         </span>
         <span
           class="c3"
         >
-          ,
+          , 
         </span>
         <span
-          class="c9"
+          class="c10"
         >
           ۲۷ می ۲۰۲۰
         </span>
       </strong>
     </div>
     <div
-      class="c10"
+      class="c11"
       dir="rtl"
     >
       <p
-        class="c11"
+        class="c12"
       >
         د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
       </p>
@@ -474,14 +472,14 @@ exports[`should show the expired content message if episode is expired 1`] = `
   padding: 2rem 0;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
 }
 
-.c10 {
+.c11 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -490,7 +488,11 @@ exports[`should show the expired content message if episode is expired 1`] = `
   margin: 0;
 }
 
-.c12 {
+.c9 {
+  padding: 0.5rem 0;
+}
+
+.c13 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -619,7 +621,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media (max-width:14.9375rem) {
-  .c11 {
+  .c12 {
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -630,7 +632,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c11 {
+  .c12 {
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -641,7 +643,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c12 {
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -652,7 +654,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c11 {
+  .c12 {
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
@@ -663,7 +665,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c11 {
+  .c12 {
     width: calc(5/8*(100% - 8 * 1rem) + 4 * 1rem );
     margin: 0 0.5rem;
     margin-right: 12.5%;
@@ -673,7 +675,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c11 {
+  .c12 {
     width: calc(10/20*(100% - 20 * 1rem) + 9 * 1rem );
     margin: 0 0.5rem;
     margin-right: 20%;
@@ -683,7 +685,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @supports (display:grid) {
-  .c11 {
+  .c12 {
     display: block;
   }
 }
@@ -708,20 +710,8 @@ exports[`should show the expired content message if episode is expired 1`] = `
   }
 }
 
-@media screen {
-  .c8 {
-    padding: 0.5rem 0;
-  }
-}
-
-@media (min-width:63rem) {
-  .c8 {
-    padding: 1rem 0;
-  }
-}
-
 @media (min-width:37.5rem) {
-  .c9 {
+  .c10 {
     padding-bottom: 0;
     word-break: break-word;
     line-height: 3.5rem;
@@ -729,35 +719,41 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c11 {
     font-size: 1.625rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c11 {
     font-size: 1.75rem;
     line-height: 2.25rem;
   }
 }
 
+@media (min-width:63rem) {
+  .c9 {
+    padding: 1rem 0;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
+  .c13 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c13 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c12 {
+  .c13 {
     padding-bottom: 0.5rem;
   }
 }
@@ -834,31 +830,31 @@ exports[`should show the expired content message if episode is expired 1`] = `
       </div>
       <strong
         aria-hidden="true"
-        class="c8"
+        class="c8 c9"
       >
         <span
-          class="c9"
+          class="c10"
         >
           نړۍ دا وخت
         </span>
         <span
           class="c3"
         >
-          ,
+          , 
         </span>
         <span
-          class="c10"
+          class="c11"
         >
           ۲۷ می ۲۰۲۰
         </span>
       </strong>
     </div>
     <div
-      class="c11"
+      class="c12"
       dir="rtl"
     >
       <p
-        class="c12"
+        class="c13"
       >
         د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
       </p>
@@ -925,14 +921,14 @@ exports[`should show the future content message if episode is not yet available 
   padding: 2rem 0;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
 }
 
-.c10 {
+.c11 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -941,7 +937,11 @@ exports[`should show the future content message if episode is not yet available 
   margin: 0;
 }
 
-.c12 {
+.c9 {
+  padding: 0.5rem 0;
+}
+
+.c13 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1070,7 +1070,7 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media (max-width:14.9375rem) {
-  .c11 {
+  .c12 {
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -1081,7 +1081,7 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c11 {
+  .c12 {
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -1092,7 +1092,7 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c12 {
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -1103,7 +1103,7 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c11 {
+  .c12 {
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
@@ -1114,7 +1114,7 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c11 {
+  .c12 {
     width: calc(5/8*(100% - 8 * 1rem) + 4 * 1rem );
     margin: 0 0.5rem;
     margin-right: 12.5%;
@@ -1124,7 +1124,7 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media (min-width:80rem) {
-  .c11 {
+  .c12 {
     width: calc(10/20*(100% - 20 * 1rem) + 9 * 1rem );
     margin: 0 0.5rem;
     margin-right: 20%;
@@ -1134,7 +1134,7 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @supports (display:grid) {
-  .c11 {
+  .c12 {
     display: block;
   }
 }
@@ -1159,20 +1159,8 @@ exports[`should show the future content message if episode is not yet available 
   }
 }
 
-@media screen {
-  .c8 {
-    padding: 0.5rem 0;
-  }
-}
-
-@media (min-width:63rem) {
-  .c8 {
-    padding: 1rem 0;
-  }
-}
-
 @media (min-width:37.5rem) {
-  .c9 {
+  .c10 {
     padding-bottom: 0;
     word-break: break-word;
     line-height: 3.5rem;
@@ -1180,35 +1168,41 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c11 {
     font-size: 1.625rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c11 {
     font-size: 1.75rem;
     line-height: 2.25rem;
   }
 }
 
+@media (min-width:63rem) {
+  .c9 {
+    padding: 1rem 0;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
+  .c13 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c13 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c12 {
+  .c13 {
     padding-bottom: 0.5rem;
   }
 }
@@ -1285,31 +1279,31 @@ exports[`should show the future content message if episode is not yet available 
       </div>
       <strong
         aria-hidden="true"
-        class="c8"
+        class="c8 c9"
       >
         <span
-          class="c9"
+          class="c10"
         >
           نړۍ دا وخت
         </span>
         <span
           class="c3"
         >
-          ,
+          , 
         </span>
         <span
-          class="c10"
+          class="c11"
         >
           ۲۷ می ۲۰۲۰
         </span>
       </strong>
     </div>
     <div
-      class="c11"
+      class="c12"
       dir="rtl"
     >
       <p
-        class="c12"
+        class="c13"
       >
         د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
       </p>
@@ -1376,14 +1370,14 @@ exports[`should show the future content message if episode is pending 1`] = `
   padding: 2rem 0;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
 }
 
-.c10 {
+.c11 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1392,7 +1386,11 @@ exports[`should show the future content message if episode is pending 1`] = `
   margin: 0;
 }
 
-.c12 {
+.c9 {
+  padding: 0.5rem 0;
+}
+
+.c13 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1521,7 +1519,7 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media (max-width:14.9375rem) {
-  .c11 {
+  .c12 {
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -1532,7 +1530,7 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c11 {
+  .c12 {
     padding: 0 0.5rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -1543,7 +1541,7 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c11 {
+  .c12 {
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
     margin: 0 0.25rem;
@@ -1554,7 +1552,7 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c11 {
+  .c12 {
     padding: 0 1rem;
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
     margin: 0 0.5rem;
@@ -1565,7 +1563,7 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c11 {
+  .c12 {
     width: calc(5/8*(100% - 8 * 1rem) + 4 * 1rem );
     margin: 0 0.5rem;
     margin-right: 12.5%;
@@ -1575,7 +1573,7 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c11 {
+  .c12 {
     width: calc(10/20*(100% - 20 * 1rem) + 9 * 1rem );
     margin: 0 0.5rem;
     margin-right: 20%;
@@ -1585,7 +1583,7 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @supports (display:grid) {
-  .c11 {
+  .c12 {
     display: block;
   }
 }
@@ -1610,20 +1608,8 @@ exports[`should show the future content message if episode is pending 1`] = `
   }
 }
 
-@media screen {
-  .c8 {
-    padding: 0.5rem 0;
-  }
-}
-
-@media (min-width:63rem) {
-  .c8 {
-    padding: 1rem 0;
-  }
-}
-
 @media (min-width:37.5rem) {
-  .c9 {
+  .c10 {
     padding-bottom: 0;
     word-break: break-word;
     line-height: 3.5rem;
@@ -1631,35 +1617,41 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c11 {
     font-size: 1.625rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c11 {
     font-size: 1.75rem;
     line-height: 2.25rem;
   }
 }
 
+@media (min-width:63rem) {
+  .c9 {
+    padding: 1rem 0;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
+  .c13 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c12 {
+  .c13 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c12 {
+  .c13 {
     padding-bottom: 0.5rem;
   }
 }
@@ -1736,31 +1728,31 @@ exports[`should show the future content message if episode is pending 1`] = `
       </div>
       <strong
         aria-hidden="true"
-        class="c8"
+        class="c8 c9"
       >
         <span
-          class="c9"
+          class="c10"
         >
           نړۍ دا وخت
         </span>
         <span
           class="c3"
         >
-          ,
+          , 
         </span>
         <span
-          class="c10"
+          class="c11"
         >
           ۲۷ می ۲۰۲۰
         </span>
       </strong>
     </div>
     <div
-      class="c11"
+      class="c12"
       dir="rtl"
     >
       <p
-        class="c12"
+        class="c13"
       >
         د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
       </p>
