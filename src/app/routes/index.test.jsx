@@ -8,6 +8,8 @@ import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import fetchMock from 'fetch-mock';
 
+import defaultToggles from '#lib/config/toggles';
+
 // components being tested
 import routes from './index';
 
@@ -68,7 +70,7 @@ const renderRouter = ({
         service,
         isAmp: false,
         status: status || 200,
-        remoteConfig: null,
+        toggles: defaultToggles.local,
         ...(errorCode && { errorCode }),
       })}
     </MemoryRouter>,
@@ -131,7 +133,7 @@ it('should route to and render the onDemand Radio page', async () => {
     pageData,
     pageType,
     service: 'indonesia',
-    remoteConfig: null,
+    toggles: null,
   });
 
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Dunia Pagi Ini';

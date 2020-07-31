@@ -3,43 +3,51 @@ import { CONFIG_REQUEST_RECEIVED, CONFIG_FETCH_ERROR } from '#lib/logger.const';
 
 const mockUrl =
   'https://mock-config-endpoint?application=simorgh&service=mundo&__amp_source_origin=http://localhost';
-const mockResponse = { testToggle: { enabled: true } };
+const mockResponse = {
+  toggles: {
+    testToggle: { enabled: true },
+  },
+};
 fetchMock.mock(mockUrl, mockResponse);
 
-describe('getRemoteConfig', () => {
+describe('getToggles', () => {
   beforeEach(async () => {
     jest.resetModules();
     await import('#testHelpers/loggerMock');
     process.env.SIMORGH_CONFIG_URL = 'https://mock-config-endpoint';
   });
 
-  it('should return null if enableFetchingToggles is not enabled', async () => {
-    jest.mock('#lib/config/toggles', () => ({
+  it('should return defaultToggles if enableFetchingToggles is not enabled', async () => {
+    const mockDefaultToggles = {
       local: {
         enableFetchingToggles: { enabled: false },
+        defaultToggle: { enabled: false },
       },
-    }));
+    };
+    jest.mock('#lib/config/toggles', () => mockDefaultToggles);
 
     // Dynamic import is used in these tests so the toggles file values can be changed
-    const getRemoteConfig = await import('.');
-    const remoteToggles = await getRemoteConfig.default('mundo');
+    const getToggles = await import('.');
+    const remoteToggles = await getToggles.default('mundo');
 
-    expect(remoteToggles).toBe(null);
+    expect(remoteToggles).toBe(mockDefaultToggles.local);
   });
 
   describe('with enableFetchingToggles enabled', () => {
+    const mockDefaultToggles = {
+      local: {
+        enableFetchingToggles: { enabled: true },
+        defaultToggle: { enabled: false },
+      },
+    };
     beforeEach(() => {
-      jest.mock('#lib/config/toggles', () => ({
-        local: {
-          enableFetchingToggles: { enabled: true },
-        },
-      }));
+      jest.mock('#lib/config/toggles', () => mockDefaultToggles);
     });
 
-    it('should return the data received from the config enpoint and log that this happened', async () => {
+    it('should return the merged local and remote toggles and log that this happened', async () => {
       const nodeLogger = await import('#testHelpers/loggerMock');
-      const getRemoteConfig = await import('.');
-      const remoteToggles = await getRemoteConfig.default('mundo');
+      const getToggles = await import('.');
+      const remoteToggles = await getToggles.default('mundo');
 
       expect(nodeLogger.default.info).toHaveBeenCalledWith(
         CONFIG_REQUEST_RECEIVED,
@@ -48,18 +56,24 @@ describe('getRemoteConfig', () => {
           url: mockUrl,
         },
       );
-      expect(remoteToggles).toEqual(mockResponse);
+      expect(remoteToggles).toEqual({
+        ...mockDefaultToggles.local,
+        ...mockResponse.toggles,
+      });
     });
 
-    it('should return cache if it exists', async () => {
+    it('should return merged local and cache if it exists', async () => {
       const mockCache = {
-        get: jest.fn(() => true),
+        get: jest.fn(() => mockResponse.toggles),
       };
 
-      const getRemoteConfig = await import('.');
-      const remoteToggles = await getRemoteConfig.default('mundo', mockCache);
+      const getToggles = await import('.');
+      const remoteToggles = await getToggles.default('mundo', mockCache);
 
-      expect(remoteToggles).toBe(true);
+      expect(remoteToggles).toEqual({
+        ...mockDefaultToggles.local,
+        ...mockResponse.toggles,
+      });
       expect(mockCache.get).toHaveBeenCalledTimes(1);
       expect(mockCache.get).toHaveBeenCalledWith(
         'https://mock-config-endpoint?application=simorgh&service=mundo&__amp_source_origin=http://localhost',
@@ -72,12 +86,15 @@ describe('getRemoteConfig', () => {
         set: jest.fn(),
       };
 
-      const getRemoteConfig = await import('.');
-      const remoteToggles = await getRemoteConfig.default('mundo', mockCache);
+      const getToggles = await import('.');
+      const remoteToggles = await getToggles.default('mundo', mockCache);
 
-      expect(remoteToggles).toEqual(mockResponse);
+      expect(remoteToggles).toEqual({
+        ...mockDefaultToggles.local,
+        ...mockResponse.toggles,
+      });
       expect(mockCache.set).toHaveBeenCalledTimes(1);
-      expect(mockCache.set).toHaveBeenCalledWith(mockUrl, mockResponse);
+      expect(mockCache.set).toHaveBeenCalledWith(mockUrl, mockResponse.toggles);
     });
 
     it('should catch response errors, log it and return null', async () => {
@@ -87,8 +104,8 @@ describe('getRemoteConfig', () => {
       fetchMock.mock(mockServiceUrl, errorCode);
 
       const nodeLogger = await import('#testHelpers/loggerMock');
-      const getRemoteConfig = await import('.');
-      const remoteToggles = await getRemoteConfig.default('pidgin');
+      const getToggles = await import('.');
+      const remoteToggles = await getToggles.default('pidgin');
 
       expect(nodeLogger.default.error).toHaveBeenCalledWith(
         CONFIG_FETCH_ERROR,
@@ -98,7 +115,7 @@ describe('getRemoteConfig', () => {
           url: mockServiceUrl,
         },
       );
-      expect(remoteToggles).toBe(null);
+      expect(remoteToggles).toBe(mockDefaultToggles.local);
     });
   });
 });

@@ -14,18 +14,17 @@ const TestComponent = ({ toggle, children }) => {
   return <div>{children}</div>;
 };
 
-const mockRemoteToggles = {
-  testToggle: {
-    enabled: true,
-  },
-};
-
 it('should render test component when remoteToggles are passed in that enable them', async () => {
-  let container;
+  const mockToggles = {
+    testToggle: {
+      enabled: true,
+    },
+  };
 
+  let container;
   await act(async () => {
     container = await render(
-      <ToggleContextProvider remoteToggles={mockRemoteToggles}>
+      <ToggleContextProvider toggles={mockToggles}>
         <TestComponent toggle="testToggle">Dummy Component</TestComponent>
       </ToggleContextProvider>,
     ).container;
@@ -35,10 +34,16 @@ it('should render test component when remoteToggles are passed in that enable th
 });
 
 it('should not render test component by default as no remoteToggles are passed in', async () => {
+  const mockToggles = {
+    testToggle: {
+      enabled: false,
+    },
+  };
+
   let container;
   await act(async () => {
     container = await render(
-      <ToggleContextProvider remoteToggles={null}>
+      <ToggleContextProvider toggles={mockToggles}>
         <TestComponent toggle="testToggle">Dummy Component</TestComponent>
       </ToggleContextProvider>,
     ).container;

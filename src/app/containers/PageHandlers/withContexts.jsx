@@ -1,6 +1,5 @@
 import React from 'react';
 import { bool, element, string, number, object } from 'prop-types';
-import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import variantPropType from '#models/propTypes/variants';
 import { pageDataPropType } from '#models/propTypes/data';
@@ -15,7 +14,7 @@ import { EventContextProvider } from '#contexts/EventContext';
 const WithContexts = Component => {
   const WithContextsContainer = props => {
     const {
-      remoteConfig,
+      toggles,
       bbcOrigin,
       status,
       id,
@@ -29,10 +28,8 @@ const WithContexts = Component => {
       pageData,
     } = props;
 
-    const remoteToggles = pathOr(null, ['toggles'], remoteConfig);
-
     return (
-      <ToggleContextProvider remoteToggles={remoteToggles}>
+      <ToggleContextProvider toggles={toggles}>
         <ServiceContextProvider
           service={service}
           variant={variant}
@@ -74,7 +71,7 @@ const WithContexts = Component => {
     variant: variantPropType,
     timeOnServer: number,
     // eslint-disable-next-line react/forbid-prop-types
-    remoteConfig: object,
+    toggles: object.isRequired,
   };
 
   WithContextsContainer.defaultProps = {
@@ -85,7 +82,6 @@ const WithContexts = Component => {
     previousPath: null,
     variant: null,
     timeOnServer: null,
-    remoteConfig: null,
   };
 
   return WithContextsContainer;

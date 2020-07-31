@@ -17,10 +17,11 @@ import afaanoromooPageData from '#data/afaanoromoo/bbc_afaanoromoo_radio/w13xttn
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandRadio/getInitialData';
+import defaultToggles from '#lib/config/toggles';
 
 const Page = ({ pageData, service, isAmp = false, variant }) => (
   <StaticRouter>
-    <ToggleContextProvider>
+    <ToggleContextProvider toggles={defaultToggles.local}>
       <ServiceContextProvider service={service} variant={variant}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"

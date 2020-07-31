@@ -7,8 +7,10 @@ import reactRouterConfig from 'react-router-config';
 import { mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 import { App } from './App';
+import getToggles from '#app/lib/utilities/getToggles';
 
 jest.mock('react-router-config');
+jest.mock('#app/lib/utilities/getToggles');
 
 describe('App', () => {
   let wrapper;
@@ -16,7 +18,7 @@ describe('App', () => {
   const initialData = {
     pageData: 'Some initial data',
     timeOnServer,
-    remoteConfig: {
+    toggles: {
       mockToggle: { enabled: true },
     },
   };
@@ -36,6 +38,9 @@ describe('App', () => {
   reactRouterConfig.renderRoutes.mockReturnValue(
     <h1>{initialData.pageData}</h1>,
   );
+
+  const updatedToggles = { mockToggle: { enabled: false } };
+  getToggles.mockReturnValue(updatedToggles);
 
   beforeAll(() => {
     wrapper = mount(
@@ -57,7 +62,7 @@ describe('App', () => {
       assetUri: undefined,
       bbcOrigin: 'https://www.bbc.co.uk',
       pageData: initialData.pageData,
-      remoteConfig: initialData.remoteConfig,
+      toggles: initialData.toggles,
       error: undefined,
       errorCode: undefined,
       id: undefined,
@@ -85,8 +90,9 @@ describe('App', () => {
             history: { action: 'PUSH' },
           });
 
-          expect.assertions(2);
+          expect.assertions(3);
           expect(route.getInitialData).not.toHaveBeenCalled();
+          expect(getToggles).not.toHaveBeenCalled();
           expect(reactRouterConfig.renderRoutes).not.toHaveBeenCalled();
         });
       });
@@ -115,6 +121,8 @@ describe('App', () => {
             });
           });
 
+          getToggles.mockImplementation(() => updatedToggles);
+
           await act(async () => {
             wrapper.setProps({ location: { pathname: 'pathnameTwo' } });
           });
@@ -127,10 +135,10 @@ describe('App', () => {
             2,
             [],
             {
-              assertUri: undefined,
+              assetUri: undefined,
               bbcOrigin: 'https://www.bbc.co.uk',
+              toggles: initialData.toggles,
               pageData: null,
-              remoteConfig: null,
               status: null,
               error: null,
               errorCode: null,
@@ -151,10 +159,10 @@ describe('App', () => {
             3,
             [],
             {
-              assertUri: undefined,
+              assetUri: undefined,
               bbcOrigin: 'https://www.bbc.co.uk',
               pageData: null,
-              remoteConfig: null,
+              toggles: updatedToggles,
               status: null,
               error,
               errorCode: null,
@@ -206,10 +214,11 @@ describe('App', () => {
             2,
             [],
             {
+              assetUrl: undefined,
               bbcOrigin: 'https://www.bbc.co.uk',
               pageData: null,
-              remoteConfig: null,
               status: null,
+              toggles: initialData.toggles,
               error: null,
               errorCode: null,
               id: undefined,
@@ -232,7 +241,7 @@ describe('App', () => {
               assetUri: undefined,
               bbcOrigin: 'https://www.bbc.co.uk',
               pageData: data.pageData,
-              remoteConfig: null,
+              toggles: updatedToggles,
               status: data.status,
               error: undefined,
               errorCode: null,

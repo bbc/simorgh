@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 import path from 'ramda/src/path';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import usePrevious from '#lib/utilities/usePrevious';
-import getRemoteConfig from '#lib/utilities/getRemoteConfig';
+import getToggles from '#app/lib/utilities/getToggles';
 
 export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
   const {
@@ -17,11 +17,11 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
 
-  const { pageData, remoteConfig, status, error, timeOnServer } = initialData;
+  const { pageData, toggles, status, error, timeOnServer } = initialData;
 
   const [state, setState] = useState({
     pageData,
-    remoteConfig,
+    toggles,
     status,
     service,
     variant,
@@ -70,7 +70,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       loaderPromise.then(() => {
         setState({
           pageData: null,
-          remoteConfig: null,
+          toggles,
           status: null,
           service: nextService,
           variant: nextVariant,
@@ -86,7 +86,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       });
 
       const updateAppState = async () => {
-        const nextRemoteConfig = await getRemoteConfig(nextService);
+        const nextToggles = await getToggles(nextService);
         const data = await getInitialData({
           path: location.pathname,
           service: nextService,
@@ -105,7 +105,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
           pageType: nextPageType,
           loading: false,
           pageData: path(['pageData'], data),
-          remoteConfig: nextRemoteConfig,
+          toggles: nextToggles,
           status: path(['status'], data),
           error: path(['error'], data),
           errorCode: null,
@@ -115,7 +115,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
 
       updateAppState();
     }
-  }, [routes, location.pathname, remoteConfig]);
+  }, [routes, location.pathname, toggles]);
 
   const previousLocationPath = usePrevious(location.pathname);
 

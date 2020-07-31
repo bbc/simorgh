@@ -8,6 +8,7 @@ import { service as persianConfig } from '#lib/config/services/persian';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import IdxPage from '#pages/IdxPage';
+import defaultToggles from '#lib/config/toggles';
 
 const radioServiceOverride = 'dari';
 
@@ -20,7 +21,7 @@ const serviceContext = {
 const IdxPageWithContext = ({ service = 'persian', pageData }) => {
   return (
     <BrowserRouter>
-      <ToggleContextProvider>
+      <ToggleContextProvider toggles={defaultToggles.local}>
         <RequestContextProvider
           pageType="IDX"
           service={service}

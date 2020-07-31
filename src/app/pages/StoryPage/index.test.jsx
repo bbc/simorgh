@@ -12,7 +12,7 @@ import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 // contexts
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContext } from '#contexts/ToggleContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 // components to test
 import { StoryPage } from '..';
@@ -41,7 +41,7 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
 
 const createAssetPage = ({ pageData }, service) => (
   <StaticRouter>
-    <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
+    <ToggleContextProvider toggles={toggleState}>
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
@@ -54,7 +54,7 @@ const createAssetPage = ({ pageData }, service) => (
           <StoryPage service={service} pageData={pageData} />
         </RequestContextProvider>
       </ServiceContextProvider>
-    </ToggleContext.Provider>
+    </ToggleContextProvider>
   </StaticRouter>
 );
 

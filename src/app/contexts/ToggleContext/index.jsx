@@ -1,22 +1,11 @@
 import React, { createContext, useReducer } from 'react';
 import { node, object } from 'prop-types';
 import { toggleReducer } from './reducer';
-import defaultToggles from '#lib/config/toggles';
 
 const ToggleContext = createContext({});
 
-const ToggleContextProvider = ({ children, remoteToggles }) => {
-  const environment = process.env.SIMORGH_APP_ENV || 'local';
-
-  const simorghToggles = {
-    ...defaultToggles[environment],
-    ...remoteToggles,
-  };
-
-  const [toggleState, toggleDispatch] = useReducer(
-    toggleReducer,
-    simorghToggles,
-  );
+const ToggleContextProvider = ({ children, toggles }) => {
+  const [toggleState, toggleDispatch] = useReducer(toggleReducer, toggles);
 
   return (
     <ToggleContext.Provider value={{ toggleState, toggleDispatch }}>
@@ -30,11 +19,7 @@ const ToggleContextConsumer = ToggleContext.Consumer;
 ToggleContextProvider.propTypes = {
   children: node.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
-  remoteToggles: object,
-};
-
-ToggleContextProvider.defaultProps = {
-  remoteToggles: null,
+  toggles: object.isRequired,
 };
 
 export { ToggleContext, ToggleContextProvider, ToggleContextConsumer };

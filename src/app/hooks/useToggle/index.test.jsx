@@ -16,7 +16,7 @@ describe('useToggle custom hook', () => {
 
       let result;
       const wrapper = ({ children }) => (
-        <ToggleContextProvider remoteToggles={mockToggles}>
+        <ToggleContextProvider toggles={mockToggles}>
           {children}
         </ToggleContextProvider>
       );
@@ -38,7 +38,7 @@ describe('useToggle custom hook', () => {
       };
       let result;
       const wrapper = ({ children }) => (
-        <ToggleContextProvider remoteToggles={mockToggles}>
+        <ToggleContextProvider toggles={mockToggles}>
           {children}
         </ToggleContextProvider>
       );

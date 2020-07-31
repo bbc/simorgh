@@ -1,5 +1,5 @@
 import Cache from 'lru-cache';
-import getRemoteConfig from '.';
+import getToggles from '.';
 
 const cacheMaxItems = parseInt(process.env.SIMORGH_CONFIG_CACHE_ITEMS, 10);
 const cacheMaxAge = parseInt(
@@ -8,7 +8,6 @@ const cacheMaxAge = parseInt(
 );
 const cache = new Cache({ max: cacheMaxItems, maxAge: cacheMaxAge * 1000 });
 
-const getRemoteConfigWithCache = async service =>
-  getRemoteConfig(service, cache);
+const withCache = async service => getToggles(service, cache);
 
-export default getRemoteConfigWithCache;
+export default withCache;

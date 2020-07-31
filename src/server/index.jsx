@@ -23,7 +23,7 @@ import {
   SERVER_SIDE_REQUEST_FAILED,
   ROUTING_INFORMATION,
 } from '#lib/logger.const';
-import getRemoteConfig from '#lib/utilities/getRemoteConfig/getRemoteConfigWithCache';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { OK } from '#lib/statusCodes.const';
 import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
@@ -136,7 +136,7 @@ server
         // Set derivedPageType based on matched route
         derivedPageType = pageType || derivedPageType;
 
-        const remoteConfig = await getRemoteConfig(service);
+        const toggles = await getToggles(service);
 
         const data = await getInitialData({
           path: url,
@@ -145,7 +145,7 @@ server
           pageType,
         });
 
-        data.remoteConfig = remoteConfig;
+        data.toggles = toggles;
         data.path = urlPath;
         data.timeOnServer = Date.now();
 
