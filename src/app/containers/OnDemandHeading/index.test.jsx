@@ -2,12 +2,12 @@ import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render, getByText, getByRole } from '@testing-library/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import OnDemandHeading from '.';
+import OnDemandHeadingContainer from '.';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ ariaHidden, idAttr, darkMode }) => (
   <ServiceContextProvider service="news">
-    <OnDemandHeading
+    <OnDemandHeadingContainer
       brandTitle="Dunia Pagi Ini"
       releaseDateTimeStamp={1587945600000}
       uuid="uuid"
