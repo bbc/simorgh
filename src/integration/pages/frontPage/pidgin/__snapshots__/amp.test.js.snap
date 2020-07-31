@@ -515,6 +515,20 @@ Object {
 }
 `;
 
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 19`] = `
+Object {
+  "sizes": "384x384",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`AMP Front Page SEO Apple Touch Icon should match attributes 20`] = `
+Object {
+  "sizes": "512x512",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png",
+}
+`;
+
 exports[`AMP Front Page SEO Canonical link 1`] = `"http://localhost:7080/pidgin"`;
 
 exports[`AMP Front Page SEO Canonical link 2`] = `"http://localhost:7080/pidgin"`;

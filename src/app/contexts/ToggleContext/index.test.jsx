@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { render, act } from '@testing-library/react';
 import fetchMock from 'fetch-mock';
-import '@testing-library/jest-dom/extend-expect';
 import { queryByText } from '@testing-library/dom';
 import togglesConfig from '#lib/config/toggles';
 import { ToggleContext, ToggleContextProvider } from '.';
