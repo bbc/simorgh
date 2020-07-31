@@ -12,7 +12,7 @@ const StyledParagraphComponent = styled(ParagraphComponent)`
   }
 `;
 
-const ParagraphContainer = ({ idAttr, text, darkMode }) => {
+const OnDemandParagraphContainer = ({ idAttr, text, darkMode }) => {
   const { script, service } = useContext(ServiceContext);
 
   if (!text) return null;
@@ -29,15 +29,15 @@ const ParagraphContainer = ({ idAttr, text, darkMode }) => {
   );
 };
 
-ParagraphContainer.propTypes = {
+OnDemandParagraphContainer.propTypes = {
   idAttr: string,
   text: string.isRequired,
   darkMode: bool,
 };
 
-ParagraphContainer.defaultProps = {
+OnDemandParagraphContainer.defaultProps = {
   idAttr: null,
   darkMode: false,
 };
 
-export default ParagraphContainer;
+export default OnDemandParagraphContainer;
