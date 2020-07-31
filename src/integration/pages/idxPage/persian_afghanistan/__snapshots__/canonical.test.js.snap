@@ -236,6 +236,13 @@ Object {
 }
 `;
 
+exports[`Canonical persian/afghanistan IDX page SEO Apple Touch Icon should match attributes 10`] = `
+Object {
+  "sizes": "512x512",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png",
+}
+`;
+
 exports[`Canonical persian/afghanistan IDX page SEO Canonical link 1`] = `"http://localhost:7080/persian/afghanistan"`;
 
 exports[`Canonical persian/afghanistan IDX page SEO Dir attribute 1`] = `"rtl"`;
