@@ -238,6 +238,13 @@ Object {
 }
 `;
 
+exports[`Canonical Articles SEO Apple Touch Icon should match attributes 10`] = `
+Object {
+  "sizes": "512x512",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png",
+}
+`;
+
 exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7080/persian/articles/c4vlle3q337o"`;
 
 exports[`Canonical Articles SEO Dir attribute 1`] = `"rtl"`;
