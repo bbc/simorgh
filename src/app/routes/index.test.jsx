@@ -5,7 +5,6 @@ import { matchPath } from 'react-router';
 
 // test helpers
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import fetchMock from 'fetch-mock';
 
 import defaultToggles from '#lib/config/toggles';
