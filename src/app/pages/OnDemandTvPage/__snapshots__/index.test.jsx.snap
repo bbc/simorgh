@@ -393,7 +393,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
         <span
           class="c3"
         >
-          , 
+          ,
         </span>
         <span
           class="c9"
@@ -844,7 +844,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
         <span
           class="c3"
         >
-          , 
+          ,
         </span>
         <span
           class="c10"
@@ -1295,7 +1295,7 @@ exports[`should show the future content message if episode is not yet available 
         <span
           class="c3"
         >
-          , 
+          ,
         </span>
         <span
           class="c10"
@@ -1746,7 +1746,7 @@ exports[`should show the future content message if episode is pending 1`] = `
         <span
           class="c3"
         >
-          , 
+          ,
         </span>
         <span
           class="c10"
