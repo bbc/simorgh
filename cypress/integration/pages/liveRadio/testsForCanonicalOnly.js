@@ -62,7 +62,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         );
 
         if (isRadioScheduleOnPage) {
-          // Override is being added twice somewhere causing a false negative on the call to the schedule!
+          // Override is being added twice causing a false negative on the call to the schedule! I think other tests need the override though. Will look at this again
           const liveRadioPath = Cypress.env('currentPath').replace(
             '?renderer_env=live',
             '',
