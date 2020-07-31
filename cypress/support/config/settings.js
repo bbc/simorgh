@@ -4170,14 +4170,14 @@ module.exports = () => ({
         environments: {
           live: {
             paths: [
-              '/persian/bbc_persian_radio/liveradio',
+              // '/persian/bbc_persian_radio/liveradio',
               '/persian/bbc_dari_radio/liveradio',
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              '/persian/bbc_persian_radio/liveradio?renderer_env=live',
+              // '/persian/bbc_persian_radio/liveradio?renderer_env=live',
               '/persian/bbc_dari_radio/liveradio?renderer_env=live',
             ],
             enabled: true,
