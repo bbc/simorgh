@@ -49,6 +49,7 @@ const logCodes = {
   // Config
   CONFIG_REQUEST_RECEIVED: 'config_request_received',
   CONFIG_FETCH_ERROR: 'config_fetch_error',
+  CONFIG_ERROR: 'config_error',
 
   // Block Types
   UNSUPPORTED_BLOCK_TYPE: 'unsupported_block_type',
