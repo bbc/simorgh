@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toggles Config when application environment is live should contain correct default values 1`] = `
+Object {
+  "_environment": "live",
+  "ads": Object {
+    "enabled": false,
+  },
+  "chartbeatAnalytics": Object {
+    "enabled": true,
+  },
+  "cinemaModeTV": Object {
+    "enabled": true,
+  },
+  "comscoreAnalytics": Object {
+    "enabled": false,
+  },
+  "cpsRecommendations": Object {
+    "enabled": false,
+  },
+  "enableFetchingToggles": Object {
+    "enabled": false,
+    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
+  },
+  "include": Object {
+    "enabled": true,
+  },
+  "liveRadioSchedule": Object {
+    "enabled": false,
+  },
+  "logMediaPlayerStatus": Object {
+    "enabled": false,
+  },
+  "mediaPlayer": Object {
+    "enabled": true,
+  },
+  "mostRead": Object {
+    "enabled": true,
+  },
+  "navOnArticles": Object {
+    "enabled": true,
+  },
+  "prerollAds": Object {
+    "enabled": true,
+  },
+  "radioSchedule": Object {
+    "enabled": true,
+  },
+  "scriptLink": Object {
+    "enabled": true,
+  },
+  "socialEmbed": Object {
+    "enabled": true,
+  },
+  "variantCookie": Object {
+    "enabled": true,
+  },
+}
+`;
+
+exports[`Toggles Config when application environment is local should contain correct default values 1`] = `
+Object {
+  "_environment": "local",
+  "ads": Object {
+    "enabled": false,
+  },
+  "chartbeatAnalytics": Object {
+    "enabled": true,
+  },
+  "cinemaModeTV": Object {
+    "enabled": true,
+  },
+  "comscoreAnalytics": Object {
+    "enabled": true,
+  },
+  "cpsRecommendations": Object {
+    "enabled": true,
+  },
+  "enableFetchingToggles": Object {
+    "enabled": true,
+    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
+  },
+  "include": Object {
+    "enabled": true,
+  },
+  "liveRadioSchedule": Object {
+    "enabled": true,
+  },
+  "logMediaPlayerStatus": Object {
+    "enabled": false,
+  },
+  "mediaPlayer": Object {
+    "enabled": true,
+  },
+  "mostRead": Object {
+    "enabled": true,
+  },
+  "navOnArticles": Object {
+    "enabled": true,
+  },
+  "prerollAds": Object {
+    "enabled": true,
+  },
+  "radioSchedule": Object {
+    "enabled": true,
+  },
+  "scriptLink": Object {
+    "enabled": true,
+  },
+  "socialEmbed": Object {
+    "enabled": true,
+  },
+  "variantCookie": Object {
+    "enabled": true,
+  },
+}
+`;
+
+exports[`Toggles Config when application environment is test should contain correct default values 1`] = `
+Object {
+  "_environment": "test",
+  "ads": Object {
+    "enabled": false,
+  },
+  "chartbeatAnalytics": Object {
+    "enabled": true,
+  },
+  "cinemaModeTV": Object {
+    "enabled": true,
+  },
+  "comscoreAnalytics": Object {
+    "enabled": true,
+  },
+  "cpsRecommendations": Object {
+    "enabled": true,
+  },
+  "enableFetchingToggles": Object {
+    "enabled": true,
+    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
+  },
+  "include": Object {
+    "enabled": true,
+  },
+  "liveRadioSchedule": Object {
+    "enabled": true,
+  },
+  "logMediaPlayerStatus": Object {
+    "enabled": false,
+  },
+  "mediaPlayer": Object {
+    "enabled": true,
+  },
+  "mostRead": Object {
+    "enabled": true,
+  },
+  "navOnArticles": Object {
+    "enabled": true,
+  },
+  "prerollAds": Object {
+    "enabled": true,
+  },
+  "radioSchedule": Object {
+    "enabled": true,
+  },
+  "scriptLink": Object {
+    "enabled": true,
+  },
+  "socialEmbed": Object {
+    "enabled": true,
+  },
+  "variantCookie": Object {
+    "enabled": true,
+  },
+}
+`;
