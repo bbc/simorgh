@@ -63,6 +63,6 @@ describe('useToggle custom hook', () => {
       result = renderHook(() => useToggle('notAToggle'), { wrapper }).result;
     });
 
-    expect(result.current).toEqual({ enabled: false });
+    expect(result.current).toEqual({ enabled: null });
   });
 });
