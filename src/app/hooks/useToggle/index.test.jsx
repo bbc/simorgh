@@ -5,48 +5,64 @@ import useToggle from '.';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 describe('useToggle custom hook', () => {
-  describe('Given a remote toggle that is true', () => {
-    it('should return enabled true', async () => {
-      const mockToggles = {
-        testToggle: {
-          enabled: true,
-        },
-      };
+  it('should return enabled true if a toggle is true', async () => {
+    const mockToggles = {
+      testToggle: {
+        enabled: true,
+      },
+    };
 
-      let result;
-      const wrapper = ({ children }) => (
-        <ToggleContextProvider toggles={mockToggles}>
-          {children}
-        </ToggleContextProvider>
-      );
+    let result;
+    const wrapper = ({ children }) => (
+      <ToggleContextProvider toggles={mockToggles}>
+        {children}
+      </ToggleContextProvider>
+    );
 
-      await act(async () => {
-        result = renderHook(() => useToggle('testToggle'), { wrapper }).result;
-      });
-
-      expect(result.current).toEqual({ enabled: true });
+    await act(async () => {
+      result = renderHook(() => useToggle('testToggle'), { wrapper }).result;
     });
+
+    expect(result.current).toEqual({ enabled: true });
   });
 
-  describe('Given a remote toggle that is false', () => {
-    it('should return enabled false', async () => {
-      const mockToggles = {
-        testToggle: {
-          enabled: false,
-        },
-      };
-      let result;
-      const wrapper = ({ children }) => (
-        <ToggleContextProvider toggles={mockToggles}>
-          {children}
-        </ToggleContextProvider>
-      );
+  it('should return enabled false if a toggle is false', async () => {
+    const mockToggles = {
+      testToggle: {
+        enabled: false,
+      },
+    };
+    let result;
+    const wrapper = ({ children }) => (
+      <ToggleContextProvider toggles={mockToggles}>
+        {children}
+      </ToggleContextProvider>
+    );
 
-      await act(async () => {
-        result = renderHook(() => useToggle('testToggle'), { wrapper }).result;
-      });
-
-      expect(result.current).toEqual({ enabled: false });
+    await act(async () => {
+      result = renderHook(() => useToggle('testToggle'), { wrapper }).result;
     });
+
+    expect(result.current).toEqual({ enabled: false });
+  });
+
+  it('should return enabled null if a toggle does not exist', async () => {
+    const mockToggles = {
+      testToggle: {
+        enabled: false,
+      },
+    };
+    let result;
+    const wrapper = ({ children }) => (
+      <ToggleContextProvider toggles={mockToggles}>
+        {children}
+      </ToggleContextProvider>
+    );
+
+    await act(async () => {
+      result = renderHook(() => useToggle('notAToggle'), { wrapper }).result;
+    });
+
+    expect(result.current).toEqual({ enabled: false });
   });
 });
