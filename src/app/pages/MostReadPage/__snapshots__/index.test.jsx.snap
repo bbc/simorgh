@@ -581,6 +581,14 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
       content="De one we dem de read well well - BBC News Pidgin"
       name="twitter:title"
     />
+    <noscript>
+      &lt;img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cs_ucfr=0&cv=2.0&cj=1" /&gt;
+    </noscript>
+    <script
+      async="true"
+      src="http://localhost:7080/simorgh/public/comscore.js"
+      type="text/javascript"
+    />
     <script
       type="application/ld+json"
     >

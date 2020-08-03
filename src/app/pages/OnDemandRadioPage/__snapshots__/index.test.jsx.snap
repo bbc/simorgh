@@ -1392,6 +1392,14 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
       content="ماښامنۍ خپرونه - BBC News پښتو"
       name="twitter:title"
     />
+    <noscript>
+      &lt;img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cs_ucfr=0&cv=2.0&cj=1" /&gt;
+    </noscript>
+    <script
+      async="true"
+      src="http://localhost:7080/simorgh/public/comscore.js"
+      type="text/javascript"
+    />
     <script
       type="application/ld+json"
     >
