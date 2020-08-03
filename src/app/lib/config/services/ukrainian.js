@@ -279,30 +279,17 @@ export const service = {
     isoLang: 'uk',
     lang: 'uk',
   },
-  'ru-UA': {
+  ru: {
     ...baseServiceConfig,
     translations: {
       ...baseServiceConfig.translations,
       ...russianMainTranslations,
     },
     datetimeLocale: 'ru',
-    locale: 'ru_UA',
+    locale: 'ru',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'ru',
-    lang: 'ru-UA',
-    headerFooterLang: 'uk',
-  },
-  es: {
-    ...baseServiceConfig,
-    translations: {
-      ...baseServiceConfig.translations,
-      ...russianMainTranslations,
-    },
-    datetimeLocale: 'ru',
-    locale: 'es',
-    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
-    isoLang: 'ru',
-    lang: 'es',
+    lang: 'ru',
     headerFooterLang: 'uk',
   },
 };
