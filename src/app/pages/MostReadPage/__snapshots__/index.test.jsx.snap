@@ -586,7 +586,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
     </noscript>
     <script
       async="true"
-      src="http://localhost:7080/simorgh/public/comscore.js"
+      src="http://localhost:7080/static/js/comscore.js"
       type="text/javascript"
     />
     <script
