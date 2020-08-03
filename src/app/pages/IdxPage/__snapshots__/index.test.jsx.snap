@@ -2324,6 +2324,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
         </div>
         <div
           class="c39"
+          data-e2e="radio-schedule"
         >
           <ul
             class="c40 c41"
