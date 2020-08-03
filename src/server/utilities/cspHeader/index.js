@@ -24,6 +24,7 @@ const directives = {
       'https://amp-error-reporting.appspot.com', // AMP
       'https://www.bbc.co.uk', // STY include indepthtoolkit
       'https://platform.twitter.com', // Social Embeds, <amp-twitter />
+      'https://mybbc-analytics.files.bbci.co.uk',
       "'self'",
     ],
     canonicalLive: [
@@ -38,6 +39,7 @@ const directives = {
       'https://cookie-oven.api.bbc.co.uk', // Cookie banner
       'https://www.bbc.co.uk', // STY include indepthtoolkit
       'https://news.files.bbci.co.uk', // STY include
+      'https://mybbc-analytics.files.bbci.co.uk',
       "'self'",
     ],
     ampNonLive: [
@@ -53,6 +55,7 @@ const directives = {
       'https://config.test.api.bbci.co.uk',
       'https://www.bbc.co.uk', // STY include indepthtoolkit
       'https://platform.twitter.com', // Social Embeds, <amp-twitter />
+      'https://mybbc-analytics.files.bbci.co.uk',
       "'self'",
     ],
     canonicalNonLive: [
@@ -76,6 +79,7 @@ const directives = {
       'https://securepubads.g.doubleclick.net', // ads
       'https://pagead2.googlesyndication.com', // ads
       'https://tpc.googlesyndication.com', // ads
+      'https://mybbc-analytics.files.bbci.co.uk',
       "'self'",
     ],
   },
