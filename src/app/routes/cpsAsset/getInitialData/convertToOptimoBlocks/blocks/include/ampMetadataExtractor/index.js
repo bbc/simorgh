@@ -10,8 +10,7 @@ const logger = nodeLogger(__filename);
  * @param {string} href The href value from an Include Block.
  */
 
-const ampMetadataExtractor = (href, baseUrl, classification) => {
-  if (classification !== 'vj-supports-amp') return null;
+const ampMetadataExtractor = (href, baseUrl) => {
   const { hostname, pathname, protocol, query } = new Url(href, baseUrl, true);
   const queryString = new Url(href).query;
 

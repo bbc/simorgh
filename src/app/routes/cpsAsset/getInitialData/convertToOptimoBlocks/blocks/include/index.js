@@ -33,7 +33,10 @@ const convertInclude = async (includeBlock, pageData, ...restParams) => {
     return null;
   }
 
-  const { includeType, classification } = includeClassifier({ href, isAmp });
+  const { includeType, classification } = includeClassifier({
+    href,
+    isAmpRequest: isAmp,
+  });
 
   if (classification === 'not-supported') {
     logger.info(INCLUDE_UNSUPPORTED, {
@@ -44,13 +47,19 @@ const convertInclude = async (includeBlock, pageData, ...restParams) => {
     return null;
   }
 
-  const ampMetadata = ampMetadataExtractor(
-    href,
-    process.env.SIMORGH_INCLUDES_BASE_AMP_URL,
-    classification,
-  );
-  const html =
-    !isAmp && (await fetchMarkup(buildIncludeUrl(href, includeType, pathname)));
+  let ampMetadata;
+  let html;
+
+  if (classification === 'vj-supports-amp') {
+    ampMetadata = ampMetadataExtractor(
+      href,
+      process.env.SIMORGH_INCLUDES_BASE_AMP_URL,
+    );
+  }
+
+  if (!isAmp) {
+    html = await fetchMarkup(buildIncludeUrl(href, includeType, pathname));
+  }
 
   const imageBlock = getImageBlock(includeType, includeBlock, isAmp);
   return {
@@ -62,7 +71,7 @@ const convertInclude = async (includeBlock, pageData, ...restParams) => {
       isAmpSupported: isAmpSupported(classification),
       ...(ampMetadata && { ampMetadata }),
       ...(html && { html }),
-      ...(imageBlock && { imageBlock }), // needed for IDT2 on amp an canonical
+      ...(imageBlock && { imageBlock }), // needed for IDT2 on both amp and canonical
     },
   };
 };

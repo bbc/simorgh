@@ -15,7 +15,7 @@ const hasAmpVersion = href => {
   return !!hasAmpImageQueryString;
 };
 
-const includeClassifier = ({ href, isAmp }) => {
+const includeClassifier = ({ href, isAmpRequest }) => {
   // This determines if the href has a leading '/'
   const hrefTypePostion = () => (href.indexOf('/') === 0 ? 1 : 0);
 
@@ -31,12 +31,12 @@ const includeClassifier = ({ href, isAmp }) => {
   // This determines if the type is supported and returns the include type name
   const includeType = supportedTypes[typeExtraction];
 
-  const platform = isAmp ? 'amp' : 'canonical';
+  const platform = isAmpRequest ? 'amp' : 'canonical';
   const classification = includeType
     ? `${includeType}-${platform}`
     : 'not-supported';
 
-  if (includeType === 'vj' && !isAmp) {
+  if (includeType === 'vj' && !isAmpRequest) {
     return { includeType, classification: 'vj-canonical' };
   }
 

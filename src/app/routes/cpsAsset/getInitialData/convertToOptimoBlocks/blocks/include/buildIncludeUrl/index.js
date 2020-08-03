@@ -3,7 +3,7 @@ import Url from 'url-parse';
 import { addOverrideQuery } from '#app/routes/utils/overrideRendererOnTest';
 
 export default (href, type, pathname) => {
-  const resolvers = {
+  const mutator = {
     idt1: '',
     idt2: '/html',
     vj: '',
@@ -11,7 +11,7 @@ export default (href, type, pathname) => {
 
   const withTrailingHref = href.startsWith('/') ? href : `/${href}`;
 
-  const includeUrl = `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${resolvers[type]}`;
+  const includeUrl = `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${mutator[type]}`;
 
   const currentRendererEnv = new Url(pathname, true).query.renderer_env;
 

@@ -23,7 +23,7 @@ describe('Include Classifier', () => {
 
       const actual = includeClassifier({
         href,
-        isAmp: false,
+        isAmpRequest: false,
       });
 
       expect(actual).toEqual(expected);
@@ -38,7 +38,7 @@ describe('Include Classifier', () => {
 
     const actual = includeClassifier({
       href: vjIncludeNotSupportingAmp,
-      isAmp: false,
+      isAmpRequest: false,
     });
 
     expect(actual).toEqual(expected);
@@ -60,7 +60,7 @@ describe('Include Classifier', () => {
 
       const actual = includeClassifier({
         href,
-        isAmp: true,
+        isAmpRequest: true,
       });
 
       expect(actual).toEqual(expected);
@@ -75,7 +75,7 @@ describe('Include Classifier', () => {
 
     const actual = includeClassifier({
       href: vjIncludeNotSupportingAmp,
-      isAmp: true,
+      isAmpRequest: true,
     });
 
     expect(actual).toEqual(expected);
@@ -89,7 +89,7 @@ describe('Include Classifier', () => {
 
     const actual = includeClassifier({
       href: 'idt3/blah',
-      isAmp: false,
+      isAmpRequest: false,
     });
 
     expect(actual).toEqual(expected);
@@ -103,7 +103,7 @@ describe('Include Classifier', () => {
 
     const actual = includeClassifier({
       href: 'idt3/blah',
-      isAmp: false,
+      isAmpRequest: false,
     });
 
     expect(actual).toEqual(expected);
@@ -124,7 +124,7 @@ describe('Include Classifier', () => {
 
       const actual = includeClassifier({
         href,
-        isAmp: false,
+        isAmpRequest: false,
       });
 
       expect(actual).toEqual(expected);
@@ -146,7 +146,7 @@ describe('Include Classifier', () => {
 
       const actual = includeClassifier({
         href,
-        isAmp: true,
+        isAmpRequest: true,
       });
 
       expect(actual).toEqual(expected);
