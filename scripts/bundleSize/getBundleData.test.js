@@ -163,14 +163,14 @@ jest.mock('fs', () => {
 
 describe('getPageBundleData', () => {
   it.each(pages)("should include data for '%s' page type", page => {
-    const data = getPageBundleData({ jsFiles });
+    const data = getPageBundleData(jsFiles);
     expect(data).toEqual(
       expect.arrayContaining([expect.arrayContaining([page])]),
     );
   });
 
   it('should output correctly for page type with two common bundles', () => {
-    const data = getPageBundleData({ jsFiles });
+    const data = getPageBundleData(jsFiles);
     const photoGalleryPageData = data.filter(([pageName]) => {
       return pageName === 'PhotoGalleryPage';
     });
@@ -178,7 +178,9 @@ describe('getPageBundleData', () => {
       Array [
         Array [
           "PhotoGalleryPage",
-          "10, 10, 10, 10, 10, 10, 10, 10",
+          "10, 10",
+          "10, 10, 10",
+          "10, 10, 10",
           80,
         ],
       ]
@@ -186,7 +188,7 @@ describe('getPageBundleData', () => {
   });
 
   it('should output correctly for page type with one common bundles', () => {
-    const data = getPageBundleData({ jsFiles });
+    const data = getPageBundleData(jsFiles);
     const photoGalleryPageData = data.filter(([pageName]) => {
       return pageName === 'OnDemandTvPage';
     });
@@ -194,7 +196,9 @@ describe('getPageBundleData', () => {
       Array [
         Array [
           "OnDemandTvPage",
-          "10, 10, 10, 10, 10, 10, 10",
+          "10, 10",
+          "10, 10, 10",
+          "10, 10",
           70,
         ],
       ]

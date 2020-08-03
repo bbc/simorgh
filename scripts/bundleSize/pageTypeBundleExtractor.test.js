@@ -1,6 +1,6 @@
 import { extractBundlesForPageType } from './pageTypeBundleExtractor';
 
-jest.mock('../reports/webpackBundleReport.json', () => ({
+jest.mock('../../reports/webpackBundleReport.json', () => ({
   namedChunkGroups: {
     main: {
       chunks: [
