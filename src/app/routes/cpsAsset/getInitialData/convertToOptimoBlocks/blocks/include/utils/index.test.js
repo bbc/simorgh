@@ -24,7 +24,7 @@ describe('isAmpSupported', () => {
 });
 
 describe('getIncludeIndex', () => {
-  it('should correctly return an include indexes', () => {
+  it('should correctly return include indexes', () => {
     const [idt1Block, idt2Block, vjBlock] = pageData.content.blocks;
 
     const { blocks } = pageData.content;
