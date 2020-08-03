@@ -155,7 +155,7 @@ export default server => {
       const dataFilePath = path.join(process.cwd(), 'data', idx, 'index.json');
       sendDataFile(res, dataFilePath, next);
     })
-    .get('/simorgh/public/comscore.js', (req, res, next) => {
+    .get('/comscore.js', (req, res, next) => {
       const localComscorePath = path.join(process.cwd(), '/public/comscore.js');
       sendDataFile(res, localComscorePath, next);
     })

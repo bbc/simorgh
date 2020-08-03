@@ -20,7 +20,7 @@ exports[`Comscore Analytics Container Snapshots should render comscore script wh
     </noscript>
     <script
       async="true"
-      src="http://localhost:7080/simorgh/public/comscore.js"
+      src="http://localhost:7080/comscore.js"
       type="text/javascript"
     />
   </head>
