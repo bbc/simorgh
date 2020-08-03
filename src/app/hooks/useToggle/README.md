@@ -21,18 +21,16 @@ export default Component;
 
 ### Testing
 
-When writing unit tests for components that use the `useToggle` hook, you should wrap the component in a ToggleContext.Provider. Then pass to it a stub for the toggles as shown below in `defaultToggles`. This will ensure that the component's unit test is not impacted by changes in the actual toggle values.
+When writing unit tests for components that use the `useToggle` hook, you should wrap the component in a ToggleContextProvider. Then pass to it a stub for the toggles as shown below in `defaultToggles`. This will ensure that the component's unit test is not impacted by changes in the actual toggle values.
 
 ```
-const defaultToggles = {
+const toggles = {
   mediaPlayer: {
     enabled: true,
   },
 };
 
-<ToggleContext.Provider
-  value={{ toggleState: defaultToggles }}
->
+<ToggleContextProvider toggles={toggles}>
   <YourComponent service="pidgin" />
-</ToggleContext.Provider>
+</ToggleContextProvider>
 ```
