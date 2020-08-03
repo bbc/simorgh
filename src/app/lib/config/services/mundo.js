@@ -171,7 +171,7 @@ export const service = {
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Título del video: ',
+          textPrefixVisuallyHidden: 'Título del video, ',
           text:
             'Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad',
         },
