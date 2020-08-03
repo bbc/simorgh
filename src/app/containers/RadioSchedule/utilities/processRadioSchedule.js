@@ -96,5 +96,5 @@ export default (data, service, currentTime) => {
       };
     });
 
-  return processedSchedule;
+  return processedSchedule || [];
 };

@@ -64,13 +64,14 @@ describe('Canonical RadioSchedule', () => {
       expect(container.querySelectorAll('li').length).toEqual(4);
     });
 
-    it('does not render when data contains less than 4 programs', async () => {
+    it('does not render when data contains less than 4 programs 1', async () => {
       const initialData = processRadioSchedule(
         { schedules: arabicRadioScheduleData.schedules.slice(0, 2) },
         'arabic',
         Date.now(),
       );
       let container;
+      console.log('xxx', initialData);
 
       await act(async () => {
         container = await render(
