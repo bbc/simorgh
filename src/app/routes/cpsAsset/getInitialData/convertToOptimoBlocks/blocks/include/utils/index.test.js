@@ -23,5 +23,5 @@ describe('isAmpSupported', () => {
 });
 
 describe('getIncludeIndex', () => {
-  it('should work ?', () => {});
+  it('should return an include index', () => {});
 });
