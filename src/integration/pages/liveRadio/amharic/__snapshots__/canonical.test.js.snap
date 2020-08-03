@@ -170,6 +170,13 @@ Object {
 }
 `;
 
+exports[`Canonical Amharic Live Radio Page SEO Apple Touch Icon should match attributes 10`] = `
+Object {
+  "sizes": "512x512",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-512x512.png",
+}
+`;
+
 exports[`Canonical Amharic Live Radio Page SEO Canonical link 1`] = `"http://localhost:7080/amharic/bbc_amharic_radio/liveradio"`;
 
 exports[`Canonical Amharic Live Radio Page SEO Dir attribute 1`] = `"ltr"`;

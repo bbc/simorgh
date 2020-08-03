@@ -3,7 +3,6 @@ import { node } from 'prop-types';
 import { MemoryRouter, Route } from 'react-router-dom';
 import { render, fireEvent } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import '@testing-library/jest-dom/extend-expect';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { UserContext } from '#contexts/UserContext';

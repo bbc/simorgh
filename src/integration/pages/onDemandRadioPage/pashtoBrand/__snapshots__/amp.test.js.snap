@@ -336,6 +336,13 @@ Object {
 }
 `;
 
+exports[`AMP On Demand Radio Page SEO Apple Touch Icon should match attributes 10`] = `
+Object {
+  "sizes": "512x512",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pashto/images/icons/icon-512x512.png",
+}
+`;
+
 exports[`AMP On Demand Radio Page SEO Canonical link 1`] = `"http://localhost:7080/pashto/bbc_pashto_radio/p0340yr4"`;
 
 exports[`AMP On Demand Radio Page SEO Dir attribute 1`] = `"rtl"`;
