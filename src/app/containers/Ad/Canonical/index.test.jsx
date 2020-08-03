@@ -9,13 +9,15 @@ const mockTestScriptLegacy = 'http://mock-test-script-legacy';
 const mockLiveScript = 'http://mock-live-script';
 const mockLiveScriptLegacy = 'http://mock-live-script-legacy';
 
+beforeEach(() => {
+  process.env.SIMORGH_ADS_SCRIPT_TEST = mockTestScript;
+  process.env.SIMORGH_ADS_SCRIPT_LEGACY_TEST = mockTestScriptLegacy;
+  process.env.SIMORGH_ADS_SCRIPT_LIVE = mockLiveScript;
+  process.env.SIMORGH_ADS_SCRIPT_LEGACY_LIVE = mockLiveScriptLegacy;
+});
+
 describe('CanonicalAds Ads', () => {
   beforeEach(() => {
-    process.env.SIMORGH_ADS_SCRIPT_TEST = mockTestScript;
-    process.env.SIMORGH_ADS_SCRIPT_LEGACY_TEST = mockTestScriptLegacy;
-    process.env.SIMORGH_ADS_SCRIPT_LIVE = mockLiveScript;
-    process.env.SIMORGH_ADS_SCRIPT_LEGACY_LIVE = mockLiveScriptLegacy;
-
     window.dotcom = {
       bootstrap: jest.fn(),
       cmd: { push: jest.fn() },
@@ -46,17 +48,6 @@ describe('CanonicalAds Ads', () => {
 jest.mock('#lib/utilities/isLive', () => jest.fn());
 
 describe('getBootstrapSrc', () => {
-  beforeEach(() => {
-    process.env.SIMORGH_ADS_SCRIPT_TEST = mockTestScript;
-    process.env.SIMORGH_ADS_SCRIPT_LEGACY_TEST = mockTestScriptLegacy;
-    process.env.SIMORGH_ADS_SCRIPT_LIVE = mockLiveScript;
-    process.env.SIMORGH_ADS_SCRIPT_LEGACY_LIVE = mockLiveScriptLegacy;
-  });
-
-  afterEach(() => {
-    jest.clearAllMocks();
-  });
-
   it('should return live script when on live environment', () => {
     isLive.mockImplementationOnce(() => true);
     expect(getBootstrapSrc('')).toBe(mockLiveScript);
