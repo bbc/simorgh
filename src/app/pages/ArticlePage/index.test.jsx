@@ -14,7 +14,6 @@ import newsMostReadData from '#data/news/mostRead';
 import persianMostReadData from '#data/persian/mostRead';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import { textBlock } from '#models/blocks/index';
-import defaultToggles from '#lib/config/toggles';
 
 // temporary: will be removed with https://github.com/bbc/simorgh/issues/836
 const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
@@ -27,7 +26,7 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
 
 // eslint-disable-next-line react/prop-types
 const Context = ({ service, children }) => (
-  <ToggleContextProvider toggles={defaultToggles.local}>
+  <ToggleContextProvider>
     <ServiceContextProvider service={service}>
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.co.uk"

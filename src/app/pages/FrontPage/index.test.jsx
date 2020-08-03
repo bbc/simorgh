@@ -9,7 +9,6 @@ import frontPageDataPidgin from '#data/pidgin/frontpage/index-light';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import getInitialData from '#app/routes/home/getInitialData';
 import { FrontPage } from '..';
-import defaultToggles from '#lib/config/toggles';
 
 const requestContextData = {
   pageType: 'frontPage',
@@ -25,7 +24,7 @@ const FrontPageWithContext = ({
   ...props
 }) => (
   <BrowserRouter>
-    <ToggleContextProvider toggles={defaultToggles.local}>
+    <ToggleContextProvider>
       <RequestContextProvider isAmp={isAmp} {...requestContextData}>
         <ServiceContextProvider service={service}>
           <FrontPage {...props} />

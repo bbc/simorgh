@@ -6,7 +6,6 @@ import HeaderContainer from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import defaultToggles from '#lib/config/toggles';
 
 storiesOf('Containers|Header', module)
   .addParameters({ chromatic: { disable: true } })
@@ -14,7 +13,7 @@ storiesOf('Containers|Header', module)
   .addDecorator(withServicesKnob())
   .add('default', ({ service, variant }) => {
     return (
-      <ToggleContextProvider toggles={defaultToggles.local}>
+      <ToggleContextProvider>
         <ServiceContextProvider service={service} variant={variant}>
           <RequestContextProvider
             isAmp={false}

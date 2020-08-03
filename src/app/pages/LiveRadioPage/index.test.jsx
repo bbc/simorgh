@@ -10,11 +10,10 @@ import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/liveRadio/getInitialData';
-import defaultToggles from '#lib/config/toggles';
 
 const Page = ({ pageData, isAmp = false }) => (
   <BrowserRouter>
-    <ToggleContextProvider toggles={defaultToggles.local}>
+    <ToggleContextProvider>
       <ServiceContextProvider service="amharic">
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.com"

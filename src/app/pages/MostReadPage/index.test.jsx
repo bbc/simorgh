@@ -8,7 +8,6 @@ import MostReadPage from '.';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import defaultToggles from '#lib/config/toggles';
 
 fetch.mockResponse(JSON.stringify(pidginMostReadData));
 
@@ -20,7 +19,7 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
 });
 
 const MostReadPageWithContext = () => (
-  <ToggleContextProvider toggles={defaultToggles.local}>
+  <ToggleContextProvider>
     <ServiceContextProvider service="pidgin">
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.com"

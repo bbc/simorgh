@@ -10,7 +10,6 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { getLocalRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
-import defaultToggles from '#lib/config/toggles';
 
 // Currently, only these services have radio schedule data
 const radioServices = {
@@ -34,7 +33,7 @@ const radioServices = {
 
 const renderRadioScheduleContainer = service => (
   <BrowserRouter>
-    <ToggleContextProvider toggles={defaultToggles.local}>
+    <ToggleContextProvider>
       <RequestContextProvider
         isAmp={false}
         pageType="frontPage"

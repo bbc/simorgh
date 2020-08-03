@@ -72,6 +72,7 @@ const CanonicalAd = ({ slotType }) => {
         aria-label={ariaLabel}
         aria-hidden="true"
         role="region"
+        data-e2e="advertisement"
       >
         <div id={`dotcom-${slotType}`} className="dotcom-ad" />
       </AdContainer>
