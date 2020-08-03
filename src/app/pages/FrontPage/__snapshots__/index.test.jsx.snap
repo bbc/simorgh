@@ -1,6 +1,829 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
+.c40 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.c38 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
+}
+
+.c41 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 0.8125rem;
+}
+
+.c0 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c13 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c35 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c8 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c3 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+.c25 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+}
+
+.c5 {
+  margin: 0;
+  padding: 0;
+}
+
+.c1 {
+  margin: 0 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+.c28 {
+  padding: 0.5rem 0 1rem;
+}
+
+.c28:last-child {
+  border: none;
+}
+
+.c28:first-child {
+  padding-top: 0;
+}
+
+.c28:last-child {
+  padding-bottom: 0;
+}
+
+.c26 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c18 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #B80000;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.c11 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.c31 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+.c15 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.c33 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c10 {
+  position: relative;
+}
+
+.c30 {
+  position: relative;
+}
+
+.c12 {
+  position: relative;
+}
+
+.c14 {
+  position: absolute;
+  bottom: 0;
+}
+
+.c14 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c32 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c16 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.c34 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.c19 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c39 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c17 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+.c17:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c17:hover,
+.c17:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c17:visited {
+  color: #6E6E73;
+}
+
+.c36 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: block;
+}
+
+.c37 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.c20 {
+  position: relative;
+  z-index: 2;
+  padding: 1rem 0 0;
+}
+
+.c22 {
+  border-top: 1px solid #F2F2F2;
+  padding: 0.5rem 0;
+}
+
+.c21 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.c24 {
+  display: inline;
+  vertical-align: middle;
+}
+
+.c23 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c23:hover,
+.c23:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c23:visited {
+  color: #6E6E73;
+}
+
+.c23 svg {
+  margin: 0;
+}
+
+.c2 {
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c35 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c35 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c27 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c29 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c29 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c29 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c29 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c29 {
+    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c29 {
+    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c29 {
+    display: block;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c8 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c4 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c3 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c25 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c25 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c1 {
+    margin: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c1 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c1 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    padding-top: 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c1 {
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c28 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c28 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c28 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c28:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    width: calc(50% - 0.5rem);
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c11 {
+    width: calc(50% - 0.5rem);
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c11 {
+    width: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) {
+  .c31 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c31 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    width: 50%;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c15 {
+    width: 50%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c15 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c33 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c33 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c33 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c10 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c30 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c32 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c32 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c16 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c34 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c34 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c19 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c19 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c39 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c39 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c39 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:63rem) {
+  .c39 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c36 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c36 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c23 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c23 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9 {
+    margin-top: 2rem;
+  }
+}
+
 <div>
   <div
     id="VariantContainer"
@@ -39,7 +862,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                 role="main"
               >
                 <h1
-                  class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                  class="c0"
                   id="content"
                   tabindex="-1"
                 >
@@ -58,30 +881,30 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                   </span>
                 </h1>
                 <div
-                  class="IndexPageContainer-sc-1yb6vt4-0 lkUiYo"
+                  class="c1"
                 >
                   <section
                     aria-labelledby="Top-stories"
-                    class="StyledSection-sc-1x9qbiu-0 hNdEyC"
+                    class="c2"
                     role="region"
                   >
                     <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 doOlE"
+                      class="c3"
                     >
                       <div
-                        class="Bar-sc-1x4gwjz-0 jsgdXU"
+                        class="c4"
                       />
                       <h2
-                        class="Heading-sc-1x4gwjz-2 eZofTG"
+                        class="c5"
                       >
                         <span
-                          class="FlexColumn-wx5kdp-0 dgpsiS"
+                          class="c6"
                         >
                           <span
-                            class="FlexRow-wx5kdp-2 dVBNyZ"
+                            class="c7"
                           >
                             <span
-                              class="Title-wx5kdp-4 cERxQI"
+                              class="c8"
                               dir="ltr"
                               id="Top-stories"
                             >
@@ -92,20 +915,20 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       </h2>
                     </div>
                     <div
-                      class="FirstSectionTopMargin-sc-1x9qbiu-1 jIhlPO"
+                      class="c9"
                     >
                       <div
-                        class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
+                        class="c10"
                       >
                         <div
-                          class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
+                          class="c11"
                           dir="ltr"
                         >
                           <div
-                            class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                            class="c12"
                           >
                             <div
-                              class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                              class="c13"
                             >
                               <amp-img
                                 alt="Senator Ahmad Lawan and Ali Ndume"
@@ -117,26 +940,26 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                               />
                             </div>
                             <div
-                              class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
+                              class="c14"
                             />
                           </div>
                         </div>
                         <div
-                          class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
+                          class="c15"
                           dir="ltr"
                         >
                           <h3
-                            class="Headline-sc-1dvfmi3-3 fccgro"
+                            class="c16"
                           >
                             <a
-                              class="Link-sc-1dvfmi3-5 jeUMCT"
+                              class="c17"
                               href="/pidgin/live/tori-48591362"
                             >
                               <span
                                 role="text"
                               >
                                 <span
-                                  class="StyledSpan-sc-5gbj69-0 jbxGSs"
+                                  class="c18"
                                   dir="ltr"
                                 >
                                   AS E DE HAPPEN 
@@ -146,48 +969,48 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                             </a>
                           </h3>
                           <p
-                            class="Summary-sc-1dvfmi3-4 zsDkO"
+                            class="c19"
                           >
                             Nigeria dey do inauguration to welcome im tear rubber lawmakers into di Ninth National Assembly.
                           </p>
                           <div
-                            class="StyledIndexAlsos-xsqyvb-0 cMpdvs"
+                            class="c20"
                             data-e2e="index-alsos"
                           >
                             <h4
-                              class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                              class="c0"
                             >
                               Another thing we de for inside dis tori
                             </h4>
                             <ul
-                              class="StyledIndexAlsosUl-xsqyvb-2 jXaBOE"
+                              class="c21"
                               role="list"
                             >
                               <li
-                                class="StyledIndexAlso-xsqyvb-1 kZPHaK"
+                                class="c22"
                                 role="listitem"
                               >
                                 <a
-                                  class="StyledIndexAlsosLink-xsqyvb-5 dwLQNJ"
+                                  class="c23"
                                   href="/pidgin/tori-48591361"
                                 >
                                   <span
-                                    class="IndexAlsosText-xsqyvb-4 gvRfTv"
+                                    class="c24"
                                   >
                                     Who go lead di Ninth National Assembly?
                                   </span>
                                 </a>
                               </li>
                               <li
-                                class="StyledIndexAlso-xsqyvb-1 kZPHaK"
+                                class="c22"
                                 role="listitem"
                               >
                                 <a
-                                  class="StyledIndexAlsosLink-xsqyvb-5 dwLQNJ"
+                                  class="c23"
                                   href="/pidgin/tori-47603701"
                                 >
                                   <span
-                                    class="IndexAlsosText-xsqyvb-4 gvRfTv"
+                                    class="c24"
                                   >
                                     4 tins wey go determine who become di next Senate President, Speaker
                                   </span>
@@ -201,26 +1024,26 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                   </section>
                   <section
                     aria-labelledby="Frequency-info"
-                    class="StyledSection-sc-1x9qbiu-0 hNdEyC"
+                    class="c2"
                     role="region"
                   >
                     <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
+                      class="c25"
                     >
                       <div
-                        class="Bar-sc-1x4gwjz-0 jsgdXU"
+                        class="c4"
                       />
                       <h2
-                        class="Heading-sc-1x4gwjz-2 eZofTG"
+                        class="c5"
                       >
                         <span
-                          class="FlexColumn-wx5kdp-0 dgpsiS"
+                          class="c6"
                         >
                           <span
-                            class="FlexRow-wx5kdp-2 dVBNyZ"
+                            class="c7"
                           >
                             <span
-                              class="Title-wx5kdp-4 cERxQI"
+                              class="c8"
                               dir="ltr"
                               id="Frequency-info"
                             >
@@ -231,27 +1054,27 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                       </h2>
                     </div>
                     <ul
-                      class="StoryPromoUl-sc-171lqjd-2 brjIMO GridComponent-nf79gm-0 gjgzxV"
+                      class="c26 c27"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+                        class="c28 c29"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                          class="c30"
                         >
                           <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                            class="c31"
                             dir="ltr"
                           >
                             <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                              class="c12"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="c13"
                               >
                                 <amp-img
                                   alt="Messi, Iwobi, Ronaldo"
@@ -263,26 +1086,26 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                 />
                               </div>
                               <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                                class="c32"
                               />
                             </div>
                           </div>
                           <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                            class="c33"
                             dir="ltr"
                           >
                             <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
+                              class="c34"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
+                                class="c17"
                                 href="https://www.bbc.com/pidgin/sport-44416820"
                               >
                                 Take dis predictor choose who go reach World Cup final
                               </a>
                             </h3>
                             <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
+                              class="c35"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -291,22 +1114,22 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+                        class="c28 c29"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                          class="c30"
                         >
                           <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                            class="c31"
                             dir="ltr"
                           >
                             <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                              class="c12"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="c13"
                               >
                                 <amp-img
                                   alt="A lone Koala perches in a eucalyptus tree"
@@ -318,19 +1141,19 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                 />
                               </div>
                               <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                                class="c32"
                               >
                                 <div
                                   aria-hidden="true"
-                                  class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                                  class="c36"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                                    class="c37"
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
+                                      class="c38"
                                       focusable="false"
                                       height="12px"
                                       viewBox="0 0 13 12"
@@ -349,26 +1172,26 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                             </div>
                           </div>
                           <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                            class="c33"
                             dir="ltr"
                           >
                             <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
+                              class="c34"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
+                                class="c17"
                                 href="http://www.bbc.com/pidgin"
                               >
                                 Audio promo
                               </a>
                             </h3>
                             <p
-                              class="Summary-sc-1dvfmi3-4 eaCWBB"
+                              class="c39"
                             >
                               Summary
                             </p>
                             <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
+                              class="c35"
                               datetime="2019-08-06"
                             >
                               6th August 2019
@@ -377,22 +1200,22 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+                        class="c28 c29"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                          class="c30"
                         >
                           <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                            class="c31"
                             dir="ltr"
                           >
                             <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                              class="c12"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="c13"
                               >
                                 <amp-img
                                   alt="Rashidi"
@@ -404,26 +1227,26 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                 />
                               </div>
                               <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                                class="c32"
                               />
                             </div>
                           </div>
                           <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                            class="c33"
                             dir="ltr"
                           >
                             <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
+                              class="c34"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
+                                class="c17"
                                 href="https://www.bbc.com/pidgin/sport-44439411"
                               >
                                 World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
                               </a>
                             </h3>
                             <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
+                              class="c35"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -432,22 +1255,22 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+                        class="c28 c29"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                          class="c30"
                         >
                           <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                            class="c31"
                             dir="ltr"
                           >
                             <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                              class="c12"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="c13"
                               >
                                 <amp-img
                                   alt="all-time African XI promo image"
@@ -459,26 +1282,26 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                 />
                               </div>
                               <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                                class="c32"
                               />
                             </div>
                           </div>
                           <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                            class="c33"
                             dir="ltr"
                           >
                             <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
+                              class="c34"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
+                                class="c17"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup
                               </a>
                             </h3>
                             <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
+                              class="c35"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -487,22 +1310,22 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+                        class="c28 c29"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                          class="c30"
                         >
                           <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                            class="c31"
                             dir="ltr"
                           >
                             <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                              class="c12"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="c13"
                               >
                                 <amp-img
                                   alt="all-time African XI promo image"
@@ -514,26 +1337,26 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                 />
                               </div>
                               <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                                class="c32"
                               />
                             </div>
                           </div>
                           <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                            class="c33"
                             dir="ltr"
                           >
                             <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
+                              class="c34"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
+                                class="c17"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup as a feature
                               </a>
                             </h3>
                             <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
+                              class="c35"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -542,22 +1365,22 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+                        class="c28 c29"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                          class="c30"
                         >
                           <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                            class="c31"
                             dir="ltr"
                           >
                             <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                              class="c12"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="c13"
                               >
                                 <amp-img
                                   alt="all-time African XI promo image"
@@ -569,19 +1392,19 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                 />
                               </div>
                               <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                                class="c32"
                               >
                                 <div
                                   aria-hidden="true"
-                                  class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                                  class="c36"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                                    class="c37"
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                                      class="c40"
                                       focusable="false"
                                       height="12px"
                                       viewBox="0 0 32 32"
@@ -597,21 +1420,21 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                             </div>
                           </div>
                           <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                            class="c33"
                             dir="ltr"
                           >
                             <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
+                              class="c34"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
+                                class="c17"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup - Video
                               </a>
                             </h3>
                             <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
+                              class="c35"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -620,22 +1443,22 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+                        class="c28 c29"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                          class="c30"
                         >
                           <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                            class="c31"
                             dir="ltr"
                           >
                             <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                              class="c12"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="c13"
                               >
                                 <amp-img
                                   alt="Sane"
@@ -647,26 +1470,26 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                 />
                               </div>
                               <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                                class="c32"
                               />
                             </div>
                           </div>
                           <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                            class="c33"
                             dir="ltr"
                           >
                             <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
+                              class="c34"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
+                                class="c17"
                                 href="https://www.bbc.com/pidgin/sport-44214129"
                               >
                                 World Cup 2018: Di top stars wey no dey go World Cup
                               </a>
                             </h3>
                             <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
+                              class="c35"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -675,22 +1498,22 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+                        class="c28 c29"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                          class="c30"
                         >
                           <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                            class="c31"
                             dir="ltr"
                           >
                             <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                              class="c12"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="c13"
                               >
                                 <amp-img
                                   alt="A lone Koala perches in a eucalyptus tree"
@@ -702,19 +1525,19 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                 />
                               </div>
                               <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                                class="c32"
                               >
                                 <div
                                   aria-hidden="true"
-                                  class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                                  class="c36"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                                    class="c37"
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                                      class="c41"
                                       focusable="false"
                                       height="13px"
                                       viewBox="0 0 32 26"
@@ -735,21 +1558,21 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                             </div>
                           </div>
                           <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                            class="c33"
                             dir="ltr"
                           >
                             <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
+                              class="c34"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
+                                class="c17"
                                 href="http://www.bbc.com/azeri"
                               >
                                 Gallery promo
                               </a>
                             </h3>
                             <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
+                              class="c35"
                               datetime="2019-08-07"
                             >
                               7th August 2019
@@ -771,6 +1594,1151 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
 `;
 
 exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
+.c41 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.c39 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
+}
+
+.c42 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 0.8125rem;
+}
+
+.c0 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c14 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
+.c13 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c36 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c45 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(10,auto);
+}
+
+.c50 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+}
+
+.c52 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.c52:hover,
+.c52:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c52:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c51 {
+  padding-top: 0.375rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.c53 {
+  padding-top: 0.5rem;
+}
+
+.c48 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.c47 {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c8 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c3 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+.c26 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+}
+
+.c5 {
+  margin: 0;
+  padding: 0;
+}
+
+.c1 {
+  margin: 0 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+.c29 {
+  padding: 0.5rem 0 1rem;
+}
+
+.c29:last-child {
+  border: none;
+}
+
+.c29:first-child {
+  padding-top: 0;
+}
+
+.c29:last-child {
+  padding-bottom: 0;
+}
+
+.c27 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c19 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #B80000;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.c11 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.c32 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+.c16 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.c34 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c10 {
+  position: relative;
+}
+
+.c31 {
+  position: relative;
+}
+
+.c12 {
+  position: relative;
+}
+
+.c15 {
+  position: absolute;
+  bottom: 0;
+}
+
+.c15 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c33 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c17 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.c35 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.c20 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c40 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c18 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+.c18:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c18:hover,
+.c18:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c18:visited {
+  color: #6E6E73;
+}
+
+.c37 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: block;
+}
+
+.c38 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.c21 {
+  position: relative;
+  z-index: 2;
+  padding: 1rem 0 0;
+}
+
+.c23 {
+  border-top: 1px solid #F2F2F2;
+  padding: 0.5rem 0;
+}
+
+.c22 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.c25 {
+  display: inline;
+  vertical-align: middle;
+}
+
+.c24 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c24:hover,
+.c24:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c24:visited {
+  color: #6E6E73;
+}
+
+.c24 svg {
+  margin: 0;
+}
+
+.c2 {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.c43 {
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c36 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c36 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c28 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c30 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c30 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c30 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c30 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c30 {
+    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c30 {
+    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c30 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c46 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c46 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c46 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c46 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c46 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c46 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c46 {
+    display: block;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c45 {
+    grid-template-rows: repeat( 5,auto );
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c49 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c49 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c49 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c49 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c49 {
+    min-width: 2rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c54 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c54 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c54 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c54 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c54 {
+    min-width: 4rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c55 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c55 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c55 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c55 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c55 {
+    min-width: 4rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c56 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c56 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c56 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c56 {
+    min-width: 4rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c56 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c50 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c50 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c52 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c52 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c52 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c51 {
+    padding-right: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c8 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c4 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c3 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c26 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c26 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c44 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c1 {
+    margin: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c1 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c1 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    padding-top: 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c1 {
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c29 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c29 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c29 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c29:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    width: calc(50% - 0.5rem);
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c11 {
+    width: calc(50% - 0.5rem);
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c11 {
+    width: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) {
+  .c32 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c32 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    width: 50%;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c16 {
+    width: 50%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c16 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c34 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c34 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c34 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c10 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c31 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c33 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c33 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c17 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c17 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c35 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c35 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c20 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c20 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c20 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c40 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c40 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c40 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:63rem) {
+  .c40 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c37 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c37 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c24 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c24 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9 {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c43 {
+    max-width: 63rem;
+  }
+}
+
 <div>
   <div
     id="VariantContainer"
@@ -798,7 +2766,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                 role="main"
               >
                 <h1
-                  class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                  class="c0"
                   id="content"
                   tabindex="-1"
                 >
@@ -817,30 +2785,30 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </span>
                 </h1>
                 <div
-                  class="IndexPageContainer-sc-1yb6vt4-0 lkUiYo"
+                  class="c1"
                 >
                   <section
                     aria-labelledby="Top-stories"
-                    class="StyledSection-sc-1x9qbiu-0 hNdEyC"
+                    class="c2"
                     role="region"
                   >
                     <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 doOlE"
+                      class="c3"
                     >
                       <div
-                        class="Bar-sc-1x4gwjz-0 jsgdXU"
+                        class="c4"
                       />
                       <h2
-                        class="Heading-sc-1x4gwjz-2 eZofTG"
+                        class="c5"
                       >
                         <span
-                          class="FlexColumn-wx5kdp-0 dgpsiS"
+                          class="c6"
                         >
                           <span
-                            class="FlexRow-wx5kdp-2 dVBNyZ"
+                            class="c7"
                           >
                             <span
-                              class="Title-wx5kdp-4 cERxQI"
+                              class="c8"
                               dir="ltr"
                               id="Top-stories"
                             >
@@ -851,24 +2819,24 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       </h2>
                     </div>
                     <div
-                      class="FirstSectionTopMargin-sc-1x9qbiu-1 jIhlPO"
+                      class="c9"
                     >
                       <div
-                        class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
+                        class="c10"
                       >
                         <div
-                          class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
+                          class="c11"
                           dir="ltr"
                         >
                           <div
-                            class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                            class="c12"
                           >
                             <div
-                              class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                              class="c13"
                             >
                               <img
                                 alt="Senator Ahmad Lawan and Ali Ndume"
-                                class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                                class="c14"
                                 sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
                                 srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 660w"
@@ -876,26 +2844,26 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               />
                             </div>
                             <div
-                              class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
+                              class="c15"
                             />
                           </div>
                         </div>
                         <div
-                          class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
+                          class="c16"
                           dir="ltr"
                         >
                           <h3
-                            class="Headline-sc-1dvfmi3-3 fccgro"
+                            class="c17"
                           >
                             <a
-                              class="Link-sc-1dvfmi3-5 jeUMCT"
+                              class="c18"
                               href="/pidgin/live/tori-48591362"
                             >
                               <span
                                 role="text"
                               >
                                 <span
-                                  class="StyledSpan-sc-5gbj69-0 jbxGSs"
+                                  class="c19"
                                   dir="ltr"
                                 >
                                   AS E DE HAPPEN 
@@ -905,48 +2873,48 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             </a>
                           </h3>
                           <p
-                            class="Summary-sc-1dvfmi3-4 zsDkO"
+                            class="c20"
                           >
                             Nigeria dey do inauguration to welcome im tear rubber lawmakers into di Ninth National Assembly.
                           </p>
                           <div
-                            class="StyledIndexAlsos-xsqyvb-0 cMpdvs"
+                            class="c21"
                             data-e2e="index-alsos"
                           >
                             <h4
-                              class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                              class="c0"
                             >
                               Another thing we de for inside dis tori
                             </h4>
                             <ul
-                              class="StyledIndexAlsosUl-xsqyvb-2 jXaBOE"
+                              class="c22"
                               role="list"
                             >
                               <li
-                                class="StyledIndexAlso-xsqyvb-1 kZPHaK"
+                                class="c23"
                                 role="listitem"
                               >
                                 <a
-                                  class="StyledIndexAlsosLink-xsqyvb-5 dwLQNJ"
+                                  class="c24"
                                   href="/pidgin/tori-48591361"
                                 >
                                   <span
-                                    class="IndexAlsosText-xsqyvb-4 gvRfTv"
+                                    class="c25"
                                   >
                                     Who go lead di Ninth National Assembly?
                                   </span>
                                 </a>
                               </li>
                               <li
-                                class="StyledIndexAlso-xsqyvb-1 kZPHaK"
+                                class="c23"
                                 role="listitem"
                               >
                                 <a
-                                  class="StyledIndexAlsosLink-xsqyvb-5 dwLQNJ"
+                                  class="c24"
                                   href="/pidgin/tori-47603701"
                                 >
                                   <span
-                                    class="IndexAlsosText-xsqyvb-4 gvRfTv"
+                                    class="c25"
                                   >
                                     4 tins wey go determine who become di next Senate President, Speaker
                                   </span>
@@ -960,26 +2928,26 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </section>
                   <section
                     aria-labelledby="Frequency-info"
-                    class="StyledSection-sc-1x9qbiu-0 hNdEyC"
+                    class="c2"
                     role="region"
                   >
                     <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
+                      class="c26"
                     >
                       <div
-                        class="Bar-sc-1x4gwjz-0 jsgdXU"
+                        class="c4"
                       />
                       <h2
-                        class="Heading-sc-1x4gwjz-2 eZofTG"
+                        class="c5"
                       >
                         <span
-                          class="FlexColumn-wx5kdp-0 dgpsiS"
+                          class="c6"
                         >
                           <span
-                            class="FlexRow-wx5kdp-2 dVBNyZ"
+                            class="c7"
                           >
                             <span
-                              class="Title-wx5kdp-4 cERxQI"
+                              class="c8"
                               dir="ltr"
                               id="Frequency-info"
                             >
@@ -990,53 +2958,53 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       </h2>
                     </div>
                     <ul
-                      class="StoryPromoUl-sc-171lqjd-2 brjIMO GridComponent-nf79gm-0 gjgzxV"
+                      class="c27 c28"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+                        class="c29 c30"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                          class="c31"
                         >
                           <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                            class="c32"
                             dir="ltr"
                           >
                             <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                              class="c12"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="c13"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                                class="c33"
                               />
                             </div>
                           </div>
                           <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                            class="c34"
                             dir="ltr"
                           >
                             <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
+                              class="c35"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
+                                class="c18"
                                 href="https://www.bbc.com/pidgin/sport-44416820"
                               >
                                 Take dis predictor choose who go reach World Cup final
                               </a>
                             </h3>
                             <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
+                              class="c36"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -1045,41 +3013,41 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+                        class="c29 c30"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                          class="c31"
                         >
                           <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                            class="c32"
                             dir="ltr"
                           >
                             <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                              class="c12"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="c13"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                                class="c33"
                               >
                                 <div
                                   aria-hidden="true"
-                                  class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                                  class="c37"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                                    class="c38"
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
+                                      class="c39"
                                       focusable="false"
                                       height="12px"
                                       viewBox="0 0 13 12"
@@ -1098,26 +3066,26 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             </div>
                           </div>
                           <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                            class="c34"
                             dir="ltr"
                           >
                             <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
+                              class="c35"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
+                                class="c18"
                                 href="http://www.bbc.com/pidgin"
                               >
                                 Audio promo
                               </a>
                             </h3>
                             <p
-                              class="Summary-sc-1dvfmi3-4 eaCWBB"
+                              class="c40"
                             >
                               Summary
                             </p>
                             <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
+                              class="c36"
                               datetime="2019-08-06"
                             >
                               6th August 2019
@@ -1126,48 +3094,48 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+                        class="c29 c30"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                          class="c31"
                         >
                           <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                            class="c32"
                             dir="ltr"
                           >
                             <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                              class="c12"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="c13"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                                class="c33"
                               />
                             </div>
                           </div>
                           <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                            class="c34"
                             dir="ltr"
                           >
                             <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
+                              class="c35"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
+                                class="c18"
                                 href="https://www.bbc.com/pidgin/sport-44439411"
                               >
                                 World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
                               </a>
                             </h3>
                             <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
+                              class="c36"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -1176,48 +3144,48 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+                        class="c29 c30"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                          class="c31"
                         >
                           <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                            class="c32"
                             dir="ltr"
                           >
                             <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                              class="c12"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="c13"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                                class="c33"
                               />
                             </div>
                           </div>
                           <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                            class="c34"
                             dir="ltr"
                           >
                             <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
+                              class="c35"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
+                                class="c18"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup
                               </a>
                             </h3>
                             <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
+                              class="c36"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -1226,48 +3194,48 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+                        class="c29 c30"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                          class="c31"
                         >
                           <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                            class="c32"
                             dir="ltr"
                           >
                             <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                              class="c12"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="c13"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                                class="c33"
                               />
                             </div>
                           </div>
                           <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                            class="c34"
                             dir="ltr"
                           >
                             <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
+                              class="c35"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
+                                class="c18"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup as a feature
                               </a>
                             </h3>
                             <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
+                              class="c36"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -1276,41 +3244,41 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+                        class="c29 c30"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                          class="c31"
                         >
                           <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                            class="c32"
                             dir="ltr"
                           >
                             <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                              class="c12"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="c13"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                                class="c33"
                               >
                                 <div
                                   aria-hidden="true"
-                                  class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                                  class="c37"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                                    class="c38"
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                                      class="c41"
                                       focusable="false"
                                       height="12px"
                                       viewBox="0 0 32 32"
@@ -1326,21 +3294,21 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             </div>
                           </div>
                           <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                            class="c34"
                             dir="ltr"
                           >
                             <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
+                              class="c35"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
+                                class="c18"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup - Video
                               </a>
                             </h3>
                             <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
+                              class="c36"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -1349,48 +3317,48 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+                        class="c29 c30"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                          class="c31"
                         >
                           <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                            class="c32"
                             dir="ltr"
                           >
                             <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                              class="c12"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="c13"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                                class="c33"
                               />
                             </div>
                           </div>
                           <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                            class="c34"
                             dir="ltr"
                           >
                             <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
+                              class="c35"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
+                                class="c18"
                                 href="https://www.bbc.com/pidgin/sport-44214129"
                               >
                                 World Cup 2018: Di top stars wey no dey go World Cup
                               </a>
                             </h3>
                             <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
+                              class="c36"
                               datetime="2018-06-14"
                             >
                               14th June 2018
@@ -1399,41 +3367,41 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+                        class="c29 c30"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                          class="c31"
                         >
                           <div
-                            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                            class="c32"
                             dir="ltr"
                           >
                             <div
-                              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                              class="c12"
                             >
                               <div
-                                class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                                class="c13"
                               >
                                 <div
                                   class="lazyload-placeholder"
                                 />
                               </div>
                               <div
-                                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                                class="c33"
                               >
                                 <div
                                   aria-hidden="true"
-                                  class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                                  class="c37"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                                    class="c38"
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                                      class="c42"
                                       focusable="false"
                                       height="13px"
                                       viewBox="0 0 32 26"
@@ -1454,21 +3422,21 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             </div>
                           </div>
                           <div
-                            class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                            class="c34"
                             dir="ltr"
                           >
                             <h3
-                              class="Headline-sc-1dvfmi3-3 hSJrur"
+                              class="c35"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 jeUMCT"
+                                class="c18"
                                 href="http://www.bbc.com/azeri"
                               >
                                 Gallery promo
                               </a>
                             </h3>
                             <time
-                              class="StyledTimestamp-um718p-0 kVWTyt"
+                              class="c36"
                               datetime="2019-08-07"
                             >
                               7th August 2019
@@ -1480,27 +3448,27 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </section>
                   <section
                     aria-labelledby="Most-Read"
-                    class="MostReadSection-sc-1r6ctrd-0 FrontPageMostReadSection-sc-58u5qv-0 hCGyVl"
+                    class="c43"
                     data-e2e="most-read"
                     role="region"
                   >
                     <div
-                      class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD SectionLabelWithMargin-sc-1resov9-0 dxfHPg"
+                      class="c26 c44"
                     >
                       <div
-                        class="Bar-sc-1x4gwjz-0 jsgdXU"
+                        class="c4"
                       />
                       <h2
-                        class="Heading-sc-1x4gwjz-2 eZofTG"
+                        class="c5"
                       >
                         <span
-                          class="FlexColumn-wx5kdp-0 dgpsiS"
+                          class="c6"
                         >
                           <span
-                            class="FlexRow-wx5kdp-2 dVBNyZ"
+                            class="c7"
                           >
                             <span
-                              class="Title-wx5kdp-4 cERxQI"
+                              class="c8"
                               dir="ltr"
                               id="Most-Read"
                             >
@@ -1511,43 +3479,43 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       </h2>
                     </div>
                     <ol
-                      class="GridComponent-nf79gm-0 gjgzxV OneColumnGrid-sc-1ofyujo-0 TwoColumnGrid-sc-1ofyujo-1 boiGsE"
+                      class="c28 c45"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+                        class="c46 c47"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="ItemWrapper-u0d8kd-3 juBlKT"
+                          class="c48"
                         >
                           <div
-                            class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cVIHWy"
+                            class="c49"
                             dir="ltr"
                           >
                             <span
-                              class="StyledSpan-fs4y6m-3 gymrUA"
+                              class="c50"
                             >
                               1
                             </span>
                           </div>
                           <div
-                            class="StyledItem-u0d8kd-1 kYQuFW"
+                            class="c51"
                             dir="ltr"
                           >
                             <a
-                              class="StyledLink-u0d8kd-0 kUvyYz"
+                              class="c52"
                               href="/pidgin/tori-46729879"
                             >
                               Public Holidays wey go happun for 2019
                             </a>
                             <div
-                              class="TimestampWrapper-u0d8kd-2 hlECaE"
+                              class="c53"
                             >
                               <time
-                                class="StyledTimestamp-um718p-0 kVWTyt"
+                                class="c36"
                                 datetime="2019-05-21"
                               >
                                 De one we dem update for: 21st May 2019
@@ -1557,38 +3525,38 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+                        class="c46 c47"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="ItemWrapper-u0d8kd-3 juBlKT"
+                          class="c48"
                         >
                           <div
-                            class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 loYovV"
+                            class="c54"
                             dir="ltr"
                           >
                             <span
-                              class="StyledSpan-fs4y6m-3 gymrUA"
+                              class="c50"
                             >
                               2
                             </span>
                           </div>
                           <div
-                            class="StyledItem-u0d8kd-1 kYQuFW"
+                            class="c51"
                             dir="ltr"
                           >
                             <a
-                              class="StyledLink-u0d8kd-0 kUvyYz"
+                              class="c52"
                               href="/pidgin/tori-50304653"
                             >
                               Liberia banks don run out of money
                             </a>
                             <div
-                              class="TimestampWrapper-u0d8kd-2 hlECaE"
+                              class="c53"
                             >
                               <time
-                                class="StyledTimestamp-um718p-0 kVWTyt"
+                                class="c36"
                                 datetime="2019-11-05"
                               >
                                 De one we dem update for: 5th November 2019
@@ -1598,38 +3566,38 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+                        class="c46 c47"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="ItemWrapper-u0d8kd-3 juBlKT"
+                          class="c48"
                         >
                           <div
-                            class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cVIHWy"
+                            class="c49"
                             dir="ltr"
                           >
                             <span
-                              class="StyledSpan-fs4y6m-3 gymrUA"
+                              class="c50"
                             >
                               3
                             </span>
                           </div>
                           <div
-                            class="StyledItem-u0d8kd-1 kYQuFW"
+                            class="c51"
                             dir="ltr"
                           >
                             <a
-                              class="StyledLink-u0d8kd-0 kUvyYz"
+                              class="c52"
                               href="/pidgin/tori-50298882"
                             >
                               Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
                             </a>
                             <div
-                              class="TimestampWrapper-u0d8kd-2 hlECaE"
+                              class="c53"
                             >
                               <time
-                                class="StyledTimestamp-um718p-0 kVWTyt"
+                                class="c36"
                                 datetime="2019-11-05"
                               >
                                 De one we dem update for: 5th November 2019
@@ -1639,38 +3607,38 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+                        class="c46 c47"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="ItemWrapper-u0d8kd-3 juBlKT"
+                          class="c48"
                         >
                           <div
-                            class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 loYovV"
+                            class="c54"
                             dir="ltr"
                           >
                             <span
-                              class="StyledSpan-fs4y6m-3 gymrUA"
+                              class="c50"
                             >
                               4
                             </span>
                           </div>
                           <div
-                            class="StyledItem-u0d8kd-1 kYQuFW"
+                            class="c51"
                             dir="ltr"
                           >
                             <a
-                              class="StyledLink-u0d8kd-0 kUvyYz"
+                              class="c52"
                               href="/pidgin/tori-50315150"
                             >
                               Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
                             </a>
                             <div
-                              class="TimestampWrapper-u0d8kd-2 hlECaE"
+                              class="c53"
                             >
                               <time
-                                class="StyledTimestamp-um718p-0 kVWTyt"
+                                class="c36"
                                 datetime="2019-11-06"
                               >
                                 De one we dem update for: 6th November 2019
@@ -1680,38 +3648,38 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+                        class="c46 c47"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="ItemWrapper-u0d8kd-3 juBlKT"
+                          class="c48"
                         >
                           <div
-                            class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cVIHWy"
+                            class="c49"
                             dir="ltr"
                           >
                             <span
-                              class="StyledSpan-fs4y6m-3 gymrUA"
+                              class="c50"
                             >
                               5
                             </span>
                           </div>
                           <div
-                            class="StyledItem-u0d8kd-1 kYQuFW"
+                            class="c51"
                             dir="ltr"
                           >
                             <a
-                              class="StyledLink-u0d8kd-0 kUvyYz"
+                              class="c52"
                               href="/pidgin/tori-50315157"
                             >
                               How Balogun market fire kill Policeman for Lagos
                             </a>
                             <div
-                              class="TimestampWrapper-u0d8kd-2 hlECaE"
+                              class="c53"
                             >
                               <time
-                                class="StyledTimestamp-um718p-0 kVWTyt"
+                                class="c36"
                                 datetime="2019-11-06"
                               >
                                 De one we dem update for: 6th November 2019
@@ -1721,38 +3689,38 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+                        class="c46 c47"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="ItemWrapper-u0d8kd-3 juBlKT"
+                          class="c48"
                         >
                           <div
-                            class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cXzHhm"
+                            class="c55"
                             dir="ltr"
                           >
                             <span
-                              class="StyledSpan-fs4y6m-3 gymrUA"
+                              class="c50"
                             >
                               6
                             </span>
                           </div>
                           <div
-                            class="StyledItem-u0d8kd-1 kYQuFW"
+                            class="c51"
                             dir="ltr"
                           >
                             <a
-                              class="StyledLink-u0d8kd-0 kUvyYz"
+                              class="c52"
                               href="/pidgin/tori-50093818"
                             >
                               Labour, FG finally agree minimum wage salary adjustment
                             </a>
                             <div
-                              class="TimestampWrapper-u0d8kd-2 hlECaE"
+                              class="c53"
                             >
                               <time
-                                class="StyledTimestamp-um718p-0 kVWTyt"
+                                class="c36"
                                 datetime="2019-10-18"
                               >
                                 De one we dem update for: 18th October 2019
@@ -1762,38 +3730,38 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+                        class="c46 c47"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="ItemWrapper-u0d8kd-3 juBlKT"
+                          class="c48"
                         >
                           <div
-                            class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 nHiMH"
+                            class="c56"
                             dir="ltr"
                           >
                             <span
-                              class="StyledSpan-fs4y6m-3 gymrUA"
+                              class="c50"
                             >
                               7
                             </span>
                           </div>
                           <div
-                            class="StyledItem-u0d8kd-1 kYQuFW"
+                            class="c51"
                             dir="ltr"
                           >
                             <a
-                              class="StyledLink-u0d8kd-0 kUvyYz"
+                              class="c52"
                               href="/pidgin/tori-50187218"
                             >
                               Naira Marley na 'Bad Influence'?
                             </a>
                             <div
-                              class="TimestampWrapper-u0d8kd-2 hlECaE"
+                              class="c53"
                             >
                               <time
-                                class="StyledTimestamp-um718p-0 kVWTyt"
+                                class="c36"
                                 datetime="2019-10-25"
                               >
                                 De one we dem update for: 25th October 2019
@@ -1803,38 +3771,38 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+                        class="c46 c47"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="ItemWrapper-u0d8kd-3 juBlKT"
+                          class="c48"
                         >
                           <div
-                            class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cXzHhm"
+                            class="c55"
                             dir="ltr"
                           >
                             <span
-                              class="StyledSpan-fs4y6m-3 gymrUA"
+                              class="c50"
                             >
                               8
                             </span>
                           </div>
                           <div
-                            class="StyledItem-u0d8kd-1 kYQuFW"
+                            class="c51"
                             dir="ltr"
                           >
                             <a
-                              class="StyledLink-u0d8kd-0 kUvyYz"
+                              class="c52"
                               href="/pidgin/tori-48347911"
                             >
                               Tins you suppose know about Naira Marley
                             </a>
                             <div
-                              class="TimestampWrapper-u0d8kd-2 hlECaE"
+                              class="c53"
                             >
                               <time
-                                class="StyledTimestamp-um718p-0 kVWTyt"
+                                class="c36"
                                 datetime="2019-05-23"
                               >
                                 De one we dem update for: 23rd May 2019
@@ -1844,38 +3812,38 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+                        class="c46 c47"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="ItemWrapper-u0d8kd-3 juBlKT"
+                          class="c48"
                         >
                           <div
-                            class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 nHiMH"
+                            class="c56"
                             dir="ltr"
                           >
                             <span
-                              class="StyledSpan-fs4y6m-3 gymrUA"
+                              class="c50"
                             >
                               9
                             </span>
                           </div>
                           <div
-                            class="StyledItem-u0d8kd-1 kYQuFW"
+                            class="c51"
                             dir="ltr"
                           >
                             <a
-                              class="StyledLink-u0d8kd-0 kUvyYz"
+                              class="c52"
                               href="/pidgin/sport-50312710"
                             >
                               Golden Eaglets crash out of Fifa U17 World Cup
                             </a>
                             <div
-                              class="TimestampWrapper-u0d8kd-2 hlECaE"
+                              class="c53"
                             >
                               <time
-                                class="StyledTimestamp-um718p-0 kVWTyt"
+                                class="c36"
                                 datetime="2019-11-06"
                               >
                                 De one we dem update for: 6th November 2019
@@ -1885,38 +3853,38 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+                        class="c46 c47"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="ItemWrapper-u0d8kd-3 juBlKT"
+                          class="c48"
                         >
                           <div
-                            class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cXzHhm"
+                            class="c55"
                             dir="ltr"
                           >
                             <span
-                              class="StyledSpan-fs4y6m-3 gymrUA"
+                              class="c50"
                             >
                               10
                             </span>
                           </div>
                           <div
-                            class="StyledItem-u0d8kd-1 kYQuFW"
+                            class="c51"
                             dir="ltr"
                           >
                             <a
-                              class="StyledLink-u0d8kd-0 kUvyYz"
+                              class="c52"
                               href="/pidgin/tori-42945173"
                             >
                               Tiger nut drink fit wake up your sex drive - Nutritionist
                             </a>
                             <div
-                              class="TimestampWrapper-u0d8kd-2 hlECaE"
+                              class="c53"
                             >
                               <time
-                                class="StyledTimestamp-um718p-0 kVWTyt"
+                                class="c36"
                                 datetime="2019-05-21"
                               >
                                 De one we dem update for: 21st May 2019

@@ -1,7 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import Fragment from './index';
 import { ServiceContext } from '#contexts/ServiceContext';
 

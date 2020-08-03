@@ -1,6 +1,5 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import RadioSchedulesWithContext from './utilities/testHelpers';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
 
