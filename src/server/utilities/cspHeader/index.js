@@ -151,6 +151,7 @@ const directives = {
       'https://r.bbci.co.uk',
       'https://pagead2.googlesyndication.com', // ads
       'https://securepubads.g.doubleclick.net', // ads
+      'https://sb.scorecardresearch.com', // ads
       'https://tpc.googlesyndication.com', // ads
       'https://www.google.com', // ads
       'https://i.ytimg.com', // Social Embeds, <amp-youtube />
@@ -188,6 +189,7 @@ const directives = {
       'https://r.bbci.co.uk',
       'https://pagead2.googlesyndication.com', // ads
       'https://securepubads.g.doubleclick.net', // ads
+      'https://sb.scorecardresearch.com', // ads
       'https://tpc.googlesyndication.com', // ads
       'https://www.google.com', // ads
       'http://b.files.bbci.co.uk', // localhost http connection for image
