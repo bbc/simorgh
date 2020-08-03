@@ -1,6 +1,9 @@
 import React, { useContext } from 'react';
 import { shape, bool, oneOf, oneOfType } from 'prop-types';
+import styled from 'styled-components';
 import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
+import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import pathOr from 'ramda/src/pathOr';
 import LiveLabel from '@bbc/psammead-live-label';
@@ -156,15 +159,28 @@ const StoryPromoContainer = ({
   const headingTagOverride =
     isRecommendation || isContentTypeGuide ? 'div' : null;
 
+  const StyledHeadline = styled(Headline)`
+    ${({ recommendationSpacing }) =>
+      recommendationSpacing &&
+      `
+      padding: ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING} 0;
+
+      @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+        padding: ${GEL_SPACING} ${GEL_SPACING_DBL} ${GEL_SPACING_DBL} 0;
+      }
+    `}
+  `;
+
   const Info = (
     <>
       {headline && (
-        <Headline
+        <StyledHeadline
           script={script}
           service={service}
           promoType={promoType}
           promoHasImage={displayImage}
           as={headingTagOverride}
+          recommendationSpacing={isRecommendation}
         >
           <Link href={url}>
             {isLive ? (
@@ -181,7 +197,7 @@ const StoryPromoContainer = ({
               linkcontents
             )}
           </Link>
-        </Headline>
+        </StyledHeadline>
       )}
       {promoSummary && displaySummary && !isRecommendation && (
         <Summary
