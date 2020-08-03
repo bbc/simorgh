@@ -110,19 +110,33 @@ console.log(pageSummaryTable.toString());
 console.log(chalk.bold('\n\nService + Page bundles summary'));
 console.log(servicePageSummaryTable.toString());
 
-const errors = pageBundlesTotals
-  .map((size, index) => {
-    const serviceName = serviceBundleData[index][0];
-    if (size < MIN_SIZE) {
-      return createConsoleError(serviceName, size, 'small');
-    }
+const errors = [];
 
-    if (size > MAX_SIZE) {
-      return createConsoleError(serviceName, size, 'large');
-    }
-    return undefined;
-  })
-  .filter(Boolean);
+if (smallestPagePlusServiceBundleSize < MIN_SIZE) {
+  const service = serviceBundleData[0][0];
+  const pageType = pageBundleData[0][0];
+  errors.push(
+    createConsoleError({
+      service,
+      pageType,
+      size: smallestPagePlusServiceBundleSize,
+      adjective: 'small',
+    }),
+  );
+}
+
+if (largestPagePlusServiceBundleSize > MAX_SIZE) {
+  const service = serviceBundleData[serviceBundleData.length - 1][0];
+  const pageType = pageBundleData[pageBundleData.length - 1][0];
+  errors.push(
+    createConsoleError({
+      service,
+      pageType,
+      size: largestPagePlusServiceBundleSize,
+      adjective: 'large',
+    }),
+  );
+}
 
 if (errors.length) {
   spinner.fail('Issues with service bundles: ');
