@@ -22,7 +22,7 @@ describe('buildIncludeUrl', () => {
     );
   });
 
-  describe('with renderer_env param', () => {
+  describe('handles renderer_env param', () => {
     it.each`
       case                                     | type      | pathname                    | href                                          | expectedUrl
       ${`with renderer env param set to test`} | ${`idt2`} | ${path`?renderer_env=test`} | ${`idt2/111-222-333-444-555`}                 | ${`https://foobar.com/includes/idt2/111-222-333-444-555/html?renderer_env=test`}
