@@ -168,7 +168,7 @@ export const service = {
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
+          textPrefixVisuallyHidden: 'Aha onyonyo, ',
           text: 'Warning: Third party content may contain adverts',
         },
         fallback: {
