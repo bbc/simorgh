@@ -22,14 +22,8 @@ const getPageIdentifier = path([
 const getHeading = path(['content', 'blocks', 0, 'text']);
 const getBodySummary = path(['content', 'blocks', 1, 'text']);
 
-export const hasRadioSchedule = async (service, pathname) => {
+export const hasRadioSchedule = async service => {
   const config = await getConfig(service);
-
-  // onLiveRadioPage is enabled on Persian to render the schedule for bbc_dari_radio
-  // however bbc_persian_radio should not show the schedule
-  if (service === 'persian' && pathname.includes('bbc_persian_radio')) {
-    return false;
-  }
 
   const serviceHasRadioSchedule = pathOr(
     false,
@@ -53,7 +47,10 @@ const radioServices = {
   bengali: 'bangla',
 };
 
-const getRadioService = service => {
+const getRadioService = ({ service, pathname }) => {
+  if (service === 'persian' && pathname.includes('bbc_persian_radio')) {
+    return 'persian';
+  }
   return radioServices[service];
 };
 
@@ -61,7 +58,7 @@ export default async ({ path: pathname, pageType, service }) => {
   try {
     const liveRadioDataPath = overrideRendererOnTest(pathname);
 
-    const pageHasRadioSchedule = await hasRadioSchedule(service, pathname);
+    const pageHasRadioSchedule = await hasRadioSchedule(service);
     const pageDataPromise = fetchPageData({
       path: liveRadioDataPath,
       pageType,
