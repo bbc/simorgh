@@ -307,13 +307,15 @@ export const getCampaignType = () => {
   // Gets the query string parameters from the current url parsing them as an object
   const { query, hash } = new Url(window.location.href, true);
 
+  // Check for the presence of the `?at_medium` QS
   const isMediumCampaign = Object.prototype.hasOwnProperty.call(
     query,
     MEDIUM_CAMPAIGN_IDENTIFIER,
   );
 
+  // Checks for the presence of the `?xtor` WS or anchor e.g. `#xtor`
   const isXtorCampaign =
-    Object.prototype.hasOwnProperty.call(hash, XTOR_CAMPAIGN_IDENTIFIER) ||
+    Object.prototype.hasOwnProperty.call(query, XTOR_CAMPAIGN_IDENTIFIER) ||
     hash.includes(XTOR_CAMPAIGN_IDENTIFIER);
 
   if (isMediumCampaign) {
