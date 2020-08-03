@@ -105,7 +105,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
   const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
 
   useEffect(() => {
-    if (!radioSchedule) {
+    if (!initialData.length) {
       const handleResponse = url => async response => {
         if (!response.ok) {
           throw Error(
@@ -141,9 +141,9 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
 
       fetchRadioScheduleData(endpoint);
     }
-  }, [endpoint, service, timeOnServer, radioSchedule]);
+  }, [endpoint, service, timeOnServer, initialData]);
 
-  if (!radioSchedule) {
+  if (!radioSchedule.length) {
     return null;
   }
 
@@ -193,7 +193,7 @@ CanonicalRadioSchedule.propTypes = {
 };
 
 CanonicalRadioSchedule.defaultProps = {
-  initialData: undefined,
+  initialData: [],
   lang: null,
   className: '',
 };
