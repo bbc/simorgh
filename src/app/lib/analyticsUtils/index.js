@@ -3,6 +3,12 @@ import uuid from 'uuid/v4';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import onClient from '../utilities/onClient';
+import Url from 'url-parse';
+import {
+  MEDIUM_CAMPAIGN_IDENTIFIER,
+  XTOR_CAMPAIGN_IDENTIFIER,
+  SUPPORTED_MEDIUM_CAMPAIGN_TYPES,
+} from './analytics.const';
 
 export const getDestination = statsDestination => {
   const destinationIDs = {
@@ -293,6 +299,34 @@ export const getThingAttributes = (attribute, articleData) => {
   }
 
   return null;
+};
+
+export const getCampaignType = () => {
+  if (!onClient()) return null;
+
+  console.log('---------- URL' + Url);
+  // Gets the query string parameters from the current url parsing them as an object
+  const { query, hash } = new Url(window.location, true);
+
+  const isMediumCampaign = query.hasOwnProperty(MEDIUM_CAMPAIGN_IDENTIFIER);
+
+  const isXtorCampaign =
+    query.hasOwnProperty(XTOR_CAMPAIGN_IDENTIFIER) ||
+    hash.includes(XTOR_CAMPAIGN_IDENTIFIER);
+
+  if (isMediumCampaign) {
+    const isSupportedMediumCampaignType = SUPPORTED_MEDIUM_CAMPAIGN_TYPES.some(
+      type => query[MEDIUM_CAMPAIGN_IDENTIFIER].includes(type),
+    );
+
+    return isSupportedMediumCampaignType
+      ? query[MEDIUM_CAMPAIGN_IDENTIFIER]
+      : null;
+  } else if (isXtorCampaign) {
+    return `XTOR`;
+  }
+
+  return false;
 };
 
 export const LIBRARY_VERSION = 'simorgh';

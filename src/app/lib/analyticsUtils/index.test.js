@@ -24,6 +24,7 @@ const {
   getEventInfo,
   getComponentInfo,
   getThingAttributes,
+  getCampaignType,
 } = require('./index');
 
 let locServeCookieValue;
@@ -568,5 +569,23 @@ describe('getThingAttributes', () => {
     const thingAttributes = getThingAttributes('fooBar', {});
 
     expect(thingAttributes).toEqual(null);
+  });
+});
+
+describe('getCampaignType', () => {
+  const windowLocation = window.location;
+
+  afterEach(() => {
+    resetWindowValue('location', windowLocation);
+  });
+
+  it.only('should return campaign type of medium', () => {
+    setWindowValue('location', {
+      href: 'https://www.bbc.com/mundo?at_medium=email',
+    });
+
+    const campaignType = getCampaignType();
+
+    expect(campaignType).toEqual('email');
   });
 });
