@@ -1,6 +1,9 @@
 import React, { createContext, useReducer } from 'react';
 import { node, object } from 'prop-types';
 import { toggleReducer } from './reducer';
+import defaultToggles from '#lib/config/toggles';
+
+const environment = process.env.SIMORGH_APP_ENV || 'local';
 
 const ToggleContext = createContext({});
 
@@ -19,7 +22,11 @@ const ToggleContextConsumer = ToggleContext.Consumer;
 ToggleContextProvider.propTypes = {
   children: node.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
-  toggles: object.isRequired,
+  toggles: object,
+};
+
+ToggleContextProvider.defaultProps = {
+  toggles: defaultToggles[environment],
 };
 
 export { ToggleContext, ToggleContextProvider, ToggleContextConsumer };

@@ -4,6 +4,14 @@ import '@testing-library/jest-dom/extend-expect';
 import { queryByText } from '@testing-library/dom';
 import { ToggleContext, ToggleContextProvider } from '.';
 
+jest.mock('#lib/config/toggles', () => ({
+  local: {
+    testToggle: {
+      enabled: true,
+    },
+  },
+}));
+
 // eslint-disable-next-line react/prop-types
 const TestComponent = ({ toggle, children }) => {
   const { toggleState } = useContext(ToggleContext);
@@ -14,7 +22,7 @@ const TestComponent = ({ toggle, children }) => {
   return <div>{children}</div>;
 };
 
-it('should render test component when remoteToggles are passed in that enable them', async () => {
+it('should render test component when toggles are passed in that enable them', async () => {
   const mockToggles = {
     testToggle: {
       enabled: true,
@@ -33,7 +41,7 @@ it('should render test component when remoteToggles are passed in that enable th
   expect(queryByText(container, 'Dummy Component')).toBeInTheDocument();
 });
 
-it('should not render test component by default as no remoteToggles are passed in', async () => {
+it('should not render test component when toggle is set to false', async () => {
   const mockToggles = {
     testToggle: {
       enabled: false,
@@ -50,4 +58,17 @@ it('should not render test component by default as no remoteToggles are passed i
   });
 
   expect(queryByText(container, 'Dummy Component')).not.toBeInTheDocument();
+});
+
+it('should use default toggles if toggles are not passed into the component', async () => {
+  let container;
+  await act(async () => {
+    container = await render(
+      <ToggleContextProvider>
+        <TestComponent toggle="testToggle">Dummy Component</TestComponent>
+      </ToggleContextProvider>,
+    ).container;
+  });
+
+  expect(queryByText(container, 'Dummy Component')).toBeInTheDocument();
 });
