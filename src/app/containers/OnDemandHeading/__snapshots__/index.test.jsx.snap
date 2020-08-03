@@ -1,18 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 1`] = `
-.c2 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
 .c0 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -23,6 +11,18 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
   display: block;
   margin: 0;
   padding: 2rem 0;
+}
+
+.c2 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 .c1 {
@@ -58,18 +58,6 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
 @media (min-width:37.5rem) {
   .c0 {
     padding: 2.5rem 0;
-  }
-}
-
-@media screen {
-  .c0 {
-    padding: 0.5rem 0;
-  }
-}
-
-@media (min-width:63rem) {
-  .c0 {
-    padding: 1rem 0;
   }
 }
 
@@ -121,18 +109,6 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
 `;
 
 exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
-.c2 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
 .c0 {
   font-size: 1.75rem;
   line-height: 2rem;
@@ -143,6 +119,18 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
   display: block;
   margin: 0;
   padding: 2rem 0;
+}
+
+.c2 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 .c1 {
@@ -178,18 +166,6 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
 @media (min-width:37.5rem) {
   .c0 {
     padding: 2.5rem 0;
-  }
-}
-
-@media screen {
-  .c0 {
-    padding: 0.5rem 0;
-  }
-}
-
-@media (min-width:63rem) {
-  .c0 {
-    padding: 1rem 0;
   }
 }
 
