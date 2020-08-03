@@ -103,7 +103,7 @@ describe('Include Classifier', () => {
 
     const actual = includeClassifier({
       href: 'idt3/blah',
-      isAmpRequest: false,
+      isAmpRequest: true,
     });
 
     expect(actual).toEqual(expected);
