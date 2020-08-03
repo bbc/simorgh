@@ -32,6 +32,11 @@
       "type": "image/png"
     },
     {
+      "src": "https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
       "src": "https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"

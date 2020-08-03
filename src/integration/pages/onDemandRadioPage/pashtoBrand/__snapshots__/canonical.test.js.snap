@@ -192,19 +192,26 @@ Object {
 
 exports[`Canonical On Demand Radio Page SEO Apple Touch Icon should match attributes 7`] = `
 Object {
+  "sizes": "180x180",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/pashto/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical On Demand Radio Page SEO Apple Touch Icon should match attributes 8`] = `
+Object {
   "sizes": "192x192",
   "url": "https://news.files.bbci.co.uk/include/articles/public/pashto/images/icons/icon-192x192.png",
 }
 `;
 
-exports[`Canonical On Demand Radio Page SEO Apple Touch Icon should match attributes 8`] = `
+exports[`Canonical On Demand Radio Page SEO Apple Touch Icon should match attributes 9`] = `
 Object {
   "sizes": "384x384",
   "url": "https://news.files.bbci.co.uk/include/articles/public/pashto/images/icons/icon-384x384.png",
 }
 `;
 
-exports[`Canonical On Demand Radio Page SEO Apple Touch Icon should match attributes 9`] = `
+exports[`Canonical On Demand Radio Page SEO Apple Touch Icon should match attributes 10`] = `
 Object {
   "sizes": "512x512",
   "url": "https://news.files.bbci.co.uk/include/articles/public/pashto/images/icons/icon-512x512.png",
