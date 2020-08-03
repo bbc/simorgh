@@ -2,8 +2,8 @@ import Cookie from 'js-cookie';
 import uuid from 'uuid/v4';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
-import onClient from '../utilities/onClient';
 import Url from 'url-parse';
+import onClient from '../utilities/onClient';
 import {
   MEDIUM_CAMPAIGN_IDENTIFIER,
   XTOR_CAMPAIGN_IDENTIFIER,
@@ -313,7 +313,7 @@ export const getCampaignType = () => {
   );
 
   const isXtorCampaign =
-    query.hasOwnProperty(XTOR_CAMPAIGN_IDENTIFIER) ||
+    Object.prototype.hasOwnProperty.call(hash, XTOR_CAMPAIGN_IDENTIFIER) ||
     hash.includes(XTOR_CAMPAIGN_IDENTIFIER);
 
   if (isMediumCampaign) {
@@ -324,9 +324,9 @@ export const getCampaignType = () => {
     return isSupportedMediumCampaignType
       ? query[MEDIUM_CAMPAIGN_IDENTIFIER]
       : null;
-  } else if (isXtorCampaign) {
-    return `XTOR`;
   }
+
+  if (isXtorCampaign) return 'XTOR';
 
   return null;
 };
