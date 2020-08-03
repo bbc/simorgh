@@ -36,7 +36,7 @@ describe('Cloudwatch Custom Metrics', () => {
     delete process.env.SIMORGH_APP_ENV;
   });
 
-  ['local', 'live'].forEach(environment => {
+  ['local'].forEach(environment => {
     it(`should not send custom metrics on ${environment}`, async () => {
       process.env.SIMORGH_APP_ENV = environment;
       await sendCustomMetric(metricParams);
