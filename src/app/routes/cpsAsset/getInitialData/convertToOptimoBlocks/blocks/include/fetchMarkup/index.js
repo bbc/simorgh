@@ -9,7 +9,7 @@ import {
 
 const logger = nodeLogger(__filename);
 
-export default async url => {
+const fetchMarkup = async url => {
   logger.info(INCLUDE_REQUEST_RECEIVED, {
     url,
   });
@@ -35,3 +35,5 @@ export default async url => {
     return null;
   }
 };
+
+export default fetchMarkup;

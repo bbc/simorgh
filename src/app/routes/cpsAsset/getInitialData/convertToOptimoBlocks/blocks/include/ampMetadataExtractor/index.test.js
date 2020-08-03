@@ -14,6 +14,7 @@ describe('Amp Metadata Extractor', () => {
 
   afterAll(() => {
     process.env.SIMORGH_INCLUDES_BASE_AMP_URL = initialBaseAmpUrlEnv;
+    loggerMock.info.mockClear();
   });
 
   it('should return image src, width, height and iframe src metadata for a supported classification', () => {
