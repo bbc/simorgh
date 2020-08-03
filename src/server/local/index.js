@@ -155,6 +155,10 @@ export default server => {
       const dataFilePath = path.join(process.cwd(), 'data', idx, 'index.json');
       sendDataFile(res, dataFilePath, next);
     })
+    .get('/simorgh/public/comscore.js', (req, res, next) => {
+      const localComscorePath = path.join(process.cwd(), '/public/comscore.js');
+      sendDataFile(res, localComscorePath, next);
+    })
     .get('/ckns_policy/*', (req, res) => {
       // Route to allow the cookie banner to make the cookie oven request
       // without throwing an error due to not being on a bbc domain.
