@@ -21,10 +21,10 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
-import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
+import StyledRadioHeadingContainer from '#containers/OnDemandHeading/StyledRadioHeadingContainer';
+import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import AVPlayer from '#containers/AVPlayer';
-import EpisodeImage from '#containers/RadioPageBlocks/Blocks/OnDemandImage';
+import EpisodeImage from '#containers/OnDemandImage';
 import LinkedData from '#containers/LinkedData';
 import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
@@ -92,7 +92,7 @@ const OnDemandRadioPage = ({ pageData }) => {
     shortSynopsis,
     masterBrand,
     episodeId,
-    episodeIsAvailable,
+    episodeAvailability,
     releaseDateTimeStamp,
     imageUrl,
     promoBrandTitle,
@@ -121,8 +121,11 @@ const OnDemandRadioPage = ({ pageData }) => {
     queryString: location.search,
   });
 
+  const episodeIsAvailable =
+    episodeAvailability === EPISODE_STATUS.EPISODE_IS_AVAILABLE;
+
   const getEpisodeNotAvailableMessage = () => {
-    if (episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_EXPIRED) {
+    if (episodeAvailability === EPISODE_STATUS.EPISODE_IS_EXPIRED) {
       return pathOr(
         'This content is no longer available',
         ['media', 'contentExpired'],
@@ -173,18 +176,18 @@ const OnDemandRadioPage = ({ pageData }) => {
             enableGelGutters
           >
             <Grid dir={dir} item columns={getGroups(6, 6, 4, 4, 4, 4)}>
-              <OnDemandHeadingBlock
+              <StyledRadioHeadingContainer
                 idAttr={idAttr}
                 brandTitle={brandTitle}
                 releaseDateTimeStamp={releaseDateTimeStamp}
               />
-              <ParagraphBlock text={summary} />
+              <OnDemandParagraphContainer text={summary} />
             </Grid>
             <Grid dir={dir} item columns={getGroups(0, 0, 2, 2, 2, 2)}>
               <EpisodeImage imageUrl={imageUrl} dir={dir} />
             </Grid>
           </StyledGelWrapperGrid>
-          {episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_AVAILABLE ? (
+          {episodeIsAvailable ? (
             <StyledAudioPlayer
               assetId={episodeId}
               embedUrl={embedUrl}
@@ -207,7 +210,7 @@ const OnDemandRadioPage = ({ pageData }) => {
             type="WebPage"
             seoTitle={headline}
             entities={
-              episodeIsAvailable === EPISODE_STATUS.EPISODE_IS_AVAILABLE
+              episodeIsAvailable
                 ? [
                     {
                       '@type': 'AudioObject',
@@ -234,11 +237,7 @@ OnDemandRadioPage.propTypes = {
     headline: string,
     summary: string,
     language: string,
-    episodeIsAvailable: oneOf([
-      EPISODE_STATUS.EPISODE_IS_AVAILABLE,
-      EPISODE_STATUS.EPISODE_IS_EXPIRED,
-      EPISODE_STATUS.EPISODE_IS_NOT_YET_AVAILABLE,
-    ]),
+    episodeAvailability: oneOf(Object.values(EPISODE_STATUS)),
     releaseDateTimeStamp: number,
     imageUrl: string,
   }).isRequired,

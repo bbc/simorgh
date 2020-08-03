@@ -1,12 +1,105 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`VJ include container on Amp should render an amp-iframe with an image placeholder 1`] = `
+.c0 {
+  grid-column: 1 / span 6;
+  display: grid;
+}
+
+.c1 > [overflow] {
+  background: linear-gradient( 0deg,#fff 0%,rgba(255,255,255,1) 75%,rgba(255,255,255,0) 100% );
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 > [overflow]::after {
+  background-color: #fff;
+  border-top: 0.125rem solid #222222;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: -10;
+}
+
+.c1 > [overflow] button {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  background-color: #222222;
+  border: 0.0625rem solid transparent;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.c1 > [overflow] button:hover,
+.c1 > [overflow] button:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    max-width: initial;
+  }
+}
+
+@media (min-width:20rem) {
+  .c1 > [overflow] button {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 <div>
   <div
-    class="GridItemConstrainedMedium-sc-12lwanc-2 IncludeGrid-sc-10v41ix-0 dworjG"
+    class="c0"
   >
     <amp-iframe
-      class="StyledAmpIframe-sc-10v41ix-1 IhZVF"
+      class="c1"
       height="360"
       layout="responsive"
       resizable=""
