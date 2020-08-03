@@ -5,6 +5,7 @@ import { node, string, shape } from 'prop-types';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ToggleContext } from '../../contexts/ToggleContext';
+import { UserContext } from '#contexts/UserContext';
 import ComscoreAnalytics from '.';
 
 const defaultToggleState = {
@@ -13,9 +14,18 @@ const defaultToggleState = {
   },
 };
 
+const defaultCookiePolicy = { cookiePolicy: '111' };
+
 const mockToggleDispatch = jest.fn();
 
-const ContextWrap = ({ pageType, platform, origin, children, toggleState }) => (
+const ContextWrap = ({
+  pageType,
+  platform,
+  origin,
+  children,
+  toggleState,
+  cookiePolicy,
+}) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
     pageType={pageType}
@@ -31,7 +41,9 @@ const ContextWrap = ({ pageType, platform, origin, children, toggleState }) => (
           toggleDispatch: mockToggleDispatch,
         }}
       >
-        {children}
+        <UserContext.Provider value={cookiePolicy}>
+          {children}
+        </UserContext.Provider>
       </ToggleContext.Provider>
     </ServiceContextProvider>
   </RequestContextProvider>
@@ -43,10 +55,12 @@ ContextWrap.propTypes = {
   origin: string.isRequired,
   platform: string.isRequired,
   toggleState: shape({}),
+  cookiePolicy: shape({}),
 };
 
 ContextWrap.defaultProps = {
   toggleState: defaultToggleState,
+  cookiePolicy: defaultCookiePolicy,
 };
 
 describe('Comscore Analytics Container', () => {
@@ -63,6 +77,29 @@ describe('Comscore Analytics Container', () => {
           pageType="article"
           origin="bbc.com"
           toggleState={toggleState}
+        >
+          <ComscoreAnalytics />
+        </ContextWrap>,
+      );
+
+      expect(container.firstChild).toBeNull();
+    });
+
+    it('should return null when user cookie policy value is 000 for canonical', () => {
+      const toggleState = {
+        comscoreAnalytics: {
+          enabled: true,
+        },
+      };
+      const mockCookiePolicy = { cookiePolicy: '000' };
+
+      const { container } = render(
+        <ContextWrap
+          platform="canonical"
+          pageType="article"
+          origin="bbc.com"
+          toggleState={toggleState}
+          cookiePolicy={mockCookiePolicy}
         >
           <ComscoreAnalytics />
         </ContextWrap>,
