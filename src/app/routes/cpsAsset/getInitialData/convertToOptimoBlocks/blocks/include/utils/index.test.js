@@ -1,4 +1,5 @@
-import { isAmpSupported /* getIncludeIndex */ } from '.';
+import { isAmpSupported, getIncludeBlockIndex } from '.';
+import pageData from '../fixtures';
 
 describe('isAmpSupported', () => {
   const truthyTestCases = [
@@ -23,5 +24,13 @@ describe('isAmpSupported', () => {
 });
 
 describe('getIncludeIndex', () => {
-  it('should return an include index', () => {});
+  it('should correctly return an include indexes', () => {
+    const [idt1Block, idt2Block, vjBlock] = pageData.content.blocks;
+
+    const { blocks } = pageData.content;
+
+    expect(getIncludeBlockIndex(blocks, vjBlock)).toEqual(2);
+    expect(getIncludeBlockIndex(blocks, idt1Block)).toEqual(0);
+    expect(getIncludeBlockIndex(blocks, idt2Block)).toEqual(1);
+  });
 });

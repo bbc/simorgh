@@ -5,5 +5,5 @@ export const isAmpSupported = classification =>
     classification === 'idt1-canonical'
   );
 
-export const getIncludeIndex = (blocks, includeBlock) =>
+export const getIncludeBlockIndex = (blocks, includeBlock) =>
   blocks.filter(block => block.type === 'include').indexOf(includeBlock);

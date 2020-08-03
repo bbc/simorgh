@@ -9,7 +9,7 @@ import isAmpPath from '#app/routes/utils/isAmpPath';
 import buildIncludeUrl from './buildIncludeUrl';
 import fetchMarkup from './fetchMarkup';
 
-import { isAmpSupported, getIncludeIndex } from './utils';
+import { isAmpSupported, getIncludeBlockIndex } from './utils';
 
 const logger = nodeLogger(__filename);
 
@@ -66,7 +66,7 @@ const convertInclude = async (includeBlock, pageData, ...restParams) => {
     type,
     model: {
       href,
-      index: getIncludeIndex(blocks, includeBlock),
+      index: getIncludeBlockIndex(blocks, includeBlock),
       type: includeType,
       isAmpSupported: isAmpSupported(classification),
       ...(ampMetadata && { ampMetadata }),
