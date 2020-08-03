@@ -221,12 +221,12 @@ describe('Story Page', () => {
       variant: 'ru-UA',
     });
 
-    const page = createAssetPage({ pageData }, 'ukrainian');
-    await matchSnapshotAsync(page);
+    render(<Page pageData={pageData} service="ukrainian" variant="ru-UA" />);
 
-    // expect(page.querySelector('div[class*="SecondaryColumn"]')).toHaveAttribute(
-    //   'lang',
-    //   'uk',
-    // );
+    const secondaryColumn = document.querySelector(
+      'div[class*="SecondaryColumn"]',
+    );
+
+    expect(secondaryColumn).toHaveAttribute('lang', 'uk');
   });
 });
