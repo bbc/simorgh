@@ -52,6 +52,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     script,
     service,
     officialLang,
+    lang,
   } = useContext(ServiceContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
@@ -243,7 +244,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <CpsMetadata
         title={title}
         shortHeadline={shortHeadline}
-        language={metadata.language}
+        language={lang}
         description={summary}
         firstPublished={firstPublished}
         lastPublished={lastPublished}

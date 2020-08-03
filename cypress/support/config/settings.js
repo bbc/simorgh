@@ -4926,15 +4926,18 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/russian/av/media-45527896', // CPS video with redirect
+              '/russian/multimedia/2012/04/120411_v_titanic_last_survivor', // TC2 video
+            ],
+            enabled: true,
           },
           test: {
             paths: [
-              '/russian/av/media-52355574',
+              '/russian/av/media-23320267', // CPS video with redirect
               '/russian/news/2016/05/160510_tc2_testmap3', // TC2 video
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [],

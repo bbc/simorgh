@@ -1,9 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import assocPath from 'ramda/src/assocPath';
-import clone from 'ramda/src/clone';
 import { render, act } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import { StaticRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -66,8 +64,8 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
 const { env } = process;
 
 const getAvailableEpisode = assocPath(
-  ['content', 'blocks', 0, 'versions'],
-  [{ availableFrom: 1583496180000, availableUntil: 9999999999999 }],
+  ['content', 'blocks', 0, 'availability'],
+  'available',
 );
 
 const pageType = 'media';
@@ -292,10 +290,7 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the expired content message if episode is expired', async () => {
-    const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions = [];
-    const koreanPageDataWithExpiredEpisode = clonedKoreanPageData;
-    fetch.mockResponse(JSON.stringify(koreanPageDataWithExpiredEpisode));
+    fetch.mockResponse(JSON.stringify(koreanPageData));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
       pageType,
@@ -313,12 +308,12 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it("should show the 'content not yet available' message if episode is not yet available", async () => {
-    const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0] = {
-      availableFrom: 9999999999999,
-      availableUntil: 9999999999999,
-    };
-    const koreanPageDataWithNotYetAvailableEpisode = clonedKoreanPageData;
+    const koreanPageDataWithNotYetAvailableEpisode = assocPath(
+      ['content', 'blocks', 0, 'availability'],
+      'future',
+      koreanPageData,
+    );
+
     fetch.mockResponse(
       JSON.stringify(koreanPageDataWithNotYetAvailableEpisode),
     );

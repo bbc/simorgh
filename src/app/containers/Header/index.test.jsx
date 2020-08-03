@@ -2,7 +2,6 @@ import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import '@testing-library/jest-dom/extend-expect';
 import HeaderContainer from './index';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
