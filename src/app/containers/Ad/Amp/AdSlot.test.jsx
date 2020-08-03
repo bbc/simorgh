@@ -1,6 +1,5 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import '@testing-library/jest-dom/extend-expect';
 import AdSlot, { getDataSlot } from './AdSlot';
 
 describe('Amp AdSlot', () => {

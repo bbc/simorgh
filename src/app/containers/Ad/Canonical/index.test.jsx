@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import '@testing-library/jest-dom/extend-expect';
 import isLive from '#lib/utilities/isLive';
 import CanonicalAd, { getBootstrapSrc, getBootstrapLegacySrc } from '.';
 

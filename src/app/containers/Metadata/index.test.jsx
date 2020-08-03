@@ -199,6 +199,11 @@ it('should render the apple touch icons', async () => {
     },
     {
       href:
+        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-180x180.png',
+      sizes: '180x180',
+    },
+    {
+      href:
         'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png',
       sizes: '192x192',
     },
