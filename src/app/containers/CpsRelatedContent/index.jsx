@@ -60,7 +60,7 @@ const CpsRelatedContent = ({ content, parentColumns }) => {
           key={item.id || item.uri}
           dir={dir}
         >
-          <StoryPromo item={item} dir={dir} />
+          <StoryPromo item={item} dir={dir} displaySummary={false} />
         </Grid>
       ))}
     </Grid>
@@ -74,6 +74,7 @@ const CpsRelatedContent = ({ content, parentColumns }) => {
       parentColumns={parentColumns}
       singleTransform={singleTransform}
       listTransform={listTransform}
+      columnType="secondary"
     />
   );
 };

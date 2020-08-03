@@ -14,12 +14,6 @@ def packageName = 'simorgh.zip'
 def storybookDist = 'storybook.zip'
 def staticAssetsDist = 'static.zip'
 
-def setupCodeCoverage() {
-  sh 'curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter'
-  sh 'chmod +x ./cc-test-reporter'
-  sh './cc-test-reporter before-build'
-}
-
 def installDependencies(){
   sh 'make install'
 }
@@ -34,10 +28,6 @@ def runDevelopmentTests(){
 
 def runProductionTests(){
   sh 'make productionTests'
-}
-
-def runChromaticTests(){
-  sh 'make testChromatic'
 }
 
 def pruneDevDependencies(){
@@ -88,6 +78,7 @@ def buildStaticAssets(env, tag) {
 
   sh "npm run build:$env"
   sh 'rm -rf staticAssets && mkdir staticAssets'
+  // sh "find build -type f -name '*.png' -delete" // Temp remove all .png assets to speed up upload of static assets (These assets are already avaiable on the CDN)
   sh "cp -R build/. staticAssets"
   sh "cd staticAssets && xargs -a ../excludeFromPublicBuild.txt rm -f {}"
   zip archive: true, dir: 'staticAssets', glob: '', zipFile: "static${tag}.zip"
@@ -144,7 +135,12 @@ pipeline {
         installDependencies()
       }
     }
+
+    // Do not run on latest
     stage ('Build for Test') {
+      when {
+        expression { env.BRANCH_NAME != 'latest' }
+      }
       agent {
         docker {
           image "${nodeImage}"
@@ -155,10 +151,16 @@ pipeline {
         buildApplication()
       }
     }
+
     stage ('Test') {
       failFast true
       parallel {
+
+        // Do not run on latest, as these tests ran in the PR checks
         stage ('Test Development') {
+          when {
+            expression { env.BRANCH_NAME != 'latest' }
+          }
           agent {
             docker {
               image "${nodeImage}"
@@ -166,15 +168,15 @@ pipeline {
             }
           }
           steps {
-            setupCodeCoverage()
-            withCredentials([string(credentialsId: 'simorgh-cc-test-reporter-id', variable: 'CC_TEST_REPORTER_ID')]) {
-              runDevelopmentTests()
-              sh './cc-test-reporter after-build -t lcov --debug --exit-code 0'
-
-            }
+            runDevelopmentTests()
           }
         }
+
+        // Do not run on latest, as these tests ran in the PR checks
         stage ('Test Production') {
+          when {
+            expression { env.BRANCH_NAME != 'latest' }
+          }
           agent {
             docker {
               image "${nodeImage}"
@@ -183,19 +185,6 @@ pipeline {
           }
           steps {
             runProductionTests()
-          }
-        }
-        stage ('Test Chromatic') {
-          agent {
-            docker {
-              image "${nodeImage}"
-              reuseNode true
-            }
-          }
-          steps {
-            withCredentials([string(credentialsId: 'simorgh-chromatic-app-code', variable: 'CHROMATIC_APP_CODE')]) {
-              runChromaticTests()
-            }
           }
         }
       }

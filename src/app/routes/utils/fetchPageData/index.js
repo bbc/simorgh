@@ -13,7 +13,7 @@ import {
   OK,
   NOT_FOUND,
   UPSTREAM_CODES_TO_PROPAGATE_IN_SIMORGH,
-} from './utils/statusCodes';
+} from '#lib/statusCodes.const';
 import getErrorStatusCode from './utils/getErrorStatusCode';
 
 const logger = nodeLogger(__filename);
@@ -32,10 +32,10 @@ export const getUrl = pathname => {
   return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
 };
 
-export default async pathname => {
-  const url = getUrl(pathname);
+export default async ({ path, pageType }) => {
+  const url = getUrl(path);
 
-  logger.info(DATA_REQUEST_RECEIVED, { url });
+  logger.info(DATA_REQUEST_RECEIVED, { data: url, pageType, path });
 
   try {
     const response = await fetch(url);
@@ -71,9 +71,11 @@ export default async pathname => {
     }
 
     logger.error(DATA_FETCH_ERROR, {
-      url,
+      data: url,
       status: simorghError.status,
       error: message,
+      pageType,
+      path,
     });
 
     throw simorghError;

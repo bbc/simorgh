@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, act } from '@testing-library/react';
 import fetchMock from 'fetch-mock';
-import '@testing-library/jest-dom/extend-expect';
 import { setFreshPromoTimestamp } from './utilities/testHelpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';

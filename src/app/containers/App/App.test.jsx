@@ -188,6 +188,7 @@ describe('App', () => {
             path: pathname,
             service: 'ukchina',
             variant: 'simp',
+            pageType: 'article',
           });
 
           // start data fetch and set loading to true

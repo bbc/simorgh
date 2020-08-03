@@ -3,30 +3,32 @@
     "blocks": [
       {
         "advertising": false,
+        "availability": "available",
         "embedding": false,
         "format": "Audio",
-        "id": "w172xh281s935sc",
+        "id": "w172xh2byxsys0p",
         "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
         "subType": "episode",
         "synopses": {
           "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
           "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
         },
-        "title": "07/06/2020 GMT",
+        "title": "29/07/2020 GMT",
         "type": "media",
         "versions": [
           {
-            "availableFrom": 1591571700000,
+            "availabilityStatus": "available",
+            "availableFrom": 1596064500000,
             "availableTerritories": {
               "nonUk": false,
               "uk": false,
               "world": true
             },
-            "availableUntil": 1594163700000,
+            "availableUntil": 1598656500000,
             "duration": 930,
             "durationISO8601": "PT15M30S",
             "types": ["Original"],
-            "versionId": "w1mshmz2n0mp4lx",
+            "versionId": "w1mshmz5k54jqv7",
             "warnings": {}
           }
         ]
@@ -42,24 +44,24 @@
       "producerId": "54"
     },
     "atiAnalytics": {},
-    "blockTypes": [],
+    "blockTypes": ["media"],
     "createdBy": "bbc_indonesian_radio",
-    "firstPublished": 1590618321000,
+    "firstPublished": 1595111754000,
     "id": "urn:bbc:ares:ws_media:brand:bbc_indonesian_radio/w13xtt0s",
     "language": "id",
-    "lastPublished": 1590618321000,
-    "lastUpdated": 1591601578116,
+    "lastPublished": 1595111754000,
+    "lastUpdated": 1595947142837,
     "locators": {
       "brandPid": "w13xtt0s",
-      "pid": "w172xh281s935sc"
+      "pid": "w172xh2byxsys0p"
     },
     "options": {},
-    "releaseDateTimeStamp": 1591488000000,
+    "releaseDateTimeStamp": 1595980800000,
     "tags": {},
-    "timestamp": 1590618321000,
+    "timestamp": 1595111754000,
     "title": "Dunia Pagi Ini",
     "type": "WSRADIO",
-    "version": "v1.3.1"
+    "version": "v1.3.3"
   },
   "promo": {
     "brand": {
@@ -69,7 +71,7 @@
     "headlines": {
       "headline": "Dunia Pagi Ini"
     },
-    "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xh281s935sc",
+    "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xh2byxsys0p",
     "indexImage": {
       "altText": null,
       "copyrightHolder": null,
@@ -83,42 +85,523 @@
     },
     "locators": {
       "brandPid": "w13xtt0s",
-      "pid": "w172xh281s935sc"
+      "pid": "w172xh2byxsys0p"
     },
     "media": {
       "advertising": false,
+      "availability": "available",
       "embedding": false,
       "format": "Audio",
-      "id": "w172xh281s935sc",
+      "id": "w172xh2byxsys0p",
       "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
       "subType": "episode",
       "synopses": {
         "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
         "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
       },
-      "title": "07/06/2020 GMT",
+      "title": "29/07/2020 GMT",
       "type": "media",
       "versions": [
         {
-          "availableFrom": 1591571700000,
+          "availabilityStatus": "available",
+          "availableFrom": 1596064500000,
           "availableTerritories": {
             "nonUk": false,
             "uk": false,
             "world": true
           },
-          "availableUntil": 1594163700000,
+          "availableUntil": 1598656500000,
           "duration": 930,
           "durationISO8601": "PT15M30S",
           "types": ["Original"],
-          "versionId": "w1mshmz2n0mp4lx",
+          "versionId": "w1mshmz5k54jqv7",
           "warnings": {}
         }
       ]
     },
+    "releaseDateTimestamp": 1595980800000,
     "type": "ws_radio"
   },
   "relatedContent": {
-    "groups": [],
+    "groups": [
+      {
+        "promos": [
+          {
+            "brand": {
+              "pid": "w13xtt0s",
+              "title": "Dunia Pagi Ini"
+            },
+            "headlines": {
+              "headline": "Dunia Pagi Ini"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xh2byxsyn8k",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "w13xtt0s",
+              "pid": "w172xh2byxsyn8k"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w172xh2byxsyn8k",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "episode",
+              "synopses": {
+                "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+                "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+              },
+              "title": "29/07/2020 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1596060900000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1598652900000,
+                  "duration": 930,
+                  "durationISO8601": "PT15M30S",
+                  "types": ["Original"],
+                  "versionId": "w1mshmz5k54jm33",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1595980800000,
+            "type": "ws_radio"
+          },
+          {
+            "brand": {
+              "pid": "w13xtt0s",
+              "title": "Dunia Pagi Ini"
+            },
+            "headlines": {
+              "headline": "Dunia Pagi Ini"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xh2byxsvw3l",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "w13xtt0s",
+              "pid": "w172xh2byxsvw3l"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w172xh2byxsvw3l",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "episode",
+              "synopses": {
+                "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+                "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+              },
+              "title": "28/07/2020 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1595978100000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1598570100000,
+                  "duration": 930,
+                  "durationISO8601": "PT15M30S",
+                  "types": ["Original"],
+                  "versionId": "w1mshmz5k54fty4",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1595894400000,
+            "type": "ws_radio"
+          },
+          {
+            "brand": {
+              "pid": "w13xtt0s",
+              "title": "Dunia Pagi Ini"
+            },
+            "headlines": {
+              "headline": "Dunia Pagi Ini"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xh2byxsvrcg",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "w13xtt0s",
+              "pid": "w172xh2byxsvrcg"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w172xh2byxsvrcg",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "episode",
+              "synopses": {
+                "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+                "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+              },
+              "title": "28/07/2020 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1595974500000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1598566500000,
+                  "duration": 930,
+                  "durationISO8601": "PT15M30S",
+                  "types": ["Original"],
+                  "versionId": "w1mshmz5k54fq60",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1595894400000,
+            "type": "ws_radio"
+          },
+          {
+            "brand": {
+              "pid": "w13xtt0s",
+              "title": "Dunia Pagi Ini"
+            },
+            "headlines": {
+              "headline": "Dunia Pagi Ini"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xh2byxsrz6h",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "w13xtt0s",
+              "pid": "w172xh2byxsrz6h"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w172xh2byxsrz6h",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "episode",
+              "synopses": {
+                "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+                "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+              },
+              "title": "27/07/2020 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1595891700000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1598483700000,
+                  "duration": 930,
+                  "durationISO8601": "PT15M30S",
+                  "types": ["Original"],
+                  "versionId": "w1mshmz5k54by11",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1595808000000,
+            "type": "ws_radio"
+          },
+          {
+            "brand": {
+              "pid": "w13xtt0s",
+              "title": "Dunia Pagi Ini"
+            },
+            "headlines": {
+              "headline": "Dunia Pagi Ini"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xh2byxsrvgc",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "w13xtt0s",
+              "pid": "w172xh2byxsrvgc"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w172xh2byxsrvgc",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "episode",
+              "synopses": {
+                "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+                "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+              },
+              "title": "27/07/2020 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1595888100000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1598480100000,
+                  "duration": 930,
+                  "durationISO8601": "PT15M30S",
+                  "types": ["Original"],
+                  "versionId": "w1mshmz5k54bt8x",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1595808000000,
+            "type": "ws_radio"
+          },
+          {
+            "brand": {
+              "pid": "w13xtt0s",
+              "title": "Dunia Pagi Ini"
+            },
+            "headlines": {
+              "headline": "Dunia Pagi Ini"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xh2blnhk717",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "w13xtt0s",
+              "pid": "w172xh2blnhk717"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w172xh2blnhk717",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "episode",
+              "synopses": {
+                "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+                "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+              },
+              "title": "26/07/2020 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1595805300000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1598397300000,
+                  "duration": 930,
+                  "durationISO8601": "PT15M30S",
+                  "types": ["Original"],
+                  "versionId": "w1mshmz55wv45vs",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1595721600000,
+            "type": "ws_radio"
+          },
+          {
+            "brand": {
+              "pid": "w13xtt0s",
+              "title": "Dunia Pagi Ini"
+            },
+            "headlines": {
+              "headline": "Dunia Pagi Ini"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xh2blnhk393",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "w13xtt0s",
+              "pid": "w172xh2blnhk393"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w172xh2blnhk393",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "episode",
+              "synopses": {
+                "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+                "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+              },
+              "title": "26/07/2020 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1595801700000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1598393700000,
+                  "duration": 930,
+                  "durationISO8601": "PT15M30S",
+                  "types": ["Original"],
+                  "versionId": "w1mshmz55wv423n",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1595721600000,
+            "type": "ws_radio"
+          },
+          {
+            "brand": {
+              "pid": "w13xtt0s",
+              "title": "Dunia Pagi Ini"
+            },
+            "headlines": {
+              "headline": "Dunia Pagi Ini"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/w172xh2blnh8j9y",
+            "indexImage": {
+              "altText": null,
+              "copyrightHolder": null,
+              "height": 0,
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "id": "",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "index",
+              "type": "image",
+              "width": 0
+            },
+            "locators": {
+              "brandPid": "w13xtt0s",
+              "pid": "w172xh2blnh8j9y"
+            },
+            "media": {
+              "advertising": false,
+              "availability": "available",
+              "embedding": false,
+              "format": "Audio",
+              "id": "w172xh2blnh8j9y",
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b4828.png",
+              "subType": "episode",
+              "synopses": {
+                "medium": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+                "short": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."
+              },
+              "title": "23/07/2020 GMT",
+              "type": "media",
+              "versions": [
+                {
+                  "availabilityStatus": "available",
+                  "availableFrom": 1595546100000,
+                  "availableTerritories": {
+                    "nonUk": false,
+                    "uk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1598138100000,
+                  "duration": 930,
+                  "durationISO8601": "PT15M30S",
+                  "types": ["Original"],
+                  "versionId": "w1mshmz55wtvh4h",
+                  "warnings": {}
+                }
+              ]
+            },
+            "releaseDateTimestamp": 1595462400000,
+            "type": "ws_radio"
+          }
+        ],
+        "type": "other-episode"
+      }
+    ],
     "site": {
       "name": "Indonesia",
       "subType": "site",
