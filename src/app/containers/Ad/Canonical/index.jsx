@@ -31,16 +31,18 @@ const AdContainer = styled.section`
   ${({ slotType }) => (slotType === 'mpu' ? mpuStyles : leaderboardStyles)}
 `;
 
-export const getBootstrapSrc = queryString => {
+export const getBootstrapSrc = (queryString, useLegacy = false) => {
+  const {
+    SIMORGH_ADS_SCRIPT_TEST,
+    SIMORGH_ADS_SCRIPT_LEGACY_TEST,
+    SIMORGH_ADS_SCRIPT_LIVE,
+    SIMORGH_ADS_SCRIPT_LEGACY_LIVE,
+  } = process.env;
   const useLiveSrc = isLive() || queryString.includes('ads-js-env=live');
-  const params = useLiveSrc ? '' : 'test/';
-  return `https://gn-web-assets.api.bbc.com/ngas/${params}dotcom-bootstrap.js`;
-};
-
-export const getBootstrapLegacySrc = queryString => {
-  const useLiveSrc = isLive() || queryString.includes('ads-js-env=live');
-  const params = useLiveSrc ? '' : 'test/';
-  return `https://gn-web-assets.api.bbc.com/ngas/${params}dotcom-bootstrap-legacy.js`;
+  if (useLiveSrc) {
+    return useLegacy ? SIMORGH_ADS_SCRIPT_LEGACY_LIVE : SIMORGH_ADS_SCRIPT_LIVE;
+  }
+  return useLegacy ? SIMORGH_ADS_SCRIPT_LEGACY_TEST : SIMORGH_ADS_SCRIPT_TEST;
 };
 
 const CanonicalAd = ({ slotType }) => {
@@ -72,7 +74,7 @@ const CanonicalAd = ({ slotType }) => {
       {/* This can be moved once we allow the script to load on live */}
       <Helmet>
         <script type="module" src={getBootstrapSrc(queryString)} />
-        <script nomodule="nomodule" src={getBootstrapLegacySrc(queryString)} />
+        <script nomodule="nomodule" src={getBootstrapSrc(queryString, true)} />
       </Helmet>
       <AdContainer
         slotType={slotType}

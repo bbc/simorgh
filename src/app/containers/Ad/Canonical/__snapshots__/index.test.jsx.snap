@@ -4,25 +4,20 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
 <html>
   <head>
     <script
-      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+      src="http://mock-test-script"
       type="module"
     />
     <script
       nomodule="nomodule"
-      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
+      src="http://mock-test-script-legacy"
     />
   </head>
   <body>
-    .c0 {
-  background-color: #F6F6F6;
-  min-height: 15.625rem;
-}
-
-<div>
+    <div>
       <section
         aria-hidden="true"
         aria-label="Advertisement 2"
-        class="c0"
+        class="AdContainer-sc-8mk8fx-0 hGXTxz"
         role="region"
       >
         <div
@@ -36,26 +31,15 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
 `;
 
 exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderboard ad with dotcom-bootstrap script 1`] = `
-.c0 {
-  background-color: #F6F6F6;
-  min-height: 5.5rem;
-}
-
-@media (min-width:63rem) {
-  .c0 {
-    min-height: 9rem;
-  }
-}
-
 <html>
   <head>
     <script
-      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+      src="http://mock-test-script"
       type="module"
     />
     <script
       nomodule="nomodule"
-      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
+      src="http://mock-test-script-legacy"
     />
   </head>
   <body>
@@ -63,7 +47,7 @@ exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderb
       <section
         aria-hidden="true"
         aria-label="Advertisement"
-        class="c0"
+        class="AdContainer-sc-8mk8fx-0 cfynHM"
         role="region"
       >
         <div

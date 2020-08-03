@@ -3,10 +3,20 @@ import { BrowserRouter } from 'react-router-dom';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import '@testing-library/jest-dom/extend-expect';
 import isLive from '#lib/utilities/isLive';
-import CanonicalAd, { getBootstrapSrc, getBootstrapLegacySrc } from '.';
+import CanonicalAd, { getBootstrapSrc } from '.';
+
+const mockTestScript = 'http://mock-test-script';
+const mockTestScriptLegacy = 'http://mock-test-script-legacy';
+const mockLiveScript = 'http://mock-live-script';
+const mockLiveScriptLegacy = 'http://mock-live-script-legacy';
 
 describe('CanonicalAds Ads', () => {
   beforeEach(() => {
+    process.env.SIMORGH_ADS_SCRIPT_TEST = mockTestScript;
+    process.env.SIMORGH_ADS_SCRIPT_LEGACY_TEST = mockTestScriptLegacy;
+    process.env.SIMORGH_ADS_SCRIPT_LIVE = mockLiveScript;
+    process.env.SIMORGH_ADS_SCRIPT_LEGACY_LIVE = mockLiveScriptLegacy;
+
     window.dotcom = {
       bootstrap: jest.fn(),
       cmd: { push: jest.fn() },
@@ -37,65 +47,44 @@ describe('CanonicalAds Ads', () => {
 jest.mock('#lib/utilities/isLive', () => jest.fn());
 
 describe('getBootstrapSrc', () => {
+  beforeEach(() => {
+    process.env.SIMORGH_ADS_SCRIPT_TEST = mockTestScript;
+    process.env.SIMORGH_ADS_SCRIPT_LEGACY_TEST = mockTestScriptLegacy;
+    process.env.SIMORGH_ADS_SCRIPT_LIVE = mockLiveScript;
+    process.env.SIMORGH_ADS_SCRIPT_LEGACY_LIVE = mockLiveScriptLegacy;
+  });
+
   afterEach(() => {
     jest.clearAllMocks();
   });
 
-  [
-    {
-      queryString: '?ads-js-env=live',
-      isLiveValue: false,
-      bootstrapSrc:
-        'https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap.js',
-    },
-    {
-      queryString: '?invalid-string',
-      isLiveValue: true,
-      bootstrapSrc:
-        'https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap.js',
-    },
-    {
-      queryString: '',
-      isLiveValue: false,
-      bootstrapSrc:
-        'https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js',
-    },
-  ].forEach(({ queryString, isLiveValue, bootstrapSrc }) => {
-    it(`should return ${bootstrapSrc} when queryString=${queryString} and isLive=${isLiveValue}`, () => {
-      isLive.mockImplementationOnce(() => isLiveValue);
-      expect(getBootstrapSrc(queryString)).toEqual(bootstrapSrc);
-    });
-  });
-});
-
-describe('getBootstrapLegacySrc', () => {
-  afterEach(() => {
-    jest.clearAllMocks();
+  it('should return live script when on live environment', () => {
+    isLive.mockImplementationOnce(() => true);
+    expect(getBootstrapSrc('')).toBe(mockLiveScript);
   });
 
-  [
-    {
-      queryString: '?ads-js-env=live',
-      isLiveValue: false,
-      bootstrapLegacySrc:
-        'https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap-legacy.js',
-    },
-    {
-      queryString: '?invalid-string',
-      isLiveValue: true,
-      bootstrapLegacySrc:
-        'https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap-legacy.js',
-    },
-    {
-      queryString: '',
-      isLiveValue: false,
-      bootstrapLegacySrc:
-        'https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js',
-    },
-  ].forEach(({ queryString, isLiveValue, bootstrapLegacySrc }) => {
-    it(`should return ${bootstrapLegacySrc} when queryString=${queryString} and isLive=${isLiveValue}`, () => {
-      isLive.mockImplementationOnce(() => isLiveValue);
-      expect(getBootstrapLegacySrc(queryString)).toEqual(bootstrapLegacySrc);
-    });
+  it('should return live legacy script when on live environment and legacy is true', () => {
+    isLive.mockImplementationOnce(() => true);
+    expect(getBootstrapSrc('', true)).toBe(mockLiveScriptLegacy);
+  });
+
+  it('should return test script when not on live environment', () => {
+    isLive.mockImplementationOnce(() => false);
+    expect(getBootstrapSrc('')).toBe(mockTestScript);
+  });
+
+  it('should return test legacy script when not on live environment and legacy is true', () => {
+    isLive.mockImplementationOnce(() => false);
+    expect(getBootstrapSrc('?invalid-query', true)).toBe(mockTestScriptLegacy);
+  });
+
+  it('should return live script when not on live environment and query string ads-js-env is set to live', () => {
+    isLive.mockImplementationOnce(() => false);
+    expect(getBootstrapSrc('ads-js-env=live')).toBe(mockLiveScript);
+  });
+
+  it('should return live legacy script when not on live environment and legacy is true and query string ads-js-env is set to live', () => {
+    isLive.mockImplementationOnce(() => false);
+    expect(getBootstrapSrc('ads-js-env=live', true)).toBe(mockLiveScriptLegacy);
   });
 });
