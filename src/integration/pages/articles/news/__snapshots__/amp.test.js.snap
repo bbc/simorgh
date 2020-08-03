@@ -312,6 +312,13 @@ Object {
 }
 `;
 
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 10`] = `
+Object {
+  "sizes": "512x512",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png",
+}
+`;
+
 exports[`AMP Articles SEO Canonical link 1`] = `"http://localhost:7080/news/articles/c5jje4ejkqvo"`;
 
 exports[`AMP Articles SEO Dir attribute 1`] = `"ltr"`;
