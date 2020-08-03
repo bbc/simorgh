@@ -304,9 +304,8 @@ export const getThingAttributes = (attribute, articleData) => {
 export const getCampaignType = () => {
   if (!onClient()) return null;
 
-  console.log('---------- URL' + Url);
   // Gets the query string parameters from the current url parsing them as an object
-  const { query, hash } = new Url(window.location, true);
+  const { query, hash } = new Url(window.location.href, true);
 
   const isMediumCampaign = query.hasOwnProperty(MEDIUM_CAMPAIGN_IDENTIFIER);
 
@@ -326,7 +325,7 @@ export const getCampaignType = () => {
     return `XTOR`;
   }
 
-  return false;
+  return null;
 };
 
 export const LIBRARY_VERSION = 'simorgh';

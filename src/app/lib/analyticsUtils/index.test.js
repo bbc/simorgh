@@ -572,14 +572,14 @@ describe('getThingAttributes', () => {
   });
 });
 
-describe('getCampaignType', () => {
+describe.only('getCampaignType', () => {
   const windowLocation = window.location;
 
   afterEach(() => {
     resetWindowValue('location', windowLocation);
   });
 
-  it.only('should return campaign type of medium', () => {
+  it('should return campaign type of email', () => {
     setWindowValue('location', {
       href: 'https://www.bbc.com/mundo?at_medium=email',
     });
@@ -587,5 +587,55 @@ describe('getCampaignType', () => {
     const campaignType = getCampaignType();
 
     expect(campaignType).toEqual('email');
+  });
+
+  it('should return campaign type of affiliate', () => {
+    setWindowValue('location', {
+      href: 'https://www.bbc.com/mundo?at_medium=affiliate',
+    });
+
+    const campaignType = getCampaignType();
+
+    expect(campaignType).toEqual('affiliate');
+  });
+
+  it('should return campaign type of custom123', () => {
+    setWindowValue('location', {
+      href: 'https://www.bbc.com/mundo?at_medium=custom123',
+    });
+
+    const campaignType = getCampaignType();
+
+    expect(campaignType).toEqual('custom123');
+  });
+
+  it('should return null for invalid campaign type', () => {
+    setWindowValue('location', {
+      href: 'https://www.bbc.com/mundo?at_medium=foo',
+    });
+
+    const campaignType = getCampaignType();
+
+    expect(campaignType).toEqual(null);
+  });
+
+  it('should return campaign type of XTOR', () => {
+    setWindowValue('location', {
+      href: 'https://www.bbc.com/mundo?xtor=123',
+    });
+
+    const campaignType = getCampaignType();
+
+    expect(campaignType).toEqual('XTOR');
+  });
+
+  it('should return campaign type of XTOR', () => {
+    setWindowValue('location', {
+      href: 'https://www.bbc.com/mundo#xtor',
+    });
+
+    const campaignType = getCampaignType();
+
+    expect(campaignType).toEqual('XTOR');
   });
 });
