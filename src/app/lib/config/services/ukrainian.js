@@ -292,6 +292,19 @@ export const service = {
     lang: 'ru-UA',
     headerFooterLang: 'uk',
   },
+  es: {
+    ...baseServiceConfig,
+    translations: {
+      ...baseServiceConfig.translations,
+      ...russianMainTranslations,
+    },
+    datetimeLocale: 'ru',
+    locale: 'es',
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ru',
+    lang: 'es',
+    headerFooterLang: 'uk',
+  },
 };
 
 export default withContext(service);

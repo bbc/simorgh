@@ -1,7 +1,7 @@
 const SERVICES_WITH_LANG_OVERRIDES = ['ukrainian'];
 
 const SERVICE_LANG_OVERRIDE_MAP = {
-  ru: 'ru-UA',
+  ru: 'es',
 };
 
 /**

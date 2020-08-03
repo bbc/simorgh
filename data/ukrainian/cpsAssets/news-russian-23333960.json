@@ -93,38 +93,37 @@
         "type": "paragraph"
       },
       {
-        "advertising": true,
-        "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
-        "embedding": true,
-        "format": "video",
         "id": "p01k6msm",
-        "imageCopyright": "BBC",
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
         "subType": "clip",
+        "format": "video",
+        "title": "Five things ants can teach us about management",
         "synopses": {
           "short": "They may be tiny, but us humans could learn a thing or two from ants."
         },
-        "title": "Five things ants can teach us about management",
-        "type": "media",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
         "versions": [
           {
-            "availableFrom": 1540218932000,
-            "availableTerritories": {
-              "nonUk": true,
-              "uk": true
-            },
+            "versionId": "p01k6msp",
+            "types": ["Original"],
             "duration": 191,
             "durationISO8601": "PT3M11S",
-            "types": [
-              "Original"
-            ],
-            "versionId": "p01k6msp",
             "warnings": {
-              "long": "Contains strong language and adult humour.",
-              "short": "Contains strong language and adult humour."
-            }
+              "short": "Contains strong language and adult humour.",
+              "long": "Contains strong language and adult humour."
+            },
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1540218932000
           }
-        ]
+        ],
+        "imageCopyright": "BBC",
+        "type": "media"
       },
       {
         "markupType": "plain_text",
@@ -159,10 +158,10 @@
     "lastPublished": 1595581985000,
     "lastUpdated": 1595590887785,
     "locators": {
-      "assetId": "23333960",
-      "assetUri": "/ukrainian/news-russian-23333960",
-      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-russian-23333960",
-      "curie": "http://www.bbc.co.uk/asset/d19f66fe-8b1b-4413-b360-a2f1cc53e160"
+      "assetUri": "/mundo/23263889",
+      "cpsUrn": "urn:bbc:content:assetUri:mundo/23263889",
+      "curie": "http://www.bbc.co.uk/asset/f776ad93-e486-b14a-b5ea-55955dd0644f",
+      "assetId": "23263889"
     },
     "options": {
       "allowAdvertising": true,
@@ -205,10 +204,10 @@
     },
     "language": "ru",
     "locators": {
-      "assetId": "23333960",
-      "assetUri": "/ukrainian/news-russian-23333960",
-      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-russian-23333960",
-      "curie": "http://www.bbc.co.uk/asset/d19f66fe-8b1b-4413-b360-a2f1cc53e160"
+      "assetUri": "/mundo/23263889",
+      "cpsUrn": "urn:bbc:content:assetUri:mundo/23263889",
+      "curie": "http://www.bbc.co.uk/asset/f776ad93-e486-b14a-b5ea-55955dd0644f",
+      "assetId": "23263889"
     },
     "summary": "Test for Russian lang Ukrainian stories",
     "timestamp": 1595581985000,
