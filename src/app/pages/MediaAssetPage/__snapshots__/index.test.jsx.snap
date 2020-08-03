@@ -540,22 +540,11 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                     <iframe
                       allow="autoplay; fullscreen"
                       allowfullscreen=""
-<<<<<<< HEAD
-                      class="StyledIframe-fuo2ed-1 lfcupi"
-=======
                       class="c5"
->>>>>>> latest
                       scrolling="no"
                       src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
                       title="Медиа плейер"
                     />
-                    <div
-                      class="LoadingImageWrapper-fuo2ed-0 gyUHhp"
-                    >
-                      <div
-                        class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
-                      />
-                    </div>
                     <noscript />
                   </div>
                 </figure>
@@ -2060,22 +2049,11 @@ exports[`Media Asset Page should render component 1`] = `
                     <iframe
                       allow="autoplay; fullscreen"
                       allowfullscreen=""
-<<<<<<< HEAD
-                      class="StyledIframe-fuo2ed-1 lfcupi"
-=======
                       class="c5"
->>>>>>> latest
                       scrolling="no"
                       src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
                       title="Media player"
                     />
-                    <div
-                      class="LoadingImageWrapper-fuo2ed-0 gyUHhp"
-                    >
-                      <div
-                        class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
-                      />
-                    </div>
                     <noscript />
                   </div>
                 </figure>
