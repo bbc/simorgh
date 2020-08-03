@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Convert Include block Data dependent conditions should return a valid IDT1 block on canonical 1`] = `
+exports[`Convert Include block Data dependent conditions should return 'a valid IDT1 block on canonical 1`] = `
 Object {
   "model": Object {
     "href": "/indepthtoolkit/quizzes/123-456",
@@ -81,7 +81,7 @@ Object {
 }
 `;
 
-exports[`Convert Include block Special conditions when fetchMarkup returns null 1`] = `
+exports[`Convert Include block Error conditions when fetchMarkup returns null 1`] = `
 Object {
   "model": Object {
     "href": "/idt2/111-222-333-444-555",
@@ -101,7 +101,7 @@ Object {
 }
 `;
 
-exports[`Convert Include block Special conditions when getImageBlock returns null 1`] = `
+exports[`Convert Include block Error conditions when getImageBlock returns null 1`] = `
 Object {
   "model": Object {
     "href": "/idt2/111-222-333-444-555",

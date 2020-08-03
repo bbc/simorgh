@@ -45,46 +45,6 @@ const runNoHrefBlockAssertions = () => {
   });
 };
 
-const expectations = [
-  {
-    block: idt1Block,
-    pathname: canonicalPathname,
-    expectation: 'a valid IDT1 block on canonical',
-  },
-  {
-    block: idt2Block,
-    pathname: canonicalPathname,
-    expectation: 'a valid IDT2 block on canonical',
-  },
-  {
-    block: vjBlock,
-    pathname: canonicalPathname,
-    expectation: 'a valid VJ block on canonical',
-  },
-  {
-    block: unsupportedIncludeBlock,
-    pathname: canonicalPathname,
-    expectation: 'null for non-supported include block on canonical',
-    runAdditionalExpectations: runUnsupportedBlockAssertions,
-  },
-  {
-    block: noHrefIncludeBlock,
-    pathname: canonicalPathname,
-    expectation: 'null include block without href on canonical',
-    runAdditionalExpectations: runNoHrefBlockAssertions,
-  },
-  {
-    block: vjAmpSupportedBlock,
-    pathname: ampPathname,
-    expectation: 'a valid VJ supported block on amp',
-  },
-  {
-    block: vjAmpNoSupportBlock,
-    pathname: ampPathname,
-    expectation: 'null non-supported VJ block on amp',
-  },
-];
-
 describe('Convert Include block', () => {
   const initialIncludesBaseUrl = process.env.SIMORGH_INCLUDES_BASE_URL;
   const initialIncludesAmpBaseUrl = process.env.SIMORGH_INCLUDES_BASE_AMP_URL;
@@ -106,25 +66,29 @@ describe('Convert Include block', () => {
     beforeEach(() => {
       fetchMarkup.default = jest.fn().mockReturnValue(includeMarkup);
     });
-    expectations.forEach(
-      ({
-        block,
-        pathname,
-        expectation,
-        runAdditionalExpectations = () => {},
-      }) => {
-        it(`should return ${expectation}`, async () => {
-          fetch.mockResponse(() => Promise.resolve(includeMarkup));
-          expect(
-            await convertInclude(block, pageData, null, pathname),
-          ).toMatchSnapshot();
-          runAdditionalExpectations();
-        });
+
+    it.each`
+      expectation                                            | block                      | pathname             | runAdditionalExpectations
+      ${`'a valid IDT1 block on canonical`}                  | ${idt1Block}               | ${canonicalPathname} | ${() => {}}
+      ${`a valid IDT2 block on canonical`}                   | ${idt2Block}               | ${canonicalPathname} | ${() => {}}
+      ${`a valid VJ block on canonical`}                     | ${vjBlock}                 | ${canonicalPathname} | ${() => {}}
+      ${`null for non-supported include block on canonical`} | ${unsupportedIncludeBlock} | ${canonicalPathname} | ${runUnsupportedBlockAssertions}
+      ${`null include block without href on canonical`}      | ${noHrefIncludeBlock}      | ${canonicalPathname} | ${runNoHrefBlockAssertions}
+      ${`a valid VJ supported block on amp`}                 | ${vjAmpSupportedBlock}     | ${ampPathname}       | ${() => {}}
+      ${`null non-supported VJ block on amp`}                | ${vjAmpNoSupportBlock}     | ${ampPathname}       | ${() => {}}
+    `(
+      `should return $expectation`,
+      async ({ block, pathname, runAdditionalExpectations }) => {
+        fetch.mockResponse(() => Promise.resolve(includeMarkup));
+        expect(
+          await convertInclude(block, pageData, null, pathname),
+        ).toMatchSnapshot();
+        runAdditionalExpectations();
       },
     );
   });
 
-  describe('Special conditions', () => {
+  describe('Error conditions', () => {
     afterEach(() => {
       jest.clearAllMocks();
     });
