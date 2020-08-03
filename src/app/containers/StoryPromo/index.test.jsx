@@ -2,7 +2,6 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import deepClone from 'ramda/src/clone';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import '@testing-library/jest-dom/extend-expect';
 import loggerMock from '#testHelpers/loggerMock';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { RequestContextProvider } from '#contexts/RequestContext';

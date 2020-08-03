@@ -315,6 +315,13 @@ Object {
 }
 `;
 
+exports[`AMP On Demand Radio Page SEO Apple Touch Icon should match attributes 10`] = `
+Object {
+  "sizes": "512x512",
+  "url": "https://news.files.bbci.co.uk/include/articles/public/indonesia/images/icons/icon-512x512.png",
+}
+`;
+
 exports[`AMP On Demand Radio Page SEO Canonical link 1`] = `"http://localhost:7080/indonesia/bbc_indonesian_radio/w172xh267fpn19l"`;
 
 exports[`AMP On Demand Radio Page SEO Dir attribute 1`] = `"ltr"`;
