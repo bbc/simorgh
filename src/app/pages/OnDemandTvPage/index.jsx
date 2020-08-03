@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import { shape, string, number, bool } from 'prop-types';
+import { shape, string, number, oneOf } from 'prop-types';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
@@ -26,18 +27,19 @@ import LinkedData from '#containers/LinkedData';
 import MetadataContainer from '../../containers/Metadata';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import OnDemandHeadingBlock from '#containers/RadioPageBlocks/Blocks/OnDemandHeading';
-import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
+import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadingContainer';
+import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import DarkModeGlobalStyles from '#lib/utilities/darkMode';
 import AVPlayer from '#containers/AVPlayer';
 import useToggle from '#hooks/useToggle';
 import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
+import { EPISODE_STATUS } from '#lib/utilities/episodeAvailability';
 
 const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
 const StyledMessageContainer = styled.div`
-  margin: ${GEL_SPACING_QUIN} 0 ${GEL_SPACING};
+  margin: ${GEL_SPACING_QUIN} 0 ${GEL_SPACING_TRPL};
   padding-top: ${landscapeRatio};
   position: relative;
   overflow: hidden;
@@ -70,7 +72,7 @@ const StyledGelPageGrid = styled(GelPageGrid)`
 
 const StyledVideoPlayer = styled(AVPlayer)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin: ${GEL_SPACING_QUIN} 0 ${GEL_SPACING};
+    margin: ${GEL_SPACING_QUIN} 0 0;
   }
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     margin-top: ${GEL_SPACING_DBL};
@@ -93,7 +95,7 @@ const OnDemandTvPage = ({ pageData }) => {
     masterBrand,
     episodeId,
     imageUrl,
-    episodeIsAvailable,
+    episodeAvailability,
     promoBrandTitle,
     thumbnailImageUrl,
     durationISO8601,
@@ -128,11 +130,24 @@ const OnDemandTvPage = ({ pageData }) => {
     queryString: location.search,
   });
 
-  const expiredContentMessage = pathOr(
-    'This content is no longer available',
-    ['media', 'contentExpired'],
-    translations,
-  );
+  const episodeIsAvailable =
+    episodeAvailability === EPISODE_STATUS.EPISODE_IS_AVAILABLE;
+
+  const getEpisodeNotAvailableMessage = () => {
+    if (episodeAvailability === EPISODE_STATUS.EPISODE_IS_EXPIRED) {
+      return pathOr(
+        'This content is no longer available',
+        ['media', 'contentExpired'],
+        translations,
+      );
+    }
+    return pathOr(
+      'This content is not yet available',
+      ['media', 'contentNotYetAvailable'],
+      translations,
+    );
+  };
+
   const iframeTitle = pathOr(
     'Video player',
     ['mediaAssetPage', 'videoPlayer'],
@@ -199,11 +214,14 @@ const OnDemandTvPage = ({ pageData }) => {
             />
           ) : (
             <StyledMessageContainer>
-              <MediaMessage service={service} message={expiredContentMessage} />
+              <MediaMessage
+                service={service}
+                message={getEpisodeNotAvailableMessage()}
+              />
             </StyledMessageContainer>
           )}
 
-          <OnDemandHeadingBlock
+          <StyledTvHeadingContainer
             brandTitle={brandTitle}
             releaseDateTimeStamp={releaseDateTimeStamp}
             darkMode={darkMode}
@@ -217,7 +235,10 @@ const OnDemandTvPage = ({ pageData }) => {
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
           margins={getGroups(true, true, true, true, false, false)}
         >
-          <ParagraphBlock text={shortSynopsis} darkMode={darkMode} />
+          <OnDemandParagraphContainer
+            text={shortSynopsis}
+            darkMode={darkMode}
+          />
         </Grid>
       </StyledGelPageGrid>
     </>
@@ -234,7 +255,7 @@ OnDemandTvPage.propTypes = {
     masterBrand: string,
     episodeId: string,
     imageUrl: string,
-    episodeIsAvailable: bool,
+    episodeAvailability: oneOf(Object.values(EPISODE_STATUS)),
     promoBrandTitle: string,
     thumbnailImageUrl: string,
     durationISO8601: string,

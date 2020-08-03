@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { string, shape, object } from 'prop-types';
 import styled from 'styled-components';
+import path from 'ramda/src/path';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -11,8 +12,10 @@ import { Headline } from '@bbc/psammead-headings';
 import pathOr from 'ramda/src/pathOr';
 import Paragraph from '@bbc/psammead-paragraph';
 import { useLocation } from 'react-router-dom';
+import useToggle from '#hooks/useToggle';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import MetadataContainer from '../../containers/Metadata';
+import RadioScheduleContainer from '#containers/RadioSchedule';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
@@ -61,6 +64,7 @@ const LiveRadioPage = ({ pageData }) => {
     bodySummary,
     masterBrand,
   } = pageData;
+  const radioScheduleData = path(['radioScheduleData'], pageData);
   const {
     script,
     service,
@@ -68,6 +72,7 @@ const LiveRadioPage = ({ pageData }) => {
     lang,
     liveRadioOverrides,
     translations,
+    radioSchedule,
   } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
@@ -78,6 +83,7 @@ const LiveRadioPage = ({ pageData }) => {
     lang,
     service,
   });
+  const radioScheduleOnPage = path(['onLiveRadioPage'], radioSchedule);
   const embedUrl = getEmbedUrl({
     mediaId,
     type: 'media',
@@ -89,6 +95,12 @@ const LiveRadioPage = ({ pageData }) => {
     ['mediaAssetPage', 'audioPlayer'],
     translations,
   );
+
+  const { enabled } = useToggle('liveRadioSchedule');
+  // onLiveRadioPage is enabled on Persian to render the schedule for bbc_dari_radio
+  // however bbc_persian_radio should not show the schedule
+  const showSchedule =
+    enabled && radioScheduleOnPage && masterBrand !== 'bbc_persian_radio';
 
   return (
     <>
@@ -160,6 +172,9 @@ const LiveRadioPage = ({ pageData }) => {
           />
         </Grid>
       </StyledGelPageGrid>
+      {showSchedule && (
+        <RadioScheduleContainer initialData={radioScheduleData} />
+      )}
     </>
   );
 };

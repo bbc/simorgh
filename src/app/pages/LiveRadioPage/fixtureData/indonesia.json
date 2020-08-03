@@ -1,29 +1,6 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "text": "BBC Indonesia Radio",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "BBC Indonesia Radio: Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.",
-        "type": "paragraph"
-      },
-      {
-        "id": "liveradio",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_indonesian_radio",
-        "duration": "PT0S",
-        "caption": "",
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
-      }
-    ]
-  },
+  "heading": "BBC Indonesia Radio",
+  "bodySummary": "BBC Indonesia Radio: Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.",
   "masterBrand": "bbc_indonesian_radio",
   "language": "id",
   "id": "urn:bbc:ares::ws_live:bbc_indonesian_radio",
@@ -31,5 +8,43 @@
   "summary": "BBC Indonesia Radio: Berita dunia, ulasan, berita olahraga dan majalah mingguan dari BBC Indonesia Radio.",
   "pageTitle": "BBC Indonesia Radio - BBC News Indonesia",
   "contentType": "player-live",
-  "pageIdentifier": "indonesia.bbc_indonesian_radio.liveradio.page"
+  "pageIdentifier": "indonesia.bbc_indonesian_radio.liveradio.page",
+  "radioScheduleData": [
+    {
+      "id": "p07qz7rg",
+      "state": "onDemand",
+      "startTime": 1571954370000,
+      "link": "/indonesia/bbc_indonesian_radio/w172ws13vq03b8v",
+      "brandTitle": "Dunia Pagi Ini",
+      "summary": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+      "duration": "PT15M30S"
+    },
+    {
+      "id": "p07qybsx",
+      "state": "onDemand",
+      "startTime": 1571913030000,
+      "link": "/indonesia/bbc_indonesian_radio/w3csyljh",
+      "brandTitle": "Global Newsbeat – Indonesia",
+      "summary": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+      "duration": "PT2M"
+    },
+    {
+      "id": "p07qy8kd",
+      "state": "onDemand",
+      "startTime": 1571909430000,
+      "link": "/indonesia/bbc_indonesian_radio/w3csyl83",
+      "brandTitle": "Global Newsbeat – Indonesia",
+      "summary": "Berbagai radio news bulletin pendek dalam Bahasa Indonesia yang dikemas dengan gaya dan agenda menarik untuk pendengar muda.",
+      "duration": "PT2M"
+    },
+    {
+      "id": "p07qz9vd",
+      "state": "next",
+      "startTime": 1893488400000,
+      "link": "/indonesia/bbc_indonesian_radio/w172ws13vq03g0z",
+      "brandTitle": "Dunia Pagi Ini",
+      "summary": "Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.",
+      "duration": "PT15M30S"
+    }
+  ]
 }

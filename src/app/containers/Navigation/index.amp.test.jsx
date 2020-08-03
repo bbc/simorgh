@@ -1,7 +1,6 @@
 import React from 'react';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import '@testing-library/jest-dom/extend-expect';
 import { render } from '@testing-library/react';
 import AmpNavigation from './index.amp';
 import {
