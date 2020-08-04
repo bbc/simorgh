@@ -4,7 +4,8 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 
-import recommendationsData from '#data/mundo/recommendations/index.json';
+import ltrRecommendationsData from '#data/mundo/recommendations/index.json';
+import rtlRecommendationsData from '#data/arabic/recommendations/index.json';
 
 import CpsRecommendations from '.';
 
@@ -48,7 +49,7 @@ describe('CpsRecommendations', () => {
     const toggleEnabled = false;
 
     const { container } = renderContainer(
-      recommendationsData,
+      ltrRecommendationsData,
       'mundo',
       toggleEnabled,
     );
@@ -58,7 +59,7 @@ describe('CpsRecommendations', () => {
     const toggleEnabled = true;
 
     const { container } = renderContainer(
-      recommendationsData,
+      ltrRecommendationsData,
       'news',
       toggleEnabled,
     );
@@ -77,7 +78,7 @@ describe('CpsRecommendations', () => {
 
     it('for multiple items', () => {
       const { container } = renderContainer(
-        recommendationsData,
+        ltrRecommendationsData,
         'mundo',
         toggleEnabled,
       );
@@ -85,8 +86,16 @@ describe('CpsRecommendations', () => {
     });
     it('for a single item', () => {
       const { container } = renderContainer(
-        [recommendationsData[0]],
+        [ltrRecommendationsData[0]],
         'mundo',
+        toggleEnabled,
+      );
+      expect(container).toMatchSnapshot();
+    });
+    it('for rtl service', () => {
+      const { container } = renderContainer(
+        rtlRecommendationsData,
+        'arabic',
         toggleEnabled,
       );
       expect(container).toMatchSnapshot();
