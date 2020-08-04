@@ -992,6 +992,11 @@ exports[`should match for Ukrainian STY with Russian lang on Amp 1`] = `
       sizes="152x152"
     />
     <link
+      href="https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link
       href="https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
       sizes="192x192"
@@ -1208,6 +1213,11 @@ exports[`should match for Ukrainian STY with Russian lang on canonical 1`] = `
       sizes="152x152"
     />
     <link
+      href="https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link
       href="https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
       sizes="192x192"
@@ -1418,6 +1428,11 @@ exports[`should match for Ukrainian STY with Ukrainian lang on Amp 1`] = `
       href="https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-152x152.png"
       rel="apple-touch-icon"
       sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
     />
     <link
       href="https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-192x192.png"
@@ -1634,6 +1649,11 @@ exports[`should match for Ukrainian STY with Ukrainian lang on canonical 1`] = `
       href="https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-152x152.png"
       rel="apple-touch-icon"
       sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
     />
     <link
       href="https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-192x192.png"
