@@ -1,12 +1,27 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { UserContext } from '#contexts/UserContext';
+import onClient from '#lib/utilities/onClient';
 
 const CanonicalComscoreAnalytics = () => {
   const { personalisationEnabled } = useContext(UserContext);
+  const [comscoreConsent, setComscoreConsent] = useState();
+
   const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
-  const csUcfr = personalisationEnabled ? '1' : '0';
+
+  useEffect(() => {
+    const csUcfr = personalisationEnabled ? '1' : '0';
+    /* eslint-disable no-underscore-dangle */
+    window._comscore = window._comscore || [];
+    window._comscore.push({ c1: '2', c2: '17986528', cs_ucfr: csUcfr });
+    setComscoreConsent(csUcfr);
+  }, [personalisationEnabled]);
+
+  // We do not want to return the comscore on the server
+  if (!onClient()) {
+    return null;
+  }
 
   return (
     <Helmet>
@@ -16,7 +31,7 @@ const CanonicalComscoreAnalytics = () => {
         src={`${staticAssetsPath}static/js/comscore.js`}
       />
       <noscript>
-        {`<img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cs_ucfr=${csUcfr}&cv=2.0&cj=1" />`}
+        {`<img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cs_ucfr=${comscoreConsent}&cv=2.0&cj=1" />`}
       </noscript>
     </Helmet>
   );
