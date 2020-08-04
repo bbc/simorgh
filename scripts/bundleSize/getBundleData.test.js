@@ -1,16 +1,5 @@
 import { getPageBundleData } from './getBundleData';
-
-const pages = [
-  'ArticlePage',
-  'MediaAssetPage',
-  'PhotoGalleryPage',
-  'StoryPage',
-  'FrontPage',
-  'MostReadPage',
-  'LiveRadioPage',
-  'OnDemandRadioPage',
-  'OnDemandTvPage',
-];
+import pages from './pages';
 
 const jsFiles = [
   'ArticlePage-31ecd969.31473c35.js',
