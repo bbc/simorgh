@@ -6,7 +6,7 @@ import { StaticRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import OnDemandRadioPage from '.';
+import OnDemandRadioPage from './OnDemandRadioPage';
 import pashtoPageData from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
 import koreanPageData from '#data/korean/bbc_korean_radio/w3ct0kn5';
 import zhongwenPageData from '#data/zhongwen/bbc_cantonese_radio/w172xf3r5x8hw4v';
