@@ -19,7 +19,7 @@ const FooterContainer = () => {
   }
 
   // 'officialLang' value is only available in the ukrainian config as our ukraine_in_russian pages will have
-  // a ukrainian text for header and footer but a russian text main element
+  // ukrainian text for the header and footer but russian text for the main element
   const footerLangAttribute = officialLang && { lang: officialLang };
 
   const { externalLink, links, copyrightText, trustProjectLink } = footer;
