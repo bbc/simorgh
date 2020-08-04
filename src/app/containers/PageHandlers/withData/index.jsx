@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { element, string, number } from 'prop-types';
 import { pageDataPropType } from '../../../models/propTypes/data';
-import ErrorPage from '#pages/ErrorPage/ErrorPage';
+import ErrorPage from '#pages/ErrorPage';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import shouldRender from './shouldRender';
 

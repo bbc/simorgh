@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import pipe from 'ramda/src/pipe';
 import { number, oneOf, string, shape } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
