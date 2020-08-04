@@ -6,7 +6,7 @@ import onClient from '#lib/utilities/onClient';
 
 const CanonicalComscoreAnalytics = () => {
   const { personalisationEnabled } = useContext(UserContext);
-  const [comscoreConsent, setComscoreConsent] = useState();
+  const [comscoreConsent, setComscoreConsent] = useState('0');
 
   const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
 
@@ -18,7 +18,7 @@ const CanonicalComscoreAnalytics = () => {
     setComscoreConsent(csUcfr);
   }, [personalisationEnabled]);
 
-  // We do not want to return the comscore on the server
+  // We do not want to return the comscore script on the server
   if (!onClient()) {
     return null;
   }
