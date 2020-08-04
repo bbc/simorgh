@@ -110,6 +110,7 @@ pipeline {
   environment {
     APP_DIRECTORY = "app"
     CI = true
+    LOG_LEVEL = 'error'
   }
   parameters {
     string(name: 'SLACK_CHANNEL', defaultValue: '#simorgh-alerts', description: 'The Slack channel where the build status is posted.')
