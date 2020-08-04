@@ -13,4 +13,11 @@ export default () => {
 
     expect(audioPlaceholderImage).toBeInTheDocument();
   });
+
+  it('Should not have a radio schedule on AMP', () => {
+    const scheduleWrapper = document.querySelector(
+      '[data-e2e="radio-schedule"]',
+    );
+    expect(scheduleWrapper).not.toBeInTheDocument();
+  });
 };
