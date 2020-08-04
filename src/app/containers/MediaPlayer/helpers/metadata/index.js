@@ -51,5 +51,12 @@ export const getMetadataBlock = aresMediaBlocks => {
   return aresMetadataBlock[0];
 };
 
+export const getOverriddenLangCode = pageLang => {
+  const SERVICE_LANG_MAP = {
+    'ru-UA': 'ru',
+  };
+  return SERVICE_LANG_MAP[pageLang] || undefined;
+};
+
 export const mediaPlayerMetadata = (aresMediaBlock, embedSource) =>
   getMetadata({ ...getMetadataBlock(aresMediaBlock), embedSource });
