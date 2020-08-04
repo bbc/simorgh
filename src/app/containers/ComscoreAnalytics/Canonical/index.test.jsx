@@ -95,7 +95,7 @@ describe('Canonical Comscore Analytics ', () => {
         expect(scriptEl).toBeInTheDocument();
         expect(scriptEl).toHaveAttribute('async');
         expect(scriptEl.src).toEqual(
-          'http://localhost:7080/static/js/comscore.js',
+          'http://localhost:7080/static/js/comscore-1.0.js',
         );
       });
     });

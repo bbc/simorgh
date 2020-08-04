@@ -28,7 +28,7 @@ const CanonicalComscoreAnalytics = () => {
       <script
         async
         type="text/javascript"
-        src={`${staticAssetsPath}static/js/comscore.js`}
+        src={`${staticAssetsPath}static/js/comscore-1.0.js`}
       />
       <noscript>
         {`<img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cs_ucfr=${comscoreConsent}&cv=2.0&cj=1" />`}
