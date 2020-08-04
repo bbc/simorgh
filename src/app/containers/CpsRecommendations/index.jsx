@@ -85,12 +85,12 @@ const CpsRecommendations = ({ items, parentColumns }) => {
   const listTransform = promoItems => (
     <Grid
       columns={{
-        group0: 6,
-        group1: 6,
-        group2: 6,
-        group3: 6,
-        group4: 6,
-        group5: 6,
+        group0: 1,
+        group1: 1,
+        group2: 1,
+        group3: 1,
+        group4: 1,
+        group5: 1,
       }}
       as={StoryPromoUl}
       enableGelGutters
@@ -100,12 +100,12 @@ const CpsRecommendations = ({ items, parentColumns }) => {
         <Grid
           item
           columns={{
-            group0: 6,
-            group1: 6,
-            group2: 6,
-            group3: 6,
-            group4: 6,
-            group5: 6,
+            group0: 1,
+            group1: 1,
+            group2: 1,
+            group3: 1,
+            group4: 1,
+            group5: 1,
           }}
           as={StoryPromoLiBase}
           border={false}
