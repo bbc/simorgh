@@ -110,6 +110,7 @@ const StoryPromoContainer = ({
   const isContentTypeGuide =
     isAssetTypeCode === 'PRO' &&
     pathOr(null, ['contentType'], item) === 'Guide';
+  const isLtr = dir === 'ltr';
 
   const { headline, url, isLive } = getHeadlineUrlAndLive(
     item,
@@ -160,13 +161,17 @@ const StoryPromoContainer = ({
     isRecommendation || isContentTypeGuide ? 'div' : null;
 
   const StyledHeadline = styled(Headline)`
-    ${({ recommendationSpacing }) =>
-      recommendationSpacing &&
+    ${() =>
+      isRecommendation &&
       `
-      padding: ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING} 0;
+      padding: ${GEL_SPACING} ${isLtr ? GEL_SPACING : 0} ${GEL_SPACING} ${
+        isLtr ? 0 : GEL_SPACING
+      };
 
       @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-        padding: ${GEL_SPACING} ${GEL_SPACING_DBL} ${GEL_SPACING_DBL} 0;
+        padding: ${GEL_SPACING} ${
+        isLtr ? GEL_SPACING_DBL : 0
+      } ${GEL_SPACING_DBL} ${isLtr ? 0 : GEL_SPACING_DBL};
       }
     `}
   `;
@@ -180,7 +185,6 @@ const StoryPromoContainer = ({
           promoType={promoType}
           promoHasImage={displayImage}
           as={headingTagOverride}
-          recommendationSpacing={isRecommendation}
         >
           <Link href={url}>
             {isLive ? (
