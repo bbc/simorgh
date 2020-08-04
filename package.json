@@ -191,7 +191,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.4",
-    "fetch-mock": "^9.10.1",
+    "fetch-mock": "^9.10.6",
     "history": "^4.10.1",
     "husky": "^4.2.5",
     "inspectpack": "^4.5.2",
