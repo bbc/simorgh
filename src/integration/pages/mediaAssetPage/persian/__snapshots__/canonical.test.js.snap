@@ -371,7 +371,7 @@ exports[`Canonical Media Asset Page outer iframe has z-index of 1 1`] = `
 <iframe
   allow="autoplay; fullscreen"
   allowfullscreen=""
-  class="StyledIframe-fuo2ed-1 hiYLRw"
+  class="StyledIframe-fuo2ed-1 lfcupi"
   scrolling="no"
   src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa"
   title="پخش صدا و تصویر"

@@ -341,7 +341,7 @@ exports[`Canonical Media Asset Page outer iframe has z-index of 1 1`] = `
 <iframe
   allow="autoplay; fullscreen"
   allowfullscreen=""
-  class="StyledIframe-fuo2ed-1 hiYLRw"
+  class="StyledIframe-fuo2ed-1 lfcupi"
   scrolling="no"
   src="https://polling.test.bbc.co.uk/ws/av-embeds/legacy/arabic/worldnews/2015/11/151120_t_arabic_av/17694217/ar"
   title="مشغل وسائط"
