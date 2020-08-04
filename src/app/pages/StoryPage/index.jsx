@@ -86,7 +86,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
   const recommendationsInitialData = path(['recommendations'], pageData);
   // 'officialLang' value is only available in the Ukrainian config as the ukraine_in_russian pages have
-  // a Ukrainian text for the secondary column but a Russian text for the main element.
+  // Ukrainian text for the secondary column but Russian text for the main element.
   const secondaryColumnLangAttribute = officialLang && { lang: officialLang };
 
   const gridColumns = {
