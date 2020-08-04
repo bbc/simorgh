@@ -8,6 +8,9 @@ cache:
     # Cache only the folder with Cypress binary, other caching takes longer and saves
     # less time, therefore this is more efficient than caching all.
     - ~/.cache/Cypress
+env:
+  - CI=true
+  - LOG_LEVEL='error'
 install: npm ci
 jobs:
   fast_finish: true
