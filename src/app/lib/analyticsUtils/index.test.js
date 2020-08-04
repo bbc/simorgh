@@ -570,3 +570,44 @@ describe('getThingAttributes', () => {
     expect(thingAttributes).toEqual(null);
   });
 });
+
+describe('getAffiliateMarketingString', () => {
+  describe('should return the "al" prefix', () => {
+    it('with the value of the at_campaign field', () => {});
+    it('with the value of the at_type field, wrapped in square brackets', () => {});
+    it('with the value of the at_identifier field, wrapped in square brackets', () => {});
+    it('with the value of the at_format field, wrapped in square brackets', () => {});
+    it('with the value of the at_creation field, wrapped in square brackets', () => {});
+    it('with the value of the at_creation field, wrapped in square brackets', () => {});
+  });
+});
+
+describe('getSLMarketingString', () => {
+  describe('should return the "SEC" prefix', () => {
+    it('with the value of the at_campaign field', () => {});
+    it('with the value of the at_platform field, wrapped in square brackets', () => {});
+    it('with the value of the at_creation field, wrapped in square brackets', () => {});
+    it('with the value of the at_variant field, wrapped in square brackets', () => {});
+    describe('with the value of the at_network field', () => {
+      it('when at_network field is "search"', () => {});
+      it('when at_network field is "content"', () => {});
+    });
+    it('the value of the at_term field, wrapped in square brackets', () => {});
+  });
+});
+
+describe('getEmailMarketingString', () => {
+  it('', () => {});
+});
+
+describe('getCustomMarketingString', () => {
+  it('', () => {});
+});
+
+describe('getXtorMarketingString', () => {
+  it('', () => {});
+});
+
+describe('getATIMarketingString', () => {
+  it('', () => {});
+});

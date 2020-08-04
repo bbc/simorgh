@@ -295,4 +295,235 @@ export const getThingAttributes = (attribute, articleData) => {
   return null;
 };
 
+export const getAffiliateMarketingString = href => {
+  const marketingStringValues = [
+    {
+      description: 'A',
+      value: 'A',
+    },
+    {
+      description: 'B',
+      value: 'B',
+    },
+    {
+      description: 'C',
+      value: 'C',
+    },
+    {
+      description: 'D',
+      value: 'D',
+    },
+    {
+      description: 'E',
+      value: '',
+    },
+    {
+      description: 'F',
+      value: 'F',
+    },
+    {
+      description: 'G',
+      value: '',
+    },
+  ];
+
+  return marketingStringValues.map(({ value }) => value).join('-');
+};
+
+export const getSLMarketingString = href => {
+  const marketingStringValues = [
+    {
+      description: 'A',
+      value: 'A',
+    },
+    {
+      description: 'B',
+      value: 'B',
+    },
+    {
+      description: 'C',
+      value: 'C',
+    },
+    {
+      description: 'D',
+      value: 'D',
+    },
+    {
+      description: 'E',
+      value: '',
+    },
+    {
+      description: 'F',
+      value: 'F',
+    },
+    {
+      description: 'G',
+      value: '',
+    },
+  ];
+
+  return marketingStringValues.map(({ value }) => value).join('-');
+};
+
+export const getEmailMarketingString = href => {
+  const marketingStringValues = [
+    {
+      description: 'A',
+      value: 'A',
+    },
+    {
+      description: 'B',
+      value: 'B',
+    },
+    {
+      description: 'C',
+      value: 'C',
+    },
+    {
+      description: 'D',
+      value: 'D',
+    },
+    {
+      description: 'E',
+      value: '',
+    },
+    {
+      description: 'F',
+      value: 'F',
+    },
+    {
+      description: 'G',
+      value: '',
+    },
+  ];
+
+  return marketingStringValues.map(({ value }) => value).join('-');
+};
+
+export const getDisplayMarketingString = href => {
+  const marketingStringValues = [
+    {
+      description: 'A',
+      value: 'A',
+    },
+    {
+      description: 'B',
+      value: 'B',
+    },
+    {
+      description: 'C',
+      value: 'C',
+    },
+    {
+      description: 'D',
+      value: 'D',
+    },
+    {
+      description: 'E',
+      value: '',
+    },
+    {
+      description: 'F',
+      value: 'F',
+    },
+    {
+      description: 'G',
+      value: '',
+    },
+  ];
+
+  return marketingStringValues.map(({ value }) => value).join('-');
+};
+
+export const getCustomMarketingString = href => {
+  const marketingStringValues = [
+    {
+      description: 'A',
+      value: 'A',
+    },
+    {
+      description: 'B',
+      value: 'B',
+    },
+    {
+      description: 'C',
+      value: 'C',
+    },
+    {
+      description: 'D',
+      value: 'D',
+    },
+    {
+      description: 'E',
+      value: '',
+    },
+    {
+      description: 'F',
+      value: 'F',
+    },
+    {
+      description: 'G',
+      value: '',
+    },
+  ];
+
+  return marketingStringValues.map(({ value }) => value).join('-');
+};
+
+export const getXtorMarketingString = href => {
+  const marketingStringValues = [
+    {
+      description: 'A',
+      value: 'A',
+    },
+    {
+      description: 'B',
+      value: 'B',
+    },
+    {
+      description: 'C',
+      value: 'C',
+    },
+    {
+      description: 'D',
+      value: 'D',
+    },
+    {
+      description: 'E',
+      value: '',
+    },
+    {
+      description: 'F',
+      value: 'F',
+    },
+    {
+      description: 'G',
+      value: '',
+    },
+  ];
+
+  return marketingStringValues.map(({ value }) => value).join('-');
+};
+
+export const getATIMarketingString = href => {
+  const supportedCampaignMappings = {
+    affiliate: () => getAffiliateMarketingString(href),
+    sl: () => getSLMarketingString(href),
+    email: () => getEmailMarketingString(href),
+    display: () => getEmailMarketingString(href),
+    custom: () => getEmailMarketingString(href),
+    xtor: () => getEmailMarketingString(href),
+  };
+  const campaignType = 'custom123'; // getCampaignType(href);
+
+  const IsSupportedCampaign = () => campaignMapping =>
+    campaignType.startsWith(campaignMapping);
+
+  const selectedCampaignType = Object.keys(supportedCampaignMappings).find(
+    IsSupportedCampaign(campaignType),
+  );
+
+  return supportedCampaignMappings[selectedCampaignType]() || null;
+};
+
 export const LIBRARY_VERSION = 'simorgh';

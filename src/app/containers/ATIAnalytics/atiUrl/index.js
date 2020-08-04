@@ -13,6 +13,7 @@ import {
   getAtiUrl,
   getEventInfo,
   getProducer,
+  getATIMarketingString,
 } from '#lib/analyticsUtils';
 
 const spaceRegex = / /g;
@@ -182,6 +183,12 @@ export const buildATIPageTrackPath = ({
       description: 'boolean - if locserve cookie value is defined',
       value: isLocServeCookieSet(),
       wrap: true,
+    },
+    {
+      key: 'xto',
+      description: 'marketing url',
+      value: getATIMarketingString(href),
+      wrap: false,
     },
     {
       key: 'ref',
