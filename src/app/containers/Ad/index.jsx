@@ -12,8 +12,9 @@ const AdContainer = ({ slotType }) => {
   const { ads } = useContext(ServiceContext);
   const hasAds = pathOr(false, ['hasAds'], ads);
   const { enabled: adsEnabled } = useToggle('ads');
+  const { enabled: ampAdsEnabled } = useToggle('ampAds');
 
-  if (!hasAds || !adsEnabled) {
+  if (!hasAds || !adsEnabled || (isAmp && !ampAdsEnabled)) {
     return null;
   }
 

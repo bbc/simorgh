@@ -1,73 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Ad Container Snapshots should correctly render a Canonical leaderboard ad 1`] = `
+exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`] = `
 <html>
   <head>
     <script
-      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+      async="true"
+      custom-element="amp-ad"
+      src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
     />
-  </head>
-  <body>
-    .c0 {
-  background-color: #F6F6F6;
-  min-height: 5.5rem;
-}
-
-@media (min-width:63rem) {
-  .c0 {
-    min-height: 9rem;
-  }
-}
-
-<div>
-      <section
-        aria-hidden="true"
-        aria-label="Publicidad"
-        class="c0"
-        role="region"
-      >
-        <div
-          class="dotcom-ad"
-          id="dotcom-leaderboard"
-        />
-      </section>
-    </div>
-  </body>
-</html>
-`;
-
-exports[`Ad Container Snapshots should correctly render a Canonical mpu ad 1`] = `
-<html>
-  <head>
     <script
-      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+      async="true"
+      custom-element="amp-access"
+      src="https://cdn.ampproject.org/v0/amp-access-0.1.js"
     />
+    <script
+      id="amp-access"
+      type="application/json"
+    >
+      {"authorization":"https://mock-toggles-endpoint.bbc.co.uk?application=simorgh&service=mundo","noPingback":true,"authorizationFallbackResponse":{"error":true}}
+    </script>
   </head>
   <body>
     .c0 {
-  background-color: #F6F6F6;
-  min-height: 15.625rem;
-}
-
-<div>
-      <section
-        aria-hidden="true"
-        aria-label="Publicidad 2"
-        class="c0"
-        role="region"
-      >
-        <div
-          class="dotcom-ad"
-          id="dotcom-mpu"
-        />
-      </section>
-    </div>
-  </body>
-</html>
-`;
-
-exports[`Ad Container Snapshots should correctly render an AMP leaderboard ad 1`] = `
-.c0 {
   background-color: #F6F6F6;
 }
 
@@ -128,27 +82,7 @@ exports[`Ad Container Snapshots should correctly render an AMP leaderboard ad 1`
   }
 }
 
-<html>
-  <head>
-    <script
-      async="true"
-      custom-element="amp-ad"
-      src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
-    />
-    <script
-      async="true"
-      custom-element="amp-access"
-      src="https://cdn.ampproject.org/v0/amp-access-0.1.js"
-    />
-    <script
-      id="amp-access"
-      type="application/json"
-    >
-      {"authorization":"https://mock-toggles-endpoint.bbc.co.uk?application=simorgh&service=mundo","noPingback":true,"authorizationFallbackResponse":{"error":true}}
-    </script>
-  </head>
-  <body>
-    <div>
+<div>
       <section
         amp-access="toggles.ads.enabled"
         amp-access-hide="true"
@@ -208,7 +142,7 @@ exports[`Ad Container Snapshots should correctly render an AMP leaderboard ad 1`
 </html>
 `;
 
-exports[`Ad Container Snapshots should correctly render an AMP mpu ad 1`] = `
+exports[`Ad Container Snapshots AMP should correctly render an mpu ad 1`] = `
 <html>
   <head>
     <script
@@ -330,6 +264,72 @@ exports[`Ad Container Snapshots should correctly render an AMP mpu ad 1`] = `
             </div>
           </div>
         </div>
+      </section>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Ad Container Snapshots Canonical should correctly render a leaderboard ad 1`] = `
+.c0 {
+  background-color: #F6F6F6;
+  min-height: 5.5rem;
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    min-height: 9rem;
+  }
+}
+
+<html>
+  <head>
+    <script
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+    />
+  </head>
+  <body>
+    <div>
+      <section
+        aria-hidden="true"
+        aria-label="Publicidad"
+        class="c0"
+        role="region"
+      >
+        <div
+          class="dotcom-ad"
+          id="dotcom-leaderboard"
+        />
+      </section>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Ad Container Snapshots Canonical should correctly render an mpu ad 1`] = `
+<html>
+  <head>
+    <script
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+    />
+  </head>
+  <body>
+    .c0 {
+  background-color: #F6F6F6;
+  min-height: 15.625rem;
+}
+
+<div>
+      <section
+        aria-hidden="true"
+        aria-label="Publicidad 2"
+        class="c0"
+        role="region"
+      >
+        <div
+          class="dotcom-ad"
+          id="dotcom-mpu"
+        />
       </section>
     </div>
   </body>
