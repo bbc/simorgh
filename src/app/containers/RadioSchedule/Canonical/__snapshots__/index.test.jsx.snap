@@ -754,6 +754,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   </div>
   <div
     class="c7"
+    data-e2e="radio-schedule"
   >
     <ul
       class="c8 c9"
@@ -2034,6 +2035,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
   </div>
   <div
     class="c7"
+    data-e2e="radio-schedule"
   >
     <ul
       class="c8 c9"
