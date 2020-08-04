@@ -2,6 +2,8 @@ import Cookie from 'js-cookie';
 import uuid from 'uuid/v4';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
+import Url from 'url-parse';
+
 import onClient from '../utilities/onClient';
 
 export const getDestination = statsDestination => {
@@ -294,6 +296,9 @@ export const getThingAttributes = (attribute, articleData) => {
 
   return null;
 };
+
+export const getUriField = (href, field) =>
+  new Url(href, true).query[field] || '';
 
 export const getAffiliateMarketingString = href => {
   const marketingStringValues = [
