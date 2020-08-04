@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
+import path from 'ramda/src/path';
 import { shape, string, number, oneOf } from 'prop-types';
 import {
   GEL_SPACING,
@@ -30,6 +31,8 @@ import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 import { EPISODE_STATUS } from '#lib/utilities/episodeAvailability';
+import useToggle from '#hooks/useToggle';
+import RadioScheduleContainer from '#containers/RadioSchedule';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
@@ -102,9 +105,14 @@ const OnDemandRadioPage = ({ pageData }) => {
 
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
-  const { dir, liveRadioOverrides, lang, service, translations } = useContext(
-    ServiceContext,
-  );
+  const {
+    dir,
+    liveRadioOverrides,
+    lang,
+    service,
+    translations,
+    radioSchedule,
+  } = useContext(ServiceContext);
   const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
 
   const mediaId = getMediaId({
@@ -144,6 +152,15 @@ const OnDemandRadioPage = ({ pageData }) => {
     ['mediaAssetPage', 'audioPlayer'],
     translations,
   );
+  const { enabled } = useToggle('liveRadioSchedule');
+
+  // onLiveRadioPage is enabled on Persian to render the schedule for bbc_dari_radio
+  // however bbc_persian_radio should not show the schedule
+  const radioScheduleData = path(['radioScheduleData'], pageData);
+  const radioScheduleOnPage = path(['onLiveRadioPage'], radioSchedule);
+
+  const showSchedule =
+    enabled && radioScheduleOnPage && masterBrand !== 'bbc_persian_radio';
 
   return (
     <>
@@ -227,6 +244,9 @@ const OnDemandRadioPage = ({ pageData }) => {
           />
         </Grid>
       </StyledGelPageGrid>
+      {showSchedule && (
+        <RadioScheduleContainer initialData={radioScheduleData} />
+      )}
     </>
   );
 };

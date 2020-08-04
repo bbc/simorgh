@@ -1,4 +1,5 @@
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getPlaceholderImageUrlUtil from '../../utils/getPlaceholderImageUrl';
@@ -10,14 +11,62 @@ import getEpisodeAvailability, {
   getUrl,
 } from '#lib/utilities/episodeAvailability';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
+import getConfig from '#app/routes/utils/getConfig';
+import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
 
-export default async ({ path: pathname, pageType }) => {
+const radioServices = {
+  indonesia: 'indonesian',
+  persian: 'dari',
+  afaanoromoo: 'oromo',
+  bengali: 'bangla',
+};
+
+const getRadioService = service => {
+  return radioServices[service];
+};
+
+export const hasRadioSchedule = async (service, pathname) => {
+  const config = await getConfig(service);
+
+  // onLiveRadioPage is enabled on Persian to render the schedule for bbc_dari_radio
+  // however bbc_persian_radio should not show the schedule
+  if (service === 'persian' && pathname.includes('bbc_persian_radio')) {
+    return false;
+  }
+
+  const serviceHasRadioSchedule = pathOr(
+    false,
+    ['radioSchedule', 'hasRadioSchedule'],
+    config,
+  );
+
+  const radioScheduleOnDemandRadioPage = pathOr(
+    false,
+    ['radioSchedule', 'onOnDemandRadioPage'],
+    config,
+  );
+
+  return serviceHasRadioSchedule && radioScheduleOnDemandRadioPage;
+};
+
+export default async ({ path: pathname, pageType, service }) => {
   try {
     const onDemandRadioDataPath = overrideRendererOnTest(pathname);
-    const { json, status } = await fetchPageData({
+    const pageHasRadioSchedule = await hasRadioSchedule(service, pathname);
+
+    const pageDataPromise = await fetchPageData({
       path: onDemandRadioDataPath,
       pageType,
     });
+
+    const { json, status } = pageHasRadioSchedule
+      ? await withRadioSchedule({
+          pageDataPromise,
+          service,
+          path: pathname,
+          radioService: getRadioService(service),
+        })
+      : await pageDataPromise;
 
     const withLogging = pathWithLogging(
       getUrl(json),
@@ -26,6 +75,8 @@ export default async ({ path: pathname, pageType }) => {
     );
     const get = (fieldPath, logLevel) =>
       logLevel ? withLogging(fieldPath, logLevel) : path(fieldPath, json);
+
+    const getRadioScheduleData = path(['radioScheduleData']);
 
     return {
       status,
@@ -63,6 +114,7 @@ export default async ({ path: pathname, pageType }) => {
           get(['promo', 'media', 'imageUrl'], LOG_LEVELS.INFO),
         ),
         episodeAvailability: getEpisodeAvailability(json),
+        radioScheduleData: getRadioScheduleData(json),
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
