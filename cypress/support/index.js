@@ -18,11 +18,9 @@ Cypress.on('uncaught:exception', err => {
   // returning false here prevents Cypress from failing the test
   if (
     err.message &&
-    (err.message.includes(
+    err.message.includes(
       'Inline or remote config should not overwrite vendor transport settings',
-    ) ||
-      // To be fixed in future gnl ads version, ignored for now to get it on test
-      err.message.includes('.finally is not a function'))
+    )
   ) {
     return false;
   }
