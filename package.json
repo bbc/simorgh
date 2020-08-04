@@ -116,7 +116,7 @@
     "express-static-gzip": "^2.0.7",
     "gnu-terry-pratchett": "0.0.2",
     "helmet": "^3.23.1",
-    "helmet-csp": "^2.10.0",
+    "helmet-csp": "^3.0.0",
     "isarray": "^2.0.5",
     "isomorphic-fetch": "^2.2.1",
     "js-cookie": "^2.2.1",
