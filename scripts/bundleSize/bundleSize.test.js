@@ -235,7 +235,7 @@ describe('bundleSize', () => {
       });
 
       expect(global.console.error).toHaveBeenCalledWith(
-        "Bundle size for service1 ArticlePage is too small at 414 kB. Please update thresholds in './scripts/bundleSizeConfig.js'",
+        "Bundle size for service1 ArticlePage is too small at 414 kB. Please update thresholds in './scripts/bundleSize/bundleSizeConfig.js'",
       );
     });
   });
@@ -281,7 +281,7 @@ describe('bundleSize', () => {
       });
 
       expect(global.console.error).toHaveBeenCalledWith(
-        "Bundle size for service2 OnDemandTvPage is too large at 573 kB. Please update thresholds in './scripts/bundleSizeConfig.js'",
+        "Bundle size for service2 OnDemandTvPage is too large at 573 kB. Please update thresholds in './scripts/bundleSize/bundleSizeConfig.js'",
       );
     });
   });
