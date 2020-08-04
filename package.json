@@ -214,6 +214,7 @@
     "retry": "^0.12.0",
     "start-server-webpack-plugin": "^2.2.5",
     "storybook-chromatic": "^4.0.2",
+    "strip-ansi": "^6.0.0",
     "stylelint": "^13.6.1",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
