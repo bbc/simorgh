@@ -149,7 +149,7 @@
     "@babel/polyfill": "^7.10.1",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
-    "@babel/runtime": "^7.10.4",
+    "@babel/runtime": "^7.11.0",
     "@bbc/apache2-license-checker": "^1.1.4",
     "@bbc/psammead-storybook-helpers": "^8.3.4",
     "@bbc/psammead-test-helpers": "^4.0.0",
