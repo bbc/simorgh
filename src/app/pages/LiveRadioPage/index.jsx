@@ -98,8 +98,7 @@ const LiveRadioPage = ({ pageData }) => {
   const { enabled } = useToggle('liveRadioSchedule');
   // onLiveRadioPage is enabled on Persian to render the schedule for bbc_dari_radio
   // however bbc_persian_radio should not show the schedule
-  const showSchedule =
-    enabled && radioScheduleOnPage && masterBrand !== 'bbc_persian_radio';
+  const showSchedule = enabled && radioScheduleOnPage;
 
   return (
     <>
