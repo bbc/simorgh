@@ -4,6 +4,8 @@ env:
   secrets-manager:
     CHROMATIC_PROJECT_TOKEN: simorgh-ci-branch:chromatic-project-token
     CC_TEST_REPORTER_ID: simorgh-ci-branch:cc-test-reporter-id
+  variables:
+    LOG_LEVEL: 'error'
 
 phases:
   install:
@@ -11,7 +13,7 @@ phases:
       nodejs: 12
     commands:
       - apt update
-      - apt -y install libgconf2-4   # needed for older cypress/bbc-a11y
+      - apt -y install libgconf2-4 # needed for older cypress/bbc-a11y
       - npm ci
   pre_build:
     commands:
