@@ -28,6 +28,7 @@ import {
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 import logEmbedSourceStatus from './helpers/logEmbedSourceStatus';
+import { getOverriddenLangCode } from './helpers/metadata';
 
 const { logMediaPlayerStatus } = toggles[
   process.env.SIMORGH_APP_ENV || 'local'
@@ -45,6 +46,7 @@ const MediaPlayerContainer = ({
   const { lang, translations, service } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
   const location = useLocation();
+  const langCode = getOverriddenLangCode(lang) || lang;
   if (!enabled || !blocks) {
     return null;
   }
@@ -116,7 +118,7 @@ const MediaPlayerContainer = ({
   });
 
   const embedSource = getEmbedUrl({
-    mediaId: `${assetId}/${isLegacyMedia ? blockId : versionId}/${lang}`,
+    mediaId: `${assetId}/${isLegacyMedia ? blockId : versionId}/${langCode}`,
     type: assetType,
     isAmp,
     queryString: location.search,
