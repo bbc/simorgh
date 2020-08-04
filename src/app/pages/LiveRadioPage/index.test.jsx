@@ -12,10 +12,15 @@ import gahuzaPageData from './fixtureData/gahuza';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
-const Page = ({ pageData, service = 'afrique', isAmp = false }) => (
+const Page = ({
+  pageData,
+  service = 'afrique',
+  lang = 'fr',
+  isAmp = false,
+}) => (
   <BrowserRouter>
     <ToggleContextProvider service={service} origin="https://www.test.bbc.com">
-      <ServiceContextProvider service={service} lang="fr">
+      <ServiceContextProvider service={service} lang={lang}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.com"
           isAmp={isAmp}
@@ -31,7 +36,7 @@ const Page = ({ pageData, service = 'afrique', isAmp = false }) => (
   </BrowserRouter>
 );
 
-const renderPage = async ({ pageData, service = 'afrique', isAmp = false }) => {
+const renderPage = async ({ pageData, service, isAmp = false }) => {
   let result;
   await act(async () => {
     result = await render(
@@ -119,6 +124,7 @@ describe('Radio Page Main', () => {
     renderPage({
       pageData: indonesianPageData,
       service: 'indonesia',
+      lang: 'id',
       isAmp: true,
     });
 
@@ -133,6 +139,7 @@ describe('Radio Page Main', () => {
     renderPage({
       pageData: gahuzaPageData,
       service: 'gahuza',
+      lang: 'rw',
     });
 
     const scheduleWrapper = document.querySelector(
