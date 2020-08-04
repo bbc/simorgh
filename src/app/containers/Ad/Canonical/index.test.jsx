@@ -1,25 +1,24 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { RequestContextProvider } from '#contexts/RequestContext';
+import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
 import CanonicalAd, { getBootstrapSrc } from '.';
 
-const requestContextData = {
-  pageType: 'frontPage',
-  service: 'pidgin',
-  isAmp: false,
-  pathname: '/pathname',
-  data: { status: 200 },
+const defaultRequestContextData = {
   canAdvertise: true,
 };
 
-// eslint-disable-next-line react/prop-types
-const CanonicalAdWithContext = ({ slotType }) => (
+/* eslint-disable react/prop-types */
+const CanonicalAdWithContext = ({
+  slotType,
+  requestContext = defaultRequestContextData,
+}) => (
   <BrowserRouter>
-    <RequestContextProvider {...requestContextData}>
+    <RequestContext.Provider value={requestContext}>
       <CanonicalAd slotType={slotType} />
-    </RequestContextProvider>
+    </RequestContext.Provider>
   </BrowserRouter>
 );
 
@@ -35,6 +34,23 @@ describe('CanonicalAds Ads', () => {
     window.dotcom = undefined;
   });
 
+  describe('Assertions', () => {
+    it('should return null when canAdvertise is false', () => {
+      const requestContext = {
+        canAdvertise: false,
+      };
+
+      const { container } = render(
+        <CanonicalAdWithContext
+          slotType="leaderboard"
+          requestContext={requestContext}
+        />,
+      );
+
+      expect(container).toBeEmptyDOMElement();
+    });
+  });
+
   describe('Snapshots', () => {
     shouldMatchSnapshot(
       'should correctly render an Canonical leaderboard ad with dotcom-bootstrap script',
@@ -43,9 +59,7 @@ describe('CanonicalAds Ads', () => {
 
     shouldMatchSnapshot(
       'should correctly render a Canonical mpu ad with dotcom-bootstrap script',
-      <BrowserRouter>
-        <CanonicalAdWithContext slotType="mpu" />
-      </BrowserRouter>,
+      <CanonicalAdWithContext slotType="mpu" />,
     );
   });
 });
