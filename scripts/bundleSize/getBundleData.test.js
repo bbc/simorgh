@@ -1,5 +1,5 @@
 import { getPageBundleData } from './getBundleData';
-import pages from './pages';
+import { pages } from './pages';
 
 const jsFiles = [
   'ArticlePage-31ecd969.31473c35.js',

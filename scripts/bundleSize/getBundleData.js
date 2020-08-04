@@ -4,7 +4,7 @@ const { extractBundlesForPageType } = require('./pageTypeBundleExtractor');
 // need fake Cypress in global scope to require service configs:
 global.Cypress = { env: () => ({}) };
 const cypressServiceConfigs = require('../../cypress/support/config/services');
-const { default: pages } = require('./pages');
+const { pages } = require('./pages');
 
 const services = Object.keys(cypressServiceConfigs);
 

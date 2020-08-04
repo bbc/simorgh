@@ -1,4 +1,4 @@
-const pages = [
+exports.pages = [
   'ArticlePage',
   'MediaAssetPage',
   'PhotoGalleryPage',
@@ -9,5 +9,3 @@ const pages = [
   'OnDemandRadioPage',
   'OnDemandTvPage',
 ];
-
-export default pages;
