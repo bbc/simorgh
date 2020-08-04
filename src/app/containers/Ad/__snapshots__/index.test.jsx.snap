@@ -4,14 +4,20 @@ exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`]
 <html>
   <head>
     <script
-      async="true"
-      custom-element="amp-ad"
-      src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+      type="module"
     />
     <script
-      async="true"
-      custom-element="amp-access"
-      src="https://cdn.ampproject.org/v0/amp-access-0.1.js"
+      nomodule="nomodule"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
+    />
+    <script
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+      type="module"
+    />
+    <script
+      nomodule="nomodule"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
     />
     <script
       id="amp-access"
