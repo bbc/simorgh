@@ -171,7 +171,7 @@
     "bbc-a11y": "^2.4.2",
     "brotli-webpack-plugin": "^1.1.0",
     "chalk": "^4.1.0",
-    "chrome-launcher": "^0.13.3",
+    "chrome-launcher": "^0.13.4",
     "compression-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^6.0.2",
     "cypress": "^4.10.0",
