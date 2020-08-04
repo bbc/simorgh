@@ -16,7 +16,7 @@ exports[`Comscore Analytics Container Snapshots should render comscore script wh
 <html>
   <head>
     <noscript>
-      &lt;img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cs_ucfr=1&cv=2.0&cj=1" /&gt;
+      &lt;img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cs_ucfr=0&cv=2.0&cj=1" /&gt;
     </noscript>
     <script
       async="true"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { node, string, shape } from 'prop-types';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
@@ -14,7 +14,7 @@ const defaultToggleState = {
   },
 };
 
-const defaultCookiePolicy = { cookiePolicy: '111' };
+const defaultPersonalisation = { personalisationEnabled: false };
 
 const mockToggleDispatch = jest.fn();
 
@@ -24,7 +24,7 @@ const ContextWrap = ({
   origin,
   children,
   toggleState,
-  cookiePolicy,
+  personalisation,
 }) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
@@ -41,7 +41,7 @@ const ContextWrap = ({
           toggleDispatch: mockToggleDispatch,
         }}
       >
-        <UserContext.Provider value={cookiePolicy}>
+        <UserContext.Provider value={personalisation}>
           {children}
         </UserContext.Provider>
       </ToggleContext.Provider>
@@ -55,12 +55,12 @@ ContextWrap.propTypes = {
   origin: string.isRequired,
   platform: string.isRequired,
   toggleState: shape({}),
-  cookiePolicy: shape({}),
+  personalisation: shape({}),
 };
 
 ContextWrap.defaultProps = {
   toggleState: defaultToggleState,
-  cookiePolicy: defaultCookiePolicy,
+  personalisation: defaultPersonalisation,
 };
 
 describe('Comscore Analytics Container', () => {
@@ -85,27 +85,77 @@ describe('Comscore Analytics Container', () => {
       expect(container.firstChild).toBeNull();
     });
 
-    it('should return null when user cookie policy value is 000 for canonical', () => {
+    it('should render the canonical noscript with cs_ucfr=0', async () => {
       const toggleState = {
         comscoreAnalytics: {
           enabled: true,
         },
       };
-      const mockCookiePolicy = { cookiePolicy: '000' };
-
-      const { container } = render(
+      render(
         <ContextWrap
           platform="canonical"
           pageType="article"
           origin="bbc.com"
           toggleState={toggleState}
-          cookiePolicy={mockCookiePolicy}
         >
           <ComscoreAnalytics />
         </ContextWrap>,
       );
 
-      expect(container.firstChild).toBeNull();
+      await waitFor(() => {
+        const noScriptContent = document.querySelector('noscript').textContent;
+        expect(noScriptContent.includes('cs_ucfr=0')).toBeTruthy();
+      });
+    });
+
+    it('should render the canonical noscript with cs_ucfr=1', async () => {
+      const toggleState = {
+        comscoreAnalytics: {
+          enabled: true,
+        },
+      };
+      const personalisation = { personalisationEnabled: true };
+
+      render(
+        <ContextWrap
+          platform="canonical"
+          pageType="article"
+          origin="bbc.com"
+          toggleState={toggleState}
+          personalisation={personalisation}
+        >
+          <ComscoreAnalytics />
+        </ContextWrap>,
+      );
+
+      await waitFor(() => {
+        const noScriptContent = document.querySelector('noscript').textContent;
+        expect(noScriptContent.includes('cs_ucfr=1')).toBeTruthy();
+      });
+    });
+
+    it('should render the canonical comscore script from self-hosted src', async () => {
+      const toggleState = {
+        comscoreAnalytics: {
+          enabled: true,
+        },
+      };
+
+      render(
+        <ContextWrap
+          platform="canonical"
+          pageType="article"
+          origin="bbc.com"
+          toggleState={toggleState}
+        >
+          <ComscoreAnalytics />
+        </ContextWrap>,
+      );
+
+      await waitFor(() => {
+        const scriptSrc = document.querySelector('script').src;
+        expect(scriptSrc.includes('static/js/comscore.js')).toBeTruthy();
+      });
     });
   });
 

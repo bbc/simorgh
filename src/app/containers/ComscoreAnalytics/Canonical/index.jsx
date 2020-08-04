@@ -4,17 +4,9 @@ import { Helmet } from 'react-helmet';
 import { UserContext } from '#contexts/UserContext';
 
 const CanonicalComscoreAnalytics = () => {
-  const { cookiePolicy } = useContext(UserContext);
+  const { personalisationEnabled } = useContext(UserContext);
   const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
-
-  if (cookiePolicy === '000') {
-    return null;
-  }
-
-  let csUcfr = 0;
-  if (cookiePolicy) {
-    csUcfr = cookiePolicy.slice(-1);
-  }
+  const csUcfr = personalisationEnabled ? '1' : '0';
 
   return (
     <Helmet>
