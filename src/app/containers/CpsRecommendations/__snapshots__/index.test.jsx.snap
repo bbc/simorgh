@@ -842,7 +842,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (max-width:14.9375rem) {
   .c13 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    width: calc(1/1*(100% - 1 * 0.5rem) + 0 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
     vertical-align: top;
@@ -851,7 +851,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c13 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    width: calc(1/1*(100% - 1 * 0.5rem) + 0 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
     vertical-align: top;
@@ -860,7 +860,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c13 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    width: calc(1/1*(100% - 1 * 0.5rem) + 0 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
     vertical-align: top;
@@ -869,7 +869,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c13 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    width: calc(1/1*(100% - 1 * 1rem) + 0 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
     vertical-align: top;
@@ -878,7 +878,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c13 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    width: calc(1/1*(100% - 1 * 1rem) + 0 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
     vertical-align: top;
@@ -887,7 +887,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:80rem) {
   .c13 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    width: calc(1/1*(100% - 1 * 1rem) + 0 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
     vertical-align: top;
@@ -902,7 +902,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (max-width:14.9375rem) {
   .c14 {
-    width: calc(16.666666666666668%);
+    width: calc(100%);
     display: inline-block;
     vertical-align: top;
   }
@@ -910,7 +910,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c14 {
-    width: calc(16.666666666666668%);
+    width: calc(100%);
     display: inline-block;
     vertical-align: top;
   }
@@ -918,7 +918,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c14 {
-    width: calc(16.666666666666668%);
+    width: calc(100%);
     display: inline-block;
     vertical-align: top;
   }
@@ -926,7 +926,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c14 {
-    width: calc(16.666666666666668%);
+    width: calc(100%);
     display: inline-block;
     vertical-align: top;
   }
@@ -934,7 +934,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c14 {
-    width: calc(16.666666666666668%);
+    width: calc(100%);
     display: inline-block;
     vertical-align: top;
   }
@@ -942,7 +942,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width:80rem) {
   .c14 {
-    width: calc(16.666666666666668%);
+    width: calc(100%);
     display: inline-block;
     vertical-align: top;
   }
