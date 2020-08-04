@@ -89,7 +89,7 @@
     "@bbc/psammead-live-label": "^1.0.0",
     "@bbc/psammead-locales": "^4.1.10",
     "@bbc/psammead-media-indicator": "^4.0.10",
-    "@bbc/psammead-media-player": "^2.7.16",
+    "@bbc/psammead-media-player": "^2.8.2",
     "@bbc/psammead-most-read": "^4.1.8",
     "@bbc/psammead-navigation": "^6.0.15",
     "@bbc/psammead-paragraph": "^2.2.32",
