@@ -79,14 +79,9 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               );
               if (isRadioScheduleOnPage && isRadioScheduleDataComplete) {
                 cy.log('Schedule has enough data');
-                cy.get('div[class*="RadioScheduleSection"]').should('exist');
-                // Use these ways to access parts of the schedule
-                // cy.get('[data-e2e=radio-schedule]').should('exist');
-                // cy.get('[data-e2e=ondemand]').should('exist');
+                cy.get('[data-e2e=radio-schedule]').should('exist');
               } else {
-                cy.get('div[class*="RadioScheduleSection"]').should(
-                  'not.exist',
-                );
+                cy.get('[data-e2e=radio-schedule]').should('not.exist');
               }
             },
           );

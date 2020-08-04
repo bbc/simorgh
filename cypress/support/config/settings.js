@@ -2102,16 +2102,19 @@ module.exports = () => ({
       liveRadio: {
         environments: {
           live: {
-            paths: ['/hindi/bbc_hindi_radio/liveradio'],
+            paths: [],
+            // route deprecated - hindi/bbc_hindi_radio/* will 404
             enabled: false,
           },
           test: {
-            paths: ['/hindi/bbc_hindi_radio/liveradio?renderer_env=live'],
+            paths: [],
+            // route deprecated - hindi/bbc_hindi_radio/* will 404
             enabled: false,
           },
           local: {
-            paths: ['/hindi/bbc_hindi_radio/liveradio'],
-            enabled: true,
+            paths: [],
+            // route deprecated - hindi/bbc_hindi_radio/* will 404
+            enabled: false,
           },
         },
         smoke: false,
@@ -4170,7 +4173,8 @@ module.exports = () => ({
         environments: {
           live: {
             paths: [
-              '/persian/bbc_persian_radio/liveradio',
+              // '/persian/bbc_persian_radio/liveradio',
+              // Schedules disabled regardless of service config for bbc_persian_radio until https://github.com/bbc/simorgh/pull/7376 is merged
               '/persian/bbc_dari_radio/liveradio',
             ],
             enabled: false,
@@ -4184,7 +4188,7 @@ module.exports = () => ({
           },
           local: {
             paths: [
-              '/persian/bbc_persian_radio/liveradio',
+              // '/persian/bbc_persian_radio/liveradio',
               '/persian/bbc_dari_radio/liveradio',
             ],
             enabled: true,
