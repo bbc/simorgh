@@ -32,17 +32,19 @@ const AdContainer = styled.section`
 `;
 
 export const getBootstrapSrc = (queryString, useLegacy = false) => {
-  const {
-    SIMORGH_ADS_SCRIPT_TEST,
-    SIMORGH_ADS_SCRIPT_LEGACY_TEST,
-    SIMORGH_ADS_SCRIPT_LIVE,
-    SIMORGH_ADS_SCRIPT_LEGACY_LIVE,
-  } = process.env;
+  const adsTestScript =
+    'https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js';
+  const adsLegacyTestScript =
+    'https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js';
+  const adsLiveScript =
+    'https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap.js';
+  const adsLegacyLiveScript =
+    'https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap-legacy.js';
   const useLiveSrc = isLive() || queryString.includes('ads-js-env=live');
   if (useLiveSrc) {
-    return useLegacy ? SIMORGH_ADS_SCRIPT_LEGACY_LIVE : SIMORGH_ADS_SCRIPT_LIVE;
+    return useLegacy ? adsLegacyLiveScript : adsLiveScript;
   }
-  return useLegacy ? SIMORGH_ADS_SCRIPT_LEGACY_TEST : SIMORGH_ADS_SCRIPT_TEST;
+  return useLegacy ? adsLegacyTestScript : adsTestScript;
 };
 
 const CanonicalAd = ({ slotType }) => {

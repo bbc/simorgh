@@ -4,12 +4,12 @@ exports[`CanonicalAds Ads Snapshots should correctly render a Canonical mpu ad w
 <html>
   <head>
     <script
-      src="http://mock-test-script"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
       type="module"
     />
     <script
       nomodule="nomodule"
-      src="http://mock-test-script-legacy"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
     />
   </head>
   <body>
@@ -50,12 +50,12 @@ exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderb
 <html>
   <head>
     <script
-      src="http://mock-test-script"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
       type="module"
     />
     <script
       nomodule="nomodule"
-      src="http://mock-test-script-legacy"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
     />
   </head>
   <body>
