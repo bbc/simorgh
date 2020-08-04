@@ -36,7 +36,7 @@ describe('getToggles', () => {
     const getToggles = await import('.');
     const toggles = await getToggles.default('mundo');
 
-    expect(toggles).toBe(mockDefaultToggles.local);
+    expect(toggles).toEqual(mockDefaultToggles.local);
   });
 
   describe('with enableFetchingToggles enabled', () => {
@@ -122,7 +122,7 @@ describe('getToggles', () => {
           url: mockServiceUrl,
         },
       );
-      expect(toggles).toBe(mockDefaultToggles.local);
+      expect(toggles).toEqual(mockDefaultToggles.local);
     });
 
     it('should catch errors not related to the response, log them and return default toggles', async () => {
@@ -142,7 +142,7 @@ describe('getToggles', () => {
         service: 'hausa',
         url: mockServiceUrl,
       });
-      expect(toggles).toBe(mockDefaultToggles.local);
+      expect(toggles).toEqual(mockDefaultToggles.local);
     });
   });
 });
