@@ -24,7 +24,7 @@ import pidginSecondaryColumnData from '#data/pidgin/secondaryColumn/index.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import igboMostReadData from '#data/igbo/mostRead/index.json';
 import igboSecondaryColumnData from '#data/igbo/secondaryColumn/index.json';
-import ukrainianPageData from '#data/ukrainian/cpsAssets/news-russian-23333960.json';
+import ukrainianInRussianPageData from '#data/ukrainian/cpsAssets/news-russian-23333960.json';
 import ukrainianSecondaryColumnData from '#data/ukrainian/secondaryColumn/index.json';
 import ukrainianMostReadData from '#data/ukrainian/mostRead/index.json';
 
@@ -203,7 +203,7 @@ describe('Story Page', () => {
   it('should render secondary column div with lang attribute when officialLang is defined by a language override', async () => {
     fetchMock.mock(
       'http://localhost/some-cps-sty-path.json',
-      ukrainianPageData,
+      ukrainianInRussianPageData,
     );
     fetchMock.mock(
       'http://localhost/ukrainian/sty-secondary-column.json',
