@@ -8,7 +8,7 @@ exports[`Canonical Comscore Analytics  Snapshots should render comscore script w
     </noscript>
     <script
       async="true"
-      src="http://localhost:7080/static/js/comscore.js"
+      src="http://localhost:7080/static/js/comscore-1.0.js"
       type="text/javascript"
     />
   </head>
