@@ -103,7 +103,7 @@ describe('processRadioSchedule', () => {
       );
     });
 
-    it('should return undefined when schedule data is incomplete', () => {
+    it('should return an empty array when schedule data is incomplete', () => {
       expect(programs).toEqual([]);
     });
   });
