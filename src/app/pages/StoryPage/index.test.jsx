@@ -52,7 +52,6 @@ const Page = ({ pageData, service, variant }) => (
           pathname={pageData.metadata.locators.assetUri}
           service={service}
           statusCode={200}
-          variant={pageData.variant}
         >
           <StoryPage service={service} pageData={pageData} />
         </RequestContextProvider>
