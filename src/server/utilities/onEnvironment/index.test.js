@@ -3,22 +3,45 @@ import onEnvironment from './index';
 const wrappedFunction = jest.fn();
 
 describe('onEnvironment check', () => {
+  const originalEnvironment = process.env.SIMORGH_APP_ENV;
+
   afterEach(() => {
-    delete process.env.SIMORGH_APP_ENV;
+    process.env.SIMORGH_APP_ENV = originalEnvironment;
   });
 
-  it('do not call wrapper function on live environment', () => {
+  it('should not call wrapper function if no environments', () => {
+    onEnvironment([], {})(wrappedFunction);
+    expect(wrappedFunction).not.toBeCalled();
+  });
+
+  it('should not call wrapper function if environment does not match', () => {
     process.env.SIMORGH_APP_ENV = 'live';
 
-    onEnvironment('test', {})(wrappedFunction);
+    onEnvironment(['local', 'test'], {})(wrappedFunction);
 
     expect(wrappedFunction).not.toBeCalled();
   });
 
-  it('call wrapper function on test environment', () => {
+  it('should not call wrapper function on live environment', () => {
+    process.env.SIMORGH_APP_ENV = 'live';
+
+    onEnvironment(['test'], {})(wrappedFunction);
+
+    expect(wrappedFunction).not.toBeCalled();
+  });
+
+  it('should call wrapper function if environment matches', () => {
+    process.env.SIMORGH_APP_ENV = 'live';
+
+    onEnvironment(['test', 'live'], {})(wrappedFunction);
+
+    expect(wrappedFunction).toBeCalled();
+  });
+
+  it('should call wrapper function on test environment', () => {
     process.env.SIMORGH_APP_ENV = 'test';
 
-    onEnvironment('test', {})(wrappedFunction);
+    onEnvironment(['test'], {})(wrappedFunction);
 
     expect(wrappedFunction).toBeCalled();
   });

@@ -31,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: '설명, ',
     imageCopyrightOffscreenText: '사진 출처, ',
     locale: `ko-KO`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ko',
     datetimeLocale: `ko`,
     service: 'korean',
     serviceName: 'Korean',
@@ -184,6 +186,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
       onFrontPage: true,
       frontPagePosition: 'Section 1',
       header: 'BBC 코리아 라디오',

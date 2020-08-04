@@ -27,6 +27,7 @@ const logCodes = {
   RADIO_MISSING_FIELD: 'radio_missing_field',
   EPISODE_EXPIRED: 'episode_expired',
   EPISODE_NOT_YET_AVAILABLE: 'episode_not_yet_available',
+  UNRECOGNISED_EPISODE_AVAILABILITY: 'unrecognised_episode_availability',
 
   // Translations
   NO_TRANSLATION_FOUND: 'no_translation_found',

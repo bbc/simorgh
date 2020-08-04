@@ -2,32 +2,431 @@
 
 exports[`CpsRelatedContent should render Top Stories components when given appropriate data 1`] = `
 <DocumentFragment>
-  <section
+  .c10 {
+  padding: 0.5rem 0 1rem;
+}
+
+.c10:last-child {
+  border: none;
+}
+
+.c10:first-child {
+  padding-top: 0;
+}
+
+.c10:last-child {
+  padding-bottom: 0;
+}
+
+.c9 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c12 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+.c12 >div {
+  vertical-align: middle;
+}
+
+.c12 >div {
+  display: inline-block;
+  vertical-align: initial;
+}
+
+.c12 svg {
+  margin: 0;
+}
+
+.c11 {
+  position: relative;
+}
+
+.c13 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  display: inline;
+}
+
+.c14 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+.c14:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c14:hover,
+.c14:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c14:visited {
+  color: #6E6E73;
+}
+
+.c15 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c8 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c2 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+}
+
+.c5 {
+  margin: 0;
+  padding: 0;
+}
+
+.c0 {
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.c1 {
+  margin-bottom: 1rem;
+}
+
+.c3 {
+  margin-top: 0;
+}
+
+@media (max-width:62.9375rem) {
+  .c10 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c10 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c10:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c12 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c12 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+    grid-column: 1 / span 6;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c11 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c15 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c8 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c4 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+<section
     aria-labelledby="top-stories-heading"
-    class="GridWrapper-sc-12lwanc-0 hgpaqH"
+    class="c0"
     data-e2e="related-content"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
+      class="c1"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD StyledSectionLabel-opyob2-2 jpnPtT"
+        class="c2 c3"
       >
         <div
-          class="Bar-sc-1x4gwjz-0 jsgdXU"
+          class="c4"
         />
         <h2
-          class="Heading-sc-1x4gwjz-2 eZofTG"
+          class="c5"
         >
           <span
-            class="FlexColumn-wx5kdp-0 dgpsiS"
+            class="c6"
           >
             <span
-              class="FlexRow-wx5kdp-2 dVBNyZ"
+              class="c7"
             >
               <span
-                class="Title-wx5kdp-4 cERxQI"
+                class="c8"
                 dir="ltr"
                 id="top-stories-heading"
               >
@@ -38,37 +437,32 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
         </h2>
       </div>
       <ul
-        class="StoryPromoUl-sc-171lqjd-2 brjIMO"
+        class="c9"
         role="list"
       >
         <li
-          class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM"
+          class="c10"
           role="listitem"
         >
           <div
-            class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            class="c11"
           >
             <div
-              class="TextGridItem-sc-1lkbq5i-0 iWRqFl"
+              class="c12"
               dir="ltr"
             >
               <h3
-                class="Headline-sc-1dvfmi3-3 gejHzT"
+                class="c13"
               >
                 <a
-                  class="Link-sc-1dvfmi3-5 jeUMCT"
+                  class="c14"
                   href="/mundo/noticias-internacional-51939501"
                 >
                   China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
                 </a>
               </h3>
-              <p
-                class="Summary-sc-1dvfmi3-4 hTsuvP"
-              >
-                Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.
-              </p>
               <time
-                class="StyledTimestamp-um718p-0 kVWTyt"
+                class="c15"
                 datetime="2020-02-03"
               >
                 3rd February 2020
@@ -77,33 +471,28 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
           </div>
         </li>
         <li
-          class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM"
+          class="c10"
           role="listitem"
         >
           <div
-            class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+            class="c11"
           >
             <div
-              class="TextGridItem-sc-1lkbq5i-0 iWRqFl"
+              class="c12"
               dir="ltr"
             >
               <h3
-                class="Headline-sc-1dvfmi3-3 gejHzT"
+                class="c13"
               >
                 <a
-                  class="Link-sc-1dvfmi3-5 jeUMCT"
+                  class="c14"
                   href="/pidgin/tori-51945757"
                 >
                   Nigeria don get five new cases of Coronavirus - See how e happun
                 </a>
               </h3>
-              <p
-                class="Summary-sc-1dvfmi3-4 hTsuvP"
-              >
-                Nigeria Health say di patients from UK and America travel come di kontri.
-              </p>
               <time
-                class="StyledTimestamp-um718p-0 kVWTyt"
+                class="c15"
                 datetime="2020-02-03"
               >
                 3rd February 2020
@@ -119,32 +508,397 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 exports[`CpsRelatedContent should render Top Stories components when without <ul> 1`] = `
 <DocumentFragment>
-  <section
+  .c11 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+.c11 >div {
+  vertical-align: middle;
+}
+
+.c11 >div {
+  display: inline-block;
+  vertical-align: initial;
+}
+
+.c11 svg {
+  margin: 0;
+}
+
+.c10 {
+  position: relative;
+}
+
+.c12 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  display: inline;
+}
+
+.c13 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+.c13:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c13:hover,
+.c13:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c13:visited {
+  color: #6E6E73;
+}
+
+.c14 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c8 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c2 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+}
+
+.c5 {
+  margin: 0;
+  padding: 0;
+}
+
+.c0 {
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.c1 {
+  margin-bottom: 1rem;
+}
+
+.c3 {
+  margin-top: 0;
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c11 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c11 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+    grid-column: 1 / span 6;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c10 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c14 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c14 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c8 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c4 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column-gap: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c0 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(8,minmax(0,6.75rem)) 1fr;
+    max-width: 45.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-template-columns: 1fr repeat(20,minmax(0,2.95rem)) 1fr;
+    max-width: 46.4rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    max-width: initial;
+    margin: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c1 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c1 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c9 {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+<section
     aria-labelledby="top-stories-heading"
-    class="GridWrapper-sc-12lwanc-0 hgpaqH"
+    class="c0"
     data-e2e="related-content"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 LegacyGridItemConstrainedLarge-opyob2-1 curbRF"
+      class="c1"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD StyledSectionLabel-opyob2-2 jpnPtT"
+        class="c2 c3"
       >
         <div
-          class="Bar-sc-1x4gwjz-0 jsgdXU"
+          class="c4"
         />
         <h2
-          class="Heading-sc-1x4gwjz-2 eZofTG"
+          class="c5"
         >
           <span
-            class="FlexColumn-wx5kdp-0 dgpsiS"
+            class="c6"
           >
             <span
-              class="FlexRow-wx5kdp-2 dVBNyZ"
+              class="c7"
             >
               <span
-                class="Title-wx5kdp-4 cERxQI"
+                class="c8"
                 dir="ltr"
                 id="top-stories-heading"
               >
@@ -155,32 +909,27 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
         </h2>
       </div>
       <div
-        class="SingleContentWrapper-opyob2-3 iddZTf"
+        class="c9"
       >
         <div
-          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+          class="c10"
         >
           <div
-            class="TextGridItem-sc-1lkbq5i-0 iWRqFl"
+            class="c11"
             dir="ltr"
           >
             <h3
-              class="Headline-sc-1dvfmi3-3 gejHzT"
+              class="c12"
             >
               <a
-                class="Link-sc-1dvfmi3-5 jeUMCT"
+                class="c13"
                 href="/mundo/noticias-internacional-51939501"
               >
                 China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
               </a>
             </h3>
-            <p
-              class="Summary-sc-1dvfmi3-4 hTsuvP"
-            >
-              Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.
-            </p>
             <time
-              class="StyledTimestamp-um718p-0 kVWTyt"
+              class="c14"
               datetime="2020-02-03"
             >
               3rd February 2020

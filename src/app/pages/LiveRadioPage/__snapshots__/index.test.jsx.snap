@@ -15,6 +15,11 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
       rel="canonical"
     />
     <link
+      href="https://www.test.bbc.com/pathname"
+      hreflang="am"
+      rel="alternate"
+    />
+    <link
       href="http://localhost:7080/amharic/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
     />
@@ -42,6 +47,11 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
       href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-152x152.png"
       rel="apple-touch-icon"
       sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
     />
     <link
       href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-192x192.png"
@@ -694,6 +704,11 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
       rel="canonical"
     />
     <link
+      href="https://www.test.bbc.com/pathname"
+      hreflang="am"
+      rel="alternate"
+    />
+    <link
       href="https://www.test.bbc.com/pathname.amp"
       rel="amphtml"
     />
@@ -725,6 +740,11 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
       href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-152x152.png"
       rel="apple-touch-icon"
       sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
     />
     <link
       href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-192x192.png"

@@ -1,37 +1,377 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = `
+.c3 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c5 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.c7 {
+  font-size: 2rem;
+  line-height: 2.625rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #F2F2F2;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c9 {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+.c10 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
+.c8 {
+  padding: 0.5rem 0;
+}
+
+.c12 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #F2F2F2;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c1 {
+  padding-bottom: 2rem;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c6 {
+  border: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width:63rem) {
+  .c5 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    margin-right: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
+    margin: 0 0.5rem;
+    margin-right: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c11 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c11 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c11 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c11 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c11 {
+    width: calc(5/8*(100% - 8 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-right: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c11 {
+    width: calc(10/20*(100% - 20 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-right: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c11 {
+    display: block;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c7 {
+    font-size: 2.375rem;
+    line-height: 2.875rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    font-size: 2.75rem;
+    line-height: 3.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    padding-bottom: 0;
+    word-break: break-word;
+    line-height: 3.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c10 {
+    font-size: 1.625rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c8 {
+    padding: 1rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c12 {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c4 {
+    margin: 2.5rem 0 0;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c4 {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c4 {
+    margin: 1rem -1rem 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c4 {
+    margin: 0.5rem -0.5rem 0;
+  }
+}
+
 <div>
   <div>
     chartbeat
   </div>
   <noscript />
   <main
-    class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1brqmij-1 cyJdzv"
+    class="c0 c1"
     dir="rtl"
     role="main"
   >
     <div
-      class="GridComponent-nf79gm-0 cAoCCU"
+      class="c2"
       dir="rtl"
     >
       <h1
-        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+        class="c3"
         id="content"
         tabindex="-1"
       >
         نړۍ دا وخت, ۲۷ می ۲۰۲۰
       </h1>
       <div
-        class="StyledVideoPlayer-sc-1brqmij-2 jdEbWl"
+        class="c4"
       >
         <div
-          class="StyledVideoContainer-sc-13p1a4d-0 dKHIix"
+          class="c5"
         >
           <iframe
             allow="autoplay; fullscreen"
             allowfullscreen=""
-            class="StyledIframe-fuo2ed-0 dIyDYU"
+            class="c6"
             scrolling="no"
             src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live"
             title="ویډیو پلیئر"
@@ -41,31 +381,31 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
       </div>
       <strong
         aria-hidden="true"
-        class="Headline-sc-1kh1qhu-0 StyledHeadline-gehp0k-0 gBkukD"
+        class="c7 c8"
       >
         <span
-          class="BrandTitle-gehp0k-1 iseUMj"
+          class="c9"
         >
           نړۍ دا وخت
         </span>
         <span
-          class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+          class="c3"
         >
           , 
         </span>
         <span
-          class="Datestamp-gehp0k-2 LXJIp"
+          class="c10"
         >
           ۲۷ می ۲۰۲۰
         </span>
       </strong>
     </div>
     <div
-      class="GridComponent-nf79gm-0 hKRvco"
+      class="c11"
       dir="rtl"
     >
       <p
-        class="Paragraph-k859h4-0 StyledParagraphComponent-v70vjd-0 cvyKtV"
+        class="c12"
       >
         د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
       </p>
@@ -75,38 +415,413 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 `;
 
 exports[`should show the expired content message if episode is expired 1`] = `
+.c3 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c6 {
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0.0625rem solid transparent;
+  color: #FFFFFF;
+  background-color: rgba(34,34,34,0.75);
+}
+
+.c7 {
+  display: block;
+  font-weight: normal;
+  bottom: 0;
+  position: absolute;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+.c8 {
+  font-size: 2rem;
+  line-height: 2.625rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c10 {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+.c11 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
+.c9 {
+  padding: 0.5rem 0;
+}
+
+.c13 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c4 {
+  margin: 2.5rem 0 1.5rem;
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c1 {
+  padding-bottom: 2rem;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c6 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c7 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c7 {
+    padding: 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    margin-right: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
+    margin: 0 0.5rem;
+    margin-right: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c12 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c12 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c12 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c12 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c12 {
+    width: calc(5/8*(100% - 8 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-right: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c12 {
+    width: calc(10/20*(100% - 20 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-right: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c12 {
+    display: block;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c8 {
+    font-size: 2.375rem;
+    line-height: 2.875rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 2.75rem;
+    line-height: 3.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    padding-bottom: 0;
+    word-break: break-word;
+    line-height: 3.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c11 {
+    font-size: 1.625rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9 {
+    padding: 1rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c13 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c13 {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c4 {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c4 {
+    margin: 1rem -1rem 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c4 {
+    margin: 0.5rem -0.5rem 0;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 <div>
   <div>
     chartbeat
   </div>
   <noscript />
   <main
-    class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1brqmij-1 cyJdzv"
+    class="c0 c1"
     dir="rtl"
     role="main"
   >
     <div
-      class="GridComponent-nf79gm-0 cAoCCU"
+      class="c2"
       dir="rtl"
     >
       <h1
-        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+        class="c3"
         id="content"
         tabindex="-1"
       >
         نړۍ دا وخت, ۲۷ می ۲۰۲۰
       </h1>
       <div
-        class="StyledMessageContainer-sc-1brqmij-0 eQVkWQ"
+        class="c4"
       >
         <div
-          class="StyledWrapper-sc-1pnftlt-0 jywlaE"
+          class="c5"
         >
           <div
-            class="MessageWrapper-sc-1pnftlt-1 dORUdB"
+            class="c6"
           >
             <strong
-              class="StyledMessage-sc-1pnftlt-2 iRlUPR"
+              class="c7"
             >
               دغه فایل نور د لاسرسي وړ نه دی.
             </strong>
@@ -115,31 +830,929 @@ exports[`should show the expired content message if episode is expired 1`] = `
       </div>
       <strong
         aria-hidden="true"
-        class="Headline-sc-1kh1qhu-0 StyledHeadline-gehp0k-0 gBkukD"
+        class="c8 c9"
       >
         <span
-          class="BrandTitle-gehp0k-1 iseUMj"
+          class="c10"
         >
           نړۍ دا وخت
         </span>
         <span
-          class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+          class="c3"
         >
           , 
         </span>
         <span
-          class="Datestamp-gehp0k-2 LXJIp"
+          class="c11"
         >
           ۲۷ می ۲۰۲۰
         </span>
       </strong>
     </div>
     <div
-      class="GridComponent-nf79gm-0 hKRvco"
+      class="c12"
       dir="rtl"
     >
       <p
-        class="Paragraph-k859h4-0 StyledParagraphComponent-v70vjd-0 cvyKtV"
+        class="c13"
+      >
+        د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
+      </p>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`should show the future content message if episode is not yet available 1`] = `
+.c3 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c6 {
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0.0625rem solid transparent;
+  color: #FFFFFF;
+  background-color: rgba(34,34,34,0.75);
+}
+
+.c7 {
+  display: block;
+  font-weight: normal;
+  bottom: 0;
+  position: absolute;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+.c8 {
+  font-size: 2rem;
+  line-height: 2.625rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c10 {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+.c11 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
+.c9 {
+  padding: 0.5rem 0;
+}
+
+.c13 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c4 {
+  margin: 2.5rem 0 1.5rem;
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c1 {
+  padding-bottom: 2rem;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c6 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c7 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c7 {
+    padding: 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    margin-right: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
+    margin: 0 0.5rem;
+    margin-right: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c12 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c12 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c12 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c12 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c12 {
+    width: calc(5/8*(100% - 8 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-right: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c12 {
+    width: calc(10/20*(100% - 20 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-right: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c12 {
+    display: block;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c8 {
+    font-size: 2.375rem;
+    line-height: 2.875rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 2.75rem;
+    line-height: 3.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    padding-bottom: 0;
+    word-break: break-word;
+    line-height: 3.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c11 {
+    font-size: 1.625rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9 {
+    padding: 1rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c13 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c13 {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c4 {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c4 {
+    margin: 1rem -1rem 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c4 {
+    margin: 0.5rem -0.5rem 0;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+<div>
+  <div>
+    chartbeat
+  </div>
+  <noscript />
+  <main
+    class="c0 c1"
+    dir="rtl"
+    role="main"
+  >
+    <div
+      class="c2"
+      dir="rtl"
+    >
+      <h1
+        class="c3"
+        id="content"
+        tabindex="-1"
+      >
+        نړۍ دا وخت, ۲۷ می ۲۰۲۰
+      </h1>
+      <div
+        class="c4"
+      >
+        <div
+          class="c5"
+        >
+          <div
+            class="c6"
+          >
+            <strong
+              class="c7"
+            >
+              دغه پروګرام د خپرولو لپاره چمتو نه دی.
+            </strong>
+          </div>
+        </div>
+      </div>
+      <strong
+        aria-hidden="true"
+        class="c8 c9"
+      >
+        <span
+          class="c10"
+        >
+          نړۍ دا وخت
+        </span>
+        <span
+          class="c3"
+        >
+          , 
+        </span>
+        <span
+          class="c11"
+        >
+          ۲۷ می ۲۰۲۰
+        </span>
+      </strong>
+    </div>
+    <div
+      class="c12"
+      dir="rtl"
+    >
+      <p
+        class="c13"
+      >
+        د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
+      </p>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`should show the future content message if episode is pending 1`] = `
+.c3 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c6 {
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0.0625rem solid transparent;
+  color: #FFFFFF;
+  background-color: rgba(34,34,34,0.75);
+}
+
+.c7 {
+  display: block;
+  font-weight: normal;
+  bottom: 0;
+  position: absolute;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+.c8 {
+  font-size: 2rem;
+  line-height: 2.625rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c10 {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+.c11 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}
+
+.c9 {
+  padding: 0.5rem 0;
+}
+
+.c13 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c4 {
+  margin: 2.5rem 0 1.5rem;
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c1 {
+  padding-bottom: 2rem;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c6 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c7 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c7 {
+    padding: 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    margin-right: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
+    margin: 0 0.5rem;
+    margin-right: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c12 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c12 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c12 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c12 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-right: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c12 {
+    width: calc(5/8*(100% - 8 * 1rem) + 4 * 1rem );
+    margin: 0 0.5rem;
+    margin-right: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c12 {
+    width: calc(10/20*(100% - 20 * 1rem) + 9 * 1rem );
+    margin: 0 0.5rem;
+    margin-right: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c12 {
+    display: block;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c8 {
+    font-size: 2.375rem;
+    line-height: 2.875rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 2.75rem;
+    line-height: 3.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    padding-bottom: 0;
+    word-break: break-word;
+    line-height: 3.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c11 {
+    font-size: 1.625rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c9 {
+    padding: 1rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c13 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c13 {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c4 {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c4 {
+    margin: 1rem -1rem 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c4 {
+    margin: 0.5rem -0.5rem 0;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+<div>
+  <div>
+    chartbeat
+  </div>
+  <noscript />
+  <main
+    class="c0 c1"
+    dir="rtl"
+    role="main"
+  >
+    <div
+      class="c2"
+      dir="rtl"
+    >
+      <h1
+        class="c3"
+        id="content"
+        tabindex="-1"
+      >
+        نړۍ دا وخت, ۲۷ می ۲۰۲۰
+      </h1>
+      <div
+        class="c4"
+      >
+        <div
+          class="c5"
+        >
+          <div
+            class="c6"
+          >
+            <strong
+              class="c7"
+            >
+              دغه پروګرام د خپرولو لپاره چمتو نه دی.
+            </strong>
+          </div>
+        </div>
+      </div>
+      <strong
+        aria-hidden="true"
+        class="c8 c9"
+      >
+        <span
+          class="c10"
+        >
+          نړۍ دا وخت
+        </span>
+        <span
+          class="c3"
+        >
+          , 
+        </span>
+        <span
+          class="c11"
+        >
+          ۲۷ می ۲۰۲۰
+        </span>
+      </strong>
+    </div>
+    <div
+      class="c12"
+      dir="rtl"
+    >
+      <p
+        class="c13"
       >
         د بي بي سي پښتو ټلویزیوني خپرونه چې هره ورځ د افغانستان په شپږ بجو په ژوندۍ بڼه خپرېږي. دلته یې لیدلی شئ.
       </p>

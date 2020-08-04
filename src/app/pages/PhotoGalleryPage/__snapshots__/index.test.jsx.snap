@@ -1202,6 +1202,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
       rel="canonical"
     />
     <link
+      href="https://www.test.bbc.co.uk/afaanoromoo/oduu-41217768"
+      hreflang="om"
+      rel="alternate"
+    />
+    <link
       href="https://www.test.bbc.co.uk/afaanoromoo/oduu-41217768.amp"
       rel="amphtml"
     />
@@ -1233,6 +1238,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
       href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-152x152.png"
       rel="apple-touch-icon"
       sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
     />
     <link
       href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-192x192.png"
@@ -2703,6 +2713,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
       sizes="152x152"
     />
     <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+    />
+    <link
       href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
       rel="apple-touch-icon"
       sizes="192x192"
@@ -2890,7 +2905,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
     </script>
   </head>
   <body>
-    .c40 {
+    .c39 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -2983,7 +2998,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   font-style: normal;
 }
 
-.c37 {
+.c36 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -3024,7 +3039,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   padding-bottom: 1rem;
 }
 
-.c36 {
+.c35 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -3159,17 +3174,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   line-height: 1.25rem;
 }
 
-.c35 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
-}
-
 .c34 {
   position: static;
   color: #222222;
@@ -3200,7 +3204,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   color: #6E6E73;
 }
 
-.c38 {
+.c37 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3211,7 +3215,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   display: block;
 }
 
-.c39 {
+.c38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3507,14 +3511,14 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c36 {
+  .c35 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c36 {
+  .c35 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -3747,42 +3751,14 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c35 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c35 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c35 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:63rem) {
-  .c35 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c38 {
+  .c37 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c38 {
+  .c37 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
@@ -4460,13 +4436,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                                 </span>
                               </a>
                             </h3>
-                            <p
-                              class="c35"
-                            >
-                              Bole festival showcase di different types of bole dem.
-                            </p>
                             <time
-                              class="c36"
+                              class="c35"
                               datetime="2018-08-09"
                             >
                               9th August 2018
@@ -4490,22 +4461,22 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                               class="c30"
                             >
                               <div
-                                class="c37"
+                                class="c36"
                               />
                               <div
                                 class="c31"
                               >
                                 <div
                                   aria-hidden="true"
-                                  class="c38"
+                                  class="c37"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="c39"
+                                    class="c38"
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="c40"
+                                      class="c39"
                                       focusable="false"
                                       height="13px"
                                       viewBox="0 0 32 26"
@@ -4551,13 +4522,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                                 </span>
                               </a>
                             </h3>
-                            <p
-                              class="c35"
-                            >
-                              Jollof Festival happun for Lagos Nigeria on Sunday and na time for pipo wey show to sample West Africa fine food dem.
-                            </p>
                             <time
-                              class="c36"
+                              class="c35"
                               datetime="2018-08-19"
                             >
                               19th August 2018
@@ -5031,6 +4997,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
       href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-152x152.png"
       rel="apple-touch-icon"
       sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
     />
     <link
       href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
@@ -5669,6 +5640,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
       rel="canonical"
     />
     <link
+      href="https://www.test.bbc.co.uk/azeri/azerbaijan-44208474"
+      hreflang="az"
+      rel="alternate"
+    />
+    <link
       href="https://www.test.bbc.co.uk/azeri/azerbaijan-44208474.amp"
       rel="amphtml"
     />
@@ -5700,6 +5676,11 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
       href="https://news.files.bbci.co.uk/include/articles/public/azeri/images/icons/icon-152x152.png"
       rel="apple-touch-icon"
       sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/azeri/images/icons/icon-180x180.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
     />
     <link
       href="https://news.files.bbci.co.uk/include/articles/public/azeri/images/icons/icon-192x192.png"
@@ -6239,7 +6220,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   padding-bottom: 1rem;
 }
 
-.c56 {
+.c55 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -6372,17 +6353,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-}
-
-.c55 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding-bottom: 0.5rem;
 }
 
 .c54 {
@@ -6850,14 +6820,14 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c56 {
+  .c55 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c56 {
+  .c55 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -7086,34 +7056,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   .c53 {
     font-size: 1rem;
     line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c55 {
-    font-size: 0.9375rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c55 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c55 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width:63rem) {
-  .c55 {
-    display: none;
-    visibility: hidden;
   }
 }
 
@@ -8383,13 +8325,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 ADR və Qazaxdan Qarsadək müsəlman dəhlizi ideyası
                               </a>
                             </h3>
-                            <p
-                              class="c55"
-                            >
-                              Bu il Azərbaycan Demokratik Respublikasının elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca bu ərəfədə Azərbaycan xalqının epik və mühüm günlərini həftəlik esselərlə təqdim edir.
-                            </p>
                             <time
-                              class="c56"
+                              class="c55"
                               datetime="2018-05-17"
                             >
                               17 May 2018
@@ -8438,13 +8375,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 ADR-100: Türk Əsgəri üçün Cəbrayıl çörəyi
                               </a>
                             </h3>
-                            <p
-                              class="c55"
-                            >
-                              ADR-100 layihəmizdə növbəti yazı: 1918-ci il martın 3-də Bolşeviklər Almaniya, Bolqarıstan, Avstriya-Macarıstan və Osmanlı nümayəndələri ilə Brest-Litovsk Sülh Sazişi imzalayır. İmzalanma Bakının azadlığı ilə nəticələnən bir sıra hadisələrə səbəb olur.
-                            </p>
                             <time
-                              class="c56"
+                              class="c55"
                               datetime="2018-03-27"
                             >
                               27 Mart 2018
@@ -8493,13 +8425,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 Borçalı: Tortdan hərəyə bir tikə - təkbaşına isə onu yemək olmaz
                               </a>
                             </h3>
-                            <p
-                              class="c55"
-                            >
-                              #ADR100 layihəmizdə: 1918-1920-ci illərdə Gürcüstanla Azərbaycan arasında əməkdaşlıq yeni respublikalar üçün olduqca mühüm idi. Eyni zamanda Bakı ilə Tbilisi arasında gərginlik yaradan məsələlər mövcud idi. Belə məsələlərdən biri də ərazi mübahisələri idi.
-                            </p>
                             <time
-                              class="c56"
+                              class="c55"
                               datetime="2018-05-10"
                             >
                               10 May 2018
@@ -8548,13 +8475,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 Cümhuriyyət hökuməti Azərbaycanı necə idarə edirdi? İlk 6 ayın hadisələri
                               </a>
                             </h3>
-                            <p
-                              class="c55"
-                            >
-                              1918-ci il mayın 28-də Azərbaycanın istiqlaliyyəti elan olunanda bu hadisədən bir gün əvvəl dağılmış Zaqafqaziya Seyminin 44 nəfər müsəlman nümayəndəsi Tiflisdə toplanır və özlərini Azərbaycanın Milli Şurası elan edirlər.
-                            </p>
                             <time
-                              class="c56"
+                              class="c55"
                               datetime="2018-04-10"
                             >
                               10 Aprel 2018
@@ -8603,13 +8525,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 1918-1991: Bir müstəqilliyin iki bəyanı
                               </a>
                             </h3>
-                            <p
-                              class="c55"
-                            >
-                              25 il əvvəl bu gün Azərbaycan çökməkdə olan Sovet İttifaqından özünün müstəqillyini bəyan edib. Bu, Azərbaycan Respublikasının ikinci doğuluşu idi.
-                            </p>
                             <time
-                              class="c56"
+                              class="c55"
                               datetime="2016-10-18"
                             >
                               18 Oktyabr 2016
@@ -8669,13 +8586,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 </span>
                               </a>
                             </h3>
-                            <p
-                              class="c55"
-                            >
-                              Çərşənbə axşamı şəhər sakinləri BBC Azərbaycancanın "Müstəqillik sizə nə verib?" sualını cavablandırıb.
-                            </p>
                             <time
-                              class="c56"
+                              class="c55"
                               datetime="2016-10-18"
                             >
                               18 Oktyabr 2016
@@ -8724,13 +8636,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 1918-ci ilə baxış: Mayın 28-nə aparan o yaz günlərində həyat necə idi?
                               </a>
                             </h3>
-                            <p
-                              class="c55"
-                            >
-                              Bu il Azərbaycan Demokratik Respublikasının elan edilməsinin 100 illik yubileyidir. BBC Azərbaycanca bu ərəfədə Azərbaycan xalqının epik və mühüm günlərini həftəlik esselərlə təqdim edəcək.
-                            </p>
                             <time
-                              class="c56"
+                              class="c55"
                               datetime="2018-03-22"
                             >
                               22 Mart 2018
@@ -8779,13 +8686,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 #ADR100 Zaqatala: Azərbaycanın qalib gəldiyi mübahisə
                               </a>
                             </h3>
-                            <p
-                              class="c55"
-                            >
-                              Bir çox azərbaycanlı və gürcüstanlı siyasətçiləri anlayırdılar ki, onların içində olduğu həssas dövrdən salamat çıxmaq üçün iqtisadi, siyasi və hərbi müttəfiqlik vacibdir. Eyni zamanda hər iki respublika arasında bir sıra mübahisələr də mövcud idi.
-                            </p>
                             <time
-                              class="c56"
+                              class="c55"
                               datetime="2018-05-04"
                             >
                               4 May 2018
@@ -8834,13 +8736,8 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 Cümhuriyyət hökumətinin İranla əlaqələri necə idi?
                               </a>
                             </h3>
-                            <p
-                              class="c55"
-                            >
-                              İranın Xəzər sahilinə çıxan bölgələrində Azərbaycan Respublikasını böyük ticari imkanlar gözləyirdi. İran ixracatının 60-70 faizinin istehsalı ənənəvi olaraq məhz həmin regionun payına düşüb. Azərbaycan və xüsusilə Bakı-Batumi dəhlizi isə Avropa bazarına aparan təbii çıxış idi. Bəs milli hökümət iqtisadi imkanları gəlirli xarici ticarətə çevirə bildimi?
-                            </p>
                             <time
-                              class="c56"
+                              class="c55"
                               datetime="2018-04-29"
                             >
                               29 Aprel 2018

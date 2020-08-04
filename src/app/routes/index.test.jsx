@@ -5,7 +5,6 @@ import { matchPath } from 'react-router';
 
 // test helpers
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import fetchMock from 'fetch-mock';
 
 // components being tested
@@ -24,6 +23,7 @@ import storyPageJson from '#data/mundo/cpsAssets/noticias-internacional-51266689
 import featureIndexPageJson from '#data/afrique/cpsAssets/48465371.json';
 import storyPageMostReadData from '#data/pidgin/mostRead/index.json';
 import indexPageJson from '#data/ukrainian/ukraine_in_russian';
+import storyPageRecommendationsData from '#data/mundo/recommendations/index.json';
 
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
 
@@ -96,7 +96,10 @@ it('should route to and render live radio page', async () => {
   );
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({ path: pathname });
+  const { pageData } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
 
   const { getByText } = renderRouter({
     pathname,
@@ -117,7 +120,10 @@ it('should route to and render the onDemand Radio page', async () => {
   );
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({ path: pathname });
+  const { pageData } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageData,
@@ -138,7 +144,10 @@ it('should route to and render the skeleton onDemand TV Brand page', async () =>
   );
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({ path: pathname });
+  const { pageData } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageData,
@@ -156,7 +165,10 @@ it('should route to and render an article page', async () => {
   fetchMock.mock(`http://localhost${pathname}.json`, articlePageJson);
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({ path: pathname });
+  const { pageData } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageData,
@@ -193,7 +205,10 @@ it('should route to and render a media asset page', async () => {
   fetchMock.mock(`http://localhost${pathname}.json`, mediaAssetPageJson);
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({ path: pathname });
+  const { pageData } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageData,
@@ -211,7 +226,10 @@ it('should route to and render a media asset page', async () => {
   fetchMock.mock(`http://localhost${pathname}.json`, mediaAssetPageJson);
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({ path: pathname });
+  const { pageData } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageData,
@@ -231,7 +249,10 @@ it('should route to and render a legacy media asset page', async () => {
   fetchMock.mock(`http://localhost${pathname}.json`, legacyMediaAssetPage);
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({ path: pathname });
+  const { pageData } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageData,
@@ -251,7 +272,10 @@ it('should route to and render a photo gallery page', async () => {
   fetchMock.mock(`http://localhost${pathname}.json`, photoGalleryPageJson);
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({ path: pathname });
+  const { pageData } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageData,
@@ -268,6 +292,10 @@ it('should route to and render a story page', async () => {
   const pathname = '/mundo/noticias-internacional-51266689';
   fetchMock.mock(`http://localhost${pathname}.json`, storyPageJson);
   fetchMock.mock(`http://localhost/mundo/mostread.json`, storyPageMostReadData);
+  fetchMock.mock(
+    `http://localhost${pathname}/recommendations.json`,
+    storyPageRecommendationsData,
+  );
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
   const { pageData } = await getInitialData({
@@ -313,7 +341,10 @@ it.skip('should route to and render a feature index page', async () => {
   fetchMock.mock(`http://localhost${pathname}.json`, featureIndexPageJson);
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({ path: pathname });
+  const { pageData } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageData,
@@ -329,7 +360,10 @@ it.skip('should route to and render a feature index page', async () => {
 it('should route to and render a 500 error page', async () => {
   const pathname = '/igbo/500';
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { errorCode } = await getInitialData({ path: pathname });
+  const { errorCode } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageType,
@@ -358,7 +392,10 @@ it('should fallback to and render a 500 error page if there is a problem with pa
 it('should route to and render a 404 error page', async () => {
   const pathname = '/igbo/404';
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { errorCode } = await getInitialData({ path: pathname });
+  const { errorCode } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageType,
@@ -375,7 +412,10 @@ it('should render a 404 error page if a data fetch responds with a 404', async (
   fetchMock.mock(`http://localhost${pathname}.json`, 404);
 
   const { pageType, getInitialData } = getMatchingRoute(pathname);
-  const { status } = await getInitialData({ path: pathname });
+  const { status } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageType,
@@ -391,7 +431,10 @@ it('should fallback to and render a 404 error page if no route match is found', 
   const pathname = '/a/path/that/does/not/exist';
   const { pageType, getInitialData } =
     getMatchingRoute(pathname) || routes[routes.length - 1];
-  const { errorCode } = await getInitialData({ path: pathname });
+  const { errorCode } = await getInitialData({
+    path: pathname,
+    pageType,
+  });
   const { getByText } = renderRouter({
     pathname,
     pageType,

@@ -1,46 +1,24 @@
-import appConfig from '../../../../src/server/utilities/serviceConfigs';
+/* eslint-disable consistent-return */
 import envConfig from '../../../support/config/envs';
 import {
-  getEmbedUrl,
-  isExpired,
+  isAvailable,
   dataEndpointOverride,
 } from '../../../support/helpers/onDemandRadioTv';
-import config from '../../../support/config/services';
 
-export default ({ service, pageType, variant }) => {
+export default ({ service, pageType }) => {
   describe(`testsForAMPOnly for ${service} ${pageType}`, () => {
     describe('Audio Player', () => {
-      const { lang } = appConfig[config[service].name][variant];
-
-      it('should render an iframe with a valid URL', () => {
-        cy.request(
-          `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
-        ).then(({ body: jsonData }) => {
-          const embedUrl = getEmbedUrl(jsonData, lang);
-          const isExpiredEpisode = isExpired(jsonData);
-
-          if (!isExpiredEpisode) {
-            cy.get(`amp-iframe[src*="${embedUrl}"]`).should('be.visible');
-            cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
-          } else {
-            cy.log(`Episode is expired: ${Cypress.env('currentPath')}`);
-          }
-        });
-      });
-
       it('should render an image placeholder', () => {
         cy.request(
           `${Cypress.env('currentPath')}.json${dataEndpointOverride()}`,
         ).then(({ body: jsonData }) => {
-          const isExpiredEpisode = isExpired(jsonData);
-
-          if (!isExpiredEpisode) {
-            cy.get(
-              `amp-img[src="${envConfig.assetUrl}/images/amp_audio_placeholder.png"]`,
-            ).should('exist');
-          } else {
-            cy.log(`Episode is expired: ${Cypress.env('currentPath')}`);
+          if (!isAvailable(jsonData)) {
+            return cy.log(`Episode unavailable: ${Cypress.env('currentPath')}`);
           }
+
+          cy.get(
+            `amp-img[src="${envConfig.assetUrl}/images/amp_audio_placeholder.png"]`,
+          ).should('exist');
         });
       });
     });

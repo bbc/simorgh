@@ -11,12 +11,13 @@ import getEpisodeAvailability, {
 } from '#lib/utilities/episodeAvailability';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
-export default async ({ path: pathname }) => {
+export default async ({ path: pathname, pageType }) => {
   try {
     const onDemandRadioDataPath = overrideRendererOnTest(pathname);
-    const { json, status } = await fetchPageData(onDemandRadioDataPath);
-
-    const episodeIsAvailable = getEpisodeAvailability(json);
+    const { json, status } = await fetchPageData({
+      path: onDemandRadioDataPath,
+      pageType,
+    });
 
     const withLogging = pathWithLogging(
       getUrl(json),
@@ -61,7 +62,7 @@ export default async ({ path: pathname }) => {
         thumbnailImageUrl: getPlaceholderImageUrlUtil(
           get(['promo', 'media', 'imageUrl'], LOG_LEVELS.INFO),
         ),
-        episodeIsAvailable,
+        episodeAvailability: getEpisodeAvailability(json),
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
