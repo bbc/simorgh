@@ -1,6 +1,1736 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`IdxPage - Persian Snapshots should render a persian idx page correctly with most read and radio schedule 1`] = `
+.c47 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.725rem;
+  height: 0.725rem;
+}
+
+.c20 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.c58 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
+}
+
+.c1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #6E6E73;
+  margin: 0;
+  padding-bottom: 1.5rem;
+}
+
+.c0 {
+  margin: 0 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+.c67 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(10,auto);
+}
+
+.c72 {
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+}
+
+.c74 {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.c74:hover,
+.c74:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c74:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c73 {
+  padding-top: 0.375rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.c75 {
+  padding-top: 0.5rem;
+}
+
+.c70 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.c69 {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.c27 {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #6E6E73;
+  display: block;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c8 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-left: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c38 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #F2F2F2;
+  margin: 1rem 0;
+  padding-left: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c3 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+}
+
+.c5 {
+  margin: 0;
+  padding: 0;
+}
+
+.c14 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.c30 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+.c22 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.c32 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c13 {
+  position: relative;
+}
+
+.c29 {
+  position: relative;
+}
+
+.c15 {
+  position: relative;
+}
+
+.c17 {
+  position: absolute;
+  bottom: 0;
+}
+
+.c17 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c31 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c23 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+}
+
+.c33 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+
+.c26 {
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c34 {
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c24 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+.c24:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c24:hover,
+.c24:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c24:visited {
+  color: #6E6E73;
+}
+
+.c25 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c54 {
+  color: #3F3F42;
+  padding: 0.5rem 0;
+  display: inline-block;
+  width: 100%;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+
+.c62 {
+  color: #6E6E73;
+  padding: 0.5rem 0;
+  display: inline-block;
+  width: 100%;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+
+.c52 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+.c52:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c52:hover,
+.c52:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c52:visited {
+  color: #6E6E73;
+}
+
+.c52:hover .c53 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c52:focus .c53 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c49 {
+  padding-top: 0.5rem;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  outline: 0.0625rem solid transparent;
+  height: 100%;
+}
+
+.c50 {
+  padding: 0 0.5rem;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c51 {
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: #222222;
+  margin: 0;
+}
+
+.c60 {
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: #6E6E73;
+  margin: 0;
+}
+
+.c61 {
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: #11708C;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.c55 {
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #6E6E73;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+.c56 {
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0.5rem;
+  background-color: #222222;
+  outline: 0.0625rem solid transparent;
+  color: #FFFFFF;
+}
+
+.c63 {
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0.5rem;
+  background-color: #FFFFFF;
+  outline: 0.0625rem solid transparent;
+  color: #11708C;
+}
+
+.c57 > svg {
+  color: #FFFFFF;
+  fill: currentColor;
+  width: 1.0625rem;
+  height: 0.75rem;
+  margin: 0;
+}
+
+.c64 > svg {
+  color: #11708C;
+  fill: currentColor;
+  width: 1.0625rem;
+  height: 0.75rem;
+  margin: 0;
+}
+
+.c59 {
+  padding-right: 0.5rem;
+}
+
+.c45 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c46 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 0.25rem;
+}
+
+.c46 > svg {
+  color: #5A5A5A;
+  margin: 0;
+  overflow: visible;
+}
+
+.c48 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+}
+
+.c48 > time {
+  color: #5A5A5A;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c48::after {
+  content: '';
+  border-top: 0.0625rem solid #AEAEB5;
+  top: 1rem;
+  margin-right: 0.625rem;
+  width: 100%;
+}
+
+.c44 {
+  padding-bottom: 0.5rem;
+}
+
+.c41 {
+  padding: 0;
+  margin: 0;
+}
+
+.c43 {
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.c35 {
+  background-color: #F2F2F2;
+  padding: 0 1rem;
+}
+
+.c39 {
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.c37 {
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 0.5rem;
+}
+
+.c11 {
+  padding: 0.5rem 0 1rem;
+}
+
+.c11:last-child {
+  border: none;
+}
+
+.c11:first-child {
+  padding-top: 0;
+}
+
+.c11:last-child {
+  padding-bottom: 0;
+}
+
+.c9 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c16 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c18 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: block;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.c21 {
+  padding: 0 0.25rem;
+}
+
+.c2 {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.c65 {
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 1.625rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 1.5rem 0 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c1 {
+    padding: 1.5rem 0 0;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    margin: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    padding-top: 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding-bottom: 2.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c10 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c12 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c12 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c12 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c12 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c12 {
+    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c12 {
+    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c12 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c28 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c28 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c28 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c28 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c28 {
+    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c28 {
+    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c28 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c40 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c40 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c40 {
+    padding: 0 1rem;
+  }
+}
+
+@supports (display:grid) {
+  .c40 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c42 {
+    width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c42 {
+    width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c42 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c42 {
+    width: calc(3/6*(100% - 6 * 1rem) + 2 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c42 {
+    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c42 {
+    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c42 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c68 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c68 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c68 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c68 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c68 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c68 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c68 {
+    display: block;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c67 {
+    grid-template-rows: repeat( 5,auto );
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c71 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c71 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c71 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c71 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c71 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c76 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c76 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c76 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c76 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c76 {
+    min-width: 2rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c77 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c77 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c77 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c77 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c77 {
+    min-width: 2rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c78 {
+    min-width: 1rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c78 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c78 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c78 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c78 {
+    min-width: 1.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c72 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c72 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c74 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c74 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c74 {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c73 {
+    padding-left: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c27 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c27 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c7 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c8 {
+    font-size: 1.625rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    padding-left: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c38 {
+    font-size: 1.625rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c38 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c38 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c38 {
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c4 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c3 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c66 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c14 {
+    width: calc(50% - 0.5rem);
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c14 {
+    width: calc(50% - 0.5rem);
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c14 {
+    width: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) {
+  .c30 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c30 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c22 {
+    width: 50%;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c22 {
+    width: 50%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c22 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c32 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c32 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c32 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c13 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c29 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c31 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c31 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c23 {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c23 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c33 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c33 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c26 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c26 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c26 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c34 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c34 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c34 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:63rem) {
+  .c34 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c54 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c54 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c62 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c62 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c51 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c51 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c60 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c60 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c61 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c61 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c55 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c55 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c56 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c56 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c56 {
+    background-color: transparent;
+    outline: none;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c63 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c63 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c63 {
+    background-color: transparent;
+    outline: none;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c48 > time {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c48 > time {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c43 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c39 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c39 {
+    max-width: 63rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c37 {
+    padding-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c37 {
+    max-width: 63rem;
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c11 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c11 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c11:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c18 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c18 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c65 {
+    max-width: 63rem;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c36 {
+    margin: 2rem -0.5rem 0;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c36 {
+    margin: 2rem -1rem 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c36 {
+    margin: 1.5rem -1rem 0;
+  }
+}
+
 <div>
   <noscript />
   <div>
@@ -10,10 +1740,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
     role="main"
   >
     <div
-      class="IndexPageContainer-sc-1yb6vt4-0 lkUiYo"
+      class="c0"
     >
       <h1
-        class="HeadingIndex-sc-1155hfb-0 StyledIndexHeading-jnasqg-0 kYCmnu"
+        class="c1"
         dir="rtl"
         id="content"
         tabindex="-1"
@@ -22,26 +1752,26 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
       </h1>
       <section
         aria-labelledby="WatchListen"
-        class="StyledSection-sc-1x9qbiu-0 hNdEyC"
+        class="c2"
         role="region"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
+          class="c3"
         >
           <div
-            class="Bar-sc-1x4gwjz-0 kXOyLn"
+            class="c4"
           />
           <h2
-            class="Heading-sc-1x4gwjz-2 eZofTG"
+            class="c5"
           >
             <span
-              class="FlexColumn-wx5kdp-0 dgpsiS"
+              class="c6"
             >
               <span
-                class="FlexRow-wx5kdp-2 dVBNyZ"
+                class="c7"
               >
                 <span
-                  class="Title-wx5kdp-4 jJpioi"
+                  class="c8"
                   dir="rtl"
                   id="WatchListen"
                 >
@@ -52,46 +1782,46 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
           </h2>
         </div>
         <ul
-          class="StoryPromoUl-sc-171lqjd-2 brjIMO GridComponent-nf79gm-0 gjgzxV"
+          class="c9 c10"
           dir="rtl"
           role="list"
         >
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 kFXEso"
+            class="c11 c12"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
+              class="c13"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
+                class="c14"
                 dir="rtl"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c15"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c16"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
+                    class="c17"
                   >
                     <div
                       aria-hidden="true"
-                      class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
+                      class="c18"
                       dir="rtl"
                     >
                       <div
-                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                        class="c19"
                       >
                         <svg
                           aria-hidden="true"
-                          class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                          class="c20"
                           focusable="false"
                           height="12px"
                           viewBox="0 0 32 32"
@@ -102,7 +1832,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           />
                         </svg>
                         <time
-                          class="StyledTime-jpt91x-0 bYtFje"
+                          class="c21"
                           datetime="PT2M32S"
                         >
                           2:32
@@ -113,21 +1843,21 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
+                class="c22"
                 dir="rtl"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 jDsPwR"
+                  class="c23"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c24"
                     href="/persian/afghanistan-52726383"
                   >
                     <span
                       role="text"
                     >
                       <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                        class="c25"
                       >
                         ویدیو
                         , 
@@ -136,7 +1866,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         ابراز نگرانی سازمان ملل از افزایش کشتار غیر نظامیان در افغانستان
                       </span>
                       <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                        class="c25"
                       >
                         , 2,32
                       </span>
@@ -144,12 +1874,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eLVbDm"
+                  class="c26"
                 >
                   در حالیکه شمار رسمی مبتلایان به ویروس کرونا از چهار و نیم میلیون نفر عبور کرده، این روزها کشورهای آمریکای لاتین به کانون های اصلی شیوع تبدیل شده‌اند..
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  class="c27"
                   datetime="2020-05-19"
                 >
                   ۳۰ اردیبهشت ۱۳۹۹ - ۱۹ مه ۲۰۲۰
@@ -158,41 +1888,41 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c11 c28"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c29"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c30"
                 dir="rtl"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c15"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c16"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c31"
                   >
                     <div
                       aria-hidden="true"
-                      class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
+                      class="c18"
                       dir="rtl"
                     >
                       <div
-                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                        class="c19"
                       >
                         <svg
                           aria-hidden="true"
-                          class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                          class="c20"
                           focusable="false"
                           height="12px"
                           viewBox="0 0 32 32"
@@ -203,7 +1933,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           />
                         </svg>
                         <time
-                          class="StyledTime-jpt91x-0 bYtFje"
+                          class="c21"
                           datetime="PT2M12S"
                         >
                           2:12
@@ -214,21 +1944,21 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c32"
                 dir="rtl"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 ecBkfP"
+                  class="c33"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c24"
                     href="/persian/afghanistan-52710877"
                   >
                     <span
                       role="text"
                     >
                       <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                        class="c25"
                       >
                         ویدیو
                         , 
@@ -237,7 +1967,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         حمله انتحاری طالبان به دفتر امنیت ملی درغزنی
                       </span>
                       <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                        class="c25"
                       >
                         , 2,12
                       </span>
@@ -245,12 +1975,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eYboNJ"
+                  class="c34"
                 >
                   مقام‌های محلی غزنی گفته‌اند در حمله صبح امروز طالبان در شهر غزنی در جنوب افغانستان هفت نفر کشته و چهل نفر زخمی شده‌اند.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  class="c27"
                   datetime="2020-05-18"
                 >
                   ۲۹ اردیبهشت ۱۳۹۹ - ۱۸ مه ۲۰۲۰
@@ -259,41 +1989,41 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c11 c28"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c29"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c30"
                 dir="rtl"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c15"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c16"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c31"
                   >
                     <div
                       aria-hidden="true"
-                      class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
+                      class="c18"
                       dir="rtl"
                     >
                       <div
-                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                        class="c19"
                       >
                         <svg
                           aria-hidden="true"
-                          class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                          class="c20"
                           focusable="false"
                           height="12px"
                           viewBox="0 0 32 32"
@@ -304,7 +2034,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           />
                         </svg>
                         <time
-                          class="StyledTime-jpt91x-0 bYtFje"
+                          class="c21"
                           datetime="PT6M14S"
                         >
                           6:14
@@ -315,21 +2045,21 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c32"
                 dir="rtl"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 ecBkfP"
+                  class="c33"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c24"
                     href="/persian/afghanistan-52699256"
                   >
                     <span
                       role="text"
                     >
                       <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                        class="c25"
                       >
                         ویدیو
                         , 
@@ -338,7 +2068,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         توافقنامه‌ای پایان بخش اختلافات چند ماهه غنی و عبدالله
                       </span>
                       <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                        class="c25"
                       >
                         , 6,14
                       </span>
@@ -346,12 +2076,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eYboNJ"
+                  class="c34"
                 >
                   در افغانستان عبدالله عبدالله با امضای یک توافق از ادعای خود به عنوان رییس جمهوری گذشت و اشرف غنی را به عنوان رییس دولت پذیرفت.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  class="c27"
                   datetime="2020-05-17"
                 >
                   ۲۸ اردیبهشت ۱۳۹۹ - ۱۷ مه ۲۰۲۰
@@ -360,41 +2090,41 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c11 c28"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c29"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c30"
                 dir="rtl"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c15"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c16"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c31"
                   >
                     <div
                       aria-hidden="true"
-                      class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
+                      class="c18"
                       dir="rtl"
                     >
                       <div
-                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                        class="c19"
                       >
                         <svg
                           aria-hidden="true"
-                          class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                          class="c20"
                           focusable="false"
                           height="12px"
                           viewBox="0 0 32 32"
@@ -405,7 +2135,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           />
                         </svg>
                         <time
-                          class="StyledTime-jpt91x-0 bYtFje"
+                          class="c21"
                           datetime="PT3M21S"
                         >
                           3:21
@@ -416,21 +2146,21 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c32"
                 dir="rtl"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 ecBkfP"
+                  class="c33"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c24"
                     href="/persian/afghanistan-52651714"
                   >
                     <span
                       role="text"
                     >
                       <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                        class="c25"
                       >
                         ویدیو
                         , 
@@ -439,7 +2169,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         واکنش‌ها به حملات اخیر افغانستان؛ دعوت به همکاری طالبان با دولت
                       </span>
                       <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                        class="c25"
                       >
                         , 3,21
                       </span>
@@ -447,12 +2177,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eYboNJ"
+                  class="c34"
                 >
                   وزارت صحت افغانستان اعلام کرده که شمار قربانیان حمله به بیمارستان کابل به ۲۴ نفر رسیده‌است.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  class="c27"
                   datetime="2020-05-13"
                 >
                   ۲۴ اردیبهشت ۱۳۹۹ - ۱۳ مه ۲۰۲۰
@@ -461,41 +2191,41 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c11 c28"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c29"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c30"
                 dir="rtl"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c15"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c16"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c31"
                   >
                     <div
                       aria-hidden="true"
-                      class="StyledMediaIndicator-sc-1p6h86b-0 chbyfp"
+                      class="c18"
                       dir="rtl"
                     >
                       <div
-                        class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                        class="c19"
                       >
                         <svg
                           aria-hidden="true"
-                          class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                          class="c20"
                           focusable="false"
                           height="12px"
                           viewBox="0 0 32 32"
@@ -506,7 +2236,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           />
                         </svg>
                         <time
-                          class="StyledTime-jpt91x-0 bYtFje"
+                          class="c21"
                           datetime="PT4M48S"
                         >
                           4:48
@@ -517,21 +2247,21 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c32"
                 dir="rtl"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 ecBkfP"
+                  class="c33"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c24"
                     href="/persian/afghanistan-52640314"
                   >
                     <span
                       role="text"
                     >
                       <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                        class="c25"
                       >
                         ویدیو
                         , 
@@ -540,7 +2270,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         روایت بازماندگان از حادثه مرزی ایران و افغانستان
                       </span>
                       <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                        class="c25"
                       >
                         , 4,48
                       </span>
@@ -548,12 +2278,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eYboNJ"
+                  class="c34"
                 >
                   سخنگوی وزارت خارجه ایران، دست داشتن نیروی انتظامی در مرگ شهروندان افغانستان در مرز دو کشور را تکذیب کرده‌است.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  class="c27"
                   datetime="2020-05-12"
                 >
                   ۲۳ اردیبهشت ۱۳۹۹ - ۱۲ مه ۲۰۲۰
@@ -565,24 +2295,24 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
       </section>
       <section
         aria-labelledby="Radio-Schedule"
-        class="RadioScheduleSection-f8vxqz-0 jTLNRU StyledRadioScheduleContainer-sc-1rygalq-1 icYZeu"
+        class="c35 c36"
         lang="fa-AF"
         role="region"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD RadioScheduleSectionLabel-f8vxqz-2 bKHBEG"
+          class="c3 c37"
         >
           <h2
-            class="Heading-sc-1x4gwjz-2 eZofTG"
+            class="c5"
           >
             <span
-              class="FlexColumn-wx5kdp-0 dgpsiS"
+              class="c6"
             >
               <span
-                class="FlexRow-wx5kdp-2 dVBNyZ"
+                class="c7"
               >
                 <span
-                  class="Title-wx5kdp-4 bSIdgQ"
+                  class="c38"
                   dir="rtl"
                   id="Radio-Schedule"
                 >
@@ -593,32 +2323,33 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
           </h2>
         </div>
         <div
-          class="RadioScheduleWrapper-f8vxqz-1 hFZkwU"
+          class="c39"
+          data-e2e="radio-schedule"
         >
           <ul
-            class="GridComponent-nf79gm-0 kCcGpG StyledGrid-sc-1q74lji-1 dHsDNK"
+            class="c40 c41"
             dir="rtl"
             role="list"
           >
             <li
-              class="GridComponent-nf79gm-0 cxONfP StyledFlexGrid-sc-1q74lji-2 itXDho"
+              class="c42 c43"
               data-e2e="onDemand"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="StartTimeWrapper-sc-1q74lji-0 kamCRN"
+                class="c44"
               >
                 <div
-                  class="Wrapper-ojp38q-0 iLZIDn"
+                  class="c45"
                 >
                   <span
-                    class="StyledClock-ojp38q-1 gushnz"
+                    class="c46"
                     dir="rtl"
                   >
                     <svg
                       aria-hidden="true"
-                      class="CoreIcon-sc-1eqhzay-0 ClockIcon-sc-1eqhzay-1 geFUte"
+                      class="c47"
                       focusable="false"
                       height="13"
                       viewBox="0 0 13 13"
@@ -634,11 +2365,11 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   </span>
                   <span
                     aria-hidden="true"
-                    class="StyledTimestamp-ojp38q-2 gnYSeR"
+                    class="c48"
                     dir="rtl"
                   >
                     <time
-                      class="StyledTimestamp-um718p-0 fMHMrb"
+                      class="c27"
                       datetime="2020-03-26"
                     >
                       ۰۵:۳۰
@@ -647,32 +2378,32 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 </div>
               </div>
               <div
-                class="CardWrapper-sc-6oo8lp-2 jgjrOO"
+                class="c49"
               >
                 <div
-                  class="TextWrapper-sc-6oo8lp-3 bcFowo"
+                  class="c50"
                 >
                   <h3
-                    class="StyledH3-sc-6oo8lp-4 jdapZU"
+                    class="c51"
                   >
                     <a
-                      class="Link-sc-1dvfmi3-5 StyledLink-sc-6oo8lp-1 dCvEUl"
+                      class="c52"
                       href="/persian/bbc_dari_radio/w172x1rwggbcdq8"
                     >
                       <span
-                        class="HeadingContentWrapper-sc-6oo8lp-11 jHsaER"
+                        class=""
                         role="text"
                       >
                         نبض خبر
                         <span
-                          class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                          class="c25"
                         >
                           , 
                           ۰۵:۳۰
                           , 
                         </span>
                         <span
-                          class="TitleWrapper-sc-6oo8lp-0 psNPy"
+                          class="c53 c54"
                         >
                           ۲۶ مارس ۲۰۲۰
                         </span>
@@ -680,20 +2411,20 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </a>
                   </h3>
                   <p
-                    class="SummaryWrapper-sc-6oo8lp-6 fTeFGf"
+                    class="c55"
                   >
                     تازه ترین خبرهای جهان
                   </p>
                 </div>
                 <div
-                  class="ButtonWrapper-sc-6oo8lp-7 chenCM"
+                  class="c56"
                 >
                   <span
-                    class="IconWrapper-sc-6oo8lp-8 dKFQcC"
+                    class="c57"
                   >
                     <svg
                       aria-hidden="true"
-                      class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
+                      class="c58"
                       focusable="false"
                       height="12px"
                       viewBox="0 0 13 12"
@@ -708,18 +2439,18 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </svg>
                   </span>
                   <time
-                    class="DurationWrapper-sc-6oo8lp-9 hWRNdd"
+                    class="c59"
                     datetime="PT3M"
                     dir="rtl"
                   >
                     <span
-                      class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                      class="c25"
                     >
                        مدت ۰۳،۰۰ 
                     </span>
                     <span
                       aria-hidden="true"
-                      class="DurationTextWrapper-sc-6oo8lp-10 dfaGSJ"
+                      class=""
                     >
                       ۰۳:۰۰
                     </span>
@@ -728,24 +2459,24 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               </div>
             </li>
             <li
-              class="GridComponent-nf79gm-0 cxONfP StyledFlexGrid-sc-1q74lji-2 itXDho"
+              class="c42 c43"
               data-e2e="onDemand"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="StartTimeWrapper-sc-1q74lji-0 kamCRN"
+                class="c44"
               >
                 <div
-                  class="Wrapper-ojp38q-0 iLZIDn"
+                  class="c45"
                 >
                   <span
-                    class="StyledClock-ojp38q-1 gushnz"
+                    class="c46"
                     dir="rtl"
                   >
                     <svg
                       aria-hidden="true"
-                      class="CoreIcon-sc-1eqhzay-0 ClockIcon-sc-1eqhzay-1 geFUte"
+                      class="c47"
                       focusable="false"
                       height="13"
                       viewBox="0 0 13 13"
@@ -761,11 +2492,11 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   </span>
                   <span
                     aria-hidden="true"
-                    class="StyledTimestamp-ojp38q-2 gnYSeR"
+                    class="c48"
                     dir="rtl"
                   >
                     <time
-                      class="StyledTimestamp-um718p-0 fMHMrb"
+                      class="c27"
                       datetime="2020-03-26"
                     >
                       ۰۲:۳۰
@@ -774,32 +2505,32 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 </div>
               </div>
               <div
-                class="CardWrapper-sc-6oo8lp-2 jgjrOO"
+                class="c49"
               >
                 <div
-                  class="TextWrapper-sc-6oo8lp-3 bcFowo"
+                  class="c50"
                 >
                   <h3
-                    class="StyledH3-sc-6oo8lp-4 jdapZU"
+                    class="c51"
                   >
                     <a
-                      class="Link-sc-1dvfmi3-5 StyledLink-sc-6oo8lp-1 dCvEUl"
+                      class="c52"
                       href="/persian/bbc_dari_radio/w3csz8fk"
                     >
                       <span
-                        class="HeadingContentWrapper-sc-6oo8lp-11 jHsaER"
+                        class=""
                         role="text"
                       >
                         چشم انداز بامدادی 2
                         <span
-                          class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                          class="c25"
                         >
                           , 
                           ۰۲:۳۰
                           , 
                         </span>
                         <span
-                          class="TitleWrapper-sc-6oo8lp-0 psNPy"
+                          class="c53 c54"
                         >
                           ۲۶ مارس ۲۰۲۰
                         </span>
@@ -807,20 +2538,20 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </a>
                   </h3>
                   <p
-                    class="SummaryWrapper-sc-6oo8lp-6 fTeFGf"
+                    class="c55"
                   >
                     تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
                   </p>
                 </div>
                 <div
-                  class="ButtonWrapper-sc-6oo8lp-7 chenCM"
+                  class="c56"
                 >
                   <span
-                    class="IconWrapper-sc-6oo8lp-8 dKFQcC"
+                    class="c57"
                   >
                     <svg
                       aria-hidden="true"
-                      class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
+                      class="c58"
                       focusable="false"
                       height="12px"
                       viewBox="0 0 13 12"
@@ -835,18 +2566,18 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </svg>
                   </span>
                   <time
-                    class="DurationWrapper-sc-6oo8lp-9 hWRNdd"
+                    class="c59"
                     datetime="PT29M30S"
                     dir="rtl"
                   >
                     <span
-                      class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                      class="c25"
                     >
                        مدت ۲۹،۳۰ 
                     </span>
                     <span
                       aria-hidden="true"
-                      class="DurationTextWrapper-sc-6oo8lp-10 dfaGSJ"
+                      class=""
                     >
                       ۲۹:۳۰
                     </span>
@@ -855,24 +2586,24 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               </div>
             </li>
             <li
-              class="GridComponent-nf79gm-0 cxONfP StyledFlexGrid-sc-1q74lji-2 itXDho"
+              class="c42 c43"
               data-e2e="onDemand"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="StartTimeWrapper-sc-1q74lji-0 kamCRN"
+                class="c44"
               >
                 <div
-                  class="Wrapper-ojp38q-0 iLZIDn"
+                  class="c45"
                 >
                   <span
-                    class="StyledClock-ojp38q-1 gushnz"
+                    class="c46"
                     dir="rtl"
                   >
                     <svg
                       aria-hidden="true"
-                      class="CoreIcon-sc-1eqhzay-0 ClockIcon-sc-1eqhzay-1 geFUte"
+                      class="c47"
                       focusable="false"
                       height="13"
                       viewBox="0 0 13 13"
@@ -888,11 +2619,11 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   </span>
                   <span
                     aria-hidden="true"
-                    class="StyledTimestamp-ojp38q-2 gnYSeR"
+                    class="c48"
                     dir="rtl"
                   >
                     <time
-                      class="StyledTimestamp-um718p-0 fMHMrb"
+                      class="c27"
                       datetime="2020-03-26"
                     >
                       ۰۱:۳۰
@@ -901,32 +2632,32 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 </div>
               </div>
               <div
-                class="CardWrapper-sc-6oo8lp-2 jgjrOO"
+                class="c49"
               >
                 <div
-                  class="TextWrapper-sc-6oo8lp-3 bcFowo"
+                  class="c50"
                 >
                   <h3
-                    class="StyledH3-sc-6oo8lp-4 jdapZU"
+                    class="c51"
                   >
                     <a
-                      class="Link-sc-1dvfmi3-5 StyledLink-sc-6oo8lp-1 dCvEUl"
+                      class="c52"
                       href="/persian/bbc_dari_radio/w3csz7tn"
                     >
                       <span
-                        class="HeadingContentWrapper-sc-6oo8lp-11 jHsaER"
+                        class=""
                         role="text"
                       >
                         چشم انداز بامدادی 1
                         <span
-                          class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                          class="c25"
                         >
                           , 
                           ۰۱:۳۰
                           , 
                         </span>
                         <span
-                          class="TitleWrapper-sc-6oo8lp-0 psNPy"
+                          class="c53 c54"
                         >
                           ۲۶ مارس ۲۰۲۰
                         </span>
@@ -934,20 +2665,20 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </a>
                   </h3>
                   <p
-                    class="SummaryWrapper-sc-6oo8lp-6 fTeFGf"
+                    class="c55"
                   >
                     تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
                   </p>
                 </div>
                 <div
-                  class="ButtonWrapper-sc-6oo8lp-7 chenCM"
+                  class="c56"
                 >
                   <span
-                    class="IconWrapper-sc-6oo8lp-8 dKFQcC"
+                    class="c57"
                   >
                     <svg
                       aria-hidden="true"
-                      class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
+                      class="c58"
                       focusable="false"
                       height="12px"
                       viewBox="0 0 13 12"
@@ -962,18 +2693,18 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </svg>
                   </span>
                   <time
-                    class="DurationWrapper-sc-6oo8lp-9 hWRNdd"
+                    class="c59"
                     datetime="PT29M30S"
                     dir="rtl"
                   >
                     <span
-                      class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                      class="c25"
                     >
                        مدت ۲۹،۳۰ 
                     </span>
                     <span
                       aria-hidden="true"
-                      class="DurationTextWrapper-sc-6oo8lp-10 dfaGSJ"
+                      class=""
                     >
                       ۲۹:۳۰
                     </span>
@@ -982,24 +2713,24 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
               </div>
             </li>
             <li
-              class="GridComponent-nf79gm-0 cxONfP StyledFlexGrid-sc-1q74lji-2 itXDho"
+              class="c42 c43"
               data-e2e="next"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="StartTimeWrapper-sc-1q74lji-0 kamCRN"
+                class="c44"
               >
                 <div
-                  class="Wrapper-ojp38q-0 iLZIDn"
+                  class="c45"
                 >
                   <span
-                    class="StyledClock-ojp38q-1 gushnz"
+                    class="c46"
                     dir="rtl"
                   >
                     <svg
                       aria-hidden="true"
-                      class="CoreIcon-sc-1eqhzay-0 ClockIcon-sc-1eqhzay-1 geFUte"
+                      class="c47"
                       focusable="false"
                       height="13"
                       viewBox="0 0 13 13"
@@ -1015,11 +2746,11 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   </span>
                   <span
                     aria-hidden="true"
-                    class="StyledTimestamp-ojp38q-2 gnYSeR"
+                    class="c48"
                     dir="rtl"
                   >
                     <time
-                      class="StyledTimestamp-um718p-0 fMHMrb"
+                      class="c27"
                       datetime="2030-01-01"
                     >
                       ۰۹:۰۰
@@ -1028,54 +2759,54 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 </div>
               </div>
               <div
-                class="CardWrapper-sc-6oo8lp-2 jgjrOO"
+                class="c49"
               >
                 <div
-                  class="TextWrapper-sc-6oo8lp-3 bcFowo"
+                  class="c50"
                 >
                   <h3
-                    class="StyledH3-sc-6oo8lp-4 dOhQDK"
+                    class="c60"
                   >
                     <span
-                      class="HeadingContentWrapper-sc-6oo8lp-11 jHsaER"
+                      class=""
                       role="text"
                     >
                       <span
-                        class="NextLabel-sc-6oo8lp-5 eTDWik"
+                        class="c61"
                         dir="rtl"
                       >
                         بعدی 
                       </span>
                       چشم انداز بامدادی 1
                       <span
-                        class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                        class="c25"
                       >
                         , 
                         ۰۹:۰۰
                         , 
                       </span>
                       <span
-                        class="TitleWrapper-sc-6oo8lp-0 bXLYaO"
+                        class="c53 c62"
                       >
                         ۱ ژانویه ۲۰۳۰
                       </span>
                     </span>
                   </h3>
                   <p
-                    class="SummaryWrapper-sc-6oo8lp-6 fTeFGf"
+                    class="c55"
                   >
                     تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
                   </p>
                 </div>
                 <div
-                  class="ButtonWrapper-sc-6oo8lp-7 brPWmx"
+                  class="c63"
                 >
                   <span
-                    class="IconWrapper-sc-6oo8lp-8 gqyxry"
+                    class="c64"
                   >
                     <svg
                       aria-hidden="true"
-                      class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
+                      class="c58"
                       focusable="false"
                       height="12px"
                       viewBox="0 0 13 12"
@@ -1090,18 +2821,18 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </svg>
                   </span>
                   <time
-                    class="DurationWrapper-sc-6oo8lp-9 hWRNdd"
+                    class="c59"
                     datetime="PT26M30S"
                     dir="rtl"
                   >
                     <span
-                      class="VisuallyHiddenText-sc-1yjwwa5-0 ldFJPH"
+                      class="c25"
                     >
                        مدت ۲۶،۳۰ 
                     </span>
                     <span
                       aria-hidden="true"
-                      class="DurationTextWrapper-sc-6oo8lp-10 dfaGSJ"
+                      class=""
                     >
                       ۲۶:۳۰
                     </span>
@@ -1114,26 +2845,26 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
       </section>
       <section
         aria-labelledby="Features"
-        class="StyledSection-sc-1x9qbiu-0 hNdEyC"
+        class="c2"
         role="region"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
+          class="c3"
         >
           <div
-            class="Bar-sc-1x4gwjz-0 kXOyLn"
+            class="c4"
           />
           <h2
-            class="Heading-sc-1x4gwjz-2 eZofTG"
+            class="c5"
           >
             <span
-              class="FlexColumn-wx5kdp-0 dgpsiS"
+              class="c6"
             >
               <span
-                class="FlexRow-wx5kdp-2 dVBNyZ"
+                class="c7"
               >
                 <span
-                  class="Title-wx5kdp-4 jJpioi"
+                  class="c8"
                   dir="rtl"
                   id="Features"
                 >
@@ -1144,58 +2875,58 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
           </h2>
         </div>
         <ul
-          class="StoryPromoUl-sc-171lqjd-2 brjIMO GridComponent-nf79gm-0 gjgzxV"
+          class="c9 c10"
           dir="rtl"
           role="list"
         >
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 kFXEso"
+            class="c11 c12"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
+              class="c13"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
+                class="c14"
                 dir="rtl"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c15"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c16"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
+                    class="c17"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
+                class="c22"
                 dir="rtl"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 jDsPwR"
+                  class="c23"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c24"
                     href="/persian/afghanistan-52722865"
                   >
                     پشت پرده توافق غنی و عبدالله؛ مارشال شدن دوستم و ماجراهای دیگر
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eLVbDm"
+                  class="c26"
                 >
                   چانه‌زنی برای دست‌یابی به یک توافق سیاسی بین اشرف غنی، رئیس جمهوری و عبدالله عبدالله که همزمان با او اعلام ریاست جمهوری کرده بود، از اوایل اسفند/حوت سال گذشته خورشیدی آغاز شد و حدود سه ماه زمان گرفت. مذاکراتی که پشت درهای بسته برگزار می‌شد به قول منابعی که با آنها صحبت کرده‌ام بارها به بن‌بست رسید و جلسات بارها با عصبانیت یکی از دو طرف مذاکره بی‌نتیجه پایان یافت.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  class="c27"
                   datetime="2020-05-20"
                 >
                   ۳۱ اردیبهشت ۱۳۹۹ - ۲۰ مه ۲۰۲۰
@@ -1204,53 +2935,53 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c11 c28"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c29"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c30"
                 dir="rtl"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c15"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c16"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c31"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c32"
                 dir="rtl"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 ecBkfP"
+                  class="c33"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c24"
                     href="/persian/afghanistan-52697976"
                   >
                     کرونا گردشگران را در افغانستان زمین‌گیر کرد
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eYboNJ"
+                  class="c34"
                 >
                   شیوع ویروس کرونا در افغانستان گردشگری را در این کشور با رکود مواجه کرده و اماکن توریستی از شرق تا غرب و از شمال تا جنوب بر روی گردشگران بسته شده است. از صنعت توریزم که هم دولت نفع می‌برد و هم مردم، حالا با رکود بی‌سابقه مواجه شده است.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  class="c27"
                   datetime="2020-05-19"
                 >
                   ۳۰ اردیبهشت ۱۳۹۹ - ۱۹ مه ۲۰۲۰
@@ -1259,53 +2990,53 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c11 c28"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c29"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c30"
                 dir="rtl"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c15"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c16"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c31"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c32"
                 dir="rtl"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 ecBkfP"
+                  class="c33"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c24"
                     href="/persian/blog-viewpoints-52616632"
                   >
                     ناظران می‌گویند؛ توافقنامه غنی و عبدالله؛ آخرین میخ بر تابوت دموکراسی افغانستان؟
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eYboNJ"
+                  class="c34"
                 >
                   سانگه صدیقی، فعال سیاسی و مدنی در مطلبی برای صفحه ناظران بی‌بی‌سی فارسی به توافق‌نامه بین محمد اشرف غنی و عبدالله پرداخته است و آن را "زوال دموکراسی" خوانده است.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  class="c27"
                   datetime="2020-05-18"
                 >
                   ۲۹ اردیبهشت ۱۳۹۹ - ۱۸ مه ۲۰۲۰
@@ -1314,53 +3045,53 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c11 c28"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c29"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c30"
                 dir="rtl"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c15"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c16"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c31"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c32"
                 dir="rtl"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 ecBkfP"
+                  class="c33"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c24"
                     href="/persian/afghanistan-52700014"
                   >
                     توافق‌نامه غنی و عبدالله؛ اختلاف چه بود و چگونه حل شد؟
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eYboNJ"
+                  class="c34"
                 >
                   محمد اشرف غنی، رئیس جمهور افغانستان موافقت‌نامه‌ای با عبدالله عبدالله، رئیس اجرایی پیشین امضا کرده است. با امضای این موافقت‌نامه میان دو رقیب سیاسی، جنجال پس از اعلام نتیجه انتخابات اخیر افغانستان پس از نزدیک به پنج ماه پایان یافت. اختلاف بین این دو رهبر چه بود و چگونه حل شد؟
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  class="c27"
                   datetime="2020-05-17"
                 >
                   ۲۸ اردیبهشت ۱۳۹۹ - ۱۷ مه ۲۰۲۰
@@ -1369,53 +3100,53 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c11 c28"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c29"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c30"
                 dir="rtl"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c15"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c16"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c31"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c32"
                 dir="rtl"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 ecBkfP"
+                  class="c33"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c24"
                     href="/persian/blog-viewpoints-52692067"
                   >
                     'آرمان ایران، داشتن نفوذ شبیه عراق در افغانستان نیست'
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eYboNJ"
+                  class="c34"
                 >
                   نویسنده در این یادداشت که برای صفحه ناظران فرستاده، می‌گوید که "آرمان ایران، داشتنِ نفوذ شبیه به عراق در افغانستان نیست" اما دارای منافع در افغانستان است از جمله صادرات و روابط تجاری و گاهی دشمن مشترک مانند داعش.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 fMHMrb"
+                  class="c27"
                   datetime="2020-05-16"
                 >
                   ۲۷ اردیبهشت ۱۳۹۹ - ۱۶ مه ۲۰۲۰
@@ -1427,27 +3158,27 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
       </section>
       <section
         aria-labelledby="Most-Read"
-        class="MostReadSection-sc-1r6ctrd-0 IdxMostReadSection-sc-1rygalq-0 jNNusG"
+        class="c65"
         data-e2e="most-read"
         role="region"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD SectionLabelWithMargin-sc-1resov9-0 dxfHPg"
+          class="c3 c66"
         >
           <div
-            class="Bar-sc-1x4gwjz-0 kXOyLn"
+            class="c4"
           />
           <h2
-            class="Heading-sc-1x4gwjz-2 eZofTG"
+            class="c5"
           >
             <span
-              class="FlexColumn-wx5kdp-0 dgpsiS"
+              class="c6"
             >
               <span
-                class="FlexRow-wx5kdp-2 dVBNyZ"
+                class="c7"
               >
                 <span
-                  class="Title-wx5kdp-4 jJpioi"
+                  class="c8"
                   dir="rtl"
                   id="Most-Read"
                 >
@@ -1458,43 +3189,43 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
           </h2>
         </div>
         <ol
-          class="GridComponent-nf79gm-0 gjgzxV OneColumnGrid-sc-1ofyujo-0 TwoColumnGrid-sc-1ofyujo-1 boiGsE"
+          class="c10 c67"
           dir="rtl"
           role="list"
         >
           <li
-            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            class="c68 c69"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="ItemWrapper-u0d8kd-3 juBlKT"
+              class="c70"
             >
               <div
-                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cUcvKH"
+                class="c71"
                 dir="rtl"
               >
                 <span
-                  class="StyledSpan-fs4y6m-3 bvXRlE"
+                  class="c72"
                 >
                   ۱
                 </span>
               </div>
               <div
-                class="StyledItem-u0d8kd-1 fkeZwt"
+                class="c73"
                 dir="rtl"
               >
                 <a
-                  class="StyledLink-u0d8kd-0 OTgcR"
+                  class="c74"
                   href="/persian/world-50317704"
                 >
                   توافق با جدایی‌طلبان یمن؛ ایران اعتراض کرد، سازمان ملل استقبال
                 </a>
                 <div
-                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                  class="c75"
                 >
                   <time
-                    class="StyledTimestamp-um718p-0 fMHMrb"
+                    class="c27"
                     datetime="2019-11-06"
                   >
                     به روز شده در ۶ نوامبر ۲۰۱۹
@@ -1504,38 +3235,38 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            class="c68 c69"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="ItemWrapper-u0d8kd-3 juBlKT"
+              class="c70"
             >
               <div
-                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hFxcvr"
+                class="c76"
                 dir="rtl"
               >
                 <span
-                  class="StyledSpan-fs4y6m-3 bvXRlE"
+                  class="c72"
                 >
                   ۲
                 </span>
               </div>
               <div
-                class="StyledItem-u0d8kd-1 fkeZwt"
+                class="c73"
                 dir="rtl"
               >
                 <a
-                  class="StyledLink-u0d8kd-0 OTgcR"
+                  class="c74"
                   href="/persian/iran-50319870"
                 >
                   فراخوان آذری جهرمی برای مناظره اینستاگرامی - زرآبادی: در مجلس مناظره کنیم
                 </a>
                 <div
-                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                  class="c75"
                 >
                   <time
-                    class="StyledTimestamp-um718p-0 fMHMrb"
+                    class="c27"
                     datetime="2019-11-06"
                   >
                     به روز شده در ۶ نوامبر ۲۰۱۹
@@ -1545,38 +3276,38 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            class="c68 c69"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="ItemWrapper-u0d8kd-3 juBlKT"
+              class="c70"
             >
               <div
-                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cUcvKH"
+                class="c71"
                 dir="rtl"
               >
                 <span
-                  class="StyledSpan-fs4y6m-3 bvXRlE"
+                  class="c72"
                 >
                   ۳
                 </span>
               </div>
               <div
-                class="StyledItem-u0d8kd-1 fkeZwt"
+                class="c73"
                 dir="rtl"
               >
                 <a
-                  class="StyledLink-u0d8kd-0 OTgcR"
+                  class="c74"
                   href="/persian/world-50320610"
                 >
                   ترکیه: همسر ابوبکر بغدادی را 'دستگیر کردیم'
                 </a>
                 <div
-                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                  class="c75"
                 >
                   <time
-                    class="StyledTimestamp-um718p-0 fMHMrb"
+                    class="c27"
                     datetime="2019-11-06"
                   >
                     به روز شده در ۶ نوامبر ۲۰۱۹
@@ -1586,38 +3317,38 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            class="c68 c69"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="ItemWrapper-u0d8kd-3 juBlKT"
+              class="c70"
             >
               <div
-                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hFxcvr"
+                class="c76"
                 dir="rtl"
               >
                 <span
-                  class="StyledSpan-fs4y6m-3 bvXRlE"
+                  class="c72"
                 >
                   ۴
                 </span>
               </div>
               <div
-                class="StyledItem-u0d8kd-1 fkeZwt"
+                class="c73"
                 dir="rtl"
               >
                 <a
-                  class="StyledLink-u0d8kd-0 OTgcR"
+                  class="c74"
                   href="/persian/world-50316456"
                 >
                   غنی سازی مجدد در فردو: مکرون اقدام ایران را 'عمیقا مایه نگرانی' خواند
                 </a>
                 <div
-                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                  class="c75"
                 >
                   <time
-                    class="StyledTimestamp-um718p-0 fMHMrb"
+                    class="c27"
                     datetime="2019-11-06"
                   >
                     به روز شده در ۶ نوامبر ۲۰۱۹
@@ -1627,38 +3358,38 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            class="c68 c69"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="ItemWrapper-u0d8kd-3 juBlKT"
+              class="c70"
             >
               <div
-                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 cUcvKH"
+                class="c71"
                 dir="rtl"
               >
                 <span
-                  class="StyledSpan-fs4y6m-3 bvXRlE"
+                  class="c72"
                 >
                   ۵
                 </span>
               </div>
               <div
-                class="StyledItem-u0d8kd-1 fkeZwt"
+                class="c73"
                 dir="rtl"
               >
                 <a
-                  class="StyledLink-u0d8kd-0 OTgcR"
+                  class="c74"
                   href="/persian/magazine-50249226"
                 >
                   دوازده دلیل حکمرانی حشرات: سوسک می‌تواند دو هفته بدون سر زنده بماند
                 </a>
                 <div
-                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                  class="c75"
                 >
                   <time
-                    class="StyledTimestamp-um718p-0 fMHMrb"
+                    class="c27"
                     datetime="2019-11-06"
                   >
                     به روز شده در ۶ نوامبر ۲۰۱۹
@@ -1668,38 +3399,38 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            class="c68 c69"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="ItemWrapper-u0d8kd-3 juBlKT"
+              class="c70"
             >
               <div
-                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hhqpIX"
+                class="c77"
                 dir="rtl"
               >
                 <span
-                  class="StyledSpan-fs4y6m-3 bvXRlE"
+                  class="c72"
                 >
                   ۶
                 </span>
               </div>
               <div
-                class="StyledItem-u0d8kd-1 fkeZwt"
+                class="c73"
                 dir="rtl"
               >
                 <a
-                  class="StyledLink-u0d8kd-0 OTgcR"
+                  class="c74"
                   href="/persian/world-50317700"
                 >
                   انتخابات ایالتی آمریکا؛ دموکرات‌ها از جمهوری‌خواهان پیش افتادند
                 </a>
                 <div
-                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                  class="c75"
                 >
                   <time
-                    class="StyledTimestamp-um718p-0 fMHMrb"
+                    class="c27"
                     datetime="2019-11-06"
                   >
                     به روز شده در ۶ نوامبر ۲۰۱۹
@@ -1709,38 +3440,38 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            class="c68 c69"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="ItemWrapper-u0d8kd-3 juBlKT"
+              class="c70"
             >
               <div
-                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 lhNSnn"
+                class="c78"
                 dir="rtl"
               >
                 <span
-                  class="StyledSpan-fs4y6m-3 bvXRlE"
+                  class="c72"
                 >
                   ۷
                 </span>
               </div>
               <div
-                class="StyledItem-u0d8kd-1 fkeZwt"
+                class="c73"
                 dir="rtl"
               >
                 <a
-                  class="StyledLink-u0d8kd-0 OTgcR"
+                  class="c74"
                   href="/persian/sport-50322486"
                 >
                   عراق اردن را به عنوان میزبان بازی با ایران معرفی کرد
                 </a>
                 <div
-                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                  class="c75"
                 >
                   <time
-                    class="StyledTimestamp-um718p-0 fMHMrb"
+                    class="c27"
                     datetime="2019-11-06"
                   >
                     به روز شده در ۶ نوامبر ۲۰۱۹
@@ -1750,38 +3481,38 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            class="c68 c69"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="ItemWrapper-u0d8kd-3 juBlKT"
+              class="c70"
             >
               <div
-                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hhqpIX"
+                class="c77"
                 dir="rtl"
               >
                 <span
-                  class="StyledSpan-fs4y6m-3 bvXRlE"
+                  class="c72"
                 >
                   ۸
                 </span>
               </div>
               <div
-                class="StyledItem-u0d8kd-1 fkeZwt"
+                class="c73"
                 dir="rtl"
               >
                 <a
-                  class="StyledLink-u0d8kd-0 OTgcR"
+                  class="c74"
                   href="/persian/iran-features-50310665"
                 >
                   آیا تهران بازی هسته ای را به هم می‌زند؟
                 </a>
                 <div
-                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                  class="c75"
                 >
                   <time
-                    class="StyledTimestamp-um718p-0 fMHMrb"
+                    class="c27"
                     datetime="2019-11-06"
                   >
                     به روز شده در ۶ نوامبر ۲۰۱۹
@@ -1791,38 +3522,38 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            class="c68 c69"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="ItemWrapper-u0d8kd-3 juBlKT"
+              class="c70"
             >
               <div
-                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 lhNSnn"
+                class="c78"
                 dir="rtl"
               >
                 <span
-                  class="StyledSpan-fs4y6m-3 bvXRlE"
+                  class="c72"
                 >
                   ۹
                 </span>
               </div>
               <div
-                class="StyledItem-u0d8kd-1 fkeZwt"
+                class="c73"
                 dir="rtl"
               >
                 <a
-                  class="StyledLink-u0d8kd-0 OTgcR"
+                  class="c74"
                   href="/persian/world-50316450"
                 >
                   آمریکا: دو ایرانی اتهام جمع‌آوری اطلاعات علیه سازمان مجاهدین در خاک آمریکا را پذیرفتند
                 </a>
                 <div
-                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                  class="c75"
                 >
                   <time
-                    class="StyledTimestamp-um718p-0 fMHMrb"
+                    class="c27"
                     datetime="2019-11-06"
                   >
                     به روز شده در ۶ نوامبر ۲۰۱۹
@@ -1832,38 +3563,38 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 iLbAiY"
+            class="c68 c69"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="ItemWrapper-u0d8kd-3 juBlKT"
+              class="c70"
             >
               <div
-                class="OneColumnWrapper-fs4y6m-0 TwoColumnWrapper-fs4y6m-1 hhqpIX"
+                class="c77"
                 dir="rtl"
               >
                 <span
-                  class="StyledSpan-fs4y6m-3 bvXRlE"
+                  class="c72"
                 >
                   ۱۰
                 </span>
               </div>
               <div
-                class="StyledItem-u0d8kd-1 fkeZwt"
+                class="c73"
                 dir="rtl"
               >
                 <a
-                  class="StyledLink-u0d8kd-0 OTgcR"
+                  class="c74"
                   href="/persian/sport-50318030"
                 >
                   فوتبال ایران و عراق؛ ایران: امن است بازی می‌کنیم، فیفا: ناامن است بازی نکنید
                 </a>
                 <div
-                  class="TimestampWrapper-u0d8kd-2 hlECaE"
+                  class="c75"
                 >
                   <time
-                    class="StyledTimestamp-um718p-0 fMHMrb"
+                    class="c27"
                     datetime="2019-11-06"
                   >
                     به روز شده در ۶ نوامبر ۲۰۱۹
@@ -1880,6 +3611,1006 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 `;
 
 exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correctly 1`] = `
+.c1 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #6E6E73;
+  margin: 0;
+  padding-bottom: 1.5rem;
+}
+
+.c0 {
+  margin: 0 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+.c20 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c6 {
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6:focus,
+.c6:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c9 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c10 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin: 1rem 0;
+  color: #222222;
+  background-color: #FDFDFD;
+  white-space: nowrap;
+  padding-left: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c3 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+}
+
+.c5 {
+  margin: 0;
+  padding: 0;
+}
+
+.c34 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.c27 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+.c21 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 100%;
+}
+
+.c35 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.c29 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c16 {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+
+.c33 {
+  position: relative;
+}
+
+.c26 {
+  position: relative;
+}
+
+.c15 {
+  position: relative;
+}
+
+.c22 {
+  position: relative;
+}
+
+.c24 {
+  position: absolute;
+  bottom: 0;
+}
+
+.c24 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c28 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c17 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+}
+
+.c30 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.c36 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.c19 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c37 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c18 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+.c18:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c18:hover,
+.c18:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c18:visited {
+  color: #6E6E73;
+}
+
+.c13 {
+  padding: 0.5rem 0 1rem;
+}
+
+.c13:last-child {
+  border: none;
+}
+
+.c13:first-child {
+  padding-top: 0;
+}
+
+.c13:last-child {
+  padding-bottom: 0;
+}
+
+.c11 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c23 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c38 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #ECEAE7;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  padding-bottom: 56.187290969899664%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+.c2 {
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    padding: 1.5rem 0 0.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c1 {
+    padding: 1.5rem 0 0;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    margin: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    padding-top: 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    padding-bottom: 2.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c12 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c32 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c32 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c32 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c32 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c32 {
+    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c32 {
+    width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c32 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c25 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c25 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c25 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c25 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c25 {
+    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c25 {
+    width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c25 {
+    display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c14 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c14 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c14 {
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
+    margin: 0 0.25rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c14 {
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c14 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c14 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c14 {
+    display: block;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c20 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c20 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c31 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c9 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c10 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    margin: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c4 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c3 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c34 {
+    width: calc(50% - 0.5rem);
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c34 {
+    width: calc(50% - 0.5rem);
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c34 {
+    width: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) {
+  .c27 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c27 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c21 {
+    padding-left: 0.5rem;
+    width: 50%;
+  }
+}
+
+@media (min-width:63rem) {
+  .c21 {
+    width: 66.67%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c21 {
+    width: initial;
+    padding: 0;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-end: span 6;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c35 {
+    width: 50%;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c35 {
+    width: 50%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c35 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c29 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c29 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c29 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    padding-right: 0.5rem;
+    width: 50%;
+  }
+}
+
+@media (min-width:63rem) {
+  .c16 {
+    width: 33.33%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c16 {
+    display: block;
+    width: initial;
+    padding: initial;
+    padding: 0;
+    width: 100%;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-end: span 6;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c16 >time {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c33 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c26 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c15 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c28 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c28 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c17 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c17 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c30 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c30 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c36 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c36 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c19 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c19 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:63rem) {
+  .c19 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c37 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c37 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c37 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c13 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c13 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c13:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    max-width: 63rem;
+  }
+}
+
 <div>
   <noscript />
   <div>
@@ -1889,10 +4620,10 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
     role="main"
   >
     <div
-      class="IndexPageContainer-sc-1yb6vt4-0 lkUiYo"
+      class="c0"
     >
       <h1
-        class="HeadingIndex-sc-1155hfb-0 StyledIndexHeading-jnasqg-0 bGKUPz"
+        class="c1"
         dir="ltr"
         id="content"
         tabindex="-1"
@@ -1901,32 +4632,32 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
       </h1>
       <section
         aria-labelledby="Verticals"
-        class="StyledSection-sc-1x9qbiu-0 hNdEyC"
+        class="c2"
         role="region"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
+          class="c3"
         >
           <div
-            class="Bar-sc-1x4gwjz-0 jsgdXU"
+            class="c4"
           />
           <h2
-            class="Heading-sc-1x4gwjz-2 eZofTG"
+            class="c5"
           >
             <a
               aria-labelledby="Verticals"
-              class="SectionLabelLink-wx5kdp-1 hlUWNS"
+              class="c6"
               href="http://www.bbc.com/ukrainian/magazine_russian"
             >
               <span
-                class="FlexColumn-wx5kdp-0 dgpsiS"
+                class="c7"
               >
                 <span
-                  class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
+                  class="c8"
                   role="text"
                 >
                   <span
-                    class="Title-wx5kdp-4 cERxQI"
+                    class="c9"
                     dir="ltr"
                     id="Verticals"
                   >
@@ -1934,7 +4665,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </span>
                   <span
                     aria-hidden="true"
-                    class="IndexLinkCta-wx5kdp-5 iaGWvX"
+                    class="c10"
                     dir="ltr"
                   >
                     Посмотреть все
@@ -1945,113 +4676,113 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           </h2>
         </div>
         <ul
-          class="StoryPromoUl-sc-171lqjd-2 brjIMO GridComponent-nf79gm-0 gjgzxV"
+          class="c11 c12"
           dir="ltr"
           role="list"
         >
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fTPTiI"
+            class="c13 c14"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 cgYtyQ"
+              class="c15"
             >
               <div
-                class="TextGridItem-sc-1lkbq5i-0 bVRUir"
+                class="c16"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 fPWFhn"
+                  class="c17"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/features-russian-52261329"
                   >
                     Как не спиться на карантине
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   Как справиться со скукой и стрессом во время карантина? Для кого-то лучшим "помощником" стал алкоголь.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2020-04-12"
                 >
                   12 апреля 2020
                 </time>
               </div>
               <div
-                class="ImageGridItem-sc-1xk56cj-0 cpmLDn"
+                class="c21"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
+                    class="c24"
                   />
                 </div>
               </div>
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c13 c25"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c26"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c27"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c28"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c29"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="c30"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/features-russian-52357130"
                   >
                     Как наш характер меняется с возрастом. Спойлер - мы становимся добрее. Но почему?
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   Личность человека не остается одинаковой на протяжении всей жизни, как считали ранее. Недавно исследователи выяснили - наш характер с возрастом улучшается.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2020-04-20"
                 >
                   20 апреля 2020
@@ -2063,26 +4794,26 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
       </section>
       <section
         aria-labelledby="Also-in-the-news"
-        class="StyledSection-sc-1x9qbiu-0 hNdEyC"
+        class="c2"
         role="region"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
+          class="c3"
         >
           <div
-            class="Bar-sc-1x4gwjz-0 jsgdXU"
+            class="c4"
           />
           <h2
-            class="Heading-sc-1x4gwjz-2 eZofTG"
+            class="c5"
           >
             <span
-              class="FlexColumn-wx5kdp-0 dgpsiS"
+              class="c7"
             >
               <span
-                class="FlexRow-wx5kdp-2 dVBNyZ"
+                class="c31"
               >
                 <span
-                  class="Title-wx5kdp-4 cERxQI"
+                  class="c9"
                   dir="ltr"
                   id="Also-in-the-news"
                 >
@@ -2093,113 +4824,113 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           </h2>
         </div>
         <ul
-          class="StoryPromoUl-sc-171lqjd-2 brjIMO GridComponent-nf79gm-0 gjgzxV"
+          class="c11 c12"
           dir="ltr"
           role="list"
         >
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fTPTiI"
+            class="c13 c14"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 cgYtyQ"
+              class="c15"
             >
               <div
-                class="TextGridItem-sc-1lkbq5i-0 bVRUir"
+                class="c16"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 fPWFhn"
+                  class="c17"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/news-russian-52663545"
                   >
                     IKEA запустила продажи в Украине: как покупать и где получать
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   На украинском сайте компании уже доступен перечень товаров и цены. С сегодняшнего дня можно делать заказы.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2020-05-14"
                 >
                   14 мая 2020
                 </time>
               </div>
               <div
-                class="ImageGridItem-sc-1xk56cj-0 cpmLDn"
+                class="c21"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
+                    class="c24"
                   />
                 </div>
               </div>
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c13 c25"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c26"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c27"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c28"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c29"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="c30"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/vert-fut-russian-52663551"
                   >
                     38 дней в океане: как семья выжила после кораблекрушения
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   Семья Робертсонов 38 дней дрейфовала в открытом океане, после того как их маленькую яхту перевернула и потопила косатка.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2020-05-14"
                 >
                   14 мая 2020
@@ -2208,53 +4939,53 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c13 c25"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c26"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c27"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c28"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c29"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="c30"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/features-russian-52633464"
                   >
                     Как Минск стал спасительным хабом для застрявших за рубежом украинцев
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   Многие украинцы из-за пандемии оказались заблокированными далеко за границей: из-за закрытия украинского неба добраться домой им очень сложно.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2020-05-12"
                 >
                   12 мая 2020
@@ -2263,53 +4994,53 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c13 c25"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c26"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c27"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c28"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c29"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="c30"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/news-russian-52647120"
                   >
                     Кличко просит правительство открыть метро с 25 мая
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   Мэр Киева Виталий Кличко заявил, что наземный транспорт в столице начнет восстанавливать нормальную работу с 22 мая, а об открытии метро с 25 мая он будет просить правительство. Все из-за транспортного коллапса.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2020-05-13"
                 >
                   13 мая 2020
@@ -2318,53 +5049,53 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c13 c25"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c26"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c27"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c28"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c29"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="c30"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/news-russian-52493624"
                   >
                     Можно обнимать внуков: ученые говорят, что маленькие дети не передают коронавирус
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   Власти Швейцарии заявили, что бабушки и дедушки могут обнимать своих внуков в возрасте до 10 лет.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2020-04-30"
                 >
                   30 апреля 2020
@@ -2373,53 +5104,53 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c13 c25"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c26"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c27"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c28"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c29"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="c30"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/features-russian-52395098"
                   >
                     Мог ли коронавирус "убежать" из лаборатории?
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   Могла ли эпидемия Covid-19 произойти из-за утечки вируса?
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2020-04-23"
                 >
                   23 апреля 2020
@@ -2428,53 +5159,53 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c13 c25"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c26"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c27"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c28"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c29"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="c30"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/news-russian-52443350"
                   >
                     Правительство хочет открыть сотни рынков - несмотря на карантин
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   Кабинет министров отрабатывает возможность открыть рынки в стране на этой неделе.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2020-04-27"
                 >
                   27 апреля 2020
@@ -2483,53 +5214,53 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c13 c25"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c26"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c27"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c28"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c29"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="c30"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/features-russian-52339462"
                   >
                     Фейки о коронавирусе в соцсетях: 7 правил информационной гигиены
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   Что можете сделать именно вы, чтобы остановить распространение неправдивой информации?
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2020-04-18"
                 >
                   18 апреля 2020
@@ -2538,53 +5269,53 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c13 c25"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c26"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c27"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c28"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c29"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="c30"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/features-russian-52336989"
                   >
                     Пожары, пылевая буря, смог: почему это происходит
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   Почему один за другим в Украине происходят эти явления, с чем они связаны и когда закончатся?
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2020-04-18"
                 >
                   18 апреля 2020
@@ -2593,53 +5324,53 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c13 c25"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c26"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c27"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c28"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c29"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="c30"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/features-russian-52344279"
                   >
                     Какие симптомы коронавируса
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   Коронавирус распространился уже почти во всем мире. Так какие симптомы имеет эта болезнь и как от нее защититься?
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2020-04-19"
                 >
                   19 апреля 2020
@@ -2651,32 +5382,32 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
       </section>
       <section
         aria-labelledby="Picture-galleries"
-        class="StyledSection-sc-1x9qbiu-0 hNdEyC"
+        class="c2"
         role="region"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
+          class="c3"
         >
           <div
-            class="Bar-sc-1x4gwjz-0 jsgdXU"
+            class="c4"
           />
           <h2
-            class="Heading-sc-1x4gwjz-2 eZofTG"
+            class="c5"
           >
             <a
               aria-labelledby="Picture-galleries"
-              class="SectionLabelLink-wx5kdp-1 hlUWNS"
+              class="c6"
               href="http://www.bbc.com/ukrainian/russian/media/photogalleries"
             >
               <span
-                class="FlexColumn-wx5kdp-0 dgpsiS"
+                class="c7"
               >
                 <span
-                  class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
+                  class="c8"
                   role="text"
                 >
                   <span
-                    class="Title-wx5kdp-4 cERxQI"
+                    class="c9"
                     dir="ltr"
                     id="Picture-galleries"
                   >
@@ -2684,7 +5415,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </span>
                   <span
                     aria-hidden="true"
-                    class="IndexLinkCta-wx5kdp-5 iaGWvX"
+                    class="c10"
                     dir="ltr"
                   >
                     Посмотреть все
@@ -2695,58 +5426,58 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           </h2>
         </div>
         <ul
-          class="StoryPromoUl-sc-171lqjd-2 brjIMO GridComponent-nf79gm-0 gjgzxV"
+          class="c11 c12"
           dir="ltr"
           role="list"
         >
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 kFXEso"
+            class="c13 c32"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ"
+              class="c33"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
+                class="c34"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
+                    class="c24"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
+                class="c35"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 fccgro"
+                  class="c36"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/features-russian-50186307"
                   >
                     Фотограф потратил год, чтобы сделать идеальное фото белок
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 zsDkO"
+                  class="c37"
                 >
                   Завоевать доверие животного - дело непростое, но результат того стоит, считает фотограф.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2019-10-25"
                 >
                   25 октября 2019
@@ -2755,53 +5486,53 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c13 c25"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c26"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c27"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 cZNKRK"
+                    class="c38"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c28"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c29"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="c30"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/features-russian-49780932"
                   >
                     Украинка, фотографирующая сестер Кардашьян: в "голых" съемках главное - доверие
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   .
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2019-09-21"
                 >
                   21 сентября 2019
@@ -2810,53 +5541,53 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c13 c25"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c26"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c27"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c28"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c29"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="c30"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/features-russian-49621722"
                   >
                     Вернувшиеся домой. Фото
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   .
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2019-09-07"
                 >
                   7 сентября 2019
@@ -2865,53 +5596,53 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c13 c25"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c26"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c27"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c28"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c29"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="c30"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/news-russian-49613573"
                   >
                     Фото дня: принцесса Шарлотта впервые пошла в школу
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   В школу четырехлетнюю принцессу повели ее родители - принц Уильям и герцогиня Кейт, а также старший брат Джордж.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2019-09-06"
                 >
                   6 сентября 2019
@@ -2920,53 +5651,53 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c13 c25"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c26"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c27"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c28"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c29"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="c30"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/features-russian-49382281"
                   >
                     Человек, который сделал 90 тысяч фото котов
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   Задолго до того, как коты завоевали интернет, Уолтер Чандоха пленил мир своими фото. Он фотографировал пушистых моделей в течение 70 лет.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2019-08-17"
                 >
                   17 августа 2019
@@ -2978,26 +5709,26 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
       </section>
       <section
         aria-labelledby="Features"
-        class="StyledSection-sc-1x9qbiu-0 hNdEyC"
+        class="c2"
         role="region"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 hsirkD"
+          class="c3"
         >
           <div
-            class="Bar-sc-1x4gwjz-0 jsgdXU"
+            class="c4"
           />
           <h2
-            class="Heading-sc-1x4gwjz-2 eZofTG"
+            class="c5"
           >
             <span
-              class="FlexColumn-wx5kdp-0 dgpsiS"
+              class="c7"
             >
               <span
-                class="FlexRow-wx5kdp-2 dVBNyZ"
+                class="c31"
               >
                 <span
-                  class="Title-wx5kdp-4 cERxQI"
+                  class="c9"
                   dir="ltr"
                   id="Features"
                 >
@@ -3008,113 +5739,113 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           </h2>
         </div>
         <ul
-          class="StoryPromoUl-sc-171lqjd-2 brjIMO GridComponent-nf79gm-0 gjgzxV"
+          class="c11 c12"
           dir="ltr"
           role="list"
         >
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fTPTiI"
+            class="c13 c14"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 cgYtyQ"
+              class="c15"
             >
               <div
-                class="TextGridItem-sc-1lkbq5i-0 bVRUir"
+                class="c16"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 fPWFhn"
+                  class="c17"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/features-russian-52653319"
                   >
                     "Не надо шляться по брифингам!" Министр Степанов - своим оппонентам
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   Максим Степанов - третий министр, возглавляющий Минздрав во время пандемии коронавируса. В интервью ВВС News Украина он прокомментировал конфликт вокруг закупок лекарств, а также рассказал, когда откроют детсады и когда медиками привезут костюмы из Китая.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2020-05-17"
                 >
                   17 мая 2020
                 </time>
               </div>
               <div
-                class="ImageGridItem-sc-1xk56cj-0 cpmLDn"
+                class="c21"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG"
+                    class="c24"
                   />
                 </div>
               </div>
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c13 c25"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c26"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c27"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c28"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c29"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="c30"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/news-russian-52675911"
                   >
                     Действительно ли Германия заблокировала "Северный поток-2"? Объясняет Лана Зеркаль
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   В соцсетях и некоторых СМИ решение немецкого регулятора называют победой, но действительно ли это победа?
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2020-05-15"
                 >
                   15 мая 2020
@@ -3123,53 +5854,53 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c13 c25"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c26"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c27"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c28"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c29"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="c30"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/news-russian-52688931"
                   >
                     Клинические испытания ремдесивира для лечения Covid-19 свернули. Почему?
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   Интересно, что тестирование прекратили не из-за их провала - а возможно, как раз наоборот.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2020-05-16"
                 >
                   16 мая 2020
@@ -3178,53 +5909,53 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c13 c25"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c26"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c27"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c28"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c29"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="c30"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/features-russian-52620256"
                   >
                     Лечение коронавируса при помощи антител: нас спасут ламы?
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   Ученые пытаются найти метод лечения Covid-19 или разработать вакцину, которая позволила бы смягчить карантинные меры, включая социальное дистанцирование. Вероятным кандидатом в спасители человечества называют ламу.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2020-05-11"
                 >
                   11 мая 2020
@@ -3233,53 +5964,53 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c13 c25"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c26"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c27"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c28"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c29"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="c30"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/news-russian-52597888"
                   >
                     11 мая в Украине ослабляют карантин. Что разрешат, а что - нет
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   Несмотря на то, что карантин, согласно решению правительства, будет действовать в Украине как минимум до 22 мая, ряд ограничений снимут уже с понедельника.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2020-05-09"
                 >
                   9 мая 2020
@@ -3288,53 +6019,53 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="StoryPromoLiBase-sc-171lqjd-0 StoryPromoLi-sc-171lqjd-1 burCNM GridComponent-nf79gm-0 fxSOhP"
+            class="c13 c25"
             dir="ltr"
             role="listitem"
           >
             <div
-              class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+              class="c26"
             >
               <div
-                class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                class="c27"
                 dir="ltr"
               >
                 <div
-                  class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                  class="c22"
                 >
                   <div
-                    class="ImagePlaceholder-sc-11u25v2-0 _StyledImagePlaceholder-gu1fm2-0 kvTWeV"
+                    class="c23"
                   >
                     <div
                       class="lazyload-placeholder"
                     />
                   </div>
                   <div
-                    class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                    class="c28"
                   />
                 </div>
               </div>
               <div
-                class="TextGridItem-sc-1lkbq5i-0 jbyRcL"
+                class="c29"
                 dir="ltr"
               >
                 <h3
-                  class="Headline-sc-1dvfmi3-3 hSJrur"
+                  class="c30"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 jeUMCT"
+                    class="c18"
                     href="/ukrainian/features-russian-52573535"
                   >
                     Коронавирус мутирует: ученые думают о последствиях
                   </a>
                 </h3>
                 <p
-                  class="Summary-sc-1dvfmi3-4 eaCWBB"
+                  class="c19"
                 >
                   Одно из исследований выявило мутацию, которая, по словам ученых, может сделать коронавирус более заразным.
                 </p>
                 <time
-                  class="StyledTimestamp-um718p-0 kVWTyt"
+                  class="c20"
                   datetime="2020-05-07"
                 >
                   7 мая 2020
