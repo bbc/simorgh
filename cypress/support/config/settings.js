@@ -4181,14 +4181,14 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              // '/persian/bbc_persian_radio/liveradio?renderer_env=live',
+              '/persian/bbc_persian_radio/liveradio?renderer_env=live',
               '/persian/bbc_dari_radio/liveradio?renderer_env=live',
             ],
             enabled: true,
           },
           local: {
             paths: [
-              // '/persian/bbc_persian_radio/liveradio',
+              '/persian/bbc_persian_radio/liveradio',
               '/persian/bbc_dari_radio/liveradio',
             ],
             enabled: true,
