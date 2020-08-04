@@ -32,7 +32,7 @@ const HeaderContainer = () => {
   const isOperaMini = onClient() && window.operamini;
 
   // 'officialLang' value is only available in the Ukrainian config as our ukraine_in_russian pages will have
-  // a Ukrainian text for the header and footer but a Russian text for the main element.
+  // Ukrainian text for the header and footer but Russian text for the main element.
   // However, the skip to content link will also be in Russian, so we need to pass the `ru-UA` lang code to it.
   const headerLangAttribute = officialLang && { lang: officialLang };
   const skipLinkLangAttribute = headerLangAttribute && { lang };
