@@ -1885,7 +1885,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/hausa/bbc_hausa_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/hausa/bbc_hausa_radio/liveradio?renderer_env=live'],
@@ -2823,7 +2823,7 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/korean/bbc_korean_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/korean/bbc_korean_radio/liveradio?renderer_env=live'],
@@ -4173,7 +4173,7 @@ module.exports = () => ({
               '/persian/bbc_persian_radio/liveradio',
               '/persian/bbc_dari_radio/liveradio',
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
