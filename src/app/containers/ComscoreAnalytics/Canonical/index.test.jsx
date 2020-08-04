@@ -27,7 +27,7 @@ describe('Canonical Comscore Analytics ', () => {
   describe('Assertions', () => {
     it('should render null when not on client', async () => {
       onClient.mockReturnValue(false);
-      render(
+      const { container } = render(
         <ContextWrap
           platform="canonical"
           pageType="article"
@@ -38,13 +38,7 @@ describe('Canonical Comscore Analytics ', () => {
         </ContextWrap>,
       );
 
-      await waitFor(() => {
-        const scriptEl = document.querySelector('script');
-        const noscriptEl = document.querySelector('noscript');
-
-        expect(scriptEl).toBeNull();
-        expect(noscriptEl).toBeNull();
-      });
+      expect(container).toBeEmptyDOMElement();
     });
 
     it('should render the noscript with cs_ucfr=0', async () => {

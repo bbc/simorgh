@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import ContextWrap from './utilities';
 import ComscoreAnalytics from '.';
 
@@ -22,7 +22,7 @@ describe('Comscore Analytics Container', () => {
         </ContextWrap>,
       );
 
-      expect(container.firstChild).toBeNull();
+      expect(container).toBeEmptyDOMElement();
     });
   });
 
@@ -33,7 +33,7 @@ describe('Comscore Analytics Container', () => {
           enabled: false,
         },
       };
-      render(
+      const { container } = render(
         <ContextWrap
           platform="canonical"
           pageType="article"
@@ -44,13 +44,7 @@ describe('Comscore Analytics Container', () => {
         </ContextWrap>,
       );
 
-      await waitFor(() => {
-        const scriptEl = document.querySelector('script');
-        const noscriptEl = document.querySelector('noscript');
-
-        expect(scriptEl).toBeNull();
-        expect(noscriptEl).toBeNull();
-      });
+      expect(container).toBeEmptyDOMElement();
     });
   });
 });
