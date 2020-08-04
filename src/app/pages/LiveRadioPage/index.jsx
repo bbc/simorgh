@@ -98,7 +98,7 @@ const LiveRadioPage = ({ pageData }) => {
   const { enabled, value } = useToggle('liveRadioSchedule');
 
   const showSchedule =
-    enabled && RegExp(value).test(service) && radioScheduleOnPage;
+    radioScheduleOnPage && enabled && RegExp(value).test(service);
 
   return (
     <>
