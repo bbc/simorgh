@@ -82,7 +82,6 @@ servicePageSummaryTable.push(
   },
 );
 
-console.log('');
 const spinner = ora({
   text: 'Analysing bundles...',
   color: 'magenta',
