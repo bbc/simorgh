@@ -572,7 +572,7 @@ describe('getThingAttributes', () => {
   });
 });
 
-describe.only('getCampaignType', () => {
+describe('getCampaignType', () => {
   const windowLocation = window.location;
 
   afterEach(() => {
