@@ -47,7 +47,7 @@ const radioServices = {
   bengali: 'bangla',
 };
 
-const getRadioService = ({ service, pathname }) => {
+export const getRadioService = ({ service, pathname }) => {
   if (service === 'persian' && pathname.includes('bbc_persian_radio')) {
     return 'persian';
   }
@@ -69,7 +69,7 @@ export default async ({ path: pathname, pageType, service }) => {
           pageDataPromise,
           service,
           path: pathname,
-          radioService: getRadioService(service),
+          radioService: getRadioService({ service, pathname }),
         })
       : await pageDataPromise;
 
