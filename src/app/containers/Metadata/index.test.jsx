@@ -46,34 +46,30 @@ const MetadataWithContext = ({
   aboutTags,
   mentionsTags,
   /* eslint-enable react/prop-types */
-}) => {
-  const serviceConfig = services[service].default;
-
-  return (
-    <ServiceContextProvider {...serviceConfig}>
-      <RequestContextProvider
-        bbcOrigin={bbcOrigin}
-        id={id}
-        isAmp={platform === 'amp'}
-        pageType={pageType}
-        pathname={pathname}
-        service={service}
-        statusCode={200}
-      >
-        <MetadataContainer
-          title={title}
-          lang={lang}
-          description={description}
-          openGraphType={openGraphType}
-          aboutTags={aboutTags}
-          mentionsTags={mentionsTags}
-          image={image}
-          imageAltText={imageAltText}
-        />
-      </RequestContextProvider>
-    </ServiceContextProvider>
-  );
-};
+}) => (
+  <ServiceContextProvider service={service} pageLang={lang}>
+    <RequestContextProvider
+      bbcOrigin={bbcOrigin}
+      id={id}
+      isAmp={platform === 'amp'}
+      pageType={pageType}
+      pathname={pathname}
+      service={service}
+      statusCode={200}
+    >
+      <MetadataContainer
+        title={title}
+        lang={lang}
+        description={description}
+        openGraphType={openGraphType}
+        aboutTags={aboutTags}
+        mentionsTags={mentionsTags}
+        image={image}
+        imageAltText={imageAltText}
+      />
+    </RequestContextProvider>
+  </ServiceContextProvider>
+);
 
 const CanonicalNewsInternationalOrigin = () => (
   <MetadataWithContext
@@ -647,5 +643,69 @@ shouldMatchSnapshot(
     lang={liveRadioPageData.metadata.language}
     description={liveRadioPageData.promo.summary}
     openGraphType="website"
+  />,
+);
+
+shouldMatchSnapshot(
+  'should match for Ukrainian STY with Ukrainian lang on canonical',
+  <MetadataWithContext
+    lang="uk"
+    service="ukrainian"
+    bbcOrigin={dotComOrigin}
+    platform="canonical"
+    id="news-53577781"
+    pageType="article"
+    pathname="/ukrainian/news-53577781"
+    description="BBC Ukrainian"
+    openGraphType="website"
+    title="BBC Ukrainian"
+  />,
+);
+
+shouldMatchSnapshot(
+  'should match for Ukrainian STY with Ukrainian lang on Amp',
+  <MetadataWithContext
+    lang="uk"
+    service="ukrainian"
+    bbcOrigin={dotComOrigin}
+    platform="amp"
+    id="news-53577781"
+    pageType="article"
+    pathname="/ukrainian/news-53577781.amp"
+    description="BBC Ukrainian"
+    openGraphType="website"
+    title="BBC Ukrainian"
+  />,
+);
+
+shouldMatchSnapshot(
+  'should match for Ukrainian STY with Russian lang on canonical',
+  <MetadataWithContext
+    lang="ru"
+    service="ukrainian"
+    bbcOrigin={dotComOrigin}
+    platform="canonical"
+    id="news-53577781"
+    pageType="article"
+    pathname="/ukrainian/news-53577781"
+    description="BBC Ukrainian"
+    openGraphType="website"
+    title="BBC Ukrainian"
+  />,
+);
+
+shouldMatchSnapshot(
+  'should match for Ukrainian STY with Russian lang on Amp',
+  <MetadataWithContext
+    lang="ru"
+    service="ukrainian"
+    bbcOrigin={dotComOrigin}
+    platform="amp"
+    id="news-53577781"
+    pageType="article"
+    pathname="/ukrainian/news-53577781.amp"
+    description="BBC Ukrainian"
+    openGraphType="website"
+    title="BBC Ukrainian"
   />,
 );
