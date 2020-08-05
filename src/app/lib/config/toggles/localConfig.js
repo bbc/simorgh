@@ -28,6 +28,8 @@ export default {
   },
   liveRadioSchedule: {
     enabled: true,
+    value:
+      '(afaanoromoo|afrique|amharic|arabic|bengali|burmese|hausa|indonesia|korean|nepali|pashto|persian|somali|swahili|tigrinya|urdu)',
   },
   logMediaPlayerStatus: {
     enabled: false,
