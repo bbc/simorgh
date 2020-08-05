@@ -159,7 +159,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
       >
         {header}
       </RadioScheduleSectionLabel>
-      <RadioScheduleWrapper data-e2e="radio-schedule">
+      <RadioScheduleWrapper>
         <RadioSchedule
           schedules={radioSchedule}
           locale={locale}

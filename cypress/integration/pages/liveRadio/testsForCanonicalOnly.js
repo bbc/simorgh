@@ -1,6 +1,11 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
-import getEmbedUrl from './helper';
+import {
+  getEmbedUrl,
+  isRadioScheduleComplete,
+  serviceHasRadioSchedule,
+} from './helper';
+import getDataUrl from '../../../support/helpers/getDataUrl';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -20,7 +25,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       let embedUrl;
 
       beforeEach(() => {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+        cy.request(getDataUrl(Cypress.env('currentPath'))).then(({ body }) => {
           embedUrl = getEmbedUrl(body, lang);
         });
       });
@@ -43,6 +48,42 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           cy.hasGlobalChartbeatConfig();
         });
       }
+    });
+    describe('Radio Schedule', () => {
+      it('should be displayed if there is enough schedule data', () => {
+        const isRadioScheduleOnPage = serviceHasRadioSchedule({
+          service,
+          variant,
+        });
+        cy.log(
+          `Live Radio Page configured for Radio Schedule? ${isRadioScheduleOnPage}`,
+        );
+
+        if (isRadioScheduleOnPage) {
+          // Override is being added twice causing a false negative on the call to the schedule! I think other tests need the override though. Will look at this again
+          const schedulePath = Cypress.env('currentPath').replace(
+            'liveradio',
+            'schedule.json',
+          );
+
+          cy.request(schedulePath).then(({ body: scheduleJson }) => {
+            const { schedules } = scheduleJson;
+
+            const isRadioScheduleDataComplete = isRadioScheduleComplete(
+              schedules,
+            );
+            cy.log(
+              `Radio Schedule is displayed? ${isRadioScheduleDataComplete}`,
+            );
+            if (isRadioScheduleOnPage && isRadioScheduleDataComplete) {
+              cy.log('Schedule has enough data');
+              cy.get('[data-e2e=radio-schedule]').should('exist');
+            } else {
+              cy.get('[data-e2e=radio-schedule]').should('not.exist');
+            }
+          });
+        }
+      });
     });
   });
 
