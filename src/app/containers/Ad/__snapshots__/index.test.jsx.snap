@@ -1,84 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Ad Container Snapshots should correctly render a Canonical leaderboard ad 1`] = `
-<html>
-  <head>
-    <script
-      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
-      type="module"
-    />
-    <script
-      nomodule="nomodule"
-      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
-    />
-  </head>
-  <body>
-    .c0 {
-  background-color: #F6F6F6;
-  min-height: 5.5rem;
-}
-
-@media (min-width:63rem) {
-  .c0 {
-    min-height: 9rem;
-  }
-}
-
-<div>
-      <section
-        aria-hidden="true"
-        aria-label="Publicidad"
-        class="c0"
-        data-e2e="advertisement"
-        role="region"
-      >
-        <div
-          class="dotcom-ad"
-          id="dotcom-leaderboard"
-        />
-      </section>
-    </div>
-  </body>
-</html>
-`;
-
-exports[`Ad Container Snapshots should correctly render a Canonical mpu ad 1`] = `
-<html>
-  <head>
-    <script
-      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
-      type="module"
-    />
-    <script
-      nomodule="nomodule"
-      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
-    />
-  </head>
-  <body>
-    .c0 {
-  background-color: #F6F6F6;
-  min-height: 15.625rem;
-}
-
-<div>
-      <section
-        aria-hidden="true"
-        aria-label="Publicidad 2"
-        class="c0"
-        data-e2e="advertisement"
-        role="region"
-      >
-        <div
-          class="dotcom-ad"
-          id="dotcom-mpu"
-        />
-      </section>
-    </div>
-  </body>
-</html>
-`;
-
-exports[`Ad Container Snapshots should correctly render an AMP leaderboard ad 1`] = `
+exports[`Ad Container Snapshots AMP should correctly render a leaderboard ad 1`] = `
 .c0 {
   background-color: #F6F6F6;
 }
@@ -379,6 +301,7 @@ exports[`Ad Container Snapshots Canonical should correctly render a leaderboard 
         aria-hidden="true"
         aria-label="Publicidad"
         class="c0"
+        data-e2e="advertisement"
         role="region"
       >
         <div
@@ -414,6 +337,7 @@ exports[`Ad Container Snapshots Canonical should correctly render an mpu ad 1`] 
         aria-hidden="true"
         aria-label="Publicidad 2"
         class="c0"
+        data-e2e="advertisement"
         role="region"
       >
         <div
