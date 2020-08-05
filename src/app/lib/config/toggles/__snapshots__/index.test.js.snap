@@ -29,7 +29,7 @@ Object {
     "enabled": true,
   },
   "liveRadioSchedule": Object {
-    "enabled": false,
+    "enabled": true,
     "value": "(hausa|korean)",
   },
   "logMediaPlayerStatus": Object {
