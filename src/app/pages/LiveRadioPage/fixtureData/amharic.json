@@ -1,14 +1,14 @@
 {
-  "bodySummary": "ዝግጅቶቻችንን’",
   "heading": "ያድምጡ",
-  "masterBrand": "bbc_amharic_radio",
+  "bodySummary": "ዝግጅቶቻችንን’",
   "language": "am",
-  "id": "urn:bbc:ares::ws_live:bbc_amharic_radio",
+  "id": "urn:bbc:ares:ws_media:live:bbc_amharic_radio",
   "name": "ያድምጡ",
   "summary": "ዝግጅቶቻችንን’",
   "pageTitle": "ያድምጡ - BBC News አማርኛ",
   "contentType": "player-live",
   "pageIdentifier": "amharic.bbc_amharic_radio.liveradio.page",
+  "masterBrand": "bbc_amharic_radio",
   "radioScheduleData": [
     {
       "id": "p07vwmt1",
@@ -46,5 +46,6 @@
       "summary": "",
       "duration": "PT5M"
     }
-  ]
+  ],
+  "metadata": { "type": "Live Radio" }
 }
