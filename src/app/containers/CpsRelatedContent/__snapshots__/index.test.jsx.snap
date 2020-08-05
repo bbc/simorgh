@@ -51,17 +51,6 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   padding: 0.5rem 0.25rem;
 }
 
-.c19 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
 .c20 {
   position: static;
   color: #222222;
@@ -205,6 +194,17 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   margin-top: 0;
 }
 
+.c19 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
 @media (max-width:62.9375rem) {
   .c11 {
     border-bottom: 0.0625rem solid #F2F2F2;
@@ -285,20 +285,6 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   .c17 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c19 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c19 {
-    font-size: 1rem;
-    line-height: 1.25rem;
   }
 }
 
@@ -518,6 +504,20 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 @media (min-width:37.5rem) {
   .c1 {
     margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c19 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -757,17 +757,6 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   padding: 0.5rem 0.25rem;
 }
 
-.c17 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
 .c20 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -922,6 +911,17 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   margin-top: 0;
 }
 
+.c17 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
 @media (min-width:63rem) {
   .c12 {
     display: block;
@@ -978,20 +978,6 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   .c15 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c17 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c17 {
-    font-size: 1rem;
-    line-height: 1.25rem;
   }
 }
 
@@ -1191,6 +1177,20 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 @media (min-width:63rem) {
   .c9 {
     padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c17 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c17 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
