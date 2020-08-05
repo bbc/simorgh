@@ -5,7 +5,6 @@ import { StaticRouter } from 'react-router-dom';
 // test helpers
 import { render } from '@testing-library/react';
 import assocPath from 'ramda/src/assocPath';
-import '@testing-library/jest-dom/extend-expect';
 import fetchMock from 'fetch-mock';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 
@@ -39,7 +38,7 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
-const createAssetPage = ({ pageData }, service) => (
+const Page = ({ pageData, service }) => (
   <StaticRouter>
     <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
       <ServiceContextProvider service={service}>
@@ -133,8 +132,7 @@ describe('Story Page', () => {
         pageType,
       });
 
-      const page = createAssetPage({ pageData }, 'pidgin');
-      await matchSnapshotAsync(page);
+      await matchSnapshotAsync(<Page pageData={pageData} service="pidgin" />);
     });
   });
 
@@ -152,7 +150,7 @@ describe('Story Page', () => {
       pageType,
     });
 
-    const { getByText } = render(createAssetPage({ pageData }, 'igbo'));
+    const { getByText } = render(<Page pageData={pageData} service="igbo" />);
     expect(getByText('23 Ọktọba 2019')).toBeInTheDocument();
   });
 
@@ -177,7 +175,7 @@ describe('Story Page', () => {
     );
 
     const { asFragment } = render(
-      createAssetPage({ pageData: pageDataWithHiddenTimestamp }, 'pidgin'),
+      <Page pageData={pageDataWithHiddenTimestamp} service="pidgin" />,
     );
 
     expect(document.querySelector('main time')).toBeNull();
@@ -195,7 +193,6 @@ describe('Story Page', () => {
       pageType,
     });
 
-    const page = createAssetPage({ pageData }, 'pidgin');
-    await matchSnapshotAsync(page);
+    await matchSnapshotAsync(<Page pageData={pageData} service="pidgin" />);
   });
 });

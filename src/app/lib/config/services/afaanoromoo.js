@@ -32,6 +32,8 @@ export const service = {
     defaultCaptionOffscreenText: 'Ibsa suuraa/viidiyoo, ',
     imageCopyrightOffscreenText: 'Madda suuraa, ',
     locale: `om-ET`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'om',
     datetimeLocale: `om`,
     service: 'afaanoromoo',
     serviceName: 'Afaan Oromoo',
@@ -161,19 +163,19 @@ export const service = {
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
-          text: 'Warning: Third party content may contain adverts',
+          textPrefixVisuallyHidden: "Ibsa waa'ee viidiyoo, ",
+          text: 'Hubachiisa: qabiyyeen qaama sadaffaa beeksisa qabaachuu malu',
         },
         fallback: {
-          text: 'Content is not available',
-          linkText: 'View content on %provider_name%',
-          linkTextSuffixVisuallyHidden: ', external',
+          text: 'Qabiyyeen kun hin argamne',
+          linkText: 'irratti dabalatan ilaali %provider_name%',
+          linkTextSuffixVisuallyHidden: ', alaan',
           warningText:
             "Qabiyyeewwan maddawwan alaa irraa ta'aniif BBCn itti gaafatamaa miti.",
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: 'Maxxansa %provider_name% irra dabri',
+          endTextVisuallyHidden: 'Xumura maxxansa %provider_name%',
         },
       },
       topStoriesTitle: 'Isin hin darbiin',
@@ -188,6 +190,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onLiveRadioPage: true,
       onFrontPage: false,
       header: 'Dhaggeeffadhaa',
       durationLabel: 'Turtii %duration%',

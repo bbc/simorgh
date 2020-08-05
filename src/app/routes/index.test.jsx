@@ -5,7 +5,6 @@ import { matchPath } from 'react-router';
 
 // test helpers
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import fetchMock from 'fetch-mock';
 
 // components being tested
@@ -24,6 +23,7 @@ import storyPageJson from '#data/mundo/cpsAssets/noticias-internacional-51266689
 import featureIndexPageJson from '#data/afrique/cpsAssets/48465371.json';
 import storyPageMostReadData from '#data/pidgin/mostRead/index.json';
 import indexPageJson from '#data/ukrainian/ukraine_in_russian';
+import storyPageRecommendationsData from '#data/mundo/recommendations/index.json';
 
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
 
@@ -292,6 +292,10 @@ it('should route to and render a story page', async () => {
   const pathname = '/mundo/noticias-internacional-51266689';
   fetchMock.mock(`http://localhost${pathname}.json`, storyPageJson);
   fetchMock.mock(`http://localhost/mundo/mostread.json`, storyPageMostReadData);
+  fetchMock.mock(
+    `http://localhost${pathname}/recommendations.json`,
+    storyPageRecommendationsData,
+  );
 
   const { getInitialData, pageType } = getMatchingRoute(pathname);
   const { pageData } = await getInitialData({

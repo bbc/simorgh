@@ -1,10 +1,12 @@
-import getInitialData from '.';
+import getInitialData, { hasRadioSchedule, getRadioService } from '.';
 import * as fetchPageData from '../../utils/fetchPageData';
 import liveRadioJson from '#data/korean/bbc_korean_radio/liveradio.json';
+import getConfig from '../../utils/getConfig';
 
 fetch.mockResponse(JSON.stringify(liveRadioJson));
 const { env } = process;
 const spy = jest.spyOn(fetchPageData, 'default');
+jest.mock('../../utils/getConfig', () => jest.fn());
 
 const pageType = 'media';
 
@@ -17,6 +19,7 @@ describe('Get initial data for live radio', () => {
   it('should return essential data for a page to render', async () => {
     const { pageData } = await getInitialData({
       path: 'mock-live-radio-path',
+      service: 'korean',
       pageType,
     });
     expect(pageData.name).toEqual('BBC 코리아 라디오');
@@ -48,5 +51,72 @@ describe('Get initial data for live radio', () => {
       path: 'mock-live-radio-path',
       pageType,
     });
+  });
+});
+
+describe('hasRadioSchedule', () => {
+  it('should return true if the service has the radio schedule on the live radio page', async () => {
+    getConfig.mockImplementationOnce(() => ({
+      radioSchedule: {
+        hasRadioSchedule: true,
+        onLiveRadioPage: true,
+      },
+    }));
+
+    expect(await hasRadioSchedule('mock-service')).toBe(true);
+  });
+
+  it('should return false if the service does not have the radio schedule on the live radio page', async () => {
+    getConfig.mockImplementationOnce(() => ({
+      radioSchedule: {
+        hasRadioSchedule: true,
+        onLiveRadioPage: false,
+      },
+    }));
+
+    expect(await hasRadioSchedule('mock-service')).toBe(false);
+  });
+
+  it('should return false if the service does not have the radio schedule enabled on any page', async () => {
+    getConfig.mockImplementationOnce(() => ({
+      radioSchedule: {
+        hasRadioSchedule: false,
+        onLiveRadioPage: false,
+      },
+    }));
+
+    expect(await hasRadioSchedule('mock-service')).toBe(false);
+  });
+});
+
+describe('getRadioService', () => {
+  it('should return persian for Persian Live Radio', () => {
+    const service = 'persian';
+    const pathname = 'bbc_persian_radio';
+    expect(getRadioService({ service, pathname })).toEqual('persian');
+  });
+
+  it('should return dari for Persian Dari Live Radio', () => {
+    const service = 'persian';
+    const pathname = 'bbc_dari_radio';
+    expect(getRadioService({ service, pathname })).toEqual('dari');
+  });
+
+  it('should return bangla for Bengali Live Radio', () => {
+    const service = 'bengali';
+    const pathname = 'bengali/bbc_bangla_radio';
+    expect(getRadioService({ service, pathname })).toEqual('bangla');
+  });
+
+  it('should return oromo for Afaanoromoo Live Radio', () => {
+    const service = 'afaanoromoo';
+    const pathname = 'afaanoromoo/bbc_afaanoromoo_radio';
+    expect(getRadioService({ service, pathname })).toEqual('oromo');
+  });
+
+  it('should return indonesian for Indonesia Live Radio', () => {
+    const service = 'indonesia';
+    const pathname = 'indonesia/bbc_indonesian_radio';
+    expect(getRadioService({ service, pathname })).toEqual('indonesian');
   });
 });

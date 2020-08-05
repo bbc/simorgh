@@ -2,7 +2,6 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import deepClone from 'ramda/src/clone';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import '@testing-library/jest-dom/extend-expect';
 import loggerMock from '#testHelpers/loggerMock';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -331,13 +330,13 @@ describe('StoryPromo Container', () => {
     });
 
     describe('With Index Alsos', () => {
-      it('should render a list with two related items', () => {
+      it('should render a list with three related items', () => {
         const { container } = render(
           <WrappedStoryPromo item={indexAlsosItem} promoType="top" />,
         );
 
         expect(container.getElementsByTagName('ul')).toHaveLength(1);
-        expect(container.getElementsByTagName('li')).toHaveLength(2);
+        expect(container.getElementsByTagName('li')).toHaveLength(3);
       });
 
       it('should render a related item not contained within a list', () => {

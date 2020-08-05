@@ -31,6 +31,8 @@ export const service = {
     defaultCaptionOffscreenText: 'क्याप्शन, ',
     imageCopyrightOffscreenText: 'तस्बिर स्रोत, ',
     locale: `ne-NP`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ne',
     datetimeLocale: `ne`,
     service: 'nepali',
     serviceName: 'Nepali',
@@ -157,7 +159,7 @@ export const service = {
         listen: 'सुन्नुहोस्',
         watch: 'हेर्नुहोस्',
         liveLabel: 'प्रत्यक्ष प्रसारण',
-        nextLabel: 'NEXT',
+        nextLabel: 'अर्को',
         previousRadioShow: 'पछिल्लो रेडिओ कार्यक्रम',
         nextRadioShow: 'अघिल्लो रेडिओ कार्यक्रम',
         duration: 'समयावधि',
@@ -189,7 +191,11 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
+      onLiveRadioPage: true,
+      onFrontPage: false,
+      header: 'पछिल्लो कार्यक्रम सुन्नुहोस्',
+      durationLabel: 'अवधि %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,

@@ -49,6 +49,7 @@ const includeProps = {
     },
   },
   type: 'idt2',
+  isAmpSupported: true,
   href: '/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6',
 };
 
@@ -171,6 +172,7 @@ describe('IncludeContainer', () => {
       imageWidth: '640',
       href:
         '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+      isAmpSupported: true,
       type: 'vj',
     };
 
@@ -194,5 +196,28 @@ describe('IncludeContainer', () => {
       includeUrl:
         '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
     });
+  });
+
+  it('should render a fallback for VJs on an Amp page when isAmpSupported is set to false', () => {
+    const vjProps = {
+      href:
+        '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+      index: 0,
+      isAmpSupported: false,
+      type: 'vj',
+    };
+
+    const mockAmpFallback = jest.fn().mockReturnValue('VJ-Amp-fallback');
+    vjAmp.default = mockAmpFallback;
+
+    const { container } = render(
+      <IncludeContainerWithMockContext
+        toggleState={defaultToggleState}
+        isAmp
+        {...vjProps}
+      />,
+    );
+
+    expect(container).toMatchSnapshot();
   });
 });

@@ -5,6 +5,11 @@ exports[`Ad Container Snapshots should correctly render a Canonical leaderboard 
   <head>
     <script
       src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+      type="module"
+    />
+    <script
+      nomodule="nomodule"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
     />
   </head>
   <body>
@@ -41,6 +46,11 @@ exports[`Ad Container Snapshots should correctly render a Canonical mpu ad 1`] =
   <head>
     <script
       src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js"
+      type="module"
+    />
+    <script
+      nomodule="nomodule"
+      src="https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js"
     />
   </head>
   <body>
