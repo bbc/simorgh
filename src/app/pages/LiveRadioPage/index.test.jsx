@@ -6,34 +6,42 @@ import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import LiveRadioPage from '.';
-import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
+import afriquePageData from './fixtureData/afrique';
+import indonesianPageData from './fixtureData/indonesia';
+import gahuzaPageData from './fixtureData/gahuza';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import getInitialData from '#app/routes/liveRadio/getInitialData';
 
-const Page = ({ pageData, isAmp = false }) => (
+const Page = ({
+  pageData,
+  service = 'afrique',
+  lang = 'fr',
+  isAmp = false,
+}) => (
   <BrowserRouter>
     <ToggleContextProvider>
-      <ServiceContextProvider service="amharic">
+      <ServiceContextProvider service={service} lang={lang}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.com"
           isAmp={isAmp}
           pageType="media"
           pathname="/pathname"
-          service="amharic"
+          service={service}
           statusCode={200}
         >
-          <LiveRadioPage service="amharic" pageData={pageData} />
+          <LiveRadioPage pageData={pageData} />
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>
   </BrowserRouter>
 );
 
-const renderPage = async ({ pageData, isAmp = false }) => {
+const renderPage = async ({ pageData, service, isAmp = false }) => {
   let result;
   await act(async () => {
-    result = await render(<Page pageData={pageData} isAmp={isAmp} />);
+    result = await render(
+      <Page pageData={pageData} service={service} isAmp={isAmp} />,
+    );
   });
 
   return result;
@@ -45,96 +53,99 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
-const pageType = 'media';
-
 describe('Radio Page Main', () => {
   it('should match snapshot for Canonical', async () => {
-    fetch.mockResponse(JSON.stringify(amharicPageData));
-    const { pageData } = await getInitialData({
-      path: 'some-live-radio-path',
-      pageType,
-    });
+    fetch.mockResponse(JSON.stringify(afriquePageData));
 
-    await matchSnapshotAsync(<Page pageData={pageData} />);
+    await matchSnapshotAsync(<Page pageData={afriquePageData} />);
   });
 
   it('should match snapshot for AMP', async () => {
-    const { pageData } = await getInitialData({
-      path: 'some-live-radio-path',
-      pageType,
-    });
-
-    await matchSnapshotAsync(<Page pageData={pageData} isAmp />);
+    await matchSnapshotAsync(<Page pageData={afriquePageData} isAmp />);
   });
 
   it('should show the title for the Live Radio page', async () => {
-    fetch.mockResponse(JSON.stringify(amharicPageData));
-    const { pageData } = await getInitialData('some-live-radio-path');
-
     const { getByText } = await renderPage({
-      pageData,
+      pageData: afriquePageData,
     });
 
-    expect(getByText('ያድምጡ')).toBeInTheDocument();
+    expect(getByText('BBC Afrique Radio')).toBeInTheDocument();
   });
 
   it('should show the summary for the Live Radio page', async () => {
-    fetch.mockResponse(JSON.stringify(amharicPageData));
-    const { pageData } = await getInitialData('some-live-radio-path');
-
     const { getByText } = await renderPage({
-      pageData,
+      pageData: afriquePageData,
     });
 
-    expect(getByText('ዝግጅቶቻችንን’')).toBeInTheDocument();
+    expect(getByText('Infos, musique et sports')).toBeInTheDocument();
   });
 
   it('should show the audio player on canonical', async () => {
-    fetch.mockResponse(JSON.stringify(amharicPageData));
-    const { pageData } = await getInitialData('some-live-radio-path');
-    const { container } = await renderPage({ pageData });
+    const { container } = await renderPage({ pageData: afriquePageData });
     const audioPlayerIframeSrc = container
       .querySelector('iframe')
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am?morph_env=live',
+      'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live',
     );
   });
 
   it('should show the audio player on AMP', async () => {
-    fetch.mockResponse(JSON.stringify(amharicPageData));
-    const { pageData } = await getInitialData('some-live-radio-path');
-    const { container } = await renderPage({ pageData, isAmp: true });
+    const { container } = await renderPage({
+      pageData: afriquePageData,
+      isAmp: true,
+    });
     const audioPlayerIframeSrc = container
       .querySelector('amp-iframe')
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp?morph_env=live',
+      'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr/amp?morph_env=live',
     );
   });
 
   it('should show the radio schedule for the Live Radio page on canonical', async () => {
-    fetch.mockResponse(JSON.stringify(amharicPageData));
-    const { pageData } = await getInitialData('some-live-radio-path');
-
     const { getByText } = await renderPage({
-      pageData,
+      pageData: indonesianPageData,
+      service: 'indonesia',
     });
 
-    expect(getByText('ያድምጡ')).toBeInTheDocument();
+    const radioScheduleTitle = getByText('Siaran radio');
+    const scheduleWrapper = document.querySelector(
+      '[data-e2e="radio-schedule"]',
+    );
+
+    expect(scheduleWrapper).toBeInTheDocument();
+    expect(radioScheduleTitle).toBeInTheDocument();
   });
 
-  it('should show the radio schedule for the Live Radio page on AMP', async () => {
-    fetch.mockResponse(JSON.stringify(amharicPageData));
-    const { pageData } = await getInitialData('some-live-radio-path');
-
-    const { getByText } = await renderPage({
-      pageData,
+  it('should not show the radio schedule for the Live Radio page on AMP', async () => {
+    renderPage({
+      pageData: indonesianPageData,
+      service: 'indonesia',
+      lang: 'id',
       isAmp: true,
     });
 
-    expect(getByText('ያድምጡ')).toBeInTheDocument();
+    const scheduleWrapper = document.querySelector(
+      '[data-e2e="radio-schedule"]',
+    );
+
+    expect(scheduleWrapper).not.toBeInTheDocument();
+  });
+
+  it('should not show the radio schedule for services without schedules', async () => {
+    renderPage({
+      pageData: gahuzaPageData,
+      service: 'gahuza',
+      lang: 'rw',
+    });
+
+    const scheduleWrapper = document.querySelector(
+      '[data-e2e="radio-schedule"]',
+    );
+
+    expect(scheduleWrapper).not.toBeInTheDocument();
   });
 });
