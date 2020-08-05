@@ -597,17 +597,53 @@ describe('getSLMarketingString', () => {
 });
 
 describe('getEmailMarketingString', () => {
-  it('', () => {});
+  describe('should return the at_emailtype field', () => {
+    it('when the value is "acquisition"', () => {});
+    it('when the value is "retention"', () => {});
+    it('when the value is "promotion"', () => {});
+    it('with the value of the at_campaign field', () => {});
+    it('with the value of the at_creation field, wrapped in square brackets', () => {});
+    it('with the value of the at_send_date field', () => {});
+    it('with the value of the at_link field, wrapped in square brackets', () => {});
+    it('with the value of the at_recipient_id field followed by the @ symbol and the value of the at_recipient_list field', () => {});
+  });
+});
+
+describe('getDisplayMarketingString', () => {
+  describe('should return the "AD" prefix', () => {
+    it('with the value of the at_campaign field', () => {});
+    it('with the value of the at_creation field, wrapped in square brackets', () => {});
+    it('with the value of the at_variant field, wrapped in square brackets', () => {});
+    it('with the value of the at_format field, wrapped in square brackets', () => {});
+    it('with the value of the at_general_placement field, wrapped in square brackets', () => {});
+    it('with the value of the at_detail_placement field, wrapped in square brackets', () => {});
+  });
 });
 
 describe('getCustomMarketingString', () => {
-  it('', () => {});
+  describe('should return the "CS" prefix followed by the part of the at_medium field following the word custom', () => {
+    it('with the value of the at_campaign field', () => {});
+    it('with the value of the at_custom_1 field, wrapped in square brackets', () => {});
+    it('with the value of the at_custom_2 field, wrapped in square brackets', () => {});
+    it('with the value of the at_custom_3 field, wrapped in square brackets', () => {});
+    it('with the value of the at_custom_4 field, wrapped in square brackets', () => {});
+  });
 });
 
 describe('getXtorMarketingString', () => {
-  it('', () => {});
+  it('should return the value of the xtor field', () => {});
 });
 
 describe('getATIMarketingString', () => {
-  it('', () => {});
+  describe('should construct ATI marketing string', () => {
+    it('for campaign type of "affiliate"', () => {});
+    it('for campaign type of "sl"', () => {});
+    it('for campaign type of "email"', () => {});
+    it('for campaign type of "display"', () => {});
+    it('for campaign type of "custom"', () => {});
+    it('for campaign type of "xtor"', () => {});
+  });
+  describe('should return null', () => {
+    it('for an unsupported campaign type', () => {});
+  });
 });

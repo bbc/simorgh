@@ -297,8 +297,8 @@ export const getThingAttributes = (attribute, articleData) => {
   return null;
 };
 
-export const getUriField = (href, field) =>
-  new Url(href, true).query[field] || '';
+export const getUriField = (query, field) =>
+  Object.prototype.hasOwnProperty.call(query, field) ? query[field] : '';
 
 export const getAffiliateMarketingString = href => {
   const marketingStringValues = [
