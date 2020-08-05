@@ -1,11 +1,8 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import onClient from '#lib/utilities/onClient';
-import ContextWrap from '../utilities';
+import ContextWrap from '../utilities/testHelper';
 import ComscoreAnalytics from '..';
-
-jest.mock('#lib/utilities/onClient');
 
 const excptedNoScriptContent = personalisationEnabled => {
   const csUcfr = personalisationEnabled ? '1' : '0';
@@ -19,14 +16,8 @@ describe('Canonical Comscore Analytics ', () => {
     },
   };
 
-  beforeEach(() => {
-    jest.clearAllMocks();
-    onClient.mockReturnValue(true);
-  });
-
   describe('Assertions', () => {
     it('should render null when not on client', async () => {
-      onClient.mockReturnValue(false);
       const { container } = render(
         <ContextWrap
           platform="canonical"
@@ -56,26 +47,6 @@ describe('Canonical Comscore Analytics ', () => {
         const noScriptEl = document.querySelector('noscript');
         expect(noScriptEl).toBeInTheDocument();
         expect(noScriptEl.textContent).toEqual(excptedNoScriptContent(false));
-      });
-    });
-
-    it('should render the noscript with cs_ucfr=1', async () => {
-      const personalisation = { personalisationEnabled: true };
-      render(
-        <ContextWrap
-          platform="canonical"
-          pageType="article"
-          origin="bbc.com"
-          toggleState={toggleState}
-          personalisation={personalisation}
-        >
-          <ComscoreAnalytics />
-        </ContextWrap>,
-      );
-      await waitFor(() => {
-        const noScriptEl = document.querySelector('noscript');
-        expect(noScriptEl).toBeInTheDocument();
-        expect(noScriptEl.textContent).toEqual(excptedNoScriptContent(true));
       });
     });
 
