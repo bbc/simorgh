@@ -77,14 +77,28 @@ const MediaAssetPage = ({ pageData }) => {
     // This is not something we currently support, so we return an error message
     video: isLegacyMediaAssetPage(requestContext.canonicalLink)
       ? MediaMessage
-      : props => <CpsAssetMediaPlayer {...props} assetUri={assetUri} />,
+      : props => (
+          // eslint-disable-next-line react/jsx-indent
+          <CpsAssetMediaPlayer
+            {...props}
+            assetUri={assetUri}
+            showLoadingImage
+          />
+        ),
 
     legacyMedia: props => (
-      <CpsAssetMediaPlayer {...props} assetUri={assetUri} isLegacyMedia />
+      <CpsAssetMediaPlayer
+        {...props}
+        assetUri={assetUri}
+        isLegacyMedia
+        showLoadingImage
+      />
     ),
 
     // "Versions" are live streams
-    version: props => <CpsAssetMediaPlayer {...props} assetUri={assetUri} />,
+    version: props => (
+      <CpsAssetMediaPlayer {...props} assetUri={assetUri} showLoadingImage />
+    ),
     unavailableMedia: MediaMessage,
   };
 
