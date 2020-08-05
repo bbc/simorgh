@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import ContextWrap from '../utilities/testHelper';
+import ContextWrap from '../testHelper';
 import ComscoreAnalytics from '..';
 
 const excptedNoScriptContent = personalisationEnabled => {

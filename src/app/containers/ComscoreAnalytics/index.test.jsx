@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import ContextWrap from './utilities/testHelper';
+import ContextWrap from './testHelper';
 import ComscoreAnalytics from '.';
 
 describe('Comscore Analytics Container', () => {
