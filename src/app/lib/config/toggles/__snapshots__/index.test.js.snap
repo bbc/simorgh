@@ -69,7 +69,7 @@ Object {
     "enabled": false,
   },
   "ampAds": Object {
-    "enabled": false,
+    "enabled": true,
   },
   "chartbeatAnalytics": Object {
     "enabled": true,
@@ -131,7 +131,7 @@ Object {
     "enabled": false,
   },
   "ampAds": Object {
-    "enabled": false,
+    "enabled": true,
   },
   "chartbeatAnalytics": Object {
     "enabled": true,
