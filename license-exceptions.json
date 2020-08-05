@@ -60,7 +60,7 @@
     "xmldom@*": {
       "reason": "Dual license under MIT or LGPL; https://github.com/jindw/xmldom/blob/master/LICENSE"
     },
-    "language-subtag-registry@0.3.20@*": {
+    "language-subtag-registry@*": {
       "reason": "Licensed under MIT; https://github.com/mattcg/language-subtag-registry#credits-and-collaboration"
     }
   }
