@@ -176,7 +176,7 @@
     "copy-webpack-plugin": "^6.0.3",
     "cypress": "^4.10.0",
     "cypress-multi-reporters": "^1.4.0",
-    "depcheck": "^0.9.2",
+    "depcheck": "^1.0.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.5.0",
