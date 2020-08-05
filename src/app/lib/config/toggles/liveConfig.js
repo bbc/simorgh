@@ -25,6 +25,7 @@ export default {
   },
   liveRadioSchedule: {
     enabled: false,
+    value: '(hausa|korean)',
   },
   logMediaPlayerStatus: {
     enabled: false,
