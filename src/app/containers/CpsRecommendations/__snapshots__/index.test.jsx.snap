@@ -436,7 +436,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
         class="c2"
         href="#end-of-recommendations"
       >
-        Skip Quizás también te interese and continue reading
+        Saltar Quizás también te interese y continuar leyendo
       </a>
       <div
         class="c3"
@@ -528,7 +528,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
         id="end-of-recommendations"
         tabindex="-1"
       >
-        End of Quizás también te interese
+        Final de Quizás también te interese
       </p>
     </div>
   </div>
@@ -1090,7 +1090,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
         class="c2"
         href="#end-of-recommendations"
       >
-        Skip Quizás también te interese and continue reading
+        Saltar Quizás también te interese y continuar leyendo
       </a>
       <div
         class="c3"
@@ -1349,7 +1349,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
         id="end-of-recommendations"
         tabindex="-1"
       >
-        End of Quizás también te interese
+        Final de Quizás también te interese
       </p>
     </div>
   </div>
@@ -1924,7 +1924,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
         class="c2"
         href="#end-of-recommendations"
       >
-        Skip مواضيع قد تهمك and continue reading
+        تخطى مواضيع قد تهمك وواصل القراءة
       </a>
       <div
         class="c3"
@@ -2183,7 +2183,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
         id="end-of-recommendations"
         tabindex="-1"
       >
-        End of مواضيع قد تهمك
+        مواضيع قد تهمك نهاية
       </p>
     </div>
   </div>
