@@ -150,28 +150,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   padding: 0.5rem 0.25rem;
 }
 
-.c19 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-}
-
-.c28 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
 .c21 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -256,6 +234,28 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 .c0 {
   margin: 0 auto;
   width: 100%;
+}
+
+.c19 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.c28 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 @media (min-width:37.5rem) {
@@ -581,34 +581,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c19 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c19 {
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c28 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c28 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
   .c21 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
@@ -686,6 +658,34 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 @media (min-width:63rem) {
   .c7 {
     margin-top: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c19 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c28 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c28 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -1155,28 +1155,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
   padding: 0.5rem 0.25rem;
 }
 
-.c26 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
-.c13 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-}
-
 .c15 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -1244,6 +1222,28 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 .c0 {
   margin: 0 auto;
   width: 100%;
+}
+
+.c26 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.c13 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
 }
 
 @media (min-width:37.5rem) {
@@ -1580,34 +1580,6 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c26 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c26 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c13 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
   .c15 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
@@ -1652,6 +1624,34 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
 @media (min-width:63rem) {
   .c0 {
     max-width: 63rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c26 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c26 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c13 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -1910,17 +1910,6 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
   padding: 0.5rem 0.25rem;
 }
 
-.c15 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-}
-
 .c17 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -1994,6 +1983,17 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
 .c0 {
   margin: 0 auto;
   width: 100%;
+}
+
+.c15 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 @media (min-width:37.5rem) {
@@ -2109,20 +2109,6 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c15 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c15 {
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
   .c17 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
@@ -2172,6 +2158,20 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
 @media (min-width:63rem) {
   .c7 {
     margin-top: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c15 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
 }
 
@@ -2404,28 +2404,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
   padding: 0.5rem 0.25rem;
 }
 
-.c16 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-}
-
-.c25 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
 .c18 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -2504,6 +2482,28 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 .c0 {
   margin: 0 auto;
   width: 100%;
+}
+
+.c16 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.c25 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 @media (min-width:37.5rem) {
@@ -2814,34 +2814,6 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c16 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c16 {
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c25 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c25 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
   .c18 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
@@ -2907,6 +2879,34 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
 @media (min-width:63rem) {
   .c0 {
     max-width: 63rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c16 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c25 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c25 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
