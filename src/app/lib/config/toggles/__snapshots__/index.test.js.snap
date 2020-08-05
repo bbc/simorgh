@@ -6,6 +6,9 @@ Object {
   "ads": Object {
     "enabled": false,
   },
+  "ampAds": Object {
+    "enabled": false,
+  },
   "chartbeatAnalytics": Object {
     "enabled": true,
   },
@@ -64,6 +67,9 @@ Object {
   "ads": Object {
     "enabled": false,
   },
+  "ampAds": Object {
+    "enabled": false,
+  },
   "chartbeatAnalytics": Object {
     "enabled": true,
   },
@@ -120,6 +126,9 @@ exports[`Toggles Config when application environment is test should contain corr
 Object {
   "_environment": "test",
   "ads": Object {
+    "enabled": false,
+  },
+  "ampAds": Object {
     "enabled": false,
   },
   "chartbeatAnalytics": Object {
