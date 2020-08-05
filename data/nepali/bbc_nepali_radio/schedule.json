@@ -1,0 +1,250 @@
+{
+  "schedules": [
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+        "pid": "p0340xzv",
+        "synopses": {
+          "medium": "बीबीसी नेपाली सेवाको हरेक दिन बेलुकी पौने नौ बजे प्रसारण हुने कार्यक्रम",
+          "short": "बीबीसी नेपाली सेवाको हरेक दिन बेलुकी पौने नौ बजे प्रसारण हुने कार्यक्रम"
+        },
+        "title": "सांझपख"
+      },
+      "broadcast": {
+        "bid": "w1mshnqzrky3v0c.imi:ws.bbc.co.uk/NEPLA1596553170",
+        "pid": "p08lpdm2"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+        "pid": "w172xhv55bljw5t",
+        "presentationTitle": "04/08/2020 GMT",
+        "synopses": {
+          "medium": "बीबीसी नेपाली सेवाको हरेक दिन बेलुकी पौने नौ बजे प्रसारण हुने कार्यक्रम",
+          "short": "बीबीसी नेपाली सेवाको हरेक दिन बेलुकी पौने नौ बजे प्रसारण हुने कार्यक्रम"
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT30M",
+      "publishedTimeEnd": 1596554970000,
+      "publishedTimeStart": 1596553170000,
+      "serviceId": "bbc_nepali_radio",
+      "transmissionTimeEnd": 1596554970000,
+      "transmissionTimeStart": 1596553170000,
+      "updateTime": 1595558255000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_nepali_radio",
+      "version": {
+        "pid": "w1mshnqzrky3v0c"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+        "pid": "p0340xzt",
+        "synopses": {
+          "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
+          "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
+        },
+        "title": "विहानीपख"
+      },
+      "broadcast": {
+        "bid": "w1mshnql16mtg42.imi:ws.bbc.co.uk/NEPLA1596590970",
+        "pid": "p08lrh6r"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+        "pid": "w172xhtrfz97h9j",
+        "presentationTitle": "05/08/2020 GMT",
+        "synopses": {
+          "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
+          "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT15M",
+      "publishedTimeEnd": 1596591870000,
+      "publishedTimeStart": 1596590970000,
+      "serviceId": "bbc_nepali_radio",
+      "transmissionTimeEnd": 1596591870000,
+      "transmissionTimeStart": 1596590970000,
+      "updateTime": 1595605122000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_nepali_radio",
+      "version": {
+        "pid": "w1mshnql16mtg42"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+        "pid": "p0340xzv",
+        "synopses": {
+          "medium": "बीबीसी नेपाली सेवाको हरेक दिन बेलुकी पौने नौ बजे प्रसारण हुने कार्यक्रम",
+          "short": "बीबीसी नेपाली सेवाको हरेक दिन बेलुकी पौने नौ बजे प्रसारण हुने कार्यक्रम"
+        },
+        "title": "सांझपख"
+      },
+      "broadcast": {
+        "bid": "w1mshnqzrky6qxg.imi:ws.bbc.co.uk/NEPLA1596639570",
+        "pid": "p08lsqnc"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+        "pid": "w172xhv55blms2x",
+        "presentationTitle": "05/08/2020 GMT",
+        "synopses": {
+          "medium": "बीबीसी नेपाली सेवाको हरेक दिन बेलुकी पौने नौ बजे प्रसारण हुने कार्यक्रम",
+          "short": "बीबीसी नेपाली सेवाको हरेक दिन बेलुकी पौने नौ बजे प्रसारण हुने कार्यक्रम"
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT30M",
+      "publishedTimeEnd": 1596641370000,
+      "publishedTimeStart": 1596639570000,
+      "serviceId": "bbc_nepali_radio",
+      "transmissionTimeEnd": 1596641370000,
+      "transmissionTimeStart": 1596639570000,
+      "updateTime": 1595644648000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_nepali_radio",
+      "version": {
+        "pid": "w1mshnqzrky6qxg"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+        "pid": "p0340xzt",
+        "synopses": {
+          "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
+          "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
+        },
+        "title": "विहानीपख"
+      },
+      "broadcast": {
+        "bid": "w1mshnql16mxc15.imi:ws.bbc.co.uk/NEPLA1596677370",
+        "pid": "p08lv242"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+        "pid": "w172xhtrfz9bd6m",
+        "presentationTitle": "06/08/2020 GMT",
+        "synopses": {
+          "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
+          "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT15M",
+      "publishedTimeEnd": 1596678270000,
+      "publishedTimeStart": 1596677370000,
+      "serviceId": "bbc_nepali_radio",
+      "transmissionTimeEnd": 1596678270000,
+      "transmissionTimeStart": 1596677370000,
+      "updateTime": 1595691473000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_nepali_radio",
+      "version": {
+        "pid": "w1mshnql16mxc15"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+        "pid": "p0340xzv",
+        "synopses": {
+          "medium": "बीबीसी नेपाली सेवाको हरेक दिन बेलुकी पौने नौ बजे प्रसारण हुने कार्यक्रम",
+          "short": "बीबीसी नेपाली सेवाको हरेक दिन बेलुकी पौने नौ बजे प्रसारण हुने कार्यक्रम"
+        },
+        "title": "सांझपख"
+      },
+      "broadcast": {
+        "bid": "w1mshnqzrky9mtk.imi:ws.bbc.co.uk/NEPLA1596725970",
+        "pid": "p08lvxxn"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+        "pid": "w172xhv55blqp00",
+        "presentationTitle": "06/08/2020 GMT",
+        "synopses": {
+          "medium": "बीबीसी नेपाली सेवाको हरेक दिन बेलुकी पौने नौ बजे प्रसारण हुने कार्यक्रम",
+          "short": "बीबीसी नेपाली सेवाको हरेक दिन बेलुकी पौने नौ बजे प्रसारण हुने कार्यक्रम"
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT30M",
+      "publishedTimeEnd": 1596727770000,
+      "publishedTimeStart": 1596725970000,
+      "serviceId": "bbc_nepali_radio",
+      "transmissionTimeEnd": 1596727770000,
+      "transmissionTimeStart": 1596725970000,
+      "updateTime": 1595731049000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_nepali_radio",
+      "version": {
+        "pid": "w1mshnqzrky9mtk"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+        "pid": "p0340xzt",
+        "synopses": {
+          "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
+          "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
+        },
+        "title": "विहानीपख"
+      },
+      "broadcast": {
+        "bid": "w1mshnql16n07y8.imi:ws.bbc.co.uk/NEPLA1596763770",
+        "pid": "p08lwtq7"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p08b8nf6.png",
+        "pid": "w172xhtrfz9f93q",
+        "presentationTitle": "07/08/2020 GMT",
+        "synopses": {
+          "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
+          "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT15M",
+      "publishedTimeEnd": 1596764670000,
+      "publishedTimeStart": 1596763770000,
+      "serviceId": "bbc_nepali_radio",
+      "transmissionTimeEnd": 1596764670000,
+      "transmissionTimeStart": 1596763770000,
+      "updateTime": 1595777866000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_nepali_radio",
+      "version": {
+        "pid": "w1mshnql16n07y8"
+      }
+    }
+  ]
+}
