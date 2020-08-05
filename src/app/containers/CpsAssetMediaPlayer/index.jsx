@@ -37,7 +37,12 @@ const Wrapper = styled(GridItemConstrainedLarge)`
   }
 `;
 
-const CpsAssetMediaPlayer = ({ blocks, assetUri, isLegacyMedia }) => {
+const CpsAssetMediaPlayer = ({
+  blocks,
+  assetUri,
+  isLegacyMedia,
+  showLoadingImage,
+}) => {
   if (!assetUri) return null;
 
   const mediaBlock = filterForBlockType(blocks, 'aresMedia');
@@ -57,6 +62,7 @@ const CpsAssetMediaPlayer = ({ blocks, assetUri, isLegacyMedia }) => {
         showPlaceholder={false}
         available={available}
         isLegacyMedia={isLegacyMedia}
+        showLoadingImage={showLoadingImage}
       />
     </Wrapper>
   );
@@ -66,10 +72,12 @@ CpsAssetMediaPlayer.propTypes = {
   ...mediaPlayerPropTypes,
   assetUri: string.isRequired,
   isLegacyMedia: bool,
+  showLoadingImage: bool,
 };
 CpsAssetMediaPlayer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
   isLegacyMedia: false,
+  showLoadingImage: false,
 };
 
 export default CpsAssetMediaPlayer;

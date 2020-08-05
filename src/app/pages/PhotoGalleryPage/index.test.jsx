@@ -7,18 +7,12 @@ import assocPath from 'ramda/src/assocPath';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import { PhotoGalleryPage as AsyncPhotoGalleryPage } from '..';
+import { PhotoGalleryPage } from '..';
 import noOnwardJourneys from '#data/pidgin/cpsAssets/sport-23252855';
 import someCpsOnwardJourneys from '#data/azeri/cpsAssets/azerbaijan-44208474.json';
 import allCpsOnwardJourneys from '#data/pidgin/cpsAssets/tori-49221071.json';
 import pglAboutData from '#data/afaanoromoo/cpsAssets/oduu-41217768';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
-
-let PhotoGalleryPage;
-
-beforeAll(async () => {
-  PhotoGalleryPage = (await AsyncPhotoGalleryPage.load()).default;
-});
 
 const toggleState = {
   mediaPlayer: {

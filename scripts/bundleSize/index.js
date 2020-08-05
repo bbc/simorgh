@@ -82,7 +82,6 @@ servicePageSummaryTable.push(
   },
 );
 
-console.log('');
 const spinner = ora({
   text: 'Analysing bundles...',
   color: 'magenta',
@@ -90,24 +89,24 @@ const spinner = ora({
 spinner.start();
 console.log(chalk.bold('\n\nResults'));
 
-console.log(chalk.bold('\nService bundles'));
+console.log(chalk.bold('\nService bundles\n'));
 console.log(serviceBundlesTable.toString());
 
-console.log(chalk.bold('\n\nService bundles summary'));
+console.log(chalk.bold('\n\nService bundles summary\n'));
 console.log(serviceSummaryTable.toString());
 
-console.log(chalk.bold('\n\nPage type bundles'));
+console.log(chalk.bold('\n\nPage type bundles\n'));
 console.log(pageBundlesTable.toString());
 
 console.log(
   [
     chalk.bold('\n\nPage bundles summary'),
-    chalk.cyan.bold('(excludes service bundle)'),
+    chalk.cyan.bold('(excludes service bundle)\n'),
   ].join(' '),
 );
 console.log(pageSummaryTable.toString());
 
-console.log(chalk.bold('\n\nService + Page bundles summary'));
+console.log(chalk.bold('\n\nService + Page bundles summary\n'));
 console.log(servicePageSummaryTable.toString());
 
 const errors = [];

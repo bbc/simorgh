@@ -1,4 +1,4 @@
-import getImageBlock from './getImageBlock';
+import getImageBlock from '.';
 
 const supportedInclude = {
   required: false,

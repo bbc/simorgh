@@ -15,7 +15,6 @@ if (DOT_ENV_CONFIG.error) {
 
 module.exports = ({
   resolvePath,
-  IS_CI,
   IS_PROD,
   START_DEV_SERVER,
   IS_PROD_PROFILE,
@@ -181,7 +180,7 @@ module.exports = ({
       }),
     );
   }
-  if (!IS_CI && IS_PROD) {
+  if (IS_PROD) {
     const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line
     /**
      * Visualize size of webpack output files with an interactive zoomable treemap.

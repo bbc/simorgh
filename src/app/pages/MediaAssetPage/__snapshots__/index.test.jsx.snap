@@ -1152,17 +1152,6 @@ exports[`Media Asset Page should render component 1`] = `
   padding: 0.5rem 0.25rem;
 }
 
-.c44 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
 .c45 {
   position: static;
   color: #222222;
@@ -1316,6 +1305,17 @@ exports[`Media Asset Page should render component 1`] = `
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+.c44 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
 @media (min-width:63rem) {
@@ -1760,20 +1760,6 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c44 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c44 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
   .c48 {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -2007,6 +1993,20 @@ exports[`Media Asset Page should render component 1`] = `
 @media (min-width:63rem) {
   .c10 {
     padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c44 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c44 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 

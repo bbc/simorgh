@@ -2,5 +2,5 @@ import MostReadPage from './MostReadPage';
 import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
 export default applyBasicPageHandlers({
-  withVariant: false,
+  addVariantHandling: false,
 })(MostReadPage);
