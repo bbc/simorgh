@@ -41,24 +41,32 @@ jest.mock('#containers/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
-const Page = ({ pageData, service, variant }) => (
-  <StaticRouter>
-    <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
-      <ServiceContextProvider service={service} variant={variant}>
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          isAmp={false}
-          pageType={pageData.metadata.type}
-          pathname={pageData.metadata.locators.assetUri}
+const Page = ({ pageData, service, variant }) => {
+  return (
+    <StaticRouter>
+      <ToggleContext.Provider
+        value={{ toggleState, toggleDispatch: jest.fn() }}
+      >
+        <ServiceContextProvider
           service={service}
-          statusCode={200}
+          variant={variant}
+          pageLang={pageData.metadata.language}
         >
-          <StoryPage service={service} pageData={pageData} />
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContext.Provider>
-  </StaticRouter>
-);
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            isAmp={false}
+            pageType={pageData.metadata.type}
+            pathname={pageData.metadata.locators.assetUri}
+            service={service}
+            statusCode={200}
+          >
+            <StoryPage service={service} pageData={pageData} />
+          </RequestContextProvider>
+        </ServiceContextProvider>
+      </ToggleContext.Provider>
+    </StaticRouter>
+  );
+};
 
 jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
   const PageWrapperContainer = props => (
