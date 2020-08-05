@@ -1,6 +1,9 @@
 import React, { useContext } from 'react';
 import { shape, bool, oneOf, oneOfType } from 'prop-types';
+import styled from 'styled-components';
 import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
+import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import pathOr from 'ramda/src/pathOr';
 import LiveLabel from '@bbc/psammead-live-label';
@@ -107,6 +110,7 @@ const StoryPromoContainer = ({
   const isContentTypeGuide =
     isAssetTypeCode === 'PRO' &&
     pathOr(null, ['contentType'], item) === 'Guide';
+  const isLtr = dir === 'ltr';
 
   const { headline, url, isLive } = getHeadlineUrlAndLive(
     item,
@@ -156,10 +160,26 @@ const StoryPromoContainer = ({
   const headingTagOverride =
     isRecommendation || isContentTypeGuide ? 'div' : null;
 
+  const StyledHeadline = styled(Headline)`
+    ${() =>
+      isRecommendation &&
+      `
+      padding: ${GEL_SPACING} ${isLtr ? GEL_SPACING : 0} ${GEL_SPACING} ${
+        isLtr ? 0 : GEL_SPACING
+      };
+
+      @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+        padding: ${GEL_SPACING} ${
+        isLtr ? GEL_SPACING_DBL : 0
+      } ${GEL_SPACING_DBL} ${isLtr ? 0 : GEL_SPACING_DBL};
+      }
+    `}
+  `;
+
   const Info = (
     <>
       {headline && (
-        <Headline
+        <StyledHeadline
           script={script}
           service={service}
           promoType={promoType}
@@ -181,7 +201,7 @@ const StoryPromoContainer = ({
               linkcontents
             )}
           </Link>
-        </Headline>
+        </StyledHeadline>
       )}
       {promoSummary && displaySummary && !isRecommendation && (
         <Summary

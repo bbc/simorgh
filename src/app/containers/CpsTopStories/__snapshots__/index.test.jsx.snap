@@ -49,18 +49,6 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   position: relative;
 }
 
-.c13 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  display: inline;
-}
-
 .c14 {
   position: static;
   color: #222222;
@@ -179,6 +167,18 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   margin-top: 0;
 }
 
+.c13 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  display: inline;
+}
+
 @media (max-width:62.9375rem) {
   .c10 {
     border-bottom: 0.0625rem solid #F2F2F2;
@@ -232,20 +232,6 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c13 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c13 {
-    font-size: 1rem;
-    line-height: 1.25rem;
   }
 }
 
@@ -401,6 +387,20 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 <section
     aria-labelledby="top-stories-heading"
     class="c0"
@@ -533,18 +533,6 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   position: relative;
 }
 
-.c12 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  display: inline;
-}
-
 .c13 {
   position: static;
   color: #222222;
@@ -663,6 +651,18 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   margin-top: 0;
 }
 
+.c12 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  display: inline;
+}
+
 @media (min-width:37.5rem) {
   .c11 {
     padding: 0 1rem;
@@ -692,20 +692,6 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
   }
 }
 
@@ -870,6 +856,20 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 @media (min-width:63rem) {
   .c9 {
     padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
