@@ -89,6 +89,7 @@ const AmpAd = ({ slotType }) => {
       aria-hidden="true"
       aria-label={ariaLabel}
       role="region"
+      data-e2e="advertisement"
     >
       <FullWidthWrapper>
         <StyledWrapper>
