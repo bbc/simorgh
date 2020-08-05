@@ -6,6 +6,8 @@ import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import mapAssetData from '#pages/MediaAssetPage/fixtureData.json';
 import pglAssetData from '#pages/PhotoGalleryPage/fixtureData.json';
 import styAssetData from '#pages/StoryPage/fixtureData/mundo.json';
+import styUkrainianAssetData from '#data/ukrainian/cpsAssets/news-53561143.json';
+import styUkrainianInRussianAssetData from '#data/ukrainian/cpsAssets/features-russian-53477115.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ATIAnalytics from '.';
@@ -19,14 +21,14 @@ analyticsUtils.getPublishedDatetime = jest
   .fn()
   .mockReturnValue('1970-01-01T00:00:00.000Z');
 
-const ContextWrap = ({ pageType, platform, children }) => (
-  <ServiceContextProvider service="news">
+const ContextWrap = ({ pageType, platform, children, service }) => (
+  <ServiceContextProvider service={service}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
       isAmp={platform === 'amp'}
       pageType={pageType}
-      service="news"
+      service={service}
       statusCode={200}
       pathname="/pathname"
     >
@@ -39,6 +41,7 @@ ContextWrap.propTypes = {
   children: node.isRequired,
   pageType: string.isRequired,
   platform: string.isRequired,
+  service: string.isRequired,
 };
 
 describe('ATI Analytics Container', () => {
@@ -73,7 +76,7 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       render(
-        <ContextWrap platform="canonical" pageType="article">
+        <ContextWrap platform="canonical" pageType="article" service="news">
           <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,
       );
@@ -112,7 +115,7 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       render(
-        <ContextWrap platform="amp" pageType="article">
+        <ContextWrap platform="amp" pageType="article" service="news">
           <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,
       );
@@ -145,7 +148,7 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       render(
-        <ContextWrap platform="canonical" pageType="frontPage">
+        <ContextWrap platform="canonical" pageType="frontPage" service="news">
           <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,
       );
@@ -178,7 +181,7 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       render(
-        <ContextWrap platform="amp" pageType="frontPage">
+        <ContextWrap platform="amp" pageType="frontPage" service="news">
           <ATIAnalytics data={articleDataNews} />
         </ContextWrap>,
       );
@@ -217,7 +220,7 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       render(
-        <ContextWrap platform="canonical" pageType="MAP">
+        <ContextWrap platform="canonical" pageType="MAP" service="news">
           <ATIAnalytics data={mapAssetData} />
         </ContextWrap>,
       );
@@ -256,7 +259,7 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       render(
-        <ContextWrap platform="amp" pageType="MAP">
+        <ContextWrap platform="amp" pageType="MAP" service="news">
           <ATIAnalytics data={mapAssetData} />
         </ContextWrap>,
       );
@@ -295,7 +298,7 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       render(
-        <ContextWrap platform="canonical" pageType="PGL">
+        <ContextWrap platform="canonical" pageType="PGL" service="news">
           <ATIAnalytics data={pglAssetData} />
         </ContextWrap>,
       );
@@ -334,7 +337,7 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       render(
-        <ContextWrap platform="amp" pageType="PGL">
+        <ContextWrap platform="amp" pageType="PGL" service="news">
           <ATIAnalytics data={pglAssetData} />
         </ContextWrap>,
       );
@@ -374,7 +377,7 @@ describe('ATI Analytics Container', () => {
       canonical.default = mockCanonical;
 
       render(
-        <ContextWrap platform="canonical" pageType="STY">
+        <ContextWrap platform="canonical" pageType="STY" service="news">
           <ATIAnalytics data={styAssetData} />
         </ContextWrap>,
       );
@@ -414,8 +417,164 @@ describe('ATI Analytics Container', () => {
       amp.default = mockAmp;
 
       render(
-        <ContextWrap platform="amp" pageType="STY">
+        <ContextWrap platform="amp" pageType="STY" service="news">
           <ATIAnalytics data={styAssetData} />
+        </ContextWrap>,
+      );
+
+      expect(mockAmp.mock.calls[0][0]).toEqual({
+        pageviewParams,
+      });
+    });
+
+    it('should return the correct language param when service is Ukrainian and pageData language is Ukrainian on canonical', () => {
+      const pageviewParams = [
+        's=598343',
+        's2=94',
+        'p=news::ukrainian.news.story.53561143.page',
+        'r=0x0x24x24',
+        're=1024x768',
+        'hl=00-00-00',
+        'lng=en-US',
+        'x1=[urn:bbc:cps:9e539daf-1d79-4630-900c-7db33c4bf1ac]',
+        'x2=[responsive]',
+        'x3=[news-ukrainian]',
+        'x4=[uk]',
+        'x5=[http%253A%252F%252Flocalhost%252F]',
+        'x7=[article]',
+        'x8=[simorgh]',
+        'x9=[Виробництво+героїну+зросло+завдяки+сонячним+батареям.+Погляд+з+Британії+-+BBC+News+Україна]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+        'x13=[Afghanistan~Drug+use~Drugs+trade~Ukraine]',
+        'x14=[1a5696c5-07d0-4a08-8b54-41ad5cd534b6~37cd3473-7b24-44b0-84c1-bf3c4801df5e~4b4cca1c-d458-4310-819e-dd48572b12c4~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]',
+        'x16=[WS%20-%20Educate%20me]',
+        'x17=[News]',
+      ].join('&');
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      canonical.default = mockCanonical;
+
+      render(
+        <ContextWrap platform="canonical" pageType="STY" service="ukrainian">
+          <ATIAnalytics data={styUkrainianAssetData} />
+        </ContextWrap>,
+      );
+
+      expect(mockCanonical.mock.calls[0][0]).toEqual({
+        pageviewParams,
+      });
+    });
+
+    it('should return the correct language param when service is Ukrainian and pageData language is Ukrainian on Amp', () => {
+      const pageviewParams = [
+        's=598343',
+        's2=94',
+        'p=news::ukrainian.news.story.53561143.page',
+        `r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
+        `re=\${availableScreenWidth}x\${availableScreenHeight}`,
+        'hl=00-00-00',
+        `lng=\${browserLanguage}`,
+        'x1=[urn:bbc:cps:9e539daf-1d79-4630-900c-7db33c4bf1ac]',
+        'x2=[amp]',
+        'x3=[news-ukrainian]',
+        'x4=[uk]',
+        `x5=[\${sourceUrl}]`,
+        `x6=[\${documentReferrer}]`,
+        'x7=[article]',
+        'x8=[simorgh]',
+        'x9=[Виробництво+героїну+зросло+завдяки+сонячним+батареям.+Погляд+з+Британії+-+BBC+News+Україна]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+        'x13=[Afghanistan~Drug+use~Drugs+trade~Ukraine]',
+        'x14=[1a5696c5-07d0-4a08-8b54-41ad5cd534b6~37cd3473-7b24-44b0-84c1-bf3c4801df5e~4b4cca1c-d458-4310-819e-dd48572b12c4~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]',
+        'x16=[WS%20-%20Educate%20me]',
+        'x17=[News]',
+        `ref=\${documentReferrer}`,
+      ].join('&');
+      const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+      amp.default = mockAmp;
+
+      render(
+        <ContextWrap platform="amp" pageType="STY" service="ukrainian">
+          <ATIAnalytics data={styUkrainianAssetData} />
+        </ContextWrap>,
+      );
+
+      expect(mockAmp.mock.calls[0][0]).toEqual({
+        pageviewParams,
+      });
+    });
+
+    it('should return the correct language param when service is Ukrainian and pageData language is Russian on canonical', () => {
+      const pageviewParams = [
+        's=598343',
+        's2=94',
+        'p=russian_features::ukrainian.russian_features.story.53477115.page',
+        'r=0x0x24x24',
+        're=1024x768',
+        'hl=00-00-00',
+        'lng=en-US',
+        'x1=[urn:bbc:cps:307108d3-9bcc-4829-990c-4b42c1290258]',
+        'x2=[responsive]',
+        'x3=[news-ukrainian]',
+        'x4=[ru]',
+        'x5=[http%253A%252F%252Flocalhost%252F]',
+        'x7=[article]',
+        'x8=[simorgh]',
+        'x9=[Карта+новых+районов+Украины:+кто+и+кого+поглотил+-+BBC+News+Україна]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+        'x13=[Society~Politics~Ukraine]',
+        'x14=[5307a8d9-f620-40f5-92d4-f99c919a6ffa~75612fa6-147c-4a43-97fa-fcf70d9cced3~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]',
+        'x16=[WS%20-%20Update%20me]',
+        'x17=[News]',
+      ].join('&');
+      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
+      canonical.default = mockCanonical;
+
+      render(
+        <ContextWrap platform="canonical" pageType="STY" service="ukrainian">
+          <ATIAnalytics data={styUkrainianInRussianAssetData} />
+        </ContextWrap>,
+      );
+
+      expect(mockCanonical.mock.calls[0][0]).toEqual({
+        pageviewParams,
+      });
+    });
+
+    it('should return the correct language param when service is Ukrainian and pageData language is Russian on Amp', () => {
+      const pageviewParams = [
+        's=598343',
+        's2=94',
+        'p=russian_features::ukrainian.russian_features.story.53477115.page',
+        `r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}`,
+        `re=\${availableScreenWidth}x\${availableScreenHeight}`,
+        'hl=00-00-00',
+        `lng=\${browserLanguage}`,
+        'x1=[urn:bbc:cps:307108d3-9bcc-4829-990c-4b42c1290258]',
+        'x2=[amp]',
+        'x3=[news-ukrainian]',
+        'x4=[ru]',
+        `x5=[\${sourceUrl}]`,
+        `x6=[\${documentReferrer}]`,
+        'x7=[article]',
+        'x8=[simorgh]',
+        'x9=[Карта+новых+районов+Украины:+кто+и+кого+поглотил+-+BBC+News+Україна]',
+        'x11=[1970-01-01T00:00:00.000Z]',
+        'x12=[1970-01-01T00:00:00.000Z]',
+        'x13=[Society~Politics~Ukraine]',
+        'x14=[5307a8d9-f620-40f5-92d4-f99c919a6ffa~75612fa6-147c-4a43-97fa-fcf70d9cced3~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]',
+        'x16=[WS%20-%20Update%20me]',
+        'x17=[News]',
+        `ref=\${documentReferrer}`,
+      ].join('&');
+      const mockAmp = jest.fn().mockReturnValue('amp-return-value');
+      amp.default = mockAmp;
+
+      render(
+        <ContextWrap platform="amp" pageType="STY" service="ukrainian">
+          <ATIAnalytics data={styUkrainianInRussianAssetData} />
         </ContextWrap>,
       );
 
@@ -429,7 +588,7 @@ describe('ATI Analytics Container', () => {
     suppressPropWarnings(['pageType', 'randomvalue']);
     isNull(
       'should render null',
-      <ContextWrap platform="canonical" pageType="randomvalue">
+      <ContextWrap platform="canonical" pageType="randomvalue" service="news">
         <ATIAnalytics data={articleDataNews} />
       </ContextWrap>,
     );
